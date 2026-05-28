@@ -50,7 +50,7 @@ The wiki is split into two strata:
 
 ### Findings — claims / results / theory / open-questions
 
-(none yet)
+- `findings/claims/formal-competence-aann-ceiling.md` — status: proposed (2026-05-28); AANN acceptability ceiling is evidence of formal, not functional, linguistic competence. Grounded by Mahowald 2024 formal/functional distinction; anchored to `resource/mahowald-2023-aann-stimuli`.
 
 ### Experiments — designs
 

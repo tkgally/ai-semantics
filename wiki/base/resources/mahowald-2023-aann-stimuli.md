@@ -12,6 +12,8 @@ updated: 2026-05-28
 links:
   - rel: anchors
     target: conjecture/aann-construction
+  - rel: anchors
+    target: claim/formal-competence-aann-ceiling
 ---
 
 # Mahowald 2023 — AANN stimulus suite and human acceptability ratings
