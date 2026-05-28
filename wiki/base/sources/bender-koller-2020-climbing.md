@@ -14,8 +14,10 @@ meaning-senses:
   - grounded
   - distributional
   - referential
+status: received
 created: 2026-05-28
 updated: 2026-05-28
+pdf-pages: 5185–5198
 links:
   - rel: supports
     target: concept/grounding
@@ -37,13 +39,29 @@ Key moves:
 3. **The octopus thought experiment.** A compelling challenge case: suppose an octopus (lacking the embodied, social history of English speakers) is exposed to English text between two humans. Even if the octopus learns to predict text perfectly, it does not understand the meaning — because meaning requires causal/social grounding that the octopus lacks and the corpus does not supply. This thought experiment directly targets `grounded.causal` and `grounded.social`.
 4. **Why the field mischaracterizes LLMs.** The authors identify a cluster of over-claims in NLP evaluation (conflating fluency with understanding, or task performance with semantic competence) and trace them to a failure to keep form and meaning distinct.
 
-## Key quotes
+## Key passages
 
-From the abstract and ACL-accessible text:
+All page numbers refer to the ACL Anthology proceedings pagination (pp. 5185–5198).
 
-> "A system trained only on form has a priori no way to learn meaning."
+**p. 5185 (abstract) — central thesis:**
 
-The octopus thought experiment (paraphrase from ACL abstract / accessible summary; exact page citation requires PDF): An agent lacking the embodied and social history that gives English expressions their meaning cannot acquire meaning from text alone, even given unlimited distributional exposure.
+> "we argue that a system trained only on form has a priori no way to learn meaning"
+
+**p. 5187 — formal definition of meaning as a relation:**
+
+> "We take meaning to be the relation M ⊆ E × I which contains pairs (e, i) of natural language expressions e and the communicative intents i they can be used to evoke."
+
+**p. 5187 — impossibility argument (core of the paper):**
+
+> "We argue that a model of natural language that is trained purely on form will not learn meaning: if the training data is only form, there is not sufficient signal to learn the relation M between that form and the non-linguistic intent of human language users, nor C between form and the standing meaning the linguistic system assigns to each form."
+
+**p. 5189 — octopus resolution (grounding required):**
+
+> "Having only form available as training data, O did not learn meaning. The language exchanged by A and B is a projection of their communicative intents through the meaning relation into linguistic forms. Without access to a means of hypothesizing and testing the underlying communicative intents, reconstructing them from the forms alone is hopeless, and O's language use will eventually diverge from the language use of an agent who can ground their language in coherent communicative intents."
+
+**p. 5190 — language acquisition corollary:**
+
+> "Human children do not learn meaning from form alone and we should not expect machines to do so either."
 
 ## What it can ground
 
@@ -64,4 +82,4 @@ The octopus thought experiment (paraphrase from ACL abstract / accessible summar
 
 ## Status in wanted.md
 
-Was `wanted (likely OA, fetch directly)`. Now `catalogued` via ACL Anthology abstract and accessible text. Full PDF available at the ACL Anthology URL above; page-level quotes should be extracted when a finding page requires a verbatim citation.
+Was `wanted (likely OA, fetch directly)`, then `catalogued`. Now `received`: full PDF fetched from ACL Anthology (2026-05-28); page-level verbatim quotes extracted above.

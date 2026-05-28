@@ -17,6 +17,7 @@ access: open-access
 meaning-senses:
   - constructional
   - distributional
+status: catalogued
 created: 2026-05-28
 updated: 2026-05-28
 links:
