@@ -30,6 +30,7 @@ The wiki is split into two strata:
 - `base/sources/lyre-2024-semantic-grounding.md` — Lyre 2024, arXiv 2402.10992; grounding-as-gradual, three-dimensional typology (functional/social/causal); grounds `grounded` sub-tags.
 - `base/sources/piantadosi-hill-2022-meaning-without-reference.md` — Piantadosi & Hill 2022, arXiv 2208.02957; conceptual-role semantics, meaning without reference; grounds `inferential` tag.
 - `base/sources/weissweiler-2023-cxg-insight.md` — Weissweiler et al. 2023, GURT; CxG-probing methodology, form–meaning pairing as test criterion; grounds `constructional` tag.
+- `base/sources/mahowald-2024-dissociating.md` — Mahowald et al. 2024, TiCS 28(6); formal-vs-functional competence distinction, neuroscience grounding; primary reference for `functional-vs-formal` tag.
 
 ### Base — resources
 
