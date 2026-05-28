@@ -26,7 +26,10 @@ The wiki is split into two strata:
 
 ### Base — sources
 
-(none ingested yet — see `base/wanted.md`)
+- `base/sources/bender-koller-2020-climbing.md` — Bender & Koller 2020, ACL; form-vs-meaning argument, octopus thought experiment; grounds `grounded` tag.
+- `base/sources/lyre-2024-semantic-grounding.md` — Lyre 2024, arXiv 2402.10992; grounding-as-gradual, three-dimensional typology (functional/social/causal); grounds `grounded` sub-tags.
+- `base/sources/piantadosi-hill-2022-meaning-without-reference.md` — Piantadosi & Hill 2022, arXiv 2208.02957; conceptual-role semantics, meaning without reference; grounds `inferential` tag.
+- `base/sources/weissweiler-2023-cxg-insight.md` — Weissweiler et al. 2023, GURT; CxG-probing methodology, form–meaning pairing as test criterion; grounds `constructional` tag.
 
 ### Base — resources
 
