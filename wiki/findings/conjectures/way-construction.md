@@ -5,7 +5,7 @@ title: LLMs draw the caused-motion inference of the way-construction
 meaning-senses:
   - constructional
   - inferential
-status: proposed
+status: designed
 contingent-on: []
 created: 2026-05-28
 updated: 2026-05-28

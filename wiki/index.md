@@ -45,7 +45,7 @@ The wiki is split into two strata:
 
 - `findings/conjectures/dative-alternation-information-structure.md`
 - `findings/conjectures/aann-construction.md` — status: designed (2026-05-28)
-- `findings/conjectures/way-construction.md`
+- `findings/conjectures/way-construction.md` — status: designed (2026-05-28)
 - `findings/conjectures/function-word-substitutability.md`
 
 ### Findings — claims / results / theory / open-questions
@@ -57,6 +57,7 @@ The wiki is split into two strata:
 (Not part of the wiki tree, but indexed here for navigability.)
 
 - `experiments/designs/aann-construction-v1.md` — provisional; contingent on `aann-stimulus-source` and `aann-operationalization`.
+- `experiments/designs/way-construction-v1.md` — provisional; anchor pending `way-construction-anchor` decision.
 
 ### Open questions
 
