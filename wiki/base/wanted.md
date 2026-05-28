@@ -81,7 +81,7 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   status: catalogued (2026-05-28, via ACL Anthology; see wiki/base/sources/bender-koller-2020-climbing.md; PDF not yet fetched for page-level quotes)
 - [P1] Mahowald, K., Ivanova, A.A., Blank, I.A., Kanwisher, N., Tenenbaum, J.B., Fedorenko, E. 2024. "Dissociating language and thought in large language models." *Trends in Cognitive Sciences* 28(6).
   why: the formal-vs-functional competence frame.
-  status: wanted (try OA / preprint)
+  status: catalogued (2026-05-28, via arXiv 2301.06627 abstract; see wiki/base/sources/mahowald-2024-dissociating.md; PDF not yet fetched for page-level quotes)
 - [P1] Lyre, H. 2024. "Understanding AI: Semantic grounding in large language models." arXiv 2402.10992.
   why: grounding-as-gradual, the basis for the `grounded.*` sub-tag structure.
   status: catalogued (2026-05-28, via arXiv abstract; see wiki/base/sources/lyre-2024-semantic-grounding.md; PDF not yet fetched)
