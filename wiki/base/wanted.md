@@ -75,19 +75,19 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   status: wanted
 - [P1] Piantadosi, S.T. & Hill, F. 2022. "Meaning without reference in large language models." NeurIPS workshop / arXiv 2208.02957.
   why: foundational for the `inferential` tag's application to LLMs. Likely OA — try to fetch directly first.
-  status: wanted (try OA first)
+  status: catalogued (2026-05-28, via arXiv abstract; see wiki/base/sources/piantadosi-hill-2022-meaning-without-reference.md; PDF not yet fetched)
 - [P1] Bender, E. & Koller, A. 2020. "Climbing towards NLU: On meaning, form, and understanding in the age of data." ACL.
   why: the form-vs-meaning argument; sets up `grounded` and the octopus thought experiment. OA via ACL Anthology.
-  status: wanted (likely OA, fetch directly)
+  status: catalogued (2026-05-28, via ACL Anthology; see wiki/base/sources/bender-koller-2020-climbing.md; PDF not yet fetched for page-level quotes)
 - [P1] Mahowald, K., Ivanova, A.A., Blank, I.A., Kanwisher, N., Tenenbaum, J.B., Fedorenko, E. 2024. "Dissociating language and thought in large language models." *Trends in Cognitive Sciences* 28(6).
   why: the formal-vs-functional competence frame.
   status: wanted (try OA / preprint)
 - [P1] Lyre, H. 2024. "Understanding AI: Semantic grounding in large language models." arXiv 2402.10992.
   why: grounding-as-gradual, the basis for the `grounded.*` sub-tag structure.
-  status: wanted (likely OA)
+  status: catalogued (2026-05-28, via arXiv abstract; see wiki/base/sources/lyre-2024-semantic-grounding.md; PDF not yet fetched)
 - [P1] Weissweiler, L., et al. 2022–24 (multiple papers on CxG probing of LLMs).
   why: nearest existing line to this project's wedge.
-  status: wanted (try OA; ACL Anthology likely)
+  status: catalogued (2026-05-28, 2023 survey paper as primary entry; see wiki/base/sources/weissweiler-2023-cxg-insight.md; 2022 and 2024 empirical papers noted there but not yet given own pages)
 - [P2] Tayyar Madabushi, H., et al. on AANN and constructional probing.
   why: same line.
   status: wanted
