@@ -13,8 +13,10 @@ meaning-senses:
   - grounded
   - inferential
   - functional-vs-formal
+status: received
 created: 2026-05-28
 updated: 2026-05-28
+pdf-pages: 18
 links:
   - rel: refines
     target: concept/grounding
@@ -39,15 +41,29 @@ Key moves:
 3. **LLMs show basic evidence in all three dimensions.** Lyre's conclusion: LLMs "are neither stochastic parrots nor semantic zombies, but already understand the language they generate, at least in an elementary sense." The phrase "elementary sense" is important — it is a gradient claim, not an endorsement of full human-like semantics.
 4. **World models.** Lyre cites evidence that LLMs develop internal world models as supporting functional and causal grounding.
 
-## Key quotes
+## Key passages
 
-From abstract and arXiv-accessible text (no page numbers available):
+Page numbers refer to the arXiv preprint PDF (18 pp.). Note: preprint has no formal section-level pagination; pages counted from p. 1 (title/abstract).
 
-> "grounding proves to be a gradual affair"
+**p. 1 (abstract) — main thesis:**
 
-> "LLMs are neither stochastic parrots nor semantic zombies, but already understand the language they generate, at least in an elementary sense"
+> "Grounding proves to be a gradual affair with a three-dimensional distinction between functional, social and causal grounding. LLMs show basic evidence in all three dimensions. A strong argument is that LLMs develop world models. Hence, LLMs are neither stochastic parrots nor semantic zombies, but already understand the language they generate, at least in an elementary sense."
 
-(LLMs) "develop world models" — cited as evidence of functional and causal grounding.
+**p. 3 — three-dimensional typology introduced:**
+
+> "it is by no means a simple yes-no question. Second, it is multi-criterial, and I will distinguish three basic types of grounding under the titles functional, social and causal grounding. Third, grounding is also gradual, in other words, it comes in degrees. My analysis aims to show that modern LLMs possess a decent functional, a weak social, and an indirect causal grounding."
+
+**p. 10 — grounding as graduated:**
+
+> "semantic grounding isn't a yes-no matter, but rather a matter of degree. Intelligent or cognitive agents and systems can be more or less semantically grounded, they can speak or think more or less meaningfully. This should be familiar to us humans: we are born without any semantic grounding and become increasingly more grounded as we grow up."
+
+**p. 12 — indirect causal grounding via world models:**
+
+> "modern LLMs develop world models, i.e. representations that are structurally similar to (parts of) the world. Put differently: the totality of text and language data is like a huge mirror of the world created by us humans, and modern LLMs are capable of extracting law-like world structures and regularities from the huge amounts of text data from which they learn."
+
+**p. 14 (conclusion) — summary verdict:**
+
+> "LLMs are neither stochastic parrots nor semantic zombies, but must rather be seen as (i) reasonably functionally grounded, (ii) weakly socially grounded, and (iii) indirectly causally grounded. A strong argument for grounding is that LLMs form world models, and the evidence for this is that the representational geometry of these models follows semantic similarities."
 
 ## What it can ground
 
@@ -69,4 +85,4 @@ From abstract and arXiv-accessible text (no page numbers available):
 
 ## Status in wanted.md
 
-Was `wanted (likely OA)`. Now `catalogued` via arXiv abstract and accessible text. Full PDF not fetched; page-level quotes not available without PDF access. Promote to `received` after full-PDF extraction.
+Was `wanted (likely OA)`, then `catalogued`. Now `received`: full PDF fetched from arXiv (2026-05-28); page-level verbatim quotes extracted above.

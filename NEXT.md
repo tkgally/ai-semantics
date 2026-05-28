@@ -2,36 +2,34 @@
 
 ## State
 
-Three AANN decisions remain open pending Tom (`decisions/open/aann-stimulus-source.md`, `decisions/open/aann-operationalization.md`). One new decision open: `decisions/open/way-construction-anchor.md` (provisional default: Option A — Goldberg 1995 examples as seed, anchor: pending). The AANN conjecture remains `designed`; the way-construction conjecture is now also `designed` (this session). Five P1 OA source pages catalogued in `wiki/base/sources/`. Full PDFs not fetched; page-level quotes pending.
+Three AANN/way-construction decisions remain open pending Tom (`decisions/open/aann-stimulus-source.md`, `decisions/open/aann-operationalization.md`, `decisions/open/way-construction-anchor.md`). Two source pages upgraded from `catalogued` to `received` this session: Bender & Koller 2020 and Lyre 2024 — both now carry verbatim page-level quotes. Three source pages remain `catalogued` (Piantadosi & Hill 2022, Weissweiler 2023, Mahowald 2024).
 
 ## Next concrete action
 
-**Fetch full PDFs for one or more catalogued sources to upgrade from `catalogued` to `received` with page-level quotes.** Priority candidates:
+**Fetch full PDFs for remaining catalogued sources.** Priority candidates:
 
-1. **Bender & Koller 2020** — PDF at ACL Anthology: `https://aclanthology.org/2020.acl-main.463.pdf`
-2. **Lyre 2024** — PDF at arXiv: `https://arxiv.org/pdf/2402.10992`
-3. **Mahowald et al. 2024** — PDF via DOI 10.1016/j.tics.2024.01.011 (CC BY 4.0, open access)
+1. **Mahowald et al. 2024** — DOI 10.1016/j.tics.2024.01.011 (CC BY 4.0, OA). Primary reference for `functional-vs-formal` tag. Try fetching via the DOI redirect.
+2. **Piantadosi & Hill 2022** — arXiv 2208.02957. Grounds the `inferential` tag; needed before any finding page invokes inferential-role semantics.
+3. **Weissweiler et al. 2023** — not yet located in OA; check ACL Anthology for GURT 2023 proceedings.
 
-For each PDF fetched: (a) extract 3–5 verbatim page-level quotes most relevant to the source page's stated contribution to the project; (b) add the quotes to the source page under a `## Key passages` section with exact page numbers; (c) upgrade `status: catalogued` to `status: received`; (d) update `wiki/index.md` entry.
+For each PDF fetched: (a) extract 3–5 verbatim page-level quotes; (b) add under `## Key passages` with exact page numbers; (c) upgrade `status: catalogued` → `status: received`; (d) update `wiki/index.md` entry.
 
 Step-by-step (next session):
 
-1. Reconcile open decisions first. Check `decisions/open/` — if any of the three decisions have been ratified, apply them (see §Blocked pending Tom).
-2. If decisions still open, proceed with PDF fetch.
-3. Fetch Bender & Koller 2020 PDF first (smallest, most foundational for `grounded` tag reasoning).
-4. Extract key passages; update `wiki/base/sources/bender-koller-2020-climbing.md`.
-5. If context permits: repeat for Lyre 2024.
-6. Update `wiki/index.md` for each upgraded source.
-7. Commit and merge.
+1. Reconcile open decisions. Check `decisions/open/` — if Tom has ratified any, apply them.
+2. Proceed with PDF fetch: try Mahowald 2024 first (most tag-critical).
+3. If context permits: repeat for Piantadosi & Hill 2022, then Weissweiler 2023.
+4. Update `wiki/index.md` for each upgraded source.
+5. Commit and merge.
 
 Files the next run will need:
 
 - `decisions/open/aann-stimulus-source.md`
 - `decisions/open/aann-operationalization.md`
 - `decisions/open/way-construction-anchor.md`
-- `wiki/base/sources/bender-koller-2020-climbing.md`
-- `wiki/base/sources/lyre-2024-semantic-grounding.md`
-- `wiki/base/sources/mahowald-2024-dissociating.md` (if fetching that PDF)
+- `wiki/base/sources/mahowald-2024-dissociating.md`
+- `wiki/base/sources/piantadosi-hill-2022-meaning-without-reference.md`
+- `wiki/base/sources/weissweiler-2023-cxg-insight.md`
 - `wiki/index.md`
 
 ## Blocked pending Tom
