@@ -2,35 +2,30 @@
 
 ## State
 
-Three AANN/way-construction decisions remain open pending Tom (`decisions/open/aann-stimulus-source.md`, `decisions/open/aann-operationalization.md`, `decisions/open/way-construction-anchor.md`). Two source pages upgraded from `catalogued` to `received` this session: Bender & Koller 2020 and Lyre 2024 — both now carry verbatim page-level quotes. Three source pages remain `catalogued` (Piantadosi & Hill 2022, Weissweiler 2023, Mahowald 2024).
+All five P1 source pages are now `received`: Bender & Koller 2020, Lyre 2024, Piantadosi & Hill 2022, Weissweiler et al. 2023, and Mahowald et al. 2024. All have section-level verbatim quotes extracted from arXiv HTML or ar5iv. Three open decisions remain pending Tom (`decisions/open/aann-stimulus-source.md`, `decisions/open/aann-operationalization.md`, `decisions/open/way-construction-anchor.md`).
 
 ## Next concrete action
 
-**Fetch full PDFs for remaining catalogued sources.** Priority candidates:
+**The reading list is complete. The source base is now ready to anchor findings pages.** The next action is to write the first **result** or **claim** page, OR to run the AANN probe against the panel — whichever Tom ratifies.
 
-1. **Mahowald et al. 2024** — DOI 10.1016/j.tics.2024.01.011 (CC BY 4.0, OA). Primary reference for `functional-vs-formal` tag. Try fetching via the DOI redirect.
-2. **Piantadosi & Hill 2022** — arXiv 2208.02957. Grounds the `inferential` tag; needed before any finding page invokes inferential-role semantics.
-3. **Weissweiler et al. 2023** — not yet located in OA; check ACL Anthology for GURT 2023 proceedings.
+The most tractable unblocked path (no pending decisions):
 
-For each PDF fetched: (a) extract 3–5 verbatim page-level quotes; (b) add under `## Key passages` with exact page numbers; (c) upgrade `status: catalogued` → `status: received`; (d) update `wiki/index.md` entry.
+1. **Write a `claim` page** grounded in Mahowald et al. 2024 — claim that LLM performance on structural acceptability tasks (e.g., AANN) is evidence of *formal* competence, not *functional* competence, and therefore does not constitute evidence about constructional meaning in the full sense. This claim is directly groundable right now: `anchors: resource/mahowald-2023-aann-stimuli` + `depends-on: source/mahowald-2024-dissociating`. It does not require running any probe.
 
-Step-by-step (next session):
+   - File: `wiki/findings/claims/formal-competence-aann-ceiling.md` (draft name)
+   - Status: `proposed`
+   - Meaning-senses: `functional-vs-formal`, `constructional`
+   - This is the theoretical wedge that makes the AANN probe scientifically interesting.
 
-1. Reconcile open decisions. Check `decisions/open/` — if Tom has ratified any, apply them.
-2. Proceed with PDF fetch: try Mahowald 2024 first (most tag-critical).
-3. If context permits: repeat for Piantadosi & Hill 2022, then Weissweiler 2023.
-4. Update `wiki/index.md` for each upgraded source.
-5. Commit and merge.
+2. **Alternatively:** Await Tom's ratification of `aann-operationalization` and `aann-stimulus-source` and then run the AANN probe.
 
 Files the next run will need:
 
-- `decisions/open/aann-stimulus-source.md`
-- `decisions/open/aann-operationalization.md`
-- `decisions/open/way-construction-anchor.md`
-- `wiki/base/sources/mahowald-2024-dissociating.md`
-- `wiki/base/sources/piantadosi-hill-2022-meaning-without-reference.md`
-- `wiki/base/sources/weissweiler-2023-cxg-insight.md`
-- `wiki/index.md`
+- `wiki/meaning-senses.md` — controlled vocabulary
+- `wiki/base/sources/mahowald-2024-dissociating.md` — grounds the formal/functional claim
+- `wiki/base/resources/mahowald-2023-aann-stimuli.md` — anchor resource
+- `wiki/findings/conjectures/aann-construction.md` — the conjecture the claim qualifies
+- `decisions/open/aann-operationalization.md` — check if ratified
 
 ## Blocked pending Tom
 
