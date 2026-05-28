@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Secrets / local config
+.env
+*.env
+
+# Local-only experiment artifacts (raw model outputs that are huge or contain
+# wholesale third-party text). Curated outputs belong in experiments/runs/ and
+# are committed; raw scratch goes here.
+experiments/data/scratch/
+experiments/data/raw/
