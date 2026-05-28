@@ -30,7 +30,8 @@ The wiki is split into two strata:
 
 ### Base — resources
 
-- `base/resources/index.md` — catalog of human-anchored empirical resources (none catalogued yet; see notes there for the shortlist to seed).
+- `base/resources/index.md` — catalog of human-anchored empirical resources.
+- `base/resources/mahowald-2023-aann-stimuli.md` — Mahowald 2023 EACL AANN stimulus suite + MTurk acceptability ratings (status: external-only); anchor for `conjecture/aann-construction`.
 
 ### Base — wants
 
@@ -39,13 +40,19 @@ The wiki is split into two strata:
 ### Findings — conjectures
 
 - `findings/conjectures/dative-alternation-information-structure.md`
-- `findings/conjectures/aann-construction.md`
+- `findings/conjectures/aann-construction.md` — status: designed (2026-05-28)
 - `findings/conjectures/way-construction.md`
 - `findings/conjectures/function-word-substitutability.md`
 
 ### Findings — claims / results / theory / open-questions
 
 (none yet)
+
+### Experiments — designs
+
+(Not part of the wiki tree, but indexed here for navigability.)
+
+- `experiments/designs/aann-construction-v1.md` — provisional; contingent on `aann-stimulus-source` and `aann-operationalization`.
 
 ### Open questions
 

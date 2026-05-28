@@ -31,7 +31,7 @@ Plus a short prose description of:
 
 ## Catalogued
 
-(none yet)
+- `mahowald-2023-aann-stimuli.md` — Mahowald 2023 EACL AANN stimulus suite (templates + slot fillers) plus MTurk acceptability ratings, released at `github.com/mahowak/aann-public`. Status: `external-only`. Grounds: `conjecture/aann-construction` and `experiments/designs/aann-construction-v1.md`.
 
 ## Shortlist to catalogue when a finding first cites them
 
