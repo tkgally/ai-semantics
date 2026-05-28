@@ -2,45 +2,51 @@
 
 ## State
 
-Bootstrapped (2026-05-28). The repository now has the schema (`CLAUDE.md`), the run discipline (`PROTOCOL.md`), the controlled meaning-sense vocabulary (`wiki/meaning-senses.md`), six concept stubs in `wiki/base/concepts/`, four founding conjectures in `wiki/findings/conjectures/`, one open question (`wiki/findings/open-questions/relational-meaning-pilot.md`), a prioritized reading list (`wiki/base/wanted.md`), a resource catalogue skeleton, a chosen panel with calibration record (`config/models.md`, `experiments/runs/2026-05-28-panel-calibration/`), and a starting budget (`config/budget.md`).
+The AANN conjecture is `designed` (2026-05-28). The first experiment design exists at `experiments/designs/aann-construction-v1.md`, operationalizing the conjecture via a continuation-likelihood contrast against Mahowald 2023's published AANN stimuli and MTurk acceptability ratings. The human anchor is catalogued at `wiki/base/resources/mahowald-2023-aann-stimuli.md` (status: `external-only` — the public release at `github.com/mahowak/aann-public` was confirmed by reading the README and the paper, but not yet mirrored locally). Two operationalization decisions are queued for Tom (see below). No probe has been run.
 
-No experimental claim is yet on the books. `findings/claims/`, `findings/results/`, `findings/theory/` are empty by design.
+`findings/claims/`, `findings/results/`, `findings/theory/` are still empty by design.
 
 ## Next concrete action
 
-**Move the AANN conjecture from `proposed` to `designed` by writing the first experiment design.**
+**Reconcile the two open AANN decisions; if both are ratified by Tom in `decisions/resolved/`, prepare the probe — mirror the Mahowald repo, lock the held-out adjective list, write the probe code. If either decision is still open, do *not* run the probe; pick the most tractable unblocked alternative instead.**
 
-Why AANN first:
+Step-by-step (next session):
 
-- It is the most-tractable of the four founding conjectures: one construction, one English-only stimulus family, a ready-made human anchor (the Weissweiler / Tayyar Madabushi line).
-- The bootstrap calibration probe already surfaced a cross-model divergence on AANN (gpt-5.4-mini gave the compositional reading; the others gave the constructional one — see `experiments/runs/2026-05-28-panel-calibration/README.md`). This is a free hint that there is signal to find.
-- The probe code is already a starting template for the real probe.
+1. **Reconcile decisions first.** Check `decisions/open/` and `decisions/resolved/`:
+   - `aann-stimulus-source.md` — provisional default: Mahowald 2023.
+   - `aann-operationalization.md` — provisional default: continuation-likelihood contrast (Option A), threshold T1, ≥30 held-out adjectives per category.
+   If Tom has ratified, move both to `decisions/resolved/` with date and rationale, then drop them from `contingent-on:` on the conjecture and the design (and rewrite any provisional language as settled).
+2. **If both decisions are ratified, do the probe-prep unit:**
+   - Mirror `https://github.com/mahowak/aann-public` into `experiments/data/aann/aann-public/`. Check license first; if not present, leave a `LICENSE-CHECK.md` note and proceed read-only.
+   - Promote `wiki/base/resources/mahowald-2023-aann-stimuli.md` from `external-only` to `catalogued` after inspecting actual file contents against the page's summary; correct any divergences.
+   - Lock the held-out adjective list. Commit `experiments/data/aann/held-out-adjectives.txt` *before* writing the probe; freeze with at least 30 adjectives per Mahowald category, chosen from outside Mahowald's slot-filler superset.
+   - Write `experiments/runs/<run-date>-aann-probe-v1/probe.py` mirroring the calibration probe's structure, including reasoning-token mitigation for Gemini. Do a 5-item dry run per panel model to confirm logprob availability (Option A vs. Option B fallback per model) before going wide.
+   - Pre-flight cost check per `config/budget.md` against the actual measured token counts from the dry run.
+   - **Do not run the full probe in the same session as the dry run.** Hand off to the *following* session for the full run + evaluation.
+3. **If either decision is still open**, pick the next tractable unit instead:
+   - Most tractable: catalogue the public OA papers in `wiki/base/wanted.md` P1 (Piantadosi & Hill 2022; Bender & Koller 2020; Lyre 2024; one Weissweiler CxG-probing paper) into `wiki/base/sources/` so a future run citing them has provenance pages. None of these requires Tom.
+   - Or: write the `way`-construction design (analogous to the AANN one), which has independent open decisions but parallel structure. This is the **second-tractable** founding conjecture per the original NEXT-after-bootstrap.
 
 Files the next run will need:
 
+- `decisions/open/aann-stimulus-source.md`
+- `decisions/open/aann-operationalization.md`
 - `wiki/findings/conjectures/aann-construction.md`
-- `wiki/base/concepts/constructional-meaning.md`
-- `experiments/runs/2026-05-28-panel-calibration/` (template + caveats)
-- `config/models.md` (panel slugs + reasoning-token caveats)
-- `config/budget.md` (pre-flight cost check)
-
-Deliverables for the next unit:
-
-1. `experiments/designs/aann-construction-v1.md` — formal design page: construct (AANN as form-meaning pairing), indicator (surprisal / acceptability contrast between licit and illicit AANN instantiations + held-out adjectives), method, **named human anchor** (Weissweiler stimulus list, catalogued as a `resource`), predictions (re-stated from the conjecture), falsification criteria.
-2. `wiki/base/resources/weissweiler-aann-stimuli.md` — the resource page for the anchor (charter §2.4: cite *content*, not existence). If the actual stimulus list cannot be located and confirmed in this session, write the resource page as `status: external-only` with a clear pointer to where it lives and what feature of it grounds the claim, and write the anchor question as `decisions/open/aann-stimulus-source.md` rather than guessing.
-3. **Operationalization gate.** Write `decisions/open/aann-operationalization.md` proposing the indicator (surprisal vs. inferential probe vs. acceptability rating) and the threshold for "tracks the construction." Provisional default: continuation-likelihood contrast on licit vs. minimally-illicit pairs, threshold = ≥20 percentile-points separation on ≥2 of 3 panel models. Downstream artifacts marked `contingent-on: aann-operationalization` until Tom ratifies.
-
-Do **not** run the actual probe in the next session. Design → gate-queue → hand off. The probe run is the session after that.
+- `experiments/designs/aann-construction-v1.md`
+- `wiki/base/resources/mahowald-2023-aann-stimuli.md`
+- `config/models.md`, `config/budget.md`
+- `experiments/runs/2026-05-28-panel-calibration/probe.py` (as a template)
 
 ## Blocked pending Tom
 
-- None blocking the next action. Two queueable decisions will land in `decisions/open/` as part of the next unit:
-  - `aann-stimulus-source.md` (which human-anchored AANN stimulus list to cite, and confirmation that we can actually inspect it).
-  - `aann-operationalization.md` (what counts as evidence the model "tracks the construction").
-- Charter-level points worth Tom's attention when convenient (no run depends on these yet):
-  - The candidate panel was chosen on a single liveness probe. After the first real probe-run, propose either confirming or rotating.
-  - `wiki/base/wanted.md` lists the founding reading list. Goldberg 1995 / 2006, Sterken & Cappelen volume, and Grindrod's recent monograph are P1; the rest can wait.
+- `decisions/open/aann-stimulus-source.md` — ratify Mahowald 2023 as primary anchor (default), or switch to Weissweiler-as-primary / Mahowald + Weissweiler combination.
+- `decisions/open/aann-operationalization.md` — ratify continuation-likelihood contrast + T1 threshold (default), or switch to Mahowald-prompt replication / paraphrase probe, or tighten the threshold to T2.
+
+Charter-level points worth Tom's attention when convenient:
+
+- Panel is still on a single liveness probe; confirm or rotate after first real probe-run.
+- `wiki/base/wanted.md` P1 list is unchanged; nothing about the AANN probe currently depends on a paywalled item being fetched.
 
 ## Reminder for the next cold-start
 
-Charter is `PROJECT.md`. Schema is `CLAUDE.md`. Run discipline is `PROTOCOL.md`. Read `wiki/index.md` before opening individual pages. **Commit and merge to the default branch** before stopping.
+Charter: `PROJECT.md`. Schema: `CLAUDE.md`. Run discipline: `PROTOCOL.md`. Read `wiki/index.md` before opening individual pages. **Reconcile `decisions/open/` first.** **Commit and merge to the default branch before stopping.**
