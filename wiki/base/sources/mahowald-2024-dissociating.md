@@ -22,9 +22,10 @@ meaning-senses:
   - functional-vs-formal
   - distributional
   - human-comparison
-status: catalogued
+status: received
 created: 2026-05-28
 updated: 2026-05-28
+pdf-pages: "arXiv 2301.06627 HTML (CC BY 4.0); no page numbers in HTML rendering"
 links:
   - rel: supports
     target: concept/formal-vs-functional-competence
@@ -56,19 +57,29 @@ Key moves:
 
 5. **Design implication.** "Models that use language in human-like ways would need to master both of these competence types, which, in turn, could require the emergence of mechanisms specialized for formal linguistic competence, distinct from functional competence." The paper is not pessimistic — it sketches a research agenda rather than a verdict.
 
-## Key quotes
+## Key passages
 
-From the abstract (verbatim, retrieved from arXiv 2301.06627):
+All quotes extracted from arXiv HTML version (arxiv.org/html/2301.06627, CC BY 4.0, 2026-05-28). No pagination available in HTML rendering; sections cited by heading name.
 
-> "Large Language Models (LLMs) have come closest among all models to date to mastering human language, yet opinions about their linguistic and cognitive capabilities remain split."
+**§Abstract — central distinction:**
 
-> "formal linguistic competence — knowledge of linguistic rules and patterns — and functional linguistic competence — understanding and using language in the world"
+> "Large Language Models (LLMs) have come closest among all models to date to mastering human language, yet opinions about their linguistic and cognitive capabilities remain split. Here, we evaluate LLMs using a distinction between formal linguistic competence—knowledge of linguistic rules and patterns—and functional linguistic competence—understanding and using language in the world."
+
+**§Abstract — LLM functional competence verdict:**
 
 > "Although LLMs are surprisingly good at formal competence, their performance on functional competence tasks remains spotty and often requires specialized fine-tuning and/or coupling with external modules."
 
-> "models that use language in human-like ways would need to master both of these competence types, which, in turn, could require the emergence of mechanisms specialized for formal linguistic competence, distinct from functional competence."
+**§"What does linguistic competence entail?" — definition of formal competence:**
 
-Page-level quotes require the full PDF; promote to `received` after PDF extraction.
+> "We define formal linguistic competence as a set of capacities required to produce and comprehend a given language. Broadly, being formally competent means getting the form of language right: knowing which strings could be valid words of a language (e.g., bnick cannot be a word in English but blick can)."
+
+**§"The language network does not support non-linguistic cognition" — neuroscience grounding:**
+
+> "The language network is extremely selective for language processing: it responds reliably when people listen to, read, or generate sentences, but not when they perform arithmetic tasks, engage in logical reasoning, understand computer programs, listen to music, categorize objects or events, reason about people's mental states, or process non-verbal communicative information like facial expressions or gestures"
+
+**§"Concluding remarks" — evaluation implication:**
+
+> "To those who criticize LLMs for their inability to do complex arithmetic or to reason about the world, we say, give language models a break: given a strict separation of language and non-linguistic capabilities in the human mind, we should evaluate these capabilities separately, recognizing successes in formal linguistic competence even when non-linguistic capabilities lag behind."
 
 ## What it can ground
 
@@ -92,4 +103,4 @@ Page-level quotes require the full PDF; promote to `received` after PDF extracti
 
 ## Status in wanted.md
 
-Was `wanted (try OA / preprint)`. Now `catalogued` via arXiv abstract (2301.06627) and abstract-level text. Full PDF available via DOI (10.1016/j.tics.2024.01.011) under CC BY 4.0; page-level quotes should be extracted when a finding page requires verbatim citation. Promote to `received` after PDF extraction.
+Was `wanted (try OA / preprint)`, then `catalogued`. Now `received`: section-level verbatim quotes extracted from arXiv HTML (2301.06627, CC BY 4.0, 2026-05-28). Full PDF also available via DOI (10.1016/j.tics.2024.01.011) for pagination verification if exact page citations are needed.

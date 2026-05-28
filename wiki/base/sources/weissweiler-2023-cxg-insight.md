@@ -17,9 +17,10 @@ access: open-access
 meaning-senses:
   - constructional
   - distributional
-status: catalogued
+status: received
 created: 2026-05-28
 updated: 2026-05-28
+pdf-pages: "arXiv 2302.02178 (ar5iv HTML); ~20 pp."
 links:
   - rel: supports
     target: concept/constructional-meaning
@@ -41,13 +42,29 @@ Key moves:
 3. **Open challenges.** Key challenges identified: (a) confound between construction knowledge and memorization of surface collocations; (b) absence of human-normed data for many constructions (making it hard to ground claims about model behavior against human behavior); (c) difficulty distinguishing formal from functional competence on construction probes.
 4. **Relation to this project.** The AANN conjecture, the `way`-construction, and the dative-alternation conjectures in this project are all instances of the program Weissweiler et al. describe. The paper provides the methodological framing that justifies using minimal-pair surprisal probes and grounding them against human acceptability data.
 
-## Key quotes
+## Key passages
 
-From abstract and arXiv-accessible text (no page numbers from preprint):
+All quotes extracted from arXiv abstract page and ar5iv HTML (ar5iv.labs.arxiv.org/html/2302.02178, 2026-05-28). No pagination in HTML rendering; sections cited by heading name.
 
-The paper argues that CxG provides "unique insight" into NLMs because constructions are form–meaning pairings whose dual nature cannot be captured by either purely formal or purely semantic probes alone.
+**§Abstract (verbatim, arXiv abs page) — scope and program:**
 
-Key open challenge (paraphrase from accessible text): distinguishing whether a model tracks a construction's constraint structure vs. simply reproducing collocational patterns from training data.
+> "Construction Grammar (CxG) has recently been used as the basis for probing studies that have investigated the performance of large pretrained language models (PLMs) with respect to the structure and meaning of constructions. In this position paper, we make suggestions for the continuation and augmentation of this line of research. We look at probing methodology that was not designed with CxG in mind, as well as probing methodology that was designed for specific constructions. We analyse selected previous work in detail, and provide our view of the most important challenges and research questions that this promising new field faces."
+
+**§2.1 (Construction Grammar) — form–meaning pairing as the unit of analysis:**
+
+> "According to CxG, meaning is encoded in abstract constellations of linguistic units of different sizes."
+
+**§3.3 (Probing with Minimal Pairs) — the minimal-pair methodology:**
+
+> "Some works in probing based on Generative Grammar have relied on finding minimal pairs of sentences that are identical except for one specific feature that, if changed, will make the sentence ungrammatical"
+
+**§3.1 (established probing limits) — memorization vs. construction-knowledge confound:**
+
+> "While this is a useful starting point for probing, it is also limited... this methodology currently does not tell us anything about if the model has identified the extent of the construction correctly, or if the model has correctly learned how each slot can be filled."
+
+**§6 (Conclusion) — research agenda:**
+
+> "We have motivated why probing large PLMs for CxG is a very important topic both for computational linguists interested in the ideal LM and for applied NLP scientists seeking to analyse and improve the current challenges that models are facing."
 
 ## What it can ground
 
@@ -76,4 +93,4 @@ These should be catalogued if/when they are directly cited by a finding page.
 
 ## Status in wanted.md
 
-Was `wanted (try OA; ACL Anthology likely)`. Now `catalogued` as the primary Weissweiler line entry. Full PDF available at arXiv URL above; page-level quotes should be extracted when a finding page requires verbatim citation.
+Was `wanted (try OA; ACL Anthology likely)`, then `catalogued`. Now `received`: full abstract (verbatim from arXiv abs) and section-level body quotes extracted from ar5iv HTML (2026-05-28). Full PDF available at arXiv for pagination verification if exact page citations are needed.

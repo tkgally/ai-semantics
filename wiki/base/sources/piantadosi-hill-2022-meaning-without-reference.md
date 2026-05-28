@@ -13,9 +13,10 @@ access: open-access
 meaning-senses:
   - inferential
   - distributional
-status: catalogued
+status: received
 created: 2026-05-28
 updated: 2026-05-28
+pdf-pages: "arXiv 2208.02957 (ar5iv HTML); ~9 pp."
 links:
   - rel: supports
     target: concept/inferential-meaning
@@ -36,15 +37,29 @@ Key moves:
 2. **Reference is not necessary for meaning.** The classic referentialist assumption (meaning = relation to world) is denied. Mathematical and logical expressions have meaning without pointing at objects; LLM expressions may be analogous.
 3. **Practical upshot.** The paper positions LLMs as capturing "important aspects of meaning" and as "approximating a compelling account of human cognition"—a stronger positive claim than mere distributional competence.
 
-## Key quotes
+## Key passages
 
-All quotes from abstract or arXiv-accessible text (no page numbers available from preprint):
+All quotes extracted from arXiv abstract page and ar5iv HTML (ar5iv.labs.arxiv.org/html/2208.02957, 2026-05-28). No pagination in HTML rendering; sections cited by heading name. Abstract quotes are from the arXiv abs page (high confidence); body quotes are from the ar5iv rendering.
 
-> "they likely capture important aspects of meaning, and moreover work in a way that approximates a compelling account of human cognition"
+**§Abstract (verbatim, arXiv abs page) — central thesis:**
 
-> "meaning cannot be determined from a model's architecture, training data, or objective function, but only by examination of how its internal states relate to each other"
+> "The widespread success of large language models (LLMs) has been met with skepticism that they possess anything like human concepts or meanings. Contrary to claims that LLMs possess no meaning whatsoever, we argue that they likely capture important aspects of meaning, and moreover work in a way that approximates a compelling account of human cognition in which meaning arises from conceptual role. Because conceptual role is defined by the relationships between internal representational states, meaning cannot be determined from a model's architecture, training data, or objective function, but only by examination of how its internal states relate to each other. This approach may clarify why and how LLMs are so successful and suggest how they can be made more human-like."
 
-> "meaning arises from conceptual role. Because conceptual role is defined by the relationships between internal representational states"
+**§"Conceptual role theory" — meaning as relational structure:**
+
+> "Meaning instead seems to come from the way concepts relate to each other."
+
+**§"Meaning and reference" — reference is not necessary:**
+
+> "there are many terms that are meaningful to us but have no discernible referent at all, such as abstract words like 'justice' and 'wit.'"
+
+**§"Conceptual role in LLMs" — internal representational geometry:**
+
+> "The relational geometry of vector representations have been examined for instance in analogy problems."
+
+**§"Conclusion" — upshot for LLMs:**
+
+> "If theories about conceptual role are the correct account, then LLMs likely already share the foundation of how our own concepts get their meaning."
 
 ## What it can ground
 
@@ -64,4 +79,4 @@ All quotes from abstract or arXiv-accessible text (no page numbers available fro
 
 ## Status in wanted.md
 
-Was `wanted (try OA first)`. Now `catalogued` via arXiv abstract and accessible text. Full PDF not fetched into repo; page-level quotes not available without PDF access. Promote to `received` only after full-PDF extraction.
+Was `wanted (try OA first)`, then `catalogued`. Now `received`: full abstract (verbatim from arXiv abs) and section-level body quotes extracted from ar5iv HTML (2026-05-28). Full PDF available at arXiv for pagination verification if exact page citations are needed.
