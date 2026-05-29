@@ -14,6 +14,8 @@ links:
   - rel: refines
     target: open-question/lexical-polysemy-gradience
   - rel: depends-on
+    target: concept/polysemy
+  - rel: depends-on
     target: concept/distributional-meaning
   - rel: depends-on
     target: concept/referential-meaning
