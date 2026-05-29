@@ -16,6 +16,8 @@ links:
     target: result/way-construction-traversal-v1
 ---
 
+> **Off-ceiling follow-up 2026-05-29** → [`result/argument-structure-coercion-v2`](../results/argument-structure-coercion-v2.md): the v1 ceiling is **cue-sensitive, not a brittle template** — all three models withhold the traversal inference when an explicit clause denies it (way `cue` affirm 0–20%, 60–100 pp drop). One wrinkle: the way-construction coerces traversal even on self-motion-precluding `resist` verbs (*slept her way…*, 70–100%) — the construction carries traversal independent of the verb — but it is still cancelled by the explicit cue. Calibration: only an *explicit* denial was tested; a subtler cue is v2b.
+
 > **Tested 2026-05-29** (conjecture lifecycle: an experiment ran; the result page stays `proposed` pending Tom's review) → [`result/way-construction-traversal-v1`](../results/way-construction-traversal-v1.md). The confirm bar (predictions 1–3) is met by all three panel models on both instruments: way path-traversal rate 77.8–100%, gap 77.7–100 pp over the location control, anti-motion verb category holding at/near ceiling; the added idiomatic over-generalization guard is at 0%. gpt-5.4-mini is the conservative outlier, declining 4–5 scattered items (*hum, eat, chat*, +*snack* under FC) as "may or may not have moved" — a cautious entailment bar, not the predicted verb-reading failure (it affirms the anti-motion items at 100%). Lead caveat: ceiling on relatively easy controls is weak evidence for deep processing; modest, single run.
 
 # Conjecture: LLMs draw the path-traversal (self-motion) inference of the *way*-construction

@@ -9,8 +9,7 @@ meaning-senses:
   - human-comparison
 status: provisional
 anchor: resource/scivetti-2025-cxnli-dataset
-contingent-on:
-  - cc-v2-difficulty-operationalization
+contingent-on: []
 created: 2026-05-29
 updated: 2026-05-29
 links:
@@ -53,7 +52,7 @@ v1 showed the panel asserts the correct covariation direction for ~100% of clear
 
 ## 3. Indicator and thresholds — OPERATIONALIZATION GATE (charter §8)
 
-v1's thresholds (T1 ≥30pp, T2 ≥70%, T3 within-15pp) were tuned to a near-ceiling regime and are uninformative if v2 is built to push off ceiling. v2 needs **new, pre-registered** difficulty-sensitive measures, and choosing them after seeing v1's ceiling is exactly the retuning trap. So this design is `contingent-on: cc-v2-difficulty-operationalization` — a decision page the next run must open (provisional default below) and Tom must ratify before v2 runs. The live choices:
+v1's thresholds (T1 ≥30pp, T2 ≥70%, T3 within-15pp) were tuned to a near-ceiling regime and are uninformative if v2 is built to push off ceiling. v2 needs **new, pre-registered** difficulty-sensitive measures, and choosing them after seeing v1's ceiling is exactly the retuning trap. The difficulty operationalization is now **ratified** ([`decisions/resolved/cc-v2-difficulty-operationalization`](../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md), 2026-05-29: UNIFY across CC + caused-motion + way + companion conative, provisional default adopted), so `contingent-on: []` and the measures below are settled — frozen with the item set before any run. The choices it fixed:
 
 - **Conflicting-cue accuracy** — fraction following the *constructional* direction against the world-knowledge cue. Candidate confirm bar: ≥ X% (X to be fixed; the honest expectation is this is where the panel finally drops below ceiling).
 - **Composition accuracy** — fraction correct on 2-step chains, vs. a single-step baseline; report the *drop*.
@@ -78,7 +77,7 @@ Same panel as v1 ([`config/models.md`](../../config/models.md)); same logprob-fr
 
 ## 7. Handoff hooks
 
-1. Open `wiki/decisions/open/cc-v2-difficulty-operationalization.md` with the §3 choices and the provisional default; do not auto-ratify.
+1. **DONE 2026-05-29** — `cc-v2-difficulty-operationalization` is ratified (UNIFY + provisional default), now at [`decisions/resolved/cc-v2-difficulty-operationalization`](../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md). The §3 choices are settled; build+freeze the item set before any run.
 2. Build + freeze a v2 `items.csv` (conflicting-cue, multi-step, embedded, near-miss controls, difficulty score) before any probe call.
 3. If pursuing the conflicting-cue / composition human-comparison, queue a human-rated anchor in `wanted.md` first.
 4. Mirror the v1 run structure under `experiments/runs/<date>-comparative-correlative-probe-v2/`.

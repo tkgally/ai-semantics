@@ -1,0 +1,98 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "caused-motion_nli": {
+    "canonical": 100.0,
+    "resist": 40.0,
+    "cue": 0.0,
+    "canonical_minus_cue_drop": 100.0,
+    "monotone_decline": true
+   },
+   "way_nli": {
+    "canonical": 100.0,
+    "resist": 100.0,
+    "cue": 0.0,
+    "canonical_minus_cue_drop": 100.0,
+    "monotone_decline": true
+   },
+   "caused-motion_fc": {
+    "canonical": 100.0,
+    "resist": 30.0,
+    "cue": 0.0,
+    "canonical_minus_cue_drop": 100.0,
+    "monotone_decline": true
+   },
+   "way_fc": {
+    "canonical": 100.0,
+    "resist": 100.0,
+    "cue": 10.0,
+    "canonical_minus_cue_drop": 90.0,
+    "monotone_decline": true
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "caused-motion_nli": {
+    "canonical": 80.0,
+    "resist": 0.0,
+    "cue": 0.0,
+    "canonical_minus_cue_drop": 80.0,
+    "monotone_decline": true
+   },
+   "way_nli": {
+    "canonical": 70.0,
+    "resist": 80.0,
+    "cue": 0.0,
+    "canonical_minus_cue_drop": 70.0,
+    "monotone_decline": false
+   },
+   "caused-motion_fc": {
+    "canonical": 80.0,
+    "resist": 0.0,
+    "cue": 10.0,
+    "canonical_minus_cue_drop": 70.0,
+    "monotone_decline": false
+   },
+   "way_fc": {
+    "canonical": 80.0,
+    "resist": 70.0,
+    "cue": 20.0,
+    "canonical_minus_cue_drop": 60.0,
+    "monotone_decline": true
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "caused-motion_nli": {
+    "canonical": 100.0,
+    "resist": 70.0,
+    "cue": 0.0,
+    "canonical_minus_cue_drop": 100.0,
+    "monotone_decline": true
+   },
+   "way_nli": {
+    "canonical": 100.0,
+    "resist": 100.0,
+    "cue": 20.0,
+    "canonical_minus_cue_drop": 80.0,
+    "monotone_decline": true
+   },
+   "caused-motion_fc": {
+    "canonical": 100.0,
+    "resist": 20.0,
+    "cue": 0.0,
+    "canonical_minus_cue_drop": 100.0,
+    "monotone_decline": true
+   },
+   "way_fc": {
+    "canonical": 100.0,
+    "resist": 100.0,
+    "cue": 20.0,
+    "canonical_minus_cue_drop": 80.0,
+    "monotone_decline": true
+   }
+  }
+ },
+ "reading_rule": "cue affirm >=70% in >=2/3 = template/H-default; ~chance/low = cue-respecting/H-deep (report-the-rate, ratified)"
+}

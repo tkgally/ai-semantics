@@ -9,8 +9,7 @@ meaning-senses:
   - human-comparison
 status: provisional
 anchor: pending
-contingent-on:
-  - cc-v2-difficulty-operationalization
+contingent-on: []
 created: 2026-05-29
 updated: 2026-05-29
 links:
@@ -42,20 +41,18 @@ Both results carry the same lead caveat, stated verbatim in each page: **ceiling
 
 On the v1 instruments these two predict the *same* near-ceiling affirm rate. **v2's job is to find the breaking point and, in doing so, to test whether the project's tentative "add easy / cancel hard" asymmetry survives off ceiling** (see [`theory/constructional-meaning-in-llms`](../../wiki/findings/theory/constructional-meaning-in-llms.md), which now carries that asymmetry as a *tentative* generalization — and which explicitly flags that all three add-direction positives are "ceiling / near-ceiling results on relatively easy controls").
 
-This page is a **design**. It does **not** run here. No v2 probe runs until the operationalization gate below is ratified.
+This page is a **design**. It does **not** run here. The operationalization gate below is now **ratified** (2026-05-29); what remains before a run is the build+freeze of the item set.
 
-## 1. Gate: this design is contingent on the cc-v2 decision (scope broadened)
+## 1. Gate: the difficulty operationalization is RATIFIED (decision resolved 2026-05-29)
 
-This v2 is `contingent-on: cc-v2-difficulty-operationalization` — the **existing** open decision ([`decisions/open/cc-v2-difficulty-operationalization`](../../wiki/decisions/open/cc-v2-difficulty-operationalization.md)). That decision was opened to fix the harder comparative-correlative v2's difficulty axes, conflicting-cue bar, degradation-shape criterion, and human-anchor scope *before* any v2 probe runs, precisely to avoid the retuning trap. The **four live choices it already enumerates are exactly the four this design needs**, only over a different construction family.
+This v2 was gated on `cc-v2-difficulty-operationalization` — the difficulty-operationalization decision ([`decisions/resolved/cc-v2-difficulty-operationalization`](../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md)). **Tom ratified it 2026-05-29: UNIFY + adopt the provisional default.** The decision's scope is now broadened from CC-only to govern all off-ceiling argument-structure v2 designs (CC + caused-motion + way + the companion harder-conative), and its provisional default is adopted as the **fixed** operationalization. So the four choices below are no longer open — they are **settled, and frozen before any probe**:
 
-So this design **proposes to broaden the scope of that same decision** to cover caused-motion and the way-construction, rather than open a new decision file (a single difficulty-operationalization gate governing all the off-ceiling v2s keeps the yardstick discipline in one place). It does **not** create a new decision. The four choices the broadened decision must fix for this family, before any probe:
+1. **Difficulty axes** (§3 below): conflicting-cue (primary) + multi-step/coercion-resisting + near-miss controls + a graded ladder (embedded-CC deferred to v3).
+2. **Conflicting-cue reading rule**: report the follow-construction-against-the-cue rate; "≥70% in ≥2/3 models = robust, ~chance/cue-following = informative partial-null" (report-the-rate, not a manufactured pass bar).
+3. **Degradation-shape criterion**: monotone with slope < a fixed pp-drop-per-difficulty-step = graceful, else brittle cliff; the slope threshold is frozen *with* the item set.
+4. **Human-anchor scope**: harder arms run internal-contrast-only with the human clause "pending" (§5); queue a human-rated harder anchor in `wanted.md` rather than blocking.
 
-1. **Difficulty axes in scope** for caused-motion + way (§3 below).
-2. **Conflicting-cue confirm bar** — the follow-construction-against-the-cue rate, reported, with a reading rule (not a manufactured pass bar).
-3. **Degradation-shape criterion** — what counts as graceful (monotone, shallow) vs. brittle cliff on the graded ladder.
-4. **Human-anchor scope** — internal-contrast-only with the human clause "pending" (Option-4 logic; see §5).
-
-Until Tom ratifies the broadened decision, every artifact below stays provisional and **no probe runs**.
+`contingent-on: []` — the yardstick is fixed. What remains before a run is purely the build+freeze of the item set (and `anchor: pending` stands for the hard arms, which is a data-availability matter, not an open decision). No v2 *result* is promoted to settled until the probe runs and is reviewed.
 
 ## 2. What v1 could not distinguish (per construction)
 
@@ -68,7 +65,7 @@ v1 for both constructions used controls that *removed* the construction (caused-
 
 ## 3. Harder manipulations (each isolates a v1 blind spot)
 
-For each manipulation, **1–2 illustrative item sketches per construction** are given. These are **ILLUSTRATIVE drafts, NOT frozen stimuli** — the frozen `items.csv` is built and hashed by `build_items.py` only after the broadened decision is ratified (the canonical retuning-trap guard: building difficulty after seeing v1's ceiling is exactly the §8 failure mode). Each sketch is written so that a model genuinely *computing* the added inference and a model *defaulting* to "yes" make **different** predictions.
+For each manipulation, **1–2 illustrative item sketches per construction** are given. These are **ILLUSTRATIVE drafts, NOT frozen stimuli** — the frozen `items.csv` is built and hashed by `build_items.py` only at build time, against the now-ratified difficulty operationalization (the canonical retuning-trap guard: the difficulty measures were fixed by the decision *before* this build step, since building difficulty after seeing v1's ceiling is exactly the §8 failure mode). Each sketch is written so that a model genuinely *computing* the added inference and a model *defaulting* to "yes" make **different** predictions.
 
 ### (a) Conflicting-cue items — the key manipulation
 
@@ -102,7 +99,7 @@ Controls **closer** to the construction than v1's absent-construction controls, 
 
 **No pass/fail thresholds are pre-committed in this design.** The v1 confirm bars (way ≥70% / gap ≥30 pp; caused-motion cm ≥70% / gap ≥30 pp) were calibrated to a near-ceiling regime and are **uninformative** once v2 is built to push off ceiling. Choosing v2's difficulty axes, conflicting-cue bar, degradation-shape criterion, or human-anchor scope **after** seeing v1's ceiling is the **canonical retuning trap** (charter §8; [`PROTOCOL.md`](../../PROTOCOL.md) §8-failure-modes: "Quietly tuning the operationalization until a null becomes positive … that is an operationalization gate. Queue it.").
 
-Therefore all four are **fixed by the broadened [`decisions/open/cc-v2-difficulty-operationalization`](../../wiki/decisions/open/cc-v2-difficulty-operationalization.md) decision BEFORE any v2 probe runs.** The framing is **report-the-rate**, not a manufactured pass bar:
+Therefore all four are **fixed by the ratified [`decisions/resolved/cc-v2-difficulty-operationalization`](../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md) decision (2026-05-29) and frozen with the item set before any probe.** The framing is **report-the-rate**, not a manufactured pass bar:
 
 - **Conflicting-cue follow-construction rate** — the fraction following the *constructional* added inference against the resolving cue. Reported per construction, per model, per instrument. The honest expectation is that this is where the panel finally drops below ceiling; a near-chance or cue-following pattern is the **informative partial-null** (charter §2.6 / §6: write the null first-class), not a failure to be tuned away.
 - **Coercion-resistance behavior** — affirm rate on coercion-resisting verbs vs. canonical hosts; the *drop* is the quantity, with a model that flags anomaly (rather than mechanically affirming) read as evidence against H-default.
@@ -123,7 +120,7 @@ The project currently carries a **tentative** generalization (see [`theory/const
 - If **both degrade similarly off ceiling** → the v1 asymmetry was an artifact of ceiling/difficulty, and the generalization should be **retired or down-graded** to "the v1 add tasks were easier," not "adding is easier than cancelling." This is the first-class null.
 - If **add degrades more than cancel** → the asymmetry reverses, a strong surprise worth a dedicated write-up.
 
-This is the scientific payoff that justifies v2 beyond "harder for its own sake": only a matched off-ceiling add/cancel pair can tell whether the add/cancel asymmetry is real or a ceiling artifact. The harder-conative cancel arm is noted here as the **companion** v2 the asymmetry test requires; it is not built by this design (disjoint-writes discipline) — it is a separate design page, gated on the same broadened decision.
+This is the scientific payoff that justifies v2 beyond "harder for its own sake": only a matched off-ceiling add/cancel pair can tell whether the add/cancel asymmetry is real or a ceiling artifact. The harder-conative cancel arm is noted here as the **companion** v2 the asymmetry test requires; it is not built by this design (disjoint-writes discipline) — it is a separate design page, gated on the same (now ratified) difficulty decision.
 
 ## 6. Human anchor — honest scope (pending; internal-contrast-only)
 
@@ -142,19 +139,19 @@ v2 reuses the v1 harness with no new machinery:
 - **Panel** unchanged ([`config/models.md`](../../config/models.md)): claude-sonnet-4.6 / gpt-5.4-mini / gemini-3.5-flash, as subjects.
 - **Run layout** mirrors v1 under `experiments/runs/<date>-argument-structure-coercion-probe-v2/`.
 
-**Back-of-envelope pre-flight cost.** The v1 add-direction probes cost **$0.044** (caused-motion, 180 calls) and **$0.072** (way, 360 calls). A v2 of comparable size (the new arms × 2 constructions × 2 instruments × 3 models, on the order of ~120–200 items) is expected to land in the same **~$0.05–0.15** range — well under the $5 single-run flag in [`config/budget.md`](../../config/budget.md). Pre-flight per the budget page before running. **No probe runs until the broadened decision is ratified** (charter §8; PROTOCOL §5).
+**Back-of-envelope pre-flight cost.** The v1 add-direction probes cost **$0.044** (caused-motion, 180 calls) and **$0.072** (way, 360 calls). A v2 of comparable size (the new arms × 2 constructions × 2 instruments × 3 models, on the order of ~120–200 items) is expected to land in the same **~$0.05–0.15** range — well under the $5 single-run flag in [`config/budget.md`](../../config/budget.md). Pre-flight per the budget page before running. The difficulty decision is **ratified**; what gates a run now is only the build+freeze of the item set (charter §8; PROTOCOL §5).
 
 ## 8. What v2 does not do
 
 - Does not revisit v1's settled contrasts (the absent-construction controls; the causal-attribution ctrl-sep; the idiomatic over-generalization guard) — those passed; v2 only adds harder, anti-cued layers.
 - Does not introduce a scored free-generation metric (no un-anchored indicator).
-- Does not pre-commit any pass/fail threshold (§4) — the difficulty axes, conflicting-cue bar, degradation-shape criterion, and human-anchor scope are all fixed by the broadened decision before the run.
+- Does not pre-commit any pass/fail threshold (§4) — the difficulty axes, conflicting-cue bar, degradation-shape criterion, and human-anchor scope are all fixed by the ratified decision and frozen with the item set before the run.
 - Does not state any human-level claim on the conflicting-cue / coercion-resisting arms (§6).
 - Does not build the companion harder-conative cancel arm itself (§5) — that is a separate design, same gate.
 
 ## 9. Handoff hooks
 
-1. Surface to Tom: **broaden** [`decisions/open/cc-v2-difficulty-operationalization`](../../wiki/decisions/open/cc-v2-difficulty-operationalization.md) to cover caused-motion + way (and the companion harder conative), or split it — do **not** auto-ratify, do **not** open a duplicate decision.
+1. **DONE 2026-05-29** — Tom ratified [`decisions/resolved/cc-v2-difficulty-operationalization`](../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md): UNIFY (covers CC + caused-motion + way + the companion harder conative) + adopt the provisional default. The difficulty yardstick is fixed.
 2. After ratification: build + freeze a v2 `items.csv` (conflicting-cue, coercion-resisting, graded ladder, near-miss controls, difficulty score) via `build_items.py` **before** any probe call.
 3. Author the companion harder-conative cancel-direction design so the add/cancel asymmetry test (§5) can run as a matched off-ceiling pair.
 4. If a human comparison on the hard arms is wanted, queue a human-rated conflicting-cue/coercion-resisting anchor in `wanted.md` first; never invent one.

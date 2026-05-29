@@ -52,8 +52,9 @@ Aggregate to a running ledger here when the second run lands (don't pre-create).
 | 2026-05-29 | conative minimal-pair probe v1 (336 calls: 56 items × 2 instruments × 3 models) | ≈ $0.071 (A $0.049 / B $0.003 / C $0.020) |
 | 2026-05-29 | caused-motion minimal-pair probe v1 (180 calls: 30 items × 2 instruments × 3 models) | ≈ $0.044 (A $0.027 / B $0.002 / C $0.015) |
 | 2026-05-29 | way-construction minimal-pair probe v1 (360 calls: 60 items × 2 instruments × 3 models) | ≈ $0.072 (A $0.052 / B $0.003 / C $0.016) |
+| 2026-05-29 | argument-structure coercion probe v2 / off-ceiling (360 calls: 60 items × 2 instruments × 3 models) | ≈ $0.093 (A $0.055 / B $0.003 / C $0.035) |
 
-Running total against the $20/month soft cap: ≈ $0.47. Ample headroom.
+Running total against the $20/month soft cap: ≈ $0.56. Ample headroom.
 
 ## When to ask Tom
 

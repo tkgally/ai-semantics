@@ -1,11 +1,14 @@
 ---
 id: cc-v2-difficulty-operationalization
-title: How is the harder comparative-correlative v2 probe operationalized (difficulty axes, conflicting-cue bar, degradation-shape criterion)?
-status: open
+title: How is the off-ceiling argument-structure v2 operationalized (difficulty axes, conflicting-cue bar, degradation-shape criterion) — unified scope?
+status: resolved
+resolved: 2026-05-29
+resolution: "UNIFY + adopt the provisional default. Ratified by Tom 2026-05-29. (1) Scope broadened from CC-only to ALL off-ceiling argument-structure v2 designs — comparative-correlative + caused-motion + way (and the companion harder-conative cancel-direction probe) are governed by this single difficulty-operationalization gate. (2) The provisional default is adopted as the FIXED operationalization: include conflicting-cue (primary) + multi-step/coercion-resisting + near-miss controls + a graded difficulty ladder (defer embedded-CC to v3); report the conflicting-cue rate with the reading rule '>=70% follow-construction in >=2/3 models = robust, ~chance/cue-following = informative partial-null' (report-the-rate, NOT a manufactured pass bar); degradation read as 'monotone with slope < a fixed pp-drop-per-difficulty-step = graceful, else brittle cliff', the slope threshold frozen WITH the item set; harder arms run internal-contrast-only with the human clause marked pending (queue a human-rated harder anchor in wanted.md rather than blocking); keep both NLI + forced-choice; free-text justification is a qualitative side-channel only. This fixes the YARDSTICK before any v2 runs (anti-retuning); no v2 result is promoted to settled until run + reviewed."
 opened: 2026-05-29
 opened-by: orchestrator
 contingent-artifacts:
   - design/comparative-correlative-v2
+  - design/argument-structure-coercion-v2
 ---
 
 # Decision: comparative-correlative v2 difficulty operationalization

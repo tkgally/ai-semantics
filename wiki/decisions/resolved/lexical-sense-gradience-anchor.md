@@ -1,7 +1,9 @@
 ---
 id: lexical-sense-gradience-anchor
 title: Which human-rated resource should anchor the lexical sense-gradience conjecture — and is graded usage-similarity (Usim) the right one?
-status: open
+status: resolved
+resolved: 2026-05-29
+resolution: "Option B — anchor on a DIFFERENT graded set, NOT Usim. Ratified by Tom 2026-05-29. Usim is retired as the candidate anchor: this session's inspection verified its scale (5-point) and counts (34 lemmas / 1530 pairs / 3 annotators) from primary sources, but the released file is not currently fetchable (Box 404 / mirror 503) and carries no explicit data license — so it fails the fetchability + license preconditions. The conjecture's monotonicity clause still needs a GRADED, RELEASED, LICENSED usage/sense-similarity resource; the specific set is to be IDENTIFIED + VERIFIED by a follow-on run before it is the in-repo anchor. Leading candidates (none yet verified in-repo): DWUG / Diachronic Word Usage Graphs (Schlechtweg et al.; graded 4-point usage-similarity judgments in the Usim tradition; CC BY; on Zenodo/GitHub) and CoSimLex (SemEval-2020 Task 3; graded word similarity in context; released). WiC (binary, CC BY-NC 4.0) remains the discrete cross-check. Until a specific graded set is verified + mirrored, the conjecture stays `proposed`/anchor-pending-identification and may not promote a result; this is a build/verify task, not a re-decision (Tom has fixed the DIRECTION: a different graded set, not Usim)."
 opened: 2026-05-29
 opened-by: orchestrator
 contingent-artifacts:
