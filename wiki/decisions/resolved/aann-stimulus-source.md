@@ -1,7 +1,9 @@
 ---
 id: aann-stimulus-source
 title: Which human-anchored AANN stimulus set should ground the AANN probe?
-status: open
+status: resolved
+resolved: 2026-05-29
+resolution: "Option A — Mahowald 2023 (EACL, arXiv 2301.12564) is the AANN human anchor. Public, item-level MTurk acceptability ratings; ready to use. Ratified by Tom."
 opened: 2026-05-28
 opened-by: lead-agent
 contingent-artifacts:

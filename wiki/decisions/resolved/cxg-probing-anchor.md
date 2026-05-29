@@ -1,7 +1,9 @@
 ---
 id: cxg-probing-anchor
 title: What human-anchored resource grounds the general claim that CxG-probing surprisal is a valid operationalization of constructional meaning sensitivity?
-status: open
+status: resolved
+resolved: 2026-05-29
+resolution: "Option A — keep the claim scoped to AANN (anchored to resource/mahowald-2023-aann-stimuli); cross-construction generality stays an explicitly provisional extrapolation, not settled. Scivetti does not broaden this claim (it concerns the surprisal technique; Scivetti uses inference-style probing). Aligns with Tom's standing steer (2026-05-29) to keep all claims realistic and modest. Ratified by Tom."
 opened: 2026-05-28
 opened-by: subagent
 contingent-artifacts:

@@ -7,8 +7,7 @@ meaning-senses:
   - inferential
   - functional-vs-formal
 status: proposed
-contingent-on:
-  - comparative-correlative-anchor
+contingent-on: []
 created: 2026-05-29
 updated: 2026-05-29
 links:
@@ -48,7 +47,7 @@ The sharp empirical question this conjecture stakes out: Weissweiler et al. 2022
 2. **Minimal-pair controls.** Controls that reuse the same scalar lexical material in a non-CC syntax (two independent clauses; a single comparative) yield a substantially lower covariation-inference rate — isolating the construction, not the words, as the source of the inference.
 3. **Direction sensitivity (the discriminating prediction).** The CC can be positive (*the more …, the more …*) or inverse (*the more …, the less …*). A model **using** the meaning tracks the direction of covariation, not just the template: inverse-CC items flip the predicted answer. A model only recognising the form would not reliably flip.
 4. **Generalization to atypical scale pairs.** The covariation inference holds for low-frequency / pragmatically atypical scale pairings unlikely to be memorised as CC strings (Scivetti's atypical-filler lever) — distinguishing genuine constructional use from an n-gram effect (ties to [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md)).
-5. **Generational contrast + panel divergence.** Decoder LLMs outperform the encoder-PLM chance-level semantic baseline of Weissweiler 2022 (the gap narrows), but remain below the human native-speaker baseline (the *candidate* Scivetti 2025 baseline, pending item-level inspection and ratification of `comparative-correlative-anchor` — so the "below human" clause is contingent, while the "clears the encoder baseline" clause is not); per-model divergence is itself data on whether residual failure is architectural or idiosyncratic.
+5. **Generational contrast + panel divergence.** Decoder LLMs outperform the encoder-PLM chance-level semantic baseline of Weissweiler 2022 (the gap narrows), but remain below the human native-speaker baseline (the Scivetti 2025 baseline, ratified 2026-05-29 as the `comparative-correlative-anchor`); per-model divergence is itself data on whether residual failure is architectural or idiosyncratic.
 
 ## What would confirm / falsify
 
@@ -57,15 +56,14 @@ The sharp empirical question this conjecture stakes out: Weissweiler et al. 2022
 - **Weak:** the inference rate tracks the surface template (positive-CC handled, inverse-CC not; or atypical fillers collapse), i.e. form recognised, meaning still not used — the 2022 dissociation **persists** essentially unchanged.
 - **Falsify (of the "narrows" claim):** decoder LLMs are at chance on the covariation inference just as the encoder PLMs were — no narrowing. A clean null here is a first-class negative (charter §2.6): it would say the form/meaning dissociation is durable across model generations, strengthening the `distributional`/formal reading.
 
-## Human anchor (pending)
+## Human anchor
 
-No human-rated CC **inference** dataset is in-repo. Two in-repo sources bear on the probe but neither is a human-rated `resource`:
-- [`source/weissweiler-2022-comparative-correlative`](../../base/sources/weissweiler-2022-comparative-correlative.md) supplies the **encoder-PLM baseline** (form recognised, meaning at chance) — a model-side precedent, not a human norm.
-- The Scivetti et al. 2025 **CxNLI CC subset** ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)) contains human-annotated NLI triples for the comparative correlative with a native-speaker accuracy baseline — the natural **candidate human anchor**, but the dataset is `external-only` (release repo not yet inspected) and the CC items are not separately verified.
+Resolved 2026-05-29: the **Scivetti CxNLI dataset** ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)) — specifically its **CC subset** of human-annotated NLI triples with a native-speaker accuracy baseline — is the ratified human anchor for this conjecture. The other relevant in-repo source remains a model-side precedent, not a human norm:
+- [`source/weissweiler-2022-comparative-correlative`](../../base/sources/weissweiler-2022-comparative-correlative.md) supplies the **encoder-PLM baseline** (form recognised, meaning at chance).
 
-Until a human-rated CC inference set is in-repo and inspected, this conjecture carries `anchor: pending`.
+Important caveat on what this anchor delivers: the release repo was inspected (de-anonymized at github.com/melissatorgbi/beyond-memorization) and provides a **single gold-standard label per item plus an aggregate ~0.90/0.83 human baseline — an "answer key," NOT a per-item multi-rater gradient.** So it anchors an answer-key comparison (and the aggregate "below human" baseline), not a graded human-judgment distribution.
 
-→ Open decision queued: [`decisions/open/comparative-correlative-anchor`](../../decisions/open/comparative-correlative-anchor.md) — whether the Scivetti CxNLI CC subset (pending item-level inspection and ratification) grounds the probe, or whether to fall back to Weissweiler 2022's stimulus design as a seed with the human-comparison arm marked pending.
+→ Anchor decision (ratified 2026-05-29): [`decisions/resolved/comparative-correlative-anchor`](../../decisions/resolved/comparative-correlative-anchor.md) — the Scivetti CxNLI CC subset grounds the probe.
 
 ## Notes / caveats
 

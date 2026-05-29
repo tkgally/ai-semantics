@@ -1,7 +1,9 @@
 ---
 id: comparative-correlative-anchor
 title: Which human-anchored resource should ground the comparative-correlative inference probe?
-status: open
+status: resolved
+resolved: 2026-05-29
+resolution: "Option A — adopt the Scivetti CxNLI comparative-correlative subset as the human anchor (Scivetti bundle). De-anonymized repo inspected 2026-05-29: per-item CxN-Type labels (incl. Comparative-Correlative) + a single gold relation per item confirmed; aggregate human baseline only. Anchor only — the conjecture stays untested. Ratified by Tom."
 opened: 2026-05-29
 opened-by: orchestrator
 contingent-artifacts:

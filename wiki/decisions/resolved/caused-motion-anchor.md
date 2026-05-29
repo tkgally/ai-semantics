@@ -1,7 +1,9 @@
 ---
 id: caused-motion-anchor
 title: Which human-anchored resource should ground the caused-motion construction probe?
-status: open
+status: resolved
+resolved: 2026-05-29
+resolution: "Adopt the Scivetti CxNLI dataset as the human anchor (Scivetti bundle, with conative / way / comparative-correlative). De-anonymized repo (github.com/melissatorgbi/beyond-memorization) inspected 2026-05-29: per-item CxN-Type labels + a single gold relation per item confirmed; aggregate human baseline only (no multi-rater gradient). Anchor only — the conjecture stays untested. Ratified by Tom."
 opened: 2026-05-28
 opened-by: subagent
 contingent-artifacts:
