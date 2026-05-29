@@ -1,0 +1,3202 @@
+[
+ {
+  "item_id": "lecture-cc-positive",
+  "scale_pair": "lecture",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the lecture's length",
+  "dim2": "the students' engagement",
+  "sentence": "The longer the lecture ran, the more engaged the students became.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the lecture's length increases, the students' engagement increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The longer the lecture ran, the more engaged the students became.\nHypothesis: As the lecture's length increases, the students' engagement increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.2137541770935059,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 91,
+   "total_tokens": 217,
+   "cost": 0.001008,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001008,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.000819
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 90,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lecture-cc-inverse",
+  "scale_pair": "lecture",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the lecture's length",
+  "dim2": "the students' engagement",
+  "sentence": "The longer the lecture ran, the less engaged the students became.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the lecture's length increases, the students' engagement increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The longer the lecture ran, the less engaged the students became.\nHypothesis: As the lecture's length increases, the students' engagement increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.0496208667755127,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 101,
+   "total_tokens": 227,
+   "cost": 0.001098,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001098,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.000909
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 100,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lecture-ctrl-two",
+  "scale_pair": "lecture",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the lecture's length",
+  "dim2": "the students' engagement",
+  "sentence": "The lecture ran long. The students were highly engaged.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the lecture's length increases, the students' engagement increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The lecture ran long. The students were highly engaged.\nHypothesis: As the lecture's length increases, the students' engagement increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.7042479515075684,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 165,
+   "total_tokens": 289,
+   "cost": 0.001671,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001671,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001485
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 164,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lecture-ctrl-single",
+  "scale_pair": "lecture",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the lecture's length",
+  "dim2": "the students' engagement",
+  "sentence": "The lecture ran longer than usual.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the lecture's length increases, the students' engagement increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The lecture ran longer than usual.\nHypothesis: As the lecture's length increases, the students' engagement increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.2586266994476318,
+  "usage": {
+   "prompt_tokens": 120,
+   "completion_tokens": 123,
+   "total_tokens": 243,
+   "cost": 0.001287,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001287,
+    "upstream_inference_prompt_cost": 0.00018,
+    "upstream_inference_completions_cost": 0.001107
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 122,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ticket-cc-positive",
+  "scale_pair": "ticket",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the ticket price",
+  "dim2": "the size of the crowd",
+  "sentence": "The higher the ticket price, the larger the crowd grew.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the ticket price increases, the size of the crowd increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The higher the ticket price, the larger the crowd grew.\nHypothesis: As the ticket price increases, the size of the crowd increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.3821022510528564,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 152,
+   "total_tokens": 276,
+   "cost": 0.001554,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001554,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001368
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 151,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ticket-cc-inverse",
+  "scale_pair": "ticket",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the ticket price",
+  "dim2": "the size of the crowd",
+  "sentence": "The higher the ticket price, the smaller the crowd grew.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the ticket price increases, the size of the crowd increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The higher the ticket price, the smaller the crowd grew.\nHypothesis: As the ticket price increases, the size of the crowd increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.0555787086486816,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 92,
+   "total_tokens": 216,
+   "cost": 0.001014,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001014,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.000828
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 91,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ticket-ctrl-two",
+  "scale_pair": "ticket",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the ticket price",
+  "dim2": "the size of the crowd",
+  "sentence": "The ticket price was high. The crowd was large.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the ticket price increases, the size of the crowd increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The ticket price was high. The crowd was large.\nHypothesis: As the ticket price increases, the size of the crowd increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.2463352680206299,
+  "usage": {
+   "prompt_tokens": 123,
+   "completion_tokens": 124,
+   "total_tokens": 247,
+   "cost": 0.0013005,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0013005,
+    "upstream_inference_prompt_cost": 0.0001845,
+    "upstream_inference_completions_cost": 0.001116
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 123,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ticket-ctrl-single",
+  "scale_pair": "ticket",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the ticket price",
+  "dim2": "the size of the crowd",
+  "sentence": "The ticket price was higher than last year.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the ticket price increases, the size of the crowd increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The ticket price was higher than last year.\nHypothesis: As the ticket price increases, the size of the crowd increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.0566585063934326,
+  "usage": {
+   "prompt_tokens": 121,
+   "completion_tokens": 166,
+   "total_tokens": 287,
+   "cost": 0.0016755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0016755,
+    "upstream_inference_prompt_cost": 0.0001815,
+    "upstream_inference_completions_cost": 0.001494
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 165,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "cafe-cc-positive",
+  "scale_pair": "cafe",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the morning's cold",
+  "dim2": "the cafe's busyness",
+  "sentence": "The colder the morning, the busier the cafe got.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the morning's cold increases, the cafe's busyness increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The colder the morning, the busier the cafe got.\nHypothesis: As the morning's cold increases, the cafe's busyness increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.1554217338562012,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 93,
+   "total_tokens": 219,
+   "cost": 0.001026,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001026,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.000837
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 92,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "cafe-cc-inverse",
+  "scale_pair": "cafe",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the morning's cold",
+  "dim2": "the cafe's busyness",
+  "sentence": "The colder the morning, the quieter the cafe got.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the morning's cold increases, the cafe's busyness increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The colder the morning, the quieter the cafe got.\nHypothesis: As the morning's cold increases, the cafe's busyness increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.781940221786499,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 175,
+   "total_tokens": 301,
+   "cost": 0.001764,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001764,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.001575
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 174,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "cafe-ctrl-two",
+  "scale_pair": "cafe",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the morning's cold",
+  "dim2": "the cafe's busyness",
+  "sentence": "The morning was cold. The cafe was busy.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the morning's cold increases, the cafe's busyness increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The morning was cold. The cafe was busy.\nHypothesis: As the morning's cold increases, the cafe's busyness increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.678102970123291,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 202,
+   "total_tokens": 327,
+   "cost": 0.0020055,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0020055,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001818
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 201,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "cafe-ctrl-single",
+  "scale_pair": "cafe",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the morning's cold",
+  "dim2": "the cafe's busyness",
+  "sentence": "The morning was colder than forecast.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the morning's cold increases, the cafe's busyness increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The morning was colder than forecast.\nHypothesis: As the morning's cold increases, the cafe's busyness increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.5716192722320557,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 171,
+   "total_tokens": 293,
+   "cost": 0.001722,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001722,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 0.001539
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 170,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "building-cc-positive",
+  "scale_pair": "building",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the building's age",
+  "dim2": "the rent",
+  "sentence": "The older the building, the higher the rent climbed.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the building's age increases, the rent increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The older the building, the higher the rent climbed.\nHypothesis: As the building's age increases, the rent increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.0306086540222168,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 84,
+   "total_tokens": 206,
+   "cost": 0.000939,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000939,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 0.000756
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 83,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "building-cc-inverse",
+  "scale_pair": "building",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the building's age",
+  "dim2": "the rent",
+  "sentence": "The older the building, the lower the rent climbed.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the building's age increases, the rent increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The older the building, the lower the rent climbed.\nHypothesis: As the building's age increases, the rent increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 6.619136095046997,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 1041,
+   "total_tokens": 1163,
+   "cost": 0.009552,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.009552,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 0.009369
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1040,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "building-ctrl-two",
+  "scale_pair": "building",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the building's age",
+  "dim2": "the rent",
+  "sentence": "The building was old. The rent was high.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the building's age increases, the rent increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The building was old. The rent was high.\nHypothesis: As the building's age increases, the rent increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.271982192993164,
+  "usage": {
+   "prompt_tokens": 121,
+   "completion_tokens": 280,
+   "total_tokens": 401,
+   "cost": 0.0027015,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0027015,
+    "upstream_inference_prompt_cost": 0.0001815,
+    "upstream_inference_completions_cost": 0.00252
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 279,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "building-ctrl-single",
+  "scale_pair": "building",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the building's age",
+  "dim2": "the rent",
+  "sentence": "The building was older than the others.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the building's age increases, the rent increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The building was older than the others.\nHypothesis: As the building's age increases, the rent increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.422624111175537,
+  "usage": {
+   "prompt_tokens": 119,
+   "completion_tokens": 133,
+   "total_tokens": 252,
+   "cost": 0.0013755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0013755,
+    "upstream_inference_prompt_cost": 0.0001785,
+    "upstream_inference_completions_cost": 0.001197
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 132,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lighting-cc-positive",
+  "scale_pair": "lighting",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the brightness of the lighting",
+  "dim2": "the patients' tension",
+  "sentence": "The brighter the lighting, the tenser the patients felt.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the brightness of the lighting increases, the patients' tension increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The brighter the lighting, the tenser the patients felt.\nHypothesis: As the brightness of the lighting increases, the patients' tension increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.0889394283294678,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 123,
+   "total_tokens": 248,
+   "cost": 0.0012945,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0012945,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001107
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 122,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lighting-cc-inverse",
+  "scale_pair": "lighting",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the brightness of the lighting",
+  "dim2": "the patients' tension",
+  "sentence": "The brighter the lighting, the calmer the patients felt.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the brightness of the lighting increases, the patients' tension increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The brighter the lighting, the calmer the patients felt.\nHypothesis: As the brightness of the lighting increases, the patients' tension increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.8367283344268799,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 156,
+   "total_tokens": 280,
+   "cost": 0.00159,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00159,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001404
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 155,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lighting-ctrl-two",
+  "scale_pair": "lighting",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the brightness of the lighting",
+  "dim2": "the patients' tension",
+  "sentence": "The lighting was bright. The patients were tense.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the brightness of the lighting increases, the patients' tension increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The lighting was bright. The patients were tense.\nHypothesis: As the brightness of the lighting increases, the patients' tension increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.3063242435455322,
+  "usage": {
+   "prompt_tokens": 123,
+   "completion_tokens": 116,
+   "total_tokens": 239,
+   "cost": 0.0012285,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0012285,
+    "upstream_inference_prompt_cost": 0.0001845,
+    "upstream_inference_completions_cost": 0.001044
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 115,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lighting-ctrl-single",
+  "scale_pair": "lighting",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the brightness of the lighting",
+  "dim2": "the patients' tension",
+  "sentence": "The lighting was brighter than before.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the brightness of the lighting increases, the patients' tension increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The lighting was brighter than before.\nHypothesis: As the brightness of the lighting increases, the patients' tension increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.1224701404571533,
+  "usage": {
+   "prompt_tokens": 120,
+   "completion_tokens": 107,
+   "total_tokens": 227,
+   "cost": 0.001143,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001143,
+    "upstream_inference_prompt_cost": 0.00018,
+    "upstream_inference_completions_cost": 0.000963
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 106,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "music-cc-positive",
+  "scale_pair": "music",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the loudness of the music",
+  "dim2": "the diners' eating speed",
+  "sentence": "The louder the music, the faster the diners ate.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the loudness of the music increases, the diners' eating speed increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The louder the music, the faster the diners ate.\nHypothesis: As the loudness of the music increases, the diners' eating speed increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.3919448852539062,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 169,
+   "total_tokens": 294,
+   "cost": 0.0017085,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0017085,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001521
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 168,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "music-cc-inverse",
+  "scale_pair": "music",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the loudness of the music",
+  "dim2": "the diners' eating speed",
+  "sentence": "The louder the music, the slower the diners ate.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the loudness of the music increases, the diners' eating speed increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The louder the music, the slower the diners ate.\nHypothesis: As the loudness of the music increases, the diners' eating speed increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.2693357467651367,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 114,
+   "total_tokens": 239,
+   "cost": 0.0012135,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0012135,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001026
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 113,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "music-ctrl-two",
+  "scale_pair": "music",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the loudness of the music",
+  "dim2": "the diners' eating speed",
+  "sentence": "The music was loud. The diners ate fast.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the loudness of the music increases, the diners' eating speed increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The music was loud. The diners ate fast.\nHypothesis: As the loudness of the music increases, the diners' eating speed increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.9479539394378662,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 228,
+   "total_tokens": 352,
+   "cost": 0.002238,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002238,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.002052
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 227,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "music-ctrl-single",
+  "scale_pair": "music",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the loudness of the music",
+  "dim2": "the diners' eating speed",
+  "sentence": "The music was louder than usual.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the loudness of the music increases, the diners' eating speed increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The music was louder than usual.\nHypothesis: As the loudness of the music increases, the diners' eating speed increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.6310834884643555,
+  "usage": {
+   "prompt_tokens": 121,
+   "completion_tokens": 148,
+   "total_tokens": 269,
+   "cost": 0.0015135,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0015135,
+    "upstream_inference_prompt_cost": 0.0001815,
+    "upstream_inference_completions_cost": 0.001332
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 147,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "trail-cc-positive",
+  "scale_pair": "trail",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the steepness of the trail",
+  "dim2": "the number of hikers attempting it",
+  "sentence": "The steeper the trail, the more hikers attempted it.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the steepness of the trail increases, the number of hikers attempting it increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The steeper the trail, the more hikers attempted it.\nHypothesis: As the steepness of the trail increases, the number of hikers attempting it increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.103691816329956,
+  "usage": {
+   "prompt_tokens": 127,
+   "completion_tokens": 93,
+   "total_tokens": 220,
+   "cost": 0.0010275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0010275,
+    "upstream_inference_prompt_cost": 0.0001905,
+    "upstream_inference_completions_cost": 0.000837
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 92,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "trail-cc-inverse",
+  "scale_pair": "trail",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the steepness of the trail",
+  "dim2": "the number of hikers attempting it",
+  "sentence": "The steeper the trail, the fewer hikers attempted it.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the steepness of the trail increases, the number of hikers attempting it increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The steeper the trail, the fewer hikers attempted it.\nHypothesis: As the steepness of the trail increases, the number of hikers attempting it increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.129101276397705,
+  "usage": {
+   "prompt_tokens": 127,
+   "completion_tokens": 123,
+   "total_tokens": 250,
+   "cost": 0.0012975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0012975,
+    "upstream_inference_prompt_cost": 0.0001905,
+    "upstream_inference_completions_cost": 0.001107
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 122,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "trail-ctrl-two",
+  "scale_pair": "trail",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the steepness of the trail",
+  "dim2": "the number of hikers attempting it",
+  "sentence": "The trail was steep. Many hikers attempted it.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the steepness of the trail increases, the number of hikers attempting it increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The trail was steep. Many hikers attempted it.\nHypothesis: As the steepness of the trail increases, the number of hikers attempting it increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.6286451816558838,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 161,
+   "total_tokens": 287,
+   "cost": 0.001638,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001638,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.001449
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 160,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "trail-ctrl-single",
+  "scale_pair": "trail",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the steepness of the trail",
+  "dim2": "the number of hikers attempting it",
+  "sentence": "The trail was steeper than the map suggested.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the steepness of the trail increases, the number of hikers attempting it increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The trail was steeper than the map suggested.\nHypothesis: As the steepness of the trail increases, the number of hikers attempting it increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.360663652420044,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 124,
+   "total_tokens": 249,
+   "cost": 0.0013035,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0013035,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001116
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 123,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "queue-cc-positive",
+  "scale_pair": "queue",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the length of the queue",
+  "dim2": "the customers' anger",
+  "sentence": "The longer the queue, the angrier the customers grew.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the length of the queue increases, the customers' anger increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The longer the queue, the angrier the customers grew.\nHypothesis: As the length of the queue increases, the customers' anger increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.4342010021209717,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 140,
+   "total_tokens": 265,
+   "cost": 0.0014475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0014475,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.00126
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 139,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "queue-cc-inverse",
+  "scale_pair": "queue",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the length of the queue",
+  "dim2": "the customers' anger",
+  "sentence": "The longer the queue, the calmer the customers grew.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the length of the queue increases, the customers' anger increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The longer the queue, the calmer the customers grew.\nHypothesis: As the length of the queue increases, the customers' anger increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.1266560554504395,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 89,
+   "total_tokens": 213,
+   "cost": 0.000987,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000987,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.000801
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 88,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "queue-ctrl-two",
+  "scale_pair": "queue",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the length of the queue",
+  "dim2": "the customers' anger",
+  "sentence": "The queue was long. The customers were angry.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the length of the queue increases, the customers' anger increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The queue was long. The customers were angry.\nHypothesis: As the length of the queue increases, the customers' anger increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.993046522140503,
+  "usage": {
+   "prompt_tokens": 123,
+   "completion_tokens": 237,
+   "total_tokens": 360,
+   "cost": 0.0023175,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0023175,
+    "upstream_inference_prompt_cost": 0.0001845,
+    "upstream_inference_completions_cost": 0.002133
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 236,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "queue-ctrl-single",
+  "scale_pair": "queue",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the length of the queue",
+  "dim2": "the customers' anger",
+  "sentence": "The queue was longer than yesterday.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the length of the queue increases, the customers' anger increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The queue was longer than yesterday.\nHypothesis: As the length of the queue increases, the customers' anger increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.2312700748443604,
+  "usage": {
+   "prompt_tokens": 120,
+   "completion_tokens": 120,
+   "total_tokens": 240,
+   "cost": 0.00126,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00126,
+    "upstream_inference_prompt_cost": 0.00018,
+    "upstream_inference_completions_cost": 0.00108
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 119,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "class-cc-positive",
+  "scale_pair": "class",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the size of the class",
+  "dim2": "the test scores",
+  "sentence": "The larger the class, the higher the test scores rose.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the size of the class increases, the test scores increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The larger the class, the higher the test scores rose.\nHypothesis: As the size of the class increases, the test scores increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 2.179025411605835,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 189,
+   "total_tokens": 313,
+   "cost": 0.001887,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001887,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001701
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 188,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "class-cc-inverse",
+  "scale_pair": "class",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the size of the class",
+  "dim2": "the test scores",
+  "sentence": "The larger the class, the lower the test scores rose.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the size of the class increases, the test scores increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The larger the class, the lower the test scores rose.\nHypothesis: As the size of the class increases, the test scores increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 9.067992210388184,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 1615,
+   "total_tokens": 1739,
+   "cost": 0.014721,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.014721,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.014535
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1614,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "class-ctrl-two",
+  "scale_pair": "class",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the size of the class",
+  "dim2": "the test scores",
+  "sentence": "The class was large. The test scores were high.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the size of the class increases, the test scores increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The class was large. The test scores were high.\nHypothesis: As the size of the class increases, the test scores increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.6282398700714111,
+  "usage": {
+   "prompt_tokens": 123,
+   "completion_tokens": 134,
+   "total_tokens": 257,
+   "cost": 0.0013905,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0013905,
+    "upstream_inference_prompt_cost": 0.0001845,
+    "upstream_inference_completions_cost": 0.001206
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 133,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "class-ctrl-single",
+  "scale_pair": "class",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the size of the class",
+  "dim2": "the test scores",
+  "sentence": "The class was larger than the year before.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the size of the class increases, the test scores increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The class was larger than the year before.\nHypothesis: As the size of the class increases, the test scores increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.382354736328125,
+  "usage": {
+   "prompt_tokens": 121,
+   "completion_tokens": 114,
+   "total_tokens": 235,
+   "cost": 0.0012075,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0012075,
+    "upstream_inference_prompt_cost": 0.0001815,
+    "upstream_inference_completions_cost": 0.001026
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 113,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "dish-cc-positive",
+  "scale_pair": "dish",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the spiciness of the dish",
+  "dim2": "the size of the tip",
+  "sentence": "The spicier the dish, the bigger the tip became.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the spiciness of the dish increases, the size of the tip increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The spicier the dish, the bigger the tip became.\nHypothesis: As the spiciness of the dish increases, the size of the tip increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.978604793548584,
+  "usage": {
+   "prompt_tokens": 127,
+   "completion_tokens": 90,
+   "total_tokens": 217,
+   "cost": 0.0010005,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0010005,
+    "upstream_inference_prompt_cost": 0.0001905,
+    "upstream_inference_completions_cost": 0.00081
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 89,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "dish-cc-inverse",
+  "scale_pair": "dish",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the spiciness of the dish",
+  "dim2": "the size of the tip",
+  "sentence": "The spicier the dish, the smaller the tip became.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the spiciness of the dish increases, the size of the tip increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The spicier the dish, the smaller the tip became.\nHypothesis: As the spiciness of the dish increases, the size of the tip increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.1816434860229492,
+  "usage": {
+   "prompt_tokens": 127,
+   "completion_tokens": 104,
+   "total_tokens": 231,
+   "cost": 0.0011265,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0011265,
+    "upstream_inference_prompt_cost": 0.0001905,
+    "upstream_inference_completions_cost": 0.000936
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 103,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "dish-ctrl-two",
+  "scale_pair": "dish",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the spiciness of the dish",
+  "dim2": "the size of the tip",
+  "sentence": "The dish was spicy. The tip was big.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the spiciness of the dish increases, the size of the tip increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The dish was spicy. The tip was big.\nHypothesis: As the spiciness of the dish increases, the size of the tip increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.2510688304901123,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 141,
+   "total_tokens": 266,
+   "cost": 0.0014565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0014565,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001269
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 140,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "dish-ctrl-single",
+  "scale_pair": "dish",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the spiciness of the dish",
+  "dim2": "the size of the tip",
+  "sentence": "The dish was spicier than expected.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the spiciness of the dish increases, the size of the tip increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The dish was spicier than expected.\nHypothesis: As the spiciness of the dish increases, the size of the tip increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.9837608337402344,
+  "usage": {
+   "prompt_tokens": 123,
+   "completion_tokens": 201,
+   "total_tokens": 324,
+   "cost": 0.0019935,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0019935,
+    "upstream_inference_prompt_cost": 0.0001845,
+    "upstream_inference_completions_cost": 0.001809
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 200,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "phone-cc-positive",
+  "scale_pair": "phone",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the newness of the phone",
+  "dim2": "how long the battery lasted",
+  "sentence": "The newer the phone, the longer the battery lasted.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the newness of the phone increases, how long the battery lasted increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The newer the phone, the longer the battery lasted.\nHypothesis: As the newness of the phone increases, how long the battery lasted increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.4415357112884521,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 128,
+   "total_tokens": 254,
+   "cost": 0.001341,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001341,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.001152
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 127,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "phone-cc-inverse",
+  "scale_pair": "phone",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the newness of the phone",
+  "dim2": "how long the battery lasted",
+  "sentence": "The newer the phone, the shorter the battery lasted.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the newness of the phone increases, how long the battery lasted increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The newer the phone, the shorter the battery lasted.\nHypothesis: As the newness of the phone increases, how long the battery lasted increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.1800143718719482,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 110,
+   "total_tokens": 236,
+   "cost": 0.001179,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001179,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.00099
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 109,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "phone-ctrl-two",
+  "scale_pair": "phone",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the newness of the phone",
+  "dim2": "how long the battery lasted",
+  "sentence": "The phone was new. The battery lasted long.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the newness of the phone increases, how long the battery lasted increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The phone was new. The battery lasted long.\nHypothesis: As the newness of the phone increases, how long the battery lasted increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.3991453647613525,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 337,
+   "total_tokens": 462,
+   "cost": 0.0032205,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0032205,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.003033
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 336,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "phone-ctrl-single",
+  "scale_pair": "phone",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the newness of the phone",
+  "dim2": "how long the battery lasted",
+  "sentence": "The phone was newer than the last model.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the newness of the phone increases, how long the battery lasted increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The phone was newer than the last model.\nHypothesis: As the newness of the phone increases, how long the battery lasted increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.4218113422393799,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 156,
+   "total_tokens": 280,
+   "cost": 0.00159,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00159,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001404
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 155,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roast-cc-positive",
+  "scale_pair": "roast",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the darkness of the roast",
+  "dim2": "the blend's popularity",
+  "sentence": "The darker the roast, the more popular the blend became.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the darkness of the roast increases, the blend's popularity increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The darker the roast, the more popular the blend became.\nHypothesis: As the darkness of the roast increases, the blend's popularity increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.9307222366333008,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 88,
+   "total_tokens": 214,
+   "cost": 0.000981,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000981,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.000792
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 87,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roast-cc-inverse",
+  "scale_pair": "roast",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the darkness of the roast",
+  "dim2": "the blend's popularity",
+  "sentence": "The darker the roast, the less popular the blend became.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the darkness of the roast increases, the blend's popularity increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The darker the roast, the less popular the blend became.\nHypothesis: As the darkness of the roast increases, the blend's popularity increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.073622703552246,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 109,
+   "total_tokens": 235,
+   "cost": 0.00117,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00117,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.000981
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 108,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roast-ctrl-two",
+  "scale_pair": "roast",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the darkness of the roast",
+  "dim2": "the blend's popularity",
+  "sentence": "The roast was dark. The blend was popular.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the darkness of the roast increases, the blend's popularity increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The roast was dark. The blend was popular.\nHypothesis: As the darkness of the roast increases, the blend's popularity increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.6915624141693115,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 164,
+   "total_tokens": 288,
+   "cost": 0.001662,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001662,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001476
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 163,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roast-ctrl-single",
+  "scale_pair": "roast",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the darkness of the roast",
+  "dim2": "the blend's popularity",
+  "sentence": "The roast was darker than the house blend.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the darkness of the roast increases, the blend's popularity increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The roast was darker than the house blend.\nHypothesis: As the darkness of the roast increases, the blend's popularity increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.3891880512237549,
+  "usage": {
+   "prompt_tokens": 123,
+   "completion_tokens": 160,
+   "total_tokens": 283,
+   "cost": 0.0016245,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0016245,
+    "upstream_inference_prompt_cost": 0.0001845,
+    "upstream_inference_completions_cost": 0.00144
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 159,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "river-cc-positive",
+  "scale_pair": "river",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the river's depth",
+  "dim2": "the ferry's speed",
+  "sentence": "The deeper the river, the faster the ferry crossed.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the river's depth increases, the ferry's speed increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The deeper the river, the faster the ferry crossed.\nHypothesis: As the river's depth increases, the ferry's speed increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.7255403995513916,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 220,
+   "total_tokens": 345,
+   "cost": 0.0021675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0021675,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.00198
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 219,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "river-cc-inverse",
+  "scale_pair": "river",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the river's depth",
+  "dim2": "the ferry's speed",
+  "sentence": "The deeper the river, the slower the ferry crossed.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the river's depth increases, the ferry's speed increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The deeper the river, the slower the ferry crossed.\nHypothesis: As the river's depth increases, the ferry's speed increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.8299057483673096,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 101,
+   "total_tokens": 226,
+   "cost": 0.0010965,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0010965,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.000909
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 100,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "river-ctrl-two",
+  "scale_pair": "river",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the river's depth",
+  "dim2": "the ferry's speed",
+  "sentence": "The river was deep. The ferry crossed fast.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the river's depth increases, the ferry's speed increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The river was deep. The ferry crossed fast.\nHypothesis: As the river's depth increases, the ferry's speed increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.0037193298339844,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 174,
+   "total_tokens": 298,
+   "cost": 0.001752,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001752,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001566
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 173,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "river-ctrl-single",
+  "scale_pair": "river",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the river's depth",
+  "dim2": "the ferry's speed",
+  "sentence": "The river was deeper than in spring.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the river's depth increases, the ferry's speed increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The river was deeper than in spring.\nHypothesis: As the river's depth increases, the ferry's speed increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.4095680713653564,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 160,
+   "total_tokens": 282,
+   "cost": 0.001623,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001623,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 0.00144
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 159,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "garden-cc-positive",
+  "scale_pair": "garden",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the garden's size",
+  "dim2": "the gardener's pay",
+  "sentence": "The bigger the garden, the higher the gardener's pay went.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the garden's size increases, the gardener's pay increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The bigger the garden, the higher the gardener's pay went.\nHypothesis: As the garden's size increases, the gardener's pay increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.0223281383514404,
+  "usage": {
+   "prompt_tokens": 128,
+   "completion_tokens": 90,
+   "total_tokens": 218,
+   "cost": 0.001002,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001002,
+    "upstream_inference_prompt_cost": 0.000192,
+    "upstream_inference_completions_cost": 0.00081
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 89,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "garden-cc-inverse",
+  "scale_pair": "garden",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the garden's size",
+  "dim2": "the gardener's pay",
+  "sentence": "The bigger the garden, the lower the gardener's pay went.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the garden's size increases, the gardener's pay increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The bigger the garden, the lower the gardener's pay went.\nHypothesis: As the garden's size increases, the gardener's pay increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.045285940170288,
+  "usage": {
+   "prompt_tokens": 128,
+   "completion_tokens": 87,
+   "total_tokens": 215,
+   "cost": 0.000975,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000975,
+    "upstream_inference_prompt_cost": 0.000192,
+    "upstream_inference_completions_cost": 0.000783
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 86,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "garden-ctrl-two",
+  "scale_pair": "garden",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the garden's size",
+  "dim2": "the gardener's pay",
+  "sentence": "The garden was big. The gardener's pay was high.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the garden's size increases, the gardener's pay increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The garden was big. The gardener's pay was high.\nHypothesis: As the garden's size increases, the gardener's pay increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.092165946960449,
+  "usage": {
+   "prompt_tokens": 127,
+   "completion_tokens": 182,
+   "total_tokens": 309,
+   "cost": 0.0018285,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0018285,
+    "upstream_inference_prompt_cost": 0.0001905,
+    "upstream_inference_completions_cost": 0.001638
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 181,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "garden-ctrl-single",
+  "scale_pair": "garden",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the garden's size",
+  "dim2": "the gardener's pay",
+  "sentence": "The garden was bigger than the neighbour's.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the garden's size increases, the gardener's pay increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The garden was bigger than the neighbour's.\nHypothesis: As the garden's size increases, the gardener's pay increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.424048900604248,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 158,
+   "total_tokens": 282,
+   "cost": 0.001608,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001608,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001422
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 157,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pebble-cc-positive",
+  "scale_pair": "pebble",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the roundness of the pebble",
+  "dim2": "the length of the meeting",
+  "sentence": "The rounder the pebble, the longer the meeting ran.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the roundness of the pebble increases, the length of the meeting increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The rounder the pebble, the longer the meeting ran.\nHypothesis: As the roundness of the pebble increases, the length of the meeting increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.4051744937896729,
+  "usage": {
+   "prompt_tokens": 127,
+   "completion_tokens": 125,
+   "total_tokens": 252,
+   "cost": 0.0013155,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0013155,
+    "upstream_inference_prompt_cost": 0.0001905,
+    "upstream_inference_completions_cost": 0.001125
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 124,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pebble-cc-inverse",
+  "scale_pair": "pebble",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the roundness of the pebble",
+  "dim2": "the length of the meeting",
+  "sentence": "The rounder the pebble, the shorter the meeting ran.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the roundness of the pebble increases, the length of the meeting increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The rounder the pebble, the shorter the meeting ran.\nHypothesis: As the roundness of the pebble increases, the length of the meeting increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.0850117206573486,
+  "usage": {
+   "prompt_tokens": 127,
+   "completion_tokens": 109,
+   "total_tokens": 236,
+   "cost": 0.0011715,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0011715,
+    "upstream_inference_prompt_cost": 0.0001905,
+    "upstream_inference_completions_cost": 0.000981
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 108,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pebble-ctrl-two",
+  "scale_pair": "pebble",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the roundness of the pebble",
+  "dim2": "the length of the meeting",
+  "sentence": "The pebble was round. The meeting ran long.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the roundness of the pebble increases, the length of the meeting increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The pebble was round. The meeting ran long.\nHypothesis: As the roundness of the pebble increases, the length of the meeting increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.1834404468536377,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 254,
+   "total_tokens": 379,
+   "cost": 0.0024735,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0024735,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.002286
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 253,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pebble-ctrl-single",
+  "scale_pair": "pebble",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the roundness of the pebble",
+  "dim2": "the length of the meeting",
+  "sentence": "The pebble was rounder than the others.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the roundness of the pebble increases, the length of the meeting increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The pebble was rounder than the others.\nHypothesis: As the roundness of the pebble increases, the length of the meeting increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.317570447921753,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 131,
+   "total_tokens": 255,
+   "cost": 0.001365,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001365,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001179
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 130,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wallpaper-cc-positive",
+  "scale_pair": "wallpaper",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the greenness of the wallpaper",
+  "dim2": "the loudness of the applause",
+  "sentence": "The greener the wallpaper, the louder the applause grew.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the greenness of the wallpaper increases, the loudness of the applause increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The greener the wallpaper, the louder the applause grew.\nHypothesis: As the greenness of the wallpaper increases, the loudness of the applause increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.4973368644714355,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 165,
+   "total_tokens": 291,
+   "cost": 0.001674,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001674,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.001485
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 164,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wallpaper-cc-inverse",
+  "scale_pair": "wallpaper",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the greenness of the wallpaper",
+  "dim2": "the loudness of the applause",
+  "sentence": "The greener the wallpaper, the quieter the applause grew.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the greenness of the wallpaper increases, the loudness of the applause increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The greener the wallpaper, the quieter the applause grew.\nHypothesis: As the greenness of the wallpaper increases, the loudness of the applause increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.1554856300354004,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 107,
+   "total_tokens": 233,
+   "cost": 0.001152,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001152,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.000963
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 106,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wallpaper-ctrl-two",
+  "scale_pair": "wallpaper",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the greenness of the wallpaper",
+  "dim2": "the loudness of the applause",
+  "sentence": "The wallpaper was green. The applause was loud.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the greenness of the wallpaper increases, the loudness of the applause increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The wallpaper was green. The applause was loud.\nHypothesis: As the greenness of the wallpaper increases, the loudness of the applause increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.870124101638794,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 209,
+   "total_tokens": 334,
+   "cost": 0.0020685,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0020685,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001881
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 208,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wallpaper-ctrl-single",
+  "scale_pair": "wallpaper",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the greenness of the wallpaper",
+  "dim2": "the loudness of the applause",
+  "sentence": "The wallpaper was greener than the trim.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the greenness of the wallpaper increases, the loudness of the applause increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The wallpaper was greener than the trim.\nHypothesis: As the greenness of the wallpaper increases, the loudness of the applause increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.3977234363555908,
+  "usage": {
+   "prompt_tokens": 123,
+   "completion_tokens": 124,
+   "total_tokens": 247,
+   "cost": 0.0013005,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0013005,
+    "upstream_inference_prompt_cost": 0.0001845,
+    "upstream_inference_completions_cost": 0.001116
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 123,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soup-cc-positive",
+  "scale_pair": "soup",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the saltiness of the soup",
+  "dim2": "the stock price",
+  "sentence": "The saltier the soup, the higher the stock price climbed.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the saltiness of the soup increases, the stock price increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The saltier the soup, the higher the stock price climbed.\nHypothesis: As the saltiness of the soup increases, the stock price increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.6305623054504395,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 132,
+   "total_tokens": 258,
+   "cost": 0.001377,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001377,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.001188
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 131,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soup-cc-inverse",
+  "scale_pair": "soup",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the saltiness of the soup",
+  "dim2": "the stock price",
+  "sentence": "The saltier the soup, the lower the stock price climbed.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the saltiness of the soup increases, the stock price increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The saltier the soup, the lower the stock price climbed.\nHypothesis: As the saltiness of the soup increases, the stock price increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 5.8641862869262695,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 911,
+   "total_tokens": 1037,
+   "cost": 0.008388,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.008388,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.008199
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 910,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soup-ctrl-two",
+  "scale_pair": "soup",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the saltiness of the soup",
+  "dim2": "the stock price",
+  "sentence": "The soup was salty. The stock price was high.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the saltiness of the soup increases, the stock price increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The soup was salty. The stock price was high.\nHypothesis: As the saltiness of the soup increases, the stock price increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.5460083484649658,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 129,
+   "total_tokens": 253,
+   "cost": 0.001347,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001347,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001161
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 128,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soup-ctrl-single",
+  "scale_pair": "soup",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the saltiness of the soup",
+  "dim2": "the stock price",
+  "sentence": "The soup was saltier than the broth.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the saltiness of the soup increases, the stock price increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The soup was saltier than the broth.\nHypothesis: As the saltiness of the soup increases, the stock price increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.67694091796875,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 151,
+   "total_tokens": 273,
+   "cost": 0.001542,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001542,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 0.001359
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 150,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "doorway-cc-positive",
+  "scale_pair": "doorway",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the width of the doorway",
+  "dim2": "the speed of the verdict",
+  "sentence": "The wider the doorway, the faster the verdict came.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the width of the doorway increases, the speed of the verdict increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The wider the doorway, the faster the verdict came.\nHypothesis: As the width of the doorway increases, the speed of the verdict increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.3700931072235107,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 158,
+   "total_tokens": 283,
+   "cost": 0.0016095,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0016095,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001422
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 157,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "doorway-cc-inverse",
+  "scale_pair": "doorway",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the width of the doorway",
+  "dim2": "the speed of the verdict",
+  "sentence": "The wider the doorway, the slower the verdict came.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the width of the doorway increases, the speed of the verdict increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The wider the doorway, the slower the verdict came.\nHypothesis: As the width of the doorway increases, the speed of the verdict increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.1958701610565186,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 116,
+   "total_tokens": 241,
+   "cost": 0.0012315,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0012315,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001044
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 115,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "doorway-ctrl-two",
+  "scale_pair": "doorway",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the width of the doorway",
+  "dim2": "the speed of the verdict",
+  "sentence": "The doorway was wide. The verdict came fast.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the width of the doorway increases, the speed of the verdict increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The doorway was wide. The verdict came fast.\nHypothesis: As the width of the doorway increases, the speed of the verdict increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.2373309135437012,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 127,
+   "total_tokens": 251,
+   "cost": 0.001329,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.001329,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.001143
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 126,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "doorway-ctrl-single",
+  "scale_pair": "doorway",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the width of the doorway",
+  "dim2": "the speed of the verdict",
+  "sentence": "The doorway was wider than the frame.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the width of the doorway increases, the speed of the verdict increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The doorway was wider than the frame.\nHypothesis: As the width of the doorway increases, the speed of the verdict increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.622464895248413,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 260,
+   "total_tokens": 382,
+   "cost": 0.002523,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002523,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 0.00234
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 259,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curtains-cc-positive",
+  "scale_pair": "curtains",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the blueness of the curtains",
+  "dim2": "the weight of the homework",
+  "sentence": "The bluer the curtains, the heavier the homework felt.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the blueness of the curtains increases, the weight of the homework increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The bluer the curtains, the heavier the homework felt.\nHypothesis: As the blueness of the curtains increases, the weight of the homework increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 7.720964431762695,
+  "usage": {
+   "prompt_tokens": 127,
+   "completion_tokens": 1190,
+   "total_tokens": 1317,
+   "cost": 0.0109005,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0109005,
+    "upstream_inference_prompt_cost": 0.0001905,
+    "upstream_inference_completions_cost": 0.01071
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 1189,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curtains-cc-inverse",
+  "scale_pair": "curtains",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the blueness of the curtains",
+  "dim2": "the weight of the homework",
+  "sentence": "The bluer the curtains, the lighter the homework felt.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the blueness of the curtains increases, the weight of the homework increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The bluer the curtains, the lighter the homework felt.\nHypothesis: As the blueness of the curtains increases, the weight of the homework increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.402146339416504,
+  "usage": {
+   "prompt_tokens": 127,
+   "completion_tokens": 126,
+   "total_tokens": 253,
+   "cost": 0.0013245,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0013245,
+    "upstream_inference_prompt_cost": 0.0001905,
+    "upstream_inference_completions_cost": 0.001134
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 125,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curtains-ctrl-two",
+  "scale_pair": "curtains",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the blueness of the curtains",
+  "dim2": "the weight of the homework",
+  "sentence": "The curtains were blue. The homework felt heavy.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the blueness of the curtains increases, the weight of the homework increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The curtains were blue. The homework felt heavy.\nHypothesis: As the blueness of the curtains increases, the weight of the homework increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.206268787384033,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 265,
+   "total_tokens": 390,
+   "cost": 0.0025725,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0025725,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.002385
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 264,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curtains-ctrl-single",
+  "scale_pair": "curtains",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the blueness of the curtains",
+  "dim2": "the weight of the homework",
+  "sentence": "The curtains were bluer than the rug.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the blueness of the curtains increases, the weight of the homework increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The curtains were bluer than the rug.\nHypothesis: As the blueness of the curtains increases, the weight of the homework increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.252929210662842,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 244,
+   "total_tokens": 368,
+   "cost": 0.002382,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002382,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.002196
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 243,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "map-cc-positive",
+  "scale_pair": "map",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the age of the map",
+  "dim2": "the sweetness of the lemonade",
+  "sentence": "The older the map, the sweeter the lemonade tasted.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the age of the map increases, the sweetness of the lemonade increases.",
+  "nli_gold": "0",
+  "prompt": "Premise: The older the map, the sweeter the lemonade tasted.\nHypothesis: As the age of the map increases, the sweetness of the lemonade increases.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.4641101360321045,
+  "usage": {
+   "prompt_tokens": 125,
+   "completion_tokens": 182,
+   "total_tokens": 307,
+   "cost": 0.0018255,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0018255,
+    "upstream_inference_prompt_cost": 0.0001875,
+    "upstream_inference_completions_cost": 0.001638
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 181,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "map-cc-inverse",
+  "scale_pair": "map",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the age of the map",
+  "dim2": "the sweetness of the lemonade",
+  "sentence": "The older the map, the sourer the lemonade tasted.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the age of the map increases, the sweetness of the lemonade increases.",
+  "nli_gold": "2",
+  "prompt": "Premise: The older the map, the sourer the lemonade tasted.\nHypothesis: As the age of the map increases, the sweetness of the lemonade increases.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 2.981668710708618,
+  "usage": {
+   "prompt_tokens": 126,
+   "completion_tokens": 380,
+   "total_tokens": 506,
+   "cost": 0.003609,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.003609,
+    "upstream_inference_prompt_cost": 0.000189,
+    "upstream_inference_completions_cost": 0.00342
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 379,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "map-ctrl-two",
+  "scale_pair": "map",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the age of the map",
+  "dim2": "the sweetness of the lemonade",
+  "sentence": "The map was old. The lemonade tasted sweet.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the age of the map increases, the sweetness of the lemonade increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The map was old. The lemonade tasted sweet.\nHypothesis: As the age of the map increases, the sweetness of the lemonade increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.4645936489105225,
+  "usage": {
+   "prompt_tokens": 124,
+   "completion_tokens": 305,
+   "total_tokens": 429,
+   "cost": 0.002931,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002931,
+    "upstream_inference_prompt_cost": 0.000186,
+    "upstream_inference_completions_cost": 0.002745
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 304,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "map-ctrl-single",
+  "scale_pair": "map",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the age of the map",
+  "dim2": "the sweetness of the lemonade",
+  "sentence": "The map was older than the atlas.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the age of the map increases, the sweetness of the lemonade increases.",
+  "nli_gold": "1",
+  "prompt": "Premise: The map was older than the atlas.\nHypothesis: As the age of the map increases, the sweetness of the lemonade increases.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.3251636028289795,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 245,
+   "total_tokens": 367,
+   "cost": 0.002388,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.002388,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 0.002205
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 244,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+]

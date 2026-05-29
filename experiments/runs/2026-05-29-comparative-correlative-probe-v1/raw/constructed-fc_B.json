@@ -1,0 +1,3202 @@
+[
+ {
+  "item_id": "lecture-cc-positive",
+  "scale_pair": "lecture",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the lecture's length",
+  "dim2": "the students' engagement",
+  "sentence": "The longer the lecture ran, the more engaged the students became.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the lecture's length increases, the students' engagement increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The longer the lecture ran, the more engaged the students became.\nAs the lecture's length increases, what does the passage imply about the students' engagement? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.5384438037872314,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lecture-cc-inverse",
+  "scale_pair": "lecture",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the lecture's length",
+  "dim2": "the students' engagement",
+  "sentence": "The longer the lecture ran, the less engaged the students became.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the lecture's length increases, the students' engagement increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The longer the lecture ran, the less engaged the students became.\nAs the lecture's length increases, what does the passage imply about the students' engagement? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.5949959754943848,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lecture-ctrl-two",
+  "scale_pair": "lecture",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the lecture's length",
+  "dim2": "the students' engagement",
+  "sentence": "The lecture ran long. The students were highly engaged.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the lecture's length increases, the students' engagement increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The lecture ran long. The students were highly engaged.\nAs the lecture's length increases, what does the passage imply about the students' engagement? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.5553638935089111,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 9,
+   "total_tokens": 123,
+   "cost": 0.000126,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000126,
+    "upstream_inference_prompt_cost": 8.55e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lecture-ctrl-single",
+  "scale_pair": "lecture",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the lecture's length",
+  "dim2": "the students' engagement",
+  "sentence": "The lecture ran longer than usual.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the lecture's length increases, the students' engagement increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The lecture ran longer than usual.\nAs the lecture's length increases, what does the passage imply about the students' engagement? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.584723949432373,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 9,
+   "total_tokens": 119,
+   "cost": 0.000123,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000123,
+    "upstream_inference_prompt_cost": 8.25e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ticket-cc-positive",
+  "scale_pair": "ticket",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the ticket price",
+  "dim2": "the size of the crowd",
+  "sentence": "The higher the ticket price, the larger the crowd grew.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the ticket price increases, the size of the crowd increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The higher the ticket price, the larger the crowd grew.\nAs the ticket price increases, what does the passage imply about the size of the crowd? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7199199199676514,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 6,
+   "total_tokens": 121,
+   "cost": 0.00011325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011325,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ticket-cc-inverse",
+  "scale_pair": "ticket",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the ticket price",
+  "dim2": "the size of the crowd",
+  "sentence": "The higher the ticket price, the smaller the crowd grew.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the ticket price increases, the size of the crowd increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The higher the ticket price, the smaller the crowd grew.\nAs the ticket price increases, what does the passage imply about the size of the crowd? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7973299026489258,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 6,
+   "total_tokens": 121,
+   "cost": 0.00011325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011325,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ticket-ctrl-two",
+  "scale_pair": "ticket",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the ticket price",
+  "dim2": "the size of the crowd",
+  "sentence": "The ticket price was high. The crowd was large.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the ticket price increases, the size of the crowd increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The ticket price was high. The crowd was large.\nAs the ticket price increases, what does the passage imply about the size of the crowd? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.6665544509887695,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 6,
+   "total_tokens": 120,
+   "cost": 0.0001125,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001125,
+    "upstream_inference_prompt_cost": 8.55e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ticket-ctrl-single",
+  "scale_pair": "ticket",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the ticket price",
+  "dim2": "the size of the crowd",
+  "sentence": "The ticket price was higher than last year.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the ticket price increases, the size of the crowd increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The ticket price was higher than last year.\nAs the ticket price increases, what does the passage imply about the size of the crowd? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 2.5485575199127197,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 9,
+   "total_tokens": 121,
+   "cost": 0.0001245,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001245,
+    "upstream_inference_prompt_cost": 8.4e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "cafe-cc-positive",
+  "scale_pair": "cafe",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the morning's cold",
+  "dim2": "the cafe's busyness",
+  "sentence": "The colder the morning, the busier the cafe got.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the morning's cold increases, the cafe's busyness increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The colder the morning, the busier the cafe got.\nAs the morning's cold increases, what does the passage imply about the cafe's busyness? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6982109546661377,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "cafe-cc-inverse",
+  "scale_pair": "cafe",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the morning's cold",
+  "dim2": "the cafe's busyness",
+  "sentence": "The colder the morning, the quieter the cafe got.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the morning's cold increases, the cafe's busyness increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The colder the morning, the quieter the cafe got.\nAs the morning's cold increases, what does the passage imply about the cafe's busyness? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 3.9958391189575195,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 6,
+   "total_tokens": 121,
+   "cost": 0.00011325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011325,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "cafe-ctrl-two",
+  "scale_pair": "cafe",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the morning's cold",
+  "dim2": "the cafe's busyness",
+  "sentence": "The morning was cold. The cafe was busy.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the morning's cold increases, the cafe's busyness increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The morning was cold. The cafe was busy.\nAs the morning's cold increases, what does the passage imply about the cafe's busyness? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.186741828918457,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 9,
+   "total_tokens": 123,
+   "cost": 0.000126,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000126,
+    "upstream_inference_prompt_cost": 8.55e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "cafe-ctrl-single",
+  "scale_pair": "cafe",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the morning's cold",
+  "dim2": "the cafe's busyness",
+  "sentence": "The morning was colder than forecast.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the morning's cold increases, the cafe's busyness increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The morning was colder than forecast.\nAs the morning's cold increases, what does the passage imply about the cafe's busyness? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7861666679382324,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 9,
+   "total_tokens": 120,
+   "cost": 0.00012375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012375,
+    "upstream_inference_prompt_cost": 8.325e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "building-cc-positive",
+  "scale_pair": "building",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the building's age",
+  "dim2": "the rent",
+  "sentence": "The older the building, the higher the rent climbed.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the building's age increases, the rent increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The older the building, the higher the rent climbed.\nAs the building's age increases, what does the passage imply about the rent? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7252206802368164,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 6,
+   "total_tokens": 118,
+   "cost": 0.000111,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000111,
+    "upstream_inference_prompt_cost": 8.4e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "building-cc-inverse",
+  "scale_pair": "building",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the building's age",
+  "dim2": "the rent",
+  "sentence": "The older the building, the lower the rent climbed.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the building's age increases, the rent increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The older the building, the lower the rent climbed.\nAs the building's age increases, what does the passage imply about the rent? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.557053804397583,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 6,
+   "total_tokens": 118,
+   "cost": 0.000111,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000111,
+    "upstream_inference_prompt_cost": 8.4e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "building-ctrl-two",
+  "scale_pair": "building",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the building's age",
+  "dim2": "the rent",
+  "sentence": "The building was old. The rent was high.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the building's age increases, the rent increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The building was old. The rent was high.\nAs the building's age increases, what does the passage imply about the rent? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6312341690063477,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 9,
+   "total_tokens": 120,
+   "cost": 0.00012375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012375,
+    "upstream_inference_prompt_cost": 8.325e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "building-ctrl-single",
+  "scale_pair": "building",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the building's age",
+  "dim2": "the rent",
+  "sentence": "The building was older than the others.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the building's age increases, the rent increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The building was older than the others.\nAs the building's age increases, what does the passage imply about the rent? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7187223434448242,
+  "usage": {
+   "prompt_tokens": 109,
+   "completion_tokens": 9,
+   "total_tokens": 118,
+   "cost": 0.00012225,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012225,
+    "upstream_inference_prompt_cost": 8.175e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lighting-cc-positive",
+  "scale_pair": "lighting",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the brightness of the lighting",
+  "dim2": "the patients' tension",
+  "sentence": "The brighter the lighting, the tenser the patients felt.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the brightness of the lighting increases, the patients' tension increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The brighter the lighting, the tenser the patients felt.\nAs the brightness of the lighting increases, what does the passage imply about the patients' tension? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6398928165435791,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lighting-cc-inverse",
+  "scale_pair": "lighting",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the brightness of the lighting",
+  "dim2": "the patients' tension",
+  "sentence": "The brighter the lighting, the calmer the patients felt.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the brightness of the lighting increases, the patients' tension increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The brighter the lighting, the calmer the patients felt.\nAs the brightness of the lighting increases, what does the passage imply about the patients' tension? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7153720855712891,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 6,
+   "total_tokens": 121,
+   "cost": 0.00011325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011325,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lighting-ctrl-two",
+  "scale_pair": "lighting",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the brightness of the lighting",
+  "dim2": "the patients' tension",
+  "sentence": "The lighting was bright. The patients were tense.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the brightness of the lighting increases, the patients' tension increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The lighting was bright. The patients were tense.\nAs the brightness of the lighting increases, what does the passage imply about the patients' tension? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.5836002826690674,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 9,
+   "total_tokens": 123,
+   "cost": 0.000126,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000126,
+    "upstream_inference_prompt_cost": 8.55e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lighting-ctrl-single",
+  "scale_pair": "lighting",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the brightness of the lighting",
+  "dim2": "the patients' tension",
+  "sentence": "The lighting was brighter than before.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the brightness of the lighting increases, the patients' tension increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The lighting was brighter than before.\nAs the brightness of the lighting increases, what does the passage imply about the patients' tension? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.790647029876709,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 6,
+   "total_tokens": 117,
+   "cost": 0.00011025,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011025,
+    "upstream_inference_prompt_cost": 8.325e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "music-cc-positive",
+  "scale_pair": "music",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the loudness of the music",
+  "dim2": "the diners' eating speed",
+  "sentence": "The louder the music, the faster the diners ate.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the loudness of the music increases, the diners' eating speed increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The louder the music, the faster the diners ate.\nAs the loudness of the music increases, what does the passage imply about the diners' eating speed? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.5392489433288574,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 6,
+   "total_tokens": 123,
+   "cost": 0.00011475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011475,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "music-cc-inverse",
+  "scale_pair": "music",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the loudness of the music",
+  "dim2": "the diners' eating speed",
+  "sentence": "The louder the music, the slower the diners ate.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the loudness of the music increases, the diners' eating speed increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The louder the music, the slower the diners ate.\nAs the loudness of the music increases, what does the passage imply about the diners' eating speed? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.6143858432769775,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 6,
+   "total_tokens": 123,
+   "cost": 0.00011475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011475,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "music-ctrl-two",
+  "scale_pair": "music",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the loudness of the music",
+  "dim2": "the diners' eating speed",
+  "sentence": "The music was loud. The diners ate fast.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the loudness of the music increases, the diners' eating speed increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The music was loud. The diners ate fast.\nAs the loudness of the music increases, what does the passage imply about the diners' eating speed? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7931241989135742,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 9,
+   "total_tokens": 125,
+   "cost": 0.0001275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001275,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "music-ctrl-single",
+  "scale_pair": "music",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the loudness of the music",
+  "dim2": "the diners' eating speed",
+  "sentence": "The music was louder than usual.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the loudness of the music increases, the diners' eating speed increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The music was louder than usual.\nAs the loudness of the music increases, what does the passage imply about the diners' eating speed? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7473945617675781,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 9,
+   "total_tokens": 122,
+   "cost": 0.00012525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012525,
+    "upstream_inference_prompt_cost": 8.475e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "trail-cc-positive",
+  "scale_pair": "trail",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the steepness of the trail",
+  "dim2": "the number of hikers attempting it",
+  "sentence": "The steeper the trail, the more hikers attempted it.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the steepness of the trail increases, the number of hikers attempting it increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The steeper the trail, the more hikers attempted it.\nAs the steepness of the trail increases, what does the passage imply about the number of hikers attempting it? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8824505805969238,
+  "usage": {
+   "prompt_tokens": 119,
+   "completion_tokens": 6,
+   "total_tokens": 125,
+   "cost": 0.00011625,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011625,
+    "upstream_inference_prompt_cost": 8.925e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "trail-cc-inverse",
+  "scale_pair": "trail",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the steepness of the trail",
+  "dim2": "the number of hikers attempting it",
+  "sentence": "The steeper the trail, the fewer hikers attempted it.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the steepness of the trail increases, the number of hikers attempting it increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The steeper the trail, the fewer hikers attempted it.\nAs the steepness of the trail increases, what does the passage imply about the number of hikers attempting it? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.5464129447937012,
+  "usage": {
+   "prompt_tokens": 119,
+   "completion_tokens": 6,
+   "total_tokens": 125,
+   "cost": 0.00011625,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011625,
+    "upstream_inference_prompt_cost": 8.925e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "trail-ctrl-two",
+  "scale_pair": "trail",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the steepness of the trail",
+  "dim2": "the number of hikers attempting it",
+  "sentence": "The trail was steep. Many hikers attempted it.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the steepness of the trail increases, the number of hikers attempting it increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The trail was steep. Many hikers attempted it.\nAs the steepness of the trail increases, what does the passage imply about the number of hikers attempting it? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.715578556060791,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 9,
+   "total_tokens": 126,
+   "cost": 0.00012825,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012825,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "trail-ctrl-single",
+  "scale_pair": "trail",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the steepness of the trail",
+  "dim2": "the number of hikers attempting it",
+  "sentence": "The trail was steeper than the map suggested.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the steepness of the trail increases, the number of hikers attempting it increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The trail was steeper than the map suggested.\nAs the steepness of the trail increases, what does the passage imply about the number of hikers attempting it? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7007861137390137,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 6,
+   "total_tokens": 123,
+   "cost": 0.00011475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011475,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "queue-cc-positive",
+  "scale_pair": "queue",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the length of the queue",
+  "dim2": "the customers' anger",
+  "sentence": "The longer the queue, the angrier the customers grew.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the length of the queue increases, the customers' anger increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The longer the queue, the angrier the customers grew.\nAs the length of the queue increases, what does the passage imply about the customers' anger? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6993741989135742,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "queue-cc-inverse",
+  "scale_pair": "queue",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the length of the queue",
+  "dim2": "the customers' anger",
+  "sentence": "The longer the queue, the calmer the customers grew.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the length of the queue increases, the customers' anger increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The longer the queue, the calmer the customers grew.\nAs the length of the queue increases, what does the passage imply about the customers' anger? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.4462151527404785,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 6,
+   "total_tokens": 121,
+   "cost": 0.00011325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011325,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "queue-ctrl-two",
+  "scale_pair": "queue",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the length of the queue",
+  "dim2": "the customers' anger",
+  "sentence": "The queue was long. The customers were angry.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the length of the queue increases, the customers' anger increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The queue was long. The customers were angry.\nAs the length of the queue increases, what does the passage imply about the customers' anger? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 2.0274410247802734,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 6,
+   "total_tokens": 120,
+   "cost": 0.0001125,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001125,
+    "upstream_inference_prompt_cost": 8.55e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "queue-ctrl-single",
+  "scale_pair": "queue",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the length of the queue",
+  "dim2": "the customers' anger",
+  "sentence": "The queue was longer than yesterday.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the length of the queue increases, the customers' anger increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The queue was longer than yesterday.\nAs the length of the queue increases, what does the passage imply about the customers' anger? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8490393161773682,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 9,
+   "total_tokens": 120,
+   "cost": 0.00012375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012375,
+    "upstream_inference_prompt_cost": 8.325e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "class-cc-positive",
+  "scale_pair": "class",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the size of the class",
+  "dim2": "the test scores",
+  "sentence": "The larger the class, the higher the test scores rose.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the size of the class increases, the test scores increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The larger the class, the higher the test scores rose.\nAs the size of the class increases, what does the passage imply about the test scores? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.5564725399017334,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 6,
+   "total_tokens": 121,
+   "cost": 0.00011325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011325,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "class-cc-inverse",
+  "scale_pair": "class",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the size of the class",
+  "dim2": "the test scores",
+  "sentence": "The larger the class, the lower the test scores rose.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the size of the class increases, the test scores increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The larger the class, the lower the test scores rose.\nAs the size of the class increases, what does the passage imply about the test scores? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.6937680244445801,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 6,
+   "total_tokens": 121,
+   "cost": 0.00011325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011325,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "class-ctrl-two",
+  "scale_pair": "class",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the size of the class",
+  "dim2": "the test scores",
+  "sentence": "The class was large. The test scores were high.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the size of the class increases, the test scores increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The class was large. The test scores were high.\nAs the size of the class increases, what does the passage imply about the test scores? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6000344753265381,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 9,
+   "total_tokens": 123,
+   "cost": 0.000126,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000126,
+    "upstream_inference_prompt_cost": 8.55e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "class-ctrl-single",
+  "scale_pair": "class",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the size of the class",
+  "dim2": "the test scores",
+  "sentence": "The class was larger than the year before.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the size of the class increases, the test scores increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The class was larger than the year before.\nAs the size of the class increases, what does the passage imply about the test scores? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.767986536026001,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 9,
+   "total_tokens": 121,
+   "cost": 0.0001245,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001245,
+    "upstream_inference_prompt_cost": 8.4e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "dish-cc-positive",
+  "scale_pair": "dish",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the spiciness of the dish",
+  "dim2": "the size of the tip",
+  "sentence": "The spicier the dish, the bigger the tip became.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the spiciness of the dish increases, the size of the tip increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The spicier the dish, the bigger the tip became.\nAs the spiciness of the dish increases, what does the passage imply about the size of the tip? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6837515830993652,
+  "usage": {
+   "prompt_tokens": 120,
+   "completion_tokens": 6,
+   "total_tokens": 126,
+   "cost": 0.000117,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000117,
+    "upstream_inference_prompt_cost": 9e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "dish-cc-inverse",
+  "scale_pair": "dish",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the spiciness of the dish",
+  "dim2": "the size of the tip",
+  "sentence": "The spicier the dish, the smaller the tip became.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the spiciness of the dish increases, the size of the tip increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The spicier the dish, the smaller the tip became.\nAs the spiciness of the dish increases, what does the passage imply about the size of the tip? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.6234824657440186,
+  "usage": {
+   "prompt_tokens": 120,
+   "completion_tokens": 6,
+   "total_tokens": 126,
+   "cost": 0.000117,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000117,
+    "upstream_inference_prompt_cost": 9e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "dish-ctrl-two",
+  "scale_pair": "dish",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the spiciness of the dish",
+  "dim2": "the size of the tip",
+  "sentence": "The dish was spicy. The tip was big.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the spiciness of the dish increases, the size of the tip increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The dish was spicy. The tip was big.\nAs the spiciness of the dish increases, what does the passage imply about the size of the tip? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6382641792297363,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 9,
+   "total_tokens": 126,
+   "cost": 0.00012825,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012825,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "dish-ctrl-single",
+  "scale_pair": "dish",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the spiciness of the dish",
+  "dim2": "the size of the tip",
+  "sentence": "The dish was spicier than expected.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the spiciness of the dish increases, the size of the tip increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The dish was spicier than expected.\nAs the spiciness of the dish increases, what does the passage imply about the size of the tip? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6662769317626953,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 9,
+   "total_tokens": 125,
+   "cost": 0.0001275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001275,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "phone-cc-positive",
+  "scale_pair": "phone",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the newness of the phone",
+  "dim2": "how long the battery lasted",
+  "sentence": "The newer the phone, the longer the battery lasted.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the newness of the phone increases, how long the battery lasted increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The newer the phone, the longer the battery lasted.\nAs the newness of the phone increases, what does the passage imply about how long the battery lasted? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 2.313082456588745,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 6,
+   "total_tokens": 123,
+   "cost": 0.00011475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011475,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "phone-cc-inverse",
+  "scale_pair": "phone",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the newness of the phone",
+  "dim2": "how long the battery lasted",
+  "sentence": "The newer the phone, the shorter the battery lasted.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the newness of the phone increases, how long the battery lasted increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The newer the phone, the shorter the battery lasted.\nAs the newness of the phone increases, what does the passage imply about how long the battery lasted? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.683983325958252,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 6,
+   "total_tokens": 123,
+   "cost": 0.00011475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011475,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "phone-ctrl-two",
+  "scale_pair": "phone",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the newness of the phone",
+  "dim2": "how long the battery lasted",
+  "sentence": "The phone was new. The battery lasted long.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the newness of the phone increases, how long the battery lasted increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The phone was new. The battery lasted long.\nAs the newness of the phone increases, what does the passage imply about how long the battery lasted? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.5729029178619385,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 9,
+   "total_tokens": 125,
+   "cost": 0.0001275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001275,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "phone-ctrl-single",
+  "scale_pair": "phone",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the newness of the phone",
+  "dim2": "how long the battery lasted",
+  "sentence": "The phone was newer than the last model.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the newness of the phone increases, how long the battery lasted increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The phone was newer than the last model.\nAs the newness of the phone increases, what does the passage imply about how long the battery lasted? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7431612014770508,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 9,
+   "total_tokens": 124,
+   "cost": 0.00012675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012675,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roast-cc-positive",
+  "scale_pair": "roast",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the darkness of the roast",
+  "dim2": "the blend's popularity",
+  "sentence": "The darker the roast, the more popular the blend became.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the darkness of the roast increases, the blend's popularity increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The darker the roast, the more popular the blend became.\nAs the darkness of the roast increases, what does the passage imply about the blend's popularity? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.5837159156799316,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roast-cc-inverse",
+  "scale_pair": "roast",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the darkness of the roast",
+  "dim2": "the blend's popularity",
+  "sentence": "The darker the roast, the less popular the blend became.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the darkness of the roast increases, the blend's popularity increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The darker the roast, the less popular the blend became.\nAs the darkness of the roast increases, what does the passage imply about the blend's popularity? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 1.8112225532531738,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roast-ctrl-two",
+  "scale_pair": "roast",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the darkness of the roast",
+  "dim2": "the blend's popularity",
+  "sentence": "The roast was dark. The blend was popular.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the darkness of the roast increases, the blend's popularity increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The roast was dark. The blend was popular.\nAs the darkness of the roast increases, what does the passage imply about the blend's popularity? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6221225261688232,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 9,
+   "total_tokens": 123,
+   "cost": 0.000126,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000126,
+    "upstream_inference_prompt_cost": 8.55e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roast-ctrl-single",
+  "scale_pair": "roast",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the darkness of the roast",
+  "dim2": "the blend's popularity",
+  "sentence": "The roast was darker than the house blend.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the darkness of the roast increases, the blend's popularity increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The roast was darker than the house blend.\nAs the darkness of the roast increases, what does the passage imply about the blend's popularity? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.622687578201294,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 9,
+   "total_tokens": 122,
+   "cost": 0.00012525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012525,
+    "upstream_inference_prompt_cost": 8.475e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "river-cc-positive",
+  "scale_pair": "river",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the river's depth",
+  "dim2": "the ferry's speed",
+  "sentence": "The deeper the river, the faster the ferry crossed.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the river's depth increases, the ferry's speed increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The deeper the river, the faster the ferry crossed.\nAs the river's depth increases, what does the passage imply about the ferry's speed? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.4987626075744629,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 6,
+   "total_tokens": 120,
+   "cost": 0.0001125,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001125,
+    "upstream_inference_prompt_cost": 8.55e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "river-cc-inverse",
+  "scale_pair": "river",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the river's depth",
+  "dim2": "the ferry's speed",
+  "sentence": "The deeper the river, the slower the ferry crossed.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the river's depth increases, the ferry's speed increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The deeper the river, the slower the ferry crossed.\nAs the river's depth increases, what does the passage imply about the ferry's speed? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.6588656902313232,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 6,
+   "total_tokens": 120,
+   "cost": 0.0001125,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001125,
+    "upstream_inference_prompt_cost": 8.55e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "river-ctrl-two",
+  "scale_pair": "river",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the river's depth",
+  "dim2": "the ferry's speed",
+  "sentence": "The river was deep. The ferry crossed fast.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the river's depth increases, the ferry's speed increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The river was deep. The ferry crossed fast.\nAs the river's depth increases, what does the passage imply about the ferry's speed? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7088789939880371,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 9,
+   "total_tokens": 122,
+   "cost": 0.00012525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012525,
+    "upstream_inference_prompt_cost": 8.475e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "river-ctrl-single",
+  "scale_pair": "river",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the river's depth",
+  "dim2": "the ferry's speed",
+  "sentence": "The river was deeper than in spring.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the river's depth increases, the ferry's speed increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The river was deeper than in spring.\nAs the river's depth increases, what does the passage imply about the ferry's speed? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6954731941223145,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 9,
+   "total_tokens": 120,
+   "cost": 0.00012375,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012375,
+    "upstream_inference_prompt_cost": 8.325e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "garden-cc-positive",
+  "scale_pair": "garden",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "the garden's size",
+  "dim2": "the gardener's pay",
+  "sentence": "The bigger the garden, the higher the gardener's pay went.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the garden's size increases, the gardener's pay increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The bigger the garden, the higher the gardener's pay went.\nAs the garden's size increases, what does the passage imply about the gardener's pay? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7181408405303955,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "garden-cc-inverse",
+  "scale_pair": "garden",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "the garden's size",
+  "dim2": "the gardener's pay",
+  "sentence": "The bigger the garden, the lower the gardener's pay went.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the garden's size increases, the gardener's pay increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The bigger the garden, the lower the gardener's pay went.\nAs the garden's size increases, what does the passage imply about the gardener's pay? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.5828197002410889,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "garden-ctrl-two",
+  "scale_pair": "garden",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "the garden's size",
+  "dim2": "the gardener's pay",
+  "sentence": "The garden was big. The gardener's pay was high.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the garden's size increases, the gardener's pay increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The garden was big. The gardener's pay was high.\nAs the garden's size increases, what does the passage imply about the gardener's pay? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7945597171783447,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 9,
+   "total_tokens": 124,
+   "cost": 0.00012675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012675,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "garden-ctrl-single",
+  "scale_pair": "garden",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "the garden's size",
+  "dim2": "the gardener's pay",
+  "sentence": "The garden was bigger than the neighbour's.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the garden's size increases, the gardener's pay increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The garden was bigger than the neighbour's.\nAs the garden's size increases, what does the passage imply about the gardener's pay? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.720874547958374,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 9,
+   "total_tokens": 121,
+   "cost": 0.0001245,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001245,
+    "upstream_inference_prompt_cost": 8.4e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pebble-cc-positive",
+  "scale_pair": "pebble",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the roundness of the pebble",
+  "dim2": "the length of the meeting",
+  "sentence": "The rounder the pebble, the longer the meeting ran.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the roundness of the pebble increases, the length of the meeting increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The rounder the pebble, the longer the meeting ran.\nAs the roundness of the pebble increases, what does the passage imply about the length of the meeting? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.5953066349029541,
+  "usage": {
+   "prompt_tokens": 120,
+   "completion_tokens": 6,
+   "total_tokens": 126,
+   "cost": 0.000117,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000117,
+    "upstream_inference_prompt_cost": 9e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pebble-cc-inverse",
+  "scale_pair": "pebble",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the roundness of the pebble",
+  "dim2": "the length of the meeting",
+  "sentence": "The rounder the pebble, the shorter the meeting ran.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the roundness of the pebble increases, the length of the meeting increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The rounder the pebble, the shorter the meeting ran.\nAs the roundness of the pebble increases, what does the passage imply about the length of the meeting? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7489068508148193,
+  "usage": {
+   "prompt_tokens": 120,
+   "completion_tokens": 6,
+   "total_tokens": 126,
+   "cost": 0.000117,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000117,
+    "upstream_inference_prompt_cost": 9e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pebble-ctrl-two",
+  "scale_pair": "pebble",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the roundness of the pebble",
+  "dim2": "the length of the meeting",
+  "sentence": "The pebble was round. The meeting ran long.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the roundness of the pebble increases, the length of the meeting increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The pebble was round. The meeting ran long.\nAs the roundness of the pebble increases, what does the passage imply about the length of the meeting? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6919894218444824,
+  "usage": {
+   "prompt_tokens": 118,
+   "completion_tokens": 9,
+   "total_tokens": 127,
+   "cost": 0.000129,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000129,
+    "upstream_inference_prompt_cost": 8.85e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pebble-ctrl-single",
+  "scale_pair": "pebble",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the roundness of the pebble",
+  "dim2": "the length of the meeting",
+  "sentence": "The pebble was rounder than the others.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the roundness of the pebble increases, the length of the meeting increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The pebble was rounder than the others.\nAs the roundness of the pebble increases, what does the passage imply about the length of the meeting? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.625032901763916,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 9,
+   "total_tokens": 126,
+   "cost": 0.00012825,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012825,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wallpaper-cc-positive",
+  "scale_pair": "wallpaper",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the greenness of the wallpaper",
+  "dim2": "the loudness of the applause",
+  "sentence": "The greener the wallpaper, the louder the applause grew.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the greenness of the wallpaper increases, the loudness of the applause increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The greener the wallpaper, the louder the applause grew.\nAs the greenness of the wallpaper increases, what does the passage imply about the loudness of the applause? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 2.511969566345215,
+  "usage": {
+   "prompt_tokens": 118,
+   "completion_tokens": 6,
+   "total_tokens": 124,
+   "cost": 0.0001155,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001155,
+    "upstream_inference_prompt_cost": 8.85e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wallpaper-cc-inverse",
+  "scale_pair": "wallpaper",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the greenness of the wallpaper",
+  "dim2": "the loudness of the applause",
+  "sentence": "The greener the wallpaper, the quieter the applause grew.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the greenness of the wallpaper increases, the loudness of the applause increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The greener the wallpaper, the quieter the applause grew.\nAs the greenness of the wallpaper increases, what does the passage imply about the loudness of the applause? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.6554262638092041,
+  "usage": {
+   "prompt_tokens": 118,
+   "completion_tokens": 6,
+   "total_tokens": 124,
+   "cost": 0.0001155,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001155,
+    "upstream_inference_prompt_cost": 8.85e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wallpaper-ctrl-two",
+  "scale_pair": "wallpaper",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the greenness of the wallpaper",
+  "dim2": "the loudness of the applause",
+  "sentence": "The wallpaper was green. The applause was loud.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the greenness of the wallpaper increases, the loudness of the applause increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The wallpaper was green. The applause was loud.\nAs the greenness of the wallpaper increases, what does the passage imply about the loudness of the applause? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.5903754234313965,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 9,
+   "total_tokens": 126,
+   "cost": 0.00012825,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012825,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wallpaper-ctrl-single",
+  "scale_pair": "wallpaper",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the greenness of the wallpaper",
+  "dim2": "the loudness of the applause",
+  "sentence": "The wallpaper was greener than the trim.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the greenness of the wallpaper increases, the loudness of the applause increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The wallpaper was greener than the trim.\nAs the greenness of the wallpaper increases, what does the passage imply about the loudness of the applause? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6606974601745605,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 9,
+   "total_tokens": 124,
+   "cost": 0.00012675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012675,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soup-cc-positive",
+  "scale_pair": "soup",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the saltiness of the soup",
+  "dim2": "the stock price",
+  "sentence": "The saltier the soup, the higher the stock price climbed.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the saltiness of the soup increases, the stock price increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The saltier the soup, the higher the stock price climbed.\nAs the saltiness of the soup increases, what does the passage imply about the stock price? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.5242431163787842,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 6,
+   "total_tokens": 123,
+   "cost": 0.00011475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011475,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soup-cc-inverse",
+  "scale_pair": "soup",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the saltiness of the soup",
+  "dim2": "the stock price",
+  "sentence": "The saltier the soup, the lower the stock price climbed.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the saltiness of the soup increases, the stock price increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The saltier the soup, the lower the stock price climbed.\nAs the saltiness of the soup increases, what does the passage imply about the stock price? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8288896083831787,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 6,
+   "total_tokens": 123,
+   "cost": 0.00011475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011475,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soup-ctrl-two",
+  "scale_pair": "soup",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the saltiness of the soup",
+  "dim2": "the stock price",
+  "sentence": "The soup was salty. The stock price was high.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the saltiness of the soup increases, the stock price increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The soup was salty. The stock price was high.\nAs the saltiness of the soup increases, what does the passage imply about the stock price? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6281111240386963,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 9,
+   "total_tokens": 124,
+   "cost": 0.00012675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012675,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soup-ctrl-single",
+  "scale_pair": "soup",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the saltiness of the soup",
+  "dim2": "the stock price",
+  "sentence": "The soup was saltier than the broth.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the saltiness of the soup increases, the stock price increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The soup was saltier than the broth.\nAs the saltiness of the soup increases, what does the passage imply about the stock price? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.5669393539428711,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 9,
+   "total_tokens": 122,
+   "cost": 0.00012525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012525,
+    "upstream_inference_prompt_cost": 8.475e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "doorway-cc-positive",
+  "scale_pair": "doorway",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the width of the doorway",
+  "dim2": "the speed of the verdict",
+  "sentence": "The wider the doorway, the faster the verdict came.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the width of the doorway increases, the speed of the verdict increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The wider the doorway, the faster the verdict came.\nAs the width of the doorway increases, what does the passage imply about the speed of the verdict? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.5891201496124268,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "doorway-cc-inverse",
+  "scale_pair": "doorway",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the width of the doorway",
+  "dim2": "the speed of the verdict",
+  "sentence": "The wider the doorway, the slower the verdict came.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the width of the doorway increases, the speed of the verdict increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The wider the doorway, the slower the verdict came.\nAs the width of the doorway increases, what does the passage imply about the speed of the verdict? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.5602011680603027,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "doorway-ctrl-two",
+  "scale_pair": "doorway",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the width of the doorway",
+  "dim2": "the speed of the verdict",
+  "sentence": "The doorway was wide. The verdict came fast.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the width of the doorway increases, the speed of the verdict increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The doorway was wide. The verdict came fast.\nAs the width of the doorway increases, what does the passage imply about the speed of the verdict? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7592453956604004,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 9,
+   "total_tokens": 124,
+   "cost": 0.00012675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012675,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "doorway-ctrl-single",
+  "scale_pair": "doorway",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the width of the doorway",
+  "dim2": "the speed of the verdict",
+  "sentence": "The doorway was wider than the frame.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the width of the doorway increases, the speed of the verdict increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The doorway was wider than the frame.\nAs the width of the doorway increases, what does the passage imply about the speed of the verdict? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7157807350158691,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 9,
+   "total_tokens": 122,
+   "cost": 0.00012525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012525,
+    "upstream_inference_prompt_cost": 8.475e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curtains-cc-positive",
+  "scale_pair": "curtains",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the blueness of the curtains",
+  "dim2": "the weight of the homework",
+  "sentence": "The bluer the curtains, the heavier the homework felt.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the blueness of the curtains increases, the weight of the homework increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The bluer the curtains, the heavier the homework felt.\nAs the blueness of the curtains increases, what does the passage imply about the weight of the homework? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7713472843170166,
+  "usage": {
+   "prompt_tokens": 119,
+   "completion_tokens": 6,
+   "total_tokens": 125,
+   "cost": 0.00011625,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011625,
+    "upstream_inference_prompt_cost": 8.925e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curtains-cc-inverse",
+  "scale_pair": "curtains",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the blueness of the curtains",
+  "dim2": "the weight of the homework",
+  "sentence": "The bluer the curtains, the lighter the homework felt.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the blueness of the curtains increases, the weight of the homework increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The bluer the curtains, the lighter the homework felt.\nAs the blueness of the curtains increases, what does the passage imply about the weight of the homework? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.5706455707550049,
+  "usage": {
+   "prompt_tokens": 119,
+   "completion_tokens": 6,
+   "total_tokens": 125,
+   "cost": 0.00011625,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011625,
+    "upstream_inference_prompt_cost": 8.925e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curtains-ctrl-two",
+  "scale_pair": "curtains",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the blueness of the curtains",
+  "dim2": "the weight of the homework",
+  "sentence": "The curtains were blue. The homework felt heavy.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the blueness of the curtains increases, the weight of the homework increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The curtains were blue. The homework felt heavy.\nAs the blueness of the curtains increases, what does the passage imply about the weight of the homework? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 2.7563490867614746,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 9,
+   "total_tokens": 126,
+   "cost": 0.00012825,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012825,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curtains-ctrl-single",
+  "scale_pair": "curtains",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the blueness of the curtains",
+  "dim2": "the weight of the homework",
+  "sentence": "The curtains were bluer than the rug.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the blueness of the curtains increases, the weight of the homework increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The curtains were bluer than the rug.\nAs the blueness of the curtains increases, what does the passage imply about the weight of the homework? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 2.771940231323242,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 9,
+   "total_tokens": 125,
+   "cost": 0.0001275,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001275,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "map-cc-positive",
+  "scale_pair": "map",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "the age of the map",
+  "dim2": "the sweetness of the lemonade",
+  "sentence": "The older the map, the sweeter the lemonade tasted.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "As the age of the map increases, the sweetness of the lemonade increases.",
+  "nli_gold": "0",
+  "prompt": "Passage: The older the map, the sweeter the lemonade tasted.\nAs the age of the map increases, what does the passage imply about the sweetness of the lemonade? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "INCREASE",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8273420333862305,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 6,
+   "total_tokens": 122,
+   "cost": 0.000114,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000114,
+    "upstream_inference_prompt_cost": 8.7e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "map-cc-inverse",
+  "scale_pair": "map",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "the age of the map",
+  "dim2": "the sweetness of the lemonade",
+  "sentence": "The older the map, the sourer the lemonade tasted.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "As the age of the map increases, the sweetness of the lemonade increases.",
+  "nli_gold": "2",
+  "prompt": "Passage: The older the map, the sourer the lemonade tasted.\nAs the age of the map increases, what does the passage imply about the sweetness of the lemonade? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "DECREASE",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.5936126708984375,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 6,
+   "total_tokens": 123,
+   "cost": 0.00011475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00011475,
+    "upstream_inference_prompt_cost": 8.775e-05,
+    "upstream_inference_completions_cost": 2.7e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "map-ctrl-two",
+  "scale_pair": "map",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "the age of the map",
+  "dim2": "the sweetness of the lemonade",
+  "sentence": "The map was old. The lemonade tasted sweet.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the age of the map increases, the sweetness of the lemonade increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The map was old. The lemonade tasted sweet.\nAs the age of the map increases, what does the passage imply about the sweetness of the lemonade? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8083457946777344,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 9,
+   "total_tokens": 124,
+   "cost": 0.00012675,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012675,
+    "upstream_inference_prompt_cost": 8.625e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "map-ctrl-single",
+  "scale_pair": "map",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "the age of the map",
+  "dim2": "the sweetness of the lemonade",
+  "sentence": "The map was older than the atlas.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "As the age of the map increases, the sweetness of the lemonade increases.",
+  "nli_gold": "1",
+  "prompt": "Passage: The map was older than the atlas.\nAs the age of the map increases, what does the passage imply about the sweetness of the lemonade? Answer INCREASE, DECREASE, or UNDETERMINED.",
+  "raw": "UNDETERMINED",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.81500244140625,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 9,
+   "total_tokens": 122,
+   "cost": 0.00012525,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00012525,
+    "upstream_inference_prompt_cost": 8.475e-05,
+    "upstream_inference_completions_cost": 4.05e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+]

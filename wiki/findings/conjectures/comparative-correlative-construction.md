@@ -6,11 +6,13 @@ meaning-senses:
   - constructional
   - inferential
   - functional-vs-formal
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-05-29
 updated: 2026-05-29
 links:
+  - rel: operationalizes
+    target: result/comparative-correlative-covariation-v1
   - rel: depends-on
     target: concept/constructional-meaning
   - rel: depends-on
@@ -26,6 +28,8 @@ links:
 ---
 
 # Conjecture: current LLMs deploy the comparative correlative's proportional meaning
+
+> **Tested 2026-05-29 — see [`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md).** The probe **supports the core "use" claim strongly** but **does not support the "narrows-but-does-not-close" qualifier**: the panel reached *ceiling* on covariation inference (including inverse-direction and absurd-pair items) and *matched* the Scivetti human baseline (93–100% vs ≈0.90), i.e. the conjecture's explicitly-flagged "stronger (closes)" outcome rather than its central bet. The dominant caveat is that ceiling on an easy instrument is weak evidence for the strong reading (a harder v2 is queued). The statement's "but does not fully close it" clause is **not supported by this instrument** and is flagged below; it is softened pending Tom's review and a harder v2, not yet retired.
 
 ## Statement
 
