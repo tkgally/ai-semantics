@@ -102,6 +102,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 - [`findings/open-questions/relational-meaning-pilot.md`](findings/open-questions/relational-meaning-pilot.md) — what minimal two-agent setup constitutes evidence that meaning is being constituted *between* agents rather than computed inside each?
 - [`findings/open-questions/constructional-vs-frequency-confound.md`](findings/open-questions/constructional-vs-frequency-confound.md) — status: open (2026-05-29); how to separate constructional-meaning sensitivity from an n-gram/frequency confound in surprisal-contrast probes (form-level).
 - [`findings/open-questions/distributional-vs-inferential-constructional.md`](findings/open-questions/distributional-vs-inferential-constructional.md) — status: open (2026-05-29); granting constructional sensitivity, what minimal evidence shows it is inferential-role tracking vs. a distributional shadow (meaning-level; downstream of the frequency question).
+- [`findings/open-questions/constructional-divergence-probe.md`](findings/open-questions/constructional-divergence-probe.md) — status: open (2026-05-29); what minimal project-run probe (panel, NLI or surprisal lane, with a memorization control) would convert the external Scivetti divergence gap into a project `result` at the Tier 3→4 boundary. The experimental cash-out of [`claim/constructional-divergent-form-generalization-gap`](findings/claims/constructional-divergent-form-generalization-gap.md); flags an operationalization gate to queue before running.
 
 ## How to extend this file
 
