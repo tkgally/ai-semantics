@@ -6,10 +6,10 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-05-29
 links:
   - rel: depends-on
     target: concept/constructional-meaning
@@ -17,9 +17,13 @@ links:
     target: concept/inferential-meaning
   - rel: depends-on
     target: open-question/constructional-vs-frequency-confound
+  - rel: supports
+    target: result/caused-motion-minimal-pair-divergence-v1
 ---
 
 # Conjecture: LLMs draw the caused-motion inference from non-motion verbs
+
+> **Tested 2026-05-29** (workflow mode) → [`result/caused-motion-minimal-pair-divergence-v1`](../results/caused-motion-minimal-pair-divergence-v1.md). The project's own caused-motion minimal pairs were built (frozen pre-run) and the panel run as subjects on both instruments. **Confirmed decisively, at ceiling**: cm affirm-rate 90–100% with a 70–100 pp gap over controls, 3/3 models, both instruments, replicating across 9–10/10 verbs, holding for atypical/low-frequency verbs (P3). The causation-specific control (ctrl-sep: object moves by another cause) is correctly withheld (0–20%), so it is genuine causal attribution, not motion detection. **Lead caveat: ceiling on relatively easy controls is weak evidence for a strong "deep processing" reading** (a harder, coercion-resisting v2 is the natural follow-up). Note the asymmetry with the conative: *adding* a construction-contributed entailment is easy/at-ceiling, while *cancelling* a lexically-default one (conative) was harder and instrument-fragile. Status → `tested` (supported, modest).
 
 ## Statement
 

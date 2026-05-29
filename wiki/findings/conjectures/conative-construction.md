@@ -6,10 +6,10 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-05-29
 links:
   - rel: depends-on
     target: concept/constructional-meaning
@@ -17,9 +17,13 @@ links:
     target: concept/inferential-meaning
   - rel: depends-on
     target: open-question/constructional-vs-frequency-confound
+  - rel: supports
+    target: result/conative-minimal-pair-divergence-v1
 ---
 
 # Conjecture: LLMs track the conative alternation's non-completion meaning
+
+> **Tested 2026-05-29** (workflow mode) → [`result/conative-minimal-pair-divergence-v1`](../results/conative-minimal-pair-divergence-v1.md). The project's own verb-held-constant minimal pairs were built (frozen pre-run), and the panel run as subjects on both instruments. **P1 (the core "use" prediction) is confirmed at the ratified bar**: the transitive−conative affirm-contact gap is ≥30 pp in 3/3 models under forced-choice (42–88 pp) and 2/3 under NLI (54–67 pp), replicating across verbs. **P3 (frequency-orthogonal) and P2 (verb-class specificity) are supported.** The standing caveat: **gpt-5.4-mini fails the conative entirely under NLI** (calls *kicked at the ball* an entailment of contact) yet partly recovers under forced-choice — an instrument-fragility the single-instrument framing would have hidden. Status → `tested` (supported, modest); promotion past `proposed`-level reading awaits Tom's review.
 
 ## Statement
 
