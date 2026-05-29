@@ -11,6 +11,8 @@ links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
   - rel: depends-on
+    target: concept/relational-meaning
+  - rel: depends-on
     target: concept/distributional-meaning
 ---
 
@@ -18,7 +20,7 @@ links:
 
 ## The question
 
-The charter's distinctive axis is `relational` meaning — meaning constituted *between* a model and a person, or between models — and notes that the existing multi-agent literature is about *coordination*, not *meaning-constitution* ([`PROJECT.md`](../../../PROJECT.md) §1). What is the smallest interactional setup whose results would count as evidence for or against meaning being constituted *between* agents, rather than computed *within* one and then aggregated?
+The charter's distinctive axis is [`concept/relational-meaning`](../../base/concepts/relational-meaning.md) — meaning constituted *between* a model and a person, or between models — and notes that the existing multi-agent literature is about *coordination*, not *meaning-constitution* ([`PROJECT.md`](../../../PROJECT.md) §1). What is the smallest interactional setup whose results would count as evidence for or against meaning being constituted *between* agents, rather than computed *within* one and then aggregated?
 
 The theory page frames this precisely as a **second ladder**: "The relational axis is not a higher rung of the same [form/meaning] ladder; it is a *second ladder* whose bottom rung is not yet defined" ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md), §"The under-explored axis"). This page's job is to define that bottom rung — to name the *minimal* design and the *one* discriminating measure that would make the second ladder start.
 

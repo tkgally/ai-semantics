@@ -16,6 +16,7 @@ This page is the **project entry point**: start here to read the project's statu
 ## Status & next steps — start here
 
 ### What to do next
+- [`executive-summary.md`](executive-summary.md) — plain-language summary of the project's purpose and current state (refreshed each session); read this first for orientation.
 - [`NEXT.md`](../NEXT.md) — current state and the next concrete action / fan-out backlog.
 - [`log.md`](../log.md) — dated history of every run.
 - Current synthesis: [`findings/theory/constructional-meaning-in-llms.md`](findings/theory/constructional-meaning-in-llms.md) — the live theory page (evidence ladder + where each finding sits).
@@ -33,14 +34,6 @@ Ratified by Tom. Ratifying an anchor/operationalization fixes the *yardstick*, n
 - [`decisions/resolved/relational-anchor-shortlist`](decisions/resolved/relational-anchor-shortlist.md) — **Option A**: Clark & Wilkes-Gibbs 1986 empirical anchor + Pickering & Garrod 2004 theoretical backdrop (ratified 2026-05-29). Anchor only; the relational pilot still needs a literature-read + the anchor fetched, and "Decision 9" is untaken.
 - [`decisions/resolved/cc-v2-difficulty-operationalization`](decisions/resolved/cc-v2-difficulty-operationalization.md) — **UNIFY + adopt default** (ratified 2026-05-29): one difficulty gate governs CC + caused-motion + way (+ companion conative) v2; the provisional default (conflicting-cue primary + coercion-resisting + near-miss + graded ladder; report-the-rate; human clause pending) is the fixed operationalization. Unblocks the v2 designs (build+freeze before any run).
 - [`decisions/resolved/lexical-sense-gradience-anchor`](decisions/resolved/lexical-sense-gradience-anchor.md) — **Option B** (ratified 2026-05-29): anchor on a different graded set, **not Usim** (verified-but-unfetchable/unlicensed). Replacement graded anchor to be identified+verified (candidates DWUG [CC BY] / CoSimLex); WiC stays the binary cross-check.
-- [`decisions/resolved/aann-stimulus-source`](decisions/resolved/aann-stimulus-source.md) — **Mahowald 2023** is the AANN human anchor.
-- [`decisions/resolved/aann-operationalization`](decisions/resolved/aann-operationalization.md) — continuation-likelihood contrast + prompted-acceptability fallback + **T1**; held-out adjectives locked pre-run.
-- [`decisions/resolved/caused-motion-anchor`](decisions/resolved/caused-motion-anchor.md) — anchored to the **Scivetti CxNLI** dataset.
-- [`decisions/resolved/conative-anchor`](decisions/resolved/conative-anchor.md) — anchored to the **Scivetti CxNLI** dataset.
-- [`decisions/resolved/way-construction-anchor`](decisions/resolved/way-construction-anchor.md) — anchored to the **Scivetti CxNLI** dataset.
-- [`decisions/resolved/comparative-correlative-anchor`](decisions/resolved/comparative-correlative-anchor.md) — anchored to the **Scivetti CxNLI** CC subset.
-- [`decisions/resolved/cxg-probing-anchor`](decisions/resolved/cxg-probing-anchor.md) — **Option A**: claim stays AANN-scoped; cross-construction generality stays provisional.
-- [`decisions/resolved/constructional-divergence-operationalization`](decisions/resolved/constructional-divergence-operationalization.md) — default: both instruments + 30/70/15-pp thresholds, frozen pre-run.
 - [`decisions/resolved/aann-stimulus-source`](decisions/resolved/aann-stimulus-source.md) — **Mahowald 2023** is the AANN human anchor.
 - [`decisions/resolved/aann-operationalization`](decisions/resolved/aann-operationalization.md) — continuation-likelihood contrast + prompted-acceptability fallback + **T1**; held-out adjectives locked pre-run.
 - [`decisions/resolved/caused-motion-anchor`](decisions/resolved/caused-motion-anchor.md) — anchored to the **Scivetti CxNLI** dataset.
@@ -72,6 +65,8 @@ Ratified by Tom. Ratifying an anchor/operationalization fixes the *yardstick*, n
 - [`base/concepts/grounding.md`](base/concepts/grounding.md) — form-vs-meaning (Bender & Koller, binary) vs. grounding-as-gradual (Lyre, three-dimensional); the project's gradient stance. (filled 2026-05-29)
 - [`base/concepts/formal-vs-functional-competence.md`](base/concepts/formal-vs-functional-competence.md) — Mahowald et al. 2024 distinction; structural knowledge vs. language-in-the-world. (filled 2026-05-29)
 - [`base/concepts/constructional-meaning.md`](base/concepts/constructional-meaning.md) — CxG form–meaning pairing; underwrites the `constructional` tag. Grounded in Weissweiler 2023. (filled 2026-05-29)
+- [`base/concepts/coercion.md`](base/concepts/coercion.md) — constructional coercion: the construction overriding the verb (caused-motion, *way*); the sharpest Tier-4 wedge; the project's own add-vs-cancel asymmetry observation. Sharpens `constructional-meaning`; grounds the four argument-structure result pages. (created 2026-05-29)
+- [`base/concepts/relational-meaning.md`](base/concepts/relational-meaning.md) — meaning constituted *between* agents (the charter's distinctive, under-explored second axis); the "second ladder" with trajectory-dependence (live-vs-shuffled) as candidate bottom rung; anchor ratified-but-unfetched. (created 2026-05-29)
 
 ### Base — sources
 

@@ -1,0 +1,53 @@
+---
+type: concept
+id: relational-meaning
+title: Relational / interactional meaning
+meaning-senses:
+  - relational
+  - distributional
+  - grounded
+created: 2026-05-29
+updated: 2026-05-29
+links:
+  - rel: depends-on
+    target: open-question/relational-meaning-pilot
+  - rel: depends-on
+    target: concept/distributional-meaning
+  - rel: refines
+    target: concept/grounding
+---
+
+# Relational meaning
+
+Relational (or interactional) meaning is meaning constituted *between* agents — between a model and a person, or between two models — rather than computed *inside* a single agent and then read off. It is the second of the charter's three candidate axes for where LLM-meaning lives, and the one the charter singles out as "genuinely under-explored" ([`PROJECT.md`](../../../PROJECT.md) §1). The controlled vocabulary states the wedge tersely: relational meaning is "Meaning constituted between a model and a person, or between models — the under-explored second axis from the charter. Treat this as the project's distinctive wedge: the multi-agent literature is about coordination, not meaning-constitution" ([`meaning-senses.md`](../../meaning-senses.md), §`relational`). The phrase to hold onto is **constituted between**: the claim is not that two systems happen to coordinate, but that the content at issue exists in the interaction and not antecedently in either party.
+
+## Why this is the charter's distinctive wedge
+
+The opportunity is precisely that the existing multi-agent literature does not occupy this space. Work on communicative agents, debate, negotiation, and emergent communication studies whether agents *coordinate* — whether they reach a shared label, converge on a strategy, or improve task success — but coordination is silent on *constitution*. Two agents that each independently compute the same convention from the same evidence would look perfectly coordinated without anything being constituted between them. So "the multi-agent literature is about coordination, not meaning-constitution" ([`meaning-senses.md`](../../meaning-senses.md), §`relational`) is not a dismissal of that literature; it is the statement of an unfilled niche. A lexicographer's question — *whose* meaning is this, and where does it live — is exactly the question that coordination metrics skip. The charter flags the same point and the same reason it is open: the relational axis is "genuinely under-explored (the multi-agent literature is about coordination, not meaning-constitution) and is a strong opportunity" ([`PROJECT.md`](../../../PROJECT.md) §1).
+
+## The contrast with model-internal meaning: a second ladder
+
+Relational meaning is defined against `model-internal` meaning — content located in a single model's behavior or representations. Every rung of the project's current evidence ladder is model-internal: the constructional probes (dative, AANN, *way*, caused-motion, conative, comparative-correlative) all ask what *one* model knows about a form–meaning pairing. The synthesis page states the relation between the two loci explicitly: "The relational axis is not a higher rung of the same ladder; it is a *second ladder* whose bottom rung is not yet defined" ([`theory/constructional-meaning-in-llms`](../../findings/theory/constructional-meaning-in-llms.md), §"The under-explored axis"). The metaphor is load-bearing. Relational meaning is not "more meaning" stacked above internal meaning on the same scale; it is a different kind of object, measured differently, with its own floor that has not yet been built. The same page records the consequence honestly: "Until a relational pilot exists, claims on this page are scoped to single-model constructional meaning" ([`theory/constructional-meaning-in-llms`](../../findings/theory/constructional-meaning-in-llms.md), §"The under-explored axis"). This concept page names the second ladder; it does not yet stand on it.
+
+The defining difficulty is operational, and the open question states it exactly: distinguishing "meaning constituted BETWEEN agents" from "meaning computed in each, then averaged" ([`open-question/relational-meaning-pilot`](../../findings/open-questions/relational-meaning-pilot.md)). A serious relational claim has to make those two stories come apart in a measurement, rather than assuming the first because coordination was observed.
+
+## The empirical anchor direction (not yet in-repo)
+
+The relational axis needs a human-generated dyadic-interaction resource to anchor any empirical claim (always-on rule 5; [`PROJECT.md`](../../../PROJECT.md) §2.5). The anchor shortlist has been ratified ([`decisions/resolved/relational-anchor-shortlist`](../../decisions/resolved/relational-anchor-shortlist.md), Option A):
+
+- **Clark & Wilkes-Gibbs 1986, "Referring as a collaborative process"** — the canonical referential-communication / tangram-naming study, in which dyads collaboratively coin and compress a shared label for hard-to-name figures over repeated rounds. It is the ratified *empirical* anchor: it supplies the human convergence/compression baseline and a documented paradigm the relational pilot directly instantiates.
+- **Pickering & Garrod 2004, "Toward a mechanistic psychology of dialogue"** — the interactive-alignment framework, the most-cited mechanistic model of dialogue alignment-across-levels. It is the ratified *theoretical backdrop* only: useful for what alignment predicts and, importantly, for what it does *not* claim about meaning-constitution.
+
+**Both papers are not yet in the repository.** They are queued in [`base/wanted.md`](../wanted.md) (P1 and P2 respectively) and have not been fetched, so this page describes them at the conceptual level only and quotes neither. No page number, quotation, or finding is attributed to either work here, and none may be until Clark & Wilkes-Gibbs 1986 is fetched and read — at which point a `source/` page with page-level provenance becomes the citable ground, and this concept page can be linked to it with an `anchors` relation. Until then the relational axis carries an explicit anchor IOU, exactly as the resolved decision records: "no relational result may be promoted until the anchor is fetched" ([`decisions/resolved/relational-anchor-shortlist`](../../decisions/resolved/relational-anchor-shortlist.md)).
+
+## How the project operationalizes the tag: trajectory-dependence
+
+The relational tag earns its keep only if there is a measure that separates "constituted between" from "computed within and averaged." The candidate the project has sharpened is **trajectory-dependence**, defined in [`open-question/relational-meaning-pilot`](../../findings/open-questions/relational-meaning-pilot.md): if a coined convention is genuinely constituted in the interaction, then one agent's later interpretation of the coined term should depend on the *ordered history* of the exchange — the particular sequence of repairs and refinements that produced it — and not merely on the *set* of utterances that happened to occur. The discriminating contrast is **live dialogue vs. shuffled-history replay**: hold the content of prior turns constant but destroy their ordering, and ask whether interpretation survives unchanged. A live-vs-shuffled gap is the operational signature of a convention built between rather than within; its absence is a relational *deflation*. That live/shuffled contrast is the project's candidate **bottom rung** of the second ladder — the minimal design whose result would count as evidence for or against relational meaning-constitution.
+
+Crucially, the deflationary alternative here is itself a `distributional` story, which is why this page co-tags `distributional` and depends on [`concept/distributional-meaning`](distributional-meaning.md). Two next-token predictors conditioned on overlapping recent context will drift toward a shared label and will show entrainment — length compression and rising token overlap — purely from co-occurrence content, and that convergence would *survive* order-scrambling. So lexical entrainment alone is **not** sufficient evidence for the `relational` tag; it is explicable by distributional structure that would equally appear in the shuffled control. Relational meaning-constitution requires a *surplus* over distributional convergence, and the live-vs-shuffled gap is exactly that surplus ([`open-question/relational-meaning-pilot`](../../findings/open-questions/relational-meaning-pilot.md)). This is the relational analogue of the discipline that runs through the constructional pages: the eye-catching convergence is the floor, and only the discriminating contrast climbs.
+
+## Open distinction: where does `grounded.social` belong?
+
+The typology carries an unresolved seam directly adjacent to this concept, which is why this page `refines` [`concept/grounding`](grounding.md). The meaning-senses page asks: "Is `grounded.social` a sub-tag of `grounded` or a separate top-level sense closer to `relational`? Plausibly the latter for this project" ([`meaning-senses.md`](../../meaning-senses.md), §Open issues). Social grounding — uptake in joint action, normative status between participants — is hard to distinguish from relational meaning, because both locate content in what happens *between* parties rather than inside one. The [`concept/grounding`](grounding.md) page flags the same seam from its side, noting that until the placement decision is taken "a finding that turns on social grounding should consider co-tagging `relational`." This concept page does not resolve the question; it records that the `grounded.social`-vs-`relational` boundary is open, that a finding straddling it should co-tag both, and that the placement should not be treated as settled.
+
+**Live tension for this project.** Relational meaning is, at the moment, the project's most distinctive claim *and* its least evidenced. There is no in-repo result on the relational axis, no fetched human anchor, and only a sharpened open question with a candidate bottom rung. The honest scope is therefore narrow: this page defines an axis and a candidate discriminator, names a ratified-but-unfetched anchor, and marks an open typological boundary — it does not assert that any model exhibits relational meaning. Two cautions travel with the concept. First, until Clark & Wilkes-Gibbs 1986 is in-repo, every empirical statement about the relational axis is an IOU, not a finding. Second, the deflationary distributional reading of entrainment is the default that any relational claim must beat; treating coordination as constitution without the live-vs-shuffled surplus would be the relational version of the distributional null this project keeps insisting on writing.
