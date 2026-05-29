@@ -6,12 +6,14 @@ meaning-senses:
   - constructional
   - functional-vs-formal
   - human-comparison
-status: open
+status: answered
 created: 2026-05-29
 updated: 2026-05-29
 links:
   - rel: depends-on
     target: claim/constructional-divergent-form-generalization-gap
+  - rel: refines
+    target: result/cxnli-distinction-divergence-v1
   - rel: depends-on
     target: resource/scivetti-2025-cxnli-dataset
   - rel: depends-on
@@ -27,6 +29,8 @@ links:
 ---
 
 # Open question: from an external divergence gap to a project-run result
+
+> **Answered 2026-05-29 (first pass) — see [`result/cxnli-distinction-divergence-v1`](../results/cxnli-distinction-divergence-v1.md).** The minimal project-run probe this question asks for was built and run: the panel-as-subjects on Scivetti's own base (Exp1) vs. distinction (Exp2) NLI items, 5 argument-structure constructions, the ratified NLI instrument. Result: the divergent-form gap **reproduces** on the 2026 panel (mean ≈34 pp base→distinction drop; 28/45/28 pp for the three models), convergent in direction, with the **conative collapsing hardest** (60–80 pp). The external claim now has project-owned evidence. The question is kept open-but-answered: the *sharper* next step is the project's **own minimal-pair** probes (esp. conative), not Scivetti's items, and a memorization-control / frequency arm (§ below) is still un-run.
 
 ## The question
 

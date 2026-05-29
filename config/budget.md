@@ -48,8 +48,9 @@ Aggregate to a running ledger here when the second run lands (don't pre-create).
 |------|-----|------------------|
 | 2026-05-28 | panel calibration (4 one-shot prompts) | ≈ $0.01 |
 | 2026-05-29 | comparative-correlative probe v1 (570 calls: 80 items × 2 framings + 30 Scivetti × 3 models) | ≈ $0.124 (A $0.090 / B $0.006 / C $0.029) |
+| 2026-05-29 | CxNLI base-vs-distinction probe v1 (600 calls: 100 base + 100 distinction × 3 models) | ≈ $0.140 (A $0.104 / B $0.006 / C $0.030) |
 
-Running total against the $20/month soft cap: ≈ $0.13. Ample headroom.
+Running total against the $20/month soft cap: ≈ $0.27. Ample headroom.
 
 ## When to ask Tom
 
