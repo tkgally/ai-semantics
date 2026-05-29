@@ -11,6 +11,8 @@ created: 2026-05-29
 updated: 2026-05-29
 links:
   - rel: depends-on
+    target: concept/polysemy
+  - rel: depends-on
     target: concept/distributional-meaning
   - rel: depends-on
     target: concept/referential-meaning
