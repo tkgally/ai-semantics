@@ -30,6 +30,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 - [`decisions/open/caused-motion-anchor`](decisions/open/caused-motion-anchor.md) — choose the human anchor for the caused-motion conjecture (or fall back to a verb-frame resource + queue a want). **New candidate Option D surfaced: Scivetti 2025 CxNLI.**
 - [`decisions/open/conative-anchor`](decisions/open/conative-anchor.md) — choose the human anchor for the conative conjecture (default: Levin 1993 / VerbNet conative-class as partial anchor). **New candidate Option D surfaced: Scivetti 2025 CxNLI.**
 - [`decisions/open/relational-anchor-shortlist`](decisions/open/relational-anchor-shortlist.md) — choose the human dyadic-interaction anchor for the relational-meaning pilot (default: Clark & Wilkes-Gibbs 1986, with Pickering & Garrod 2004 as theoretical backdrop). Opened 2026-05-29.
+- [`decisions/open/comparative-correlative-anchor`](decisions/open/comparative-correlative-anchor.md) — anchor for the comparative-correlative conjecture (default: Scivetti CxNLI CC subset, pending item-level inspection; fall back to Weissweiler-2022 seed with human arm pending). Opened 2026-05-29.
 
 ### Resolved decisions
 - (none yet) — ratified decisions will be listed here, each linking its file under `wiki/decisions/resolved/`.
@@ -83,6 +84,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 - [`findings/conjectures/function-word-substitutability.md`](findings/conjectures/function-word-substitutability.md)
 - [`findings/conjectures/caused-motion-construction.md`](findings/conjectures/caused-motion-construction.md) — status: proposed (2026-05-29); transitive causation-of-motion from non-motion verbs; anchor pending (`caused-motion-anchor`)
 - [`findings/conjectures/conative-construction.md`](findings/conjectures/conative-construction.md) — status: proposed (2026-05-29); cancellation of the completed-contact entailment (verb held constant); anchor pending (`conative-anchor`)
+- [`findings/conjectures/comparative-correlative-construction.md`](findings/conjectures/comparative-correlative-construction.md) — status: proposed (2026-05-29); decoder LLMs use the CC's proportional-covariation meaning, narrowing-but-not-closing the encoder-PLM form/meaning dissociation that [`source/weissweiler-2022-comparative-correlative`](base/sources/weissweiler-2022-comparative-correlative.md) found; the project's first longitudinal (2022 encoders → 2025 decoders) construction conjecture. Anchor pending (`comparative-correlative-anchor`).
 
 ### Findings — claims / results / theory / open-questions
 
