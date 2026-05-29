@@ -1,7 +1,7 @@
 ---
 type: conjecture
 id: way-construction
-title: LLMs draw the caused-motion inference of the way-construction
+title: LLMs draw the path-traversal (self-motion) inference of the way-construction
 meaning-senses:
   - constructional
   - inferential
@@ -14,13 +14,13 @@ links:
     target: concept/constructional-meaning
 ---
 
-# Conjecture: LLMs draw the caused-motion inference of the *way*-construction
+# Conjecture: LLMs draw the path-traversal (self-motion) inference of the *way*-construction
 
 ## Statement
 
 The English ***way*-construction** — *He whistled his way down the hall*, *She elbowed her way through the crowd*, *They drank their way through the night* — is a paradigmatic CxG case where the **construction** contributes the meaning ("subject moves along a path while/by V-ing"), not the verb. The verbs *whistle*, *elbow*, *drink* are not lexically motion verbs.
 
-The conjecture: LLMs draw the caused-motion / path-traversal inference from *way*-construction instances even when the verb is non-motion, and they do so at a rate that distinguishes the construction from minimally-different non-constructional alternatives.
+The conjecture: LLMs draw the path-traversal (self-motion) inference from *way*-construction instances even when the verb is non-motion, and they do so at a rate that distinguishes the construction from minimally-different non-constructional alternatives.
 
 ## Why this is interesting
 
@@ -42,7 +42,7 @@ The conjecture: LLMs draw the caused-motion / path-traversal inference from *way
 
 ## Human anchor (pending)
 
-Goldberg (1995, ch. 9) gives the canonical inventory of *way*-construction stimuli with discussion. A modern rated version would be ideal. Queue `decisions/open/way-construction-anchor.md` at design time.
+Goldberg (1995, ch. 9) gives the canonical inventory of *way*-construction stimuli with discussion. A modern rated version would be ideal. Queue [`decisions/open/way-construction-anchor`](../../decisions/open/way-construction-anchor.md) at design time.
 
 ## Notes / caveats
 

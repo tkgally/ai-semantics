@@ -22,7 +22,7 @@ The AANN conjecture says LLMs treat the AANN construction (*a beautiful three da
 For each (template, adjective, numeral, noun) tuple, compute the model's average per-token log-probability assigned to the **licit AANN** instantiation versus each of Mahowald's four **minimally-illicit** variants (switched order, no modifier, singular noun, no article). Indicator = the signed contrast averaged over items, plus the per-item signed-rank correlation against Mahowald's MTurk human ratings on the matched subset.
 
 - **Pros**: clean, graded, behaviorally direct, comparable across panel models if all three expose log-probs via OpenRouter; matches the small-model lane (charter §5) for follow-up.
-- **Cons**: not all panel models expose token logprobs reliably via OpenRouter; reasoning-token leakage on Gemini / DeepSeek (per panel-calibration caveats in `config/models.md`) may interact with this.
+- **Cons**: not all panel models expose token logprobs reliably via OpenRouter; reasoning-token leakage on Gemini / DeepSeek (per panel-calibration caveats in [`config/models.md`](../../../config/models.md)) may interact with this.
 
 ### B. Prompted acceptability rating (Mahowald-replication)
 
@@ -59,12 +59,12 @@ The conjecture predicts generalization, not memorization. Define held-out items 
 - **Threshold**: T1.
 - **Held-out items**: ≥ 30 per adjective category, drawn from outside Mahowald's superset, locked in `experiments/data/aann/held-out-adjectives.txt` *before* the probe is run.
 
-Why this default rather than the looser T0: the bootstrap calibration probe already showed a cross-model AANN divergence (`experiments/runs/2026-05-28-panel-calibration/README.md`). The point of T1 is to make the conjecture's support claim mean something — not to lower the bar until a null becomes positive.
+Why this default rather than the looser T0: the bootstrap calibration probe already showed a cross-model AANN divergence ([`experiments/runs/2026-05-28-panel-calibration/README.md`](../../../experiments/runs/2026-05-28-panel-calibration/README.md)). The point of T1 is to make the conjecture's support claim mean something — not to lower the bar until a null becomes positive.
 
 ## What downstream is contingent on this
 
-- `wiki/findings/conjectures/aann-construction.md` (now `contingent-on: aann-operationalization`).
-- `experiments/designs/aann-construction-v1.md` (entire design is provisional under this default; if Tom ratifies a different indicator the design must be rewritten before the probe runs, not after).
+- [`wiki/findings/conjectures/aann-construction.md`](../../findings/conjectures/aann-construction.md) (now `contingent-on: aann-operationalization`).
+- [`experiments/designs/aann-construction-v1.md`](../../../experiments/designs/aann-construction-v1.md) (entire design is provisional under this default; if Tom ratifies a different indicator the design must be rewritten before the probe runs, not after).
 - All future `claim` / `result` pages spawned by the AANN probe.
 
 ## Notes for the resolver

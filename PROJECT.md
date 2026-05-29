@@ -52,12 +52,12 @@ ai-semantics/
   PROTOCOL.md           the per-run discipline (see §7)
   NEXT.md               the baton: state, next action, blocked items
   log.md                append-only chronicle
-  decisions/
-    open/               queued gate decisions awaiting Tom
-    resolved/           ratified decisions (with date + rationale)
   wiki/
-    index.md            catalog of all pages; read first to navigate
+    index.md            catalog of all pages; read first to navigate (project entry point)
     meaning-senses.md   THE controlled typology of senses of "meaning"
+    decisions/
+      open/             queued gate decisions awaiting Tom
+      resolved/         ratified decisions (with date + rationale)
     base/               STRATUM 0 — prior knowledge & human resources
       sources/          one page per ingested source, with provenance
       concepts/         human-semantics concepts
@@ -123,7 +123,7 @@ You choose the panel from what is live on OpenRouter (an API key is in your envi
 Every run is an independent cloud session with a fresh context and a fresh clone of the default branch. **All continuity lives in the repo.** Each run:
 
 1. **Read** `NEXT.md`, then `wiki/index.md`, then only the pages the next action needs.
-2. **Reconcile** `decisions/open/`: apply any decision Tom has ratified into `decisions/resolved/`; promote findings that were contingent on it; re-mark anything still pending.
+2. **Reconcile** `wiki/decisions/open/`: apply any decision Tom has ratified into `wiki/decisions/resolved/`; promote findings that were contingent on it; re-mark anything still pending.
 3. **Pick** the next bounded unit named in `NEXT.md`. Scope it to fit comfortably in one context window. If it is too big, split it, write the split back into `NEXT.md`, and do the first part.
 4. **Do** the unit.
 5. **Verify** before committing: `senselint` (every findings page tags a meaning-sense; nothing contingent is presented as settled), provenance (every claim cites an in-repo source/resource that bears on it), and the human-anchor check on any empirical claim.
@@ -143,7 +143,7 @@ Two gate classes:
 - **Operationalization** — how a construct becomes an indicator (what counts as evidence that construction X carries meaning Y in model M). This is where the real decisions live and where an autonomous loop will quietly cheat by retuning until it gets a positive.
 - **Human-anchor** — confirming the existing resource invoked actually bears on the claim, not merely that it exists.
 
-On hitting a gate: write a page to `decisions/open/` with the question, the options, your **provisional default and its rationale**; mark everything downstream **contingent**; continue on whatever is *not* blocked; and surface the pending decision in `NEXT.md`. The inviolable rule (the lesson that a simulated or assumed judgment manufactures false assurance): **a contingent finding is never promoted to settled until Tom ratifies it in **`decisions/`**.** `senselint` enforces that no result page rests on an unratified operationalization without being flagged.
+On hitting a gate: write a page to `wiki/decisions/open/` with the question, the options, your **provisional default and its rationale**; mark everything downstream **contingent**; continue on whatever is *not* blocked; and surface the pending decision in `NEXT.md`. The inviolable rule (the lesson that a simulated or assumed judgment manufactures false assurance): **a contingent finding is never promoted to settled until Tom ratifies it in **`wiki/decisions/`**.** `senselint` enforces that no result page rests on an unratified operationalization without being flagged.
 
 ---
 
@@ -155,7 +155,7 @@ The first run writes `CLAUDE.md` as the file you actually read every session. It
 
 ## 10. Tom’s role and the interaction model
 
-- **Light, asynchronous presence.** He answers `decisions/open/` when available, supplies resources, steers occasionally, and triggers work via routines that point you to `NEXT.md`. He sets the cadence.
+- **Light, asynchronous presence.** He answers `wiki/decisions/open/` when available, supplies resources, steers occasionally, and triggers work via routines that point you to `NEXT.md`. He sets the cadence.
 - **Resources / ingestion.** Tom has University of Tokyo library access and will upload paywalled papers and books (scans/PDFs) that you cannot reach yourself. Read them with native vision / OCR; summarize into `base/sources/` with **page-level provenance**; link out to concepts and resources; **never store wholesale text** — grounded summaries and short exact quotes only, held for research use. Keep `base/wanted.md` current so he knows what to fetch next.
 - **He is never a subject.** All human bearing comes from existing resources.
 - **Spend.** Tom monitors OpenRouter spend and will instruct you if it runs high. Keep OpenRouter under the cap in `config/budget.md`; probes are read-only; pause and flag in `NEXT.md` if spend or scope looks wrong.
@@ -165,7 +165,7 @@ The first run writes `CLAUDE.md` as the file you actually read every session. It
 
 ## 11. First-run bootstrap checklist
 
-1. Create the directory structure (§3) and `log.md`, `decisions/open/`, `decisions/resolved/`.
+1. Create the directory structure (§3) and `log.md`, `wiki/decisions/open/`, `wiki/decisions/resolved/`.
 2. Write `CLAUDE.md` (§9) and `PROTOCOL.md` (§7).
 3. Seed `wiki/meaning-senses.md` with an initial typology drawn from the literature, distinguishing at least: distributional meaning (Firth/Harris); referential meaning and sense vs. reference (Frege; the externalist debate); inferential / conceptual-role meaning, incl. “meaning without reference” (Piantadosi & Hill) and inferentialism (Brandom applied to LLMs); the form-vs-meaning / grounding axis (Bender & Koller) and grounding-as-gradual (Lyre: functional/social/causal); formal vs. functional linguistic competence (Mahowald, Ivanova, Fedorenko et al.); and constructional form–meaning pairing (Construction Grammar; the CxG-probing line — Weissweiler, Tayyar Madabushi, Scivetti). Treat this as a living, revisable page, not a finished taxonomy.
 4. Seed stub pages in `base/concepts/` for those entries and seed `base/wanted.md` with the founding reading list (lexical: Cruse, Murphy, Lyons; constructional: Goldberg, Croft; the classics the LLM debate invokes — Putnam, Lewis, Evans, Millikan, the Firth/Harris originals; and the current wave — the Sterken & Cappelen volume, Grindrod). Note which are likely paywalled so Tom can prioritize.
