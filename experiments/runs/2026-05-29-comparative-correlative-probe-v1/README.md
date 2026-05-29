@@ -30,10 +30,12 @@ anticipated this and ratified a fallback — temperature=0 greedy completion + s
 so this probe runs cleanly without logprobs. (The AANN probe cannot: its ratified indicator
 *requires* logprobs. See `NEXT.md` / the queued decision.)
 
-`google/gemini-3.5-flash` requires reasoning to be enabled ("Reasoning is mandatory for this
-endpoint and cannot be disabled", HTTP 400 when `reasoning.enabled=false`); we set
-`max_tokens=4096` and parse the trailing digit / last keyword. A and B answered with a bare
-token at `max_tokens=64`.
+`google/gemini-3.5-flash` requires reasoning to be enabled: setting `reasoning.enabled=false`
+was tested in the dry run and rejected with HTTP 400 ("Reasoning is mandatory for this
+endpoint and cannot be disabled"). The committed `probe.py` therefore **omits** the `reasoning`
+key entirely (letting the endpoint default apply) and bumps `max_tokens` to 4096 for `google/`
+to absorb the reasoning tokens; it parses the trailing digit / last keyword from the visible
+output. A and B answered with a bare token at `max_tokens=64`.
 
 ## Files
 
@@ -43,8 +45,12 @@ token at `max_tokens=64`.
 - `probe.py` — the probe runner (3 arms × 3 models). Raw JSON per (arm, slot) under `raw/`.
 - `analyze.py` — applies the frozen thresholds T1/T2/T3; emits `raw/results.json`.
 - `raw/` — raw model outputs (prompts, responses, parsed predictions, usage). The Scivetti
-  items appear here as premise/hypothesis text; this is run output, not a mirror of the
-  un-licensed dataset (which is read in place from `/tmp`, never copied into the repo).
+  arm files (`scivetti-nli_*.json`) are **redacted**: premise/hypothesis text is removed and
+  only `item_index / cxn / gold / pred / correct` plus a re-derivation note are kept, because
+  the Scivetti dataset carries no license (project rule: read in place, don't mirror). To
+  reproduce the Scivetti arm, run `probe.py --scivetti-dir` against a local clone. The
+  constructed-item arms (`constructed-*.json`) keep full prompts/responses — those items are
+  the project's own.
 
 ## Operationalization (frozen, per the ratified decisions — NOT retuned after results)
 

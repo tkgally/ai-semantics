@@ -23,9 +23,12 @@ This page is the **project entry point**: start here to read the project's statu
 ### Open decisions — blocking, pending Tom
 These gate promotion of contingent findings; nothing depending on them is settled until ratified. To resolve one, add a `resolution:` block or move the file to `wiki/decisions/resolved/` (see [`PROTOCOL.md`](../PROTOCOL.md) §2).
 
-Eight decisions were ratified 2026-05-29 (see *Resolved decisions* below). One remains open:
+Eight decisions were ratified 2026-05-29 (see *Resolved decisions* below). **Four are now open** (one prior + three opened by the 2026-05-29 probe-run session):
 
+- [`decisions/open/aann-panel-logprob-blocker`](decisions/open/aann-panel-logprob-blocker.md) — **blocks the AANN probe.** Its ratified indicator (continuation-likelihood logprob contrast + `p("good")` fallback) needs token logprobs, but the ratified panel exposes none on OpenRouter (verified 2026-05-29). Substitute the panel (default), the small-model lane, or re-operationalize? Opened 2026-05-29.
 - [`decisions/open/relational-anchor-shortlist`](decisions/open/relational-anchor-shortlist.md) — choose the human dyadic-interaction anchor for the relational-meaning pilot (default: Clark & Wilkes-Gibbs 1986, with Pickering & Garrod 2004 as theoretical backdrop). Opened 2026-05-29. *(The broader two-AI relational experiment — "Decision 9" in Tom's walkthrough — has not yet been taken.)*
+- [`decisions/open/lexical-sense-gradience-anchor`](decisions/open/lexical-sense-gradience-anchor.md) — anchor for the first lexical conjecture (default: Usim graded usage-similarity + WiC binary cross-check, pending in-repo inspection of the Usim release). Opened 2026-05-29. Non-blocking (the conjecture is `proposed`).
+- [`decisions/open/cc-v2-difficulty-operationalization`](decisions/open/cc-v2-difficulty-operationalization.md) — difficulty axes/thresholds for a harder comparative-correlative v2 (to escape the v1 ceiling). Non-urgent; the v1 result stands on its own. Opened 2026-05-29.
 
 ### Resolved decisions
 Ratified by Tom 2026-05-29. Ratifying an anchor/operationalization fixes the *yardstick*, not the *result* — the conjectures/designs below remain untested/unrun.
@@ -76,6 +79,7 @@ Ratified by Tom 2026-05-29. Ratifying an anchor/operationalization fixes the *ya
 
 - [`base/resources/index.md`](base/resources/index.md) — catalog of human-anchored empirical resources.
 - [`base/resources/mahowald-2023-aann-stimuli.md`](base/resources/mahowald-2023-aann-stimuli.md) — Mahowald 2023 EACL AANN stimulus suite + MTurk acceptability ratings (status: external-only); anchor for [`conjecture/aann-construction`](findings/conjectures/aann-construction.md).
+- [`base/resources/wic-graded-usage-similarity.md`](base/resources/wic-graded-usage-similarity.md) — Usim graded usage-similarity ratings (Erk, McCarthy & Gaylord 2009/2013) — graded 5-point human usage-similarity judgments; the candidate gradience anchor for [`conjecture/lexical-sense-gradience`](findings/conjectures/lexical-sense-gradience.md), with WiC (Pilehvar & Camacho-Collados 2019, binary, CC BY-NC 4.0) as the binary cross-check. Status: external-only (license/counts unverified this run — see page). (created 2026-05-29)
 - [`base/resources/scivetti-2025-cxnli-dataset.md`](base/resources/scivetti-2025-cxnli-dataset.md) — Scivetti et al. 2025 CxNLI / CxNLI-Distinction constructional NLI dataset (435 + 99 triples over 8 / 5 constructions; native-speaker baseline ≈0.90 / ≈0.83). Status: partial (de-anonymized repo inspected 2026-05-29: per-item construction labels + single gold answer per item). **Ratified anchor (2026-05-29)** for the caused-motion, conative, way, and comparative-correlative conjectures — answer-key + aggregate baseline. (created 2026-05-29)
 
 ### Base — wants
@@ -90,7 +94,8 @@ Ratified by Tom 2026-05-29. Ratifying an anchor/operationalization fixes the *ya
 - [`findings/conjectures/function-word-substitutability.md`](findings/conjectures/function-word-substitutability.md)
 - [`findings/conjectures/caused-motion-construction.md`](findings/conjectures/caused-motion-construction.md) — status: proposed (2026-05-29); transitive causation-of-motion from non-motion verbs; anchor pending (`caused-motion-anchor`)
 - [`findings/conjectures/conative-construction.md`](findings/conjectures/conative-construction.md) — status: proposed (2026-05-29); cancellation of the completed-contact entailment (verb held constant); anchor pending (`conative-anchor`)
-- [`findings/conjectures/comparative-correlative-construction.md`](findings/conjectures/comparative-correlative-construction.md) — status: proposed (2026-05-29); decoder LLMs use the CC's proportional-covariation meaning, narrowing-but-not-closing the encoder-PLM form/meaning dissociation that [`source/weissweiler-2022-comparative-correlative`](base/sources/weissweiler-2022-comparative-correlative.md) found; the project's first longitudinal (2022 encoders → 2025 decoders) construction conjecture. Anchor pending (`comparative-correlative-anchor`).
+- [`findings/conjectures/comparative-correlative-construction.md`](findings/conjectures/comparative-correlative-construction.md) — status: **tested** (2026-05-29); decoder LLMs use the CC's proportional-covariation meaning. **Probed this session** → [`result/comparative-correlative-covariation-v1`](findings/results/comparative-correlative-covariation-v1.md): the "use" core is supported at ceiling; the "narrows-but-not-closes" clause is *not* supported by the v1 instrument (panel matched the human baseline). Anchored to the Scivetti CC subset (`comparative-correlative-anchor`, ratified).
+- [`findings/conjectures/lexical-sense-gradience.md`](findings/conjectures/lexical-sense-gradience.md) — status: proposed (2026-05-29); the project's **first lexical (non-grammatical) conjecture**. LLM same/different-sense behavior is monotonic in human-rated usage similarity, with an intermediate regime for polysemy absent for homonymy, separable from a context-similarity (`distributional`) shadow. Sharpens [`open-question/lexical-polysemy-gradience`](findings/open-questions/lexical-polysemy-gradience.md). Candidate anchor: Usim graded usage-similarity (`external-only`); `contingent-on: lexical-sense-gradience-anchor` (open).
 
 ### Findings — claims / results / theory / open-questions
 
@@ -109,7 +114,8 @@ Ratified by Tom 2026-05-29. Ratifying an anchor/operationalization fixes the *ya
 
 - [`experiments/designs/aann-construction-v1.md`](../experiments/designs/aann-construction-v1.md) — provisional; contingent on `aann-stimulus-source` and `aann-operationalization`.
 - [`experiments/designs/way-construction-v1.md`](../experiments/designs/way-construction-v1.md) — provisional; anchor pending `way-construction-anchor` decision.
-- [`experiments/designs/comparative-correlative-v1.md`](../experiments/designs/comparative-correlative-v1.md) — provisional; operationalizes [`conjecture/comparative-correlative-construction`](findings/conjectures/comparative-correlative-construction.md) as a covariation-inference probe (CC-vs-control gap, inverse-CC direction-flip, atypical-pair generalization; both NLI and forced-choice framings). Contingent on `comparative-correlative-anchor` + `constructional-divergence-operationalization`; cost < $1.
+- [`experiments/designs/comparative-correlative-v1.md`](../experiments/designs/comparative-correlative-v1.md) — **RUN 2026-05-29** → [`result/comparative-correlative-covariation-v1`](findings/results/comparative-correlative-covariation-v1.md). Operationalized the CC conjecture as a covariation-inference probe (CC-vs-control gap, inverse-CC direction-flip, atypical-pair generalization; NLI + forced-choice). Both governing decisions ratified; cost $0.12.
+- [`experiments/designs/comparative-correlative-v2.md`](../experiments/designs/comparative-correlative-v2.md) — provisional; a *harder* follow-up to escape the v1 ceiling (conflicting-cue CC, multi-step composition, near-miss controls, graded difficulty ladder). Contingent on `cc-v2-difficulty-operationalization` (open); unrun.
 
 ### Open questions
 
