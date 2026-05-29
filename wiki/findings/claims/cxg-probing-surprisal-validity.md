@@ -29,7 +29,7 @@ links:
 
 ## Statement
 
-Contrasting an LLM's assigned surprisal (equivalently, continuation log-likelihood) between the members of a **form–meaning minimal pair** — a licit instantiation of a construction versus a minimally-different variant that breaks the construction — is a **valid operationalization** of the model's *sensitivity to that construction*. Where a human-normed minimal-pair set exists, the per-item surprisal contrast can be regressed against human acceptability/judgment to license a graded claim about whether the model's behavior reflects the construction's constraint structure.
+Contrasting an LLM's assigned surprisal (equivalently, continuation log-likelihood) between the members of a **form–meaning minimal pair** — a licit instantiation of a construction versus a minimally-different variant that breaks the construction — is taken here to be a **valid operationalization** of the model's *sensitivity to that construction*. (In-repo this is established only for the AANN instance; for constructions generally it is advanced provisionally — see *Anchor* and `decisions/open/cxg-probing-anchor`.) Where a human-normed minimal-pair set exists, the per-item surprisal contrast can be regressed against human acceptability/judgment to license a graded claim about whether the model's behavior reflects the construction's constraint structure.
 
 The validity is **bounded** in three specific ways, each of which the claim states up front:
 

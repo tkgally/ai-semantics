@@ -13,11 +13,11 @@ links:
     target: concept/constructional-meaning
   - rel: depends-on
     target: concept/distributional-meaning
-  - rel: refines
+  - rel: depends-on
     target: conjecture/caused-motion-construction
-  - rel: refines
+  - rel: depends-on
     target: conjecture/aann-construction
-  - rel: refines
+  - rel: depends-on
     target: conjecture/function-word-substitutability
 ---
 

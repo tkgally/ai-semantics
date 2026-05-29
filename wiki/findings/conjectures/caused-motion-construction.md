@@ -16,6 +16,8 @@ links:
     target: concept/constructional-meaning
   - rel: depends-on
     target: concept/inferential-meaning
+  - rel: depends-on
+    target: open-question/constructional-vs-frequency-confound
 ---
 
 # Conjecture: LLMs draw the caused-motion inference from non-motion verbs

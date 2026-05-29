@@ -31,7 +31,7 @@ If an LLM matches or exceeds human rater agreement on AANN structural-acceptabil
 
 The theoretical framework is supplied by Mahowald et al. 2024 (`source/mahowald-2024-dissociating`), the defining statement of the formal-vs-functional competence distinction as applied to LLMs. From the Abstract:
 
-> "We evaluate LLMs using a distinction between formal linguistic competence—knowledge of linguistic rules and patterns—and functional linguistic competence—understanding and using language in the world."
+> "Here, we evaluate LLMs using a distinction between formal linguistic competence—knowledge of linguistic rules and patterns—and functional linguistic competence—understanding and using language in the world."
 
 The paper defines formal competence operationally in the section "What does linguistic competence entail?":
 

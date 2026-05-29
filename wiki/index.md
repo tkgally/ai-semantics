@@ -17,12 +17,12 @@ The wiki is split into two strata:
 
 ### Base — concepts
 
-- `base/concepts/distributional-meaning.md` — stub
+- `base/concepts/distributional-meaning.md` — distributional view; the null hypothesis for constructional-meaning claims. Grounded in Bender & Koller, Piantadosi & Hill, Weissweiler. (filled 2026-05-29)
 - `base/concepts/referential-meaning.md` — stub
 - `base/concepts/inferential-meaning.md` — stub
 - `base/concepts/grounding.md` — stub
-- `base/concepts/formal-vs-functional-competence.md` — stub
-- `base/concepts/constructional-meaning.md` — stub
+- `base/concepts/formal-vs-functional-competence.md` — Mahowald et al. 2024 distinction; structural knowledge vs. language-in-the-world. (filled 2026-05-29)
+- `base/concepts/constructional-meaning.md` — CxG form–meaning pairing; underwrites the `constructional` tag. Grounded in Weissweiler 2023. (filled 2026-05-29)
 
 ### Base — sources
 
@@ -45,12 +45,16 @@ The wiki is split into two strata:
 
 - `findings/conjectures/dative-alternation-information-structure.md`
 - `findings/conjectures/aann-construction.md` — status: designed (2026-05-28)
-- `findings/conjectures/way-construction.md` — status: designed (2026-05-28)
+- `findings/conjectures/way-construction.md` — status: designed (2026-05-28); path-traversal (self-motion) inference
 - `findings/conjectures/function-word-substitutability.md`
+- `findings/conjectures/caused-motion-construction.md` — status: proposed (2026-05-29); transitive causation-of-motion from non-motion verbs; anchor pending (`caused-motion-anchor`)
+- `findings/conjectures/conative-construction.md` — status: proposed (2026-05-29); cancellation of the completed-contact entailment (verb held constant); anchor pending (`conative-anchor`)
 
 ### Findings — claims / results / theory / open-questions
 
 - `findings/claims/formal-competence-aann-ceiling.md` — status: proposed (2026-05-28); AANN acceptability ceiling is evidence of formal, not functional, linguistic competence. Grounded by Mahowald 2024 formal/functional distinction; anchored to `resource/mahowald-2023-aann-stimuli`.
+- `findings/claims/cxg-probing-surprisal-validity.md` — status: proposed (2026-05-29); surprisal contrast on form–meaning minimal pairs is a valid (but bounded) operationalization of constructional-meaning *sensitivity*. Methodological counterpart to the AANN-ceiling claim. `anchor: pending`, contingent on `cxg-probing-anchor`.
+- `findings/theory/constructional-meaning-in-llms.md` — status: draft (2026-05-29); the project's first theory page. A five-tier evidence ladder (form-acceptability < surprisal-contrast < gradient semantic tracking < generalization < inference-licensing) placing each existing claim/conjecture; brackets the grounding axis; flags the relational axis as future work.
 
 ### Experiments — designs
 
@@ -62,6 +66,8 @@ The wiki is split into two strata:
 ### Open questions
 
 - `findings/open-questions/relational-meaning-pilot.md` — what minimal two-agent setup constitutes evidence that meaning is being constituted *between* agents rather than computed inside each?
+- `findings/open-questions/constructional-vs-frequency-confound.md` — status: open (2026-05-29); how to separate constructional-meaning sensitivity from an n-gram/frequency confound in surprisal-contrast probes (form-level).
+- `findings/open-questions/distributional-vs-inferential-constructional.md` — status: open (2026-05-29); granting constructional sensitivity, what minimal evidence shows it is inferential-role tracking vs. a distributional shadow (meaning-level; downstream of the frequency question).
 
 ## How to extend this file
 

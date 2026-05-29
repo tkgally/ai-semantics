@@ -14,6 +14,8 @@ links:
     target: source/piantadosi-hill-2022-meaning-without-reference
   - rel: depends-on
     target: source/mahowald-2024-dissociating
+  - rel: depends-on
+    target: source/weissweiler-2023-cxg-insight
   - rel: refines
     target: concept/formal-vs-functional-competence
   - rel: refines

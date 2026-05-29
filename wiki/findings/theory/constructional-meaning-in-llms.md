@@ -79,7 +79,7 @@ Two caveats travel with the wedge and must not be elided:
 The project refuses the unqualified word "meaning" (`wiki/meaning-senses.md`). Three senses are in play here, and the theory keeps them separate.
 
 - **Distributional** — meaning as co-occurrence structure; the implicit theory of the next-token objective (Firth/Harris). This is the *null hypothesis* against which constructional-meaning claims must be set: a fluent model has distributional structure for free. The senses page flags that distributional structure "by itself ... is silent on reference and on truth — this is exactly the contested boundary."
-- **Inferential** — meaning as inferential role: a construction means what it licenses you to infer. Piantadosi & Hill 2022 (`source/piantadosi-hill-2022-meaning-without-reference`) give the framing under which inference-preservation counts as genuinely semantic: "meaning ... arises from conceptual role," constituted by "the relationships between internal representational states." On this view, a model that systematically licenses a construction's characteristic inferences has more than distributional mimicry.
+- **Inferential** — meaning as inferential role: a construction means what it licenses you to infer. Piantadosi & Hill 2022 (`source/piantadosi-hill-2022-meaning-without-reference`) give the framing under which inference-preservation counts as genuinely semantic: "meaning ... arises from conceptual role," constituted by "the relationships between internal representational states" (abstract). On this view, a model that systematically licenses a construction's characteristic inferences has more than distributional mimicry.
 - **Constructional** — meaning as the form–meaning pairing itself, the thing the probe is for.
 
 The distributional/inferential boundary is not assumed to collapse (the senses page leaves the collapse question open: "Should `distributional` and `inferential` collapse ... Probably no"). This theory treats inferential structure as the *upgrade* over distributional structure that constructional-meaning evidence must demonstrate — which is precisely why the top tiers of the evidence ladder below are inferential, not distributional.
@@ -92,11 +92,11 @@ Two poles bound the grounding debate the project sits inside. Bender & Koller 20
 
 — where meaning is defined as "the relation M ⊆ E × I which contains pairs (e, i) of natural language expressions e and the communicative intents i they can be used to evoke." On this definition, *no* text-only behavior, however systematic, counts as meaning, because the grounding relation to communicative intent is absent from the training signal.
 
-Lyre 2024 (`source/lyre-2024-semantic-grounding`) supplies the framing this project actually adopts — grounding as graded rather than binary:
+Lyre 2024 (`source/lyre-2024-semantic-grounding`) supplies the framing this project actually adopts — grounding as graded rather than binary (p. 10):
 
 > "semantic grounding isn't a yes-no matter, but rather a matter of degree. Intelligent or cognitive agents and systems can be more or less semantically grounded"
 
-with the verdict that LLMs are "neither stochastic parrots nor semantic zombies, but already understand the language they generate, at least in an elementary sense."
+with the verdict that LLMs are "neither stochastic parrots nor semantic zombies, but already understand the language they generate, at least in an elementary sense" (p. 1, abstract).
 
 This theory takes the Lyre stance methodologically: the question is not whether an LLM has constructional meaning full stop, but *how far up the evidence ladder* its behavior reaches. Bender & Koller mark the position that even the top rung of a text-only ladder does not reach grounded communicative meaning; that position is recorded, not refuted here. The ladder below measures *constructional* meaning-tracking within the text-only setting; it is deliberately silent on whether tracking ever amounts to grounding in Bender & Koller's stronger sense. That silence is the honest scope of a text-only probe program.
 

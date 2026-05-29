@@ -16,7 +16,7 @@ links:
     target: concept/constructional-meaning
   - rel: depends-on
     target: concept/inferential-meaning
-  - rel: refines
+  - rel: depends-on
     target: open-question/constructional-vs-frequency-confound
 ---
 

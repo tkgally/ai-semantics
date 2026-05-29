@@ -16,13 +16,13 @@ links:
     target: concept/distributional-meaning
   - rel: depends-on
     target: concept/inferential-meaning
-  - rel: refines
+  - rel: depends-on
     target: open-question/constructional-vs-frequency-confound
-  - rel: refines
+  - rel: depends-on
     target: conjecture/conative-construction
-  - rel: refines
+  - rel: depends-on
     target: conjecture/caused-motion-construction
-  - rel: refines
+  - rel: depends-on
     target: conjecture/way-construction
 ---
 
