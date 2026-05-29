@@ -9,6 +9,8 @@ Checks:
   4. Anchor discipline for claim/result pages.
   5. Contingent-language note: pages with non-empty contingent-on.
   6. Index coverage: every typed page mentioned in wiki/index.md.
+  7. Inline-link integrity: every relative markdown link to a .md target resolves
+     (keeps the clickable wiki navigation from rotting; see tools/linkify.py).
 
 Usage:
   python3 tools/senselint.py [--repo /path/to/repo]
@@ -547,6 +549,46 @@ def check_index_coverage(relpath, meta, index_text, report):
         f"page not found in wiki/index.md (neither filename '{stem}' nor id '{page_id}' appears there)")
 
 
+INLINE_LINK_RE = re.compile(r'\]\(([^)]+)\)')
+
+def check_inline_links(repo, report):
+    """Check 7: every inline markdown link to a relative .md target must resolve.
+
+    Skips fenced code blocks, external URLs, and non-.md targets. Pure-anchor and
+    image links are ignored. This guards the clickable navigation produced by
+    tools/linkify.py against bit-rot when pages are renamed or moved.
+    """
+    wiki_abs = os.path.join(repo, 'wiki')
+    for root, dirs, files in os.walk(wiki_abs):
+        dirs[:] = [d for d in dirs if d != '.git']
+        for fname in sorted(files):
+            if not fname.endswith('.md'):
+                continue
+            abspath = os.path.join(root, fname)
+            relpath = os.path.relpath(abspath, repo)
+            try:
+                with open(abspath, encoding='utf-8') as fh:
+                    text = fh.read()
+            except OSError:
+                continue
+            in_fence = False
+            for line in text.split('\n'):
+                if line.lstrip().startswith('```'):
+                    in_fence = not in_fence
+                    continue
+                if in_fence:
+                    continue
+                for tgt in INLINE_LINK_RE.findall(line):
+                    link = tgt.split('#')[0].strip()
+                    if not link or link.startswith(('http://', 'https://', 'mailto:')):
+                        continue
+                    if not link.endswith('.md'):
+                        continue
+                    resolved = os.path.normpath(os.path.join(os.path.dirname(abspath), link))
+                    if not os.path.isfile(resolved):
+                        report.error(relpath, f"broken inline link target: '{tgt}'")
+
+
 # ---------------------------------------------------------------------------
 # Main.
 # ---------------------------------------------------------------------------
@@ -623,6 +665,11 @@ def main():
             # Index coverage
             if index_text:
                 check_index_coverage(relpath, meta or {}, index_text, report)
+
+    # -----------------------------------------------------------------------
+    # Inline-link integrity across all of wiki/ (check 7).
+    # -----------------------------------------------------------------------
+    check_inline_links(repo, report)
 
     print(f"Scanned {findings_count} findings page(s) and {base_count} base page(s).")
     print()

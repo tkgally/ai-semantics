@@ -30,13 +30,13 @@ The discriminating inference: from *She kicked at the ball* it does **not** foll
 
 The conjecture: current LLMs draw the **non-completion / attempted-contact** inference from conative `V at NP` instances and the **completed-contact** inference from the matched transitive `V NP` instances, at a rate that separates the alternation from minimally different controls — i.e. they treat the *at*-frame as a meaning-bearing construction, not as a stylistic paraphrase of the transitive.
 
-This is distinct from the other argument-structure conjectures in the wedge. `conjecture/caused-motion-construction` and `conjecture/way-construction` test whether the construction *adds* an entailment the verb cannot license (motion/causation from non-motion verbs). The conative tests the converse: whether the construction *removes* / *weakens* an entailment (completed contact) that the bare transitive carries, with the **same verb** in both frames. It probes whether the model reads telicity / affectedness off the argument-structure construction rather than off the verb's lexical aspect.
+This is distinct from the other argument-structure conjectures in the wedge. [`conjecture/caused-motion-construction`](caused-motion-construction.md) and [`conjecture/way-construction`](way-construction.md) test whether the construction *adds* an entailment the verb cannot license (motion/causation from non-motion verbs). The conative tests the converse: whether the construction *removes* / *weakens* an entailment (completed contact) that the bare transitive carries, with the **same verb** in both frames. It probes whether the model reads telicity / affectedness off the argument-structure construction rather than off the verb's lexical aspect.
 
 ## Why this is interesting
 
 - The verb is held **constant** across the minimal pair; only the construction (direct object vs. *at*-oblique) varies. So a difference in the completion entailment cannot come from the verb's lexical entry — it must be `constructional`. This is a cleaner verb-control than caused-motion (where the verb also changes valence).
 - It bites the `inferential` side precisely: confirmation requires the model to treat the conative as *cancelling* the completed-contact entailment (an inference about telicity/affectedness), not merely as producing fluent text or assigning a likelihood gap.
-- It exposes the `constructional`-vs-`distributional` tension (see `open-question/constructional-vs-frequency-confound`) with an unusually favorable design: because the two frames share the verb and most lexical material, raw unigram frequency is nearly matched, and the surviving signal is more plausibly the construction's contribution. The *at*-frame is also markedly **lower-frequency** than the transitive, which lets a frequency-only account make a falsifiable wrong prediction (see Predictions 3).
+- It exposes the `constructional`-vs-`distributional` tension (see [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md)) with an unusually favorable design: because the two frames share the verb and most lexical material, raw unigram frequency is nearly matched, and the surviving signal is more plausibly the construction's contribution. The *at*-frame is also markedly **lower-frequency** than the transitive, which lets a frequency-only account make a falsifiable wrong prediction (see Predictions 3).
 
 ## Predictions
 
@@ -55,11 +55,11 @@ This is distinct from the other argument-structure conjectures in the wedge. `co
 
 No in-repo resource currently covers the conative alternation with item-level human acceptability or entailment ratings. The canonical *inventory* is Levin (1993, §1.3 / the "Conative Alternation" class) — a descriptive verb-class list, **not** rated stimuli; it certifies *which verbs* enter the conative, which is the load-bearing premise for Prediction 2, but gives no gradient acceptability or entailment norms. Until a usable empirical anchor is in-repo and inspected, this conjecture carries `anchor: pending`.
 
-→ Open decision queued: `decisions/open/conative-anchor.md` — which human-anchored resource grounds the probe (a rated conative/telicity-completion stimulus set if one is public; else VerbNet/Levin verb-class membership as a partial anchor for the verb-class premise; else defer + queue a wanted-resource request).
+→ Open decision queued: [`decisions/open/conative-anchor`](../../../decisions/open/conative-anchor.md) — which human-anchored resource grounds the probe (a rated conative/telicity-completion stimulus set if one is public; else VerbNet/Levin verb-class membership as a partial anchor for the verb-class premise; else defer + queue a wanted-resource request).
 
 ## Notes / caveats
 
 - *at* is polysemous (locative, temporal, conative). Control by holding the verb in a contact-by-motion semantic class so the only available *at*-reading is conative; exclude locative-*at* readings (*looked at*) from the stimulus set.
 - The completed-contact entailment is itself defeasible in the transitive for some verbs (you can *hit at* and *hit*; *hit the wall* strongly entails contact). Anchor the confirmation criterion on verbs where the transitive's completion entailment is robust.
 - Probe phrasing matters; trial multiple phrasings **before** seeing results, then commit (charter §8 operationalization gate).
-- Frequency is handled jointly with `open-question/constructional-vs-frequency-confound`; lock the frequency-matching and the verb-class membership list **before** running.
+- Frequency is handled jointly with [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md); lock the frequency-matching and the verb-class membership list **before** running.

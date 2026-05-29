@@ -14,15 +14,20 @@ This session was an **experimental dynamic-workflow burst** (orchestrator + six 
 
 A coherence sweep confirmed no duplication (the four argument-structure conjectures partition cleanly) and no contradictions; all link-relation/quote-integrity defects it found were fixed in-session.
 
+A follow-up maintenance pass (same PR) made the wiki **clickable** (`tools/linkify.py`; 120 relative links; senselint check 7 guards them) and rewrote `PROTOCOL.md` / `CLAUDE.md` so that **"continue working on the project" now defaults to workflow mode** (see `PROTOCOL.md §0`/`§A`).
+
 ## Next concrete action
 
-**Fill the three remaining `base/concepts/` stubs**, starting with `concept/inferential-meaning` — this is now load-bearing: both new conjectures (`caused-motion-construction`, `conative-construction`) and one open-question `depends-on` it, yet it is still a stub (a latent defect). Then `concept/referential-meaning` and `concept/grounding`.
+Default mode for the next run is **workflow mode** (`PROTOCOL.md §A`). Fan out this backlog of independent, anchor-tractable units (disjoint files; orchestrator integrates the shared files):
 
-- Ground `inferential-meaning` in `source/piantadosi-hill-2022-meaning-without-reference` (now carries verbatim conceptual-role quotes) and the `inferential` entry in `wiki/meaning-senses.md`.
-- Match the shape of the three concept pages filled this run (front-matter, ≥1 meaning-sense, typed `depends-on`/`refines` links, one verified quote, a "live tension" note).
-- Files the next run needs: `wiki/base/concepts/inferential-meaning.md`, `wiki/meaning-senses.md`, `wiki/base/sources/piantadosi-hill-2022-meaning-without-reference.md`, and `tools/senselint.py` (run it before commit).
+1. **Fill `concept/inferential-meaning`** — now load-bearing: both new conjectures and one open-question `depends-on` it, yet it is still a stub. Ground in `source/piantadosi-hill-2022-meaning-without-reference` (carries verbatim conceptual-role quotes) and the `inferential` entry in `wiki/meaning-senses.md`.
+2. **Fill `concept/referential-meaning`** — ground in the `referential` sense (Frege/Putnam) and Bender & Koller's reference discussion; note the externalist sub-tags.
+3. **Fill `concept/grounding`** — ground in `source/lyre-2024-semantic-grounding` (gradual, three-dimensional) and `source/bender-koller-2020-climbing` (the strong form/meaning denial).
+4. **Deepen a source** still at abstract/section level toward page-level quotes, or catalogue a new P2 source (Tayyar Madabushi / Scivetti constructional probing) if OA-fetchable.
 
-Smaller queued NITs from the coherence sweep (do alongside if cheap, else leave): hedge "canonical demonstration" → "Goldberg's canonical argument" in `caused-motion-construction.md`; consider adding `inferential` to `constructional-vs-frequency-confound`'s meaning-senses.
+Match the shape of the three concept pages filled this run (front-matter, ≥1 meaning-sense, typed links, ≥1 verified quote, a "live tension" note). Run `senselint.py` + `linkify.py` before commit.
+
+Smaller queued NITs from the coherence sweep (fold into any wave): hedge "canonical demonstration" → "Goldberg's canonical argument" in `caused-motion-construction.md`; consider adding `inferential` to `constructional-vs-frequency-confound`'s meaning-senses.
 
 ## Blocked pending Tom
 
@@ -35,8 +40,6 @@ Six open decisions now gate promotion of contingent work. The three new ones cam
 - `decisions/open/caused-motion-anchor.md` — **new.** Anchor for the caused-motion conjecture.
 - `decisions/open/conative-anchor.md` — **new.** Anchor for the conative conjecture (provisional default: Levin 1993 / VerbNet conative-class membership as partial anchor).
 
-Charter-level note for Tom: this run is a deliberate stress test of the dynamic-workflow mode. If the burst pattern is to be repeated, decide whether `PROTOCOL.md` should grow an explicit "workflow run" variant or whether the project stays on one-unit-per-run.
-
 ## Reminder for the next cold-start
 
-Charter: `PROJECT.md`. Schema: `CLAUDE.md`. Run discipline: `PROTOCOL.md`. Read `wiki/index.md` before opening individual pages. **Reconcile `decisions/open/` first** (six entries now). **Run `python3 tools/senselint.py` before commit** — it now exists. **Commit and merge to the default branch before stopping.**
+Charter: `PROJECT.md`. Schema: `CLAUDE.md`. Run discipline: `PROTOCOL.md` — **"continue working" ⇒ workflow mode (§0/§A)**: plan a wave, fan out parallel subagents, run an adversarial coherence pass, integrate + verify, commit the wave, and (if Tom gave a deadline) loop until the clock. Read `wiki/index.md` before opening individual pages. **Reconcile `decisions/open/` first** (six entries now). **Run `python3 tools/senselint.py` (0 errors) and `python3 tools/linkify.py` before each commit.** **Commit and merge to the default branch before stopping.**

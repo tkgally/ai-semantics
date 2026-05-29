@@ -1,6 +1,6 @@
 # meaning-senses.md — controlled typology
 
-This is the controlled vocabulary that every `wiki/findings/` page must tag with at least one entry under `meaning-senses:` (see `CLAUDE.md`). The point is not a finished taxonomy. The point is to refuse the unqualified word "meaning" in this project's prose. Where two senses are both relevant, list both — that is informative, not a defect.
+This is the controlled vocabulary that every `wiki/findings/` page must tag with at least one entry under `meaning-senses:` (see [`CLAUDE.md`](../CLAUDE.md)). The point is not a finished taxonomy. The point is to refuse the unqualified word "meaning" in this project's prose. Where two senses are both relevant, list both — that is informative, not a defect.
 
 This page is **revisable**. Propose changes via a `decisions/open/` entry; do not silently rename a tag that other pages already cite.
 

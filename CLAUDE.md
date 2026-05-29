@@ -6,7 +6,7 @@ Read this file every run. It encodes how `ai-semantics` is shaped. The charter i
 
 1. **Read first, write second.** Start a run by reading `NEXT.md`, then `wiki/index.md`, then only the pages your next action needs. Do not load the whole wiki.
 2. **Charter takes precedence.** If something here contradicts `PROJECT.md`, fix this file; don't drift.
-3. **Run discipline.** Follow `PROTOCOL.md` end-to-end every run, including the verification gates before commit.
+3. **Run discipline.** Follow `PROTOCOL.md` end-to-end every run, including the verification gates before commit. **When Tom says "continue working on the project," the default is workflow mode** — a multiagent dynamic workflow (orchestrator + parallel subagents + an adversarial coherence pass), looping waves until any stated deadline. See `PROTOCOL.md §0` and `§A`. Single-unit mode is the fallback for small or surgical tasks. Workflow mode parallelizes *generation*, never *judgement*: the gates, the human-anchor discipline, the no-fabrication rule, and "surface decisions, don't auto-resolve them" all still bind.
 4. **No human subjects.** Tom is the researcher, not a subject. All human bearing comes from existing resources (treebanks, sense-annotated corpora, dictionaries, acceptability sets, construction inventories). See `wiki/base/resources/`.
 5. **No silent gate skipping.** When you hit an operationalization or human-anchor question, write a page to `decisions/open/` with options and a provisional default; mark downstream artifacts contingent; surface in `NEXT.md`. A contingent finding is never promoted to settled until Tom ratifies it.
 
@@ -75,18 +75,34 @@ A `claim` or `result` without at least one `anchors` link to a `resource` is a d
 - Concepts in `base/concepts/` use the concept name directly (e.g. `distributional-meaning.md`).
 - Source pages in `base/sources/` use `lastname-year-shorttitle.md` (e.g. `bender-koller-2020-climbing.md`).
 
+## Cross-references (clickable links)
+
+The wiki is meant to be **read by clicking page to page**, so inline cross-references are clickable relative markdown links, not inert code spans. Convention: keep the typed reference as the visible label and point it at the target's relative path —
+
+```
+[`source/weissweiler-2023-cxg-insight`](../../base/sources/weissweiler-2023-cxg-insight.md)
+[`claim/formal-competence-aann-ceiling`](../claims/formal-competence-aann-ceiling.md)
+[`base/sources/foo.md`](base/sources/foo.md)   # the index.md catalog form
+```
+
+- Only link to a target that **exists**; an aspirational mention of a not-yet-created page stays a plain code span until the page exists.
+- This is body prose only. The YAML front-matter `links:` block stays `target: type/id` **without** backticks — it is the machine-readable typed-link graph senselint consumes. The two are kept in sync by hand.
+- `tools/linkify.py` normalizes references to this form (existence-gated, idempotent); `tools/senselint.py` check 7 fails the build on a broken inline link. Run both at the verification step — you need not hand-format every link if you run `linkify.py` before commit.
+
 ## Meaning-sense tagging (mechanical lint)
 
 Every page under `wiki/findings/` must declare at least one entry in `meaning-senses:` drawn from the controlled vocabulary in `wiki/meaning-senses.md`. Inline use of the word "meaning" without a clear referent or sense-tag is a defect — qualify it or replace it.
 
-`tools/senselint.py` will eventually enforce this; until it exists, do the check by hand at the verification step.
+`tools/senselint.py` enforces this mechanically (check 2). Inline use of the word "meaning" without a clear referent or sense-tag is still a defect the tool cannot catch — qualify it or replace it by hand.
 
-## Verification before commit (run by hand until tooling exists)
+## Verification before commit
 
-1. **senselint** — every page in `wiki/findings/` has front-matter; every page declares ≥1 `meaning-senses` entry from the controlled vocabulary; nothing whose `contingent-on` is non-empty is written in settled language.
-2. **provenance** — every claim/result cites an in-repo `source` or `resource` page that bears on it (not just exists).
-3. **human-anchor** — every empirical claim about LLM meaning carries an `anchors:` link to a `resource` page, OR a `decisions/open/` entry queuing the anchor question.
-4. **index** — `wiki/index.md` lists every typed page; add new entries.
+`tools/senselint.py` and `tools/linkify.py` now exist; run them, then do the two judgement checks by hand. (Full detail in `PROTOCOL.md §5` and `tools/README.md`.)
+
+1. **senselint** — `python3 tools/senselint.py` reports **0 errors**. Mechanically covers front-matter, meaning-senses vocabulary, typed-link relations + resolution, anchor discipline, index coverage, and inline-link integrity. Expected residue: a WARN on `wanted.md` (no front-matter) and INFO notes on contingent pages.
+2. **linkify** — `python3 tools/linkify.py` then `--check` shows 0 remaining: cross-references are clickable links to existing pages.
+3. **provenance** (by hand) — every claim/result cites an in-repo `source` or `resource` page that bears on it (not just exists), with quotes matching the source page verbatim.
+4. **human-anchor** (by hand) — every empirical claim about LLM meaning carries an `anchors:` link to a `resource` page, OR a `decisions/open/` entry queuing the anchor question.
 
 ## What to write, what not to write
 

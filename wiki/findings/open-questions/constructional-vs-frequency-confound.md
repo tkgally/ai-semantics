@@ -25,7 +25,7 @@ links:
 
 ## The question
 
-Every surprisal-contrast probe in this project's constructional wedge (`conjecture/aann-construction`, `conjecture/way-construction`, `conjecture/caused-motion-construction`, `conjecture/function-word-substitutability`) shares one threat: when a model assigns lower surprisal to a licit construction than to an illicit minimal-pair variant, that gap is consistent with **two** explanations that the probe does not, by itself, distinguish:
+Every surprisal-contrast probe in this project's constructional wedge ([`conjecture/aann-construction`](../conjectures/aann-construction.md), [`conjecture/way-construction`](../conjectures/way-construction.md), [`conjecture/caused-motion-construction`](../conjectures/caused-motion-construction.md), [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md)) shares one threat: when a model assigns lower surprisal to a licit construction than to an illicit minimal-pair variant, that gap is consistent with **two** explanations that the probe does not, by itself, distinguish:
 
 1. The model has acquired the **form–meaning pairing** — it tracks the construction as a `constructional` unit with characteristic semantics (the project's claim).
 2. The model is tracking **surface co-occurrence statistics** — the licit string is simply more probable n-gram-by-n-gram in the training distribution (the `distributional` deflation of the claim).
@@ -34,7 +34,7 @@ What is the minimal additional evidence that licenses concluding (1) rather than
 
 ## Why it matters
 
-This is the load-bearing methodological question for the entire constructional program. If it is not answered, every confirmed conjecture in the wedge is vulnerable to the one-line objection "you measured n-gram frequency, not meaning," and no `result` can be promoted past `weak` (see the "Weak" branches in all four conjectures, which are exactly this confound). The charter's `distributional`-vs-`constructional` boundary (`meaning-senses.md`) is contested precisely here. Resolving the question is what lets a result discriminate between the two camps instead of being claimed by both.
+This is the load-bearing methodological question for the entire constructional program. If it is not answered, every confirmed conjecture in the wedge is vulnerable to the one-line objection "you measured n-gram frequency, not meaning," and no `result` can be promoted past `weak` (see the "Weak" branches in all four conjectures, which are exactly this confound). The charter's `distributional`-vs-`constructional` boundary ([`meaning-senses.md`](../../meaning-senses.md)) is contested precisely here. Resolving the question is what lets a result discriminate between the two camps instead of being claimed by both.
 
 ## Why it is hard
 
@@ -57,7 +57,7 @@ A satisfying answer names which of these the project will treat as **necessary**
 
 ## Relation to the existing wedge
 
-This question generalizes the "Weak" / memorization branches already written into all four conjectures and the operationalization-gate notes in `conjecture/function-word-substitutability` and `conjecture/caused-motion-construction`. It is the natural **method spine** that a future loop turn should resolve once, then reuse across probes — rather than re-litigating the confound per conjecture.
+This question generalizes the "Weak" / memorization branches already written into all four conjectures and the operationalization-gate notes in [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) and [`conjecture/caused-motion-construction`](../conjectures/caused-motion-construction.md). It is the natural **method spine** that a future loop turn should resolve once, then reuse across probes — rather than re-litigating the confound per conjecture.
 
 ## Pointers for the next visit
 

@@ -53,7 +53,7 @@ What it **cannot** ground:
 
 - Claims about model *representations* of the construction — Mahowald uses behavioral acceptability only.
 - Claims about constructional meaning beyond English AANN.
-- Claims about productivity on items wholly outside the slot-filler superset — held-out generalization requires extending the templates, which is a downstream design decision (see `decisions/open/aann-operationalization.md`).
+- Claims about productivity on items wholly outside the slot-filler superset — held-out generalization requires extending the templates, which is a downstream design decision (see [`decisions/open/aann-operationalization`](../../../decisions/open/aann-operationalization.md)).
 
 ## Known limits
 

@@ -107,7 +107,7 @@ All quotes extracted from arXiv HTML version (arxiv.org/html/2301.06627, CC BY 4
 
 ## What it can ground
 
-- The `functional-vs-formal` tag on any finding page — this paper *is* the primary reference for that tag. `meaning-senses.md` explicitly attributes this distinction to "the Mahowald / Ivanova / Fedorenko distinction."
+- The `functional-vs-formal` tag on any finding page — this paper *is* the primary reference for that tag. [`meaning-senses.md`](../../meaning-senses.md) explicitly attributes this distinction to "the Mahowald / Ivanova / Fedorenko distinction."
 - Claims that LLM performance on structural acceptability tasks (e.g., AANN) constitutes evidence of **formal** competence without warranting conclusions about **functional** competence. This is directly useful for AANN results: acceptability judgments probe formal competence; what follows about meaning-tracking is a separate question.
 - Any finding that needs to situate LLM grammatical behavior against a competence theory: this paper provides the theoretical vocabulary.
 - Claims about the relevance of neuroscience dissociations to LLM evaluation methodology.

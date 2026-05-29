@@ -28,13 +28,13 @@ The English **caused-motion construction** — `Subj V Obj Obl(path/goal)`, as i
 
 The conjecture: current LLMs draw the caused-motion entailment — *Y moved along Z*, and *the subject's V-ing caused it* — from caused-motion instances with non-motion, non-transitive verbs, at a rate that separates the construction from minimally different surface strings in which the same verb appears without the construction.
 
-This is distinct from the `way`-construction conjecture (`conjecture/way-construction`): there the moving entity is the *subject* and the path is reflexive (*his way*); here the moving entity is a *distinct direct object* the subject acts on, and the entailment is **transitive causation**, not self-propelled motion. The two probe different corners of the argument-structure space.
+This is distinct from the `way`-construction conjecture ([`conjecture/way-construction`](way-construction.md)): there the moving entity is the *subject* and the path is reflexive (*his way*); here the moving entity is a *distinct direct object* the subject acts on, and the entailment is **transitive causation**, not self-propelled motion. The two probe different corners of the argument-structure space.
 
 ## Why this is interesting
 
 - It is the canonical demonstration that argument-structure meaning is **not** projected from the verb's lexical frame — *sneeze* is intransitive, takes no object and no path, yet the construction coerces both. If an LLM draws the causation-of-motion entailment here, the meaning it is reading cannot be coming from the verb's lexical entry; it must be `constructional`.
 - It bites the `inferential` side cleanly: confirmation requires showing the model treats the construction as *licensing the entailment* "Y moved / the subject caused it," not merely producing fluent continuations.
-- It exposes the project's central `constructional`-vs-`distributional` tension (see `open-question/constructional-vs-frequency-confound`): a skeptic can say the model is tracking the high-frequency `V NP PP` skeleton, not the construction's meaning. The non-motion-verb manipulation is the lever that pries those apart, because the verb itself never co-occurs with motion entailments in the distribution.
+- It exposes the project's central `constructional`-vs-`distributional` tension (see [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md)): a skeptic can say the model is tracking the high-frequency `V NP PP` skeleton, not the construction's meaning. The non-motion-verb manipulation is the lever that pries those apart, because the verb itself never co-occurs with motion entailments in the distribution.
 
 ## Predictions
 
@@ -53,11 +53,11 @@ This is distinct from the `way`-construction conjecture (`conjecture/way-constru
 
 No in-repo resource currently covers the caused-motion construction with item-level human acceptability or entailment ratings. The canonical *inventory* is Goldberg (1995, ch. 7) — descriptive, not rated. A usable empirical anchor would be either (a) an acceptability-rated caused-motion stimulus set, or (b) the caused-motion subset of a broader argument-structure-construction norming study. Until one is in-repo and inspected, this conjecture carries `anchor: pending`.
 
-→ Open decision queued: `decisions/open/caused-motion-anchor.md` — which human-anchored caused-motion stimulus set (if any exists and is public) should ground the probe, and what to do if none does (fall back to a verb-frame resource such as PropBank/VerbNet for the non-motion/intransitivity contrast, and queue a wanted-resource request to Tom).
+→ Open decision queued: [`decisions/open/caused-motion-anchor`](../../../decisions/open/caused-motion-anchor.md) — which human-anchored caused-motion stimulus set (if any exists and is public) should ground the probe, and what to do if none does (fall back to a verb-frame resource such as PropBank/VerbNet for the non-motion/intransitivity contrast, and queue a wanted-resource request to Tom).
 
 ## Notes / caveats
 
 - The path PP can telegraph motion on its own (*off the table* implies a prior location); control by including non-constructional items that contain the same PP without the `V NP PP` frame, so the construction — not the PP — carries the manipulation.
 - Probe phrasing matters; trial multiple phrasings **before** seeing results, then commit (charter §8 operationalization gate).
 - "Coercion" cases where the verb mildly resists the construction (*She thought the ball into the goal*) are the most diagnostic but also the noisiest; bracket them as a secondary tier, not the confirmation criterion.
-- Frequency is the dominant confound and is handled jointly with `open-question/constructional-vs-frequency-confound`; lock the frequency-matching procedure before running.
+- Frequency is the dominant confound and is handled jointly with [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md); lock the frequency-matching procedure before running.

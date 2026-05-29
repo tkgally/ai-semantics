@@ -29,7 +29,7 @@ If an LLM matches or exceeds human rater agreement on AANN structural-acceptabil
 
 ### Formal competence defined (Mahowald et al. 2024)
 
-The theoretical framework is supplied by Mahowald et al. 2024 (`source/mahowald-2024-dissociating`), the defining statement of the formal-vs-functional competence distinction as applied to LLMs. From the Abstract:
+The theoretical framework is supplied by Mahowald et al. 2024 ([`source/mahowald-2024-dissociating`](../../base/sources/mahowald-2024-dissociating.md)), the defining statement of the formal-vs-functional competence distinction as applied to LLMs. From the Abstract:
 
 > "Here, we evaluate LLMs using a distinction between formal linguistic competence—knowledge of linguistic rules and patterns—and functional linguistic competence—understanding and using language in the world."
 
@@ -47,7 +47,7 @@ LLM success on grammaticality judgment and structural acceptability tasks is the
 
 ### Human anchor (Mahowald 2023 AANN stimuli)
 
-The human behavioral anchor is the MTurk acceptability rating corpus in `resource/mahowald-2023-aann-stimuli`. In that study, 126 US-English raters assigned acceptability scores on a 1–10 scale to AANN sentences and their degenerate variants. These are **form-acceptability judgments**: raters were asked whether a sentence "sounds good," not what meaning it carries or what inference it licenses. Correlation with these ratings therefore confirms that a model tracks human structural intuitions; it does not confirm that the model tracks the construction's meaning.
+The human behavioral anchor is the MTurk acceptability rating corpus in [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahowald-2023-aann-stimuli.md). In that study, 126 US-English raters assigned acceptability scores on a 1–10 scale to AANN sentences and their degenerate variants. These are **form-acceptability judgments**: raters were asked whether a sentence "sounds good," not what meaning it carries or what inference it licenses. Correlation with these ratings therefore confirms that a model tracks human structural intuitions; it does not confirm that the model tracks the construction's meaning.
 
 ### The gap this identifies
 
@@ -61,7 +61,7 @@ The AANN construction carries a characteristic meaning beyond well-formedness: t
 
 ## Payoff for the AANN project line
 
-This claim is the **theoretical wedge** that makes the AANN probe scientifically interesting. Were acceptability tracking sufficient evidence for constructional meaning, a ceiling result would be a complete confirmation of `conjecture/aann-construction`. This claim blocks that inference. The conjecture's confirmation criteria must therefore target evidence that goes beyond form-acceptability — specifically, gradient tracking of the construction's characteristic semantics. This sharpens what the probe is for before it runs, and specifies the conditions under which an AANN ceiling result would still be a null on the constructional meaning question.
+This claim is the **theoretical wedge** that makes the AANN probe scientifically interesting. Were acceptability tracking sufficient evidence for constructional meaning, a ceiling result would be a complete confirmation of [`conjecture/aann-construction`](../conjectures/aann-construction.md). This claim blocks that inference. The conjecture's confirmation criteria must therefore target evidence that goes beyond form-acceptability — specifically, gradient tracking of the construction's characteristic semantics. This sharpens what the probe is for before it runs, and specifies the conditions under which an AANN ceiling result would still be a null on the constructional meaning question.
 
 ## Scope and limits
 

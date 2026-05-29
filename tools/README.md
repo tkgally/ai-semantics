@@ -1,5 +1,30 @@
 # tools/README.md
 
+## linkify.py
+
+`tools/linkify.py` makes the wiki **clickable**: it rewrites in-repo references written as backticked code spans into relative markdown links, so a reader can navigate page-to-page in any markdown viewer.
+
+```
+python3 tools/linkify.py          # rewrite in place across wiki/
+python3 tools/linkify.py --check  # report-only; exit 1 if anything would change
+```
+
+It converts three reference shapes, **only when the target file exists on disk**:
+
+- typed refs — `` `source/foo` ``, `` `claim/bar` ``, `` `conjecture/baz` ``, etc. → the page under the matching `wiki/` directory;
+- decision refs — `` `decisions/open/foo` `` (with or without `.md`) → `decisions/open/foo.md`;
+- path refs — any backticked relative `.md` path such as `` `base/sources/foo.md` `` or `` `meaning-senses.md` `` (resolved against `wiki/` first, then the repo root) — this is what makes the `index.md` catalog clickable.
+
+The visible label keeps the original backticked text, so `` `source/foo` `` becomes ``[`source/foo`](../../base/sources/foo.md)`` — still reads as a typed reference, now clickable.
+
+Design guarantees:
+
+- **Existence-gated.** Aspirational mentions of not-yet-created pages (e.g. a `decisions/open/` entry a conjecture says it *will* queue) are left as plain code spans, so the tool never creates a dead link.
+- **Idempotent.** Already-linkified references are never re-wrapped; safe to run every wave.
+- **YAML untouched.** The front-matter `links:` block uses `target: type/id` *without* backticks and is never modified — it remains the machine-readable typed-link graph that senselint consumes. The clickable links are body prose; the typed links are metadata. Both are kept in sync by hand (and verified by senselint checks 3 and 7).
+
+Run `linkify.py` (and `senselint.py`) as part of the verification step before every commit; see `PROTOCOL.md`.
+
 ## senselint.py
 
 `tools/senselint.py` is the mechanical verification gate for the `ai-semantics` wiki, implementing the checks described in `PROTOCOL.md §5` and `CLAUDE.md §Verification before commit`.
@@ -75,6 +100,10 @@ Any page (findings or base) with a non-empty `contingent-on:` list gets an **INF
 #### Check 6 — Index coverage
 
 Every `wiki/findings/` and `wiki/base/` page (by filename stem or `id` field) should appear in `wiki/index.md`. Pages missing from the index are **WARN**.
+
+#### Check 7 — Inline-link integrity
+
+Every inline markdown link in a `wiki/` page that points to a relative `.md` target (e.g. `[`source/foo`](../../base/sources/foo.md)`) must resolve to a file that exists. Broken targets are **ERROR**. External URLs, pure-anchor links, and non-`.md` targets are ignored; fenced code blocks are skipped. This keeps the clickable navigation produced by `linkify.py` (below) from rotting when pages are renamed or moved.
 
 ### Output format
 
