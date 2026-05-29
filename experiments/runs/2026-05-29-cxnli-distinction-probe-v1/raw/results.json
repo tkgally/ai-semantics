@@ -1,0 +1,126 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "base_acc": 0.94,
+   "dist_acc": 0.64,
+   "drop_pp": 30.0,
+   "base_n": 100,
+   "dist_n": 100,
+   "na": {
+    "base": 0,
+    "dist": 0
+   },
+   "per_construction": {
+    "causative-with-CxN": {
+     "base": 0.95,
+     "dist": 0.8,
+     "drop_pp": 15.0
+    },
+    "caused-motion": {
+     "base": 0.95,
+     "dist": 0.65,
+     "drop_pp": 30.0
+    },
+    "conative": {
+     "base": 1.0,
+     "dist": 0.35,
+     "drop_pp": 65.0
+    },
+    "intransitive-motion": {
+     "base": 0.85,
+     "dist": 0.65,
+     "drop_pp": 20.0
+    },
+    "resultative": {
+     "base": 0.95,
+     "dist": 0.75,
+     "drop_pp": 20.0
+    }
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "base_acc": 0.84,
+   "dist_acc": 0.39,
+   "drop_pp": 45.0,
+   "base_n": 100,
+   "dist_n": 100,
+   "na": {
+    "base": 0,
+    "dist": 0
+   },
+   "per_construction": {
+    "causative-with-CxN": {
+     "base": 0.95,
+     "dist": 0.3,
+     "drop_pp": 65.0
+    },
+    "caused-motion": {
+     "base": 0.75,
+     "dist": 0.5,
+     "drop_pp": 25.0
+    },
+    "conative": {
+     "base": 0.95,
+     "dist": 0.2,
+     "drop_pp": 75.0
+    },
+    "intransitive-motion": {
+     "base": 0.8,
+     "dist": 0.45,
+     "drop_pp": 35.0
+    },
+    "resultative": {
+     "base": 0.75,
+     "dist": 0.5,
+     "drop_pp": 25.0
+    }
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "base_acc": 0.96,
+   "dist_acc": 0.55,
+   "drop_pp": 41.0,
+   "base_n": 100,
+   "dist_n": 100,
+   "na": {
+    "base": 0,
+    "dist": 0
+   },
+   "per_construction": {
+    "causative-with-CxN": {
+     "base": 1.0,
+     "dist": 0.6,
+     "drop_pp": 40.0
+    },
+    "caused-motion": {
+     "base": 0.95,
+     "dist": 0.45,
+     "drop_pp": 50.0
+    },
+    "conative": {
+     "base": 1.0,
+     "dist": 0.45,
+     "drop_pp": 55.0
+    },
+    "intransitive-motion": {
+     "base": 0.9,
+     "dist": 0.6,
+     "drop_pp": 30.0
+    },
+    "resultative": {
+     "base": 0.95,
+     "dist": 0.65,
+     "drop_pp": 30.0
+    }
+   }
+  }
+ },
+ "references": {
+  "scivetti_human_exp1": 0.9,
+  "scivetti_human_exp2": 0.83,
+  "scivetti_gpt_o1_drop": ">40% (aggregate, published)"
+ }
+}
