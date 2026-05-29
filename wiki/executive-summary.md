@@ -37,13 +37,14 @@ So far the project has run **six experiments of its own design**, all cheap (und
 - **LLMs handle the "easy direction" well.** When a construction *adds* a meaning onto a verb (e.g. the pattern makes *whistle* imply movement down a hall), today's models reliably draw that inference — often near-perfectly.
 - **They struggle with the "hard direction."** When the *same surface form* has to be mapped to a *different* meaning, or when a construction must *cancel* a meaning the verb normally carries, models do markedly worse and become inconsistent.
 - **It's genuine computation, not a trick.** A stress test showed that when a sentence explicitly contradicts the expected inference, the models correctly withhold it — so their success is sensitive to context, not a brittle "this pattern always means X" reflex.
-- **How you ask matters.** The same model can show competence one way of asking and lose it another — a caution against trusting any single test.
+- **How you ask matters.** The same model can show competence one way of asking and lose it another — a caution against trusting any single test. This session that caution was written up as its own standing question: *is a model's grasp of a construction a stable fact about the model, or partly an artifact of how we phrase the test?* It conditions how confidently any of the results above can be read.
 
 These are honest, bounded results: single runs, small samples, all on text-only models, and each carries its caveats on the relevant page. The live synthesis lives on the [theory page](findings/theory/constructional-meaning-in-llms.md).
 
 ## What's open or on hold
 
 - **The "relational" frontier is untouched.** The project's most distinctive idea — that meaning might be constituted *between* agents in conversation, not just inside one model — has a sharpened plan but no experiment yet, and is waiting on a key human dataset to be obtained. See [`concept/relational-meaning`](base/concepts/relational-meaning.md).
+- **The "lexical" frontier is staged but not yet run.** Alongside grammar, the project means to study the meanings of individual *words* — in particular how word senses shade gradually into one another (the *polysemy* a lexicographer lives in). This session gave that line its conceptual home ([`concept/polysemy`](base/concepts/polysemy.md)); like the relational frontier, it now waits on a suitable public dataset of human sense judgments before an experiment can run.
 - **One experiment is on hold for technical reasons.** A planned probe (the "AANN" construction) needs fine-grained probability outputs that the current model service doesn't expose; it waits for a setup with local compute.
 - **Two small decisions are pending Tom**, neither blocking ongoing work.
 
