@@ -48,9 +48,9 @@ These gate promotion of contingent findings; nothing depending on them is settle
 ### Base — concepts
 
 - [`base/concepts/distributional-meaning.md`](base/concepts/distributional-meaning.md) — distributional view; the null hypothesis for constructional-meaning claims. Grounded in Bender & Koller, Piantadosi & Hill, Weissweiler. (filled 2026-05-29)
-- [`base/concepts/referential-meaning.md`](base/concepts/referential-meaning.md) — stub
-- [`base/concepts/inferential-meaning.md`](base/concepts/inferential-meaning.md) — stub
-- [`base/concepts/grounding.md`](base/concepts/grounding.md) — stub
+- [`base/concepts/referential-meaning.md`](base/concepts/referential-meaning.md) — sense/reference/externalist; the LLM-meaning debate's hardest cases. Grounded in Bender & Koller; Putnam/Evans grounding pending. (filled 2026-05-29)
+- [`base/concepts/inferential-meaning.md`](base/concepts/inferential-meaning.md) — conceptual-role / inferential semantics; the strongest pro-LLM-meaning position. Grounded in Piantadosi & Hill. (filled 2026-05-29)
+- [`base/concepts/grounding.md`](base/concepts/grounding.md) — form-vs-meaning (Bender & Koller, binary) vs. grounding-as-gradual (Lyre, three-dimensional); the project's gradient stance. (filled 2026-05-29)
 - [`base/concepts/formal-vs-functional-competence.md`](base/concepts/formal-vs-functional-competence.md) — Mahowald et al. 2024 distinction; structural knowledge vs. language-in-the-world. (filled 2026-05-29)
 - [`base/concepts/constructional-meaning.md`](base/concepts/constructional-meaning.md) — CxG form–meaning pairing; underwrites the `constructional` tag. Grounded in Weissweiler 2023. (filled 2026-05-29)
 
@@ -60,6 +60,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 - [`base/sources/lyre-2024-semantic-grounding.md`](base/sources/lyre-2024-semantic-grounding.md) — Lyre 2024, arXiv 2402.10992; grounding-as-gradual, three-dimensional typology (functional/social/causal); grounds `grounded` sub-tags. **status: received** (page-level quotes extracted 2026-05-28).
 - [`base/sources/piantadosi-hill-2022-meaning-without-reference.md`](base/sources/piantadosi-hill-2022-meaning-without-reference.md) — Piantadosi & Hill 2022, arXiv 2208.02957; conceptual-role semantics, meaning without reference; grounds `inferential` tag. **status: received** (section-level quotes extracted 2026-05-28).
 - [`base/sources/weissweiler-2023-cxg-insight.md`](base/sources/weissweiler-2023-cxg-insight.md) — Weissweiler et al. 2023, GURT; CxG-probing methodology, form–meaning pairing as test criterion; grounds `constructional` tag. **status: received** (section-level quotes extracted 2026-05-28).
+- [`base/sources/scivetti-2025-beyond-memorization.md`](base/sources/scivetti-2025-beyond-memorization.md) — Scivetti, Tayyar Madabushi et al. 2025, IJCNLP-AACL; CxG inference benchmark over 8 phrasal constructions (incl. caused-motion, conative, way-manner) with human comparison; GPT-o1 drops >40% on syntactically-identical/semantically-divergent forms. Resolves both P2 wants. **status: received** (abstract verbatim from ACL Anthology + 3 section-level body quotes from arXiv v1 HTML, 2026-05-29).
 - [`base/sources/mahowald-2024-dissociating.md`](base/sources/mahowald-2024-dissociating.md) — Mahowald et al. 2024, TiCS 28(6); formal-vs-functional competence distinction, neuroscience grounding; primary reference for `functional-vs-formal` tag. **status: received** (section-level quotes extracted 2026-05-28).
 
 ### Base — resources
