@@ -39,6 +39,15 @@ The load-bearing property the anchor must have: **graded** per-pair human judgme
 
 Rationale: Usim is the cleanest in-literature graded usage-similarity signal and directly grounds the monotonicity clause that WiC cannot; but its in-repo provenance is currently too thin to ratify outright.
 
+## Update 2026-05-29 — the requested Usim inspection ran (surfacing, not resolving)
+
+The inspection that Option A was made contingent on has now been done (results folded into [`resource/wic-graded-usage-similarity`](../../base/resources/wic-graded-usage-similarity.md)). Findings, from primary sources actually retrieved:
+
+- **Scale + counts now VERIFIED** (ACL 2009 PDF `aclanthology.org/P09-1002.pdf`, HTTP 200; Erk guidelines page, HTTP 200): the graded scale is **1 – completely different, 2 – mostly different, 3 – similar, 4 – very similar, 5 – identical** (+ "Cannot Decide"); **Usim = 34 lemmas, 45 sentence-pairs/lemma = 1530 pairs, 3 native-British-English annotators, LEXSUB source**. (This corrects the page's earlier "~11 lemmas / ~430 items" figures, which actually describe the companion **WSsim** set.)
+- **Two ratification preconditions remain UNMET:** (i) **fetchability** — the advertised release file (`utexas.box.com/.../…lywbnl.tgz`) returns **HTTP 404** and the McCarthy mirror **HTTP 503**; no working public mirror found 2026-05-29. (ii) **license** — no formal data license exists, only an email-courtesy request on Erk's page; the ACL paper's CC BY-NC-SA 3.0 licenses the *publication*, not the dataset.
+
+So the **intellectual fit is confirmed** (graded scale grounds the monotonicity clause WiC cannot) but **access/licensing is the standing blocker**. This does not resolve the decision. It sharpens the choice for Tom: ratify Option A *pending a successful re-fetch + license confirmation* (e.g., emailing Erk), or fall toward **Option C** (queue a wanted-resource request) to unblock the conjecture sooner without that dependency. The resource page `status` stays `external-only` until the file is actually fetched and licensed.
+
 ## Notes for the resolver
 
 Tom: a one-line ratification is enough — "Usim + WiC, pending inspection", "use WSsim instead", or name a specific graded dataset. Reminder: the conjecture's prediction 2 (polysemy-vs-homonymy intermediate regime) needs a polysemy/homonymy stratification layered on whatever anchor is chosen; that is a build step, not a property of any released ratings, and should be frozen with the item set before any probe runs (a separate operationalization gate the conjecture's *Notes* flags).

@@ -5,14 +5,18 @@ title: LLMs draw the path-traversal (self-motion) inference of the way-construct
 meaning-senses:
   - constructional
   - inferential
-status: designed
+status: tested
 contingent-on: []
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-05-29
 links:
   - rel: depends-on
     target: concept/constructional-meaning
+  - rel: supports
+    target: result/way-construction-traversal-v1
 ---
+
+> **Tested 2026-05-29** (conjecture lifecycle: an experiment ran; the result page stays `proposed` pending Tom's review) → [`result/way-construction-traversal-v1`](../results/way-construction-traversal-v1.md). The confirm bar (predictions 1–3) is met by all three panel models on both instruments: way path-traversal rate 77.8–100%, gap 77.7–100 pp over the location control, anti-motion verb category holding at/near ceiling; the added idiomatic over-generalization guard is at 0%. gpt-5.4-mini is the conservative outlier, declining 4–5 scattered items (*hum, eat, chat*, +*snack* under FC) as "may or may not have moved" — a cautious entailment bar, not the predicted verb-reading failure (it affirms the anti-motion items at 100%). Lead caveat: ceiling on relatively easy controls is weak evidence for deep processing; modest, single run.
 
 # Conjecture: LLMs draw the path-traversal (self-motion) inference of the *way*-construction
 
