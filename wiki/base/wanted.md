@@ -98,6 +98,23 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   why: the AANN portion of the constructional-probing line that Scivetti et al. 2025 does NOT cover; needed if the AANN conjecture wants a CxG-native human anchor beyond the existing Mahowald 2023 stimulus suite.
   status: wanted
 
+### Relational / dyadic-interaction anchors (for the relational-meaning pilot)
+
+These would supply the human dyadic-interaction anchor the [`open-question/relational-meaning-pilot`](../findings/open-questions/relational-meaning-pilot.md) needs before any relational result can be promoted. None is in-repo; choosing among them is queued as `decisions/open/relational-anchor-shortlist`.
+
+- [P2] Clark, H.H. & Wilkes-Gibbs, D. 1986. "Referring as a collaborative process." *Cognition* 22(1): 1–39.
+  why: the canonical tangram-naming convergence paradigm; dyads collaboratively coin and compress shared labels over rounds — the closest human analogue to the iterated-reference-game pilot, and the strongest single candidate anchor.
+  status: wanted
+- [P3] Krauss, R.M. & Weinheimer, S. 1964/1966. Reference-phrase-shortening studies.
+  why: the earlier convergence-curve studies the entrainment measure would be calibrated against.
+  status: wanted
+- [P3] HCRC Map Task corpus (Anderson et al. 1991).
+  why: corpus-grade anchor for referential alignment / entrainment in goal-directed dyads.
+  status: wanted
+- [P3] Pickering, M.J. & Garrod, S. 2004. "Toward a mechanistic psychology of dialogue." *Behavioral and Brain Sciences* 27(2).
+  why: the "interactive alignment" framework — theoretical anchor for what alignment-across-levels predicts (and what it does not claim about meaning-constitution).
+  status: wanted
+
 ## Notes on fetching
 
 - **Try open-access first.** ACL Anthology, arXiv, preprint pages, lab pages — many of the LLM-meaning items above are OA and a run can fetch them via `WebFetch`. Only escalate to Tom when paywalled.

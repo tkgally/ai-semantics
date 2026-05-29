@@ -25,10 +25,11 @@ These gate promotion of contingent findings; nothing depending on them is settle
 
 - [`decisions/open/aann-stimulus-source`](decisions/open/aann-stimulus-source.md) — ratify Mahowald 2023 as the primary AANN human anchor (default), or switch.
 - [`decisions/open/aann-operationalization`](decisions/open/aann-operationalization.md) — ratify the continuation-likelihood contrast + T1 threshold (default), or switch.
-- [`decisions/open/way-construction-anchor`](decisions/open/way-construction-anchor.md) — ratify Option A (Goldberg 1995 examples as seed; anchor pending), or supply rated data.
+- [`decisions/open/way-construction-anchor`](decisions/open/way-construction-anchor.md) — ratify Option A (Goldberg 1995 examples as seed; anchor pending), or supply rated data. **New candidate Option D surfaced: Scivetti 2025 CxNLI (realizes the gestured Option C).**
 - [`decisions/open/cxg-probing-anchor`](decisions/open/cxg-probing-anchor.md) — scope the CxG-probing-validity claim to AANN (default), acquire a CxG-native broad anchor, or split the claim.
-- [`decisions/open/caused-motion-anchor`](decisions/open/caused-motion-anchor.md) — choose the human anchor for the caused-motion conjecture (or fall back to a verb-frame resource + queue a want).
-- [`decisions/open/conative-anchor`](decisions/open/conative-anchor.md) — choose the human anchor for the conative conjecture (default: Levin 1993 / VerbNet conative-class as partial anchor).
+- [`decisions/open/caused-motion-anchor`](decisions/open/caused-motion-anchor.md) — choose the human anchor for the caused-motion conjecture (or fall back to a verb-frame resource + queue a want). **New candidate Option D surfaced: Scivetti 2025 CxNLI.**
+- [`decisions/open/conative-anchor`](decisions/open/conative-anchor.md) — choose the human anchor for the conative conjecture (default: Levin 1993 / VerbNet conative-class as partial anchor). **New candidate Option D surfaced: Scivetti 2025 CxNLI.**
+- [`decisions/open/relational-anchor-shortlist`](decisions/open/relational-anchor-shortlist.md) — choose the human dyadic-interaction anchor for the relational-meaning pilot (default: Clark & Wilkes-Gibbs 1986, with Pickering & Garrod 2004 as theoretical backdrop). Opened 2026-05-29.
 
 ### Resolved decisions
 - (none yet) — ratified decisions will be listed here, each linking its file under `wiki/decisions/resolved/`.
@@ -67,6 +68,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 
 - [`base/resources/index.md`](base/resources/index.md) — catalog of human-anchored empirical resources.
 - [`base/resources/mahowald-2023-aann-stimuli.md`](base/resources/mahowald-2023-aann-stimuli.md) — Mahowald 2023 EACL AANN stimulus suite + MTurk acceptability ratings (status: external-only); anchor for [`conjecture/aann-construction`](findings/conjectures/aann-construction.md).
+- [`base/resources/scivetti-2025-cxnli-dataset.md`](base/resources/scivetti-2025-cxnli-dataset.md) — Scivetti et al. 2025 CxNLI / CxNLI-Distinction constructional NLI dataset (435 + 99 triples over 8 / 5 constructions incl. caused-motion, conative, way-manner; native-speaker baseline ≈0.90 / ≈0.83). Status: external-only (repo not reachable this run). **Candidate** human inference-rate anchor for `caused-motion-anchor`, `conative-anchor`, `way-construction-anchor` — surfaced, not adopted. (created 2026-05-29)
 
 ### Base — wants
 

@@ -39,16 +39,24 @@ Search for existing judgment or priming data on the way-construction's path-trav
 
 **Upside:** independent external anchor with potentially larger N. **Risk:** may not exist in the form needed; fetching and confirming takes a session.
 
+### Option D — Scivetti et al. 2025 CxNLI dataset (surfaced 2026-05-29 — concretely realizes Option C; candidate, not yet adopted)
+
+Option C above gestured at "recent CxG-probing work in the Weissweiler / Tayyar Madabushi line." That candidate now has a concrete instance, catalogued at [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md): `Way-Manner` is one of its 8 constructions, tested as **inference** (NLI), with human annotation and a native-speaker accuracy baseline (≈0.90) — exactly the inference-probe-with-human-norm this decision says the *way* probe needs (and which Option A's Goldberg-examples-only seed cannot supply). Its verified way-manner example item — premise *"I yawned my way back to the Narrow Neck."*, hypothesis *"I traveled back to Narrow Neck without yawning."*, label **Contradiction** — is a human-licensed path-traversal-with-manner inference of precisely the kind the conjecture probes (the *way*-construction contributes path-traversal; the non-motion verb *yawn* supplies manner).
+
+- **Upside over Option A:** supplies the human inference comparison Option A explicitly lacks; it is the realization of the Option-C "published psycholinguistic / CxG-probing data" path.
+- **Limits to weigh:** small N per construction; aggregate accuracy verified, not per-item human inference rates; the repo was not inspectable this run, so item-level structure and whether the *way* items use the same non-motion-verb manipulation as this design are unconfirmed.
+- **Status:** a candidate only — surfaced for Tom, not adopted. Adoption needs (a) Tom's ratification and (b) item-level inspection (see the resource page's "Pointer for next visit").
+
 ## Provisional default
 
-**Option A.** Rationale: (i) the design's primary result is the model construction-vs-control gap, which does not require a rated human norm; (ii) Goldberg's expert-curated examples are sufficient to verify that items are genuine way-construction tokens; (iii) proceeding now keeps the probe on track without waiting for annotation or literature search; (iv) if the gap result is strong, the anchor question becomes a refinement, not a blocker.
+**Option A** remains the provisional default (Option D was surfaced 2026-05-29 but is not adopted). Rationale: (i) the design's primary result is the model construction-vs-control gap, which does not require a rated human norm; (ii) Goldberg's expert-curated examples are sufficient to verify that items are genuine way-construction tokens; (iii) proceeding now keeps the probe on track without waiting for annotation or literature search; (iv) if the gap result is strong, the anchor question becomes a refinement, not a blocker.
 
 The design marks `anchor: pending` and records the limitation in the human-anchor section.
 
 ## What would change the default
 
 - If Tom is willing to annotate 60–100 items before the probe runs, switch to Option B and update the design to add a human-rate column to the results table.
-- If a published inference-rated dataset surfaces in the literature search (Option C), adopt it instead.
+- If a published inference-rated dataset surfaces in the literature search (Option C), adopt it instead. **Scivetti et al. 2025 (Option D) is now that surfaced dataset** — if item-level inspection confirms usable per-item *way*-manner inference data, it becomes the strongest anchor.
 
 ## Notes for the resolver
 

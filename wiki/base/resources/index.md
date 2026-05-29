@@ -32,6 +32,7 @@ Plus a short prose description of:
 ## Catalogued
 
 - `mahowald-2023-aann-stimuli.md` — Mahowald 2023 EACL AANN stimulus suite (templates + slot fillers) plus MTurk acceptability ratings, released at `github.com/mahowak/aann-public`. Status: `external-only`. Grounds: [`conjecture/aann-construction`](../../findings/conjectures/aann-construction.md) and [`experiments/designs/aann-construction-v1.md`](../../../experiments/designs/aann-construction-v1.md).
+- `scivetti-2025-cxnli-dataset.md` — Scivetti et al. 2025 CxNLI / CxNLI-Distinction constructional NLI dataset (435 + 99 human-annotated NLI triples over 8 / 5 phrasal constructions, incl. caused-motion, conative, way-manner; native-speaker baseline ≈0.90 / ≈0.83). Status: `external-only` (release repo not reachable this run; documented at the paper level only). **Candidate** human inference-rate anchor for [`decisions/open/caused-motion-anchor`](../../decisions/open/caused-motion-anchor.md), [`decisions/open/conative-anchor`](../../decisions/open/conative-anchor.md), [`decisions/open/way-construction-anchor`](../../decisions/open/way-construction-anchor.md) — surfaced, not adopted (no `anchors:` links until ratified). Cannot ground AANN.
 
 ## Shortlist to catalogue when a finding first cites them
 
