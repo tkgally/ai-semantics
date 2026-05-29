@@ -37,8 +37,16 @@ links:
     target: conjecture/dative-alternation-information-structure
   - rel: depends-on
     target: conjecture/function-word-substitutability
+  - rel: depends-on
+    target: conjecture/caused-motion-construction
+  - rel: depends-on
+    target: conjecture/conative-construction
+  - rel: depends-on
+    target: conjecture/comparative-correlative-construction
   - rel: supports
     target: open-question/relational-meaning-pilot
+  - rel: supports
+    target: open-question/constructional-divergence-probe
   - rel: depends-on
     target: source/mahowald-2024-dissociating
   - rel: depends-on

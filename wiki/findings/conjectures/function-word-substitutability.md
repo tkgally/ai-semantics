@@ -27,7 +27,7 @@ For matched-frequency minimal pairs, swapping a **function word** (e.g., *the* �
 
 - Function words are exactly where lexicography is historically thinnest and meaning-theory is most underdeveloped — yet they carry the constructional load.
 - The frequency-controlled comparison is the cleanest possible probe of the `constructional` vs. `distributional` distinction: the distributional theory predicts comparable behavior shifts for comparable frequency; a substantially larger shift on function-word swaps is evidence for constructional meaning being computed beyond surface co-occurrence.
-- It is the most *general* of the four founding conjectures — any LLM, any matched corpus, any inferential probe; the conjecture survives or fails across many specific stimulus sets.
+- It is the most *general* of the project's constructional conjectures — any LLM, any matched corpus, any inferential probe; the conjecture survives or fails across many specific stimulus sets.
 
 ## Predictions
 
@@ -52,5 +52,5 @@ A frequency-controlled function-vs-content swap inventory does not, to current k
 
 ## Notes / caveats
 
-- This is the most *abstract* of the founding conjectures and so the most vulnerable to operationalization tuning. Lock the matched-pair set **before** seeing model outputs.
+- This is the most *abstract* of the project's constructional conjectures and so the most vulnerable to operationalization tuning. Lock the matched-pair set **before** seeing model outputs.
 - A null here is a positive result for the distributional position, not a failure — write it as such.

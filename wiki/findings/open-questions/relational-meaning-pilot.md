@@ -24,7 +24,7 @@ The theory page frames this precisely as a **second ladder**: "The relational ax
 
 ## Why it matters
 
-This is plausibly the project's strongest contribution if executed well. The founding conjectures (dative, AANN, *way*, caused-motion, conative) are all `model-internal` probes — they ask what a single model knows. None touches the relational axis. Without a pilot here, the relational angle remains rhetoric, and the theory page's "standing IOU" stays unpaid.
+This is plausibly the project's strongest contribution if executed well. The project's constructional conjectures (dative, AANN, *way*, function-word, caused-motion, conative, comparative-correlative) are all `model-internal` probes — they ask what a single model knows. None touches the relational axis. Without a pilot here, the relational angle remains rhetoric, and the theory page's "standing IOU" stays unpaid.
 
 ## The hard part, named exactly
 
