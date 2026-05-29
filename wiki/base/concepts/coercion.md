@@ -1,0 +1,48 @@
+---
+type: concept
+id: coercion
+title: Constructional coercion (the construction overriding the verb)
+meaning-senses:
+  - constructional
+  - inferential
+created: 2026-05-29
+updated: 2026-05-29
+links:
+  - rel: refines
+    target: concept/constructional-meaning
+  - rel: depends-on
+    target: source/weissweiler-2023-cxg-insight
+  - rel: depends-on
+    target: source/scivetti-2025-beyond-memorization
+---
+
+# Constructional coercion (the construction overriding the verb)
+
+**Coercion**, in the Construction Grammar sense (Goldberg 1995; not in-repo), is what happens when an argument-structure construction imposes its own meaning onto a verb that does not lexically carry it. The verb is slotted into a frame whose semantics it does not independently license, and the frame wins: it "adds" — or, in the converse cases, overrides — an entailment the verb alone could not supply. The textbook cases are *Maria sneezed the napkin off the table* (the intransitive, motion-denoting-nothing verb *sneeze* is read as causing the napkin to move, because the caused-motion construction contributes the causation-of-motion) and *Mia whistled her way down the hall* (the *way*-construction contributes path-traversal, so *whistle* — no displacement in its lexical content — is read as accompanying self-propelled motion down the hall). These are standard examples in the CxG literature; the project's own probes adopt them directly (see [`result/caused-motion-minimal-pair-divergence-v1`](../../findings/results/caused-motion-minimal-pair-divergence-v1.md) and [`result/way-construction-traversal-v1`](../../findings/results/way-construction-traversal-v1.md), both of which attribute these examples to Goldberg 1995, chs. 7 and 9).
+
+## Coercion as the sharpest case of constructional meaning
+
+Coercion is a **sharpening of [`concept/constructional-meaning`](constructional-meaning.md)**, not a new sense. The general claim of CxG is that meaning is carried by the form–meaning pairing, not by the lexical items slotted into it — that, as Weissweiler et al. put it, "meaning is encoded in abstract constellations of linguistic units of different sizes" ([`source/weissweiler-2023-cxg-insight`](../sources/weissweiler-2023-cxg-insight.md), §2.1). Coercion is the limiting case that makes this claim hardest to evade: when the verb *cannot* supply the inference (an intransitive verb that denotes no motion cannot, on its own, entail caused motion or path-traversal), any systematic reading of that inference must come from the construction. Scivetti et al. note the same property of constructions as the basis for testing generalization — CxG "explicitly links syntactic forms to abstract, non-lexical meanings" ([`source/scivetti-2025-beyond-memorization`](../sources/scivetti-2025-beyond-memorization.md), abstract). Coercion is where the *non-lexical* part of "non-lexical meanings" is unmistakable.
+
+This is why coercion is a strong probe of constructional **meaning** rather than constructional **form**. A model can track the *form* of the caused-motion or *way*-construction (the surface pattern, the slot structure) by distributional learning alone. But the inference — *the napkin moved*, *Mia ended up down the hall* — is not in the verb and not in any single lexical part, so a model that systematically draws it implicates the construction as a meaning-bearing unit. In the project's evidence ladder this is the top text-internal rung: **Tier 4, inference-licensing** ([`theory/constructional-meaning-in-llms`](../../findings/theory/constructional-meaning-in-llms.md)), the rung at which "the construction, not the verb, is carrying the inference." Coercion constructions are the paradigm Tier-4 cases precisely because the verb is held constant and stripped of the relevant entailment.
+
+## The add vs. cancel/suppress directions (the project's own observation)
+
+The project's own probes have run coercion in two opposite directions, and observed — as a **single-session, single-date, small-N observation**, not a settled finding — an asymmetry between them:
+
+- **ADD direction** — the construction adds a construction-contributed entailment onto a non-licensing verb. *Caused-motion* (add a causation-of-motion entailment: *sneeze the napkin off the table*) and the *way*-construction (add a self-motion/path-traversal entailment: *whistle her way down the hall*). Across the panel these were **easy / at or near ceiling**: caused-motion affirmed at 90–100% with a 70–100 pp gap over controls in 3/3 models ([`result/caused-motion-minimal-pair-divergence-v1`](../../findings/results/caused-motion-minimal-pair-divergence-v1.md)); the *way*-traversal entailment above the ratified bar in 3/3 models, way 77.8–100% ([`result/way-construction-traversal-v1`](../../findings/results/way-construction-traversal-v1.md)).
+- **CANCEL / SUPPRESS direction** — the construction cancels or suppresses an entailment the verb lexically defaults to. The *conative* alternation (*Maria kicked at the ball* should **not** entail completed contact, where *Maria kicked the ball* does) is the project's cancel case. This was **harder and instrument-fragile**: 2/3 models cleanly cancelled the completed-contact entailment, but gpt-5.4-mini **failed it entirely under the NLI instrument** (calling all conative items "entailment") while partly recovering under forced-choice ([`result/conative-minimal-pair-divergence-v1`](../../findings/results/conative-minimal-pair-divergence-v1.md)).
+
+The tentative reading the project carries from this juxtaposition: **current decoders more readily license a construction-contributed (added) inference than suppress a lexically-default one.** This must be stated modestly. It rests on a single session of own-design probes (N = 10–18 verbs each, one run/date, two instruments), and — critically — it is **confounded with ceiling and difficulty**: the add cases were ceiling on relatively easy controls, so "add is easier than cancel" is not yet separable from "the add items happened to be easier." A matched off-ceiling *cancel*-direction probe has not been run; until it is, the asymmetry is an observation to be tested, not a result to be promoted.
+
+## Coercion as genuine computation vs. a "this-frame → yes" template
+
+A coercion effect at ceiling raises an immediate deflationary worry: is the model *computing* the construction's inference, or has it learned a brittle "this-frame → yes" template — affirming the inference for any well-formed coercion regardless of context? The project's off-ceiling v2 probe ([`result/argument-structure-coercion-v2`](../../findings/results/argument-structure-coercion-v2.md)) names these as **H-deep** (the model computes the inference and would withhold it when a resolving cue blocks it) and **H-default** (a learned template a conflicting cue cannot override).
+
+The discriminating arm paired each canonical coercion with the same construction and verb plus an explicit clause **denying** the inference (*…but the napkin never moved* / *…but she never left the doorway*). All three models dropped to floor on the cue items (affirm 0–20%, a 60–100 pp drop from canonical, 3/3 models, both instruments, both constructions) — i.e. they **withheld** the added inference once it was explicitly denied. A pure template would have ignored the denial; the panel did not. So for an explicit verbal cue the add-direction ceilings are **cue-sensitive computation, not a brittle template** (H-deep over H-default). The standing caution: this tests only the *explicit* end of "conflicting cue" — a direct verbal contradiction is the easiest kind to register — and it does not establish robust world-knowledge reasoning; a subtler implicit cue (e.g. a bolted-down, immovable object) was not run. The result removes the "ceiling artifact" worry for the explicit-cue case, not for coercion in general.
+
+## How coercion sits in this project's vocabulary
+
+- Tag coercion findings `constructional` (the meaning is in the form–meaning pairing) and co-tag `inferential` whenever the probe turns on whether the construction's inference-licensing is tracked — which, for coercion, it almost always does.
+- Coercion is the cleanest available wedge for separating constructional **meaning** from constructional **form**: the verb cannot explain the inference, so the memorization-vs-construction-knowledge confound that Weissweiler et al. name ([`source/weissweiler-2023-cxg-insight`](../sources/weissweiler-2023-cxg-insight.md), §3.1) bites less hard when the coerced inference holds for atypical, low-frequency-in-construction verbs (a Tier-3 control the caused-motion and *way* probes passed).
+- Keep the standing caution from all four result pages: **ceiling on relatively easy controls is weak evidence for any strong "deep processing" reading.** Coercion is a strong probe in principle; the project's positive results on it are real but read modestly, and the strength of the underlying competence still wants a harder instrument.
