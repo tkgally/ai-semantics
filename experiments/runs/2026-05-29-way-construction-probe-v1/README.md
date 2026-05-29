@@ -43,4 +43,4 @@ Stimuli are the **project's own** (no third-party license); committed `raw/*.jso
 
 ## Results / cost
 
-(filled after the run from the committed `raw/results.json` — see the result page for the write-up. Every number reproducible from `raw/results.json`.)
+360 calls, **0 NA**, cost **$0.072** (A $0.052 / B $0.003 / C $0.016), recorded in [`config/budget.md`](../../../config/budget.md). Headline: way path-traversal rate **77.8–100%**, gap (way − ctrl-loc) **77.7–100 pp**, **3/3 models, both instruments**; the anti-motion stress category holds at/near ceiling for every model; idiomatic over-generalization guard **0%** everywhere; ctrl-motion positive floor **100%** everywhere; ctrl-loc near floor (0–11.1%). gpt-5.4-mini is the conservative outlier (declines consumption-verb items *eat/chat/snack/hum* as CANT_TELL). Full write-up at the result page; every number reproducible from `raw/results.json`.
