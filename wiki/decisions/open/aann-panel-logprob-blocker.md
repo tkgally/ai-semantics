@@ -81,6 +81,8 @@ So "swap in models" does **not** deliver what its ratification intended (the rat
 
 This is exactly the "don't let the loop pick the instrument after the panel is fixed" case, so it was not auto-resolved — awaiting Tom's corrected ruling.
 
+**Tom's response 2026-05-29: HOLD AANN, do other work.** Presented the narrowed B1/B2/B3 choice; Tom chose to hold the AANN run rather than accept a degraded fallback-on-2-families probe, and redirected the session to now-unblocked work (off-ceiling v2 probe + the DWUG/CoSimLex lexical-anchor follow-through). **AANN stays UNRUN and this decision stays OPEN** — the clean way to run it (B2, the small-model lane for true Option-A surprisal) needs local compute stood up, deferred to a future session. No AANN result is fabricated or implied in the interim.
+
 ## What downstream is contingent on this
 
 - [`design/aann-construction-v1`](../../../experiments/designs/aann-construction-v1.md) — unrunnable as written until this resolves; §2/§3.2 (indicator + panel) are the affected sections.
