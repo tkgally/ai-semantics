@@ -61,6 +61,26 @@ All quotes extracted from arXiv abstract page and ar5iv HTML (ar5iv.labs.arxiv.o
 
 > "If theories about conceptual role are the correct account, then LLMs likely already share the foundation of how our own concepts get their meaning."
 
+**§"Communicative intentions" — engagement with stochastic parrots critique:**
+
+> "But in our view, a key difference between autocompleting parrots and LLMs is that the latter have rich, causal, and structured internal states."
+
+**§"Communicative intentions" — semantic intent defined:**
+
+> "One view of intent is semantic, corresponding to whether the language they produce arises from an internal representation of (intended) meaning."
+
+**§"Communicative intentions" — LLMs attributed semantic intent:**
+
+> "We have argued that LLM's internal state has some notions of conceptual role, so LLM's utterances have the semantic intent corresponding to these roles."
+
+**§"Discovering conceptual role" — logical conjunction as example:**
+
+> "A symbol like AND only means logical conjunction if it interacts (composes) with others symbols like TRUE and FALSE in the appropriate way—i.e. when it has the right conceptual role"
+
+**§"Conceptual role in LLMs" — internal states as locus of meaning:**
+
+> "If anything like this view is correct, then the search for meaning in learning models—or brains—should focus on understanding the way that the systems' internal representational states relate to each other."
+
 ## What it can ground
 
 - The `inferential` tag on findings pages — when a finding is that an LLM tracks inferential relationships, this paper provides philosophical backing for treating that as a semantically significant result.
@@ -79,4 +99,4 @@ All quotes extracted from arXiv abstract page and ar5iv HTML (ar5iv.labs.arxiv.o
 
 ## Status in wanted.md
 
-Was `wanted (try OA first)`, then `catalogued`. Now `received`: full abstract (verbatim from arXiv abs) and section-level body quotes extracted from ar5iv HTML (2026-05-28). Full PDF available at arXiv for pagination verification if exact page citations are needed.
+Was `wanted (try OA first)`, then `catalogued`. Now `received`: full abstract (verbatim from arXiv abs) and section-level body quotes extracted from ar5iv HTML (2026-05-28). Five additional quotes added 2026-05-28 from "Communicative intentions" and "Discovering conceptual role" sections (via ar5iv HTML, ar5iv.labs.arxiv.org/html/2208.02957). Full PDF available at arXiv for pagination verification if exact page citations are needed.
