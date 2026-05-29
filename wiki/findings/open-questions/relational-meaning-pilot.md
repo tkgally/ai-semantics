@@ -80,7 +80,7 @@ Per always-on rule 5 and the charter's independent-human-bearing commitment, a r
 - **HCRC Map Task corpus** — task-oriented dialogue with referential alignment; a corpus-grade anchor for entrainment in goal-directed dyads.
 - **Pickering & Garrod 2004** — the "interactive alignment" framework; the most-cited dyadic-linguistic model, useful as the *theoretical* anchor for what alignment-across-levels predicts (and what it does **not** claim about meaning-constitution).
 
-A human anchor must be **fetched** before any result here can be promoted. Both the fetch want and the anchor-choice decision are now queued: a [`base/wanted.md`](../../base/wanted.md) entry for the candidate anchors (Clark & Wilkes-Gibbs 1986 is the strongest single candidate, since its paradigm maps directly onto the pilot), and the decision [`decisions/open/relational-anchor-shortlist`](../../decisions/open/relational-anchor-shortlist.md) to choose among them (provisional default: Clark & Wilkes-Gibbs 1986, with Pickering & Garrod 2004 as theoretical backdrop). The pilot stays `anchor: pending` until one is fetched and Tom ratifies.
+**Anchor RATIFIED 2026-05-29** ([`decisions/resolved/relational-anchor-shortlist`](../../decisions/resolved/relational-anchor-shortlist.md), Option A): the empirical anchor is **Clark & Wilkes-Gibbs 1986** (the tangram referential-communication paradigm the pilot directly instantiates; supplies the human convergence/compression baseline), with **Pickering & Garrod 2004** (interactive-alignment) as theoretical backdrop only. This fixes the *anchor* — it does **not** make the pilot runnable: both papers are queued in [`base/wanted.md`](../../base/wanted.md) and are **not yet in-repo**, so no relational result can be promoted until Clark & Wilkes-Gibbs 1986 is fetched and read. A separate **literature-reading gate** (multi-agent-LLM + alignment, below) remains before the pilot promotes to a runnable design, and the broader two-AI experiment ("Decision 9") is still not taken.
 
 ## Why this is queued, not active
 
@@ -93,7 +93,7 @@ Sharpening the question — fixing the task, the conditions, the discriminating 
 
 ## Pointers for the next visit
 
-- **Queued this wave** (now open): a [`base/wanted.md`](../../base/wanted.md) relational-anchors section (Clark & Wilkes-Gibbs 1986 strongest single anchor; Krauss & Weinheimer; Map Task; Pickering & Garrod), and the decision [`decisions/open/relational-anchor-shortlist`](../../decisions/open/relational-anchor-shortlist.md) to choose among them. Tom's ratification of that decision fixes the anchor.
+- **Anchor decision RESOLVED 2026-05-29** ([`decisions/resolved/relational-anchor-shortlist`](../../decisions/resolved/relational-anchor-shortlist.md), Option A: Clark & Wilkes-Gibbs 1986 + Pickering & Garrod 2004 backdrop). Next concrete step: **fetch Clark & Wilkes-Gibbs 1986** (queued in [`base/wanted.md`](../../base/wanted.md)) so the human convergence baseline is in-repo.
 - Pickering & Garrod "interactive alignment" as the theoretical anchor — check open-access availability when fetched.
 - The MultiAgent-LLM literature as the corpus to *not* duplicate; read for whether any setup already includes an order-scramble or static-history control (the load-bearing control here).
 - On a positive result, the natural promotion is a `conjecture` page that the theory page would absorb as the bottom rung of its relational second ladder.

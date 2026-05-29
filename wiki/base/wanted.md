@@ -100,19 +100,30 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 
 ### Relational / dyadic-interaction anchors (for the relational-meaning pilot)
 
-These would supply the human dyadic-interaction anchor the [`open-question/relational-meaning-pilot`](../findings/open-questions/relational-meaning-pilot.md) needs before any relational result can be promoted. None is in-repo; choosing among them is queued as `decisions/open/relational-anchor-shortlist`.
+These would supply the human dyadic-interaction anchor the [`open-question/relational-meaning-pilot`](../findings/open-questions/relational-meaning-pilot.md) needs before any relational result can be promoted. **Anchor decision RESOLVED 2026-05-29** (`decisions/resolved/relational-anchor-shortlist`, Option A): Clark & Wilkes-Gibbs 1986 is the ratified empirical anchor + Pickering & Garrod 2004 the theoretical backdrop — so the first two below are now the **priority fetches** (the other two are no longer needed unless the pilot's emphasis shifts).
 
-- [P2] Clark, H.H. & Wilkes-Gibbs, D. 1986. "Referring as a collaborative process." *Cognition* 22(1): 1–39.
-  why: the canonical tangram-naming convergence paradigm; dyads collaboratively coin and compress shared labels over rounds — the closest human analogue to the iterated-reference-game pilot, and the strongest single candidate anchor.
-  status: wanted
+- [P1] Clark, H.H. & Wilkes-Gibbs, D. 1986. "Referring as a collaborative process." *Cognition* 22(1): 1–39. **← RATIFIED ANCHOR (fetch first).**
+  why: the canonical tangram-naming convergence paradigm; dyads collaboratively coin and compress shared labels over rounds — the closest human analogue to the iterated-reference-game pilot. Ratified as the empirical anchor; the pilot cannot promote a result until this is in-repo.
+  status: wanted (priority)
 - [P3] Krauss, R.M. & Weinheimer, S. 1964/1966. Reference-phrase-shortening studies.
   why: the earlier convergence-curve studies the entrainment measure would be calibrated against.
   status: wanted
 - [P3] HCRC Map Task corpus (Anderson et al. 1991).
   why: corpus-grade anchor for referential alignment / entrainment in goal-directed dyads.
   status: wanted
-- [P3] Pickering, M.J. & Garrod, S. 2004. "Toward a mechanistic psychology of dialogue." *Behavioral and Brain Sciences* 27(2).
+- [P2] Pickering, M.J. & Garrod, S. 2004. "Toward a mechanistic psychology of dialogue." *Behavioral and Brain Sciences* 27(2). **← RATIFIED theoretical backdrop.**
   why: the "interactive alignment" framework — theoretical anchor for what alignment-across-levels predicts (and what it does not claim about meaning-constitution).
+  status: wanted
+
+### Graded usage/sense-similarity anchor (for the lexical-sense-gradience conjecture)
+
+The lexical conjecture's anchor decision RESOLVED 2026-05-29 ([`decisions/resolved/lexical-sense-gradience-anchor`](../decisions/resolved/lexical-sense-gradience-anchor.md), **Option B**: a different graded set, NOT Usim — Usim is unfetchable/unlicensed). Need a graded, released, licensed usage/sense-similarity set to ground the monotonicity clause:
+
+- [P1] DWUG — Diachronic Word Usage Graphs (Schlechtweg et al.). Graded human usage-similarity judgments (4-point, Usim tradition), **CC BY**, on Zenodo/GitHub. **← leading Option-B candidate (verify license + scale + counts + fetchability, then mirror to experiments/data/ + write a resource page).**
+  why: the load-bearing graded anchor the monotonicity clause needs; well-licensed and available (unlike Usim).
+  status: wanted (priority)
+- [P2] CoSimLex (SemEval-2020 Task 3). Graded human ratings of word similarity in context; released.
+  why: alternative graded in-context similarity anchor if DWUG does not fit.
   status: wanted
 
 ## Notes on fetching

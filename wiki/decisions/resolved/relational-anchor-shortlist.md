@@ -1,7 +1,9 @@
 ---
 id: relational-anchor-shortlist
 title: Which human dyadic-interaction resource should anchor the relational-meaning pilot?
-status: open
+status: resolved
+resolved: 2026-05-29
+resolution: "Option A — Clark & Wilkes-Gibbs 1986 ('Referring as a collaborative process') is the primary empirical anchor (the iterated reference-game pilot is a direct instance of its tangram paradigm and it supplies the human convergence/compression baseline), with Pickering & Garrod 2004 (interactive-alignment) as theoretical backdrop only. Ratified by Tom 2026-05-29. Fixes the ANCHOR only: the pilot still needs a literature-reading step (multi-agent-LLM + alignment) before it promotes to a runnable design, and the broader two-AI experiment ('Decision 9') is still not taken. Both papers are queued in base/wanted.md (not yet in-repo) — no relational result may be promoted until the anchor is fetched."
 opened: 2026-05-29
 opened-by: orchestrator
 contingent-artifacts:

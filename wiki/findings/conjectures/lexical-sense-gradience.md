@@ -7,8 +7,7 @@ meaning-senses:
   - referential
   - human-comparison
 status: proposed
-contingent-on:
-  - lexical-sense-gradience-anchor
+contingent-on: []
 created: 2026-05-29
 updated: 2026-05-29
 links:
@@ -18,13 +17,13 @@ links:
     target: concept/distributional-meaning
   - rel: depends-on
     target: concept/referential-meaning
-  - rel: anchors
+  - rel: depends-on
     target: resource/wic-graded-usage-similarity
 ---
 
 # Conjecture: graded sense-relatedness tracking in LLMs (the lexical wedge)
 
-> **Status: proposed, untested.** This is the project's first **lexical** (non-grammatical) conjecture, sharpening the seed [`open-question/lexical-polysemy-gradience`](../open-questions/lexical-polysemy-gradience.md). Its human anchor is a **candidate, not ratified**: the graded usage-similarity resource it points to ([`resource/wic-graded-usage-similarity`](../../base/resources/wic-graded-usage-similarity.md)) is `external-only` (not yet mirrored or inspected in-repo), and an anchor decision (`lexical-sense-gradience-anchor`) should be queued before any result is promoted. All claims here are provisional.
+> **Status: proposed, untested. Anchor decision RESOLVED 2026-05-29 → Option B.** Tom ratified [`decisions/resolved/lexical-sense-gradience-anchor`](../../decisions/resolved/lexical-sense-gradience-anchor.md): **anchor on a different graded set, NOT Usim** (Usim's scale + counts were verified this session but its released file is unfetchable and unlicensed — see [`resource/wic-graded-usage-similarity`](../../base/resources/wic-graded-usage-similarity.md)). The monotonicity clause still needs a **graded, released, licensed** usage/sense-similarity set; the specific one is to be **identified + verified** by a follow-on run (leading candidates, not yet in-repo: **DWUG** / Diachronic Word Usage Graphs, graded usage-similarity, CC BY; **CoSimLex** / SemEval-2020 Task 3, graded in-context similarity). **WiC** (binary, CC BY-NC 4.0) remains the discrete cross-check. The conjecture stays `proposed`/anchor-pending-identification and may not promote a result until a specific graded set is verified and mirrored. All claims here are provisional.
 
 ## Statement
 
@@ -49,7 +48,7 @@ Clause (c) is the load-bearing one: it is what separates graded-sense tracking (
 2. **Intermediate regime for polysemy, floor for homonymy.** Related-but-distinct polysemous usage pairs occupy an **intermediate** band of the model's signal; homonym pairs cluster near the "different" floor. The distributions for the two regimes are separable — polysemy is *not* treated as just-another-homonym (which would be discrete-collapse, hypothesis 2).
 3. **Context-similarity control (the discriminating prediction).** When usage pairs are matched so that overall sentence/context overlap is roughly constant across high- and low-relatedness pairs, the monotonic relation to *human sense relatedness* **persists**. If instead the signal tracks context overlap and goes flat once context overlap is controlled, that is the distributional shadow (hypothesis 3).
 4. **Bridging contexts.** Deliberately sense-ambiguous (bridging) contexts, engineered so two senses are co-present, yield **intermediate, less-confident** model behavior rather than a forced discrete pick — the behavioral fingerprint of gradience.
-5. **Binary cross-check.** On a binary same/different set (WiC), the model's same-sense judgments agree with human binary labels at a baseline rate; the *graded* set (Usim) is where the monotonicity claim is actually tested. Agreement on the binary task without gradience on the graded task would be evidence for discrete-collapse.
+5. **Binary cross-check.** On a binary same/different set (WiC), the model's same-sense judgments agree with human binary labels at a baseline rate; the *graded* set (the Option-B anchor, TBD) is where the monotonicity claim is actually tested. Agreement on the binary task without gradience on the graded task would be evidence for discrete-collapse.
 
 ## What would confirm / falsify
 
@@ -62,19 +61,23 @@ The **context-similarity control is the design's spine**: confirming clauses (a)
 
 ## Human anchor
 
-Candidate (not ratified): the **Usim graded usage-similarity ratings** of Erk, McCarthy & Gaylord, catalogued at [`resource/wic-graded-usage-similarity`](../../base/resources/wic-graded-usage-similarity.md). Usim is the load-bearing anchor because its **graded 5-point human usage-similarity judgments** are what predictions 1–3 require — a binary set cannot ground monotonicity. **WiC** (binary same/different-sense, Pilehvar & Camacho-Collados 2019) is the cross-check for prediction 5 and the discrete contrast, but is explicitly *insufficient* for the gradience claim (the seed's warning).
+**Decision resolved 2026-05-29 → Option B** ([`decisions/resolved/lexical-sense-gradience-anchor`](../../decisions/resolved/lexical-sense-gradience-anchor.md)): anchor on a **different graded set, NOT Usim**. Usim (Erk, McCarthy & Gaylord) was the original candidate and its content fits perfectly — this session's inspection verified its graded **5-point** scale and counts (34 lemmas / 1530 pairs / 3 annotators) from primary sources ([`resource/wic-graded-usage-similarity`](../../base/resources/wic-graded-usage-similarity.md)) — **but** its released file is unfetchable (Box 404 / mirror 503) and carries no explicit license, so it fails the fetchability + license preconditions and is **retired as the anchor**.
+
+The monotonicity clause still needs a **graded, released, licensed** usage/sense-similarity resource; the specific one is to be **identified + verified by a follow-on run** (a build/verify task, not a re-decision — Tom fixed the direction). Leading candidates, none yet in-repo:
+- **DWUG** (Diachronic Word Usage Graphs; Schlechtweg et al.) — graded human usage-similarity judgments in the Usim tradition (4-point scale), **CC BY**, distributed on Zenodo/GitHub. The strongest candidate on license + availability.
+- **CoSimLex** (SemEval-2020 Task 3) — graded human ratings of word similarity in context; released.
+
+**WiC** (binary same/different-sense, Pilehvar & Camacho-Collados 2019, CC BY-NC 4.0) remains the cross-check for prediction 5 and the discrete contrast, but is explicitly *insufficient* for the gradience claim (the seed's warning).
 
 Anchor caveats, stated plainly:
-- The resource is **`external-only`**: not yet mirrored or inspected in-repo. Its license, exact scale wording, and item counts were **not verified from a primary source** this run (see the resource page's *Known limits*). So this anchor is a *candidate*, and the conjecture's `contingent-on` carries `lexical-sense-gradience-anchor`.
-- Usim rates usage similarity but does **not** itself tag pairs as polysemy vs. homonymy; prediction 2 needs a polysemy/homonymy **stratification** added on top (e.g., from a dictionary or WordNet sense-relatedness). That stratification is work-to-be-done, not a property of the released ratings.
+- The chosen graded set must be **fetched + verified (license, exact scale, counts) and mirrored** before any result is promoted; until then the conjecture is `proposed`/anchor-pending-identification.
+- A graded usage-similarity set typically does **not** tag pairs as polysemy vs. homonymy; prediction 2 needs a polysemy/homonymy **stratification** added on top (e.g., from a dictionary or WordNet sense-relatedness) — work-to-be-done, frozen with the item set before any probe.
 - The over-/under-splitting arm of the seed (model sense inventory vs. a human inventory) is **not** carried by this conjecture; it would need WordNet + SemCor/OntoNotes and is left to a later, separate finding.
-
-→ An **anchor decision should be queued** (`wiki/decisions/open/lexical-sense-gradience-anchor`): adopt Usim (graded) as the ratified gradience anchor with WiC as the binary cross-check, vs. an alternative graded set. **This page does not open that decision** (per house rules, surfacing is the job, not auto-resolving); it is flagged for the orchestrator.
 
 ## Notes / caveats
 
 - **Instrument is an operationalization gate.** Two loci are possible: behavioral (prompted same/different-sense + confidence on the panel) or the small-model lane (representation-similarity / probe for a graded signal). They are different instruments and may disagree; pick and **freeze the instrument before seeing results** (charter §8) — do not tune it until the collapse becomes gradience or vice versa. Queue this gate before running.
 - **Context-similarity must be measured, not assumed.** Clause (c) needs an explicit context-overlap measure (lexical overlap, sentence-embedding similarity, or both) computed independently of the model's sense signal, so the control is real and not circular.
-- **Small N.** Usim is on the order of hundreds of items over ~11 lemmas (provisional, unverified count); per-lemma claims will carry wide uncertainty. Treat this as a gradience-signal probe, not a coverage benchmark.
-- **Sense relatedness is itself graded and contested.** "Human-rated usage similarity" is the operational stand-in for "sense relatedness"; they are close but not identical, and the conjecture should not silently equate them. Usim measures usage similarity; the lexicographic gradience claim is about sense relatedness — keep the two labelled distinctly in any result.
+- **Small N.** Graded usage-similarity sets are modest in size (e.g. Usim was 1530 pairs over 34 lemmas; DWUG/CoSimLex differ); per-lemma claims will carry wide uncertainty. Treat this as a gradience-signal probe, not a coverage benchmark.
+- **Sense relatedness is itself graded and contested.** "Human-rated usage similarity" is the operational stand-in for "sense relatedness"; they are close but not identical, and the conjecture should not silently equate them. The graded set measures usage similarity; the lexicographic gradience claim is about sense relatedness — keep the two labelled distinctly in any result.
 - **Relation to the constructional wedge.** This is the lexical counterpart of [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md) / [`open-question/distributional-vs-inferential-constructional`](../open-questions/distributional-vs-inferential-constructional.md): there the null is n-gram frequency; here it is context similarity. Both ask whether a `distributional` shadow explains apparent meaning-tracking. It does **not** touch the relational axis.

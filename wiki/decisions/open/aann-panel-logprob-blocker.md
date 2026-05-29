@@ -57,6 +57,30 @@ Replace the indicator with a behavioral, parse-from-text one the current panel c
 
 **Option A** (substitute logprob-capable, family-decorrelated panel models, keep the ratified surprisal indicator and T1 threshold), because it preserves the ratified *measurement* and only changes the *subjects* — the smaller of the two integrity costs — and because the surprisal contrast is the indicator the whole AANN line (conjecture predictions, the surprisal-validity claim, the held-out-adjective design) was built around. But this default is **not acted on**: no AANN probe runs and no panel is swapped until Tom rules, because changing the subjects is itself a value-laden choice the loop should not make alone.
 
+## Update 2026-05-29 — Tom ratified "swap in models", but a live-API re-check voided the premise (re-surfaced)
+
+Tom ratified **Option A (swap in logprob-capable models)** to keep the ratified surprisal indicator. Before running, the candidate models were tested against the **live OpenRouter API** — and the result contradicts the (2026-05-29) capability list this page was written from:
+
+| candidate | exposes logprobs (live)? |
+|---|---|
+| `deepseek/deepseek-v4-pro` | **No** (`logprobs=False`) |
+| `deepseek/deepseek-v4-flash` | **No** |
+| `x-ai/grok-4.3` | **No** (HTTP 400, rejects the argument) |
+| `qwen/qwen3.7-max` | **Yes** |
+| `openai/gpt-4o`, `openai/gpt-4o-mini` | **Yes** |
+| meta-llama / mistral / microsoft-phi / cohere / z-ai-glm / moonshot-kimi / amazon-nova / nvidia / perplexity | **No** or error |
+
+**Two consequences that change the decision:**
+1. **Only two decorrelated families expose logprobs** (Alibaba/Qwen + OpenAI/gpt-4o). A **3-family decorrelated logprob panel is not available** — the charter's family-decorrelation rationale can't be met for a logprob probe right now.
+2. **The *primary* ratified indicator (Option A of `aann-operationalization`: per-token surprisal of a *provided* AANN string vs. degenerate variants) is uncomputable on OpenRouter at all** — no model offers echo / prompt-logprobs (gpt-4o-mini echo returns no token_logprobs; gpt-3.5-turbo-instruct errors; the qwen completions endpoint 404s). Only the **Option-B fallback** (next-token logprob of a prompted judgment token) is feasible, and only on the 2 families above.
+
+So "swap in models" does **not** deliver what its ratification intended (the ratified surprisal indicator on a decorrelated panel). The honest narrowed choice, re-surfaced to Tom 2026-05-29:
+- **B1 — run AANN now with Option B (prompted `p("good")`/`p("bad")` logprob) on the 2-family logprob panel** (qwen3.7-max + gpt-4o + gpt-4o-mini; note 4o/4o-mini share a family). Fastest; gets a result; but degraded (fallback indicator, 2-family decorrelation) — and Option B is close to the Tier-0 acceptability [`claim/formal-competence-aann-ceiling`](../../findings/claims/formal-competence-aann-ceiling.md) warns is not meaning-tracking.
+- **B2 — small-model lane** (Tom's original Option B): self-host one small open-weight model for **true Option-A surprisal**. Now the *only* way to get the primary ratified indicator; single model, no cross-family signal.
+- **B3 — re-operationalize to a logprob-free forced-choice** on the full 3-family behavioral panel (best comparability with the other own-design probes; weaker, re-opens the operationalization gate).
+
+This is exactly the "don't let the loop pick the instrument after the panel is fixed" case, so it was not auto-resolved — awaiting Tom's corrected ruling.
+
 ## What downstream is contingent on this
 
 - [`design/aann-construction-v1`](../../../experiments/designs/aann-construction-v1.md) — unrunnable as written until this resolves; §2/§3.2 (indicator + panel) are the affected sections.
