@@ -1,0 +1,68 @@
+---
+id: aann-panel-logprob-blocker
+title: The ratified AANN indicator needs token logprobs the ratified panel does not expose — substitute the panel, the indicator, or the instrument?
+status: open
+opened: 2026-05-29
+opened-by: orchestrator
+contingent-artifacts:
+  - design/aann-construction-v1
+  - conjecture/aann-construction
+---
+
+# Decision: AANN probe is logprob-blocked on the ratified panel
+
+## The blocker (verified 2026-05-29)
+
+The AANN probe was the session's priority-1 target and is ratified end-to-end (anchor = Mahowald 2023, [`decisions/resolved/aann-stimulus-source`](../resolved/aann-stimulus-source.md); operationalization = continuation-likelihood logprob contrast, Option A, with a prompted-`p("good")` logprob fallback, Option B, [`decisions/resolved/aann-operationalization`](../resolved/aann-operationalization.md)). The Mahowald repo is MIT-licensed and was cloned and inspected — no licensing obstacle.
+
+**The obstacle is the API.** Both ratified indicators require token log-probabilities:
+- Option A scores per-token log-probability of the licit AANN string vs. four degenerate variants.
+- Option B reads the response-token logprob of "good" vs "bad".
+
+The ratified panel ([`config/models.md`](../../../config/models.md)) exposes **no token logprobs on OpenRouter**. Verified against the live model catalog on 2026-05-29:
+
+| Panel slot | Model | `logprobs` supported? |
+|---|---|---|
+| panel.A | `anthropic/claude-sonnet-4.6` | **No** |
+| panel.B | `openai/gpt-5.4-mini` | **No** |
+| panel.C | `google/gemini-3.5-flash` | **No** |
+
+(All Anthropic and Google models on OpenRouter return `logprobs=False`; among OpenAI models only legacy `gpt-4o`-class and a few image models expose logprobs, not the `gpt-5.x` chat line.) So neither ratified indicator can be computed on the ratified panel. The probe is **blocked, not failed** — nothing about the AANN conjecture is settled by this.
+
+This is exactly the contingency the operationalization gate and [`config/budget.md`](../../../config/budget.md) anticipated ("If a probe demands a model not currently in the panel … flag and let Tom approve the substitution"), and the contingency the AANN design's own §2 Option-B fallback was meant to cover — but the fallback *also* needs logprobs, so it does not rescue the case here.
+
+## Why this is a gate, not a thing the loop may quietly fix
+
+Three ways to unblock, each a value-laden change to a *ratified* measurement (charter §8 / CLAUDE.md rule 5). The autonomous loop must not pick one silently — choosing the instrument after the panel is fixed is precisely where a loop can bias toward whatever is convenient or whatever it expects to pass.
+
+### Option A — Substitute logprob-capable panel models (keep the ratified indicator)
+
+Swap one or more panel slots for decorrelated, logprob-exposing models so the continuation-likelihood contrast can run as ratified. Live, family-decorrelated, logprob-capable candidates on OpenRouter (2026-05-29): `deepseek/deepseek-v4-flash` and `deepseek/deepseek-v4-pro` (DeepSeek), `x-ai/grok-4.3` / `grok-4.20` (xAI), `qwen/qwen3.7-max` and several `qwen3.5/3.6` sizes (Alibaba), `mistralai/ministral-*` (Mistral), legacy `openai/gpt-4o`/`gpt-4o-mini` (OpenAI).
+- **Pro:** keeps the ratified indicator and threshold exactly; the surprisal contrast is the cleanest, most quantitative AANN measure and the one the design and [`claim/cxg-probing-surprisal-validity`](../../findings/claims/cxg-probing-surprisal-validity.md) are written around. Aligns with the charter's small-model/surprisal lane (§5).
+- **Con:** changes the *subjects*. The panel was chosen (config/models.md) for family decorrelation across Anthropic/OpenAI/Google; a logprob-driven swap trades that specific decorrelation for a different one. Cross-probe comparability with the comparative-correlative run (which used the original panel) is reduced. Needs a budget re-estimate (logprob scoring is still cheap, but the panel is different).
+
+### Option B — Self-host a small open-weight model for the surprisal lane
+
+Run the continuation-likelihood contrast on a small open-weight model locally (the charter's "small-model lane", §5: direct next-token probabilities). 
+- **Pro:** true surprisal, no API logprob dependence, reusable for every future surprisal probe; cleanest realization of the ratified indicator.
+- **Con:** it is then a *single* model, not the decorrelated panel — a different evidential profile (no cross-family convergence/divergence signal); needs compute and a model choice (itself a small decision); slower to stand up.
+
+### Option C — Re-operationalize AANN to a logprob-free instrument (keep the ratified panel)
+
+Replace the indicator with a behavioral, parse-from-text one the current panel can run — e.g. a forced-choice acceptability judgment ("Which sounds more natural, A or B?") or a prompted 1–7 rating parsed from the completion (no logprob), scored against the Mahowald degenerate-variant contrasts and MTurk gradient. (This is what the comparative-correlative probe did successfully for NLI/forced-choice.)
+- **Pro:** runs today on the ratified, decorrelated panel; comparable in style to the CC run that just succeeded.
+- **Con:** it is a **different ratified measurement** — `aann-operationalization` specifically ratified the logprob contrast over the prompted alternatives, and re-opening that is re-litigating a closed gate. A prompted rating also conflates "rates as good" with "is sensitive to" (the con the operationalization page already recorded for Option B), and forced-choice acceptability is closer to the Tier-0 form-acceptability that [`claim/formal-competence-aann-ceiling`](../../findings/claims/formal-competence-aann-ceiling.md) warns is *not* meaning-tracking.
+
+## Provisional default (in force until Tom ratifies — used only to keep non-AANN work moving; the AANN probe stays UNRUN)
+
+**Option A** (substitute logprob-capable, family-decorrelated panel models, keep the ratified surprisal indicator and T1 threshold), because it preserves the ratified *measurement* and only changes the *subjects* — the smaller of the two integrity costs — and because the surprisal contrast is the indicator the whole AANN line (conjecture predictions, the surprisal-validity claim, the held-out-adjective design) was built around. But this default is **not acted on**: no AANN probe runs and no panel is swapped until Tom rules, because changing the subjects is itself a value-laden choice the loop should not make alone.
+
+## What downstream is contingent on this
+
+- [`design/aann-construction-v1`](../../../experiments/designs/aann-construction-v1.md) — unrunnable as written until this resolves; §2/§3.2 (indicator + panel) are the affected sections.
+- [`conjecture/aann-construction`](../../findings/conjectures/aann-construction.md) — stays `designed`, untested.
+- Any future AANN `result`/`claim`.
+
+## Notes for the resolver
+
+Tom: a one-line ratification is enough — "swap to [name 1–3 logprob-capable models]", "stand up the small-model lane (Option B), use [model]", or "re-operationalize to forced-choice (Option C)". If Option A, naming the substitute models (or just "pick three decorrelated logprob-capable ones") lets the next run update [`config/models.md`](../../../config/models.md) and run the probe. Reminder: this only fixes *how AANN is measured*; it does not pre-judge whether AANN comes out positive or null. The comparative-correlative probe already ran on the original panel without logprobs (forced-choice/NLI parse), so the panel is fine for *that* instrument — AANN is special only because its ratified indicator is logprob-based.

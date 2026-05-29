@@ -19,11 +19,15 @@ links:
     target: theory/constructional-meaning-in-llms
   - rel: supports
     target: claim/formal-competence-aann-ceiling
+  - rel: refines
+    target: result/cxnli-distinction-divergence-v1
 ---
 
 # Claim: LLMs track constructional form–meaning pairings up to a point but show a large generalization gap on syntactically identical, semantically divergent forms
 
 ## Statement
+
+> **Now corroborated by a project-run probe (2026-05-29) — [`result/cxnli-distinction-divergence-v1`](../results/cxnli-distinction-divergence-v1.md).** The project ran its own panel as subjects on Scivetti's base vs. distinction NLI items: the divergent-form gap **reproduces** (mean ≈34 pp base→distinction drop; 30/45/28 pp across the three panel models), convergent in direction, with the conative hardest (60–80 pp). The claim is no longer resting on the external aggregate alone — it now has the project's own (small-N, single-run) evidence pointing the same way. Magnitude is *not* a like-for-like reproduction of Scivetti's ">40%" (different construction subset, zero-shot, base subsample); the order of magnitude and the direction match.
 
 Current state-of-the-art LLMs track phrasal-constructional form–meaning pairings **up to a point**, but exhibit a large generalization gap — a drop of **over 40%** (reported for GPT-o1) — when the *same* syntactic form carries a *divergent* constructional meaning, measured against a native-speaker baseline (≈0.90 on the base inference task, ≈0.83 on the divergent-form task). This is evidence that the construction-level competence current LLMs display is, in those models, partly **form-bound** rather than fully meaning-general: it falls short of the human ability to deploy the appropriate constructional semantics for syntactically identical but semantically divergent instances.
 

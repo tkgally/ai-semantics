@@ -6,7 +6,7 @@ meaning-senses:
   - constructional
   - inferential
   - functional-vs-formal
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-05-29
 updated: 2026-05-29
@@ -27,11 +27,13 @@ links:
 
 # Conjecture: current LLMs deploy the comparative correlative's proportional meaning
 
+> **Tested 2026-05-29 — see [`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md).** The probe **supports the core "use" claim strongly** but **does not support the "narrows-but-does-not-close" qualifier**: the panel reached *ceiling* on covariation inference (including inverse-direction and absurd-pair items) and *matched* the Scivetti human baseline (93–100% vs ≈0.90), i.e. the conjecture's explicitly-flagged "stronger (closes)" outcome rather than its central bet. The dominant caveat is that ceiling on an easy instrument is weak evidence for the strong reading (a harder v2 is queued). The statement's "but does not fully close it" clause is **not supported by this instrument** and is flagged below; it is softened pending Tom's review and a harder v2, not yet retired.
+
 ## Statement
 
 The English **comparative correlative** (CC) — the two-clause `the X-er …, the Y-er …` template, *the more you practice, the better you get* — is a Construction Grammar paradigm case: its form is distinctive while its meaning is **non-compositional** and supplied by the construction itself, namely a **proportional / covariational dependency** between two scales (as the first scale increases, the second changes in a fixed direction). No lexical item in the clause carries that "as X, so Y" semantics; the construction does.
 
-The conjecture: current instruction-tuned **decoder** LLMs (the Scivetti et al. 2025 panel class — GPT-4o, GPT-o1, Llama-3) **use** the CC's proportional-covariation meaning — they draw the inference that a change along the first scale entails a corresponding change along the second — at a rate that separates CC instances from minimally different non-CC controls, **narrowing** the form-recognised-but-meaning-not-used dissociation that [`source/weissweiler-2022-comparative-correlative`](../../base/sources/weissweiler-2022-comparative-correlative.md) documented for encoder PLMs (BERT/RoBERTa/DeBERTa) — *but does not fully close it*, falling short of the human baseline.
+The conjecture: current instruction-tuned **decoder** LLMs (the Scivetti et al. 2025 panel class — GPT-4o, GPT-o1, Llama-3) **use** the CC's proportional-covariation meaning — they draw the inference that a change along the first scale entails a corresponding change along the second — at a rate that separates CC instances from minimally different non-CC controls, **narrowing** the form-recognised-but-meaning-not-used dissociation that [`source/weissweiler-2022-comparative-correlative`](../../base/sources/weissweiler-2022-comparative-correlative.md) documented for encoder PLMs (BERT/RoBERTa/DeBERTa) — *but does not fully close it*, falling short of the human baseline. **[Tested 2026-05-29 — the "use" core is supported; the "but does not fully close it / falls short of the human baseline" clause is NOT supported by the v1 instrument (the panel reached ceiling and matched the human baseline). The clause is flagged, not yet retired, pending a harder v2 and Tom's review — see [`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md).]**
 
 The sharp empirical question this conjecture stakes out: Weissweiler et al. 2022 found encoder PLMs **recognise the structure of the CC but fail to use its meaning** (above-chance syntactic probe; no model above chance on the semantic task). Does that dissociation persist, narrow, or close in current decoder LLMs? The conjecture's directional bet — narrows-but-not-closes — is consistent with the [`claim/constructional-divergent-form-generalization-gap`](../claims/constructional-divergent-form-generalization-gap.md): newer models process constructional semantics "up to a point" but still lag humans on generalization.
 
