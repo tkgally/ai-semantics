@@ -1,7 +1,9 @@
 ---
 id: aann-operationalization
 title: What counts as evidence that a panel model "tracks" the AANN construction?
-status: open
+status: resolved
+resolved: 2026-05-29
+resolution: "Default — indicator A (continuation-likelihood contrast) with Option B (prompted acceptability) fallback where logprobs are unavailable; threshold T1; held-out adjectives locked before the run. Locks the measurement before running (charter §8). Ratified by Tom."
 opened: 2026-05-28
 opened-by: lead-agent
 contingent-artifacts:

@@ -7,8 +7,7 @@ meaning-senses:
   - inferential
   - distributional
 status: proposed
-contingent-on:
-  - caused-motion-anchor
+contingent-on: []
 created: 2026-05-28
 updated: 2026-05-28
 links:
@@ -45,15 +44,17 @@ This is distinct from the `way`-construction conjecture ([`conjecture/way-constr
 
 ## What would confirm / falsify
 
-- **Confirm:** >=70% causation-of-motion "yes" rate for caused-motion items with non-motion verbs, with a >=30pp gap vs. matched non-constructional controls, holding for **held-out / low-frequency verbs** as well as canonical ones, in >=2 of 3 panel models, against a human-rated caused-motion inventory (anchor pending; see below).
+- **Confirm:** >=70% causation-of-motion "yes" rate for caused-motion items with non-motion verbs, with a >=30pp gap vs. matched non-constructional controls, holding for **held-out / low-frequency verbs** as well as canonical ones, in >=2 of 3 panel models, against the ratified human anchor (the Scivetti CxNLI dataset; see below).
 - **Weak:** the entailment rate tracks the verb's lexical motion/transitivity relatedness rather than the construction (model reads the verb's frame, not the construction) — or the effect holds only for canonical high-frequency items and collapses on held-out verbs.
 - **Falsify:** flat causation-of-motion rate across construction and control; or a rate that tracks the unigram/bigram frequency of the `V NP PP` skeleton alone, with no residual once frequency is matched. A clean null here is a positive result for the `distributional` position and must be written as such.
 
-## Human anchor (pending)
+## Human anchor
 
-No in-repo resource currently covers the caused-motion construction with item-level human acceptability or entailment ratings. The canonical *inventory* is Goldberg (1995, ch. 7) — descriptive, not rated. A usable empirical anchor would be either (a) an acceptability-rated caused-motion stimulus set, or (b) the caused-motion subset of a broader argument-structure-construction norming study. Until one is in-repo and inspected, this conjecture carries `anchor: pending`.
+Resolved 2026-05-29: the **Scivetti CxNLI dataset** ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)) is the ratified human anchor for the caused-motion construction (its caused-motion subset). The canonical descriptive *inventory* remains Goldberg (1995, ch. 7).
 
-→ Open decision queued: [`decisions/open/caused-motion-anchor`](../../decisions/open/caused-motion-anchor.md) — which human-anchored caused-motion stimulus set (if any exists and is public) should ground the probe, and what to do if none does (fall back to a verb-frame resource such as PropBank/VerbNet for the non-motion/intransitivity contrast, and queue a wanted-resource request to Tom).
+Important caveat on what this anchor delivers: the release repo was inspected (de-anonymized at github.com/melissatorgbi/beyond-memorization) and provides a **single gold-standard label per item plus an aggregate ~0.90/0.83 human baseline — an "answer key," NOT a per-item multi-rater gradient.** So it anchors an answer-key comparison, not a graded human-judgment distribution; the confirm criterion is read against that answer key, not against a rater-by-rater acceptability gradient.
+
+→ Anchor decision (ratified 2026-05-29): [`decisions/resolved/caused-motion-anchor`](../../decisions/resolved/caused-motion-anchor.md) — the Scivetti CxNLI caused-motion subset grounds the probe.
 
 ## Notes / caveats
 

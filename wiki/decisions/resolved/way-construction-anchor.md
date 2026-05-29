@@ -1,7 +1,9 @@
 ---
 id: way-construction-anchor
 title: Which human-anchored stimulus set should ground the way-construction inference probe?
-status: open
+status: resolved
+resolved: 2026-05-29
+resolution: "Adopt the Scivetti CxNLI dataset as the human anchor (Scivetti bundle, with caused-motion / conative / comparative-correlative); this realises the gestured Option C. De-anonymized repo inspected 2026-05-29: per-item CxN-Type labels + a single gold relation per item confirmed; aggregate human baseline only. Anchor only — the conjecture stays untested. Ratified by Tom."
 opened: 2026-05-28
 opened-by: lead-agent
 contingent-artifacts:

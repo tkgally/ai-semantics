@@ -7,8 +7,7 @@ meaning-senses:
   - inferential
   - distributional
 status: proposed
-contingent-on:
-  - conative-anchor
+contingent-on: []
 created: 2026-05-28
 updated: 2026-05-28
 links:
@@ -47,15 +46,17 @@ This is distinct from the other argument-structure conjectures in the wedge. [`c
 
 ## What would confirm / falsify
 
-- **Confirm:** completed-contact "yes" rate for conative `V at NP` items is >=30pp **below** the matched transitive `V NP` items, holding with the verb constant and replicating across the Levin conative-class verbs (not a single verb), in >=2 of 3 panel models, against a human-anchored conative-class inventory (anchor pending; see below).
+- **Confirm:** completed-contact "yes" rate for conative `V at NP` items is >=30pp **below** the matched transitive `V NP` items, holding with the verb constant and replicating across the Levin conative-class verbs (not a single verb), in >=2 of 3 panel models, against the ratified human anchor (the Scivetti CxNLI dataset; see below).
 - **Weak:** a gap exists but tracks the *at*-oblique's lexical association with non-completion (the model is reading *at* as a generic atelic marker) rather than the verb-specific conative alternation — or the effect holds only for canonical high-frequency items (*kick at the ball*) and collapses on held-out verbs/objects.
 - **Falsify:** flat completed-contact rate across conative and transitive frames (model treats *at* as a stylistic variant); or a rate that tracks the unigram/bigram frequency of the surface string alone, with no residual once frequency is matched. A clean null here is a positive result for the `distributional` position and must be written as such (charter §8).
 
-## Human anchor (pending)
+## Human anchor
 
-No in-repo resource currently covers the conative alternation with item-level human acceptability or entailment ratings. The canonical *inventory* is Levin (1993, §1.3 / the "Conative Alternation" class) — a descriptive verb-class list, **not** rated stimuli; it certifies *which verbs* enter the conative, which is the load-bearing premise for Prediction 2, but gives no gradient acceptability or entailment norms. Until a usable empirical anchor is in-repo and inspected, this conjecture carries `anchor: pending`.
+Resolved 2026-05-29: the **Scivetti CxNLI dataset** ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)) is the ratified human anchor for the conative construction (its conative subset). The canonical descriptive verb-class *inventory* remains Levin (1993, §1.3 / the "Conative Alternation" class), which certifies *which verbs* enter the conative — the load-bearing premise for Prediction 2.
 
-→ Open decision queued: [`decisions/open/conative-anchor`](../../decisions/open/conative-anchor.md) — which human-anchored resource grounds the probe (a rated conative/telicity-completion stimulus set if one is public; else VerbNet/Levin verb-class membership as a partial anchor for the verb-class premise; else defer + queue a wanted-resource request).
+Important caveat on what this anchor delivers: the release repo was inspected (de-anonymized at github.com/melissatorgbi/beyond-memorization) and provides a **single gold-standard label per item plus an aggregate ~0.90/0.83 human baseline — an "answer key," NOT a per-item multi-rater gradient.** So it anchors an answer-key comparison, not a graded human-judgment distribution.
+
+→ Anchor decision (ratified 2026-05-29): [`decisions/resolved/conative-anchor`](../../decisions/resolved/conative-anchor.md) — the Scivetti CxNLI conative subset grounds the probe.
 
 ## Notes / caveats
 

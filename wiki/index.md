@@ -23,18 +23,22 @@ This page is the **project entry point**: start here to read the project's statu
 ### Open decisions — blocking, pending Tom
 These gate promotion of contingent findings; nothing depending on them is settled until ratified. To resolve one, add a `resolution:` block or move the file to `wiki/decisions/resolved/` (see [`PROTOCOL.md`](../PROTOCOL.md) §2).
 
-- [`decisions/open/aann-stimulus-source`](decisions/open/aann-stimulus-source.md) — ratify Mahowald 2023 as the primary AANN human anchor (default), or switch.
-- [`decisions/open/aann-operationalization`](decisions/open/aann-operationalization.md) — ratify the continuation-likelihood contrast + T1 threshold (default), or switch.
-- [`decisions/open/way-construction-anchor`](decisions/open/way-construction-anchor.md) — ratify Option A (Goldberg 1995 examples as seed; anchor pending), or supply rated data. **New candidate Option D surfaced: Scivetti 2025 CxNLI (realizes the gestured Option C).**
-- [`decisions/open/cxg-probing-anchor`](decisions/open/cxg-probing-anchor.md) — scope the CxG-probing-validity claim to AANN (default), acquire a CxG-native broad anchor, or split the claim.
-- [`decisions/open/caused-motion-anchor`](decisions/open/caused-motion-anchor.md) — choose the human anchor for the caused-motion conjecture (or fall back to a verb-frame resource + queue a want). **New candidate Option D surfaced: Scivetti 2025 CxNLI.**
-- [`decisions/open/conative-anchor`](decisions/open/conative-anchor.md) — choose the human anchor for the conative conjecture (default: Levin 1993 / VerbNet conative-class as partial anchor). **New candidate Option D surfaced: Scivetti 2025 CxNLI.**
-- [`decisions/open/relational-anchor-shortlist`](decisions/open/relational-anchor-shortlist.md) — choose the human dyadic-interaction anchor for the relational-meaning pilot (default: Clark & Wilkes-Gibbs 1986, with Pickering & Garrod 2004 as theoretical backdrop). Opened 2026-05-29.
-- [`decisions/open/comparative-correlative-anchor`](decisions/open/comparative-correlative-anchor.md) — anchor for the comparative-correlative conjecture (default: Scivetti CxNLI CC subset, pending item-level inspection; fall back to Weissweiler-2022 seed with human arm pending). Opened 2026-05-29.
-- [`decisions/open/constructional-divergence-operationalization`](decisions/open/constructional-divergence-operationalization.md) — instrument (NLI vs forced-choice vs both), thresholds, and frequency-matching for the upper-ladder divergence probes (default: both instruments, 30pp/70%/15pp thresholds, frozen at item-commit). Governs the divergence-probe family; first client is the CC design. Opened 2026-05-29.
+Eight decisions were ratified 2026-05-29 (see *Resolved decisions* below). One remains open:
+
+- [`decisions/open/relational-anchor-shortlist`](decisions/open/relational-anchor-shortlist.md) — choose the human dyadic-interaction anchor for the relational-meaning pilot (default: Clark & Wilkes-Gibbs 1986, with Pickering & Garrod 2004 as theoretical backdrop). Opened 2026-05-29. *(The broader two-AI relational experiment — "Decision 9" in Tom's walkthrough — has not yet been taken.)*
 
 ### Resolved decisions
-- (none yet) — ratified decisions will be listed here, each linking its file under `wiki/decisions/resolved/`.
+Ratified by Tom 2026-05-29. Ratifying an anchor/operationalization fixes the *yardstick*, not the *result* — the conjectures/designs below remain untested/unrun.
+- [`decisions/resolved/aann-stimulus-source`](decisions/resolved/aann-stimulus-source.md) — **Mahowald 2023** is the AANN human anchor.
+- [`decisions/resolved/aann-operationalization`](decisions/resolved/aann-operationalization.md) — continuation-likelihood contrast + prompted-acceptability fallback + **T1**; held-out adjectives locked pre-run.
+- [`decisions/resolved/caused-motion-anchor`](decisions/resolved/caused-motion-anchor.md) — anchored to the **Scivetti CxNLI** dataset.
+- [`decisions/resolved/conative-anchor`](decisions/resolved/conative-anchor.md) — anchored to the **Scivetti CxNLI** dataset.
+- [`decisions/resolved/way-construction-anchor`](decisions/resolved/way-construction-anchor.md) — anchored to the **Scivetti CxNLI** dataset.
+- [`decisions/resolved/comparative-correlative-anchor`](decisions/resolved/comparative-correlative-anchor.md) — anchored to the **Scivetti CxNLI** CC subset.
+- [`decisions/resolved/cxg-probing-anchor`](decisions/resolved/cxg-probing-anchor.md) — **Option A**: claim stays AANN-scoped; cross-construction generality stays provisional.
+- [`decisions/resolved/constructional-divergence-operationalization`](decisions/resolved/constructional-divergence-operationalization.md) — default: both instruments + 30/70/15-pp thresholds, frozen pre-run.
+
+  *The four Scivetti-anchored decisions were ratified together as one bundle after the de-anonymized dataset repo ([github.com/melissatorgbi/beyond-memorization](https://github.com/melissatorgbi/beyond-memorization)) was inspected and confirmed to carry per-item construction labels + a single gold answer per item.*
 
 ### Fetch backlog & governance
 - [`base/wanted.md`](base/wanted.md) — prioritized sources to fetch (Tom has library access).
@@ -72,7 +76,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 
 - [`base/resources/index.md`](base/resources/index.md) — catalog of human-anchored empirical resources.
 - [`base/resources/mahowald-2023-aann-stimuli.md`](base/resources/mahowald-2023-aann-stimuli.md) — Mahowald 2023 EACL AANN stimulus suite + MTurk acceptability ratings (status: external-only); anchor for [`conjecture/aann-construction`](findings/conjectures/aann-construction.md).
-- [`base/resources/scivetti-2025-cxnli-dataset.md`](base/resources/scivetti-2025-cxnli-dataset.md) — Scivetti et al. 2025 CxNLI / CxNLI-Distinction constructional NLI dataset (435 + 99 triples over 8 / 5 constructions incl. caused-motion, conative, way-manner; native-speaker baseline ≈0.90 / ≈0.83). Status: external-only (repo not reachable this run). **Candidate** human inference-rate anchor for `caused-motion-anchor`, `conative-anchor`, `way-construction-anchor` — surfaced, not adopted. (created 2026-05-29)
+- [`base/resources/scivetti-2025-cxnli-dataset.md`](base/resources/scivetti-2025-cxnli-dataset.md) — Scivetti et al. 2025 CxNLI / CxNLI-Distinction constructional NLI dataset (435 + 99 triples over 8 / 5 constructions; native-speaker baseline ≈0.90 / ≈0.83). Status: partial (de-anonymized repo inspected 2026-05-29: per-item construction labels + single gold answer per item). **Ratified anchor (2026-05-29)** for the caused-motion, conative, way, and comparative-correlative conjectures — answer-key + aggregate baseline. (created 2026-05-29)
 
 ### Base — wants
 
@@ -92,7 +96,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 
 - [`findings/claims/formal-competence-aann-ceiling.md`](findings/claims/formal-competence-aann-ceiling.md) — status: proposed (2026-05-28); AANN acceptability ceiling is evidence of formal, not functional, linguistic competence. Grounded by Mahowald 2024 formal/functional distinction; anchored to [`resource/mahowald-2023-aann-stimuli`](base/resources/mahowald-2023-aann-stimuli.md).
 - [`findings/claims/constructional-divergent-form-generalization-gap.md`](findings/claims/constructional-divergent-form-generalization-gap.md) — status: proposed (2026-05-29); LLMs track constructional form–meaning pairings "up to a point" but show a >40% generalization gap (GPT-o1) on syntactically-identical / semantically-divergent forms vs. a native-speaker baseline (≈0.90/≈0.83). The project's first claim with in-repo human-comparison empirical bearing. Anchored to [`resource/scivetti-2025-cxnli-dataset`](base/resources/scivetti-2025-cxnli-dataset.md); sits at the theory ladder's Tier 3→4 boundary. `contingent-on: []`.
-- [`findings/claims/cxg-probing-surprisal-validity.md`](findings/claims/cxg-probing-surprisal-validity.md) — status: proposed (2026-05-29); surprisal contrast on form–meaning minimal pairs is a valid (but bounded) operationalization of constructional-meaning *sensitivity*. Methodological counterpart to the AANN-ceiling claim. `anchor: pending`, contingent on `cxg-probing-anchor`.
+- [`findings/claims/cxg-probing-surprisal-validity.md`](findings/claims/cxg-probing-surprisal-validity.md) — status: proposed (2026-05-29); surprisal contrast on form–meaning minimal pairs is a valid (but bounded) operationalization of constructional-meaning *sensitivity*. Methodological counterpart to the AANN-ceiling claim. Anchored to `resource/mahowald-2023-aann-stimuli` (AANN-scoped); cross-construction generality stays provisional (`cxg-probing-anchor` resolved 2026-05-29, Option A).
 - [`findings/theory/constructional-meaning-in-llms.md`](findings/theory/constructional-meaning-in-llms.md) — status: draft (2026-05-29); the project's first theory page. A five-tier evidence ladder (form-acceptability < surprisal-contrast < gradient semantic tracking < generalization < inference-licensing) placing each existing claim/conjecture; brackets the grounding axis; flags the relational axis as future work.
 
 ### Experiments — designs

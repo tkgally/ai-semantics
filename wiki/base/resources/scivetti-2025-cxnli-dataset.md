@@ -2,8 +2,9 @@
 type: resource
 id: scivetti-2025-cxnli-dataset
 title: Scivetti et al. 2025 CxNLI / CxNLI-Distinction constructional NLI dataset
-status: external-only
-url: https://anonymous.4open.science/r/beyond-memorization-B82B
+status: partial
+url: https://github.com/melissatorgbi/beyond-memorization
+url-note: "the paper's anonymized link https://anonymous.4open.science/r/beyond-memorization-B82B now redirects to the de-anonymized GitHub repo above (confirmed 2026-05-29)"
 paper: https://arxiv.org/abs/2501.04661 (ACL Anthology https://aclanthology.org/2025.ijcnlp-long.65/)
 venue: IJCNLP-AACL 2025, pp. 1184–1201
 meaning-senses:
@@ -12,14 +13,23 @@ meaning-senses:
   - human-comparison
 created: 2026-05-29
 updated: 2026-05-29
+resolved-anchor-for: "caused-motion, conative, way-construction, comparative-correlative (ratified by Tom 2026-05-29)"
 links:
   - rel: depends-on
     target: source/scivetti-2025-beyond-memorization
+  - rel: anchors
+    target: conjecture/caused-motion-construction
+  - rel: anchors
+    target: conjecture/conative-construction
+  - rel: anchors
+    target: conjecture/way-construction
+  - rel: anchors
+    target: conjecture/comparative-correlative-construction
 ---
 
 # Scivetti et al. 2025 — CxNLI and CxNLI-Distinction constructional NLI dataset
 
-This page catalogs the **public dataset** released with Scivetti et al. 2025. The argument summary of the paper lives on the source page [`source/scivetti-2025-beyond-memorization`](../sources/scivetti-2025-beyond-memorization.md); this page is the *dataset catalog* — a distinct role. It documents the data only at the level the paper itself documents, because the release repository is **not reachable from this environment** this run (see Known limits), so item-level inspection is pending.
+This page catalogs the **public dataset** released with Scivetti et al. 2025. The argument summary of the paper lives on the source page [`source/scivetti-2025-beyond-memorization`](../sources/scivetti-2025-beyond-memorization.md); this page is the *dataset catalog* — a distinct role. **Ratified 2026-05-29 (Tom) as the human anchor for the four CxG conjectures** — caused-motion, conative, way-construction, comparative-correlative. The release repository (anonymized in the paper) is now de-anonymized at [github.com/melissatorgbi/beyond-memorization](https://github.com/melissatorgbi/beyond-memorization) and was **inspected on 2026-05-29**: per-item construction labels and a single gold-standard inference label per item are confirmed (see *Dataset structure* and *Known limits*). It is not mirrored in-repo (no license file observed; per project rules we keep a structural summary + short quotes, not wholesale data).
 
 ## What it is
 
@@ -92,15 +102,14 @@ These three examples were read via WebFetch from the v2 HTML rendering of Table 
 
 ## What it can ground
 
-This is the key section. The dataset is a **candidate human inference-rate anchor** (the project's Tier-4 "inference-licensing" level of evidence) for exactly three of the project's open conjectures, because it contains human-annotated NLI triples for precisely those constructions *plus* a native-speaker accuracy baseline:
+This is the key section. The dataset is the **ratified human inference anchor** (the project's Tier-4 "inference-licensing" level of evidence) for **four** of the project's conjectures, because it contains human-annotated NLI triples for precisely those constructions *plus* a native-speaker accuracy baseline:
 
 - **caused-motion** — `Caused-Motion` is one of the 8 constructions, with human-annotated triples and the 0.90 baseline.
 - **conative** — `Conative` is one of the 8.
 - **way-manner / way-construction** — `Way-Manner` is one of the 8.
+- **comparative-correlative** — `Comparative-Correlative` is one of the 8.
 
-Concretely, it **could** serve as the human anchor that the three open decisions `caused-motion-anchor`, `conative-anchor`, and `way-construction-anchor` are seeking — an alternative to (or supplement to) their current provisional VerbNet/Levin/Goldberg default. The bearing is real: human-licensed inference labels over those exact constructions, with an aggregate accuracy baseline against which model NLI accuracy can be compared on the *same items*.
-
-**This is a CANDIDATE only.** It is *not* asserted to be the anchor. Those three decisions are open with a different provisional default, so this page intentionally adds **no `anchors:` links** — doing so would pre-resolve an open decision. Adoption is pending (a) Tom's ratification of the decision and (b) item-level inspection of the currently unreachable data repository (see Pointer for next visit). The orchestrator will surface this candidate in the relevant decision pages.
+**Ratified (2026-05-29, Tom).** The four anchor decisions (`caused-motion-anchor`, `conative-anchor`, `way-construction-anchor`, `comparative-correlative-anchor`) were resolved together to adopt this dataset, and the de-anonymized repo was inspected to confirm viability. This page therefore now carries `anchors:` links to those four conjectures. The bearing is a per-item **answer key**: human-licensed inference labels over those exact constructions, with an aggregate accuracy baseline (≈0.90 / ≈0.83) against which model NLI accuracy can be compared on the *same items*. **Caveat (confirmed by inspection):** the release gives a *single* adjudicated gold label per item, not a per-item multi-rater distribution — so it anchors an answer-key comparison, not a graded human-judgment gradient. The conjectures remain untested; the anchor fixes the yardstick, not the result.
 
 More generally the dataset can ground:
 
@@ -111,22 +120,22 @@ More generally the dataset can ground:
 
 - **AANN.** The Article + Adjective + Numeral + Noun construction is **not** among the 8 constructions. Do not cite this dataset for AANN.
 - **Model-internal / representational claims.** The evaluation is behavioral NLI accuracy only; it says nothing about internal representations, so it cannot ground `model-internal` claims.
-- **Exact per-item human ratings.** Only aggregate native-speaker accuracy / IAA (0.90, 0.83) are verified. Whether the public repo releases *per-item* human labels (and in what schema) has **not** been inspected this run; per-item human-rating claims cannot be grounded until the repo is inspected.
+- **A per-item human-rating *gradient*.** Inspection (2026-05-29) confirmed the repo releases a *single* gold-standard label per item, not per-annotator judgments. So the dataset grounds an answer-key comparison (model label vs. one human gold label) plus an aggregate accuracy baseline — but **not** a graded distribution of how much humans themselves agreed or disagreed per item.
 
 ## Known limits
 
 - **Aggregate baseline, not gradient ratings.** The human bearing is an aggregate accuracy/agreement figure, not per-item graded human inference ratings. It supports an accuracy-comparison anchor, not a graded-inference-strength anchor, on the evidence verified so far.
 - **Small N per construction.** ≈435 triples / 8 constructions in Exp 1 and ≈99 triples / 5 constructions in Exp 2 — so only on the order of tens of items per construction. Any per-construction claim carries wide uncertainty.
-- **Repo not inspectable from this environment.** `https://anonymous.4open.science/r/beyond-memorization-B82B` is not reachable here (proxied away / 403), so item-level file structure, file names, column layouts, and per-construction counts are **not** verified. This page deliberately catalogs only what the paper documents; `status: external-only`.
+- **Inspected, not mirrored (`status: partial`).** The repo is reachable at [github.com/melissatorgbi/beyond-memorization](https://github.com/melissatorgbi/beyond-memorization). Inspection of `data/CxNLI/CxNLI_3_examples_test.tsv` (2026-05-29) confirmed a `CxN Type` column naming all 8 constructions and a single **gold-standard relation** per item (`0` entailment / `1` neutral / `2` contradiction), with items laid out across three rows (premise / hypothesis / relation) per item number. The files are **not** mirrored in-repo (no license file observed; project rule: summaries + short quotes, not wholesale data). Per-construction item counts and the `CxNLI_distinction` split were not fully enumerated (one expected path 404'd), so the catalog stays `partial`.
 - **Exp-2 0.83 figure is phrased as IAA, not unambiguously as accuracy.** See the caveat in *Dataset structure* above.
 - **Version / title drift.** arXiv v1 (8 Jan 2025) was titled "Assessing Language Comprehension in Large Language Models Using Construction Grammar"; v2 (13 Aug 2025) and the published ACL version are "Beyond Memorization: … Using Phrasal Constructions." Quotes on this page are from the **arXiv v2 HTML** (`https://arxiv.org/html/2501.04661v2`) and the **published ACL Anthology** abstract, both fetched 2026-05-29. The source page records the same drift.
 
 ## Pointer for next visit
 
-A future run that can reach the repository should:
+The anchor is now ratified; the next step is to actually run a probe. A future run should:
 
-1. Mirror `https://anonymous.4open.science/r/beyond-memorization-B82B` into `experiments/data/` (NOT the wiki).
-2. Inspect the item-level structure: file names, formats, columns; confirm the per-construction triple counts; and determine **whether per-item human labels (not just aggregate accuracy) are released**.
-3. Re-confirm the Table 9 example items and the Table 1 human-performance values character-for-character against the PDF/repo.
-4. Upgrade `status:` from `external-only` to `catalogued` (or `partial`) accordingly.
-5. Only after Tom ratifies the relevant decision(s), add the appropriate `anchors:` link(s) to the [`conjecture/caused-motion-construction`](../../findings/conjectures/caused-motion-construction.md), [`conjecture/conative-construction`](../../findings/conjectures/conative-construction.md), and/or [`conjecture/way-construction`](../../findings/conjectures/way-construction.md) pages (note the full conjecture ids — the first two are `…-construction`).
+1. Check the repo's license, then mirror `github.com/melissatorgbi/beyond-memorization` into `experiments/data/scivetti/` (NOT the wiki). If no license is granted, work against it in place rather than copying it in.
+2. Enumerate the per-construction triple counts and the `CxNLI_distinction` split (one path 404'd this run); confirm column layout beyond the main test file.
+3. Re-confirm the Table 9 example items character-for-character against the repo data.
+4. Upgrade `status:` from `partial` to `catalogued` once mirrored / fully enumerated.
+5. The `anchors:` links to the four conjectures are in place (ratified 2026-05-29). When a probe runs, compare panel-model NLI labels against the per-item gold labels and report against the aggregate ≈0.90 / ≈0.83 human baseline — not as a per-item human gradient.

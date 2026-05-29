@@ -27,7 +27,7 @@ links:
 
 Current state-of-the-art LLMs track phrasal-constructional form–meaning pairings **up to a point**, but exhibit a large generalization gap — a drop of **over 40%** (reported for GPT-o1) — when the *same* syntactic form carries a *divergent* constructional meaning, measured against a native-speaker baseline (≈0.90 on the base inference task, ≈0.83 on the divergent-form task). This is evidence that the construction-level competence current LLMs display is, in those models, partly **form-bound** rather than fully meaning-general: it falls short of the human ability to deploy the appropriate constructional semantics for syntactically identical but semantically divergent instances.
 
-The claim is about the *aggregate, cross-construction* published result (the >40% headline drop) and the *aggregate* native-speaker baseline, not about any single construction. Per-construction breakdowns (caused-motion, conative, way-manner) are a separate, finer claim gated by the three open anchor decisions ([`decisions/open/caused-motion-anchor`](../../decisions/open/caused-motion-anchor.md), [`decisions/open/conative-anchor`](../../decisions/open/conative-anchor.md), [`decisions/open/way-construction-anchor`](../../decisions/open/way-construction-anchor.md)); this claim deliberately does not rest on them and is therefore `contingent-on: []`.
+The claim is about the *aggregate, cross-construction* published result (the >40% headline drop) and the *aggregate* native-speaker baseline, not about any single construction. Per-construction breakdowns (caused-motion, conative, way-manner) are a separate, finer claim gated by the three open anchor decisions ([`decisions/resolved/caused-motion-anchor`](../../decisions/resolved/caused-motion-anchor.md), [`decisions/resolved/conative-anchor`](../../decisions/resolved/conative-anchor.md), [`decisions/resolved/way-construction-anchor`](../../decisions/resolved/way-construction-anchor.md)); this claim deliberately does not rest on them and is therefore `contingent-on: []`.
 
 ## Grounds
 
@@ -80,9 +80,9 @@ The human anchor is [`resource/scivetti-2025-cxnli-dataset`](../../base/resource
 
 ## Limits
 
-- **Aggregate result.** The >40% drop and the ≈0.90 / ≈0.83 baselines are aggregate across constructions; the claim cannot be sharpened to any construction without the per-construction data and (for the three relevant constructions) ratification of the open anchor decisions.
+- **Aggregate result.** The >40% drop and the ≈0.90 / ≈0.83 baselines are aggregate across constructions; the claim cannot be sharpened to any single construction without the per-construction counts (the anchor decisions for caused-motion / conative / way / comparative-correlative are now ratified, 2026-05-29, but the per-construction NLI items must still be enumerated from the dataset).
 - **Small N per construction.** ≈435 triples / 8 constructions (Exp 1) and ≈99 triples / 5 constructions (Exp 2) — on the order of tens of items per construction — so any narrowing carries wide uncertainty.
-- **Per-item data uninspected this run.** The release repository was not reachable when the resource was catalogued; item-level structure and whether per-item human labels are released are unverified.
+- **Single gold label, not a human gradient.** The release repository was inspected 2026-05-29 (de-anonymized): it provides a single adjudicated gold answer per item plus the aggregate ≈0.90 / ≈0.83 baseline — not a per-item multi-rater distribution. The aggregate scoping of this claim is unaffected.
 - **Single paper, behavioral.** The claim rests on one paper's behavioral NLI accuracies; it is not corroborated by an independent dataset and says nothing about model internals.
 - **Exp-2 figure provenance caveat.** The 0.83 number is verified as printed but phrased as an IAA "with the original judgments"; its reading as a native-speaker-accuracy baseline is the source/resource gloss, flagged for re-check.
 

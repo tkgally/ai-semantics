@@ -36,13 +36,17 @@ The conjecture: LLMs draw the path-traversal (self-motion) inference from *way*-
 
 ## What would confirm / falsify
 
-- **Confirm:** ≥70% path-traversal inference rate for *way*-construction items with non-motion verbs, ≥30pp gap vs. minimal-pair controls, in ≥2 of 3 panel models, anchored against the Goldberg (1995) stimulus inventory.
+- **Confirm:** ≥70% path-traversal inference rate for *way*-construction items with non-motion verbs, ≥30pp gap vs. minimal-pair controls, in ≥2 of 3 panel models, anchored against the ratified human anchor (the Scivetti CxNLI way-manner subset; see below), with Goldberg (1995) as the descriptive item seed.
 - **Weak:** inference rate tracks verb's lexical motion-relatedness rather than the construction (model is reading the verb, not the construction).
 - **Falsify:** flat inference rate across construction and control; model treats *way*-construction surface as decorative.
 
-## Human anchor (pending)
+## Human anchor
 
-Goldberg (1995, ch. 9) gives the canonical inventory of *way*-construction stimuli with discussion. A modern rated version would be ideal. Queue [`decisions/open/way-construction-anchor`](../../decisions/open/way-construction-anchor.md) at design time.
+Resolved 2026-05-29: the **Scivetti CxNLI dataset** ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)) is the ratified human anchor for this conjecture — specifically its **way-manner subset**. Goldberg (1995, ch. 9) remains the descriptive seed for the item inventory.
+
+Important caveat on what this anchor delivers: the release repo was inspected (de-anonymized at github.com/melissatorgbi/beyond-memorization) and provides a **single gold-standard label per item plus an aggregate ~0.90/0.83 human baseline — an "answer key," NOT a per-item multi-rater gradient.** So it anchors an answer-key comparison, not a graded human-judgment distribution.
+
+→ Anchor decision (ratified 2026-05-29): [`decisions/resolved/way-construction-anchor`](../../decisions/resolved/way-construction-anchor.md) — the Scivetti CxNLI way-manner subset grounds the probe.
 
 ## Notes / caveats
 

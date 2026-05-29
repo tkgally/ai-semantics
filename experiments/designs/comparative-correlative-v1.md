@@ -8,10 +8,8 @@ meaning-senses:
   - functional-vs-formal
   - human-comparison
 status: provisional
-anchor: pending
-contingent-on:
-  - comparative-correlative-anchor
-  - constructional-divergence-operationalization
+anchor: resource/scivetti-2025-cxnli-dataset
+contingent-on: []
 created: 2026-05-29
 updated: 2026-05-29
 links:
@@ -31,7 +29,7 @@ links:
 
 # Experiment design v1 — comparative correlative
 
-**Status**: provisional. The human-comparison component is contingent on [`decisions/open/comparative-correlative-anchor`](../../wiki/decisions/open/comparative-correlative-anchor.md) (`anchor: pending`), and the operationalization choices (instrument, gap definition, frequency-matching) are contingent on a `constructional-divergence-operationalization` decision the orchestrator should open before any run (see §8). Nothing claiming a human-comparison finding may be promoted to settled until both are ratified. Marked provisional in exactly the way [`aann-construction-v1`](aann-construction-v1.md) and [`way-construction-v1`](way-construction-v1.md) are marked contingent on their decisions.
+**Status**: both governing decisions were **ratified 2026-05-29**. [`decisions/resolved/comparative-correlative-anchor`](../../wiki/decisions/resolved/comparative-correlative-anchor.md) fixes the human anchor as the **Scivetti CxNLI dataset** (its CC subset); the [`decisions/resolved/constructional-divergence-operationalization`](../../wiki/decisions/resolved/constructional-divergence-operationalization.md) decision fixes the operationalization (both instruments — NLI + forced-choice; thresholds 30pp / 70% / within-15pp, frozen at item-commit). That settles instrument, gap definitions, and frequency-matching framing. The design is **unrun**: nothing claiming a human-comparison finding may be promoted to settled until the probe actually runs. Settled the same way [`aann-construction-v1`](aann-construction-v1.md) and [`way-construction-v1`](way-construction-v1.md) have their governing decisions ratified.
 
 ## 1. Construct
 
@@ -41,7 +39,7 @@ The construct of interest: whether a panel model **uses** the CC's covariation m
 
 ## 2. Indicator
 
-(Per provisional default in the `constructional-divergence-operationalization` decision to be opened — see §8. Instrument choice is locked there *before* the probe runs.)
+(Per the `constructional-divergence-operationalization` decision, ratified 2026-05-29 — see §8. Instrument choice is locked there, before the probe runs: both NLI and forced-choice are run.)
 
 The construct maps to a **covariation-inference rate** with three derived contrasts, all committed and frozen before any probe call:
 
@@ -60,10 +58,10 @@ A behavioral API probe over the panel ([`config/models.md`](../../config/models.
 
 Two candidate instruments, with a real trade-off that the operationalization decision must fix **before** running (charter §8):
 
-- **(a) NLI / entailment framing (Scivetti-style).** Present premise + hypothesis, ask for entailment / neutral / contradiction. Example: premise *"The more the committee delayed, the angrier the investors grew."*, hypothesis *"If the committee delayed more, the investors grew angrier."* → entailment; an inverse-direction hypothesis on an inverse-CC item → contradiction. **Upside:** apples-to-apples with the candidate human anchor, the Scivetti CxNLI CC subset ([`resource/scivetti-2025-cxnli-dataset`](../../wiki/base/resources/scivetti-2025-cxnli-dataset.md)), which is 3-way NLI with a native-speaker accuracy baseline — so the human-comparison arm can be run on the *same instrument*. **Downside:** it is a *different* instrument from Weissweiler 2022's masked/cloze **semantic-application** task, so the encoder-PLM "meaning at chance" baseline is **not directly interchangeable** with NLI accuracy.
+- **(a) NLI / entailment framing (Scivetti-style).** Present premise + hypothesis, ask for entailment / neutral / contradiction. Example: premise *"The more the committee delayed, the angrier the investors grew."*, hypothesis *"If the committee delayed more, the investors grew angrier."* → entailment; an inverse-direction hypothesis on an inverse-CC item → contradiction. **Upside:** apples-to-apples with the ratified human anchor, the Scivetti CxNLI CC subset ([`resource/scivetti-2025-cxnli-dataset`](../../wiki/base/resources/scivetti-2025-cxnli-dataset.md)), which is 3-way NLI with a native-speaker accuracy baseline — so the human-comparison arm can be run on the *same instrument*. **Downside:** it is a *different* instrument from Weissweiler 2022's masked/cloze **semantic-application** task, so the encoder-PLM "meaning at chance" baseline is **not directly interchangeable** with NLI accuracy.
 - **(b) Forced-choice covariation-direction question.** Ask directly: *"Does increased delay go with increased anger, or decreased anger?"* (or Y/N "Does increased delay go with increased anger?"). **Upside:** closer in spirit to Weissweiler's semantic-application framing (use the meaning to answer a covariation question), and the cleanest read on the direction-flip indicator. **Downside:** not apples-to-apples with the Scivetti NLI human baseline; the human-comparison arm would then need a re-derived baseline.
 
-**Recommendation (provisional default for the decision):** run **both** framings on a shared item set — NLI as the primary instrument for the human-comparison arm (against Scivetti), forced-choice as the primary instrument for the direction-flip indicator and as the closer analogue to Weissweiler's semantic task. Report each indicator against the instrument that grounds it, and **never** cross-compare an NLI number against the Weissweiler encoder baseline as if interchangeable (conjecture caveat; charter §8). Cost permits both (see §6). The decision page locks which instrument grounds which indicator before the run.
+**Ratified choice (2026-05-29):** run **both** framings on a shared item set — NLI as the primary instrument for the human-comparison arm (against Scivetti), forced-choice as the primary instrument for the direction-flip indicator and as the closer analogue to Weissweiler's semantic task. Report each indicator against the instrument that grounds it, and **never** cross-compare an NLI number against the Weissweiler encoder baseline as if interchangeable (conjecture caveat; charter §8). Cost permits both (see §6). The ratified `constructional-divergence-operationalization` decision locks which instrument grounds which indicator before the run.
 
 ### 3.2 Item set
 
@@ -103,11 +101,11 @@ For each panel model: compute the CC covariation-inference rate, the CC-vs-contr
 
 ## 4. Human anchor
 
-**Candidate anchor**: the Scivetti et al. 2025 CxNLI **comparative-correlative subset** ([`resource/scivetti-2025-cxnli-dataset`](../../wiki/base/resources/scivetti-2025-cxnli-dataset.md)) — human-annotated NLI triples for the CC (one of its 8 constructions) with a native-speaker accuracy baseline (≈ 0.90 Exp 1 / ≈ 0.83 Exp 2). This is the only in-repo candidate pairing CC inference items with a human baseline, and it shares the NLI framing of instrument (a).
+**Ratified anchor (2026-05-29)**: the Scivetti et al. 2025 CxNLI **comparative-correlative subset** ([`resource/scivetti-2025-cxnli-dataset`](../../wiki/base/resources/scivetti-2025-cxnli-dataset.md)) — human-annotated NLI triples for the CC (one of its 8 constructions) with a native-speaker accuracy baseline (≈ 0.90 Exp 1 / ≈ 0.83 Exp 2) — is the human anchor for this design ([`decisions/resolved/comparative-correlative-anchor`](../../wiki/decisions/resolved/comparative-correlative-anchor.md)). It shares the NLI framing of instrument (a).
 
-**`anchor: pending`.** The resource is `external-only` / uninspected: the release repo was unreachable when catalogued, so the CC subset's per-item structure, count, and whether **per-item** human labels (vs. aggregate accuracy) are released are unverified. The human-comparison arm of this design is therefore contingent on **(a)** item-level inspection of the Scivetti repo and **(b)** Tom's ratification of [`decisions/open/comparative-correlative-anchor`](../../wiki/decisions/open/comparative-correlative-anchor.md) (provisional default: Option A pending inspection; fall back to Option B — Weissweiler-2022 stimulus seed with the human arm pending — if inspection shows no usable per-item data).
+**What the Scivetti anchor delivers (caveat)**: the release repo was inspected (de-anonymized at github.com/melissatorgbi/beyond-memorization) and provides a **single gold-standard label per item plus the aggregate ~0.90/0.83 human baseline — an "answer key," NOT a per-item multi-rater gradient.** So the human-comparison arm is an answer-key + aggregate-baseline comparison, not a regression against a graded per-item human-judgment distribution. The NLI framing (instrument a) is what keeps that comparison apples-to-apples.
 
-**Model-side comparison (available now, no anchor ratification needed)**: the Weissweiler 2022 encoder-PLM baseline — BERT/RoBERTa/DeBERTa recognise the CC's form but score **at chance** on its meaning ([`source/weissweiler-2022-comparative-correlative`](../../wiki/base/sources/weissweiler-2022-comparative-correlative.md)). Caveat (carried from the conjecture): that baseline is a masked/cloze semantic-application result, not NLI, so it grounds the **generational narrowing** comparison only against a comparable framing — do not equate it with an NLI accuracy number. An aggregate panel-vs-encoder narrowing claim can be made without ratifying the anchor; the panel-vs-human "below human level" clause cannot, until the anchor lands.
+**Model-side comparison**: the Weissweiler 2022 encoder-PLM baseline — BERT/RoBERTa/DeBERTa recognise the CC's form but score **at chance** on its meaning ([`source/weissweiler-2022-comparative-correlative`](../../wiki/base/sources/weissweiler-2022-comparative-correlative.md)). Caveat (carried from the conjecture): that baseline is a masked/cloze semantic-application result, not NLI, so it grounds the **generational narrowing** comparison only against a comparable framing — do not equate it with an NLI accuracy number. The anchor is now ratified, so both the panel-vs-encoder narrowing claim and the panel-vs-human "below human level" clause have a fixed yardstick — but neither is settled until the probe runs.
 
 ## 5. Predictions (from [`conjecture/comparative-correlative-construction`](../../wiki/findings/conjectures/comparative-correlative-construction.md))
 
@@ -147,11 +145,11 @@ The following choices are exactly where an autonomous loop would quietly cheat b
 - **Gap / threshold definitions** — T1 (CC-vs-control ≥ 30 pp), T2 (direction-flip ≥ 70%), T3 (atypical within 15 pp), and the "below-human" comparison rule.
 - **Frequency-matching procedure** — how typical vs atypical scale pairs are selected and frozen (shared concern with [`open-question/constructional-vs-frequency-confound`](../../wiki/findings/open-questions/constructional-vs-frequency-confound.md)).
 
-**Note to the orchestrator (a new decision needs opening).** [`open-question/constructional-divergence-probe`](../../wiki/findings/open-questions/constructional-divergence-probe.md) already names a `constructional-divergence-operationalization` decision to be opened when this design space is picked up. The orchestrator should open that decision (or a CC-specific `comparative-correlative-operationalization` decision) covering the three bullets above, with the §3.1 recommendation as the provisional default. This design is marked **provisional / contingent** on it and on `comparative-correlative-anchor`, mirroring how [`aann-construction-v1`](aann-construction-v1.md) is contingent on `aann-operationalization` and [`way-construction-v1`](way-construction-v1.md) on `way-construction-anchor`.
+**Decision status.** [`open-question/constructional-divergence-probe`](../../wiki/findings/open-questions/constructional-divergence-probe.md) named a `constructional-divergence-operationalization` decision for this design space. That decision was **ratified 2026-05-29**, covering the three bullets above with the §3.1 recommendation as the ratified choice (both instruments; thresholds 30pp / 70% / within-15pp, frozen at item-commit). Together with the ratified `comparative-correlative-anchor`, this fixes the design's yardstick — the same way [`aann-construction-v1`](aann-construction-v1.md)'s `aann-operationalization` and [`way-construction-v1`](way-construction-v1.md)'s `way-construction-anchor` are ratified. The design remains unrun.
 
 ## 9. What this design does not do
 
-- Does not assume the Scivetti CC subset is usable as a per-item anchor; until the repo is inspected and Tom ratifies the anchor decision, the human-comparison arm reports "pending."
+- Does not over-read the Scivetti CC subset: with the anchor ratified (2026-05-29), the human-comparison arm is an answer-key + aggregate-baseline comparison, not a per-item multi-rater gradient.
 - Does not cross-compare an NLI accuracy number against the Weissweiler 2022 encoder semantic-application baseline as if the two instruments were interchangeable.
 - Does not test the model's *productive generation* of novel CC instances — a different indicator, queued for a v2.
 - Does not cross-link to the AANN, way, caused-motion, or conative designs as a shared run; independent loop turn.
@@ -161,7 +159,7 @@ The following choices are exactly where an autonomous loop would quietly cheat b
 
 When a future run executes the probe:
 
-1. Confirm [`decisions/open/comparative-correlative-anchor`](../../wiki/decisions/open/comparative-correlative-anchor.md) status and the (to-be-opened) operationalization decision; do not promote anything to settled while either is open.
+1. Both [`decisions/resolved/comparative-correlative-anchor`](../../wiki/decisions/resolved/comparative-correlative-anchor.md) and the `constructional-divergence-operationalization` decision are ratified (2026-05-29); the run still does not promote anything to a settled finding until the probe has executed and produced results.
 2. If the Scivetti repo is reachable, mirror `https://anonymous.4open.science/r/beyond-memorization-B82B` into `experiments/data/comparative-correlative/scivetti/` (license-check first), inspect the CC subset item-level, and confirm whether per-item human labels are released; update the resource page's `status:` accordingly.
 3. Commit the full item list to `experiments/data/comparative-correlative/items.csv` (columns per §3.2), lexically frozen, before the probe runs.
 4. Run the 3-item dry run per panel model to confirm label parsing / logprob availability.

@@ -7,9 +7,8 @@ meaning-senses:
   - inferential
   - human-comparison
 status: provisional
-anchor: pending
-contingent-on:
-  - way-construction-anchor
+anchor: resource/scivetti-2025-cxnli-dataset
+contingent-on: []
 created: 2026-05-28
 updated: 2026-05-28
 links:
@@ -21,7 +20,7 @@ links:
 
 # Experiment design v1 — way-construction
 
-**Status**: provisional. The human-comparison component is contingent on `decisions/open/way-construction-anchor.md` (anchor: pending). The operationalization itself is self-standing and not behind a separate gate. Nothing claiming a human-comparison finding may be promoted to settled until the anchor decision is ratified.
+**Status**: the `decisions/resolved/way-construction-anchor.md` decision was **ratified 2026-05-29** — the **Scivetti CxNLI dataset** (its way-manner subset) is the human anchor. The operationalization itself is self-standing and not behind a separate gate. That fixes the yardstick, but the design is **unrun**: nothing claiming a human-comparison finding may be promoted to settled until the probe actually runs.
 
 ## 1. Construct
 
@@ -124,13 +123,9 @@ No item-level cherry-picking. No post-hoc threshold adjustment.
 
 ## 4. Human anchor
 
-**Provisional anchor**: Goldberg (1995, ch. 9) — canonical way-construction examples used as item seeds. The anchor is theoretical (expert-curated examples) rather than empirical (rated inference-probe responses). A placeholder resource page (`wiki/base/resources/goldberg-1995-way-stimuli.md`) records which examples are drawn from which pages and is created at probe-prep time.
+**Ratified anchor (2026-05-29)**: the **Scivetti CxNLI dataset** ([`resource/scivetti-2025-cxnli-dataset`](../../wiki/base/resources/scivetti-2025-cxnli-dataset.md)) — its **way-manner subset** — is the human anchor for this design (`decisions/resolved/way-construction-anchor.md`). Goldberg (1995, ch. 9) remains the **descriptive seed** for the item set: its canonical examples certify that way-construction items are genuine tokens of the construction. A resource page for the Goldberg seed (`wiki/base/resources/goldberg-1995-way-stimuli.md`) is created at probe-prep time.
 
-**Anchor gap**: no rated human inference-rate data exists in-repo. The human-comparison component is therefore limited to:
-- Using Goldberg's examples to certify that way-construction items are genuine tokens of the construction.
-- Treating the path-traversal inference as near-ceiling for human readers of canonical way-construction sentences (implicit in Goldberg's linguistic description; defensible as a stipulated baseline).
-
-**Contingent on** `decisions/open/way-construction-anchor.md` (provisional default: Option A). If Tom ratifies Option B (corpus annotation), update this design to add a rated human inference rate column, restate predictions relative to that rate, and drop `anchor: pending`.
+**What the Scivetti anchor delivers (caveat)**: the release repo was inspected (de-anonymized at github.com/melissatorgbi/beyond-memorization) and provides a **single gold-standard label per item plus an aggregate ~0.90/0.83 human baseline — an "answer key," NOT a per-item multi-rater gradient.** So the human-comparison arm is an answer-key comparison (model label vs. gold label, model rate vs. the aggregate human baseline), not a regression against a graded human-judgment distribution. Treat the path-traversal inference as near-ceiling for human readers of canonical items only where the Scivetti gold label confirms it.
 
 ## 5. Predictions (from `conjecture/way-construction`)
 
@@ -175,5 +170,5 @@ When the next run executes the probe:
 1. Create `wiki/base/resources/goldberg-1995-way-stimuli.md` with provenance (Goldberg 1995 ch. 9, note page numbers of sourced examples).
 2. Commit the full item list to `experiments/data/way-construction/items.csv` with columns: `item_id`, `sentence`, `verb`, `verb_category`, `path_pp`, `item_type` (way-construction / type1a / type1b / type2-idiomatic / type2-nopp), `source`.
 3. Run the 3-item dry run per panel model to confirm logprob availability before committing to the full run.
-4. If `decisions/open/way-construction-anchor.md` has been ratified as Option B (corpus annotation), update §4 and §5 before running.
+4. `decisions/resolved/way-construction-anchor.md` is ratified (2026-05-29, Scivetti CxNLI way-manner subset); when the Scivetti repo is mirrored in, align §4/§5 with the actual per-item gold labels and aggregate human baseline before running.
 5. Write the probe code under `experiments/runs/<date>-way-construction-probe-v1/` mirroring the calibration probe structure at `experiments/runs/2026-05-28-panel-calibration/probe.py`.

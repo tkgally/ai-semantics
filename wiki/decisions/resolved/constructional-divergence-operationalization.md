@@ -1,7 +1,9 @@
 ---
 id: constructional-divergence-operationalization
 title: How is the constructional-divergence / meaning-use probe operationalized (instrument, thresholds, frequency-matching)?
-status: open
+status: resolved
+resolved: 2026-05-29
+resolution: "Default — both instruments (NLI + forced-choice), preset thresholds (30pp / 70% / within-15pp), frozen at item-commit; memorization control via atypical fillers. Locks the measurement before running (charter §8). Ratified by Tom."
 opened: 2026-05-29
 opened-by: orchestrator
 contingent-artifacts:

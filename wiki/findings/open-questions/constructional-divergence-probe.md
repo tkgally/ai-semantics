@@ -43,7 +43,7 @@ The theory page is currently honest that it claims "a *structure* (the ladder, t
 - **Already external (the claim):** Scivetti et al. 2025's aggregate cross-construction >40% drop with a native-speaker baseline.
 - **What a project result adds, minimally:**
   1. The **panel's own** behavior on the syntactically-identical / semantically-divergent contrast, recorded under `experiments/` (prompts, models, date), so the finding is the project's to revise — not a citation of someone else's table.
-  2. A **human anchor in-repo**: the Scivetti CxNLI-Distinction data is the natural candidate ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)), but it is `external-only` (repo not yet inspected) and is only a *candidate* anchor for the three per-construction decisions (`caused-motion-anchor`, `conative-anchor`, `way-construction-anchor`) pending Tom's ratification. An **aggregate** replication can compare the panel to Scivetti's *published* aggregate baseline without ratifying those decisions; a **per-construction** result cannot, until both item-level inspection and ratification land.
+  2. A **human anchor in-repo**: the Scivetti CxNLI-Distinction data ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)) — now the **ratified** anchor (2026-05-29) for the four CxG conjectures; the repo was de-anonymized and inspected (`status: partial`: per-item construction labels + a single gold answer per item). A per-construction result can compare panel labels to the per-item gold answers plus the aggregate ≈0.90/≈0.83 baseline; note the anchor is an answer key, not a graded per-item human distribution (single gold label only).
   3. A **memorization control**, reusing Scivetti's own lever: pragmatically atypical lexical fillers "unlikely to appear in pre-training data" — tying this probe to the method spine in [`open-question/constructional-vs-frequency-confound`](constructional-vs-frequency-confound.md).
 
 ## What a serious answer would look like
@@ -59,7 +59,7 @@ A minimal design that:
 
 Per charter §8 and [`CLAUDE.md`](../../../CLAUDE.md) rule 5, the choices in steps 2–3 are exactly where an autonomous loop would quietly cheat by retuning the threshold after seeing a null. They must be written into a decision page **before** the probe runs, not settled here:
 
-- [`decisions/open/constructional-divergence-operationalization.md`](../../decisions/open/constructional-divergence-operationalization.md) (opened 2026-05-29) — fixes the instrument (NLI prompt vs. surprisal vs. both), the gap definition, the human-baseline comparison, and the promotion threshold; and states the memorization-control requirement. The comparative-correlative design ([`design/comparative-correlative-v1`](../../../experiments/designs/comparative-correlative-v1.md)) is its first client.
+- [`decisions/resolved/constructional-divergence-operationalization.md`](../../decisions/resolved/constructional-divergence-operationalization.md) (**ratified 2026-05-29**) — fixed the instrument (both NLI + forced-choice), the gap/threshold definitions (30 / 70 / within-15 pp), the human-baseline comparison, and the memorization-control requirement. The comparative-correlative design ([`design/comparative-correlative-v1`](../../../experiments/designs/comparative-correlative-v1.md)) is its first client.
 
 This open-question only **names** the design space; it does not resolve it.
 
@@ -71,6 +71,6 @@ This open-question only **names** the design space; it does not resolve it.
 
 ## Pointers for the next visit
 
-- First check whether the Scivetti release repo is reachable from a future environment (it was not this run — see the resource page's "Pointer for next visit"); item-level inspection is the gate on the per-construction version and on any in-repo human anchor.
+- The Scivetti release repo is reachable (de-anonymized at github.com/melissatorgbi/beyond-memorization; inspected 2026-05-29). A future run can mirror it (license-check first) for the per-construction probe; the per-item gold answers are the anchor.
 - Confirm which panel models expose token-level log-probs (needed for the surprisal-lane variant) vs. only API-level outputs (needed for the NLI-lane variant).
 - Open the operationalization decision page **before** running, not after.

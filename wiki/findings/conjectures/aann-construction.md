@@ -6,9 +6,7 @@ meaning-senses:
   - constructional
   - functional-vs-formal
 status: designed
-contingent-on:
-  - aann-stimulus-source
-  - aann-operationalization
+contingent-on: []
 created: 2026-05-28
 updated: 2026-05-28
 links:
@@ -44,22 +42,22 @@ The conjecture: current LLMs treat AANN as a **productive construction** in Gold
 
 ## What would confirm / falsify
 
-- **Confirm:** AANN-licit vs. illicit surprisal contrast on held-out lexical items tracks the human-rated acceptability gradient in [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahowald-2023-aann-stimuli.md), in ≥2 of 3 panel models. Concrete threshold per [`decisions/open/aann-operationalization`](../../decisions/open/aann-operationalization.md) (provisional default T1).
+- **Confirm:** AANN-licit vs. illicit surprisal contrast on held-out lexical items tracks the human-rated acceptability gradient in [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahowald-2023-aann-stimuli.md), in ≥2 of 3 panel models. Concrete threshold per [`decisions/resolved/aann-operationalization`](../../decisions/resolved/aann-operationalization.md) (ratified 2026-05-29: continuation-likelihood contrast (Option A) + prompted-acceptability fallback + threshold T1).
 - **Weak:** contrast exists for items that appeared in training (memorization) but does not generalize to held-out adjectives.
 - **Falsify:** flat or inverse contrast pattern; or contrast that tracks unigram frequency of adjective alone, not the construction.
 
 ## Human anchor
 
-Catalogued as [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahowald-2023-aann-stimuli.md) (status: `external-only` until a future run mirrors the released repo). Mahowald 2023 (EACL) — templatic AANN stimulus generator plus MTurk acceptability ratings — supersedes the earlier "Weissweiler line" pointer in the bootstrap version of this conjecture; the Weissweiler CxG-probing papers remain a candidate secondary anchor and are tracked in [`decisions/open/aann-stimulus-source`](../../decisions/open/aann-stimulus-source.md).
+Catalogued as [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahowald-2023-aann-stimuli.md) (status: `external-only` until a future run mirrors the released repo). Mahowald 2023 (EACL) — templatic AANN stimulus generator plus MTurk acceptability ratings — supersedes the earlier "Weissweiler line" pointer in the bootstrap version of this conjecture; the Weissweiler CxG-probing papers remain a candidate secondary anchor. The anchor question was resolved 2026-05-29: Mahowald 2023 is the ratified AANN anchor (see [`decisions/resolved/aann-stimulus-source`](../../decisions/resolved/aann-stimulus-source.md)).
 
-→ Open decisions queued:
+→ Anchor and operationalization decisions (both ratified 2026-05-29):
 
-- [`decisions/open/aann-stimulus-source`](../../decisions/open/aann-stimulus-source.md) — confirm Mahowald-as-primary anchor vs. adding Weissweiler as secondary.
-- [`decisions/open/aann-operationalization`](../../decisions/open/aann-operationalization.md) — what counts as "tracks the construction" (indicator + threshold + held-out items).
+- [`decisions/resolved/aann-stimulus-source`](../../decisions/resolved/aann-stimulus-source.md) — ratified: Mahowald 2023 is the primary AANN anchor (Weissweiler retained as candidate secondary).
+- [`decisions/resolved/aann-operationalization`](../../decisions/resolved/aann-operationalization.md) — ratified: continuation-likelihood contrast (Option A) + prompted-acceptability fallback + threshold T1 + held-out adjectives, locked before the run.
 
 ## Status note
 
-This conjecture is `designed` as of 2026-05-28: [`experiments/designs/aann-construction-v1.md`](../../../experiments/designs/aann-construction-v1.md) operationalizes it. It is **not** `tested` and may not be promoted to a claim until both `contingent-on` decisions are ratified by Tom and the probe is run.
+This conjecture is `designed` as of 2026-05-28: [`experiments/designs/aann-construction-v1.md`](../../../experiments/designs/aann-construction-v1.md) operationalizes it. Both governing decisions were ratified by Tom 2026-05-29, which fixes the yardstick (anchor, indicator, threshold) — but the conjecture remains **not** `tested`: the probe has **not yet been run**, and it may not be promoted to a claim until it is. Ratifying the anchor settles how the result will be judged, not the result.
 
 ## Notes / caveats
 

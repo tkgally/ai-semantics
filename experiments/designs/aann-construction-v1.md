@@ -8,9 +8,7 @@ meaning-senses:
   - functional-vs-formal
   - human-comparison
 status: provisional
-contingent-on:
-  - aann-stimulus-source
-  - aann-operationalization
+contingent-on: []
 created: 2026-05-28
 updated: 2026-05-28
 links:
@@ -24,7 +22,7 @@ links:
 
 # Experiment design v1 — AANN construction
 
-**Status**: provisional. The entire design is contingent on `decisions/open/aann-operationalization.md` and `decisions/open/aann-stimulus-source.md`. Nothing in this page may be promoted to a settled finding until both are ratified.
+**Status**: both governing decisions — `decisions/resolved/aann-operationalization.md` and `decisions/resolved/aann-stimulus-source.md` — were **ratified 2026-05-29** (Mahowald 2023 as the AANN anchor; continuation-likelihood contrast (Option A) + prompted-acceptability fallback + threshold T1 + held-out adjectives locked before the run). That fixes the design's yardstick. The design itself is **unrun**: nothing in this page may be promoted to a settled finding until the probe actually runs.
 
 ## 1. Construct
 
@@ -32,7 +30,7 @@ The **AANN construction** as a form-meaning pairing in Goldberg's sense: form = 
 
 ## 2. Indicator
 
-(Per provisional default in `decisions/open/aann-operationalization.md`.)
+(Per `decisions/resolved/aann-operationalization.md`, ratified 2026-05-29.)
 
 **Primary indicator (Option A)**: continuation-likelihood contrast. For each item tuple (template, adjective, numeral, noun), compute the panel model's average per-token log-probability for the **licit AANN** instantiation and for each of the four **minimally-illicit** Mahowald-2023 variants:
 
@@ -88,7 +86,7 @@ For each panel model:
 
 - Compute the **rank-above-degenerate rate** on (a) anchored items, (b) held-out items.
 - Compute the **signed gradient correlation** against MTurk-mean ratings on anchored items only.
-- Apply the T1 threshold from `decisions/open/aann-operationalization.md`.
+- Apply the T1 threshold from `decisions/resolved/aann-operationalization.md`.
 - Report all four numbers for all three models in a single table, including failure modes (logprobs unavailable, reasoning truncation, etc.). Per panel-as-subjects (charter §6), cross-model divergence is itself a result.
 
 No item-level cherry-picking. No post-hoc threshold adjustment.
@@ -145,6 +143,6 @@ When the *next-next* run executes the probe:
 
 1. Mirror `https://github.com/mahowak/aann-public` into `experiments/data/aann/aann-public/` (license-check first).
 2. Promote `resource/mahowald-2023-aann-stimuli` from `external-only` to `catalogued` after inspecting file contents.
-3. Confirm `decisions/open/aann-stimulus-source.md` and `decisions/open/aann-operationalization.md` are either resolved (in which case promote downstream language) or still open (in which case do not promote anything to settled).
+3. `decisions/resolved/aann-stimulus-source.md` and `decisions/resolved/aann-operationalization.md` are both resolved (ratified 2026-05-29); the run still does not promote anything to a settled finding until the probe has executed and produced results.
 4. Lock the held-out adjective list and commit it under `experiments/data/aann/held-out-adjectives.txt` *before* the probe runs.
 5. Write the probe code under `experiments/runs/<date>-aann-probe-v1/` mirroring the calibration probe's structure.

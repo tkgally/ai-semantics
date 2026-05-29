@@ -67,7 +67,7 @@ The abstract is quoted verbatim from the ACL Anthology page (https://aclantholog
 
 - The AANN-specific behavioral findings: that GPT-3 (`text-davinci-002`) gives acceptability judgments on AANN that are broadly similar to crowdsourced human judgments and broadly align with the constraints proposed in the AANN literature, with documented divergences. This is the **argument** behind the dataset on [`resource/mahowald-2023-aann-stimuli`](../resources/mahowald-2023-aann-stimuli.md).
 - The `functional-vs-formal` reading drawn by [`claim/formal-competence-aann-ceiling`](../../findings/claims/formal-competence-aann-ceiling.md): the paper's own conclusion distinguishes recognizing/using the *form* of the construction "in a relatively (but not perfectly) human-like way" from "showing that it understands the meaning or function of the construction." The acceptability-as-formal-competence line has the author's own framing behind it.
-- The prompt-on-CoLA validation method (84% accuracy, MCC 0.63 on the CoLA dev set) as a method precedent for prompted acceptability judgments — relevant to the operationalization decision recorded in [`decisions/open/aann-operationalization`](../../decisions/open/aann-operationalization.md).
+- The prompt-on-CoLA validation method (84% accuracy, MCC 0.63 on the CoLA dev set) as a method precedent for prompted acceptability judgments — relevant to the operationalization decision recorded in [`decisions/resolved/aann-operationalization`](../../decisions/resolved/aann-operationalization.md).
 - The model-vs-human comparison pattern on a single construction, as a `human-comparison` exemplar.
 
 ## What it cannot ground
