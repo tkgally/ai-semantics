@@ -75,16 +75,16 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   status: wanted
 - [P1] Piantadosi, S.T. & Hill, F. 2022. "Meaning without reference in large language models." NeurIPS workshop / arXiv 2208.02957.
   why: foundational for the `inferential` tag's application to LLMs. Likely OA — try to fetch directly first.
-  status: catalogued (2026-05-28, via arXiv abstract; see wiki/base/sources/piantadosi-hill-2022-meaning-without-reference.md; PDF not yet fetched)
+  status: received (2026-05-28, section-level quotes from arXiv abs + ar5iv HTML; 5 additional quotes added 2026-05-28 from "Communicative intentions" and "Discovering conceptual role" sections; see wiki/base/sources/piantadosi-hill-2022-meaning-without-reference.md)
 - [P1] Bender, E. & Koller, A. 2020. "Climbing towards NLU: On meaning, form, and understanding in the age of data." ACL.
   why: the form-vs-meaning argument; sets up `grounded` and the octopus thought experiment. OA via ACL Anthology.
-  status: catalogued (2026-05-28, via ACL Anthology; see wiki/base/sources/bender-koller-2020-climbing.md; PDF not yet fetched for page-level quotes)
+  status: received (2026-05-28, abstract verbatim from ACL Anthology + body quotes pp. 5187–5190 from prior PDF ingestion; full abstract added verbatim 2026-05-28; ACL Anthology offers PDF only, no HTML rendering; see wiki/base/sources/bender-koller-2020-climbing.md)
 - [P1] Mahowald, K., Ivanova, A.A., Blank, I.A., Kanwisher, N., Tenenbaum, J.B., Fedorenko, E. 2024. "Dissociating language and thought in large language models." *Trends in Cognitive Sciences* 28(6).
   why: the formal-vs-functional competence frame.
-  status: catalogued (2026-05-28, via arXiv 2301.06627 abstract; see wiki/base/sources/mahowald-2024-dissociating.md; PDF not yet fetched for page-level quotes)
+  status: received (2026-05-28, section-level quotes from arXiv HTML 2301.06627v3; 7 additional quotes added 2026-05-28 covering functional competence definition, BLiMP benchmark, hierarchical structure, commonsense failure, theory of mind, and modularity agenda; see wiki/base/sources/mahowald-2024-dissociating.md)
 - [P1] Lyre, H. 2024. "Understanding AI: Semantic grounding in large language models." arXiv 2402.10992.
   why: grounding-as-gradual, the basis for the `grounded.*` sub-tag structure.
-  status: catalogued (2026-05-28, via arXiv abstract; see wiki/base/sources/lyre-2024-semantic-grounding.md; PDF not yet fetched)
+  status: received (2026-05-28, page-level quotes from arXiv PDF pp. 1–14; no HTML version available; ar5iv redirect to abs page; PDF is binary-only via WebFetch; body quotes were extracted at prior ingestion step; no new quotes added 2026-05-28 due to HTML unavailability; see wiki/base/sources/lyre-2024-semantic-grounding.md)
 - [P1] Weissweiler, L., et al. 2022–24 (multiple papers on CxG probing of LLMs).
   why: nearest existing line to this project's wedge.
   status: catalogued (2026-05-28, 2023 survey paper as primary entry; see wiki/base/sources/weissweiler-2023-cxg-insight.md; 2022 and 2024 empirical papers noted there but not yet given own pages)

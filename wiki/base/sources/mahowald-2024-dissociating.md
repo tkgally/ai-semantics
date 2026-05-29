@@ -81,6 +81,30 @@ All quotes extracted from arXiv HTML version (arxiv.org/html/2301.06627, CC BY 4
 
 > "To those who criticize LLMs for their inability to do complex arithmetic or to reason about the world, we say, give language models a break: given a strict separation of language and non-linguistic capabilities in the human mind, we should evaluate these capabilities separately, recognizing successes in formal linguistic competence even when non-linguistic capabilities lag behind."
 
+**§"Functional linguistic competence" — full definition:**
+
+> "Thus, we define functional linguistic competence as non-language-specific cognitive functions that are required when using language in tandem with non-language-specific capacities in real-world circumstances."
+
+**§"LLMs perform well on benchmarks of diverse linguistic phenomena" — BLiMP result:**
+
+> "Strikingly, a model submitted to the BabyLM challenge achieved 86% on BLiMP (cf. human baseline of 89%) despite being trained on an amount of data comparable to what a human child might be exposed to (see Box 3)."
+
+**§"LLMs learn hierarchical structure" — agreement and structure:**
+
+> "Today's LLMs perform long-distance number agreement well above chance, preferring the grammatical over a non-grammatical sentence continuation even in the presence of intervening distractor words."
+
+**§"World models 1: factual and commonsense knowledge" — LLM failure mode:**
+
+> "LLMs can struggle on commonsense knowledge benchmarks, especially once low-level statistical cues are controlled for."
+
+**§"Social cognition" — theory of mind controversy:**
+
+> "LLMs' ability to solve theory of mind tasks has been subject to particular controversy. These tasks require both social knowledge and the ability to maintain a situation model."
+
+**§"Toward models that use language like humans" — modularity agenda:**
+
+> "We see at least two ways to separate LLM circuits responsible for formal and functional competence: explicitly building modularity into the architecture of the system (we call this Architectural Modularity) or naturally inducing modularity through the training process, both through the training data and the objective function (we call this Emergent Modularity)."
+
 ## What it can ground
 
 - The `functional-vs-formal` tag on any finding page — this paper *is* the primary reference for that tag. `meaning-senses.md` explicitly attributes this distinction to "the Mahowald / Ivanova / Fedorenko distinction."
@@ -103,4 +127,4 @@ All quotes extracted from arXiv HTML version (arxiv.org/html/2301.06627, CC BY 4
 
 ## Status in wanted.md
 
-Was `wanted (try OA / preprint)`, then `catalogued`. Now `received`: section-level verbatim quotes extracted from arXiv HTML (2301.06627, CC BY 4.0, 2026-05-28). Full PDF also available via DOI (10.1016/j.tics.2024.01.011) for pagination verification if exact page citations are needed.
+Was `wanted (try OA / preprint)`, then `catalogued`. Now `received`: section-level verbatim quotes extracted from arXiv HTML (2301.06627v3, CC BY 4.0, 2026-05-28). Seven additional quotes added 2026-05-28 covering functional competence definition, BLiMP benchmark result, hierarchical structure, commonsense failure, theory of mind, and modularity agenda. Full PDF also available via DOI (10.1016/j.tics.2024.01.011) for pagination verification if exact page citations are needed.

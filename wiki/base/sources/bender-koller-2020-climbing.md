@@ -41,9 +41,13 @@ Key moves:
 
 ## Key passages
 
-All page numbers refer to the ACL Anthology proceedings pagination (pp. 5185–5198).
+All page numbers refer to the ACL Anthology proceedings pagination (pp. 5185–5198). Abstract text confirmed verbatim from ACL Anthology abstract field (https://aclanthology.org/2020.acl-main.463/, 2026-05-28).
 
-**p. 5185 (abstract) — central thesis:**
+**p. 5185 (abstract) — full abstract verbatim:**
+
+> "The success of the large neural language models on many NLP tasks is exciting. However, we find that these successes sometimes lead to hype in which these models are being described as "understanding" language or capturing "meaning". In this position paper, we argue that a system trained only on form has a priori no way to learn meaning. In keeping with the ACL 2020 theme of "Taking Stock of Where We've Been and Where We're Going", we argue that a clear understanding of the distinction between form and meaning will help guide the field towards better science around natural language understanding."
+
+**p. 5185 (abstract) — central thesis (short form):**
 
 > "we argue that a system trained only on form has a priori no way to learn meaning"
 
@@ -82,4 +86,4 @@ All page numbers refer to the ACL Anthology proceedings pagination (pp. 5185–5
 
 ## Status in wanted.md
 
-Was `wanted (likely OA, fetch directly)`, then `catalogued`. Now `received`: full PDF fetched from ACL Anthology (2026-05-28); page-level verbatim quotes extracted above.
+Was `wanted (likely OA, fetch directly)`, then `catalogued`. Now `received`: abstract confirmed verbatim from ACL Anthology abstract field (2026-05-28); body quotes (pp. 5187–5190) extracted from PDF at prior ingestion step. PDF is binary-only (no HTML rendering available at ACL Anthology); body-quote page numbers were recorded at prior ingestion and are retained as-is. Abstract now added verbatim (2026-05-28 upgrade).
