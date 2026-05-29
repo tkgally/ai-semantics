@@ -12,7 +12,7 @@ The first **off-ceiling** test of the two add-direction Tier-4 positives (caused
 
 - **Indicator:** affirm-construction-inference rate (FC YES, or NLI entailment) on the per-item hypothesis — same instrument as v1 (NLI 0/1/2 + forced-choice YES/NO/CANT_TELL), temperature 0, **no logprobs** (so it runs on the existing 3-family behavioral panel).
 - **Panel** ([`config/models.md`](../../../config/models.md)): claude-sonnet-4.6 (A), gpt-5.4-mini (B), gemini-3.5-flash (C).
-- **Stimuli** (project's own, frozen pre-run; `items.csv` sha256[:16] `<FREEZE_HASH>`): 60 items — 10 caused-motion stems + 10 way stems × 3 conditions.
+- **Stimuli** (project's own, frozen pre-run; `items.csv` sha256[:16] `280beeb3d9aff093`): 60 items — 10 caused-motion stems + 10 way stems × 3 conditions.
 
 ## Conditions (graded difficulty ladder)
 
@@ -32,10 +32,15 @@ The first **off-ceiling** test of the two add-direction Tier-4 positives (caused
 
 Stimuli are the **project's own** (no third-party license); committed `raw/*.json` are **unredacted**. Re-derive via `build_items.py` then `probe.py`.
 
+## Scope (partial execution of the ratified design — documented, not retuned)
+
+The ratified operationalization lists four difficulty axes (conflicting-cue, coercion-resisting, graded ladder, near-miss controls; plus multi-step composition). **This run executes three: conflicting-cue (primary) + coercion-resisting + the graded ladder.** Near-miss form controls and multi-step composition are **deferred to a v2b** — v1 already established the construction-floor controls (caused-motion: absent-construction `ctrl-loc`, causal-separation `ctrl-sep`; way: locative `ctrl-loc`, idiomatic over-generalization guard), all of which passed, so this run targets the *novel off-ceiling discriminators* v1 lacked. This is a scope choice fixed before seeing results (the conflicting-cue arm is the hardest, most-discriminating arm, run in full), **not** a retuning of difficulty to manufacture an outcome.
+
 ## Pre-registration / no-retuning
 
 - Difficulty axes, the conflicting-cue reading rule, the degradation-shape criterion, and the human-anchor scope were **fixed by the ratified decision BEFORE this build** (anti-retuning, charter §8).
-- Items frozen + committed **before any probe call**. An adversarial pre-run pass was run; fixes (if any) applied **before freezing** — see commit history + below.
+- Items frozen + committed **before any probe call** (`items.csv` sha256[:16] `280beeb3d9aff093`).
+- **Adversarial pre-run pass:** attempted as an independent read-only subagent **three times**; all three failed on transient API 529 (server overload, 0 tokens). To avoid stalling the gate indefinitely, the pre-run critique was done as an **orchestrator self-review** instead — a noted reduction in independence (recorded here and in the result page). Self-review found no stimulus BLOCKERs (cue denials cleanly cancel the hypothesis; canonical/cue minimal-pair integrity holds; resist verbs are genuinely anomalous); one NIT (the way `resist` verb "slept" carries mild idiom contamination — "slept one's way to the top" — noted in Limits) and one scope SHOULD-FIX (near-miss/multi-step deferred, above). No item changes were needed, so the freeze hash is unchanged.
 - `analyze.py` reports raw rates per condition; no threshold tuned after the run.
 
 ## Files
