@@ -31,6 +31,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 - [`decisions/open/conative-anchor`](decisions/open/conative-anchor.md) — choose the human anchor for the conative conjecture (default: Levin 1993 / VerbNet conative-class as partial anchor). **New candidate Option D surfaced: Scivetti 2025 CxNLI.**
 - [`decisions/open/relational-anchor-shortlist`](decisions/open/relational-anchor-shortlist.md) — choose the human dyadic-interaction anchor for the relational-meaning pilot (default: Clark & Wilkes-Gibbs 1986, with Pickering & Garrod 2004 as theoretical backdrop). Opened 2026-05-29.
 - [`decisions/open/comparative-correlative-anchor`](decisions/open/comparative-correlative-anchor.md) — anchor for the comparative-correlative conjecture (default: Scivetti CxNLI CC subset, pending item-level inspection; fall back to Weissweiler-2022 seed with human arm pending). Opened 2026-05-29.
+- [`decisions/open/constructional-divergence-operationalization`](decisions/open/constructional-divergence-operationalization.md) — instrument (NLI vs forced-choice vs both), thresholds, and frequency-matching for the upper-ladder divergence probes (default: both instruments, 30pp/70%/15pp thresholds, frozen at item-commit). Governs the divergence-probe family; first client is the CC design. Opened 2026-05-29.
 
 ### Resolved decisions
 - (none yet) — ratified decisions will be listed here, each linking its file under `wiki/decisions/resolved/`.
@@ -65,6 +66,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 - [`base/sources/weissweiler-2022-comparative-correlative.md`](base/sources/weissweiler-2022-comparative-correlative.md) — Weissweiler, Hofmann, Köksal & Schütze 2022, EMNLP; probes BERT/RoBERTa/DeBERTa on the English comparative correlative and finds they **recognise the structure but fail to use its meaning** — a syntax-vs-semantics dissociation. The single-construction empirical precedent the 2023 survey generalizes; the CC is also one of Scivetti 2025's 8 constructions. **status: received** (abstract verbatim from ACL Anthology + 3 section-level body quotes from ar5iv HTML, 2026-05-29).
 - [`base/sources/scivetti-2025-beyond-memorization.md`](base/sources/scivetti-2025-beyond-memorization.md) — Scivetti, Tayyar Madabushi et al. 2025, IJCNLP-AACL; CxG inference benchmark over 8 phrasal constructions (incl. caused-motion, conative, way-manner) with human comparison; GPT-o1 drops >40% on syntactically-identical/semantically-divergent forms. Resolves both P2 wants. **status: received** (abstract verbatim from ACL Anthology + 3 section-level body quotes from arXiv v1 HTML, 2026-05-29).
 - [`base/sources/mahowald-2024-dissociating.md`](base/sources/mahowald-2024-dissociating.md) — Mahowald et al. 2024, TiCS 28(6); formal-vs-functional competence distinction, neuroscience grounding; primary reference for `functional-vs-formal` tag. **status: received** (section-level quotes extracted 2026-05-28).
+- [`base/sources/mahowald-2023-aann-judgments.md`](base/sources/mahowald-2023-aann-judgments.md) — Mahowald 2023, EACL (arXiv 2301.12564); GPT-3 (text-davinci-002) rates the AANN construction; broadly human-like on form, with the author's own caveat that this is "not the same thing as showing that it understands the meaning or function." The argument/findings record (the dataset is the separate stimuli resource); grounds [`claim/formal-competence-aann-ceiling`](findings/claims/formal-competence-aann-ceiling.md). **status: received** (abstract + 3 section-level body quotes verbatim, 2026-05-29).
 
 ### Base — resources
 
@@ -99,6 +101,7 @@ These gate promotion of contingent findings; nothing depending on them is settle
 
 - [`experiments/designs/aann-construction-v1.md`](../experiments/designs/aann-construction-v1.md) — provisional; contingent on `aann-stimulus-source` and `aann-operationalization`.
 - [`experiments/designs/way-construction-v1.md`](../experiments/designs/way-construction-v1.md) — provisional; anchor pending `way-construction-anchor` decision.
+- [`experiments/designs/comparative-correlative-v1.md`](../experiments/designs/comparative-correlative-v1.md) — provisional; operationalizes [`conjecture/comparative-correlative-construction`](findings/conjectures/comparative-correlative-construction.md) as a covariation-inference probe (CC-vs-control gap, inverse-CC direction-flip, atypical-pair generalization; both NLI and forced-choice framings). Contingent on `comparative-correlative-anchor` + `constructional-divergence-operationalization`; cost < $1.
 
 ### Open questions
 

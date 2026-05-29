@@ -59,7 +59,7 @@ A minimal design that:
 
 Per charter §8 and [`CLAUDE.md`](../../../CLAUDE.md) rule 5, the choices in steps 2–3 are exactly where an autonomous loop would quietly cheat by retuning the threshold after seeing a null. They must be written into a decision page **before** the probe runs, not settled here:
 
-- `decisions/open/constructional-divergence-operationalization.md` (to be opened when this is picked up) — fix the instrument (NLI prompt vs. surprisal), the gap definition, the human-baseline comparison, and the promotion threshold; and state the memorization-control requirement.
+- [`decisions/open/constructional-divergence-operationalization.md`](../../decisions/open/constructional-divergence-operationalization.md) (opened 2026-05-29) — fixes the instrument (NLI prompt vs. surprisal vs. both), the gap definition, the human-baseline comparison, and the promotion threshold; and states the memorization-control requirement. The comparative-correlative design ([`design/comparative-correlative-v1`](../../../experiments/designs/comparative-correlative-v1.md)) is its first client.
 
 This open-question only **names** the design space; it does not resolve it.
 

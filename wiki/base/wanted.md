@@ -96,7 +96,7 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   status: received (2026-05-29, abstract from ACL Anthology + section-level body quotes from arXiv v1 HTML; see wiki/base/sources/scivetti-2025-beyond-memorization.md). Full PDF (pp. 1184–1201) holds per-construction + human-baseline numbers if a finding needs them.
 - [P2] AANN-specific human probing: Mahowald 2023 "A discerning several thousand judgments…" (EACL) / Chronis et al. 2023.
   why: the AANN portion of the constructional-probing line that Scivetti et al. 2025 does NOT cover; needed if the AANN conjecture wants a CxG-native human anchor beyond the existing Mahowald 2023 stimulus suite.
-  status: wanted
+  status: Mahowald 2023 RECEIVED as its own source page (2026-05-29; EACL, arXiv 2301.12564; see wiki/base/sources/mahowald-2023-aann-judgments.md — argument/findings; dataset on resource/mahowald-2023-aann-stimuli). Chronis et al. 2023 still wanted (fetch only if a finding cites it).
 
 ### Relational / dyadic-interaction anchors (for the relational-meaning pilot)
 
