@@ -87,7 +87,7 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   status: received (2026-05-28, page-level quotes from arXiv PDF pp. 1–14; no HTML version available; ar5iv redirect to abs page; PDF is binary-only via WebFetch; body quotes were extracted at prior ingestion step; no new quotes added 2026-05-28 due to HTML unavailability; see wiki/base/sources/lyre-2024-semantic-grounding.md)
 - [P1] Weissweiler, L., et al. 2022–24 (multiple papers on CxG probing of LLMs).
   why: nearest existing line to this project's wedge.
-  status: catalogued (2026-05-28, 2023 survey paper as primary entry; see wiki/base/sources/weissweiler-2023-cxg-insight.md; 2022 and 2024 empirical papers noted there but not yet given own pages)
+  status: catalogued (2026-05-28, 2023 survey paper as primary entry; see wiki/base/sources/weissweiler-2023-cxg-insight.md). 2022 comparative-correlative paper now RECEIVED as its own page (2026-05-29; EMNLP 2022, arXiv 2210.13181; see wiki/base/sources/weissweiler-2022-comparative-correlative.md). A 2024 empirical paper remains uncatalogued — give it a page only if a finding cites it (avoid guessing which 2024 paper without verifying).
 - [P2] Tayyar Madabushi, H., et al. on AANN and constructional probing.
   why: same line.
   status: received (2026-05-29, via Scivetti et al. 2025 — Tayyar Madabushi is senior author; see wiki/base/sources/scivetti-2025-beyond-memorization.md). NOTE: that paper covers 8 phrasal constructions but NOT AANN; the AANN-specific portion of this want is split out below.
