@@ -90,9 +90,12 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   status: catalogued (2026-05-28, 2023 survey paper as primary entry; see wiki/base/sources/weissweiler-2023-cxg-insight.md; 2022 and 2024 empirical papers noted there but not yet given own pages)
 - [P2] Tayyar Madabushi, H., et al. on AANN and constructional probing.
   why: same line.
-  status: wanted
-- [P2] Scivetti, A., et al. (recent constructional probing work).
-  why: same line; check what current title and venue are.
+  status: received (2026-05-29, via Scivetti et al. 2025 — Tayyar Madabushi is senior author; see wiki/base/sources/scivetti-2025-beyond-memorization.md). NOTE: that paper covers 8 phrasal constructions but NOT AANN; the AANN-specific portion of this want is split out below.
+- [P2] Scivetti, W., Tayyar Madabushi, H., et al. 2025. "Beyond Memorization: Assessing Semantic Generalization in LLMs Using Phrasal Constructions." IJCNLP-AACL 2025; arXiv 2501.04661.
+  why: nearest recent empirical CxG-probing instance; tests caused-motion, conative, way-manner (3 of this repo's conjectures) with human comparison.
+  status: received (2026-05-29, abstract from ACL Anthology + section-level body quotes from arXiv v1 HTML; see wiki/base/sources/scivetti-2025-beyond-memorization.md). Full PDF (pp. 1184–1201) holds per-construction + human-baseline numbers if a finding needs them.
+- [P2] AANN-specific human probing: Mahowald 2023 "A discerning several thousand judgments…" (EACL) / Chronis et al. 2023.
+  why: the AANN portion of the constructional-probing line that Scivetti et al. 2025 does NOT cover; needed if the AANN conjecture wants a CxG-native human anchor beyond the existing Mahowald 2023 stimulus suite.
   status: wanted
 
 ## Notes on fetching

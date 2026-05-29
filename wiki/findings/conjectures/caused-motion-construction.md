@@ -32,7 +32,7 @@ This is distinct from the `way`-construction conjecture ([`conjecture/way-constr
 
 ## Why this is interesting
 
-- It is the canonical demonstration that argument-structure meaning is **not** projected from the verb's lexical frame — *sneeze* is intransitive, takes no object and no path, yet the construction coerces both. If an LLM draws the causation-of-motion entailment here, the meaning it is reading cannot be coming from the verb's lexical entry; it must be `constructional`.
+- It is Goldberg's canonical argument that argument-structure meaning is **not** projected from the verb's lexical frame — *sneeze* is intransitive, takes no object and no path, yet the construction coerces both. If an LLM draws the causation-of-motion entailment here, the meaning it is reading cannot be coming from the verb's lexical entry; it must be `constructional`.
 - It bites the `inferential` side cleanly: confirmation requires showing the model treats the construction as *licensing the entailment* "Y moved / the subject caused it," not merely producing fluent continuations.
 - It exposes the project's central `constructional`-vs-`distributional` tension (see [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md)): a skeptic can say the model is tracking the high-frequency `V NP PP` skeleton, not the construction's meaning. The non-motion-verb manipulation is the lever that pries those apart, because the verb itself never co-occurs with motion entailments in the distribution.
 

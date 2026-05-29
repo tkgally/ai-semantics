@@ -5,9 +5,10 @@ title: How do we separate constructional-meaning sensitivity from an n-gram/freq
 meaning-senses:
   - constructional
   - distributional
+  - inferential
 status: open
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-05-29
 links:
   - rel: depends-on
     target: concept/constructional-meaning
