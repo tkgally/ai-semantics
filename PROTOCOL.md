@@ -17,15 +17,15 @@ Both modes obey the same non-negotiables (§1, §2, §5, §6) and the same chart
 
 1. `NEXT.md` — state, the next action(s), what is blocked.
 2. `wiki/index.md` — catalog of typed pages. Do not read individual pages until you know which ones the next action needs.
-3. `decisions/open/` — list filenames; read only those that touch the next action.
+3. `wiki/decisions/open/` — list filenames; read only those that touch the next action.
 4. Selectively read the pages the next action depends on (the `links:` graph is your guide).
 
 Do not load the whole wiki. Re-ground in `PROJECT.md` only when the unit feels off-charter.
 
 ## 2. Reconcile decisions — both modes
 
-For each file in `decisions/open/`:
-- If Tom has added a `resolution:` block or moved it to `resolved/`, apply it: move/keep the page in `decisions/resolved/` with date and rationale; find every page with that decision id in `contingent-on:` and either (a) promote it (remove from `contingent-on`, upgrade language from provisional to settled) or (b) retire it if the ratified decision contradicts it.
+For each file in `wiki/decisions/open/`:
+- If Tom has added a `resolution:` block or moved it to `resolved/`, apply it: move/keep the page in `wiki/decisions/resolved/` with date and rationale; find every page with that decision id in `contingent-on:` and either (a) promote it (remove from `contingent-on`, upgrade language from provisional to settled) or (b) retire it if the ratified decision contradicts it.
 - Otherwise leave it; if it still blocks the unit, re-flag in `NEXT.md`.
 
 **Never auto-resolve an open decision yourself.** Surfacing is the job; ratifying is Tom's.
@@ -48,7 +48,7 @@ Launch the wave's subagents in parallel. Every subagent prompt must carry the **
 - Read `CLAUDE.md`, `PROTOCOL.md` §5, `wiki/meaning-senses.md`, `wiki/index.md`, and the specific dependency pages — first.
 - Create only the named new files; do **not** edit `wiki/index.md`, `NEXT.md`, `log.md`, `CLAUDE.md`, `PROTOCOL.md`, `PROJECT.md`, or any file outside the assignment.
 - Use only exact, verifiable quotes with provenance. **Never fabricate a quote, page number, or human-annotated resource.** If a fetch fails, report it honestly and change nothing fabricated.
-- Respect anchor discipline: a claim/result needs an `anchors:` link to a resource, or `anchor: pending` + a queued `decisions/open/` entry. Never invent an anchor.
+- Respect anchor discipline: a claim/result needs an `anchors:` link to a resource, or `anchor: pending` + a queued `wiki/decisions/open/` entry. Never invent an anchor.
 - Keep anything in `contingent-on:` in provisional language.
 - Write cross-references as clickable relative links per `CLAUDE.md §Cross-references` (or leave plain and let `linkify.py` normalize at integration).
 - Return: files created, ids, links, any anchor/decision gaps, and any quote whose provenance is weaker than page-level.
@@ -93,7 +93,7 @@ Run, in order:
 1. **senselint** — `python3 tools/senselint.py` must report **0 errors**. This mechanically checks front-matter, meaning-senses vocabulary, typed-link relations + target resolution, anchor discipline, index coverage, and inline-link integrity. WARNs/INFOs are reviewed by hand (the `wanted.md` front-matter WARN and contingent-page INFOs are expected).
 2. **linkify** — `python3 tools/linkify.py` (then `--check` to confirm 0 remaining). Cross-references should be clickable relative links to existing pages.
 3. **provenance** — every new claim/result cites at least one in-repo `source`/`resource` page that actually bears on it; exact quotes match the source page's verbatim content.
-4. **human-anchor** — every empirical claim about LLM meaning has an `anchors:` link to a `resource`, OR a queued `decisions/open/` entry.
+4. **human-anchor** — every empirical claim about LLM meaning has an `anchors:` link to a `resource`, OR a queued `wiki/decisions/open/` entry.
 
 If any check fails, fix or queue (do not commit-and-promise-to-fix).
 
@@ -116,7 +116,7 @@ Rewrite `NEXT.md` from scratch:
 
 - **State:** one or two sentences — where the project is right now.
 - **Next concrete action:** the next bounded unit(s). In workflow mode, list a small backlog the next run can fan out; in single-unit mode, name the one unit. Include filenames needed.
-- **Blocked pending Tom:** every `decisions/open/` id gating promotion of work.
+- **Blocked pending Tom:** every `wiki/decisions/open/` id gating promotion of work.
 
 Append one dated line to `log.md` describing the run (mode, what landed, decisions queued, anything notable). Example:
 
@@ -132,7 +132,7 @@ Stop cleanly at the wind-up point (or, in workflow mode with a deadline, when th
 - Did I conflate two senses of "meaning"?
 - Did I cite a resource I had not actually checked?
 - Did I retune an indicator after seeing a null?
-- Did I promote a contingent finding without a `decisions/resolved/` entry?
+- Did I promote a contingent finding without a `wiki/decisions/resolved/` entry?
 - Did a subagent fabricate a quote or anchor, and did the coherence pass catch it?
 - Did two subagents collide on a shared file?
 - Did I leave work uncommitted or unmerged?

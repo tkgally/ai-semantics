@@ -53,7 +53,7 @@ This is distinct from the `way`-construction conjecture ([`conjecture/way-constr
 
 No in-repo resource currently covers the caused-motion construction with item-level human acceptability or entailment ratings. The canonical *inventory* is Goldberg (1995, ch. 7) — descriptive, not rated. A usable empirical anchor would be either (a) an acceptability-rated caused-motion stimulus set, or (b) the caused-motion subset of a broader argument-structure-construction norming study. Until one is in-repo and inspected, this conjecture carries `anchor: pending`.
 
-→ Open decision queued: [`decisions/open/caused-motion-anchor`](../../../decisions/open/caused-motion-anchor.md) — which human-anchored caused-motion stimulus set (if any exists and is public) should ground the probe, and what to do if none does (fall back to a verb-frame resource such as PropBank/VerbNet for the non-motion/intransitivity contrast, and queue a wanted-resource request to Tom).
+→ Open decision queued: [`decisions/open/caused-motion-anchor`](../../decisions/open/caused-motion-anchor.md) — which human-anchored caused-motion stimulus set (if any exists and is public) should ground the probe, and what to do if none does (fall back to a verb-frame resource such as PropBank/VerbNet for the non-motion/intransitivity contrast, and queue a wanted-resource request to Tom).
 
 ## Notes / caveats
 

@@ -9,6 +9,36 @@ The wiki is split into two strata:
 
 [`meaning-senses.md`](meaning-senses.md) is the controlled vocabulary every findings page must tag against.
 
+This page is the **project entry point**: start here to read the project's status and decide what to do next. The dashboard immediately below is the decision-relevant view; the full typed-page catalog follows under [Pages](#pages).
+
+---
+
+## Status & next steps — start here
+
+### What to do next
+- [`NEXT.md`](../NEXT.md) — current state and the next concrete action / fan-out backlog.
+- [`log.md`](../log.md) — dated history of every run.
+- Current synthesis: [`findings/theory/constructional-meaning-in-llms.md`](findings/theory/constructional-meaning-in-llms.md) — the live theory page (evidence ladder + where each finding sits).
+
+### Open decisions — blocking, pending Tom
+These gate promotion of contingent findings; nothing depending on them is settled until ratified. To resolve one, add a `resolution:` block or move the file to `wiki/decisions/resolved/` (see [`PROTOCOL.md`](../PROTOCOL.md) §2).
+
+- [`decisions/open/aann-stimulus-source`](decisions/open/aann-stimulus-source.md) — ratify Mahowald 2023 as the primary AANN human anchor (default), or switch.
+- [`decisions/open/aann-operationalization`](decisions/open/aann-operationalization.md) — ratify the continuation-likelihood contrast + T1 threshold (default), or switch.
+- [`decisions/open/way-construction-anchor`](decisions/open/way-construction-anchor.md) — ratify Option A (Goldberg 1995 examples as seed; anchor pending), or supply rated data.
+- [`decisions/open/cxg-probing-anchor`](decisions/open/cxg-probing-anchor.md) — scope the CxG-probing-validity claim to AANN (default), acquire a CxG-native broad anchor, or split the claim.
+- [`decisions/open/caused-motion-anchor`](decisions/open/caused-motion-anchor.md) — choose the human anchor for the caused-motion conjecture (or fall back to a verb-frame resource + queue a want).
+- [`decisions/open/conative-anchor`](decisions/open/conative-anchor.md) — choose the human anchor for the conative conjecture (default: Levin 1993 / VerbNet conative-class as partial anchor).
+
+### Resolved decisions
+- (none yet) — ratified decisions will be listed here, each linking its file under `wiki/decisions/resolved/`.
+
+### Fetch backlog & governance
+- [`base/wanted.md`](base/wanted.md) — prioritized sources to fetch (Tom has library access).
+- Charter [`PROJECT.md`](../PROJECT.md) · run discipline [`PROTOCOL.md`](../PROTOCOL.md) · conventions [`CLAUDE.md`](../CLAUDE.md).
+
+---
+
 ## Pages
 
 ### Controlled vocabulary

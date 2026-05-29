@@ -307,8 +307,8 @@ def load_index_text(repo):
 
 
 def decisions_open_ids(repo):
-    """Return set of filenames (without .md) in decisions/open/."""
-    d = os.path.join(repo, 'decisions', 'open')
+    """Return set of filenames (without .md) in wiki/decisions/open/."""
+    d = os.path.join(repo, 'wiki', 'decisions', 'open')
     ids = set()
     if os.path.isdir(d):
         for fname in os.listdir(d):
@@ -510,7 +510,7 @@ def check_anchor_discipline(relpath, meta, repo, report):
                 if cid_str not in open_ids:
                     report.warn(relpath,
                         f"anchor:pending references contingent-on id '{cid_str}' "
-                        f"but no matching decisions/open/{cid_str}.md found")
+                        f"but no matching wiki/decisions/open/{cid_str}.md found")
             report.info(relpath,
                 "anchor:pending — human anchor not yet in-repo (contingent-on set)")
         else:

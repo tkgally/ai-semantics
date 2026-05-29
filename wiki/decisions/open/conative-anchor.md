@@ -12,7 +12,7 @@ contingent-artifacts:
 
 ## Question
 
-The conative conjecture (`wiki/findings/conjectures/conative-construction.md`) needs a human anchor — ideally an item-level acceptability- or entailment-rated stimulus set for the English conative alternation (*She kicked at the ball* vs. *She kicked the ball*) — to compare against panel-model behavior. No such resource is currently in-repo. We need to decide which human-anchored resource grounds the probe, and what to do if no item-rated conative set is publicly available.
+The conative conjecture ([`wiki/findings/conjectures/conative-construction.md`](../../findings/conjectures/conative-construction.md)) needs a human anchor — ideally an item-level acceptability- or entailment-rated stimulus set for the English conative alternation (*She kicked at the ball* vs. *She kicked the ball*) — to compare against panel-model behavior. No such resource is currently in-repo. We need to decide which human-anchored resource grounds the probe, and what to do if no item-rated conative set is publicly available.
 
 The conjecture's discriminating manipulation holds the **verb constant** and varies only the construction (direct object vs. *at*-oblique), testing whether the construction cancels the completed-contact entailment. Prediction 2 additionally leans on **verb-class membership**: only Levin conative-class verbs should show the effect. The anchor must therefore support at least one of: (a) item-level human judgments of the completion/contact entailment or acceptability, or (b) certification of which verbs lexically enter the conative alternation.
 
@@ -33,13 +33,13 @@ The conjecture's discriminating manipulation holds the **verb constant** and var
 
 ### C. Defer and queue a wanted-resource request
 
-- If neither a rated conative set (A) nor the Levin/VerbNet framing (B) is judged sufficient, hold the conjecture at `proposed` and add a request to `wiki/base/wanted.md` for an item-rated conative/telicity stimulus set. Per the project's **no-human-subjects** rule, this means *existing* released ratings only — not new collection.
+- If neither a rated conative set (A) nor the Levin/VerbNet framing (B) is judged sufficient, hold the conjecture at `proposed` and add a request to [`wiki/base/wanted.md`](../../base/wanted.md) for an item-rated conative/telicity stimulus set. Per the project's **no-human-subjects** rule, this means *existing* released ratings only — not new collection.
 
 ## Provisional default (in force until Tom ratifies)
 
 **Option B**: anchor the *verb-class premise* on Levin (1993) / VerbNet conative-class membership, certifying that the chosen verbs do (and the controls do not) enter the conative, while a future run searches for an Option-A rated set. The conjecture carries `anchor: pending` until either (A) lands or Tom ratifies B as sufficient.
 
-Rationale: (i) the conjecture's Prediction 2 turns precisely on verb-class membership, which a verb-lexicon resource certifies directly; (ii) Levin/VerbNet are public and inspectable now, unlike any presumed rated conative set; (iii) it avoids fabricating a human-rated resource that may not exist. Caveat: Option B alone does **not** anchor the completion-entailment gradient (Prediction 1), so a `result` built on B can be promoted no further than `weak` on that prediction until an Option-A gradient anchor lands — consistent with the promotion logic in `open-question/constructional-vs-frequency-confound`.
+Rationale: (i) the conjecture's Prediction 2 turns precisely on verb-class membership, which a verb-lexicon resource certifies directly; (ii) Levin/VerbNet are public and inspectable now, unlike any presumed rated conative set; (iii) it avoids fabricating a human-rated resource that may not exist. Caveat: Option B alone does **not** anchor the completion-entailment gradient (Prediction 1), so a `result` built on B can be promoted no further than `weak` on that prediction until an Option-A gradient anchor lands — consistent with the promotion logic in [`open-question/constructional-vs-frequency-confound`](../../findings/open-questions/constructional-vs-frequency-confound.md).
 
 ## What would change the default
 

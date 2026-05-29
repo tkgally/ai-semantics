@@ -13,7 +13,7 @@ contingent-artifacts:
 
 ## Question
 
-The way-construction experiment design (`experiments/designs/way-construction-v1.md`) requires a human-anchored stimulus resource to ground the inference probe. Unlike the AANN probe, which compares model acceptability behavior against human acceptability ratings, the way-construction probe is an **inference probe** — it asks whether the model draws a path-traversal inference. The anchor therefore needs to supply human inference rates (or at minimum a stimulus list that linguistically-trained experts certify as genuine way-construction tokens with unambiguous path-traversal entailments).
+The way-construction experiment design ([`experiments/designs/way-construction-v1.md`](../../../experiments/designs/way-construction-v1.md)) requires a human-anchored stimulus resource to ground the inference probe. Unlike the AANN probe, which compares model acceptability behavior against human acceptability ratings, the way-construction probe is an **inference probe** — it asks whether the model draws a path-traversal inference. The anchor therefore needs to supply human inference rates (or at minimum a stimulus list that linguistically-trained experts certify as genuine way-construction tokens with unambiguous path-traversal entailments).
 
 No such rated dataset is currently in-repo. Goldberg (1995, ch. 9) is the canonical reference for the *way*-construction, but it is a theoretical monograph with expert-curated examples and no rating distribution. This decision gate identifies options and records the provisional default.
 

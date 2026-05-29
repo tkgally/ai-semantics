@@ -42,7 +42,7 @@ The conjecture: LLMs draw the path-traversal (self-motion) inference from *way*-
 
 ## Human anchor (pending)
 
-Goldberg (1995, ch. 9) gives the canonical inventory of *way*-construction stimuli with discussion. A modern rated version would be ideal. Queue [`decisions/open/way-construction-anchor`](../../../decisions/open/way-construction-anchor.md) at design time.
+Goldberg (1995, ch. 9) gives the canonical inventory of *way*-construction stimuli with discussion. A modern rated version would be ideal. Queue [`decisions/open/way-construction-anchor`](../../decisions/open/way-construction-anchor.md) at design time.
 
 ## Notes / caveats
 

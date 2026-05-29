@@ -12,7 +12,7 @@ contingent-artifacts:
 
 ## Question
 
-The caused-motion conjecture (`wiki/findings/conjectures/caused-motion-construction.md`) needs a human anchor — an item-level acceptability- or entailment-rated stimulus set for the English caused-motion construction (`Subj V Obj Obl(path/goal)`, *She sneezed the napkin off the table*) — to compare against panel-model behavior. No such resource is currently in-repo. We need to decide which human-anchored resource grounds the probe, and what to do if no item-rated caused-motion set is publicly available.
+The caused-motion conjecture ([`wiki/findings/conjectures/caused-motion-construction.md`](../../findings/conjectures/caused-motion-construction.md)) needs a human anchor — an item-level acceptability- or entailment-rated stimulus set for the English caused-motion construction (`Subj V Obj Obl(path/goal)`, *She sneezed the napkin off the table*) — to compare against panel-model behavior. No such resource is currently in-repo. We need to decide which human-anchored resource grounds the probe, and what to do if no item-rated caused-motion set is publicly available.
 
 Critically, the conjecture's discriminating manipulation is the use of **non-motion, non-transitive verbs** (*sneeze*, *laugh*, *yawn*) in a frame that requires an object and an oblique path. The anchor must support, at minimum, distinguishing verbs that lexically license `V NP PP` from verbs that do not.
 
@@ -33,7 +33,7 @@ Critically, the conjecture's discriminating manipulation is the use of **non-mot
 
 ### C. Defer and queue a wanted-resource request
 
-- If neither a rated caused-motion set (A) nor the VerbNet/PropBank framing (B) is judged sufficient, hold the conjecture at `proposed` and add a request to `wiki/base/wanted.md` for an item-rated caused-motion stimulus set (or for Goldberg-derived stimuli with fresh acceptability collection — noting the project's **no-human-subjects** rule, this means *existing* released ratings only, not new collection).
+- If neither a rated caused-motion set (A) nor the VerbNet/PropBank framing (B) is judged sufficient, hold the conjecture at `proposed` and add a request to [`wiki/base/wanted.md`](../../base/wanted.md) for an item-rated caused-motion stimulus set (or for Goldberg-derived stimuli with fresh acceptability collection — noting the project's **no-human-subjects** rule, this means *existing* released ratings only, not new collection).
 
 ## Provisional default (in force until Tom ratifies)
 

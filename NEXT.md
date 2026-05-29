@@ -33,13 +33,13 @@ Smaller queued NITs from the coherence sweep (fold into any wave): hedge "canoni
 
 Six open decisions now gate promotion of contingent work. The three new ones came from this session:
 
-- `decisions/open/aann-stimulus-source.md` — ratify Mahowald 2023 as primary AANN anchor (default), or switch.
-- `decisions/open/aann-operationalization.md` — ratify continuation-likelihood contrast + T1 threshold (default), or switch.
-- `decisions/open/way-construction-anchor.md` — ratify Option A (Goldberg 1995 examples as seed), or supply data.
-- `decisions/open/cxg-probing-anchor.md` — **new.** Scope the CxG-probing-validity claim to AANN (default), acquire a CxG-native broad human anchor, or split the claim.
-- `decisions/open/caused-motion-anchor.md` — **new.** Anchor for the caused-motion conjecture.
-- `decisions/open/conative-anchor.md` — **new.** Anchor for the conative conjecture (provisional default: Levin 1993 / VerbNet conative-class membership as partial anchor).
+- `wiki/decisions/open/aann-stimulus-source.md` — ratify Mahowald 2023 as primary AANN anchor (default), or switch.
+- `wiki/decisions/open/aann-operationalization.md` — ratify continuation-likelihood contrast + T1 threshold (default), or switch.
+- `wiki/decisions/open/way-construction-anchor.md` — ratify Option A (Goldberg 1995 examples as seed), or supply data.
+- `wiki/decisions/open/cxg-probing-anchor.md` — **new.** Scope the CxG-probing-validity claim to AANN (default), acquire a CxG-native broad human anchor, or split the claim.
+- `wiki/decisions/open/caused-motion-anchor.md` — **new.** Anchor for the caused-motion conjecture.
+- `wiki/decisions/open/conative-anchor.md` — **new.** Anchor for the conative conjecture (provisional default: Levin 1993 / VerbNet conative-class membership as partial anchor).
 
 ## Reminder for the next cold-start
 
-Charter: `PROJECT.md`. Schema: `CLAUDE.md`. Run discipline: `PROTOCOL.md` — **"continue working" ⇒ workflow mode (§0/§A)**: plan a wave, fan out parallel subagents, run an adversarial coherence pass, integrate + verify, commit the wave, and (if Tom gave a deadline) loop until the clock. Read `wiki/index.md` before opening individual pages. **Reconcile `decisions/open/` first** (six entries now). **Run `python3 tools/senselint.py` (0 errors) and `python3 tools/linkify.py` before each commit.** **Commit and merge to the default branch before stopping.**
+Charter: `PROJECT.md`. Schema: `CLAUDE.md`. Run discipline: `PROTOCOL.md` — **"continue working" ⇒ workflow mode (§0/§A)**: plan a wave, fan out parallel subagents, run an adversarial coherence pass, integrate + verify, commit the wave, and (if Tom gave a deadline) loop until the clock. Read `wiki/index.md` before opening individual pages. **Reconcile `wiki/decisions/open/` first** (six entries now). **Run `python3 tools/senselint.py` (0 errors) and `python3 tools/linkify.py` before each commit.** **Commit and merge to the default branch before stopping.**

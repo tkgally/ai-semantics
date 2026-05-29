@@ -8,7 +8,7 @@ Read this file every run. It encodes how `ai-semantics` is shaped. The charter i
 2. **Charter takes precedence.** If something here contradicts `PROJECT.md`, fix this file; don't drift.
 3. **Run discipline.** Follow `PROTOCOL.md` end-to-end every run, including the verification gates before commit. **When Tom says "continue working on the project," the default is workflow mode** — a multiagent dynamic workflow (orchestrator + parallel subagents + an adversarial coherence pass), looping waves until any stated deadline. See `PROTOCOL.md §0` and `§A`. Single-unit mode is the fallback for small or surgical tasks. Workflow mode parallelizes *generation*, never *judgement*: the gates, the human-anchor discipline, the no-fabrication rule, and "surface decisions, don't auto-resolve them" all still bind.
 4. **No human subjects.** Tom is the researcher, not a subject. All human bearing comes from existing resources (treebanks, sense-annotated corpora, dictionaries, acceptability sets, construction inventories). See `wiki/base/resources/`.
-5. **No silent gate skipping.** When you hit an operationalization or human-anchor question, write a page to `decisions/open/` with options and a provisional default; mark downstream artifacts contingent; surface in `NEXT.md`. A contingent finding is never promoted to settled until Tom ratifies it.
+5. **No silent gate skipping.** When you hit an operationalization or human-anchor question, write a page to `wiki/decisions/open/` with options and a provisional default; mark downstream artifacts contingent; surface in `NEXT.md`. A contingent finding is never promoted to settled until Tom ratifies it.
 
 ## Page types
 
@@ -40,7 +40,7 @@ meaning-senses:             # required on findings pages; see wiki/meaning-sense
 status: proposed            # for claim/result: proposed | supported | contested | retired
                             # for conjecture: proposed | designed | tested | retired
                             # for theory: draft | live | superseded
-contingent-on:              # decisions/open/ ids this depends on; empty if none
+contingent-on:              # wiki/decisions/open/ ids this depends on; empty if none
   - []
 created: 2026-05-28
 updated: 2026-05-28
@@ -66,7 +66,7 @@ Use only these relation strings in `links:` and in inline prose where typing mat
 - `anchors` — page A is the human resource grounding B (only `resource` → `claim/result`).
 - `supersedes` — page A replaces B (for theory revisions).
 
-A `claim` or `result` without at least one `anchors` link to a `resource` is a defect unless explicitly marked `anchor: pending` with a `decisions/open/` entry.
+A `claim` or `result` without at least one `anchors` link to a `resource` is a defect unless explicitly marked `anchor: pending` with a `wiki/decisions/open/` entry.
 
 ## Naming conventions
 
@@ -102,7 +102,7 @@ Every page under `wiki/findings/` must declare at least one entry in `meaning-se
 1. **senselint** — `python3 tools/senselint.py` reports **0 errors**. Mechanically covers front-matter, meaning-senses vocabulary, typed-link relations + resolution, anchor discipline, index coverage, and inline-link integrity. Expected residue: a WARN on `wanted.md` (no front-matter) and INFO notes on contingent pages.
 2. **linkify** — `python3 tools/linkify.py` then `--check` shows 0 remaining: cross-references are clickable links to existing pages.
 3. **provenance** (by hand) — every claim/result cites an in-repo `source` or `resource` page that bears on it (not just exists), with quotes matching the source page verbatim.
-4. **human-anchor** (by hand) — every empirical claim about LLM meaning carries an `anchors:` link to a `resource` page, OR a `decisions/open/` entry queuing the anchor question.
+4. **human-anchor** (by hand) — every empirical claim about LLM meaning carries an `anchors:` link to a `resource` page, OR a `wiki/decisions/open/` entry queuing the anchor question.
 
 ## What to write, what not to write
 

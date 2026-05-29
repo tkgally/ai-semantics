@@ -55,7 +55,7 @@ This is distinct from the other argument-structure conjectures in the wedge. [`c
 
 No in-repo resource currently covers the conative alternation with item-level human acceptability or entailment ratings. The canonical *inventory* is Levin (1993, §1.3 / the "Conative Alternation" class) — a descriptive verb-class list, **not** rated stimuli; it certifies *which verbs* enter the conative, which is the load-bearing premise for Prediction 2, but gives no gradient acceptability or entailment norms. Until a usable empirical anchor is in-repo and inspected, this conjecture carries `anchor: pending`.
 
-→ Open decision queued: [`decisions/open/conative-anchor`](../../../decisions/open/conative-anchor.md) — which human-anchored resource grounds the probe (a rated conative/telicity-completion stimulus set if one is public; else VerbNet/Levin verb-class membership as a partial anchor for the verb-class premise; else defer + queue a wanted-resource request).
+→ Open decision queued: [`decisions/open/conative-anchor`](../../decisions/open/conative-anchor.md) — which human-anchored resource grounds the probe (a rated conative/telicity-completion stimulus set if one is public; else VerbNet/Levin verb-class membership as a partial anchor for the verb-class premise; else defer + queue a wanted-resource request).
 
 ## Notes / caveats
 
