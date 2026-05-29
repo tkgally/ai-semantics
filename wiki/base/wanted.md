@@ -87,7 +87,7 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   status: received (2026-05-28, page-level quotes from arXiv PDF pp. 1–14; no HTML version available; ar5iv redirect to abs page; PDF is binary-only via WebFetch; body quotes were extracted at prior ingestion step; no new quotes added 2026-05-28 due to HTML unavailability; see wiki/base/sources/lyre-2024-semantic-grounding.md)
 - [P1] Weissweiler, L., et al. 2022–24 (multiple papers on CxG probing of LLMs).
   why: nearest existing line to this project's wedge.
-  status: catalogued (2026-05-28, 2023 survey paper as primary entry; see wiki/base/sources/weissweiler-2023-cxg-insight.md; 2022 and 2024 empirical papers noted there but not yet given own pages)
+  status: catalogued (2026-05-28, 2023 survey paper as primary entry; see wiki/base/sources/weissweiler-2023-cxg-insight.md). 2022 comparative-correlative paper now RECEIVED as its own page (2026-05-29; EMNLP 2022, arXiv 2210.13181; see wiki/base/sources/weissweiler-2022-comparative-correlative.md). A 2024 empirical paper remains uncatalogued — give it a page only if a finding cites it (avoid guessing which 2024 paper without verifying).
 - [P2] Tayyar Madabushi, H., et al. on AANN and constructional probing.
   why: same line.
   status: received (2026-05-29, via Scivetti et al. 2025 — Tayyar Madabushi is senior author; see wiki/base/sources/scivetti-2025-beyond-memorization.md). NOTE: that paper covers 8 phrasal constructions but NOT AANN; the AANN-specific portion of this want is split out below.
@@ -96,6 +96,23 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   status: received (2026-05-29, abstract from ACL Anthology + section-level body quotes from arXiv v1 HTML; see wiki/base/sources/scivetti-2025-beyond-memorization.md). Full PDF (pp. 1184–1201) holds per-construction + human-baseline numbers if a finding needs them.
 - [P2] AANN-specific human probing: Mahowald 2023 "A discerning several thousand judgments…" (EACL) / Chronis et al. 2023.
   why: the AANN portion of the constructional-probing line that Scivetti et al. 2025 does NOT cover; needed if the AANN conjecture wants a CxG-native human anchor beyond the existing Mahowald 2023 stimulus suite.
+  status: Mahowald 2023 RECEIVED as its own source page (2026-05-29; EACL, arXiv 2301.12564; see wiki/base/sources/mahowald-2023-aann-judgments.md — argument/findings; dataset on resource/mahowald-2023-aann-stimuli). Chronis et al. 2023 still wanted (fetch only if a finding cites it).
+
+### Relational / dyadic-interaction anchors (for the relational-meaning pilot)
+
+These would supply the human dyadic-interaction anchor the [`open-question/relational-meaning-pilot`](../findings/open-questions/relational-meaning-pilot.md) needs before any relational result can be promoted. None is in-repo; choosing among them is queued as `decisions/open/relational-anchor-shortlist`.
+
+- [P2] Clark, H.H. & Wilkes-Gibbs, D. 1986. "Referring as a collaborative process." *Cognition* 22(1): 1–39.
+  why: the canonical tangram-naming convergence paradigm; dyads collaboratively coin and compress shared labels over rounds — the closest human analogue to the iterated-reference-game pilot, and the strongest single candidate anchor.
+  status: wanted
+- [P3] Krauss, R.M. & Weinheimer, S. 1964/1966. Reference-phrase-shortening studies.
+  why: the earlier convergence-curve studies the entrainment measure would be calibrated against.
+  status: wanted
+- [P3] HCRC Map Task corpus (Anderson et al. 1991).
+  why: corpus-grade anchor for referential alignment / entrainment in goal-directed dyads.
+  status: wanted
+- [P3] Pickering, M.J. & Garrod, S. 2004. "Toward a mechanistic psychology of dialogue." *Behavioral and Brain Sciences* 27(2).
+  why: the "interactive alignment" framework — theoretical anchor for what alignment-across-levels predicts (and what it does not claim about meaning-constitution).
   status: wanted
 
 ## Notes on fetching

@@ -68,6 +68,36 @@ Abstract quoted verbatim from the **published ACL Anthology page** (https://acla
 
 > "Thus, our targeted series of experiments demonstrated that LLMs do process constructional semantics up to a point, yet our challenge datasets revealed the breaking point of understanding—where speakers are able to generalize the appropriate semantics to constructional slots filled by pragmatically atypical lexical items, but LLMs are much less proficient at this generalization."
 
+## Experimental results (added 2026-05-29, arXiv v2 HTML)
+
+Results-level quotes read and verified character-for-character against the **arXiv v2 HTML** (`https://arxiv.org/html/2501.04661v2`, fetched 2026-05-29, raw HTML cross-checked). Sections cited by heading/number as printed in v2. These complement — and do not duplicate — the dataset-structure facts (435/99 triples, the 8-construction inventory, the 3-way label scheme, models, example items, baselines) that live on the resource page [`resource/scivetti-2025-cxnli-dataset`](../resources/scivetti-2025-cxnli-dataset.md). Note that in v2 the conclusions are numbered **§8** (the existing v1 quote above is from "§9 Conclusions" under the v1 numbering); the two passages differ in wording across versions, so both are retained as version-labelled.
+
+**§4.3 Empirical Evaluation and Analysis (verbatim, arXiv v2 HTML) — Experiment 1 (CxNLI) result: models do well on the intuitive-but-rarer task:**
+
+> "Overall, we see that performance is high even in the zero-shot setting for GPT-4o and GPT-o1. We also observe that GPT-4o and Llama 3 70B consistently perform better than their smaller model counterparts GPT-3.5 and Llama 3 8B."
+
+For the Experiment 1 native-speaker baseline (90%) against which this "high" performance is compared, see the resource page (§4.1: "native speaker accuracy on the NLI task is 90%").
+
+**§4.3 Empirical Evaluation and Analysis (verbatim, arXiv v2 HTML) — what the Exp-1 result tracks (in-context learning, not a generic NLI signal):**
+
+> "Adding examples of Cxns for in-context learning boosts performance, while additional SNLI examples do not boost performance. This is especially true for GPT-3.5 and Llama 3 8B, which benefit substantially more from in-context learning from CxNLI. This reliance on in-context learning indicates that our datasets test a different axis of semantic knowledge than more general datasets like SNLI."
+
+**§5.3 Empirical Evaluation and Analysis (verbatim, arXiv v2 HTML) — Experiment 2 (CxNLI-Distinction) result: the drop on syntactically-identical / semantically-divergent forms:**
+
+> "As we can see in Table 6, performance is significantly lower than our results from Exp 1 in almost every prompt setting and across all models. The difference in performance is stark."
+
+Caveat (no fabrication): the **"over 40%"** figure and the explicit GPT-o1 framing appear in the **abstract** (quoted above), not in this §5.3 body text. The body reports the drop qualitatively ("significantly lower", "stark"); the >40% magnitude is an abstract-level claim. The per-cell figures live in Table 6, which was not transcribed verbatim here.
+
+**§5.3 Empirical Evaluation and Analysis (verbatim, arXiv v2 HTML) — model-vs-human contrast on Exp 2 (failure-to-generalize framing):**
+
+> "While these examples are also slightly more difficult for humans, the ceiling of human performance (IAA 83%) is well above current LLM performance, even for GPT-4o, GPT-o1 and Llama 3 70B. Again we see a large difference between the GPT-4o and the smaller models, and also see that GPT-o1 performs worse than GPT-4o."
+
+**§8 Conclusions and Future Work (verbatim, arXiv v2 HTML) — the two experiments together ("up to a point"); v2 wording of the line the v1 quote above renders differently:**
+
+> "the ability of models to generalize constructional meaning to both novel instantiations and distinct Cxns still lags substantially behind that of humans."
+
+This is the relationship the paper draws between the two experiments: models process constructional semantics on the entrenched Exp-1 cases but fail to carry it to the syntactically-identical-yet-divergent Exp-2 cases. See the §9 "breaking point of understanding" line quoted above (v1) for the matching framing.
+
 ## What it can ground
 
 - The `constructional` tag on conjecture/result pages that test argument-structure or phrasal constructions via inference rather than acceptability — this paper is a recent empirical exemplar with public data.
@@ -86,7 +116,8 @@ Abstract quoted verbatim from the **published ACL Anthology page** (https://acla
 - Behavioral evaluation; results are task accuracies, not direct evidence about what models represent.
 - Title and framing shifted between arXiv v1 ("Assessing Language Comprehension … Using Construction Grammar") and the published version ("Beyond Memorization … Using Phrasal Constructions"); the v1 body quotes here are from the earlier framing. If precise published-version wording of body passages is needed, the ACL PDF must be consulted.
 - The body section quotes are from the arXiv v1 HTML, not the camera-ready PDF; page-level provenance for body passages is pending PDF ingestion.
+- Results-level body quotes (the "## Experimental results" section) were added on 2026-05-29 from the **arXiv v2 HTML** (`https://arxiv.org/html/2501.04661v2`), verified character-for-character against the raw HTML; page-level PDF provenance for these passages is still pending. The "over 40%" figure is verified only in the abstract, not the v2 body; the §5.3 body reports the drop qualitatively, and Table 6 per-cell figures were not transcribed verbatim.
 
 ## Status in wanted.md
 
-Was `wanted` under both "Tayyar Madabushi et al. on AANN and constructional probing" and "Scivetti et al. (recent constructional probing work)" (P2). Now `received`: full abstract verbatim from the published ACL Anthology page, plus three section-level body quotes verbatim from arXiv v1 HTML (both fetched 2026-05-29). One paper resolves both wanted entries (Tayyar Madabushi is senior author). Full PDF (ACL, pp. 1184–1201) available for per-construction and human-baseline numbers if a finding needs them.
+Was `wanted` under both "Tayyar Madabushi et al. on AANN and constructional probing" and "Scivetti et al. (recent constructional probing work)" (P2). Now `received`: full abstract verbatim from the published ACL Anthology page, three section-level body quotes verbatim from arXiv v1 HTML, plus (added 2026-05-29) a results-level "## Experimental results" section of body quotes verbatim from arXiv v2 HTML (§4.3 / §5.3 / §8), all fetched 2026-05-29. One paper resolves both wanted entries (Tayyar Madabushi is senior author). Full PDF (ACL, pp. 1184–1201) still available for Table 6 per-cell numbers and page-level provenance if a finding needs them.

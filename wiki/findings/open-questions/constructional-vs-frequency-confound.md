@@ -35,7 +35,7 @@ What is the minimal additional evidence that licenses concluding (1) rather than
 
 ## Why it matters
 
-This is the load-bearing methodological question for the entire constructional program. If it is not answered, every confirmed conjecture in the wedge is vulnerable to the one-line objection "you measured n-gram frequency, not meaning," and no `result` can be promoted past `weak` (see the "Weak" branches in all four conjectures, which are exactly this confound). The charter's `distributional`-vs-`constructional` boundary ([`meaning-senses.md`](../../meaning-senses.md)) is contested precisely here. Resolving the question is what lets a result discriminate between the two camps instead of being claimed by both.
+This is the load-bearing methodological question for the entire constructional program. If it is not answered, every confirmed conjecture in the wedge is vulnerable to the one-line objection "you measured n-gram frequency, not meaning," and no `result` can be promoted past `weak` (see the "Weak" branches across the project's constructional conjectures, which are exactly this confound). The charter's `distributional`-vs-`constructional` boundary ([`meaning-senses.md`](../../meaning-senses.md)) is contested precisely here. Resolving the question is what lets a result discriminate between the two camps instead of being claimed by both.
 
 ## Why it is hard
 
@@ -58,7 +58,7 @@ A satisfying answer names which of these the project will treat as **necessary**
 
 ## Relation to the existing wedge
 
-This question generalizes the "Weak" / memorization branches already written into all four conjectures and the operationalization-gate notes in [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) and [`conjecture/caused-motion-construction`](../conjectures/caused-motion-construction.md). It is the natural **method spine** that a future loop turn should resolve once, then reuse across probes — rather than re-litigating the confound per conjecture.
+This question generalizes the "Weak" / memorization branches already written into the project's constructional conjectures (aann, way, function-word, caused-motion, conative, comparative-correlative) and the operationalization-gate notes in [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) and [`conjecture/caused-motion-construction`](../conjectures/caused-motion-construction.md). It is the natural **method spine** that a future loop turn should resolve once, then reuse across probes — rather than re-litigating the confound per conjecture.
 
 ## Pointers for the next visit
 

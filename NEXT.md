@@ -2,42 +2,50 @@
 
 ## State
 
-Workflow-mode wave (orchestrator + 4 parallel subagents + 1 adversarial coherence pass), one wave, no deadline. It landed, in one PR:
+Workflow-mode continuous run: **9 waves** (orchestrator + parallel generation subagents + an adversarial coherence pass per wave, plus a closing identity/coherence audit), one PR. All waves gated clean (senselint 0 errors; linkify clean). What landed:
 
-- **Concepts filled** — the last three base concept stubs are now full pages, matching the `distributional-meaning` shape (front-matter, meaning-senses, typed links, ≥1 verified quote, a "Live tension" note):
-  - `concept/inferential-meaning` — conceptual-role / inferential semantics; Piantadosi & Hill's "meaning without reference" as the strongest pro-LLM-meaning position; `contradicts concept/grounding`, `refines concept/distributional-meaning`.
-  - `concept/referential-meaning` — sense / reference / externalist sub-positions; grounded in Bender & Koller. **Honest gap flagged:** Putnam 1975 / Evans 1973 are *not* in-repo, so the `referential.externalist` sub-tag has no in-repo primary anchor yet (both in `wanted.md`).
-  - `concept/grounding` — Bender & Koller's binary form/meaning denial vs. Lyre's grounding-as-gradual three-dimensional typology; the project's gradient stance flagged as a contestable working choice.
-  - **All six base concepts are now filled.** No concept stubs remain.
-- **New source** `source/scivetti-2025-beyond-memorization` (Scivetti, Tayyar Madabushi et al. 2025, IJCNLP-AACL; arXiv 2501.04661) — a CxG inference benchmark over 8 phrasal constructions with human comparison; GPT-o1 drops >40% on syntactically-identical/semantically-divergent forms. **Resolves both P2 wants** (one paper; Tayyar Madabushi is senior author). Abstract verbatim from ACL Anthology + 3 section-level body quotes from arXiv v1 HTML; quotes independently re-verified by the cataloguing subagent.
-- **NITs folded in** — "canonical demonstration" → "Goldberg's canonical argument" in `caused-motion-construction`; `inferential` added to `constructional-vs-frequency-confound`'s meaning-senses.
+- **Scivetti 2025 dataset catalogued + surfaced.** New [`resource/scivetti-2025-cxnli-dataset`](wiki/base/resources/scivetti-2025-cxnli-dataset.md) (CxNLI 435 triples/8 constructions; CxNLI-Distinction 99/5; native-speaker baseline ≈0.90/≈0.83; 3-way NLI). Documented at the **paper level only** — the release repo (`anonymous.4open.science/...`) was **not reachable** this run, so `status: external-only`, item-level inspection pending. **Surfaced (not auto-resolved)** as a candidate Option D in `caused-motion-anchor`, `conative-anchor`, `way-construction-anchor`, and (default Option A) the new `comparative-correlative-anchor`.
+- **First human-anchored claim.** [`claim/constructional-divergent-form-generalization-gap`](wiki/findings/claims/constructional-divergent-form-generalization-gap.md) — LLMs track constructional form–meaning pairings "up to a point" but show a >40% (GPT-o1) divergent-form gap vs. the human baseline. Anchored to the Scivetti resource; aggregate-scoped so `contingent-on: []`. Carefully bounded (a gap, not an absence).
+- **Comparative-correlative wedge added.** New [`source/weissweiler-2022-comparative-correlative`](wiki/base/sources/weissweiler-2022-comparative-correlative.md) (encoder PLMs recognise CC form but fail to use its meaning), [`conjecture/comparative-correlative-construction`](wiki/findings/conjectures/comparative-correlative-construction.md) (the project's first *longitudinal* construction conjecture: 2022 encoders → 2025 decoders), and [`design/comparative-correlative-v1`](experiments/designs/comparative-correlative-v1.md) (covariation-inference probe, NLI + forced-choice, cost <$1).
+- **Mahowald 2023 AANN paper** now has its own [`source/mahowald-2023-aann-judgments`](wiki/base/sources/mahowald-2023-aann-judgments.md) (argument/findings; the dataset was already the stimuli resource); directly grounds the AANN-ceiling claim.
+- **Theory page** folded in the four filled concepts + the Scivetti claim at the Tier 3→4 boundary; outbound link graph completed in the audit.
+- **Relational axis sharpened.** [`open-question/relational-meaning-pilot`](wiki/findings/open-questions/relational-meaning-pilot.md) is now a concrete iterated-reference-game pilot (live-vs-shuffled trajectory-dependence discriminator); opened `relational-anchor-shortlist`; added relational wants.
+- **Lexical axis seeded.** [`open-question/lexical-polysemy-gradience`](wiki/findings/open-questions/lexical-polysemy-gradience.md) — first non-grammatical wedge (graded polysemy vs. discrete sense; candidate anchors WiC / graded usage-similarity / WordNet-SemCor; no decision opened).
+- **New methodological open-question + decision.** [`open-question/constructional-divergence-probe`](wiki/findings/open-questions/constructional-divergence-probe.md) (turning the external Scivetti negative into a project-run result) and `constructional-divergence-operationalization` (instrument/thresholds/frequency-matching for the divergence-probe family).
+- **Identity/coherence audit (wave 9 capstone)** across the whole findings layer: no BLOCKERs; fixed stale conjecture counts, the theory link block, and two over-tight phrasings.
 
-Coherence pass returned **no BLOCKERs**: all quotes verbatim against in-repo sources, no fabrication (referential-meaning carries zero Putnam/Evans quotes/citations, as required), typed links clean, the four concept pages partition cleanly. One real typo fixed (`a expression's` → `an`); the verbatim "others symbols" quote was correctly left intact. senselint: 0 errors (expected `wanted.md` WARN + 4 contingent INFOs).
-
-**Lead worth acting on next:** Scivetti et al. 2025 probes **caused-motion, conative, and way-manner** — three of this repo's conjectures — *with public prompts/responses and a human baseline*. That public dataset is a candidate human anchor for three currently-pending anchor decisions (see below).
+Run stopped at ~53 min (under the ~2h budget) per `PROTOCOL.md §A5`: the backlog of genuinely-tractable, non-blocked, non-fabricating units was exhausted — the remaining high-value steps all gate on Tom's open decisions or on the Scivetti repo becoming reachable. Continuing would have meant padding (mechanical extra conjectures) or further bloating the decision queue. Subagent tokens this run ≈ 0.65M across 9 generation + 4 coherence/audit passes.
 
 ## Next concrete action
 
-Default is **workflow mode** (`PROTOCOL.md §A`). Suggested backlog of independent, now-tractable units (disjoint files):
+Default is **workflow mode** (`PROTOCOL.md §A`). The single biggest unblock is external (Tom ratifies decisions, or a future environment can reach the Scivetti repo). Tractable units for the next wave, in priority order:
 
-1. **Catalogue the Scivetti et al. 2025 public dataset as a `resource` page** under `wiki/base/resources/` (prompts + model responses + human comparison on 8 constructions). This is the high-value unit: it could supply a CxG-native human anchor for `caused-motion-anchor`, `conative-anchor`, and `way-construction-anchor` (three open decisions). Inspect the actual dataset (the paper says it is publicly available) and record at the item/annotation level *what it can ground*, not by existence. Then **surface** (do not auto-resolve) the option in each of those three decision pages.
-2. **Deepen `source/scivetti-2025-beyond-memorization` to page-level** from the ACL camera-ready PDF (pp. 1184–1201) — per-construction numbers and the human-baseline figures — if a finding needs them. Body quotes are currently arXiv-v1-HTML/section-level only.
-3. **Deepen a still-section-level source** (`piantadosi-hill-2022`, `weissweiler-2023`, or `mahowald-2024`) toward page-level quotes, *only if* the original is re-fetchable — never fabricate pagination.
-4. **Extend the theory page or an open question** now that all concepts are filled: e.g. fold the four filled concepts into `theory/constructional-meaning-in-llms`'s framing, or sharpen `open-question/relational-meaning-pilot`.
+1. **If the Scivetti release repo is reachable** (`https://anonymous.4open.science/r/beyond-memorization-B82B` — was 403/proxied this run): mirror it into `experiments/data/` (license-check first), inspect item-level structure, confirm per-construction counts and **whether per-item human labels are released**, and upgrade [`resource/scivetti-2025-cxnli-dataset`](wiki/base/resources/scivetti-2025-cxnli-dataset.md) from `external-only`. This unblocks the four CxG anchor decisions and the divergence-probe designs at once.
+2. **Develop the lexical wedge**: read the WiC / graded usage-similarity / WSD-as-classification line, then turn [`open-question/lexical-polysemy-gradience`](wiki/findings/open-questions/lexical-polysemy-gradience.md) into a conjecture + catalogue a *gradience-bearing* sense resource (verify it carries graded, not just discrete, annotations). Non-blocked; broadens beyond the grammatical wedge.
+3. **Deepen a still-section-level source toward page-level** (`piantadosi-hill-2022`, `weissweiler-2023`, `lyre-2024`) — only if a finding needs the page-level numbers, and only if re-fetchable; never fabricate pagination.
+4. **Do NOT** mechanically add more construction conjectures (resultative, let-alone, …) just to fill the Scivetti 8 — that is padding and adds to the decision queue. Add one only if a specific finding needs it.
 
-Match the shape of the filled concept pages. Run `senselint.py` (0 errors) + `linkify.py` before commit.
+Match the shape of the existing typed pages. Run `senselint.py` (0 errors) + `linkify.py` before commit.
 
 ## Blocked pending Tom
 
-Six open decisions gate promotion of contingent work — **unchanged this run** (none resolved). Note the new Scivetti lead bears on three of them (it may supply the missing anchor, pending Tom's ratification):
+**Nine** open decisions gate promotion of contingent work. **Consolidation note:** four of them name the *same* Scivetti dataset as candidate anchor, gated on the *same* repo inspection — they can be ratified as **one bundle**.
 
-- `wiki/decisions/open/aann-stimulus-source.md` — ratify Mahowald 2023 as primary AANN anchor (default), or switch.
-- `wiki/decisions/open/aann-operationalization.md` — ratify continuation-likelihood contrast + T1 threshold (default), or switch.
-- `wiki/decisions/open/way-construction-anchor.md` — ratify Option A (Goldberg 1995 examples as seed), or supply data. **Scivetti 2025 tests way-manner with a human baseline — a candidate anchor.**
-- `wiki/decisions/open/cxg-probing-anchor.md` — scope the CxG-probing-validity claim to AANN (default), acquire a CxG-native broad human anchor, or split the claim. **Scivetti 2025 is a candidate CxG-native broad anchor.**
-- `wiki/decisions/open/caused-motion-anchor.md` — anchor for the caused-motion conjecture. **Scivetti 2025 tests caused-motion with a human baseline — a candidate anchor.**
-- `wiki/decisions/open/conative-anchor.md` — anchor for the conative conjecture (provisional default: Levin 1993 / VerbNet). **Scivetti 2025 tests conative with a human baseline — a candidate anchor.**
+**Scivetti-anchor bundle (one decision for Tom — "adopt Scivetti for these four pending repo inspection, or not"):**
+- [`decisions/open/caused-motion-anchor`](wiki/decisions/open/caused-motion-anchor.md) — provisional default B (VerbNet/PropBank); Scivetti surfaced as Option D.
+- [`decisions/open/conative-anchor`](wiki/decisions/open/conative-anchor.md) — provisional default B (Levin/VerbNet); Scivetti Option D (its verified example item is directly on Prediction 1).
+- [`decisions/open/way-construction-anchor`](wiki/decisions/open/way-construction-anchor.md) — provisional default A (Goldberg seed); Scivetti Option D realizes the gestured Option C.
+- [`decisions/open/comparative-correlative-anchor`](wiki/decisions/open/comparative-correlative-anchor.md) — provisional default A (Scivetti CC subset pending inspection); fallback B (Weissweiler-2022 seed).
+
+**AANN line:**
+- [`decisions/open/aann-stimulus-source`](wiki/decisions/open/aann-stimulus-source.md) — ratify Mahowald 2023 as primary AANN anchor (default), or switch.
+- [`decisions/open/aann-operationalization`](wiki/decisions/open/aann-operationalization.md) — ratify continuation-likelihood contrast + T1 threshold (default), or switch.
+- [`decisions/open/cxg-probing-anchor`](wiki/decisions/open/cxg-probing-anchor.md) — scope the CxG-probing-validity claim to AANN (default), acquire a CxG-native broad anchor (Scivetti is now a candidate), or split the claim.
+
+**Operationalization / relational:**
+- [`decisions/open/constructional-divergence-operationalization`](wiki/decisions/open/constructional-divergence-operationalization.md) — instrument (NLI vs forced-choice vs both) + thresholds + frequency-matching for the divergence-probe family (default: both instruments, 30pp/70%/15pp, frozen at item-commit). Governs the CC design.
+- [`decisions/open/relational-anchor-shortlist`](wiki/decisions/open/relational-anchor-shortlist.md) — human dyadic-interaction anchor for the relational pilot (default: Clark & Wilkes-Gibbs 1986 + Pickering & Garrod 2004 backdrop).
 
 ## Reminder for the next cold-start
 
-Charter: `PROJECT.md`. Schema: `CLAUDE.md`. Run discipline: `PROTOCOL.md` — **"continue working" ⇒ workflow mode (§0/§A)**: plan a wave, fan out parallel subagents, run an adversarial coherence pass, integrate + verify, commit the wave, and (if Tom gave a deadline) loop until the clock. Read `wiki/index.md` before opening individual pages. **Reconcile `wiki/decisions/open/` first** (six entries). **Run `python3 tools/senselint.py` (0 errors) and `python3 tools/linkify.py` before each commit.** **Commit and merge to the default branch before stopping.**
+Charter: `PROJECT.md`. Schema: `CLAUDE.md`. Run discipline: `PROTOCOL.md` — **"continue working" ⇒ workflow mode (§0/§A)**: plan a wave, fan out parallel subagents, run an adversarial coherence pass, integrate + verify, commit per wave, loop until any stated deadline OR until the non-blocked backlog is exhausted (§A5 — don't pad). Read `wiki/index.md` before opening pages. **Reconcile `wiki/decisions/open/` first** (nine entries; four are the Scivetti-anchor bundle). **Run `python3 tools/senselint.py` (0 errors) and `python3 tools/linkify.py` before each commit.** **The Scivetti release repo was unreachable this run** — re-test reachability early; it is the gate on the most valuable next step. Commit and merge to the default branch before stopping.

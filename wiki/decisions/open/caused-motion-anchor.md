@@ -35,14 +35,22 @@ Critically, the conjecture's discriminating manipulation is the use of **non-mot
 
 - If neither a rated caused-motion set (A) nor the VerbNet/PropBank framing (B) is judged sufficient, hold the conjecture at `proposed` and add a request to [`wiki/base/wanted.md`](../../base/wanted.md) for an item-rated caused-motion stimulus set (or for Goldberg-derived stimuli with fresh acceptability collection — noting the project's **no-human-subjects** rule, this means *existing* released ratings only, not new collection).
 
+### D. Scivetti et al. 2025 CxNLI dataset as an inference-rate anchor (surfaced 2026-05-29 — candidate, not yet adopted)
+
+- **What:** the public dataset catalogued at [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md). `Caused-Motion` is one of its 8 constructions, with human-annotated NLI triples and a native-speaker accuracy baseline (≈0.90).
+- **Why it bears on this decision:** unlike Option B (which only certifies the *verb-side non-licensing premise* and leaves the construction's gradient to the model), Scivetti supplies **human-licensed inference labels on caused-motion sentences themselves** — the inference-licensing level the conjecture actually targets — plus an aggregate human baseline for direct LLM-vs-human comparison on the same items. Its verified caused-motion example item (premise *"I threw the stone across the river."*, hypothesis *"I caused the stone to move across the river by throwing it."*, label Entailment) is exactly the caused-motion entailment the conjecture probes.
+- **Limits to weigh:** small N per construction (≈435 triples / 8 constructions); the human bearing verified so far is an *aggregate* accuracy, not per-item graded ratings; the data repository was not inspectable this run (whether per-item human labels are released is unconfirmed); the items use ordinary motion-licensing verbs (e.g. *throw*), so whether the set includes the conjecture's discriminating **non-motion** verbs (*sneeze*, *laugh*) must be confirmed by inspecting the data.
+- **Status:** a candidate only — surfaced for Tom's consideration, not adopted. Adoption needs (a) Tom's ratification and (b) item-level inspection of the repo (see the resource page's "Pointer for next visit").
+
 ## Provisional default (in force until Tom ratifies)
 
-**Option B**: anchor the *non-licensing premise* on VerbNet/PropBank verb-frame inventories, certifying that the chosen non-motion verbs do not lexically license `V NP PP`, while a future run searches for an Option-A rated set. The conjecture carries `anchor: pending` until either (A) lands or Tom ratifies B as sufficient.
+**Option B** remains the provisional default (a new candidate, Option D, was surfaced 2026-05-29 but is not adopted): anchor the *non-licensing premise* on VerbNet/PropBank verb-frame inventories, certifying that the chosen non-motion verbs do not lexically license `V NP PP`, while a future run searches for an Option-A rated set. The conjecture carries `anchor: pending` until either (A) lands or Tom ratifies B as sufficient.
 
 Rationale: (i) the conjecture's force comes precisely from verbs that *cannot* project the frame, and a verb-frame resource certifies that directly; (ii) VerbNet/PropBank are public and inspectable now, unlike any presumed rated caused-motion set; (iii) it avoids fabricating a human-rated resource that may not exist.
 
 ## What would change the default
 
+- If item-level inspection of the Scivetti repo confirms human-licensed caused-motion inference labels (Option D), that is a stronger anchor for the *inference* the conjecture targets than Option B's verb-frame premise — promote to D (or D-as-supplement-to-B).
 - If a public, item-rated caused-motion acceptability set is found and inspected, promote to Option A (it gives a gradient anchor, which B cannot).
 - If VerbNet/PropBank turn out not to cleanly mark the non-motion verbs as excluding `V NP PP` (e.g., they list a coerced frame), the premise weakens and we fall back to Option C plus a wanted-resource request.
 
