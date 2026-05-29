@@ -11,10 +11,24 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-05-29
 links:
   - rel: refines
     target: claim/formal-competence-aann-ceiling
+  - rel: depends-on
+    target: claim/constructional-divergent-form-generalization-gap
+  - rel: depends-on
+    target: resource/scivetti-2025-cxnli-dataset
+  - rel: depends-on
+    target: source/scivetti-2025-beyond-memorization
+  - rel: depends-on
+    target: concept/constructional-meaning
+  - rel: depends-on
+    target: concept/distributional-meaning
+  - rel: depends-on
+    target: concept/inferential-meaning
+  - rel: depends-on
+    target: concept/grounding
   - rel: depends-on
     target: conjecture/aann-construction
   - rel: depends-on
@@ -76,7 +90,7 @@ Two caveats travel with the wedge and must not be elided:
 
 ## What "meaning" is, on this page
 
-The project refuses the unqualified word "meaning" ([`wiki/meaning-senses.md`](../../meaning-senses.md)). Three senses are in play here, and the theory keeps them separate.
+The project refuses the unqualified word "meaning" ([`wiki/meaning-senses.md`](../../meaning-senses.md)). Three senses are in play here, and the theory keeps them separate. Each is now a full concept page: [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md), [`concept/inferential-meaning`](../../base/concepts/inferential-meaning.md), [`concept/constructional-meaning`](../../base/concepts/constructional-meaning.md), with the orthogonal grounding axis treated at [`concept/grounding`](../../base/concepts/grounding.md).
 
 - **Distributional** — meaning as co-occurrence structure; the implicit theory of the next-token objective (Firth/Harris). This is the *null hypothesis* against which constructional-meaning claims must be set: a fluent model has distributional structure for free. The senses page flags that distributional structure "by itself ... is silent on reference and on truth — this is exactly the contested boundary."
 - **Inferential** — meaning as inferential role: a construction means what it licenses you to infer. Piantadosi & Hill 2022 ([`source/piantadosi-hill-2022-meaning-without-reference`](../../base/sources/piantadosi-hill-2022-meaning-without-reference.md)) give the framing under which inference-preservation counts as genuinely semantic: "meaning ... arises from conceptual role," constituted by "the relationships between internal representational states" (abstract). On this view, a model that systematically licenses a construction's characteristic inferences has more than distributional mimicry.
@@ -122,13 +136,14 @@ The ladder is the page's claim, in compressed form: **form-acceptability < surpr
 - [`conjecture/aann-construction`](../conjectures/aann-construction.md) — spans **Tier 1 → Tier 3** (surprisal contrast, evaluative gradient, held-out generalization). Status `designed`; **contingent on two open decisions** (`aann-stimulus-source`, `aann-operationalization`). This theory therefore treats its eventual confirmation as provisional: until Tom ratifies those decisions, any AANN result is contingent and may not be promoted (per [`CLAUDE.md`](../../../CLAUDE.md) always-on rule 5).
 - [`conjecture/dative-alternation-information-structure`](../conjectures/dative-alternation-information-structure.md) — **Tier 2** (gradient information-structure tracking). Anchor pending; not yet at design.
 - [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) — **Tier 1 → Tier 4** in the general case, and the most abstract conjecture; its operationalization gate (what counts as a frequency-matched pair) is named as the place a loop could "quietly cheat." Anchor pending.
-- [`conjecture/way-construction`](../conjectures/way-construction.md) — **Tier 4** (inference-licensing); the cleanest case where meaning is located in the construction. Anchor pending (Goldberg 1995 inventory; `way-construction-anchor` to be opened at design).
+- [`conjecture/way-construction`](../conjectures/way-construction.md) — **Tier 4** (inference-licensing); the cleanest case where meaning is located in the construction. Anchor pending (Goldberg 1995 inventory; `way-construction-anchor`, with [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md) surfaced as a candidate Option D — a CxG-native inference anchor with a human baseline).
+- [`claim/constructional-divergent-form-generalization-gap`](../claims/constructional-divergent-form-generalization-gap.md) — **Tier 3 → Tier 4**, and the first claim on this ladder carrying in-repo *human-comparison* evidence rather than only a methodological commitment. It reads Scivetti et al. 2025's >40% divergent-form drop (GPT-o1) against a native-speaker baseline (≈0.90 / ≈0.83) as a *negative* result at the generalization / inference-licensing boundary for current models: the same surface form does not generalize to its divergent constructional meaning the way human speakers manage. Status `proposed`; `contingent-on: []` (it rests on the aggregate published result and aggregate baseline, not on the per-construction anchors). Anchored to [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md).
 
-Read top-down, the project's existing wedge already targets every rung of the ladder, but the *evidence in hand* is currently only Tier 0 (one `proposed` claim) plus four conjectures at `designed`/`proposed`. No rung above 0 has a *result* yet. This page should be rewritten the moment the first AANN probe returns.
+Read top-down, the project's existing wedge already targets every rung of the ladder. The *evidence in hand* is now richer than at this page's first draft: one `proposed` Tier-0 claim (the AANN ceiling), four conjectures at `designed`/`proposed` spanning Tiers 1–4, and — new this revision — one `proposed` claim at the Tier 3→4 boundary that, for the first time, brings *human-comparison data from an existing resource* to bear on the upper ladder ([`claim/constructional-divergent-form-generalization-gap`](../claims/constructional-divergent-form-generalization-gap.md)). Two cautions keep this from being over-read. First, that claim is a *negative* finding — a generalization gap — not a positive demonstration that a model has climbed the ladder; it is consistent with the prediction that the upper rungs are hard to fake, but it does not itself show any rung *reached*. Second, it is a claim about an *external* paper's published aggregate result, not a `result` page from a probe of the project's own design: no probe of this project's own instruments has returned, and no *positive* result above Tier 0 exists yet. This page should be rewritten when the first AANN probe returns, when a positive upper-tier result lands, or when the Scivetti per-construction data is inspected and the relevant anchor decisions are ratified.
 
 ## The under-explored axis: relational meaning
 
-Every rung above is a `model-internal` probe — it asks what a single model knows. The charter's distinctive axis, `relational` meaning (meaning constituted *between* agents, not computed within one), is untouched by the ladder. [`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md) records this gap squarely: the founding conjectures "are all `model-internal` probes ... None of them touches the relational axis. Without a pilot here, the relational angle remains rhetoric."
+Every rung above is a `model-internal` probe — it asks what a single model knows. The charter's distinctive axis, `relational` meaning (meaning constituted *between* agents, not computed within one), is untouched by the ladder. [`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md) records this gap squarely: the founding conjectures "are all `model-internal` probes ... None touches the relational axis. Without a pilot here, the relational angle remains rhetoric." That open question is now sharpened to a concrete iterated dyadic reference-game pilot whose live-vs-shuffled-history contrast is the candidate bottom rung of the relational "second ladder."
 
 The relational axis is not a higher rung of the same ladder; it is a *second ladder* whose bottom rung is not yet defined. The open question's own criterion — a measure distinguishing "meaning constituted between" from "meaning computed in each, then averaged," e.g. a behavior shift in one agent that depends on the *trajectory* of the other's prior outputs — is the project's standing IOU. This theory **supports** that open question by marking it as the natural extension: the form/meaning ladder is the first-loop object; a relational ladder is the second-loop object. Until a relational pilot exists, claims on this page are scoped to single-model constructional meaning.
 
@@ -152,6 +167,6 @@ It also forbids promoting a contingent conjecture's eventual result to settled l
 
 ## Status and revision hook
 
-`status: draft`. This page is `contingent-on: []` *directly* — it introduces no new empirical claim of its own and depends on no open decision in its own right. But it leans on findings that are themselves contingent: [`conjecture/aann-construction`](../conjectures/aann-construction.md) is contingent on `aann-stimulus-source` and `aann-operationalization`, and three conjectures have anchors still pending. The prose above flags those dependencies as provisional rather than settled, per [`CLAUDE.md`](../../../CLAUDE.md) rule 5; this theory therefore claims a *structure* (the ladder, the placements) and not yet any *result*.
+`status: draft`. This page is `contingent-on: []` *directly* — it introduces no new empirical claim of its own and depends on no open decision in its own right. It leans on findings that are themselves contingent: [`conjecture/aann-construction`](../conjectures/aann-construction.md) is contingent on `aann-stimulus-source` and `aann-operationalization`, and three conjectures have anchors still pending. It also now leans on [`claim/constructional-divergent-form-generalization-gap`](../claims/constructional-divergent-form-generalization-gap.md), which is itself `contingent-on: []` (it uses only the aggregate published result), so it does not import a new contingency — though its *per-construction* sharpenings remain gated by `caused-motion-anchor` / `conative-anchor` / `way-construction-anchor`, three decisions the newly-catalogued [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md) has been surfaced as a candidate anchor for (pending Tom). The prose above flags those dependencies as provisional rather than settled, per [`CLAUDE.md`](../../../CLAUDE.md) rule 5; this theory claims a *structure* (the ladder, the placements) plus one externally-grounded negative data point at the Tier 3→4 boundary — and not yet any *result* of the project's own.
 
-Revision trigger: rewrite this page when the first probe returns a result, when Tom ratifies any AANN open decision, or when a relational-meaning pilot defines the bottom rung of the second ladder.
+This revision (2026-05-29) incorporated the first filled concept pages (linked in "What 'meaning' is, on this page") and the first human-comparison claim at the upper ladder. Revision trigger: rewrite this page when the first probe of the project's own design returns a result, when Tom ratifies any AANN open decision, when the Scivetti per-construction data is inspected and an anchor decision is ratified, or when a relational-meaning pilot defines the bottom rung of the second ladder ([`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md), now sharpened to a concrete iterated-reference-game design).
