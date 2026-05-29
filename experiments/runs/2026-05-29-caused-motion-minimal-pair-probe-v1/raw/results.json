@@ -1,0 +1,174 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "nli": {
+    "cm_rate": 100.0,
+    "ctrl_loc_rate": 0.0,
+    "ctrl_sep_rate": 10.0,
+    "gap_vs_worst_ctrl_pp": 90.0,
+    "cm_n": 10,
+    "cm_typical": 100.0,
+    "cm_atypical": 100.0,
+    "cm_inanimate": 100.0,
+    "cm_animate": 100.0,
+    "atypical_minus_typical_pp": 0.0,
+    "verbs_cm_majority_yes": "10/10",
+    "per_verb_cm": {
+     "cough": 100.0,
+     "hiccup": 100.0,
+     "huff": 100.0,
+     "laugh": 100.0,
+     "shiver": 100.0,
+     "shudder": 100.0,
+     "sneeze": 100.0,
+     "snore": 100.0,
+     "whistle": 100.0,
+     "yawn": 100.0
+    },
+    "na": 0
+   },
+   "fc": {
+    "cm_rate": 100.0,
+    "ctrl_loc_rate": 0.0,
+    "ctrl_sep_rate": 10.0,
+    "gap_vs_worst_ctrl_pp": 90.0,
+    "cm_n": 10,
+    "cm_typical": 100.0,
+    "cm_atypical": 100.0,
+    "cm_inanimate": 100.0,
+    "cm_animate": 100.0,
+    "atypical_minus_typical_pp": 0.0,
+    "verbs_cm_majority_yes": "10/10",
+    "per_verb_cm": {
+     "cough": 100.0,
+     "hiccup": 100.0,
+     "huff": 100.0,
+     "laugh": 100.0,
+     "shiver": 100.0,
+     "shudder": 100.0,
+     "sneeze": 100.0,
+     "snore": 100.0,
+     "whistle": 100.0,
+     "yawn": 100.0
+    },
+    "na": 0
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "nli": {
+    "cm_rate": 90.0,
+    "ctrl_loc_rate": 0.0,
+    "ctrl_sep_rate": 20.0,
+    "gap_vs_worst_ctrl_pp": 70.0,
+    "cm_n": 10,
+    "cm_typical": 100.0,
+    "cm_atypical": 80.0,
+    "cm_inanimate": 100.0,
+    "cm_animate": 80.0,
+    "atypical_minus_typical_pp": -20.0,
+    "verbs_cm_majority_yes": "9/10",
+    "per_verb_cm": {
+     "cough": 100.0,
+     "hiccup": 100.0,
+     "huff": 100.0,
+     "laugh": 100.0,
+     "shiver": 100.0,
+     "shudder": 0.0,
+     "sneeze": 100.0,
+     "snore": 100.0,
+     "whistle": 100.0,
+     "yawn": 100.0
+    },
+    "na": 0
+   },
+   "fc": {
+    "cm_rate": 90.0,
+    "ctrl_loc_rate": 0.0,
+    "ctrl_sep_rate": 10.0,
+    "gap_vs_worst_ctrl_pp": 80.0,
+    "cm_n": 10,
+    "cm_typical": 100.0,
+    "cm_atypical": 80.0,
+    "cm_inanimate": 100.0,
+    "cm_animate": 80.0,
+    "atypical_minus_typical_pp": -20.0,
+    "verbs_cm_majority_yes": "9/10",
+    "per_verb_cm": {
+     "cough": 100.0,
+     "hiccup": 100.0,
+     "huff": 100.0,
+     "laugh": 100.0,
+     "shiver": 100.0,
+     "shudder": 100.0,
+     "sneeze": 100.0,
+     "snore": 0.0,
+     "whistle": 100.0,
+     "yawn": 100.0
+    },
+    "na": 0
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "nli": {
+    "cm_rate": 100.0,
+    "ctrl_loc_rate": 0.0,
+    "ctrl_sep_rate": 0.0,
+    "gap_vs_worst_ctrl_pp": 100.0,
+    "cm_n": 10,
+    "cm_typical": 100.0,
+    "cm_atypical": 100.0,
+    "cm_inanimate": 100.0,
+    "cm_animate": 100.0,
+    "atypical_minus_typical_pp": 0.0,
+    "verbs_cm_majority_yes": "10/10",
+    "per_verb_cm": {
+     "cough": 100.0,
+     "hiccup": 100.0,
+     "huff": 100.0,
+     "laugh": 100.0,
+     "shiver": 100.0,
+     "shudder": 100.0,
+     "sneeze": 100.0,
+     "snore": 100.0,
+     "whistle": 100.0,
+     "yawn": 100.0
+    },
+    "na": 0
+   },
+   "fc": {
+    "cm_rate": 100.0,
+    "ctrl_loc_rate": 0.0,
+    "ctrl_sep_rate": 0.0,
+    "gap_vs_worst_ctrl_pp": 100.0,
+    "cm_n": 10,
+    "cm_typical": 100.0,
+    "cm_atypical": 100.0,
+    "cm_inanimate": 100.0,
+    "cm_animate": 100.0,
+    "atypical_minus_typical_pp": 0.0,
+    "verbs_cm_majority_yes": "10/10",
+    "per_verb_cm": {
+     "cough": 100.0,
+     "hiccup": 100.0,
+     "huff": 100.0,
+     "laugh": 100.0,
+     "shiver": 100.0,
+     "shudder": 100.0,
+     "sneeze": 100.0,
+     "snore": 100.0,
+     "whistle": 100.0,
+     "yawn": 100.0
+    },
+    "na": 0
+   }
+  }
+ },
+ "thresholds": {
+  "cm_rate_min": 70,
+  "gap_pp": 30,
+  "atypical_within_pp": 15
+ }
+}
