@@ -1,0 +1,98 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "cm-construction_nli": {
+    "affirm": 100.0,
+    "n": 8
+   },
+   "near-coord_nli": {
+    "affirm": 87.5,
+    "n": 8
+   },
+   "near-seq_nli": {
+    "affirm": 75.0,
+    "n": 8
+   },
+   "gap_nli": 18.8,
+   "near_miss_affirm_nli": 81.2,
+   "cm-construction_fc": {
+    "affirm": 100.0,
+    "n": 8
+   },
+   "near-coord_fc": {
+    "affirm": 62.5,
+    "n": 8
+   },
+   "near-seq_fc": {
+    "affirm": 0.0,
+    "n": 8
+   },
+   "gap_fc": 68.8,
+   "near_miss_affirm_fc": 31.2
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "cm-construction_nli": {
+    "affirm": 100.0,
+    "n": 8
+   },
+   "near-coord_nli": {
+    "affirm": 87.5,
+    "n": 8
+   },
+   "near-seq_nli": {
+    "affirm": 37.5,
+    "n": 8
+   },
+   "gap_nli": 37.5,
+   "near_miss_affirm_nli": 62.5,
+   "cm-construction_fc": {
+    "affirm": 100.0,
+    "n": 8
+   },
+   "near-coord_fc": {
+    "affirm": 62.5,
+    "n": 8
+   },
+   "near-seq_fc": {
+    "affirm": 12.5,
+    "n": 8
+   },
+   "gap_fc": 62.5,
+   "near_miss_affirm_fc": 37.5
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "cm-construction_nli": {
+    "affirm": 100.0,
+    "n": 8
+   },
+   "near-coord_nli": {
+    "affirm": 62.5,
+    "n": 8
+   },
+   "near-seq_nli": {
+    "affirm": 25.0,
+    "n": 8
+   },
+   "gap_nli": 56.2,
+   "near_miss_affirm_nli": 43.8,
+   "cm-construction_fc": {
+    "affirm": 100.0,
+    "n": 8
+   },
+   "near-coord_fc": {
+    "affirm": 0.0,
+    "n": 8
+   },
+   "near-seq_fc": {
+    "affirm": 0.0,
+    "n": 8
+   },
+   "gap_fc": 100.0,
+   "near_miss_affirm_fc": 0.0
+  }
+ },
+ "reading_rule": "affirm-causation rate per arm; headline = construction-vs-near-miss GAP per model per instrument (report-the-rate, ratified)"
+}

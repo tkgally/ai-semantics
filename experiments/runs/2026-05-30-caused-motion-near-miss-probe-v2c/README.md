@@ -49,4 +49,11 @@ An **independent read-only adversarial subagent** re-derived the affirm-gold dir
 
 ## Results / cost
 
-_(to be filled after the run + independent post-run number verification.)_
+96 calls, **0 NA**. Cost **$0.21213 billed** (A $0.02276 / B $0.00555 / C $0.18382) — gemini again billed ~15× its rate-card estimate ($0.184 vs $0.013), driven by reasoning tokens (139 s, 48 calls). Session probe spend still low single dollars, far under the $20/mo cap.
+
+**Headline: the caused-motion ceiling is genuinely construction-keyed — most sharply under forced-choice.** Affirm-causation rate per arm:
+- **`cm-construction` = 100% across all 3 models, both instruments** (the homogeneity fix gave a clean anchor: 8 uniform inanimate-propulsion scenes).
+- **Near-miss forms are withheld substantially**, with a large construction-vs-near-miss **gap**: FC gaps **68.8 / 62.5 / 100.0 pp** (claude / gpt-5.4-mini / gemini); NLI gaps **18.8 / 37.5 / 56.2 pp**. So the causation inference is keyed on the **construction form**, not a loose "verb happened + object displaced → caused it" shape — tightening v1's floor. gemini's FC is the cleanest discrimination: construction 100% → both near-miss **0%**.
+- **The gap is larger under FC than NLI**, because NLI is more permissive of the **Gricean** causal reading: the coordinated *and*-frame (`near-coord`) is affirmed as causation-entailing at 87.5 / 87.5 / 62.5% under NLI but only 62.5 / 62.5 / 0% under FC; the temporal-sequence frame (`near-seq`) is the **cleaner withhold** (NLI 75 / 37.5 / 25%; FC 0 / 12.5 / 0%) — exactly the pragmatics-vs-entailment, near-coord-noisier pattern the pre-run critic predicted. This is a **general instrument/form effect across all 3 models**, not a single-model crack.
+
+Reproducible from `raw/results.json`. **Post-run verification:** every figure independently recomputed from `raw/*.json` by a read-only adversarial subagent → **CLEAN — all figures verified** (0 NA, all rates over n=8 per cell).
