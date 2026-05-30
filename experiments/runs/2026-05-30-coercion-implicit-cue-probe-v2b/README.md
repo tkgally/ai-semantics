@@ -54,4 +54,8 @@ Critic confirmed: immovability descriptors ("bolted-down", "cast-iron", "two-ton
 
 ## Results / cost
 
-(to be filled after the run.)
+180 calls, **0 NA**, cost **$0.039** (A $0.028 / B $0.002 / C $0.009). **Headline: the models do NOT block the impossible coercion from world knowledge alone — they need the explicit outcome statement.** With only the in-premise immovability descriptor, affirm-caused-motion stays near-ceiling (implicit-wk 90–100%; gpt-5.4-mini FC the lone exception at 40%); only the **explicit** outcome denial drives it to floor (0%, gpt-5.4-mini FC 10%). implicit − explicit = NLI [100, 90, 100] pp, FC [90, 30, 100] pp. So the v2 cue-sensitivity is **explicit-outcome parsing, not world-model integration** — and even under FC (where world knowledge should engage), claude (90%) and gemini (100%) still affirm the impossible coercion; only gpt-5.4-mini partially engages it. Full write-up at [`result/coercion-implicit-cue-v2b`](../../../wiki/findings/results/coercion-implicit-cue-v2b.md); reproducible from `raw/results.json`.
+
+**NOTE — path bug caught + fixed:** same hardcoded-`ITEMS`-path bug as the cancel-direction run (the copied `probe.py` pointed at `argument-structure-coercion-v2/items.csv`). The pre-fix run loaded the wrong stimuli; the path was corrected to `coercion-implicit-cue-v2b/items.csv` and the probe re-run on the correct frozen items. Numbers above are from the corrected run.
+
+**Post-run verification:** every figure independently recomputed from `raw/*.json` by a read-only adversarial subagent.

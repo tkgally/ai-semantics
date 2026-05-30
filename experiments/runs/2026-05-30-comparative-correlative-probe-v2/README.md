@@ -50,4 +50,6 @@ An **independent read-only adversarial subagent** re-derived every gold from the
 
 ## Results / cost
 
-(to be filled after the run.)
+114 calls, **0 NA**, cost **$0.026** (A $0.019 / B $0.001 / C $0.006). **Headline: the v1 ceiling survives the off-ceiling stress — it overshoots again.** Construction-correct rate: baseline 100% all; **conflicting-cue (follow-construction against world knowledge) 100% NLI, 100/83.3/83.3 FC** (a single 1-in-6 item slips to world knowledge for gpt-5.4-mini and gemini under FC); paraphrase 100% (gemini FC 75%); **multi-step composition 100% all models/instruments**, including the diagnostic `multi-bears` (negative × negative = positive) that a single-clause heuristic would fail. The CC covariation competence is robust, not a brittle template. Full write-up at [`result/comparative-correlative-covariation-v2`](../../../wiki/findings/results/comparative-correlative-covariation-v2.md); reproducible from `raw/results.json`.
+
+**Post-run verification:** every figure independently recomputed from `raw/*.json` by a read-only adversarial subagent. (This probe used a fresh self-contained `probe.py` written for the v2 path — not the buggy copy — so it loaded the correct items on the first run.)

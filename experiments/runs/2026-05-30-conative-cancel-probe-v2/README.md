@@ -58,4 +58,8 @@ The kick/hit/punch/slash/stab/chop/hack core + touch/break/shatter resist arm we
 
 ## Results / cost
 
-(to be filled after the run.)
+264 calls, **0 NA**, cost **$0.059** (A $0.039 / B $0.002 / C $0.017). **Headline: the add/cancel asymmetry survives de-confounding from ceiling.** The transitive lexical default is at ceiling (affirm-contact 91.7–100%), but **suppression-no-cue** (`100 − conative_affirm`) is off-ceiling and model/instrument-dependent — NLI [58.3, 0.0, 66.7] pp, FC [66.7, 33.3, 83.3] pp — vs the add-direction's matched **licensing-no-cue** ~ceiling (claude/gemini 100%, gpt-5.4-mini 70–80%). gpt-5.4-mini **fails suppression entirely under NLI** (conative affirm 100%) but recovers under FC; gemini **over-suppresses under FC** (cue-following 25% — won't re-license contact even against an explicit contact consequence). Full write-up + every number at [`result/conative-cancel-direction-v2`](../../../wiki/findings/results/conative-cancel-direction-v2.md); reproducible from `raw/results.json`.
+
+**NOTE — path bug caught + fixed:** the `probe.py` copied from the add-direction v2 carried a hardcoded `ITEMS` path to `argument-structure-coercion-v2/items.csv`. The first run (pre-fix) therefore re-ran the OLD coercion-v2 stimuli (~$0.09 wasted, no result contaminated — nothing was written up from it). The path was corrected to `conative-cancel-v2/items.csv` and the probe re-run on the correct frozen items; the numbers above are from the corrected run.
+
+**Post-run verification:** every figure was independently recomputed from the per-record `raw/*.json` by a read-only adversarial subagent (separate from `analyze.py`).

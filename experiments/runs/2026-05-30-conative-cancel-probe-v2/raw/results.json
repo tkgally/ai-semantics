@@ -1,0 +1,75 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "nli": {
+    "transitive": 100.0,
+    "conative": 41.7,
+    "cue": 100.0,
+    "suppression_no_cue": 58.3,
+    "cue_following": 100.0,
+    "conative_to_cue_shift": 58.3,
+    "ctrl_transitive": 75.0,
+    "ctrl_resist": 100.0
+   },
+   "fc": {
+    "transitive": 100.0,
+    "conative": 33.3,
+    "cue": 75.0,
+    "suppression_no_cue": 66.7,
+    "cue_following": 75.0,
+    "conative_to_cue_shift": 41.7,
+    "ctrl_transitive": 100.0,
+    "ctrl_resist": 25.0
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "nli": {
+    "transitive": 91.7,
+    "conative": 100.0,
+    "cue": 100.0,
+    "suppression_no_cue": 0.0,
+    "cue_following": 100.0,
+    "conative_to_cue_shift": 0.0,
+    "ctrl_transitive": 100.0,
+    "ctrl_resist": 100.0
+   },
+   "fc": {
+    "transitive": 100.0,
+    "conative": 66.7,
+    "cue": 91.7,
+    "suppression_no_cue": 33.3,
+    "cue_following": 91.7,
+    "conative_to_cue_shift": 25.0,
+    "ctrl_transitive": 100.0,
+    "ctrl_resist": 75.0
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "nli": {
+    "transitive": 100.0,
+    "conative": 33.3,
+    "cue": 100.0,
+    "suppression_no_cue": 66.7,
+    "cue_following": 100.0,
+    "conative_to_cue_shift": 66.7,
+    "ctrl_transitive": 50.0,
+    "ctrl_resist": 75.0
+   },
+   "fc": {
+    "transitive": 100.0,
+    "conative": 16.7,
+    "cue": 25.0,
+    "suppression_no_cue": 83.3,
+    "cue_following": 25.0,
+    "conative_to_cue_shift": 8.3,
+    "ctrl_transitive": 50.0,
+    "ctrl_resist": 0.0
+   }
+  }
+ },
+ "indicator": "affirm-contact rate on '<subj> made contact with <obj>'",
+ "reading_rule": "report-the-rate; headline = cross-direction comparison vs the add-direction v2 (de-confound add/cancel asymmetry from ceiling), not a pass bar"
+}

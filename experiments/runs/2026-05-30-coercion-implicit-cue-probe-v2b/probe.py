@@ -1,6 +1,6 @@
-"""Off-ceiling argument-structure coercion v2 probe (2026-05-29).
+"""Caused-motion implicit-cue v2b probe (2026-05-30) -- copied from the add-direction v2 harness.
 
-Operationalizes design/argument-structure-coercion-v2 with the project's OWN stimuli
+Operationalizes design/coercion-implicit-cue-v2b with the project OWN stimuli
 (experiments/data/coercion-implicit-cue-v2b/items.csv, frozen by build_items.py
 BEFORE this runs), under the RATIFIED difficulty gate (decisions/resolved/
 cc-v2-difficulty-operationalization). Behavioral NLI + forced-choice, temperature 0,

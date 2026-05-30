@@ -1,6 +1,6 @@
-"""Off-ceiling argument-structure coercion v2 probe (2026-05-29).
+"""Cancel-direction conative v2 probe (2026-05-30) -- copied from the add-direction v2 harness.
 
-Operationalizes design/argument-structure-coercion-v2 with the project's OWN stimuli
+Operationalizes design/conative-cancel-v2 with the project OWN stimuli
 (experiments/data/conative-cancel-v2/items.csv, frozen by build_items.py
 BEFORE this runs), under the RATIFIED difficulty gate (decisions/resolved/
 cc-v2-difficulty-operationalization). Behavioral NLI + forced-choice, temperature 0,

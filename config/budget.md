@@ -53,8 +53,14 @@ Aggregate to a running ledger here when the second run lands (don't pre-create).
 | 2026-05-29 | caused-motion minimal-pair probe v1 (180 calls: 30 items × 2 instruments × 3 models) | ≈ $0.044 (A $0.027 / B $0.002 / C $0.015) |
 | 2026-05-29 | way-construction minimal-pair probe v1 (360 calls: 60 items × 2 instruments × 3 models) | ≈ $0.072 (A $0.052 / B $0.003 / C $0.016) |
 | 2026-05-29 | argument-structure coercion probe v2 / off-ceiling (360 calls: 60 items × 2 instruments × 3 models) | ≈ $0.093 (A $0.055 / B $0.003 / C $0.035) |
+| 2026-05-30 | cancel-direction conative probe v2 (264 calls) | **$0.300 actual** (token-estimate said $0.059) |
+| 2026-05-30 | caused-motion implicit-cue probe v2b (180 calls) | **$0.158 actual** (token-estimate said $0.039) |
+| 2026-05-30 | comparative-correlative probe v2 (114 calls) | **$0.109 actual** (token-estimate said $0.026) |
+| 2026-05-30 | wasted re-run from a hardcoded-`ITEMS`-path bug (copied probe.py loaded the old coercion-v2 stimuli before the path was fixed; ~1.3 probes' worth, raw discarded) | ≈ $0.30 actual (est.; disclosed; no result contaminated) |
 
-Running total against the $20/month soft cap: ≈ $0.56. Ample headroom.
+Running total against the $20/month soft cap: **the estimate-based total above (≈$0.56 through 2026-05-29) is a SUBSTANTIAL UNDERCOUNT** — see the note below. Real billed spend is several times higher but still far under the cap.
+
+> **⚠ Estimate-vs-actual discrepancy (discovered 2026-05-30).** Every prior row's figure is a **token-count estimate** from a hardcoded rate card inside each `probe.py`; the **actual OpenRouter-billed cost** (the per-record `usage.cost` field the API returns) is **~4.5× higher** this session (the 3 corrected runs billed **$0.567** vs a $0.124 estimate; e.g. gemini billed ~$0.25 on the conative run vs $0.017 estimated). So the cumulative "≈$0.56" line carried since 2026-05-29 is an underestimate — true cumulative spend is plausibly in the low single dollars. This does **not** threaten the $20/month cap, but the tracking method should be fixed: future `analyze.py`/budget rows should sum the API-returned `usage.cost`, not the local rate-card estimate. **Flagged for Tom** (NEXT.md). Action item: have the probe harness record `usage.cost` going forward.
 
 ## When to ask Tom
 
