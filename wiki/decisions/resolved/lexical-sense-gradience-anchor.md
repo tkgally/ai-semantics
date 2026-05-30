@@ -53,3 +53,8 @@ So the **intellectual fit is confirmed** (graded scale grounds the monotonicity 
 ## Notes for the resolver
 
 Tom: a one-line ratification is enough — "Usim + WiC, pending inspection", "use WSsim instead", or name a specific graded dataset. Reminder: the conjecture's prediction 2 (polysemy-vs-homonymy intermediate regime) needs a polysemy/homonymy stratification layered on whatever anchor is chosen; that is a build step, not a property of any released ratings, and should be frozen with the item set before any probe runs (a separate operationalization gate the conjecture's *Notes* flags).
+
+
+## Correction 2026-05-30 — DWUG license (does NOT reopen the decision)
+
+A follow-on verification run catalogued DWUG ([`resource/dwug-usage-graphs`](../../base/resources/dwug-usage-graphs.md)) and found its license is **CC BY-ND 4.0** (Attribution-NoDerivatives) on all DWUG EN/DE/ES/SV releases — **not "CC BY"** as the resolution text and the option-list above state. Practical effect: analysis use and *verbatim* mirroring are permitted; distributing a *modified/augmented* version (e.g. a publicly-released file with an added polysemy/homonymy column) is not. This does not change the ratified direction (Option B — a graded set, not Usim); it corrects a factual premise and is surfaced for Tom's awareness. The DURel 4-point graded scale and ~100k-judgment total were verified; per-lemma counts are partially verified (see the resource page's Verified/Unverified breakdown). DWUG remains the recommended Option-B candidate; CoSimLex was evaluated and rejected on design fit (different-word pairs, not same-word usage pairs).

@@ -27,10 +27,12 @@ See `PROJECT.md` §3. Briefly:
 - `wiki/base/` — stratum 0 (sources, concepts, resources, the prioritized fetch list `wanted.md`).
 - `wiki/findings/` — strata above (conjectures, claims, results, theory, open questions).
 - `experiments/` — designs, run records, data.
-- `decisions/` — `open/` for asynchronous gate decisions awaiting Tom; `resolved/` once ratified.
+- `wiki/decisions/` — `open/` for asynchronous gate decisions awaiting Tom; `resolved/` once ratified.
 - `config/` — `models.md` (the panel) and `budget.md` (OpenRouter spend cap).
 - `tools/` — small stdlib-Python CLIs, added when a run needs them.
 
 ## Status
 
-Bootstrapped 2026-05-28. No empirical claims on the books yet. Next concrete action is in `NEXT.md`.
+Bootstrapped 2026-05-28; active. The project has run **six probes of its own design** (all behavioral, read-only, under $0.60 total against a $20/month cap) and holds a first synthesis: a five-tier *evidence ladder* for constructional meaning in LLMs. The headline pattern so far is modest and bounded — current decoders handle the "easy direction" of the upper ladder (a construction *adding* an inference onto a verb) at or near ceiling, while the "hard direction" (the same surface form mapping to a *divergent* meaning, or a construction *cancelling* a lexical default) is markedly weaker and instrument-sensitive; an off-ceiling stress test shows the easy-direction ceilings are cue-sensitive computation, not a brittle template. Thirteen decisions have been put to Tom — eleven ratified, two open (both non-blocking).
+
+For orientation read `wiki/executive-summary.md` first, then `wiki/index.md`. The next concrete action and the live backlog are in `NEXT.md`.
