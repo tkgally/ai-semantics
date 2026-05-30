@@ -1,0 +1,206 @@
+#!/usr/bin/env python3
+"""Lancaster perceptual-strength moderation of the lexical-v1 monotonicity result.
+
+Pure stdlib (no numpy/scipy — project constraint). Reads the frozen lexical-v1 raw
+ratings + manifest + the lemma_perceptual.csv join table; writes raw/results.json.
+
+Tests (see PREREG.md):
+  T1  median-split stratified Spearman rho(model, human), Delta = HIGH - LOW,
+      cluster-bootstrap CI (resample lemmas).
+  T2  lemma-level Spearman rho(MAE, perceptual strength) across 42 lemmas.
+  T3  same with Visual.mean.
+"""
+import csv, json, os, random, statistics
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
+V1RAW = os.path.join(ROOT, "experiments/runs/2026-05-30-lexical-sense-gradience-probe-v1/raw")
+JOIN = os.path.join(HERE, "lemma_perceptual.csv")
+
+MODELS = {"A": "claude-sonnet-4.6", "B": "gpt-5.4-mini", "C": "gemini-3.5-flash"}
+FRAMINGS = ["durel", "cont"]
+SCALE = {"durel": (1.0, 4.0), "cont": (0.0, 100.0)}  # for [0,1] normalization in T2
+SEED = 20260530
+NBOOT = 10000
+
+
+# ---------- statistics (stdlib) ----------
+def rankdata(xs):
+    """Average-rank (ties shared)."""
+    order = sorted(range(len(xs)), key=lambda i: xs[i])
+    ranks = [0.0] * len(xs)
+    i = 0
+    while i < len(xs):
+        j = i
+        while j + 1 < len(xs) and xs[order[j + 1]] == xs[order[i]]:
+            j += 1
+        avg = (i + j) / 2.0 + 1.0
+        for k in range(i, j + 1):
+            ranks[order[k]] = avg
+        i = j + 1
+    return ranks
+
+
+def pearson(xs, ys):
+    n = len(xs)
+    if n < 2:
+        return None
+    mx, my = sum(xs) / n, sum(ys) / n
+    sx = sum((x - mx) ** 2 for x in xs)
+    sy = sum((y - my) ** 2 for y in ys)
+    if sx == 0 or sy == 0:
+        return None
+    cov = sum((x - mx) * (y - my) for x, y in zip(xs, ys))
+    return cov / (sx ** 0.5 * sy ** 0.5)
+
+
+def spearman(xs, ys):
+    if len(xs) < 2:
+        return None
+    return pearson(rankdata(xs), rankdata(ys))
+
+
+def pct(vals, p):
+    vals = sorted(vals)
+    if not vals:
+        return None
+    k = (len(vals) - 1) * p
+    lo, hi = int(k), min(int(k) + 1, len(vals) - 1)
+    return vals[lo] + (vals[hi] - vals[lo]) * (k - lo)
+
+
+# ---------- load ----------
+def load():
+    # join table
+    perc = {}
+    for r in csv.DictReader(open(JOIN, newline="")):
+        if r["covered"] == "1":
+            perc[r["lemma"]] = {
+                "Max_strength.perceptual": float(r["Max_strength.perceptual"]),
+                "Visual.mean": float(r["Visual.mean"]),
+            }
+    # ratings: item_id -> {model -> {framing -> pred}} ; plus human + lemma
+    items = {}
+    for fr in FRAMINGS:
+        for code in MODELS:
+            data = json.load(open(os.path.join(V1RAW, f"{fr}_{code}.json")))
+            for row in data:
+                it = items.setdefault(row["item_id"], {
+                    "lemma": row["lemma"], "human": float(row["human_median"]),
+                    "pred": {}})
+                it["pred"].setdefault(code, {})[fr] = float(row["pred"])
+    return perc, items
+
+
+# ---------- analysis ----------
+def stratified(items, perc, moderator, code, fr):
+    """Return (rho_high, rho_low, n_high, n_low) pooled within median-split strata."""
+    covered = {lem: v[moderator] for lem, v in perc.items()}
+    med = statistics.median(sorted(covered.values()))
+    hi_m, hi_h, lo_m, lo_h = [], [], [], []
+    for it in items.values():
+        lem = it["lemma"]
+        if lem not in covered:
+            continue
+        if code not in it["pred"] or fr not in it["pred"][code]:
+            continue
+        m, h = it["pred"][code][fr], it["human"]
+        if covered[lem] > med:
+            hi_m.append(m); hi_h.append(h)
+        else:
+            lo_m.append(m); lo_h.append(h)
+    return (spearman(hi_m, hi_h), spearman(lo_m, lo_h), len(hi_m), len(lo_m), med)
+
+
+def cluster_bootstrap_delta(items, perc, moderator, code, fr, med):
+    """Resample lemmas with replacement; recompute Delta rho = rho_high - rho_low."""
+    covered = {lem: v[moderator] for lem, v in perc.items()}
+    # group pairs by lemma
+    bylem = {}
+    for it in items.values():
+        lem = it["lemma"]
+        if lem not in covered:
+            continue
+        if code not in it["pred"] or fr not in it["pred"][code]:
+            continue
+        bylem.setdefault(lem, []).append((it["pred"][code][fr], it["human"]))
+    lemmas = list(bylem.keys())
+    rng = random.Random(SEED)
+    deltas = []
+    for _ in range(NBOOT):
+        samp = [lemmas[rng.randrange(len(lemmas))] for _ in lemmas]
+        hi_m, hi_h, lo_m, lo_h = [], [], [], []
+        for lem in samp:
+            tgt_m, tgt_h = (hi_m, hi_h) if covered[lem] > med else (lo_m, lo_h)
+            for m, h in bylem[lem]:
+                tgt_m.append(m); tgt_h.append(h)
+        rh, rl = spearman(hi_m, hi_h), spearman(lo_m, lo_h)
+        if rh is not None and rl is not None:
+            deltas.append(rh - rl)
+    return pct(deltas, 0.025), pct(deltas, 0.975), len(deltas)
+
+
+def lemma_level_mae(items, perc, moderator, code, fr):
+    """T2: Spearman(lemma MAE, lemma perceptual strength) across covered lemmas."""
+    lo, hi = SCALE[fr]
+    def norm(v):
+        return (v - lo) / (hi - lo)
+    bylem = {}
+    for it in items.values():
+        lem = it["lemma"]
+        if lem not in perc:
+            continue
+        if code not in it["pred"] or fr not in it["pred"][code]:
+            continue
+        err = abs(norm(it["pred"][code][fr]) - norm(it["human"]))
+        bylem.setdefault(lem, []).append(err)
+    xs, ys, rows = [], [], []
+    for lem, errs in bylem.items():
+        mae = sum(errs) / len(errs)
+        ps = perc[lem][moderator]
+        xs.append(ps); ys.append(mae)
+        rows.append({"lemma": lem, "n": len(errs), "perc": ps, "mae": round(mae, 4)})
+    return spearman(xs, ys), len(xs), rows
+
+
+def main():
+    perc, items = load()
+    out = {"n_items_total": len(items),
+           "n_lemmas_covered": len(perc),
+           "moderators": ["Max_strength.perceptual", "Visual.mean"],
+           "T1": {}, "T2": {}}
+    for moderator in ["Max_strength.perceptual", "Visual.mean"]:
+        out["T1"][moderator] = {}
+        out["T2"][moderator] = {}
+        for fr in FRAMINGS:
+            for code, name in MODELS.items():
+                rh, rl, nh, nl, med = stratified(items, perc, moderator, code, fr)
+                clo, chi, nboot = cluster_bootstrap_delta(items, perc, moderator, code, fr, med)
+                out["T1"][moderator][f"{name}|{fr}"] = {
+                    "rho_high": round(rh, 4), "rho_low": round(rl, 4),
+                    "delta": round(rh - rl, 4), "n_high": nh, "n_low": nl,
+                    "median_split": round(med, 4),
+                    "delta_ci95": [round(clo, 4), round(chi, 4)], "nboot": nboot,
+                }
+                rho, nlem, lemrows = lemma_level_mae(items, perc, moderator, code, fr)
+                out["T2"][moderator][f"{name}|{fr}"] = {
+                    "rho_mae_perc": round(rho, 4), "n_lemmas": nlem,
+                }
+                if moderator == "Max_strength.perceptual" and fr == "durel" and code == "C":
+                    out["T2"]["_example_lemma_rows_gemini_durel"] = sorted(
+                        lemrows, key=lambda r: -r["perc"])
+    os.makedirs(os.path.join(HERE, "raw"), exist_ok=True)
+    json.dump(out, open(os.path.join(HERE, "raw/results.json"), "w"), indent=1)
+    # console summary
+    print(f"items {out['n_items_total']}  covered lemmas {out['n_lemmas_covered']}")
+    for moderator in out["moderators"]:
+        print(f"\n=== moderator: {moderator} ===")
+        print(f"{'model|framing':28}{'rhoHI':>7}{'rhoLO':>7}{'Δ':>7}  {'Δ CI95':>18}   {'T2 rho(MAE,perc)':>17}")
+        for k in out["T1"][moderator]:
+            t1 = out["T1"][moderator][k]; t2 = out["T2"][moderator][k]
+            ci = f"[{t1['delta_ci95'][0]:+.2f},{t1['delta_ci95'][1]:+.2f}]"
+            print(f"{k:28}{t1['rho_high']:7.3f}{t1['rho_low']:7.3f}{t1['delta']:+7.3f}  {ci:>18}   {t2['rho_mae_perc']:+17.3f}")
+
+
+if __name__ == "__main__":
+    main()
