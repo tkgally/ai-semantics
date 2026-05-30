@@ -126,6 +126,20 @@ The lexical conjecture's anchor decision RESOLVED 2026-05-29 ([`decisions/resolv
   why: alternative graded in-context similarity anchor if DWUG does not fit.
   status: wanted
 
+### Multimodal / grounded anchors (for the new multimodal / physical-AI axis)
+
+Scouted 2026-05-30 ([`base/resources/multimodal-anchor-scouting.md`](resources/multimodal-anchor-scouting.md)); license + URL verified, data not yet fetched. The axis's anchor-class choice is surfaced in [`decisions/open/multimodal-panel-and-grounding-theory`](../decisions/open/multimodal-panel-and-grounding-theory.md) (Q3).
+
+- [P1] Lancaster Sensorimotor Norms (Lynott, Connell, Brysbaert, Brand & Carney 2020). OSF https://osf.io/7emr6/. CC BY 4.0 (verified). 39,707 words × 11 perceptual/action dimensions, ~3,500 raters.
+  why: the cheapest first multimodal unit — a **text-side perceptual-grounding moderator on the existing DWUG lexical result** (does monotonicity strengthen for perceptually grounded words?). Joins the lexical program to the grounded axis; $0, no new probe; a plain data download.
+  status: wanted (priority; scouted 2026-05-30, license + OSF URL verified, data not yet fetched).
+- [P2] THINGS-data behavioral triplet judgments (Hebart et al., eLife 2023). OSF https://osf.io/f5rn6/. CC0 (via the eLife publication; OSF README not directly inspected).
+  why: 4.7M graded human object-similarity judgments — the strongest multimodal *behavioral* anchor if a VLM image-input comparison axis opens (Q3 Option B). Needs a probe design + budget.
+  status: wanted (scouted 2026-05-30; CC0 via secondary source; verify OSF README before cataloguing as a typed resource).
+- [P3] NLVR2 annotations (Suhr et al. 2019). https://github.com/lil-lab/nlvr. CC BY 4.0 (annotations; images via Google Form).
+  why: 107k fully human-written sentences + binary labels over image pairs; cleanest human provenance in image-text entailment; relevant if a VLM constructional-inference axis opens.
+  status: wanted (scouted 2026-05-30; annotation license verified).
+
 ## Notes on fetching
 
 - **Try open-access first.** ACL Anthology, arXiv, preprint pages, lab pages — many of the LLM-meaning items above are OA and a run can fetch them via `WebFetch`. Only escalate to Tom when paywalled.

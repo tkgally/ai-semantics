@@ -7,6 +7,7 @@ meaning-senses:
   - referential
   - distributional
   - inferential
+  - grounded
 status: draft
 contingent-on: []
 created: 2026-05-30
@@ -42,7 +43,7 @@ links:
 
 The project has run on two tracks that looked separate: a **grammatical** wedge (constructional meaning — does a model track a construction's contributed inference?) with nine-plus own-design results, and, as of 2026-05-30, a **lexical** wedge (sense gradience — does a model track graded word-sense relatedness?) with its first result, [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md). Tom's steer is to connect them, in theory and empirically. This page argues they are **not two tracks but one**, and that the project has — without having named it — been applying a **single evidential test** on both. It is a synthesis page (a framework + a bridge), claiming a structure, not new data; the new data are on the two result pages it leans on.
 
-## The continuum thesis (grounded, not novel)
+## The continuum thesis (established in CxG, not novel here)
 
 Construction Grammar's foundational move is that the lexicon and the grammar are **not different kinds of thing**. [`concept/constructional-meaning`](../../base/concepts/constructional-meaning.md) states it directly: constructions "range from morphemes and closed-class items through idioms and argument-structure templates to large-scale discourse patterns" — a single inventory (a *constructicon*) along a cline of **specificity** and **schematicity**. A word is, on this view, a maximally specific construction (a form–meaning pairing with a fully fixed form); an argument-structure template is a maximally schematic one. There is no principled seam between "lexical meaning" and "grammatical meaning"; there is one form–meaning space at different grains. (CxG canon — Goldberg 1995/2006, Langacker, Croft 2001 — is referenced in `constructional-meaning` as not-in-repo; the continuum claim here rests on that concept page's in-repo statement of it, not on fabricated quotation.)
 
@@ -71,6 +72,36 @@ This is the first time the project can state its central finding as a **cline-sp
 The cleanest place the cline becomes a single phenomenon is **coercion** ([`concept/coercion`](../../base/concepts/coercion.md)) — a construction overriding a word. When the caused-motion construction makes *sneeze* in *she sneezed the napkin off the table* contribute causation-of-motion it does not lexically have, that **is** a shift in the word's sense *induced by the grammar*. Constructional coercion (grammar end) and contextual sense modulation (lexicon end) are the **same event** described from the two ends of the cline. The project has measured each end separately — the caused-motion construction's inference is genuinely construction-keyed ([`result/caused-motion-near-miss-v2c`](../results/caused-motion-near-miss-v2c.md)); a word's sense relatedness is gradiently tracked (the lexical result) — but never the **join**.
 
 The join is directly testable with the instrument the lexical probe already built: take a coercing construction and ask, with the DWUG-style relatedness rating, **how related is the verb's sense between its neutral frame and its coerced frame**, against non-coercing controls. That probe — [`design/coercion-as-sense-modulation-v1`](../../../experiments/designs/coercion-as-sense-modulation-v1.md) — **ran (2026-05-30)** → [`result/coercion-sense-modulation-v1`](../results/coercion-sense-modulation-v1.md): **the predicted direction holds**. All three models rate a coerced verb use as **less sense-related** to its bare use than a length-matched non-coercing elaboration (positive gap, every model/framing; cm > way; the three-way ordering control ≥ coerced ≥ a genuine-sense-shift `polysemy-anchor` holds in all cells) — so constructional coercion **registers, partially, as a lexical sense shift**: the two wedges empirically touch. **One bound keeps it honest:** the design cannot separate this from the coerced sentences' added object+path *argument structure* (the gap may be partly surface, not sense), so the bridge is established as an internal-contrast direction-of-effect, not a clean sense claim — a non-coercing transitive control is the v2. A second, unforced finding: the model strongest at pure lexical gradience (gemini) is the *least* coercion-sensitive, so the two competences come apart across the panel.
+
+## The prospective third axis: multimodal / perceptual grounding
+
+As of 2026-05-30 the project adds a **third** scope axis alongside the lexical and grammatical
+ones: **multimodal / physical-AI meaning** (Tom's headline steer). The continuum thesis above is
+about *grain* (specific word ↔ schematic construction), all on **text-only** form. The third axis
+is orthogonal to grain: it varies the **modality of the form** — does adding perceptual input
+(images; where tractable audio/video) change a model's meaning behavior beyond what the text
+distribution already supplies? This is the same beat-the-distributional-shadow skeleton with a
+*different* null: not "context similarity" (lexicon) or "n-gram/surface form" (grammar) but
+**"the text already gave it away" (perceptual redundancy)**. The driving theories are the ones
+this repo already catalogs that tie meaning to the world — Bender & Koller / Lyre grounding
+([`concept/grounding`](../../base/concepts/grounding.md)), Harnad's symbol grounding
+([`concept/symbol-grounding-problem`](../../base/concepts/symbol-grounding-problem.md)), Barsalou's
+perceptual symbols ([`concept/embodied-cognition`](../../base/concepts/embodied-cognition.md)) —
+positioned to give the `grounded.perceptual` tag its first empirical exercise *if a result lands*
+(nothing has run yet).
+
+The axis is **designed to join this continuum, not sit beside it.** The first multimodal conjecture,
+[`conjecture/multimodal-lexical-grounding-divergence`](../conjectures/multimodal-lexical-grounding-divergence.md),
+reuses the **same DURel-style graded-relatedness instrument** the lexical wedge validated and toggles
+**one factor (modality)** — exactly how coercion bridged the two text wedges by reusing one
+instrument and toggling the coercing construction. So a multimodal result lands on the *lexical end*
+of the cline (graded word-sense relatedness, now with vs without a picture) and, via prediction 4
+(coercion under depiction), reaches toward the *grammatical end* too. The integration claim is
+deliberately conditional: the third axis joins the continuum **only to the extent the evidence
+supports it** — a perceptual-redundancy null (the image changes nothing) would say grounding adds no
+sense signal these text models lack, which is a first-class negative, not a failure to integrate.
+Nothing here is yet tested; this section fixes the *target*, and the conjecture's prediction 1 (a
+$0 Lancaster-norms moderation of the existing lexical result) is the cheapest first contact.
 
 ## What this page predicts and forbids
 
