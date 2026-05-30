@@ -44,7 +44,7 @@ The hypothesis "`<Subj>`'s `<gerund>` caused `<obj>` to move." is **held identic
 | `near-coord` | 2 | coordinated *and* | *Maria sneezed, and the napkin ended up off the table.* | withhold |
 | `near-seq` | 3 | temporal sequence | *Maria sneezed. Moments later, the napkin was off the table.* | withhold |
 
-Verbs are non-motion bodily/sound/air-displacement verbs (sneeze, cough, blow, laugh, whistle, fan, clap, puff) whose lexical semantics do **not** encode caused motion — so the construction is doing the work.
+Verbs are non-motion bodily/air-displacement verbs (sneeze, cough, blow, puff, huff, fan) on **light inanimate objects** (napkin, crumb, dust, feather, wrapper, smoke, petal, confetti) — clean physical propulsion, so the construction is doing the work and the causal relation is uniform across scenes (the pre-run critic's homogeneity fix; see the run README).
 
 ## Reading rule (ratified report-the-rate; no manufactured pass bar)
 
@@ -59,4 +59,4 @@ Verbs are non-motion bodily/sound/air-displacement verbs (sneeze, cough, blow, l
 
 ## Pre-registration
 
-Items frozen + committed **before any probe call** (`items.csv` sha256[:16] `6d0b92e39b2d9eb8`); an `assert` in `build_items.py` checks the hypothesis is identical across the three forms within each scene. An independent read-only adversarial pre-run critique re-derives the affirm-gold direction and the form contrast before the run.
+Items frozen + committed **before any probe call** (`items.csv` sha256[:16] `a60b812d4b46bcc4`); an `assert` in `build_items.py` checks the hypothesis is identical across the three forms within each scene. An independent read-only adversarial pre-run critique re-derives the affirm-gold direction and the form contrast before the run.

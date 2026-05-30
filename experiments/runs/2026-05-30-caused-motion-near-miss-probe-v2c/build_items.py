@@ -70,15 +70,21 @@ import os
 #   (scene_id, subj, verb_past, gerund, obj, path_pp, endpoint)
 # path_pp = the construction's directional ("off the table"); endpoint = the near-miss end-state
 # ("off the table" as a state). gerund used in the hypothesis ("<Subj>'s <gerund> caused ...").
+# All 8 are CLEAN INANIMATE-PROPULSION scenes (the pre-run critic flagged the earlier
+# animate "whistled the dog" [signaling], "clapped the pigeon" [startle], and anomalous
+# "laughed the straw" items as heterogeneous causal relations that would muddy the
+# "construction affirmed at ceiling" anchor; replaced before the run with light inanimate
+# objects + non-motion propulsion verbs so the construction's physical-causation reading is
+# uniform). Verb repeats across scenes are fine — all are clean propulsion.
 SCENES = [
     ("napkin", "Maria", "sneezed", "sneezing", "the napkin", "off the table", "off the table"),
     ("crumb", "Tom", "coughed", "coughing", "the crumb", "across the table", "across the table"),
     ("dust", "Sam", "blew", "blowing", "the dust", "off the shelf", "off the shelf"),
-    ("straw", "Lena", "laughed", "laughing", "the straw", "out of the glass", "out of the glass"),
-    ("dog", "Ben", "whistled", "whistling", "the dog", "out of the yard", "out of the yard"),
-    ("smoke", "Priya", "fanned", "fanning", "the smoke", "out of the room", "out of the room"),
-    ("pigeon", "Leo", "clapped", "clapping", "the pigeon", "off the ledge", "off the ledge"),
     ("feather", "Marco", "puffed", "puffing", "the feather", "off his palm", "off his palm"),
+    ("wrapper", "Lena", "huffed", "huffing", "the wrapper", "off the tray", "off the tray"),
+    ("smoke", "Priya", "fanned", "fanning", "the smoke", "out of the room", "out of the room"),
+    ("petal", "Ben", "blew", "blowing", "the petal", "off the railing", "off the railing"),
+    ("confetti", "Leo", "puffed", "puffing", "the confetti", "off the desk", "off the desk"),
 ]
 
 # arm -> (difficulty, affirm_gold). affirm_gold in {"affirm","withhold"} = the entailment-correct
