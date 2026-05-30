@@ -52,22 +52,47 @@ RATE_CARD = {
 }
 
 
-def call(model, system, user, max_tokens=None, temperature=0, retries=4, timeout=120):
+def call(model, system, user, max_tokens=None, temperature=0, retries=4, timeout=120,
+         images=None):
     """One chat completion. Returns {content, usage, error}.
 
     `usage` carries the API-billed `cost` field because the request sets
     `"usage": {"include": true}`. google/* models burn the visible-output budget on
     reasoning tokens under a small cap (see config/models.md caveat), so they default
     to a large max_tokens unless overridden.
+
+    MULTIMODAL (image input). Pass `images=` to attach images to the user turn — all
+    three current panel families accept image input (verified 2026-05-30 against the
+    OpenRouter /models catalog: anthropic/claude-sonnet-4.6, openai/gpt-5.4-mini,
+    google/gemini-3.5-flash all list `image` in input_modalities; gemini also lists
+    audio+video). `images` is a list, each element either a URL string
+    ("https://…" or a "data:image/png;base64,…" data URI) or a dict
+    {"url": "...", "detail": "low|high|auto"}. When `images` is None the user turn is
+    sent as a plain string (text-only, unchanged from prior behaviour), so existing
+    text probes are byte-for-byte identical. When images are present the user turn is
+    built as the OpenAI/OpenRouter multimodal content array
+    ([{type:text,...}, {type:image_url, image_url:{url:...}}, ...]).
     """
     key = os.environ["OPENROUTER_API_KEY"]
     if max_tokens is None:
         max_tokens = 4096 if model.startswith("google/") else 64
+    if images:
+        user_content = [{"type": "text", "text": user}]
+        for im in images:
+            if isinstance(im, str):
+                user_content.append({"type": "image_url", "image_url": {"url": im}})
+            else:  # dict with at least "url", optionally "detail"
+                iu = {"url": im["url"]}
+                if im.get("detail"):
+                    iu["detail"] = im["detail"]
+                user_content.append({"type": "image_url", "image_url": iu})
+    else:
+        user_content = user
     body = {
         "model": model,
         "messages": [
             {"role": "system", "content": system},
-            {"role": "user", "content": user},
+            {"role": "user", "content": user_content},
         ],
         "temperature": temperature,
         "max_tokens": max_tokens,
