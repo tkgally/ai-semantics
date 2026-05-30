@@ -48,4 +48,23 @@ VERDICT after fix: sound to run (with the result-page down-claim per I1).
 
 ## Results / cost
 
-_(to be filled after the run + independent post-run number verification.)_
+180 calls, **0 NA**, cost **$0.249 billed** (A $0.024 / B $0.012 / C $0.212; gemini reasoning-heavy as usual).
+
+**Headline: constructional coercion registers as a PARTIAL sense shift in the lexical instrument — for all three models, both framings.** Mean relatedness per arm (the calibration worked: `control-elab` near-ceiling, `polysemy-anchor` low, `coerced` in between):
+
+| model | framing | control-elab | coerced-cm | coerced-way | polysemy-anchor | gap (control − coerced) |
+|---|---|---|---|---|---|---|
+| claude-sonnet-4.6 | durel | 3.75 | 2.67 | 3.00 | 1.67 | **0.92** (cm 1.08 / way 0.75) |
+| claude-sonnet-4.6 | cont | 91.2 | 57.8 | 61.7 | 15.8 | **31.4** |
+| gpt-5.4-mini | durel | 3.83 | 2.67 | 3.50 | 1.33 | **0.75** |
+| gpt-5.4-mini | cont | 96.8 | 64.8 | 87.8 | 18.7 | **20.5** (cm 32 / way 9) |
+| gemini-3.5-flash | durel | 3.75 | 3.00 | 3.50 | 1.67 | **0.50** |
+| gemini-3.5-flash | cont | 96.7 | 86.7 | 90.0 | 15.0 | **8.3** |
+
+- The **three-way ordering control ≥ coerced ≥ polysemy-anchor holds in all 6 cells**; the coercion gap is **positive for every model/framing**; the within-verb sign is 8–11 of 12. So the panel rates a coerced verb use as **less sense-related to its bare use than a matched non-coercing elaboration** — coercion shows up *inside* the lexical relatedness instrument.
+- **Partial, not full:** the coerced arms stay well above the genuine-sense-shift `polysemy-anchor` floor — coercion is a *milder* sense modulation than a polysemy/homonymy switch.
+- **Construction + model structure:** caused-motion (cm) registers as a bigger shift than the way-construction for every model (cm gap > way gap); the metaphorical way items (`smile`/`joke`/`bluff`) are the mildest. **gemini shows the smallest coercion gap** (cont 8.3; it rates coerced uses as still ~90 related) despite being the strongest pure sense-gradience tracker (lexical v1 ρ=0.83) — strongest lexical tracker ≠ most coercion-sensitive; claude is the most coercion-sensitive (gap 31).
+
+**Critical caveat (the pre-run critic's I1, inherent to the design):** the coerced sentence-2 always adds object+path argument structure the control lacks, so this gap **cannot fully separate "the model registers a SENSE shift" from "the model rates added transitive/path structure as less verb-related."** The result is an **internal-contrast** finding; the polysemy anchors show pure sense shift *can* drive low ratings but do not control the coerced arm's surface confound. A v2 with a non-coercing *transitive* control is the clean follow-up.
+
+Reproducible from `raw/results.json`. **Post-run verification:** all arm means, gaps, within-verb signs, the 180/0 totals, and the three-way ordering independently recomputed from `raw/*.json` → **CLEAN — all figures verified**.
