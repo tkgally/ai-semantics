@@ -1,0 +1,52 @@
+---
+id: lexical-sense-gradience-operationalization
+title: How is the lexical-sense-gradience probe operationalized (instrument, polysemy/homonymy stratification source, context-similarity control, synchronic filter)?
+status: resolved
+opened: 2026-05-30
+opened-by: orchestrator
+resolved: 2026-05-30
+resolved-by: orchestrator (under Tom's explicit standing delegation — see Resolution)
+contingent-artifacts:
+  - design/lexical-sense-gradience-v1
+---
+
+# Decision: lexical-sense-gradience probe operationalization
+
+## Resolution (2026-05-30)
+
+**Ratified under Tom's explicit standing delegation.** In the 2026-05-30 session Tom wrote: *"I ratify whatever decision you make that is rigorous and in line with the principles of this project … please proceed autonomously … focusing for the time being on lexical meaning,"* with one hard constraint: *"I will not be providing local compute any time soon."* This is a durable, on-the-record delegation of ratification authority for rigorous, in-principle operationalization choices — so resolving this gate is authorized, not a unilateral auto-resolution. The orchestrator records its specific choices and reasoning below; the no-retuning discipline still binds (every measure is fixed **before** any model call, and the design is split so the contestable stratification is not bundled into the clean monotonicity test — see §scope).
+
+**Q1 — Instrument → behavioral panel (DURel-style graded rating), small-model representation lane DEFERRED.** Forced by the no-compute constraint (the representation-similarity lane needs hidden states / local compute, the same blocker as AANN). The panel is prompted as a DURel *annotator*: given the target word marked in two usage sentences, rate the relatedness of the word's meaning across the two on the **verbatim 4-point DURel scale** (4 Identical / 3 Closely Related / 2 Distantly Related / 1 Unrelated) — the exact human instrument, so the model signal is directly rank-comparable to the human median. **Two pre-registered framings** are run for instrument-robustness (a recurring project concern, [`open-question/instrument-sensitivity-constructional-inference`](../../findings/open-questions/instrument-sensitivity-constructional-inference.md)): (a) the ordinal 4-point DURel rating; (b) a continuous 0–100 relatedness rating. Temperature 0, logprob-free → existing panel. Using the human scale is the *fairest* monotonicity test (it tests whether the model **orders** pairs like humans, a rank correlation), not teaching-to-the-anchor.
+
+**Q2 — Polysemy/homonymy stratification → WordNet-grounded reproducible rule, run as a SEPARATE later probe (v2), not bundled into v1.** The stratification is genuinely contestable and DWUG does not carry it; bundling it into the monotonicity test would risk a retuning trap and muddy a clean result. So v1 runs **P1 (monotonicity) + P3 (context-similarity control)** only — the load-bearing, fully DWUG-anchored core. The frozen stratification *method* for the later v2: a lemma is **homonymous** if its WordNet senses split into groups in different lexicographer files (`lexname`/supersense) with no shared hypernym below the unique-beginner level **and** distinct etymologies (cross-checked against a dictionary/Wiktionary etymology); **polysemous** if its senses share a near hypernym / common etymology; **genuinely ambiguous lemmas are flagged and EXCLUDED**, not force-labelled. Kept as a layer separate from the raw DWUG files (CC BY-ND). This fixes the method now (no post-hoc tuning) while staging it cleanly.
+
+**Q3 — Context-similarity control → TWO pre-registered controls: (i) content-token lexical overlap [independent, surface] + (ii) model-rated topic/situation similarity [semantic].** Both fixed **before** any sense-probe result is seen (no retuning toward a result). (i) Lexical overlap between the two sentences with the target token removed (Jaccard + token-F1 over lower-cased content tokens), computed independently of any model. **Build-time finding (2026-05-30):** in the frozen 200-pair sample, lexical overlap is **near-zero across all DURel levels** (mean Jaccard 0.001–0.015; Spearman with the human median only 0.18) — DWUG's same-lemma usage sentences share almost no content words regardless of sense-relatedness, so a *surface-lexical* shadow is ruled out almost by construction, but (i) therefore has little variance to partial out and is a **weak** control. (ii) was added to meet the real threat to clause (c) — the deeper *semantic* context shadow: each panel model also rates the **topic/situation similarity of the two sentences ignoring the target word** (0–100), elicited as a separate framing in the same run; the sense-monotonicity is then reported as a partial Spearman controlling for this model-rated topic similarity. (ii) is model-internal (not a fully independent measure) — disclosed — but it directly tests whether the sense signal is *just* the model's perception of how similar the two contexts are. The offline sentence-embedding cosine originally floated as the semantic control is **unavailable** (no ML libraries / no compute, per Tom's constraint), so (ii) replaces it. The combination (surface-independent + semantic-model-internal) is the v1 control battery; both partials reported.
+
+**Q4 — Synchronic filter → within-period pairs only.** Verified amply feasible (2026-05-30 inspection of `dwug_en.zip` v3.0.0: 22,393 within-period pairs spread across all four DURel levels — 1:3546 / 2:6320 / 3:3504 / 4:9023; every lemma represented; 8,731 have ≥2 judgments). v1 retains only pairs whose two usages share a DWUG `grouping` (time period), giving a clean synchronic gradience anchor; cross-period pairs may be reported descriptively only.
+
+**Data/licence handling (decided with the above, since it conditions reproducibility):** DWUG is CC BY-ND 4.0 over copyrighted CCOHA corpus text. To be conservative the project does **not** commit the raw archive or the corpus sentences; it commits the reproducible **recipe** (`build_items.py`: Zenodo URL + archive sha256 + the frozen within-period filter + ≥2-judgment requirement + fixed sampling seed + balance/diversity caps) and a **manifest** of the selected pairs by DWUG identifier + the human rating values used as gold (pointers + the specific annotation values for ~200 pairs — research-analysis use, not dataset redistribution). The full usage sentences live only in a gitignored local extraction during the run; committed raw JSON records ids + ratings + model preds, **not** the CCOHA text. Freeze = sha256 of the deterministic manifest.
+
+---
+
+## Why this exists (original framing, retained)
+
+
+The **anchor direction** for [`conjecture/lexical-sense-gradience`](../../findings/conjectures/lexical-sense-gradience.md) is already settled — [`decisions/resolved/lexical-sense-gradience-anchor`](lexical-sense-gradience-anchor.md) ratified Option B (a graded set, not Usim), and DWUG was independently verified 2026-05-30 ([`resource/dwug-usage-graphs`](../../base/resources/dwug-usage-graphs.md), VERDICT: YES-WITH-CAVEATS). But [`design/lexical-sense-gradience-v1`](../../../experiments/designs/lexical-sense-gradience-v1.md) still has **operationalization choices** that are not fixed. The conjecture's own Notes flag this: *"Instrument is an operationalization gate … pick and freeze the instrument before seeing results … Queue this gate before running."* Choosing these after seeing a gradience-or-collapse pattern is the canonical retuning trap (charter §8). **No lexical probe runs until this is ratified.** This is surfacing, not a resolution — the orchestrator does not auto-resolve.
+
+## The live choices (see design §3–§5)
+
+1. **Instrument (Q1).** Behavioral panel (prompt the 3-family panel for a graded same/different-sense rating + confidence on the two usage sentences; logprob-free, runs now) vs the small-model representation-similarity lane (cosine of the target word's contextual vectors; the cleaner `distributional` instrument but needs **local compute**, the same blocker as AANN) — or commit to **both** as separate pre-registered instruments.
+2. **Polysemy / homonymy stratification source (Q2).** WordNet-based (unrelated coarse roots / distinct homographs = homonymy; related senses = polysemy) vs dictionary-based (separate headwords = homonymy, numbered senses = polysemy) vs a manual expert tag of the 40 DWUG EN lemmas. DWUG does **not** carry this split; prediction 2 needs it added and frozen.
+3. **Context-similarity control measure (Q3).** Lexical overlap (Jaccard / token-F1 minus the target), sentence-embedding cosine, or both — computed independently of the model's sense signal, then partialled out. This is the design's spine (clause c).
+4. **Synchronic filter (Q4).** Within-period pairs only (clean synchronic anchor) vs include cross-period pairs with the period gap as a covariate. DWUG mixes two CCOHA periods.
+
+## Provisional default (in force until Tom ratifies — NOT acted on; the probe stays unrun)
+
+1. **Q1 → behavioral panel**, small-model lane deferred (it needs local compute, held the same way AANN is). Rationale: every prior probe is behavioral; this keeps the lexical wedge runnable now and comparable to the constructional findings. Re-add the representation lane when local compute lands.
+2. **Q2 → WordNet-based stratification**, frozen with the item set and stored separately from the raw DWUG files (CC BY-ND forbids distributing a modified DWUG). Manual expert tags of the 40 lemmas are an acceptable supplement if WordNet relatedness is ambiguous, but must be pre-registered.
+3. **Q3 → both** lexical overlap *and* sentence-embedding cosine, reported separately; the partial correlation controls for each.
+4. **Q4 → within-period pairs only** for the synchronic gradience anchor; a cross-period arm may be reported descriptively but is not the primary test.
+
+## Notes for the resolver
+
+Tom: a one-line ratification or amendment fixes the yardstick. The point of this gate is only to stop the next run from tuning the instrument/stratification/control to whatever turns a collapse into gradience or vice versa. Not urgent — the lexical probe is a new axis, not a follow-up to a pending result. If you'd rather not pursue it yet (e.g. wait for the small-model lane / local compute so the cleaner `distributional` instrument is available), say so and the design stays parked. The DWUG anchor itself is verified and ready either way.
