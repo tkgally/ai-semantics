@@ -43,7 +43,7 @@ links:
 
 The project has run on two tracks that looked separate: a **grammatical** wedge (constructional meaning — does a model track a construction's contributed inference?) with nine-plus own-design results, and, as of 2026-05-30, a **lexical** wedge (sense gradience — does a model track graded word-sense relatedness?) with its first result, [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md). Tom's steer is to connect them, in theory and empirically. This page argues they are **not two tracks but one**, and that the project has — without having named it — been applying a **single evidential test** on both. It is a synthesis page (a framework + a bridge), claiming a structure, not new data; the new data are on the two result pages it leans on.
 
-## The continuum thesis (grounded, not novel)
+## The continuum thesis (established in CxG, not novel here)
 
 Construction Grammar's foundational move is that the lexicon and the grammar are **not different kinds of thing**. [`concept/constructional-meaning`](../../base/concepts/constructional-meaning.md) states it directly: constructions "range from morphemes and closed-class items through idioms and argument-structure templates to large-scale discourse patterns" — a single inventory (a *constructicon*) along a cline of **specificity** and **schematicity**. A word is, on this view, a maximally specific construction (a form–meaning pairing with a fully fixed form); an argument-structure template is a maximally schematic one. There is no principled seam between "lexical meaning" and "grammatical meaning"; there is one form–meaning space at different grains. (CxG canon — Goldberg 1995/2006, Langacker, Croft 2001 — is referenced in `constructional-meaning` as not-in-repo; the continuum claim here rests on that concept page's in-repo statement of it, not on fabricated quotation.)
 
@@ -87,7 +87,8 @@ this repo already catalogs that tie meaning to the world — Bender & Koller / L
 ([`concept/grounding`](../../base/concepts/grounding.md)), Harnad's symbol grounding
 ([`concept/symbol-grounding-problem`](../../base/concepts/symbol-grounding-problem.md)), Barsalou's
 perceptual symbols ([`concept/embodied-cognition`](../../base/concepts/embodied-cognition.md)) —
-giving the `grounded.perceptual` tag its first empirical exercise.
+positioned to give the `grounded.perceptual` tag its first empirical exercise *if a result lands*
+(nothing has run yet).
 
 The axis is **designed to join this continuum, not sit beside it.** The first multimodal conjecture,
 [`conjecture/multimodal-lexical-grounding-divergence`](../conjectures/multimodal-lexical-grounding-divergence.md),

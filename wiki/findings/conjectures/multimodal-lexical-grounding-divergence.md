@@ -5,10 +5,11 @@ title: Visual grounding moves a model's graded lexical-sense behavior toward the
 meaning-senses:
   - grounded
   - grounded.perceptual
-  - referential
+  - referential.sense
   - distributional
   - human-comparison
 status: proposed
+anchor: pending
 contingent-on:
   - multimodal-panel-and-grounding-theory
 created: 2026-05-30
@@ -81,9 +82,10 @@ as movement toward the independent human signal.**
 
 ## Why this is interesting
 
-- It earns the `grounded.perceptual` tag its **first empirical exercise**. Until now grounding
-  has been a base-layer concept only; this is the project asking the grounding question of its
-  own panel's behavior, with a human anchor, rather than rehearsing the philosophy.
+- **If confirmed, it would give** the `grounded.perceptual` tag its **first empirical exercise**.
+  Until now grounding has been a base-layer concept only; this is the project *proposing* to ask
+  the grounding question of its own panel's behavior, with a human anchor, rather than rehearsing
+  the philosophy. (Nothing has run; the tag is exercised only when a result lands.)
 - It is a clean test on the seam between [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md)
   and [`concept/grounding`](../../base/concepts/grounding.md): does perceptual input add `referential.sense`-relevant
   signal *beyond the distributional shadow*, or has a strong text model already saturated it?
@@ -91,11 +93,17 @@ as movement toward the independent human signal.**
   first-class negative that bounds how much grounding the multimodal models' extra modality buys.
 - It offers a **second route to the lexical hard direction (polysemy vs. homonymy)** that the
   text-only [`result/lexical-polysemy-homonymy-v2`](../results/lexical-polysemy-homonymy-v2.md)
-  could not reach (DWUG EN had only 3 clean homonyms, and they sat at the human "unrelated"
-  floor where text already puts them). Vision may supply the *discreteness* signal the text
-  distribution under-determined: visually distinct referents → image pushes homonym pairs to the
-  floor; visually overlapping polyseme uses → image leaves them intermediate. If so, the
-  discreteness regime DWUG EN couldn't separate in text becomes separable under depiction.
+  could not reach. That null was *not* "homonyms sat at the floor": DWUG EN held only **3 clean
+  homonym lemmas** (`ball`/`plane`/`prop`), and their cross-period usage pairs were often the
+  **same sense within a pair** (etymological homonyms whose two instances do not actually contrast
+  senses) — so the homonyms carried substantial *intermediate and high* human mass, the bimodality
+  precondition failed, and **no separable discreteness regime existed to detect in either the human
+  or the model ratings**. The gap was a *design* gap: DWUG (built for diachronic change) supplies
+  no clean, cross-sense, perceptually-contrasting homonym pairs. A purpose-built **image-paired**
+  set of genuinely cross-sense homonym pairs with visually distinct referents could supply exactly
+  that contrast — vision adding a sense-distinguishing signal the diachronic text anchor never
+  carried. (This is a *prediction about a constructed set*, not a claim that DWUG's homonyms are
+  floored — they are not.)
 - It is built to **integrate**, not replace. The instrument is the *same* DURel-style graded
   relatedness rating the lexical program validated, with the image as the only added variable —
   so a result here joins the lexicon↔grammar continuum
@@ -107,7 +115,7 @@ as movement toward the independent human signal.**
 
 Ordered cheapest-first, matching the anchor-class sequencing surfaced in
 [`decisions/open/multimodal-panel-and-grounding-theory`](../../decisions/open/multimodal-panel-and-grounding-theory.md)
-(Q3). Predictions 1 is text-side and **$0 / runnable now**; 2–4 require image input.
+(Q3). Prediction 1 is text-side and **$0 / runnable now**; 2–4 require image input.
 
 1. **Perceptual-strength moderation (text-side, the cheap bridge — runnable with no new probe).**
    Re-analyzing the *already-collected* lexical-v1 ratings
@@ -182,8 +190,9 @@ license/fetchability/meaning-bearing in
 - **Predictions 2–3** need an **image-paired graded-sense resource**: either a constructed
   image-sense set (target words depicted in two usages, rated against a human sense inventory — new
   stimuli + a new image probe) or an existing graded human perceptual-similarity set
-  (**THINGS-data** triplet judgments, CC0 — but those are object-similarity, not word-sense, so they
-  test a *related* claim, not this one directly). Which to build/fetch is the Q3-B decision.
+  (**THINGS-data** triplet judgments, CC0 [per a secondary source; the OSF README was not directly
+  verified this run — see the scouting note] — but those are object-similarity, not word-sense, so
+  they test a *related* claim, not this one directly). Which to build/fetch is the Q3-B decision.
 
 Anchor caveats, stated plainly:
 - The conjecture must not be promoted past `proposed` until (a) the anchor-class decision is ratified
