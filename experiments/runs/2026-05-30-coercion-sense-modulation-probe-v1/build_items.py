@@ -57,7 +57,7 @@ POLY = [
     ("charge", "The cavalry «charged» the hill.", "The shop «charged» a small fee."),
     ("break", "He «broke» the window.", "He «broke» for lunch at noon."),
     ("set", "She «set» the dinner table.", "The sun «set» behind the hills."),
-    ("bank", "They sat on the river «bank».", "She deposited it at the «bank»."),  # homonymy floor
+    ("bank", "The plane «banked» sharply left.", "She «banked» the cheque at noon."),  # verb homonymy floor (tilt vs deposit)
 ]
 
 
