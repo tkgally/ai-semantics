@@ -1,7 +1,7 @@
 """Off-ceiling argument-structure coercion v2 probe (2026-05-29).
 
 Operationalizes design/argument-structure-coercion-v2 with the project's OWN stimuli
-(experiments/data/argument-structure-coercion-v2/items.csv, frozen by build_items.py
+(experiments/data/coercion-implicit-cue-v2b/items.csv, frozen by build_items.py
 BEFORE this runs), under the RATIFIED difficulty gate (decisions/resolved/
 cc-v2-difficulty-operationalization). Behavioral NLI + forced-choice, temperature 0,
 NO logprobs -> runs on the existing 3-family behavioral panel (config/models.md).
@@ -24,7 +24,7 @@ PANEL = {"A": "anthropic/claude-sonnet-4.6", "B": "openai/gpt-5.4-mini",
          "C": "google/gemini-3.5-flash"}
 HERE = os.path.dirname(os.path.abspath(__file__))
 ITEMS = os.path.abspath(os.path.join(HERE, "..", "..", "data",
-                                     "argument-structure-coercion-v2", "items.csv"))
+                                     "coercion-implicit-cue-v2b", "items.csv"))
 RAW = os.path.join(HERE, "raw")
 
 NLI_SYS = (

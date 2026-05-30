@@ -1,18 +1,16 @@
-"""Off-ceiling argument-structure coercion v2 probe (2026-05-29).
+"""Comparative-correlative v2 (off-ceiling) probe (2026-05-30).
 
-Operationalizes design/argument-structure-coercion-v2 with the project's OWN stimuli
-(experiments/data/conative-cancel-v2/items.csv, frozen by build_items.py
-BEFORE this runs), under the RATIFIED difficulty gate (decisions/resolved/
-cc-v2-difficulty-operationalization). Behavioral NLI + forced-choice, temperature 0,
-NO logprobs -> runs on the existing 3-family behavioral panel (config/models.md).
+Operationalizes design/comparative-correlative-v2 with the project's OWN frozen stimuli
+(experiments/data/comparative-correlative-v2/items.csv, built by build_items.py BEFORE this
+runs), under the RATIFIED difficulty gate (decisions/resolved/cc-v2-difficulty-
+operationalization). Behavioral NLI + forced-choice, temperature 0, NO logprobs -> runs on
+the existing 3-family behavioral panel (config/models.md). Internal-contrast-only (no
+Scivetti human-comparison arm: the conflicting-cue / multi-step arms have no in-repo human
+norm; design s4).
 
-Indicator: affirm-construction-inference rate (FC YES, or NLI label 0 = entailment) on
-the per-item hypothesis. Key arm = conflicting-cue (canonical vs cue minimal pair):
-a model still affirming under the explicit denial = template/H-default; withholding = H-deep.
-
-Arms per slot:
-  NLI: premise = sentence, hypothesis = nli_hypothesis -> 0/1/2
-  FC : "is the following statement true: '<hypothesis>'? YES / NO / CANT_TELL"
+Instrument (reused verbatim from the v1 CC probe):
+  NLI: premise = sentence, hypothesis = "As <dim1> increases, <dim2> increases." -> 0/1/2
+  FC : "As <dim1> increases, how does <dim2> change?" -> INCREASE / DECREASE / UNDETERMINED
 
 Run: OPENROUTER_API_KEY=... python3 probe.py
 """
@@ -24,7 +22,7 @@ PANEL = {"A": "anthropic/claude-sonnet-4.6", "B": "openai/gpt-5.4-mini",
          "C": "google/gemini-3.5-flash"}
 HERE = os.path.dirname(os.path.abspath(__file__))
 ITEMS = os.path.abspath(os.path.join(HERE, "..", "..", "data",
-                                     "conative-cancel-v2", "items.csv"))
+                                     "comparative-correlative-v2", "items.csv"))
 RAW = os.path.join(HERE, "raw")
 
 NLI_SYS = (
@@ -36,14 +34,12 @@ NLI_SYS = (
     "Output a single digit 0, 1, or 2 and nothing else."
 )
 FC_SYS = (
-    "You answer a single question about a short sentence, using ONLY what the sentence "
-    "states or logically entails (not what is merely plausible). Answer with exactly one "
-    "of: YES, NO, CANT_TELL. Output only that token and nothing else."
+    "You answer a single multiple-choice question about a short passage. Read the passage, "
+    "then decide what it implies about how the second quantity changes as the first quantity "
+    "increases. Use ONLY what the passage states or logically entails (not what is merely "
+    "plausible in the real world). Answer with exactly one word: INCREASE, DECREASE, or "
+    "UNDETERMINED. Output only that one word."
 )
-
-
-def load_items():
-    return list(csv.DictReader(open(ITEMS)))
 
 
 def call(model, system, user):
@@ -79,27 +75,30 @@ def parse_fc(c):
     if not c:
         return None
     u = c.upper()
-    if "CANT" in u.replace("'", "") or "CAN'T" in u or "TELL" in u:
-        return "CANT_TELL"
-    if re.search(r"\bYES\b", u):
-        return "YES"
-    if re.search(r"\bNO\b", u):
-        return "NO"
+    if "UNDETERMIN" in u:
+        return "UNDETERMINED"
+    if "INCREASE" in u:
+        return "INCREASE"
+    if "DECREASE" in u:
+        return "DECREASE"
     return None
 
 
-def fc_q(it):
-    return (f"Sentence: {it['sentence']}\nQuestion: Based only on the sentence, is the "
-            f"following statement true: \"{it['nli_hypothesis']}\" Answer YES, NO, or CANT_TELL.")
+def nli_user(it):
+    return f"Premise: {it['sentence']}\nHypothesis: {it['nli_hypothesis']}\nRelation:"
+
+
+def fc_user(it):
+    return (f"Passage: {it['sentence']}\nAs {it['dim1']} increases, how does {it['dim2']} "
+            f"change? Answer INCREASE, DECREASE, or UNDETERMINED.")
 
 
 def run(arm, sys_prompt, items, slot, model, make_user, parse):
     recs = []
     for it in items:
         r = call(model, sys_prompt, make_user(it))
-        recs.append({"item_id": it["item_id"], "construction": it["construction"],
-                     "stem": it["stem"], "condition": it["condition"],
-                     "difficulty": it["difficulty"], "pred": parse(r.get("content")),
+        recs.append({"item_id": it["item_id"], "arm": it["arm"], "difficulty": it["difficulty"],
+                     "direction_gold": it["direction_gold"], "pred": parse(r.get("content")),
                      "raw": r.get("content"), "error": r.get("error"), "usage": r.get("usage")})
     os.makedirs(RAW, exist_ok=True)
     json.dump(recs, open(os.path.join(RAW, f"{arm}_{slot}.json"), "w"), indent=1)
@@ -118,15 +117,14 @@ def cost(recs_lists, model):
 
 
 def main():
-    items = load_items()
+    items = list(csv.DictReader(open(ITEMS)))
     print(f"{len(items)} items")
-    nli_user = lambda it: f"Premise: {it['sentence']}\nHypothesis: {it['nli_hypothesis']}\nRelation:"
     summary, total = {}, 0.0
     for slot, model in PANEL.items():
         print(f"\n=== panel.{slot} {model} ===")
         t0 = time.time()
         nli = run("nli", NLI_SYS, items, slot, model, nli_user, parse_nli)
-        fc = run("fc", FC_SYS, items, slot, model, fc_q, parse_fc)
+        fc = run("fc", FC_SYS, items, slot, model, fc_user, parse_fc)
         cst = cost([nli, fc], model)
         total += cst
         summary[slot] = {"model": model, "n_calls": len(nli) + len(fc),
