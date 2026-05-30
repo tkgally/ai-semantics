@@ -24,20 +24,25 @@ estimated_cost = sum over models of:
     (n_items × avg_out_tokens × pricing.completion)
 ```
 
-Use `experiments/runs/2026-05-28-panel-calibration/probe.py` as the cost-template for a single one-shot probe; multiply.
+Use `experiments/runs/2026-05-28-panel-calibration/probe.py` as the cost-template for a single one-shot probe; multiply. This is only a *pre-flight estimate* — the recorded figure must be the **actual billed** cost (see below).
 
 If `estimated_cost` > **$5 in a single run** or > **$10 cumulative against the current month's cap**, **stop and flag in NEXT.md** with the cost estimate before running.
 
 ## After each probe
 
-Record actual usage in the run record (under `experiments/runs/<date>-<name>/`):
+Record **actual billed** usage in the run record (under `experiments/runs/<date>-<name>/`).
+**Use the API-returned `usage.cost`, not the rate-card estimate** — the estimate undercounts
+real spend ~4.5x (2026-05-30 finding). The shared harness [`experiments/lib/openrouter.py`](../experiments/lib/openrouter.py)
+does this for you: `call()` requests `usage.cost` (via `"usage": {"include": true}`) and
+`billed_cost()` sums it. New probes should import from there rather than re-implement the
+estimate. (Legacy ledger rows below this date are estimates and are flagged as undercounts.)
 
 ```
 usage:
-  panel.A: prompt_tokens=..., completion_tokens=..., cost_usd=...
+  panel.A: prompt_tokens=..., completion_tokens=..., cost_usd=...   # cost_usd = summed usage.cost
   panel.B: ...
   panel.C: ...
-  total_cost_usd: ...
+  total_cost_usd: ...   # = billed_cost([...]) ; flag any n_missing_cost > 0
 ```
 
 Aggregate to a running ledger here when the second run lands (don't pre-create).
