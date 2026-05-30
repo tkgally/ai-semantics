@@ -2,36 +2,92 @@
 
 ## State
 
-The project now runs on a **third scope axis**. Alongside the **grammatical** wedge (constructional meaning, 11 own-design results) and the **lexical** wedge (sense gradience: clauses a+c supported, b a null awaiting a homonymy-enriched anchor), this session (2026-05-30, **workflow mode**, branch `claude/elegant-hopper-KJCOb`, PR #28) opened the **multimodal / physical-AI meaning** axis as a *research-program plan built as typed wiki pages* — at Tom's headline steer. **No probes ran ($0 API spend);** the deliverable is the plan + base layer + the first multimodal conjecture.
+The project is **three-axis**: **grammatical** (live, robust — 11 own-design results), **lexical**
+(live: conjecture clauses a+c supported, b a null awaiting a homonymy-enriched anchor), and
+**multimodal / physical-AI** (opened 2026-05-30). This session (2026-05-30, **workflow mode**,
+branch `claude/dreamy-galileo-u2Ipf`, PR #29) ran the multimodal axis's **first probe-bearing unit**
+— the **$0 Lancaster perceptual-grounding moderation** of the existing DWUG lexical result
+(prediction 1 of [`conjecture/multimodal-lexical-grounding-divergence`](wiki/findings/conjectures/multimodal-lexical-grounding-divergence.md),
+decision Q3 default A, standing delegation). It produced the project's **first `grounded`-tagged
+result — a NULL**.
 
-What landed (3 generation waves + 2 independent adversarial passes [1 base-layer coherence pass + 1 conjecture review], all fixes applied):
+What landed (one full wave + two independent adversarial passes [pre-write critic + post-run
+verifier], all fixes applied):
 
-1. **Feasibility — settled, and it is the opposite of the AANN blocker.** All three *current* panel families already accept **image** input (verified against the live OpenRouter `/models` catalog: `claude-sonnet-4.6`, `gpt-5.4-mini`, `gemini-3.5-flash`; gemini also audio+video). So the text↔VLM contrast can run **within the same model families** (modality toggled, family held constant) — no model-family swap forced. [`experiments/lib/openrouter.py`](experiments/lib/openrouter.py) extended with a backward-compatible `images=` param (text-only calls byte-for-byte unchanged). See [`experiments/notes/multimodal-panel-feasibility.md`](experiments/notes/multimodal-panel-feasibility.md).
-2. **Base layer (8 pages).** VLM-compositionality literature — [`source/thrush-2022-winoground`](wiki/base/sources/thrush-2022-winoground.md), [`source/yuksekgonul-2023-aro`](wiki/base/sources/yuksekgonul-2023-aro.md) (+SugarCrepe note), [`concept/multimodal-compositionality`](wiki/base/concepts/multimodal-compositionality.md); grounding/embodiment philosophy — [`source/harnad-1990-symbol-grounding`](wiki/base/sources/harnad-1990-symbol-grounding.md), [`source/barsalou-1999-perceptual-symbol-systems`](wiki/base/sources/barsalou-1999-perceptual-symbol-systems.md), [`concept/symbol-grounding-problem`](wiki/base/concepts/symbol-grounding-problem.md), [`concept/embodied-cognition`](wiki/base/concepts/embodied-cognition.md). These give `grounded.perceptual` a real conceptual home and surface the still-unanchored `referential.externalist` gap. Abstracts verbatim; some body quotes flagged pending PDF / secondary-source.
-3. **The first multimodal conjecture** — [`conjecture/multimodal-lexical-grounding-divergence`](wiki/findings/conjectures/multimodal-lexical-grounding-divergence.md), the project's **first `grounded`-tagged finding**. Directional, falsifiable: visual grounding moves graded lexical-sense behavior **toward the human signal** beyond the text-only baseline, **concentrated where senses are perceptually distinguishable**; the text-only baseline is the null to beat, with a *redundancy* null and a *distraction* null both first-class. Built to **join** the lexicon↔grammar continuum by reusing the validated DURel-style instrument and toggling one factor (modality). [`theory/lexicon-grammar-continuum`](wiki/findings/theory/lexicon-grammar-continuum.md) extended with the prospective third axis.
-4. **Anchor scouting + a surfaced decision.** [`base/resources/multimodal-anchor-scouting.md`](wiki/base/resources/multimodal-anchor-scouting.md) verified 6 candidates; **Lancaster Sensorimotor Norms** (CC BY 4.0) is the cheapest first anchor (a $0 text-side moderator on the existing DWUG result), **THINGS-data** (CC0) the image-probe anchor. The value-laden choices (panel / grounding theory / anchor class) are surfaced in [`decisions/open/multimodal-panel-and-grounding-theory`](wiki/decisions/open/multimodal-panel-and-grounding-theory.md) — **not** auto-resolved.
+1. **Anchor fetched + catalogued.** The **Lancaster Sensorimotor Norms** (Lynott et al. 2020,
+   **CC BY 4.0**) aggregate CSV downloaded + **sha256-pinned** (OSF `rwhs6`/`48wsc`,
+   `445d363f…`; full CSV gitignored, derived 42-lemma join table committed). New typed resource
+   [`resource/lancaster-sensorimotor-norms`](wiki/base/resources/lancaster-sensorimotor-norms.md).
+   42/43 DWUG EN lemmas covered (`lass` absent).
+2. **The result — a NULL** ([`result/lexical-perceptual-grounding-moderation-v1`](wiki/findings/results/lexical-perceptual-grounding-moderation-v1.md)).
+   A word's perceptual groundedness (`Max_strength.perceptual`) does **not** predict how well a
+   text-only model tracks its graded DWUG senses. Pre-registered primary cells (durel × 3 models):
+   every Δρ = ρ_HIGH − ρ_LOW negative (−0.05 / −0.27 / −0.04); the lone CI excluding zero
+   (gpt-5.4-mini, −0.27) runs the **wrong** way. Confounds (pairs/lemma, annotator-count, spread)
+   all clear; **inherently underpowered** (21 lemmas/side, compressed range 2.44–4.95) → null reads
+   as "no detectable moderation OR unresolvable," not a falsification. **Lowers the prior** on the
+   image predictions (2–4) per the conjecture's own null clause; does **not** reach the image-vs-text
+   *redundancy* null (that needs an actual image probe). Cost **$0.00**.
+3. **Discipline.** Inputs frozen (sha256) before any model-rating × perceptual quantity; independent
+   pre-write critic caught a normalization **BLOCKER** (fixed pre-run) + forced the power /
+   collinearity (perceptual≈visual ρ 0.85) / multiple-comparison disclosures + an n≥3 robustness pass;
+   independent post-run verifier reproduced **every** figure to ±0.0001. `PREREG.md` + run record in
+   [`experiments/runs/2026-05-30-lancaster-perceptual-moderation-v1/`](experiments/runs/2026-05-30-lancaster-perceptual-moderation-v1/README.md).
 
-## Next concrete action (workflow-mode backlog — all un-gated unless noted)
+## Next concrete action (backlog — pick by Tom's decision or run un-gated units)
 
-The first runnable multimodal unit and the lexical backlog both stand; pick by Tom's decision (or run the $0 unit under the standing delegation if defaults hold).
+The cheapest high-value $0 multimodal unit is **done**. The next multimodal step (the genuine image
+probe) is **gated on a value-laden Tom decision** (Q3-B); the rest of the standing backlog is un-gated
+but needs **new API spend**.
 
-1. **Multimodal prediction 1 — Lancaster moderation of the existing DWUG lexical result ($0, no new API; the cheapest high-value unit and the project's likely FIRST `grounded` result).** Fetch the Lancaster Sensorimotor Norms (OSF https://osf.io/7emr6/, CC BY 4.0 — a plain data download), join perceptual/action-strength scores to the 43 DWUG EN lemmas, and re-analyze the already-collected lexical-v1 ratings: is the panel's sense-relatedness monotonicity (Spearman 0.60–0.83) **stronger for perceptually grounded lemmas**? Read-only re-analysis in the project's proven $0 mode; joins the lexical program to the grounded axis. Contingent on [`decisions/open/multimodal-panel-and-grounding-theory`](wiki/decisions/open/multimodal-panel-and-grounding-theory.md) Q3 (default A = do this; **non-blocking** — runnable under the standing delegation if defaults hold). Needs the adversarial pre-write/post-run discipline of any $0 re-analysis.
-2. **Multimodal predictions 2–3 — the first IMAGE probe (genuinely multimodal; new spend).** (a) A **liveness ping** through the extended harness (tiny synthetic image + "what colour?", all 3 models) — infrastructure, ~$0.001, freeze the 1-line stimulus + sha256. (b) Then build + freeze an **image-paired graded-sense set** (target words depicted in two usages, with genuinely cross-sense, visually-distinct homonym pairs) rated with vs without the image, against a human sense signal. Needs Q3-B + a new design doc + budget; gemini reasoning+image tokens dominate cost.
-3. **Lexical v3 — homonymy-enriched anchor** (still open; the clean clause-(b) test the DWUG-EN null pointed to). Needs a graded set with matched cross-sense homonym/polysemy pairs (or a small constructed minimal-pair set rated against a human sense inventory — new API). *Note the multimodal conjecture's prediction 3 is a second route to the same clause-(b) question, via vision.*
-4. **Bridge v2 — non-coercing transitive control** (settles the coercion-v1 sense-vs-surface confound; new stimuli + one cheap probe).
-5. **WiC binary cross-check** (conjecture prediction 5; needs WiC fetched + a cheap probe).
-6. **AANN small-model lane** (held by Tom — needs local compute; holds the lexical small-model representation lane too). **Relational pilot** — needs Clark & Wilkes-Gibbs 1986 fetched (Tom's library) + a multi-agent-LLM literature read.
+1. **Multimodal predictions 2–3 — the first IMAGE probe (genuinely multimodal; new spend). GATED.**
+   (a) A liveness ping through the now-image-capable harness (tiny synthetic image + "what colour?",
+   all 3 models; ~$0.001; freeze the 1-line stimulus + sha256). (b) An image-paired graded-sense set
+   (target words depicted in two usages, with genuinely cross-sense, visually-distinct homonym pairs)
+   rated with vs without the image, against a human sense signal. **Needs Tom's Q3-B** (opening the
+   image-input probe is the surfaced, value-laden direction-setting call) + a new design doc + budget
+   + an image anchor (THINGS-data, CC0, scouted). The prediction-1 null *lowered* the prior on this
+   but did **not** falsify it — the word-level Lancaster proxy is blunter than prediction 3's
+   *sense-level* perceptual-distinguishability moderator, so a sharp image test is still warranted.
+2. **Bridge v2 — non-coercing transitive control (un-gated; new stimuli + one cheap probe).** Settles
+   the coercion-v1 sense-vs-surface confound ([`result/coercion-sense-modulation-v1`](wiki/findings/results/coercion-sense-modulation-v1.md)).
+   The cleanest un-gated runnable unit (governed by ratified gates, internal-contrast-only).
+3. **Lexical v3 — homonymy-enriched anchor (un-gated; needs a new graded set with matched cross-sense
+   homonym/polysemy pairs + new API).** The clean clause-(b) test the DWUG-EN null
+   ([`result/lexical-polysemy-homonymy-v2`](wiki/findings/results/lexical-polysemy-homonymy-v2.md))
+   pointed to. (Multimodal prediction 3 is a second route to the same question, via vision.)
+4. **WiC binary cross-check** (conjecture prediction 5; needs WiC fetched + a cheap probe).
+5. **AANN small-model lane** (held by Tom — needs local compute). **Relational pilot** — needs Clark &
+   Wilkes-Gibbs 1986 fetched (Tom's library) + a multi-agent-LLM literature read.
 
-Run `python3 tools/senselint.py` (0 errors) + `python3 tools/linkify.py` before every commit. Claims modest; nulls first-class. New probes import [`experiments/lib/openrouter.py`](experiments/lib/openrouter.py) (billed `usage.cost`; now image-capable via `images=`); **freeze + commit stimuli (sha256) before any probe call.** **Budget watch:** gemini reasoning tokens dominate multi-call cost — and image tokens are a new driver (keep images small / low-detail).
+Run `python3 tools/senselint.py` (0 errors) + `python3 tools/linkify.py` before every commit. Claims
+modest; **nulls first-class**. New probes import [`experiments/lib/openrouter.py`](experiments/lib/openrouter.py)
+(billed `usage.cost`; image-capable via `images=`); **freeze + commit stimuli (sha256) before any
+probe call.** **Budget watch:** gemini reasoning + image tokens dominate multi-call cost — keep images
+small/low-detail.
 
 ## Blocked / pending Tom (3 open decisions, all non-blocking)
 
-- [`decisions/open/multimodal-panel-and-grounding-theory`](wiki/decisions/open/multimodal-panel-and-grounding-theory.md) — **NEW (direction-setting, non-blocking).** The multimodal axis's three value-laden choices: **Q1** panel (default A: keep the existing 3-family panel, image first), **Q2** grounding theory to privilege (default A: Lyre gradual + `grounded.perceptual`; Harnad/Barsalou as foils), **Q3** anchor class (default A: Lancaster $0 text-side moderator first; B: THINGS image probe; C: hold multimodal for the text lexical v3). A one-liner per question is enough; the conjecture + base layer stand either way, and the $0 prediction-1 unit can run under the standing delegation if defaults hold.
-- [`decisions/open/aann-panel-logprob-blocker`](wiki/decisions/open/aann-panel-logprob-blocker.md) — AANN held (Tom's call); clean path needs local compute. Not blocking.
-- [`decisions/open/conflicting-cue-human-anchor`](wiki/decisions/open/conflicting-cue-human-anchor.md) — low-priority; the pending human anchor for internal-contrast-only off-ceiling/bridge results. A one-liner closes it.
-
-*(Twelve decisions are resolved; the standing delegation — "I ratify whatever decision you make that is rigorous and in line with the principles," within the no-local-compute constraint — covers rigorous in-principle operationalization/anchor choices, but the multimodal axis's panel/grounding/anchor-class choices were surfaced as value-laden per the steer.)*
+- [`decisions/open/multimodal-panel-and-grounding-theory`](wiki/decisions/open/multimodal-panel-and-grounding-theory.md)
+  — **direction-setting, non-blocking.** Q1 panel (default A: existing 3-family, image first), Q2
+  grounding theory (default A: Lyre gradual + `grounded.perceptual`, Harnad/Barsalou as foils), Q3
+  anchor class (default A = the Lancaster $0 moderator, **now DONE → null**; **B = the THINGS image
+  probe, the live next call**; C = hold multimodal for text lexical v3). With Q3-A done, the live
+  question is **whether to open the image probe (Q3-B) now** — the value-laden call. A one-liner each
+  is enough.
+- [`decisions/open/aann-panel-logprob-blocker`](wiki/decisions/open/aann-panel-logprob-blocker.md) —
+  AANN held (Tom's call); clean path needs local compute. Not blocking.
+- [`decisions/open/conflicting-cue-human-anchor`](wiki/decisions/open/conflicting-cue-human-anchor.md)
+  — low-priority; pending human anchor for internal-contrast-only off-ceiling/bridge results. A
+  one-liner closes it.
 
 ## Reminder for the next cold-start
 
-Charter `PROJECT.md` (purpose/modesty §1/§2); schema `CLAUDE.md`; run discipline `PROTOCOL.md` ("continue working" ⇒ workflow mode). **Read [`wiki/executive-summary.md`](wiki/executive-summary.md) first, then `wiki/index.md`**; reconcile `wiki/decisions/open/` (3 open, all non-blocking). The project is now **three-axis**: grammatical (live, robust), lexical (live: a+c supported, b a null), and multimodal/physical (newly opened — base layer + first conjecture + feasibility done; **first runnable unit = the $0 Lancaster moderation of the existing DWUG result**, which would be the first `grounded`-tagged result). The harness is now image-capable. No image probe has run yet; the panel is verified able to take images.
+Charter `PROJECT.md` (purpose/modesty §1/§2); schema `CLAUDE.md`; run discipline `PROTOCOL.md`
+("continue working" ⇒ workflow mode). **Read [`wiki/executive-summary.md`](wiki/executive-summary.md)
+first, then `wiki/index.md`**; reconcile `wiki/decisions/open/` (3 open, all non-blocking). The project
+is **three-axis**: grammatical (live, robust), lexical (a+c supported, b a null), multimodal (base
+layer + first conjecture + feasibility + **now the first `grounded`-tagged result, a $0 NULL**). The
+harness is image-capable but **no image probe has run yet** — the panel is verified able to take
+images; opening that probe is the surfaced Q3-B decision. The next un-gated new-spend unit is
+**bridge-v2**.
