@@ -70,7 +70,7 @@ HOMONYM 3 lemmas / 16 pairs, POLYSEMY 35 lemmas / 154 pairs (170 of 200 pairs us
 
 ## Freeze hash
 
-`stratification.csv` sha256: **`3169ff3a1b1e825d653e7eba33d4c1a8a4ab1de6b30c9c9c1c8c81fc14eef21f`** — the committed file is the corrected uniform-rule version (HOMONYM = ball/plane/prop; lass excluded). Re-running `analyze.py` against it reproduces `raw/results.json`.
+`stratification.csv` sha256: **`de9657db9848e422e70e51181f6e01d2dc86eb53b3bff154ee3f104712bf66a0`** — the committed file is the corrected uniform-rule version (HOMONYM = ball/plane/prop; lass excluded). Re-running `analyze.py` against it reproduces `raw/results.json`.
 
 ## Post-run verification
 
