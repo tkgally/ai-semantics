@@ -85,6 +85,49 @@ def ensure_dwug():
     raise RuntimeError("DWUG data/ dir not found after extraction")
 
 
+def stem_match(token, root):
+    """token (a surface form) is a plausible inflection of the lemma root."""
+    t = token.lower()
+    if not t.isalpha():
+        return False
+    need = min(4, len(root))
+    cp = 0
+    for x, y in zip(t, root):
+        if x == y:
+            cp += 1
+        else:
+            break
+    return cp >= need or root in t or t in root
+
+
+def extract_target(ctx, a, b, root):
+    """Robustly recover the target word span.
+
+    DWUG `indexes_target_token` offsets are misaligned (+1) for some items whose `context`
+    has a leading space (the pre-run critic's B1). Fix: anchor near the given offset, expand
+    to the maximal alphabetic run, and validate it is a plausible inflection of the lemma root
+    (else drop the use). Returns (start, end, surface) or None.
+    """
+    n = len(ctx)
+    anchor = None
+    for cand in (a, a + 1, a - 1, a + 2, a - 2):
+        if 0 <= cand < n and ctx[cand].isalpha():
+            anchor = cand
+            break
+    if anchor is None:
+        return None
+    s = anchor
+    while s > 0 and ctx[s - 1].isalpha():
+        s -= 1
+    e = anchor
+    while e < n and ctx[e].isalpha():
+        e += 1
+    surface = ctx[s:e]
+    if not stem_match(surface, root):
+        return None
+    return s, e, surface
+
+
 def content_tokens(sentence, target_surface):
     toks = re.findall(r"[a-z]+", sentence.lower())
     tgt = set(re.findall(r"[a-z]+", target_surface.lower()))
@@ -102,6 +145,7 @@ def overlap(s1, t1, s2, t2):
 
 
 def load_lemma(data_dir, lemma):
+    root = lemma.split("_")[0].lower()
     uses = {}
     with open(os.path.join(data_dir, lemma, "uses.csv"), encoding="utf-8") as f:
         for r in csv.DictReader(f, delimiter="\t"):
@@ -109,8 +153,12 @@ def load_lemma(data_dir, lemma):
             if len(parts) != 2 or not all(p.strip().lstrip("-").isdigit() for p in parts):
                 continue  # malformed/missing target offset -> unusable usage
             a, b = int(parts[0]), int(parts[1])
+            got = extract_target(r["context"], a, b, root)
+            if got is None:
+                continue  # span could not be validated against the lemma -> drop (B1 fix)
+            s, e, surface = got
             uses[r["identifier"]] = {"context": r["context"], "grouping": r["grouping"],
-                                     "span": (a, b), "surface": r["context"][a:b],
+                                     "span": (s, e), "surface": surface,
                                      "pos": r["pos"], "date": r["date"]}
     pj = defaultdict(list)
     with open(os.path.join(data_dir, lemma, "judgments.csv"), encoding="utf-8") as f:
@@ -182,6 +230,13 @@ def main():
         selected.extend(picked)
         print(f"  level {lvl}: selected {len(picked)} (from {len(cands)}; "
               f"{len(set(c['lemma'] for c in picked))} lemmas)")
+
+    # B2 span-sanity gate: every selected item's two target surfaces must validate against
+    # the lemma root (no mid-word/garbage spans ship in the frozen set).
+    for c in selected:
+        root = c["lemma"].split("_")[0].lower()
+        assert stem_match(c["surf1"], root) and stem_match(c["surf2"], root), \
+            f"span-sanity fail {c['id1']}/{c['id2']} root={root} surf=({c['surf1']!r},{c['surf2']!r})"
 
     # stable item ids
     selected.sort(key=lambda d: (d["human_median"], d["lemma"], d["id1"], d["id2"]))

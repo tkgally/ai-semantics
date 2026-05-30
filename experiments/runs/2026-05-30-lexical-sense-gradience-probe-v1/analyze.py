@@ -71,7 +71,7 @@ def boot_ci(x, y, n_boot=2000, seed=20260530):
 
 def main():
     man = {r["item_id"]: {"overlap": float(r["overlap_jaccard"]),
-                          "human": float(r["human_median"])}
+                          "human": float(r["human_median"]), "human_n": int(r["human_n"])}
            for r in csv.DictReader(open(MANIFEST))}
     out = {"per_model": {}, "n_items": len(man),
            "reading_rule": "P1 Spearman(model sense, human DURel); P3 partial Spearman "
@@ -96,10 +96,16 @@ def main():
             r_so, r_ho = spearman(sense, overlap), spearman(human, overlap)
             r_st, r_ht = spearman(sense, topic), spearman(human, topic)
             ci = boot_ci(sense, human)
+            # S3 robustness: rho on the higher-reliability subset (>=3 annotators)
+            ids3 = [i for i in ids if man[i]["human_n"] >= 3]
+            r_sh3 = (round(spearman([preds[sense_fr][i] for i in ids3],
+                                    [man[i]["human"] for i in ids3]), 3)
+                     if len(ids3) >= 10 else None)
             cell = {"n": len(ids), "rho_sense_human": round(r_sh, 3), "rho_ci95": ci,
                     "partial_ctrl_overlap": round(partial(r_sh, r_so, r_ho), 3),
                     "partial_ctrl_topic": round(partial(r_sh, r_st, r_ht), 3),
                     "rho_sense_topic": round(r_st, 3),
+                    "rho_sense_human_n>=3": r_sh3, "n_ge3": len(ids3),
                     "na": sum(1 for i in man if preds[sense_fr].get(i) is None)}
             # per-human-level mean sense rating (monotonic table)
             bylvl = defaultdict(list)
