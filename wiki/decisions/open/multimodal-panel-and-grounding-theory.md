@@ -69,11 +69,38 @@ a finding's interpretation depends on which one frames it:
   yardstick. (Caveat already on [`concept/grounding`](../../base/concepts/grounding.md): Lyre is a non-peer-reviewed preprint
   whose 3-D typology is his own framing, not consensus — cite with attribution.)
 
+## Q3 — Which anchor class does the first multimodal unit privilege?
+
+The anchor scouting ([`base/resources/multimodal-anchor-scouting.md`](../../base/resources/multimodal-anchor-scouting.md))
+surfaced two structurally different first units, which differ in cost and in how much
+they actually exercise *multimodality*:
+
+- **A (provisional default) — Lancaster Sensorimotor Norms as a text-side grounding
+  moderator on the EXISTING DWUG lexical result (\$0, no new probe).** Join the 40 DWUG EN
+  lemmas to their perceptual-strength ratings (CC BY 4.0) and ask whether the established
+  monotonicity ([`result/lexical-sense-gradience-v1`](../../findings/results/lexical-sense-gradience-v1.md), Spearman 0.60–0.83) is *stronger for
+  perceptually grounded words*. This directly **joins the lexical program to the grounded
+  axis** (the integration goal) and is a read-only re-analysis in the project's proven $0
+  mode — but it tests `grounded.perceptual` as a *property of words*, not via image input.
+- **B — THINGS-data triplet judgments as an image-grounded perceptual anchor (new probe,
+  new spend).** Compare a VLM (image input) vs a text-only model on human object-similarity
+  judgments (CC0, 4.7M triplets). The genuinely *multimodal* first probe — exercises image
+  input — but needs a new design + budget.
+- **C — hold the multimodal axis and spend the next unit on the text lexical v3**
+  (homonymy-enriched anchor) that [`result/lexical-polysemy-homonymy-v2`](../../findings/results/lexical-polysemy-homonymy-v2.md)'s null already
+  points to. Keeps focus on the open lexical clause (b).
+
+A and B are *sequenceable* (A first as the cheap bridge, B if warranted). The provisional
+default is **A** because it is $0, exercises the integration goal, and reuses an already-
+collected result — but whether to open the image-input probe (B) now, or hold for the
+text lexical v3 (C), is the direction-setting call for Tom.
+
 ## Provisional defaults
 
-**Q1 → A** (existing 3-family panel, image first) and **Q2 → A** (Lyre gradual framing +
-`grounded.perceptual`, Harnad/Barsalou as foils). Both are the choices the un-gated prep
-already assumed, so a "defaults stand" keeps everything as built; a different call
-re-points the first multimodal probe. Tom: a one-liner per question is enough. **Not
-blocking** — the conjecture and base layer stand either way; this governs the first
-probe's panel + interpretive frame.
+**Q1 → A** (existing 3-family panel, image first), **Q2 → A** (Lyre gradual framing +
+`grounded.perceptual`, Harnad/Barsalou as foils), **Q3 → A** (Lancaster text-side $0
+moderator on the existing DWUG result as the first multimodal-adjacent unit). All three
+are the choices the un-gated prep already assumed, so a "defaults stand" keeps everything
+as built; a different call re-points the first multimodal unit. Tom: a one-liner per
+question is enough. **Not blocking** — the conjecture and base layer stand either way;
+this governs the first unit's panel, interpretive frame, and anchor class.

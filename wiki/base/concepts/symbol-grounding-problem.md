@@ -31,7 +31,7 @@ A symbol system consists of tokens manipulated by rules that operate purely on t
 
 > "How can the meanings of the meaningless symbol tokens, manipulated solely on the basis of their (arbitrary) shapes, be grounded in anything but other meaningless symbols?" ([`source/harnad-1990-symbol-grounding`](../sources/harnad-1990-symbol-grounding.md), p. 335)
 
-The regress is made vivid by the Chinese/Chinese dictionary scenario. Trying to learn Chinese by consulting only a Chinese/Chinese dictionary produces an endless "merry-go-round, passing endlessly from one meaningless symbol or symbol-string (the definientes) to another (the definienda), never coming to a halt on what anything meant." ([`source/harnad-1990-symbol-grounding`](../sources/harnad-1990-symbol-grounding.md), body). The merry-go-round is a regress of the same kind that afflicts purely symbolic AI: every symbol is defined by other symbols, none of which has its meaning grounded in anything non-symbolic.
+The regress is made vivid by the Chinese/Chinese dictionary scenario. Trying to learn Chinese by consulting only a Chinese/Chinese dictionary produces an endless "merry-go-round, passing endlessly from one meaningless symbol or symbol-string (the definientes) to another (the definienda), never coming to a halt on what anything meant." ([`source/harnad-1990-symbol-grounding`](../sources/harnad-1990-symbol-grounding.md), body — arXiv cs/9906002, verbatim). The merry-go-round is a regress of the same kind that afflicts purely symbolic AI: every symbol is defined by other symbols, none of which has its meaning grounded in anything non-symbolic.
 
 ## Harnad's proposed solution
 

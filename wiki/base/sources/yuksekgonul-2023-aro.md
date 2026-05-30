@@ -24,7 +24,7 @@ pdf-pages: "arXiv 2210.01936v3 abstract page (verbatim abstract fetched 2026-05-
 links:
   - rel: supports
     target: concept/multimodal-compositionality
-  - rel: refines
+  - rel: supports
     target: source/thrush-2022-winoground
 
 ---
