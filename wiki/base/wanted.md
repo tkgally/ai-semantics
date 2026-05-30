@@ -121,7 +121,7 @@ The lexical conjecture's anchor decision RESOLVED 2026-05-29 ([`decisions/resolv
 
 - [P1] DWUG — Diachronic Word Usage Graphs (Schlechtweg et al.). Graded human usage-similarity judgments (4-point, Usim tradition), **CC BY**, on Zenodo/GitHub. **← leading Option-B candidate (verify license + scale + counts + fetchability, then mirror to experiments/data/ + write a resource page).**
   why: the load-bearing graded anchor the monotonicity clause needs; well-licensed and available (unlike Usim).
-  status: wanted (priority)
+  status: catalogued (2026-05-30 — resource page created: wiki/base/resources/dwug-usage-graphs.md; see page for the license / scale / counts / fetchability / fit verification breakdown)
 - [P2] CoSimLex (SemEval-2020 Task 3). Graded human ratings of word similarity in context; released.
   why: alternative graded in-context similarity anchor if DWUG does not fit.
   status: wanted
