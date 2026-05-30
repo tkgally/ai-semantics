@@ -47,8 +47,16 @@ The embedded-CC follow-up to the v1/v2 CC ceiling positives. v1/v2 probed the CC
 
 ## Pre-run critique
 
-_(to be filled from the independent read-only adversarial subagent before the run; re-freeze if any gold is corrected.)_
+An **independent read-only adversarial subagent** re-derived every `nli_gold`/`fc_gold` from the sentence text alone (ignoring the build comments). **VERDICT: sound to run as-is — all 16 golds correct, no BLOCKER / SHOULD-FIX, hash unchanged.** It confirmed: the `negation` contradiction golds (the premise denies exactly the positive hypothesis), the `modal-epistemic` neutral golds (the operator raises the relation without asserting it), the `negation-inv` neutral golds (negating a decrease does not entail an increase), and the `baseline-inv` polarity recodes (incl. the double-recode `negi-alarm`). Disclosure NITs (noted, not fixed): (1) **the `negation` arm assumes the strict-proposition reading** — under a weaker pragmatic reading "it is not true that the more they trained the better they performed" denies only a strict/lawlike link and could be read as neutral; the contradiction gold is the intended (strict) reading and is defensible. (2) Several embedded items have a real-world direction a model ignoring the operator would default to (training→performance, exercise→lifespan, etc.) — by design (the trap); no baseline item is accidentally ambiguous (baselines align world-knowledge with the stated direction). (3) Cosmetic plural-subject/singular-verb in three positive hypotheses ("…sales increases") — does not affect any entailment/gold; left as-is to preserve the freeze hash.
 
 ## Results / cost
 
-_(to be filled after the run + independent post-run number verification.)_
+96 calls, **1 NA** (claude NLI on `negi-alarm` over-reasoned past `max_tokens=64` and emitted no digit — the single hardest, doubly-recoded item; FC for the same item is present). Cost **$0.09326 billed** (A $0.01705 / B $0.00419 / C $0.07202) — first run on the corrected harness; gemini billed **14×** its rate-card estimate ($0.072 vs $0.005), the sharpest confirmation yet of the budget-tracking fix.
+
+**Headline: the CC covariation reading mostly survives operator embedding — but not in every model, and the third model cracks under FC via logical OVER-inference (not template-firing).** Per-arm operator-correct rate:
+- **claude & gemini track operator scope at/near ceiling.** Both: 100% on `baseline-pos`/`baseline-inv` and on `negation`/`modal-epistemic` (withhold the covariation direction under negation + epistemic hedging). gemini is **100% on every arm, both instruments**. claude's only slips are both on the doubly-recoded `negi-alarm` (FC→DECREASE; NLI→NA). So the v1/v2 robustness is **not** a bare "the-more…the-more → INCREASE" template — it survives the operator that cancels the assertion.
+- **gpt-5.4-mini cracks under the FC instrument, via the excluded-middle fallacy.** FC: `negation-inv` **0%** — all three negated-inverse items answered **INCREASE** (treats ¬(X decreases) as entailing X increases); one `negation` item flipped to **DECREASE** (¬increase ⟹ decrease); one `modal` read as asserted (INCREASE). Its NLI is much stronger (only a "unproven ⟹ false" slip on `mod-exercise`). The errors are **over-inference, not template-firing** — it withholds correctly on 3/4 direct negations and is at ceiling on both baselines.
+
+This both supports CC robustness (2/3 models perfect; operator scope genuinely tracked) and localizes a sharp, instrument-dependent failure in the third model to a specific logical error. Reproducible from `raw/results.json`.
+
+**Post-run verification:** every figure independently recomputed from `raw/*.json` by a read-only adversarial subagent (see result page).

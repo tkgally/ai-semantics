@@ -61,6 +61,7 @@ Aggregate to a running ledger here when the second run lands (don't pre-create).
 | 2026-05-30 | cancel-direction conative probe v2 (264 calls) | **$0.300 actual** (token-estimate said $0.059) |
 | 2026-05-30 | caused-motion implicit-cue probe v2b (180 calls) | **$0.158 actual** (token-estimate said $0.039) |
 | 2026-05-30 | comparative-correlative probe v2 (114 calls) | **$0.109 actual** (token-estimate said $0.026) |
+| 2026-05-30 | comparative-correlative probe v3 / embedded-CC operator-scope (96 calls) | **$0.09326 billed** (A $0.01705 / B $0.00419 / C $0.07202; first run summing API `usage.cost` — gemini billed 14× its $0.005 estimate) |
 | 2026-05-30 | wasted re-run from a hardcoded-`ITEMS`-path bug (copied probe.py loaded the old coercion-v2 stimuli before the path was fixed; ~1.3 probes' worth, raw discarded) | ≈ $0.30 actual (est.; disclosed; no result contaminated) |
 
 Running total against the $20/month soft cap: **the estimate-based total above (≈$0.56 through 2026-05-29) is a SUBSTANTIAL UNDERCOUNT** — see the note below. Real billed spend is several times higher but still far under the cap.

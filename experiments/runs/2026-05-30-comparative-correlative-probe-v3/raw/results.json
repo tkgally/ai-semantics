@@ -1,0 +1,158 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "baseline-pos_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "baseline-inv_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation_nli": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "modal-epistemic_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation-inv_nli": {
+    "correct": 100.0,
+    "n": 2
+   },
+   "baseline-pos_fc": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "baseline-inv_fc": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation_fc": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "modal-epistemic_fc": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation-inv_fc": {
+    "correct": 66.7,
+    "n": 3
+   },
+   "embedding_cancellation_nli": {
+    "rate": 100.0,
+    "n": 9
+   },
+   "embedding_cancellation_fc": {
+    "rate": 100.0,
+    "n": 10
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "baseline-pos_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "baseline-inv_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation_nli": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "modal-epistemic_nli": {
+    "correct": 66.7,
+    "n": 3
+   },
+   "negation-inv_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "baseline-pos_fc": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "baseline-inv_fc": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation_fc": {
+    "correct": 75.0,
+    "n": 4
+   },
+   "modal-epistemic_fc": {
+    "correct": 66.7,
+    "n": 3
+   },
+   "negation-inv_fc": {
+    "correct": 0.0,
+    "n": 3
+   },
+   "embedding_cancellation_nli": {
+    "rate": 100.0,
+    "n": 10
+   },
+   "embedding_cancellation_fc": {
+    "rate": 60.0,
+    "n": 10
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "baseline-pos_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "baseline-inv_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation_nli": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "modal-epistemic_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation-inv_nli": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "baseline-pos_fc": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "baseline-inv_fc": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation_fc": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "modal-epistemic_fc": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "negation-inv_fc": {
+    "correct": 100.0,
+    "n": 3
+   },
+   "embedding_cancellation_nli": {
+    "rate": 100.0,
+    "n": 10
+   },
+   "embedding_cancellation_fc": {
+    "rate": 100.0,
+    "n": 10
+   }
+  }
+ },
+ "reading_rule": "operator-correct rate per arm; headline = embedding-cancellation rate (off bare-positive on embedded arms) + per-arm operator-correct + degradation shape (report-the-rate, ratified)"
+}
