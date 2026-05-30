@@ -1,0 +1,63 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "nli": {
+    "canonical": 100.0,
+    "implicit_wk": 100.0,
+    "explicit": 0.0,
+    "implicit_minus_explicit": 100.0,
+    "canonical_to_implicit_drop": 0.0,
+    "canonical_to_explicit_drop": 100.0
+   },
+   "fc": {
+    "canonical": 100.0,
+    "implicit_wk": 90.0,
+    "explicit": 0.0,
+    "implicit_minus_explicit": 90.0,
+    "canonical_to_implicit_drop": 10.0,
+    "canonical_to_explicit_drop": 100.0
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "nli": {
+    "canonical": 100.0,
+    "implicit_wk": 90.0,
+    "explicit": 0.0,
+    "implicit_minus_explicit": 90.0,
+    "canonical_to_implicit_drop": 10.0,
+    "canonical_to_explicit_drop": 100.0
+   },
+   "fc": {
+    "canonical": 60.0,
+    "implicit_wk": 40.0,
+    "explicit": 10.0,
+    "implicit_minus_explicit": 30.0,
+    "canonical_to_implicit_drop": 20.0,
+    "canonical_to_explicit_drop": 50.0
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "nli": {
+    "canonical": 100.0,
+    "implicit_wk": 100.0,
+    "explicit": 0.0,
+    "implicit_minus_explicit": 100.0,
+    "canonical_to_implicit_drop": 0.0,
+    "canonical_to_explicit_drop": 100.0
+   },
+   "fc": {
+    "canonical": 100.0,
+    "implicit_wk": 100.0,
+    "explicit": 0.0,
+    "implicit_minus_explicit": 100.0,
+    "canonical_to_implicit_drop": 0.0,
+    "canonical_to_explicit_drop": 100.0
+   }
+  }
+ },
+ "indicator": "affirm-caused-motion rate",
+ "reading_rule": "report-the-rate; headline = implicit-wk vs explicit gap + canonical->cue drops, per instrument (no pass bar)"
+}

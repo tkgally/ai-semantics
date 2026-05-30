@@ -26,7 +26,7 @@ links:
 
 # DWUG — Diachronic Word Usage Graphs (Schlechtweg et al. 2021)
 
-> **Verification status (2026-05-30):** License VERIFIED (CC BY-ND 4.0, not plain CC BY — a correction to `wanted.md`/anchor-decision wording). DURel annotation scale VERIFIED verbatim. Total-judgment count VERIFIED from primary source. DWUG EN download URL fetchable (HTTP 200). Per-lemma and per-usage-pair counts for DWUG EN partially verified (from secondary citation of dataset statistics table). Annotator count partially verified (from paper description). See the Verified / Unverified / Open breakdown at the end of this page. **Anchor status: carries `anchors:` link contingent on Tom's ratification of the license assessment and the diachronic-vs-synchronic fit note below** — the intellectual fit is established (graded human usage-similarity signal, same DURel tradition as Usim, 4-point graded scale) but the ND license restriction and the diachronic design are both open questions the orchestrator should surface to Tom before promoting any result.
+> **Verification status (2026-05-30):** License VERIFIED (CC BY-ND 4.0, not plain CC BY — a correction to `wanted.md`/anchor-decision wording). DURel annotation scale VERIFIED verbatim. Total-judgment count VERIFIED from primary source. DWUG EN download URL fetchable (HTTP 200). Per-lemma (40), per-usage-pair (29k), and agreement (ρ .69 / α .61) counts for DWUG EN VERIFIED from the primary Table 3 (independent pass 2026-05-30); annotator count VERIFIED = **9 for EN** (the "4" was only the starting count — a correction to the earlier draft). See the Verified / Unverified / Open breakdown at the end of this page. **Anchor status: carries `anchors:` link contingent on Tom's ratification of the license assessment and the diachronic-vs-synchronic fit note below** — the intellectual fit is established (graded human usage-similarity signal, same DURel tradition as Usim, 4-point graded scale) but the ND license restriction and the diachronic design are both open questions the orchestrator should surface to Tom before promoting any result.
 
 This page catalogs the DWUG (Diachronic Word Usage Graphs) resource — the Option-B candidate anchor ratified by Tom on 2026-05-29 for [`conjecture/lexical-sense-gradience`](../../findings/conjectures/lexical-sense-gradience.md). The anchor decision [`decisions/resolved/lexical-sense-gradience-anchor`](../../decisions/resolved/lexical-sense-gradience-anchor.md) identified DWUG as the leading candidate; this page records what was actually confirmed on 2026-05-30.
 
@@ -50,18 +50,18 @@ Annotators could additionally respond **"Cannot decide"** (same source). The sca
 
 The paper describes the procedure: annotators "judge usage pairs on a semantic proximity scale avoiding the a priori definition of word senses" (from blog.junge-sprachwissenschaft.de/2021/08/01/Schlechtweg-DURel-Annotation-Tool.html, fetched 2026-05-30).
 
-### DWUG EN — counts (partially verified)
+### DWUG EN — counts (verified from primary, Table 3)
 
-The following figures for DWUG EN are drawn from a secondary citation of the paper's summary statistics table (from a web search result excerpt citing Table data, 2026-05-30). They are **partially verified** — the figures match the source's statement but the table itself was not read directly (the EMNLP PDF returned binary-only; the arXiv HTML was a 404). Mark these as "consistent with secondary sources":
+These figures were **verified from the primary source** — the EMNLP 2021 paper's Table 3 (EN row), read directly from the PDF by an independent verification pass on 2026-05-30 (the earlier "partially verified, secondary citation" status is superseded):
 
-- **Target words (lemmas):** ~40 (for English; 168 DWUGs total across all four languages)
-- **Judged usage pairs:** ~29,000 (for English)
-- **Annotators:** ~4 per language ("annotation process started out with four annotators per language", from web search result excerpt citing the EMNLP 2021 paper 2026-05-30)
-- **Total judgments (all languages):** ~100,000 ("based on 100,000 human semantic proximity judgments", EMNLP 2021 abstract, verbatim from Semantic Scholar API fetch 2026-05-30)
-- **Source corpus:** Clean Corpus of Historical American English (CCOHA); two time periods (1810–1860 and 1960–2010)
-- **Annotator agreement (approximate, from search result citing Table):** Spearman ρ ~0.69, Krippendorff's α ~0.61 across annotators for English
+- **Target words (lemmas):** **40** (for English; 168 DWUGs total across all four languages). **VERIFIED** (Table 3, EN row).
+- **Judged usage pairs:** **29,000** (for English; "total no. of judged usage pairs", JUD column). **VERIFIED** (Table 3). **Version caveat:** this is the count in the 2021 paper. The v3.0.0 archive under audit (Zenodo 14028531) "extends previous versions with one more annotation round", and the WUGsite now lists DWUG EN at **~69k** judgments — so the released v3.0.0 is larger than the 29k reported in the paper. State the version when citing a count.
+- **Annotators:** **9 total for English** (Table 3, AN column = 9). The "four annotators per language" figure is only the *starting* count: the paper states verbatim (§4.1) "We started out with four annotators per language. Following high annotation loads and dropouts, additional annotators were hired, resulting in 9/8/5 total annotators for EN/DE/SV, respectively." (Correction 2026-05-30: a prior draft said "~4 per language" — that understates the EN count by more than half.)
+- **Total judgments (all languages):** ~100,000 ("based on 100,000 human semantic proximity judgments", EMNLP 2021 abstract, verbatim from Semantic Scholar API fetch 2026-05-30; the paper body §6 adds "In total, roughly 100,000 judgments were made by annotators").
+- **Source corpus:** Clean Corpus of Historical American English (CCOHA); two time periods (1810–1860 and 1960–2010).
+- **Annotator agreement:** Spearman ρ = 0.69 (SPR column), Krippendorff's α = 0.61 (KRI column) for English. **VERIFIED** (Table 3).
 
-These figures should be confirmed against the paper's statistics table on the next visit.
+The paper further notes that "annotators make frequent use of the intermediate levels of the scale ('2','3') and thus assign graded distinctions of word meaning" — direct support for the conjecture's intermediate-regime prediction.
 
 ## License
 
@@ -77,7 +77,7 @@ The Zenodo description for DWUG EN v2.0.0 adds: **"Republication and redistribut
 
 **What CC BY-ND 4.0 permits and restricts (per Creative Commons, https://creativecommons.org/licenses/by-nd/4.0/, fetched 2026-05-30):**
 
-> "Share: copy and redistribute the material in any medium or format for any purpose, even commercially."
+> "Share — copy and redistribute the material in any medium or format for any purpose, even commercially."
 > "If you remix, transform, or build upon the material, you may not distribute the modified material."
 
 The CC license FAQ (per web search result, 2026-05-30) further clarifies: "A company may annotate a work under an ND license for internal purposes and circulate it internally, and even if the annotated version is considered an adaptation, this does not violate version 4.0 of the ND licenses so long as the annotated copy is not shared outside the company."
@@ -117,7 +117,7 @@ Both were identified as candidates in the anchor decision. The 2026-05-30 verifi
 
 **DWUG EN — recommended (with caveats).**
 - License: CC BY-ND 4.0. Permits analysis and verbatim mirroring; prohibits distributing modified versions. Adequate for the intended use with the caveat noted above.
-- Scale: 4-point DURel (1=Unrelated … 4=Identical), human, multi-rater, ~4 annotators. Graded signal over usage pairs of the same target word.
+- Scale: 4-point DURel (1=Unrelated … 4=Identical), human, multi-rater, **9 annotators for EN** (Table 3). Graded signal over usage pairs of the same target word.
 - Design fit: measures human semantic proximity between two usages of the **same target word** — exactly the signal [`conjecture/lexical-sense-gradience`](../../findings/conjectures/lexical-sense-gradience.md) needs for the monotonicity clause. The diachronic design is a complication (requires filtering within-period pairs) but is acknowledged as a solvable methodological step, not a disqualification.
 - Fetchable: YES, confirmed HTTP 200.
 
@@ -145,8 +145,8 @@ If/when mirrored: place at `experiments/data/dwug/dwug_en.zip` (NOT in the wiki)
 
 - **CC BY-ND 4.0, not CC BY.** The `wanted.md` entry and the anchor decision text both say "CC BY." This is incorrect. The license on DWUG EN is CC BY-ND 4.0. The practical difference is that a modified/augmented version of the dataset may not be distributed publicly. Analysis use and verbatim mirroring are permitted. Tom should be aware of this before any stratification layer is distributed.
 - **Diachronic design.** DWUG pairs span two time periods; within-time pairs must be selected explicitly for a synchronic gradience anchor. The paper notes "diachronic and synchronic uses" — this is a methodological step, not a blocker, but it requires freezing the within-period pair selection before any probe (charter §8 re: instrument-before-results).
-- **Per-lemma/pair counts for EN: partially verified.** The figures "~40 target words, ~29k usage pairs" are from a secondary citation of the statistics table. They have not been read directly from the paper (EMNLP PDF binary-only; arXiv HTML 404). Confirm these against the paper on the next visit or by inspecting the downloaded archive.
-- **Annotator count: partially verified.** "Four annotators per language" is cited from a web search result excerpt citing the paper; not read verbatim from the primary source.
+- **Per-lemma/pair counts for EN: VERIFIED (2026-05-30).** "40 target words, 29k judged usage pairs" were read directly from the paper's Table 3 (EN row) by an independent pass. Version caveat: the released v3.0.0 archive (Zenodo 14028531) is larger (~69k judgments per the WUGsite) after later annotation rounds.
+- **Annotator count: VERIFIED = 9 for EN (2026-05-30).** Table 3 (AN column) gives 9 total annotators for English; "four per language" was only the starting count before dropouts/hires (paper §4.1, verbatim quoted above). A prior draft's "~4" is corrected.
 - **Data not mirrored or inspected in-repo** (`status: partial`). The Zenodo record and download URL are verified; the archive contents, file format, and exact within-time pair extraction procedure are not yet confirmed.
 
 ## Verified / Unverified / Open breakdown
@@ -159,9 +159,10 @@ If/when mirrored: place at `experiments/data/dwug/dwug_en.zip` (NOT in the wiki)
 | "Cannot decide" option available | **VERIFIED** | Same source |
 | Total judgments ~100,000 across all languages | **VERIFIED verbatim** | EMNLP 2021 abstract via Semantic Scholar API, 2026-05-30 |
 | DWUG EN download URL fetchable (HTTP 200, ~17 MB) | **VERIFIED** | curl HEAD 2026-05-30 |
-| DWUG EN ~40 target words | **PARTIALLY VERIFIED** | Secondary citation of paper statistics table (web search result 2026-05-30); not read from primary |
-| DWUG EN ~29k judged usage pairs | **PARTIALLY VERIFIED** | Same secondary citation |
-| ~4 annotators per language | **PARTIALLY VERIFIED** | Search result excerpt citing EMNLP 2021 paper, 2026-05-30 |
+| DWUG EN 40 target words | **VERIFIED** | Primary paper Table 3 (EN row), read directly 2026-05-30 |
+| DWUG EN 29k judged usage pairs (2021 paper; v3.0.0 archive ~69k) | **VERIFIED** | Primary paper Table 3 (JUD); v3.0.0 size per WUGsite |
+| Annotators = **9 for EN** (started from 4) | **VERIFIED / PRIOR DRAFT CORRECTED** | Table 3 (AN=9) + §4.1 "9/8/5 total annotators for EN/DE/SV"; earlier "~4" was the starting count only |
+| Agreement ρ .69 / α .61 (EN) | **VERIFIED** | Primary paper Table 3 (SPR/KRI) |
 | Within-time (synchronic) pair subset is extractable | **PARTIALLY VERIFIED** | EMNLP abstract mentions "diachronic and synchronic uses"; corpus spans two periods; details not inspected |
 | Data format (file structure inside dwug_en.zip) | **UNVERIFIED** | Archive not downloaded or inspected |
 | CoSimLex scale (0–10 exact labels) | **UNVERIFIED verbatim** | Only inferred from data values; primary paper not read |

@@ -1,0 +1,122 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "baseline_nli": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "conflicting-cue_nli": {
+    "correct": 100.0,
+    "n": 6,
+    "follow_world_pct": 0.0,
+    "undetermined_pct": 0.0
+   },
+   "paraphrase_nli": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "multi-step_nli": {
+    "correct": 100.0,
+    "n": 5
+   },
+   "baseline_fc": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "conflicting-cue_fc": {
+    "correct": 100.0,
+    "n": 6,
+    "follow_world_pct": 0.0,
+    "undetermined_pct": 0.0
+   },
+   "paraphrase_fc": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "multi-step_fc": {
+    "correct": 100.0,
+    "n": 5
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "baseline_nli": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "conflicting-cue_nli": {
+    "correct": 100.0,
+    "n": 6,
+    "follow_world_pct": 0.0,
+    "undetermined_pct": 0.0
+   },
+   "paraphrase_nli": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "multi-step_nli": {
+    "correct": 100.0,
+    "n": 5
+   },
+   "baseline_fc": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "conflicting-cue_fc": {
+    "correct": 83.3,
+    "n": 6,
+    "follow_world_pct": 16.7,
+    "undetermined_pct": 0.0
+   },
+   "paraphrase_fc": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "multi-step_fc": {
+    "correct": 100.0,
+    "n": 5
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "baseline_nli": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "conflicting-cue_nli": {
+    "correct": 100.0,
+    "n": 6,
+    "follow_world_pct": 0.0,
+    "undetermined_pct": 0.0
+   },
+   "paraphrase_nli": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "multi-step_nli": {
+    "correct": 100.0,
+    "n": 5
+   },
+   "baseline_fc": {
+    "correct": 100.0,
+    "n": 4
+   },
+   "conflicting-cue_fc": {
+    "correct": 83.3,
+    "n": 6,
+    "follow_world_pct": 16.7,
+    "undetermined_pct": 0.0
+   },
+   "paraphrase_fc": {
+    "correct": 75.0,
+    "n": 4
+   },
+   "multi-step_fc": {
+    "correct": 100.0,
+    "n": 5
+   }
+  }
+ },
+ "reading_rule": "construction-correct rate per arm; headline = conflicting-cue follow-construction + multi-step composition + degradation shape (report-the-rate, ratified)"
+}
