@@ -63,6 +63,7 @@ Aggregate to a running ledger here when the second run lands (don't pre-create).
 | 2026-05-30 | comparative-correlative probe v2 (114 calls) | **$0.109 actual** (token-estimate said $0.026) |
 | 2026-05-30 | comparative-correlative probe v3 / embedded-CC operator-scope (96 calls) | **$0.09326 billed** (A $0.01705 / B $0.00419 / C $0.07202; first run summing API `usage.cost` — gemini billed 14× its $0.005 estimate) |
 | 2026-05-30 | caused-motion near-miss form-control probe v2c (96 calls) | **$0.21213 billed** (A $0.02276 / B $0.00555 / C $0.18382; gemini ~15× its $0.013 estimate, reasoning-token heavy) |
+| 2026-05-30 | lexical-sense-gradience probe v1 / first LEXICAL probe (1800 calls: 200 pairs × 3 framings × 3 models) | **$3.13410 billed** (A $0.42291 / B $0.10500 / C **$2.60619**; gemini ~14.5× its $0.18 estimate). Priciest single run to date; under the $5 single-run flag but flags **gemini reasoning-token cost as the dominant budget driver on multi-call probes** — consider `reasoning:{effort:"none"}` or a lower gemini `max_tokens` for large runs. |
 | 2026-05-30 | wasted re-run from a hardcoded-`ITEMS`-path bug (copied probe.py loaded the old coercion-v2 stimuli before the path was fixed; ~1.3 probes' worth, raw discarded) | ≈ $0.30 actual (est.; disclosed; no result contaminated) |
 
 Running total against the $20/month soft cap: **the estimate-based total above (≈$0.56 through 2026-05-29) is a SUBSTANTIAL UNDERCOUNT** — see the note below. Real billed spend is several times higher but still far under the cap.

@@ -51,4 +51,18 @@ VERDICT after fixes: sound to run.
 
 ## Results / cost
 
-_(to be filled after the run + independent post-run number verification.)_
+1800 calls, **0 NA**. Cost **$3.134 billed** (A $0.423 / B $0.105 / C **$2.606**) — gemini billed ~14.5× its rate-card estimate ($2.61 vs $0.18) over 600 reasoning-heavy calls; the priciest single run to date but under the $5 single-run flag and far under the $20/mo cap (reasoning-token cost on multi-call gemini probes is now a known budget driver).
+
+**Headline: a clean POSITIVE — the panel's graded sense-relatedness rating is strongly rank-correlated with the human DURel median, and the correlation survives the context-similarity control.** Spearman ρ(model sense, human DURel), n=200, bootstrap 95% CI:
+
+| model | durel ρ (CI) | cont ρ (CI) | partial \| overlap | partial \| topic | ρ(sense,topic) |
+|---|---|---|---|---|---|
+| claude-sonnet-4.6 | 0.679 (0.59–0.75) | 0.696 (0.61–0.78) | 0.67 / 0.69 | 0.52 / 0.54 | 0.64 / 0.68 |
+| gpt-5.4-mini | 0.601 (0.49–0.69) | 0.675 (0.58–0.75) | 0.59 / 0.66 | 0.50 / 0.58 | 0.46 / 0.52 |
+| gemini-3.5-flash | **0.804 (0.75–0.85)** | **0.825 (0.76–0.87)** | 0.80 / 0.82 | 0.73 / 0.75 | 0.56 / 0.59 |
+
+- **P1 monotonicity holds for all 3 models, both framings.** Per-human-level mean ratings are cleanly monotonic (e.g. claude `cont`: 18→21→32→36→50→76→80 across human levels 1.0→4.0). For reference, DWUG EN's *human* inter-annotator Spearman is **0.69** — so the panel's agreement with the human median is in (claude) or **above** (gemini 0.80) the human–human range (a reference point, not an identical comparison: model-vs-median is more stable than annotator-vs-annotator).
+- **P3 / clause (c): the monotonicity is not a context shadow.** Partialling out lexical overlap barely moves ρ (overlap is near-degenerate here, so this rules out a *surface* shadow a priori, not by partialling — S1). Partialling out the model's **own topic-similarity** rating **substantially survives** (e.g. gemini 0.80→0.73, claude 0.68→0.52) — the sense signal adds rank information beyond the model's perception of how similar the two contexts/topics are. (Model-internal control — a surviving partial is modest positive support; a collapse would have been ambiguous — S2.)
+- **Instrument/model note:** gpt-5.4-mini is again the noisier model under the *ordinal* DURel framing (ρ 0.60; its mid-level means non-monotonic) but cleaner under the *continuous* framing (ρ 0.68) — a lexical echo of the project's instrument-sensitivity theme. gemini is the strongest sense-tracker; claude in between.
+
+Reproducible from `raw/results.json`. **Post-run verification:** all 24 ρ/partial figures + the 1800-record/0-NA counts + the monotonic per-level means were independently recomputed from `raw/*.json` + `manifest.csv` by a read-only adversarial subagent → **CLEAN — all figures verified**.
