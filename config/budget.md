@@ -24,20 +24,25 @@ estimated_cost = sum over models of:
     (n_items × avg_out_tokens × pricing.completion)
 ```
 
-Use `experiments/runs/2026-05-28-panel-calibration/probe.py` as the cost-template for a single one-shot probe; multiply.
+Use `experiments/runs/2026-05-28-panel-calibration/probe.py` as the cost-template for a single one-shot probe; multiply. This is only a *pre-flight estimate* — the recorded figure must be the **actual billed** cost (see below).
 
 If `estimated_cost` > **$5 in a single run** or > **$10 cumulative against the current month's cap**, **stop and flag in NEXT.md** with the cost estimate before running.
 
 ## After each probe
 
-Record actual usage in the run record (under `experiments/runs/<date>-<name>/`):
+Record **actual billed** usage in the run record (under `experiments/runs/<date>-<name>/`).
+**Use the API-returned `usage.cost`, not the rate-card estimate** — the estimate undercounts
+real spend ~4.5x (2026-05-30 finding). The shared harness [`experiments/lib/openrouter.py`](../experiments/lib/openrouter.py)
+does this for you: `call()` requests `usage.cost` (via `"usage": {"include": true}`) and
+`billed_cost()` sums it. New probes should import from there rather than re-implement the
+estimate. (Legacy ledger rows below this date are estimates and are flagged as undercounts.)
 
 ```
 usage:
-  panel.A: prompt_tokens=..., completion_tokens=..., cost_usd=...
+  panel.A: prompt_tokens=..., completion_tokens=..., cost_usd=...   # cost_usd = summed usage.cost
   panel.B: ...
   panel.C: ...
-  total_cost_usd: ...
+  total_cost_usd: ...   # = billed_cost([...]) ; flag any n_missing_cost > 0
 ```
 
 Aggregate to a running ledger here when the second run lands (don't pre-create).
@@ -56,6 +61,8 @@ Aggregate to a running ledger here when the second run lands (don't pre-create).
 | 2026-05-30 | cancel-direction conative probe v2 (264 calls) | **$0.300 actual** (token-estimate said $0.059) |
 | 2026-05-30 | caused-motion implicit-cue probe v2b (180 calls) | **$0.158 actual** (token-estimate said $0.039) |
 | 2026-05-30 | comparative-correlative probe v2 (114 calls) | **$0.109 actual** (token-estimate said $0.026) |
+| 2026-05-30 | comparative-correlative probe v3 / embedded-CC operator-scope (96 calls) | **$0.09326 billed** (A $0.01705 / B $0.00419 / C $0.07202; first run summing API `usage.cost` — gemini billed 14× its $0.005 estimate) |
+| 2026-05-30 | caused-motion near-miss form-control probe v2c (96 calls) | **$0.21213 billed** (A $0.02276 / B $0.00555 / C $0.18382; gemini ~15× its $0.013 estimate, reasoning-token heavy) |
 | 2026-05-30 | wasted re-run from a hardcoded-`ITEMS`-path bug (copied probe.py loaded the old coercion-v2 stimuli before the path was fixed; ~1.3 probes' worth, raw discarded) | ≈ $0.30 actual (est.; disclosed; no result contaminated) |
 
 Running total against the $20/month soft cap: **the estimate-based total above (≈$0.56 through 2026-05-29) is a SUBSTANTIAL UNDERCOUNT** — see the note below. Real billed spend is several times higher but still far under the cap.
