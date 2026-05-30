@@ -75,19 +75,35 @@ CONATIVE = [
     ("slash",   "slashed",   "rope",     "and the rope split in two"),
     ("stab",    "stabbed",   "mattress", "and the blade sank deep into it"),
     ("claw",    "clawed",    "curtain",  "leaving deep gashes in it"),
-    ("swat",    "swatted",   "cushion",  "and it tumbled off the sofa"),
-    ("jab",     "jabbed",    "pad",      "and the pad shuddered from the blow"),
+    ("swat",    "swatted",   "balloon",  "and the balloon shot across the room"),
+    ("jab",     "jabbed",    "pad",      "and the pad jolted backward"),
     ("chop",    "chopped",   "log",      "and the log split cleanly"),
     ("scratch", "scratched", "post",     "leaving a long gouge in it"),
     ("hack",    "hacked",    "branch",   "and the branch came clean off"),
-    ("strike",  "struck",    "bell",     "and the bell rang out"),
+    ("whack",   "whacked",   "melon",    "and the melon split open"),
 ]
+# Verb/object/cue revision (pre-run, after the independent adversarial critique, 2026-05-30):
+# - swat object cushion -> balloon: "swatted at the cushion" (stationary) is marginal and
+#   "tumbled off the sofa" under-determines contact (a cushion can be jostled); "swatted the
+#   balloon" robustly entails contact, "swatted at the balloon" cancels, and "shot across the
+#   room" entails forceful contact.
+# - strike/bell -> whack/melon: "strike at" has a dominant idiomatic aim/attack reading
+#   ("strike at the enemy/root") so "struck at the bell" is a marginal physical conative, and
+#   "the bell rang out" only weakly entails THIS subject's contact. whack is a clean Levin
+#   hit-class conative; "the melon split open" entails forceful contact.
+# - jab cue "shuddered from the blow" -> "jolted backward": "from the blow" presupposes a
+#   landed strike (edges toward restating the contact hypothesis); "jolted backward" entails
+#   contact without the near-circular phrasing.
+# KNOWN WEAK-CONTRAST PAIRS (kept, flagged): scratch/claw are surface-contact verbs whose "at"
+# frame still implies iterative grazing contact, so the conative cancels EFFECTIVE/completed
+# contact only weakly -> these may pull conative_affirm up; reported with this caveat, not
+# scored as the headline suppression cells alone.
 
 # Non-alternating contact verbs (touch-class touch/kiss; break-class break/shatter): do NOT
 # take the conative in Levin (1993). The "V at NP" frame is anomalous -> resist arm.
 CONTROL = [
     ("touch",   "touched",   "wall"),
-    ("kiss",    "kissed",    "child"),
+    ("embrace", "embraced",  "child"),   # was kiss: "kiss at" alternates (air-kissing); embrace does not
     ("break",   "broke",     "vase"),
     ("shatter", "shattered", "window"),
 ]

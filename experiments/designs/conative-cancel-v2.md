@@ -66,4 +66,4 @@ Per the ratified Option-4 logic (same as the add-direction v2): the `transitive`
 
 ## Harness / freeze / budget
 
-Reuses the add-direction v2 harness verbatim (`build_items.py` → freeze → `probe.py` NLI+FC → `analyze.py`). Items frozen + committed before any probe call (`items.csv` sha256[:16] `d799ef279f589db9`; 44 items = 12 conative-class verbs × {transitive, conative, cue} + 4 control verbs × {transitive, resist}). 44 × 2 instruments × 3 models = 264 calls; expected ≈ $0.05–0.08 (cf. v1 conative $0.071), well under the budget flag. Pre-flight per [`config/budget.md`](../../config/budget.md).
+Reuses the add-direction v2 harness verbatim (`build_items.py` → freeze → `probe.py` NLI+FC → `analyze.py`). Items frozen + committed before any probe call (`items.csv` sha256[:16] `431945d4e1fa7a99` after the pre-run critique fixes; 44 items = 12 conative-class verbs × {transitive, conative, cue} + 4 control verbs × {transitive, resist}). 44 × 2 instruments × 3 models = 264 calls; expected ≈ $0.05–0.08 (cf. v1 conative $0.071), well under the budget flag. Pre-flight per [`config/budget.md`](../../config/budget.md).

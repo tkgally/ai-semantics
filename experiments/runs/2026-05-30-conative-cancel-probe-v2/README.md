@@ -13,7 +13,7 @@ The **cancel-direction** mirror of the off-ceiling add-direction v2, built to **
 
 - **Indicator:** affirm-contact rate (FC YES / NLI entailment) on "&lt;subj&gt; made contact with &lt;obj&gt;"; temperature 0, no logprobs → the existing 3-family behavioral panel.
 - **Panel** ([`config/models.md`](../../../config/models.md)): claude-sonnet-4.6 (A), gpt-5.4-mini (B), gemini-3.5-flash (C).
-- **Stimuli** (project's own, frozen pre-run; `items.csv` sha256[:16] `d799ef279f589db9`): 44 items — 12 Levin conative-class verbs × {transitive, conative, cue} + 4 non-alternating control verbs × {transitive, resist}.
+- **Stimuli** (project's own, frozen pre-run; `items.csv` sha256[:16] `431945d4e1fa7a99`, after the pre-run critique fixes below): 44 items — 12 Levin conative-class verbs × {transitive, conative, cue} + 4 non-alternating control verbs × {transitive, resist}.
 
 ## Conditions
 
@@ -46,7 +46,15 @@ The **cancel-direction** mirror of the off-ceiling add-direction v2, built to **
 
 ## Pre-run critique
 
-(to be filled from the independent adversarial pass; any item fixes re-freeze the hash.)
+An **independent read-only adversarial subagent** critiqued the frozen stimuli before the run (anti-retuning §8 — stimulus fixes precede seeing any result). **No BLOCKERs**; gold logic internally consistent across all 44 rows. Applied its SHOULD-FIX items (re-froze `d799ef279f589db9` → `431945d4e1fa7a99`):
+
+- **swat/cushion → swat/balloon** (+ cue "shot across the room"): "swatted at the cushion" (stationary) is marginal and "tumbled off the sofa" under-determined contact; the balloon variant cleanly entails contact under the cue.
+- **strike/bell → whack/melon** (+ cue "the melon split open"): "strike at" has a dominant idiomatic *aim/attack* reading so "struck at the bell" is a marginal physical conative, and "rang out" weakly entailed *this* subject's contact; whack is a clean Levin hit-class conative.
+- **kiss → embrace** (resist arm): "kiss at" alternates (air-kissing), so it did not anomalize crisply; "embraced at the child" is robustly anomalous.
+- **jab cue "shuddered from the blow" → "jolted backward"**: "from the blow" presupposed a landed strike (near-circular with the contact hypothesis).
+- **Kept, flagged:** scratch/claw are weaker-contrast surface verbs (the "at" frame implies grazing contact); reported with that caveat rather than dropped.
+
+The kick/hit/punch/slash/stab/chop/hack core + touch/break/shatter resist arm were judged sound as-is.
 
 ## Results / cost
 
