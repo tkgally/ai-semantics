@@ -19,7 +19,8 @@ JOIN = os.path.join(HERE, "lemma_perceptual.csv")
 
 MODELS = {"A": "claude-sonnet-4.6", "B": "gpt-5.4-mini", "C": "gemini-3.5-flash"}
 FRAMINGS = ["durel", "cont"]
-SCALE = {"durel": (1.0, 4.0), "cont": (0.0, 100.0)}  # for [0,1] normalization in T2
+SCALE = {"durel": (1.0, 4.0), "cont": (0.0, 100.0)}  # model-pred scale per framing (T2 norm)
+HUMAN_SCALE = (1.0, 4.0)  # B1 fix: human gold is ALWAYS the DURel median on 1-4, every framing
 SEED = 20260530
 NBOOT = 10000
 
@@ -87,14 +88,14 @@ def load():
             for row in data:
                 it = items.setdefault(row["item_id"], {
                     "lemma": row["lemma"], "human": float(row["human_median"]),
-                    "pred": {}})
+                    "human_n": int(row["human_n"]), "pred": {}})
                 it["pred"].setdefault(code, {})[fr] = float(row["pred"])
     return perc, items
 
 
 # ---------- analysis ----------
-def stratified(items, perc, moderator, code, fr):
-    """Return (rho_high, rho_low, n_high, n_low) pooled within median-split strata."""
+def stratified(items, perc, moderator, code, fr, min_n=1):
+    """Return (rho_high, rho_low, n_high, n_low, med) pooled within median-split strata."""
     covered = {lem: v[moderator] for lem, v in perc.items()}
     med = statistics.median(sorted(covered.values()))
     hi_m, hi_h, lo_m, lo_h = [], [], [], []
@@ -103,6 +104,8 @@ def stratified(items, perc, moderator, code, fr):
         if lem not in covered:
             continue
         if code not in it["pred"] or fr not in it["pred"][code]:
+            continue
+        if it.get("human_n", 99) < min_n:
             continue
         m, h = it["pred"][code][fr], it["human"]
         if covered[lem] > med:
@@ -140,11 +143,22 @@ def cluster_bootstrap_delta(items, perc, moderator, code, fr, med):
     return pct(deltas, 0.025), pct(deltas, 0.975), len(deltas)
 
 
-def lemma_level_mae(items, perc, moderator, code, fr):
-    """T2: Spearman(lemma MAE, lemma perceptual strength) across covered lemmas."""
-    lo, hi = SCALE[fr]
-    def norm(v):
-        return (v - lo) / (hi - lo)
+def lemma_level_mae(items, perc, moderator, code, fr, min_n=1):
+    """T2: Spearman(lemma MAE, lemma perceptual strength) across covered lemmas.
+
+    B1 fix: the model pred is normalized on its framing's scale (SCALE[fr]); the human
+    gold is ALWAYS normalized on the DURel (1,4) scale (HUMAN_SCALE), because the gold is
+    the DURel median on 1-4 in every framing. min_n filters to pairs with >= min_n raters.
+    """
+    mlo, mhi = SCALE[fr]
+    hlo, hhi = HUMAN_SCALE
+
+    def mnorm(v):
+        return (v - mlo) / (mhi - mlo)
+
+    def hnorm(v):
+        return (v - hlo) / (hhi - hlo)
+
     bylem = {}
     for it in items.values():
         lem = it["lemma"]
@@ -152,7 +166,9 @@ def lemma_level_mae(items, perc, moderator, code, fr):
             continue
         if code not in it["pred"] or fr not in it["pred"][code]:
             continue
-        err = abs(norm(it["pred"][code][fr]) - norm(it["human"]))
+        if it.get("human_n", 99) < min_n:
+            continue
+        err = abs(mnorm(it["pred"][code][fr]) - hnorm(it["human"]))
         bylem.setdefault(lem, []).append(err)
     xs, ys, rows = [], [], []
     for lem, errs in bylem.items():
@@ -163,12 +179,46 @@ def lemma_level_mae(items, perc, moderator, code, fr):
     return spearman(xs, ys), len(xs), rows
 
 
+def confounds(items, perc):
+    """Input-only confound checks (no model outputs): does the moderator track pairs/lemma,
+    annotator count, human spread, or its own Visual sibling? (critic S1/S4/N1)."""
+    bylem = {}
+    for it in items.values():
+        lem = it["lemma"]
+        if lem not in perc:
+            continue
+        d = bylem.setdefault(lem, {"n": 0, "hn": [], "hvals": []})
+        d["n"] += 1
+        d["hn"].append(it["human_n"])
+        d["hvals"].append(it["human"])
+    lems = list(bylem.keys())
+    pv = [perc[l]["Max_strength.perceptual"] for l in lems]
+    npairs = [bylem[l]["n"] for l in lems]
+    mean_hn = [sum(bylem[l]["hn"]) / len(bylem[l]["hn"]) for l in lems]
+    spread = [(statistics.pstdev(bylem[l]["hvals"]) if len(bylem[l]["hvals"]) > 1 else 0.0)
+              for l in lems]
+    vis = [perc[l]["Visual.mean"] for l in lems]
+    n_identical = sum(1 for l in lems
+                      if abs(perc[l]["Max_strength.perceptual"] - perc[l]["Visual.mean"]) < 1e-9)
+    return {
+        "n_lemmas": len(lems),
+        "rho_perc_vs_npairs": round(spearman(pv, npairs), 4),
+        "rho_perc_vs_mean_human_n": round(spearman(pv, mean_hn), 4),
+        "rho_perc_vs_human_spread": round(spearman(pv, spread), 4),
+        "rho_perc_vs_visual": round(spearman(pv, vis), 4),
+        "n_lemmas_perc_eq_visual": n_identical,
+    }
+
+
 def main():
     perc, items = load()
     out = {"n_items_total": len(items),
            "n_lemmas_covered": len(perc),
            "moderators": ["Max_strength.perceptual", "Visual.mean"],
-           "T1": {}, "T2": {}}
+           "primary_cell": "Max_strength.perceptual x durel x {A,B,C}, T1 (all else exploratory)",
+           "confounds": confounds(items, perc),
+           "T1": {}, "T2": {},
+           "robustness_n_ge_3": {}}
     for moderator in ["Max_strength.perceptual", "Visual.mean"]:
         out["T1"][moderator] = {}
         out["T2"][moderator] = {}
@@ -189,6 +239,22 @@ def main():
                 if moderator == "Max_strength.perceptual" and fr == "durel" and code == "C":
                     out["T2"]["_example_lemma_rows_gemini_durel"] = sorted(
                         lemrows, key=lambda r: -r["perc"])
+
+    # robustness: primary cell-set restricted to pairs with >=3 annotators (critic S4)
+    for fr in FRAMINGS:
+        for code, name in MODELS.items():
+            rh, rl, nh, nl, med = stratified(items, perc, "Max_strength.perceptual",
+                                             code, fr, min_n=3)
+            rho, nlem, _ = lemma_level_mae(items, perc, "Max_strength.perceptual",
+                                           code, fr, min_n=3)
+            out["robustness_n_ge_3"][f"{name}|{fr}"] = {
+                "T1_rho_high": round(rh, 4) if rh is not None else None,
+                "T1_rho_low": round(rl, 4) if rl is not None else None,
+                "T1_delta": round(rh - rl, 4) if (rh is not None and rl is not None) else None,
+                "n_high": nh, "n_low": nl,
+                "T2_rho_mae_perc": round(rho, 4) if rho is not None else None,
+                "n_lemmas": nlem,
+            }
     os.makedirs(os.path.join(HERE, "raw"), exist_ok=True)
     json.dump(out, open(os.path.join(HERE, "raw/results.json"), "w"), indent=1)
     # console summary

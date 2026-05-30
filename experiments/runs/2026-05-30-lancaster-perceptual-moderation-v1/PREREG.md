@@ -80,3 +80,41 @@ lower error → better tracking).
 - One **independent post-run number-verifier** recomputes every reported figure from the frozen
   inputs after the run.
 - No indicator is retuned after seeing an outcome. If the primary is null, the null is the result.
+
+## Pre-run critique fixes (applied before any outcome was computed)
+
+An independent adversarial pre-write critic reviewed this prereg + `build_join.py` + `analyze.py`
+(input-only; no moderation outcome computed). It independently re-verified the T1 mechanics are
+correct (fixed-threshold median; lemma-level — not pair-level — cluster resampling; correct
+Spearman tie handling; A/B/C↔model labels; 196 pairs after dropping `lass`). Fixes applied
+**before the run**:
+
+- **B1 (BLOCKER, fixed) — T2 human-side normalization.** The human gold is the DURel median on
+  the **1–4 scale in every framing**; the original T2 normalized the human term by the *framing's*
+  scale, so under `cont` (0–100) the human collapsed to ~0.01–0.04 and the "error" reduced to the
+  model's raw level. Fixed: model pred normalized on its framing scale, **human always on (1,4)**
+  (`HUMAN_SCALE`). T1 is Spearman on raw values (scale-invariant) → was never affected.
+- **S1 (disclosed) — the secondary moderator is near-collinear with the primary.** Across the 42
+  lemmas, ρ(`Max_strength.perceptual`, `Visual.mean`) ≈ 0.85 and ~33/42 are numerically identical
+  (vision is the dominant modality for most DWUG targets). **T3 is therefore a near-duplicate, not
+  independent corroboration** — reported as such, never as a second confirmation. (`analyze.py`
+  now reports the collinearity in the `confounds` block.)
+- **S2 (disclosed) — underpowered + median-boundary fragility.** 21 lemmas/side, compressed
+  moderator range (2.44–4.95), and 3 lemmas (`bar`, `chef`, `rag`) within 0.05 of the median
+  (their HIGH/LOW side is near-arbitrary). A **null must be read as "no detectable moderation OR
+  an effect this design cannot resolve," not as evidence against prediction 1.**
+- **S3 (fixed) — primary cell-set designated in advance:** `Max_strength.perceptual` × `durel` ×
+  {A,B,C}, test T1. Everything else (`cont`, `Visual.mean`, T2) is exploratory/robustness. All 24
+  cells are reported; no cell is cherry-picked as confirmatory.
+- **S4 (added) — n≥3 robustness pass.** Half the gold rests on 2 annotators (v1's S3). Added a
+  `robustness_n_ge_3` pass repeating the primary cell-set on pairs with ≥3 raters. (Critic checked
+  ρ(perceptual, mean human_n) = −0.07 → not a *differential* confound across the split.)
+- **N1 (recorded) — input-only confounds, all checked null:** ρ(perceptual, pairs/lemma),
+  ρ(perceptual, mean human_n), ρ(perceptual, human spread) are all emitted in the `confounds`
+  block so a reader sees they were checked, not assumed.
+- **S5 (resolved) — the second human anchor is page-grounded:** the Lancaster norms now have a
+  typed [`resource/lancaster-sensorimotor-norms`](../../../wiki/base/resources/lancaster-sensorimotor-norms.md)
+  page; the result will cite both DWUG (gradience) and Lancaster (moderator) as human anchors.
+
+Verdict after fixes: sound to run; inherently low-powered (report estimates + CIs, write the null
+first-class, do not over-read).
