@@ -6,10 +6,9 @@ meaning-senses:
   - distributional
   - referential
   - human-comparison
-status: provisional
+status: ready
 anchor: resource/dwug-usage-graphs
-contingent-on:
-  - lexical-sense-gradience-operationalization
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -27,7 +26,9 @@ links:
 
 # Experiment design v1 — lexical sense gradience (the lexical wedge)
 
-> **Status: provisional. Does NOT run here.** This design has a live operationalization gate ([`decisions/open/lexical-sense-gradience-operationalization`](../../wiki/decisions/open/lexical-sense-gradience-operationalization.md)) — the instrument, the polysemy/homonymy stratification source, and the context-similarity control are not yet fixed. Per charter §8, those measures must be frozen **before** any probe; choosing them after seeing a gradience/collapse pattern is the canonical retuning trap. The anchor *direction* is settled ([`decisions/resolved/lexical-sense-gradience-anchor`](../../wiki/decisions/resolved/lexical-sense-gradience-anchor.md) → Option B, DWUG), and DWUG was independently verified 2026-05-30 ([`resource/dwug-usage-graphs`](../../wiki/base/resources/dwug-usage-graphs.md), VERDICT: YES-WITH-CAVEATS). What remains before a run is (a) ratifying the operationalization decision, (b) mirroring + inspecting `dwug_en.zip`, and (c) building + freezing the item set.
+> **Status: ready. Operationalization gate RESOLVED 2026-05-30** ([`decisions/resolved/lexical-sense-gradience-operationalization`](../../wiki/decisions/resolved/lexical-sense-gradience-operationalization.md), ratified under Tom's standing delegation, within the no-local-compute constraint). The four measures are now **fixed before any probe**: **Q1** instrument = behavioral panel as a DURel annotator (verbatim 4-point scale) + a 0–100 continuous framing, both pre-registered (small-model lane deferred — needs compute); **Q2** polysemy/homonymy stratification = WordNet-grounded rule, run as a **separate later probe (v2)**, *not* bundled into v1 (so the contestable layer never touches the clean monotonicity test); **Q3** context-similarity control = content-token lexical overlap (frozen primary), embedding cosine secondary-if-available; **Q4** synchronic filter = within-period pairs only (verified amply feasible: 22,393 within-period pairs across all 4 DURel levels). **v1 scope = P1 (monotonicity) + P3 (context-similarity control).** DWUG was independently verified 2026-05-30 ([`resource/dwug-usage-graphs`](../../wiki/base/resources/dwug-usage-graphs.md), VERDICT: YES-WITH-CAVEATS); `dwug_en.zip` v3.0.0 was downloaded + inspected this session (format confirmed: per-lemma `uses.csv` [context + period + target offsets] + `judgments.csv` [per-annotator DURel 1–4]).
+>
+> **Data/licence (decided with the gate):** DWUG is CC BY-ND 4.0 over copyrighted CCOHA text; the project commits the reproducible **recipe** + an identifier/rating **manifest**, never the raw archive or the corpus sentences (gitignored, local-only during the run). See the resolved decision's "Data/licence handling".
 
 This is the project's **first lexical (non-grammatical) probe design**. It operationalizes [`conjecture/lexical-sense-gradience`](../../wiki/findings/conjectures/lexical-sense-gradience.md) — that an LLM's same/different-sense behavior is *monotonic in human-rated usage similarity*, with an *intermediate regime for polysemy* absent for homonymy, *separable from a context-similarity shadow*. Every prior finding is constructional; this opens the lexical axis the charter names as under-used.
 

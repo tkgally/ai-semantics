@@ -6,10 +6,10 @@ meaning-senses:
   - distributional
   - referential
   - human-comparison
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-05-30
 links:
   - rel: refines
     target: open-question/lexical-polysemy-gradience
@@ -25,7 +25,7 @@ links:
 
 # Conjecture: graded sense-relatedness tracking in LLMs (the lexical wedge)
 
-> **Status: proposed, untested. Anchor decision RESOLVED 2026-05-29 → Option B.** Tom ratified [`decisions/resolved/lexical-sense-gradience-anchor`](../../decisions/resolved/lexical-sense-gradience-anchor.md): **anchor on a different graded set, NOT Usim** (Usim's scale + counts were verified this session but its released file is unfetchable and unlicensed — see [`resource/wic-graded-usage-similarity`](../../base/resources/wic-graded-usage-similarity.md)). The monotonicity clause still needs a **graded, released, licensed** usage/sense-similarity set; the specific one is to be **identified + verified** by a follow-on run (leading candidates, not yet in-repo: **DWUG** / Diachronic Word Usage Graphs, graded usage-similarity, CC BY; **CoSimLex** / SemEval-2020 Task 3, graded in-context similarity). **WiC** (binary, CC BY-NC 4.0) remains the discrete cross-check. The conjecture stays `proposed`/anchor-pending-identification and may not promote a result until a specific graded set is verified and mirrored. All claims here are provisional.
+> **Status: tested (v1, 2026-05-30) — clauses (a)+(c) SUPPORTED; clause (b) untested (deferred to v2).** Anchor identified + verified = **DWUG EN** ([`resource/dwug-usage-graphs`](../../base/resources/dwug-usage-graphs.md), the Option-B graded set ratified 2026-05-29). The first lexical probe ran → [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md): all three panel models' graded sense-relatedness ratings are **monotonic in the human DURel median** (Spearman 0.60–0.83, in/above the human inter-annotator range of 0.69) — **clause (a)** — and the monotonicity **survives a context-similarity control** (partialling out the model's own topic-similarity rating; lexical overlap near-degenerate) — **clause (c)**. The **polysemy-vs-homonymy intermediate-regime, clause (b) / prediction 2, is NOT yet tested**: it was deferred to a separate **v2** with a frozen WordNet-grounded stratification (gate [`decisions/resolved/lexical-sense-gradience-operationalization`](../../decisions/resolved/lexical-sense-gradience-operationalization.md) Q2), so the contestable layer never touched the clean monotonicity test. **WiC** (binary) remains an unrun discrete cross-check. So the conjecture's *central bet (a+c)* is supported on a single run / 43 CCOHA lemmas; its *distinctive bet (b)* is still open.
 
 ## Statement
 

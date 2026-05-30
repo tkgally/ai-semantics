@@ -1,0 +1,86 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "durel": {
+    "arm_means": {
+     "control-elab": 3.75,
+     "coerced-cm": 2.67,
+     "coerced-way": 3.0,
+     "polysemy-anchor": 1.67
+    },
+    "gap_pooled": 0.92,
+    "gap_cm": 1.08,
+    "gap_way": 0.75,
+    "within_verb_control>coerced": "11/12"
+   },
+   "cont": {
+    "arm_means": {
+     "control-elab": 91.17,
+     "coerced-cm": 57.83,
+     "coerced-way": 61.67,
+     "polysemy-anchor": 15.83
+    },
+    "gap_pooled": 31.42,
+    "gap_cm": 33.34,
+    "gap_way": 29.5,
+    "within_verb_control>coerced": "10/12"
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "durel": {
+    "arm_means": {
+     "control-elab": 3.83,
+     "coerced-cm": 2.67,
+     "coerced-way": 3.5,
+     "polysemy-anchor": 1.33
+    },
+    "gap_pooled": 0.75,
+    "gap_cm": 1.16,
+    "gap_way": 0.33,
+    "within_verb_control>coerced": "8/12"
+   },
+   "cont": {
+    "arm_means": {
+     "control-elab": 96.83,
+     "coerced-cm": 64.83,
+     "coerced-way": 87.83,
+     "polysemy-anchor": 18.67
+    },
+    "gap_pooled": 20.5,
+    "gap_cm": 32.0,
+    "gap_way": 9.0,
+    "within_verb_control>coerced": "10/12"
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "durel": {
+    "arm_means": {
+     "control-elab": 3.75,
+     "coerced-cm": 3.0,
+     "coerced-way": 3.5,
+     "polysemy-anchor": 1.67
+    },
+    "gap_pooled": 0.5,
+    "gap_cm": 0.75,
+    "gap_way": 0.25,
+    "within_verb_control>coerced": "8/12"
+   },
+   "cont": {
+    "arm_means": {
+     "control-elab": 96.67,
+     "coerced-cm": 86.67,
+     "coerced-way": 90.0,
+     "polysemy-anchor": 15.0
+    },
+    "gap_pooled": 8.34,
+    "gap_cm": 10.0,
+    "gap_way": 6.67,
+    "within_verb_control>coerced": "9/12"
+   }
+  }
+ },
+ "reading_rule": "mean relatedness per arm; headline = coercion sense-shift gap (control-elab minus coerced) + per-verb sign + polysemy calibration"
+}
