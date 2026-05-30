@@ -1,0 +1,174 @@
+{
+ "panel": [
+  "claude",
+  "gpt-5.4-mini",
+  "gemini"
+ ],
+ "lexical_predictor_durel": {
+  "claude": 0.679,
+  "gpt-5.4-mini": 0.601,
+  "gemini": 0.804
+ },
+ "lexical_predictor_cont": {
+  "claude": 0.696,
+  "gpt-5.4-mini": 0.675,
+  "gemini": 0.825
+ },
+ "lexical_order": "gemini > claude > gpt-5.4-mini",
+ "note": "n=3 models: Spearman is descriptive only (few distinct orderings); report the exact rank pattern. Ceiling-for-all rows excluded from rho.",
+ "per_result": {
+  "caused-motion-v1 (affirm%, FC)": {
+   "vals": {
+    "claude": 100,
+    "gpt-5.4-mini": 90,
+    "gemini": 100
+   },
+   "order": "claude > gemini > gpt-5.4-mini",
+   "rho_vs_lexical": 0.866,
+   "ceiling_for_all": true,
+   "lexical_order_agreement": "CEILING",
+   "metric": "affirm caused-motion rate %, forced-choice",
+   "source": "result/caused-motion-minimal-pair-divergence-v1"
+  },
+  "way-v1 (affirm%, FC)": {
+   "vals": {
+    "claude": 100,
+    "gpt-5.4-mini": 77.8,
+    "gemini": 94.4
+   },
+   "order": "claude > gemini > gpt-5.4-mini",
+   "rho_vs_lexical": 0.5,
+   "ceiling_for_all": false,
+   "lexical_order_agreement": "DIVERGE",
+   "metric": "affirm path-traversal rate %, forced-choice",
+   "source": "result/way-construction-traversal-v1"
+  },
+  "conative-v1 (gap pp, FC)": {
+   "vals": {
+    "claude": 67,
+    "gpt-5.4-mini": 42,
+    "gemini": 88
+   },
+   "order": "gemini > claude > gpt-5.4-mini",
+   "rho_vs_lexical": 1.0,
+   "ceiling_for_all": false,
+   "lexical_order_agreement": "MATCH",
+   "metric": "transitive-conative completed-contact gap pp, forced-choice",
+   "source": "result/conative-minimal-pair-divergence-v1"
+  },
+  "conative-v1 (gap pp, NLI)": {
+   "vals": {
+    "claude": 54,
+    "gpt-5.4-mini": -8,
+    "gemini": 67
+   },
+   "order": "gemini > claude > gpt-5.4-mini",
+   "rho_vs_lexical": 1.0,
+   "ceiling_for_all": false,
+   "lexical_order_agreement": "MATCH",
+   "metric": "transitive-conative gap pp, NLI",
+   "source": "result/conative-minimal-pair-divergence-v1"
+  },
+  "CC-v1 (gap pp)": {
+   "vals": {
+    "claude": 87.5,
+    "gpt-5.4-mini": 90.0,
+    "gemini": 80.0
+   },
+   "order": "gpt-5.4-mini > claude > gemini",
+   "rho_vs_lexical": -1.0,
+   "ceiling_for_all": true,
+   "lexical_order_agreement": "CEILING",
+   "metric": "CC covariation vs control gap pp",
+   "source": "result/comparative-correlative-covariation-v1"
+  },
+  "cxnli-distinction (drop pp; LOWER=better)": {
+   "vals": {
+    "claude": -30,
+    "gpt-5.4-mini": -45,
+    "gemini": -41
+   },
+   "order": "claude > gemini > gpt-5.4-mini",
+   "rho_vs_lexical": 0.5,
+   "ceiling_for_all": false,
+   "lexical_order_agreement": "DIVERGE",
+   "metric": "base->distinction accuracy drop pp (less negative = better)",
+   "source": "result/cxnli-distinction-divergence-v1"
+  },
+  "conative-cancel-v2 (suppress%, FC)": {
+   "vals": {
+    "claude": 66.7,
+    "gpt-5.4-mini": 33.3,
+    "gemini": 83.3
+   },
+   "order": "gemini > claude > gpt-5.4-mini",
+   "rho_vs_lexical": 1.0,
+   "ceiling_for_all": false,
+   "lexical_order_agreement": "MATCH",
+   "metric": "conative suppression-no-cue %, forced-choice",
+   "source": "result/conative-cancel-direction-v2"
+  },
+  "coercion-implicit-v2b (impossible-affirm%, FC; LOWER=more world-knowledge)": {
+   "vals": {
+    "claude": 90,
+    "gpt-5.4-mini": 40,
+    "gemini": 100
+   },
+   "order": "gemini > claude > gpt-5.4-mini",
+   "rho_vs_lexical": 1.0,
+   "ceiling_for_all": false,
+   "lexical_order_agreement": "MATCH",
+   "metric": "affirm physically-impossible coercion %, FC (lower = more WK engagement)",
+   "source": "result/coercion-implicit-cue-v2b"
+  },
+  "CC-v3 (operator-correct%, FC)": {
+   "vals": {
+    "claude": 100,
+    "gpt-5.4-mini": 60,
+    "gemini": 100
+   },
+   "order": "claude > gemini > gpt-5.4-mini",
+   "rho_vs_lexical": 0.866,
+   "ceiling_for_all": false,
+   "lexical_order_agreement": "DIVERGE",
+   "metric": "operator-scope-correct %, FC (negation/hedge embedding)",
+   "source": "result/comparative-correlative-covariation-v3"
+  },
+  "caused-motion-near-miss-v2c (gap pp, FC)": {
+   "vals": {
+    "claude": 68.8,
+    "gpt-5.4-mini": 62.5,
+    "gemini": 100.0
+   },
+   "order": "gemini > claude > gpt-5.4-mini",
+   "rho_vs_lexical": 1.0,
+   "ceiling_for_all": false,
+   "lexical_order_agreement": "MATCH",
+   "metric": "construction-vs-near-miss causation gap pp, FC",
+   "source": "result/caused-motion-near-miss-v2c"
+  },
+  "coercion-sense-modulation-v1 (gap cont)": {
+   "vals": {
+    "claude": 31.4,
+    "gpt-5.4-mini": 20.5,
+    "gemini": 8.3
+   },
+   "order": "claude > gpt-5.4-mini > gemini",
+   "rho_vs_lexical": -0.5,
+   "ceiling_for_all": false,
+   "lexical_order_agreement": "DIVERGE",
+   "metric": "coercion sense-shift gap (control-elab - coerced), 0-100",
+   "source": "result/coercion-sense-modulation-v1"
+  }
+ },
+ "summary": {
+  "n_results": 11,
+  "n_ceiling_excluded": 2,
+  "n_discriminating": 9,
+  "mean_rho_vs_lexical (discriminating)": 0.707,
+  "n_order_match": 5,
+  "n_order_diverge": 4,
+  "gpt_is_weakest_lexically": true,
+  "bridge_inverts": true
+ }
+}
