@@ -7,9 +7,8 @@ meaning-senses:
   - inferential
   - distributional
 status: proposed
-anchor: pending
-contingent-on:
-  - conflicting-cue-human-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -64,11 +63,11 @@ Read alongside [`result/comparative-correlative-covariation-v2`](comparative-cor
 
 ## Caveats (lead first)
 
-- **The implicit-wk gold is contestable.** A sentence can *assert* an impossible event; whether the right answer is "affirm (the premise says so)" or "withhold (it can't happen)" is genuinely unsettled for humans too. This is why the arm is **internal-contrast-only** with **no human baseline** (`anchor: pending`, [`decisions/open/conflicting-cue-human-anchor`](../../decisions/open/conflicting-cue-human-anchor.md)); the result is read as the implicit-vs-explicit *contrast*, not as a below-human error rate. No human label invented.
+- **The implicit-wk gold is contestable.** A sentence can *assert* an impossible event; whether the right answer is "affirm (the premise says so)" or "withhold (it can't happen)" is genuinely unsettled for humans too. This is why the arm is **internal-contrast-only** with **no human baseline** (`anchor: internal-contrast-only`, [`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)); the result is read as the implicit-vs-explicit *contrast*, not as a below-human error rate. No human label invented.
 - **Small N** (10 scenes × 3 conditions × 3 models); direction-of-effect, not precise magnitude.
 - **canonical anchor.** The `canonical` arm keeps the v1/v2 phenomenon-level caused-motion anchor ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)); pre-run critique fixed propulsive verbs (huff/puff) so the canonical YES is genuinely coerced, not literal.
 - **Scope.** Only the world-knowledge cue axis ran; near-miss form controls and multi-step composition remain for a later run (documented, not retuned).
 
 ## Bearing
 
-**Refines** [`result/argument-structure-coercion-v2`](argument-structure-coercion-v2.md) by bounding its H-deep reading to "respects explicit outcome statements" rather than "integrates world knowledge." Feeds [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md) (the coercion-cancellation competence is shallower than v2 alone suggested). `contingent-on: conflicting-cue-human-anchor` (non-blocking). Cost **$0.158 billed** (token-estimate $0.039 undercounts; see [`config/budget.md`](../../../config/budget.md)); 0 NA / 180 calls.
+**Refines** [`result/argument-structure-coercion-v2`](argument-structure-coercion-v2.md) by bounding its H-deep reading to "respects explicit outcome statements" rather than "integrates world knowledge." Feeds [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md) (the coercion-cancellation competence is shallower than v2 alone suggested). Internal-contrast-only by ratified decision ([`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md), 2026-05-31). Cost **$0.158 billed** (token-estimate $0.039 undercounts; see [`config/budget.md`](../../../config/budget.md)); 0 NA / 180 calls.

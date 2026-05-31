@@ -7,9 +7,8 @@ meaning-senses:
   - inferential
   - distributional
 status: proposed
-anchor: pending
-contingent-on:
-  - conflicting-cue-human-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-05-29
 updated: 2026-05-29
 links:
@@ -89,7 +88,7 @@ This sits on the theory ladder as the first **off-ceiling** datum for the add-di
 **Does NOT license:**
 - **"Models robustly reason about world knowledge against the construction."** Only an *explicit verbal* denial was tested. Subtler/implicit conflicting cues are unrun (v2b).
 - **A resolution of the add/cancel asymmetry.** This is an add-direction probe only; the matched off-ceiling *cancel*-direction (harder conative) the design calls for was not run, so "add easier than cancel" remains confounded with ceiling/difficulty (still future work).
-- **A human-level claim.** Internal-contrast-only by ratified design (the Scivetti subsets have no conflicting-cue items; the "correct" reading of an anti-cued coercion is itself contestable for humans). `anchor: pending`; no human baseline asserted or invented.
+- **A human-level claim.** Internal-contrast-only by ratified design (the Scivetti subsets have no conflicting-cue items; the "correct" reading of an anti-cued coercion is itself contestable for humans). `anchor: internal-contrast-only`; no human baseline asserted or invented.
 - **A model-internal or grounding claim.** Behavioral only.
 
 ## Limits
@@ -109,4 +108,4 @@ This sits on the theory ladder as the first **off-ceiling** datum for the add-di
 
 ## Status
 
-`status: proposed`, `anchor: pending` (internal-contrast-only, ratified). Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []`. Promotion past `proposed` awaits Tom's review. The standing next step is v2b: a subtler (world-knowledge / implicit) conflicting cue, plus the matched cancel-direction probe to de-confound the add/cancel asymmetry.
+`status: proposed`, `anchor: internal-contrast-only` (ratified 2026-05-31, conflicting-cue-human-anchor). Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []`. Promotion past `proposed` awaits Tom's review. The standing next step is v2b: a subtler (world-knowledge / implicit) conflicting cue, plus the matched cancel-direction probe to de-confound the add/cancel asymmetry.

@@ -2,7 +2,7 @@
 
 **Date frozen:** 2026-05-30 (before computing any model-rating × perceptual-strength quantity)
 **Unit:** prediction 1 of [`conjecture/multimodal-lexical-grounding-divergence`](../../../wiki/findings/conjectures/multimodal-lexical-grounding-divergence.md) — the $0, text-side, no-new-probe moderation.
-**Governing decision:** [`decisions/open/multimodal-panel-and-grounding-theory`](../../../wiki/decisions/open/multimodal-panel-and-grounding-theory.md) Q3 default **A** (Lancaster text-side moderator first), run under the standing delegation (defaults hold; non-blocking). `anchor: pending` until Q3 ratified — result stays `proposed`/contingent.
+**Governing decision:** [`decisions/resolved/multimodal-panel-and-grounding-theory`](../../../wiki/decisions/resolved/multimodal-panel-and-grounding-theory.md) Q3 default **A** (Lancaster text-side moderator first), run under the standing delegation (defaults hold; non-blocking). `anchor: pending` until Q3 ratified — result stays `proposed`/contingent.
 
 ## Question
 

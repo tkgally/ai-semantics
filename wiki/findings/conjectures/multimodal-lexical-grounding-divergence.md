@@ -11,7 +11,7 @@ meaning-senses:
 status: proposed
 anchor: pending
 contingent-on:
-  - multimodal-panel-and-grounding-theory
+  - multimodal-image-anchor
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -43,8 +43,12 @@ links:
 > whether a *text-only* model tracks graded sense relatedness above a context-similarity
 > shadow (answer: yes, clauses a+c — [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md));
 > this one asks whether **adding the picture changes that behavior, in the human direction,
-> beyond what the text already gave away.** `contingent-on: multimodal-panel-and-grounding-theory`
-> (the panel / grounding-theory / anchor-class choices are surfaced, not self-resolved).
+> beyond what the text already gave away.** **Panel / grounding-theory / anchor-class are
+> now ratified** ([`decisions/resolved/multimodal-panel-and-grounding-theory`](../../decisions/resolved/multimodal-panel-and-grounding-theory.md),
+> 2026-05-31: Q1=A existing 3-family panel, Q2=A Lyre gradual grounding, **Q3=B GO** on the
+> image probe). The one remaining surfaced gate is the image probe's human-anchor choice,
+> `contingent-on: multimodal-image-anchor` (realized as a WordNet-keyed constructed set;
+> proceeding under standing delegation, surfaced not self-resolved).
 
 ## Statement
 
@@ -113,9 +117,10 @@ as movement toward the independent human signal.**
 
 ## Predictions
 
-Ordered cheapest-first, matching the anchor-class sequencing surfaced in
-[`decisions/open/multimodal-panel-and-grounding-theory`](../../decisions/open/multimodal-panel-and-grounding-theory.md)
-(Q3). Prediction 1 is text-side and **$0 / runnable now**; 2–4 require image input.
+Ordered cheapest-first, matching the anchor-class sequencing ratified in
+[`decisions/resolved/multimodal-panel-and-grounding-theory`](../../decisions/resolved/multimodal-panel-and-grounding-theory.md)
+(Q3=B GO). Prediction 1 is text-side and was run **$0** (a null); 2–4 require image input
+and are the live unit (image probe design [`design/multimodal-grounding-image-v1`](../../../experiments/designs/multimodal-grounding-image-v1.md)).
 
 1. **Perceptual-strength moderation (text-side, the cheap bridge — runnable with no new probe).**
    Re-analyzing the *already-collected* lexical-v1 ratings
@@ -153,6 +158,7 @@ Ordered cheapest-first, matching the anchor-class sequencing surfaced in
    perception actually carries the distinction*. In particular, **homonym pairs with visually
    distinct referents should drop toward the human "different" floor under image input** — the
    route to clause (b) the text anchor could not reach.
+   **→ TESTED 2026-05-31 (image probe): a REDUNDANCY NULL** — [`result/multimodal-grounding-image-v1`](../results/multimodal-grounding-image-v1.md). For clear homonyms the **text-only** panel already separates same- from different-synset pairs **perfectly (AUC 1.0)**, so the image cannot improve the binary separation (prediction-2 redundancy null in its strong form); the lone predicted-direction movement is one model on the continuous scale (gpt-5.4-mini, different-synset −8 toward "unrelated", surviving the distraction control), and claude shows a faint distraction-direction wobble. Bounds the strong reading **for clear homonyms**; fine polysemy (where text need not saturate) is untouched.
 4. **Coercion under depiction (the grammar-end touchpoint, later).** Showing an image consistent
    vs. inconsistent with a coerced reading changes the model's coercion-sense-modulation behavior
    ([`result/coercion-sense-modulation-v1`](../results/coercion-sense-modulation-v1.md)) — connecting
@@ -187,10 +193,12 @@ clause (c) and the constructional wedge's beat-the-distributional-shadow discipl
 
 ## Human anchor
 
-`anchor: pending` — **contingent on
-[`decisions/open/multimodal-panel-and-grounding-theory`](../../decisions/open/multimodal-panel-and-grounding-theory.md)**
-(Q3, the anchor-class choice), not yet ratified. The candidate anchors, scouted and verified for
-license/fetchability/meaning-bearing in
+`anchor: pending` — the anchor-*class* choice is **ratified**
+([`decisions/resolved/multimodal-panel-and-grounding-theory`](../../decisions/resolved/multimodal-panel-and-grounding-theory.md),
+Q3=B GO); the remaining surfaced choice is **which** human anchor keys the image probe
+([`decisions/open/multimodal-image-anchor`](../../decisions/open/multimodal-image-anchor.md):
+WiC-binary-keyed image set, proceeding under standing delegation). The candidate anchors,
+scouted and verified for license/fetchability/meaning-bearing in
 [`base/resources/multimodal-anchor-scouting.md`](../../base/resources/multimodal-anchor-scouting.md):
 
 - **Prediction 1** anchors to the **Lancaster Sensorimotor Norms** (Lynott et al. 2020, CC BY 4.0)

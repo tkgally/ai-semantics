@@ -2,7 +2,7 @@
 
 Un-gated feasibility scouting for the new **multimodal / physical-AI meaning** axis
 (see `wiki/findings/conjectures/` multimodal conjecture and
-`wiki/decisions/open/multimodal-panel-and-grounding-theory`). The driving question
+`wiki/decisions/resolved/multimodal-panel-and-grounding-theory`). The driving question
 for the axis: *do multimodal (vision-language) models interpret lexical/grammatical
 meaning differently from text-only models?* Before any probe can run we must know
 (a) which multimodal models are reachable through the existing OpenRouter harness,
@@ -96,5 +96,5 @@ a **liveness ping** (see below) before any finding-bearing probe.
 The *choice of multimodal model panel* (keep the existing 3 vs add a VLM-specialist family)
 and *which grounding theory to privilege* (Harnad symbol-grounding vs Barsalou perceptual
 symbols vs Lyre gradual-grounding) are value-laden / direction-setting and are surfaced in
-`wiki/decisions/open/multimodal-panel-and-grounding-theory`, not self-resolved. This note
+`wiki/decisions/resolved/multimodal-panel-and-grounding-theory`, not self-resolved. This note
 establishes only the *capability* fact: the existing panel CAN take images.

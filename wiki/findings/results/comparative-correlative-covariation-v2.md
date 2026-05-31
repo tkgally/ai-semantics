@@ -8,9 +8,8 @@ meaning-senses:
   - functional-vs-formal
   - human-comparison
 status: proposed
-anchor: pending
-contingent-on:
-  - conflicting-cue-human-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -64,9 +63,9 @@ Two checks rule out the shallow reading the v1 caveat worried about:
 
 - **Still near-ceiling → still weak evidence for the strongest reading.** Like v1, a ceiling result on a (now harder, but still modest) instrument bounds how strong a "deep covariation reasoning" claim it can support. The only cracks are under FC (gpt/gemini 1/6 conflicting-cue slip; gemini 3/4 paraphrase) — small, not a cliff.
 - **No `undetermined`-gold items.** Every item's correct answer is increase or decrease, so the NLI-neutral / FC-UNDETERMINED path is unexercised; an UNDETERMINED-biased model would not be penalized by this run (none showed that bias — all gave directional answers). Noted as a scope limit.
-- **Internal-contrast-only on the hard arms; no human baseline.** The `baseline` arm keeps the v1 phenomenon-level Scivetti CC anchor ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)); the conflicting-cue / multi-step arms have **no in-repo human norm** → **no human-level claim** on them (`anchor: pending`, [`decisions/open/conflicting-cue-human-anchor`](../../decisions/open/conflicting-cue-human-anchor.md)). No human label invented.
+- **Internal-contrast-only on the hard arms; no human baseline.** The `baseline` arm keeps the v1 phenomenon-level Scivetti CC anchor ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)); the conflicting-cue / multi-step arms have **no in-repo human norm** → **no human-level claim** on them (`anchor: internal-contrast-only`, [`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)). No human label invented.
 - **Small N** (19 items × 3 models); direction-of-effect, not precise magnitude.
 
 ## Bearing
 
-**Refines** [`result/comparative-correlative-covariation-v1`](comparative-correlative-covariation-v1.md) (the v1 ceiling is not task-easiness — it survives conflicting-cue + composition). Feeds [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md): the CC sits as the project's most robust constructional positive, contrasting with the **shallower** caused-motion coercion-cancellation ([`result/coercion-implicit-cue-v2b`](coercion-implicit-cue-v2b.md)) — both consistent with one disposition: *follow the stated construction over world knowledge*, right for the CC, questionable for the impossible coercion. `contingent-on: conflicting-cue-human-anchor` (non-blocking). Cost **$0.109 billed** (token-estimate $0.026 undercounts; see [`config/budget.md`](../../../config/budget.md)); 0 NA / 114 calls.
+**Refines** [`result/comparative-correlative-covariation-v1`](comparative-correlative-covariation-v1.md) (the v1 ceiling is not task-easiness — it survives conflicting-cue + composition). Feeds [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md): the CC sits as the project's most robust constructional positive, contrasting with the **shallower** caused-motion coercion-cancellation ([`result/coercion-implicit-cue-v2b`](coercion-implicit-cue-v2b.md)) — both consistent with one disposition: *follow the stated construction over world knowledge*, right for the CC, questionable for the impossible coercion. Internal-contrast-only by ratified decision ([`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md), 2026-05-31). Cost **$0.109 billed** (token-estimate $0.026 undercounts; see [`config/budget.md`](../../../config/budget.md)); 0 NA / 114 calls.

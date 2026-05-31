@@ -1,12 +1,45 @@
 ---
 id: multimodal-panel-and-grounding-theory
 title: For the new multimodal axis — which model panel, and which grounding theory to privilege?
-status: open
+status: resolved
 opened: 2026-05-30
 opened-by: orchestrator
+resolved: 2026-05-31
+resolved-by: tom
+resolution: "Q1=A, Q2=A, Q3=B (GO)"
 contingent-artifacts:
   - conjecture/multimodal-lexical-grounding-divergence
+  - result/lexical-perceptual-grounding-moderation-v1
 ---
+
+## RESOLUTION (2026-05-31, Tom)
+
+Tom's ruling this round (verbatim intent): "IMAGE EXPERIMENT — APPROVED. … Treat decision
+multimodal-panel-and-grounding-theory as: **Q3 → B is GO**; keep the existing image-capable
+3-family panel (**Q1 default A**) and the Lyre gradual-grounding framing (**Q2 default A**)
+as working defaults unless you find a principled reason to surface a change."
+
+- **Q1 → A:** keep the existing 3-family image-capable panel (`claude-sonnet-4.6` /
+  `gpt-5.4-mini` / `gemini-3.5-flash`), image toggled on/off within-family.
+- **Q2 → A:** Lyre gradual-grounding framing + `grounded.perceptual`; Harnad/Barsalou as foils.
+- **Q3 → B (GO):** **open the genuine image-input probe** (predictions 2–3 of
+  [`conjecture/multimodal-lexical-grounding-divergence`](../../findings/conjectures/multimodal-lexical-grounding-divergence.md)).
+  Q3-A (the $0 Lancaster text-side moderator) was already done last session → a null
+  ([`result/lexical-perceptual-grounding-moderation-v1`](../../findings/results/lexical-perceptual-grounding-moderation-v1.md));
+  that null lowered the prior but did not settle the image bet, so the image probe is GO.
+
+**Consequence (applied this round):** the prediction-1 result has its
+`contingent-on: multimodal-panel-and-grounding-theory` removed (it stands on its Lancaster +
+DWUG anchors). The conjecture is no longer contingent on *this* decision; the **image
+probe's human-anchor choice** (WiC-binary-keyed image set vs. a genuinely-multimodal
+alternative) is a *new, narrower* surfaced question carried by
+[`decisions/open/multimodal-image-anchor`](../open/multimodal-image-anchor.md) — opened this
+round, proceeding under Tom's standing delegation with the choice surfaced, not fabricated.
+The image probe design is [`design/multimodal-grounding-image-v1`](../../../experiments/designs/multimodal-grounding-image-v1.md).
+
+---
+
+## (original surfacing, for the record)
 
 # Decision: the multimodal axis's panel and its privileged grounding theory
 

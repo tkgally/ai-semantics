@@ -22,7 +22,7 @@ links:
 
 # Design — comparative-correlative probe v3 (embedded CC / operator scope)
 
-**The embedded-CC arm the [`design/comparative-correlative-v2`](comparative-correlative-v2.md) deferred.** Governed by the ratified [`decisions/resolved/cc-v2-difficulty-operationalization`](../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md) (which unified the v2 difficulty gate and said explicitly "...defer embedded-CC to v3..."). **No new decision.** Internal-contrast-only (`anchor: pending`, tracked by [`decisions/open/conflicting-cue-human-anchor`](../../wiki/decisions/open/conflicting-cue-human-anchor.md)).
+**The embedded-CC arm the [`design/comparative-correlative-v2`](comparative-correlative-v2.md) deferred.** Governed by the ratified [`decisions/resolved/cc-v2-difficulty-operationalization`](../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md) (which unified the v2 difficulty gate and said explicitly "...defer embedded-CC to v3..."). **No new decision.** Internal-contrast-only (`anchor: pending`, tracked by [`decisions/resolved/conflicting-cue-human-anchor`](../../wiki/decisions/resolved/conflicting-cue-human-anchor.md)).
 
 ## Why
 

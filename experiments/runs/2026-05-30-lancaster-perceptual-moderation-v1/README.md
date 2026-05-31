@@ -4,7 +4,7 @@
 **Type:** $0 read-only re-analysis (no new API spend) of the already-collected lexical-v1 ratings.
 **Prereg (frozen):** [`PREREG.md`](PREREG.md)
 **Conjecture / prediction:** [`conjecture/multimodal-lexical-grounding-divergence`](../../../wiki/findings/conjectures/multimodal-lexical-grounding-divergence.md) prediction 1.
-**Governing decision:** [`decisions/open/multimodal-panel-and-grounding-theory`](../../../wiki/decisions/open/multimodal-panel-and-grounding-theory.md) Q3 default **A** (run under the standing delegation; non-blocking).
+**Governing decision:** [`decisions/resolved/multimodal-panel-and-grounding-theory`](../../../wiki/decisions/resolved/multimodal-panel-and-grounding-theory.md) Q3 default **A** (run under the standing delegation; non-blocking).
 **Anchors:** [`resource/lancaster-sensorimotor-norms`](../../../wiki/base/resources/lancaster-sensorimotor-norms.md) (moderator) + [`resource/dwug-usage-graphs`](../../../wiki/base/resources/dwug-usage-graphs.md) (the graded human signal).
 **Result page:** [`result/lexical-perceptual-grounding-moderation-v1`](../../../wiki/findings/results/lexical-perceptual-grounding-moderation-v1.md)
 

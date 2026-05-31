@@ -1,0 +1,41 @@
+total calls=144  parse-fails(NA)=0
+
+================ framing: durel ================
+
+  [claude]
+    sep(same-diff): text=+2.667  image=+2.667  Δsep(img-txt)=+0.000  CI95=[+0.000,+0.000]
+    AUC(same>diff): text=1.000  image=1.000
+    mean image-text rating diff: distinct-F=+0.000  same-T(distraction ctrl)=+0.000
+      prediction-3 contrast (distinctF push-apart vs sameT): +0.000  [want distinct-F to DROP (mdF<0) more than same-T]
+
+  [gpt]
+    sep(same-diff): text=+2.500  image=+2.667  Δsep(img-txt)=+0.167  CI95=[-0.400,+0.750]
+    AUC(same>diff): text=1.000  image=1.000
+    mean image-text rating diff: distinct-F=-0.167  same-T(distraction ctrl)=+0.000
+      prediction-3 contrast (distinctF push-apart vs sameT): +0.167  [want distinct-F to DROP (mdF<0) more than same-T]
+
+  [gemini]
+    sep(same-diff): text=+2.500  image=+2.500  Δsep(img-txt)=+0.000  CI95=[+0.000,+0.000]
+    AUC(same>diff): text=1.000  image=1.000
+    mean image-text rating diff: distinct-F=+0.000  same-T(distraction ctrl)=+0.000
+      prediction-3 contrast (distinctF push-apart vs sameT): +0.000  [want distinct-F to DROP (mdF<0) more than same-T]
+
+================ framing: scale ================
+
+  [claude]
+    sep(same-diff): text=+92.167  image=+89.167  Δsep(img-txt)=-3.000  CI95=[-5.000,-1.000]
+    AUC(same>diff): text=1.000  image=1.000
+    mean image-text rating diff: distinct-F=+0.000  same-T(distraction ctrl)=-3.000
+      prediction-3 contrast (distinctF push-apart vs sameT): -3.000  [want distinct-F to DROP (mdF<0) more than same-T]
+
+  [gpt]
+    sep(same-diff): text=+81.667  image=+88.833  Δsep(img-txt)=+7.167  CI95=[+0.167,+13.057]
+    AUC(same>diff): text=1.000  image=1.000
+    mean image-text rating diff: distinct-F=-7.833  same-T(distraction ctrl)=-0.667
+      prediction-3 contrast (distinctF push-apart vs sameT): +7.167  [want distinct-F to DROP (mdF<0) more than same-T]
+
+  [gemini]
+    sep(same-diff): text=+91.667  image=+90.000  Δsep(img-txt)=-1.667  CI95=[-4.167,+0.000]
+    AUC(same>diff): text=1.000  image=1.000
+    mean image-text rating diff: distinct-F=+0.833  same-T(distraction ctrl)=-0.833
+      prediction-3 contrast (distinctF push-apart vs sameT): -1.667  [want distinct-F to DROP (mdF<0) more than same-T]
