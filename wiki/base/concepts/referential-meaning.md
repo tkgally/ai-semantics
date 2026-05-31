@@ -6,7 +6,7 @@ meaning-senses:
   - referential
   - grounded
 created: 2026-05-28
-updated: 2026-05-29
+updated: 2026-05-31
 links:
   - rel: depends-on
     target: source/bender-koller-2020-climbing
@@ -14,6 +14,14 @@ links:
     target: concept/grounding
   - rel: contradicts
     target: concept/distributional-meaning
+  - rel: depends-on
+    target: concept/symbol-grounding-problem
+  - rel: depends-on
+    target: concept/embodied-cognition
+  - rel: depends-on
+    target: result/lexical-perceptual-grounding-moderation-v1
+  - rel: depends-on
+    target: result/multimodal-grounding-image-v1
 ---
 
 # Referential meaning
@@ -42,8 +50,34 @@ and then argue that form-only training cannot recover it:
 
 Bender & Koller frame the missing relation as one to *communicative intent* rather than to extra-linguistic *referents* specifically, but the structural point transfers directly: reference and externalist reference-fixing are relations between form and something the corpus does not contain (a causal-historical chain, a community of experts, a world the speaker is embedded in). If form-only training cannot recover the intent relation, the burden is on any account that says it nonetheless recovers the reference relation. This is the same architectural objection that the [`concept/grounding`](grounding.md) page develops as the `grounded` requirement — referential meaning is, on the externalist construal, a *grounded* relation, which is why this page co-tags `grounded` and links `refines` to the grounding concept. (Note that Bender & Koller's own use of "meaning" is not sorted against this sub-typology; their source page flags that citing them "requires specifying which sense the citation is intended to invoke" — here the intended sense is the form-to-world/intent relation that referential and grounded share.)
 
+## Internalism vs. externalism — and the LLM case
+
+The three sub-positions above sort along a deeper axis the LLM-meaning debate keeps returning to: whether what an expression means is fixed *inside* the speaker or partly *outside* them. This is the **internalism/externalism** question, and it is where the referential view bears hardest on the LLM case.
+
+**Externalism** holds that meaning and reference are fixed partly by facts *outside the head* — by causal-historical chains and the social environment, not by any description the speaker carries. The canonical arguments are Putnam's Twin Earth and *division of linguistic labor*, Burge's social externalism (the *arthritis* case — a speaker's word can mean what the surrounding community's experts make it mean, even against the speaker's own partial grasp), and Evans's causal theory of names (all **not in-repo; characterization** — Putnam 1975 and Evans 1973 are queued in [`wiki/base/wanted.md`](../wanted.md); Burge 1979 is added there this session). On this family of views, two individuals could be internally identical and still mean different things, because their environments and communities differ.
+
+**Internalism** holds the opposite: the content that is psychologically real — *narrow* content — is fixed by what is in the head, and reference to a mind-external world is either derivative or not a proper object of a science of meaning at all. Chomsky's internalist view of language (i-language as a state of the individual, with word-world reference treated as not a natural-scientific relation) and Fodor's *narrow content* (the individualistic content meant to survive Twin Earth) are the reference points (**not in-repo; characterization**; Chomsky 2000 and Fodor 1987 added to [`wiki/base/wanted.md`](../wanted.md) this session).
+
+The LLM case sorts cleanly on this axis — and unfavorably for *reference*. **An LLM has only narrow access by construction**: its states are functions of its training distribution and its context window — text in, text out. It has no causal-historical chain to a baptismal event, no membership in a community of experts, no environment it is embedded in independently of the corpus. So:
+
+- On **externalism**, this is the strongest *in-principle* case that an LLM does not *refer*: the relation reference requires is precisely the form-to-world / form-to-community relation the corpus does not contain. This is structurally the same gap Bender & Koller mark — the missing relation between form and "the non-linguistic intent of human language users" ([`source/bender-koller-2020-climbing`](../sources/bender-koller-2020-climbing.md), p. 5187, quoted above) — recast as the missing relation between form and the external reference-fixers. If reference is constitutively external, no quantity of internal distributional structure supplies it.
+- On **internalism**, the verdict is gentler but thinner: whatever an LLM has is *narrow content* by construction, and a narrow-content theorist could grant it "content" of the only kind they think is real — without that content amounting to reference in the externalist's sense. The internalist concedes the model has *something*; they deny the externalist's bar was the right one.
+
+The point is not that the project can *settle* internalism vs. externalism — it cannot — but that the LLM is an unusually clean instance of the *narrow* case, so the externalist's "no" and the internalist's "yes, but narrow" are visibly answering different questions about it.
+
+### What the grounding nulls do (and do not) say here
+
+The project's two grounding results bear on the *externalist* side specifically, because adding a perceptual channel is the most tractable way to give a model something beyond its narrow text states. Both came out negative, and both are bounded:
+
+- A word's perceptual groundedness does **not** predict how well a text-only model tracks its graded senses ([`result/lexical-perceptual-grounding-moderation-v1`](../../findings/results/lexical-perceptual-grounding-moderation-v1.md): Δρ negative or null in every primary cell, the lone CI excluding zero running the *wrong* way; **underpowered**, ≈21 lemmas/side).
+- Showing the depicting image does **not** improve the panel's same-sense / different-sense separation for clear homonyms, because the text-only panel already separates them perfectly ([`result/multimodal-grounding-image-v1`](../../findings/results/multimodal-grounding-image-v1.md): text-only AUC = 1.000 in every cell — a *redundancy* null).
+
+Read on the internalism/externalism axis, these say: **for clear homonyms and concrete words, adding the external perceptual channel changes nothing measurable — the narrow (text-internal) signal already saturates the easy cases.** This is suggestive but must be read with care, and it is **interpretation, not a verdict the result pages assert**: it neither confirms internalism nor refutes externalism. It shows only that *where the narrow signal already suffices, the wide signal has nothing to add* — which leaves the externalist contribution **untested exactly where it would matter**, in the cell neither probe contains (fine polysemy; abstract or perceptually-subtle senses, where text under-determines the distinction). The project's own [`conjecture/distributional-saturation-grounding-headroom`](../../findings/conjectures/distributional-saturation-grounding-headroom.md) makes that residual the next place to look. So the grounding nulls trim the *hope* that a perceptual channel obviously rescues reference for the easy cases; they do not touch the in-principle externalist question at all.
+
 ## Live tension
 
 The genuine open question for this project is whether an LLM that demonstrably tracks distributional, sense-like structure is thereby tracking **reference** at all — or whether sense-tracking and reference-fixing are different in kind, such that no quantity of the former adds up to the latter. A deflationist (and the inferentialist line behind [`concept/inferential-meaning`](inferential-meaning.md)) says sense-tracking is enough to count as meaning; an externalist says reference is constitutively a relation to a world and a community that text does not contain, and Bender & Koller's form-only argument is the sharpest version of that "no" on the table in-repo.
 
 There is also a methodological tension specific to how this project verifies things, and it should be stated bluntly. The project has an in-repo, human-anchored resource for **form** — the AANN acceptability stimuli ([`resource/mahowald-2023-aann-stimuli`](../resources/mahowald-2023-aann-stimuli.md)) let a formal-competence claim be checked against human acceptability judgements. There is **no comparable in-repo resource that anchors reference**: no dataset that pins a human-agreed extension or reference relation an LLM could be tested against. So referential claims about LLMs currently cannot be empirically grounded the way formal claims can; they remain conceptual until a reference-bearing resource is found or built. Compounding this, the primary philosophical sources for the externalist sub-tag (`Putnam 1975`, `Evans 1973`) are still in `wiki/base/wanted.md` and not yet ingested, so even the *conceptual* grounding of `referential.externalist` is provisional pending those ingestions. Any finding tagged `referential.reference` or `referential.externalist` should carry this gap explicitly rather than borrow the apparent solidity of a form-side result.
+
+**Why the reference-anchor gap is structural, not just a missing download.** That gap — no in-repo resource that anchors *reference* the way the AANN stimuli anchor *form* — is not an accident of what has been fetched; it is structural, and the internalism/externalism framing says why. A Twin-Earth-style diagnostic for reference needs a *controlled external-environment difference* between two otherwise-identical narrow states: hold the model fixed and vary what its words are *about* in the world, then ask whether meaning tracks the world or the narrow state. But an LLM has no environment to vary independently of its text — there is no "Twin Earth" to move it to — so the manipulation that operationalizes externalist reference has no purchase on it. The closest available substitute is a grounded (perceptual or causal) referent channel — exactly what [`concept/symbol-grounding-problem`](symbol-grounding-problem.md) and [`concept/embodied-cognition`](embodied-cognition.md) develop — and the grounding nulls above show that the channel the project *did* add lands where text already saturates. So a reference anchor is not a fetch away; building one means building a controlled world-relation a text model can be tested against, a far larger undertaking than cataloguing a dataset. Until then, whether there is *any* referential content here at all is the question handed to [`concept/deflationary-and-eliminativist-llm-meaning`](deflationary-and-eliminativist-llm-meaning.md); this page's narrower point is that even granting some narrow content, *reference* in the externalist sense remains both unestablished and, for now, structurally un-probeable.

@@ -145,6 +145,9 @@ Scouted 2026-05-30 ([`base/resources/multimodal-anchor-scouting.md`](resources/m
 - [P3] NLVR2 annotations (Suhr et al. 2019). https://github.com/lil-lab/nlvr. CC BY 4.0 (annotations; images via Google Form).
   why: 107k fully human-written sentences + binary labels over image pairs; cleanest human provenance in image-text entailment; relevant if a VLM constructional-inference axis opens.
   status: wanted (scouted 2026-05-30; annotation license verified).
+- [P3] Visual Word Sense Disambiguation (VWSD) — SemEval-2023 Task 1 (Raganato et al. 2023).
+  why: the **image-native** sense-selection task [`findings/conjectures/distributional-saturation-grounding-headroom.md`](../findings/conjectures/distributional-saturation-grounding-headroom.md) names as the next grounding step — sense selection *requires* the image, so it directly instantiates the text-under-determined regime (unlike the image-as-add-on probe that saturated). Needs scouting/license/fetch verification before it can anchor a result.
+  status: wanted (named 2026-05-31; not yet scouted).
 
 ### Theory / philosophy-of-meaning primary texts (added 2026-05-31, theory session)
 
@@ -188,6 +191,27 @@ The 2026-05-31 theory wave wrote five established-position concept pages that **
   status: wanted
 - [P3] Cappelen, H. & Dever, J. 2021. *Making AI Intelligible: Philosophical Foundations.* OUP.
   why: a worked deflationary/anti-anthropomorphic treatment of AI content/reference; for `deflationary-and-eliminativist-llm-meaning`. (Complements the already-listed Sterken & Cappelen ed. volume.)
+  status: wanted
+
+The wave-2 deepenings and original conjectures (2026-05-31) added these (the pages characterize them, no quotes; none was already listed):
+
+- [P3] Sellars, W. 1956. "Empiricism and the Philosophy of Mind."
+  why: the "space of reasons" lineage behind Brandom's normative inferentialism, characterized in [`base/concepts/inferential-meaning.md`](concepts/inferential-meaning.md). Fetch only if a finding leans on the Sellarsian lineage.
+  status: wanted
+- [P2] Burge, T. 1979. "Individualism and the Mental." *Midwest Studies in Philosophy* 4.
+  why: social externalism (the *arthritis* case) extending Twin-Earth content-fixing to ordinary concepts; the externalist pole of [`base/concepts/referential-meaning.md`](concepts/referential-meaning.md)'s internalism/externalism section.
+  status: wanted
+- [P3] Chomsky, N. 2000. *New Horizons in the Study of Language and Mind.* Cambridge.
+  why: the i-language internalist position + the argument that word-world reference is not a natural-scientific relation; the internalist pole of `referential-meaning`.
+  status: wanted
+- [P3] Fodor, J.A. 1987. *Psychosemantics.* MIT.
+  why: **narrow content** — the individualistic content meant to survive Twin Earth; the internalist content notion in `referential-meaning`. Distinct from the already-listed Fodor & Lepore 1992 (anti-holism).
+  status: wanted
+- [P2] Lewis, D. 1969. *Convention: A Philosophical Study.* Harvard.
+  why: the philosophical theory of convention behind the "commutative convention" framing in [`findings/conjectures/commutative-convention.md`](../findings/conjectures/commutative-convention.md). Distinct from the already-listed Lewis 1970 "General Semantics".
+  status: wanted
+- [P3] A defeasible-reasoning / non-monotonic-logic reference (e.g. Reiter, R. 1980. "A Logic for Default Reasoning." *Artificial Intelligence* 13; or a current survey).
+  why: [`findings/conjectures/constructional-monotonicity-asymmetry.md`](../findings/conjectures/constructional-monotonicity-asymmetry.md) characterizes the add/cancel asymmetry as monotone-accumulation-vs-defeasance *by analogy only*; fetch first if the project ever leans on the formal mapping.
   status: wanted
 
 ## Notes on fetching
