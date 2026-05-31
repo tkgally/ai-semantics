@@ -8,7 +8,9 @@ v1 found constructional coercion registers as a partial lexical sense shift, but
 
 ## FREEZE (before any model call)
 
-- `items.csv` sha256[:16] **`fb69ae26a3cba74e`** — 28 items: 8 verbs × {coerced-way, transitive-ctrl, elab-ctrl} + 4 polysemy anchors. Own constructed sentences (no corpus/licence). Build asserts the verb is marked «» in both sentences of every item.
+- `items.csv` sha256[:16] **`93a83efd98ece009`** — 28 items: 8 verbs (whistle, sing, hum, dance, **shout**, fight, write, read) × {coerced-way, transitive-ctrl, elab-ctrl} + 4 polysemy anchors. Own constructed sentences (no corpus/licence). Build asserts the verb is marked «» in both sentences of every item. *(Pre-run critic S2 fix applied + re-frozen: replaced "talk"→"shout" — "talk nonsense" was a cognate/mass object, less structurally parallel; "shout a warning to the crowd" is a clean count-NP+PP conventional same-sense transitive. fight's transitive tightened "a duel"→"a fierce battle" for clearer same-sense. Both fixes were conservative — they had pushed the transitive arm down. Prior hash `fb69ae26a3cba74e`.)*
+
+**Residual surface caveat (critic NIT, carried to the result):** the coerced-way arm's object is always "POSS way" (a non-canonical / cognate object) while the transitive-ctrl object is a referential count NP. So a positive ISOLATION gap is "coercion + the way-object-form" vs a conventional transitive — an internal-contrast, not pure-sense-isolated-from-every-surface-feature. v2 removes the v1 confound (added arguments per se) but not the "way"-object-form asymmetry.
 
 ## Arms & reading rule (fixed pre-run)
 
