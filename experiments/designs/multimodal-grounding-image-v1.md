@@ -8,10 +8,10 @@ meaning-senses:
   - referential.sense
   - distributional
   - human-comparison
-status: draft
-anchor: resource/wic-word-in-context
+status: run
+anchor: resource/wordnet-sense-inventory
 contingent-on:
-  - multimodal-panel-and-grounding-theory
+  - multimodal-image-anchor
 created: 2026-05-31
 updated: 2026-05-31
 links:
@@ -33,8 +33,21 @@ links:
 
 # Experiment design v1 — multimodal grounding (the image-input wedge)
 
-> **Status: draft — DESIGN ONLY.** This document specifies the probe; the orchestrator
-> builds + freezes (sha256) + runs it in a later wave. It operationalizes **predictions 2–3**
+> **RECONCILIATION NOTE (2026-05-31, as RUN).** The probe was built, frozen, and run per
+> [`experiments/runs/2026-05-31-multimodal-grounding-image-v1/PREREG.md`](../runs/2026-05-31-multimodal-grounding-image-v1/README.md).
+> Two things changed from this draft and the **PREREG is authoritative** where they differ:
+> (1) **Anchor:** the realized anchor is **WordNet-synset-keyed *constructed* minimal pairs**
+> ([`resource/wordnet-sense-inventory`](../../wiki/base/resources/wordnet-sense-inventory.md)), **not**
+> WiC — WiC's actual items under-covered clean visually-distinct homonyms (bat/crane/mouse absent as WiC
+> nouns). The same/different gold is the author's synset assignment (verified distinct synsets), not a
+> per-item human label — weaker than WiC, stated as such. (2) **Scope:** the realized set is **12 pairs /
+> 2 strata / 144 calls** (distinct-F homonyms + same-T controls); the §3/§6 "~16 pairs / ~192 calls /
+> VWSD-considered / third abstract-F stratum" text below is the *draft* plan — the abstract-F stratum was
+> dropped to v2 (abstract senses can't be faithfully depicted). Read §3/§6 as design rationale, the
+> PREREG as what ran.
+>
+> **Status: run.** This document specifies the probe; the orchestrator
+> built + froze (sha256) + ran it. It operationalizes **predictions 2–3**
 > of [`conjecture/multimodal-lexical-grounding-divergence`](../../wiki/findings/conjectures/multimodal-lexical-grounding-divergence.md)
 > — the first probe in the project that actually sends image input to the panel. Prediction 1
 > (the $0 text-side Lancaster moderation) already ran as a NULL

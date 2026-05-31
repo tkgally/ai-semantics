@@ -22,6 +22,23 @@ EXISTING human sense inventory — no new human subjects); **surface the anchor 
 fabricate one**." This page is that surfacing. It is **non-blocking**: the design proceeds on the
 provisional default under the standing delegation; Tom can redirect a one-liner asynchronously.
 
+## REALIZED ANCHOR (2026-05-31) — Option A-variant, surfaced
+
+On building, **WiC's actual sentence items badly under-covered clean visually-distinct homonyms**
+(bat/crane/mouse are absent as WiC nouns; most WiC noun-F items use abstract/non-prototypical senses),
+which would have left the prediction-3 "visually-distinct" stratum weak. So the **realized** v1 anchor
+is the *other* arm of Tom's authorization — **a constructed minimal-pair set keyed to an EXISTING human
+sense inventory: Princeton WordNet** ([`resource/wordnet-sense-inventory`](../../base/resources/wordnet-sense-inventory.md),
+the same inventory WiC is built from). Each item's same/different gold = same vs different WordNet noun
+**synset** (verified via NLTK WordNet; synset ids in the run's `items.csv`). **Honesty note (forced by
+the independent pre-run critic):** *no per-item human annotator judged these constructed pairs* — the
+human-anchored part is the WordNet **sense inventory** (these are genuinely distinct vs identical
+synsets); the **mapping of each constructed sentence to a synset is the author's**, weaker than WiC's
+released per-item labels, and the result states this. **WiC remains the anchor for the text-only
+lexical-v3** ([`design/lexical-polysemy-homonymy-v3`](../../../experiments/designs/lexical-polysemy-homonymy-v3.md)),
+where its actual items suffice. Result: `result/multimodal-grounding-image-v1`.
+Tom: a one-liner ("WordNet-keyed constructed set is fine" / "redo with WiC/VWSD") is enough; **not blocking**.
+
 ## The question
 
 Which independent human anchor keys the image probe's graded-relatedness DV, and how is the image
