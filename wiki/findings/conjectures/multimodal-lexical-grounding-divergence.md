@@ -10,8 +10,7 @@ meaning-senses:
   - human-comparison
 status: proposed
 anchor: pending
-contingent-on:
-  - multimodal-image-anchor
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -46,9 +45,12 @@ links:
 > beyond what the text already gave away.** **Panel / grounding-theory / anchor-class are
 > now ratified** ([`decisions/resolved/multimodal-panel-and-grounding-theory`](../../decisions/resolved/multimodal-panel-and-grounding-theory.md),
 > 2026-05-31: Q1=A existing 3-family panel, Q2=A Lyre gradual grounding, **Q3=B GO** on the
-> image probe). The one remaining surfaced gate is the image probe's human-anchor choice,
-> `contingent-on: multimodal-image-anchor` (realized as a WordNet-keyed constructed set;
-> proceeding under standing delegation, surfaced not self-resolved).
+> image probe). The image probe's human-anchor choice is now **ratified** too
+> ([`decisions/resolved/multimodal-image-anchor`](../../decisions/resolved/multimodal-image-anchor.md),
+> 2026-05-31, Tom: "A stands" — the WordNet-keyed constructed set), so `contingent-on: []`. The
+> image predictions (2–4) still carry `anchor: pending` only in the sense that each *future* image
+> result scopes its own claim; the v1 result ([`result/multimodal-grounding-image-v1`](../results/multimodal-grounding-image-v1.md))
+> is anchored and promoted.
 
 ## Statement
 
@@ -195,9 +197,9 @@ clause (c) and the constructional wedge's beat-the-distributional-shadow discipl
 
 `anchor: pending` — the anchor-*class* choice is **ratified**
 ([`decisions/resolved/multimodal-panel-and-grounding-theory`](../../decisions/resolved/multimodal-panel-and-grounding-theory.md),
-Q3=B GO); the remaining surfaced choice is **which** human anchor keys the image probe
-([`decisions/open/multimodal-image-anchor`](../../decisions/open/multimodal-image-anchor.md):
-WiC-binary-keyed image set, proceeding under standing delegation). The candidate anchors,
+Q3=B GO); the **which-anchor** choice is now ratified too
+([`decisions/resolved/multimodal-image-anchor`](../../decisions/resolved/multimodal-image-anchor.md),
+2026-05-31, Tom: "A stands" — WordNet-keyed constructed set, binary-scoped). The candidate anchors,
 scouted and verified for license/fetchability/meaning-bearing in
 [`base/resources/multimodal-anchor-scouting.md`](../../base/resources/multimodal-anchor-scouting.md):
 

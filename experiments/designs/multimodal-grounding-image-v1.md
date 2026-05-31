@@ -10,8 +10,7 @@ meaning-senses:
   - human-comparison
 status: run
 anchor: resource/wordnet-sense-inventory
-contingent-on:
-  - multimodal-image-anchor
+contingent-on: []
 created: 2026-05-31
 updated: 2026-05-31
 links:
@@ -58,8 +57,9 @@ links:
 > is **ratified** per Tom's decision-2 this round: **Q1→A** (keep the existing 3-family image-capable
 > panel — `anthropic/claude-sonnet-4.6` / `openai/gpt-5.4-mini` / `google/gemini-3.5-flash`),
 > **Q2→A** (Lyre gradual-grounding + `grounded.perceptual`; Harnad/Barsalou as sharper foils),
-> **Q3→B GO** (open the image probe). `contingent-on` stays set until Tom ratifies the *result*;
-> ratifying the anchor fixes the yardstick, not the outcome.
+> **Q3→B GO** (open the image probe). The anchor choice is **ratified** 2026-05-31
+> ([`decisions/resolved/multimodal-image-anchor`](../../wiki/decisions/resolved/multimodal-image-anchor.md),
+> Tom: "A stands"), so `contingent-on: []`; ratifying the anchor fixes the yardstick, not the outcome.
 
 ## 0. The one-line claim under test
 

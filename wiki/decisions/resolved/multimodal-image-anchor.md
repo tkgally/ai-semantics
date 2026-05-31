@@ -1,20 +1,42 @@
 ---
 id: multimodal-image-anchor
 title: For the image probe — which human anchor keys it (WiC-binary-keyed constructed image set vs. an existing genuinely-multimodal resource)?
-status: open
+status: resolved
 opened: 2026-05-31
 opened-by: orchestrator
+resolved: 2026-05-31
+resolved-by: Tom (ratified, this round)
 contingent-artifacts:
   - conjecture/multimodal-lexical-grounding-divergence
   - design/multimodal-grounding-image-v1
+  - result/multimodal-grounding-image-v1
 ---
 
 # Decision: the image probe's human anchor
 
+## Resolution (2026-05-31, Tom)
+
+**Ratified — Option A stands.** Tom (this round, decision 1): *"multimodal-image-anchor — the
+WordNet-keyed constructed set was the right call; A stands. Move to resolved."* The realized
+anchor (a constructed minimal-pair set keyed to the Princeton WordNet sense inventory, with each
+item's gold = same vs different noun synset and the honest "no per-item human judged these
+constructed pairs / the synset mapping is the author's" caveat) is endorsed as the in-force
+anchor for [`result/multimodal-grounding-image-v1`](../../findings/results/multimodal-grounding-image-v1.md).
+The three contingent artifacts are promoted: `contingent-on: multimodal-image-anchor` cleared on
+the conjecture, the design, and the result; provisional language upgraded to settled. **No finding
+changed** — the redundancy null stands on its [`resource/wordnet-sense-inventory`](../../base/resources/wordnet-sense-inventory.md)
+anchor, scoped to the binary same/different-synset separation. The image-probe **v2** (finer/abstract
+senses, or VWSD as a genuinely-multimodal anchor) remains an open *design* option, not gated by this
+decision.
+
+---
+
+# Decision: the image probe's human anchor (original framing, retained)
+
 ## Why this exists (surfaced, proceeding under standing delegation)
 
 Tom **approved** the genuine image experiment this round (decision 2; the panel/theory/anchor-class
-gate [`decisions/resolved/multimodal-panel-and-grounding-theory`](../resolved/multimodal-panel-and-grounding-theory.md)
+gate [`decisions/resolved/multimodal-panel-and-grounding-theory`](multimodal-panel-and-grounding-theory.md)
 is ratified Q3=B GO). Tom **delegated the anchor choice** to the orchestrator but was explicit:
 "Choose the image experiment's human anchor rigorously … (either an imperfect-but-real existing
 human resource with the claim scoped accordingly, or an image-paired stimulus set keyed to an

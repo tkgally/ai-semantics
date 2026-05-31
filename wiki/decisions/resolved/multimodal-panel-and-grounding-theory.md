@@ -33,8 +33,8 @@ as working defaults unless you find a principled reason to surface a change."
 DWUG anchors). The conjecture is no longer contingent on *this* decision; the **image
 probe's human-anchor choice** (WiC-binary-keyed image set vs. a genuinely-multimodal
 alternative) is a *new, narrower* surfaced question carried by
-[`decisions/open/multimodal-image-anchor`](../open/multimodal-image-anchor.md) — opened this
-round, proceeding under Tom's standing delegation with the choice surfaced, not fabricated.
+[`decisions/resolved/multimodal-image-anchor`](multimodal-image-anchor.md) — opened this
+round and **ratified 2026-05-31 (Tom: "A stands")**, the WordNet-keyed constructed set.
 The image probe design is [`design/multimodal-grounding-image-v1`](../../../experiments/designs/multimodal-grounding-image-v1.md).
 
 ---
