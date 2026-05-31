@@ -53,13 +53,21 @@ RATE_CARD = {
 
 
 def call(model, system, user, max_tokens=None, temperature=0, retries=4, timeout=120,
-         images=None):
+         images=None, reasoning=None):
     """One chat completion. Returns {content, usage, error}.
 
     `usage` carries the API-billed `cost` field because the request sets
     `"usage": {"include": true}`. google/* models burn the visible-output budget on
     reasoning tokens under a small cap (see config/models.md caveat), so they default
     to a large max_tokens unless overridden.
+
+    REASONING (optional, added 2026-05-31 for the relational reference-game probe — the
+    most call-heavy probe to date, where Gemini reasoning tokens are the dominant cost
+    driver per the budget ledger). Pass `reasoning=` to forward OpenRouter's `reasoning`
+    control verbatim, e.g. `reasoning={"enabled": False}` or `{"effort": "none"}` to
+    suppress reasoning tokens on tasks that do not need them (short labels / single-token
+    picks). When `reasoning is None` the field is omitted and behaviour is byte-identical
+    to before, so existing probes are unaffected.
 
     MULTIMODAL (image input). Pass `images=` to attach images to the user turn — all
     three current panel families accept image input (verified 2026-05-30 against the
@@ -98,6 +106,8 @@ def call(model, system, user, max_tokens=None, temperature=0, retries=4, timeout
         "max_tokens": max_tokens,
         "usage": {"include": True},  # <- makes OpenRouter return the billed usage.cost
     }
+    if reasoning is not None:
+        body["reasoning"] = reasoning
     last = None
     for attempt in range(retries):
         try:
