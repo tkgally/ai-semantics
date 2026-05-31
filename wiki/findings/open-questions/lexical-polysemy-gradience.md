@@ -6,9 +6,9 @@ meaning-senses:
   - distributional
   - referential
   - human-comparison
-status: open
+status: answered
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-05-31
 links:
   - rel: depends-on
     target: concept/polysemy
@@ -16,9 +16,25 @@ links:
     target: concept/distributional-meaning
   - rel: depends-on
     target: concept/referential-meaning
+  - rel: refines
+    target: conjecture/lexical-sense-gradience
+  - rel: depends-on
+    target: result/lexical-sense-gradience-v1
+  - rel: depends-on
+    target: result/lexical-polysemy-homonymy-v2
+  - rel: depends-on
+    target: result/lexical-polysemy-homonymy-v3
+  - rel: depends-on
+    target: resource/wic-word-in-context
+  - rel: depends-on
+    target: resource/wordnet-sense-inventory
+  - rel: depends-on
+    target: resource/dwug-usage-graphs
 ---
 
 # Open question: graded polysemy vs. discrete sense in LLMs
+
+> **Update / what landed (2026-05-31) — largely answered by the lexical line; one sub-arm stands as a powered null.** This seed question spawned [`conjecture/lexical-sense-gradience`](../conjectures/lexical-sense-gradience.md), which has since been tested across three results. The headline (hypotheses 1 vs 2 below): **graded-sense tracking IS present, not a collapse to discreteness.** [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) found every panel model's graded sense-relatedness rating **monotonic in the human DURel median** (Spearman 0.60–0.83, in/above the human inter-annotator range ≈0.69), and this monotonicity **survives a context-similarity control** — so hypothesis 3 (the **distributional shadow**) is ruled out as the whole story (clauses a + c). The **distinctive sub-question** — whether the model treats homonymy as a *separate discrete regime* beyond graded distance (hypothesis 2 as a positive prediction, conjecture clause b) — is **not established**: [`result/lexical-polysemy-homonymy-v2`](../results/lexical-polysemy-homonymy-v2.md) found it untestable at the DWUG anchor (only 3 clean homonym lemmas; bimodality precondition unmet), and [`result/lexical-polysemy-homonymy-v3`](../results/lexical-polysemy-homonymy-v3.md), run on a homonymy-enriched WiC noun subset, returned a **powered null** on the discreteness-separation test (rating separates same/different equally well for homonyms and polysemes, AUC diff ≈ 0). The one positive — homonym different-sense pairs floored more — **cannot be distinguished from plain graded distance** (a single continuous relatedness axis, with homonyms further out, predicts exactly this; the discreteness/graded-distance confound is intrinsic to a lemma-level WiC contrast). So the model behaves as a **graded sense tracker with no demonstrated extra discrete homonymy regime** — consistent with the lexicographer's gradience picture, but the bimodal "discrete floor for homonyms vs intermediate band for polysemy" is *not* shown. Marked **answered** because the core graded-vs-discrete question this page poses is resolved in the graded direction with a real human anchor; the residual discrete-regime sub-arm is tracked on the conjecture/result pages as a powered null (not falsified), not as a still-live form of *this* question. The over-/under-splitting arm (model sense inventory vs a human inventory) was deliberately **not** carried by the conjecture and remains untouched. (Orchestrator note: this "answered" call reflects the run probes, not a value judgement — but the discrete-regime sub-arm being a *null rather than a positive* is the one place a reader might prefer "largely answered"; flagged.)
 
 ## The question
 
@@ -43,28 +59,30 @@ A design that distinguishes three hypotheses:
 
 Discriminating moves: hold context-similarity roughly constant while varying sense relatedness (polysemy vs. homonymy vs. same-sense) so hypothesis 3 is separable from 1; include **bridging contexts** (engineered to be sense-ambiguous) and test for an intermediate regime; compare the model's induced sense splits against a human sense inventory for over-/under-splitting.
 
-## Human anchors (candidates; none in-repo yet)
+## Human anchors (now mostly in-repo)
 
-Public, human-annotated lexical-sense resources that could ground this — several are already on the resources shortlist ([`base/resources/index.md`](../../base/resources/index.md)):
+The candidate anchors this page originally listed as "none in-repo yet" have since been catalogued and used (anchor decision resolved 2026-05-29 → Option B; see the conjecture):
 
-- **WiC — Word-in-Context** (Pilehvar & Camacho-Collados 2019): human binary same-sense/different-sense judgments for a target word across two contexts. The cleanest candidate for the same/different-sense behavioral contrast; public.
-- **Graded word-sense / usage-similarity data** (e.g. Erk, McCarthy & Gaylord usage-similarity (Usim) ratings; SemEval graded-sense / lexical-substitution sets): human *graded* relatedness judgments — the resource type that bears directly on hypothesis 1 (gradience), which a binary set like WiC cannot fully ground.
-- **WordNet** (sense inventory) and **SemCor / OntoNotes** (sense-tagged corpora): for the over-/under-splitting comparison against a human sense inventory. On the resources shortlist.
+- **WiC — Word-in-Context** (Pilehvar & Camacho-Collados 2019): human **binary** same-sense/different-sense labels (lexicographer-inventory-derived) for a target word across two contexts. **Now in-repo and verified:** [`resource/wic-word-in-context`](../../base/resources/wic-word-in-context.md) (CC BY-NC 4.0; 7,466 items, 50/50 balanced; negatives **homonymy-enriched** — closest-polyseme pairs pruned). It anchored the clause-(b) discreteness test [`result/lexical-polysemy-homonymy-v3`](../results/lexical-polysemy-homonymy-v3.md). Binary, **not** graded — it grounds same/different separation, never a graded monotonicity claim.
+- **Graded usage-similarity data** — the resource type bearing on hypothesis 1 (gradience). **Now in-repo:** [`resource/dwug-usage-graphs`](../../base/resources/dwug-usage-graphs.md) (DWUG, Schlechtweg et al.; CC BY-ND 4.0; graded 4-point DURel judgments) was the ratified Option-B graded anchor and grounds the v1 monotonicity result. The originally-named Usim (Erk, McCarthy & Gaylord) was *retired* as the anchor — its content fit but its released file is unfetchable / unlicensed (catalogued at [`resource/wic-graded-usage-similarity`](../../base/resources/wic-graded-usage-similarity.md)). **Still genuinely wanted:** a *second* graded, fetchable, licensed usage-similarity set — CoSimLex was evaluated and **rejected on design fit** (it rates *different-word* pairs in context, not two usages of the *same* lemma), so DWUG remains the sole graded anchor and a homonymy-enriched *graded* set (which neither DWUG nor WiC supplies) is the open want for a clean clause-(b) test that holds graded distance constant.
+- **WordNet** (sense inventory) for the over-/under-splitting comparison. **Now in-repo:** [`resource/wordnet-sense-inventory`](../../base/resources/wordnet-sense-inventory.md) (Princeton WordNet 3.0; permissive license; 117,659 synsets). **SemCor / OntoNotes** (sense-tagged corpora) are still **not** in-repo; the over-/under-splitting arm was never carried by the conjecture and remains unprobed.
 
-A future run that picks this up would catalogue the chosen resource as a `resource` page (checking it actually bears on the *gradience* question, not just sense existence — the charter's verify-content-not-existence rule), and queue an anchor decision then. **This page does not open that decision** — it is an open question, not yet a design.
+The chosen resources were catalogued by the feature that actually bears (the charter's verify-content-not-existence rule), and the anchor decision was opened and resolved — so this page is no longer waiting on an anchor for its central arm. The one still-genuinely-wanted asset is a **graded, homonymy-enriched** set (above), which would let a future run separate a discrete homonymy regime from plain graded distance — the confound that left clause (b) a powered null.
 
 ## Relation to the existing wedge
 
 - It is the **lexical counterpart** of the constructional `distributional`-vs-`constructional` tension ([`open-question/constructional-vs-frequency-confound`](constructional-vs-frequency-confound.md)): there the null is n-gram frequency; here it is context-similarity. Both ask whether a `distributional` shadow explains apparent meaning-tracking.
 - It does **not** touch the relational axis ([`open-question/relational-meaning-pilot`](relational-meaning-pilot.md)); it is `model-internal` plus `human-comparison`.
-- If pursued, it would likely spawn the project's first lexical `conjecture` (e.g., "LLM same/different-sense behavior is monotonic in human-rated sense relatedness, with an intermediate regime for polysemy absent for homonymy").
+- It did spawn the project's first lexical `conjecture` — [`conjecture/lexical-sense-gradience`](../conjectures/lexical-sense-gradience.md), stated almost exactly as anticipated here ("monotonic in human-rated sense relatedness, with an intermediate regime for polysemy absent for homonymy") — now tested (see the Update block above).
 
-## Why this is queued, not active
+## Status: answered (history below)
 
-It needs the word-sense-disambiguation / usage-similarity literature read first (WiC, Usim, the graded-sense line, the CoarseWSD / WSD-as-classification critiques) to confirm the gradience probe is not already a solved or trivial measurement, and to pick the anchor whose annotations are *graded* rather than discrete. Framing the question — fixing the three hypotheses and the context-similarity control — is the deliverable here; resolving it is a later loop turn gated on the reading and a fetched, gradience-bearing anchor.
+*This section is retained for the record; the question's resolution is in the Update block at the top.*
 
-## Pointers for the next visit
+When this page was written it was queued, not active — pending a word-sense-disambiguation / usage-similarity literature read and a fetched, graded, licensed anchor. Both happened: the anchor decision was resolved (Option B → DWUG for the graded arm, WiC as the binary cross-check), the resources were catalogued and verified, and the conjecture's three clauses were probed (v1, v2, v3). Framing the question — fixing the three hypotheses and the context-similarity control — was the deliverable here; the resolution is recorded above and on the conjecture/result pages.
 
-- Confirm which candidate anchor carries **graded** (not binary) human sense-relatedness judgments — that is the load-bearing property for hypothesis 1; WiC alone (binary) underdetermines it.
-- Decide the locus: behavioral (prompted same/different-sense + confidence) on the panel, or the small-model lane (representation-similarity / probe) for a graded signal — note the instrument is an operationalization gate to queue before running.
-- This is the seed for broadening beyond the grammatical wedge; keep it from sprawling — one tractable polysemy-gradience probe, anchored, before any wider lexical-semantics program.
+## Residual / pointers for any follow-on
+
+- The one un-probed seed arm is **over-/under-splitting** (model sense inventory vs a human inventory) — never carried by the conjecture; it would need SemCor/OntoNotes (still not in-repo) alongside the now-in-repo [`resource/wordnet-sense-inventory`](../../base/resources/wordnet-sense-inventory.md).
+- The clause-(b) discrete-regime sub-arm is a **powered null**, not a falsification; a cleaner test would need a **graded, homonymy-enriched** set that holds human graded distance constant across strata (the intrinsic confound WiC's lemma-level labels cannot remove). That is the standing want, not a defect of the work done.
+- The representation-locus variant (graded sense *representations*, small-model lane) remains deferred on local compute; v1–v3 are all behavioral.

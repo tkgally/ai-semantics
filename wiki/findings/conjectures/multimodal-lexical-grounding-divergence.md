@@ -8,14 +8,16 @@ meaning-senses:
   - referential.sense
   - distributional
   - human-comparison
-status: proposed
+status: tested
 anchor: pending
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-05-31
 links:
   - rel: refines
     target: open-question/lexical-polysemy-gradience
+  - rel: depends-on
+    target: result/multimodal-grounding-image-v1
   - rel: depends-on
     target: conjecture/lexical-sense-gradience
   - rel: depends-on
@@ -34,10 +36,14 @@ links:
 
 # Conjecture: visual grounding shifts graded lexical-sense behavior toward the human signal (the project's first multimodal wedge)
 
-> **Status: proposed (2026-05-30).** The project's **first multimodal conjecture** and the
-> first finding-type page tagged `grounded` / `grounded.perceptual` — the `grounded` tag has
-> existed in [`meaning-senses.md`](../../meaning-senses.md) since the project began but has never
-> carried a finding. It is the direct multimodal extension of the lexical wedge
+> **Status: partially tested (updated 2026-05-31).** The project's **first multimodal conjecture**
+> and the first finding-type page tagged `grounded` / `grounded.perceptual` — the `grounded` tag had
+> existed in [`meaning-senses.md`](../../meaning-senses.md) since the project began but carried no
+> finding until this conjecture's predictions ran. **Predictions 1–3 have now run, all landing as negatives:**
+> prediction 1 landed as a text-side null (2026-05-30, [`result/lexical-perceptual-grounding-moderation-v1`](../results/lexical-perceptual-grounding-moderation-v1.md)),
+> and predictions 2–3 landed as a **redundancy null** in the project's first image-input probe
+> (2026-05-31, [`result/multimodal-grounding-image-v1`](../results/multimodal-grounding-image-v1.md)).
+> Only **prediction 4 (coercion under depiction)** remains genuinely unrun. It is the direct multimodal extension of the lexical wedge
 > [`conjecture/lexical-sense-gradience`](lexical-sense-gradience.md): that conjecture asked
 > whether a *text-only* model tracks graded sense relatedness above a context-similarity
 > shadow (answer: yes, clauses a+c — [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md));
@@ -88,10 +94,12 @@ as movement toward the independent human signal.**
 
 ## Why this is interesting
 
-- **If confirmed, it would give** the `grounded.perceptual` tag its **first empirical exercise**.
-  Until now grounding has been a base-layer concept only; this is the project *proposing* to ask
-  the grounding question of its own panel's behavior, with a human anchor, rather than rehearsing
-  the philosophy. (Nothing has run; the tag is exercised only when a result lands.)
+- **It has given** the `grounded.perceptual` tag its **first empirical exercise** — by two negatives.
+  Until predictions 1–3 ran, grounding was a base-layer concept only; the project has now asked the
+  grounding question of its own panel's behavior, with a human anchor, rather than rehearsing the
+  philosophy. The grounding axis currently stands at **two bounded negatives for clear homonyms**
+  (a text-side moderation null and an image-side redundancy null — see the Predictions section), not
+  at confirmation; fine polysemy and a genuinely image-native task are the honest next directions.
 - It is a clean test on the seam between [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md)
   and [`concept/grounding`](../../base/concepts/grounding.md): does perceptual input add `referential.sense`-relevant
   signal *beyond the distributional shadow*, or has a strong text model already saturated it?
@@ -121,8 +129,11 @@ as movement toward the independent human signal.**
 
 Ordered cheapest-first, matching the anchor-class sequencing ratified in
 [`decisions/resolved/multimodal-panel-and-grounding-theory`](../../decisions/resolved/multimodal-panel-and-grounding-theory.md)
-(Q3=B GO). Prediction 1 is text-side and was run **$0** (a null); 2–4 require image input
-and are the live unit (image probe design [`design/multimodal-grounding-image-v1`](../../../experiments/designs/multimodal-grounding-image-v1.md)).
+(Q3=B GO). **What has landed (as of 2026-05-31):** prediction 1 ran text-side **$0** (a null,
+2026-05-30); predictions 2–3 ran in the first image-input probe and landed as a **redundancy null**
+(2026-05-31, [`result/multimodal-grounding-image-v1`](../results/multimodal-grounding-image-v1.md)).
+Only **prediction 4** (coercion under depiction) remains unrun; it requires image input
+(image probe design [`design/multimodal-grounding-image-v1`](../../../experiments/designs/multimodal-grounding-image-v1.md)).
 
 1. **Perceptual-strength moderation (text-side, the cheap bridge — runnable with no new probe).**
    Re-analyzing the *already-collected* lexical-v1 ratings
@@ -214,9 +225,13 @@ scouted and verified for license/fetchability/meaning-bearing in
   they test a *related* claim, not this one directly). Which to build/fetch is the Q3-B decision.
 
 Anchor caveats, stated plainly:
-- The conjecture must not be promoted past `proposed` until (a) the anchor-class decision is ratified
-  and (b) the chosen anchor is fetched + verified + (where licensed) mirrored. Prediction 1's
-  Lancaster join is the cheapest path to a *first* contingent result.
+- The two gates that once held this at `proposed` are now both met: (a) the anchor-class decision is
+  ratified ([`decisions/resolved/multimodal-panel-and-grounding-theory`](../../decisions/resolved/multimodal-panel-and-grounding-theory.md),
+  Q3=B GO; image anchor "A stands"), and (b) the predictions-2–3 anchor (the WordNet-keyed constructed
+  set) was fetched + verified + frozen and its v1 result is anchored and promoted. The conjecture is
+  now **partially tested** (predictions 1–3 ran, both negative); the page-level `anchor: pending`
+  scopes only the still-unrun **prediction 4** (coercion under depiction), whose image-paired anchor is
+  not yet built.
 - **Human usage-similarity is the operational stand-in for sense relatedness** (carried from the
   lexical conjecture); the multimodal version adds that **image depiction is itself a designed
   variable**, not a human judgment — the human anchor stays the relatedness/similarity rating, the
@@ -247,5 +262,10 @@ Anchor caveats, stated plainly:
   `referential.sense`; it does **not** touch `referential.externalist` (Putnam/Evans, still
   un-anchored in-repo). Perceptual grounding is not reference-fixing; do not let an image effect be
   read as the model tracking *reference*.
-- **Single-axis, modest N expected.** Like the lexical probes, any first result will be a single run
-  on a modest item set — a grounding-signal probe, not a coverage benchmark.
+- **Single-axis, modest N — borne out.** Like the lexical probes, the realized image result was a
+  single run on a modest item set (n=12 WordNet-keyed pairs, 3 models;
+  [`result/multimodal-grounding-image-v1`](../results/multimodal-grounding-image-v1.md)) — a
+  grounding-signal probe, not a coverage benchmark. The redundancy null is correspondingly bounded: the
+  text-only panel was already at ceiling (AUC 1.000 every cell), so there was no separation headroom for
+  the image to add, the gold is author synset-assignment (not per-item human labels), and fine polysemy
+  was untouched.

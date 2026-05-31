@@ -8,7 +8,7 @@ meaning-senses:
   - functional-vs-formal
 status: open
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-05-31
 links:
   - rel: depends-on
     target: result/conative-minimal-pair-divergence-v1
@@ -16,9 +16,23 @@ links:
     target: result/way-construction-traversal-v1
   - rel: depends-on
     target: claim/cxg-probing-surprisal-validity
+  - rel: depends-on
+    target: result/comparative-correlative-covariation-v3
+  - rel: depends-on
+    target: result/caused-motion-near-miss-v2c
+  - rel: depends-on
+    target: result/instrument-disagreement-reanalysis-v1
 ---
 
 # Open question: does constructional-inference competence depend on the elicitation instrument?
+
+> **Update / what landed (2026-05-31) — two distinct sources of instrument sensitivity identified; its pervasiveness bounded; question stays open (standing methodological question).** Since this page was written, three own-design results have run that are exactly its subject matter, and they sharpen the picture from "gpt-5.4-mini diverges on the conative" into **two separable mechanisms plus a pervasiveness bound**:
+>
+> 1. **A model-specific logical slip.** [`result/comparative-correlative-covariation-v3`](../results/comparative-correlative-covariation-v3.md) embedded the comparative correlative under negation / epistemic hedging. claude and gemini track the operator scope at/near ceiling on both instruments; gpt-5.4-mini **cracks under forced-choice specifically**, but the mechanism is now precise: an **excluded-middle over-inference** under negation/forced-choice (treating ¬(X decreases) as entailing X increases), *not* a bare rate gap and not a surface template firing. The instrument-fragility is again confined to gpt-5.4-mini and localized to one logical error.
+> 2. **A general pragmatics/entailment NLI-vs-FC effect.** [`result/caused-motion-near-miss-v2c`](../results/caused-motion-near-miss-v2c.md) found a **second, non-model-specific** source: the caused-motion causation inference is genuinely form-keyed (construction 100% affirm vs near-miss withheld), but the construction-vs-near-miss gap is **smaller under NLI than forced-choice uniformly across all three models** — NLI admits the Gricean post-hoc causal reading that forced-choice's strict-entailment framing withholds. This is a content-level instrument effect tracking the pragmatics/entailment boundary, distinct from the gpt-specific cracks.
+> 3. **A pervasiveness bound.** [`result/instrument-disagreement-reanalysis-v1`](../results/instrument-disagreement-reanalysis-v1.md) (read-only, $0) turned the anecdote into a descriptive statistic across two existing runs: **large instrument disagreement (50.0 pp) is confined to the single gpt-5.4-mini × conative cell**; the other eight cells (claude/gemini × conative, all three models × both add-direction constructions in coercion-v2) show ≤20.8 pp, mostly ≤10 pp. So instrument fragility is **not pervasive** in this panel — though the add-direction cells' agreement is partly ceiling/floor compression, not demonstrated invariance (the re-analysis is descriptive, no significance test).
+>
+> Net: instrument sensitivity now has **two identified sources** — a model-specific logical-slip mechanism (gpt-5.4-mini's excluded-middle over-inference, FC-localized) and a general NLI-vs-FC pragmatics/entailment effect (NLI more permissive of Gricean inference, uniform across models) — and the re-analysis **bounds its pervasiveness** to one model × construction cell at the large end. The page **stays `open`**: it is a standing methodological question that conditions how every Tier-4 result is read, and the "serious answer" below (a dedicated cross-instrument × cross-construction design with a pre-registered primary instrument and an operationalization gate queued for Tom) has **not** been run — these three results motivate and partially characterize the question, they do not close it.
 
 ## The question
 
