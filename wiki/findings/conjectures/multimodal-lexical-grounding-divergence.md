@@ -121,7 +121,7 @@ Ordered cheapest-first, matching the anchor-class sequencing surfaced in
    Re-analyzing the *already-collected* lexical-v1 ratings
    ([`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md)) moderated by
    the **Lancaster Sensorimotor Norms** (human perceptual/action strength ratings; CC BY 4.0;
-   see [`base/resources/multimodal-anchor-scouting.md`](../../base/resources/multimodal-anchor-scouting.md)),
+   see [`base/resources/lancaster-sensorimotor-norms`](../../base/resources/lancaster-sensorimotor-norms.md)),
    the text-only panel's monotonicity (rating vs human DURel median) is **stronger for highly
    perceptually-grounded lemmas** than for abstract ones. *This is a within-text-model test of
    whether perceptual groundedness of a word predicts how well the model tracks its sense* — a
@@ -129,6 +129,15 @@ Ordered cheapest-first, matching the anchor-class sequencing surfaced in
    no moderation — a word's perceptual strength does not predict the model's tracking quality
    (sense-tracking is uniform across the abstract/concrete divide). A null here is itself
    informative and would lower the prior on predictions 2–4.
+   **→ TESTED 2026-05-30 ($0): a NULL** — [`result/lexical-perceptual-grounding-moderation-v1`](../results/lexical-perceptual-grounding-moderation-v1.md).
+   No primary cell (`Max_strength.perceptual` × `durel` × 3 models) shows the predicted positive
+   Δρ; all three are negative (−0.05 / −0.27 / −0.04), the only CI excluding zero (gpt-5.4-mini)
+   runs the *wrong* way. The design is **underpowered** (21 lemmas/side, compressed range 2.44–4.95)
+   so this is "no detectable moderation OR unresolvable," not a falsification — but it removes the
+   hoped-for converging text-side hint and **lowers the prior on predictions 2–4**, exactly as the
+   null clause anticipated. Crucially it does **not** reach the prediction-2 *redundancy* null (that
+   is an image-vs-text contrast); and the word-level Lancaster proxy is blunter than prediction 3's
+   *sense-level* perceptual-distinguishability moderator, so a sharp image test is still warranted.
 2. **Image-grounding divergence (the core multimodal claim).** Same panel, same graded-relatedness
    instrument, run **with disambiguating images of each usage vs text alone**: the image-conditioned
    rating **diverges** from the same model's text-only rating, and the divergence is **toward** the
