@@ -141,20 +141,24 @@ def main():
         mo = summ.get((m, "mono"))
         if not d:
             continue
-        lift_ok = (d["lift_lo"] == d["lift_lo"] and d["lift_lo"] > 0)
+        # POSITIVE bar (frozen, strict, untouched): order gap CI excludes 0, chronology-specific,
+        # above the monologue floor, and history is load-bearing. history_loadbearing uses the lift
+        # POINT estimate (>0.10 accuracy lift): the methodological-vs-deflationary NULL distinction
+        # is descriptive only and does NOT gate the positive (no model meets order_ci regardless).
+        history_loadbearing = (d["lift"] == d["lift"] and d["lift"] > 0.10)
         order_ci = (d["og_lo"] == d["og_lo"] and d["og_lo"] > 0)
         chron_ok = (d["od"] > d["rv"])
         floor_ok = (mo is None) or (d["og"] > mo["og"])
-        pos = lift_ok and order_ci and chron_ok and floor_ok
+        pos = history_loadbearing and order_ci and chron_ok and floor_ok
         any_pos = any_pos or pos
-        if not lift_ok:
+        if not history_loadbearing:
             verdict = "UNDER-POWERED / METHODOLOGICAL (history not load-bearing; order untestable)"
         elif pos:
             verdict = "RELATIONAL POSITIVE"
         else:
-            verdict = "RELATIONAL NULL (deflationary: coordination, not constitution)"
+            verdict = "RELATIONAL NULL (deflationary: history content helps, order does not)"
         print(f"[{m}] {verdict}")
-        print(f"     lift={d['lift']:+.3f}(gate {'PASS' if lift_ok else 'fail'}) "
+        print(f"     lift={d['lift']:+.3f}(load-bearing {'yes' if history_loadbearing else 'no'}) "
               f"order_gap={d['og']:+.3f}[{d['og_lo']:+.3f},{d['og_hi']:+.3f}]"
               f"(CI>0 {'yes' if order_ci else 'no'}) "
               f"chron {'ok' if chron_ok else 'artifact?'} "

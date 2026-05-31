@@ -12,12 +12,12 @@ contingent-artifacts:
 
 ## Why this exists (surfaced, not auto-resolved)
 
-`decisions/resolved/relational-pilot-go` ("Decision 9", GO) ratified **what** to run — the two-AI
+[`decisions/resolved/relational-pilot-go`](../resolved/relational-pilot-go.md) ("Decision 9", GO) ratified **what** to run — the two-AI
 iterated dyadic reference game, homogeneous dyads first, with the live-vs-shuffled trajectory
 contrast as the load-bearing measure and Hawkins as the convergence anchor only. Building it forced
 three **operationalization** calls that the GO decision did not fix. Per PROTOCOL §A/§5 and CLAUDE.md
 always-on rule 5, these are surfaced here with a provisional default and the result
-(`result/relational-reference-game-v1`) is
+([`result/relational-reference-game-v1`](../../findings/results/relational-reference-game-v1.md)) is
 marked `contingent-on` this page; none is auto-promoted to settled until Tom ratifies the yardstick.
 Ratifying fixes the *yardstick*, never the *result*.
 
@@ -33,7 +33,7 @@ Ratifying fixes the *yardstick*, never the *result*.
   word-budget (≤12 words) blocks exhaustive cell-listing, forcing the holistic coined label the
   paradigm needs.
 - **Alternative (B):** real image tangrams (the panel is image-capable). Higher ecological validity
-  and a closer tie to `resource/hawkins-tangrams`, but multiplies image-token cost on every turn and
+  and a closer tie to [`resource/hawkins-tangrams`](../../base/resources/hawkins-tangrams.md), but multiplies image-token cost on every turn and
   complicates exact content-holding for the shuffle.
 - **Known risk:** if text grids are too easy to describe literally within the budget, the live game
   runs at ceiling and the trajectory test loses sensitivity. The PREREG flags a ceiling outcome as
@@ -69,11 +69,11 @@ Ratifying fixes the *yardstick*, never the *result*.
 ## Provisional default and contingency
 
 Run v1 under A/A/A (above), freeze + report, and mark
-`result/relational-reference-game-v1`
+[`result/relational-reference-game-v1`](../../findings/results/relational-reference-game-v1.md)
 `contingent-on: relational-pilot-operationalization`. The **trajectory-dependence measure makes no
 human-comparison claim** — it is the pilot's own within-model internal contrast (the open question and
 the GO decision both state Hawkins anchors the *convergence* baseline only), so the result carries an
-`anchors` link to `resource/hawkins-tangrams` for the entrainment curve and is otherwise an internal
+`anchors` link to [`resource/hawkins-tangrams`](../../base/resources/hawkins-tangrams.md) for the entrainment curve and is otherwise an internal
 contrast. A v1 positive would be held contingent (a candidate relational `conjecture`, not a settled
 finding) until Tom ratifies this yardstick; a v1 null stands as a first-class negative regardless of
 this decision (a null does not over-claim).
