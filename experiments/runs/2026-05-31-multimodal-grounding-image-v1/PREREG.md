@@ -80,13 +80,49 @@ license in `manifest.json`/`ATTRIBUTION.md`.
 0ffe7816…  bank-F_1.jpg       1ccd328d…  crane-T_2.jpg      2547fdcb…  bank-F_2.jpg
 36e48f32…  bat-F_2.jpg        476ef165…  pitcher-T_2.jpg    61534a5f…  pitcher-F_2.jpg
 69df63b7…  bat-T_2.jpg        6bb379b6…  bank-T_2.jpg       76c557b2…  pitcher-F_1.jpg
-776602a9…  seal-F_1.jpg       7c929010…  crane-F_2.jpg      89776dbf…  bat-T_1.jpg
+35cb1dab…  seal-F_1.jpg       7c929010…  crane-F_2.jpg      89776dbf…  bat-T_1.jpg
 8c329071…  bank-T_1.jpg       9abfae35…  mouse-T_2.jpg      a5133616…  crane-T_1.jpg
 ba939051…  mouse-F_1.jpg      bb613556…  mouse-T_1.jpg      bff13629…  mouse-F_2.jpg
 c49ed3fd…  seal-F_2.jpg       ebb2e014…  seal-T_2.jpg       eff1c9c1…  bat-F_1.jpg
 b4fb9839…  _liveness_red.png (synthetic, liveness only — not a finding)
 ```
 (Full 64-hex digests via `sha256sum images/*.jpg` reproduce these prefixes.)
+
+## Independent pre-run critic — fixes applied + re-frozen (2026-05-31)
+
+An independent adversarial critic reviewed the frozen stimuli/PREREG/design before the grid.
+Applied before any finding-bearing call:
+- **B1 (anchor relabel, BLOCKER):** governance now matches the freeze — `decisions/open/multimodal-image-anchor`
+  and the design `anchor:` field relabeled from WiC to **WordNet-synset-keyed constructed pairs**; the
+  result page states the same. **Honesty note the critic forced:** *no per-item human annotator judged
+  these pairs.* The human anchor is the WordNet **sense inventory** (a human-built lexical resource); the
+  same/different gold is the **author's synset assignment** of constructed sentences, verified to be
+  distinct vs identical synsets — weaker than WiC's per-item human labels, and stated as such.
+- **B2 (attribution, BLOCKER):** `ATTRIBUTION.md` regenerated from `manifest.json` (mouse-F_1, bank-T_1
+  credits corrected).
+- **S3 (style confound):** `seal-F_1` swapped from a captioned lithograph to a clean PD harbor-seal
+  **photo** (sha → `35cb1dab…`) for stylistic parity; re-frozen.
+- **S4:** `seal-F` context-2 de-"red"ed ("wax seal", to match the monochrome impression).
+- **S1 (parse):** `parse_num` now prefers a bare-number reply, else the LAST in-range number (the
+  scale digits 1–4 / 0,100 appear in the prompt); `raw` logged for every call for hand-audit.
+- **S2 (NA asymmetry — pre-registered rule):** if any model's **image-condition** parse-fail count
+  exceeds its **text-condition** count by **>1 item**, that model's modality contrast is reported as
+  **uninterpretable** (not silently dropped) — guards against gemini reasoning-token overruns biasing
+  the within-family image-vs-text Δ.
+- **NITs noted, not blocking:** bank-F_2 lacks signage (river-vs-building contrast still clear);
+  crane-F_2 crane is small; design-doc §3/§6 are stale vs this 12-item/2-stratum/WordNet freeze
+  (reconciled by a pointer in the design).
+
+**The central structural caveat (lifted into the result, not fixable by item edits):** distinct-F gold
+is **confounded with image surface-dissimilarity by construction** — every gold-"different" pair is shown
+two visibly different pictures. A model doing *zero* sense computation ("two different-looking pictures →
+less related") reproduces the prediction-2 effect. The **same-T distraction control** (two different
+photos of the *same* referent) is the only guard, and it is weak. So the strongest honest claim is
+**binary + behavioral**: "showing depicting pictures does / does not increase the panel's separation of
+WordNet-distinct from WordNet-same noun pairs over byte-identical text, within family, and whether that
+survives the same-referent surface-dissimilarity control." It **cannot** license "the model is
+perceptually grounded." Redundancy null is the most likely outcome; power (12 items, 6/stratum, n=3) is
+low and the bootstrap CI will be wide — stated as the lead caveat.
 
 ## Order of operations (mandatory)
 

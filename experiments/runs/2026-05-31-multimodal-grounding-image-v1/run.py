@@ -44,13 +44,19 @@ def data_uri(path):
     return "data:image/jpeg;base64," + base64.b64encode(b).decode()
 
 def parse_num(txt, lo, hi):
+    """Robust rating parse (S1 fix). Prompts contain scale digits (1-4, 0/100), so a
+    chatty model that echoes the scale before answering would mis-parse on first-match.
+    Strategy: if the stripped reply IS a bare number use it; else take the LAST in-range
+    number (the model's final answer). `raw` is always logged for post-run hand-audit of
+    any non-bare reply."""
     if not txt:
         return None
-    m = re.search(r"-?\d+(?:\.\d+)?", txt)
-    if not m:
-        return None
-    v = float(m.group())
-    return v if lo <= v <= hi else None
+    s = txt.strip().strip("*. ")
+    if re.fullmatch(r"-?\d+(?:\.\d+)?", s):
+        v = float(s)
+        return v if lo <= v <= hi else None
+    cands = [float(x) for x in re.findall(r"-?\d+(?:\.\d+)?", txt) if lo <= float(x) <= hi]
+    return cands[-1] if cands else None
 
 def load_items():
     return list(csv.DictReader(open(os.path.join(HERE, "items.csv"))))
