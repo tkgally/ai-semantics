@@ -18,6 +18,17 @@ links:
 
 # Open question: minimal two-agent setup for relational meaning
 
+> **v1 RAN (2026-05-31) → a first-class relational NULL.** The pilot below was built and run:
+> [`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md). Across all three
+> homogeneous-dyad panels the coined convention is recovered from the **set** of prior turns, not
+> their **ordered trajectory** (history content lifts a fresh matcher's accuracy, but ordered ≈
+> shuffled ≈ reversed; no order-gap CI excludes 0) — coordination, not constitution; the deflationary
+> distributional story survives order-scrambling. The question **stays open** because the bounded
+> null leaves the sharper arms unrun: the **history-perturbation arm** (reassign a coined term
+> mid-trajectory, test position-sensitivity), **image referents**, and **cross-family dyads** — see
+> [`decisions/open/relational-pilot-operationalization`](../../decisions/open/relational-pilot-operationalization.md).
+> What follows is the design as run.
+
 ## The question
 
 The charter's distinctive axis is [`concept/relational-meaning`](../../base/concepts/relational-meaning.md) — meaning constituted *between* a model and a person, or between models — and notes that the existing multi-agent literature is about *coordination*, not *meaning-constitution* ([`PROJECT.md`](../../../PROJECT.md) §1). What is the smallest interactional setup whose results would count as evidence for or against meaning being constituted *between* agents, rather than computed *within* one and then aggregated?

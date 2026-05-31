@@ -2,65 +2,61 @@
 
 ## State
 
-The project is **three-axis**: **grammatical** (live, robust — 11 own-design results), **lexical**
-(live: clauses a+c supported; clause **b** — the distinctive polysemy-vs-homonymy *discreteness* bet —
-a **powered null** at the WiC anchor), and **multimodal / grounding** (two negatives). **No finding
-changed in the consolidation work below.**
+The project is **three-axis plus a now-opened fourth**: **grammatical** (live, 11 own-design results),
+**lexical** (clauses a+c supported; clause b a powered null), **multimodal/grounding** (two negatives),
+and — **new this session** — the **relational axis** has its **first finding**: a first-class **null**.
 
-Two sessions are recorded here:
+**This session (2026-05-31, workflow/single-build): built and ran the relational pilot (Decision 9 =
+GO).** The two-AI iterated dyadic reference-game over hard-to-name tangram-like figures ran end-to-end
+→ [`result/relational-reference-game-v1`](wiki/findings/results/relational-reference-game-v1.md).
+**Headline: convergence WITHOUT trajectory-dependence — a first-class relational null.** Across all
+three homogeneous-dyad panels the coined convention is recovered from the **set** of prior turns, not
+their **ordered trajectory** (history content lifts a fresh matcher +0.25…+0.42, but ordered ≈
+shuffled ≈ reversed; no order-gap CI excludes 0). Coordination, not constitution; the deflationary
+distributional story survives order-scrambling. Secondary, anchored to
+[`resource/hawkins-tangrams`](wiki/base/resources/hawkins-tangrams.md): the dyads converge on
+referential accuracy but, unlike humans, **do not compress** their expressions (convergence without
+entrainment). **864 calls, $0.945 billed, 14 NA** (all claude truncations, spread across arms — verifier
+confirmed the null is unchanged dropping them). Independent pre-run critic (caught a
+self-describing-coined-term blocker before any finding-bearing call) + post-run verifier (every figure
+reproduced from raw, 0/432 scoring mismatches). Run dir:
+[`experiments/runs/2026-05-31-relational-reference-game-v1/`](experiments/runs/2026-05-31-relational-reference-game-v1/README.md).
 
-1. **Consolidation pass (2026-05-31, merged as PR #32).** Documentation only — no experiments, $0.
-   Refreshed both theory pages to absorb the latest results; hardened the provenance of 8 source pages
-   (re-verifying quotes verbatim where fetchable, keeping honest flags where not — e.g. corrected three
-   paraphrased Harnad quotes and an ARO "Table 1" error); swept the index/catalog for stale
-   anchor/contingent notes; refreshed two open-questions and the multimodal conjecture. No finding
-   created, changed, promoted, or retired.
+The theory page, the relational concept page, and the open question now record the relational axis at
+**one bounded negative** (floor characterized, bottom rung not climbed). Nothing on the other three
+axes changed.
 
-2. **Decisions recorded (2026-05-31, this follow-up branch).** Tom reviewed the three pending decisions
-   and ruled. These are now written into the wiki:
-   - **Relational pilot ("Decision 9") = GO.** Green-lit; see
-     [`decisions/resolved/relational-pilot-go`](wiki/decisions/resolved/relational-pilot-go.md).
-     **This is now the next concrete action** (the run is deferred to the next session, since this one is
-     documentation-only).
-   - **AANN probe = keep HOLD.** No `TOGETHER_API_KEY` added; the AANN surprisal path stays blocked.
-     Reaffirmed in [`decisions/open/cloud-compute-path`](wiki/decisions/open/cloud-compute-path.md)
-     (stays open).
-   - **`open-question/lexical-polysemy-gradience` reverted to `open`** (Tom preferred it stay live rather
-     than "answered" — its distinctive discrete-regime sub-arm is a powered null, not a positive
-     resolution). Still largely addressed; held open for a future graded, homonymy-enriched clause-(b) test.
+## Next concrete action — backlog (workflow-fannable; none blocked)
 
-## Next concrete action — RUN THE RELATIONAL PILOT (green-lit)
+The relational pilot is a *bounded* null. The natural next moves (a fresh wave can fan these out):
 
-**Build and run the two-AI iterated dyadic reference-game pilot** per the design in
-[`open-question/relational-meaning-pilot`](wiki/findings/open-questions/relational-meaning-pilot.md) and
-the ratified [`decisions/resolved/relational-pilot-go`](wiki/decisions/resolved/relational-pilot-go.md):
+1. **Relational pilot v2 — the sharper trajectory test.** Build the deferred **history-perturbation
+   arm** (reassign a coined term mid-trajectory; test whether a fresh matcher's interpretation tracks
+   *where* in the order the change lands, beyond *that* the content changed). This is the cleanest test
+   of order-dependence and the one most likely to expose an effect v1 was under-powered for. Optionally
+   add **image referents** (Q1→B) and **cross-family dyads** (heterogeneous arm). See
+   [`decisions/open/relational-pilot-operationalization`](wiki/decisions/open/relational-pilot-operationalization.md)
+   (recommends exactly these). Anchor discipline unchanged (Hawkins = convergence only; trajectory =
+   internal contrast). Budget: similar scale (~$1).
+2. **Surface the v1 yardstick to Tom** for ratification (text grids / order-isolating headline /
+   monologue floor) — non-blocking; the null stands regardless.
+3. Lower-priority axis-deepening (any of): a relational **conjecture** page only if v2 turns positive;
+   otherwise keep the relational axis at one negative and let the theory pages hold it.
 
-- **Agents:** the 3-family panel, **homogeneous dyads first** (same model in both roles); cross-family a later arm.
-- **Conditions:** (1) live dialogue, (2) shuffled-history replay (content identical, order destroyed — the
-  deflationary "averaged-within" control), (3) single-agent-with-self baseline, (4) optional history-perturbation arm.
-- **Load-bearing measure:** the **live-vs-shuffled gap** in B's interpretation/usage of the coined term.
-  A live ≈ shuffled outcome is a **first-class relational null** (coordination, not constitution) — write it, don't retune it.
-- **Human anchor:** [`resource/hawkins-tangrams`](wiki/base/resources/hawkins-tangrams.md) supplies the
-  convergence/entrainment baseline only; the trajectory-dependence measure is the pilot's own internal contrast.
-  Fetching Clark & Wilkes-Gibbs 1986 (in [`base/wanted.md`](wiki/base/wanted.md)) is optional, not blocking.
-- **Discipline:** freeze + commit stimuli (sha256) before any call; ≥1 independent pre-run critic + ≥1
-  post-run verifier. **Budget:** the most call-heavy probe to date — keep it small (~6–12 figures, ~6 rounds,
-  a few dyads/condition) to stay under the $20/week cap; mind the Gemini reasoning-token cost when setting `max_tokens`.
-- On a positive, promote to a `conjecture` and let the theory page absorb it as the bottom rung of the relational "second ladder".
+## Blocked / pending Tom (none blocks the above)
 
-## Still on hold / pending Tom
-
-- **AANN probe** — HOLD (Tom's reaffirmed call): no logprob path on the current panel; a Together
-  `echo+logprobs` path would unblock the Option-A surprisal for <$1 **if** Tom later adds a
-  `TOGETHER_API_KEY` ([`decisions/open/cloud-compute-path`](wiki/decisions/open/cloud-compute-path.md),
-  [`decisions/open/aann-panel-logprob-blocker`](wiki/decisions/open/aann-panel-logprob-blocker.md)).
-- **Image probe v2 / VWSD** — un-gated but low-motivation (text-only panel already saturates the
-  word-sense cases tried); worth it only to push the grounding axis into genuinely image-native territory.
+- [`decisions/open/relational-pilot-operationalization`](wiki/decisions/open/relational-pilot-operationalization.md)
+  — the v1 yardstick (a null stands regardless; ratification only fixes the yardstick).
+- [`decisions/open/aann-panel-logprob-blocker`](wiki/decisions/open/aann-panel-logprob-blocker.md) +
+  [`decisions/open/cloud-compute-path`](wiki/decisions/open/cloud-compute-path.md) — **AANN stays on
+  HOLD** (no `TOGETHER_API_KEY`; no logprob path on the current panel). Unblocks for <$1 if Tom adds a key.
+- **Image probe v2 / VWSD** — un-gated, low-motivation (text panel saturates word-sense cases).
 
 ## Reminder for the next cold-start
 
 Charter `PROJECT.md`; schema `CLAUDE.md`; run discipline `PROTOCOL.md` ("continue working" ⇒ workflow
 mode). **Read [`wiki/executive-summary.md`](wiki/executive-summary.md) first, then `wiki/index.md`**;
-reconcile `wiki/decisions/open/` (2 open, the non-blocking AANN/compute pair). **The headline for the next
-run: the relational pilot is GREEN-LIT — it is the next experiment to build and run.** It is the project's
-most distinctive next step; do it under the freeze + pre/post-critic discipline and the budget cap.
+reconcile `wiki/decisions/open/` (now **3 open** — the relational-pilot yardstick + the AANN/compute
+pair). The headline: **the relational pilot RAN — a first-class null (convergence without
+trajectory-dependence)**; the most distinctive next step is **v2 with the perturbation arm**, the one
+test v1 was under-powered to run.
