@@ -58,3 +58,7 @@ you want the AANN Option-A path opened, add a Together/Fireworks key and say "A"
 **Unverified (confirm on first real use):** Fireworks pricing; that a *named 2026 Together model*
 returns `prompt.token_logprobs` (reachability proven, returned-field contents not); Together free-tier
 credits; Modal/Replicate GPU rates.
+
+## Update 2026-05-31 (reaffirmed)
+
+Tom reviewed this after the PR #32 consolidation merge and chose **HOLD** again — no `TOGETHER_API_KEY` / Fireworks key added; the AANN Option-A surprisal path stays blocked. This decision stays **open** (revisit if/when a key is provisioned).
