@@ -1,0 +1,134 @@
+---
+type: concept
+id: deflationary-and-eliminativist-llm-meaning
+title: Deflationary and eliminativist readings of "LLM meaning"
+meaning-senses:
+  - distributional
+  - grounded
+  - relational
+created: 2026-05-31
+updated: 2026-05-31
+links:
+  - rel: depends-on
+    target: concept/distributional-meaning
+  - rel: depends-on
+    target: concept/grounding
+  - rel: depends-on
+    target: concept/relational-meaning
+  - rel: depends-on
+    target: result/relational-reference-game-v1
+  - rel: depends-on
+    target: result/lexical-perceptual-grounding-moderation-v1
+  - rel: depends-on
+    target: result/multimodal-grounding-image-v1
+  - rel: depends-on
+    target: result/lexical-sense-gradience-v1
+  - rel: depends-on
+    target: source/bender-koller-2020-climbing
+  - rel: depends-on
+    target: source/lyre-2024-semantic-grounding
+  - rel: depends-on
+    target: source/piantadosi-hill-2022-meaning-without-reference
+---
+
+# Deflationary and eliminativist readings of "LLM meaning"
+
+The other concept pages in this wave each develop a *positive* theory of what meaning is — truth-conditional and use ([`truth-conditional-and-use-meaning.md`](truth-conditional-and-use-meaning.md)), compositional structure ([`compositionality.md`](compositionality.md)), frames and prototypes ([`frame-and-prototype-semantics.md`](frame-and-prototype-semantics.md)), holistic interdependence ([`semantic-holism.md`](semantic-holism.md)). This page owns a different, prior axis: **is there anything there at all, and if so, how much?** It maps the meta-positions one can hold about whether the phrase "LLM meaning" picks out a real explanandum — from the eliminativist *no* through the deflationary *only the distributional null* to the project's descriptivist refusal to litigate the yes/no — and it asks which of the project's own findings push which way. It develops no positive theory of meaning of its own; it is the page about the *bearing* of the evidence on the existence-and-degree question.
+
+A note on scope, stated up front because it disciplines everything below: **no behavioral result this project can obtain settles the form-vs-meaning question in principle.** That is not a hedge; it is the structural consequence of the strongest eliminativist-leaning argument (Bender & Koller, below). The project's contribution is therefore not to *answer* the existence question but to make precise *how* each finding bears on it — which findings a deflationist comfortably absorbs, and which strain a strict "no structure at all" reading.
+
+## The spectrum
+
+### Eliminativism: "stochastic parrots", no meaning
+
+The eliminativist pole holds that LLM output is statistical form without meaning or understanding — the model is, in the now-standard phrase, a *stochastic parrot*. The phrase originates with Bender, Gebru, McMillan-Major & Shmitchell 2021, "On the Dangers of Stochastic Parrots" (FAccT) **(not in-repo; characterization)**, an influential critique arguing that a language model is a system for haphazardly stitching together sequences of linguistic forms according to probabilistic information about how they combine, without reference to meaning. The label has become the field's shorthand for the eliminativist reading, and it is the foil both in-repo sources below define themselves against.
+
+The **rigorous** version of the eliminativist line — the one stated as an argument rather than a slogan — is Bender & Koller 2020 ([`source/bender-koller-2020-climbing`](../sources/bender-koller-2020-climbing.md)). Their claim is architectural and binary. Meaning is defined as a relation:
+
+> "We take meaning to be the relation M ⊆ E × I which contains pairs (e, i) of natural language expressions e and the communicative intents i they can be used to evoke." ([`source/bender-koller-2020-climbing`](../sources/bender-koller-2020-climbing.md), p. 5187)
+
+and the impossibility result follows from what the training signal contains:
+
+> "We argue that a model of natural language that is trained purely on form will not learn meaning: if the training data is only form, there is not sufficient signal to learn the relation M between that form and the non-linguistic intent of human language users, nor C between form and the standing meaning the linguistic system assigns to each form." ([`source/bender-koller-2020-climbing`](../sources/bender-koller-2020-climbing.md), p. 5187)
+
+compressed to the thesis "a system trained only on form has a priori no way to learn meaning" ([`source/bender-koller-2020-climbing`](../sources/bender-koller-2020-climbing.md), p. 5185, abstract).
+
+**This is the single most important point on the page for calibration.** Bender & Koller's argument is *in-principle*, about the training signal, **not a behavioral prediction.** It says the corpus lacks the signal that would fix M, and therefore that *no* text-only behavior, however systematic, can constitute meaning in their sense — because the grounding relation to communicative intent is simply absent from what the model ever saw. The octopus thought experiment makes the same point concretely: an octopus that learns to predict the text exchanged between two humans does not thereby understand it, because reconstructing the communicative intents "from the forms alone is hopeless" ([`source/bender-koller-2020-climbing`](../sources/bender-koller-2020-climbing.md), p. 5189). The form/meaning distinction and the grounding axis this rests on are developed at [`concept/grounding`](grounding.md) (binary pole) and [`concept/distributional-meaning`](distributional-meaning.md) (why distributional structure is "silent on reference and on truth"); the anchoring-mechanism question behind it is [`concept/symbol-grounding-problem`](symbol-grounding-problem.md).
+
+The consequence for this project is sharp and is the **in-principle gap** that recurs below: because the argument is about the signal and not the behavior, *behavioral evidence cannot refute it.* A model can pass every probe the project runs and a Bender-Koller eliminativist can consistently maintain that it still has no meaning, because passing a probe is more form, and form was never the thing in question. This is why the project does not claim to settle the existence question — and why, conversely, the project's positive findings must be read as straining a *different*, weaker eliminativist claim (see §2).
+
+### Deflationism: structure, but "just" distributional
+
+The deflationary pole concedes more than the eliminativist and asks for less than the inflationist. It grants that there is real structure in what the model does — neighbourhoods, gradients, systematic substitution behavior — but holds that this structure is *just* distributional: there is no need to posit reference, grounding, or understanding *beyond* the distributional null. Where eliminativism says "nothing there," deflationism says "something there, but nothing over and above co-occurrence structure."
+
+The distinctive deflationary move, in this project's terms, is to take the **distributional null as the whole story rather than as the hypothesis to beat.** The project's methodological spine ([`concept/distributional-meaning`](distributional-meaning.md)) is that a fluent model has distributional structure *for free* — co-occurrence neighbourhoods, surface regularities — so that structure is the null hypothesis any meaning-claim must be set against. The deflationist agrees the null describes the model accurately and then *stops*: the model is well-described by its distributional structure, and the explanatory work is done. Crucially, this is a coherent position *even after* a finding beats a particular operationalized shadow: the deflationist's reply is "the distributional story was simply richer than that one control measured," not "there is meaning here." Deflationism is therefore not refuted by a positive that beats a *named* shadow; it is refuted, if ever, only by an argument that the structure demands a non-distributional posit — and the project's behavioral evidence does not, by itself, supply that argument.
+
+This is the reading the project works hardest to give a fair run, because its entire discipline (the null-as-thing-to-beat, the human anchors, write-the-null) is built to let the deflationary story win wherever it can (§3).
+
+### The project's descriptivism: "describe, don't litigate"
+
+The project's own stance is neither eliminativist nor inflationary. It is descriptivist: refuse the yes/no, treat the phenomenon as a **real explanandum** whatever its ultimate metaphysics, and describe the structure that is actually there ([`PROJECT.md`](../../../PROJECT.md) §1). The wedge is to ask for *degrees* and *kinds* of structure — does this gradient beat that shadow, on this construction, for these models — rather than to adjudicate whether the structure "is meaning." On the existence-and-degree axis this page maps, descriptivism sits deliberately between the poles: it declines the eliminativist's confident *no* and the inflationist's confident *yes*, on the explicit grounds (developed in §3) that the yes/no is **under-determined by the behavioral evidence the project can obtain.**
+
+The closest in-repo ally of this stance is Lyre 2024 ([`source/lyre-2024-semantic-grounding`](../sources/lyre-2024-semantic-grounding.md)), whose gradualism converts the binary existence question into a degree question:
+
+> "semantic grounding isn't a yes-no matter, but rather a matter of degree. Intelligent or cognitive agents and systems can be more or less semantically grounded, they can speak or think more or less meaningfully." ([`source/lyre-2024-semantic-grounding`](../sources/lyre-2024-semantic-grounding.md), p. 10)
+
+and whose explicit verdict places LLMs between the two poles this page's spectrum is bounded by:
+
+> "Grounding proves to be a gradual affair with a three-dimensional distinction between functional, social and causal grounding. LLMs show basic evidence in all three dimensions. A strong argument is that LLMs develop world models. Hence, LLMs are neither stochastic parrots nor semantic zombies, but already understand the language they generate, at least in an elementary sense." ([`source/lyre-2024-semantic-grounding`](../sources/lyre-2024-semantic-grounding.md), p. 1, abstract)
+
+Two cautions travel with leaning on Lyre, both recorded on [`concept/grounding`](grounding.md): the paper is a non-peer-reviewed preprint, and its three-dimensional typology is Lyre's own framing, not a ratified consensus taxonomy. The "elementary sense" hedge is the load-bearing phrase — it is a *gradient* claim that the project can run with, not an endorsement of full human-like semantics. Lyre's "neither stochastic parrots nor semantic zombies" is precisely the refusal of *both* poles that descriptivism wants; note though that Lyre goes one step further than strict descriptivism by asserting the models *do* "understand … in an elementary sense," which is already a (modest) positive verdict, whereas the project tries to stop at the description.
+
+**Inflationary readings** (LLMs genuinely mean, in something close to the full human sense) are the fourth region of the axis and live off this page: the strongest in-repo version is conceptual-role inferentialism, developed at [`concept/inferential-meaning`](inferential-meaning.md). Its anti-deflationary thesis is Piantadosi & Hill 2022 ([`source/piantadosi-hill-2022-meaning-without-reference`](../sources/piantadosi-hill-2022-meaning-without-reference.md)):
+
+> "Contrary to claims that LLMs possess no meaning whatsoever, we argue that they likely capture important aspects of meaning, and moreover work in a way that approximates a compelling account of human cognition in which meaning arises from conceptual role." ([`source/piantadosi-hill-2022-meaning-without-reference`](../sources/piantadosi-hill-2022-meaning-without-reference.md), abstract)
+
+This page only *gestures* at the inflationary pole and links it out; the positive case is [`concept/inferential-meaning`](inferential-meaning.md)'s to make. What matters here is the shape of the full axis: **eliminativism (no) → deflationism (just distributional) → descriptivism (describe, don't litigate) → inflationism (genuinely mean)**, with the project planting itself at the third position and treating the first and fourth as the bounds it does not claim to adjudicate between.
+
+## Which findings bear which way
+
+The project's value on this axis is that it does not argue the spectrum abstractly — it has run probes, and each result has a *bearing*. The mapping below is the page's substantive contribution. The discipline throughout (and the reason the bearing is trustworthy) is in §3: the nulls are written, not hidden, and the positives had to beat a named shadow.
+
+### Findings that push toward deflation / the null
+
+These are first-class negatives — exactly the outcomes the deflationary reading predicts, and the project records them as results rather than burying them.
+
+- **The relational pilot is a first-class relational null** ([`result/relational-reference-game-v1`](../../findings/results/relational-reference-game-v1.md)). Homogeneous LLM dyads coordinate, coin a compressed convention, and a fresh matcher recovers it from the interaction record — but the recovery depends on the *content set* of prior turns, **not their ordered trajectory.** Giving the matcher the history lifts accuracy well above the coined term alone (history_lift `coined_only → ordered` = **+0.250 / +0.333 / +0.417** across the three models), so the test is interpretable; but destroying the order changes almost nothing (order gap `ordered − shuffled` = **+0.083 / +0.056 / +0.111**, and *no* model's clustered-bootstrap CI excludes 0; the coherent `reversed` arm is no better than random `shuffled`). This is **coordination, not constitution**: the deflationary `distributional` story — two next-token predictors converging from overlapping co-occurrence content — *survives* order-scrambling, which is exactly what a convention "computed within each agent and aggregated" rather than "constituted between them" would do. The candidate bottom rung of the relational second ladder ([`concept/relational-meaning`](relational-meaning.md)) is **not climbed**; the pilot characterizes the floor. *(Interpretation, not result: this is the relational analogue of the distributional-vs-constructional null that runs through the whole project — the eye-catching convergence is the floor, and only the discriminating contrast would climb. Bound, stated on the result page: at pilot scale the test detects only large consistent order effects, so a moderate real trajectory effect could read as this null.)*
+
+- **Perceptual grounding does not predict text-only sense-tracking** ([`result/lexical-perceptual-grounding-moderation-v1`](../../findings/results/lexical-perceptual-grounding-moderation-v1.md)). A word's perceptual groundedness (Lancaster sensorimotor norms) does **not** predict how well a text-only model tracks its graded senses against the human DURel signal — every Δρ in the pre-registered primary cells is negative, and the lone CI excluding zero runs the *wrong* way. Honest bound: the test is **underpowered** (≈21 lemmas/side), so the null means "no detectable moderation, or unresolvable," not "evidence against grounding." It lowers the prior that adding perceptual signal would change the sense behavior — a directionally deflationary datum about the *grounded* axis ([`concept/grounding`](grounding.md)).
+
+- **The image probe is a redundancy null** ([`result/multimodal-grounding-image-v1`](../../findings/results/multimodal-grounding-image-v1.md)). Showing the depicting picture does **not** improve the panel's separation of same-synset vs different-synset word pairs — because the **text-only panel already separates clear homonyms perfectly** (AUC = 1.000 in every cell). Perceptual input adds no sense signal the text distribution did not already supply, for clear homonyms. Bound (it cuts both ways): the test is *least sensitive exactly where it looks cleanest* — clear homonyms maximize both visual distinctness and text separability, so text saturates and the image has nothing to add; the cell where an image could still matter (fine polysemy / abstract senses, where text does not saturate) is the cell this probe does not contain. Still, for the senses tested, this is the deflationary "the text already gave it away" reading holding.
+
+Together these three say: where the project went looking for a *surplus* over the distributional/text-only story — a relational surplus from ordered interaction, a perceptual surplus from grounding — it did not find one. That is the deflationary reading's home turf, and the project's own findings furnish it honestly.
+
+### Findings that strain strict eliminativism
+
+These do **not** vindicate inflationism and they do **not** refute deflationism (see the precise statement below). What they strain is the *strict eliminativist* claim — "form without any meaning-relevant structure at all," the slogan reading of "stochastic parrot" — because they show behavior that beats the project's *named distributional shadow*.
+
+- **Graded word-sense tracking matches the human signal and survives the context-similarity control** ([`result/lexical-sense-gradience-v1`](../../findings/results/lexical-sense-gradience-v1.md)). Across 200 DWUG within-period usage pairs, every panel model's graded sense-relatedness rating is strongly rank-correlated with the human DURel median — Spearman **0.60–0.83**, in or above the human inter-annotator range (≈**0.69**) — and the monotonicity **survives partialling out the model's own topic-similarity rating** (the named distributional shadow: gemini 0.80 → 0.73 after the control, not collapse to zero). A pure "form-without-any-meaning-relevant-structure" reading is hard to square with behavior that tracks a human graded-sense signal *and* is not reducible to the most obvious distributional confound.
+
+- **The comparative correlative composes, beyond a single-clause heuristic** ([`result/comparative-correlative-covariation-v2`](../../findings/results/comparative-correlative-covariation-v2.md)). The panel deploys the construction's covariation meaning above matched controls, follows it against conflicting world knowledge (~100% NLI, 83–100% FC), and **composes** two-step covariation chains — including the diagnostic *negative × negative = positive* case that a flat single-clause "the-more → increase" heuristic gets wrong. This is the project's most robust constructional positive; the construction-contributed inference is computed, not pattern-matched off a surface template, which is more structure than a strict-parrot reading allows.
+
+**Be precise about what this strains and what it does not.** A deflationist is entirely unmoved by both findings: "still just distributional, only richer than the particular shadow you controlled for." That reply is consistent — beating a *named* operationalized null (topic similarity; single-clause frequency) does not exhaust the distributional hypothesis, and the project never claims it does. What the findings genuinely strain is the *strict eliminativist / slogan-parrot* claim that there is **no meaning-relevant structure at all** — because matching a human sense gradient that survives the context control, and composing a construction's inference past a single-clause heuristic, are structure that the bare "haphazard stitching of forms" picture does not predict. The honest statement is therefore directional and bounded: these results **push against strict eliminativism** and **leave deflationism standing**, and (per §3) they do not touch Bender & Koller's in-principle argument at all, which was never a claim about behavior.
+
+## The methodological point: why "describe, don't litigate" is the right stance
+
+The project's discipline is *built to give deflation every chance* — and this is exactly what makes its positives meaningful and its nulls honest. Three features of the method do the work, all developed on [`concept/distributional-meaning`](distributional-meaning.md) and the two theory pages ([`theory/constructional-meaning-in-llms`](../../findings/theory/constructional-meaning-in-llms.md), [`theory/lexicon-grammar-continuum`](../../findings/theory/lexicon-grammar-continuum.md)):
+
+1. **The distributional null is the thing to beat, not the thing to confirm.** A finding only counts as more-than-distributional if it survives a *named* shadow — context/topic similarity for words, n-gram/surface form for constructions. The deflationist's preferred hypothesis is installed as the incumbent that every positive must defeat. So when a positive *does* beat the shadow (the two findings in §2's second list), it is not a low bar cleared; it is the deflationary incumbent locally outscored on a specific operationalization.
+2. **Human anchors.** Empirical claims about LLM meaning are tied to existing human-generated evidence (DURel medians, inter-annotator ranges, the Hawkins entrainment curve) — the comparison is to a human yardstick, not to a model-internal hunch.
+3. **Write the null.** The nulls in §2's first list are first-class results, recorded with their bounds, not quietly dropped. A research program that wanted to inflate would not foreground a relational null, a grounding-moderation null, and a redundancy null.
+
+The payoff is an argument *for* descriptivism, and it runs through the **in-principle gap** the eliminativist pole established. Because Bender & Koller's argument is about the *training signal* and not the *behavior*, **no behavioral result the project can obtain settles the form-vs-meaning question.** A model that beats every shadow is, to a consistent Bender-Koller eliminativist, still producing form; a model that fails every probe is, to a consistent inflationist, merely badly elicited. The yes/no existence question is **under-determined** by the behavioral evidence available to a project like this one. Given that under-determination, the rational stance is not to *pick* a side of a question the evidence cannot decide, but to **describe** the structure the evidence *can* characterize — which gradients beat which shadows, for which phenomena, in which models — and to make the *bearing* of each finding on the existence question precise without pretending to resolve it. That is "describe, don't litigate": not agnosticism as evasion, but the calibrated response to a genuinely under-determined question.
+
+## Honest scope
+
+This page does **not** adjudicate eliminativism vs inflationism, and it claims no result of its own — it is a map of the *bearing* of findings produced elsewhere. Its modest contribution is exactly that map: to state, finding by finding, which way the project's evidence leans on the existence-and-degree axis, and to be scrupulous that the lean is directional and bounded — *toward* the deflationary/null reading where the surplus over the distributional story was sought and not found, *against* strict eliminativism where behavior beat a named shadow, and silent on Bender & Koller's in-principle claim throughout.
+
+Three hand-offs keep this page in its lane:
+
+- The **grounding floor** — whether text-only structure ever amounts to grounding in Bender & Koller's stronger sense, and the binary-vs-gradual framing of that question — is developed at [`concept/grounding`](grounding.md), with the anchoring-mechanism question at [`concept/symbol-grounding-problem`](symbol-grounding-problem.md). This page uses the grounding nulls; it does not theorize grounding.
+- The **holism angle** — whether meaning's interdependence cuts for or against the deflationary reading — is [`semantic-holism.md`](semantic-holism.md)'s.
+- The **inflationary positive case** — that conceptual role constitutes genuine meaning without reference — is [`concept/inferential-meaning`](inferential-meaning.md)'s; this page only marks where on the axis it sits.
+
+The positive theories of *what* meaning is, against which all of this is ultimately read, are the wave's other concept pages: [`truth-conditional-and-use-meaning.md`](truth-conditional-and-use-meaning.md), [`compositionality.md`](compositionality.md), [`frame-and-prototype-semantics.md`](frame-and-prototype-semantics.md), and [`semantic-holism.md`](semantic-holism.md). This page's job was only the prior, framing question — *is there anything there, and how much* — and its answer is the project's: there is describable structure, some of it beats the distributional shadow on specific tests and some of it does not, and whether that structure *is meaning* is a question the available behavioral evidence cannot, in principle, close.
