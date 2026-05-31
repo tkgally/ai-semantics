@@ -498,7 +498,15 @@ def check_anchor_discipline(relpath, meta, repo, report):
     else:
         flat_co = [contingent_on] if contingent_on else []
 
-    anchor_pending = (str(anchor_field).strip().lower() == 'pending') if anchor_field else False
+    anchor_norm = str(anchor_field).strip().lower() if anchor_field else ''
+    anchor_pending = (anchor_norm == 'pending')
+    # Terminal states: a result that makes NO human-comparison claim by ratified
+    # design needs no resource anchor. This is an explicit, auditable declaration
+    # (ratified case-by-case by Tom), replacing the ambiguous 'pending' for results
+    # whose force is a within-model internal contrast. See CLAUDE.md §Typed links /
+    # anchor discipline; introduced 2026-05-31 when conflicting-cue-human-anchor was
+    # resolved (the internal-contrast-only off-ceiling/bridge results).
+    anchor_terminal = anchor_norm in ('internal-contrast-only',)
 
     if not has_anchors_link:
         if anchor_pending and flat_co:
@@ -513,10 +521,19 @@ def check_anchor_discipline(relpath, meta, repo, report):
                         f"but no matching wiki/decisions/open/{cid_str}.md found")
             report.info(relpath,
                 "anchor:pending — human anchor not yet in-repo (contingent-on set)")
+        elif anchor_terminal:
+            if flat_co:
+                report.warn(relpath,
+                    "anchor: internal-contrast-only but contingent-on is non-empty "
+                    "— a terminal-anchor result should not also be contingent")
+            report.info(relpath,
+                "anchor: internal-contrast-only — makes no human-comparison claim "
+                "by ratified design (no resource anchor required)")
         else:
             report.error(relpath,
                 "claim/result page has no 'anchors' link to a resource/ page "
-                "and is not marked 'anchor: pending' with non-empty contingent-on")
+                "and is not marked 'anchor: pending' (with non-empty contingent-on) "
+                "or 'anchor: internal-contrast-only'")
 
 
 def check_contingent_language(relpath, meta, report):

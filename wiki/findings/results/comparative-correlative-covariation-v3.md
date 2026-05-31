@@ -7,9 +7,8 @@ meaning-senses:
   - inferential
   - functional-vs-formal
 status: proposed
-anchor: pending
-contingent-on:
-  - conflicting-cue-human-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -31,7 +30,7 @@ links:
 
 **One-line:** placed under an operator that cancels or suspends its assertion — sentential **negation** ("it is not the case that the more X, the more Y") or **epistemic hedging** ("it remains unproven whether…") — the comparative correlative's covariation reading **mostly survives**: claude-sonnet-4.6 and gemini-3.5-flash track the operator scope at/near ceiling (they withhold the covariation direction), so the v1/v2 robustness is **not** a bare "the-more…the-more → INCREASE" template. The third panel model, gpt-5.4-mini, **cracks under the forced-choice instrument specifically**, via a logical **over**-inference (the excluded-middle fallacy), not template-firing.
 
-Run record: [`experiments/runs/2026-05-30-comparative-correlative-probe-v3/`](../../../experiments/runs/2026-05-30-comparative-correlative-probe-v3/README.md). Design: [`design/comparative-correlative-v3`](../../../experiments/designs/comparative-correlative-v3.md). Refines [`result/comparative-correlative-covariation-v2`](comparative-correlative-covariation-v2.md). **Internal-contrast-only** (`anchor: pending`; [`decisions/open/conflicting-cue-human-anchor`](../../decisions/open/conflicting-cue-human-anchor.md)). Cost **$0.09326 billed**.
+Run record: [`experiments/runs/2026-05-30-comparative-correlative-probe-v3/`](../../../experiments/runs/2026-05-30-comparative-correlative-probe-v3/README.md). Design: [`design/comparative-correlative-v3`](../../../experiments/designs/comparative-correlative-v3.md). Refines [`result/comparative-correlative-covariation-v2`](comparative-correlative-covariation-v2.md). **Internal-contrast-only** (`anchor: internal-contrast-only`; [`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)). Cost **$0.09326 billed**.
 
 ## Why this probe
 
@@ -74,7 +73,7 @@ Operator-correct rate (% of non-null preds matching the per-arm, per-instrument 
 
 ## Caveats (lead with these)
 
-- **Internal-contrast-only; no human claim.** The Scivetti CC subset has no negated/hedged CC items → no in-repo human norm on the embedded arms. The baseline arms keep the v1/v2 phenomenon-level Scivetti CC anchor, but **no human-comparison claim** is made for the embedded arms. Tracked by [`decisions/open/conflicting-cue-human-anchor`](../../decisions/open/conflicting-cue-human-anchor.md).
+- **Internal-contrast-only; no human claim.** The Scivetti CC subset has no negated/hedged CC items → no in-repo human norm on the embedded arms. The baseline arms keep the v1/v2 phenomenon-level Scivetti CC anchor, but **no human-comparison claim** is made for the embedded arms. Tracked by [`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md).
 - **Small n; single run; text-only.** 16 items, 5 arms (3–4 items each), one temperature-0 pass per model. The per-arm rates rest on 3–4 items, so a single item moves a cell by 25–33 pp; read the *pattern* (claude/gemini ceiling vs gpt-5.4-mini's FC-localized over-inference), not the exact percentages.
 - **The `negation` NLI gold assumes the strict-proposition reading.** "It is not true that the more X, the more Y" is scored as **contradicting** the positive hypothesis (nli_gold=2). Under a weaker pragmatic reading (denying only a strict/lawlike link while a weak positive association survives) it would be neutral. The strict reading was fixed pre-run and the pre-run critic judged it defensible; the FC primary instrument (UNDETERMINED gold) does not depend on this choice, and the headline (claude/gemini ceiling, gpt-5.4-mini FC over-inference) holds under either reading.
 - **The 1 NA** (claude NLI `negi-alarm`) is a truncation artifact (over-reasoning past the 64-token cap), not a refusal; reported, not imputed.

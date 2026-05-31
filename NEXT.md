@@ -68,7 +68,7 @@ small/low-detail.
 
 ## Blocked / pending Tom (3 open decisions, all non-blocking)
 
-- [`decisions/open/multimodal-panel-and-grounding-theory`](wiki/decisions/open/multimodal-panel-and-grounding-theory.md)
+- [`decisions/resolved/multimodal-panel-and-grounding-theory`](wiki/decisions/resolved/multimodal-panel-and-grounding-theory.md)
   — **direction-setting, non-blocking.** Q1 panel (default A: existing 3-family, image first), Q2
   grounding theory (default A: Lyre gradual + `grounded.perceptual`, Harnad/Barsalou as foils), Q3
   anchor class (default A = the Lancaster $0 moderator, **now DONE → null**; **B = the THINGS image
@@ -77,7 +77,7 @@ small/low-detail.
   is enough.
 - [`decisions/open/aann-panel-logprob-blocker`](wiki/decisions/open/aann-panel-logprob-blocker.md) —
   AANN held (Tom's call); clean path needs local compute. Not blocking.
-- [`decisions/open/conflicting-cue-human-anchor`](wiki/decisions/open/conflicting-cue-human-anchor.md)
+- [`decisions/resolved/conflicting-cue-human-anchor`](wiki/decisions/resolved/conflicting-cue-human-anchor.md)
   — low-priority; pending human anchor for internal-contrast-only off-ceiling/bridge results. A
   one-liner closes it.
 

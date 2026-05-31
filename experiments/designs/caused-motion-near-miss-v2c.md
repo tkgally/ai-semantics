@@ -24,7 +24,7 @@ links:
 
 # Design — caused-motion probe v2c (near-miss form controls)
 
-**The near-miss form-control arm that [`design/argument-structure-coercion-v2`](argument-structure-coercion-v2.md) §3(d) specified and v2/v2b deferred** (v2b README: "the other deferred arms — near-miss form controls and multi-step composition — remain for a later run"). Governed by the same ratified [`decisions/resolved/cc-v2-difficulty-operationalization`](../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md) gate (report-the-rate, internal-contrast-only). **No new decision.** `anchor: pending`, tracked by [`decisions/open/conflicting-cue-human-anchor`](../../wiki/decisions/open/conflicting-cue-human-anchor.md).
+**The near-miss form-control arm that [`design/argument-structure-coercion-v2`](argument-structure-coercion-v2.md) §3(d) specified and v2/v2b deferred** (v2b README: "the other deferred arms — near-miss form controls and multi-step composition — remain for a later run"). Governed by the same ratified [`decisions/resolved/cc-v2-difficulty-operationalization`](../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md) gate (report-the-rate, internal-contrast-only). **No new decision.** `anchor: pending`, tracked by [`decisions/resolved/conflicting-cue-human-anchor`](../../wiki/decisions/resolved/conflicting-cue-human-anchor.md).
 
 ## Why
 

@@ -128,7 +128,7 @@ The lexical conjecture's anchor decision RESOLVED 2026-05-29 ([`decisions/resolv
 
 ### Multimodal / grounded anchors (for the new multimodal / physical-AI axis)
 
-Scouted 2026-05-30 ([`base/resources/multimodal-anchor-scouting.md`](resources/multimodal-anchor-scouting.md)); license + URL verified, data not yet fetched. The axis's anchor-class choice is surfaced in [`decisions/open/multimodal-panel-and-grounding-theory`](../decisions/open/multimodal-panel-and-grounding-theory.md) (Q3).
+Scouted 2026-05-30 ([`base/resources/multimodal-anchor-scouting.md`](resources/multimodal-anchor-scouting.md)); license + URL verified, data not yet fetched. The axis's anchor-class choice is surfaced in [`decisions/resolved/multimodal-panel-and-grounding-theory`](../decisions/resolved/multimodal-panel-and-grounding-theory.md) (Q3).
 
 - [P1] Lancaster Sensorimotor Norms (Lynott, Connell, Brysbaert, Brand & Carney 2020). OSF https://osf.io/7emr6/. CC BY 4.0 (verified). 39,707 words × 11 perceptual/action dimensions, ~3,500 raters.
   why: the cheapest first multimodal unit — a **text-side perceptual-grounding moderator on the existing DWUG lexical result** (does monotonicity strengthen for perceptually grounded words?). Joins the lexical program to the grounded axis; $0, no new probe; a plain data download.

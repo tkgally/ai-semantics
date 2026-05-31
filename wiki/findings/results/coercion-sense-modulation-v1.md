@@ -7,9 +7,8 @@ meaning-senses:
   - referential
   - inferential
 status: proposed
-anchor: pending
-contingent-on:
-  - conflicting-cue-human-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -29,7 +28,7 @@ links:
 
 **One-line:** reusing the **lexical** sense-relatedness instrument (validated against human DURel in [`result/lexical-sense-gradience-v1`](lexical-sense-gradience-v1.md)) on **grammatical** coercion stimuli, all three panel models rate a verb's meaning as **less related** between its bare use and its caused-motion / way-coerced use than between its bare use and a length-matched **non-coercing** elaboration — a positive "coercion sense-shift gap" in every model and both framings, with the coerced arm sitting **between** a same-sense control (high) and a genuine sense-shift `polysemy-anchor` (low). So **constructional coercion registers, partially, as a lexical sense shift** — the place the two wedges touch ([`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md)). **Caveat (decisive for the claim):** the design cannot separate this from the coerced sentences' added argument structure — see Caveats.
 
-Run record: [`experiments/runs/2026-05-30-coercion-sense-modulation-probe-v1/`](../../../experiments/runs/2026-05-30-coercion-sense-modulation-probe-v1/README.md). Design: [`design/coercion-as-sense-modulation-v1`](../../../experiments/designs/coercion-as-sense-modulation-v1.md). **Internal-contrast-only** (`anchor: pending`; [`decisions/open/conflicting-cue-human-anchor`](../../decisions/open/conflicting-cue-human-anchor.md)). Cost **$0.249 billed**.
+Run record: [`experiments/runs/2026-05-30-coercion-sense-modulation-probe-v1/`](../../../experiments/runs/2026-05-30-coercion-sense-modulation-probe-v1/README.md). Design: [`design/coercion-as-sense-modulation-v1`](../../../experiments/designs/coercion-as-sense-modulation-v1.md). **Internal-contrast-only** (`anchor: internal-contrast-only`; [`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)). Cost **$0.249 billed**.
 
 ## What was tested
 

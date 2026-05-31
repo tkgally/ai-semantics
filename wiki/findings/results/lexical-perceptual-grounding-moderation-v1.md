@@ -10,8 +10,7 @@ meaning-senses:
   - human-comparison
 status: proposed
 anchor: resource/lancaster-sensorimotor-norms
-contingent-on:
-  - multimodal-panel-and-grounding-theory
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -52,9 +51,8 @@ Run record: [`experiments/runs/2026-05-30-lancaster-perceptual-moderation-v1/`](
 refines [`result/lexical-sense-gradience-v1`](lexical-sense-gradience-v1.md). Anchors:
 [`resource/lancaster-sensorimotor-norms`](../../base/resources/lancaster-sensorimotor-norms.md)
 (moderator) + [`resource/dwug-usage-graphs`](../../base/resources/dwug-usage-graphs.md) (the
-graded human signal). Governed by [`decisions/open/multimodal-panel-and-grounding-theory`](../../decisions/open/multimodal-panel-and-grounding-theory.md)
-Q3 default A (run under the standing delegation; **non-blocking**) → `contingent-on` that decision;
-language stays provisional until Tom ratifies. **Cost $0.00** (re-analysis of frozen ratings). An
+graded human signal). Governed by [`decisions/resolved/multimodal-panel-and-grounding-theory`](../../decisions/resolved/multimodal-panel-and-grounding-theory.md),
+resolved 2026-05-31 (Q3 default A ratified; this prediction-1 null stands on its Lancaster + DWUG anchors). **Cost $0.00** (re-analysis of frozen ratings). An
 independent adversarial pre-write critic fixed a normalization blocker and forced the
 power/collinearity caveats **before** the run; an independent post-run verifier reproduced every
 figure exactly (see Provenance).

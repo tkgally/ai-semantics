@@ -67,7 +67,7 @@ Use only these relation strings in `links:` and in inline prose where typing mat
 - `anchors` — page A is the human resource grounding B (only `resource` → `claim/result`).
 - `supersedes` — page A replaces B (for theory revisions).
 
-A `claim` or `result` without at least one `anchors` link to a `resource` is a defect unless explicitly marked `anchor: pending` with a `wiki/decisions/open/` entry.
+A `claim` or `result` without at least one `anchors` link to a `resource` is a defect unless **either** (a) explicitly marked `anchor: pending` with a `wiki/decisions/open/` entry it names in `contingent-on:`, **or** (b) explicitly marked `anchor: internal-contrast-only` — a ratified terminal declaration that the result makes **no human-comparison claim** (its force is a within-model contrast), so no resource anchor is required. The terminal state (b) is for results Tom has ratified as internal-contrast-only (introduced 2026-05-31 with `decisions/resolved/conflicting-cue-human-anchor`); use it only after such ratification, never to dodge a genuine human-anchor obligation. `senselint.py` check 4 enforces all three states.
 
 ## Naming conventions
 

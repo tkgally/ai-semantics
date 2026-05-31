@@ -7,9 +7,8 @@ meaning-senses:
   - inferential
   - human-comparison
 status: proposed
-anchor: pending
-contingent-on:
-  - conflicting-cue-human-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -77,11 +76,11 @@ At matched task structure the **no-cue** construction reading is the discriminat
 ## Caveats (lead first)
 
 - **Small N, panel-as-subjects.** 12 verbs × 3 conditions × 3 models; rates carry wide per-cell uncertainty. Read as a direction-of-effect signal, not a precise magnitude.
-- **Internal-contrast-only; no human baseline on the cue arm.** The `transitive`–`conative` minimal pair keeps the v1 phenomenon-level conative anchor ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md) conative subset); the **cue arm has no in-repo human norm** and the contact-cued conative's "correct" reading is contestable for humans → **no human-level claim** on it (`anchor: pending`, [`decisions/open/conflicting-cue-human-anchor`](../../decisions/open/conflicting-cue-human-anchor.md)). No human label invented.
+- **Internal-contrast-only; no human baseline on the cue arm.** The `transitive`–`conative` minimal pair keeps the v1 phenomenon-level conative anchor ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md) conative subset); the **cue arm has no in-repo human norm** and the contact-cued conative's "correct" reading is contestable for humans → **no human-level claim** on it (`anchor: internal-contrast-only`, [`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)). No human label invented.
 - **Weak-contrast verbs flagged.** scratch/claw are surface-contact verbs whose "at" frame still implies grazing contact (pre-run critique); they may inflate conative_affirm slightly, *strengthening* (not weakening) the "suppression is hard" reading.
 - **Control arm wrinkle.** The non-alternating control verbs (touch/embrace/break/shatter) show gemini under-affirming even the *transitive* contact (ctrl-transitive 50%), so its control floor is noisy; the headline rests on the conative-class verbs, not the small control arm.
 - **"Strengthened," not "established."** The generalization is a modest direction-of-effect claim across three models on the project's own stimuli; it is not a human-anchored or large-N result.
 
 ## Bearing
 
-Refines [`result/conative-minimal-pair-divergence-v1`](conative-minimal-pair-divergence-v1.md) (adds the cue arm + the matched cross-direction comparison) and the add-direction [`result/argument-structure-coercion-v2`](argument-structure-coercion-v2.md) (supplies its missing cancel companion). Feeds [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md): the "license-easier-than-suppress" asymmetry is no longer flagged as confounded-with-ceiling. `contingent-on: conflicting-cue-human-anchor` (non-blocking). Cost **$0.30 billed** (the probe's token-estimate of $0.059 undercounts ~5× — the harness's rate card is stale; see [`config/budget.md`](../../../config/budget.md)); 0 NA / 264 calls.
+Refines [`result/conative-minimal-pair-divergence-v1`](conative-minimal-pair-divergence-v1.md) (adds the cue arm + the matched cross-direction comparison) and the add-direction [`result/argument-structure-coercion-v2`](argument-structure-coercion-v2.md) (supplies its missing cancel companion). Feeds [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md): the "license-easier-than-suppress" asymmetry is no longer flagged as confounded-with-ceiling. Internal-contrast-only by ratified decision ([`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md), 2026-05-31). Cost **$0.30 billed** (the probe's token-estimate of $0.059 undercounts ~5× — the harness's rate card is stale; see [`config/budget.md`](../../../config/budget.md)); 0 NA / 264 calls.

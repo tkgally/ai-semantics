@@ -7,9 +7,8 @@ meaning-senses:
   - referential
   - human-comparison
 status: proposed
-anchor: pending
-contingent-on:
-  - conflicting-cue-human-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -67,7 +66,7 @@ Across the **9 discriminating** (non-ceiling) results, mean ρ(lexical, construc
 - **n = 3 models.** This is the binding limit: a 3-point rank order supports only descriptive pattern-reading, never a significance claim. The "+0.71 mean ρ" is reported for transparency, not as evidence — three models give Spearman only a handful of possible values. Read the *orderings*, especially the bottom-rank consistency and the bridge inversion.
 - **Heterogeneous metrics.** The constructional numbers are gaps / rates / drops on different scales and instruments; only their *within-result rank* across the three models is used, which is the comparable quantity, but a rank ignores magnitude (several "MATCH" results have gemini and claude near-tied).
 - **Ceiling masks order.** Two results are ceiling-for-all and excluded; several "MATCH"/"DIVERGE" calls rest on small per-model differences near ceiling, so the MATCH/DIVERGE split (5/4) is itself fragile.
-- **No new data / no human anchor for the cross-axis claim itself.** Each tabulated number keeps its own source page's anchor (the lexical predictor is DWUG-anchored; several constructional rows are internal-contrast-only), but the *ordering* finding makes no new human-comparison claim — it is a model-internal meta-observation. `anchor: pending`; `contingent-on: conflicting-cue-human-anchor` (inherited from the v2 / bridge rows it tabulates).
+- **No new data / no human anchor for the cross-axis claim itself.** Each tabulated number keeps its own source page's anchor (the lexical predictor is DWUG-anchored; several constructional rows are internal-contrast-only), but the *ordering* finding makes no new human-comparison claim — it is a model-internal meta-observation. `anchor: internal-contrast-only` (as are the v2 / bridge rows it tabulates; conflicting-cue-human-anchor resolved 2026-05-31).
 - **Single run/date** per source result; behavioral, not representational.
 
 ## Where it sits

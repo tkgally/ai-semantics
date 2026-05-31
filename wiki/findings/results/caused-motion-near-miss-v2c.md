@@ -7,9 +7,8 @@ meaning-senses:
   - inferential
   - functional-vs-formal
 status: proposed
-anchor: pending
-contingent-on:
-  - conflicting-cue-human-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-05-30
 updated: 2026-05-30
 links:
@@ -29,7 +28,7 @@ links:
 
 **One-line:** holding the verb + object + displacement **outcome** roughly constant and varying only the **form**, the caused-motion construction's causation-of-motion inference is **genuinely keyed on the construction form**, not on a loose "verb happened + object ended up displaced → caused it" shape. All three models affirm the causation at **100%** for the construction but **withhold** it substantially for near-miss frames (coordinated *and* / temporal sequence), with the construction-vs-near-miss gap **62.5–100 pp under forced-choice**. This **tightens the v1 floor**. NLI is more permissive of the **Gricean** post-hoc causal reading (the *and*-frame is read as causation-entailing more often), so the gap is smaller there — a general instrument/form effect across all three models, not a single-model crack.
 
-Run record: [`experiments/runs/2026-05-30-caused-motion-near-miss-probe-v2c/`](../../../experiments/runs/2026-05-30-caused-motion-near-miss-probe-v2c/README.md). Design: [`design/caused-motion-near-miss-v2c`](../../../experiments/designs/caused-motion-near-miss-v2c.md). Refines [`result/caused-motion-minimal-pair-divergence-v1`](caused-motion-minimal-pair-divergence-v1.md). **Internal-contrast-only** (`anchor: pending`; [`decisions/open/conflicting-cue-human-anchor`](../../decisions/open/conflicting-cue-human-anchor.md)). Cost **$0.21213 billed**.
+Run record: [`experiments/runs/2026-05-30-caused-motion-near-miss-probe-v2c/`](../../../experiments/runs/2026-05-30-caused-motion-near-miss-probe-v2c/README.md). Design: [`design/caused-motion-near-miss-v2c`](../../../experiments/designs/caused-motion-near-miss-v2c.md). Refines [`result/caused-motion-minimal-pair-divergence-v1`](caused-motion-minimal-pair-divergence-v1.md). **Internal-contrast-only** (`anchor: internal-contrast-only`; [`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)). Cost **$0.21213 billed**.
 
 ## Why this probe
 
@@ -73,7 +72,7 @@ Affirm-causation rate (% YES/entailment; n=8 per cell, 0 NA):
 
 ## Caveats (lead with these)
 
-- **Internal-contrast-only; no human claim.** Scivetti has no coordinated/sequence near-miss items → no in-repo human norm on the near-miss arms. The `cm-construction` arm keeps the v1 phenomenon-level caused-motion anchor; **no human-comparison claim** is made for the near-miss arms. Tracked by [`decisions/open/conflicting-cue-human-anchor`](../../decisions/open/conflicting-cue-human-anchor.md).
+- **Internal-contrast-only; no human claim.** Scivetti has no coordinated/sequence near-miss items → no in-repo human norm on the near-miss arms. The `cm-construction` arm keeps the v1 phenomenon-level caused-motion anchor; **no human-comparison claim** is made for the near-miss arms. Tracked by [`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md).
 - **The near-miss "withhold" gold is the strict-entailment reading.** A Gricean reader genuinely infers causation from the *and*-frame, so a model that affirms `near-coord` is not simply wrong — which is why the headline is the within-scene **gap**, not accuracy against the near-miss gold. The result is the *contrast*, and it is robust under either reading of the near-miss.
 - **Small n; single run; text-only.** 8 scenes per form, one temperature-0 pass per model. Read the pattern (construction 100% vs near-miss withheld, FC sharper than NLI), not the exact per-cell percentages.
 - **Cost note.** Billed `usage.cost` ([`experiments/lib/openrouter.py`](../../../experiments/lib/openrouter.py)); gemini billed ~15× its rate-card estimate (reasoning tokens), reconfirming the budget-tracking fix.

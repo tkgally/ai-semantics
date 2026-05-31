@@ -24,7 +24,7 @@ links:
 
 # Design — coercion as lexical sense modulation (v1, the lexicon–grammar bridge)
 
-**The empirical bridge proposed by [`theory/lexicon-grammar-continuum`](../../wiki/findings/theory/lexicon-grammar-continuum.md).** It reuses the **lexical** sense-relatedness instrument built for [`result/lexical-sense-gradience-v1`](../../wiki/findings/results/lexical-sense-gradience-v1.md) on **constructional** (coercion) stimuli, so a result speaks to both wedges at once. Internal-contrast-only (`anchor: pending` — no in-repo human relatedness rating for constructed coercion pairs; same status as the off-ceiling constructional probes, tracked by [`decisions/open/conflicting-cue-human-anchor`](../../wiki/decisions/open/conflicting-cue-human-anchor.md)). Operationalization fixed under Tom's standing delegation (rigorous, no new gated decision — it reuses ratified instruments).
+**The empirical bridge proposed by [`theory/lexicon-grammar-continuum`](../../wiki/findings/theory/lexicon-grammar-continuum.md).** It reuses the **lexical** sense-relatedness instrument built for [`result/lexical-sense-gradience-v1`](../../wiki/findings/results/lexical-sense-gradience-v1.md) on **constructional** (coercion) stimuli, so a result speaks to both wedges at once. Internal-contrast-only (`anchor: pending` — no in-repo human relatedness rating for constructed coercion pairs; same status as the off-ceiling constructional probes, tracked by [`decisions/resolved/conflicting-cue-human-anchor`](../../wiki/decisions/resolved/conflicting-cue-human-anchor.md)). Operationalization fixed under Tom's standing delegation (rigorous, no new gated decision — it reuses ratified instruments).
 
 ## The bet
 
