@@ -102,8 +102,19 @@ def perm_test(items, fr, obs_auc, obs_floor, rng):
             round(ge_floor / valid_floor, 4) if valid_floor else None)
 
 
+def _ci(diffs):
+    if not diffs:
+        return None
+    diffs.sort()
+    return [round(diffs[int(0.025 * len(diffs))], 3), round(diffs[int(0.975 * len(diffs))], 3)]
+
+
 def boot_auc_diff(items, fr, rng):
-    """Bootstrap CI for AUC_homonym - AUC_polyseme by resampling items within stratum/gold."""
+    """Item-level bootstrap CI for AUC_homonym - AUC_polyseme (resample items within
+    stratum/gold). NOTE (pre-run reviewer S4): this is CLUSTERING-NAIVE — it ignores the
+    within-lemma correlation, so with few lemmas it is anti-conservative (too narrow).
+    Reported as descriptive only; the whole-lemma permutation p is the inferential yardstick.
+    The clustering-aware cluster_boot_auc_diff() below is the honest CI."""
     pools = defaultdict(list)
     for it in items:
         pools[(it["stratum"], it["gold"])].append(it["r"])
@@ -116,12 +127,29 @@ def boot_auc_diff(items, fr, rng):
         ap = auc(rs.get(("POLYSEME", "T"), []), rs.get(("POLYSEME", "F"), []))
         if ah is not None and ap is not None:
             diffs.append(ah - ap)
-    if not diffs:
-        return None
-    diffs.sort()
-    lo = diffs[int(0.025 * len(diffs))]
-    hi = diffs[int(0.975 * len(diffs))]
-    return [round(lo, 3), round(hi, 3)]
+    return _ci(diffs)
+
+
+def cluster_boot_auc_diff(items, fr, rng):
+    """Clustering-AWARE bootstrap CI (S4 fix): resample whole LEMMAS with replacement within
+    each stratum (preserving each lemma's item cluster), then recompute AUC_H - AUC_P. This is
+    the honest CI given the homonym AUC rests on few lemmas; wider than the item bootstrap."""
+    by_lemma = defaultdict(list)
+    strat_of = {}
+    for it in items:
+        by_lemma[it["lemma"]].append(it)
+        strat_of[it["lemma"]] = it["stratum"]
+    H = [l for l in by_lemma if strat_of[l] == "HOMONYM"]
+    P = [l for l in by_lemma if strat_of[l] == "POLYSEME"]
+    diffs = []
+    for _ in range(N_BOOT):
+        samp = ([H[rng.randrange(len(H))] for _ in range(len(H))]
+                + [P[rng.randrange(len(P))] for _ in range(len(P))])
+        ritems = [it for l in samp for it in by_lemma[l]]
+        _, hd, _f = stratum_stats(ritems, fr)
+        if hd is not None:
+            diffs.append(hd)
+    return _ci(diffs)
 
 
 def main():
@@ -160,17 +188,28 @@ def main():
             stats, hd_auc, hd_floor = stratum_stats(items, fr)
             p_auc, p_floor = perm_test(items, fr, hd_auc, hd_floor, rng)
             boot = boot_auc_diff(items, fr, rng)
-            # low-overlap matched subset
+            cboot = cluster_boot_auc_diff(items, fr, rng)
+            # low-overlap matched subset (NOTE S1: overlap is ~0 for almost all WiC items,
+            # so this subset is ~the full sample — the control is uninformative, not "passed")
             low = [it for it in items if overlaps[it["item_id"]] <= ov_median]
             _, hd_auc_low, hd_floor_low = stratum_stats(low, fr)
+            # per-lemma F-item mean r (S3: shows how few lemmas carry the homonym signal)
+            per_lemma_F = {}
+            for it in items:
+                if it["gold"] == "F":
+                    per_lemma_F.setdefault((it["stratum"], it["lemma"]), []).append(it["r"])
             m[fr] = {"n_used": len(items), "by_stratum": stats,
                      "AUC_diff(H-P)": (round(hd_auc, 3) if hd_auc is not None else None),
                      "floorfrac_diff(H-P)": (round(hd_floor, 3) if hd_floor is not None else None),
                      "perm_p_AUC": p_auc, "perm_p_floor": p_floor,
-                     "boot95_AUC_diff": boot,
+                     "boot95_AUC_diff_itemnaive": boot,
+                     "boot95_AUC_diff_clustered": cboot,
                      "lowoverlap_AUC_diff(H-P)": (round(hd_auc_low, 3)
                                                   if hd_auc_low is not None else None),
-                     "lowoverlap_n": len(low)}
+                     "lowoverlap_n": len(low),
+                     "homonym_F_mean_by_lemma": {l: round(mean(v), 2)
+                                                 for (s, l), v in sorted(per_lemma_F.items())
+                                                 if s == "HOMONYM"}}
         out["per_model"][slot] = m
 
     json.dump(out, open(os.path.join(RAW, "results.json"), "w"), indent=1)
@@ -187,7 +226,8 @@ def main():
             h, p = c["by_stratum"]["HOMONYM"], c["by_stratum"]["POLYSEME"]
             print(f"  {fr:5s} n={c['n_used']:3d}  "
                   f"AUC_H={h['auc']}(T{h['nT']}/F{h['nF']}) AUC_P={p['auc']}(T{p['nT']}/F{p['nF']})  "
-                  f"AUCdiff={c['AUC_diff(H-P)']} permp={c['perm_p_AUC']} boot95={c['boot95_AUC_diff']}")
+                  f"AUCdiff={c['AUC_diff(H-P)']} permp={c['perm_p_AUC']} "
+                  f"clusterboot95={c['boot95_AUC_diff_clustered']}")
             print(f"        floorF_H={h['floorfrac_F']} floorF_P={p['floorfrac_F']} "
                   f"floordiff={c['floorfrac_diff(H-P)']} permp={c['perm_p_floor']}  "
                   f"meanF_H={h['mean_F']} meanF_P={p['mean_F']}  "
