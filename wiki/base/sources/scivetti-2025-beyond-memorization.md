@@ -50,7 +50,7 @@ Relation to this project: this is the most directly on-target recent empirical i
 
 ## Key passages
 
-Abstract quoted verbatim from the **published ACL Anthology page** (https://aclanthology.org/2025.ijcnlp-long.65/, fetched 2026-05-29, HTML). Body section quotes read verbatim from the **arXiv v1 HTML** rendering (https://arxiv.org/html/2501.04661v1, fetched 2026-05-29); sections cited by heading/number as printed in v1.
+Abstract quoted verbatim from the **published ACL Anthology page** (https://aclanthology.org/2025.ijcnlp-long.65/, fetched 2026-05-29, HTML). Body section quotes read verbatim from the **arXiv v1 HTML** rendering (https://arxiv.org/html/2501.04661v1, fetched 2026-05-29; re-verified character-for-character 2026-05-31); sections cited by heading/number as printed in v1. The three v1 body quotes below were re-located in v1 on re-verification at §2.1 Construction Grammars, §3 Theory-Informed Experimental Design, and §9 Conclusions and Future Work respectively (these passages do **not** appear under the same numbering in v2 — see the version note below).
 
 **Abstract (verbatim, published ACL version) — design and headline result:**
 
@@ -70,7 +70,7 @@ Abstract quoted verbatim from the **published ACL Anthology page** (https://acla
 
 ## Experimental results (added 2026-05-29, arXiv v2 HTML)
 
-Results-level quotes read and verified character-for-character against the **arXiv v2 HTML** (`https://arxiv.org/html/2501.04661v2`, fetched 2026-05-29, raw HTML cross-checked). Sections cited by heading/number as printed in v2. These complement — and do not duplicate — the dataset-structure facts (435/99 triples, the 8-construction inventory, the 3-way label scheme, models, example items, baselines) that live on the resource page [`resource/scivetti-2025-cxnli-dataset`](../resources/scivetti-2025-cxnli-dataset.md). Note that in v2 the conclusions are numbered **§8** (the existing v1 quote above is from "§9 Conclusions" under the v1 numbering); the two passages differ in wording across versions, so both are retained as version-labelled.
+Results-level quotes read and verified character-for-character against the **arXiv v2 HTML** (`https://arxiv.org/html/2501.04661v2`, fetched 2026-05-29; re-verified 2026-05-31, the §4.3 / §5.3 / §8 passages below all re-confirmed verbatim). Sections cited by heading/number as printed in v2. These complement — and do not duplicate — the dataset-structure facts (435/99 triples, the 8-construction inventory, the 3-way label scheme, models, example items, baselines) that live on the resource page [`resource/scivetti-2025-cxnli-dataset`](../resources/scivetti-2025-cxnli-dataset.md). Note that in v2 the conclusions are numbered **§8** (the existing v1 quote above is from "§9 Conclusions" under the v1 numbering); the two passages differ in wording across versions, so both are retained as version-labelled.
 
 **§4.3 Empirical Evaluation and Analysis (verbatim, arXiv v2 HTML) — Experiment 1 (CxNLI) result: models do well on the intuitive-but-rarer task:**
 

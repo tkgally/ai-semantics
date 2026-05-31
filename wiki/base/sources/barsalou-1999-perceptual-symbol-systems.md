@@ -17,7 +17,7 @@ meaning-senses:
   - grounded.causal
 status: received
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-05-31
 pdf-pages: 84
 links:
   - rel: supports
@@ -34,7 +34,7 @@ Target article with peer commentary in *Behavioral and Brain Sciences* 22 (1999)
 
 Note on page range: Cambridge Core lists pp. 577–660; this includes the peer commentary section. The target article alone runs approximately pp. 577–609. The distinction matters for locating quotes.
 
-**Provenance.** The Cambridge Core abstract was fetched and confirmed verbatim 2026-05-30. The author-lab PDF (barsaloulab.org) yielded no extractable text via automated tools. Key body passages were cross-checked against multiple citing sources (Jim Davies summary, Omar Meriwani summary, Cambridge Core abstract) and are noted below with their provenance level. Tom has library access and should verify body page numbers against the published text.
+**Provenance.** The Cambridge Core abstract was fetched and confirmed verbatim 2026-05-30. Two separate primary-PDF fetch attempts (author-lab copy at barsaloulab.org, and the Rutgers-hosted `Barsalou_BBS1999.pdf`) both yielded **no extractable text** — the PDFs are scanned/CCITT-image documents with no text layer, and no local OCR tool was available (re-attempted 2026-05-31). So **no primary OA copy with verifiable text was reached.** Key body passages remain cross-checked only against secondary citing sources (Jim Davies summary, Omar Meriwani summary) plus the verbatim Cambridge Core abstract, and are noted below with their provenance level. The body quotes are therefore **secondary-source / approximately verbatim** and are NOT upgraded. Tom has library access and should verify body page numbers and exact wording against the published text.
 
 ## Summary
 

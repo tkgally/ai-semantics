@@ -11,7 +11,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-05-31
 links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
@@ -20,9 +20,17 @@ links:
   - rel: depends-on
     target: result/lexical-polysemy-homonymy-v2
   - rel: depends-on
+    target: result/lexical-polysemy-homonymy-v3
+  - rel: depends-on
     target: result/cross-axis-lexical-constructional-ordering-v1
   - rel: depends-on
     target: result/coercion-sense-modulation-v1
+  - rel: depends-on
+    target: result/coercion-sense-modulation-v2
+  - rel: depends-on
+    target: result/lexical-perceptual-grounding-moderation-v1
+  - rel: depends-on
+    target: result/multimodal-grounding-image-v1
   - rel: depends-on
     target: result/comparative-correlative-covariation-v1
   - rel: depends-on
@@ -65,7 +73,7 @@ The two open-questions that name the shadow are explicitly parallel — [`open-q
 - **Grammatical end:** the comparative correlative deploys its covariation inference above matched controls, survives conflicting world knowledge and operator embedding, and composes ([`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md) → v2 → v3). The shadow (form/frequency) does not explain it.
 - **Lexical end:** the panel's graded sense-relatedness rating tracks the human DURel median (Spearman 0.60–0.83, in/above the human inter-annotator range) and **survives partialling out the model's own topic-similarity** ([`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md)). The shadow (context similarity) does not explain it either.
 
-This is the first time the project can state its central finding as a **cline-spanning** one rather than a grammar-only one: *current decoders track a graded form–meaning signal that beats the distributional null at both the word grain and the construction grain* — with the same caveats on both (behavioral not representational; single runs; modest N; the hard *negative* directions — divergent-form generalization on grammar, the untested polysemy/homonymy split on lexis — still open).
+This is the first time the project can state its central finding as a **cline-spanning** one rather than a grammar-only one: *current decoders track a graded form–meaning signal that beats the distributional null at both the word grain and the construction grain* — with the same caveats on both (behavioral not representational; single runs; modest N; the hard *negative* directions — divergent-form generalization on grammar, and on lexis the **polysemy/homonymy discreteness split**, now tested on a homonymy-enriched WiC anchor and returning a **powered null** ([`result/lexical-polysemy-homonymy-v3`](../results/lexical-polysemy-homonymy-v3.md): no separate discrete regime over plain graded distance), so the *graded* signal stands but the *discrete-regime* bet does not).
 
 ## The empirical bridge: coercion is where the two grains touch
 
@@ -87,8 +95,8 @@ this repo already catalogs that tie meaning to the world — Bender & Koller / L
 ([`concept/grounding`](../../base/concepts/grounding.md)), Harnad's symbol grounding
 ([`concept/symbol-grounding-problem`](../../base/concepts/symbol-grounding-problem.md)), Barsalou's
 perceptual symbols ([`concept/embodied-cognition`](../../base/concepts/embodied-cognition.md)) —
-positioned to give the `grounded.perceptual` tag its first empirical exercise *if a result lands*
-(nothing has run yet).
+positioned to give the `grounded.perceptual` tag its first empirical exercise — which it now has, as
+**two negatives** (below).
 
 The axis is **designed to join this continuum, not sit beside it.** The first multimodal conjecture,
 [`conjecture/multimodal-lexical-grounding-divergence`](../conjectures/multimodal-lexical-grounding-divergence.md),
@@ -100,8 +108,25 @@ of the cline (graded word-sense relatedness, now with vs without a picture) and,
 deliberately conditional: the third axis joins the continuum **only to the extent the evidence
 supports it** — a perceptual-redundancy null (the image changes nothing) would say grounding adds no
 sense signal these text models lack, which is a first-class negative, not a failure to integrate.
-Nothing here is yet tested; this section fixes the *target*, and the conjecture's prediction 1 (a
-$0 Lancaster-norms moderation of the existing lexical result) is the cheapest first contact.
+
+**As of 2026-05-31 the grounding axis stands at two negatives, both for *clear homonyms*.** The
+cheapest first contact, prediction 1 — a $0 Lancaster-norms moderation of the existing lexical
+result — **ran** → [`result/lexical-perceptual-grounding-moderation-v1`](../results/lexical-perceptual-grounding-moderation-v1.md):
+a word's perceptual groundedness does **not** predict how well a text-only model tracks its graded
+senses (Δρ negative or null in every primary cell; the lone CI excluding zero runs the *wrong* way;
+underpowered, so a bounded null, not a falsification). Then the first **image-input** probe
+(predictions 2–3) **ran** → [`result/multimodal-grounding-image-v1`](../results/multimodal-grounding-image-v1.md):
+showing the depicting picture does **not** improve the panel's separation of same- vs different-synset
+pairs, because the **text-only panel already separates clear homonyms perfectly** (AUC = 1.000 in
+every cell) — the predicted redundancy null in its strong form, with one small gpt-5.4-mini
+continuous-scale positive that survives the surface-distraction control but cannot be read as
+grounding. The honest bound runs through both: the test is **least sensitive exactly where it looks
+cleanest** — clear homonyms maximize both visual distinctness and text separability, so text
+saturates and the image has nothing to add. These are **bounded negatives for clear homonyms**, not a
+verdict on grounding: the cell where an image could still matter — **fine polysemy / abstract senses
+where text does not saturate** — is exactly the cell neither probe contains, and stays open. So the
+third axis is, so far, integrated as a pair of first-class negatives: on these models, for clear
+homonyms, perceptual input adds no sense signal the text distribution does not already supply.
 
 ## What this page predicts and forbids
 
@@ -113,4 +138,11 @@ $0 Lancaster-norms moderation of the existing lexical result) is the cheapest fi
 
 ## Status and revision hook
 
-`status: draft`; `contingent-on: []`. It reorganizes existing results under one frame; the one bridge probe it proposed has now run ([`result/coercion-sense-modulation-v1`](../results/coercion-sense-modulation-v1.md)) and confirmed its direction (with the surface-confound bound). Two further 2026-05-30 re-analyses sharpened it: the **lexical v2** ([`result/lexical-polysemy-homonymy-v2`](../results/lexical-polysemy-homonymy-v2.md)) attempted the lexical "hard direction" (polysemy-vs-homonymy) and returned a **null/not-established** — DWUG EN holds only 3 clean homonym lemmas, the predicted discreteness regime is not separable from monotonicity-plus-selection, and every test is non-significant; so the lexical hard direction is **not yet in hand** (its clean test needs a homonymy-enriched v3). The **cross-axis model-ordering** check ([`result/cross-axis-lexical-constructional-ordering-v1`](../results/cross-axis-lexical-constructional-ordering-v1.md)) settled the ordering watch (failure transfers, strength does not, the bridge inverts — see the Update box above). Open revision triggers: a v2 bridge with a non-coercing transitive control (to settle the sense-vs-surface question); a **lexical v3** with a homonymy-enriched anchor (to actually test clause (b)); and a relational pilot. The net for the continuum thesis: it is right that the two wedges are **one target cline** (a positive that beats the distributional shadow on both ends), but wrong if read as "one competence" — the model orderings dissociate; and the lexical *hard* direction (homonymy discreteness) is, unlike the grammatical hard direction, **not yet even testable on the current anchor**.
+`status: draft`; `contingent-on: []`. It reorganizes existing results under one frame; the probes and re-analyses it proposed or pointed to have since run, and the triggers it once listed as open are now mostly discharged:
+
+- **The bridge probe** ([`result/coercion-sense-modulation-v1`](../results/coercion-sense-modulation-v1.md)) confirmed its direction with a surface-confound bound, and its proposed **v2 with a non-coercing transitive control** then **ran** ([`result/coercion-sense-modulation-v2`](../results/coercion-sense-modulation-v2.md)): the gap **partially de-confounds** — a small, **fine-scale-only, fragile** sense-specific residual survives a structure-matched conventional-transitive control (isolation gap cont +13.6/+6.1/+1.9, ≈0 on the coarse scale, carried by 3–4 of 8 verbs) **alongside a real surface component**. So v1's drop was a *mix* (mostly sense for claude, mostly surface for gemini); the bridge holds but is fainter than v1's raw gap implied. (See the bridge section above.)
+- **The lexical hard direction.** The **lexical v2** ([`result/lexical-polysemy-homonymy-v2`](../results/lexical-polysemy-homonymy-v2.md)) found the polysemy-vs-homonymy discreteness split **untestable at the DWUG anchor** (only 3 clean homonym lemmas) and pointed to a homonymy-enriched v3. That **v3 ran** ([`result/lexical-polysemy-homonymy-v3`](../results/lexical-polysemy-homonymy-v3.md)) on a homonymy-enriched WiC noun subset and returned a **powered null**: the panel separates WiC same/different equally well for homonyms and polysemes (AUC diff ≈ 0 in all six cells), and the lone positive (homonym different-senses floored more) **cannot be separated from plain graded distance** — it is lemma-concentrated, scale-quirk-amplified, and CI-fragile. So clause (b)'s distinctive **discrete-regime** bet is **not established** (now *powered*, not merely untestable), while the central bet (the graded signal, clauses a+c) still stands.
+- **The cross-axis model-ordering** check ([`result/cross-axis-lexical-constructional-ordering-v1`](../results/cross-axis-lexical-constructional-ordering-v1.md)) settled the ordering watch (failure transfers, strength does not, the bridge inverts — see the Update box above).
+- **The grounding axis** opened as two negatives for clear homonyms (prediction-1 moderation null + image-probe redundancy null — see the third-axis section above).
+
+The remaining open trigger is a **relational pilot**. The net for the continuum thesis: it is right that the two wedges are **one target cline** (a positive that beats the distributional shadow on both ends), but wrong if read as "one competence" — the model orderings dissociate. The lexical *hard* direction (homonymy discreteness) has now been **tested on a homonymy-enriched anchor → not established as a separate discreteness regime**; and the discreteness/graded-distance confound is **intrinsic to a lemma-level WiC contrast** (a clean test would need pair-level senses holding human graded distance constant), so unlike the grammatical hard direction it remains hard to isolate even with a purpose-built anchor.

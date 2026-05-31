@@ -16,7 +16,7 @@ meaning-senses:
   - human-comparison
 status: received
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-05-31
 pdf-pages: "ACL Anthology 2023.eacl-main.20 (PDF, pp. 265–273) for title/venue/abstract; abstract verbatim from the ACL Anthology page and arXiv 2301.12564; body section quotes read from the ar5iv HTML rendering (ar5iv.labs.arxiv.org/html/2301.12564), cited by section name, no page numbers in HTML"
 links:
   - rel: supports
@@ -87,4 +87,4 @@ The abstract is quoted verbatim from the ACL Anthology page (https://aclantholog
 
 ## Status in wanted.md
 
-`received`: abstract verbatim from the ACL Anthology page (cross-checked against arXiv 2301.12564), plus three section-level body quotes (Introduction, Methods, Conclusion) verbatim from the ar5iv HTML, all fetched and verified character-for-character on 2026-05-29. Venue, page range (265–273), and DOI confirmed from the ACL Anthology. The dataset/stimuli are catalogued separately at [`resource/mahowald-2023-aann-stimuli`](../resources/mahowald-2023-aann-stimuli.md). The camera-ready PDF (pp. 265–273) remains available for page-level provenance on body passages if a finding needs it.
+`received`: abstract verbatim from the ACL Anthology page (cross-checked against arXiv 2301.12564), plus three section-level body quotes (Introduction, Methods, Conclusion) verbatim from the ar5iv HTML, all fetched and verified character-for-character on 2026-05-29 and re-confirmed 2026-05-31 (CoLA validation 84% / MCC 0.63, the GPT-3 text-davinci-002 question, and the form-vs-meaning conclusion all matched character-for-character on re-fetch). Venue, page range (265–273), and DOI confirmed from the ACL Anthology. The dataset/stimuli are catalogued separately at [`resource/mahowald-2023-aann-stimuli`](../resources/mahowald-2023-aann-stimuli.md). The camera-ready PDF (pp. 265–273) remains available for page-level provenance on body passages if a finding needs it.
