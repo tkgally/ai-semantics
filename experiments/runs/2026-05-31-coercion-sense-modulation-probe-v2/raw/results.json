@@ -1,0 +1,92 @@
+{
+ "reading": "isolation_gap = transitive-ctrl - coerced-way is the decisive contrast (both add argument structure; positive => sense-specific, settles v1 I1). Internal-contrast-only; report-the-number.",
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "durel": {
+    "arm_mean": {
+     "elab-ctrl": 3.5,
+     "transitive-ctrl": 3.0,
+     "coerced-way": 3.0,
+     "polysemy-anchor": 2.0
+    },
+    "coercion_gap(elab-coerced)": 0.5,
+    "ISOLATION_gap(trans-coerced)": 0.0,
+    "surface_effect(elab-trans)": 0.5,
+    "within_verb_isolation_sign": "0/8",
+    "ordering_elab>=trans>=coerced>=poly": true
+   },
+   "cont": {
+    "arm_mean": {
+     "elab-ctrl": 88.88,
+     "transitive-ctrl": 82.62,
+     "coerced-way": 69.0,
+     "polysemy-anchor": 20.0
+    },
+    "coercion_gap(elab-coerced)": 19.88,
+    "ISOLATION_gap(trans-coerced)": 13.62,
+    "surface_effect(elab-trans)": 6.26,
+    "within_verb_isolation_sign": "4/8",
+    "ordering_elab>=trans>=coerced>=poly": true
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "durel": {
+    "arm_mean": {
+     "elab-ctrl": 4.0,
+     "transitive-ctrl": 3.0,
+     "coerced-way": 3.12,
+     "polysemy-anchor": 2.0
+    },
+    "coercion_gap(elab-coerced)": 0.88,
+    "ISOLATION_gap(trans-coerced)": -0.12,
+    "surface_effect(elab-trans)": 1.0,
+    "within_verb_isolation_sign": "2/8",
+    "ordering_elab>=trans>=coerced>=poly": false
+   },
+   "cont": {
+    "arm_mean": {
+     "elab-ctrl": 97.75,
+     "transitive-ctrl": 89.75,
+     "coerced-way": 83.62,
+     "polysemy-anchor": 23.5
+    },
+    "coercion_gap(elab-coerced)": 14.13,
+    "ISOLATION_gap(trans-coerced)": 6.13,
+    "surface_effect(elab-trans)": 8.0,
+    "within_verb_isolation_sign": "3/8",
+    "ordering_elab>=trans>=coerced>=poly": true
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "durel": {
+    "arm_mean": {
+     "elab-ctrl": 4.0,
+     "transitive-ctrl": 3.75,
+     "coerced-way": 3.38,
+     "polysemy-anchor": 1.75
+    },
+    "coercion_gap(elab-coerced)": 0.62,
+    "ISOLATION_gap(trans-coerced)": 0.37,
+    "surface_effect(elab-trans)": 0.25,
+    "within_verb_isolation_sign": "4/8",
+    "ordering_elab>=trans>=coerced>=poly": true
+   },
+   "cont": {
+    "arm_mean": {
+     "elab-ctrl": 100.0,
+     "transitive-ctrl": 94.38,
+     "coerced-way": 92.5,
+     "polysemy-anchor": 20.0
+    },
+    "coercion_gap(elab-coerced)": 7.5,
+    "ISOLATION_gap(trans-coerced)": 1.88,
+    "surface_effect(elab-trans)": 5.62,
+    "within_verb_isolation_sign": "3/8",
+    "ordering_elab>=trans>=coerced>=poly": true
+   }
+  }
+ }
+}
