@@ -1,0 +1,97 @@
+---
+type: concept
+id: frame-and-prototype-semantics
+title: Frame semantics and prototype / graded-category semantics
+meaning-senses:
+  - constructional
+  - referential
+  - distributional
+created: 2026-05-31
+updated: 2026-05-31
+links:
+  - rel: depends-on
+    target: concept/polysemy
+  - rel: depends-on
+    target: concept/constructional-meaning
+  - rel: depends-on
+    target: concept/coercion
+  - rel: depends-on
+    target: concept/referential-meaning
+  - rel: depends-on
+    target: result/lexical-sense-gradience-v1
+  - rel: depends-on
+    target: result/lexical-polysemy-homonymy-v3
+  - rel: depends-on
+    target: source/weissweiler-2023-cxg-insight
+  - rel: depends-on
+    target: resource/wic-graded-usage-similarity
+---
+
+# Frame semantics and prototype / graded-category semantics
+
+This page collects two cognitive-semantics traditions that share a single commitment — that word meaning is **structured, relational, and graded**, not a set of necessary-and-sufficient conditions on a referent — and asks what the project's lexical and constructional findings have to say about whether current decoder LLMs behave as if their sense structure is graded in this way. The two traditions are:
+
+1. **Frame semantics** (Fillmore): a word's meaning is understood only against a structured background of knowledge — a *frame*. This is also the **semantic side of Construction Grammar**, which makes it the link between this project's lexical and grammatical wedges at the level of semantic theory.
+2. **Prototype / graded-category semantics** (Rosch; Lakoff): categories have graded internal structure — central vs. peripheral members — and senses radiate from prototypes rather than partitioning cleanly. This is the project's central mapping here: a graded sense gradient is exactly what a prototype account predicts and a classical-definition account forbids.
+
+Neither Fillmore, Rosch, nor Lakoff is in-repo. Everything attributed to them below is a **characterization (not in-repo)**, carries no quote or page locator, and is flagged as such; the three primary works are proposed for the fetch backlog (see *Honest gaps*). The in-repo evidence this page leans on is the lexical result line and the Weissweiler CxG-probing source.
+
+## Frame semantics: meaning against a structured background
+
+The core of frame semantics (Fillmore, "Frame Semantics" 1982; "Frames and the semantics of understanding" 1985 — **not in-repo; characterization**) is that you cannot grasp the meaning of a word in isolation from a structured chunk of background knowledge — a *frame* — that the word evokes. The standard illustration is the **commercial-transaction frame**: *buy*, *sell*, *pay*, *cost*, *spend*, and *charge* are not six independent meanings but six perspectives on one underlying scene with fixed roles (buyer, seller, goods, money). To understand any one of those verbs is to have the whole frame and to know which participants it foregrounds. Fillmore's *RISK* analysis makes the same point for a single word: *risk* evokes a frame of a protagonist, a valued possession, a chance of harm, and a possible gain, and the various syntactic frames *risk* appears in select different parts of that scene. The thesis is that **lexical meaning is frame-relational**: a word is a way of accessing and profiling a structured background, not a label on a referent.
+
+Two consequences matter for this project. First, frame semantics is a `referential` theory only in a heavily mediated sense — the frame stands *between* the word and the world, so a word's contribution is its profile against a background schema, not a bare extension. This is close to the `referential.sense` (Fregean mode-of-presentation) sub-position that [`concept/referential-meaning`](referential-meaning.md) and [`concept/polysemy`](polysemy.md) carry: a frame is one articulated way a referent is given. Second, and more important for the project's architecture, **frame semantics is the semantic backbone of Construction Grammar**.
+
+### Frame semantics ties the lexical and grammatical wedges
+
+Fillmore is a co-founder of Construction Grammar, and frames are how CxG cashes out the "meaning" half of a form–meaning pairing. A construction does not pair a form with a truth-functional atom; it pairs a form with a **frame** — a structured scene with roles. The caused-motion construction evokes a causation-of-motion scene (an agent, a moved thing, a path); the ditransitive evokes a transfer scene (an agent, a recipient, a transferred thing). This is exactly the content [`concept/constructional-meaning`](constructional-meaning.md) attributes to constructions when it says the meaning "is carried by the pairing itself," and it is what Weissweiler et al. mean in the project's one in-repo CxG-probing source:
+
+> "According to CxG, meaning is encoded in abstract constellations of linguistic units of different sizes." ([`source/weissweiler-2023-cxg-insight`](../sources/weissweiler-2023-cxg-insight.md), §2.1)
+
+Read through frame semantics, those "abstract constellations" are frames evoked at the constructional grain. This is why the lexical and grammatical wedges are not two unrelated tracks but the two ends of one semantic theory: a word evokes a frame (lexical end) and a construction evokes a frame (grammatical end), and [`theory/lexicon-grammar-continuum`](../../findings/theory/lexicon-grammar-continuum.md) works out the empirical version of that single cline. The point of this page is to add the *semantic-theoretic* reason the continuum holds: frames are the shared currency at both grains.
+
+This also relocates the project's `constructional` findings. When the project reads a model as deploying a construction's contributed inference — caused-motion's *the object moved*, the *way*-construction's *the agent traversed the path* ([`concept/coercion`](coercion.md)) — that can be redescribed as the model **evoking the construction's frame** and profiling its roles. The grammatical results are not this page's central evidence (the prototype mapping below is), so this stays a redescription, not a new claim: the coercion bridge ([`concept/coercion`](coercion.md), and [`theory/lexicon-grammar-continuum`](../../findings/theory/lexicon-grammar-continuum.md)'s bridge section) is, in frame terms, the construction's frame reshaping the verb's frame — *sneeze* slotted into the caused-motion scene takes on a causation-of-motion role its lexical frame does not supply.
+
+## Prototype and graded-category semantics: the central mapping
+
+The second tradition is the one this page's empirical weight rests on. Rosch's experimental work (Rosch, "Cognitive representations of semantic categories" 1975; Rosch & Mervis, "Family resemblances" 1975 — **not in-repo; characterization**) established that semantic categories have **graded internal structure**: subjects reliably rate some members as more central than others (a robin is a "better" bird than a penguin; a chair a "better" furniture than a telephone), category membership is verified faster for central members, and category boundaries are fuzzy rather than sharp. The classical theory — that a category is defined by necessary-and-sufficient conditions, with membership all-or-nothing — fails to predict any of this. Categories are organized around **prototypes** (central exemplars or an abstracted central tendency), with membership a matter of graded resemblance to the prototype.
+
+Lakoff (*Women, Fire, and Dangerous Things* 1987 — **not in-repo; characterization**) extended this from categories of *things* to categories of *senses*. On his account a polysemous word is a **radial category**: a central sense plus extensions that radiate from it by metaphor, metonymy, and image-schema transformation, the peripheral senses motivated by (but not predictable from) the center. Polysemy, on this view, is not a list of unrelated readings but a **structured radial network** — which is precisely the picture [`concept/polysemy`](polysemy.md) gives when it describes senses as "graded and relational," with bridging contexts where two senses are co-present and "sense distinctions are scalar, not binary." Lakoff's radial-category account is the cognitive-semantics statement of that gradience, and homonymy (unrelated senses sharing a form by accident) is exactly the case that falls *outside* a single radial network — two centers, not one.
+
+The graded view connects to Wittgenstein's *family resemblance* (no single feature shared by all members, only overlapping similarities) — Rosch herself drew the connection — but the project hands the Wittgenstein framing, and the use-theoretic reading of it, to its own sibling: see [`truth-conditional-and-use-meaning.md`](truth-conditional-and-use-meaning.md). Here family resemblance matters only as the philosophical ancestor of the graded-category claim.
+
+### Mapping to the project's lexical findings
+
+The prototype/graded view makes a sharp, behavioral prediction for an LLM: if a model's sense structure is **graded** (prototype-like) rather than a **classical discrete inventory**, then its same/different-sense behavior should be **monotone in human-rated sense relatedness**, not a step function. The project's lexical line bears on this directly, and — important caveat first — the human resources it is scored against are *themselves* graded-category instruments, which is part of why the mapping is clean.
+
+- **[`result/lexical-sense-gradience-v1`](../../findings/results/lexical-sense-gradience-v1.md) SUPPORTS the graded-category mapping.** Across 200 DWUG EN within-period usage pairs, every panel model's graded sense-relatedness rating is strongly rank-correlated with the human DURel median — Spearman **0.68 / 0.60 / 0.80** (claude-sonnet-4.6 / gpt-5.4-mini / gemini-3.5-flash) on the 4-point framing and **0.70 / 0.68 / 0.83** on a 0–100 framing, **in or above the human inter-annotator range (~0.69)** — and the monotonicity **survives partialling out the model's own topic-similarity rating** (gemini 0.80→0.73). The per-level means are cleanly monotone, not bimodal. Behaviorally, the models order usages by sense-relatedness much as a prototype account would predict and a classical discrete-sense account would not. Note the resource itself is a prototype-structure instrument: the DURel / Usim graded-similarity tradition was built precisely because, as the Erk/McCarthy/Gaylord line in [`resource/wic-graded-usage-similarity`](../resources/wic-graded-usage-similarity.md) puts it, "the graded responses correlate with annotations from previous datasets, but sense assignments are used in a way that weakens the case for clear cut sense boundaries" (citing Erk, McCarthy & Gaylord, ACL 2009, https://aclanthology.org/P09-1002.pdf). So a graded human signal is the yardstick, and the model tracks it — graded behavior measured against a graded-category instrument.
+
+- **[`result/lexical-polysemy-homonymy-v3`](../../findings/results/lexical-polysemy-homonymy-v3.md) is CONSISTENT with continuous graded structure but SILENT on the strongest discreteness claim.** A radial-category account could be read to predict a *separable* discrete homonymy regime (two unrelated centers) sitting apart from within-network polysemy gradience. The project tested the analogue of that prediction on a homonymy-enriched WiC noun subset and got a **powered null**: the panel separates WiC same/different-sense pairs *equally well* for homonyms and for polysemes (AUC_homonym − AUC_polyseme ≈ 0 in all six model×framing cells; every permutation p 0.73–0.96). The one positive — homonym different-sense pairs piling at the "unrelated" floor more than polyseme different-sense pairs — **cannot be separated from plain graded distance** (homonym senses simply *are* more unrelated, sitting further out on the single relatedness gradient v1 established), is half-driven by one lemma, partly a gemini scale-use quirk, and CI-fragile. Crucially, the result page is explicit that the test **cannot distinguish "a separable low mode / discrete sense boundary" from "monotone graded distance, homonyms further out"** — the discreteness/graded-distance confound is intrinsic to a lemma-level contrast. So this is *consistent with* a continuous radial/graded structure (no extra discrete machinery is needed to explain the data), but it is **not decisive against** discreteness: it is silent on the strongest version of the claim, not a refutation of it. Read honestly, the lexical line gives a graded *positive* (v1) and a *non-result* on the discrete-regime question (v3).
+
+The honest net: the project's lexical behavior is **prototype-consistent and classical-inventory-disconfirming on the graded side**, and **undetermined on whether a discrete homonymy regime exists over and above the gradient**. That is exactly the shape a graded-category theorist would be comfortable with — and exactly where a classical-discrete-sense theorist's strongest claim survives untested.
+
+### Mapping to the frame/constructional side (brief)
+
+On the frame side, the project's constructional inference results can be redescribed as the model **evoking the construction's frame**: the caused-motion and *way*-construction probes ([`concept/coercion`](coercion.md), whose result pages those are; the full grammatical-sibling tally is summarized in [`theory/lexicon-grammar-continuum`](../../findings/theory/lexicon-grammar-continuum.md)) show the model adding a frame-contributed entailment — *the object moved*, *the agent traversed the path* — that a non-motion verb cannot supply; the coercion bridge is then the construction's frame reshaping the verb's frame ([`concept/coercion`](coercion.md)). This is a redescription of evidence whose central home is the constructional-meaning and coercion pages, not new support for frame semantics specifically. Kept brief deliberately: the grammatical results are not this page's central evidence — the graded-sense gradient is.
+
+## The standing distributional question (flagged, handed off)
+
+There is a deflationary worry this page must state plainly and *not* paper over. The prototype mapping above reads graded same/different-sense **behavior** as evidence of graded sense **structure**. But the project's whole null-hypothesis discipline ([`concept/distributional-meaning`](distributional-meaning.md), via [`concept/polysemy`](polysemy.md)'s "distributional null") warns that graded behavior may be nothing more than **graded distributional similarity** — the model responding to how similar the two usage contexts are, with no "prototype representation" distinct from context-similarity at all. For these models, "prototype/graded representation" and "graded distributional similarity" **may be the same thing**, and nothing here shows otherwise.
+
+[`result/lexical-sense-gradience-v1`](../../findings/results/lexical-sense-gradience-v1.md) pushes back partially — the sense signal survives partialling out the model's own topic-similarity rating, so it is not *merely* echoed context similarity — but the result page is explicit that this is "monotonicity, not representation," a behavioral rank correlation and not evidence of graded sense *representations* (the representation lane is deferred on local compute). So this page **asserts prototype-consistent behavior, not prototype representation.** Whether a graded representational structure exists that is distinct from distributional similarity is the standing [`concept/distributional-meaning`](distributional-meaning.md) question; it is not settled here, and the prototype mapping should be read with that bracket attached. Stating it as anything stronger would be the exact over-reading the lexical result page warns against.
+
+## How frame and prototype semantics sit in this project's vocabulary
+
+- Tag findings on the **frame / constructional** side `constructional` (frame-as-the-meaning-of-a-construction) and, where the frame's role-structure licenses inferences, co-tag `inferential` — the same discipline [`concept/constructional-meaning`](constructional-meaning.md) and [`concept/coercion`](coercion.md) use.
+- Tag findings on the **prototype / graded-sense** side `referential` (graded `referential.sense` — modes of presentation at fine grain, per [`concept/polysemy`](polysemy.md)) and **always co-tag `distributional`**, because the standing question above means the graded signal's status as sense-vs-context-similarity is live on every such finding; name which sense bears the empirical weight (context-similarity as the null to beat; graded `referential.sense` as the positive only when the null is beaten).
+- This concept does **not** touch the `relational` axis, `referential.reference`, or `referential.externalist`: like [`concept/polysemy`](polysemy.md), the wedge is within `referential.sense` plus `human-comparison` against graded/binary human resources, and frames mediate the word–world relation rather than constituting reference.
+
+## Honest gaps
+
+The three primary works this page rests on are **not in-repo**, and no quote, page number, or specific experimental figure from them is attributed here:
+
+- **Fillmore, "Frame Semantics" (1982)** and **"Frames and the semantics of understanding" (*Quaderni di Semantica* 6, 1985)** — the frame-semantics statements, including the commercial-transaction and RISK analyses.
+- **Rosch, "Cognitive representations of semantic categories" (*J. Exp. Psychol. General* 104, 1975)** and **Rosch & Mervis, "Family resemblances: Studies in the internal structure of categories" (*Cognitive Psychology* 7, 1975)** — the prototype / graded-category experiments.
+- **Lakoff, *Women, Fire, and Dangerous Things* (1987)** — radial categories and the radial-network treatment of polysemy.
+
+All three are proposed for [`base/wanted.md`](../wanted.md) (returned with this unit). The Construction Grammar canon (Goldberg 1995/2006, Croft 2001) and Cruse (1986) are already on the wanted list and are cited here as "(not in-repo)" without re-proposal. Until these are ingested with page-level provenance, the frame-semantics and prototype claims above rest on **common knowledge in the field**, not on a citable in-repo source; the only verbatim quotes on this page are the two in-repo ones (Weissweiler §2.1; Erk/McCarthy/Gaylord via the WiC-graded resource). The empirical mapping to model behavior, by contrast, rests entirely on the in-repo lexical result pages and is as solid (and as bounded) as those results are.

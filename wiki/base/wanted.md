@@ -145,6 +145,74 @@ Scouted 2026-05-30 ([`base/resources/multimodal-anchor-scouting.md`](resources/m
 - [P3] NLVR2 annotations (Suhr et al. 2019). https://github.com/lil-lab/nlvr. CC BY 4.0 (annotations; images via Google Form).
   why: 107k fully human-written sentences + binary labels over image pairs; cleanest human provenance in image-text entailment; relevant if a VLM constructional-inference axis opens.
   status: wanted (scouted 2026-05-30; annotation license verified).
+- [P3] Visual Word Sense Disambiguation (VWSD) — SemEval-2023 Task 1 (Raganato et al. 2023).
+  why: the **image-native** sense-selection task [`findings/conjectures/distributional-saturation-grounding-headroom.md`](../findings/conjectures/distributional-saturation-grounding-headroom.md) names as the next grounding step — sense selection *requires* the image, so it directly instantiates the text-under-determined regime (unlike the image-as-add-on probe that saturated). Needs scouting/license/fetch verification before it can anchor a result.
+  status: wanted (named 2026-05-31; not yet scouted).
+
+### Theory / philosophy-of-meaning primary texts (added 2026-05-31, theory session)
+
+The 2026-05-31 theory wave wrote five established-position concept pages that **characterize** these works (no quotes, no page numbers — flagged "(not in-repo; characterization)"). Fetch the load-bearing ones if a later finding needs to quote or pin a position. (Putnam 1975, Evans 1973, Brandom 1994, Lewis 1970, Firth 1957, Harris 1954 are already listed above and are not repeated here.)
+
+- [P2] Wittgenstein, L. 1953. *Philosophical Investigations.*
+  why: the meaning-as-use pole (language-games, "look for the use," family resemblance) — the Wittgensteinian half of [`base/concepts/truth-conditional-and-use-meaning.md`](concepts/truth-conditional-and-use-meaning.md); also the ancestor of prototype theory's family-resemblance categories.
+  status: wanted
+- [P3] Frege, G. 1892. "Über Sinn und Bedeutung" ("On Sense and Reference").
+  why: the sense/reference distinction + the root of the truth-conditional pole and the principle of compositionality; underpins `truth-conditional-and-use-meaning` and [`base/concepts/compositionality.md`](concepts/compositionality.md).
+  status: wanted
+- [P3] Tarski, A. 1933/1944. "The Concept of Truth in Formalized Languages" / "The Semantic Conception of Truth."
+  why: the recursive truth-via-satisfaction definition the model-theoretic lineage is built on.
+  status: wanted
+- [P3] Davidson, D. 1967. "Truth and Meaning." *Synthese* 17. (Reprinted with his holism essays in *Inquiries into Truth and Interpretation*, 1984.)
+  why: "meaning = truth-conditions" as a theory of meaning (truth-conditional pole); *Inquiries* also carries the holism-of-the-mental that grounds [`base/concepts/semantic-holism.md`](concepts/semantic-holism.md).
+  status: wanted
+- [P3] Montague, R. 1973. "The Proper Treatment of Quantification in Ordinary English" (PTQ); and Partee, B.H. on compositionality (e.g. *Mathematical Methods in Linguistics*, 1990).
+  why: natural language as a formal language with homomorphic syntax→semantics — compositional truth-conditional semantics in its strongest form; for `compositionality`.
+  status: wanted
+- [P2] Fillmore, C.J. 1982. "Frame Semantics" (in *Linguistics in the Morning Calm*); and 1985. "Frames and the semantics of understanding." *Quaderni di Semantica* 6.
+  why: frame semantics as the semantic backbone of Construction Grammar (Fillmore founds both) — the tie between the lexical and grammatical wedges at the level of semantic theory; for [`base/concepts/frame-and-prototype-semantics.md`](concepts/frame-and-prototype-semantics.md).
+  status: wanted
+- [P3] Rosch, E. 1975. "Cognitive representations of semantic categories." *J. Exp. Psychol. General* 104; and Rosch, E. & Mervis, C.B. 1975. "Family resemblances." *Cognitive Psychology* 7.
+  why: the prototype / graded-category experiments the lexical-gradience mapping leans on; for `frame-and-prototype-semantics`.
+  status: wanted
+- [P3] Lakoff, G. 1987. *Women, Fire, and Dangerous Things.* Chicago.
+  why: radial categories / radial-network treatment of polysemy; for `frame-and-prototype-semantics` and [`base/concepts/polysemy.md`](concepts/polysemy.md).
+  status: wanted
+- [P2] Quine, W.V.O. 1951. "Two Dogmas of Empiricism"; and 1960. *Word and Object.*
+  why: confirmation/meaning holism — the source of the holist pole; for `semantic-holism`.
+  status: wanted
+- [P3] Dummett, M. 1975/76. "What is a Theory of Meaning?" (I & II).
+  why: molecularism — the middle position between atomism and holism; for `semantic-holism`.
+  status: wanted
+- [P2] Fodor, J.A. & Lepore, E. 1992. *Holism: A Shopper's Guide.* Blackwell.
+  why: the anti-holism argument + the claim that holism threatens compositionality, communication, and stability of meaning; bears on both `semantic-holism` and `compositionality`.
+  status: wanted
+- [P2] Bender, E.M., Gebru, T., McMillan-Major, A. & Shmitchell, S. 2021. "On the Dangers of Stochastic Parrots." FAccT.
+  why: the eliminativist-leaning origin of the "stochastic parrot" framing — the foil for [`base/concepts/deflationary-and-eliminativist-llm-meaning.md`](concepts/deflationary-and-eliminativist-llm-meaning.md). (The phrase currently appears in-repo only inside the verbatim Lyre quote.)
+  status: wanted
+- [P3] Cappelen, H. & Dever, J. 2021. *Making AI Intelligible: Philosophical Foundations.* OUP.
+  why: a worked deflationary/anti-anthropomorphic treatment of AI content/reference; for `deflationary-and-eliminativist-llm-meaning`. (Complements the already-listed Sterken & Cappelen ed. volume.)
+  status: wanted
+
+The wave-2 deepenings and original conjectures (2026-05-31) added these (the pages characterize them, no quotes; none was already listed):
+
+- [P3] Sellars, W. 1956. "Empiricism and the Philosophy of Mind."
+  why: the "space of reasons" lineage behind Brandom's normative inferentialism, characterized in [`base/concepts/inferential-meaning.md`](concepts/inferential-meaning.md). Fetch only if a finding leans on the Sellarsian lineage.
+  status: wanted
+- [P2] Burge, T. 1979. "Individualism and the Mental." *Midwest Studies in Philosophy* 4.
+  why: social externalism (the *arthritis* case) extending Twin-Earth content-fixing to ordinary concepts; the externalist pole of [`base/concepts/referential-meaning.md`](concepts/referential-meaning.md)'s internalism/externalism section.
+  status: wanted
+- [P3] Chomsky, N. 2000. *New Horizons in the Study of Language and Mind.* Cambridge.
+  why: the i-language internalist position + the argument that word-world reference is not a natural-scientific relation; the internalist pole of `referential-meaning`.
+  status: wanted
+- [P3] Fodor, J.A. 1987. *Psychosemantics.* MIT.
+  why: **narrow content** — the individualistic content meant to survive Twin Earth; the internalist content notion in `referential-meaning`. Distinct from the already-listed Fodor & Lepore 1992 (anti-holism).
+  status: wanted
+- [P2] Lewis, D. 1969. *Convention: A Philosophical Study.* Harvard.
+  why: the philosophical theory of convention behind the "commutative convention" framing in [`findings/conjectures/commutative-convention.md`](../findings/conjectures/commutative-convention.md). Distinct from the already-listed Lewis 1970 "General Semantics".
+  status: wanted
+- [P3] A defeasible-reasoning / non-monotonic-logic reference (e.g. Reiter, R. 1980. "A Logic for Default Reasoning." *Artificial Intelligence* 13; or a current survey).
+  why: [`findings/conjectures/constructional-monotonicity-asymmetry.md`](../findings/conjectures/constructional-monotonicity-asymmetry.md) characterizes the add/cancel asymmetry as monotone-accumulation-vs-defeasance *by analogy only*; fetch first if the project ever leans on the formal mapping.
+  status: wanted
 
 ## Notes on fetching
 

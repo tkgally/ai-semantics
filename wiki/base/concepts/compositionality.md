@@ -1,0 +1,90 @@
+---
+type: concept
+id: compositionality
+title: Compositionality and the Fregean principle
+meaning-senses:
+  - constructional
+  - distributional
+  - inferential
+  - grounded.perceptual
+created: 2026-05-31
+updated: 2026-05-31
+links:
+  - rel: depends-on
+    target: concept/constructional-meaning
+  - rel: depends-on
+    target: concept/coercion
+  - rel: depends-on
+    target: concept/multimodal-compositionality
+  - rel: depends-on
+    target: concept/distributional-meaning
+  - rel: depends-on
+    target: result/comparative-correlative-covariation-v2
+  - rel: depends-on
+    target: result/caused-motion-minimal-pair-divergence-v1
+  - rel: depends-on
+    target: result/way-construction-traversal-v1
+  - rel: depends-on
+    target: source/weissweiler-2023-cxg-insight
+  - rel: depends-on
+    target: source/thrush-2022-winoground
+---
+
+# Compositionality and the Fregean principle
+
+This page owns the **part–whole axis** of meaning: the principle of compositionality, why it is the engine of formal semantics, and how Construction Grammar reframes it by enlarging what counts as a "part." It is deliberately narrow. Truth-conditional meaning, frame/prototype semantics, semantic holism, and the deflationary reading of LLM meaning each have their own sibling concept page; this page **links** to them at the seams rather than developing them.
+
+## 1. The principle of compositionality
+
+The **principle of compositionality** — usually attributed to Frege (the principle of compositionality and the `Sinn`/`Bedeutung` distinction, 1892; *not in-repo; characterization*) — states that the meaning of a complex expression is a **function of the meanings of its parts and of the way they are syntactically combined**. Nothing in the whole comes from nowhere: fix the parts and fix the mode of combination, and the meaning of the whole is determined.
+
+Two properties of natural language make the principle attractive as more than a slogan, and they are the standard motivation for it (Frege; Fodor & Lepore restate them as the argument's load-bearing data; both *not in-repo; characterization*):
+
+- **Productivity** — a finite vocabulary and a finite stock of combinatory rules generate an unbounded number of well-formed expressions, including ones never encountered before. A compositional semantics explains how a speaker who has never met a sentence can nonetheless compute what it means.
+- **Systematicity** — the ability to understand *the dog chased the cat* is not independent of the ability to understand *the cat chased the dog*. The two are systematically related because they are built from the same parts under the same rules. Compositionality predicts exactly this clustering of abilities.
+
+Compositionality in this strict, function-of-the-parts form is the **engine of formal / truth-conditional semantics**. In the Montague tradition (Montague's *PTQ* / "The Proper Treatment of Quantification", 1973, and the work Partee systematized into the textbook framework; *both not in-repo; characterization*), the meaning of an expression is computed by a homomorphism from a syntactic algebra to a semantic algebra: each syntactic rule of combination is paired with a semantic rule of combination, so the structure of the derivation *is* the structure of the meaning. The truth-conditional content this machinery delivers is the subject of the sibling page [`truth-conditional-and-use-meaning.md`](truth-conditional-and-use-meaning.md); here the relevant point is only that **compositionality is what lets that machinery run** — without a part-to-whole function, there is no homomorphism to build.
+
+A note this project must keep in view: the strict principle is usually stated as **lexical** compositionality — the "parts" are *words* (plus the syntactic mode of combination). That choice of what counts as a part is exactly what Construction Grammar contests.
+
+## 2. The Construction-Grammar reframing: enlarging the inventory of parts
+
+Construction Grammar (CxG) puts pressure on the *lexical* reading of "parts," not on the principle itself. The CxG claim ([`concept/constructional-meaning`](constructional-meaning.md)) is that meaning is carried by **form–meaning pairings at every level of abstraction** — morphemes, words, idioms, argument-structure templates — and that some of these pairings contribute meaning that is **not predictable from the lexical items slotted into them**. Weissweiler et al. state the unit directly:
+
+> "According to CxG, meaning is encoded in abstract constellations of linguistic units of different sizes." ([`source/weissweiler-2023-cxg-insight`](../sources/weissweiler-2023-cxg-insight.md), §2.1)
+
+Scivetti et al. make the same point about what those constellations carry: CxG "explicitly links syntactic forms to abstract, non-lexical meanings" ([`source/scivetti-2025-beyond-memorization`](../sources/scivetti-2025-beyond-memorization.md), abstract). The operative word is **non-lexical**: there is constructional content that no inventory of word-meanings will reconstruct.
+
+The sharpest case is [`concept/coercion`](coercion.md) — the construction **overriding** the verb. In *Maria sneezed the napkin off the table*, the caused-motion construction contributes the causation-of-motion that the intransitive, motion-denoting-nothing verb *sneeze* cannot supply; in *Mia whistled her way down the hall*, the *way*-construction contributes path-traversal that *whistle* lacks. Coercion is the **limiting case** for the compositionality debate because the verb *cannot* be the source of the inference, so a strict **lexical** compositionality — one whose only parts are the words — necessarily **under-predicts** the meaning of the whole.
+
+The precise way to state the CxG move matters, and it is easy to get wrong. CxG is **not best read as anti-compositional.** It does not deny that the whole is a function of its parts and their combination. It **enlarges the inventory of parts** to include constructions themselves: the caused-motion template, the *way*-construction, and the comparative correlative are *parts* — abstract, schematic form–meaning pairings — that combine with the lexical items filling their slots. On that enlarged inventory, the coerced sentence *is* compositional: its meaning is a function of (verb-meaning) ⊕ (construction-meaning) under the construction's mode of combination. What coercion refutes is the claim that the *words alone* exhaust the parts; what it preserves is the principle that meaning is built from parts and their combination. (CxG canon — Goldberg 1995; Croft 2001 — is *not in-repo*; both are already in [`base/wanted.md`](../wanted.md) and are cited here as not-in-repo.) This is the same continuum thesis the project's theory pages turn on: a word is a maximally specific construction and an argument-structure template a maximally schematic one, two ends of one form–meaning cline ([`theory/lexicon-grammar-continuum`](../../findings/theory/lexicon-grammar-continuum.md)).
+
+The remaining issue — whether the construction-as-part is a *meaning*-bearing unit or only a recurrent *form* — is the wedge the project's evidence ladder is built to adjudicate ([`theory/constructional-meaning-in-llms`](../../findings/theory/constructional-meaning-in-llms.md)); §3 maps the findings that bear on it.
+
+## 3. What the project's findings say about compositional behavior
+
+The project has not measured "compositionality" under that name, but several own-design results bear on it directly. Read against the principle, they SUPPORT, STRAIN, or are SILENT on it as follows. All are behavioral, single-run, small-N, and read modestly.
+
+**The cleanest evidence of genuinely compositional (not single-clause-heuristic) processing — SUPPORTS.** [`result/comparative-correlative-covariation-v2`](../../findings/results/comparative-correlative-covariation-v2.md) had the panel **compose two-step covariation chains at 100%** (3/3 models, both instruments) — including the diagnostic `multi-bears` item where both steps are negative and the composed answer is **positive** (negative × negative = positive), "which a single-clause heuristic would get wrong." A model reading only one clause would answer *decrease*; all three answered *increase*. This is the project's closest analogue to the systematicity datum that motivates the principle: the whole's value is computed from the parts' signs under their mode of combination, not read off the last clause. (Lead caveat from the result page: still near-ceiling on a modest instrument, so it bounds how strong a "deep composition" reading it licenses.)
+
+**The coercion cases — SUPPORT the enlarged-parts reading by STRAINING the lexical-only one.** [`result/caused-motion-minimal-pair-divergence-v1`](../../findings/results/caused-motion-minimal-pair-divergence-v1.md) (affirm caused-motion 90–100%, gap 70–100 pp over controls, 3/3 models) and [`result/way-construction-traversal-v1`](../../findings/results/way-construction-traversal-v1.md) (path-traversal 77.8–100%, gap 77.7–100 pp, 3/3 models) both show the panel drawing an inference **the verb cannot supply**. This is exactly where **strict lexical compositionality under-predicts** — the words alone do not entail the motion — yet the models draw the construction-contributed inference, and withhold it for matched controls (caused-motion's causation-specific control 0–20%; the *way*-construction's idiomatic guard at 0%). So the behavior is sensitive to the constructional "part." It does **not**, by itself, settle that the construction is encoded as a *meaning*-bearing unit rather than a high-frequency form; that is the standing question handed off in §4.
+
+**Coercion as a compositional *interaction* between construction and lexeme — WEAKLY SUPPORTS, stated honestly.** [`result/coercion-sense-modulation-v2`](../../findings/results/coercion-sense-modulation-v2.md) asked whether a coerced verb's sense is rated as *modulated* by the construction — a compositional interaction, not just an added part. After partial de-confounding against a structure-matched conventional-transitive control, a sense-specific residual (the ISOLATION gap = transitive-ctrl − coerced-way) is **positive on the fine 0–100 scale for all three models (claude +13.6, gpt +6.1, gemini +1.9)** but **≈ 0 on the coarse 4-point scale**, is **fragile** (only 3–4 of 8 verbs positive; *hum* runs the wrong way), and sits alongside a **real surface component**. So the construction does modulate the lexeme's contribution — the interaction is real — but the signal is **faint and partly surface** (refining [`result/coercion-sense-modulation-v1`](../../findings/results/coercion-sense-modulation-v1.md)). This is a genuine compositional-interaction datum, read as weak.
+
+**The cross-modal contrast — SUPPORTS that text-only decoders compose where these VLM benchmarks fail, with a critical like-for-like caveat.** The vision-language compositionality benchmarks find the opposite of the CC result. On **Winoground** ([`source/thrush-2022-winoground`](../sources/thrush-2022-winoground.md)) — image-caption pairs whose captions share an identical word-bag and differ only in order — SOTA VLMs are near the group-score chance floor of 16.67% (random row "25.00, 25.00, 16.67"; MTurk human group 85.50), and the abstract reports "none of them do much better than chance." **ARO** ([`source/yuksekgonul-2023-aro`](../sources/yuksekgonul-2023-aro.md)) decomposes this into a "severe lack of order sensitivity" and attribute-binding failure across "more than 50,000 test cases" — the **bag-of-words** failure mode (an order-insensitive model is, in this project's vocabulary, a [`concept/distributional-meaning`](distributional-meaning.md) model that ignores combination). So cross-modally these models are **non-compositional** where the text-only panel composes the CC at 100%.
+
+Two caveats keep this an honest contrast rather than a clean result, both per [`concept/multimodal-compositionality`](multimodal-compositionality.md):
+- **Discriminative vs. generative.** All three benchmark papers use **discriminative** image-text matching; the project's panel is **generative**, probed via NLI / forced-choice. The contrast is **suggestive, not like-for-like** — different task structures recruit different pathways, and "the connection is conceptual ... the behaviours are not identical and should not be equated."
+- **Benchmark artefacts.** SugarCrepe (Hsieh et al. 2023; *abstract-only in-repo*) reports that "blind models with no access to the image outperform state-of-the-art vision-language models" on these benchmarks, so part of the measured failure may be a benchmark artefact rather than pure compositional failure. The near-chance result is real; the specific deficit attribution is what the cleaner eval contests.
+
+So across the modalities: the principle SUPPORTS where text-only composition is tested directly (CC two-step chains; coercion's added inference); it is STRAINED cross-modally (the VLM bag-of-words failure) — but the cross-modal strain bears on `grounded.perceptual` composition, a regime the project's generative text-only panel does not occupy, so it does not transfer to a verdict on the panel.
+
+## 4. The standing question, and a threat handed off
+
+**Is the compositional success genuine computation or a richer distributional shortcut?** This is the deflationary worry the project never closes by fiat. A model could in principle reproduce the CC and coercion behavior above by tracking very rich co-occurrence structure — a [`concept/distributional-meaning`](distributional-meaning.md) shadow — without composing meaning-bearing parts at all. The project's two standing defenses are: (a) the **Tier-3 generalization control** (the coerced inference holds for atypical, low-frequency-in-construction verbs — caused-motion within 15 pp, the *way*-construction's anti-motion category at ceiling — which a memorized-string account does not predict), and (b) the **multi-step composition diagnostic** in the CC (the negative × negative = positive item, which a last-clause distributional heuristic gets wrong). These narrow the distributional-only explanation; they do not eliminate it, and the inferential-vs-distributional boundary is left open by design (the question of whether a meaningful symbol must "compose ... with ... TRUE and FALSE ... when it has the right conceptual role" — Piantadosi & Hill's inferentialist framing, [`source/piantadosi-hill-2022-meaning-without-reference`](../sources/piantadosi-hill-2022-meaning-without-reference.md) — is precisely what a distributional shortcut might or might not satisfy). The deflationary reading is developed on its own sibling page, `concept/deflationary-and-eliminativist-llm-meaning`; this page only flags that the question is live.
+
+**A threat to compositionality itself, handed off.** Compositionality is in tension with **semantic holism** — the view that an expression's meaning depends on its place in the whole web of a language's expressions. If meaning is holistic, the "meaning of a part" is not a fixed input that combines into a whole; it shifts with the whole, and the function-of-the-parts picture is undermined. Fodor & Lepore (*Holism: A Shopper's Guide*, 1992; *not in-repo; characterization*) argue exactly this — that holism, if true, is incompatible with compositionality, and that compositionality is therefore a reason to reject holism. This project does **not** adjudicate that dispute here. The holism side of it — and the threat it poses to the principle stated on this page — is developed on the sibling page [`semantic-holism.md`](semantic-holism.md); the only claim made here is that the two cannot both be taken in their strongest forms, and that this page's commitment to a part-to-whole function is what holism would contest. (The eliminativist cousin of holism's threat — that there are no stable word-meanings to compose at all — belongs with the deflationary page noted above.)
+
+## Meaning-sense usage note
+
+"Compositional meaning" on this page is primarily `constructional` (the parts that compose are form–meaning pairings, words and constructions alike) and `distributional` (the null the project must beat is a part-blind co-occurrence shortcut). It is `inferential` where the test of whether a construction is a genuine meaning-bearing part is whether the model licenses the construction's characteristic inference (the coercion cases). The `grounded.perceptual` tag enters only through §3's cross-modal contrast — the VLM bag-of-words failure is a claim about whether compositional structure survives into the perceptual modality — and not into the project's own text-only results. Per the project's lint rule, the unqualified word "meaning" is avoided; where it appears it is tagged or qualified.

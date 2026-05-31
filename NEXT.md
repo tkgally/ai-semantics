@@ -2,61 +2,32 @@
 
 ## State
 
-The project is **three-axis plus a now-opened fourth**: **grammatical** (live, 11 own-design results),
-**lexical** (clauses a+c supported; clause b a powered null), **multimodal/grounding** (two negatives),
-and — **new this session** — the **relational axis** has its **first finding**: a first-class **null**.
+The project's four empirical axes are **unchanged** from last session — **grammatical** (11 own-design results; evidence ladder), **lexical** (sense-gradience positive + a powered discreteness null), **grounding** (two bounded negatives), **relational** (a first-class null). **This session (2026-05-31) was a DOCUMENTATION / THEORY session — $0, no experiments, no model/API calls** — deliberately rebalancing the project's empirical lean with a richer theoretical/philosophical layer on lexical & grammatical meaning. Landed in three committed waves (workflow mode: orchestrator + parallel generation subagents + an independent adversarial pass per wave):
 
-**This session (2026-05-31, workflow/single-build): built and ran the relational pilot (Decision 9 =
-GO).** The two-AI iterated dyadic reference-game over hard-to-name tangram-like figures ran end-to-end
-→ [`result/relational-reference-game-v1`](wiki/findings/results/relational-reference-game-v1.md).
-**Headline: convergence WITHOUT trajectory-dependence — a first-class relational null.** Across all
-three homogeneous-dyad panels the coined convention is recovered from the **set** of prior turns, not
-their **ordered trajectory** (history content lifts a fresh matcher +0.25…+0.42, but ordered ≈
-shuffled ≈ reversed; no order-gap CI excludes 0). Coordination, not constitution; the deflationary
-distributional story survives order-scrambling. Secondary, anchored to
-[`resource/hawkins-tangrams`](wiki/base/resources/hawkins-tangrams.md): the dyads converge on
-referential accuracy but, unlike humans, **do not compress** their expressions (convergence without
-entrainment). **864 calls, $0.945 billed, 14 NA** (all claude truncations, spread across arms — verifier
-confirmed the null is unchanged dropping them). Independent pre-run critic (caught a
-self-describing-coined-term blocker before any finding-bearing call) + post-run verifier (every figure
-reproduced from raw, 0/432 scoring mismatches). Run dir:
-[`experiments/runs/2026-05-31-relational-reference-game-v1/`](experiments/runs/2026-05-31-relational-reference-game-v1/README.md).
+- **5 new established-position concept pages**, each mapping a classical position to the project's *actual* findings: [`concept/truth-conditional-and-use-meaning`](wiki/base/concepts/truth-conditional-and-use-meaning.md), [`concept/compositionality`](wiki/base/concepts/compositionality.md), [`concept/frame-and-prototype-semantics`](wiki/base/concepts/frame-and-prototype-semantics.md), [`concept/semantic-holism`](wiki/base/concepts/semantic-holism.md), [`concept/deflationary-and-eliminativist-llm-meaning`](wiki/base/concepts/deflationary-and-eliminativist-llm-meaning.md).
+- **2 deepened concept pages**: [`concept/inferential-meaning`](wiki/base/concepts/inferential-meaning.md) (Brandom's normative inferentialism vs Piantadosi-Hill's internalist conceptual role; what the Tier-4 results do/don't show; the relational bridge) and [`concept/referential-meaning`](wiki/base/concepts/referential-meaning.md) (a worked internalism/externalism section + the grounding nulls mapped onto the externalist axis + why the reference-anchor gap is structural).
+- **3 ORIGINAL conjectures** (the project's own falsifiable forward bets, each cross-linked for the empirical loop): [`conjecture/constructional-monotonicity-asymmetry`](wiki/findings/conjectures/constructional-monotonicity-asymmetry.md) (additive-easy / defeasance-hard), [`conjecture/distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md) (grounding acts only in the text-under-determination residual), [`conjecture/commutative-convention`](wiki/findings/conjectures/commutative-convention.md) (relational conventions are commutative — aggregation, not constitution).
+- **1 philosophical-map synthesis**, [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md), positioning all findings: LLM meaning, where the project can see it, is **model-internal, thin-inferential, use-based, graded, compositional at the construction grain** — beating but **not escaping** the distributional shadow; the referential / perceptually-grounded / relational loci are each **silent or bounded-negative** (a deflation-leaning, **non**-eliminativist picture — the descriptivist middle the charter chose). The two empirical theory pages got light "theoretical situating" cross-links to it; [`concept/coercion`](wiki/base/concepts/coercion.md) had a stale line fixed (the matched cancel-direction probe *has* run).
 
-The theory page, the relational concept page, and the open question now record the relational axis at
-**one bounded negative** (floor characterized, bottom rung not climbed). Nothing on the other three
-axes changed.
+No finding changed; no open decision was auto-resolved; all empirical work stayed on hold.
 
-## Next concrete action — backlog (workflow-fannable; none blocked)
+## Next concrete action — backlog (empirical work resumes in a non-theory session)
 
-The relational pilot is a *bounded* null. The natural next moves (a fresh wave can fan these out):
+The three new conjectures sharpen the empirical loop's next bets — each maps to a queued experiment:
 
-1. **Relational pilot v2 — the sharper trajectory test.** Build the deferred **history-perturbation
-   arm** (reassign a coined term mid-trajectory; test whether a fresh matcher's interpretation tracks
-   *where* in the order the change lands, beyond *that* the content changed). This is the cleanest test
-   of order-dependence and the one most likely to expose an effect v1 was under-powered for. Optionally
-   add **image referents** (Q1→B) and **cross-family dyads** (heterogeneous arm). See
-   [`decisions/open/relational-pilot-operationalization`](wiki/decisions/open/relational-pilot-operationalization.md)
-   (recommends exactly these). Anchor discipline unchanged (Hawkins = convergence only; trajectory =
-   internal contrast). Budget: similar scale (~$1).
-2. **Surface the v1 yardstick to Tom** for ratification (text grids / order-isolating headline /
-   monologue floor) — non-blocking; the null stands regardless.
-3. Lower-priority axis-deepening (any of): a relational **conjecture** page only if v2 turns positive;
-   otherwise keep the relational axis at one negative and let the theory pages hold it.
+1. **Relational pilot v2 — the history-perturbation arm** (most distinctive). Reassign a coined term mid-trajectory; test whether a fresh matcher's interpretation tracks *where* in the order the change lands (beyond *that* content changed). This is the decisive test of [`conjecture/commutative-convention`](wiki/findings/conjectures/commutative-convention.md) — predicts still-commutative; **falsified by a robust CI-clean order/position effect** — and the test v1 was under-powered for. Optionally add image referents + cross-family dyads. See [`decisions/open/relational-pilot-operationalization`](wiki/decisions/open/relational-pilot-operationalization.md). ~$1.
+2. **Grounding: a fine-polysemy / VWSD image probe** — the test of [`conjecture/distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md): run the image instrument where text-only AUC < 1.0 (fine polysemy / abstract or perceptually-subtle senses), predicting a positive Δ in the residual unlike the saturated-homonym redundancy null, with a negative separability×improvement correlation. VWSD is the image-native task to scout (now in [`base/wanted.md`](wiki/base/wanted.md)). Moves the grounding axis off two nulls — or confirms the modality is inert for sense.
+3. **A matched-difficulty add/cancel battery** — the test of [`conjecture/constructional-monotonicity-asymmetry`](wiki/findings/conjectures/constructional-monotonicity-asymmetry.md): new add-vs-cancel construction pairs at matched ceiling, predicting the asymmetry generalizes and the cancel direction stays more instrument-fragile. Candidate anchor: the Scivetti CxNLI dataset.
+4. **AANN** remains one API key away (logprob blocker; see below).
 
-## Blocked / pending Tom (none blocks the above)
+(Pure-theory follow-ups, lower priority: any of the established-position concept pages could be deepened further once the wanted primary texts are fetched; the synthesis page has explicit revision triggers tied to the three bets above.)
 
-- [`decisions/open/relational-pilot-operationalization`](wiki/decisions/open/relational-pilot-operationalization.md)
-  — the v1 yardstick (a null stands regardless; ratification only fixes the yardstick).
-- [`decisions/open/aann-panel-logprob-blocker`](wiki/decisions/open/aann-panel-logprob-blocker.md) +
-  [`decisions/open/cloud-compute-path`](wiki/decisions/open/cloud-compute-path.md) — **AANN stays on
-  HOLD** (no `TOGETHER_API_KEY`; no logprob path on the current panel). Unblocks for <$1 if Tom adds a key.
-- **Image probe v2 / VWSD** — un-gated, low-motivation (text panel saturates word-sense cases).
+## Blocked / pending Tom (none blocks a future empirical session's choice among the above)
+
+- [`decisions/open/relational-pilot-operationalization`](wiki/decisions/open/relational-pilot-operationalization.md) — the v1 yardstick (the null, and the conjecture generalizing it, stand regardless; ratification only fixes the yardstick).
+- [`decisions/open/aann-panel-logprob-blocker`](wiki/decisions/open/aann-panel-logprob-blocker.md) + [`decisions/open/cloud-compute-path`](wiki/decisions/open/cloud-compute-path.md) — **AANN stays on HOLD**; unblocks for <$1 if Tom adds a `TOGETHER_API_KEY`.
+- **New this session, non-blocking, for awareness:** the 3 original conjectures make testable bets but **need no ratification** (conjecture pages don't); each names a candidate anchor a future *result* would require. **No new operationalization decision was opened** — the relational v2 is already covered by the open yardstick decision, and the other two name in-repo or scout-able anchors.
 
 ## Reminder for the next cold-start
 
-Charter `PROJECT.md`; schema `CLAUDE.md`; run discipline `PROTOCOL.md` ("continue working" ⇒ workflow
-mode). **Read [`wiki/executive-summary.md`](wiki/executive-summary.md) first, then `wiki/index.md`**;
-reconcile `wiki/decisions/open/` (now **3 open** — the relational-pilot yardstick + the AANN/compute
-pair). The headline: **the relational pilot RAN — a first-class null (convergence without
-trajectory-dependence)**; the most distinctive next step is **v2 with the perturbation arm**, the one
-test v1 was under-powered to run.
+Charter `PROJECT.md`; schema `CLAUDE.md`; run discipline `PROTOCOL.md` ("continue working" ⇒ workflow mode). Read [`wiki/executive-summary.md`](wiki/executive-summary.md) first, then `wiki/index.md`; reconcile `wiki/decisions/open/` (still **3 open** — unchanged this session). The theory/philosophy layer is now substantial: **[`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md) is the new philosophical-map synthesis** (start there for "where, if anywhere, LLM meaning lives"); the two empirical theory pages hold the evidence ladder and the lexicon-grammar continuum. The most distinctive next *experiment* remains the **relational v2 perturbation arm**.
