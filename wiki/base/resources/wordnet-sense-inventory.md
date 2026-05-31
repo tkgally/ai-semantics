@@ -14,6 +14,8 @@ contingent-on: []
 created: 2026-05-31
 updated: 2026-05-31
 links:
+  - rel: anchors
+    target: result/multimodal-grounding-image-v1
   - rel: depends-on
     target: concept/polysemy
   - rel: depends-on
@@ -54,7 +56,7 @@ partition*, **not**:
 
 **Honest scope for a constructed probe.** When a study *constructs* its own sentence pairs and assigns
 each pair a same/different gold **by which WordNet synset the author judges each context to instantiate**
-(as in `result/multimodal-grounding-image-v1`),
+(as in [`result/multimodal-grounding-image-v1`](../../findings/results/multimodal-grounding-image-v1.md)),
 the human-anchored part is the **synset inventory** (that these are genuinely distinct vs identical
 senses in WordNet — verifiable, e.g. `bat.n.01` mammal vs `bat.n.05` club). The **mapping of a
 constructed sentence to a synset is the author's**, not an independent annotator's. That makes the gold

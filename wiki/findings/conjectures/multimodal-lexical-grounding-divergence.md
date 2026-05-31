@@ -47,8 +47,8 @@ links:
 > now ratified** ([`decisions/resolved/multimodal-panel-and-grounding-theory`](../../decisions/resolved/multimodal-panel-and-grounding-theory.md),
 > 2026-05-31: Q1=A existing 3-family panel, Q2=A Lyre gradual grounding, **Q3=B GO** on the
 > image probe). The one remaining surfaced gate is the image probe's human-anchor choice,
-> `contingent-on: multimodal-image-anchor` (WiC-binary-keyed image set; proceeding under
-> standing delegation, surfaced not self-resolved).
+> `contingent-on: multimodal-image-anchor` (realized as a WordNet-keyed constructed set;
+> proceeding under standing delegation, surfaced not self-resolved).
 
 ## Statement
 
@@ -158,6 +158,7 @@ and are the live unit (image probe design [`design/multimodal-grounding-image-v1
    perception actually carries the distinction*. In particular, **homonym pairs with visually
    distinct referents should drop toward the human "different" floor under image input** — the
    route to clause (b) the text anchor could not reach.
+   **→ TESTED 2026-05-31 (image probe): a REDUNDANCY NULL** — [`result/multimodal-grounding-image-v1`](../results/multimodal-grounding-image-v1.md). For clear homonyms the **text-only** panel already separates same- from different-synset pairs **perfectly (AUC 1.0)**, so the image cannot improve the binary separation (prediction-2 redundancy null in its strong form); the lone predicted-direction movement is one model on the continuous scale (gpt-5.4-mini, different-synset −8 toward "unrelated", surviving the distraction control), and claude shows a faint distraction-direction wobble. Bounds the strong reading **for clear homonyms**; fine polysemy (where text need not saturate) is untouched.
 4. **Coercion under depiction (the grammar-end touchpoint, later).** Showing an image consistent
    vs. inconsistent with a coerced reading changes the model's coercion-sense-modulation behavior
    ([`result/coercion-sense-modulation-v1`](../results/coercion-sense-modulation-v1.md)) — connecting

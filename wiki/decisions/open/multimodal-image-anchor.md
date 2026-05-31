@@ -36,7 +36,7 @@ human-anchored part is the WordNet **sense inventory** (these are genuinely dist
 synsets); the **mapping of each constructed sentence to a synset is the author's**, weaker than WiC's
 released per-item labels, and the result states this. **WiC remains the anchor for the text-only
 lexical-v3** ([`design/lexical-polysemy-homonymy-v3`](../../../experiments/designs/lexical-polysemy-homonymy-v3.md)),
-where its actual items suffice. Result: `result/multimodal-grounding-image-v1`.
+where its actual items suffice. Result: [`result/multimodal-grounding-image-v1`](../../findings/results/multimodal-grounding-image-v1.md).
 Tom: a one-liner ("WordNet-keyed constructed set is fine" / "redo with WiC/VWSD") is enough; **not blocking**.
 
 ## The question
