@@ -6,7 +6,7 @@ meaning-senses:
   - referential
   - distributional
   - human-comparison
-status: ready
+status: run
 anchor: resource/wic-word-in-context
 contingent-on: []
 created: 2026-05-31

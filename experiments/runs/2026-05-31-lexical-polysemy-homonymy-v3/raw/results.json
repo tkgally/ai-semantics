@@ -1,0 +1,342 @@
+{
+ "params": {
+  "FLOOR": {
+   "durel": 1,
+   "cont": 10
+  },
+  "N_PERM": 10000,
+  "N_BOOT": 5000,
+  "SEED": 20260531,
+  "overlap_median": 0.0,
+  "n_items": 161
+ },
+ "strat_counts": {
+  "HOMONYM": {
+   "T": 21,
+   "F": 39,
+   "n_lemmas": 11
+  },
+  "POLYSEME": {
+   "T": 36,
+   "F": 65,
+   "n_lemmas": 11
+  }
+ },
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "durel": {
+    "n_used": 161,
+    "by_stratum": {
+     "HOMONYM": {
+      "nT": 21,
+      "nF": 39,
+      "auc": 0.882,
+      "mean_T": 3.62,
+      "mean_F": 2.0,
+      "TF_gap": 1.62,
+      "floorfrac_F": 0.436
+     },
+     "POLYSEME": {
+      "nT": 36,
+      "nF": 65,
+      "auc": 0.879,
+      "mean_T": 3.56,
+      "mean_F": 2.23,
+      "TF_gap": 1.32,
+      "floorfrac_F": 0.185
+     }
+    },
+    "AUC_diff(H-P)": 0.003,
+    "floorfrac_diff(H-P)": 0.251,
+    "perm_p_AUC": 0.9623,
+    "perm_p_floor": 0.0236,
+    "boot95_AUC_diff_itemnaive": [
+     -0.099,
+     0.102
+    ],
+    "boot95_AUC_diff_clustered": [
+     -0.113,
+     0.098
+    ],
+    "lowoverlap_AUC_diff(H-P)": 0.008,
+    "lowoverlap_n": 159,
+    "homonym_F_mean_by_lemma": {
+     "ball": 1.8,
+     "bank": 2.0,
+     "case": 1.62,
+     "date": 2.0,
+     "pitch": 1.0,
+     "pitcher": 4.0,
+     "plane": 2.0,
+     "rock": 3.0,
+     "school": 2.8,
+     "seal": 2.0,
+     "tear": 1.0
+    }
+   },
+   "cont": {
+    "n_used": 161,
+    "by_stratum": {
+     "HOMONYM": {
+      "nT": 21,
+      "nF": 39,
+      "auc": 0.882,
+      "mean_T": 83.48,
+      "mean_F": 30.87,
+      "TF_gap": 52.6,
+      "floorfrac_F": 0.564
+     },
+     "POLYSEME": {
+      "nT": 36,
+      "nF": 65,
+      "auc": 0.9,
+      "mean_T": 84.22,
+      "mean_F": 37.05,
+      "TF_gap": 47.18,
+      "floorfrac_F": 0.308
+     }
+    },
+    "AUC_diff(H-P)": -0.018,
+    "floorfrac_diff(H-P)": 0.256,
+    "perm_p_AUC": 0.7324,
+    "perm_p_floor": 0.0661,
+    "boot95_AUC_diff_itemnaive": [
+     -0.123,
+     0.077
+    ],
+    "boot95_AUC_diff_clustered": [
+     -0.12,
+     0.071
+    ],
+    "lowoverlap_AUC_diff(H-P)": -0.013,
+    "lowoverlap_n": 159,
+    "homonym_F_mean_by_lemma": {
+     "ball": 26.0,
+     "bank": 30.8,
+     "case": 17.46,
+     "date": 25.67,
+     "pitch": 5.0,
+     "pitcher": 95.0,
+     "plane": 32.0,
+     "rock": 47.5,
+     "school": 67.4,
+     "seal": 20.0,
+     "tear": 0.0
+    }
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "durel": {
+    "n_used": 161,
+    "by_stratum": {
+     "HOMONYM": {
+      "nT": 21,
+      "nF": 39,
+      "auc": 0.775,
+      "mean_T": 3.24,
+      "mean_F": 2.1,
+      "TF_gap": 1.14,
+      "floorfrac_F": 0.282
+     },
+     "POLYSEME": {
+      "nT": 36,
+      "nF": 65,
+      "auc": 0.799,
+      "mean_T": 3.33,
+      "mean_F": 2.12,
+      "TF_gap": 1.21,
+      "floorfrac_F": 0.154
+     }
+    },
+    "AUC_diff(H-P)": -0.024,
+    "floorfrac_diff(H-P)": 0.128,
+    "perm_p_AUC": 0.8531,
+    "perm_p_floor": 0.1323,
+    "boot95_AUC_diff_itemnaive": [
+     -0.176,
+     0.121
+    ],
+    "boot95_AUC_diff_clustered": [
+     -0.232,
+     0.153
+    ],
+    "lowoverlap_AUC_diff(H-P)": -0.015,
+    "lowoverlap_n": 159,
+    "homonym_F_mean_by_lemma": {
+     "ball": 2.2,
+     "bank": 2.0,
+     "case": 2.0,
+     "date": 1.67,
+     "pitch": 1.0,
+     "pitcher": 4.0,
+     "plane": 2.0,
+     "rock": 1.5,
+     "school": 3.0,
+     "seal": 2.0,
+     "tear": 1.0
+    }
+   },
+   "cont": {
+    "n_used": 161,
+    "by_stratum": {
+     "HOMONYM": {
+      "nT": 21,
+      "nF": 39,
+      "auc": 0.83,
+      "mean_T": 83.62,
+      "mean_F": 38.9,
+      "TF_gap": 44.72,
+      "floorfrac_F": 0.179
+     },
+     "POLYSEME": {
+      "nT": 36,
+      "nF": 65,
+      "auc": 0.852,
+      "mean_T": 76.72,
+      "mean_F": 31.85,
+      "TF_gap": 44.88,
+      "floorfrac_F": 0.2
+     }
+    },
+    "AUC_diff(H-P)": -0.022,
+    "floorfrac_diff(H-P)": -0.021,
+    "perm_p_AUC": 0.8332,
+    "perm_p_floor": 0.8112,
+    "boot95_AUC_diff_itemnaive": [
+     -0.162,
+     0.113
+    ],
+    "boot95_AUC_diff_clustered": [
+     -0.209,
+     0.124
+    ],
+    "lowoverlap_AUC_diff(H-P)": -0.014,
+    "lowoverlap_n": 159,
+    "homonym_F_mean_by_lemma": {
+     "ball": 39.4,
+     "bank": 36.6,
+     "case": 23.85,
+     "date": 35.0,
+     "pitch": 15.0,
+     "pitcher": 100.0,
+     "plane": 1.0,
+     "rock": 59.5,
+     "school": 76.6,
+     "seal": 85.0,
+     "tear": 18.0
+    }
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "durel": {
+    "n_used": 161,
+    "by_stratum": {
+     "HOMONYM": {
+      "nT": 21,
+      "nF": 39,
+      "auc": 0.894,
+      "mean_T": 3.48,
+      "mean_F": 1.92,
+      "TF_gap": 1.55,
+      "floorfrac_F": 0.41
+     },
+     "POLYSEME": {
+      "nT": 36,
+      "nF": 65,
+      "auc": 0.878,
+      "mean_T": 3.53,
+      "mean_F": 2.42,
+      "TF_gap": 1.11,
+      "floorfrac_F": 0.0
+     }
+    },
+    "AUC_diff(H-P)": 0.016,
+    "floorfrac_diff(H-P)": 0.41,
+    "perm_p_AUC": 0.7633,
+    "perm_p_floor": 0.0,
+    "boot95_AUC_diff_itemnaive": [
+     -0.078,
+     0.112
+    ],
+    "boot95_AUC_diff_clustered": [
+     -0.089,
+     0.094
+    ],
+    "lowoverlap_AUC_diff(H-P)": 0.023,
+    "lowoverlap_n": 159,
+    "homonym_F_mean_by_lemma": {
+     "ball": 2.4,
+     "bank": 1.6,
+     "case": 1.54,
+     "date": 2.0,
+     "pitch": 1.0,
+     "pitcher": 4.0,
+     "plane": 2.0,
+     "rock": 2.5,
+     "school": 2.6,
+     "seal": 1.0,
+     "tear": 1.0
+    }
+   },
+   "cont": {
+    "n_used": 161,
+    "by_stratum": {
+     "HOMONYM": {
+      "nT": 21,
+      "nF": 39,
+      "auc": 0.907,
+      "mean_T": 88.33,
+      "mean_F": 33.08,
+      "TF_gap": 55.26,
+      "floorfrac_F": 0.487
+     },
+     "POLYSEME": {
+      "nT": 36,
+      "nF": 65,
+      "auc": 0.904,
+      "mean_T": 87.22,
+      "mean_F": 45.54,
+      "TF_gap": 41.68,
+      "floorfrac_F": 0.031
+     }
+    },
+    "AUC_diff(H-P)": 0.003,
+    "floorfrac_diff(H-P)": 0.456,
+    "perm_p_AUC": 0.9567,
+    "perm_p_floor": 0.0,
+    "boot95_AUC_diff_itemnaive": [
+     -0.095,
+     0.097
+    ],
+    "boot95_AUC_diff_clustered": [
+     -0.111,
+     0.068
+    ],
+    "lowoverlap_AUC_diff(H-P)": 0.008,
+    "lowoverlap_n": 159,
+    "homonym_F_mean_by_lemma": {
+     "ball": 42.0,
+     "bank": 24.0,
+     "case": 15.77,
+     "date": 31.67,
+     "pitch": 0.0,
+     "pitcher": 100.0,
+     "plane": 20.0,
+     "rock": 52.5,
+     "school": 67.0,
+     "seal": 80.0,
+     "tear": 0.0
+    }
+   }
+  }
+ },
+ "overlap_by_stratum_gold": {
+  "HOMONYM-F": 0.0,
+  "HOMONYM-T": 0.0,
+  "POLYSEME-F": 0.0,
+  "POLYSEME-T": 0.0081
+ }
+}

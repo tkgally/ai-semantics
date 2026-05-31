@@ -10,8 +10,7 @@ meaning-senses:
   - human-comparison
 status: proposed
 anchor: resource/wordnet-sense-inventory
-contingent-on:
-  - multimodal-image-anchor
+contingent-on: []
 created: 2026-05-31
 updated: 2026-05-31
 links:
@@ -39,7 +38,9 @@ links:
 > run record + `PREREG.md` in [`experiments/runs/2026-05-31-multimodal-grounding-image-v1/`](../../../experiments/runs/2026-05-31-multimodal-grounding-image-v1/README.md).
 > Cost **$0.2286 billed**, 144 calls, 0 NA. Independent pre-run critic (forced the anchor relabel +
 > stimulus fixes) + independent post-run verifier (every figure reproduced from raw, 0 re-parse
-> mismatches). `contingent-on: multimodal-image-anchor` (the anchor choice is surfaced, non-blocking).
+> mismatches). The anchor decision [`decisions/resolved/multimodal-image-anchor`](../../decisions/resolved/multimodal-image-anchor.md)
+> was **ratified 2026-05-31 (Tom: "A stands")** — `contingent-on: []`; the null stands on its
+> WordNet sense-inventory anchor, scoped to the binary same/different-synset separation.
 
 ## One-line finding
 
@@ -137,8 +138,9 @@ opposite micro-wobble on the surface-similarity control.
 - **Image-dissimilarity confound** (above): the probe cannot distinguish perceptual grounding of *sense*
   from graded image-*surface*-dissimilarity tracking. Stated in PREREG before the run.
 - **Gold is author synset-assignment, not per-item human labels** (WordNet inventory is the human part;
-  the sentence→synset mapping is the author's). Weaker than WiC/SemCor; surfaced in
-  [`decisions/open/multimodal-image-anchor`](../../decisions/open/multimodal-image-anchor.md).
+  the sentence→synset mapping is the author's). Weaker than WiC/SemCor; the anchor choice was ratified in
+  [`decisions/resolved/multimodal-image-anchor`](../../decisions/resolved/multimodal-image-anchor.md)
+  (Tom: "A stands").
 - **Binary-scoped, not graded; not a grounding verdict.** Per [`concept/embodied-cognition`](../../base/concepts/embodied-cognition.md)
   and [`concept/symbol-grounding-problem`](../../base/concepts/symbol-grounding-problem.md), even the gpt
   effect shows behavior *sensitive to* image input on a continuous scale, not a perceptual symbol system.
@@ -152,4 +154,5 @@ opposite micro-wobble on the surface-similarity control.
   the text-side grounding null is now joined by an image-side redundancy null — the grounding axis is
   **two negatives** for the lexical wedge's clear-homonym end, with fine polysemy still open.
 - Anchored to [`resource/wordnet-sense-inventory`](../../base/resources/wordnet-sense-inventory.md).
-  `contingent-on: multimodal-image-anchor` (open; anchor choice surfaced to Tom). Cost $0.2286.
+  `contingent-on: []` (anchor ratified 2026-05-31, [`decisions/resolved/multimodal-image-anchor`](../../decisions/resolved/multimodal-image-anchor.md):
+  "A stands"). Cost $0.2286.
