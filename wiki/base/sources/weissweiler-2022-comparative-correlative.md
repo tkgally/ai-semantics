@@ -47,7 +47,7 @@ Relation to this project: this is an early, single-construction instance of the 
 
 ## Key passages
 
-Abstract quoted verbatim from the ACL Anthology page (https://aclanthology.org/2022.emnlp-main.746/) and cross-checked against the arXiv abs page (https://arxiv.org/abs/2210.13181); both fetched 2026-05-29 and identical. Body section quotes read verbatim from the ar5iv HTML rendering (https://ar5iv.labs.arxiv.org/html/2210.13181, fetched 2026-05-29); no pagination in HTML, so sections are cited by heading/number as printed.
+Abstract quoted verbatim from the ACL Anthology page (https://aclanthology.org/2022.emnlp-main.746/) and cross-checked against the arXiv abs page (https://arxiv.org/abs/2210.13181); both fetched 2026-05-29 and identical. Body section quotes read verbatim from the ar5iv HTML rendering (https://ar5iv.labs.arxiv.org/html/2210.13181, fetched 2026-05-29; re-verified character-for-character 2026-05-31); no pagination in HTML, so sections are cited by heading/number as printed. On re-verification all three body quotes matched exactly and were located at: quote 1 — §1 Introduction (second paragraph); quote 2 — §1 Introduction (final paragraph); quote 3 — §6 Conclusion (first sentence). (An earlier status note had mislabelled quote 2 as "§4.2"; the correct locator is §1 Introduction.)
 
 **Abstract (verbatim, ACL Anthology / arXiv abs) — design and the central finding (the title's question):**
 
@@ -87,4 +87,4 @@ Abstract quoted verbatim from the ACL Anthology page (https://aclanthology.org/2
 
 ## Status in wanted.md
 
-Noted on [`source/weissweiler-2023-cxg-insight`](weissweiler-2023-cxg-insight.md) ("Note on the broader Weissweiler line") as a paper to catalogue if/when cited by a finding. Now `received`: title, authors, venue (EMNLP 2022, pp. 10859–10882), and arXiv id (2210.13181) verified against the ACL Anthology page and arXiv; full abstract verbatim from ACL Anthology (identical to arXiv abs); three section-level body quotes verbatim from ar5iv HTML (§1, §4.2, §6), all fetched 2026-05-29. Full ACL PDF (pp. 10859–10882) available for page-level provenance and exact per-layer/per-model numbers if a finding needs them.
+Noted on [`source/weissweiler-2023-cxg-insight`](weissweiler-2023-cxg-insight.md) ("Note on the broader Weissweiler line") as a paper to catalogue if/when cited by a finding. Now `received`: title, authors, venue (EMNLP 2022, pp. 10859–10882), and arXiv id (2210.13181) verified against the ACL Anthology page and arXiv; full abstract verbatim from ACL Anthology (identical to arXiv abs); three section-level body quotes verbatim from ar5iv HTML (§1 ×2, §6), fetched 2026-05-29 and re-verified character-for-character 2026-05-31. Full ACL PDF (pp. 10859–10882) available for page-level provenance and exact per-layer/per-model numbers if a finding needs them.

@@ -1,6 +1,6 @@
 # Executive summary
 
-*A plain-language summary of what this project is and where it stands. Updated at the end of each work session. Last updated: **2026-05-31** (later session — ran the **top-priority lexical "polysemy-vs-homonymy" test** [a powered null] and a **bridge-confound cleanup** [partial de-confounding], applied the researcher's decisions, and catalogued a relational-axis dataset).*
+*A plain-language summary of what this project is and where it stands. Updated at the end of each work session. Last updated: **2026-05-31** (a **documentation / consolidation session** — no new experiments, $0 spent: refreshed the two theory pages to absorb the latest results, hardened the provenance of eight cited sources [re-verifying quotes verbatim where fetchable, keeping honest flags where not], swept the wiki for stale cross-references and anchor notes, and groomed the resource catalog. **No finding changed.** The substantive research state below is carried unchanged from the prior session, which ran the lexical "polysemy-vs-homonymy" test [a powered null], a bridge-confound cleanup [partial de-confounding], applied the researcher's decisions, and catalogued a relational-axis dataset.)*
 
 For the navigable catalog of every page, see [`index.md`](index.md). For the live next-action handoff, see [`NEXT.md`](../NEXT.md). For the full charter, see [`PROJECT.md`](../PROJECT.md).
 

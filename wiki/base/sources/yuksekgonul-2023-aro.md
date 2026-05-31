@@ -19,8 +19,8 @@ meaning-senses:
   - distributional
 status: received
 created: 2026-05-30
-updated: 2026-05-30
-pdf-pages: "arXiv 2210.01936v3 abstract page (verbatim abstract fetched 2026-05-30); ICLR 2023 virtual poster page (key finding paraphrases confirmed 2026-05-30). Body section quotes not yet extracted from full PDF."
+updated: 2026-05-31
+pdf-pages: "arXiv 2210.01936v3 abstract page (verbatim abstract fetched 2026-05-30, re-confirmed 2026-05-31); ICLR 2023 virtual poster page (key finding paraphrases confirmed 2026-05-30). Two §2.3 body sentences (CLIP/BLIP relation + attribution percentages) verified verbatim from the ar5iv HTML rendering (ar5iv.labs.arxiv.org/html/2210.01936, fetched 2026-05-31); HTML carries no page numbers, so body quotes are cited by section. Per-model numeric table cells (Figure 1 / appendix) NOT transcribed — not independently confirmed at cell level."
 links:
   - rel: supports
     target: concept/multimodal-compositionality
@@ -59,7 +59,15 @@ Abstract quoted verbatim from **arXiv 2210.01936v3 abstract page** (https://arxi
 
 > "Despite the success of large vision and language models (VLMs) in many downstream applications, it is unclear how well they encode compositional information. Here, we create the Attribution, Relation, and Order (ARO) benchmark to systematically evaluate the ability of VLMs to understand different types of relationships, attributes, and order. ARO consists of Visual Genome Attribution, to test the understanding of objects' properties; Visual Genome Relation, to test for relational understanding; and COCO & Flickr30k-Order, to test for order sensitivity. ARO is orders of magnitude larger than previous benchmarks of compositionality, with more than 50,000 test cases. We show where state-of-the-art VLMs have poor relational understanding, can blunder when linking objects to their attributes, and demonstrate a severe lack of order sensitivity. VLMs are predominantly trained and evaluated on large datasets with rich compositional structure in the images and captions. Yet, training on these datasets has not been enough to address the lack of compositional understanding, and evaluating on these datasets has failed to surface this deficiency. To understand why these limitations emerge and are not represented in the standard tests, we zoom into the evaluation and training procedures. We demonstrate that it is possible to perform well on retrieval over existing datasets without using the composition and order information. Given that contrastive pretraining optimizes for retrieval on datasets with similar shortcuts, we hypothesize that this can explain why the models do not need to learn to represent compositional information. This finding suggests a natural solution: composition-aware hard negative mining. We show that a simple-to-implement modification of contrastive learning significantly improves the performance on tasks requiring understanding of order and compositionality."
 
-**Note on body/results quotes:** Specific per-model per-task accuracy numbers and section-level body passages are not verified here — the arXiv HTML version was unavailable (404) and the PDF was binary. The abstract is verified verbatim; detailed results live in the paper's Table 1 and section 3. A full PDF ingestion or arXiv HTML fetch when available would supply section-level quotes with page numbers.
+**§2.3 "Evaluating VLMs on ARO" (verbatim, ar5iv HTML, fetched 2026-05-31) — relation performance:**
+
+> "Quantitatively, while BLIP obtains 66% macro accuracy for spatial relations, it obtains 56% accuracy in verbs. In contrast, CLIP achieves 56% in spatial relations and 61% in verbs."
+
+**§2.3 (verbatim, ar5iv HTML, fetched 2026-05-31) — attribution performance:**
+
+> "In attribution tests, although BLIP (88%) and XLVM (87%) perform remarkably well, CLIP (62%) is again close to chance level."
+
+**Correction on table location.** Earlier drafts of this page assumed per-model accuracy numbers live in "Table 1." That is wrong: in the ar5iv HTML, **Table 1's caption is "List of perturbations used in order sensitivity experiments"** (§2.2) — it lists the order-shuffle perturbation types, not model scores. The aggregate per-model accuracy bars live in **Figure 1** (and detailed per-model cells in the appendix). The Figure 1 / appendix numeric cells are **NOT transcribed here**: they were not independently confirmed at the cell level (a single small-model extraction is not sufficient provenance for individual numeric cells). The two prose sentences above (CLIP/BLIP percentages) were each confirmed verbatim across two independent ar5iv fetches and are safe to cite. A full PDF read with page numbers remains the route to citing individual table cells.
 
 ## SugarCrepe (Hsieh et al. 2023, NeurIPS) — brief note
 
@@ -82,7 +90,7 @@ Authors: Cheng-Yu Hsieh, Jieyu Zhang, Zixian Ma, Aniruddha Kembhavi, Ranjay Kris
 
 - Claims about generative VLMs — the paper tests discriminative (retrieval/matching) models, primarily CLIP variants.
 - Claims about specific modern generative models (GPT-4V, Gemini, etc.) probed in this project's panel — those are outside the paper's scope.
-- The exact magnitude of each failure by sub-dimension (needs Table 1 from the full PDF).
+- The exact per-model magnitude of each failure by sub-dimension beyond the §2.3 prose percentages transcribed above (CLIP 56%/61% relations, 62% attribution; BLIP 66%/56% relations, 88% attribution). The full per-model Figure 1 / appendix table cells are not transcribed (not confirmed at cell level).
 - Claims that compositionality is fully fixed by hard negative mining — SugarCrepe (Hsieh et al. 2023) shows improvements were overestimated.
 
 ## Known limits
@@ -90,4 +98,4 @@ Authors: Cheng-Yu Hsieh, Jieyu Zhang, Zixian Ma, Aniruddha Kembhavi, Ranjay Kris
 - Behavioral evaluation; does not probe internal representations.
 - Discriminative task (image-text retrieval) — failure mode may not transfer to generative or prompted evaluation settings used by this project.
 - The "bags of words" framing was developed for contrastively trained CLIP-style models; its applicability to instruction-tuned generative VLMs is a separate empirical question.
-- Body quotes and numerical results are abstract-verified only; Table 1 per-model numbers are unverified.
+- Two §2.3 prose sentences with CLIP/BLIP relation and attribution percentages are now verified verbatim (ar5iv HTML, 2026-05-31). Individual per-model table/figure cells remain unverified at cell level and are not transcribed. (Note: "Table 1" in this paper is the order-perturbation list, not a model-score table.)

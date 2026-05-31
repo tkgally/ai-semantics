@@ -9,7 +9,7 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-30
+updated: 2026-05-31
 links:
   - rel: refines
     target: open-question/lexical-polysemy-gradience

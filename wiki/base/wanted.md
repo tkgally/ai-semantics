@@ -55,6 +55,9 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 - [P3] Millikan, R.G. 1984. *Language, Thought, and Other Biological Categories.* MIT.
   why: teleosemantics; only fetch if a finding needs it.
   status: wanted
+- [P3] Brandom, R.B. 1994. *Making It Explicit.* Harvard. (or *Articulating Reasons*, 2000.)
+  why: the systematic statement of inferentialism — content fixed by an expression's position in a web of material inferences, not by prior relation to objects; grounds the philosophical framing cited as "not in-repo" in [`concept/inferential-meaning`](concepts/inferential-meaning.md). Fetch only if a finding leans on the normative-inferentialism distinction.
+  status: wanted
 
 ### Firth / Harris originals
 
@@ -135,7 +138,7 @@ Scouted 2026-05-30 ([`base/resources/multimodal-anchor-scouting.md`](resources/m
 
 - [P1] Lancaster Sensorimotor Norms (Lynott, Connell, Brysbaert, Brand & Carney 2020). OSF https://osf.io/7emr6/. CC BY 4.0 (verified). 39,707 words × 11 perceptual/action dimensions, ~3,500 raters.
   why: the cheapest first multimodal unit — a **text-side perceptual-grounding moderator on the existing DWUG lexical result** (does monotonicity strengthen for perceptually grounded words?). Joins the lexical program to the grounded axis; $0, no new probe; a plain data download.
-  status: wanted (priority; scouted 2026-05-30, license + OSF URL verified, data not yet fetched).
+  status: catalogued (2026-05-30 — fetched + checksummed and resource page created: wiki/base/resources/lancaster-sensorimotor-norms.md; see page for the license / dimensions / counts / fetchability / fit verification breakdown)
 - [P2] THINGS-data behavioral triplet judgments (Hebart et al., eLife 2023). OSF https://osf.io/f5rn6/. CC0 (via the eLife publication; OSF README not directly inspected).
   why: 4.7M graded human object-similarity judgments — the strongest multimodal *behavioral* anchor if a VLM image-input comparison axis opens (Q3 Option B). Needs a probe design + budget.
   status: wanted (scouted 2026-05-30; CC0 via secondary source; verify OSF README before cataloguing as a typed resource).
