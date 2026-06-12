@@ -5,9 +5,8 @@ title: LLMs treat the AANN ("a beautiful three days") construction as a unit, no
 meaning-senses:
   - constructional
   - functional-vs-formal
-status: proposed
-contingent-on:
-  - aann-behavioral-operationalization
+status: designed
+contingent-on: []
 created: 2026-05-28
 updated: 2026-06-12
 links:
@@ -16,7 +15,7 @@ links:
   - rel: refines
     target: open-question/relational-meaning-pilot
   - rel: operationalizes
-    target: design/aann-construction-v1
+    target: design/aann-construction-v2
   - rel: depends-on
     target: resource/mahowald-2023-aann-stimuli
 ---
@@ -66,13 +65,23 @@ resolved [`decisions/resolved/aann-panel-logprob-blocker`](../../decisions/resol
 (no OpenRouter logprobs, no local GPU, no key will be provisioned), so "designed" would be false —
 [`experiments/designs/aann-construction-v1.md`](../../../experiments/designs/aann-construction-v1.md)
 is retired unrun. The indicator question was **reopened** as
-[`decisions/open/aann-behavioral-operationalization`](../../decisions/open/aann-behavioral-operationalization.md)
+[`decisions/resolved/aann-behavioral-operationalization`](../../decisions/resolved/aann-behavioral-operationalization.md)
 (provisional default: gradient-primary behavioral instrument on the existing panel, Mahowald
 Exp 2/3 ratings as anchor). The predictions and falsification *substance* above stand; only the
 indicator clause ("surprisal contrast", "continuation likelihood") is reopened — read those
 through whatever instrument the new decision ratifies. The conjecture returns to `designed` when
-a frozen v2 design exists under a ratified instrument. The probe has **never been run**; no AANN
-result exists or is implied.
+a frozen v2 design exists under a ratified instrument.
+
+**Updated 2026-06-12 (later session): status `proposed` → `designed`.** The instrument decision
+was **ratified** by the cross-session adversarial-review procedure
+([`decisions/resolved/aann-behavioral-operationalization`](../../decisions/resolved/aann-behavioral-operationalization.md),
+ADOPT DEFAULT with nine binding conditions), the Mahowald repo was mirrored and verified (MIT;
+Exp-2 item-level ratings usable), and the frozen behavioral v2 design now exists:
+[`experiments/designs/aann-construction-v2.md`](../../../experiments/designs/aann-construction-v2.md)
+(gradient-primary, dual-framing, frequency-controlled held-out arm, Tier-0 manipulation check;
+read predictions 1–2 above through that instrument — "continuation likelihood" becomes "prompted
+graded acceptability", with the gradient scored against the **empirical** Exp-2 MTurk cell means,
+never a stipulated ordering). `contingent-on` cleared accordingly.
 
 ## Notes / caveats
 

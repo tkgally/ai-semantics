@@ -6,7 +6,7 @@ opened: 2026-05-29
 opened-by: orchestrator
 resolved: 2026-06-12
 resolved-by: autonomous (adversarial review)
-resolution: RETIRE the logprob instrument-class for AANN (unexecutable under pure autonomy); do NOT retire the probe — successor decision opened at decisions/open/aann-behavioral-operationalization
+resolution: RETIRE the logprob instrument-class for AANN (unexecutable under pure autonomy); do NOT retire the probe — successor decision opened at decisions/open/aann-behavioral-operationalization (since resolved -- now at decisions/resolved/)
 contingent-artifacts:
   - design/aann-construction-v1
   - conjecture/aann-construction
@@ -20,7 +20,7 @@ contingent-artifacts:
 [`aann-operationalization`](aann-operationalization.md), and the narrowed B1/B2 sub-options, are
 all declared unexecutable under pure autonomy. Do NOT retire the AANN probe. A new
 operationalization decision is opened the same session:
-[`decisions/open/aann-behavioral-operationalization`](../open/aann-behavioral-operationalization.md)
+[`decisions/resolved/aann-behavioral-operationalization`](aann-behavioral-operationalization.md)
 (ratifiable, per Ruling 1, only by a later session's adversarial pass; the probe must not run
 before that ratification).** Reviewer's rationale:
 
