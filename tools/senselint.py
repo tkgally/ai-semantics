@@ -179,6 +179,7 @@ TYPE_DIR_MAP = {
     'conjecture':    'wiki/findings/conjectures',
     'theory':        'wiki/findings/theory',
     'open-question': 'wiki/findings/open-questions',
+    'essay':         'wiki/findings/essays',
     # experiments/designs — referenced by some pages
     'design':        'experiments/designs',
 }
@@ -547,7 +548,7 @@ def check_contingent_language(relpath, meta, report):
     if flat_co:
         report.info(relpath,
             f"contingent-on is non-empty {flat_co} — review for settled language "
-            f"(must remain provisional until Tom ratifies)")
+            f"(must remain provisional until the decision is ratified; see PROJECT.md §12.3)")
 
 
 def check_index_coverage(relpath, meta, index_text, report):

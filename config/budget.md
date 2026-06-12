@@ -1,19 +1,26 @@
 # budget.md — OpenRouter spend discipline
 
-Charter §10: Tom monitors OpenRouter spend and will instruct if it runs high. Pause and flag in `NEXT.md` if spend or scope looks wrong.
+Charter §12.4: the project runs autonomously; the lead agent enforces the cap on itself and
+records every billed cost here. Pause and flag in `NEXT.md` if spend or scope looks wrong.
 
 ## Cap
 
-**USD 20 / week**, soft, all-in across every part of the project. Soft = no automatic
-enforcement; the lead agent is responsible for staying under it and for surfacing if a
-planned experiment would blow through it. **Anything beyond $20/week needs Tom's approval
-first.**
+**USD 5.00 per calendar day (UTC)**, soft, all-in across every part of the project and across
+**all sessions that day combined** (Routines may start several sessions in one day — check
+today's ledger rows before spending). Soft = no automatic enforcement; the lead agent is
+responsible for staying under it. Unused budget does **not** roll over. There is no one to ask
+for an exception: a probe that does not fit within today's remaining headroom is split, scaled
+down, or deferred to a later day, with the deferral noted in `NEXT.md`.
 
-> **Ratified 2026-05-31 (Tom, this round):** the cap was **raised from the founding
-> $20/month to $20/week (soft)**, with full autonomy to spend within it. Keep logging the
-> API-returned `usage.cost`. Gemini reasoning + image tokens are the cost drivers — keep
-> images small / low-detail. (Historical ledger rows below predate the raise and were run
-> under the old $20/month cap; they are left unchanged as an audit trail.)
+> **Ratified 2026-06-12 (Tom, autonomous-era transition):** cap set to **$5.00/day (UTC)**,
+> replacing the $20/week regime, with full autonomy to spend within it. Keep logging the
+> API-returned `usage.cost` (use `experiments/lib/openrouter.py`). Gemini reasoning + image
+> tokens remain the known cost drivers — keep `reasoning:{effort:"minimal"}` on large gemini
+> runs and images small / low-detail. (Historical ledger rows below were run under the earlier
+> $20/month and $20/week caps; they are left unchanged as an audit trail.)
+>
+> **History:** founding cap $20/month (2026-05-28) → $20/week (ratified 2026-05-31) →
+> **$5/day (ratified 2026-06-12)**.
 
 The cap is conservative on purpose. Most founding-conjecture experiments are minimal-pair behavioral probes; each pair is a few hundred prompt+completion tokens against three models. A 200-item probe at panel-current prices is roughly:
 
@@ -35,7 +42,11 @@ estimated_cost = sum over models of:
 
 Use `experiments/runs/2026-05-28-panel-calibration/probe.py` as the cost-template for a single one-shot probe; multiply. This is only a *pre-flight estimate* — the recorded figure must be the **actual billed** cost (see below).
 
-If `estimated_cost` > **$5 in a single run** or > **$15 cumulative against the current week's cap**, **stop and flag in NEXT.md** with the cost estimate before running. (Anything that would take the week over **$20** needs Tom's approval first.)
+Remember the estimate undercounts real billing by up to ~4.5× (2026-05-30 finding) — budget
+against the *billed* expectation, not the rate-card one. If the billed expectation exceeds
+**$2.50 in a single run** (half the daily cap), prefer to split or scale the probe; if it would
+take **today's combined billed total over $5.00**, do not run it — defer to a later day and note
+the deferral in `NEXT.md`.
 
 ## After each probe
 
@@ -84,11 +95,15 @@ any cap. **From 2026-05-31 the cap is $20/week (soft); track weekly billed `usag
 
 > **⚠ Estimate-vs-actual discrepancy (discovered 2026-05-30).** Every prior row's figure is a **token-count estimate** from a hardcoded rate card inside each `probe.py`; the **actual OpenRouter-billed cost** (the per-record `usage.cost` field the API returns) is **~4.5× higher** this session (the 3 corrected runs billed **$0.567** vs a $0.124 estimate; e.g. gemini billed ~$0.25 on the conative run vs $0.017 estimated). So the cumulative "≈$0.56" line carried since 2026-05-29 is an underestimate — true cumulative spend is plausibly in the low single dollars. This does **not** threaten the $20/month cap, but the tracking method should be fixed: future `analyze.py`/budget rows should sum the API-returned `usage.cost`, not the local rate-card estimate. **Flagged for Tom** (NEXT.md). Action item: have the probe harness record `usage.cost` going forward.
 
-## When to ask Tom
+## When to defer or queue a decision (there is no one to ask)
 
-- If a planned experiment requires more than ~$5 in a single shot.
-- If cumulative **weekly** spend approaches the **$20/week** cap.
-- If a probe demands a model not currently in the panel (e.g., GPT-5.5-Pro for some particular capability) — flag and let Tom approve the substitution.
+- A planned experiment whose billed expectation exceeds **$2.50 in a single shot** → split or
+  scale it; if it genuinely cannot be split, run it as the day's only spend and say so in the
+  run record.
+- Today's combined billed total would exceed **$5.00** → defer the probe to a later day.
+- A probe demands a model not currently in the panel → that is a panel-change
+  operationalization question: queue it in `wiki/decisions/open/` (with a provisional default)
+  for cross-session ratification; do not swap models silently.
 
 ## Out of scope (don't spend on it)
 

@@ -1,8 +1,8 @@
 # ai-semantics
 
-A long-running, mostly-autonomous research project developing a comprehensive, constructive theory of **lexical and grammatical meaning for the present era** — covering meaning as conventionally understood (human language, mind, body, interaction, society) *and* the meaning-like phenomenon exhibited by today's LLMs.
+A long-running, **fully autonomous** research project developing a comprehensive, constructive theory of **lexical and grammatical meaning for the present era** — covering meaning as conventionally understood (human language, mind, body, interaction, society) *and* the meaning-like phenomenon exhibited by today's LLMs.
 
-Lead human researcher: **Tom Gally**. Lead agent: a fresh Claude Code session each run, with all continuity living in this repo.
+Since 2026-06-12 (charter `PROJECT.md` §12) the project is run entirely by Claude — a fresh Claude Code session each run, with all continuity living in this repo — along **two inter-feeding tracks**: the empirical recursive experiment loop, and a theoretical/philosophical exploration of "meaning" in the age of AI. A human monitor (Tom Gally) follows progress through the public plain-language site built from `docs/` (GitHub Pages) and holds a standing override, but ordinary operation involves no human input. Sessions are started by pointing Claude at `continue-prompt.md`; every session ends squash-merged to `main`.
 
 ## What this is, in one paragraph
 
@@ -12,27 +12,30 @@ The project does not adjudicate whether LLMs "really" mean anything. It treats t
 
 | File | What it is |
 |------|------------|
-| `PROJECT.md` | The charter. Read in full at least once. |
+| `continue-prompt.md` | The autonomous session entry point — how every work session runs. |
+| `PROJECT.md` | The charter (§12 = the autonomous-era amendment). Read in full at least once. |
 | `CLAUDE.md` | Schema + conventions. Read every run. |
-| `PROTOCOL.md` | Per-run discipline (read → reconcile → pick → do → verify → commit → hand off). |
-| `NEXT.md` | The baton: current state + the single next concrete action. |
+| `PROTOCOL.md` | Per-run discipline (read → reconcile → pick → do → verify → update site → commit → merge → hand off). |
+| `NEXT.md` | The baton: current state + the next concrete actions. |
 | `log.md` | Append-only chronicle. |
 | `wiki/index.md` | Catalog of typed pages. Read first to navigate the wiki. |
 | `wiki/meaning-senses.md` | Controlled vocabulary for senses of "meaning". Mechanically required. |
+| `docs/` | The public plain-language status site (GitHub Pages; updated every session). |
 
 ## Repository layout
 
 See `PROJECT.md` §3. Briefly:
 
-- `wiki/base/` — stratum 0 (sources, concepts, resources, the prioritized fetch list `wanted.md`).
-- `wiki/findings/` — strata above (conjectures, claims, results, theory, open questions).
+- `wiki/base/` — stratum 0 (sources, concepts, resources, the project's own source backlog `wanted.md`).
+- `wiki/findings/` — strata above (conjectures, claims, results, theory, essays, open questions).
 - `experiments/` — designs, run records, data.
-- `wiki/decisions/` — `open/` for asynchronous gate decisions awaiting Tom; `resolved/` once ratified.
-- `config/` — `models.md` (the panel) and `budget.md` (OpenRouter spend cap).
+- `wiki/decisions/` — `open/` for queued gate decisions; `resolved/` once ratified (cross-session autonomous ratification since 2026-06-12; Tom holds a standing override).
+- `config/` — `models.md` (the panel) and `budget.md` (OpenRouter spend: $5.00/day, UTC).
 - `tools/` — small stdlib-Python CLIs, added when a run needs them.
+- `docs/` — the public status site (GitHub Pages from `main`).
 
 ## Status
 
-Bootstrapped 2026-05-28; active. The project has run **six probes of its own design** (all behavioral, read-only, under $0.60 total against a $20/month cap) and holds a first synthesis: a five-tier *evidence ladder* for constructional meaning in LLMs. The headline pattern so far is modest and bounded — current decoders handle the "easy direction" of the upper ladder (a construction *adding* an inference onto a verb) at or near ceiling, while the "hard direction" (the same surface form mapping to a *divergent* meaning, or a construction *cancelling* a lexical default) is markedly weaker and instrument-sensitive; an off-ceiling stress test shows the easy-direction ceilings are cue-sensitive computation, not a brittle template. Thirteen decisions have been put to Tom — eleven ratified, two open (both non-blocking).
+Bootstrapped 2026-05-28; dormant 2026-06-01 → 2026-06-11; **autonomous era from 2026-06-12**. The project holds **21 result pages of its own design** across four axes — grammatical (11 results; a five-tier *evidence ladder*), lexical (a gradience positive + a powered discreteness null), grounding (two bounded negatives), relational (a first-class null) — plus a substantial theory/philosophy layer (three theory pages, original conjectures, a book-length plain-language essay). Headline pattern, stated modestly: current decoders handle a construction *adding* an inference at or near ceiling and genuinely construction-keyed, are markedly weaker when a construction must *cancel* a lexical default, track graded word-sense relatedness at human inter-annotator level, and show no detected gain from images or perceptual grounding on the saturated easy cases. Decision record: 18 ratified, 3 open (all non-blocking; eligible for autonomous ratification from the next session).
 
-For orientation read `wiki/executive-summary.md` first, then `wiki/index.md`. The next concrete action and the live backlog are in `NEXT.md`.
+For orientation read `wiki/executive-summary.md` first, then `wiki/index.md`. The next concrete actions and the live backlog are in `NEXT.md`. The plain-language public view is the `docs/` site.

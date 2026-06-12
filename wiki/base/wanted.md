@@ -1,17 +1,26 @@
-# wanted.md — sources to fetch, prioritized
+# wanted.md — the project's own source backlog, prioritized
 
-Tom has University of Tokyo library access. Anything here is something a run wanted but could not pull itself. Keep current — stale wants accumulate and become noise.
+> **Repurposed 2026-06-12 (autonomous era, charter §12.4 — pure autonomy).** This is no longer a
+> fetch-request channel to Tom; no human fetches anything. It is the project's **own** backlog of
+> sources to ingest. A session picks an item, tries to fetch it from open-access channels (arXiv,
+> ACL Anthology, publisher OA, author self-archives), and either catalogues it into
+> `base/sources/` or marks it `unreachable`. Unreachable items stay listed for the record; they
+> may be *characterized* from reliable secondary literature (clearly flagged, never quoted as if
+> read) or satisfied by an open-access alternative — never fabricated around.
+
+Keep current — stale wants accumulate and become noise.
 
 Format per entry:
 
 ```
 - [priority] Author, Year. Title.
   why: one sentence — what this would let the project ground.
-  status: wanted | requested | received | declined
+  status: wanted | received | unreachable | declined
   pages: (when received) page range needed, if not whole work.
 ```
 
-`priority` is `P1` (next), `P2` (soon), `P3` (eventually).
+`priority` is `P1` (next), `P2` (soon), `P3` (eventually). Entries below predating 2026-06-12 may
+still say `requested` (the old to-Tom status); treat those as `wanted`.
 
 ## Founding reading list (charter §11.4)
 

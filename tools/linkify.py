@@ -42,6 +42,7 @@ TYPE_DIR = {
     "conjecture": "wiki/findings/conjectures",
     "theory": "wiki/findings/theory",
     "open-question": "wiki/findings/open-questions",
+    "essay": "wiki/findings/essays",
 }
 
 _TYPED = re.compile(r"^(?P<type>" + "|".join(TYPE_DIR) + r")/(?P<id>[a-z0-9-]+)$")
