@@ -26,7 +26,8 @@ links:
 > distributional story survives order-scrambling. The question **stays open** because the bounded
 > null leaves the sharper arms unrun: the **history-perturbation arm** (reassign a coined term
 > mid-trajectory, test position-sensitivity), **image referents**, and **cross-family dyads** — see
-> [`decisions/open/relational-pilot-operationalization`](../../decisions/open/relational-pilot-operationalization.md).
+> [`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md)
+> (v1 yardstick ratified 2026-06-12, autonomous adversarial review).
 > What follows is the design as run.
 
 ## The question

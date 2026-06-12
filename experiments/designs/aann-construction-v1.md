@@ -7,10 +7,11 @@ meaning-senses:
   - distributional
   - functional-vs-formal
   - human-comparison
-status: provisional
-contingent-on: []
+status: retired (unrun — indicator unexecutable under pure autonomy, 2026-06-12)
+contingent-on:
+  - aann-behavioral-operationalization
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-12
 links:
   - rel: operationalizes
     target: conjecture/aann-construction
@@ -22,7 +23,16 @@ links:
 
 # Experiment design v1 — AANN construction
 
-**Status**: both governing decisions — `decisions/resolved/aann-operationalization.md` and `decisions/resolved/aann-stimulus-source.md` — were **ratified 2026-05-29** (Mahowald 2023 as the AANN anchor; continuation-likelihood contrast (Option A) + prompted-acceptability fallback + threshold T1 + held-out adjectives locked before the run). That fixes the design's yardstick. The design itself is **unrun**: nothing in this page may be promoted to a settled finding until the probe actually runs.
+> **RETIRED UNRUN (2026-06-12).** This design's ratified indicator (per-token continuation-
+> likelihood contrast, with a prompted-acceptability *logprob* fallback) is unexecutable under
+> the project's pure-autonomy constitution: OpenRouter exposes no echo/prompt-logprobs on any
+> model, no local GPU exists, and no key will be provisioned — see the cross-session resolution
+> `wiki/decisions/resolved/aann-panel-logprob-blocker.md` (2026-06-12). The page is kept intact
+> as the record of the v1 measurement chain; a behavioral v2 design under
+> `wiki/decisions/open/aann-behavioral-operationalization.md` will supersede it. The conjecture
+> itself is NOT retired and the probe was never run.
+
+**Status (historical)**: both governing decisions — `decisions/resolved/aann-operationalization.md` and `decisions/resolved/aann-stimulus-source.md` — were **ratified 2026-05-29** (Mahowald 2023 as the AANN anchor; continuation-likelihood contrast (Option A) + prompted-acceptability fallback + threshold T1 + held-out adjectives locked before the run). That fixes the design's yardstick. The design itself is **unrun**: nothing in this page may be promoted to a settled finding until the probe actually runs.
 
 ## 1. Construct
 

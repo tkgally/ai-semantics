@@ -8,7 +8,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-12
 links:
   - rel: depends-on
     target: result/relational-reference-game-v1
@@ -22,7 +22,7 @@ links:
 
 # Conjecture: the commutative convention (aggregation, not constitution)
 
-> **Status: proposed (2026-05-31). The project's own forward, deflationary bet on the relational axis.** It generalizes a single, **bounded, pilot-scale null** — [`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), which the result page itself flags as **under-powered for order effects** — into a directional claim, names the distinction that makes the pilot's "coordination, not constitution" verdict precise, and states the sharp test that would overturn it. This is a **conjecture, not a settled claim**, and it does **not** assert that LLMs are *unable* to constitute meaning relationally; it bets only that the observed order-invariance *persists*, and it hands the loop the experiment that could falsify that bet. The v1 result it builds on is `contingent-on` a yardstick **still pending Tom** ([`decisions/open/relational-pilot-operationalization`](../../decisions/open/relational-pilot-operationalization.md)); ratifying that yardstick would fix the *measure*, never the *result*, and never this generalization of it.
+> **Status: proposed (2026-05-31). The project's own forward, deflationary bet on the relational axis.** It generalizes a single, **bounded, pilot-scale null** — [`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), which the result page itself flags as **under-powered for order effects** — into a directional claim, names the distinction that makes the pilot's "coordination, not constitution" verdict precise, and states the sharp test that would overturn it. This is a **conjecture, not a settled claim**, and it does **not** assert that LLMs are *unable* to constitute meaning relationally; it bets only that the observed order-invariance *persists*, and it hands the loop the experiment that could falsify that bet. The v1 yardstick was **ratified 2026-06-12** (autonomous cross-session adversarial review, [`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md)); the ratification fixed the *measure*, never the *result*, and never this generalization of it.
 
 ## Statement
 
@@ -36,7 +36,7 @@ Across the three family-decorrelated panels in the relational pilot, a coined re
 
 The pilot's verdict — *coordination, not constitution* — turns on a distinction this conjecture supplies a name for. The two are **operationally separable** exactly by commutativity:
 
-- **AGGREGATION (commutative).** A convention is **computed inside each agent** from the shared content and then **aggregated** across agents (two systems independently arriving at the same label from overlapping evidence). Because each agent's computation conditions on a *content set*, scrambling the order of that content leaves the result unchanged — the aggregated convention is **commutative**. This is the deflationary reading [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md) predicts: two next-token predictors conditioned on overlapping recent context converge from co-occurrence content, "a convergence that survives order-scrambling" ([`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), §Headline).
+- **AGGREGATION (commutative).** A convention is **computed inside each agent** from the shared content and then **aggregated** across agents (two systems independently arriving at the same label from overlapping evidence). Because each agent's computation conditions on a *content set*, scrambling the order of that content leaves the result unchanged — the aggregated convention is **commutative**. This is the deflationary reading [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md) predicts: two next-token predictors conditioned on overlapping recent context converge from co-occurrence content, "a convergence that survives order-scrambling" ([`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), §Interpretation).
 
 - **CONSTITUTION (non-commutative).** A convention **constituted *between*** agents would be one whose content "exists in the interaction and not antecedently in either party" ([`concept/relational-meaning`](../../base/concepts/relational-meaning.md), §intro). There, the **live order** of the exchange — the particular sequence of repairs, partial acceptances, and refinements, and of *which* precedent got fixed *when* — is part of what the convention *is*. Such a convention would be **non-commutative**: reordering the trajectory would change the recovered interpretation, because order carries disambiguating information the content-set alone does not.
 
@@ -46,7 +46,7 @@ So the pilot's deflation has a precise shape: **the relational convergence the p
 
 From [`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), across **all three** homogeneous-dyad panels (`claude-sonnet-4.6`, `gpt-5.4-mini`, `gemini-3.5-flash`):
 
-- **History content is load-bearing.** Giving the matcher the record lifts accuracy well above the opaque nickname alone: `coined_only → ordered` lift **+0.25 … +0.42** (clustered-bootstrap CIs; the lift is clearly positive for all three, so the order test is interpretable, not a methodological artifact).
+- **History content is load-bearing.** Giving the matcher the record lifts accuracy well above the opaque nickname alone: `coined_only → ordered` lift **+0.25 … +0.42** — a positive point estimate for all three models (the claude and gemini lift CIs touch 0 at the lower bound; the interpretability gate is point-estimate-based, as the result page's caveat 7 discloses).
 - **Order is *not* load-bearing.** The `ordered − shuffled` gap is **+0.06 … +0.11**, and **no model's clustered-bootstrap CI excludes 0**.
 - **Not chronology-specific.** The coherent `reversed` arm is **≤ random `shuffled`** in every cell (claude reversed 0.750 < shuffled 0.833; gemini 0.750 < 0.806), so even the small positive order-gap point estimates are order-insensitive noise around a content-driven baseline, not a trajectory effect.
 - **Convergence without entrainment (the run's one anchored, human-comparison finding).** The dyads reach near-ceiling referential *accuracy* but keep expression length roughly constant (~8.5–10.8 words), whereas the human Hawkins dyads *compress* (length 7.73→4.10 words, accuracy 0.78→0.94 over repetitions) — convergence without human-like compression. This secondary finding is anchored to [`resource/hawkins-tangrams`](../../base/resources/hawkins-tangrams.md).
@@ -59,9 +59,26 @@ If the conjecture holds, it predicts a **sharp human/LLM contrast at the relatio
 
 This contrast is a *prediction*, not a measured result. The human side is unanchored in-repo (Brennan & Clark 1996 unfetched), and the LLM side is the pilot's own bounded null. The page makes the contrast explicit precisely so that fetching the human anchor and running the v2 perturbation arm could decisively confirm or break it.
 
+## Update 2026-06-12 — the decisive test ran once: INCONCLUSIVE (bet survives an attempt, unstrengthened)
+
+The history-perturbation arm ran as
+[`result/relational-history-perturbation-v2`](../results/relational-history-perturbation-v2.md)
+(PREREG frozen after an independent pre-run critic pass; independent post-run verifier, zero
+mismatches). **Pre-registered verdict, all three models: INCONCLUSIVE/MIXED.** The falsification
+clause did **not** fire (no model tracked stated chronology in both presentation-direction
+arms), and the commutative null was **not** certified either (claude shows a CI-clean
+forward-arm elevation that vanishes when chronology and prompt position are decoupled — where
+it points anywhere, it points at *physical prompt position*, not chronology). So this
+conjecture **stays `proposed`: neither falsified nor meaningfully strengthened.** Do not cite
+the v2 run as the bet "holding" — only as the bet surviving a first, power-limited attempt
+whose most solid product is methodological (chronological recency and prompt-positional recency
+must be de-confounded by design; the direction-control arm is now the house pattern). The
+decisive test remains open pending truncation-proof elicitation, better-certified stimuli, and
+more clusters.
+
 ## What would confirm / falsify (the bet the loop picks up)
 
-The decisive test is the **history-perturbation arm** already recommended for v2 in [`decisions/open/relational-pilot-operationalization`](../../decisions/open/relational-pilot-operationalization.md) (§"Recommended resolution") and named in the open question ([`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md), §"Conditions"): **reassign a coined term mid-trajectory** (e.g. swap which figure a coined term was first attached to at a chosen point in the order) and test whether a fresh matcher's interpretation tracks ***where* in the sequence the change landed** — *beyond* merely tracking *that* the content changed.
+The decisive test is the **history-perturbation arm** already recommended for v2 in [`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md) (§"Recommended resolution") and named in the open question ([`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md), §"Conditions"): **reassign a coined term mid-trajectory** (e.g. swap which figure a coined term was first attached to at a chosen point in the order) and test whether a fresh matcher's interpretation tracks ***where* in the sequence the change landed** — *beyond* merely tracking *that* the content changed.
 
 - **Confirms (the deflationary bet holds):** interpretation stays largely **commutative** — a **weak or no position-in-sequence effect** once content is matched. The convention is recovered from the content set regardless of where the perturbation sits. This would extend the v1 null from "order of a static record doesn't matter" to "position of a *live* repair doesn't matter," strengthening the aggregation reading.
 - **Falsifies (the first evidence of constitution):** v2 shows a **robust, CI-clean order/position effect** — interpretation tracks *sequence position* beyond content (the matcher's reading shifts in proportion to *where* the perturbation lands, not just whether the altered content is present). That would be the first evidence of a **non-commutative, constituted-between** convention, and the bottom rung of the relational second ladder ([`concept/relational-meaning`](../../base/concepts/relational-meaning.md), §"a second ladder"). The conjecture would be **retired**, and the positive promoted to a candidate relational `conjecture`/claim under the usual contingency discipline.
@@ -83,6 +100,6 @@ The commutative/aggregation reading sits comfortably with a holist picture of th
 ## Honesty box
 
 - **Generalizes a bounded null.** The v1 result detects only **large, consistent** order effects (n=12 coined terms/model, 2 games, 6 figures); a *moderate* real trajectory effect could read as this null. The result page's own honest claim is "*direction and absence-of-large-effect*, not a precise zero" ([`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), §Caveats). This conjecture is a **forward bet that the pattern persists under the sharper v2 test**, not a settled claim that LLMs *cannot* constitute meaning relationally.
-- **Yardstick pending Tom.** The v1 result is `contingent-on` [`decisions/open/relational-pilot-operationalization`](../../decisions/open/relational-pilot-operationalization.md) (text-grid referents; order-isolating `ordered`-vs-`shuffled` headline; monologue floor). Ratifying that yardstick fixes the *measure*, never the *result*, and never this generalization. (The null itself stands as a first-class negative regardless, because a null does not over-claim.)
+- **Yardstick ratified (2026-06-12).** The v1 yardstick (text-grid referents; order-isolating `ordered`-vs-`shuffled` headline; monologue floor) was ratified v1-scoped by autonomous cross-session adversarial review ([`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md)); the result's `contingent-on` was cleared. The ratification fixed the *measure*, never the *result*, and never this generalization. (The null itself stood as a first-class negative regardless, because a null does not over-claim.)
 - **A possibly-too-easy probe.** The opaque-nickname setting may simply not be one where ordered history *can* carry disambiguating information beyond its content ([`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), §Caveat 2). The perturbation arm is designed to create exactly such a setting, which is why it — not a rerun of v1 — is the decisive test.
 - **Modest framing.** Per the charter, this is a **deflationary** bet written under-claimed: it predicts persistence of an order-invariance already observed, names the one experiment that would overturn it, and makes the human contrast it predicts explicit and falsifiable rather than assumed.

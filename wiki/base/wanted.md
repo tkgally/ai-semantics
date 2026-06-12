@@ -110,16 +110,28 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   why: the AANN portion of the constructional-probing line that Scivetti et al. 2025 does NOT cover; needed if the AANN conjecture wants a CxG-native human anchor beyond the existing Mahowald 2023 stimulus suite.
   status: Mahowald 2023 RECEIVED as its own source page (2026-05-29; EACL, arXiv 2301.12564; see wiki/base/sources/mahowald-2023-aann-judgments.md — argument/findings; dataset on resource/mahowald-2023-aann-stimuli). Chronis et al. 2023 still wanted (fetch only if a finding cites it).
 
+**2025–2026 OA finds on whether/which "meaning"-sense LLMs have (literature refresh, 2026-06-12 — found, abstracts checked, not catalogued):**
+
+- [P2] Schuele, M. 2024/2025. "On the Semantics of Large Language Models." *Intellectica* 81: 15–36 (2024); arXiv 2507.05448 (July 2025).
+  why: applies classical Frege/Russell semantic theory to LLM word- and sentence-level representations — directly on the `referential` vs. `distributional` boundary; abstract fetched verbatim 2026-06-12, full text not read.
+  status: wanted (OA on arXiv; good next philosophical catalogue candidate)
+- [P2] Millière, R. & Buckner, C. 2024. "A Philosophical Introduction to Language Models — Part I: Continuity with Classic Debates." arXiv 2401.03910.
+  why: the standard survey connecting LLM-meaning disputes to the classic debates the project's concept pages characterize; useful as a map, not an anchor.
+  status: wanted (OA on arXiv; only the title/landing page seen 2026-06-12)
+- [P3] [authors not yet verified] 2025. "Mechanistic Indicators of Understanding in Large Language Models." arXiv 2507.08017.
+  why: candidate bridge between interpretability evidence and the understanding/meaning question (surfaced in the 2026-06-12 search; only the arXiv id and title were seen — page not opened, authors unknown).
+  status: wanted (found 2026-06-12, not catalogued)
+
 ### Relational / dyadic-interaction anchors (for the relational-meaning pilot)
 
 These would supply the human dyadic-interaction anchor the [`open-question/relational-meaning-pilot`](../findings/open-questions/relational-meaning-pilot.md) needs before any relational result can be promoted. **Anchor decision RESOLVED 2026-05-29** (`decisions/resolved/relational-anchor-shortlist`, Option A): Clark & Wilkes-Gibbs 1986 is the ratified empirical anchor + Pickering & Garrod 2004 the theoretical backdrop — so the first two below are now the **priority fetches** (the other two are no longer needed unless the pilot's emphasis shifts).
 
 - [P1] Clark, H.H. & Wilkes-Gibbs, D. 1986. "Referring as a collaborative process." *Cognition* 22(1): 1–39. **← RATIFIED ANCHOR (fetch first).**
   why: the canonical tangram-naming convergence paradigm; dyads collaboratively coin and compress shared labels over rounds — the closest human analogue to the iterated-reference-game pilot. Ratified as the empirical anchor; the pilot cannot promote a result until this is in-repo.
-  status: wanted (priority)
+  status: wanted (priority). Publisher route checked 2026-06-12: ScienceDirect article page returns HTTP 403 to anonymous fetch — plainly paywalled via the publisher. Not yet marked `unreachable` outright: Clark's Stanford publications page (web.stanford.edu/~clark/pubs.html) is a plausible author self-archive route, not tried this session.
 - [P2] Brennan, S.E. & Clark, H.H. 1996. "Conceptual pacts and lexical choice in conversation." *Journal of Experimental Psychology: LMC* 22(6): 1482–1493. **← added 2026-05-31 (Tom, decision `relational-fetchable-anchor`).**
   why: the human result that most directly *motivates* the pilot's live-vs-shuffled discriminator — lexical entrainment is shown to be **historical** (not merely salience-driven) and **partner-specific**, the human-side analogue of "live ≠ shuffled." Complements C&W-G 1986. A fetchable derived/aggregate baseline is now available via the Hawkins tangrams corpus ([`decisions/resolved/relational-fetchable-anchor`](../decisions/resolved/relational-fetchable-anchor.md), Option A).
-  status: wanted
+  status: wanted. APA journal is paywalled, but a web search (2026-06-12) located a long-standing course-site mirror PDF (profgerhard.de/sfs/lehre/ws0708/spieltheorie/Brennan&Clark_96.pdf) — verify it is the JEP:LMC paper (not Brennan 1996 "Lexical entrainment in spontaneous dialog", a different paper often confused with it) before quoting.
 - [P3] Krauss, R.M. & Weinheimer, S. 1964/1966. Reference-phrase-shortening studies.
   why: the earlier convergence-curve studies the entrainment measure would be calibrated against.
   status: wanted
@@ -129,6 +141,21 @@ These would supply the human dyadic-interaction anchor the [`open-question/relat
 - [P2] Pickering, M.J. & Garrod, S. 2004. "Toward a mechanistic psychology of dialogue." *Behavioral and Brain Sciences* 27(2). **← RATIFIED theoretical backdrop.**
   why: the "interactive alignment" framework — theoretical anchor for what alignment-across-levels predicts (and what it does not claim about meaning-constitution).
   status: wanted
+
+**LLM-side relational sources (the model side of the axis — first catalogued 2026-06-12):**
+
+- [P1] Ashery, A.F., Aiello, L.M. & Baronchelli, A. 2025. "Emergent social conventions and collective bias in LLM populations." *Science Advances* 11(20), eadu9368; arXiv 2410.08948.
+  why: the first major demonstration of spontaneous convention emergence in LLM-agent populations — the relational axis's load-bearing LLM-side prior art (coordination shown, constitution untested; the foil the pilot positions against).
+  status: received (2026-06-12, abstract verbatim from arXiv HTML v2 + section-level body quotes verified character-for-character against the v2 HTML; see wiki/base/sources/ashery-2025-llm-conventions.md)
+- [P1] Imai, S., İnan, M., Sicilia, A. & Alikhani, M. 2025. "Measuring How (Not Just Whether) VLMs Build Common Ground." arXiv 2509.03805.
+  why: VLM self-play dyads in the PhotoBook reference game scored against 2,506 human dialogues on grounding efficiency / content alignment / lexical adaptation / human-likeness — the conceptual-pacts question asked of model dyads directly; independently corroborates the pilot's convergence-without-human-like-compression pattern.
+  status: received (2026-06-12, abstract verbatim from arXiv abs page + section-level body quotes verified character-for-character against the v1 HTML; see wiki/base/sources/imai-2025-vlm-common-ground.md)
+- [P2] Barrie, C. & Törnberg, P. 2025. "Emergent LLM behaviors are observationally equivalent to data leakage." arXiv 2505.23796; and the authors' reply: Ashery, Aiello & Baronchelli 2025, arXiv 2506.18600.
+  why: the live critique exchange over the Ashery et al. result (data-contamination deflation vs. genuinely emergent dynamics); fetch both before any in-repo finding leans on the *emergence* (rather than the mere occurrence) of LLM conventions.
+  status: wanted (located 2026-06-12; reply abstract fetched verbatim, neither paper read in full)
+- [P3] [authors not yet verified] 2026. "LVLMs and Humans Ground Differently in Referential Communication." arXiv 2601.19792.
+  why: dyadic-grounding comparison (surfaced in the 2026-06-12 search; only the arXiv id and title were seen — the page was not opened, so the author list is unknown); fetch only if the relational program needs a second dyadic datapoint beyond 2509.03805.
+  status: wanted (found 2026-06-12, not catalogued)
 
 ### Graded usage/sense-similarity anchor (for the lexical-sense-gradience conjecture)
 

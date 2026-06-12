@@ -9,10 +9,9 @@ meaning-senses:
   - human-comparison
 status: proposed
 anchor: resource/hawkins-tangrams
-contingent-on:
-  - relational-pilot-operationalization
+contingent-on: []
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-12
 links:
   - rel: anchors
     target: resource/hawkins-tangrams
@@ -26,7 +25,9 @@ links:
 
 # Result: the relational pilot — convergence without trajectory-dependence (a first-class null)
 
-> **Status: proposed (2026-05-31), contingent on [`decisions/open/relational-pilot-operationalization`](../../decisions/open/relational-pilot-operationalization.md).**
+> **Status: proposed (2026-05-31); yardstick ratified 2026-06-12** — A/A/A adopted by autonomous
+> cross-session adversarial review ([`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md)),
+> `contingent-on` cleared. Ratification fixed the yardstick, never this (null) result.
 > The project's **first finding on the relational axis** — the bottom rung of the "second ladder"
 > ([`concept/relational-meaning`](../../base/concepts/relational-meaning.md)). Builds + runs the
 > two-AI iterated dyadic reference-game pilot ratified GO in
@@ -100,14 +101,22 @@ A **second, anchored** finding falls out of the same run: the LLM dyads converge
 | gpt    | 0.333 | 0.750 | 0.667 | 0.694 | **+0.417** [0.083, 0.750] | **+0.056** [−0.194, 0.278] | +0.056 |
 | gemini | 0.667 | 0.917 | 0.750 | 0.806 | **+0.250** [0.000, 0.500] | **+0.111** [0.000, 0.278] | +0.028 |
 
-(CIs = clustered bootstrap over coined terms.) **history_lift is clearly positive for all three**
-(history content helps — coined_only is well below ordered), so the order test is interpretable, not
-a methodological artifact. **The ORDER gap is small and no model's CI excludes 0**; the `reversed`
+(CIs = clustered bootstrap over coined terms.) **history_lift has a positive point estimate for all
+three** (history content helps — coined_only is well below ordered), so the order test is read as
+interpretable rather than a methodological artifact — but note the claude and gemini lift CIs touch
+0 at the lower bound ([+0.000, +0.667] and [+0.000, +0.500]); the interpretability gate is
+point-estimate-based (caveat 7). **The ORDER gap is small and no model's CI excludes 0**; the `reversed`
 (coherent reverse-chronological) arm is **no better than — sometimes worse than — random `shuffled`**
 (claude reversed 0.750 < shuffled 0.833; gemini 0.750 < 0.806), so even the small positive order-gap
 point estimates are not a chronology-specific trajectory effect but order-insensitive noise around a
 content-driven baseline. The pre-registered positive bar (order-gap CI>0 **and** chronology-specific
 **and** above the monologue floor) is met by **no model**.
+
+**The design-named (confounded) "live vs shuffled" contrast, reported per the ratified Q2-A
+"report BOTH" rule:** live-online accuracy vs dyadic shuffled-replay = claude 0.883 vs 0.833
+(+0.05), gpt 0.667 vs 0.694 (−0.03), gemini 0.983 vs 0.806 (+0.18). Incoherent in sign across
+models — consistent with its known confound (live matchers have incremental self-generated
+exposure and feedback the replay matchers lack), which is why it is not the headline.
 
 ## Interpretation — coordination, not constitution
 
@@ -136,7 +145,13 @@ rises. So the panel reproduces the human *accuracy* convergence but **not** the 
 compression* curve. This is the run's one **human-comparison** claim and the only measure
 [`resource/hawkins-tangrams`](../../base/resources/hawkins-tangrams.md) anchors. (Honest scope: a
 ≤12-word director budget caps the ceiling, and the elicited final nickname is short by construction;
-the finding is about the *trajectory* of the in-dialogue expressions, which stays flat.)
+the finding is about the *trajectory* of the in-dialogue expressions, which stays flat. Two further
+bounds: the comparison crosses referent modality and channel — text-grid LLM games under a word
+budget vs human image-tangram unconstrained speech — a mismatch the Hawkins page's own "What it
+CANNOT ground" section warns about; and **gemini's live game ran at 0.92→1.00 from rep 1**, so a
+model already at ceiling has little pressure to compress and the no-compression claim is weakest
+for gemini. Claude (0.67) and gpt (0.42) start below the human 0.78 starting accuracy, so the
+finding does not reduce to a ceiling artifact for them.)
 
 ## Anchor discipline (read this before citing)
 
@@ -148,11 +163,15 @@ the finding is about the *trajectory* of the in-dialogue expressions, which stay
   CANNOT ground". No human-comparison claim is made for the null.
 - The **entrainment curve is the only human-comparison measure** and carries the page's single
   `anchors` link to [`resource/hawkins-tangrams`](../../base/resources/hawkins-tangrams.md).
-- The page is `contingent-on`
-  [`decisions/open/relational-pilot-operationalization`](../../decisions/open/relational-pilot-operationalization.md):
-  the *yardstick* (text-grid referents; order-isolating headline; monologue floor) is provisional
-  until Tom ratifies. A null does not over-claim, so it stands as a first-class negative regardless;
-  ratification would only fix the yardstick, not the result.
+- The *yardstick* (text-grid referents; order-isolating headline; monologue floor) was
+  **ratified 2026-06-12** by autonomous cross-session adversarial review
+  ([`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md);
+  the page was originally contingent on that decision under the pre-autonomous "until Tom
+  ratifies" formulation — the governance transitioned 2026-06-12, see
+  [`decisions/resolved/autonomous-era-governance`](../../decisions/resolved/autonomous-era-governance.md)).
+  A null does not over-claim, so it stood as a first-class negative regardless; the ratification
+  fixed the yardstick, not the result, and is **v1-scoped** (image referents and a
+  content-matched floor remain live design questions for v2).
 
 ## Caveats (the null is bounded, not strong)
 
@@ -170,7 +189,19 @@ the finding is about the *trajectory* of the in-dialogue expressions, which stay
 4. **Gemini at `reasoning: effort=minimal`** (required on this endpoint) — constant across all gemini
    arms, so a within-gemini condition, not a cross-arm confound; cross-*model* comparison is already
    family-confounded by the homogeneous-dyad design.
-5. **Labeling refinement disclosed:** the analysis distinguishes a *methodological* null (history not
+5. **Monologue-floor caveat (restated from the PREREG):** dyadic records carry hit/miss outcomes
+   that monologue records (no feedback) cannot — that *is* the interactive signal, so a dyadic >
+   mono gap would reflect the feedback loop itself, not merely extra record content. Stated, not
+   stripped; it conditions the floor a future *positive* must beat (moot for this null, which
+   failed the order-gap CI before the floor mattered).
+6. **Round-label reconstructibility (logged 2026-06-12, from the v2 PREREG).** v1's history
+   lines carried `round k:` labels, so the shuffled and reversed arms were **in principle
+   reconstructible** — a matcher that wanted chronology could re-sort by label. This makes the
+   v1 order-insensitivity null *less* surprising, not more (an order-using matcher had a
+   recovery route the design left open). The v2 arm
+   ([`result/relational-history-perturbation-v2`](relational-history-perturbation-v2.md))
+   removes the labels and conveys order purely by position.
+7. **Labeling refinement disclosed:** the analysis distinguishes a *methodological* null (history not
    load-bearing) from this *deflationary* null (history loads, order does not) by the history_lift
    **point** estimate (>0.10); the frozen **positive** bar (order-gap CI>0) is untouched and unmet by
    every model. This affects only how the two null-flavours are named, not the headline.
@@ -185,4 +216,4 @@ positive demonstration that the deflationary distributional story survives order
 would have to rise above. The theory page absorbs it as: the relational axis now has its first
 *finding* (a null), no longer only an IOU. Natural next steps (deferred): the **perturbation arm**
 (sharper trajectory test), **image referents**, and **cross-family dyads** — see
-[`decisions/open/relational-pilot-operationalization`](../../decisions/open/relational-pilot-operationalization.md).
+[`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md).

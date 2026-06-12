@@ -1,5 +1,14 @@
 # Cloud-compute feasibility / scoping note
 
+> **HISTORICAL RECORD (annotated 2026-06-12).** This note's operative assumption — that Tom
+> might provision a `TOGETHER_API_KEY` — is superseded by the pure-autonomy ruling
+> (`wiki/decisions/resolved/autonomous-era-governance.md`, Ruling 3), and its "$20/week" budget
+> framing is superseded by the **$5.00/day (UTC)** cap. Both governing decisions are resolved:
+> `wiki/decisions/resolved/cloud-compute-path.md` (RETIRED/CLOSED) and
+> `wiki/decisions/resolved/aann-panel-logprob-blocker.md` (logprob path terminated; behavioral
+> re-operationalization opened). The capability/pricing tables below are dated 2026-05-31
+> snapshots — re-verify before any hypothetical future use.
+
 **Status:** scoping only (Tom decision 5, this round). **No rebuild committed.** This note
 reports what is *actually* possible for the two capabilities OpenRouter cannot provide,
 within (a) this environment's network policy and (b) the newly-raised **$20/week soft**
@@ -7,7 +16,7 @@ budget. It does **not** run anything or change the panel. All prices/capabilitie
 carry a URL + access date; anything I could not verify is marked **UNVERIFIED**.
 
 The two blocked capabilities (from
-[`decisions/open/aann-panel-logprob-blocker`](../../wiki/decisions/open/aann-panel-logprob-blocker.md)):
+[`decisions/resolved/aann-panel-logprob-blocker`](../../wiki/decisions/resolved/aann-panel-logprob-blocker.md)):
 
 - **CAP-1 — provided-string surprisal.** Per-token log-probability / surprisal of a
   *specific provided continuation string* (echo / prompt-logprobs semantics). This is the
@@ -221,5 +230,3 @@ AANN Option-A single-model" (A) / "stand up an HF Endpoint for both" (B) / "keep
   <https://www.kaggle.com/product-feedback/173129> · <https://www.kaggle.com/docs/api> ·
   <https://github.com/Kaggle/kaggle-cli>
 - Network/stack measurements: `curl`/`env`/`python3` from this sandbox, 2026-05-31 (see §0).
-</content>
-</invoke>
