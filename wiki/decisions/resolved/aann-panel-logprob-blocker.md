@@ -62,7 +62,7 @@ created for it. The panel ([`config/models.md`](../../../config/models.md)) is u
 
 ## The blocker (verified 2026-05-29)
 
-The AANN probe was the session's priority-1 target and is ratified end-to-end (anchor = Mahowald 2023, [`decisions/resolved/aann-stimulus-source`](../resolved/aann-stimulus-source.md); operationalization = continuation-likelihood logprob contrast, Option A, with a prompted-`p("good")` logprob fallback, Option B, [`decisions/resolved/aann-operationalization`](../resolved/aann-operationalization.md)). The Mahowald repo is MIT-licensed and was cloned and inspected — no licensing obstacle.
+The AANN probe was the session's priority-1 target and is ratified end-to-end (anchor = Mahowald 2023, [`decisions/resolved/aann-stimulus-source`](aann-stimulus-source.md); operationalization = continuation-likelihood logprob contrast, Option A, with a prompted-`p("good")` logprob fallback, Option B, [`decisions/resolved/aann-operationalization`](aann-operationalization.md)). The Mahowald repo is MIT-licensed and was cloned and inspected — no licensing obstacle.
 
 **The obstacle is the API.** Both ratified indicators require token log-probabilities:
 - Option A scores per-token log-probability of the licit AANN string vs. four degenerate variants.
