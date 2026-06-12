@@ -1,0 +1,162 @@
+/* Meaning in the Age of AI — public site stylesheet.
+   Plain, readable, no build step. Keep it boring and dependable. */
+
+:root {
+  --ink: #1f2430;
+  --ink-soft: #4a5160;
+  --paper: #faf9f6;
+  --card: #ffffff;
+  --accent: #2a5d8f;
+  --accent-soft: #e8eff6;
+  --rule: #d9d5cc;
+  --good: #2e6e4e;
+  --note: #8a6d1d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+header.site {
+  background: var(--card);
+  border-bottom: 1px solid var(--rule);
+  padding: 1.4rem 1rem 0.9rem;
+  text-align: center;
+}
+
+header.site h1 {
+  margin: 0 0 0.2rem;
+  font-size: 1.7rem;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+}
+
+header.site h1 a { color: var(--ink); text-decoration: none; }
+
+header.site .tagline {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  font-style: italic;
+}
+
+nav.site {
+  background: var(--card);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.55rem 1rem;
+  text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.92rem;
+}
+
+nav.site a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 0.7rem;
+  padding: 0.15rem 0.2rem;
+}
+
+nav.site a.current {
+  border-bottom: 2px solid var(--accent);
+  color: var(--ink);
+}
+
+nav.site a:hover { text-decoration: underline; }
+
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.6rem 1.2rem 3rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: normal;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.25rem;
+  margin-top: 2.2rem;
+}
+
+h3 { font-size: 1.08rem; margin-top: 1.8rem; }
+
+a { color: var(--accent); }
+
+.status-box {
+  background: var(--accent-soft);
+  border: 1px solid #c5d6e6;
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.3rem 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.93rem;
+}
+
+.status-box dt { font-weight: bold; float: left; clear: left; width: 11rem; }
+.status-box dd { margin: 0 0 0.35rem 11.5rem; }
+@media (max-width: 540px) {
+  .status-box dt { float: none; width: auto; }
+  .status-box dd { margin-left: 0.8rem; }
+}
+
+.entry {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1rem 1.3rem;
+  margin: 1.2rem 0;
+}
+
+.entry h3 { margin-top: 0.2rem; }
+
+.entry .meta {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+.pill {
+  display: inline-block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.74rem;
+  border-radius: 999px;
+  padding: 0.05rem 0.6rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.pill.green  { background: #e3f0e8; color: var(--good); }
+.pill.amber  { background: #f6eed7; color: var(--note); }
+.pill.blue   { background: var(--accent-soft); color: var(--accent); }
+
+dl.glossary dt {
+  font-weight: bold;
+  margin-top: 1.1rem;
+}
+
+dl.glossary dd { margin: 0.15rem 0 0 1rem; }
+
+footer.site {
+  border-top: 1px solid var(--rule);
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--ink-soft);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+.caveat {
+  border-left: 4px solid var(--note);
+  background: #fbf7ec;
+  padding: 0.6rem 1rem;
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+}

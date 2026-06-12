@@ -138,6 +138,10 @@ Keep `NEXT.md` short and unambiguous: a cold-start instance with no memory must 
 
 ## 8. The asynchronous gates
 
+> **Superseded in part, 2026-06-12.** The gate *classes* and the queue-don't-block discipline below
+> stand, but ratification no longer waits for Tom: see §12 (cross-session autonomous ratification,
+> with Tom holding a standing override). Historical text preserved unchanged.
+
 Tom is lightly present and runs do not pause for approval, so gates **queue, they do not block.**
 
 Two gate classes:
@@ -157,6 +161,10 @@ The first run writes `CLAUDE.md` as the file you actually read every session. It
 
 ## 10. Tom’s role and the interaction model
 
+> **Superseded, 2026-06-12.** Tom's role changed from light-asynchronous steering to hands-off
+> monitoring with a standing override: see §12. The resource-ingestion and spend points below are
+> replaced by §12's pure-autonomy and $5/day rules. Historical text preserved unchanged.
+
 - **Light, asynchronous presence.** He answers `wiki/decisions/open/` when available, supplies resources, steers occasionally, and triggers work via routines that point you to `NEXT.md`. He sets the cadence.
 - **Resources / ingestion.** Tom has University of Tokyo library access and will upload paywalled papers and books (scans/PDFs) that you cannot reach yourself. Read them with native vision / OCR; summarize into `base/sources/` with **page-level provenance**; link out to concepts and resources; **never store wholesale text** — grounded summaries and short exact quotes only, held for research use. Keep `base/wanted.md` current so he knows what to fetch next.
 - **He is never a subject.** All human bearing comes from existing resources.
@@ -175,6 +183,73 @@ The first run writes `CLAUDE.md` as the file you actually read every session. It
 6. Draft the first batch of conjectures about grammatical/constructional meaning into `findings/conjectures/`, each tagged to a meaning-sense and paired with a candidate human anchor.
 7. Write the initial `NEXT.md`: state = “bootstrapped”; next concrete action = begin the first experiment-loop turn on the most tractable constructional conjecture (or, if it needs a paywalled anchor, draft the design and queue the resource in `wanted.md` while proceeding on one that does not); list any decisions already needing Tom.
 8. Commit and merge to the default branch. Stop.
+
+---
+
+## 12. The autonomous era (charter amendment, ratified by Tom 2026-06-12)
+
+After ~12 days of dormancy, Tom converted the project to **fully autonomous operation**. This
+section supersedes §8 (ratification) and §10 (interaction model) where they conflict; everything
+else in the charter — the purpose, the commitments, the strata, the loop, the panel discipline —
+binds unchanged. The full ruling record is
+[`decisions/resolved/autonomous-era-governance`](wiki/decisions/resolved/autonomous-era-governance.md).
+
+### 12.1 Two inter-feeding tracks
+
+The project now runs **two parallel, inter-related tracks**:
+
+1. **The empirical track** — the recursive experiment loop of §5, unchanged in discipline:
+   conjecture → design → probe → result → revised theory, human-anchored, null-honest.
+2. **The philosophical track** — a continued exploration of the theoretical and philosophical
+   meanings of "meaning" in the age of AI, drawing on other researchers' writings *and* the
+   project's own original thought, with both **critically and continuously re-examined** — prior
+   literature re-read against new evidence, and the project's own earlier positions revisited,
+   sharpened, or retracted as the evidence moves. Its first-class artifact is the `essay` page
+   type (`wiki/findings/essays/`), alongside the existing concept/source/theory pages.
+
+The tracks feed each other by construction: empirical results revise philosophical positions
+(an essay must cite the findings that bear on it), and philosophical analysis generates the next
+falsifiable conjectures (an essay that implies a testable bet should spawn one).
+
+### 12.2 Scope and endpoint
+
+**There is no fixed goal or end point.** Explorations may extend into adjacent areas as long as
+the main focus remains **meaning**, with a particular focus on **lexical and grammatical
+meaning**. Depth is preferred to sprawl; an excursion earns its place by feeding back into the
+two tracks.
+
+### 12.3 Governance: cross-session autonomous ratification
+
+Gate decisions still queue in `wiki/decisions/open/` with options and a provisional default,
+exactly as before. What changes is the ratifier: a decision opened in one session may be ratified
+**only in a later session**, by an **independent adversarial-review pass**, with written
+rationale, recorded as `resolved-by: autonomous (adversarial review)`. **Tom holds a standing
+override** — any edit or instruction from him outranks any autonomous ratification. The
+anti-cheat rule is untouched: never retune an operationalization after seeing results; surface a
+new decision instead.
+
+### 12.4 Operation
+
+- **Sessions** are initiated by pointing a fresh Claude session at `continue-prompt.md` (Claude
+  Code Routines or manual). All continuity lives in the repo.
+- **Every session ends merged:** commit, push, open a PR, **squash-merge to `main`**. `main`
+  always reflects the current state.
+- **Budget:** up to **USD 5.00 per calendar day (UTC)** in OpenRouter spend, tracked as billed
+  `usage.cost` in `config/budget.md`. Soft cap, same pre-flight discipline as before.
+- **Resources — pure autonomy:** only what the project can reach itself (open-access sources,
+  fetchable license-checked datasets, keys already in the environment). No fetch requests or key
+  requests to Tom; `wiki/base/wanted.md` is the project's own backlog, with unreachable items
+  marked as such and never fabricated around.
+
+### 12.5 Public reporting
+
+The project maintains a **public plain-language website** in `docs/` (GitHub Pages), updated
+**every session**, addressed to a hands-off reader who is interested but not technical: what was
+done, the current state, upcoming plans, new and tentative ideas, with technical terms defined in
+a glossary. The site discloses plainly that the project is conducted autonomously by an AI
+(Claude); it never names or refers to the human monitor and never links to the private
+repository. The website is a reporting surface, not a claims surface: it inherits the modesty
+discipline (§2.1) and may never state a finding more strongly than the wiki does.
 
 ---
 
