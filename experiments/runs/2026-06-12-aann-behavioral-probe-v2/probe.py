@@ -30,14 +30,20 @@ ABORT_USD = 2.50  # PREREG single-run flag
 
 
 def parse_int(text, lo, hi):
+    """Full-string bare integer first; otherwise the LAST in-range token (pre-run
+    critic S4: taking the first token records a scale-echo like 'of 0 to 100, 85'
+    as 0 and never triggers the retry)."""
     if text is None:
         return None
     t = text.strip().rstrip(".")
+    if t.isdigit() and lo <= int(t) <= hi:
+        return int(t)
+    found = None
     for tok in t.replace("\n", " ").split():
-        tok = tok.strip(".,!")
+        tok = tok.strip(".,!:;")
         if tok.isdigit() and lo <= int(tok) <= hi:
-            return int(tok)
-    return None
+            found = int(tok)
+    return found
 
 
 def parse_ab(text):
@@ -53,7 +59,10 @@ def parse_ab(text):
 
 
 def ask(slot, user):
-    kwargs = {"max_tokens": 16}
+    # Per-slot max_tokens (pre-run critic B3): the output is one integer/letter, but
+    # gemini burns budget on hidden reasoning (2026-05-28 calibration) -- give C 512
+    # with effort minimal; A/B get 64. max_tokens is a cap, not a purchase.
+    kwargs = {"max_tokens": 512 if slot == "C" else 64}
     if slot == "C":
         kwargs["reasoning"] = {"effort": "minimal"}
     return call(PANEL[slot], SYSTEM, user, temperature=0, **kwargs)
@@ -83,12 +92,16 @@ def run_arm(slot, arm, records):
         rows.append({"id": s["id"], "arm": arm, "raw": r["content"],
                      "value": val, "usage": r.get("usage"), "error": r.get("error")})
         records.append(r)
-        if (i + 1) % 50 == 0:
-            c = billed_cost(records)
+        if (i + 1) % 25 == 0:
+            c = billed_cost([records])[0]
             print(f"  {slot}/{arm}: {i+1}/{len(tasks)} cost so far ${c:.3f}", flush=True)
             if c >= ABORT_USD:
-                print("ABORT: single-run flag reached", flush=True)
-                break
+                # Pre-run critic S2: a real abort -- persist as .partial (analyze.py
+                # ignores partials) and stop the whole invocation, not just this arm.
+                json.dump(rows, open(str(out) + ".partial", "w"), indent=1)
+                print(f"ABORT: single-run flag ${ABORT_USD} reached; wrote {out}.partial",
+                      flush=True)
+                sys.exit(1)
         time.sleep(0.1)
     json.dump(rows, open(out, "w"), indent=1)
     miss = sum(1 for x in rows if x["value"] is None)
@@ -107,7 +120,7 @@ def main():
     for slot in slots:
         for arm in arms:
             run_arm(slot, arm, records)
-    total = billed_cost(records)
+    total = billed_cost([records])[0]
     print(f"TOTAL billed this invocation: ${total:.4f}")
     with open(RAW / "cost-log.txt", "a") as f:
         f.write(f"{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())} "

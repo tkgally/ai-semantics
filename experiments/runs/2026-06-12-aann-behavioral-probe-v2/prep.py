@@ -137,7 +137,7 @@ def main():
                 "human_rating": it["ratings"][0],
                 "zipf": zipf_frequency(it["adj"], "en"),
             })
-    # 4-point robustness subset: first item of every 4th cell (deterministic, ~100 items)
+    # 4-point robustness subset: BOTH items of every 4th cell (deterministic, 102 items)
     for i, s in enumerate(anchored):
         s["robustness_4pt"] = (i % 8 == 0) or (i % 8 == 1)
 

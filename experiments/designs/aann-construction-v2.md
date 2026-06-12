@@ -50,8 +50,8 @@ the Tier-0 licit/illicit form ceiling already documented in
 
 - **Condition 1 (empirical, not stipulated gradient).** The human side is computed from the
   mirrored `mturk_data/adjexp_turk.csv` (3,600 non-filler single-rating items): committed
-  derived tables `human_cell_means.csv` (204 adjective × noun-class cells, n ≈ 11–20 ratings
-  each) and `human_class_means.csv` (28 adjective-class × noun-class cells). **No predicted
+  derived tables `human_cell_means.csv` (204 adjective × noun-class cells, n = 6–28 ratings
+  each, median 18) and `human_class_means.csv` (28 adjective-class × noun-class cells). **No predicted
   class ordering is hardcoded anywhere in the scoring path.** Noted discrepancy, per the
   ratification: the decision page's parenthetical ("evaluative > quantitative > stubborn/color")
   and the resource page's canonical ordering ("quantitative > ambiguous > qualitative >
@@ -65,16 +65,26 @@ the Tier-0 licit/illicit form ceiling already documented in
   **Item-level** Spearman across the 408 sampled items is reported as a descriptive robustness
   number only (each item carries a single human rating — rater noise attenuates item-level ρ;
   this is why cell grain is primary, and the attenuation is disclosed wherever item-level ρ is
-  reported).
+  reported). **Disclosed deviation:** Condition 2 enumerates "item-level primary, class-cell
+  secondary (or the reverse)"; this design's primary is a third grain — the 204 adjective ×
+  noun-class cells — chosen because single-rating items make item-level human values
+  rater-noise-dominated while 204 cells keep far more resolution than 28 class-cells. The
+  deviation is acknowledged here, pre-run, rather than left contestable post-hoc.
+  **Noun-class guard (pre-run critic, added pre-run):** the anchored pass additionally requires
+  mean within-noun-class Spearman ≥ 0.25 across the 6 noun-class strata, because a degenerate
+  responder emitting only the human noun-class marginal (zero adjective information) scores
+  ρ = 0.466 on the 204 cells — above the 0.40 threshold — while the conjecture's predictions
+  are about the adjective gradient; the held-out pass carries the analogous ≥ 0.30 within-class
+  requirement (full numbers in PREREG.md).
 - **Condition 8 (framings).** Primary framing: **0–100** ("respond with only the integer").
   Robustness framing: **4-point** (1–4), on a fixed 102-item subset flagged in `stimuli.json`.
   Divergence check: item-level Spearman between the two framings' ratings on the subset; if
   < 0.50 for a model, an instrument-fragility caveat is mandatory in the result page for that
-  model. Per-model settings locked: temperature 0; `max_tokens` 16; panel C (gemini) runs with
+  model. Per-model settings locked: temperature 0; `max_tokens` 64 for A/B and 512 for C (the 2026-05-28 calibration: gemini burns small caps on hidden reasoning); panel C (gemini) runs with
   `reasoning: {"effort": "minimal"}` (the ratified cost/behavior mitigation); panel per
   `config/models.md` (A claude-sonnet-4.6, B gpt-5.4-mini, C gemini-3.5-flash).
 
-**Productivity arm (Conditions 5, 6):** 22 **held-out adjectives** (4 per class, 6 classes;
+**Productivity arm (Conditions 5, 6):** 24 **held-out adjectives** (4 per class, 6 classes;
 `HELD_OUT` in `prep.py`; none in Mahowald's 50), frequency-controlled: resource = **wordfreq 3.x
 Zipf scale (en)**; statistic = per-class **median Zipf**; procedure = each held-out class median
 within **±0.5** of the Mahowald class median (asserted mechanically in `prep.py`; all 6 pass).
@@ -120,7 +130,7 @@ means and the **human anchored** class-cell means over the 15 held-out class-cel
 - Any null is written as a first-class result.
 
 T1 (ρ ≥ 0.30) from the retired surprisal operationalization was **not** carried over; the 0.40
-cell-level threshold is set higher because cell means (n ≈ 11–20 human ratings, 2 model items)
+cell-level threshold is set higher because cell means (n = 6–28 human ratings, median 18; 2 model items)
 remove much of the rater noise that motivated T1's leniency, and it was fixed before any model
 output existed (Condition 4).
 
@@ -155,7 +165,7 @@ across ~10 prior runs.
 - **Scale-use calibration differs by model**; rank correlation mitigates but does not eliminate.
 - [`claim/cxg-probing-surprisal-validity`](../../wiki/findings/claims/cxg-probing-surprisal-validity.md)
   warrants the **surprisal** instrument only and does **not** transfer to this behavioral one.
-- Human item ratings are **single-rater**; model cell means use 2 items vs the human ~11–20 —
+- Human item ratings are **single-rater**; model cell means use 2 items vs the human 6–28 (median 18) —
   composition noise is unbiased under the seeded random sample but nonzero.
 
 ## 6. Pre-flight cost (config/budget.md)
