@@ -1,18 +1,60 @@
 ---
 id: relational-pilot-operationalization
 title: Are the relational-pilot v1 operationalization choices (text-grid referents; order-isolating ordered-vs-shuffled; monologue floor) the right yardstick?
-status: open
+status: resolved
 opened: 2026-05-31
 opened-by: orchestrator
+resolved: 2026-06-12
+resolved-by: autonomous (adversarial review)
+resolution: ADOPT DEFAULT — A/A/A, scoped to the v1 pilot yardstick
 contingent-artifacts:
   - result/relational-reference-game-v1
 ---
 
 # Decision: relational pilot v1 operationalization
 
+## Resolution (2026-06-12, autonomous cross-session ratification — PROJECT.md §12.3)
+
+**ADOPT DEFAULT (A/A/A), scoped to the v1 pilot yardstick.** Ratified by an independent
+adversarial-review pass in a later session than the one that opened the decision (the first
+autonomous ratification under [`autonomous-era-governance`](autonomous-era-governance.md));
+Tom's standing override outranks it. Ratifying fixes the **yardstick, never the result** — the
+v1 null was first-class regardless. Reviewer's rationale:
+
+- **Q1 (text grids).** The strongest case for B (image tangrams) is ecological validity plus the
+  referent-modality/channel mismatch in the anchored "convergence without compression" comparison
+  (text-grid LLM games under a ≤12-word budget vs human image-tangram unconstrained speech — a
+  mismatch the Hawkins resource page itself warns about). A still wins *for the pilot*: the
+  load-bearing shuffle control requires byte-identical reorderable turn content, which text
+  serializes exactly and images do not, on the most call-heavy probe to date. The pre-declared
+  ceiling risk partially materialized (gemini live 0.92→1.00), honestly reported. Q1→B remains
+  the named v2 upgrade, so nothing is locked in.
+- **Q2 (order-isolating headline).** The literal live-vs-shuffled contrast is confounded on its
+  face (live matchers have incremental self-generated exposure and feedback), and the run record
+  proves it (incoherent across models: claude +0.05, gpt −0.03, gemini +0.18). Verified against
+  git: the PREREG fixing ordered-vs-shuffled as PRIMARY was committed (`3bd7dab`, 2026-05-31
+  07:14:39) **before** the results commit (`456bfec`, 07:41:10). The anti-cheat audit cuts in
+  A's favor: A made the null *easier* to obtain, and the confounded B headline would have looked
+  more positive — A was chosen against, not toward, the flattering reading.
+- **Q3 (monologue floor).** B (self-dialogue with self-generated feedback) would content-match
+  the records but collapses into the treatment condition itself in homogeneous dyads, making
+  bar (b) vacuous as a floor. A's known limitation (monologue records lack hit/miss content —
+  "that *is* the interactive signal") was pre-registered, stated not stripped. The confound
+  matters only for a future *positive*; v2 should consider a content-matched floor variant then.
+- **Future-bias check.** Ratifying A/A/A locks in nothing that biases the v2 perturbation arm:
+  Q1-A is pilot-scoped; Q2-A's order-isolation logic is what *motivates* the perturbation arm;
+  Q3-A leaves the v2 floor design open. This ratification fixes the **v1 yardstick**, not a
+  standing commitment for successor designs.
+
+Downstream: [`result/relational-reference-game-v1`](../../findings/results/relational-reference-game-v1.md)
+promoted (`contingent-on` cleared); four reviewer-flagged defects fixed on the result page the
+same session (history-lift CI honesty; the confounded live-vs-shuffled numbers reported in-page
+per Q2-A's "report BOTH"; the gemini ceiling flagged against the anchored secondary finding;
+the monologue-floor caveat restated).
+
 ## Why this exists (surfaced, not auto-resolved)
 
-[`decisions/resolved/relational-pilot-go`](../resolved/relational-pilot-go.md) ("Decision 9", GO) ratified **what** to run — the two-AI
+[`decisions/resolved/relational-pilot-go`](relational-pilot-go.md) ("Decision 9", GO) ratified **what** to run — the two-AI
 iterated dyadic reference game, homogeneous dyads first, with the live-vs-shuffled trajectory
 contrast as the load-bearing measure and Hawkins as the convergence anchor only. Building it forced
 three **operationalization** calls that the GO decision did not fix. Per PROTOCOL §A/§5 and CLAUDE.md

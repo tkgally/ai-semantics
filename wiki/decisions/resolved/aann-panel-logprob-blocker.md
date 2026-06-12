@@ -1,15 +1,64 @@
 ---
 id: aann-panel-logprob-blocker
 title: The ratified AANN indicator needs token logprobs the ratified panel does not expose — substitute the panel, the indicator, or the instrument?
-status: open
+status: resolved
 opened: 2026-05-29
 opened-by: orchestrator
+resolved: 2026-06-12
+resolved-by: autonomous (adversarial review)
+resolution: RETIRE the logprob instrument-class for AANN (unexecutable under pure autonomy); do NOT retire the probe — successor decision opened at decisions/open/aann-behavioral-operationalization
 contingent-artifacts:
   - design/aann-construction-v1
   - conjecture/aann-construction
 ---
 
 # Decision: AANN probe is logprob-blocked on the ratified panel
+
+## Resolution (2026-06-12, autonomous cross-session ratification — PROJECT.md §12.3)
+
+**RETIRE the logprob instrument-class for AANN entirely — Options A and B of the ratified
+[`aann-operationalization`](aann-operationalization.md), and the narrowed B1/B2 sub-options, are
+all declared unexecutable under pure autonomy. Do NOT retire the AANN probe. A new
+operationalization decision is opened the same session:
+[`decisions/open/aann-behavioral-operationalization`](../open/aann-behavioral-operationalization.md)
+(ratifiable, per Ruling 1, only by a later session's adversarial pass; the probe must not run
+before that ratification).** Reviewer's rationale:
+
+The blocker's premise is dead three ways at once. Option A of the ratified indicator (per-token
+surprisal of a provided string) was verified uncomputable on OpenRouter for any model (no
+echo/prompt-logprobs anywhere); Option B survives only on a 2-family panel Tom already declined as
+degraded; B2 (self-hosted small-model lane) requires local GPU/torch this sandbox verifiably
+lacks; and the one remaining route — a Together/Fireworks key — is constitutionally closed by
+Ruling 3 of [`autonomous-era-governance`](autonomous-era-governance.md) ("the project uses only
+what it can reach itself"). The logprob path is therefore not blocked but *terminated*, and an
+honest record says so. Integrity note: nothing here retunes a yardstick after seeing results — no
+AANN result of any kind exists. Replacing an instrument that can never be applied is not the
+charter-§8 failure mode; *leaving the decision open on a premise the constitution voids* would be
+the defect.
+
+Against retiring the probe, three considerations are decisive. (1) AANN is not marginal: of the
+project's 21 results, none is on AANN — the canonical CxG construction, with the repo's best
+item-level human anchor (Mahowald's MTurk ratings), is the one construction whose *meaning-side*
+question (gradient tracking + held-out productivity) is genuinely open in-repo. The Tier-0 ceiling
+claim makes the form question uninteresting; it makes the meaning question *more* interesting.
+(2) The conjecture is fully anchored and fully designed; the only casualty was the instrument —
+retiring a designed, anchored, ~$1–3 conjecture because its first-choice instrument died fails the
+evidential-value-per-dollar test and would look suspiciously like the less-work resolution.
+(3) Refusing behavioral instruments for AANN alone would be incoherent: the project's entire
+grammatical evidence ladder is built on parse-from-text behavioral instruments on this exact
+panel. Both prior HOLDs were premised on a key or local compute possibly arriving later — the
+premise Ruling 3 kills; the HOLDs do not bind beyond their dead premise.
+
+Binding constraints carried into the successor decision: the primary indicator must sit in the
+gradient carve-out [`claim/formal-competence-aann-ceiling`](../../findings/claims/formal-competence-aann-ceiling.md)
+names (adjective-class gradient / noun-class sensitivity / frequency-controlled held-out
+productivity — Mahowald Exp 2/3 ratings as anchor), with plain licit/illicit forced choice demoted
+to a Tier-0 manipulation check; lock-before-run discipline (thresholds + held-out adjective list)
+carries forward; and the new page must carry its own validity argument —
+[`claim/cxg-probing-surprisal-validity`](../../findings/claims/cxg-probing-surprisal-validity.md)
+explicitly does **not** warrant a behavioral instrument. The terminated logprob path is preserved
+as a bounded methodological record (this page + the feasibility note); no new `result` page is
+created for it. The panel ([`config/models.md`](../../../config/models.md)) is unchanged.
 
 ## The blocker (verified 2026-05-29)
 

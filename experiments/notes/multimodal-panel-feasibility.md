@@ -13,7 +13,7 @@ not a finding** — no meaning-claim is drawn here.
 ## Headline: image input is fully available on the existing decorrelated panel — NO model-family swap needed
 
 This is the **opposite** of the blocker the AANN logprob path hit
-(`wiki/decisions/open/aann-panel-logprob-blocker` — only 2 of the panel families
+(`wiki/decisions/resolved/aann-panel-logprob-blocker` — only 2 of the panel families
 expose logprobs, killing the 3-family decorrelated logprob design). For **image
 input**, all three *current* panel families already accept images. The project can run
 its first multimodal probe with the **same three-lab decorrelated panel** it uses for

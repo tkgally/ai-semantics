@@ -65,7 +65,7 @@ Whichever is chosen is **frozen with the item set**; the stratification layer is
 Two loci, as the conjecture's Notes flag — they are different instruments and may disagree:
 
 - **Behavioral panel (provisional default).** Present the two usage sentences for a target word to the 3-family panel ([`config/models.md`](../../config/models.md)) and elicit a same-sense / different-sense judgment **with a graded confidence** (e.g. a 1–4 or 0–100 relatedness rating, or a calibrated same/different + confidence). Temperature 0; logprob-free → runs on the existing panel (no local compute). This mirrors every prior probe and is **not** blocked the way the AANN logprob/small-model lane is.
-- **Small-model representation-similarity lane.** Cosine between the target word's contextual representations in the two sentences, as a continuous same-sense signal. This is the cleaner "distributional" instrument but **needs local compute** (the same blocker that holds AANN, [`decisions/open/aann-panel-logprob-blocker`](../../wiki/decisions/open/aann-panel-logprob-blocker.md)) — OpenRouter exposes no usable hidden states.
+- **Small-model representation-similarity lane.** Cosine between the target word's contextual representations in the two sentences, as a continuous same-sense signal. This is the cleaner "distributional" instrument but **needs local compute** (the same blocker that holds AANN, [`decisions/resolved/aann-panel-logprob-blocker`](../../wiki/decisions/resolved/aann-panel-logprob-blocker.md)) — OpenRouter exposes no usable hidden states.
 
 The gate must pick one (or commit to both as separate, pre-registered instruments). The provisional default is the **behavioral panel**, with the small-model lane deferred until local compute is available.
 

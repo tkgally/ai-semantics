@@ -5,10 +5,11 @@ title: LLMs treat the AANN ("a beautiful three days") construction as a unit, no
 meaning-senses:
   - constructional
   - functional-vs-formal
-status: designed
-contingent-on: []
+status: proposed
+contingent-on:
+  - aann-behavioral-operationalization
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-12
 links:
   - rel: depends-on
     target: concept/constructional-meaning
@@ -57,7 +58,21 @@ Catalogued as [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahow
 
 ## Status note
 
-This conjecture is `designed` as of 2026-05-28: [`experiments/designs/aann-construction-v1.md`](../../../experiments/designs/aann-construction-v1.md) operationalizes it. Both governing decisions were ratified by Tom 2026-05-29, which fixes the yardstick (anchor, indicator, threshold) — but the conjecture remains **not** `tested`: the probe has **not yet been run**, and it may not be promoted to a claim until it is. Ratifying the anchor settles how the result will be judged, not the result.
+**Updated 2026-06-12: status reverted `designed` → `proposed`.** The v1 design's ratified
+indicator (the logprob/surprisal contrast, Options A and B of
+[`decisions/resolved/aann-operationalization`](../../decisions/resolved/aann-operationalization.md))
+was declared **unexecutable under pure autonomy** by the cross-session adversarial review that
+resolved [`decisions/resolved/aann-panel-logprob-blocker`](../../decisions/resolved/aann-panel-logprob-blocker.md)
+(no OpenRouter logprobs, no local GPU, no key will be provisioned), so "designed" would be false —
+[`experiments/designs/aann-construction-v1.md`](../../../experiments/designs/aann-construction-v1.md)
+is retired unrun. The indicator question was **reopened** as
+[`decisions/open/aann-behavioral-operationalization`](../../decisions/open/aann-behavioral-operationalization.md)
+(provisional default: gradient-primary behavioral instrument on the existing panel, Mahowald
+Exp 2/3 ratings as anchor). The predictions and falsification *substance* above stand; only the
+indicator clause ("surprisal contrast", "continuation likelihood") is reopened — read those
+through whatever instrument the new decision ratifies. The conjecture returns to `designed` when
+a frozen v2 design exists under a ratified instrument. The probe has **never been run**; no AANN
+result exists or is implied.
 
 ## Notes / caveats
 

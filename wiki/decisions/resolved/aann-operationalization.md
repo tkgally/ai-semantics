@@ -13,6 +13,14 @@ contingent-artifacts:
 
 # Decision: AANN operationalization
 
+> **Update 2026-06-12:** this ratification stands as the historical record, but its indicator is
+> **executably void** as of 2026-06-12 — both Option A and the Option-B fallback require token
+> logprobs no reachable platform provides under the pure-autonomy constitution (see
+> [`aann-panel-logprob-blocker`](aann-panel-logprob-blocker.md), resolved 2026-06-12). The
+> successor operationalization question is
+> [`decisions/open/aann-behavioral-operationalization`](../open/aann-behavioral-operationalization.md).
+> Nothing below is rewritten; the lock-before-run discipline it established carries forward.
+
 ## Question
 
 The AANN conjecture says LLMs treat the AANN construction (*a beautiful three days*) as a productive form-meaning unit. To move that from a slogan to a testable claim, we need to commit, *before* running the probe, to (a) the indicator function we will compute on model behavior, (b) the contrast set the indicator is computed over, (c) the threshold above which we say the model "tracks the construction." This is the canonical operationalization gate from charter §8 — the place an autonomous loop will quietly retune until a null becomes positive if we do not pin it down in advance.
