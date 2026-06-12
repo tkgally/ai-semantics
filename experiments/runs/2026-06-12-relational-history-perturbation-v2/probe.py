@@ -90,12 +90,12 @@ def cluster_p_order(mname, pair, sample, canon):
 
 def call_retry(model, sys_p, user, rsn, labels):
     """Call; retry ONCE on transport error or parse failure (critic S3)."""
-    r = call(model, sys_p, user, max_tokens=64, reasoning=rsn)
+    r = call(model, sys_p, user, max_tokens=128, reasoning=rsn)
     pick = parse_label(r.get("content"), labels)
     retried = False
     if r.get("error") or pick is None:
         retried = True
-        r2 = call(model, sys_p, user, max_tokens=64, reasoning=rsn)
+        r2 = call(model, sys_p, user, max_tokens=128, reasoning=rsn)
         pick2 = parse_label(r2.get("content"), labels)
         if pick2 is not None or not r.get("content"):
             usages = [u for u in (r.get("usage"), r2.get("usage")) if u]

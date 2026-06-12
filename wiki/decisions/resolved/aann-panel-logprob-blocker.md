@@ -135,7 +135,7 @@ This is exactly the "don't let the loop pick the instrument after the panel is f
 ## What downstream is contingent on this
 
 - [`design/aann-construction-v1`](../../../experiments/designs/aann-construction-v1.md) — unrunnable as written until this resolves; §2/§3.2 (indicator + panel) are the affected sections.
-- [`conjecture/aann-construction`](../../findings/conjectures/aann-construction.md) — stays `designed`, untested.
+- [`conjecture/aann-construction`](../../findings/conjectures/aann-construction.md) — stays `designed`, untested. *(Superseded by the 2026-06-12 resolution above: reverted to `proposed`, contingent on the successor decision.)*
 - Any future AANN `result`/`claim`.
 
 ## Notes for the resolver

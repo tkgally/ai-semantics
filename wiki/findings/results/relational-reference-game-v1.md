@@ -105,7 +105,7 @@ A **second, anchored** finding falls out of the same run: the LLM dyads converge
 three** (history content helps — coined_only is well below ordered), so the order test is read as
 interpretable rather than a methodological artifact — but note the claude and gemini lift CIs touch
 0 at the lower bound ([+0.000, +0.667] and [+0.000, +0.500]); the interpretability gate is
-point-estimate-based (caveat 6). **The ORDER gap is small and no model's CI excludes 0**; the `reversed`
+point-estimate-based (caveat 7). **The ORDER gap is small and no model's CI excludes 0**; the `reversed`
 (coherent reverse-chronological) arm is **no better than — sometimes worse than — random `shuffled`**
 (claude reversed 0.750 < shuffled 0.833; gemini 0.750 < 0.806), so even the small positive order-gap
 point estimates are not a chronology-specific trajectory effect but order-insensitive noise around a
@@ -194,7 +194,14 @@ finding does not reduce to a ceiling artifact for them.)
    mono gap would reflect the feedback loop itself, not merely extra record content. Stated, not
    stripped; it conditions the floor a future *positive* must beat (moot for this null, which
    failed the order-gap CI before the floor mattered).
-6. **Labeling refinement disclosed:** the analysis distinguishes a *methodological* null (history not
+6. **Round-label reconstructibility (logged 2026-06-12, from the v2 PREREG).** v1's history
+   lines carried `round k:` labels, so the shuffled and reversed arms were **in principle
+   reconstructible** — a matcher that wanted chronology could re-sort by label. This makes the
+   v1 order-insensitivity null *less* surprising, not more (an order-using matcher had a
+   recovery route the design left open). The v2 arm
+   ([`result/relational-history-perturbation-v2`](relational-history-perturbation-v2.md))
+   removes the labels and conveys order purely by position.
+7. **Labeling refinement disclosed:** the analysis distinguishes a *methodological* null (history not
    load-bearing) from this *deflationary* null (history loads, order does not) by the history_lift
    **point** estimate (>0.10); the frozen **positive** bar (order-gap CI>0) is untouched and unmet by
    every model. This affects only how the two null-flavours are named, not the headline.

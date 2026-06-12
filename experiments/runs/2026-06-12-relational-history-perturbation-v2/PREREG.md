@@ -48,6 +48,10 @@ two BLOCKERS + five SHOULD-FIXes; all are applied and the stimuli regenerated (n
    matcher may go out-of-pair — captured by the out-of-pair measure.
 9. **N4** — ρ is precisely the **last-*line*-twin** rate (for interleaved orders the final
    "block" is one line).
+10. **Liveness plumbing fix (before any finding-bearing call):** the liveness check reproduced
+   v1's known claude truncation failure (chatty reply overrunning a 64-token completion cap;
+   v1 logged 14 such NAs). Completion cap raised **64 → 128 uniformly for all models** and
+   recorded here; liveness raw is excluded from analysis by rule.
 
 ## Stimuli freeze
 

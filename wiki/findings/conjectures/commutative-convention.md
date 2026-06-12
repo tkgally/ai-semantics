@@ -8,7 +8,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-12
 links:
   - rel: depends-on
     target: result/relational-reference-game-v1
@@ -36,7 +36,7 @@ Across the three family-decorrelated panels in the relational pilot, a coined re
 
 The pilot's verdict — *coordination, not constitution* — turns on a distinction this conjecture supplies a name for. The two are **operationally separable** exactly by commutativity:
 
-- **AGGREGATION (commutative).** A convention is **computed inside each agent** from the shared content and then **aggregated** across agents (two systems independently arriving at the same label from overlapping evidence). Because each agent's computation conditions on a *content set*, scrambling the order of that content leaves the result unchanged — the aggregated convention is **commutative**. This is the deflationary reading [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md) predicts: two next-token predictors conditioned on overlapping recent context converge from co-occurrence content, "a convergence that survives order-scrambling" ([`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), §Headline).
+- **AGGREGATION (commutative).** A convention is **computed inside each agent** from the shared content and then **aggregated** across agents (two systems independently arriving at the same label from overlapping evidence). Because each agent's computation conditions on a *content set*, scrambling the order of that content leaves the result unchanged — the aggregated convention is **commutative**. This is the deflationary reading [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md) predicts: two next-token predictors conditioned on overlapping recent context converge from co-occurrence content, "a convergence that survives order-scrambling" ([`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), §Interpretation).
 
 - **CONSTITUTION (non-commutative).** A convention **constituted *between*** agents would be one whose content "exists in the interaction and not antecedently in either party" ([`concept/relational-meaning`](../../base/concepts/relational-meaning.md), §intro). There, the **live order** of the exchange — the particular sequence of repairs, partial acceptances, and refinements, and of *which* precedent got fixed *when* — is part of what the convention *is*. Such a convention would be **non-commutative**: reordering the trajectory would change the recovered interpretation, because order carries disambiguating information the content-set alone does not.
 
@@ -46,7 +46,7 @@ So the pilot's deflation has a precise shape: **the relational convergence the p
 
 From [`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), across **all three** homogeneous-dyad panels (`claude-sonnet-4.6`, `gpt-5.4-mini`, `gemini-3.5-flash`):
 
-- **History content is load-bearing.** Giving the matcher the record lifts accuracy well above the opaque nickname alone: `coined_only → ordered` lift **+0.25 … +0.42** (clustered-bootstrap CIs; the lift is clearly positive for all three, so the order test is interpretable, not a methodological artifact).
+- **History content is load-bearing.** Giving the matcher the record lifts accuracy well above the opaque nickname alone: `coined_only → ordered` lift **+0.25 … +0.42** — a positive point estimate for all three models (the claude and gemini lift CIs touch 0 at the lower bound; the interpretability gate is point-estimate-based, as the result page's caveat 7 discloses).
 - **Order is *not* load-bearing.** The `ordered − shuffled` gap is **+0.06 … +0.11**, and **no model's clustered-bootstrap CI excludes 0**.
 - **Not chronology-specific.** The coherent `reversed` arm is **≤ random `shuffled`** in every cell (claude reversed 0.750 < shuffled 0.833; gemini 0.750 < 0.806), so even the small positive order-gap point estimates are order-insensitive noise around a content-driven baseline, not a trajectory effect.
 - **Convergence without entrainment (the run's one anchored, human-comparison finding).** The dyads reach near-ceiling referential *accuracy* but keep expression length roughly constant (~8.5–10.8 words), whereas the human Hawkins dyads *compress* (length 7.73→4.10 words, accuracy 0.78→0.94 over repetitions) — convergence without human-like compression. This secondary finding is anchored to [`resource/hawkins-tangrams`](../../base/resources/hawkins-tangrams.md).
@@ -58,6 +58,23 @@ In the aggregation/constitution vocabulary: content lifts interpretation (the co
 If the conjecture holds, it predicts a **sharp human/LLM contrast at the relational grain**. The human relational convention appears to be **non-commutative**. The most directly relevant human result is **conceptual pacts** — *Brennan, S.E. & Clark, H.H. 1996, "Conceptual pacts and lexical choice in conversation," Journal of Experimental Psychology: LMC 22(6): 1482–1493* — which reports that human lexical entrainment has a **historical** (not merely ahistorical/salience-driven) and **partner-specific** component (as characterized in [`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md) §"Human anchor"; the paper is queued in [`base/wanted.md`](../../base/wanted.md) at P2 and is **not in-repo**, so it is **characterized, not quoted**, and no page number or quotation is attributed here). On that characterization, *which* partner you formed a pact with, and *when* in the history a term got fixed, matter to later interpretation — i.e. the human convention is **path-dependent / non-commutative**. The deflationary backdrop on the same axis — interactive alignment (Pickering & Garrod 2004; also not in-repo; characterization) — frames alignment as "a largely automatic process" of cross-level priming, i.e. coordination without a constitution claim, which is exactly the commutative/aggregation story (again as characterized in [`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md), not quoted). So the conjecture's bet is: **humans (conceptual pacts) are non-commutative; LLM dyads (so far) are commutative.**
 
 This contrast is a *prediction*, not a measured result. The human side is unanchored in-repo (Brennan & Clark 1996 unfetched), and the LLM side is the pilot's own bounded null. The page makes the contrast explicit precisely so that fetching the human anchor and running the v2 perturbation arm could decisively confirm or break it.
+
+## Update 2026-06-12 — the decisive test ran once: INCONCLUSIVE (bet survives an attempt, unstrengthened)
+
+The history-perturbation arm ran as
+[`result/relational-history-perturbation-v2`](../results/relational-history-perturbation-v2.md)
+(PREREG frozen after an independent pre-run critic pass; independent post-run verifier, zero
+mismatches). **Pre-registered verdict, all three models: INCONCLUSIVE/MIXED.** The falsification
+clause did **not** fire (no model tracked stated chronology in both presentation-direction
+arms), and the commutative null was **not** certified either (claude shows a CI-clean
+forward-arm elevation that vanishes when chronology and prompt position are decoupled — where
+it points anywhere, it points at *physical prompt position*, not chronology). So this
+conjecture **stays `proposed`: neither falsified nor meaningfully strengthened.** Do not cite
+the v2 run as the bet "holding" — only as the bet surviving a first, power-limited attempt
+whose most solid product is methodological (chronological recency and prompt-positional recency
+must be de-confounded by design; the direction-control arm is now the house pattern). The
+decisive test remains open pending truncation-proof elicitation, better-certified stimuli, and
+more clusters.
 
 ## What would confirm / falsify (the bet the loop picks up)
 
