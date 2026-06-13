@@ -24,8 +24,12 @@ links:
 
 # Design: relational history-perturbation probe (v3)
 
-> **Status: draft — awaiting independent pre-run critic; the run's `PREREG.md` is frozen
-> only after the critic pass, before any finding-bearing call.** This design supersedes
+> **Status: pre-run critic passed 2026-06-13 — GO after fixes, all applied.** The critic
+> ruled the provenance shift (open issue 1) **inside-class — no decision page**; blockers
+> 1–3 and should-fixes S1–S6 are incorporated below and in the run dir
+> (`experiments/runs/2026-06-13-relational-history-perturbation-v3/`), logged in that
+> run's `PREREG-draft.md`. The run's `PREREG.md` is frozen by the orchestrator (with the
+> `stimuli.json` sha256) before any finding-bearing call. This design supersedes
 > [`design/relational-history-perturbation-v2`](relational-history-perturbation-v2.md) and
 > exists for one reason: the v2 run
 > ([`result/relational-history-perturbation-v2`](../../wiki/findings/results/relational-history-perturbation-v2.md))
@@ -70,14 +74,18 @@ Per panel model, per near-twin pair (X, Y), per description sample s ∈ {0, 1, 
   YXXY, YYXX, YXYX, XYYX`) **× 2 presentation directions** (fwd/rev). Content multiset
   byte-identical across the 12 cells within a cluster; only chronological position and
   physical layout vary, independently.
-- **CONSISTENT** (per-cluster manipulation gate): 2 control records per cluster (all four
-  lines describing one twin, same nonce, fwd), one per twin — retained on top of
-  per-description certification as defense in depth (certification certifies lines singly;
-  the gate certifies the assembled record).
+- **CONSISTENT** (per-cluster manipulation gate): **4 control records per cluster** (all
+  four lines describing one twin, same nonce) — one per twin × **both presentation
+  directions** (critic S1, 2026-06-13: the rev-framed control checks
+  direction-instruction following exactly where the artifact diagnosis needs it) —
+  retained on top of per-description certification as defense in depth (certification
+  certifies lines singly; the gate certifies the assembled record). The gate requires
+  **all four** controls correct.
 
 Cluster = (pair × sample), the bootstrap and gating unit, as in v2. v1 discipline retained:
 one frozen matcher figure-array permutation per cluster, constant across that cluster's 12
-mixed cells + 2 controls.
+mixed cells + 4 controls. Totals: 108 mixed + 36 controls = 144 trials/model, **432
+finding-bearing calls**.
 
 ## Stimuli plan
 
