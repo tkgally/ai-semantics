@@ -88,19 +88,41 @@ itself) adds that. The project's central question was whether language models ac
   partly an artifact of a flat target plus one outlier, not a wholesale failure. All of this is
   gradient-<em>tracking</em>, consistent with a productive pattern; whether the models use the
   construction's <em>meaning</em> (a unified, evaluated stretch) was the next question — and it
-  has now been tested (June 13). <strong>The answer is a <a href="glossary.html#null">null</a>,
-  but a <a href="glossary.html#ceiling">ceiling</a>-bounded one.</strong> Asked to choose between
-  a "one whole stretch" reading and a "three separate days" reading, no model shifted its choice
-  toward the whole-stretch reading when given the special phrase (<em>a beautiful three days</em>)
-  rather than the ordinary one (<em>three beautiful days</em>) — but only because the models
-  already pick the whole-stretch reading for the ordinary phrase nearly every time, so the test
-  has no room to detect a difference. So this is "the test can't separate the construction's
-  meaning from what the model would infer anyway," <em>not</em> "the models lack the
-  understanding." The one thing that did move is a grammatical reflex in one model (singular
-  "was" for the special phrase, plural "were" for the ordinary one) — which the rules fixed in
-  advance correctly decline to count as drawing the meaning. So the form is tracked; the
-  inferential <em>use</em> stays untested-as-designed, and a sharper future test needs a
-  comparison phrase that does not already invite the same reading.</li>
+  has now been tested twice. <strong>The current answer (updated June 13) is a carefully bounded
+  <em>partial</em> yes: a real but uneven effect of the construction.</strong> A first test reached
+  a dead end — asked to choose between a "one whole stretch" reading and a "three separate days"
+  reading, no model shifted toward the whole-stretch reading for the special phrase
+  (<em>a beautiful three days</em>) over the ordinary one (<em>three beautiful days</em>), but only
+  because the models already pick the whole-stretch reading for the <em>ordinary</em> phrase nearly
+  every time. With the ordinary phrase at the <a href="glossary.html#ceiling">ceiling</a>, the test
+  had no room to detect a difference. A redesign then swapped the ordinary comparison phrase for one
+  that genuinely reads "day by day, separately" by default ("on each of the three days, it was
+  beautiful"), plus a third phrase carrying that same itemizing wording <em>without</em> the
+  construction, so any movement can be pinned on the construction rather than the borrowed wording.
+  The fix worked — the new comparison phrase did read "separate" at baseline (the ceiling is gone) —
+  and against it <strong>all three models shifted toward the "one whole stretch" reading for the
+  special phrase</strong> when picking the better paraphrase, by a wide margin even after subtracting
+  the borrowed-wording effect. <strong>But</strong> a paraphrase choice is the softest of the three
+  ways the test asks the question; the stronger checks are a yes/no
+  <a href="glossary.html#entailment">entailment</a> question and a grammar reflex (the construction
+  takes a singular verb — "a beautiful three days <em>was</em>" rather than "<em>were</em>"). Those
+  agreed with the paraphrase shift in only <strong>one of the three models</strong> — there, all
+  three ways of asking line up, the strongest single-model signal of this kind the project has
+  produced; for the other two the shift showed up <em>only</em> in the
+  <a href="glossary.html#paraphrase-vs-entailment">paraphrase choice</a>. So the honest verdict is
+  <strong>partial</strong>: a real construction effect on which reading the models pick, fully
+  consistent across all three tests in one model, and surface-level (paraphrase preference only) in
+  the other two — for those two the careful reading is "the construction shifts which paraphrase
+  they <em>prefer</em>," not "the model draws the inference." This is a
+  <a href="glossary.html#within-model">model-vs-model</a> comparison, never a comparison to people
+  (no human dataset measures this inference). Two honesty notes recorded with it: the different ways
+  of asking disagreed sharply (the largest such gap in the project's record — itself a tracked
+  finding), and a post-run check caught a real bug in the analysis code (one question had been scored
+  on only half its data); fixing it to the plan fixed in advance — raw answers untouched — is what
+  moved the one model into the "consistent across tests" column, without changing the overall partial
+  verdict. So the construction's <em>form</em> is tracked, and its inferential <em>use</em> is now
+  detectable and partially convergent rather than untestable — real, but uneven across models and
+  ways of asking.</li>
   <li><strong>One pattern is impressively robust.</strong> The "the more X, the more Y"
   construction survived every harder test thrown at it, including logical traps ("it is
   <em>not</em> the case that the more X…") that two of three models handled correctly —

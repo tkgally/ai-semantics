@@ -188,6 +188,26 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > singular-agreement reflex (+0.74)** — sits at the **form/agreement** rung, not the inference
 > rung (the pre-registered headline-gating refused to read it as inference), reinforcing the
 > recurring AANN pattern: strong on *form*, unproven on *inferential use*.
+>
+> **AANN's Tier 4, second attempt (2026-06-13, fifth session) — PARTIAL: the ceiling was removed
+> and a real construction effect appeared.** [`result/aann-inferential-v4`](../results/aann-inferential-v4.md)
+> implemented the fix the v3 null demanded: a **distributive-default control** (an itemizing "on each
+> of the three days…" frame) whose baseline reading is genuinely distributive, plus a **lexical-cue
+> control**, so the headline is a double contrast Δ² = P(uni|AANN) − P(uni|LCC). The control read
+> distributive at baseline for all three models (P(uni|DDC) = 0 / 0.22 / 0 — the v3 ceiling is gone),
+> and against it **all three models shift paraphrase selection toward unification** (Δ² +0.78 / +0.70
+> / +0.96, net of the cue). So the ladder's Tier-4 limit the v3 null hit — *inference and default
+> coincide* — is **escapable**: with a headroom-bearing control the construction's effect on the
+> reading is measurable. But it **converges across instruments (paraphrase + NLI + the
+> grammaticalized agreement reflex) in only one model, gpt-5.4-mini**; claude and gemini show the
+> paraphrase shift **without** NLI convergence or the agreement reflex (PARAPHRASE-ONLY). So the AANN
+> reaches a **clearing-the-bar Tier-4 signal for one of three models**, with the standing caution
+> that a forced-choice paraphrase preference is weaker than a converging NLI + agreement shift — for
+> the two paraphrase-only models, read it as a shift in *paraphrase preference*, not inference. The
+> instrument disagreement is the largest in the record (|FC−NLI| up to 1.04), feeding
+> [`open-question/instrument-sensitivity-constructional-inference`](../open-questions/instrument-sensitivity-constructional-inference.md);
+> `internal-contrast-only`. (An independent verifier caught and fixed an NLI-aggregation bug to the
+> frozen spec; the overall PARTIAL verdict was unchanged.)
 
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 
