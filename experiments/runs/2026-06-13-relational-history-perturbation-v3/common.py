@@ -5,9 +5,11 @@ One module so harvest.py / certify.py / probe.py cannot drift apart on the thing
 design (experiments/designs/relational-history-perturbation-v3.md) requires to be
 identical everywhere:
 
-- the FORCED single-label elicitation format (fix 1: truncation-proof; completion cap 512,
-  gemini reasoning effort "minimal" per config/models.md caveat 1),
+- the FORCED single-label elicitation format (fix 1: completion cap 512 makes truncation
+  rare, not impossible; gemini reasoning effort "minimal" per config/models.md caveat 1),
 - the pre-registered STRICT PARSE RULE (strict / non-strict / NA after one stern retry),
+  including the critic blocker-2 rule: a reply with finish_reason == "length" is NEVER
+  parsed for a pick (parse-fail -> stern retry -> NA),
 - the cost LEDGER and the pre-registered HARD STOP at $1.50 projected total,
 - panel slugs (imported from experiments/lib/openrouter.py PANEL — never hardcoded),
 - the frozen design constants (orders, directions, nonces, seeds).

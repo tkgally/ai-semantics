@@ -1,7 +1,7 @@
 ---
 type: design
 id: relational-history-perturbation-v3
-title: Relational v3 — the history-perturbation arm, second attempt (verifier fix-list incorporated; the decisive commutativity test, properly powered and truncation-proof)
+title: Relational v3 — the history-perturbation arm, second attempt (verifier fix-list incorporated; the decisive commutativity test, properly powered and truncation-resistant)
 meaning-senses:
   - relational
   - distributional
@@ -58,7 +58,7 @@ order-invariant (ρ_chron ≈ 0.5). The logic section of the
 
 | # | v2 defect (verifier) | v3 fix |
 |---|---------------------|--------|
-| 1 | Claude truncation non-random and cell-correlated: 11/72 mixed trials NA at the 128-token cap, all pair-2, 8 forward-arm; 10 truncated-but-parsed picks possibly deliberation-mentions. | **Truncation-proof elicitation**: strict forced-format single-token answer ("reply with exactly one label, nothing else"), completion cap raised to 512 so no reply can truncate, strict parse rule with a compliance flag, strict-only sensitivity cut (§Elicitation). |
+| 1 | Claude truncation non-random and cell-correlated: 11/72 mixed trials NA at the 128-token cap, all pair-2, 8 forward-arm; 10 truncated-but-parsed picks possibly deliberation-mentions. | **Truncation-resistant elicitation**: strict forced-format single-token answer ("reply with exactly one label, nothing else"), completion cap raised to 512 so truncation is rare (not impossible — a `finish_reason: length` reply is never parsed, per critic blocker 2), strict parse rule with a compliance flag, strict-only sensitivity cut (§Elicitation). |
 | 2 | gpt effectively uninformative: its v1-harvested descriptions passed the manipulation gate in only 1/6 clusters (control acc 0.42). | **Regenerated, per-description certified stimuli for all three models** (uniform procedure, not a gpt-only patch): fresh description harvest + an individual certification call per description; only certified descriptions enter records (§Stimuli). |
 | 3 | ≤6 clusters/model/direction (gemini 3); single/identical-cluster bootstrap CIs degenerate. | **9 clusters/model/direction** (3 pairs × 3 description samples, gemini included via fresh harvest — its v1 pool was too thin for more than 1 sample); power rationale in §Power. |
 | 4 | Latent rule defect: the falsification clause had no minimum-cluster guard — a single gated cluster's zero-width CI could mechanically fire it. | **Pre-registered ≥k-cluster guard, k = 3**, applied symmetrically to every CI-bearing clause (falsification, artifact, *and* null-certification), plus a rule that degenerate (zero-width) CIs can satisfy no clause (§Decision rule). |
@@ -101,11 +101,18 @@ finding-bearing calls**.
   list, temperature 0. Deduplicate (within figure and against the twin's set).
 - **Per-description certification**: each distinct candidate gets **one certification
   call** — a fresh same-model matcher, probe-shaped prompt, the single description line, no
-  nonce, no history: which figure is described? Certified iff correct. The first **6
-  certified descriptions per figure** (deterministic harvest order) are frozen in; 6 = 3
-  samples × 2 descriptions. Shortfall procedure (pre-registered): one top-up harvest call at
+  nonce, no history: which figure is described? Certified iff correct. The ≤12-word budget
+  is enforced **mechanically at harvest time**, before certification (critic S4 —
+  over-budget lines never reach a certification call). The first **6 certified
+  descriptions per figure** (deterministic harvest order) are frozen in; 6 = 3 samples × 2
+  descriptions, partitioned deterministically as sample s ← roster positions 2s, 2s+1
+  (pre-registered). Shortfall procedure (pre-registered): one top-up harvest call at
   temperature 0.8, logged; if still short, that model's sample count drops and the reduced
   cluster count is recorded in the PREREG **before** the stimuli freeze.
+- **Deferred (never gating, critic issue-5 ruling)**: a **cross-model certification
+  cross-check** — re-certifying each model's frozen roster with the other two models'
+  matchers — is deferred to a future session, pre-registered there as **descriptive
+  only**; it can contextualize, never gate or re-open, this run's verdicts.
 - **Known bias direction, disclosed**: certification selects for individually discriminative
   lines, which *sharpens* the X-vs-Y conflict — i.e. it biases **against** the
   ~0.5-noise-toward-the-null failure mode the v2 critic identified (B2), not toward the
@@ -121,13 +128,16 @@ finding-bearing calls**.
   stimulus-construction data, kept but never analyzed as findings; the probe `full` run is
   the only finding-bearing dataset (v2 rule S2, extended).
 
-## Elicitation (fix 1 — truncation-proof)
+## Elicitation (fix 1 — truncation-resistant)
 
 - **Forced format**: system + user prompts demand the reply be **exactly one figure label**
   (`P1`…`P6`) and nothing else — no explanation, no restatement.
-- **No truncation possible**: completion cap 512 (vs v2's 128), so even a non-compliant
-  deliberating reply completes; the v2 failure mode (label lost past the cap) is closed at
-  both ends. gemini keeps `reasoning: effort minimal` (per
+- **Truncation made rare AND made harmless** (critic blocker 2 softened the original
+  "no truncation possible" claim): completion cap 512 (vs v2's 128) makes truncation
+  rare, not impossible; the pre-registered rule that closes the hole is that a reply
+  with `finish_reason: length` is **never parsed for a pick** — it counts as a
+  parse-fail → stern retry → NA, in probe and certification alike, with `finish_reason`
+  recorded per call. gemini keeps `reasoning: effort minimal` (per
   [`config/models.md`](../../config/models.md) caveat 1).
 - **Strict parse rule (pre-registered)**: (a) reply that is exactly one label after
   whitespace/punctuation stripping → pick, flagged `strict`; (b) else, if the final
@@ -171,75 +181,98 @@ All frozen in `PREREG.md` post-critic; no retuning after seeing data.
   descriptive cross-check on the cluster-independence caveat (clusters within a pair share
   figures).
 
-## Decision rule (fixes 4 and 5 baked in)
+## Decision rule (fixes 4 and 5 baked in; critic blockers 1 and 3 applied 2026-06-13)
 
-**The ≥k guard, k = 3**: every clause below additionally requires **≥3 gated clusters in
-each presentation direction** and non-degenerate CIs for the quantities it cites. Below
-that floor the run is METHODOLOGICAL NULL for that model, whatever the point estimates say.
-The guard is symmetric — it blocks a one-cluster zero-width CI from firing falsification
-(the v2 latent defect) *and* from certifying the null (no dodging in either direction).
+**The ≥k guard, k = 3**: every CI-bearing clause requires **≥3 gated clusters in each
+presentation direction** and non-degenerate CIs for the quantities it cites. The guard is
+symmetric — it blocks a one-cluster zero-width CI from firing falsification (the v2
+latent defect) *and* from certifying the null (no dodging in either direction).
 
-Per model, pre-registered verdict categories:
+**Trial floors (critic blocker 3)**: the effect clauses (FALSIFIED, ARTIFACT) require
+**≥24 gated in-pair parsed trials per direction**; null-certification keeps the stricter
+**≥36** floor. (Reconciliation with v2 PREREG S4: that floor concerned a 3-cluster
+nominal total in a degenerate identical-rate-cluster regime; v3 adds degenerate-CI
+exclusion + both-direction agreement + these explicit floors — a sharpening of S4's
+intent, recorded in full in the run PREREG.)
 
-- **FALSIFIED (non-commutative, chronology-tracking)** iff ≥3 gated clusters per direction
-  AND out-of-pair ≤ 0.5 AND ρ_chron's CI excludes 0.5 **on the same side in BOTH
-  presentation directions** (two-sided: recency or primacy, direction reported). → the
-  conjecture's invariance bet falsified for that model; the positive surfaced, not
-  auto-promoted, under the usual contingency discipline.
-- **PHYSICAL-POSITION ARTIFACT** iff the guard holds and ρ_phys's CI excludes 0.5 on the
-  same side in both directions while the ρ_chron clause is unmet. → methodological finding
-  about prompt-position bias; says nothing relational.
-- **COMMUTATIVE-NULL-CERTIFIED** iff ≥3 gated clusters per direction, out-of-pair ≤ 0.5,
-  all four CIs (ρ_chron, ρ_phys × both directions) include 0.5, **AND ≥36 gated in-pair
-  parsed trials per direction** (an absence claim needs sample-size floor, not just CI
-  coverage — pre-registered so "certified" cannot be earned on scraps). → extends the v1
-  null to "position of conflicting convention evidence"; the conjecture stays `proposed`,
-  strengthened, not proven; "certified" means the pre-registered null clause fired, never a
-  precise zero.
-- **INCONCLUSIVE / MIXED** iff the guard holds but the arms disagree (one CI-clean, the
-  other not, or opposite sides without the artifact pattern) — the v2 outcome, reported
-  with point estimates and no substantive label.
-- **METHODOLOGICAL NULL** iff < 3 gated clusters in either direction. **UNDER-POWERED** iff
-  out-of-pair > 0.5.
+**The verdict is an ordered, exhaustive if/else tree (critic blocker 1)** — first clause
+that fires wins; explicit final else; precedence METHODOLOGICAL NULL > UNDER-POWERED >
+the CI clauses. Per model:
+
+1. **METHODOLOGICAL NULL** if < 3 gated clusters in either direction — whatever the point
+   estimates say.
+2. **UNDER-POWERED** if out-of-pair > 0.5 on parsed picks.
+3. **FALSIFIED (non-commutative, chronology-tracking)** if ρ_chron's CI excludes 0.5 **on
+   the same side in BOTH presentation directions** (two-sided: recency or primacy,
+   direction reported) and the ≥24 floor holds. → the conjecture's invariance bet
+   falsified for that model, **under forced-label elicitation** (scope limit); the
+   positive surfaced, not auto-promoted, under the usual contingency discipline.
+4. **PHYSICAL-POSITION ARTIFACT** if ρ_phys's CI excludes 0.5 on the same side in both
+   directions (ρ_chron clause unfired) and the ≥24 floor holds. → pre-registered reading
+   (critic S1): **"position-following or direction-instruction neglect — observationally
+   equivalent here"**; methodological, says nothing relational.
+5. **COMMUTATIVE-NULL-CERTIFIED** if all four CIs (ρ_chron, ρ_phys × both directions)
+   include 0.5 (non-degenerate) and the ≥36 floor holds (an absence claim needs a
+   sample-size floor, not just CI coverage). → extends the v1 null to "position of
+   conflicting convention evidence"; the conjecture stays `proposed`, strengthened, not
+   proven; "certified" means the pre-registered null clause fired, never a precise zero.
+6. **INCONCLUSIVE — null pattern, certification floor unmet** (named gap sub-label) if
+   the guard holds, out-of-pair ≤ 0.5, all four CIs include 0.5, but the ≥36 floor is
+   unmet — no clause fires.
+7. **Else: INCONCLUSIVE / MIXED** — everything not caught above (arms disagree, opposite
+   sides, a degenerate CI, or a CI pattern below the ≥24 effect floor) — the v2 outcome,
+   reported with point estimates and no substantive label.
+
 - **Multiplicity (acknowledged, inherited)**: "≥1 model fires" over 3 models at 95% CIs
   carries ≈14% family-wise false-positive risk under the global null; the both-directions
-  requirement tightens it.
+  requirement tightens it, **but as two correlated tests, not independent ones** (critic
+  S6: fwd/rev share clusters and stimuli).
 
 ## Power rationale (fix 3)
 
 v2's binding constraint was not nominal n but **gate survival and truncation**: nominal 6
 clusters/model decayed to 4 (claude, then −NA attrition), 1 (gpt), 2-of-3 (gemini). v3
 attacks realized-n directly: certified stimuli should put gate survival near ceiling, and
-the forced format eliminates truncation NAs, so realized gated n should approach the
-nominal **9 clusters / 54 mixed trials per direction per model** (vs v2's nominal 6/36,
-gemini 3/18; realized far less). That is ~1.5× nominal and ~2×–9× *realized* over v2, and
-it removes the single-cluster degenerate-CI regime entirely. Still pilot-scale, stated
-plainly: with 9 clusters, only a **consistent ρ_chron ≳ 0.7** is reliably CI-clean;
-CI-includes-0.5 remains *inconclusive-leaning-null*, not a precise zero; orderings and
-effect-direction, not effect sizes.
+the forced format plus the never-parse-truncated rule should drive truncation NAs to near
+zero, so realized gated n should approach the nominal **9 clusters / 54 mixed trials per
+direction per model** (vs v2's nominal 6/36, gemini 3/18; realized far less). That is
+~1.5× nominal and ~2×–9× *realized* over v2, and it removes the single-cluster
+degenerate-CI regime entirely. Still pilot-scale, stated plainly: with 9 clusters, only a
+**consistent ρ_chron ≳ 0.7** is reliably CI-clean; CI-includes-0.5 remains
+*inconclusive-leaning-null*, not a precise zero; orderings and effect-direction, not
+effect sizes. Two honesty notes (critic S6), disclosed next to that caveat: (a) the
+fwd/rev arms share clusters and stimuli, so the both-directions agreement requirement is
+**two correlated tests, not independent replications**; (b) a symmetric U-shaped
+(primacy+recency) serial-position profile dilutes ρ_chron toward 0.5 in **both**
+directions — a bias **toward the conjecture's own bet** — so CI-includes-0.5 is
+consistent with either genuine order-invariance or a symmetric order effect (the
+clean-switch vs interleaved secondary is the descriptive probe of that profile).
 
 ## Cost pre-flight (billed `usage.cost`, not rate-card)
 
 Yardstick: v2's finding-bearing run billed **$0.277 for 210 calls** (≈$0.0013/call,
-probe-shaped); v1's game calls billed ≈$0.0011 each. v3 is **≈3× v2's call count** — said
-plainly:
+probe-shaped); v1's game calls billed ≈$0.0011 each. v3 is **≈3.3× v2's call count**
+(critic S1 added 54 control calls, ≈+$0.07) — said plainly:
 
 | phase | calls | est. billed |
 |---|---|---|
 | harvest (18 calls + ≤18 top-ups; director-shaped) | ≤36 | ≈$0.05 |
-| certification (≤48 distinct candidates × 3 models; 1-line probe-shaped) | ≤144 | ≈$0.17 |
-| probe `full` (3 × [108 mixed + 18 controls]) | 378 (+retries) | ≈$0.55 |
-| liveness + preflight (never analyzed) | ≈15 | ≈$0.02 |
-| **total** | **≈575–650** | **≈$0.80; expectation stated: < $1.00** |
+| certification (≤48 distinct candidates × 3 models; 1-line probe-shaped) | ≤144 first pass | ≈$0.17 |
+| certification of top-up candidates (honest worst case, critic S3: each top-up call can add up to 8 more candidates) | ≤+144 | worst ≈+$0.17; expected ≈$0 |
+| probe `full` (3 × [108 mixed + 36 controls]) | 432 (+retries) | ≈$0.62 |
+| liveness + preflight (3 + 9 gpt + 9 claude controls; never analyzed) | 21 | ≈$0.03 |
+| **total** | **≈630 expected; ≤790 worst case (+retries)** | **≈$0.87; expectation stated: < $1.00** |
 
 Worst-case sensitivity, disclosed: the 512-token cap means a persistently non-compliant
-claude (deliberating to cap on most trials) could push the probe phase toward ≈$1.30 total;
+claude (deliberating to cap on most trials) could push the probe phase toward ≈$1.35 total;
 the forced format exists precisely to prevent this, the liveness format-gate checks
 compliance before any finding-bearing call, and **phase checkpoints** apply — billed cost
-recorded after harvest, certification, and preflight, with a pre-registered **hard stop at
-$1.50 projected total** (re-design, don't push through). Well under the $2.50 single-run
-flag and the $5.00/day cap; actual billed `usage.cost` recorded per phase in
-`config/budget.md`.
+recorded after harvest, certification, and preflight, plus a **per-model checkpoint inside
+the `full` phase** (critic S2: projected total re-checked before each model's batch from
+*realized* per-call billed costs; preflight includes claude controls so the projection
+sees the priciest model), with a pre-registered **hard stop at $1.50 projected total**
+(re-design, don't push through). Well under the $2.50 single-run flag and the $5.00/day
+cap; actual billed `usage.cost` recorded per phase in `config/budget.md`.
 
 ## Anchor posture
 
@@ -279,27 +312,28 @@ by choice:
   uniform fabricated feedback, asserted about "ONE target"), so ecological status changes
   in degree, not kind; certification operationalizes the same stimulus-quality requirement
   the v2 critic's B2 gate introduced, and its bias direction (sharper conflict, anti-null)
-  is disclosed above. **The pre-run critic is explicitly asked to contest this judgement**
-  (open issue 1 below); if the critic deems it value-laden, it goes to
-  `wiki/decisions/open/` before the freeze, per house rule 5.
+  is disclosed above. **The pre-run critic was explicitly asked to contest this judgement**
+  (open issue 1 below) and **ruled it inside-class** (2026-06-13): no decision page; two
+  conditions recorded as scope limits in the run PREREG (stimuli are
+  harvested-and-certified, not live-game by-products — to be repeated in the eventual
+  result page — and certification selects for individually decodable lines, so the result
+  is conditional on evidence lines that work singly and says nothing about conventions
+  whose lines are only interpretable in context).
 
-## Open issues for the pre-run critic
+## Open issues for the pre-run critic — RESOLVED 2026-06-13 (critic verdict: GO after fixes)
 
-1. **Provenance shift**: is harvested-and-certified (vs live-game) description provenance an
-   inside-class hygiene fix, as argued in the gate check, or a value-laden
-   operationalization change needing a decision page?
-2. **Batch harvest**: 8 candidates in one numbered-list call (cheap, deterministic) may
-   yield a different register than one-at-a-time generation — does certification fully
-   absorb that, or should harvest be one-description-per-call at temperature 0.8?
-3. **Guard calibration**: is k = 3 the right floor, and is the extra ≥36-trial floor on
-   null-certification the right asymmetry (stricter on the absence claim), or should both
-   clauses carry it?
-4. **Forced format vs deliberation**: could suppressing visible deliberation itself change
-   pick behavior (a format-as-treatment worry)? If the critic thinks so, a small
-   format-compliance preflight comparison could be added before freeze.
-5. **Certification by the same model**: certification uses a same-model matcher (the
-   convention is model-internal); should a cross-model certification cross-check be logged
-   descriptively?
+1. **Provenance shift** — ruled **inside-class hygiene; no decision page**, with the two
+   scope-limit conditions above recorded in the run PREREG.
+2. **Batch harvest** — retained as designed; certification absorbs the register worry.
+3. **Guard calibration** — k = 3 retained; the asymmetry resolved by adding a **≥24-trial
+   per-direction floor to the effect clauses** (FALSIFIED, ARTIFACT) while
+   null-certification keeps ≥36 (blocker 3).
+4. **Forced format vs deliberation** — retained, with the pre-registered scope limit that
+   any FALSIFIED/CERTIFIED verdict holds **under forced-label elicitation**; suppressing
+   visible deliberation could change the pick mechanism.
+5. **Certification by the same model** — same-model certification retained; the
+   cross-model cross-check is **deferred** (see §Stimuli plan: never gating; a future
+   session; pre-registered descriptive only).
 
 ## Run plan
 
