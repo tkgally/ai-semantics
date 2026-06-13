@@ -100,9 +100,14 @@ noun class (temporal stratum negative; see the result's caveat 2).
 [`decisions/open/aann-inferential-operationalization`](../../decisions/open/aann-inferential-operationalization.md)
 (indicator choice + the anchor sub-question — Mahowald's acceptability ratings do not anchor an
 inference measure); no v3 design may be frozen or run until it is ratified in a later session.
-The gradient half's `tested` status is unaffected. A companion temporal held-out widening
-(v2 caveat 2; same ratified instrument, no new decision) is designed at
-[`experiments/designs/aann-temporal-heldout-v2b.md`](../../../experiments/designs/aann-temporal-heldout-v2b.md).
+The gradient half's `tested` status is unaffected. The companion temporal held-out widening
+(v2 caveat 2; same ratified instrument, no new decision) **ran the same session** →
+[`result/aann-temporal-heldout-v2b`](../results/aann-temporal-heldout-v2b.md): widening the
+temporal stratum 5× (16 → 80 items) confirms caveat 2 was real — the temporal stratum is
+**uniformly negative at every grain** for all three models, so held-out AANN *productivity*
+(generalizing the gradient to novel adjectives) is **noun-class-dependent** (strong for
+object/distance, absent for temporal). This refines, and does not overturn, the v2 overall
+SUPPORTED verdict.
 
 ## Notes / caveats
 
