@@ -162,6 +162,18 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 
 **Tier 3 — Generalization to held-out material.** The Tier-2 effect holds for lexical items the model is unlikely to have seen *in the construction* during training. This is Goldberg's productivity criterion and the project's main defense against memorization ([`conjecture/aann-construction`](../conjectures/aann-construction.md): "the held-out lexical-item check is the main defense"; its "weak" outcome is explicitly "contrast exists for items that appeared in training (memorization) but does not generalize"). Generalization converts a "the model has stored these instances" story into a "the model has the schema" story.
 
+> **Rungs 2–3 climbed for AANN (2026-06-12).** [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md)
+> is the first AANN run, under the ratified behavioral instrument (the surprisal indicator of
+> the Tier-1 paragraph above was retired unexecutable; gradient elicitation is prompted, not
+> likelihood-based). All three panel models **rank-track the empirical human Exp-2 gradient**
+> (cell-level ρ 0.68–0.75, frequency- and noun-class-guarded — Tier 2) **and replicate the
+> class gradient on a locked, frequency-matched held-out adjective list** (0.75–0.83 — Tier 3,
+> with the honest caveat that replication is uneven by noun class: the temporal stratum comes
+> out negative). AANN's **Tier 4** — inference-licensing on the unification/evaluation meaning
+> — remains untested; that is the line's natural v3. The Tier-0 ceiling claim
+> ([`claim/formal-competence-aann-ceiling`](../claims/formal-competence-aann-ceiling.md)) is
+> unchanged: this result is exactly the "separate meaning-diagnostic" its carve-out called for.
+
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 
 The ladder is the page's claim, in compressed form: **form-acceptability < surprisal-contrast < gradient semantic tracking < generalization < inference-licensing.** Each upward step narrows the space of distributional-only explanations; only the top two steps are evidence for constructional *meaning* as opposed to constructional *form*.
@@ -226,7 +238,7 @@ The null is bounded — pilot scale (n≈12 coined terms/model), and a sharper t
 - From a frequency-uncontrolled gradient (Tier 1 dressed as Tier 2) to semantic tracking.
 - From any text-internal tier (0–4) to grounded communicative meaning in Bender & Koller's sense, absent a separate grounding argument.
 
-It also forbids promoting a contingent conjecture's eventual result to settled language while its `contingent-on` decisions are open — the AANN line is the live instance.
+It also forbids promoting a contingent conjecture's eventual result to settled language while its `contingent-on` decisions are open — the AANN line was the live instance until 2026-06-12, when its instrument decision was ratified, the v2 design frozen, and the probe run under it (an example of the discipline running end-to-end: surface → cross-session ratify → freeze → run).
 
 ## Theoretical situating
 

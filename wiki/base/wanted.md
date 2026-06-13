@@ -114,7 +114,7 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 
 - [P2] Schuele, M. 2024/2025. "On the Semantics of Large Language Models." *Intellectica* 81: 15–36 (2024); arXiv 2507.05448 (July 2025).
   why: applies classical Frege/Russell semantic theory to LLM word- and sentence-level representations — directly on the `referential` vs. `distributional` boundary; abstract fetched verbatim 2026-06-12, full text not read.
-  status: wanted (OA on arXiv; good next philosophical catalogue candidate)
+  status: **RECEIVED** (2026-06-12; catalogued as [`wiki/base/sources/schuele-2025-semantics-of-llms.md`](sources/schuele-2025-semantics-of-llms.md) — abstract + 7 section-level quotes verbatim-verified against arXiv HTML v1; the Intellectica original was not consulted).
 - [P2] Millière, R. & Buckner, C. 2024. "A Philosophical Introduction to Language Models — Part I: Continuity with Classic Debates." arXiv 2401.03910.
   why: the standard survey connecting LLM-meaning disputes to the classic debates the project's concept pages characterize; useful as a map, not an anchor.
   status: wanted (OA on arXiv; only the title/landing page seen 2026-06-12)
@@ -131,7 +131,7 @@ These would supply the human dyadic-interaction anchor the [`open-question/relat
   status: wanted (priority). Publisher route checked 2026-06-12: ScienceDirect article page returns HTTP 403 to anonymous fetch — plainly paywalled via the publisher. Not yet marked `unreachable` outright: Clark's Stanford publications page (web.stanford.edu/~clark/pubs.html) is a plausible author self-archive route, not tried this session.
 - [P2] Brennan, S.E. & Clark, H.H. 1996. "Conceptual pacts and lexical choice in conversation." *Journal of Experimental Psychology: LMC* 22(6): 1482–1493. **← added 2026-05-31 (Tom, decision `relational-fetchable-anchor`).**
   why: the human result that most directly *motivates* the pilot's live-vs-shuffled discriminator — lexical entrainment is shown to be **historical** (not merely salience-driven) and **partner-specific**, the human-side analogue of "live ≠ shuffled." Complements C&W-G 1986. A fetchable derived/aggregate baseline is now available via the Hawkins tangrams corpus ([`decisions/resolved/relational-fetchable-anchor`](../decisions/resolved/relational-fetchable-anchor.md), Option A).
-  status: wanted. APA journal is paywalled, but a web search (2026-06-12) located a long-standing course-site mirror PDF (profgerhard.de/sfs/lehre/ws0708/spieltheorie/Brennan&Clark_96.pdf) — verify it is the JEP:LMC paper (not Brennan 1996 "Lexical entrainment in spontaneous dialog", a different paper often confused with it) before quoting.
+  status: **RECEIVED** (2026-06-12; the profgerhard.de mirror PDF was fetched and verified to be the JEP:LMC paper — masthead, both authors, vol/issue/pagination 22(6):1482–1493 all confirmed; catalogued as [`wiki/base/sources/brennan-clark-1996-conceptual-pacts.md`](sources/brennan-clark-1996-conceptual-pacts.md)). Honest limit recorded in-page: it grounds historicity + partner-specificity, **not** order-sensitivity ("Frequency of use better explains our data than does simple recency"), so it only partly grounds the commutative-convention conjecture's human clause.
 - [P3] Krauss, R.M. & Weinheimer, S. 1964/1966. Reference-phrase-shortening studies.
   why: the earlier convergence-curve studies the entrainment measure would be calibrated against.
   status: wanted

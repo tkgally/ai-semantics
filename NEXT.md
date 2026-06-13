@@ -2,64 +2,74 @@
 
 ## State
 
-**Session 1 of the autonomous era is landed.** The first autonomous ratification round resolved
-all three pre-pause decisions (relational yardstick → Default A/A/A adopted, v1 result promoted;
-AANN logprob path → terminated, probe kept, successor decision opened; cloud-compute path →
-closed on the dead-key premise). The decisive relational v2 (history-perturbation) experiment
-**ran → INCONCLUSIVE/MIXED** ([`result/relational-history-perturbation-v2`](wiki/findings/results/relational-history-perturbation-v2.md)):
-[`conjecture/commutative-convention`](wiki/findings/conjectures/commutative-convention.md)
-neither falsified nor strengthened; the pre-run critic's direction-control arm converted a
-would-be spurious "recency falsification" into an identified prompt-position/chronology
-confound. The philosophical track opened: first essay
-([`essay/aggregation-not-constitution`](wiki/findings/essays/aggregation-not-constitution.md),
-revision triggers already exercised once) + two 2025 relational-axis sources (Ashery, Imai).
-Spend 2026-06-12: **$0.29** of $5.00. Website updated (journal, home, findings, plans, glossary).
+**Session 2 of the autonomous era (third June-12 session) is landed.** Three things changed.
+(1) **Tom's standing instruction applied first**: the public site now carries
+`noindex/nofollow/noai` meta tags on all six pages plus `docs/robots.txt` (see the
+standing-override note below for the domain-root caveat). (2) **The AANN line ran end-to-end in
+one session**: the second autonomous ratification round adopted the behavioral instrument
+([`decisions/resolved/aann-behavioral-operationalization`](wiki/decisions/resolved/aann-behavioral-operationalization.md),
+nine binding conditions) → Mahowald repo mirrored/verified (MIT) → frozen v2 design + PREREG →
+independent pre-run critic (added the decisive noun-class guard) → probe (1,782 calls, 0
+missing, $0.3125) → independent post-run verifier (0 mismatches) →
+[`result/aann-behavioral-gradient-v2`](wiki/findings/results/aann-behavioral-gradient-v2.md):
+**SUPPORTED** — all 3 models track the human Exp-2 gradient (cell ρ 0.68–0.75) and replicate it
+on frequency-matched held-out adjectives (0.75–0.83; temporal stratum does NOT replicate —
+caveat 2). [`conjecture/aann-construction`](wiki/findings/conjectures/aann-construction.md) is
+`tested`; the **inferential half is untested**. (3) **Philosophical track**: Schuele 2025
+catalogued (first in-repo "sense-without-reference" argument); **Brennan & Clark 1996 fetched
+and verified** → essay trigger c-ii exercised:
+[`essay/aggregation-not-constitution`](wiki/findings/essays/aggregation-not-constitution.md)
+(now `revised`) and [`conjecture/commutative-convention`](wiki/findings/conjectures/commutative-convention.md)
+human-contrast clauses corrected — the source grounds partner-specificity/historicity, **not**
+order-sensitivity ("frequency over recency"). Spend 2026-06-12 (both sessions): **$0.60** of
+$5.00. Website updated (journal, home, findings, plans, glossary + 2 new entries, footers).
 
 ## Next concrete actions — backlog for the next session
 
-1. **Ratification round (first order of business, PROTOCOL §2).** One decision is eligible:
-   [`decisions/open/aann-behavioral-operationalization`](wiki/decisions/open/aann-behavioral-operationalization.md)
-   (opened 2026-06-12 by the adversarial review that closed the logprob blocker). Independent
-   adversarial review of the gradient-primary behavioral default vs the alternatives (forced
-   choice only / retire). If adopted: a later unit writes the frozen AANN v2 design
-   (Mahowald Exp 2/3 anchor; held-out adjective list locked pre-run; its own validity argument —
-   the surprisal-validity claim does not transfer; Tier-0 forced choice as manipulation check
-   only). The probe may run in the same session as the design freeze **only if** the
-   ratification preceded the design (the decision was opened in an earlier session — same-session
-   sequencing as used for the relational v2 is fine).
-2. **Empirical track — either AANN v2 (if ratified, ~$1) or relational v3.** Relational v3 =
-   the perturbation follow-up with the verifier's fix-list applied: truncation-proof elicitation
-   (strict single-token forced format; claude truncated 21/84 even at 128 tokens),
-   re-certified/regenerated gpt stimuli (its v1 descriptions failed their own gate, 1/6 clusters
-   usable), more clusters (more twin pairs or fresh description harvests), and a pre-registered
-   **minimum-cluster guard** on the falsification clause (latent defect: a single gated cluster's
-   zero-width bootstrap CI could fire it mechanically). Both are good; prefer AANN v2 if the
-   ratification lands (the grammatical track has been idle since 2026-05-31, and the relational
-   axis got this session's spend).
-3. **Philosophical track — second source/essay unit.** Catalogue Schuele 2025 "On the Semantics
-   of LLMs" (arXiv 2507.05448, abstract already verified — strongest queued candidate) into
-   `base/sources/`; optionally fetch **Brennan & Clark 1996** via the located author-archive
-   route (profgerhard.de mirror — verify it is the right paper, NOT Brennan 1996 "Lexical
-   entrainment") to convert the essay's and conjecture's human-contrast clause from
-   characterization to citable ground. A second essay is **not** urgent; only start one if a
-   thesis is genuinely ripe.
+1. **AANN v3 — the inferential arm (grammatical track's priority).** The v2 result is
+   gradient-tracking only; the conjecture's distinctive *meaning* clause (unification +
+   evaluation: does the model draw the "unified, evaluated stretch" paraphrase/inferences?)
+   is untested. The indicator choice is a value-laden operationalization call → **open a
+   `wiki/decisions/open/` page first** (options: paraphrase forced-choice vs entailment-style
+   NLI vs generation-and-code; provisional default + anchor question — Mahowald's ratings do
+   NOT anchor an inference measure), ratifiable the following session. Cheap companion fix in
+   the same unit: widen the **temporal held-out cells** (v2 caveat 2 — the one stratum that
+   failed to replicate; 4 cells was too thin to read).
+2. **Relational v3 (relational track).** Unchanged from last handoff: the perturbation
+   follow-up with the verifier's fix-list (truncation-proof single-token elicitation;
+   re-certified gpt stimuli; more clusters; pre-registered minimum-cluster guard). The essay's
+   corrected human-contrast clause adds a reason to run it: the human side no longer presumes
+   non-commutativity, so the LLM-side answer carries more of the contrast's weight.
+3. **Philosophical track.** Catalogue Millière & Buckner 2024 (arXiv 2401.03910, the two-part
+   philosophical survey — the strongest remaining queued source). A second essay only if ripe;
+   one live candidate thesis: what the Brennan-Clark correction does to the
+   aggregation-vs-constitution bet (the human pole of "non-commutative" is now an open
+   empirical question, not an anchor).
 4. **Website** per PROTOCOL §5b, as always.
 
 ## Open decisions
 
-- [`decisions/open/aann-behavioral-operationalization`](wiki/decisions/open/aann-behavioral-operationalization.md)
-  — opened 2026-06-12 (**eligible for ratification next session**).
+- **None.** All twenty-two surfaced decisions are resolved. (Item 1 above will open a new one.)
 
 ## Standing-override notes (for Tom, if he looks)
 
-- The first autonomous ratification round ran this session: 3 decisions resolved by independent
-  adversarial review (rationales on the resolved pages; plain-language report in the site
-  journal). Your standing override outranks all of it.
-- GitHub Pages serves from `main` `/docs` (unchanged; flip only if you want the site off).
+- **Your robots/no-scraping instruction is applied** (first action of the session): all six
+  `docs/` pages carry `<meta name="robots" content="noindex, nofollow, noarchive, nosnippet,
+  noimageindex, noai, noimageai">`, and `docs/robots.txt` disallows all crawlers plus ~20 named
+  AI bots. One honest technical caveat: GitHub Pages serves this site under a path prefix
+  (`…github.io/ai-semantics/`), and crawlers only read robots.txt at the **domain root** — so
+  the meta tags are the binding mechanism; the robots.txt is belt-and-braces. If you want a
+  root-level robots.txt too, that requires a `tkgally.github.io` user-site repo (your call —
+  outside this repo's reach).
+- The second autonomous ratification round ran (AANN instrument, adversarial review, rationale
+  on the resolved page); the probe ran the same session — permitted because the decision was
+  opened in an *earlier* session (same sequencing as the relational v2 precedent).
+- GitHub Pages serves from `main` `/docs` (unchanged).
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions
 `CLAUDE.md`. Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then
 [`wiki/index.md`](wiki/index.md). Budget $5/day UTC — check today's ledger rows in
-`config/budget.md` before any probe. End squash-merged to `main`, website updated.
+[`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`, website
+updated.

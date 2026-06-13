@@ -2,13 +2,13 @@
 type: resource
 id: mahowald-2023-aann-stimuli
 title: Mahowald 2023 AANN stimulus suite and MTurk acceptability ratings
-status: external-only
+status: catalogued
 url: https://github.com/mahowak/aann-public
-license: see repo (no LICENSE file confirmed in this run; treat as research-use until verified)
+license: MIT (LICENSE file verified in the mirrored repo, 2026-06-12; "Copyright (c) 2024 Kyle Mahowald")
 paper: https://arxiv.org/abs/2301.12564
 venue: EACL 2023
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-12
 links:
   - rel: anchors
     target: conjecture/aann-construction
@@ -30,7 +30,21 @@ The release at `github.com/mahowak/aann-public` contains, per the README and the
 - `mturk_generation/` — HTML templates and input CSVs to regenerate the MTurk surveys.
 - `gpt3_data/` — GPT-3 ratings (text-davinci-002) for the same items.
 
-This run has not mirrored the repo locally and has not run the generation scripts; hence `status: external-only`. The paper's Table 1 (page 2) gives the superset of slot fillers used to generate the templates, which is what this page summarizes below.
+**Mirrored and inspected 2026-06-12** (upstream commit `c8095a0008cd6538717de5cc937f90ce5944e688`,
+2024-06-12; cloned to `experiments/data/aann-public/`, gitignored under the recipe-not-corpus
+posture — MIT license permits redistribution, but the 69 MB raw mirror is re-clonable and only
+derived tables are committed). Inspection confirmed the structure summarized below, and
+specifically the anchor-bearing files: `mturk_data/adjexp_turk.csv` (7,200 rating rows, 3,600
+non-filler over item ids of the form `{adjective}-{numeral}-{noun}-sent-{nounclass}-{template}` —
+the Experiment 2 adjective×noun gradient), `mturk_data/mainexp_turk.csv` (3,740 rows, 756
+non-filler over AANN/default/degenerate-variant conditions — Experiment 1; the 756 counts every
+rated item across all conditions, a superset of the 378 critical-sentence ratings the Known
+limits section cites), and
+`mturk_data/adjorder_turk.csv` (1,320 rows — the order experiment). Ratings are on the 1–10
+acceptability scale in the `answer` column; sentences are reconstructible from
+`generate_sentence_templates/` (template `first`/`second` strings + slot fillers). Hence
+`status: catalogued`. The paper's Table 1 (page 2) gives the superset of slot fillers used to
+generate the templates, which is what this page summarizes below.
 
 ## Stimulus structure (from Mahowald 2023, Table 1, p. 2)
 
@@ -71,8 +85,9 @@ When the AANN probe runs, expect citations to:
 
 ## Pointer for next visit
 
-The next session that runs the actual probe should:
-
-1. Clone or fetch the repo into `experiments/data/aann/` (or a sibling path), not the wiki.
-2. Inspect the actual contents of `aann-sents/` and `mturk_data/` to confirm structure matches the summary here; update this page from `external-only` to `catalogued` once inspected.
-3. Re-confirm license before any redistribution.
+~~Clone, inspect, re-confirm license~~ — **done 2026-06-12** (see the mirror note above): repo
+cloned to `experiments/data/aann-public/`, `mturk_data/` and `aann-sents/` inspected and found to
+match the summary here, license verified MIT, page promoted `external-only` → `catalogued`. The
+instrument that consumes this anchor is governed by
+[`decisions/resolved/aann-behavioral-operationalization`](../../decisions/resolved/aann-behavioral-operationalization.md)
+(ratified 2026-06-12; the earlier surprisal instrument is retired).

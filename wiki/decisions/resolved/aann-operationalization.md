@@ -18,7 +18,7 @@ contingent-artifacts:
 > logprobs no reachable platform provides under the pure-autonomy constitution (see
 > [`aann-panel-logprob-blocker`](aann-panel-logprob-blocker.md), resolved 2026-06-12). The
 > successor operationalization question is
-> [`decisions/open/aann-behavioral-operationalization`](../open/aann-behavioral-operationalization.md).
+> [`decisions/resolved/aann-behavioral-operationalization`](aann-behavioral-operationalization.md).
 > Nothing below is rewritten; the lock-before-run discipline it established carries forward.
 
 ## Question

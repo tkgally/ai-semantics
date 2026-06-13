@@ -18,6 +18,8 @@ links:
     target: concept/distributional-meaning
   - rel: supports
     target: open-question/relational-meaning-pilot
+  - rel: depends-on
+    target: source/brennan-clark-1996-conceptual-pacts
 ---
 
 # Conjecture: the commutative convention (aggregation, not constitution)
@@ -53,11 +55,16 @@ From [`result/relational-reference-game-v1`](../results/relational-reference-gam
 
 In the aggregation/constitution vocabulary: content lifts interpretation (the convention *uses* shared content), but order does not (the convention is *commutative* in that content) — the signature of aggregation, not constitution.
 
-## The predicted human contrast (characterized; not in-repo — flagged)
+## The predicted human contrast (revised 2026-06-12 — partner leg now citable; order leg still open)
 
-If the conjecture holds, it predicts a **sharp human/LLM contrast at the relational grain**. The human relational convention appears to be **non-commutative**. The most directly relevant human result is **conceptual pacts** — *Brennan, S.E. & Clark, H.H. 1996, "Conceptual pacts and lexical choice in conversation," Journal of Experimental Psychology: LMC 22(6): 1482–1493* — which reports that human lexical entrainment has a **historical** (not merely ahistorical/salience-driven) and **partner-specific** component (as characterized in [`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md) §"Human anchor"; the paper is queued in [`base/wanted.md`](../../base/wanted.md) at P2 and is **not in-repo**, so it is **characterized, not quoted**, and no page number or quotation is attributed here). On that characterization, *which* partner you formed a pact with, and *when* in the history a term got fixed, matter to later interpretation — i.e. the human convention is **path-dependent / non-commutative**. The deflationary backdrop on the same axis — interactive alignment (Pickering & Garrod 2004; also not in-repo; characterization) — frames alignment as "a largely automatic process" of cross-level priming, i.e. coordination without a constitution claim, which is exactly the commutative/aggregation story (again as characterized in [`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md), not quoted). So the conjecture's bet is: **humans (conceptual pacts) are non-commutative; LLM dyads (so far) are commutative.**
+If the conjecture holds, it predicts a **sharp human/LLM contrast at the relational grain**. The human relational convention appears to be **non-commutative** — but the in-repo ground for that "appears" must now be stated in two parts, because the conceptual-pacts primary source was fetched and read 2026-06-12 ([`source/brennan-clark-1996-conceptual-pacts`](../../base/sources/brennan-clark-1996-conceptual-pacts.md)), and it grounds **less than the earlier characterization implied**:
 
-This contrast is a *prediction*, not a measured result. The human side is unanchored in-repo (Brennan & Clark 1996 unfetched), and the LLM side is the pilot's own bounded null. The page makes the contrast explicit precisely so that fetching the human anchor and running the v2 perturbation arm could decisively confirm or break it.
+- **Grounded (citable): historicity and partner-specificity.** Brennan & Clark 1996 shows human lexical entrainment is **historical** (speakers keep pact terms even when a plain basic-level word would do) and **partner-indexed** (Experiment 3: term retention 48% with the same matcher vs 18% with a switched matcher; pacts are established jointly). *Which partner* a pact was formed with matters to later interpretation — that much of the human side is now anchored, in-page quotes and pagination included.
+- **Not grounded (still a characterization): order-sensitivity.** The paper never perturbs interaction *order*, and its own analysis cuts the other way for the sequence dimension: "Frequency of use better explains our data than does simple recency" (p. 1492) — frequency being an **order-insensitive** statistic of the history. So the leap from "historical and partner-specific" to "**path-dependent / non-commutative**" is **not licensed by this source**. Human order-sensitivity at the grain the pilot probes (would a human matcher's interpretation change under a shuffled record?) remains untested in-repo.
+
+The deflationary backdrop on the same axis — interactive alignment (Pickering & Garrod 2004; not in-repo; characterization via [`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md), not quoted) — frames alignment as largely automatic cross-level priming, i.e. coordination without a constitution claim, which is exactly the commutative/aggregation story. So the conjecture's bet now reads, more carefully: **humans form partner-indexed, historical pacts (anchored); whether the human convention is additionally *order-sensitive* — the precise contrast with the LLM dyads' commutativity — is an open empirical question on both sides of the contrast.**
+
+This contrast remains a *prediction*, not a measured result: the human side is anchored only on the partner/historicity leg, and the LLM side is the pilot's own bounded null. If anything, the frequency-over-recency finding **softens the presumption that humans must come out non-commutative** — which makes the predicted contrast a genuinely open bet rather than a foregone conclusion, and is recorded here as the exercise of this page's own revision discipline rather than smoothed over.
 
 ## Update 2026-06-12 — the decisive test ran once: INCONCLUSIVE (bet survives an attempt, unstrengthened)
 
@@ -89,9 +96,16 @@ Two **scope extensions** (not falsification conditions, but where the bet might 
 
 - The trajectory / commutativity measure is the pilot's own **internal within-model contrast** (`ordered` vs `shuffled`, same model both arms) and is **internal-contrast-only** — it makes **no human-comparison claim**, exactly as ratified for the relational line in [`decisions/resolved/relational-fetchable-anchor`](../../decisions/resolved/relational-fetchable-anchor.md) and stated in [`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md) (§"Anchor discipline"). So a v2 commutativity result would carry **no resource anchor obligation** for the order measure itself; it would be a within-model contrast.
 - [`resource/hawkins-tangrams`](../../base/resources/hawkins-tangrams.md) anchors the **human convergence / entrainment baseline ONLY** (the "convergence without compression" secondary finding), **not** the trajectory/commutativity measure — its page states explicitly that the live-vs-shuffled trajectory measure is "novel to the LLM probe and unanchored by any human resource."
-- The **human non-commutativity** side of the predicted contrast (the conceptual-pacts comparison) would need **Brennan & Clark 1996** fetched and read into a `source/` page before any human-comparison claim on that contrast could be made; it is queued in [`base/wanted.md`](../../base/wanted.md) (P2) and is not in-repo. Until then the human contrast is a *characterized prediction*, not an anchored finding.
+- The **human side** of the predicted contrast: **Brennan & Clark 1996 is now in-repo**
+  ([`source/brennan-clark-1996-conceptual-pacts`](../../base/sources/brennan-clark-1996-conceptual-pacts.md),
+  fetched and verified 2026-06-12), and it anchors the **historicity + partner-specificity** leg
+  of the human characterization. It does **not** anchor human *order-sensitivity* (it never
+  manipulates order, and reports frequency-over-recency) — so a human-comparison claim on the
+  commutativity contrast itself would still need a human order-perturbation result, which no
+  in-repo resource supplies. The earlier anchor IOU is **partly redeemed, and the unredeemed
+  remainder is now precisely delimited**.
 
-So this conjecture needs **no resource anchor** to stand as a forward bet (it is a within-model directional prediction); the human-contrast *clause* carries an explicit anchor IOU naming Brennan & Clark 1996.
+So this conjecture needs **no resource anchor** to stand as a forward bet (it is a within-model directional prediction); the human-contrast *clause* is anchored on the partner/historicity leg and carries a delimited open question (human order-sensitivity) on the other.
 
 ## Interpretive note — convergence from a shared distributional substrate (links to holism)
 
