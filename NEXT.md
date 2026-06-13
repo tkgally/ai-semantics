@@ -2,69 +2,82 @@
 
 ## State
 
-**Session 2 of the autonomous era (third June-12 session) is landed.** Three things changed.
-(1) **Tom's standing instruction applied first**: the public site now carries
-`noindex/nofollow/noai` meta tags on all six pages plus `docs/robots.txt` (see the
-standing-override note below for the domain-root caveat). (2) **The AANN line ran end-to-end in
-one session**: the second autonomous ratification round adopted the behavioral instrument
-([`decisions/resolved/aann-behavioral-operationalization`](wiki/decisions/resolved/aann-behavioral-operationalization.md),
-nine binding conditions) → Mahowald repo mirrored/verified (MIT) → frozen v2 design + PREREG →
-independent pre-run critic (added the decisive noun-class guard) → probe (1,782 calls, 0
-missing, $0.3125) → independent post-run verifier (0 mismatches) →
-[`result/aann-behavioral-gradient-v2`](wiki/findings/results/aann-behavioral-gradient-v2.md):
-**SUPPORTED** — all 3 models track the human Exp-2 gradient (cell ρ 0.68–0.75) and replicate it
-on frequency-matched held-out adjectives (0.75–0.83; temporal stratum does NOT replicate —
-caveat 2). [`conjecture/aann-construction`](wiki/findings/conjectures/aann-construction.md) is
-`tested`; the **inferential half is untested**. (3) **Philosophical track**: Schuele 2025
-catalogued (first in-repo "sense-without-reference" argument); **Brennan & Clark 1996 fetched
-and verified** → essay trigger c-ii exercised:
-[`essay/aggregation-not-constitution`](wiki/findings/essays/aggregation-not-constitution.md)
-(now `revised`) and [`conjecture/commutative-convention`](wiki/findings/conjectures/commutative-convention.md)
-human-contrast clauses corrected — the source grounds partner-specificity/historicity, **not**
-order-sensitivity ("frequency over recency"). Spend 2026-06-12 (both sessions): **$0.60** of
-$5.00. Website updated (journal, home, findings, plans, glossary + 2 new entries, footers).
+**Session of 2026-06-13 (workflow mode, 3 waves) is landed.** Two probes ran end-to-end under
+full discipline (independent pre-run critic + frozen PREREG + run + independent post-run
+verifier, **0 mismatches each**); one source catalogued; one new decision surfaced. Spend
+**≈$0.69 of $5.00** (UTC day). No ratification this session (none was eligible — the only open
+decision was opened *this* session).
+
+1. **Relational v3 — the commutativity test, second attempt** →
+   [`result/relational-history-perturbation-v3`](wiki/findings/results/relational-history-perturbation-v3.md).
+   The v2 verifier's five-item fix-list was implemented and it **worked mechanically** (0
+   truncation / 0 NA / 0 retries; strict-compliance 1.000; gemini at full power — gate 0.92, 7/9
+   clusters, both trial-floors passed). Verdict **INCONCLUSIVE/MIXED** (gemini, claude); gpt
+   **METHODOLOGICAL NULL** (1/6 clusters — stimulus quality still its weak point even after
+   certification + one top-up). The clean read (gemini) shows a forward chronology elevation
+   (ρ_chron 0.780) that **does not survive direction reversal** — the post-run verifier corrected
+   a first-pass over-claim: this is **not** "physical position over chronology" (rev ρ_phys
+   collapses to exactly 0.5, refuting that; forward ρ_chron ≡ ρ_phys by construction). Defensible
+   claim: the forward elevation is **direction-fragile**. Conjecture stays `proposed`. 384 calls,
+   $0.386 billed.
+2. **AANN v2b — temporal held-out widening** →
+   [`result/aann-temporal-heldout-v2b`](wiki/findings/results/aann-temporal-heldout-v2b.md).
+   Widening the temporal held-out stratum 5× (16 → 80 items) under the same ratified v2 instrument
+   confirms v2 caveat 2 was real: the temporal stratum is **uniformly negative at every grain**
+   for all three models → held-out AANN **productivity is noun-class-dependent**. Refines (does
+   not overturn) the v2 SUPPORTED verdict. Fresh Tier-0 passes all 3; framing agrees 0.82–0.94.
+   432 calls, $0.0793 billed.
+3. **Philosophical track:** [`source/milliere-buckner-2024-philosophical-intro-i`](wiki/base/sources/milliere-buckner-2024-philosophical-intro-i.md)
+   catalogued (abstract + 7 verbatim quotes; grounds the grounding / symbol-grounding /
+   deflationary / compositionality / inferential / referential concept pages). Part II
+   (arXiv 2405.03207) stays in the backlog.
+4. **New open decision surfaced** (see below). Website, executive summary, budget ledger all
+   updated.
 
 ## Next concrete actions — backlog for the next session
 
-1. **AANN v3 — the inferential arm (grammatical track's priority).** The v2 result is
-   gradient-tracking only; the conjecture's distinctive *meaning* clause (unification +
-   evaluation: does the model draw the "unified, evaluated stretch" paraphrase/inferences?)
-   is untested. The indicator choice is a value-laden operationalization call → **open a
-   `wiki/decisions/open/` page first** (options: paraphrase forced-choice vs entailment-style
-   NLI vs generation-and-code; provisional default + anchor question — Mahowald's ratings do
-   NOT anchor an inference measure), ratifiable the following session. Cheap companion fix in
-   the same unit: widen the **temporal held-out cells** (v2 caveat 2 — the one stratum that
-   failed to replicate; 4 cells was too thin to read).
-2. **Relational v3 (relational track).** Unchanged from last handoff: the perturbation
-   follow-up with the verifier's fix-list (truncation-proof single-token elicitation;
-   re-certified gpt stimuli; more clusters; pre-registered minimum-cluster guard). The essay's
-   corrected human-contrast clause adds a reason to run it: the human side no longer presumes
-   non-commutativity, so the LLM-side answer carries more of the contrast's weight.
-3. **Philosophical track.** Catalogue Millière & Buckner 2024 (arXiv 2401.03910, the two-part
-   philosophical survey — the strongest remaining queued source). A second essay only if ripe;
-   one live candidate thesis: what the Brennan-Clark correction does to the
-   aggregation-vs-constitution bet (the human pole of "non-commutative" is now an open
-   empirical question, not an anchor).
-4. **Website** per PROTOCOL §5b, as always.
+1. **Ratify (or keep open) the AANN inferential-arm decision** (eligible this session for the
+   first time): [`decisions/open/aann-inferential-operationalization`](wiki/decisions/open/aann-inferential-operationalization.md)
+   — run the independent adversarial-review pass on its three indicator options (paraphrase FC /
+   NLI / generation-and-code) **and** its anchor sub-question (Mahowald's acceptability ratings
+   do not anchor an inference measure; default = internal-contrast-only + a literature-stipulated
+   key). Provisional default: A+B two-instrument package, FC primary. If ratified, the AANN v3
+   inferential design becomes buildable — the grammatical track's deepest open question (does the
+   model *use* the unification/evaluation meaning, not just rate acceptability?).
+2. **Relational v4 (relational track).** The v3 open question is now precisely located: a
+   forward-only chronology elevation of unknown origin that dies on reversal. The decisive next
+   design must **decouple chronology from physical position *within* a single arm** (a
+   non-adjacent perturbation point), because the forward arm conflates them by construction and
+   the reversed arm lands at chance at this power. Two companion fixes: drop or re-source gpt
+   (its descriptions never clear certification past 6/9 clusters), and raise claude's power
+   (floor36 unmet at 5/9 clusters). Cross-family (heterogeneous) dyads and image referents remain
+   the scope-extension options. Reuse `experiments/runs/2026-06-13-relational-history-perturbation-v3/`
+   machinery.
+3. **AANN follow-ups (grammatical track), if not doing the inferential arm yet.** The temporal
+   productivity hole (v2b) is now a *finding*; a natural question is *why* time-words fail — is it
+   the small temporal noun inventory, a frequency artifact, or genuine? A within-class analysis on
+   the existing v2 + v2b raw ($0) could scope it before any new spend. Also: the tourish-typo
+   template depresses ratings — a typo-free template replication would clean the category boundary.
+4. **Philosophical track.** Catalogue **Millière & Buckner 2024 Part II** (arXiv 2405.03207, the
+   "new frontiers" half) — the natural completion of the Part-I survey now in repo. A second essay
+   only if ripe.
+5. **Website** per PROTOCOL §5b, as always.
 
 ## Open decisions
 
-- **None.** All twenty-two surfaced decisions are resolved. (Item 1 above will open a new one.)
+- [`decisions/open/aann-inferential-operationalization`](wiki/decisions/open/aann-inferential-operationalization.md)
+  — **opened 2026-06-13 (this session); NOT yet eligible — ratifiable next session at the
+  earliest** (PROJECT.md §12.3). Indicator + anchor for the AANN meaning-clause probe. Any AANN
+  v3 inferential design/run is contingent on it.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- **Your robots/no-scraping instruction is applied** (first action of the session): all six
-  `docs/` pages carry `<meta name="robots" content="noindex, nofollow, noarchive, nosnippet,
-  noimageindex, noai, noimageai">`, and `docs/robots.txt` disallows all crawlers plus ~20 named
-  AI bots. One honest technical caveat: GitHub Pages serves this site under a path prefix
-  (`…github.io/ai-semantics/`), and crawlers only read robots.txt at the **domain root** — so
-  the meta tags are the binding mechanism; the robots.txt is belt-and-braces. If you want a
-  root-level robots.txt too, that requires a `tkgally.github.io` user-site repo (your call —
-  outside this repo's reach).
-- The second autonomous ratification round ran (AANN instrument, adversarial review, rationale
-  on the resolved page); the probe ran the same session — permitted because the decision was
-  opened in an *earlier* session (same sequencing as the relational v2 precedent).
-- GitHub Pages serves from `main` `/docs` (unchanged).
+- No ratification ran this session: the only open decision was opened this session, and a decision
+  is never ratifiable in the session that opened it (PROTOCOL §2). It is queued for next session.
+- Both probes' verifiers ran clean (0 mismatches). The relational v3 verifier caught and
+  corrected an over-claim in the orchestrator's first-pass reading ("position not chronology") —
+  the result page and all cross-references carry the corrected, weaker claim.
+- Spend 2026-06-13: **$0.69 of $5.00** (UTC). GitHub Pages still serves from `main` `/docs`.
 
 ## Reminder for the next cold-start
 
