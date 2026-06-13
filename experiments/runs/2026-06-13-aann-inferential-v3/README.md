@@ -1,9 +1,58 @@
 # Run: AANN inferential v3 — 2026-06-13
 
-**STATUS: DESIGNED / FROZEN, NOT RUN.** Materials are built, frozen, and runnable-later;
-**NO model API calls have been made** (this is a $0 design-and-build unit). The run awaits an
-independent **pre-run critic**; `probe.py` refuses to run until `PREREG-draft.md` is reviewed
-and committed as `PREREG.md` (and refuses to run if `analyze.py` is absent).
+**STATUS: DESIGNED / FROZEN, PRE-RUN CRITIC = NO-GO, NOT RUN.** Materials are built and frozen;
+**NO model API calls have been made** (a $0 design-and-build unit). An independent pre-run
+critic reviewed the frozen materials on 2026-06-13 and returned **NO-GO this session** — the
+analysis/PREREG machinery is sound (29-check selftest, all eight conditions met in code) but the
+**object-class stimulus items carry a structural defect**. The run is deferred to a later
+session after the stimuli are repaired (per the repair list below), re-frozen, and re-reviewed
+by a fresh pre-run critic. `probe.py` still refuses to run until `PREREG-draft.md` is committed
+as `PREREG.md`; it has **not** been frozen, by design — the NO-GO holds.
+
+## PRE-RUN CRITIC VERDICT (2026-06-13, independent, read-only): NO-GO
+
+The machinery (analyze.py headline-gating, control-subtraction, Tier-0 gate, counterbalancing,
+budget guards) passed its 29-check selftest and the condition-by-condition check (1,2,3,4,5,7,8
+PASS; 6 FAIL because the disputed-flag set does not cover the real defect). The failure is
+**stimulus quality, concentrated in the 9 object-measure items**, plus a parser bug. The clean
+path is repair → re-freeze → fresh review next session, **not** an in-session retune (editing
+`stimuli.json` after the critic has seen it would cross the freeze/anti-retuning boundary —
+PROTOCOL §B, Condition 8). Frozen materials are left **intact** as the reviewed artifact.
+
+**Repair list for next session (rebuild via `prep.py`, then re-freeze + fresh pre-run critic):**
+
+- **B1 — object-class unification paraphrase is anomalous.** The template "formed one continuous
+  **stretch** … as a whole" / "were a single continuous stretch" was written for time/distance
+  (a *stretch* of time/road) and is odd-to-false on mass/area nouns: "The thirty pounds formed
+  one continuous stretch", "The forty acres formed one continuous stretch", "The three kilos
+  formed one continuous stretch". A model rejecting the *anomalous paraphrase* would confound the
+  primary Arm A shift. Re-author object-class paraphrases with a class-appropriate unification
+  predicate, **or drop the object class** (temporal 13 + distance ~9 are high-quality and
+  sufficient). Note: `generous-forty-acres`, `sprawling-ten-acres`, `precious-three-kilos`,
+  `staggering-fifty-pounds` carry the defect but were **not** disputed-flagged, so the Condition-6
+  sensitivity test misses them.
+- **B2 — dollar items are not well-formed AANN of the target shape.** "a tidy two thousand
+  dollars" has `noun="thousand"`; the plural measure noun "dollars" is dropped from the
+  paraphrases and the agreement frames, giving degenerate strings ("Two tidy thousand ___ what we
+  needed"). Drop or re-author `tidy-two-thousand`, `hefty-five-hundred`, `ruinous-twenty-thousand`,
+  `modest-two-hundred`.
+- **B3 — parser reproduces the v2b markdown-bold failure (mechanical).** `parse_ab` /
+  `parse_yesno` strip `.,!:;` but not `*`/quotes, so gemini's `**A**` / `**YES**` → `None`. Add
+  `*` and quotes to the strip set or regex-extract a standalone token. (Fixing this alone would
+  not touch stimuli, but B1/B2 gate regardless.)
+- **S1 — `noun_sg("yards")` maps to "yards"** → ungrammatical foil "Each **yards** individually
+  was lonely"; should be "yard".
+- **S2 — lexical-overlap parity is real but vacuous** (the U/D-distinguishing words are
+  stopworded out, so parity reduces to {adj,num,noun}=3 trivially); either stop stopwording them
+  or document the parity metric's scope.
+- **S4 — after dropping/repairing object items, re-check class balance** and that ≥6
+  under-pressure items survive (currently 11, some in object).
+
+**Budget note (critic-confirmed):** 744 calls ≈ **$0.137 billed** (from v2b's measured
+$0.0793/432-call rate of the identical shape); cannot plausibly exceed $1. Budget was never the
+constraint — stimulus validity was.
+
+## What it tests
 
 Tests the **inferential half** of
 [`conjecture/aann-construction`](../../../wiki/findings/conjectures/aann-construction.md) —

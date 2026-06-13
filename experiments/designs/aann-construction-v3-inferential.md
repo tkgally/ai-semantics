@@ -5,7 +5,7 @@ title: AANN construction probe v3 — inferential (unification + whole-evaluatio
 meaning-senses:
   - constructional
   - inferential
-status: frozen (pre-run)
+status: frozen — pre-run critic NO-GO (stimulus repair pending, see run README)
 contingent-on:
   - aann-inferential-operationalization
 created: 2026-06-13
@@ -26,6 +26,18 @@ links:
 ---
 
 # Experiment design v3 — AANN construction (inferential: unification + whole-evaluation)
+
+> **Pre-run critic verdict 2026-06-13: NO-GO this session.** The analysis/PREREG machinery
+> passed (29-check selftest; conditions 1,2,3,4,5,7,8 PASS in code), but the **9 object-class
+> stimulus items carry a structural defect** (the "formed one continuous stretch" unification
+> paraphrase is anomalous for mass/area nouns; the dollar items drop their plural measure noun
+> and aren't well-formed AANN of the target shape), and condition 6's disputed-flag set does not
+> cover it — so the **primary Arm A shift would be confounded on those items**. Plus a parser
+> bug reproducing the v2b markdown-bold failure. Repair is a **next-session** job (re-author/drop
+> the object class via `prep.py`, fix the parser, re-freeze, fresh pre-run critic) — fixing
+> stimuli in the session that reviewed them would cross the freeze/anti-retuning boundary
+> (Condition 8). The temporal (13) and distance (~9) items are high-quality and survive. Full
+> repair list: run README, [`experiments/runs/2026-06-13-aann-inferential-v3/README.md`](../runs/2026-06-13-aann-inferential-v3/README.md).
 
 **Governing decision:** [`decisions/resolved/aann-inferential-operationalization`](../../wiki/decisions/resolved/aann-inferential-operationalization.md)
 — **RESOLVED 2026-06-13** (autonomous cross-session adversarial review): ADOPT DEFAULT WITH
