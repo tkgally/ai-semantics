@@ -1,0 +1,486 @@
+{
+ "run": "2026-06-13-aann-temporal-heldout-v2b",
+ "arms": [
+  "heldout-temporal",
+  "tier0",
+  "robustness"
+ ],
+ "prereg": "PREREG.md (frozen from PREREG-draft.md)",
+ "seed": 20260613,
+ "thresholds": {
+  "cell_rho_min_inclusive": 0.4,
+  "adj_rho_min_inclusive": 0.2,
+  "ci_lower_strictly_above": 0.0,
+  "fail_ci_upper_strictly_below": 0.2,
+  "tier0_min_inclusive_of_24": 20,
+  "fragility_rho_strictly_below": 0.5
+ },
+ "models": {
+  "A": {
+   "slot": "A",
+   "model": "claude-sonnet-4.6",
+   "arm_status": {
+    "heldout-temporal": "ok",
+    "tier0": "ok",
+    "robustness": "ok"
+   },
+   "tier0": {
+    "arm_status": "ok",
+    "n": 24,
+    "aann_preferred": 23,
+    "aann_preferred_first_token_v2_descriptive": 23,
+    "missing": 0,
+    "missingness": "ok",
+    "by_position": {
+     "A": 9,
+     "B": 15
+    },
+    "pass": true
+   },
+   "bookkeeping": {
+    "n_rows": 80,
+    "n_parsed": 80,
+    "n_missing": 0,
+    "missing_frac": 0.0,
+    "missingness": "ok",
+    "per_cell_na": {
+     "ambig": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     },
+     "neg": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     },
+     "pos": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     },
+     "quant": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     }
+    },
+    "cells_over_5pct_na": []
+   },
+   "primary": {
+    "n_class_cells": 4,
+    "model_class_cell_means": {
+     "ambig": 54.95,
+     "neg": 49.35,
+     "pos": 50.55,
+     "quant": 43
+    },
+    "human_class_cell_means": {
+     "ambig": 8.2526,
+     "neg": 7.5673,
+     "pos": 8.0183,
+     "quant": 8.4508
+    },
+    "class_cell_spearman": -0.2,
+    "degenerate": false,
+    "lattice_caveat": "n=4 class-cells: Spearman lattice is coarse ({0, +/-0.2, +/-0.4, +/-0.6, +/-0.8, +/-1.0}); read only jointly with the adjective-grain secondary statistic (PREREG)"
+   },
+   "secondary": {
+    "n_adjectives": 40,
+    "adjectives_dropped_all_na": [],
+    "adjective_spearman": -0.1389,
+    "degenerate": false,
+    "ci95": [
+     -0.4382,
+     0.1715
+    ],
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260613
+   },
+   "verdict": "FAILS-TO-REPLICATE",
+   "tourish_sensitivity": {
+    "excluded_template": 2,
+    "excluded_template_text": "The tourish stayed ... in Papua New Guinea",
+    "n_items_remaining": 56,
+    "class_cell_spearman_excl_t2": -0.2,
+    "adjective_spearman_excl_t2": -0.038,
+    "n_adjectives": 40,
+    "ci95_excl_t2": [
+     -0.3389,
+     0.2745
+    ],
+    "verdict_if_t2_excluded": "STILL-TOO-THIN",
+    "verdict_category_differs": true,
+    "note": "descriptive only; the gate stays on all 80 items (PREREG); all-80 missingness gate and bootstrap seed reused",
+    "mandatory_caveat": "MANDATORY CAVEAT: excluding the upstream-typo ('tourish') template-2 items changes this model's verdict category (FAILS-TO-REPLICATE on all 80 items vs STILL-TOO-THIN on the 56 non-template-2 items); the gate remains on all 80 items per PREREG, and the result page must carry this sentence."
+   },
+   "descriptives": {
+    "item_spearman_pooled_n": 80,
+    "item_spearman_pooled": -0.0635,
+    "partial_spearman_zipf_adjective_grain": -0.1441,
+    "per_class_adjective_spread_sd": {
+     "ambig": 18.2261,
+     "neg": 21.686,
+     "pos": 25.181,
+     "quant": 16.7
+    },
+    "new_only_adjective_spearman": -0.1512,
+    "new_only_n_adjectives": 24,
+    "new_vs_carryover": {
+     "new_adjective_mean": 45.5208,
+     "carryover_adjective_mean": 55.375,
+     "per_class": {
+      "new/ambig": 50.4167,
+      "new/neg": 47.5,
+      "new/pos": 44.25,
+      "new/quant": 39.9167,
+      "v2-carryover/ambig": 61.75,
+      "v2-carryover/neg": 52.125,
+      "v2-carryover/pos": 60,
+      "v2-carryover/quant": 47.625
+     },
+     "noun_asymmetry_note": "subgroup reads are confounded with item surface: the frozen rotation gives new adjectives more days/hours items (12/12/8/8/8 over days/hours/months/weeks/years) and carryovers more months/weeks/years (4/4/8/8/8), so new-vs-carryover differences are not interpretable as adjective-set effects alone"
+    },
+    "carryover_vs_v2": {
+     "statistic": "consistency (Spearman + mean signed difference, v2b minus v2), not test-retest: v2 rated 1 item per adjective, v2b averages 2 different items",
+     "n_adjectives": 16,
+     "spearman_v2b_mean_vs_v2_single": -0.09,
+     "mean_signed_diff_v2b_minus_v2": -2.4375,
+     "v2_temporal_class_means": {
+      "ambig": 63.25,
+      "neg": 56.75,
+      "pos": 60.25,
+      "quant": 51
+     },
+     "v2b_carryover_class_means": {
+      "ambig": 61.75,
+      "neg": 52.125,
+      "pos": 60,
+      "quant": 47.625
+     }
+    }
+   },
+   "robustness_4pt": {
+    "n_pairs": 40,
+    "missing": 0,
+    "framing_spearman": 0.9388,
+    "fragility_flag": false
+   }
+  },
+  "B": {
+   "slot": "B",
+   "model": "gpt-5.4-mini",
+   "arm_status": {
+    "heldout-temporal": "ok",
+    "tier0": "ok",
+    "robustness": "ok"
+   },
+   "tier0": {
+    "arm_status": "ok",
+    "n": 24,
+    "aann_preferred": 21,
+    "aann_preferred_first_token_v2_descriptive": 21,
+    "missing": 0,
+    "missingness": "ok",
+    "by_position": {
+     "A": 13,
+     "B": 11
+    },
+    "pass": true
+   },
+   "bookkeeping": {
+    "n_rows": 80,
+    "n_parsed": 80,
+    "n_missing": 0,
+    "missing_frac": 0.0,
+    "missingness": "ok",
+    "per_cell_na": {
+     "ambig": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     },
+     "neg": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     },
+     "pos": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     },
+     "quant": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     }
+    },
+    "cells_over_5pct_na": []
+   },
+   "primary": {
+    "n_class_cells": 4,
+    "model_class_cell_means": {
+     "ambig": 50.6,
+     "neg": 40.15,
+     "pos": 37.5,
+     "quant": 30.05
+    },
+    "human_class_cell_means": {
+     "ambig": 8.2526,
+     "neg": 7.5673,
+     "pos": 8.0183,
+     "quant": 8.4508
+    },
+    "class_cell_spearman": -0.4,
+    "degenerate": false,
+    "lattice_caveat": "n=4 class-cells: Spearman lattice is coarse ({0, +/-0.2, +/-0.4, +/-0.6, +/-0.8, +/-1.0}); read only jointly with the adjective-grain secondary statistic (PREREG)"
+   },
+   "secondary": {
+    "n_adjectives": 40,
+    "adjectives_dropped_all_na": [],
+    "adjective_spearman": -0.0281,
+    "degenerate": false,
+    "ci95": [
+     -0.3534,
+     0.3051
+    ],
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260613
+   },
+   "verdict": "STILL-TOO-THIN",
+   "tourish_sensitivity": {
+    "excluded_template": 2,
+    "excluded_template_text": "The tourish stayed ... in Papua New Guinea",
+    "n_items_remaining": 56,
+    "class_cell_spearman_excl_t2": -0.4,
+    "adjective_spearman_excl_t2": -0.0834,
+    "n_adjectives": 40,
+    "ci95_excl_t2": [
+     -0.4036,
+     0.2391
+    ],
+    "verdict_if_t2_excluded": "STILL-TOO-THIN",
+    "verdict_category_differs": false,
+    "note": "descriptive only; the gate stays on all 80 items (PREREG); all-80 missingness gate and bootstrap seed reused"
+   },
+   "descriptives": {
+    "item_spearman_pooled_n": 80,
+    "item_spearman_pooled": 0.0041,
+    "partial_spearman_zipf_adjective_grain": -0.0273,
+    "per_class_adjective_spread_sd": {
+     "ambig": 22.1708,
+     "neg": 28.0704,
+     "pos": 22.3793,
+     "quant": 19.6136
+    },
+    "new_only_adjective_spearman": -0.1508,
+    "new_only_n_adjectives": 24,
+    "new_vs_carryover": {
+     "new_adjective_mean": 35.2292,
+     "carryover_adjective_mean": 46.0938,
+     "per_class": {
+      "new/ambig": 49.25,
+      "new/neg": 40.0,
+      "new/pos": 30.75,
+      "new/quant": 20.9167,
+      "v2-carryover/ambig": 52.625,
+      "v2-carryover/neg": 40.375,
+      "v2-carryover/pos": 47.625,
+      "v2-carryover/quant": 43.75
+     },
+     "noun_asymmetry_note": "subgroup reads are confounded with item surface: the frozen rotation gives new adjectives more days/hours items (12/12/8/8/8 over days/hours/months/weeks/years) and carryovers more months/weeks/years (4/4/8/8/8), so new-vs-carryover differences are not interpretable as adjective-set effects alone"
+    },
+    "carryover_vs_v2": {
+     "statistic": "consistency (Spearman + mean signed difference, v2b minus v2), not test-retest: v2 rated 1 item per adjective, v2b averages 2 different items",
+     "n_adjectives": 16,
+     "spearman_v2b_mean_vs_v2_single": -0.0589,
+     "mean_signed_diff_v2b_minus_v2": -0.7812,
+     "v2_temporal_class_means": {
+      "ambig": 54,
+      "neg": 41.5,
+      "pos": 50.75,
+      "quant": 41.25
+     },
+     "v2b_carryover_class_means": {
+      "ambig": 52.625,
+      "neg": 40.375,
+      "pos": 47.625,
+      "quant": 43.75
+     }
+    }
+   },
+   "robustness_4pt": {
+    "n_pairs": 40,
+    "missing": 0,
+    "framing_spearman": 0.8783,
+    "fragility_flag": false
+   }
+  },
+  "C": {
+   "slot": "C",
+   "model": "gemini-3.5-flash",
+   "arm_status": {
+    "heldout-temporal": "ok",
+    "tier0": "ok",
+    "robustness": "ok"
+   },
+   "tier0": {
+    "arm_status": "ok",
+    "n": 24,
+    "aann_preferred": 22,
+    "aann_preferred_first_token_v2_descriptive": 24,
+    "missing": 0,
+    "missingness": "ok",
+    "by_position": {
+     "A": 8,
+     "B": 16
+    },
+    "pass": true
+   },
+   "bookkeeping": {
+    "n_rows": 80,
+    "n_parsed": 80,
+    "n_missing": 0,
+    "missing_frac": 0.0,
+    "missingness": "ok",
+    "per_cell_na": {
+     "ambig": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     },
+     "neg": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     },
+     "pos": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     },
+     "quant": {
+      "n": 20,
+      "missing": 0,
+      "na_frac": 0.0
+     }
+    },
+    "cells_over_5pct_na": []
+   },
+   "primary": {
+    "n_class_cells": 4,
+    "model_class_cell_means": {
+     "ambig": 84.25,
+     "neg": 75,
+     "pos": 70,
+     "quant": 68.75
+    },
+    "human_class_cell_means": {
+     "ambig": 8.2526,
+     "neg": 7.5673,
+     "pos": 8.0183,
+     "quant": 8.4508
+    },
+    "class_cell_spearman": -0.4,
+    "degenerate": false,
+    "lattice_caveat": "n=4 class-cells: Spearman lattice is coarse ({0, +/-0.2, +/-0.4, +/-0.6, +/-0.8, +/-1.0}); read only jointly with the adjective-grain secondary statistic (PREREG)"
+   },
+   "secondary": {
+    "n_adjectives": 40,
+    "adjectives_dropped_all_na": [],
+    "adjective_spearman": -0.0458,
+    "degenerate": false,
+    "ci95": [
+     -0.3521,
+     0.2652
+    ],
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260613
+   },
+   "verdict": "STILL-TOO-THIN",
+   "tourish_sensitivity": {
+    "excluded_template": 2,
+    "excluded_template_text": "The tourish stayed ... in Papua New Guinea",
+    "n_items_remaining": 56,
+    "class_cell_spearman_excl_t2": -0.4,
+    "adjective_spearman_excl_t2": -0.1539,
+    "n_adjectives": 40,
+    "ci95_excl_t2": [
+     -0.4437,
+     0.1569
+    ],
+    "verdict_if_t2_excluded": "FAILS-TO-REPLICATE",
+    "verdict_category_differs": true,
+    "note": "descriptive only; the gate stays on all 80 items (PREREG); all-80 missingness gate and bootstrap seed reused",
+    "mandatory_caveat": "MANDATORY CAVEAT: excluding the upstream-typo ('tourish') template-2 items changes this model's verdict category (STILL-TOO-THIN on all 80 items vs FAILS-TO-REPLICATE on the 56 non-template-2 items); the gate remains on all 80 items per PREREG, and the result page must carry this sentence."
+   },
+   "descriptives": {
+    "item_spearman_pooled_n": 80,
+    "item_spearman_pooled": -0.0815,
+    "partial_spearman_zipf_adjective_grain": -0.0578,
+    "per_class_adjective_spread_sd": {
+     "ambig": 18.5236,
+     "neg": 20.7163,
+     "pos": 30.7544,
+     "quant": 25.5019
+    },
+    "new_only_adjective_spearman": -0.0595,
+    "new_only_n_adjectives": 24,
+    "new_vs_carryover": {
+     "new_adjective_mean": 73.0208,
+     "carryover_adjective_mean": 76.7188,
+     "per_class": {
+      "new/ambig": 85.4167,
+      "new/neg": 76.25,
+      "new/pos": 66.6667,
+      "new/quant": 63.75,
+      "v2-carryover/ambig": 82.5,
+      "v2-carryover/neg": 73.125,
+      "v2-carryover/pos": 75,
+      "v2-carryover/quant": 76.25
+     },
+     "noun_asymmetry_note": "subgroup reads are confounded with item surface: the frozen rotation gives new adjectives more days/hours items (12/12/8/8/8 over days/hours/months/weeks/years) and carryovers more months/weeks/years (4/4/8/8/8), so new-vs-carryover differences are not interpretable as adjective-set effects alone"
+    },
+    "carryover_vs_v2": {
+     "statistic": "consistency (Spearman + mean signed difference, v2b minus v2), not test-retest: v2 rated 1 item per adjective, v2b averages 2 different items",
+     "n_adjectives": 16,
+     "spearman_v2b_mean_vs_v2_single": 0.0823,
+     "mean_signed_diff_v2b_minus_v2": -8.5938,
+     "v2_temporal_class_means": {
+      "ambig": 93.75,
+      "neg": 86.25,
+      "pos": 90,
+      "quant": 71.25
+     },
+     "v2b_carryover_class_means": {
+      "ambig": 82.5,
+      "neg": 73.125,
+      "pos": 75,
+      "quant": 76.25
+     }
+    }
+   },
+   "robustness_4pt": {
+    "n_pairs": 40,
+    "missing": 0,
+    "framing_spearman": 0.815,
+    "fragility_flag": false
+   }
+  }
+ },
+ "cost": {
+  "status": "ok",
+  "lines": [
+   "2026-06-13T01:50:50Z slots=['A', 'B', 'C'] arms=['heldout-temporal', 'tier0', 'robustness'] billed=$0.0793 missing_cost_calls=0"
+  ],
+  "total_billed_usd": 0.0793,
+  "missing_cost_calls": 0
+ },
+ "tier0_passers": [
+  "A",
+  "B",
+  "C"
+ ],
+ "stratum_verdict": "STILL-TOO-THIN / MIXED"
+}
