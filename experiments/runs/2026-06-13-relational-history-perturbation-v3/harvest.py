@@ -19,7 +19,15 @@ model's sample count drops and the reduced cluster count is recorded in PREREG.m
 the stimuli freeze.
 
 Harvest raw is STIMULUS-CONSTRUCTION data: kept, never analyzed as findings (v2 rule S2,
-extended). Deduplication and mechanical checks happen in certify.py (single place).
+extended).
+
+MECHANICAL FILTERS AT HARVEST TIME (critic S4, 2026-06-13): the <=12-word budget is
+enforced HERE, before certification — over-budget lines are logged in the harvest record
+(`dropped_over_budget`) and never become candidates, so they cannot reach a certification
+call. certify.py keeps its own budget check as defense in depth. A length-truncated
+harvest reply (finish_reason == "length", critic blocker 2) drops its LAST parsed line
+(possibly cut mid-text), logged as `dropped_truncated_tail`. Deduplication (within figure
++ against the twin) stays in certify.py, which needs the cross-figure view.
 
 Usage (from repo root or this dir):
   python3 harvest.py plan      # no API calls: prints planned calls + cost estimate
@@ -35,7 +43,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from common import (MODELS, MODEL_SEED_OFFSET, SEED0, N_CAND, WORD_BUDGET, RAW,  # noqa: E402
-                    call, load_figures, grid_block, reasoning_for, flat_cost,
+                    call_fr, load_figures, grid_block, reasoning_for, flat_cost,
                     ledger_append, check_hard_stop, append_jsonl, read_jsonl)
 
 HARVEST_PATH = os.path.join(RAW, "harvest.jsonl")
@@ -85,15 +93,28 @@ def harvest_call(mname, model, figs, fid, temperature, phase):
     user = (f"Your figures:\n{d_block}\n\nTARGET: {d_label[fid]}\n"
             f"Give {N_CAND} different candidate descriptions of the TARGET "
             f"(each <= {WORD_BUDGET} words).")
-    r = call(model, HARVEST_SYS.format(n=N_CAND, budget=WORD_BUDGET), user,
-             max_tokens=512, temperature=temperature, reasoning=reasoning_for(model))
+    r = call_fr(model, HARVEST_SYS.format(n=N_CAND, budget=WORD_BUDGET), user,
+                max_tokens=512, temperature=temperature, reasoning=reasoning_for(model))
     cands = parse_candidates(r.get("content"))
+    # critic blocker 2: a length-truncated list's LAST parsed line may be cut mid-text —
+    # drop it (logged), never let a truncated tail become a candidate.
+    dropped_tail = []
+    if r.get("finish_reason") == "length" and cands:
+        dropped_tail = [cands.pop()]
+    # critic S4: enforce the <=12-word budget mechanically AT HARVEST, before
+    # certification — over-budget lines never reach a certification call.
+    over = [c for c in cands if len(c.split()) > WORD_BUDGET]
+    cands = [c for c in cands if len(c.split()) <= WORD_BUDGET]
     rec = {"phase": phase, "model": mname, "fig": fid, "temperature": temperature,
            "n_candidates": len(cands), "candidates": cands,
+           "dropped_over_budget": over, "dropped_truncated_tail": dropped_tail,
+           "finish_reason": r.get("finish_reason"),
            "raw": r.get("content"), "usage": [r.get("usage", {})], "err": r.get("error")}
     append_jsonl(HARVEST_PATH, rec)
-    print(f"  {mname:7s} {fid} [{phase} t={temperature}]: {len(cands)} candidates"
-          + (f"  ERR={r.get('error')}" if r.get("error") else ""))
+    note = (f"  ERR={r.get('error')}" if r.get("error") else "") + \
+           (f"  over-budget dropped={len(over)}" if over else "") + \
+           ("  TRUNCATED tail dropped" if dropped_tail else "")
+    print(f"  {mname:7s} {fid} [{phase} t={temperature}]: {len(cands)} candidates{note}")
     return rec
 
 

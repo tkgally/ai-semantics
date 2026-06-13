@@ -23,10 +23,13 @@ import os
 import re
 import string
 import sys
+import time
+import urllib.error
+import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.abspath(os.path.join(HERE, "..", "..", "lib")))
-from openrouter import PANEL, call, billed_cost  # noqa: E402
+from openrouter import PANEL, URL, call, billed_cost  # noqa: E402
 
 V1 = os.path.abspath(os.path.join(HERE, "..", "2026-05-31-relational-reference-game-v1"))
 RAW = os.path.join(HERE, "raw")
@@ -48,8 +51,9 @@ NONCE = {0: "PLOVNEK", 1: "SKARMIL", 2: "VANTREX"}
 # v1 figures.json content hash the design pins ("original sha256 a2709582…").
 FIGURES_SHA256 = "a2709582a58e54378190b3e6e15191be4fe1f05d27c37830856f958371deb6c4"
 
-# ---- elicitation (fix 1: truncation-proof forced format) --------------------------------
-MAX_TOKENS = 512  # v2 was 128; 512 means even a non-compliant deliberating reply completes
+# ---- elicitation (fix 1: forced format; cap raised so truncation is RARE, not impossible)
+MAX_TOKENS = 512  # v2 was 128; 512 makes truncation rare, NOT impossible — a reply with
+                  # finish_reason == "length" is NEVER parsed (critic blocker 2, 2026-06-13)
 REASONING = {"google/": {"effort": "minimal"}}  # config/models.md caveat 1
 HARD_STOP_USD = 1.50  # pre-registered hard stop on PROJECTED TOTAL billed cost
 
@@ -140,18 +144,70 @@ def parse_forced(txt, labels):
     return None, None
 
 
+def call_fr(model, system, user, max_tokens=None, temperature=0, retries=4, timeout=120,
+            reasoning=None):
+    """One chat completion that ALSO surfaces choices[0].finish_reason.
+
+    Critic blocker 2 (2026-06-13): a reply with finish_reason == "length" is NEVER
+    parsed for a pick — its visible text is a truncated prefix and any label in it is
+    untrustworthy. lib/openrouter.call discards finish_reason, so the transport is
+    mirrored here verbatim (same body incl. the usage-include flag, same retry/backoff);
+    flagged for upstreaming to lib/ in a later session rather than editing the shared
+    module mid-run. Returns {content, usage, finish_reason[, error]}.
+    """
+    key = os.environ["OPENROUTER_API_KEY"]
+    if max_tokens is None:
+        max_tokens = 4096 if model.startswith("google/") else 64
+    body = {"model": model,
+            "messages": [{"role": "system", "content": system},
+                         {"role": "user", "content": user}],
+            "temperature": temperature, "max_tokens": max_tokens,
+            "usage": {"include": True}}  # <- OpenRouter returns billed usage.cost
+    if reasoning is not None:
+        body["reasoning"] = reasoning
+    last = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(
+                URL, data=json.dumps(body).encode(),
+                headers={"Authorization": f"Bearer {key}",
+                         "Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                d = json.load(r)
+            ch = d["choices"][0]
+            return {"content": (ch["message"].get("content") or "").strip(),
+                    "usage": d.get("usage", {}),
+                    "finish_reason": ch.get("finish_reason")}
+        except urllib.error.HTTPError as e:
+            last = f"HTTP {e.code}: {e.read().decode()[:150]}"
+        except Exception as e:  # noqa: BLE001
+            last = f"{type(e).__name__}: {e}"
+        time.sleep(2 ** attempt)
+    return {"content": None, "usage": {}, "finish_reason": None, "error": last}
+
+
+def parse_reply(r, labels):
+    """Strict parse rule applied to one response dict — but a length-truncated reply
+    (finish_reason == "length") is NEVER parsed for a pick: parse-fail, so the caller's
+    stern retry, then NA (critic blocker 2; pre-registered)."""
+    if r.get("finish_reason") == "length":
+        return None, None
+    return parse_forced(r.get("content"), labels)
+
+
 def call_forced(model, sys_p, user, labels, label_list):
-    """One forced-format call; on transport error or parse-fail, ONE retry with the stern
-    one-label-only reminder (design §Elicitation (c)). Returns
-    (response, pick, parse_mode, retried, usages)."""
+    """One forced-format call; on transport error, length-truncation, or parse-fail, ONE
+    retry with the stern one-label-only reminder (design §Elicitation (c)); persistent
+    failure -> NA. Returns (response, pick, parse_mode, retried, usages); the returned
+    response carries `finish_reason` for the record."""
     rsn = reasoning_for(model)
-    r = call(model, sys_p, user, max_tokens=MAX_TOKENS, reasoning=rsn)
-    pick, mode = parse_forced(r.get("content"), labels)
+    r = call_fr(model, sys_p, user, max_tokens=MAX_TOKENS, reasoning=rsn)
+    pick, mode = parse_reply(r, labels)
     if not r.get("error") and pick is not None:
         return r, pick, mode, False, [r.get("usage", {})]
-    r2 = call(model, sys_p, user + STERN.format(label_list=label_list),
-              max_tokens=MAX_TOKENS, reasoning=rsn)
-    pick2, mode2 = parse_forced(r2.get("content"), labels)
+    r2 = call_fr(model, sys_p, user + STERN.format(label_list=label_list),
+                 max_tokens=MAX_TOKENS, reasoning=rsn)
+    pick2, mode2 = parse_reply(r2, labels)
     usages = [u for u in (r.get("usage"), r2.get("usage")) if u]
     if pick2 is not None or not r.get("content"):
         return r2, pick2, mode2, True, usages

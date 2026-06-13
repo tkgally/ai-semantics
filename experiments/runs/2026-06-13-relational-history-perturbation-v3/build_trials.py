@@ -15,8 +15,13 @@ No API calls. Adapted from v2 build_stimuli.py with the v3 design changes
 - MIXED: 2 certified descriptions of X + 2 of Y, uniform positive feedback, all 6 orders
   of {X,X,Y,Y} x 2 presentation directions; content multiset byte-identical across the 12
   cells of a cluster;
-- CONSISTENT: 2 controls per cluster (all four lines describing one twin, fwd), retained
-  on top of certification as defense in depth.
+- CONSISTENT: 4 controls per cluster — one per twin x BOTH presentation directions
+  (critic S1, 2026-06-13: a rev-direction control checks instruction-following under the
+  rev framing, sharpening the position-vs-direction artifact diagnosis), retained on top
+  of certification as defense in depth. 36 controls/model; totals 144/model, 432.
+- SAMPLE PARTITION (pre-registered, critic S4): sample s in {0, 1, 2} takes roster
+  positions 2s and 2s+1 of the frozen first-6-certified-in-harvest-order roster
+  (`roster[2s:2s+2]` below) — fully deterministic given certification_report.json.
 
 Freeze discipline: the printed sha256 of stimuli.json goes into PREREG.md; NO
 finding-bearing probe call before that hash is committed (probe.py enforces this).
@@ -61,6 +66,8 @@ def build(report, figs):
             ra = md["figures"][a]["roster"]
             rb = md["figures"][b]["roster"]
             for s in range(n_samples):
+                # pre-registered deterministic partition (critic S4): sample s = roster
+                # positions 2s, 2s+1 (first-6-certified-in-harvest-order roster)
                 dx, dy = ra[2 * s:2 * s + 2], rb[2 * s:2 * s + 2]
                 assert len(dx) == 2 and len(dy) == 2, "roster shorter than n_samples implies"
                 ckey = f"{m}:{pid}:{s}"
@@ -80,14 +87,16 @@ def build(report, figs):
                             "last": a if order[-1] == "X" else b,   # chron-last twin
                             "first": a if order[0] == "X" else b,   # chron-first twin
                         })
-                # consistent controls: all 4 lines describe ONE twin (fwd only)
+                # consistent controls: all 4 lines describe ONE twin, run in BOTH
+                # presentation directions (critic S1) -> 4 controls per cluster
                 for fid, dd in ((a, dx), (b, dy)):
-                    trials[m].append({
-                        "kind": "consistent", "pair": pid, "X": a, "Y": b,
-                        "order": None, "direction": "fwd", "sample": s,
-                        "nonce": NONCE[pid], "target": fid, "cluster": ckey,
-                        "lines": [dd[0], dd[1], dd[0], dd[1]],
-                    })
+                    for direction in DIRECTIONS:
+                        trials[m].append({
+                            "kind": "consistent", "pair": pid, "X": a, "Y": b,
+                            "order": None, "direction": direction, "sample": s,
+                            "nonce": NONCE[pid], "target": fid, "cluster": ckey,
+                            "lines": [dd[0], dd[1], dd[0], dd[1]],
+                        })
     return {"seed": SEED0, "orders": ORDERS, "directions": DIRECTIONS,
             "nonce": {str(k): v for k, v in NONCE.items()},
             "figures_content_sha256": FIGURES_SHA256,
@@ -108,12 +117,15 @@ def main():
     figs = load_figures()  # hash-checked against the frozen v1 set
     out = build(report, figs)
 
-    # geometry assertions (design: 9 clusters -> 108 mixed + 18 controls per model)
+    # geometry assertions (design: 9 clusters -> 108 mixed + 36 controls per model;
+    # controls = 2 twins x 2 directions per cluster, critic S1)
     for m in MODELS:
         n_cl = sum(1 for k in out["clusters"] if k.startswith(m + ":"))
         mixed = [t for t in out["trials"][m] if t["kind"] == "mixed"]
         cons = [t for t in out["trials"][m] if t["kind"] == "consistent"]
-        assert len(mixed) == 12 * n_cl and len(cons) == 2 * n_cl, "geometry violation"
+        assert len(mixed) == 12 * n_cl and len(cons) == 4 * n_cl, "geometry violation"
+        assert all(sum(1 for t in cons if t["direction"] == d) == 2 * n_cl
+                   for d in DIRECTIONS), "controls not balanced across directions"
         # byte-identical multiset within every cluster's 12 mixed cells
         by_cl = {}
         for t in mixed:
@@ -129,7 +141,7 @@ def main():
     n = {m: len(out["trials"][m]) for m in MODELS}
     total = sum(n.values())
     print(f"{os.path.basename(args.out)} written: trials/model {n} (total {total}; "
-          f"design nominal 126/model, 378 total)\nsha256={h}")
+          f"design nominal 144/model, 432 total)\nsha256={h}")
     print("FREEZE: record this sha256 in PREREG.md (frozen post-critic) before any "
           "finding-bearing call; probe.py refuses `preflight`/`full` until it matches.")
 

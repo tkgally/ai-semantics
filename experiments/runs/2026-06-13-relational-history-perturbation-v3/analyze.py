@@ -7,21 +7,24 @@ the verdict mapper is CODE (verdict() below), not prose, so it cannot be retuned
 silently. No quantity outside this file's outputs may be promoted to a finding.
 
 Per model:
-- per-cluster manipulation gate (both consistent controls correct);
+- per-cluster manipulation gate (ALL FOUR consistent controls correct — 2 twins x 2
+  presentation directions, critic S1);
 - PRIMARY: gated rho_chron per presentation direction (chron-last-twin pick rate over
   gated, parsed, in-pair mixed trials), clustered bootstrap CI (10,000 resamples over
   (pair x sample) clusters);
 - artifact diagnostic rho_phys (physically-last-line twin);
 - the >=k-cluster guard, k = 3, per direction (fix 4), applied symmetrically to every
   CI-bearing clause; degenerate (zero-width) CIs satisfy NO clause;
-- the >=36 gated in-pair parsed trials per direction floor on null-certification;
+- trial floors (critic blocker 3): >=24 gated in-pair parsed trials per direction on
+  the FALSIFIED and PHYSICAL-POSITION-ARTIFACT clauses; >=36 on null-certification;
 - both-directions agreement on every chronology clause (fix 5);
 - NA / out-of-pair reporting (out-of-pair over parsed picks; >0.5 -> UNDER-POWERED);
   NA-concentration flag (>25% in any pair x direction cell);
 - per-model strict-compliance rate;
 - secondary descriptive: clean-switch (XXYY/YYXX) vs interleaved;
-- pre-registered sensitivity cuts: leave-one-pair-out (x3), NAs-as-out-of-pair,
-  strict-format-only, pair-level (3-cluster) bootstrap as a descriptive cross-check.
+- sensitivity cuts (pre-registered, DESCRIPTIVE ONLY, never verdict-bearing — critic
+  S5: the verdict is computed on the primary gated pool only): leave-one-pair-out (x3),
+  NAs-as-out-of-pair, strict-format-only, pair-level (3-cluster) bootstrap.
 
 Usage (from repo root or this dir):
   python3 analyze.py                          # reads raw/probe-<model>.jsonl
@@ -44,6 +47,8 @@ N_BOOT = 10000
 SEED = 20260613
 K_GUARD = 3          # >=k gated clusters per direction (design fix 4)
 N_FLOOR_NULL = 36    # >=36 gated in-pair parsed trials per direction for null-cert
+N_FLOOR_EFFECT = 24  # >=24 gated in-pair parsed trials per direction for the
+                     # FALSIFIED / PHYSICAL-POSITION-ARTIFACT clauses (critic blocker 3)
 OOP_MAX = 0.5
 CLEAN = {"XXYY", "YYXX"}
 DIRS = ("fwd", "rev")
@@ -128,7 +133,8 @@ def compute(mixed, gate_ok, label, na_as_oop=False,
         res["rho_chron_ungated"], _ = rate(ud, "picked_chron_last")
         out["dirs"][d] = res
     out["guard_ok"] = all(out["dirs"][d]["n_gated_clusters"] >= K_GUARD for d in DIRS)
-    out["n_floor_ok"] = all(out["dirs"][d]["n_in_pair"] >= N_FLOOR_NULL for d in DIRS)
+    out["floor24_ok"] = all(out["dirs"][d]["n_in_pair"] >= N_FLOOR_EFFECT for d in DIRS)
+    out["floor36_ok"] = all(out["dirs"][d]["n_in_pair"] >= N_FLOOR_NULL for d in DIRS)
     # secondary descriptive (gated, both directions pooled)
     out["secondary"] = {}
     for nm, sel in (("clean", lambda r: r["order"] in CLEAN),
@@ -139,16 +145,23 @@ def compute(mixed, gate_ok, label, na_as_oop=False,
 
 
 def verdict(stats):
-    """THE pre-registered verdict mapper (design §Decision rule) — mechanical.
+    """THE pre-registered verdict mapper (design §Decision rule) — mechanical, an
+    ORDERED, EXHAUSTIVE if/else tree with an explicit final else (critic blocker 1).
 
-    Categories: METHODOLOGICAL NULL / UNDER-POWERED / FALSIFIED / PHYSICAL-POSITION
-    ARTIFACT / COMMUTATIVE-NULL-CERTIFIED / INCONCLUSIVE-MIXED. Degenerate (zero-width)
-    CIs have side=None and satisfy no clause. Every CI clause requires agreement in BOTH
-    presentation directions.
+    Pre-registered precedence: METHODOLOGICAL NULL > UNDER-POWERED > the CI clauses
+    (FALSIFIED > PHYSICAL-POSITION ARTIFACT > COMMUTATIVE-NULL-CERTIFIED > the named
+    gap sub-label "INCONCLUSIVE — null pattern, certification floor unmet") > final
+    else INCONCLUSIVE-MIXED. Degenerate (zero-width) CIs have side=None and satisfy no
+    clause. Every CI clause requires agreement in BOTH presentation directions. Trial
+    floors (critic blocker 3): the effect clauses (FALSIFIED, ARTIFACT) require >=24
+    gated in-pair parsed trials per direction; null-certification keeps the stricter
+    >=36 floor.
     """
+    # 1. METHODOLOGICAL NULL — the >=k-cluster guard outranks everything below.
     if not stats["guard_ok"]:
         return ("METHODOLOGICAL NULL", f"< {K_GUARD} gated clusters in some direction "
                 "(whatever the point estimates say)")
+    # 2. UNDER-POWERED — outranks every CI clause.
     if stats["oop"] > OOP_MAX:
         return ("UNDER-POWERED", f"out-of-pair {stats['oop']:.3f} > {OOP_MAX} on parsed picks")
     side = {}
@@ -158,22 +171,39 @@ def verdict(stats):
             side[(nm, d)] = None if ci is None else ci["side"]
     c_f, c_r = side[("chron", "fwd")], side[("chron", "rev")]
     p_f, p_r = side[("phys", "fwd")], side[("phys", "rev")]
-    chron_fires = (c_f is not None and c_r is not None and c_f != 0 and c_f == c_r)
-    if chron_fires:
+    chron_pattern = (c_f is not None and c_r is not None and c_f != 0 and c_f == c_r)
+    phys_pattern = (p_f is not None and p_r is not None and p_f != 0 and p_f == p_r)
+    all_null = all(side[(nm, d)] == 0 for nm in ("chron", "phys") for d in DIRS)
+    # 3. FALSIFIED — rho_chron CI pattern + the >=24-trial effect floor.
+    if chron_pattern and stats["floor24_ok"]:
         d = "RECENCY" if c_f > 0 else "PRIMACY"
         return ("FALSIFIED", f"non-commutative, chronology-tracking ({d}); rho_chron CI "
-                "excludes 0.5 on the same side in BOTH presentation directions")
-    if p_f is not None and p_r is not None and p_f != 0 and p_f == p_r:
+                "excludes 0.5 on the same side in BOTH presentation directions, with "
+                f">= {N_FLOOR_EFFECT} gated in-pair parsed trials per direction")
+    # 4. PHYSICAL-POSITION ARTIFACT — reached only if FALSIFIED did not fire.
+    if phys_pattern and stats["floor24_ok"]:
         return ("PHYSICAL-POSITION ARTIFACT", "rho_phys CI excludes 0.5 on the same side "
-                "in both directions while the rho_chron clause is unmet; methodological, "
-                "not relational")
-    all_null = all(side[(nm, d)] == 0 for nm in ("chron", "phys") for d in DIRS)
-    if all_null and stats["n_floor_ok"]:
+                "in both directions while the rho_chron clause is unmet, with "
+                f">= {N_FLOOR_EFFECT} gated in-pair parsed trials per direction — "
+                "position-following or direction-instruction neglect, observationally "
+                "equivalent here; methodological, not relational")
+    # 5. COMMUTATIVE-NULL-CERTIFIED — all four CIs null + the stricter >=36 floor.
+    if all_null and stats["floor36_ok"]:
         return ("COMMUTATIVE-NULL-CERTIFIED", "all four CIs include 0.5 (non-degenerate) "
                 f"and >= {N_FLOOR_NULL} gated in-pair parsed trials per direction")
+    # 6. The NAMED GAP SUB-LABEL (critic blocker 1): guard holds, out-of-pair <= 0.5,
+    #    all four CIs include 0.5 (non-degenerate), but the >=36 certification floor is
+    #    unmet — no clause fires.
     if all_null:
-        return ("INCONCLUSIVE-MIXED", "null pattern but below the pre-registered "
-                f"{N_FLOOR_NULL}-trial-per-direction certification floor — no clause fires")
+        return ("INCONCLUSIVE — null pattern, certification floor unmet",
+                "guard holds, out-of-pair <= 0.5, all four CIs include 0.5 "
+                f"(non-degenerate), but < {N_FLOOR_NULL} gated in-pair parsed trials in "
+                "some direction — the absence claim may not be certified on this n")
+    # 7. FINAL ELSE — INCONCLUSIVE-MIXED, exhaustively everything not caught above.
+    if (chron_pattern or phys_pattern) and not stats["floor24_ok"]:
+        return ("INCONCLUSIVE-MIXED", "a both-directions CI pattern is present but "
+                f"< {N_FLOOR_EFFECT} gated in-pair parsed trials in some direction — "
+                "no effect clause may fire; point estimates only")
     return ("INCONCLUSIVE-MIXED", "arms disagree (one CI-clean, the other not, opposite "
             "sides, or a degenerate CI) — point estimates only, no substantive label")
 
@@ -193,7 +223,7 @@ def fmt_ci(ci):
 def print_stats(stats, indent="  "):
     print(f"{indent}{stats['label']}: mixed={stats['n_mixed']} parsed={stats['n_parsed']} "
           f"NA={stats['n_na']} oop={stats['oop']:.3f} guard_ok={stats['guard_ok']} "
-          f"floor36_ok={stats['n_floor_ok']}")
+          f"floor24_ok={stats['floor24_ok']} floor36_ok={stats['floor36_ok']}")
     for d in DIRS:
         r = stats["dirs"][d]
         print(f"{indent}  {d}: rho_chron={fmt(r['rho_chron'])} {fmt_ci(r['ci_chron'])} "
@@ -216,7 +246,8 @@ def main():
         mixed = [r for r in recs if r["kind"] == "mixed"]
         cons = [r for r in recs if r["kind"] == "consistent"]
 
-        # manipulation gate: both consistent controls correct, per (pair, sample) cluster
+        # manipulation gate: ALL FOUR consistent controls correct (2 twins x 2
+        # directions, critic S1), per (pair, sample) cluster
         gate_ok, by_cluster = {}, {}
         for r in cons:
             by_cluster.setdefault((r["pair"], r["sample"]), []).append(r)
@@ -252,7 +283,9 @@ def main():
         for nm, sec in primary["secondary"].items():
             print(f"  SECONDARY {nm}: rho_chron={fmt(sec['rho_chron'])} (n={sec['n']})")
 
-        # ---- pre-registered sensitivity cuts (descriptive; primary verdict stands) ----
+        # ---- pre-registered sensitivity cuts — DESCRIPTIVE ONLY, never verdict-bearing
+        # (critic S5: the verdict above is computed on the primary gated pool only;
+        # "verdict-under-cut" is a descriptive robustness readout, not a verdict) ----
         cuts = {}
         cut_views = [("strict-only",
                       [r for r in mixed if r.get("parse_mode") == "strict"], False),
@@ -263,10 +296,11 @@ def main():
         for label, view, na_oop in cut_views:
             st = compute(view, gate_ok, label, na_as_oop=na_oop)
             cv, cwhy = verdict(st)
-            st["verdict"] = cv
+            st["verdict_descriptive_only"] = cv
             cuts[label] = st
             print_stats(st, indent="  CUT ")
-            print(f"  CUT {label}: verdict-under-cut = {cv}")
+            print(f"  CUT {label}: verdict-under-cut (descriptive only, never "
+                  f"verdict-bearing) = {cv}")
         # pair-level (3-cluster) bootstrap — descriptive cross-check only, NO verdict
         pl = compute(mixed, gate_ok, "pair-level-bootstrap (descriptive only)",
                      cluster_of=lambda r: r["pair"])

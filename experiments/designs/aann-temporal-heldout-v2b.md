@@ -5,7 +5,7 @@ title: AANN temporal held-out widening (v2b) — addendum under the ratified v2 
 meaning-senses:
   - constructional
   - human-comparison
-status: draft (pre-critic; freeze after independent pre-run critic)
+status: pre-freeze (independent pre-run critic returned GO after fixes, 2026-06-13; fixes applied; freeze = PREREG.md commit by the orchestrator)
 contingent-on: []
 created: 2026-06-13
 updated: 2026-06-13
@@ -63,6 +63,15 @@ v2b widens **within** cells (run dir
 | Temporal nouns | 4 of 5 | **all 5** (days, hours, weeks, months, years) |
 | Temporal items / calls | 16 / 48 | **80 / 240** |
 
+Two further arms were added by the pre-run critic's fixes (2026-06-13, GO after
+fixes), bringing the run to **432 calls**:
+
+| Arm | Items × models | Calls | Bearing |
+|---|---|---|---|
+| `heldout-temporal` (above) | 80 × 3 | 240 | gate-bearing gradient read |
+| `tier0` — **fresh**, the 24 v2 forced-choice pairs verbatim | 24 × 3 | 72 | gate-bearing instrument check per model (pass ≥ 20/24; failure ⇒ excluded from the ≥2-of-3 stratum count) |
+| `robustness` — 4-point framing on a fixed pre-declared 40-item subsample (one item per adjective, class- and template-balanced, seeded deterministic selection; rule frozen in `stimuli.json`) | 40 × 3 | 120 | caveat-bearing only (ρ < 0.50 or NaN ⇒ mandatory instrument-fragility caveat, v2 semantics) |
+
 - **The class-cell count cannot exceed 4.** Per Mahowald's Exp-2 validity matrix (as
   realized in the committed v2 human tables), only ambig, neg, pos, quant are valid on
   temporal nouns (human/stubborn/color are not). So "widen the temporal held-out
@@ -92,8 +101,10 @@ v2b widens **within** cells (run dir
   held-out temporal class-cell means and the human anchored temporal class-cell means
   (quant 8.45 > ambig 8.25 > pos 8.02 > neg 7.57, from the frozen v2
   `human_class_means.csv`). Honest caveat, stated pre-run: at 4 class-cells a Spearman
-  is coarse (lattice {0, ±0.2, ±0.4, ±0.8, ±1}); it is read jointly with —
-- **Secondary, finer grain (chosen before any data):** adjective-grain Spearman — 40
+  is coarse (the full n=4 lattice is {0, ±0.2, ±0.4, ±0.6, ±0.8, ±1} — corrected per
+  the pre-run critic; the earlier draft wrongly omitted ±0.6); it is read jointly with —
+- **Secondary, finer grain (gate-bearing, full stop; chosen before any data):**
+  adjective-grain Spearman — 40
   held-out adjective means vs the class-assigned human anchored temporal mean
   (average-rank ties), with a 10,000-resample percentile bootstrap 95% CI over
   adjectives. Same comparison, real resolution. **Warrant in the ratified instrument:**
@@ -105,54 +116,82 @@ v2b widens **within** cells (run dir
 - **Verdict categories (frozen in the PREREG):** per model **replicates** (class-cell
   ρ ≥ 0.40 AND adjective-grain ρ ≥ 0.20 with CI lower bound > 0) /
   **fails-to-replicate** (adjective-grain CI upper bound < 0.20) / **still-too-thin**
-  (otherwise); stratum verdict by the ≥2-of-3 rule. All outcomes, including the null,
-  are written as a refinement of the v2 result's caveat 2.
+  (otherwise); REPLICATES is evaluated before FAILS (contradiction ⇒ still-too-thin
+  with note); stratum verdict by the ≥2-of-3 rule **over Tier-0-passing models only**
+  (a Tier-0 failure is instrument failure for that model — its gradient verdict is
+  reported descriptively, never counted; < 2 passers ⇒ instrument failure, no stratum
+  verdict). Bootstrap: 10,000 percentile resamples over adjectives, **seed 20260613**.
+  All outcomes, including the null, are written as a refinement of the v2 result's
+  caveat 2.
+- **Pre-declared sensitivity (mandatory descriptive, gate unchanged):** the class-cell
+  and adjective-grain statistics recomputed excluding template-2 items (the upstream
+  "tourish" typo template); if the verdict category would differ, a mandatory caveat
+  sentence attaches to the result. The gate stays on all 80 items.
 - Descriptive extras (no gates): pooled item-grain rank agreement (n = 80), Zipf
-  partial at adjective grain, carryover-vs-v2 consistency, new-vs-carryover subgroup
-  means.
+  partial at adjective grain, carryover-vs-v2 **consistency** (Spearman + mean signed
+  difference; consistency, not test–retest), new-only (n = 24) adjective-grain ρ,
+  new-vs-carryover subgroup means (read with the pre-declared noun-asymmetry note),
+  and the v2-style first-token Tier-0 score (continuity only; the Tier-0 gate parses
+  the **last** standalone letter, fixing v2's documented first-bare-token defect).
 
 Full numbers, missingness rules (>10% caveat / >25% instrument failure / INCOMPLETE on
 abort), and disclosures:
 `experiments/runs/2026-06-13-aann-temporal-heldout-v2b/PREREG-draft.md`.
 
-## 3. Honest strains on "same instrument, no new decision"
+## 3. Honest strains, and the pre-run critic's resolutions (2026-06-13)
 
-Flagged for the pre-run critic rather than smoothed over:
+Flagged for the pre-run critic rather than smoothed over; each is now **resolved** —
+no conditional readings remain, and the PREREG-draft carries exactly one reading of
+every gate:
 
 1. The **secondary adjective-grain statistic is new at gate level** — v2 gated nothing
    at that grain. It is the same model-vs-anchored-half comparison at finer grain,
-   declared pre-data; if the critic reads it as a new operationalization rather than a
-   precision read, the fallback is to demote it to descriptive and accept that 4-cell
-   coarseness may force a still-too-thin verdict.
-2. **Tier-0 is inherited from v2** (all three models passed 23–24/24 one day earlier,
-   identical settings), not re-run. A fresh Tier-0 costs ~$0.013 if required.
+   declared pre-data. **Resolved: the critic ruled it a precision read warranted by
+   Conditions 2/4 of the governing decision; it is gate-bearing, full stop.**
+2. **Tier-0.** v2's pass (23–24/24, one day earlier) is not inherited. **Resolved: a
+   fresh Tier-0 arm is run** — the 24 v2 pairs byte-identical, 72 calls, pass ≥ 20/24
+   per model; failure = instrument failure for that model, excluded from the stratum
+   count. The gate parses the **last** standalone letter (fixing v2's documented
+   first-bare-token defect); the v2-style first-token score is reported descriptively.
 3. **Carryover re-rating** pools previously-probed held-out adjectives with new ones
-   (both human-unseen by construction); subgroup numbers are reported.
-4. **The 4-point robustness framing is dropped** (this run is 0–100 primary only).
-   Binding Condition 8 pairs the primary framing with a 4-point robustness check; the
-   justification for dropping it here (framing convergence already established in v2
-   on 102 items, ρ 0.82–0.93 per model) is stated in the PREREG-draft — but the
-   temporal stratum is exactly where v2 failed to replicate, so framing robustness
-   *in this stratum* is untested. If the pre-run critic reads Condition 8 as binding
-   per-run rather than per-instrument, the fix is a small 4-point subsample
-   (~+80 calls, ~+$0.02).
+   (both human-unseen by construction); subgroup numbers are reported, with the
+   pre-declared noun-asymmetry note (the rotation gives the two subgroups different
+   noun mixes, so subgroup differences are not adjective-set effects alone).
+4. **The 4-point robustness framing.** Binding Condition 8 pairs the primary framing
+   with a 4-point robustness check. **Resolved: the critic ruled Condition 8 binds
+   per-run**, so a fixed pre-declared 40-item 4-point subsample is run (120 calls),
+   caveat-bearing with v2's exact fragility semantics (ρ < 0.50 or NaN ⇒ mandatory
+   instrument-fragility caveat for that model; never gate-bearing).
 
 ## 4. Cost (config/budget.md)
 
-240 calls. Pre-flight from v2's **measured billed** held-out per-call rates:
-point estimate **$0.042**, expected **≈ $0.04–0.09 billed**; abort flag $0.30 coded in
-`probe.py`. Well under the $2.50 single-run flag and the $5.00/day budget.
+**432 calls** (per model: 80 main + 24 Tier-0 + 40 four-point). Pre-flight from v2's
+**measured billed** per-call rates per arm (held-out 0–100: A $0.000331, B $0.000080,
+C $0.000115; Tier-0: A $0.000263, B $0.000068, C $0.000221; 4-point: A $0.000355,
+B $0.000083, C $0.000114 — the Tier-0/4-point arms' prompts are shorter, and their
+rates are taken from the matching v2 arms, not extrapolated): point estimate
+**$0.077** ($0.042 + $0.013 + $0.022), expected **≈ $0.08–0.15 billed**; abort flag
+$0.30 coded in `probe.py`. Well under the $2.50 single-run flag and the $5.00/day
+budget. Calls with missing `usage.cost` are counted and logged, never silently
+discarded.
 
 ## 5. Run protocol
 
-1. `prep.py` (run, no model calls) froze `stimuli.json` (80 items, audit embedded).
-2. Independent **pre-run critic** reviews this addendum + PREREG-draft + stimuli;
-   fixes applied; `analyze.py` written; PREREG-draft committed as `PREREG.md`
-   (**freeze**). `probe.py` refuses to run before the freeze.
-3. `probe.py` — 240 calls via `experiments/lib/openrouter.py` (`usage: include`),
-   raw JSON per model under `raw/`, one verbatim retry, billed-cost log, $0.30 abort.
-4. `analyze.py` computes exactly the PREREG statistics; independent **post-run
-   verifier** recomputes from raw before any wiki edit.
+1. `prep.py` (run, no model calls) froze `stimuli.json`: 80 main items (verified
+   byte-identical across the critic-fix regeneration), the 24 v2 Tier-0 pairs
+   verbatim, the 40-item 4-point subsample (deterministic seeded rule embedded),
+   audit embedded.
+2. Independent **pre-run critic** reviewed this addendum + PREREG-draft + stimuli
+   (verdict: GO after fixes); fixes applied (this revision); `analyze.py` written and
+   selftested; PREREG-draft committed as `PREREG.md` by the orchestrator (**freeze**).
+   `probe.py` refuses to run before the freeze **and refuses to run if `analyze.py`
+   is absent** (the analysis code is part of the freeze).
+3. `probe.py` — 432 calls via `experiments/lib/openrouter.py` (`usage: include`),
+   raw JSON per (model, arm) under `raw/`, one verbatim retry, billed-cost log with
+   missing-cost counts, $0.30 abort.
+4. `analyze.py` computes exactly the PREREG statistics (incl. the Tier-0 gate, the
+   4-point fragility caveat, and the tourish-template sensitivity recompute);
+   independent **post-run verifier** recomputes from raw before any wiki edit.
 5. Result: an update refining
    [`result/aann-behavioral-gradient-v2`](../../wiki/findings/results/aann-behavioral-gradient-v2.md)
    caveat 2 (or a small follow-up result page linked `refines` to it), anchored to

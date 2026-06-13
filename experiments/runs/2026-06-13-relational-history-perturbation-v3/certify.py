@@ -9,17 +9,20 @@ described? Certified iff correct. The first 6 certified descriptions per figure
 
 MECHANICAL CHECKS (run before any model-based check, deterministic, no API):
   - non-empty after normalization;
-  - <= 12 words (the requested v1 budget, enforced; over-budget candidates are logged
-    and dropped, never silently kept);
+  - <= 12 words — PRIMARY enforcement now lives in harvest.py (critic S4, 2026-06-13:
+    over-budget lines never reach certification); the check here is kept as defense in
+    depth against hand-edited raw;
   - deduplication WITHIN the figure and AGAINST THE TWIN's set (case-insensitive,
     whitespace-normalized; second occurrence in canonical processing order is dropped —
     a description shared with the twin cannot discriminate the pair).
 
 MODEL-BASED CHECK: one forced-format certification call per surviving candidate (same
-elicitation/parse/retry discipline as the probe, from common.py; certification uses the
-same model whose record the description will populate — the convention under test is
-model-internal; design open issue 5 flags an optional cross-model cross-check for the
-critic).
+elicitation/parse/retry discipline as the probe, from common.py — including the critic
+blocker-2 rule: a reply with finish_reason == "length" is NEVER parsed for a pick;
+parse-fail -> stern retry -> uncertified. Certification uses the same model whose record
+the description will populate — the convention under test is model-internal; the
+cross-model certification cross-check is DEFERRED per the critic's issue-5 ruling: never
+gating, a future session, pre-registered descriptive only).
 
 ANTI-NULL BIAS, DISCLOSED (embedded verbatim in the report): certification selects for
 individually discriminative lines, which SHARPENS the X-vs-Y conflict — it biases AGAINST
@@ -156,7 +159,8 @@ def main():
             pick_cid = next((c for l, c in p_order if l == pick), None)
             rec = {"model": m, "fig": fid, "desc": desc, "pick": pick,
                    "pick_cid": pick_cid, "certified": pick_cid == fid,
-                   "parse_mode": pmode, "retried": retried, "raw": r.get("content"),
+                   "parse_mode": pmode, "retried": retried,
+                   "finish_reason": r.get("finish_reason"), "raw": r.get("content"),
                    "p_order": p_order, "usage": usages, "err": r.get("error")}
             append_jsonl(CERT_PATH, rec)
             new.append(rec)
@@ -205,12 +209,16 @@ def main():
                             "cert_retried": (cr["retried"] if cr else None)})
     report = {"schema": "relational-history-perturbation-v3 certification report",
               "anti_null_bias_disclosure": ANTI_NULL_BIAS_DISCLOSURE,
-              "criteria": {"mechanical": ["non-empty", f"<= {WORD_BUDGET} words",
+              "criteria": {"mechanical": ["non-empty",
+                                          f"<= {WORD_BUDGET} words (primary enforcement "
+                                          "at harvest time, critic S4; re-checked here)",
                                           "dedup within figure",
                                           "dedup against twin set"],
                            "model_based": "fresh same-model matcher, single description "
                                           "line, no nonce, no history; certified iff the "
-                                          "parsed pick is the described figure",
+                                          "parsed pick is the described figure; a "
+                                          "finish_reason=='length' reply is never parsed "
+                                          "(critic blocker 2)",
                            "roster_rule": f"first {DESCS_PER_FIG} certified per figure, "
                                           "deterministic harvest order"},
               "models": models_out, "census": full_census}

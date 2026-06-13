@@ -6,14 +6,22 @@ No API calls; no finding-bearing data. Generates:
   fixtures/stimuli.fixture.json               (via build_trials.build — geometry check)
   fixtures/raw/probe-{claude,gpt,gemini}.jsonl (synthetic probe records)
 
-The synthetic behaviour patterns exercise three branches of the pre-registered verdict
-mapper in analyze.py (expected when run with `analyze.py --raw-dir fixtures/raw`):
-  claude : all 9 clusters gated; picks chron-last in 5-6/6 orders BOTH directions
+The synthetic behaviour patterns exercise the revised verdict tree in analyze.py
+(expected when run with `analyze.py --raw-dir fixtures/raw`):
+  claude : all 9 clusters gated; picks chron-last in 5-6/6 orders BOTH directions; 54
+           in-pair trials/direction (>= the 24-trial effect floor, critic blocker 3)
            -> FALSIFIED (RECENCY)
   gpt    : all 9 clusters gated; per-cluster chron-last counts cycle 3/2/4 of 6 (mean
-           0.5, non-degenerate CI) with 54 in-pair trials/direction
+           0.5, non-degenerate CI) with 54 in-pair trials/direction (>= the 36 floor)
            -> COMMUTATIVE-NULL-CERTIFIED
-  gemini : only 2 clusters pass the manipulation gate -> METHODOLOGICAL NULL
+  gemini : 5 clusters gated (pair 0 all three samples + pair 1 samples 0-1), gpt-like
+           null pattern, 30 in-pair trials/direction — guard holds (5 >= 3) but 30 < 36
+           -> the NAMED GAP SUB-LABEL (critic blocker 1):
+              "INCONCLUSIVE — null pattern, certification floor unmet";
+           its leave-out-pair-0 sensitivity cut drops to 2 gated clusters and shows
+           METHODOLOGICAL NULL as the descriptive verdict-under-cut.
+Degenerate-CI handling stays visible in gpt's pair-level (3-cluster) cross-check, whose
+pair rates are identically 0.5 (zero-width CI, flagged DEGEN).
 
 These are FIXTURES: synthetic, labelled as such, never to be confused with run data
 (which lives in raw/, written only by probe.py).
@@ -52,8 +60,10 @@ def make_report(figs, pairs):
 
 def synth_records(stim):
     """Deterministic picks per the patterns documented in the module docstring."""
-    # gemini gated clusters: pair 0, samples 0 and 1 only
-    gemini_gated = {(0, 0), (0, 1)}
+    # gemini gated clusters: 5 of 9 — guard holds (>=3/direction) but the per-direction
+    # in-pair n (5 x 6 = 30) sits in the gap 24 <= n < 36, exercising the named
+    # gap sub-label (and, under leave-out-pair-0, METHODOLOGICAL NULL).
+    gemini_gated = {(0, 0), (0, 1), (0, 2), (1, 0), (1, 1)}
     cluster_index = {}  # (m, pair, sample) -> running index for pattern cycling
 
     def ci_of(m, t):
@@ -96,10 +106,8 @@ def synth_records(stim):
                 pos = order_pos[t["order"]]
                 if m == "claude":      # recency: 6/6 on even clusters, 5/6 on odd
                     chron = not (ci % 2 == 1 and pos == 0)
-                elif m == "gpt":       # chron counts cycle 3/2/4 of 6 -> mean exactly 0.5
+                else:                  # gpt AND gemini: null cycle 3/2/4 of 6 -> mean 0.5
                     chron = t["order"] in GPT_CHRON[ci % 3]
-                else:                  # gemini: pattern irrelevant (guard fails)
-                    chron = pos % 2 == 0
                 other = t["X"] if t["last"] == t["Y"] else t["Y"]
                 rec["pick_cid"] = t["last"] if chron else other
                 rec["pick"] = "P?"
@@ -121,7 +129,10 @@ def main():
     for m in MODELS:
         n = len(stim["trials"][m])
         mixed = sum(1 for t in stim["trials"][m] if t["kind"] == "mixed")
-        assert (n, mixed) == (126, 108), f"geometry: {m} {n}/{mixed}"
+        # critic S1: 4 controls/cluster (2 twins x 2 directions) -> 36 controls/model;
+        # 108 + 36 = 144 trials/model, 432 finding-bearing calls total.
+        assert (n, mixed) == (144, 108), f"geometry: {m} {n}/{mixed}"
+    assert sum(len(stim["trials"][m]) for m in MODELS) == 432, "total != 432"
     os.makedirs(RAW_DIR, exist_ok=True)
     recs = synth_records(stim)
     for m in MODELS:
@@ -130,7 +141,9 @@ def main():
                 f.write(json.dumps(r) + "\n")
     print("fixtures written. Expected verdicts under `python3 analyze.py --raw-dir "
           "fixtures/raw`:\n  claude: FALSIFIED (RECENCY)\n  gpt: "
-          "COMMUTATIVE-NULL-CERTIFIED\n  gemini: METHODOLOGICAL NULL")
+          "COMMUTATIVE-NULL-CERTIFIED\n  gemini: INCONCLUSIVE — null pattern, "
+          "certification floor unmet (gap sub-label; 30 < 36 trials/direction);\n"
+          "          leave-out-pair-0 cut shows METHODOLOGICAL NULL (descriptive only)")
 
 
 if __name__ == "__main__":

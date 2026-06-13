@@ -16,6 +16,16 @@ Geometry (deterministic, no model calls):
   = 80 items, rotated over all 5 Mahowald temporal nouns, both nums
   (three/five), and all 3 Exp-2 temporal templates.
 
+Pre-run critic fixes (2026-06-13, GO after fixes) add two arms, embedded here
+so the run dir stays self-contained:
+  - tier0: the 24 v2 Tier-0 forced-choice pairs, copied VERBATIM from the
+    committed v2 stimuli.json (fresh per-run instrument check, blocker 1);
+  - robustness_4pt: a fixed 40-item subsample of the 80 main items (one item
+    per adjective, class- and template-balanced, seeded deterministic
+    selection — rule documented in select_4pt_subset), blocker 2.
+The 80 main items are untouched by these additions (verified by diff at
+freeze time).
+
 PROVENANCE / MIRROR-INDEPENDENCE. The gitignored upstream mirror
 (experiments/data/aann-public/) is NOT required and is absent in this
 checkout. Everything is rebuilt from the COMMITTED, FROZEN v2 artifacts:
@@ -46,7 +56,9 @@ and must match EXACTLY (commensurability across wordfreq versions), else
 the script aborts.
 """
 import csv
+import itertools
 import json
+import random
 import re
 import statistics
 import sys
@@ -63,8 +75,9 @@ except ImportError:
 
 HERE = Path(__file__).parent
 V2 = HERE / ".." / "2026-06-12-aann-behavioral-probe-v2"
-SEED = 20260613  # recorded for provenance; the build below is pure rotation,
-                 # deterministic with no random draws
+SEED = 20260613  # the 80-item build is pure rotation (no random draws); the
+                 # 4-point subsample selection uses this seed (one randrange
+                 # draw per class, see select_4pt_subset) — fully deterministic
 
 # ------------------------------------------------------------------ frozen lists
 # NEW held-out adjectives, 6 per temporal-eligible class. None appear in
@@ -131,6 +144,54 @@ def recover_temporal_templates(stim):
 def build_sentence(templates, tpl, adj, num, noun):
     first, second = templates[tpl]
     return uppercasefirst(f"{first} {a_an(adj)} {adj} {num} {noun}{second}.".lstrip(" "))
+
+
+def select_4pt_subset(items, seed):
+    """Pre-run critic blocker 2: the fixed, pre-declared 40-item 4-point framing
+    robustness subsample. SELECTION RULE (deterministic, seeded, documented):
+
+      - exactly ONE of each adjective's 2 items (40 adjectives -> 40 items);
+      - class balance is automatic (10 adjectives per class -> 10 items/class);
+      - TEMPLATE balance enforced per class: each adjective's pair spans 2 of
+        the 3 templates, so a one-per-adjective selection has per-class
+        template counts summing to 10; the most balanced multiset possible is
+        {3, 3, 4}, and the selection must achieve it in every class;
+      - determinism: classes in sorted order; within a class, adjectives in
+        the frozen build order (new-6 sorted, then carryover-4 sorted) and each
+        adjective's items in build order (k = 0, 1); the 2^10 per-adjective
+        item-index tuples are enumerated in lexicographic order, filtered to
+        the template-balanced ones, and ONE is picked per class by
+        random.Random(seed) via a single rng.randrange draw per class
+        (seed = 20260613, the run seed).
+
+    Returns the 40 item ids in class-then-build order. Asserted: 40 ids, one
+    per adjective, 10 per class, per-class template counts {3, 3, 4}.
+    """
+    rng = random.Random(seed)
+    by_class = {}
+    for it in items:  # insertion order == frozen build order
+        by_class.setdefault(it["adjclass"], {}).setdefault(it["adj"], []).append(it)
+    chosen = []
+    for ac in sorted(by_class):
+        pairs = list(by_class[ac].values())
+        assert all(len(p) == 2 for p in pairs) and len(pairs) == 10, ac
+        balanced = []
+        for combo in itertools.product((0, 1), repeat=len(pairs)):
+            counts = [0, 0, 0]
+            for pair, k in zip(pairs, combo):
+                counts[pair[k]["template"]] += 1
+            if sorted(counts) == [3, 3, 4]:
+                balanced.append(combo)
+        combo = balanced[rng.randrange(len(balanced))]
+        chosen.extend(pair[k] for pair, k in zip(pairs, combo))
+    # mechanical guards
+    assert len(chosen) == 40 and len({it["adj"] for it in chosen}) == 40
+    for ac in sorted(by_class):
+        cls = [it for it in chosen if it["adjclass"] == ac]
+        assert len(cls) == 10, ac
+        tc = sorted([it["template"] for it in cls].count(t) for t in (0, 1, 2))
+        assert tc == [3, 3, 4], (ac, tc)
+    return [it["id"] for it in chosen]
 
 
 def main():
@@ -218,6 +279,18 @@ def main():
         assert len(pair) == 2 and pair[0]["noun"] != pair[1]["noun"] \
             and pair[0]["template"] != pair[1]["template"], adj
 
+    # ---- fresh Tier-0 arm (pre-run critic blocker 1): the 24 v2 forced-choice
+    # pairs, reused BYTE-IDENTICALLY — copied verbatim (same JSON objects) from
+    # the committed v2 stimuli.json so the run dir stays self-contained.
+    tier0 = stim["tier0"]
+    assert len(tier0) == 24, len(tier0)
+    for t in tier0:
+        assert set(t) == {"id", "arm", "contrast", "A", "B", "aann_position"}, t
+        assert t["aann_position"] in ("A", "B"), t
+
+    # ---- 4-point framing robustness subsample (pre-run critic blocker 2)
+    subset_ids = select_4pt_subset(items, SEED)
+
     out = {
         "seed": SEED,
         "built_from": {
@@ -231,6 +304,17 @@ def main():
         "templates_temporal": {str(k): list(v) for k, v in sorted(templates.items())},
         "freq_audit": audit,
         "items": items,
+        "tier0": tier0,  # the 24 v2 pairs, verbatim (fresh Tier-0 arm, critic blocker 1)
+        "robustness_4pt": {  # fixed pre-declared subsample (critic blocker 2)
+            "rule": ("one item per adjective; class-balanced (10/class, automatic); "
+                     "per-class template counts forced to the most-balanced multiset "
+                     "{3,3,4}; deterministic + seeded: classes sorted, adjectives in "
+                     "frozen build order, 2^10 item-index tuples enumerated "
+                     "lexicographically, one balanced tuple drawn per class with "
+                     "random.Random(seed)"),
+            "seed": SEED,
+            "ids": subset_ids,
+        },
         "counts": {
             "class_cells": len(TEMPORAL_CLASSES),
             "adjectives_per_class": 10,
@@ -238,8 +322,10 @@ def main():
             "carryover_adjectives": sum(len(v) for v in carryover.values()),
             "items_per_adjective": 2,
             "items": len(items),
-            "calls_per_model": len(items),
-            "calls_total": len(items) * 3,
+            "tier0_pairs": len(tier0),
+            "robustness_4pt_items": len(subset_ids),
+            "calls_per_model": len(items) + len(tier0) + len(subset_ids),
+            "calls_total": (len(items) + len(tier0) + len(subset_ids)) * 3,
         },
     }
     with open(HERE / "stimuli.json", "w") as f:

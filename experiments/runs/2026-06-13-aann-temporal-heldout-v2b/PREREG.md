@@ -1,11 +1,12 @@
-# PREREG — DRAFT (NOT YET FROZEN) — AANN temporal held-out widening (v2b)
+# PREREG — FROZEN 2026-06-13 — AANN temporal held-out widening (v2b)
 
-**STATUS: DRAFT, pre-run-critic fixes applied (2026-06-13, verdict GO after fixes).**
-This pre-registration becomes binding only when committed as `PREREG.md` (the freeze),
-and **no finding-bearing model call may be made before that freeze** (`probe.py` refuses
-to run while only the draft exists, and refuses to run if `analyze.py` is absent — the
-analysis code is part of the freeze). No model output for this run exists at draft time;
-every number below was set from the committed v2 artifacts only.
+**STATUS: FROZEN (committed as `PREREG.md` by the orchestrator, 2026-06-13, after the
+independent pre-run critic's GO-after-fixes verdict and the application of all blockers
+and should-fixes).** This pre-registration is binding; it was frozen before any model
+call for this run (`probe.py` refuses to run while only the draft exists, and refuses to
+run if `analyze.py` is absent — the analysis code is part of the freeze). No model output
+for this run existed at freeze time; every number below was set from the committed v2
+artifacts only. The draft it was frozen from is kept verbatim as `PREREG-draft.md`.
 
 Design addendum: `experiments/designs/aann-temporal-heldout-v2b.md`, which runs **under**
 the ratified v2 instrument (`experiments/designs/aann-construction-v2.md`; governing
