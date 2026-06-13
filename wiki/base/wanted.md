@@ -152,7 +152,7 @@ These would supply the human dyadic-interaction anchor the [`open-question/relat
   status: received (2026-06-12, abstract verbatim from arXiv abs page + section-level body quotes verified character-for-character against the v1 HTML; see wiki/base/sources/imai-2025-vlm-common-ground.md)
 - [P2] Barrie, C. & Törnberg, P. 2025. "Emergent LLM behaviors are observationally equivalent to data leakage." arXiv 2505.23796; and the authors' reply: Ashery, Aiello & Baronchelli 2025, arXiv 2506.18600.
   why: the live critique exchange over the Ashery et al. result (data-contamination deflation vs. genuinely emergent dynamics); fetch both before any in-repo finding leans on the *emergence* (rather than the mere occurrence) of LLM conventions.
-  status: wanted (located 2026-06-12; reply abstract fetched verbatim, neither paper read in full)
+  status: **received** (2026-06-13; both abstracts verbatim from the arXiv abs pages + section-level body quotes verified character-for-character against the v1 HTML of each; catalogued as [`wiki/base/sources/barrie-tornberg-2025-data-leakage.md`](sources/barrie-tornberg-2025-data-leakage.md). Both are arXiv v1 preprints — peer-review status not confirmed; the exchange is recorded as unadjudicated.)
 - [P3] [authors not yet verified] 2026. "LVLMs and Humans Ground Differently in Referential Communication." arXiv 2601.19792.
   why: dyadic-grounding comparison (surfaced in the 2026-06-12 search; only the arXiv id and title were seen — the page was not opened, so the author list is unknown); fetch only if the relational program needs a second dyadic datapoint beyond 2509.03805.
   status: wanted (found 2026-06-12, not catalogued)
