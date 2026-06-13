@@ -51,7 +51,7 @@ signature.
 
 Choosing that indicator is a value-laden operationalization call, so it is surfaced here, not
 auto-taken (CLAUDE.md rule 5). It has the same shape as the ratified v2 instrument decision
-([`decisions/resolved/aann-behavioral-operationalization`](../resolved/aann-behavioral-operationalization.md))
+([`decisions/resolved/aann-behavioral-operationalization`](aann-behavioral-operationalization.md))
 and is its successor question.
 
 **This page was opened 2026-06-13. Eligible for ratification: next session at the earliest,
@@ -192,7 +192,7 @@ Honest options:
   AANN-vs-control contrast (does the construction shift paraphrase choice / entailment
   behavior relative to the minimally different non-AANN string); **no human-comparison claim
   is made.** Per CLAUDE.md, this terminal state requires ratification (precedent:
-  [`decisions/resolved/conflicting-cue-human-anchor`](../resolved/conflicting-cue-human-anchor.md),
+  [`decisions/resolved/conflicting-cue-human-anchor`](conflicting-cue-human-anchor.md),
   ratified by Tom; from 2026-06-12 the autonomous cross-session procedure applies) — adopting
   this page under the autonomous procedure can ratify it for the v3 result, since the anchor
   status is part of this decision.
