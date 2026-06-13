@@ -450,8 +450,10 @@ def _synthetic_rows(level_by_class, jitter_seed=None, constant=None,
 
 def selftest():
     failures = []
+    n_checks = [0]
 
     def check(name, cond):
+        n_checks[0] += 1
         print(("PASS " if cond else "FAIL ") + name)
         if not cond:
             failures.append(name)
@@ -552,7 +554,7 @@ def selftest():
 
     if failures:
         raise SystemExit(f"SELFTEST FAILED: {failures}")
-    print(f"SELFTEST OK ({29} checks)")
+    print(f"SELFTEST OK ({n_checks[0]} checks)")
 
 
 if __name__ == "__main__":
