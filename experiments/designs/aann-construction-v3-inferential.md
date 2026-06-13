@@ -5,7 +5,7 @@ title: AANN construction probe v3 — inferential (unification + whole-evaluatio
 meaning-senses:
   - constructional
   - inferential
-status: repaired 2026-06-13 (object class dropped); re-frozen for a fresh pre-run critic
+status: ran 2026-06-13 → NULL (ceiling-bounded); see result/aann-inferential-v3
 contingent-on:
   - aann-inferential-operationalization
 created: 2026-06-13

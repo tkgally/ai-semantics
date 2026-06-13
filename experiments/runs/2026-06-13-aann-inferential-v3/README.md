@@ -1,11 +1,12 @@
 # Run: AANN inferential v3 — 2026-06-13
 
-**STATUS: REPAIRED → re-frozen → fresh pre-run critic → RUN (see results below).** The prior
-session built and froze the materials; its independent pre-run critic returned **NO-GO** over a
-real object-class stimulus defect. This (later) session applied the pre-authorized repair, had a
-**fresh** independent pre-run critic review the repaired materials, and — on its GO — froze
-`PREREG.md` and ran the probe. The run results and post-run verification are recorded at the
-bottom of this file.
+**STATUS: REPAIRED → re-frozen → fresh pre-run critic GO → RAN.** The prior session built and
+froze the materials; its independent pre-run critic returned **NO-GO** over a real object-class
+stimulus defect. This (later) session applied the pre-authorized repair, had a **fresh**
+independent pre-run critic review the repaired materials (verdict **GO**, all five prior defects
+confirmed fixed, all eight binding conditions PASS, anti-cheat PASS), then froze `PREREG.md` and
+ran the probe. The run results and independent post-run verification are recorded at the **bottom
+of this file** (`## Run results`).
 
 ## Repair applied this session (2026-06-13, a later session than the NO-GO)
 
@@ -112,8 +113,37 @@ flagged + sensitivity-tested; (7) |FC−NLI| named statistic + convergence rule 
 
 ```
 python3 prep.py             # writes stimuli.json (no model calls) — DONE
-# orchestrator freezes PREREG.md after the independent pre-run critic's GO
-python3 analyze.py --selftest   # 29 checks, no calls
-python3 probe.py            # all arms, all models (refuses without PREREG.md + analyze.py)
-python3 analyze.py          # reads raw/, writes results.json
+# orchestrator freezes PREREG.md after the independent pre-run critic's GO — DONE
+python3 analyze.py --selftest   # 29 checks, no calls — DONE
+python3 probe.py            # all arms, all models (refuses without PREREG.md + analyze.py) — DONE
+python3 analyze.py          # reads raw/, writes results.json — DONE
 ```
+
+## Run results (2026-06-13)
+
+**624 calls, $0.0910 billed, 0 missing responses, 0 missing-cost calls.** Fresh pre-run critic
+GO; independent post-run verifier reproduced every number from raw with its own code (0
+mismatches). Full write-up: [`result/aann-inferential-v3`](../../../wiki/findings/results/aann-inferential-v3.md).
+
+**VERDICT: NULL (ceiling-bounded).** No model produced a primary (paraphrase) AANN-vs-control
+shift clearing τ = +0.20 with CI-lower > 0. All three pass Tier-0 (24 / 22 / 24).
+
+| | A claude | B gpt | C gemini |
+|---|---|---|---|
+| paraphrase shift (PRIMARY) | +0.174 (< τ) | +0.043 | 0.000 |
+| — raw unification rate AANN / control | 0.96 / 0.78 | 1.00 / 0.96 | 1.00 / 1.00 |
+| NLI shift (convergent) | 0.000 | +0.043 | 0.000 |
+| **agreement shift** (discriminator) | 0.000 | **+0.739 (pos)** | 0.000 |
+| — raw "was" rate AANN / control | 1.00 / 1.00 | 0.96 / 0.22 | 1.00 / 1.00 |
+| category | NULL | NULL | NULL |
+
+**Two takeaways.** (1) The meaning arms are at **ceiling in the control too** — models read the
+plural control (*three beautiful days*) as a unified evaluated stretch as readily as the AANN, so
+the construction has no headroom to *shift* the inference; the under-pressure subset (distributive
+locally fluent) did not rescue it (+0.20 / 0 / 0). The null is therefore **ceiling-bounded** — a
+measurement null with a named cause, not "models lack the inference." (2) The one substantive
+positive is **gpt-5.4-mini's grammaticalized singular-agreement reflex (+0.74)** — *was* for AANN
+(0.96) vs *were* for control (0.22) — which the pre-registered headline-gating correctly does NOT
+let count as "draws the unification inference" (primary arm null). The |FC−NLI| disagreement was
+small for all (≤0.17, no flag): a low-disagreement, ceiling-bounded data point for the
+instrument-sensitivity open question.

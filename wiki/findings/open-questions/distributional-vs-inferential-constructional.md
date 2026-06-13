@@ -28,6 +28,21 @@ links:
 
 # Open question: distributional vs. inferential constructional sensitivity
 
+> **Update (2026-06-13) — the "core move" was attempted and ran into exactly the predicted wall.**
+> [`result/aann-inferential-v3`](../results/aann-inferential-v3.md) implemented move (1) (inference
+> under distributional pressure) for the AANN construction: a pre-registered under-pressure subset
+> where the *distributive* paraphrase is the locally-fluent continuation, with the indicator the
+> AANN-vs-control *shift*. The result is a **ceiling-bounded null** — and the reason is this page's
+> own diagnosis made concrete: the unification (inferentially-licensed) reading is **also the
+> distributional default** for the bare plural control (*three beautiful days*), so inference and
+> likelihood **coincide** even under the engineered pressure, and a shift-from-control design cannot
+> separate them. Lesson for the next visit: move (1) is necessary but **not sufficient** unless the
+> control's default reading is itself *distributive* (so the construction has somewhere to move the
+> inference *to*); the under-pressure manipulation must bias the *control's* baseline, not only the
+> item's local fluency. The one signal that did move — gpt-5.4-mini's grammaticalized
+> singular-agreement reflex — is a *form* reflex, not the inferential discriminator this question
+> seeks. The question stays **open**.
+
 ## The question
 
 Suppose [`open-question/constructional-vs-frequency-confound`](constructional-vs-frequency-confound.md) is answered and we have established that a model's behavior on a construction is **not** reducible to raw n-gram frequency — the model is genuinely sensitive to the construction as a unit. A second, finer question remains, and it is *not* the same question.

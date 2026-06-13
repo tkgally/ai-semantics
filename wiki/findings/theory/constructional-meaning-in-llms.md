@@ -169,10 +169,25 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > (cell-level ρ 0.68–0.75, frequency- and noun-class-guarded — Tier 2) **and replicate the
 > class gradient on a locked, frequency-matched held-out adjective list** (0.75–0.83 — Tier 3,
 > with the honest caveat that replication is uneven by noun class: the temporal stratum comes
-> out negative). AANN's **Tier 4** — inference-licensing on the unification/evaluation meaning
-> — remains untested; that is the line's natural v3. The Tier-0 ceiling claim
+> out negative). The Tier-0 ceiling claim
 > ([`claim/formal-competence-aann-ceiling`](../claims/formal-competence-aann-ceiling.md)) is
 > unchanged: this result is exactly the "separate meaning-diagnostic" its carve-out called for.
+>
+> **AANN's Tier 4 attempted (2026-06-13) — a ceiling-bounded NULL.** [`result/aann-inferential-v3`](../results/aann-inferential-v3.md)
+> ran the inference-licensing arm (does the construction *shift* the unification/whole-evaluation
+> reading vs a matched plural control?) at the ratified paraphrase-FC + NLI + singular-agreement
+> package. **No model clears the shift bar** (paraphrase shift +0.17 / +0.04 / 0.00). But this is
+> a **measurement null with a named cause, not a Tier-4 failure verdict**: the unification reading
+> is the **default for the plural control too** (control rates 0.78–1.00), so the construction has
+> no headroom to move it — and the under-pressure subset (distributive locally fluent) did not
+> rescue it. This is the ladder's first encounter with the limit
+> [`open-question/distributional-vs-inferential-constructional`](../open-questions/distributional-vs-inferential-constructional.md)
+> warned of: at Tier 4 the inferentially-licensed reading and the distributional default
+> **coincide**, so a shift-from-control design cannot separate them unless the control's default is
+> engineered to be *distributive*. The lone positive — gpt-5.4-mini's **grammaticalized
+> singular-agreement reflex (+0.74)** — sits at the **form/agreement** rung, not the inference
+> rung (the pre-registered headline-gating refused to read it as inference), reinforcing the
+> recurring AANN pattern: strong on *form*, unproven on *inferential use*.
 
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 
