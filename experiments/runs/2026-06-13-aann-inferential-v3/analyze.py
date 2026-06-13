@@ -43,7 +43,13 @@ ITEMS = {it["id"]: it for it in STIMULI["items"]}
 TIER0 = {p["id"]: p for p in STIMULI["tier0"]}
 UNDER_PRESSURE = set(STIMULI["under_pressure_ids"])
 DISPUTED = set(STIMULI["key_disputed_ids"])
-EXPECTED_ROWS = {"paraphrase": 64, "nli": 128, "agreement": 64, "tier0": 24}
+# Row counts derive from the frozen item count (N base items): paraphrase and
+# agreement are {AANN, control} per item (2N); NLI is 2 hypotheses x {AANN,
+# control} per item (4N); Tier-0 is the fixed 24 pairs. After the 2026-06-13
+# object-class drop N = 23 (was 32): paraphrase/agreement 46, nli 92, tier0 24.
+_N = len(ITEMS)
+EXPECTED_ROWS = {"paraphrase": 2 * _N, "nli": 4 * _N, "agreement": 2 * _N,
+                 "tier0": len(TIER0)}
 BOOT = 10000
 SEED = 20260613
 
@@ -477,18 +483,21 @@ def selftest():
     # ---- shift math + positivity
     s, ci, k = shift_ci({i: 1 for i in ITEMS}, {i: 0 for i in ITEMS},
                         list(ITEMS))
-    check("full +1 shift computed", abs(s - 1.0) < 1e-9 and k == 32)
+    check("full +1 shift computed", abs(s - 1.0) < 1e-9 and k == len(ITEMS))
     check("+1 shift is positive (>=TAU, CI>0)", positive(s, ci))
     s0, ci0, _ = shift_ci({i: 1 for i in ITEMS}, {i: 1 for i in ITEMS},
                           list(ITEMS))
     check("zero shift not positive", not positive(s0, ci0))
     check("zero-shift CI is degenerate (0,0)", ci0 == (0.0, 0.0))
-    # small shift below TAU
+    # small shift below TAU: pick a one-count strictly under TAU*N (TAU*23=4.6,
+    # so 4/23 ~ 0.174 < 0.20). Keep it robust to the item count.
     half = list(ITEMS)
-    a = {i: (1 if k2 < 5 else 0) for k2, i in enumerate(half)}
+    n_below = int(TAU * len(half))   # floor(0.20*23) = 4 -> 4/23 = 0.174 < TAU
+    a = {i: (1 if k2 < n_below else 0) for k2, i in enumerate(half)}
     c = {i: 0 for i in half}
     ss, sci, _ = shift_ci(a, c, half)
-    check("shift 5/32 (~0.156) < TAU not positive", not positive(ss, sci))
+    check(f"shift {n_below}/{len(half)} (~{n_below/len(half):.3f}) < TAU "
+          "not positive", not positive(ss, sci))
 
     # ---- Tier-0 gate
     check("tier0 20/24 passes (inclusive)",

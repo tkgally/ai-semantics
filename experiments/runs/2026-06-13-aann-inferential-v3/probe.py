@@ -11,14 +11,15 @@ at freeze time, before any call — the v2b house guard). The decision's
 ratification fixes the yardstick, not a result; design+materials are frozen
 here, runnable later.
 
-FOUR ARMS (744 calls total = 248/model x 3):
-  paraphrase    32 items x 3 = 96   PRIMARY: U/D forced choice, AANN vs control
+FOUR ARMS (624 calls total = 208/model x 3; 23 base items after the object
+class was dropped in the 2026-06-13 repair):
+  paraphrase    23x2 = 46/model     PRIMARY: U/D forced choice, AANN vs control
                                     (the indicator is the AANN-vs-control SHIFT)
-  nli          128 items x 3 = 384  CONVERGENT: 2 hypotheses x {AANN, control}
+  nli          23x4 = 92/model      CONVERGENT: 2 hypotheses x {AANN, control}
                                     affirm/withhold; shift on unification/whole
-  agreement     64 items x 3 = 192  DISCRIMINATOR (load-bearing): was/were FC,
+  agreement    23x2 = 46/model      DISCRIMINATOR (load-bearing): was/were FC,
                                     {AANN, control}; singular-agreement shift
-  tier0         24 pairs x 3 = 72   manipulation check; >=20/24 per model gate
+  tier0        24 pairs = 24/model  manipulation check; >=20/24 per model gate
 
 Settings IDENTICAL to the ratified panel (config/models.md): temperature 0;
 max_tokens 64 (A claude-sonnet-4.6, B gpt-5.4-mini) / 512 (C gemini-3.5-flash);
@@ -74,17 +75,24 @@ P_TIER0 = (
 ABORT_USD = 0.50  # PREREG single-run flag (pre-flight estimate ~ $0.13-0.25)
 
 
+# B3 fix (2026-06-13 repair): strip markdown-bold asterisks / quotes / backticks
+# as well as punctuation, so gemini's "**A**" / "**YES**" markdown-bold replies
+# parse (the v2b markdown-bold failure reproduced here otherwise). Applied to both
+# the full-string fast path and the per-token last-token scan.
+_STRIP = ".,!:;'\"*`"
+
+
 def parse_ab(text):
     """Full-string A/B first, else the LAST standalone A/B token (the v2b
     last-token convention; a preamble must not freeze the first letter)."""
     if text is None:
         return None
-    t = text.strip().upper().rstrip(".")
+    t = text.strip().upper().strip(_STRIP).strip()
     if t in ("A", "B"):
         return t
     found = None
     for tok in t.replace("\n", " ").replace(":", " ").split():
-        tok = tok.strip(".,!:;")
+        tok = tok.strip(_STRIP)
         if tok in ("A", "B"):
             found = tok
     return found
@@ -94,12 +102,12 @@ def parse_yesno(text):
     """Full-string YES/NO first, else the LAST standalone YES/NO token."""
     if text is None:
         return None
-    t = text.strip().upper().rstrip(".")
+    t = text.strip().upper().strip(_STRIP).strip()
     if t in ("YES", "NO"):
         return t
     found = None
     for tok in t.replace("\n", " ").replace(":", " ").split():
-        tok = tok.strip(".,!:;'\"")
+        tok = tok.strip(_STRIP)
         if tok in ("YES", "NO"):
             found = tok
     return found

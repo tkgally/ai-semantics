@@ -5,7 +5,7 @@ title: AANN construction probe v3 — inferential (unification + whole-evaluatio
 meaning-senses:
   - constructional
   - inferential
-status: frozen — pre-run critic NO-GO (stimulus repair pending, see run README)
+status: ran 2026-06-13 → NULL (ceiling-bounded); see result/aann-inferential-v3
 contingent-on:
   - aann-inferential-operationalization
 created: 2026-06-13
@@ -27,17 +27,19 @@ links:
 
 # Experiment design v3 — AANN construction (inferential: unification + whole-evaluation)
 
-> **Pre-run critic verdict 2026-06-13: NO-GO this session.** The analysis/PREREG machinery
-> passed (29-check selftest; conditions 1,2,3,4,5,7,8 PASS in code), but the **9 object-class
-> stimulus items carry a structural defect** (the "formed one continuous stretch" unification
-> paraphrase is anomalous for mass/area nouns; the dollar items drop their plural measure noun
-> and aren't well-formed AANN of the target shape), and condition 6's disputed-flag set does not
-> cover it — so the **primary Arm A shift would be confounded on those items**. Plus a parser
-> bug reproducing the v2b markdown-bold failure. Repair is a **next-session** job (re-author/drop
-> the object class via `prep.py`, fix the parser, re-freeze, fresh pre-run critic) — fixing
-> stimuli in the session that reviewed them would cross the freeze/anti-retuning boundary
-> (Condition 8). The temporal (13) and distance (~9) items are high-quality and survive. Full
-> repair list: run README, [`experiments/runs/2026-06-13-aann-inferential-v3/README.md`](../runs/2026-06-13-aann-inferential-v3/README.md).
+> **Repair note (2026-06-13, a later session than the NO-GO).** The prior session's independent
+> pre-run critic returned **NO-GO** over a real object-class stimulus defect (the "formed one
+> continuous stretch" unification paraphrase is anomalous for mass/area nouns; the dollar items
+> dropped their plural measure noun and were not well-formed AANN), plus a parser bug. Per the
+> pre-authorized repair list, this session (a *later* one — no anti-retuning boundary crossed; no
+> data existed) **dropped the object class entirely** rather than re-author it: the unification
+> ("continuous stretch") reading is natural for genuine extents (time, distance) and anomalous for
+> mass/area/money, so restricting to **temporal (13) + distance (10) = 23 items** sharpens rather
+> than degrades the construct test. The parser now strips markdown-bold/quotes (B3); `noun_sg`
+> fixed (S1, "yards"→"yard"); the lexical-overlap parity metric's scope documented (S2). The result
+> is **scoped to temporal + distance measure nouns only**, stated on the result page. The repaired
+> materials were then reviewed by a **fresh** independent pre-run critic before the run; full repair
+> record: run README, [`experiments/runs/2026-06-13-aann-inferential-v3/README.md`](../runs/2026-06-13-aann-inferential-v3/README.md).
 
 **Governing decision:** [`decisions/resolved/aann-inferential-operationalization`](../../wiki/decisions/resolved/aann-inferential-operationalization.md)
 — **RESOLVED 2026-06-13** (autonomous cross-session adversarial review): ADOPT DEFAULT WITH
@@ -100,9 +102,13 @@ front matter, and in `PREREG-draft.md`, before any model call; it is never resel
 outputs. There is no "winning instrument" chosen post-hoc; the headline reads Arm A, with Arm B as
 convergence evidence and the disagreement statistic (§6) reported, never averaged away.
 
-Every arm is built on the **same frozen base items**: ~32 AANN base sentences (the count and
-geometry are fixed in `stimuli.json`; see §8), each spanning Mahowald's measure-noun classes
-(object / distance / temporal), each with a lexically-matched non-AANN **control**.
+Every arm is built on the **same frozen base items**: **23** AANN base sentences (the count and
+geometry are fixed in `stimuli.json`; see §8), spanning **two** of Mahowald's measure-noun classes
+— **temporal (13) and distance (10)** — each with a lexically-matched non-AANN **control**. (The
+object/mass measure-noun class was dropped in the 2026-06-13 repair: see the banner above and the
+run README. Restricting to genuine *extents* — time and distance — is also what makes the
+"continuous stretch" unification paraphrase well-formed, so the indicator is not confounded by an
+anomalous paraphrase.)
 
 ### Arm A — paraphrase forced-choice (PRIMARY)
 
@@ -284,17 +290,17 @@ decision page and this design as its record, rather than run an uninterpretable 
 
 ## 8. Pre-flight cost (config/budget.md)
 
-Geometry (frozen in `stimuli.json`): **32 base items**. Per model the calls are:
-Arm A paraphrase FC **32**, Arm B NLI (2 hypotheses × {AANN, control}) **32 × 2 × 2 = 128**,
-agreement FC ({AANN, control}) **64**, Tier-0 **24** = **248 calls/model × 3 = 744 calls**.
-~80 tokens in / ~8 out each (FC/NLI are single-token picks; same shape as v2/v2b).
+Geometry (frozen in `stimuli.json`): **23 base items** (temporal 13 / distance 10). Per model the
+calls are: Arm A paraphrase FC ({AANN, control}) **46**, Arm B NLI (2 hypotheses × {AANN, control})
+**23 × 2 × 2 = 92**, agreement FC ({AANN, control}) **46**, Tier-0 **24** = **208 calls/model × 3 =
+624 calls**. ~80 tokens in / ~8 out each (FC/NLI are single-token picks; same shape as v2/v2b).
 
 Pre-flight from v2b's **measured billed** per-call rates (single-token FC/NLI arms, the same
-prompt shape): A ≈ $0.00033, B ≈ $0.00008, C ≈ $0.00012 per call → per-model ≈ $0.082 (A) +
-$0.020 (B) + $0.030 (C) ≈ **$0.13 point estimate** across all three models for 744 calls. The
+prompt shape): A ≈ $0.00033, B ≈ $0.00008, C ≈ $0.00012 per call → at 208 calls/model ≈ $0.069 (A)
++ $0.017 (B) + $0.025 (C) ≈ **$0.11 point estimate** across all three models for 624 calls. The
 known **~4.5× rate-card undercount** is already absorbed (these are *billed* v2b rates, not
 rate-card); allowing for the one verbatim retry per unparseable response and variance,
-**expected ≈ $0.13–0.25 billed**. This lands **well under $1** — but note it must be **flagged if
+**expected ≈ $0.11–0.20 billed**. This lands **well under $1** — but note it must be **flagged if
 it could exceed $1**, and it cannot here at this geometry. A single-run **ABORT_USD = $0.50** flag
 is coded in `probe.py` (well under the $2.50 single-run flag and the $5.00/day budget). Today's
 prior spend is tracked in `config/budget.md`; the actual billed `usage.cost` is recorded in the

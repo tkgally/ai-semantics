@@ -118,6 +118,23 @@ temporal stratum 5× (16 → 80 items) confirms caveat 2 was real — the tempor
 object/distance, absent for temporal). This refines, and does not overturn, the v2 overall
 SUPPORTED verdict.
 
+**Update 2026-06-13 (next session): the inferential half is now TESTED — a ceiling-bounded NULL.**
+The frozen v3 design ran (after repair + a fresh pre-run-critic GO + independent post-run
+verification) → [`result/aann-inferential-v3`](../results/aann-inferential-v3.md). At the ratified
+A+B instrument (paraphrase forced-choice primary + entailment NLI convergent + singular-agreement
+discriminator), **no model shifts unification-vs-distributive inference relative to a matched
+control** (paraphrase shift +0.17 / +0.04 / 0.00, none clears τ=0.20 with CI-lo>0; verdict NULL).
+But the null is **ceiling-bounded, not a competence verdict**: the unification reading is the
+**default for the plural control too** (control raw rates 0.78–1.00), so the construction has no
+headroom to *shift* the inference — exactly the "inference and default coincide" hardness
+[`open-question/distributional-vs-inferential-constructional`](../open-questions/distributional-vs-inferential-constructional.md)
+named. The one positive signal is **gpt-5.4-mini's grammaticalized singular-agreement reflex
+(+0.74)** (a `functional-vs-formal` form-reflex, not an inference), which the pre-registered
+headline-gating correctly does **not** let count as "draws the unification inference." So: the
+inferential clause is **neither supported nor cleanly disconfirmed** — it is **untestable at this
+instrument as designed** (a future probe needs a control whose default reading is *distributive*).
+The productive-gradient half's SUPPORTED status is unaffected; $0.0910, 0 missing.
+
 ## Notes / caveats
 
 - Memorization is the main confound; the held-out lexical-item check is the main defense.

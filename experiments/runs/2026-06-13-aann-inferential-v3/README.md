@@ -1,56 +1,44 @@
 # Run: AANN inferential v3 — 2026-06-13
 
-**STATUS: DESIGNED / FROZEN, PRE-RUN CRITIC = NO-GO, NOT RUN.** Materials are built and frozen;
-**NO model API calls have been made** (a $0 design-and-build unit). An independent pre-run
-critic reviewed the frozen materials on 2026-06-13 and returned **NO-GO this session** — the
-analysis/PREREG machinery is sound (29-check selftest, all eight conditions met in code) but the
-**object-class stimulus items carry a structural defect**. The run is deferred to a later
-session after the stimuli are repaired (per the repair list below), re-frozen, and re-reviewed
-by a fresh pre-run critic. `probe.py` still refuses to run until `PREREG-draft.md` is committed
-as `PREREG.md`; it has **not** been frozen, by design — the NO-GO holds.
+**STATUS: REPAIRED → re-frozen → fresh pre-run critic GO → RAN.** The prior session built and
+froze the materials; its independent pre-run critic returned **NO-GO** over a real object-class
+stimulus defect. This (later) session applied the pre-authorized repair, had a **fresh**
+independent pre-run critic review the repaired materials (verdict **GO**, all five prior defects
+confirmed fixed, all eight binding conditions PASS, anti-cheat PASS), then froze `PREREG.md` and
+ran the probe. The run results and independent post-run verification are recorded at the **bottom
+of this file** (`## Run results`).
 
-## PRE-RUN CRITIC VERDICT (2026-06-13, independent, read-only): NO-GO
+## Repair applied this session (2026-06-13, a later session than the NO-GO)
 
-The machinery (analyze.py headline-gating, control-subtraction, Tier-0 gate, counterbalancing,
-budget guards) passed its 29-check selftest and the condition-by-condition check (1,2,3,4,5,7,8
-PASS; 6 FAIL because the disputed-flag set does not cover the real defect). The failure is
-**stimulus quality, concentrated in the 9 object-measure items**, plus a parser bug. The clean
-path is repair → re-freeze → fresh review next session, **not** an in-session retune (editing
-`stimuli.json` after the critic has seen it would cross the freeze/anti-retuning boundary —
-PROTOCOL §B, Condition 8). Frozen materials are left **intact** as the reviewed artifact.
+Per the pre-authorized repair list (carried in the prior handoff), and because no data existed
+(so this is not anti-retuning — no result could have motivated it):
 
-**Repair list for next session (rebuild via `prep.py`, then re-freeze + fresh pre-run critic):**
+- **B1 + B2 — object/mass class DROPPED.** The "formed one continuous stretch / were a single
+  continuous stretch" unification paraphrase is anomalous for mass/area nouns (pounds, acres,
+  kilos are not a *stretch*), and the dollar items dropped their plural measure noun and were not
+  well-formed AANN of the target shape. Rather than re-author 9 bespoke object paraphrases (the
+  exact place the prior critic found the defect, and a fresh-defect risk), the object class was
+  **dropped entirely**. Temporal (13) + distance (10) = **23 items** remain; for these *genuine
+  extents* the "continuous stretch" unification reading is the natural one, so dropping object
+  **sharpens** the construct test rather than degrading it. The result is **scoped to temporal +
+  distance measure nouns only** (stated on the result page).
+- **B3 — parser fixed.** `parse_ab` / `parse_yesno` now strip markdown-bold `*`, quotes, and
+  backticks (full-string fast path and last-token scan), so gemini's `**A**` / `**YES**` parse;
+  verified on `**A**`→A, `"YES"`→YES, `**NO**`→NO, `maybe`→None.
+- **S1 — `noun_sg("yards")` → "yard"** (was "yards"); the foil now reads "Each **yard**
+  individually was lonely."
+- **S2 — parity scope documented.** The lexical-overlap parity metric deliberately measures
+  *premise-content* overlap (adj/num/noun) and excludes the unification/distributive contrast
+  vocabulary (which is the manipulation, not overlap); documented in `prep.py`. The metric is a
+  construction-time guarantee, not a discriminating filter.
+- **S4 — class balance + under-pressure re-checked.** 23 items (temporal 13 / distance 10); 10
+  under-pressure (distributive locally-fluent) items survive (≥6 required); 1 disputed-key item
+  (the yards inventory-edge item — the object items carried the other flags and are gone). The
+  29-check `analyze.py --selftest` passes; counterbalance + parity assertions in `prep.py` pass.
 
-- **B1 — object-class unification paraphrase is anomalous.** The template "formed one continuous
-  **stretch** … as a whole" / "were a single continuous stretch" was written for time/distance
-  (a *stretch* of time/road) and is odd-to-false on mass/area nouns: "The thirty pounds formed
-  one continuous stretch", "The forty acres formed one continuous stretch", "The three kilos
-  formed one continuous stretch". A model rejecting the *anomalous paraphrase* would confound the
-  primary Arm A shift. Re-author object-class paraphrases with a class-appropriate unification
-  predicate, **or drop the object class** (temporal 13 + distance ~9 are high-quality and
-  sufficient). Note: `generous-forty-acres`, `sprawling-ten-acres`, `precious-three-kilos`,
-  `staggering-fifty-pounds` carry the defect but were **not** disputed-flagged, so the Condition-6
-  sensitivity test misses them.
-- **B2 — dollar items are not well-formed AANN of the target shape.** "a tidy two thousand
-  dollars" has `noun="thousand"`; the plural measure noun "dollars" is dropped from the
-  paraphrases and the agreement frames, giving degenerate strings ("Two tidy thousand ___ what we
-  needed"). Drop or re-author `tidy-two-thousand`, `hefty-five-hundred`, `ruinous-twenty-thousand`,
-  `modest-two-hundred`.
-- **B3 — parser reproduces the v2b markdown-bold failure (mechanical).** `parse_ab` /
-  `parse_yesno` strip `.,!:;` but not `*`/quotes, so gemini's `**A**` / `**YES**` → `None`. Add
-  `*` and quotes to the strip set or regex-extract a standalone token. (Fixing this alone would
-  not touch stimuli, but B1/B2 gate regardless.)
-- **S1 — `noun_sg("yards")` maps to "yards"** → ungrammatical foil "Each **yards** individually
-  was lonely"; should be "yard".
-- **S2 — lexical-overlap parity is real but vacuous** (the U/D-distinguishing words are
-  stopworded out, so parity reduces to {adj,num,noun}=3 trivially); either stop stopwording them
-  or document the parity metric's scope.
-- **S4 — after dropping/repairing object items, re-check class balance** and that ≥6
-  under-pressure items survive (currently 11, some in object).
-
-**Budget note (critic-confirmed):** 744 calls ≈ **$0.137 billed** (from v2b's measured
-$0.0793/432-call rate of the identical shape); cannot plausibly exceed $1. Budget was never the
-constraint — stimulus validity was.
+**Budget note:** 624 calls (208/model × 3) ≈ **$0.11 point estimate** (from v2b's measured
+$0.0793/432-call rate of the identical single-token shape); cannot plausibly exceed $1. Budget was
+never the constraint — stimulus validity was.
 
 ## What it tests
 
@@ -91,11 +79,11 @@ The indicator is the **AANN-vs-control SHIFT**, never the raw AANN rate; the res
   data). Named `-draft` for the pre-run critic; the orchestrator freezes it as `PREREG.md`.
 - `prep.py` — hand-authored stimulus build (NO model calls); asserts lexical-overlap parity
   (Condition 2) and counterbalance balance. → `stimuli.json`.
-- `stimuli.json` — 32 base items (temporal 13 / distance 10 / object 9), each with AANN +
-  control + U/D paraphrases (+ counterbalance + overlap counts) + NLI hypotheses + was/were
-  pair + local-fluency direction + expert-stipulated key + item-level dispute flags; + 24
-  Tier-0 pairs. 11 under-pressure items; 6 disputed-key flags.
-- `probe.py` — four arms (paraphrase 192 / nli 384 / agreement 192 / tier0 72 calls);
+- `stimuli.json` — 23 base items (temporal 13 / distance 10; object class dropped in repair),
+  each with AANN + control + U/D paraphrases (+ counterbalance + overlap counts) + NLI
+  hypotheses + was/were pair + local-fluency direction + expert-stipulated key + item-level
+  dispute flag; + 24 Tier-0 pairs. 10 under-pressure items; 1 disputed-key flag.
+- `probe.py` — four arms (paraphrase 138 / nli 276 / agreement 138 / tier0 72 calls);
   per-slot max_tokens + gemini reasoning-minimal; one-retry parsing; billed-cost logging;
   ABORT_USD = $0.50; freeze + `analyze.py` guards (refuses to run without `PREREG.md`).
 - `analyze.py` — the frozen pre-registered analysis: AANN-vs-control shifts per arm,
@@ -105,8 +93,8 @@ The indicator is the **AANN-vs-control SHIFT**, never the raw AANN rate; the res
 
 ## Pre-flight budget estimate
 
-744 calls. From v2b **measured billed** single-token-arm rates (so the ~4.5× rate-card
-undercount is already absorbed): **point estimate ≈ $0.13; expected ≈ $0.13–0.25 billed**
+624 calls. From v2b **measured billed** single-token-arm rates (so the ~4.5× rate-card
+undercount is already absorbed): **point estimate ≈ $0.11; expected ≈ $0.11–0.20 billed**
 with retries/variance. **Well under $1** at this geometry; flag required only if a later
 geometry change could exceed $1 (it cannot here). ABORT_USD = $0.50 single-run flag. Under the
 $5.00/day budget.
@@ -125,8 +113,37 @@ flagged + sensitivity-tested; (7) |FC−NLI| named statistic + convergence rule 
 
 ```
 python3 prep.py             # writes stimuli.json (no model calls) — DONE
-# orchestrator freezes PREREG.md after the independent pre-run critic's GO
-python3 analyze.py --selftest   # 29 checks, no calls
-python3 probe.py            # all arms, all models (refuses without PREREG.md + analyze.py)
-python3 analyze.py          # reads raw/, writes results.json
+# orchestrator freezes PREREG.md after the independent pre-run critic's GO — DONE
+python3 analyze.py --selftest   # 29 checks, no calls — DONE
+python3 probe.py            # all arms, all models (refuses without PREREG.md + analyze.py) — DONE
+python3 analyze.py          # reads raw/, writes results.json — DONE
 ```
+
+## Run results (2026-06-13)
+
+**624 calls, $0.0910 billed, 0 missing responses, 0 missing-cost calls.** Fresh pre-run critic
+GO; independent post-run verifier reproduced every number from raw with its own code (0
+mismatches). Full write-up: [`result/aann-inferential-v3`](../../../wiki/findings/results/aann-inferential-v3.md).
+
+**VERDICT: NULL (ceiling-bounded).** No model produced a primary (paraphrase) AANN-vs-control
+shift clearing τ = +0.20 with CI-lower > 0. All three pass Tier-0 (24 / 22 / 24).
+
+| | A claude | B gpt | C gemini |
+|---|---|---|---|
+| paraphrase shift (PRIMARY) | +0.174 (< τ) | +0.043 | 0.000 |
+| — raw unification rate AANN / control | 0.96 / 0.78 | 1.00 / 0.96 | 1.00 / 1.00 |
+| NLI shift (convergent) | 0.000 | +0.043 | 0.000 |
+| **agreement shift** (discriminator) | 0.000 | **+0.739 (pos)** | 0.000 |
+| — raw "was" rate AANN / control | 1.00 / 1.00 | 0.96 / 0.22 | 1.00 / 1.00 |
+| category | NULL | NULL | NULL |
+
+**Two takeaways.** (1) The meaning arms are at **ceiling in the control too** — models read the
+plural control (*three beautiful days*) as a unified evaluated stretch as readily as the AANN, so
+the construction has no headroom to *shift* the inference; the under-pressure subset (distributive
+locally fluent) did not rescue it (+0.20 / 0 / 0). The null is therefore **ceiling-bounded** — a
+measurement null with a named cause, not "models lack the inference." (2) The one substantive
+positive is **gpt-5.4-mini's grammaticalized singular-agreement reflex (+0.74)** — *was* for AANN
+(0.96) vs *were* for control (0.22) — which the pre-registered headline-gating correctly does NOT
+let count as "draws the unification inference" (primary arm null). The |FC−NLI| disagreement was
+small for all (≤0.17, no flag): a low-disagreement, ceiling-bounded data point for the
+instrument-sensitivity open question.
