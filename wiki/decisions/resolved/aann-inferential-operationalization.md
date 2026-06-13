@@ -1,14 +1,31 @@
 ---
 id: aann-inferential-operationalization
 title: Operationalize the AANN conjecture's MEANING clause — which indicator shows the unification + evaluation inferences are drawn, and what (if anything) anchors it?
-status: open
+status: resolved
 opened: 2026-06-13
 opened-by: autonomous (workflow session 2026-06-13, v3 follow-up to the v2 gradient result)
+resolved: 2026-06-13
+resolved-by: autonomous (adversarial review)
+resolution: ADOPT DEFAULT WITH CONDITIONS — A+B two-instrument package (paraphrase forced-choice primary, entailment NLI convergent arm, grammaticalized singular/plural agreement sub-probe as the load-bearing discriminator; C demoted to optional-exploratory), under eight binding pre-run conditions; anchor status (i) `anchor: internal-contrast-only` + (ii) literature-stipulated expert-coded key, the `internal-contrast-only` terminal state ratified for the v3 result by this adoption.
 contingent-artifacts:
   - conjecture/aann-construction
 ---
 
 # Decision: an inferential operationalization for the AANN v3 probe
+
+> **RESOLVED 2026-06-13 (autonomous adversarial review, cross-session — opened by the prior
+> 2026-06-13 session, ratified by the next session per PROJECT.md §12.3). Verdict: ADOPT
+> DEFAULT WITH CONDITIONS.** An independent fresh reviewer (not the orchestrator that does the
+> downstream design work this session) evaluated both parts together and adopted the provisional
+> defaults — the A+B two-instrument package and the (i)+(ii) anchor — subject to **eight binding
+> conditions** recorded in the *Ratification* section at the foot of this page. The adoption is
+> of the **instrument-class, indicator hierarchy, and anchor status only**: no AANN v3 design,
+> run, or result is ratified by this verdict, and the conjecture's inferential half stays
+> **untested**. This adoption **constitutes the `internal-contrast-only` ratification** CLAUDE.md
+> requires for the eventual v3 result (precedent:
+> [`decisions/resolved/conflicting-cue-human-anchor`](conflicting-cue-human-anchor.md)).
+> Anti-cheat: **PASS** — no v3 data exists; the decision fixes the yardstick (and, the reviewer
+> noted, is structurally biased *against* a free positive), without prejudging the result.
 
 ## Why this exists
 
@@ -229,3 +246,81 @@ recorded. If the review finds neither A nor B survivable as a validity argument 
 distributional-shadow mitigations are judged insufficient at this tier), the honest fallback
 is to leave the inferential half as an open question with this page's analysis as its record
 — a null-shaped outcome the charter prefers over an uninterpretable run.
+
+## Ratification (2026-06-13, autonomous adversarial review)
+
+An independent fresh reviewer read this page in full, both anchor precedents, the conjecture,
+the v2 result, the Mahowald resource, and the two open questions the fragility argument leans
+on, and confirmed the decision's empirical citations against the actual result pages (NLI more
+permissive of Gricean readings; the conative NLI collapse vs FC; the comparative-correlative FC
+crack; the ≤50 pp instrument-disagreement bound). Verdict: **ADOPT DEFAULT WITH CONDITIONS.**
+
+**Indicator (Part 1) — adopted.** The strongest objection — that stacking two instruments which
+both read the distributional shadow merely launders the confound through a convergence design,
+and that A and B carry *known, opposite, systematic* biases at this tier — survives only in its
+weak form, because the design already absorbs the defeaters: (a) the AANN-vs-control **shift**
+design subtracts the article-cue baseline (the indicator is the differential, never the raw AANN
+rate); (b) the **grammaticalized agreement sub-probe** is the one place the distributional-shadow
+story predicts the *opposite* of the inferential story (singular agreement on a plural head is
+distributionally dispreferred), so it is elevated to the load-bearing discriminator; (c) the
+convergence design's value is the *disagreement statistic* |FC shift − NLI shift| fed to
+[`open-question/instrument-sensitivity-constructional-inference`](../../findings/open-questions/instrument-sensitivity-constructional-inference.md),
+not an averaged headline. Net: the indicator survives **as a within-model contrast probe, not as
+a clean inferential or human-comparison measure** — which is exactly what the anchor status
+restricts it to, so the two parts are mutually load-bearing and were ratified together. Demoting
+C is correct (its coding step imports an un-ratified LLM-judge / no-inter-rater-check fragility).
+
+**Anchor (Part 2) — adopted, (i)+(ii).** The category-error argument is correct and endorsed:
+Mahowald's `mturk_data/` is 1–10 *acceptability* ratings; no human there was asked the
+unification-vs-distributive question, so reusing it as an inference anchor would be the
+"cite-a-resource-by-existence" failure the verification gate forbids. `anchor:
+internal-contrast-only` is the honest terminal state; option (iii) defer-until-human-dataset is
+*less* honest (it blocks the follow-up indefinitely to protect a human-comparison claim the
+decision explicitly disclaims). The pre-conditions for an honest `internal-contrast-only`
+ratification are all met (anchor status is part of this decision; opened in an earlier session;
+no v3 result exists), so this adoption **ratifies that terminal state for the v3 result**. The
+literature key (ii) is correct as a *scoring key* but must be labelled expert-stipulated, never
+dressed as a human anchor.
+
+### Eight binding conditions (frozen pre-run; the v3 design must satisfy all)
+
+1. **Primary instrument fixed before any model call.** A (paraphrase forced-choice) is primary;
+   B (NLI) is the convergent robustness arm. Locked in the frozen design's front matter; never
+   reselected after seeing outputs (no post-hoc "winning instrument").
+2. **The indicator is the AANN-vs-control *shift*, never the raw AANN rate.** Headline statistic
+   per arm = the differential between the AANN item and its lexically-matched non-AANN control;
+   raw rates are descriptive only. Control pairing + lexical-overlap parity (neither paraphrase
+   shares more surface material with the premise) committed in the frozen stimuli.
+3. **The grammaticalized agreement sub-probe is the load-bearing discriminator.** Reported
+   separately and weighted above the paraphrase arm. If the paraphrase arm is positive but the
+   agreement sub-probe is null, the headline is "shift in paraphrase selection without the
+   grammaticalized reflex" — **not** "draws the unification inference."
+4. **At least some items place the distributive paraphrase as the locally-fluent continuation**
+   (inference under distributional pressure). The per-item local-fluency direction is declared in
+   the frozen stimuli, and the under-pressure subset analysed separately.
+5. **`anchor: internal-contrast-only` declared on the v3 result; no human-comparison claim may
+   appear.** Mahowald linked only as stimulus provenance / v2 gradient anchor. The literature key
+   labelled **expert-stipulated** on both design and result page. The result page carries the
+   chief-cost statement verbatim ("can never say the model draws the inference the way humans
+   do").
+6. **Disputed literature codings flagged item-level** and excluded from / sensitivity-tested
+   against the headline; the key is not presented as settled where the AANN-semantics literature
+   genuinely disputes it.
+7. **|FC shift − NLI shift| per model is a reported named statistic**, fed to the
+   instrument-sensitivity open question, never averaged away. A pre-declared convergence-vs-
+   disagreement rule is fixed before the run; a Tier-0-style manipulation check with a
+   pre-declared failure consequence carries forward (a model failing it has its inference numbers
+   reported as instrument failure, not reinterpreted).
+8. **Thresholds, item lists, paraphrase wordings, per-model settings frozen pre-run; pre-flight
+   budget estimate recorded (CLAUDE.md rule 8).** No threshold set or retuned after any
+   pilot/dry-run output. If neither arm can be given a defensible internal-contrast validity
+   argument at design time, the ratified fallback is the charter-preferred null: leave the
+   inferential half an open question with this page as its record.
+
+**Anti-cheat — PASS.** No AANN v3 result, partial output, pilot, or run record exists; no outcome
+can have motivated the adoption. The reviewer checked specifically for framing that steers toward
+a predetermined positive and found the **opposite**: the control-shift subtraction, the
+hardest-test agreement sub-probe foregrounded, the refusal to average away instrument
+disagreement, the named null fallback, and the within-model-contrast claim cap all bias the
+design *against* a free positive. This is yardstick-fixing, correctly separated from the result
+by the cross-session boundary, with the under-claim direction favoured throughout.

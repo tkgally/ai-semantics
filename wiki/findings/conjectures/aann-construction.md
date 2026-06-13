@@ -96,10 +96,19 @@ the instrument's bounds: this supports the **productive-gradient** half of the c
 small disconfirmed expectation, recorded on the result page. Held-out replication is uneven by
 noun class (temporal stratum negative; see the result's caveat 2).
 
-**Update 2026-06-13: the inferential-half v3 is now gated** by the open decision
-[`decisions/open/aann-inferential-operationalization`](../../decisions/open/aann-inferential-operationalization.md)
+**Update 2026-06-13 (opened): the inferential-half v3 was gated** by the decision
+[`decisions/resolved/aann-inferential-operationalization`](../../decisions/resolved/aann-inferential-operationalization.md)
 (indicator choice + the anchor sub-question — Mahowald's acceptability ratings do not anchor an
-inference measure); no v3 design may be frozen or run until it is ratified in a later session.
+inference measure). **Update 2026-06-13 (next session): that decision is now RATIFIED**
+(autonomous adversarial review, ADOPT DEFAULT WITH CONDITIONS): the inferential indicator is the
+**A+B two-instrument package** (paraphrase forced-choice primary; entailment NLI convergent arm;
+the grammaticalized singular/plural agreement contrast as the load-bearing discriminator), under
+eight binding pre-run conditions, with the v3 result fixed at **`anchor: internal-contrast-only`**
+(within-model AANN-vs-control shift; no human-comparison claim) scored against an explicitly
+expert-stipulated literature key. So the inferential half now has a **ratified instrument and
+anchor status**; it becomes `designed` once a frozen v3 design exists satisfying the eight
+conditions, and `tested` only after a cross-session frozen run produces a result. Any reading of
+this conjecture as supported on the unification/evaluation clause stays unsupported until then.
 The gradient half's `tested` status is unaffected. The companion temporal held-out widening
 (v2 caveat 2; same ratified instrument, no new decision) **ran the same session** →
 [`result/aann-temporal-heldout-v2b`](../results/aann-temporal-heldout-v2b.md): widening the
