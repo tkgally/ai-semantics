@@ -1,0 +1,357 @@
+{
+ "provenance_check_v2b_cell_grain_spearman": {
+  "recomputed": {
+   "claude-sonnet-4.6": {
+    "n_records": 80,
+    "cell_means": {
+     "ambig": 54.95,
+     "neg": 49.35,
+     "pos": 50.55,
+     "quant": 43
+    },
+    "cell_grain_spearman": -0.2
+   },
+   "gpt-5.4-mini": {
+    "n_records": 80,
+    "cell_means": {
+     "ambig": 50.6,
+     "neg": 40.15,
+     "pos": 37.5,
+     "quant": 30.05
+    },
+    "cell_grain_spearman": -0.4
+   },
+   "gemini-3.5-flash": {
+    "n_records": 80,
+    "cell_means": {
+     "ambig": 84.25,
+     "neg": 75,
+     "pos": 70,
+     "quant": 68.75
+    },
+    "cell_grain_spearman": -0.4
+   }
+  },
+  "vs_published": {
+   "claude-sonnet-4.6": {
+    "published": -0.2,
+    "recomputed": -0.2,
+    "match": true
+   },
+   "gpt-5.4-mini": {
+    "published": -0.4,
+    "recomputed": -0.4,
+    "match": true
+   },
+   "gemini-3.5-flash": {
+    "published": -0.4,
+    "recomputed": -0.4,
+    "match": true
+   }
+  },
+  "all_match": true
+ },
+ "H1_human_gradient_spread_by_nounclass": {
+  "art": {
+   "complete": true,
+   "class_means": {
+    "ambig": 7.0368,
+    "neg": 5.7404,
+    "pos": 6.5413,
+    "quant": 7.7208
+   },
+   "range": 1.9804,
+   "sd": 0.7224,
+   "human_order_low_to_high": [
+    "neg",
+    "pos",
+    "ambig",
+    "quant"
+   ]
+  },
+  "distance": {
+   "complete": true,
+   "class_means": {
+    "ambig": 8.326,
+    "neg": 6.8438,
+    "pos": 7.3333,
+    "quant": 8.67
+   },
+   "range": 1.8262,
+   "sd": 0.7358,
+   "human_order_low_to_high": [
+    "neg",
+    "pos",
+    "ambig",
+    "quant"
+   ]
+  },
+  "human": {
+   "complete": true,
+   "class_means": {
+    "ambig": 7.0224,
+    "neg": 6.1803,
+    "pos": 6.2794,
+    "quant": 7.7971
+   },
+   "range": 1.6168,
+   "sd": 0.6514,
+   "human_order_low_to_high": [
+    "neg",
+    "pos",
+    "ambig",
+    "quant"
+   ]
+  },
+  "objects": {
+   "complete": true,
+   "class_means": {
+    "ambig": 7.4076,
+    "neg": 5.7368,
+    "pos": 6.6548,
+    "quant": 8.1095
+   },
+   "range": 2.3727,
+   "sd": 0.8817,
+   "human_order_low_to_high": [
+    "neg",
+    "pos",
+    "ambig",
+    "quant"
+   ]
+  },
+  "temporal": {
+   "complete": true,
+   "class_means": {
+    "ambig": 8.2526,
+    "neg": 7.5673,
+    "pos": 8.0183,
+    "quant": 8.4508
+   },
+   "range": 0.8835,
+   "sd": 0.3293,
+   "human_order_low_to_high": [
+    "neg",
+    "pos",
+    "ambig",
+    "quant"
+   ]
+  },
+  "unitlike": {
+   "complete": true,
+   "class_means": {
+    "ambig": 7.4053,
+    "neg": 6.8624,
+    "pos": 6.7831,
+    "quant": 7.8807
+   },
+   "range": 1.0976,
+   "sd": 0.4441,
+   "human_order_low_to_high": [
+    "pos",
+    "neg",
+    "ambig",
+    "quant"
+   ]
+  }
+ },
+ "H1_v2_heldout_spearman_per_stratum": {
+  "claude-sonnet-4.6": {
+   "distance": 0.6325,
+   "objects": 0.9429,
+   "temporal": -0.2
+  },
+  "gpt-5.4-mini": {
+   "distance": 0.6,
+   "objects": 0.9429,
+   "temporal": -0.2
+  },
+  "gemini-3.5-flash": {
+   "distance": 0.6325,
+   "objects": 0.8857,
+   "temporal": -0.2
+  }
+ },
+ "H1_spread_comparison": {
+  "temporal_range": 0.8835,
+  "by_nounclass": {
+   "art": {
+    "range": 1.9804,
+    "sd": 0.7224
+   },
+   "distance": {
+    "range": 1.8262,
+    "sd": 0.7358
+   },
+   "human": {
+    "range": 1.6168,
+    "sd": 0.6514
+   },
+   "objects": {
+    "range": 2.3727,
+    "sd": 0.8817
+   },
+   "temporal": {
+    "range": 0.8835,
+    "sd": 0.3293
+   },
+   "unitlike": {
+    "range": 1.0976,
+    "sd": 0.4441
+   }
+  },
+  "temporal_is_narrowest": true
+ },
+ "H2_temporal_inventory": {
+  "n_temporal_nouns": 5,
+  "temporal_nouns": [
+   "days",
+   "hours",
+   "months",
+   "weeks",
+   "years"
+  ],
+  "n_adjclasses": 4,
+  "adjclasses": [
+   "ambig",
+   "neg",
+   "pos",
+   "quant"
+  ],
+  "n_class_cells": 4,
+  "spearman_lattice_n4": "{0, +/-0.2, +/-0.4, +/-0.6, +/-0.8, +/-1.0}",
+  "note": "with only 4 class-cells the cell-grain Spearman can take 11 discrete values; a single swapped pair moves rho by 0.2-0.4"
+ },
+ "H3_zipf_by_class": {
+  "distance": {
+   "n_items": 16,
+   "zipf_median": 3.595,
+   "zipf_mean": 3.685,
+   "n_unique_adjs": 16
+  },
+  "human": {
+   "n_items": 4,
+   "zipf_median": 5.01,
+   "zipf_mean": 5.0175,
+   "n_unique_adjs": 4
+  },
+  "objects": {
+   "n_items": 24,
+   "zipf_median": 4.16,
+   "zipf_mean": 4.1471,
+   "n_unique_adjs": 24
+  },
+  "temporal": {
+   "n_items": 16,
+   "zipf_median": 3.595,
+   "zipf_mean": 3.685,
+   "n_unique_adjs": 16
+  },
+  "temporal_v2b": {
+   "n_items": 80,
+   "zipf_median": 3.675,
+   "zipf_mean": 3.6728,
+   "n_unique_adjs": 40
+  },
+  "v2b_freq_audit_all_pass": true,
+  "temporal_distance_same_adjset_in_v2": true
+ },
+ "H4_per_noun_model_behavior": {
+  "claude-sonnet-4.6": {
+   "model_class_means": {
+    "ambig": 54.95,
+    "neg": 49.35,
+    "pos": 50.55,
+    "quant": 43
+   },
+   "model_order_low_to_high": [
+    "quant",
+    "neg",
+    "pos",
+    "ambig"
+   ],
+   "human_order_low_to_high": [
+    "neg",
+    "pos",
+    "ambig",
+    "quant"
+   ],
+   "per_noun_cell_spearman": {
+    "days": -0.4,
+    "hours": -0.4,
+    "months": 0.8,
+    "weeks": -0.8,
+    "years": 0.8944
+   },
+   "n_nouns_positive": 2,
+   "n_nouns_total": 5,
+   "quant_is_human_highest": true,
+   "quant_is_model_lowest": true,
+   "cell_grain_spearman_dropping_quant": 1.0
+  },
+  "gpt-5.4-mini": {
+   "model_class_means": {
+    "ambig": 50.6,
+    "neg": 40.15,
+    "pos": 37.5,
+    "quant": 30.05
+   },
+   "model_order_low_to_high": [
+    "quant",
+    "pos",
+    "neg",
+    "ambig"
+   ],
+   "human_order_low_to_high": [
+    "neg",
+    "pos",
+    "ambig",
+    "quant"
+   ],
+   "per_noun_cell_spearman": {
+    "days": -0.4,
+    "hours": -0.4,
+    "months": 0.4,
+    "weeks": -0.1054,
+    "years": 0.6
+   },
+   "n_nouns_positive": 2,
+   "n_nouns_total": 5,
+   "quant_is_human_highest": true,
+   "quant_is_model_lowest": true,
+   "cell_grain_spearman_dropping_quant": 0.5
+  },
+  "gemini-3.5-flash": {
+   "model_class_means": {
+    "ambig": 84.25,
+    "neg": 75,
+    "pos": 70,
+    "quant": 68.75
+   },
+   "model_order_low_to_high": [
+    "quant",
+    "pos",
+    "neg",
+    "ambig"
+   ],
+   "human_order_low_to_high": [
+    "neg",
+    "pos",
+    "ambig",
+    "quant"
+   ],
+   "per_noun_cell_spearman": {
+    "days": -0.8,
+    "hours": -0.2,
+    "months": 0.0,
+    "weeks": 0.0,
+    "years": 0.8
+   },
+   "n_nouns_positive": 1,
+   "n_nouns_total": 5,
+   "quant_is_human_highest": true,
+   "quant_is_model_lowest": true,
+   "cell_grain_spearman_dropping_quant": 0.5
+  }
+ }
+}

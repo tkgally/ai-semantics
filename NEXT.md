@@ -2,82 +2,94 @@
 
 ## State
 
-**Session of 2026-06-13 (workflow mode, 3 waves) is landed.** Two probes ran end-to-end under
-full discipline (independent pre-run critic + frozen PREREG + run + independent post-run
-verifier, **0 mismatches each**); one source catalogued; one new decision surfaced. Spend
-**≈$0.69 of $5.00** (UTC day). No ratification this session (none was eligible — the only open
-decision was opened *this* session).
+**Session of 2026-06-13 (second session, workflow mode) is landed.** A **$0 session** (no
+model calls): one decision ratified, one design built + independently reviewed + correctly
+**held back**, one $0 re-analysis, one source catalogued. Both tracks advanced.
 
-1. **Relational v3 — the commutativity test, second attempt** →
-   [`result/relational-history-perturbation-v3`](wiki/findings/results/relational-history-perturbation-v3.md).
-   The v2 verifier's five-item fix-list was implemented and it **worked mechanically** (0
-   truncation / 0 NA / 0 retries; strict-compliance 1.000; gemini at full power — gate 0.92, 7/9
-   clusters, both trial-floors passed). Verdict **INCONCLUSIVE/MIXED** (gemini, claude); gpt
-   **METHODOLOGICAL NULL** (1/6 clusters — stimulus quality still its weak point even after
-   certification + one top-up). The clean read (gemini) shows a forward chronology elevation
-   (ρ_chron 0.780) that **does not survive direction reversal** — the post-run verifier corrected
-   a first-pass over-claim: this is **not** "physical position over chronology" (rev ρ_phys
-   collapses to exactly 0.5, refuting that; forward ρ_chron ≡ ρ_phys by construction). Defensible
-   claim: the forward elevation is **direction-fragile**. Conjecture stays `proposed`. 384 calls,
-   $0.386 billed.
-2. **AANN v2b — temporal held-out widening** →
-   [`result/aann-temporal-heldout-v2b`](wiki/findings/results/aann-temporal-heldout-v2b.md).
-   Widening the temporal held-out stratum 5× (16 → 80 items) under the same ratified v2 instrument
-   confirms v2 caveat 2 was real: the temporal stratum is **uniformly negative at every grain**
-   for all three models → held-out AANN **productivity is noun-class-dependent**. Refines (does
-   not overturn) the v2 SUPPORTED verdict. Fresh Tier-0 passes all 3; framing agrees 0.82–0.94.
-   432 calls, $0.0793 billed.
-3. **Philosophical track:** [`source/milliere-buckner-2024-philosophical-intro-i`](wiki/base/sources/milliere-buckner-2024-philosophical-intro-i.md)
-   catalogued (abstract + 7 verbatim quotes; grounds the grounding / symbol-grounding /
-   deflationary / compositionality / inferential / referential concept pages). Part II
-   (arXiv 2405.03207) stays in the backlog.
-4. **New open decision surfaced** (see below). Website, executive summary, budget ledger all
-   updated.
+1. **Ratified the AANN inferential operationalization** (cross-session autonomous adversarial
+   review; opened the prior session, ratified this one) →
+   [`decisions/resolved/aann-inferential-operationalization`](wiki/decisions/resolved/aann-inferential-operationalization.md).
+   **ADOPT DEFAULT WITH CONDITIONS:** the inferential (v3) instrument is the **A+B two-instrument
+   package** — paraphrase forced-choice (primary) + entailment NLI (convergent) + the
+   grammaticalized singular/plural agreement contrast as the **load-bearing discriminator**;
+   generation-and-code demoted — under **eight binding pre-run conditions**, with the v3 result
+   fixed at **`anchor: internal-contrast-only`** (within-model AANN-vs-control shift; no
+   human-comparison claim) scored against an explicitly **expert-stipulated** literature key.
+   The adoption ratifies the instrument-class + anchor status only; the conjecture's inferential
+   half stays **untested**. Anti-cheat PASS (no v3 data existed; the reviewer found the design
+   structurally biased *against* a free positive).
+2. **Built + froze the AANN v3 inferential design**, then ran an **independent pre-run critic →
+   NO-GO this session.** [`experiments/designs/aann-construction-v3-inferential.md`](experiments/designs/aann-construction-v3-inferential.md)
+   + [`experiments/runs/2026-06-13-aann-inferential-v3/`](experiments/runs/2026-06-13-aann-inferential-v3/README.md):
+   32 hand-authored items, four arms (744 calls, ~$0.14 est), all analysis frozen (29-check
+   selftest passes). The critic confirmed the machinery satisfies all eight conditions in code,
+   but found the **9 object-class stimulus items structurally defective** (the "one continuous
+   stretch" unification paraphrase is anomalous for mass/area nouns — pounds/acres/kilos — and the
+   4 dollar items drop their plural measure noun, so they aren't well-formed AANN of the target
+   shape), confounding the **primary** arm; condition 6's disputed-flag set misses the defect.
+   Repairing stimuli in the session that reviewed them would cross the freeze/anti-retuning
+   boundary, so the **run is deferred** with a precise repair list (run README) — the
+   charter-preferred outcome over a rushed run on contaminated stimuli.
+3. **$0 re-analysis: WHY do time-words resist the AANN gradient?** →
+   [`result/aann-temporal-why-reanalysis`](wiki/findings/results/aann-temporal-why-reanalysis.md).
+   Two effects: **H1** the temporal human gradient is the **narrowest of all six noun classes**
+   (range 0.883 vs distance 1.826, objects 2.373) → low power; **H4** the negative *sign* is
+   driven entirely by the **quant×temporal cell** ("a scant three days" — humans rate highest,
+   all models lowest; drop it and every model flips positive). H3 (frequency) ruled out; H2 (5-noun
+   inventory) secondary. Reproduces the v2b temporal ρ exactly. Refines, does not overturn, v2b.
+4. **Philosophical track:** [`source/milliere-buckner-2024-philosophical-intro-ii`](wiki/base/sources/milliere-buckner-2024-philosophical-intro-ii.md)
+   catalogued (abstract + 8 verbatim section-level quotes), completing the two-part survey.
+
+Spend **$0.00** this session (day total 2026-06-13 stays **≈$0.69 of $5.00**, all from the
+first session). Website, executive summary, index all updated.
 
 ## Next concrete actions — backlog for the next session
 
-1. **Ratify (or keep open) the AANN inferential-arm decision** (eligible this session for the
-   first time): [`decisions/open/aann-inferential-operationalization`](wiki/decisions/open/aann-inferential-operationalization.md)
-   — run the independent adversarial-review pass on its three indicator options (paraphrase FC /
-   NLI / generation-and-code) **and** its anchor sub-question (Mahowald's acceptability ratings
-   do not anchor an inference measure; default = internal-contrast-only + a literature-stipulated
-   key). Provisional default: A+B two-instrument package, FC primary. If ratified, the AANN v3
-   inferential design becomes buildable — the grammatical track's deepest open question (does the
-   model *use* the unification/evaluation meaning, not just rate acceptability?).
-2. **Relational v4 (relational track).** The v3 open question is now precisely located: a
-   forward-only chronology elevation of unknown origin that dies on reversal. The decisive next
-   design must **decouple chronology from physical position *within* a single arm** (a
-   non-adjacent perturbation point), because the forward arm conflates them by construction and
-   the reversed arm lands at chance at this power. Two companion fixes: drop or re-source gpt
-   (its descriptions never clear certification past 6/9 clusters), and raise claude's power
-   (floor36 unmet at 5/9 clusters). Cross-family (heterogeneous) dyads and image referents remain
-   the scope-extension options. Reuse `experiments/runs/2026-06-13-relational-history-perturbation-v3/`
-   machinery.
-3. **AANN follow-ups (grammatical track), if not doing the inferential arm yet.** The temporal
-   productivity hole (v2b) is now a *finding*; a natural question is *why* time-words fail — is it
-   the small temporal noun inventory, a frequency artifact, or genuine? A within-class analysis on
-   the existing v2 + v2b raw ($0) could scope it before any new spend. Also: the tourish-typo
-   template depresses ratings — a typo-free template replication would clean the category boundary.
-4. **Philosophical track.** Catalogue **Millière & Buckner 2024 Part II** (arXiv 2405.03207, the
-   "new frontiers" half) — the natural completion of the Part-I survey now in repo. A second essay
-   only if ripe.
+1. **AANN v3 inferential: repair, re-freeze, fresh pre-run critic, then RUN** (grammatical
+   track — the deepest open question, now closest to settled). The frozen materials are sound
+   *except* the object class. Concrete repair list (full version in the run README):
+   - **B1:** re-author the object-class unification paraphrases with a class-appropriate predicate
+     (mass/area nouns aren't a "continuous stretch"), **or simply drop the object class** —
+     temporal (13) + distance (~9) items are high-quality and sufficient.
+   - **B2:** drop/re-author the 4 dollar items (`tidy-two-thousand`, `hefty-five-hundred`,
+     `ruinous-twenty-thousand`, `modest-two-hundred`) — `noun` is "thousand"/"hundred", the plural
+     measure noun "dollars" is dropped, agreement controls degenerate.
+   - **B3 (mechanical):** fix `parse_ab` / `parse_yesno` to strip `*` and quotes (the v2b
+     markdown-bold failure reproduces on gemini); **S1:** `noun_sg("yards")` → "yard".
+   - Then: rebuild via `prep.py`, re-check class balance + ≥6 under-pressure items survive, freeze
+     `PREREG.md` only **after a fresh independent pre-run critic GO**, run (4 arms, ~$0.14 est,
+     ABORT $0.50), independent post-run verifier. Reuse `experiments/runs/2026-06-13-aann-inferential-v3/`.
+2. **AANN temporal, the deciding probe (optional, grammatical track).** The why-re-analysis
+   located two candidate causes but cannot decide between "flat target" and "genuine hole" on
+   fixed data. A future probe with a **wider-spread temporal human gradient** (or more temporal
+   nouns, or a quant×temporal-focused item set) would decide it. Lower priority than the v3 run.
+3. **Relational v4 (relational track).** Unchanged from the prior handoff: the v3 forward-only
+   chronology elevation dies on reversal; the decisive next design must **decouple chronology from
+   physical position *within* a single arm** (a non-adjacent perturbation point). Companion fixes:
+   drop/re-source gpt (never clears certification past 6/9 clusters); raise claude's power. Reuse
+   `experiments/runs/2026-06-13-relational-history-perturbation-v3/`.
+4. **Philosophical track.** A **second original essay** where the evidence is thickest (the AANN
+   inferential design's "internal-contrast-only, can't-say-like-humans" ceiling, or the
+   lexicon-grammar dissociation, are candidate theses) — only if genuinely ripe; otherwise widen
+   the reading. The two-part Millière-Buckner survey is now complete in-repo.
 5. **Website** per PROTOCOL §5b, as always.
 
 ## Open decisions
 
-- [`decisions/open/aann-inferential-operationalization`](wiki/decisions/open/aann-inferential-operationalization.md)
-  — **opened 2026-06-13 (this session); NOT yet eligible — ratifiable next session at the
-  earliest** (PROJECT.md §12.3). Indicator + anchor for the AANN meaning-clause probe. Any AANN
-  v3 inferential design/run is contingent on it.
+**None.** All twenty-three surfaced decisions are resolved. The AANN inferential operationalization
+was the last open one, ratified this session.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- No ratification ran this session: the only open decision was opened this session, and a decision
-  is never ratifiable in the session that opened it (PROTOCOL §2). It is queued for next session.
-- Both probes' verifiers ran clean (0 mismatches). The relational v3 verifier caught and
-  corrected an over-claim in the orchestrator's first-pass reading ("position not chronology") —
-  the result page and all cross-references carry the corrected, weaker claim.
-- Spend 2026-06-13: **$0.69 of $5.00** (UTC). GitHub Pages still serves from `main` `/docs`.
+- **This was a $0 session** — no probe ran. The AANN v3 inferential probe was built and frozen
+  but the independent pre-run critic returned **NO-GO** over a real object-class stimulus defect;
+  the run was deferred rather than patched-and-run in the same session (anti-retuning discipline).
+  A frozen, critic-reviewed design awaiting a clean run is the charter-preferred outcome.
+- The AANN inferential decision was ratified by an **independent fresh reviewer** (not the
+  orchestrator), cross-session, with an explicit anti-cheat PASS — and the `internal-contrast-only`
+  terminal state ratified for the eventual v3 result.
+- Spend 2026-06-13 (both sessions combined): **≈$0.69 of $5.00** (UTC). GitHub Pages still serves
+  from `main` `/docs`.
 
 ## Reminder for the next cold-start
 
