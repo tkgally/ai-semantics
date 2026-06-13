@@ -59,7 +59,7 @@ The human anchored-half class means, taken over the four adjective classes the t
 noun admits (ambig / neg / pos / quant), have a **within-class range of only 0.883** on the
 1–10 scale (sd 0.329). Across all six noun classes:
 
-| noun class | human range (ambig/neg/pos/quant) | sd | v2 held-out ρ (claude / gpt / gemini) |
+| noun class | human range (ambig/neg/pos/quant) | sd | v2 *parent-run* held-out ρ (claude / gpt / gemini) |
 |------------|-----------------------------------|-----|----------------------------------------|
 | objects | **2.373** | 0.882 | +0.943 / +0.943 / +0.886 |
 | art | 1.980 | 0.722 | — (not in held-out) |
@@ -67,6 +67,13 @@ noun admits (ambig / neg / pos / quant), have a **within-class range of only 0.8
 | human | 1.617 | 0.651 | — (not in held-out) |
 | unitlike | 1.098 | 0.444 | — (not in held-out) |
 | **temporal** | **0.883** | **0.329** | **−0.20 / −0.20 / −0.20** |
+
+> **Reading the temporal ρ — two runs, not a discrepancy.** The ρ column above is from the
+> **v2 *parent* run** (the thin 16-item held-out arm), where the temporal stratum was ≈ −0.2 for
+> all three models. The **v2b widened run** (80 items) re-measured the same cell-grain ρ as
+> **−0.20 / −0.40 / −0.40** (claude / gpt / gemini) — the figure the provenance check above
+> reproduces exactly. Both are correct; they are two runs at two stratum widths, both uniformly
+> non-positive. This page's decomposition (H1, H4) draws on the v2b widened raw throughout.
 
 Temporal is the **narrowest gradient of any noun class** — about one-third the spread of
 objects and half that of distance, the two classes that carried v2's positive held-out
