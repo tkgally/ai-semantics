@@ -5,7 +5,7 @@ title: LLMs treat the AANN ("a beautiful three days") construction as a unit, no
 meaning-senses:
   - constructional
   - functional-vs-formal
-status: designed
+status: tested
 contingent-on: []
 created: 2026-05-28
 updated: 2026-06-12
@@ -82,6 +82,19 @@ Exp-2 item-level ratings usable), and the frozen behavioral v2 design now exists
 read predictions 1–2 above through that instrument — "continuation likelihood" becomes "prompted
 graded acceptability", with the gradient scored against the **empirical** Exp-2 MTurk cell means,
 never a stipulated ordering). `contingent-on` cleared accordingly.
+
+**Updated 2026-06-12 (same session, post-run): status `designed` → `tested` — SUPPORTED.**
+The probe ran the same session (permitted: the ratification preceded the design — the decision
+was opened in an earlier session) → [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md):
+all three models pass every pre-registered gate (anchored gradient ρ 0.68–0.75 at cell grain;
+frequency and noun-class guards clean; held-out class-gradient replication 0.75–0.83 on the
+locked frequency-matched adjective list; Tier-0 23–24/24; $0.3125, 0 missing). Read it through
+the instrument's bounds: this supports the **productive-gradient** half of the conjecture
+(behavior tracks the human acceptability gradient and generalizes it to novel adjectives); the
+**inferential half** (does the model *use* the unification/evaluation meaning?) remains untested
+— the natural v3. Prediction 3 (gpt underperforms on the gradient) was **not** borne out — a
+small disconfirmed expectation, recorded on the result page. Held-out replication is uneven by
+noun class (temporal stratum negative; see the result's caveat 2).
 
 ## Notes / caveats
 
