@@ -120,8 +120,10 @@ def NLI_distrib(num, noun, adj):
 
 
 def noun_sg(noun):
+    # S1 fix (2026-06-13 repair session): "yards" -> "yard" (was "yards", giving
+    # the ungrammatical foil "Each yards individually was lonely").
     return {"days": "day", "hours": "hour", "weeks": "week", "months": "month",
-            "years": "year", "miles": "mile", "yards": "yards", "pounds": "pound",
+            "years": "year", "miles": "mile", "yards": "yard", "pounds": "pound",
             "dollars": "dollar", "acres": "acre", "kilos": "kilo"}.get(noun, noun)
 
 
@@ -185,40 +187,16 @@ RAW_ITEMS = [
     ("treacherous", "eight", "miles", "distance",
      "We sailed a treacherous eight miles around the headland.",
      "We sailed eight treacherous miles around the headland.", "distributive", None),
-    # ---- object / measure ----
-    ("remarkable", "thirty", "pounds", "object",
-     "He lost a remarkable thirty pounds last year.",
-     "He lost thirty remarkable pounds last year.", "neutral",
-     "weight-loss 'pounds' is a canonical AANN object-measure case, but the "
-     "control 'thirty remarkable pounds' is itself marginal, so the control "
-     "baseline is weaker here"),
-    ("staggering", "fifty", "pounds", "object",
-     "She gained a staggering fifty pounds of muscle.",
-     "She gained fifty staggering pounds of muscle.", "neutral", None),
-    ("tidy", "two", "thousand", "object",
-     "We saved a tidy two thousand dollars that month.",
-     "We saved two thousand tidy dollars that month.", "neutral",
-     "'two thousand dollars' with the numeral 'thousand' stretches the AANN "
-     "numeral slot; coding kept but flagged"),
-    ("hefty", "five", "hundred", "object",
-     "He paid a hefty five hundred dollars in fees.",
-     "He paid five hundred hefty dollars in fees.", "neutral",
-     "numeral 'hundred' + dollars: same numeral-slot caveat as the 'thousand' "
-     "item"),
-    ("generous", "forty", "acres", "object",
-     "They farmed a generous forty acres of wheat.",
-     "They farmed forty generous acres of wheat.", "neutral", None),
-    ("sprawling", "ten", "acres", "object",
-     "She bought a sprawling ten acres of woodland.",
-     "She bought ten sprawling acres of woodland.", "neutral", None),
-    ("precious", "three", "kilos", "object",
-     "We carried a precious three kilos of seed.",
-     "We carried three precious kilos of seed.", "neutral", None),
-    ("ruinous", "twenty", "thousand", "object",
-     "The repair cost a ruinous twenty thousand dollars.",
-     "The repair cost twenty thousand ruinous dollars.", "distributive",
-     "numeral 'thousand' + dollars: numeral-slot caveat as above"),
-    # ---- a few more temporal/distance to reach 32, balanced classes ----
+    # ---- object / measure class DROPPED in the 2026-06-13 repair (see README
+    # B1/B2): the "formed one continuous stretch" unification paraphrase is
+    # anomalous for mass/area nouns (pounds/acres/kilos are not a stretch), and
+    # the dollar items dropped their plural measure noun and were not well-formed
+    # AANN of the target shape. Per the pre-authorized repair list the object
+    # class is dropped rather than re-authored; temporal + distance (genuine
+    # extents, for which the "continuous stretch" unification reading is the
+    # natural one) are high-quality and sufficient. The result is scoped to
+    # temporal + distance measure nouns only.
+    # ---- a few more temporal/distance, balanced classes ----
     ("blissful", "four", "days", "temporal",
      "We enjoyed a blissful four days by the lake.",
      "We enjoyed four blissful days by the lake.", "neutral", None),
@@ -234,13 +212,11 @@ RAW_ITEMS = [
     ("relentless", "twelve", "miles", "distance",
      "She marched a relentless twelve miles through the storm.",
      "She marched twelve relentless miles through the storm.", "distributive", None),
-    ("modest", "two", "hundred", "object",
-     "He earned a modest two hundred dollars from the sale.",
-     "He earned two hundred modest dollars from the sale.", "neutral",
-     "numeral 'hundred' + dollars: numeral-slot caveat as above"),
 ]
 
-assert len(RAW_ITEMS) == 32, len(RAW_ITEMS)
+# 23 base items after the object class was dropped in repair: temporal 13,
+# distance 10 (was 32 = temporal 13 / distance 10 / object 9).
+assert len(RAW_ITEMS) == 23, len(RAW_ITEMS)
 
 
 def build():
@@ -294,6 +270,18 @@ def build():
         items.append(item)
 
     # ---- lexical-overlap parity assertion (Condition 2) ----
+    # SCOPE OF THIS METRIC (S2, documented in the 2026-06-13 repair): the parity
+    # check measures how much *premise content* (the adjective, numeral, and
+    # measure noun — the only content lemmas both paraphrases can echo from the
+    # premise) each paraphrase shares with the premise. It DELIBERATELY excludes
+    # the unification/distributive contrast vocabulary ("continuous stretch /
+    # whole" vs "each / individually") via STOPWORDS, because those words ARE the
+    # experimental manipulation and must not be scored as "overlap" — counting
+    # them would penalise the very contrast we test. Because the U/D templates are
+    # parallel by construction, both paraphrases carry the same {adj, num, noun}
+    # premise content, so parity holds at equality. The metric is thus a
+    # construction-time guarantee, not a discriminating filter: it certifies the
+    # model cannot pick a paraphrase merely because it repeats more of the premise.
     bad = [it["id"] for it in items if not it["lexical_overlap"]["parity_ok"]]
     assert not bad, f"lexical-overlap parity violated (|U-D|>1) for: {bad}"
 
@@ -301,9 +289,11 @@ def build():
     n_u_is_a = sum(1 for it in items if it["fc_letter_unification"] == "A")
     n_was_is_a = sum(1 for it in items
                      if it["agreement"]["agr_letter_was"] == "A")
-    # seeded; require roughly balanced (within 6 of half for 32 items)
-    assert abs(n_u_is_a - 16) <= 6, n_u_is_a
-    assert abs(n_was_is_a - 16) <= 6, n_was_is_a
+    # seeded; require roughly balanced (within ~25% of half of the item count)
+    half = len(items) / 2
+    tol = max(5, round(len(items) * 0.25))
+    assert abs(n_u_is_a - half) <= tol, n_u_is_a
+    assert abs(n_was_is_a - half) <= tol, n_was_is_a
 
     # ---- under-pressure subset (Condition 4) ----
     under_pressure = [it["id"] for it in items
@@ -382,8 +372,9 @@ def main():
     print(f"  key-disputed (item-level flags): {c['key_disputed']} "
           f"-> {out['key_disputed_ids']}")
     print(f"  tier0 pairs: {c['tier0_pairs']}")
-    print(f"  counterbalance: U-letter=A on {c['fc_unification_letter_A']}/32; "
-          f"was-letter=A on {c['agr_was_letter_A']}/32")
+    print(f"  counterbalance: U-letter=A on {c['fc_unification_letter_A']}"
+          f"/{c['base_items']}; was-letter=A on {c['agr_was_letter_A']}"
+          f"/{c['base_items']}")
     print("  lexical-overlap parity: PASS (asserted)")
 
 

@@ -10,21 +10,19 @@
  "load_bearing_discriminator": "agreement (was/were) sub-probe",
  "noun_classes": [
   "distance",
-  "object",
   "temporal"
  ],
  "counts": {
-  "base_items": 32,
+  "base_items": 23,
   "by_nounclass": {
    "distance": 10,
-   "object": 9,
    "temporal": 13
   },
-  "under_pressure_distributive": 11,
-  "key_disputed": 6,
+  "under_pressure_distributive": 10,
+  "key_disputed": 1,
   "tier0_pairs": 24,
-  "fc_unification_letter_A": 15,
-  "agr_was_letter_A": 17
+  "fc_unification_letter_A": 10,
+  "agr_was_letter_A": 13
  },
  "under_pressure_ids": [
   "v3-temporal-miserable-three-weeks",
@@ -34,18 +32,12 @@
   "v3-distance-muddy-three-miles",
   "v3-distance-steep-four-miles",
   "v3-distance-treacherous-eight-miles",
-  "v3-object-ruinous-twenty-thousand",
   "v3-temporal-brutal-six-weeks",
   "v3-temporal-frantic-two-days",
   "v3-distance-relentless-twelve-miles"
  ],
  "key_disputed_ids": [
-  "v3-distance-lonely-thirty-yards",
-  "v3-object-remarkable-thirty-pounds",
-  "v3-object-tidy-two-thousand",
-  "v3-object-hefty-five-hundred",
-  "v3-object-ruinous-twenty-thousand",
-  "v3-object-modest-two-hundred"
+  "v3-distance-lonely-thirty-yards"
  ],
  "items": [
   {
@@ -628,7 +620,7 @@
    "nli": {
     "unification_hyp": "The thirty yards were a single continuous stretch.",
     "whole_eval_hyp": "The stretch as a whole was lonely.",
-    "distributive_foil": "Each yards individually was lonely."
+    "distributive_foil": "Each yard individually was lonely."
    },
    "agreement": {
     "aann_frame": "A lonely thirty yards ___ what we needed.",
@@ -677,286 +669,6 @@
    "key_provenance": "expert-stipulated",
    "key_disputed": false,
    "key_dispute_reason": null
-  },
-  {
-   "id": "v3-object-remarkable-thirty-pounds",
-   "adj": "remarkable",
-   "num": "thirty",
-   "noun": "pounds",
-   "nounclass": "object",
-   "aann": "He lost a remarkable thirty pounds last year.",
-   "control": "He lost thirty remarkable pounds last year.",
-   "paraphrase_unification": "The thirty pounds formed one continuous stretch, remarkable as a whole.",
-   "paraphrase_distributive": "Each of the thirty pounds was individually remarkable.",
-   "fc_letter_unification": "A",
-   "lexical_overlap": {
-    "unification": 3,
-    "distributive": 3,
-    "parity_ok": true,
-    "direction": "equal"
-   },
-   "nli": {
-    "unification_hyp": "The thirty pounds were a single continuous stretch.",
-    "whole_eval_hyp": "The stretch as a whole was remarkable.",
-    "distributive_foil": "Each pound individually was remarkable."
-   },
-   "agreement": {
-    "aann_frame": "A remarkable thirty pounds ___ what we needed.",
-    "control_frame": "Thirty remarkable pounds ___ what we needed.",
-    "aann_expected": "was",
-    "control_expected": "were",
-    "agr_letter_was": "B"
-   },
-   "local_fluency": "neutral",
-   "expected_inference_key": "unification",
-   "key_provenance": "expert-stipulated",
-   "key_disputed": true,
-   "key_dispute_reason": "weight-loss 'pounds' is a canonical AANN object-measure case, but the control 'thirty remarkable pounds' is itself marginal, so the control baseline is weaker here"
-  },
-  {
-   "id": "v3-object-staggering-fifty-pounds",
-   "adj": "staggering",
-   "num": "fifty",
-   "noun": "pounds",
-   "nounclass": "object",
-   "aann": "She gained a staggering fifty pounds of muscle.",
-   "control": "She gained fifty staggering pounds of muscle.",
-   "paraphrase_unification": "The fifty pounds formed one continuous stretch, staggering as a whole.",
-   "paraphrase_distributive": "Each of the fifty pounds was individually staggering.",
-   "fc_letter_unification": "B",
-   "lexical_overlap": {
-    "unification": 3,
-    "distributive": 3,
-    "parity_ok": true,
-    "direction": "equal"
-   },
-   "nli": {
-    "unification_hyp": "The fifty pounds were a single continuous stretch.",
-    "whole_eval_hyp": "The stretch as a whole was staggering.",
-    "distributive_foil": "Each pound individually was staggering."
-   },
-   "agreement": {
-    "aann_frame": "A staggering fifty pounds ___ what we needed.",
-    "control_frame": "Fifty staggering pounds ___ what we needed.",
-    "aann_expected": "was",
-    "control_expected": "were",
-    "agr_letter_was": "B"
-   },
-   "local_fluency": "neutral",
-   "expected_inference_key": "unification",
-   "key_provenance": "expert-stipulated",
-   "key_disputed": false,
-   "key_dispute_reason": null
-  },
-  {
-   "id": "v3-object-tidy-two-thousand",
-   "adj": "tidy",
-   "num": "two",
-   "noun": "thousand",
-   "nounclass": "object",
-   "aann": "We saved a tidy two thousand dollars that month.",
-   "control": "We saved two thousand tidy dollars that month.",
-   "paraphrase_unification": "The two thousand formed one continuous stretch, tidy as a whole.",
-   "paraphrase_distributive": "Each of the two thousand was individually tidy.",
-   "fc_letter_unification": "A",
-   "lexical_overlap": {
-    "unification": 3,
-    "distributive": 3,
-    "parity_ok": true,
-    "direction": "equal"
-   },
-   "nli": {
-    "unification_hyp": "The two thousand were a single continuous stretch.",
-    "whole_eval_hyp": "The stretch as a whole was tidy.",
-    "distributive_foil": "Each thousand individually was tidy."
-   },
-   "agreement": {
-    "aann_frame": "A tidy two thousand ___ what we needed.",
-    "control_frame": "Two tidy thousand ___ what we needed.",
-    "aann_expected": "was",
-    "control_expected": "were",
-    "agr_letter_was": "B"
-   },
-   "local_fluency": "neutral",
-   "expected_inference_key": "unification",
-   "key_provenance": "expert-stipulated",
-   "key_disputed": true,
-   "key_dispute_reason": "'two thousand dollars' with the numeral 'thousand' stretches the AANN numeral slot; coding kept but flagged"
-  },
-  {
-   "id": "v3-object-hefty-five-hundred",
-   "adj": "hefty",
-   "num": "five",
-   "noun": "hundred",
-   "nounclass": "object",
-   "aann": "He paid a hefty five hundred dollars in fees.",
-   "control": "He paid five hundred hefty dollars in fees.",
-   "paraphrase_unification": "The five hundred formed one continuous stretch, hefty as a whole.",
-   "paraphrase_distributive": "Each of the five hundred was individually hefty.",
-   "fc_letter_unification": "A",
-   "lexical_overlap": {
-    "unification": 3,
-    "distributive": 3,
-    "parity_ok": true,
-    "direction": "equal"
-   },
-   "nli": {
-    "unification_hyp": "The five hundred were a single continuous stretch.",
-    "whole_eval_hyp": "The stretch as a whole was hefty.",
-    "distributive_foil": "Each hundred individually was hefty."
-   },
-   "agreement": {
-    "aann_frame": "A hefty five hundred ___ what we needed.",
-    "control_frame": "Five hefty hundred ___ what we needed.",
-    "aann_expected": "was",
-    "control_expected": "were",
-    "agr_letter_was": "A"
-   },
-   "local_fluency": "neutral",
-   "expected_inference_key": "unification",
-   "key_provenance": "expert-stipulated",
-   "key_disputed": true,
-   "key_dispute_reason": "numeral 'hundred' + dollars: same numeral-slot caveat as the 'thousand' item"
-  },
-  {
-   "id": "v3-object-generous-forty-acres",
-   "adj": "generous",
-   "num": "forty",
-   "noun": "acres",
-   "nounclass": "object",
-   "aann": "They farmed a generous forty acres of wheat.",
-   "control": "They farmed forty generous acres of wheat.",
-   "paraphrase_unification": "The forty acres formed one continuous stretch, generous as a whole.",
-   "paraphrase_distributive": "Each of the forty acres was individually generous.",
-   "fc_letter_unification": "A",
-   "lexical_overlap": {
-    "unification": 3,
-    "distributive": 3,
-    "parity_ok": true,
-    "direction": "equal"
-   },
-   "nli": {
-    "unification_hyp": "The forty acres were a single continuous stretch.",
-    "whole_eval_hyp": "The stretch as a whole was generous.",
-    "distributive_foil": "Each acre individually was generous."
-   },
-   "agreement": {
-    "aann_frame": "A generous forty acres ___ what we needed.",
-    "control_frame": "Forty generous acres ___ what we needed.",
-    "aann_expected": "was",
-    "control_expected": "were",
-    "agr_letter_was": "B"
-   },
-   "local_fluency": "neutral",
-   "expected_inference_key": "unification",
-   "key_provenance": "expert-stipulated",
-   "key_disputed": false,
-   "key_dispute_reason": null
-  },
-  {
-   "id": "v3-object-sprawling-ten-acres",
-   "adj": "sprawling",
-   "num": "ten",
-   "noun": "acres",
-   "nounclass": "object",
-   "aann": "She bought a sprawling ten acres of woodland.",
-   "control": "She bought ten sprawling acres of woodland.",
-   "paraphrase_unification": "The ten acres formed one continuous stretch, sprawling as a whole.",
-   "paraphrase_distributive": "Each of the ten acres was individually sprawling.",
-   "fc_letter_unification": "A",
-   "lexical_overlap": {
-    "unification": 3,
-    "distributive": 3,
-    "parity_ok": true,
-    "direction": "equal"
-   },
-   "nli": {
-    "unification_hyp": "The ten acres were a single continuous stretch.",
-    "whole_eval_hyp": "The stretch as a whole was sprawling.",
-    "distributive_foil": "Each acre individually was sprawling."
-   },
-   "agreement": {
-    "aann_frame": "A sprawling ten acres ___ what we needed.",
-    "control_frame": "Ten sprawling acres ___ what we needed.",
-    "aann_expected": "was",
-    "control_expected": "were",
-    "agr_letter_was": "B"
-   },
-   "local_fluency": "neutral",
-   "expected_inference_key": "unification",
-   "key_provenance": "expert-stipulated",
-   "key_disputed": false,
-   "key_dispute_reason": null
-  },
-  {
-   "id": "v3-object-precious-three-kilos",
-   "adj": "precious",
-   "num": "three",
-   "noun": "kilos",
-   "nounclass": "object",
-   "aann": "We carried a precious three kilos of seed.",
-   "control": "We carried three precious kilos of seed.",
-   "paraphrase_unification": "The three kilos formed one continuous stretch, precious as a whole.",
-   "paraphrase_distributive": "Each of the three kilos was individually precious.",
-   "fc_letter_unification": "A",
-   "lexical_overlap": {
-    "unification": 3,
-    "distributive": 3,
-    "parity_ok": true,
-    "direction": "equal"
-   },
-   "nli": {
-    "unification_hyp": "The three kilos were a single continuous stretch.",
-    "whole_eval_hyp": "The stretch as a whole was precious.",
-    "distributive_foil": "Each kilo individually was precious."
-   },
-   "agreement": {
-    "aann_frame": "A precious three kilos ___ what we needed.",
-    "control_frame": "Three precious kilos ___ what we needed.",
-    "aann_expected": "was",
-    "control_expected": "were",
-    "agr_letter_was": "A"
-   },
-   "local_fluency": "neutral",
-   "expected_inference_key": "unification",
-   "key_provenance": "expert-stipulated",
-   "key_disputed": false,
-   "key_dispute_reason": null
-  },
-  {
-   "id": "v3-object-ruinous-twenty-thousand",
-   "adj": "ruinous",
-   "num": "twenty",
-   "noun": "thousand",
-   "nounclass": "object",
-   "aann": "The repair cost a ruinous twenty thousand dollars.",
-   "control": "The repair cost twenty thousand ruinous dollars.",
-   "paraphrase_unification": "The twenty thousand formed one continuous stretch, ruinous as a whole.",
-   "paraphrase_distributive": "Each of the twenty thousand was individually ruinous.",
-   "fc_letter_unification": "B",
-   "lexical_overlap": {
-    "unification": 3,
-    "distributive": 3,
-    "parity_ok": true,
-    "direction": "equal"
-   },
-   "nli": {
-    "unification_hyp": "The twenty thousand were a single continuous stretch.",
-    "whole_eval_hyp": "The stretch as a whole was ruinous.",
-    "distributive_foil": "Each thousand individually was ruinous."
-   },
-   "agreement": {
-    "aann_frame": "A ruinous twenty thousand ___ what we needed.",
-    "control_frame": "Twenty ruinous thousand ___ what we needed.",
-    "aann_expected": "was",
-    "control_expected": "were",
-    "agr_letter_was": "B"
-   },
-   "local_fluency": "distributive",
-   "expected_inference_key": "unification",
-   "key_provenance": "expert-stipulated",
-   "key_disputed": true,
-   "key_dispute_reason": "numeral 'thousand' + dollars: numeral-slot caveat as above"
   },
   {
    "id": "v3-temporal-blissful-four-days",
@@ -1020,7 +732,7 @@
     "control_frame": "Six brutal weeks ___ what we needed.",
     "aann_expected": "was",
     "control_expected": "were",
-    "agr_letter_was": "A"
+    "agr_letter_was": "B"
    },
    "local_fluency": "distributive",
    "expected_inference_key": "unification",
@@ -1038,7 +750,7 @@
    "control": "They had two frantic days before the launch.",
    "paraphrase_unification": "The two days formed one continuous stretch, frantic as a whole.",
    "paraphrase_distributive": "Each of the two days was individually frantic.",
-   "fc_letter_unification": "B",
+   "fc_letter_unification": "A",
    "lexical_overlap": {
     "unification": 3,
     "distributive": 3,
@@ -1055,7 +767,7 @@
     "control_frame": "Two frantic days ___ what we needed.",
     "aann_expected": "was",
     "control_expected": "were",
-    "agr_letter_was": "A"
+    "agr_letter_was": "B"
    },
    "local_fluency": "distributive",
    "expected_inference_key": "unification",
@@ -1073,7 +785,7 @@
    "control": "We skied seven dazzling miles of fresh powder.",
    "paraphrase_unification": "The seven miles formed one continuous stretch, dazzling as a whole.",
    "paraphrase_distributive": "Each of the seven miles was individually dazzling.",
-   "fc_letter_unification": "B",
+   "fc_letter_unification": "A",
    "lexical_overlap": {
     "unification": 3,
     "distributive": 3,
@@ -1132,41 +844,6 @@
    "key_provenance": "expert-stipulated",
    "key_disputed": false,
    "key_dispute_reason": null
-  },
-  {
-   "id": "v3-object-modest-two-hundred",
-   "adj": "modest",
-   "num": "two",
-   "noun": "hundred",
-   "nounclass": "object",
-   "aann": "He earned a modest two hundred dollars from the sale.",
-   "control": "He earned two hundred modest dollars from the sale.",
-   "paraphrase_unification": "The two hundred formed one continuous stretch, modest as a whole.",
-   "paraphrase_distributive": "Each of the two hundred was individually modest.",
-   "fc_letter_unification": "A",
-   "lexical_overlap": {
-    "unification": 3,
-    "distributive": 3,
-    "parity_ok": true,
-    "direction": "equal"
-   },
-   "nli": {
-    "unification_hyp": "The two hundred were a single continuous stretch.",
-    "whole_eval_hyp": "The stretch as a whole was modest.",
-    "distributive_foil": "Each hundred individually was modest."
-   },
-   "agreement": {
-    "aann_frame": "A modest two hundred ___ what we needed.",
-    "control_frame": "Two modest hundred ___ what we needed.",
-    "aann_expected": "was",
-    "control_expected": "were",
-    "agr_letter_was": "B"
-   },
-   "local_fluency": "neutral",
-   "expected_inference_key": "unification",
-   "key_provenance": "expert-stipulated",
-   "key_disputed": true,
-   "key_dispute_reason": "numeral 'hundred' + dollars: numeral-slot caveat as above"
   }
  ],
  "tier0": [
@@ -1180,9 +857,9 @@
   {
    "id": "tier0-beautiful-three-days-no_mod",
    "contrast": "no_mod",
-   "aann_position": "A",
-   "A": "We spent a beautiful three days in Rome.",
-   "B": "We spent a three days in Rome."
+   "aann_position": "B",
+   "A": "We spent a three days in Rome.",
+   "B": "We spent a beautiful three days in Rome."
   },
   {
    "id": "tier0-beautiful-three-days-no_plural",
@@ -1194,9 +871,9 @@
   {
    "id": "tier0-beautiful-three-days-no_a",
    "contrast": "no_a",
-   "aann_position": "B",
-   "A": "We spent beautiful three days in Rome.",
-   "B": "We spent a beautiful three days in Rome."
+   "aann_position": "A",
+   "A": "We spent a beautiful three days in Rome.",
+   "B": "We spent beautiful three days in Rome."
   },
   {
    "id": "tier0-gruelling-five-days-reverse_mods",
@@ -1208,44 +885,44 @@
   {
    "id": "tier0-gruelling-five-days-no_mod",
    "contrast": "no_mod",
-   "aann_position": "A",
-   "A": "She endured a gruelling five days at sea.",
-   "B": "She endured a five days at sea."
+   "aann_position": "B",
+   "A": "She endured a five days at sea.",
+   "B": "She endured a gruelling five days at sea."
   },
   {
    "id": "tier0-gruelling-five-days-no_plural",
    "contrast": "no_plural",
-   "aann_position": "B",
-   "A": "She endured a gruelling five day at sea.",
-   "B": "She endured a gruelling five days at sea."
+   "aann_position": "A",
+   "A": "She endured a gruelling five days at sea.",
+   "B": "She endured a gruelling five day at sea."
   },
   {
    "id": "tier0-gruelling-five-days-no_a",
    "contrast": "no_a",
-   "aann_position": "A",
-   "A": "She endured a gruelling five days at sea.",
-   "B": "She endured gruelling five days at sea."
+   "aann_position": "B",
+   "A": "She endured gruelling five days at sea.",
+   "B": "She endured a gruelling five days at sea."
   },
   {
    "id": "tier0-glorious-two-weeks-reverse_mods",
    "contrast": "reverse_mods",
-   "aann_position": "A",
-   "A": "They had a glorious two weeks on the coast.",
-   "B": "They had a two glorious weeks on the coast."
+   "aann_position": "B",
+   "A": "They had a two glorious weeks on the coast.",
+   "B": "They had a glorious two weeks on the coast."
   },
   {
    "id": "tier0-glorious-two-weeks-no_mod",
    "contrast": "no_mod",
-   "aann_position": "B",
-   "A": "They had a two weeks on the coast.",
-   "B": "They had a glorious two weeks on the coast."
+   "aann_position": "A",
+   "A": "They had a glorious two weeks on the coast.",
+   "B": "They had a two weeks on the coast."
   },
   {
    "id": "tier0-glorious-two-weeks-no_plural",
    "contrast": "no_plural",
-   "aann_position": "A",
-   "A": "They had a glorious two weeks on the coast.",
-   "B": "They had a glorious two week on the coast."
+   "aann_position": "B",
+   "A": "They had a glorious two week on the coast.",
+   "B": "They had a glorious two weeks on the coast."
   },
   {
    "id": "tier0-glorious-two-weeks-no_a",
@@ -1264,9 +941,9 @@
   {
    "id": "tier0-miserable-three-weeks-no_mod",
    "contrast": "no_mod",
-   "aann_position": "B",
-   "A": "He survived a three weeks in quarantine.",
-   "B": "He survived a miserable three weeks in quarantine."
+   "aann_position": "A",
+   "A": "He survived a miserable three weeks in quarantine.",
+   "B": "He survived a three weeks in quarantine."
   },
   {
    "id": "tier0-miserable-three-weeks-no_plural",
@@ -1299,16 +976,16 @@
   {
    "id": "tier0-restful-four-months-no_plural",
    "contrast": "no_plural",
-   "aann_position": "B",
-   "A": "We took a restful four month off work.",
-   "B": "We took a restful four months off work."
+   "aann_position": "A",
+   "A": "We took a restful four months off work.",
+   "B": "We took a restful four month off work."
   },
   {
    "id": "tier0-restful-four-months-no_a",
    "contrast": "no_a",
-   "aann_position": "B",
-   "A": "We took restful four months off work.",
-   "B": "We took a restful four months off work."
+   "aann_position": "A",
+   "A": "We took a restful four months off work.",
+   "B": "We took restful four months off work."
   },
   {
    "id": "tier0-punishing-six-months-reverse_mods",
@@ -1320,9 +997,9 @@
   {
    "id": "tier0-punishing-six-months-no_mod",
    "contrast": "no_mod",
-   "aann_position": "A",
-   "A": "The crew faced a punishing six months of drought.",
-   "B": "The crew faced a six months of drought."
+   "aann_position": "B",
+   "A": "The crew faced a six months of drought.",
+   "B": "The crew faced a punishing six months of drought."
   },
   {
    "id": "tier0-punishing-six-months-no_plural",
@@ -1334,9 +1011,9 @@
   {
    "id": "tier0-punishing-six-months-no_a",
    "contrast": "no_a",
-   "aann_position": "B",
-   "A": "The crew faced punishing six months of drought.",
-   "B": "The crew faced a punishing six months of drought."
+   "aann_position": "A",
+   "A": "The crew faced a punishing six months of drought.",
+   "B": "The crew faced punishing six months of drought."
   }
  ]
 }

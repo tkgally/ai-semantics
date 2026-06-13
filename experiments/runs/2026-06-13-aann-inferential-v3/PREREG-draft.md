@@ -30,13 +30,15 @@ robustness arm. The **agreement (was/were) sub-probe** is the **load-bearing dis
 (Condition 3), reported separately and weighted above the paraphrase arm. No instrument is
 reselected after seeing outputs.
 
-## Arms (four; all required; 744 calls = 248/model × 3)
+## Arms (four; all required; 624 calls = 208/model × 3)
+
+*(Geometry after the 2026-06-13 object-class drop: 23 base items, temporal 13 / distance 10.)*
 
 | Arm | Items × models | Calls | Bearing |
 |---|---|---|---|
-| `paraphrase` | 64 (32×{AANN,control}) × 3 | 192 | PRIMARY: U/D forced choice; indicator = unification-choice shift |
-| `nli` | 128 (32×2 hyp×{AANN,control}) × 3 | 384 | CONVERGENT: affirm-rate shift (unification + whole-eval) |
-| `agreement` | 64 (32×{AANN,control}) × 3 | 192 | DISCRIMINATOR (load-bearing): singular-agreement shift |
+| `paraphrase` | 46 (23×{AANN,control}) × 3 | 138 | PRIMARY: U/D forced choice; indicator = unification-choice shift |
+| `nli` | 92 (23×2 hyp×{AANN,control}) × 3 | 276 | CONVERGENT: affirm-rate shift (unification + whole-eval) |
+| `agreement` | 46 (23×{AANN,control}) × 3 | 138 | DISCRIMINATOR (load-bearing): singular-agreement shift |
 | `tier0` | 24 pairs × 3 | 72 | gate-bearing manipulation check, per model |
 
 An absent or partial file for **any** arm (e.g. after a budget abort) makes the run
@@ -44,18 +46,20 @@ An absent or partial file for **any** arm (e.g. after a budget abort) makes the 
 
 ## Frozen inputs (committed before the run; built by `prep.py`, no model calls)
 
-- `stimuli.json` — seed 20260613, **32 hand-authored base items** spanning Mahowald's
-  measure-noun classes (temporal 13, distance 10, object 9). Each item carries: AANN
-  sentence + lexically-matched non-AANN control; U/D paraphrase pair with **seeded A/B
-  counterbalance** (`fc_letter_unification`); per-item **lexical-overlap counts** (Condition
-  2 — all 32 items have **equal** U/D premise overlap, parity asserted in `prep.py`); NLI
-  unification + whole-evaluation hypotheses (+ distributive foil); was/were agreement pair
+- `stimuli.json` — seed 20260613, **23 hand-authored base items** spanning two of Mahowald's
+  measure-noun classes (temporal 13, distance 10; the object/mass class was dropped in the
+  2026-06-13 repair — see README). Each item carries: AANN sentence + lexically-matched
+  non-AANN control; U/D paraphrase pair with **seeded A/B counterbalance**
+  (`fc_letter_unification`); per-item **lexical-overlap counts** (Condition 2 — all 23 items
+  have **equal** U/D premise overlap, parity asserted in `prep.py`, its scope documented);
+  NLI unification + whole-evaluation hypotheses (+ distributive foil); was/were agreement pair
   with seeded counterbalance (`agr_letter_was`); **per-item local-fluency direction**
   (Condition 4); the **expert-stipulated** unification key (Condition 5/6); item-level
-  **`key_disputed`** flags (6 items, all reasoned). The 24 Tier-0 pairs (6 base AANN frames
+  **`key_disputed`** flag (1 item — the yards inventory-edge item; the object items that
+  carried the other flags are gone). The 24 Tier-0 pairs (6 base AANN frames — all temporal —
   × the 4 Mahowald degenerate variants `reverse_mods`/`no_mod`/`no_plural`/`no_a`, AANN
   position counterbalanced) are built mechanically.
-  - **Under-pressure subset (Condition 4):** 11 items where the **distributive** paraphrase
+  - **Under-pressure subset (Condition 4):** 10 items where the **distributive** paraphrase
     is the locally-fluent continuation; analysed separately.
   - **Adjectives are evaluatively-loaded** (the construction's semantics is partly
     evaluative); items where world-knowledge **alone** forces unification were excluded at
@@ -100,7 +104,7 @@ present in both conditions; bootstrap **95% CI, 10,000 resamples over items, see
   **never averaged away**. Flag (mandatory per-model instrument-fragility caveat) if
   ≥ 0.30 (inclusive).
 - **Disputed-coding sensitivity (Condition 6):** the paraphrase-arm positivity is recomputed
-  excluding the 6 item-level `key_disputed` items; if positivity changes, a mandatory caveat
+  excluding the 1 item-level `key_disputed` item; if positivity changes, a mandatory caveat
   attaches.
 
 ## Frozen verdict map (per model, then stratum) — pre-declared convergence rule (Condition 7)
@@ -141,10 +145,10 @@ control, in the direction the published semantics predicts.*
 
 ## Spend (config/budget.md) — pre-flight estimate (Condition 8)
 
-744 calls (248/model × 3: paraphrase 192 + nli 384 + agreement 192 + tier0 72). Pre-flight
+624 calls (208/model × 3: paraphrase 138 + nli 276 + agreement 138 + tier0 72). Pre-flight
 from v2b's **measured billed** single-token-arm per-call rates (A ≈ $0.00033, B ≈ $0.00008,
-C ≈ $0.00012): per-model ≈ $0.082 (A) + $0.020 (B) + $0.030 (C) → **point estimate ≈ $0.13**
-across all three models; with the one verbatim retry and variance, **expected ≈ $0.13–0.25
+C ≈ $0.00012): per-model ≈ $0.069 (A) + $0.017 (B) + $0.025 (C) → **point estimate ≈ $0.11**
+across all three models; with the one verbatim retry and variance, **expected ≈ $0.11–0.20
 billed**. These are *billed* v2b rates, so the known ~4.5× rate-card undercount is **already
 absorbed**, not added on top. This lands **well under $1** at this geometry; **if a later
 geometry change could push it over $1, that must be flagged** (it cannot here). Single-run
