@@ -232,10 +232,34 @@ def nli_affirm(row):
 
 
 def split_by_frame(rows, indicator):
-    """rows -> {frame: {id: indicator}} for cond in {aann, ddc, lcc}."""
-    out = {"aann": {}, "ddc": {}, "lcc": {}}
+    """rows -> {frame: {id: indicator}} for cond in {aann, ddc, lcc}.
+
+    When MULTIPLE rows share a (cond, id) — the NLI arm has TWO hypothesis rows
+    per item (unification_hyp + whole_eval_hyp) — the item value is the MEAN of
+    their indicators. This is the frozen NLI indicator: 'affirm rate on the
+    unification / whole-evaluation hypotheses' (design §3.2/§4; PREREG). For
+    single-row arms (paraphrase) the mean of one value is identity, so the
+    paraphrase numbers are unchanged. None (missing) indicators are dropped from
+    the per-item mean; an item whose rows are all-None becomes None.
+
+    FIX 2026-06-13 (post-run independent verifier): the prior `out[cond][id] =
+    indicator(r)` plain assignment silently OVERWROTE the unification_hyp row with
+    the whole_eval_hyp row (ordered last), so the NLI Δ² reflected whole-eval ONLY
+    — contradicting the frozen both-hypothesis indicator. Corrected here to the
+    item-level mean over both hypotheses. Raw data unchanged (no re-run of the
+    probe); only the analysis aggregation is corrected to match the frozen spec.
+    The overall PARTIAL verdict is unchanged; per-model gpt-5.4-mini moves from
+    PARAPHRASE-PLUS-REFLEX-NO-NLI (buggy whole-eval-only) to CONVERGENT-POSITIVE
+    (spec-faithful both-hyp), because its NLI Δ² is positive under the prereg
+    indicator. See README 'Analysis correction' note."""
+    acc = {"aann": {}, "ddc": {}, "lcc": {}}
     for r in rows:
-        out[r["cond"]][r["id"]] = indicator(r)
+        acc[r["cond"]].setdefault(r["id"], []).append(indicator(r))
+    out = {"aann": {}, "ddc": {}, "lcc": {}}
+    for cond, d in acc.items():
+        for i, vals in d.items():
+            present = [v for v in vals if v is not None]
+            out[cond][i] = (statistics.mean(present) if present else None)
     return out
 
 

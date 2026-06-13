@@ -1,12 +1,12 @@
 # Run: AANN inferential v4 — 2026-06-13
 
-**STATUS: NOT RUN — pre-run critic pending.** The materials (`prep.py` → `stimuli.json`,
-`analyze.py`, `probe.py`, `PREREG-draft.md`) are built and self-tested with **zero model
-calls**. The v4 probe may run **only after** a **fresh independent pre-run critic** (not this
-design's author/orchestrator) reviews the frozen design + `PREREG.md` + `stimuli.json` and
-returns **GO**. A **NO-GO on N1/N2 buildability triggers the Option-B fallback (cancel-direction
-/ conative route), not a run.** `probe.py` refuses to run until `PREREG.md` (and `analyze.py`)
-are present. There is **no `raw/` with model data** — none exists.
+**STATUS: RAN 2026-06-13 (5th session). Verdict PARTIAL.** A **fresh independent pre-run critic
+returned GO** (all six new + eight inherited conditions PASS; anti-cheat PASS; analyze.py fidelity
+PASS; 23/23 items buildable). PREREG was frozen from the reviewed draft, the probe ran (831 calls,
+**$0.1266 billed, 0 missing in every arm, 0 missing-cost calls**), and an **independent post-run
+verifier recomputed every number from raw** — paraphrase/headroom/agreement/Tier-0/cost: **0
+mismatches**, and it **caught a load-bearing NLI-aggregation bug** in `analyze.py` (see *Analysis
+correction* below), which was fixed to the frozen spec and re-run.
 
 ## What v4 is
 
@@ -137,8 +137,49 @@ python3 analyze.py              # reads raw/, writes results.json
 # independent post-run verifier recomputes every number from raw before the result page
 ```
 
-## Run results
+## Run results (verified)
 
-**NOT RUN — placeholder.** This section will be filled by a later, post-critic session after the probe
-runs and an independent post-run verifier recomputes every number from raw. No model calls have been
-made; no results exist.
+831 calls, **$0.1266 billed**, 0 missing of 831, 0 missing-cost calls. Verdict: **PARTIAL** —
+the construction shifts paraphrase selection toward unification in **all three** models (net of the
+lexical cue, with the v3 ceiling removed: headroom gate PASS for all), and this **converges across
+paraphrase + NLI + the grammaticalized agreement reflex in gpt-5.4-mini** (CONVERGENT-POSITIVE);
+claude and gemini show the paraphrase shift **without** cross-instrument convergence (NLI not
+clearing the bar; agreement at ceiling, uninformative) → PARAPHRASE-ONLY. <2 models converge ⇒ not
+SUPPORTED; ≥2 show the paraphrase shift ⇒ PARTIAL.
+
+| Per model (all Tier-0 + headroom PASS) | A claude-sonnet-4.6 | B gpt-5.4-mini | C gemini-3.5-flash |
+|---|---|---|---|
+| Headroom P(uni\|DDC) (PASS ≤0.30) | 0 · PASS | 0.217 · PASS | 0 · PASS |
+| **Paraphrase Δ²** (primary; τ=+0.20, CI-lo>0) | **+0.783** CI[0.61,0.91] · **POS** | **+0.696** CI[0.52,0.87] · **POS** | **+0.957** CI[0.87,1.0] · **POS** |
+|  — P(uni) AANN / DDC / LCC | 0.913 / 0 / 0.130 | 1.0 / 0.217 / 0.304 | 1.0 / 0 / 0.043 |
+| NLI Δ² (convergent; both-hyp) | +0.152 CI[0,0.33] · not pos | **+0.261** CI[0.07,0.46] · **POS** | −0.087 CI[−0.22,0.04] · not pos |
+|  — affirm AANN / DDC / LCC | 0.652 / 0.478 / 0.500 | 0.717 / 0.565 / 0.457 | 0.761 / 0.630 / 0.848 |
+| **Agreement shift** (load-bearing) | 0 · not pos (ceiling) | **+0.652** CI[0.43,0.87] · **POS** | 0 · not pos (ceiling) |
+|  — raw "was" AANN / bare-plural ctrl | 1.0 / 1.0 | 0.957 / 0.304 | 1.0 / 1.0 |
+| Tier-0 (≥20/24) | 24/24 | 23/24 | 24/24 |
+| \|FC Δ² − NLI Δ²\| (flag ≥0.30) | 0.630 (flag) | 0.435 (flag) | 1.044 (flag) |
+| **Category (§6)** | **PARAPHRASE-ONLY** | **CONVERGENT-POSITIVE** | **PARAPHRASE-ONLY** |
+
+Under-pressure subset (distributive locally-fluent, n=10) paraphrase Δ²: 0.90 / 0.70 / 1.00 (all
+positive — the shift survives where the distributive paraphrase is the locally-fluent one).
+Disputed-coding sensitivity: excluding the 1 flagged item changes no category (`category_changes:
+false`). The result page is [`result/aann-inferential-v4`](../../../wiki/findings/results/aann-inferential-v4.md).
+
+## Analysis correction (independent post-run verifier, 2026-06-13)
+
+The independent post-run verifier reproduced paraphrase / headroom / agreement / Tier-0 / cost /
+missingness with **0 mismatches**, and **caught a real bug** in `analyze.py`'s NLI aggregation:
+`split_by_frame` used a plain assignment `out[cond][id] = indicator(r)`, so with **two** NLI rows
+per (cond, id) — `unification_hyp` and `whole_eval_hyp` — the second **silently overwrote** the
+first. The reported NLI Δ² therefore reflected the **whole-evaluation hypothesis only**, contradicting
+the **frozen** indicator (design §3.2/§4 and PREREG: "affirm rate on the **unification + whole-eval**
+hypotheses"; the both-hypothesis average). The fix (item-level mean over both hypotheses, identity for
+the single-row paraphrase arm) corrects the code **to the frozen spec** — not a threshold retune; the
+fix direction was dictated by the pre-registration and independently confirmed by the verifier. **Raw
+data unchanged (no probe re-run).** Effect: the buggy whole-eval-only NLI was null for all three;
+the spec-faithful both-hypothesis NLI is positive for **gpt-5.4-mini** (Δ² 0.26, CI-lo 0.065), which
+moves it from PARAPHRASE-PLUS-REFLEX-NO-NLI to **CONVERGENT-POSITIVE**. The **overall PARTIAL verdict
+is unchanged** (still <2 models converge — claude and gemini have null agreement reflexes). The
+"NLI-null-everywhere / DDC-ceiling-on-NLI" narrative was a bug artifact: the both-hypothesis DDC
+affirm rates (0.48 / 0.57 / 0.63) are **off-ceiling**, so NLI did have headroom; it simply registers
+the construction effect only for gpt.

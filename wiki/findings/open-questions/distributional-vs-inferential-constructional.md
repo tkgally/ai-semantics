@@ -42,6 +42,25 @@ links:
 > item's local fluency. The one signal that did move — gpt-5.4-mini's grammaticalized
 > singular-agreement reflex — is a *form* reflex, not the inferential discriminator this question
 > seeks. The question stays **open**.
+>
+> **Update (2026-06-13, fifth session) — the wall is escapable: with a control whose default is
+> *distributive*, the construction's effect on the reading becomes measurable.**
+> [`result/aann-inferential-v4`](../results/aann-inferential-v4.md) applied the precise lesson above
+> — bias the *control's* baseline, not just the item's local fluency — by building a
+> **distributive-default control** ("on each of the three days…") plus a lexical-cue control. It
+> worked: the control read distributive at baseline (P(uni|DDC) = 0 / 0.22 / 0, off the v3 ceiling),
+> and against it all three models shifted paraphrase selection toward unification (Δ² +0.78 / +0.70 /
+> +0.96, net of the lexical cue). So "inference and distributional default coincide" is **not a
+> permanent wall** — a headroom-bearing control separates the construction's contribution from the
+> phrase's default. **But** what the separation buys is sense-dependent: the shift is a
+> forced-choice **paraphrase-preference** shift in all three models, and it rises to a cross-instrument
+> (paraphrase + NLI + grammaticalized agreement) **inferential** signal in only **one** model
+> (gpt-5.4-mini). For the other two, the move from move-(1) to genuine sense-(2) inferential role is
+> **still not secured** — the paraphrase shift could be a richer distributional/constructional
+> preference rather than entailment commitment, exactly the sense-(1)/sense-(2) gap this page is
+> about. So the question stays **open**, but sharper: the discriminating design exists and fires; the
+> remaining work is whether the paraphrase-preference shift *is* inferential role, which the NLI +
+> agreement convergence test (passed by 1/3 models) is the current best discriminator for.
 
 ## The question
 

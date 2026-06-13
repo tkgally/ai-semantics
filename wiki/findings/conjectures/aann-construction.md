@@ -135,6 +135,25 @@ inferential clause is **neither supported nor cleanly disconfirmed** — it is *
 instrument as designed** (a future probe needs a control whose default reading is *distributive*).
 The productive-gradient half's SUPPORTED status is unaffected; $0.0910, 0 missing.
 
+**Update 2026-06-13 (fifth session): the inferential half is now PARTIAL — the v3 ceiling was
+removed and a real construction effect appeared.** The v4 redesign ran (after a fresh pre-run-critic
+GO + independent post-run verification) → [`result/aann-inferential-v4`](../results/aann-inferential-v4.md).
+The single change — replacing the ceiling-pinned bare-plural control with a **distributive-default
+control** (an itemizing "on each of the three days…" frame) plus a **lexical-cue control** so the
+headline is a double contrast Δ² = P(uni|AANN) − P(uni|LCC) — **worked**: the new control reads
+distributive at baseline for all three models (P(uni|DDC) = 0 / 0.22 / 0, where v3's control sat at
+0.78–1.00). Against it, **all three models shift paraphrase selection toward the unification reading**
+(Δ² +0.78 / +0.70 / +0.96, net of the lexical cue) — the positive v3 could not reach. But the shift
+**converges across instruments in only one model**: **gpt-5.4-mini is CONVERGENT-POSITIVE**
+(paraphrase + NLI entailment + the grammaticalized singular-agreement reflex +0.65, replicating v3's
++0.74), while **claude and gemini are PARAPHRASE-ONLY** (the shift does not carry to NLI, and their
+agreement reflex is flat at ceiling). Verdict **PARTIAL** (<2 models converge). So the inferential
+clause moves from "untestable at this instrument" to **partially supported**: a measured construction
+effect, fully convergent in one model, paraphrase-level in two — **not** established across the panel.
+`anchor: internal-contrast-only`; $0.1266, 0 missing. (An independent verifier caught an
+NLI-aggregation bug fixed to the frozen spec; the overall PARTIAL verdict was unchanged by the fix —
+see the result page.)
+
 ## Notes / caveats
 
 - Memorization is the main confound; the held-out lexical-item check is the main defense.

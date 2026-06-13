@@ -33,6 +33,25 @@ links:
 > 3. **A pervasiveness bound.** [`result/instrument-disagreement-reanalysis-v1`](../results/instrument-disagreement-reanalysis-v1.md) (read-only, $0) turned the anecdote into a descriptive statistic across two existing runs: **large instrument disagreement (50.0 pp) is confined to the single gpt-5.4-mini × conative cell**; the other eight cells (claude/gemini × conative, all three models × both add-direction constructions in coercion-v2) show ≤20.8 pp, mostly ≤10 pp. So instrument fragility is **not pervasive** in this panel — though the add-direction cells' agreement is partly ceiling/floor compression, not demonstrated invariance (the re-analysis is descriptive, no significance test).
 >
 > Net: instrument sensitivity now has **two identified sources** — a model-specific logical-slip mechanism (gpt-5.4-mini's excluded-middle over-inference, FC-localized) and a general NLI-vs-FC pragmatics/entailment effect (NLI more permissive of Gricean inference, uniform across models) — and the re-analysis **bounds its pervasiveness** to one model × construction cell at the large end. The page **stays `open`**: it is a standing methodological question that conditions how every Tier-4 result is read, and the "serious answer" below (a dedicated cross-instrument × cross-construction design with a pre-registered primary instrument and an operationalization gate queued for Tom) has **not** been run — these three results motivate and partially characterize the question, they do not close it.
+>
+> **Update (2026-06-13, fifth session) — the AANN inferential v4 produces the *largest* FC-vs-NLI
+> disagreement in the record, and it is *not* a ceiling artifact.**
+> [`result/aann-inferential-v4`](../results/aann-inferential-v4.md) ran a forced-choice paraphrase
+> arm and an entailment-NLI arm on the *same* frozen items (the AANN against a distributive-default
+> control). The named |FC Δ² − NLI Δ²| statistic is flagged for **all three** models — **0.63 / 0.43
+> / 1.04** — exceeding the prior 0.50 pp single-cell maximum, and now spread across *every* model
+> rather than confined to one. The pattern: the exclusive forced-choice instrument registers the
+> construction's unification shift cleanly in all three models (Δ² +0.78 / +0.70 / +0.96), while the
+> permissive NLI entailment instrument registers it only in gpt-5.4-mini (+0.26; claude +0.15 not
+> clearing, gemini −0.09). Crucially the NLI nulls are **off-ceiling** (both-hypothesis DDC affirm
+> rates 0.48 / 0.57 / 0.63 — verified after a fixed aggregation bug; the earlier-looking "NLI
+> ceiling" was the bug), so this is genuine instrument *divergence*, not compression: the forced
+> exclusive choice is simply more sensitive to the construction than the "is it entailed?" judgment.
+> This is the **third** datum-type for the page — distinct from the gpt-specific logical slip and the
+> uniform Gricean-permissiveness effect: here FC and NLI disagree because **FC's exclusivity surfaces
+> a construction effect that NLI's permissiveness dilutes**, and the disagreement is now *broad* (all
+> three models) rather than confined. The page stays **`open`**, with this as its sharpest and most
+> general FC-vs-NLI datum yet.
 
 ## The question
 

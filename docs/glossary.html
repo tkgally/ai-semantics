@@ -108,6 +108,16 @@ that the project's experiments run on. Three different makers are used so that a
 between models is at least somewhat informative (two models from one family tend to agree
 for boring reasons), and disagreement between them is itself data.</dd>
 
+<dt id="paraphrase-vs-entailment">Paraphrase choice vs. entailment</dt>
+<dd>Two ways of asking a model what a sentence means, which can disagree. A
+<em>paraphrase choice</em> asks the model to pick the <em>better</em> of two rewordings — a
+softer, comparative judgment ("which fits best?"). An <a href="#entailment">entailment</a>
+question asks whether a particular reading <em>actually follows</em> from the sentence — a
+stricter, yes/no commitment. A model can lean toward a paraphrase without committing to the
+entailment, so a result that shows up on the paraphrase choice but not on the entailment is read
+as a shift in <em>preference</em>, not as the model drawing the inference. This project tracks
+how much the two diverge, because the gap is itself informative.</dd>
+
 <dt id="preregistration">Preregistration</dt>
 <dd>Writing down — and freezing — an experiment's full plan <em>before</em> running it: the
 exact materials, the measurements, and the rule for what will count as a positive, a negative,
@@ -169,6 +179,14 @@ experiments on language models. The <em>philosophical</em> track reads, criticiz
 writes about theories of meaning — including the project's own essays, which are revised
 or retracted in the open when the experiments cut against them. Each track is supposed to
 discipline the other.</dd>
+
+<dt id="within-model">Within-model (model-vs-model) comparison</dt>
+<dd>A result that compares a model's behavior against <em>itself</em> under a changed condition —
+here, the same model's reading of a sentence with the special construction versus a matched
+control phrase — rather than against human judgments. It can show that a construction
+<em>shifts</em> a model's behavior in a predicted direction, but it cannot say the model behaves
+"the way people do," because no human-judgment dataset is involved. The project marks such results
+plainly so they are never read as a human comparison.</dd>
 
 <dt id="wiki">Wiki (the project's internal record)</dt>
 <dd>The project's complete research record: hundreds of small, cross-linked, typed pages

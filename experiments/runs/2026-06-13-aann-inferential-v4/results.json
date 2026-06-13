@@ -89,23 +89,23 @@
    },
    "nli": {
     "label": "NLI \u0394\u00b2 = affirm(AANN) - affirm(LCC) [unification + whole-eval hyps]",
-    "p_uni_aann": 0.913,
-    "p_uni_ddc": 0.8696,
-    "p_uni_lcc": 0.8696,
-    "aann_shift": 0.0435,
-    "lexical_cue_shift": 0.0,
-    "delta2": 0.0435,
+    "p_uni_aann": 0.6522,
+    "p_uni_ddc": 0.4783,
+    "p_uni_lcc": 0.5,
+    "aann_shift": 0.1739,
+    "lexical_cue_shift": 0.0217,
+    "delta2": 0.1522,
     "ci95": [
-     -0.1304,
-     0.2174
+     0.0,
+     0.3261
     ],
     "n_items": 23,
     "delta2_positive": false,
     "aann_shift_clears_tau": false
    },
    "nli_headroom": {
-    "affirm_ddc": 0.8696,
-    "status": "HEADROOM-FAIL",
+    "affirm_ddc": 0.4783,
+    "status": "MARGINAL",
     "note": "reported alongside; the FC headroom gate governs the primary"
    },
    "agreement": {
@@ -122,11 +122,11 @@
    },
    "instrument_disagreement": {
     "statistic": "|FC \u0394\u00b2 - NLI \u0394\u00b2|",
-    "value": 0.7391,
+    "value": 0.6304,
     "flag": true,
     "fed_to": "open-question/instrument-sensitivity-constructional-inference"
    },
-   "instrument_fragility_caveat": "mandatory: |FC \u0394\u00b2 - NLI \u0394\u00b2| = 0.7391 >= 0.3; this model's inferential read is instrument-fragile (fed to the instrument-sensitivity open question), never averaged away (PREREG)",
+   "instrument_fragility_caveat": "mandatory: |FC \u0394\u00b2 - NLI \u0394\u00b2| = 0.6304 >= 0.3; this model's inferential read is instrument-fragile (fed to the instrument-sensitivity open question), never averaged away (PREREG)",
    "category": "PARAPHRASE-ONLY",
    "headline": "shift in paraphrase selection WITHOUT the grammaticalized reflex (NOT 'draws the unification inference')",
    "convergent_positive": false,
@@ -211,22 +211,22 @@
    },
    "nli": {
     "label": "NLI \u0394\u00b2 = affirm(AANN) - affirm(LCC) [unification + whole-eval hyps]",
-    "p_uni_aann": 0.8261,
-    "p_uni_ddc": 0.913,
-    "p_uni_lcc": 0.6957,
-    "aann_shift": -0.087,
-    "lexical_cue_shift": -0.2174,
-    "delta2": 0.1304,
+    "p_uni_aann": 0.7174,
+    "p_uni_ddc": 0.5652,
+    "p_uni_lcc": 0.4565,
+    "aann_shift": 0.1522,
+    "lexical_cue_shift": -0.1087,
+    "delta2": 0.2609,
     "ci95": [
-     -0.1304,
-     0.3913
+     0.0652,
+     0.4565
     ],
     "n_items": 23,
-    "delta2_positive": false,
+    "delta2_positive": true,
     "aann_shift_clears_tau": false
    },
    "nli_headroom": {
-    "affirm_ddc": 0.913,
+    "affirm_ddc": 0.5652,
     "status": "HEADROOM-FAIL",
     "note": "reported alongside; the FC headroom gate governs the primary"
    },
@@ -244,14 +244,14 @@
    },
    "instrument_disagreement": {
     "statistic": "|FC \u0394\u00b2 - NLI \u0394\u00b2|",
-    "value": 0.5653,
+    "value": 0.4348,
     "flag": true,
     "fed_to": "open-question/instrument-sensitivity-constructional-inference"
    },
-   "instrument_fragility_caveat": "mandatory: |FC \u0394\u00b2 - NLI \u0394\u00b2| = 0.5653 >= 0.3; this model's inferential read is instrument-fragile (fed to the instrument-sensitivity open question), never averaged away (PREREG)",
-   "category": "PARAPHRASE-PLUS-REFLEX-NO-NLI",
-   "headline": "paraphrase double-contrast and agreement shift positive but the NLI convergent arm did not confirm; not full convergence",
-   "convergent_positive": false,
+   "instrument_fragility_caveat": "mandatory: |FC \u0394\u00b2 - NLI \u0394\u00b2| = 0.4348 >= 0.3; this model's inferential read is instrument-fragile (fed to the instrument-sensitivity open question), never averaged away (PREREG)",
+   "category": "CONVERGENT-POSITIVE",
+   "headline": "the construction shifts inferential behaviour, including the grammaticalized singular reflex, relative to a matched control, in the direction the published semantics predicts",
+   "convergent_positive": true,
    "disputed_sensitivity": {
     "n_disputed_excluded": 1,
     "paraphrase_positive_all_items": true,
@@ -333,22 +333,22 @@
    },
    "nli": {
     "label": "NLI \u0394\u00b2 = affirm(AANN) - affirm(LCC) [unification + whole-eval hyps]",
-    "p_uni_aann": 1,
-    "p_uni_ddc": 1,
-    "p_uni_lcc": 1,
-    "aann_shift": 0,
-    "lexical_cue_shift": 0,
-    "delta2": 0,
+    "p_uni_aann": 0.7609,
+    "p_uni_ddc": 0.6304,
+    "p_uni_lcc": 0.8478,
+    "aann_shift": 0.1304,
+    "lexical_cue_shift": 0.2174,
+    "delta2": -0.087,
     "ci95": [
-     0,
-     0
+     -0.2174,
+     0.0435
     ],
     "n_items": 23,
     "delta2_positive": false,
     "aann_shift_clears_tau": false
    },
    "nli_headroom": {
-    "affirm_ddc": 1,
+    "affirm_ddc": 0.6304,
     "status": "HEADROOM-FAIL",
     "note": "reported alongside; the FC headroom gate governs the primary"
    },
@@ -366,11 +366,11 @@
    },
    "instrument_disagreement": {
     "statistic": "|FC \u0394\u00b2 - NLI \u0394\u00b2|",
-    "value": 0.9565,
+    "value": 1.0435,
     "flag": true,
     "fed_to": "open-question/instrument-sensitivity-constructional-inference"
    },
-   "instrument_fragility_caveat": "mandatory: |FC \u0394\u00b2 - NLI \u0394\u00b2| = 0.9565 >= 0.3; this model's inferential read is instrument-fragile (fed to the instrument-sensitivity open question), never averaged away (PREREG)",
+   "instrument_fragility_caveat": "mandatory: |FC \u0394\u00b2 - NLI \u0394\u00b2| = 1.0435 >= 0.3; this model's inferential read is instrument-fragile (fed to the instrument-sensitivity open question), never averaged away (PREREG)",
    "category": "PARAPHRASE-ONLY",
    "headline": "shift in paraphrase selection WITHOUT the grammaticalized reflex (NOT 'draws the unification inference')",
    "convergent_positive": false,
