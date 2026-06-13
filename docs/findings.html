@@ -30,7 +30,7 @@ from studies the project designed itself and ran on a fixed
 <a href="glossary.html#panel">panel</a> of three commercial
 <a href="glossary.html#llm">language models</a> from different makers, scored wherever
 possible against published <a href="glossary.html#anchor">human-judgment datasets</a>.
-Updated as new results land. <em>Current through June 12, 2026 (third session).</em></p>
+Updated as new results land. <em>Current through June 13, 2026.</em></p>
 
 <div class="caveat">
 <strong>How to read all of this.</strong> These are small, careful studies — typically a
@@ -62,18 +62,24 @@ itself) adds that. The project's central question was whether language models ac
   implies the kick may have missed). On matched tests, all three models were less reliable
   and less consistent at this — a directional asymmetry the project has confirmed isn't
   just one test being harder than another.</li>
-  <li><strong>A fine-grained acceptability landscape is reproduced — and generalized
-  (new, June 12).</strong> English allows "a" before a plural in <em>a beautiful five
-  days</em>, but only comfortably with certain adjectives and nouns. Compared against a
-  published dataset of human acceptability ratings over hundreds of adjective–noun
-  combinations, all three models' graded ratings reproduce the human landscape's shape
-  (<a href="glossary.html#rank-correlation">rank correlations</a> around 0.7), survive a
-  word-frequency control and a guard against a "nouns-only" shortcut, and — on a
-  <a href="glossary.html#held-out">held-out</a>, frequency-matched list of adjectives the
-  human raters never saw — reproduce the gradient again (unevenly: it fails for time-nouns
-  specifically). This is gradient-<em>tracking</em>, consistent with a productive pattern;
-  whether the models use the construction's <em>meaning</em> (a unified, evaluated stretch)
-  is deliberately untested so far.</li>
+  <li><strong>A fine-grained acceptability landscape is reproduced — and generalized, with
+  one bounded exception (updated June 13).</strong> English allows "a" before a plural in
+  <em>a beautiful five days</em>, but only comfortably with certain adjectives and nouns.
+  Compared against a published dataset of human acceptability ratings over hundreds of
+  adjective–noun combinations, all three models' graded ratings reproduce the human
+  landscape's shape (<a href="glossary.html#rank-correlation">rank correlations</a> around
+  0.7), survive a word-frequency control and a guard against a "nouns-only" shortcut, and —
+  on a <a href="glossary.html#held-out">held-out</a>, frequency-matched list of adjectives the
+  human raters never saw — reproduce the gradient again. A June 13 follow-up re-ran the one
+  weak spot — time-words (<em>days, weeks, months, years</em>) — with five times as much
+  data, and confirmed it is <strong>real, not a fluke</strong>: for time-words, none of the
+  three models reproduces the human ordering, at any level of detail. So the generalization to
+  new adjectives holds for most noun types but not for time-words — a bounded gap that refines,
+  not overturns, the positive result. (Honest caveat recorded with it: a known typo in one of
+  the original test sentences depresses its ratings and shifts exactly where the
+  "fails"/"too-thin-to-tell" line falls.) All of this is gradient-<em>tracking</em>, consistent
+  with a productive pattern; whether the models use the construction's <em>meaning</em> (a
+  unified, evaluated stretch) is deliberately untested so far.</li>
   <li><strong>One pattern is impressively robust.</strong> The "the more X, the more Y"
   construction survived every harder test thrown at it, including logical traps ("it is
   <em>not</em> the case that the more X…") that two of three models handled correctly —
@@ -129,20 +135,22 @@ history, as a history, is doing constitutive work: it looks like two systems con
 not a meaning being built between them. One human-like behavior was also missing: people's
 descriptions get shorter as a naming game goes on; the AI pairs' didn't.</p>
 
-<p>The follow-up (June 12, 2026) sharpened the question: given a conversation record whose
-evidence about a nickname <em>conflicts</em> — early turns pointing to one shape, later turns
-to its near-twin — does a fresh model side with the most recent usage, as a person treats the
-latest agreement as the one in force? The
-<a href="glossary.html#preregistration">preregistered</a> verdict was
-<strong>inconclusive</strong> for all three models tested. One model did show an apparent
-recency preference, but only when the conversation was printed earliest-first; printed
-latest-first, the preference vanished — so it may track <em>position on the page</em>, not
-conversational history (a <a href="glossary.html#confound">confound</a> the design caught
-because an independent pre-run review demanded the reversed-printing control). A second
-model's materials failed their own quality check and were set aside as untestable; the third
-was too small a sample to call. Net: the working hypothesis that AI conventions ignore
-conversational history was neither overturned nor strengthened — the question stays open, and
-every future test of it now has to separate "most recent" from "nearest on the page."</p>
+<p>The follow-up sharpened the question: given a conversation record whose evidence about a
+nickname <em>conflicts</em> — early turns pointing to one shape, later turns to its near-twin —
+does a fresh model side with the most recent usage, as a person treats the latest agreement as
+the one in force? A first attempt (June 12, 2026) was inconclusive partly for technical reasons
+(cut-off answers, weak materials, too few cases). A second attempt (June 13, 2026) repaired all
+of those and re-ran on a clean setup, and the
+<a href="glossary.html#preregistration">preregistered</a> verdict is <strong>still
+inconclusive</strong> — but now for a substantive reason. On the cleanest, best-powered model an
+apparent order effect showed up when the conversation record was read front-to-back, but it
+<em>vanished</em> when the same record was read back-to-front, so it is not a stable
+order-tracking effect. Importantly, this does <em>not</em> show the model is merely following the
+physically-last line either — that reading was checked and rejected. The careful statement is
+only that the apparent effect is fragile and direction-dependent, so the question stays open.
+One of the three models still couldn't be read on this test (its materials were too weak even
+after repair). Net: the working hypothesis that AI conventions ignore conversational history was
+neither overturned nor strengthened.</p>
 
 <p>This section also gained the project's first <strong>essay</strong>, "Aggregation, not
 constitution" — see <a href="plans.html">Plans &amp; ideas</a> for what the philosophical

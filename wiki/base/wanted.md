@@ -117,7 +117,7 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
   status: **RECEIVED** (2026-06-12; catalogued as [`wiki/base/sources/schuele-2025-semantics-of-llms.md`](sources/schuele-2025-semantics-of-llms.md) — abstract + 7 section-level quotes verbatim-verified against arXiv HTML v1; the Intellectica original was not consulted).
 - [P2] Millière, R. & Buckner, C. 2024. "A Philosophical Introduction to Language Models — Part I: Continuity with Classic Debates." arXiv 2401.03910.
   why: the standard survey connecting LLM-meaning disputes to the classic debates the project's concept pages characterize; useful as a map, not an anchor.
-  status: wanted (OA on arXiv; only the title/landing page seen 2026-06-12)
+  status: **RECEIVED** (2026-06-13; catalogued as [`wiki/base/sources/milliere-buckner-2024-philosophical-intro-i.md`](sources/milliere-buckner-2024-philosophical-intro-i.md) — abstract + 7 section-level quotes verbatim-verified against the ar5iv HTML rendering of arXiv v1; arxiv.org/html returns 404 for this paper. Part II, arXiv 2405.03207, remains uncatalogued backlog).
 - [P3] [authors not yet verified] 2025. "Mechanistic Indicators of Understanding in Large Language Models." arXiv 2507.08017.
   why: candidate bridge between interpretability evidence and the understanding/meaning question (surfaced in the 2026-06-12 search; only the arXiv id and title were seen — page not opened, authors unknown).
   status: wanted (found 2026-06-12, not catalogued)

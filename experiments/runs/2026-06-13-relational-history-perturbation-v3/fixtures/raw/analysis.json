@@ -1,0 +1,1433 @@
+{
+  "claude": {
+    "gate": {
+      "control_acc": 1.0,
+      "n_pass": 9,
+      "clusters": {
+        "0:0": true,
+        "0:1": true,
+        "0:2": true,
+        "1:0": true,
+        "1:1": true,
+        "1:2": true,
+        "2:0": true,
+        "2:1": true,
+        "2:2": true
+      }
+    },
+    "strict_compliance": 1.0,
+    "retried": 0,
+    "na_concentration_flags": [],
+    "primary": {
+      "label": "PRIMARY",
+      "n_mixed": 108,
+      "n_parsed": 108,
+      "n_na": 0,
+      "oop": 0.0,
+      "dirs": {
+        "fwd": {
+          "n_in_pair": 54,
+          "n_gated_clusters": 9,
+          "rho_chron": 0.9259259259259259,
+          "ci_chron": {
+            "lo": 0.8703703703703703,
+            "hi": 0.9814814814814815,
+            "degenerate": false,
+            "side": 1,
+            "n_clusters": 9
+          },
+          "rho_phys": 0.9259259259259259,
+          "ci_phys": {
+            "lo": 0.8703703703703703,
+            "hi": 0.9814814814814815,
+            "degenerate": false,
+            "side": 1,
+            "n_clusters": 9
+          },
+          "rho_chron_ungated": 0.9259259259259259
+        },
+        "rev": {
+          "n_in_pair": 54,
+          "n_gated_clusters": 9,
+          "rho_chron": 0.9259259259259259,
+          "ci_chron": {
+            "lo": 0.8703703703703703,
+            "hi": 0.9814814814814815,
+            "degenerate": false,
+            "side": 1,
+            "n_clusters": 9
+          },
+          "rho_phys": 0.4074074074074074,
+          "ci_phys": {
+            "lo": 0.35185185185185186,
+            "hi": 0.46296296296296297,
+            "degenerate": false,
+            "side": -1,
+            "n_clusters": 9
+          },
+          "rho_chron_ungated": 0.9259259259259259
+        }
+      },
+      "guard_ok": true,
+      "floor24_ok": true,
+      "floor36_ok": true,
+      "secondary": {
+        "clean": {
+          "rho_chron": 0.7777777777777778,
+          "n": 36
+        },
+        "interleaved": {
+          "rho_chron": 1.0,
+          "n": 72
+        }
+      }
+    },
+    "verdict": "FALSIFIED",
+    "verdict_reason": "non-commutative, chronology-tracking (RECENCY); rho_chron CI excludes 0.5 on the same side in BOTH presentation directions, with >= 24 gated in-pair parsed trials per direction",
+    "sensitivity_cuts": {
+      "strict-only": {
+        "label": "strict-only",
+        "n_mixed": 108,
+        "n_parsed": 108,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 9,
+            "rho_chron": 0.9259259259259259,
+            "ci_chron": {
+              "lo": 0.8703703703703703,
+              "hi": 0.9814814814814815,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 9
+            },
+            "rho_phys": 0.9259259259259259,
+            "ci_phys": {
+              "lo": 0.8703703703703703,
+              "hi": 0.9814814814814815,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 9
+            },
+            "rho_chron_ungated": 0.9259259259259259
+          },
+          "rev": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 9,
+            "rho_chron": 0.9259259259259259,
+            "ci_chron": {
+              "lo": 0.8703703703703703,
+              "hi": 0.9814814814814815,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 9
+            },
+            "rho_phys": 0.4074074074074074,
+            "ci_phys": {
+              "lo": 0.35185185185185186,
+              "hi": 0.46296296296296297,
+              "degenerate": false,
+              "side": -1,
+              "n_clusters": 9
+            },
+            "rho_chron_ungated": 0.9259259259259259
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.7777777777777778,
+            "n": 36
+          },
+          "interleaved": {
+            "rho_chron": 1.0,
+            "n": 72
+          }
+        },
+        "verdict_descriptive_only": "FALSIFIED"
+      },
+      "NAs-as-out-of-pair": {
+        "label": "NAs-as-out-of-pair",
+        "n_mixed": 108,
+        "n_parsed": 108,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 9,
+            "rho_chron": 0.9259259259259259,
+            "ci_chron": {
+              "lo": 0.8703703703703703,
+              "hi": 0.9814814814814815,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 9
+            },
+            "rho_phys": 0.9259259259259259,
+            "ci_phys": {
+              "lo": 0.8703703703703703,
+              "hi": 0.9814814814814815,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 9
+            },
+            "rho_chron_ungated": 0.9259259259259259
+          },
+          "rev": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 9,
+            "rho_chron": 0.9259259259259259,
+            "ci_chron": {
+              "lo": 0.8703703703703703,
+              "hi": 0.9814814814814815,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 9
+            },
+            "rho_phys": 0.4074074074074074,
+            "ci_phys": {
+              "lo": 0.35185185185185186,
+              "hi": 0.46296296296296297,
+              "degenerate": false,
+              "side": -1,
+              "n_clusters": 9
+            },
+            "rho_chron_ungated": 0.9259259259259259
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.7777777777777778,
+            "n": 36
+          },
+          "interleaved": {
+            "rho_chron": 1.0,
+            "n": 72
+          }
+        },
+        "verdict_descriptive_only": "FALSIFIED"
+      },
+      "leave-out-pair-0": {
+        "label": "leave-out-pair-0",
+        "n_mixed": 72,
+        "n_parsed": 72,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.9166666666666666,
+            "ci_chron": {
+              "lo": 0.8611111111111112,
+              "hi": 0.9722222222222222,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.9166666666666666,
+            "ci_phys": {
+              "lo": 0.8611111111111112,
+              "hi": 0.9722222222222222,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.9166666666666666
+          },
+          "rev": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.9166666666666666,
+            "ci_chron": {
+              "lo": 0.8611111111111112,
+              "hi": 0.9722222222222222,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.4166666666666667,
+            "ci_phys": {
+              "lo": 0.3611111111111111,
+              "hi": 0.4722222222222222,
+              "degenerate": false,
+              "side": -1,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.9166666666666666
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.75,
+            "n": 24
+          },
+          "interleaved": {
+            "rho_chron": 1.0,
+            "n": 48
+          }
+        },
+        "verdict_descriptive_only": "FALSIFIED"
+      },
+      "leave-out-pair-1": {
+        "label": "leave-out-pair-1",
+        "n_mixed": 72,
+        "n_parsed": 72,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.9444444444444444,
+            "ci_chron": {
+              "lo": 0.8888888888888888,
+              "hi": 1.0,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.9444444444444444,
+            "ci_phys": {
+              "lo": 0.8888888888888888,
+              "hi": 1.0,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.9444444444444444
+          },
+          "rev": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.9444444444444444,
+            "ci_chron": {
+              "lo": 0.8888888888888888,
+              "hi": 1.0,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.3888888888888889,
+            "ci_phys": {
+              "lo": 0.3333333333333333,
+              "hi": 0.4444444444444444,
+              "degenerate": false,
+              "side": -1,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.9444444444444444
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.8333333333333334,
+            "n": 24
+          },
+          "interleaved": {
+            "rho_chron": 1.0,
+            "n": 48
+          }
+        },
+        "verdict_descriptive_only": "FALSIFIED"
+      },
+      "leave-out-pair-2": {
+        "label": "leave-out-pair-2",
+        "n_mixed": 72,
+        "n_parsed": 72,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.9166666666666666,
+            "ci_chron": {
+              "lo": 0.8611111111111112,
+              "hi": 0.9722222222222222,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.9166666666666666,
+            "ci_phys": {
+              "lo": 0.8611111111111112,
+              "hi": 0.9722222222222222,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.9166666666666666
+          },
+          "rev": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.9166666666666666,
+            "ci_chron": {
+              "lo": 0.8611111111111112,
+              "hi": 0.9722222222222222,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.4166666666666667,
+            "ci_phys": {
+              "lo": 0.3611111111111111,
+              "hi": 0.4722222222222222,
+              "degenerate": false,
+              "side": -1,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.9166666666666666
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.75,
+            "n": 24
+          },
+          "interleaved": {
+            "rho_chron": 1.0,
+            "n": 48
+          }
+        },
+        "verdict_descriptive_only": "FALSIFIED"
+      },
+      "pair-level-bootstrap": {
+        "label": "pair-level-bootstrap (descriptive only)",
+        "n_mixed": 108,
+        "n_parsed": 108,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 3,
+            "rho_chron": 0.9259259259259259,
+            "ci_chron": {
+              "lo": 0.8888888888888888,
+              "hi": 0.9444444444444444,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 3
+            },
+            "rho_phys": 0.9259259259259259,
+            "ci_phys": {
+              "lo": 0.8888888888888888,
+              "hi": 0.9444444444444444,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 3
+            },
+            "rho_chron_ungated": 0.9259259259259259
+          },
+          "rev": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 3,
+            "rho_chron": 0.9259259259259259,
+            "ci_chron": {
+              "lo": 0.8888888888888888,
+              "hi": 0.9444444444444444,
+              "degenerate": false,
+              "side": 1,
+              "n_clusters": 3
+            },
+            "rho_phys": 0.4074074074074074,
+            "ci_phys": {
+              "lo": 0.3888888888888889,
+              "hi": 0.4444444444444444,
+              "degenerate": false,
+              "side": -1,
+              "n_clusters": 3
+            },
+            "rho_chron_ungated": 0.9259259259259259
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.7777777777777778,
+            "n": 36
+          },
+          "interleaved": {
+            "rho_chron": 1.0,
+            "n": 72
+          }
+        }
+      }
+    }
+  },
+  "gpt": {
+    "gate": {
+      "control_acc": 1.0,
+      "n_pass": 9,
+      "clusters": {
+        "0:0": true,
+        "0:1": true,
+        "0:2": true,
+        "1:0": true,
+        "1:1": true,
+        "1:2": true,
+        "2:0": true,
+        "2:1": true,
+        "2:2": true
+      }
+    },
+    "strict_compliance": 1.0,
+    "retried": 0,
+    "na_concentration_flags": [],
+    "primary": {
+      "label": "PRIMARY",
+      "n_mixed": 108,
+      "n_parsed": 108,
+      "n_na": 0,
+      "oop": 0.0,
+      "dirs": {
+        "fwd": {
+          "n_in_pair": 54,
+          "n_gated_clusters": 9,
+          "rho_chron": 0.5,
+          "ci_chron": {
+            "lo": 0.4074074074074074,
+            "hi": 0.5925925925925926,
+            "degenerate": false,
+            "side": 0,
+            "n_clusters": 9
+          },
+          "rho_phys": 0.5,
+          "ci_phys": {
+            "lo": 0.4074074074074074,
+            "hi": 0.5925925925925926,
+            "degenerate": false,
+            "side": 0,
+            "n_clusters": 9
+          },
+          "rho_chron_ungated": 0.5
+        },
+        "rev": {
+          "n_in_pair": 54,
+          "n_gated_clusters": 9,
+          "rho_chron": 0.5,
+          "ci_chron": {
+            "lo": 0.4074074074074074,
+            "hi": 0.5925925925925926,
+            "degenerate": false,
+            "side": 0,
+            "n_clusters": 9
+          },
+          "rho_phys": 0.5,
+          "ci_phys": {
+            "lo": 0.4074074074074074,
+            "hi": 0.5925925925925926,
+            "degenerate": false,
+            "side": 0,
+            "n_clusters": 9
+          },
+          "rho_chron_ungated": 0.5
+        }
+      },
+      "guard_ok": true,
+      "floor24_ok": true,
+      "floor36_ok": true,
+      "secondary": {
+        "clean": {
+          "rho_chron": 0.6666666666666666,
+          "n": 36
+        },
+        "interleaved": {
+          "rho_chron": 0.4166666666666667,
+          "n": 72
+        }
+      }
+    },
+    "verdict": "COMMUTATIVE-NULL-CERTIFIED",
+    "verdict_reason": "all four CIs include 0.5 (non-degenerate) and >= 36 gated in-pair parsed trials per direction",
+    "sensitivity_cuts": {
+      "strict-only": {
+        "label": "strict-only",
+        "n_mixed": 108,
+        "n_parsed": 108,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 9,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.4074074074074074,
+              "hi": 0.5925925925925926,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 9
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.4074074074074074,
+              "hi": 0.5925925925925926,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 9
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 9,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.4074074074074074,
+              "hi": 0.5925925925925926,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 9
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.4074074074074074,
+              "hi": 0.5925925925925926,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 9
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6666666666666666,
+            "n": 36
+          },
+          "interleaved": {
+            "rho_chron": 0.4166666666666667,
+            "n": 72
+          }
+        },
+        "verdict_descriptive_only": "COMMUTATIVE-NULL-CERTIFIED"
+      },
+      "NAs-as-out-of-pair": {
+        "label": "NAs-as-out-of-pair",
+        "n_mixed": 108,
+        "n_parsed": 108,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 9,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.4074074074074074,
+              "hi": 0.5925925925925926,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 9
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.4074074074074074,
+              "hi": 0.5925925925925926,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 9
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 9,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.4074074074074074,
+              "hi": 0.5925925925925926,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 9
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.4074074074074074,
+              "hi": 0.5925925925925926,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 9
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6666666666666666,
+            "n": 36
+          },
+          "interleaved": {
+            "rho_chron": 0.4166666666666667,
+            "n": 72
+          }
+        },
+        "verdict_descriptive_only": "COMMUTATIVE-NULL-CERTIFIED"
+      },
+      "leave-out-pair-0": {
+        "label": "leave-out-pair-0",
+        "n_mixed": 72,
+        "n_parsed": 72,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6666666666666666,
+            "n": 24
+          },
+          "interleaved": {
+            "rho_chron": 0.4166666666666667,
+            "n": 48
+          }
+        },
+        "verdict_descriptive_only": "COMMUTATIVE-NULL-CERTIFIED"
+      },
+      "leave-out-pair-1": {
+        "label": "leave-out-pair-1",
+        "n_mixed": 72,
+        "n_parsed": 72,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6666666666666666,
+            "n": 24
+          },
+          "interleaved": {
+            "rho_chron": 0.4166666666666667,
+            "n": 48
+          }
+        },
+        "verdict_descriptive_only": "COMMUTATIVE-NULL-CERTIFIED"
+      },
+      "leave-out-pair-2": {
+        "label": "leave-out-pair-2",
+        "n_mixed": 72,
+        "n_parsed": 72,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 36,
+            "n_gated_clusters": 6,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.3888888888888889,
+              "hi": 0.6111111111111112,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 6
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6666666666666666,
+            "n": 24
+          },
+          "interleaved": {
+            "rho_chron": 0.4166666666666667,
+            "n": 48
+          }
+        },
+        "verdict_descriptive_only": "COMMUTATIVE-NULL-CERTIFIED"
+      },
+      "pair-level-bootstrap": {
+        "label": "pair-level-bootstrap (descriptive only)",
+        "n_mixed": 108,
+        "n_parsed": 108,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 3,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.5,
+              "hi": 0.5,
+              "degenerate": true,
+              "side": null,
+              "n_clusters": 3
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.5,
+              "hi": 0.5,
+              "degenerate": true,
+              "side": null,
+              "n_clusters": 3
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 54,
+            "n_gated_clusters": 3,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.5,
+              "hi": 0.5,
+              "degenerate": true,
+              "side": null,
+              "n_clusters": 3
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.5,
+              "hi": 0.5,
+              "degenerate": true,
+              "side": null,
+              "n_clusters": 3
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6666666666666666,
+            "n": 36
+          },
+          "interleaved": {
+            "rho_chron": 0.4166666666666667,
+            "n": 72
+          }
+        }
+      }
+    }
+  },
+  "gemini": {
+    "gate": {
+      "control_acc": 0.7777777777777778,
+      "n_pass": 5,
+      "clusters": {
+        "0:0": true,
+        "0:1": true,
+        "0:2": true,
+        "1:0": true,
+        "1:1": true,
+        "1:2": false,
+        "2:0": false,
+        "2:1": false,
+        "2:2": false
+      }
+    },
+    "strict_compliance": 1.0,
+    "retried": 0,
+    "na_concentration_flags": [],
+    "primary": {
+      "label": "PRIMARY",
+      "n_mixed": 108,
+      "n_parsed": 108,
+      "n_na": 0,
+      "oop": 0.0,
+      "dirs": {
+        "fwd": {
+          "n_in_pair": 30,
+          "n_gated_clusters": 5,
+          "rho_chron": 0.4666666666666667,
+          "ci_chron": {
+            "lo": 0.36666666666666664,
+            "hi": 0.5666666666666667,
+            "degenerate": false,
+            "side": 0,
+            "n_clusters": 5
+          },
+          "rho_phys": 0.4666666666666667,
+          "ci_phys": {
+            "lo": 0.36666666666666664,
+            "hi": 0.5666666666666667,
+            "degenerate": false,
+            "side": 0,
+            "n_clusters": 5
+          },
+          "rho_chron_ungated": 0.5
+        },
+        "rev": {
+          "n_in_pair": 30,
+          "n_gated_clusters": 5,
+          "rho_chron": 0.4666666666666667,
+          "ci_chron": {
+            "lo": 0.36666666666666664,
+            "hi": 0.5666666666666667,
+            "degenerate": false,
+            "side": 0,
+            "n_clusters": 5
+          },
+          "rho_phys": 0.5333333333333333,
+          "ci_phys": {
+            "lo": 0.43333333333333335,
+            "hi": 0.6333333333333333,
+            "degenerate": false,
+            "side": 0,
+            "n_clusters": 5
+          },
+          "rho_chron_ungated": 0.5
+        }
+      },
+      "guard_ok": true,
+      "floor24_ok": true,
+      "floor36_ok": false,
+      "secondary": {
+        "clean": {
+          "rho_chron": 0.6,
+          "n": 20
+        },
+        "interleaved": {
+          "rho_chron": 0.4,
+          "n": 40
+        }
+      }
+    },
+    "verdict": "INCONCLUSIVE \u2014 null pattern, certification floor unmet",
+    "verdict_reason": "guard holds, out-of-pair <= 0.5, all four CIs include 0.5 (non-degenerate), but < 36 gated in-pair parsed trials in some direction \u2014 the absence claim may not be certified on this n",
+    "sensitivity_cuts": {
+      "strict-only": {
+        "label": "strict-only",
+        "n_mixed": 108,
+        "n_parsed": 108,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 30,
+            "n_gated_clusters": 5,
+            "rho_chron": 0.4666666666666667,
+            "ci_chron": {
+              "lo": 0.36666666666666664,
+              "hi": 0.5666666666666667,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_phys": 0.4666666666666667,
+            "ci_phys": {
+              "lo": 0.36666666666666664,
+              "hi": 0.5666666666666667,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 30,
+            "n_gated_clusters": 5,
+            "rho_chron": 0.4666666666666667,
+            "ci_chron": {
+              "lo": 0.36666666666666664,
+              "hi": 0.5666666666666667,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_phys": 0.5333333333333333,
+            "ci_phys": {
+              "lo": 0.43333333333333335,
+              "hi": 0.6333333333333333,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6,
+            "n": 20
+          },
+          "interleaved": {
+            "rho_chron": 0.4,
+            "n": 40
+          }
+        },
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "NAs-as-out-of-pair": {
+        "label": "NAs-as-out-of-pair",
+        "n_mixed": 108,
+        "n_parsed": 108,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 30,
+            "n_gated_clusters": 5,
+            "rho_chron": 0.4666666666666667,
+            "ci_chron": {
+              "lo": 0.36666666666666664,
+              "hi": 0.5666666666666667,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_phys": 0.4666666666666667,
+            "ci_phys": {
+              "lo": 0.36666666666666664,
+              "hi": 0.5666666666666667,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 30,
+            "n_gated_clusters": 5,
+            "rho_chron": 0.4666666666666667,
+            "ci_chron": {
+              "lo": 0.36666666666666664,
+              "hi": 0.5666666666666667,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_phys": 0.5333333333333333,
+            "ci_phys": {
+              "lo": 0.43333333333333335,
+              "hi": 0.6333333333333333,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6,
+            "n": 20
+          },
+          "interleaved": {
+            "rho_chron": 0.4,
+            "n": 40
+          }
+        },
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "leave-out-pair-0": {
+        "label": "leave-out-pair-0",
+        "n_mixed": 72,
+        "n_parsed": 72,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 12,
+            "n_gated_clusters": 2,
+            "rho_chron": 0.4166666666666667,
+            "ci_chron": {
+              "lo": 0.3333333333333333,
+              "hi": 0.5,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 2
+            },
+            "rho_phys": 0.4166666666666667,
+            "ci_phys": {
+              "lo": 0.3333333333333333,
+              "hi": 0.5,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 2
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 12,
+            "n_gated_clusters": 2,
+            "rho_chron": 0.4166666666666667,
+            "ci_chron": {
+              "lo": 0.3333333333333333,
+              "hi": 0.5,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 2
+            },
+            "rho_phys": 0.5833333333333334,
+            "ci_phys": {
+              "lo": 0.5,
+              "hi": 0.6666666666666666,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 2
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": false,
+        "floor24_ok": false,
+        "floor36_ok": false,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.5,
+            "n": 8
+          },
+          "interleaved": {
+            "rho_chron": 0.375,
+            "n": 16
+          }
+        },
+        "verdict_descriptive_only": "METHODOLOGICAL NULL"
+      },
+      "leave-out-pair-1": {
+        "label": "leave-out-pair-1",
+        "n_mixed": 72,
+        "n_parsed": 72,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 18,
+            "n_gated_clusters": 3,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.3333333333333333,
+              "hi": 0.6666666666666666,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 3
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.3333333333333333,
+              "hi": 0.6666666666666666,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 3
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 18,
+            "n_gated_clusters": 3,
+            "rho_chron": 0.5,
+            "ci_chron": {
+              "lo": 0.3333333333333333,
+              "hi": 0.6666666666666666,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 3
+            },
+            "rho_phys": 0.5,
+            "ci_phys": {
+              "lo": 0.3333333333333333,
+              "hi": 0.6666666666666666,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 3
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": false,
+        "floor36_ok": false,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6666666666666666,
+            "n": 12
+          },
+          "interleaved": {
+            "rho_chron": 0.4166666666666667,
+            "n": 24
+          }
+        },
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "leave-out-pair-2": {
+        "label": "leave-out-pair-2",
+        "n_mixed": 72,
+        "n_parsed": 72,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 30,
+            "n_gated_clusters": 5,
+            "rho_chron": 0.4666666666666667,
+            "ci_chron": {
+              "lo": 0.36666666666666664,
+              "hi": 0.5666666666666667,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_phys": 0.4666666666666667,
+            "ci_phys": {
+              "lo": 0.36666666666666664,
+              "hi": 0.5666666666666667,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 30,
+            "n_gated_clusters": 5,
+            "rho_chron": 0.4666666666666667,
+            "ci_chron": {
+              "lo": 0.36666666666666664,
+              "hi": 0.5666666666666667,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_phys": 0.5333333333333333,
+            "ci_phys": {
+              "lo": 0.43333333333333335,
+              "hi": 0.6333333333333333,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 5
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6,
+            "n": 20
+          },
+          "interleaved": {
+            "rho_chron": 0.4,
+            "n": 40
+          }
+        },
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "pair-level-bootstrap": {
+        "label": "pair-level-bootstrap (descriptive only)",
+        "n_mixed": 108,
+        "n_parsed": 108,
+        "n_na": 0,
+        "oop": 0.0,
+        "dirs": {
+          "fwd": {
+            "n_in_pair": 30,
+            "n_gated_clusters": 2,
+            "rho_chron": 0.4666666666666667,
+            "ci_chron": {
+              "lo": 0.4166666666666667,
+              "hi": 0.5,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 2
+            },
+            "rho_phys": 0.4666666666666667,
+            "ci_phys": {
+              "lo": 0.4166666666666667,
+              "hi": 0.5,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 2
+            },
+            "rho_chron_ungated": 0.5
+          },
+          "rev": {
+            "n_in_pair": 30,
+            "n_gated_clusters": 2,
+            "rho_chron": 0.4666666666666667,
+            "ci_chron": {
+              "lo": 0.4166666666666667,
+              "hi": 0.5,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 2
+            },
+            "rho_phys": 0.5333333333333333,
+            "ci_phys": {
+              "lo": 0.5,
+              "hi": 0.5833333333333334,
+              "degenerate": false,
+              "side": 0,
+              "n_clusters": 2
+            },
+            "rho_chron_ungated": 0.5
+          }
+        },
+        "guard_ok": false,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "secondary": {
+          "clean": {
+            "rho_chron": 0.6,
+            "n": 20
+          },
+          "interleaved": {
+            "rho_chron": 0.4,
+            "n": 40
+          }
+        }
+      }
+    }
+  }
+}

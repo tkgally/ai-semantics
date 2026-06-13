@@ -83,6 +83,27 @@ must be de-confounded by design; the direction-control arm is now the house patt
 decisive test remains open pending truncation-proof elicitation, better-certified stimuli, and
 more clusters.
 
+## Update 2026-06-13 — the decisive test ran again on a clean instrument: still INCONCLUSIVE
+
+The v2 verifier's five-item fix-list was implemented and the test re-run as
+[`result/relational-history-perturbation-v3`](../results/relational-history-perturbation-v3.md)
+(PREREG frozen post-critic; independent post-run verifier, zero mismatches). The fixes worked
+mechanically — **0 truncation, 0 NA, strict-compliance 1.000**, and gemini reached full power
+(gate 0.92, 7/9 clusters, both pre-registered trial-floors passed). **Verdict: INCONCLUSIVE/MIXED
+again** for the two informative models (gemini, claude); gpt is a **METHODOLOGICAL NULL** (1/6
+clusters — stimulus quality still its weak point). The clean read (gemini) shows a strong
+**forward** chronology elevation (ρ_chron 0.780, CI excludes 0.5) that **does not survive
+direction reversal** (reversed ρ_chron CI lower bound exactly 0.500). The verifier **corrected a
+first-pass over-claim**: this is *not* evidence for "physical position over chronology" — a
+position-following account predicts the reversed ρ_phys above 0.5, but it collapses to exactly
+0.500 (chance), and the forward arm cannot separate the two by construction. The defensible
+reading is only that **the forward elevation is direction-fragile**: the falsification clause did
+not fire (no direction-invariant chronology/position effect) and the commutative null was not
+certified. So the conjecture **stays `proposed`** — neither falsified nor strengthened — but the
+inconclusiveness is now *located* (a forward-only elevation of unknown origin on a clean
+instrument) rather than buried in instrument noise. v4 would need a design that decouples
+chronology from position *within* a single arm (a non-adjacent perturbation point).
+
 ## What would confirm / falsify (the bet the loop picks up)
 
 The decisive test is the **history-perturbation arm** already recommended for v2 in [`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md) (§"Recommended resolution") and named in the open question ([`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md), §"Conditions"): **reassign a coined term mid-trajectory** (e.g. swap which figure a coined term was first attached to at a chosen point in the order) and test whether a fresh matcher's interpretation tracks ***where* in the sequence the change landed** — *beyond* merely tracking *that* the content changed.

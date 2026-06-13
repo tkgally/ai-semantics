@@ -1,0 +1,2402 @@
+{
+  "schema": "relational-history-perturbation-v3 certification report",
+  "anti_null_bias_disclosure": "Certification selects for individually discriminative lines, which sharpens the X-vs-Y conflict - i.e. it biases AGAINST the ~0.5-noise-toward-the-null failure mode the v2 critic identified (B2), not toward the conjecture's bet. (Design relational-history-perturbation-v3, 'Known bias direction, disclosed'.)",
+  "criteria": {
+    "mechanical": [
+      "non-empty",
+      "<= 12 words (primary enforcement at harvest time, critic S4; re-checked here)",
+      "dedup within figure",
+      "dedup against twin set"
+    ],
+    "model_based": "fresh same-model matcher, single description line, no nonce, no history; certified iff the parsed pick is the described figure; a finish_reason=='length' reply is never parsed (critic blocker 2)",
+    "roster_rule": "first 6 certified per figure, deterministic harvest order"
+  },
+  "models": {
+    "claude": {
+      "figures": {
+        "F0": {
+          "candidates_kept": 8,
+          "certified_n": 8,
+          "roster": [
+            "Solid block top-right, four rows only, bottom half empty.",
+            "Dense filled region in upper portion, completely empty below.",
+            "Triangle-like mass upper-right, four rows, nothing underneath.",
+            "Top four rows filled right side, all else empty.",
+            "Staircase shape expanding left, rows one through four only.",
+            "Filled chunk upper area, sharp bottom edge, blank below."
+          ],
+          "shortfall": false,
+          "topup_used": false
+        },
+        "F1": {
+          "candidates_kept": 8,
+          "certified_n": 8,
+          "roster": [
+            "Dense filled triangle, top-right, with two dots below left.",
+            "Four rows of hashes, widening left, then two isolated hash rows.",
+            "Solid block top half, single column of two hashes beneath.",
+            "Pyramid shape upper portion, lone vertical pair of hashes below.",
+            "Top four rows filled heavily, then two rows with single hashes.",
+            "Staircase expanding leftward, followed by two lone hashes below center."
+          ],
+          "shortfall": false,
+          "topup_used": false
+        },
+        "F2": {
+          "candidates_kept": 8,
+          "certified_n": 7,
+          "roster": [
+            "Single hash in row 2, columns 3 and 6 separated",
+            "Figure with gap between two top dots, tapering downward",
+            "Sparse top with two lone hashes, dense middle, thin bottom",
+            "Two disconnected hashes row 2, merging into block rows 3-5",
+            "Bottom has two single hashes sticking down like legs",
+            "Wide block in middle rows, narrows to single column below"
+          ],
+          "shortfall": false,
+          "topup_used": false
+        },
+        "F3": {
+          "candidates_kept": 16,
+          "certified_n": 8,
+          "roster": [
+            "Isolated dot row 2, broken third row with gap",
+            "Lone hash row 2, fragmented row 3, narrow base",
+            "Top half sparse and split, bottom half dense pyramid",
+            "Single # at left, gap, ## at right in row 3",
+            "Two separate filled cells top-left, then split pattern below",
+            "Disconnected top, merging into bottom-right cluster"
+          ],
+          "shortfall": false,
+          "topup_used": true
+        },
+        "F4": {
+          "candidates_kept": 16,
+          "certified_n": 7,
+          "roster": [
+            "Two separate filled regions, upper-right heavy, nothing below row 4",
+            "Hash cluster shifts right, with lone dot upper-left area",
+            "Triangular mass upper-right, small dot pair at left, empty base",
+            "Dense block top-right, two filled rows at bottom of cluster",
+            "Upper-right blob, then gap row, then two hashes left-center",
+            "Filled region top-right, small ##.. shape four rows down"
+          ],
+          "shortfall": false,
+          "topup_used": true
+        },
+        "F5": {
+          "candidates_kept": 16,
+          "certified_n": 6,
+          "roster": [
+            "Top has one hash, grows to two, then full rows.",
+            "Two full seven-wide rows, small pyramid above, two dots below.",
+            "Single hash top row, then double, two full rows, pair below.",
+            "Lone hash, then two, then two rows of seven, then pair.",
+            "Six dots then one hash, six dots then two hashes, then full.",
+            "Two nearly-full rows flanked by sparse rows above and empty below."
+          ],
+          "shortfall": false,
+          "topup_used": true
+        }
+      },
+      "pairs": {
+        "0": {
+          "X": "F0",
+          "Y": "F1",
+          "n_samples": 3
+        },
+        "1": {
+          "X": "F2",
+          "Y": "F3",
+          "n_samples": 3
+        },
+        "2": {
+          "X": "F4",
+          "Y": "F5",
+          "n_samples": 3
+        }
+      },
+      "n_clusters": 9
+    },
+    "gpt": {
+      "figures": {
+        "F0": {
+          "candidates_kept": 16,
+          "certified_n": 10,
+          "roster": [
+            "Upper-right staircase blob",
+            "Compact slanted roof shape",
+            "Right-heavy widening triangle",
+            "Short broad wedge with flat base",
+            "Upper-right wedge of stacked descending right-leaning rows",
+            "Compact staircase triangle in the top-right corner"
+          ],
+          "shortfall": false,
+          "topup_used": true
+        },
+        "F1": {
+          "candidates_kept": 8,
+          "certified_n": 7,
+          "roster": [
+            "Diagonal descending block from top-right to mid-left",
+            "Three-tier slanted top, then leftward drop",
+            "Broad top cap with a short lower right column",
+            "Pyramid-like wedge ending in a hanging stem",
+            "Top-heavy stepped shape with two downward legs",
+            "Slanted roof plus a narrow vertical tail"
+          ],
+          "shortfall": false,
+          "topup_used": false
+        },
+        "F2": {
+          "candidates_kept": 16,
+          "certified_n": 3,
+          "roster": [
+            "Two separated top dots over a wide middle bar",
+            "Thin top gap, then blocky horizontal band with tail",
+            "Sparse upper marks, chunky center, tapering bottom-right"
+          ],
+          "shortfall": true,
+          "topup_used": true
+        },
+        "F3": {
+          "candidates_kept": 8,
+          "certified_n": 6,
+          "roster": [
+            "Tall central column with rightward top bar and lower tail",
+            "Sparse vertical zigzag with two bulges on the right",
+            "Hooked shape: top-left nub, mid-right mass, descending stem",
+            "Broken ladder leaning right with scattered side pixels",
+            "Staggered right-side staircase with two dangling lower pixels",
+            "Angular totem: lone top dot over blocky right-leaning body"
+          ],
+          "shortfall": false,
+          "topup_used": false
+        },
+        "F4": {
+          "candidates_kept": 16,
+          "certified_n": 5,
+          "roster": [
+            "Top-right staircase block with a lower centered double-peaked bar",
+            "Right-heavy roof with a split middle stripe and bottom nubs",
+            "Top-right double spikes over a bulging middle band",
+            "Two small top-right blocks above a broad stepped body",
+            "Blocky top-right corner above a broad, uneven shelf"
+          ],
+          "shortfall": true,
+          "topup_used": true
+        },
+        "F5": {
+          "candidates_kept": 8,
+          "certified_n": 6,
+          "roster": [
+            "Tiny top-right nub over two stacked wide bars",
+            "Small protruding tip on top of a two-band slab",
+            "Short vertical corner mark over two thick rows",
+            "Little top-right tooth above twin solid stripes",
+            "Single pixel cap above a wide rectangular banner",
+            "Hanging corner dot over two dense horizontal layers"
+          ],
+          "shortfall": false,
+          "topup_used": false
+        }
+      },
+      "pairs": {
+        "0": {
+          "X": "F0",
+          "Y": "F1",
+          "n_samples": 3
+        },
+        "1": {
+          "X": "F2",
+          "Y": "F3",
+          "n_samples": 1
+        },
+        "2": {
+          "X": "F4",
+          "Y": "F5",
+          "n_samples": 2
+        }
+      },
+      "n_clusters": 6
+    },
+    "gemini": {
+      "figures": {
+        "F0": {
+          "candidates_kept": 8,
+          "certified_n": 8,
+          "roster": [
+            "Solid block of shapes in the top-four rows, completely empty bottom-four.",
+            "Top-heavy shape with no single hanging pixels or stems below row four.",
+            "A staircase-like block in the top-right corner, bottom half entirely empty.",
+            "Four filled rows at the top, shifting leftwards, bottom half blank.",
+            "A solid wedge in the top-right, flat bottom on row four.",
+            "Top-right cluster with no dangling vertical lines or isolated pixels below."
+          ],
+          "shortfall": false,
+          "topup_used": false
+        },
+        "F1": {
+          "candidates_kept": 7,
+          "certified_n": 7,
+          "roster": [
+            "Large top-heavy block with a two-pixel vertical tail hanging underneath.",
+            "A thick wedge shape on top with a short central stem below.",
+            "Top four rows filled, with a single vertical line extending down.",
+            "Looks like a mushroom or umbrella shifted to the left.",
+            "A bulky top cluster with a thin two-pixel handle underneath.",
+            "A heavy cloud shape on top supported by a thin central pillar."
+          ],
+          "shortfall": false,
+          "topup_used": false
+        },
+        "F2": {
+          "candidates_kept": 8,
+          "certified_n": 6,
+          "roster": [
+            "Top half has two horns; bottom half has a thin tail.",
+            "A central block with two antennas above and a vertical stem below.",
+            "Looks like a bug with two feelers and a long tail.",
+            "Two separate pixels on row two, with a vertical tail below.",
+            "A thick horizontal bar with two horns and a thin stem.",
+            "Two top spikes, a wide body, and a single-line tail."
+          ],
+          "shortfall": false,
+          "topup_used": false
+        },
+        "F3": {
+          "candidates_kept": 8,
+          "certified_n": 6,
+          "roster": [
+            "Sparse figure with two vertical single-pixel lines at the bottom.",
+            "Figure with a single pixel at row 2, column 3.",
+            "Middle section has a gap separating a small right-side two-pixel block.",
+            "Looks like a fragmented shape with a distinct vertical tail at bottom.",
+            "Row three has a three-pixel block and a separate two-pixel block.",
+            "A scattered shape with a two-pixel vertical stem at the bottom."
+          ],
+          "shortfall": false,
+          "topup_used": false
+        },
+        "F4": {
+          "candidates_kept": 16,
+          "certified_n": 7,
+          "roster": [
+            "Two blocks of three on top, with a gap below them.",
+            "A shape concentrated in the top four rows, ending with two dots.",
+            "Top-right cluster with a separate pixel on the left of row three.",
+            "Upper right block with a three-wide detached tail on the left.",
+            "Two stairs on top right, one small horizontal line on left.",
+            "Figure with a gap under the top left three-pixel bar."
+          ],
+          "shortfall": false,
+          "topup_used": true
+        },
+        "F5": {
+          "candidates_kept": 16,
+          "certified_n": 13,
+          "roster": [
+            "A 2x2 block hanging below a wide horizontal bar.",
+            "Top right corner has a single pixel, then two, then seven.",
+            "Wide horizontal block with a small 2-pixel wide tail underneath.",
+            "Looks like a heavy cloud with a small double-pixel rain droplet.",
+            "Seven-wide bar with a small two-pixel support centered underneath.",
+            "Two wide rows of seven blocks with two dangling pixels underneath."
+          ],
+          "shortfall": false,
+          "topup_used": true
+        }
+      },
+      "pairs": {
+        "0": {
+          "X": "F0",
+          "Y": "F1",
+          "n_samples": 3
+        },
+        "1": {
+          "X": "F2",
+          "Y": "F3",
+          "n_samples": 3
+        },
+        "2": {
+          "X": "F4",
+          "Y": "F5",
+          "n_samples": 3
+        }
+      },
+      "n_clusters": 9
+    }
+  },
+  "census": [
+    {
+      "model": "claude",
+      "fig": "F0",
+      "desc": "Solid block top-right, four rows only, bottom half empty.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F0",
+      "desc": "Dense filled region in upper portion, completely empty below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F0",
+      "desc": "Triangle-like mass upper-right, four rows, nothing underneath.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F0",
+      "desc": "Top four rows filled right side, all else empty.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F0",
+      "desc": "Staircase shape expanding left, rows one through four only.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F0",
+      "desc": "Filled chunk upper area, sharp bottom edge, blank below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F0",
+      "desc": "No isolated pixels, compact mass top rows, empty bottom half.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F0",
+      "desc": "Four rows of hashes growing leftward, bottom four rows blank.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F1",
+      "desc": "Dense filled triangle, top-right, with two dots below left.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F1",
+      "desc": "Four rows of hashes, widening left, then two isolated hash rows.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F1",
+      "desc": "Solid block top half, single column of two hashes beneath.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F1",
+      "desc": "Pyramid shape upper portion, lone vertical pair of hashes below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F1",
+      "desc": "Top four rows filled heavily, then two rows with single hashes.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F1",
+      "desc": "Staircase expanding leftward, followed by two lone hashes below center.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F1",
+      "desc": "Large filled upper region, two solitary hashes in rows five and six.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F1",
+      "desc": "Hash block rows one to four, then two single hashes, then empty.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F2",
+      "desc": "Two isolated dots on top row, then dense block below",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F2",
+      "desc": "Single hash in row 2, columns 3 and 6 separated",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F2",
+      "desc": "Figure with gap between two top dots, tapering downward",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F2",
+      "desc": "Sparse top with two lone hashes, dense middle, thin bottom",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F2",
+      "desc": "Two disconnected hashes row 2, merging into block rows 3-5",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F2",
+      "desc": "Bottom has two single hashes sticking down like legs",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F2",
+      "desc": "Wide block in middle rows, narrows to single column below",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F2",
+      "desc": "Top row empty, two separate dots, then rectangular mass center",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Split top row, gap in middle, bottom stem",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Isolated dot row 2, broken third row with gap",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Two separate clusters top, merging bottom, single stem",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Row 3 has gap between left and right parts",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Lone hash row 2, fragmented row 3, narrow base",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Bottom four rows form inverted triangle with stem",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Top half sparse and split, bottom half dense pyramid",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Single # at left, gap, ## at right in row 3",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Two separate filled cells top-left, then split pattern below",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Single hash in row two, far left side",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Disconnected top, merging into bottom-right cluster",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Gap in middle rows, two columns of single hashes bottom",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Sparse top, broken row three with gap in middle",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Row three has hash-gap-hash pattern, disconnected shape",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Bottom two rows each have one centered hash, trailing down",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F3",
+      "desc": "Figure with isolated dot row two, fragmented third row",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Dense cluster top-right, empty bottom half, isolated corner dot",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Two separate filled regions, upper-right heavy, nothing below row 4",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Top rows: sparse left, dense right; bottom four rows empty",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Hash cluster shifts right, with lone dot upper-left area",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Upper portion filled right side, lower half completely blank",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Triangular mass upper-right, small dot pair at left, empty base",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Filled block top-right corner, single hashes left side, blank bottom",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Four filled rows only, rightward bias, bottom four rows clear",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Dense block top-right, two filled rows at bottom of cluster",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Hash cluster upper-right with isolated double-hash row below",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Top-right filled mass, small two-cell row beneath gap",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Triangular mass upper-right corner, lone pair of hashes below",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Upper-right blob, then gap row, then two hashes left-center",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Filled region top-right, small ##.. shape four rows down",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Heavy upper-right cluster, isolated two-hash row, bottom rows empty",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F4",
+      "desc": "Three rows forming right-side block, then lone double-hash beneath",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Single hash top row, then two rows of seven hashes.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Solid block of seven in rows three and four.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Top has one hash, grows to two, then full rows.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Two full seven-wide rows, small pyramid above, two dots below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Rightmost column filled rows one through four, left sparse top.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Rows three and four nearly full, tapering upward to single dot.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Four filled rows decreasing upward: 7,7,2,1 hashes from bottom.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Two hashes in middle bottom, two dense rows above, sparse top.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Single hash top row, then double, two full rows, pair below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Sparse top, two dense seven-wide rows, two hashes, then empty.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "One hash row six, two hashes row seven, seven hashes twice.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Top half filled, bottom half empty, two centered hashes middle.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Lone hash, then two, then two rows of seven, then pair.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Pyramid-like top, two wide solid rows, small pair, three blank rows.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Six dots then one hash, six dots then two hashes, then full.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "claude",
+      "fig": "F5",
+      "desc": "Two nearly-full rows flanked by sparse rows above and empty below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Curved fan wedge, thick top-right corner",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Stacked diagonal bar cluster",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Upper-right staircase blob",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Three-line descending cap",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Compact slanted roof shape",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Right-heavy widening triangle",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Short broad wedge with flat base",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Top-right dense stair-step block",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Upper-right wedge of stacked descending right-leaning rows",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Compact staircase triangle in the top-right corner",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Three-row slanted block, widest on the bottom",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Diagonal wedge tapering leftward from a right corner",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Right-corner pyramid with four filled rows",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Small top-right mountain of # symbols",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Stepped triangular cap along the upper-right edge",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F0",
+      "desc": "Dense right-aligned wedge, floating near the top",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F1",
+      "desc": "Stair-step wedge with a right-side vertical stem",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F1",
+      "desc": "Diagonal descending block from top-right to mid-left",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F1",
+      "desc": "Three-tier slanted top, then leftward drop",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F1",
+      "desc": "Broad top cap with a short lower right column",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F1",
+      "desc": "Pyramid-like wedge ending in a hanging stem",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F1",
+      "desc": "Top-heavy stepped shape with two downward legs",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F1",
+      "desc": "Slanted roof plus a narrow vertical tail",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F1",
+      "desc": "Blocky ramp descending left, with a central drop",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Two separated top dots over a wide middle bar",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Small paired pegs above a descending right-side staircase",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Thin top gap, then blocky horizontal band with tail",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Symmetric-ish midsection with a hooked lower-right leg",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Sparse upper marks, chunky center, tapering bottom-right",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Two tiny top accents above a thick broken rectangle",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Left-center nub and right-center nub over layered bars",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Floating double-tick header above a wide stepped base",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Two separated top dots, then solid center band",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Left lone stalk beside right lone stalk",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Wide horizontal block with two top bumps",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Stair-step shape descending on the right",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Chunky middle bar over a lower right tail",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Twin peaks above a thick rectangular body",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Sparse top row, dense middle, tapering lower-right",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F2",
+      "desc": "Offset crossbar with vertical right-side extension",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F3",
+      "desc": "Tall central column with rightward top bar and lower tail",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F3",
+      "desc": "Sparse vertical zigzag with two bulges on the right",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F3",
+      "desc": "Hooked shape: top-left nub, mid-right mass, descending stem",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F3",
+      "desc": "Broken ladder leaning right with scattered side pixels",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F3",
+      "desc": "Small top spike, then wide right-heavy block, then tapering tail",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F3",
+      "desc": "Asymmetric vertical figure with a rightward shelf near the middle",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F3",
+      "desc": "Staggered right-side staircase with two dangling lower pixels",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F3",
+      "desc": "Angular totem: lone top dot over blocky right-leaning body",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Top-right staircase block with a lower centered double-peaked bar",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Two small top-right blocks above a broad middle crossbar",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Diagonal upper-right wedge over a thick central band",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Right-heavy roof with a split middle stripe and bottom nubs",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Chunky upper-right corner, then a wide bar beneath it",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Small twin blocks at top-right, stacked over a big bridge",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Slanted top-right cap over a thick row with two feet",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Upper-right corner attached to a central shelf and lower bumps",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Top-right double spikes over a bulging middle band",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Two small top-right blocks above a broad stepped body",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Right-corner cap, central bridge, and lower-left slab",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Jagged upper-right cluster with a four-wide middle stripe",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Twin peaks at top right over a chunky base",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Stair-stepped mass ending in two dots below",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Compact right-heavy form with a split center and lower nub",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F4",
+      "desc": "Blocky top-right corner above a broad, uneven shelf",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F5",
+      "desc": "Tiny top-right nub over two stacked wide bars",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F5",
+      "desc": "One-dot corner above a pair of full horizontal bands",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F5",
+      "desc": "Right-edge notch atop a broad double-striped block",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F5",
+      "desc": "Small protruding tip on top of a two-band slab",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F5",
+      "desc": "Short vertical corner mark over two thick rows",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F5",
+      "desc": "Little top-right tooth above twin solid stripes",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F5",
+      "desc": "Single pixel cap above a wide rectangular banner",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gpt",
+      "fig": "F5",
+      "desc": "Hanging corner dot over two dense horizontal layers",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F0",
+      "desc": "Solid block of shapes in the top-four rows, completely empty bottom-four.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F0",
+      "desc": "Top-heavy shape with no single hanging pixels or stems below row four.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F0",
+      "desc": "A staircase-like block in the top-right corner, bottom half entirely empty.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F0",
+      "desc": "Four filled rows at the top, shifting leftwards, bottom half blank.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F0",
+      "desc": "A solid wedge in the top-right, flat bottom on row four.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F0",
+      "desc": "Top-right cluster with no dangling vertical lines or isolated pixels below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F0",
+      "desc": "A compact, stair-stepped block occupying only the top-right quadrant.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F0",
+      "desc": "Four rows of solid blocks at the top, completely clear below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F1",
+      "desc": "Large top-heavy block with a two-pixel vertical tail hanging underneath.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F1",
+      "desc": "A thick wedge shape on top with a short central stem below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F1",
+      "desc": "Top four rows filled, with a single vertical line extending down.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F1",
+      "desc": "Looks like a mushroom or umbrella shifted to the left.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F1",
+      "desc": "A bulky top cluster with a thin two-pixel handle underneath.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F1",
+      "desc": "A heavy cloud shape on top supported by a thin central pillar.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F1",
+      "desc": "A thick wedge-like figure with a short vertical tail in the middle.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F2",
+      "desc": "Two antennas on top, thick middle, and a single-pixel tail below.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F2",
+      "desc": "Figure with two separate top dots and a long vertical tail.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F2",
+      "desc": "Top half has two horns; bottom half has a thin tail.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F2",
+      "desc": "A central block with two antennas above and a vertical stem below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F2",
+      "desc": "Looks like a bug with two feelers and a long tail.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F2",
+      "desc": "Two separate pixels on row two, with a vertical tail below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F2",
+      "desc": "A thick horizontal bar with two horns and a thin stem.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F2",
+      "desc": "Two top spikes, a wide body, and a single-line tail.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F3",
+      "desc": "Sparse figure with two vertical single-pixel lines at the bottom.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F3",
+      "desc": "Top-left single pixel, middle horizontal block, and two-pixel vertical tail.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F3",
+      "desc": "Figure with a single pixel at row 2, column 3.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F3",
+      "desc": "Middle section has a gap separating a small right-side two-pixel block.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F3",
+      "desc": "Bottom tail is two vertical pixels on the sixth column.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F2",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F3",
+      "desc": "Looks like a fragmented shape with a distinct vertical tail at bottom.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F3",
+      "desc": "Row three has a three-pixel block and a separate two-pixel block.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F3",
+      "desc": "A scattered shape with a two-pixel vertical stem at the bottom.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Top-heavy shape with a separate single dot on the left.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Two blocks of three on top, with a gap below them.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "A large upper cluster with a small two-pixel tail hanging down.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Top-right heavy shape with a single isolated pixel on the left.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Upper-right block with a tiny two-pixel vertical stem at the bottom.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "A shape concentrated in the top four rows, ending with two dots.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Top-right cluster with a separate pixel on the left of row three.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "A large top-right block with a small two-pixel hanging tail.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Two separate top steps with a single isolated block on the left.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F3",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Upper right block with a three-wide detached tail on the left.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Top-heavy right shape with two hanging blocks underneath.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Two stairs on top right, one small horizontal line on left.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Large block in top-right corner with two hanging pixels below it.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Figure with a gap under the top left three-pixel bar.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Top-right stairs with two dangling blocks at the bottom center.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F4",
+      "desc": "Solid upper-right chunk with a floating three-pixel segment to its left.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Top-heavy shape with two single-pixel steps on top right, flat bottom.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F0",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Two-pixel wide stem pointing down from a wide, flat-bottomed block.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F1",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "A 2x2 block hanging below a wide horizontal bar.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Top right corner has a single pixel, then two, then seven.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Wide horizontal block with a small 2-pixel wide tail underneath.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Upper half filled, ending with a small centered 2x1 block below.",
+      "mechanical_drop": null,
+      "certified": false,
+      "cert_pick": "F4",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Looks like a heavy cloud with a small double-pixel rain droplet.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Seven-wide bar with a small two-pixel support centered underneath.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Two wide rows of seven blocks with two dangling pixels underneath.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "A large horizontal rectangle with two single-pixel steps on top.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Top-right corner stepped down to a wide band and a small tail.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Two rows of 7, with two above and two below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Large block in rows 3-4, tiny steps above, tiny tail below.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "A wide horizontal bar with two blocks centered underneath.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Seven-wide block in the upper middle with a short double-pixel tail.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    },
+    {
+      "model": "gemini",
+      "fig": "F5",
+      "desc": "Two rows of seven, topped by a single and double pixel.",
+      "mechanical_drop": null,
+      "certified": true,
+      "cert_pick": "F5",
+      "cert_parse_mode": "strict",
+      "cert_retried": false
+    }
+  ]
+}
