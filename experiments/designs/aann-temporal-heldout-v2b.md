@@ -96,7 +96,12 @@ v2b widens **within** cells (run dir
 - **Secondary, finer grain (chosen before any data):** adjective-grain Spearman — 40
   held-out adjective means vs the class-assigned human anchored temporal mean
   (average-rank ties), with a 10,000-resample percentile bootstrap 95% CI over
-  adjectives. Same comparison, real resolution.
+  adjectives. Same comparison, real resolution. **Warrant in the ratified instrument:**
+  binding **Condition 2** of
+  [`decisions/resolved/aann-behavioral-operationalization`](../../wiki/decisions/resolved/aann-behavioral-operationalization.md)
+  itself contemplates declaring the correlation grain pre-run, and **Condition 4**
+  requires grain + thresholds frozen pre-run — which is exactly what this addendum
+  does (declared here, frozen in the PREREG before any call).
 - **Verdict categories (frozen in the PREREG):** per model **replicates** (class-cell
   ρ ≥ 0.40 AND adjective-grain ρ ≥ 0.20 with CI lower bound > 0) /
   **fails-to-replicate** (adjective-grain CI upper bound < 0.20) / **still-too-thin**
@@ -123,6 +128,14 @@ Flagged for the pre-run critic rather than smoothed over:
    identical settings), not re-run. A fresh Tier-0 costs ~$0.013 if required.
 3. **Carryover re-rating** pools previously-probed held-out adjectives with new ones
    (both human-unseen by construction); subgroup numbers are reported.
+4. **The 4-point robustness framing is dropped** (this run is 0–100 primary only).
+   Binding Condition 8 pairs the primary framing with a 4-point robustness check; the
+   justification for dropping it here (framing convergence already established in v2
+   on 102 items, ρ 0.82–0.93 per model) is stated in the PREREG-draft — but the
+   temporal stratum is exactly where v2 failed to replicate, so framing robustness
+   *in this stratum* is untested. If the pre-run critic reads Condition 8 as binding
+   per-run rather than per-instrument, the fix is a small 4-point subsample
+   (~+80 calls, ~+$0.02).
 
 ## 4. Cost (config/budget.md)
 

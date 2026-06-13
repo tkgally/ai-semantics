@@ -5,7 +5,7 @@ title: Relational v2 — the history-perturbation arm (mid-trajectory reassignme
 meaning-senses:
   - relational
   - distributional
-status: ready
+status: run (2026-06-12); superseded by relational-history-perturbation-v3
 contingent-on: []
 created: 2026-06-12
 updated: 2026-06-12

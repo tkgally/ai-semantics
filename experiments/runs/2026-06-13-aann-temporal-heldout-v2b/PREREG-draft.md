@@ -34,8 +34,9 @@ gates already passed at the overall grain.
   - **Frequency control (same procedure as v2, Condition 5):** wordfreq 3.x Zipf (en),
     per-class median; the 6 new adjectives' class median within ±0.5 of the Mahowald
     class median, and the combined 10 within ±0.5 too — asserted mechanically in
-    `prep.py`; **all 4 classes pass** (ambig 4.06|3.91|3.91, neg 3.52|3.50|3.34,
-    pos 4.07|3.85|4.00, quant 3.43|3.41|3.38 — mahowald|new-6|combined-10). Local
+    `prep.py`; **all 4 classes pass** (ambig 4.065|3.91|3.91, neg 3.52|3.505|3.34,
+    pos 4.07|3.855|3.995, quant 3.43|3.405|3.38 — mahowald|new-6|combined-10, exact
+    values as embedded in the `stimuli.json` audit). Local
     wordfreq (3.1.1) verified to reproduce every committed v2 Zipf value exactly
     (commensurability guard, asserted). New adjectives appear in neither Mahowald's 50
     nor the v2 held-out 24 (asserted).
