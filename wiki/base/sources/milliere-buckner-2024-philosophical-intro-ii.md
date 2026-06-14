@@ -16,7 +16,7 @@ meaning-senses:
   - inferential
 status: received
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-06-14
 links:
   - rel: refines
     target: source/milliere-buckner-2024-philosophical-intro-i

@@ -13,7 +13,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-14
 links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
@@ -45,6 +45,10 @@ links:
     target: conjecture/distributional-saturation-grounding-headroom
   - rel: depends-on
     target: conjecture/commutative-convention
+  - rel: depends-on
+    target: result/relational-history-perturbation-v4
+  - rel: depends-on
+    target: essay/conversation-as-text-not-timeline
   - rel: depends-on
     target: result/lexical-sense-gradience-v1
   - rel: depends-on
@@ -118,7 +122,7 @@ Each entry states the bearing as **interpretation**, names the finding that carr
 
 **Grounded — two bounded negatives; the contribution is confined to a residual the probes have not entered.** The grounding axis is, so far, a pair of nulls *for clear homonyms* ([`concept/grounding`](../../base/concepts/grounding.md)). On Lyre's gradual framing — that grounding "isn't a yes-no matter, but rather a matter of degree" ([`source/lyre-2024-semantic-grounding`](../../base/sources/lyre-2024-semantic-grounding.md), p. 10) — the project's contribution is to show the *degree* added by a picture is ≈0 exactly where text saturates, and to conjecture (not show) that it could be positive in the under-determined residual.
 
-**Relational constitution — bounded negative.** The charter's most distinctive hope — meaning constituted *between* agents — meets a first-class null: convergence without trajectory-dependence ([`concept/relational-meaning`](../../base/concepts/relational-meaning.md)). The deflationary aggregation reading holds; constitution is not seen (bounded, under-powered for order effects — not closed).
+**Relational constitution — bounded negative, with a layout confound now mapped.** The charter's most distinctive hope — meaning constituted *between* agents — meets a first-class null: convergence without trajectory-dependence ([`concept/relational-meaning`](../../base/concepts/relational-meaning.md)). Constitution is **not seen** across four perturbation runs (v2–v4): no model tracks the stated chronology. But the *form* of the deflationary aggregation reading the null first suggested is itself nuanced by [`result/relational-history-perturbation-v4`](../results/relational-history-perturbation-v4.md): with chronology and physical text-position decoupled within one arm, both models anchor on **text-position**, not chronology — so they are **neither** chronology-trackers (constitution) **nor** the clean order-free "bag of turns" (clean commutative aggregation), but **position-driven** readers of a layout ([`essay/conversation-as-text-not-timeline`](../essays/conversation-as-text-not-timeline.md)). The relational question stays **open** (bounded; `internal-contrast-only`; position-following indistinguishable from stamp-blindness — not closed), now with a known geometry trap: a linear-prompt recency probe cannot separate "latest in time" from "last on the page."
 
 **Eliminativism strained; deflationism fits; descriptivism vindicated.** The positives (gradience beating its shadow; CC composing) are hard to square with a strict "stochastic parrot" eliminativism — there *is* structure that beats the named null. But they do **not refute deflationism** ("still just distributional, only richer"), and behavioral evidence never can (the Bender & Koller in-principle gap). The project's **descriptivism** — neither eliminativist nor inflationary — is the stance the evidence vindicates: the yes/no question is under-determined by exactly the evidence the project can obtain, so describing the structure is the right move ([`concept/deflationary-and-eliminativist-llm-meaning`](../../base/concepts/deflationary-and-eliminativist-llm-meaning.md)).
 
@@ -136,7 +140,7 @@ The session's three original conjectures are precisely the bets that would updat
 
 - [`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md) sharpens the *thin / distributional-prior* character of the constructional competence: accumulation aligns with the predictive objective (easy), defeasance fights it (hard). If it generalizes under matched difficulty, the "thin inferential, distributionally-shaped" reading of the grammatical positives is strengthened; if add/cancel turn symmetric, that reading weakens.
 - [`conjecture/distributional-saturation-grounding-headroom`](../conjectures/distributional-saturation-grounding-headroom.md) names *where* the **grounded** cell could turn from "negative" to a signal: the text-under-determination residual (fine polysemy; abstract/perceptually-subtle senses; VWSD). It is the one bet that could move grounding off two nulls — or confirm the modality is inert for sense.
-- [`conjecture/commutative-convention`](../conjectures/commutative-convention.md) turns the **relational** null into a testable algebraic property (commutative = aggregation; non-commutative = constitution) and names the v2 history-perturbation arm as the experiment that could move "relational = bounded negative" to "supports constitution."
+- [`conjecture/commutative-convention`](../conjectures/commutative-convention.md) turns the **relational** null into a testable algebraic property (commutative = aggregation; non-commutative = constitution). Its history-perturbation arm has now run four times (v2–v4); v4's within-arm decoupling found **text-position, not chronology** ([`result/relational-history-perturbation-v4`](../results/relational-history-perturbation-v4.md)), leaving the conjecture `proposed` — neither falsified nor certified — and converting a suspected confound into a mapped geometry trap any future linear-prompt recency probe must design out.
 
 So the map is not static: its three softest cells (the depth of the inferential reading, grounding, and relational constitution) each have a sharp, queued experiment attached. That is the synthesis working as the charter intends — a positioning that *generates* the next questions rather than closing them.
 
