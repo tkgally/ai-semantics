@@ -63,7 +63,7 @@ decision's Option-B cancel-direction fallback logic.
 
 - **Inference/default divergence:** maximal and built-in. The verb-held-constant minimal pair
   ([`result/conative-minimal-pair-divergence-v1`](../../findings/results/conative-minimal-pair-divergence-v1.md))
-  shows the transitive default at or near ceiling (affirm-contact 91.7–100%) while the conative
+  shows the transitive default at or near ceiling (affirm-contact 92–100%) while the conative
   affirm-contact is off-ceiling and model/instrument-dependent — so there is genuine headroom for a
   construction effect *and* for the two instruments to diverge.
 - **In-repo human anchor:** YES. `Conative` is one of the 8 constructions in the Scivetti CxNLI

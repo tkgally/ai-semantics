@@ -89,7 +89,7 @@ Under the open decision's provisional default, the fresh construction is the **c
 **cancel-direction** construction whose licensed inference (no completed contact) runs *opposite* to
 the verb's distributional default (*kick* lexically implies contact). The verb-held-constant minimal
 pair ([`result/conative-minimal-pair-divergence-v1`](../results/conative-minimal-pair-divergence-v1.md))
-already shows the transitive default at or near ceiling (affirm-contact 91.7–100%) while the
+already shows the transitive default at or near ceiling (affirm-contact 92–100%) while the
 conative affirm-contact is off-ceiling and model/instrument-dependent — so the inference-vs-default
 divergence and the headroom the AANN had to *engineer* are here **for free**. The add-direction
 CxNLI constructions (way, caused-motion) ran *at* ceiling on both instruments
