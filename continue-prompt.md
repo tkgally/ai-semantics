@@ -56,7 +56,17 @@ quietly dormant: if the last several sessions were all one track, weight the bac
    the monitor, never overstate. This step is mandatory even in a tiny session.
 7. **Land it** (`PROTOCOL.md §6`): commit, push, open a PR, **squash-merge to `main`**, confirm
    `main` advanced.
-8. **Hand off** (`PROTOCOL.md §7`): rewrite `NEXT.md`, append one line to `log.md`, stop.
+8. **Hand off** (`PROTOCOL.md §7`): rewrite `NEXT.md`, append one line to `log.md`. Before
+   stopping, kill every background task/loop this session started and confirm a clean process
+   table and clean `git status` — then stop.
+
+**Running long commands / waiting.** Probes (`probe.py full`, `certify.py run`) take minutes.
+Launch them with the harness's `run_in_background: true` and rely on the completion notification
+plus the output file — do **not** hand-roll a wait loop. If you must wait, wait on the *exact*
+captured PID (`cmd & pid=$!`; `wait "$pid"`) or a sentinel file, **never a name match**:
+`pgrep -f`/`pkill -f` on a command substring matches the `claude` launcher (its argv carries your
+replayed commands) and the loop spins forever. Any unavoidable poll needs a deadline. Full rules:
+`PROTOCOL.md §6b`.
 
 ## 4. Conduct
 

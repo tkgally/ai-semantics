@@ -157,6 +157,28 @@ open and put **"land PR #N first"** at the very top of `NEXT.md`.
 In workflow mode, each wave is its own commit (§A5); the final commit carries the integration,
 the website update, and the handoff.
 
+## 6b. Running long commands & waiting — both modes
+
+Probes and certification runs (`probe.py full`, `certify.py run`) take minutes. How you wait on
+them is a known foot-gun in this cloud environment — get it wrong and the session spins forever
+(this happened: an `until ! pgrep -f "probe.py full"; do sleep 3; done` loop that never exited,
+left a runaway background task alive, and stranded uncommitted work between Routine invocations).
+
+1. **Never detect completion by name-match.** Do **not** use `pgrep -f`/`pkill -f` on a command
+   substring (or any string that could appear in the session's own command history). The `claude`
+   launcher carries the *entire* replayed conversation — including your own command text — in its
+   argv, so a substring match hits the launcher itself and the condition never clears.
+2. **Prefer not to hand-roll a wait at all.** Launch any long-running command with the harness's
+   `run_in_background: true` and rely on the automatic completion notification plus its output
+   file. That runs the probe in one step, with no loop to leak.
+3. **If you genuinely must wait on a process, wait on its exact PID — never a name.** Launch as
+   `cmd & pid=$!` and `wait "$pid"` in the same shell, or poll `kill -0 "$pid"` on that captured
+   pid; **or** have the command drop a sentinel on completion (`cmd; touch .done`) and poll for
+   the *file* with the Monitor tool. Bare chained `sleep` as a wait stays forbidden.
+4. **Defense in depth.** Any unavoidable polling loop must be bounded by a max-iteration or
+   wall-clock deadline so it can never spin forever, and must exit non-zero / report when the
+   deadline is hit.
+
 ## 7. Hand off — both modes
 
 Rewrite `NEXT.md` from scratch:
@@ -172,6 +194,12 @@ Append one dated line to `log.md` describing the run (mode, what landed, decisio
 2026-06-13  workflow: 2 waves + coherence pass; landed <X>; ratified <Y> (adversarial review); $0.80; site updated; merged PR #N.
 ```
 
+**Wind-up hygiene — before you stop.** Terminate every background task or polling loop this
+session started, and verify none survive: no stray `sleep`, no wait-loop, no leftover `python3`
+run process alive, and `git status` clean. A scheduled Routine relies on each session ending
+clean — a runaway loop or a still-running background task blocks the next run and strands
+uncommitted work. Confirm the clean process table and the clean tree as the last thing you do.
+
 Stop cleanly at the wind-up point — which means **after** the squash-merge has succeeded, never before.
 
 ## Failure-mode checklist (post-mortem prompts)
@@ -184,6 +212,7 @@ Stop cleanly at the wind-up point — which means **after** the squash-merge has
 - Did I ratify a decision opened in this same session, or skip the independent reviewer?
 - Did a subagent fabricate a quote or anchor, and did the coherence pass catch it?
 - Did two subagents collide on a shared file?
+- Did I wait on a process by name-match (`pgrep -f`) instead of its PID or a completion notification? Did I leave a background task or wait-loop running at wind-up?
 - Did I leave work uncommitted, unmerged, or the website stale?
 - Did the website state anything more strongly than the wiki does?
 - Did I exceed (or fail to record) the day's OpenRouter spend?
