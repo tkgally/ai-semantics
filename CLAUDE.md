@@ -13,7 +13,7 @@ Read this file every run. It encodes how `ai-semantics` is shaped. The charter i
 7. **Two tracks, inter-feeding** (`PROJECT.md` §12.1). The empirical loop and the philosophical exploration are both first-class: empirical results revise essays and theory; essays spawn conjectures. No fixed endpoint; scope may extend outward while meaning — especially lexical and grammatical meaning — stays the focus.
 8. **Budget: USD 5.00 per calendar day (UTC)** in OpenRouter spend, tracked as billed `usage.cost` in `config/budget.md`. Pre-flight estimate before any probe; record the actual after.
 9. **The website is part of every session.** Update `docs/` (journal entry + home-page status, plus whatever pages the session's work touched) before the final commit — `PROTOCOL.md §5b`. Plain language; glossary-linked; no repo links; never name or refer to the monitor; never state a finding more strongly than the wiki does.
-10. **End merged.** Every session ends commit → push → PR → **squash-merge to `main`**, confirmed (`PROTOCOL.md §6`). If the merge cannot land, "land PR #N" goes at the top of `NEXT.md`.
+10. **End merged, end clean.** Every session ends commit → push → PR → **squash-merge to `main`**, confirmed (`PROTOCOL.md §6`). If the merge cannot land, "land PR #N" goes at the top of `NEXT.md`. Before stopping, kill every background task/loop the session started and verify a clean process table + clean `git status` (`PROTOCOL.md §7`). **Never detect process completion by name-match** — `pgrep -f`/`pkill -f` on a command substring matches the `claude` launcher and spins forever; prefer the harness's `run_in_background`, or wait on an exact captured PID (`PROTOCOL.md §6b`).
 
 ## Page types
 
