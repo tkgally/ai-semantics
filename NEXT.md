@@ -2,113 +2,115 @@
 
 ## State
 
-**Session of 2026-06-14 (ninth session, empirical/grammatical track — single focused
-empirical unit with independent pre-run critic + independent post-run verifier) is
-landed. ≈$0.21 spent; day total 2026-06-14 (sessions 6–9) ≈$1.19 of $5.00.** Per the
-eighth session's handoff (weight back to the empirical track, AANN follow-up the most
-tractable), this session ran the **powered panel replication of the AANN inferential
-v4 PARTIAL result** (NEXT backlog item 1, first bullet).
+**Session of 2026-06-14 (tenth session, PHILOSOPHICAL track — reading + writing,
+no probes, $0 spent) is landed. Day total 2026-06-14 (sessions 6–10) ≈$1.19 of
+$5.00.** Per the ninth session's handoff (weight back to the philosophical track),
+this session did two philosophical-track units, both keyed to the v6 replication
+that landed last session.
 
-1. **EMPIRICAL — GRAMMATICAL (headline): AANN inferential v6 → PARTIAL, replicates v4
-   cell-for-cell.** [`result/aann-inferential-v6`](wiki/findings/results/aann-inferential-v6.md)
-   (status: proposed). Same yardstick as v4 (instrument, thresholds, verdict map, and
-   analysis code identical — `analyze.py` byte-identical save run name / design path /
-   bootstrap seed, the only logic-touching diffs inside `--selftest`), single change the
-   **item set**: 40 fresh hand-authored base items (temporal 20 / distance 20, nearly
-   doubling v4's 23 and rebalancing the distance class), all **40 adjectives held-out**
-   (mechanically asserted disjoint from v4's 21 *and* the v5-reflex probe's 30). Both
-   pre-registered questions answered **yes**: (1) the panel-wide paraphrase
-   double-contrast shift **holds up powered** — all three models paraphrase-positive
-   (Δ² +0.875 / +0.575 / +0.90, every CI clear of τ=+0.20; headroom PASS all,
-   P(uni|DDC) 0 / 0.225 / 0); (2) **gpt-5.4-mini's cross-instrument convergence
-   replicates** — CONVERGENT-POSITIVE again (paraphrase + NLI Δ² +0.225 + agreement
-   reflex +0.60), claude + gemini again PARAPHRASE-ONLY (NLI null; agreement flat at
-   ceiling 1.00/1.00). Verdict **PARTIAL**, per-model categories PARA-ONLY / CONV-POS /
-   PARA-ONLY exactly as v4. Removes v4's small-N / single-date / direction-not-magnitude
-   caveat (the effect is now stable in **magnitude across two disjoint item sets**); the
-   **single-panel** and **expert-stipulated-key** caveats stand. No new decision (ran
-   under the already-ratified AANN inferential instruments); `anchor:
-   internal-contrast-only`. Fresh pre-run-critic GO (no BLOCKER/SHOULD-FIX; all 14
-   conditions PASS; replication fidelity + held-out + anti-cheat verified; selftest 38
-   checks) + independent post-run verifier (0 mismatches; confirmed the v4 NLI-
-   aggregation bug class is absent here). 1392 calls, $0.2138 billed, 0 missing.
+1. **PHILOSOPHICAL (headline): essay [`essay/preference-without-commitment`](wiki/findings/essays/preference-without-commitment.md)
+   revised (draft → revised) to stand on a *replicated* preference/commitment split.**
+   The essay argues that a forced-choice paraphrase *preference* and an NLI entailment
+   *commitment* are evidence for two **different** constructs (graded distributional
+   compatibility vs. defeasible inferential commitment), so "does the model use the
+   construction's meaning?" has no single model-level answer where they dissociate. Its
+   empirical leg was a single PARTIAL run (v4). The ninth session's
+   [`result/aann-inferential-v6`](wiki/findings/results/aann-inferential-v6.md)
+   replicated the FC/NLI dissociation **cell for cell** on 40 fresh held-out items —
+   which **exercised the essay's own revision triggers (a) and (b) and fired neither**:
+   (a) the powered replication did *not* show claude/gemini's NLI converging (so the
+   preference-without-commitment reading for those two is **confirmed, not retracted**),
+   and (b) the FC shift *did* replicate (antecedent **strengthened, not weakened**). The
+   essay is therefore strengthened, not retracted; all changes logged in-page (status
+   box, a new v6-numbers paragraph in §"The evidence…", honest-limits, triggers (a)/(b)
+   annotated exercised-but-not-fired, a Revision log). `internal-contrast-only` ceiling
+   unchanged — still no human-comparison claim.
 
-2. **Integration:** conjecture [`conjecture/aann-construction`](wiki/findings/conjectures/aann-construction.md)
-   (v6 replication note added; inferential clause unchanged in status, now on firmer
-   ground), theory [`theory/constructional-meaning-in-llms`](wiki/findings/theory/constructional-meaning-in-llms.md)
-   (AANN Tier-4 cell: PARTIAL replicates powered), [`wiki/index.md`](wiki/index.md)
-   (result + design catalogued), [`wiki/executive-summary.md`](wiki/executive-summary.md)
-   refreshed. Website (`docs/`) updated: journal entry, home status + latest, findings
-   AANN bullet. senselint **0 errors**; linkify clean.
+2. **PHILOSOPHICAL (source ingest): catalogued [`source/grindrod-2024-linguistic-intentionality`](wiki/base/sources/grindrod-2024-linguistic-intentionality.md)**
+   (Grindrod 2024, *Synthese* 204:71, arXiv 2404.09576, "Large language models and
+   linguistic intentionality"). Argues the LLM meaningful-usage question is better posed
+   at the **linguistic**-metasemantic level (Evans' naming practices; Millikan's
+   teleosemantics) than the mental one, with a hedged-positive verdict because linguistic
+   intentionality depends on a pre-existing public language the model inherits. Filed as a
+   **map/counterpoint, not a human anchor** (no annotated resource; reports no
+   experiments); pairs with Beckmann-Queloz (anti-deflation from the mechanistic side) and
+   triangulates with Piantadosi-Hill + Schuele. Abstract + 6 §-located body quotes verified
+   character-for-character against the accepted-version PDF; one abs-page-vs-PDF model-name
+   discrepancy ("LLaMa" vs "Claude") flagged in-page. Paper existence/title/venue/DOI
+   independently re-verified by the orchestrator via the arXiv abs page. `wanted.md`
+   Grindrod entry flipped to RECEIVED (Grindrod's 2026 *Phil Studies* paper and his
+   *Communicating with AI* chapter remain separate uncatalogued items).
+
+3. **Integration / website:** both new pages catalogued in [`wiki/index.md`](wiki/index.md);
+   `wanted.md` updated; `docs/` updated (journal entry tenth session, home status + latest
+   block, findings.html grammar-section essay mention). senselint **0 errors**; linkify
+   clean.
 
 ## Next concrete actions — backlog for the next session
 
-**Two-track note:** the last four sessions were empirical / empirical / philosophical /
-empirical (sixth AANN-reflex, seventh relational-v4, eighth philosophical, ninth
-AANN-v6). The **AANN line is now thoroughly worked** — gradient half SUPPORTED (v2,
-v2b), inferential half PARTIAL and now **replicated** (v3→v4→v6), agreement reflex
-generalized (v5). **Weight the next session toward the PHILOSOPHICAL track** (it has had
-only one of the last four sessions), with a non-AANN empirical fallback. Both are
-first-class.
+**Two-track note:** sessions 6–10 were emp / emp / phil / emp / phil — the two tracks
+are now **balanced** over the recent window. The AANN empirical line is thoroughly
+worked (gradient SUPPORTED, inferential PARTIAL and **replicated** v4→v6, reflex
+generalized v5); the philosophical track has a fresh essay revision + a fresh source.
+Either track is a fair lean next session; the **non-AANN empirical** options below are
+the most tractable un-run experiments.
 
-1. **PHILOSOPHICAL (weighted first).** The v6 replication turns a soft empirical fact
-   into a firm one: across two disjoint item sets, the AANN construction shifts *which
-   paraphrase the models prefer* in all three models, but only **gpt-5.4-mini** carries
-   that onto a stricter entailment/agreement *commitment*. That is exactly the subject of
-   the fourth-ish essay [`essay/preference-without-commitment`](wiki/findings/essays/preference-without-commitment.md)
-   — which can now be **revised to cite a replicated** preference/commitment split (its
-   empirical anchor is no longer a single run). Check its revision triggers and update
-   in-page. **Or** catalogue a queued source from [`wiki/base/wanted.md`](wiki/base/wanted.md):
-   **Sterken & Cappelen (eds.), *Communicating with AI*** (P1; check OA), **Grindrod**
-   monograph (P1; verify title/OA), or the **2601.19792** "LVLMs and Humans Ground
-   Differently" dyadic-grounding paper (P3, relational-side datapoint). Or a new essay
-   where the evidence is now thick (the replicated single-model convergence is a candidate
-   subject in its own right: what does it mean that *one* model's inference survives every
-   instrument while two stop at preference?).
-
-2. **EMPIRICAL — non-AANN (fallback / if the session leans empirical).** Two tractable
-   options, both off the now-saturated AANN axis:
-   - **RELATIONAL v5** — the v4 trap (models anchor on **text position**, so a *linear*
-     recency probe cannot see a chronology convention) needs a design that **neutralizes
-     text-position** (randomize/rotate the decisive line so position carries no
-     information, gate on a task that *requires* reading the stamp value) **or** a
-     **stamp-comprehension pre-probe** (can these models use an explicit recency stamp at
-     all when position is uninformative?). Template:
-     `experiments/runs/2026-06-14-relational-history-perturbation-v4/`. Named scope
-     extensions remain: image referents, cross-family dyads, live reassignment.
+1. **EMPIRICAL — non-AANN (most tractable un-run work).** Two options, both off the
+   saturated AANN axis:
+   - **RELATIONAL v5** — the v4 trap (both models anchor on **text position**, so a
+     *linear* recency probe cannot see a chronology convention) needs a design that
+     **neutralizes text-position**: randomize/rotate the decisive line so position
+     carries no information and gate on a task that *requires* reading the stamp value;
+     **or** a **stamp-comprehension pre-probe** (can these models use an explicit recency
+     stamp at all when position is uninformative?). Template:
+     `experiments/runs/2026-06-14-relational-history-perturbation-v4/`. This needs a fresh
+     operationalization decision surfaced (text-position-neutralization design), pre-run
+     critic + post-run verifier as usual. Named scope extensions still open: image
+     referents, cross-family dyads, live reassignment.
    - **A fresh construction's inferential test** — apply the v4/v6 double-contrast
-     instrument design (DDC + LCC + paraphrase/NLI/agreement) to a *different*
-     construction whose inference and distributional default plausibly diverge, to test
-     whether the "paraphrase-shift-without-commitment, one-model-converges" pattern is
-     AANN-specific or general. This would need its own operationalization decision
-     (surface it, don't smuggle it).
+     instrument (DDC + LCC + paraphrase/NLI/agreement) to a *different* construction whose
+     licensed inference and distributional default plausibly diverge, to test whether the
+     "paraphrase-shift-without-commitment, one-model-converges" pattern is **AANN-specific
+     or general** (the v6 essay revision makes this the sharpest open generalization
+     question). Needs its own operationalization decision — surface it, don't smuggle it.
+
+2. **PHILOSOPHICAL.** Options:
+   - **A cross-source synthesis essay** bridging the new Grindrod source to the project's
+     own relational picture: Grindrod's "the model inherits content from a *public*
+     language" thesis is a philosophy-of-language statement of the same **aggregation
+     (model-and-its-corpus), not constitution (between-agents)** line the first essay
+     ([`essay/aggregation-not-constitution`](wiki/findings/essays/aggregation-not-constitution.md))
+     and the commutative-convention conjecture argue from behavior — a genuine
+     essay-spawning convergence worth arguing in the project's own voice (with the honest
+     gap: Grindrod reasons metasemantically, the project behaviorally).
+   - **Catalogue another queued source.** The source subagent confirmed **arXiv 2601.19792**
+     ("LVLMs and Humans Ground Differently in Referential Communication", relational-side
+     P3) is fetchable; or pull an OA route for **Cappelen & Dever 2021 *Making AI
+     Intelligible*** (P2, deflationary), **Sterken & Cappelen *Communicating with AI***
+     (P1; the Grindrod/Porter/Hansen chapter is a candidate), or a classic (Putnam 1975,
+     Wittgenstein 1953) if OA.
 
 3. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
-**None open.** All twenty-four decisions remain resolved; **none opened or ratified this
-session.** No methodological judgment call required surfacing — v6 is a replication of an
-already-ratified-instrument design, with the same frozen yardstick (the anti-cheat point
-of a replication is precisely that the yardstick is fixed and cannot be tuned). The
-independent pre-run critic (GO) and independent post-run verifier (VERIFIED, 0 mismatches)
-are the workflow's generation/judgement split working as intended.
+**None open.** `wiki/decisions/open/` is empty; nothing to reconcile this session. All
+twenty-four decisions remain resolved; none opened or ratified this session (the essay
+revision ran under already-ratified instruments; a source catalogue needs no decision).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- The project's deepest grammar-meaning result — that *a beautiful three days* nudges the
-  models toward a "one whole evaluated stretch" reading (a **partial yes**: fully
-  convergent across instruments in one of three models, surface-level in two) — was
-  **re-run bigger on 40 fresh words and replicated point for point**. The honest upshot:
-  the effect's *size*, not just its direction, is now stable across two separate item
-  sets, so the earlier "too small / single day" caveat is gone. What remains: still only
-  three models (one panel), and still scored against an expert's stipulated key, never
-  human inference data — so it can never say the models infer "the way people do."
-- **Spend this session ≈ $0.21** (1392 calls, billed `usage.cost`). Day total 2026-06-14
-  (sessions 6–9) ≈ $1.19 of $5.00. GitHub Pages serves from `main` `/docs`.
-- **No self-approved methodological call this session.** The replication ran under the
-  already-ratified instrument; both the pre-run critic and post-run verifier were
-  independent fresh agents.
+- This session was reading-and-writing only — **$0 spent**. It revised a written argument
+  (the "preferring a reading without committing to its inference" essay) so that it rests
+  on a *replicated* result rather than a single run: the bigger re-run from last session
+  reproduced the split rather than dissolving it, so the argument was **strengthened, not
+  retracted** — and the essay's own pre-stated rewrite conditions were checked and none
+  were met. It also read and filed one new outside philosophy paper (Grindrod 2024,
+  *Synthese*) as one position in the debate, not as a project finding.
+- Day total 2026-06-14 (sessions 6–10) ≈ **$1.19** of $5.00. GitHub Pages serves from
+  `main` `/docs`.
+- **No self-approved methodological call this session.** No decision was opened or
+  ratified; both units ran under existing ratified instruments / standing conventions.
 
 ## Reminder for the next cold-start
 
@@ -116,8 +118,9 @@ Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md
 conventions `CLAUDE.md`. Read [`wiki/executive-summary.md`](wiki/executive-summary.md)
 then [`wiki/index.md`](wiki/index.md). Budget $5/day UTC — check today's ledger rows in
 [`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`,
-website updated. **Weight the next session toward the PHILOSOPHICAL track (it has had one
-of the last four sessions; the AANN empirical line is now thoroughly worked — gradient
-SUPPORTED, inferential PARTIAL and replicated, reflex generalized) — with a non-AANN
-empirical fallback (relational v5 needs text-position neutralization; or a fresh
-construction's inferential probe).**
+website updated. **The two tracks are balanced over sessions 6–10; either lean is fair.
+The most tractable un-run experiments are non-AANN: relational v5 (needs text-position
+neutralization + a fresh operationalization decision) or a fresh construction's
+double-contrast inferential probe (tests whether the v6 preference/commitment split is
+AANN-specific or general). Philosophical: a Grindrod↔aggregation synthesis essay, or
+catalogue another queued source (2601.19792 confirmed fetchable).**

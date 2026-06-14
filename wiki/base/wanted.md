@@ -82,9 +82,9 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 - [P1] Sterken, R.K. & Cappelen, H. (eds.). *Communicating with AI: Philosophical Perspectives.* OUP (forthcoming/recent).
   why: the most current edited volume on LLM-meaning specifically; central to where the debate is now.
   status: wanted
-- [P1] Grindrod, J. *The Persuasive Machines? / Talking to Robots / [check current title].* (2024–25 monograph on LLMs and language).
+- [P1] Grindrod, J. (2024–25 work on LLMs and language).
   why: cited as a current systematic treatment; check actual title and pull intro + relevant chapters.
-  status: wanted
+  status: **RECEIVED** (2026-06-14 — the on-point item is Grindrod, J. 2024. "Large language models and linguistic intentionality." *Synthese* 204:71 (arXiv 2404.09576); catalogued as [`wiki/base/sources/grindrod-2024-linguistic-intentionality.md`](sources/grindrod-2024-linguistic-intentionality.md) — abstract + 6 §-located body quotes verified character-for-character against the accepted-version PDF). The backlog entry's tentative titles were not this paper. **Still uncatalogued** (fetch only if a finding needs them): Grindrod's *Philosophical Studies* 2026 "Modelling Language using Large Language Models," and his chapter (with J.D. Porter & Nat Hansen) in the Sterken & Cappelen *Communicating with AI* volume listed above.
 - [P1] Piantadosi, S.T. & Hill, F. 2022. "Meaning without reference in large language models." NeurIPS workshop / arXiv 2208.02957.
   why: foundational for the `inferential` tag's application to LLMs. Likely OA — try to fetch directly first.
   status: received (2026-05-28, section-level quotes from arXiv abs + ar5iv HTML; 5 additional quotes added 2026-05-28 from "Communicative intentions" and "Discovering conceptual role" sections; see wiki/base/sources/piantadosi-hill-2022-meaning-without-reference.md)
