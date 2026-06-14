@@ -222,6 +222,21 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > sits at the ladder's **form/agreement rung, not the inference rung** (the pre-registered gating still
 > refuses to read agreement as inference), so it does **not** move v4's PARTIAL inferential verdict; it
 > says the *form*-side reflex is robust to held-out material and present in two of three models.
+>
+> **AANN's Tier-4 PARTIAL replicates, powered, on fresh held-out adjectives (2026-06-14, ninth
+> session).** [`result/aann-inferential-v6`](../results/aann-inferential-v6.md) re-ran the v4 design
+> **unchanged** (same instrument, thresholds, verdict map, analysis code) on a fresh, larger item set —
+> **40 held-out items** (temporal 20 / distance 20, adjectives disjoint from v4 and the v5-reflex probe).
+> Both pre-registered questions came back **yes**: the panel-wide paraphrase double contrast **holds up
+> powered** (Δ² +0.875 / +0.575 / +0.90, all CI-clear, headroom PASS all), and **gpt-5.4-mini's
+> cross-instrument convergence replicates** (paraphrase + NLI Δ² +0.225 + agreement +0.60 →
+> CONVERGENT-POSITIVE), with claude and gemini again PARAPHRASE-ONLY (NLI null, agreement at ceiling).
+> Verdict **PARTIAL**, cell-for-cell as v4. The Tier-4-for-one-model signal is therefore not a small-N or
+> single-date artifact: the construction's effect on the paraphrase reading is **stable in magnitude
+> across two disjoint item sets**, and gpt's is the only model whose effect survives onto the
+> distributionally-dispreferred agreement reflex. The single-panel and expert-stipulated-key caveats
+> stand; `internal-contrast-only`. The instrument disagreement replicates as the record's sharpest
+> (|FC−NLI| up to 0.925), still feeding the instrument-sensitivity open question.
 
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 

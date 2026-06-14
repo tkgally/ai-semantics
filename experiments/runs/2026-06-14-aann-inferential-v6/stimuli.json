@@ -1,0 +1,1959 @@
+{
+ "seed": 20260614,
+ "design": "experiments/designs/aann-construction-v6-inferential.md",
+ "replication_of": "experiments/runs/2026-06-13-aann-inferential-v4",
+ "governing_decisions": [
+  "wiki/decisions/resolved/aann-inferential-default-coincidence.md",
+  "wiki/decisions/resolved/aann-inferential-operationalization.md"
+ ],
+ "anchor": "internal-contrast-only",
+ "chief_cost_statement": "The v6 can never say 'models draw the inference the way humans do' \u2014 only that the construction shifts inferential behaviour relative to a matched control, in the direction the published semantics predicts.",
+ "expected_inference_key_provenance": "EXPERT-STIPULATED. The unification/whole-evaluation reading is the AANN-licensed answer per the design author's coding of the published AANN semantics (Solt 2007 unit-coercion; Dalrymple & King 2019; Bylinina & Nouwen 2018 \u2014 named as the analyses the stipulation rests on, NOT quoted; they are not in-repo). This is a scoring key, not a behavioral-human anchor.",
+ "primary_instrument": "A (paraphrase forced-choice)",
+ "convergent_instrument": "B (entailment NLI)",
+ "load_bearing_discriminator": "agreement (was/were) sub-probe",
+ "frame_inventory": {
+  "aann": "the construction (the AANN sentence)",
+  "ddc": "distributive-default control (N1 headroom frame); 'On each of the {num} {noun} {pp}, it was {adj}.'",
+  "lcc": "lexical-cue control (N2 construction-isolating arm); same itemizing cue, attributive adjective, no AANN; 'On each of the {num} {adj} {noun} {pp}, {verb}.'",
+  "agreement_control": "BARE PLURAL (N4) \u2014 agreement arm only, NOT the DDC; 'Three magical days ___ what we needed.'"
+ },
+ "headline_statistic": "double-contrast Delta^2 = P(uni|AANN) - P(uni|LCC) = (AANN shift) - (lexical-cue shift)",
+ "noun_classes": [
+  "distance",
+  "temporal"
+ ],
+ "counts": {
+  "base_items": 40,
+  "by_nounclass": {
+   "distance": 20,
+   "temporal": 20
+  },
+  "frames_per_item": 3,
+  "under_pressure_distributive": 22,
+  "key_disputed": 1,
+  "tier0_pairs": 24,
+  "fc_unification_letter_A": 13,
+  "agr_was_letter_A": 21,
+  "tier0_aann_letter_A": 14
+ },
+ "under_pressure_ids": [
+  "v6-temporal-dreadful-four-days",
+  "v6-temporal-dreary-five-days",
+  "v6-temporal-stressful-three-weeks",
+  "v6-temporal-bleak-six-months",
+  "v6-temporal-hellish-three-days",
+  "v6-temporal-tense-five-hours",
+  "v6-temporal-sombre-three-days",
+  "v6-temporal-draining-six-weeks",
+  "v6-temporal-monotonous-four-months",
+  "v6-temporal-gloomy-five-days",
+  "v6-distance-savage-two-miles",
+  "v6-distance-windswept-four-miles",
+  "v6-distance-rough-eight-miles",
+  "v6-distance-taxing-twelve-miles",
+  "v6-distance-blistering-six-miles",
+  "v6-distance-backbreaking-three-miles",
+  "v6-distance-hazardous-four-miles",
+  "v6-distance-sandy-five-miles",
+  "v6-distance-bumpy-nine-miles",
+  "v6-distance-freezing-forty-yards",
+  "v6-distance-vertiginous-three-miles",
+  "v6-distance-sodden-five-miles"
+ ],
+ "key_disputed_ids": [
+  "v6-distance-freezing-forty-yards"
+ ],
+ "items": [
+  {
+   "id": "v6-temporal-magical-three-days",
+   "adj": "magical",
+   "num": "three",
+   "noun": "days",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "We spent a magical three days in Venice.",
+    "ddc": "On each of the three days in Venice, it was magical.",
+    "lcc": "On each of the three magical days in Venice, we wandered."
+   },
+   "aann": "We spent a magical three days in Venice.",
+   "control_bare_plural": "We spent three magical days in Venice.",
+   "pp": "in Venice",
+   "lcc_verb": "we wandered",
+   "paraphrase_unification": "The three days formed one continuous stretch, magical as a whole.",
+   "paraphrase_distributive": "Each of the three days was individually magical.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The three days were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was magical.",
+    "distributive_foil": "Each day individually was magical."
+   },
+   "agreement": {
+    "aann_frame": "A magical three days ___ what we needed.",
+    "control_frame": "Three magical days ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-dreadful-four-days",
+   "adj": "dreadful",
+   "num": "four",
+   "noun": "days",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "He endured a dreadful four days in hospital.",
+    "ddc": "On each of the four days in hospital, it was dreadful.",
+    "lcc": "On each of the four dreadful days in hospital, he lay still."
+   },
+   "aann": "He endured a dreadful four days in hospital.",
+   "control_bare_plural": "He endured four dreadful days in hospital.",
+   "pp": "in hospital",
+   "lcc_verb": "he lay still",
+   "paraphrase_unification": "The four days formed one continuous stretch, dreadful as a whole.",
+   "paraphrase_distributive": "Each of the four days was individually dreadful.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The four days were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was dreadful.",
+    "distributive_foil": "Each day individually was dreadful."
+   },
+   "agreement": {
+    "aann_frame": "A dreadful four days ___ what we needed.",
+    "control_frame": "Four dreadful days ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-splendid-two-weeks",
+   "adj": "splendid",
+   "num": "two",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "They had a splendid two weeks in Provence.",
+    "ddc": "On each of the two weeks in Provence, it was splendid.",
+    "lcc": "On each of the two splendid weeks in Provence, they painted."
+   },
+   "aann": "They had a splendid two weeks in Provence.",
+   "control_bare_plural": "They had two splendid weeks in Provence.",
+   "pp": "in Provence",
+   "lcc_verb": "they painted",
+   "paraphrase_unification": "The two weeks formed one continuous stretch, splendid as a whole.",
+   "paraphrase_distributive": "Each of the two weeks was individually splendid.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The two weeks were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was splendid.",
+    "distributive_foil": "Each week individually was splendid."
+   },
+   "agreement": {
+    "aann_frame": "A splendid two weeks ___ what we needed.",
+    "control_frame": "Two splendid weeks ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-dreary-five-days",
+   "adj": "dreary",
+   "num": "five",
+   "noun": "days",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "She passed a dreary five days indoors.",
+    "ddc": "On each of the five days indoors, it was dreary.",
+    "lcc": "On each of the five dreary days indoors, she read."
+   },
+   "aann": "She passed a dreary five days indoors.",
+   "control_bare_plural": "She passed five dreary days indoors.",
+   "pp": "indoors",
+   "lcc_verb": "she read",
+   "paraphrase_unification": "The five days formed one continuous stretch, dreary as a whole.",
+   "paraphrase_distributive": "Each of the five days was individually dreary.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The five days were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was dreary.",
+    "distributive_foil": "Each day individually was dreary."
+   },
+   "agreement": {
+    "aann_frame": "A dreary five days ___ what we needed.",
+    "control_frame": "Five dreary days ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-peaceful-four-days",
+   "adj": "peaceful",
+   "num": "four",
+   "noun": "days",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "We enjoyed a peaceful four days by the river.",
+    "ddc": "On each of the four days by the river, it was peaceful.",
+    "lcc": "On each of the four peaceful days by the river, we dozed."
+   },
+   "aann": "We enjoyed a peaceful four days by the river.",
+   "control_bare_plural": "We enjoyed four peaceful days by the river.",
+   "pp": "by the river",
+   "lcc_verb": "we dozed",
+   "paraphrase_unification": "The four days formed one continuous stretch, peaceful as a whole.",
+   "paraphrase_distributive": "Each of the four days was individually peaceful.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The four days were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was peaceful.",
+    "distributive_foil": "Each day individually was peaceful."
+   },
+   "agreement": {
+    "aann_frame": "A peaceful four days ___ what we needed.",
+    "control_frame": "Four peaceful days ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-stressful-three-weeks",
+   "adj": "stressful",
+   "num": "three",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "He worked a stressful three weeks before the merger.",
+    "ddc": "On each of the three weeks before the merger, it was stressful.",
+    "lcc": "On each of the three stressful weeks before the merger, he stayed late."
+   },
+   "aann": "He worked a stressful three weeks before the merger.",
+   "control_bare_plural": "He worked three stressful weeks before the merger.",
+   "pp": "before the merger",
+   "lcc_verb": "he stayed late",
+   "paraphrase_unification": "The three weeks formed one continuous stretch, stressful as a whole.",
+   "paraphrase_distributive": "Each of the three weeks was individually stressful.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The three weeks were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was stressful.",
+    "distributive_foil": "Each week individually was stressful."
+   },
+   "agreement": {
+    "aann_frame": "A stressful three weeks ___ what we needed.",
+    "control_frame": "Three stressful weeks ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-golden-two-years",
+   "adj": "golden",
+   "num": "two",
+   "noun": "years",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "They had a golden two years in the sun.",
+    "ddc": "On each of the two years in the sun, it was golden.",
+    "lcc": "On each of the two golden years in the sun, they prospered."
+   },
+   "aann": "They had a golden two years in the sun.",
+   "control_bare_plural": "They had two golden years in the sun.",
+   "pp": "in the sun",
+   "lcc_verb": "they prospered",
+   "paraphrase_unification": "The two years formed one continuous stretch, golden as a whole.",
+   "paraphrase_distributive": "Each of the two years was individually golden.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The two years were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was golden.",
+    "distributive_foil": "Each year individually was golden."
+   },
+   "agreement": {
+    "aann_frame": "A golden two years ___ what we needed.",
+    "control_frame": "Two golden years ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-bleak-six-months",
+   "adj": "bleak",
+   "num": "six",
+   "noun": "months",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "We faced a bleak six months of winter.",
+    "ddc": "On each of the six months of winter, it was bleak.",
+    "lcc": "On each of the six bleak months of winter, we huddled inside."
+   },
+   "aann": "We faced a bleak six months of winter.",
+   "control_bare_plural": "We faced six bleak months of winter.",
+   "pp": "of winter",
+   "lcc_verb": "we huddled inside",
+   "paraphrase_unification": "The six months formed one continuous stretch, bleak as a whole.",
+   "paraphrase_distributive": "Each of the six months was individually bleak.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The six months were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was bleak.",
+    "distributive_foil": "Each month individually was bleak."
+   },
+   "agreement": {
+    "aann_frame": "A bleak six months ___ what we needed.",
+    "control_frame": "Six bleak months ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-hellish-three-days",
+   "adj": "hellish",
+   "num": "three",
+   "noun": "days",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "She survived a hellish three days in transit.",
+    "ddc": "On each of the three days in transit, it was hellish.",
+    "lcc": "On each of the three hellish days in transit, she waited."
+   },
+   "aann": "She survived a hellish three days in transit.",
+   "control_bare_plural": "She survived three hellish days in transit.",
+   "pp": "in transit",
+   "lcc_verb": "she waited",
+   "paraphrase_unification": "The three days formed one continuous stretch, hellish as a whole.",
+   "paraphrase_distributive": "Each of the three days was individually hellish.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The three days were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was hellish.",
+    "distributive_foil": "Each day individually was hellish."
+   },
+   "agreement": {
+    "aann_frame": "A hellish three days ___ what we needed.",
+    "control_frame": "Three hellish days ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-delightful-two-weeks",
+   "adj": "delightful",
+   "num": "two",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "We had a delightful two weeks on the farm.",
+    "ddc": "On each of the two weeks on the farm, it was delightful.",
+    "lcc": "On each of the two delightful weeks on the farm, we baked bread."
+   },
+   "aann": "We had a delightful two weeks on the farm.",
+   "control_bare_plural": "We had two delightful weeks on the farm.",
+   "pp": "on the farm",
+   "lcc_verb": "we baked bread",
+   "paraphrase_unification": "The two weeks formed one continuous stretch, delightful as a whole.",
+   "paraphrase_distributive": "Each of the two weeks was individually delightful.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The two weeks were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was delightful.",
+    "distributive_foil": "Each week individually was delightful."
+   },
+   "agreement": {
+    "aann_frame": "A delightful two weeks ___ what we needed.",
+    "control_frame": "Two delightful weeks ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-tense-five-hours",
+   "adj": "tense",
+   "num": "five",
+   "noun": "hours",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "They endured a tense five hours of talks.",
+    "ddc": "On each of the five hours of talks, it was tense.",
+    "lcc": "On each of the five tense hours of talks, they negotiated."
+   },
+   "aann": "They endured a tense five hours of talks.",
+   "control_bare_plural": "They endured five tense hours of talks.",
+   "pp": "of talks",
+   "lcc_verb": "they negotiated",
+   "paraphrase_unification": "The five hours formed one continuous stretch, tense as a whole.",
+   "paraphrase_distributive": "Each of the five hours was individually tense.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The five hours were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was tense.",
+    "distributive_foil": "Each hour individually was tense."
+   },
+   "agreement": {
+    "aann_frame": "A tense five hours ___ what we needed.",
+    "control_frame": "Five tense hours ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-sombre-three-days",
+   "adj": "sombre",
+   "num": "three",
+   "noun": "days",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "He spent a sombre three days in mourning.",
+    "ddc": "On each of the three days in mourning, it was sombre.",
+    "lcc": "On each of the three sombre days in mourning, he grieved."
+   },
+   "aann": "He spent a sombre three days in mourning.",
+   "control_bare_plural": "He spent three sombre days in mourning.",
+   "pp": "in mourning",
+   "lcc_verb": "he grieved",
+   "paraphrase_unification": "The three days formed one continuous stretch, sombre as a whole.",
+   "paraphrase_distributive": "Each of the three days was individually sombre.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The three days were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was sombre.",
+    "distributive_foil": "Each day individually was sombre."
+   },
+   "agreement": {
+    "aann_frame": "A sombre three days ___ what we needed.",
+    "control_frame": "Three sombre days ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-carefree-four-days",
+   "adj": "carefree",
+   "num": "four",
+   "noun": "days",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "We had a carefree four days at the beach.",
+    "ddc": "On each of the four days at the beach, it was carefree.",
+    "lcc": "On each of the four carefree days at the beach, we swam."
+   },
+   "aann": "We had a carefree four days at the beach.",
+   "control_bare_plural": "We had four carefree days at the beach.",
+   "pp": "at the beach",
+   "lcc_verb": "we swam",
+   "paraphrase_unification": "The four days formed one continuous stretch, carefree as a whole.",
+   "paraphrase_distributive": "Each of the four days was individually carefree.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The four days were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was carefree.",
+    "distributive_foil": "Each day individually was carefree."
+   },
+   "agreement": {
+    "aann_frame": "A carefree four days ___ what we needed.",
+    "control_frame": "Four carefree days ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-lively-three-weeks",
+   "adj": "lively",
+   "num": "three",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "We had a lively three weeks on tour.",
+    "ddc": "On each of the three weeks on tour, it was lively.",
+    "lcc": "On each of the three lively weeks on tour, we performed."
+   },
+   "aann": "We had a lively three weeks on tour.",
+   "control_bare_plural": "We had three lively weeks on tour.",
+   "pp": "on tour",
+   "lcc_verb": "we performed",
+   "paraphrase_unification": "The three weeks formed one continuous stretch, lively as a whole.",
+   "paraphrase_distributive": "Each of the three weeks was individually lively.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The three weeks were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was lively.",
+    "distributive_foil": "Each week individually was lively."
+   },
+   "agreement": {
+    "aann_frame": "A lively three weeks ___ what we needed.",
+    "control_frame": "Three lively weeks ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-draining-six-weeks",
+   "adj": "draining",
+   "num": "six",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "He had a draining six weeks of treatment.",
+    "ddc": "On each of the six weeks of treatment, it was draining.",
+    "lcc": "On each of the six draining weeks of treatment, he rested."
+   },
+   "aann": "He had a draining six weeks of treatment.",
+   "control_bare_plural": "He had six draining weeks of treatment.",
+   "pp": "of treatment",
+   "lcc_verb": "he rested",
+   "paraphrase_unification": "The six weeks formed one continuous stretch, draining as a whole.",
+   "paraphrase_distributive": "Each of the six weeks was individually draining.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The six weeks were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was draining.",
+    "distributive_foil": "Each week individually was draining."
+   },
+   "agreement": {
+    "aann_frame": "A draining six weeks ___ what we needed.",
+    "control_frame": "Six draining weeks ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-restorative-two-weeks",
+   "adj": "restorative",
+   "num": "two",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "We took a restorative two weeks in the mountains.",
+    "ddc": "On each of the two weeks in the mountains, it was restorative.",
+    "lcc": "On each of the two restorative weeks in the mountains, we hiked."
+   },
+   "aann": "We took a restorative two weeks in the mountains.",
+   "control_bare_plural": "We took two restorative weeks in the mountains.",
+   "pp": "in the mountains",
+   "lcc_verb": "we hiked",
+   "paraphrase_unification": "The two weeks formed one continuous stretch, restorative as a whole.",
+   "paraphrase_distributive": "Each of the two weeks was individually restorative.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The two weeks were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was restorative.",
+    "distributive_foil": "Each week individually was restorative."
+   },
+   "agreement": {
+    "aann_frame": "A restorative two weeks ___ what we needed.",
+    "control_frame": "Two restorative weeks ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-monotonous-four-months",
+   "adj": "monotonous",
+   "num": "four",
+   "noun": "months",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "They endured a monotonous four months at the outpost.",
+    "ddc": "On each of the four months at the outpost, it was monotonous.",
+    "lcc": "On each of the four monotonous months at the outpost, they drilled."
+   },
+   "aann": "They endured a monotonous four months at the outpost.",
+   "control_bare_plural": "They endured four monotonous months at the outpost.",
+   "pp": "at the outpost",
+   "lcc_verb": "they drilled",
+   "paraphrase_unification": "The four months formed one continuous stretch, monotonous as a whole.",
+   "paraphrase_distributive": "Each of the four months was individually monotonous.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The four months were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was monotonous.",
+    "distributive_foil": "Each month individually was monotonous."
+   },
+   "agreement": {
+    "aann_frame": "A monotonous four months ___ what we needed.",
+    "control_frame": "Four monotonous months ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-cheerful-three-days",
+   "adj": "cheerful",
+   "num": "three",
+   "noun": "days",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "We spent a cheerful three days at the fair.",
+    "ddc": "On each of the three days at the fair, it was cheerful.",
+    "lcc": "On each of the three cheerful days at the fair, we played games."
+   },
+   "aann": "We spent a cheerful three days at the fair.",
+   "control_bare_plural": "We spent three cheerful days at the fair.",
+   "pp": "at the fair",
+   "lcc_verb": "we played games",
+   "paraphrase_unification": "The three days formed one continuous stretch, cheerful as a whole.",
+   "paraphrase_distributive": "Each of the three days was individually cheerful.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The three days were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was cheerful.",
+    "distributive_foil": "Each day individually was cheerful."
+   },
+   "agreement": {
+    "aann_frame": "A cheerful three days ___ what we needed.",
+    "control_frame": "Three cheerful days ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-gloomy-five-days",
+   "adj": "gloomy",
+   "num": "five",
+   "noun": "days",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "He passed a gloomy five days in the rain.",
+    "ddc": "On each of the five days in the rain, it was gloomy.",
+    "lcc": "On each of the five gloomy days in the rain, he sulked."
+   },
+   "aann": "He passed a gloomy five days in the rain.",
+   "control_bare_plural": "He passed five gloomy days in the rain.",
+   "pp": "in the rain",
+   "lcc_verb": "he sulked",
+   "paraphrase_unification": "The five days formed one continuous stretch, gloomy as a whole.",
+   "paraphrase_distributive": "Each of the five days was individually gloomy.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The five days were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was gloomy.",
+    "distributive_foil": "Each day individually was gloomy."
+   },
+   "agreement": {
+    "aann_frame": "A gloomy five days ___ what we needed.",
+    "control_frame": "Five gloomy days ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-temporal-blessed-two-weeks",
+   "adj": "blessed",
+   "num": "two",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "frames": {
+    "aann": "They had a blessed two weeks of calm.",
+    "ddc": "On each of the two weeks of calm, it was blessed.",
+    "lcc": "On each of the two blessed weeks of calm, they gave thanks."
+   },
+   "aann": "They had a blessed two weeks of calm.",
+   "control_bare_plural": "They had two blessed weeks of calm.",
+   "pp": "of calm",
+   "lcc_verb": "they gave thanks",
+   "paraphrase_unification": "The two weeks formed one continuous stretch, blessed as a whole.",
+   "paraphrase_distributive": "Each of the two weeks was individually blessed.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The two weeks were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was blessed.",
+    "distributive_foil": "Each week individually was blessed."
+   },
+   "agreement": {
+    "aann_frame": "A blessed two weeks ___ what we needed.",
+    "control_frame": "Two blessed weeks ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-picturesque-six-miles",
+   "adj": "picturesque",
+   "num": "six",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We hiked a picturesque six miles along the coast.",
+    "ddc": "On each of the six miles along the coast, it was picturesque.",
+    "lcc": "On each of the six picturesque miles along the coast, we paused for photos."
+   },
+   "aann": "We hiked a picturesque six miles along the coast.",
+   "control_bare_plural": "We hiked six picturesque miles along the coast.",
+   "pp": "along the coast",
+   "lcc_verb": "we paused for photos",
+   "paraphrase_unification": "The six miles formed one continuous stretch, picturesque as a whole.",
+   "paraphrase_distributive": "Each of the six miles was individually picturesque.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The six miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was picturesque.",
+    "distributive_foil": "Each mile individually was picturesque."
+   },
+   "agreement": {
+    "aann_frame": "A picturesque six miles ___ what we needed.",
+    "control_frame": "Six picturesque miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-savage-two-miles",
+   "adj": "savage",
+   "num": "two",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "They climbed a savage two miles to the summit.",
+    "ddc": "On each of the two miles to the summit, it was savage.",
+    "lcc": "On each of the two savage miles to the summit, they roped up."
+   },
+   "aann": "They climbed a savage two miles to the summit.",
+   "control_bare_plural": "They climbed two savage miles to the summit.",
+   "pp": "to the summit",
+   "lcc_verb": "they roped up",
+   "paraphrase_unification": "The two miles formed one continuous stretch, savage as a whole.",
+   "paraphrase_distributive": "Each of the two miles was individually savage.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The two miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was savage.",
+    "distributive_foil": "Each mile individually was savage."
+   },
+   "agreement": {
+    "aann_frame": "A savage two miles ___ what we needed.",
+    "control_frame": "Two savage miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-windswept-four-miles",
+   "adj": "windswept",
+   "num": "four",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We walked a windswept four miles along the cliffs.",
+    "ddc": "On each of the four miles along the cliffs, it was windswept.",
+    "lcc": "On each of the four windswept miles along the cliffs, we leaned into the gale."
+   },
+   "aann": "We walked a windswept four miles along the cliffs.",
+   "control_bare_plural": "We walked four windswept miles along the cliffs.",
+   "pp": "along the cliffs",
+   "lcc_verb": "we leaned into the gale",
+   "paraphrase_unification": "The four miles formed one continuous stretch, windswept as a whole.",
+   "paraphrase_distributive": "Each of the four miles was individually windswept.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The four miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was windswept.",
+    "distributive_foil": "Each mile individually was windswept."
+   },
+   "agreement": {
+    "aann_frame": "A windswept four miles ___ what we needed.",
+    "control_frame": "Four windswept miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-desolate-ten-miles",
+   "adj": "desolate",
+   "num": "ten",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "She drove a desolate ten miles across the plain.",
+    "ddc": "On each of the ten miles across the plain, it was desolate.",
+    "lcc": "On each of the ten desolate miles across the plain, she saw no one."
+   },
+   "aann": "She drove a desolate ten miles across the plain.",
+   "control_bare_plural": "She drove ten desolate miles across the plain.",
+   "pp": "across the plain",
+   "lcc_verb": "she saw no one",
+   "paraphrase_unification": "The ten miles formed one continuous stretch, desolate as a whole.",
+   "paraphrase_distributive": "Each of the ten miles was individually desolate.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The ten miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was desolate.",
+    "distributive_foil": "Each mile individually was desolate."
+   },
+   "agreement": {
+    "aann_frame": "A desolate ten miles ___ what we needed.",
+    "control_frame": "Ten desolate miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-rough-eight-miles",
+   "adj": "rough",
+   "num": "eight",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We sailed a rough eight miles to the harbour.",
+    "ddc": "On each of the eight miles to the harbour, it was rough.",
+    "lcc": "On each of the eight rough miles to the harbour, we held on."
+   },
+   "aann": "We sailed a rough eight miles to the harbour.",
+   "control_bare_plural": "We sailed eight rough miles to the harbour.",
+   "pp": "to the harbour",
+   "lcc_verb": "we held on",
+   "paraphrase_unification": "The eight miles formed one continuous stretch, rough as a whole.",
+   "paraphrase_distributive": "Each of the eight miles was individually rough.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The eight miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was rough.",
+    "distributive_foil": "Each mile individually was rough."
+   },
+   "agreement": {
+    "aann_frame": "A rough eight miles ___ what we needed.",
+    "control_frame": "Eight rough miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-taxing-twelve-miles",
+   "adj": "taxing",
+   "num": "twelve",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "He trudged a taxing twelve miles home.",
+    "ddc": "On each of the twelve miles home, it was taxing.",
+    "lcc": "On each of the twelve taxing miles home, he limped."
+   },
+   "aann": "He trudged a taxing twelve miles home.",
+   "control_bare_plural": "He trudged twelve taxing miles home.",
+   "pp": "home",
+   "lcc_verb": "he limped",
+   "paraphrase_unification": "The twelve miles formed one continuous stretch, taxing as a whole.",
+   "paraphrase_distributive": "Each of the twelve miles was individually taxing.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The twelve miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was taxing.",
+    "distributive_foil": "Each mile individually was taxing."
+   },
+   "agreement": {
+    "aann_frame": "A taxing twelve miles ___ what we needed.",
+    "control_frame": "Twelve taxing miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-stunning-five-miles",
+   "adj": "stunning",
+   "num": "five",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We drove a stunning five miles through the canyon.",
+    "ddc": "On each of the five miles through the canyon, it was stunning.",
+    "lcc": "On each of the five stunning miles through the canyon, we gazed out."
+   },
+   "aann": "We drove a stunning five miles through the canyon.",
+   "control_bare_plural": "We drove five stunning miles through the canyon.",
+   "pp": "through the canyon",
+   "lcc_verb": "we gazed out",
+   "paraphrase_unification": "The five miles formed one continuous stretch, stunning as a whole.",
+   "paraphrase_distributive": "Each of the five miles was individually stunning.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The five miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was stunning.",
+    "distributive_foil": "Each mile individually was stunning."
+   },
+   "agreement": {
+    "aann_frame": "A stunning five miles ___ what we needed.",
+    "control_frame": "Five stunning miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-blistering-six-miles",
+   "adj": "blistering",
+   "num": "six",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "She ran a blistering six miles in the heat.",
+    "ddc": "On each of the six miles in the heat, it was blistering.",
+    "lcc": "On each of the six blistering miles in the heat, she gasped."
+   },
+   "aann": "She ran a blistering six miles in the heat.",
+   "control_bare_plural": "She ran six blistering miles in the heat.",
+   "pp": "in the heat",
+   "lcc_verb": "she gasped",
+   "paraphrase_unification": "The six miles formed one continuous stretch, blistering as a whole.",
+   "paraphrase_distributive": "Each of the six miles was individually blistering.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The six miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was blistering.",
+    "distributive_foil": "Each mile individually was blistering."
+   },
+   "agreement": {
+    "aann_frame": "A blistering six miles ___ what we needed.",
+    "control_frame": "Six blistering miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-gorgeous-seven-miles",
+   "adj": "gorgeous",
+   "num": "seven",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We cycled a gorgeous seven miles by the vineyards.",
+    "ddc": "On each of the seven miles by the vineyards, it was gorgeous.",
+    "lcc": "On each of the seven gorgeous miles by the vineyards, we coasted."
+   },
+   "aann": "We cycled a gorgeous seven miles by the vineyards.",
+   "control_bare_plural": "We cycled seven gorgeous miles by the vineyards.",
+   "pp": "by the vineyards",
+   "lcc_verb": "we coasted",
+   "paraphrase_unification": "The seven miles formed one continuous stretch, gorgeous as a whole.",
+   "paraphrase_distributive": "Each of the seven miles was individually gorgeous.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The seven miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was gorgeous.",
+    "distributive_foil": "Each mile individually was gorgeous."
+   },
+   "agreement": {
+    "aann_frame": "A gorgeous seven miles ___ what we needed.",
+    "control_frame": "Seven gorgeous miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-backbreaking-three-miles",
+   "adj": "backbreaking",
+   "num": "three",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "They hauled the gear a backbreaking three miles uphill.",
+    "ddc": "On each of the three miles uphill, it was backbreaking.",
+    "lcc": "On each of the three backbreaking miles uphill, they strained."
+   },
+   "aann": "They hauled the gear a backbreaking three miles uphill.",
+   "control_bare_plural": "They hauled the gear three backbreaking miles uphill.",
+   "pp": "uphill",
+   "lcc_verb": "they strained",
+   "paraphrase_unification": "The three miles formed one continuous stretch, backbreaking as a whole.",
+   "paraphrase_distributive": "Each of the three miles was individually backbreaking.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 2,
+   "nli": {
+    "unification_hyp": "The three miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was backbreaking.",
+    "distributive_foil": "Each mile individually was backbreaking."
+   },
+   "agreement": {
+    "aann_frame": "A backbreaking three miles ___ what we needed.",
+    "control_frame": "Three backbreaking miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-hazardous-four-miles",
+   "adj": "hazardous",
+   "num": "four",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We crossed a hazardous four miles of ice.",
+    "ddc": "On each of the four miles of ice, it was hazardous.",
+    "lcc": "On each of the four hazardous miles of ice, we roped together."
+   },
+   "aann": "We crossed a hazardous four miles of ice.",
+   "control_bare_plural": "We crossed four hazardous miles of ice.",
+   "pp": "of ice",
+   "lcc_verb": "we roped together",
+   "paraphrase_unification": "The four miles formed one continuous stretch, hazardous as a whole.",
+   "paraphrase_distributive": "Each of the four miles was individually hazardous.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The four miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was hazardous.",
+    "distributive_foil": "Each mile individually was hazardous."
+   },
+   "agreement": {
+    "aann_frame": "A hazardous four miles ___ what we needed.",
+    "control_frame": "Four hazardous miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-sandy-five-miles",
+   "adj": "sandy",
+   "num": "five",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We slogged a sandy five miles down the beach.",
+    "ddc": "On each of the five miles down the beach, it was sandy.",
+    "lcc": "On each of the five sandy miles down the beach, we sank with each step."
+   },
+   "aann": "We slogged a sandy five miles down the beach.",
+   "control_bare_plural": "We slogged five sandy miles down the beach.",
+   "pp": "down the beach",
+   "lcc_verb": "we sank with each step",
+   "paraphrase_unification": "The five miles formed one continuous stretch, sandy as a whole.",
+   "paraphrase_distributive": "Each of the five miles was individually sandy.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The five miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was sandy.",
+    "distributive_foil": "Each mile individually was sandy."
+   },
+   "agreement": {
+    "aann_frame": "A sandy five miles ___ what we needed.",
+    "control_frame": "Five sandy miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-verdant-two-miles",
+   "adj": "verdant",
+   "num": "two",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We strolled a verdant two miles through the valley.",
+    "ddc": "On each of the two miles through the valley, it was verdant.",
+    "lcc": "On each of the two verdant miles through the valley, we admired the green."
+   },
+   "aann": "We strolled a verdant two miles through the valley.",
+   "control_bare_plural": "We strolled two verdant miles through the valley.",
+   "pp": "through the valley",
+   "lcc_verb": "we admired the green",
+   "paraphrase_unification": "The two miles formed one continuous stretch, verdant as a whole.",
+   "paraphrase_distributive": "Each of the two miles was individually verdant.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The two miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was verdant.",
+    "distributive_foil": "Each mile individually was verdant."
+   },
+   "agreement": {
+    "aann_frame": "A verdant two miles ___ what we needed.",
+    "control_frame": "Two verdant miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-pristine-six-miles",
+   "adj": "pristine",
+   "num": "six",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We skied a pristine six miles of backcountry.",
+    "ddc": "On each of the six miles of backcountry, it was pristine.",
+    "lcc": "On each of the six pristine miles of backcountry, we cut fresh tracks."
+   },
+   "aann": "We skied a pristine six miles of backcountry.",
+   "control_bare_plural": "We skied six pristine miles of backcountry.",
+   "pp": "of backcountry",
+   "lcc_verb": "we cut fresh tracks",
+   "paraphrase_unification": "The six miles formed one continuous stretch, pristine as a whole.",
+   "paraphrase_distributive": "Each of the six miles was individually pristine.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The six miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was pristine.",
+    "distributive_foil": "Each mile individually was pristine."
+   },
+   "agreement": {
+    "aann_frame": "A pristine six miles ___ what we needed.",
+    "control_frame": "Six pristine miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-bumpy-nine-miles",
+   "adj": "bumpy",
+   "num": "nine",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We rode a bumpy nine miles on the dirt track.",
+    "ddc": "On each of the nine miles on the dirt track, it was bumpy.",
+    "lcc": "On each of the nine bumpy miles on the dirt track, we jolted along."
+   },
+   "aann": "We rode a bumpy nine miles on the dirt track.",
+   "control_bare_plural": "We rode nine bumpy miles on the dirt track.",
+   "pp": "on the dirt track",
+   "lcc_verb": "we jolted along",
+   "paraphrase_unification": "The nine miles formed one continuous stretch, bumpy as a whole.",
+   "paraphrase_distributive": "Each of the nine miles was individually bumpy.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The nine miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was bumpy.",
+    "distributive_foil": "Each mile individually was bumpy."
+   },
+   "agreement": {
+    "aann_frame": "A bumpy nine miles ___ what we needed.",
+    "control_frame": "Nine bumpy miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-majestic-eight-miles",
+   "adj": "majestic",
+   "num": "eight",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We hiked a majestic eight miles below the peaks.",
+    "ddc": "On each of the eight miles below the peaks, it was majestic.",
+    "lcc": "On each of the eight majestic miles below the peaks, we stopped often."
+   },
+   "aann": "We hiked a majestic eight miles below the peaks.",
+   "control_bare_plural": "We hiked eight majestic miles below the peaks.",
+   "pp": "below the peaks",
+   "lcc_verb": "we stopped often",
+   "paraphrase_unification": "The eight miles formed one continuous stretch, majestic as a whole.",
+   "paraphrase_distributive": "Each of the eight miles was individually majestic.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The eight miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was majestic.",
+    "distributive_foil": "Each mile individually was majestic."
+   },
+   "agreement": {
+    "aann_frame": "A majestic eight miles ___ what we needed.",
+    "control_frame": "Eight majestic miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-freezing-forty-yards",
+   "adj": "freezing",
+   "num": "forty",
+   "noun": "yards",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "She swam a freezing forty yards to the boat.",
+    "ddc": "On each of the forty yards to the boat, it was freezing.",
+    "lcc": "On each of the forty freezing yards to the boat, she gasped at the cold."
+   },
+   "aann": "She swam a freezing forty yards to the boat.",
+   "control_bare_plural": "She swam forty freezing yards to the boat.",
+   "pp": "to the boat",
+   "lcc_verb": "she gasped at the cold",
+   "paraphrase_unification": "The forty yards formed one continuous stretch, freezing as a whole.",
+   "paraphrase_distributive": "Each of the forty yards was individually freezing.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The forty yards were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was freezing.",
+    "distributive_foil": "Each yard individually was freezing."
+   },
+   "agreement": {
+    "aann_frame": "A freezing forty yards ___ what we needed.",
+    "control_frame": "Forty freezing yards ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": true,
+   "key_dispute_reason": "yard-count items are at the edge of the AANN measure-noun inventory; Mahowald's distance class centers on miles, so 'yards' coding is less settled"
+  },
+  {
+   "id": "v6-distance-vertiginous-three-miles",
+   "adj": "vertiginous",
+   "num": "three",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We climbed a vertiginous three miles up the face.",
+    "ddc": "On each of the three miles up the face, it was vertiginous.",
+    "lcc": "On each of the three vertiginous miles up the face, we clung to the rock."
+   },
+   "aann": "We climbed a vertiginous three miles up the face.",
+   "control_bare_plural": "We climbed three vertiginous miles up the face.",
+   "pp": "up the face",
+   "lcc_verb": "we clung to the rock",
+   "paraphrase_unification": "The three miles formed one continuous stretch, vertiginous as a whole.",
+   "paraphrase_distributive": "Each of the three miles was individually vertiginous.",
+   "fc_letter_unification": "B",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The three miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was vertiginous.",
+    "distributive_foil": "Each mile individually was vertiginous."
+   },
+   "agreement": {
+    "aann_frame": "A vertiginous three miles ___ what we needed.",
+    "control_frame": "Three vertiginous miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-lush-four-miles",
+   "adj": "lush",
+   "num": "four",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We wandered a lush four miles through the rainforest.",
+    "ddc": "On each of the four miles through the rainforest, it was lush.",
+    "lcc": "On each of the four lush miles through the rainforest, we heard birdsong."
+   },
+   "aann": "We wandered a lush four miles through the rainforest.",
+   "control_bare_plural": "We wandered four lush miles through the rainforest.",
+   "pp": "through the rainforest",
+   "lcc_verb": "we heard birdsong",
+   "paraphrase_unification": "The four miles formed one continuous stretch, lush as a whole.",
+   "paraphrase_distributive": "Each of the four miles was individually lush.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The four miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was lush.",
+    "distributive_foil": "Each mile individually was lush."
+   },
+   "agreement": {
+    "aann_frame": "A lush four miles ___ what we needed.",
+    "control_frame": "Four lush miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "local_fluency": "neutral",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  },
+  {
+   "id": "v6-distance-sodden-five-miles",
+   "adj": "sodden",
+   "num": "five",
+   "noun": "miles",
+   "nounclass": "distance",
+   "frames": {
+    "aann": "We waded a sodden five miles through the marsh.",
+    "ddc": "On each of the five miles through the marsh, it was sodden.",
+    "lcc": "On each of the five sodden miles through the marsh, we were soaked."
+   },
+   "aann": "We waded a sodden five miles through the marsh.",
+   "control_bare_plural": "We waded five sodden miles through the marsh.",
+   "pp": "through the marsh",
+   "lcc_verb": "we were soaked",
+   "paraphrase_unification": "The five miles formed one continuous stretch, sodden as a whole.",
+   "paraphrase_distributive": "Each of the five miles was individually sodden.",
+   "fc_letter_unification": "A",
+   "lexical_overlap": {
+    "unification": 3,
+    "distributive": 3,
+    "parity_ok": true,
+    "direction": "equal"
+   },
+   "control_lexical_delta": 1,
+   "nli": {
+    "unification_hyp": "The five miles were a single continuous stretch.",
+    "whole_eval_hyp": "The stretch as a whole was sodden.",
+    "distributive_foil": "Each mile individually was sodden."
+   },
+   "agreement": {
+    "aann_frame": "A sodden five miles ___ what we needed.",
+    "control_frame": "Five sodden miles ___ what we needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "local_fluency": "distributive",
+   "expected_inference_key": "unification",
+   "key_provenance": "expert-stipulated",
+   "key_disputed": false,
+   "key_dispute_reason": null
+  }
+ ],
+ "tier0": [
+  {
+   "id": "tier0-magical-three-days-reverse_mods",
+   "contrast": "reverse_mods",
+   "aann_position": "A",
+   "A": "We spent a magical three days in Venice.",
+   "B": "We spent a three magical days in Venice."
+  },
+  {
+   "id": "tier0-magical-three-days-no_mod",
+   "contrast": "no_mod",
+   "aann_position": "B",
+   "A": "We spent a three days in Venice.",
+   "B": "We spent a magical three days in Venice."
+  },
+  {
+   "id": "tier0-magical-three-days-no_plural",
+   "contrast": "no_plural",
+   "aann_position": "B",
+   "A": "We spent a magical three day in Venice.",
+   "B": "We spent a magical three days in Venice."
+  },
+  {
+   "id": "tier0-magical-three-days-no_a",
+   "contrast": "no_a",
+   "aann_position": "A",
+   "A": "We spent a magical three days in Venice.",
+   "B": "We spent magical three days in Venice."
+  },
+  {
+   "id": "tier0-dreadful-four-days-reverse_mods",
+   "contrast": "reverse_mods",
+   "aann_position": "A",
+   "A": "He endured a dreadful four days in hospital.",
+   "B": "He endured a four dreadful days in hospital."
+  },
+  {
+   "id": "tier0-dreadful-four-days-no_mod",
+   "contrast": "no_mod",
+   "aann_position": "A",
+   "A": "He endured a dreadful four days in hospital.",
+   "B": "He endured a four days in hospital."
+  },
+  {
+   "id": "tier0-dreadful-four-days-no_plural",
+   "contrast": "no_plural",
+   "aann_position": "A",
+   "A": "He endured a dreadful four days in hospital.",
+   "B": "He endured a dreadful four day in hospital."
+  },
+  {
+   "id": "tier0-dreadful-four-days-no_a",
+   "contrast": "no_a",
+   "aann_position": "B",
+   "A": "He endured dreadful four days in hospital.",
+   "B": "He endured a dreadful four days in hospital."
+  },
+  {
+   "id": "tier0-splendid-two-weeks-reverse_mods",
+   "contrast": "reverse_mods",
+   "aann_position": "B",
+   "A": "They had a two splendid weeks in Provence.",
+   "B": "They had a splendid two weeks in Provence."
+  },
+  {
+   "id": "tier0-splendid-two-weeks-no_mod",
+   "contrast": "no_mod",
+   "aann_position": "B",
+   "A": "They had a two weeks in Provence.",
+   "B": "They had a splendid two weeks in Provence."
+  },
+  {
+   "id": "tier0-splendid-two-weeks-no_plural",
+   "contrast": "no_plural",
+   "aann_position": "A",
+   "A": "They had a splendid two weeks in Provence.",
+   "B": "They had a splendid two week in Provence."
+  },
+  {
+   "id": "tier0-splendid-two-weeks-no_a",
+   "contrast": "no_a",
+   "aann_position": "B",
+   "A": "They had splendid two weeks in Provence.",
+   "B": "They had a splendid two weeks in Provence."
+  },
+  {
+   "id": "tier0-dreary-five-days-reverse_mods",
+   "contrast": "reverse_mods",
+   "aann_position": "A",
+   "A": "She passed a dreary five days indoors.",
+   "B": "She passed a five dreary days indoors."
+  },
+  {
+   "id": "tier0-dreary-five-days-no_mod",
+   "contrast": "no_mod",
+   "aann_position": "A",
+   "A": "She passed a dreary five days indoors.",
+   "B": "She passed a five days indoors."
+  },
+  {
+   "id": "tier0-dreary-five-days-no_plural",
+   "contrast": "no_plural",
+   "aann_position": "B",
+   "A": "She passed a dreary five day indoors.",
+   "B": "She passed a dreary five days indoors."
+  },
+  {
+   "id": "tier0-dreary-five-days-no_a",
+   "contrast": "no_a",
+   "aann_position": "B",
+   "A": "She passed dreary five days indoors.",
+   "B": "She passed a dreary five days indoors."
+  },
+  {
+   "id": "tier0-peaceful-four-days-reverse_mods",
+   "contrast": "reverse_mods",
+   "aann_position": "A",
+   "A": "We enjoyed a peaceful four days by the river.",
+   "B": "We enjoyed a four peaceful days by the river."
+  },
+  {
+   "id": "tier0-peaceful-four-days-no_mod",
+   "contrast": "no_mod",
+   "aann_position": "A",
+   "A": "We enjoyed a peaceful four days by the river.",
+   "B": "We enjoyed a four days by the river."
+  },
+  {
+   "id": "tier0-peaceful-four-days-no_plural",
+   "contrast": "no_plural",
+   "aann_position": "A",
+   "A": "We enjoyed a peaceful four days by the river.",
+   "B": "We enjoyed a peaceful four day by the river."
+  },
+  {
+   "id": "tier0-peaceful-four-days-no_a",
+   "contrast": "no_a",
+   "aann_position": "A",
+   "A": "We enjoyed a peaceful four days by the river.",
+   "B": "We enjoyed peaceful four days by the river."
+  },
+  {
+   "id": "tier0-stressful-three-weeks-reverse_mods",
+   "contrast": "reverse_mods",
+   "aann_position": "A",
+   "A": "He worked a stressful three weeks before the merger.",
+   "B": "He worked a three stressful weeks before the merger."
+  },
+  {
+   "id": "tier0-stressful-three-weeks-no_mod",
+   "contrast": "no_mod",
+   "aann_position": "B",
+   "A": "He worked a three weeks before the merger.",
+   "B": "He worked a stressful three weeks before the merger."
+  },
+  {
+   "id": "tier0-stressful-three-weeks-no_plural",
+   "contrast": "no_plural",
+   "aann_position": "A",
+   "A": "He worked a stressful three weeks before the merger.",
+   "B": "He worked a stressful three week before the merger."
+  },
+  {
+   "id": "tier0-stressful-three-weeks-no_a",
+   "contrast": "no_a",
+   "aann_position": "B",
+   "A": "He worked stressful three weeks before the merger.",
+   "B": "He worked a stressful three weeks before the merger."
+  }
+ ]
+}

@@ -172,6 +172,23 @@ item-set-bound and do not contradict. This is a **form/agreement-rung** generali
 robust to held-out items and present in two of three models); it does **not** change the **inferential**
 verdict, which stays at v4's PARTIAL. `anchor: internal-contrast-only`; $0.0320, 0 missing.
 
+**Update 2026-06-14 (ninth session): the inferential PARTIAL REPLICATES, powered, on fresh held-out
+adjectives.** A powered panel replication of v4 ran (fresh pre-run-critic GO + independent post-run
+verification, 0 mismatches) → [`result/aann-inferential-v6`](../results/aann-inferential-v6.md). Same
+yardstick as v4 (instrument, thresholds, verdict map, analysis code identical), single change the item
+set: **40 fresh hand-authored base items** (temporal 20 / distance 20, nearly doubling v4's 23,
+rebalancing the distance class), all **40 adjectives held-out** (disjoint from v4's 21 and the
+v5-reflex probe's 30). Both pre-registered questions answered **yes**: (1) the panel-wide paraphrase
+double-contrast shift **holds up powered** — all three models paraphrase-positive (Δ²
++0.875 / +0.575 / +0.90, headroom PASS all, DDC 0 / 0.225 / 0); (2) **gpt-5.4-mini's cross-instrument
+convergence replicates** — CONVERGENT-POSITIVE again (paraphrase + NLI Δ² +0.225 + agreement reflex
++0.60), while claude and gemini are again PARAPHRASE-ONLY (NLI null, agreement flat at ceiling 1.00/1.00).
+Verdict **PARTIAL**, cell-for-cell as v4 (per-model categories PARA-ONLY / CONV-POS / PARA-ONLY). The
+inferential clause is unchanged in *status* (partially supported) but now on **firmer ground**: the
+construction effect is shown stable in **magnitude across two disjoint item sets**, removing v4's
+"small-N / single-date / direction-not-magnitude" caveat (the **single-panel** and
+**expert-stipulated-key** caveats remain). `anchor: internal-contrast-only`; $0.2138, 0 missing.
+
 ## Notes / caveats
 
 - Memorization is the main confound; the held-out lexical-item check is the main defense.
