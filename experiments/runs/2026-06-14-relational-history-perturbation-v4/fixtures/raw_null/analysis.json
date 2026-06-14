@@ -1,0 +1,956 @@
+{
+  "claude": {
+    "gate": {
+      "control_acc": 1.0,
+      "consistent_acc": 1.0,
+      "stamp_respect_acc": 1.0,
+      "n_pass": 12,
+      "clusters": {
+        "0:0": true,
+        "0:1": true,
+        "0:2": true,
+        "0:3": true,
+        "1:0": true,
+        "1:1": true,
+        "1:2": true,
+        "1:3": true,
+        "2:0": true,
+        "2:1": true,
+        "2:2": true,
+        "2:3": true
+      }
+    },
+    "strict_compliance": 1.0,
+    "retried": 0,
+    "na_concentration_flags": [],
+    "primary": {
+      "label": "PRIMARY",
+      "n_mixed": 192,
+      "n_parsed": 192,
+      "n_na": 0,
+      "oop": 0.0,
+      "n_in_pair": 192,
+      "n_gated_clusters": 12,
+      "rho_chron": 0.5416666666666666,
+      "delta_chron": 0.04166666666666663,
+      "ci_chron": {
+        "lo": 0.4791666666666667,
+        "hi": 0.609375,
+        "degenerate": false,
+        "side": 0,
+        "n_clusters": 12
+      },
+      "rho_pos": 0.4270833333333333,
+      "delta_pos": -0.07291666666666669,
+      "ci_pos": {
+        "lo": 0.359375,
+        "hi": 0.4791666666666667,
+        "degenerate": false,
+        "side": -1,
+        "n_clusters": 12
+      },
+      "cell_n_in_pair": {
+        "X:late": 48,
+        "X:early": 48,
+        "Y:late": 48,
+        "Y:early": 48
+      },
+      "min_cell_n": 48,
+      "by_dpos": {
+        "late": {
+          "rho_chron": 0.46875,
+          "rho_pos": 0.46875,
+          "n": 96
+        },
+        "early": {
+          "rho_chron": 0.6145833333333334,
+          "rho_pos": 0.3854166666666667,
+          "n": 96
+        }
+      },
+      "guard_ok": true,
+      "floor24_ok": true,
+      "floor36_ok": true
+    },
+    "verdict": "TEXT-POSITION ARTIFACT",
+    "verdict_reason": "Delta_pos CI excludes 0.5 (first-line-following) while Delta_chron CI includes 0.5, with >= 24 gated in-pair parsed trials in every cell \u2014 a methodological finding about prompt geometry / stamp neglect; says nothing relational",
+    "sensitivity_cuts": {
+      "strict-only": {
+        "label": "strict-only",
+        "n_mixed": 192,
+        "n_parsed": 192,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 192,
+        "n_gated_clusters": 12,
+        "rho_chron": 0.5416666666666666,
+        "delta_chron": 0.04166666666666663,
+        "ci_chron": {
+          "lo": 0.4791666666666667,
+          "hi": 0.609375,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "rho_pos": 0.4270833333333333,
+        "delta_pos": -0.07291666666666669,
+        "ci_pos": {
+          "lo": 0.3645833333333333,
+          "hi": 0.4791666666666667,
+          "degenerate": false,
+          "side": -1,
+          "n_clusters": 12
+        },
+        "cell_n_in_pair": {
+          "X:late": 48,
+          "X:early": 48,
+          "Y:late": 48,
+          "Y:early": 48
+        },
+        "min_cell_n": 48,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.46875,
+            "rho_pos": 0.46875,
+            "n": 96
+          },
+          "early": {
+            "rho_chron": 0.6145833333333334,
+            "rho_pos": 0.3854166666666667,
+            "n": 96
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "verdict_descriptive_only": "TEXT-POSITION ARTIFACT"
+      },
+      "NAs-as-out-of-pair": {
+        "label": "NAs-as-out-of-pair",
+        "n_mixed": 192,
+        "n_parsed": 192,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 192,
+        "n_gated_clusters": 12,
+        "rho_chron": 0.5416666666666666,
+        "delta_chron": 0.04166666666666663,
+        "ci_chron": {
+          "lo": 0.4791666666666667,
+          "hi": 0.609375,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "rho_pos": 0.4270833333333333,
+        "delta_pos": -0.07291666666666669,
+        "ci_pos": {
+          "lo": 0.3645833333333333,
+          "hi": 0.4791666666666667,
+          "degenerate": false,
+          "side": -1,
+          "n_clusters": 12
+        },
+        "cell_n_in_pair": {
+          "X:late": 48,
+          "X:early": 48,
+          "Y:late": 48,
+          "Y:early": 48
+        },
+        "min_cell_n": 48,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.46875,
+            "rho_pos": 0.46875,
+            "n": 96
+          },
+          "early": {
+            "rho_chron": 0.6145833333333334,
+            "rho_pos": 0.3854166666666667,
+            "n": 96
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "verdict_descriptive_only": "TEXT-POSITION ARTIFACT"
+      },
+      "late-only": {
+        "label": "late-only",
+        "n_mixed": 96,
+        "n_parsed": 96,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 96,
+        "n_gated_clusters": 12,
+        "rho_chron": 0.46875,
+        "delta_chron": -0.03125,
+        "ci_chron": {
+          "lo": 0.375,
+          "hi": 0.5625,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "rho_pos": 0.46875,
+        "delta_pos": -0.03125,
+        "ci_pos": {
+          "lo": 0.375,
+          "hi": 0.5625,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "cell_n_in_pair": {
+          "X:late": 48,
+          "X:early": 0,
+          "Y:late": 48,
+          "Y:early": 0
+        },
+        "min_cell_n": 0,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.46875,
+            "rho_pos": 0.46875,
+            "n": 96
+          },
+          "early": {
+            "rho_chron": null,
+            "rho_pos": null,
+            "n": 0
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": false,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "early-only": {
+        "label": "early-only",
+        "n_mixed": 96,
+        "n_parsed": 96,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 96,
+        "n_gated_clusters": 12,
+        "rho_chron": 0.6145833333333334,
+        "delta_chron": 0.11458333333333337,
+        "ci_chron": {
+          "lo": 0.5416666666666666,
+          "hi": 0.7083333333333334,
+          "degenerate": false,
+          "side": 1,
+          "n_clusters": 12
+        },
+        "rho_pos": 0.3854166666666667,
+        "delta_pos": -0.11458333333333331,
+        "ci_pos": {
+          "lo": 0.2916666666666667,
+          "hi": 0.4583333333333333,
+          "degenerate": false,
+          "side": -1,
+          "n_clusters": 12
+        },
+        "cell_n_in_pair": {
+          "X:late": 0,
+          "X:early": 48,
+          "Y:late": 0,
+          "Y:early": 48
+        },
+        "min_cell_n": 0,
+        "by_dpos": {
+          "late": {
+            "rho_chron": null,
+            "rho_pos": null,
+            "n": 0
+          },
+          "early": {
+            "rho_chron": 0.6145833333333334,
+            "rho_pos": 0.3854166666666667,
+            "n": 96
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": false,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "INCONCLUSIVE-MIXED"
+      },
+      "leave-out-pair-0": {
+        "label": "leave-out-pair-0",
+        "n_mixed": 128,
+        "n_parsed": 128,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 128,
+        "n_gated_clusters": 8,
+        "rho_chron": 0.546875,
+        "delta_chron": 0.046875,
+        "ci_chron": {
+          "lo": 0.453125,
+          "hi": 0.6484375,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 8
+        },
+        "rho_pos": 0.40625,
+        "delta_pos": -0.09375,
+        "ci_pos": {
+          "lo": 0.3203125,
+          "hi": 0.46875,
+          "degenerate": false,
+          "side": -1,
+          "n_clusters": 8
+        },
+        "cell_n_in_pair": {
+          "X:late": 32,
+          "X:early": 32,
+          "Y:late": 32,
+          "Y:early": 32
+        },
+        "min_cell_n": 32,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.453125,
+            "rho_pos": 0.453125,
+            "n": 64
+          },
+          "early": {
+            "rho_chron": 0.640625,
+            "rho_pos": 0.359375,
+            "n": 64
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "TEXT-POSITION ARTIFACT"
+      },
+      "leave-out-pair-1": {
+        "label": "leave-out-pair-1",
+        "n_mixed": 128,
+        "n_parsed": 128,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 128,
+        "n_gated_clusters": 8,
+        "rho_chron": 0.5390625,
+        "delta_chron": 0.0390625,
+        "ci_chron": {
+          "lo": 0.484375,
+          "hi": 0.609375,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 8
+        },
+        "rho_pos": 0.4609375,
+        "delta_pos": -0.0390625,
+        "ci_pos": {
+          "lo": 0.421875,
+          "hi": 0.5,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 8
+        },
+        "cell_n_in_pair": {
+          "X:late": 32,
+          "X:early": 32,
+          "Y:late": 32,
+          "Y:early": 32
+        },
+        "min_cell_n": 32,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.5,
+            "rho_pos": 0.5,
+            "n": 64
+          },
+          "early": {
+            "rho_chron": 0.578125,
+            "rho_pos": 0.421875,
+            "n": 64
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "leave-out-pair-2": {
+        "label": "leave-out-pair-2",
+        "n_mixed": 128,
+        "n_parsed": 128,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 128,
+        "n_gated_clusters": 8,
+        "rho_chron": 0.5390625,
+        "delta_chron": 0.0390625,
+        "ci_chron": {
+          "lo": 0.46875,
+          "hi": 0.6171875,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 8
+        },
+        "rho_pos": 0.4140625,
+        "delta_pos": -0.0859375,
+        "ci_pos": {
+          "lo": 0.3203125,
+          "hi": 0.4921875,
+          "degenerate": false,
+          "side": -1,
+          "n_clusters": 8
+        },
+        "cell_n_in_pair": {
+          "X:late": 32,
+          "X:early": 32,
+          "Y:late": 32,
+          "Y:early": 32
+        },
+        "min_cell_n": 32,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.453125,
+            "rho_pos": 0.453125,
+            "n": 64
+          },
+          "early": {
+            "rho_chron": 0.625,
+            "rho_pos": 0.375,
+            "n": 64
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "TEXT-POSITION ARTIFACT"
+      },
+      "pair-level-bootstrap": {
+        "label": "pair-level-bootstrap (descriptive only)",
+        "n_mixed": 192,
+        "n_parsed": 192,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 192,
+        "n_gated_clusters": 3,
+        "rho_chron": 0.5416666666666666,
+        "delta_chron": 0.04166666666666663,
+        "ci_chron": {
+          "lo": 0.53125,
+          "hi": 0.546875,
+          "degenerate": false,
+          "side": 1,
+          "n_clusters": 3
+        },
+        "rho_pos": 0.4270833333333333,
+        "delta_pos": -0.07291666666666669,
+        "ci_pos": {
+          "lo": 0.359375,
+          "hi": 0.46875,
+          "degenerate": false,
+          "side": -1,
+          "n_clusters": 3
+        },
+        "cell_n_in_pair": {
+          "X:late": 48,
+          "X:early": 48,
+          "Y:late": 48,
+          "Y:early": 48
+        },
+        "min_cell_n": 48,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.46875,
+            "rho_pos": 0.46875,
+            "n": 96
+          },
+          "early": {
+            "rho_chron": 0.6145833333333334,
+            "rho_pos": 0.3854166666666667,
+            "n": 96
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true
+      }
+    }
+  },
+  "gemini": {
+    "gate": {
+      "control_acc": 1.0,
+      "consistent_acc": 1.0,
+      "stamp_respect_acc": 1.0,
+      "n_pass": 12,
+      "clusters": {
+        "0:0": true,
+        "0:1": true,
+        "0:2": true,
+        "0:3": true,
+        "1:0": true,
+        "1:1": true,
+        "1:2": true,
+        "1:3": true,
+        "2:0": true,
+        "2:1": true,
+        "2:2": true,
+        "2:3": true
+      }
+    },
+    "strict_compliance": 1.0,
+    "retried": 0,
+    "na_concentration_flags": [],
+    "primary": {
+      "label": "PRIMARY",
+      "n_mixed": 192,
+      "n_parsed": 192,
+      "n_na": 0,
+      "oop": 0.0,
+      "n_in_pair": 192,
+      "n_gated_clusters": 12,
+      "rho_chron": 0.484375,
+      "delta_chron": -0.015625,
+      "ci_chron": {
+        "lo": 0.4375,
+        "hi": 0.5260416666666666,
+        "degenerate": false,
+        "side": 0,
+        "n_clusters": 12
+      },
+      "rho_pos": 0.5677083333333334,
+      "delta_pos": 0.06770833333333337,
+      "ci_pos": {
+        "lo": 0.5,
+        "hi": 0.6354166666666666,
+        "degenerate": false,
+        "side": 0,
+        "n_clusters": 12
+      },
+      "cell_n_in_pair": {
+        "X:late": 48,
+        "X:early": 48,
+        "Y:late": 48,
+        "Y:early": 48
+      },
+      "min_cell_n": 48,
+      "by_dpos": {
+        "late": {
+          "rho_chron": 0.5520833333333334,
+          "rho_pos": 0.5520833333333334,
+          "n": 96
+        },
+        "early": {
+          "rho_chron": 0.4166666666666667,
+          "rho_pos": 0.5833333333333334,
+          "n": 96
+        }
+      },
+      "guard_ok": true,
+      "floor24_ok": true,
+      "floor36_ok": true
+    },
+    "verdict": "COMMUTATIVE-NULL-CERTIFIED",
+    "verdict_reason": "both Delta_chron and Delta_pos CIs include 0.5 (non-degenerate) with >= 36 gated in-pair parsed trials in every cell \u2014 neither stamped chronology nor text position moves the pick",
+    "sensitivity_cuts": {
+      "strict-only": {
+        "label": "strict-only",
+        "n_mixed": 192,
+        "n_parsed": 192,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 192,
+        "n_gated_clusters": 12,
+        "rho_chron": 0.484375,
+        "delta_chron": -0.015625,
+        "ci_chron": {
+          "lo": 0.4375,
+          "hi": 0.5260416666666666,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "rho_pos": 0.5677083333333334,
+        "delta_pos": 0.06770833333333337,
+        "ci_pos": {
+          "lo": 0.5,
+          "hi": 0.6354166666666666,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "cell_n_in_pair": {
+          "X:late": 48,
+          "X:early": 48,
+          "Y:late": 48,
+          "Y:early": 48
+        },
+        "min_cell_n": 48,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.5520833333333334,
+            "rho_pos": 0.5520833333333334,
+            "n": 96
+          },
+          "early": {
+            "rho_chron": 0.4166666666666667,
+            "rho_pos": 0.5833333333333334,
+            "n": 96
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "verdict_descriptive_only": "COMMUTATIVE-NULL-CERTIFIED"
+      },
+      "NAs-as-out-of-pair": {
+        "label": "NAs-as-out-of-pair",
+        "n_mixed": 192,
+        "n_parsed": 192,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 192,
+        "n_gated_clusters": 12,
+        "rho_chron": 0.484375,
+        "delta_chron": -0.015625,
+        "ci_chron": {
+          "lo": 0.4375,
+          "hi": 0.5260416666666666,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "rho_pos": 0.5677083333333334,
+        "delta_pos": 0.06770833333333337,
+        "ci_pos": {
+          "lo": 0.5,
+          "hi": 0.6354166666666666,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "cell_n_in_pair": {
+          "X:late": 48,
+          "X:early": 48,
+          "Y:late": 48,
+          "Y:early": 48
+        },
+        "min_cell_n": 48,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.5520833333333334,
+            "rho_pos": 0.5520833333333334,
+            "n": 96
+          },
+          "early": {
+            "rho_chron": 0.4166666666666667,
+            "rho_pos": 0.5833333333333334,
+            "n": 96
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true,
+        "verdict_descriptive_only": "COMMUTATIVE-NULL-CERTIFIED"
+      },
+      "late-only": {
+        "label": "late-only",
+        "n_mixed": 96,
+        "n_parsed": 96,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 96,
+        "n_gated_clusters": 12,
+        "rho_chron": 0.5520833333333334,
+        "delta_chron": 0.05208333333333337,
+        "ci_chron": {
+          "lo": 0.4895833333333333,
+          "hi": 0.625,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "rho_pos": 0.5520833333333334,
+        "delta_pos": 0.05208333333333337,
+        "ci_pos": {
+          "lo": 0.4895833333333333,
+          "hi": 0.6145833333333334,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "cell_n_in_pair": {
+          "X:late": 48,
+          "X:early": 0,
+          "Y:late": 48,
+          "Y:early": 0
+        },
+        "min_cell_n": 0,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.5520833333333334,
+            "rho_pos": 0.5520833333333334,
+            "n": 96
+          },
+          "early": {
+            "rho_chron": null,
+            "rho_pos": null,
+            "n": 0
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": false,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "early-only": {
+        "label": "early-only",
+        "n_mixed": 96,
+        "n_parsed": 96,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 96,
+        "n_gated_clusters": 12,
+        "rho_chron": 0.4166666666666667,
+        "delta_chron": -0.08333333333333331,
+        "ci_chron": {
+          "lo": 0.3229166666666667,
+          "hi": 0.5104166666666666,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "rho_pos": 0.5833333333333334,
+        "delta_pos": 0.08333333333333337,
+        "ci_pos": {
+          "lo": 0.4895833333333333,
+          "hi": 0.6770833333333334,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 12
+        },
+        "cell_n_in_pair": {
+          "X:late": 0,
+          "X:early": 48,
+          "Y:late": 0,
+          "Y:early": 48
+        },
+        "min_cell_n": 0,
+        "by_dpos": {
+          "late": {
+            "rho_chron": null,
+            "rho_pos": null,
+            "n": 0
+          },
+          "early": {
+            "rho_chron": 0.4166666666666667,
+            "rho_pos": 0.5833333333333334,
+            "n": 96
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": false,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "leave-out-pair-0": {
+        "label": "leave-out-pair-0",
+        "n_mixed": 128,
+        "n_parsed": 128,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 128,
+        "n_gated_clusters": 8,
+        "rho_chron": 0.484375,
+        "delta_chron": -0.015625,
+        "ci_chron": {
+          "lo": 0.421875,
+          "hi": 0.5390625,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 8
+        },
+        "rho_pos": 0.53125,
+        "delta_pos": 0.03125,
+        "ci_pos": {
+          "lo": 0.4609375,
+          "hi": 0.609375,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 8
+        },
+        "cell_n_in_pair": {
+          "X:late": 32,
+          "X:early": 32,
+          "Y:late": 32,
+          "Y:early": 32
+        },
+        "min_cell_n": 32,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.515625,
+            "rho_pos": 0.515625,
+            "n": 64
+          },
+          "early": {
+            "rho_chron": 0.453125,
+            "rho_pos": 0.546875,
+            "n": 64
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "leave-out-pair-1": {
+        "label": "leave-out-pair-1",
+        "n_mixed": 128,
+        "n_parsed": 128,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 128,
+        "n_gated_clusters": 8,
+        "rho_chron": 0.46875,
+        "delta_chron": -0.03125,
+        "ci_chron": {
+          "lo": 0.4140625,
+          "hi": 0.515625,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 8
+        },
+        "rho_pos": 0.578125,
+        "delta_pos": 0.078125,
+        "ci_pos": {
+          "lo": 0.5,
+          "hi": 0.6640625,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 8
+        },
+        "cell_n_in_pair": {
+          "X:late": 32,
+          "X:early": 32,
+          "Y:late": 32,
+          "Y:early": 32
+        },
+        "min_cell_n": 32,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.546875,
+            "rho_pos": 0.546875,
+            "n": 64
+          },
+          "early": {
+            "rho_chron": 0.390625,
+            "rho_pos": 0.609375,
+            "n": 64
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "INCONCLUSIVE \u2014 null pattern, certification floor unmet"
+      },
+      "leave-out-pair-2": {
+        "label": "leave-out-pair-2",
+        "n_mixed": 128,
+        "n_parsed": 128,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 128,
+        "n_gated_clusters": 8,
+        "rho_chron": 0.5,
+        "delta_chron": 0.0,
+        "ci_chron": {
+          "lo": 0.4609375,
+          "hi": 0.546875,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 8
+        },
+        "rho_pos": 0.59375,
+        "delta_pos": 0.09375,
+        "ci_pos": {
+          "lo": 0.5078125,
+          "hi": 0.6796875,
+          "degenerate": false,
+          "side": 1,
+          "n_clusters": 8
+        },
+        "cell_n_in_pair": {
+          "X:late": 32,
+          "X:early": 32,
+          "Y:late": 32,
+          "Y:early": 32
+        },
+        "min_cell_n": 32,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.59375,
+            "rho_pos": 0.59375,
+            "n": 64
+          },
+          "early": {
+            "rho_chron": 0.40625,
+            "rho_pos": 0.59375,
+            "n": 64
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": false,
+        "verdict_descriptive_only": "TEXT-POSITION ARTIFACT"
+      },
+      "pair-level-bootstrap": {
+        "label": "pair-level-bootstrap (descriptive only)",
+        "n_mixed": 192,
+        "n_parsed": 192,
+        "n_na": 0,
+        "oop": 0.0,
+        "n_in_pair": 192,
+        "n_gated_clusters": 3,
+        "rho_chron": 0.484375,
+        "delta_chron": -0.015625,
+        "ci_chron": {
+          "lo": 0.453125,
+          "hi": 0.515625,
+          "degenerate": false,
+          "side": 0,
+          "n_clusters": 3
+        },
+        "rho_pos": 0.5677083333333334,
+        "delta_pos": 0.06770833333333337,
+        "ci_pos": {
+          "lo": 0.515625,
+          "hi": 0.640625,
+          "degenerate": false,
+          "side": 1,
+          "n_clusters": 3
+        },
+        "cell_n_in_pair": {
+          "X:late": 48,
+          "X:early": 48,
+          "Y:late": 48,
+          "Y:early": 48
+        },
+        "min_cell_n": 48,
+        "by_dpos": {
+          "late": {
+            "rho_chron": 0.5520833333333334,
+            "rho_pos": 0.5520833333333334,
+            "n": 96
+          },
+          "early": {
+            "rho_chron": 0.4166666666666667,
+            "rho_pos": 0.5833333333333334,
+            "n": 96
+          }
+        },
+        "guard_ok": true,
+        "floor24_ok": true,
+        "floor36_ok": true
+      }
+    }
+  }
+}

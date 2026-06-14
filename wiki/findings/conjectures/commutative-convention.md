@@ -8,7 +8,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-31
-updated: 2026-06-12
+updated: 2026-06-14
 links:
   - rel: depends-on
     target: result/relational-reference-game-v1
@@ -103,6 +103,36 @@ certified. So the conjecture **stays `proposed`** — neither falsified nor stre
 inconclusiveness is now *located* (a forward-only elevation of unknown origin on a clean
 instrument) rather than buried in instrument noise. v4 would need a design that decouples
 chronology from position *within* a single arm (a non-adjacent perturbation point).
+
+## Update 2026-06-14 — the within-arm decoupling ran: TEXT POSITION, not chronology (still neither falsified nor certified)
+
+v3 named the fix it could not perform: decouple chronology from text-position *within* a
+single arm. [`result/relational-history-perturbation-v4`](../results/relational-history-perturbation-v4.md)
+does it — chronology carried by an explicit per-line **round stamp**, the decisive
+most-recent line placed **non-terminally**, so "chronologically-latest twin" and
+"physically-last-line twin" are crossed **orthogonally** (cov 0, asserted at build; PREREG
+frozen post-critic, GO-after-fixes with the stamp-indicator ruled **inside-class**;
+independent post-run verifier). **The decoupling worked, and the answer is text position.**
+**claude → TEXT-POSITION ARTIFACT** (Δ_pos CI-clean 0.698[0.594,0.804]; Δ_chron null
+0.509[0.465,0.556]); **gemini → INCONCLUSIVE/MIXED**, same direction (position-dominant
+Δ_pos 0.812, a small late/early asymmetry leaving Δ_chron's CI marginally off 0.5). In the
+conflict cells both models pick the physically-last (chronologically-*earlier*) twin ~0.69–0.75
+of the time.
+
+Consequences for this conjecture: it **stays `proposed` — neither falsified nor certified.**
+**Not falsified:** neither model tracks the stamped chronology (the falsification clause is
+chronology-tracking; the models move, if anything, *against* chronology toward physical
+position), so no constituted, path-dependent convention appeared. **Not certified:** the
+models are **not** content-only — they are strongly **position-driven** (Δ_pos clean in both),
+so the commutative null is **not** strengthened. Two further cautions, both binding on how this
+is cited: (a) per the pre-run critic's calibration, position-following here is
+**indistinguishable from stamp-blindness** — the result is methodological (prompt geometry /
+stamp-value neglect), **not** "the models chose to ignore recency"; (b) v4's real product is
+the **located confound**: v3's verifier *refused* to assert "physical position over chronology"
+because v3 could not earn it, and v4 earns it cleanly — any future recency/chronology probe over
+a *linear* prompt must decouple stamped recency from physical position, or it cannot tell "tracks
+the latest convention" from "reads the last line." The decisive relational question therefore
+remains **open**, now with a known geometry trap to avoid.
 
 ## What would confirm / falsify (the bet the loop picks up)
 
