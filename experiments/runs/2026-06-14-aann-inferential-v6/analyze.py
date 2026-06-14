@@ -43,7 +43,7 @@ operationalization §Ratification):
 FROZEN THRESHOLDS (fixed pre-data; baked here, not tunable):
   - double-contrast threshold TAU = +0.20, INCLUSIVE (Δ² >= +0.20 passes).
   - a "positive" Δ² additionally needs bootstrap 95% CI lower bound > 0 (STRICT).
-    10,000 item-level resamples, seed 20260613.
+    10,000 item-level resamples, seed 20260614.
   - headroom gate: PASS P(uni|DDC) <= 0.30; MARGINAL <= 0.50; FAIL > 0.50.
   - Tier-0 pass >= 20/24, INCLUSIVE; >25% missing = instrument failure.
   - instrument-disagreement flag: |FC Δ² - NLI Δ²| >= 0.30 (INCLUSIVE).
