@@ -1,0 +1,413 @@
+{
+ "run": "2026-06-14-aann-inferential-v6",
+ "design": "experiments/designs/aann-construction-v6-inferential.md",
+ "anchor": "internal-contrast-only",
+ "chief_cost_statement": "The v6 can never say 'models draw the inference the way humans do' \u2014 only that the construction shifts inferential behaviour relative to a matched control, in the direction the published semantics predicts.",
+ "expected_inference_key_provenance": "EXPERT-STIPULATED. The unification/whole-evaluation reading is the AANN-licensed answer per the design author's coding of the published AANN semantics (Solt 2007 unit-coercion; Dalrymple & King 2019; Bylinina & Nouwen 2018 \u2014 named as the analyses the stipulation rests on, NOT quoted; they are not in-repo). This is a scoring key, not a behavioral-human anchor.",
+ "primary_instrument": "A (paraphrase forced-choice, double contrast \u0394\u00b2)",
+ "headline_statistic": "\u0394\u00b2 = P(uni|AANN) - P(uni|LCC)",
+ "thresholds": {
+  "tau_delta2_inclusive": 0.2,
+  "ci_lower_strictly_above": 0.0,
+  "headroom_pass_le": 0.3,
+  "headroom_ceiling_le": 0.5,
+  "tier0_min_inclusive_of_24": 20,
+  "disagreement_flag_min_inclusive": 0.3
+ },
+ "models": {
+  "A": {
+   "slot": "A",
+   "model": "claude-sonnet-4.6",
+   "arm_status": {
+    "paraphrase": "ok",
+    "nli": "ok",
+    "agreement": "ok",
+    "tier0": "ok"
+   },
+   "tier0": {
+    "arm_status": "ok",
+    "n": 24,
+    "aann_preferred": 24,
+    "missing": 0,
+    "missingness": "ok",
+    "pass": true
+   },
+   "paraphrase": {
+    "label": "\u0394\u00b2 = P(uni|AANN) - P(uni|LCC) [double contrast, net of lexical cue]",
+    "p_uni_aann": 0.95,
+    "p_uni_ddc": 0,
+    "p_uni_lcc": 0.075,
+    "aann_shift": 0.95,
+    "lexical_cue_shift": 0.075,
+    "delta2": 0.875,
+    "ci95": [
+     0.775,
+     0.975
+    ],
+    "n_items": 40,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "paraphrase_under_pressure": {
+    "label": "under-pressure subset (distributive locally-fluent): paraphrase \u0394\u00b2",
+    "p_uni_aann": 1,
+    "p_uni_ddc": 0,
+    "p_uni_lcc": 0.0455,
+    "aann_shift": 1,
+    "lexical_cue_shift": 0.0455,
+    "delta2": 0.9545,
+    "ci95": [
+     0.8636,
+     1
+    ],
+    "n_items": 22,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "paraphrase_excl_disputed": {
+    "label": "paraphrase \u0394\u00b2 excluding item-level disputed-key items",
+    "p_uni_aann": 0.9487,
+    "p_uni_ddc": 0,
+    "p_uni_lcc": 0.0769,
+    "aann_shift": 0.9487,
+    "lexical_cue_shift": 0.0769,
+    "delta2": 0.8718,
+    "ci95": [
+     0.7692,
+     0.9744
+    ],
+    "n_items": 39,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "headroom": {
+    "p_uni_ddc": 0,
+    "status": "PASS",
+    "target_le": 0.3,
+    "ceiling_le": 0.5,
+    "note": "PASS: DDC reads distributive at baseline, AANN has headroom"
+   },
+   "nli": {
+    "label": "NLI \u0394\u00b2 = affirm(AANN) - affirm(LCC) [unification + whole-eval hyps]",
+    "p_uni_aann": 0.625,
+    "p_uni_ddc": 0.5,
+    "p_uni_lcc": 0.475,
+    "aann_shift": 0.125,
+    "lexical_cue_shift": -0.025,
+    "delta2": 0.15,
+    "ci95": [
+     0.0125,
+     0.275
+    ],
+    "n_items": 40,
+    "delta2_positive": false,
+    "aann_shift_clears_tau": false
+   },
+   "nli_headroom": {
+    "affirm_ddc": 0.5,
+    "status": "MARGINAL",
+    "note": "reported alongside; the FC headroom gate governs the primary"
+   },
+   "agreement": {
+    "label": "P(was|AANN) - P(was|bare-plural control) [singular reflex; single contrast]",
+    "shift": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "n_items": 40,
+    "positive": false,
+    "raw_aann_rate": 1,
+    "raw_control_rate": 1
+   },
+   "instrument_disagreement": {
+    "statistic": "|FC \u0394\u00b2 - NLI \u0394\u00b2|",
+    "value": 0.725,
+    "flag": true,
+    "fed_to": "open-question/instrument-sensitivity-constructional-inference"
+   },
+   "instrument_fragility_caveat": "mandatory: |FC \u0394\u00b2 - NLI \u0394\u00b2| = 0.725 >= 0.3; this model's inferential read is instrument-fragile (fed to the instrument-sensitivity open question), never averaged away (PREREG)",
+   "category": "PARAPHRASE-ONLY",
+   "headline": "shift in paraphrase selection WITHOUT the grammaticalized reflex (NOT 'draws the unification inference')",
+   "convergent_positive": false,
+   "disputed_sensitivity": {
+    "n_disputed_excluded": 1,
+    "paraphrase_positive_all_items": true,
+    "paraphrase_positive_excl_disputed": true,
+    "category_changes": false
+   }
+  },
+  "B": {
+   "slot": "B",
+   "model": "gpt-5.4-mini",
+   "arm_status": {
+    "paraphrase": "ok",
+    "nli": "ok",
+    "agreement": "ok",
+    "tier0": "ok"
+   },
+   "tier0": {
+    "arm_status": "ok",
+    "n": 24,
+    "aann_preferred": 24,
+    "missing": 0,
+    "missingness": "ok",
+    "pass": true
+   },
+   "paraphrase": {
+    "label": "\u0394\u00b2 = P(uni|AANN) - P(uni|LCC) [double contrast, net of lexical cue]",
+    "p_uni_aann": 1,
+    "p_uni_ddc": 0.225,
+    "p_uni_lcc": 0.425,
+    "aann_shift": 0.775,
+    "lexical_cue_shift": 0.2,
+    "delta2": 0.575,
+    "ci95": [
+     0.425,
+     0.725
+    ],
+    "n_items": 40,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "paraphrase_under_pressure": {
+    "label": "under-pressure subset (distributive locally-fluent): paraphrase \u0394\u00b2",
+    "p_uni_aann": 1,
+    "p_uni_ddc": 0.2727,
+    "p_uni_lcc": 0.4545,
+    "aann_shift": 0.7273,
+    "lexical_cue_shift": 0.1818,
+    "delta2": 0.5455,
+    "ci95": [
+     0.3182,
+     0.7273
+    ],
+    "n_items": 22,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "paraphrase_excl_disputed": {
+    "label": "paraphrase \u0394\u00b2 excluding item-level disputed-key items",
+    "p_uni_aann": 1,
+    "p_uni_ddc": 0.2051,
+    "p_uni_lcc": 0.4103,
+    "aann_shift": 0.7949,
+    "lexical_cue_shift": 0.2051,
+    "delta2": 0.5897,
+    "ci95": [
+     0.4359,
+     0.7436
+    ],
+    "n_items": 39,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "headroom": {
+    "p_uni_ddc": 0.225,
+    "status": "PASS",
+    "target_le": 0.3,
+    "ceiling_le": 0.5,
+    "note": "PASS: DDC reads distributive at baseline, AANN has headroom"
+   },
+   "nli": {
+    "label": "NLI \u0394\u00b2 = affirm(AANN) - affirm(LCC) [unification + whole-eval hyps]",
+    "p_uni_aann": 0.7125,
+    "p_uni_ddc": 0.5,
+    "p_uni_lcc": 0.4875,
+    "aann_shift": 0.2125,
+    "lexical_cue_shift": -0.0125,
+    "delta2": 0.225,
+    "ci95": [
+     0.075,
+     0.375
+    ],
+    "n_items": 40,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "nli_headroom": {
+    "affirm_ddc": 0.5,
+    "status": "MARGINAL",
+    "note": "reported alongside; the FC headroom gate governs the primary"
+   },
+   "agreement": {
+    "label": "P(was|AANN) - P(was|bare-plural control) [singular reflex; single contrast]",
+    "shift": 0.6,
+    "ci95": [
+     0.425,
+     0.75
+    ],
+    "n_items": 40,
+    "positive": true,
+    "raw_aann_rate": 0.825,
+    "raw_control_rate": 0.225
+   },
+   "instrument_disagreement": {
+    "statistic": "|FC \u0394\u00b2 - NLI \u0394\u00b2|",
+    "value": 0.35,
+    "flag": true,
+    "fed_to": "open-question/instrument-sensitivity-constructional-inference"
+   },
+   "instrument_fragility_caveat": "mandatory: |FC \u0394\u00b2 - NLI \u0394\u00b2| = 0.35 >= 0.3; this model's inferential read is instrument-fragile (fed to the instrument-sensitivity open question), never averaged away (PREREG)",
+   "category": "CONVERGENT-POSITIVE",
+   "headline": "the construction shifts inferential behaviour, including the grammaticalized singular reflex, relative to a matched control, in the direction the published semantics predicts",
+   "convergent_positive": true,
+   "disputed_sensitivity": {
+    "n_disputed_excluded": 1,
+    "paraphrase_positive_all_items": true,
+    "paraphrase_positive_excl_disputed": true,
+    "category_changes": false
+   }
+  },
+  "C": {
+   "slot": "C",
+   "model": "gemini-3.5-flash",
+   "arm_status": {
+    "paraphrase": "ok",
+    "nli": "ok",
+    "agreement": "ok",
+    "tier0": "ok"
+   },
+   "tier0": {
+    "arm_status": "ok",
+    "n": 24,
+    "aann_preferred": 24,
+    "missing": 0,
+    "missingness": "ok",
+    "pass": true
+   },
+   "paraphrase": {
+    "label": "\u0394\u00b2 = P(uni|AANN) - P(uni|LCC) [double contrast, net of lexical cue]",
+    "p_uni_aann": 0.975,
+    "p_uni_ddc": 0,
+    "p_uni_lcc": 0.075,
+    "aann_shift": 0.975,
+    "lexical_cue_shift": 0.075,
+    "delta2": 0.9,
+    "ci95": [
+     0.8,
+     0.975
+    ],
+    "n_items": 40,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "paraphrase_under_pressure": {
+    "label": "under-pressure subset (distributive locally-fluent): paraphrase \u0394\u00b2",
+    "p_uni_aann": 0.9545,
+    "p_uni_ddc": 0,
+    "p_uni_lcc": 0.0909,
+    "aann_shift": 0.9545,
+    "lexical_cue_shift": 0.0909,
+    "delta2": 0.8636,
+    "ci95": [
+     0.6818,
+     1
+    ],
+    "n_items": 22,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "paraphrase_excl_disputed": {
+    "label": "paraphrase \u0394\u00b2 excluding item-level disputed-key items",
+    "p_uni_aann": 0.9744,
+    "p_uni_ddc": 0,
+    "p_uni_lcc": 0.0513,
+    "aann_shift": 0.9744,
+    "lexical_cue_shift": 0.0513,
+    "delta2": 0.9231,
+    "ci95": [
+     0.8205,
+     1
+    ],
+    "n_items": 39,
+    "delta2_positive": true,
+    "aann_shift_clears_tau": true
+   },
+   "headroom": {
+    "p_uni_ddc": 0,
+    "status": "PASS",
+    "target_le": 0.3,
+    "ceiling_le": 0.5,
+    "note": "PASS: DDC reads distributive at baseline, AANN has headroom"
+   },
+   "nli": {
+    "label": "NLI \u0394\u00b2 = affirm(AANN) - affirm(LCC) [unification + whole-eval hyps]",
+    "p_uni_aann": 0.775,
+    "p_uni_ddc": 0.6,
+    "p_uni_lcc": 0.8,
+    "aann_shift": 0.175,
+    "lexical_cue_shift": 0.2,
+    "delta2": -0.025,
+    "ci95": [
+     -0.1375,
+     0.0875
+    ],
+    "n_items": 40,
+    "delta2_positive": false,
+    "aann_shift_clears_tau": false
+   },
+   "nli_headroom": {
+    "affirm_ddc": 0.6,
+    "status": "HEADROOM-FAIL",
+    "note": "reported alongside; the FC headroom gate governs the primary"
+   },
+   "agreement": {
+    "label": "P(was|AANN) - P(was|bare-plural control) [singular reflex; single contrast]",
+    "shift": 0,
+    "ci95": [
+     0,
+     0
+    ],
+    "n_items": 40,
+    "positive": false,
+    "raw_aann_rate": 1,
+    "raw_control_rate": 1
+   },
+   "instrument_disagreement": {
+    "statistic": "|FC \u0394\u00b2 - NLI \u0394\u00b2|",
+    "value": 0.925,
+    "flag": true,
+    "fed_to": "open-question/instrument-sensitivity-constructional-inference"
+   },
+   "instrument_fragility_caveat": "mandatory: |FC \u0394\u00b2 - NLI \u0394\u00b2| = 0.925 >= 0.3; this model's inferential read is instrument-fragile (fed to the instrument-sensitivity open question), never averaged away (PREREG)",
+   "category": "PARAPHRASE-ONLY",
+   "headline": "shift in paraphrase selection WITHOUT the grammaticalized reflex (NOT 'draws the unification inference')",
+   "convergent_positive": false,
+   "disputed_sensitivity": {
+    "n_disputed_excluded": 1,
+    "paraphrase_positive_all_items": true,
+    "paraphrase_positive_excl_disputed": true,
+    "category_changes": false
+   }
+  }
+ },
+ "cost": {
+  "status": "ok",
+  "total_billed_usd": 0.2138,
+  "missing_cost_calls": 0
+ },
+ "tier0_passers": [
+  "A",
+  "B",
+  "C"
+ ],
+ "headroom_clearing_models": [
+  "A",
+  "B",
+  "C"
+ ],
+ "headroom_failed_models": [],
+ "headroom_summary": {
+  "A": "PASS",
+  "B": "PASS",
+  "C": "PASS"
+ },
+ "verdict": "PARTIAL (paraphrase/constructional shift without full convergence)",
+ "verdict_basis": ">=2 reach paraphrase double-contrast positivity but <2 CONVERGENT-POSITIVE",
+ "verdict_over_models": [
+  "A",
+  "B",
+  "C"
+ ]
+}
