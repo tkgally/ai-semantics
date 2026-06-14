@@ -154,6 +154,24 @@ effect, fully convergent in one model, paraphrase-level in two — **not** estab
 NLI-aggregation bug fixed to the frozen spec; the overall PARTIAL verdict was unchanged by the fix —
 see the result page.)
 
+**Update 2026-06-14 (sixth session): the singular-agreement reflex GENERALIZES beyond gpt on fresh
+held-out items (a `functional-vs-formal` form-rung result, not an inference upgrade).** The dedicated
+reflex-generalization probe ran (fresh pre-run-critic GO + independent post-run verification, 0
+mismatches) → [`result/aann-agreement-reflex-v5`](../results/aann-agreement-reflex-v5.md). Reusing the
+ratified agreement arm **unchanged** on 30 fresh held-out adjective×measure-noun items (0 overlap with
+v3/v4) at a *stricter* bar (τ=+0.30): **gpt-5.4-mini REPLICATES** its reflex (+0.43, smaller than v3's
++0.74 / v4's +0.65 but clearing the higher bar), and — the news — **claude-sonnet-4.6 shows the reflex
+off the ceiling** (+0.33; its bare-plural control was-rate falls to 0.667 where v3/v4 had it pinned at
+1.00), so the reflex is **not gpt-specific** → verdict **REFLEX-GENERALIZES-TO-PANEL**. **gemini stays
+at the ceiling** (control was-rate 0.867, structurally blind, confirming the v3/v4 reading on a second
+sample). Bounds the verifier flagged and the result carries: claude's shift is a clean within-item
+contrast but **carried entirely by the temporal subset** (distance stays at full ceiling) and sits one
+item above the bar — read as "the construction shifts claude's agreement choice on the temporal
+held-out items," not a class-general property; v3/v4's "ceiling" and v5's "off-ceiling" are both
+item-set-bound and do not contradict. This is a **form/agreement-rung** generalization (the reflex is
+robust to held-out items and present in two of three models); it does **not** change the **inferential**
+verdict, which stays at v4's PARTIAL. `anchor: internal-contrast-only`; $0.0320, 0 missing.
+
 ## Notes / caveats
 
 - Memorization is the main confound; the held-out lexical-item check is the main defense.

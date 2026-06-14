@@ -208,6 +208,20 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > [`open-question/instrument-sensitivity-constructional-inference`](../open-questions/instrument-sensitivity-constructional-inference.md);
 > `internal-contrast-only`. (An independent verifier caught and fixed an NLI-aggregation bug to the
 > frozen spec; the overall PARTIAL verdict was unchanged.)
+>
+> **The AANN agreement reflex generalizes beyond gpt on held-out items — a form/agreement-rung
+> result, not an inference upgrade (2026-06-14, sixth session).** [`result/aann-agreement-reflex-v5`](../results/aann-agreement-reflex-v5.md)
+> re-ran the ratified was/were agreement arm (the grammaticalized singular-agreement reflex — the one
+> place a distributional account predicts the *opposite* of the construction's single-unit construal)
+> on 30 fresh held-out items. **gpt-5.4-mini replicates** its reflex (+0.43, attenuated from v3/v4 but
+> clearing a stricter τ=+0.30), and **claude-sonnet-4.6 shows it off the ceiling** (+0.33; its
+> bare-plural control falls to 0.667 *was* where v3/v4 had it pinned at ceiling) → the reflex is **not
+> gpt-specific**. gemini stays at ceiling. The verdict is bounded: claude's shift is a clean within-item
+> contrast but is **temporal-subset-driven** (distance stays at ceiling) and one item above the bar, so
+> the v3/v4 "agreement ceiling for claude/gemini" reading was **item-set-bound**, not structural. This
+> sits at the ladder's **form/agreement rung, not the inference rung** (the pre-registered gating still
+> refuses to read agreement as inference), so it does **not** move v4's PARTIAL inferential verdict; it
+> says the *form*-side reflex is robust to held-out material and present in two of three models.
 
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 

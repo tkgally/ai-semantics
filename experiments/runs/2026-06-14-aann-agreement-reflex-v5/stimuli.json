@@ -1,0 +1,791 @@
+{
+ "seed": 20260614,
+ "design": "experiments/designs/aann-agreement-reflex-generalization-v5.md",
+ "governing_decisions": [
+  "wiki/decisions/resolved/aann-inferential-operationalization.md",
+  "wiki/decisions/resolved/aann-inferential-default-coincidence.md"
+ ],
+ "anchor": "internal-contrast-only",
+ "status": "DRAFT — NOT RUN; design/materials only. No model calls have been made. No v5 numbers exist.",
+ "chief_cost_statement": "The v5 can never say 'models pick the singular agreement the way humans do' — only that the construction shifts the within-model singular-agreement choice relative to a matched bare-plural control, in the direction the published AANN semantics predicts. This is a within-model contrast, not a human-comparison claim.",
+ "expected_agreement_key_provenance": "EXPERT-STIPULATED. For an AANN measure-phrase subject the singular ('was') is the AANN-licensed agreement; for the bare-plural control the plural ('were') is the ordinary agreement. This is the design author's coding of the published AANN semantics (Solt 2007 unit-coercion; Dalrymple & King 2019; Bylinina & Nouwen 2018 — named as the analyses the stipulation rests on, NOT quoted; they are not in-repo). It is a scoring key, NOT a behavioral-human anchor.",
+ "headline_instrument": "agreement (was/were forced choice), single contrast P(was|AANN) - P(was|control), unchanged from the v4 agreement arm",
+ "headline_statistic": "agreement shift = P(was|AANN) - P(was|bare-plural control), per model",
+ "freshness_note": "All adjectives here are HELD-OUT: none appears in the v3/v4 item set (beautiful, gruelling, glorious, miserable, restful, punishing, memorable, turbulent, sleepless, hectic, blissful, brutal, frantic, scenic, muddy, breathtaking, steep, lonely, treacherous, dazzling, relentless). Adjective x measure-noun combinations are fresh. Measure-noun classes are temporal + distance only (the 'genuine extents' the v3/v4 line kept); the count-noun diagnostic arm uses ordinary count nouns deliberately.",
+ "noun_classes": [
+  "temporal",
+  "distance"
+ ],
+ "counts": {
+  "held_out_items": 30,
+  "by_nounclass": {
+   "temporal": 18,
+   "distance": 12
+  },
+  "diagnostic_count_noun_items": 10,
+  "tier0_pairs": 12,
+  "agr_was_letter_A_heldout": 15,
+  "diag_was_letter_A": 5,
+  "tier0_was_letter_A": 6,
+  "tier0_correct_answer_letter_A": 6
+ },
+ "arm_field_map": {
+  "agreement": "held-out items; each has an 'agreement' sub-object with aann_frame, control_frame, agr_letter_was (MIRRORS the v4 agreement sub-structure exactly).",
+  "diagnostic": "count-noun controls; DESCRIPTIVE-ONLY, never verdict-bearing. Each has a 'diagnostic' sub-object with control_frame (bare count plural), agr_letter_was, expected = 'were' (a genuine count plural robustly takes plural).",
+  "tier0": "was/were manipulation check; clearly grammatical-vs-ungrammatical agreement pairs; >= threshold per model to confirm the model reads the was/were task at all."
+ },
+ "items": [
+  {
+   "id": "v5-temporal-exhausting-three-days",
+   "adj": "exhausting",
+   "num": "three",
+   "noun": "days",
+   "nounclass": "temporal",
+   "aann": "We endured an exhausting three days at the summit.",
+   "control_bare_plural": "We endured three exhausting days at the summit.",
+   "agreement": {
+    "aann_frame": "An exhausting three days ___ what the climb demanded.",
+    "control_frame": "Three exhausting days ___ what the climb demanded.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-joyful-two-weeks",
+   "adj": "joyful",
+   "num": "two",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "aann": "They shared a joyful two weeks at the cabin.",
+   "control_bare_plural": "They shared two joyful weeks at the cabin.",
+   "agreement": {
+    "aann_frame": "A joyful two weeks ___ exactly what they had hoped for.",
+    "control_frame": "Two joyful weeks ___ exactly what they had hoped for.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-chaotic-four-hours",
+   "adj": "chaotic",
+   "num": "four",
+   "noun": "hours",
+   "nounclass": "temporal",
+   "aann": "The desk ran a chaotic four hours after the alert.",
+   "control_bare_plural": "The desk ran four chaotic hours after the alert.",
+   "agreement": {
+    "aann_frame": "A chaotic four hours ___ all the warning we got.",
+    "control_frame": "Four chaotic hours ___ all the warning we got.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-tedious-five-months",
+   "adj": "tedious",
+   "num": "five",
+   "noun": "months",
+   "nounclass": "temporal",
+   "aann": "She faced a tedious five months of paperwork.",
+   "control_bare_plural": "She faced five tedious months of paperwork.",
+   "agreement": {
+    "aann_frame": "A tedious five months ___ the price of the transfer.",
+    "control_frame": "Five tedious months ___ the price of the transfer.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-productive-two-days",
+   "adj": "productive",
+   "num": "two",
+   "noun": "days",
+   "nounclass": "temporal",
+   "aann": "We had a productive two days at the workshop.",
+   "control_bare_plural": "We had two productive days at the workshop.",
+   "agreement": {
+    "aann_frame": "A productive two days ___ what the team needed.",
+    "control_frame": "Two productive days ___ what the team needed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-harrowing-three-weeks",
+   "adj": "harrowing",
+   "num": "three",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "aann": "He came through a harrowing three weeks on the ward.",
+   "control_bare_plural": "He came through three harrowing weeks on the ward.",
+   "agreement": {
+    "aann_frame": "A harrowing three weeks ___ all he could recall of it.",
+    "control_frame": "Three harrowing weeks ___ all he could recall of it.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-idyllic-four-days",
+   "adj": "idyllic",
+   "num": "four",
+   "noun": "days",
+   "nounclass": "temporal",
+   "aann": "We spent an idyllic four days on the island.",
+   "control_bare_plural": "We spent four idyllic days on the island.",
+   "agreement": {
+    "aann_frame": "An idyllic four days ___ just what the trip promised.",
+    "control_frame": "Four idyllic days ___ just what the trip promised.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-agonising-six-hours",
+   "adj": "agonising",
+   "num": "six",
+   "noun": "hours",
+   "nounclass": "temporal",
+   "aann": "She waited an agonising six hours for the verdict.",
+   "control_bare_plural": "She waited six agonising hours for the verdict.",
+   "agreement": {
+    "aann_frame": "An agonising six hours ___ what the jury took.",
+    "control_frame": "Six agonising hours ___ what the jury took.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-festive-three-days",
+   "adj": "festive",
+   "num": "three",
+   "noun": "days",
+   "nounclass": "temporal",
+   "aann": "The town held a festive three days of parades.",
+   "control_bare_plural": "The town held three festive days of parades.",
+   "agreement": {
+    "aann_frame": "A festive three days ___ the whole of the holiday.",
+    "control_frame": "Three festive days ___ the whole of the holiday.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-serene-two-months",
+   "adj": "serene",
+   "num": "two",
+   "noun": "months",
+   "nounclass": "temporal",
+   "aann": "They enjoyed a serene two months in the hills.",
+   "control_bare_plural": "They enjoyed two serene months in the hills.",
+   "agreement": {
+    "aann_frame": "A serene two months ___ everything the retreat offered.",
+    "control_frame": "Two serene months ___ everything the retreat offered.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-wretched-five-days",
+   "adj": "wretched",
+   "num": "five",
+   "noun": "days",
+   "nounclass": "temporal",
+   "aann": "We slogged through a wretched five days of rain.",
+   "control_bare_plural": "We slogged through five wretched days of rain.",
+   "agreement": {
+    "aann_frame": "A wretched five days ___ the worst of the season.",
+    "control_frame": "Five wretched days ___ the worst of the season.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-perilous-three-hours",
+   "adj": "perilous",
+   "num": "three",
+   "noun": "hours",
+   "nounclass": "temporal",
+   "aann": "The crew flew a perilous three hours through the front.",
+   "control_bare_plural": "The crew flew three perilous hours through the front.",
+   "agreement": {
+    "aann_frame": "A perilous three hours ___ all the fuel allowed.",
+    "control_frame": "Three perilous hours ___ all the fuel allowed.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-dismal-four-weeks",
+   "adj": "dismal",
+   "num": "four",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "aann": "Sales had a dismal four weeks after the recall.",
+   "control_bare_plural": "Sales had four dismal weeks after the recall.",
+   "agreement": {
+    "aann_frame": "A dismal four weeks ___ the low point of the year.",
+    "control_frame": "Four dismal weeks ___ the low point of the year.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-rewarding-two-years",
+   "adj": "rewarding",
+   "num": "two",
+   "noun": "years",
+   "nounclass": "temporal",
+   "aann": "She had a rewarding two years on the project.",
+   "control_bare_plural": "She had two rewarding years on the project.",
+   "agreement": {
+    "aann_frame": "A rewarding two years ___ the best of her career.",
+    "control_frame": "Two rewarding years ___ the best of her career.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-grim-six-weeks",
+   "adj": "grim",
+   "num": "six",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "aann": "The unit endured a grim six weeks at the front.",
+   "control_bare_plural": "The unit endured six grim weeks at the front.",
+   "agreement": {
+    "aann_frame": "A grim six weeks ___ as much as they could bear.",
+    "control_frame": "Six grim weeks ___ as much as they could bear.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-jubilant-two-days",
+   "adj": "jubilant",
+   "num": "two",
+   "noun": "days",
+   "nounclass": "temporal",
+   "aann": "The city had a jubilant two days after the win.",
+   "control_bare_plural": "The city had two jubilant days after the win.",
+   "agreement": {
+    "aann_frame": "A jubilant two days ___ the high point of the season.",
+    "control_frame": "Two jubilant days ___ the high point of the season.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-sweltering-three-weeks",
+   "adj": "sweltering",
+   "num": "three",
+   "noun": "weeks",
+   "nounclass": "temporal",
+   "aann": "We pushed through a sweltering three weeks of harvest.",
+   "control_bare_plural": "We pushed through three sweltering weeks of harvest.",
+   "agreement": {
+    "aann_frame": "A sweltering three weeks ___ all the summer gave us.",
+    "control_frame": "Three sweltering weeks ___ all the summer gave us.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-temporal-frigid-four-months",
+   "adj": "frigid",
+   "num": "four",
+   "noun": "months",
+   "nounclass": "temporal",
+   "aann": "The station faced a frigid four months of darkness.",
+   "control_bare_plural": "The station faced four frigid months of darkness.",
+   "agreement": {
+    "aann_frame": "A frigid four months ___ the length of the polar night.",
+    "control_frame": "Four frigid months ___ the length of the polar night.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-winding-five-miles",
+   "adj": "winding",
+   "num": "five",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "We drove a winding five miles up the pass.",
+   "control_bare_plural": "We drove five winding miles up the pass.",
+   "agreement": {
+    "aann_frame": "A winding five miles ___ all that stood between us and the top.",
+    "control_frame": "Five winding miles ___ all that stood between us and the top.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-rugged-eight-miles",
+   "adj": "rugged",
+   "num": "eight",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "They hiked a rugged eight miles to the ridge.",
+   "control_bare_plural": "They hiked eight rugged miles to the ridge.",
+   "agreement": {
+    "aann_frame": "A rugged eight miles ___ the whole of the approach.",
+    "control_frame": "Eight rugged miles ___ the whole of the approach.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-gritty-three-miles",
+   "adj": "gritty",
+   "num": "three",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "She ran a gritty three miles through the dunes.",
+   "control_bare_plural": "She ran three gritty miles through the dunes.",
+   "agreement": {
+    "aann_frame": "A gritty three miles ___ the hardest leg of the course.",
+    "control_frame": "Three gritty miles ___ the hardest leg of the course.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-arduous-twelve-miles",
+   "adj": "arduous",
+   "num": "twelve",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "We trekked an arduous twelve miles to base camp.",
+   "control_bare_plural": "We trekked twelve arduous miles to base camp.",
+   "agreement": {
+    "aann_frame": "An arduous twelve miles ___ the day's whole march.",
+    "control_frame": "Twelve arduous miles ___ the day's whole march.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-dusty-four-miles",
+   "adj": "dusty",
+   "num": "four",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "They rode a dusty four miles into town.",
+   "control_bare_plural": "They rode four dusty miles into town.",
+   "agreement": {
+    "aann_frame": "A dusty four miles ___ all that lay ahead of them.",
+    "control_frame": "Four dusty miles ___ all that lay ahead of them.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-slick-two-miles",
+   "adj": "slick",
+   "num": "two",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "We crept a slick two miles down the icy grade.",
+   "control_bare_plural": "We crept two slick miles down the icy grade.",
+   "agreement": {
+    "aann_frame": "A slick two miles ___ the worst of the descent.",
+    "control_frame": "Two slick miles ___ the worst of the descent.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-craggy-six-miles",
+   "adj": "craggy",
+   "num": "six",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "The trail wound a craggy six miles along the spine.",
+   "control_bare_plural": "The trail wound six craggy miles along the spine.",
+   "agreement": {
+    "aann_frame": "A craggy six miles ___ the length of the traverse.",
+    "control_frame": "Six craggy miles ___ the length of the traverse.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-marshy-three-miles",
+   "adj": "marshy",
+   "num": "three",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "We waded a marshy three miles to the hide.",
+   "control_bare_plural": "We waded three marshy miles to the hide.",
+   "agreement": {
+    "aann_frame": "A marshy three miles ___ the slowest stretch of the day.",
+    "control_frame": "Three marshy miles ___ the slowest stretch of the day.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-jagged-seven-miles",
+   "adj": "jagged",
+   "num": "seven",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "They sailed a jagged seven miles past the reef.",
+   "control_bare_plural": "They sailed seven jagged miles past the reef.",
+   "agreement": {
+    "aann_frame": "A jagged seven miles ___ the riskiest part of the passage.",
+    "control_frame": "Seven jagged miles ___ the riskiest part of the passage.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-boggy-four-miles",
+   "adj": "boggy",
+   "num": "four",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "We crossed a boggy four miles of moorland.",
+   "control_bare_plural": "We crossed four boggy miles of moorland.",
+   "agreement": {
+    "aann_frame": "A boggy four miles ___ all that separated the two villages.",
+    "control_frame": "Four boggy miles ___ all that separated the two villages.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-rocky-ten-miles",
+   "adj": "rocky",
+   "num": "ten",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "The convoy ground out a rocky ten miles to the depot.",
+   "control_bare_plural": "The convoy ground out ten rocky miles to the depot.",
+   "agreement": {
+    "aann_frame": "A rocky ten miles ___ the last leg before resupply.",
+    "control_frame": "Ten rocky miles ___ the last leg before resupply.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "A"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  },
+  {
+   "id": "v5-distance-snowy-five-miles",
+   "adj": "snowy",
+   "num": "five",
+   "noun": "miles",
+   "nounclass": "distance",
+   "aann": "We skied a snowy five miles back to the lodge.",
+   "control_bare_plural": "We skied five snowy miles back to the lodge.",
+   "agreement": {
+    "aann_frame": "A snowy five miles ___ the whole of the return.",
+    "control_frame": "Five snowy miles ___ the whole of the return.",
+    "aann_expected": "was",
+    "control_expected": "were",
+    "agr_letter_was": "B"
+   },
+   "expected_agreement_key": "was",
+   "key_provenance": "expert-stipulated"
+  }
+ ],
+ "diagnostic": [
+  {
+   "id": "v5-diag-three-dogs",
+   "noun": "dogs",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Three excited dogs ___ waiting at the gate.",
+    "expected": "were",
+    "agr_letter_was": "B"
+   }
+  },
+  {
+   "id": "v5-diag-four-cars",
+   "noun": "cars",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Four red cars ___ parked along the kerb.",
+    "expected": "were",
+    "agr_letter_was": "A"
+   }
+  },
+  {
+   "id": "v5-diag-two-books",
+   "noun": "books",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Two heavy books ___ lying on the desk.",
+    "expected": "were",
+    "agr_letter_was": "B"
+   }
+  },
+  {
+   "id": "v5-diag-five-chairs",
+   "noun": "chairs",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Five wooden chairs ___ stacked by the door.",
+    "expected": "were",
+    "agr_letter_was": "A"
+   }
+  },
+  {
+   "id": "v5-diag-three-lamps",
+   "noun": "lamps",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Three dim lamps ___ flickering in the hall.",
+    "expected": "were",
+    "agr_letter_was": "B"
+   }
+  },
+  {
+   "id": "v5-diag-six-letters",
+   "noun": "letters",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Six unopened letters ___ sitting on the mat.",
+    "expected": "were",
+    "agr_letter_was": "A"
+   }
+  },
+  {
+   "id": "v5-diag-two-bridges",
+   "noun": "bridges",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Two old bridges ___ closed for repairs.",
+    "expected": "were",
+    "agr_letter_was": "B"
+   }
+  },
+  {
+   "id": "v5-diag-four-windows",
+   "noun": "windows",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Four tall windows ___ open to the street.",
+    "expected": "were",
+    "agr_letter_was": "A"
+   }
+  },
+  {
+   "id": "v5-diag-three-gardens",
+   "noun": "gardens",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Three walled gardens ___ hidden behind the house.",
+    "expected": "were",
+    "agr_letter_was": "B"
+   }
+  },
+  {
+   "id": "v5-diag-five-paintings",
+   "noun": "paintings",
+   "note": "ordinary count plural; bare plural robustly takes WERE; descriptive-only ceiling diagnostic",
+   "diagnostic": {
+    "control_frame": "Five framed paintings ___ hung above the stairs.",
+    "expected": "were",
+    "agr_letter_was": "A"
+   }
+  }
+ ],
+ "tier0": [
+  {
+   "id": "tier0-was-singular-dog",
+   "contrast": "clear_singular_subject",
+   "grammatical_form": "was",
+   "agr_letter_was": "A",
+   "frame": "The dog ___ asleep by the fire.",
+   "A": "was",
+   "B": "were"
+  },
+  {
+   "id": "tier0-was-singular-child",
+   "contrast": "clear_singular_subject",
+   "grammatical_form": "was",
+   "agr_letter_was": "B",
+   "frame": "The child ___ late for school.",
+   "A": "were",
+   "B": "was"
+  },
+  {
+   "id": "tier0-was-singular-book",
+   "contrast": "clear_singular_subject",
+   "grammatical_form": "was",
+   "agr_letter_was": "B",
+   "frame": "The book ___ on the table.",
+   "A": "were",
+   "B": "was"
+  },
+  {
+   "id": "tier0-was-singular-engine",
+   "contrast": "clear_singular_subject",
+   "grammatical_form": "was",
+   "agr_letter_was": "A",
+   "frame": "The engine ___ running smoothly.",
+   "A": "was",
+   "B": "were"
+  },
+  {
+   "id": "tier0-was-singular-window",
+   "contrast": "clear_singular_subject",
+   "grammatical_form": "was",
+   "agr_letter_was": "A",
+   "frame": "The window ___ open.",
+   "A": "was",
+   "B": "were"
+  },
+  {
+   "id": "tier0-was-singular-letter",
+   "contrast": "clear_singular_subject",
+   "grammatical_form": "was",
+   "agr_letter_was": "B",
+   "frame": "The letter ___ on the mat.",
+   "A": "were",
+   "B": "was"
+  },
+  {
+   "id": "tier0-were-plural-dogs",
+   "contrast": "clear_plural_subject",
+   "grammatical_form": "were",
+   "agr_letter_was": "A",
+   "frame": "The dogs ___ asleep by the fire.",
+   "A": "was",
+   "B": "were"
+  },
+  {
+   "id": "tier0-were-plural-children",
+   "contrast": "clear_plural_subject",
+   "grammatical_form": "were",
+   "agr_letter_was": "A",
+   "frame": "The children ___ late for school.",
+   "A": "was",
+   "B": "were"
+  },
+  {
+   "id": "tier0-were-plural-books",
+   "contrast": "clear_plural_subject",
+   "grammatical_form": "were",
+   "agr_letter_was": "B",
+   "frame": "The books ___ on the table.",
+   "A": "were",
+   "B": "was"
+  },
+  {
+   "id": "tier0-were-plural-engines",
+   "contrast": "clear_plural_subject",
+   "grammatical_form": "were",
+   "agr_letter_was": "B",
+   "frame": "The engines ___ running smoothly.",
+   "A": "were",
+   "B": "was"
+  },
+  {
+   "id": "tier0-were-plural-windows",
+   "contrast": "clear_plural_subject",
+   "grammatical_form": "were",
+   "agr_letter_was": "A",
+   "frame": "The windows ___ open.",
+   "A": "was",
+   "B": "were"
+  },
+  {
+   "id": "tier0-were-plural-letters",
+   "contrast": "clear_plural_subject",
+   "grammatical_form": "were",
+   "agr_letter_was": "B",
+   "frame": "The letters ___ on the mat.",
+   "A": "were",
+   "B": "was"
+  }
+ ]
+}
