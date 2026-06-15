@@ -1,0 +1,248 @@
+{
+ "run": "2026-06-15-conative-preference-commitment-v1",
+ "design": "experiments/designs/conative-preference-commitment-v1.md",
+ "anchor": {
+  "nli_conative": "human-anchored (resource/scivetti-2025-cxnli-dataset; CxNLI conative gold = non-entailment)",
+  "paraphrase_arm": "internal-contrast-only",
+  "resist_lcc_arm": "internal-contrast-only"
+ },
+ "primary_discriminator": "Arm 2 NLI commitment (\u0394\u00b2_commit); paraphrase is the weaker preference signal",
+ "headline_statistics": [
+  "\u0394\u00b2_pref = P(cancel-pref|conative) - P(cancel-pref|resist)",
+  "\u0394\u00b2_commit = P(withhold|conative) - P(withhold|resist)"
+ ],
+ "thresholds": {
+  "tau_delta2_inclusive": 0.2,
+  "ci_lower_strictly_above": 0.0,
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20260615,
+  "headroom_min_inclusive": 0.85,
+  "whole_design_min_clear_of_3": 2
+ },
+ "models": {
+  "A": {
+   "slot": "A",
+   "model": "claude-sonnet-4.6",
+   "arm_status": {
+    "paraphrase": "ok",
+    "nli": "ok"
+   },
+   "missingness": {
+    "paraphrase": {
+     "missing": 0,
+     "gate": "ok"
+    },
+    "nli": {
+     "missing": 0,
+     "gate": "ok"
+    }
+   },
+   "preference": {
+    "label": "\u0394\u00b2_pref = P(cancel-pref|conative) - P(cancel-pref|resist)",
+    "p_cancelpref_conative": 0.6667,
+    "p_cancelpref_resist": 0.875,
+    "p_cancelpref_transitive_conative": 0,
+    "p_cancelpref_transitive_resist": 0.375,
+    "conative_shift": 0.6667,
+    "resist_shift": 0.5,
+    "delta2": -0.2083,
+    "ci95": [
+     -0.5833,
+     0.1667
+    ],
+    "n_conative": 12,
+    "n_resist": 8,
+    "delta2_positive": false,
+    "headroom_default_rate_transitive_conative": 1
+   },
+   "commitment": {
+    "label": "\u0394\u00b2_commit = P(withhold|conative) - P(withhold|resist)",
+    "p_cancelpref_conative": 0.5833,
+    "p_cancelpref_resist": 0.125,
+    "p_cancelpref_transitive_conative": 0,
+    "p_cancelpref_transitive_resist": 0.125,
+    "conative_shift": 0.5833,
+    "resist_shift": 0.0,
+    "delta2": 0.4583,
+    "ci95": [
+     0.0833,
+     0.7917
+    ],
+    "n_conative": 12,
+    "n_resist": 8,
+    "delta2_positive": true,
+    "headroom_default_rate_transitive_conative": 1
+   },
+   "headroom": {
+    "p_nli_entailment_transitive_conative": 1,
+    "p_paraphrase_default_transitive_conative": 1,
+    "min_inclusive": 0.85,
+    "status": "PASS",
+    "note": "PASS: the transitive contact default is at ceiling on both instruments; the conative has room to suppress it"
+   },
+   "category": "COMMITMENT-ONLY",
+   "headline": "ANOMALY: the conative shifts the NLI commitment (\u0394\u00b2_commit positive) but NOT the paraphrase preference; reported as an anomaly, not folded into a confirm",
+   "convergent_positive": false,
+   "paraphrase_only": false
+  },
+  "B": {
+   "slot": "B",
+   "model": "gpt-5.4-mini",
+   "arm_status": {
+    "paraphrase": "ok",
+    "nli": "ok"
+   },
+   "missingness": {
+    "paraphrase": {
+     "missing": 0,
+     "gate": "ok"
+    },
+    "nli": {
+     "missing": 0,
+     "gate": "ok"
+    }
+   },
+   "preference": {
+    "label": "\u0394\u00b2_pref = P(cancel-pref|conative) - P(cancel-pref|resist)",
+    "p_cancelpref_conative": 0.25,
+    "p_cancelpref_resist": 0.25,
+    "p_cancelpref_transitive_conative": 0,
+    "p_cancelpref_transitive_resist": 0,
+    "conative_shift": 0.25,
+    "resist_shift": 0.25,
+    "delta2": 0.0,
+    "ci95": [
+     -0.4167,
+     0.375
+    ],
+    "n_conative": 12,
+    "n_resist": 8,
+    "delta2_positive": false,
+    "headroom_default_rate_transitive_conative": 1
+   },
+   "commitment": {
+    "label": "\u0394\u00b2_commit = P(withhold|conative) - P(withhold|resist)",
+    "p_cancelpref_conative": 0,
+    "p_cancelpref_resist": 0.25,
+    "p_cancelpref_transitive_conative": 0.0833,
+    "p_cancelpref_transitive_resist": 0,
+    "conative_shift": -0.0833,
+    "resist_shift": 0.25,
+    "delta2": -0.25,
+    "ci95": [
+     -0.625,
+     0
+    ],
+    "n_conative": 12,
+    "n_resist": 8,
+    "delta2_positive": false,
+    "headroom_default_rate_transitive_conative": 0.9167
+   },
+   "headroom": {
+    "p_nli_entailment_transitive_conative": 0.9167,
+    "p_paraphrase_default_transitive_conative": 1,
+    "min_inclusive": 0.85,
+    "status": "PASS",
+    "note": "PASS: the transitive contact default is at ceiling on both instruments; the conative has room to suppress it"
+   },
+   "category": "LEXICAL-CUE ARTIFACT",
+   "headline": "a raw conative shift exists but the double contrast (net of the anomalous at-string) is not positive on either arm: the bare-at cue, not the licensed conative, moved the reading",
+   "convergent_positive": false,
+   "paraphrase_only": false
+  },
+  "C": {
+   "slot": "C",
+   "model": "gemini-3.5-flash",
+   "arm_status": {
+    "paraphrase": "ok",
+    "nli": "ok"
+   },
+   "missingness": {
+    "paraphrase": {
+     "missing": 0,
+     "gate": "ok"
+    },
+    "nli": {
+     "missing": 0,
+     "gate": "ok"
+    }
+   },
+   "preference": {
+    "label": "\u0394\u00b2_pref = P(cancel-pref|conative) - P(cancel-pref|resist)",
+    "p_cancelpref_conative": 0.8333,
+    "p_cancelpref_resist": 0.875,
+    "p_cancelpref_transitive_conative": 0,
+    "p_cancelpref_transitive_resist": 0.25,
+    "conative_shift": 0.8333,
+    "resist_shift": 0.625,
+    "delta2": -0.0417,
+    "ci95": [
+     -0.3333,
+     0.2917
+    ],
+    "n_conative": 12,
+    "n_resist": 8,
+    "delta2_positive": false,
+    "headroom_default_rate_transitive_conative": 1
+   },
+   "commitment": {
+    "label": "\u0394\u00b2_commit = P(withhold|conative) - P(withhold|resist)",
+    "p_cancelpref_conative": 0.25,
+    "p_cancelpref_resist": 0,
+    "p_cancelpref_transitive_conative": 0,
+    "p_cancelpref_transitive_resist": 0,
+    "conative_shift": 0.25,
+    "resist_shift": 0,
+    "delta2": 0.25,
+    "ci95": [
+     0,
+     0.5
+    ],
+    "n_conative": 12,
+    "n_resist": 8,
+    "delta2_positive": false,
+    "headroom_default_rate_transitive_conative": 1
+   },
+   "headroom": {
+    "p_nli_entailment_transitive_conative": 1,
+    "p_paraphrase_default_transitive_conative": 1,
+    "min_inclusive": 0.85,
+    "status": "PASS",
+    "note": "PASS: the transitive contact default is at ceiling on both instruments; the conative has room to suppress it"
+   },
+   "category": "LEXICAL-CUE ARTIFACT",
+   "headline": "a raw conative shift exists but the double contrast (net of the anomalous at-string) is not positive on either arm: the bare-at cue, not the licensed conative, moved the reading",
+   "convergent_positive": false,
+   "paraphrase_only": false
+  }
+ },
+ "cost": {
+  "status": "ok",
+  "total_billed_usd": 0.05,
+  "missing_cost_calls": 0
+ },
+ "headroom_clearing_models": [
+  "A",
+  "B",
+  "C"
+ ],
+ "headroom_failed_models": [],
+ "headroom_summary": {
+  "A": "PASS",
+  "B": "PASS",
+  "C": "PASS"
+ },
+ "verdict": "INCONCLUSIVE",
+ "verdict_basis": "the panel does not cleanly match a confirm/falsify shape (no CONVERGENT-POSITIVE + PARAPHRASE-ONLY pair, and not unanimously convergent or null)",
+ "verdict_over_models": [
+  "A",
+  "B",
+  "C"
+ ],
+ "per_model_categories": {
+  "A": "COMMITMENT-ONLY",
+  "B": "LEXICAL-CUE ARTIFACT",
+  "C": "LEXICAL-CUE ARTIFACT"
+ },
+ "gpt_scoring_note": "design \u00a77 (binding anti-cheat): gpt-5.4-mini's PRE-EXISTING conative NLI fragility must NOT be retrofitted as new confirmation; the converging model's identity is read from THIS run's data. A genuine CONFIRM needs a model OTHER than gpt-5.4-mini to converge."
+}
