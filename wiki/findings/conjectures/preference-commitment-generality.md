@@ -6,12 +6,13 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: proposed
-anchor: pending
+status: tested
 contingent-on: []
 created: 2026-06-14
 updated: 2026-06-15
 links:
+  - rel: contradicts
+    target: result/conative-preference-commitment-v1
   - rel: depends-on
     target: result/aann-inferential-v6
   - rel: depends-on
@@ -28,17 +29,21 @@ links:
 
 # Conjecture: preference without commitment generalizes beyond AANN
 
-> **Status: proposed; a forward bet, unrun.** The governing decision
+> **Status: tested — NOT CONFIRMED (2026-06-15).** The governing decision
 > [`decisions/resolved/fresh-construction-inferential-generalization`](../../decisions/resolved/fresh-construction-inferential-generalization.md)
-> — which fresh construction carries the test, and under what binding conditions — was **ratified
-> 2026-06-15** (autonomous adversarial review, cross-session: ADOPT Option A, the conative). So the
-> construction is now the *ratified* choice, not a provisional default, and the frozen design
+> was ratified 2026-06-15 (ADOPT Option A, the conative); the frozen design
 > [`design/conative-preference-commitment-v1`](../../../experiments/designs/conative-preference-commitment-v1.md)
-> implements it. **`contingent-on` is cleared.** But the bet itself stays a *forward bet*: **no probe
-> has yet been run**, so every claim below about what the panel *will* do is provisional. `anchor:
-> pending` until a result lands — the anchor situation (entailment arm CxNLI-anchored answer-key;
-> FC/cue arms internal-contrast-only) is spelled out under *Human anchor* below and applies to the
-> result, not to this unrun conjecture.
+> ran the same UTC day → [`result/conative-preference-commitment-v1`](../results/conative-preference-commitment-v1.md),
+> **VERDICT INCONCLUSIVE**. The conative did **not** reproduce the AANN preference-without-commitment
+> shape: the paraphrase double contrast was **non-positive in all three models** (the bare-*at* lexical
+> cue absorbs the cancel-preference), and the only construction effect was a **single model's
+> commitment-only** shift (claude Δ²_commit +0.46) — the *mirror* of the AANN dissociation. **The
+> conjecture's confirm criterion is not met; the first generalization attempt failed to reproduce the
+> dissociation, which now reads as AANN-specific so far.** The forward bet below is retained as the
+> *original* statement for the record, struck through where the result bears on it; the conceptual
+> "two constructs" point survives, the "general ordering" claim does not. One construction cannot prove
+> AANN-uniqueness — a third construction (the way/caused-motion near-miss fallback) could still revisit
+> it.
 
 ## Statement
 

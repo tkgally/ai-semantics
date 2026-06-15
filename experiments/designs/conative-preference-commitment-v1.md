@@ -29,8 +29,11 @@ links:
 
 # Experiment design v1 — conative preference/commitment double contrast
 
-> **Status: provisional → frozen at the `PREREG.md` step after a fresh independent pre-run-critic
-> GO.** This design runs entirely under the **ratified** decision
+> **Status: RUN 2026-06-15** → [`result/conative-preference-commitment-v1`](../../wiki/findings/results/conative-preference-commitment-v1.md)
+> (VERDICT INCONCLUSIVE — the AANN preference/commitment dissociation does not generalize to the
+> conative). Frozen at the `PREREG.md` step after a fresh independent pre-run-critic GO-WITH-FIXES
+> (resist verb `snap`→`bump`); 240 calls, $0.05, 0 missing; independent post-run verifier
+> REPRODUCED-CLEAN. This design ran entirely under the **ratified** decision
 > [`decisions/resolved/fresh-construction-inferential-generalization`](../../wiki/decisions/resolved/fresh-construction-inferential-generalization.md)
 > (Option A — the conative; ratified 2026-06-15, autonomous adversarial review), inheriting the AANN
 > double-contrast discipline ([`decisions/resolved/aann-inferential-default-coincidence`](../../wiki/decisions/resolved/aann-inferential-default-coincidence.md)).
