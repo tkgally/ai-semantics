@@ -1,24 +1,33 @@
 ---
 id: fresh-construction-inferential-generalization
 title: How to test whether the AANN "preference-without-commitment" double-contrast dissociation is AANN-specific or a general property — choosing the fresh construction to carry the instrument
-status: open
+status: resolved
 opened: 2026-06-14
 opened-by: autonomous (workflow session 2026-06-14)
+resolved: 2026-06-15
+resolved-by: autonomous (adversarial review)
+resolution: ADOPT DEFAULT (Option A — apply the double-contrast preference/commitment instrument to the CONATIVE), with Option B's harder near-miss variant as the named binding fallback if the conative proves unbuildable under the binding conditions. The conative is the only in-repo candidate that simultaneously supplies (i) a built-in, free inference-vs-default divergence (cancel-direction), (ii) a ratified in-repo human anchor (CxNLI conative subset), and (iii) a demonstrated off-ceiling baseline. Anti-cheat PASS (the binding conditions bias against a free positive; the symmetric conjecture cannot be spun either way; the pre-registered scoring rule forbids retrofitting gpt-5.4-mini's pre-existing conative NLI fragility as new evidence). Fabrication CLEAN; anchor honesty correct. One yardstick-translation condition added at ratification (see Ratification §): the AANN headroom thresholds (P(uni|control) ≤ 0.30 / ≤ 0.50) were defined for the unification reading and MUST be re-stated in conative terms in the frozen design (conative affirm-contact demonstrably off the transitive ceiling), since v1/v2 conative cells range up to 66.7%.
 provisional-default: Option A (apply the double-contrast preference/commitment instrument to the CONATIVE — a cancel-direction, CxNLI-anchored construction whose licensed inference runs opposite to the verb's distributional default, which by construction supplies headroom)
 contingent-artifacts:
   - conjecture/preference-commitment-generality
-eligible-for-ratification: NO — opened this session; not eligible until a later session (PROTOCOL §2; never ratify in the opening session)
+eligible-for-ratification: YES — opened 2026-06-14, ratified 2026-06-15 (a later session; PROTOCOL §2 boundary held)
 ---
 
 # Decision: which fresh construction carries the preference/commitment generalization test
 
-> **OPENED 2026-06-14 (autonomous workflow session). NOT eligible for ratification this
-> session.** Per PROTOCOL §2, a decision is never ratifiable in the session that opened it;
-> surfacing and ratifying must be separated by at least one session boundary. A *later* session may
-> ratify via an independent adversarial-review pass (PROJECT.md §12.3); Tom's standing override
-> outranks any autonomous ratification. The provisional default below governs the contingent design
-> and conjecture, but any design under this decision must carry `contingent-on:
-> fresh-construction-inferential-generalization` and stay in provisional language until ratified.
+> **RESOLVED 2026-06-15 (autonomous adversarial review, cross-session — opened by the
+> 2026-06-14 eleventh session, ratified by the next session per PROJECT.md §12.3). Verdict:
+> ADOPT DEFAULT (Option A — the conative), with Option B's harder near-miss variant as the
+> binding fallback.** An independent reviewer (a fresh agent, author of none of these pages)
+> read the decision, its options, the provisional default, the contingent conjecture, the
+> candidate-construction result pages, and the CxNLI anchor resource, and returned **ADOPT
+> DEFAULT** — anti-cheat **PASS**, fabrication **CLEAN**, anchor honesty **correct**. See the
+> **Ratification** section at the foot of this page for the verdict, the verified numbers, and
+> the one yardstick-translation condition added. Tom's standing override outranks this
+> autonomous ratification. The contingent conjecture
+> [`conjecture/preference-commitment-generality`](../../findings/conjectures/preference-commitment-generality.md)
+> stays a forward bet until a design+result exists; its anchor status moves to the split status
+> (entailment arm CxNLI answer-key; FC/cue arms internal-contrast-only) only when that result lands.
 
 ## The question
 
@@ -43,7 +52,7 @@ run the **same double-contrast preference-vs-commitment instrument on a fresh co
 null can mean), so it is surfaced here rather than chosen silently mid-design.
 
 The instrument to be generalized is the **double contrast** ratified for AANN
-([`decisions/resolved/aann-inferential-default-coincidence`](../resolved/aann-inferential-default-coincidence.md)):
+([`decisions/resolved/aann-inferential-default-coincidence`](aann-inferential-default-coincidence.md)):
 a forced-choice paraphrase arm and an NLI entailment arm on the *same frozen items*, with the
 headline a within-design double contrast (target-vs-lexical-cue-control) so a measured shift cannot
 be a lexical-cue artifact, gated by a **headroom precondition** (the control baseline must be
@@ -150,9 +159,9 @@ commitment in a minority, one model converging), not whether any one model diver
 ## Binding conditions inherited from the ratified AANN decision
 
 Any design under this decision inherits the discipline of
-[`decisions/resolved/aann-inferential-default-coincidence`](../resolved/aann-inferential-default-coincidence.md)
+[`decisions/resolved/aann-inferential-default-coincidence`](aann-inferential-default-coincidence.md)
 (itself inheriting the eight conditions of
-[`decisions/resolved/aann-inferential-operationalization`](../resolved/aann-inferential-operationalization.md)),
+[`decisions/resolved/aann-inferential-operationalization`](aann-inferential-operationalization.md)),
 adapted to the fresh construction:
 
 1. **Headroom precondition.** The control baseline (the inference the construction is to
@@ -205,9 +214,50 @@ decision's were:
 - This decision fixes the **yardstick** (which construction, what counts), never a result. A later
   session motivated by wanting a particular outcome must not ratify it (PROTOCOL §2 anti-cheat).
 
+## Ratification (2026-06-15, autonomous adversarial review)
+
+**VERDICT: ADOPT DEFAULT (Option A — the conative).** Reviewer: an independent fresh agent,
+author of none of these pages; the decision was opened 2026-06-14 (eleventh session) and reviewed
+2026-06-15 (a later session), so the PROTOCOL §2 boundary held.
+
+**Verified numbers (each checked against its cited source page).** Transitive default affirm-contact
+**92–100%** ([`result/conative-minimal-pair-divergence-v1`](../../findings/results/conative-minimal-pair-divergence-v1.md));
+conative affirm-contact **13–66.7%** across v1/v2 cells (off-ceiling); way **77.8–100%**
+([`result/way-construction-traversal-v1`](../../findings/results/way-construction-traversal-v1.md));
+caused-motion **90–100%** ([`result/caused-motion-minimal-pair-divergence-v1`](../../findings/results/caused-motion-minimal-pair-divergence-v1.md))
+— the add-direction pair runs at ceiling, the no-dissociation regime, confirming Option B is a poor
+host. The CxNLI conative triple (premise *"I sipped at the Heineken."*, hypothesis *"The Heineken was
+not the target of my sipping."*, relation **Contradiction**, Table 9) and the ≈0.90 Exp-1 native
+baseline match [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)
+verbatim; the AANN-exclusion note ("not among the 8 constructions; do not cite this dataset for
+AANN") is correctly quoted.
+
+**Anti-cheat PASS.** The headroom precondition makes a null informative and forbids running where a
+positive would be unfalsifiable; the lexical-cue double contrast disqualifies a shift a matched cue
+alone could produce; the conjecture is symmetric (falsified by full convergence in all three *or* a
+full null in all three); and the pre-registered scoring rule for gpt-5.4-mini's known conative NLI
+fragility forbids retrofitting the pre-existing single-model divergence as new evidence. The default
+fixes a **yardstick**, not a result.
+
+**One condition added at ratification (yardstick translation, binding on the frozen design).** The
+AANN headroom thresholds (P(uni|control) ≤ 0.30 PASS / ≤ 0.50 MARGINAL) were defined for the
+*unification* reading. The conative quantity is the **transitive-vs-conative affirm-contact gap** (or,
+equivalently, the conative affirm-contact rate sitting demonstrably **off the transitive ceiling**).
+The frozen design must **re-state the headroom gate in conative terms** and re-verify it on the
+frozen items rather than importing the AANN's numeric ≤0.30/≤0.50 thresholds uncritically — v1/v2
+conative cells range up to 66.7%, above the AANN 0.50 hard ceiling, so the gate must be a
+*construction-effect headroom* statement (conative affirm meaningfully below the transitive ≥0.92
+ceiling, with room for both instruments to diverge), not a literal P(uni)≤0.30 import.
+
+**Contingent artifacts.** [`conjecture/preference-commitment-generality`](../../findings/conjectures/preference-commitment-generality.md)
+stays `proposed` and a forward bet; its `contingent-on` is cleared at the moment a frozen design under
+this ratified default exists. Its anchor moves from `pending` to the split status (entailment arm
+CxNLI answer-key + ≈0.90 aggregate baseline, NOT a per-item gradient; FC/cue arms
+internal-contrast-only) only when an actual result lands.
+
 ## Status / handoff note
 
-Opened this session; **carry in NEXT.md as "opened this session (not yet eligible)."** The
+Opened 2026-06-14; **ratified 2026-06-15 (this section).** The
 contingent conjecture
 [`conjecture/preference-commitment-generality`](../../findings/conjectures/preference-commitment-generality.md)
 is written under this decision's provisional default and stays in provisional language until a later

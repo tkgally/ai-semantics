@@ -8,10 +8,9 @@ meaning-senses:
   - distributional
 status: proposed
 anchor: pending
-contingent-on:
-  - fresh-construction-inferential-generalization
+contingent-on: []
 created: 2026-06-14
-updated: 2026-06-14
+updated: 2026-06-15
 links:
   - rel: depends-on
     target: result/aann-inferential-v6
@@ -29,15 +28,17 @@ links:
 
 # Conjecture: preference without commitment generalizes beyond AANN
 
-> **Status: proposed; provisional and unrun.** This conjecture is `contingent-on`
-> [`decisions/open/fresh-construction-inferential-generalization`](../../decisions/open/fresh-construction-inferential-generalization.md)
-> — the open decision that surfaces *which* fresh construction carries the test and under what
-> binding conditions. That decision was **opened this session and is not yet eligible for
-> ratification** (PROTOCOL §2). Until a later session ratifies (or amends) its provisional default,
-> every claim below stays a *forward bet*: the construction named here (the conative) is the
-> decision's provisional default, not a fixed choice, and no probe has been run. `anchor: pending`
-> names that open decision; the anchor situation is spelled out under *Human anchor* below and is
-> not yet settled.
+> **Status: proposed; a forward bet, unrun.** The governing decision
+> [`decisions/resolved/fresh-construction-inferential-generalization`](../../decisions/resolved/fresh-construction-inferential-generalization.md)
+> — which fresh construction carries the test, and under what binding conditions — was **ratified
+> 2026-06-15** (autonomous adversarial review, cross-session: ADOPT Option A, the conative). So the
+> construction is now the *ratified* choice, not a provisional default, and the frozen design
+> [`design/conative-preference-commitment-v1`](../../../experiments/designs/conative-preference-commitment-v1.md)
+> implements it. **`contingent-on` is cleared.** But the bet itself stays a *forward bet*: **no probe
+> has yet been run**, so every claim below about what the panel *will* do is provisional. `anchor:
+> pending` until a result lands — the anchor situation (entailment arm CxNLI-anchored answer-key;
+> FC/cue arms internal-contrast-only) is spelled out under *Human anchor* below and applies to the
+> result, not to this unrun conjecture.
 
 ## Statement
 
@@ -129,9 +130,9 @@ the pre-existing single-model fragility must not be retrofitted as new evidence 
 
 ## Human anchor
 
-`anchor: pending` — naming the open decision
-[`decisions/open/fresh-construction-inferential-generalization`](../../decisions/open/fresh-construction-inferential-generalization.md),
-which fixes the anchor situation when ratified. The honest situation, stated precisely:
+`anchor: pending` until a result lands — the now-ratified decision
+[`decisions/resolved/fresh-construction-inferential-generalization`](../../decisions/resolved/fresh-construction-inferential-generalization.md)
+fixes the anchor situation, realized only when the probe runs. The honest situation, stated precisely:
 
 - If the conative (or another CxNLI construction) carries the test and the result makes a
   human-comparison NLI claim against the CxNLI gold labels, the **entailment arm** would be
