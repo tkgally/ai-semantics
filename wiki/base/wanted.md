@@ -109,6 +109,12 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 - [P2] AANN-specific human probing: Mahowald 2023 "A discerning several thousand judgments…" (EACL) / Chronis et al. 2023.
   why: the AANN portion of the constructional-probing line that Scivetti et al. 2025 does NOT cover; needed if the AANN conjecture wants a CxG-native human anchor beyond the existing Mahowald 2023 stimulus suite.
   status: Mahowald 2023 RECEIVED as its own source page (2026-05-29; EACL, arXiv 2301.12564; see wiki/base/sources/mahowald-2023-aann-judgments.md — argument/findings; dataset on resource/mahowald-2023-aann-stimuli). Chronis et al. 2023 still wanted (fetch only if a finding cites it).
+- [P1] Baggio, G. & Murphy, E. 2024. "On the referential capacity of language models: An internalist rejoinder to Mandelkern & Linzen." arXiv 2406.00159.
+  why: the published **internalist** rebuttal to Mandelkern & Linzen 2024 — contests both the "natural-histories-suffice" grounding move and the corpus-membership reading; the in-repo counter-pole to the strongest pro-reference argument, and the source revision-trigger (d) of the sixth essay wanted.
+  status: **RECEIVED** (2026-06-15; catalogued as [`wiki/base/sources/baggio-murphy-2024-internalist-rejoinder.md`](sources/baggio-murphy-2024-internalist-rejoinder.md) — 8 §-located quotes incl. the "neither LMs nor 'their words' refer" bottom line, verified character-for-character against the arXiv PDF via pdfminer; arXiv preprint, peer-review status unconfirmed at fetch time).
+- [P2] Ostertag, G. 2025. "Language Models and Externalism: A Reply to Mandelkern and Linzen." *Computational Linguistics* (ACL Anthology 2025.cl-2.8).
+  why: the **externalist-side** reply to Mandelkern & Linzen — argues a term's "natural history" does not generally ground its referential properties; the complement to the internalist rejoinder catalogued above. Reachable via the ACL Anthology PDF.
+  status: wanted (surfaced 2026-06-15; not yet fetched).
 
 **2025–2026 OA finds on whether/which "meaning"-sense LLMs have (literature refresh, 2026-06-12 — found, abstracts checked, not catalogued):**
 

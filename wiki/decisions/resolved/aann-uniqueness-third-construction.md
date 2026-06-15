@@ -194,3 +194,21 @@ under budget only on the critic's GO. The frozen design is
 [`design/third-construction-preference-commitment-v1`](../../../experiments/designs/third-construction-preference-commitment-v1.md)
 (created the fifteenth session, 2026-06-15; **not yet critic-reviewed, not yet run**). If the headroom
 precondition cannot be met at critic time, the design must not run and routes to Option C.
+
+## Outcome (2026-06-15, sixteenth session — Option A executed → Option C realized)
+
+The frozen design's harvest arm was built and run after an independent pre-run critic rendered
+**GO-FOR-HARVEST** (harvest arm only; headline gated on the harvest clearing G2 for ≥ 2/3 models). The
+harvest **FAILED the headroom gate G4 (1/3 models clear ≤ 0.50: claude 0.625, gpt 0.479 PASS, gemini
+0.552)** → [`result/third-construction-headroom-harvest-v1`](../../findings/results/third-construction-headroom-harvest-v1.md).
+Per **Carry-forward 2**, the design did **not** run the headline and routed to **Option C** — *"AANN-specific
+so far"* recorded as terminal on current resources, **no retuning, no second harvest**. The harvest's
+diagnosis: the add-direction marginal pool is **bimodal** (low-propulsion physical verbs at ceiling —
+verb-independent coercion; cognition verbs off-ceiling only by being anomalous), so the two binding
+requirements (a usable lexical-cue control frame and an off-ceiling contestable band) are mutually
+exclusive on these resources. Carry-forward 1 honored (scoped to add-direction; cancel-direction /
+unification-shape **Option B stays in reserve**). Carry-forward 3 honored (result is
+`internal-contrast-only`; no AANN-uniqueness human claim; no anchor invented). The followed-up claim
+[`claim/preference-commitment-dissociation-aann-specific`](../../findings/claims/preference-commitment-dissociation-aann-specific.md)
+stays `supported` / "so far" (Option C does not strengthen it to uniqueness). The empirical track now
+redirects elsewhere (relational v5, or the lexical-gradience line) per the decision's Option-C clause.
