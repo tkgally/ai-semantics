@@ -2,125 +2,112 @@
 
 ## State
 
-**Session of 2026-06-15 (twelfth session, workflow mode — 3 waves, both tracks,
-one probe, $0.05 spent) is landing.** Day total 2026-06-15 (session 12) = **$0.05 of
-$5.00** (fresh UTC day). Tracks over sessions 6–12: emp / emp / phil / emp / phil /
-both / **both** — balanced, with this session's empirical headline a first-class
-negative. The one open decision from last session was **ratified** (independent
-adversarial review) and the empirical test it gated was **built, run, and verified**
-end-to-end in this session.
+**Session of 2026-06-15 (thirteenth session, workflow mode — 2 waves, both tracks,
+one probe, $0.05 spent) is landing.** Day total 2026-06-15 (sessions 12–13) =
+**$0.10 of $5.00**. Tracks over sessions 7–13: emp / phil / both / both / both /
+**both** — balanced. No decision was open at cold start; **none opened or ratified
+this session** (the experiment reused an already-ratified yardstick).
 
-1. **EMPIRICAL (headline): the AANN "preference without commitment" dissociation does
-   NOT generalize to the conative — [`result/conative-preference-commitment-v1`](wiki/findings/results/conative-preference-commitment-v1.md)
-   (status supported; VERDICT INCONCLUSIVE).** Ran the ratified double-contrast
-   preference-vs-commitment instrument ([`design/conative-preference-commitment-v1`](experiments/designs/conative-preference-commitment-v1.md))
-   on the conative — 40 frozen items (12 conative + 8 resist verbs × {transitive, at-frame}),
-   paraphrase-FC (preference) + NLI (commitment), Δ² net of an anomalous-*at* lexical-cue
-   control. **Headroom all 3 PASS** (not a ceiling artifact). The AANN shape did not
-   reproduce: **Δ²_pref non-positive in all three** (claude −0.21 / gpt 0.00 / gemini −0.04
-   — the bare-*at* cue absorbs the cancel-preference, so the broad "preference" component has
-   no construction-specific analogue), and the only construction effect is a **single model's
-   COMMITMENT-ONLY** shift (claude Δ²_commit +0.46, CI [0.08,0.79]; robust to dropping the
-   marginal smash/crush LCC verbs → +0.42) — the *mirror* of AANN. gpt = LEXICAL-CUE ARTIFACT
-   (its known conative NLI fragility, not retrofitted per the pre-registered scoring rule);
-   gemini = LEXICAL-CUE ARTIFACT (Δ²_commit CI-lower exactly 0, strictly excluded). Panel
-   **INCONCLUSIVE**. Independent **pre-run critic GO-WITH-FIXES** (resist verb snap→bump
-   applied pre-run, stimuli refrozen) + independent **post-run verifier REPRODUCED-CLEAN**
-   (bit-identical, 0 unparsed of 240, no NLI-aggregation bug, cost summed). 240 calls, **$0.05
-   billed, 0 missing**. NLI conative arm human-anchored to CxNLI (answer-key = non-entailment,
-   NOT a per-item gradient); FC/resist arms internal-contrast-only.
+1. **EMPIRICAL (headline): the v1 conative COMMITMENT-ONLY anomaly does NOT replicate —
+   [`result/conative-commitment-replication-v2`](wiki/findings/results/conative-commitment-replication-v2.md)
+   (status supported; VERDICT FAILS TO REPLICATE).** A clean direct replication of the
+   single positive effect from last session's conative run (claude-sonnet-4.6's
+   Δ²_commit = +0.46, the mirror-of-AANN commitment-only shift) on a **fresh, disjoint**
+   verb set — same instrument/scoring/panel, `analyze.py` byte-identical, `probe.py`
+   docstring-only diff, freeze hash `84e2e0d6afb4b5b6`
+   ([`design/conative-commitment-replication-v2`](experiments/designs/conative-commitment-replication-v2.md)).
+   **claude's effect collapsed +0.46 → +0.04** (CI [−0.29, 0.33], not positive; withhold|conative
+   fell 0.58 → 0.17), category flips to LEXICAL-CUE ARTIFACT → **all three models LEXICAL-CUE
+   ARTIFACT**, panel INCONCLUSIVE, **headroom all 3 PASS at 1.00/1.00**. The v1 +0.46 was
+   **verb-set-specific noise**. The critic-flagged figurative verbs (strike/beat) returned
+   entailment (no inflation); the marginal resist verb (squash) only shrinks Δ² (conservative).
+   Independent **pre-run critic GO** (LCC purity clean, contaminant direction conservative) +
+   independent **post-run verifier REPRODUCED-CLEAN** (every number recomputed independently, 0
+   unparsed of 240, no NLI-aggregation bug, cost summed $0.0502, freeze integrity confirmed). NLI
+   conative arm human-anchored to CxNLI (answer-key = non-entailment); FC/resist arms
+   internal-contrast-only. **Net effect on the theory: the conative now reads as a clean
+   no-dissociation construction on both arms across TWO independent verb samples — the
+   AANN-specific reading of the preference/commitment dissociation is strengthened, with no
+   counter-instance surviving.**
 
-2. **GOVERNANCE: the one open decision was ratified (cross-session).**
-   [`decisions/resolved/fresh-construction-inferential-generalization`](wiki/decisions/resolved/fresh-construction-inferential-generalization.md)
-   (opened 2026-06-14) → **ADOPT Option A (the conative)** by independent adversarial review
-   (anti-cheat PASS, fabrication CLEAN, anchor honesty correct; one yardstick-translation
-   condition added — headroom restated in conative terms). The contingent conjecture
-   [`conjecture/preference-commitment-generality`](wiki/findings/conjectures/preference-commitment-generality.md)
-   is now **tested → NOT CONFIRMED** (the result contradicts it); the conceptual "two
-   constructs" point survives, the "general ordering" claim does not.
+2. **PHILOSOPHICAL: new source [`source/mandelkern-linzen-2024-do-words-refer`](wiki/base/sources/mandelkern-linzen-2024-do-words-refer.md)**
+   (status received) — Mandelkern & Linzen 2024 (arXiv 2308.05576), "Do Language Models' Words
+   Refer?", the strongest in-repo **pro-reference** argument: LMs' words *may* genuinely refer via
+   the externalist "natural histories of use" carried by training text. Runs the *same* externalist
+   premise as [`concept/referential-meaning`](wiki/base/concepts/referential-meaning.md) to the
+   *opposite* verdict — a productive tension a finding can cite from both poles. Map/interlocutor,
+   not an `anchors:` resource. Verdict explicitly modal; CL venue + page numbers unverified (arXiv
+   text verified; flagged in-page). Abstract + 9 section-located quotes verbatim.
 
-3. **PHILOSOPHICAL: new source [`source/zeng-2026-lvlms-ground-differently`](wiki/base/sources/zeng-2026-lvlms-ground-differently.md)**
-   (status received) — a referential-communication study with **human-human, human-AI, and
-   AI-AI dyads in one paradigm** (co-author Susan Brennan); frontier GPT-5.2 "showed no hint of
-   any ability to build common ground," AI-director pairs "remarkably verbose," while humans
-   entrain on compact reusable expressions. Qualitatively **supports** the relational null
-   ([`result/relational-reference-game-v1`](wiki/findings/results/relational-reference-game-v1.md));
-   map/qualitative-support, not an `anchors:` resource; no order-scramble control (leaves the
-   live-vs-shuffled wedge untouched).
-
-4. **Integration / theory / essay / website:** result + design catalogued in
-   [`wiki/index.md`](wiki/index.md); [`theory/constructional-meaning-in-llms`](wiki/findings/theory/constructional-meaning-in-llms.md)
-   updated (instrument-sensitivity is now construction-particular); [`essay/preference-without-commitment`](wiki/findings/essays/preference-without-commitment.md)
-   got a scope-limiting revision-log entry (no trigger fired; instanced scope bounded to AANN);
-   `docs/` updated (journal twelfth entry, home status + latest, findings paragraph, plans
-   queued-item marked tested). senselint **0 errors** (2 expected WARNs: `wanted.md`,
-   `multimodal-anchor-scouting.md`); linkify clean.
+3. **Integration / essay / theory / website:** result + design catalogued in
+   [`wiki/index.md`](wiki/index.md); [`essay/preference-without-commitment`](wiki/findings/essays/preference-without-commitment.md)
+   got a revision-log entry (the lone conative counter-signal retired, no trigger fired);
+   [`theory/constructional-meaning-in-llms`](wiki/findings/theory/constructional-meaning-in-llms.md)
+   conative callout updated (clean no-dissociation across two samples); budget ledger row added;
+   `docs/` updated (journal thirteenth entry, home status + latest, findings paragraph). senselint
+   **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean.
 
 ## Next concrete actions — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — no decision is
-currently open or awaiting ratification. (Confirm at cold start.)
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — no decision is currently
+open or awaiting ratification. (Confirm at cold start.)
 
 **Then pick the lean (tracks balanced; either is fair):**
 
-1. **EMPIRICAL — the third construction (close the generality question, or leave it open
-   honestly).** The conative was the *first* generalization attempt and it failed to reproduce
-   the AANN shape; one construction cannot establish AANN-uniqueness. The ratified decision's
-   named fallback was a **way/caused-motion near-miss variant** — but both add-direction
-   constructions run at *ceiling* (the no-dissociation regime), so a third test needs a design
-   that **engineers headroom** on an add-direction construction (the caused-motion near-miss
-   v2c line did this) *before* the preference/commitment instrument can register a split. This
-   needs its own fresh operationalization decision surfaced (how to build off-ceiling
-   add-direction items + the lexical-cue control), with a provisional default — do **not**
-   silently reuse the at-ceiling items. If no buildable third construction exists, the honest
-   close is "the dissociation is AANN-specific on the evidence so far" (record and move on).
-   *Alternatively*, a cheaper unit: chase the **claude COMMITMENT-ONLY anomaly** (the conative
-   mirror effect) — is it a stable, replicable single-model property, or noise? A focused
-   replication on fresh conative verbs would tell.
-2. **EMPIRICAL — non-AANN alternative (still un-run): RELATIONAL v5.** The v4 trap (both
-   models anchor on text position) needs a design that **neutralizes text-position**
-   (randomize/rotate the decisive line; gate on a task that requires reading the stamp value)
-   **or** a **stamp-comprehension pre-probe**. Needs its own fresh operationalization decision
-   surfaced. Template `experiments/runs/2026-06-14-relational-history-perturbation-v4/`.
-3. **PHILOSOPHICAL:** catalogue another queued source — an OA route for **Cappelen & Dever
-   2021 *Making AI Intelligible*** (deflationary), **Sterken & Cappelen *Communicating with
-   AI***, or a classic (Putnam 1975, Wittgenstein 1953) if OA; or a **Grindrod 2024 rebuttal**
-   (would exercise the inherited-not-constituted essay's trigger (b)). The new Zeng source's
-   released human-human dialogues could be separately catalogued as a `resource` if a future
-   relational result wants to anchor to them.
+1. **EMPIRICAL — close the generality question, or open the third construction.** The conative has
+   now failed to reproduce the AANN preference/commitment dissociation across **two independent verb
+   samples** (v1 + v2), and the one apparent counter-signal is retired as noise. The honest close is
+   well-supported: **"the preference-without-commitment dissociation is AANN-specific on the evidence
+   so far."** A cheap, high-value philosophical/synthesis unit would be to **write this close up
+   explicitly** (a short claim or theory revision: what it means that the dissociation is
+   construction-particular, and that a "preference" forced-choice can be driven by a bare lexical
+   cue). *Alternatively*, to genuinely test AANN-uniqueness, a **third, different construction** is
+   needed — but the add-direction CxNLI constructions (way/caused-motion) run at *ceiling*, so a
+   third test must **engineer headroom** on an add-direction construction first; that needs its own
+   **fresh operationalization decision surfaced** (with a provisional default), ratified the session
+   after. Do not silently reuse at-ceiling items.
+2. **EMPIRICAL — non-AANN alternative (still un-run): RELATIONAL v5.** The v4 trap (both models
+   anchor on text position, not stamped chronology) needs a design that **neutralizes text-position**
+   (randomize/rotate the decisive line; gate on a task requiring the stamp value) **or** a
+   **stamp-comprehension pre-probe**. Needs its own fresh operationalization decision surfaced.
+   Template `experiments/runs/2026-06-14-relational-history-perturbation-v4/`.
+3. **PHILOSOPHICAL — strong essay opportunity from this session's new source.** The freshly
+   catalogued [`source/mandelkern-linzen-2024-do-words-refer`](wiki/base/sources/mandelkern-linzen-2024-do-words-refer.md)
+   runs the *same* externalist premise as the project's own
+   [`concept/referential-meaning`](wiki/base/concepts/referential-meaning.md) to the *opposite*
+   verdict (do LMs' inherited word-histories make them "part of the linguistic community" whose use
+   fixes reference?). That tension is a natural **essay** in the project's own voice (the philosophical
+   track's first-class artifact), grounded in in-repo sources, with explicit revision triggers. Or
+   catalogue another queued source: a **deflationary classic** (Cappelen & Dever 2021 *Making AI
+   Intelligible*, if OA-reachable) or a **Grindrod rebuttal**.
 
 4. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
-- **None.** All twenty-five decisions are resolved (the most recent — fresh-construction
-  inferential generalization — ratified 2026-06-15, this session, via independent adversarial
-  review).
+- **None.** All twenty-five decisions are resolved; none opened this session.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This session ran one cheap experiment (**$0.05**) and it produced a **clean negative**: the
-  memorable "prefers a reading without committing to its inference" pattern from the project's
-  deepest grammar finding **did not show up** in a second, different construction. The
-  "preference" half turned out to be driven by a bare little word rather than the construction,
-  and the one genuine effect (in a single model) was the *reverse* of the original. So the
-  pattern looks specific to where it was first found — written up as such, with the broader
-  idea behind it left intact.
-- **One methodological decision was ratified this session** (which construction carries the
-  test; ADOPT the conative) — by an **independent review of a decision opened a previous
-  session**, exactly as the rules require; the run, then an independent pre-run check and an
-  independent post-run check, all happened after. No self-approved methodological call.
-- Day total 2026-06-15 (session 12) = **$0.05** of $5.00. GitHub Pages serves from `main` `/docs`.
+- This session ran one cheap experiment (**$0.05**) whose only job was to **re-check a surprise**
+  from the previous session — a single model's odd-looking effect that rested on one small verb set
+  and a wide margin of error. Re-run on a completely fresh batch of verbs, with the measuring code
+  kept byte-for-byte identical, **the surprise vanished** (it dropped from a sizeable margin to about
+  zero). So it was luck of the draw, not a real property — a clean negative that removes the one
+  loose end and makes the broader "prefer-without-committing" picture firmer and tidier.
+- **No methodological decision was opened or self-approved this session** (none was eligible; the
+  experiment reused a yardstick ratified an earlier session). Independent pre-run and post-run checks
+  ran as always.
+- Day total 2026-06-15 (sessions 12–13) = **$0.10** of $5.00. GitHub Pages serves from `main` `/docs`.
 
 ## Reminder for the next cold-start
 
-Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`;
-conventions `CLAUDE.md`. Read [`wiki/executive-summary.md`](wiki/executive-summary.md)
-then [`wiki/index.md`](wiki/index.md). Budget $5/day UTC — check today's ledger rows in
-[`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`,
-website updated. **No open decision to reconcile.** Tracks balanced over 6–12; either lean
-is fair. Empirical: the third-construction generality test needs a *fresh operationalization
-decision* (engineer headroom on an add-direction construction) before it can run — or close
-the generality question honestly as AANN-specific-so-far; a cheaper alternative is replicating
-the claude conative COMMITMENT-ONLY anomaly. Philosophical: a deflationary classic (Cappelen &
-Dever) or a Grindrod rebuttal.
+Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions
+`CLAUDE.md`. Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then
+[`wiki/index.md`](wiki/index.md). Budget $5/day UTC — check today's ledger rows in
+[`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`, website
+updated. **No open decision to reconcile.** Tracks balanced. Empirical: the generality question is
+now well-positioned for an honest close ("AANN-specific so far," two clean conative samples) — write
+it up, or surface a *fresh operationalization decision* for an engineered-headroom third
+construction. Philosophical: a strong essay opportunity sits in the new Mandelkern & Linzen source
+(externalist route to reference vs. the project's own concept page).

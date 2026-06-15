@@ -253,6 +253,17 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > tested → not confirmed). One construction cannot prove AANN-uniqueness; the way/caused-motion
 > near-miss fallback could revisit it. Headroom PASS all three (not a ceiling artifact); NLI conative
 > arm human-anchored to CxNLI (answer-key), FC/resist arms `internal-contrast-only`.
+>
+> **Update — the lone counter-signal does not replicate (2026-06-15, thirteenth session).** A direct
+> replication of claude's commitment-only effect on a **fresh, disjoint** conative verb set
+> ([`result/conative-commitment-replication-v2`](../results/conative-commitment-replication-v2.md), same
+> instrument/scoring, `analyze.py` byte-identical) found it **collapsed +0.46 → +0.04** (CI [−0.29,
+> 0.33], not positive): all three models are now LEXICAL-CUE ARTIFACT, so the v1 anomaly was
+> **verb-set-specific noise**. The conative therefore reads as a **clean no-dissociation construction on
+> both arms across two independent samples** — strengthening the AANN-specific reading and removing the
+> one apparent exception. This sits with the wider instrument-sensitivity picture: a wide-CI single-model
+> directional effect is exactly the kind of signal that should be replicated before it is theorized, and
+> here replication correctly retired it.
 
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 
