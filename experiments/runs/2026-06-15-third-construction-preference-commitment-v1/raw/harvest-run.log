@@ -1,0 +1,65 @@
+  A/paraphrase: 20/20 cost $0.0067
+  A/paraphrase: 40/40 cost $0.0135
+  A/paraphrase: 60/60 cost $0.0204
+A/paraphrase: 60 rows, 0 missing -> /home/user/ai-semantics/experiments/runs/2026-06-15-third-construction-preference-commitment-v1/raw/A-paraphrase.json
+  A/nli: 20/20 cost $0.0302
+  A/nli: 40/40 cost $0.0401
+  A/nli: 60/60 cost $0.0500
+A/nli: 60 rows, 0 missing -> /home/user/ai-semantics/experiments/runs/2026-06-15-third-construction-preference-commitment-v1/raw/A-nli.json
+  B/paraphrase: 20/20 cost $0.0517
+  B/paraphrase: 40/40 cost $0.0534
+  B/paraphrase: 60/60 cost $0.0551
+B/paraphrase: 60 rows, 0 missing -> /home/user/ai-semantics/experiments/runs/2026-06-15-third-construction-preference-commitment-v1/raw/B-paraphrase.json
+  B/nli: 20/20 cost $0.0574
+  B/nli: 40/40 cost $0.0598
+  B/nli: 60/60 cost $0.0622
+B/nli: 60 rows, 0 missing -> /home/user/ai-semantics/experiments/runs/2026-06-15-third-construction-preference-commitment-v1/raw/B-nli.json
+  C/paraphrase: 20/20 cost $0.0645
+  C/paraphrase: 40/40 cost $0.0670
+  C/paraphrase: 60/60 cost $0.0694
+C/paraphrase: 60 rows, 0 missing -> /home/user/ai-semantics/experiments/runs/2026-06-15-third-construction-preference-commitment-v1/raw/C-paraphrase.json
+  C/nli: 20/20 cost $0.0731
+  C/nli: 40/40 cost $0.0768
+  C/nli: 60/60 cost $0.0805
+C/nli: 60 rows, 0 missing -> /home/user/ai-semantics/experiments/runs/2026-06-15-third-construction-preference-commitment-v1/raw/C-nli.json
+
+TOTAL billed this invocation: $0.0805
+
+=== HEADROOM GATE EVALUATION (design §5) ===
+  A (anthropic/claude-sonnet-4.6): marginal G1=0.625 (n=96)  clean G3=1.000 (n=24)  G2FAIL(<=0.50)  G3PASS(>=0.85)
+  B (openai/gpt-5.4-mini): marginal G1=0.479 (n=96)  clean G3=0.917 (n=24)  G2PASS(<=0.50)  G3PASS(>=0.85)
+  C (google/gemini-3.5-flash): marginal G1=0.552 (n=96)  clean G3=1.000 (n=24)  G2FAIL(<=0.50)  G3PASS(>=0.85)
+
+  G4: 1/3 models clear G2 (<=0.50)  ->  FAIL — route to OPTION C (AANN-specific so far; no retuning)
+
+=== PER-VERB pooled affirm rate (marginal arm; for §3 subset selection) ===
+  notice      [M1-cognition     ] affirm=0.000 (n=12)  RETAIN (<=0.30)
+  perceive    [M1-cognition     ] affirm=0.000 (n=12)  RETAIN (<=0.30)
+  recognize   [M1-cognition     ] affirm=0.000 (n=12)  RETAIN (<=0.30)
+  understand  [M1-cognition     ] affirm=0.083 (n=12)  RETAIN (<=0.30)
+  realize     [M1-cognition     ] affirm=0.083 (n=12)  RETAIN (<=0.30)
+  suspect     [M1-cognition     ] affirm=0.083 (n=12)  RETAIN (<=0.30)
+  imagine     [M1-cognition     ] affirm=0.083 (n=12)  RETAIN (<=0.30)
+  know        [M1-cognition     ] affirm=0.167 (n=12)  RETAIN (<=0.30)
+  remember    [M1-cognition     ] affirm=0.167 (n=12)  RETAIN (<=0.30)
+  doubt       [M1-cognition     ] affirm=0.333 (n=12)  RETAIN
+  believe     [M1-cognition     ] affirm=0.500 (n=12)  RETAIN
+  recall      [M1-cognition     ] affirm=0.583 (n=12)  drop
+  blink       [M2-lowpropulsion ] affirm=0.833 (n=12)  drop
+  shrug       [M2-lowpropulsion ] affirm=0.833 (n=12)  drop
+  hum         [M2-lowpropulsion ] affirm=0.917 (n=12)  drop
+  grin        [M2-lowpropulsion ] affirm=0.917 (n=12)  drop
+  wink        [M2-lowpropulsion ] affirm=0.917 (n=12)  drop
+  smile       [M2-lowpropulsion ] affirm=0.917 (n=12)  drop
+  frown       [M2-lowpropulsion ] affirm=0.917 (n=12)  drop
+  whisper     [M2-lowpropulsion ] affirm=0.917 (n=12)  drop
+  nod         [M2-lowpropulsion ] affirm=1.000 (n=12)  drop
+  giggle      [M2-lowpropulsion ] affirm=1.000 (n=12)  drop
+  yawn        [M2-lowpropulsion ] affirm=1.000 (n=12)  drop
+  sigh        [M2-lowpropulsion ] affirm=1.000 (n=12)  drop
+
+  subset: 11 verbs retain (<=0.50); need >= 10  ->  OK
+
+  HEADLINE AUTHORIZED: False  (gate or subset failed -> OPTION C terminal close)
+
+wrote gate verdict -> /home/user/ai-semantics/experiments/runs/2026-06-15-third-construction-preference-commitment-v1/harvest.json

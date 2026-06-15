@@ -13,6 +13,8 @@ updated: 2026-06-15
 links:
   - rel: contradicts
     target: result/conative-preference-commitment-v1
+  - rel: contradicts
+    target: result/third-construction-headroom-harvest-v1
   - rel: depends-on
     target: result/aann-inferential-v6
   - rel: depends-on
@@ -54,6 +56,22 @@ links:
 > or a counter-instance), and the design's own author flagged that the headroom precondition may genuinely
 > fail at critic time, routing to Option C. Any result is scoped to add-direction and does not settle the
 > cancel-direction/unification *shape* question.
+>
+> **Update 2026-06-15 (sixteenth session — Option A executed, Option C realized):** an independent pre-run
+> critic GO'd the **harvest arm only**; the harvest ran →
+> [`result/third-construction-headroom-harvest-v1`](../results/third-construction-headroom-harvest-v1.md).
+> **The headroom gate FAILED (1/3 models clear ≤ 0.50; G4 needs ≥ 2/3) → routed to Option C, no headline,
+> no retuning.** The harvest showed the marginal pool is **bimodal**: low-propulsion physical verbs
+> ("blinked the feather off the table") affirm the construction **at ceiling** (pooled 0.93 —
+> verb-independent coercion), while cognition verbs ("knew the feather off the table") are off-ceiling only
+> because they are **anomalous** (pooled 0.17), and anomalous verbs cannot carry the lexical-cue control
+> frame cleanly — so no usable off-ceiling band exists. **This is the conjecture's SECOND failed
+> generalization attempt** (conative cancel-direction = INCONCLUSIVE; caused-motion add-direction =
+> Option-C / no buildable headroom): the generality bet is now **un-instanced in both inference
+> directions** on current in-repo resources. Neither attempt *falsifies* it (both are headroom/cue-limited,
+> not counter-instances), but the conjecture stays firmly **tested → not confirmed**, and the followed-up
+> claim's *"AANN-specific so far"* is reinforced (the add-direction route is closed on current resources;
+> the cancel-direction/unification-shape Option-B route stays in reserve).
 
 ## Statement
 

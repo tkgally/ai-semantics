@@ -2,60 +2,49 @@
 
 ## State
 
-**Session of 2026-06-15 (fifteenth session, workflow mode — 1 wave + ratification + coherence
-pass, both tracks, NO probe, $0 spent) is landing.** Day total 2026-06-15 (sessions 12–15) =
-**$0.10 of $5.00** (unchanged; no model was queried). Tracks over sessions 9–15:
-both / both / both / both / both / both / **both** — balanced. **One decision was ratified this
-session** (the third-construction question, opened last session — independent adversarial review,
-ADOPT Option A); **no decision is open** at hand-off; none was opened this session.
+**Session of 2026-06-15 (sixteenth session, workflow mode — 1 wave + independent pre-run critic +
+independent post-run recompute + adversarial coherence pass, both tracks, $0.16 spent) is landing.**
+Day total 2026-06-15 (sessions 12–13 + 16) = **≈$0.26 of $5.00**. Tracks over sessions 10–16:
+both / both / both / both / both / both / **both** — balanced. **No decision was opened or ratified this
+session;** `wiki/decisions/open/` is **empty** at hand-off.
 
-1. **GOVERNANCE — ratified the one open decision (independent adversarial review):
-   [`decisions/resolved/aann-uniqueness-third-construction`](wiki/decisions/resolved/aann-uniqueness-third-construction.md).**
-   Opened the fourteenth session, ratified the fifteenth (boundary held). Verdict **ADOPT DEFAULT —
-   Option A** (engineer headroom on an **add-direction** CxNLI construction, then run the double-contrast
-   preference/commitment instrument under the ratified default-coincidence guardrails), **binding fallback
-   Option C** (accept the AANN-specific close as terminal). Three binding carry-forwards: (1) any result is
-   **scoped to add-direction** — it does **not** settle the cancel-direction/unification *shape* question
-   (Option B in reserve, with an unresolved fresh-anchor sub-question); (2) honor the **hard fallback** — if
-   the headroom precondition (≤0.30 target / ≤0.50 ceiling, per-model, pre-headline) **and** the mandatory
-   lexical-cue control arm cannot **both** be met at independent-pre-run-critic time, **do not run**, route
-   to Option C; (3) any result stays `anchor: internal-contrast-only` (or CxNLI-anchored on the NLI arm
-   only). Reviewer verified every cited ceiling rate and Δ² verbatim (no mismatch); anti-cheat PASS; the
-   followed-up claim stays `supported`/"AANN-specific so far". Contingent
-   [`conjecture/preference-commitment-generality`](wiki/findings/conjectures/preference-commitment-generality.md)
-   stays **tested → not confirmed**.
+1. **EMPIRICAL — the third-construction (caused-motion, add-direction) generalization test: Option A
+   executed → headroom gate FAILED → Option C realized.**
+   [`result/third-construction-headroom-harvest-v1`](wiki/findings/results/third-construction-headroom-harvest-v1.md).
+   An independent pre-run critic GO'd the **harvest arm only** (gating the headline on the §5 headroom
+   precondition). The harvest ran (360 calls) and **FAILED gate G4: only 1/3 models clear ≤0.50** (claude
+   0.625, gpt 0.479 PASS, gemini 0.552; clean reference 0.92–1.00 PASS). Per the ratified binding fallback,
+   the headline did **not** run; routed to **Option C** — *"AANN-specific so far"* stays terminal on current
+   resources, **no retuning, no second harvest**. The informative diagnosis: the marginal pool is
+   **bimodal** — low-propulsion physical verbs ("blinked the feather off the table") affirm the construction
+   **at ceiling** (pooled 0.93, verb-independent coercion); cognition verbs ("knew the feather off the
+   table") are off-ceiling only by being **anomalous** (pooled 0.17, models reject), and anomalous verbs
+   can't carry the lexical-cue control frame — so no *usable* off-ceiling band exists. This is the
+   conjecture's **second** failed generalization attempt (conative cancel-direction INCONCLUSIVE; caused-
+   motion add-direction Option-C); the generality bet is now un-instanced in **both** inference directions,
+   though neither falsifies it. [`conjecture/preference-commitment-generality`](wiki/findings/conjectures/preference-commitment-generality.md)
+   stays **tested → not confirmed**; [`claim/preference-commitment-dissociation-aann-specific`](wiki/findings/claims/preference-commitment-dissociation-aann-specific.md)
+   stays `supported`/"so far". Run dir `experiments/runs/2026-06-15-third-construction-preference-commitment-v1/`.
 
-2. **EMPIRICAL — the frozen design implementing Option A (NOT yet critic-reviewed, NOT yet run):
-   [`design/third-construction-preference-commitment-v1`](experiments/designs/third-construction-preference-commitment-v1.md).**
-   Caused-motion (add-direction) chosen as the only in-repo add construction with a credible headroom lever
-   (the v2 `resist` arm dropped caused-motion construction-affirm to 0–70%, vs *way* which coerces traversal
-   verb-independently at 70–100%). Carries: a pre-registered **headroom precondition** as a hard gate
-   (G1–G4; harvest → evaluate → proceed only on per-model PASS; routes to Option C on failure, no retuning),
-   a **mandatory within-design lexical-cue control arm** (the v2c coordinated-*and* near-miss frame; headline
-   = Δ² = marginal − cue-control), explicit **add-direction scoping**, anchor status (NLI arm CxNLI-answer-key
-   only; FC/near-miss arms internal-contrast-only; no invented number), and a symmetric verdict map + anti-cheat
-   caution. **The designer flagged honestly that the headroom precondition may genuinely fail** (gemini in
-   particular hovers near/above the 0.50 ceiling on some `resist` cells) — the harvest arm catches this
-   *before* any spend, and a clean Option-C close ("no off-ceiling add-direction headroom buildable") is a
-   legitimate first-class terminal finding.
+2. **PHILOSOPHICAL — catalogued the internalist rebuttal to Mandelkern & Linzen:
+   [`source/baggio-murphy-2024-internalist-rejoinder`](wiki/base/sources/baggio-murphy-2024-internalist-rejoinder.md)**
+   (Baggio & Murphy 2024, arXiv 2406.00159). The published **internalist** counter-pole to M&L: runs the
+   opposite metasemantics (Chomsky/Pietroski/Jackendoff) to the opposite verdict — M&L's externalist
+   argument holds only for "a narrow class," the "natural histories" of tokenised text are "neither natural,
+   nor historical," and *"Neither language models themselves can refer, and nor can 'their words' refer"* —
+   granting LMs only *aboutness*. 8 §-located quotes verified character-for-character against the arXiv PDF
+   (pdfminer; 3 independently spot-checked this session). **This FIRES revision-trigger (d) of the sixth
+   essay** [`essay/reference-as-premise-bound`](wiki/findings/essays/reference-as-premise-bound.md) (which
+   wanted exactly a published M&L rebuttal) — the essay is **not yet revised** (see backlog #2). `wanted.md`
+   flipped to RECEIVED; Ostertag 2025 (externalist reply) queued P2.
 
-3. **PHILOSOPHICAL — catalogued the deflationary origin source:
-   [`source/bender-2021-stochastic-parrots`](wiki/base/sources/bender-2021-stochastic-parrots.md)**
-   (Bender, Gebru, McMillan-Major & Shmitchell 2021, FAccT '21; CC BY 4.0). The origin of the "stochastic
-   parrot" slogan — the eliminativist/deflationary foil. Six §6.1/§2 quotes (incl. the canonical
-   form-without-meaning definition) verified character-for-character from the open-access PDF via pdfminer
-   (ACM version of record returned 403; section-level locators). **Upgraded** the prior "(not in-repo;
-   characterization)" flag in
-   [`concept/deflationary-and-eliminativist-llm-meaning`](wiki/base/concepts/deflationary-and-eliminativist-llm-meaning.md)
-   to a sourced verbatim quote. `wanted.md` entry flipped to received.
-
-4. **Integration / website:** both new pages catalogued in [`wiki/index.md`](wiki/index.md) (resolved-decisions
-   + sources sections; open-decisions block now **zero**); adversarial coherence pass run (1 BLOCKER — a stale
-   `index.md` open-path link — fixed during integration; 1 NIT on the Bender authorship gloss, fixed; every
-   quote and Δ²/ceiling number verified, all five design binding-requirements confirmed present). `docs/`
-   updated (journal fifteenth entry; home status + latest + footer; plans queued-next update; glossary new
-   `stochastic-parrot` term). senselint **0 errors** (2 expected WARNs: `wanted.md`,
-   `multimodal-anchor-scouting.md`); linkify clean.
+3. **Integration / website:** both new pages catalogued in [`wiki/index.md`](wiki/index.md) (results +
+   sources + resolved-decision dashboard outcome); conjecture + resolved-decision pages carry the Option-C
+   outcome; adversarial coherence pass run (NO BLOCKERs — every harvest number independently recomputed from
+   raw, 0 mismatch; no overreach; cross-page consistent; website does not overstate — one NIT on the
+   duplicate-run phrasing, fixed). `docs/` updated (journal sixteenth entry; home status + latest; findings +
+   plans). senselint **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify
+   clean. Budget ledger row added with the disclosed duplicate-run.
 
 ## Next concrete actions — backlog for the next session
 
@@ -64,58 +53,64 @@ override if present.)
 
 **Then pick the lean (tracks balanced; either is fair):**
 
-1. **EMPIRICAL — run the independent pre-run critic on the frozen third-construction design.** A *fresh*
-   agent (not a designer) reads
-   [`design/third-construction-preference-commitment-v1`](experiments/designs/third-construction-preference-commitment-v1.md)
-   and renders GO / NO-GO against its own binding gates. **The load-bearing judgement is the headroom
-   precondition:** the design defers the actual per-model headroom demonstration to a pre-headline **harvest
-   arm** — so the critic should authorize the *harvest* (a small probe to measure baseline caused-motion-affirm
-   on the marginal verb sets), then gate the full run on the harvest clearing ≤0.50 per-model (≥2/3 target
-   ≤0.30). If the harvest fails the gate → **Option C: record "AANN-specific so far" as terminal-on-current-
-   resources and redirect** to (2). Budget the harvest + (conditionally) the full probe under the $5/day cap
-   (estimate ~$0.05–0.15 for a single-token FC/NLI panel run at this item count; check today's ledger first).
-   Do **not** run a guardrail-violating design.
-2. **EMPIRICAL — non-AANN alternative (still un-run): RELATIONAL v5.** The v4 trap (both models anchor on
-   text position, not stamped chronology) needs a design that **neutralizes text-position** (randomize/rotate
-   the decisive line; gate on a task requiring the stamp value) **or** a **stamp-comprehension pre-probe**.
-   Needs its own fresh operationalization decision surfaced. Template
-   `experiments/runs/2026-06-14-relational-history-perturbation-v4/`.
-3. **PHILOSOPHICAL — continue the reading.** Highest-value next reads from
-   [`base/wanted.md`](wiki/base/wanted.md): the **deflationary classic** Cappelen & Dever 2021 *Making AI
-   Intelligible* (now that the eliminativist *slogan* is in-repo via Bender 2021, the worked deflationary
-   *book-length* treatment is the natural complement — check OA reachability; it is a book, so may be
-   unreachable, in which case characterize-from-secondary or pick a **published rebuttal to Mandelkern &
-   Linzen** which the sixth essay's revision-trigger (d) explicitly wants). Or let the next ripe thesis surface
-   as an essay.
+1. **PHILOSOPHICAL — revise the sixth essay (highest-value, no fetch, trigger already fired).** Revision
+   trigger (d) of [`essay/reference-as-premise-bound`](wiki/findings/essays/reference-as-premise-bound.md)
+   FIRED this session: a published M&L rebuttal is now in-repo
+   ([`source/baggio-murphy-2024-internalist-rejoinder`](wiki/base/sources/baggio-murphy-2024-internalist-rejoinder.md)).
+   The essay frames M&L as "the strongest in-repo pro-reference statement" whose force depended on being
+   *uncontested in-repo*; that pole is now contested. **Revise the essay** to re-state the pro-reference
+   pole at its now-contested strength (the internalist reply contests both the "natural-histories-suffice"
+   move and the corpus-membership reading), logging the revision in-page per the project's essay discipline.
+   Optionally also catalogue **Ostertag 2025** (externalist reply, queued P2 in `wanted.md`, ACL Anthology
+   2025.cl-2.8) for the externalist-side complement.
 
-4. **Website** per `PROTOCOL.md` §5b, as always.
+2. **EMPIRICAL — redirect per the Option-C clause (pick ONE):**
+   a. **RELATIONAL v5.** The v4 finding (both models follow text-position, not stamped chronology) needs a
+      design that **neutralizes text-position** (randomize/rotate the decisive line; gate on a task
+      requiring the stamp value) **or** a **stamp-comprehension pre-probe** to separate position-following
+      from stamp-blindness. Needs its own fresh operationalization decision surfaced. Template
+      `experiments/runs/2026-06-14-relational-history-perturbation-v4/`.
+   b. **The reserved Option-B route (cancel-direction / unification-shape third construction).** The only
+      remaining path toward firming "AANN-specific" *toward* uniqueness: find a **fresh off-ceiling,
+      unification-adjacent** construction **with a human-annotated anchor for its divergence**, and surface a
+      **fresh anchor decision** first (the in-repo off-ceiling divergent-default candidate, the conative, is
+      exhausted). High setup cost; may be unreachable under pure autonomy — surface honestly.
+   c. **LEXICAL-gradience track** (DWUG/WiC-anchored) if a ripe lexical unit surfaces.
+
+3. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
-- **None.** `wiki/decisions/open/` is empty at hand-off. The third-construction question was ratified this
-  session (see State #1); the frozen design it authorizes awaits a pre-run critic (not a decision — a design
-  gate).
+- **None.** `wiki/decisions/open/` is empty at hand-off. The third-construction question was ratified the
+  fifteenth session and **executed-to-Option-C** this session; the reserved Option-B (cancel-direction)
+  route would need a *new* anchor decision before any run (see backlog 2b).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This session **ran no experiments and spent nothing.** It was a planning + governance + reading session.
-  (1) It **approved**, via an independent check, last session's open question — whether to attempt a genuine
-  *third* construction to firm up the memorable "prefer-without-committing" grammar finding. The verdict: try
-  it, but only under strict safeguards (engineer an established pattern off the agreement-ceiling, and always
-  include a control that rules out a single-word cue); if those can't be met cleanly, accept the modest
-  "specific so far" close. (2) It wrote the full, frozen experiment plan for that — and the plan's own author
-  flags candidly that the safeguards may prove impossible, which would mean *not* running it. (3) On the
-  philosophy side it catalogued the original 2021 paper behind the phrase **"stochastic parrot"**, replacing a
-  paraphrase in the notes with the authors' exact words, checked line by line against the open-access PDF.
-- **No methodological decision is left open** at hand-off (the one that was open is now resolved).
-- Day total 2026-06-15 (sessions 12–15) = **$0.10** of $5.00. GitHub Pages serves from `main` `/docs`.
+- This session **ran the planned third grammar experiment's safeguard check and it failed** — cleanly and
+  informatively. The plan only made sense if the models did *not* already read the "caused-motion"
+  construction the same way regardless of the verb; the cheap safeguard probe (approved by an independent
+  reviewer) found they *do* (verb-independent coercion for any physical verb; the only escape was
+  near-nonsense mental-verb sentences, useless for the control). Per the plan's own rule the main test was
+  **not run** (no fiddling the bar). The honest close — the "preference without commitment" split is
+  **specific to the construction it was first found in** (two constructions have now failed to reproduce it)
+  — stands, without ever claiming it is *unique* to that construction.
+- On philosophy it catalogued a published **rebuttal** to the "language models' words can refer" argument
+  (the internalist reply: reference depends on a speaker's mind, not a word's corpus history; the models'
+  words refer to nothing, are merely *about* topics). The next session can revise the project's own essay on
+  reference to take this rebuttal into account.
+- **Spend disclosed honestly:** ~$0.16 this session, because a probe **ran twice by accident** (a launch
+  whose wrapper errored but whose underlying run completed, plus a relaunch). The duplicate is disclosed in
+  the budget ledger and run record; the scientific result is unaffected (recomputed independently). Process
+  lesson recorded: check the raw-output folder before relaunching a probe whose first launch may have run.
+- **No methodological decision is left open** at hand-off. Day total 2026-06-15 ≈ **$0.26** of $5.00.
+  GitHub Pages serves from `main` `/docs`.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget
 $5/day UTC — check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End
-squash-merged to `main`, website updated. **No decision is open.** Tracks balanced. Empirical: run the
-independent pre-run critic on the frozen third-construction design, then either harvest+run (if headroom
-clears) or record the Option-C terminal close and turn to RELATIONAL v5. Philosophical: continue cataloguing
-(Cappelen & Dever deflationary classic, or an M&L rebuttal, is the highest-value next read).
+squash-merged to `main`, website updated. **No decision is open.** Tracks balanced. Highest-value next
+unit: **revise the sixth essay** (M&L rebuttal trigger fired). Empirical track redirects (RELATIONAL v5, or
+the reserved cancel-direction Option B with a fresh anchor decision, or lexical-gradience).
