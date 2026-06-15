@@ -42,8 +42,18 @@ links:
 > dissociation, which now reads as AANN-specific so far.** The forward bet below is retained as the
 > *original* statement for the record, struck through where the result bears on it; the conceptual
 > "two constructs" point survives, the "general ordering" claim does not. One construction cannot prove
-> AANN-uniqueness — a third construction (the way/caused-motion near-miss fallback) could still revisit
-> it.
+> AANN-uniqueness — a third construction could still revisit it.
+>
+> **Update 2026-06-15 (fifteenth session):** the third-construction question is now ratified —
+> [`decisions/resolved/aann-uniqueness-third-construction`](../../decisions/resolved/aann-uniqueness-third-construction.md)
+> (ADOPT Option A: engineer headroom on an **add-direction** construction; binding fallback Option C) — and
+> a frozen design implementing it exists
+> ([`design/third-construction-preference-commitment-v1`](../../../experiments/designs/third-construction-preference-commitment-v1.md),
+> caused-motion; **not yet critic-reviewed, not yet run**). This does **not** change the conjecture's
+> `tested → not confirmed` status: a clean third result would *refine* it (toward firmer AANN-specificity
+> or a counter-instance), and the design's own author flagged that the headroom precondition may genuinely
+> fail at critic time, routing to Option C. Any result is scoped to add-direction and does not settle the
+> cancel-direction/unification *shape* question.
 
 ## Statement
 
