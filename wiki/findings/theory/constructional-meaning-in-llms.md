@@ -264,6 +264,17 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > one apparent exception. This sits with the wider instrument-sensitivity picture: a wide-CI single-model
 > directional effect is exactly the kind of signal that should be replicated before it is theorized, and
 > here replication correctly retired it.
+>
+> **The bounded close is now a typed claim (2026-06-15, fourteenth session).** The synthesis those two
+> updates point to is recorded as a first-class claim:
+> [`claim/preference-commitment-dissociation-aann-specific`](../claims/preference-commitment-dissociation-aann-specific.md)
+> (`status: supported`, `anchor: internal-contrast-only`) — on the evidence so far the
+> preference-without-commitment dissociation is **AANN-specific**, replicating across two disjoint AANN
+> item sets but not reproducing on the conative across two verb samples in either direction. It carries
+> the ladder caution explicitly: a forced-choice paraphrase-preference shift can be produced by a bare
+> lexical cue (the conative bare-*at* case), so such a shift is Tier-4-relevant evidence about
+> distributional compatibility at most, **not** evidence of inference-licensing on its own. Calibrated to
+> "AANN-specific *so far*" — only one alternative construction has been tested.
 
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 
