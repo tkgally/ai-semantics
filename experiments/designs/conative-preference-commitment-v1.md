@@ -69,14 +69,24 @@ Hypothesis / contact proposition throughout: *"&lt;subj&gt; made contact with &l
   set (kick/hit/punch/slash/stab/claw/swat/jab/chop/scratch/hack/whack), with their typical objects.
   These already ran off-ceiling under the conative frame (v1/v2).
 - **Resist verbs (LCC):** non-alternating contact verbs that do **not** take the conative in Levin
-  1993 (touch/break-class), expanded to **8** for a stabler cue baseline (touch, embrace, break,
-  shatter, + four more in the same non-alternating contact families — see `prep.py`). Forced into the
-  anomalous `V at NP` frame, they carry the bare *at* cue **without** the licensed conative
-  construction. **This is the cue control the ratified decision names** ("the non-alternating /
-  anomalous *at*-string family the v1 and v2 probes already used"). Verb-class differs from the
-  target by necessity (only non-alternating verbs are non-conative) — the double contrast is therefore
-  *licensed-conative-vs-anomalous-at-string*, not a perfect lexical minimal pair; this caveat is
-  inherited from, and made explicit by, the ratified decision, and is restated on the result page.
+  1993 (touch/break-class), expanded to **8** for a stabler cue baseline: touch, embrace, break,
+  shatter, crush, smash, **bump**, split (see `prep.py`). Forced into the anomalous `V at NP` frame,
+  they carry the bare *at* cue **without** the licensed conative construction. **This is the cue
+  control the ratified decision names** ("the non-alternating / anomalous *at*-string family the v1
+  and v2 probes already used"). Verb-class differs from the target by necessity (only non-alternating
+  verbs are non-conative) — the double contrast is therefore *licensed-conative-vs-anomalous-at-string*,
+  not a perfect lexical minimal pair; this caveat is inherited from, and made explicit by, the ratified
+  decision, and is restated on the result page.
+  - **LCC-purity note (independent pre-run critic, 2026-06-15).** The critic flagged that some
+    non-alternating verbs nonetheless carry a *weak idiomatic* "V at NP" reading, which would make the
+    resist arm behave partly like a real at-construction and **shrink Δ²** (a conservative,
+    bias-against-positive direction — it cannot manufacture a false positive). **"snap" was removed
+    pre-run** and replaced with **"bump"**: *snapped at* is a lexicalized idiom (bite / lash out /
+    speak sharply), a genuine control contaminant; *bumped at the cart* carries no idiomatic
+    at-reading. **"smash" and "crush" remain marginal** (weaker idiomaticity); the result page must
+    report a **robustness check** of Δ² with and without smash/crush in the resist pool, and flag if
+    either behaves anomalously in the resist arm. (Refreeze after the swap: `stimuli.json` sha256[:16]
+    `3ca3a1d50069f0cd`.)
 
 ## 3. The two instruments (both on the same frozen items)
 
