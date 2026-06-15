@@ -6,13 +6,13 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: proposed
-anchor: pending
-contingent-on:
-  - fresh-construction-inferential-generalization
+status: tested
+contingent-on: []
 created: 2026-06-14
-updated: 2026-06-14
+updated: 2026-06-15
 links:
+  - rel: contradicts
+    target: result/conative-preference-commitment-v1
   - rel: depends-on
     target: result/aann-inferential-v6
   - rel: depends-on
@@ -29,15 +29,21 @@ links:
 
 # Conjecture: preference without commitment generalizes beyond AANN
 
-> **Status: proposed; provisional and unrun.** This conjecture is `contingent-on`
-> [`decisions/open/fresh-construction-inferential-generalization`](../../decisions/open/fresh-construction-inferential-generalization.md)
-> — the open decision that surfaces *which* fresh construction carries the test and under what
-> binding conditions. That decision was **opened this session and is not yet eligible for
-> ratification** (PROTOCOL §2). Until a later session ratifies (or amends) its provisional default,
-> every claim below stays a *forward bet*: the construction named here (the conative) is the
-> decision's provisional default, not a fixed choice, and no probe has been run. `anchor: pending`
-> names that open decision; the anchor situation is spelled out under *Human anchor* below and is
-> not yet settled.
+> **Status: tested — NOT CONFIRMED (2026-06-15).** The governing decision
+> [`decisions/resolved/fresh-construction-inferential-generalization`](../../decisions/resolved/fresh-construction-inferential-generalization.md)
+> was ratified 2026-06-15 (ADOPT Option A, the conative); the frozen design
+> [`design/conative-preference-commitment-v1`](../../../experiments/designs/conative-preference-commitment-v1.md)
+> ran the same UTC day → [`result/conative-preference-commitment-v1`](../results/conative-preference-commitment-v1.md),
+> **VERDICT INCONCLUSIVE**. The conative did **not** reproduce the AANN preference-without-commitment
+> shape: the paraphrase double contrast was **non-positive in all three models** (the bare-*at* lexical
+> cue absorbs the cancel-preference), and the only construction effect was a **single model's
+> commitment-only** shift (claude Δ²_commit +0.46) — the *mirror* of the AANN dissociation. **The
+> conjecture's confirm criterion is not met; the first generalization attempt failed to reproduce the
+> dissociation, which now reads as AANN-specific so far.** The forward bet below is retained as the
+> *original* statement for the record, struck through where the result bears on it; the conceptual
+> "two constructs" point survives, the "general ordering" claim does not. One construction cannot prove
+> AANN-uniqueness — a third construction (the way/caused-motion near-miss fallback) could still revisit
+> it.
 
 ## Statement
 
@@ -129,9 +135,9 @@ the pre-existing single-model fragility must not be retrofitted as new evidence 
 
 ## Human anchor
 
-`anchor: pending` — naming the open decision
-[`decisions/open/fresh-construction-inferential-generalization`](../../decisions/open/fresh-construction-inferential-generalization.md),
-which fixes the anchor situation when ratified. The honest situation, stated precisely:
+`anchor: pending` until a result lands — the now-ratified decision
+[`decisions/resolved/fresh-construction-inferential-generalization`](../../decisions/resolved/fresh-construction-inferential-generalization.md)
+fixes the anchor situation, realized only when the probe runs. The honest situation, stated precisely:
 
 - If the conative (or another CxNLI construction) carries the test and the result makes a
   human-comparison NLI claim against the CxNLI gold labels, the **entailment arm** would be

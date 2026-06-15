@@ -11,7 +11,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-28
-updated: 2026-05-31
+updated: 2026-06-15
 links:
   - rel: refines
     target: claim/formal-competence-aann-ceiling
@@ -237,6 +237,22 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > distributionally-dispreferred agreement reflex. The single-panel and expert-stipulated-key caveats
 > stand; `internal-contrast-only`. The instrument disagreement replicates as the record's sharpest
 > (|FC−NLI| up to 0.925), still feeding the instrument-sensitivity open question.
+
+> **The AANN preference/commitment dissociation does NOT generalize to the conative (2026-06-15,
+> twelfth session).** [`result/conative-preference-commitment-v1`](../results/conative-preference-commitment-v1.md)
+> ran the *same* double-contrast preference-vs-commitment instrument on a fresh divergent-default
+> construction (the conative), testing whether the AANN shape ([`essay/preference-without-commitment`](../essays/preference-without-commitment.md))
+> is general — **VERDICT INCONCLUSIVE**. The AANN shape did not reproduce: the paraphrase double
+> contrast was **non-positive in all three models** (a bare-*at* lexical cue absorbs the
+> cancel-preference, so the broad "preference" component has no construction-specific analogue here),
+> and the only construction effect was a **single model's commitment-only** shift (claude Δ²_commit
+> +0.46) — the *mirror* of AANN. So the instrument-sensitivity story is now **construction-particular**:
+> the two instruments *can* dissociate (AANN), but the *way* they dissociate does not transfer, and on
+> the conative it is the weaker paraphrase instrument that shows no construction-specific signal at all.
+> The preference-without-commitment ordering reads as **AANN-specific so far** ([`conjecture/preference-commitment-generality`](../conjectures/preference-commitment-generality.md),
+> tested → not confirmed). One construction cannot prove AANN-uniqueness; the way/caused-motion
+> near-miss fallback could revisit it. Headroom PASS all three (not a ceiling artifact); NLI conative
+> arm human-anchored to CxNLI (answer-key), FC/resist arms `internal-contrast-only`.
 
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 
