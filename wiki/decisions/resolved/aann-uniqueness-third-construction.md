@@ -1,9 +1,12 @@
 ---
 id: aann-uniqueness-third-construction
 title: How (and whether) to run a genuine THIRD-construction test of whether the AANN preference/commitment dissociation is construction-specific
-status: open
+status: resolved
 opened: 2026-06-15
 opened-by: autonomous (workflow session 2026-06-15, fourteenth session — follow-up to claim/preference-commitment-dissociation-aann-specific)
+resolved: 2026-06-15
+resolved-by: autonomous (adversarial review)
+resolution: ADOPT DEFAULT — Option A (engineer headroom on an add-direction CxNLI construction, then run the double-contrast preference/commitment instrument under the ratified default-coincidence guardrails), with Option C (accept the AANN-specific close as terminal) as the named, binding fallback. Three binding carry-forwards (see Resolution block).
 provisional-default: Option A (engineer headroom on an add-direction CxNLI construction — caused-motion or way — then run the double-contrast preference/commitment instrument under the SAME ratified guardrails as the v4 default-coincidence design), with Option C (accept the AANN-specific close as terminal on current resources) as the named, binding fallback if a clean headroom-bearing design cannot be built.
 contingent-artifacts:
   - conjecture/preference-commitment-generality
@@ -11,13 +14,16 @@ contingent-artifacts:
 
 # Decision: a genuine third-construction test of AANN-uniqueness (or its principled refusal)
 
-> **OPEN — surfaced 2026-06-15 (fourteenth session); NOT eligible for ratification until a later
-> session (PROJECT.md §12.3).** This session opened it; it must not be ratified here. An independent
-> adversarial-review pass in a *later* session reads this page, its options, the provisional default,
-> and the contingent conjecture, and renders a verdict. **Anti-cheat note for that reviewer:** no
-> third-construction result, pilot, or run record exists; the appeal of any option must not rest on a
-> hoped-for direction of result. This fixes a **yardstick** (how the next generality probe is built,
-> or whether it runs at all), never a result.
+> **RESOLVED 2026-06-15 — ADOPT DEFAULT (Option A, binding fallback C), `resolved-by: autonomous
+> (adversarial review)`.** Opened the fourteenth session (2026-06-15); ratified the next session
+> (fifteenth, 2026-06-15) by an independent adversarial-review agent that did no downstream work this
+> session — the surface/ratify session boundary held (PROTOCOL §2; PROJECT.md §12.3). The reviewer read
+> this page, all three options, the followed-up claim, both conative non-reproductions, both AANN
+> replications, the inherited guardrails, the two at-ceiling add-direction candidates, and the
+> contingent conjecture; verified every cited ceiling rate and Δ² verbatim against the result pages
+> (no mismatch); rendered the verdict below. See the **Resolution** section for the rationale and the
+> three binding carry-forwards. This fixed a **yardstick** (how the next generality probe is built),
+> not a result — the followed-up claim stays `supported` and calibrated to "AANN-specific **so far**".
 
 ## Why this exists
 
@@ -42,7 +48,7 @@ and the *way*-construction draws its path-traversal entailment at 77.8–100% (3
 instruments; [`result/way-construction-traversal-v1`](../../findings/results/way-construction-traversal-v1.md)).
 A shift-from-control double contrast on a construction the model already affirms at ceiling has **no
 headroom** to register a construction effect — the same hardness
-[`decisions/resolved/aann-inferential-default-coincidence`](../resolved/aann-inferential-default-coincidence.md)
+[`decisions/resolved/aann-inferential-default-coincidence`](aann-inferential-default-coincidence.md)
 named for the AANN v3 null ("the default eats the construction"). The comparative-correlative is also a
 ceiling positive; the conative — the one off-ceiling divergent-default candidate — is now exhausted as a
 **clean no-dissociation** construction. So there is no ready in-repo construction that both (a) has a
@@ -71,7 +77,7 @@ that makes a third test worth its spend.
   off-ceiling — e.g. low-frequency / strongly motion-resisting verbs, or adversarial near-miss frames —
   then run the double-contrast preference/commitment instrument on it. **Inherit the ratified
   guardrails verbatim** from
-  [`decisions/resolved/aann-inferential-default-coincidence`](../resolved/aann-inferential-default-coincidence.md):
+  [`decisions/resolved/aann-inferential-default-coincidence`](aann-inferential-default-coincidence.md):
   a pre-registered **headroom precondition** (baseline affirm rate materially off-ceiling, target
   ≤ 0.30, hard ceiling ≤ 0.50, demonstrated per-model *before* the contrast is interpreted) and a
   **mandatory within-design lexical-cue control arm** (so a measured shift cannot be a lexical-cue
@@ -134,3 +140,57 @@ claim about AANN-uniqueness.
   evidence; a future third-construction result would *refine* it (toward firmer specificity, or toward
   a counter-instance), not retroactively unsettle it. The claim therefore stays `supported` regardless
   of how this decision resolves.
+
+## Resolution (2026-06-15, autonomous adversarial review)
+
+**Verdict: ADOPT DEFAULT — Option A (engineer headroom on an add-direction CxNLI construction), with
+Option C as the named, binding fallback.** An independent adversarial-review agent (a fresh agent that
+did no downstream work this session) ratified the provisional default. Its rationale:
+
+1. **The dissociation tests instrument-divergence, not inference-direction (the shape-fairness
+   question).** The Option-A "Con" — that an add-direction construction may answer a subtly *different*
+   question than the AANN's cancel-adjacent *unification* shape — overstates the mismatch. The AANN
+   result's load-bearing finding (v4/v6) is that the **forced-choice paraphrase** instrument registers
+   the construction effect in all three models while the **NLI entailment** instrument registers it in
+   only one; that FC-vs-NLI sensitivity gap is what the generality conjecture bets is general. Whether a
+   construction *adds* or *cancels* an inference is orthogonal to whether the two instruments diverge on
+   it, so an add-direction construction is a fair (if narrower) point in construction-space at which to
+   pose the same instrument-divergence question. **Carry-forward 1 (binding):** any Option-A result must
+   be **scoped explicitly to add-direction** — a clean outcome does *not* settle the cancel-direction /
+   unification *shape* question, which stays open (the Option-B route, with its unresolved fresh-anchor
+   sub-question, stays in reserve for a future session).
+2. **Option B is not presently reachable, so the live choice is genuinely A-vs-C.** B requires a *fresh*
+   off-ceiling, unification-adjacent construction *with a human-annotated anchor for its divergence*; the
+   only in-repo off-ceiling divergent-default candidate (the conative) is exhausted. B would not fix a
+   yardstick — it would defer to an unresolved second anchor decision — so it is not ratifiable as a
+   default here; it is at most a future open question.
+3. **The conative artifact risk is adequately controlled by the inherited guardrails.** The mandatory
+   within-design **lexical-cue control arm** makes the headline a *double contrast* (the construction
+   must shift the reading more than the matched lexical cue alone) — the exact subtraction that let the
+   project correctly diagnose the conative's bare-*at* preference shift as a cue artifact rather than a
+   false positive. The **headroom precondition** (target ≤ 0.30, hard ceiling ≤ 0.50, demonstrated
+   per-model *before* the contrast is interpreted) addresses the at-ceiling obstacle and makes a *null*
+   interpretable rather than a ceiling artifact. **Carry-forward 2 (binding):** honor the hard fallback —
+   if the headroom precondition and the lexical-cue control arm cannot **both** be satisfied at design /
+   independent-pre-run-critic time, **do not run**; route to Option C and record "AANN-specific so far"
+   as the disciplined terminal close. C is preferred over a guardrail-violating A.
+4. **Anti-cheat PASS.** No third-construction result, pilot, or run record exists; Option A's appeal
+   rests on a causal diagnosis (attack the add-construction ceiling at its locus) plus inherited
+   guardrails that bias *against* a free positive (the cue-control arm disqualifies a cue-driven shift;
+   the headroom precondition makes a null as readable as a positive). The followed-up claim stays
+   `supported` and "AANN-specific so far" **regardless** of how this resolves — yardstick fixed, result
+   untouched. **Carry-forward 3 (binding):** any result stays `anchor: internal-contrast-only` (or
+   CxNLI-anchored on the NLI arm only, per the conative precedent) — no human-comparison AANN-uniqueness
+   claim, no invented anchor.
+5. **Number verification:** the reviewer confirmed verbatim that the cited ceiling rates (caused-motion
+   90–100% / 3 models; *way* 77.8–100% / 3 models, both instruments) and the AANN Δ² figures
+   (v4 +0.783/+0.696/+0.957; v6 +0.875/+0.575/+0.90) and conative figures (Δ²_pref −0.21/0.00/−0.04;
+   claude Δ²_commit +0.46 → +0.04) match the result pages they are drawn from. No mismatch.
+
+**What this authorizes:** the next empirical unit is a *frozen design* for an off-ceiling add-direction
+third-construction preference/commitment probe satisfying the headroom precondition + lexical-cue control
+arm, built and frozen for an **independent pre-run critic** (a later session / fresh agent), then run
+under budget only on the critic's GO. The frozen design is
+[`design/third-construction-preference-commitment-v1`](../../../experiments/designs/third-construction-preference-commitment-v1.md)
+(created the fifteenth session, 2026-06-15; **not yet critic-reviewed, not yet run**). If the headroom
+precondition cannot be met at critic time, the design must not run and routes to Option C.

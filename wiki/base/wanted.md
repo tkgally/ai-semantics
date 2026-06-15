@@ -223,8 +223,8 @@ The 2026-05-31 theory wave wrote five established-position concept pages that **
   why: the anti-holism argument + the claim that holism threatens compositionality, communication, and stability of meaning; bears on both `semantic-holism` and `compositionality`.
   status: wanted
 - [P2] Bender, E.M., Gebru, T., McMillan-Major, A. & Shmitchell, S. 2021. "On the Dangers of Stochastic Parrots." FAccT.
-  why: the eliminativist-leaning origin of the "stochastic parrot" framing — the foil for [`base/concepts/deflationary-and-eliminativist-llm-meaning.md`](concepts/deflationary-and-eliminativist-llm-meaning.md). (The phrase currently appears in-repo only inside the verbatim Lyre quote.)
-  status: wanted
+  why: the eliminativist-leaning origin of the "stochastic parrot" framing — the foil for [`base/concepts/deflationary-and-eliminativist-llm-meaning.md`](concepts/deflationary-and-eliminativist-llm-meaning.md).
+  status: **RECEIVED** (2026-06-15; catalogued as [`wiki/base/sources/bender-2021-stochastic-parrots.md`](sources/bender-2021-stochastic-parrots.md) — 6 §6.1/§2 quotes incl. the canonical "stochastic parrot" definition verified character-for-character from the CC BY 4.0 PDF via pdfminer; section-level locators. The ACM version of record returned HTTP 403; quotes from the open-access mirror, whose text matches the canonical citation. The deflationary concept page's prior "(not in-repo; characterization)" flag is upgraded to a sourced verbatim quote.)
 - [P3] Cappelen, H. & Dever, J. 2021. *Making AI Intelligible: Philosophical Foundations.* OUP.
   why: a worked deflationary/anti-anthropomorphic treatment of AI content/reference; for `deflationary-and-eliminativist-llm-meaning`. (Complements the already-listed Sterken & Cappelen ed. volume.)
   status: wanted
