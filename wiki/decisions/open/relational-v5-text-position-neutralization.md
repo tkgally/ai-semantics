@@ -223,9 +223,11 @@ deliberately:
   a human/LLM contrast at exactly this grain). The conjecture itself records that **no in-repo
   resource anchors human order-sensitivity**: Brennan & Clark 1996
   ([`source/brennan-clark-1996-conceptual-pacts`](../../base/sources/brennan-clark-1996-conceptual-pacts.md))
-  anchors historicity and partner-specificity but *"never perturbs interaction order"* and reports
-  *"Frequency of use better explains our data than does simple recency"* — an order-*insensitive*
-  statistic — so it cannot ground a human order-/position-sensitivity comparison. Hawkins
+  anchors historicity and partner-specificity but never perturbs the *order* of an interaction
+  history (its historical variables are frequency and recency, not sequence position — the source
+  page records that "The paper never scrambles or reorders an interaction history") and reports the
+  verbatim *"Frequency of use better explains our data than does simple recency"* — an
+  order-*insensitive* statistic — so it cannot ground a human order-/position-sensitivity comparison. Hawkins
   ([`resource/hawkins-tangrams`](../../base/resources/hawkins-tangrams.md)) anchors the convergence
   baseline only.
 - **The unresolved tension:** if v5's force is kept strictly within-model (does *this* model's pick
