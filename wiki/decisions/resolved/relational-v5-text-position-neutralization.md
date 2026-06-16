@@ -1,16 +1,75 @@
 ---
 id: relational-v5-text-position-neutralization
 title: How should a relational v5 design separate "follows stamped chronology" from "follows text position", and does it need a human anchor or is it internal-contrast-only?
-status: open
+status: resolved
 opened: 2026-06-15
 opened-by: orchestrator (subagent, surfaced not resolved)
+resolved: 2026-06-16
+resolved-by: autonomous (adversarial review)
+resolution: adopt-default (Option B then A, staged; C the binding fallback); anchor internal-contrast-only
 contingent-artifacts:
   - conjecture/commutative-convention
 ---
 
 # Decision: relational v5 — neutralizing text-position so chronology-following can be seen
 
-> **Status: OPEN (2026-06-15). Surfaced, not resolved.** Per [`PROTOCOL.md`](../../../PROTOCOL.md) §2
+> **Status: RESOLVED (2026-06-16) — `resolved-by: autonomous (adversarial review)`.** Opened the
+> seventeenth session (2026-06-15); ratified the next session (2026-06-16) by an **independent
+> adversarial reviewer** (a fresh agent, not the one doing the downstream work), per
+> [`PROTOCOL.md`](../../../PROTOCOL.md) §2 and [`PROJECT.md`](../../../PROJECT.md) §12.3. The
+> session boundary held. Tom's standing override outranks this autonomous ratification.
+>
+> ## Ruling
+> **VERDICT: adopt the provisional default — Option B then Option A, staged.** Run the cheap
+> stamp-comprehension pre-probe (Option B) first; an Option-A position-rotated, stamp-gated
+> chronology arm runs **only for models that pass B**. **Option C is the binding fallback** at
+> both gates. **ANCHOR: `internal-contrast-only`** — v5's framing is held strictly within-model;
+> no human-comparison claim may be promoted from any v5 result (the human side is undischargeable
+> on current resources — Brennan & Clark report an order-*insensitive* statistic, Hawkins anchors
+> only convergence — and none is owed because no human contrast is asserted). **ANTI-CHEAT: PASS.**
+>
+> **Reviewer's reasoning on the two flagged checks.** (1) *Staged B→A is sound and A-alone does
+> not subsume B:* Option A's rotation neutralizes position as a competing signal but does not by
+> itself establish there is a chronology signal to detect, so an A-only null stays the uninterpretable
+> "blind vs comprehending-but-not-using" object; B resolves that at lowest cost. A B-pass is held
+> to the narrow license (can read a stamp on demand, not "spontaneously weights it"). (2) *Option A's
+> stamp-requiring task cannot be certified unsolvable in the abstract* — it is the single largest
+> leak risk — so the ruling ratifies the routing: if a pre-run critic cannot certify it on
+> idealized-reader fixtures, the arm does not run and routes to C. Cost/benefit favors the staged
+> path (sub-$1 B + a ~$0.63-scale A, well inside $5/day) over closing at C now, because the
+> stamp-blindness-vs-chronology-neglect distinction is genuinely relational and not retuned.
+>
+> **Binding carry-forwards the running session must honor:**
+> 1. **Stage strictly B → A.** Pre-register a comprehension floor as the B gate; only passers earn A.
+> 2. **Freeze the B stamp format before the B run**, with idealized-reader fixtures + an
+>    independent pre-run critic GO. A B-fail for **both** panel models **closes the line at C** —
+>    it must **not** trigger a stamp-format retune or a B re-run ("do not tune until comprehension
+>    appears").
+> 3. **Certify Option A's stamp-requiring task UNSOLVABLE by a positional/lexical shortcut** on
+>    idealized-reader fixtures, via independent pre-run critic, before any A run; if it cannot be
+>    certified, **route to C** — do not weaken the task to get a GO.
+> 4. **Hold the A-null interpretation to its narrow wording:** a B-pass + A-null licenses only
+>    "comprehends recency on demand but does not spontaneously weight it here" — never "comprehends
+>    recency" in general, never "the models chose to ignore recency." Carry v4's scope limit verbatim.
+> 5. **Anchor `internal-contrast-only`, framing strictly within-model.** Any reach for "the way
+>    humans do" is a new, currently-undischargeable anchor question — open it fresh.
+> 6. **Keep C binding** at both gates; keep [`conjecture/commutative-convention`](../../findings/conjectures/commutative-convention.md)
+>    `proposed` with its inconclusiveness located until/unless a clean A result moves it.
+> 7. **Budget:** pre-flight each phase; honor a $1.50-class per-arm hard stop; record actuals.
+> 8. **Governance:** this fixes the yardstick only — it pre-authorizes no v5 *result*; the running
+>    session still owns its own pre-run/post-run critic passes and verification gates.
+>
+> **Realization (2026-06-16, eighteenth session — Option B executed):** the staged design was
+> implemented as the run [`experiments/runs/2026-06-16-relational-stamp-comprehension-b/`](../../../experiments/runs/2026-06-16-relational-stamp-comprehension-b/)
+> and the result is [`result/relational-stamp-comprehension-b`](../../findings/results/relational-stamp-comprehension-b.md).
+> See that page for the B verdict and which models (if any) earned an Option-A arm.
+>
+> The original surfacing text (options, provisional default, anchor question) is preserved below
+> unchanged as the record the reviewer assessed.
+
+---
+
+> **Status (as surfaced): OPEN (2026-06-15). Surfaced, not resolved.** Per [`PROTOCOL.md`](../../../PROTOCOL.md) §2
 > and [`CLAUDE.md`](../../../CLAUDE.md) always-on rule 5, this page states the live
 > operationalization question with options and a **provisional default**, and is **not** ratified
 > in the session that opened it. A *later* session ratifies it via an independent adversarial-review
@@ -212,7 +271,7 @@ deliberately:
 - The chronology-vs-position contrast is a **within-model contrast over byte-identical content**
   differing only in stamp and line order — structurally the same kind of measure that the relational
   line has carried as `internal-contrast-only` since
-  [`decisions/resolved/conflicting-cue-human-anchor`](../resolved/conflicting-cue-human-anchor.md)
+  [`decisions/resolved/conflicting-cue-human-anchor`](conflicting-cue-human-anchor.md)
   and as applied to v4. On that reading, v5 needs **no** resource anchor and should declare
   `internal-contrast-only` — but **only after** an independent cross-session ratification, never as a
   way to dodge a genuine anchor obligation ([`CLAUDE.md`](../../../CLAUDE.md) §typed-links/anchor

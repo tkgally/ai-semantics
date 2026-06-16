@@ -8,8 +8,10 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-31
-updated: 2026-06-14
+updated: 2026-06-16
 links:
+  - rel: depends-on
+    target: result/relational-stamp-comprehension-b
   - rel: depends-on
     target: result/relational-reference-game-v1
   - rel: depends-on
@@ -133,6 +135,30 @@ because v3 could not earn it, and v4 earns it cleanly — any future recency/chr
 a *linear* prompt must decouple stamped recency from physical position, or it cannot tell "tracks
 the latest convention" from "reads the last line." The decisive relational question therefore
 remains **open**, now with a known geometry trap to avoid.
+
+## Update 2026-06-16 — the stamp-comprehension gate (Option B) passed: both models read the stamp on demand (still neither falsified nor certified)
+
+The relational-v5 decision was ratified (autonomous cross-session adversarial review,
+[`decisions/resolved/relational-v5-text-position-neutralization`](../../decisions/resolved/relational-v5-text-position-neutralization.md):
+adopt-default, **Option B then A, staged**), and the **Option B stamp-comprehension pre-probe ran**
+→ [`result/relational-stamp-comprehension-b`](../results/relational-stamp-comprehension-b.md)
+(balanced-block design proven to drive every position/lexical shortcut to exactly 1/K; fresh
+independent pre-run critic GO after a NO-GO-and-repair; independent post-run verifier REPRODUCED).
+**Both models comprehend the round stamp as a recency value on demand** — claude and gemini each
+score **1.000** on both the "latest" and "earliest" queries with position-following at exactly
+chance (0.25), 0 NA.
+
+Consequence for this conjecture: it **stays `proposed` — neither falsified nor certified.** What B
+*does* change is the reading of v4: v4's binding caveat was that position-following was
+*"indistinguishable from stamp-blindness."* B removes the stamp-blindness horn — the models are
+**not** stamp-blind. So v4's position-following is now best read as **comprehending-but-not-
+spontaneously-using** (the models *can* read the stamp when asked; they just did not weight it in
+v4's convention-recovery task), not as an inability to parse the stamp. This is a sharper picture,
+but it is **not** evidence either way on commutativity: B is a *gate* (a direct recency question),
+not the spontaneous-weighting test. The decisive test is now the staged **Option A** arm
+(position-rotated, stamp-gated chronology), whose null would — given B's pass — finally mean
+something ("comprehends recency on demand but does not spontaneously weight it when fixing a
+convention"). Until Option A runs and is certified shortcut-proof, the bet is unmoved.
 
 ## What would confirm / falsify (the bet the loop picks up)
 
