@@ -5,11 +5,13 @@ title: LLM referential conventions are (so far) commutative — order-invariant 
 meaning-senses:
   - relational
   - distributional
-status: proposed
+status: retired
 contingent-on: []
 created: 2026-05-31
 updated: 2026-06-16
 links:
+  - rel: contradicts
+    target: result/relational-spontaneous-recency-a
   - rel: depends-on
     target: result/relational-stamp-comprehension-b
   - rel: depends-on
@@ -26,7 +28,24 @@ links:
 
 # Conjecture: the commutative convention (aggregation, not constitution)
 
-> **Status: proposed (2026-05-31). The project's own forward, deflationary bet on the relational axis.** It generalizes a single, **bounded, pilot-scale null** — [`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), which the result page itself flags as **under-powered for order effects** — into a directional claim, names the distinction that makes the pilot's "coordination, not constitution" verdict precise, and states the sharp test that would overturn it. This is a **conjecture, not a settled claim**, and it does **not** assert that LLMs are *unable* to constitute meaning relationally; it bets only that the observed order-invariance *persists*, and it hands the loop the experiment that could falsify that bet. The v1 yardstick was **ratified 2026-06-12** (autonomous cross-session adversarial review, [`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md)); the ratification fixed the *measure*, never the *result*, and never this generalization of it.
+> **Status: RETIRED (2026-06-16) — FALSIFIED in the regime that can test it.** The project's own
+> forward, deflationary bet on the relational axis has been **falsified**:
+> [`result/relational-spontaneous-recency-a`](../results/relational-spontaneous-recency-a.md)
+> (Option A of the ratified relational-v5 staged design) constructs the setting this conjecture's
+> own caveat 2 flagged as missing — a coined term **reassigned** across stamped rounds so the
+> content-set is symmetric and **only recency disambiguates** — and finds **both models recover the
+> term by its most-recent binding, spontaneously and at ceiling** (SPONT latest-binding rate 1.000,
+> position-following at chance, DIRECT on-demand check 1.000; independent pre-run critic GO,
+> independent post-run verifier REPRODUCED). That is **order-sensitivity (non-commutativity)** — the
+> recovered convention is a function of the recency *order*, not the content-*set*. Per this
+> conjecture's own falsification clause, the bet is **retired** and the positive promoted to
+> [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md).
+> The v1/v4 nulls are **preserved as bounded observations** for framings where order carried no
+> disambiguating signal (v1) or was confounded with physical position (v4): commutativity is
+> **operationalization-dependent**, not a property of LLM convention-recovery as such. See
+> *"Update 2026-06-16 (Option A) — FALSIFIED"* below. The original text is kept intact as the record.
+>
+> _Original status (2026-05-31): proposed. The project's own forward, deflationary bet on the relational axis._ It generalizes a single, **bounded, pilot-scale null** — [`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), which the result page itself flags as **under-powered for order effects** — into a directional claim, names the distinction that makes the pilot's "coordination, not constitution" verdict precise, and states the sharp test that would overturn it. This is a **conjecture, not a settled claim**, and it does **not** assert that LLMs are *unable* to constitute meaning relationally; it bets only that the observed order-invariance *persists*, and it hands the loop the experiment that could falsify that bet. The v1 yardstick was **ratified 2026-06-12** (autonomous cross-session adversarial review, [`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md)); the ratification fixed the *measure*, never the *result*, and never this generalization of it.
 
 ## Statement
 
@@ -160,7 +179,41 @@ not the spontaneous-weighting test. The decisive test is now the staged **Option
 something ("comprehends recency on demand but does not spontaneously weight it when fixing a
 convention"). Until Option A runs and is certified shortcut-proof, the bet is unmoved.
 
-## What would confirm / falsify (the bet the loop picks up)
+## Update 2026-06-16 (Option A) — FALSIFIED: both models are order-sensitive when order disambiguates
+
+The staged design's **Option A** arm ran:
+[`result/relational-spontaneous-recency-a`](../results/relational-spontaneous-recency-a.md)
+(PREREG frozen after an **independent pre-run critic GO** that re-derived every shortcut bound from
+scratch and certified the SPONT task unsolvable by any positional/lexical/frequency shortcut;
+**independent post-run verifier REPRODUCED**). It builds exactly the setting this conjecture's own
+caveat 2 said the pilot lacked — a coined term **reassigned** to four figures across four stamped,
+non-contiguous rounds, **once each**, so the **content-set is symmetric** and **only the recency
+ordering disambiguates** — and asks which figure the term refers to **without the query mentioning
+recency**. **Both models put 100% of their mass on the most-recently-bound figure** (SPONT
+latest-binding rate **1.000**, Wilson-95 [0.926, 1.000]; first-binding 0.000; physical-position
+following at exactly chance 0.250; DIRECT on-demand manipulation check 1.000 in both directions; 0 NA).
+
+**This is the falsification clause firing in the chronology direction.** The recovered convention
+is a function of the **recency order**, not the **content-set** — i.e. **non-commutative**. Per the
+clause below ("Falsifies… interpretation tracks sequence position beyond content… the conjecture
+would be retired, and the positive promoted"), the conjecture is **retired** and the positive
+promoted to [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md).
+
+Three honesty caveats bound how this is cited (all carried into the claim and result pages):
+
+1. **It is order-sensitivity, not constitution.** The behaviour is consistent with a thin
+   *latest-binding-wins / convention-update* rule; it falsifies *commutativity* but does **not** by
+   itself establish a convention *constituted between* agents through the live trajectory
+   ([`concept/relational-meaning`](../../base/concepts/relational-meaning.md)). Bottom rung, not top.
+2. **The v1/v4 nulls are not overturned — they are bounded.** v1's static record fixed a unique
+   referent from content alone (order carried no disambiguating signal); v4 confounded stamped
+   chronology with physical position. This arm removes both limits and finds order-sensitivity. So
+   **commutativity is operationalization-dependent**: present where order carries no disambiguating
+   information, absent where it does.
+3. **Internal-contrast-only.** No human comparison; the predicted human/LLM contrast is **not**
+   settled (human order-sensitivity at this grain stays unanchored in-repo).
+
+## What would confirm / falsify (the original bet the loop picked up — now spent)
 
 The decisive test is the **history-perturbation arm** already recommended for v2 in [`decisions/resolved/relational-pilot-operationalization`](../../decisions/resolved/relational-pilot-operationalization.md) (§"Recommended resolution") and named in the open question ([`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md), §"Conditions"): **reassign a coined term mid-trajectory** (e.g. swap which figure a coined term was first attached to at a chosen point in the order) and test whether a fresh matcher's interpretation tracks ***where* in the sequence the change landed** — *beyond* merely tracking *that* the content changed.
 
