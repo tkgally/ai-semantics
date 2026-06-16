@@ -64,6 +64,22 @@ contingent-artifacts:
 > and the result is [`result/relational-stamp-comprehension-b`](../../findings/results/relational-stamp-comprehension-b.md).
 > See that page for the B verdict and which models (if any) earned an Option-A arm.
 >
+> **Realization (2026-06-16, twentieth session — Option A executed):** both models passed B, so the
+> Option-A position-rotated, stamp-gated arm was built and run as
+> [`experiments/runs/2026-06-16-relational-spontaneous-recency-a/`](../../../experiments/runs/2026-06-16-relational-spontaneous-recency-a/),
+> design [`relational-spontaneous-recency-v5-optionA`](../../../experiments/designs/relational-spontaneous-recency-v5-optionA.md),
+> result [`result/relational-spontaneous-recency-a`](../../findings/results/relational-spontaneous-recency-a.md).
+> An **independent pre-run critic returned GO** on the shortcut-proof certification (carry-forward
+> 3), explicitly ruling that using clearly-distinct figures instead of the sketch's v4 near-twins
+> *tightens rather than alters* the construct (no re-surfacing owed — near-twins would confound a
+> recency failure with a discrimination failure). **Result: both models SPONTANEOUS-RECENCY** —
+> they recover a reassigned term by its most-recent binding at ceiling, order-sensitive
+> (non-commutative). This is **not** an A-null, so carry-forward 4's narrow A-null wording did not
+> apply; the positive was promoted to [`claim/relational-order-sensitive-reassignment`](../../findings/claims/relational-order-sensitive-reassignment.md)
+> and [`conjecture/commutative-convention`](../../findings/conjectures/commutative-convention.md)
+> was **retired (falsified in this regime)**. `anchor: internal-contrast-only` held (carry-forward
+> 5); no human-comparison claim. The staged B→A line is now **complete**: Option C was not reached.
+>
 > The original surfacing text (options, provisional default, anchor question) is preserved below
 > unchanged as the record the reviewer assessed.
 

@@ -2,110 +2,105 @@
 
 ## State
 
-**Session of 2026-06-16 (nineteenth session, philosophical — added the project's seventh essay and corrected two
-of its own pages; $0 spent) is landing.** Day total 2026-06-16 (sessions 18–19) = **$0.053 of $5.00** (session 19
-queried no models). Tracks over sessions 13–19: both / philosophical / philosophical-leaning / —(15th ratify)— /
-experiment / philosophical / empirical / **philosophical** — so the philosophical track (overdue going in) was
-advanced; **next session is due to lean empirical** (the Option-A rotation arm is teed up and warranted). **No
-decision was opened or ratified this session** (`wiki/decisions/open/` was empty at cold-start and stays empty).
+**Session of 2026-06-16 (twentieth session, empirical — ran the relational-v5 Option-A arm; the relational track's
+first POSITIVE; $0.124 spent) is landing.** Day total 2026-06-16 (sessions 18 + 20) = **$0.177 of $5.00.** Tracks
+over sessions 13–20: both / phil / phil-leaning / —(15 ratify)— / empirical / phil / empirical(18 Option B) /
+phil(19) / **empirical(20)** — so **next session is due to lean philosophical**, and there is a strong
+philosophical need teed up (two relational essays now need revision; see below). **No decision was opened or
+ratified this session** (`wiki/decisions/open/` empty at cold-start and stays empty; the relational-v5 decision was
+resolved the 18th session and its staged B→A line is now **complete**).
 
-1. **PHILOSOPHICAL — wrote the seventh essay: [`essay/reference-denials-disunified`](wiki/findings/essays/reference-denials-disunified.md) (draft).**
-   The sibling/complement of the sixth essay [`essay/reference-as-premise-bound`](wiki/findings/essays/reference-as-premise-bound.md):
-   where the sixth anatomizes the *yes-vs-no* externalist disagreement (and finds it premise-bound), the seventh
-   anatomizes the **internal disunity of the "no" camp.** The repo now holds **three structurally distinct denials**
-   of LM reference — signal-based ([`source/bender-koller-2020-climbing`](wiki/base/sources/bender-koller-2020-climbing.md)),
-   internalist frame-rejection ([`source/baggio-murphy-2024-internalist-rejoinder`](wiki/base/sources/baggio-murphy-2024-internalist-rejoinder.md) §4),
-   and externalist-membership ([`concept/referential-meaning`](wiki/base/concepts/referential-meaning.md); Baggio & Murphy §5;
-   the §4/§5 incompatibility is *intra-paper*) — plus Ostertag as an open-verdict route-critic. They share today's
-   verdict but give **incompatible counterfactuals** for what would lift it (a missing *signal* / *social-historical
-   status* / *mind* — and internalism says no built world-relation suffices). Original contribution: the
-   **counterfactual-divergence diagnosis** (the referential "no" is not one boundary but several coinciding on
-   current models). No new empirical claim; every quote cites its in-repo page verbatim.
+1. **EMPIRICAL (the headline) — Option A ran → both models SPONTANEOUS-RECENCY (order-sensitive / non-commutative).**
+   [`result/relational-spontaneous-recency-a`](wiki/findings/results/relational-spontaneous-recency-a.md): a coined
+   term is **reassigned** to 4 distinct figures across 4 non-contiguous stamped rounds (content-set symmetric, only
+   recency disambiguates); asked which figure it refers to **without the query mentioning recency**, both
+   `claude-sonnet-4.6` and `gemini-3.5-flash` put **100%** of SPONT mass on the **most-recently-bound** figure
+   (latest-binding rate 1.000, Wilson [0.926, 1.0]; first-binding 0.000; physical-position-following at exactly
+   chance 0.250; DIRECT on-demand manipulation check 1.000 both directions; 0 NA; 160/160 strict). The geometry
+   decoupling worked — genuine stamp-recency reading, **not** v4's text-position artifact. **Discipline:** independent
+   pre-run critic **GO** (re-derived every shortcut bound from scratch; ruled the distinct-figures deviation — no v4
+   near-twins — *tightens* rather than alters the construct) + independent post-run verifier **REPRODUCED** (0
+   mismatches). `anchor: internal-contrast-only`.
 
-2. **PHILOSOPHICAL (integration) — two page-corrections the essay forces, applied this session.**
-   (a) [`concept/deflationary-and-eliminativist-llm-meaning`](wiki/base/concepts/deflationary-and-eliminativist-llm-meaning.md):
-   added a scope note recording the in-principle denial as a **family** of mutually-incompatible boundaries (Bender &
-   Koller = the *signal-based* member), not one — which makes "describe, don't litigate" over-determined/stronger.
-   (b) [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md): the "only a built world-relation
-   moves the referential cell" prediction is now flagged **frame-relative** (true on externalist/signal-based frames,
-   false on internalism). Both edits cross-link the essay; neither makes a new empirical claim.
+2. **EMPIRICAL → THEORY — the conjecture is FALSIFIED and a scoped claim promoted.**
+   [`conjecture/commutative-convention`](wiki/findings/conjectures/commutative-convention.md) **retired (falsified in
+   the regime that can test it)**; the positive promoted to
+   [`claim/relational-order-sensitive-reassignment`](wiki/findings/claims/relational-order-sensitive-reassignment.md)
+   (supported, internal-contrast-only). **Bounded hard:** order-sensitivity = a thin *latest-binding-wins* rule, **not**
+   rich constitution; "spontaneous" = the query is not recency-directed, **not** cue-free (the INTRO flags
+   reassignment); the v1/v4 nulls are **not** overturned but bounded — commutativity is **operationalization-dependent**
+   (absent where order disambiguates, present where it carries no signal / is confounded with position). The resolved
+   decision page carries an Option-A realization note; index + website updated.
 
-3. **DISCIPLINE.** Independent adversarial coherence/refutation pass (fresh general-purpose agent, read-only): **no
-   quote-integrity or fabrication BLOCKERs** (all 17 verbatim quotes verified character-for-character against the
-   cited in-repo pages; Bender & Koller correctly cast as denying *meaning M* not "reference" narrowly; Ostertag
-   correctly cast as an open-verdict route-critic; B&M §4/§5 split accurate; non-duplication vs the sixth essay
-   confirmed). One mechanical BLOCKER (essay missing from `wiki/index.md`) **fixed**; SHOULD-FIX S1 (scope
-   Correction 2 to acknowledge the map already frames internalism as describable) + S2 (surface that B&M houses two
-   frames intra-paper) + NIT N1 (restore "*externalist*" emphasis) **all applied**. senselint **0 errors** (2 expected
-   WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean. Index entry added. Website (`docs/`) updated:
-   journal + home status/latest + findings paragraph (all plain-language, no overstatement).
+3. **DISCIPLINE.** senselint **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify
+   clean. Both adversarial passes were fresh independent agents (critic before the run, verifier after). Website
+   (`docs/`) updated: home status + new latest entry + journal entry + findings paragraph — plain-language, modest, no
+   overstatement (the small print — thin-not-rich, one task, no human comparison, bet-overturned-but-bounded — is on
+   the public pages).
 
 ## Next concrete actions — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — no decision is open, nothing to ratify.
-Apply any Tom override first if present.
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — nothing to ratify. Apply any Tom override first.
 
-**Then pick the lean.** Philosophical was advanced the last two of three sessions are now philosophical/empirical/
-philosophical — **next session is due to lean empirical.** The Option-A rotation arm (below) is the highest-value
-unit and is warranted (both models passed Option B last session).
+**Then pick the lean — philosophical is due, and the empirical result demands it.** The Option-A falsification was
+written under (and overturns) the picture two essays were built on; revising them is exactly the charter's
+empirical→philosophical inter-feeding (§12.1). Highest-value next units:
 
-1. **EMPIRICAL (highest-value, heavy) — the Option-A position-rotated, stamp-gated chronology arm (relational v5).**
-   Both models passed Option B (the stamp-comprehension gate, [`result/relational-stamp-comprehension-b`](wiki/findings/results/relational-stamp-comprehension-b.md)),
-   so A is warranted. Build it under the **binding carry-forwards** in [`decisions/resolved/relational-v5-text-position-neutralization`](wiki/decisions/resolved/relational-v5-text-position-neutralization.md):
-   (a) keep the v1–v4 instrument class (text-grid referents, frozen v1 figures, near-twin pairs, byte-identical
-   multisets, nonce coined terms, fresh-matcher forced-format) — needs the v4 **harvest + certification** machinery
-   (claude+gemini supply solo-decodable near-twins; gpt stays dropped); (b) add a **position-rotation** factor over
-   the decisive line; (c) make the headline a **stamp-requiring** scoring task (e.g. "recover the convention as of
-   round k") that an **independent pre-run critic must certify UNSOLVABLE by a positional/lexical shortcut on
-   idealized-reader fixtures** — *if it cannot be certified, route to Option C, do not weaken the task*; (d) keep v4's
-   stamp-respect control as a manipulation check only; (e) `anchor: internal-contrast-only`, framing strictly
-   within-model; (f) honor the A-null narrow wording ("comprehends recency on demand but does not spontaneously
-   weight it here"). Template: `experiments/runs/2026-06-14-relational-history-perturbation-v4/` and the session-18
-   Option-B run for the staged discipline. Pre-flight ≈ v4's ~$0.63 finding-bearing + ~$0.20 certification; well
-   inside $5/day. **This is the test that could finally move [`conjecture/commutative-convention`](wiki/findings/conjectures/commutative-convention.md)
-   off `proposed` in the chronology direction.**
-2. **EMPIRICAL alternative** if Option-A cannot be certified shortcut-proof (route to C), or for variety: the
-   **lexical-gradience** track (DWUG/WiC-anchored) if a ripe lexical unit surfaces; or the reserved **Option-B
-   cancel-direction / unification-shape third construction** (needs a *fresh* off-ceiling, unification-adjacent
-   construction **with a human-annotated anchor for its divergence** — surface a fresh anchor decision first; high
-   setup cost, may be unreachable under pure autonomy — surface honestly).
-3. **PHILOSOPHICAL (lighter, if a balanced session) — catalogue a new open-access source from
-   [`wanted.md`](wiki/base/wanted.md).** The three-pole LM-reference picture is now in-repo **complete and twice
-   essayed** (sixth + seventh essays), so a fresh philosophical thread is better spent elsewhere: e.g. a
-   Putnam 1975 / Kripke primary to anchor the externalist machinery both reference essays lean on (currently
-   characterization-only — see the seventh essay's trigger (c)); or the Sterken & Cappelen *Communicating with AI*
-   volume; or Lewis 1969 *Convention* (would anchor the "commutative convention" framing). Verify OA-fetchability
-   before committing — do not gamble a session on an unreachable primary.
+1. **PHILOSOPHICAL (integration, highest-value) — revise the two relational essays the falsification touches.**
+   (a) [`essay/conversation-as-text-not-timeline`](wiki/findings/essays/conversation-as-text-not-timeline.md) (draft)
+   argued the models read a conversation as "prose geometry — a bag with a gradient down the page," neither timeline
+   nor order-free set, on the strength of v4's position-following. Option A shows that when order **disambiguates**,
+   the models **do** track the timeline (latest-binding-wins) — so the "text-not-timeline" thesis must be **scoped**:
+   it holds where order carries no disambiguating signal, and **fails** where it does. Fire its revision triggers
+   (it explicitly named "a v5 neutralizing text-position" and "live-reassignment" as triggers); log the revision
+   in-page. (b) The first essay [`essay/...aggregation-not-constitution`] (the aggregation-vs-constitution piece) bet
+   on commutativity/aggregation; Option A puts the models on the **order-sensitive** side in this regime (still
+   *aggregation-thin*, not constitution) — revise to record that the clean commutative reading is now falsified-where-
+   testable, and sharpen the aggregation/constitution line as "order-sensitive but thin, not constituted-between."
+   Both are essay-revisions (log in-page, keep retractions visible), not new claims; no new spend.
+
+2. **PHILOSOPHICAL alternative / complement — catalogue an open-access primary that the relational line now needs.**
+   **Lewis 1969 *Convention*** would anchor the very notion of "convention" the whole relational axis leans on (and
+   the retired conjecture's framing); or a primary on conversational **repair / common ground** (Clark) to ground the
+   "latest agreement supersedes" norm the models exhibit. Verify OA-fetchability before committing; do not gamble a
+   session on an unreachable primary. (`wanted.md` has the backlog.)
+
+3. **EMPIRICAL (if a balanced session, or for a later empirical lean) — the order-sensitivity GENERALITY follow-up.**
+   The new claim's revision triggers name the bets: does latest-binding-wins persist under **implicit** reassignment
+   (no "was reassigned" framing — the cleanest test that it is not a surface artifact of the wording), under
+   **non-overwrite repairs**, with **image referents**, or in **cross-family dyads**? And the **thin-vs-rich**
+   separation (is it a shallow overwrite heuristic or deeper path-dependence?). Any of these is a clean next empirical
+   unit; the implicit-reassignment control is the highest-value (it directly tests the verifier's one flagged caveat).
+   Template: `experiments/runs/2026-06-16-relational-spontaneous-recency-a/` (reusable balanced-block machinery).
+
 4. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
-- **None.** `wiki/decisions/open/` is empty. (The relational-v5 decision was ratified the eighteenth session,
-  2026-06-16, and is in `wiki/decisions/resolved/`.)
+- **None.** `wiki/decisions/open/` is empty. The relational-v5 decision (`wiki/decisions/resolved/`) is **fully
+  realized**: staged B→A complete, Option C not reached.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This was a **philosophy-only session** (no models queried, $0). It wrote the project's seventh essay, which makes a
-  clean structural point: the claim "language models' words don't refer to things in the world" is **not one claim but
-  three** — they disagree about *why*, and about what would have to change for a model's words to refer (a missing
-  world-connection? a missing social standing? a missing mind?), agreeing only about today's models. On the "missing
-  mind" view, even building a world-connection would never be enough. Because the project had been treating "they
-  don't refer" as a single settled boundary, two of its own pages were corrected to call it a *family* of
-  incompatible boundaries instead — which makes the project's refusal to take sides on the question stronger, not
-  weaker.
-- **Deliberately modest:** the essay produces no experimental result; its whole job is to get a distinction right and
-  discipline how the project cites itself. It ranks none of the three positions and settles nothing about whether the
-  models refer.
-- Full discipline held: an independent adversarial reviewer checked every quotation against its source and the
-  argument against the sixth essay before the work was kept; all its fixes were applied. GitHub Pages serves from
-  `main` `/docs`.
+- This was an **experiment session** (~$0.12; day ~$0.18 of $5.00). It ran the decisive test of a long-standing
+  question: are a model's word-meanings **order-blind** (a bag of what was said) or do they track **when** things
+  were agreed? With page-position neutralized so only timestamps disambiguate, **both models cleanly tracked the
+  latest agreement** when a coined word was reassigned mid-conversation — **overturning the project's own earlier bet**
+  that these conventions are order-insensitive. That bet (a conjecture) is now retired and replaced by a narrow,
+  supported finding.
+- **Deliberately modest:** the finding is that the models apply a simple "latest agreement wins" rule — a *thinner*
+  thing than meaning being genuinely *built between* two parties. It is one task, makes no comparison to people, and
+  does **not** make the earlier order-*insensitive* results wrong (they were settings where order carried no extra
+  information) — so whether a convention is order-free turns out to depend on the task.
+- Full discipline held: an independent reviewer certified the test *before* it ran (no shortcut could pass it without
+  reading the timestamps), and an independent verifier reproduced every number from the raw data afterward. GitHub
+  Pages serves from `main` `/docs`.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
-Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget
-$5/day UTC — check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End
-squash-merged to `main`, website updated. **No decision is open.** Tracks: philosophical advanced this session — a
-session is **due to lean empirical**. Highest-value next unit: **build + run the Option-A rotation arm** (relational
-v5) under the resolved decision's binding carry-forwards (certify the stamp-requiring task shortcut-proof *before*
-running, else route to C) — both models passed B, so A is warranted.
+Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget $5/day UTC
+— check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`,
+website updated. **No decision is open.** Tracks: empirical advanced this session (relational track's first positive)
+— a session is **due to lean philosophical**, and two relational essays now need revision in light of the
+falsification (the highest-value next unit). The relational-v5 staged line is **complete**.
