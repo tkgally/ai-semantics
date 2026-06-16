@@ -2,7 +2,7 @@
 """common.py — shared machinery for the relational STAMP-COMPREHENSION pre-probe (Option B).
 
 This is the Option-B stamp-comprehension pre-probe ratified by the 2026-06-16 adversarial
-review of decisions/open/relational-v5-text-position-neutralization (adopt-default: B then A,
+review of decisions/resolved/relational-v5-text-position-neutralization (adopt-default: B then A,
 staged; C the binding fallback). Its ONLY job is a gate: do the panel models read the round
 STAMP *as a recency value at all*, when physical line-position is neutralized so only the
 stamp value disambiguates? v4 found both models follow physical text-position, and its binding

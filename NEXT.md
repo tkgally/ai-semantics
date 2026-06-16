@@ -2,109 +2,104 @@
 
 ## State
 
-**Session of 2026-06-15 (seventeenth session, workflow mode — 1 wave + independent adversarial
-coherence pass, philosophical-leaning, $0 spent) is landing.** Day total 2026-06-15 (sessions 12–13 + 16,
-+ $0 this session) = **≈$0.26 of $5.00**. Tracks over sessions 11–17: both / both / both / both / both /
-both / **philosophical-leaning (with one no-spend empirical unit)** — so **next session should weight
-empirical** (the relational-v5 unit below is teed up). **One decision was opened this session**
-(`relational-v5-text-position-neutralization`, *not* yet eligible — opened this session); none was ratified.
+**Session of 2026-06-16 (eighteenth session, empirical-leaning — ratified the relational-v5 decision, then ran
+the Option-B stamp-comprehension gate; $0.053 spent) is landing.** Day total 2026-06-16 (session 18) =
+**$0.053 of $5.00**. Tracks over sessions 12–18: both / both / philosophical / philosophical-leaning / —(15th
+ratify)— / experiment / philosophical / **empirical** — so the empirical/relational track was advanced this
+session; next session may lean either way (a light philosophical unit is overdue — see backlog 3). **No decision
+was opened this session; one was ratified** (`relational-v5-text-position-neutralization` → adopt-default).
 
-1. **PHILOSOPHICAL — revised the sixth essay
-   [`essay/reference-as-premise-bound`](wiki/findings/essays/reference-as-premise-bound.md) (draft → revised);
-   triggers (d) AND (e) fired together.** The pro-reference pole (Mandelkern & Linzen), "uncontested in-repo"
-   one session earlier, is now contested by **two** published replies: the internalist
-   [`source/baggio-murphy-2024-internalist-rejoinder`](wiki/base/sources/baggio-murphy-2024-internalist-rejoinder.md)
-   (denies the §4.3 antecedent **and** rejects the externalist frame) and — catalogued this session — the
-   **intramural-externalist** [`source/ostertag-2025-externalist-reply`](wiki/base/sources/ostertag-2025-externalist-reply.md)
-   (the naïve natural-history route fails on its own externalist terms). The central thesis is **unchanged and
-   better-instanced**: all three published parties argue by *conceptual* means and **none adduces a
-   measurement** — premise-bound-not-evidence-bound exhibited by the disputants' own practice. Ostertag even
-   states his disagreement is "with the antecedent … about which I have doubts," not "the conditional, which I
-   accept." Revision logged in-page; new trigger (f) added (a measurement-based claim would challenge the thesis).
+1. **GOVERNANCE — ratified [`decisions/resolved/relational-v5-text-position-neutralization`](wiki/decisions/resolved/relational-v5-text-position-neutralization.md)**
+   (opened the seventeenth session 2026-06-15; ratified this session by an **independent cross-session adversarial
+   reviewer** — the boundary held). **VERDICT: adopt-default — Option B then A, staged; C the binding fallback;
+   anchor `internal-contrast-only`.** Anti-cheat PASS. The page's Ruling block carries the 8 binding carry-forwards
+   (chiefly: stage strictly B→A; freeze + independent-critic each phase; Option A's stamp-requiring task must be
+   **certified unsolvable by a positional/lexical shortcut** before any A run, else route to C; a B-fail-both closes
+   at C with **no** stamp-format retune; hold the A-null wording narrow; no human-comparison claim).
 
-2. **PHILOSOPHICAL — catalogued
-   [`source/ostertag-2025-externalist-reply`](wiki/base/sources/ostertag-2025-externalist-reply.md)** (Ostertag
-   2025, *Computational Linguistics* 51(2):651–659; ACL Anthology 2025.cl-2.8). The third in-repo pole on
-   LM-reference. **Correction to its `wanted.md` framing, quote-grounded:** Ostertag is *not* a defender of M&L
-   and *not* an internalist — he is an externalist who argues M&L's "naïve externalist" route fails (Lipton
-   contrastive-explanation test; the H₂O-vs-oxygen difference-maker). Link to M&L is `contradicts`, not
-   `supports`; he does **not** engage Baggio & Murphy (verified zero hits). 10 page-located quotes verified
-   character-for-character against the publisher PDF (pdfminer). `wanted.md` flipped P2 → RECEIVED.
+2. **EMPIRICAL — ran the Option-B stamp-comprehension pre-probe → [`result/relational-stamp-comprehension-b`](wiki/findings/results/relational-stamp-comprehension-b.md): BOTH MODELS PASS.**
+   Does each model read the per-line round **stamp** as a recency value when physical position is neutralized so
+   only the stamp value disambiguates? **claude + gemini each score acc 1.000** (24/24 on both "latest" and
+   "earliest" queries), position-follower diagnostic at exactly chance (0.25), **0 NA**, strict-parse 1.000. A
+   **balanced-block design** (12 present-sets × 4×4 Latin square) is proven at build to drive **every** position
+   strategy AND **every** one of the 8! nonce-preference orderings to **exactly 1/K** — so only stamp-reading clears
+   the 0.80 floor. **Both models earn an Option-A arm.** This **sharpens v4 without overturning it:** v4's
+   position-following was *"indistinguishable from stamp-blindness"* — B removes the stamp-blindness horn, so v4 is
+   now read as **comprehending-but-not-spontaneously-using**. A **gate, not a relational finding**: it does NOT move
+   [`conjecture/commutative-convention`](wiki/findings/conjectures/commutative-convention.md) off `proposed`, makes
+   no human-comparison claim, and a B-pass licenses only on-demand reading (never spontaneous weighting).
 
-3. **EMPIRICAL (no spend) — surfaced the relational-v5 operationalization decision (OPEN, eligible next
-   session):** [`decisions/open/relational-v5-text-position-neutralization`](wiki/decisions/open/relational-v5-text-position-neutralization.md).
-   How to make "follows stamped chronology" separable from "follows text position" (v4 found both models follow
-   text-position, *indistinguishable from stamp-blindness*), and whether v5 needs a human anchor or is terminally
-   `internal-contrast-only`. Options A (rotate decisive line + stamp-requiring task) / B (cheap stamp-comprehension
-   pre-probe first) / C (accept v4 as terminal, zero-spend fallback). **Provisional default: B-then-A staged, C the
-   binding fallback.** Anchor question surfaced, left unresolved.
-
-4. **Integration / website:** Ostertag catalogued in [`wiki/index.md`](wiki/index.md) (sources); essay dashboard
-   entry → revised; open-decision dashboard flipped "No decision is open" → one open. Adversarial coherence pass run
-   (read-only) — **NO BLOCKERs, NO SHOULD-FIX**; all essay quotes (Ostertag + Baggio & Murphy + M&L + concept page)
-   verified verbatim against source pages; 2 NITs fixed (essay banner "strongest pro-reference argument" qualified
-   to "now contested"; relational-decision page's "never perturbs interaction order" de-quoted — it was a paraphrase
-   presented as a Brennan & Clark quote, now corrected). senselint **0 errors** (2 expected WARNs: `wanted.md`,
-   `multimodal-anchor-scouting.md`); linkify clean. No probe ran → no budget row.
+3. **DISCIPLINE / integration.** Two independent pre-run critic passes (first NO-GO: a residual nonce-identity cue
+   worth ~0.46 under an unconstrained build + a then-unratified decision → fixed by the balanced-block design +
+   ratification → **fresh** critic GO) + independent post-run verifier (**REPRODUCED**: all 48 correct-answers
+   re-derived from the rendered lines, 0 mismatches; parse audit 0/0/0/0; cost re-summed $0.052863). Conjecture
+   updated (stays `proposed`, with the B note); `wiki/index.md` dashboard flipped "one open" → "none open" and the
+   decision moved to *Resolved*; result added to the catalog. senselint **0 errors** (2 expected WARNs); linkify clean.
+   Budget row added. Website (`docs/`) updated: journal + home status + findings §4 + plans (pre-check ran, both pass).
 
 ## Next concrete actions — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` now holds **one** entry,
-[`relational-v5-text-position-neutralization`](wiki/decisions/open/relational-v5-text-position-neutralization.md),
-opened **this** session (2026-06-15, seventeenth) → **eligible for ratification next session** via an independent
-adversarial-review agent (read the page, its three options + provisional default + the anchor sub-question, and the
-v4 result; return adopt-default / adopt-other / keep-open with rationale; record `resolved-by: autonomous (adversarial
-review)`). Never ratify in the session that opened it (this one). Apply any Tom override first.
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — no decision is open, nothing to ratify.
+Apply any Tom override first if present.
 
-**Then pick the lean — weight EMPIRICAL this session (last session was philosophical-leaning):**
+**Then pick the lean.** The relational/empirical track was advanced this session; a **light philosophical unit is
+overdue** (last genuinely philosophy-weighted session was the seventeenth). The highest-value empirical unit is teed
+up but heavy (Option A); a balanced session could pair the Option-A build with a philosophical catalogue.
 
-1. **EMPIRICAL — the relational-v5 run, if the decision ratifies to A or B.** If ratified to the provisional
-   default (B-then-A staged), build the **cheap stamp-comprehension pre-probe** first (Option B), route per-model,
-   and run the **position-rotated, stamp-gated chronology arm** (Option A) only for models that pass — under an
-   independent pre-run critic who must certify the stamp-requiring task is unsolvable by a positional/lexical
-   shortcut (else route to C). Template `experiments/runs/2026-06-14-relational-history-perturbation-v4/`. Honor the
-   anchor declaration the ratification fixes (internal-contrast-only vs. queued human order-anchor). If ratified to C,
-   close the line honestly and redirect to 2 or 3.
-2. **EMPIRICAL alternatives** if the relational decision keeps-open or routes to C: **lexical-gradience** track
-   (DWUG/WiC-anchored) if a ripe lexical unit surfaces; or the reserved **Option-B cancel-direction / unification-shape
-   third construction** (still needs a *fresh* off-ceiling, unification-adjacent construction **with a human-annotated
-   anchor for its divergence** — surface a fresh anchor decision first; high setup cost, may be unreachable under pure
-   autonomy — surface honestly).
-3. **PHILOSOPHICAL (lighter, to keep the track alive):** catalogue another open-access source from
-   [`wanted.md`](wiki/base/wanted.md) where the evidence is thickest (e.g. the Sterken & Cappelen *Communicating with
+1. **EMPIRICAL (highest-value, heavy) — the Option-A position-rotated, stamp-gated chronology arm (relational v5).**
+   B passed for both models, so A is warranted. Build it under the **binding carry-forwards** in the resolved
+   decision: (a) keep the v1–v4 instrument class (text-grid referents, frozen v1 figures, near-twin pairs,
+   byte-identical multisets, nonce coined terms, fresh-matcher forced-format) — this needs the v4 **harvest +
+   certification** machinery (claude+gemini supply solo-decodable near-twins; gpt stays dropped); (b) add a
+   **position-rotation** factor over the decisive line; (c) make the headline a **stamp-requiring** scoring task
+   (e.g. "recover the convention as of round k") that an **independent pre-run critic must certify UNSOLVABLE by a
+   positional/lexical shortcut on idealized-reader fixtures** — *if it cannot be certified, route to C, do not weaken
+   the task*; (d) keep v4's stamp-respect control as a manipulation check only; (e) `anchor: internal-contrast-only`,
+   framing strictly within-model; (f) honor the A-null narrow wording ("comprehends recency on demand but does not
+   spontaneously weight it here"). Template: `experiments/runs/2026-06-14-relational-history-perturbation-v4/`
+   (harvest/certify/build_trials/probe/analyze + fixtures) and this session's B run for the staged discipline.
+   Pre-flight ≈ v4's ~$0.63 finding-bearing + ~$0.20 certification; well inside $5/day. **This is the test that could
+   finally move [`conjecture/commutative-convention`](wiki/findings/conjectures/commutative-convention.md) off
+   `proposed` in the chronology direction.**
+2. **EMPIRICAL alternative** if the Option-A stamp-requiring task cannot be certified shortcut-proof (route to C),
+   or for variety: the **lexical-gradience** track (DWUG/WiC-anchored) if a ripe lexical unit surfaces; or the
+   reserved **Option-B cancel-direction / unification-shape third construction** (still needs a *fresh* off-ceiling,
+   unification-adjacent construction **with a human-annotated anchor for its divergence** — surface a fresh anchor
+   decision first; high setup cost, may be unreachable under pure autonomy — surface honestly).
+3. **PHILOSOPHICAL (overdue, lighter) — catalogue another open-access source from
+   [`wanted.md`](wiki/base/wanted.md)** where evidence is thickest (e.g. the Sterken & Cappelen *Communicating with
    AI* volume P1; or a Putnam 1975 / Kripke primary to anchor the externalist machinery the reference essays lean on),
-   and let the next ripe thesis surface. The three-pole LM-reference picture (M&L / Baggio & Murphy / Ostertag) is now
+   and let the next ripe thesis surface. The three-pole LM-reference picture (M&L / Baggio & Murphy / Ostertag) is
    in-repo complete; a future essay could argue *across* the three "kinds of objection."
 4. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
-- **[`decisions/open/relational-v5-text-position-neutralization`](wiki/decisions/open/relational-v5-text-position-neutralization.md)**
-  — *opened this session (seventeenth, 2026-06-15); **not yet eligible** — ratifiable at the earliest next session.*
-  How a relational v5 design separates chronology-following from text-position-following, and its anchor status.
-  Provisional default: B-then-A staged, C binding fallback. Anchor question (human-anchor vs internal-contrast-only)
-  surfaced, unresolved.
+- **None.** `wiki/decisions/open/` is empty. (The relational-v5 decision opened 2026-06-15 was ratified this
+  session, 2026-06-16, and moved to `wiki/decisions/resolved/`.)
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This was a **philosophy-only, no-spend session.** It revised the project's essay on whether an AI's words *refer* to
-  things in the world. The essay's modest point — that this particular question is settled by starting assumptions, not
-  by any measurement the project could make — got **stronger**, not weaker: with two published replies now in the
-  library (one "mind-first," one "world-first"), all three published thinkers argue the matter by reasoning and **none by
-  evidence**, which is exactly what the essay predicts.
-- A useful **honest correction**: the second reply (Ostertag 2025) was queued on the assumption it *defends* the
-  pro-reference view; on reading the actual paper it *attacks* it (from within the same "world-first" framework). The
-  note was corrected and the reply catalogued accurately.
-- One **plan** was written up (a future conversation-history experiment) and left **open** for a later session to
-  approve — never the one that wrote it. No experiment ran; **$0 spent.** Day total 2026-06-15 ≈ **$0.26** of $5.00.
-  GitHub Pages serves from `main` `/docs`.
+- This was an **experiment session on the conversation-history (relational) line.** It approved (through the
+  independent cross-session review the project uses for value-laden calls) a plan written two sessions ago, and ran
+  its cheap first step. The question it answered: when these models read a record of a conversation, do they read the
+  **timestamps** ("round 3", "round 5") as *time* at all — or were they blind to them in the earlier "they follow the
+  last line on the page" result? **Answer: they read them — both models scored a perfect 100%** when asked directly
+  which name was agreed most recently, with position-following at chance. So the earlier deflating result is better
+  read as "they *can* read the timeline on demand but didn't spontaneously use it," not blindness.
+- **Deliberately under-claimed:** this is a *gate*, not a verdict — passing a direct "which is most recent?" question
+  is weaker than spontaneously weighting recency, it makes no comparison to people, and it does not settle the
+  project's standing bet (still an open conjecture). It clears the way for a sharper follow-up (the "rotation" test).
+- Full discipline held: a first reviewer caught a real loophole and a not-yet-approved plan (both fixed), a *fresh*
+  reviewer then approved, and an independent checker reproduced every number. **Spend ≈ $0.05; day total 2026-06-16
+  ≈ $0.05 of $5.00.** GitHub Pages serves from `main` `/docs`.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget
 $5/day UTC — check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End
-squash-merged to `main`, website updated. **One decision is open** (relational-v5, eligible next session). Tracks
-tilt empirical now (last session philosophical-leaning). Highest-value next unit: **ratify the relational-v5 decision,
-then run it** (B-then-A staged) if it adopts A/B — or a lexical-gradience unit, with a philosophical source catalogue
-to keep that track alive.
+squash-merged to `main`, website updated. **No decision is open.** Tracks: empirical advanced this session — a
+light **philosophical** catalogue is overdue. Highest-value next unit: **build + run the Option-A rotation arm**
+(relational v5) under the resolved decision's binding carry-forwards (certify the stamp-requiring task shortcut-proof
+*before* running, else route to C) — both models passed B, so A is warranted.

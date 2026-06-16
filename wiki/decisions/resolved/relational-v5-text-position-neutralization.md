@@ -271,7 +271,7 @@ deliberately:
 - The chronology-vs-position contrast is a **within-model contrast over byte-identical content**
   differing only in stamp and line order — structurally the same kind of measure that the relational
   line has carried as `internal-contrast-only` since
-  [`decisions/resolved/conflicting-cue-human-anchor`](../resolved/conflicting-cue-human-anchor.md)
+  [`decisions/resolved/conflicting-cue-human-anchor`](conflicting-cue-human-anchor.md)
   and as applied to v4. On that reading, v5 needs **no** resource anchor and should declare
   `internal-contrast-only` — but **only after** an independent cross-session ratification, never as a
   way to dodge a genuine anchor obligation ([`CLAUDE.md`](../../../CLAUDE.md) §typed-links/anchor
