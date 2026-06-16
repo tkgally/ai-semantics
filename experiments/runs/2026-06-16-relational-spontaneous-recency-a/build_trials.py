@@ -8,7 +8,7 @@ generalized from nonces to figures):
            query = "SPONT" (no recency mention); the GOVERNING figure (latest-governs) is the
            one agreed at the MAX round. The min-round figure is recorded as the anti-recency
            diagnostic. This is the headline.
-  DIRECT : N_BLOCKS_DIRECT present-sets x K records -> 24 records/model. Half DIR_MR (correct =
+  DIRECT : N_BLOCKS_DIRECT present-sets x K records -> 32 records/model. Half DIR_MR (correct =
            max round), half DIR_LR (correct = min round) -- the B-style on-demand manipulation
            check, in THIS instrument.
 
