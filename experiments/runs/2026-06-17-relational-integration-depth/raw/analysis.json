@@ -1,0 +1,129 @@
+{
+  "direct_floor": 0.8,
+  "two_attr_ceiling": 0.5,
+  "single_attr_ceiling": 0.25,
+  "pos_chance": 0.125,
+  "models": {
+    "claude": {
+      "n_total": 80,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 32,
+          "n": 32,
+          "rate": 1.0,
+          "wilson95": [
+            0.8928,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "integ": {
+        "target_governs": {
+          "k": 48,
+          "n": 48,
+          "rate": 1.0,
+          "wilson95": [
+            0.9259,
+            1.0
+          ]
+        },
+        "twin_shape_recent_two": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "twin_pattern": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "twin_color": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "pos_last_rate": 0.125,
+        "pos_first_rate": 0.125,
+        "integ_sig": true
+      },
+      "verdict": "INTEGRATION-UNDER-LOAD"
+    },
+    "gemini": {
+      "n_total": 80,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 32,
+          "n": 32,
+          "rate": 1.0,
+          "wilson95": [
+            0.8928,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "integ": {
+        "target_governs": {
+          "k": 48,
+          "n": 48,
+          "rate": 1.0,
+          "wilson95": [
+            0.9259,
+            1.0
+          ]
+        },
+        "twin_shape_recent_two": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "twin_pattern": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "twin_color": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "pos_last_rate": 0.125,
+        "pos_first_rate": 0.125,
+        "integ_sig": true
+      },
+      "verdict": "INTEGRATION-UNDER-LOAD"
+    }
+  },
+  "integration_under_load_models": [
+    "claude",
+    "gemini"
+  ],
+  "partial_or_overwrite_models": []
+}

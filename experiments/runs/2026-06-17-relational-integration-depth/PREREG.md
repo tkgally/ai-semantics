@@ -1,8 +1,6 @@
-# PREREG (DRAFT) — relational INTEGRATION-UNDER-LOAD probe (burial depth 2)
+# PREREG (FROZEN) — relational INTEGRATION-UNDER-LOAD probe (burial depth 2)
 
-**This is PREREG-draft.md. `probe.py full` REFUSES to run until this is renamed `PREREG.md` AND it
-records the frozen `stimuli.json` sha256 — done only after the independent pre-run critic returns
-GO.** Internal-contrast-only (the ratified relational posture; no human comparison; no new decision
+**FROZEN 2026-06-17 after independent pre-run critic GO** (fresh agent: reproduced the sha; re-derived every shortcut bound from scratch — position 0.125, single-attr ≤0.25, every drop-one-turn reader exactly 0.50 incl. RECENT-TWO, full integrator 1.000; false-positive of a true-0.50 reader clearing the bar ≈ 3% [k≥31/48]; ALL FIXTURES PASS; ruled **no new decision owed**; BLOCKERS none, SHOULD-FIX none). Internal-contrast-only (the ratified relational posture; no human comparison; no new decision
 owed — a depth generalization of an established within-model contrast with a symmetric verdict map).
 
 ## Frozen stimuli
