@@ -80,7 +80,15 @@ spontaneously weighting the round stamp.
    conjecture's predicted human/LLM contrast is *not* settled by this result — human
    order-sensitivity at this grain remains unanchored in-repo.
 2. **One operationalization.** Reassignment-of-a-term is one way to make order disambiguating;
-   generality (image referents, cross-family dyads, non-overwrite repairs) is untested.
+   generality (image referents, cross-family dyads) is untested. **Non-overwrite repairs are now
+   tested** (2026-06-17): when the latest turn is *compatible* with an earlier one (refinement, not
+   replacement), both models **integrate** — the earlier, non-terminal turn survives into the
+   referent at ceiling, rather than being overwritten
+   ([`result/relational-integration-rung-ii`](../results/relational-integration-rung-ii.md);
+   rung (ii) of [`essay/update-is-not-constitution`](../essays/update-is-not-constitution.md)). So the
+   models' update rule is **supersede-on-conflict, compose-on-compatibility** — still thin
+   (single-reader-recoverable), and the integration shown is *survival*, not order-sensitive
+   composition (the design's constraints are symmetric, so a commutative conjunction passes equally).
 3. **Thin, not rich.** "Latest-binding-wins" may be a shallow update heuristic; this claim does not
    separate thin order-sensitivity from deep path-dependence.
 4. **Spontaneous = query-not-directed AND flag-not-directed, but not literally cue-free.** The
