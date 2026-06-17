@@ -1,0 +1,133 @@
+{
+  "direct_floor": 0.8,
+  "pos_chance": 0.25,
+  "models": {
+    "claude": {
+      "n_total": 80,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 32,
+          "n": 32,
+          "rate": 1.0,
+          "wilson95": [
+            0.8928,
+            1.0
+          ]
+        },
+        "by_query": {
+          "DIR_MR": {
+            "k": 16,
+            "n": 16,
+            "rate": 1.0,
+            "wilson95": [
+              0.8064,
+              1.0
+            ]
+          },
+          "DIR_LR": {
+            "k": 16,
+            "n": 16,
+            "rate": 1.0,
+            "wilson95": [
+              0.8064,
+              1.0
+            ]
+          }
+        },
+        "manip_pass": true
+      },
+      "spont": {
+        "latest_governs": {
+          "k": 48,
+          "n": 48,
+          "rate": 1.0,
+          "wilson95": [
+            0.9259,
+            1.0
+          ]
+        },
+        "first_governs": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "pos_last_rate": 0.25,
+        "pos_first_rate": 0.25,
+        "latest_sig": true,
+        "first_sig": false
+      },
+      "verdict": "SPONTANEOUS-RECENCY"
+    },
+    "gemini": {
+      "n_total": 80,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 32,
+          "n": 32,
+          "rate": 1.0,
+          "wilson95": [
+            0.8928,
+            1.0
+          ]
+        },
+        "by_query": {
+          "DIR_MR": {
+            "k": 16,
+            "n": 16,
+            "rate": 1.0,
+            "wilson95": [
+              0.8064,
+              1.0
+            ]
+          },
+          "DIR_LR": {
+            "k": 16,
+            "n": 16,
+            "rate": 1.0,
+            "wilson95": [
+              0.8064,
+              1.0
+            ]
+          }
+        },
+        "manip_pass": true
+      },
+      "spont": {
+        "latest_governs": {
+          "k": 48,
+          "n": 48,
+          "rate": 1.0,
+          "wilson95": [
+            0.9259,
+            1.0
+          ]
+        },
+        "first_governs": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "pos_last_rate": 0.25,
+        "pos_first_rate": 0.25,
+        "latest_sig": true,
+        "first_sig": false
+      },
+      "verdict": "SPONTANEOUS-RECENCY"
+    }
+  },
+  "order_sensitive_models": [
+    "claude",
+    "gemini"
+  ],
+  "commutative_here_models": []
+}

@@ -9,10 +9,12 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-17
 links:
   - rel: depends-on
     target: result/relational-spontaneous-recency-a
+  - rel: depends-on
+    target: result/relational-implicit-reassignment-control
   - rel: contradicts
     target: conjecture/commutative-convention
   - rel: refines
@@ -29,6 +31,14 @@ links:
 > independent post-run verifier REPRODUCED). It is the positive the conjecture's own falsification
 > clause said to promote when a clean order effect appears. `anchor: internal-contrast-only` —
 > a within-model behavioural contrast over byte-identical content; **no human-comparison claim.**
+>
+> **Strengthened 2026-06-17** by the implicit-reassignment control
+> ([`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md)):
+> with Option A's explicit *"was reassigned"* INTRO sentence removed and everything else
+> byte-identical, both models still recover the most-recent binding at ceiling (SPONT
+> latest-binding 1.000, DIRECT 1.000, 0 NA). Latest-binding-wins is therefore **not** a surface
+> artifact of that wording — **revision trigger 2 is tested and bounded in the claim's favour**, and
+> scope limit 4 is **tightened** (spontaneous = also *flag-not-directed*, below). Stays `supported`.
 
 ## The claim (scoped exactly)
 
@@ -73,15 +83,26 @@ spontaneously weighting the round stamp.
    generality (image referents, cross-family dyads, non-overwrite repairs) is untested.
 3. **Thin, not rich.** "Latest-binding-wins" may be a shallow update heuristic; this claim does not
    separate thin order-sensitivity from deep path-dependence.
-4. **Spontaneous = query-not-directed, not cue-free.** The framing flags that the term was
-   reassigned (a choice among bindings is required); the models resolve that choice by **recency**
-   without the query asking them to — which is the content of "spontaneous" here.
+4. **Spontaneous = query-not-directed AND flag-not-directed, but not literally cue-free.** The
+   models resolve the choice among bindings by **recency** without the query asking them to, and —
+   per the 2026-06-17 implicit-reassignment control
+   ([`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md))
+   — **even without an INTRO sentence flagging that a reassignment occurred** (the original Option-A
+   caveat, now tested and bounded). What is *not* removed is the stamped history itself: the model is
+   still shown the term was used for several figures across rounds and infers the multiplicity from
+   that. "Implicit" means no sentence flags the reassignment, not that no information distinguishes
+   the bindings.
 
 ## Revision triggers
 
 - A framing in which order disambiguates but the models **do not** track it (a commutative result
   in an order-disambiguating setting) would **bound** this claim to the reassignment frame.
-- Evidence that the latest-binding-wins behaviour is a **surface artifact** of the explicit
-  "was reassigned" wording (e.g. it vanishes when reassignment is implicit) would narrow it.
+- ~~Evidence that the latest-binding-wins behaviour is a **surface artifact** of the explicit
+  "was reassigned" wording (e.g. it vanishes when reassignment is implicit) would narrow it.~~
+  **Tested 2026-06-17 → bounded in the claim's favour** (not narrowed): the implicit-reassignment
+  control ([`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md))
+  dropped the explicit flag and the behaviour **persisted at ceiling** in both models — so it is not
+  a wording artifact. (A *more aggressive* implicitness — burying the multiplicity, never saying
+  "agreed" — remains untested; this trigger stays live for that stronger variant.)
 - A human order-perturbation anchor becoming available would let the within-model claim be tested
   against the predicted human contrast (a new, currently-undischargeable anchor question).
