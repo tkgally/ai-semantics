@@ -1,0 +1,128 @@
+{
+  "direct_floor": 0.8,
+  "overwrite_ceiling": 0.5,
+  "pos_chance": 0.25,
+  "models": {
+    "claude": {
+      "n_total": 80,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 32,
+          "n": 32,
+          "rate": 1.0,
+          "wilson95": [
+            0.8928,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "integ": {
+        "target_governs": {
+          "k": 48,
+          "n": 48,
+          "rate": 1.0,
+          "wilson95": [
+            0.9259,
+            1.0
+          ]
+        },
+        "latest_only": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "earlier_only": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "neither": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "pos_last_rate": 0.25,
+        "pos_first_rate": 0.25,
+        "integ_sig": true
+      },
+      "verdict": "INTEGRATION"
+    },
+    "gemini": {
+      "n_total": 80,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 32,
+          "n": 32,
+          "rate": 1.0,
+          "wilson95": [
+            0.8928,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "integ": {
+        "target_governs": {
+          "k": 48,
+          "n": 48,
+          "rate": 1.0,
+          "wilson95": [
+            0.9259,
+            1.0
+          ]
+        },
+        "latest_only": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "earlier_only": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "neither": {
+          "k": 0,
+          "n": 48,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0741
+          ]
+        },
+        "pos_last_rate": 0.25,
+        "pos_first_rate": 0.25,
+        "integ_sig": true
+      },
+      "verdict": "INTEGRATION"
+    }
+  },
+  "integration_models": [
+    "claude",
+    "gemini"
+  ],
+  "overwrite_or_weaker_models": []
+}
