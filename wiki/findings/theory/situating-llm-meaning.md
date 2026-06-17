@@ -13,7 +13,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-31
-updated: 2026-06-16
+updated: 2026-06-17
 links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
@@ -49,6 +49,8 @@ links:
     target: result/relational-history-perturbation-v4
   - rel: depends-on
     target: result/relational-spontaneous-recency-a
+  - rel: depends-on
+    target: result/relational-implicit-reassignment-control
   - rel: depends-on
     target: claim/relational-order-sensitive-reassignment
   - rel: contradicts
@@ -160,4 +162,4 @@ So the map is not static: its three softest cells (the depth of the inferential 
 
 `status: draft`; `contingent-on: []` — this page introduces no new empirical claim of its own; it depends on findings and concept pages already in-repo. It is the philosophical-map counterpart to the two empirical theory pages, which it cross-references for depth ([`theory/constructional-meaning-in-llms`](constructional-meaning-in-llms.md) for the grammatical ladder; [`theory/lexicon-grammar-continuum`](lexicon-grammar-continuum.md) for the one-cline framing).
 
-Revise this page when any of the still-soft cells move: an **AANN** result lands (sharpening the formal/functional and Tier-1 placement); a **fine-polysemy / VWSD** grounding probe runs (the headroom residual tested); or a **reference-bearing resource** is built (the only thing that could make the truth-conditional/externalist cell non-silent). The relational-perturbation trigger has now **fired**: the commutativity bet was **broken** (Option A, order-disambiguating; [`result/relational-spontaneous-recency-a`](../results/relational-spontaneous-recency-a.md)) — this revision records that resolution; the relational cell is now order-sensitive-but-thin rather than a clean commutative null, and would move again only if order-sensitivity were shown to be a surface artifact or were lifted past latest-binding-wins toward constitution. Each would redraw one cell; none is expected to overturn the whole sketch, but the map is held as revisable, and the findings — not the placements — are the part that compounds.
+Revise this page when any of the still-soft cells move: an **AANN** result lands (sharpening the formal/functional and Tier-1 placement); a **fine-polysemy / VWSD** grounding probe runs (the headroom residual tested); or a **reference-bearing resource** is built (the only thing that could make the truth-conditional/externalist cell non-silent). The relational-perturbation trigger has now **fired**: the commutativity bet was **broken** (Option A, order-disambiguating; [`result/relational-spontaneous-recency-a`](../results/relational-spontaneous-recency-a.md)) — this revision records that resolution; the relational cell is now order-sensitive-but-thin rather than a clean commutative null, and would move again only if order-sensitivity were shown to be a surface artifact or were lifted past latest-binding-wins toward constitution. **(Update 2026-06-17: the surface-artifact half was tested and survived — an implicit-reassignment control dropped the explicit "was reassigned" wording and the most-recent-binding behaviour persisted at ceiling in both models ([`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md)), so the cell does not move; it is held more firmly at order-sensitive-but-thin. The remaining mover is the constitution direction.)** Each would redraw one cell; none is expected to overturn the whole sketch, but the map is held as revisable, and the findings — not the placements — are the part that compounds.
