@@ -15,6 +15,8 @@ links:
     target: result/relational-spontaneous-recency-a
   - rel: depends-on
     target: result/relational-implicit-reassignment-control
+  - rel: depends-on
+    target: result/relational-integration-depth
   - rel: contradicts
     target: conjecture/commutative-convention
   - rel: refines
@@ -89,6 +91,13 @@ spontaneously weighting the round stamp.
    models' update rule is **supersede-on-conflict, compose-on-compatibility** — still thin
    (single-reader-recoverable), and the integration shown is *survival*, not order-sensitive
    composition (the design's constraints are symmetric, so a commutative conjunction passes equally).
+   The compose-on-compatibility half is now also tested **robust to burial depth 2** (2026-06-17):
+   with **three** compatible turns and the earliest buried under two later ones, both models still
+   retain it at ceiling, and a "drop-the-oldest, keep-recent-two" reader (which would score 0.50) is
+   taken 0.000 of the time ([`result/relational-integration-depth`](../results/relational-integration-depth.md)).
+   So the "more turns" worry is bounded one step — integration is not a depth-1 artifact — though
+   the result is again saturated at ceiling (robust to *one* further turn of depth, not arbitrary
+   depth/grid-size/partial-conflict).
 3. **Thin, not rich.** "Latest-binding-wins" may be a shallow update heuristic; this claim does not
    separate thin order-sensitivity from deep path-dependence.
 4. **Spontaneous = query-not-directed AND flag-not-directed, but not literally cue-free.** The
