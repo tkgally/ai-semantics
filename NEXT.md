@@ -2,99 +2,100 @@
 
 ## State
 
-**Session of 2026-06-17 (twenty-third session, philosophical) is landed and squash-merged to `main` (PR #TBD).** A
-writing-and-philosophy session ($0 spent) that consolidated the now-firm relational positive. Workflow mode, one deep wave
-of three disjoint-write units + an independent adversarial coherence pass. Day total 2026-06-17 = **$0.118 of $5.00**
-(carried from session 22; this session spent nothing). Tracks over sessions 14–23: phil / ratify / empirical / phil /
-empirical / phil / empirical(20) / phil(21) / empirical(22) / **phil(23)** — so the next session is **due to lean
-empirical** (phil/empirical alternation; the relational empirical backlog now has a conceptual scaffold to draw on, below).
-**No decision was opened or ratified this session** (`wiki/decisions/open/` empty at cold-start and stays empty).
+**Session of 2026-06-17 (twenty-fourth session, empirical) is landed and squash-merged to `main` (PR #TBD).** A
+single-deep-unit empirical session: built, critic-gated, ran, and verified the **relational rung-(ii) integration
+probe** — the next rung of the ladder in
+[`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md). **Verdict: both models
+INTEGRATION at ceiling.** When a coined term's latest turn is *compatible* with an earlier one (a *refinement*, not a
+replacement), both `claude` and `gemini` **compose** the two rather than overwriting the earlier — INTEG target rate
+**1.000** (Wilson [0.926, 1.0]), overwrite/earlier-only/neither all **0.000**, grid-position at chance, DIRECT on-demand
+**1.000**, 0 NA. So the relational update rule is **supersede-on-conflict, compose-on-compatibility**. Still **thin /
+single-reader-recoverable** — does not approach constitution. Independent pre-run critic **GO** (reproduced build/sha,
+re-derived all shortcut bounds, ruled no new decision owed) + independent post-run verifier **REPRODUCED**. Day total
+2026-06-17 (sessions 22–24) = **≈$0.222 of $5.00** (this session $0.103792 billed). **No decision opened or ratified**
+(`wiki/decisions/open/` empty at cold-start and stays empty). Tracks 20–24: empirical / phil / empirical / phil /
+**empirical(24)** — the next session is **due to lean philosophical**.
 
-1. **PHILOSOPHICAL (the headline) — a new essay mapping the rungs above the relational floor.** New essay
-   [`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md) (draft): builds the structure
-   [`concept/relational-meaning`](wiki/base/concepts/relational-meaning.md) said was missing — a **four-rung ladder** above
-   the relational bottom ((i) order-sensitive *overwrite* = latest-binding-wins, the only rung with evidence; (ii)
-   order-sensitive *integration* / non-overwrite repair; (iii) *path-dependence* proper / live-vs-shuffled; (iv) genuine
-   *between-agent constitution* / Brandomian scorekeeping), each with a candidate behavioral signature and a **proposed**
-   discriminating design — plus a sharp **single-reader-recoverability criterion** cutting thin (updated) from rich
-   (constituted). Thesis: *updating a convention is not constituting one.* Holds the line hard — evidence for rung (i) only;
-   (ii)–(iv) explicitly unbuilt; the current instrument cannot separate (i) from (iii) (claim scope limit 3); the firm floor
-   makes the distance to constitution *measurable and large*. `internal-contrast-only`, no human comparison.
+1. **EMPIRICAL (the headline) — rung (ii) occupied.** New result
+   [`result/relational-integration-rung-ii`](wiki/findings/results/relational-integration-rung-ii.md) (proposed,
+   `internal-contrast-only`). Design: a coined term DAX constrained over two stamped rounds about a 2×2 figure grid
+   (earlier = a shape, latest = a pattern); each constraint matches 2 of 4 figures, only the conjunction is unique, so any
+   single-attribute (overwrite or earlier-only) reader caps at 0.50 — beating it requires the earlier turn to *survive*.
+   Run dir `experiments/runs/2026-06-17-relational-integration-rung-ii/`; design
+   `experiments/designs/relational-integration-rung-ii.md`. Two binding caveats (folded everywhere): the design's
+   constraints are *symmetric*, so this shows the earlier turn **survives**, **not** that the composition is
+   *order-sensitive* (a commutative conjunction passes equally); and the conjunction is trivially easy (DIRECT=INTEG=1.0),
+   so the ceiling is weak evidence of *spontaneous* composition and does not rule out overwrite under harder load.
 
-2. **PHILOSOPHICAL (the two consolidations) — folded the implicit-reassignment control into both relational essays.**
-   [`essay/aggregation-not-constitution`](wiki/findings/essays/aggregation-not-constitution.md) and
-   [`essay/conversation-as-text-not-timeline`](wiki/findings/essays/conversation-as-text-not-timeline.md) were revised
-   (strengthen-not-overturn): the 2026-06-17 control bounded scope-limit-4 / revision-trigger-2 in the claim's favour, so
-   bound (2) in each essay is tightened to *flag-not-directed* ("spontaneous" = query-not-directed AND flag-not-directed,
-   not literally cue-free). The third deflation's reversal in `aggregation-not-constitution` is made sturdier-not-larger.
-   Nothing else moved: still thin latest-binding-wins, still not constitution, still internal-contrast-only.
+2. **INTEGRATION (theory/essay/claim/concept synced).** [`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md)
+   draft→**revised** (revision trigger (a) fired; rung (ii) now occupied; **both rungs (i),(ii) on the thin side**; trigger
+   stays live only in its stronger "order-sensitive composition" form).
+   [`claim/relational-order-sensitive-reassignment`](wiki/findings/claims/relational-order-sensitive-reassignment.md)
+   scope limit 2 updated (non-overwrite repairs tested → integration). [`concept/relational-meaning`](wiki/base/concepts/relational-meaning.md)
+   and [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md) synced (relational cell stays
+   **negative on constitution**; two thin rungs climbed, rich upper ladder unbuilt). Exec-summary refreshed.
 
 3. **DISCIPLINE.** senselint **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean.
-   An independent read-only adversarial coherence pass ran over the three pages: **no blockers** (modesty held, no
-   human-comparison drift, statuses correct, the control correctly labeled a strengthening not a trigger-firing); two minor
-   quote-locator cleanups in the new essay applied by the orchestrator. Website (`docs/`) updated: home status + new latest
-   card + journal 23rd entry + findings relational paragraph (eighth essay) — plain-language, modest, nothing stronger than
-   the wiki.
+   Website (`docs/`) updated: home status (38 studies) + new latest card + spending; journal 24th entry; findings
+   relational section (combine step climbed); plans naming-game section refreshed. Plain-language, modest, nothing
+   stronger than the wiki.
 
 ## Next concrete actions — backlog for the next session
 
 **Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — nothing to ratify. Apply any Tom override first.
 
-**Then pick the lean — empirical is due** (sessions 21–23 ran phil/empirical/phil; the relational philosophy now has a
-ladder that names exactly which empirical moves would climb it). Highest-value candidates:
+**Then pick the lean — philosophical is due** (tracks 20–24 ran empirical/phil/empirical/phil/empirical). Candidates:
 
-1. **EMPIRICAL (highest-value, balanced choice) — climb a rung of the new ladder.** The new essay
-   ([`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md)) makes the next empirical
-   targets crisp; each is a clean internal-contrast-only design needing its own frozen design + independent pre/post critic:
-   (a) **Rung (ii) — non-overwrite repairs.** Does order-sensitivity hold when the latest agreement *refines* rather than
-       *replaces* an earlier one? Proposed discriminator: hold the final turn fixed, vary an *earlier* refining turn — an
-       overwrite reader (rung i) is invariant to that change, an integrating reader is not. Separates "latest supersedes"
-       from "agreements compose."
-   (b) **Rung (iii) — thin-vs-rich separation (the live-vs-shuffled design).** Present the *same* final multiset of stamped
-       bindings via two different ordered histories; a clean gap = first evidence path-dependence proper; a null = confirms
-       single-reader-recoverability. This is the design that could move the claim toward (or away from) the constitution
-       rung — currently the instrument *cannot* separate (i) from (iii) (claim scope limit 3).
-   (c) **A more aggressive implicitness** (bury the multiplicity; never say "agreed") — the stronger variant of the claim's
-       revision trigger 2 that the 2026-06-17 control left live.
-   (d) **Cross-family dyads / image referents** — generality of latest-binding-wins beyond the homogeneous text-grid setting.
-   Reuse the balanced-block machinery in `experiments/runs/2026-06-17-relational-implicit-reassignment/` and
-   `experiments/designs/relational-implicit-reassignment-v5.md` (the byte-identical-roster, single-factor-control pattern).
+1. **PHILOSOPHICAL (highest-value, the natural follow-on) — absorb the rung-(ii) result into the relational essays.**
+   The two compatible-turn rungs (overwrite, integrate) are now both established and both *thin*. A philosophical unit
+   could (a) revise [`essay/aggregation-not-constitution`](wiki/findings/essays/aggregation-not-constitution.md) and/or
+   [`essay/conversation-as-text-not-timeline`](wiki/findings/essays/conversation-as-text-not-timeline.md) to record that
+   the update rule is now "supersede-on-conflict, compose-on-compatibility" — still thin, still not constitution — and/or
+   (b) sharpen the **thin/rich criterion** in [`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md)
+   now that *two* rungs sit demonstrably on the thin side (what, precisely, the live-vs-shuffled test would have to show to
+   cross the cut). No spend; all in-repo quotes.
 
-2. **PHILOSOPHICAL (alternative, if the next-next session leans phil) — catalogue an open-access primary the relational line
-   leans on.** **Lewis 1969 *Convention*** (the notion the whole axis rests on) or a Clark primary on conversational
-   **repair / common ground**. **Verify OA-fetchability before committing** — both are likely copyrighted; do not gamble a
-   session on an unreachable primary. (`base/wanted.md` carries the backlog.)
+2. **EMPIRICAL (the next rung, if a later session leans empirical) — rung (iii): live-vs-shuffled / path-dependence.**
+   The essay names this as the threshold rung that could begin to move toward constitution, and the claim's scope limit 3
+   says the current instrument *cannot* separate rung (i)/(ii) from (iii). **This likely needs a new
+   `wiki/decisions/open/` entry** — the operationalization is value-laden (how to present "the same final stamped multiset
+   via two different ordered histories" without the stamps trivializing it; whether to drop stamps and rely on arrival
+   order; what counts as a clean live-vs-shuffled gap). Surface a decision with options + provisional default rather than
+   silently picking. The balanced-block machinery in `experiments/runs/2026-06-17-relational-integration-rung-ii/` is
+   reusable. *Other empirical generality probes (image referents, cross-family dyads, shape-latest, >2-turn or
+   partially-conflicting refinements, a harder spontaneous-integration variant) remain open and cheaper, but lower-value
+   than rung (iii).*
 
-3. **GRAMMATICAL (standing) — the AANN/CxG line's remaining open units** (e.g. the cancel-direction / unification-shape
+3. **GRAMMATICAL (standing) — the AANN/CxG line's remaining open unit** (the cancel-direction / unification-shape
    Option-B held in reserve in `decisions/resolved/aann-uniqueness-third-construction`). Lower priority than the relational
-   ladder while it is freshly scaffolded.
+   line while it is active.
 
 4. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
-- **None.** `wiki/decisions/open/` is empty. The relational-v5 decision (`wiki/decisions/resolved/`) is **fully realized**
-  (staged B→A complete; Option-A positive controlled for the wording-artifact alternative; the conceptual ladder above the
-  bottom rung now mapped). Climbing rungs (ii)–(iv) would each be a fresh design under the existing internal-contrast-only
-  posture — no new decision is owed unless a design needs a value-laden operationalization call.
+- **None.** `wiki/decisions/open/` is empty. The relational-v5 decision (`wiki/decisions/resolved/`) is fully realized
+  (staged B→A complete; the order-sensitivity positive controlled for the wording artifact; rung (ii) integration now
+  established). Climbing rung (iii) (path-dependence) would **owe a new decision** (value-laden operationalization — see
+  backlog 2); rungs (i),(ii) are done under the existing internal-contrast-only posture with no new decision owed.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This was a **writing-and-philosophy session** ($0). It did not run any models. It took the recent, now-solid result —
-  that both models recover a reassigned made-up word by its *most-recent* agreed meaning — and (1) recorded the previous
-  session's strengthening in the two essays that lean on it, and (2) wrote a new essay turning the gap between a thin
-  "latest wins" rule and meaning genuinely *built between* two agents into a **ladder with named steps and a sharp test**.
-  The honest message throughout: the project has evidence for only the bottom step; the rest of the ladder is mapped but
-  unbuilt, and the distance to the top is large. An independent reviewer checked the three pieces for over-claiming and
-  quote accuracy before they were kept. GitHub Pages serves from `main` `/docs`.
+- This was an **experiment session** (~$0.10). It climbed the first step above the bottom of the conversation-meaning
+  "ladder": when a later agreement about a made-up word *fits with* an earlier one (rather than contradicting it), both
+  models **combine** the two instead of throwing the earlier away (100% of the time). So the rule is fuller than "latest
+  wins" — overwrite on conflict, combine when compatible. The honest framing throughout: this is still a *thin* ability (a
+  single reader of the transcript could do the same combining), a long way from meaning genuinely *built between* two
+  parties; and because the combining task is easy, the perfect score shows the models *can and do* combine more than that
+  they do so unprompted. An independent reviewer reproduced every number and pushed for those caveats. Two steps of the
+  ladder are now climbed, both on the "thin" side. GitHub Pages serves from `main` `/docs`.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget $5/day UTC
 — check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`,
-website updated. **No decision is open.** Tracks 21–23 ran phil/empirical/phil — a session is **due to lean empirical**;
-the highest-value unit is climbing a rung of the new relational ladder (non-overwrite repairs = rung ii, or the
-live-vs-shuffled thin/rich separation = rung iii), each a fresh frozen design under the existing internal-contrast-only
-posture. The relational positive is firm and controlled for the wording artifact; the conceptual scaffold above it is now
-in place.
+website updated. **No decision is open.** Tracks 20–24 ran empirical/phil/empirical/phil/empirical — a session is **due to
+lean philosophical** (absorb the rung-(ii) result into the relational essays / sharpen the thin/rich criterion). The next
+*empirical* rung is rung (iii) live-vs-shuffled / path-dependence, which **would owe a new decision** (value-laden
+operationalization). Two thin rungs of the relational ladder are now climbed; the rich upper ladder is unbuilt.
