@@ -1,10 +1,12 @@
 ---
 id: relational-rung-iii-path-dependence
 title: How should a rung-(iii) PATH-dependence (live-vs-shuffled) test on the relational axis be operationalized, given that any final stamped multiset a single reader can recover is thin by construction?
-status: open
+status: resolved
 opened: 2026-06-17
 opened-by: orchestrator (subagent, surfaced not resolved)
-not-eligible-for-ratification-until: a later session (cross-session; earliest next session)
+resolved: 2026-06-17
+resolved-by: autonomous (adversarial review)
+resolution: adopt-default (Option C under a binding pre-run adjudication gate; documented structural-closure equally promotable; null equally promotable); anchor internal-contrast-only
 anchor: internal-contrast-only
 contingent-artifacts:
   - essay/update-is-not-constitution
@@ -13,15 +15,31 @@ contingent-artifacts:
 
 # Decision: operationalizing rung (iii) — path-dependence proper, the live-vs-shuffled gap
 
-> **Status: OPEN (2026-06-17). Surfaced this session, NOT ratified.** Per
-> [`PROTOCOL.md`](../../../PROTOCOL.md) §2 and [`CLAUDE.md`](../../../CLAUDE.md) always-on rule 5,
-> this page states a live, value-laden operationalization question with options and a **provisional
-> default**, and is **not eligible for ratification in the session that opened it.** A *later*
-> session ratifies it via an independent adversarial-review pass (autonomous cross-session
-> procedure, [`PROJECT.md`](../../../PROJECT.md) §12.3); Tom's standing override outranks any
-> autonomous ratification. The language below stays provisional throughout. **Anchor posture:
-> `internal-contrast-only`** (within-model contrast over byte-identical content; see §"The anchor
-> question").
+> **Status: RESOLVED (2026-06-17, autonomous adversarial review — cross-session: opened by the
+> twenty-sixth session 2026-06-17, ratified by the twenty-seventh; the session boundary held).
+> VERDICT: ADOPT THE PROVISIONAL DEFAULT.** Pursue Option C (non-commuting operation semantics) as
+> the only stimulus design that makes arrival-order load-bearing without re-opening the v4
+> text-position confound (Option A, verified to be the already-run v4 regime) or colliding with the
+> identical-final-multiset trap (Option B, whose honest clean outcome is a null). Option C runs
+> **only** under a binding pre-run adjudication gate that decides, *before any run* and biased
+> *against* the rich reading, whether an operation-order gap counts as rung (iii) or as a separate
+> thin "respects operation order" finding; the default does **not** pre-authorize calling an
+> Option-C gap rich. A documented structural-closure terminus — "text-only stimuli cannot cross to
+> the rich side; the rung-(iii) program is bounded on current resources" — is a fully promotable
+> outcome, as is a null; neither is a reason to keep spending
+> ([`PROTOCOL.md`](../../../PROTOCOL.md) §A5). The clean-gap criterion (pre-registered Wilson-95
+> effect-size gate, position neutralization, stamp-comprehension floor, independent shortcut
+> certification on idealized-reader fixtures) is ratified as the yardstick. **Anchor
+> `internal-contrast-only` is ratified** — a within-model contrast over byte-identical/order-permuted
+> content, asserting no human comparison; the in-repo human evidence (Brennan & Clark
+> order-insensitive, Hawkins convergence-only, Clark & Wilkes-Gibbs unfetched) could not ground one
+> and none is owed. Any future framing reaching for human path-dependence comparison incurs a fresh,
+> currently-undischargeable anchor question. **Anti-cheat: PASS** — the default biases against a free
+> positive; a null and a structural-closure are both as promotable as a positive. The independent
+> reviewer verified every load-bearing quote (Option A = the v4 regime; claim scope limit 3; the
+> essay's thin/rich criterion; the three human-anchor facts) MATCH with no mismatch. Ratification
+> fixes the **yardstick, never the result**. Tom's standing override outranks this autonomous
+> ratification. The provisional language below is preserved as the record of the options weighed.
 
 ## The question (precise)
 
@@ -97,7 +115,7 @@ gap.
   exactly the **text-position regime v4 already ran**, where both models followed physical text
   position and that following was *"indistinguishable from being blind to the stamp values
   altogether"* (the v4 finding recorded in
-  [`decisions/resolved/relational-v5-text-position-neutralization`](../resolved/relational-v5-text-position-neutralization.md)).
+  [`decisions/resolved/relational-v5-text-position-neutralization`](relational-v5-text-position-neutralization.md)).
   A "gap" here would be position-following, not path-dependence — and would not separate "tracks the
   live trajectory" from "reads the last line." It re-opens a confound the relational line already
   resolved. **Not recommended on its own.**
@@ -155,7 +173,7 @@ shape, offered for a ratifying session to fix:
 - **Artifact exclusions, by construction.** The gap must survive (a) **position neutralization** —
   the decisive line's physical slot rotated/marginalized as in the ratified v5 Option-A machinery,
   so a "gap" cannot be text-position following
-  ([`decisions/resolved/relational-v5-text-position-neutralization`](../resolved/relational-v5-text-position-neutralization.md));
+  ([`decisions/resolved/relational-v5-text-position-neutralization`](relational-v5-text-position-neutralization.md));
   (b) a **stamp-comprehension floor** — if stamps are present, the model must demonstrably read them
   (the v5 Option-B pre-probe), so a "gap" cannot be stamp-blindness; (c) **shortcut certification**
   on idealized-reader fixtures by an independent pre-run critic, in the balanced-block style of the
@@ -216,14 +234,14 @@ posture), never the *result*.
 terminal.** The live-vs-shuffled contrast is a within-model behavioral contrast over byte-identical
 (or order-permuted) content; structurally the same kind of measure the relational line has carried
 as `internal-contrast-only` since
-[`decisions/resolved/conflicting-cue-human-anchor`](../resolved/conflicting-cue-human-anchor.md)
+[`decisions/resolved/conflicting-cue-human-anchor`](conflicting-cue-human-anchor.md)
 and as ratified for v5. No human comparison is owed because none is asserted: the in-repo human
 evidence leans order-*insensitive* — Brennan & Clark
 ([`source/brennan-clark-1996-conceptual-pacts`](../../base/sources/brennan-clark-1996-conceptual-pacts.md))
 report a frequency-over-recency, order-insensitive statistic and never perturb the order of an
 interaction history; Hawkins ([`resource/hawkins-tangrams`](../../base/resources/hawkins-tangrams.md))
 anchors convergence only; the ratified theoretical anchor Clark & Wilkes-Gibbs 1986 is still
-unfetched ([`decisions/resolved/relational-anchor-shortlist`](../resolved/relational-anchor-shortlist.md)).
+unfetched ([`decisions/resolved/relational-anchor-shortlist`](relational-anchor-shortlist.md)).
 A ratifying session must also weigh the **undischargeable** sub-case: if a rung-(iii) framing reaches
 for "LLM conventions are/aren't path-dependent *the way human ones are*," that incurs a human
 path-dependence anchor obligation **no in-repo resource can currently discharge** — which itself
