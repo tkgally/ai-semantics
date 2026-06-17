@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-12
-updated: 2026-06-16
+updated: 2026-06-17
 links:
   - rel: depends-on
     target: result/relational-reference-game-v1
@@ -17,6 +17,8 @@ links:
     target: conjecture/commutative-convention
   - rel: depends-on
     target: result/relational-spontaneous-recency-a
+  - rel: depends-on
+    target: result/relational-implicit-reassignment-control
   - rel: depends-on
     target: claim/relational-order-sensitive-reassignment
   - rel: depends-on
@@ -35,7 +37,7 @@ links:
 
 # Essay: aggregation, not constitution
 
-> **Status: revised (2026-06-16 — trigger (a) has now fired; the deflationary leg is half-overturned. See the newest-first Revision log entry.) The project's first essay — the philosophical track arguing in its own voice.** Its empirical leg rested on one bounded pilot null ([`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md)) and the forward bet that generalized it ([`conjecture/commutative-convention`](../conjectures/commutative-convention.md)). The decisive history-perturbation test — repeatedly inconclusive through v2–v4 (position-confounded) — was finally run in its **v5 / Option-A** realization on 2026-06-16, with v4's text-position confound designed out by balanced rotation, and it **fired trigger (a)**: a CI-clean, ceiling, two-model order effect ([`result/relational-spontaneous-recency-a`](../results/relational-spontaneous-recency-a.md)), promoted to [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md). Per this essay's own pre-stated trigger-(a) spec, the claim that LLM dyad conventions *are* commutative **falls**, the anti-Brandomian friction **reverses in direction only (heavily qualified)**, and "What the null does not touch" survives and *gains* force. The essay's new resting place: the convention is **order-sensitive but thin — not the clean commutative aggregation first found, but also not constitution.** Read the triggers and the Revision log before citing the argument.
+> **Status: revised (2026-06-16 — trigger (a) has now fired; the deflationary leg is half-overturned. See the newest-first Revision log entry.) The project's first essay — the philosophical track arguing in its own voice.** Its empirical leg rested on one bounded pilot null ([`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md)) and the forward bet that generalized it ([`conjecture/commutative-convention`](../conjectures/commutative-convention.md)). The decisive history-perturbation test — repeatedly inconclusive through v2–v4 (position-confounded) — was finally run in its **v5 / Option-A** realization on 2026-06-16, with v4's text-position confound designed out by balanced rotation, and it **fired trigger (a)**: a CI-clean, ceiling, two-model order effect ([`result/relational-spontaneous-recency-a`](../results/relational-spontaneous-recency-a.md)), promoted to [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md). Per this essay's own pre-stated trigger-(a) spec, the claim that LLM dyad conventions *are* commutative **falls**, the anti-Brandomian friction **reverses in direction only (heavily qualified)**, and "What the null does not touch" survives and *gains* force. The essay's new resting place: the convention is **order-sensitive but thin — not the clean commutative aggregation first found, but also not constitution.** A follow-up control on 2026-06-17 ([`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md)) **strengthened — did not overturn** — that Option-A positive: with Option A's explicit *"was reassigned"* sentence removed and everything else byte-identical, both models still recovered the most-recent binding at ceiling, so latest-binding-wins is not a wording artifact. It does not lift the finding past the bottom rung. Read the triggers and the Revision log before citing the argument.
 
 ## The position
 
@@ -62,6 +64,8 @@ That is exactly the signature [`concept/distributional-meaning`](../../base/conc
 **Third, a small piece of friction against one empirical hope.** If LLM content were normatively instituted between agents in something like Brandom's sense, the relational axis is where that should have shown up as order-sensitive, interaction-borne structure. The in-repo discussion already draws this consequence at its correct, weak strength: the pilot is "more consistent with the internalist conceptual-role picture than with a relationally-constituted one, which is a small piece of friction against expecting the Brandomian version to be the right description of these systems — and nothing stronger" ([`concept/inferential-meaning`](../../base/concepts/inferential-meaning.md), §"The relational bridge"). Friction, not refutation. The next section says why the stronger reading is unavailable.
 
 > **The friction reverses in direction only — sign-flip at the commutativity grain, gap to constitution untouched (2026-06-16, trigger (a)).** Option A removes the order-invariance that fed this friction: an order-sensitive surplus is, *in direction*, what an interaction-instituted account would predict, so on the narrow question "does anything beyond order-invariant content appear?" the friction's sign flips. But the reversal must not be over-read, and the result page is explicit about why: the surplus is "a thin **latest-binding-wins** rule," "the bottom rung of order-sensitivity, not the top," and emphatically "does **not** by itself certify constitution" ([`result/relational-spontaneous-recency-a`](../results/relational-spontaneous-recency-a.md), §"What this shows"). Brandom's account is **deontic scorekeeping** — commitments held, entitlements tracked, challenges issued and answered — and Option A measured *none* of that (its agents made no assertions they could be held to, kept no score). So the sign flips at the *commutativity* grain while the gap to genuine normative constitution is **completely untouched**: this is **not** evidence for constitution and **not** evidence for Brandom's thesis. It removes one specific count of friction (the predicted-direction surplus did, in this regime, appear) without moving anything in the section below.
+>
+> **The removed count of friction is more secure, not larger (2026-06-17 — implicit-reassignment control).** The 2026-06-17 control ([`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md)) dropped Option A's explicit *"was reassigned"* INTRO sentence, kept everything else byte-identical (same stimuli sha256), and **both models still recovered the most-recent binding at ceiling** (SPONT latest-binding **1.000**, Wilson-95 [0.926, 1.000]; first-binding **0.000**; physical-position at exactly chance **0.250**; DIRECT **1.000** both directions; **0 NA**). So the order-sensitive surplus is robust to removing the explicit flag — the friction-removal is sturdier, the surplus is not a wording artifact. But this changes **nothing** about magnitude or direction-of-distance to constitution: the control "does **NOT** show … 'rich constitution.' Exactly as in Option A, latest-binding-wins is consistent with a thin **convention-update / overwrite** rule … which is order-sensitive but is **not** the deep [`concept/relational-meaning`](../../base/concepts/relational-meaning.md) notion of a convention *constituted between* agents" ([`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md), §"What this shows — and what it does NOT"). The gap to deontic scorekeeping stays untouched; do not read the firmer footing as nearness to constitution.
 
 ## What the null does not touch
 
@@ -83,6 +87,37 @@ The v2 **history-perturbation arm** — reassign a coined term mid-trajectory an
 
 ## Revision log
 
+- **2026-06-17 (implicit-reassignment control — strengthens, does not overturn, the Option-A positive; status stays `revised`).**
+  This entry folds in a **control**, not a trigger firing — the implicit-reassignment control is not
+  one of this essay's named triggers; it strengthens the Option-A positive the essay already leans on
+  → [`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md)
+  (independent pre-run critic GO, independent post-run verifier REPRODUCED).
+  - **What it tested.** Option A's clean positive carried one deflationary escape: maybe both models
+    tracked recency only because the INTRO *told* them the term *"was reassigned … in different rounds
+    you agreed it referred to different figures."* — a wording artifact. This control **removed exactly
+    that sentence** and kept everything else byte-identical (same `stimuli.json` sha256, same figures,
+    round quadruples, geometry, seed, the two query conditions, parse, scoring). The model must itself
+    notice the term picks out different figures across rounds.
+  - **The result (verbatim).** Both models still recovered the most-recent binding at ceiling: SPONT
+    latest-binding rate **1.000** (Wilson-95 [0.926, 1.000]), first-binding rate **0.000**,
+    physical-position-following at exactly chance **0.250 / 0.250**, DIRECT manipulation check
+    **1.000** in both directions, **0 NA**; 160/160 strict parses. "Numerically indistinguishable from
+    Option A … removing the explicit flag changed **nothing** in the measured behaviour"
+    ([`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md),
+    §"The headline"). So latest-binding-wins is **not** a surface artifact of the "was reassigned" wording.
+  - **What it tightens.** Binding bound (2): "spontaneous" was already *query-not-recency-directed*; it
+    is now also **flag-not-directed** — the model is not told a reassignment occurred and infers the
+    multiplicity from the stamped history itself ([`result/relational-implicit-reassignment-control`](../results/relational-implicit-reassignment-control.md),
+    §"What this shows — and what it does NOT"). The third deflation's reversal (anti-Brandomian friction
+    reverses in direction only) is made **sturdier, not bigger**: the order-sensitive surplus is robust
+    to dropping the explicit flag, so the removed count of friction is more secure.
+  - **What it does NOT change.** The finding stays the **thin** *latest-binding-wins* rule — the
+    **bottom rung**, **not** constitution and **not** deontic scorekeeping. The control "does **NOT**
+    show … 'rich constitution'" and "does **not** separate thin order-sensitivity from deep
+    path-dependence" (same section). It is **internal-contrast-only — no human comparison**; Brennan &
+    Clark 1996 still report order-*insensitive* "Frequency of use better explains our data than does
+    simple recency" (p. 1492), so the predicted human/LLM contrast remains **unsettled**. Nothing in
+    "What the null does not touch" moves; the gap to constitution is untouched.
 - **2026-06-16 (trigger (a) fired — the deflationary leg is half-overturned; status stays `revised`).**
   The decisive history-perturbation test — inconclusive through v2 (2026-06-12), v3 (2026-06-13),
   and v4 (2026-06-14, where it was found to be position-confounded) — was finally run in its
@@ -121,7 +156,10 @@ The v2 **history-perturbation arm** — reassign a coined term mid-trajectory an
     (supported, internal-contrast-only).
   - **Four binding bounds carried throughout:** (1) **thin, not rich** — latest-binding-wins, bottom
     rung, not constituted-between; (2) **"spontaneous" = query not recency-directed, not cue-free**
-    (the INTRO flags the reassignment); (3) **internal-contrast-only — no human comparison** (Brennan
+    (the INTRO flags the reassignment) — **tightened 2026-06-17:** also **flag-not-directed**, i.e.
+    the model is *not* told a reassignment occurred and infers the multiplicity from the stamped
+    history itself; the explicit flag is gone but the stamped history is not, so still **not literally
+    cue-free** (see the 2026-06-17 Revision log entry); (3) **internal-contrast-only — no human comparison** (Brennan
     & Clark report order-*insensitive* frequency-over-recency, so the predicted human/LLM contrast is
     still **not** settled); (4) **does not overturn v1/v4 — it bounds them**: commutativity is
     **operationalization-dependent**, present where order carries no disambiguating signal (v1) or is

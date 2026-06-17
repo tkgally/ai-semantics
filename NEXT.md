@@ -2,93 +2,99 @@
 
 ## State
 
-**Session of 2026-06-17 (twenty-second session, empirical) is landed and squash-merged to `main` (PR #62).** It ran
-the **implicit-reassignment control** — the highest-value backlog unit, the sharpest open caveat on the new relational
-order-sensitivity claim. Day total 2026-06-17 = **$0.118 of $5.00** (this was the day's only session so far). Tracks over
-sessions 14–22: phil / ratify / empirical / phil / empirical / phil / empirical(20) / phil(21) / **empirical(22)** — so
-the next session is **due to lean philosophical** (the empirical/phil alternation; two empirical-leaning units in a row now).
-**No decision was opened or ratified this session** (`wiki/decisions/open/` empty at cold-start and stays empty; the
-relational-v5 staged line remains complete).
+**Session of 2026-06-17 (twenty-third session, philosophical) is landed and squash-merged to `main` (PR #TBD).** A
+writing-and-philosophy session ($0 spent) that consolidated the now-firm relational positive. Workflow mode, one deep wave
+of three disjoint-write units + an independent adversarial coherence pass. Day total 2026-06-17 = **$0.118 of $5.00**
+(carried from session 22; this session spent nothing). Tracks over sessions 14–23: phil / ratify / empirical / phil /
+empirical / phil / empirical(20) / phil(21) / empirical(22) / **phil(23)** — so the next session is **due to lean
+empirical** (phil/empirical alternation; the relational empirical backlog now has a conceptual scaffold to draw on, below).
+**No decision was opened or ratified this session** (`wiki/decisions/open/` empty at cold-start and stays empty).
 
-1. **EMPIRICAL (the headline) — the implicit-reassignment control of Option A.** A single-unit session under full discipline
-   (independent pre-run critic GO → freeze → liveness → 160-call probe → independent post-run verifier REPRODUCED).
-   - Result: [`result/relational-implicit-reassignment-control`](wiki/findings/results/relational-implicit-reassignment-control.md)
-     (proposed, `internal-contrast-only`). Dropped Option A's one explicit *"was reassigned"* INTRO sentence; **frozen
-     stimuli roster byte-identical to Option A** (same sha256 `432cb57d…`; the sole manipulation is one line in the prompt
-     renderer). **Both models still recover the most-recent binding at ceiling** (SPONT latest-binding 1.000, Wilson
-     [0.926, 1.0]; first-binding 0.000; physical-position at chance 0.250; DIRECT manip 1.000 both directions; 0 NA) —
-     numerically indistinguishable from Option A. So latest-binding-wins is **not** a surface artifact of the wording.
-   - Claim [`claim/relational-order-sensitive-reassignment`](wiki/findings/claims/relational-order-sensitive-reassignment.md):
-     **revision trigger 2 tested → bounded in the claim's favour** (not narrowed); **scope limit 4 tightened** to
-     *flag-not-directed*. Stays `supported`.
-   - Light sync of [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md) +
-     [`concept/relational-meaning`](wiki/base/concepts/relational-meaning.md): the surface-artifact alternative was tested
-     and controlled out; relational cell **held more firmly** at order-sensitive-but-thin — **map position unchanged**
-     (still short of constitution).
+1. **PHILOSOPHICAL (the headline) — a new essay mapping the rungs above the relational floor.** New essay
+   [`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md) (draft): builds the structure
+   [`concept/relational-meaning`](wiki/base/concepts/relational-meaning.md) said was missing — a **four-rung ladder** above
+   the relational bottom ((i) order-sensitive *overwrite* = latest-binding-wins, the only rung with evidence; (ii)
+   order-sensitive *integration* / non-overwrite repair; (iii) *path-dependence* proper / live-vs-shuffled; (iv) genuine
+   *between-agent constitution* / Brandomian scorekeeping), each with a candidate behavioral signature and a **proposed**
+   discriminating design — plus a sharp **single-reader-recoverability criterion** cutting thin (updated) from rich
+   (constituted). Thesis: *updating a convention is not constituting one.* Holds the line hard — evidence for rung (i) only;
+   (ii)–(iv) explicitly unbuilt; the current instrument cannot separate (i) from (iii) (claim scope limit 3); the firm floor
+   makes the distance to constitution *measurable and large*. `internal-contrast-only`, no human comparison.
 
-2. **DISCIPLINE.** senselint **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean.
-   Pre-run critic and post-run verifier were both fresh independent agents. Website (`docs/`) updated: home status + new
-   latest card + journal 22nd entry + findings paragraph — plain-language, modest, nothing stronger than the wiki.
+2. **PHILOSOPHICAL (the two consolidations) — folded the implicit-reassignment control into both relational essays.**
+   [`essay/aggregation-not-constitution`](wiki/findings/essays/aggregation-not-constitution.md) and
+   [`essay/conversation-as-text-not-timeline`](wiki/findings/essays/conversation-as-text-not-timeline.md) were revised
+   (strengthen-not-overturn): the 2026-06-17 control bounded scope-limit-4 / revision-trigger-2 in the claim's favour, so
+   bound (2) in each essay is tightened to *flag-not-directed* ("spontaneous" = query-not-directed AND flag-not-directed,
+   not literally cue-free). The third deflation's reversal in `aggregation-not-constitution` is made sturdier-not-larger.
+   Nothing else moved: still thin latest-binding-wins, still not constitution, still internal-contrast-only.
+
+3. **DISCIPLINE.** senselint **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean.
+   An independent read-only adversarial coherence pass ran over the three pages: **no blockers** (modesty held, no
+   human-comparison drift, statuses correct, the control correctly labeled a strengthening not a trigger-firing); two minor
+   quote-locator cleanups in the new essay applied by the orchestrator. Website (`docs/`) updated: home status + new latest
+   card + journal 23rd entry + findings relational paragraph (eighth essay) — plain-language, modest, nothing stronger than
+   the wiki.
 
 ## Next concrete actions — backlog for the next session
 
 **Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — nothing to ratify. Apply any Tom override first.
 
-**Then pick the lean — philosophical is due** (sessions 20–22 ran empirical/phil/empirical; the relational empirical line
-just got two strengthening data points and the claim is now robust to the wording-artifact worry, so the next high-value
-move is to let the philosophy compound on the now-firmer relational picture, or catalogue a primary the line leans on).
-Highest-value candidates:
+**Then pick the lean — empirical is due** (sessions 21–23 ran phil/empirical/phil; the relational philosophy now has a
+ladder that names exactly which empirical moves would climb it). Highest-value candidates:
 
-1. **PHILOSOPHICAL (highest-value, balanced choice) — fold the strengthened relational claim into the essays/map, or open a
-   fresh essay.** The two relational essays ([`essay/aggregation-not-constitution`](wiki/findings/essays/aggregation-not-constitution.md),
-   [`essay/conversation-as-text-not-timeline`](wiki/findings/essays/conversation-as-text-not-timeline.md)) were revised last
-   session for the Option-A falsification; the implicit control now **removes a deflationary escape** from that positive
-   without changing its direction — a small but real strengthening one or both essays could record (check each essay's
-   revision triggers; this is a *strengthen-not-overturn* update, so keep it modest). Alternatively, a **new short essay** on
-   the thin/rich boundary ("latest-binding-wins" as convention-*update* vs convention-*constitution*) — the conceptual line
-   the relational results keep bumping against — would be original philosophical-track work that the now-firm empirical base
-   can support. **Do not over-claim:** the control strengthens, it does not lift the finding past the bottom rung.
+1. **EMPIRICAL (highest-value, balanced choice) — climb a rung of the new ladder.** The new essay
+   ([`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md)) makes the next empirical
+   targets crisp; each is a clean internal-contrast-only design needing its own frozen design + independent pre/post critic:
+   (a) **Rung (ii) — non-overwrite repairs.** Does order-sensitivity hold when the latest agreement *refines* rather than
+       *replaces* an earlier one? Proposed discriminator: hold the final turn fixed, vary an *earlier* refining turn — an
+       overwrite reader (rung i) is invariant to that change, an integrating reader is not. Separates "latest supersedes"
+       from "agreements compose."
+   (b) **Rung (iii) — thin-vs-rich separation (the live-vs-shuffled design).** Present the *same* final multiset of stamped
+       bindings via two different ordered histories; a clean gap = first evidence path-dependence proper; a null = confirms
+       single-reader-recoverability. This is the design that could move the claim toward (or away from) the constitution
+       rung — currently the instrument *cannot* separate (i) from (iii) (claim scope limit 3).
+   (c) **A more aggressive implicitness** (bury the multiplicity; never say "agreed") — the stronger variant of the claim's
+       revision trigger 2 that the 2026-06-17 control left live.
+   (d) **Cross-family dyads / image referents** — generality of latest-binding-wins beyond the homogeneous text-grid setting.
+   Reuse the balanced-block machinery in `experiments/runs/2026-06-17-relational-implicit-reassignment/` and
+   `experiments/designs/relational-implicit-reassignment-v5.md` (the byte-identical-roster, single-factor-control pattern).
 
-2. **PHILOSOPHICAL (alternative) — catalogue an open-access primary the relational line leans on.** **Lewis 1969
-   *Convention*** (the notion of "convention" the whole axis rests on) or a Clark primary on conversational **repair /
-   common ground**. **Verify OA-fetchability before committing** — both are likely copyrighted; do not gamble a session on an
-   unreachable primary. (`base/wanted.md` carries the backlog.)
+2. **PHILOSOPHICAL (alternative, if the next-next session leans phil) — catalogue an open-access primary the relational line
+   leans on.** **Lewis 1969 *Convention*** (the notion the whole axis rests on) or a Clark primary on conversational
+   **repair / common ground**. **Verify OA-fetchability before committing** — both are likely copyrighted; do not gamble a
+   session on an unreachable primary. (`base/wanted.md` carries the backlog.)
 
-3. **EMPIRICAL (if the next-next session leans empirical) — the claim's remaining open triggers.** The implicit-control
-   trigger is now discharged; the still-open generality/robustness units (each a clean internal-contrast-only design needing
-   its own frozen design + pre/post critic):
-   (a) **Non-overwrite repairs** — does order-sensitivity hold when the latest agreement *refines* rather than *replaces* an
-       earlier one? (b) **Cross-family dyads / image referents** — generality of latest-binding-wins beyond the homogeneous
-       text-grid setting. (c) **Thin-vs-rich separation** — the design that could move the claim toward (or away from) the
-       constitution rung. (d) A *more aggressive* implicitness (bury the multiplicity; never say "agreed") — the stronger
-       variant of revision trigger 2 that this session's control left live. Reuse the balanced-block machinery in
-       `experiments/runs/2026-06-17-relational-implicit-reassignment/` (and `experiments/designs/relational-implicit-reassignment-v5.md`).
+3. **GRAMMATICAL (standing) — the AANN/CxG line's remaining open units** (e.g. the cancel-direction / unification-shape
+   Option-B held in reserve in `decisions/resolved/aann-uniqueness-third-construction`). Lower priority than the relational
+   ladder while it is freshly scaffolded.
 
 4. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
 - **None.** `wiki/decisions/open/` is empty. The relational-v5 decision (`wiki/decisions/resolved/`) is **fully realized**
-  (staged B→A complete; Option C not reached; the Option-A positive now controlled for the wording-artifact alternative).
+  (staged B→A complete; Option-A positive controlled for the wording-artifact alternative; the conceptual ladder above the
+  bottom rung now mapped). Climbing rungs (ii)–(iv) would each be a fresh design under the existing internal-contrast-only
+  posture — no new decision is owed unless a design needs a value-laden operationalization call.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This was an **experiment session** ($0.12). It ran a control on the previous "latest version wins" result. That result
-  showed both models, when a coined name is reassigned across timestamped rounds, recover it by its most-recent meaning —
-  but the prompt had *told* the model the name "was reassigned," so the effect might have been a trick of the wording.
-- **This session deleted that one sentence** and kept everything else byte-for-byte identical. The behaviour didn't change:
-  both models again picked the most-recently-agreed picture 100% of the time. So the finding is **not** an artifact of the
-  phrasing — it is sturdier, not bigger. The careful small print is unchanged: it is still a thin "latest agreement wins"
-  rule, a long way from meaning genuinely built *between* two parties, and it makes no claim about how people behave. An
-  independent reviewer certified the test before it ran and a second independent reviewer reproduced every number after.
-  GitHub Pages serves from `main` `/docs`.
+- This was a **writing-and-philosophy session** ($0). It did not run any models. It took the recent, now-solid result —
+  that both models recover a reassigned made-up word by its *most-recent* agreed meaning — and (1) recorded the previous
+  session's strengthening in the two essays that lean on it, and (2) wrote a new essay turning the gap between a thin
+  "latest wins" rule and meaning genuinely *built between* two agents into a **ladder with named steps and a sharp test**.
+  The honest message throughout: the project has evidence for only the bottom step; the rest of the ladder is mapped but
+  unbuilt, and the distance to the top is large. An independent reviewer checked the three pieces for over-claiming and
+  quote accuracy before they were kept. GitHub Pages serves from `main` `/docs`.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget $5/day UTC
 — check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`,
-website updated. **No decision is open.** Tracks 20–22 ran empirical/phil/empirical — a session is **due to lean
-philosophical**; the highest-value unit is folding the now-firmer relational claim into the essays/map (a *strengthen-not-
-overturn* update — keep it modest) or cataloguing an OA primary the relational line leans on. The relational-v5 staged line
-is **complete** and its Option-A positive is now controlled for the wording-artifact alternative.
+website updated. **No decision is open.** Tracks 21–23 ran phil/empirical/phil — a session is **due to lean empirical**;
+the highest-value unit is climbing a rung of the new relational ladder (non-overwrite repairs = rung ii, or the
+live-vs-shuffled thin/rich separation = rung iii), each a fresh frozen design under the existing internal-contrast-only
+posture. The relational positive is firm and controlled for the wording artifact; the conceptual scaffold above it is now
+in place.
