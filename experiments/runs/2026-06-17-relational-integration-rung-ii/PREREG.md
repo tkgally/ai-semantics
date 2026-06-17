@@ -1,7 +1,3 @@
-# PREREG (draft) — relational rung-(ii) INTEGRATION probe
-
-> **This is the DRAFT.** `probe.py full` refuses to run until this file is renamed `PREREG.md`
-> **after** an independent pre-run critic GO. Renaming is the freeze act.
 
 ## Frozen stimuli
 
