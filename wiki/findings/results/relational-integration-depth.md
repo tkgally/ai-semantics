@@ -157,7 +157,7 @@ It does **NOT** show:
 - **Not rich constitution.** Per [`essay/update-is-not-constitution`](../essays/update-is-not-constitution.md),
   this is still on the **thin / single-reader-recoverable** side of the thin/rich criterion: a single
   reader handed the record can intersect the three stated constraints. It is **not** path-dependence
-  (rung iii — see the open decision [`decisions/open/relational-rung-iii-path-dependence`](../../decisions/open/relational-rung-iii-path-dependence.md))
+  (rung iii — see the ratified decision [`decisions/resolved/relational-rung-iii-path-dependence`](../../decisions/resolved/relational-rung-iii-path-dependence.md))
   and **not** between-agent constitution (rung iv). This result does not move the claim toward those
   rungs.
 - **Not a human comparison** (`anchor: internal-contrast-only`). No in-repo resource grounds human
