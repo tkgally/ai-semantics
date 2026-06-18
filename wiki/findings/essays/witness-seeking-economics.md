@@ -249,10 +249,11 @@ The figure-to-figure rendering removed the read-off while holding everything els
 trials), and **the signature persisted** — "the single-move-reader signature persists even when each move is
 a trivial lookup," with gpt still applying "only one of the two moves 65.6% of the time" on the order-stated
 arm ([`result/relational-order-composition-c-figure-to-figure`](../results/relational-order-composition-c-figure-to-figure.md)).
-A signature that *survives* the removal of sub-axis (1) **falsifies (1) and promotes (2)**: "the difficulty
-is **not** the per-move computation the figure-maps removed; it is **holding and applying two operations in
-sequence** (the chaining itself)." The probe relocated the implicated axis from a two-way disjunction to a
-single named axis — a real information gain, collected on a **non-witness**.
+A signature that *survives* the removal of sub-axis (1) **disfavors (1) and promotes (2)** (on this one
+`internal-contrast-only` run, at the strength its page states): "the difficulty is **not** the per-move
+computation the figure-maps removed; it is **holding and applying two operations in sequence** (the chaining
+itself)." The probe relocated the implicated axis from a two-way disjunction toward a single named axis — a
+real information gain, collected on a **non-witness**.
 
 So an on-signature, single-variable easing has **two** payouts, not one:
 
@@ -270,7 +271,7 @@ ranks above an off-signature one not only because its non-witness *lowers the po
 given there) but because its non-witness is **constructive** — it sharpens the map of where the difficulty
 lives and so aims the *next* probe better than the prior signature could. The contrast is exact in the
 project's own record: the off-signature K=4 non-witness left the implicated-axis map unchanged (its failures
-were "dominated by single-move readers," the "identical failure signature to K=6"); the on-signature
+were ones in which "single-move readers dominate," the "identical failure signature to K=6"); the on-signature
 figure-to-figure non-witness *redrew* it (read-off out, chaining in).
 
 Two bounds keep this honest. **First, the dividend is collected only by a genuinely single-variable easing** —
