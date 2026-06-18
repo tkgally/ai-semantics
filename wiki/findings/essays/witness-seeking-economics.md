@@ -72,6 +72,24 @@ links:
 > pays out even when it returns no witness) and gives a second rationale for the project's single-variable
 > design discipline. The closure ≠ suspension line is untouched: relocating the implicated axis hands the
 > next probe a sharper target — the opposite of closing the negative.
+>
+> **Update (2026-06-18, later session — trigger (a) and trigger (f) both tested; logged per essay
+> discipline).** This essay named the next well-targeted easing — a **worked-example scaffold** on the
+> implicated **chaining** axis — and it was then run
+> ([`result/relational-order-composition-c-worked-example`](../results/relational-order-composition-c-worked-example.md)):
+> one worked example demonstrating the chaining mechanic, added to the byte-identical fig trials (a clean
+> **single-variable** easing; pre-run critic GO, post-run verifier REPRODUCED). **Trigger (a) did NOT fire —
+> no witness** (gemini DIRECT 0.625, gpt 0.156; claude RESPECTS-ORDER at ceiling). The diagnostic-dividend
+> mechanism paid out exactly as the section below predicts, in its **persist** branch: the single-move
+> signature *persisted* (gpt's *intensified* to 84.4% single-move with the order stated), so the easing
+> **subtracted a sub-axis** — the single-move reading is **not** a demonstration/comprehension gap (showing
+> the procedure did not help), so the residual difficulty is chaining **execution**. This is the second
+> on-signature non-witness to pay a constructive dividend, corroborating the section's claim. **Trigger (f)
+> did NOT fire:** the signature *persisted/intensified*, it did not *change kind* (the models did not stop
+> being single-move readers and fail some new way) — so this is the persist case the section already treats,
+> not the contrasting change case (f) anticipates. The closure ≠ suspension line holds: the suspension note
+> on the result page was **updated**, not closed — only **fewer chaining steps** remains un-eased, and it is
+> near its ≥2-move floor.
 
 ## The occasion
 
@@ -337,12 +355,17 @@ empty fourth box.
 
 ## Revision triggers (read before citing)
 
-- **(a) A witness found on a so-far-un-eased axis.** If a future well-targeted easing (figure-to-figure
-  moves, fewer chaining steps, a worked-example scaffold) lets gemini or gpt clear the on-demand
-  composition gate, the witness fires, the existence question is settled positive, and this essay's reading
-  of the K=4 non-witness as "off-signature, weak" is *confirmed* (the right axis carried the witness the
-  wrong axis could not). The essay is corroborated, not overturned — but the specific suspension would be
-  reopened-and-resolved-positive, exactly as the economics predicts a cheap targeted probe can do.
+- **(a) A witness found on a so-far-un-eased axis.** *Tested twice 2026-06-18 and did NOT fire (no
+  witness):* the **figure-to-figure** read-off easing and then the **worked-example scaffold** on the
+  chaining axis ([`result/relational-order-composition-c-worked-example`](../results/relational-order-composition-c-worked-example.md))
+  both left gemini and gpt below the on-demand gate (the scaffold: gemini 0.625, gpt 0.156), while claude
+  stayed at ceiling. So no witness has yet appeared — the trigger stays **live** for the one remaining
+  un-eased axis (**fewer chaining steps**, near its ≥2-move floor) or a different/easier operation pair.
+  If such a future well-targeted easing lets gemini or gpt clear the gate, the witness fires, the existence
+  question is settled positive, and this essay's reading of the K=4 non-witness as "off-signature, weak" is
+  *confirmed* (the right axis carried the witness the wrong axes could not). The essay is corroborated, not
+  overturned — but the specific suspension would be reopened-and-resolved-positive, exactly as the economics
+  predicts a cheap targeted probe can do.
 - **(b) A structural bound on a witness-search space.** An in-repo argument that a whole class of easings
   cannot carry a witness (the relational program's transcript ceiling is the existing exemplar for the
   *rich-side* question; an analogous bound for some *thin-side* composition capability would be new) would
@@ -364,7 +387,13 @@ empty fourth box.
   difficulty is chaining). If a future single-variable on-signature easing instead *shifts* the signature —
   the model stops being a single-move reader and fails some new way — the dividend is still collected but
   redraws the implicated-axis map differently; the section would gain a contrasting worked case, sharpening
-  (not overturning) the general claim that an on-signature non-witness is constructive.
+  (not overturning) the general claim that an on-signature non-witness is constructive. *Tested 2026-06-18
+  and did NOT fire:* the worked-example-scaffold easing
+  ([`result/relational-order-composition-c-worked-example`](../results/relational-order-composition-c-worked-example.md))
+  left the single-move signature *persisting and intensifying* (gpt 65.6% → 84.4% single-move), not
+  changing kind — the **persist** case the section already treats, which subtracted the demonstration-gap
+  sub-axis. The trigger stays **live** for any future on-signature easing whose signature shifts to a new
+  failure mode.
 
 ## Honesty box
 
