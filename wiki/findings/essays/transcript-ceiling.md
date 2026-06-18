@@ -7,7 +7,7 @@ meaning-senses:
   - distributional
   - model-internal
   - grounded
-status: draft
+status: live
 contingent-on: []
 created: 2026-06-17
 updated: 2026-06-18
@@ -34,7 +34,21 @@ links:
 
 # Essay: the transcript ceiling
 
-> **Status: draft (2026-06-17). A philosophical-track essay arguing in the project's own voice.** Its
+> **Status: live (promoted 2026-06-18, from draft of 2026-06-17). A standing philosophical-track
+> position the project argues in its own voice — `live` means an active, held position, *not*
+> established or proven.** The essay was created in one session (2026-06-17); its named puncture test,
+> revision trigger (a), was run in a *separate later session* (2026-06-18,
+> [`result/relational-order-composition-c`](../results/relational-order-composition-c.md) — the
+> strongest order-load-bearing text design the project can build: two genuinely non-commuting moves,
+> STEP/FLIP); and the puncture **did not occur** (the pre-run adjudication gate, biased *against* the
+> rich reading, ruled the operation-order gap **THIN**). A *third* session (2026-06-18) promotes it.
+> That clean cross-session separation — conceived in one session, tested in another, promoted in a third
+> — is what licenses calling it standing. This is an **essay-lifecycle promotion** (draft → live), **not**
+> a `decisions/` ratification of an anchor or operationalization, and it fixes no yardstick and proves no
+> result. The thesis below remains a **conjecture about the project's own method**, hedged with "may":
+> one design and one operation pair (STEP/FLIP, two moves) is **corroboration, not proof**, and all four
+> revision triggers (a)–(d) stay live — trigger (a) included, for *other* certified Option-C designs. A
+> philosophical-track essay arguing in the project's own voice. Its
 > original contribution is *conceptual*: it asks whether the project's recurring
 > **single-reader-recoverability** criterion — the cut [`essay/update-is-not-constitution`](update-is-not-constitution.md)
 > draws between a *thin* (merely updated) and a *rich* (constituted) convention — is best read as a
@@ -69,6 +83,16 @@ links:
 > design, one operation pair (STEP/FLIP, two moves), so trigger (a) **stays live** for other certified
 > Option-C designs, and trigger (b) (a different-medium rung-(iv) instrument) is wholly untouched. The
 > "may"/conjecture hedging below stands; the ceiling is corroborated, not established.
+
+> **Promotion to live (2026-06-18).** On the strength of the trigger-(a) test recorded in the update
+> immediately above — run in a *separate, later* session than the one that wrote this essay and judged
+> THIN by a gate biased against the rich reading — this essay is promoted from `draft` to `live`. `live`
+> marks it as an active, standing position the project holds in its own voice; it does **not** mean the
+> conjecture is proven. The promotion changes status only: the argument, the honesty box, the revision
+> triggers, and every cited quote are unchanged, and the calibration is deliberately tightened (not
+> loosened) — one corroborated design is not a proof, so the thesis stays a falsifiable conjecture and
+> all four triggers (a)–(d) remain live. See the trigger-(a) update directly above for the test detail;
+> this note does not restate it. (This is an essay-lifecycle promotion, not a `decisions/` ratification.)
 
 ## The position
 
