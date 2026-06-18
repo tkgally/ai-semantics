@@ -10,8 +10,10 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-06-18
 links:
+  - rel: depends-on
+    target: result/relational-order-composition-c
   - rel: refines
     target: essay/update-is-not-constitution
   - rel: refines
@@ -47,6 +49,26 @@ links:
 > their stated (thin, `internal-contrast-only`) strength, and there is **no human comparison** anywhere
 > in this essay. The thesis is a *conjecture*, hedged throughout with "may," and carries explicit
 > puncture conditions (see Revision triggers). Read those before citing.
+
+> **Update (2026-06-18) — revision trigger (a) tested → NOT activated; ceiling corroborated, not
+> punctured.** The certified Option-C run that trigger (a) anticipated has now been run:
+> [`result/relational-order-composition-c`](../results/relational-order-composition-c.md). Its design is
+> exactly the named puncture test — two genuinely **non-commuting** operations (STEP/FLIP on a 6-track),
+> so two orders of the same move-set reach different end states and a shuffle is not a no-op. **Outcome:
+> the puncture did not occur.** The pre-run adjudication gate (biased against the rich reading, applied
+> *before* the run) ruled the operation-order gap **THIN** — the stamped move-list is in the record, so a
+> single reader applies it in stamp order and reads off the answer (single-reader-recoverable). So
+> trigger (a) is **not** activated: the ceiling **holds** for the relational axis. The empirical detail
+> cuts the right way — `claude-sonnet-4.6` spontaneously orders the two non-commuting moves by their
+> round stamps **at ceiling** (COMP 1.000, Wilson LB 0.949), and `gemini-3.5-flash` cannot compose them
+> even when told the order (UNINTERPRETABLE); but **both** cases sit on the thin side, because even the
+> model that aces the strongest order-load-bearing text design the project can build does so via a gap a
+> single reader of the record could reconstruct. This is the essay's thesis confirmed by its own named
+> test, on the strongest design available to it. **Calibration:** this **strengthens** the conjecture (a
+> named puncture test was run and the puncture did not happen) but does **not** prove it — it is one
+> design, one operation pair (STEP/FLIP, two moves), so trigger (a) **stays live** for other certified
+> Option-C designs, and trigger (b) (a different-medium rung-(iv) instrument) is wholly untouched. The
+> "may"/conjecture hedging below stands; the ceiling is corroborated, not established.
 
 ## The position
 
@@ -219,11 +241,18 @@ This essay is a conjecture about the project's method and is explicitly revisabl
 evidence that would puncture or bound it.
 
 - **(a) A certified Option-C gap the adjudication gate judges genuinely non-single-reader-recoverable.**
-  If a rung-(iii) operation-semantics design survives shortcut certification and produces a live-vs-
-  shuffled gap that the pre-run gate (biased against the rich reading) rules is *not* recoverable by a
-  single reader of the final record, the ceiling is **punctured for the relational axis** — a text
-  record would have carried a rich-side surplus after all, and the thesis would be wrong as stated. (The
-  decision's honest expectation is that this will not happen, but the gate exists to allow it.)
+  *(Tested 2026-06-18 → **not activated**; gap adjudicated **thin**; ceiling holds; trigger stays **live**
+  for other certified Option-C designs.)* If a rung-(iii) operation-semantics design survives shortcut
+  certification and produces a live-vs-shuffled gap that the pre-run gate (biased against the rich
+  reading) rules is *not* recoverable by a single reader of the final record, the ceiling is **punctured
+  for the relational axis** — a text record would have carried a rich-side surplus after all, and the
+  thesis would be wrong as stated. (The decision's honest expectation is that this will not happen, but
+  the gate exists to allow it.) **First test:**
+  [`result/relational-order-composition-c`](../results/relational-order-composition-c.md) (2026-06-18) is
+  exactly such a certified Option-C design (two non-commuting moves); the pre-run gate ruled the
+  operation-order gap **thin** (the stamped move-list is in the record), so trigger (a) did **not** fire
+  and the ceiling is corroborated — see the dated update note at the top of this essay. The trigger
+  remains live for other Option-C operation pairs / a different operationalization.
 - **(b) A between-agent (rung iv) instrument in a different medium.** A relational instrument that records
   commitments/entitlements/challenges — necessarily *not* a text transcript of the final state — would
   move the rich side from "outside the probe's range" to "measured," and would bound this essay to

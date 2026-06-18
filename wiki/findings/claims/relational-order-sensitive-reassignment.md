@@ -9,7 +9,7 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-16
-updated: 2026-06-17
+updated: 2026-06-18
 links:
   - rel: depends-on
     target: result/relational-spontaneous-recency-a
@@ -23,6 +23,8 @@ links:
     target: concept/relational-meaning
   - rel: depends-on
     target: result/relational-stamp-comprehension-b
+  - rel: depends-on
+    target: result/relational-order-composition-c
 ---
 
 # Claim: LLM referential conventions are order-sensitive (non-commutative) when the history disambiguates by recency
@@ -97,9 +99,32 @@ spontaneously weighting the round stamp.
    taken 0.000 of the time ([`result/relational-integration-depth`](../results/relational-integration-depth.md)).
    So the "more turns" worry is bounded one step — integration is not a depth-1 artifact — though
    the result is again saturated at ceiling (robust to *one* further turn of depth, not arbitrary
-   depth/grid-size/partial-conflict).
+   depth/grid-size/partial-conflict). **Order-sensitive *composition* — the strong, non-commutative
+   sense — is now tested** (2026-06-18) and the result is a **split**
+   ([`result/relational-order-composition-c`](../results/relational-order-composition-c.md)): with two
+   genuinely **non-commuting** operations (STEP/FLIP on a 6-track, so the two stamp orders reach
+   different end states), `claude-sonnet-4.6` **spontaneously orders the two moves by their round
+   stamps at ceiling** (COMP target 1.000, Wilson [0.949, 1.0]; DIRECT on-demand gate 0.861 PASS;
+   reversed-order/start/single-move readings taken 0.000) — a **stricter** dependence than the
+   commutative *survival* shown at rung (ii), since a commutative conjunction cannot pass it. But
+   `gemini-3.5-flash` **cannot compose the two moves even when told the order** (DIRECT gate 0.583 <
+   0.80 → UNINTERPRETABLE), so order-sensitive composition is occupied by **one model**, not the panel
+   — narrower than the both-model ceilings of rungs (i)–(ii). Still **thin** (single-reader-recoverable;
+   *"respects operation order,"* not rung iii / constitution).
 3. **Thin, not rich.** "Latest-binding-wins" may be a shallow update heuristic; this claim does not
-   separate thin order-sensitivity from deep path-dependence.
+   separate thin order-sensitivity from deep path-dependence. **The deep path-dependence (rung iii)
+   question is now addressed at the yardstick level** (2026-06-18): the Option-C non-commuting-operation
+   design — the **strongest order-load-bearing text design** the project can build — was built,
+   certified, and run
+   ([`result/relational-order-composition-c`](../results/relational-order-composition-c.md)), and its
+   gap was **adjudicated THIN** before the run (single-reader-recoverable: the stamped move-list is in
+   the record). Under
+   [`decisions/resolved/relational-rung-iii-path-dependence`](../../decisions/resolved/relational-rung-iii-path-dependence.md)
+   the **rich-side rung (iii) is documented structurally closed for text-only stimuli** — a transcript
+   *is* a final content+stamps record, so no text stimulus carries arrival-order surplus outside what
+   the record states. So "deep path-dependence" is **not reached by any text design** — this limit is
+   now **bounded, not open-ended**. (This is a *documented closure*, not a positive: the claim still
+   asserts only thin order-sensitivity.)
 4. **Spontaneous = query-not-directed AND flag-not-directed, but not literally cue-free.** The
    models resolve the choice among bindings by **recency** without the query asking them to, and —
    per the 2026-06-17 implicit-reassignment control
