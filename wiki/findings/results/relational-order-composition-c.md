@@ -1,7 +1,7 @@
 ---
 type: result
 id: relational-order-composition-c
-title: Order-sensitive composition (Option C, non-commuting operations) — one model (claude) spontaneously orders two non-commuting moves by their stamps at ceiling; gemini cannot compose them on demand (uninterpretable); the gap is adjudicated THIN and the rich-side rung (iii) is documented structurally closed for text-only stimuli
+title: Order-sensitive composition (Option C, non-commuting operations) — across the full three-model panel only claude spontaneously orders two non-commuting moves by their stamps at ceiling; gemini AND gpt cannot compose them on demand (both uninterpretable), so order-sensitive composition is a claude-only capability here; the gap is adjudicated THIN and the rich-side rung (iii) is documented structurally closed for text-only stimuli
 meaning-senses:
   - relational
   - model-internal
@@ -33,13 +33,19 @@ links:
 > survival of a compatible turn (which a commutative conjunction passes equally)?*
 > ([`result/relational-integration-rung-ii`](relational-integration-rung-ii.md), scope note 3;
 > [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md)
-> scope limit 2). **Split result:** `claude-sonnet-4.6` orders two non-commuting moves by their
-> round stamps **spontaneously and at ceiling** (RESPECTS-ORDER); `gemini-3.5-flash` **cannot
-> compose the two moves even when told the order** (DIRECT gate fails → UNINTERPRETABLE). The gap is
-> **adjudicated THIN before the run** (a single reader applies the stamped move-list in order and
-> reads off the answer) — reported as *"respects operation order,"* **not** rung (iii). The
+> scope limit 2). **Split result, now read across the full three-model panel:** `claude-sonnet-4.6`
+> orders two non-commuting moves by their round stamps **spontaneously and at ceiling**
+> (RESPECTS-ORDER); **both** `gemini-3.5-flash` **and** `gpt-5.4-mini` **cannot compose the two moves
+> even when told the order** (DIRECT gate fails → UNINTERPRETABLE for each). So order-sensitive
+> composition is occupied by **claude alone** — a one-of-three capability, not a panel property; two
+> separately-trained models cannot even compose two non-commuting moves on demand in this instrument.
+> The gap is **adjudicated THIN before the run** (a single reader applies the stamped move-list in
+> order and reads off the answer) — reported as *"respects operation order,"* **not** rung (iii). The
 > rich-side rung (iii) is documented **structurally closed for text-only stimuli** (the parallel,
-> promotable headline). `anchor: internal-contrast-only`; **no human-comparison claim.**
+> promotable headline). `anchor: internal-contrast-only`; **no human-comparison claim.** (gpt added in
+> a later 2026-06-18 session — the generality re-run named by
+> [`essay/capability-split`](../essays/capability-split.md) trigger (a); see *Third-model extension*
+> below.)
 
 ## The question (precise)
 
@@ -98,6 +104,7 @@ Design: [`relational-order-composition-c`](../../../experiments/designs/relation
 |---|---|---|---|---|---|---|---|---|---|
 | claude-sonnet-4.6 | **0.861** (31/36) | **1.000** (72/72) | [0.949, 1.000] | 0.000 | 0.000 | 0.000 | 0.000 | 0 | **RESPECTS-ORDER** |
 | gemini-3.5-flash | **0.583** (21/36) | 0.319 | [0.223, 0.434] | 0.222 | 0.000 | 0.153 | 0.264 | 0 | **UNINTERPRETABLE** |
+| gpt-5.4-mini | **0.194** (7/36) | 0.111 | [0.057, 0.204] | 0.125 | 0.069 | 0.181 | 0.250 | 0 | **UNINTERPRETABLE** |
 
 - **claude — RESPECTS-ORDER.** Its DIRECT on-demand composition passes (0.861 > 0.80), and on COMP it
   recovers the **stamp-order** end figure **every time** (72/72, Wilson LB 0.949 — far above the 0.50
@@ -112,7 +119,15 @@ Design: [`relational-order-composition-c`](../../../experiments/designs/relation
   rate (0.319) is therefore **uninterpretable** — the gate correctly refuses to read it (we cannot
   tell spontaneous order-blindness from inability-to-compose). gemini follows no single shortcut
   cleanly (swapped 0.222, flip-only 0.264, step-only 0.153) — it is simply failing the task.
-- **Clean record:** 216/216 answered, **0 NA, 0 retried, 0 length-truncation** both models.
+- **gpt — UNINTERPRETABLE (third-model extension).** Its DIRECT on-demand gate fails even harder than
+  gemini's (0.194 < 0.80, Wilson [0.097, 0.350] — the whole CI sits far below the floor): gpt-5.4-mini
+  cannot compose two non-commuting spatial moves *even when told the order explicitly*. Its COMP rate
+  (0.111) is therefore uninterpretable. The error pattern is diagnostic of the failure mode: the bulk
+  of gpt's wrong answers are **single-move readers** (flip-only 0.250, step-only 0.181) — it frequently
+  applies only **one** of the two stamped moves, rather than composing both. It answered in strict
+  forced format on all 108 records (0 NA, 0 retried, 0 truncation), so the low score is a genuine
+  composition-ability limit, not a parse artifact.
+- **Clean record:** 324/324 answered across the three models, **0 NA, 0 retried, 0 length-truncation**.
 
 **Discipline.** Independent pre-run critic + adjudicator GO (THIN adjudication; reader-family
 enumeration; anti-cheat PASS). Independent **post-run verifier** re-derived every stamp-order target
@@ -151,10 +166,15 @@ It does **NOT** show:
 
 - **Not rich constitution, not path-dependence (rung iii).** See point 2; the adjudication settled
   this before any data.
-- **Not a both-model finding.** Only claude clears the on-demand gate. gemini is uninterpretable here
-  (an instrument-capability limit, not a clean order-blind null). So order-sensitive composition is
-  occupied **by claude**, not by "both panel models" — generality is bounded, and the single-model
-  positive is weaker than the both-model ceilings of rungs (i)–(ii).
+- **Not a both-model finding — and now confirmed not a panel finding.** Only claude clears the
+  on-demand gate. **Both** gemini and gpt are uninterpretable here (an instrument-capability limit for
+  each, not a clean order-blind null). So order-sensitive composition is occupied **by claude alone**
+  across the full three-model panel — a **one-of-three** capability, not a property of "the panel" or
+  of "LLMs"; generality is bounded, and the single-model positive is weaker than the both-model
+  ceilings of rungs (i)–(ii). Running the third model did **not** widen the split toward a panel
+  property (the outcome [`essay/capability-split`](../essays/capability-split.md) trigger (a)
+  anticipated for a *composing* third model); it **sharpened the claude-only reading** — two
+  separately-trained models cannot compose two non-commuting moves on demand in this instrument.
 - **Not a single-forward-pass behaviour for claude.** claude **ignored the forced-format
   instruction** and emitted chain-of-thought on ~98/108 records, ending with the answer on the last
   line (which the parser extracted). So "spontaneous" means *claude chose, unprompted, to reason in
@@ -165,9 +185,11 @@ It does **NOT** show:
 
 ## Honesty box
 
-- **Split verdict, single-model positive.** claude RESPECTS-ORDER at ceiling (COMP 72/72, Wilson LB
-  0.949; DIRECT 0.861); gemini UNINTERPRETABLE (DIRECT 0.583 < 0.80). The positive is **one model**,
-  not the panel — narrower than rungs (i)–(ii), which both models cleared.
+- **Split verdict, single-model positive (full panel).** claude RESPECTS-ORDER at ceiling (COMP
+  72/72, Wilson LB 0.949; DIRECT 0.861); gemini UNINTERPRETABLE (DIRECT 0.583 < 0.80); gpt
+  UNINTERPRETABLE (DIRECT 0.194 < 0.80). The positive is **one of three models**, not the panel —
+  narrower than rungs (i)–(ii), which both models cleared. Two separately-trained models fail the
+  on-demand composition gate.
 - **claude emitted CoT despite the forced format.** 98/108 claude replies were chain-of-thought with
   the answer on the final line (non-strict parse). The independent post-run verifier re-derived each
   stamp-order target from the geometry and confirmed the last-line extraction is the genuine final
@@ -176,13 +198,44 @@ It does **NOT** show:
 - **gemini's failure is a composition-ability limit, not a parse artifact.** gemini gave 108 strict
   single-token answers; its DIRECT errors are genuine wrong figures (verified against the derived
   target). The instrument is simply too hard for it — so it yields no usable order-sensitivity signal.
+- **gpt's failure is likewise a composition-ability limit, not a parse artifact.** gpt gave 108 strict
+  single-figure answers (0 NA, 0 retried, 0 truncation); its DIRECT errors are genuine wrong figures,
+  predominantly **single-move** readers (flip-only 0.250, step-only 0.181) — it applied only one of the
+  two stamped moves. The independent post-run verifier re-derived every stamp-order target from the
+  STEP/FLIP geometry, re-parsed all 108 records with its own parser (0 disagreements), and confirmed
+  the failure is genuine, not formatting noise.
 - **Adjudicated THIN; rich side closed by construction.** The decision's gate, applied before the run
   and biased against the rich reading, ruled the gap thin; the rich-side rung (iii) closure for
   text-only stimuli holds regardless of the verdict. A null (had both models been order-blind) would
   have been equally promotable.
 - **One operationalization.** STEP/FLIP on a 6-track, two moves, two rounds, text figures. Generality
   (other operation pairs, >2 moves, image referents, cross-family dyads, a panel that can all compose)
-  untested.
-- **Spend.** 216 finding-bearing calls + 2 liveness = **$0.29835 billed** (`usage.cost`-summed,
-  0 missing; claude $0.23175, gemini $0.06383, liveness $0.00278), inside the $0.55 per-run hard stop
-  and the $5.00/day cap (day total 2026-06-18 ≈ $0.298).
+  untested. The third-model extension tested *panel* generality (claude-only confirmed across three
+  models); the *instrument* generality directions above remain untested.
+- **Spend.** Original run (claude+gemini): 216 finding-bearing calls + 2 liveness = **$0.29835 billed**
+  (`usage.cost`-summed, 0 missing; claude $0.23175, gemini $0.06383, liveness $0.00278). Third-model
+  extension (gpt): 108 finding-bearing calls + 1 liveness = **$0.03702 billed** (gpt $0.03663, liveness
+  $0.00038; 0 missing). Both inside the $0.55 per-run hard stop; day total 2026-06-18 ≈ **$0.335** of
+  the $5.00/day cap.
+
+## Third-model extension (gpt-5.4-mini) — provenance
+
+Run in a later 2026-06-18 session to test the panel generality the honesty box and
+[`essay/capability-split`](../essays/capability-split.md) trigger (a) named. Run dir:
+[`experiments/runs/2026-06-18-relational-order-composition-c-gpt/`](../../../experiments/runs/2026-06-18-relational-order-composition-c-gpt/).
+
+- **Same frozen instrument, byte-identical stimuli.** `stimuli.json` is byte-identical to the original
+  run (sha256 of the newline-stripped blob = `89f078e3…374cfc`, matching the original PREREG); probe /
+  analyze / verdict-map code unchanged. Only the panel dict differs (`{"gpt": panel.B}`).
+- **No panel-change decision owed.** `openai/gpt-5.4-mini` **is** `panel.B`
+  ([`config/models.md`](../../../config/models.md)); the budget panel-change rule fires only for a
+  model *not* in the panel. gpt was dropped from the earlier relational *history-perturbation* line for
+  a **stimulus-generation** reason (it could not supply solo-decodable near-twin descriptions in the
+  harvest design — [`result/relational-history-perturbation-v4`](relational-history-perturbation-v4.md);
+  [`result/relational-stamp-comprehension-b`](relational-stamp-comprehension-b.md)), which is
+  **inapplicable** to a fully synthetic instrument with no model-generated descriptions.
+- **Independent gates.** A fresh **pre-run critic** GO'd the extension (panel-change adjudication: none
+  owed; drop-reason adjudication: inapplicable; freeze intact). A fresh **post-run verifier**
+  REPRODUCED every number from raw (DIRECT 7/36 = 0.194 [0.097, 0.350]; COMP 8/72 = 0.111; 0 NA;
+  $0.037017 billed, 0 missing) and confirmed gpt's failure is a genuine composition-ability limit
+  (single-move readers dominate), not a parse artifact.

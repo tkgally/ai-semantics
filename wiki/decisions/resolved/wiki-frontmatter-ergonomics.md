@@ -1,10 +1,55 @@
 ---
 id: wiki-frontmatter-ergonomics
 title: Should the wiki add per-page frontmatter summaries/keywords (and a leaner index) to make cold-start triage cheaper — and if so, how minimal?
-status: open
+status: resolved
 opened: 2026-06-18
 opened-by: Tom (interactive request)
 contingent-artifacts: []
+resolved: 2026-06-18
+resolved-by: autonomous (adversarial review)
+resolution: ADOPT Option D (trim the always-loaded index; move the resolved-decisions changelog to a history page; no per-page summary/keyword headers)
+---
+
+# Resolution (2026-06-18, autonomous adversarial review, cross-session)
+
+> **RATIFIED: ADOPT Option D** — trim the always-loaded [`index.md`](../../index.md) (move the resolved-decisions
+> changelog out to [`index.md`](../../index.md), this directory's history page); **do not** add per-page
+> `summary:`/`keywords:` headers (Option A's header half and Option B are rejected).
+> `resolved-by: autonomous (adversarial review)`. Opened 2026-06-18 out-of-band at Tom's interactive
+> request; ratified the next autonomous session (cross-session boundary held). Tom's standing override
+> outranks this if he ever rules otherwise.
+
+**Why Option D and not the provisional default (Option A).** An independent adversarial-review agent
+re-derived the cold-start cost from the repo and found **two premises of the opening analysis below
+are factually wrong as of 2026-06-18**, and both undercut specifically the *per-page-header* half of
+Option A:
+
+1. **The resolved-decisions changelog is NOT "most of the ~207 KB" of the index.** Measured: the
+   `### Resolved decisions` changelog was **~22.7 KB (~11%)** of [`index.md`](../../index.md); the **per-page Pages
+   catalog (~181 KB, ~87%)** is the real bulk. So moving the changelog out (the Option-D / Option-A
+   move 1) is still net-positive — the changelog is the most-prunable block and is never needed on the
+   main triage path — but it captures ~11% of the file, not "most." Adopt D for the honest reason.
+2. **`wiki/decisions/*` are NOT frontmatter-bare today.** Every page under `wiki/decisions/` already
+   begins with `---`. The genuinely bare pages are meta/catalog files ([`meaning-senses.md`](../../meaning-senses.md),
+   [`base/wanted.md`](../../base/wanted.md), [`executive-summary.md`](../../executive-summary.md), [`base/resources/index.md`](../../base/resources/index.md), the scouting note, [`index.md`](../../index.md)
+   itself) — exactly the pages where a `summary:`/`keywords:` header earns least and still adds the
+   "third copy / drift" maintenance tax [`CLAUDE.md`](../../../CLAUDE.md)'s never-silent-drift rule warns against. So
+   Option A move 2 was aimed at a **mis-identified** set; its residual benefit is negligible. Cut it.
+
+**What was implemented this session:** the changelog was relocated to
+[`decisions/resolved/index.md`](index.md); `index.md` keeps a count, the governance note, and a
+one-line pointer (plus the single most-recent-decision line). **No** per-page headers were added; **no**
+new `senselint` field-check was added (senselint already warns-not-errors on missing frontmatter
+outside `findings/`, so Option D needs none). The convention change is logged in
+[`log.md`](../../../log.md). **Anti-cheat:** `contingent-artifacts: []` is accurate — no research
+result is tilted; this fixes only a navigation convention. The "yardstick, never the result" rule is
+satisfied vacuously (no result rides on it).
+
+**Note on the analysis below:** the original opening analysis is preserved verbatim for the record;
+its two factual errors (the "most of the ~207 KB" claim in §"The costs to weigh" point 3, and the
+"`wiki/decisions/*` … no frontmatter" claim in point 2) are **corrected above** and should be read in
+light of this resolution.
+
 ---
 
 # Decision: wiki frontmatter / cold-start-triage ergonomics
@@ -83,7 +128,7 @@ Three coordinated moves:
 1. **Lean the index.** Keep [`wiki/index.md`](../../index.md) as the single triage surface but curate it: a
    current-state dashboard + a tight typed-page catalog at the top; move the verbose
    *resolved-decisions changelog* (the paragraph-length per-decision bullets, now the bulk of the
-   ~207 KB) into a dedicated history page (e.g. `wiki/decisions/resolved/index.md`), leaving
+   ~207 KB) into a dedicated history page (e.g. [`wiki/decisions/resolved/index.md`](index.md)), leaving
    one-line pointers in the main index.
 2. **Minimal headers on the four bare page classes.** Add a sentence-form `title:` and a short
    `keywords:` list to the pages that currently have *no* frontmatter (`wiki/decisions/*`,

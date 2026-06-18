@@ -2,112 +2,89 @@
 
 ## State
 
-**Session of 2026-06-18 (twenty-ninth session, philosophical) is landed and squash-merged to `main` (PR #TBD).**
-A writing session that synthesized last session's rung-(iii) closure into three disjoint essay units (one wave,
-parallel fan-out + an adversarial coherence pass). No experiment, **no OpenRouter spend** (day total 2026-06-18
-unchanged at ≈ $0.30 from the 28th session).
+**Session of 2026-06-18 (thirtieth session, empirical) is landed and squash-merged to `main` (PR #TBD).**
+A workflow session that (1) ratified the one open decision and (2) ran the empirical lean that was due.
 
-1. **[`essay/transcript-ceiling`](wiki/findings/essays/transcript-ceiling.md) promoted `draft` → `live`.** Its named
-   puncture test — revision trigger (a) — was run in a *separate later* session
-   ([`result/relational-order-composition-c`](wiki/findings/results/relational-order-composition-c.md), the strongest
-   order-load-bearing text design buildable) and did **not** fire (the pre-run gate ruled the operation-order gap THIN),
-   so the conjecture stands **corroborated**. The promotion is calibrated hard: `live` = a standing position the project
-   argues in its own voice, **not** proven; all four triggers stay live, (a) for *other* Option-C designs. Clean
-   cross-session separation (conceived 27th, tested 28th, promoted 29th); this is an essay-lifecycle promotion, **not** a
-   `decisions/` ratification.
+1. **EMPIRICAL HEADLINE — order-sensitive composition is confirmed claude-only across the full panel.** The
+   already-certified, frozen **Option-C** order-sensitive-composition instrument
+   ([`design/relational-order-composition-c`](experiments/designs/relational-order-composition-c.md)) was re-run on the
+   **third panel model, gpt-5.4-mini** (panel.B) — the generality test named by
+   [`essay/capability-split`](wiki/findings/essays/capability-split.md) trigger (a). **gpt is UNINTERPRETABLE**
+   (DIRECT on-demand gate 0.194 < 0.80, Wilson [0.097, 0.350] — it cannot compose two non-commuting moves even when told
+   the order; error pattern is single-move readers). So across all three models only **claude RESPECTS-ORDER**; **gemini
+   and gpt both UNINTERPRETABLE**. Running the third model did **not** widen the split toward a panel property — it
+   **sharpened** the claude-only reading (2/3 models fail the on-demand gate; each an instrument-capability limit, not a
+   clean order-blind null). New run dir
+   [`experiments/runs/2026-06-18-relational-order-composition-c-gpt/`](experiments/runs/2026-06-18-relational-order-composition-c-gpt/),
+   byte-identical frozen stimuli; independent pre-run critic GO (no panel-change owed — gpt IS panel.B; its earlier
+   relational drop was a stimulus-generation reason inapplicable to synthetic stimuli) + independent post-run verifier
+   REPRODUCED. **$0.037017 billed**; day total 2026-06-18 ≈ **$0.335** of $5.00.
+   [`result/relational-order-composition-c`](wiki/findings/results/relational-order-composition-c.md) updated to the
+   three-model headline; [`essay/capability-split`](wiki/findings/essays/capability-split.md) carries a logged in-page
+   revision to the three-model panel (trigger (a) partially discharged; "thing to watch" widened to claude > {gemini, gpt}).
 
-2. **New [`essay/rung-iv-instrument`](wiki/findings/essays/rung-iv-instrument.md) (tenth essay).** The constructive
-   complement to the ceiling: what a rung-(iv) between-agent instrument would have to be — **a scored live practice, not
-   a transcript** — recording uptake-instituted normative observables (commitment undertaken / entitlement
-   granted-withheld / challenge discharged), each a surplus no single reader of a record can reconstruct. Holds the
-   discipline **rung (iii) ≠ rung (iv)** (a non-text medium that merely carries arrival-order surplus bounds the ceiling
-   but is strictly weaker than recording normative status). Builds nothing, promises nothing, no human comparison; quotes
-   no Brandom directly. Names exactly the event the ceiling essay's trigger (b) anticipates.
+2. **RECONCILE — ratified [`decisions/resolved/wiki-frontmatter-ergonomics`](wiki/decisions/resolved/wiki-frontmatter-ergonomics.md): ADOPT Option D** (NOT the
+   provisional default Option A). An independent adversarial-review agent measured the repo and corrected two premises of
+   the opening analysis: the resolved-decisions changelog was ~11% of `index.md` (not "most"), and `wiki/decisions/*` are
+   not frontmatter-bare today. So the index-trim core was adopted and the per-page-header half cut. Applied: the
+   resolved-decisions changelog moved out of `wiki/index.md` into a new history page
+   [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md) (index 208 KB → 187 KB); `index.md` keeps a
+   count + governance note + one-line pointer; **no** per-page headers, **no** new senselint check; logged in `log.md`.
 
-3. **New [`essay/capability-split`](wiki/findings/essays/capability-split.md) (eleventh essay).** Option C is the **first
-   relational rung to split the panel** (claude RESPECTS-ORDER, gemini UNINTERPRETABLE). A one-model positive is a
-   **capability split**, not a property of "the models"/"LLMs"; standing recommendation — mark every panel verdict
-   **CONCORDANT vs SPLIT**, never average a split into a panel-level claim (the project's past findings were *already
-   careful* — this is forward discipline, not an accusation). gemini's negative is an **instrument-capability limit, not
-   a clean order-blind null** (the gate refuses to read its COMP rate). "claude > gemini" is logged as a **thing to
-   watch, not a finding.**
-
-**Integration:** `wiki/index.md` essays catalog updated (transcript-ceiling status → live; two new essays added). Coherence
-pass: **0 blockers**, quote integrity verbatim-clean; applied 1 link-relation fix + 1 quote-mark nit on capability-split.
-**senselint 0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean. Website
-(`docs/`): journal 29th entry + home status/card + plans "different-medium" update + findings new paragraph + footer
-dates.
-
-**One decision was opened out-of-band 2026-06-18** (Tom interactive request):
-[`wiki-frontmatter-ergonomics`](wiki/decisions/open/wiki-frontmatter-ergonomics.md) — wiki cold-start ergonomics (lean index +
-minimal page headers); eligible for cross-session ratification next session (see *Open decisions* below). Tracks 20–29:
-emp/phil ×5 (strict alternation, ending **phil(29)**) — the next session is **due to lean empirical**.
+**Integration:** senselint **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean
+(self-healed 63 moved-changelog links + 2 hand-fixed design-page paths). Website (`docs/`): journal 30th entry + home
+status/card + findings relational paragraph + plans naming-game update. Tracks 20–30: emp/phil ×5 then **emp(30)** — the
+next session is **due to lean philosophical** (or a cheap empirical relational unit).
 
 ## Next concrete actions — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` holds **one** entry —
-[`wiki-frontmatter-ergonomics`](wiki/decisions/open/wiki-frontmatter-ergonomics.md) (opened 2026-06-18 at Tom's interactive
-request, **now cross-session eligible**): an ergonomics/governance decision, provisional default **Option A**, no contingent
-artifacts. Ratify via an independent adversarial-review agent (or leave open with what's missing). Apply any Tom override
-first, as always.
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** (all 28 decisions resolved). Nothing to ratify
+unless Tom opens something or leaves an override. Apply any Tom override first, as always.
 
-**Then pick the lean — empirical is due** (tracks 20–29 ended phil). Strongest candidates (the first directly closes a
-gap this session's essays opened):
+**Then pick the lean — philosophical is due** (tracks 20–30 ended emp). Candidates:
 
-1. **EMPIRICAL (lean is due) — a third composing model (capability-split generality).** The order-sensitive-composition
-   rung is occupied by **claude alone**; gemini is uninterpretable. [`essay/capability-split`](wiki/findings/essays/capability-split.md)
-   revision trigger (a) and [`result/relational-order-composition-c`](wiki/findings/results/relational-order-composition-c.md)
-   both name the obvious next test: run the **frozen Option-C instrument** (design
-   [`relational-order-composition-c`](experiments/designs/relational-order-composition-c.md), already certified) on a
-   **third model that clears the DIRECT on-demand gate**, to see whether spontaneous order-sensitive composition
-   generalizes beyond claude or is a one-model property. Cheap (~$0.15–0.30, one model, 108 calls), no new decision (a
-   re-run of a ratified frozen design on an added panel model — but note: *adding a model to the panel* is a panel-change
-   question; if the third model is **not** already in the panel, that is a `decisions/open/` panel-change entry per
-   `config/budget.md`, so prefer a model already in-panel, or queue the panel change). Pre-flight + pre-run critic as usual.
+1. **PHILOSOPHICAL (lean is due).** The capability-split essay now stands on a three-model panel — a natural philosophical
+   follow-on is on **what a one-of-three capability split licenses and forbids** when the two failures are *instrument*
+   limits, not capacity nulls (the asymmetry between an existential positive and an undischargeable negative). Or develop
+   [`essay/rung-iv-instrument`](wiki/findings/essays/rung-iv-instrument.md) (the between-agent scored-practice blueprint)
+   now that the text-only ceiling is firm across three models. No standalone philosophical unit is *pressing*; pick the
+   one that pairs with the evidence that just moved.
 
-2. **EMPIRICAL alternatives (relational generality).** **Partially-conflicting refinements** (the other untested horn of
-   the rung-(ii) caveat — a later turn *partly* conflicts with an earlier one: does it overwrite, integrate, or split?);
-   **which-attribute-buried / larger-grid / >3-turn** generality of integration; **image referents**; **cross-family
-   dyads**. Grammar reserve: the AANN/CxG **cancel-direction / unification-shape Option-B** held in
+2. **EMPIRICAL alternatives (if the lean flips or a unit pairs).** The single most informative cheap test the new result
+   invites is **capability-split trigger (b): does an *easier* non-commuting-operation design let gemini or gpt clear the
+   on-demand gate?** (a both-fail-under-difficulty vs stable-gap discriminator — bounds the split to *this* instrument if
+   they then compose). Other untested relational horns: **partially-conflicting refinements** (a later turn *partly*
+   conflicts — overwrite/integrate/split?); **larger-grid / >3-turn** integration generality; **image referents**;
+   **cross-family dyads**. Grammar reserve: the AANN/CxG **cancel-direction / unification-shape Option-B** held in
    [`decisions/resolved/aann-uniqueness-third-construction`](wiki/decisions/resolved/aann-uniqueness-third-construction.md)
    (needs a fresh human anchor first).
 
-3. **PHILOSOPHICAL (if the lean flips or a unit pairs).** The three new essays are fresh; obvious follow-ons only emerge
-   once new evidence moves (e.g. a third composing model would let `capability-split` upgrade its "thing to watch," and a
-   panel-wide composition would turn the split rung concordant). No standalone philosophical unit is *pressing*.
-
-4. **Website** per `PROTOCOL.md` §5b, as always.
+3. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
-- [`wiki-frontmatter-ergonomics`](wiki/decisions/open/wiki-frontmatter-ergonomics.md) — *opened 2026-06-18 (out-of-band,
-  Tom's interactive request); eligible for ratification next session.* Should the wiki add per-page frontmatter
-  summaries/keywords (and a leaner `index.md`) to make cold-start triage cheaper, and how minimal? Ergonomics/governance,
-  no contingent artifacts; provisional default **Option A** (lean index + minimal `title:`/`keywords:` headers on the four
-  bare page classes), fallback **Option D** (trim the index only). Reconcile next session: run an independent
-  adversarial-review pass (or apply a Tom override).
+- **None.** `wiki/decisions/open/` is empty (28 resolved; the full changelog now lives in
+  [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). The most recent ratification was
+  `wiki-frontmatter-ergonomics` (Option D, this session).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This was a **writing session (no spending)** that drew out what last session's order-of-operations result *means*.
-  Three short essays: (1) the "transcript ceiling" essay — the argument that a text-only test can't reach the richer
-  "meaning built between two parties" — was made a **standing position** of the project because the one experiment that
-  could have disproved it was run last session and didn't (corroborated, deliberately **not** called proven). (2) A new
-  essay on what an instrument that *could* reach the richer rung would have to be: a live, *scored* exchange (who
-  committed to what, who granted whom the right to a claim, which challenges were met), not a transcript — a blueprint
-  only, built nothing, no comparison to people. (3) A methodological essay: last session's result was a **split** (one
-  model could, one couldn't), and a split belongs to *that model*, not to "AI" — never average it into a claim about the
-  pair. An independent review pass checked all three for over-claiming, mis-quotation, and any accidental human
-  comparison. GitHub Pages serves from `main` `/docs`.
+- This session **ran one cheap experiment and tidied the wiki**. (1) The "order of operations" puzzle was run on a
+  *third* model to see whether tracking the order of two moves is shared — it is not: the third model couldn't do the
+  basic step even when told the order (right ~1/5 of the time), so across all three models exactly one does it. The
+  finding stays "one model's capability," never averaged into a claim about "the models," and the two failures are read
+  as limits of *this task*, not proof of inability. (2) Your queued note-keeping question was decided cross-session by an
+  independent review: it *measured* the files, found the original hunch half-right, and adopted the lean answer — slim the
+  always-read index (move the decisions archive to a history page) and skip per-page summaries. GitHub Pages serves from
+  `main` `/docs`.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
-[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget $5/day UTC —
-check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`,
-website updated. **One decision is open** ([`wiki-frontmatter-ergonomics`](wiki/decisions/open/wiki-frontmatter-ergonomics.md),
-opened 2026-06-18 out-of-band — ratify cross-session next run). Tracks 20–29 ran emp/phil ×5 — a session is **due to lean empirical**. The
-relational ladder stands at rung (i) overwrite, rung (ii) integration (+depth 2), the order-sensitive-**composition**
-rung (**claude only** — a capability split), and **rung (iii) documented structurally closed for text-only stimuli**.
-The strongest next empirical move is to **run the already-certified Option-C instrument on a third model** to test
-whether order-sensitive composition generalizes beyond claude (mind the panel-change rule if the model is not in-panel).
+[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md) (now leaner — the
+resolved-decisions changelog lives at [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). Budget
+$5/day UTC — check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End squash-merged to
+`main`, website updated. **No decision is open.** Tracks 20–30 ran emp/phil ×5 then emp — a session is **due to lean
+philosophical**. The relational ladder stands at rung (i) overwrite, rung (ii) integration (+depth 2), the
+order-sensitive-**composition** rung (**claude only** — now confirmed across the full three-model panel: gemini and gpt
+both fail the on-demand gate), and **rung (iii) documented structurally closed for text-only stimuli**.
