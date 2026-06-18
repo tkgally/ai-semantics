@@ -111,5 +111,30 @@ internal-contrast-only`; **no human-comparison claim**.
 
 ## Independent pre-run critic
 
-*(to be completed before any finding-bearing call — a fresh independent agent gates instrument
-validity and governance)*
+**GO** (fresh independent agent, 2026-06-18, before any finding-bearing call). The critic reproduced
+the freeze (the fig-dir `stimuli.json` sha = `975e31bc…88ba`, **byte-identical** to the K=4
+`stimuli.json`; `build_trials.py`/`analyze.py`/`fixtures/make_fixtures.py` byte-identical to K=4; all
+fixture asserts PASS). It **recomputed the geometry from scratch** (did not trust the run's ops):
+STEP/FLIP do not commute at any of the 4 starts; re-derived target/swapped/single-move/start ends for
+all 96 records (**0 mismatches**); valid-config exclusion holds for every record; target figure and
+track-position uniform; only stamp-order beats 0.50 (print-order / both canonical = 0.50; const-figure
+/ track-position = 0.25; single-move / start / swapped = 0).
+
+**The key new check — the figure-to-figure rendering — passed cleanly.** Parsing the move tables back
+**out of the rendered prompt text** (trusting only text): the STEP/FLIP tables are the correct
+figure→figure maps derived from each record's `track`, every table a valid bijection (FLIP an
+involution, STEP a 4-cycle); listed in **fixed canonical SHAPES order** for all 96 (no positional
+leakage); **0 "Position N" leaks across all 96 prompts**; composing the two parsed tables in stamp
+order lands on `target_shape` and reversed on `swapped_shape` for **all 96 records** (text-traced).
+A 12-strategy new-shortcut hunt at the figure-table level found **only stamp-order = 1.0**; the
+track-position picker has **vanished** (no positions shown) — which only strengthens the proofing.
+DIRECT solvability (apply the two named tables in the stated order) = **32/32**.
+
+**The easing is on-signature** (removing the position↔figure read-off eases the per-move /
+chaining layer the single-move-reader signature implicates, not an off-signature axis); the DIRECT
+gate is a fair measured arbiter; the verdict map is symmetric and honest. **Governance: no new
+`wiki/decisions/open/` entry owed** — a rendering-only, byte-identical-trial easing within the
+already-ratified Option-C / `internal-contrast-only` frame, the exact "figure-to-figure" easing
+pre-named in `capability-split` trigger (b). Thresholds byte-identical (not retuned). **No BLOCKER,
+no SHOULD-FIX**; two harmless NITs (a contrast-example "Position 1" in a docstring; the `HARD_STOP_USD`
+framing — both correct in context).
