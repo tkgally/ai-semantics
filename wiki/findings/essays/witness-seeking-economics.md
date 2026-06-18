@@ -59,6 +59,19 @@ links:
 > DIRECT the most — 0.594→0.656 — yet still left the gap), and the economics' distinction holds: the search is
 > now **suspended on the read-off axis, not closed**. Trigger (a) (a witness on a so-far-un-eased axis) stays
 > **live** for the worked-example / fewer-steps designs.
+>
+> **Deepening (2026-06-18, thirty-fifth session — the on-signature non-witness re-read; logged per essay
+> discipline).** A later session re-examined this essay against the figure-to-figure result it had just
+> recorded and found the economics **under-credited** what an *on-signature* non-witness is worth. The
+> probe-value model below (expected information × probability-it-fires) counts a non-witness only as
+> "lowering the posterior." But the figure-to-figure run *also* paid a **diagnostic dividend**: by removing
+> one implicated sub-axis (the per-move read-off) while holding the failure-signature observation fixed, its
+> non-witness *relocated* the implicated axis from a two-way disjunction (read-off vs. chaining) to a single
+> named axis (chaining) — telling the next session where the difficulty is *not*. The new section **"The
+> diagnostic dividend"** adds this as a value-component of an on-signature, **single-variable** easing (it
+> pays out even when it returns no witness) and gives a second rationale for the project's single-variable
+> design discipline. The closure ≠ suspension line is untouched: relocating the implicated axis hands the
+> next probe a sharper target — the opposite of closing the negative.
 
 ## The occasion
 
@@ -212,6 +225,67 @@ So the K=4 result is correctly read not as "the negative is nearly closed" but a
 failed; the implicated axis is still un-eased; the search is **not** suspendable yet." The project's own
 pages already act on this; the essay only makes the rule explicit.
 
+## The diagnostic dividend: what an on-signature non-witness buys even when it doesn't fire
+
+The K=4 worked instance above is the *floor* of a non-witness's value — an off-signature easing whose
+failure barely moves the posterior. The **figure-to-figure** easing that followed
+([`result/relational-order-composition-c-figure-to-figure`](../results/relational-order-composition-c-figure-to-figure.md))
+reaches a *ceiling* a non-witness can hit, and it forces a refinement the two-factor value model above does
+not yet contain. That probe re-rendered the byte-identical K=4 trials (same `stimuli.json` sha) so each move
+became an explicit figure→figure lookup table with no positions shown — easing the **on-signature** axis (the
+per-move read-off the single-move signature implicates), changing the *single* variable of rendering. It
+found **no witness**: neither gemini (DIRECT 0.656) nor gpt (0.250) cleared the on-demand gate. By the
+two-factor model so far, that is an on-signature non-witness — it "meaningfully lowers the posterior," more
+than the off-signature K=4 did. True, but incomplete.
+
+What the two-factor model misses is that this non-witness *also* told the project **where the difficulty is
+not**. The mechanism is general. A failure *signature* is rarely a single hypothesis; it is usually a small
+disjunction of them. The single-move-reader signature — the model applies only one of the two stamped moves —
+was, before this probe, compatible with (at least) two readings: **(1)** the per-move read-off is too costly,
+so the model economizes by doing one move; or **(2)** the chaining itself — holding two operations and
+applying *both* in sequence — is the bottleneck, independent of any per-move cost. The K=6 and K=4
+instruments could not separate these: both kept the positional read-off, so both left (1) and (2) bundled.
+The figure-to-figure rendering removed the read-off while holding everything else fixed (byte-identical
+trials), and **the signature persisted** — "the single-move-reader signature persists even when each move is
+a trivial lookup," with gpt still applying "only one of the two moves 65.6% of the time" on the order-stated
+arm ([`result/relational-order-composition-c-figure-to-figure`](../results/relational-order-composition-c-figure-to-figure.md)).
+A signature that *survives* the removal of sub-axis (1) **falsifies (1) and promotes (2)**: "the difficulty
+is **not** the per-move computation the figure-maps removed; it is **holding and applying two operations in
+sequence** (the chaining itself)." The probe relocated the implicated axis from a two-way disjunction to a
+single named axis — a real information gain, collected on a **non-witness**.
+
+So an on-signature, single-variable easing has **two** payouts, not one:
+
+- **If it fires,** the negative flips — the witness the whole search is for.
+- **If it does not fire but the signature *persists* through the removal of one implicated sub-axis,** the
+  probe has *subtracted that sub-axis from the implicated set*. It does not so much lower a scalar posterior
+  as **redraw the implicated-axis map** that drives the next allocation, telling the next session which
+  un-eased axis to fund (here: the **chaining** axis — a worked-example scaffold, or fewer chaining steps —
+  rather than anything touching the read-off). (Had the signature instead *changed* — the model ceasing to be
+  a single-move reader and failing some new way — that too would be diagnostic, redrawing the map in a
+  different direction.)
+
+This is the refinement the "axis novelty / signature match" section above was missing: an on-signature easing
+ranks above an off-signature one not only because its non-witness *lowers the posterior more* (the reason
+given there) but because its non-witness is **constructive** — it sharpens the map of where the difficulty
+lives and so aims the *next* probe better than the prior signature could. The contrast is exact in the
+project's own record: the off-signature K=4 non-witness left the implicated-axis map unchanged (its failures
+were "dominated by single-move readers," the "identical failure signature to K=6"); the on-signature
+figure-to-figure non-witness *redrew* it (read-off out, chaining in).
+
+Two bounds keep this honest. **First, the dividend is collected only by a genuinely single-variable easing** —
+one that isolates a sub-axis while holding the others fixed, as the byte-identical-trial figure-to-figure
+design did (only the rendering changed). A confounded "easier" probe that moves several axes at once forfeits
+the dividend: when the signature persists you cannot tell which removed axis was the inert one. So the
+diagnostic dividend is a *second* argument for the single-variable, on-signature easings the project already
+prefers — the first was cleaner inference on the witness question; the second is that only such a design lets
+the *non-witness* pay out. **Second, the dividend does not touch the closure ≠ suspension line.** Relocating
+the implicated axis closes nothing — it names the next un-eased axis to probe, which *extends* the search with
+a sharper target rather than ending it. An on-signature non-witness that pays a diagnostic dividend is, if
+anything, the strongest case for keeping the witness-search *open* (now better-aimed), not for suspending it;
+the suspension recorded for this line still rests on the **budget**, not on the implicated-axis map having
+gone blank.
+
 ## The reporting discipline: a witness-search suspension note
 
 [`essay/undischargeable-negative`](undischargeable-negative.md) gave the project a filing system for
@@ -284,6 +358,12 @@ empty fourth box.
 - **(e) A fetched human resource licensing a capacity comparison.** None is in-repo. One bearing on how a
   *human* capability-search is bounded under finite resources would let the economics be applied
   comparatively — currently forbidden by the no-human-comparison discipline this essay observes.
+- **(f) An on-signature easing whose failure signature *changes* rather than persists.** The diagnostic-
+  dividend section reasons from a *persisting* signature (read-off removed, single-move reading survives →
+  difficulty is chaining). If a future single-variable on-signature easing instead *shifts* the signature —
+  the model stops being a single-move reader and fails some new way — the dividend is still collected but
+  redraws the implicated-axis map differently; the section would gain a contrasting worked case, sharpening
+  (not overturning) the general claim that an on-signature non-witness is constructive.
 
 ## Honesty box
 
@@ -307,6 +387,12 @@ empty fourth box.
 - The thesis preserves [`essay/undischargeable-negative`](undischargeable-negative.md) intact: a behavioral
   negative stays undischargeable no matter when the search is suspended. Suspension is a budget decision,
   not an epistemic one, and is always reopenable.
+- The thirty-fifth-session **diagnostic-dividend** deepening is a refinement of this essay's own value
+  model, grounded in [`result/relational-order-composition-c-figure-to-figure`](../results/relational-order-composition-c-figure-to-figure.md):
+  an on-signature, single-variable non-witness is **constructive** — its persisting failure signature
+  relocated the implicated axis from "read-off vs. chaining" to "chaining," redrawing the map that aims the
+  next probe. It adds **no** empirical claim (it reads the result page at its stated strength) and does not
+  touch the closure ≠ suspension line.
 - **No human comparison** is made or owed: the cited result is `internal-contrast-only`, and the human leg
   of every cited contrast is unanchored in-repo. The economics is general to budgeted capability-probing,
   but the essay applies it only to the project's own LLM probes.
