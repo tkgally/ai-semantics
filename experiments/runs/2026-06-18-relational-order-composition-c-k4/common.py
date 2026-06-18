@@ -84,8 +84,8 @@ Design (non-commuting operation semantics; EASIER K=4 instance).
     tell spontaneous order-blindness from inability-to-compose).
 
 Shortcut-proofing (certified at build + on idealized-reader fixtures, BEFORE any model is queried).
-The answer space is the 6 track figures. Records are built so that, over each subset:
-  (a) the TARGET figure (stamp-order end) is UNIFORM over the 6 figures => every fixed figure-
+The answer space is the 4 track figures. Records are built so that, over each subset:
+  (a) the TARGET figure (stamp-order end) is UNIFORM over the 4 figures => every fixed figure-
       identity picker scores exactly 1/K;
   (b) the TARGET's TRACK POSITION is balanced => every fixed track-position picker scores <= 1/K
       (and never the 0.50 bar);
@@ -95,7 +95,7 @@ The answer space is the 6 track figures. Records are built so that, over each su
   (d) the start figure and each single-move reader (STEP-only, FLIP-only from the start) and the
       reversed-order ("swapped") reader are EXCLUDED from being the target by construction =>
       each scores 0 on the target;
-  (e) frequency flat (6 distinct figures once each).
+  (e) frequency flat (4 distinct figures once each).
 So no figure-identity / track-position / print-order / canonical-order / start / single-move /
 reversed-order shortcut can clear the 0.50 bar; only ordering the two moves by their stamps can.
 """

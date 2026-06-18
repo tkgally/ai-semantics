@@ -78,7 +78,7 @@ def _build_block(cfg, query, bi, rid_start, place_rng):
     place_rng.shuffle(disp_orders)
     records, rid = [], rid_start
     for j in range(C.K):
-        target_shape = C.SHAPES[j]                       # cycles all 6 shapes once across the block
+        target_shape = C.SHAPES[j]                       # cycles all 4 shapes once across the block
         others = [s for s in C.SHAPES if s != target_shape]
         place_rng.shuffle(others)
         track = [None] * C.K
@@ -127,7 +127,7 @@ def build():
 
 # ---- idealized-reader scorers (analytic certification) -----------------------------------
 def _const_fig_acc(records, shape):
-    """'always pick figure `shape`' -- all 6 shapes present every record, so this is just
+    """'always pick figure `shape`' -- all 4 shapes present every record, so this is just
     P(target == shape)."""
     return sum(1 for r in records if r["target_shape"] == shape) / len(records)
 
@@ -167,13 +167,13 @@ def assert_balance(records):
         rs = [r for r in records if r["subset"] == subset]
         n = len(rs)
         assert n > 0, f"{subset}: empty"
-        # 0) every record has all 6 distinct shapes; latest move-round > earlier; valid config
+        # 0) every record has all 4 distinct shapes; latest move-round > earlier; valid config
         for r in rs:
             assert sorted(r["track"]) == sorted(C.SHAPES), f"{subset} rid {r['rid']}: track not perm"
             assert r["r_hi"] > r["r_lo"], f"{subset} rid {r['rid']}: stamps not ordered"
             assert valid_config(r["start_idx"], r["order"]), f"{subset} rid {r['rid']}: invalid cfg"
             assert r["target_shape"] == r["track"][r["target_idx"]]
-        # 1) target figure UNIFORM over the 6 shapes => const-figure / figure-pref picker = 1/K
+        # 1) target figure UNIFORM over the 4 shapes => const-figure / figure-pref picker = 1/K
         figc = Counter(r["target_shape"] for r in rs)
         assert set(figc) == set(C.SHAPES) and len(set(figc.values())) == 1, \
             f"{subset}: target figure not uniform: {dict(figc)}"

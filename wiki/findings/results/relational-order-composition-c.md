@@ -212,6 +212,13 @@ It does **NOT** show:
   (other operation pairs, >2 moves, image referents, cross-family dyads, a panel that can all compose)
   untested. The third-model extension tested *panel* generality (claude-only confirmed across three
   models); the *instrument* generality directions above remain untested.
+- **Witness-seeking follow-up (no witness).** A later 2026-06-18 session ran the
+  [`essay/capability-split`](../essays/capability-split.md) trigger-(b) probe — the **same** STEP/FLIP
+  pair with the track shrunk **K=6 → K=4** (an easier instrument) — to test whether gemini's/gpt's
+  UNINTERPRETABLE here was driven by K=6 difficulty. It was **not**: both still failed the on-demand
+  gate at K=4 (gemini 0.594, gpt 0.438; claude still RESPECTS-ORDER), so the two UNINTERPRETABLE
+  verdicts **survive halving the instrument** — the claude-only composition reading is bounded from
+  below ([`result/relational-order-composition-c-easier-k4`](relational-order-composition-c-easier-k4.md)).
 - **Spend.** Original run (claude+gemini): 216 finding-bearing calls + 2 liveness = **$0.29835 billed**
   (`usage.cost`-summed, 0 missing; claude $0.23175, gemini $0.06383, liveness $0.00278). Third-model
   extension (gpt): 108 finding-bearing calls + 1 liveness = **$0.03702 billed** (gpt $0.03663, liveness

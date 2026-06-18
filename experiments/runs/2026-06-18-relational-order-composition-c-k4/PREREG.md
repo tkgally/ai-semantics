@@ -99,4 +99,20 @@ Option-C design. `anchor: internal-contrast-only`.
 
 ## Independent pre-run critic
 
-> _GO / NO-GO recorded here after the fresh pre-run-critic pass, before any finding-bearing call._
+**GO** (fresh independent agent, 2026-06-18, before any finding-bearing call). The critic computed
+the geometry itself (did not trust the run's code): STEP/FLIP **do not commute** at all 4 starts;
+FLIP is a clean 2-swap derangement (no fixed point); **exactly 4 valid configs**, one per target
+position, order balanced 2 SF / 2 FS; recomputed target/swapped/single-move ends for all 96 records
+(**0 mismatches**); confirmed `stimuli.json` sha256 `975e31bc…88ba` matches byte-for-byte.
+Brute-forced **19 reader families** against the real COMP stimuli — **the only reader > 0.50 is
+genuine stamp-order composition (1.0000)**; every constant-figure / track-position reader = 0.25,
+print-order / both canonical = 0.50, and the **exotic recency readers** (higher-stamp-move,
+last-printed-move, lower-stamp-move, first-printed-move) = **0.0000**; **no reader beats 0.50 without
+stamp-order**. Ruled the "easier" framing fair and clean (smaller answer space *raises* the
+identity/position floor to 0.25 but the bar stays 0.50, untouched; `analyze.py` byte-identical; K is
+effectively the sole manipulated variable; symmetric verdict map honest; claude positive-control
+sound). **Governance: no new `wiki/decisions/open/` entry owed** — a scale parameter (K) of the
+already-ratified Option-C instrument, exactly as the gpt third-model extension owed none; thresholds
+byte-identical to the K=6 run that predates this outcome (not tuned). `anchor: internal-contrast-only`
+appropriate. **No BLOCKER, no SHOULD-FIX**; two cosmetic stale-"6" docstring NITs (fixed; stimuli sha
+unchanged).
