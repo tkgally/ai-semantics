@@ -38,13 +38,18 @@ pass: **0 blockers**, quote integrity verbatim-clean; applied 1 link-relation fi
 (`docs/`): journal 29th entry + home status/card + plans "different-medium" update + findings new paragraph + footer
 dates.
 
-**No decision was opened this session.** Tracks 20–29: emp/phil ×5 (strict alternation, ending **phil(29)**) — the next
-session is **due to lean empirical**.
+**One decision was opened out-of-band 2026-06-18** (Tom interactive request):
+[`wiki-frontmatter-ergonomics`](wiki/decisions/open/wiki-frontmatter-ergonomics.md) — wiki cold-start ergonomics (lean index +
+minimal page headers); eligible for cross-session ratification next session (see *Open decisions* below). Tracks 20–29:
+emp/phil ×5 (strict alternation, ending **phil(29)**) — the next session is **due to lean empirical**.
 
 ## Next concrete actions — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — there is **no open decision to ratify**. Apply
-any Tom override first, as always.
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` holds **one** entry —
+[`wiki-frontmatter-ergonomics`](wiki/decisions/open/wiki-frontmatter-ergonomics.md) (opened 2026-06-18 at Tom's interactive
+request, **now cross-session eligible**): an ergonomics/governance decision, provisional default **Option A**, no contingent
+artifacts. Ratify via an independent adversarial-review agent (or leave open with what's missing). Apply any Tom override
+first, as always.
 
 **Then pick the lean — empirical is due** (tracks 20–29 ended phil). Strongest candidates (the first directly closes a
 gap this session's essays opened):
@@ -75,8 +80,12 @@ gap this session's essays opened):
 
 ## Open decisions
 
-- **None.** `wiki/decisions/open/` is empty. All twenty-seven decisions are resolved. No decision was opened this session
-  (an essay-lifecycle promotion is not a `decisions/` ratification).
+- [`wiki-frontmatter-ergonomics`](wiki/decisions/open/wiki-frontmatter-ergonomics.md) — *opened 2026-06-18 (out-of-band,
+  Tom's interactive request); eligible for ratification next session.* Should the wiki add per-page frontmatter
+  summaries/keywords (and a leaner `index.md`) to make cold-start triage cheaper, and how minimal? Ergonomics/governance,
+  no contingent artifacts; provisional default **Option A** (lean index + minimal `title:`/`keywords:` headers on the four
+  bare page classes), fallback **Option D** (trim the index only). Reconcile next session: run an independent
+  adversarial-review pass (or apply a Tom override).
 
 ## Standing-override notes (for Tom, if he looks)
 
@@ -96,7 +105,8 @@ gap this session's essays opened):
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
 [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget $5/day UTC —
 check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`,
-website updated. **No decision is open.** Tracks 20–29 ran emp/phil ×5 — a session is **due to lean empirical**. The
+website updated. **One decision is open** ([`wiki-frontmatter-ergonomics`](wiki/decisions/open/wiki-frontmatter-ergonomics.md),
+opened 2026-06-18 out-of-band — ratify cross-session next run). Tracks 20–29 ran emp/phil ×5 — a session is **due to lean empirical**. The
 relational ladder stands at rung (i) overwrite, rung (ii) integration (+depth 2), the order-sensitive-**composition**
 rung (**claude only** — a capability split), and **rung (iii) documented structurally closed for text-only stimuli**.
 The strongest next empirical move is to **run the already-certified Option-C instrument on a third model** to test
