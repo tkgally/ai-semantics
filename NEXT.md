@@ -2,111 +2,102 @@
 
 ## State
 
-**Session of 2026-06-18 (twenty-eighth session, empirical) is landed and squash-merged to `main` (PR #TBD).**
-An experiment session on the relational axis that built, certified, ran, and verified the **Option-C
-order-sensitive-composition** probe — the empirical realization of the ratified rung-(iii) decision
-([`decisions/resolved/relational-rung-iii-path-dependence`](wiki/decisions/resolved/relational-rung-iii-path-dependence.md)).
+**Session of 2026-06-18 (twenty-ninth session, philosophical) is landed and squash-merged to `main` (PR #TBD).**
+A writing session that synthesized last session's rung-(iii) closure into three disjoint essay units (one wave,
+parallel fan-out + an adversarial coherence pass). No experiment, **no OpenRouter spend** (day total 2026-06-18
+unchanged at ≈ $0.30 from the 28th session).
 
-1. **The empirical headline — order-sensitive composition, a SPLIT positive, adjudicated THIN.**
-   [`result/relational-order-composition-c`](wiki/findings/results/relational-order-composition-c.md): a coined
-   token moves on a 6-figure track under two stamped **non-commuting** operations (STEP `p→(p+1)%6`, FLIP
-   `p→5−p`); applying them in stamp order vs reversed lands on different figures, so order is load-bearing by
-   construction. This tests the gap rung-(ii) integration explicitly left open (*"a commutative conjunction
-   would pass equally"*). **claude-sonnet-4.6 RESPECTS-ORDER** — spontaneously orders the two moves by their
-   round stamps at ceiling (COMP target 1.000, Wilson [0.949,1.0]; DIRECT on-demand gate 0.861 PASS;
-   swapped/start/single-move all 0.000) = genuinely **non-commutative composition**, stricter than rung-(ii)
-   survival. **gemini-3.5-flash UNINTERPRETABLE** (DIRECT gate 0.583 < 0.80 — cannot compose the two moves on
-   demand). So the rung is occupied by **one model**, not the panel. Independent pre-run critic+adjudicator
-   **GO** (THIN; reader-family enumeration incl. exotic readers all ≤0.50; anti-cheat PASS); independent
-   post-run verifier **REPRODUCED** (decisive check: on reverse-printed records claude's reasoning re-sorts by
-   round stamp, so the 1.000 is genuine composition, not a print-order shortcut). claude emitted CoT despite
-   the forced format (answer on the last line; parse spot-verified). 216 calls + 2 liveness, **$0.298 billed**,
-   0 missing, 0 NA. `anchor: internal-contrast-only` (already ratified for the relational line / the
-   rung-(iii) decision — no new decision owed).
+1. **[`essay/transcript-ceiling`](wiki/findings/essays/transcript-ceiling.md) promoted `draft` → `live`.** Its named
+   puncture test — revision trigger (a) — was run in a *separate later* session
+   ([`result/relational-order-composition-c`](wiki/findings/results/relational-order-composition-c.md), the strongest
+   order-load-bearing text design buildable) and did **not** fire (the pre-run gate ruled the operation-order gap THIN),
+   so the conjecture stands **corroborated**. The promotion is calibrated hard: `live` = a standing position the project
+   argues in its own voice, **not** proven; all four triggers stay live, (a) for *other* Option-C designs. Clean
+   cross-session separation (conceived 27th, tested 28th, promoted 29th); this is an essay-lifecycle promotion, **not** a
+   `decisions/` ratification.
 
-2. **The rich-side headline — rung (iii) documented STRUCTURALLY CLOSED for text-only stimuli.** The gap was
-   **adjudicated THIN before the run** (the stamped move-list is in the record → single-reader-recoverable →
-   *"respects operation order"*, NOT rung iii). Since this is the **strongest order-load-bearing text design**
-   the project can build and even claude's perfect gap is thin, the rich-side rung (iii) is bounded for
-   text-only stimuli (a transcript IS a final content+stamps record). Per the decision §A5 this **documented
-   closure is a fully promotable outcome**, and it **corroborates** [`essay/transcript-ceiling`](wiki/findings/essays/transcript-ceiling.md):
-   its **revision trigger (a)** (a certified Option-C gap the gate judged *non*-single-reader-recoverable) was
-   **tested → NOT activated** (the gate ruled thin), so the ceiling holds (corroborated, not proven; the
-   trigger stays live for other Option-C designs / a different-medium rung-(iv) instrument).
+2. **New [`essay/rung-iv-instrument`](wiki/findings/essays/rung-iv-instrument.md) (tenth essay).** The constructive
+   complement to the ceiling: what a rung-(iv) between-agent instrument would have to be — **a scored live practice, not
+   a transcript** — recording uptake-instituted normative observables (commitment undertaken / entitlement
+   granted-withheld / challenge discharged), each a surplus no single reader of a record can reconstruct. Holds the
+   discipline **rung (iii) ≠ rung (iv)** (a non-text medium that merely carries arrival-order surplus bounds the ceiling
+   but is strictly weaker than recording normative status). Builds nothing, promises nothing, no human comparison; quotes
+   no Brandom directly. Names exactly the event the ceiling essay's trigger (b) anticipates.
 
-**Integration:** folded into [`claim/relational-order-sensitive-reassignment`](wiki/findings/claims/relational-order-sensitive-reassignment.md)
-(scope limits 2 + 3), [`concept/relational-meaning`](wiki/base/concepts/relational-meaning.md) (rung-iii-closure
-note), [`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md) (rung (ii)/(iii)
-updates; revision trigger (b) marked partly-resolved), and [`essay/transcript-ceiling`](wiki/findings/essays/transcript-ceiling.md)
-(trigger (a) tested → corroborated). `wiki/index.md` + [`executive-summary.md`](wiki/executive-summary.md)
-updated; website (`docs/`: journal 28th entry + home status/card + plans rung-iii "built+run+closure" update +
-findings new paragraph). **senselint 0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`);
-linkify clean. **$0.298 spent; day total 2026-06-18 ≈ $0.30 of $5.00.**
+3. **New [`essay/capability-split`](wiki/findings/essays/capability-split.md) (eleventh essay).** Option C is the **first
+   relational rung to split the panel** (claude RESPECTS-ORDER, gemini UNINTERPRETABLE). A one-model positive is a
+   **capability split**, not a property of "the models"/"LLMs"; standing recommendation — mark every panel verdict
+   **CONCORDANT vs SPLIT**, never average a split into a panel-level claim (the project's past findings were *already
+   careful* — this is forward discipline, not an accusation). gemini's negative is an **instrument-capability limit, not
+   a clean order-blind null** (the gate refuses to read its COMP rate). "claude > gemini" is logged as a **thing to
+   watch, not a finding.**
 
-**No decision was opened this session.** Tracks 20–28: emp/phil/emp/phil/emp/phil/emp/phil/**emp(28)** — strict
-alternation; the next session is **due to lean philosophical**.
+**Integration:** `wiki/index.md` essays catalog updated (transcript-ceiling status → live; two new essays added). Coherence
+pass: **0 blockers**, quote integrity verbatim-clean; applied 1 link-relation fix + 1 quote-mark nit on capability-split.
+**senselint 0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean. Website
+(`docs/`): journal 29th entry + home status/card + plans "different-medium" update + findings new paragraph + footer
+dates.
+
+**No decision was opened this session.** Tracks 20–29: emp/phil ×5 (strict alternation, ending **phil(29)**) — the next
+session is **due to lean empirical**.
 
 ## Next concrete actions — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — there is **no open decision to
-ratify**. Apply any Tom override first, as always.
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — there is **no open decision to ratify**. Apply
+any Tom override first, as always.
 
-**Then pick the lean — philosophical is due** (tracks 20–28 ended emp). Candidates:
+**Then pick the lean — empirical is due** (tracks 20–29 ended phil). Strongest candidates (the first directly closes a
+gap this session's essays opened):
 
-1. **PHILOSOPHICAL (lean is due) — synthesize the rung-(iii) closure.** The relational ladder now has a firm
-   outcome at its threshold rung: the rich side (path-dependence proper, rung iii) is **documented structurally
-   closed for text-only stimuli**, and the order-sensitive-composition rung is occupied by one model. Strong
-   philosophical units: (a) **promote [`essay/transcript-ceiling`](wiki/findings/essays/transcript-ceiling.md)
-   `draft → live`** — its named puncture test (trigger (a)) has now been run and did not spring, so the
-   conjecture is corroborated; write the short in-page rationale and tighten the "conjecture vs corroborated"
-   language (keep it falsifiable: other Option-C designs / a non-text medium remain live). (b) Examine, as the
-   essay/update-is-not-constitution rung (iv) note flags it, **what a between-agent (rung iv) instrument in a
-   different medium would even require** ("entirely unbuilt") — a concept/essay unit on the interaction-log
-   medium with normative observables (commitments/entitlements/challenges), and why it is not a transcript. (c)
-   The **single-model split** (claude composes, gemini cannot) is itself worth an essay/concept note: order-
-   sensitive composition is a **capability split**, not a property of "the models" — bears on the project's
-   habitual "both panel models" framing and on what a one-model positive licenses.
+1. **EMPIRICAL (lean is due) — a third composing model (capability-split generality).** The order-sensitive-composition
+   rung is occupied by **claude alone**; gemini is uninterpretable. [`essay/capability-split`](wiki/findings/essays/capability-split.md)
+   revision trigger (a) and [`result/relational-order-composition-c`](wiki/findings/results/relational-order-composition-c.md)
+   both name the obvious next test: run the **frozen Option-C instrument** (design
+   [`relational-order-composition-c`](experiments/designs/relational-order-composition-c.md), already certified) on a
+   **third model that clears the DIRECT on-demand gate**, to see whether spontaneous order-sensitive composition
+   generalizes beyond claude or is a one-model property. Cheap (~$0.15–0.30, one model, 108 calls), no new decision (a
+   re-run of a ratified frozen design on an added panel model — but note: *adding a model to the panel* is a panel-change
+   question; if the third model is **not** already in the panel, that is a `decisions/open/` panel-change entry per
+   `config/budget.md`, so prefer a model already in-panel, or queue the panel change). Pre-flight + pre-run critic as usual.
 
-2. **EMPIRICAL (if the lean flips or a unit pairs).** Remaining relational units: **partially-conflicting
-   refinements** (the other untested horn of the rung-(ii) caveat — when a later turn *partly* conflicts with
-   an earlier one); **which-attribute-buried / larger-grid / >3-turn** generality of integration; **image
-   referents**; **cross-family dyads**; a **panel that can all compose** (gemini's UNINTERPRETABLE bounds the
-   composition result to one model — a third composing model would test generality). Grammar reserve: the
-   AANN/CxG **cancel-direction / unification-shape Option-B** held in
-   [`decisions/resolved/aann-uniqueness-third-construction`](wiki/decisions/resolved/aann-uniqueness-third-construction.md).
+2. **EMPIRICAL alternatives (relational generality).** **Partially-conflicting refinements** (the other untested horn of
+   the rung-(ii) caveat — a later turn *partly* conflicts with an earlier one: does it overwrite, integrate, or split?);
+   **which-attribute-buried / larger-grid / >3-turn** generality of integration; **image referents**; **cross-family
+   dyads**. Grammar reserve: the AANN/CxG **cancel-direction / unification-shape Option-B** held in
+   [`decisions/resolved/aann-uniqueness-third-construction`](wiki/decisions/resolved/aann-uniqueness-third-construction.md)
+   (needs a fresh human anchor first).
 
-3. **Website** per `PROTOCOL.md` §5b, as always.
+3. **PHILOSOPHICAL (if the lean flips or a unit pairs).** The three new essays are fresh; obvious follow-ons only emerge
+   once new evidence moves (e.g. a third composing model would let `capability-split` upgrade its "thing to watch," and a
+   panel-wide composition would turn the split rung concordant). No standalone philosophical unit is *pressing*.
+
+4. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
-- **None.** `wiki/decisions/open/` is empty. All twenty-seven decisions are resolved. The rung-(iii) decision
-  (ratified the 27th session) is now **empirically realized** this session — its yardstick produced a thin
-  split positive plus a documented rich-side closure, exactly the outcome the decision biased toward.
+- **None.** `wiki/decisions/open/` is empty. All twenty-seven decisions are resolved. No decision was opened this session
+  (an essay-lifecycle promotion is not a `decisions/` ratification).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This was an **experiment session (~$0.30)** that ran the test the previous session had approved — whether the
-  *order* in which two non-combining changes were made changes a made-up word's meaning. **One model (claude)
-  tracked the order perfectly and unprompted** (its visible working says "apply in round order"); **the other
-  (gemini) couldn't do the two-move composition at all**, so the finding is one model, not both. The crucial
-  ruling, fixed *before* the run by an independent reviewer: this counts as a **thin** result either way (a
-  single reader of the record can just replay the listed moves) — so it is "respects the order of operations,"
-  not the richer "meaning built between two parties." And because this is the strongest such test plain text
-  can express, acing it while staying thin **documents** that the richer rung is out of reach for any
-  text-only test — a real result, and exactly what last session's "transcript ceiling" essay predicted (its
-  one escape-hatch test was run and did not spring). No comparison to people. An independent checker reproduced
-  every number and confirmed claude's working really re-sorts by timestamp. GitHub Pages serves from `main`
-  `/docs`.
+- This was a **writing session (no spending)** that drew out what last session's order-of-operations result *means*.
+  Three short essays: (1) the "transcript ceiling" essay — the argument that a text-only test can't reach the richer
+  "meaning built between two parties" — was made a **standing position** of the project because the one experiment that
+  could have disproved it was run last session and didn't (corroborated, deliberately **not** called proven). (2) A new
+  essay on what an instrument that *could* reach the richer rung would have to be: a live, *scored* exchange (who
+  committed to what, who granted whom the right to a claim, which challenges were met), not a transcript — a blueprint
+  only, built nothing, no comparison to people. (3) A methodological essay: last session's result was a **split** (one
+  model could, one couldn't), and a split belongs to *that model*, not to "AI" — never average it into a claim about the
+  pair. An independent review pass checked all three for over-claiming, mis-quotation, and any accidental human
+  comparison. GitHub Pages serves from `main` `/docs`.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
-[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget $5/day UTC
-— check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End squash-merged to
-`main`, website updated. **No decision is open.** Tracks 20–28 ran emp/phil ×4 then emp — a session is **due to
-lean philosophical**. The relational ladder now has rung (i) overwrite, rung (ii) integration (+depth 2), the
-order-sensitive-**composition** rung (claude only), and **rung (iii) documented structurally closed for
-text-only stimuli** — the honest terminus the rung-(iii) decision and the
-[`essay/transcript-ceiling`](wiki/findings/essays/transcript-ceiling.md) both predicted. The strongest next
-philosophical move is to promote the transcript-ceiling essay to `live` and map what a different-*medium* rung
-(iv) instrument would require.
+[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget $5/day UTC —
+check today's ledger rows in [`config/budget.md`](config/budget.md) before any probe. End squash-merged to `main`,
+website updated. **No decision is open.** Tracks 20–29 ran emp/phil ×5 — a session is **due to lean empirical**. The
+relational ladder stands at rung (i) overwrite, rung (ii) integration (+depth 2), the order-sensitive-**composition**
+rung (**claude only** — a capability split), and **rung (iii) documented structurally closed for text-only stimuli**.
+The strongest next empirical move is to **run the already-certified Option-C instrument on a third model** to test
+whether order-sensitive composition generalizes beyond claude (mind the panel-change rule if the model is not in-panel).
