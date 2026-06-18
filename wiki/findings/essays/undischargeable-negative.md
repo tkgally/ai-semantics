@@ -183,6 +183,12 @@ gates (kind 2), the question is what evidence could *move* it. The table answers
 So the asymmetry sorts the project's possible moves against any suspected negative into one that is futile
 (re-run the failing probe), one that is decisive-if-it-fires (seek a witness), and one that is off the
 behavioral axis (argue the structure). That is a usable map for every empirical session that faces a null.
+What it does *not* settle — because the elicitation space is open, there is always one more easing to try —
+is *how much* witness-seeking is worth, and on what grounds a finite budget may suspend the search.
+[`essay/witness-seeking-economics`](witness-seeking-economics.md) takes up exactly that question, drawing a
+sharp line between **logical closure** (never available, the result above) and **practical suspension** (a
+provisional spending decision), and supplying the rule that the search should fund axis-diverse,
+failure-signature-matched easings and prefer a structural bound to exhaustion.
 
 ## The reporting discipline
 
