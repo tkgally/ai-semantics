@@ -20,6 +20,8 @@ links:
   - rel: depends-on
     target: result/relational-order-composition-c-easier-k4
   - rel: depends-on
+    target: result/relational-order-composition-c-figure-to-figure
+  - rel: depends-on
     target: concept/formal-vs-functional-competence
 ---
 
@@ -40,6 +42,23 @@ links:
 > new empirical claim** and makes **no human comparison**: every empirical sentence cites the in-repo page
 > that carries it, at that page's stated strength, and the result it reads is a non-witness null /
 > `internal-contrast-only`. Read the revision triggers before citing.
+>
+> **Update (2026-06-18, later session — the named on-signature probe ran; logged per essay discipline).** This
+> essay named the well-targeted next probe: ease the **implicated** axis (the per-move read-off the single-move
+> signature points at), e.g. "a figure-to-figure move design." That probe was then run
+> ([`result/relational-order-composition-c-figure-to-figure`](../results/relational-order-composition-c-figure-to-figure.md)):
+> the byte-identical K=4 trials re-rendered so each move is a figure→figure lookup table (no positions),
+> removing the read-off. **No witness** — neither gemini (DIRECT 0.656) nor gpt (0.250) cleared the gate — but
+> the single-move-reader signature **persisted even when each move is a trivial lookup**, localizing the
+> residual difficulty to **chaining itself** (not the per-move read-off). This is exactly the case the essay
+> anticipated: a non-witness on the **on-signature** axis, which it called "the first genuinely strong"
+> evidence and the trigger for a **witness-search suspension note** — now recorded on the result page (axes
+> eased: state-space + per-move read-off; implicated-but-un-eased: worked-example scaffold, fewer chaining
+> steps; structural bound: none yet; reopen condition: a cheap probe on those un-eased axes). The essay's
+> reading of the K=4 easing as off-signature is **corroborated** (the on-signature easing moved gemini's
+> DIRECT the most — 0.594→0.656 — yet still left the gap), and the economics' distinction holds: the search is
+> now **suspended on the read-off axis, not closed**. Trigger (a) (a witness on a so-far-un-eased axis) stays
+> **live** for the worked-example / fewer-steps designs.
 
 ## The occasion
 
