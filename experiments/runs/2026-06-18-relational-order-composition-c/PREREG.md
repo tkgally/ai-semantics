@@ -1,7 +1,3 @@
-# PREREG-draft — relational ORDER-SENSITIVE COMPOSITION (Option C)
-
-**This is the DRAFT.** `probe.py full` refuses to run until this is renamed `PREREG.md` AND records
-the frozen `stimuli.json` sha256 — done only after the independent pre-run critic GO.
 
 ## Frozen stimuli
 
