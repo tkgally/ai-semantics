@@ -1,0 +1,208 @@
+{
+  "direct_floor": 0.8,
+  "print_ceiling": 0.5,
+  "pos_chance": 0.16666666666666666,
+  "models": {
+    "claude": {
+      "n_total": 108,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "wilson95": [
+            0.9036,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "comp": {
+        "target_governs": {
+          "k": 72,
+          "n": 72,
+          "rate": 1.0,
+          "wilson95": [
+            0.9493,
+            1.0
+          ]
+        },
+        "swapped": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "start": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "step1": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "flip1": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "comp_sig": true
+      },
+      "verdict": "RESPECTS-ORDER"
+    },
+    "gemini": {
+      "n_total": 108,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "wilson95": [
+            0.9036,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "comp": {
+        "target_governs": {
+          "k": 72,
+          "n": 72,
+          "rate": 1.0,
+          "wilson95": [
+            0.9493,
+            1.0
+          ]
+        },
+        "swapped": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "start": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "step1": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "flip1": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "comp_sig": true
+      },
+      "verdict": "RESPECTS-ORDER"
+    },
+    "gpt": {
+      "n_total": 108,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "wilson95": [
+            0.9036,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "comp": {
+        "target_governs": {
+          "k": 62,
+          "n": 72,
+          "rate": 0.8611,
+          "wilson95": [
+            0.7629,
+            0.9228
+          ]
+        },
+        "swapped": {
+          "k": 10,
+          "n": 72,
+          "rate": 0.1389,
+          "wilson95": [
+            0.0772,
+            0.2371
+          ]
+        },
+        "start": {
+          "k": 1,
+          "n": 72,
+          "rate": 0.0139,
+          "wilson95": [
+            0.0025,
+            0.0746
+          ]
+        },
+        "step1": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "flip1": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "comp_sig": true
+      },
+      "verdict": "RESPECTS-ORDER"
+    }
+  },
+  "respects_order_models": [
+    "claude",
+    "gemini",
+    "gpt"
+  ],
+  "order_blind_models": []
+}
