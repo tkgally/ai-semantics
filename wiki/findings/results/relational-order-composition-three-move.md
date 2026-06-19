@@ -24,6 +24,8 @@ links:
     target: source/li-2024-cot-serial
   - rel: depends-on
     target: claim/relational-order-sensitive-reassignment
+  - rel: depends-on
+    target: essay/witness-seeking-economics
   - rel: refines
     target: concept/relational-meaning
 ---
@@ -232,10 +234,70 @@ slip, not a parse artifact and not a single-move read.
   cell).
 - **(iii) The thin/rich gap is untouched:** rung (iii) stays documented structurally closed for
   text-only stimuli; this result is on the thin side by construction (adjudicated before the run).
-- **(iv) The trigger-(b) hunt continues:** no channel-controlled composition bound has been found at any
-  depth/size tested. If one is wanted, the next move is **deeper still** (≥4 moves) or a qualitatively
-  harder serial demand — but note each deeper instrument needs fresh shortcut-proofing (the competing
-  reader set grows with depth).
+- **(iv) The trigger-(b) hunt has no channel-controlled bound at any depth/size tested** — and the
+  depth axis is now **suspended on budget + low prior** as the place to keep looking (see the suspension
+  note immediately below). A deeper-still (≥4-move) probe stays *available on reopen*, not foreclosed.
+
+## Witness/bound-search suspension on the DEPTH axis (recorded 2026-06-19, later session)
+
+A later session re-examined whether to push this axis to **≥4 moves** — the step that [`NEXT.md`](../../../NEXT.md)
+and point (iv) above had named as the priority next probe — and, applying
+[`essay/witness-seeking-economics`](../essays/witness-seeking-economics.md), records a **bound-search
+suspension on the depth axis**: *a spending decision, not a closure, and reopenable at any time.* The
+four-part note that essay's reporting discipline prescribes:
+
+- **(i) Axis pushed, and the verdict.** Composition **depth** was pushed 2 → 3. All three models came back
+  at/near ceiling (claude/gemini COMP 1.000; gpt 0.903; DIRECT 1.000 throughout) — **no strain whatever** at
+  depth three. The trigger-(b) contrast (a serial-computation negative that *survives* the wide channel)
+  returned **negative**.
+
+- **(ii) The prior that a bound sits near depth 4 is low.** Hunting a channel-controlled bound here means
+  pushing depth until even the working surface fails — i.e. hunting a *negative*. The depth-3 result gives no
+  failure signature to ease (there is no failure); it pushes load to *seek* one. Two facts make the near-term
+  prior low: (a) the panel shows **zero degradation** at depth three; and (b)
+  [`source/li-2024-cot-serial`](../../base/sources/li-2024-cot-serial.md) supplies a theory-of-computation
+  reason to expect the channel to keep absorbing deeper serial load — `T` chain-of-thought steps let an *idealized*
+  transformer compute any size-`T` serial circuit, so a fixed small-depth composition stays well within a
+  working surface's reach. (Cited at its stated strength: a theory-of-computation result about *idealized*
+  transformers, grounding the *plausibility* of channel-scaling — **not** a claim about the panel's internals,
+  and **no** human comparison.) By [`essay/witness-seeking-economics`](../essays/witness-seeking-economics.md),
+  marching down one axis once the probes do not even fail is the diminishing-returns case — each further depth
+  that returns RESPECTS-ORDER adds one more ∀-instance toward "no depth ever defeats the channel", which a
+  battery of probes never reaches ([`essay/undischargeable-negative`](../essays/undischargeable-negative.md)).
+  The honest counter-case, stated head-on: a single depth-4 probe *would* be on-signature (one variable,
+  +1 move, everything else held) and *could* fire reopen-condition (iv) — were gpt's spontaneous-ordering
+  COMP finally to drift toward 0.50 — which would be informative either way. The project judges the depth
+  axis low-novelty **despite** this, because +1 move *of the same kind* tests the very hypothesis the depth-3
+  pass already addressed (the [`essay/witness-seeking-economics`](../essays/witness-seeking-economics.md)
+  "same axis twice" diminishing-returns case); the genuinely higher-information probe eases a *different kind*
+  of composition (below), not one more rung of the same ladder.
+
+- **(iii) No clean structural closure — so this is a budget suspension, not a reach-closure.** li-2024 bounds
+  the *expressive* question (capacity scales with steps) but leaves the *reliability* question (does
+  spontaneous ordering degrade at large depth?) empirical, reachable only at depths far beyond what is cheap
+  to test; there is no [`essay/transcript-ceiling`](../essays/transcript-ceiling.md)-style class-level
+  exclusion of a depth bound. So the suspension rests on **budget + low prior** — the
+  [`essay/witness-seeking-economics`](../essays/witness-seeking-economics.md) "suspended on budget, never
+  closed" case — *not* a kind-3 reach-closure, and emphatically *not* the forbidden kind-4 "the models can't".
+  A design-side economics point reinforces it: the **shortcut-proofing cost grows super-linearly with depth**
+  — the competing-reader family the freeze must defeat went from a handful (2 moves) to **16** sub-paths
+  (3 moves) to **65** (4 moves), and strict isolation needs an ever-larger track `K`, so each deeper probe
+  costs more to *build safely* before any API spend, while its expected information falls.
+
+- **(iv) Reopen condition.** Reopened automatically by any of: a **qualitatively harder serial demand** that
+  is cheap (not merely +1 move of the same kind); a **much deeper chain** if it ever becomes cheap to
+  shortcut-proof and run; or **any sign of strain** at the current frontier (e.g. gpt's spontaneous-ordering
+  COMP drifting toward 0.50 as load grows). A cheap, well-targeted probe on any of these reopens the search;
+  the negative is **never closed**.
+
+**What this suspension does NOT do.** It does not retract the capacity reading (working-surface composition
+holds across operation pair, grid size, and depth three — unchanged). It does not foreclose a deeper bound (a
+behavioral positive is not a ceiling, per
+[`essay/undischargeable-negative`](../essays/undischargeable-negative.md)). It owes **no**
+`wiki/decisions/open` entry: a witness/bound-search suspension is a reopenable spending record, not a
+ratifiable operationalization or anchor gate. **The higher-information empirical next step is a *different
+kind* of composition** — partially-conflicting refinements, cross-family dyads, or image referents — each
+testing a *new* hypothesis rather than adding one more ∀-instance to the depth march.
 
 ## Honesty box
 
