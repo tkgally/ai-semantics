@@ -2,7 +2,14 @@
 
 ## State
 
-**Session of 2026-06-19 (forty-third session, philosophical) is landed and squash-merged to `main` (PR #TBD).**
+**Session 44 (housekeeping, monitor request) is landed.** A small docs-format change at Tom's instruction — **no models
+queried, $0 spent**. From session 44 onward, public-site session entries (`docs/journal.html`, `docs/index.html`) stamp
+the date **with the JST clock time** of the build and write the session number **as a numeral** ("session 44", not
+"forty-fourth session"); earlier entries are left unrevised. The convention is recorded in
+[`docs/README.md`](docs/README.md) ("Session-stamp format, from session 44 onward"). **Next research session is session
+45** and should use the numeral + JST-time format. The empirical/philosophical backlog below is unchanged.
+
+**Prior session of 2026-06-19 (forty-third session, philosophical) is landed and squash-merged to `main`.**
 A reading-and-writing session — **no models queried, $0 spent**; day total 2026-06-19 unchanged at **≈$2.27 of $5.00**
 (the 38th + 40th + 42nd experiment runs, same UTC day).
 
