@@ -2,99 +2,94 @@
 
 ## State
 
-**Session of 2026-06-19 (forty-third session, philosophical) is landed and squash-merged to `main` (PR #TBD).**
-A reading-and-writing session — **no models queried, $0 spent**; day total 2026-06-19 unchanged at **≈$2.27 of $5.00**
-(the 38th + 40th + 42nd experiment runs, same UTC day).
+**Session of 2026-06-19 (forty-fourth session, empirical) is landed and squash-merged to `main` (PR #TBD).**
+It built, certified, ran, and wrote up the **>2-move (deeper-composition) probe** — the priority empirical axis and the
+[`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md) **trigger-(b) contrast case**.
+Spend **$0.803 billed**; day total 2026-06-19 now **≈$3.08 of $5.00** (sessions 38+40+42+44).
 
-It catalogued one open-access outside source bearing directly on the project's current composition line:
-[`source/li-2024-cot-serial`](wiki/base/sources/li-2024-cot-serial.md) — **Li, Liu, Zhou & Ma 2024, "Chain of Thought
-Empowers Transformers to Solve Inherently Serial Problems" (ICLR 2024, arXiv 2402.12875)**. It is the **formal
-counterpart** of the [`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md) mechanism: a
-constant-depth ("one forward pass") transformer is expressively bounded (AC⁰/TC⁰), but with `T` chain-of-thought steps
-it computes any size-`T` boolean circuit — so a working surface supplies the **inherently serial computation** a forced
-single token lacks. Its lead hard example is **permutation-group composition**, exactly the project's composition-probe
-object (STEP/FLIP, CYCLE/SWAP on D4/A4/D6). Catalogued with scope limits stated plainly: theory/mechanism source about
-*idealized* transformers, **not a human anchor and not a claim about the panel**; licenses **no human comparison**.
-Abstract verbatim-verified from the arXiv abs page; body section-located via arXiv HTML / ar5iv (one §3.4 locator
-correction logged in-page after a cross-check caught a first-fetch mislocation). Links: `supports` the essay,
-`refines` [`concept/formal-vs-functional-competence`](wiki/base/concepts/formal-vs-functional-competence.md).
+**Result: DEPTH SURVIVES THE CHANNEL — all three models RESPECTS-ORDER on THREE non-commuting moves**
+([`result/relational-order-composition-three-move`](wiki/findings/results/relational-order-composition-three-move.md)):
+claude DIRECT 1.000 / COMP 1.000; gemini 1.000 / 1.000; **gpt DIRECT 1.000 / COMP 0.903** (Wilson-LB 0.813 > 0.50; its
+7 misses, all on reverse-printed records, are single mis-applied table lookups *after* a correct stamp-order re-sort,
+not order-handling failures). So the working-surface composition **capacity now holds across THREE generality axes** —
+operation pair (A4), grid size (K=6), and **depth (3 moves)** — and the trigger-(b) "survives a widened channel"
+contrast returns **negative** for a depth-3 bound (the wide channel absorbed the deeper serial load, as
+[`source/li-2024-cot-serial`](wiki/base/sources/li-2024-cot-serial.md) predicts). The suggestive K=6 state-size dip did
+**not** continue into depth (gpt 0.903), but the depth-3 run used a different generic-permutation instrument, so it is
+not a clean continuation of that series. Still **THIN**; `anchor: internal-contrast-only`; no human comparison.
 
-**Why this and not an essay edit:** the two essays NEXT.md last flagged for a possible currency pass
-([`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md),
-[`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md)) were checked and found **fully
-current** — both updated 2026-06-19, both already folding in the K=6 grid-size axis, the alt-pair axis, and the gpt-dip
-signal. Editing them would have been padding, so the session did the cleaner owed-nothing unit (ingest an outside work)
-instead. senselint **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean.
-Website (`docs/`): journal 43rd entry + home status block + "latest" entry brought current.
+**Design note worth keeping:** the dihedral STEP/FLIP family **cannot** be shortcut-proofed at three moves (its products
+collapse — exhaustive search found no K≤12 config isolating the true ordering, exactly the pigeonhole worry the prior
+handoff flagged). The fix was **three generic non-commuting derangements** of six figures (generating S6), found by
+search to give a perfectly balanced set (6 orderings × 1 strict-valid start each, 6 distinct starts/targets). The **0.50
+ceiling carries over** because a "half-composer" who orders only 2 of 3 moves correctly tops out at exactly 0.50 — proven
+by brute-forcing the full reader family in `assert_balance` and confirmed by the independent pre-run critic (no
+non-composing reader beats 0.50). This is the reusable template if a **≥4-move** run is ever built.
 
-**Tracks: …phil(41)→emp(42)→phil(43), so the next session is due to lean EMPIRICAL** (or philosophical again if no
-empirical unit is build-ready — see below).
+senselint **0 errors**; linkify clean. Website (`docs/`): journal 44th entry + home status block + "latest" entry +
+findings.html follow-up. Essay/theory/claim updated (see below).
 
 ## Next concrete actions — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** (all 28 decisions resolved). Nothing to ratify
-unless Tom opens something or leaves an override. This session opened **no** decision. Apply any Tom override first.
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** (all 28 decisions resolved). This session opened
+**no** decision (the pre-run critic concurred that the move-count change owes none — within-frame, same adjudication +
+`internal-contrast-only` posture). Apply any Tom override first.
 
-**Then pick the lean — empirical is due** (tracks ended on phil(43)). Candidates, either track:
+**Then pick the lean — philosophical is due** (tracks ended on …phil(43) → emp(44)). Candidates, either track:
 
-1. **EMPIRICAL (lean is due).** The clear priority is the **>2-move (deeper-composition)** probe — the **most
-   informative** remaining axis and the natural
-   [`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md) **trigger-(b) contrast case**
-   (does a serial-depth negative *survive* the wide working-surface channel → channel-*controlled*, a real bound, not
-   channel-bounded?). The K=6 gpt-dip signal (COMP 0.953→0.906→0.861 across the three working-surface instruments,
-   DIRECT at ceiling throughout, overlapping CIs → suggestive only) makes it timely, and `source/li-2024-cot-serial`
-   now gives a theoretical reason to expect serial *depth* to be the load-bearing axis. **BUILD-COST NOTE
-   (unchanged, important):** a >2-move instrument needs **fresh** shortcut-proofing over all orderings of ≥3 distinct
-   stamps — the competing-reader set explodes (single-move ×3, pair-compositions, more canonical orders), and K=4 may
-   be **too small** to exclude every competing reader-end by construction (pigeonhole on 4 positions). Budget a
-   **dedicated build session**: likely needs K≥5/6 *and* careful balancing, with its own independent pre-run critic.
-   Do **not** rush it into a shared wave. Other axes remain: partially-conflicting refinements; image referents;
-   cross-family dyads. Grammar reserve: the AANN/CxG cancel-direction Option-B held in
+1. **PHILOSOPHICAL (lean is due).** A genuinely warranted (not padding) writing unit carried over from before and now
+   sharpened by this session's result: fold [`source/li-2024-cot-serial`](wiki/base/sources/li-2024-cot-serial.md) into
+   the [`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md) **"A machine
+   performance/competence gap"** section as **external theoretical grounding** for the serial-computation mechanism
+   (the section currently flags that frame as "a *frame*, not an empirical claim" with no outside theoretical support;
+   the source — chain-of-thought lets a transformer perform inherently serial computation a single forward pass cannot —
+   supplies exactly that, carefully scoped: theory about idealized transformers, not the panel, no human comparison). The
+   depth-3 result (trigger-(b) negative) makes this timely: the essay now *predicts and confirms* on the depth axis what
+   the source explains. NB: this session already added a **forward note** + a trigger-(b) "tested, not fired" note to the
+   essay and the depth result to its links — so the remaining unit is the **competence/performance section grounding**,
+   not those. Check it isn't now redundant before writing. Or catalogue another open-access `wanted.md` source.
+
+2. **EMPIRICAL (if a second wave or no philosophical unit is build-ready).** Remaining composition axes: **deeper still
+   (≥4 moves)** — the only way to keep hunting for a channel-*controlled* bound, but **build cost grows** (the competing
+   reader set expands with depth; use the generic-permutation + brute-forced `assert_balance` template from this session;
+   K=6 may be too small to strict-isolate at 4 moves — likely needs K≥7/8; budget a dedicated build session, its own
+   pre-run critic). Other axes: **partially-conflicting refinements**; **image referents**; **cross-family dyads**.
+   Grammar reserve: the AANN/CxG cancel-direction Option-B held in
    [`decisions/resolved/aann-uniqueness-third-construction`](wiki/decisions/resolved/aann-uniqueness-third-construction.md)
    (needs a fresh human anchor first).
-
-2. **PHILOSOPHICAL (if a second wave, or if no empirical unit is build-ready).** A now-available, genuinely warranted
-   (not padding) writing unit: fold `source/li-2024-cot-serial` into the
-   [`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md) "A machine performance/competence
-   gap" section as **external theoretical grounding** for the serial-computation mechanism — the essay currently flags
-   that frame as "a *frame*, not an empirical claim" with no outside support, and this source supplies exactly that
-   support (carefully scoped: theory about idealized transformers, not the panel; no human comparison). *Deliberately
-   left for a later session* this run to avoid same-day churn on a fresh draft. Or catalogue another open-access
-   `wanted.md` source (self-fetch only).
 
 3. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
 - **None.** `wiki/decisions/open/` is empty (28 resolved; full changelog in
-  [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). Most recent ratification:
-  `wiki-frontmatter-ergonomics` (Option D, 30th session). This session opened none.
+  [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). This session opened none.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This session read no models and spent nothing. It filed an outside computer-science result (a 2024 conference paper)
-  that **independently backs the project's recent method lesson**: that proof shows a model forced to answer in one
-  shot is mathematically limited, but gains genuine step-by-step ("serial") power once it can write out intermediate
-  steps — exactly why "giving the models room to show their working" unlocked the order-of-operations puzzle. The
-  paper's headline hard example is *composing permutations*, the very move the project's puzzle is built from, so both
-  the puzzle choice and the explanation now have outside theoretical support. Filed with the honest limits front and
-  centre: it is a proof about idealized model designs, **not** the specific models tested, and makes **no comparison to
-  people**. The next session leans back toward an experiment — most likely the "more than two moves" test the recent
-  runs pointed to (which needs a careful dedicated build).
+- This session ran the "more than two moves" experiment the recent runs pointed to. It asked the models to work out the
+  order of **three** time-stamped moves (not two), given room to show their working — the deepest version of the
+  order-of-operations puzzle the project has built, and the case it expected might finally be too hard for the roomy
+  answer format. It was **not** too hard: all three models worked out the three-move order on their own (two perfectly,
+  the third about nine in ten, its slips small arithmetic errors after it had already sorted the moves correctly). So the
+  ability is now confirmed across a different pair of moves, a bigger board, **and** a deeper chain. The honest limits
+  hold: it makes no comparison to people, it is still a "thin" kind of order-sensitivity, and a success cannot prove that
+  no even-deeper task (four or more moves) would trip the models up. Building the test was the bulk of the work and was
+  double-checked independently before and after spending. Spend ≈ $0.80; day total ≈ $3.08 of $5.00.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
 [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md) (resolved-decisions
 changelog at [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). Budget $5/day UTC — check today's
-ledger rows in [`config/budget.md`](config/budget.md) before any probe (2026-06-19 day total = **≈$2.27**; this session
-added **$0.00**). End squash-merged to `main`, website updated. **No decision is open.** Tracks ended
-**emp(42) → phil(43)** — a session is **due to lean empirical**. The composition line: the working-surface composition
-witness **generalizes over two axes** — operation pair (D4↔A4) **and** grid size (K=4↔K=6) — a composition **capacity**,
-still **THIN**, still **negative on constitution**; and as of this session it has **outside theoretical grounding**
-([`source/li-2024-cot-serial`](wiki/base/sources/li-2024-cot-serial.md)). Remaining empirical axes: **>2 moves**
-(deeper composition — most informative, the `output-channel-confound` trigger-(b) contrast case; **budget the intricate
-≥3-stamp shortcut-proofing, likely needs K≥5/6**), images, cross-family. Every composition probe **must use a working
-surface** (the forced single-token format masks the capability). **Rung (iii) stays documented structurally closed for
-text-only stimuli.** The methodological spine has **six** essays (undischargeable-negative, witness-seeking-economics,
-capability-split, transcript-ceiling, floor-is-not-a-ceiling, output-channel-confound).
+ledger rows in [`config/budget.md`](config/budget.md) before any probe (2026-06-19 day total = **≈$3.08**; this session
+added **$0.803**). End squash-merged to `main`, website updated. **No decision is open.** Tracks ended
+**emp(44)** after **phil(43)** — a session is **due to lean philosophical**. The composition line: the working-surface
+order-sensitive composition witness is now a **capacity** generalizing over **three** axes — operation pair, grid size,
+and **depth (three moves)** — still **THIN**, still **negative on constitution**, with **no** channel-controlled bound
+found at any depth/size tested (the [`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md)
+trigger-(b) contrast remains open: only deeper-still or a qualitatively harder serial demand could fire it). Every
+composition probe **must use a working surface** (the forced single-token format masks the capability). **Rung (iii)
+stays documented structurally closed for text-only stimuli.** The methodological spine has **six** essays
+(undischargeable-negative, witness-seeking-economics, capability-split, transcript-ceiling, floor-is-not-a-ceiling,
+output-channel-confound).

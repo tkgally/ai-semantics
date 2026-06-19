@@ -1,0 +1,269 @@
+{
+  "direct_floor": 0.8,
+  "print_ceiling": 0.5,
+  "pos_chance": 0.16666666666666666,
+  "models": {
+    "claude": {
+      "n_total": 108,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "wilson95": [
+            0.9036,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "comp": {
+        "target_governs": {
+          "k": 72,
+          "n": 72,
+          "rate": 1.0,
+          "wilson95": [
+            0.9493,
+            1.0
+          ]
+        },
+        "rev": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "print": {
+          "k": 12,
+          "n": 72,
+          "rate": 0.1667,
+          "wilson95": [
+            0.098,
+            0.2691
+          ]
+        },
+        "start": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "singles": {
+          "FLIP": {
+            "k": 0,
+            "n": 72,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.0507
+            ]
+          },
+          "SLIDE": {
+            "k": 0,
+            "n": 72,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.0507
+            ]
+          },
+          "TWIST": {
+            "k": 0,
+            "n": 72,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.0507
+            ]
+          }
+        },
+        "comp_sig": true
+      },
+      "verdict": "RESPECTS-ORDER"
+    },
+    "gemini": {
+      "n_total": 108,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "wilson95": [
+            0.9036,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "comp": {
+        "target_governs": {
+          "k": 72,
+          "n": 72,
+          "rate": 1.0,
+          "wilson95": [
+            0.9493,
+            1.0
+          ]
+        },
+        "rev": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "print": {
+          "k": 12,
+          "n": 72,
+          "rate": 0.1667,
+          "wilson95": [
+            0.098,
+            0.2691
+          ]
+        },
+        "start": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "singles": {
+          "FLIP": {
+            "k": 0,
+            "n": 72,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.0507
+            ]
+          },
+          "SLIDE": {
+            "k": 0,
+            "n": 72,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.0507
+            ]
+          },
+          "TWIST": {
+            "k": 0,
+            "n": 72,
+            "rate": 0.0,
+            "wilson95": [
+              0.0,
+              0.0507
+            ]
+          }
+        },
+        "comp_sig": true
+      },
+      "verdict": "RESPECTS-ORDER"
+    },
+    "gpt": {
+      "n_total": 108,
+      "n_na": 0,
+      "direct": {
+        "acc": {
+          "k": 36,
+          "n": 36,
+          "rate": 1.0,
+          "wilson95": [
+            0.9036,
+            1.0
+          ]
+        },
+        "manip_pass": true
+      },
+      "comp": {
+        "target_governs": {
+          "k": 65,
+          "n": 72,
+          "rate": 0.9028,
+          "wilson95": [
+            0.8126,
+            0.9521
+          ]
+        },
+        "rev": {
+          "k": 3,
+          "n": 72,
+          "rate": 0.0417,
+          "wilson95": [
+            0.0143,
+            0.1155
+          ]
+        },
+        "print": {
+          "k": 15,
+          "n": 72,
+          "rate": 0.2083,
+          "wilson95": [
+            0.1305,
+            0.3157
+          ]
+        },
+        "start": {
+          "k": 0,
+          "n": 72,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.0507
+          ]
+        },
+        "singles": {
+          "FLIP": {
+            "k": 1,
+            "n": 72,
+            "rate": 0.0139,
+            "wilson95": [
+              0.0025,
+              0.0746
+            ]
+          },
+          "SLIDE": {
+            "k": 3,
+            "n": 72,
+            "rate": 0.0417,
+            "wilson95": [
+              0.0143,
+              0.1155
+            ]
+          },
+          "TWIST": {
+            "k": 3,
+            "n": 72,
+            "rate": 0.0417,
+            "wilson95": [
+              0.0143,
+              0.1155
+            ]
+          }
+        },
+        "comp_sig": true
+      },
+      "verdict": "RESPECTS-ORDER"
+    }
+  },
+  "respects_order_models": [
+    "claude",
+    "gemini",
+    "gpt"
+  ],
+  "order_blind_models": [],
+  "uninterpretable_models": []
+}
