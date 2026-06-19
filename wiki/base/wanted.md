@@ -127,6 +127,9 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 - [P3] Beckmann, P. & Queloz, M. 2025. "Mechanistic Indicators of Understanding in Large Language Models." arXiv 2507.08017 (v5).
   why: candidate bridge between interpretability evidence and the understanding/meaning question; the published interpretability-side statement of the anti-binary stance allied to the project's "describe, don't litigate" — map and counterpoint, not a human anchor.
   status: RECEIVED (catalogued 2026-06-14 → base/sources/beckmann-queloz-2025-mechanistic-indicators.md; abstract verbatim-verified, §5/§6 bodies unreachable via the truncated HTML renderings).
+- [methodology] Li, Z., Liu, H., Zhou, D. & Ma, T. 2024. "Chain of Thought Empowers Transformers to Solve Inherently Serial Problems." ICLR 2024; arXiv 2402.12875.
+  why: theoretical grounding for the [`essay/output-channel-confound`](../findings/essays/output-channel-confound.md) serial-computation mechanism — a constant-depth transformer is expressively bounded (AC^0/TC^0) without CoT but with T intermediate steps computes any size-T circuit, so a working surface supplies inherently serial computation a forced single token cannot; lead hard example is permutation-group composition, the project's own composition-probe object. Not previously on this list; surfaced and catalogued 2026-06-19 because it bears directly on the in-repo composition line.
+  status: **RECEIVED** (2026-06-19; catalogued as [`wiki/base/sources/li-2024-cot-serial.md`](sources/li-2024-cot-serial.md) — abstract verbatim from the arXiv abs page; body section-located via arXiv HTML / ar5iv with a §3.4 locator correction logged in-page. Theory/mechanism source, not a human anchor; licenses no human comparison.)
 
 ### Relational / dyadic-interaction anchors (for the relational-meaning pilot)
 
