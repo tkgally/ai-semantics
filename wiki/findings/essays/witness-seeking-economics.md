@@ -104,6 +104,16 @@ links:
 > resolve it positive — the exact payoff this essay's "suspend, never close" discipline is for. The
 > "ease the **implicated** axis" rule also delivered: the truly-implicated axis was the elicitation surface,
 > and easing it found the witness in **one** probe (~$0.74).
+>
+> **Refined-forward (2026-06-19, next session): [`essay/output-channel-confound`](output-channel-confound.md).**
+> A companion essay reads the same witness as an **allocation correction** to this one. The decisive axis —
+> the **output channel** (forced single token vs. a working surface) — was eased *fifth*, after four content
+> easings, yet it is **cheap** and **recurs across the whole instrument library**, so a narrow channel is a
+> standing rival explanation for *any* forced-format serial-computation negative. That essay adds the output
+> channel to this essay's implicated-axis menu and ranks it **among the first** controls to vary, not the
+> last. It preserves the closure ≠ suspension line (the channel-widening **reopened-and-resolved-positive**)
+> and the "ease the implicated axis" rule (it names the under-weighted axis), and bounds the confound to
+> capabilities that are **serial and externalizable** (single-token tasks are untouched).
 
 ## The occasion
 
