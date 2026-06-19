@@ -2,10 +2,15 @@
 
 ## State
 
-**Session of 2026-06-19 (forty-fourth session, empirical) is landed and squash-merged to `main` (PR #TBD).**
+**Session 45 (empirical, 2026-06-19 UTC / 2026-06-20 JST) is landed and squash-merged to `main`.**
 It built, certified, ran, and wrote up the **>2-move (deeper-composition) probe** — the priority empirical axis and the
 [`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md) **trigger-(b) contrast case**.
-Spend **$0.803 billed**; day total 2026-06-19 now **≈$3.08 of $5.00** (sessions 38+40+42+44).
+Spend **$0.803 billed**; day total 2026-06-19 (UTC) now **≈$3.08 of $5.00** (sessions 38+40+42+45-experiment).
+
+*(Note: the immediately prior commit was **session 44**, a docs-only housekeeping change at Tom's instruction — from
+session 44 onward, public-site session entries stamp the **JST clock time** of the build and write the session number
+**as a numeral**, e.g. "session 45"; earlier entries unrevised. Convention recorded in
+[`docs/README.md`](docs/README.md). This session's site entries follow it. The **next session is session 46**.)*
 
 **Result: DEPTH SURVIVES THE CHANNEL — all three models RESPECTS-ORDER on THREE non-commuting moves**
 ([`result/relational-order-composition-three-move`](wiki/findings/results/relational-order-composition-three-move.md)):
