@@ -110,7 +110,15 @@ spontaneously weighting the round stamp.
    `gemini-3.5-flash` **cannot compose the two moves even when told the order** (DIRECT gate 0.583 <
    0.80 → UNINTERPRETABLE), so order-sensitive composition is occupied by **one model**, not the panel
    — narrower than the both-model ceilings of rungs (i)–(ii). Still **thin** (single-reader-recoverable;
-   *"respects operation order,"* not rung iii / constitution).
+   *"respects operation order,"* not rung iii / constitution). **Update 2026-06-19: the one-model
+   reading was elicitation-relative.** Four forced-single-token easings (K=4, figure-maps, worked
+   example) left gemini and gpt UNINTERPRETABLE, but a fifth easing that permitted a **working surface**
+   (step-by-step output; reasoning-effort knob held constant) flipped **both** to RESPECTS-ORDER
+   at/near ceiling — gemini DIRECT 1.000 / COMP 1.000, gpt DIRECT 0.969 / COMP 0.953
+   ([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md)).
+   So order-sensitive composition is occupied by **the whole panel (concordant) when models may
+   externalize the execution**, like rungs (i)–(ii); the prior split was an artifact of the forced
+   single-token format, not a composition-capacity limit. Still **thin** either way.
 3. **Thin, not rich.** "Latest-binding-wins" may be a shallow update heuristic; this claim does not
    separate thin order-sensitivity from deep path-dependence. **The deep path-dependence (rung iii)
    question is now addressed at the yardstick level** (2026-06-18): the Option-C non-commuting-operation

@@ -90,6 +90,20 @@ links:
 > not the contrasting change case (f) anticipates. The closure ≠ suspension line holds: the suspension note
 > on the result page was **updated**, not closed — only **fewer chaining steps** remains un-eased, and it is
 > near its ≥2-move floor.
+>
+> **Update (2026-06-19, next session — the witness-search REOPENED-AND-RESOLVED-POSITIVE; logged per essay
+> discipline).** The single most important vindication of this essay's central distinction (logical closure
+> vs. practical suspension): the composition negative was **suspended on budget, never closed** across four
+> instruments — and a fifth, cheap, well-targeted probe found a **witness**. The implicated axis was not
+> chaining *capacity* but the **execution format**: every prior run forbade a working surface, and permitting
+> step-by-step output (reasoning-effort knob held constant) flipped **both** gemini (DIRECT 0.625→1.000) and
+> gpt (0.156→0.969) to RESPECTS-ORDER at/near ceiling
+> ([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md)).
+> Had the project *closed* the negative (declared "these models can't compose") after four non-witnesses, it
+> would have been **wrong**. Because it only *suspended*, a single targeted probe could and did reopen and
+> resolve it positive — the exact payoff this essay's "suspend, never close" discipline is for. The
+> "ease the **implicated** axis" rule also delivered: the truly-implicated axis was the elicitation surface,
+> and easing it found the witness in **one** probe (~$0.74).
 
 ## The occasion
 
