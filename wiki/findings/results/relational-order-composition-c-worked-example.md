@@ -199,6 +199,20 @@ decision; **not** a closure — the negative stays undischargeable):
 - **(iv) Reopen condition:** a cheap, well-targeted probe on the remaining implicated axis (a genuinely
   easier *execution* of two-move chaining, or a different/easier non-commuting operation pair) would
   reopen the search; until one is run, the search is **suspended, not closed**.
+  **→ MET 2026-06-19, and the search is REOPENED-AND-RESOLVED-POSITIVE — a WITNESS was found.** The
+  execution-format easing ([`result/relational-order-composition-c-reasoning-scaffold`](relational-order-composition-c-reasoning-scaffold.md)),
+  on the **byte-identical** figure-to-figure trials, changed only the response format: from this run's
+  *forced single token, reasoning forbidden* to a **working surface** ("you MAY think step by step …
+  FINAL: <figure>"), reasoning-effort knob held constant. **Both** gemini (DIRECT 0.625→**1.000**) and
+  gpt (DIRECT 0.156→**0.969**) cleared the on-demand gate and spontaneously ordered by stamps on COMP
+  (gemini 1.000, gpt 0.953) → **all three models RESPECTS-ORDER**. So the four-instrument single-move
+  signature was an artifact of **denying a working surface**, not a chaining-execution *capacity*
+  limit. The "chaining execution" localization above is refined accordingly: the obstacle was the
+  *execution format* (no surface on which to chain), not an inability to chain. This **confirms**
+  [`essay/floor-is-not-a-ceiling`](../essays/floor-is-not-a-ceiling.md) objection (B) (the elicitation
+  space was open along the execution-format axis the ≥2-move floor did not touch) and vindicates the
+  [`essay/undischargeable-negative`](../essays/undischargeable-negative.md) refusal ever to close the
+  negative.
 
 ## Honesty box
 

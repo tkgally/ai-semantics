@@ -271,6 +271,18 @@ where to stop digging that points at solid ground.
   the elicitation space was open along an axis the floor did not touch, so the floor was never a closure. The
   central claim is strongly corroborated and the specific suspension is reopened-and-resolved-positive,
   exactly as the economics predicts a cheap targeted probe can do.
+  **→ FIRED 2026-06-19 (next session), as predicted.** The **execution-format scaffold** axis named in
+  objection (B) was eased: on the byte-identical figure-to-figure trials, permitting a step-by-step
+  **working surface** (reasoning-effort knob held constant) flipped **both** gemini (DIRECT 0.625→1.000)
+  and gpt (0.156→0.969) to RESPECTS-ORDER at/near ceiling — **all three models** now compose,
+  spontaneously ordering by round stamps
+  ([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md)).
+  This is the **strongest possible corroboration** of this essay's central claim: the ≥2-move floor was
+  never a ceiling — the witness-bearing region was open along the execution-format axis, exactly as
+  objection (B) argued, and a structural reach-closure read off the floor would have been **wrong**
+  (there was a witness all along). The essay is **confirmed, not retired**; the criterion (a
+  task-parameter floor is not a kind-3 reach-closure) stands, now with an empirical demonstration that
+  treating it as one would have foreclosed a real positive.
 - **(c) A genuine medium-level exclusion discovered for some composition witness.** If an argument showed
   that a text instrument *constitutively cannot express* some structure a composition witness would require —
   a definitional, class-level exclusion of the transcript-ceiling type — then a kind-3 reach-closure *would*
