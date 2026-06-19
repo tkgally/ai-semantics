@@ -143,4 +143,34 @@ judgement and may flag otherwise.
 
 ## Independent pre-run critic
 
-_(pending — to be filled with the fresh independent agent's GO/flag verdict before any finding-bearing call)_
+**GO** (fresh independent agent, 2026-06-19, before any finding-bearing call; recomputed everything from
+scratch — did NOT import the run's `apply_order`/`op_step`/`op_flip`). Independently confirmed: STEP and
+FLIP are valid permutations of {0..5}; STEP is a fixed-point-free 6-cycle, FLIP a fixed-point-free
+involution; they **do not commute** at any start (SF-ends `[4,3,2,1,0,5]` ≠ FS-ends `[0,5,4,3,2,1]`);
+**⟨STEP,FLIP⟩ = D6 (order 12)** versus D4's 8 — genuinely a larger group. Independent enumeration gave
+exactly the 8 valid (start, order) pairs and per-target grouping in PREREG (positions 1 and 4 each offer
+two options; the frozen set picks `(3,SF)`/`(2,FS)`); all 6 frozen `VALID_CONFIGS` are valid, hit targets
+0..5 once each, balanced 3 SF / 3 FS. Recomputed `target/swapped/step1/flip1/start` indices and shapes for
+**all 108 records** from `track`+`start_idx`+`order`: **0 mismatches** (every `track` a permutation of the
+6 shapes; `r_hi > r_lo`). Over the 72 COMP records: every constant-figure picker = 1/6; max track-position
+picker = 1/6; print-order = canonical-SF = canonical-FS = **exactly 0.5000**; start / step1 / flip1 /
+swapped = **0**; target figure uniform (12 each), target position uniform (12 each), order 36/36, display
+36/36. Rendered COMP/DIRECT prompts: move tables are the correct STEP/FLIP figure→figure derivations, no
+positions/indices/digits leak, COMP omits the order, DIRECT states the order matching each record's stamp
+order, FINAL-tag instruction present. `parse_forced` **target-blind** (last-tag-wins; last-line fallback;
+non-present tags ignored; `finish_reason=="length"` never parsed) on 10 hand cases. rstrip-sha256 =
+`f4d0e36d…82b33`, matching PREREG and `probe._require_frozen`. Diffed vs the witness run: `analyze.py` and
+`fixtures/make_fixtures.py` **byte-identical** (empty diff); `MAX_TOKENS=1024`, `REASONING` (gemini effort
+minimal **held constant**), `HARD_STOP_USD=1.50`, thresholds (`DIRECT_FLOOR` 0.80, `PRINT_CEILING` 0.50),
+MODELS, ROUND_PAIRS, TERM, SEED0, the SYS/INTRO/QUERY/STERN/build_user/move_map/render/parse/call block,
+and the analyze verdict logic are **byte-identical** — the only substantive changes are K=4→6, the
+six-figure SHAPES, VALID_CONFIGS + reps (COMP×2/DIRECT×1), N_BLOCKS, POS_CHANCE, the K=6 liveness record,
+pre-flight call-count comments, and docstrings (**K-only**). `python3 build_trials.py` + `python3
+fixtures/make_fixtures.py` re-run: matching sha, all balance asserts pass, ALL FIXTURE ASSERTS PASS.
+**Governance: no new `wiki/decisions/open/` entry owed** — K is not a parameter
+`decisions/resolved/relational-rung-iii-path-dependence` froze (the original Option-C ran at K=6); the THIN
+adjudication and `internal-contrast-only` posture are preserved verbatim in the byte-identical `analyze.py`
+and this PREREG. **No BLOCKER, no SHOULD-FIX**; one NIT (this critic-section placeholder — now filled).
+NOTE (expected, not a defect): the K=6 build uses fewer reps (COMP×2 vs the witness's ×4) → n=72 COMP /
+n=36 DIRECT per model; the gate thresholds are identical and the fixtures confirm the 0.50 bar is clean at
+this n.
