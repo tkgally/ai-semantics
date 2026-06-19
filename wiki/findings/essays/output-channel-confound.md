@@ -27,6 +27,8 @@ links:
     target: result/relational-order-composition-three-move
   - rel: depends-on
     target: concept/formal-vs-functional-competence
+  - rel: depends-on
+    target: source/li-2024-cot-serial
 ---
 
 # Essay: the output channel is an instrument
@@ -220,9 +222,35 @@ lacks formal linguistic competence." The output-channel confound is the same gua
 rather than the *task-content* end: **failure under a constraining response format does not show that a model
 lacks the capability the format obstructs.** Both are refusals to read a constrained performance as the
 boundary of competence; the contribution here is to identify the **response format** as a constraint that
-behaves like a performance factor, and to make varying it a control rather than an afterthought. (The
-analogy is a *frame*, not an empirical claim: the essay imports no human result and asserts none; the
-competence/performance vocabulary is used only to locate the machine confound on a familiar map.)
+behaves like a performance factor, and to make varying it a control rather than an afterthought.
+
+The machine side of this gap now has an **independent, formal articulation** — and keeping the human and
+machine sides apart matters, because only the latter is grounded. The competence/performance vocabulary is
+borrowed from the *human* case, where it stays a frame; but the specific mechanism it names here — that an
+externalized working surface supplies serial computation a single forward pass cannot — has a
+theory-of-computation counterpart that bears directly on transformers.
+[`source/li-2024-cot-serial`](../../base/sources/li-2024-cot-serial.md) (Li, Liu, Zhou & Ma, ICLR 2024)
+proves, for *idealized* decoder-only transformers, that "CoT empowers the model with the ability to perform
+inherently serial computation, which is otherwise lacking in transformers, especially when depth is low": a
+constant-depth transformer answering in one forward pass is confined to a small parallel complexity class
+("can only solve problems in TC^0 without CoT"), whereas "with T steps of CoT" it "can solve any problem
+solvable by boolean circuits of size T." The match to the project's instrument is unusually tight, because
+the paper's lead hard-for-parallel example is "the composition of permutation groups" — the same *class* of
+object the composition probes use (STEP/FLIP, CYCLE/SWAP as permutations generating D4/A4/D6), though the
+paper's example is the asymptotic `S_5`, not the project's finite stimuli. So the working-surface
+dependence the project observed *from behavior* has an independent, published reason to be *expected* on
+exactly this class of task: for an inherently serial computation a forced single-token channel is a genuine
+**expressive** bottleneck, not a neutral readout. This grounds the mechanism's **plausibility**, and no more
+— the boundary the source draws and the essay keeps is sharp: the result is asymptotic, about idealized
+constant-depth transformers, and proves nothing about the panel's actual internals (the project's models are
+not constant-depth in the theorem's sense, and the project has no mechanistic access). It explains *why such
+a dependence is expected*, not *that it holds* for these models, which only the behavioral runs establish.
+
+(So the analogy to the *human* case remains a *frame*, not an empirical claim: the essay imports no human
+result and asserts none, and the competence/performance vocabulary is used only to locate the machine
+confound on a familiar map. Li et al. is **not** a human result either — it is a theory-of-computation
+statement about idealized transformers, machine-side grounding for the serial-computation mechanism, and it
+licenses **no** human comparison; the cited behavioral result stays THIN / `internal-contrast-only`.)
 
 ## Why the channel deserved to be tried first, not fifth
 
@@ -338,8 +366,10 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   performed — and to derive the **control** it forces: vary the output channel before reading any forced-format
   capability-negative, treat such a negative as **channel-bounded** until that is done, **index** every
   capability attribution to its channel, and rank the channel **among the first** controls because it is cheap
-  and recurs across the instrument library. It also draws the **machine performance/competence** map and the
-  **aperture-vs-ceiling** dual with [`essay/transcript-ceiling`](transcript-ceiling.md). [`essay/floor-is-not-a-ceiling`](floor-is-not-a-ceiling.md)
+  and recurs across the instrument library. It also draws the **machine performance/competence** map (with
+  independent theory-of-computation grounding for the serial-computation mechanism,
+  [`source/li-2024-cot-serial`](../../base/sources/li-2024-cot-serial.md)) and the **aperture-vs-ceiling** dual
+  with [`essay/transcript-ceiling`](transcript-ceiling.md). [`essay/floor-is-not-a-ceiling`](floor-is-not-a-ceiling.md)
   named the execution-format axis; this essay generalizes that one named axis into a confound, a scope
   condition, and a standing control. **No empirical claim here is new, original, or reported.**
 - The strongest empirical / in-repo sentences leaned on, at their stated strength: "the four-instrument
@@ -357,7 +387,13 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   on elicitation" ([`essay/capability-split`](capability-split.md)); the formal/functional distinction and
   "failure on a world-knowledge task does not show that a model lacks formal linguistic competence"
   ([`concept/formal-vs-functional-competence`](../../base/concepts/formal-vs-functional-competence.md)).
-  Nothing here outruns those.
+  The machine-side mechanism grounding cites [`source/li-2024-cot-serial`](../../base/sources/li-2024-cot-serial.md):
+  "CoT empowers the model with the ability to perform inherently serial computation, which is otherwise lacking
+  in transformers, especially when depth is low"; "can only solve problems in TC^0 without CoT"; "with T steps
+  of CoT" it "can solve any problem solvable by boolean circuits of size T"; "the composition of permutation
+  groups" (all from that source's verbatim-verified abstract). These are used at their stated strength — a
+  **theory-of-computation result about idealized transformers**, grounding the mechanism's *plausibility*, not
+  the panel's internals, and licensing **no** human comparison. Nothing here outruns those.
 - The thesis preserves [`essay/undischargeable-negative`](undischargeable-negative.md) and
   [`essay/witness-seeking-economics`](witness-seeking-economics.md) intact: a forced-format negative stays an
   undischargeable kind-2 verdict, and the output channel is added as a privileged (cheap, recurring) region of
