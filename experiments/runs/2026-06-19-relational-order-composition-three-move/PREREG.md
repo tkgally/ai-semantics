@@ -158,4 +158,43 @@ a decision is owed, open one and mark the result `contingent`.**
 
 ## Independent pre-run critic
 
-**[PENDING — to be filled by an independent fresh agent before any finding-bearing call.]**
+**GO** (fresh independent agent, 2026-06-19, before any finding-bearing call; recomputed all geometry,
+the reader family, Wilson, prompt rendering, and the sha from scratch — did NOT import the run's
+`apply_seq`/`op`/`PERMS`). Independently confirmed: FLIP/SLIDE/TWIST are each bijections of {0..5},
+each a **derangement**, **pairwise non-commuting**, and ⟨FLIP,SLIDE,TWIST⟩ generates the **full S6
+(order 720)** — orderings spread maximally. All 16 sub-paths enumerated per config: all **6 configs
+strict-isolated** (true-stamp-order endpoint hit by none of the other 15 paths, and ≠ start); targets
+= {0,1,2,3,4,5} (6 distinct positions); the 6 orderings cover S3 exactly once. Over the 72 COMP records
+(endpoints recomputed independently): genuine stamp-order composer = **1.0000**; all 6 canonical
+full-order readers = **0.1667**; print/display reader = **0.1667**; the 3 display-fill half-composers =
+**0.5000**, max over all 18 canon-fill half-composers = **0.5000**; start / each single-move / max
+ordered-pair / reversed-order = **0.0000**; max constant-figure and max track-position pickers =
+**0.1667**. **Could not construct ANY non-composing reader beating 0.50:** an adversarial brute force
+over ordering-rules keyed on round-rank patterns confirmed that pinning 2 of 3 slots from the stamps
+forces the 3rd (only one move remains) ⇒ a full composer (1.0), so there is **no systematic
+non-composing strategy strictly between 0.50 and 1.0**; an apparent "0.833 non-composer" was a *partial*
+composer (orders by stamps on 5/6 round-rank patterns, deviates on 1 — genuine composition the bar is
+meant to credit); the only oracle keyed on genuinely non-composing cues, `(start_shape, display-order)`,
+hit 0.597 with **Wilson-LB 0.4818 ≤ 0.50** — does not clear the bar. **The 0.50 ceiling is clean.**
+Rendering: figure→figure tables match an independent derivation from each record's `track`+PERMS (0
+mismatches over 108×3×6); no position/index/slot words leak; COMP omits the order; DIRECT states the
+order matching each record's stamp order; FINAL-tag instruction present; `parse_forced` **target-blind**
+(10 hand cases + length-truncation: last-tag-wins, last-line fallback, non-present tags ignored,
+ambiguous last line → None, `finish_reason=="length"` never parsed). rstrip-sha256 =
+`eae2a2ab…0b6d774a`, matching PREREG and `probe._require_frozen`. DIRECT (n=36): target 1.0, start 0,
+reversed 0; COMP figure/position/order/display balanced. `build_trials.py` + `fixtures/make_fixtures.py`
+re-run clean (matching sha, all balance asserts pass, ALL FIXTURE ASSERTS PASS). Diffed vs the K=6
+two-move run: substantive changes are exactly (a) move count 2→3 and (b) the **forced** operation-set
+switch (dihedral STEP/FLIP → three generic permutations, since the dihedral group's products collapse
+at three moves and cannot be shortcut-proofed — confirmed), plus the half-composer machinery and
+`HARD_STOP_USD` 1.50→1.80; `parse_forced` byte-identical in code, MAX_TOKENS / DIRECT_FLOOR /
+PRINT_CEILING / POS_CHANCE / REASONING (gemini effort minimal) held constant. **Governance: no new
+`wiki/decisions/open/` entry owed** — concurs with the design: the ratified
+`decisions/resolved/relational-rung-iii-path-dependence` adopted Option C (non-commuting operation
+semantics, agnostic to which group realizes them), froze the THIN adjudication and `internal-contrast-only`
+anchor (preserved verbatim here), and did not freeze the move count; the generic-permutation switch is
+the same class of within-frame variation as the alt-pair (D4→A4) operation-pair change, and the depth
+change introduces no new value-laden choice (the deeper load is *measured* by the DIRECT gate, not
+assumed). Spend sane and within budget (`HARD_STOP_USD=1.80` is on the run's projected total; even at
+the cap the day total ≈$4.07 < $5.00). **No BLOCKER, no SHOULD-FIX**; one NIT (this critic-section
+placeholder — now filled).
