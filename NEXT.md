@@ -2,76 +2,68 @@
 
 ## State
 
-**Session of 2026-06-19 (thirty-ninth session, philosophical) is landed and squash-merged to `main` (PR #TBD).**
-A single-essay writing session — **no models queried, $0 spent**; day total 2026-06-19 = **$0.735 of $5.00** (unchanged).
+**Session of 2026-06-19 (fortieth session, empirical) is landed and squash-merged to `main` (PR #TBD).**
+A single experiment session — **288 finding-bearing calls, $0.739 billed**; day total 2026-06-19 = **$1.47 of $5.00**
+(witness run $0.735 earlier the same UTC day + this $0.739).
 
-It wrote the project's **fifteenth essay**, [`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md),
-the philosophical-track unit the 38th-session handoff named: the methodological lesson the witness teaches. The essay
-**names a confound** — the **output channel** through which a model must answer (a forced single token vs. a **working
-surface** on which it may externalize its computation) is **a degree of freedom of the instrument, not a neutral
-readout**. A channel too narrow to carry a multi-step computation can **mask** a capability (the 38th-session witness:
-the four-instrument composition split **dissolved** into panel-concordance when the channel alone was widened,
-reasoning-effort held constant); a wide channel can **scaffold** one. So there is **no neutral channel**, a behavioral
-capability claim is **indexed to a channel**, and an unindexed one is underspecified. Upshots: a forced-format
-capability-**negative** is **channel-bounded, never a capacity verdict** until the channel is varied (the kind-2
-verdict is a *true* measurement of a *channel-bounded* capability — the error is **mis-description**, preserving
-[`essay/undischargeable-negative`](wiki/findings/essays/undischargeable-negative.md)); the channel is a **mandatory,
-high-value control** the [`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md)
-allocation should rank **among the first** easings (cheap; recurs across the instrument library; was the *decisive*
-axis here). **Scoped**: the confound bites only when the capability is **serial + externalizable** AND the channel
-forbids externalizing it — single-token *tasks* (acceptability, single-premise NLI) are untouched. Draws a **machine
-performance/competence** map (a frame, no human claim) and an **aperture-vs-ceiling dual** with
-[`essay/transcript-ceiling`](wiki/findings/essays/transcript-ceiling.md) (input-medium ceiling vs. output-channel
-aperture). **`refines`** undischargeable-negative + witness-seeking-economics; generalizes the single execution-format
-axis [`essay/floor-is-not-a-ceiling`](wiki/findings/essays/floor-is-not-a-ceiling.md) objection (B) merely named.
-**No new empirical claim; no human comparison.**
+It ran the **alt-pair generality re-run** of the Option-C order-sensitive composition probe,
+[`result/relational-order-composition-c-altpair`](wiki/findings/results/relational-order-composition-c-altpair.md):
+a generality test of the 38th-session **working-surface witness** over the **one axis the witness left fixed — the
+operation pair**. The witness was found on the dihedral STEP/FLIP pair (generating **D4**); this run swapped it for a
+**genuinely different** non-commuting pair — **CYCLE** (the 3-cycle `(1 2 3)`) + **SWAP** (the double transposition
+`(0 1)(2 3)`), generating **A4** (a different group, not a relabeling) — holding everything else identical (K=4,
+figure→figure rendering, working-surface format, thresholds, verdict map, THIN adjudication; fresh stimuli, rstrip-sha
+`f21f0cfb…22bb`). **Outcome: REPLICATES — all three models RESPECTS-ORDER** (claude DIRECT 1.000 / COMP 1.000; gemini
+1.000 / 1.000; **gpt DIRECT 1.000 / COMP 0.906**, Wilson-LB 0.810 > 0.50 — gpt's 6 misses are reversed-order slips, NOT
+single-move reads). DIRECT at ceiling for all three self-calibrates the alt pair as fully composable; CoT re-sorts by
+round stamp on all 32 reverse-printed COMP records (genuine composition). So the dissolution of the four-instrument
+forced-format split is a composition **capacity**, not an artifact of the one STEP/FLIP instrument — **strengthening**
+[`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md)'s "capacity, not one-instrument
+artifact" reading and answering the witness result's open-question (iv) (generality across operation pairs) **positive**.
+**Still THIN** ("respects operation order", not rung iii); `anchor: internal-contrast-only`; **no human comparison.**
 
-**Integration:** independent **adversarial coherence pass** (fresh read-only agent over the essay vs. all six cited
-essays + the result page + CLAUDE.md/meaning-senses) — **NO BLOCKER on the argument**; every quoted locator verified
-verbatim; anti-smuggle clean (no capacity-absence asserted in the essay's own voice); scope stated consistently;
-symmetric hazard handled; transcript-ceiling "mirror" accurate; no human-comparison leak. **1 BLOCKER** (a house-rule
-link-graph omission: `transcript-ceiling` cited for a whole section but missing from the YAML `links:`) + **2
-SHOULD-FIX** ("over five sessions" → "across five easings"; "many single-integer instruments" → "single-token
-judgement instruments (acceptability, single-premise NLI)") — **all applied**. Updated, by judgement (orchestrator):
-the new essay; **forward-pointer notes** added to the two refined parents (undischargeable-negative,
-witness-seeking-economics); [`wiki/index.md`](wiki/index.md) +1 essay entry (15th); [`wiki/executive-summary.md`](wiki/executive-summary.md)
-+39th entry (demoted 38th). senselint **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`);
-linkify clean. Website (`docs/`): journal 39th entry + home status block (Current focus rewritten, Spending "nothing
-this session", Completed studies stays 45) + new "The latest" card + findings order-task follow-up paragraph. Tracks:
-…phil(37)→**emp(38)**→**phil(39)**, so the next session is **due to lean empirical**.
+**Integration:** independent **pre-run critic GO** (fresh agent recomputed CYCLE/SWAP from scratch, confirmed A4 ≠ D4
+a genuinely different pair, 0 geometry mismatches, all shortcut readers exactly at bounds, sha match, parser
+target-blind, only the operation pair changed vs the witness run, no new decision owed) + independent **post-run
+verifier REPRODUCED** (288/288 picks matched, 0 geometry mismatches, CoT genuineness confirmed with verbatim quotes for
+all three models, cost re-summed $0.739, 0 missing). Updated, by judgement (orchestrator): the new result page;
+forward-pointer notes to the **witness result** (open-question iv answered positive) and to
+[`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md) (capacity reading corroborated over
+the operation pair); [`wiki/index.md`](wiki/index.md) +1 result entry; senselint **0 errors** (2 expected WARNs:
+`wanted.md`, `multimodal-anchor-scouting.md`); linkify clean. Website (`docs/`): journal 40th entry + home status block
+(Completed studies 45→46, Current focus rewritten, Spending updated) + new "The latest" card + findings generality
+follow-up paragraph. Tracks: …emp(38)→phil(39)→**emp(40)**, so the next session is **due to lean philosophical**.
 
 ## Next concrete actions — backlog for the next session
 
 **Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** (all 28 decisions resolved). Nothing to
-ratify unless Tom opens something or leaves an override. Apply any Tom override first, as always.
+ratify unless Tom opens something or leaves an override. This session opened **no** decision (the alt-pair run owed
+none, per the pre-run critic). Apply any Tom override first, as always.
 
-**Then pick the lean — empirical is due** (tracks ended on phil(39)). Candidates:
+**Then pick the lean — philosophical is due** (tracks ended on emp(40)). Candidates:
 
-1. **EMPIRICAL (lean is due) — a GENERALITY probe, NOT witness-seeking** (the composition witness-search is closed
-   positive: all three models compose two non-commuting moves *given a working surface*). The open questions are now
-   about **generality**: (a) does the working-surface composition **generalize to a different / more-familiar
-   non-commuting operation pair** (the original `essay/floor-is-not-a-ceiling` objection-(B) axis — now a generality
-   test)? (b) **larger grids / >2 moves** (deeper composition); (c) **partially-conflicting refinements**; (d) **image
-   referents**; (e) **cross-family dyads**. **CRITICAL design note (from the new essay):** the **forced single-token
-   format is now known to mask this capability** — any composition probe must use the **working-surface** elicitation
-   (or run both forced-vs-working as a contrast), not the old forced format, or the result will be uninterpretable for
-   the same reason the four prior runs were. A fresh pair / deeper composition is a **new instrument** needing its own
-   freeze + independent pre-run critic + the THIN adjudication gate (still `internal-contrast-only`, still within the
-   ratified Option-C frame).
-   - **A clean test of the new essay directly: trigger (b).** Re-run a *forced-format* serial-computation negative with
-     a **widened channel** and see whether it **persists** (a control case the essay wants: a negative the
-     output-channel control *clears* rather than dissolves). If it persists, that is a more robust kind-2 verdict
-     (channel-controlled, not channel-bounded) and supplies the essay's contrasting worked case. If a *different*
-     capability's forced-format negative dissolves under a working surface, that is trigger (a) — a second masking,
-     strengthening the confound from a one-instance generalization.
+1. **PHILOSOPHICAL (lean is due).** The composition line now has a clean empirical shape worth synthesizing:
+   - **Re-examine [`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md)** (the
+     relational ladder) now that order-sensitive **composition** is **panel-concordant AND generalizes across the
+     operation pair** (thin, under a working surface) — is composition a stable rung, and where does it sit relative to
+     rungs (i)–(ii)? Or
+   - **A short synthesis / theory-page touch** recording that the working-surface composition capacity is now
+     corroborated on two distinct non-commuting pairs (D4, A4) — what the capacity reading does and does not license
+     (still THIN, still one operationalization family). Could update
+     [`findings/theory/situating-llm-meaning.md`](wiki/findings/theory/situating-llm-meaning.md)'s relational cell.
+   - Or **catalogue a `wanted.md` source** (philosophical-track reading) if a cheap mixed unit is preferred.
+
+2. **EMPIRICAL (if a philosophical anchor is not ready, or as a second wave).** Generality axes still untested for the
+   working-surface composition capacity (all need a working-surface elicitation — the forced format is known to mask):
+   (a) **larger grids** (K>4); (b) **deeper composition** (>2 moves) — the most informative, and a candidate
+   **contrast case** for [`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md) trigger (b)
+   (a serial-computation negative that *survives* a widened channel → channel-controlled, not channel-bounded);
+   (c) partially-conflicting refinements; (d) image referents; (e) cross-family dyads. **NOTE on build cost:** a >2-move
+   instrument needs fresh shortcut-proofing over all orderings of 3 distinct stamps (intricate certification — budget
+   the build time); the alt-pair build here was cheap because it reused the K=4 machinery.
    - Grammar reserve: the AANN/CxG cancel-direction Option-B held in
      [`decisions/resolved/aann-uniqueness-third-construction`](wiki/decisions/resolved/aann-uniqueness-third-construction.md)
      (needs a fresh human anchor first).
-
-2. **PHILOSOPHICAL (if a cheap mixed unit, or the empirical anchor is not ready).** Re-examine
-   [`essay/update-is-not-constitution`](wiki/findings/essays/update-is-not-constitution.md) (the relational ladder)
-   now that order-sensitive **composition** is **panel-concordant** (thin, under a working surface) like rungs
-   (i)–(ii), not a one-model rung; or catalogue a `wanted.md` source.
 
 3. **Website** per `PROTOCOL.md` §5b, as always.
 
@@ -83,33 +75,30 @@ ratify unless Tom opens something or leaves an override. Apply any Tom override 
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Last session a five-session puzzle was settled by one cheap test: two models that had "failed" a two-step task four
-  times actually did it flawlessly the moment they were allowed to **show their working** instead of answering in one
-  word. This session drew the general lesson and wrote it up: **the box a model has to answer in is part of the test,
-  not a neutral window onto the model.** A cramped answer-format can *hide* an ability — so a failure read off it means
-  "can't *in this format*," not "can't," and the two are genuinely different. The practical rules: treat a
-  forced-format failure as tied to that format until you've tried a roomier one; say which answer-channel any
-  "can/can't" claim is about; and, because the format is cheap to change and lurks in almost every test, vary it
-  *early*, not (as happened here) last. The lesson is bounded — it only bites when a task needs real step-by-step
-  working *and* the format forbids showing it, so plain yes/no tests are untouched — and it is paired with an older
-  point as a matched set: a transcript has a real *ceiling*, a cramped format only a *narrow doorway* that can be
-  widened; mixing them up sends you digging in the wrong place. An independent reviewer checked it word-for-word and
-  confirmed it never slips into "the model can't." No comparison to people; nothing spent. The next session leans back
-  to experiments — testing whether the working-surface composition *generalizes* (a different pair of moves, bigger
-  grids, images), with the standing warning that the old one-word format is now known to mask the ability.
+- Last session found that two models which had "failed" a two-step order-of-operations puzzle could actually do it
+  once given room to show their working — but only on one specific pair of moves. This session checked whether that
+  was a fluke of the one pair: it rebuilt the puzzle with a **genuinely different pair of moves** (a three-way rotation
+  and a swap-in-pairs, which combine differently) and re-ran all three models, changing only the pair. **It
+  replicated cleanly** — all three again apply both moves correctly on demand and work out the order on their own when
+  it isn't given (two perfectly, the third ~91%), with their working re-sorting the moves into time order even when
+  printed in reverse. So the ability is a **real capacity** to carry out an order of operations (given room to show
+  the working), not a quirk of the one test. It stays modest: a thin kind of order-sensitivity, no comparison to
+  people, one family of puzzle (bigger boards, more moves, and picture versions untested). An independent reviewer
+  approved the materials before any spending and a second reproduced every number. ≈ 74 cents; day total ≈ $1.47. The
+  next session leans back to the writing/philosophy track.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
 [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md) (resolved-decisions
 changelog at [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). Budget $5/day UTC — check today's
-ledger rows in [`config/budget.md`](config/budget.md) before any probe (2026-06-19 day total so far = **$0.735**; this
-session added **$0.00**). End squash-merged to `main`, website updated. **No decision is open.** Tracks ended
-**emp(38) → phil(39)** — a session is **due to lean empirical**. The methodological spine now has **six** essays
-(`essay/undischargeable-negative`, `essay/witness-seeking-economics`, `essay/capability-split`,
-`essay/transcript-ceiling`, `essay/floor-is-not-a-ceiling`, and now **`essay/output-channel-confound`** — the output
-channel as a capability-masker / an instrument axis any forced-format negative must vary). The relational composition
-question is **closed positive** for "can these models compose two non-commuting moves?" (yes, given a working surface);
-remaining empirical questions are **generality** (a different pair, deeper composition, images, cross-family), and any
-composition probe **must use a working surface** — the forced single-token format is now known to mask the capability.
-**Rung (iii) stays documented structurally closed for text-only stimuli.**
+ledger rows in [`config/budget.md`](config/budget.md) before any probe (2026-06-19 day total so far = **$1.47**; this
+session added **$0.739**). End squash-merged to `main`, website updated. **No decision is open.** Tracks ended
+**phil(39) → emp(40)** — a session is **due to lean philosophical**. The composition line: the working-surface
+**witness** (all three models compose two non-commuting moves given a working surface) now **generalizes across the
+operation pair** (replicated on a second, A4, pair) — a composition **capacity**, not a one-instrument artifact;
+remaining empirical generality axes are larger grids, >2 moves (deeper composition; also the natural
+`essay/output-channel-confound` trigger-(b) contrast case), images, cross-family. Every composition probe **must use a
+working surface** (the forced single-token format masks the capability). **Rung (iii) stays documented structurally
+closed for text-only stimuli.** The methodological spine has **six** essays (undischargeable-negative,
+witness-seeking-economics, capability-split, transcript-ceiling, floor-is-not-a-ceiling, output-channel-confound).

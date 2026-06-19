@@ -77,6 +77,17 @@ That is the occasion. The project spent four sessions easing the *content* of th
 eased the *channel* once and the negative dissolved. The lesson is not local to composition, and naming it
 is this essay's work.
 
+*Forward note (2026-06-19, later session).* The reading defended below — that the dissolution reflects a
+composition **capacity**, not an artifact of the one STEP/FLIP instrument — has since been tested on the
+one axis the witness left fixed: the **operation pair**.
+[`result/relational-order-composition-c-altpair`](../results/relational-order-composition-c-altpair.md)
+re-ran the working surface on a **genuinely different** non-commuting pair (CYCLE/SWAP, generating A4 —
+a different group than STEP/FLIP's D4) and found **all three models again RESPECTS-ORDER** (claude/gemini
+DIRECT 1.000 / COMP 1.000; gpt DIRECT 1.000 / COMP 0.906). So the witness is **not** specific to the one
+instrument's geometry: the capacity-reading is corroborated across a second pair. This does not engage a
+revision trigger (it is neither a second *channel*-masking nor a channel-survival case — the channel was
+already wide); it is a **generality** corroboration of the capacity the essay reads off the witness.
+
 ## The confound, named
 
 The hidden assumption in the first four easings was that the **output channel is a window** — a neutral
