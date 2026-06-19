@@ -24,6 +24,8 @@ links:
   - rel: depends-on
     target: result/relational-order-composition-c-reasoning-scaffold
   - rel: depends-on
+    target: result/relational-order-composition-three-move
+  - rel: depends-on
     target: concept/formal-vs-functional-competence
 ---
 
@@ -92,13 +94,35 @@ capacity-reading is corroborated across a second pair and a larger state space. 
 trigger (neither is a second *channel*-masking nor a channel-survival case — the channel was already wide);
 both are **generality** corroborations of the capacity the essay reads off the witness. *One honest signal
 for the watch-list:* gpt's spontaneous-ordering reliability (COMP, not the on-demand DIRECT gate, which
-stays at ceiling) dips monotonically as the instrument grows — 0.953 (K=4 STEP/FLIP) → 0.906 (K=4
+stays at ceiling) dipped monotonically as the instrument grew — 0.953 (K=4 STEP/FLIP) → 0.906 (K=4
 CYCLE/SWAP) → 0.861 (K=6) — a *suggestive* (overlapping-CI, n=72) hint that **state size taxes spontaneous
 order-selection even when the channel is wide and on-demand composition is intact**. That is exactly the
-distinction this essay turns on (a *channel* bound vs. a *capacity* bound): the natural sharpening is a
+distinction this essay turns on (a *channel* bound vs. a *capacity* bound): the natural sharpening was a
 **deeper-composition (>2-move)** probe — a bigger *serial-depth* demand rather than a bigger *state* — to
 see whether a negative ever **survives** the wide channel (which would be channel-*controlled*, a real
 bound, not channel-bounded).
+
+*Forward note (2026-06-19, deeper-composition run).* That sharpening has now been run.
+[`result/relational-order-composition-three-move`](../results/relational-order-composition-three-move.md)
+composed **three** non-commuting moves on the working surface (the dihedral family cannot be
+shortcut-proofed at three moves, so it used three generic non-commuting permutations; the 0.50 ceiling
+carries over because a "half-composer" who orders only two of the three correctly tops out at 0.50). The
+result is **DEPTH SURVIVES THE CHANNEL**: all three models RESPECTS-ORDER (claude/gemini DIRECT 1.000 /
+COMP 1.000; gpt DIRECT 1.000 / COMP 0.903, Wilson-LB 0.813 > 0.50). So this essay's **revision trigger
+(b)** — a serial-computation negative that *survives* a widened channel — was directly tested at depth
+three and **did not fire**: the wide channel absorbed the deeper serial load, exactly as
+[`source/li-2024-cot-serial`](../../base/sources/li-2024-cot-serial.md)'s account (chain-of-thought
+supplies inherently serial computation a single forward pass cannot) predicts a scratchpad should. The
+capacity-reading now holds across **three** generality axes — operation pair, grid size, and **depth** —
+and the line still has **no** channel-*controlled* composition bound. Two honesty notes: (1) this is a
+behavioral positive, not a ceiling — it does not foreclose that *still*-deeper composition (≥4 moves) or
+another instrument finds a survival negative (per
+[`essay/undischargeable-negative`](undischargeable-negative.md), a positive bounds no more than a
+negative does); (2) the suggestive state-size dip did **not** continue into depth (gpt COMP 0.903 at
+depth three, on par with the two-move instruments), but the depth-3 run used a different (generic)
+operation set, so it is not a clean continuation of the same dip series — gpt's spontaneous-ordering
+reliability simply stays in the 0.86–0.95 band across all four working-surface instruments, on-demand
+composition at ceiling throughout.
 
 ## The confound, named
 
@@ -288,7 +312,11 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   kind-2 verdict — channel-controlled, not channel-bounded. This would not overturn the essay (which says vary
   the channel, not that widening always flips the verdict) but would supply the important contrasting case: a
   negative that the output-channel control *clears* rather than dissolves, making the control's diagnostic
-  value cut both ways.
+  value cut both ways. **Tested once and not fired (2026-06-19):** the deeper-composition (three-move) run
+  [`result/relational-order-composition-three-move`](../results/relational-order-composition-three-move.md)
+  put a bigger serial-depth demand on the wide channel and the channel *absorbed* it (all three RESPECTS-ORDER
+  at depth three) — so the contrasting case is still **open**; deeper still (≥4 moves) or a qualitatively
+  harder serial demand remains the place to look for it.
 - **(c) A wide-channel positive shown to be channel-scaffolded artifact.** If a capability that appears only
   *with* a working surface were shown to be an artifact of the scaffold doing the computation the model cannot
   do internally (e.g., the model copying a procedure verbatim without composing), the symmetric hazard this

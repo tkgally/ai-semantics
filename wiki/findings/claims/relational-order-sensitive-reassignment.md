@@ -118,7 +118,14 @@ spontaneously weighting the round stamp.
    ([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md)).
    So order-sensitive composition is occupied by **the whole panel (concordant) when models may
    externalize the execution**, like rungs (i)–(ii); the prior split was an artifact of the forced
-   single-token format, not a composition-capacity limit. Still **thin** either way.
+   single-token format, not a composition-capacity limit. Still **thin** either way. **This
+   working-surface composition has since replicated across three generality axes** — operation pair
+   (A4 vs D4, [`result/relational-order-composition-c-altpair`](../results/relational-order-composition-c-altpair.md)),
+   grid size (K=6, [`result/relational-order-composition-c-k6`](../results/relational-order-composition-c-k6.md)),
+   and **composition depth (three non-commuting moves,
+   [`result/relational-order-composition-three-move`](../results/relational-order-composition-three-move.md))**
+   — all panel-concordant RESPECTS-ORDER, so it is a composition **capacity** (given a working surface),
+   not a one-instrument artifact; still thin throughout.
 3. **Thin, not rich.** "Latest-binding-wins" may be a shallow update heuristic; this claim does not
    separate thin order-sensitivity from deep path-dependence. **The deep path-dependence (rung iii)
    question is now addressed at the yardstick level** (2026-06-18): the Option-C non-commuting-operation
