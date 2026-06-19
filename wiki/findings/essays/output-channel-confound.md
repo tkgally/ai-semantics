@@ -1,0 +1,317 @@
+---
+type: essay
+id: output-channel-confound
+title: The output channel is an instrument — why a forced response format can mask a capability, what such masking individuates, and the control every behavioral capability-negative owes
+meaning-senses:
+  - model-internal
+  - functional-vs-formal
+  - relational
+status: draft
+contingent-on: []
+created: 2026-06-19
+updated: 2026-06-19
+links:
+  - rel: refines
+    target: essay/undischargeable-negative
+  - rel: refines
+    target: essay/witness-seeking-economics
+  - rel: depends-on
+    target: essay/floor-is-not-a-ceiling
+  - rel: depends-on
+    target: essay/capability-split
+  - rel: depends-on
+    target: essay/transcript-ceiling
+  - rel: depends-on
+    target: result/relational-order-composition-c-reasoning-scaffold
+  - rel: depends-on
+    target: concept/formal-vs-functional-competence
+---
+
+# Essay: the output channel is an instrument
+
+> **Status: draft (2026-06-19). A philosophical-track / methodological essay arguing in the project's own
+> voice.** Its original contribution is a **named confound and the control that disarms it**: the *output
+> channel* through which a model is required to answer — a forced single token versus a working surface on
+> which it may externalize its computation — is a **degree of freedom of the instrument, not a neutral
+> readout**. A channel too narrow to carry a multi-step computation can **mask** a capability the model has;
+> a channel wide enough to externalize it can **scaffold** one. There is no neutral setting, so a behavioral
+> capability claim — positive or negative — is **indexed to a channel**, and an unindexed one is
+> underspecified. The methodological upshot: a forced-format capability-*negative* is, until the channel is
+> varied, indistinguishable from a channel artifact and must be read as **channel-bounded**, never as a
+> capacity verdict; and the output channel is therefore a **mandatory, high-value control** that the
+> project's witness-economics should rank among the *first* easings, not the last. The argument is anchored
+> in one decisive demonstration from the project's own record — a four-instrument capability split that
+> **dissolved** into panel-concordance when the channel alone was widened, reasoning-effort held constant.
+> It contains **no new empirical claim** and makes **no human comparison**: every empirical sentence cites
+> the in-repo page that carries it, at that page's stated strength, and the result it reads is THIN /
+> `internal-contrast-only`. Read the revision triggers before citing.
+
+## The occasion
+
+The composition witness-search is the cleanest object the project has produced for this question, because it
+ran the natural experiment by accident and across five easings. The Option-C split —
+`claude-sonnet-4.6` composes two non-commuting moves, `gemini-3.5-flash` and `gpt-5.4-mini` return
+UNINTERPRETABLE — was chased through **four** witness-seeking easings without a witness. Each of the four
+eased a *content* axis of the task: state-space size (K=6→K=4), the per-move positional read-off
+(figure-to-figure maps), the demonstration gap (a worked example), and step count (floored at two). Across
+all four, the two failing models kept the same failure signature — applying only one of the two stamped
+moves — and the project correctly localized the difficulty, on those instruments, to "chaining execution."
+
+The fifth easing changed something the first four had held fixed without noticing it was a variable: the
+**response format**. Every one of the four prior runs forbade the model a working surface — the system
+prompt demanded one figure name with "no reasoning," and gemini ran at reasoning `effort: minimal`. The
+fifth probe, on the **byte-identical** figure-to-figure trials, manipulated *only* the output format: it
+**permitted step-by-step working** and parsed a `FINAL:` tag, with "the reasoning-effort knob … **held
+constant** (gemini stays at `effort: minimal`; the working surface is opened only in the visible output
+channel)" ([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md)).
+The result was the search's first witness, and it landed for both failing models at once: "**gemini flips
+DIRECT 0.656 → 1.000** and **gpt flips DIRECT 0.250 → 0.969**," and the result page draws the conclusion
+without softening it — "the four-instrument gemini/gpt negative was an artifact of the **forced
+single-token format** (no working surface), **not** a composition-capacity limit"
+([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md)).
+[`essay/capability-split`](capability-split.md) records the same event from its side: "a split is contingent
+on elicitation; reading the forced-format split as 'claude is the stronger composer' would have been exactly
+the over-extrapolation this essay refused."
+
+That is the occasion. The project spent four sessions easing the *content* of the task and found nothing; it
+eased the *channel* once and the negative dissolved. The lesson is not local to composition, and naming it
+is this essay's work.
+
+## The confound, named
+
+The hidden assumption in the first four easings was that the **output channel is a window** — a neutral
+aperture through which the model's capability is read off, the same capability however the window is shaped.
+Under that assumption, "reply with exactly one figure name" and "show your working, then give a `FINAL:` tag"
+are two readouts of one underlying fact, and the format is methodologically inert.
+
+The witness refutes the assumption. The output channel is not a window; it is **part of the instrument** —
+a degree of freedom that interacts with the capability being probed. When the probed capability requires a
+**multi-step, serial computation** (hold operation A, apply it, hold the result, apply operation B), the
+channel's *width* — whether the model may externalize intermediate state or must emit a final answer in one
+token — is not incidental to whether the computation succeeds. A channel too narrow to hold the working can
+prevent the computation from being carried out at all, and the result page says exactly this: "the obstacle
+was not a *capacity* to chain but the *denial of a surface on which to chain*," and "The single-move
+signature was the shape of a two-step computation forced through a one-token channel"
+([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md)).
+
+Call this the **output-channel confound** (equivalently, the *elicitation-surface confound*): *a forced
+response format can manufacture an apparent capability-negative by denying the model the surface on which the
+probed computation is performed, so that a failure read off a narrow channel conflates the absence of the
+capability with the absence of room to express it.* It is a confound in the strict sense — a variable that
+moves with the manipulation and offers a rival explanation of the outcome — and it had been **uncontrolled**
+across four otherwise-careful single-variable easings, because each held the channel fixed at its narrowest
+setting and varied only the content.
+
+The confound has a clean signature, which is part of why it is worth naming: it bites precisely where the
+capability is **serial and internal**. It does not threaten every forced-format probe. A probe whose task is
+*itself* a single-token judgement with no multi-step computation to externalize — an acceptability rating, a
+single-premise NLI choice — gives the model nothing to write on a scratchpad that the one-token channel
+denies; there is no masked working because there is no working. The output-channel confound is therefore
+*scoped*: it threatens a forced-format negative when (a) the probed capability requires multi-step or serial
+computation, **and** (b) the channel forbids externalizing it. Both conditions held for composition; neither
+need hold for the project's single-token judgement instruments (acceptability ratings, single-premise NLI),
+which this essay does not impugn. The scope is
+the difference between a useful confound and a fashionable one.
+
+## What the masking individuates
+
+It is tempting to read the witness as showing the four prior negatives were simply *wrong* — the models could
+compose all along, and the narrow-channel runs erred. That reading is too quick, and getting it right is the
+essay's most load-bearing distinction.
+
+The narrow-channel negative was a **true** verdict — about a **channel-bounded** capability. The result page
+is explicit that the witness "does **not** show the models compose *without* a working surface (they do not,
+robustly, across four instruments) — the finding is precisely that the **format** gates the behavior"
+([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md)).
+So the four runs did not measure nothing, and they did not measure falsely: they measured *can gemini/gpt
+compose two non-commuting moves in a forced one-token reply* — and the answer to **that** question is, on the
+evidence, no. The error the confound names is not a false measurement but a **mis-description**: reading a
+true negative about the channel-bounded capability ("compose-in-one-token") as a negative about the capacity
+simpliciter ("compose"). The two are different capabilities, and the output channel is exactly the variable
+that **individuates** them.
+
+This is why the witness fits [`essay/undischargeable-negative`](undischargeable-negative.md) so precisely
+rather than embarrassing it. Those four negatives were logged as **kind-2 instrument-uninterpretable** —
+"M failed prerequisite gate G, so the meaning-side question was unasked" — and never as a capability-absence,
+because the essay's discipline forbids reading a behavioral negative as "M cannot." The kind-2 tag was the
+honest record that the verdict was relative to *this instrument*, and the output channel turns out to have
+been part of the instrument all along. The witness then does what that essay says a witness does: "the next
+untried framing could carry a witness, and a single witness would falsify the whole universal." The
+channel-widening *was* the untried framing. The general moral sharpens the parent essay's open-elicitation
+point: the elicitation space whose openness makes a capability-negative undischargeable is open along the
+**output channel** as much as along the input content — and the output end had been the project's blind side.
+
+The individuation cuts both ways, and honesty requires naming the symmetric hazard. If a *too-narrow* channel
+can mask a capacity, a *wide* channel can **scaffold** one: a working surface lets the model perform serial
+computation in tokens that it might not perform in a single forward pass, so a wide-channel positive is a
+positive about *compose-given-a-scratchpad*, not about *compose-in-one-step*. There is no privileged neutral
+channel that reads off "the" capability free of format; **every channel setting indexes a different
+capability**, narrower or wider in exactly the way the format affords. The methodological consequence is not
+"always widen the channel" — that would simply prefer one index over another — but: **state the channel a
+capability attribution is indexed to.** The composition finding is correctly indexed — it claims order-
+sensitive composition *given a working surface*, and explicitly declines the *without*-a-surface version. An
+unindexed capability claim ("model M composes") is underspecified in the same way a claim of measurement
+without units is: it omits a parameter the value depends on.
+
+## A machine performance/competence gap
+
+The shape of this should be familiar to anyone who has thought about the classical **competence/performance**
+distinction in linguistics: a system's underlying competence can be masked by performance factors — memory
+limits, processing load, the demands of the production channel — so that what a subject *does* under a given
+elicitation underdetermines what it *knows how* to do. The output-channel confound is a machine instance of
+exactly this gap. The forced one-token channel is a **performance constraint**: it caps the working memory
+the model may externalize, and a serial computation that overruns that cap fails to surface even when the
+competence to perform it is present (as the wider channel then reveals). The single-move signature was the
+visible residue of a competence squeezed through an aperture too small to pass it.
+
+The project already holds the LLM-tuned version of this caution, from a different angle.
+[`concept/formal-vs-functional-competence`](../../base/concepts/formal-vs-functional-competence.md) draws
+Mahowald et al.'s distinction between "formal linguistic competence—knowledge of linguistic rules and
+patterns—and functional linguistic competence—understanding and using language in the world," and states the
+guardrail this essay needs in general form: "failure on a world-knowledge task does not show that a model
+lacks formal linguistic competence." The output-channel confound is the same guardrail at the *channel* end
+rather than the *task-content* end: **failure under a constraining response format does not show that a model
+lacks the capability the format obstructs.** Both are refusals to read a constrained performance as the
+boundary of competence; the contribution here is to identify the **response format** as a constraint that
+behaves like a performance factor, and to make varying it a control rather than an afterthought. (The
+analogy is a *frame*, not an empirical claim: the essay imports no human result and asserts none; the
+competence/performance vocabulary is used only to locate the machine confound on a familiar map.)
+
+## Why the channel deserved to be tried first, not fifth
+
+[`essay/witness-seeking-economics`](witness-seeking-economics.md) ranks witness-seeking probes by axis
+novelty and signature match — "read the failure signature, ease the implicated axis" — and its value model
+already implies a correction the composition search makes vivid. The four content easings were each a
+legitimate single-variable manipulation, and the economics correctly judged them on-signature or off (the
+K=4 state-space easing off-signature, the figure-to-figure read-off easing on-signature, and so on). But the
+output channel is an axis the economics' menu under-weighted, and it has two properties that should have
+moved it to the front of the queue.
+
+First, it is **cheap and broad**: a forced single-token format is a *standing* feature of nearly every probe
+the project runs, so a confound that lives in the format is not a quirk of one instrument but a candidate
+rival explanation wherever a serial-computation negative appears. An axis that recurs across the whole
+instrument library earns an early check on grounds of reach alone. Second, it turned out to be the
+**decisive** one: four content easings moved the failing models' on-demand accuracy barely, and the single
+channel easing moved both to ceiling. With hindsight the failure signature even pointed at it — a model that
+"applies only one of the two moves" is a model that got *one* operation out before the channel closed, which
+is as much a symptom of a too-small aperture as of a chaining-capacity wall. The economics' "ease the
+implicated axis" rule was right; what the search lacked was the output channel *on the list of axes to
+implicate*. This essay adds it, and ranks it high: **the output channel is among the first controls a
+serial-computation capability-negative should vary, because it is cheap, it recurs across the instrument
+library, and a narrow channel is a standing rival explanation for any forced-format negative.**
+
+This is a correction to the project's *allocation*, stated without accusation — the four content easings were
+sound work that paid diagnostic dividends, and the channel easing depended on
+[`essay/floor-is-not-a-ceiling`](floor-is-not-a-ceiling.md) first naming "an explicit step-by-step working
+surface" as an un-eased axis. The lesson is forward-looking: do not let a control that recurs across every
+instrument be the one tried last.
+
+## The mirror: an aperture is not a ceiling
+
+The output-channel confound has an instructive opposite in the project's spine, and seeing the contrast keeps
+both disciplines honest. [`essay/transcript-ceiling`](transcript-ceiling.md) argues a genuine *medium-level*
+exclusion: the rich-side relational surplus is, by definition, absent from any transcript, so no text probe —
+however its channel is shaped — can reach it; that closure "bounds the medium, not the models" (quoted in
+[`essay/undischargeable-negative`](undischargeable-negative.md)). Both the transcript ceiling and the
+output-channel confound are *instrument*, not *model*, facts — but they pull in **opposite directions**, and
+at **opposite ends of the instrument**.
+
+- The transcript ceiling is a property of the **input medium**: a target property the prompt cannot present,
+  a real ceiling, a map of where to *stop digging* because no easing can reach the witness.
+- The output-channel confound is a property of the **output channel**: a removable constraint on what the
+  *response* may contain, an aperture mistaken for a wall, a sign that the project *stopped digging too soon*
+  because one cheap easing — widening the channel — could reach the witness.
+
+The two errors are duals. Mistaking a ceiling for an aperture wastes budget chasing a witness that the medium
+forbids (the waste the transcript ceiling exists to prevent). Mistaking an aperture for a ceiling forecloses a
+witness that one channel-widening would deliver (the error the composition split would have committed had it
+been read as "claude is the stronger composer"). The unifying discipline is that an instrument is bounded at
+**both ends** — by what its input can present and by what its output can carry — and a capability verdict is
+relative to **both** bounds. The witness-economics' axes had been almost entirely input/content axes; the
+output channel is the under-attended dual, and a negative is not even a candidate capacity verdict until the
+output bound, as much as the input bound, has been shown not to be doing the work.
+
+## What this essay is not
+
+- **Not a claim that any model can or cannot compose.** It is about how to *read* a forced-format negative,
+  not about gemini's or gpt's capacity. The composition witness shows they compose *given a working surface*
+  and explicitly not *without* one; this essay neither extends nor narrows that.
+- **Not "always widen the channel."** Widening the channel indexes a *different* (wider) capability, not a
+  truer one. The recommendation is to **vary** the channel and **state the index**, not to privilege the wide
+  setting as neutral — there is no neutral setting.
+- **Not an impeachment of the project's single-token instruments.** The confound is scoped: it bites only a
+  forced-format negative on a capability that requires serial, externalizable computation. Single-token
+  *tasks* (acceptability, single-premise NLI) give the model no masked working to lose, and are untouched.
+- **Not an accusation that past sessions mis-allocated.** The four content easings were sound single-variable
+  work, and the channel axis was named by [`essay/floor-is-not-a-ceiling`](floor-is-not-a-ceiling.md) before
+  it could be eased. The correction — try the recurring channel control early — is forward-looking, exactly
+  as [`essay/undischargeable-negative`](undischargeable-negative.md) and
+  [`essay/witness-seeking-economics`](witness-seeking-economics.md) generalized disciplines already
+  half-practiced.
+- **Not a human comparison.** The cited result is THIN / `internal-contrast-only`; the competence/performance
+  framing is a conceptual map, not an imported human result. The confound is general to any behavioral
+  capacity-probing under a constrained response format (it would bind for human testing too), but the essay
+  applies it only to the project's own LLM probes and asserts nothing about humans.
+
+## Revision triggers (read before citing)
+
+- **(a) A second output-channel masking, on a different capability.** A future forced-format negative on some
+  *other* serial-computation capability that likewise dissolves when the channel is widened would
+  **strengthen** this essay from a one-instance generalization toward a robust confound. The essay would be
+  corroborated; the scope conditions (serial + externalizable) would gain a second worked case.
+- **(b) A serial-computation negative that survives a widened channel.** If a forced-format negative on a
+  multi-step capability is re-run with a working surface and **persists** (the model still fails with room to
+  externalize), then for *that* case the channel was not the confound, and the negative is a more robust
+  kind-2 verdict — channel-controlled, not channel-bounded. This would not overturn the essay (which says vary
+  the channel, not that widening always flips the verdict) but would supply the important contrasting case: a
+  negative that the output-channel control *clears* rather than dissolves, making the control's diagnostic
+  value cut both ways.
+- **(c) A wide-channel positive shown to be channel-scaffolded artifact.** If a capability that appears only
+  *with* a working surface were shown to be an artifact of the scaffold doing the computation the model cannot
+  do internally (e.g., the model copying a procedure verbatim without composing), the symmetric hazard this
+  essay names would acquire an in-repo instance, sharpening the "every channel indexes a different capability"
+  point into a worked warning against over-reading wide-channel positives.
+- **(d) A genuine medium-level exclusion at the output end.** If some capability witness were shown to require
+  a response structure that *no* text channel can carry (a true output-side analogue of the transcript
+  ceiling), then for that case the output bound would be a real ceiling, not a removable aperture, and the
+  essay's "aperture, not ceiling" reading would be bounded to channels that *can* be widened — which is the
+  general case for response format, but not a universal one.
+- **(e) A fetched human resource licensing a capacity comparison.** None is in-repo. One bearing on how a
+  *human* competence is masked by performance/channel constraints would let the competence/performance frame
+  be applied comparatively — currently forbidden by the no-human-comparison discipline this essay observes.
+
+## Honesty box
+
+- The essay's **original** contribution is to **name the output-channel (elicitation-surface) confound** — a
+  forced response format can mask a serial-computation capability by denying the surface on which it is
+  performed — and to derive the **control** it forces: vary the output channel before reading any forced-format
+  capability-negative, treat such a negative as **channel-bounded** until that is done, **index** every
+  capability attribution to its channel, and rank the channel **among the first** controls because it is cheap
+  and recurs across the instrument library. It also draws the **machine performance/competence** map and the
+  **aperture-vs-ceiling** dual with [`essay/transcript-ceiling`](transcript-ceiling.md). [`essay/floor-is-not-a-ceiling`](floor-is-not-a-ceiling.md)
+  named the execution-format axis; this essay generalizes that one named axis into a confound, a scope
+  condition, and a standing control. **No empirical claim here is new, original, or reported.**
+- The strongest empirical / in-repo sentences leaned on, at their stated strength: "the four-instrument
+  gemini/gpt negative was an artifact of the **forced single-token format** … **not** a composition-capacity
+  limit"; "the obstacle was not a *capacity* to chain but the *denial of a surface on which to chain*"; "The
+  single-move signature was the shape of a two-step computation forced through a one-token channel"; the
+  witness "does **not** show the models compose *without* a working surface … the **format** gates the
+  behavior"; and the reasoning-effort knob "**held constant** … the working surface is opened only in the
+  visible output channel" (all [`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md));
+  the channel axis named as "an explicit step-by-step working surface … un-eased"
+  ([`essay/floor-is-not-a-ceiling`](floor-is-not-a-ceiling.md)); "the next untried framing could carry a
+  witness, and a single witness would falsify the whole universal" and the kind-2 instrument-uninterpretable
+  tag ([`essay/undischargeable-negative`](undischargeable-negative.md)); "read the failure signature, ease the
+  implicated axis" ([`essay/witness-seeking-economics`](witness-seeking-economics.md)); "a split is contingent
+  on elicitation" ([`essay/capability-split`](capability-split.md)); the formal/functional distinction and
+  "failure on a world-knowledge task does not show that a model lacks formal linguistic competence"
+  ([`concept/formal-vs-functional-competence`](../../base/concepts/formal-vs-functional-competence.md)).
+  Nothing here outruns those.
+- The thesis preserves [`essay/undischargeable-negative`](undischargeable-negative.md) and
+  [`essay/witness-seeking-economics`](witness-seeking-economics.md) intact: a forced-format negative stays an
+  undischargeable kind-2 verdict, and the output channel is added as a privileged (cheap, recurring) region of
+  the open elicitation space the economics should sample early. The closure ≠ suspension line is untouched —
+  the channel-widening **reopened-and-resolved-positive**, the opposite of a closure.
+- **No human comparison** is made or owed: the cited result is THIN / `internal-contrast-only`, and the human
+  leg of every cited contrast is unanchored in-repo. The confound is general to constrained-response capacity-
+  probing, but the essay applies it only to the project's own LLM probes.

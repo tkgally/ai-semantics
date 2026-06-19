@@ -39,6 +39,16 @@ links:
 > before citing. The thesis is hedged as a claim about *behavioral* evidence specifically — it concedes
 > that a capacity-absence *is* dischargeable by a non-behavioral argument (an architectural bound, a
 > mechanistic result); see trigger (a).
+>
+> **Refined-forward (2026-06-19): [`essay/output-channel-confound`](output-channel-confound.md).** That
+> essay identifies one region of the open elicitation space this essay quantifies over as **privileged** —
+> the **output channel** (forced single token vs. a working surface). A channel too narrow to externalize a
+> multi-step computation can **mask** a capability, so a forced-format negative is a true **kind-2
+> instrument-uninterpretable** verdict about a *channel-bounded* capability, **mis-described** if read as a
+> capacity-absence — exactly this essay's empty fourth box, now with the output channel named as the cheap,
+> recurring axis to vary before trusting any forced-format negative. The thesis here is preserved intact; the
+> 38th-session witness ([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md))
+> is its vindication ("a single witness would falsify the whole universal").
 
 ## The occasion
 
