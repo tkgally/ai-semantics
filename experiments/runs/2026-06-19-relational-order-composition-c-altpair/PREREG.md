@@ -124,4 +124,30 @@ this judgement and may flag otherwise.
 
 ## Independent pre-run critic
 
-*(to be filled by the fresh independent agent before any finding-bearing call)*
+**GO** (fresh independent agent, 2026-06-19, before any finding-bearing call; recomputed everything
+from scratch — did NOT import the run's `apply_order`/`op_*`). Independently confirmed: CYCLE=`[0,2,3,1]`
+and SWAP=`[1,0,3,2]` are valid permutations of {0,1,2,3}; they **do not commute** at any start (CS-ends
+`[1,3,2,0]` ≠ SC-ends `[2,0,1,3]`); **⟨CYCLE,SWAP⟩ = A4 (order 12)** versus ⟨STEP,FLIP⟩ = D4 (order 8)
+— a **genuinely different group, not a relabeling**. Recomputed `target/swapped/cycle1/swap1/start` and
+the indices for **all 96 records** from `track`+`start_idx`+`order`: **0 mismatches**. Over the 64 COMP
+records: every constant-figure picker = 0.2500 and every fixed track-position picker = 0.2500 (=1/K);
+print-order, canonical-CS, canonical-SC readers each = **exactly 0.5000**; start / cycle1-only /
+swap1-only / reversed-swapped readers each = **0.0000**; only the genuine stamp-order composer = 1.0000;
+target figure uniform (16 each), target track-position uniform (16 each), order balanced (32 CS / 32 SC),
+display order balanced (32 stamp / 32 rev). Independently enumerated the valid configs and got exactly
+`VALID_CONFIGS = {(3,CS),(2,SC),(0,SC),(1,CS)}` (one per target position, 2 CS / 2 SC). rstrip-sha256 =
+`f21f0cfb…22bb`, matching PREREG and `probe._require_frozen`. Rendered COMP/DIRECT prompts: move tables
+correct figure→figure derivations, no positions/indices leak, COMP omits the order (spontaneous), DIRECT
+states the order matching each record's stamp order, FINAL-tag instruction present, the CYCLE-fixes-pos-0
+"a triangle becomes a triangle" self-map correct (not a bug). `parse_forced` **target-blind** (10/10 hand
+cases; last-tag-wins; `finish_reason=="length"` never parsed). Diffed vs the witness run: the **only**
+substantive changes are the two op bodies + labels, `ORDER_OPS` (SF/FS→CS/SC), `VALID_CONFIGS`, the
+cycle1/swap1 field renames, and docstrings/comments — `MAX_TOKENS=1024`, `REASONING` (gemini effort
+minimal **held constant**), `HARD_STOP_USD=1.50`, K=4, thresholds, MODELS, ROUND_PAIRS, SHAPES, TERM,
+SEED0, the SYS/STERN/QUERY/build_user/parse_forced/call_forced block, and the analyze verdict logic are
+**byte-identical**. `python3 build_trials.py` + `python3 fixtures/make_fixtures.py` re-run: matching sha,
+all balance asserts pass, ALL FIXTURE ASSERTS PASS. **Governance: no new `wiki/decisions/open/` entry
+owed** — the operation pair is not a parameter `decisions/resolved/relational-rung-iii-path-dependence`
+froze; the THIN adjudication and `internal-contrast-only` posture are preserved. **No BLOCKER, no
+SHOULD-FIX**; two cosmetic NITs (one stale "STEP, FLIP" docstring label in `render_rules` — **applied**;
+one odd-K comment asymmetry, moot at K=4).

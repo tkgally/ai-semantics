@@ -217,7 +217,7 @@ def move_map(track, op):
 
 
 def render_rules(track):
-    """The two move tables (STEP, FLIP), each listing all K figure->figure mappings in canonical
+    """The two move tables (CYCLE, SWAP), each listing all K figure->figure mappings in canonical
     SHAPES order. No positions appear."""
     out = []
     for op in ("CYCLE", "SWAP"):
