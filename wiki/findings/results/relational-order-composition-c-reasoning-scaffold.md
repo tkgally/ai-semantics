@@ -213,6 +213,13 @@ is updated. **The suspension is lifted: a witness was found.**
 - **(iv) What remains open:** the THIN→rich gap is untouched (rung (iii) stays structurally closed for
   text); generality across operation pairs, larger grids, >2 moves, and the many-shot/different-pair
   axes is still untested; this is one operationalization, one run, three-model panel.
+  **Update (2026-06-19, later session):** the **operation-pair** axis was tested and **replicates** —
+  [`result/relational-order-composition-c-altpair`](relational-order-composition-c-altpair.md) re-ran
+  the working surface on a **genuinely different** non-commuting pair (CYCLE/SWAP, generating A4, vs.
+  this run's STEP/FLIP / D4) and **all three models again RESPECTS-ORDER** (claude/gemini DIRECT 1.000 /
+  COMP 1.000; gpt DIRECT 1.000 / COMP 0.906). So the dissolution of the split is a composition capacity,
+  not an artifact of the one STEP/FLIP instrument. Larger grids, >2 moves, and non-figure referents stay
+  untested.
 
 ## Honesty box
 
