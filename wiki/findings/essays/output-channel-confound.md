@@ -78,15 +78,27 @@ eased the *channel* once and the negative dissolved. The lesson is not local to 
 is this essay's work.
 
 *Forward note (2026-06-19, later session).* The reading defended below — that the dissolution reflects a
-composition **capacity**, not an artifact of the one STEP/FLIP instrument — has since been tested on the
-one axis the witness left fixed: the **operation pair**.
+composition **capacity**, not an artifact of the one STEP/FLIP instrument — has since been tested on **two**
+generality axes the witness left fixed. First, the **operation pair**:
 [`result/relational-order-composition-c-altpair`](../results/relational-order-composition-c-altpair.md)
 re-ran the working surface on a **genuinely different** non-commuting pair (CYCLE/SWAP, generating A4 —
 a different group than STEP/FLIP's D4) and found **all three models again RESPECTS-ORDER** (claude/gemini
-DIRECT 1.000 / COMP 1.000; gpt DIRECT 1.000 / COMP 0.906). So the witness is **not** specific to the one
-instrument's geometry: the capacity-reading is corroborated across a second pair. This does not engage a
-revision trigger (it is neither a second *channel*-masking nor a channel-survival case — the channel was
-already wide); it is a **generality** corroboration of the capacity the essay reads off the witness.
+DIRECT 1.000 / COMP 1.000; gpt DIRECT 1.000 / COMP 0.906). Second, the **grid size**:
+[`result/relational-order-composition-c-k6`](../results/relational-order-composition-c-k6.md) re-ran the
+working surface on a larger track (K=6, the dihedral STEP/FLIP pair now generating D6) and again found
+**all three RESPECTS-ORDER** (claude/gemini DIRECT 1.000 / COMP 1.000; gpt DIRECT 1.000 / COMP 0.861). So
+the witness is **not** specific to the one instrument's geometry **or** to the smallest grid: the
+capacity-reading is corroborated across a second pair and a larger state space. Neither engages a revision
+trigger (neither is a second *channel*-masking nor a channel-survival case — the channel was already wide);
+both are **generality** corroborations of the capacity the essay reads off the witness. *One honest signal
+for the watch-list:* gpt's spontaneous-ordering reliability (COMP, not the on-demand DIRECT gate, which
+stays at ceiling) dips monotonically as the instrument grows — 0.953 (K=4 STEP/FLIP) → 0.906 (K=4
+CYCLE/SWAP) → 0.861 (K=6) — a *suggestive* (overlapping-CI, n=72) hint that **state size taxes spontaneous
+order-selection even when the channel is wide and on-demand composition is intact**. That is exactly the
+distinction this essay turns on (a *channel* bound vs. a *capacity* bound): the natural sharpening is a
+**deeper-composition (>2-move)** probe — a bigger *serial-depth* demand rather than a bigger *state* — to
+see whether a negative ever **survives** the wide channel (which would be channel-*controlled*, a real
+bound, not channel-bounded).
 
 ## The confound, named
 
