@@ -370,7 +370,19 @@ empty fourth box.
   cannot carry a witness (the relational program's transcript ceiling is the existing exemplar for the
   *rich-side* question; an analogous bound for some *thin-side* composition capability would be new) would
   let a suspension be backed by a kind-3 reach-closure rather than by exhaustion — the highest-value
-  terminator in the economics. This sharpens the essay.
+  terminator in the economics. This sharpens the essay. *Attempted 2026-06-19 for the thin-side
+  composition capability and the bound does **not** exist:*
+  [`essay/floor-is-not-a-ceiling`](floor-is-not-a-ceiling.md) examined the only candidate — the **≥2-move
+  floor** (a composition needs ≥2 moves) plus the behavioral localization to "chaining execution" — and
+  showed it is **not** a kind-3 reach-closure but a **task-parameter floor**: it caps one easing axis
+  (step count) while leaving the elicitation space open along others (a different operation pair, an
+  execution-format scaffold, many-shot), and any "irreducible core" step that would close it smuggles in
+  the undischargeable behavioral universal (the forbidden kind-4 box). So the composition witness-search
+  stays **suspended on budget, never structurally closed**. The trigger fired in the *negative* — a
+  **reasoned null** rather than the new bound it anticipated — which **sharpens** this essay anyway: that
+  refining essay adds the **gate a candidate must pass to count as a structural bound** (a class-level /
+  medium-level exclusion, not a task-parameter floor — "not every floor is a ceiling"). The trigger stays
+  **live** for a *genuine* medium-level exclusion of some composition witness (its trigger (c)).
 - **(c) A calibrated prior over an elicitation space.** If the project ever acquired a defensible
   quantitative prior over how likely a witness is along a given axis (it has none today), the informal
   "expected information" reasoning here could be made precise for that case — bounding the essay's

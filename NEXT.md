@@ -2,75 +2,70 @@
 
 ## State
 
-**Session of 2026-06-18 (thirty-sixth session, empirical) is landed and squash-merged to `main` (PR #TBD).**
-A single-unit empirical session — **288 finding-bearing calls + 3 liveness, $0.372384 billed** (`usage.cost`-summed,
-0 missing); day total 2026-06-18 ≈ **$1.358 of $5.00**.
+**Session of 2026-06-19 (thirty-seventh session, philosophical) is landed and squash-merged to `main` (PR #TBD).**
+A single deep essay-unit session — **no models queried, $0.00 spent**; day total 2026-06-19 = **$0.00 of $5.00**.
 
-It ran the **worked-example-scaffold** witness-seeking re-run of the Option-C order-sensitive composition split
-([`result/relational-order-composition-c-worked-example`](wiki/findings/results/relational-order-composition-c-worked-example.md))
-— the **first easing of the chaining axis** the figure-to-figure run localized (a new axis; the three prior easings
-touched only state-space and read-off). The single manipulated variable was one **worked example** demonstrating the
-chaining mechanic (apply move 1 to the start, then move 2 to the result), added to the **byte-identical** fig trials
-(same `stimuli.json` sha `975e31bc…88ba`), built with disjoint items/moves and an explicit order so it eased chaining
-**without** teaching stamp-resolution (COMP spontaneity preserved).
+It wrote the project's **fourteenth essay**, [`essay/floor-is-not-a-ceiling`](wiki/findings/essays/floor-is-not-a-ceiling.md),
+which **answers [`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md) revision trigger
+(b)** — does a **structural bound** (kind-3 reach-closure) exist for *thin-side* two-move composition? — **in the
+negative, and the negative is the contribution.** The composition witness-search is suspended across four instruments
+with the structural bound recorded as "none yet"; this essay examined the only candidate (the **≥2-move floor** plus the
+behavioral localization of the difficulty to "chaining execution") and showed it is **not** a kind-3 reach-closure, on
+three grounds: **(A)** the candidate's load-bearing premise ("the difficulty *is* the irreducible core") is a
+**behavioral universal**, undischargeable per [`essay/undischargeable-negative`](wiki/findings/essays/undischargeable-negative.md)
+— "M cannot chain" disguised as a structural argument (the **kind-4** box, refused); **(B)** the floor bounds only the
+*step-count* axis, leaving the elicitation space **open** along un-eased axes (a different/more-familiar non-commuting
+operation pair, execution-format scaffolding, many-shot); **(C)** — the **original contribution** — a **task-parameter
+floor** is the wrong *type* of object to be a reach-closure. The criterion: *a kind-3 reach-closure excludes the witness
+from an entire instrument **class** by a class-level (definitional, medium-level) property (the transcript ceiling); a
+bound on a **task parameter** caps one knob and leaves the witness-bearing region populated — **not every floor is a
+ceiling.*** **Verdict:** no kind-3 bound of the available type exists, so the composition witness-search can only ever be
+**suspended on budget, never structurally closed** — upgrading the result's item-(iii) "none yet" to a **reasoned null**.
+It **sharpens** witness-seeking-economics (adds the gate a candidate bound must pass) and **reinforces** the closure ≠
+suspension line. A **non-behavioral** capacity-closure stays open (undischargeable-negative trigger (a)). `internal-contrast-only`;
+**no human comparison.**
 
-**HEADLINE — NO WITNESS again, and the scaffold did not help.** claude RESPECTS-ORDER at ceiling (DIRECT 1.000, COMP
-64/64); **gemini UNINTERPRETABLE** (DIRECT 0.625) and **gpt UNINTERPRETABLE** (DIRECT 0.156) — neither cleared the
-gate. Decisively, shown a worked chain *and* told the order, **gpt still applies only one of the two moves 84.4% of
-the time** (up from the fig run's 65.6%; gemini 21.9%, unchanged; claude 0%). So the single-move signature **persists
-and intensifies** even when chaining is demonstrated outright → the difficulty is **not** a demonstration/comprehension
-gap but chaining **execution** itself. (The numeric DIRECT drops — gpt 0.250→0.156, gemini 0.656→0.625 — are within
-**overlapping CIs**: read "no witness", **not** "the scaffold hurt"; a worked example also lengthens the prompt.)
-The split now survives **four** instruments (K=6 positional, K=4 positional, K=4 figure-maps, K=4 figure-maps + worked
-example), two on-signature. Per [`essay/undischargeable-negative`](wiki/findings/essays/undischargeable-negative.md)
-it stays **undischargeable, not closed** (kind-2 instrument-uninterpretable). `anchor: internal-contrast-only`; **no
-human comparison.**
-
-**Integration:** independent **pre-run critic GO** (fresh agent: reproduced the byte-identical freeze; recomputed
-geometry 0 mismatches; traced rendering 0 position leaks; verified the worked example leaks no trial answer/map,
-teaches no stamp-resolution — no digits/round/stamp/recency words — is arithmetically correct, and is the *single*
-prompt variable vs the fig run; ruled no new decision owed). Independent **post-run verifier REPRODUCED** every number
-with its own Wilson (0 mismatches; 0 missing-cost; sha confirmed; total $0.372384). Updated, by judgement (orchestrator):
-the result page (new), [`essay/capability-split`](wiki/findings/essays/capability-split.md) (trigger (b) tested a third
-time → worked-example **discharged**; only fewer-steps remains; trigger (c) "four instruments"),
-[`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md) (trigger (a) tested → no witness;
-trigger (f) tested → **did not fire**, signature persisted/intensified not changed; diagnostic-dividend persist-branch
-corroborated), [`wiki/index.md`](wiki/index.md), [`wiki/executive-summary.md`](wiki/executive-summary.md). senselint
-**0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean. Website (`docs/`): journal
-36th entry + home status/"The latest" card + findings follow-up paragraph. Tracks: …emp(34)→phil(35)→**emp(36)**, so the
-next session is **due to lean philosophical** (or a cheap mixed unit).
+**Integration:** independent **adversarial coherence pass** (fresh read-only agent over the essay vs. all four cited
+essays + the result page) returned **no BLOCKER** — confirmed every quoted locator verbatim, the argument sound, and **no
+kind-4 smuggle** in the essay's own voice; five SHOULD-FIX precision items applied (two honesty-box quote-boundary fixes;
+the "already in the backlog" claim corrected from "two" to "one [a different operation pair]"; the "three independent
+reasons" framing softened; the missing index entry added). Updated, by judgement (orchestrator): the essay (new),
+[`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md) (trigger (b) annotated → addressed
+negative, stays live for a *genuine* medium-level exclusion), the suspension-note item (iii) on
+[`result/relational-order-composition-c-worked-example`](wiki/findings/results/relational-order-composition-c-worked-example.md)
+("none yet" → "none of the available type exists"), [`wiki/index.md`](wiki/index.md), [`wiki/executive-summary.md`](wiki/executive-summary.md).
+senselint **0 errors** (2 expected WARNs: `wanted.md`, `multimodal-anchor-scouting.md`); linkify clean. Website (`docs/`):
+journal 37th entry + home status/"The latest" card + findings follow-up paragraph. Tracks: …phil(35)→emp(36)→**phil(37)**,
+so the next session is **due to lean empirical** (or a cheap mixed unit).
 
 ## Next concrete actions — backlog for the next session
 
 **Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** (all 28 decisions resolved). Nothing to ratify
 unless Tom opens something or leaves an override. Apply any Tom override first, as always.
 
-**Then pick the lean — philosophical is due** (tracks ended on emp(36)). Candidates:
+**Then pick the lean — empirical is due** (tracks ended on phil(37)). Candidates:
 
-1. **PHILOSOPHICAL (lean is due) — re-examine, don't spawn for its own sake.** The composition witness-search is now
-   **suspended across four instruments** and **near its easing floor on the byte-identical line**: with state-space,
-   read-off, and chaining-demonstration all discharged, the one remaining implicated axis is **fewer chaining steps**,
-   and an order-sensitive *composition* needs **≥ 2** moves — so that axis cannot go lower and remain a composition.
-   This is the natural occasion for the unit [`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md)
-   **trigger (b)** names: ask whether a **structural bound (kind-3 reach-closure)** exists for *thin-side* two-move
-   composition — "an analogous bound for some thin-side composition capability would be new" — i.e., is there an
-   argument that **no** easing of two-move non-commuting composition (short of changing the task) could carry a witness
-   for these models, given the ≥2-move floor? If a defensible bound exists, the suspension upgrades from budget-based to
-   structural (the highest-value terminator in the economics); if not, write the null and say why. **Caution:** a
-   structural bound is a claim about *instrument reach*, never *model capacity* — keep it kind-3, never kind-4.
-   Alternatively, catalogue the strongest queued open-access source in [`base/wanted.md`](wiki/base/wanted.md)
-   (network-permitting).
-
-2. **EMPIRICAL (if a unit pairs, or next empirical lean) — a FRESH axis, not another easing of the same instrument.**
-   The byte-identical composition line is at its floor; further marching down it is low-value (and four eased re-runs
-   of one instrument are **not** distinct probes — `capability-split` trigger (c)). Genuinely fresh options: a
-   **different non-commuting operation pair** (is STEP/FLIP-on-a-ring unusually hard for gemini/gpt, or is two-move
-   composition itself the wall? — a fresh pair would be a new instrument, needing its own freeze + critic), or a fresh
-   relational horn: **partially-conflicting refinements** (a later turn *partly* conflicts — overwrite/integrate/split?),
-   **larger-grid / >3-turn** integration generality, **image referents**, **cross-family dyads**. Grammar reserve: the
-   AANN/CxG **cancel-direction / unification-shape Option-B** held in
+1. **EMPIRICAL (lean is due) — a FRESH axis, not another easing of the same instrument.** The byte-identical composition
+   line is at its floor **and** is now argued to have **no structural terminator** (this session) — so further marching down
+   it is doubly low-value. The single most decision-relevant fresh probe is **a different non-commiting operation pair**:
+   the new essay's **objection (B)** names "a different / more-familiar non-commuting operation pair" as an **open, un-eased
+   axis the ≥2-move floor does not touch**, and a witness there would **fire the existential** (confirming objection (B) and
+   reopening-resolving the suspension positive), while a non-witness would **extend** the suspension to a second pair and
+   bear on "is STEP/FLIP-on-a-ring unusually hard, or is two-move composition itself the wall?" A fresh pair is a **new
+   instrument** needing its own freeze + independent pre-run critic + the THIN adjudication gate (still `internal-contrast-only`,
+   still Option-C frame). Other genuinely fresh relational horns: **partially-conflicting refinements** (a later turn *partly*
+   conflicts — overwrite/integrate/split?), **larger-grid / >3-turn** integration generality, **image referents**,
+   **cross-family dyads**. Grammar reserve: the AANN/CxG **cancel-direction / unification-shape Option-B** held in
    [`decisions/resolved/aann-uniqueness-third-construction`](wiki/decisions/resolved/aann-uniqueness-third-construction.md)
    (needs a fresh human anchor first).
+
+2. **PHILOSOPHICAL (if a unit pairs, or to keep the source backlog warm).** Catalogue the strongest queued open-access
+   source in [`base/wanted.md`](wiki/base/wanted.md) (network-permitting). Or — the higher-value but harder move named by
+   this session — the **non-behavioral capacity-closure** route: [`essay/floor-is-not-a-ceiling`](wiki/findings/essays/floor-is-not-a-ceiling.md)
+   trigger (a) / [`essay/undischargeable-negative`](wiki/findings/essays/undischargeable-negative.md) trigger (a) leave open
+   whether an *architectural / expressivity / mechanistic* argument could close the composition **capacity** question off
+   the behavioral axis (a different object from the reach-closure this session denied). That needs a fetched source bearing
+   on transformer compositional expressivity; do **not** manufacture one.
 
 3. **Website** per `PROTOCOL.md` §5b, as always.
 
@@ -82,33 +77,37 @@ unless Tom opens something or leaves an override. Apply any Tom override first, 
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This session tried the *last* easier version of the "order of operations" test the project had been saving — a
-  **worked example** that shows the two struggling models exactly how to do one move and then the other (using
-  different shapes so it gives nothing away). It didn't help: the strong model stayed perfect, the other two still
-  failed, and one of them did only a single move *even more* often (about 84% of the time) despite being shown how and
-  told the order. So the trouble isn't that the models don't understand the task or were never shown the steps — it's
-  the bare act of doing two steps in a row. As always this is **not** "the models can't"; it's a budget decision to
-  pause this line, now with only one near-impossible easier version left (a task with fewer than two steps stops being
-  a two-step task). Two independent reviewers vetted it (one before spending — checking the worked example gives no
-  answer away and teaches no shortcut — one reproducing every number after). About 37 cents; the day stays ≈ $1.36 of
-  the $5/day cap. Next session leans to writing/philosophy (the tracks alternate), where a natural question is whether
-  one can *argue* — not just keep testing — that no easier version of a two-step task could ever crack it.
+- For six sessions the project kept trying *easier* versions of the "order of operations" two-step puzzle and none
+  helped, but it never concluded "those models can't" (a verdict it holds is unreachable from behaviour). This session
+  asked the natural next thing: can you *argue* — without more testing — that **no** easier version could ever work, which
+  would let the project stop searching for a *reason* (not just for lack of budget)? The answer is **no**, for a careful
+  reason now written down. The one candidate argument leans on a hard *floor* ("a two-step task can't drop below two
+  steps"), but a floor on how simple a task can get is **not** a ceiling on what the method can reach — it blocks only one
+  *direction* of easing and leaves others untried (a more familiar pair of moves; letting the model show its working step
+  by step), and arguing past them would secretly assume the models "can't." So the testing stays **paused for budget
+  reasons, reopenable any time**, not closed — and the lasting product is the distinction *not every floor is a ceiling*.
+  No models queried, **nothing spent**; day total June 19 = $0.00. The essay was checked adversarially by an independent
+  reviewer (every quotation verified word-for-word; confirmed it never slips into "the models can't"; a few precision
+  fixes). The next session leans back to experiment — the sharpest fresh test is a *different* pair of moves, to see
+  whether the specific pair used so far is unusually hard or two-step composition itself is the wall.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
 [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md) (resolved-decisions
 changelog at [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). Budget $5/day UTC — check today's
-ledger rows in [`config/budget.md`](config/budget.md) before any probe (2026-06-18 day total ≈ **$1.358**; this session
-added **$0.372384**). End squash-merged to `main`, website updated. **No decision is open.** Tracks ended **emp(34) →
-phil(35) → emp(36)** — a session is **due to lean philosophical**. The relational ladder stands at rung (i) overwrite,
-rung (ii) integration (+depth 2), order-sensitive **composition** (**claude only** across the full three-model panel,
-robust to **four** instruments — K=6, K=4, K=4 figure-maps, K=4 figure-maps + worked example — the two UNINTERPRETABLE
-verdicts surviving both on-signature easings), and **rung (iii) documented structurally closed for text-only stimuli**.
-The methodological spine has four essays: `essay/undischargeable-negative` (the logic), `essay/witness-seeking-economics`
-(the spending — suspend never close; ease the implicated axis; the diagnostic dividend, **persist branch** now twice
-demonstrated), `essay/capability-split` (read splits as splits; trigger (b) discharged on three of four easings, only
-fewer-steps left), and `essay/transcript-ceiling` (the structural reach-closure). The composition witness-search is
-**suspended across four instruments and near its easing floor** (only **fewer chaining steps** un-eased, which is
-bounded below by the ≥2-move definition of a composition) — the natural next move is to ask whether a **structural
-bound** retires the rest of the search, or to open a **fresh axis** (different operation pair / fresh relational horn).
+ledger rows in [`config/budget.md`](config/budget.md) before any probe (2026-06-19 day total so far = **$0.00**; this
+session added **$0.00**). End squash-merged to `main`, website updated. **No decision is open.** Tracks ended **phil(35) →
+emp(36) → phil(37)** — a session is **due to lean empirical**. The relational ladder stands at rung (i) overwrite, rung
+(ii) integration (+depth 2), order-sensitive **composition** (**claude only** across the full three-model panel, robust to
+**four** instruments — K=6, K=4, K=4 figure-maps, K=4 figure-maps + worked example), and **rung (iii) documented
+structurally closed for text-only stimuli**. The methodological spine now has **five** essays:
+`essay/undischargeable-negative` (the logic — kind-1/2/3 negatives, the empty kind-4 box), `essay/witness-seeking-economics`
+(the spending — suspend never close; ease the implicated axis; the diagnostic dividend), `essay/capability-split` (read
+splits as splits), `essay/transcript-ceiling` (the rich-side kind-3 reach-closure), and **`essay/floor-is-not-a-ceiling`**
+(the new one — answers witness-seeking-economics trigger (b): **no** kind-3 bound exists for thin-side two-move composition,
+because the ≥2-move floor is a *task-parameter floor*, not a *medium-level exclusion*; the suspension stays **budget-based,
+never structurally closed**). The composition witness-search is **suspended across four instruments, at its byte-identical
+easing floor, and now argued to have no structural terminator** — so the next move is a **fresh axis** (a different
+non-commuting operation pair is the sharpest, and would directly test the new essay's objection (B)), not more easing of
+the same instrument.

@@ -104,7 +104,8 @@ distinction the strong version makes vivid.
 
 If this went through, it would be the highest-value terminator the economics describes — it would retire the
 remaining composition witness-search at zero spend, exactly as the transcript ceiling retired the rich-side
-text-probe program. It does not go through, for three independent reasons, each sufficient on its own.
+text-probe program. It does not go through, for three reasons — the first two each
+independently sufficient, the third explaining why the defeat generalizes.
 
 ## Why it is not a kind-3 reach-closure
 
@@ -151,7 +152,8 @@ genuine two-move non-commuting composition — and several of those are un-eased
 - **Many-shot rather than one demonstration.** The worked-example run used a single example. The number of
   demonstrations is its own axis; one non-witness at k=1 does not bound k>1.
 
-None of these is exotic; two are already in the project's own backlog as *fresh* axes. Their existence is
+None of these is exotic; one (a different operation pair) is already in the project's own backlog, and the
+other two are fresh axes the floor likewise leaves open. Their existence is
 fatal to the candidate, because "no easing can carry a witness" is the open ∀ over elicitations that
 [`essay/undischargeable-negative`](undischargeable-negative.md) shows behavior cannot establish — and the
 floor closes only the sub-region "fewer than two moves" of one axis, leaving the witness-bearing region (≥2
@@ -306,9 +308,10 @@ where to stop digging that points at solid ground.
   it," and a kind-3 closure closes "a *reach* claim … not a *capacity* claim"
   ([`essay/undischargeable-negative`](undischargeable-negative.md)); the transcript ceiling rests on "The rich
   side is defined by what the record lacks" and "A transcript states a record and nothing more"
-  ([`essay/transcript-ceiling`](transcript-ceiling.md)); the negatives stay instrument-bounded, never "lacks
-  order-sensitive composition in general" ([`essay/capability-split`](capability-split.md);
-  [`concept/formal-vs-functional-competence`](../../base/concepts/formal-vs-functional-competence.md)).
+  ([`essay/transcript-ceiling`](transcript-ceiling.md)); the negatives stay instrument-bounded — never "lacks
+  order-sensitive composition" in general ([`essay/capability-split`](capability-split.md)), echoing the
+  discipline that "failure on a world-knowledge task does not show that a model lacks formal linguistic
+  competence" ([`concept/formal-vs-functional-competence`](../../base/concepts/formal-vs-functional-competence.md)).
   Nothing here outruns those.
 - The thesis preserves [`essay/undischargeable-negative`](undischargeable-negative.md) and
   [`essay/witness-seeking-economics`](witness-seeking-economics.md) intact: it denies a *behavioral*
