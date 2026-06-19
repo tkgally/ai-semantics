@@ -185,10 +185,17 @@ decision; **not** a closure — the negative stays undischargeable):
   **≥ 2** moves by construction, so "fewer chaining steps" cannot go below two and remain a composition
   — this axis is near its natural floor on the byte-identical line. Further easing would change the
   instrument (a different/easier operation pair) or move off the byte-identical comparison.
-- **(iii) Structural bound on the remaining search:** **none yet** for this thin-side composition
-  capability (unlike the rich-side rung (iii), which has the [`essay/transcript-ceiling`](../essays/transcript-ceiling.md)
-  closure). No argument yet shows a fewer-steps or alternative-operation design *cannot* carry a witness
-  — though the ≥2-move floor narrows what a "fewer-steps" easing could be.
+- **(iii) Structural bound on the remaining search:** **none of the available type exists** (updated
+  2026-06-19; was "none yet" — a later session supplied the argument). Unlike the rich-side rung (iii),
+  which has the [`essay/transcript-ceiling`](../essays/transcript-ceiling.md) closure, this thin-side
+  composition capability has **no kind-3 reach-closure**: [`essay/floor-is-not-a-ceiling`](../essays/floor-is-not-a-ceiling.md)
+  examined the only candidate — the **≥2-move floor** plus the chaining-execution localization — and
+  showed it is a **task-parameter floor**, not a **medium-level exclusion**, so it caps one easing axis
+  (step count) while the elicitation space stays open along others (a different operation pair, an
+  execution-format scaffold, many-shot), and the step that would close it ("the difficulty *is* the
+  irreducible core") is an undischargeable behavioral universal (the kind-4 box). So the search stays
+  **suspended on budget, never structurally closed** — a *reasoned* null, not merely an absent bound. The
+  ≥2-move floor still narrows what a "fewer-steps" easing could be, but a floor is not a ceiling.
 - **(iv) Reopen condition:** a cheap, well-targeted probe on the remaining implicated axis (a genuinely
   easier *execution* of two-move chaining, or a different/easier non-commuting operation pair) would
   reopen the search; until one is run, the search is **suspended, not closed**.
