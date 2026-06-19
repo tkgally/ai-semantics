@@ -6,7 +6,7 @@ meaning-senses:
   - functional-vs-formal
   - distributional
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-19
 links:
   - rel: depends-on
     target: source/mahowald-2024-dissociating
@@ -14,6 +14,8 @@ links:
     target: concept/distributional-meaning
   - rel: refines
     target: concept/constructional-meaning
+  - rel: depends-on
+    target: source/li-2024-cot-serial
 ---
 
 # Formal vs. functional linguistic competence
@@ -25,3 +27,5 @@ The distinction is drawn by Mahowald, Ivanova, Blank, Kanwisher, Tenenbaum, and 
 For this project the distinction does two pieces of work. First, it prevents over-attribution: a model that reaches acceptability ceiling on the AANN structural contrast has demonstrated formal competence on that construction, not constructional meaning-tracking — the `formal-competence-aann-ceiling` claim encodes this directly. Second, it prevents under-attribution: failure on a world-knowledge task does not show that a model lacks formal linguistic competence. The two questions must be separated before results can be interpreted. Any finding tagged `functional-vs-formal` should specify which side of the line the probe sits on and what additional evidence would be required to establish the other side.
 
 **Live tension for this project.** The formal/functional boundary is not always crisp. Mahowald et al. acknowledge that pragmatics sits at the interface: pragmatic interpretation requires both form-knowledge (what is literally said) and functional resources (what is meant, given interlocutor and context). Constructions whose meaning is heavily conventionalized at the pragmatic level — e.g., indirect speech acts, scalar implicature-bearing forms — straddle the line. For constructions like the AANN, where the constructional meaning is partly formal (the adjective-type and noun-type constraints) and partly semantic-pragmatic (the evaluative-unitization frame), assigning a finding purely to one side requires explicit argument. The distinction is also orthogonal to the grounded/ungrounded distinction of Bender & Koller (2020): a model can be formally competent without being grounded in communicative intent, and the two questions should not be conflated when interpreting probe results.
+
+**A complexity-theoretic sharpening of the *performance* side (added 2026-06-19).** The performance/competence caution above has a formal counterpart for transformers specifically. [`source/li-2024-cot-serial`](../sources/li-2024-cot-serial.md) (Li, Liu, Zhou & Ma, ICLR 2024) proves that an idealized constant-depth decoder-only transformer answering *in one forward pass* is expressively bounded ("can only solve problems in TC^0 without CoT"; a tighter AC^0 bound under constant-bit precision), whereas "with T steps of CoT" — an externalized chain of intermediate steps — it "can solve any problem solvable by boolean circuits of size T", i.e. CoT "empowers the model with the ability to perform inherently serial computation, which is otherwise lacking in transformers, especially when depth is low" (abstract, verbatim-verified on the source page). So for an *inherently serial* task a constrained output channel (no room for intermediate steps) is a genuine **expressive** bottleneck, and a failure under that constraint is a performance/channel fact rather than evidence about the model's underlying competence — the machine-side, theory-of-computation analogue of the guardrail "failure on a world-knowledge task does not show that a model lacks formal linguistic competence." The methodological consequence the project draws from this is developed in [`essay/output-channel-confound`](../../findings/essays/output-channel-confound.md). Scope, as the source states: the bound is asymptotic and about idealized transformers, with no claim about the panel models' actual internals and no human comparison; it grounds *why* a working-surface dependence is expected on serial tasks (e.g. permutation-group composition), not *that* it holds for any particular model, which only behavioral runs establish.
