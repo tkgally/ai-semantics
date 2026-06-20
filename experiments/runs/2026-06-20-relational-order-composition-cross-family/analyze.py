@@ -70,7 +70,7 @@ def analyze(raw_dir):
     pos_chance = stim["pos_chance"]
 
     def print_pick(rec):
-        return C.final_color(rec, tuple(rec["display_order"]))
+        return C.color_at(rec, tuple(rec["display_order"]), rec["s"])
 
     out = {"direct_floor": floor, "print_ceiling": ceiling, "pos_chance": pos_chance, "models": {}}
     print(f"\n=== CROSS-FAMILY order-sensitive COMPOSITION verdict (direct_floor={floor}, "
@@ -89,8 +89,9 @@ def analyze(raw_dir):
         target = _rate(cp, lambda r: r["target_color"])
         rev = _rate(cp, lambda r: r["rev_color"])
         prnt = _rate(cp, print_pick)
-        c0 = _rate(cp, lambda r: r["start_color"])
         cr = _rate(cp, lambda r: r["recolor_color"])
+        c_oth = _rate(cp, lambda r: r["init_colors"][r["o"]])
+        earlier = _rate(cp, lambda r: C.color_at(r, (r["stamp_order"][0],), r["s"]))
         comp_sig = target["wilson95"][0] > ceiling
 
         if not manip_pass:
@@ -103,7 +104,7 @@ def analyze(raw_dir):
         m = {"n_total": len(recs), "n_na": len(na),
              "direct": {"acc": dacc, "manip_pass": manip_pass},
              "comp": {"target_governs": target, "rev": rev, "print": prnt,
-                      "c0": c0, "cr": cr, "comp_sig": comp_sig},
+                      "cr": cr, "c_oth": c_oth, "earlier_only": earlier, "comp_sig": comp_sig},
              "verdict": verdict}
         out["models"][name] = m
         print(f"\n  {name}: VERDICT = {verdict}  (NA={len(na)})")
@@ -113,7 +114,7 @@ def analyze(raw_dir):
         print(f"     COMP target (stamp-order composition) rate={target['rate']:.3f} "
               f"CI={target['wilson95']} (n={target['n']}; print ceiling {ceiling}) sig={comp_sig}")
         print(f"     COMP breakdown: reversed-order={rev['rate']:.3f}, print-order={prnt['rate']:.3f}, "
-              f"C0(start)={c0['rate']:.3f}, Cr(recolor)={cr['rate']:.3f}")
+              f"Cr(recolor)={cr['rate']:.3f}, C_oth={c_oth['rate']:.3f}, earlier-only={earlier['rate']:.3f}")
 
     verdicts = {k: m["verdict"] for k, m in out["models"].items()}
     out["respects_order_models"] = [k for k, v in verdicts.items() if v == "RESPECTS-ORDER"]
