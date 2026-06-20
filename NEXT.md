@@ -2,73 +2,81 @@
 
 ## State
 
-**Session 50 (2026-06-20 UTC) ratified the dative-alternation operationalization (ADOPT MODIFIED) and BUILT + FROZE + CERTIFIED
-the probe instrument under an independent pre-run critic GO; $0 spent, no models queried. The run is the next step.**
-The English DATIVE ALTERNATION line (double-object *Mary gave John the book* vs. prepositional *Mary gave the book to John*,
-constrained by information structure) — the project's return to its grammatical core — is now ready to run:
+**Session 51 (2026-06-20 UTC) RAN the frozen dative information-structure probe → PANEL CONFIRM (3/3 models).**
+The English dative alternation — *Mary gave John the book* (double-object, DOC) vs. *Mary gave the book to John*
+(prepositional dative, PD) — **tracks information structure** in all three panel models: each shifts DOC/PD
+preference in the human direction (given recipient → DOC, given theme → PD) across a manipulation that holds
+length+animacy identical by construction, and the effect **survives the end-weight dissociation control** for all
+three. Result: [`result/dative-information-structure-v1`](wiki/findings/results/dative-information-structure-v1.md)
+(`status: proposed`, **human-anchored** to [`resource/languageR-dative-corpus`](wiki/base/resources/languageR-dative-corpus.md),
+NOT internal-contrast-only) — the project's **first human-anchored Tier-2 positive of its own design**. The
+conjecture is now `tested`; the theory page carries a synthesis blockquote + Tier-2 placement.
 
-- **Decision ratified (cross-session):** [`decisions/resolved/dative-anchor-and-indicator`](wiki/decisions/resolved/dative-anchor-and-indicator.md)
-  — opened by session 49, ratified by session 50 via an independent adversarial-review agent: **ADOPT MODIFIED** (Option A corpus
-  production surface = primary anchor; B&F 2010 ratings an opportunistic upgrade only; graded forced-choice indicator; synthetic
-  minimal pairs; human-anchored posture) with **four modifications** (confirm-wording fix; binding primary/secondary analysis
-  ordering; numeric length-control thresholds; forced-choice validity guard) + **seven binding build conditions**.
-- **Anchor promoted:** [`resource/languageR-dative-corpus`](wiki/base/resources/languageR-dative-corpus.md) `external-only`→**`catalogued`**
-  — corpus mirrored + inspected firsthand (3263×15; NP=2414/PP=849; factor levels confirmed; logistic fit reproduces all five
-  canonical human directions, acc 0.887). Derived gradient committed (`corpus_inspection.json`); raw `.rda` gitignored.
-- **Instrument BUILT + FROZEN + CERTIFIED:** [`experiments/runs/2026-06-20-dative-information-structure/`](experiments/runs/2026-06-20-dative-information-structure/)
-  — `stimuli.json` **sha256 `0ffe3700524a8e5e0780820bab2fa4301923d37d93f7683d69515c968c4ababf`** (44 items = 32 main + 12 control;
-  240 trials). The givenness manipulation lives ONLY in the discourse context, so the within-item shift is **provably immune to
-  every length/position/order shortcut** (`certification.json`: all 8 enumerated shortcut readers → max|shift|=0; all binding
-  conditions PASS). `PREREG.md` freezes the sha + the pre-registered analysis + verdict map + the **independent pre-run critic GO**.
-- **JST site-stamp hardened (monitor request):** the requirement to stamp the journal entry + home-page "Last updated" with the
-  Japan-time clock time is now in `PROTOCOL.md §5b` (with the `TZ=Asia/Tokyo` recipe + the UTC-vs-JST budget-day gotcha) and
-  `CLAUDE.md` rule 9, plus a cautionary note in `docs/README.md` (sessions 48–49 had dropped it). This session's site entries
-  carry `12:36 JST`.
+- **Numbers** (main within-item shift, all bootstrap-LB > 0): gemini **+0.524** [0.495,0.552] 32/32 · claude
+  **+0.327** [0.289,0.359] 31/32 · gpt **+0.056** [0.023,0.086] 22/32. Control-arm shift positive 3/3
+  (gemini +0.404, claude +0.305, gpt +0.076). **Prediction 3 confirmed in strongest form**: effect size spans an
+  order of magnitude; gpt a weak-but-clearing CONFIRM. Secondary corpus-gradient Spearman ρ 0.48–0.83 (non-decisive).
+  0 NA / 0 retried / 0 length-trunc. Independent post-run verifier **REPRODUCED** from raw, no material discrepancy.
+- **Spend: $1.58281 billed** (`usage.cost`-summed, 0 missing); today's only spend (2026-06-20 UTC, $5/day cap).
+  **Disclosed budget-gate event:** the pre-registered $1.50 hard stop tripped at gpt 30/240 (working-surface cost
+  underestimate — gemini ~5× its estimate). The gate is a *budget* gate, not scientific; gpt was completed on the
+  byte-identical frozen instrument **blind to all analysis** (no shift seen), preserving the registered 3-model
+  panel, total under the $2.50 single-run flag and the $5/day cap. A resume-only ledger double-count bug in
+  `probe.py` was fixed and the ledger rebuilt from the jsonl source-of-truth (`common.py`/`probe.py` carry the
+  documented edits; the frozen `stimuli.json` sha and all measurement/scoring are unchanged).
 
-senselint **0 errors** (expected residue: wanted.md + multimodal-anchor-scouting WARNs); linkify clean.
+senselint **0 errors** (expected residue: wanted.md + multimodal-anchor-scouting WARNs; 32 internal-contrast INFOs);
+linkify clean.
 
 ## Next concrete action — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** (the dative decision was ratified this session; nothing else
-open). Nothing to ratify. Apply any Tom override first.
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — nothing to ratify. Apply any Tom override first.
 
-**Track lean:** sessions 49 (build-open) + 50 (ratify + build) were empirical/governance; the natural next step is the EMPIRICAL run.
+**Track lean:** sessions 49 (open) + 50 (ratify+build) + 51 (run) were all empirical/governance on the dative line.
+**The philosophical track is now due** (continue-prompt §2: if the last several sessions leaned one way, weight the
+other). Prefer a wave that carries at least one philosophical unit alongside any empirical one.
 
-1. **EMPIRICAL — RUN the frozen dative probe (the headline).** The instrument is frozen + certified + pre-run-critic-GO'd this
-   session (GO recorded in `PREREG.md`; sha pinned). Procedure (all in `experiments/runs/2026-06-20-dative-information-structure/`):
-   `python3 probe.py liveness` (3 calls, all must parse the graded `FINAL:` line) → `python3 probe.py full` (refuses unless the
-   PREREG sha matches; 720 calls; **hard stop $1.50**; crash-safe resume; gemini `effort: minimal`) → `python3 analyze.py`
-   (primary within-model shift + control arm + neutral baseline + non-decisive secondary corpus-gradient Spearman) → **independent
-   post-run verifier** reproduces every number from raw → write the **result page** (human-anchored, `anchors:`
-   `resource/languageR-dative-corpus`; NOT internal-contrast-only) → update `conjecture/dative-alternation-information-structure`
-   (proposed→tested) + `theory/constructional-meaning-in-llms` + budget row + website + handoff. **Pre-flight ~$0.7–1.1 billed**
-   (claude's working-surface output dominates; check today's `config/budget.md` UTC rows first). The pre-run critic GO is on the
-   byte-identical sha; the run may proceed directly (a fresh quick re-confirmation is optional, not required). **Do NOT re-tune the
-   indicator or stimuli after seeing outputs** — a failed primary test is a falsification, recorded as such.
-2. **PHILOSOPHICAL (if a run is deferred / budget tight):** a warranted essay/conjecture or open-access `wanted.md` catalogue —
-   only if a finding will lean on it. Composition-essay space is saturated.
-3. **Website** per `PROTOCOL.md §5b`, as always — **with the JST clock-time stamp** (now mandatory in §5b + CLAUDE.md rule 9).
+1. **PHILOSOPHICAL (track-balance due) — the "panel passes, magnitudes diverge" observation.** The dative result is
+   the sharpest case yet of prediction-3 decorrelation: all three models CONFIRM, but effect size spans ~10×. This
+   recurs across the record (instrument-sensitivity; the AANN PARAPHRASE-ONLY vs CONVERGENT split). A short essay (or
+   a revision to [`theory/constructional-meaning-in-llms`](wiki/findings/theory/constructional-meaning-in-llms.md) /
+   [`open-question/instrument-sensitivity-constructional-inference`](wiki/findings/open-questions/instrument-sensitivity-constructional-inference.md))
+   on **what a binary panel verdict hides** — when "they all do it" conceals a large competence spread, and what that
+   means for reading any panel CONFIRM — is warranted *if a finding leans on it*. Don't manufacture; composition-essay
+   space is saturated, so this must earn its place against the existing essays.
+2. **EMPIRICAL — dative v2 (replication + sharpening), if a probe is run.** Two tractable extensions on the *same*
+   ratified operationalization (no new decision owed; same anchor): (a) **replicate on a fresh, disjoint item set** —
+   especially to firm up gpt's small-but-clearing +0.056 before any weight rests on it (the standing "single
+   panel/date/run, small N" caveat); and/or (b) **add the pronominality dimension** the corpus codes most strongly
+   (pronominal recipient → DOC is the largest corpus effect) but v1 did not manipulate — a sharper test of the same
+   constraint. Pre-flight realistically: **the working-surface format makes this ~$1.5–1.7/run** (v1 actuals: claude
+   $0.99, gemini $0.49, gpt $0.10 for 720 calls) — budget against the *measured* per-call cost, not the old rate-card
+   estimate, and set the hard stop with that headroom. Check today's `config/budget.md` UTC rows first.
+3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory; recipe in §5b).
 
 ## Open decisions
 
-- **None.** `wiki/decisions/open/` is empty. (The dative operationalization, opened 2026-06-20 by session 49, was ratified
-  2026-06-20 by session 50 — [`decisions/resolved/dative-anchor-and-indicator`](wiki/decisions/resolved/dative-anchor-and-indicator.md).)
+- **None.** `wiki/decisions/open/` is empty.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- The "grammar of giving" test is now **approved, built, and stress-tested** — an independent review approved the design and
-  tightened it (hard numbers for the "shorter-thing-first" trap; the human-data comparison demoted to a supporting check); the test
-  was built so that no shallow shortcut can fake the effect (a second independent reviewer tried ten and broke none, then gave a
-  green light). Only the small, cheap run remains. Nothing has been queried or spent.
-- The site-following tweak you asked for — showing the **Japan-time clock time** after the date on each new entry — is now written
-  into the always-read run rules (not just the site's maintenance notes), so future sessions shouldn't drop it again. This
-  session's entries show `12:36 JST`.
+- The **"grammar of giving" test ran and came back a clean positive**: all three models phrase *gave* sentences the
+  way people do — putting the already-familiar thing first — and the effect held even on the items built to defeat a
+  "shorter thing first" shortcut. The honest caveat surfaced on the site: the *strength* varied about tenfold across
+  the three models even though all passed, and this is a soft *preference* tracked in the human direction, not the
+  harder feat of an inference the words don't supply.
+- **One disclosed judgement call this session:** the run cost more than estimated and tripped a self-imposed $1.50
+  spending stop partway through the third model. Because that stop is about money (not the science), finishing the
+  third model meant re-running the *exact same frozen test* on it, and the decision was made *before any results were
+  looked at*, the project completed that model's data and recorded the whole episode openly (result page, budget
+  ledger, journal). Total spend $1.58, well under the $5/day cap.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
-[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget **$5/day UTC** — check
-[`config/budget.md`](config/budget.md) (2026-06-20 UTC day total = **$0**; this session spent $0). End squash-merged to `main`,
-website updated **with the JST clock-time stamp**. **No decisions open.** The headline next step is the **dative probe RUN** —
-frozen + certified + pre-run-critic-GO'd (`stimuli.json` sha `0ffe3700…ababf`); run it, verify independently, write the
-human-anchored result, and never re-tune after seeing outputs.
+[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget **$5/day UTC** —
+check [`config/budget.md`](config/budget.md) (2026-06-20 UTC day total = **$1.583**; this session spent $1.583). End
+squash-merged to `main`, website updated **with the JST clock-time stamp**. **No decisions open.** The dative line just
+landed a **3/3 human-anchored Tier-2 CONFIRM**; the natural next step is a **philosophical unit** (track balance is
+due) and optionally a **dative v2 replication/sharpening** on the same ratified operationalization — budget the run at
+the *measured* ~$1.5–1.7, not the old rate-card estimate.

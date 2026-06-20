@@ -11,8 +11,10 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-28
-updated: 2026-06-15
+updated: 2026-06-20
 links:
+  - rel: depends-on
+    target: result/dative-information-structure-v1
   - rel: refines
     target: claim/formal-competence-aann-ceiling
   - rel: depends-on
@@ -276,6 +278,28 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > distributional compatibility at most, **not** evidence of inference-licensing on its own. Calibrated to
 > "AANN-specific *so far*" — only one alternative construction has been tested.
 
+> **The dative alternation tracks information structure — a clean Tier-2 panel positive, human-anchored
+> to corpus production (2026-06-20, session 51).** [`result/dative-information-structure-v1`](../results/dative-information-structure-v1.md)
+> ran the project's return to its grammatical core under the ratified operationalization
+> ([`decisions/resolved/dative-anchor-and-indicator`](../../decisions/resolved/dative-anchor-and-indicator.md)).
+> **All three panel models CONFIRM**: each shifts its double-object-vs-prepositional-dative preference in
+> the human direction (given recipient → DOC, given theme → PD) across a manipulation that holds length
+> and animacy **identical by construction** — so the within-item shift is provably immune to any
+> length/position/order shortcut (build-certified: all eight shortcut readers → shift 0) — and the effect
+> **survives the control arm** that makes the given constituent the *longer* one (information structure vs.
+> end-weight), so it is not a short-before-long heuristic. This is the ladder's **Tier 2** (gradient
+> semantic tracking), and the project's **first human-anchored Tier-2 positive of its own design** —
+> anchored to a corpus *production* surface ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md),
+> Bresnan et al. 2007), the apt human signal for a production-preference indicator. It patterns with the
+> recurring **add/easy-direction** observation: current decoders track a well-described soft constraint in
+> the human direction cleanly. Two sharp, calibrating notes: (i) **prediction 3 (effect-size decorrelation)
+> is confirmed in the strongest form yet** — the shift spans an order of magnitude (gemini +0.52 ≫ claude
+> +0.33 ≫ gpt +0.06), with gpt a weak-but-clearing CONFIRM (~1/10 gemini's size); so "the panel does it"
+> conceals a large competence spread the binary verdict hides. (ii) It is a gradient *preference* effect,
+> **not** Tier-4 inference-licensing — the construction is not contributing an entailment the lexical items
+> cannot supply. The secondary corpus-gradient Spearman (ρ 0.48–0.83) strengthens but is non-decisive by
+> pre-registration. Single panel/date/run, small N; a graded-preference, not logprob, measure.
+
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 
 The ladder is the page's claim, in compressed form: **form-acceptability < surprisal-contrast < gradient semantic tracking < generalization < inference-licensing.** Each upward step narrows the space of distributional-only explanations; only the top two steps are evidence for constructional *meaning* as opposed to constructional *form*.
@@ -285,7 +309,7 @@ The ladder is the page's claim, in compressed form: **form-acceptability < surpr
 - [`claim/formal-competence-aann-ceiling`](../claims/formal-competence-aann-ceiling.md) — **Tier 0**, and the page that fixes Tier 0 as a floor rather than a proof. Status `proposed`; not contingent on any open decision.
 - [`conjecture/aann-construction`](../conjectures/aann-construction.md) — spans **Tier 1 → Tier 3** (surprisal contrast, evaluative gradient, held-out generalization). Status `designed`; both governing decisions (`aann-stimulus-source`, `aann-operationalization`) were **ratified 2026-05-29**, fixing the yardstick — but the probe is **blocked, unrun**: its ratified indicator (continuation-likelihood logprob contrast, with a prompted-`p("good")` fallback) requires token logprobs, and the ratified panel exposes none on OpenRouter (verified 2026-05-29). A decision to substitute the panel or the indicator is queued for Tom (`NEXT.md`); until then no AANN result exists.
 - [`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md) — **the project's first probe of its own design to run**, and the first *positive* upper-ladder result: a **Tier-4 (inference-licensing)** pass with a **Tier-3 (atypical/generalization)** control passed, on the comparative correlative. The 2026 decoder panel deploys the CC's covariation meaning at ceiling — construction-driven (T1 +80–90 pp over matched controls), direction-tracking (T2 inverse-flip 95–100%), n-gram-robust (T3 no atypical collapse) — and matches the Scivetti ≈0.90 human baseline (93–100%). Status `proposed`. **Crucial caveat:** ceiling on an easy instrument is weak evidence for the strong reading, so this is read as "the [`source/weissweiler-2022-comparative-correlative`](../../base/sources/weissweiler-2022-comparative-correlative.md) encoder-era form/meaning dissociation is *not reproduced by this instrument*," not as proof of deep constructional processing. It is the first datum on the ladder that is both upper-tier *and* positive *and* of the project's own design.
-- [`conjecture/dative-alternation-information-structure`](../conjectures/dative-alternation-information-structure.md) — **Tier 2** (gradient information-structure tracking). Anchor pending; not yet at design.
+- [`conjecture/dative-alternation-information-structure`](../conjectures/dative-alternation-information-structure.md) — **Tier 2** (gradient information-structure tracking). **Tested 2026-06-20 → CONFIRM, 3/3 models** ([`result/dative-information-structure-v1`](../results/dative-information-structure-v1.md)): the first human-anchored Tier-2 positive of the project's own design (see below). Status `tested`; anchor ratified ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md)).
 - [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) — **Tier 1 → Tier 4** in the general case, and the most abstract conjecture; its operationalization gate (what counts as a frequency-matched pair) is named as the place a loop could "quietly cheat." Anchor pending.
 - [`conjecture/way-construction`](../conjectures/way-construction.md) — **Tier 4** (inference-licensing); the cleanest case where meaning is located in the construction. Status `tested` (2026-05-29); anchor ratified (`way-construction-anchor` → [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md) way-manner subset; Goldberg 1995 inventory seed). **Probed this session** → [`result/way-construction-traversal-v1`](../results/way-construction-traversal-v1.md), a Tier-4 positive above the ratified bar (see below).
 - [`claim/constructional-divergent-form-generalization-gap`](../claims/constructional-divergent-form-generalization-gap.md) — **Tier 3 → Tier 4**, and the first claim on this ladder carrying in-repo *human-comparison* evidence rather than only a methodological commitment. It reads Scivetti et al. 2025's >40% divergent-form drop (GPT-o1) against a native-speaker baseline (≈0.90 / ≈0.83) as a *negative* result at the generalization / inference-licensing boundary for current models: the same surface form does not generalize to its divergent constructional meaning the way human speakers manage. Status `proposed`; `contingent-on: []` (it rests on the aggregate published result and aggregate baseline, not on the per-construction anchors). Anchored to [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md).

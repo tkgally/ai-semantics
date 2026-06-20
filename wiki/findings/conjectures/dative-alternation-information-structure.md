@@ -6,7 +6,7 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-05-28
 updated: 2026-06-20
@@ -15,7 +15,20 @@ links:
     target: concept/constructional-meaning
   - rel: depends-on
     target: resource/languageR-dative-corpus
+  - rel: supports
+    target: result/dative-information-structure-v1
 ---
+
+> **TESTED 2026-06-20 (session 51) → CONFIRM, 3/3 panel models.**
+> [`result/dative-information-structure-v1`](../results/dative-information-structure-v1.md) ran the frozen
+> instrument: every panel model shifts DOC/PD preference in the human direction across the
+> information-structure manipulation (given recipient → DOC, given theme → PD), with length and animacy
+> held identical by construction, and the effect **survives the end-weight dissociation control** for all
+> three. Effect magnitude is sharply decorrelated (gemini +0.52 ≫ claude +0.33 ≫ gpt +0.06, all clearing
+> their bootstrap lower bound) — **prediction 3 confirmed**. The secondary corpus-gradient correlation
+> (Spearman ρ 0.48–0.83) strengthens but is non-decisive by pre-registration. Human-anchored to
+> [`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md). Caveat: single
+> panel/date/run, small item N, a graded-preference (not logprob) measure.
 
 > **Operationalization RATIFIED 2026-06-20 (session 50, ADOPT MODIFIED).** The human anchor is
 > in-repo ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md) —
