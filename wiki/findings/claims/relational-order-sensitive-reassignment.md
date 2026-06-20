@@ -84,8 +84,13 @@ spontaneously weighting the round stamp.
    conjecture's predicted human/LLM contrast is *not* settled by this result — human
    order-sensitivity at this grain remains unanchored in-repo.
 2. **One operationalization.** Reassignment-of-a-term is one way to make order disambiguating;
-   generality (image referents, cross-family dyads) is untested. **Non-overwrite repairs are now
-   tested** (2026-06-17): when the latest turn is *compatible* with an earlier one (refinement, not
+   generality (image referents) is untested. **Cross-family dyads** (a heterogeneous spatial+attribute
+   operation pair) were *attempted* 2026-06-20 and **suspended before any spend** — the pre-run gate
+   found the operationalization unusually leak-prone, and per
+   [`essay/witness-seeking-economics`](../essays/witness-seeking-economics.md) the expected ceiling did
+   not justify the build cost ($0; reopenable; see
+   [`result/relational-order-composition-three-move`](../results/relational-order-composition-three-move.md)
+   point (i)). **Non-overwrite repairs are now tested** (2026-06-17): when the latest turn is *compatible* with an earlier one (refinement, not
    replacement), both models **integrate** — the earlier, non-terminal turn survives into the
    referent at ceiling, rather than being overwritten
    ([`result/relational-integration-rung-ii`](../results/relational-integration-rung-ii.md);
