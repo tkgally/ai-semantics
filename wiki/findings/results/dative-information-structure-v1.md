@@ -122,7 +122,10 @@ its graded `FINAL:` line on the first call.
    a small effect (22/32 items positive, CI lower bound just above zero at +0.023) that earns CONFIRM
    legitimately under the pre-registered lower-bound gate but is roughly **one-tenth** gemini's magnitude.
    Two models with comparable general competence differ greatly in how cleanly they track this constraint,
-   exactly as the conjecture predicted.
+   exactly as the conjecture predicted. **What this spread means for reading the concordant 3/3 label** —
+   that a binary panel CONFIRM can hide an order-of-magnitude magnitude spread, so the verdict licenses a
+   panel-scoped *direction* sentence but not a panel-scoped *uniformity* one — is drawn out as a reading
+   discipline in [`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md).
 4. **The secondary corpus gradient strengthens the read.** Each model's per-cell DOC-preference correlates
    with the firsthand `languageR::dative` corpus model's predicted P(NP=DOC) per factor configuration
    (Spearman ρ 0.48 / 0.79 / 0.83), and the ranking matches the primary: the model with the strongest

@@ -52,6 +52,16 @@ links:
 > a construction effect that NLI's permissiveness dilutes**, and the disagreement is now *broad* (all
 > three models) rather than confined. The page stays **`open`**, with this as its sharpest and most
 > general FC-vs-NLI datum yet.
+>
+> **Pointer (2026-06-20, session 52) — a sibling texture of panel heterogeneity, named as a reading
+> discipline.** [`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md)
+> uses this page's across-instrument *convergence heterogeneity* (the AANN PARTIAL: all models shift on
+> FC, only one carries it across instruments) as the contrast case to a *different* texture — *magnitude*
+> decorrelation **on a single instrument**, where all three models CONFIRM on the same forced choice but
+> the effect size spans ~10× ([`result/dative-information-structure-v1`](../results/dative-information-structure-v1.md)).
+> Both are ways a single panel-level label (CONFIRM / PARTIAL) flattens real per-model heterogeneity; this
+> page's mechanism (on-which-instruments) and the essay's (how-much-on-one-instrument) are distinct but
+> share the moral.
 
 ## The question
 
