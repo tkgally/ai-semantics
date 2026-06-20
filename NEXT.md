@@ -2,28 +2,24 @@
 
 ## State
 
-**Session 51 (2026-06-20 UTC) RAN the frozen dative information-structure probe → PANEL CONFIRM (3/3 models).**
-The English dative alternation — *Mary gave John the book* (double-object, DOC) vs. *Mary gave the book to John*
-(prepositional dative, PD) — **tracks information structure** in all three panel models: each shifts DOC/PD
-preference in the human direction (given recipient → DOC, given theme → PD) across a manipulation that holds
-length+animacy identical by construction, and the effect **survives the end-weight dissociation control** for all
-three. Result: [`result/dative-information-structure-v1`](wiki/findings/results/dative-information-structure-v1.md)
-(`status: proposed`, **human-anchored** to [`resource/languageR-dative-corpus`](wiki/base/resources/languageR-dative-corpus.md),
-NOT internal-contrast-only) — the project's **first human-anchored Tier-2 positive of its own design**. The
-conjecture is now `tested`; the theory page carries a synthesis blockquote + Tier-2 placement.
+**Session 52 (2026-06-20 UTC) was PHILOSOPHICAL (track-balance correction) — wrote essay 16, $0 spent.**
+Sessions 49–51 were all empirical on the dative line, so this session led philosophical. It turned the
+session-51 dative result's sharpest detail — a **CONCORDANT CONFIRM (3/3)** sitting on an **order-of-magnitude
+effect-size spread** (gemini +0.524 ≫ claude +0.327 ≫ gpt +0.056) — into a named reading discipline:
+[`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md)
+(status `draft`), which **refines** [`essay/capability-split`](wiki/findings/essays/capability-split.md) into the
+*concordant* case that essay left open. Thesis: a binary panel verdict is a **threshold gate**, blind above the
+threshold, so a shared "CONFIRM" can hide a wide magnitude spread; prediction-3 decorrelation makes the magnitude
+carry information the label discards → **a concordant verdict carries its spread** (report per-model magnitudes;
+license the panel-scoped *direction* sentence, never a panel-scoped *uniformity/magnitude* one). Not a model
+ranking; no human magnitude comparison; "comparable general competence" flagged an unmeasured premise.
 
-- **Numbers** (main within-item shift, all bootstrap-LB > 0): gemini **+0.524** [0.495,0.552] 32/32 · claude
-  **+0.327** [0.289,0.359] 31/32 · gpt **+0.056** [0.023,0.086] 22/32. Control-arm shift positive 3/3
-  (gemini +0.404, claude +0.305, gpt +0.076). **Prediction 3 confirmed in strongest form**: effect size spans an
-  order of magnitude; gpt a weak-but-clearing CONFIRM. Secondary corpus-gradient Spearman ρ 0.48–0.83 (non-decisive).
-  0 NA / 0 retried / 0 length-trunc. Independent post-run verifier **REPRODUCED** from raw, no material discrepancy.
-- **Spend: $1.58281 billed** (`usage.cost`-summed, 0 missing); today's only spend (2026-06-20 UTC, $5/day cap).
-  **Disclosed budget-gate event:** the pre-registered $1.50 hard stop tripped at gpt 30/240 (working-surface cost
-  underestimate — gemini ~5× its estimate). The gate is a *budget* gate, not scientific; gpt was completed on the
-  byte-identical frozen instrument **blind to all analysis** (no shift seen), preserving the registered 3-model
-  panel, total under the $2.50 single-run flag and the $5/day cap. A resume-only ledger double-count bug in
-  `probe.py` was fixed and the ledger rebuilt from the jsonl source-of-truth (`common.py`/`probe.py` carry the
-  documented edits; the frozen `stimuli.json` sha and all measurement/scoring are unchanged).
+- Independent **adversarial review** (fresh agent) run before commit; 1 BLOCKER + 2 SHOULD-FIX + 2 NIT all applied
+  (a Honesty-box quote misattribution, an over-claim against the essay's own caveat, a missing cite, the
+  ill-fitting `model-internal` tag dropped, two notations). Integration: index 16th-essay entry; back-pointers
+  from [`result/dative-information-structure-v1`](wiki/findings/results/dative-information-structure-v1.md) and
+  [`open-question/instrument-sensitivity-constructional-inference`](wiki/findings/open-questions/instrument-sensitivity-constructional-inference.md).
+- **Spend: $0.** Day total 2026-06-20 UTC (sessions 49–52) = **$1.583 of $5.00**, all from session 51.
 
 senselint **0 errors** (expected residue: wanted.md + multimodal-anchor-scouting WARNs; 32 internal-contrast INFOs);
 linkify clean.
@@ -32,26 +28,24 @@ linkify clean.
 
 **Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — nothing to ratify. Apply any Tom override first.
 
-**Track lean:** sessions 49 (open) + 50 (ratify+build) + 51 (run) were all empirical/governance on the dative line.
-**The philosophical track is now due** (continue-prompt §2: if the last several sessions leaned one way, weight the
-other). Prefer a wave that carries at least one philosophical unit alongside any empirical one.
+**Track lean:** sessions 49–51 empirical, 52 philosophical. The lean is now roughly balanced; **the next session may go
+empirical** (the dative v2 replication below is the highest-value open unit and needs no new decision).
 
-1. **PHILOSOPHICAL (track-balance due) — the "panel passes, magnitudes diverge" observation.** The dative result is
-   the sharpest case yet of prediction-3 decorrelation: all three models CONFIRM, but effect size spans ~10×. This
-   recurs across the record (instrument-sensitivity; the AANN PARAPHRASE-ONLY vs CONVERGENT split). A short essay (or
-   a revision to [`theory/constructional-meaning-in-llms`](wiki/findings/theory/constructional-meaning-in-llms.md) /
-   [`open-question/instrument-sensitivity-constructional-inference`](wiki/findings/open-questions/instrument-sensitivity-constructional-inference.md))
-   on **what a binary panel verdict hides** — when "they all do it" conceals a large competence spread, and what that
-   means for reading any panel CONFIRM — is warranted *if a finding leans on it*. Don't manufacture; composition-essay
-   space is saturated, so this must earn its place against the existing essays.
-2. **EMPIRICAL — dative v2 (replication + sharpening), if a probe is run.** Two tractable extensions on the *same*
-   ratified operationalization (no new decision owed; same anchor): (a) **replicate on a fresh, disjoint item set** —
-   especially to firm up gpt's small-but-clearing +0.056 before any weight rests on it (the standing "single
-   panel/date/run, small N" caveat); and/or (b) **add the pronominality dimension** the corpus codes most strongly
-   (pronominal recipient → DOC is the largest corpus effect) but v1 did not manipulate — a sharper test of the same
-   constraint. Pre-flight realistically: **the working-surface format makes this ~$1.5–1.7/run** (v1 actuals: claude
-   $0.99, gemini $0.49, gpt $0.10 for 720 calls) — budget against the *measured* per-call cost, not the old rate-card
-   estimate, and set the hard stop with that headroom. Check today's `config/budget.md` UTC rows first.
+1. **EMPIRICAL (highest value) — dative v2 (replication + sharpening), on the *same* ratified operationalization
+   (no new decision owed; same anchor [`resource/languageR-dative-corpus`](wiki/base/resources/languageR-dative-corpus.md)).**
+   Two tractable extensions: (a) **replicate on a fresh, disjoint item set** — especially to firm up gpt's
+   small-but-clearing **+0.056** before any weight rests on its *size* (the standing "single panel/date/run, small N"
+   caveat, and now [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md)
+   revision trigger (c) — a replication that compresses the spread weakens "in strongest form"); and/or (b) **add the
+   pronominality dimension** the corpus codes most strongly (pronominal recipient → DOC is the largest corpus effect)
+   but v1 did not manipulate. **Pre-flight realistically: the working-surface format made v1 ~$1.58/run** (claude $0.99,
+   gemini $0.49, gpt $0.10 for 720 calls — gemini ~5× its rate-card estimate); budget against the *measured* per-call
+   cost and set the hard stop with that headroom. Check today's `config/budget.md` UTC rows first; freeze-then-run
+   discipline (the pre-run critic GO and the run may sit in different sessions if cleaner).
+2. **PHILOSOPHICAL (only if a finding leans on it — do not manufacture).** Composition/method-essay space is
+   **saturated** (16 essays). A new philosophical unit should wait for fresh evidence (e.g. the dative v2 result, if it
+   compresses or replicates the spread, would *exercise* essay-16's revision triggers — a logged revision, not a new
+   essay). The essay-16 / capability-split pair now covers both the concordant and split readings of a panel.
 3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory; recipe in §5b).
 
 ## Open decisions
@@ -60,23 +54,21 @@ other). Prefer a wave that carries at least one philosophical unit alongside any
 
 ## Standing-override notes (for Tom, if he looks)
 
-- The **"grammar of giving" test ran and came back a clean positive**: all three models phrase *gave* sentences the
-  way people do — putting the already-familiar thing first — and the effect held even on the items built to defeat a
-  "shorter thing first" shortcut. The honest caveat surfaced on the site: the *strength* varied about tenfold across
-  the three models even though all passed, and this is a soft *preference* tracked in the human direction, not the
-  harder feat of an inference the words don't supply.
-- **One disclosed judgement call this session:** the run cost more than estimated and tripped a self-imposed $1.50
-  spending stop partway through the third model. Because that stop is about money (not the science), finishing the
-  third model meant re-running the *exact same frozen test* on it, and the decision was made *before any results were
-  looked at*, the project completed that model's data and recorded the whole episode openly (result page, budget
-  ledger, journal). Total spend $1.58, well under the $5/day cap.
+- This session wrote a short essay (no models queried, nothing spent) making a **reading rule** out of last session's
+  most striking detail: on the "grammar of giving" test all three models passed, but the *strength* of the effect varied
+  about **tenfold**. The rule: a pass/fail verdict is a threshold and can hide a big spread in degree, so when every
+  model passes the project should report the individual sizes and not let "they all do it" slide into "they all do it to
+  a similar degree." It is careful to make **no comparison to people** on the sizes and to be **no ranking** of the
+  models. It pairs with an earlier essay on the opposite case (when the models *disagree*).
+- An independent reviewer checked the essay against its sources before it was kept and caught a mis-attributed quote and
+  one small over-claim, both fixed.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
 [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget **$5/day UTC** —
-check [`config/budget.md`](config/budget.md) (2026-06-20 UTC day total = **$1.583**; this session spent $1.583). End
-squash-merged to `main`, website updated **with the JST clock-time stamp**. **No decisions open.** The dative line just
-landed a **3/3 human-anchored Tier-2 CONFIRM**; the natural next step is a **philosophical unit** (track balance is
-due) and optionally a **dative v2 replication/sharpening** on the same ratified operationalization — budget the run at
-the *measured* ~$1.5–1.7, not the old rate-card estimate.
+check [`config/budget.md`](config/budget.md) (2026-06-20 UTC day total = **$1.583**, all from session 51). End
+squash-merged to `main`, website updated **with the JST clock-time stamp**. **No decisions open.** The dative line has a
+**3/3 human-anchored Tier-2 CONFIRM** (session 51) and now a **reading-discipline essay** on its magnitude spread
+(session 52); the natural next step is the **dative v2 replication/sharpening** on the same ratified operationalization —
+budget the run at the *measured* ~$1.5–1.7, not the old rate-card estimate.
