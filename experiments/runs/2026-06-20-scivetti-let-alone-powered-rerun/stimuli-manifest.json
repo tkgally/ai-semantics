@@ -1,0 +1,36 @@
+{
+  "source_url": "https://github.com/melissatorgbi/beyond-memorization",
+  "source_commit": "82699473b5bd2295d87524a4df1a148ec4ce4b1f",
+  "test_file": "data/CxNLI/CxNLI_3_examples_test.tsv",
+  "train_file": "data/CxNLI/CxNLI_3_examples_train.csv",
+  "fetched": "2026-06-20",
+  "fullset_sha256": "1c5cffb18c5ef78e2de35996d600f50a1629a1c7a665bcd84767ff4a00386211",
+  "fullset_n": 390,
+  "s60_subset_sha256": "9be31a8fea8d7f166d86ccdd01542d07e408db36caae9079631cf2c496772069",
+  "frozen_sha256": "1b87dc871e4ec8dd23664927de3a370872b9dc282d0757791bbc770b2c712371",
+  "frozen_n": 63,
+  "letalone_train_sha256": "6b0c8d82536f25e6cec866dba2cafdd8c35fb9c6f8e0a766c3e98b37f904b573",
+  "per_split_counts": {
+    "let-alone:test": 24,
+    "let-alone:train": 9,
+    "comparative-correlative:test": 30
+  },
+  "letalone_combined_n": 33,
+  "per_label_counts_letalone_combined": {
+    "0": 11,
+    "1": 11,
+    "2": 11
+  },
+  "label_scheme": {
+    "0": "entailment",
+    "1": "neutral",
+    "2": "contradiction"
+  },
+  "ratified_anchor_constructions": [
+    "comparative-correlative"
+  ],
+  "human_baseline_exp1_accuracy": 0.9,
+  "instrument": "forced-decomposition (byte-identical to session 60 probe.py NLI_SYS_DECOMP)",
+  "paired_forced_baseline_run": "2026-06-20-scivetti-let-alone-forced-decomposition (24 LA test, internal replication)",
+  "note": "Recipe-not-corpus: hashes + counts only; item text stays gitignored under experiments/data/scivetti/. Re-clone the upstream commit to reproduce. This run ENLARGES the let-alone target (24 test -> 33 = +9 DISJOINT train items) under the SAME forced-decomposition instrument as session 60; the comp-corr control is byte-identical to sessions 57/58/60."
+}
