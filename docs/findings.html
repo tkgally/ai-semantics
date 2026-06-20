@@ -50,17 +50,20 @@ itself) adds that. The project's central question was whether language models ac
 <em>use</em> this pattern-level meaning or just recognize the pattern's shape.</p>
 
 <ul>
-  <li><strong>The "grammar of giving" — choosing a phrasing by what's familiar: yes, all three
-  models (new, June 20).</strong> English lets you say <em>"Mary gave John the book"</em> or
+  <li><strong>The "grammar of giving" — choosing a phrasing by what's familiar: two of three models,
+  on replication (June 20).</strong> English lets you say <em>"Mary gave John the book"</em> or
   <em>"Mary gave the book to John"</em>, and people tend to put the already-familiar thing first.
-  Shown a context that makes the recipient familiar, all three models leaned toward the recipient-first
-  phrasing; make the thing-given familiar, and they leaned the other way — the human pattern, in every
-  model. The effect held even on items built so that a model merely preferring "the shorter thing first"
-  would have to go the opposite way, and the models' preferences also tracked, more loosely, a real
-  dataset of how thousands of attested sentences were actually phrased. Two honest caveats: the
-  <em>strength</em> varied roughly tenfold across the three models even though all passed; and this is a
-  model following a soft <em>preference</em>, not the harder feat of drawing an inference the words don't
-  supply. (An independent re-check reproduced every number from the raw data.)</li>
+  Shown a context that makes the recipient familiar, the models leaned toward the recipient-first
+  phrasing; make the thing-given familiar, and they leaned the other way — the human pattern. The
+  effect held even on items built so that a model merely preferring "the shorter thing first" would
+  have to go the opposite way, and the models' preferences also tracked, more loosely, a real dataset
+  of how thousands of attested sentences were actually phrased. <strong>The test was then re-run on a
+  completely fresh set of sentences</strong>, and the picture sharpened: two of the three models
+  repeated their result almost exactly, but the third's earlier pass <em>did not hold up</em> — on the
+  new items its effect shrank to nearly zero. So the honest summary is "two of three track it
+  robustly," and the gap between the strongest and weakest model is even wider than it first looked.
+  This is a model following a soft <em>preference</em>, not the harder feat of drawing an inference the
+  words don't supply. (Independent re-checks reproduced every number from the raw data both times.)</li>
   <li><strong>Adding a meaning: yes, reliably.</strong> When a construction adds an
   inference (the sneezed napkin moved; someone who "whistled his way down the hall"
   travelled down the hall), all three models draw it at or near 100%, across many verbs —

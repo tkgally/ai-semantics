@@ -149,7 +149,12 @@ the lexical items cannot supply.
 
 - **Single panel / single date / single run, small item N (32 main + 12 control).** This is
   direction-of-effect evidence, not a magnitude estimate; gpt's small positive especially wants
-  replication on a fresh item set before any weight is put on its size.
+  replication on a fresh item set before any weight is put on its size. **Replicated (session 53)
+  by [`result/dative-information-structure-v2`](dative-information-structure-v2.md)** on a disjoint
+  item set: claude (+0.325) and gemini (+0.500) reproduced almost exactly, but **gpt's CONFIRM did
+  not replicate** — its shift fell to +0.018 with a CI including zero (WEAK). The panel verdict holds
+  at CONFIRM but drops to 2/3, and the order-of-magnitude effect-size spread widened rather than
+  compressed.
 - **Production preference, not acceptability rating.** The corpus anchors the human *production* direction
   (what speakers choose in context), which is the right anchor for this production-preference indicator;
   it is **not** a per-item human acceptability rating. The Bresnan & Ford (2010) graded-rating anchor was

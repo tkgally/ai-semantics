@@ -1,0 +1,131 @@
+{
+  "manifest": {
+    "source": "https://cran.r-project.org/src/contrib/languageR_1.6.tar.gz",
+    "tarball_sha256": "37e3e283b7d8226a1a7ebb5cb8dde32421c516f2ed4983834950de3c3640f974",
+    "rda_sha256": "19da466d50b0a7f42d66ce104fc7e658040685f6f7e3f845461e83bbe69c05fc",
+    "shape": [
+      3263,
+      15
+    ],
+    "columns": [
+      "Speaker",
+      "Modality",
+      "Verb",
+      "SemanticClass",
+      "LengthOfRecipient",
+      "AnimacyOfRec",
+      "DefinOfRec",
+      "PronomOfRec",
+      "LengthOfTheme",
+      "AnimacyOfTheme",
+      "DefinOfTheme",
+      "PronomOfTheme",
+      "RealizationOfRecipient",
+      "AccessOfRec",
+      "AccessOfTheme"
+    ],
+    "outcome_counts": {
+      "NP": 2414,
+      "PP": 849
+    },
+    "factor_levels": {
+      "AccessOfRec": [
+        "accessible",
+        "given",
+        "new"
+      ],
+      "AccessOfTheme": [
+        "accessible",
+        "given",
+        "new"
+      ],
+      "PronomOfRec": [
+        "nonpronominal",
+        "pronominal"
+      ],
+      "PronomOfTheme": [
+        "nonpronominal",
+        "pronominal"
+      ],
+      "DefinOfRec": [
+        "definite",
+        "indefinite"
+      ],
+      "DefinOfTheme": [
+        "definite",
+        "indefinite"
+      ],
+      "AnimacyOfRec": [
+        "animate",
+        "inanimate"
+      ],
+      "AnimacyOfTheme": [
+        "animate",
+        "inanimate"
+      ],
+      "Modality": [
+        "spoken",
+        "written"
+      ],
+      "SemanticClass": [
+        "a",
+        "c",
+        "f",
+        "p",
+        "t"
+      ]
+    },
+    "length_summary": {
+      "LengthOfRecipient": [
+        1,
+        31,
+        1.842
+      ],
+      "LengthOfTheme": [
+        1,
+        46,
+        4.272
+      ]
+    }
+  },
+  "corpus_model": {
+    "outcome": "P(PP) = prepositional dative; NP=double-object is the 0 class",
+    "predictors": [
+      "const",
+      "log_theme_minus_rec_len",
+      "AccessOfRec_given",
+      "AccessOfRec_new",
+      "AccessOfTheme_given",
+      "AccessOfTheme_new",
+      "PronomOfRec_pronominal",
+      "PronomOfTheme_pronominal",
+      "DefinOfRec_indefinite",
+      "DefinOfTheme_indefinite",
+      "AnimacyOfRec_inanimate",
+      "AnimacyOfTheme_inanimate"
+    ],
+    "coefficients": {
+      "const": 1.6247,
+      "log_theme_minus_rec_len": -1.0557,
+      "AccessOfRec_given": -0.9305,
+      "AccessOfRec_new": 0.8901,
+      "AccessOfTheme_given": 1.3271,
+      "AccessOfTheme_new": 0.0264,
+      "PronomOfRec_pronominal": -1.48,
+      "PronomOfTheme_pronominal": 1.3687,
+      "DefinOfRec_indefinite": 0.8397,
+      "DefinOfTheme_indefinite": -0.9625,
+      "AnimacyOfRec_inanimate": 1.6228,
+      "AnimacyOfTheme_inanimate": -1.1746
+    },
+    "in_sample_accuracy": 0.8869,
+    "n": 3263,
+    "directional_checks": {
+      "given_recipient_pushes_DOC(NP)": true,
+      "pronominal_recipient_pushes_DOC(NP)": true,
+      "given_theme_pushes_PD(PP)": true,
+      "pronominal_theme_pushes_PD(PP)": true,
+      "longer_theme_pushes_DOC(NP)_by_end_weight": true
+    }
+  }
+}
