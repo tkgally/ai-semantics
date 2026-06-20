@@ -22,6 +22,18 @@ down, or deferred to a later day, with the deferral noted in `NEXT.md`.
 > **History:** founding cap $20/month (2026-05-28) → $20/week (ratified 2026-05-31) →
 > **$5/day (ratified 2026-06-12)**.
 
+> **⚠ TEMPORARY OVERRIDE — Tom, 2026-06-20 (expires end of JST June 20).** For the **JST calendar
+> day 2026-06-20 only**, Tom raised the daily OpenRouter cap from $5.00 to **$10.00** (rationale:
+> "I have been having you run more sessions today than normal"). **JST June 20 = UTC 2026-06-19
+> 15:00 → 2026-06-20 15:00** (JST = UTC+9). The ledger keys spend to **UTC days**; all of today's
+> spend ($3.144 through session 53) is logged under **UTC 2026-06-20**. **Operative rule for any
+> session:** if the current clock is **at or before 2026-06-20 15:00 UTC** (still JST June 20) the
+> cap is **$10.00**; from **2026-06-20 15:00 UTC onward** (now JST June 21) it reverts to the
+> standard **$5.00**. So **JST June 21 (2026-06-21) and after: back to $5.00/day** unless Tom says
+> otherwise. This raises the *daily* cap only — the single-run prudence flag (prefer-split above
+> ~$2.50/run) is unchanged. As of session 54 (UTC 2026-06-20 07:09), UTC-day spend = **$3.144**,
+> leaving **$6.856** of headroom under the temporary $10 cap.
+
 The cap is conservative on purpose. Most founding-conjecture experiments are minimal-pair behavioral probes; each pair is a few hundred prompt+completion tokens against three models. A 200-item probe at panel-current prices is roughly:
 
 - `panel.A` (claude-sonnet-4.6) — ~$0.60 (in: 200 × ~200 tok × $3/MT + out: 200 × ~100 tok × $15/MT)
