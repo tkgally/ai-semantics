@@ -47,7 +47,18 @@ REASONING = {"google/": {"effort": "minimal"}}   # gemini cost-driver mitigation
 # gate would spuriously trip mid-run and strand the run. $1.50 is honest headroom and
 # still under a third of the $5/day UTC cap. Budget-gate change only; the frozen stimuli
 # sha and all measurement/scoring are unchanged.
-HARD_STOP_USD = 1.50
+#
+# RAISED 1.50 -> 1.80 (2026-06-20, session 51, on RESUME). The first invocation completed
+# claude (240, billed $0.990) and gemini (240, billed $0.485) but tripped the $1.50 gate at
+# gpt 30/240: the working-surface format made BOTH claude and gemini far pricier than the
+# pre-flight estimate (gemini ~5x its $0.05-0.10 estimate -- under effort:minimal it still
+# wrote justifications). The frozen instrument is byte-identical; gpt IS panel.B (no model
+# swap); ~210 gpt calls remain at ~$0.10, so resuming completes the REGISTERED 3-model panel
+# at a total ~$1.58 -- well under the $5/day UTC cap and the $2.50 single-run flag. This
+# decision was taken BEFORE any analyze.py run (blind to all shifts/verdicts), so it is a
+# pure budget-gate adjustment, not an anti-cheat-relevant retune. Measurement/scoring/stimuli
+# sha unchanged.
+HARD_STOP_USD = 1.80
 
 SYS = ("You are a careful native speaker of English judging how natural different "
        "phrasings sound in a given context. You weigh the discourse context (what has "

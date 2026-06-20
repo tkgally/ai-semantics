@@ -65,12 +65,19 @@ def full():
     # pre-flight: 240 trials x 3 models = 720 calls; graded outputs w/ brief justification
     # (~512 tok cap). Honest estimate (rate card undercounts billed ~4.5x): claude ~$0.6-0.9 +
     # gpt ~$0.05 + gemini(effort minimal) ~$0.05-0.10 -> ~$0.7-1.1 billed. Hard stop $1.50.
-    C.check_hard_stop(1.10, "full")
+    # On a FRESH run this projects the full ~$1.10; on RESUME (session 51, gpt tail only)
+    # most trials are already done and recorded, so a coarse +1.10 would over-project against
+    # the already-spent ledger and spuriously trip. Project only the remaining undone trials
+    # at the rate-card-corrected per-call cost so the initial gate reflects the real tail.
+    done_now = sum(len(C.read_jsonl(os.path.join(C.RAW, f"probe-{n}.jsonl"))) for n in C.MODELS)
+    remaining = max(0, len(trials) * len(C.MODELS) - done_now)
+    C.check_hard_stop(min(1.10, remaining * 0.0006 + 0.02), "full")
     print(f"FULL: {len(trials)} trials x {len(C.MODELS)} models")
     for name, slug in C.MODELS.items():
         path = os.path.join(C.RAW, f"probe-{name}.jsonl")
         done = {r["tid"] for r in C.read_jsonl(path)}
         recs_for_cost = C.read_jsonl(path)
+        new_calls = 0
         for i, t in enumerate(trials):
             tid = f"{t['item']}|{t['context_kind']}|{'A' if t['doc_is_a'] else 'B'}"
             if tid in done:
@@ -86,10 +93,18 @@ def full():
                    "raw": r.get("content"), "usage": usages}
             C.append_jsonl(path, row)
             recs_for_cost.append(row)
+            new_calls += 1
             if len(recs_for_cost) % 30 == 0:
                 C.check_hard_stop(0.15, f"full/{name}")
-        billed, have, missing = C.flat_cost(recs_for_cost)
-        C.ledger_append(f"full/{name}", len(recs_for_cost), billed, missing, "finding-bearing")
+        # RESUME FIX (session 51): only write a ledger row for a model that made NEW calls
+        # this invocation. The original unconditional append re-logged the FULL cost of an
+        # already-complete model on every resume, double-counting in ledger_total() and
+        # spuriously tripping the gate. The jsonl usage fields remain the cost source of
+        # truth (analyze.py sums them); the ledger is the gate's running tally only.
+        if new_calls:
+            billed, have, missing = C.flat_cost(recs_for_cost)
+            C.ledger_append(f"full/{name}", len(recs_for_cost), billed, missing,
+                            "finding-bearing")
     print("FULL done. Run: python3 analyze.py")
 
 
