@@ -37,19 +37,17 @@ def _require_frozen():
 
 
 def _liveness_record():
-    # a fixed sanity record (NOT from stimuli.json): K=4 row, DAX starts spot 1 (idx 0) colored red;
-    # SWAP(spot1,spot2) round 2, RECOLOR(spot1 -> blue) round 5. Stamp order SWAP-first -> DAX moves
-    # to spot 2 (still red), then recolor hits spot 1 (the OTHER token) -> DAX stays RED. DIRECT.
+    # a fixed sanity record (NOT from stimuli.json): K=4 row; the DAX spot is spot 1 (idx 0); SWAP
+    # (spot1,spot2) round 2, RECOLOR(spot1 -> red) round 5. Stamp order SWAP-first -> spot1 gets
+    # spot2's color (blue), then recolor spot1 -> RED. On-demand correct = red. DIRECT.
     rec = {"rid": -1, "subset": "direct", "query": "DIRECT",
-           "a": 0, "b": 1, "recolor_target": "a",
-           "stamp_first": "SWAP", "stamp_order": ["SWAP", "RECOLOR"],
-           "start_color": "red", "recolor_color": "blue",
-           "init_colors": ["red", "green", "yellow", "purple"],
-           "rounds": [2, 5], "disp_perm": [0, 1]}
-    rec["display_order"] = [rec["stamp_order"][i] for i in rec["disp_perm"]]
+           "a": 0, "b": 1, "s": 0, "o": 1, "m": 0,
+           "readout_type": "SAME", "stamp_first": "SWAP", "stamp_order": ["SWAP", "RECOLOR"],
+           "recolor_color": "red", "init_colors": ["green", "blue", "yellow", "purple"],
+           "rounds": [2, 5], "display_order": ["SWAP", "RECOLOR"]}
     rec["hist_display"] = [{"round": rec["rounds"][i], "op": rec["stamp_order"][i],
-                            "desc": C.op_desc(rec, rec["stamp_order"][i])} for i in rec["disp_perm"]]
-    rec["target_color"] = C.final_color(rec, tuple(rec["stamp_order"]))
+                            "desc": C.op_desc(rec, rec["stamp_order"][i])} for i in (0, 1)]
+    rec["target_color"] = C.answer_color(rec)
     return rec
 
 
@@ -78,11 +76,11 @@ def full():
     _require_frozen()
     stim = json.load(open(STIM))
     records = stim["records"]
-    # pre-flight: 324 calls (108/model x 3 = 72 COMP + 36 DIRECT per model). A working surface raises
+    # pre-flight: 384 calls (128/model x 3 = 96 COMP + 32 DIRECT per model). A working surface raises
     # OUTPUT tokens, but this is a DEPTH-2 task (two ops) with a short chain, so the CoT is shorter
-    # than the three-move run ($0.80 for 324 calls); estimate ~= $0.5-0.8 (claude CoT the driver;
+    # than the three-move run ($0.80 for 324 calls); estimate ~= $0.7-1.0 (claude CoT the driver;
     # gemini held at effort minimal); hard stop $1.50.
-    C.check_hard_stop(0.90, "full")
+    C.check_hard_stop(1.10, "full")
     print(f"FULL: {len(records)} records x {len(C.MODELS)} models")
     for name, slug in C.MODELS.items():
         path = os.path.join(C.RAW, f"probe-{name}.jsonl")
