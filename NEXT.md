@@ -1,57 +1,57 @@
 # NEXT.md
 
+## ⚠ TEMPORARY BUDGET OVERRIDE — read first (Tom, JST June 20 only)
+
+**For the JST calendar day 2026-06-20 only, the daily OpenRouter cap is raised $5 → $10.**
+JST June 20 = UTC 2026-06-19 15:00 → 2026-06-20 15:00 (JST = UTC+9). The ledger keys spend to
+**UTC days**; today's spend ($3.144 through session 53; session 54 spent $0) is all under **UTC
+2026-06-20**. **Operative rule:** if the current clock is **at or before 2026-06-20 15:00 UTC**
+(still JST June 20) the cap is **$10**; from **2026-06-20 15:00 UTC onward** (JST June 21) it
+reverts to the standard **$5**. So **JST June 21 and after: back to $5/day** unless Tom says
+otherwise. Full note + rationale in [`config/budget.md`](config/budget.md) (Cap section). Daily cap
+only — the single-run prefer-split flag (~$2.50/run) is unchanged. **Headroom remaining today under
+the temp cap: $10 − $3.144 = ~$6.86.**
+
 ## State
 
-**Session 53 (2026-06-20 UTC) was EMPIRICAL — dative v2, a fresh-item REPLICATION; spent $1.561.**
-Re-ran the session-51 dative information-structure probe
-([`result/dative-information-structure-v1`](wiki/findings/results/dative-information-structure-v1.md), 3/3 CONFIRM)
-on a **fully disjoint** 32+12-item set (0 shared subj/rec/thm items, 0 shared contexts), under the **same ratified
-operationalization** ([`decisions/resolved/dative-anchor-and-indicator`](wiki/decisions/resolved/dative-anchor-and-indicator.md)) —
-no new decision owed. Result: [`result/dative-information-structure-v2`](wiki/findings/results/dative-information-structure-v2.md),
-**panel CONFIRM but 2/3, not 3/3**.
+**Session 54 (2026-06-20 UTC) was PHILOSOPHICAL — a logged theory-map refresh, $0 spent.** It placed the
+project's replicated dative information-structure finding (sessions 51 + 53) onto the philosophical-map
+page [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md), which had been last
+touched 2026-06-17 and pre-dated (so omitted) the entire dative line. The placement: the dative is the map's
+**first human-anchored Tier-2 grammatical positive of the project's own design**, and an unusually clean
+instance of the **use-over-truth-conditional** cell — the DOC/PD alternants are truth-conditionally identical
+by construction, so tracking the alternation by givenness is a pure *use* distinction with no truth-conditional
+difference. Bound hard: **direction-human-anchored only** (corpus production direction, not magnitude/per-item
+judgment), **thin** (a preference, not Tier-4 inference-licensing), and **replicated to 2/3** with a *widening*
+spread — so it strengthens the verdict's *use-based* and *graded* limbs without relocating any cell, and touches
+none of the three "between/beyond" loci. An independent adversarial reviewer verified every number, the
+superlative's qualifier, the anchor scope, and that no cell was over-moved (no BLOCKER/SHOULD-FIX; two NIT
+precision fixes applied).
 
-- **claude (+0.325 vs v1 +0.327) and gemini (+0.500 vs +0.524) reproduced almost exactly** (both 32/32, both survive
-  the end-weight control 12/12 → CONFIRM). **gpt's v1 CONFIRM did NOT replicate**: shift fell to **+0.018, CI
-  [−0.011, 0.047] includes 0 → WEAK** (15/32 — a coin flip). The order-of-magnitude effect-size **spread reproduced
-  and WIDENED** (gemini-to-gpt ≈9×→≈27×); the spread did **not** compress.
-- This fires revision trigger (c) of [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md)
-  in the **strengthening** direction → **logged revision, status `draft`→`revised`** (v1's concordant 3/3 demonstrably
-  hid a fragile member; the "wants replication" caveat is **discharged**). Theory page, v1 back-pointer, index,
-  exec-summary all updated.
-- Instrument frozen (`stimuli.json` sha `32d3e622…cddbf9b`; certification PASS), **independent fresh-agent pre-run
-  critic GO** + **independent post-run verifier REPRODUCED** from raw (billed exact, 720/720 doc_pref rechecked).
-  0 NA/retry/trunc. Hard stop $2.00 never tripped.
-- **Spend: $1.561** (claude $0.979 + gemini $0.471 + gpt $0.105 + liveness $0.005). **Day total 2026-06-20 UTC
-  (sessions 49–53) = $3.144 of $5.00.**
-
-senselint **0 errors** (expected residue: wanted.md + multimodal-anchor-scouting WARNs; 32 internal-contrast INFOs);
-linkify clean.
+senselint **0 errors** (expected residue: wanted.md + multimodal-anchor-scouting WARNs; 32 internal-contrast
+INFOs); linkify clean. `wiki/decisions/open/` is **EMPTY**.
 
 ## Next concrete action — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — nothing to ratify. Apply any Tom override first.
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — nothing to ratify. Apply any Tom
+override first (the budget note above; check for any newer one).
 
-**Track lean:** sessions 49–51 empirical, 52 philosophical, 53 empirical → recent weight is **heavily empirical**.
-Per the charter's track-balance rule, **the next session should lean PHILOSOPHICAL** — *but only if a unit is
-genuinely owed* (do not manufacture; essay space is saturated at 16, and essay-16 was just revised, not re-opened).
+**Track lean:** 51 empirical, 52 philosophical, 53 empirical, 54 philosophical → cleanly alternating; recent
+weight is **balanced**. The next session may lean **EMPIRICAL** without violating balance (the philosophical
+track just took a unit this session and essay space is saturated at 16).
 
-1. **PHILOSOPHICAL (preferred by track-balance, only if real).** The v2 result is fresh evidence the philosophical
-   track can metabolize *without a new essay*: candidate units, pick the one genuinely owed —
-   (a) a **logged refresh** of [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md) if the
-   now-*replicated-but-2/3* dative status changes where the finding sits on the map (the
-   [`theory/constructional-meaning-in-llms`](wiki/findings/theory/constructional-meaning-in-llms.md) box was already
-   updated this session — check whether the situating page needs the same); or
-   (b) if — and only if — the "fragile vs robust panel membership, revealed by replication" idea is a *distinct*
-   contribution from essay-16's "carry the spread" (it may not be), a short open-question page rather than a new
-   essay. **Default: no new essay; a logged theory-refresh at most.**
-2. **EMPIRICAL (the dative line's natural sharpening, if the next session leans empirical instead).** Add the
+1. **EMPIRICAL (preferred — the dative line's natural sharpening; budget headroom is ample today).** Add the
    **pronominality dimension** the corpus codes most strongly (pronominal recipient → DOC is the largest corpus
-   effect) but neither v1 nor v2 manipulated. **Check first whether this owes a new operationalization decision**
-   (how to establish a *pronominal* given referent in the discourse context, and its coding) — if so, queue it to
-   `wiki/decisions/open/` with a provisional default and run no spend this session; if it is plainly within the
-   ratified indicator (same graded forced-choice, new factor level), it can proceed freeze→critic→run. **Budget at
-   the measured ~$1.56/run** (v1 and v2 both came in $1.56–1.58 for 720 calls); check today's `config/budget.md`
-   UTC rows first.
+   effect) but neither v1 nor v2 manipulated. **CHECK FIRST whether this owes a new operationalization decision**
+   — specifically how to establish a *pronominal given referent* in the discourse context and how to code it
+   against the ratified indicator. If it owes a decision, queue it to `wiki/decisions/open/` with a provisional
+   default and **run no spend this session** (a later session ratifies). If it is plainly within the ratified
+   indicator (same graded forced-choice, new factor level), it can proceed freeze → independent pre-run critic →
+   run. **Budget at the measured ~$1.56/run** (v1 and v2 both came in $1.56–1.58 for 720 calls); check today's
+   `config/budget.md` UTC rows and the temp-cap rule above first.
+2. **PHILOSOPHICAL (only if genuinely owed — default NOT owed next session).** Essay space is saturated at 16;
+   both theory pages are now current on the dative. A philosophical unit is owed only if a *new* source is
+   ingested (open-access self-fetch) or a finding moves. Do not manufacture one.
 3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory; recipe in §5b).
 
 ## Open decisions
@@ -60,21 +60,24 @@ genuinely owed* (do not manufacture; essay space is saturated at 16, and essay-1
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This session **re-ran the "grammar of giving" test on a completely fresh set of sentences** (44 new scenarios,
-  nothing shared with the first run). The two stronger models repeated their result almost exactly; the **weakest
-  model's earlier pass did not hold up** — on the new sentences its effect shrank to nearly zero. So the overall
-  verdict is still a pass, but **two of three** rather than all three, and the gap between strongest and weakest grew
-  **wider**. This is the previous session's reading rule (report each model's size; don't read "they all pass" as
-  "they all pass equally") earning its keep: the original "all three pass" quietly contained one fragile member.
-- Two independent fresh-agent reviewers were used as required (one certified the test before any money was spent;
-  one re-computed every number from the raw data afterward — both clean). Spend $1.56, within the daily limit.
+- **The temporary $10/day cap you set for today (JST June 20) is recorded** in `config/budget.md` and at the top
+  of this file, with the UTC/JST boundary spelled out so later sessions today apply it and tomorrow's sessions
+  revert to $5. No spend was made this session, so headroom today is essentially untouched (~$6.86 of the temp
+  $10 remains).
+- This session did **no experiment**. It updated the project's internal "map" of what meaning *is* so that the
+  recent **"grammar of giving"** result now sits on it — placed as a case of meaning-as-*use* (the two phrasings
+  describe the same event, so choosing between them by what's already been mentioned is about *packaging*, not
+  facts), kept deliberately modest (tied to human data only on the *direction* of the pattern, a thin preference
+  not an inference, holding for two of three models). Nothing on the public site was stated more strongly than the
+  internal record, and the site does not mention the budget change.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
-[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget **$5/day UTC** —
-check [`config/budget.md`](config/budget.md) (**2026-06-20 UTC day total = $3.144** across sessions 49–53; a fresh UTC
-day resets it). End squash-merged to `main`, website updated **with the JST clock-time stamp**. **No decisions open.**
-The dative line is now a **replicated Tier-2 positive** (claude+gemini robust across two disjoint item sets; gpt's
-pass fragile, did not replicate); the natural next steps are a **philosophical track-balance unit** (only if owed) or
-the **pronominality sharpening** (check whether it owes a new decision first).
+[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). **Budget today
+(JST June 20) = $10/day TEMP — see the override box at the top; reverts to $5 at UTC 2026-06-20 15:00 (JST June
+21).** Check [`config/budget.md`](config/budget.md) (**2026-06-20 UTC day total = $3.144** across sessions 49–54;
+a fresh UTC day resets it). End squash-merged to `main`, website updated **with the JST clock-time stamp**. **No
+decisions open.** The dative line is a **replicated Tier-2 positive now placed on the philosophical map**
+(claude+gemini robust across two disjoint item sets; gpt's pass fragile, did not replicate); the natural next step
+is the **pronominality sharpening** (check whether it owes a new decision first).
