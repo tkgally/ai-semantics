@@ -121,8 +121,17 @@ CELLS = [("SAME", "SWAP"), ("SAME", "RECOLOR"), ("DIFF", "SWAP"), ("DIFF", "RECO
 
 GEOMS = [(0, 1), (1, 2), (2, 3), (3, 0)]   # (a,b) swap pairs; cycled across the 4 cells x 3 geoms
 
-ROUND_PAIRS = [[2, 6], [1, 5], [3, 8], [2, 7], [4, 9], [1, 6],
-               [3, 7], [2, 8], [1, 7], [4, 8], [3, 9], [2, 9]]
+# OVERLAPPING CONSECUTIVE round pairs (each pair is (k, k+1)). The OVERLAP is load-bearing: every
+# interior round value v appears both as the EARLIER stamp (the lo of pair (v, v+1)) and as the LATER
+# stamp (the hi of pair (v-1, v)), so a reader keyed on a SINGLE op-line's round value -- against any
+# fixed or learned threshold -- cannot tell whether that op is earlier or later, and is forced to
+# chance. (Disjoint earlier/later value sets, e.g. earlier in {1..4} / later in {5..9}, would let a
+# single-line cutoff recover the order without comparing the two stamps -- a lexical shortcut an
+# independent pre-run critic caught and the relational-line v5 GO-discipline forbids. assert_balance
+# now certifies the best single-round-line reader's Wilson-95 LB <= 0.50.) Only the global min/max
+# (rounds 1 and K_MAX) are unavoidably one-sided; they are rare, so the best single-line reader sits
+# near chance (Wilson-LB well below 0.50, certified mechanically).
+ROUND_PAIRS = [[k, k + 1] for k in range(1, 13)]   # (1,2),(2,3),...,(12,13); 12 pairs
 
 DISPLAY_PERMS = [(0, 1), (1, 0)]
 

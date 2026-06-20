@@ -2,7 +2,7 @@
 
 **Run:** `2026-06-20-relational-order-composition-cross-family`
 **Frozen stimuli:** `stimuli.json`
-**rstrip-sha256 = `f8d70547f55393de6f9a6652b4dde9122df3d667fefebf5091bc86e7661c8b85`**
+**rstrip-sha256 = `86f80180181689d870d7e2712eb8c86c4dedc8ddeb4b140886582fe88245ad16`**
 (the `probe.py full` gate refuses to run unless this exact sha is recorded here)
 
 > **Status at freeze: design complete, balance + fixtures certified, awaiting the FINAL independent
@@ -16,8 +16,13 @@
 > to a FIXED spot** ("what color is on the DAX spot?"). (3) The position-anchored design was then
 > NO-GO'd for a *different* reason: the visible **swap-pair geometry was confounded with the cell**
 > (`swap_pair × stamp_first` 12:6), and since the SWAP move names its spots, a geometry-keyed reader
-> scored up to 0.83 without reading stamps. **This design fixes that with a MATCHED-PAIR construction**
-> (below), which makes stamp order independent of *all* visible geometry by construction.
+> scored up to 0.83 without reading stamps. Fixed with a **MATCHED-PAIR construction** (below). (4) The
+> matched-pair design was NO-GO'd for yet another reason: the **round-stamp values were disjoint
+> across earlier/later** (earlier ∈ {1–4}, later ∈ {5–9}), so a reader keyed on a *single* op-line's
+> round against a fixed cutoff recovered the order (score 1.0) without comparing the two stamps. Fixed
+> here with **overlapping consecutive round pairs** (every interior round value appears as both the
+> earlier and the later stamp) plus a mechanical certification that the best single-round-line reader's
+> Wilson-LB ≤ 0.50. **This is the fifth freeze.**
 
 ## The question (precise)
 
@@ -56,10 +61,16 @@ the SWAP and RECOLOR lines. Consequently **stamp order is independent of everyth
 round stamps themselves**: any reader that does not read the per-op round stamps — including one keyed
 on the swap-pair or any visible-geometry signature — gets exactly one record of each pair right and is
 pinned at **0.50**. Only reading the round stamps and applying the two ops **in stamp order** clears
-0.50 (= 1.0). This is certified two ways in `assert_balance`: (i) a **geometry-oracle** upper bound
-(group by the full visible-minus-stamps signature, take the best constant guess per group) = **0.5000**;
-(ii) the brute-forced non-composing reader family (single-op, stamp-using partials, fixed/reverse/print
-orders, fixed-spot, const) all ≤ 0.50 (worst = 0.5000; `apply-only-earlier` = 0.25).
+0.50 (= 1.0). This is certified **three** ways in `assert_balance`: (i) a **geometry-oracle** upper
+bound (group by the full visible-minus-stamps signature, take the best constant guess per group) =
+**0.5000**; (ii) the brute-forced non-composing reader family (single-op, stamp-using partials,
+fixed/reverse/print orders, fixed-spot, const) all ≤ 0.50 (worst = 0.5000; `apply-only-earlier` =
+0.25); (iii) the **single-round-line readers** — the best reader keyed on one op-line's absolute round
+value (SWAP-line, RECOLOR-line, print-first, print-second), the round-magnitude shortcut — all have
+**Wilson-95 LB ≤ 0.50** (worst in-sample 0.5417, LB **0.4423**). The round stamps use **overlapping
+consecutive pairs** `(k, k+1)` for k=1..12, so every interior round value occurs as both the earlier
+and the later stamp; only the global min/max are one-sided and rare, leaving the best single-round
+reader below the bar. The genuine composer is at Wilson-LB **0.9615** — a decisive separation.
 
 ## Design parameters (frozen)
 
@@ -103,7 +114,8 @@ of within-frame variation. **No new `wiki/decisions/open/` entry is owed**; the 
 
 - `python3 build_trials.py` → `assert_balance` PASS: 96 COMP + 32 DIRECT; **composer = 1.000**;
   **geometry-oracle = 0.5000**; every brute-forced non-composing reader ≤ 0.50 (`apply-only-earlier`
-  = 0.25); all balance checks pass; every record order-discriminating. Frozen sha above.
+  = 0.25); **every single-round-line reader Wilson-LB ≤ 0.50** (worst 0.4423); all balance checks
+  pass; every record order-discriminating. Frozen sha above.
 - `python3 fixtures/make_fixtures.py` → ALL FIXTURE ASSERTS PASS: only a genuine stamp-order composer
   → RESPECTS-ORDER (1.0); report-Cr / fixed-order / print-order → 0.50; earlier-only → 0.25; all
   ORDER-BLIND-OR-WEAKER; const-color / direct-fail → UNINTERPRETABLE.

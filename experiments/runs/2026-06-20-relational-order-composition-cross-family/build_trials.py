@@ -31,10 +31,21 @@ Prints the sha256 that must go into the PREREG before any finding-bearing call.
 """
 import hashlib
 import json
+import math
 import os
 from collections import Counter, defaultdict
 
 import common as C
+
+
+def _wilson_lb(k, n, z=1.96):
+    if n == 0:
+        return 0.0
+    p = k / n
+    d = 1 + z * z / n
+    c = p + z * z / (2 * n)
+    h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
+    return (c - h) / d
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "stimuli.json")
@@ -99,32 +110,32 @@ def _make_record(rid, query, geo, cr, coth, stamp_first, rounds, print_swap_firs
 
 
 def build():
-    records, rid, u = [], 0, 0
-    # COMP: 3 color-reps x 16 geometries = 48 units; each unit emits the MATCHED PAIR (both orders)
-    # -> 96 records. Colors per unit make the answer uniform over the 6 colors.
-    for rep in range(3):
-        for geo in GEOMETRIES:
-            cr = C.COLORS[u % C.NUM_COLORS]
-            coth = C.COLORS[(u + 3) % C.NUM_COLORS]
-            rounds = C.ROUND_PAIRS[u % len(C.ROUND_PAIRS)]
-            print_swap_first = (u % 2 == 0)
-            for stamp_first in ("SWAP", "RECOLOR"):          # the matched pair
-                records.append(_make_record(rid, "COMP", geo, cr, coth, stamp_first, rounds,
-                                            print_swap_first))
-                rid += 1
-            u += 1
-    # DIRECT: 1 color-rep x 16 geometries = 16 units -> 32 records (the order is stated, so the
-    # matched pair just supplies both on-demand directions).
-    for geo in GEOMETRIES:
+    records, rid = [], 0
+    np = len(C.ROUND_PAIRS)   # 12 round pairs
+    # COMP: 48 units (16 geometries x 3) -> each unit emits the MATCHED PAIR (both orders) = 96
+    # records. Round pair = u % 12 (each pair used 4x, decorrelated from the 16-geometry cycle);
+    # print order balanced 2:2 within each pair's 4 units; colors make the answer uniform over 6.
+    for u in range(48):
+        geo = GEOMETRIES[u % len(GEOMETRIES)]
         cr = C.COLORS[u % C.NUM_COLORS]
         coth = C.COLORS[(u + 3) % C.NUM_COLORS]
-        rounds = C.ROUND_PAIRS[u % len(C.ROUND_PAIRS)]
+        rounds = C.ROUND_PAIRS[u % np]
+        print_swap_first = ((u // np) % 2 == 0)              # 2:2 within each pair's 4 occurrences
+        for stamp_first in ("SWAP", "RECOLOR"):              # the matched pair
+            records.append(_make_record(rid, "COMP", geo, cr, coth, stamp_first, rounds,
+                                        print_swap_first))
+            rid += 1
+    # DIRECT: 16 geometries x both orders = 32 records (order is stated, so round magnitude is moot).
+    for u in range(16):
+        geo = GEOMETRIES[u]
+        cr = C.COLORS[u % C.NUM_COLORS]
+        coth = C.COLORS[(u + 3) % C.NUM_COLORS]
+        rounds = C.ROUND_PAIRS[(u + 4) % np]
         print_swap_first = (u % 2 == 0)
         for stamp_first in ("SWAP", "RECOLOR"):
             records.append(_make_record(rid, "DIRECT", geo, cr, coth, stamp_first, rounds,
                                         print_swap_first))
             rid += 1
-        u += 1
     return records
 
 
@@ -172,6 +183,29 @@ def _visible_sig(r):
             tuple(r["display_order"]), tuple(sorted(r["rounds"])))
 
 
+def _round_on_op(r, op):
+    """The round number printed on the line for operation `op` (SWAP or RECOLOR)."""
+    return r["rounds"][0] if r["stamp_first"] == op else r["rounds"][1]
+
+
+def _round_on_print_pos(r, pos):
+    """The round number on the op printed in physical position `pos` (0 = first printed)."""
+    op = r["display_order"][pos]
+    return _round_on_op(r, op)
+
+
+def _best_single_round_reader(rs, value_fn):
+    """The strongest reader keyed on ONE op-line's absolute round value: group by that value and
+    predict the majority stamp_first per value (optimal single-feature predictor). Because matched
+    pairs make the answer determined by stamp_first, this reader's ANSWER accuracy equals its
+    stamp_first-prediction accuracy. Returns (k_correct, n)."""
+    groups = defaultdict(Counter)
+    for r in rs:
+        groups[value_fn(r)][r["stamp_first"]] += 1
+    k = sum(max(c.values()) for c in groups.values())
+    return k, len(rs)
+
+
 def _geometry_oracle_rate(rs):
     """Upper bound on any reader keyed on the visible-minus-stamps signature: group by signature and
     take the most common answer in each group. With matched pairs this is exactly 0.50."""
@@ -214,6 +248,19 @@ def assert_balance(records):
         oracle = _geometry_oracle_rate(rs)
         assert oracle <= C.PRINT_CEILING + EPS, \
             f"{subset}: geometry-oracle reader = {oracle} > 0.50 (visible geometry leaks the answer)"
+        # SINGLE-ROUND-LINE readers: a reader keyed on ONE op-line's absolute round value (the lexical
+        # round-magnitude shortcut). The order is determined only on the COMP arm (DIRECT states it).
+        round_lb_worst = 0.0
+        if subset == "comp":
+            for tag, fn in [("SWAP-line", lambda r: _round_on_op(r, "SWAP")),
+                            ("RECOLOR-line", lambda r: _round_on_op(r, "RECOLOR")),
+                            ("print-first-line", lambda r: _round_on_print_pos(r, 0)),
+                            ("print-second-line", lambda r: _round_on_print_pos(r, 1))]:
+                k, nn = _best_single_round_reader(rs, fn)
+                lb = _wilson_lb(k, nn)
+                round_lb_worst = max(round_lb_worst, lb)
+                assert lb <= C.PRINT_CEILING + EPS, \
+                    f"comp: single-round-line reader '{tag}' rate={k/nn:.4f} Wilson-LB={lb:.4f} > 0.50"
         worst, worst_name = 0.0, None
         if subset == "comp":
             for name, fn in _noncomposing_readers().items():
@@ -228,8 +275,9 @@ def assert_balance(records):
                 assert abs(_rate(rs, lambda r, c=c0: c) - C.POS_CHANCE) < EPS, f"comp: const-{c0} != 1/6"
         print(f"  [{subset}] geometry OK: {n} records; composer=1.000; "
               f"cells/stamp_first/readout_type/readout-spot/print-order balanced; "
-              f"geometry-oracle (strongest visible-geometry reader) = {oracle:.4f} (<= {C.PRINT_CEILING}); "
-              + (f"worst brute-forced non-composing reader = '{worst_name}' at {worst:.4f}; "
+              f"geometry-oracle = {oracle:.4f}; "
+              + (f"worst single-round-line reader Wilson-LB = {round_lb_worst:.4f} (<= {C.PRINT_CEILING}); "
+                 f"worst brute-forced non-composing reader = '{worst_name}' at {worst:.4f}; "
                  f"answer uniform over 6 colors (const=1/6)." if subset == "comp" else "manip-check set."))
     cp = [r for r in records if r["subset"] == "comp"]
     di = [r for r in records if r["subset"] == "direct"]
