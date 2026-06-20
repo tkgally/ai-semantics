@@ -8,7 +8,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-20
 links:
   - rel: depends-on
     target: concept/coercion
@@ -26,9 +26,23 @@ links:
     target: result/coercion-implicit-cue-v2b
   - rel: supports
     target: open-question/instrument-sensitivity-constructional-inference
+  - rel: depends-on
+    target: result/scivetti-cxnli-answer-key-v1
 ---
 
 # Conjecture: LLM constructional inference is additive-easy but defeasance-hard (a monotonicity asymmetry)
+
+> **First empirical touch (2026-06-20), NOT a test.** [`result/scivetti-cxnli-answer-key-v1`](../results/scivetti-cxnli-answer-key-v1.md)
+> reports add (caused-motion ∪ way-manner) vs cancel (conative) **base answer-key
+> accuracy** on the human Scivetti items: the gaps are small and **inconsistent in
+> sign** (claude −0.092 with the conative *highest*, gpt +0.035, gemini +0.021). This
+> is **baseline-difficulty-confounded** and is **not** the matched-difficulty /
+> ceiling-controlled confirm test this conjecture requires — it confirms nothing and
+> falsifies nothing. It is, however, **consistent with** the conjecture's own scope
+> statement: the asymmetry is posited for the *de-confounded suppression-with-no-cue*
+> arms (the conative-cancel-v2 template), not for base NLI accuracy, where both
+> directions sit near ceiling. The conjecture stays `proposed`; the matched-difficulty
+> generalization test remains the only thing that can move it.
 
 ## Statement
 

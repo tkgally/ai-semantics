@@ -130,9 +130,25 @@ More generally the dataset can ground:
 - **Exp-2 0.83 figure is phrased as IAA, not unambiguously as accuracy.** See the caveat in *Dataset structure* above.
 - **Version / title drift.** arXiv v1 (8 Jan 2025) was titled "Assessing Language Comprehension in Large Language Models Using Construction Grammar"; v2 (13 Aug 2025) and the published ACL version are "Beyond Memorization: … Using Phrasal Constructions." Quotes on this page are from the **arXiv v2 HTML** (`https://arxiv.org/html/2501.04661v2`) and the **published ACL Anthology** abstract, both fetched 2026-05-29. The source page records the same drift.
 
+## Probes run against this anchor
+
+- **2026-05-29** — [`result/cxnli-distinction-divergence-v1`](../../findings/results/cxnli-distinction-divergence-v1.md):
+  base→distinction *drop* on 5 argument-structure constructions (base arm a 20-item
+  subsample). The divergent-form gap reproduces (~39 pp mean drop).
+- **2026-06-20** — [`result/scivetti-cxnli-answer-key-v1`](../../findings/results/scivetti-cxnli-answer-key-v1.md):
+  the **full** Exp-1 base task, all 8 constructions, 390 items, panel NLI vs per-item
+  gold vs the ≈0.90 baseline. **2/3 models match the human baseline** (claude 0.903,
+  gemini 0.915; gpt-5.4-mini 0.813 below); the single cross-model failure is the
+  phrasal scalar **let-alone** (0.46–0.67). Per-construction Exp-1 test counts now fully
+  enumerated (causative-with 54 / caused-motion 36 / comparative-correlative 30 /
+  conative 78 / intransitive-motion 69 / let-alone 24 / resultative 66 / way-manner 33 =
+  390; balanced 130/130/130 across the three labels), sha-pinned in the run's
+  `stimuli-manifest.json` (upstream commit `82699473`).
+
 ## Pointer for next visit
 
-The anchor is now ratified; the next step is to actually run a probe. A future run should:
+The anchor is ratified and the base + distinction answer-key probes have both run. A
+future run could:
 
 1. Check the repo's license, then mirror `github.com/melissatorgbi/beyond-memorization` into `experiments/data/scivetti/` (NOT the wiki). If no license is granted, work against it in place rather than copying it in.
 2. Enumerate the per-construction triple counts and the `CxNLI_distinction` split (one path 404'd this run); confirm column layout beyond the main test file.
