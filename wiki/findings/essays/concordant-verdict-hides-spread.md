@@ -5,13 +5,15 @@ title: A concordant verdict still hides a spread — what a panel CONFIRM concea
 meaning-senses:
   - constructional
   - functional-vs-formal
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-20
 updated: 2026-06-20
 links:
   - rel: depends-on
     target: result/dative-information-structure-v1
+  - rel: depends-on
+    target: result/dative-information-structure-v2
   - rel: depends-on
     target: conjecture/dative-alternation-information-structure
   - rel: refines
@@ -179,6 +181,26 @@ gives that the two competences dissociate. So a concordant CONFIRM at the *forma
 the well-formed string well-formed) and a concordant CONFIRM at the *functional* end (everyone tracks
 givenness, but across a 10× range) are not the same kind of result, and collapsing both to "3/3
 CONFIRM" hides precisely the dissociation the project exists to describe.
+
+## Revision log
+
+- **2026-06-20 (session 53), trigger (c) exercised → essay strengthened, status `draft`→`revised`.**
+  The fresh-item replication
+  [`result/dative-information-structure-v2`](../results/dative-information-structure-v2.md) (a disjoint
+  32+12-item set, same ratified operationalization) returned the outcome trigger (c) anticipated — and it
+  fired in the **strengthening** direction, not the softening one the trigger flagged as a risk. The
+  decorrelation did **not** compress: claude (+0.325 vs v1 +0.327) and gemini (+0.500 vs +0.524)
+  reproduced almost exactly, while gpt fell from a clearing +0.056 to **+0.018 with a CI that includes
+  zero (WEAK)** — so the gemini-to-gpt magnitude ratio *widened* from ≈9× to ≈27×, and the panel verdict
+  dropped from a concordant **3/3** to **2/3**. This supplies the essay's sharpest demonstration to date:
+  **v1's concordant 3/3 label hid a fragile member** — the single model whose CONFIRM did not survive
+  replication. The reading discipline this essay prescribes (report per-model magnitudes; never read a
+  shared label as a shared degree) is exactly what would have flagged gpt's order-of-magnitude-smaller
+  +0.056 as the CONFIRM to distrust. No clause of the discipline changes; its empirical spine is firmer,
+  and the "in strongest form" reading of prediction 3 stands (trigger (c)'s "if a replication compresses
+  the spread" condition did not occur). The Honesty-box caveat *"gpt's small positive especially wants
+  replication before weight rests on its size"* is now **discharged**: it was checked, and the weight did
+  not hold.
 
 ## Revision triggers (read before citing)
 
