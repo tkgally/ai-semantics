@@ -26,6 +26,8 @@ links:
     target: result/scivetti-cxnli-answer-key-v1
   - rel: depends-on
     target: result/scivetti-let-alone-working-surface-v1
+  - rel: depends-on
+    target: result/scivetti-let-alone-forced-decomposition-v1
 ---
 
 # Open question: does constructional-inference competence depend on the elicitation instrument?
@@ -93,6 +95,19 @@ links:
 > FC-vs-NLI axis, shows **model-graded** sensitivity (and again it is gpt-5.4-mini at the fragile end). The
 > page **stays `open`**: the output channel joins NLI-vs-FC as a dimension along which "constructional-inference
 > competence" can prove elicitation-dependent, and the standing methodological question is unchanged.
+>
+> **Update (2026-06-20, session 60) — the output-channel sensitivity is *graded within* a single model, not
+> all-or-none.** [`result/scivetti-let-alone-forced-decomposition-v1`](../results/scivetti-let-alone-forced-decomposition-v1.md)
+> closed the session-58 honesty note's gap by **forcing** gpt to use the channel (a mandatory 3-step
+> decomposition; gpt's median let-alone completion jumped 8 → 120 tokens, 24/24 worked). The result refines the
+> model-graded picture: forcing uptake **partly** closes gpt's let-alone gap (+0.21, directional but
+> underpowered, within-item sign test p = 0.090 → UNCHANGED) yet leaves it **below** the human ≈0.90 baseline
+> (0.583), where claude (0.833) and gemini (0.875) sit. So the output channel's effect on measured
+> constructional-inference competence is not binary (artifact vs real) even within the fragile model: part of
+> gpt's let-alone gap is channel-bounded (uptake helps) and part **survives a genuinely-exercised channel**.
+> This is the same lesson the page registers for the FC-vs-NLI axis — that "competence" reads off the
+> instrument in graded, model-specific ways — now sharpened on the output-channel axis to a *partial* effect.
+> The page **stays `open`**.
 
 ## The question
 

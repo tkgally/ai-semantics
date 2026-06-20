@@ -15,6 +15,8 @@ links:
     target: essay/undischargeable-negative
   - rel: depends-on
     target: result/scivetti-let-alone-working-surface-v1
+  - rel: depends-on
+    target: result/scivetti-let-alone-forced-decomposition-v1
   - rel: refines
     target: essay/witness-seeking-economics
   - rel: depends-on
@@ -235,6 +237,17 @@ Uptake sits **between** the two states the confound already named — channel-bo
 channel-controlled (survives widening) — and a control that does not check for it can misread a non-uptake as
 a survival, mistaking an unused affordance for a real bound.
 
+*Forward note (2026-06-20, session 60).* The uptake-inducing re-run this section prescribes has now been run
+([`result/scivetti-let-alone-forced-decomposition-v1`](../results/scivetti-let-alone-forced-decomposition-v1.md);
+trigger (b), below). A **forced** 3-step decomposition took gpt from offered-but-declined (median 8 completion
+tokens) to genuinely-exercised (median 120, 24/24 worked), and the answer it returned is the one the
+three-state picture predicts is *possible but had not yet been seen*: a **partial** effect — forcing uptake
+lifted gpt's let-alone accuracy directionally (+0.21) yet left it **below** the human baseline, where the two
+models that took up the channel sit. So channel-not-taken-up resolved not to channel-bounded *or*
+channel-controlled but to a **mixture** of the two, vindicating the clause's insistence that uptake be checked
+and forced before a verdict — had the session-58 non-uptake been read as a survival, this mixture would have
+been mis-recorded as a clean bound.
+
 This does not weaken the confound; it **completes the control** it prescribes, and it makes the control's unit
 of analysis the *model*, not the *panel*. An output-channel control reports a *capacity* reading only over the
 sub-panel that exercised the channel; for any model that declined it (as gpt did here, against claude and
@@ -420,6 +433,27 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   §"Offering a channel is not exercising it: uptake as a control condition" — because it corrects the
   *control* the essay prescribes, not merely what would change the essay's mind. The trigger record stays
   here as the originating event; the prescription now lives in the body.)**
+  **The confound was then removed — uptake INDUCED — and (b) is now a CANDIDATE, partially fired
+  (2026-06-20, session 60).** [`result/scivetti-let-alone-forced-decomposition-v1`](../results/scivetti-let-alone-forced-decomposition-v1.md)
+  re-ran the same 24 let-alone items with a **forced** decomposition (a mandatory, construction-neutral,
+  answer-blind 3-step scaffold required before the `FINAL:` tag — the lower-governance-risk uptake-forcer this
+  trigger named, no demonstration items). It worked: gpt's median let-alone completion length jumped **8 → 120
+  tokens** (24/24 items now genuinely worked, where session 58 it mostly emitted bare answers), so the channel
+  was at last *actually exercised* — the precondition this trigger and the body demand. With uptake forced,
+  gpt's accuracy rose **0.375 → 0.583** (+0.21, 7 gains / 2 losses) but the within-item sign test is
+  **underpowered** (p = 0.090, does not clear the pre-registered 0.05 bar → verdict UNCHANGED), and gpt
+  **stays below the human ≈0.90 baseline** (CI hi 0.755) where claude (0.833) and gemini (0.875) sit; the
+  comp-correlative ceiling control stayed PRESERVED and the two stronger models stayed at baseline (the
+  scaffold is a benign, valid instrument, not a teaching one). So this is the **shape** (b) describes — a model
+  that externalizes the computation and *still falls short* — making it the closest in-repo contrast case to a
+  channel-*controlled* residual; but "survives" must be read carefully (gpt *improved*, it did not persist at
+  chance) and the residual rests on an underpowered lift, so (b) is logged **partially fired / candidate**:
+  *direction* present (a below-baseline residual under a genuinely-used wide channel), *power* not yet there to
+  call it clean. The next witness axis is a **powered** re-run (more let-alone items, or the disjoint
+  train-split items) — not "more of the same," but enough discordant pairs to resolve the +0.21. This neither
+  overturns the essay nor yet supplies the clean cuts-both-ways contrast; it converts gpt's let-alone from
+  *channel-not-taken-up* (inconclusive) into a *partial channel effect with a candidate channel-controlled
+  residual*, which is exactly the progression the uptake clause was added to enable.
 - **(c) A wide-channel positive shown to be channel-scaffolded artifact.** If a capability that appears only
   *with* a working surface were shown to be an artifact of the scaffold doing the computation the model cannot
   do internally (e.g., the model copying a procedure verbatim without composing), the symmetric hazard this
