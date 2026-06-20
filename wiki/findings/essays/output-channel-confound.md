@@ -28,6 +28,8 @@ links:
   - rel: depends-on
     target: result/relational-order-composition-three-move
   - rel: depends-on
+    target: result/scivetti-let-alone-working-surface-v1
+  - rel: depends-on
     target: concept/formal-vs-functional-competence
   - rel: depends-on
     target: source/li-2024-cot-serial
@@ -204,6 +206,43 @@ sensitive composition *given a working surface*, and explicitly declines the *wi
 unindexed capability claim ("model M composes") is underspecified in the same way a claim of measurement
 without units is: it omits a parameter the value depends on.
 
+## Offering a channel is not exercising it: uptake as a control condition
+
+The control the confound forces — *vary the output channel before reading a forced-format negative* — has a
+hidden parameter that a second masking case exposed and that the body, as first written, left implicit. **A
+working surface is an affordance, not a coercion.** Opening the channel in the prompt — permitting
+step-by-step output, parsing a `FINAL:` tag — does not guarantee the model *uses* it; and a model that is
+*offered* a wider channel but answers as though it were not has not, in the sense the control requires, had
+its channel widened at all.
+
+[`result/scivetti-let-alone-working-surface-v1`](../results/scivetti-let-alone-working-surface-v1.md) is
+where this surfaced. Re-running the near-chance phrasal-scalar **let-alone** NLI items under a working
+surface lifted two of three models to the human baseline on the *same items* (claude 0.542 → 0.792, gemini
+0.667 → 0.917; within-item sign test p = 0.035) — revision trigger (a), fired (below). But the third,
+gpt-5.4-mini, stayed near chance (0.375) *with the surface offered*, and the post-run verifier found why: it
+answered "**16 of 24** let-alone items as a bare one-token `FINAL: N`" with "0 reasoning tokens on *every*
+item" — it **declined** the surface. That outcome is neither a channel-bounded negative *cleared* by widening
+(claude/gemini) nor a channel-controlled negative that *survives* widening (the genuine trigger-(b) contrast
+case the essay is still seeking): it is a third state the body had no name for, **channel-not-taken-up**.
+
+So the control acquires a missing clause: **"vary the channel" means vary the channel *actually used*, not
+merely the channel offered.** A clean reading of a forced-format negative under a widened channel must verify
+**uptake** — that the model in fact externalized the computation — before its persistence can be read as
+channel-controlled. Where uptake is partial or absent, the test is *inconclusive*, not negative, and must be
+re-run with an uptake-*inducing* channel (a forced decomposition that requires the steps before the answer, or
+a few-shot demonstration of working the inference) before the model's persistence licenses any verdict.
+Uptake sits **between** the two states the confound already named — channel-bounded (cleared by widening) and
+channel-controlled (survives widening) — and a control that does not check for it can misread a non-uptake as
+a survival, mistaking an unused affordance for a real bound.
+
+This does not weaken the confound; it **completes the control** it prescribes, and it makes the control's unit
+of analysis the *model*, not the *panel*. An output-channel control reports a *capacity* reading only over the
+sub-panel that exercised the channel; for any model that declined it (as gpt did here, against claude and
+gemini who reasoned 24/24, CoT medians ~1040 / ~1430 chars), the control's own precondition is unmet and the
+verdict is owed an uptake-inducing re-run, not recorded as a survival. Uptake became visible only because one
+model declined; the discipline it forces — check that the widened channel was taken, model by model — applies
+whether or not a given panel happens to make it visible.
+
 ## A machine performance/competence gap
 
 The shape of this should be familiar to anyone who has thought about the classical **competence/performance**
@@ -315,7 +354,9 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   and explicitly not *without* one; this essay neither extends nor narrows that.
 - **Not "always widen the channel."** Widening the channel indexes a *different* (wider) capability, not a
   truer one. The recommendation is to **vary** the channel and **state the index**, not to privilege the wide
-  setting as neutral — there is no neutral setting.
+  setting as neutral — there is no neutral setting. And a channel is only *varied* if it is **taken up**:
+  offering a working surface a model declines leaves its channel unwidened in fact (see §"Offering a channel
+  is not exercising it").
 - **Not an impeachment of the project's single-token instruments.** The confound is scoped: it bites only a
   forced-format negative on a capability that requires serial, externalizable computation. Single-token
   *tasks* (acceptability, single-premise NLI) give the model no masked working to lose, and are untouched.
@@ -374,7 +415,11 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   "vary the channel" means vary the channel *actually used*, so a clean (b) test must *induce uptake* (forced
   decomposition, few-shot demonstrations of working the inference) before a model's persistence under an
   *offered* surface can be read as channel-controlled.** Uptake is a third state between channel-bounded
-  (cleared by widening) and channel-controlled (survives widening): channel-not-taken-up.
+  (cleared by widening) and channel-controlled (survives widening): channel-not-taken-up. **(2026-06-20,
+  session 59: this scope condition has been *promoted from this trigger note into the body* — see
+  §"Offering a channel is not exercising it: uptake as a control condition" — because it corrects the
+  *control* the essay prescribes, not merely what would change the essay's mind. The trigger record stays
+  here as the originating event; the prescription now lives in the body.)**
 - **(c) A wide-channel positive shown to be channel-scaffolded artifact.** If a capability that appears only
   *with* a working surface were shown to be an artifact of the scaffold doing the computation the model cannot
   do internally (e.g., the model copying a procedure verbatim without composing), the symmetric hazard this
@@ -396,7 +441,10 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   performed — and to derive the **control** it forces: vary the output channel before reading any forced-format
   capability-negative, treat such a negative as **channel-bounded** until that is done, **index** every
   capability attribution to its channel, and rank the channel **among the first** controls because it is cheap
-  and recurs across the instrument library. It also draws the **machine performance/competence** map (with
+  and recurs across the instrument library. The control carries one further clause the body now makes explicit
+  (promoted 2026-06-20 from a revision-trigger note): a channel counts as widened only where the model **takes
+  it up**, so a clean control **verifies uptake** model-by-model and reads a declined surface as
+  *channel-not-taken-up* (inconclusive, owed an uptake-inducing re-run), never as a survival. It also draws the **machine performance/competence** map (with
   independent theory-of-computation grounding for the serial-computation mechanism,
   [`source/li-2024-cot-serial`](../../base/sources/li-2024-cot-serial.md)) and the **aperture-vs-ceiling** dual
   with [`essay/transcript-ceiling`](transcript-ceiling.md). [`essay/floor-is-not-a-ceiling`](floor-is-not-a-ceiling.md)
