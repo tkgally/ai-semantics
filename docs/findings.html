@@ -71,16 +71,22 @@ itself) adds that. The project's central question was whether language models ac
   (a "length-matched" fix was rejected for tilting <em>toward</em> a false positive). So it is recorded as
   something <a href="glossary.html#reach">the tools can't cleanly reach</a> and reported only on the human
   side, where it is plainly real.</li>
-  <li><strong>Graded against a human answer key — human-level on most constructions, but a clear gap on
-  "let alone" (June 20).</strong> A published set of 390 hand-labelled grammar puzzles spans eight
-  constructions and asks, for each, whether one sentence implies, contradicts, or leaves open another; native
-  speakers score about <strong>90%</strong>. Graded on the full set, <strong>two of the three models matched that
-  human level</strong> (90% and 92%) and the smallest trailed at 81%. The one construction <em>all three</em>
-  handled badly was <em>let alone</em> ("hard enough for one person, let alone a society") — 46–67%, near guessing
-  on a three-way choice — even though they sailed through the who-did-what-to-whom constructions. Important caveat:
-  these puzzles are public, so a model may have <em>seen</em> them, which inflates a score; that makes the
-  <em>failures</em> (let alone; the smallest model overall) the trustworthy signal and the matches the weaker one.
-  An independent check reproduced every number.</li>
+  <li><strong>Graded against a human answer key — human-level on most constructions, and the "let alone" gap
+  turns out to be mostly an answer-format trap (June 20).</strong> A published set of 390 hand-labelled grammar
+  puzzles spans eight constructions and asks, for each, whether one sentence implies, contradicts, or leaves
+  open another; native speakers score about <strong>90%</strong>. Graded on the full set, <strong>two of the
+  three models matched that human level</strong> (90% and 92%) and the smallest trailed at 81%. The one
+  construction <em>all three</em> handled badly was <em>let alone</em> ("hard enough for one person, let alone a
+  society") — 46–67%, near guessing on a three-way choice. <strong>A follow-up showed why:</strong> re-running
+  the <em>same</em> puzzles but letting the models reason step by step (instead of forcing a one-word answer),
+  changing nothing else, <strong>two of the three jumped to the human ~90% level on the very same items</strong>
+  (54%→79%, 67%→92%), while an easy control pattern stayed perfect. So the gap was largely a
+  <em>cramped-answer-format</em> artifact — <em>let alone</em>'s inference takes a few steps, which one word
+  forbade — not a missing kind of grammatical understanding. (The smallest model didn't recover, but a check
+  found it had largely <em>declined</em> the offered room to reason — a weaker thing than a real limit.) Caveat
+  still standing: the puzzles are public, so a model may have <em>seen</em> them; the trustworthy signals are the
+  relative ones (the format jump; the smallest model's non-use). Independent review before spending; every number
+  and the genuineness of the written working reproduced afterward.</li>
   <li><strong>Adding a meaning: yes, reliably.</strong> When a construction adds an
   inference (the sneezed napkin moved; someone who "whistled his way down the hall"
   travelled down the hall), all three models draw it at or near 100%, across many verbs —
