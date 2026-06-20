@@ -62,10 +62,10 @@ def full():
     _require_frozen()
     stim = json.load(open(STIM))
     trials = stim["trials"]
-    # pre-flight: 240 trials x 3 models = 720 calls; short graded outputs (~512 tok cap,
-    # brief justification). Comparable single-output panel probes bill ~$0.0001-0.0003/call
-    # -> ~$0.10-0.25 expected. Hard stop $0.60.
-    C.check_hard_stop(0.35, "full")
+    # pre-flight: 240 trials x 3 models = 720 calls; graded outputs w/ brief justification
+    # (~512 tok cap). Honest estimate (rate card undercounts billed ~4.5x): claude ~$0.6-0.9 +
+    # gpt ~$0.05 + gemini(effort minimal) ~$0.05-0.10 -> ~$0.7-1.1 billed. Hard stop $1.50.
+    C.check_hard_stop(1.10, "full")
     print(f"FULL: {len(trials)} trials x {len(C.MODELS)} models")
     for name, slug in C.MODELS.items():
         path = os.path.join(C.RAW, f"probe-{name}.jsonl")

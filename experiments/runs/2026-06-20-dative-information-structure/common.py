@@ -41,7 +41,13 @@ MODELS = {"claude": PANEL["A"], "gemini": PANEL["C"], "gpt": PANEL["B"]}
 
 MAX_TOKENS = 512   # room for a brief justification before the FINAL line; gemini needs headroom
 REASONING = {"google/": {"effort": "minimal"}}   # gemini cost-driver mitigation, held constant
-HARD_STOP_USD = 0.60   # pre-registered hard stop on PROJECTED total billed cost
+# Pre-registered hard stop on PROJECTED total billed cost. Raised 0.60 -> 1.50 after the
+# pre-run critic's NIT-1: the repo rate card (which undercounts billed cost ~4.5x) puts
+# claude alone over 240 trials at ~$0.6-0.9 with a 512-token working surface, so a $0.60
+# gate would spuriously trip mid-run and strand the run. $1.50 is honest headroom and
+# still under a third of the $5/day UTC cap. Budget-gate change only; the frozen stimuli
+# sha and all measurement/scoring are unchanged.
+HARD_STOP_USD = 1.50
 
 SYS = ("You are a careful native speaker of English judging how natural different "
        "phrasings sound in a given context. You weigh the discourse context (what has "

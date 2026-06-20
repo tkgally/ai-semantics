@@ -88,16 +88,39 @@ a limitation, not fixed by re-prompting after seeing the distribution.
 
 ## Budget pre-flight
 
-240 trials × 3 models = 720 calls; short graded outputs (≤512-token cap, brief
-justification). Comparable single-output panel probes bill ~$0.0001–0.0003/call →
-**~$0.10–0.25 expected**; pre-registered **hard stop $0.60** (projected-total gate in
-`common.py`). gemini held at `effort: minimal`. Well inside the $5/day UTC cap.
+240 trials × 3 models = 720 calls; graded outputs with a brief justification (≤512-token
+cap). **Honest estimate (corrected after the pre-run critic's NIT-1):** the repo rate
+card — which *undercounts* billed cost ~4.5× — puts **claude** alone at ~$0.6–0.9 over
+240 trials with a working surface; gpt-5.4-mini ~$0.05 and gemini (effort minimal)
+~$0.05–0.10. So **~$0.7–1.1 billed expected**, dominated by claude's output tokens.
+Pre-registered **hard stop $1.50** (projected-total gate, re-checked every 30 calls,
+aborts with crash-safe resume). Comfortably under a third of the $5/day UTC cap.
+
+## Pre-run critic (session 50, 2026-06-20)
+
+**VERDICT: GO** (independent adversarial pre-run critic, fresh agent). No BLOCKER, no
+SHOULD-FIX. The critic independently re-derived the shortcut-proofness (ten surface-only
+readers it invented — char-length, rendered-string length, "the"-count, verb hash,
+animacy-from-article, etc. — all max|shift| = 0.000000; the only path off zero is reading
+the discourse context, and a reader peeking only at context *length* averages mean shift
+≈ −0.0001, far short of the bar, because the two contexts are length-balanced). It verified
+all binding conditions against the actual frozen items (within-pair length variance 0;
+6 long-recipient + 6 long-theme control items dissociating info-structure from end-weight;
+length distributions matched; 32 main + neutral baseline; 240 trials = 120/120 A/B), all 15
+verbs canonical alternating datives, the analysis biased against a free positive (CONFIRM
+lower-bound-gated, FALSIFY the default, parser target-blind, secondary non-decisive), and
+the corpus fit firsthand + canonical. **Governance: no new decision owed** (the lone
+value-laden build choice — coding 6 institutional `tlong` recipients inanimate — feeds
+only the non-decisive secondary Spearman). Two NITs: NIT-1 (budget optimism) — **addressed**
+(hard stop raised 0.60→1.50, estimate corrected above); NIT-2 (incidental `to`-phrases in
+`m06`/`m21` contexts) — benign (not a ditransitive of the test verb; if anything primes
+*against* a positive). The run may proceed on the byte-identical sha-pinned instrument.
 
 ## Run procedure
 
 1. `python3 probe.py liveness` — 3 calls, all must parse the graded FINAL line.
-2. Independent pre-run critic GO (this session) on the frozen sha; a fresh pre-run critic
-   GO is re-confirmed right before spend if the run lands in a later session.
+2. Pre-run critic GO recorded above (session 50, on this exact sha). The run may proceed
+   directly on the frozen instrument; a fresh quick re-confirmation is optional, not required.
 3. `python3 probe.py full` — refuses unless this sha is recorded above.
 4. `python3 analyze.py` → `analysis.json`.
 5. Independent post-run verifier reproduces the numbers from raw before the result page is written.
