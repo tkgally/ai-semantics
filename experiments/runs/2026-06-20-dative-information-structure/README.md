@@ -1,13 +1,45 @@
-# Dative-alternation information-structure probe — DESIGN SPEC (contingent, NOT RUN)
+# Dative-alternation information-structure probe — ACTIVE BUILD SPEC (ratified)
 
-**Status: design draft. No stimuli built, no certification, no model calls, $0
-spent.** This directory holds the *design specification* for the probe that opens
-the dative line; it is **contingent on**
-[`wiki/decisions/open/dative-anchor-and-indicator`](../../../wiki/decisions/open/dative-anchor-and-indicator.md)
-and must not be built, certified, or run until that decision is ratified by a later
-session's independent adversarial review. Building stimuli here now would freeze a
-design around an unratified value-laden choice and force a re-freeze — so this file
-is a plan, not an instrument.
+**Status: operationalization RATIFIED 2026-06-20 (session 50, ADOPT MODIFIED) —
+[`decisions/resolved/dative-anchor-and-indicator`](../../../wiki/decisions/resolved/dative-anchor-and-indicator.md).**
+This is now the **active build spec**, no longer contingent. The binding
+build-session conditions from the ratification are folded in below (see "Binding
+conditions (ratified)"). Stimuli construction, freezing, and certification proceed
+under those conditions; the run is gated by an independent pre-run critic's GO/NO-GO.
+
+## Binding conditions (ratified 2026-06-20 — all must hold before any spend)
+
+- **(a) Within-pair length variance = 0** — recipient and theme word-lengths are
+  identical across the two phrasings (DOC vs PD) compared within a pair.
+- **(b) Length-matched given/new control arm of ≥12 pairs**, of which **≥6** are
+  cases where information structure predicts the *longer* constituent first — so the
+  *short-before-long* and *given-before-new* predictions come apart (opposite
+  orderings).
+- **(c)** Across the full set, recipient/theme length distributions do **not** differ
+  between given-condition and new-condition items (report it; exact matching or a
+  non-significant difference).
+- **(d) ≥30** controlled minimal-pair items for the main contrast, plus the control
+  arm (b), plus a **neutral both-new baseline**.
+- **(e) Analysis ordering is binding:** the corpus-licensed **within-model preference
+  shift** is the sole confirm/weak/falsify-bearing **primary** test; the
+  human-gradient correlation is **secondary** and may strengthen a confirm or
+  characterize a weak result but may never convert weak→confirm nor rescue a failed
+  primary test.
+- **(f) Falsify arm is live** — a flip with the length confound but not with
+  information structure (the control arm) is a falsification, recorded as such, with
+  no retuning; a pre-run-critic NO-GO defers the run, never relaxes the control.
+- **(g) Resource-promotion gate** — `languageR::dative` is mirrored + row-inspected
+  (3263×15, factor levels confirmed firsthand) + promoted `external-only`→`catalogued`
+  before the corpus-gradient secondary analysis may cite it; the predicted-probability
+  surface is computed from inspected data (or Bresnan et al.'s reported model), not
+  asserted.
+- **Validity guard:** the discourse context establishing givenness must be
+  load-bearing — the *same* two phrasings must flip preference *only* because the
+  context changed; report the neutral both-new baseline so a context-insensitive
+  shallow preference is detectable.
+- **Pre-run certification:** an independent pre-run critic certifies, against the
+  frozen stimuli, that **no length-only and no position-only reader beats chance** on
+  the information-structure contrast — GO/NO-GO before any spend.
 
 ## Question
 

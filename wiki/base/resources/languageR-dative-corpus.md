@@ -2,7 +2,7 @@
 type: resource
 id: languageR-dative-corpus
 title: Bresnan et al. (2007) dative-alternation corpus (languageR::dative)
-status: external-only
+status: catalogued
 url: https://cran.r-project.org/web/packages/languageR/
 data: https://cran.r-project.org/src/contrib/languageR_1.6.tar.gz
 docs: https://rdrr.io/cran/languageR/man/dative.html
@@ -106,11 +106,13 @@ What it **cannot** ground on its own:
   **synthetic minimal pairs** built to the corpus's factor structure rather than
   lifting corpus sentences verbatim; the corpus then anchors the *factor → outcome*
   relationship, not specific items.
-- **GPL data, recipe-not-corpus posture.** Like the other in-repo anchors, the
-  build session should mirror the package tarball to `experiments/data/` (gitignored),
-  inspect/checksum the `dative.rda` (requires R or a librdata reader), and commit
-  only derived tables. Reading the `.rda` is a build-time step (no R in the
-  cataloguing environment, 2026-06-20).
+- **GPL data, recipe-not-corpus posture.** The package tarball is mirrored to
+  `experiments/data/languageR/` (gitignored; tarball sha256
+  `37e3e283b7d8226a1a7ebb5cb8dde32421c516f2ed4983834950de3c3640f974`); `dative.rda`
+  was read with a librdata reader (`pyreadr`) — **no R needed** — and only derived
+  tables are committed (the inspection manifest + the fitted-coefficient gradient in
+  `experiments/runs/2026-06-20-dative-information-structure/corpus_inspection.json`).
+  Never the raw rows.
 
 ## Companion rating anchor (option, not yet verified)
 
@@ -124,16 +126,24 @@ paper PDF could not be text-extracted in the cataloguing environment, so no body
 quotes are recorded here — verbatim verification is deferred to whichever session
 adopts the rating anchor.)* If its per-item data proves fetchable and licensed, it
 is the more direct anchor for the conjecture's *graded-acceptability* clause; this
-is one arm of the open operationalization decision
-([`decisions/open/dative-anchor-and-indicator`](../../decisions/open/dative-anchor-and-indicator.md)).
+was one arm of the operationalization decision
+([`decisions/resolved/dative-anchor-and-indicator`](../../decisions/resolved/dative-anchor-and-indicator.md)),
+**ratified 2026-06-20 ADOPT MODIFIED: B&F 2010 is an opportunistic upgrade only, not
+a precondition** — the verified corpus production surface (this resource) is the
+adopted primary anchor.
 
 ## Pointer for next visit
 
-- Status `external-only`: documented and license-verified from the authoritative
-  CRAN package, tarball fetchability confirmed (HTTP 200, 2026-06-20), but the data
-  rows are **not yet mirrored or inspected firsthand**. The build session promotes
-  this to `catalogued` after mirroring + row inspection (3263 × 15 confirmed
-  firsthand, factor levels confirmed).
-- The instrument that will consume this anchor is governed by
-  [`decisions/open/dative-anchor-and-indicator`](../../decisions/open/dative-anchor-and-indicator.md)
-  — ratifiable, at the earliest, the session after the one that opened it.
+- Status `catalogued` (promoted 2026-06-20, session 50): the data were **mirrored and
+  inspected firsthand** — **3263 × 15 confirmed**, outcome `RealizationOfRecipient`
+  NP(DOC)=2414 / PP(PD)=849, and every factor level confirmed against the package
+  documentation (`AccessOfRec`/`AccessOfTheme` = accessible/given/new; `PronomOf*` =
+  nonpronominal/pronominal; etc.). A logistic fit on the inspected rows reproduces all
+  five canonical human directions (given/pronominal recipient → DOC; given/pronominal
+  theme → PD; longer theme → DOC by end-weight) at in-sample accuracy 0.887 — this is
+  the corpus production-probability gradient the probe's *secondary* analysis uses.
+- The instrument that consumes this anchor is governed by
+  [`decisions/resolved/dative-anchor-and-indicator`](../../decisions/resolved/dative-anchor-and-indicator.md)
+  — **ratified 2026-06-20 (ADOPT MODIFIED).** Its build-condition (g) makes this
+  resource's promotion `external-only`→`catalogued` (mirror + firsthand row
+  inspection) a **gate** on the probe's corpus-gradient *secondary* analysis.

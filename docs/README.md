@@ -31,11 +31,20 @@ are for the lead agent updating the site each session (`PROTOCOL.md §5b`; chart
   phase, study count, current focus, spending posture) and replace "The latest" with a short
   version of the new journal entry.
 
-**Session-stamp format (from session 44 onward).** Each new session entry carries the date
-followed by the JST clock time at which the site is built near the end of that session (no need
-to be minute-exact), and writes the session number as a numeral (`session 44`, not `forty-fourth
-session`). This applies **going forward only** — earlier entries keep their original spelled-out
-numbering and date-only stamps; do not revise them.
+**Session-stamp format (from session 44 onward) — mandatory, easy to forget.** Each new session
+entry carries the date followed by the JST clock time at which the site is built near the end of
+that session (no need to be minute-exact), and writes the session number as a numeral
+(`session 44`, not `forty-fourth session`). Get the stamp mechanically — don't guess the time:
+`TZ=Asia/Tokyo date "+%B %-d, %Y, %H:%M JST"`. This applies **going forward only** — earlier
+entries keep their original spelled-out numbering and date-only stamps; do not revise them.
+
+> ⚠ **The JST clock time is the part that gets dropped.** Sessions 44–47 included it; sessions
+> 48–49 reverted to a bare date and had to be flagged. Treat the `HH:MM JST` clock time as a
+> non-optional field of the stamp on both the journal entry and the home-page "Last updated"
+> line. The requirement is now also encoded in `PROTOCOL.md §5b` and `CLAUDE.md` rule 9 (the
+> files read every session); this note is the detailed version. **Gotcha:** the JST stamp date
+> can differ from the UTC budget day (JST = UTC+9), so e.g. `01:51 JST June 20` is the June-19
+> UTC budget day — stamp the site in JST, track spend in UTC.
 - `findings.html` — only when a finding changed: update the relevant section *and* the
   "current through" date line.
 - `plans.html` — keep "Queued next" honest: remove what got done, add what's now queued;

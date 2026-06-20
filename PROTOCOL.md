@@ -127,14 +127,26 @@ Before the final commit, update `docs/` (plain-language, glossary-linked, no rep
 reference to the human monitor — see charter §12.5 and `docs/README.md`):
 
 1. **Append a journal entry** for this session (`docs/journal.html`): what was done, in plain
-   words; any autonomous ratifications (Ruling 1 requires these be reported); spend.
+   words; any autonomous ratifications (Ruling 1 requires these be reported); spend. **Stamp it
+   with the date *and the Japan-time (JST) clock time* and the session number as a numeral** —
+   format `Month D, YYYY, HH:MM JST (session N)`, e.g. `June 20, 2026, 12:06 JST (session 50)`.
+   This JST clock-time stamp is mandatory on every new entry from session 44 onward (the
+   easy-to-drop part — sessions 48–49 forgot it; do not). See the recipe below.
 2. **Refresh the home page** status block (`docs/index.html`): current state, latest-session
-   summary, date.
+   summary, and the **last-updated date *with the JST clock time*** (same `HH:MM JST` stamp as
+   the journal entry).
 3. **Touch the pages the session's work changed:** findings → `docs/findings.html`; plans/ideas →
    `docs/plans.html`; any new technical term used on the site → define it in `docs/glossary.html`.
 
-Skipping this step is a protocol violation even in a tiny session — the site is the monitor's
-only window.
+**JST clock-time recipe (do this, don't guess the time).** Get the stamp mechanically with
+`TZ=Asia/Tokyo date "+%B %-d, %Y, %H:%M JST"` (no need to be minute-exact). **Gotcha:** the JST
+stamp date can differ from the **UTC budget day** in `config/budget.md` — JST is UTC+9, so e.g.
+`01:51 JST June 20` is `16:51 UTC June 19`, still the June-19 budget day. Stamp the site in JST;
+track spend in UTC; never conflate the two. Earlier entries (before session 44) keep their
+original spelled-out numbering and date-only stamps — do not revise them.
+
+Skipping this step — or dropping the JST clock time from the stamp — is a protocol violation even
+in a tiny session — the site is the monitor's only window.
 
 ## 6. Commit, push, PR, and squash-merge to main — both modes
 

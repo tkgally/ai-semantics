@@ -7,8 +7,7 @@ meaning-senses:
   - inferential
   - distributional
 status: proposed
-contingent-on:
-  - dative-anchor-and-indicator
+contingent-on: []
 created: 2026-05-28
 updated: 2026-06-20
 links:
@@ -18,21 +17,23 @@ links:
     target: resource/languageR-dative-corpus
 ---
 
-> **Design opened 2026-06-20.** The human anchor is now in-repo
-> ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md) —
+> **Operationalization RATIFIED 2026-06-20 (session 50, ADOPT MODIFIED).** The human anchor is
+> in-repo ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md) —
 > Bresnan et al. 2007, `languageR::dative`, 3263 corpus observations coded for the
-> information-structure factors below plus the NP/PP outcome), a design spec is
-> drafted ([`experiments/runs/2026-06-20-dative-information-structure/README.md`](../../../experiments/runs/2026-06-20-dative-information-structure/README.md)),
-> and the value-laden operationalization choices are surfaced in
-> [`decisions/open/dative-anchor-and-indicator`](../../decisions/open/dative-anchor-and-indicator.md)
-> (ratifiable, at the earliest, next session; no probe runs before then). Two
-> updates to the statement below: (1) the **surprisal / continuation-likelihood**
-> indicator the predictions name is **unavailable under pure autonomy** (no panel
-> prompt-logprobs — the AANN surprisal blocker), so the probe uses a **behavioral
-> graded forced-choice** indicator instead; (2) the **load-bearing control** is
-> dissociating *length* from *givenness* (given material is shorter in the corpus,
-> so a short-before-long preference would mimic information-structure sensitivity) —
-> see the design spec and decision.
+> information-structure factors below plus the NP/PP outcome), and the operationalization decision
+> ([`decisions/resolved/dative-anchor-and-indicator`](../../decisions/resolved/dative-anchor-and-indicator.md))
+> is now resolved: corpus production surface as the **primary** anchor (Bresnan & Ford 2010
+> ratings an opportunistic upgrade only); a **behavioral graded forced-choice** indicator
+> (surprisal / continuation-likelihood is **unavailable under pure autonomy** — no panel
+> prompt-logprobs, the AANN surprisal blocker); **synthetic minimal pairs** built to the corpus
+> factor structure; and the **load-bearing control** dissociating *length* from *givenness*
+> (given material is shorter in the corpus, so a short-before-long preference would mimic
+> information-structure sensitivity), now bound by numeric thresholds. The active build spec
+> ([`experiments/runs/2026-06-20-dative-information-structure/README.md`](../../../experiments/runs/2026-06-20-dative-information-structure/README.md))
+> carries the binding conditions. **Confirm is scored on the within-model preference *shift* in
+> the human direction (the corpus-licensed primary test); tracking the human production-probability
+> gradient is a secondary, strengthening measure** — see the resolved decision and the revised
+> confirm criterion below.
 
 # Conjecture: LLMs track the information-structure constraint on dative alternation
 
@@ -46,7 +47,7 @@ The DOC/PD choice is one of the most-studied form-meaning pairings in English. T
 
 ## Predictions
 
-*(Indicator updated 2026-06-20: the surprisal/continuation-likelihood wording below is superseded by a behavioral graded forced-choice indicator — no panel prompt-logprobs are available under pure autonomy. The predictions are otherwise unchanged. See the design-opened blockquote above and [`decisions/open/dative-anchor-and-indicator`](../../decisions/open/dative-anchor-and-indicator.md).)*
+*(Indicator updated 2026-06-20: the surprisal/continuation-likelihood wording below is superseded by a behavioral graded forced-choice indicator — no panel prompt-logprobs are available under pure autonomy. The predictions are otherwise unchanged. See the ratified blockquote above and [`decisions/resolved/dative-anchor-and-indicator`](../../decisions/resolved/dative-anchor-and-indicator.md).)*
 
 1. In a minimal-pair production-preference probe (a graded forced-choice between DOC and PD given a controlled discourse context), LLMs prefer DOC when the recipient is given/pronominal and the theme is new, and prefer PD when the theme is given/pronominal and the recipient is new.
 2. The effect is **graded**, not categorical: the model's preference strength should track the human signal (the corpus production-probability surface, or graded acceptability ratings if that anchor is adopted) on parallel items rather than flipping at a hard threshold.
@@ -54,22 +55,20 @@ The DOC/PD choice is one of the most-studied form-meaning pairings in English. T
 
 ## What would confirm / falsify
 
-- **Confirm:** the model's DOC/PD preference shifts in the human direction across information-structure conditions (length and animacy held constant) **and** tracks the human gradient — the corpus-model predicted production probability per factor configuration (Option A), or graded acceptability ratings (Option B, if adopted) — across at least 30 controlled minimal-pair items, in at least two of three panel models.
-- **Weak:** the preference shift exists but does not track the human gradient — the model has a surface preference but not graded information-structure sensitivity.
+- **Confirm (primary, corpus-licensed):** the model's DOC/PD preference **shifts in the human direction** across information-structure conditions (given/pronominal recipient → DOC; given/pronominal theme → PD), with length and animacy held constant, across at least 30 controlled minimal-pair items, in at least two of three panel models. *(Modification ratified 2026-06-20: confirm is scored on this within-model shift — the test the corpus production surface licenses. The original standalone "human acceptability scores/ratings" clause is the Option-B/C path only.)*
+- **Strengthens a confirm (secondary, anchor-dependent, non-decisive):** the model's per-condition preference also tracks the **human gradient** — the corpus-model predicted PP/NP production probability per factor configuration (Option A), or Bresnan & Ford 2010 graded acceptability ratings (Option B, if that anchor is verified and adopted). This secondary correlation may strengthen a confirm or characterize a weak result, but **cannot on its own convert a weak result to a confirm, nor rescue a failed primary test.**
+- **Weak:** the primary preference shift exists but does not track the human gradient — the model has a surface preference but not graded information-structure sensitivity.
 - **Falsify:** preference flips with shallow confounds (recipient/theme length, animacy of theme) but **not** with the information-structure manipulation when length and animacy are controlled (the length-matched given/new control arm).
 
-## Human anchor (pending)
+## Human anchor (resolved)
 
-Needs a sourced human-acceptability dataset for dative alternation by information-structure condition. Candidates:
-
-- Bresnan et al. (2007) "Predicting the dative alternation" corpus study + the follow-up rating data.
-- The MIT/Harvard psycholinguistic norming work that uses these stimuli.
-
-→ **Resolved into the in-repo anchor + the open operationalization decision (2026-06-20):**
-the corpus is catalogued as [`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md);
-the anchor-choice question (corpus production surface vs. Bresnan & Ford 2010
-ratings) plus the indicator and the length/givenness control are the three
-sub-questions of [`decisions/open/dative-anchor-and-indicator`](../../decisions/open/dative-anchor-and-indicator.md).
+→ **Resolved into the in-repo anchor + the ratified operationalization decision (2026-06-20):**
+the corpus is catalogued as [`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md)
+(Bresnan et al. 2007, `languageR::dative`); the anchor-choice question (corpus production surface
+— **adopted as primary** — vs. Bresnan & Ford 2010 ratings — an opportunistic upgrade only) plus
+the indicator and the length/givenness control were the three sub-questions of
+[`decisions/resolved/dative-anchor-and-indicator`](../../decisions/resolved/dative-anchor-and-indicator.md),
+ratified ADOPT MODIFIED.
 
 ## Notes / caveats
 

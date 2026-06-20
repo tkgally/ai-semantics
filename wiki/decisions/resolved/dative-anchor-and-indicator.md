@@ -1,13 +1,71 @@
 ---
 id: dative-anchor-and-indicator
 title: How to operationalize the dative-alternation information-structure probe — which human anchor, and which logprob-free behavioral indicator?
-status: open
+status: resolved
 opened: 2026-06-20
 opened-by: autonomous (session opening the dative empirical line)
+resolved: 2026-06-20
+resolved-by: autonomous (adversarial review)
+resolution: adopt-modified (Option A corpus anchor primary / Option (i) graded forced-choice / synthetic minimal pairs with the binding length↔givenness dissociation / human-anchored posture — with four tightening modifications and seven binding build-session conditions)
+anchor: human-anchored (languageR::dative corpus production surface; Bresnan & Ford 2010 ratings an opportunistic upgrade only)
 contingent-artifacts:
   - design/dative-information-structure-v1
   - conjecture/dative-alternation-information-structure
 ---
+
+> **Status: RESOLVED (2026-06-20, session 50, autonomous adversarial review — cross-session:
+> opened by session 49 on 2026-06-20, ratified by session 50; the session boundary held).
+> VERDICT: ADOPT MODIFIED.** The independent reviewer ratified the provisional default's core
+> architecture — **Q1 Option A** (the verified `languageR::dative` corpus production surface as
+> the primary anchor; Bresnan & Ford 2010 ratings an opportunistic *upgrade*, **not** a
+> precondition); **Q2 Option (i)** (graded forced-choice preference — the only logprob-free
+> indicator that holds length/lexis/animacy fixed); **Q3 synthetic minimal pairs** with the
+> binding length↔givenness dissociation; **human-anchored** result posture (NOT
+> internal-contrast-only) — with **four modifications** that tighten under-specified joints
+> (none of which makes a positive likelier; all close cheat-surfaces):
+>
+> 1. **Confirm-wording fix.** Under Option A, *confirm* = the model tracks the corpus
+>    **production-probability** gradient; the conjecture's standalone "human acceptability
+>    scores/ratings" clause is demoted to the Option-B/C path only. The build session edits
+>    [`conjecture/dative-alternation-information-structure`](../../findings/conjectures/dative-alternation-information-structure.md) accordingly (applied this session).
+> 2. **Primary/secondary ordering is binding.** The corpus-licensed **within-model preference
+>    shift** across the information-structure conditions (length+animacy held constant) is the
+>    sole confirm/weak/falsify-bearing test. The human-gradient correlation is **secondary** and
+>    may *strengthen* a confirm or characterize a weak result, but may **never** on its own
+>    convert weak→confirm nor rescue a failed primary test.
+> 3. **Numeric length-control thresholds** (see "Binding build-session conditions" below) — prose
+>    "matched length" is too loose to bind a build session; item selection here is the chief
+>    cheat-surface the page itself flags.
+> 4. **Forced-choice validity guard** (carried from the AANN logprob-blocker resolution): plain
+>    naturalness forced-choice can collapse into Tier-0 *form*-acceptability that is not
+>    meaning-tracking. The discourse context establishing givenness must be load-bearing (the
+>    same two phrasings flip preference *only* because the context changed), and the neutral
+>    both-new baseline must be reported so a context-insensitive shallow preference is detectable.
+>
+> **Binding build-session conditions** (all must hold before any spend):
+> (a) **Within-pair length variance = 0** — recipient and theme word-lengths identical across the
+> two phrasings compared. (b) A dedicated **length-matched given/new control arm of ≥12 pairs**,
+> of which **≥6** are cases where information structure predicts the *longer* constituent first
+> (so short-before-long and given-before-new make *opposite* predictions). (c) Across the full
+> set, recipient/theme length distributions do not differ between given- and new-condition items
+> (report it; exact matching or a non-significant difference). (d) **≥30** controlled
+> minimal-pair items for the main contrast, plus the control arm, plus the neutral both-new
+> baseline. (e) **Analysis ordering** as modification 2. (f) **Falsify arm live** — a flip with
+> the length confound but not with information structure is a falsification, recorded as such,
+> no retuning (a pre-run-critic NO-GO defers the run, never relaxes the control). (g) **Resource
+> promotion gate** — `languageR::dative` mirrored + row-inspected (3263×15, factor levels
+> confirmed firsthand) + promoted `external-only`→`catalogued` before the corpus-gradient
+> secondary analysis may cite it; the predicted-probability surface is computed from inspected
+> data (or Bresnan et al.'s reported model), not asserted. Plus: an independent pre-run critic
+> certifies, against the frozen stimuli, that **no length-only and no position-only reader beats
+> chance on the information-structure contrast** — GO/NO-GO.
+>
+> Anti-cheat: the reviewer confirmed the verdict is not motivated by wanting a particular result
+> (every modification makes a spurious positive harder and keeps the falsify arm live). Ratifying
+> fixes the **yardstick**, never the result; the probe must not be run, nor the indicator
+> re-tuned, in any session that ratifies. The contingent artifacts are promoted (see below):
+> the conjecture's confirm-wording fixed and `contingent-on` cleared; the design spec carries the
+> binding conditions and is now the active spec.
 
 # Decision: anchor + indicator for the dative-alternation probe
 
@@ -58,7 +116,7 @@ is contingent on this decision.
 The conjecture as written (2026-05-28) proposed a **surprisal / continuation-likelihood**
 indicator. That is **unavailable under pure autonomy**: OpenRouter exposes no
 prompt/echo-logprobs on the panel models — the exact blocker that retired the AANN
-surprisal instrument ([`decisions/resolved/aann-panel-logprob-blocker`](../resolved/aann-panel-logprob-blocker.md)).
+surprisal instrument ([`decisions/resolved/aann-panel-logprob-blocker`](aann-panel-logprob-blocker.md)).
 So a **behavioral** indicator is required, and which one is a choice:
 
 - **Option (i) — graded forced-choice preference** (provisional default). Given a
