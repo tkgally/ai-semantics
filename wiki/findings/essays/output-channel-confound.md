@@ -9,10 +9,12 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-06-20
 links:
   - rel: refines
     target: essay/undischargeable-negative
+  - rel: depends-on
+    target: result/scivetti-let-alone-working-surface-v1
   - rel: refines
     target: essay/witness-seeking-economics
   - rel: depends-on
@@ -334,6 +336,22 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   *other* serial-computation capability that likewise dissolves when the channel is widened would
   **strengthen** this essay from a one-instance generalization toward a robust confound. The essay would be
   corroborated; the scope conditions (serial + externalizable) would gain a second worked case.
+  **→ FIRED 2026-06-20 (session 58), on a different task and a *grammatical-meaning* capability.**
+  [`result/scivetti-let-alone-working-surface-v1`](../results/scivetti-let-alone-working-surface-v1.md) re-ran
+  the phrasal-scalar **let-alone** CxNLI items — near-chance for all three panel models under the session-57
+  **forced single-token** format — under a working surface (format-only, gemini reasoning-effort held
+  constant). **Two of three models dissolved the negative**: claude 0.542→0.792 and gemini 0.667→0.917 on the
+  *same items* (within-item sign test 7 gains / 1 loss, p = 0.035), reaching the ≈0.90 human baseline, with a
+  comparative-correlative ceiling control PRESERVED. So this is a second worked masking case, on a *different
+  instrument-family* (single-premise NLI) than the composition witness. **It also sharpens the scope claim**:
+  the body above scoped "single-premise NLI" *out* of the confound ("no masked working because there is no
+  working"). The let-alone result shows the scope line is not drawn at the **task** (NLI vs not) but at the
+  **computation** — a single-premise NLI item whose inference is itself **scalar/serial** (order two clauses
+  on a pragmatic scale, then compute the a-fortiori direction) *does* carry masked working, so the channel
+  masks it, exactly as the serial-computation scope condition predicts. The corrected scope reads: *the
+  confound bites a forced-format negative whenever the probed inference is serial and externalizable —
+  regardless of whether the task wears a "single-premise NLI" label.* The argument-structure NLI items
+  (already at ceiling in one token) remain outside it, as the body says, because their inference is not serial.
 - **(b) A serial-computation negative that survives a widened channel.** If a forced-format negative on a
   multi-step capability is re-run with a working surface and **persists** (the model still fails with room to
   externalize), then for *that* case the channel was not the confound, and the negative is a more robust
@@ -345,6 +363,18 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   put a bigger serial-depth demand on the wide channel and the channel *absorbed* it (all three RESPECTS-ORDER
   at depth three) — so the contrasting case is still **open**; deeper still (≥4 moves) or a qualitatively
   harder serial demand remains the place to look for it.
+  **A candidate (b) appeared 2026-06-20 but was confounded — and the confound is itself a sharpening.** On the
+  let-alone working-surface run ([`result/scivetti-let-alone-working-surface-v1`](../results/scivetti-let-alone-working-surface-v1.md)),
+  gpt-5.4-mini stayed near chance (0.375) *with the surface offered* — which looked like a (b) survival. But
+  the post-run verifier found gpt had largely **declined** the surface: 16 of 24 let-alone answers were bare
+  one-token `FINAL: N`, with **0 reasoning tokens** on every item. A channel that is **offered but not taken
+  up** is not a *widened* channel in the sense (b) requires — (b) needs the model to **externalize the
+  computation and still fail**, and gpt mostly did not externalize. So (b) is **not** fired, and the episode
+  adds a scope condition the essay had left implicit: **a working surface is an affordance, not a coercion;
+  "vary the channel" means vary the channel *actually used*, so a clean (b) test must *induce uptake* (forced
+  decomposition, few-shot demonstrations of working the inference) before a model's persistence under an
+  *offered* surface can be read as channel-controlled.** Uptake is a third state between channel-bounded
+  (cleared by widening) and channel-controlled (survives widening): channel-not-taken-up.
 - **(c) A wide-channel positive shown to be channel-scaffolded artifact.** If a capability that appears only
   *with* a working surface were shown to be an artifact of the scaffold doing the computation the model cannot
   do internally (e.g., the model copying a procedure verbatim without composing), the symmetric hazard this

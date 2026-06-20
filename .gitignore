@@ -53,3 +53,10 @@ experiments/data/languageR/
 # and derived per-construction accuracies. NEVER the raw NLI item text. Re-clonable;
 # upstream commit pinned in the run record + resource page.)
 experiments/data/scivetti/
+
+# Working-surface CoT for the let-alone format probe: the model's step-by-step
+# reasoning RESTATES the unlicensed Scivetti premise/hypothesis text, so the full CoT
+# is gitignored (recipe-not-corpus). Committed artifact is raw/{slot}-labels.json
+# (item_id + gold + parsed label + content sha256 + usage, NO text); the CoT under
+# raw/cot/ is for in-session parse/genuineness verification only and is re-derivable.
+experiments/runs/2026-06-20-scivetti-let-alone-working-surface/raw/cot/

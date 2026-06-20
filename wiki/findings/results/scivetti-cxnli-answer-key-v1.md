@@ -195,3 +195,17 @@ the Scivetti anchor are both ratified; this result uses only aggregate/answer-ke
 bearing). What is `proposed` is the project's reading. Promotion past `proposed`-level
 awaits Tom's review and ideally a replication or alternate-framing sweep of the
 `let-alone` failure (the discriminating signal).
+
+> **Follow-up (2026-06-20, session 58): the `let-alone` failure was largely an
+> output-channel artifact.** The alternate-framing sweep this Status line called for has
+> run — [`result/scivetti-let-alone-working-surface-v1`](scivetti-let-alone-working-surface-v1.md)
+> re-ran the SAME `let-alone` items under a **working surface** (format-only). **2 of 3
+> models LIFT to the human ≈0.90 baseline** on the same items (claude 0.542→0.792, gemini
+> 0.667→0.917; within-item sign test p = 0.035; ceiling control PRESERVED), so the
+> near-chance here was substantially a **forced single-token channel** effect masking the
+> construction's *scalar/serial* inference, **not** a clean scalar-phrasal competence
+> boundary. gpt-5.4-mini did not recover, but largely **declined** the offered surface
+> (bare one-token answers), so its persistence is channel non-uptake, not a demonstrated
+> channel-controlled failure. The "`let-alone` failure is the robust signal" framing above
+> still holds *relative to the forced channel*, but the cross-model **dissociation** it
+> implied is now read as channel-sensitivity, not a content-type difficulty.
