@@ -1,0 +1,157 @@
+{
+  "human_baseline": 0.9,
+  "instrument": "forced-decomposition",
+  "letalone_combined_n": 33,
+  "per_model": {
+    "claude-sonnet-4.6": {
+      "letalone_combined": {
+        "n": 33,
+        "correct": 24,
+        "acc": 0.7272727272727273,
+        "wilson_lo": 0.5578211674561319,
+        "wilson_hi": 0.849327273436772
+      },
+      "letalone_test": {
+        "n": 24,
+        "correct": 17,
+        "acc": 0.7083333333333334,
+        "wilson_lo": 0.508319363412903,
+        "wilson_hi": 0.8508553966583573
+      },
+      "letalone_train": {
+        "n": 9,
+        "correct": 7,
+        "acc": 0.7777777777777778,
+        "wilson_lo": 0.4525833436728054,
+        "wilson_hi": 0.9367762376877727
+      },
+      "control_cc": {
+        "n": 30,
+        "correct": 30,
+        "acc": 1.0,
+        "wilson_lo": 0.8864829086095221,
+        "wilson_hi": 1.0
+      },
+      "control_preserved": true,
+      "uptake_worked": 33,
+      "uptake_worked_frac": 1.0,
+      "uptake_induced": true,
+      "gpt_or_other_completion_median": 211,
+      "vs_baseline": {
+        "ci_hi_below_090": true,
+        "ci_covers_090": false
+      },
+      "internal_replication_vs_s60": {
+        "n_shared": 24,
+        "label_agreement": 0.875,
+        "s60_test_acc": 0.8333333333333334,
+        "this_test_acc": 0.7083333333333334
+      },
+      "verdict": "CONFIRMS-RESIDUAL",
+      "parse_modes": {
+        "tagged": 63
+      },
+      "n_missing": 0
+    },
+    "gpt-5.4-mini": {
+      "letalone_combined": {
+        "n": 33,
+        "correct": 21,
+        "acc": 0.6363636363636364,
+        "wilson_lo": 0.46615872621534094,
+        "wilson_hi": 0.7781303383204013
+      },
+      "letalone_test": {
+        "n": 24,
+        "correct": 14,
+        "acc": 0.5833333333333334,
+        "wilson_lo": 0.3883433764938864,
+        "wilson_hi": 0.7553265275346177
+      },
+      "letalone_train": {
+        "n": 9,
+        "correct": 7,
+        "acc": 0.7777777777777778,
+        "wilson_lo": 0.4525833436728054,
+        "wilson_hi": 0.9367762376877727
+      },
+      "control_cc": {
+        "n": 30,
+        "correct": 30,
+        "acc": 1.0,
+        "wilson_lo": 0.8864829086095221,
+        "wilson_hi": 1.0
+      },
+      "control_preserved": true,
+      "uptake_worked": 33,
+      "uptake_worked_frac": 1.0,
+      "uptake_induced": true,
+      "gpt_or_other_completion_median": 125,
+      "vs_baseline": {
+        "ci_hi_below_090": true,
+        "ci_covers_090": false
+      },
+      "internal_replication_vs_s60": {
+        "n_shared": 24,
+        "label_agreement": 0.875,
+        "s60_test_acc": 0.5833333333333334,
+        "this_test_acc": 0.5833333333333334
+      },
+      "verdict": "CONFIRMS-RESIDUAL",
+      "parse_modes": {
+        "tagged": 63
+      },
+      "n_missing": 0
+    },
+    "gemini-3.5-flash": {
+      "letalone_combined": {
+        "n": 33,
+        "correct": 30,
+        "acc": 0.9090909090909091,
+        "wilson_lo": 0.7642705646564897,
+        "wilson_hi": 0.968596628950737
+      },
+      "letalone_test": {
+        "n": 24,
+        "correct": 21,
+        "acc": 0.875,
+        "wilson_lo": 0.6899571185214243,
+        "wilson_hi": 0.9565574496068442
+      },
+      "letalone_train": {
+        "n": 9,
+        "correct": 9,
+        "acc": 1.0,
+        "wilson_lo": 0.7008472464490407,
+        "wilson_hi": 1.0
+      },
+      "control_cc": {
+        "n": 30,
+        "correct": 30,
+        "acc": 1.0,
+        "wilson_lo": 0.8864829086095221,
+        "wilson_hi": 1.0
+      },
+      "control_preserved": true,
+      "uptake_worked": 33,
+      "uptake_worked_frac": 1.0,
+      "uptake_induced": true,
+      "gpt_or_other_completion_median": 170,
+      "vs_baseline": {
+        "ci_hi_below_090": false,
+        "ci_covers_090": true
+      },
+      "internal_replication_vs_s60": {
+        "n_shared": 24,
+        "label_agreement": 1.0,
+        "s60_test_acc": 0.875,
+        "this_test_acc": 0.875
+      },
+      "verdict": "DISSOLVES",
+      "parse_modes": {
+        "tagged": 63
+      },
+      "n_missing": 0
+    }
+  }
+}
