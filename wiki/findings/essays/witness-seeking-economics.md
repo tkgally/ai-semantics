@@ -24,6 +24,8 @@ links:
   - rel: depends-on
     target: result/scivetti-let-alone-forced-decomposition-v1
   - rel: depends-on
+    target: result/scivetti-let-alone-powered-rerun-v1
+  - rel: depends-on
     target: essay/output-channel-confound
   - rel: depends-on
     target: concept/formal-vs-functional-competence
@@ -161,6 +163,27 @@ links:
 > in the single-case, on [`essay/output-channel-confound`](output-channel-confound.md)'s trigger (b) — "a
 > powered re-run … not 'more of the same'"; this deepening promotes it into the economics' general value
 > model, its proper home.)
+>
+> **Resolution (2026-06-20, session 62 — the partial witness's first *resolved* instance; logged per essay
+> discipline).** The powered re-run trigger (g) prescribed has now landed
+> ([`result/scivetti-let-alone-powered-rerun-v1`](../results/scivetti-let-alone-powered-rerun-v1.md)): the
+> same forced-decomposition axis, instrument byte-identical, the let-alone set enlarged to its human-anchored
+> **ceiling** (33 = 24 test + the 9 *disjoint* train items). The slot resolves **both** ways trigger (g)
+> anticipated, at once. (i) *As a capability witness, the easing is a clean **miss**:* gpt's accuracy stayed
+> **below** the ≈0.90 baseline (combined 0.636, CI hi 0.778 < 0.90), reproducing the session-60 *accuracy*
+> exactly (via offsetting label flips — gpt churns too, see (ii)) and extending to disjoint items — no presence is reached, the below-baseline residual is confirmed
+> (and is, read from the sibling essay, [`essay/output-channel-confound`](output-channel-confound.md) trigger
+> (b)'s cleanest *firing*: a channel-controlled residual). (ii) *And the self-extinguishing bound's "design,
+> not count, limits power" sub-clause is **realized**:* the run exposed ~12% temp-0 label stochasticity (a
+> baseline-matcher swung to 0.708 on the *identical* items), a per-run swing comparable to the residual gap —
+> so what now limits precision is **measurement noise, not item count**, and the funded next probe redirects
+> to a **repeated-run / multi-sample** design on a *new* (measurement) axis, **not** a third item-count
+> re-run. The exemption is therefore **spent** exactly as designed — it bought one adequately-aimed
+> resolution, then extinguished, the further re-run it forbids being "more items" (the ceiling is reached)
+> while permitting the orthogonal repeated-run axis. Closure ≠ suspension is untouched: the residual stays
+> undischargeable ("confirmed below-baseline in two runs" is not "demonstrated bound"), the search stays live
+> on the measurement axis. **No new empirical claim; the human-anchored leg is read at stated strength
+> (descriptive + contamination-caveated); no new human comparison is made.**
 
 ## The occasion
 
@@ -565,8 +588,8 @@ empty fourth box.
   changing kind — the **persist** case the section already treats, which subtracted the demonstration-gap
   sub-axis. The trigger stays **live** for any future on-signature easing whose signature shifts to a new
   failure mode.
-- **(g) A powered re-run resolving a partial witness.** The partial-witness section names one open case —
-  gpt's underpowered +0.21 let-alone lift under forced uptake
+- **(g) A powered re-run resolving a partial witness. — RESOLVED 2026-06-20 (session 62).** The
+  partial-witness section named one open case — gpt's underpowered +0.21 let-alone lift under forced uptake
   ([`result/scivetti-let-alone-forced-decomposition-v1`](../results/scivetti-let-alone-forced-decomposition-v1.md)).
   Its prescribed continuation is a **powered re-run of the same axis** (more let-alone items, or the disjoint
   train-split items the result page names). When that re-run lands, the partial-witness slot gains its first
@@ -577,6 +600,16 @@ empty fourth box.
   exemption's self-extinguishing bound — flagging that the design, not just the item count, limits power
   (e.g. too few discordant pairs are reachable on this construction), which would redirect the spend to a
   *different* axis rather than a third re-run.
+  **What landed** ([`result/scivetti-let-alone-powered-rerun-v1`](../results/scivetti-let-alone-powered-rerun-v1.md);
+  see the dated Resolution block at the head of this essay): **both predicted shapes at once.** As a
+  *capability* witness the easing is a **clean miss** — gpt stayed below baseline (0.636, CI hi 0.778 < 0.90),
+  reproducing session 60 exactly, so no presence is reached and the below-baseline residual is confirmed (the
+  sibling essay's trigger (b) reads the *same* outcome as its cleanest *firing*). **And** the re-run did the
+  thing the "partial again" branch foresaw without itself coming back partial: it surfaced ~12% temp-0 **label
+  stochasticity** as the binding limit, so **the design (measurement), not the item count, limits power** —
+  redirecting the next spend to a *repeated-run / multi-sample* axis, not a third item re-run (the item count
+  is at its human-anchored ceiling). The three-outcome model is corroborated and the self-extinguishing bound
+  is realized: the exemption bought **one** adequately-aimed resolution and is now **spent**.
 
 ## Honesty box
 
@@ -620,6 +653,17 @@ empty fourth box.
   narrow and self-extinguishing. The single-case statement of the principle pre-existed on
   [`essay/output-channel-confound`](output-channel-confound.md)'s trigger (b); promoting it into the value
   model is the new work. The closure ≠ suspension line is untouched: a partial witness keeps the search live.
+- The session-62 **resolution** of the partial-witness slot (trigger (g)) is likewise no new empirical claim;
+  it reads [`result/scivetti-let-alone-powered-rerun-v1`](../results/scivetti-let-alone-powered-rerun-v1.md)
+  at its stated strength. The numbers leaned on: the powered re-run (let-alone enlarged 24 → 33 with 9
+  *disjoint* train items, the human-anchored ceiling) left gpt's accuracy **0.636** (CI hi **0.778 < 0.90**),
+  reproducing session 60's 0.583 exactly on the shared 24, with uptake induced (33/33 worked) and the ceiling
+  control PRESERVED; and it exposed **~12% temp-0 label stochasticity** (a baseline-matcher read 0.708 on the
+  *identical* 24 via 3 adverse flips). The deepening's **original** contribution is to record that the slot's
+  *first resolved instance* lands as **a confirmed below-baseline residual (a capability-witness clean miss)
+  + a realized "design-not-count-limits-power" redirect** to a repeated-run axis — corroborating the
+  three-outcome model and showing the exemption *spent* as designed. The closure ≠ suspension line is
+  untouched (the residual stays undischargeable; the search stays live on the measurement axis).
 - **No new human comparison** is made or owed. The composition results read here are `internal-contrast-only`
   (their human leg unanchored in-repo); the let-alone result the partial-witness deepening adds **is**
   human-anchored ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md);

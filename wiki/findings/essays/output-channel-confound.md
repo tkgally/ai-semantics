@@ -17,6 +17,8 @@ links:
     target: result/scivetti-let-alone-working-surface-v1
   - rel: depends-on
     target: result/scivetti-let-alone-forced-decomposition-v1
+  - rel: depends-on
+    target: result/scivetti-let-alone-powered-rerun-v1
   - rel: refines
     target: essay/witness-seeking-economics
   - rel: depends-on
@@ -256,6 +258,17 @@ verdict is owed an uptake-inducing re-run, not recorded as a survival. Uptake be
 model declined; the discipline it forces — check that the widened channel was taken, model by model — applies
 whether or not a given panel happens to make it visible.
 
+*Forward note (2026-06-20, session 62).* The "still seeking" above (the genuine trigger-(b) contrast case) is
+now **found, magnitude-caveated**: the powered re-run
+([`result/scivetti-let-alone-powered-rerun-v1`](../results/scivetti-let-alone-powered-rerun-v1.md); trigger
+(b), below) enlarged the let-alone set to its human-anchored ceiling (33 items) and gpt's below-baseline
+residual **held** (combined 0.636, CI hi 0.778 < 0.90), reproducing the session-60 accuracy exactly and
+extending to disjoint items, with uptake induced (33/33 worked) and the control preserved — so gpt
+externalizes the inference and *still* falls short, the channel-**controlled** residual the contrast case
+needs. The same run, though, exposed ~12% temp-0 label stochasticity (a baseline-matcher swung to 0.708 on
+identical items), so the firing is *directional, magnitude-unpinned*, and the binding limit is now measurement
+noise rather than item count — the next move is a repeated-run design, not more items.
+
 ## A machine performance/competence gap
 
 The shape of this should be familiar to anyone who has thought about the classical **competence/performance**
@@ -454,6 +467,27 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   overturns the essay nor yet supplies the clean cuts-both-ways contrast; it converts gpt's let-alone from
   *channel-not-taken-up* (inconclusive) into a *partial channel effect with a candidate channel-controlled
   residual*, which is exactly the progression the uptake clause was added to enable.
+  **(b) is now FIRED — magnitude-caveated — by the powered re-run (2026-06-20, session 62).** The named
+  powered re-run landed: [`result/scivetti-let-alone-powered-rerun-v1`](../results/scivetti-let-alone-powered-rerun-v1.md)
+  held the forced-decomposition instrument **byte-identical** and enlarged the let-alone target to the
+  **human-annotated ceiling** (33 = the 24 test items + the 9 *disjoint* train-split items; the 1-example
+  train split ⊆ those 9, so no more human-anchored let-alone items exist to add). gpt's below-baseline
+  residual **held**: combined 0.636, Wilson CI hi **0.778 < 0.90**, with uptake induced (33/33 worked) and the
+  comp-correlative ceiling control PRESERVED — and, decisively for "survives," gpt's session-60 *accuracy*
+  reproduced **exactly** (0.583 → 0.583 on the identical 24) while the *fresh disjoint* items came in below
+  baseline too (7/9). So gpt externalizes the inference and **still falls short at the item ceiling, across
+  two runs and a disjoint set** — the clean cuts-both-ways contrast this trigger has sought since 2026-06-19:
+  a serial-ish negative the output-channel control *clears* (shows channel-**controlled**) rather than
+  dissolves. **The caveat that keeps it from being unconditional:** the same run exposed ~12% temp-0 label
+  stochasticity (claude — a baseline-matcher — read 0.708 on the *identical* 24 items via 3 adverse flips;
+  gpt churns labels too, its net effect cancelled this draw; only gemini was deterministic), a per-run swing
+  comparable to the residual gap. So (b) is **fired in direction** — a channel-controlled below-baseline
+  residual, robust to a claude-sized swing (gpt's upper plausible accuracy ~0.76 still < 0.90) — but the
+  residual's **magnitude** is not pinned, and the binding limit going forward is **measurement noise, not
+  item count**: the next move is a *repeated-run / multi-sample* design, not more items. The firing stays
+  **descriptive + contamination-caveated** (let-alone items are public; an answer-key match cannot distinguish
+  learned construction-meaning from memory) and never reads as "gpt cannot" (undischargeable-negative); what
+  fired is the *contrast-case shape* the control's diagnostic value needs, not a capability verdict.
 - **(c) A wide-channel positive shown to be channel-scaffolded artifact.** If a capability that appears only
   *with* a working surface were shown to be an artifact of the scaffold doing the computation the model cannot
   do internally (e.g., the model copying a procedure verbatim without composing), the symmetric hazard this
@@ -511,6 +545,15 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   undischargeable kind-2 verdict, and the output channel is added as a privileged (cheap, recurring) region of
   the open elicitation space the economics should sample early. The closure ≠ suspension line is untouched —
   the channel-widening **reopened-and-resolved-positive**, the opposite of a closure.
-- **No human comparison** is made or owed: the cited result is THIN / `internal-contrast-only`, and the human
-  leg of every cited contrast is unanchored in-repo. The confound is general to constrained-response capacity-
-  probing, but the essay applies it only to the project's own LLM probes.
+- **Human comparison, scoped narrowly (updated 2026-06-20, session 62).** The *composition* results cited
+  here are THIN / `internal-contrast-only` — their human leg is unanchored in-repo, so they license no human
+  comparison. The *let-alone* results, however, **are** human-anchored
+  ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md), the ≈0.90
+  native-speaker baseline, ratified 2026-05-29), so the trigger-(b) firing
+  ([`result/scivetti-let-alone-powered-rerun-v1`](../results/scivetti-let-alone-powered-rerun-v1.md)) does
+  rest partly on a human comparison. The leg the essay's *control argument* leans on is the **within-model**
+  channel/uptake contrast (offered → forced surface, model-internal); the **accuracy-vs-baseline** leg
+  (gpt's residual below 0.90) is anchored but **descriptive + contamination-caveated** (public items; an
+  answer-key match cannot distinguish learned construction-meaning from memory) and read at exactly that
+  strength — never as "gpt cannot." The confound itself is general to constrained-response capacity-probing,
+  but the essay applies it only to the project's own LLM probes.
