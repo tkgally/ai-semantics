@@ -8,7 +8,7 @@ meaning-senses:
   - functional-vs-formal
 status: open
 created: 2026-05-29
-updated: 2026-05-31
+updated: 2026-06-20
 links:
   - rel: depends-on
     target: result/conative-minimal-pair-divergence-v1
@@ -22,6 +22,10 @@ links:
     target: result/caused-motion-near-miss-v2c
   - rel: depends-on
     target: result/instrument-disagreement-reanalysis-v1
+  - rel: depends-on
+    target: result/scivetti-cxnli-answer-key-v1
+  - rel: depends-on
+    target: result/scivetti-let-alone-working-surface-v1
 ---
 
 # Open question: does constructional-inference competence depend on the elicitation instrument?
@@ -62,6 +66,33 @@ links:
 > Both are ways a single panel-level label (CONFIRM / PARTIAL) flattens real per-model heterogeneity; this
 > page's mechanism (on-which-instruments) and the essay's (how-much-on-one-instrument) are distinct but
 > share the moral.
+>
+> **Update (2026-06-20, session 59) — a *fourth* instrument-sensitivity mechanism: the output channel
+> (forced single token vs working surface), distinct from the FC-vs-NLI *input* axis this page has tracked.**
+> Sessions 57→58 add a datum the page's three prior mechanisms (gpt's FC-localized logical slip; the uniform
+> Gricean NLI-permissiveness effect; FC-exclusivity surfacing an effect NLI dilutes) do not cover, because it
+> lives at the *output* end of the instrument rather than in the NLI-vs-FC framing of the *input*. The
+> Scivetti answer-key probe ([`result/scivetti-cxnli-answer-key-v1`](../results/scivetti-cxnli-answer-key-v1.md))
+> found the phrasal-scalar **let-alone** construction at near-chance for all three models under a **forced
+> single-token** NLI channel (the prompt required a single digit and nothing else), while the eight argument-structure
+> constructions sat at/near the ≈0.90 human native-speaker baseline. The format-only follow-up
+> ([`result/scivetti-let-alone-working-surface-v1`](../results/scivetti-let-alone-working-surface-v1.md))
+> re-ran the *same* let-alone items under a **working surface** (step-by-step permitted, a `FINAL:` tag
+> parsed; everything else byte-identical, reasoning-effort held constant) and **two of three models lifted to
+> the human baseline** (claude 0.542→0.792, gemini 0.667→0.917; within-item sign test p = 0.035; a
+> comparative-correlative ceiling control preserved). So a Tier-4 inference that read as near-chance was
+> largely **channel-bounded**, not competence-absent — the elicitation dependence here is along the *output
+> channel*, the response-format dimension, not the FC-vs-NLI *input instrument* this page's first three
+> mechanisms concern. This is the same caution the page exists to register (a single-instrument result can
+> mis-state competence), now extended to the response-format dimension; the dedicated methodological treatment
+> — the confound, its scope condition, and the control it forces — lives in
+> [`essay/output-channel-confound`](../essays/output-channel-confound.md). One honesty note carried from that
+> result, parallel to this page's recurring gpt-5.4-mini story: the third model did **not** lift, but largely
+> **declined** the offered surface (16/24 bare one-token answers, 0 reasoning tokens), so its persistence is
+> *channel-not-taken-up*, not a demonstrated channel-controlled failure — the output-channel axis, like the
+> FC-vs-NLI axis, shows **model-graded** sensitivity (and again it is gpt-5.4-mini at the fragile end). The
+> page **stays `open`**: the output channel joins NLI-vs-FC as a dimension along which "constructional-inference
+> competence" can prove elicitation-dependent, and the standing methodological question is unchanged.
 
 ## The question
 
