@@ -124,8 +124,11 @@ paper PDF could not be text-extracted in the cataloguing environment, so no body
 quotes are recorded here — verbatim verification is deferred to whichever session
 adopts the rating anchor.)* If its per-item data proves fetchable and licensed, it
 is the more direct anchor for the conjecture's *graded-acceptability* clause; this
-is one arm of the open operationalization decision
-([`decisions/open/dative-anchor-and-indicator`](../../decisions/open/dative-anchor-and-indicator.md)).
+was one arm of the operationalization decision
+([`decisions/resolved/dative-anchor-and-indicator`](../../decisions/resolved/dative-anchor-and-indicator.md)),
+**ratified 2026-06-20 ADOPT MODIFIED: B&F 2010 is an opportunistic upgrade only, not
+a precondition** — the verified corpus production surface (this resource) is the
+adopted primary anchor.
 
 ## Pointer for next visit
 
@@ -134,6 +137,8 @@ is one arm of the open operationalization decision
   rows are **not yet mirrored or inspected firsthand**. The build session promotes
   this to `catalogued` after mirroring + row inspection (3263 × 15 confirmed
   firsthand, factor levels confirmed).
-- The instrument that will consume this anchor is governed by
-  [`decisions/open/dative-anchor-and-indicator`](../../decisions/open/dative-anchor-and-indicator.md)
-  — ratifiable, at the earliest, the session after the one that opened it.
+- The instrument that consumes this anchor is governed by
+  [`decisions/resolved/dative-anchor-and-indicator`](../../decisions/resolved/dative-anchor-and-indicator.md)
+  — **ratified 2026-06-20 (ADOPT MODIFIED).** Its build-condition (g) makes this
+  resource's promotion `external-only`→`catalogued` (mirror + firsthand row
+  inspection) a **gate** on the probe's corpus-gradient *secondary* analysis.
