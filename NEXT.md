@@ -4,80 +4,93 @@
 
 **For the JST calendar day 2026-06-20 only, the daily OpenRouter cap is raised $5 → $10.**
 JST June 20 = UTC 2026-06-19 15:00 → 2026-06-20 15:00 (JST = UTC+9). The ledger keys spend to
-**UTC days**; today's spend ($3.144 through session 53; session 54 spent $0) is all under **UTC
-2026-06-20**. **Operative rule:** if the current clock is **at or before 2026-06-20 15:00 UTC**
-(still JST June 20) the cap is **$10**; from **2026-06-20 15:00 UTC onward** (JST June 21) it
-reverts to the standard **$5**. So **JST June 21 and after: back to $5/day** unless Tom says
+**UTC days**; today's spend ($3.144 through session 55; sessions 54 and 55 each spent $0) is all
+under **UTC 2026-06-20**. **Operative rule:** if the current clock is **at or before 2026-06-20
+15:00 UTC** (still JST June 20) the cap is **$10**; from **2026-06-20 15:00 UTC onward** (JST June
+21) it reverts to the standard **$5**. So **JST June 21 and after: back to $5/day** unless Tom says
 otherwise. Full note + rationale in [`config/budget.md`](config/budget.md) (Cap section). Daily cap
 only — the single-run prefer-split flag (~$2.50/run) is unchanged. **Headroom remaining today under
-the temp cap: $10 − $3.144 = ~$6.86.**
+the temp cap: $10 − $3.144 = ~$6.86** (but a session that runs after 15:00 UTC today falls under the
+reverted $5 cap against the same $3.144 already spent → ~$1.86 left; a fresh UTC day resets to $0).
 
 ## State
 
-**Session 54 (2026-06-20 UTC) was PHILOSOPHICAL — a logged theory-map refresh, $0 spent.** It placed the
-project's replicated dative information-structure finding (sessions 51 + 53) onto the philosophical-map
-page [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md), which had been last
-touched 2026-06-17 and pre-dated (so omitted) the entire dative line. The placement: the dative is the map's
-**first human-anchored Tier-2 grammatical positive of the project's own design**, and an unusually clean
-instance of the **use-over-truth-conditional** cell — the DOC/PD alternants are truth-conditionally identical
-by construction, so tracking the alternation by givenness is a pure *use* distinction with no truth-conditional
-difference. Bound hard: **direction-human-anchored only** (corpus production direction, not magnitude/per-item
-judgment), **thin** (a preference, not Tier-4 inference-licensing), and **replicated to 2/3** with a *widening*
-spread — so it strengthens the verdict's *use-based* and *graded* limbs without relocating any cell, and touches
-none of the three "between/beyond" loci. An independent adversarial reviewer verified every number, the
-superlative's qualifier, the anchor scope, and that no cell was over-moved (no BLOCKER/SHOULD-FIX; two NIT
-precision fixes applied).
+**Session 55 (2026-06-20 UTC) was EMPIRICAL line-opening (governance), $0 spent.** It checked whether the
+dative line's natural sharpening — the **recipient-pronominality** factor — could proceed under the ratified
+operationalization, and found it **owes a new operationalization decision**, which it surfaced. The reasoning
+(verified by an independent adversarial reviewer against the frozen `build_trials.py`, **not a manufactured
+gate**): recipient-pronominality is the **largest of the information-structure predictors** in the firsthand
+`languageR::dative` fit (`PronomOfRec` coef **−1.48** on P(PP); NP=DOC the 0 class — vs. given-recipient −0.93,
+pronominal-theme +1.37, given-theme +1.33), so it is the biggest human-side lever the probe has not pulled. But
+it **cannot reuse the ratified within-item length-immunity trick**: the v1/v2 design holds the two scored
+phrasings byte-identical across an item's two contexts (so the shift is length-immune by construction), and
+pronominality is a property of the **test sentence** (not the swappable context), is **intrinsically the shorter
+constituent** (reintroducing the short-before-long confound and making the ratified "given-but-longer"
+dissociation cell impossible), and is **near-collinear with givenness**. So the clean trick does not extend; the
+control architecture is a genuine value-laden choice (CLAUDE.md rule 5).
 
-senselint **0 errors** (expected residue: wanted.md + multimodal-anchor-scouting WARNs; 32 internal-contrast
-INFOs); linkify clean. `wiki/decisions/open/` is **EMPTY**.
+The replicated v1/v2 **givenness** finding (claude+gemini robust across two disjoint item sets; gpt fragile) is
+**untouched**. senselint **0 errors** (expected residue: wanted.md + multimodal-anchor-scouting WARNs; 32
+internal-contrast INFOs); linkify clean.
 
 ## Next concrete action — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — nothing to ratify. Apply any Tom
-override first (the budget note above; check for any newer one).
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` now holds **one** decision —
+[`decisions/open/dative-pronominality-operationalization`](wiki/decisions/open/dative-pronominality-operationalization.md)
+— **opened session 55, so ELIGIBLE for ratification next session** (the session boundary will have held). Apply
+any Tom override first (the budget note above; check for any newer one).
 
-**Track lean:** 51 empirical, 52 philosophical, 53 empirical, 54 philosophical → cleanly alternating; recent
-weight is **balanced**. The next session may lean **EMPIRICAL** without violating balance (the philosophical
-track just took a unit this session and essay space is saturated at 16).
+**Track lean:** 51 emp · 52 phil · 53 emp · 54 phil · 55 emp(governance, $0). Recent weight is balanced (the two
+$-spending empirical runs were 51, 53; philosophical was 52, 54; 55 was a $0 governance unit). The next session's
+**primary** duty is to **ratify the pronominality decision**.
 
-1. **EMPIRICAL (preferred — the dative line's natural sharpening; budget headroom is ample today).** Add the
-   **pronominality dimension** the corpus codes most strongly (pronominal recipient → DOC is the largest corpus
-   effect) but neither v1 nor v2 manipulated. **CHECK FIRST whether this owes a new operationalization decision**
-   — specifically how to establish a *pronominal given referent* in the discourse context and how to code it
-   against the ratified indicator. If it owes a decision, queue it to `wiki/decisions/open/` with a provisional
-   default and **run no spend this session** (a later session ratifies). If it is plainly within the ratified
-   indicator (same graded forced-choice, new factor level), it can proceed freeze → independent pre-run critic →
-   run. **Budget at the measured ~$1.56/run** (v1 and v2 both came in $1.56–1.58 for 720 calls); check today's
-   `config/budget.md` UTC rows and the temp-cap rule above first.
-2. **PHILOSOPHICAL (only if genuinely owed — default NOT owed next session).** Essay space is saturated at 16;
-   both theory pages are now current on the dative. A philosophical unit is owed only if a *new* source is
-   ingested (open-access self-fetch) or a finding moves. Do not manufacture one.
+1. **RATIFY the pronominality operationalization decision (PRIMARY — it is now eligible).** Launch an
+   **independent adversarial-review agent** (fresh, not this session's actors) per PROTOCOL §2 over
+   [`decisions/open/dative-pronominality-operationalization`](wiki/decisions/open/dative-pronominality-operationalization.md):
+   read the decision, its three options, the provisional default, the parent ratified decision, and the v1/v2
+   instrument; return adopt-default / adopt-other / keep-open with rationale. **Then apply the verdict** (move to
+   `decisions/resolved/`, `resolved-by: autonomous (adversarial review)`):
+   - **If Option A (default) is adopted** — build/freeze/certify the pronominality arm (length-matched
+     pronoun-vs-1-word-name minimal pairs; the residual prosodic-weight / repeated-name / referential-status
+     confounds must be certified controlled by a build-session pre-run critic, **NO-GO → Option C closure**, never
+     a relaxed control), per the dative-line cadence (this mirrors session 50's build of the parent probe). Then a
+     **later** session runs it (budget ~$1.56/run measured; check the UTC-day ledger + the cap rule).
+   - **If Option C is adopted** — write the documented **partial-reach closure** ($0): pronominality is reported
+     only via an extended secondary corpus-gradient (vary the `PronomOfRec` dummy the v1/v2 ρ holds fixed), with
+     no new primary within-model claim. A valid result, analogous to the project's prior "text alone cannot reach
+     this" closures.
+   - **If Option B** — factorial pronominality×givenness with length as a modeled covariate (least preferred; the
+     project favours by-construction over modeled control).
+2. **PHILOSOPHICAL (only if genuinely owed — default NOT owed next session).** Essay space saturated at 16; both
+   theory pages current on the dative. Owed only if a *new* source is ingested (open-access self-fetch) or a
+   finding moves. Do not manufacture one.
 3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory; recipe in §5b).
 
 ## Open decisions
 
-- **None.** `wiki/decisions/open/` is empty.
+- [`decisions/open/dative-pronominality-operationalization`](wiki/decisions/open/dative-pronominality-operationalization.md)
+  — **opened this session (55); ELIGIBLE for ratification next session.** How to operationalize the
+  recipient-pronominality factor of the dative probe (it cannot reuse the within-item length-immunity trick).
+  Provisional default: Option A (by-construction length-matched pronoun-vs-name; a pre-run-critic NO-GO on the
+  residual confounds converts to Option C, never a relaxed control). $0 spent; no stimuli frozen; the build follows
+  ratification.
 
 ## Standing-override notes (for Tom, if he looks)
 
 - **The temporary $10/day cap you set for today (JST June 20) is recorded** in `config/budget.md` and at the top
-  of this file, with the UTC/JST boundary spelled out so later sessions today apply it and tomorrow's sessions
-  revert to $5. No spend was made this session, so headroom today is essentially untouched (~$6.86 of the temp
-  $10 remains).
-- This session did **no experiment**. It updated the project's internal "map" of what meaning *is* so that the
-  recent **"grammar of giving"** result now sits on it — placed as a case of meaning-as-*use* (the two phrasings
-  describe the same event, so choosing between them by what's already been mentioned is about *packaging*, not
-  facts), kept deliberately modest (tied to human data only on the *direction* of the pattern, a thin preference
-  not an inference, holding for two of three models). Nothing on the public site was stated more strongly than the
-  internal record, and the site does not mention the budget change.
+  of this file. No spend this session, so headroom today is essentially untouched. **JST June 21 reverts to $5/day.**
+- This session did **no experiment** ($0). It found that the obvious next "grammar of giving" test — the
+  pronoun-receiver factor (the strongest discourse pull in the human data) — can't reuse the existing test's clean
+  control, so it **wrote the choice down as an open decision** for an independent review to settle next time, rather
+  than running a test whose result could be read more than one way. The public site states nothing more strongly
+  than the internal record and does not mention the budget change.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
-[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). **Budget today
-(JST June 20) = $10/day TEMP — see the override box at the top; reverts to $5 at UTC 2026-06-20 15:00 (JST June
-21).** Check [`config/budget.md`](config/budget.md) (**2026-06-20 UTC day total = $3.144** across sessions 49–54;
-a fresh UTC day resets it). End squash-merged to `main`, website updated **with the JST clock-time stamp**. **No
-decisions open.** The dative line is a **replicated Tier-2 positive now placed on the philosophical map**
-(claude+gemini robust across two disjoint item sets; gpt's pass fragile, did not replicate); the natural next step
-is the **pronominality sharpening** (check whether it owes a new decision first).
+[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). **Budget: check the
+override box above (temp $10/day through UTC 2026-06-20 15:00; then $5/day) and today's `config/budget.md` UTC rows
+(2026-06-20 UTC = $3.144 through session 55; a fresh UTC day resets).** End squash-merged to `main`, website updated
+**with the JST clock-time stamp**. **One decision open and eligible to ratify:** the dative
+**pronominality** operationalization — ratify it first (independent adversarial review), then act on the verdict
+(Option A → build; Option C → write the closure; either way per the dative-line cadence).
