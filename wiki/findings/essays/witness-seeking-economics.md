@@ -114,6 +114,27 @@ links:
 > last. It preserves the closure ≠ suspension line (the channel-widening **reopened-and-resolved-positive**)
 > and the "ease the implicated axis" rule (it names the under-weighted axis), and bounds the confound to
 > capabilities that are **serial and externalizable** (single-token tasks are untouched).
+>
+> **Update (2026-06-20 — a suspension where the *probe*, not the model, hit the wall; logged per this
+> essay's reporting discipline).** The cross-family composition probe (a heterogeneous spatial+attribute
+> operation pair, the different-*kind* step the depth suspension pointed to) was **built and suspended
+> before any spend**
+> ([`result/relational-order-composition-three-move`](../results/relational-order-composition-three-move.md)
+> point (i); run [README](../../../experiments/runs/2026-06-20-relational-order-composition-cross-family/README.md)).
+> It sharpens the essay's **cost term** in a way the depth discussion only half-anticipated. The cost of
+> a witness-seeking probe is not only the API spend; it includes the **shortcut-proofing cost** — the
+> design work to certify that *no* non-composing reader can clear the bar — and this run shows that cost
+> grows not just with composition *depth* (the competing-reader family the depth note tracked) but with
+> **operation heterogeneity**: a single-bit answer over two near-orthogonal operations proved unusually
+> leak-prone (the independent pre-run gate found **five** distinct shortcut classes — object-anchoring,
+> a geometry×cell confound, and three round-magnitude leaks — each fixed, with a residual content-
+> conditional overfitting gap remaining). With the model-side prior already low (the working-surface
+> composition capacity is panel-concordant on every axis tested, no strain anywhere), the rising
+> build-cost tipped the allocation to **suspend** — a spending decision, **never** a closure, asserting
+> nothing about the models, and reopenable by a cleaner (e.g. non-binary-answer) design. Two disciplines
+> are preserved exactly: the gate **was not weakened to get a GO** (the project declined to spend rather
+> than relax the 0.50 bar — the relational-line GO-discipline), and the suspension is filed as a
+> **witness-search suspension**, not a kind-4 "the models can't."
 
 ## The occasion
 

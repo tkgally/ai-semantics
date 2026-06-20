@@ -1,8 +1,16 @@
+> **OUTCOME: BUILT, NOT RUN — suspended before any spend (2026-06-20).** After FIVE independent
+> pre-run-critic NO-GOs (each a real, distinct shortcut leak, all fixed — see `README.md`), the
+> instrument is clean against every generalizable/causal non-composing reader, but a residual
+> content-conditional overfitting gap remains, and — decisively — the marginal value (an expected
+> ceiling; the capacity is panel-concordant on every axis tested) does not justify the demonstrated
+> build cost. This is an `essay/witness-seeking-economics` SUSPENSION (a spending decision, not a
+> closure; says nothing about the models), parallel to the depth-4 suspension. $0 spent.
+
 # PREREG — CROSS-FAMILY (heterogeneous-operation) order-sensitive composition, POSITION-ANCHORED + MATCHED-PAIR (Option-C generality axis)
 
 **Run:** `2026-06-20-relational-order-composition-cross-family`
 **Frozen stimuli:** `stimuli.json`
-**rstrip-sha256 = `86f80180181689d870d7e2712eb8c86c4dedc8ddeb4b140886582fe88245ad16`**
+**rstrip-sha256 = `d33aa8e825056edf84086722f77a976b1433de5f712b5e6eceb5aab6fa0a03f7`**
 (the `probe.py full` gate refuses to run unless this exact sha is recorded here)
 
 > **Status at freeze: design complete, balance + fixtures certified, awaiting the FINAL independent

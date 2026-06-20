@@ -51,18 +51,19 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "stimuli.json")
 
 
-def _geometries():
-    """All 16 visible geometries: 4 swap pairs x 4 (readout spot s, recolor target m) on the swap
-    spots. Perfectly balances the swap pair, the readout spot s (each spot 4x), and readout_type
-    (8 SAME / 8 DIFF)."""
-    geos = []
-    for (a, b) in C.GEOMS:
-        for (s, m) in [(a, a), (b, b), (a, b), (b, a)]:
-            geos.append((a, b, s, m))
-    return geos
-
-
-GEOMETRIES = _geometries()
+# FOUR geometries (a, b, s, m), one per swap pair, chosen so the readout spot s is uniform over the
+# 4 spots and readout_type is balanced (2 SAME where s==m, 2 DIFF where s!=m). Using only 4 geometries
+# is deliberate: each geometry is paired with ALL 12 round pairs (build() below), so that CONDITIONING
+# on the (always-visible) geometry gives the SAME overlapping round distribution as the marginal --
+# which collapses the geometry x single-round-line reader (the freeze-#5 killer) back to chance. With
+# more geometries than round-pair slots, geometry would correlate with which round pairs appear and a
+# geometry-conditional round reader would leak.
+GEOMETRIES = [
+    (0, 1, 0, 0),   # SAME, s=0, recolor the DAX spot
+    (1, 2, 1, 2),   # DIFF, s=1, recolor the other swap spot
+    (2, 3, 2, 2),   # SAME, s=2
+    (3, 0, 3, 0),   # DIFF, s=3
+]
 
 
 def _assign_colors(o, s, a, b, cr, coth):
@@ -111,31 +112,41 @@ def _make_record(rid, query, geo, cr, coth, stamp_first, rounds, print_swap_firs
 
 def build():
     records, rid = [], 0
-    np = len(C.ROUND_PAIRS)   # 12 round pairs
-    # COMP: 48 units (16 geometries x 3) -> each unit emits the MATCHED PAIR (both orders) = 96
-    # records. Round pair = u % 12 (each pair used 4x, decorrelated from the 16-geometry cycle);
-    # print order balanced 2:2 within each pair's 4 units; colors make the answer uniform over 6.
-    for u in range(48):
-        geo = GEOMETRIES[u % len(GEOMETRIES)]
-        cr = C.COLORS[u % C.NUM_COLORS]
-        coth = C.COLORS[(u + 3) % C.NUM_COLORS]
-        rounds = C.ROUND_PAIRS[u % np]
-        print_swap_first = ((u // np) % 2 == 0)              # 2:2 within each pair's 4 occurrences
-        for stamp_first in ("SWAP", "RECOLOR"):              # the matched pair
-            records.append(_make_record(rid, "COMP", geo, cr, coth, stamp_first, rounds,
-                                        print_swap_first))
-            rid += 1
-    # DIRECT: 16 geometries x both orders = 32 records (order is stated, so round magnitude is moot).
-    for u in range(16):
-        geo = GEOMETRIES[u]
-        cr = C.COLORS[u % C.NUM_COLORS]
-        coth = C.COLORS[(u + 3) % C.NUM_COLORS]
-        rounds = C.ROUND_PAIRS[(u + 4) % np]
-        print_swap_first = (u % 2 == 0)
-        for stamp_first in ("SWAP", "RECOLOR"):
-            records.append(_make_record(rid, "DIRECT", geo, cr, coth, stamp_first, rounds,
-                                        print_swap_first))
-            rid += 1
+    npairs = len(C.ROUND_PAIRS)   # 12 round pairs
+    ng = len(GEOMETRIES)          # 4 geometries
+    # COMP: 4 geometries x 12 round pairs = 48 units; each unit emits the MATCHED PAIR (both orders)
+    # = 96 records. Every geometry is crossed with EVERY round pair exactly once, so conditioning on
+    # the visible geometry leaves the full overlapping round distribution (defeats the geometry x
+    # single-round-line reader). Colors make the answer uniform over the 6 colors; print order
+    # balanced 6:6 within each geometry.
+    u = 0
+    for gi in range(ng):
+        for pi in range(npairs):
+            geo = GEOMETRIES[gi]
+            cr = C.COLORS[(pi + gi) % C.NUM_COLORS]          # color decorrelated from the round pair
+            coth = C.COLORS[(pi + gi + 3) % C.NUM_COLORS]
+            rounds = C.ROUND_PAIRS[pi]
+            print_swap_first = True                          # constant print order (SWAP
+            #   listed first): zero correlation with stamp order; nothing to condition a round reader on
+            for stamp_first in ("SWAP", "RECOLOR"):          # the matched pair
+                records.append(_make_record(rid, "COMP", geo, cr, coth, stamp_first, rounds,
+                                            print_swap_first))
+                rid += 1
+            u += 1
+    # DIRECT: 4 geometries x 4 round pairs x both orders = 32 records (order is stated, so round
+    # magnitude is moot); enough for the on-demand gate.
+    for gi in range(ng):
+        for j in range(4):
+            geo = GEOMETRIES[gi]
+            cr = C.COLORS[u % C.NUM_COLORS]
+            coth = C.COLORS[(u + 3) % C.NUM_COLORS]
+            rounds = C.ROUND_PAIRS[(gi * 3 + j) % npairs]
+            print_swap_first = True
+            for stamp_first in ("SWAP", "RECOLOR"):
+                records.append(_make_record(rid, "DIRECT", geo, cr, coth, stamp_first, rounds,
+                                            print_swap_first))
+                rid += 1
+            u += 1
     return records
 
 
@@ -194,14 +205,18 @@ def _round_on_print_pos(r, pos):
     return _round_on_op(r, op)
 
 
-def _best_single_round_reader(rs, value_fn):
-    """The strongest reader keyed on ONE op-line's absolute round value: group by that value and
-    predict the majority stamp_first per value (optimal single-feature predictor). Because matched
-    pairs make the answer determined by stamp_first, this reader's ANSWER accuracy equals its
-    stamp_first-prediction accuracy. Returns (k_correct, n)."""
+def _best_single_round_reader(rs, value_fn, cond_fn=None):
+    """The strongest reader keyed on ONE op-line's absolute round value (optionally CONDITIONED on a
+    visible feature `cond_fn`, e.g. the geometry): group by (cond, value) and predict the majority
+    stamp_first per group (optimal predictor). Because matched pairs make the answer determined by
+    stamp_first, this reader's ANSWER accuracy equals its stamp_first-prediction accuracy. A reader
+    that conditions on geometry + ONE round value still does NOT compare the two rounds, so it must
+    cap at 0.50 -- the freeze-#5 leak was exactly this geometry-conditional version. Returns
+    (k_correct, n)."""
     groups = defaultdict(Counter)
     for r in rs:
-        groups[value_fn(r)][r["stamp_first"]] += 1
+        key = (cond_fn(r) if cond_fn else None, value_fn(r))
+        groups[key][r["stamp_first"]] += 1
     k = sum(max(c.values()) for c in groups.values())
     return k, len(rs)
 
@@ -242,8 +257,10 @@ def assert_balance(records):
         for key in ("cell_label", "stamp_first", "readout_type", "s", "a"):
             c = Counter(r[key] for r in rs)
             assert len(set(c.values())) == 1, f"{subset}: {key} not balanced {dict(c)}"
-        c = Counter(tuple(r["display_order"]) for r in rs)
-        assert len(c) == 2 and len(set(c.values())) == 1, f"{subset}: print order not balanced {dict(c)}"
+        # print order is CONSTANT (SWAP listed first): zero correlation with stamp order, and nothing
+        # to condition a single-round-line reader on. A print-order reader is still capped via the
+        # brute-forced `print-order@s` reader below.
+        assert len(set(tuple(r["display_order"]) for r in rs)) == 1, f"{subset}: print order not constant"
         # MATCHED-PAIR + geometry-oracle: the strongest visible-geometry reader caps at 0.50
         oracle = _geometry_oracle_rate(rs)
         assert oracle <= C.PRINT_CEILING + EPS, \
@@ -252,15 +269,32 @@ def assert_balance(records):
         # round-magnitude shortcut). The order is determined only on the COMP arm (DIRECT states it).
         round_lb_worst = 0.0
         if subset == "comp":
-            for tag, fn in [("SWAP-line", lambda r: _round_on_op(r, "SWAP")),
-                            ("RECOLOR-line", lambda r: _round_on_op(r, "RECOLOR")),
-                            ("print-first-line", lambda r: _round_on_print_pos(r, 0)),
-                            ("print-second-line", lambda r: _round_on_print_pos(r, 1))]:
-                k, nn = _best_single_round_reader(rs, fn)
-                lb = _wilson_lb(k, nn)
-                round_lb_worst = max(round_lb_worst, lb)
-                assert lb <= C.PRINT_CEILING + EPS, \
-                    f"comp: single-round-line reader '{tag}' rate={k/nn:.4f} Wilson-LB={lb:.4f} > 0.50"
+            line_fns = [("SWAP-line", lambda r: _round_on_op(r, "SWAP")),
+                        ("RECOLOR-line", lambda r: _round_on_op(r, "RECOLOR")),
+                        ("print-first-line", lambda r: _round_on_print_pos(r, 0)),
+                        ("print-second-line", lambda r: _round_on_print_pos(r, 1))]
+            # marginal AND conditional on the GENERALIZABLE / STRUCTURAL features a model could key on
+            # per-prompt with a CONSISTENT (causal) relationship to the order: the round magnitude
+            # itself, and the salient geometry / readout_type (each crossed with ALL round pairs, so
+            # geometry is independent of the pair). These are the real shortcuts. NOTE (documented
+            # residual, NOT certified): conditioning on per-prompt CONTENT (the exact recolor color)
+            # leaves a small in-sample correlation (best (recolor_color, swap-round) reader ~0.656,
+            # Wilson-LB ~0.557) -- an OVERFITTING artifact of the 96-record frozen set, not a strategy
+            # a model could apply to a fresh prompt (the recolor color is causally irrelevant to the
+            # order). Fully erasing even that is combinatorially hard in a small frozen set; this run
+            # is SUSPENDED before any spend (see README / the witness-seeking-economics suspension),
+            # so the gap is moot, but it is recorded honestly here rather than hidden.
+            cond_fns = [("marginal", None),
+                        ("|geometry", lambda r: (r["a"], r["b"], r["s"], r["m"])),
+                        ("|readout_type", lambda r: r["readout_type"])]
+            for ltag, lfn in line_fns:
+                for ctag, cfn in cond_fns:
+                    k, nn = _best_single_round_reader(rs, lfn, cfn)
+                    lb = _wilson_lb(k, nn)
+                    round_lb_worst = max(round_lb_worst, lb)
+                    assert lb <= C.PRINT_CEILING + EPS, \
+                        f"comp: single-round-line reader '{ltag}{ctag}' rate={k/nn:.4f} " \
+                        f"Wilson-LB={lb:.4f} > 0.50 (round magnitude leaks the order)"
         worst, worst_name = 0.0, None
         if subset == "comp":
             for name, fn in _noncomposing_readers().items():
@@ -274,7 +308,7 @@ def assert_balance(records):
             for c0 in C.COLORS:
                 assert abs(_rate(rs, lambda r, c=c0: c) - C.POS_CHANCE) < EPS, f"comp: const-{c0} != 1/6"
         print(f"  [{subset}] geometry OK: {n} records; composer=1.000; "
-              f"cells/stamp_first/readout_type/readout-spot/print-order balanced; "
+              f"cells/stamp_first/readout_type/readout-spot balanced; print order constant; "
               f"geometry-oracle = {oracle:.4f}; "
               + (f"worst single-round-line reader Wilson-LB = {round_lb_worst:.4f} (<= {C.PRINT_CEILING}); "
                  f"worst brute-forced non-composing reader = '{worst_name}' at {worst:.4f}; "

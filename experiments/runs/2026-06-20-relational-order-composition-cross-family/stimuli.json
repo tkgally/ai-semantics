@@ -147,7 +147,7 @@
     {
       "a": 0,
       "b": 1,
-      "block": "COMP-SS-s1m1-01",
+      "block": "COMP-SS-s0m0-01",
       "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
@@ -160,19 +160,19 @@
           "round": 2
         },
         {
-          "desc": "a RECOLOR of the token on spot 2 to blue",
+          "desc": "a RECOLOR of the token on spot 1 to blue",
           "op": "RECOLOR",
           "round": 3
         }
       ],
       "init_colors": [
-        "purple",
         "red",
+        "purple",
         "green",
         "yellow"
       ],
-      "m": 1,
-      "o": 0,
+      "m": 0,
+      "o": 1,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "SAME",
@@ -183,7 +183,7 @@
         2,
         3
       ],
-      "s": 1,
+      "s": 0,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -195,7 +195,7 @@
     {
       "a": 0,
       "b": 1,
-      "block": "COMP-SR-s1m1-01",
+      "block": "COMP-SR-s0m0-01",
       "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
@@ -208,19 +208,19 @@
           "round": 3
         },
         {
-          "desc": "a RECOLOR of the token on spot 2 to blue",
+          "desc": "a RECOLOR of the token on spot 1 to blue",
           "op": "RECOLOR",
           "round": 2
         }
       ],
       "init_colors": [
-        "purple",
         "red",
+        "purple",
         "green",
         "yellow"
       ],
-      "m": 1,
-      "o": 0,
+      "m": 0,
+      "o": 1,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "SAME",
@@ -231,7 +231,7 @@
         2,
         3
       ],
-      "s": 1,
+      "s": 0,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -243,8 +243,8 @@
     {
       "a": 0,
       "b": 1,
-      "block": "COMP-DS-s0m1-01",
-      "cell_label": "DIFF@S",
+      "block": "COMP-SS-s0m0-01",
+      "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
         "RECOLOR"
@@ -256,7 +256,7 @@
           "round": 3
         },
         {
-          "desc": "a RECOLOR of the token on spot 2 to green",
+          "desc": "a RECOLOR of the token on spot 1 to green",
           "op": "RECOLOR",
           "round": 4
         }
@@ -267,13 +267,13 @@
         "blue",
         "yellow"
       ],
-      "m": 1,
+      "m": 0,
       "o": 1,
       "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "DIFF",
+      "readout_type": "SAME",
       "recolor_color": "green",
-      "rev_color": "green",
+      "rev_color": "orange",
       "rid": 4,
       "rounds": [
         3,
@@ -286,13 +286,13 @@
         "RECOLOR"
       ],
       "subset": "comp",
-      "target_color": "orange"
+      "target_color": "green"
     },
     {
       "a": 0,
       "b": 1,
-      "block": "COMP-DR-s0m1-01",
-      "cell_label": "DIFF@R",
+      "block": "COMP-SR-s0m0-01",
+      "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
         "RECOLOR"
@@ -304,7 +304,7 @@
           "round": 4
         },
         {
-          "desc": "a RECOLOR of the token on spot 2 to green",
+          "desc": "a RECOLOR of the token on spot 1 to green",
           "op": "RECOLOR",
           "round": 3
         }
@@ -315,13 +315,13 @@
         "blue",
         "yellow"
       ],
-      "m": 1,
+      "m": 0,
       "o": 1,
       "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "DIFF",
+      "readout_type": "SAME",
       "recolor_color": "green",
-      "rev_color": "orange",
+      "rev_color": "green",
       "rid": 5,
       "rounds": [
         3,
@@ -334,108 +334,12 @@
         "SWAP"
       ],
       "subset": "comp",
-      "target_color": "green"
+      "target_color": "orange"
     },
     {
       "a": 0,
       "b": 1,
-      "block": "COMP-DS-s1m0-01",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 4
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 1 to yellow",
-          "op": "RECOLOR",
-          "round": 5
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "green",
-        "purple"
-      ],
-      "m": 0,
-      "o": 0,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
-      "rev_color": "yellow",
-      "rid": 6,
-      "rounds": [
-        4,
-        5
-      ],
-      "s": 1,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "red"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-DR-s1m0-01",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 5
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 1 to yellow",
-          "op": "RECOLOR",
-          "round": 4
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "green",
-        "purple"
-      ],
-      "m": 0,
-      "o": 0,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
-      "rev_color": "red",
-      "rid": 7,
-      "rounds": [
-        4,
-        5
-      ],
-      "s": 1,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "yellow"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SS-s1m1-12",
+      "block": "COMP-SS-s0m0-01",
       "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
@@ -443,24 +347,120 @@
       ],
       "hist_display": [
         {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 4
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 5
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "green",
+        "purple"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "yellow",
+      "rev_color": "red",
+      "rid": 6,
+      "rounds": [
+        4,
+        5
+      ],
+      "s": 0,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "yellow"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SR-s0m0-01",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
           "round": 5
         },
         {
-          "desc": "a RECOLOR of the token on spot 2 to purple",
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 4
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "green",
+        "purple"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "yellow",
+      "rev_color": "yellow",
+      "rid": 7,
+      "rounds": [
+        4,
+        5
+      ],
+      "s": 0,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "red"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SS-s0m0-01",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 5
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to purple",
           "op": "RECOLOR",
           "round": 6
         }
       ],
       "init_colors": [
-        "green",
         "red",
         "blue",
+        "green",
         "yellow"
       ],
-      "m": 1,
-      "o": 2,
+      "m": 0,
+      "o": 1,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "SAME",
@@ -471,7 +471,7 @@
         5,
         6
       ],
-      "s": 1,
+      "s": 0,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -481,9 +481,9 @@
       "target_color": "purple"
     },
     {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SR-s1m1-12",
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SR-s0m0-01",
       "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
@@ -491,24 +491,24 @@
       ],
       "hist_display": [
         {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
           "round": 6
         },
         {
-          "desc": "a RECOLOR of the token on spot 2 to purple",
+          "desc": "a RECOLOR of the token on spot 1 to purple",
           "op": "RECOLOR",
           "round": 5
         }
       ],
       "init_colors": [
-        "green",
         "red",
         "blue",
+        "green",
         "yellow"
       ],
-      "m": 1,
-      "o": 2,
+      "m": 0,
+      "o": 1,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "SAME",
@@ -519,7 +519,7 @@
         5,
         6
       ],
-      "s": 1,
+      "s": 0,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -529,9 +529,9 @@
       "target_color": "blue"
     },
     {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SS-s2m2-12",
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SS-s0m0-01",
       "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
@@ -539,23 +539,23 @@
       ],
       "hist_display": [
         {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
           "round": 6
         },
         {
-          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "desc": "a RECOLOR of the token on spot 1 to orange",
           "op": "RECOLOR",
           "round": 7
         }
       ],
       "init_colors": [
-        "blue",
-        "green",
         "red",
+        "green",
+        "blue",
         "yellow"
       ],
-      "m": 2,
+      "m": 0,
       "o": 1,
       "print_swap_first": true,
       "query": "COMP",
@@ -567,7 +567,7 @@
         6,
         7
       ],
-      "s": 2,
+      "s": 0,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -577,9 +577,9 @@
       "target_color": "orange"
     },
     {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SR-s2m2-12",
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SR-s0m0-01",
       "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
@@ -587,23 +587,23 @@
       ],
       "hist_display": [
         {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
           "round": 7
         },
         {
-          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "desc": "a RECOLOR of the token on spot 1 to orange",
           "op": "RECOLOR",
           "round": 6
         }
       ],
       "init_colors": [
-        "blue",
-        "green",
         "red",
+        "green",
+        "blue",
         "yellow"
       ],
-      "m": 2,
+      "m": 0,
       "o": 1,
       "print_swap_first": true,
       "query": "COMP",
@@ -615,7 +615,583 @@
         6,
         7
       ],
-      "s": 2,
+      "s": 0,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "green"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SS-s0m0-01",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 7
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to red",
+          "op": "RECOLOR",
+          "round": 8
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "yellow",
+        "green",
+        "purple"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "red",
+      "rev_color": "yellow",
+      "rid": 12,
+      "rounds": [
+        7,
+        8
+      ],
+      "s": 0,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "red"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SR-s0m0-01",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to red",
+          "op": "RECOLOR",
+          "round": 7
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "yellow",
+        "green",
+        "purple"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "red",
+      "rev_color": "red",
+      "rid": 13,
+      "rounds": [
+        7,
+        8
+      ],
+      "s": 0,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "yellow"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SS-s0m0-01",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to blue",
+          "op": "RECOLOR",
+          "round": 9
+        }
+      ],
+      "init_colors": [
+        "red",
+        "purple",
+        "green",
+        "yellow"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "blue",
+      "rev_color": "purple",
+      "rid": 14,
+      "rounds": [
+        8,
+        9
+      ],
+      "s": 0,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "blue"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SR-s0m0-01",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 9
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to blue",
+          "op": "RECOLOR",
+          "round": 8
+        }
+      ],
+      "init_colors": [
+        "red",
+        "purple",
+        "green",
+        "yellow"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "blue",
+      "rev_color": "blue",
+      "rid": 15,
+      "rounds": [
+        8,
+        9
+      ],
+      "s": 0,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "purple"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SS-s0m0-01",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 9
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to green",
+          "op": "RECOLOR",
+          "round": 10
+        }
+      ],
+      "init_colors": [
+        "red",
+        "orange",
+        "blue",
+        "yellow"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "green",
+      "rev_color": "orange",
+      "rid": 16,
+      "rounds": [
+        9,
+        10
+      ],
+      "s": 0,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "green"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SR-s0m0-01",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to green",
+          "op": "RECOLOR",
+          "round": 9
+        }
+      ],
+      "init_colors": [
+        "red",
+        "orange",
+        "blue",
+        "yellow"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "green",
+      "rev_color": "green",
+      "rid": 17,
+      "rounds": [
+        9,
+        10
+      ],
+      "s": 0,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "orange"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SS-s0m0-01",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 11
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "green",
+        "purple"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "yellow",
+      "rev_color": "red",
+      "rid": 18,
+      "rounds": [
+        10,
+        11
+      ],
+      "s": 0,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "yellow"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SR-s0m0-01",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 11
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 10
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "green",
+        "purple"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "yellow",
+      "rev_color": "yellow",
+      "rid": 19,
+      "rounds": [
+        10,
+        11
+      ],
+      "s": 0,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "red"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SS-s0m0-01",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 11
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to purple",
+          "op": "RECOLOR",
+          "round": 12
+        }
+      ],
+      "init_colors": [
+        "red",
+        "blue",
+        "green",
+        "yellow"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "purple",
+      "rev_color": "blue",
+      "rid": 20,
+      "rounds": [
+        11,
+        12
+      ],
+      "s": 0,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "purple"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SR-s0m0-01",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 12
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to purple",
+          "op": "RECOLOR",
+          "round": 11
+        }
+      ],
+      "init_colors": [
+        "red",
+        "blue",
+        "green",
+        "yellow"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "purple",
+      "rev_color": "purple",
+      "rid": 21,
+      "rounds": [
+        11,
+        12
+      ],
+      "s": 0,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "blue"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SS-s0m0-01",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 12
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to orange",
+          "op": "RECOLOR",
+          "round": 13
+        }
+      ],
+      "init_colors": [
+        "red",
+        "green",
+        "blue",
+        "yellow"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "orange",
+      "rev_color": "green",
+      "rid": 22,
+      "rounds": [
+        12,
+        13
+      ],
+      "s": 0,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "orange"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "COMP-SR-s0m0-01",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 13
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to orange",
+          "op": "RECOLOR",
+          "round": 12
+        }
+      ],
+      "init_colors": [
+        "red",
+        "green",
+        "blue",
+        "yellow"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "orange",
+      "rev_color": "orange",
+      "rid": 23,
+      "rounds": [
+        12,
+        13
+      ],
+      "s": 0,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -637,31 +1213,31 @@
         {
           "desc": "a SWAP of the tokens on spot 2 and spot 3",
           "op": "SWAP",
-          "round": 7
+          "round": 1
         },
         {
-          "desc": "a RECOLOR of the token on spot 3 to red",
+          "desc": "a RECOLOR of the token on spot 3 to blue",
           "op": "RECOLOR",
-          "round": 8
+          "round": 2
         }
       ],
       "init_colors": [
         "green",
-        "blue",
-        "yellow",
-        "purple"
+        "red",
+        "purple",
+        "yellow"
       ],
       "m": 2,
       "o": 2,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
-      "recolor_color": "red",
-      "rev_color": "red",
-      "rid": 12,
+      "recolor_color": "blue",
+      "rev_color": "blue",
+      "rid": 24,
       "rounds": [
-        7,
-        8
+        1,
+        2
       ],
       "s": 1,
       "stamp_first": "SWAP",
@@ -670,7 +1246,7 @@
         "RECOLOR"
       ],
       "subset": "comp",
-      "target_color": "yellow"
+      "target_color": "purple"
     },
     {
       "a": 1,
@@ -685,7 +1261,439 @@
         {
           "desc": "a SWAP of the tokens on spot 2 and spot 3",
           "op": "SWAP",
-          "round": 8
+          "round": 2
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to blue",
+          "op": "RECOLOR",
+          "round": 1
+        }
+      ],
+      "init_colors": [
+        "green",
+        "red",
+        "purple",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "blue",
+      "rev_color": "purple",
+      "rid": 25,
+      "rounds": [
+        1,
+        2
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "blue"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 2
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to green",
+          "op": "RECOLOR",
+          "round": 3
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "orange",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "green",
+      "rev_color": "green",
+      "rid": 26,
+      "rounds": [
+        2,
+        3
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "orange"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 3
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to green",
+          "op": "RECOLOR",
+          "round": 2
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "orange",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "green",
+      "rev_color": "orange",
+      "rid": 27,
+      "rounds": [
+        2,
+        3
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "green"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 3
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 4
+        }
+      ],
+      "init_colors": [
+        "green",
+        "blue",
+        "red",
+        "purple"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "yellow",
+      "rev_color": "yellow",
+      "rid": 28,
+      "rounds": [
+        3,
+        4
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "red"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 4
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 3
+        }
+      ],
+      "init_colors": [
+        "green",
+        "blue",
+        "red",
+        "purple"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "yellow",
+      "rev_color": "red",
+      "rid": 29,
+      "rounds": [
+        3,
+        4
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "yellow"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 4
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 5
+        }
+      ],
+      "init_colors": [
+        "green",
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "purple",
+      "rev_color": "purple",
+      "rid": 30,
+      "rounds": [
+        4,
+        5
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "blue"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 5
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 4
+        }
+      ],
+      "init_colors": [
+        "green",
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "purple",
+      "rev_color": "blue",
+      "rid": 31,
+      "rounds": [
+        4,
+        5
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "purple"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 5
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
+          "round": 6
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "green",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "orange",
+      "rev_color": "orange",
+      "rid": 32,
+      "rounds": [
+        5,
+        6
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "green"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 6
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
+          "round": 5
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "green",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "orange",
+      "rev_color": "green",
+      "rid": 33,
+      "rounds": [
+        5,
+        6
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "orange"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 6
         },
         {
           "desc": "a RECOLOR of the token on spot 3 to red",
@@ -705,1015 +1713,7 @@
       "query": "COMP",
       "readout_type": "DIFF",
       "recolor_color": "red",
-      "rev_color": "yellow",
-      "rid": 13,
-      "rounds": [
-        7,
-        8
-      ],
-      "s": 1,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "red"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-DS-s2m1-12",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 8
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 2 to blue",
-          "op": "RECOLOR",
-          "round": 9
-        }
-      ],
-      "init_colors": [
-        "green",
-        "purple",
-        "red",
-        "yellow"
-      ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "blue",
-      "rev_color": "blue",
-      "rid": 14,
-      "rounds": [
-        8,
-        9
-      ],
-      "s": 2,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "purple"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-DR-s2m1-12",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 9
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 2 to blue",
-          "op": "RECOLOR",
-          "round": 8
-        }
-      ],
-      "init_colors": [
-        "green",
-        "purple",
-        "red",
-        "yellow"
-      ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "blue",
-      "rev_color": "purple",
-      "rid": 15,
-      "rounds": [
-        8,
-        9
-      ],
-      "s": 2,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "blue"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-SS-s2m2-23",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 9
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 3 to green",
-          "op": "RECOLOR",
-          "round": 10
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "yellow",
-        "red",
-        "orange"
-      ],
-      "m": 2,
-      "o": 3,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "green",
-      "rev_color": "orange",
-      "rid": 16,
-      "rounds": [
-        9,
-        10
-      ],
-      "s": 2,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "green"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-SR-s2m2-23",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 10
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 3 to green",
-          "op": "RECOLOR",
-          "round": 9
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "yellow",
-        "red",
-        "orange"
-      ],
-      "m": 2,
-      "o": 3,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "green",
-      "rev_color": "green",
-      "rid": 17,
-      "rounds": [
-        9,
-        10
-      ],
-      "s": 2,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "orange"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-SS-s3m3-23",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 10
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 4 to yellow",
-          "op": "RECOLOR",
-          "round": 11
-        }
-      ],
-      "init_colors": [
-        "green",
-        "purple",
-        "red",
-        "blue"
-      ],
-      "m": 3,
-      "o": 2,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "yellow",
       "rev_color": "red",
-      "rid": 18,
-      "rounds": [
-        10,
-        11
-      ],
-      "s": 3,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "yellow"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-SR-s3m3-23",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 11
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 4 to yellow",
-          "op": "RECOLOR",
-          "round": 10
-        }
-      ],
-      "init_colors": [
-        "green",
-        "purple",
-        "red",
-        "blue"
-      ],
-      "m": 3,
-      "o": 2,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "yellow",
-      "rev_color": "yellow",
-      "rid": 19,
-      "rounds": [
-        10,
-        11
-      ],
-      "s": 3,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "red"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-DS-s2m3-23",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 11
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 4 to purple",
-          "op": "RECOLOR",
-          "round": 12
-        }
-      ],
-      "init_colors": [
-        "green",
-        "yellow",
-        "red",
-        "blue"
-      ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "purple",
-      "rev_color": "purple",
-      "rid": 20,
-      "rounds": [
-        11,
-        12
-      ],
-      "s": 2,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "blue"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-DR-s2m3-23",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 12
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 4 to purple",
-          "op": "RECOLOR",
-          "round": 11
-        }
-      ],
-      "init_colors": [
-        "green",
-        "yellow",
-        "red",
-        "blue"
-      ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "purple",
-      "rev_color": "blue",
-      "rid": 21,
-      "rounds": [
-        11,
-        12
-      ],
-      "s": 2,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "purple"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-DS-s3m2-23",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 12
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 3 to orange",
-          "op": "RECOLOR",
-          "round": 13
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "yellow",
-        "green",
-        "red"
-      ],
-      "m": 2,
-      "o": 2,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "orange",
-      "rev_color": "orange",
-      "rid": 22,
-      "rounds": [
-        12,
-        13
-      ],
-      "s": 3,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "green"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-DR-s3m2-23",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 13
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 3 to orange",
-          "op": "RECOLOR",
-          "round": 12
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "yellow",
-        "green",
-        "red"
-      ],
-      "m": 2,
-      "o": 2,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "orange",
-      "rev_color": "green",
-      "rid": 23,
-      "rounds": [
-        12,
-        13
-      ],
-      "s": 3,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "orange"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-SS-s3m3-30",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 4 to red",
-          "op": "RECOLOR",
-          "round": 2
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 1
-        }
-      ],
-      "init_colors": [
-        "yellow",
-        "green",
-        "purple",
-        "blue"
-      ],
-      "m": 3,
-      "o": 0,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "red",
-      "rev_color": "yellow",
-      "rid": 24,
-      "rounds": [
-        1,
-        2
-      ],
-      "s": 3,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "red"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-SR-s3m3-30",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 4 to red",
-          "op": "RECOLOR",
-          "round": 1
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 2
-        }
-      ],
-      "init_colors": [
-        "yellow",
-        "green",
-        "purple",
-        "blue"
-      ],
-      "m": 3,
-      "o": 0,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "red",
-      "rev_color": "red",
-      "rid": 25,
-      "rounds": [
-        1,
-        2
-      ],
-      "s": 3,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "yellow"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-SS-s0m0-30",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to blue",
-          "op": "RECOLOR",
-          "round": 3
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 2
-        }
-      ],
-      "init_colors": [
-        "red",
-        "green",
-        "yellow",
-        "purple"
-      ],
-      "m": 0,
-      "o": 3,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "blue",
-      "rev_color": "purple",
-      "rid": 26,
-      "rounds": [
-        2,
-        3
-      ],
-      "s": 0,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "blue"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-SR-s0m0-30",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to blue",
-          "op": "RECOLOR",
-          "round": 2
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 3
-        }
-      ],
-      "init_colors": [
-        "red",
-        "green",
-        "yellow",
-        "purple"
-      ],
-      "m": 0,
-      "o": 3,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "blue",
-      "rev_color": "blue",
-      "rid": 27,
-      "rounds": [
-        2,
-        3
-      ],
-      "s": 0,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "purple"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-DS-s3m0-30",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to green",
-          "op": "RECOLOR",
-          "round": 4
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 3
-        }
-      ],
-      "init_colors": [
-        "orange",
-        "blue",
-        "yellow",
-        "red"
-      ],
-      "m": 0,
-      "o": 0,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "green",
-      "rev_color": "green",
-      "rid": 28,
-      "rounds": [
-        3,
-        4
-      ],
-      "s": 3,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "orange"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-DR-s3m0-30",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to green",
-          "op": "RECOLOR",
-          "round": 3
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 4
-        }
-      ],
-      "init_colors": [
-        "orange",
-        "blue",
-        "yellow",
-        "red"
-      ],
-      "m": 0,
-      "o": 0,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "green",
-      "rev_color": "orange",
-      "rid": 29,
-      "rounds": [
-        3,
-        4
-      ],
-      "s": 3,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "green"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-DS-s0m3-30",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 4 to yellow",
-          "op": "RECOLOR",
-          "round": 5
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 4
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "green",
-        "purple",
-        "red"
-      ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
-      "rev_color": "yellow",
-      "rid": 30,
-      "rounds": [
-        4,
-        5
-      ],
-      "s": 0,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "red"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-DR-s0m3-30",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 4 to yellow",
-          "op": "RECOLOR",
-          "round": 4
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 5
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "green",
-        "purple",
-        "red"
-      ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
-      "rev_color": "red",
-      "rid": 31,
-      "rounds": [
-        4,
-        5
-      ],
-      "s": 0,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "yellow"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-SS-s0m0-01",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to purple",
-          "op": "RECOLOR",
-          "round": 6
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 5
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "green",
-        "yellow"
-      ],
-      "m": 0,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "purple",
-      "rev_color": "blue",
-      "rid": 32,
-      "rounds": [
-        5,
-        6
-      ],
-      "s": 0,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "purple"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-SR-s0m0-01",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to purple",
-          "op": "RECOLOR",
-          "round": 5
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 6
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "green",
-        "yellow"
-      ],
-      "m": 0,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "purple",
-      "rev_color": "purple",
-      "rid": 33,
-      "rounds": [
-        5,
-        6
-      ],
-      "s": 0,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "blue"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-SS-s1m1-01",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 2 to orange",
-          "op": "RECOLOR",
-          "round": 7
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 6
-        }
-      ],
-      "init_colors": [
-        "green",
-        "red",
-        "blue",
-        "yellow"
-      ],
-      "m": 1,
-      "o": 0,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "orange",
-      "rev_color": "green",
       "rid": 34,
       "rounds": [
         6,
@@ -1726,432 +1726,48 @@
         "RECOLOR"
       ],
       "subset": "comp",
-      "target_color": "orange"
+      "target_color": "yellow"
     },
     {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-SR-s1m1-01",
-      "cell_label": "SAME@R",
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DR-s1m2-12",
+      "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 2 to orange",
-          "op": "RECOLOR",
-          "round": 6
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
           "op": "SWAP",
           "round": 7
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to red",
+          "op": "RECOLOR",
+          "round": 6
         }
       ],
       "init_colors": [
         "green",
-        "red",
         "blue",
-        "yellow"
+        "yellow",
+        "purple"
       ],
-      "m": 1,
-      "o": 0,
-      "print_swap_first": false,
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "orange",
-      "rev_color": "orange",
+      "readout_type": "DIFF",
+      "recolor_color": "red",
+      "rev_color": "yellow",
       "rid": 35,
       "rounds": [
         6,
         7
       ],
       "s": 1,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "green"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-DS-s0m1-01",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 2 to red",
-          "op": "RECOLOR",
-          "round": 8
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 7
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "yellow",
-        "green",
-        "purple"
-      ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "red",
-      "rev_color": "red",
-      "rid": 36,
-      "rounds": [
-        7,
-        8
-      ],
-      "s": 0,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "yellow"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-DR-s0m1-01",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 2 to red",
-          "op": "RECOLOR",
-          "round": 7
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 8
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "yellow",
-        "green",
-        "purple"
-      ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "red",
-      "rev_color": "yellow",
-      "rid": 37,
-      "rounds": [
-        7,
-        8
-      ],
-      "s": 0,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "red"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-DS-s1m0-01",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to blue",
-          "op": "RECOLOR",
-          "round": 9
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 8
-        }
-      ],
-      "init_colors": [
-        "purple",
-        "red",
-        "green",
-        "yellow"
-      ],
-      "m": 0,
-      "o": 0,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "blue",
-      "rev_color": "blue",
-      "rid": 38,
-      "rounds": [
-        8,
-        9
-      ],
-      "s": 1,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "purple"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-DR-s1m0-01",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to blue",
-          "op": "RECOLOR",
-          "round": 8
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 9
-        }
-      ],
-      "init_colors": [
-        "purple",
-        "red",
-        "green",
-        "yellow"
-      ],
-      "m": 0,
-      "o": 0,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "blue",
-      "rev_color": "purple",
-      "rid": 39,
-      "rounds": [
-        8,
-        9
-      ],
-      "s": 1,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "blue"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SS-s1m1-12",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 2 to green",
-          "op": "RECOLOR",
-          "round": 10
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 9
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "red",
-        "orange",
-        "yellow"
-      ],
-      "m": 1,
-      "o": 2,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "green",
-      "rev_color": "orange",
-      "rid": 40,
-      "rounds": [
-        9,
-        10
-      ],
-      "s": 1,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "green"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SR-s1m1-12",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 2 to green",
-          "op": "RECOLOR",
-          "round": 9
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 10
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "red",
-        "orange",
-        "yellow"
-      ],
-      "m": 1,
-      "o": 2,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "green",
-      "rev_color": "green",
-      "rid": 41,
-      "rounds": [
-        9,
-        10
-      ],
-      "s": 1,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "orange"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SS-s2m2-12",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to yellow",
-          "op": "RECOLOR",
-          "round": 11
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 10
-        }
-      ],
-      "init_colors": [
-        "green",
-        "red",
-        "blue",
-        "purple"
-      ],
-      "m": 2,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "yellow",
-      "rev_color": "red",
-      "rid": 42,
-      "rounds": [
-        10,
-        11
-      ],
-      "s": 2,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "yellow"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SR-s2m2-12",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to yellow",
-          "op": "RECOLOR",
-          "round": 10
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 11
-        }
-      ],
-      "init_colors": [
-        "green",
-        "red",
-        "blue",
-        "purple"
-      ],
-      "m": 2,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "yellow",
-      "rev_color": "yellow",
-      "rid": 43,
-      "rounds": [
-        10,
-        11
-      ],
-      "s": 2,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -2166,18 +1782,306 @@
       "block": "COMP-DS-s1m2-12",
       "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 3 to purple",
-          "op": "RECOLOR",
-          "round": 12
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 7
         },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to blue",
+          "op": "RECOLOR",
+          "round": 8
+        }
+      ],
+      "init_colors": [
+        "green",
+        "red",
+        "purple",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "blue",
+      "rev_color": "blue",
+      "rid": 36,
+      "rounds": [
+        7,
+        8
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "purple"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
         {
           "desc": "a SWAP of the tokens on spot 2 and spot 3",
           "op": "SWAP",
+          "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to blue",
+          "op": "RECOLOR",
+          "round": 7
+        }
+      ],
+      "init_colors": [
+        "green",
+        "red",
+        "purple",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "blue",
+      "rev_color": "purple",
+      "rid": 37,
+      "rounds": [
+        7,
+        8
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "blue"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to green",
+          "op": "RECOLOR",
+          "round": 9
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "orange",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "green",
+      "rev_color": "green",
+      "rid": 38,
+      "rounds": [
+        8,
+        9
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "orange"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 9
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to green",
+          "op": "RECOLOR",
+          "round": 8
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "orange",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "green",
+      "rev_color": "orange",
+      "rid": 39,
+      "rounds": [
+        8,
+        9
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "green"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 9
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 10
+        }
+      ],
+      "init_colors": [
+        "green",
+        "blue",
+        "red",
+        "purple"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "yellow",
+      "rev_color": "yellow",
+      "rid": 40,
+      "rounds": [
+        9,
+        10
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "red"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 9
+        }
+      ],
+      "init_colors": [
+        "green",
+        "blue",
+        "red",
+        "purple"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "yellow",
+      "rev_color": "red",
+      "rid": 41,
+      "rounds": [
+        9,
+        10
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "yellow"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
           "round": 11
         }
       ],
@@ -2189,15 +2093,15 @@
       ],
       "m": 2,
       "o": 2,
-      "print_swap_first": false,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
       "recolor_color": "purple",
       "rev_color": "purple",
-      "rid": 44,
+      "rid": 42,
       "rounds": [
-        11,
-        12
+        10,
+        11
       ],
       "s": 1,
       "stamp_first": "SWAP",
@@ -2214,19 +2118,19 @@
       "block": "COMP-DR-s1m2-12",
       "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 3 to purple",
-          "op": "RECOLOR",
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
           "round": 11
         },
         {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 12
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 10
         }
       ],
       "init_colors": [
@@ -2237,15 +2141,15 @@
       ],
       "m": 2,
       "o": 2,
-      "print_swap_first": false,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
       "recolor_color": "purple",
       "rev_color": "blue",
-      "rid": 45,
+      "rid": 43,
       "rounds": [
-        11,
-        12
+        10,
+        11
       ],
       "s": 1,
       "stamp_first": "RECOLOR",
@@ -2259,43 +2163,43 @@
     {
       "a": 1,
       "b": 2,
-      "block": "COMP-DS-s2m1-12",
+      "block": "COMP-DS-s1m2-12",
       "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 2 to orange",
-          "op": "RECOLOR",
-          "round": 13
-        },
-        {
           "desc": "a SWAP of the tokens on spot 2 and spot 3",
           "op": "SWAP",
+          "round": 11
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
           "round": 12
         }
       ],
       "init_colors": [
         "blue",
-        "green",
         "red",
+        "green",
         "yellow"
       ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": false,
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
       "recolor_color": "orange",
       "rev_color": "orange",
-      "rid": 46,
+      "rid": 44,
       "rounds": [
-        12,
-        13
+        11,
+        12
       ],
-      "s": 2,
+      "s": 1,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -2307,41 +2211,233 @@
     {
       "a": 1,
       "b": 2,
-      "block": "COMP-DR-s2m1-12",
+      "block": "COMP-DR-s1m2-12",
       "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 2 to orange",
-          "op": "RECOLOR",
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
           "round": 12
         },
         {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 13
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
+          "round": 11
         }
       ],
       "init_colors": [
         "blue",
-        "green",
         "red",
+        "green",
         "yellow"
       ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": false,
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
       "recolor_color": "orange",
       "rev_color": "green",
+      "rid": 45,
+      "rounds": [
+        11,
+        12
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "orange"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 12
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to red",
+          "op": "RECOLOR",
+          "round": 13
+        }
+      ],
+      "init_colors": [
+        "green",
+        "blue",
+        "yellow",
+        "purple"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "red",
+      "rev_color": "red",
+      "rid": 46,
+      "rounds": [
+        12,
+        13
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "yellow"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "COMP-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 13
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to red",
+          "op": "RECOLOR",
+          "round": 12
+        }
+      ],
+      "init_colors": [
+        "green",
+        "blue",
+        "yellow",
+        "purple"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "red",
+      "rev_color": "yellow",
       "rid": 47,
       "rounds": [
         12,
         13
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "red"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SS-s2m2-23",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 1
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to green",
+          "op": "RECOLOR",
+          "round": 2
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "yellow",
+        "red",
+        "orange"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "green",
+      "rev_color": "orange",
+      "rid": 48,
+      "rounds": [
+        1,
+        2
+      ],
+      "s": 2,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "green"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SR-s2m2-23",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 2
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to green",
+          "op": "RECOLOR",
+          "round": 1
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "yellow",
+        "red",
+        "orange"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "green",
+      "rev_color": "green",
+      "rid": 49,
+      "rounds": [
+        1,
+        2
       ],
       "s": 2,
       "stamp_first": "RECOLOR",
@@ -2365,12 +2461,300 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 1
+          "round": 2
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 3
+        }
+      ],
+      "init_colors": [
+        "green",
+        "purple",
+        "blue",
+        "red"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "yellow",
+      "rev_color": "red",
+      "rid": 50,
+      "rounds": [
+        2,
+        3
+      ],
+      "s": 2,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "yellow"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SR-s2m2-23",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 3
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 2
+        }
+      ],
+      "init_colors": [
+        "green",
+        "purple",
+        "blue",
+        "red"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "yellow",
+      "rev_color": "yellow",
+      "rid": 51,
+      "rounds": [
+        2,
+        3
+      ],
+      "s": 2,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "red"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SS-s2m2-23",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 3
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 4
+        }
+      ],
+      "init_colors": [
+        "green",
+        "yellow",
+        "red",
+        "blue"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "purple",
+      "rev_color": "blue",
+      "rid": 52,
+      "rounds": [
+        3,
+        4
+      ],
+      "s": 2,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "purple"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SR-s2m2-23",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 4
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 3
+        }
+      ],
+      "init_colors": [
+        "green",
+        "yellow",
+        "red",
+        "blue"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "purple",
+      "rev_color": "purple",
+      "rid": 53,
+      "rounds": [
+        3,
+        4
+      ],
+      "s": 2,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "blue"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SS-s2m2-23",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 4
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
+          "round": 5
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "yellow",
+        "red",
+        "green"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "orange",
+      "rev_color": "green",
+      "rid": 54,
+      "rounds": [
+        4,
+        5
+      ],
+      "s": 2,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "orange"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SR-s2m2-23",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 5
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
+          "round": 4
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "yellow",
+        "red",
+        "green"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "orange",
+      "rev_color": "orange",
+      "rid": 55,
+      "rounds": [
+        4,
+        5
+      ],
+      "s": 2,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "green"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SS-s2m2-23",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 5
         },
         {
           "desc": "a RECOLOR of the token on spot 3 to red",
           "op": "RECOLOR",
-          "round": 2
+          "round": 6
         }
       ],
       "init_colors": [
@@ -2386,10 +2770,10 @@
       "readout_type": "SAME",
       "recolor_color": "red",
       "rev_color": "yellow",
-      "rid": 48,
+      "rid": 56,
       "rounds": [
-        1,
-        2
+        5,
+        6
       ],
       "s": 2,
       "stamp_first": "SWAP",
@@ -2413,12 +2797,12 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 2
+          "round": 6
         },
         {
           "desc": "a RECOLOR of the token on spot 3 to red",
           "op": "RECOLOR",
-          "round": 1
+          "round": 5
         }
       ],
       "init_colors": [
@@ -2434,10 +2818,10 @@
       "readout_type": "SAME",
       "recolor_color": "red",
       "rev_color": "red",
-      "rid": 49,
+      "rid": 57,
       "rounds": [
-        1,
-        2
+        5,
+        6
       ],
       "s": 2,
       "stamp_first": "RECOLOR",
@@ -2451,7 +2835,7 @@
     {
       "a": 2,
       "b": 3,
-      "block": "COMP-SS-s3m3-23",
+      "block": "COMP-SS-s2m2-23",
       "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
@@ -2461,33 +2845,33 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 2
+          "round": 6
         },
         {
-          "desc": "a RECOLOR of the token on spot 4 to blue",
+          "desc": "a RECOLOR of the token on spot 3 to blue",
           "op": "RECOLOR",
-          "round": 3
+          "round": 7
         }
       ],
       "init_colors": [
         "green",
         "yellow",
-        "purple",
-        "red"
+        "red",
+        "purple"
       ],
-      "m": 3,
-      "o": 2,
+      "m": 2,
+      "o": 3,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "SAME",
       "recolor_color": "blue",
       "rev_color": "purple",
-      "rid": 50,
+      "rid": 58,
       "rounds": [
-        2,
-        3
+        6,
+        7
       ],
-      "s": 3,
+      "s": 2,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -2499,7 +2883,7 @@
     {
       "a": 2,
       "b": 3,
-      "block": "COMP-SR-s3m3-23",
+      "block": "COMP-SR-s2m2-23",
       "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
@@ -2509,33 +2893,33 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 3
+          "round": 7
         },
         {
-          "desc": "a RECOLOR of the token on spot 4 to blue",
+          "desc": "a RECOLOR of the token on spot 3 to blue",
           "op": "RECOLOR",
-          "round": 2
+          "round": 6
         }
       ],
       "init_colors": [
         "green",
         "yellow",
-        "purple",
-        "red"
+        "red",
+        "purple"
       ],
-      "m": 3,
-      "o": 2,
+      "m": 2,
+      "o": 3,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "SAME",
       "recolor_color": "blue",
       "rev_color": "blue",
-      "rid": 51,
+      "rid": 59,
       "rounds": [
-        2,
-        3
+        6,
+        7
       ],
-      "s": 3,
+      "s": 2,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -2547,8 +2931,8 @@
     {
       "a": 2,
       "b": 3,
-      "block": "COMP-DS-s2m3-23",
-      "cell_label": "DIFF@S",
+      "block": "COMP-SS-s2m2-23",
+      "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
         "RECOLOR"
@@ -2557,12 +2941,12 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 3
+          "round": 7
         },
         {
-          "desc": "a RECOLOR of the token on spot 4 to green",
+          "desc": "a RECOLOR of the token on spot 3 to green",
           "op": "RECOLOR",
-          "round": 4
+          "round": 8
         }
       ],
       "init_colors": [
@@ -2571,17 +2955,305 @@
         "red",
         "orange"
       ],
-      "m": 3,
+      "m": 2,
       "o": 3,
       "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "DIFF",
+      "readout_type": "SAME",
+      "recolor_color": "green",
+      "rev_color": "orange",
+      "rid": 60,
+      "rounds": [
+        7,
+        8
+      ],
+      "s": 2,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "green"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SR-s2m2-23",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to green",
+          "op": "RECOLOR",
+          "round": 7
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "yellow",
+        "red",
+        "orange"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
       "recolor_color": "green",
       "rev_color": "green",
-      "rid": 52,
+      "rid": 61,
       "rounds": [
-        3,
-        4
+        7,
+        8
+      ],
+      "s": 2,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "orange"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SS-s2m2-23",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 9
+        }
+      ],
+      "init_colors": [
+        "green",
+        "purple",
+        "blue",
+        "red"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "yellow",
+      "rev_color": "red",
+      "rid": 62,
+      "rounds": [
+        8,
+        9
+      ],
+      "s": 2,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "yellow"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SR-s2m2-23",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 9
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 8
+        }
+      ],
+      "init_colors": [
+        "green",
+        "purple",
+        "blue",
+        "red"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "yellow",
+      "rev_color": "yellow",
+      "rid": 63,
+      "rounds": [
+        8,
+        9
+      ],
+      "s": 2,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "red"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SS-s2m2-23",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 9
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 10
+        }
+      ],
+      "init_colors": [
+        "green",
+        "yellow",
+        "red",
+        "blue"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "purple",
+      "rev_color": "blue",
+      "rid": 64,
+      "rounds": [
+        9,
+        10
+      ],
+      "s": 2,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "purple"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SR-s2m2-23",
+      "cell_label": "SAME@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 9
+        }
+      ],
+      "init_colors": [
+        "green",
+        "yellow",
+        "red",
+        "blue"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "purple",
+      "rev_color": "purple",
+      "rid": 65,
+      "rounds": [
+        9,
+        10
+      ],
+      "s": 2,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "blue"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SS-s2m2-23",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
+          "round": 11
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "yellow",
+        "red",
+        "green"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "SAME",
+      "recolor_color": "orange",
+      "rev_color": "green",
+      "rid": 66,
+      "rounds": [
+        10,
+        11
       ],
       "s": 2,
       "stamp_first": "SWAP",
@@ -2595,8 +3267,8 @@
     {
       "a": 2,
       "b": 3,
-      "block": "COMP-DR-s2m3-23",
-      "cell_label": "DIFF@R",
+      "block": "COMP-SR-s2m2-23",
+      "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
         "RECOLOR"
@@ -2605,31 +3277,31 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 4
+          "round": 11
         },
         {
-          "desc": "a RECOLOR of the token on spot 4 to green",
+          "desc": "a RECOLOR of the token on spot 3 to orange",
           "op": "RECOLOR",
-          "round": 3
+          "round": 10
         }
       ],
       "init_colors": [
         "blue",
         "yellow",
         "red",
-        "orange"
+        "green"
       ],
-      "m": 3,
+      "m": 2,
       "o": 3,
       "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "green",
+      "readout_type": "SAME",
+      "recolor_color": "orange",
       "rev_color": "orange",
-      "rid": 53,
+      "rid": 67,
       "rounds": [
-        3,
-        4
+        10,
+        11
       ],
       "s": 2,
       "stamp_first": "RECOLOR",
@@ -2643,8 +3315,8 @@
     {
       "a": 2,
       "b": 3,
-      "block": "COMP-DS-s3m2-23",
-      "cell_label": "DIFF@S",
+      "block": "COMP-SS-s2m2-23",
+      "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
         "RECOLOR"
@@ -2653,33 +3325,33 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 4
+          "round": 11
         },
         {
-          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "desc": "a RECOLOR of the token on spot 3 to red",
           "op": "RECOLOR",
-          "round": 5
+          "round": 12
         }
       ],
       "init_colors": [
         "green",
         "purple",
-        "red",
-        "blue"
+        "blue",
+        "yellow"
       ],
       "m": 2,
-      "o": 2,
+      "o": 3,
       "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
+      "readout_type": "SAME",
+      "recolor_color": "red",
       "rev_color": "yellow",
-      "rid": 54,
+      "rid": 68,
       "rounds": [
-        4,
-        5
+        11,
+        12
       ],
-      "s": 3,
+      "s": 2,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -2691,8 +3363,8 @@
     {
       "a": 2,
       "b": 3,
-      "block": "COMP-DR-s3m2-23",
-      "cell_label": "DIFF@R",
+      "block": "COMP-SR-s2m2-23",
+      "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
         "RECOLOR"
@@ -2701,33 +3373,33 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 5
+          "round": 12
         },
         {
-          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "desc": "a RECOLOR of the token on spot 3 to red",
           "op": "RECOLOR",
-          "round": 4
+          "round": 11
         }
       ],
       "init_colors": [
         "green",
         "purple",
-        "red",
-        "blue"
+        "blue",
+        "yellow"
       ],
       "m": 2,
-      "o": 2,
+      "o": 3,
       "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
+      "readout_type": "SAME",
+      "recolor_color": "red",
       "rev_color": "red",
-      "rid": 55,
+      "rid": 69,
       "rounds": [
-        4,
-        5
+        11,
+        12
       ],
-      "s": 3,
+      "s": 2,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -2737,9 +3409,9 @@
       "target_color": "yellow"
     },
     {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-SS-s3m3-30",
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SS-s2m2-23",
       "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
@@ -2747,143 +3419,47 @@
       ],
       "hist_display": [
         {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 5
+          "round": 12
         },
         {
-          "desc": "a RECOLOR of the token on spot 4 to purple",
+          "desc": "a RECOLOR of the token on spot 3 to blue",
           "op": "RECOLOR",
-          "round": 6
+          "round": 13
         }
       ],
       "init_colors": [
-        "blue",
         "green",
         "yellow",
-        "red"
+        "red",
+        "purple"
       ],
-      "m": 3,
-      "o": 0,
+      "m": 2,
+      "o": 3,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "SAME",
-      "recolor_color": "purple",
-      "rev_color": "blue",
-      "rid": 56,
+      "recolor_color": "blue",
+      "rev_color": "purple",
+      "rid": 70,
       "rounds": [
-        5,
-        6
+        12,
+        13
       ],
-      "s": 3,
+      "s": 2,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
         "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "purple"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-SR-s3m3-30",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 6
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 4 to purple",
-          "op": "RECOLOR",
-          "round": 5
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "green",
-        "yellow",
-        "red"
-      ],
-      "m": 3,
-      "o": 0,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "purple",
-      "rev_color": "purple",
-      "rid": 57,
-      "rounds": [
-        5,
-        6
-      ],
-      "s": 3,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
       ],
       "subset": "comp",
       "target_color": "blue"
     },
     {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-SS-s0m0-30",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 6
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 1 to orange",
-          "op": "RECOLOR",
-          "round": 7
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "yellow",
-        "green"
-      ],
-      "m": 0,
-      "o": 3,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "orange",
-      "rev_color": "green",
-      "rid": 58,
-      "rounds": [
-        6,
-        7
-      ],
-      "s": 0,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "orange"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "COMP-SR-s0m0-30",
+      "a": 2,
+      "b": 3,
+      "block": "COMP-SR-s2m2-23",
       "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
@@ -2891,42 +3467,42 @@
       ],
       "hist_display": [
         {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 7
+          "round": 13
         },
         {
-          "desc": "a RECOLOR of the token on spot 1 to orange",
+          "desc": "a RECOLOR of the token on spot 3 to blue",
           "op": "RECOLOR",
-          "round": 6
+          "round": 12
         }
       ],
       "init_colors": [
-        "red",
-        "blue",
+        "green",
         "yellow",
-        "green"
+        "red",
+        "purple"
       ],
-      "m": 0,
+      "m": 2,
       "o": 3,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "SAME",
-      "recolor_color": "orange",
-      "rev_color": "orange",
-      "rid": 59,
+      "recolor_color": "blue",
+      "rev_color": "blue",
+      "rid": 71,
       "rounds": [
-        6,
-        7
+        12,
+        13
       ],
-      "s": 0,
+      "s": 2,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
         "SWAP"
       ],
       "subset": "comp",
-      "target_color": "green"
+      "target_color": "purple"
     },
     {
       "a": 3,
@@ -2941,12 +3517,300 @@
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
-          "round": 7
+          "round": 1
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 2
+        }
+      ],
+      "init_colors": [
+        "red",
+        "green",
+        "purple",
+        "blue"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "yellow",
+      "rev_color": "yellow",
+      "rid": 72,
+      "rounds": [
+        1,
+        2
+      ],
+      "s": 3,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "red"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DR-s3m0-30",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 2
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 1
+        }
+      ],
+      "init_colors": [
+        "red",
+        "green",
+        "purple",
+        "blue"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "yellow",
+      "rev_color": "red",
+      "rid": 73,
+      "rounds": [
+        1,
+        2
+      ],
+      "s": 3,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "yellow"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DS-s3m0-30",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 2
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to purple",
+          "op": "RECOLOR",
+          "round": 3
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "green",
+        "yellow",
+        "red"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "purple",
+      "rev_color": "purple",
+      "rid": 74,
+      "rounds": [
+        2,
+        3
+      ],
+      "s": 3,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "blue"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DR-s3m0-30",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 3
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to purple",
+          "op": "RECOLOR",
+          "round": 2
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "green",
+        "yellow",
+        "red"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "purple",
+      "rev_color": "blue",
+      "rid": 75,
+      "rounds": [
+        2,
+        3
+      ],
+      "s": 3,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "purple"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DS-s3m0-30",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 3
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to orange",
+          "op": "RECOLOR",
+          "round": 4
+        }
+      ],
+      "init_colors": [
+        "green",
+        "blue",
+        "yellow",
+        "red"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "orange",
+      "rev_color": "orange",
+      "rid": 76,
+      "rounds": [
+        3,
+        4
+      ],
+      "s": 3,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "comp",
+      "target_color": "green"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DR-s3m0-30",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 4
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to orange",
+          "op": "RECOLOR",
+          "round": 3
+        }
+      ],
+      "init_colors": [
+        "green",
+        "blue",
+        "yellow",
+        "red"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "COMP",
+      "readout_type": "DIFF",
+      "recolor_color": "orange",
+      "rev_color": "green",
+      "rid": 77,
+      "rounds": [
+        3,
+        4
+      ],
+      "s": 3,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "comp",
+      "target_color": "orange"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DS-s3m0-30",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 4
         },
         {
           "desc": "a RECOLOR of the token on spot 1 to red",
           "op": "RECOLOR",
-          "round": 8
+          "round": 5
         }
       ],
       "init_colors": [
@@ -2962,10 +3826,10 @@
       "readout_type": "DIFF",
       "recolor_color": "red",
       "rev_color": "red",
-      "rid": 60,
+      "rid": 78,
       "rounds": [
-        7,
-        8
+        4,
+        5
       ],
       "s": 3,
       "stamp_first": "SWAP",
@@ -2989,12 +3853,12 @@
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
-          "round": 8
+          "round": 5
         },
         {
           "desc": "a RECOLOR of the token on spot 1 to red",
           "op": "RECOLOR",
-          "round": 7
+          "round": 4
         }
       ],
       "init_colors": [
@@ -3010,10 +3874,10 @@
       "readout_type": "DIFF",
       "recolor_color": "red",
       "rev_color": "yellow",
-      "rid": 61,
+      "rid": 79,
       "rounds": [
-        7,
-        8
+        4,
+        5
       ],
       "s": 3,
       "stamp_first": "RECOLOR",
@@ -3027,7 +3891,7 @@
     {
       "a": 3,
       "b": 0,
-      "block": "COMP-DS-s0m3-30",
+      "block": "COMP-DS-s3m0-30",
       "cell_label": "DIFF@S",
       "display_order": [
         "SWAP",
@@ -3037,33 +3901,33 @@
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
-          "round": 8
+          "round": 5
         },
         {
-          "desc": "a RECOLOR of the token on spot 4 to blue",
+          "desc": "a RECOLOR of the token on spot 1 to blue",
           "op": "RECOLOR",
-          "round": 9
+          "round": 6
         }
       ],
       "init_colors": [
-        "red",
+        "purple",
         "green",
         "yellow",
-        "purple"
+        "red"
       ],
-      "m": 3,
-      "o": 3,
+      "m": 0,
+      "o": 0,
       "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
       "recolor_color": "blue",
       "rev_color": "blue",
-      "rid": 62,
+      "rid": 80,
       "rounds": [
-        8,
-        9
+        5,
+        6
       ],
-      "s": 0,
+      "s": 3,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -3075,7 +3939,7 @@
     {
       "a": 3,
       "b": 0,
-      "block": "COMP-DR-s0m3-30",
+      "block": "COMP-DR-s3m0-30",
       "cell_label": "DIFF@R",
       "display_order": [
         "SWAP",
@@ -3085,897 +3949,33 @@
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
-          "round": 9
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 4 to blue",
-          "op": "RECOLOR",
-          "round": 8
-        }
-      ],
-      "init_colors": [
-        "red",
-        "green",
-        "yellow",
-        "purple"
-      ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "blue",
-      "rev_color": "purple",
-      "rid": 63,
-      "rounds": [
-        8,
-        9
-      ],
-      "s": 0,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "blue"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-SS-s0m0-01",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 9
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 1 to green",
-          "op": "RECOLOR",
-          "round": 10
-        }
-      ],
-      "init_colors": [
-        "red",
-        "orange",
-        "blue",
-        "yellow"
-      ],
-      "m": 0,
-      "o": 1,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "green",
-      "rev_color": "orange",
-      "rid": 64,
-      "rounds": [
-        9,
-        10
-      ],
-      "s": 0,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "green"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-SR-s0m0-01",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 10
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 1 to green",
-          "op": "RECOLOR",
-          "round": 9
-        }
-      ],
-      "init_colors": [
-        "red",
-        "orange",
-        "blue",
-        "yellow"
-      ],
-      "m": 0,
-      "o": 1,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "green",
-      "rev_color": "green",
-      "rid": 65,
-      "rounds": [
-        9,
-        10
-      ],
-      "s": 0,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "orange"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-SS-s1m1-01",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 10
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 2 to yellow",
-          "op": "RECOLOR",
-          "round": 11
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "green",
-        "purple"
-      ],
-      "m": 1,
-      "o": 0,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "yellow",
-      "rev_color": "red",
-      "rid": 66,
-      "rounds": [
-        10,
-        11
-      ],
-      "s": 1,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "yellow"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-SR-s1m1-01",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 11
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 2 to yellow",
-          "op": "RECOLOR",
-          "round": 10
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "green",
-        "purple"
-      ],
-      "m": 1,
-      "o": 0,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "yellow",
-      "rev_color": "yellow",
-      "rid": 67,
-      "rounds": [
-        10,
-        11
-      ],
-      "s": 1,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "red"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-DS-s0m1-01",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 11
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 2 to purple",
-          "op": "RECOLOR",
-          "round": 12
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "green",
-        "yellow"
-      ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "purple",
-      "rev_color": "purple",
-      "rid": 68,
-      "rounds": [
-        11,
-        12
-      ],
-      "s": 0,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "blue"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-DR-s0m1-01",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 12
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 2 to purple",
-          "op": "RECOLOR",
-          "round": 11
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "green",
-        "yellow"
-      ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "purple",
-      "rev_color": "blue",
-      "rid": 69,
-      "rounds": [
-        11,
-        12
-      ],
-      "s": 0,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "purple"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-DS-s1m0-01",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 12
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 1 to orange",
-          "op": "RECOLOR",
-          "round": 13
-        }
-      ],
-      "init_colors": [
-        "green",
-        "red",
-        "blue",
-        "yellow"
-      ],
-      "m": 0,
-      "o": 0,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "orange",
-      "rev_color": "orange",
-      "rid": 70,
-      "rounds": [
-        12,
-        13
-      ],
-      "s": 1,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "green"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "COMP-DR-s1m0-01",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 13
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 1 to orange",
-          "op": "RECOLOR",
-          "round": 12
-        }
-      ],
-      "init_colors": [
-        "green",
-        "red",
-        "blue",
-        "yellow"
-      ],
-      "m": 0,
-      "o": 0,
-      "print_swap_first": true,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "orange",
-      "rev_color": "green",
-      "rid": 71,
-      "rounds": [
-        12,
-        13
-      ],
-      "s": 1,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "orange"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SS-s1m1-12",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 2 to red",
-          "op": "RECOLOR",
-          "round": 2
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 1
-        }
-      ],
-      "init_colors": [
-        "green",
-        "blue",
-        "yellow",
-        "purple"
-      ],
-      "m": 1,
-      "o": 2,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "red",
-      "rev_color": "yellow",
-      "rid": 72,
-      "rounds": [
-        1,
-        2
-      ],
-      "s": 1,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "red"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SR-s1m1-12",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 2 to red",
-          "op": "RECOLOR",
-          "round": 1
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 2
-        }
-      ],
-      "init_colors": [
-        "green",
-        "blue",
-        "yellow",
-        "purple"
-      ],
-      "m": 1,
-      "o": 2,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "red",
-      "rev_color": "red",
-      "rid": 73,
-      "rounds": [
-        1,
-        2
-      ],
-      "s": 1,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "yellow"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SS-s2m2-12",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to blue",
-          "op": "RECOLOR",
-          "round": 3
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 2
-        }
-      ],
-      "init_colors": [
-        "green",
-        "purple",
-        "red",
-        "yellow"
-      ],
-      "m": 2,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "blue",
-      "rev_color": "purple",
-      "rid": 74,
-      "rounds": [
-        2,
-        3
-      ],
-      "s": 2,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "blue"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-SR-s2m2-12",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to blue",
-          "op": "RECOLOR",
-          "round": 2
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 3
-        }
-      ],
-      "init_colors": [
-        "green",
-        "purple",
-        "red",
-        "yellow"
-      ],
-      "m": 2,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "blue",
-      "rev_color": "blue",
-      "rid": 75,
-      "rounds": [
-        2,
-        3
-      ],
-      "s": 2,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "purple"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-DS-s1m2-12",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to green",
-          "op": "RECOLOR",
-          "round": 4
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 3
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "red",
-        "orange",
-        "yellow"
-      ],
-      "m": 2,
-      "o": 2,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "green",
-      "rev_color": "green",
-      "rid": 76,
-      "rounds": [
-        3,
-        4
-      ],
-      "s": 1,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "orange"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-DR-s1m2-12",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to green",
-          "op": "RECOLOR",
-          "round": 3
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 4
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "red",
-        "orange",
-        "yellow"
-      ],
-      "m": 2,
-      "o": 2,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "green",
-      "rev_color": "orange",
-      "rid": 77,
-      "rounds": [
-        3,
-        4
-      ],
-      "s": 1,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "green"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-DS-s2m1-12",
-      "cell_label": "DIFF@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 2 to yellow",
-          "op": "RECOLOR",
-          "round": 5
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 4
-        }
-      ],
-      "init_colors": [
-        "green",
-        "red",
-        "blue",
-        "purple"
-      ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
-      "rev_color": "yellow",
-      "rid": 78,
-      "rounds": [
-        4,
-        5
-      ],
-      "s": 2,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "red"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "COMP-DR-s2m1-12",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 2 to yellow",
-          "op": "RECOLOR",
-          "round": 4
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 5
-        }
-      ],
-      "init_colors": [
-        "green",
-        "red",
-        "blue",
-        "purple"
-      ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
-      "rev_color": "red",
-      "rid": 79,
-      "rounds": [
-        4,
-        5
-      ],
-      "s": 2,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "comp",
-      "target_color": "yellow"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-SS-s2m2-23",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to purple",
-          "op": "RECOLOR",
           "round": 6
         },
         {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 5
-        }
-      ],
-      "init_colors": [
-        "green",
-        "yellow",
-        "red",
-        "blue"
-      ],
-      "m": 2,
-      "o": 3,
-      "print_swap_first": false,
-      "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "purple",
-      "rev_color": "blue",
-      "rid": 80,
-      "rounds": [
-        5,
-        6
-      ],
-      "s": 2,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "comp",
-      "target_color": "purple"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-SR-s2m2-23",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "desc": "a RECOLOR of the token on spot 1 to blue",
           "op": "RECOLOR",
           "round": 5
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 6
         }
       ],
       "init_colors": [
+        "purple",
         "green",
         "yellow",
-        "red",
-        "blue"
+        "red"
       ],
-      "m": 2,
-      "o": 3,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "purple",
+      "readout_type": "DIFF",
+      "recolor_color": "blue",
       "rev_color": "purple",
       "rid": 81,
       "rounds": [
         5,
         6
       ],
-      "s": 2,
+      "s": 3,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -3985,38 +3985,38 @@
       "target_color": "blue"
     },
     {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-SS-s3m3-23",
-      "cell_label": "SAME@S",
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DS-s3m0-30",
+      "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 4 to orange",
-          "op": "RECOLOR",
-          "round": 7
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 6
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to green",
+          "op": "RECOLOR",
+          "round": 7
         }
       ],
       "init_colors": [
+        "orange",
         "blue",
         "yellow",
-        "green",
         "red"
       ],
-      "m": 3,
-      "o": 2,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "orange",
+      "readout_type": "DIFF",
+      "recolor_color": "green",
       "rev_color": "green",
       "rid": 82,
       "rounds": [
@@ -4033,38 +4033,38 @@
       "target_color": "orange"
     },
     {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-SR-s3m3-23",
-      "cell_label": "SAME@R",
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DR-s3m0-30",
+      "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 4 to orange",
-          "op": "RECOLOR",
-          "round": 6
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 7
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to green",
+          "op": "RECOLOR",
+          "round": 6
         }
       ],
       "init_colors": [
+        "orange",
         "blue",
         "yellow",
-        "green",
         "red"
       ],
-      "m": 3,
-      "o": 2,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "orange",
+      "readout_type": "DIFF",
+      "recolor_color": "green",
       "rev_color": "orange",
       "rid": 83,
       "rounds": [
@@ -4081,135 +4081,135 @@
       "target_color": "green"
     },
     {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-DS-s2m3-23",
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DS-s3m0-30",
       "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 4 to red",
-          "op": "RECOLOR",
-          "round": 8
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 7
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 8
         }
       ],
       "init_colors": [
+        "red",
         "green",
         "purple",
-        "blue",
-        "yellow"
+        "blue"
       ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
-      "recolor_color": "red",
-      "rev_color": "red",
+      "recolor_color": "yellow",
+      "rev_color": "yellow",
       "rid": 84,
       "rounds": [
         7,
         8
       ],
-      "s": 2,
+      "s": 3,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
         "RECOLOR"
       ],
       "subset": "comp",
-      "target_color": "yellow"
+      "target_color": "red"
     },
     {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-DR-s2m3-23",
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DR-s3m0-30",
       "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 4 to red",
-          "op": "RECOLOR",
-          "round": 7
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 7
         }
       ],
       "init_colors": [
+        "red",
         "green",
         "purple",
-        "blue",
-        "yellow"
+        "blue"
       ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
-      "recolor_color": "red",
-      "rev_color": "yellow",
+      "recolor_color": "yellow",
+      "rev_color": "red",
       "rid": 85,
       "rounds": [
         7,
         8
       ],
-      "s": 2,
+      "s": 3,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
         "SWAP"
       ],
       "subset": "comp",
-      "target_color": "red"
+      "target_color": "yellow"
     },
     {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-DS-s3m2-23",
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DS-s3m0-30",
       "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 3 to blue",
-          "op": "RECOLOR",
-          "round": 9
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to purple",
+          "op": "RECOLOR",
+          "round": 9
         }
       ],
       "init_colors": [
+        "blue",
         "green",
         "yellow",
-        "purple",
         "red"
       ],
-      "m": 2,
-      "o": 2,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
-      "recolor_color": "blue",
-      "rev_color": "blue",
+      "recolor_color": "purple",
+      "rev_color": "purple",
       "rid": 86,
       "rounds": [
         8,
@@ -4222,42 +4222,42 @@
         "RECOLOR"
       ],
       "subset": "comp",
-      "target_color": "purple"
+      "target_color": "blue"
     },
     {
-      "a": 2,
-      "b": 3,
-      "block": "COMP-DR-s3m2-23",
+      "a": 3,
+      "b": 0,
+      "block": "COMP-DR-s3m0-30",
       "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 3 to blue",
-          "op": "RECOLOR",
-          "round": 8
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 9
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to purple",
+          "op": "RECOLOR",
+          "round": 8
         }
       ],
       "init_colors": [
+        "blue",
         "green",
         "yellow",
-        "purple",
         "red"
       ],
-      "m": 2,
-      "o": 2,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
-      "recolor_color": "blue",
-      "rev_color": "purple",
+      "recolor_color": "purple",
+      "rev_color": "blue",
       "rid": 87,
       "rounds": [
         8,
@@ -4270,41 +4270,41 @@
         "SWAP"
       ],
       "subset": "comp",
-      "target_color": "blue"
+      "target_color": "purple"
     },
     {
       "a": 3,
       "b": 0,
-      "block": "COMP-SS-s3m3-30",
-      "cell_label": "SAME@S",
+      "block": "COMP-DS-s3m0-30",
+      "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 4 to green",
-          "op": "RECOLOR",
-          "round": 10
-        },
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 9
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to orange",
+          "op": "RECOLOR",
+          "round": 10
         }
       ],
       "init_colors": [
-        "orange",
+        "green",
         "blue",
         "yellow",
         "red"
       ],
-      "m": 3,
+      "m": 0,
       "o": 0,
-      "print_swap_first": false,
+      "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "green",
+      "readout_type": "DIFF",
+      "recolor_color": "orange",
       "rev_color": "orange",
       "rid": 88,
       "rounds": [
@@ -4323,36 +4323,36 @@
     {
       "a": 3,
       "b": 0,
-      "block": "COMP-SR-s3m3-30",
-      "cell_label": "SAME@R",
+      "block": "COMP-DR-s3m0-30",
+      "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 4 to green",
-          "op": "RECOLOR",
-          "round": 9
-        },
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to orange",
+          "op": "RECOLOR",
+          "round": 9
         }
       ],
       "init_colors": [
-        "orange",
+        "green",
         "blue",
         "yellow",
         "red"
       ],
-      "m": 3,
+      "m": 0,
       "o": 0,
-      "print_swap_first": false,
+      "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "green",
+      "readout_type": "DIFF",
+      "recolor_color": "orange",
       "rev_color": "green",
       "rid": 89,
       "rounds": [
@@ -4371,43 +4371,43 @@
     {
       "a": 3,
       "b": 0,
-      "block": "COMP-SS-s0m0-30",
-      "cell_label": "SAME@S",
+      "block": "COMP-DS-s3m0-30",
+      "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to yellow",
-          "op": "RECOLOR",
-          "round": 11
-        },
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to red",
+          "op": "RECOLOR",
+          "round": 11
         }
       ],
       "init_colors": [
-        "blue",
+        "yellow",
         "green",
         "purple",
-        "red"
+        "blue"
       ],
       "m": 0,
-      "o": 3,
-      "print_swap_first": false,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "yellow",
+      "readout_type": "DIFF",
+      "recolor_color": "red",
       "rev_color": "red",
       "rid": 90,
       "rounds": [
         10,
         11
       ],
-      "s": 0,
+      "s": 3,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -4419,43 +4419,43 @@
     {
       "a": 3,
       "b": 0,
-      "block": "COMP-SR-s0m0-30",
-      "cell_label": "SAME@R",
+      "block": "COMP-DR-s3m0-30",
+      "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to yellow",
-          "op": "RECOLOR",
-          "round": 10
-        },
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 11
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to red",
+          "op": "RECOLOR",
+          "round": 10
         }
       ],
       "init_colors": [
-        "blue",
+        "yellow",
         "green",
         "purple",
-        "red"
+        "blue"
       ],
       "m": 0,
-      "o": 3,
-      "print_swap_first": false,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
-      "readout_type": "SAME",
-      "recolor_color": "yellow",
+      "readout_type": "DIFF",
+      "recolor_color": "red",
       "rev_color": "yellow",
       "rid": 91,
       "rounds": [
         10,
         11
       ],
-      "s": 0,
+      "s": 3,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -4470,34 +4470,34 @@
       "block": "COMP-DS-s3m0-30",
       "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to purple",
-          "op": "RECOLOR",
-          "round": 12
-        },
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 11
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to blue",
+          "op": "RECOLOR",
+          "round": 12
         }
       ],
       "init_colors": [
-        "blue",
+        "purple",
         "green",
         "yellow",
         "red"
       ],
       "m": 0,
       "o": 0,
-      "print_swap_first": false,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
-      "recolor_color": "purple",
-      "rev_color": "purple",
+      "recolor_color": "blue",
+      "rev_color": "blue",
       "rid": 92,
       "rounds": [
         11,
@@ -4510,7 +4510,7 @@
         "RECOLOR"
       ],
       "subset": "comp",
-      "target_color": "blue"
+      "target_color": "purple"
     },
     {
       "a": 3,
@@ -4518,34 +4518,34 @@
       "block": "COMP-DR-s3m0-30",
       "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to purple",
-          "op": "RECOLOR",
-          "round": 11
-        },
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 12
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to blue",
+          "op": "RECOLOR",
+          "round": 11
         }
       ],
       "init_colors": [
-        "blue",
+        "purple",
         "green",
         "yellow",
         "red"
       ],
       "m": 0,
       "o": 0,
-      "print_swap_first": false,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
-      "recolor_color": "purple",
-      "rev_color": "blue",
+      "recolor_color": "blue",
+      "rev_color": "purple",
       "rid": 93,
       "rounds": [
         11,
@@ -4558,103 +4558,103 @@
         "SWAP"
       ],
       "subset": "comp",
-      "target_color": "purple"
+      "target_color": "blue"
     },
     {
       "a": 3,
       "b": 0,
-      "block": "COMP-DS-s0m3-30",
+      "block": "COMP-DS-s3m0-30",
       "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 4 to orange",
-          "op": "RECOLOR",
-          "round": 13
-        },
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 12
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to green",
+          "op": "RECOLOR",
+          "round": 13
         }
       ],
       "init_colors": [
-        "red",
+        "orange",
         "blue",
         "yellow",
-        "green"
+        "red"
       ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
-      "recolor_color": "orange",
-      "rev_color": "orange",
+      "recolor_color": "green",
+      "rev_color": "green",
       "rid": 94,
       "rounds": [
         12,
         13
       ],
-      "s": 0,
+      "s": 3,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
         "RECOLOR"
       ],
       "subset": "comp",
-      "target_color": "green"
+      "target_color": "orange"
     },
     {
       "a": 3,
       "b": 0,
-      "block": "COMP-DR-s0m3-30",
+      "block": "COMP-DR-s3m0-30",
       "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 4 to orange",
-          "op": "RECOLOR",
-          "round": 12
-        },
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
           "round": 13
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to green",
+          "op": "RECOLOR",
+          "round": 12
         }
       ],
       "init_colors": [
-        "red",
+        "orange",
         "blue",
         "yellow",
-        "green"
+        "red"
       ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "COMP",
       "readout_type": "DIFF",
-      "recolor_color": "orange",
-      "rev_color": "green",
+      "recolor_color": "green",
+      "rev_color": "orange",
       "rid": 95,
       "rounds": [
         12,
         13
       ],
-      "s": 0,
+      "s": 3,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
         "SWAP"
       ],
       "subset": "comp",
-      "target_color": "orange"
+      "target_color": "green"
     },
     {
       "a": 0,
@@ -4669,12 +4669,12 @@
         {
           "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
-          "round": 5
+          "round": 1
         },
         {
           "desc": "a RECOLOR of the token on spot 1 to red",
           "op": "RECOLOR",
-          "round": 6
+          "round": 2
         }
       ],
       "init_colors": [
@@ -4692,8 +4692,8 @@
       "rev_color": "yellow",
       "rid": 96,
       "rounds": [
-        5,
-        6
+        1,
+        2
       ],
       "s": 0,
       "stamp_first": "SWAP",
@@ -4717,12 +4717,12 @@
         {
           "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
-          "round": 6
+          "round": 2
         },
         {
           "desc": "a RECOLOR of the token on spot 1 to red",
           "op": "RECOLOR",
-          "round": 5
+          "round": 1
         }
       ],
       "init_colors": [
@@ -4740,8 +4740,8 @@
       "rev_color": "red",
       "rid": 97,
       "rounds": [
-        5,
-        6
+        1,
+        2
       ],
       "s": 0,
       "stamp_first": "RECOLOR",
@@ -4755,43 +4755,43 @@
     {
       "a": 0,
       "b": 1,
-      "block": "DIRE-SS-s1m1-01",
+      "block": "DIRE-SS-s0m0-01",
       "cell_label": "SAME@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 2 to blue",
-          "op": "RECOLOR",
-          "round": 7
-        },
-        {
           "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
-          "round": 6
+          "round": 2
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to blue",
+          "op": "RECOLOR",
+          "round": 3
         }
       ],
       "init_colors": [
-        "purple",
         "red",
+        "purple",
         "green",
         "yellow"
       ],
-      "m": 1,
-      "o": 0,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "SAME",
       "recolor_color": "blue",
       "rev_color": "purple",
       "rid": 98,
       "rounds": [
-        6,
-        7
+        2,
+        3
       ],
-      "s": 1,
+      "s": 0,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -4803,43 +4803,43 @@
     {
       "a": 0,
       "b": 1,
-      "block": "DIRE-SR-s1m1-01",
+      "block": "DIRE-SR-s0m0-01",
       "cell_label": "SAME@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 2 to blue",
-          "op": "RECOLOR",
-          "round": 6
-        },
-        {
           "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
-          "round": 7
+          "round": 3
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to blue",
+          "op": "RECOLOR",
+          "round": 2
         }
       ],
       "init_colors": [
-        "purple",
         "red",
+        "purple",
         "green",
         "yellow"
       ],
-      "m": 1,
-      "o": 0,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "SAME",
       "recolor_color": "blue",
       "rev_color": "blue",
       "rid": 99,
       "rounds": [
-        6,
-        7
+        2,
+        3
       ],
-      "s": 1,
+      "s": 0,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -4851,8 +4851,8 @@
     {
       "a": 0,
       "b": 1,
-      "block": "DIRE-DS-s0m1-01",
-      "cell_label": "DIFF@S",
+      "block": "DIRE-SS-s0m0-01",
+      "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
         "RECOLOR"
@@ -4861,12 +4861,12 @@
         {
           "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
-          "round": 7
+          "round": 3
         },
         {
-          "desc": "a RECOLOR of the token on spot 2 to green",
+          "desc": "a RECOLOR of the token on spot 1 to green",
           "op": "RECOLOR",
-          "round": 8
+          "round": 4
         }
       ],
       "init_colors": [
@@ -4875,71 +4875,23 @@
         "blue",
         "yellow"
       ],
-      "m": 1,
+      "m": 0,
       "o": 1,
       "print_swap_first": true,
       "query": "DIRECT",
-      "readout_type": "DIFF",
+      "readout_type": "SAME",
       "recolor_color": "green",
-      "rev_color": "green",
+      "rev_color": "orange",
       "rid": 100,
       "rounds": [
-        7,
-        8
+        3,
+        4
       ],
       "s": 0,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
         "RECOLOR"
-      ],
-      "subset": "direct",
-      "target_color": "orange"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "DIRE-DR-s0m1-01",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 8
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 2 to green",
-          "op": "RECOLOR",
-          "round": 7
-        }
-      ],
-      "init_colors": [
-        "red",
-        "orange",
-        "blue",
-        "yellow"
-      ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": true,
-      "query": "DIRECT",
-      "readout_type": "DIFF",
-      "recolor_color": "green",
-      "rev_color": "orange",
-      "rid": 101,
-      "rounds": [
-        7,
-        8
-      ],
-      "s": 0,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
       ],
       "subset": "direct",
       "target_color": "green"
@@ -4947,151 +4899,103 @@
     {
       "a": 0,
       "b": 1,
-      "block": "DIRE-DS-s1m0-01",
-      "cell_label": "DIFF@S",
+      "block": "DIRE-SR-s0m0-01",
+      "cell_label": "SAME@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to yellow",
-          "op": "RECOLOR",
-          "round": 9
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 1 and spot 2",
-          "op": "SWAP",
-          "round": 8
-        }
-      ],
-      "init_colors": [
-        "red",
-        "blue",
-        "green",
-        "purple"
-      ],
-      "m": 0,
-      "o": 0,
-      "print_swap_first": false,
-      "query": "DIRECT",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
-      "rev_color": "yellow",
-      "rid": 102,
-      "rounds": [
-        8,
-        9
-      ],
-      "s": 1,
-      "stamp_first": "SWAP",
-      "stamp_order": [
         "SWAP",
         "RECOLOR"
       ],
-      "subset": "direct",
-      "target_color": "red"
-    },
-    {
-      "a": 0,
-      "b": 1,
-      "block": "DIRE-DR-s1m0-01",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to yellow",
-          "op": "RECOLOR",
-          "round": 8
-        },
         {
           "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
-          "round": 9
+          "round": 4
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to green",
+          "op": "RECOLOR",
+          "round": 3
         }
       ],
       "init_colors": [
         "red",
+        "orange",
         "blue",
-        "green",
-        "purple"
+        "yellow"
       ],
       "m": 0,
-      "o": 0,
-      "print_swap_first": false,
+      "o": 1,
+      "print_swap_first": true,
       "query": "DIRECT",
-      "readout_type": "DIFF",
-      "recolor_color": "yellow",
-      "rev_color": "red",
-      "rid": 103,
+      "readout_type": "SAME",
+      "recolor_color": "green",
+      "rev_color": "green",
+      "rid": 101,
       "rounds": [
-        8,
-        9
+        3,
+        4
       ],
-      "s": 1,
+      "s": 0,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
         "SWAP"
+      ],
+      "subset": "direct",
+      "target_color": "orange"
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "block": "DIRE-SS-s0m0-01",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
+          "op": "SWAP",
+          "round": 4
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 5
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "green",
+        "purple"
+      ],
+      "m": 0,
+      "o": 1,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "SAME",
+      "recolor_color": "yellow",
+      "rev_color": "red",
+      "rid": 102,
+      "rounds": [
+        4,
+        5
+      ],
+      "s": 0,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
       ],
       "subset": "direct",
       "target_color": "yellow"
     },
     {
-      "a": 1,
-      "b": 2,
-      "block": "DIRE-SS-s1m1-12",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 9
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 2 to purple",
-          "op": "RECOLOR",
-          "round": 10
-        }
-      ],
-      "init_colors": [
-        "green",
-        "red",
-        "blue",
-        "yellow"
-      ],
-      "m": 1,
-      "o": 2,
-      "print_swap_first": true,
-      "query": "DIRECT",
-      "readout_type": "SAME",
-      "recolor_color": "purple",
-      "rev_color": "blue",
-      "rid": 104,
-      "rounds": [
-        9,
-        10
-      ],
-      "s": 1,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "direct",
-      "target_color": "purple"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "DIRE-SR-s1m1-12",
+      "a": 0,
+      "b": 1,
+      "block": "DIRE-SR-s0m0-01",
       "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
@@ -5099,138 +5003,42 @@
       ],
       "hist_display": [
         {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "desc": "a SWAP of the tokens on spot 1 and spot 2",
           "op": "SWAP",
-          "round": 10
+          "round": 5
         },
         {
-          "desc": "a RECOLOR of the token on spot 2 to purple",
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
           "op": "RECOLOR",
-          "round": 9
+          "round": 4
         }
       ],
       "init_colors": [
-        "green",
-        "red",
         "blue",
-        "yellow"
+        "red",
+        "green",
+        "purple"
       ],
-      "m": 1,
-      "o": 2,
+      "m": 0,
+      "o": 1,
       "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "SAME",
-      "recolor_color": "purple",
-      "rev_color": "purple",
-      "rid": 105,
+      "recolor_color": "yellow",
+      "rev_color": "yellow",
+      "rid": 103,
       "rounds": [
-        9,
-        10
+        4,
+        5
       ],
-      "s": 1,
+      "s": 0,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
         "SWAP"
       ],
       "subset": "direct",
-      "target_color": "blue"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "DIRE-SS-s2m2-12",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to orange",
-          "op": "RECOLOR",
-          "round": 11
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 10
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "green",
-        "red",
-        "yellow"
-      ],
-      "m": 2,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "DIRECT",
-      "readout_type": "SAME",
-      "recolor_color": "orange",
-      "rev_color": "green",
-      "rid": 106,
-      "rounds": [
-        10,
-        11
-      ],
-      "s": 2,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "direct",
-      "target_color": "orange"
-    },
-    {
-      "a": 1,
-      "b": 2,
-      "block": "DIRE-SR-s2m2-12",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to orange",
-          "op": "RECOLOR",
-          "round": 10
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 2 and spot 3",
-          "op": "SWAP",
-          "round": 11
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "green",
-        "red",
-        "yellow"
-      ],
-      "m": 2,
-      "o": 1,
-      "print_swap_first": false,
-      "query": "DIRECT",
-      "readout_type": "SAME",
-      "recolor_color": "orange",
-      "rev_color": "orange",
-      "rid": 107,
-      "rounds": [
-        10,
-        11
-      ],
-      "s": 2,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "direct",
-      "target_color": "green"
+      "target_color": "red"
     },
     {
       "a": 1,
@@ -5245,12 +5053,204 @@
         {
           "desc": "a SWAP of the tokens on spot 2 and spot 3",
           "op": "SWAP",
-          "round": 11
+          "round": 4
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 5
+        }
+      ],
+      "init_colors": [
+        "green",
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "DIFF",
+      "recolor_color": "purple",
+      "rev_color": "purple",
+      "rid": 104,
+      "rounds": [
+        4,
+        5
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "direct",
+      "target_color": "blue"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "DIRE-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 5
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 4
+        }
+      ],
+      "init_colors": [
+        "green",
+        "red",
+        "blue",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "DIFF",
+      "recolor_color": "purple",
+      "rev_color": "blue",
+      "rid": 105,
+      "rounds": [
+        4,
+        5
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "direct",
+      "target_color": "purple"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "DIRE-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 5
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
+          "round": 6
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "green",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "DIFF",
+      "recolor_color": "orange",
+      "rev_color": "orange",
+      "rid": 106,
+      "rounds": [
+        5,
+        6
+      ],
+      "s": 1,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "direct",
+      "target_color": "green"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "DIRE-DR-s1m2-12",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 6
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
+          "round": 5
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "red",
+        "green",
+        "yellow"
+      ],
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "DIFF",
+      "recolor_color": "orange",
+      "rev_color": "green",
+      "rid": 107,
+      "rounds": [
+        5,
+        6
+      ],
+      "s": 1,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "direct",
+      "target_color": "orange"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "block": "DIRE-DS-s1m2-12",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 2 and spot 3",
+          "op": "SWAP",
+          "round": 6
         },
         {
           "desc": "a RECOLOR of the token on spot 3 to red",
           "op": "RECOLOR",
-          "round": 12
+          "round": 7
         }
       ],
       "init_colors": [
@@ -5268,8 +5268,8 @@
       "rev_color": "red",
       "rid": 108,
       "rounds": [
-        11,
-        12
+        6,
+        7
       ],
       "s": 1,
       "stamp_first": "SWAP",
@@ -5293,12 +5293,12 @@
         {
           "desc": "a SWAP of the tokens on spot 2 and spot 3",
           "op": "SWAP",
-          "round": 12
+          "round": 7
         },
         {
           "desc": "a RECOLOR of the token on spot 3 to red",
           "op": "RECOLOR",
-          "round": 11
+          "round": 6
         }
       ],
       "init_colors": [
@@ -5316,8 +5316,8 @@
       "rev_color": "yellow",
       "rid": 109,
       "rounds": [
-        11,
-        12
+        6,
+        7
       ],
       "s": 1,
       "stamp_first": "RECOLOR",
@@ -5331,43 +5331,43 @@
     {
       "a": 1,
       "b": 2,
-      "block": "DIRE-DS-s2m1-12",
+      "block": "DIRE-DS-s1m2-12",
       "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 2 to blue",
-          "op": "RECOLOR",
-          "round": 13
-        },
-        {
           "desc": "a SWAP of the tokens on spot 2 and spot 3",
           "op": "SWAP",
-          "round": 12
+          "round": 7
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to blue",
+          "op": "RECOLOR",
+          "round": 8
         }
       ],
       "init_colors": [
         "green",
-        "purple",
         "red",
+        "purple",
         "yellow"
       ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": false,
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "DIFF",
       "recolor_color": "blue",
       "rev_color": "blue",
       "rid": 110,
       "rounds": [
-        12,
-        13
+        7,
+        8
       ],
-      "s": 2,
+      "s": 1,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -5379,43 +5379,43 @@
     {
       "a": 1,
       "b": 2,
-      "block": "DIRE-DR-s2m1-12",
+      "block": "DIRE-DR-s1m2-12",
       "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 2 to blue",
-          "op": "RECOLOR",
-          "round": 12
-        },
-        {
           "desc": "a SWAP of the tokens on spot 2 and spot 3",
           "op": "SWAP",
-          "round": 13
+          "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to blue",
+          "op": "RECOLOR",
+          "round": 7
         }
       ],
       "init_colors": [
         "green",
-        "purple",
         "red",
+        "purple",
         "yellow"
       ],
-      "m": 1,
-      "o": 1,
-      "print_swap_first": false,
+      "m": 2,
+      "o": 2,
+      "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "DIFF",
       "recolor_color": "blue",
       "rev_color": "purple",
       "rid": 111,
       "rounds": [
-        12,
-        13
+        7,
+        8
       ],
-      "s": 2,
+      "s": 1,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -5437,12 +5437,12 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 1
+          "round": 7
         },
         {
           "desc": "a RECOLOR of the token on spot 3 to green",
           "op": "RECOLOR",
-          "round": 2
+          "round": 8
         }
       ],
       "init_colors": [
@@ -5460,8 +5460,8 @@
       "rev_color": "orange",
       "rid": 112,
       "rounds": [
-        1,
-        2
+        7,
+        8
       ],
       "s": 2,
       "stamp_first": "SWAP",
@@ -5485,12 +5485,12 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 2
+          "round": 8
         },
         {
           "desc": "a RECOLOR of the token on spot 3 to green",
           "op": "RECOLOR",
-          "round": 1
+          "round": 7
         }
       ],
       "init_colors": [
@@ -5508,8 +5508,8 @@
       "rev_color": "green",
       "rid": 113,
       "rounds": [
-        1,
-        2
+        7,
+        8
       ],
       "s": 2,
       "stamp_first": "RECOLOR",
@@ -5523,43 +5523,43 @@
     {
       "a": 2,
       "b": 3,
-      "block": "DIRE-SS-s3m3-23",
+      "block": "DIRE-SS-s2m2-23",
       "cell_label": "SAME@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 4 to yellow",
-          "op": "RECOLOR",
-          "round": 3
-        },
-        {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 2
+          "round": 8
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 9
         }
       ],
       "init_colors": [
         "green",
         "purple",
-        "red",
-        "blue"
+        "blue",
+        "red"
       ],
-      "m": 3,
-      "o": 2,
-      "print_swap_first": false,
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "SAME",
       "recolor_color": "yellow",
       "rev_color": "red",
       "rid": 114,
       "rounds": [
-        2,
-        3
+        8,
+        9
       ],
-      "s": 3,
+      "s": 2,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -5571,43 +5571,43 @@
     {
       "a": 2,
       "b": 3,
-      "block": "DIRE-SR-s3m3-23",
+      "block": "DIRE-SR-s2m2-23",
       "cell_label": "SAME@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 4 to yellow",
-          "op": "RECOLOR",
-          "round": 2
-        },
-        {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 3
+          "round": 9
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to yellow",
+          "op": "RECOLOR",
+          "round": 8
         }
       ],
       "init_colors": [
         "green",
         "purple",
-        "red",
-        "blue"
+        "blue",
+        "red"
       ],
-      "m": 3,
-      "o": 2,
-      "print_swap_first": false,
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "SAME",
       "recolor_color": "yellow",
       "rev_color": "yellow",
       "rid": 115,
       "rounds": [
-        2,
-        3
+        8,
+        9
       ],
-      "s": 3,
+      "s": 2,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
@@ -5619,8 +5619,8 @@
     {
       "a": 2,
       "b": 3,
-      "block": "DIRE-DS-s2m3-23",
-      "cell_label": "DIFF@S",
+      "block": "DIRE-SS-s2m2-23",
+      "cell_label": "SAME@S",
       "display_order": [
         "SWAP",
         "RECOLOR"
@@ -5629,12 +5629,12 @@
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 3
+          "round": 9
         },
         {
-          "desc": "a RECOLOR of the token on spot 4 to purple",
+          "desc": "a RECOLOR of the token on spot 3 to purple",
           "op": "RECOLOR",
-          "round": 4
+          "round": 10
         }
       ],
       "init_colors": [
@@ -5643,71 +5643,23 @@
         "red",
         "blue"
       ],
-      "m": 3,
+      "m": 2,
       "o": 3,
       "print_swap_first": true,
       "query": "DIRECT",
-      "readout_type": "DIFF",
+      "readout_type": "SAME",
       "recolor_color": "purple",
-      "rev_color": "purple",
+      "rev_color": "blue",
       "rid": 116,
       "rounds": [
-        3,
-        4
+        9,
+        10
       ],
       "s": 2,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
         "RECOLOR"
-      ],
-      "subset": "direct",
-      "target_color": "blue"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "DIRE-DR-s2m3-23",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 4
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 4 to purple",
-          "op": "RECOLOR",
-          "round": 3
-        }
-      ],
-      "init_colors": [
-        "green",
-        "yellow",
-        "red",
-        "blue"
-      ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": true,
-      "query": "DIRECT",
-      "readout_type": "DIFF",
-      "recolor_color": "purple",
-      "rev_color": "blue",
-      "rid": 117,
-      "rounds": [
-        3,
-        4
-      ],
-      "s": 2,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
       ],
       "subset": "direct",
       "target_color": "purple"
@@ -5715,151 +5667,103 @@
     {
       "a": 2,
       "b": 3,
-      "block": "DIRE-DS-s3m2-23",
-      "cell_label": "DIFF@S",
+      "block": "DIRE-SR-s2m2-23",
+      "cell_label": "SAME@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to orange",
-          "op": "RECOLOR",
-          "round": 5
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 3 and spot 4",
-          "op": "SWAP",
-          "round": 4
-        }
-      ],
-      "init_colors": [
-        "blue",
-        "yellow",
-        "green",
-        "red"
-      ],
-      "m": 2,
-      "o": 2,
-      "print_swap_first": false,
-      "query": "DIRECT",
-      "readout_type": "DIFF",
-      "recolor_color": "orange",
-      "rev_color": "orange",
-      "rid": 118,
-      "rounds": [
-        4,
-        5
-      ],
-      "s": 3,
-      "stamp_first": "SWAP",
-      "stamp_order": [
         "SWAP",
         "RECOLOR"
       ],
-      "subset": "direct",
-      "target_color": "green"
-    },
-    {
-      "a": 2,
-      "b": 3,
-      "block": "DIRE-DR-s3m2-23",
-      "cell_label": "DIFF@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
       "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 3 to orange",
-          "op": "RECOLOR",
-          "round": 4
-        },
         {
           "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 5
+          "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to purple",
+          "op": "RECOLOR",
+          "round": 9
         }
       ],
       "init_colors": [
-        "blue",
-        "yellow",
         "green",
-        "red"
+        "yellow",
+        "red",
+        "blue"
       ],
       "m": 2,
-      "o": 2,
-      "print_swap_first": false,
+      "o": 3,
+      "print_swap_first": true,
       "query": "DIRECT",
-      "readout_type": "DIFF",
-      "recolor_color": "orange",
-      "rev_color": "green",
-      "rid": 119,
+      "readout_type": "SAME",
+      "recolor_color": "purple",
+      "rev_color": "purple",
+      "rid": 117,
       "rounds": [
-        4,
-        5
+        9,
+        10
       ],
-      "s": 3,
+      "s": 2,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
         "SWAP"
+      ],
+      "subset": "direct",
+      "target_color": "blue"
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "block": "DIRE-SS-s2m2-23",
+      "cell_label": "SAME@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
+          "op": "SWAP",
+          "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 3 to orange",
+          "op": "RECOLOR",
+          "round": 11
+        }
+      ],
+      "init_colors": [
+        "blue",
+        "yellow",
+        "red",
+        "green"
+      ],
+      "m": 2,
+      "o": 3,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "SAME",
+      "recolor_color": "orange",
+      "rev_color": "green",
+      "rid": 118,
+      "rounds": [
+        10,
+        11
+      ],
+      "s": 2,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
       ],
       "subset": "direct",
       "target_color": "orange"
     },
     {
-      "a": 3,
-      "b": 0,
-      "block": "DIRE-SS-s3m3-30",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "hist_display": [
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 5
-        },
-        {
-          "desc": "a RECOLOR of the token on spot 4 to red",
-          "op": "RECOLOR",
-          "round": 6
-        }
-      ],
-      "init_colors": [
-        "yellow",
-        "green",
-        "purple",
-        "blue"
-      ],
-      "m": 3,
-      "o": 0,
-      "print_swap_first": true,
-      "query": "DIRECT",
-      "readout_type": "SAME",
-      "recolor_color": "red",
-      "rev_color": "yellow",
-      "rid": 120,
-      "rounds": [
-        5,
-        6
-      ],
-      "s": 3,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "direct",
-      "target_color": "red"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "DIRE-SR-s3m3-30",
+      "a": 2,
+      "b": 3,
+      "block": "DIRE-SR-s2m2-23",
       "cell_label": "SAME@R",
       "display_order": [
         "SWAP",
@@ -5867,138 +5771,42 @@
       ],
       "hist_display": [
         {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "desc": "a SWAP of the tokens on spot 3 and spot 4",
           "op": "SWAP",
-          "round": 6
+          "round": 11
         },
         {
-          "desc": "a RECOLOR of the token on spot 4 to red",
+          "desc": "a RECOLOR of the token on spot 3 to orange",
           "op": "RECOLOR",
-          "round": 5
+          "round": 10
         }
       ],
       "init_colors": [
+        "blue",
         "yellow",
-        "green",
-        "purple",
-        "blue"
+        "red",
+        "green"
       ],
-      "m": 3,
-      "o": 0,
+      "m": 2,
+      "o": 3,
       "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "SAME",
-      "recolor_color": "red",
-      "rev_color": "red",
-      "rid": 121,
+      "recolor_color": "orange",
+      "rev_color": "orange",
+      "rid": 119,
       "rounds": [
-        5,
-        6
+        10,
+        11
       ],
-      "s": 3,
+      "s": 2,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",
         "SWAP"
       ],
       "subset": "direct",
-      "target_color": "yellow"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "DIRE-SS-s0m0-30",
-      "cell_label": "SAME@S",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to blue",
-          "op": "RECOLOR",
-          "round": 7
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 6
-        }
-      ],
-      "init_colors": [
-        "red",
-        "green",
-        "yellow",
-        "purple"
-      ],
-      "m": 0,
-      "o": 3,
-      "print_swap_first": false,
-      "query": "DIRECT",
-      "readout_type": "SAME",
-      "recolor_color": "blue",
-      "rev_color": "purple",
-      "rid": 122,
-      "rounds": [
-        6,
-        7
-      ],
-      "s": 0,
-      "stamp_first": "SWAP",
-      "stamp_order": [
-        "SWAP",
-        "RECOLOR"
-      ],
-      "subset": "direct",
-      "target_color": "blue"
-    },
-    {
-      "a": 3,
-      "b": 0,
-      "block": "DIRE-SR-s0m0-30",
-      "cell_label": "SAME@R",
-      "display_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "hist_display": [
-        {
-          "desc": "a RECOLOR of the token on spot 1 to blue",
-          "op": "RECOLOR",
-          "round": 6
-        },
-        {
-          "desc": "a SWAP of the tokens on spot 4 and spot 1",
-          "op": "SWAP",
-          "round": 7
-        }
-      ],
-      "init_colors": [
-        "red",
-        "green",
-        "yellow",
-        "purple"
-      ],
-      "m": 0,
-      "o": 3,
-      "print_swap_first": false,
-      "query": "DIRECT",
-      "readout_type": "SAME",
-      "recolor_color": "blue",
-      "rev_color": "blue",
-      "rid": 123,
-      "rounds": [
-        6,
-        7
-      ],
-      "s": 0,
-      "stamp_first": "RECOLOR",
-      "stamp_order": [
-        "RECOLOR",
-        "SWAP"
-      ],
-      "subset": "direct",
-      "target_color": "purple"
+      "target_color": "green"
     },
     {
       "a": 3,
@@ -6013,12 +5821,204 @@
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
-          "round": 7
+          "round": 10
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to red",
+          "op": "RECOLOR",
+          "round": 11
+        }
+      ],
+      "init_colors": [
+        "yellow",
+        "green",
+        "purple",
+        "blue"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "DIFF",
+      "recolor_color": "red",
+      "rev_color": "red",
+      "rid": 120,
+      "rounds": [
+        10,
+        11
+      ],
+      "s": 3,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "direct",
+      "target_color": "yellow"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "DIRE-DR-s3m0-30",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 11
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to red",
+          "op": "RECOLOR",
+          "round": 10
+        }
+      ],
+      "init_colors": [
+        "yellow",
+        "green",
+        "purple",
+        "blue"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "DIFF",
+      "recolor_color": "red",
+      "rev_color": "yellow",
+      "rid": 121,
+      "rounds": [
+        10,
+        11
+      ],
+      "s": 3,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "direct",
+      "target_color": "red"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "DIRE-DS-s3m0-30",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 11
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to blue",
+          "op": "RECOLOR",
+          "round": 12
+        }
+      ],
+      "init_colors": [
+        "purple",
+        "green",
+        "yellow",
+        "red"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "DIFF",
+      "recolor_color": "blue",
+      "rev_color": "blue",
+      "rid": 122,
+      "rounds": [
+        11,
+        12
+      ],
+      "s": 3,
+      "stamp_first": "SWAP",
+      "stamp_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "subset": "direct",
+      "target_color": "purple"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "DIRE-DR-s3m0-30",
+      "cell_label": "DIFF@R",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 12
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to blue",
+          "op": "RECOLOR",
+          "round": 11
+        }
+      ],
+      "init_colors": [
+        "purple",
+        "green",
+        "yellow",
+        "red"
+      ],
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
+      "query": "DIRECT",
+      "readout_type": "DIFF",
+      "recolor_color": "blue",
+      "rev_color": "purple",
+      "rid": 123,
+      "rounds": [
+        11,
+        12
+      ],
+      "s": 3,
+      "stamp_first": "RECOLOR",
+      "stamp_order": [
+        "RECOLOR",
+        "SWAP"
+      ],
+      "subset": "direct",
+      "target_color": "blue"
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "block": "DIRE-DS-s3m0-30",
+      "cell_label": "DIFF@S",
+      "display_order": [
+        "SWAP",
+        "RECOLOR"
+      ],
+      "hist_display": [
+        {
+          "desc": "a SWAP of the tokens on spot 4 and spot 1",
+          "op": "SWAP",
+          "round": 12
         },
         {
           "desc": "a RECOLOR of the token on spot 1 to green",
           "op": "RECOLOR",
-          "round": 8
+          "round": 13
         }
       ],
       "init_colors": [
@@ -6036,8 +6036,8 @@
       "rev_color": "green",
       "rid": 124,
       "rounds": [
-        7,
-        8
+        12,
+        13
       ],
       "s": 3,
       "stamp_first": "SWAP",
@@ -6061,12 +6061,12 @@
         {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
-          "round": 8
+          "round": 13
         },
         {
           "desc": "a RECOLOR of the token on spot 1 to green",
           "op": "RECOLOR",
-          "round": 7
+          "round": 12
         }
       ],
       "init_colors": [
@@ -6084,8 +6084,8 @@
       "rev_color": "orange",
       "rid": 125,
       "rounds": [
-        7,
-        8
+        12,
+        13
       ],
       "s": 3,
       "stamp_first": "RECOLOR",
@@ -6099,43 +6099,43 @@
     {
       "a": 3,
       "b": 0,
-      "block": "DIRE-DS-s0m3-30",
+      "block": "DIRE-DS-s3m0-30",
       "cell_label": "DIFF@S",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 4 to yellow",
-          "op": "RECOLOR",
-          "round": 9
-        },
-        {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
-          "round": 8
+          "round": 1
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 2
         }
       ],
       "init_colors": [
-        "blue",
+        "red",
         "green",
         "purple",
-        "red"
+        "blue"
       ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "DIFF",
       "recolor_color": "yellow",
       "rev_color": "yellow",
       "rid": 126,
       "rounds": [
-        8,
-        9
+        1,
+        2
       ],
-      "s": 0,
+      "s": 3,
       "stamp_first": "SWAP",
       "stamp_order": [
         "SWAP",
@@ -6147,43 +6147,43 @@
     {
       "a": 3,
       "b": 0,
-      "block": "DIRE-DR-s0m3-30",
+      "block": "DIRE-DR-s3m0-30",
       "cell_label": "DIFF@R",
       "display_order": [
-        "RECOLOR",
-        "SWAP"
+        "SWAP",
+        "RECOLOR"
       ],
       "hist_display": [
         {
-          "desc": "a RECOLOR of the token on spot 4 to yellow",
-          "op": "RECOLOR",
-          "round": 8
-        },
-        {
           "desc": "a SWAP of the tokens on spot 4 and spot 1",
           "op": "SWAP",
-          "round": 9
+          "round": 2
+        },
+        {
+          "desc": "a RECOLOR of the token on spot 1 to yellow",
+          "op": "RECOLOR",
+          "round": 1
         }
       ],
       "init_colors": [
-        "blue",
+        "red",
         "green",
         "purple",
-        "red"
+        "blue"
       ],
-      "m": 3,
-      "o": 3,
-      "print_swap_first": false,
+      "m": 0,
+      "o": 0,
+      "print_swap_first": true,
       "query": "DIRECT",
       "readout_type": "DIFF",
       "recolor_color": "yellow",
       "rev_color": "red",
       "rid": 127,
       "rounds": [
-        8,
-        9
+        1,
+        2
       ],
-      "s": 0,
+      "s": 3,
       "stamp_first": "RECOLOR",
       "stamp_order": [
         "RECOLOR",

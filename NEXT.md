@@ -2,100 +2,72 @@
 
 ## State
 
-**Session 47 (method / philosophical, 2026-06-19 UTC / 2026-06-20 JST) is landed and squash-merged to `main`.**
-A $0 method session that **discharged the depth-axis allocation question** rather than spending on it. The standing
-backlog had named a ≥4-move (depth-4) composition probe as the priority empirical step. This session weighed it against
-the project's own [`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md) and instead
-recorded a **bound-search SUSPENSION on the DEPTH axis** on the depth-3 result page
-([`result/relational-order-composition-three-move`](wiki/findings/results/relational-order-composition-three-move.md), new
-section + adjusted point (iv) + a `depends-on: essay/witness-seeking-economics` link). The suspension is **on budget +
-low prior, never a closure**, and **depth-4 stays reopenable** (reopen conditions written on the page). No probe; **$0
-spend**; day total 2026-06-19 (UTC) **unchanged at ≈$3.08 of $5.00**.
+**Session 48 (empirical attempt, 2026-06-20 UTC) is landed: a cross-family composition probe was BUILT and SUSPENDED before any spend — $0.**
+The backlog's priority was a *different-kind* composition probe; this session built the **cross-family** one (a heterogeneous
+**SWAP × RECOLOR** — a spatial move composed with an attribute recolor, on the working surface). The **independent pre-run gate
+NO-GO'd it five times**, each for a real, distinct shortcut leak (object-anchoring → fixed by a position-anchored readout; a
+geometry×cell confound → fixed by a **matched-pair** construction; and three round-magnitude leaks → fixed by overlapping round
+pairs + crossing every geometry with all round pairs). The instrument ended **clean against every generalizable/causal
+non-composing reader** (geometry-oracle 0.5000; marginal/geometry/readout_type-conditional single-round readers Wilson-LB ≤ 0.44;
+composer LB 0.9615), with a **residual content-conditional overfitting gap** (best ≈0.557 LB, an artifact of the small frozen set,
+not a strategy a model could apply to a fresh prompt). Per [`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md),
+the call was to **suspend** — the expected outcome is one more ceiling (the working-surface composition capacity is panel-concordant
+on every axis tested, no strain), and the demonstrated **build cost** (five redesigns; shortcut-proofing cost grows with operation
+*heterogeneity*, not just depth) doesn't justify it. A spending decision, **not** a closure; says nothing about the models;
+reopenable with a cleaner (e.g. non-binary-answer) design. Artifacts kept, **NOT RUN** (`PREREG` renamed so `probe.py` refuses).
+Full story: [`experiments/runs/2026-06-20-relational-order-composition-cross-family/README.md`](experiments/runs/2026-06-20-relational-order-composition-cross-family/README.md).
 
-Grounds (all from facts already in-repo): all three models RESPECTS-ORDER at depth 3 with **zero strain** (claude/gemini
-COMP 1.000, gpt 0.903; DIRECT 1.000 throughout); [`source/li-2024-cot-serial`](wiki/base/sources/li-2024-cot-serial.md)
-gives a theory-of-computation reason (cited at its stated strength — idealized transformers, no human comparison) to
-expect the working surface to keep absorbing deeper serial load; hunting a channel-controlled bound by going deeper is
-hunting an **undischargeable negative** (each deeper RESPECTS-ORDER pass is one more ∀-instance); and shortcut-proofing
-cost grows **super-linearly** with depth (competing-reader family 2 moves → 16 → **65**; strict isolation needs K≫6). No
-clean structural reach-closure is available, so this is a budget suspension, not a kind-3 closure.
-
-**Independent adversarial review** (fresh agent) pressure-tested the call for motivated reasoning, closure-vs-suspension
-discipline, li-2024 over-claim, human comparison, governance, and link integrity → **ACCEPT-WITH-FIXES** (no blockers).
-All three fixes applied (rebut the "just run one depth-4" objection head-on; "structural reason" → "theory-of-computation
-reason"; align point (iv) wording). The reviewer independently verified the 16→65 sub-path arithmetic and concurred a
-depth-4 run was **not** needed to land the call.
-
-senselint **0 errors**; linkify clean. Website (`docs/`): journal session-47 entry + home status block + "latest" entry +
-a `plans.html` update bringing the conversation/order line current and recording the depth pause. No finding changed (the
-capacity reading is unchanged; `findings.html` untouched).
+senselint **0 errors**; linkify clean. Recorded on [`result/relational-order-composition-three-move`](wiki/findings/results/relational-order-composition-three-move.md)
+point (i), [`claim/relational-order-sensitive-reassignment`](wiki/findings/claims/relational-order-sensitive-reassignment.md) scope
+limit 2, and a logged update to [`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md) (a worked
+case: the witness-*seeking probe*, not the model, hit a build-cost wall). Website (`docs/`): journal session-48 entry + home
+status + "latest" + `plans.html`.
 
 ## Next concrete actions — backlog for the next session
 
-**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** (all 28 decisions resolved; only `.gitkeep`). This
-session opened **no** decision (a witness/bound-search suspension is a reopenable spending record, not a ratifiable
-operationalization/anchor gate — confirmed by the adversarial reviewer). Apply any Tom override first.
+**Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** (28 resolved; `.gitkeep` only). This session opened **no**
+decision (a witness-search suspension is a reopenable spending record, not a ratifiable gate). Apply any Tom override first.
 
-**Track lean:** recent tracks ran phil(43) → emp(44) → emp(45) → phil(46) → **method/phil(47)**. **Empirical is now
-strongly overdue** — pick an empirical build unless a sharper philosophical unit is genuinely ready. Candidates:
+**Track lean:** phil(43) → emp(44) → emp(45) → phil(46) → method/phil(47) → **emp-attempt/$0(48)**. No probe has *run* since
+session 45; **a spend-bearing empirical build is overdue**, but the cross-family axis is now suspended — pick one of:
 
-1. **EMPIRICAL — a DIFFERENT-KIND composition probe (the new priority axis).** With the depth axis suspended, the
-   higher-information next step on the composition line is a *qualitatively new* composition, not one more move. From the
-   three-move result's "still untested" list: **partially-conflicting refinements**, **cross-family dyads**, or **image
-   referents** (the last needs a VLM = the multimodal axis; heavier). Each is a fresh build: design + shortcut-proofing +
-   `build_trials.assert_balance` + an **independent pre-run critic** + run + **independent post-run verifier**. Reuse the
-   working-surface + figure→figure + `FINAL:`-tag machinery from
-   [`experiments/runs/2026-06-19-relational-order-composition-three-move/`](experiments/runs/2026-06-19-relational-order-composition-three-move/).
-   **Budget a dedicated build+run session on a fresh UTC day** (full $5 headroom; partly-conflicting / cross-family runs
-   should be ~$0.7–1.0 like the prior Option-C runs — pre-flight-estimate and check
-   [`config/budget.md`](config/budget.md)).
+1. **EMPIRICAL — a DIFFERENT different-kind composition.** The cross-family axis is suspended; the remaining different-kind
+   candidates from the three-move result's "still untested" list are **partially-conflicting refinements** (a later turn that
+   agrees on some attributes and conflicts on others — connects to the rung-(ii) integration paradigm) and **image referents** (a
+   VLM = the multimodal axis; heavier). Each is a fresh build with the full gate discipline. **Heed the session-48 lesson:** prefer
+   a design with a **non-binary / large answer space** (the single-bit {Cr,C_oth} answer is what made cross-family so leak-prone),
+   and add the conditional single-round-line certification to `assert_balance` from the start. Budget a fresh UTC day.
 
-2. **EMPIRICAL — depth-4 remains reopenable.** If a future session disagrees with the suspension, finds a cheaper
-   shortcut-proofing route, or wants a depth-4 data point to back the suspension with evidence rather than extrapolation,
-   the reopen conditions and the full design path are on
-   [`result/relational-order-composition-three-move`](wiki/findings/results/relational-order-composition-three-move.md).
-   The honest counter-case (a depth-4 run *would* be on-signature and *could* fire reopen-condition (iv)) is recorded
-   there — it was judged low-novelty, not foreclosed.
+2. **EMPIRICAL — reopen cross-family with a cleaner design.** If a future session wants the cross-family data point, the run dir has
+   the matched-pair machinery and the five-leak post-mortem. The reopen path: a **non-binary answer** so no single visible feature
+   pins the order (kills the content-conditional residual), then re-certify. Low priority unless the binary-answer fix is cheap.
 
-3. **PHILOSOPHICAL — catalogue an open-access `wanted.md` source, or spawn a warranted essay/conjecture.** Fetchable P1/P2
-   items remain in [`wiki/base/wanted.md`](wiki/base/wanted.md). Catalogue only if a finding will lean on it — avoid
-   padding. **Do not** re-do composition-essay work: that space is saturated (output-channel-confound, witness-seeking-
-   economics, floor-is-not-a-ceiling, capability-split all freshly updated; the depth suspension is now recorded).
-   Grammar reserve: the AANN/CxG cancel-direction Option-B held in
-   [`decisions/resolved/aann-uniqueness-third-construction`](wiki/decisions/resolved/aann-uniqueness-third-construction.md)
-   needs a fresh human anchor first.
+3. **PHILOSOPHICAL — a warranted essay/conjecture or an open-access `wanted.md` catalogue.** Catalogue only if a finding will lean
+   on it. Composition-essay space is **saturated** (do not pad it); but the session-48 suspension itself could seed a small
+   methodological sharpening if a *new* angle appears (the witness-seeking-economics update already records the cost-term lesson).
 
 4. **Website** per `PROTOCOL.md` §5b, as always.
 
 ## Open decisions
 
-- **None.** `wiki/decisions/open/` is empty (28 resolved; full changelog in
-  [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). This session opened none and ratified none.
+- **None.** `wiki/decisions/open/` is empty. This session opened none and ratified none.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This was a short method session that made one judgment call: it decided **not** to run the experiment the plan had
-  flagged as next (a four-move version of the "order of operations" test), and wrote down exactly why — applying the
-  project's own rule about spending a small daily budget over an endless space of possible tests. The short version: the
-  models show no strain at three moves, an outside proof gives a reason to expect a deeper chain to be absorbed too, and
-  each deeper test costs much more just to build safely. It is a **pause, not a verdict** about the models, and it reopens
-  any time. An independent reviewer pressure-tested the call for motivated reasoning and for any hidden "the models can't"
-  and found none. No experiment, no new claim, no spending; the day's running total is unchanged at ≈$3.08 of $5.00.
-- If you'd rather the project just run the four-move test, that path is fully laid out on the three-move result page —
-  nothing here forecloses it.
+- This session tried to build the next experiment — a "mixed moves" version of the order test (one move shifts items, one recolors
+  them) — and an independent safety reviewer found **five** different ways a model could look right without doing the real task.
+  Each was fixed, but the design stayed hard to make fully watertight, and — by the project's own "when to stop testing" rule (the
+  models show no strain on any version so far, so the expected result was one more success, while the build cost kept climbing) —
+  the project chose **not to run it**. A pause, not a verdict; nothing was spent. The next ideas are other different-kind tests.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read
-[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md) (resolved-decisions
-changelog at [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). Budget $5/day **UTC** — check today's
-ledger rows in [`config/budget.md`](config/budget.md) before any probe (the JST clock can read a day ahead of the UTC
-budget day; 2026-06-19 UTC day total = **≈$3.08**; this session added **$0**). End squash-merged to `main`, website
-updated. **No decision is open.** Tracks ran phil(43) → emp(44) → emp(45) → phil(46) → **method/phil(47)** — **empirical
-is strongly overdue**. The composition witness is a **THIN capacity** holding across **three** axes (operation pair, grid
-size, depth-3), still **negative on constitution**, still **no** channel-controlled bound; the **depth axis is now
-suspended on budget + low prior (reopenable)** — the next empirical step is a **different kind** of composition
-(partially-conflicting refinements / cross-family dyads / image referents), not depth-4. Every composition probe **must use
-a working surface**. **Rung (iii) stays documented structurally closed for text-only stimuli.** The methodological spine has
-**six** essays (undischargeable-negative, witness-seeking-economics, capability-split, transcript-ceiling,
-floor-is-not-a-ceiling, output-channel-confound) — composition-essay space is **saturated; do not pad it**.
+[`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md). Budget **$5/day UTC** — check
+[`config/budget.md`](config/budget.md) (2026-06-20 UTC day total = **$0**; this session spent $0). End squash-merged to `main`,
+website updated. **No decision is open.** The composition witness is a **THIN capacity** holding across operation pair, grid size,
+and depth 3 (panel-concordant RESPECTS-ORDER, working surface required), still **negative on constitution**, still **no**
+channel-controlled bound; the **depth axis is suspended** (budget + low prior) and now the **cross-family axis is suspended too**
+(build cost + low prior — five pre-run leaks). The next different-kind step is **partially-conflicting refinements** or **image
+referents** — and design it with a **non-binary answer space** (the session-48 lesson). Every composition probe **must use a working
+surface**; rung (iii) stays **documented structurally closed for text-only stimuli**.

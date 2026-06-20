@@ -227,7 +227,13 @@ slip, not a parse artifact and not a single-move read.
 - **(i) Axes now tested for generality of the witness:** operation pair (STEP/FLIP → CYCLE/SWAP) →
   replicates; grid size (K=4 → K=6) → replicates; **composition depth (2 → 3 moves) → survives** (this
   run). Still untested: still deeper composition (≥4 moves), partially-conflicting refinements, image
-  referents, cross-family dyads.
+  referents. **Cross-family dyads (a heterogeneous spatial+attribute pair) were *attempted* 2026-06-20
+  ([`experiments/runs/2026-06-20-relational-order-composition-cross-family/`](../../../experiments/runs/2026-06-20-relational-order-composition-cross-family/README.md))
+  and SUSPENDED before any spend** — the pre-run gate found the operationalization unusually
+  leak-prone (five distinct shortcut classes; a single-bit answer over two near-orthogonal ops is
+  hard to shortcut-proof), and per [`essay/witness-seeking-economics`](../essays/witness-seeking-economics.md)
+  the expected ceiling did not justify the demonstrated build cost. **$0 spent; reopenable** with a
+  cleaner (e.g. non-binary-answer) design.
 - **(ii) Bound on the capacity reading:** the working-surface composition now holds on two non-commuting
   pairs (D4, A4), two grid sizes (K=4, K=6), and **two depths (2, 3 moves)**. It remains one
   operationalization family (figure→figure lookup tables, text-only, three-model panel, single run per
