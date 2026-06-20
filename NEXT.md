@@ -2,80 +2,73 @@
 
 ## ⚠ Budget note — read first
 
-**The temporary $10/day cap (Tom, JST June 20 only) expires at the clock at 2026-06-20 15:00 UTC** (= end of
-JST June 20; this session landed ~14:40 UTC, just under the wire). **Any session at or after 15:00 UTC is back
-to the standard $5.00/day (UTC)** unless Tom says otherwise — i.e. the next session almost certainly runs under
-the standard $5 cap. Either way today's spend is well under both.
-**Today's UTC-day spend (2026-06-20) is $4.125** (sessions 51 $1.583 + 53 $1.561 + 57 $0.331 + 58 $0.316 +
-**60 $0.334**). A **fresh UTC day (2026-06-21+) resets to $0 at the standard $5/day cap.** The single-run
-prefer-split flag (~$2.50/run) is unchanged. Full ledger in [`config/budget.md`](config/budget.md).
+**Standard cap is back: $5.00/day (UTC).** Tom's temporary $10 cap expired 2026-06-20 15:00 UTC. **Today's
+UTC-day spend (2026-06-20) is $4.125** (sessions 51 $1.583 + 53 $1.561 + 57 $0.331 + 58 $0.316 + 60 $0.334;
+**session 61 was $0** — no probe). Leaves **~$0.875** of headroom on UTC-day 2026-06-20 — but a **fresh UTC
+day (2026-06-21+) resets to $0 at $5/day**, and at the JST stamp time of this handoff (June 21 ~02:00 JST) the
+next UTC day begins at 09:00 JST (00:00 UTC). The single-run prefer-split flag (~$2.50/run) is unchanged. Full
+ledger in [`config/budget.md`](config/budget.md).
 
 ## State
 
-**Session 60 (2026-06-20 UTC) was EMPIRICAL ($0.334 spent) — the clean trigger-(b) gpt-uptake `let-alone`
-test the previous two sessions queued.** It ran the uptake-inducing **forced-decomposition** re-run →
-[`result/scivetti-let-alone-forced-decomposition-v1`](wiki/findings/results/scivetti-let-alone-forced-decomposition-v1.md)
-(status `proposed`; anchors [`resource/scivetti-2025-cxnli-dataset`](wiki/base/resources/scivetti-2025-cxnli-dataset.md),
-let-alone leg descriptive, comp-correlative the ratified-anchor ceiling control).
+**Session 61 (UTC 2026-06-20, JST June 21) was PHILOSOPHICAL ($0, no probe)** — the genuine revision-trigger
+sweep NEXT preferred. Judged a revision **genuinely owed** to
+[`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md): session 60's
+forced-decomposition result produced an outcome shape the essay's value model had no slot for — a **partial
+witness** (gpt let-alone +0.21, sign-test p=0.090, below baseline; "partially fired / candidate"), neither a
+clean *fire* (presence) nor a clean *miss* (non-witness).
 
-- **Single manipulated variable vs session 58:** the *offered* free-form working surface → a **mandatory,
-  construction-neutral, answer-blind 3-step decomposition** (premise paraphrase / hypothesis paraphrase /
-  link) required before the `FINAL:` tag. **No demonstration items** (lowest-governance-risk uptake-forcer →
-  the few-shot leak caveat does not apply → **no new decision owed**). Held byte-identical: same 24 let-alone
-  + 30 comp-corr items (subset sha `9be31a8fea8d7f16`, full-set == s57/58 `1c5cffb18c5ef78e`), 0/1/2 defs
-  verbatim, gold not shown, panel, temp 0, gemini `effort: minimal` held constant.
-- **Cadence honored:** independent fresh-agent pre-run critic **GO** (8/8 checks; byte-level single-variable
-  diff; no demo items; no gold leak; verdict-map + uptake-check pre-registered incl. the honest
-  "uptake-not-induced → method-null" branch) → frozen `PREREG.md` → probe → independent fresh-agent post-run
-  verifier **REPRODUCED** (every acc/Wilson/sign-test + the uptake check + content_sha256↔CoT binding +
-  CoT genuineness + no gold-leak; 0 discrepancies).
-- **Verdict — UPTAKE INDUCED for all 3; all UNCHANGED vs offered; gpt PARTIAL recovery.** Forcing the steps
-  took gpt from offered-but-declined (median **8** completion tokens, 16/24 bare) to genuinely-exercised
-  (median **120**, 24/24 worked) — **closing session 58's "channel-not-taken-up" hole.** With the channel
-  actually used, gpt's let-alone rose **0.375 → 0.583** (+0.21, 7 gains / 2 losses) — **directional but
-  underpowered** (within-item sign test p = 0.090, does **not** clear the pre-registered 0.05 bar → verdict
-  UNCHANGED) — and it **stays BELOW** the ≈0.90 human baseline (CI hi 0.755) where claude (0.833) and gemini
-  (0.875) sit. So gpt's let-alone is a **partial output-channel effect** (part channel-bounded, part survives
-  the exercised channel): the closest in-repo `essay/output-channel-confound` **trigger-(b) CANDIDATE**
-  (direction present, power not yet there) — **not** a clean firing, and **not** a "channel artifact for gpt"
-  reading. claude/gemini stay at baseline (manipulation check: the scaffold is benign, not teaching), comp-corr
-  ceiling control PRESERVED 3/3.
-
-Inter-feeding edits (genuinely owed, not manufactured): `essay/output-channel-confound` trigger (b) → CANDIDATE
-partially-fired + a body forward-note in the uptake subsection (channel-not-taken-up resolved to a *mixture* of
-channel-bounded + channel-controlled, vindicating the verify-uptake clause); `result/scivetti-let-alone-working-surface-v1`
-forward-note (the named uptake arm ran → "artifact or bound?" resolves to **partly each**);
-`open-question/instrument-sensitivity-constructional-inference` session-60 update (output-channel sensitivity is
-**graded within** a model, not all-or-none). senselint **0 errors**; linkify clean; open-decisions dir **empty**.
+- **What landed.** New body section **"The partial witness: a directional-but-underpowered easing, and the
+  'power-up' move"** + a dated header block + revision **trigger (g)** + an honesty-box bullet. The added
+  rule: a witness-seeking probe has **three** outcomes (fires / partial / miss); a partial witness's correct
+  continuation is a **powered re-run of the same axis** (more items), **exempt** from the parent essay's "more
+  of the same probe cannot" and this essay's "axis novelty / same axis twice." Discriminator = **whether the
+  first run produced a directional effect** (powering a *signal* resolves power, not the existence question a
+  clean non-witness already answered). Exemption stated **narrow + self-extinguishing**; **closure ≠
+  suspension** preserved. The principle pre-existed single-case on
+  [`essay/output-channel-confound`](wiki/findings/essays/output-channel-confound.md) trigger (b); promoting it
+  into the value model is the new work.
+- **Judged NO note owed to** [`essay/undischargeable-negative`](wiki/findings/essays/undischargeable-negative.md)
+  (it defers the "how much witness-seeking is worth" question to witness-economics; its "more of the same
+  cannot" maxim stays true as stated — the powered re-run uses *more items*). One essay, the right one — not
+  manufactured symmetry.
+- **Verification.** Independent read-only adversarial coherence pass (fresh agent): quotes verbatim, numbers
+  exact, logic consistent. One SHOULD-FIX, **fixed** — adding the human-anchored Scivetti let-alone result to a
+  citation list previously all `internal-contrast-only` had made the essay's blanket no-human-comparison
+  disclaimers false; narrowed them (the leg the essay leans on is the within-model format/uptake contrast; the
+  accuracy-vs-baseline leg is anchored/descriptive, read at stated strength). Reciprocal links added (essay
+  depends-on result + output-channel-confound; result supports essay + a forward-note). senselint **0 errors**;
+  linkify clean; open-decisions dir **empty**.
 
 ## Next concrete action — backlog for the next session
 
 **Reconcile first (PROTOCOL §2):** `wiki/decisions/open/` is **empty** — nothing to ratify. Apply any Tom
 override first (the budget note above; check for any newer one).
 
-**Track lean.** 55 emp · 56 emp · 57 emp · 58 emp · 59 **phil($0)** · 60 **emp($)**. The recent record is
-empirical-heavy with one philosophical session. **Weight the next session toward PHILOSOPHICAL** — but only if a
-revision is *genuinely owed* (do not manufacture an essay). If nothing is owed, the cleanest empirical move is
-the powered let-alone re-run below.
+**Track lean.** 56 emp · 57 emp · 58 emp · 59 phil · 60 emp · 61 **phil($0)**. Two of the last three were
+philosophical, so the recent record is now balanced-leaning-empirical. **Weight the next session toward
+EMPIRICAL** — the powered let-alone re-run below is the cleanest, and it is now *also* the named next step for
+two essays (`witness-seeking-economics` trigger (g) + `output-channel-confound` trigger (b)).
 
-1. **PHILOSOPHICAL (preferred *if owed*) — a genuine revision-trigger sweep.** Session 60 just turned
-   `essay/output-channel-confound` trigger (b) into a *candidate partial firing* and added the body forward-note;
-   check whether any *further* revision is owed by the partial-effect result — e.g. does
-   [`essay/undischargeable-negative`](wiki/findings/essays/undischargeable-negative.md) or
-   [`essay/witness-seeking-economics`](wiki/findings/essays/witness-seeking-economics.md) want a note that the
-   output-channel control can return a *graded* (partial) verdict, not just clear/survive? Judge honestly; if the
-   session-60 edits already discharge it, **write the null** and pivot to the empirical unit. (A $0 unit if owed.)
-2. **EMPIRICAL (preferred if no philosophical revision is owed) — the POWERED let-alone re-run.** gpt's +0.21
-   is the right *direction* for a channel-controlled residual but **underpowered** (n = 24, 9 discordant pairs,
-   sign-test p = 0.090). Re-run with **more let-alone items** to resolve it. Two sources of fresh items, both
-   needing a setup step: (a) the **disjoint train-split** let-alone items (`CxNLI_3_examples_train.csv` / the
-   1-example train file in the same upstream repo — already cloned this session under
-   `experiments/data/scivetti/`, gitignored) — *check these are disjoint from the 24 test items and balanced*;
-   (b) a **free-form uptake-forcer** ("write at least N sentences of working") that separates *uptake* from the
-   *3-step scaffold structure* (a `Limits` caveat of the v1 result). Same ratified Scivetti anchor +
-   `constructional-divergence-operationalization`; forced decomposition with no demo items was already cleared as
-   no-new-decision — but **adding train-split items is a new item set**, so re-freeze + re-certify + a fresh
-   pre-run critic GO, and confirm disjointness. Pre-flight ~$0.3–0.5 (working-surface CoT, claude the driver).
+1. **EMPIRICAL (preferred) — the POWERED let-alone re-run.** Resolve gpt's underpowered +0.21 (n=24, 9
+   discordant pairs, sign-test p=0.090). This is now the **trigger-(g) partial-witness resolution** that
+   `witness-seeking-economics` §"The partial witness" prescribes: a powered re-run of the *same* forced-
+   decomposition axis, **explicitly exempt** from "more of the same" because session 60 left a directional
+   *signal*, not a null. Two item sources, both needing a setup step:
+   (a) the **disjoint train-split** let-alone items (`CxNLI_3_examples_train.csv` / the 1-example train file in
+   the same upstream repo — cloned under `experiments/data/scivetti/`, gitignored) — *check disjoint from the
+   24 test items + balanced*; (b) a **free-form uptake-forcer** ("write at least N sentences of working") that
+   separates *uptake* from the *3-step scaffold structure* (a `Limits` caveat of the v1 result). Same ratified
+   Scivetti anchor + `constructional-divergence-operationalization`; forced decomposition with no demo items was
+   already cleared as no-new-decision — but **adding train-split items is a new item set**, so re-freeze +
+   re-certify + a fresh pre-run critic GO + confirm disjointness. Pre-flight ~$0.3–0.5 (working-surface CoT,
+   claude the driver). **Outcome reading is pre-named by trigger (g):** confirms the residual (→ a clean
+   `output-channel-confound` trigger-(b) channel-controlled case), dissolves it (→ full channel artifact), or
+   stays partial (→ sharpens the design-not-count power bound, redirect axis).
+2. **PHILOSOPHICAL (only if a revision is genuinely owed — do NOT manufacture).** Session 61 just discharged
+   the output-channel/partial-effect revision sweep; nothing further is obviously owed there. If the powered
+   re-run (1) lands and *resolves* the partial witness, a small follow-up note to `witness-seeking-economics`
+   trigger (g) and `output-channel-confound` trigger (b) would then be genuinely owed (a $0 unit).
 3. **Longer-horizon alternatives (only if 1–2 are blocked):**
    - [`conjecture/function-word-substitutability`](wiki/findings/conjectures/function-word-substitutability.md)
      needs a new frequency-matched-pair anchor decision *opened* first — a $0 line-opening unit.
@@ -89,22 +82,29 @@ the powered let-alone re-run below.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- **Your temporary $10/day cap for JST June 20 has expired (15:00 UTC June 20); we are back to $5/day.**
-  Session 60 spent **$0.334**; UTC-day 2026-06-20 total = **$4.125** of $5.
-- This session ran the experiment the last two were building toward. Two sessions ago a model failed a hard
-  grammar puzzle under a one-word answer; giving it room to reason helped two of three models but the third
-  mostly *ignored* the room. This session *required* the third model to write out its working — it did, and the
-  result is an honest in-between: forcing the working closed *part* of its gap (it rose from 38% to 58%) but
-  left it *below* the human ~90% level the other two reach. So the cramped answer format was hiding *some* of
-  the ability, not all of it. The 20-point rise (on 24 puzzles) is suggestive, not statistically settled — a
-  bigger puzzle set is the next step. The site states this no more strongly than the wiki, names no monitor.
+- **The temporary $10/day cap (JST June 20) has expired; we are back to $5/day.** Session 61 spent **$0** (no
+  model was run); UTC-day 2026-06-20 total stays **$4.125** of $5.
+- This was a writing-and-method session, no experiments. Last session's result was a *halfway* one: requiring
+  the smallest model to show its working nudged it up on a hard grammar puzzle (38%→58%) but not to the human
+  ~90% level, and on only 24 puzzles the rise isn't statistically settled. The project's method had names for
+  only two outcomes of such a test — "found the ability" or "came up empty" — so this session added a third,
+  the *halfway* result, and worked out the right response: re-run the same test with more puzzles to learn
+  whether the nudge is real (which looks like a forbidden repeat but isn't, because the first run left a
+  real-looking signal rather than a blank). The site states this no more strongly than the wiki, names no
+  monitor.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md).
-**Budget: temp $10 cap EXPIRED 15:00 UTC 2026-06-20 → standard $5/day; today's UTC spend $4.125; a fresh UTC
-day resets.** **No decisions open** — nothing to ratify; lean **PHILOSOPHICAL** (a genuine revision sweep only
-if owed — the session-60 partial-effect result may already be discharged) **else the POWERED let-alone re-run**
-(more items — train-split or a free-form uptake-forcer — to resolve gpt's underpowered +0.21). End
-squash-merged to `main`, website updated **with the JST clock-time stamp**.
+**Budget: standard $5/day (UTC); UTC-day 2026-06-20 spend $4.125 (~$0.875 left); a fresh UTC day resets.**
+**No decisions open** — nothing to ratify; lean **EMPIRICAL** (the POWERED let-alone re-run — now the named
+trigger-(g)/trigger-(b) next step — to resolve gpt's underpowered +0.21; needs train-split items or a free-form
+uptake-forcer + re-freeze + re-certify + fresh pre-run critic). End squash-merged to `main`, website updated
+**with the JST clock-time stamp**.
+
+> ⚠ **Repo note for the cold-start (one-time, harmless):** a fresh clone's local `main` ref may lag behind the
+> true remote `main`. Session 61 found local/`origin/main` pointing at a stale commit (#36, 2026-05-31) until a
+> `git fetch origin main` force-updated it to the real head. If `git log main` looks impossibly old or
+> `merge-base main <branch>` is empty, **`git fetch origin main` first** — the project's real main is the chain
+> of squash-merged session PRs (now at #105). Not a problem, just don't be alarmed by a stale ref pre-fetch.
