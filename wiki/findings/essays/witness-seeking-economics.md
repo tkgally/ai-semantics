@@ -9,7 +9,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-06-20
 links:
   - rel: refines
     target: essay/undischargeable-negative
@@ -21,6 +21,10 @@ links:
     target: result/relational-order-composition-c-easier-k4
   - rel: depends-on
     target: result/relational-order-composition-c-figure-to-figure
+  - rel: depends-on
+    target: result/scivetti-let-alone-forced-decomposition-v1
+  - rel: depends-on
+    target: essay/output-channel-confound
   - rel: depends-on
     target: concept/formal-vs-functional-competence
 ---
@@ -39,9 +43,12 @@ links:
 > draws a sharp line between **logical closure** (never available from behavior — the
 > [`essay/undischargeable-negative`](undischargeable-negative.md) result, fully preserved here) and
 > **practical suspension** (a provisional, always-reopenable decision to stop spending). It contains **no
-> new empirical claim** and makes **no human comparison**: every empirical sentence cites the in-repo page
-> that carries it, at that page's stated strength, and the result it reads is a non-witness null /
-> `internal-contrast-only`. Read the revision triggers before citing.
+> new empirical claim** and makes **no human comparison of its own**: every empirical sentence cites the
+> in-repo page that carries it, at that page's stated strength. The composition results it reads are
+> non-witness nulls / `internal-contrast-only`; the let-alone result the session-61 deepening adds is
+> *human-anchored* ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)),
+> but the leg this essay leans on is the **within-model** format/uptake contrast — the essay introduces no
+> human comparison the cited page does not already carry. Read the revision triggers before citing.
 >
 > **Update (2026-06-18, later session — the named on-signature probe ran; logged per essay discipline).** This
 > essay named the well-targeted next probe: ease the **implicated** axis (the per-move read-off the single-move
@@ -135,6 +142,25 @@ links:
 > are preserved exactly: the gate **was not weakened to get a GO** (the project declined to spend rather
 > than relax the 0.50 bar — the relational-line GO-discipline), and the suspension is filed as a
 > **witness-search suspension**, not a kind-4 "the models can't."
+>
+> **Deepening (2026-06-20, session 61 — the partial witness; logged per essay discipline).** The value
+> model below sorts a witness-seeking probe's outcome into *fires* (a witness, flips to presence) or *does
+> not fire* (a non-witness — lowers the posterior, possibly paying a diagnostic dividend). A later
+> empirical session produced a **third** outcome the binary had no slot for: a probe that eased the
+> implicated axis and returned a **directional but underpowered lift** — neither a clean fire nor a clean
+> miss ([`result/scivetti-let-alone-forced-decomposition-v1`](../results/scivetti-let-alone-forced-decomposition-v1.md):
+> forcing uptake lifted gpt's let-alone +0.21 yet left it below baseline and the within-item sign test
+> underpowered, p = 0.090 — "**partially fired / candidate**"). The new section **"The partial witness"**
+> adds this outcome to the value model and resolves the allocation question it raises: the correct
+> continuation is a **powered re-run of the same axis** (more items), which the "axis novelty / same axis
+> twice" caution would wrongly discourage and which must be carefully distinguished from the parent essay's
+> futile "more of the same probe cannot." The discriminator is **whether the first run produced a
+> directional effect**: powering an underpowered *signal* resolves a live easing's statistics, not the
+> existence question a clean non-witness already answered. The closure ≠ suspension line is untouched — a
+> partial witness *keeps the search live* and names the funded next probe. (The principle was first stated,
+> in the single-case, on [`essay/output-channel-confound`](output-channel-confound.md)'s trigger (b) — "a
+> powered re-run … not 'more of the same'"; this deepening promotes it into the economics' general value
+> model, its proper home.)
 
 ## The occasion
 
@@ -350,6 +376,90 @@ anything, the strongest case for keeping the witness-search *open* (now better-a
 the suspension recorded for this line still rests on the **budget**, not on the implicated-axis map having
 gone blank.
 
+## The partial witness: a directional-but-underpowered easing, and the "power-up" move
+
+The value model so far — even with the diagnostic-dividend refinement — sorts a witness-seeking probe's
+outcome into two bins: it **fires** (a witness, the negative flips to a presence) or it **does not** (a
+non-witness, which lowers the posterior and may pay a diagnostic dividend by relocating the implicated axis).
+A later session produced an outcome that fits neither bin cleanly, and seeing why forces a third slot.
+
+The occasion is the let-alone output-channel search. A forced single-token format had left all three panel
+models near chance on the phrasal-scalar **let-alone** NLI items; a working surface lifted two of them to the
+human baseline, but the weakest model, `gpt-5.4-mini`, had largely **declined** the offered surface (a
+*channel-not-taken-up*, [`essay/output-channel-confound`](output-channel-confound.md)). The well-targeted
+next probe forced uptake — a mandatory construction-neutral decomposition before the answer — and it worked
+as a manipulation: gpt's median let-alone working jumped from 8 to 120 tokens, 24/24 items genuinely worked.
+With the channel now actually exercised, the easing returned **a directional lift that does not reach a
+witness**: gpt's accuracy rose **0.375 → 0.583** (+0.21, 7 gains / 2 losses), but the within-item sign test
+is **underpowered** (p = 0.090 on 9 discordant pairs, short of the pre-registered 0.05 bar → verdict
+UNCHANGED) and the rate **stays below the ≈0.90 baseline** the other two models reach. The result page reads
+the outcome as "a **partial output-channel effect** … part is channel-bounded … and part survives a
+genuinely-exercised wide channel," registered "**partially fired / candidate**: the *direction* is the
+contrast case … the *power* is not yet there to call it clean"
+([`result/scivetti-let-alone-forced-decomposition-v1`](../results/scivetti-let-alone-forced-decomposition-v1.md)).
+
+This is a **partial witness**, and it sits *between* the two outcomes the value model names. It is not a
+fire: no presence is settled — the rate stayed below baseline and the within-item test failed to clear its
+bar, so the existence question ("can this model do let-alone, channel given and used") is still open. But it
+is emphatically **not a clean non-witness** either: the easing *moved the rate substantially in the witness
+direction*. Filing it as a non-witness — "posterior down a notch" — would mis-describe a strong directional
+signal as evidence *against* a witness; filing it as a fire would over-read an underpowered lift as a settled
+presence. Either misfiling loses the actual information, which is precisely *that the implicated axis is alive
+but the run could not resolve it*.
+
+The allocation consequence is where the partial witness earns its own treatment, because the move it calls
+for looks, at first, like the one move both this essay and its parent forbid. The natural next probe is a
+**powered re-run of the *same* axis** — the same forced-decomposition easing, on **more** let-alone items —
+to resolve whether the +0.21 is real or sampling noise. Yet [`essay/undischargeable-negative`](undischargeable-negative.md)
+warns that "**more of the same probe cannot**," and the **axis-novelty** rule above warns that "easing the
+**same axis twice** has steeply diminishing returns." Taken flatly, both would discourage exactly the
+high-value probe. The deepening's claim is that they do **not** apply here, and the value model must say why.
+
+The discriminator is **whether the first run produced a directional effect.** "More of the same probe cannot"
+governs a re-run of an instrument that returned a **clean non-effect** — another ∀-instance, after which the
+negative is exactly as un-established as before *because nothing moved*; the re-run tests a hypothesis the
+first run already answered ("this axis, eased, did not carry a witness"). A re-run after a *partial* witness
+is a different act on a different question. The first run did **not** answer its hypothesis — it returned a
+*shift it lacked the power to certify*. The second run, on more items, does not re-ask "does easing this axis
+help?" (the first run already showed it does, directionally); it asks "**is the observed shift real?**" — a
+**power** question the first run, at n = 24 with 9 discordant pairs, structurally could not settle. Powering a
+live directional signal is statistical resolution of an *implicated, productive* axis, not a diminishing-
+returns march down an *exhausted* one. The axis-novelty rule therefore needs a scope clause: *its
+diminishing-returns verdict on "the same axis twice" holds when the first easing returned a clean
+non-witness; it is suspended when the first easing returned a partial witness, where the same axis is the
+single highest-value place left to spend.*
+
+So the value model gains a third outcome and its continuation rule:
+
+- **Fires** → the negative flips to a presence; the search on this capability is settled positive.
+- **Partial witness** (a directional lift, underpowered, no presence reached) → the implicated axis is
+  *alive but unresolved*; fund a **powered re-run of the same axis** (more items, more discordant pairs),
+  explicitly **exempt** from the "same axis / more of the same" caution, until the signal is either confirmed
+  (it becomes a fire) or dissolved (the lift was noise → it becomes a clean miss).
+- **Misses** (a clean non-witness) → the posterior drops, possibly with a diagnostic dividend; fund a
+  *fresh, on-signature* axis next, **not** a re-run of this one (here the caution binds with full force).
+
+Two bounds keep the new slot from being abused. **First, the power-up exemption is narrow and self-
+extinguishing.** It licenses re-running the *same* axis *only* because the first run produced an underpowered
+directional effect; it does not license re-running an axis that returned a clean non-effect, and it does not
+license endless re-runs — once the re-run carries adequate power, its verdict is terminal (a fire or a clean
+miss), and a further re-run *would* be "more of the same." The exemption buys exactly one adequately-powered
+resolution, not a standing license. **Second, the partial witness does not touch the closure ≠ suspension
+line.** It neither closes the negative — gpt's below-baseline residual stays undischargeable; "candidate" is
+not "demonstrated bound" — nor suspends the search; it does the opposite of both, *keeping the search live and
+naming the funded next probe.* If anything, a partial witness is the strongest case against suspension: an
+axis that visibly moves the rate is the last axis a budget should abandon.
+
+The partial witness also carries a second reading that doubles the value of resolving it, and the two essays
+meet here. Because gpt now externalizes the computation **and still falls short**, the same result is the
+closest thing in the record to [`essay/output-channel-confound`](output-channel-confound.md)'s **trigger (b)**
+— a serial-computation negative that *survives* a genuinely-widened channel (a *channel-controlled* residual,
+not a channel-bounded one). A powered re-run therefore serves double duty: it either confirms a real
+below-baseline residual (firing that essay's long-sought cuts-both-ways contrast case) or reveals the lift as
+noise and the residual as a full channel artifact after all. The economics ranks such a dual-purpose,
+on-signature, productive-axis re-run **high** — it is the rare re-run that the "more of the same" caution does
+not condemn precisely because the first run left a *signal*, not a *null*, behind.
+
 ## The reporting discipline: a witness-search suspension note
 
 [`essay/undischargeable-negative`](undischargeable-negative.md) gave the project a filing system for
@@ -394,9 +504,13 @@ empty fourth box.
   trigger (b) live and named the implicated axis as the next probe. The essay generalizes a discipline
   already half-practiced, exactly as [`essay/undischargeable-negative`](undischargeable-negative.md) did for
   the negatives themselves.
-- **Not a human comparison.** The result it reads is `internal-contrast-only`; the economics is general to
-  any program that probes an open capability under a budget (it would bind for human probing too), but the
-  essay applies it only to the project's own LLM probes and asserts nothing about humans.
+- **Not a human comparison of the essay's own.** The composition results it reads are
+  `internal-contrast-only`; the let-alone result the partial-witness section reads is *human-anchored*
+  (its accuracy-vs-≈0.90-baseline leg is anchored for comp-correlative, descriptive for let-alone), but the
+  leg this essay leans on is the **within-model** format/uptake contrast, and it reads the page's
+  baseline references only at that page's stated strength — introducing no new human comparison. The
+  economics is general to any program that probes an open capability under a budget (it would bind for human
+  probing too), but the essay applies it only to the project's own LLM probes and asserts nothing about humans.
 
 ## Revision triggers (read before citing)
 
@@ -451,6 +565,18 @@ empty fourth box.
   changing kind — the **persist** case the section already treats, which subtracted the demonstration-gap
   sub-axis. The trigger stays **live** for any future on-signature easing whose signature shifts to a new
   failure mode.
+- **(g) A powered re-run resolving a partial witness.** The partial-witness section names one open case —
+  gpt's underpowered +0.21 let-alone lift under forced uptake
+  ([`result/scivetti-let-alone-forced-decomposition-v1`](../results/scivetti-let-alone-forced-decomposition-v1.md)).
+  Its prescribed continuation is a **powered re-run of the same axis** (more let-alone items, or the disjoint
+  train-split items the result page names). When that re-run lands, the partial-witness slot gains its first
+  *resolved* instance — either the lift is confirmed (the easing **fires**: a witness, the negative flips to
+  a presence) or it dissolves into noise (a **clean miss**: the residual was a full channel artifact, and the
+  axis is now exhausted, the exemption spent). Either way the three-outcome model is corroborated; a re-run
+  that came back *partial again* (still directional, still underpowered) would instead **sharpen** the
+  exemption's self-extinguishing bound — flagging that the design, not just the item count, limits power
+  (e.g. too few discordant pairs are reachable on this construction), which would redirect the spend to a
+  *different* axis rather than a third re-run.
 
 ## Honesty box
 
@@ -480,6 +606,25 @@ empty fourth box.
   relocated the implicated axis from "read-off vs. chaining" to "chaining," redrawing the map that aims the
   next probe. It adds **no** empirical claim (it reads the result page at its stated strength) and does not
   touch the closure ≠ suspension line.
-- **No human comparison** is made or owed: the cited result is `internal-contrast-only`, and the human leg
-  of every cited contrast is unanchored in-repo. The economics is general to budgeted capability-probing,
-  but the essay applies it only to the project's own LLM probes.
+- The session-61 **partial-witness** deepening is likewise a refinement of this essay's own value model, not
+  a new empirical claim; it reads [`result/scivetti-let-alone-forced-decomposition-v1`](../results/scivetti-let-alone-forced-decomposition-v1.md)
+  at its stated strength. The numbers leaned on: forcing uptake took gpt's median let-alone working from
+  **8 → 120 tokens** (24/24 worked) and its accuracy **0.375 → 0.583** (+0.21, 7 gains / 2 losses), with the
+  within-item sign test **underpowered** (p = 0.090, 9 discordant pairs → verdict UNCHANGED) and the rate
+  **below the ≈0.90 baseline** — "a **partial output-channel effect** … part is channel-bounded … and part
+  survives a genuinely-exercised wide channel," "**partially fired / candidate** … the *power* is not yet
+  there to call it clean," with "**a powered re-run (more let-alone items …)** … the next witness axis." The
+  deepening's **original** contribution is the third outcome slot (partial witness) and the **power-up scope
+  clause** — that re-running the *same* axis after a *directional* easing resolves power, not existence, and
+  so is exempt from "more of the same probe cannot" / "the same axis twice," with the exemption bounded as
+  narrow and self-extinguishing. The single-case statement of the principle pre-existed on
+  [`essay/output-channel-confound`](output-channel-confound.md)'s trigger (b); promoting it into the value
+  model is the new work. The closure ≠ suspension line is untouched: a partial witness keeps the search live.
+- **No new human comparison** is made or owed. The composition results read here are `internal-contrast-only`
+  (their human leg unanchored in-repo); the let-alone result the partial-witness deepening adds **is**
+  human-anchored ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md);
+  its accuracy-vs-≈0.90 leg anchored for comp-correlative, descriptive for let-alone), so this essay's
+  "below the ≈0.90 baseline" references *restate that page's own anchored/descriptive comparison at its
+  stated strength* — the essay's contribution is the spending-rule reading off the **within-model** format/
+  uptake contrast and adds no human comparison of its own. The economics is general to budgeted
+  capability-probing, but the essay applies it only to the project's own LLM probes.

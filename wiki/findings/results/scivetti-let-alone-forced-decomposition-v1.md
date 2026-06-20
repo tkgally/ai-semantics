@@ -20,6 +20,8 @@ links:
     target: result/scivetti-let-alone-working-surface-v1
   - rel: supports
     target: essay/output-channel-confound
+  - rel: supports
+    target: essay/witness-seeking-economics
   - rel: depends-on
     target: essay/undischargeable-negative
   - rel: depends-on
@@ -164,7 +166,13 @@ used.
    descriptive accuracy whose CI is wide. So (b) is registered as **partially fired /
    candidate**: the *direction* is the contrast case (a channel-controlled residual), the
    *power* is not yet there to call it clean. A powered re-run (more let-alone items, or the
-   disjoint train-split items) is the next witness axis.
+   disjoint train-split items) is the next witness axis. *(Forward note, session 61: this
+   outcome — a directional-but-underpowered easing — is read methodologically in
+   [`essay/witness-seeking-economics`](../essays/witness-seeking-economics.md) §"The partial
+   witness" as a **third** witness-search outcome between fire and clean miss, whose correct
+   continuation is a **powered re-run of the same axis** — a power-resolution move the essay
+   exempts from the "more of the same probe cannot" caution because the first run left a
+   directional signal, not a null.)*
 4. **The two stronger models confirm the scaffold is a valid, benign instrument.** claude
    (0.792 → 0.833) and gemini (0.917 → 0.875) both stay at the human baseline under forced
    decomposition (UNCHANGED, no DROP, gemini's −0.04 a non-significant 2/3 wobble), and the
