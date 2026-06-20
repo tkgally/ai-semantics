@@ -233,3 +233,14 @@ Scivetti anchor are both ratified). What is `proposed` is the project's reading.
 past `proposed` awaits Tom's review and ideally a robustness arm on gpt's non-recovery
 (few-shot / alternate framing / the disjoint train-split let-alone items — the next witness
 axes the undischargeable-negative discipline names).
+
+> **Forward note (2026-06-20, session 60) — the uptake-inducing arm this page named has been
+> run.** [`result/scivetti-let-alone-forced-decomposition-v1`](scivetti-let-alone-forced-decomposition-v1.md)
+> re-ran the same 24 items with a **forced** 3-step decomposition. It **induced uptake** in
+> gpt (median completion length 8 → 120 tokens; 24/24 worked, vs the 16/24-bare decline
+> here), closing this page's "channel-not-taken-up" gap. The result: forcing uptake **partly**
+> closes gpt's let-alone gap (+0.21, directional but underpowered, sign-test p = 0.090 →
+> UNCHANGED) yet leaves it **below** the human baseline (0.583) where claude/gemini sit — a
+> **partial** output-channel effect, not the clean "artifact" or clean "survival" reading.
+> So this page's open question ("is gpt's let-alone a channel artifact or a real bound?")
+> resolves to **partly each**.
