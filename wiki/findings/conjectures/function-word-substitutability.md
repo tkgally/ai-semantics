@@ -90,6 +90,21 @@ critic (no item added/dropped after the first probe call). What counts as a "fre
 pair was the place a loop could quietly cheat by selecting items that bias the result — the
 ratified freeze-and-hash + pre-run-critic GO/NO-GO is what binds that.
 
+> **Build v1 (2026-06-21, session 67) — NO-GO; run DEFERRED.** The build pipeline is complete
+> and the set certified SOUND on every matching/shortcut-reader/integrity check (length-only
+> reader asymmetry 0.0; minimal-pair integrity; no leak), but it falls **far short of the ≥200
+> target**: under faithful matching only **~66 clean items across 3 viable content semantic
+> classes** survive. A *length-only* reader forces a signed **+1** content length-match (every
+> function swap is +1 char), and the frequency∩length∩coherence intersection is thin — the
+> person-noun route dies (no open-class noun at Lg10WF ≈ 3.33 with +1 length near 4.74), the
+> `the`→`a` swap admits **no** frequency-matched content control at all (no content word reaches
+> Lg10WF ≈ 6.0), the adjective class has no clean matched swap, and `some`/`will` each yield a
+> single matched out-word. An independent reviewer confirmed the NO-GO and that ≥200 is
+> near-infeasible without relaxing a ratified tolerance. The blocker is queued as
+> [`decisions/open/function-word-count-vs-matching`](../../decisions/open/function-word-count-vs-matching.md);
+> see [`result/function-word-swap-build-v1`](../results/function-word-swap-build-v1.md). The
+> conjecture stays **`designed`** and untested; the probe runs once that decision is ratified.
+
 ## Notes / caveats
 
 - This is the most *abstract* of the project's constructional conjectures and so the most vulnerable to operationalization tuning. Lock the matched-pair set **before** seeing model outputs.

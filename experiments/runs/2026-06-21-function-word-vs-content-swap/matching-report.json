@@ -1,0 +1,57 @@
+{
+ "function_pairs": {
+  "because": {
+   "out_lg": 4.7374,
+   "in_lg": 3.3312,
+   "gap": 1.4062,
+   "gloss": "subordinator: causal->concessive"
+  },
+  "some": {
+   "out_lg": 4.9449,
+   "in_lg": 4.4473,
+   "gap": 0.4976,
+   "gloss": "quantifier: existential->universal"
+  },
+  "will": {
+   "out_lg": 5.0347,
+   "in_lg": 4.955,
+   "gap": 0.0797,
+   "gloss": "modal: future->conditional"
+  }
+ },
+ "counts": {
+  "matched_total": 66,
+  "det_char": 10,
+  "by_function": {
+   "because": 38,
+   "some": 22,
+   "will": 6
+  },
+  "by_function_x_pos": {
+   "because:verb": 32,
+   "because:noun_thing": 6,
+   "some:noun_person": 14,
+   "some:verb": 4,
+   "some:noun_thing": 4,
+   "will:verb": 6
+  },
+  "content_semantic_classes": [
+   "noun_person",
+   "noun_thing",
+   "verb"
+  ]
+ },
+ "gap_residual_mean_by_ftype": {
+  "because": -0.0712,
+  "some": 0.0101,
+  "will": 0.0714
+ },
+ "gap_residual_absmax_by_ftype": {
+  "because": 0.1564,
+  "some": 0.0317,
+  "will": 0.0914
+ },
+ "dropped_pairs": [],
+ "freq_tol": 0.1,
+ "len_match": "signed dlen == function dlen (all +1)"
+}
