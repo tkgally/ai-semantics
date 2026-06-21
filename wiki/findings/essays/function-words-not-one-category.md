@@ -18,6 +18,8 @@ links:
   - rel: depends-on
     target: result/function-word-modal-widening
   - rel: depends-on
+    target: result/function-word-modal-second-instrument
+  - rel: depends-on
     target: concept/constructional-meaning
   - rel: depends-on
     target: concept/distributional-meaning
@@ -25,8 +27,9 @@ links:
 
 # Essay: "function words" is not one inferential category in these models
 
-> **Status: revised (2026-06-21, session 71 — revision logged below). A philosophical-track essay
-> arguing in the project's own voice.** Its
+> **Status: revised (2026-06-21, sessions 71 and 72 — revisions logged below; trigger (a) narrowed
+> the modal gloss, trigger (c) relocated the modal null to instrument calibration). A
+> philosophical-track essay arguing in the project's own voice.** Its
 > original contribution is a single conceptual correction and a calibrated reading of it: **"function
 > word" — a part-of-speech / distributional class — is not a natural kind for *inferential* bearing in
 > these models.** The project's function-word-vs-content swap result confirmed 3/3 that swapping a function
@@ -199,6 +202,50 @@ Three things follow, and the essay's body above should be read through them:
    sharpest remaining lever on whether the surviving `will`→`would` null is the *instrument's*
    insensitivity or the *relation's* subtlety.
 
+## Revision (2026-06-21, session 72): trigger (c) fired *positive* — the modal null is the instrument, not the relation
+
+Revision trigger (c) below — "a second inferential instrument" — was run the session after this essay's
+trigger-(a) revision, and it **fires positive**.
+[`result/function-word-modal-second-instrument`](../results/function-word-modal-second-instrument.md)
+holds the modal swap byte-identical (the same frozen will/shall/must stimuli) and changes only the
+**indicator**, from 3-way NLI entailment-flip to a single-token forced-choice **modal-force preference**.
+A second indicator **does register** the swaps NLI left null: `will`→`would` shifts the forced-choice
+preference toward the conditional reading in all three models (claude 6/20, gpt 13/20, gemini 17/20,
+every bootstrap CI above zero) where NLI flipped it 0/0/3 of 20; and the `shall`→`should` **NLI
+panel-split dissolves** — claude and gpt, which collapsed *should* ≈ *required* under NLI's "is required
+to" frame, distinguish advisory from required at ceiling under a direct preference (17/18, 18/18, 18/18),
+matching gemini. The content-swap control shifts ~0 and base-strong preference is high (0.90–1.00), so the
+arms are interpretable.
+
+This is the decider trigger (c) named, and it lands on the **instrument-sensitivity** horn of the §"A
+calibrated reading" dilemma. The modal near-null is therefore **not** a fact about the future→conditional
+*relation* being inferentially inert — it is a fact about **3-way NLI's calibration**. Two consequences,
+and the §"A calibrated reading" section should be read through them:
+
+1. **The §"A calibrated reading" thesis is vindicated in its strongest form.** That section hedged
+   between "the *type* of relation changed" and "the *instrument's* sensitivity to that relation," calling
+   trigger (c) "the single most decisive trigger and the essay's strongest reason for hedging." The hedge
+   is now **discharged toward instrument sensitivity**: with the relation held byte-identical, swapping the
+   indicator flips the result from null to registered. *The inferential indicator's calibration
+   co-determines what counts as inferential load* — this is no longer interpretation but a demonstrated
+   within-stimulus, cross-instrument contrast.
+2. **One honest bound keeps the win calibrated (do not over-read it).** The forced-choice HEDGE option for
+   the `will` arm explicitly names the irrealis reading ("conditional or hypothetical"), so the second
+   instrument is **structurally more disposed** to register `will`→`would` than NLI's entailment frame was.
+   The result therefore licenses the **relocation** (the NLI null was not relation-intrinsic) but **not**
+   the stronger claim that the future→conditional relation is "robustly inferential" — a registered
+   *preference* is weaker than a computed *entailment* (the same "preference without commitment" gap the
+   project's AANN line named). claude's `will` cell is the weakest (6/20); the relocation rests on all
+   three clearing zero, not on any one cell. So the essay's deflationary discipline holds: what changed is
+   *which instrument reads the swap*, not a claim that the models compute modal truth-conditions.
+
+The net effect on the essay's spine: the **type-specificity thesis survives** (closed-class items still
+carry inferential load non-uniformly *under any given instrument*), but the *low-load* end of the modal
+gradient is now shown to be **instrument-relative**, not a property of the swap. "Constructional load is a
+relation among a construction, the inference it licenses, and the instrument used to read that inference"
+(below) is exactly the right statement — and the third term has now been shown to be **load-bearing** by
+direct manipulation.
+
 ## This does not undercut the constructional reading — it refines it
 
 It would be a misreading to take type-specificity as eroding the result's support for constructional meaning
@@ -266,6 +313,13 @@ construction, the inference it licenses, and the instrument used to read that in
   to "instrument sensitivity," vindicating the §"A calibrated reading" caveat that the instrument's
   calibration co-determines the result. This is the single most decisive trigger and the essay's strongest
   reason for hedging the calibrated reading.
+  > **FIRED (2026-06-21, session 72) — positive.** [`result/function-word-modal-second-instrument`](../results/function-word-modal-second-instrument.md):
+  > a single-token forced-choice modal-force preference, on the byte-identical frozen stimuli, **registers**
+  > the `will`→`would` swap (claude 6/20, gpt 13/20, gemini 17/20; CIs clear zero) NLI left null, and the
+  > `shall`→`should` NLI panel-split **dissolves** into concordance (17/18, 18/18, 18/18). The modal nulls
+  > relocate to **instrument calibration**, vindicating §"A calibrated reading" in its strongest form —
+  > **bounded** by the `will`-arm fairness asymmetry (the HEDGE option names the irrealis reading, so this
+  > licenses the relocation, not a "robustly inferential" claim). See the **Revision (session 72)** section above.
 - **(d) A source on which closed-class distinctions are truth-conditional.** If an ingested source
   classifies which closed-class distinctions are truth-conditional versus pragmatic/scalar, the high-load /
   low-load split could be predicted *a priori* rather than read off the arms post hoc, which would convert
