@@ -23,12 +23,17 @@ links:
     target: concept/constructional-meaning
   - rel: depends-on
     target: concept/distributional-meaning
+  - rel: depends-on
+    target: source/davis-2024-implicature-sep
+  - rel: depends-on
+    target: concept/truth-conditional-and-use-meaning
 ---
 
 # Essay: "function words" is not one inferential category in these models
 
-> **Status: revised (2026-06-21, sessions 71 and 72 — revisions logged below; trigger (a) narrowed
-> the modal gloss, trigger (c) relocated the modal null to instrument calibration). A
+> **Status: revised (2026-06-21, sessions 71, 72, and 73 — revisions logged below; trigger (a) narrowed
+> the modal gloss, trigger (c) relocated the modal null to instrument calibration, trigger (d) grounded the
+> high/low split in an external implicature typology). A
 > philosophical-track essay arguing in the project's own voice.** Its
 > original contribution is a single conceptual correction and a calibrated reading of it: **"function
 > word" — a part-of-speech / distributional class — is not a natural kind for *inferential* bearing in
@@ -246,6 +251,96 @@ relation among a construction, the inference it licenses, and the instrument use
 (below) is exactly the right statement — and the third term has now been shown to be **load-bearing** by
 direct manipulation.
 
+## Revision (2026-06-21, session 73): trigger (d) fired — the high/low split is predicted *a priori* by the implicature typology, not read off the arms
+
+Revision trigger (d) below — "a source on which closed-class distinctions are truth-conditional" — is now
+discharged. The project ingested [`source/davis-2024-implicature-sep`](../../base/sources/davis-2024-implicature-sep.md),
+Wayne Davis's *Stanford Encyclopedia of Philosophy* survey "Implicature", which supplies the external
+semantics/pragmatics typology this essay named as its weakest point. The typology lets the §"A calibrated
+reading" split be **predicted from the instrument**, rather than read off the arms post hoc, and it grounds
+in an in-repo source the very terms ("truth-conditional / logical-scope" vs "scalar/pragmatic") that section
+had been using as the essay's own gloss.
+
+**The typology, in three diagnostics** (all verbatim via the source page; the § locators are Davis's section
+numbers). Grice's foundational cut is between what a speaker *says* and what she thereby *implicates*: "Grice
+introduced the technical terms _implicate_ and _implicature_ for the case in which what the speaker said is
+distinct from what the speaker thereby meant or implied" (§1). Within what is implicated, the species that
+matters here is *conversational* (including generalized / **scalar**) implicature, marked by two diagnostics:
+it is **cancelable** — "generalized conversational implicatures differ from semantic implicatures in being
+_cancelable_" (§2) — and, the load-bearing point, it is **not (in general) entailed** by what is said:
+"Whereas semantic implicatures are generally entailed by what is said, many believe that conversational
+implicatures cannot be" (§2). The paradigm is the quantity scale: uttering "Some athletes smoke" implicates
+"Not all athletes smoke", but "(5a) can be asserted without implicating [5b] … by adding 'Indeed, all do'
+after uttering 'Some athletes smoke'" (§2) — the upper bound is a cancelable implicature, not part of the
+truth-conditional content.
+
+**The a-priori prediction this licenses.** A 3-way NLI judgment is an *entailment* instrument: it asks whether
+a premise entails, contradicts, or is neutral toward a hypothesis. By Davis's typology, an entailment
+instrument is a probe of *what is said* — truth-conditional, at-issue content — and is by construction blind
+to content carried by a conversational implicature, since on the standard view "conversational implicatures
+cannot be [entailed]". So the typology predicts, *before looking at the arms*, **which closed-class swaps a
+3-way NLI instrument should register and which it should miss**: a swap registers iff it changes at-issue
+truth-conditional content; a swap whose force is carried by a scalar implicature is one the instrument can
+legitimately leave null. Run against the four arms:
+
+- **`some`→`every` (registers — predicted).** Existential→universal force is an *at-issue* quantificational
+  change: against a universal hypothesis, "every" entails it and "some" does not. This is what-is-said, so an
+  entailment instrument must register it — and it does, near-totally in every model (+0.929 / +0.750 / +0.750).
+- **`few`→`many` (splits — predicted as the legitimate-divergence arm).** Against "All X", neither the paucal
+  nor the multal quantifier entails the universal; the only difference that bears is the *upper-bounding
+  scalar implicature* of "many" ("many, but not all"), which Davis classifies as cancelable and not entailed.
+  An entailment instrument therefore has no obligation to register it, and a panel can legitimately diverge by
+  whether each model reads the upper bound as in force. That is exactly what
+  [`result/function-word-few-many-split`](../results/function-word-few-many-split.md) found: claude keeps
+  "Many X → All X" a contradiction (upper bound in force), gpt and gemini relax it to neutral (only the lower
+  bound at-issue). The typology predicts *a priori* that this is the arm where a truth-conditional instrument
+  can split — because the contested content here is implicature, not what-is-said.
+- **`because`→`although` (registers — but a *mixed* case, not a clean implicature contrast).** `because`
+  carries an at-issue *causal assertion*; swapping it for concessive `although` removes that assertion — an
+  at-issue truth-conditional change an entailment instrument must register, and it does (+1.000 / +0.875 /
+  +1.000). The concessive layer of `although` is itself implicature-like (a not-at-issue conventional
+  implicature of unexpectedness, "implied rather than said"), but the *registration* is driven by the at-issue
+  causal change, not the concessive layer. So this arm is predicted HIGH for an *at-issue* reason; it is not
+  the clean implicature contrast (the source page flags exactly this caveat).
+- **`will`→`would` (the case the typology covers least directly).** The future→conditional shift is *modal
+  semantics*, not implicature: the models read the eventuality's occurrence as intact under either modal, so an
+  entailment instrument sees no at-issue change. The implicature typology does not directly classify this arm;
+  its relocation to instrument calibration came from trigger (c) — a *second* instrument did register it — not
+  from Davis. Trigger (d) thus grounds the **quantifier / connective** end of the calibrated reading and is
+  *complementary* to (c)'s modal relocation, not a substitute for it.
+
+So three of the four arms fall out of the typology a priori — the at-issue swaps (`some`→`every`, the causal
+content of `because`) register; the scalar-implicature swap (`few`→`many`) is the licensed-divergence arm —
+and the fourth is modal semantics, handled by trigger (c). Until now those terms were the essay's own gloss
+"resting on no ingested semantics typology" (the named trigger-(d) weakness); Davis's typology now supplies
+the a-priori classification behind them, converting the gloss **from interpretation toward claim**.
+
+**What this does and does not buy (the bounds keep it calibrated).**
+
+1. **It does not show the models *compute* implicatures.** Davis's typology is about *human language and
+   speakers' meaning*; producing NLI labels consistent with "many does not reach all" is not computing a
+   scalar implicature. The essay's deflationary discipline is unchanged: what trigger (d) explains is *which
+   swaps a truth-conditional instrument registers*, by reference to the at-issue / implicature status of the
+   content — a fact about the instrument and the linguistic typology, not a mechanism claim about the models.
+2. **"Toward claim," not "to settled claim."** A typology that *predicts* the observed pattern is corroboration,
+   not proof; and Davis reports the non-entailment of conversational implicature as the standard but contested
+   view ("many believe"; "conversational implicatures are _typically_ not entailments. But exceptions have been
+   noted"). The calibrated reading is now predicted a priori, and so far stronger than a post-hoc gloss — but it
+   remains an interpretation backed by an external frame, not a measured mechanism.
+3. **The cleanest typology-predicted contrast is `some`→`every` vs `few`→`many`.** That pair is the minimal
+   at-issue-vs-scalar-implicature contrast *inside the quantifier domain*, holding the part-of-speech class
+   fixed — the sharpest possible vindication of this essay's thesis that "function word" is the wrong unit: two
+   quantifier swaps, same closed class, split exactly along the at-issue / implicature line the typology draws.
+   `because`→`although` is predicted HIGH but mixed; the modal lies outside the implicature typology's scope.
+
+The net effect on the essay's spine: the type-specificity thesis is unchanged, and the §"A calibrated reading"
+thesis — "constructional load is a relation among a construction, the inference it licenses, and the instrument
+used to read that inference" — now has an *a-priori reason why the instrument is load-bearing*: an entailment
+instrument tracks what-is-said and is by design insensitive to implicature, so which closed-class swaps it
+registers is co-determined by whether the swap's force is at-issue or implicature. The third term of that
+relation is not only shown load-bearing by manipulation (trigger c); it is now *predicted* load-bearing by an
+external semantics typology (trigger d).
+
 ## This does not undercut the constructional reading — it refines it
 
 It would be a misreading to take type-specificity as eroding the result's support for constructional meaning
@@ -325,6 +420,13 @@ construction, the inference it licenses, and the instrument used to read that in
   low-load split could be predicted *a priori* rather than read off the arms post hoc, which would convert
   the calibrated reading from interpretation toward claim. The essay currently rests on no external
   semantics typology, and that is where it is weakest.
+  > **FIRED (2026-06-21, session 73) — discharged.** [`source/davis-2024-implicature-sep`](../../base/sources/davis-2024-implicature-sep.md)
+  > supplies the typology: a 3-way NLI instrument probes *what is said* (entailment / at-issue content) and is
+  > by construction blind to *scalar implicature* ("conversational implicatures cannot be [entailed]"), so the
+  > at-issue swaps (`some`→`every`; the causal content of `because`) register and the scalar swap (`few`→`many`)
+  > is the licensed-divergence arm — the high/low split predicted *a priori*, not read off the arms. See the
+  > **Revision (session 73)** section above; bounded (does not show the models compute implicatures; the modal
+  > arm is modal semantics, relocated by trigger (c), not by this typology).
 
 ## Honesty box
 
@@ -361,7 +463,11 @@ construction, the inference it licenses, and the instrument used to read that in
   contrasts the models with humans. The frequency norm the probe matches on,
   [`resource/subtlex-us-frequency`](../../base/resources/subtlex-us-frequency.md), is mentioned only as the
   probe's matching floor, not as an anchor for any human claim.
-- **Provenance note (named weakness).** The high-load / low-load split is read *off the arms* and given a
-  truth-conditional-vs-scalar interpretation that rests on no ingested semantics typology — that gap is
-  revision trigger (d). The calibrated reading (§"A calibrated reading") is interpretation, not a finding;
-  revision triggers (a)–(c) are the experiments that would confirm, narrow, or relocate it.
+- **Provenance note (named weakness, now reduced).** The high-load / low-load split was originally read *off
+  the arms* and given a truth-conditional-vs-scalar interpretation resting on no ingested semantics typology —
+  the named trigger-(d) gap. Trigger (d) is now **discharged**: [`source/davis-2024-implicature-sep`](../../base/sources/davis-2024-implicature-sep.md)
+  supplies the a-priori typology (see the **Revision (session 73)** section), so the split is *predicted* by an
+  external frame rather than read off the arms — moving the calibrated reading from interpretation *toward*
+  claim, though not to a settled mechanism (the typology predicts the pattern; it does not show the models
+  compute implicatures, and Davis reports it as the standard-but-contested view). The calibrated reading
+  (§"A calibrated reading") is now externally grounded but still an interpretation, not a measured mechanism.
