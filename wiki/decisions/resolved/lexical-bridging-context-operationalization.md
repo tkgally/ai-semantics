@@ -1,9 +1,12 @@
 ---
 id: lexical-bridging-context-operationalization
 title: How to operationalize "intermediate, less-confident" model behavior on bridging items — which within-item gradience instrument (and reading rule), frozen before any result?
-status: open
+status: resolved
 opened: 2026-06-21
 opened-by: autonomous (session 74, opening the lexical bridging-context probe's operationalization gate)
+resolved: 2026-06-21
+resolved-by: autonomous (adversarial review)
+resolution: adopt-modified (B-primary + C-categorical-cross-check fixed panel / A characterizing-only / freeze-before-data / bound Q3 context control / first-class null — with three binding modifications and nine build-session conditions)
 contingent-artifacts:
   - open-question/lexical-bridging-context-gradience
 meaning-senses:
@@ -20,24 +23,83 @@ links:
     target: concept/referential-meaning
 ---
 
-> **Status: OPEN (opened 2026-06-21, session 74).** This page **surfaces** the
-> operationalization gate for the lexical bridging-context probe; it does **not**
-> resolve it. It is **NOT ratifiable in this session** (the cross-session rule,
-> [`PROJECT.md`](../../../PROJECT.md) §12.3 / [`CLAUDE.md`](../../../CLAUDE.md) rule 5):
-> the **earliest** it may be ratified is a **later** session's independent
-> adversarial-review pass, with written rationale recorded `resolved-by: autonomous
-> (adversarial review)`. **No probe runs before that ratification.** This page lays
-> out the instrument options and a *provisional default for a later reviewer* — it
-> does **not** pick an instrument. Tom's standing override outranks any autonomous
-> ratification.
+> **Status: RESOLVED (2026-06-21, session 75, autonomous adversarial review — cross-session:
+> opened by session 74 on 2026-06-21, ratified by session 75; the session boundary held).
+> VERDICT: ADOPT DEFAULT — with three binding modifications.** An independent fresh-agent
+> reviewer (not the orchestrator that did this session's downstream work) re-derived the
+> cheat-surface from scratch and confirmed the provisional default's core architecture: a fixed
+> two-instrument panel — **Option B** (explicit graded-confidence) **primary**, **Option C**
+> (the "both/unclear" third option) **categorical cross-check**, **Option A** (forced-judgment
+> dispersion) **characterizing-only** — frozen before any probe call, with a pre-committed
+> cross-instrument reading rule, the inherited v1 clause-(c) context-ambiguity control (Q3) bound
+> as **non-optional**, and a first-class within-item-discreteness **null**. This closes the named
+> failure mode (instrument-shopping until intermediacy appears): a pre-registered fixed panel
+> removes post-hoc instrument selection, demoting A removes its dispersion knobs from the verdict,
+> and the context control blocks the distributional-shadow route to a false positive.
 >
-> **Paired gate.** The human-anchor question for this probe — what *certifies* an
-> item as genuinely bridging, independent of the model — is handled in a sibling
-> decision, `lexical-bridging-context-anchor` (being opened in the same session by
-> a sibling unit; its exact final content is not assumed here). This page is **only**
-> the operationalization gate: how to *measure* "intermediate, less-confident,"
-> given a bridging stratum the anchor decision certifies. The two gates must both be
-> ratified (cross-session) before any run.
+> **Three binding modifications** (none makes a positive likelier; all close cheat-surfaces or
+> correct the reading rule):
+> 1. **Numeric freeze, not prose.** "All scales/thresholds/wording frozen" is too loose to bind a
+>    builder; like [`function-word-anchor-design`](function-word-anchor-design.md)'s M2 thresholds,
+>    the build session must pre-register and sha256-hash B's exact **intermediate midpoint band**,
+>    C's **verbatim third-option wording**, the sample/paraphrase counts + temperature for any A
+>    dispersion read, and the three item classes. The band and wording are the chief residual knobs.
+> 2. **Per-axis agreement, not blanket AND.** The page itself concedes C makes only the
+>    *decline-rate* (confidence/dispersion) axis crisp, so C cannot co-equally certify the
+>    *position* axis. The reading rule is therefore: the **position** axis is certified by **B**
+>    alone (bridging strictly between the two clear classes); the **confidence/dispersion** axis is
+>    certified by **both** B (mid-band) **and** C (elevated decline rate vs both clear classes).
+>    Prediction 4 = *supported* only if position holds (B) **and** dispersion holds on both B and C.
+>    C is never asked to certify position.
+> 3. **Disagreement is a substantive result, not the null.** A bare logical AND over a continuous
+>    and a categorical instrument with different noise profiles at intrinsically small N inflates
+>    false negatives and quietly makes the null the default. B–C disagreement on the dispersion axis
+>    is reported as a **mixed/weak** result with both readings shown — NOT collapsed into the clean
+>    null. The clean null is reserved for bridging handled at clear-item confidence AND clear-item
+>    decline rate (graded scale, ungraded commitment), reported as cleanly as a positive.
+>
+> Ratifying fixes the **yardstick, never the result** ([`CLAUDE.md`](../../../CLAUDE.md) rule 6): no
+> probe ran this session, and the paired human-anchor gate
+> ([`lexical-bridging-context-anchor`](lexical-bridging-context-anchor.md)) is **correctly deferred,
+> not resolved here** — it was ratified separately the same session by its own independent reviewer.
+> The provisional-default prose below is the reviewer's evidence base; the **binding build-session
+> conditions** at the end of this block are now load-bearing.
+>
+> ### Binding build-session conditions (load-bearing)
+> A future builder / pre-run critic must enforce **all** of:
+> - **(a) Panel frozen:** B primary + C categorical cross-check + A characterizing-only. No
+>   instrument added, dropped, re-worded, or re-thresholded after any output is seen.
+> - **(b) Numeric freeze (the M2-analogue this page lacked):** before the first probe call, record
+>   and sha256-hash B's rating scale and exact numeric **intermediate midpoint band**; C's
+>   **verbatim third-option wording**; the sample/paraphrase counts + temperature for any A read;
+>   and the three item classes (clearly-same / clearly-different / bridging).
+> - **(c) Per-axis agreement rule** (modification 2 above), written down before data.
+> - **(d) Disagreement-reporting rule** (modification 3 above): mixed/weak ≠ null.
+> - **(e) Clear-class precondition:** interpretable only if the clear classes show high confidence
+>   (B) and low decline rate (C); report these as a precondition, else NO-GO.
+> - **(f) Q3 control non-optional:** a v1-style context-ambiguity / context-similarity control
+>   measured independently of the sense-uncertainty signal is part of the design; an instrument set
+>   without this slot fails the gate.
+> - **(g) A characterizing-only:** A may describe but never decide; its knobs never enter the verdict.
+> - **(h) Pre-run critic GO/NO-GO** against the frozen set: a NO-GO defers the run rather than
+>   relaxing any band, wording, or the agreement rule.
+> - **(i) Anchor deferral intact:** this gate licenses no human-comparison claim until the sibling
+>   anchor gate's own conditions (incl. its claim-scope cap to usage-similarity) are met.
+>
+> ### Residual risks (survive adoption)
+> - **Q3 may be insufficient even when bound** — v1's topic control is model-internal and was
+>   flagged weak; a bound-but-weak context control may not fully separate sense- from
+>   context-indeterminacy. The result must disclose this and not over-claim sense-tracking.
+> - **Small N is intrinsic;** the per-axis rule plus small N keeps false-negative risk live even
+>   after modification 3. Direction-of-effect, wide per-lemma uncertainty only.
+> - **Usage-similarity vs sense-relatedness slide** — inherited correctly but easy to drop; bound by
+>   the anchor gate's label discipline.
+> - **Stated confidence (B) may be miscalibrated** — a model defaulting mid-scale on any hard item
+>   is a confound the clear-class precondition (e) mitigates but does not eliminate.
+>
+> ---
+>
+> *The provisional-default analysis below is preserved verbatim as the reviewer's evidence base.*
 
 # Decision: which within-item gradience instrument, and its reading rule, frozen before any result
 
@@ -65,9 +127,9 @@ That makes the choice of instrument a value-laden operationalization decision a
 session must not auto-take ([`CLAUDE.md`](../../../CLAUDE.md) rule 5). This page
 interlocks the choices and makes the freeze-before-results discipline binding — in
 the same shape as the resolved
-[`decisions/resolved/function-word-anchor-design`](../resolved/function-word-anchor-design.md)
+[`decisions/resolved/function-word-anchor-design`](function-word-anchor-design.md)
 and the conjecture's own
-[`decisions/resolved/lexical-sense-gradience-operationalization`](../resolved/lexical-sense-gradience-operationalization.md).
+[`decisions/resolved/lexical-sense-gradience-operationalization`](lexical-sense-gradience-operationalization.md).
 
 Two facts constrain the whole space and are stated up front so no option smuggles
 them past a later reviewer:
