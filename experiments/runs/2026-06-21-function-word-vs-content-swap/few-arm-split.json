@@ -1,0 +1,60 @@
+{
+  "few_n_items": 126,
+  "label_encoding": {
+    "0": "entailment",
+    "1": "neutral",
+    "2": "contradiction"
+  },
+  "models": {
+    "claude": {
+      "model": "claude",
+      "n": 126,
+      "flip_fn": 0.0952,
+      "base_dist": {
+        "contradiction": 126
+      },
+      "fn_dist": {
+        "neutral": 12,
+        "contradiction": 114
+      },
+      "joint": {
+        "con->neu": 12,
+        "con->con": 114
+      }
+    },
+    "gpt": {
+      "model": "gpt",
+      "n": 126,
+      "flip_fn": 0.9683,
+      "base_dist": {
+        "neutral": 1,
+        "contradiction": 125
+      },
+      "fn_dist": {
+        "neutral": 123,
+        "contradiction": 3
+      },
+      "joint": {
+        "neu->neu": 1,
+        "con->neu": 122,
+        "con->con": 3
+      }
+    },
+    "gemini": {
+      "model": "gemini",
+      "n": 126,
+      "flip_fn": 0.9603,
+      "base_dist": {
+        "contradiction": 126
+      },
+      "fn_dist": {
+        "neutral": 121,
+        "contradiction": 5
+      },
+      "joint": {
+        "con->neu": 121,
+        "con->con": 5
+      }
+    }
+  }
+}
