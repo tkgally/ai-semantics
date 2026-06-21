@@ -107,8 +107,9 @@ be reported per arm) makes each cell interpretable:
    agreement is **high** (1.00 / 1.00 / 0.89): all models read "the bidder *shall* buy the lot → is
    required to buy the lot" as entailment, so the feared "*shall* read as plain future" collapse did
    **not** happen — the split is interpretable. The *fn* condition divides the panel: **gemini** reads
-   "*should* buy → is required to buy" as **no longer entailment** (16/18 flip to neutral — it grades
-   *should* as advisory, weaker than *required*), while **claude and gpt keep it entailment** (17/18,
+   "*should* buy → is required to buy" as **no longer entailment** (14/18 ≈ 0.78 flip, almost all to
+   neutral — it grades *should* as advisory, weaker than *required*), while **claude and gpt keep it
+   entailment** (17/18,
    flip 0.056 — they collapse *should* ≈ *required*). So whether the advisory/obligation distinction
    is inference-relevant is a **genuine model difference**, not a surface artifact. **Read with its
    thinness:** the entire `shall` arm rests on a single content pair (`buy`→`give`), so the split is

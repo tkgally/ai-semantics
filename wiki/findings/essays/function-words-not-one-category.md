@@ -6,7 +6,7 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-21
 updated: 2026-06-21
@@ -16,6 +16,8 @@ links:
   - rel: depends-on
     target: result/function-word-swap-run-v2
   - rel: depends-on
+    target: result/function-word-modal-widening
+  - rel: depends-on
     target: concept/constructional-meaning
   - rel: depends-on
     target: concept/distributional-meaning
@@ -23,7 +25,8 @@ links:
 
 # Essay: "function words" is not one inferential category in these models
 
-> **Status: draft (2026-06-21). A philosophical-track essay arguing in the project's own voice.** Its
+> **Status: revised (2026-06-21, session 71 — revision logged below). A philosophical-track essay
+> arguing in the project's own voice.** Its
 > original contribution is a single conceptual correction and a calibrated reading of it: **"function
 > word" — a part-of-speech / distributional class — is not a natural kind for *inferential* bearing in
 > these models.** The project's function-word-vs-content swap result confirmed 3/3 that swapping a function
@@ -158,6 +161,44 @@ not register the load it carries. The essay is explicit that this is interpretat
 manipulate instrument calibration, so it cannot separate "the type of relation changed" from "the
 instrument's sensitivity to that relation." The two revision triggers below are designed to pull them apart.
 
+## Revision (2026-06-21, session 71): trigger (a) fired — the modal null is *future→conditional-specific*, not modal
+
+Revision trigger (a) below — "a widened modal arm" — was run the same day this essay was drafted, and
+it **fires in the "narrows" direction**. [`result/function-word-modal-widening`](../results/function-word-modal-widening.md)
+widened the modal arm beyond `will`→`would` to two new modal contrasts under the same instrument and
+matching discipline, with the result that **the modal null does not generalize**: `must`→`might`
+(necessity→possibility) "flips at ceiling in all three models (20/20 each)," and `shall`→`should`
+(deontic obligation→advisory) "flips strongly in gemini (14/18 ≈ 0.78) though barely in claude/gpt
+(1/18 ≈ 0.06)," while `will`→`would` "replicates run-v2 cell-for-cell (claude 0/20, gpt 0/20, gemini
+3/20)." So this essay's claim that "modal flavor is the kind of shift this instrument is insensitive
+to" was **too strong, and is now narrowed**: the near-null is a fact about the **future→conditional**
+swap specifically, not about modal swaps as a class. As trigger (a) anticipated, "the type-specificity
+thesis survives but its diagnosis changes."
+
+Three things follow, and the essay's body above should be read through them:
+
+1. **The "modal flavor is invisible" gloss is retracted as a blanket claim** (kept visible here per the
+   project's retraction discipline). The §"A calibrated reading" sentence that groups `will`→`would`
+   under "shift something the 3-way frame is comparatively *insensitive* to: modal flavor" is true of
+   `will`→`would` but **false of `must`→`might`**, which the instrument registers at ceiling.
+2. **The deeper "calibration co-determines the result" reading is *vindicated and sharpened*, not
+   weakened.** Across the four modal contrasts now measured, the instrument registers the swap exactly
+   when the swap changes a relation 3-way NLI is built to read — a clear (non-)entailment — and misses
+   the subtle future→conditional irrealis shift. The modal-widening result states the gradient verbatim:
+   "loud category mismatch (registers in all) > within-scale deontic strength (registers in one model) >
+   subtle future→conditional irrealis (registers in none)." This is the §"A calibrated reading" thesis
+   made concrete, with the boundary now shown to be **partly model-dependent** (the `shall`→`should` split).
+3. **One honest deflation of the loudest cell.** The `must`→`might` ceiling flip is the strongest
+   refutation of "modals are invisible," but the modal-widening result flags it as the *least clean*:
+   it "crosses flavor — deontic *must* → epistemic *might*," so "is required to find" (deontic) vs
+   "*might* find" (epistemic possibility) is "a category mismatch, the easiest kind of non-entailment"
+   — claude in fact sends it to *contradiction* on all 20 items. So `must`→`might` shows modals are not
+   blanket-invisible, but it does not isolate a within-scale necessity-vs-possibility reading; the clean
+   within-scale contrast is `shall`→`should`, and there the panel splits (and rests on a single content
+   pair `buy`→`give`, so read narrowly). Trigger (c) — a second inferential instrument — is now the
+   sharpest remaining lever on whether the surviving `will`→`would` null is the *instrument's*
+   insensitivity or the *relation's* subtlety.
+
 ## This does not undercut the constructional reading — it refines it
 
 It would be a misreading to take type-specificity as eroding the result's support for constructional meaning
@@ -207,6 +248,10 @@ construction, the inference it licenses, and the instrument used to read that in
   one-pair observation to a type-level fact. If instead some modal contrast flips strongly, the reading
   **narrows**: it was idiosyncratic to `will`→`would`, not modal flavor as such, and the type-specificity
   thesis survives but its diagnosis changes.
+  > **FIRED (2026-06-21, session 71) — narrows.** [`result/function-word-modal-widening`](../results/function-word-modal-widening.md):
+  > `must`→`might` flips at ceiling 3/3 and `shall`→`should` splits the panel, so the null does **not**
+  > generalize; it is future→conditional-specific. The type-specificity thesis survives, its diagnosis
+  > changed. See the **Revision (session 71)** section above.
 - **(b) A quantifier-scope / scalar-implicature probe.** The companion result
   [`result/function-word-few-many-split`](../results/function-word-few-many-split.md) has already *localized*
   the split within-model — it sits entirely on the multal-vs-universal ("Many X → All X") reading — but it

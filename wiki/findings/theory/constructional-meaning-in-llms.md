@@ -366,10 +366,19 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > sensitivity (it does not — see `because`/`some`)." This is a sharper instance of the **carry-the-spread**
 > discipline ([`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md)): a 3/3
 > concordant verdict here conceals not just a magnitude spread but that the *concordance itself rests on
-> different items per model*. The modal near-null is **so far a one-pair observation** (`will`→`would`);
-> whether it generalizes to other modal types (whether *all* modal swaps are NLI-invisible or only the
-> future→conditional one) is **under test by a probe in this same session** and not yet in. `internal-contrast-only`
-> — no human comparison (a BLiMP/NLI human baseline stays an optional, not-in-repo upgrade).
+> different items per model*. **The modal near-null does NOT generalize (2026-06-21, session 71):**
+> [`result/function-word-modal-widening`](../results/function-word-modal-widening.md) widened the modal arm
+> and found `must`→`might` (necessity→possibility, **but crossing deontic→epistemic flavor — a category
+> mismatch, the easy non-entailment, not a clean within-scale test**) flips at **ceiling in all three
+> models**, while the clean within-scale `shall`→`should` (deontic obligation→advisory) **splits the panel**
+> (gemini 0.778 vs claude/gpt 0.056, resting on one content pair),
+> while `will`→`would` replicates the null — so the near-null is a **future→conditional-specific** fact, not
+> a modal fact. The instrument registers a modal swap in proportion to how truth-conditionally "loud" it is
+> (loud category mismatch > within-deontic-strength, partly model-dependent > subtle irrealis), which
+> **sharpens** the same point the `few`/`many` split makes: which closed-class swap reaches this rung is
+> co-determined by the inferential **instrument's** calibration, not by the part-of-speech class — the
+> conceptual correction of [`essay/function-words-not-one-category`](../essays/function-words-not-one-category.md).
+> `internal-contrast-only` — no human comparison (a BLiMP/NLI human baseline stays an optional, not-in-repo upgrade).
 
 The ladder is the page's claim, in compressed form: **form-acceptability < surprisal-contrast < gradient semantic tracking < generalization < inference-licensing.** Each upward step narrows the space of distributional-only explanations; only the top two steps are evidence for constructional *meaning* as opposed to constructional *form*.
 
