@@ -1,0 +1,99 @@
+{
+ "ok": true,
+ "fails": [],
+ "checks": {
+  "(e) every function arm >= ARM_MIN items": true,
+  "(e) >=4 content semantic classes": true,
+  "matched_count": 118,
+  "arm_min": 15,
+  "counts_by_arm": {
+   "because": 32,
+   "must": 20,
+   "shall": 18,
+   "some": 28,
+   "will": 20
+  },
+  "semantic_classes": [
+   "adj",
+   "noun_person",
+   "noun_thing",
+   "verb"
+  ],
+  "premise_fn differs from base ONLY by the function word": true,
+  "premise_ct differs from base ONLY by the content word": true,
+  "function swap-in word never appears in the hypothesis (no leak)": true,
+  "every matched item predicts a function flip (pred_base != pred_fn)": true,
+  "(i) freq-only reader max POSITIVE threshold asymmetry <= 0.12": true,
+  "(i) len-only reader max POSITIVE threshold asymmetry <= 0.05": true,
+  "(i) monotone freq reader pooled (func_gap-content_gap)": -0.0527,
+  "(i) monotone freq reader asymmetry small (<=0.10)": true,
+  "freq_only_asymmetry_by_theta": {
+   "theta=0.0": 0.0,
+   "theta=0.05": 0.0,
+   "theta=0.0797": -0.1695,
+   "theta=0.1": -0.1695,
+   "theta=0.131": -0.0847,
+   "theta=0.1317": -0.2542,
+   "theta=0.1709": -0.1864,
+   "theta=0.1711": -0.1017,
+   "theta=0.1865": -0.0339,
+   "theta=0.2": -0.0339,
+   "theta=0.2969": 0.0,
+   "theta=0.3": 0.0,
+   "theta=0.4976": -0.2373,
+   "theta=0.5": -0.2373,
+   "theta=0.5107": -0.2034,
+   "theta=0.5118": -0.1695,
+   "theta=0.5202": -0.0508,
+   "theta=0.528": 0.0,
+   "theta=0.75": 0.0,
+   "theta=0.7586": -0.1525,
+   "theta=0.7831": 0.0,
+   "theta=1.0": 0.0,
+   "theta=1.25": 0.0,
+   "theta=1.4062": -0.2712,
+   "theta=1.4565": -0.2288,
+   "theta=1.4596": -0.1864,
+   "theta=1.4881": -0.0847,
+   "theta=1.4891": 0.0
+  },
+  "len_only_asymmetry_by_theta": {
+   "theta=1": 0.0,
+   "theta=2": 0.0
+  },
+  "max_positive_freq_asym": 0.0,
+  "max_positive_len_asym": 0.0,
+  "mean_Lg10WF_func_out": 4.6894,
+  "mean_Lg10WF_cont_out": 4.7291,
+  "abs_mean_Lg10WF_gap_func_vs_cont_out": 0.0398,
+  "gap_match_by_ftype": {
+   "because": {
+    "func_gap": 1.4062,
+    "content_gap_mean": 1.479,
+    "n": 32
+   },
+   "must": {
+    "func_gap": 0.1317,
+    "content_gap_mean": 0.2023,
+    "n": 20
+   },
+   "shall": {
+    "func_gap": 0.7586,
+    "content_gap_mean": 0.7831,
+    "n": 18
+   },
+   "some": {
+    "func_gap": 0.4976,
+    "content_gap_mean": 0.5193,
+    "n": 28
+   },
+   "will": {
+    "func_gap": 0.0797,
+    "content_gap_mean": 0.1511,
+    "n": 20
+   }
+  },
+  "det_char_arm_count": 0
+ },
+ "stimuli_sha256": "fb605ed9863bcd877778e6b4a9cd8b39df551e64272aa67ef37fd7915fb7c28a"
+}

@@ -11,7 +11,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-28
-updated: 2026-06-20
+updated: 2026-06-21
 links:
   - rel: depends-on
     target: result/dative-information-structure-v1
@@ -47,6 +47,10 @@ links:
     target: result/comparative-correlative-covariation-v3
   - rel: depends-on
     target: result/caused-motion-near-miss-v2c
+  - rel: depends-on
+    target: result/function-word-swap-run-v2
+  - rel: depends-on
+    target: result/function-word-few-many-split
   - rel: depends-on
     target: resource/scivetti-2025-cxnli-dataset
   - rel: depends-on
@@ -320,6 +324,62 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 
 **Tier 4 — Inference-licensing.** The model treats the construction as licensing its characteristic *inferences*, where the inference is contributed by the construction and not by any lexical part. The paradigm Tier-4 phenomenon is [`concept/coercion`](../../base/concepts/coercion.md) — the construction overriding a verb that does not lexically carry the inference (*sneeze the napkin off the table*), so any systematic reading of the inference must come from the construction. This is the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense. The paradigm case is [`conjecture/way-construction`](../conjectures/way-construction.md): the *way*-construction contributes the path-traversal meaning, and the verbs (*whistle*, *elbow*, *drink*) are not motion verbs — so a high path-traversal "yes" rate for non-motion verbs, with a large gap against minimal-pair controls (`way-construction` Predictions 1–2, confirm threshold ≥70% / ≥30pp gap), is evidence that the *construction*, not the verb, is carrying the inference. [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) Prediction 2 (entailment flips after function-word swaps) reaches for this tier in the general case. Inference-licensing is the rung at which Piantadosi & Hill's claim becomes testable: systematic inference-preservation that the lexical items cannot explain is the behavioral signature of conceptual role.
 
+> **The function-word swap reaches this rung — but "function word" is not one inferential kind, so the load is type-specific, not uniform (2026-06-21).** [`result/function-word-swap-run-v2`](../results/function-word-swap-run-v2.md)
+> ran the project's most abstract constructional bet ([`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md)
+> Prediction 2) as a within-model contrast: how often does swapping a **function word** flip a 3-way
+> NLI label vs swapping a **frequency+length-matched content word**? **All three panel models CONFIRM** —
+> "Function-word swaps change the inference vastly more often than frequency+length-matched content-word
+> swaps, and the **content control behaves exactly as designed** — matched content swaps almost never flip
+> the label" (per-model contrast claude +0.340, gpt +0.825, gemini +0.859, every bootstrap lower bound
+> clear of zero). The falsify arm did not fire: "Content-swap flip rates are near zero for every model
+> (1.0% / 4.4% / 3.4%)" and "the falsify arm (content ≥ function) **did not fire** in any model or any arm."
+> This is **strong support for the constructional reading over the pure-distributional null** at this rung:
+> a content swap of equal frequency and length leaves the inference alone, so it is not matched-frequency
+> distributional neighbourhood that moves these inferences — the closed-class swap is. It belongs with the
+> page's **add direction is easy** observation, now extended to closed-class items.
+>
+> **But the pooled CONFIRM hides type-structure that bears directly on this page's "tiers rise together"
+> prediction and on Open Tension 1.** The per-arm contrast (flip_fn − flip_ct) is **not uniform across
+> function-word types**: `because`→`although` (subordinator) **+1.000 / +0.875 / +1.000** and `some`→`every`
+> (existential→universal quantifier) **+0.929 / +0.750 / +0.750** flip the inference almost every time in
+> every model — the cleanest Tier-4 closed-class signal; but `will`→`would` (future→conditional modal) is
+> **+0.000 / +0.000 / +0.150**, essentially null across the panel — the models read "the council *would* see
+> the visitor next week" as "still entailing 'the council is going to see the visitor next week,' not as the
+> irrealis/conditional shift the design predicted"; and `few`→`many` (paucal→multal quantifier) **splits the
+> panel** at **+0.095 / +0.960 / +0.960** (claude near-null, gpt/gemini near-total). A companion within-model
+> re-analysis localizes that split entirely on the "Many X → All X" reading (claude keeps it a contradiction,
+> gpt/gemini relax it to neutral), without claiming which reading is correct or that any model "computes" an
+> implicature ([`result/function-word-few-many-split`](../results/function-word-few-many-split.md)).
+>
+> **Two consequences for the ladder.** (i) **Prediction 3 ("not driven by a few categories") holds at the
+> *content-class* level but fails at the *function-word-type* level.** "Every **content semantic class** (adj,
+> noun_person, noun_thing, verb) shows flip_fn > flip_ct in every model," but "across **function-word types**
+> the effect is *not* uniform: two of four arms (the modal `will`, and `few` for claude) are near-null" — the
+> asymmetry is "carried by a **subset of function-word types** ... not uniformly by all closed-class items."
+> So **"constructional load" is not one quantity attached to a part-of-speech class**; it is type-specific,
+> the conceptual correction argued in [`essay/function-words-not-one-category`](../essays/function-words-not-one-category.md).
+> (ii) **The pooled magnitude is *not* a model-capability ranking.** Because `few` is **126/206 (61%)** of
+> items, the pooled contrast is dominated by it; claude's lower +0.34 "is **dragged down** by its near-null
+> `few` arm (claude is actually at ceiling on `because`/`some`)," so "The same 'CONFIRM' therefore rests on
+> **different arms for different models**" and "The cross-model magnitude spread is an artifact of the
+> `few`-arm split × `few`-arm dominance, not evidence that claude has a weaker general function-word
+> sensitivity (it does not — see `because`/`some`)." This is a sharper instance of the **carry-the-spread**
+> discipline ([`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md)): a 3/3
+> concordant verdict here conceals not just a magnitude spread but that the *concordance itself rests on
+> different items per model*. **The modal near-null does NOT generalize (2026-06-21, session 71):**
+> [`result/function-word-modal-widening`](../results/function-word-modal-widening.md) widened the modal arm
+> and found `must`→`might` (necessity→possibility, **but crossing deontic→epistemic flavor — a category
+> mismatch, the easy non-entailment, not a clean within-scale test**) flips at **ceiling in all three
+> models**, while the clean within-scale `shall`→`should` (deontic obligation→advisory) **splits the panel**
+> (gemini 0.778 vs claude/gpt 0.056, resting on one content pair),
+> while `will`→`would` replicates the null — so the near-null is a **future→conditional-specific** fact, not
+> a modal fact. The instrument registers a modal swap in proportion to how truth-conditionally "loud" it is
+> (loud category mismatch > within-deontic-strength, partly model-dependent > subtle irrealis), which
+> **sharpens** the same point the `few`/`many` split makes: which closed-class swap reaches this rung is
+> co-determined by the inferential **instrument's** calibration, not by the part-of-speech class — the
+> conceptual correction of [`essay/function-words-not-one-category`](../essays/function-words-not-one-category.md).
+> `internal-contrast-only` — no human comparison (a BLiMP/NLI human baseline stays an optional, not-in-repo upgrade).
+
 The ladder is the page's claim, in compressed form: **form-acceptability < surprisal-contrast < gradient semantic tracking < generalization < inference-licensing.** Each upward step narrows the space of distributional-only explanations; only the top two steps are evidence for constructional *meaning* as opposed to constructional *form*.
 
 ## Where the existing wedge sits
@@ -328,7 +388,7 @@ The ladder is the page's claim, in compressed form: **form-acceptability < surpr
 - [`conjecture/aann-construction`](../conjectures/aann-construction.md) — spans **Tier 1 → Tier 3** (surprisal contrast, evaluative gradient, held-out generalization). Status `designed`; both governing decisions (`aann-stimulus-source`, `aann-operationalization`) were **ratified 2026-05-29**, fixing the yardstick — but the probe is **blocked, unrun**: its ratified indicator (continuation-likelihood logprob contrast, with a prompted-`p("good")` fallback) requires token logprobs, and the ratified panel exposes none on OpenRouter (verified 2026-05-29). A decision to substitute the panel or the indicator is queued for Tom (`NEXT.md`); until then no AANN result exists.
 - [`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md) — **the project's first probe of its own design to run**, and the first *positive* upper-ladder result: a **Tier-4 (inference-licensing)** pass with a **Tier-3 (atypical/generalization)** control passed, on the comparative correlative. The 2026 decoder panel deploys the CC's covariation meaning at ceiling — construction-driven (T1 +80–90 pp over matched controls), direction-tracking (T2 inverse-flip 95–100%), n-gram-robust (T3 no atypical collapse) — and matches the Scivetti ≈0.90 human baseline (93–100%). Status `proposed`. **Crucial caveat:** ceiling on an easy instrument is weak evidence for the strong reading, so this is read as "the [`source/weissweiler-2022-comparative-correlative`](../../base/sources/weissweiler-2022-comparative-correlative.md) encoder-era form/meaning dissociation is *not reproduced by this instrument*," not as proof of deep constructional processing. It is the first datum on the ladder that is both upper-tier *and* positive *and* of the project's own design.
 - [`conjecture/dative-alternation-information-structure`](../conjectures/dative-alternation-information-structure.md) — **Tier 2** (gradient information-structure tracking). **Tested 2026-06-20 → CONFIRM, 3/3 models** ([`result/dative-information-structure-v1`](../results/dative-information-structure-v1.md)); **replicated 2026-06-20 on a disjoint item set → CONFIRM holds but 2/3** ([`result/dative-information-structure-v2`](../results/dative-information-structure-v2.md): claude & gemini reproduce near-identically, gpt's CONFIRM falls to WEAK, the effect-size spread widens). The first human-anchored Tier-2 positive of the project's own design (see below). Status `tested`; anchor ratified ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md)).
-- [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) — **Tier 1 → Tier 4** in the general case, and the most abstract conjecture; its operationalization gate (what counts as a frequency-matched pair) is named as the place a loop could "quietly cheat." Anchor pending.
+- [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md) — **Tier 1 → Tier 4** in the general case, and the most abstract conjecture; its operationalization gate (what counts as a frequency-matched pair) is named as the place a loop could "quietly cheat." **Tested 2026-06-21 → CONFIRM, 3/3 models** ([`result/function-word-swap-run-v2`](../results/function-word-swap-run-v2.md)): swapping a function word flips 3-way NLI far more than swapping a frequency+length-matched content word, with the matched-content control near-floor and the falsify arm unfired — strong support for constructional over pure distributional meaning. But the per-arm breakdown shows the inferential load is **type-specific, not uniform across closed-class items** — so prediction 3 holds at the *content-class* level and fails at the *function-word-type* level (see the dedicated block below). Status `tested`; `anchor: internal-contrast-only` (ratified — no human comparison).
 - [`conjecture/way-construction`](../conjectures/way-construction.md) — **Tier 4** (inference-licensing); the cleanest case where meaning is located in the construction. Status `tested` (2026-05-29); anchor ratified (`way-construction-anchor` → [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md) way-manner subset; Goldberg 1995 inventory seed). **Probed this session** → [`result/way-construction-traversal-v1`](../results/way-construction-traversal-v1.md), a Tier-4 positive above the ratified bar (see below).
 - [`claim/constructional-divergent-form-generalization-gap`](../claims/constructional-divergent-form-generalization-gap.md) — **Tier 3 → Tier 4**, and the first claim on this ladder carrying in-repo *human-comparison* evidence rather than only a methodological commitment. It reads Scivetti et al. 2025's >40% divergent-form drop (GPT-o1) against a native-speaker baseline (≈0.90 / ≈0.83) as a *negative* result at the generalization / inference-licensing boundary for current models: the same surface form does not generalize to its divergent constructional meaning the way human speakers manage. Status `proposed`; `contingent-on: []` (it rests on the aggregate published result and aggregate baseline, not on the per-construction anchors). Anchored to [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md).
 
@@ -379,7 +439,7 @@ The null is bounded — pilot scale (n≈12 coined terms/model), and a sharper t
 
 ## What the theory predicts and forbids
 
-**Predicts.** If LLMs have constructional meaning in the project's sense, then for a well-described construction we should observe a *coherent climb*: not just Tier-0 acceptability, but Tier-2 gradient tracking that survives frequency control, Tier-3 generalization to held-out items, and — for inference-bearing constructions like *way* — Tier-4 inference-licensing that the lexical items cannot explain. The tiers should rise together; a model with genuine constructional competence should not be strong at Tier 4 while failing Tier 2 on the same construction.
+**Predicts.** If LLMs have constructional meaning in the project's sense, then for a well-described construction we should observe a *coherent climb*: not just Tier-0 acceptability, but Tier-2 gradient tracking that survives frequency control, Tier-3 generalization to held-out items, and — for inference-bearing constructions like *way* — Tier-4 inference-licensing that the lexical items cannot explain. The tiers should rise together; a model with genuine constructional competence should not be strong at Tier 4 while failing Tier 2 on the same construction. This is a per-construction prediction, and the function-word swap result ([`result/function-word-swap-run-v2`](../results/function-word-swap-run-v2.md)) sharpens *why* it must stay per-construction: the Tier-4 signal is **type-specific** — robust for the subordinator and the existential→universal quantifier, near-null for the future→conditional modal, panel-split for the paucal→multal quantifier — so a *part-of-speech class* like "function word" is the wrong unit to predict over, and a pooled magnitude across a class is not a model-capability measure.
 
 **Forbids.** The theory forbids three inferences:
 - From Tier 0 to constructional meaning (the `formal-competence-aann-ceiling` block, generalized).
