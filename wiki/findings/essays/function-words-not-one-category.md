@@ -33,7 +33,8 @@ links:
 
 > **Status: revised (2026-06-21, sessions 71, 72, and 73 — revisions logged below; trigger (a) narrowed
 > the modal gloss, trigger (c) relocated the modal null to instrument calibration, trigger (d) grounded the
-> high/low split in an external implicature typology). A
+> high/low split in an external implicature typology; session 74 added a status note under trigger (b)
+> recording that its human-anchor sub-route was scouted to a null — no claim changed). A
 > philosophical-track essay arguing in the project's own voice.** Its
 > original contribution is a single conceptual correction and a calibrated reading of it: **"function
 > word" — a part-of-speech / distributional class — is not a natural kind for *inferential* bearing in
@@ -402,6 +403,17 @@ construction, the inference it licenses, and the instrument used to read that in
   human anchor that fixes the correct reading) would relocate the split from a localized-but-unexplained
   model difference to a named mechanism, and the calibrated reading in §"A calibrated reading" would be
   confirmed or replaced.
+  > **NOT FIRED — human-anchor sub-route scouted to a null (2026-06-21, session 74).** The trigger has two
+  > sub-routes: a mechanism probe, or *a human anchor that fixes the correct reading*. The latter was
+  > scouted — [`resource/scalar-implicature-anchor-scouting`](../../base/resources/scalar-implicature-anchor-scouting.md)
+  > — and came back a **null**: no clean, openly-licensed, quantifier-specific human scalar-implicature-rate
+  > dataset was found (van Tiel et al. 2016 carries the on-target `<some, all>` rate but is paywalled / OA-PDF-403;
+  > the cleanly-licensed open data is adjectival/off-target; VAQUUM measures appropriateness, not the "not all"
+  > inference rate). So the human-anchor route to discharging trigger (b) is **blocked for now**, and the split's
+  > "which reading is normatively correct" half stays open with no in-repo human grounding. The **mechanism-probe**
+  > sub-route remains the live one — a quantifier-scope probe pinning the upper-bounding mechanism, which would be
+  > `internal-contrast-only` (a within-model contrast, no human-comparison claim) until such an anchor is found.
+  > This does **not** fire the trigger; it records that one of its two routes is currently unavailable.
 - **(c) A second inferential instrument.** If an indicator *beyond* 3-way NLI (e.g. a graded paraphrase-
   preference, a forced-choice continuation, a scalar-quantity questionnaire) **does** register the modal or
   scalar swaps that NLI leaves near-null, that would relocate the effect from "type of grammatical relation"
