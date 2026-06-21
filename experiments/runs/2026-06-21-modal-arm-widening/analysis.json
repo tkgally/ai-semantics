@@ -1,0 +1,264 @@
+{
+ "seed": 20260621,
+ "models": {
+  "claude": {
+   "model": "claude",
+   "n_used": 118,
+   "unparsed_items": 0,
+   "flip_fn_rate": 0.6864,
+   "flip_ct_rate": 0.0169,
+   "contrast_fn_minus_ct": 0.6695,
+   "bootstrap95": [
+    0.5847,
+    0.7542
+   ],
+   "verdict": "CONFIRM",
+   "manip_base_label_agreement": 0.7712,
+   "manip_fn_direction_agreement": 0.4831,
+   "per_semantic_class": {
+    "adj": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "n": 10
+    },
+    "noun_thing": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0556,
+     "n": 18
+    },
+    "verb": {
+     "flip_fn": 0.5132,
+     "flip_ct": 0.0,
+     "n": 76
+    },
+    "noun_person": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0714,
+     "n": 14
+    }
+   },
+   "per_function_type": {
+    "because": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.875,
+     "n": 32
+    },
+    "must": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.0,
+     "n": 20
+    },
+    "shall": {
+     "flip_fn": 0.0556,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.0556,
+     "n": 18
+    },
+    "some": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0714,
+     "base_label_agreement": 0.0357,
+     "fn_direction_agreement": 1.0,
+     "n": 28
+    },
+    "will": {
+     "flip_fn": 0.0,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.0,
+     "n": 20
+    }
+   },
+   "det_char_function_flip_rate": null
+  },
+  "gpt": {
+   "model": "gpt",
+   "n_used": 118,
+   "unparsed_items": 0,
+   "flip_fn_rate": 0.661,
+   "flip_ct_rate": 0.0763,
+   "contrast_fn_minus_ct": 0.5847,
+   "bootstrap95": [
+    0.4915,
+    0.678
+   ],
+   "verdict": "CONFIRM",
+   "manip_base_label_agreement": 0.8644,
+   "manip_fn_direction_agreement": 0.339,
+   "per_semantic_class": {
+    "adj": {
+     "flip_fn": 0.9,
+     "flip_ct": 0.3,
+     "n": 10
+    },
+    "noun_thing": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.1667,
+     "n": 18
+    },
+    "verb": {
+     "flip_fn": 0.5132,
+     "flip_ct": 0.0132,
+     "n": 76
+    },
+    "noun_person": {
+     "flip_fn": 0.8571,
+     "flip_ct": 0.1429,
+     "n": 14
+    }
+   },
+   "per_function_type": {
+    "because": {
+     "flip_fn": 0.9688,
+     "flip_ct": 0.0938,
+     "base_label_agreement": 0.9688,
+     "fn_direction_agreement": 0.0312,
+     "n": 32
+    },
+    "must": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.6,
+     "n": 20
+    },
+    "shall": {
+     "flip_fn": 0.0556,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.0556,
+     "n": 18
+    },
+    "some": {
+     "flip_fn": 0.9286,
+     "flip_ct": 0.2143,
+     "base_label_agreement": 0.4643,
+     "fn_direction_agreement": 0.9286,
+     "n": 28
+    },
+    "will": {
+     "flip_fn": 0.0,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.0,
+     "n": 20
+    }
+   },
+   "det_char_function_flip_rate": null
+  },
+  "gemini": {
+   "model": "gemini",
+   "n_used": 118,
+   "unparsed_items": 0,
+   "flip_fn_rate": 0.822,
+   "flip_ct_rate": 0.0763,
+   "contrast_fn_minus_ct": 0.7458,
+   "bootstrap95": [
+    0.661,
+    0.8305
+   ],
+   "verdict": "CONFIRM",
+   "manip_base_label_agreement": 0.839,
+   "manip_fn_direction_agreement": 0.6271,
+   "per_semantic_class": {
+    "adj": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "n": 10
+    },
+    "noun_thing": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "n": 18
+    },
+    "verb": {
+     "flip_fn": 0.7237,
+     "flip_ct": 0.0789,
+     "n": 76
+    },
+    "noun_person": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.2143,
+     "n": 14
+    }
+   },
+   "per_function_type": {
+    "because": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.4062,
+     "n": 32
+    },
+    "must": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.7,
+     "n": 20
+    },
+    "shall": {
+     "flip_fn": 0.7778,
+     "flip_ct": 0.1111,
+     "base_label_agreement": 0.8889,
+     "fn_direction_agreement": 0.8889,
+     "n": 18
+    },
+    "some": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.25,
+     "base_label_agreement": 0.3929,
+     "fn_direction_agreement": 1.0,
+     "n": 28
+    },
+    "will": {
+     "flip_fn": 0.15,
+     "flip_ct": 0.0,
+     "base_label_agreement": 1.0,
+     "fn_direction_agreement": 0.15,
+     "n": 20
+    }
+   },
+   "det_char_function_flip_rate": null
+  }
+ },
+ "panel_verdict_pooled_secondary": "CONFIRM",
+ "panel_confirms_pooled_secondary": 3,
+ "modal_arm_flip_fn": {
+  "claude": {
+   "will": 0.0,
+   "shall": 0.0556,
+   "must": 1.0
+  },
+  "gpt": {
+   "will": 0.0,
+   "shall": 0.0556,
+   "must": 1.0
+  },
+  "gemini": {
+   "will": 0.15,
+   "shall": 0.7778,
+   "must": 1.0
+  }
+ },
+ "control_arm_flip_fn": {
+  "claude": {
+   "some": 1.0,
+   "because": 1.0
+  },
+  "gpt": {
+   "some": 0.9286,
+   "because": 0.9688
+  },
+  "gemini": {
+   "some": 1.0,
+   "because": 1.0
+  }
+ },
+ "NOTE": "MODAL-ARM-WIDENING follow-up (session 71) -- NOT a re-test of the conjecture (already `tested`). PRIMARY readout: the per_function_type flip_fn of the three MODAL arms (will->would future->conditional [run-v2 replication], shall->should deontic obligation->advisory [NEW], must->might necessity->possibility [NEW]) against the in-run POSITIVE-CONTROL arms (some->every, because->although), which must flip if the NLI instrument is alive in this run. Question = essay revision trigger (a): does the will->would modal null GENERALIZE across modal types (strengthens the 'modals are NLI-invisible' reading) or is it idiosyncratic (some modal flips -> reading narrows)? The pooled contrast/verdict are SECONDARY (per-arm is the unit). Count gate is PER-ARM (>=15/arm, certification.json), not the conjecture's >=200. internal-contrast-only: NO human comparison."
+}
