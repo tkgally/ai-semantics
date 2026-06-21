@@ -17,40 +17,166 @@
    "in_lg": 4.955,
    "gap": 0.0797,
    "gloss": "modal: future->conditional"
+  },
+  "few": {
+   "out_lg": 4.1874,
+   "in_lg": 4.2632,
+   "gap": 0.0758,
+   "gloss": "quantifier: paucal->multal"
   }
  },
  "counts": {
-  "matched_total": 66,
+  "matched_total": 206,
   "det_char": 10,
   "by_function": {
-   "because": 38,
-   "some": 22,
-   "will": 6
+   "because": 32,
+   "some": 28,
+   "will": 20,
+   "few": 126
   },
   "by_function_x_pos": {
-   "because:verb": 32,
-   "because:noun_thing": 6,
+   "because:verb": 12,
+   "because:noun_thing": 10,
+   "because:adj": 10,
    "some:noun_person": 14,
-   "some:verb": 4,
-   "some:noun_thing": 4,
-   "will:verb": 6
+   "some:verb": 6,
+   "some:noun_thing": 8,
+   "will:verb": 20,
+   "few:noun_person": 30,
+   "few:verb": 48,
+   "few:noun_thing": 12,
+   "few:adj": 36
   },
   "content_semantic_classes": [
+   "adj",
    "noun_person",
    "noun_thing",
    "verb"
   ]
  },
  "gap_residual_mean_by_ftype": {
-  "because": -0.0712,
-  "some": 0.0101,
-  "will": 0.0714
+  "because": 0.0728,
+  "some": 0.0217,
+  "will": 0.0714,
+  "few": 0.042
  },
  "gap_residual_absmax_by_ftype": {
-  "because": 0.1564,
-  "some": 0.0317,
-  "will": 0.0914
+  "because": 0.0829,
+  "some": 0.0304,
+  "will": 0.0914,
+  "few": 0.1318
  },
+ "content_diversity_by_function_x_pos": {
+  "because:adj": {
+   "distinct_out_words": 1,
+   "items": 10,
+   "items_per_out_word": 10.0,
+   "out_word_counts": {
+    "sure": 10
+   }
+  },
+  "because:noun_thing": {
+   "distinct_out_words": 1,
+   "items": 10,
+   "items_per_out_word": 10.0,
+   "out_word_counts": {
+    "thing": 10
+   }
+  },
+  "because:verb": {
+   "distinct_out_words": 1,
+   "items": 12,
+   "items_per_out_word": 12.0,
+   "out_word_counts": {
+    "give": 12
+   }
+  },
+  "few:adj": {
+   "distinct_out_words": 6,
+   "items": 36,
+   "items_per_out_word": 6.0,
+   "out_word_counts": {
+    "open": 6,
+    "hard": 6,
+    "late": 6,
+    "easy": 6,
+    "true": 6,
+    "young": 6
+   }
+  },
+  "few:noun_person": {
+   "distinct_out_words": 3,
+   "items": 30,
+   "items_per_out_word": 10.0,
+   "out_word_counts": {
+    "men": 10,
+    "wife": 10,
+    "kids": 10
+   }
+  },
+  "few:noun_thing": {
+   "distinct_out_words": 2,
+   "items": 12,
+   "items_per_out_word": 6.0,
+   "out_word_counts": {
+    "number": 6,
+    "chance": 6
+   }
+  },
+  "few:verb": {
+   "distinct_out_words": 5,
+   "items": 48,
+   "items_per_out_word": 9.6,
+   "out_word_counts": {
+    "run": 10,
+    "pay": 10,
+    "eat": 10,
+    "sit": 10,
+    "die": 8
+   }
+  },
+  "some:noun_person": {
+   "distinct_out_words": 1,
+   "items": 14,
+   "items_per_out_word": 14.0,
+   "out_word_counts": {
+    "man": 14
+   }
+  },
+  "some:noun_thing": {
+   "distinct_out_words": 2,
+   "items": 8,
+   "items_per_out_word": 4.0,
+   "out_word_counts": {
+    "way": 4,
+    "time": 4
+   }
+  },
+  "some:verb": {
+   "distinct_out_words": 1,
+   "items": 6,
+   "items_per_out_word": 6.0,
+   "out_word_counts": {
+    "take": 6
+   }
+  },
+  "will:verb": {
+   "distinct_out_words": 1,
+   "items": 20,
+   "items_per_out_word": 20.0,
+   "out_word_counts": {
+    "see": 20
+   }
+  }
+ },
+ "single_out_word_classes": [
+  "because:adj",
+  "because:noun_thing",
+  "because:verb",
+  "some:noun_person",
+  "some:verb",
+  "will:verb"
+ ],
  "dropped_pairs": [],
  "freq_tol": 0.1,
  "len_match": "signed dlen == function dlen (all +1)"

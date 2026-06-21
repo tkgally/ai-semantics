@@ -6,7 +6,7 @@ meaning-senses:
   - constructional
   - distributional
   - inferential
-status: designed
+status: tested
 contingent-on: []
 created: 2026-05-28
 updated: 2026-06-21
@@ -114,6 +114,22 @@ ratified freeze-and-hash + pre-run-critic GO/NO-GO is what binds that.
 > freq-only residual to be fixed and the ≥200/≥4-class bar kept. The conjecture stays **`designed`**
 > and untested; build-v2 (the widened set) runs under a fresh pre-run critic. See
 > [`result/function-word-swap-build-v1`](../results/function-word-swap-build-v1.md).
+
+> **Build-v2 RUN (2026-06-21, session 69) — CONFIRM 3/3, non-uniformly. Conjecture now `tested`.**
+> The widened set (206 matched items, 4 content classes, four function arms `because`/`some`/`will`/`few`)
+> was frozen + certified `"ok": true` (max-positive shortcut-reader asymmetry 0.0) under two
+> independent fresh-agent pre-run critics (first NO-GO → fixed → second GO), run on the 3-model panel
+> ($0.502 billed), and the analysis was reproduced to the digit by an independent post-run verifier.
+> **All three models CONFIRM** (contrast > 0, bootstrap LB > 0): function-word swaps flip the 3-way
+> NLI judgment far more than frequency+length-matched content-word swaps, with the matched-content
+> control near-floor (content flip 1–4%; the falsify arm did not fire). **But the effect is
+> non-uniform across function-word types:** strong and panel-consistent for `because`→`although`
+> (subordinator) and `some`→`every` (existential→universal quantifier); **near-null for
+> `will`→`would`** (modal future→conditional) across all three models; and **`few`→`many` splits the
+> panel** (claude near-null +0.095, gpt/gemini near-total +0.96). Because `few` is 61% of items the
+> pooled magnitude is dominated by it. Prediction 3 holds at the content-CLASS level (all 4 classes
+> fn>ct) but **not** at the function-word-TYPE level. Full result + per-arm tables:
+> [`result/function-word-swap-run-v2`](../results/function-word-swap-run-v2.md).
 
 ## Notes / caveats
 

@@ -135,9 +135,12 @@ def main():
                    if m.get("verdict") == "CONFIRM")
     out["panel_verdict"] = ("CONFIRM" if confirms >= 2 else "MIXED/WEAK")
     out["panel_confirms"] = confirms
-    out["NOTE"] = ("Count gate: the conjecture's CONFIRM criterion requires >=200 matched "
-                   "items; this set has fewer (see certification.json). Any positive here is "
-                   "a CHARACTERIZING pilot, not a confirmation, unless run on a >=200 set.")
+    out["NOTE"] = ("Count gate MET: build-v2 has 206 matched items across 4 content classes "
+                   "(certification.json ok=true), so the conjecture's >=200 / >=4-class CONFIRM "
+                   "criterion is satisfied. Caveat to weigh in the result: the few->many "
+                   "quantifier arm is 126/206 (61%) of items; read the per_function_type "
+                   "breakdown for whether the contrast holds within EACH function pair, not just "
+                   "pooled (conjecture prediction 3).")
     json.dump(out, open(os.path.join(HERE, "analysis.json"), "w"), indent=1)
     print(json.dumps(out, indent=1))
 

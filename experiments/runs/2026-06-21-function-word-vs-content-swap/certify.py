@@ -96,11 +96,23 @@ def main():
     # The guard is against a reader REPRODUCING the function>content asymmetry, i.e. a
     # POSITIVE (function-favoring) asymmetry. A negative value (content swaps look bigger)
     # is conservative -- it cannot mimic the conjecture -- so we track the max POSITIVE.
+    # The freq-only-reader asymmetry is piecewise-constant in theta: it can change ONLY at a
+    # theta equal to some item's |dLg10WF| gap. Its supremum over continuous theta is attained
+    # JUST BELOW one of those gap values. So we build the grid from the gaps themselves (every
+    # function gap and every content gap), testing theta = g - eps for each, instead of a fixed
+    # coarse grid that can step over a narrow positive peak (build-v1/v2 pre-run-critic catch:
+    # a coarse {0.05, 0.1} grid hid a +0.136 peak at theta~0.07 between the steps). A few legacy
+    # anchor thetas are kept for readability.
+    EPS = 1e-9
+    gaps = sorted({round(func_deltas(it)[0], 6) for it in matched}
+                  | {round(cont_deltas(it)[0], 6) for it in matched})
+    thetas = sorted({0.0, 0.05, 0.1, 0.2, 0.3, 0.5, 0.75, 1.0, 1.25}
+                    | {g - EPS for g in gaps} | {g for g in gaps})
     freq_asym, len_asym = {}, {}
-    for theta in [0.0, 0.05, 0.1, 0.2, 0.3, 0.5, 0.75, 1.0, 1.25]:
+    for theta in thetas:
         fn = sum(freq_only_flip(func_deltas(it)[0], theta) for it in matched) / len(matched)
         ct = sum(freq_only_flip(cont_deltas(it)[0], theta) for it in matched) / len(matched)
-        freq_asym[f"theta={theta}"] = round(fn - ct, 4)
+        freq_asym[f"theta={round(theta, 6)}"] = round(fn - ct, 4)
     for theta in [1, 2]:
         fn = sum(len_only_flip(func_deltas(it)[1], theta) for it in matched) / len(matched)
         ct = sum(len_only_flip(cont_deltas(it)[1], theta) for it in matched) / len(matched)

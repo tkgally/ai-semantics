@@ -40,6 +40,11 @@ FUNC = {
     "because": {"out": "because", "in": "although", "gloss": "subordinator: causal->concessive"},
     "some":    {"out": "some",    "in": "every",    "gloss": "quantifier: existential->universal"},
     "will":    {"out": "will",    "in": "would",    "gloss": "modal: future->conditional"},
+    # build-v2 inventory-widening (decisions/resolved/function-word-count-vs-matching cond. 4):
+    # few->many is the new quantifier pair. (many->every was rejected: 'many guards'->'every
+    # guards' breaks number agreement, so it is not a grammatical single-token swap; few and
+    # many both take plural, so few->many is.) +1 char, |dLg10WF|-matchable, flips NLI.
+    "few":     {"out": "few",     "in": "many",     "gloss": "quantifier: paucal->multal"},
 }
 for d in FUNC.values():
     d["out_lg"] = round(F.require(d["out"]), 4)
@@ -88,7 +93,8 @@ def verify_pair(ftype, out, inn):
 def make():
     frames = json.load(open(os.path.join(HERE, "frames.json")))
     items, dropped = [], []
-    for ftype in ("because", "some", "will"):
+    arms = [k for k in frames if not k.startswith("_") and k != "the_char"]
+    for ftype in arms:
         fout, fin = FUNC[ftype]["out"], FUNC[ftype]["in"]
         for fr in frames[ftype]:
             cap = fr.get("cap", False)
@@ -150,11 +156,25 @@ def main():
 
     by_class, by_ft = {}, {}
     resid = {}
+    out_words = {}   # (ftype:pos) -> {out_word: count}  (condition 6 diversity audit)
     for it in matched:
         c = f"{it['ftype']}:{it['pos']}"
         by_class[c] = by_class.get(c, 0) + 1
         by_ft[it["ftype"]] = by_ft.get(it["ftype"], 0) + 1
         resid.setdefault(it["ftype"], []).append(it["content_gap"] - it["func_gap"])
+        out_words.setdefault(c, {})
+        out_words[c][it["cont_out"]] = out_words[c].get(it["cont_out"], 0) + 1
+    # condition 6: distinct out-words per (function x class), items-per-out-word, single-word flag
+    diversity = {}
+    single_word_classes = []
+    for c, ow in sorted(out_words.items()):
+        n_items = sum(ow.values())
+        n_out = len(ow)
+        diversity[c] = {"distinct_out_words": n_out, "items": n_items,
+                        "items_per_out_word": round(n_items / n_out, 2),
+                        "out_word_counts": dict(sorted(ow.items(), key=lambda x: -x[1]))}
+        if n_out == 1:
+            single_word_classes.append(c)
     report = {
         "function_pairs": {k: {"out_lg": v["out_lg"], "in_lg": v["in_lg"],
                                "gap": v["gap"], "gloss": v["gloss"]}
@@ -166,6 +186,8 @@ def main():
                                        for k, v in resid.items()},
         "gap_residual_absmax_by_ftype": {k: round(max(abs(x) for x in v), 4)
                                          for k, v in resid.items()},
+        "content_diversity_by_function_x_pos": diversity,
+        "single_out_word_classes": single_word_classes,
         "dropped_pairs": dropped,
         "freq_tol": FREQ_TOL, "len_match": "signed dlen == function dlen (all +1)",
     }

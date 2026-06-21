@@ -1,0 +1,188 @@
+{
+ "seed": 20260621,
+ "models": {
+  "claude": {
+   "model": "claude",
+   "n_used": 206,
+   "unparsed_items": 0,
+   "flip_fn_rate": 0.3495,
+   "flip_ct_rate": 0.0097,
+   "contrast_fn_minus_ct": 0.3398,
+   "bootstrap95": [
+    0.2767,
+    0.4078
+   ],
+   "verdict": "CONFIRM",
+   "manip_base_label_agreement": 0.8689,
+   "manip_fn_direction_agreement": 0.3301,
+   "per_semantic_class": {
+    "adj": {
+     "flip_fn": 0.2174,
+     "flip_ct": 0.0,
+     "n": 46
+    },
+    "noun_thing": {
+     "flip_fn": 0.7333,
+     "flip_ct": 0.0333,
+     "n": 30
+    },
+    "verb": {
+     "flip_fn": 0.2326,
+     "flip_ct": 0.0,
+     "n": 86
+    },
+    "noun_person": {
+     "flip_fn": 0.4545,
+     "flip_ct": 0.0227,
+     "n": 44
+    }
+   },
+   "per_function_type": {
+    "because": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "n": 32
+    },
+    "few": {
+     "flip_fn": 0.0952,
+     "flip_ct": 0.0,
+     "n": 126
+    },
+    "some": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0714,
+     "n": 28
+    },
+    "will": {
+     "flip_fn": 0.0,
+     "flip_ct": 0.0,
+     "n": 20
+    }
+   },
+   "det_char_function_flip_rate": 0.0
+  },
+  "gpt": {
+   "model": "gpt",
+   "n_used": 206,
+   "unparsed_items": 0,
+   "flip_fn_rate": 0.8689,
+   "flip_ct_rate": 0.0437,
+   "contrast_fn_minus_ct": 0.8252,
+   "bootstrap95": [
+    0.767,
+    0.8786
+   ],
+   "verdict": "CONFIRM",
+   "manip_base_label_agreement": 0.9078,
+   "manip_fn_direction_agreement": 0.733,
+   "per_semantic_class": {
+    "adj": {
+     "flip_fn": 0.9565,
+     "flip_ct": 0.0435,
+     "n": 46
+    },
+    "noun_thing": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0333,
+     "n": 30
+    },
+    "verb": {
+     "flip_fn": 0.7326,
+     "flip_ct": 0.0233,
+     "n": 86
+    },
+    "noun_person": {
+     "flip_fn": 0.9545,
+     "flip_ct": 0.0909,
+     "n": 44
+    }
+   },
+   "per_function_type": {
+    "because": {
+     "flip_fn": 0.9375,
+     "flip_ct": 0.0625,
+     "n": 32
+    },
+    "few": {
+     "flip_fn": 0.9683,
+     "flip_ct": 0.0079,
+     "n": 126
+    },
+    "some": {
+     "flip_fn": 0.9643,
+     "flip_ct": 0.2143,
+     "n": 28
+    },
+    "will": {
+     "flip_fn": 0.0,
+     "flip_ct": 0.0,
+     "n": 20
+    }
+   },
+   "det_char_function_flip_rate": 0.2
+  },
+  "gemini": {
+   "model": "gemini",
+   "n_used": 206,
+   "unparsed_items": 0,
+   "flip_fn_rate": 0.8932,
+   "flip_ct_rate": 0.034,
+   "contrast_fn_minus_ct": 0.8592,
+   "bootstrap95": [
+    0.8107,
+    0.9029
+   ],
+   "verdict": "CONFIRM",
+   "manip_base_label_agreement": 0.9175,
+   "manip_fn_direction_agreement": 0.801,
+   "per_semantic_class": {
+    "adj": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "n": 46
+    },
+    "noun_thing": {
+     "flip_fn": 0.9667,
+     "flip_ct": 0.0,
+     "n": 30
+    },
+    "verb": {
+     "flip_fn": 0.7558,
+     "flip_ct": 0.0465,
+     "n": 86
+    },
+    "noun_person": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0682,
+     "n": 44
+    }
+   },
+   "per_function_type": {
+    "because": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.0,
+     "n": 32
+    },
+    "few": {
+     "flip_fn": 0.9603,
+     "flip_ct": 0.0,
+     "n": 126
+    },
+    "some": {
+     "flip_fn": 1.0,
+     "flip_ct": 0.25,
+     "n": 28
+    },
+    "will": {
+     "flip_fn": 0.15,
+     "flip_ct": 0.0,
+     "n": 20
+    }
+   },
+   "det_char_function_flip_rate": 0.0
+  }
+ },
+ "panel_verdict": "CONFIRM",
+ "panel_confirms": 3,
+ "NOTE": "Count gate MET: build-v2 has 206 matched items across 4 content classes (certification.json ok=true), so the conjecture's >=200 / >=4-class CONFIRM criterion is satisfied. Caveat to weigh in the result: the few->many quantifier arm is 126/206 (61%) of items; read the per_function_type breakdown for whether the contrast holds within EACH function pair, not just pooled (conjecture prediction 3)."
+}
