@@ -2,119 +2,116 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** Session 74 (UTC 2026-06-21) spent **$0** (a planning/groundwork session — no
-model queried). UTC-day 2026-06-21 total is unchanged at **$2.870** ($1.964 s64 + $0.503 s69 + $0 s70 + $0.280
-s71 + $0.123 s72 + $0 s73 + $0 s74) of $5.00 (headroom **$2.130** *if the next session is still 2026-06-21 UTC*; a
-new UTC day resets to the full $5 — check the clock). Single-run prefer-split flag unchanged (~$2.50/run). Full
+**Standard cap: $5.00/day (UTC).** Session 75 (UTC 2026-06-21) spent **$0** (governance + dual-track groundwork — no
+model queried). UTC-day 2026-06-21 total is unchanged at **$2.870** ($1.964 s64 + $0.503 s69 + $0 s70 + $0.280 s71 +
+$0.123 s72 + $0 s73 + $0 s74 + $0 s75) of $5.00 (headroom **$2.130** *if the next session is still 2026-06-21 UTC*; a
+new UTC day resets to the full $5 — **check the clock**). Single-run prefer-split flag unchanged (~$2.50/run). Full
 ledger in [`config/budget.md`](config/budget.md). Check for any newer Tom override before spending.
 
 ## State
 
-**Session 74 (UTC 2026-06-21) — dual-track planning/groundwork, $0 — cleared the path to reopen the lexical axis,
-added a possible human yardstick (BLiMP), and recorded an honest null on the scalar human anchor.** Workflow mode:
-one wave of 4 parallel bounded units + an independent read-only adversarial coherence pass (clean — no
-BLOCKERs/SHOULD-FIX content defects; 3 hygiene fixes applied: dropped a stray `type:decision`, registered the two
-new resource pages in both indexes), then a small synthesis edit. No experiment ran.
+**Session 75 (UTC 2026-06-21) — governance + dual-track groundwork, $0 — ratified BOTH lexical bridging-context gates
+(cross-session), froze the bridging-stratum + design spec, and wrote a new essay.** Workflow mode: reconciliation
+(two independent fresh-agent adversarial-review ratifications) + one wave of 2 parallel bounded units + a read-only
+adversarial coherence pass (1 BLOCKER fixed at integration — a misattributed quote). No experiment ran.
 
-- **EMPIRICAL/governance — the two lexical bridging-context gate decisions are now OPEN** (named, not opened, by
-  [`open-question/lexical-bridging-context-gradience`](wiki/findings/open-questions/lexical-bridging-context-gradience.md)
-  last session). Both ratify **cross-session** (earliest next session):
-  - [`decisions/open/lexical-bridging-context-operationalization`](wiki/decisions/open/lexical-bridging-context-operationalization.md)
-    — how to measure "intermediate, less-confident" within-item behavior (Option A spread/entropy, B graded-confidence,
-    C "both/unclear" third option), frozen before any data; provisional default a frozen B+C panel with B–C agreement,
-    A characterizing-only. Names the failure mode (tuning the instrument until intermediacy appears) and the first-class
-    null.
-  - [`decisions/open/lexical-bridging-context-anchor`](wiki/decisions/open/lexical-bridging-context-anchor.md) — what
-    human-grounded signal certifies an item as "genuinely bridging" (Option 1 DWUG mid-scale/high-disagreement pairs,
-    2 WiC for the clear poles only, 3 engineered constructions = `internal-contrast-only`, strictly weaker). Provisional
-    default the DWUG-derived stratum; per-item rater thinness forced as the load-bearing caveat.
-- **EMPIRICAL infrastructure — BLiMP catalogued** as [`resource/blimp`](wiki/base/resources/blimp.md) (Warstadt et al.
-  2020 TACL; 67k acceptability minimal pairs, 96.4% human agreement, CC-BY README-prose; 67 files fetched + schema
-  inspected, 10-line sample sha256-pinned, full set not committed). It is the optional non-blocking **Posture-2
-  human-acceptability upgrade** named in [`decisions/resolved/function-word-anchor-design`](wiki/decisions/resolved/function-word-anchor-design.md).
-  **Acceptability only** — cannot anchor entailment/implicature/sense-similarity.
-- **PHILOSOPHICAL/empirical feed — honest null on the scalar human anchor.**
-  [`resource/scalar-implicature-anchor-scouting`](wiki/base/resources/scalar-implicature-anchor-scouting.md) scouted
-  van Tiel et al. 2016 (on-target quantifier rate, paywalled/OA-PDF-403), Pankratz & van Tiel 2025 (CC BY but
-  adjectival/off-target), VAQUUM (appropriateness ≠ implicature-rate; license unverified), Scivetti CxNLI (single gold,
-  no quantifiers): **no clean openly-licensed quantifier-specific human implicature-rate set found.** So essay trigger
-  (b)'s human-comparison upgrade stays **blocked**; `internal-contrast-only` is the honest posture. Logged as a
-  "NOT FIRED" status note under trigger (b) of
-  [`essay/function-words-not-one-category`](wiki/findings/essays/function-words-not-one-category.md) (no claim changed).
+- **GOVERNANCE — both lexical bridging-context gates RATIFIED (cross-session; opened s74, ratified s75).** Each by a
+  separate independent fresh-agent adversarial review:
+  - [`decisions/resolved/lexical-bridging-context-operationalization`](wiki/decisions/resolved/lexical-bridging-context-operationalization.md)
+    — **ADOPT DEFAULT + 3 binding mods:** the **B-primary (graded confidence) + C-categorical-cross-check ("both/unclear")
+    fixed panel**, A (forced-judgment dispersion) characterizing-only; (1) **numeric freeze + sha256** of bands/wording
+    before data, (2) **per-axis** reading (position by B alone; confidence/dispersion by both B and C — *not* a blanket
+    AND), (3) **B–C disagreement is a mixed/weak result, not the null**. v1 clause-(c) context control bound non-optional.
+  - [`decisions/resolved/lexical-bridging-context-anchor`](wiki/decisions/resolved/lexical-bridging-context-anchor.md)
+    — **ADOPT the DWUG-stratum + WiC-poles DESIGN with a binding CLAIM-SCOPE CAP:** the human-comparison force is capped
+    to **usage-similarity intermediacy**, never "two senses co-present"; **≥3-rater floor**; **collapses to
+    `internal-contrast-only`** if the floored pool is too thin. One quote-integrity fix applied.
+- **EMPIRICAL groundwork — bridging stratum FROZEN + design spec written + buildability reported ($0).** Built
+  deterministically from the committed v1 DWUG manifest (no corpus text, CC BY-ND posture). Surviving pool under the
+  **≥3-rater floor: 9 clear-same / 24 bridging / 15 clear-different = 48 pairs** (152 dropped); the **clear-same pole is
+  thin (9/7)** — WiC-T supplement permitted (clear poles only). Verdict: **RUNNABLE-as-human-comparison (capped),
+  conditional** (collapse-to-`internal-contrast-only` stays live). Artifacts: [`experiments/designs/lexical-bridging-context-v1.md`](experiments/designs/lexical-bridging-context-v1.md)
+  (frozen design: B+C panel with numeric PLACEHOLDERS, per-axis reading, Q3 control, claim cap, run blocker) + the
+  frozen [`experiments/designs/lexical-bridging-context-v1/stratum.csv`](experiments/designs/lexical-bridging-context-v1/stratum.csv)
+  (sha256 `e7d36773…`), `freeze_stratum.py` (deterministic), and `BUILDABILITY.md`.
+- **PHILOSOPHICAL — new essay** [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md)
+  (the project's nineteenth): a graded sense **scale** (cross-item, established by v1) and graded sense **commitment**
+  (within-item, the unrun Prediction 4) are logically independent; the null "graded scale, ungraded commitment" is a
+  substantive behavioral finding, not a failure. Behavior-not-representation; usage-similarity cap; four revision
+  triggers + honesty box.
+- **Hygiene:** fixed a pre-existing quote-integrity defect on [`concept/polysemy`](wiki/base/concepts/polysemy.md)
+  (it misquoted `referential-meaning` as "co-occurrence statistics encode"; the page actually says "next-token
+  prediction optimizes for" — re-quoted verbatim, idea preserved as framing).
 
 ## Next concrete action — backlog for the next session
 
-**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` now holds **TWO** decisions, both opened **this session
-(74)** and therefore **eligible for ratification by the next session** (an independent fresh-agent adversarial-review
-pass each — never the session that opened them, and never the orchestrator that did this session's downstream work).
-Apply any Tom override first. The two:
-- `lexical-bridging-context-operationalization` — *opened session 74, eligible next session.*
-- `lexical-bridging-context-anchor` — *opened session 74, eligible next session.*
-Ratifying fixes the **yardstick, never the result**. If a reviewer keeps one open, carry it forward with what's missing.
+**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — no open decisions. (Both lexical bridging
+gates were resolved this session; do not re-ratify them.) Apply any Tom override first.
 
-**Track lean.** 69 emp · 70 dual · 71 dual · 72 dual · 73 philosophical+diversify · 74 **method/groundwork (lexical-gov
-+ infra + philosophical scouting)**. The modal/function-word line stays saturated; both tracks are alive. Keep
-weighting toward the lexical axis and diversification rather than squeezing the modal line further.
+**Track lean.** 70 dual · 71 dual · 72 dual · 73 phil+diversify · 74 method/groundwork · 75 **governance + lexical
+groundwork + philosophical**. The lexical axis is now the **active front** (right up to the run blocker); keep
+weighting there until the bridging probe runs, then rebalance.
 
-1. **RECONCILE → then EMPIRICAL/diversify — the lexical bridging-context probe.** Ratify the two gates above
-   (cross-session). Once ratified, the probe is **buildable**: construct + certify a frozen 3-class set (clearly-same /
-   clearly-different / bridging) per the ratified instrument and anchor, pass an independent pre-run critic, then run
-   (spend-bearing). Anchor default DWUG ([`resource/dwug-usage-graphs`](wiki/base/resources/dwug-usage-graphs.md)) — mind
-   the per-item rater thinness the resource page and the anchor decision both flag. Lowest-friction way to advance the
-   reopened lexical axis.
-2. **PHILOSOPHICAL/EMPIRICAL — essay trigger (b), the few→many scalar mechanism.** The human-anchor sub-route is now
-   scouted to a **null** (see [`resource/scalar-implicature-anchor-scouting`](wiki/base/resources/scalar-implicature-anchor-scouting.md)),
-   so the live sub-route is a **mechanism probe**, `internal-contrast-only`: a quantifier-scope probe (`some`/`many`/`most`/`all`
-   × scalar upper-bounding) pinning *why* the panel divides on "Many X → All X"
-   ([`result/function-word-few-many-split`](wiki/findings/results/function-word-few-many-split.md)). A within-model
-   contrast, no human-comparison claim, until a quantifier-specific human set turns up. (If a future literature refresh
-   finds the van Tiel 2016 quantifier rates via a reachable OA route, the human-comparison upgrade reopens.)
-3. **OPTIONAL — exercise the BLiMP Posture-2 upgrade for the function-word line.** [`resource/blimp`](wiki/base/resources/blimp.md)
-   is now in-repo; the function-word swap results (all `internal-contrast-only`) could gain a human-**acceptability**
-   comparison on the determiner-noun/quantifier/NPI overlap. Acceptability ≠ entailment, so it backs the form side, not
-   the entailment-flip indicator — frame carefully. Never blocks a within-model run.
-4. **DIVERSIFY further — the relational axis** (order-composition ladder, dormant since ~s44) for a different kind of
-   rebalancing if the lexical unit isn't picked up.
-5. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
+1. **EMPIRICAL — unblock + run the lexical bridging-context probe** (the design is frozen up to two blockers; the
+   lowest-friction way to land the reopened lexical axis):
+   - **(a) Re-fetch corpus text** — DWUG `dwug_en.zip` (Zenodo 14028531, CC BY-ND) into the **gitignored** data area
+     (`experiments/data/dwug/`), re-map `id1`/`id2` → usage sentences + target offsets, re-record archive sha256.
+     **No re-fetch script exists** — write a `prep.py` (cf. `experiments/data/subtlex-us/prep.py`). WiC `WiC_dataset.zip`
+     likewise **if** the clear poles are supplemented (advisable — clear-same is thin at 9). *Network-bearing; verify the
+     environment's network policy allows the fetch — if blocked, that is an honest blocker to record.*
+   - **(b) Freeze the instrument numbers** (B's midpoint band, C's verbatim third-option wording, A's sample/temp) +
+     sha256, under an **independent pre-run critic** (operationalization condition b/h). Re-check the **clear-same
+     precondition** empirically; if unmet even with WiC support, **collapse to `internal-contrast-only`** and relabel.
+   - **(c) Run** (spend-bearing; pre-flight per [`config/budget.md`](config/budget.md)). **Cost note:** v1's lexical run
+     was gemini-heavy (~$3.13); keep gemini `effort: minimal` and scale, or split — a confidence + third-option panel
+     over 48 pairs × variants could be pricey. Lead any result with the usage-similarity-vs-sense label discipline.
+   - Files: [`experiments/designs/lexical-bridging-context-v1.md`](experiments/designs/lexical-bridging-context-v1.md);
+     stratum + BUILDABILITY in `experiments/designs/lexical-bridging-context-v1/`.
+2. **PHILOSOPHICAL/THEORY — sync the theory pages** to the within-item axis + the new essay:
+   [`theory/lexicon-grammar-continuum`](wiki/findings/theory/lexicon-grammar-continuum.md) and
+   [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md) should register the cross-item-vs-
+   within-item gradience distinction and [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md).
+   The essay's revision triggers fire on the probe outcome.
+3. **DIVERSIFY (if the lexical unit isn't picked up)** — essay trigger (b) the few→many scalar mechanism
+   (`internal-contrast-only`, human anchor scouted null — see [`result/function-word-few-many-split`](wiki/findings/results/function-word-few-many-split.md)),
+   or the dormant **relational** axis (order-composition ladder).
+4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
-**TWO, both opened session 74, both eligible for ratification next session (cross-session rule):**
-- [`decisions/open/lexical-bridging-context-operationalization`](wiki/decisions/open/lexical-bridging-context-operationalization.md)
-  — *opened session 74; eligible next session.*
-- [`decisions/open/lexical-bridging-context-anchor`](wiki/decisions/open/lexical-bridging-context-anchor.md)
-  — *opened session 74; eligible next session.*
+**NONE.** `wiki/decisions/open/` is empty (both lexical bridging gates resolved session 75; do not re-ratify).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 74 spent **$0** (no model queried; UTC-day 2026-06-21 total unchanged at $2.870 of $5).
-- Plain-language version: a planning session with one honest dead-end. It cleared the path to reopen the project's
-  quieter *word-meaning* thread by writing down — as formal proposals for a *later* session to approve — the two
-  judgment calls a future "do models get less sure on deliberately ambiguous words?" test must settle first: how to
-  measure "less sure," and how to certify a word is genuinely ambiguous using human-rated data. It also catalogued a
-  standard human-checked grammar benchmark (BLiMP) as a *possible* future way to compare the models to people on
-  grammatical well-formedness. And it went looking for published human data on how people read quantity words like
-  *many*/*few* (to ask which model reading matches people on a recent split) and **came up empty** — the on-target
-  study is paywalled, the free data covers other words — so that comparison stays out of reach and the result remains a
-  contrast among the models only. No experiment ran.
+- Session 75 spent **$0** (no model queried; UTC-day 2026-06-21 total unchanged at $2.870 of $5).
+- Plain-language version: a session that **approved** (via independent review, the rules' cross-session safeguard) the
+  two judgment calls the previous session wrote down for the word-ambiguity test — how to measure whether a model is
+  "less sure," and how to certify a word is genuinely ambiguous from human data — adding two honest safeguards (the
+  measure is fixed in numbers before any data; the people-comparison is capped to "people rated the uses as middling
+  in similarity," never "two meanings are present"). It then **built the test to the edge of running**: it locked down
+  the exact 48 word-use pairs (only those at least three people rated), found the set usable but thin, and reported the
+  one thing that blocks the run — the underlying sentences are under a no-derivatives licence and must be re-fetched. It
+  also wrote a short essay on why a model that ranks senses smoothly across examples but answers each single ambiguous
+  case with full confidence would be a real finding, not a failure. No experiment ran.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md).
-**Budget: standard $5/day (UTC).** **RECONCILE FIRST:** `wiki/decisions/open/` holds **two** decisions (both lexical
-bridging gates, opened session 74) — **both eligible for ratification next session** via independent fresh-agent
-adversarial review (never the orchestrator). **The modal/function-word line is saturated; keep weighting to the
-lexical axis:** after ratifying the two gates, the **lexical bridging-context probe** becomes buildable (build + certify
-+ critic + run, spend-bearing); or pursue **essay trigger (b)** (the few→many scalar mechanism, now `internal-contrast-only`
-because the human anchor scouted null), or a **dormant axis** (relational). End squash-merged to `main`, website updated
-**with the JST clock-time stamp**.
+**Budget: standard $5/day (UTC).** **RECONCILE FIRST:** `wiki/decisions/open/` is **EMPTY** — no ratifications owed.
+**The lexical axis is the active front:** the bridging-context probe is **built up to two blockers** — (a) re-fetch the
+DWUG corpus text (gitignored, CC BY-ND, no prep script yet) + WiC if poles supplemented; (b) freeze the instrument
+numbers under an independent pre-run critic + re-check the thin clear-same precondition (collapse to
+`internal-contrast-only` if unmet) — then run (spend-bearing, gemini-cost-aware). Or sync the theory pages, or
+diversify (few→many mechanism / relational). End squash-merged to `main`, website updated **with the JST clock-time
+stamp**.
 
 > ⚠ **Repo note for the cold-start (one-time, harmless):** a fresh clone's local `main` ref may lag the true remote
 > `main`. If `git log main` looks impossibly old or `merge-base main <branch>` is empty, **`git fetch origin main`
-> first** (sessions 64–74 all confirmed this — `git branch -f main origin/main` fixes it).
+> first** (sessions 64–75 all confirmed this — `git branch -f main origin/main` fixes it).
 >
-> ⚠ **Empirical re-run note:** the SUBTLEX-US full word list is **gitignored** (not in a fresh clone) — re-fetch via
-> `experiments/data/subtlex-us/prep.py` before re-running any `build.py`/`certify.py` that reads `freqlib.py`. The modal
-> stimuli themselves are committed. The full BLiMP dataset is **not** in-repo (only a 10-line sample); re-fetch from the
-> repo BLiMP catalogues if a probe needs it.
+> ⚠ **Empirical re-run note:** the SUBTLEX-US full word list is **gitignored** (re-fetch via
+> `experiments/data/subtlex-us/prep.py`). The **DWUG corpus text is also gitignored** (CC BY-ND) and **has no prep
+> script yet** — writing one is part of next session's bridging-probe unblock (Zenodo 14028531). The frozen bridging
+> **stratum** (`experiments/designs/lexical-bridging-context-v1/stratum.csv`, manifest-derived columns only) **is**
+> committed; the corpus sentences it indexes are not. The full BLiMP dataset is **not** in-repo (only a 10-line sample).

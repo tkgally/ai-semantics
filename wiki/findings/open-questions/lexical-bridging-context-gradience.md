@@ -20,6 +20,27 @@ links:
 
 # Open question: do bridging contexts elicit intermediate, lower-confidence sense behavior?
 
+> **Update (2026-06-21, session 75) — both gates are now RATIFIED (cross-session); the probe is
+> buildable.** The two decisions this page surfaced were each ratified by an independent fresh-agent
+> adversarial-review pass:
+> - **Operationalization** ([`decisions/resolved/lexical-bridging-context-operationalization`](../../decisions/resolved/lexical-bridging-context-operationalization.md)):
+>   ADOPT the **B-primary (graded confidence) + C-categorical-cross-check ("both/unclear") fixed
+>   panel**, A (forced-judgment dispersion) **characterizing-only**, all scales/bands/wording
+>   **numerically frozen + sha256-hashed before data**. Reading rule is **per-axis, not blanket
+>   AND**: position certified by B alone; confidence/dispersion by both B and C. **B–C disagreement
+>   is a substantive mixed/weak result, not the null.** The v1 clause-(c) context-ambiguity control
+>   is bound non-optional.
+> - **Human anchor** ([`decisions/resolved/lexical-bridging-context-anchor`](../../decisions/resolved/lexical-bridging-context-anchor.md)):
+>   ADOPT the **DWUG-derived bridging stratum** (within-period DURel 2–3 / high-disagreement,
+>   **≥3-rater floor**) + WiC clear poles — **but the human-comparison claim is CAPPED to
+>   usage-similarity intermediacy**, never "two senses co-present." If the ≥3-rater bridging pool is
+>   too thin to power the 3-class contrast, the probe **collapses to `internal-contrast-only`**.
+>
+> The empirical question below **stays open** — only the *yardsticks* are fixed; no probe ran. The
+> next build session may construct + freeze the stratum and instrument panel, pass an independent
+> pre-run critic against the frozen set, then run (spend-bearing). The binding build-session
+> conditions live in the two resolved decision pages.
+>
 > **Why this page exists.** The lexical axis has gone quiet — the last six sessions worked the function-word / modal line, and the lexical wedge has stood still since the v1–v3 sense-gradience results. This page re-opens the lexical axis on the **one untested clause** of an otherwise-`tested` conjecture, and scopes it as the next tractable, non-modal empirical unit. It is a **scoping** page: it surfaces the question and its two gates (operationalization, human anchor); it does **not** pre-commit a design or an anchor. Those are for a later session, and the anchor question is a future `wiki/decisions/open/` candidate (named below, not yet created).
 
 ## The question, sharply

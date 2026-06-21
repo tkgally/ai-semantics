@@ -4,14 +4,94 @@ title: What human-grounded signal certifies that a bridging item is genuinely br
 meaning-senses:
   - distributional
   - referential
-status: open
+status: resolved
 opened: 2026-06-21
 opened-by: autonomous (session 74, opening the lexical bridging-context probe's human-anchor gate)
+resolved: 2026-06-21
+resolved-by: autonomous (adversarial review)
+resolution: adopt-modified (Route 1 DWUG-derived stratum for the bridging class + WiC for the clear poles, Route 3 internal-contrast-only fallback — but the human-comparison claim is CAPPED to usage-similarity intermediacy; ≥3-rater floor; freeze-before-output; six binding build-session conditions)
+anchor: human-comparison (DWUG usage-similarity intermediacy — claim-scope capped; NOT a "two senses co-present" certification)
 contingent-artifacts:
   - open-question/lexical-bridging-context-gradience
 ---
 
-> **Status: OPEN — opened 2026-06-21; NOT ratifiable this session.** The earliest ratification is a *later* session's independent adversarial-review pass with written rationale ([`PROJECT.md`](../../../PROJECT.md) §12.3; [`CLAUDE.md`](../../../CLAUDE.md) rule 5). **No probe runs before that ratification.** This page surfaces the human-anchor gate for the bridging-context probe and lays out three candidate routes with a provisional default; it **does not** decide among them, and it **invents no human anchor**. Tom's standing override outranks any autonomous ratification.
+> **Status: RESOLVED (2026-06-21, session 75, autonomous adversarial review — cross-session:
+> opened by session 74 on 2026-06-21, ratified by session 75; the session boundary held).
+> VERDICT: ADOPT the default DESIGN (Route 1 DWUG bridging stratum + WiC clear poles), with a
+> binding CLAIM-SCOPE CAP.** An independent fresh-agent reviewer (not the orchestrator that did this
+> session's downstream work) confirmed that DWUG is the only in-repo resource carrying a graded,
+> multi-rater, per-pair human signal of intermediacy, and that WiC is correctly relegated to the
+> two clear poles (binary by design; it pruned its closest polyseme negatives). The hole is the
+> page's own caveat (b), and the reviewer judged it closer to fatal than the bare default lets on:
+> Prediction 4 is about **two senses co-present** (a `referential.sense` claim), but a DWUG
+> mid-scale (DURel 2–3) / high-disagreement pair certifies only that **humans split on usage
+> similarity** — which can also arise from homonymy halfway-points, register/topic drift, or
+> annotator noise. DWUG "does not tag pairs as polysemy vs. homonymy," so Route 1 alone cannot
+> license the sense-co-presence reading.
+>
+> **Resolution: this is not a reason to demote to Route 3** (that would discard a real human
+> intermediacy signal) **— it is a reason to CAP THE CLAIM.** The ratified yardstick certifies a
+> **human-rated usage-similarity midpoint / high-disagreement stratum**, and any result may claim
+> only that the model's confidence tracks *that*, explicitly labelled as **usage similarity**, never
+> as sense co-presence. A sense-relatedness layer (e.g. WordNet) could later strengthen it, but
+> adding it now would be designing the yardstick against an unrun result — it is **deferred as a
+> noted enhancement, not required**. The rater-thinness caveat (151/200 EN pairs on 2 annotators;
+> ρ≈0.69) makes the **≥3-rater floor** right but threatens power; if the floored bridging pool
+> cannot support the 3-class contrast, the design **collapses to Route 3** (`internal-contrast-only`)
+> and must be relabelled.
+>
+> ### Binding build-session conditions (load-bearing)
+> - **(1) Class definition, frozen before any model output:** bridging = DWUG **within-period** pairs
+>   at rounded DURel 2–3 AND/OR high inter-rater disagreement, each surviving the rater floor;
+>   clear-same = high-agreement DURel-4; clear-different = high-agreement DURel-1. WiC T/F may
+>   supplement the two clear poles **only**, never the bridging stratum.
+> - **(2) Rater floor:** **≥3 annotators per pair** to enter any class (the half-integer 2-rater
+>   levels are not reliable graded gold). Report the surviving per-class pool size **before** running;
+>   if the bridging pool is too small to power the 3-class ordinal contrast, the probe runs as **Route
+>   3 `internal-contrast-only`**, not a human-comparison claim.
+> - **(3) Freeze rule:** the full stratum (item ids + class labels + rater counts) is frozen with a
+>   manifest sha256 **before any model call**. No item may change class after any model output is
+>   seen; re-selecting the bridging stratum against model confidence is the named anti-cheat
+>   violation and voids the result.
+> - **(4) Within-period enforcement:** DWUG diachronic structure means within-period filtering must
+>   be enforced as in v1, or cross-period semantic-change pairs masquerade as bridging.
+> - **(5) Label discipline:** every artifact states the bridging stratum is a **human-rated
+>   usage-similarity midpoint / high-disagreement** stratum. "sense bridge" / "two senses co-present"
+>   may describe the *concept being probed*, never the *certification* of a DWUG item.
+> - **(6) Claim cap:** the result may make a **human-comparison claim only about usage-similarity
+>   intermediacy** (the model is less confident where humans rated / split mid usage-similarity). It
+>   may **NOT** claim humans certified two senses co-present. On the DWUG route it is **not**
+>   `internal-contrast-only` (a real human signal anchors it), but its human-comparison force is
+>   scoped to usage similarity. The Q3 context-ambiguity / distributional-shadow control belongs to
+>   the sibling [`lexical-bridging-context-operationalization`](lexical-bridging-context-operationalization.md)
+>   gate — handed off here, not re-decided.
+>
+> ### Residual risks (survive adoption)
+> - Usage-similarity-mid ≠ sense-co-presence persists after the cap; the result page must **lead**
+>   with it or readers will over-read a positive as "the model represents bridging senses."
+> - **Power risk:** the ≥3-rater floor on an already-small within-period pool (v1: 200 pairs / 43
+>   lemmas) may leave too few certified bridging items; the design may in practice collapse to Route
+>   3. Not resolved by ratification — the builder checks it empirically post-freeze.
+> - DWUG EN low end mixes homonymy (v1 flagged `lass`/`lassi`); the mid-band may inherit homonym
+>   halfway-points, contaminating the polysemy-bridge reading.
+> - Instrument sensitivity (the sibling gate's concern) bounds interpretability of any result built
+>   on this stratum.
+>
+> ### Quote-integrity fix applied at integration
+> The reviewer flagged that the route-2 paragraph below presented **"the gold is the expert sense
+> split, not a rating panel"** inside quotation marks as if verbatim from
+> [`resource/wic-word-in-context`](../../base/resources/wic-word-in-context.md); the resource page's
+> actual wording is "the per-item label is the expert sense split, not a graded judgment" and "Treat
+> WiC agreement claims as 'agreement with the lexicographer sense split,' not 'agreement with a
+> rating panel.'" The body text has been corrected to de-quote that compression. All other quotes
+> (DURel scale; the "intermediate levels … graded distinctions" line; the 151/200 / ρ≈0.69
+> rater-thinness figures; the WiC "binary by design" and pruning quotes) were verified **verbatim**
+> against their source pages.
+>
+> ---
+>
+> *The provisional-default analysis below is preserved as the reviewer's evidence base (with the
+> one quote-integrity correction noted above applied inline).*
 
 # Decision: human anchor for the lexical bridging-context probe
 
@@ -44,7 +124,7 @@ The open-question page lifts three candidate human-grounded sources of a bridgin
 ### Route 2 — WiC near-boundary items
 
 - **What.** Draw the bridging stratum from items near the decision boundary of [`resource/wic-word-in-context`](../../base/resources/wic-word-in-context.md).
-- **What WiC affords, and where it stops (the feature that bears).** WiC carries **binary** lexicographer-inventory same/different-sense labels over two contexts of the same target word; its page is explicit that it "is **binary by design**" and "cannot ground 'the model's signal is *monotonic* in human-rated relatedness.'" There is **no native per-item human graded or confidence axis** in WiC — "the gold is the expert sense split, not a rating panel" ([`resource/wic-word-in-context`](../../base/resources/wic-word-in-context.md)) — so WiC has **no native "near-boundary" annotation** to read a bridging stratum off. Worse for this exact use, its construction "removed all pairs whose senses were first degree connections … sister senses … those which belonged to the same supersense" (same page, verbatim from the WiC paper) — i.e. it **pruned the closest polyseme pairs**, exactly the near-bridge middle a bridging study most wants.
+- **What WiC affords, and where it stops (the feature that bears).** WiC carries **binary** lexicographer-inventory same/different-sense labels over two contexts of the same target word; its page is explicit that it "is **binary by design**" and "cannot ground 'the model's signal is *monotonic* in human-rated relatedness.'" There is **no native per-item human graded or confidence axis** in WiC — its page states "the per-item label is the expert sense split, not a graded judgment" and directs that WiC agreement be read as "agreement with the lexicographer sense split," not "agreement with a rating panel" ([`resource/wic-word-in-context`](../../base/resources/wic-word-in-context.md)) — so WiC has **no native "near-boundary" annotation** to read a bridging stratum off. Worse for this exact use, its construction "removed all pairs whose senses were first degree connections … sister senses … those which belonged to the same supersense" (same page, verbatim from the WiC paper) — i.e. it **pruned the closest polyseme pairs**, exactly the near-bridge middle a bridging study most wants.
 - **Net.** WiC can supply **clean clear-same (T) and clear-different (F) anchor items** — its large, balanced, POS-typed pool (7,466 items, 50/50) makes it an excellent source of the two *clear* poles. But it does **not** out-of-the-box certify a *bridging* stratum: any "near-boundary" WiC subset would have to be defined by an **added** signal (e.g. a WordNet sense-relatedness measure on the negatives WiC retained, or an external graded re-rating), not read off WiC's binary labels. As a standalone bridging anchor, WiC is insufficient; as a clear-pole anchor paired with another route's bridging certification, it is strong.
 
 ### Route 3 — Fresh engineered bridging constructions — NO human anchor
