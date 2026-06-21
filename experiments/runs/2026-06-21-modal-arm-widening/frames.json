@@ -1,0 +1,1575 @@
+{
+ "_doc": "MODAL-ARM-WIDENING (session 71). Tests essay revision trigger (a): does the will->would modal null generalize across modal types? REUSES the ratified instrument + matching discipline (run-v2). {fw}/{Fw}=function word (premise only). {cw}=content word (premise AND hyp). base/fn=predicted 3-way NLI label (0 ent,1 neu,2 con). pairs=[out,in]; build.py drops any pair failing freq(b,c)+SIGNED-length(d) matching vs its function pair. ARMS: because/some/will REUSED verbatim from run-v2 (because+some = in-run positive controls proving the NLI instrument flips on a real inferential change; will = replication of the run-v2 modal null). shall->should (deontic obligation->advisory) and must->might (deontic necessity->epistemic possibility) are the NEW modal arms; both use an 'is required to' hypothesis so the swap is predicted to flip ENT->NEU (shall/must = required; should=advisory, might=possibility, neither = required). Content swaps matched to the MODAL pair within |dLg10WF|<=0.10 at both ends, signed dlen==function dlen, content gap>=function gap (certify.py). shall rests on one content pair (buy->give) -- the gap-0.759 supply ceiling, flagged like run-v2's single-out-word arms.",
+ "because": [
+  {
+   "premise": "The board agreed to {cw} {fw} the market had shifted.",
+   "hyp": "The market shifting is the reason the board agreed to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The owner chose to {cw} {fw} the costs had risen.",
+   "hyp": "The rising costs are the reason the owner chose to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The council voted to {cw} {fw} the law had changed.",
+   "hyp": "The law changing is the reason the council voted to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The firm decided to {cw} {fw} the demand had fallen.",
+   "hyp": "The demand falling is the reason the firm decided to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The donors offered to {cw} {fw} the appeal had spread.",
+   "hyp": "The appeal spreading is the reason the donors offered to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The staff agreed to {cw} {fw} the terms had improved.",
+   "hyp": "The terms improving is the reason the staff agreed to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The trustees planned to {cw} {fw} the deficit had grown.",
+   "hyp": "The deficit growing is the reason the trustees planned to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The partners agreed to {cw} {fw} the deal had closed.",
+   "hyp": "The deal closing is the reason the partners agreed to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The agency chose to {cw} {fw} the budget had cleared.",
+   "hyp": "The budget clearing is the reason the agency chose to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The committee voted to {cw} {fw} the grant had arrived.",
+   "hyp": "The grant arriving is the reason the committee voted to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The directors planned to {cw} {fw} the sales had recovered.",
+   "hyp": "The sales recovering is the reason the directors planned to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The hospital agreed to {cw} {fw} the funding had returned.",
+   "hyp": "The funding returning is the reason the hospital agreed to {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "verb",
+   "pairs": [
+    [
+     "give",
+     "serve"
+    ]
+   ]
+  },
+  {
+   "premise": "The board ignored the {cw} {fw} the meeting had ended.",
+   "hyp": "The meeting ending is the reason the board ignored the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "speech"
+    ]
+   ]
+  },
+  {
+   "premise": "The judge repeated the {cw} {fw} the hearing had resumed.",
+   "hyp": "The hearing resuming is the reason the judge repeated the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "signal"
+    ]
+   ]
+  },
+  {
+   "premise": "The clerk missed the {cw} {fw} the office had closed.",
+   "hyp": "The office closing is the reason the clerk missed the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "speech"
+    ]
+   ]
+  },
+  {
+   "premise": "The coach ignored the {cw} {fw} the season had ended.",
+   "hyp": "The season ending is the reason the coach ignored the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "signal"
+    ]
+   ]
+  },
+  {
+   "premise": "The doctor repeated the {cw} {fw} the test had returned.",
+   "hyp": "The test returning is the reason the doctor repeated the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "speech"
+    ]
+   ]
+  },
+  {
+   "premise": "The captain missed the {cw} {fw} the storm had hit.",
+   "hyp": "The storm hitting is the reason the captain missed the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "signal"
+    ]
+   ]
+  },
+  {
+   "premise": "The mayor ignored the {cw} {fw} the crowd had gathered.",
+   "hyp": "The crowd gathering is the reason the mayor ignored the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "speech"
+    ]
+   ]
+  },
+  {
+   "premise": "The pilot missed the {cw} {fw} the tower had paused.",
+   "hyp": "The tower pausing is the reason the pilot missed the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "signal"
+    ]
+   ]
+  },
+  {
+   "premise": "The teacher repeated the {cw} {fw} the bell had rung.",
+   "hyp": "The bell ringing is the reason the teacher repeated the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "speech"
+    ]
+   ]
+  },
+  {
+   "premise": "The guard ignored the {cw} {fw} the alarm had stopped.",
+   "hyp": "The alarm stopping is the reason the guard ignored the {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "noun_thing",
+   "pairs": [
+    [
+     "thing",
+     "signal"
+    ]
+   ]
+  },
+  {
+   "premise": "The juror seemed {cw} {fw} the witness had testified.",
+   "hyp": "The witness testifying is the reason the juror seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  },
+  {
+   "premise": "The buyer seemed {cw} {fw} the agent had called.",
+   "hyp": "The agent calling is the reason the buyer seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  },
+  {
+   "premise": "The patient seemed {cw} {fw} the doctor had explained.",
+   "hyp": "The doctor explaining is the reason the patient seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  },
+  {
+   "premise": "The witness seemed {cw} {fw} the lawyer had asked.",
+   "hyp": "The lawyer asking is the reason the witness seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  },
+  {
+   "premise": "The student seemed {cw} {fw} the teacher had warned.",
+   "hyp": "The teacher warning is the reason the student seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  },
+  {
+   "premise": "The clerk seemed {cw} {fw} the manager had spoken.",
+   "hyp": "The manager speaking is the reason the clerk seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  },
+  {
+   "premise": "The driver seemed {cw} {fw} the officer had signaled.",
+   "hyp": "The officer signaling is the reason the driver seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  },
+  {
+   "premise": "The tenant seemed {cw} {fw} the landlord had written.",
+   "hyp": "The landlord writing is the reason the tenant seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  },
+  {
+   "premise": "The nurse seemed {cw} {fw} the surgeon had arrived.",
+   "hyp": "The surgeon arriving is the reason the nurse seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  },
+  {
+   "premise": "The client seemed {cw} {fw} the broker had answered.",
+   "hyp": "The broker answering is the reason the client seemed {cw}.",
+   "base": 0,
+   "fn": 2,
+   "slot": "adj",
+   "pairs": [
+    [
+     "sure",
+     "aware"
+    ]
+   ]
+  }
+ ],
+ "some": [
+  {
+   "premise": "{Fw} guard ignored the {cw} at the gate.",
+   "hyp": "All of the guards ignored the {cw} at the gate.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} nurse recognized the {cw} in the hallway.",
+   "hyp": "All of the nurses recognized the {cw} in the hallway.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} teacher praised the {cw} after class.",
+   "hyp": "All of the teachers praised the {cw} after class.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} clerk greeted the {cw} at the counter.",
+   "hyp": "All of the clerks greeted the {cw} at the counter.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} soldier questioned the {cw} near the border.",
+   "hyp": "All of the soldiers questioned the {cw} near the border.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} judge watched the {cw} during the hearing.",
+   "hyp": "All of the judges watched the {cw} during the hearing.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} officer escorted the {cw} to the car.",
+   "hyp": "All of the officers escorted the {cw} to the car.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} doctor examined the {cw} that morning.",
+   "hyp": "All of the doctors examined the {cw} that morning.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} agent followed the {cw} through the station.",
+   "hyp": "All of the agents followed the {cw} through the station.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} waiter served the {cw} by the window.",
+   "hyp": "All of the waiters served the {cw} by the window.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} warden noticed the {cw} in the yard.",
+   "hyp": "All of the wardens noticed the {cw} in the yard.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} ranger helped the {cw} on the trail.",
+   "hyp": "All of the rangers helped the {cw} on the trail.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} captain saluted the {cw} on the deck.",
+   "hyp": "All of the captains saluted the {cw} on the deck.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} driver thanked the {cw} after the ride.",
+   "hyp": "All of the drivers thanked the {cw} after the ride.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_person",
+   "cap": true,
+   "pairs": [
+    [
+     "man",
+     "girl"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} guest decided to {cw} the offer that night.",
+   "hyp": "All of the guests decided to {cw} the offer that night.",
+   "base": 1,
+   "fn": 0,
+   "slot": "verb",
+   "cap": true,
+   "pairs": [
+    [
+     "take",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} tenant chose to {cw} the deal that morning.",
+   "hyp": "All of the tenants chose to {cw} the deal that morning.",
+   "base": 1,
+   "fn": 0,
+   "slot": "verb",
+   "cap": true,
+   "pairs": [
+    [
+     "take",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} buyer agreed to {cw} the offer that week.",
+   "hyp": "All of the buyers agreed to {cw} the offer that week.",
+   "base": 1,
+   "fn": 0,
+   "slot": "verb",
+   "cap": true,
+   "pairs": [
+    [
+     "take",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} player refused to {cw} the deal that season.",
+   "hyp": "All of the players refused to {cw} the deal that season.",
+   "base": 1,
+   "fn": 0,
+   "slot": "verb",
+   "cap": true,
+   "pairs": [
+    [
+     "take",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} client wanted to {cw} the offer that day.",
+   "hyp": "All of the clients wanted to {cw} the offer that day.",
+   "base": 1,
+   "fn": 0,
+   "slot": "verb",
+   "cap": true,
+   "pairs": [
+    [
+     "take",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} partner planned to {cw} the deal that quarter.",
+   "hyp": "All of the partners planned to {cw} the deal that quarter.",
+   "base": 1,
+   "fn": 0,
+   "slot": "verb",
+   "cap": true,
+   "pairs": [
+    [
+     "take",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} guard blocked the {cw} at midnight.",
+   "hyp": "All of the guards blocked the {cw} at midnight.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_thing",
+   "cap": true,
+   "pairs": [
+    [
+     "way",
+     "room"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} clerk set the {cw} for the wedding.",
+   "hyp": "All of the clerks set the {cw} for the wedding.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_thing",
+   "cap": true,
+   "pairs": [
+    [
+     "time",
+     "place"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} planner changed the {cw} at noon.",
+   "hyp": "All of the planners changed the {cw} at noon.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_thing",
+   "cap": true,
+   "pairs": [
+    [
+     "time",
+     "place"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} host announced the {cw} to the guests.",
+   "hyp": "All of the hosts announced the {cw} to the guests.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_thing",
+   "cap": true,
+   "pairs": [
+    [
+     "time",
+     "place"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} marshal cleared the {cw} before dawn.",
+   "hyp": "All of the marshals cleared the {cw} before dawn.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_thing",
+   "cap": true,
+   "pairs": [
+    [
+     "way",
+     "room"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} usher blocked the {cw} after the parade.",
+   "hyp": "All of the ushers blocked the {cw} after the parade.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_thing",
+   "cap": true,
+   "pairs": [
+    [
+     "way",
+     "room"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} scout marked the {cw} on the map.",
+   "hyp": "All of the scouts marked the {cw} on the map.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_thing",
+   "cap": true,
+   "pairs": [
+    [
+     "way",
+     "room"
+    ]
+   ]
+  },
+  {
+   "premise": "{Fw} agent fixed the {cw} for the meeting.",
+   "hyp": "All of the agents fixed the {cw} for the meeting.",
+   "base": 1,
+   "fn": 0,
+   "slot": "noun_thing",
+   "cap": true,
+   "pairs": [
+    [
+     "time",
+     "place"
+    ]
+   ]
+  }
+ ],
+ "will": [
+  {
+   "premise": "The council {fw} {cw} the visitor next week.",
+   "hyp": "The council is going to {cw} the visitor next week.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The captain {fw} {cw} the crew before dawn.",
+   "hyp": "The captain is going to {cw} the crew before dawn.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  },
+  {
+   "premise": "The director {fw} {cw} the staff this afternoon.",
+   "hyp": "The director is going to {cw} the staff this afternoon.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The board {fw} {cw} the auditor next quarter.",
+   "hyp": "The board is going to {cw} the auditor next quarter.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  },
+  {
+   "premise": "The agency {fw} {cw} the client by Monday.",
+   "hyp": "The agency is going to {cw} the client by Monday.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The mayor {fw} {cw} the reporter tomorrow.",
+   "hyp": "The mayor is going to {cw} the reporter tomorrow.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  },
+  {
+   "premise": "The judge {fw} {cw} the jury that day.",
+   "hyp": "The judge is going to {cw} the jury that day.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The doctor {fw} {cw} the patient next visit.",
+   "hyp": "The doctor is going to {cw} the patient next visit.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  },
+  {
+   "premise": "The manager {fw} {cw} the team at noon.",
+   "hyp": "The manager is going to {cw} the team at noon.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The owner {fw} {cw} the tenant next month.",
+   "hyp": "The owner is going to {cw} the tenant next month.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  },
+  {
+   "premise": "The coach {fw} {cw} the player that week.",
+   "hyp": "The coach is going to {cw} the player that week.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The dean {fw} {cw} the student on Friday.",
+   "hyp": "The dean is going to {cw} the student on Friday.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  },
+  {
+   "premise": "The sergeant {fw} {cw} the recruit at dawn.",
+   "hyp": "The sergeant is going to {cw} the recruit at dawn.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The editor {fw} {cw} the writer next week.",
+   "hyp": "The editor is going to {cw} the writer next week.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  },
+  {
+   "premise": "The warden {fw} {cw} the inmate that evening.",
+   "hyp": "The warden is going to {cw} the inmate that evening.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The chief {fw} {cw} the officer before noon.",
+   "hyp": "The chief is going to {cw} the officer before noon.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  },
+  {
+   "premise": "The principal {fw} {cw} the parent on Tuesday.",
+   "hyp": "The principal is going to {cw} the parent on Tuesday.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The captain {fw} {cw} the sailor at sea.",
+   "hyp": "The captain is going to {cw} the sailor at sea.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  },
+  {
+   "premise": "The bishop {fw} {cw} the deacon that Sunday.",
+   "hyp": "The bishop is going to {cw} the deacon that Sunday.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "take"
+    ]
+   ]
+  },
+  {
+   "premise": "The foreman {fw} {cw} the worker next shift.",
+   "hyp": "The foreman is going to {cw} the worker next shift.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "see",
+     "tell"
+    ]
+   ]
+  }
+ ],
+ "shall": [
+  {
+   "premise": "The tenant {fw} {cw} the share.",
+   "hyp": "The tenant is required to {cw} the share.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The bidder {fw} {cw} the lot.",
+   "hyp": "The bidder is required to {cw} the lot.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The member {fw} {cw} the bond.",
+   "hyp": "The member is required to {cw} the bond.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The dealer {fw} {cw} the unit.",
+   "hyp": "The dealer is required to {cw} the unit.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The client {fw} {cw} the plot.",
+   "hyp": "The client is required to {cw} the plot.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The holder {fw} {cw} the note.",
+   "hyp": "The holder is required to {cw} the note.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The partner {fw} {cw} the stake.",
+   "hyp": "The partner is required to {cw} the stake.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The donor {fw} {cw} the gift.",
+   "hyp": "The donor is required to {cw} the gift.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The patron {fw} {cw} the card.",
+   "hyp": "The patron is required to {cw} the card.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The broker {fw} {cw} the deed.",
+   "hyp": "The broker is required to {cw} the deed.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The trader {fw} {cw} the coin.",
+   "hyp": "The trader is required to {cw} the coin.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The owner {fw} {cw} the ring.",
+   "hyp": "The owner is required to {cw} the ring.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The guest {fw} {cw} the prize.",
+   "hyp": "The guest is required to {cw} the prize.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The host {fw} {cw} the token.",
+   "hyp": "The host is required to {cw} the token.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The lodger {fw} {cw} the vase.",
+   "hyp": "The lodger is required to {cw} the vase.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The renter {fw} {cw} the plate.",
+   "hyp": "The renter is required to {cw} the plate.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The seller {fw} {cw} the robe.",
+   "hyp": "The seller is required to {cw} the robe.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  },
+  {
+   "premise": "The buyer {fw} {cw} the doll.",
+   "hyp": "The buyer is required to {cw} the doll.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "buy",
+     "give"
+    ]
+   ]
+  }
+ ],
+ "must": [
+  {
+   "premise": "The clerk {fw} {cw} the file.",
+   "hyp": "The clerk is required to {cw} the file.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "find",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The auditor {fw} {cw} the form.",
+   "hyp": "The auditor is required to {cw} the form.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "find",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The warden {fw} {cw} the key.",
+   "hyp": "The warden is required to {cw} the key.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "find",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The editor {fw} {cw} the note.",
+   "hyp": "The editor is required to {cw} the note.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "find",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The scout {fw} {cw} the map.",
+   "hyp": "The scout is required to {cw} the map.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "find",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The porter {fw} {cw} the bag.",
+   "hyp": "The porter is required to {cw} the bag.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "find",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The ranger {fw} {cw} the log.",
+   "hyp": "The ranger is required to {cw} the log.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "find",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The usher {fw} {cw} the tag.",
+   "hyp": "The usher is required to {cw} the tag.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "find",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The matron {fw} {cw} the aide.",
+   "hyp": "The matron is required to {cw} the aide.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "call",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The sergeant {fw} {cw} the monk.",
+   "hyp": "The sergeant is required to {cw} the monk.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "call",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The captain {fw} {cw} the cook.",
+   "hyp": "The captain is required to {cw} the cook.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "call",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The steward {fw} {cw} the page.",
+   "hyp": "The steward is required to {cw} the page.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "call",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The foreman {fw} {cw} the chef.",
+   "hyp": "The foreman is required to {cw} the chef.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "call",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The marshal {fw} {cw} the twin.",
+   "hyp": "The marshal is required to {cw} the twin.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "call",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The bishop {fw} {cw} the monk.",
+   "hyp": "The bishop is required to {cw} the monk.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "call",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The colonel {fw} {cw} the aide.",
+   "hyp": "The colonel is required to {cw} the aide.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "call",
+     "leave"
+    ]
+   ]
+  },
+  {
+   "premise": "The porter {fw} {cw} the cart back.",
+   "hyp": "The porter is required to {cw} the cart back.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "put",
+     "move"
+    ]
+   ]
+  },
+  {
+   "premise": "The janitor {fw} {cw} the crate back.",
+   "hyp": "The janitor is required to {cw} the crate back.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "put",
+     "move"
+    ]
+   ]
+  },
+  {
+   "premise": "The steward {fw} {cw} the bench back.",
+   "hyp": "The steward is required to {cw} the bench back.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "put",
+     "move"
+    ]
+   ]
+  },
+  {
+   "premise": "The caretaker {fw} {cw} the stool back.",
+   "hyp": "The caretaker is required to {cw} the stool back.",
+   "base": 0,
+   "fn": 1,
+   "slot": "verb",
+   "pairs": [
+    [
+     "put",
+     "move"
+    ]
+   ]
+  }
+ ]
+}
