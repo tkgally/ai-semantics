@@ -99,6 +99,8 @@ links:
     target: source/bender-koller-2020-climbing
   - rel: depends-on
     target: source/lyre-2024-semantic-grounding
+  - rel: depends-on
+    target: source/davis-2024-implicature-sep
 ---
 
 # Theory (draft): evidence for constructional meaning in LLMs
@@ -392,6 +394,19 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > was not relation-intrinsic), not a "robustly inferential" claim — a registered preference is weaker than a
 > computed entailment. `internal-contrast-only` — no human comparison (a BLiMP/NLI human baseline stays an
 > optional, not-in-repo upgrade).
+>
+> **An external semantics typology now grounds the split *a priori* (2026-06-21, session 73):**
+> [`source/davis-2024-implicature-sep`](../../base/sources/davis-2024-implicature-sep.md) (Davis's SEP
+> "Implicature") supplies the classification the type-specificity reading had been making off the arms. A
+> 3-way NLI judgment probes *what is said* — at-issue, truth-conditional content — and is by construction blind
+> to a *scalar implicature*, since on the standard view "conversational implicatures cannot be [entailed]" by
+> what is said. So which closed-class swaps reach this rung *under NLI* is **predicted, not observed post hoc**:
+> the at-issue swaps register (`some`→`every`; the causal content of `because`), the scalar swap (`few`→`many`)
+> is the licensed-divergence arm, and the modal arm is modal semantics handled by trigger (c). This converts
+> the essay's calibrated reading "from interpretation toward claim" — **bounded:** a typology that *predicts*
+> the pattern is corroboration, not a demonstration that the models *compute* implicatures, and Davis reports
+> the non-entailment of implicature as the standard-but-contested view
+> ([`essay/function-words-not-one-category`](../essays/function-words-not-one-category.md), trigger (d), fired).
 
 The ladder is the page's claim, in compressed form: **form-acceptability < surprisal-contrast < gradient semantic tracking < generalization < inference-licensing.** Each upward step narrows the space of distributional-only explanations; only the top two steps are evidence for constructional *meaning* as opposed to constructional *form*.
 
