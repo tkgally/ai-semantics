@@ -14,6 +14,8 @@ links:
     target: result/scivetti-let-alone-powered-rerun-v1
   - rel: depends-on
     target: result/scivetti-let-alone-repeated-runs-v1
+  - rel: depends-on
+    target: source/he-2025-defeating-nondeterminism
   - rel: refines
     target: essay/concordant-verdict-hides-spread
   - rel: depends-on
@@ -28,8 +30,9 @@ links:
 
 # Essay: the point estimate is a draw
 
-> **Status: revised (2026-06-21, session 64; originally draft, session 63). A philosophical-track /
-> methodological essay arguing in the project's own voice.** Its original contribution is a *measurement-epistemics reading discipline*,
+> **Status: revised (2026-06-21, session 65 — trigger (c) discharged; previously revised session 64;
+> originally draft, session 63). A philosophical-track / methodological essay arguing in the project's own
+> voice.** Its original contribution is a *measurement-epistemics reading discipline*,
 > not an empirical claim: a single-run behavioral accuracy at temperature 0 is a **draw**, not a fixed
 > quantity, because temperature-0 decoding is **not** deterministic — re-running a byte-identical
 > instrument can move the accuracy — so a single-run point estimate carries a **run-to-run jitter** that
@@ -62,6 +65,23 @@ links:
 > confirmation — the trigger-(d) case — that a real small effect, gpt's below-baseline residual, **survives**
 > the jitter (de-noised majority-vote 0.606; every one of five runs < 0.90). The ~±0.12 / ~12% sentences
 > below remain accurate as **gpt's** number; read them with the model-specificity this revision adds.
+
+> **Revision (2026-06-21, session 65) — trigger (c) DISCHARGED; the mechanism is now sourced, the
+> discipline unchanged.** The temperature-0-nondeterminism source trigger (c) named was fetched and
+> catalogued: [`source/he-2025-defeating-nondeterminism`](../../base/sources/he-2025-defeating-nondeterminism.md)
+> (He & Thinking Machines Lab 2025, an open-access engineering write-up). It documents *why* greedy
+> temperature-0 decoding is not bit-reproducible in served inference: not per-kernel randomness (the
+> forward-pass kernels are themselves run-to-run deterministic) but **load-dependent batch-size variation
+> interacting with non-batch-invariant kernels** — the same input row reduces in a different order, and so
+> to a different rounded logit, depending on the batch it happened to be served in; floating-point
+> non-associativity is the ultimate numeric cause. This **grounds the essay's empirical premise** beyond
+> the single in-repo behavioral observation: the run-to-run jitter the project measured is an *expected*
+> property of hosted API inference, not an artifact of its harness. **What does not change:** the source
+> is a *mechanism* characterization for an open-ended-generation setting, so it grounds *that* and *why*
+> the jitter occurs — **not** its magnitude on the project's forced-choice instruments (that stays the
+> per-instrument K=5 measurement), and it makes **no** claim about the specific panel models' or
+> OpenRouter's batching. The reading discipline is untouched; only the premise is now cited rather than
+> rested on a single observation. See the trigger (c) entry below, now marked discharged.
 
 ## The occasion
 
@@ -218,13 +238,18 @@ numbers are mush."
   stable jitter magnitude, the discipline would harden from a qualitative "ask whether the gap clears it"
   into a quantitative correction (inflate small-effect intervals by a measured factor). Nothing in-repo
   licenses that yet; the ~12% is a single instrument's number.
-- **(c) A source on temperature-0 nondeterminism.** The *mechanism* (why temp-0 decoding is not bit-exact
-  — floating-point non-associativity under varying batch/hardware execution order, server-side
-  routing) is documented in the systems literature but **not** ingested in-repo; no such page is cited
-  here, and none is fabricated. A fetched open-access source characterizing the mechanism would ground the
-  essay's empirical premise beyond the single in-repo observation and let it speak about *why* the jitter
-  occurs, not only *that* it does. Until then the essay rests on the one measurement and claims only what
-  that measurement shows. (Queued as a [`base/wanted.md`](../../base/wanted.md) candidate.)
+- **(c) A source on temperature-0 nondeterminism. — DISCHARGED (2026-06-21, session 65).** The *mechanism*
+  (why temp-0 decoding is not bit-exact) is now ingested in-repo:
+  [`source/he-2025-defeating-nondeterminism`](../../base/sources/he-2025-defeating-nondeterminism.md)
+  documents it as **load-dependent batch-size variation × non-batch-invariant kernels**, with
+  floating-point non-associativity (`(a+b)+c ≠ a+(b+c)`) as the ultimate numeric cause and the
+  often-blamed *concurrency* the lesser factor (the forward-pass kernels are themselves run-to-run
+  deterministic). The essay now grounds its empirical premise — that temp-0 jitter occurs — on a
+  documented general mechanism, not only the single in-repo behavioral observation. The source is a
+  *mechanism* account on open-ended generation, so it does **not** transfer the *magnitude* of jitter to
+  the project's forced-choice instruments (that remains the K=5 measurement) and asserts nothing about the
+  panel's or OpenRouter's batching; the essay claims only "consistent with a documented general mechanism."
+  The reading discipline is unaffected by this discharge — it grounds *why*, not *how much*.
 - **(d) A jitter-free re-run of a result currently read as small-but-real.** If a small functional effect
   the project rests weight on (e.g. a future small CONFIRM) were re-run and found **stable** across
   repeats, that effect graduates from "provisional pending a repeated run" to a finding that has cleared
@@ -251,5 +276,10 @@ numbers are mush."
   results untouched.
 - **No human comparison** is made or owed: the jitter is a model-internal measurement fact, and the essay
   applies its discipline only to the project's own LLM probes.
-- The *mechanism* of temperature-0 nondeterminism is **not** sourced in-repo (trigger (c)); the essay
-  rests on the single behavioral observation that it occurs, and claims no more.
+- The *mechanism* of temperature-0 nondeterminism is now sourced in-repo (trigger (c) discharged
+  2026-06-21): [`source/he-2025-defeating-nondeterminism`](../../base/sources/he-2025-defeating-nondeterminism.md)
+  attributes it to load-dependent batch-size variation × non-batch-invariant kernels (FP non-associativity
+  the ultimate cause). The essay grounds *that* and *why* the jitter occurs on this source, but the
+  *magnitude* on its own instruments rests on the in-repo K=5 measurement, not on the source, and no claim
+  is made about the panel's or OpenRouter's specific batching — only "consistent with a documented general
+  mechanism."

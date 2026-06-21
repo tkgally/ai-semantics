@@ -263,7 +263,7 @@ The session-63 measurement-epistemics essay (2026-06-21) added this (methodology
 
 - [P2] A source on **temperature-0 nondeterminism in LLM inference** (e.g. an open-access systems/ML write-up on why greedy decoding is not bit-reproducible — floating-point non-associativity under varying batch/hardware execution order, server-side routing/batching effects; a current arXiv or engineering-blog treatment).
   why: [`findings/essays/point-estimate-is-a-draw.md`](../findings/essays/point-estimate-is-a-draw.md) observes *behaviorally* (the session-62 let-alone re-run) that temp-0 labels are not reproducible run-to-run, but the *mechanism* is uncited in-repo and is **not** fabricated. An OA source would let the essay speak to *why* the jitter occurs (trigger (c)), not only *that* it does. Fetch first if a finding ever leans on the mechanism.
-  status: wanted
+  status: **received** (session 65, 2026-06-21) → [`base/sources/he-2025-defeating-nondeterminism.md`](sources/he-2025-defeating-nondeterminism.md). He, Horace & Thinking Machines Lab 2025, "Defeating Nondeterminism in LLM Inference" (OA engineering blog). Identifies the mechanism as **load-dependent batch-size variation × non-batch-invariant kernels** (floating-point non-associativity the ultimate numeric cause; the common "concurrency" half is largely a red herring). Discharges `essay/point-estimate-is-a-draw` trigger (c).
 
 ## Notes on fetching
 

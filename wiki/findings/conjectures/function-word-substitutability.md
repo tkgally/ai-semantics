@@ -7,9 +7,10 @@ meaning-senses:
   - distributional
   - inferential
 status: proposed
-contingent-on: []
+contingent-on:
+  - function-word-anchor-design
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-06-21
 links:
   - rel: depends-on
     target: concept/constructional-meaning
@@ -48,7 +49,7 @@ A frequency-controlled function-vs-content swap inventory does not, to current k
 - A frequency-matched word-pair list drawn from BNC / COCA / a UD treebank.
 - An NLI / acceptability backing (BLiMP / SyntaxGym have partial coverage of function-word minimal pairs).
 
-→ Queue `decisions/open/function-word-anchor-design.md` at design time. This is the **operationalization gate** for this conjecture — what counts as a "frequency-matched" pair is the place a loop can quietly cheat by selecting items that bias the result.
+→ Queue [`decisions/open/function-word-anchor-design`](../../decisions/open/function-word-anchor-design.md) at design time. This is the **operationalization gate** for this conjecture — what counts as a "frequency-matched" pair is the place a loop can quietly cheat by selecting items that bias the result.
 
 ## Notes / caveats
 
