@@ -8,7 +8,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-06-21
 links:
   - rel: depends-on
     target: result/dative-information-structure-v1
@@ -184,6 +184,24 @@ CONFIRM" hides precisely the dissociation the project exists to describe.
 
 ## Revision log
 
+- **2026-06-21 (session 63), a measurement-level sibling named — no clause changed; honesty-box caveat
+  given teeth.** A later result,
+  [`result/scivetti-let-alone-powered-rerun-v1`](../results/scivetti-let-alone-powered-rerun-v1.md),
+  quantified a **third, distinct** source of variation under a tidy number — not at the level of the
+  phenomenon (the two *textures* this essay names — between-model magnitude decorrelation, and
+  across-instrument convergence heterogeneity), but one level down, at the level of the **measurement**:
+  *within-model run-to-run jitter* at temperature 0 (~12% label churn on a hard near-chance instrument;
+  *"a single run's accuracy is a draw"*). This essay's "carry the per-model magnitudes" discipline invites
+  a reader to compare small magnitudes like gpt's +0.056 against gemini's +0.524; the new measurement-level
+  essay [`essay/point-estimate-is-a-draw`](point-estimate-is-a-draw.md) adds the prior question that
+  comparison presupposes — *is the smaller magnitude bigger than its own run-to-run jitter?* — and is the
+  home for it. **No clause of this essay's discipline changes** (between-model spread is still carried, and
+  the dative was a different, larger, graded instrument than the let-alone NLI on which the ~12% was
+  measured, so no dative jitter number exists). What *is* sharpened is the Honesty-box "single run" caveat:
+  gpt's +0.056 sits exactly in the small-functional-effect cell where the new finding shows a single-run
+  point estimate is least settled — so "wants replication before weight rests on its size" now has a named
+  mechanism (run-to-run jitter), and the discipline gains a sibling that asks whether a between-model gap
+  could be a within-model draw.
 - **2026-06-20 (session 53), trigger (c) exercised → essay strengthened, status `draft`→`revised`.**
   The fresh-item replication
   [`result/dative-information-structure-v2`](../results/dative-information-structure-v2.md) (a disjoint

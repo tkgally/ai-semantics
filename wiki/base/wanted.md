@@ -259,6 +259,12 @@ The wave-2 deepenings and original conjectures (2026-05-31) added these (the pag
   why: [`findings/conjectures/constructional-monotonicity-asymmetry.md`](../findings/conjectures/constructional-monotonicity-asymmetry.md) characterizes the add/cancel asymmetry as monotone-accumulation-vs-defeasance *by analogy only*; fetch first if the project ever leans on the formal mapping.
   status: wanted
 
+The session-63 measurement-epistemics essay (2026-06-21) added this (methodology source; the essay rests on a single in-repo behavioral observation and explicitly does not fabricate the mechanism):
+
+- [P2] A source on **temperature-0 nondeterminism in LLM inference** (e.g. an open-access systems/ML write-up on why greedy decoding is not bit-reproducible — floating-point non-associativity under varying batch/hardware execution order, server-side routing/batching effects; a current arXiv or engineering-blog treatment).
+  why: [`findings/essays/point-estimate-is-a-draw.md`](../findings/essays/point-estimate-is-a-draw.md) observes *behaviorally* (the session-62 let-alone re-run) that temp-0 labels are not reproducible run-to-run, but the *mechanism* is uncited in-repo and is **not** fabricated. An OA source would let the essay speak to *why* the jitter occurs (trigger (c)), not only *that* it does. Fetch first if a finding ever leans on the mechanism.
+  status: wanted
+
 ## Notes on fetching
 
 - **Try open-access first.** ACL Anthology, arXiv, preprint pages, lab pages — many of the LLM-meaning items above are OA and a run can fetch them via `WebFetch`. Only escalate to Tom when paywalled.
