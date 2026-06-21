@@ -6,9 +6,8 @@ meaning-senses:
   - constructional
   - distributional
   - inferential
-status: proposed
-contingent-on:
-  - function-word-anchor-design
+status: designed
+contingent-on: []
 created: 2026-05-28
 updated: 2026-06-21
 links:
@@ -16,6 +15,8 @@ links:
     target: concept/constructional-meaning
   - rel: depends-on
     target: concept/distributional-meaning
+  - rel: depends-on
+    target: resource/subtlex-us-frequency
 ---
 
 # Conjecture: function-word swaps produce sharper meaning shifts than content-word swaps
@@ -32,9 +33,28 @@ For matched-frequency minimal pairs, swapping a **function word** (e.g., *the* �
 
 ## Predictions
 
-1. KL divergence (or similar) on continuation distributions is larger after function-word swaps than after frequency-matched content-word swaps.
-2. Entailment / inference behavior flips more often after function-word swaps.
-3. The gap is robust across panel models and across content-word semantic classes — i.e., it is not driven by a few outlier categories.
+> **Revision 2026-06-21 (session 66, M1 of the ratified [`decisions/resolved/function-word-anchor-design`](../../decisions/resolved/function-word-anchor-design.md)).**
+> Prediction 1 was written around a continuation-distribution **KL** instrument, which is
+> **dead on the panel** (OpenRouter exposes no prompt/echo-logprobs —
+> [`decisions/resolved/aann-panel-logprob-blocker`](../../decisions/resolved/aann-panel-logprob-blocker.md)).
+> It is re-mapped below to the **behavioral divergence proxy** that stands in for it, and is
+> demoted to **secondary / characterizing-only** (it may describe but never *decide* a result).
+> The **primary** confirm/weak/falsify-bearing prediction is now prediction 2 (entailment-flip /
+> forced-choice rate). Original wording preserved for the record: *"KL divergence (or similar)
+> on continuation distributions is larger after function-word swaps than after frequency-matched
+> content-word swaps."*
+
+1. *(secondary, characterizing-only)* A **behavioral continuation-divergence proxy** — e.g.
+   sampled-continuation disagreement or paraphrase-preference shift at fixed temperature — is
+   larger after function-word swaps than after frequency-matched content-word swaps. This is a
+   noisy, tunable surrogate for the unavailable continuation-distribution KL; it may
+   *characterize* a result but may never on its own confirm or falsify the conjecture.
+2. *(primary)* **Entailment / inference behavior flips more often** after function-word swaps
+   than after frequency-matched content-word swaps, measured as the entailment-flip / graded
+   forced-choice rate (the sole confirm/weak/falsify-bearing indicator), behind a binding
+   manipulation-check that the judgment moves *because the inferential relation changed*.
+3. The gap is robust across panel models and across content-word semantic classes — i.e., it is
+   not driven by a few outlier categories.
 
 ## What would confirm / falsify
 
@@ -42,14 +62,33 @@ For matched-frequency minimal pairs, swapping a **function word** (e.g., *the* �
 - **Weak:** gap present but small and inconsistent across models — function-word effects are real but not dominant over distributional.
 - **Falsify:** flat or inverse pattern — content-word swaps move behavior at least as much as function-word swaps, after frequency control. Would be a strong (and surprising) finding for the distributional camp; write it.
 
-## Human anchor (pending)
+## Operationalization (ratified) and result posture
 
-A frequency-controlled function-vs-content swap inventory does not, to current knowledge, exist as a single resource. The conjecture probably first needs:
+The operationalization gate is **resolved**:
+[`decisions/resolved/function-word-anchor-design`](../../decisions/resolved/function-word-anchor-design.md)
+(ratified 2026-06-21, session 66, autonomous adversarial review — ADOPT WITH MODIFICATIONS).
+It fixes the yardstick:
 
-- A frequency-matched word-pair list drawn from BNC / COCA / a UD treebank.
-- An NLI / acceptability backing (BLiMP / SyntaxGym have partial coverage of function-word minimal pairs).
+- **Frequency norm:** [`resource/subtlex-us-frequency`](../../base/resources/subtlex-us-frequency.md)
+  (SUBTLEX-US `Lg10WF`), fetched + sha256-pinned in-repo. Content controls are matched to the
+  function-word swap targets within **|ΔLg10WF| ≤ 0.10**, plus length (±1 char) and a reported
+  predictability non-difference; pair-level where feasible (*will→would*), condition-level with
+  mirrored frequency spread where not (*because→although*, *some→every*). The full set is
+  **frozen + hashed before the first probe call** (≥200 matched pairs after attrition, ≥4
+  content-word semantic classes with per-class counts reported).
+- **Indicator:** entailment-flip / graded forced-choice rate (prediction 2) is the sole
+  confirm/weak/falsify-bearing test, behind a binding manipulation-check; the continuation-
+  divergence proxy (prediction 1) is secondary/characterizing-only.
+- **Result posture: `internal-contrast-only`** — the predictions are a within-model contrast
+  (function-swap shift vs content-swap shift), so no human anchor is required for the minimal
+  claim. A **BLiMP / NLI** human backing remains **fetch-and-catalogue-first** (neither is
+  in-repo yet) and is an **optional Posture-2 upgrade** that never blocks the within-model run.
 
-→ Queue [`decisions/open/function-word-anchor-design`](../../decisions/open/function-word-anchor-design.md) at design time. This is the **operationalization gate** for this conjecture — what counts as a "frequency-matched" pair is the place a loop can quietly cheat by selecting items that bias the result.
+The conjecture is therefore **`designed`** but not yet runnable in one session: the build
+session must still construct + certify the frozen matched set under an independent pre-run
+critic (no item added/dropped after the first probe call). What counts as a "frequency-matched"
+pair was the place a loop could quietly cheat by selecting items that bias the result — the
+ratified freeze-and-hash + pre-run-critic GO/NO-GO is what binds that.
 
 ## Notes / caveats
 
