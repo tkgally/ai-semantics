@@ -2,80 +2,76 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** Session 75 (UTC 2026-06-21) spent **$0** (governance + dual-track groundwork — no
-model queried). UTC-day 2026-06-21 total is unchanged at **$2.870** ($1.964 s64 + $0.503 s69 + $0 s70 + $0.280 s71 +
-$0.123 s72 + $0 s73 + $0 s74 + $0 s75) of $5.00 (headroom **$2.130** *if the next session is still 2026-06-21 UTC*; a
-new UTC day resets to the full $5 — **check the clock**). Single-run prefer-split flag unchanged (~$2.50/run). Full
-ledger in [`config/budget.md`](config/budget.md). Check for any newer Tom override before spending.
+**Standard cap: $5.00/day (UTC).** Session 76 (UTC 2026-06-21) spent **$0** (empirical unblock to run-ready + theory sync —
+no model queried). UTC-day 2026-06-21 total is unchanged at **$2.870** ($1.964 s64 + $0.503 s69 + $0.280 s71 + $0.123 s72 +
+$0 s70/73/74/75/76) of $5.00 (headroom **$2.130** *if the next session is still 2026-06-21 UTC*; a new UTC day resets to the
+full $5 — **check the clock**). Single-run prefer-split flag unchanged (~$2.50/run). Full ledger in
+[`config/budget.md`](config/budget.md). Check for any newer Tom override before spending.
 
 ## State
 
-**Session 75 (UTC 2026-06-21) — governance + dual-track groundwork, $0 — ratified BOTH lexical bridging-context gates
-(cross-session), froze the bridging-stratum + design spec, and wrote a new essay.** Workflow mode: reconciliation
-(two independent fresh-agent adversarial-review ratifications) + one wave of 2 parallel bounded units + a read-only
-adversarial coherence pass (1 BLOCKER fixed at integration — a misattributed quote). No experiment ran.
+**Session 76 (UTC 2026-06-21) — empirical unblock, $0 — drove the lexical bridging-context probe to RUN-READY and got an
+independent pre-run-critic GO; deferred the spend-bearing run to a fresh UTC budget day.** Workflow mode: one wave of 3
+parallel disjoint-file units + an orchestrator-authored frozen instrument + an independent pre-run critic (judgement, not
+parallelized) + verification. No experiment ran.
 
-- **GOVERNANCE — both lexical bridging-context gates RATIFIED (cross-session; opened s74, ratified s75).** Each by a
-  separate independent fresh-agent adversarial review:
-  - [`decisions/resolved/lexical-bridging-context-operationalization`](wiki/decisions/resolved/lexical-bridging-context-operationalization.md)
-    — **ADOPT DEFAULT + 3 binding mods:** the **B-primary (graded confidence) + C-categorical-cross-check ("both/unclear")
-    fixed panel**, A (forced-judgment dispersion) characterizing-only; (1) **numeric freeze + sha256** of bands/wording
-    before data, (2) **per-axis** reading (position by B alone; confidence/dispersion by both B and C — *not* a blanket
-    AND), (3) **B–C disagreement is a mixed/weak result, not the null**. v1 clause-(c) context control bound non-optional.
-  - [`decisions/resolved/lexical-bridging-context-anchor`](wiki/decisions/resolved/lexical-bridging-context-anchor.md)
-    — **ADOPT the DWUG-stratum + WiC-poles DESIGN with a binding CLAIM-SCOPE CAP:** the human-comparison force is capped
-    to **usage-similarity intermediacy**, never "two senses co-present"; **≥3-rater floor**; **collapses to
-    `internal-contrast-only`** if the floored pool is too thin. One quote-integrity fix applied.
-- **EMPIRICAL groundwork — bridging stratum FROZEN + design spec written + buildability reported ($0).** Built
-  deterministically from the committed v1 DWUG manifest (no corpus text, CC BY-ND posture). Surviving pool under the
-  **≥3-rater floor: 9 clear-same / 24 bridging / 15 clear-different = 48 pairs** (152 dropped); the **clear-same pole is
-  thin (9/7)** — WiC-T supplement permitted (clear poles only). Verdict: **RUNNABLE-as-human-comparison (capped),
-  conditional** (collapse-to-`internal-contrast-only` stays live). Artifacts: [`experiments/designs/lexical-bridging-context-v1.md`](experiments/designs/lexical-bridging-context-v1.md)
-  (frozen design: B+C panel with numeric PLACEHOLDERS, per-axis reading, Q3 control, claim cap, run blocker) + the
-  frozen [`experiments/designs/lexical-bridging-context-v1/stratum.csv`](experiments/designs/lexical-bridging-context-v1/stratum.csv)
-  (sha256 `e7d36773…`), `freeze_stratum.py` (deterministic), and `BUILDABILITY.md`.
-- **PHILOSOPHICAL — new essay** [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md)
-  (the project's nineteenth): a graded sense **scale** (cross-item, established by v1) and graded sense **commitment**
-  (within-item, the unrun Prediction 4) are logically independent; the null "graded scale, ungraded commitment" is a
-  substantive behavioral finding, not a failure. Behavior-not-representation; usage-similarity cap; four revision
-  triggers + honesty box.
-- **Hygiene:** fixed a pre-existing quote-integrity defect on [`concept/polysemy`](wiki/base/concepts/polysemy.md)
-  (it misquoted `referential-meaning` as "co-occurrence statistics encode"; the page actually says "next-token
-  prediction optimizes for" — re-quoted verbatim, idea preserved as framing).
+- **EMPIRICAL — both run blockers CLEARED; the probe is RUN-READY (pre-run critic GO).**
+  - **(a) Corpus re-fetch recipes written + verified ($0).** [`prep.py`](experiments/designs/lexical-bridging-context-v1/prep.py)
+    re-fetches DWUG (Zenodo 14028531, archive sha `64eef477…` verified) and re-maps **48/48** frozen stratum pairs →
+    usage sentences + target offsets (0 failures) into the gitignored data area;
+    [`prep_wic.py`](experiments/designs/lexical-bridging-context-v1/prep_wic.py) re-fetches WiC (archive sha `f1a2fb67…`,
+    matches the resource-page copy) and freezes a **20 + 20** clear-pole supplement
+    ([`wic_poles.csv`](experiments/designs/lexical-bridging-context-v1/wic_poles.csv), sha `b8b1a7aa…`; clear poles ONLY,
+    never bridging). Corpus text stays out of git (CC BY-ND / CC BY-NC, gitignored).
+  - **(b) Instrument numbers FROZEN + sha256'd** ([`instrument.json`](experiments/designs/lexical-bridging-context-v1/instrument.json),
+    sha `901ea89f…`): B primary (`b_rel` 0–100 relatedness = position; `b_conf` SAME/DIFFERENT + 0–100 confidence),
+    C cross-check (`c_third` SAME/DIFFERENT/UNCLEAR, verbatim third-option wording, decline rate), A characterizing-only
+    (`a_forced`, 5 samples temp 1.0), Q3 `topic` control. Per-axis reading rule (position by B alone; confidence/dispersion
+    by **both** B and C; mixed/weak ≠ null; clear-class precondition; usage-similarity claim cap). Runner
+    [`probe.py`](experiments/designs/lexical-bridging-context-v1/probe.py) is config-driven (no inline knob; gemini reasoning
+    suppressed for cost). No-API dry run OK (88 items = 48 DWUG + 40 WiC; bridging = 24 DWUG-only).
+  - **Independent pre-run critic GO** (a fresh agent re-derived the cheat-surface): conditions (a)–(i) all PASS; the
+    degenerate-responder surface (always-mid / always-UNCLEAR / always-SAME) is closed by the clear-class precondition;
+    `[40,60]` band + neutral third-option wording are not gameable post-hoc (the sha binds them). 7 non-blocking
+    run-session cautions are folded into the design's §7.
+- **PHILOSOPHICAL — theory sync.** [`theory/lexicon-grammar-continuum`](wiki/findings/theory/lexicon-grammar-continuum.md)
+  and [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md) now register the cross-item
+  graded-**scale** vs within-item graded-**commitment** distinction and link
+  [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md) + the open question.
+- **Why the run was deferred (disciplined, not blocked):** day headroom ~$2.13 < v1's gemini-driven ~$3.13 lexical-run
+  cost; a fresh UTC day resets the $5 cap, so a clean run beats squeezing a scaled one in today.
 
 ## Next concrete action — backlog for the next session
 
-**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — no open decisions. (Both lexical bridging
-gates were resolved this session; do not re-ratify them.) Apply any Tom override first.
+**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — no open decisions, no ratifications owed. Apply any
+Tom override first.
 
-**Track lean.** 70 dual · 71 dual · 72 dual · 73 phil+diversify · 74 method/groundwork · 75 **governance + lexical
-groundwork + philosophical**. The lexical axis is now the **active front** (right up to the run blocker); keep
-weighting there until the bridging probe runs, then rebalance.
+**Track lean.** 73 phil · 74 method · 75 governance+lexical · 76 **empirical-unblock + phil-sync**. The lexical axis is the
+**active front and now RUN-READY** — running it is the lowest-friction way to land a result; keep weighting there until the
+bridging probe runs, then rebalance.
 
-1. **EMPIRICAL — unblock + run the lexical bridging-context probe** (the design is frozen up to two blockers; the
-   lowest-friction way to land the reopened lexical axis):
-   - **(a) Re-fetch corpus text** — DWUG `dwug_en.zip` (Zenodo 14028531, CC BY-ND) into the **gitignored** data area
-     (`experiments/data/dwug/`), re-map `id1`/`id2` → usage sentences + target offsets, re-record archive sha256.
-     **No re-fetch script exists** — write a `prep.py` (cf. `experiments/data/subtlex-us/prep.py`). WiC `WiC_dataset.zip`
-     likewise **if** the clear poles are supplemented (advisable — clear-same is thin at 9). *Network-bearing; verify the
-     environment's network policy allows the fetch — if blocked, that is an honest blocker to record.*
-   - **(b) Freeze the instrument numbers** (B's midpoint band, C's verbatim third-option wording, A's sample/temp) +
-     sha256, under an **independent pre-run critic** (operationalization condition b/h). Re-check the **clear-same
-     precondition** empirically; if unmet even with WiC support, **collapse to `internal-contrast-only`** and relabel.
-   - **(c) Run** (spend-bearing; pre-flight per [`config/budget.md`](config/budget.md)). **Cost note:** v1's lexical run
-     was gemini-heavy (~$3.13); keep gemini `effort: minimal` and scale, or split — a confidence + third-option panel
-     over 48 pairs × variants could be pricey. Lead any result with the usage-similarity-vs-sense label discipline.
-   - Files: [`experiments/designs/lexical-bridging-context-v1.md`](experiments/designs/lexical-bridging-context-v1.md);
-     stratum + BUILDABILITY in `experiments/designs/lexical-bridging-context-v1/`.
-2. **PHILOSOPHICAL/THEORY — sync the theory pages** to the within-item axis + the new essay:
-   [`theory/lexicon-grammar-continuum`](wiki/findings/theory/lexicon-grammar-continuum.md) and
-   [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md) should register the cross-item-vs-
-   within-item gradience distinction and [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md).
-   The essay's revision triggers fire on the probe outcome.
-3. **DIVERSIFY (if the lexical unit isn't picked up)** — essay trigger (b) the few→many scalar mechanism
-   (`internal-contrast-only`, human anchor scouted null — see [`result/function-word-few-many-split`](wiki/findings/results/function-word-few-many-split.md)),
+1. **EMPIRICAL — RUN the lexical bridging-context probe** (everything below the run is done; this is the top item):
+   - **(a) Stage the gitignored corpus** in the fresh clone: run `python3 experiments/designs/lexical-bridging-context-v1/prep.py`
+     then `prep_wic.py` (both re-fetch + re-map; `probe.py` `sys.exit`s if the DWUG fulltext is missing). *Network-bearing —
+     verify the environment's network policy allows the Zenodo + WiC fetch; if blocked, that is an honest blocker to record.*
+   - **(b) Pre-flight budget** per [`config/budget.md`](config/budget.md) and **run** `OPENROUTER_API_KEY=… python3 probe.py`.
+     **Cost-aware:** v1's lexical run billed gemini ~$2.61 (reasoning-heavy); `probe.py` already suppresses reasoning — keep
+     gemini effort minimal, and if the single-shot estimate exceeds $2.50, **split by model** or **drop the characterizing-only
+     A read** (omitting A cannot touch the verdict).
+   - **(c) Mandatory empirical clear-class precondition check** (BUILDABILITY flags 9/7 clear-same as marginal): the clear
+     classes must show high confidence (B) + low decline rate (C). **If unmet even with the 20 WiC-T poles → collapse to
+     `internal-contrast-only` and relabel** — do not relax the precondition.
+   - **(d) Analyze + write the result**, leading with the **usage-similarity ≠ sense-co-presence cap**; disclose b_conf's
+     self-report risk, the near-degenerate independent context control (4/48 nonzero overlap → model-`topic` partial is the
+     operative Q3), and the small lemma-clustered N. The frozen reading rule decides supported / mixed-weak / clean-null.
+   - Files: [`experiments/designs/lexical-bridging-context-v1.md`](experiments/designs/lexical-bridging-context-v1.md) (§7 run
+     handoff + the 7 critic cautions); instrument/stratum/WiC + prep/probe in `experiments/designs/lexical-bridging-context-v1/`.
+   - On the outcome, the essay [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md)
+     revision triggers (a)/(b)/(c) fire — strengthen or revise it accordingly; promote a `claim` page per the route the probe ran.
+2. **DIVERSIFY (if the lexical run isn't picked up / network-blocked)** — essay trigger (b) the few→many scalar mechanism
+   (`internal-contrast-only`, human anchor scouted null — [`result/function-word-few-many-split`](wiki/findings/results/function-word-few-many-split.md)),
    or the dormant **relational** axis (order-composition ladder).
-4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
+3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
@@ -83,35 +79,35 @@ weighting there until the bridging probe runs, then rebalance.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 75 spent **$0** (no model queried; UTC-day 2026-06-21 total unchanged at $2.870 of $5).
-- Plain-language version: a session that **approved** (via independent review, the rules' cross-session safeguard) the
-  two judgment calls the previous session wrote down for the word-ambiguity test — how to measure whether a model is
-  "less sure," and how to certify a word is genuinely ambiguous from human data — adding two honest safeguards (the
-  measure is fixed in numbers before any data; the people-comparison is capped to "people rated the uses as middling
-  in similarity," never "two meanings are present"). It then **built the test to the edge of running**: it locked down
-  the exact 48 word-use pairs (only those at least three people rated), found the set usable but thin, and reported the
-  one thing that blocks the run — the underlying sentences are under a no-derivatives licence and must be re-fetched. It
-  also wrote a short essay on why a model that ranks senses smoothly across examples but answers each single ambiguous
-  case with full confidence would be a real finding, not a failure. No experiment ran.
+- Session 76 spent **$0** (no model queried; UTC-day 2026-06-21 total unchanged at $2.870 of $5).
+- Plain-language version: the word-ambiguity test the last two sessions designed and "built to the edge of running" is now
+  **ready to run**. This session cleared the two things that stood in the way — it wrote and checked a recipe that re-fetches
+  the underlying sentences (kept out of the project under a no-derivatives licence) and re-attaches them to the locked-down set
+  of 48 word-use pairs (all reconnected cleanly), shored up the thinnest group with 20 + 20 clear examples from a second
+  human-rated collection, and **locked the test's exact measuring numbers** (the confidence scale, the "in-between" band, the
+  "unclear" wording, the sampling settings) with a fingerprint so none can be nudged after results arrive. An **independent
+  reviewer checked the finished setup and gave it a green light**, confirming a model can't cheat by answering "in-between" or
+  "unclear" to everything. The run itself was **held back to a fresh day** because today's remaining budget was below what the
+  run is likely to cost. No experiment ran.
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md).
 **Budget: standard $5/day (UTC).** **RECONCILE FIRST:** `wiki/decisions/open/` is **EMPTY** — no ratifications owed.
-**The lexical axis is the active front:** the bridging-context probe is **built up to two blockers** — (a) re-fetch the
-DWUG corpus text (gitignored, CC BY-ND, no prep script yet) + WiC if poles supplemented; (b) freeze the instrument
-numbers under an independent pre-run critic + re-check the thin clear-same precondition (collapse to
-`internal-contrast-only` if unmet) — then run (spend-bearing, gemini-cost-aware). Or sync the theory pages, or
-diversify (few→many mechanism / relational). End squash-merged to `main`, website updated **with the JST clock-time
-stamp**.
+**The lexical bridging-context probe is RUN-READY (pre-run critic GO):** re-run `prep.py` + `prep_wic.py` to stage the
+gitignored corpus, pre-flight budget (gemini reasoning suppressed; split / drop-A if the single shot > $2.50), run `probe.py`,
+do the **mandatory empirical clear-class precondition check** (collapse to `internal-contrast-only` if unmet), then analyze +
+write the result **leading with the usage-similarity-vs-sense cap**. Or diversify (few→many mechanism / relational). End
+squash-merged to `main`, website updated **with the JST clock-time stamp**.
 
 > ⚠ **Repo note for the cold-start (one-time, harmless):** a fresh clone's local `main` ref may lag the true remote
 > `main`. If `git log main` looks impossibly old or `merge-base main <branch>` is empty, **`git fetch origin main`
-> first** (sessions 64–75 all confirmed this — `git branch -f main origin/main` fixes it).
+> first** (sessions 64–76 all confirmed this — `git branch -f main origin/main` fixes it).
 >
 > ⚠ **Empirical re-run note:** the SUBTLEX-US full word list is **gitignored** (re-fetch via
-> `experiments/data/subtlex-us/prep.py`). The **DWUG corpus text is also gitignored** (CC BY-ND) and **has no prep
-> script yet** — writing one is part of next session's bridging-probe unblock (Zenodo 14028531). The frozen bridging
-> **stratum** (`experiments/designs/lexical-bridging-context-v1/stratum.csv`, manifest-derived columns only) **is**
-> committed; the corpus sentences it indexes are not. The full BLiMP dataset is **not** in-repo (only a 10-line sample).
+> `experiments/data/subtlex-us/prep.py`). The **DWUG corpus text** (CC BY-ND) and the **WiC corpus text** (CC BY-NC) are also
+> gitignored — re-fetch via `experiments/designs/lexical-bridging-context-v1/prep.py` (DWUG, all 48/48 stratum pairs re-map)
+> and `prep_wic.py` (WiC clear poles). The committed artifacts (frozen `stratum.csv`, `instrument.json` + sha, `wic_poles.csv`
+> + sha) carry only identifiers/ratings/wordings — no corpus sentences. The full BLiMP dataset is **not** in-repo (only a
+> 10-line sample).

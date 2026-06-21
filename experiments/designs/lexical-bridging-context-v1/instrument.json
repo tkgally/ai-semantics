@@ -1,0 +1,103 @@
+{
+  "_provenance": {
+    "design": "experiments/designs/lexical-bridging-context-v1.md",
+    "operationalization_gate": "wiki/decisions/resolved/lexical-bridging-context-operationalization.md",
+    "anchor_gate": "wiki/decisions/resolved/lexical-bridging-context-anchor.md",
+    "frozen": "2026-06-21 (session 76, build-session numeric freeze)",
+    "note": "FROZEN instrument config. sha256 of this file (see instrument.sha256) is the numeric-freeze hash demanded by operationalization condition (b): B's rating scale + intermediate midpoint band, C's verbatim third-option wording, A's sample count + temperature, and the three item classes are all fixed HERE, before any probe call. No value below may be added, dropped, re-worded, or re-thresholded after any model output is seen (condition a). A pre-run critic GO/NO-GO runs against THIS file (condition h); a NO-GO defers the run, it does not relax a band."
+  },
+
+  "item_classes": {
+    "_basis": "frozen on the rounded human DURel median with a binding >=3-rater floor (anchor gate); see stratum.csv / BUILDABILITY.md. WiC clear-pole supplement (wic_poles.csv) carries nominal pole human_median 4.0 (clear-same) / 1.0 (clear-different); WiC NEVER supplies bridging items.",
+    "clear-same": "human_median >= 3.5  (DURel-4 pole)",
+    "bridging": "1.5 < human_median < 3.5  (DURel 2-3 = human-rated usage-similarity midpoint; NOT a certified sense bridge)",
+    "clear-different": "human_median <= 1.5  (DURel-1 pole)"
+  },
+
+  "shared_user_template": "Target word: {lemma}\nSentence 1: {s1}\nSentence 2: {s2}\n",
+  "target_marker": "« » (guillemets around the target span, per v1)",
+
+  "instruments": {
+    "B": {
+      "role": "primary",
+      "axes": "position (graded relatedness, B alone certifies) + confidence (B + C jointly certify the confidence/dispersion axis)",
+      "temperature": 0,
+      "framings": {
+        "b_rel": {
+          "signal": "position axis: 0-100 relatedness rating (graded). Verbatim reuse of v1 CONT_SYS so the instrument is one v1 already validated as monotonic against the human DURel signal.",
+          "scale": [0, 100],
+          "intermediate_midpoint_band": [40, 60],
+          "system": "You are a linguistic annotator judging word meaning in context. You will see one target word, marked with «guillemets», in two sentences. Rate how related the MEANING of that target word is between the two uses on a 0-100 scale (100 = exactly the same meaning, 0 = completely unrelated meanings). Answer with a single integer from 0 to 100 and nothing else.",
+          "parse": "last 0-100 integer, clamped to [0,100]"
+        },
+        "b_conf": {
+          "signal": "confidence axis: same/different call + 0-100 confidence in THAT call. Bridging expected LOWER mean confidence than both clear classes.",
+          "scale": [0, 100],
+          "system": "You are a linguistic annotator judging word meaning in context. You will see one target word, marked with «guillemets», in two sentences. First decide whether the target word has the SAME sense or a DIFFERENT sense in the two uses. Then state how confident you are in that decision on a 0-100 scale (100 = completely certain, 0 = a pure guess). Answer with exactly one line in the form: SAME 87  or  DIFFERENT 40 — the word SAME or DIFFERENT, a space, then an integer 0-100, and nothing else.",
+          "parse": "first token in {SAME,DIFFERENT} (case-insensitive) = call; first 0-100 integer = confidence"
+        }
+      }
+    },
+
+    "C": {
+      "role": "categorical cross-check",
+      "axis": "confidence/dispersion axis only (decline rate). C NEVER certifies the position axis (per-axis rule, modification 2).",
+      "temperature": 0,
+      "framings": {
+        "c_third": {
+          "signal": "decline rate: fraction choosing the third option UNCLEAR. Bridging expected elevated vs BOTH clear classes.",
+          "options": ["SAME", "DIFFERENT", "UNCLEAR"],
+          "decline_token": "UNCLEAR",
+          "third_option_wording_verbatim": "UNCLEAR — the two uses are genuinely in between, so you cannot confidently decide whether the sense is the same or different.",
+          "system": "You are a linguistic annotator judging word meaning in context. You will see one target word, marked with «guillemets», in two sentences. Decide whether the target word has the SAME sense, a DIFFERENT sense, or whether the case is UNCLEAR — the two uses are genuinely in between, so you cannot confidently decide whether the sense is the same or different. Answer with exactly one word: SAME, DIFFERENT, or UNCLEAR — and nothing else.",
+          "parse": "first token in {SAME,DIFFERENT,UNCLEAR} (case-insensitive)"
+        }
+      }
+    },
+
+    "A": {
+      "role": "characterizing-only",
+      "axis": "dispersion of a forced binary pick across repeated samples. DESCRIBES, never DECIDES (condition g): A's knobs never enter the verdict.",
+      "n_samples": 5,
+      "temperature": 1.0,
+      "framings": {
+        "a_forced": {
+          "signal": "flip-rate / Shannon entropy of the 5 forced SAME/DIFFERENT picks per item. Bridging dispersion described against a matched clear-class dispersion baseline; never load-bearing.",
+          "system": "You are a linguistic annotator judging word meaning in context. You will see one target word, marked with «guillemets», in two sentences. Decide whether the target word has the SAME sense or a DIFFERENT sense in the two uses. You must choose one. Answer with exactly one word: SAME or DIFFERENT — and nothing else.",
+          "parse": "first token in {SAME,DIFFERENT} (case-insensitive)"
+        }
+      }
+    },
+
+    "Q3_context_control": {
+      "role": "non-optional context-ambiguity control (condition f), measured INDEPENDENTLY of the sense signal",
+      "temperature": 0,
+      "framings": {
+        "topic": {
+          "signal": "0-100 topic/situation similarity IGNORING the target word (verbatim v1 TOPIC_SYS). Operative Q3 instrument = partial out this model-internal topic rating (flagged modest/model-internal); the committed lexical-overlap columns are near-degenerate (4/48 nonzero) and rule out only the SURFACE shadow a priori.",
+          "scale": [0, 100],
+          "system": "You will see two sentences. One word is marked with «guillemets». IGNORING that marked word entirely, rate how similar the overall TOPIC, SITUATION, and content of the two sentences are, on a 0-100 scale (100 = same situation/topic, 0 = completely different topics). Judge everything EXCEPT the marked word. Answer with a single integer from 0 to 100 and nothing else.",
+          "parse": "first 0-100 integer, clamped to [0,100]"
+        }
+      }
+    }
+  },
+
+  "reading_rule_frozen": {
+    "_basis": "operationalization gate modifications 2 & 3; per-axis, NOT blanket AND.",
+    "position_axis": "certified by B (b_rel) ALONE: bridging class mean relatedness sits STRICTLY between clear-different mean and clear-same mean (per-lemma-clustered bootstrap CI). Absolute 'intermediate' descriptor: bridging mean within the frozen [40,60] band.",
+    "confidence_dispersion_axis": "certified by BOTH B and C: (B) bridging mean confidence (b_conf) LOWER than BOTH clear classes; AND (C) bridging decline rate (c_third %UNCLEAR) ELEVATED vs BOTH clear classes.",
+    "prediction4_supported": "iff position holds (B) AND confidence/dispersion holds on BOTH B and C.",
+    "mixed_weak_not_null": "B-C disagreement on the confidence/dispersion axis is reported as a MIXED/WEAK result with both readings shown — NEVER collapsed into the clean null.",
+    "clean_null": "bridging handled at clear-item confidence (B) AND clear-item decline rate (C) — a graded SCALE with ungraded COMMITMENT (within-item discreteness). Reported AS CLEANLY as a positive.",
+    "clear_class_precondition": "interpretable only if the clear classes show high confidence (B: high mean b_conf and saturated b_rel at the poles) AND low decline rate (C: low %UNCLEAR). Report as a precondition; if unmet even with the WiC pole supplement, NO-GO → collapse to internal-contrast-only (anchor conditions 2 & 6).",
+    "no_post_hoc_threshold": "no pass bar tuned after the run; all contrasts are ordinal with per-lemma-clustered bootstrap uncertainty. A is characterizing-only and never enters this rule."
+  },
+
+  "claim_scope_cap": "Any human-comparison claim is about usage-similarity intermediacy ONLY (anchor condition 6). A DWUG mid-scale pair is a human-rated usage-similarity midpoint, NOT a certified within-sense bridge. Lead every result with this.",
+
+  "cost_control": {
+    "calls_per_item_per_model": "B(b_rel + b_conf) + C(c_third) + Q3(topic) = 4 temp-0 calls; A(a_forced) = 5 temp-1.0 samples; total 9.",
+    "gemini_note": "v1's lexical run billed gemini ~$2.61 over 600 reasoning-heavy calls. Pass reasoning suppression (e.g. reasoning={\"effort\":\"none\"}) on ALL framings (every call here is a short label / single integer, so reasoning tokens are pure cost). Keep gemini effort minimal. Pre-flight per config/budget.md; if the single-shot estimate exceeds $2.50, split by model or drop the A dispersion read (characterizing-only, so omitting it does not touch the verdict)."
+  }
+}
