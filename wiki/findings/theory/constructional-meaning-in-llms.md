@@ -52,6 +52,8 @@ links:
   - rel: depends-on
     target: result/function-word-few-many-split
   - rel: depends-on
+    target: result/function-word-modal-second-instrument
+  - rel: depends-on
     target: resource/scivetti-2025-cxnli-dataset
   - rel: depends-on
     target: source/scivetti-2025-beyond-memorization
@@ -372,13 +374,24 @@ The core contribution of this page: a tier ordering on what counts as evidence, 
 > mismatch, the easy non-entailment, not a clean within-scale test**) flips at **ceiling in all three
 > models**, while the clean within-scale `shall`→`should` (deontic obligation→advisory) **splits the panel**
 > (gemini 0.778 vs claude/gpt 0.056, resting on one content pair),
-> while `will`→`would` replicates the null — so the near-null is a **future→conditional-specific** fact, not
-> a modal fact. The instrument registers a modal swap in proportion to how truth-conditionally "loud" it is
-> (loud category mismatch > within-deontic-strength, partly model-dependent > subtle irrealis), which
-> **sharpens** the same point the `few`/`many` split makes: which closed-class swap reaches this rung is
-> co-determined by the inferential **instrument's** calibration, not by the part-of-speech class — the
-> conceptual correction of [`essay/function-words-not-one-category`](../essays/function-words-not-one-category.md).
-> `internal-contrast-only` — no human comparison (a BLiMP/NLI human baseline stays an optional, not-in-repo upgrade).
+> while `will`→`would` replicates the null — so under NLI the near-null *looked* like a
+> **future→conditional-specific** fact. The NLI instrument registers a modal swap in proportion to how
+> truth-conditionally "loud" it is (loud category mismatch > within-deontic-strength, partly model-dependent
+> > subtle irrealis). **But a SECOND instrument relocates the nulls to the instrument itself (2026-06-21,
+> session 72):** [`result/function-word-modal-second-instrument`](../results/function-word-modal-second-instrument.md)
+> holds the modal swap byte-identical and changes only the indicator (3-way NLI → a single-token
+> forced-choice modal-force preference). It **registers** `will`→`would` in all three models (claude 6/20,
+> gpt 13/20, gemini 17/20, CIs clear zero) where NLI flipped 0/0/3, and the `shall`→`should` NLI panel-split
+> **dissolves** into concordance (17/18, 18/18, 18/18) — so the modal nulls/splits were
+> **NLI-instrument-specific, not relation-intrinsic**. This is the strongest in-repo demonstration that
+> *which closed-class swap reaches this rung is co-determined by the inferential **instrument's**
+> calibration, not by the part-of-speech class* — the conceptual correction of
+> [`essay/function-words-not-one-category`](../essays/function-words-not-one-category.md), now shown by
+> direct manipulation rather than read off the arms (essay trigger (c), fired positive). **Bounded:** the
+> forced-choice `will` HEDGE option names the irrealis reading, so this licenses the *relocation* (the null
+> was not relation-intrinsic), not a "robustly inferential" claim — a registered preference is weaker than a
+> computed entailment. `internal-contrast-only` — no human comparison (a BLiMP/NLI human baseline stays an
+> optional, not-in-repo upgrade).
 
 The ladder is the page's claim, in compressed form: **form-acceptability < surprisal-contrast < gradient semantic tracking < generalization < inference-licensing.** Each upward step narrows the space of distributional-only explanations; only the top two steps are evidence for constructional *meaning* as opposed to constructional *form*.
 
