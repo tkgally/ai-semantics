@@ -98,4 +98,28 @@ result page, fire essay trigger (c), update theory.
 
 ---
 
-PRE-RUN CRITIC: PENDING
+PRE-RUN CRITIC: GO
+
+Independent fresh-agent pre-run critic (2026-06-21, session 72) reproduced the build byte-for-byte
+(canonical sha256 `a12b2da0e84b37d9e54c098bec09672886876aa7e851f92d9f78c0ef7e0dc5c8`, file sha256
+`a1eb83a8a9f93789ef347a7b08804e567ef0060baf1aa839f7ce0c1377393e40` — both match), re-ran
+`certify.py` to `"ok": true`, and returned **GO** with **no BLOCKERs**. It confirmed: (a) no
+option-wording cue (length, lexical, position) can manufacture a spurious positive `shift_fn`
+because the shift is within-item with identical options at base/fn; (b) the channel is genuinely
+matched to the NLI run (both single-token, no working surface), so a divergence is attributable to
+question type; (c) **no decision is owed** — the forced-choice indicator is named in the ratified
+`decisions/resolved/function-word-anchor-design` Q2(i) ("graded forced-choice rate") AND essay
+trigger (c), and the result is `internal-contrast-only`; (d) the freeze guard works and
+`internal-contrast-only` is the correct anchor state.
+
+Three SHOULD-FIX disclosures (carried into the result page + post-run verifier brief; not design
+changes):
+1. **`will`-arm fairness asymmetry.** Standalone `would` is genuinely irrealis out of context and
+   the HEDGE option explicitly names "conditional or hypothetical," so this instrument is
+   structurally *more* disposed to register `will`→`would` than NLI was. A `will`-positive must be
+   reported as "a forced-choice instrument that names the irrealis reading registers the shift,"
+   not as "the relation is robustly inferential across instruments."
+2. **`base_strong_pref` is a per-arm interpretation gate.** If base does not prefer STRONG in an
+   arm, that arm's `shift_fn` is uninterpretable — report it as such, do not read the shift as signal.
+3. **`shall` thinness carries over.** All 18 `shall` items rest on the single content pair
+   `buy`→`give` (inherited from the source run); the secondary `shall` reading stays narrow.
