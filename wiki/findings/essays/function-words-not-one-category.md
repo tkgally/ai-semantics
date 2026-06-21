@@ -267,7 +267,7 @@ introduced the technical terms _implicate_ and _implicature_ for the case in whi
 distinct from what the speaker thereby meant or implied" (§1). Within what is implicated, the species that
 matters here is *conversational* (including generalized / **scalar**) implicature, marked by two diagnostics:
 it is **cancelable** — "generalized conversational implicatures differ from semantic implicatures in being
-_cancelable_" (§2) — and, the load-bearing point, it is **not (in general) entailed** by what is said:
+_cancelable,_ either explicitly or implicitly (contextually)" (§2) — and, the load-bearing point, it is **not (in general) entailed** by what is said:
 "Whereas semantic implicatures are generally entailed by what is said, many believe that conversational
 implicatures cannot be" (§2). The paradigm is the quantity scale: uttering "Some athletes smoke" implicates
 "Not all athletes smoke", but "(5a) can be asserted without implicating [5b] … by adding 'Indeed, all do'
