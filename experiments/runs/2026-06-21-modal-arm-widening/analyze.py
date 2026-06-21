@@ -82,9 +82,11 @@ def analyze_model(name, items):
         per_class.setdefault(it["pos"], {"fn": [], "ct": []})
         per_class[it["pos"]]["fn"].append(ffn)
         per_class[it["pos"]]["ct"].append(fct)
-        per_ft.setdefault(it["ftype"], {"fn": [], "ct": []})
+        per_ft.setdefault(it["ftype"], {"fn": [], "ct": [], "base_ok": [], "fndir_ok": []})
         per_ft[it["ftype"]]["fn"].append(ffn)
         per_ft[it["ftype"]]["ct"].append(fct)
+        per_ft[it["ftype"]]["base_ok"].append(1 if str(b) == str(it["pred_base"]) else 0)
+        per_ft[it["ftype"]]["fndir_ok"].append(1 if str(f) == str(it["pred_fn"]) else 0)
     if not n_used:
         return {"model": name, "n_used": 0}
     contrasts = [a - b for a, b in zip(flips_fn, flips_ct)]
@@ -117,6 +119,11 @@ def analyze_model(name, items):
                                for k, v in per_class.items()},
         "per_function_type": {k: {"flip_fn": round(sum(v["fn"]) / len(v["fn"]), 4),
                                   "flip_ct": round(sum(v["ct"]) / len(v["ct"]), 4),
+                                  # per-arm base-label agreement (NIT 1, pre-run critic): a
+                                  # shall-specific base collapse (shall read as future, not
+                                  # deontic) would show here, hidden in the pooled metric.
+                                  "base_label_agreement": round(sum(v["base_ok"]) / len(v["base_ok"]), 4),
+                                  "fn_direction_agreement": round(sum(v["fndir_ok"]) / len(v["fndir_ok"]), 4),
                                   "n": len(v["fn"])}
                               for k, v in per_ft.items()},
         "det_char_function_flip_rate": (round(sum(det_flips) / len(det_flips), 4)
