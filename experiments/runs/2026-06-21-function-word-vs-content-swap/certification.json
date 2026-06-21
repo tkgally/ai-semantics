@@ -1,0 +1,65 @@
+{
+ "ok": false,
+ "fails": [
+  "(e) >=200 matched items",
+  "(e) >=4 content semantic classes",
+  "(i) freq-only reader max POSITIVE threshold asymmetry <= 0.12"
+ ],
+ "checks": {
+  "(e) >=200 matched items": false,
+  "(e) >=4 content semantic classes": false,
+  "matched_count": 66,
+  "semantic_classes": [
+   "noun_person",
+   "noun_thing",
+   "verb"
+  ],
+  "premise_fn differs from base ONLY by the function word": true,
+  "premise_ct differs from base ONLY by the content word": true,
+  "function swap-in word never appears in the hypothesis (no leak)": true,
+  "every matched item predicts a function flip (pred_base != pred_fn)": true,
+  "(i) freq-only reader max POSITIVE threshold asymmetry <= 0.12": false,
+  "(i) len-only reader max POSITIVE threshold asymmetry <= 0.05": true,
+  "(i) monotone freq reader pooled (func_gap-content_gap)": 0.0311,
+  "(i) monotone freq reader asymmetry small (<=0.10)": true,
+  "freq_only_asymmetry_by_theta": {
+   "theta=0.0": 0.0,
+   "theta=0.05": 0.0,
+   "theta=0.1": -0.0909,
+   "theta=0.2": 0.0,
+   "theta=0.3": 0.0,
+   "theta=0.5": -0.2576,
+   "theta=0.75": 0.0,
+   "theta=1.0": 0.0,
+   "theta=1.25": 0.1212
+  },
+  "len_only_asymmetry_by_theta": {
+   "theta=1": 0.0,
+   "theta=2": 0.0
+  },
+  "max_positive_freq_asym": 0.1212,
+  "max_positive_len_asym": 0.0,
+  "mean_Lg10WF_func_out": 4.8336,
+  "mean_Lg10WF_cont_out": 4.8246,
+  "abs_mean_Lg10WF_gap_func_vs_cont_out": 0.009,
+  "gap_match_by_ftype": {
+   "because": {
+    "func_gap": 1.4062,
+    "content_gap_mean": 1.335,
+    "n": 38
+   },
+   "some": {
+    "func_gap": 0.4976,
+    "content_gap_mean": 0.5077,
+    "n": 22
+   },
+   "will": {
+    "func_gap": 0.0797,
+    "content_gap_mean": 0.1511,
+    "n": 6
+   }
+  },
+  "det_char_arm_count": 10
+ },
+ "stimuli_sha256": "0d0d38c0a28f90f5737c68c448d3a51419be26b328abfad3be354682aee95f42"
+}
