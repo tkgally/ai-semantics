@@ -11,7 +11,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-31
+updated: 2026-06-21
 links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
@@ -43,6 +43,10 @@ links:
     target: concept/distributional-meaning
   - rel: supports
     target: open-question/lexical-polysemy-gradience
+  - rel: depends-on
+    target: open-question/lexical-bridging-context-gradience
+  - rel: depends-on
+    target: essay/graded-scale-ungraded-commitment
 ---
 
 # Theory (draft): the lexicon–grammar continuum, and the single test that spans it
@@ -71,7 +75,7 @@ The two open-questions that name the shadow are explicitly parallel — [`open-q
 **The state of the evidence, unified:** the project now has a *positive that beats the distributional shadow on **both** ends of the cline* —
 
 - **Grammatical end:** the comparative correlative deploys its covariation inference above matched controls, survives conflicting world knowledge and operator embedding, and composes ([`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md) → v2 → v3). The shadow (form/frequency) does not explain it.
-- **Lexical end:** the panel's graded sense-relatedness rating tracks the human DURel median (Spearman 0.60–0.83, in/above the human inter-annotator range) and **survives partialling out the model's own topic-similarity** ([`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md)). The shadow (context similarity) does not explain it either.
+- **Lexical end:** the panel's graded sense-relatedness rating tracks the human DURel median (Spearman 0.60–0.83, in/above the human inter-annotator range) and **survives partialling out the model's own topic-similarity** ([`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md)). The shadow (context similarity) does not explain it either. One scope note belongs here, because the word "gradience" carries two senses the project now keeps apart: v1 established a graded *scale* — a **cross-item** property, that the model's relatedness ratings rank-order many usage pairs the way humans do — and *only* that. Whether the model also shows graded *commitment* — a **within-item** property, intermediate / lower-confidence behavior on the single use that is itself a bridging context — is the unrun Prediction 4, now scoped by [`open-question/lexical-bridging-context-gradience`](../open-questions/lexical-bridging-context-gradience.md) and argued in [`essay/graded-scale-ungraded-commitment`](../essays/graded-scale-ungraded-commitment.md). The two are logically independent: a model *could* rank-order smoothly yet still force every ambiguous item to a confident discrete pick (a graded scale, ungraded commitment). The probe is buildable-but-unrun, and any human comparison it licenses is capped to usage-similarity intermediacy, never certified sense co-presence ([`decisions/resolved/lexical-bridging-context-anchor`](../../decisions/resolved/lexical-bridging-context-anchor.md)).
 
 This is the first time the project can state its central finding as a **cline-spanning** one rather than a grammar-only one: *current decoders track a graded form–meaning signal that beats the distributional null at both the word grain and the construction grain* — with the same caveats on both (behavioral not representational; single runs; modest N; the hard *negative* directions — divergent-form generalization on grammar, and on lexis the **polysemy/homonymy discreteness split**, now tested on a homonymy-enriched WiC anchor and returning a **powered null** ([`result/lexical-polysemy-homonymy-v3`](../results/lexical-polysemy-homonymy-v3.md): no separate discrete regime over plain graded distance), so the *graded* signal stands but the *discrete-regime* bet does not).
 

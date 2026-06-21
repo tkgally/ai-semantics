@@ -28,21 +28,38 @@ links:
 
 # Experiment design v1 — lexical bridging-context probe (within-item gradience)
 
-> **Status: draft — frozen stratum + design, NOT yet runnable.** Both gates are
-> ratified cross-session:
+> **Status: draft — frozen stratum + frozen instrument + corpus-prep recipes; RUN-READY,
+> not yet run (session 76 build).** Both gates are ratified cross-session:
 > [`decisions/resolved/lexical-bridging-context-operationalization`](../../wiki/decisions/resolved/lexical-bridging-context-operationalization.md)
 > (B-primary graded-confidence + C-categorical-cross-check fixed panel; A
 > characterizing-only; per-axis reading rule; numeric freeze before data) and
 > [`decisions/resolved/lexical-bridging-context-anchor`](../../wiki/decisions/resolved/lexical-bridging-context-anchor.md)
 > (DWUG-derived bridging stratum + WiC clear poles; ≥3-rater floor; claim CAP to
 > usage-similarity; collapse to `internal-contrast-only` if the floored pool is too
-> thin). This page encodes the design and references the **frozen candidate
-> stratum**; two things still block a run: (i) the DWUG corpus text must be
-> **re-fetched** (gitignored, absent from a fresh clone, no re-fetch script), and
-> (ii) the **instrument numbers** (B's midpoint band, C's verbatim third-option
-> wording, A's sample/temperature) must be **frozen + sha256'd** at build time under
-> an independent pre-run critic. See [`BUILDABILITY.md`](lexical-bridging-context-v1/BUILDABILITY.md)
-> for the surviving pool sizes and the conditional RUNNABLE/collapse verdict.
+> thin). **Both run blockers are now cleared (session 76):**
+> - **(a) corpus re-fetch — recipe written + verified.**
+>   [`prep.py`](lexical-bridging-context-v1/prep.py) re-fetches DWUG (Zenodo 14028531,
+>   archive sha `64eef477…`, verified) and re-maps all **48/48** frozen stratum pairs to
+>   usage sentences + target offsets (0 failures) into the gitignored data area;
+>   [`prep_wic.py`](lexical-bridging-context-v1/prep_wic.py) re-fetches WiC and freezes the
+>   **20 + 20** clear-pole supplement ([`wic_poles.csv`](lexical-bridging-context-v1/wic_poles.csv),
+>   sha `b8b1a7aa…`; clear poles ONLY, never bridging).
+> - **(b) instrument numbers — frozen + sha256'd under an independent pre-run critic (GO).**
+>   [`instrument.json`](lexical-bridging-context-v1/instrument.json) (sha
+>   `901ea89f…`, [`instrument.sha256`](lexical-bridging-context-v1/instrument.sha256)) fixes
+>   B's scale + the `[40,60]` midpoint band, C's verbatim third-option wording, A's
+>   sample count (5) + temperature (1.0), and the three item classes. An independent
+>   fresh-agent pre-run critic re-derived the cheat-surface and returned **GO**
+>   (no NO-GO defect; the degenerate-responder surface is closed by the clear-class
+>   precondition), with run-session cautions folded into §7.
+>
+> **What remains is the run itself** (re-run `prep.py`/`prep_wic.py` to stage the gitignored
+> corpus in a fresh clone, then the spend-bearing probe via
+> [`probe.py`](lexical-bridging-context-v1/probe.py)) — deferred at build time only because
+> the build session's UTC-day budget headroom (~$2.13) was below v1's gemini-driven
+> ~$3.13 lexical-run cost; a fresh UTC day resets the $5 cap. See
+> [`BUILDABILITY.md`](lexical-bridging-context-v1/BUILDABILITY.md) for the surviving pool
+> sizes and the conditional RUNNABLE/collapse verdict.
 
 This operationalizes the **one untested clause** of
 [`conjecture/lexical-sense-gradience`](../../wiki/findings/conjectures/lexical-sense-gradience.md)
@@ -107,7 +124,7 @@ T/F items to supplement the **two clear poles only, never the bridging stratum**
 Advisable because the floored clear-same pole is thin (9/7). A build session may
 freeze a separate WiC pole manifest (kept apart from the DWUG stratum, its own sha).
 
-## 2. Instrument panel (frozen panel shape; numeric values are PLACEHOLDERS)
+## 2. Instrument panel (FROZEN — values in [`instrument.json`](lexical-bridging-context-v1/instrument.json), sha `901ea89f…`)
 
 Per the operationalization gate: a **fixed two-instrument panel** plus a
 characterizing-only third. No instrument may be added, dropped, re-worded, or
@@ -117,19 +134,25 @@ re-thresholded after any output is seen (condition a).
   call **and** a graded confidence/relatedness rating per item. Expresses *both*
   axes (position = side of midpoint; confidence = distance from the confident
   extremes). Reuses the v1-validated `durel`/`cont` framing repurposed per-item.
-  - PLACEHOLDER (freeze at build, sha256'd): the rating **scale** and the exact
-    numeric **intermediate midpoint band** that counts as "intermediate."
+  - FROZEN: two temp-0 framings — `b_rel` (0–100 relatedness = the graded **position**
+    signal, verbatim v1 `cont`) and `b_conf` (`SAME`/`DIFFERENT` call + 0–100
+    **confidence** in that call). Rating **scale** 0–100; **intermediate midpoint band**
+    `[40, 60]`.
 - **C (categorical cross-check) — a "both / unclear" third option.** The model is
   given an explicit third option and the signal is whether it takes it **more on
   bridging than on clear items** (an elevated decline rate). Behaves differently from
   B, so B–C agreement is stronger than either alone.
-  - PLACEHOLDER (freeze at build, sha256'd): the **verbatim third-option wording**.
+  - FROZEN: `c_third`, temp 0, options `SAME` / `DIFFERENT` / `UNCLEAR`; verbatim
+    third-option wording — "UNCLEAR — the two uses are genuinely in between, so you
+    cannot confidently decide whether the sense is the same or different." Decline rate =
+    %`UNCLEAR` (the pre-run critic confirmed this wording is neutral, not over-inviting).
 - **A (characterizing-only) — forced-judgment dispersion.** The model is forced to
   pick same/different (no third option, no confidence); the dispersion of picks
   across paraphrases/samples *describes* but never *decides* (condition g); its knobs
   never enter the verdict.
-  - PLACEHOLDER (freeze at build, sha256'd): **sample/paraphrase count** and
-    **temperature** for any A read.
+  - FROZEN: `a_forced`, **5 stochastic samples** per item at **temperature 1.0**
+    (dispersion = flip-rate / entropy of the 5 forced picks). Characterizing-only — never
+    enters the verdict; may be dropped under budget without touching the result.
 
 Temperature 0 for B and C (panel default; A may sample). Logprob-free, runs on the
 existing panel ([`config/models.md`](../../config/models.md)).
@@ -199,24 +222,44 @@ each reported as cleanly as a positive (§3).
   human-comparison claim. That call is empirical and belongs to the build/critic
   session.
 
-## 7. Run blocker + pre-run-critic gate (handoff)
+## 7. Build state (DONE) + run handoff
 
-1. **Re-fetch corpus text** — DWUG `dwug_en.zip` (Zenodo 14028531) into the
-   gitignored data area; re-map `id1`/`id2` to usage sentences + target offsets;
-   re-record archive sha256. WiC `WiC_dataset.zip` likewise if poles are supplemented.
-   **This is the run blocker:** the stratum carries only identifiers + ratings, no
-   text. (See [`BUILDABILITY.md`](lexical-bridging-context-v1/BUILDABILITY.md).)
-2. **Freeze + sha256 the instrument numbers** (the §2 placeholders) under an
-   independent pre-run critic (operationalization condition b).
-3. **Optionally freeze the WiC clear-pole supplement** (item ids + gold), separate
-   from the DWUG stratum, its own sha.
-4. **Pre-run critic GO/NO-GO** against the frozen stratum + instrument
-   (operationalization condition h): a NO-GO defers the run, never relaxes a band,
-   wording, or the agreement rule. Re-check the clear-class precondition; if unmet,
-   collapse to `internal-contrast-only` (§6).
-5. Run (spend-bearing; pre-flight per [`config/budget.md`](../../config/budget.md));
-   review; only then promote a result, leading with the usage-similarity-vs-sense
-   label discipline.
+**Done at build (session 76), in order:**
+1. ✅ **Corpus re-fetch recipes written + verified.** [`prep.py`](lexical-bridging-context-v1/prep.py)
+   re-fetches DWUG (Zenodo 14028531, archive sha `64eef477…` verified) and re-maps **48/48**
+   frozen stratum pairs → usage sentences + offsets (0 failures) into the gitignored data
+   area; [`prep_wic.py`](lexical-bridging-context-v1/prep_wic.py) re-fetches WiC and freezes the
+   **20 + 20** clear-pole supplement ([`wic_poles.csv`](lexical-bridging-context-v1/wic_poles.csv),
+   sha `b8b1a7aa…`).
+2. ✅ **Instrument frozen + sha256'd** (operationalization condition b):
+   [`instrument.json`](lexical-bridging-context-v1/instrument.json), sha `901ea89f…`.
+3. ✅ **WiC clear-pole supplement frozen** separate from the DWUG stratum, its own sha.
+4. ✅ **Pre-run critic GO** (operationalization condition h): an independent fresh-agent
+   reviewer re-derived the cheat-surface and returned **GO** — no NO-GO defect; the
+   degenerate-responder surface (always-mid / always-UNCLEAR / always-SAME) is closed by
+   the clear-class precondition; the `[40,60]` band and the neutral third-option wording
+   are not gameable post-hoc (the sha binds them).
+
+**Run handoff — the cautions the critic bound the run/analysis session to carry:**
+- **Stage the gitignored corpus first** (a fresh clone has no corpus text): run `prep.py`
+  then `prep_wic.py`; the probe `sys.exit`s if the DWUG fulltext is missing.
+- **Record the live WiC archive sha** in the result and compare to the resource page's
+  `f1a2fb6…` copy (`prep_wic.py` records, does not hard-pin).
+- **Empirical clear-class precondition check is mandatory at run time** (BUILDABILITY flags
+  9/7 clear-same as marginal): if the precondition fails even with the 20 WiC-T poles,
+  **collapse to `internal-contrast-only`** and relabel — do not relax it (§6).
+- **Lead every result with the usage-similarity ≠ sense-co-presence cap** (§0); the DWUG
+  low end mixes homonymy.
+- **b_conf is a self-report;** disclose the miscalibration risk (a model defaulting
+  mid-scale on any hard item) the precondition mitigates but does not eliminate.
+- **Small, lemma-clustered N** (48 DWUG pairs / ~20 lemmas): direction-of-effect with wide
+  per-lemma bootstrap CIs only; no coverage claim.
+- **Spot-check the raw outputs** for stray-number misparse before analysis (parsers take the
+  first integer; reasoning is suppressed and prompts demand "X and nothing else", so risk is
+  low).
+- **Pre-flight per [`config/budget.md`](../../config/budget.md)** (spend-bearing; keep gemini
+  reasoning suppressed / effort minimal, or split by model / drop the characterizing-only A
+  read if the single-shot estimate exceeds $2.50). Only then promote a result.
 
 ## 8. Scope and limits (lead with these)
 
