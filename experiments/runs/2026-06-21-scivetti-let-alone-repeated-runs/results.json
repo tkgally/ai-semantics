@@ -1,0 +1,5663 @@
+{
+ "K": 5,
+ "human_baseline": 0.9,
+ "instrument": "forced-decomposition",
+ "ceiling_range_eps": 0.034,
+ "per_model": {
+  "A": {
+   "name": "claude-sonnet-4.6",
+   "n_runs_committed": 5,
+   "cells": {
+    "letalone_combined": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       0.8181818181818182,
+       0.7575757575757576,
+       0.7575757575757576,
+       0.7878787878787878,
+       0.7575757575757576
+      ],
+      "mean": 0.7757575757575758,
+      "min": 0.7575757575757576,
+      "max": 0.8181818181818182,
+      "range": 0.06060606060606066,
+      "sd": 0.027103854272724742
+     },
+     "stability": {
+      "n_items": 33,
+      "n_constant": 26,
+      "churn_rate": 0.21212121212121213,
+      "mean_pairwise_agreement": 0.896969696969697,
+      "n_pairs": 10,
+      "majority_vote_correct": 26,
+      "majority_vote_acc": 0.7878787878787878,
+      "majority_vote_wilson": [
+       0.6224802241287064,
+       0.8932411343356381
+      ],
+      "items": [
+       {
+        "item_id": "let-alone#1",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "2"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#10",
+        "gold": 1,
+        "labels": [
+         "1",
+         "2",
+         "1",
+         "1",
+         "2"
+        ],
+        "label_counts": {
+         "1": 3,
+         "2": 2
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#11",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#12",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#13",
+        "gold": 1,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#14",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#15",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#16",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#17",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#18",
+        "gold": 0,
+        "labels": [
+         "0",
+         "1",
+         "0",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "0": 2,
+         "1": 3
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#19",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#2",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#20",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "1",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 4,
+         "1": 1
+        },
+        "modal": "2",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#21",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#22",
+        "gold": 1,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#23",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#24",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#25",
+        "gold": 1,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "1"
+        ],
+        "label_counts": {
+         "2": 4,
+         "1": 1
+        },
+        "modal": "2",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#26",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#27",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#28",
+        "gold": 1,
+        "labels": [
+         "1",
+         "2",
+         "2",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 3,
+         "2": 2
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#29",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#3",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#30",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#31",
+        "gold": 1,
+        "labels": [
+         "2",
+         "1",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 4,
+         "1": 1
+        },
+        "modal": "2",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#32",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#33",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#4",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#5",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#6",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#7",
+        "gold": 1,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#8",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#9",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    },
+    "letalone_test": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       0.7916666666666666,
+       0.75,
+       0.7916666666666666,
+       0.75,
+       0.75
+      ],
+      "mean": 0.7666666666666666,
+      "min": 0.75,
+      "max": 0.7916666666666666,
+      "range": 0.04166666666666663,
+      "sd": 0.022821773229381902
+     },
+     "stability": {
+      "n_items": 24,
+      "n_constant": 20,
+      "churn_rate": 0.16666666666666666,
+      "mean_pairwise_agreement": 0.9166666666666666,
+      "n_pairs": 10,
+      "majority_vote_correct": 18,
+      "majority_vote_acc": 0.75,
+      "majority_vote_wilson": [
+       0.5510017468789357,
+       0.8800079652065766
+      ],
+      "items": [
+       {
+        "item_id": "let-alone#10",
+        "gold": 1,
+        "labels": [
+         "1",
+         "2",
+         "1",
+         "1",
+         "2"
+        ],
+        "label_counts": {
+         "1": 3,
+         "2": 2
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#11",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#12",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#13",
+        "gold": 1,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#14",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#15",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#16",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#17",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#18",
+        "gold": 0,
+        "labels": [
+         "0",
+         "1",
+         "0",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "0": 2,
+         "1": 3
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#22",
+        "gold": 1,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#23",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#24",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#25",
+        "gold": 1,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "1"
+        ],
+        "label_counts": {
+         "2": 4,
+         "1": 1
+        },
+        "modal": "2",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#26",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#27",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#31",
+        "gold": 1,
+        "labels": [
+         "2",
+         "1",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 4,
+         "1": 1
+        },
+        "modal": "2",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#32",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#33",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#4",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#5",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#6",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#7",
+        "gold": 1,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#8",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#9",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    },
+    "letalone_train": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       0.8888888888888888,
+       0.7777777777777778,
+       0.6666666666666666,
+       0.8888888888888888,
+       0.7777777777777778
+      ],
+      "mean": 0.7999999999999999,
+      "min": 0.6666666666666666,
+      "max": 0.8888888888888888,
+      "range": 0.2222222222222222,
+      "sd": 0.09296222517045283
+     },
+     "stability": {
+      "n_items": 9,
+      "n_constant": 6,
+      "churn_rate": 0.3333333333333333,
+      "mean_pairwise_agreement": 0.8444444444444444,
+      "n_pairs": 10,
+      "majority_vote_correct": 8,
+      "majority_vote_acc": 0.8888888888888888,
+      "majority_vote_wilson": [
+       0.5649937852319399,
+       0.9801096286728695
+      ],
+      "items": [
+       {
+        "item_id": "let-alone#1",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "2"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#19",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#2",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#20",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "1",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 4,
+         "1": 1
+        },
+        "modal": "2",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#21",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#28",
+        "gold": 1,
+        "labels": [
+         "1",
+         "2",
+         "2",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 3,
+         "2": 2
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#29",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#3",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#30",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    },
+    "compcorr": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "range": 0.0,
+      "sd": 0.0
+     },
+     "stability": {
+      "n_items": 30,
+      "n_constant": 30,
+      "churn_rate": 0.0,
+      "mean_pairwise_agreement": 1.0,
+      "n_pairs": 10,
+      "majority_vote_correct": 30,
+      "majority_vote_acc": 1.0,
+      "majority_vote_wilson": [
+       0.8864829086095221,
+       1.0
+      ],
+      "items": [
+       {
+        "item_id": "comparative-correlative#436",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#437",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#438",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#439",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#440",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#441",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#442",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#443",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#444",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#445",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#446",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#447",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#448",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#449",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#450",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#451",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#452",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#453",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#454",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#455",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#456",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#457",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#458",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#459",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#466",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#467",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#468",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#472",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#473",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#474",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    }
+   },
+   "guard": {
+    "per_run": [
+     {
+      "run": 1,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 2,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 3,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 4,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 5,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     }
+    ],
+    "all_clean": true
+   },
+   "cross_session": {
+    "s60": {
+     "letalone_test": 0.8333333333333334,
+     "compcorr": 1.0
+    },
+    "s62": {
+     "letalone_combined": 0.7272727272727273,
+     "letalone_test": 0.7083333333333334,
+     "letalone_train": 0.7777777777777778,
+     "compcorr": 1.0
+    },
+    "extended_band": {
+     "letalone_combined": {
+      "n_runs": 6,
+      "per_run": [
+       0.8181818181818182,
+       0.7575757575757576,
+       0.7575757575757576,
+       0.7878787878787878,
+       0.7575757575757576,
+       0.7272727272727273
+      ],
+      "mean": 0.7676767676767677,
+      "min": 0.7272727272727273,
+      "max": 0.8181818181818182,
+      "range": 0.09090909090909094,
+      "sd": 0.031296835120868026
+     },
+     "compcorr": {
+      "n_runs": 7,
+      "per_run": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "range": 0.0,
+      "sd": 0.0
+     }
+    }
+   }
+  },
+  "B": {
+   "name": "gpt-5.4-mini",
+   "n_runs_committed": 5,
+   "cells": {
+    "letalone_combined": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       0.6363636363636364,
+       0.6666666666666666,
+       0.5454545454545454,
+       0.6060606060606061,
+       0.5454545454545454
+      ],
+      "mean": 0.6,
+      "min": 0.5454545454545454,
+      "max": 0.6666666666666666,
+      "range": 0.12121212121212122,
+      "sd": 0.05420770854544946
+     },
+     "stability": {
+      "n_items": 33,
+      "n_constant": 23,
+      "churn_rate": 0.30303030303030304,
+      "mean_pairwise_agreement": 0.8727272727272727,
+      "n_pairs": 10,
+      "majority_vote_correct": 20,
+      "majority_vote_acc": 0.6060606060606061,
+      "majority_vote_wilson": [
+       0.4368314280651038,
+       0.7531711776849179
+      ],
+      "items": [
+       {
+        "item_id": "let-alone#1",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "2",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#10",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#11",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#12",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#13",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#14",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#15",
+        "gold": 0,
+        "labels": [
+         "0",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "0": 1,
+         "1": 4
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#16",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#17",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#18",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#19",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#2",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#20",
+        "gold": 2,
+        "labels": [
+         "1",
+         "2",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#21",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#22",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#23",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#24",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#25",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "2",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#26",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#27",
+        "gold": 0,
+        "labels": [
+         "1",
+         "0",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "0": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#28",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#29",
+        "gold": 2,
+        "labels": [
+         "1",
+         "2",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#3",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#30",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "0",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "0": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#31",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#32",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "1",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 4,
+         "1": 1
+        },
+        "modal": "2",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#33",
+        "gold": 0,
+        "labels": [
+         "0",
+         "1",
+         "0",
+         "0",
+         "1"
+        ],
+        "label_counts": {
+         "0": 3,
+         "1": 2
+        },
+        "modal": "0",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#4",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#5",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#6",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#7",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "0"
+        ],
+        "label_counts": {
+         "1": 4,
+         "0": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#8",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#9",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    },
+    "letalone_test": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       0.6666666666666666,
+       0.625,
+       0.5416666666666666,
+       0.625,
+       0.5416666666666666
+      ],
+      "mean": 0.6,
+      "min": 0.5416666666666666,
+      "max": 0.6666666666666666,
+      "range": 0.125,
+      "sd": 0.05590169943749475
+     },
+     "stability": {
+      "n_items": 24,
+      "n_constant": 18,
+      "churn_rate": 0.25,
+      "mean_pairwise_agreement": 0.8916666666666666,
+      "n_pairs": 10,
+      "majority_vote_correct": 15,
+      "majority_vote_acc": 0.625,
+      "majority_vote_wilson": [
+       0.42709619037907065,
+       0.7884086656636855
+      ],
+      "items": [
+       {
+        "item_id": "let-alone#10",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#11",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#12",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#13",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#14",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#15",
+        "gold": 0,
+        "labels": [
+         "0",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "0": 1,
+         "1": 4
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#16",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#17",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#18",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#22",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#23",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#24",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#25",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "2",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#26",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#27",
+        "gold": 0,
+        "labels": [
+         "1",
+         "0",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "0": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#31",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#32",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "1",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 4,
+         "1": 1
+        },
+        "modal": "2",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#33",
+        "gold": 0,
+        "labels": [
+         "0",
+         "1",
+         "0",
+         "0",
+         "1"
+        ],
+        "label_counts": {
+         "0": 3,
+         "1": 2
+        },
+        "modal": "0",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#4",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#5",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#6",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#7",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "0"
+        ],
+        "label_counts": {
+         "1": 4,
+         "0": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#8",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#9",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    },
+    "letalone_train": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       0.5555555555555556,
+       0.7777777777777778,
+       0.5555555555555556,
+       0.5555555555555556,
+       0.5555555555555556
+      ],
+      "mean": 0.6,
+      "min": 0.5555555555555556,
+      "max": 0.7777777777777778,
+      "range": 0.2222222222222222,
+      "sd": 0.09938079899999065
+     },
+     "stability": {
+      "n_items": 9,
+      "n_constant": 5,
+      "churn_rate": 0.4444444444444444,
+      "mean_pairwise_agreement": 0.8222222222222222,
+      "n_pairs": 10,
+      "majority_vote_correct": 5,
+      "majority_vote_acc": 0.5555555555555556,
+      "majority_vote_wilson": [
+       0.2666473457440297,
+       0.811224570528086
+      ],
+      "items": [
+       {
+        "item_id": "let-alone#1",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "2",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#19",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#2",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#20",
+        "gold": 2,
+        "labels": [
+         "1",
+         "2",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#21",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#28",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#29",
+        "gold": 2,
+        "labels": [
+         "1",
+         "2",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#3",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#30",
+        "gold": 0,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "0",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "0": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": false
+       }
+      ]
+     }
+    },
+    "compcorr": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       0.9666666666666667,
+       1.0,
+       0.9666666666666667,
+       1.0,
+       1.0
+      ],
+      "mean": 0.9866666666666667,
+      "min": 0.9666666666666667,
+      "max": 1.0,
+      "range": 0.033333333333333326,
+      "sd": 0.018257418583505533
+     },
+     "stability": {
+      "n_items": 30,
+      "n_constant": 28,
+      "churn_rate": 0.06666666666666667,
+      "mean_pairwise_agreement": 0.9733333333333334,
+      "n_pairs": 10,
+      "majority_vote_correct": 30,
+      "majority_vote_acc": 1.0,
+      "majority_vote_wilson": [
+       0.8864829086095221,
+       1.0
+      ],
+      "items": [
+       {
+        "item_id": "comparative-correlative#436",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#437",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#438",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#439",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#440",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#441",
+        "gold": 2,
+        "labels": [
+         "0",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "0": 1,
+         "2": 4
+        },
+        "modal": "2",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#442",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#443",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#444",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#445",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#446",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#447",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#448",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#449",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#450",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#451",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#452",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "1",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 4,
+         "1": 1
+        },
+        "modal": "0",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#453",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#454",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#455",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#456",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#457",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#458",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#459",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#466",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#467",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#468",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#472",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#473",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#474",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    }
+   },
+   "guard": {
+    "per_run": [
+     {
+      "run": 1,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 0.9666666666666667,
+      "cc_wilson_lo": 0.8332924860304112,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 2,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 3,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 0.9666666666666667,
+      "cc_wilson_lo": 0.8332924860304112,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 4,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 5,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     }
+    ],
+    "all_clean": true
+   },
+   "cross_session": {
+    "s60": {
+     "letalone_test": 0.5833333333333334,
+     "compcorr": 1.0
+    },
+    "s62": {
+     "letalone_combined": 0.6363636363636364,
+     "letalone_test": 0.5833333333333334,
+     "letalone_train": 0.7777777777777778,
+     "compcorr": 1.0
+    },
+    "extended_band": {
+     "letalone_combined": {
+      "n_runs": 6,
+      "per_run": [
+       0.6363636363636364,
+       0.6666666666666666,
+       0.5454545454545454,
+       0.6060606060606061,
+       0.5454545454545454,
+       0.6363636363636364
+      ],
+      "mean": 0.6060606060606061,
+      "min": 0.5454545454545454,
+      "max": 0.6666666666666666,
+      "range": 0.12121212121212122,
+      "sd": 0.05070666827479246
+     },
+     "compcorr": {
+      "n_runs": 7,
+      "per_run": [
+       0.9666666666666667,
+       1.0,
+       0.9666666666666667,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "mean": 0.9904761904761905,
+      "min": 0.9666666666666667,
+      "max": 1.0,
+      "range": 0.033333333333333326,
+      "sd": 0.016265001215808882
+     }
+    }
+   }
+  },
+  "C": {
+   "name": "gemini-3.5-flash",
+   "n_runs_committed": 5,
+   "cells": {
+    "letalone_combined": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       0.8787878787878788,
+       0.8787878787878788,
+       0.8787878787878788,
+       0.9090909090909091,
+       0.9090909090909091
+      ],
+      "mean": 0.8909090909090909,
+      "min": 0.8787878787878788,
+      "max": 0.9090909090909091,
+      "range": 0.030303030303030276,
+      "sd": 0.01659765325773229
+     },
+     "stability": {
+      "n_items": 33,
+      "n_constant": 31,
+      "churn_rate": 0.06060606060606061,
+      "mean_pairwise_agreement": 0.9696969696969697,
+      "n_pairs": 10,
+      "majority_vote_correct": 30,
+      "majority_vote_acc": 0.9090909090909091,
+      "majority_vote_wilson": [
+       0.7642705646564897,
+       0.968596628950737
+      ],
+      "items": [
+       {
+        "item_id": "let-alone#1",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#10",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#11",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#12",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#13",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#14",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#15",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#16",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#17",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#18",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#19",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#2",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#20",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#21",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#22",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#23",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#24",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#25",
+        "gold": 1,
+        "labels": [
+         "2",
+         "1",
+         "2",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "2": 2,
+         "1": 3
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#26",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#27",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#28",
+        "gold": 1,
+        "labels": [
+         "1",
+         "2",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#29",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#3",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#30",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#31",
+        "gold": 1,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#32",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#33",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#4",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#5",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#6",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#7",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#8",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#9",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    },
+    "letalone_test": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       0.8333333333333334,
+       0.875,
+       0.8333333333333334,
+       0.875,
+       0.875
+      ],
+      "mean": 0.8583333333333334,
+      "min": 0.8333333333333334,
+      "max": 0.875,
+      "range": 0.04166666666666663,
+      "sd": 0.022821773229381902
+     },
+     "stability": {
+      "n_items": 24,
+      "n_constant": 23,
+      "churn_rate": 0.041666666666666664,
+      "mean_pairwise_agreement": 0.975,
+      "n_pairs": 10,
+      "majority_vote_correct": 21,
+      "majority_vote_acc": 0.875,
+      "majority_vote_wilson": [
+       0.6899571185214243,
+       0.9565574496068442
+      ],
+      "items": [
+       {
+        "item_id": "let-alone#10",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#11",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#12",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#13",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#14",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#15",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#16",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#17",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#18",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#22",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#23",
+        "gold": 2,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#24",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#25",
+        "gold": 1,
+        "labels": [
+         "2",
+         "1",
+         "2",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "2": 2,
+         "1": 3
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#26",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#27",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#31",
+        "gold": 1,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": false
+       },
+       {
+        "item_id": "let-alone#32",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#33",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#4",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#5",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#6",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#7",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#8",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#9",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    },
+    "letalone_train": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       1.0,
+       0.8888888888888888,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "mean": 0.9777777777777777,
+      "min": 0.8888888888888888,
+      "max": 1.0,
+      "range": 0.11111111111111116,
+      "sd": 0.04969039949999535
+     },
+     "stability": {
+      "n_items": 9,
+      "n_constant": 8,
+      "churn_rate": 0.1111111111111111,
+      "mean_pairwise_agreement": 0.9555555555555555,
+      "n_pairs": 10,
+      "majority_vote_correct": 9,
+      "majority_vote_acc": 1.0,
+      "majority_vote_wilson": [
+       0.7008472464490407,
+       1.0
+      ],
+      "items": [
+       {
+        "item_id": "let-alone#1",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#19",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#2",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#20",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#21",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#28",
+        "gold": 1,
+        "labels": [
+         "1",
+         "2",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 4,
+         "2": 1
+        },
+        "modal": "1",
+        "constant": false,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#29",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#3",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "let-alone#30",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    },
+    "compcorr": {
+     "spread": {
+      "n_runs": 5,
+      "per_run": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "range": 0.0,
+      "sd": 0.0
+     },
+     "stability": {
+      "n_items": 30,
+      "n_constant": 30,
+      "churn_rate": 0.0,
+      "mean_pairwise_agreement": 1.0,
+      "n_pairs": 10,
+      "majority_vote_correct": 30,
+      "majority_vote_acc": 1.0,
+      "majority_vote_wilson": [
+       0.8864829086095221,
+       1.0
+      ],
+      "items": [
+       {
+        "item_id": "comparative-correlative#436",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#437",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#438",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#439",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#440",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#441",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#442",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#443",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#444",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#445",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#446",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#447",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#448",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#449",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#450",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#451",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#452",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#453",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#454",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#455",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#456",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#457",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#458",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#459",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#466",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#467",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#468",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#472",
+        "gold": 1,
+        "labels": [
+         "1",
+         "1",
+         "1",
+         "1",
+         "1"
+        ],
+        "label_counts": {
+         "1": 5
+        },
+        "modal": "1",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#473",
+        "gold": 0,
+        "labels": [
+         "0",
+         "0",
+         "0",
+         "0",
+         "0"
+        ],
+        "label_counts": {
+         "0": 5
+        },
+        "modal": "0",
+        "constant": true,
+        "modal_correct": true
+       },
+       {
+        "item_id": "comparative-correlative#474",
+        "gold": 2,
+        "labels": [
+         "2",
+         "2",
+         "2",
+         "2",
+         "2"
+        ],
+        "label_counts": {
+         "2": 5
+        },
+        "modal": "2",
+        "constant": true,
+        "modal_correct": true
+       }
+      ]
+     }
+    }
+   },
+   "guard": {
+    "per_run": [
+     {
+      "run": 1,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 2,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 3,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 4,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     },
+     {
+      "run": 5,
+      "worked_frac": 1.0,
+      "uptake_induced": true,
+      "cc_acc": 1.0,
+      "cc_wilson_lo": 0.8864829086095221,
+      "control_preserved": true,
+      "n_missing": 0
+     }
+    ],
+    "all_clean": true
+   },
+   "cross_session": {
+    "s60": {
+     "letalone_test": 0.875,
+     "compcorr": 1.0
+    },
+    "s62": {
+     "letalone_combined": 0.9090909090909091,
+     "letalone_test": 0.875,
+     "letalone_train": 1.0,
+     "compcorr": 1.0
+    },
+    "extended_band": {
+     "letalone_combined": {
+      "n_runs": 6,
+      "per_run": [
+       0.8787878787878788,
+       0.8787878787878788,
+       0.8787878787878788,
+       0.9090909090909091,
+       0.9090909090909091,
+       0.9090909090909091
+      ],
+      "mean": 0.8939393939393939,
+      "min": 0.8787878787878788,
+      "max": 0.9090909090909091,
+      "range": 0.030303030303030276,
+      "sd": 0.01659765325773229
+     },
+     "compcorr": {
+      "n_runs": 7,
+      "per_run": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "range": 0.0,
+      "sd": 0.0
+     }
+    }
+   }
+  }
+ },
+ "trigger_a_read": {
+  "A": {
+   "name": "claude-sonnet-4.6",
+   "verdict": "TRIGGER-A-FIRES",
+   "letalone_range": 0.06060606060606066,
+   "compcorr_range": 0.0,
+   "letalone_churn": 0.21212121212121213,
+   "compcorr_churn": 0.0
+  },
+  "B": {
+   "name": "gpt-5.4-mini",
+   "verdict": "TRIGGER-A-FIRES",
+   "letalone_range": 0.12121212121212122,
+   "compcorr_range": 0.033333333333333326,
+   "letalone_churn": 0.30303030303030304,
+   "compcorr_churn": 0.06666666666666667
+  },
+  "C": {
+   "name": "gemini-3.5-flash",
+   "verdict": "TRIGGER-A-FIRES",
+   "letalone_range": 0.030303030303030276,
+   "compcorr_range": 0.0,
+   "letalone_churn": 0.06060606060606061,
+   "compcorr_churn": 0.0
+  }
+ }
+}
