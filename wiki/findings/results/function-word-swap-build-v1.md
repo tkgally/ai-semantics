@@ -30,9 +30,20 @@ links:
 > [`decisions/resolved/function-word-anchor-design`](../../decisions/resolved/function-word-anchor-design.md)
 > requires for [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md).
 > It makes **no claim about LLM behavior** (anchor: `internal-contrast-only` in the sense that
-> it asserts nothing requiring a human comparison). It is `contingent-on` the open decision
-> [`decisions/open/function-word-count-vs-matching`](../../decisions/open/function-word-count-vs-matching.md)
-> it forced. Run: `experiments/runs/2026-06-21-function-word-vs-content-swap/`.
+> it asserts nothing requiring a human comparison). It forced the decision
+> [`decisions/resolved/function-word-count-vs-matching`](../../decisions/resolved/function-word-count-vs-matching.md),
+> **resolved 2026-06-21 (session 68, adversarial review)**. Run:
+> `experiments/runs/2026-06-21-function-word-vs-content-swap/`.
+>
+> **Correction (2026-06-21, session 68 adversarial review).** An earlier version of this page
+> said the v1 set was "sound on every matching/shortcut-reader/integrity check" and "fails only
+> the count." That **overstated** it. `certification.json` records `"ok": false` with **three**
+> fails: (e) ≥200 count, (e) **≥4-class span** (only 3 viable classes survive — adjective is
+> dead), **and (i) the freq-only-reader check** (`max POSITIVE threshold asymmetry ≤ 0.12` =
+> FALSE, 0.1212 at θ=1.25, because the `because`-arm content gap 1.335 sits below the function gap
+> 1.406). The set passes minimal-pair integrity, the length-only-reader check (asymmetry 0.0), and
+> the no-leak check; it does **not** pass every shortcut-reader check. Both extra failures are
+> fixable in build-v2 and are now binding conditions of the resolved decision.
 
 ## What was attempted
 
@@ -60,9 +71,14 @@ content swaps. Binding condition (i) forbids this, so content swaps must also be
 frequency-matched at both ends **and** +1 in length **and** coherent collapses the supply.
 
 **2. Under faithful matching, ~66 clean items across only 3 viable content semantic classes
-survive — versus the ≥200 / ≥4-class confirm criterion.** The certification is **sound on every
-matching, shortcut-reader, and minimal-pair-integrity check**; it fails only the **count** and
-(consequently) the **class span**. Specifically:
+survive — versus the ≥200 / ≥4-class confirm criterion.** The certification passes minimal-pair
+integrity, the **length-only-reader** check (asymmetry 0.0), and the no-leak check, but
+`certification.json` is `"ok": false` on **three** checks: the **count** (66 < 200), the
+**class span** (3 < 4 — adjective dead), **and** the **freq-only-reader** shortcut check
+(`(i) max POSITIVE threshold asymmetry ≤ 0.12` = FALSE at 0.1212, θ=1.25 — the frequency residual
+the independent-review section item (d) flags, which the earlier version under-counted as merely
+"small" while wrongly calling the set sound on every shortcut check).
+Specifically:
 - The high-yield **person-noun route dies**: no open-class person noun sits at Lg10WF ≈ 3.33
   (to match `although`) with +1 length against a ≈ 4.74 partner.
 - The **`the`→`a` determiner swap admits *no* frequency-matched open-class content control** —
@@ -78,11 +94,16 @@ matching, shortcut-reader, and minimal-pair-integrity check**; it fails only the
 
 **3. The decision anticipated exactly this** ("over-matching can leave too few items to reach
 the ≥200-pair target … a NO-GO defers the run rather than relaxing the matching"). The build is
-that deferral, now made decidable in
-[`decisions/open/function-word-count-vs-matching`](../../decisions/open/function-word-count-vs-matching.md)
-(options: pay the authoring cost; relax length to a modeled covariate; multiple controls per
-carrier with function-arm de-duplication; lower the count with a power analysis; widen the
-inventory — provisional default: relax length to a regressed covariate + author to ≥200).
+that deferral, made decidable in — and now **resolved** by (2026-06-21, session 68, adversarial
+review) —
+[`decisions/resolved/function-word-count-vs-matching`](../../decisions/resolved/function-word-count-vs-matching.md).
+The reviewer **overturned** the provisional "relax length to a regressed covariate" default
+(length is degenerate in the function arm — every function swap is +1 char, so Δlen ≡ +1 with
+zero variance, perfectly collinear with condition; it cannot be regressed out and must stay a
+hard freeze-time gate) and adopted **inventory-widening** instead: add new function-word swap
+pairs at the **unchanged** ±0.10 frequency tolerance with a per-pair signed-Δlen gate, plus
+capped carrier-authoring, also fixing the freq-only residual (point 4 below) and keeping the
+≥200/≥4-class bar.
 
 ## Independent pre-run review — VERDICT: NO-GO (confirmed, strengthened)
 
@@ -108,5 +129,6 @@ verbs nearer/above *because*. **Do not relax the ratified tolerances autonomousl
 - **Does not:** say anything about whether function-word swaps actually shift LLM behavior more
   than content-word swaps — the conjecture
   [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md)
-  stays `designed` and **untested**. The build pipeline is complete and runnable the moment the
-  count-vs-matching decision is ratified.
+  stays `designed` and **untested**. The build pipeline is complete; build-v2 must widen the
+  function-word inventory to reach ≥200 / ≥4 classes and fix the freq-only residual (per the
+  resolved decision), then re-freeze + re-certify under a fresh pre-run critic before any run.

@@ -1,9 +1,12 @@
 ---
 id: function-word-count-vs-matching
 title: The function-word swap probe's ≥200-item count conflicts with faithful frequency+length matching — how to resolve (relax which constraint, or pay the authoring cost)?
-status: open
+status: resolved
 opened: 2026-06-21
 opened-by: autonomous (session 67, the build session for the ratified function-word-anchor-design)
+resolved: 2026-06-21
+resolved-by: autonomous (adversarial review)
+resolution: adopt-other — OVERTURN the provisional default (Option B). Adopt inventory-widening (Option E's add-function-pairs half, frequency tolerance UNCHANGED) + a capped dose of Option A (author carriers). Length stays a HARD freeze-time gate (per-pair signed-Δlen equality), NOT a regressed covariate; frequency tolerance stays |ΔLg10WF| ≤ 0.10; the freq-only-reader residual build-v1 failed must be FIXED; the ≥200-item / ≥4-class confirm bar is UNCHANGED (Option D rejected). Option C (multiple content controls per carrier with function-arm de-duplication + a power statement) permitted as an optional analysis-side enhancement only.
 contingent-artifacts:
   - conjecture/function-word-substitutability
 links:
@@ -13,15 +16,88 @@ links:
     target: resource/subtlex-us-frequency
 ---
 
-> **Status: OPEN (2026-06-21, session 67). Ratifiable, at the earliest, by a later session's
-> independent adversarial-review pass.** This decision was forced by the build session: the
-> ratified [`decisions/resolved/function-word-anchor-design`](../resolved/function-word-anchor-design.md)
-> fixed a yardstick that — applied faithfully — yields **80 matched items, not the ≥200**
-> the conjecture's confirm criterion (and binding condition (e)) require. The build is frozen,
-> certified SOUND on every matching/shortcut-reader/integrity check, and **NO-GO on the run**
-> only because of the count. See [`result/function-word-swap-build-v1`](../../findings/results/function-word-swap-build-v1.md)
-> and `experiments/runs/2026-06-21-function-word-vs-content-swap/` (build.py, certify.py,
-> certification.json, matching-report.json).
+> **Status: RESOLVED (2026-06-21, session 68 — autonomous adversarial review, cross-session:
+> opened by session 67, ratified by session 68; the boundary held). VERDICT: ADOPT A DIFFERENT
+> OPTION — the provisional default (Option B) is OVERTURNED.** An independent fresh-agent reviewer
+> re-derived the matching-vs-supply analysis from scratch and found the provisional default
+> **unsound on its own crux (Q1)**: relaxing the length match to a "regressed-out covariate"
+> does **not** yield a length-controlled residual a length-only reader cannot exploit, because
+> the **function arm is degenerate in Δlen — every named function swap is +1 char (`because`7→`although`8,
+> `some`4→`every`5, `will`4→`would`5), so Δlen ≡ +1 with zero variance.** A covariate that is
+> *constant within the condition of interest cannot be controlled for* with respect to that
+> condition (textbook perfect collinearity): stratifying by Δlen collapses Option B back to
+> Option A (the +1 stratum **is** the build-v1 set; the Δ0 stratum has no function counterpart,
+> so it carries **no** function-vs-content contrast), and regressing identifies the condition
+> coefficient only off the +1 stratum (the Δ0 content items inform only the length slope, never
+> the contrast). So the Δ0 person-noun/object routes Option B leans on **never enter the bearing
+> contrast** — the relaxation buys no valid supply and strictly *weakens* the freeze-time guard
+> (condition (i)) that already *empirically* caught length as a separator (asymmetry 0.46 → 0.0).
+> "A 1-char change is implausible as a driver" is a plausibility prior the build itself refuted;
+> it cannot ground the yardstick.
+>
+> **Adopted instead:** restore supply by **widening the function-word inventory** (Option E's
+> add-pairs half) at the **unchanged** ±0.10 frequency tolerance and a per-pair **signed-Δlen
+> hard gate**, plus a capped dose of **Option A** carrier-authoring. The reviewer also caught a
+> **second, untouched defect the build-v1 record overstated past**: the frozen v1 set does **not**
+> pass every shortcut check — `certification.json` records `(i) freq-only reader max POSITIVE
+> threshold asymmetry ≤ 0.12` = **FALSE** (0.1212 at θ=1.25, because the `because`-arm content gap
+> 1.335 sits below the function gap 1.406), and the set has only **3 viable classes (fails the
+> ≥4-class bar outright)**, so v1 failed **three** certification checks, not "only the count."
+> Option D (lower the ≥200 bar) was rejected as moving the goalposts; the freq-tolerance-loosening
+> half of Option E was rejected. Anti-cheat PASS: the overturn makes a spurious *positive harder*
+> (length stays a hard gate; the freq residual must be fixed), the falsify arm stays live, the
+> reviewer declined the easier (less-authoring) path because it is unsound — not to change a
+> result — and the boundary held (opened session 67, no model output exists). Build-v2 binding
+> conditions are in **§Ratified resolution** below. See
+> [`result/function-word-swap-build-v1`](../../findings/results/function-word-swap-build-v1.md)
+> (corrected this session) and `experiments/runs/2026-06-21-function-word-vs-content-swap/`.
+
+## Ratified resolution — binding conditions for build-v2
+
+All parent-yardstick conditions (a)–(i) of
+[`decisions/resolved/function-word-anchor-design`](function-word-anchor-design.md) **remain in
+force unchanged**. In addition, the build session that next constructs the frozen set must:
+
+1. **Keep the length gate a HARD freeze-time gate.** Content swaps match the function pair's
+   *signed* Δlen exactly (per-pair signed-Δlen equality — generalizing condition (d) so a new
+   function pair with Δlen=+2 is admissible iff its content controls also swap with Δlen=+2).
+   No Δlen=0 content item may enter the bearing contrast against a +1 function pair. Length is
+   **not** demoted to a covariate. `certify.py`'s `len_only_asymmetry` must stay **0.0**.
+2. **Keep the frequency tolerance at |ΔLg10WF| ≤ 0.10**, both ends, mirrored within-pair spread.
+   Do **not** loosen it (tightening-and-justifying remains allowed per parent (b)).
+3. **Fix the freq-only-reader residual build-v1 failed.** `certify.py`'s
+   `(i) freq-only reader max POSITIVE threshold asymmetry ≤ 0.12` must **PASS** at every θ, and
+   the monotone pooled `func_gap − content_gap` must stay |·| ≤ 0.10 with no per-arm content gap
+   systematically below its function gap. Concretely the `because` arm needs OUT verbs whose
+   content gap ≥ the 1.406 function gap (e.g. choose OUT verbs at/above `because`'s 4.737 Lg10WF).
+   Re-certify + re-hash.
+4. **Restore the ≥4-class span by widening the function-word inventory, not by re-using dead
+   words.** Add coherent, ±0.10-matchable, signed-Δlen-matchable function-word swap pairs from
+   the closed classes the conjecture already names as illustrative (determiners / modals /
+   subordinators / quantifiers). Each added pair passes (b)–(d) and the manipulation check
+   independently, and must **genuinely shift the inferential relation** (a near-synonymous pair
+   like `may→might` has abundant supply but fails the manipulation check — it does not flip NLI —
+   so it is excluded). Session-68 reconnaissance (recorded in the run README) found real supply
+   at the unchanged tolerances for `few→many` (+1, quantifier), `many→every` (+1, quantifier),
+   `shall→should` (+1, deontic modal) and `when→while` (+1, temporal subordinator); each still
+   needs hand-authored coherent carriers + content controls + a manipulation check.
+5. **Reach ≥200 matched items (condition (e)) honestly**, by inventory-widening + capped carrier
+   authoring. The ≥200 bar is **not** amended.
+6. **Report per-pair and per-class content lexical diversity** in `matching-report.json` (distinct
+   out-words per class; items-per-out-word), so prediction 3 ("not driven by a few categories")
+   is auditable; flag any class resting on a single out-word.
+7. **Freeze + hash before outputs (condition (f)) intact**; `probe.py`'s PREREG-sha + "PRE-RUN
+   CRITIC: GO" guard unchanged. A **fresh** pre-run critic must re-certify the widened set.
+8. **Falsify arm intact (condition (h)):** `analyze.py`'s `FALSIFY: contrast ≤ 0` verdict (content
+   flip rate ≥ function flip rate = a clean positive for the distributional camp) unchanged; the
+   consistent-content-swap-in-both-premise-and-hypothesis design (which biases toward the null)
+   is kept.
+9. **Optional Option C layering** (multiple content controls per carrier with explicit
+   function-arm de-duplication + a power statement replacing the "≥200 pairs" framing) is
+   permitted as an analysis enhancement only — it does **not** substitute for conditions 3–5.
+
+If, after widening at the unchanged tolerances, ≥200 / ≥4-class still cannot be reached, the
+correct move is a **further deferral / new decision**, not relaxing a control or lowering the bar.
 
 # Decision: how to resolve the ≥200-count vs tight-matching tension
 
