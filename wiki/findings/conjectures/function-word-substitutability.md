@@ -90,20 +90,30 @@ critic (no item added/dropped after the first probe call). What counts as a "fre
 pair was the place a loop could quietly cheat by selecting items that bias the result — the
 ratified freeze-and-hash + pre-run-critic GO/NO-GO is what binds that.
 
-> **Build v1 (2026-06-21, session 67) — NO-GO; run DEFERRED.** The build pipeline is complete
-> and the set certified SOUND on every matching/shortcut-reader/integrity check (length-only
-> reader asymmetry 0.0; minimal-pair integrity; no leak), but it falls **far short of the ≥200
-> target**: under faithful matching only **~66 clean items across 3 viable content semantic
-> classes** survive. A *length-only* reader forces a signed **+1** content length-match (every
-> function swap is +1 char), and the frequency∩length∩coherence intersection is thin — the
-> person-noun route dies (no open-class noun at Lg10WF ≈ 3.33 with +1 length near 4.74), the
-> `the`→`a` swap admits **no** frequency-matched content control at all (no content word reaches
-> Lg10WF ≈ 6.0), the adjective class has no clean matched swap, and `some`/`will` each yield a
-> single matched out-word. An independent reviewer confirmed the NO-GO and that ≥200 is
-> near-infeasible without relaxing a ratified tolerance. The blocker is queued as
-> [`decisions/open/function-word-count-vs-matching`](../../decisions/open/function-word-count-vs-matching.md);
-> see [`result/function-word-swap-build-v1`](../results/function-word-swap-build-v1.md). The
-> conjecture stays **`designed`** and untested; the probe runs once that decision is ratified.
+> **Build v1 (2026-06-21, session 67) — NO-GO; run DEFERRED.** The build pipeline is complete and
+> the set passes minimal-pair integrity, the length-only-reader check (asymmetry 0.0), and no-leak,
+> but `certification.json` is `"ok": false` on **three** checks: the **count** (66 < 200), the
+> **≥4-class span** (only 3 viable classes — adjective dead), **and** the **freq-only-reader**
+> check (0.1212 > 0.12; the `because`-arm content gap 1.335 < function gap 1.406). *(Correction,
+> session 68: an earlier wording here said "certified SOUND on every matching/shortcut-reader/
+> integrity check" — that overstated it; see the corrected
+> [`result/function-word-swap-build-v1`](../results/function-word-swap-build-v1.md).)* Under
+> faithful matching only **~66 clean items** survive: a *length-only* reader forces a signed **+1**
+> content length-match (every function swap is +1 char), and the frequency∩length∩coherence
+> intersection is thin — the person-noun route dies (no open-class noun at Lg10WF ≈ 3.33 with +1
+> length near 4.74), the `the`→`a` swap admits **no** frequency-matched content control at all (no
+> content word reaches Lg10WF ≈ 6.0), the adjective class has no clean matched swap, and
+> `some`/`will` each yield a single matched out-word.
+>
+> **Decision resolved (2026-06-21, session 68 — adversarial review).** The blocker is resolved:
+> [`decisions/resolved/function-word-count-vs-matching`](../../decisions/resolved/function-word-count-vs-matching.md).
+> The reviewer **overturned** the relax-length default (length is degenerate in the function arm —
+> Δlen ≡ +1 with zero variance — so it cannot be regressed out; it must stay a hard freeze-time
+> gate) and adopted **inventory-widening** (add new function-word pairs at the unchanged ±0.10
+> frequency tolerance + per-pair signed-Δlen gate) + capped carrier-authoring, also requiring the
+> freq-only residual to be fixed and the ≥200/≥4-class bar kept. The conjecture stays **`designed`**
+> and untested; build-v2 (the widened set) runs under a fresh pre-run critic. See
+> [`result/function-word-swap-build-v1`](../results/function-word-swap-build-v1.md).
 
 ## Notes / caveats
 
