@@ -5,13 +5,15 @@ title: The point estimate is a draw — why a single-run accuracy at temperature
 meaning-senses:
   - model-internal
   - functional-vs-formal
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-21
 updated: 2026-06-21
 links:
   - rel: depends-on
     target: result/scivetti-let-alone-powered-rerun-v1
+  - rel: depends-on
+    target: result/scivetti-let-alone-repeated-runs-v1
   - rel: refines
     target: essay/concordant-verdict-hides-spread
   - rel: depends-on
@@ -26,8 +28,8 @@ links:
 
 # Essay: the point estimate is a draw
 
-> **Status: draft (2026-06-21). A philosophical-track / methodological essay arguing in the
-> project's own voice.** Its original contribution is a *measurement-epistemics reading discipline*,
+> **Status: revised (2026-06-21, session 64; originally draft, session 63). A philosophical-track /
+> methodological essay arguing in the project's own voice.** Its original contribution is a *measurement-epistemics reading discipline*,
 > not an empirical claim: a single-run behavioral accuracy at temperature 0 is a **draw**, not a fixed
 > quantity, because temperature-0 decoding is **not** deterministic — re-running a byte-identical
 > instrument can move the accuracy — so a single-run point estimate carries a **run-to-run jitter** that
@@ -40,6 +42,26 @@ links:
 > it draws is about how to *read* the project's own model-internal numbers. Read the revision triggers
 > before citing — in particular, the ~12% magnitude is **one instrument's** jitter, not a transferable
 > constant.
+
+> **Revision (2026-06-21, session 64) — trigger (a) FIRED; scope narrowed and sharpened.** The
+> repeated-run measurement trigger (a) named was run:
+> [`result/scivetti-let-alone-repeated-runs-v1`](../results/scivetti-let-alone-repeated-runs-v1.md)
+> scored the byte-identical instrument **K = 5** times at temperature 0 over the same 63 items. It
+> confirms the essay's central premises and **narrows** its scope exactly as trigger (a) prescribed, on
+> three points. **(1) The jitter is ceiling-protected.** The comparative-correlative ceiling control did
+> **not** jitter (range 0.000 for claude/gemini; 0.033 — one item once — for gpt) while the near-chance
+> let-alone swung up to 0.121 — so the headline claim sharpens from "single-run point estimates are
+> draws" to "single-run point estimates **on hard, near-chance, functional instruments** are draws,"
+> leaving ceilings and clean separations explicitly untouched. **(2) The ~±0.12 is model-specific, not a
+> panel constant.** It is confirmed for **gpt** (range 0.121) but claude's range is 0.061 and gemini's
+> 0.030 — so trigger (b) (a transferable constant) stays **un-fired**, and the discipline reads "ask
+> whether the gap clears the jitter *for this model on this instrument*." **(3) "gemini is deterministic"
+> is corrected to "gemini is the *most stable*."** Over five runs gemini churns 2/33 (not zero) — small,
+> but non-zero. The discipline itself is **unchanged** (ask whether a gap clears the jitter); what moved
+> is the established *prevalence* (large jitter is confined to the small-near-chance cell) plus a worked
+> confirmation — the trigger-(d) case — that a real small effect, gpt's below-baseline residual, **survives**
+> the jitter (de-noised majority-vote 0.606; every one of five runs < 0.90). The ~±0.12 / ~12% sentences
+> below remain accurate as **gpt's** number; read them with the model-specificity this revision adds.
 
 ## The occasion
 

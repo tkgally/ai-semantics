@@ -206,7 +206,15 @@ on this construction is now temp-0 label stochasticity (~12% per run), not item 
   byte-identical runs for both claude and gpt (gemini deterministic). Single-run accuracies
   on this construction are draws with ~±0.12 spread; CIs that assume fixed per-item rates
   understate across-run uncertainty. The right next move is **repeated runs / multi-sample**,
-  not more items.
+  not more items. **→ Done (session 64):**
+  [`result/scivetti-let-alone-repeated-runs-v1`](scivetti-let-alone-repeated-runs-v1.md) ran the
+  byte-identical instrument **K = 5** times and **pins** this — the swing is **gpt ~±0.12 / claude
+  ~0.06 / gemini ~0.03** (model-specific, *not* a constant), it is **ceiling-protected** (the
+  comp-corr control did not jitter), gemini is **most-stable not strictly deterministic** (2/33 over
+  five runs), and **gpt's below-baseline residual survives** the jitter (de-noised majority-vote
+  0.606; every one of five runs < 0.90). The "~12%" / "gemini deterministic" phrasings on this page
+  are the **single-run-pair** read; the K = 5 measurement supersedes their magnitude/determinism
+  detail (the finding — gpt's residual — is unchanged and strengthened).
 - **Item ceiling reached.** 33 is the maximum human-annotated let-alone N in the upstream
   release (the 1-example train split ⊆ the 9 used). No further power is available from this
   resource without new human annotation (out of scope: no human subjects).
