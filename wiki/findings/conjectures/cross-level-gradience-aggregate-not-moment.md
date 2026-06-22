@@ -7,9 +7,8 @@ meaning-senses:
   - referential
   - constructional
   - relational
-status: proposed
-contingent-on:
-  - cross-level-shared-instrument-operationalization
+status: designed
+contingent-on: []
 created: 2026-06-22
 updated: 2026-06-22
 links:
@@ -27,16 +26,17 @@ links:
 
 # Conjecture: the aggregate/moment shape is one cross-level property, not three rhyming facts
 
-> **Status: proposed (scoping only).** This page is a **forward bet**, not a result. It
-> opens **no spend**, ratifies **nothing**, and runs **no probe**. The bet it states is
-> contingent on the operationalization gate
-> [`decisions/open/cross-level-shared-instrument-operationalization`](../../decisions/open/cross-level-shared-instrument-operationalization.md),
-> which is itself **open** and ratifiable — at the earliest — by a *later* session via
-> independent adversarial review ([`PROJECT.md`](../../../PROJECT.md) §12.3). Until that gate is ratified and a
-> shared-instrument probe is designed, frozen, and run, every claim below stays provisional
-> and the **honest default is the deflationary one** (three rhyming, instrument-specific
-> facts), which this conjecture bets *against* — so the burden of proof is on the conjecture,
-> not on the default.
+> **Status: designed (2026-06-22, session 82).** This page is a **forward bet**, not a result. It
+> opens **no spend** and runs **no probe**. Its operationalization gate
+> [`decisions/resolved/cross-level-shared-instrument-operationalization`](../../decisions/resolved/cross-level-shared-instrument-operationalization.md)
+> was **ratified session 82 (ADOPT DEFAULT, independent adversarial review)** — fixing the
+> *yardstick* (Option A + the binding build-session conditions C1–C4), **never the result** —
+> so the `contingent-on` is now cleared and the conjecture is `designed`: a shared-instrument
+> cross-level probe can be **built and frozen under the resolved gate**, then run **only** after a
+> fresh **pre-run critic GO** and a budget check (no probe ran in the ratifying session). Until
+> such a probe is designed, frozen, run, and verified, every claim below stays provisional and the
+> **honest default is the deflationary one** (three rhyming, instrument-specific facts), which this
+> conjecture bets *against* — so the burden of proof is on the conjecture, not on the default.
 
 ## Statement
 
@@ -115,7 +115,7 @@ the OQ's named discriminator:
 > instruments are equalized, that is evidence for three rhyming instrument-specific facts."
 
 The **actual choice of instrument is deferred** to the operationalization gate
-[`decisions/open/cross-level-shared-instrument-operationalization`](../../decisions/open/cross-level-shared-instrument-operationalization.md)
+[`decisions/resolved/cross-level-shared-instrument-operationalization`](../../decisions/resolved/cross-level-shared-instrument-operationalization.md)
 and is **not decided here**. The OQ is explicit that "the operationalization of such a probe
 is **not** decided here and would be a future `wiki/decisions/open/` candidate, with the same
 freeze-before-results discipline the lexical and AANN designs imposed." This conjecture states
@@ -177,15 +177,16 @@ statement would have to be stated at the **weakest common strength**." Concretel
 cross-level claim built on this conjecture could be made only as an **internal, within-model
 contrast** unless each leg's anchor is *separately* established — which is a deferred,
 per-leg anchor obligation, routed to the operationalization gate
-([`decisions/open/cross-level-shared-instrument-operationalization`](../../decisions/open/cross-level-shared-instrument-operationalization.md),
+([`decisions/resolved/cross-level-shared-instrument-operationalization`](../../decisions/resolved/cross-level-shared-instrument-operationalization.md),
 Q4) and to future per-leg anchor decisions, **never** dodged here.
 
 ## Notes / caveats
 
 - **Provisional throughout.** The instrument, the per-level verdict map, the cross-level
-  reading rule, and every leg's anchor status all depend on the open gate's *later*
-  ratification. Until then this is a forward bet, not a design — and ratifying that gate would
-  fix the **yardstick**, never the result ([`CLAUDE.md`](../../../CLAUDE.md) rule 6).
+  reading rule, and every leg's anchor status are now **fixed by the resolved gate's frozen
+  design** (Option A + the binding conditions C1–C4); what stays provisional is the *result* —
+  no shared-instrument probe has yet been built, frozen, run, or verified. Ratifying that gate
+  fixed the **yardstick**, never the result ([`CLAUDE.md`](../../../CLAUDE.md) rule 6).
 - **Behavioral, not representational.** Every leg is about what the models *do*; none touches
   graded *representations*. A cross-level property, if found, would be a **behavioral
   regularity**, not a claim about internals or about next-token training mechanics directly.
