@@ -71,6 +71,22 @@ links:
 > independence of scale and commitment is untouched; what the channel test adds is that the
 > commitment leg is mostly real, not an aperture.
 
+> **CROSS-LEVEL NOTE (2026-06-22, session 85) — the lexical leg's *join* to the other levels
+> failed equalization; this essay's lexical finding is untouched.** The bet that this lexical
+> "graded scale, ungraded commitment" shape was *one cross-level property* shared with the
+> constructional and relational levels was tested and **lost**: under one frozen shared
+> instrument it **dissolved at R2**
+> ([`result/cross-level-shared-instrument-v1`](../results/cross-level-shared-instrument-v1.md);
+> 3/3 models). The lexical leg is the **only** one where the discrete-on-the-moment posture held;
+> at the other two levels the same models go graded (take "UNCLEAR" elevated). **Nothing here is
+> retracted** — this essay was always scoped to the lexical level, and the dissolution
+> *re-confirmed* the lexical commitment null under a third instrument; only the cross-level
+> *unification* fell. A live successor reading is that the lexical leg's specialness may be the
+> *kind* of ambiguity its bridging stimulus presented (a **scalar** usage-similarity midpoint, with
+> a nearer pole to lean to) rather than the word-sense *layer* — see
+> [`essay/ambiguity-kind-not-level`](ambiguity-kind-not-level.md), filed at R1 and routed to the
+> matched-ambiguity-kind probe.
+
 > **Status: revised (2026-06-22; draft 2026-06-21). A philosophical-track essay arguing in the
 > project's own voice, written *before* the probe that would test it; trigger (b) has since
 > fired (see the revision banner above).** Its original contribution is conceptual: it

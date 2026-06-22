@@ -34,6 +34,22 @@ links:
 
 > **Status: revised (2026-06-14). The project's third original essay — the philosophical track arguing in its own voice.** Its empirical leg now rests on a **replicated** PARTIAL result — the original v4 run ([`result/aann-inferential-v4`](../results/aann-inferential-v4.md)) and its powered panel replication on a fresh, larger, held-out item set ([`result/aann-inferential-v6`](../results/aann-inferential-v6.md)), which reproduced the forced-choice-vs-entailment dissociation **cell for cell** across two disjoint item sets — together with the standing instrument-sensitivity question it sharpens ([`open-question/instrument-sensitivity-constructional-inference`](../open-questions/instrument-sensitivity-constructional-inference.md)). The thesis is a **methodological/philosophical** position about what "using" a construction's meaning could amount to when two probes of it disagree — **not** a claim that the models do or do not "have" meaning. The Revision triggers section states in advance exactly what future evidence would revise or retract it (two of its triggers were exercised by the v6 replication and **neither fired** — see the Revision log). Read the triggers before citing the argument.
 
+> **CROSS-LEVEL NOTE (2026-06-22, session 85) — the constructional leg's *join* to the other
+> levels failed equalization; this essay's constructional finding is untouched.** The
+> constructional preference-vs-commitment dissociation was, in a later session, read as one leg of
+> a candidate *cross-level* property (graded-in-the-aggregate / discrete-or-uncommitted-in-the-moment,
+> shared with the lexical and relational levels). That cross-level **unification** was tested under
+> one frozen shared instrument and **dissolved at R2**
+> ([`result/cross-level-shared-instrument-v1`](../results/cross-level-shared-instrument-v1.md);
+> 3/3 models): on the equalized instrument the constructional genuinely-ambiguous (structural
+> two-reading) item drew **elevated decline** for claude and gemini — graded-on-the-moment, the
+> opposite pole from the lexical leg (gpt's constructional leg was a C3 NO-GO, over-declining its
+> own clear controls). **Nothing in this essay is retracted**: the FC-vs-NLI dissociation was always
+> scoped to the constructional level; only the cross-level *join* fell. A live successor reading
+> indexes the split by the *kind* of indeterminacy (this leg's *disjunctive* two-reading vs the
+> lexical leg's *scalar* midpoint) rather than by level — see
+> [`essay/ambiguity-kind-not-level`](ambiguity-kind-not-level.md).
+
 ## The position
 
 This essay argues one bounded position. A **forced-choice paraphrase preference** and an **entailment commitment** are not two noisy measurements of one underlying property called "use." They are evidence for **two different things**: a graded *distributional compatibility* (given the construction, which paraphrase fits better?) and a defeasible *inferential commitment* (given the premise, is the hypothesis true?). Where these dissociate — where the construction reliably shifts which paraphrase a model *prefers* but does not move whether the model will *commit* to the entailment — the question "does the model use the construction's meaning?" has **no single answer at the model level**. The construction modulates preference without licensing inference; "use" comes apart into two properties that need not co-occur.
