@@ -29,6 +29,36 @@ links:
 > 6). **No probe is run here and no spend is opened.** This page lays out options and a
 > provisional default for a future reviewer; it decides nothing.
 
+> **Review verdict — session 81, 2026-06-22 (independent adversarial review; gate stays OPEN).**
+> Per [`PROTOCOL.md`](../../../PROTOCOL.md) §2 this gate became eligible for cross-session
+> ratification in session 81 (opened session 80; the session boundary held). A **fresh
+> independent adversarial-review agent** — not the orchestrator that did this session's
+> downstream work — reviewed the page, its three options, the bound constraints (Q3, Q4), the
+> cross-level reading rule (Q2), and the provisional default (Option A). **Verdict: KEEP OPEN.**
+> The reviewer affirmed the substantive choices — **Option A is the right shared instrument**
+> (C "does not port cleanly" to the lexical/relational levels and would violate Q3; B's
+> forced-pick dispersion was already demoted to *characterizing-only* at the lexical leg, too
+> blunt as a primary moment-axis instrument), the **Q3 disclosed-and-scoped** treatment of the
+> within-record relational "aggregate" is adequate, and the **Q4 anchor deferral is a
+> legitimate deferral, not a dodge**. But it found one load-bearing defect: **Option A adopts
+> the same instrument family the project already ran at the lexical leg
+> ([`result/lexical-bridging-context-v1`](../../findings/results/lexical-bridging-context-v1.md))
+> while dropping the binding scaffolding the resolved lexical gate
+> ([`lexical-bridging-context-operationalization`](../resolved/lexical-bridging-context-operationalization.md))
+> proved that family needs.** At the lexical leg the clean ungraded-commitment null was carried
+> by the **categorical decline** instrument (≈0 UNCLEAR on bridging), *not* by confidence —
+> which was flat-but-high and, under the working-surface re-run
+> ([`result/lexical-bridging-context-working-surface-v1`](../../findings/results/lexical-bridging-context-working-surface-v1.md)),
+> **partly channel-sensitive** (claude's self-reported confidence cracked while categorical
+> decline held). So treating the confidence rating as a co-equal expression of the *moment*
+> pole is a **regression** from the ratified lexical architecture, not the inheritance the page
+> advertised. **Resolution this session:** the four required additions are incorporated below
+> as **binding build-session conditions** (new section before the Anti-cheat note); they make
+> the gate *stricter*, touch no result, and were the independent reviewer's own recommendations.
+> The gate **remains OPEN** with these conditions added and is **eligible for ratification at
+> the earliest next session** by a fresh independent reviewer over the strengthened page. **No
+> probe was run and no spend was opened.**
+
 # Decision: which single commitment instrument, applied identically across levels, frozen before any result
 
 ## Why this exists
@@ -254,6 +284,59 @@ demoted forced-pick dispersion to characterizing-only) and C **does not port cle
 lexical and relational levels (Q1-C weakness) — so A is the option least likely to smuggle in a
 positive by measuring different things at different levels. **This choice is NOT made here; it
 is laid out for a future independent adversarial-review pass.**
+
+## Binding build-session conditions (load-bearing — added 2026-06-22, session 81, per independent review)
+
+These were the independent reviewer's four required additions; they are now **load-bearing**.
+They modelled on the resolved lexical gate's conditions (a)–(i)
+([`lexical-bridging-context-operationalization`](../resolved/lexical-bridging-context-operationalization.md)),
+the precedent this gate advertised inheriting but had not yet matched. **None makes a positive
+likelier; all close a cheat-surface or correct the reading rule.** A future builder / pre-run
+critic must enforce **all** of:
+
+- **(C1) Per-axis separation — categorical decline, not confidence, is load-bearing for the
+  moment pole.** Under Option A the elicitation carries two components: a 0–100 **confidence**
+  rating and a categorical **"unsure / both / unclear" decline**. The **categorical decline**
+  (not the confidence rating) is the load-bearing instrument for the *moment / commitment* pole
+  at **every** level — exactly as the lexical gate ruled "position by B alone; commitment by
+  **both** B and C," and as
+  [`result/lexical-bridging-context-v1`](../../findings/results/lexical-bridging-context-v1.md)
+  found the ungraded-commitment null was carried by **near-zero categorical decline**, not by
+  confidence. Confidence may **corroborate** but may **not, on its own, flip a moment-axis
+  verdict** at any level. The cross-level reading rule (Q2) must be written this way before data.
+
+- **(C2) Numeric / wording freeze + sha256 (the M2-analogue this page lacked).** Before the
+  first probe call, record and **sha256-hash**: (i) the confidence scale and its exact numeric
+  **mid-band**; (ii) the **verbatim** "unsure / both / unclear" decline wording; (iii) the
+  **per-level operational definitions of "aggregate" and "moment"** (the Q3 comparability slot,
+  frozen, with the relational "aggregate" labelled the weaker within-record /
+  single-reader-recoverable notion); and (iv) the **cross-level confirm / dissolve / weak
+  thresholds**. Prose-level "all scales/wording frozen" is **too loose to bind a builder** (the
+  lexical reviewer's central holding); the quantities above must be pinned and hashed.
+
+- **(C3) Clear-class precondition → NO-GO, per level.** A level is interpretable only if its
+  **clear classes** show **high confidence and low decline** under the shared instrument. If a
+  level fails this precondition, that level **collapses to weak / `internal-contrast-only`** and
+  **cannot contribute a moment-axis verdict** — it does not get re-worded or re-thresholded to
+  rescue it (the lexical gate's condition (e)). The precondition is reported per level as a
+  precondition, not discovered after the fact.
+
+- **(C4) Channel-sensitivity guard for the confidence component.** Because the project has
+  already caught self-reported confidence **moving with the output channel** rather than with
+  indeterminacy (claude's confidence softened under the working surface while categorical
+  decline held —
+  [`result/lexical-bridging-context-working-surface-v1`](../../findings/results/lexical-bridging-context-working-surface-v1.md)),
+  a confidence **shift alone** — without a matching categorical-decline shift — is reported as a
+  **self-report effect, NOT as graded-moment evidence**. This keeps the named "channel-sensitive
+  self-report" weakness of Option A out of the cross-level moment verdict.
+
+**Reporting nuance (not a blocker, recorded for the builder).** The Q2 confirm rule fires at
+**≥2** levels; a "confirm" that rests on the lexical + constructional legs and **excludes the
+relational leg** (the weakest, within-record one) buys *less* than a 3-level confirm and must be
+scoped as such — a 2-level instrument-equalized regularity over the two stronger legs, not a
+full cross-level mechanism. The convergence ladder
+([`essay/cross-level-convergence-ladder`](../../findings/essays/cross-level-convergence-ladder.md))
+governs the rung such a result may be asserted at (R2 over the levels actually tested).
 
 ## Anti-cheat note
 

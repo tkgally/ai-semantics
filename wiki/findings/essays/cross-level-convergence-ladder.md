@@ -7,7 +7,7 @@ meaning-senses:
   - constructional
   - relational
   - human-comparison
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-22
 updated: 2026-06-22
@@ -22,11 +22,13 @@ links:
     target: essay/undischargeable-negative
   - rel: depends-on
     target: essay/output-channel-confound
+  - rel: depends-on
+    target: source/hitchcock-redei-2020-reichenbach-cc
 ---
 
 # Essay: from rhyme to mechanism — a convergence ladder for cross-level pattern claims
 
-> **Status: draft (2026-06-22). A philosophical-track / methodological essay arguing in the
+> **Status: revised (2026-06-22). A philosophical-track / methodological essay arguing in the
 > project's own voice.** Its original contribution is a **general evidence standard** for one
 > recurring move the project is now positioned to make repeatedly: the upgrade from *"we describe
 > several findings with one phrase"* to *"those findings share one underlying mechanism."* That
@@ -218,6 +220,47 @@ its *own* instrument cannot move the cross-level claim, just as the parent essay
 same probe cannot" move a negative: another R1-style observation adds another rhyme, never an
 instrument-equalized cross-leg test.)
 
+## Where the ladder meets the external literature
+
+The ladder was abstracted from scratch off the OQ's ad-hoc reasoning, and naming an external
+methodology literature that it informally reinvents is the honest next step — it tells us whether the
+project re-derived a real bar or merely a private one. The relevant literature is the philosophy of
+**common-cause inference**: when two events are correlated and neither causes the other, what licenses
+inferring that they **share a cause** rather than merely coincide. That is, abstractly, the ladder's
+own question — "the three legs *rhyme*; whether they *share a cause* is unshown." The canonical
+statement is Reichenbach's Common Cause Principle, summarized in
+[`source/hitchcock-redei-2020-reichenbach-cc`](../../base/sources/hitchcock-redei-2020-reichenbach-cc.md):
+"Reichenbach's Common Cause Principle says that when such a probabilistic correlation between *A* and
+*B* exists, this is because one of the following causal relations exists: *A* is a cause of *B*; *B* is
+a cause of *A*; or *A* and *B* are both caused by a third factor, *C*."
+
+The mapping is exact at one point and instructive at another. The **exact** point is the
+**screening-off / independence** condition: Reichenbach's common cause must render its effects
+"*conditionally independent*, given *C*" — "In Reichenbach's terminology, *C* screens *A* off from
+*B*." The ladder's R1→R2 step is the behavioral form of precisely this requirement: under R1 the legs
+agree only under each level's *own* instrument, so their agreement could flow through the shared method
+rather than a shared cause; R2 equalizes the instrument so that, if the shape survives, the instrument
+is removed as a non-independent route — the behavioral analogue of demanding that the witnesses screen
+off, not co-vary through a common method. The ladder's standing caveat that shared priors are not
+independent witnesses is the same caveat under another name.
+
+The **instructive** point is that the external literature locates the licensing bar *more permissively*
+than the ladder does, and this sharpens rather than refutes the deflationary default. Reichenbach's
+principle is "significant because it posits a connection between causal structure and probabilistic
+correlations, thus facilitating causal inference from observed correlations" — i.e. a stable
+correlation, on the principle, already *motivates* positing a common cause, whereas the ladder
+withholds the mechanism verdict until the instrument is equalized at R2. The gap is deliberate, not a
+correction of Reichenbach: the ladder operates over n=3 commercial models whose instruments are
+confounded with the levels they measure, so the project's higher bar is a behavioral conservatism that
+*operationalizes* Reichenbach's independence condition rather than relaxing it. And the literature
+carries its own deflationary residue: "A number of authors have proposed counterexamples to the Common
+Cause Principle" — correlations that resist a clean screening-off common cause — which is the external
+mirror of the ladder's insistence that a rhyme can dissolve at R2. So the external grounding *confirms*
+the family of inference (independence is the real discriminator) while *relocating* the bar (a robust
+correlation licenses more, sooner, in the unconstrained case than the project's behavioral one allows).
+The ladder stands; it is now read as a deliberately conservative behavioral specialization of a
+recognized common-cause inference, not a from-scratch private yardstick.
+
 ## Why a ladder and not a binary
 
 A binary — "is this shape one mechanism, yes or no?" — would force the project to either over-assert
@@ -297,10 +340,21 @@ into information instead of a non-event.
   instrument's native reading, R2 = a third instrument equalizing the contrast) or need a sibling. The
   present scope is cross-level; the cross-instrument extension is flagged, not asserted.
 
-- **(e) A methodological source that locates the bar differently.** The ladder rests on a from-scratch
-  abstraction of the OQ's ad-hoc disanalogy-and-discriminator reasoning, not on an ingested external
-  methodology literature on mechanism-vs-coincidence inference. If such a source is ingested and locates
-  the licensing bar elsewhere, re-derive; this is the essay's weakest provenance point.
+- **(e) A methodological source that locates the bar differently — *partially discharged 2026-06-22*.**
+  The ladder began as a from-scratch abstraction of the OQ's ad-hoc disanalogy-and-discriminator
+  reasoning. As of 2026-06-22 (session 81) this trigger is **partially discharged**: the essay now
+  ingests [`source/hitchcock-redei-2020-reichenbach-cc`](../../base/sources/hitchcock-redei-2020-reichenbach-cc.md),
+  the SEP entry on Reichenbach's Common Cause Principle, as the external methodology literature on
+  mechanism-vs-coincidence inference (see "Where the ladder meets the external literature"). The source
+  **confirmed** the ladder's discriminator — the R1→R2 step is the behavioral form of Reichenbach's
+  **screening-off / conditional-independence** condition — and **relocated** the bar: the principle is
+  *more permissive* than the ladder's deflationary default (a robust correlation already licenses
+  positing a common cause), so the ladder is now read as a deliberately conservative behavioral
+  specialization, not a refuted one. Residual weakness: one encyclopedia entry is not the whole
+  literature (robustness analysis / triangulation / consilience proper — e.g. Keyser on robustness, not
+  reachable open-access at ingest — remain un-ingested), and the ladder stays a *behavioral adaptation*
+  of these ideas, not a derivation from them. If a future source locates the bar elsewhere again,
+  re-derive.
 
 ## What this essay is not
 
@@ -366,7 +420,34 @@ into information instead of a non-event.
   `internal-contrast-only`), and the essay's original argument is methodological, so it carries no
   resource-anchor obligation. The anchor-strength clause it states is a *constraint on* such claims, not
   a human-comparison the essay itself makes.
-- **Provenance note (weaker than page-level).** The general ladder is a from-scratch abstraction of the
-  ad-hoc reasoning in one in-repo open-question, not a reading of an external methodology literature on
-  distinguishing one mechanism from coincident causes. That is the essay's weakest provenance point and
-  is named as revision trigger (e).
+- **Provenance note (partially strengthened 2026-06-22).** The general ladder *originated* as a
+  from-scratch abstraction of the ad-hoc reasoning in one in-repo open-question. As of 2026-06-22 it is
+  no longer ungrounded in external methodology: it now reads against
+  [`source/hitchcock-redei-2020-reichenbach-cc`](../../base/sources/hitchcock-redei-2020-reichenbach-cc.md)
+  (Reichenbach's Common Cause Principle), which **confirmed** the screening-off / independence
+  discriminator the ladder's R1→R2 step operationalizes and **relocated** the bar (the principle is more
+  permissive than the ladder's deflationary default; the ladder is a conservative behavioral
+  specialization). This was the essay's weakest provenance point — revision trigger (e) — and is now
+  *partially* discharged. It remains the weakest point: one SEP entry is not the full robustness /
+  triangulation / consilience literature (the most direct fit, Keyser's robustness-analysis paper, was
+  not reachable open-access at ingest), and the ladder remains a behavioral adaptation rather than a
+  derivation. Quotes leaned on are verbatim from the source page (double-fetch-confirmed): "Reichenbach's
+  Common Cause Principle says that when such a probabilistic correlation between *A* and *B* exists, this
+  is because one of the following causal relations exists …"; "In Reichenbach's terminology, *C* screens
+  *A* off from *B*."; "*conditionally independent*, given *C*"; "facilitating causal inference from
+  observed correlations"; "A number of authors have proposed counterexamples to the Common Cause
+  Principle."
+
+## Revision log
+
+- **2026-06-22 (session 81).** Partially discharged revision trigger (e): ingested
+  [`source/hitchcock-redei-2020-reichenbach-cc`](../../base/sources/hitchcock-redei-2020-reichenbach-cc.md)
+  (SEP, Reichenbach's Common Cause Principle) as the external methodology literature on
+  mechanism-vs-coincidence inference the ladder informally reinvents. Added the "Where the ladder meets
+  the external literature" section; revised trigger (e) and the Provenance note to record that the source
+  **confirmed** the screening-off / independence discriminator (the ladder's R1→R2 step) and **relocated**
+  the bar (Reichenbach is more permissive; the ladder is a conservative behavioral specialization).
+  Status `draft → revised`; added `depends-on: source/hitchcock-redei-2020-reichenbach-cc` to `links:`.
+  No empirical claim changed; the ladder itself is unchanged, now externally grounded. (The preferred
+  fit, Keyser 2016 on robustness analysis, was not reachable open-access at ingest; SEP Reichenbach used
+  as the confirmed-accessible primary.)
