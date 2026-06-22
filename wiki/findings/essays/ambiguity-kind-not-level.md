@@ -208,9 +208,15 @@ bridging midpoint (related senses, scalar) and a homonym (unrelated senses, disj
 "lexical," so a **within-lexical** contrast — DWUG bridging items vs. balanced-homonym items, the
 *same* frozen instrument — tests "kind, not level" while holding the level fixed, sidestepping the
 cross-level comparability problem that dogged the original probe. This is the matched-ambiguity-kind
-follow-up, surfaced as an operationalization decision **opened this session** (options + a
-provisional default; ratified, at the earliest, a later session) — see
-[`decisions/open/matched-ambiguity-kind-cross-level`](../../decisions/open/matched-ambiguity-kind-cross-level.md).
+follow-up, surfaced as an operationalization decision opened the session this essay was written
+(session 85) and **ratified session 86 (2026-06-22, ADOPT DEFAULT)** — see
+[`decisions/resolved/matched-ambiguity-kind-cross-level`](../../decisions/resolved/matched-ambiguity-kind-cross-level.md):
+the ratified yardstick is **Option B** (keep the DWUG scalar-bridging lexical leg; *add* a
+balanced-homonym disjunctive lexical class as a *within-lexical* contrast, level held fixed),
+`internal-contrast-only` for the disjunctive arm, plus a binding **nuisance-matching freeze**
+(register/length/frequency/syntactic-frame between the two lexical classes) — so the within-lexical
+probe below is now **buildable** (the run still gated by a fresh pre-run critic + budget). This
+ratification fixes the *yardstick*; the kind-reading itself **stays at R1** until such a probe runs.
 The essay does not decide that operationalization; it states why the test is worth running:
 **it is the R2 rung for the kind-reading**, the one move that would tell a kind-regularity from a
 soft-stimulus artifact, exactly as the original shared-instrument probe was the R2 rung for the

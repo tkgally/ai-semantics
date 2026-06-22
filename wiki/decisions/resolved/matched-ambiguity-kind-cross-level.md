@@ -1,9 +1,12 @@
 ---
 id: matched-ambiguity-kind-cross-level
 title: "How do you certify 'matched ambiguity KIND' across levels so the cross-level discrete-vs-graded contrast is fair — and what is the human-anchor posture for a genuinely-DISJUNCTIVE lexical class (a balanced homonym context is NOT a DWUG usage-similarity midpoint)?"
-status: open
+status: resolved
 opened: 2026-06-22
 opened-by: autonomous (session 85, surfacing the load-bearing comparability residual of result/cross-level-shared-instrument-v1 as a queued operationalization gate)
+resolved: 2026-06-22
+resolved-by: autonomous (adversarial review)
+resolution: adopt-default (Q1 Option B — keep the DWUG scalar-bridging lexical leg, ADD a balanced-homonym disjunctive lexical class as a within-lexical scalar-vs-disjunctive contrast, level held fixed; Q2 Q2-b internal-contrast-only for the disjunctive arm unless a homonym sense-resource is separately ratified; Q3 reading rule as written; PLUS one added binding condition — a nuisance-matching freeze on register/length/frequency/syntactic-frame between the two lexical classes; ratified session 86)
 meaning-senses:
   - distributional
   - referential
@@ -25,13 +28,71 @@ links:
     target: concept/distributional-meaning
 ---
 
-> **Status: OPEN — opened this session (2026-06-22, session 85). NOT ratifiable here.** Per
-> [`CLAUDE.md`](../../../CLAUDE.md) rule 5 and charter §12.3, this gate presents OPTIONS + a
-> PROVISIONAL DEFAULT only. It is a *yardstick* question and **fixes nothing**; the earliest it
-> may be ratified is a *later* session's independent adversarial-review pass with written
-> rationale, recorded `resolved-by: autonomous (adversarial review)`, the session boundary
-> holding (opened 85 → earliest ratification 86+). **This page opens no spend and runs no
-> probe.** Ratifying it would fix *how matched-ambiguity-kind is certified*, never any result.
+> **Status: RESOLVED — ADOPT DEFAULT (independent adversarial review, session 86, 2026-06-22).**
+> Opened session 85, **ratified session 86** by a fresh independent adversarial-review agent (the
+> session boundary held: opened 85 → ratified 86). **Verdict: ADOPT DEFAULT** — **Q1 = Option B**
+> (keep the human-anchored DWUG scalar-bridging lexical leg; **ADD** a balanced-homonym
+> disjunctive lexical class as a *within-lexical* scalar-vs-disjunctive contrast, **level held
+> fixed**), **Q2 = Q2-b (`internal-contrast-only`)** for the disjunctive arm unless a sense-
+> annotated homonym resource is separately, cross-session ratified (Q2-a, an explicit future
+> decision; **no anchor is invented here**), **Q3 reading rule as written** (instrument + C1–C4
+> inherited unchanged and re-frozen; matched-kind certification + item ids + survival/collapse
+> threshold sha256-frozen before the first probe call; survival and collapse reported
+> symmetrically, survival held to a *higher* anti-cheat bar). **One binding condition was added at
+> ratification** (see below). The reviewer **spot-checked verbatim** the two load-bearing quotes
+> this page pulls from [`result/cross-level-shared-instrument-v1`](../../findings/results/cross-level-shared-instrument-v1.md)
+> ("the stimulus **body** …" and "Whether the lexical discreteness …") and the usage-similarity
+> **cap** quote from [`decisions/resolved/lexical-bridging-context-anchor`](lexical-bridging-context-anchor.md)
+> — all match character-for-character (the cap quote's ellipsis honestly elides a parenthetical
+> without distorting meaning). **Anti-cheat PASS:** Option B isolates the confounded variable
+> rather than smuggling it — it varies *only* the ambiguity KIND with the **level held fixed**, so
+> it cannot manufacture a *survival* (which would partly revive the defeated unified conjecture)
+> by handing the lexical leg a softer stimulus; the named failure mode (re-selecting the
+> disjunctive class against model confidence) is foreclosed by the Q3 sha256 freeze; inherited C1
+> keeps the moment verdict decline-driven, not confidence-driven; survival carries the higher bar.
+> Option A is the stronger-but-costlier alternative (a full cross-level matched-kind statement,
+> needing a reachable Q2-a homonym anchor — held in reserve); Option C ("behaviorally unresolvable
+> at this N") was correctly rejected because Option B is a concrete, cheap, freezable design that
+> refutes its premise. Q2-b is **honest, not a dodge** — Q2-a is held open as a separate future
+> cross-session decision and no in-repo resource silently certifies homonym sense co-presence
+> (verified against [`concept/polysemy`](../../base/concepts/polysemy.md): DWUG "does not tag pairs
+> as polysemy vs. homonymy"); the **weakest-common-strength** rule correctly floors any unified /
+> within-lexical statement at `internal-contrast-only` for the disjunctive arm while the DWUG leg
+> keeps its usage-similarity cap. **The reviewer stated the verdict is not result-motivated** (no
+> stake in survival vs collapse; if anything a reviewer hoping to revive the unified conjecture
+> would prefer the looser Option A, where cross-level body confounds could leak a survival — so
+> endorsing B closes that door, the correct direction for a yardstick). **No probe was run and no
+> spend was opened — ratifying fixes the yardstick, never the result** ([`CLAUDE.md`](../../../CLAUDE.md)
+> rule 6). The run remains gated by a future independent **pre-run critic GO/NO-GO** and a
+> **budget** check; a NO-GO defers the run rather than relaxing any band.
+>
+> **Binding condition added at ratification — the nuisance-matching freeze (load-bearing).**
+> Option B's two lexical classes — DWUG scalar-bridging (attested corpus usages) vs.
+> author-built balanced-homonym contexts — may differ not only in ambiguity *kind* but in
+> **register, token/sentence length, target-word frequency band, and syntactic frame**. Without
+> matching on these, a %UNCLEAR difference (or its absence) could be charged to a nuisance
+> dimension rather than to kind — the *within-level* analogue of the very body-difference confound
+> this gate exists to kill. **Therefore, before any model call, the frozen matched-kind
+> certification must additionally record that the two lexical classes are matched (or explicitly
+> stratified/controlled) on register, token/sentence length, target-word frequency band, and
+> syntactic frame, to the extent the pools allow; any residual imbalance is disclosed in the
+> design doc and the result must lead with it as a co-confound.** If the pools cannot be matched,
+> the result states the imbalance as a limit, exactly as
+> [`result/cross-level-shared-instrument-v1`](../../findings/results/cross-level-shared-instrument-v1.md)
+> stated its body-difference caveat. This neutralizes the one confound the page understated and
+> keeps Option B's "level held fixed" promise honest at the *body* level, not just the
+> *level-label* level.
+>
+> `contingent-artifacts` is empty (the essay [`essay/ambiguity-kind-not-level`](../../findings/essays/ambiguity-kind-not-level.md)
+> is `contingent-on: []`, held at R1 on the convergence ladder, and is **unaffected** by this
+> ratification — it stays at R1 pending an actual run), so nothing needs promotion or retirement.
+> Full rationale: [`log.md`](../../../log.md) and [`decisions/resolved/index.md`](index.md).
+>
+> ---
+>
+> *The original surfacing text (options, provisional default, anti-cheat note) is preserved below
+> as the ratified record. The PROVISIONAL DEFAULT it names is now the RATIFIED yardstick, amended
+> by the one binding nuisance-matching condition above.*
 
 # Decision: certifying "matched ambiguity KIND" across levels, and the anchor for a disjunctive lexical class
 
@@ -79,9 +140,9 @@ This is exactly the "future `wiki/decisions/open/` candidate" the open question 
 would be a future `wiki/decisions/open/` candidate, with the same freeze-before-results
 discipline …"). It inherits the shape and the anti-cheat discipline of the resolved
 shared-instrument gate
-([`decisions/resolved/cross-level-shared-instrument-operationalization`](../resolved/cross-level-shared-instrument-operationalization.md))
+([`decisions/resolved/cross-level-shared-instrument-operationalization`](cross-level-shared-instrument-operationalization.md))
 and the **claim-cap** precedent of the resolved lexical anchor gate
-([`decisions/resolved/lexical-bridging-context-anchor`](../resolved/lexical-bridging-context-anchor.md)).
+([`decisions/resolved/lexical-bridging-context-anchor`](lexical-bridging-context-anchor.md)).
 
 ## What is being decided (scope), and what is not
 
@@ -102,7 +163,7 @@ and the **claim-cap** precedent of the resolved lexical anchor gate
 
 - **The shared commitment instrument itself.** Already resolved (Option A: graded
   SAME/DIFFERENT/UNCLEAR + 0–100 confidence, C1–C4 binding) by
-  [`decisions/resolved/cross-level-shared-instrument-operationalization`](../resolved/cross-level-shared-instrument-operationalization.md).
+  [`decisions/resolved/cross-level-shared-instrument-operationalization`](cross-level-shared-instrument-operationalization.md).
   This gate changes the **lexical stimulus class**, not the instrument; the instrument and its
   C1–C4 conditions are **inherited unchanged** and re-frozen.
 - **Whether to run at all.** A future independent **pre-run critic** GO/NO-GO and a **budget**
@@ -206,7 +267,7 @@ lexical leg is made disjunctive.
 **A balanced homonym context is NOT a DWUG usage-similarity midpoint.** The resolved lexical
 anchor gate certified only a *usage-similarity* yardstick and **capped** the claim accordingly —
 verbatim from
-[`decisions/resolved/lexical-bridging-context-anchor`](../resolved/lexical-bridging-context-anchor.md):
+[`decisions/resolved/lexical-bridging-context-anchor`](lexical-bridging-context-anchor.md):
 
 > "the result may make a **human-comparison claim only about usage-similarity intermediacy** … It
 > may **NOT** claim humans certified two senses co-present."
@@ -254,7 +315,7 @@ The reading rule is fixed **before** any output:
    not confidence, is load-bearing for the moment pole), C2 (numeric/wording sha256 freeze), C3
    (clear-class precondition → per-level NO-GO), C4 (channel-sensitivity guard for confidence) are
    carried over verbatim from
-   [`decisions/resolved/cross-level-shared-instrument-operationalization`](../resolved/cross-level-shared-instrument-operationalization.md)
+   [`decisions/resolved/cross-level-shared-instrument-operationalization`](cross-level-shared-instrument-operationalization.md)
    and re-frozen. This gate changes **only the lexical stimulus class's KIND**, nothing else.
 3. **Pre-commit survival vs collapse.** **Survival** = the lexical disjunctive class's decline
    (%UNCLEAR) stays near-zero and CI-indistinguishable from the prior scalar-bridging lexical leg,
