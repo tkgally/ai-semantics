@@ -18,6 +18,8 @@ links:
     target: conjecture/lexical-sense-gradience
   - rel: depends-on
     target: result/lexical-bridging-context-v1
+  - rel: depends-on
+    target: result/lexical-bridging-context-working-surface-v1
   - rel: anchors
     target: resource/dwug-usage-graphs
   - rel: depends-on
@@ -26,10 +28,19 @@ links:
 
 # Claim: graded scale, ungraded commitment (lexical, behavioral)
 
-> **Status: supported (2026-06-22, session 77)** by a single direct test,
-> [`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md)
-> (3/3 panel models, clear-class precondition met). Direction-of-effect at small,
-> lemma-clustered N — not a coverage claim.
+> **Status: supported (2026-06-22, session 77; channel-checked session 79).** Supported by a
+> direct test, [`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md)
+> (3/3 panel models, clear-class precondition met), and the channel-artifact alternative named
+> below has since been tested:
+> [`result/lexical-bridging-context-working-surface-v1`](../results/lexical-bridging-context-working-surface-v1.md)
+> re-ran the probe under a **working surface** (format-only, reasoning held constant) and found
+> the commitment null is **largely channel-CONTROLLED, not a forced-format artifact** — it
+> survives a genuinely-used working surface for gemini, and the **categorical-decline** half holds
+> for every model that took up the channel; the one crack is claude's **self-reported confidence**
+> (it softens under reflection, CI-strict lower), and gpt **declined** the surface (inconclusive).
+> So the claim stands with a sharpened scope: the *categorical-commitment* component is
+> channel-controlled; the *self-reported-confidence* component is partly channel-sensitive (claude).
+> Direction-of-effect at small, lemma-clustered N — not a coverage claim.
 
 ## Statement
 
@@ -84,5 +95,11 @@ The clear-class precondition was met on all three models, so the result is ancho
 - Evidence that the ungraded-commitment pattern is an artifact of the working channel
   (single-token output) rather than the relation — c.f. the
   [`output-channel-confound`](../essays/output-channel-confound.md) line on the modal/
-  let-alone axis — would bound it; this probe used short-label output, so a working-surface
-  re-run is the natural next test.
+  let-alone axis — would bound it. **This test has now run**
+  ([`result/lexical-bridging-context-working-surface-v1`](../results/lexical-bridging-context-working-surface-v1.md)):
+  the pattern is **largely channel-controlled**, not an artifact, so this would-change-it
+  route is mostly closed — with the residual that claude's *self-reported confidence* component
+  is partly channel-sensitive. A future probe showing the **categorical-decline** half (not just
+  a self-report number) crack under a genuinely-used wide channel would still bound the claim.
+- A larger, lemma-disjoint bridging set, or an uptake-induced re-run for gpt (which declined the
+  working surface here), would widen the channel check beyond the two models that took it up.

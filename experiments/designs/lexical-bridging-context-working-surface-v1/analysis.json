@@ -1,0 +1,827 @@
+{
+ "_meta": {
+  "n_boot": 10000,
+  "seed": 20260622,
+  "band": [
+   40,
+   60
+  ],
+  "variant": "working-surface",
+  "compares_to": "experiments/designs/lexical-bridging-context-v1/analysis.json"
+ },
+ "scopes": {
+  "dwug_plus_wic": {
+   "A": {
+    "model": "claude-sonnet-4.6",
+    "n_items": {
+     "clear-same": 29,
+     "bridging": 24,
+     "clear-different": 35
+    },
+    "parse_success": {
+     "b_rel": [
+      88,
+      88
+     ],
+     "b_conf_conf": [
+      88,
+      88
+     ],
+     "c_third": [
+      88,
+      88
+     ],
+     "topic": [
+      88,
+      88
+     ]
+    },
+    "uptake": {
+     "b_rel": {
+      "n": 88,
+      "median_content_chars": 1159.5,
+      "median_completion_tokens": 283.5,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "b_conf": {
+      "n": 88,
+      "median_content_chars": 991.0,
+      "median_completion_tokens": 243.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "c_third": {
+      "n": 88,
+      "median_content_chars": 981.5,
+      "median_completion_tokens": 243.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "topic": {
+      "n": 88,
+      "median_content_chars": 1007.5,
+      "median_completion_tokens": 223.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     }
+    },
+    "position": {
+     "b_rel_means": {
+      "clear-different": 24.371,
+      "bridging": 46.167,
+      "clear-same": 73.897
+     },
+     "brid_in_band_40_60": true,
+     "gap_clearsame_minus_bridging_ci": [
+      15.2241,
+      39.52
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      9.8131,
+      33.2792
+     ],
+     "between_pointwise": true,
+     "between_ci_strict": true
+    },
+    "confidence": {
+     "b_conf_means": {
+      "clear-different": 88.429,
+      "bridging": 75.167,
+      "clear-same": 83.897
+     },
+     "gap_clearsame_minus_bridging_ci": [
+      1.7778,
+      16.1645
+     ],
+     "gap_cleardiff_minus_bridging_ci": [
+      6.0093,
+      21.1538
+     ],
+     "lower_pointwise": true,
+     "lower_ci_strict": true
+    },
+    "decline": {
+     "pct_unclear": {
+      "clear-different": 0.029,
+      "bridging": 0.125,
+      "clear-same": 0.138
+     },
+     "gap_bridging_minus_clearsame_ci": [
+      -0.1959,
+      0.155
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      -0.0294,
+      0.2273
+     ],
+     "elevated_pointwise": false,
+     "elevated_ci_strict": false
+    },
+    "dispersion_A_characterizing_only": {
+     "entropy_bits_means": {},
+     "present": false
+    },
+    "q3_topic_control": {
+     "n_bridging_pairs": 24,
+     "pearson_topic_vs_brel_on_bridging": 0.3939
+    },
+    "precondition": {
+     "conf_ok": true,
+     "decline_ok": true,
+     "rel_poles_ok": true,
+     "met": true
+    },
+    "verdict": "MIXED/WEAK \u2014 B(confidence) and C(decline) disagree (B_lower=True, C_elevated=False; position=True) \u2014 both readings shown, NOT the null"
+   },
+   "B": {
+    "model": "gpt-5.4-mini",
+    "n_items": {
+     "clear-same": 29,
+     "bridging": 24,
+     "clear-different": 35
+    },
+    "parse_success": {
+     "b_rel": [
+      88,
+      88
+     ],
+     "b_conf_conf": [
+      88,
+      88
+     ],
+     "c_third": [
+      88,
+      88
+     ],
+     "topic": [
+      88,
+      88
+     ]
+    },
+    "uptake": {
+     "b_rel": {
+      "n": 88,
+      "median_content_chars": 9.0,
+      "median_completion_tokens": 14.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 85.2
+     },
+     "b_conf": {
+      "n": 88,
+      "median_content_chars": 19.0,
+      "median_completion_tokens": 15.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 90.9
+     },
+     "c_third": {
+      "n": 88,
+      "median_content_chars": 16.0,
+      "median_completion_tokens": 8.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 98.9
+     },
+     "topic": {
+      "n": 88,
+      "median_content_chars": 9.0,
+      "median_completion_tokens": 14.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 98.9
+     }
+    },
+    "position": {
+     "b_rel_means": {
+      "clear-different": 35.229,
+      "bridging": 46.875,
+      "clear-same": 75.414
+     },
+     "brid_in_band_40_60": true,
+     "gap_clearsame_minus_bridging_ci": [
+      15.7288,
+      40.6525
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      -1.5148,
+      24.103
+     ],
+     "between_pointwise": true,
+     "between_ci_strict": false
+    },
+    "confidence": {
+     "b_conf_means": {
+      "clear-different": 93.714,
+      "bridging": 92.25,
+      "clear-same": 93.931
+     },
+     "gap_clearsame_minus_bridging_ci": [
+      -1.9231,
+      6.9604
+     ],
+     "gap_cleardiff_minus_bridging_ci": [
+      -3.3165,
+      7.188
+     ],
+     "lower_pointwise": true,
+     "lower_ci_strict": false
+    },
+    "decline": {
+     "pct_unclear": {
+      "clear-different": 0.0,
+      "bridging": 0.0,
+      "clear-same": 0.0
+     },
+     "gap_bridging_minus_clearsame_ci": [
+      0.0,
+      0.0
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      0.0,
+      0.0
+     ],
+     "elevated_pointwise": false,
+     "elevated_ci_strict": false
+    },
+    "dispersion_A_characterizing_only": {
+     "entropy_bits_means": {},
+     "present": false
+    },
+    "q3_topic_control": {
+     "n_bridging_pairs": 24,
+     "pearson_topic_vs_brel_on_bridging": 0.4816
+    },
+    "precondition": {
+     "conf_ok": true,
+     "decline_ok": true,
+     "rel_poles_ok": true,
+     "met": true
+    },
+    "verdict": "CLEAN NULL \u2014 bridging at clear-item position, confidence, and decline (graded scale + ungraded commitment)"
+   },
+   "C": {
+    "model": "gemini-3.5-flash",
+    "n_items": {
+     "clear-same": 29,
+     "bridging": 24,
+     "clear-different": 35
+    },
+    "parse_success": {
+     "b_rel": [
+      88,
+      88
+     ],
+     "b_conf_conf": [
+      88,
+      88
+     ],
+     "c_third": [
+      88,
+      88
+     ],
+     "topic": [
+      88,
+      88
+     ]
+    },
+    "uptake": {
+     "b_rel": {
+      "n": 88,
+      "median_content_chars": 1121.5,
+      "median_completion_tokens": 257.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "b_conf": {
+      "n": 88,
+      "median_content_chars": 856.5,
+      "median_completion_tokens": 206.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "c_third": {
+      "n": 88,
+      "median_content_chars": 893.0,
+      "median_completion_tokens": 212.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "topic": {
+      "n": 88,
+      "median_content_chars": 1020.0,
+      "median_completion_tokens": 222.5,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     }
+    },
+    "position": {
+     "b_rel_means": {
+      "clear-different": 26.429,
+      "bridging": 52.292,
+      "clear-same": 81.828
+     },
+     "brid_in_band_40_60": true,
+     "gap_clearsame_minus_bridging_ci": [
+      17.2194,
+      40.8621
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      12.8501,
+      38.4868
+     ],
+     "between_pointwise": true,
+     "between_ci_strict": true
+    },
+    "confidence": {
+     "b_conf_means": {
+      "clear-different": 97.429,
+      "bridging": 93.75,
+      "clear-same": 91.207
+     },
+     "gap_clearsame_minus_bridging_ci": [
+      -5.9319,
+      0.9179
+     ],
+     "gap_cleardiff_minus_bridging_ci": [
+      0.5812,
+      7.03
+     ],
+     "lower_pointwise": false,
+     "lower_ci_strict": false
+    },
+    "decline": {
+     "pct_unclear": {
+      "clear-different": 0.0,
+      "bridging": 0.0,
+      "clear-same": 0.0
+     },
+     "gap_bridging_minus_clearsame_ci": [
+      0.0,
+      0.0
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      0.0,
+      0.0
+     ],
+     "elevated_pointwise": false,
+     "elevated_ci_strict": false
+    },
+    "dispersion_A_characterizing_only": {
+     "entropy_bits_means": {},
+     "present": false
+    },
+    "q3_topic_control": {
+     "n_bridging_pairs": 24,
+     "pearson_topic_vs_brel_on_bridging": 0.4797
+    },
+    "precondition": {
+     "conf_ok": true,
+     "decline_ok": true,
+     "rel_poles_ok": true,
+     "met": true
+    },
+    "verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)"
+   }
+  },
+  "dwug_only": {
+   "A": {
+    "model": "claude-sonnet-4.6",
+    "n_items": {
+     "clear-same": 9,
+     "bridging": 24,
+     "clear-different": 15
+    },
+    "parse_success": {
+     "b_rel": [
+      48,
+      48
+     ],
+     "b_conf_conf": [
+      48,
+      48
+     ],
+     "c_third": [
+      48,
+      48
+     ],
+     "topic": [
+      48,
+      48
+     ]
+    },
+    "uptake": {
+     "b_rel": {
+      "n": 48,
+      "median_content_chars": 1181.0,
+      "median_completion_tokens": 292.5,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "b_conf": {
+      "n": 48,
+      "median_content_chars": 1044.0,
+      "median_completion_tokens": 256.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "c_third": {
+      "n": 48,
+      "median_content_chars": 1006.0,
+      "median_completion_tokens": 260.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "topic": {
+      "n": 48,
+      "median_content_chars": 1011.5,
+      "median_completion_tokens": 221.5,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     }
+    },
+    "position": {
+     "b_rel_means": {
+      "clear-different": 12.733,
+      "bridging": 46.167,
+      "clear-same": 64.889
+     },
+     "brid_in_band_40_60": true,
+     "gap_clearsame_minus_bridging_ci": [
+      -3.8,
+      40.8942
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      20.1733,
+      45.4348
+     ],
+     "between_pointwise": true,
+     "between_ci_strict": false
+    },
+    "confidence": {
+     "b_conf_means": {
+      "clear-different": 92.667,
+      "bridging": 75.167,
+      "clear-same": 85.111
+     },
+     "gap_clearsame_minus_bridging_ci": [
+      1.2802,
+      18.404
+     ],
+     "gap_cleardiff_minus_bridging_ci": [
+      8.1083,
+      26.4702
+     ],
+     "lower_pointwise": true,
+     "lower_ci_strict": true
+    },
+    "decline": {
+     "pct_unclear": {
+      "clear-different": 0.0,
+      "bridging": 0.125,
+      "clear-same": 0.111
+     },
+     "gap_bridging_minus_clearsame_ci": [
+      -0.2857,
+      0.2174
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      0.0,
+      0.25
+     ],
+     "elevated_pointwise": true,
+     "elevated_ci_strict": false
+    },
+    "dispersion_A_characterizing_only": {
+     "entropy_bits_means": {},
+     "present": false
+    },
+    "q3_topic_control": {
+     "n_bridging_pairs": 24,
+     "pearson_topic_vs_brel_on_bridging": 0.3939
+    },
+    "precondition": {
+     "conf_ok": true,
+     "decline_ok": true,
+     "rel_poles_ok": false,
+     "met": false
+    },
+    "verdict": "PRECONDITION-UNMET -> internal-contrast-only (collapse)"
+   },
+   "B": {
+    "model": "gpt-5.4-mini",
+    "n_items": {
+     "clear-same": 9,
+     "bridging": 24,
+     "clear-different": 15
+    },
+    "parse_success": {
+     "b_rel": [
+      48,
+      48
+     ],
+     "b_conf_conf": [
+      48,
+      48
+     ],
+     "c_third": [
+      48,
+      48
+     ],
+     "topic": [
+      48,
+      48
+     ]
+    },
+    "uptake": {
+     "b_rel": {
+      "n": 48,
+      "median_content_chars": 9.0,
+      "median_completion_tokens": 14.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 87.5
+     },
+     "b_conf": {
+      "n": 48,
+      "median_content_chars": 19.0,
+      "median_completion_tokens": 16.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 83.3
+     },
+     "c_third": {
+      "n": 48,
+      "median_content_chars": 16.0,
+      "median_completion_tokens": 8.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 97.9
+     },
+     "topic": {
+      "n": 48,
+      "median_content_chars": 9.0,
+      "median_completion_tokens": 14.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 97.9
+     }
+    },
+    "position": {
+     "b_rel_means": {
+      "clear-different": 29.533,
+      "bridging": 46.875,
+      "clear-same": 76.0
+     },
+     "brid_in_band_40_60": true,
+     "gap_clearsame_minus_bridging_ci": [
+      9.4905,
+      45.3571
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      1.7857,
+      32.3385
+     ],
+     "between_pointwise": true,
+     "between_ci_strict": true
+    },
+    "confidence": {
+     "b_conf_means": {
+      "clear-different": 93.6,
+      "bridging": 92.25,
+      "clear-same": 91.556
+     },
+     "gap_clearsame_minus_bridging_ci": [
+      -5.2917,
+      5.6845
+     ],
+     "gap_cleardiff_minus_bridging_ci": [
+      -6.0615,
+      7.8
+     ],
+     "lower_pointwise": false,
+     "lower_ci_strict": false
+    },
+    "decline": {
+     "pct_unclear": {
+      "clear-different": 0.0,
+      "bridging": 0.0,
+      "clear-same": 0.0
+     },
+     "gap_bridging_minus_clearsame_ci": [
+      0.0,
+      0.0
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      0.0,
+      0.0
+     ],
+     "elevated_pointwise": false,
+     "elevated_ci_strict": false
+    },
+    "dispersion_A_characterizing_only": {
+     "entropy_bits_means": {},
+     "present": false
+    },
+    "q3_topic_control": {
+     "n_bridging_pairs": 24,
+     "pearson_topic_vs_brel_on_bridging": 0.4816
+    },
+    "precondition": {
+     "conf_ok": true,
+     "decline_ok": true,
+     "rel_poles_ok": true,
+     "met": true
+    },
+    "verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)"
+   },
+   "C": {
+    "model": "gemini-3.5-flash",
+    "n_items": {
+     "clear-same": 9,
+     "bridging": 24,
+     "clear-different": 15
+    },
+    "parse_success": {
+     "b_rel": [
+      48,
+      48
+     ],
+     "b_conf_conf": [
+      48,
+      48
+     ],
+     "c_third": [
+      48,
+      48
+     ],
+     "topic": [
+      48,
+      48
+     ]
+    },
+    "uptake": {
+     "b_rel": {
+      "n": 48,
+      "median_content_chars": 1146.5,
+      "median_completion_tokens": 267.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "b_conf": {
+      "n": 48,
+      "median_content_chars": 901.0,
+      "median_completion_tokens": 215.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "c_third": {
+      "n": 48,
+      "median_content_chars": 929.5,
+      "median_completion_tokens": 220.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "topic": {
+      "n": 48,
+      "median_content_chars": 1040.5,
+      "median_completion_tokens": 224.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     }
+    },
+    "position": {
+     "b_rel_means": {
+      "clear-different": 15.0,
+      "bridging": 52.292,
+      "clear-same": 79.222
+     },
+     "brid_in_band_40_60": true,
+     "gap_clearsame_minus_bridging_ci": [
+      11.2545,
+      42.4167
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      21.8466,
+      52.125
+     ],
+     "between_pointwise": true,
+     "between_ci_strict": true
+    },
+    "confidence": {
+     "b_conf_means": {
+      "clear-different": 98.333,
+      "bridging": 93.75,
+      "clear-same": 91.111
+     },
+     "gap_clearsame_minus_bridging_ci": [
+      -6.3636,
+      1.6857
+     ],
+     "gap_cleardiff_minus_bridging_ci": [
+      0.361,
+      8.4091
+     ],
+     "lower_pointwise": false,
+     "lower_ci_strict": false
+    },
+    "decline": {
+     "pct_unclear": {
+      "clear-different": 0.0,
+      "bridging": 0.0,
+      "clear-same": 0.0
+     },
+     "gap_bridging_minus_clearsame_ci": [
+      0.0,
+      0.0
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      0.0,
+      0.0
+     ],
+     "elevated_pointwise": false,
+     "elevated_ci_strict": false
+    },
+    "dispersion_A_characterizing_only": {
+     "entropy_bits_means": {},
+     "present": false
+    },
+    "q3_topic_control": {
+     "n_bridging_pairs": 24,
+     "pearson_topic_vs_brel_on_bridging": 0.4797
+    },
+    "precondition": {
+     "conf_ok": true,
+     "decline_ok": true,
+     "rel_poles_ok": true,
+     "met": true
+    },
+    "verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)"
+   }
+  }
+ },
+ "delta_vs_v1": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "bridging_b_conf": {
+    "v1": 82.583,
+    "ws": 75.167,
+    "delta": -7.416
+   },
+   "bridging_pct_unclear": {
+    "v1": 0.0,
+    "ws": 0.125,
+    "delta": 0.125
+   },
+   "v1_verdict": "CLEAN NULL \u2014 bridging handled at clear-item position, confidence, and decline (graded scale + ungraded commitment)",
+   "ws_verdict": "MIXED/WEAK \u2014 B(confidence) and C(decline) disagree (B_lower=True, C_elevated=False; position=True) \u2014 both readings shown, NOT the null"
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "bridging_b_conf": {
+    "v1": 95.667,
+    "ws": 92.25,
+    "delta": -3.417
+   },
+   "bridging_pct_unclear": {
+    "v1": 0.042,
+    "ws": 0.0,
+    "delta": -0.042
+   },
+   "v1_verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)",
+   "ws_verdict": "CLEAN NULL \u2014 bridging at clear-item position, confidence, and decline (graded scale + ungraded commitment)"
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "bridging_b_conf": {
+    "v1": 94.792,
+    "ws": 93.75,
+    "delta": -1.042
+   },
+   "bridging_pct_unclear": {
+    "v1": 0.0,
+    "ws": 0.0,
+    "delta": 0.0
+   },
+   "v1_verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)",
+   "ws_verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)"
+  }
+ }
+}

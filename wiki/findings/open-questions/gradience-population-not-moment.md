@@ -15,6 +15,10 @@ links:
   - rel: depends-on
     target: result/lexical-bridging-context-v1
   - rel: depends-on
+    target: result/lexical-bridging-context-working-surface-v1
+  - rel: depends-on
+    target: essay/output-channel-confound
+  - rel: depends-on
     target: essay/graded-scale-ungraded-commitment
   - rel: depends-on
     target: essay/aggregation-not-constitution
@@ -172,25 +176,26 @@ in-repo lever already exists:
   ungraded would harden one leg; finding it *graded* under such a manipulation would weaken the
   "discrete moment" reading and so weaken the cross-level pattern.
 
-- **The existing output-channel lever (a discriminating re-run).** The project's
-  [`essay/output-channel-confound`](../essays/output-channel-confound.md) establishes that "a
-  forced-format capability-*negative* is, until the channel is varied, indistinguishable from a
-  channel artifact and must be read as **channel-bounded**, never as a capacity verdict." The
-  lexical commitment-null was read off a constrained output channel (a forced same/different
-  call plus a confidence number / a categorical third option), so the "ungraded commitment"
-  finding is, on that essay's own logic, **channel-bounded until the channel is varied**: an
-  apparent absence of within-moment gradience could be the model declining to *externalize* a
-  hesitation a working surface would let it voice. A **working-surface re-run** of the lexical
-  bridging probe — letting the model reason before committing, uptake verified per the essay's
-  uptake clause — is therefore one concrete discriminating test: if hesitation appears on the
-  ambiguous item once the channel is wide, the "discrete moment" leg was partly a channel
-  artifact and the cross-level pattern loses that leg; if commitment survives a genuinely-used
-  wide channel, the leg is channel-*controlled* and the pattern is firmer. The output-channel
-  essay's three-state vocabulary (channel-bounded / channel-not-taken-up / channel-controlled)
-  is exactly the grid such a re-run would resolve into. (The scope caveat from that essay
-  applies: the confound bites only where the probed handling is *serial and externalizable* —
-  whether a same/different-sense commitment is that kind of computation is itself part of what
-  the re-run would reveal.)
+- **The existing output-channel lever (a discriminating re-run) — NOW RUN (2026-06-22, session 79).**
+  The project's [`essay/output-channel-confound`](../essays/output-channel-confound.md) establishes
+  that "a forced-format capability-*negative* is, until the channel is varied, indistinguishable
+  from a channel artifact and must be read as **channel-bounded**, never as a capacity verdict." The
+  lexical commitment-null was read off a constrained output channel, so the "ungraded commitment"
+  finding was, on that essay's logic, channel-bounded until the channel was varied. **That
+  working-surface re-run has now landed:**
+  [`result/lexical-bridging-context-working-surface-v1`](../results/lexical-bridging-context-working-surface-v1.md)
+  re-ran the probe letting the models reason before committing (uptake verified per the essay's
+  uptake clause). **The lexical "discrete-moment" leg comes out largely channel-CONTROLLED, so it is
+  FIRMER, not dissolved:** the commitment null survived a genuinely-used wide channel for gemini, and
+  the **categorical-decline** instrument stayed ungraded for every model that took up the surface.
+  Two caveats the leg now carries: claude's **self-reported confidence** softened under the surface
+  (a self-report shift, not graded categorical commitment), and gpt **declined** the surface
+  (channel-not-taken-up → its leg is untested). The output-channel essay's three-state grid resolved
+  exactly as it predicts (gemini channel-controlled / gpt channel-not-taken-up / claude a partial
+  self-report crack), and the scope caveat held: a same/different-sense commitment is **not** a
+  serial-externalizable computation, and widening a taken-up channel did not dissolve it. So the
+  cross-level pattern **keeps its lexical leg, now channel-checked** — with the honest residual that
+  one model's confidence self-report is partly channel-sensitive and one model's leg is untested.
 
 A "general constraint" reading is licensed only if the shape **survives equalizing the
 instrument** (or survives a channel-widening that the model takes up); short of that, the

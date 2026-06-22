@@ -18,6 +18,8 @@ links:
   - rel: depends-on
     target: result/lexical-bridging-context-v1
   - rel: depends-on
+    target: result/lexical-bridging-context-working-surface-v1
+  - rel: depends-on
     target: open-question/lexical-bridging-context-gradience
   - rel: depends-on
     target: concept/polysemy
@@ -50,6 +52,24 @@ links:
 > this essay flagged as a third outcome — the **commitment** null is the shadow-robust part; the
 > scale is the part the bound-but-weak control qualifies. The original argument below stands as
 > written; "would" is now "did" for trigger (b).
+
+> **FORWARD NOTE (2026-06-22, session 79) — the channel-artifact alternative was tested, and the
+> commitment leg is largely CHANNEL-CONTROLLED.** A reader could object that "ungraded commitment"
+> was read off a *cramped output channel* — the model forced to a single label may default to
+> confidence it would not voice on a working surface (the
+> [`output-channel-confound`](output-channel-confound.md) worry). That control has now run:
+> [`result/lexical-bridging-context-working-surface-v1`](../results/lexical-bridging-context-working-surface-v1.md)
+> re-ran the same frozen items with a **working surface** (format-only; reasoning held constant).
+> Result: the commitment null is **not, in the main, a channel artifact** — it survives a
+> genuinely-used wide channel for gemini, and the **categorical-decline** instrument stays ungraded
+> for every model that took up the surface. The one place it softens is **claude's self-reported
+> confidence** (it drops to a CI-strict-lower number under reflection while its *categorical*
+> commitment holds — a self-report shift, not graded commitment); gpt **declined** the surface
+> (inconclusive). So "gradience in the ledger, none in the moment" is strengthened on its robust
+> (categorical) half and qualified on the self-report half: a model reasoning aloud may *report* a
+> lower number on the ambiguous item, yet still *commit* to a discrete pick. The conceptual
+> independence of scale and commitment is untouched; what the channel test adds is that the
+> commitment leg is mostly real, not an aperture.
 
 > **Status: revised (2026-06-22; draft 2026-06-21). A philosophical-track essay arguing in the
 > project's own voice, written *before* the probe that would test it; trigger (b) has since
