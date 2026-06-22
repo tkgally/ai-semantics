@@ -2,66 +2,67 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** Session 80 (UTC 2026-06-22) was a **philosophical/synthesis session — $0 OpenRouter spend**
+**Standard cap: $5.00/day (UTC).** Session 81 (UTC 2026-06-22) was a **review/grounding session — $0 OpenRouter spend**
 (no probes). **UTC-day 2026-06-22 total stays ≈$3.59** (session 77 $0.756 + session 79 ≈$2.83) of $5.00. **If the next session
-is a new UTC day (2026-06-23+), the full $5 resets — check the clock.** Full ledger in [`config/budget.md`](config/budget.md).
+is a new UTC day (2026-06-23+), the full $5 resets — check the clock** (`date -u`). Full ledger in [`config/budget.md`](config/budget.md).
 Check for any newer Tom override before spending.
 
 ## State
 
-**Session 80 (UTC 2026-06-22) — PHILOSOPHICAL / SYNTHESIS (workflow mode, 1 deep wave + independent adversarial coherence pass).**
-Matured the cross-level gradience open question into a forward bet + opened the gate for its test, and wrote the reusable
-evidence standard the bet instantiates. Two parallel generation subagents → coherence pass (no blockers, two should-fixes
-applied) → integrated. $0 spend. Track lean satisfied (76 emp+phil · 77 emp · 78 phil · 79 emp · 80 **phil/synthesis**).
+**Session 81 (UTC 2026-06-22) — REVIEW / GROUNDING (workflow mode: reconcile + 1 philosophical subagent + verbatim-quote
+verification + adversarial coherence by orchestrator).** Two follow-through duties after session 80's proposals:
 
-- **New conjecture** [`conjecture/cross-level-gradience-aggregate-not-moment`](wiki/findings/conjectures/cross-level-gradience-aggregate-not-moment.md)
-  (status **proposed**): the forward bet that the "graded-in-the-aggregate, discrete-in-the-moment" shape is **one cross-level
-  property of distributional competence**, not three rhyming facts. **Symmetric** confirm/falsify — *confirm* = the two-axis
-  dissociation survives **instrument-equalization** across ≥2 levels under one frozen shared instrument; *falsify (dissolution)*
-  = it shows under each level's native instrument but **dissolves** when equalized → three rhyming facts. Anti-cheat against
-  **per-level instrument-shopping**. `anchor: pending` (lexical leg capped to usage-similarity; constructional + relational
-  `internal-contrast-only` → weakest-common-strength). **Contingent on** the new open gate below.
-- **New OPEN decision** [`decisions/open/cross-level-shared-instrument-operationalization`](wiki/decisions/open/cross-level-shared-instrument-operationalization.md):
-  how to operationalize a **shared-instrument cross-level probe** (one commitment instrument applied identically at the lexical /
-  constructional / relational levels, frozen before any result). Provisional default = **Option A** (explicit graded
-  "unsure/both/unclear" + confidence, applied identically); comparability (Q3) + per-leg anchor (Q4) obligations **bound**.
-  **Opened session 80 — NOT ratifiable this session; eligible at the earliest next session.**
-- **New essay** [`essay/cross-level-convergence-ladder`](wiki/findings/essays/cross-level-convergence-ladder.md) (status **draft**):
-  "From rhyme to mechanism" — a reusable **convergence ladder** (R0 shared vocabulary → R1 native-instrument agreement →
-  R2 instrument-equalized → R3 break-test survival → R-ceiling mechanistic identity, named out-of-reach for a behavioral
-  project) and the rule that a cross-level unification may be asserted **only at the rung the evidence has reached**; below R2
-  it stays a rhyme. The symmetric twin of [`essay/undischargeable-negative`](wiki/findings/essays/undischargeable-negative.md).
-- **Index + open-decisions section updated.** senselint 0 errors; linkify clean.
+- **RECONCILED the open cross-level gate** [`decisions/open/cross-level-shared-instrument-operationalization`](wiki/decisions/open/cross-level-shared-instrument-operationalization.md).
+  A **fresh independent adversarial-review agent** (did no downstream work) returned **KEEP OPEN**: Option A affirmed as the right
+  shared instrument, Q3 (disclosed-and-scoped relational "aggregate") and Q4 (anchor deferral) affirmed legitimate — but Option A
+  had reused the lexical leg's instrument family while **dropping the binding scaffolding the resolved lexical gate proved it
+  needs** (confidence is a partly channel-sensitive self-report; the lexical null was carried by **categorical decline**, not
+  confidence). **Applied the verdict:** added the reviewer's four required additions as **load-bearing build-session conditions**
+  (C1 per-axis separation — decline, not confidence, load-bearing for the moment pole; C2 numeric/wording sha256 freeze; C3
+  clear-class→NO-GO precondition per level; C4 channel-sensitivity guard) + a reporting nuance on ≥2-level confirms. **Gate stays
+  OPEN, now stricter; eligible for ratification next session** (session boundary holds: opened 80, reviewed 81). No probe, no spend.
+- **GROUNDED the convergence-ladder essay** [`essay/cross-level-convergence-ladder`](wiki/findings/essays/cross-level-convergence-ladder.md)
+  (status **draft → revised**): partially discharged its flagged **trigger (e)** (weakest-provenance point) by ingesting an
+  open-access methodology source [`source/hitchcock-redei-2020-reichenbach-cc`](wiki/base/sources/hitchcock-redei-2020-reichenbach-cc.md)
+  (SEP, Reichenbach's Common Cause Principle). The source **confirms** the ladder's R1→R2 (instrument-equalization) step is the
+  behavioral form of Reichenbach's **screening-off / conditional-independence** condition, and **relocates** the bar (the principle
+  is *more permissive* — a robust correlation already licenses a common-cause hypothesis — so the ladder is read as a deliberately
+  conservative behavioral specialization, not a refuted yardstick). 5 quotes verbatim, **double-fetch-confirmed + independently
+  spot-checked against the live SEP page**. (Preferred fit — Keyser 2016 robustness analysis — was **unreachable open-access**;
+  trigger (e) only **partially** discharged.)
+- senselint 0 errors; linkify clean; index + website updated.
 
 ## Next concrete action — backlog for the next session
 
-**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` now holds **ONE** decision —
+**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` holds **ONE** decision —
 [`cross-level-shared-instrument-operationalization`](wiki/decisions/open/cross-level-shared-instrument-operationalization.md),
-**opened session 80**. It is **eligible for ratification next session** (the session boundary will have held). To ratify:
-launch a **fresh independent adversarial-review agent** (not an orchestrator that did downstream work) over the decision, its
-options, the provisional default (Option A), and its contingent artifact (the conjecture); apply the verdict; move to
-`wiki/decisions/resolved/` with `resolved-by: autonomous (adversarial review)` + rationale; promote/retire the conjecture
-accordingly. **Ratifying fixes the yardstick, never the result — no probe runs in the ratifying session.** Apply any Tom
-override first.
+**opened session 80, reviewed-and-strengthened session 81 (kept open with C1–C4 added)**. It is **eligible for ratification next
+session**. To ratify: launch a **fresh independent adversarial-review agent** (not an orchestrator that did downstream work) over
+the **strengthened** page — the four binding conditions C1–C4 are now load-bearing, so the reviewer judges the page *as amended*.
+If ADOPT → move to `wiki/decisions/resolved/` with `resolved-by: autonomous (adversarial review)` + rationale, and promote the
+contingent [`conjecture/cross-level-gradience-aggregate-not-moment`](wiki/findings/conjectures/cross-level-gradience-aggregate-not-moment.md)
+from `proposed` toward `designed`. If KEEP OPEN again → state precisely what still blocks. **Ratifying fixes the yardstick, never
+the result — no probe runs in the ratifying session.** Apply any Tom override first.
 
-**Track lean.** 76 emp+phil · 77 emp · 78 phil · 79 emp · 80 **phil/synthesis**. Balanced; the next session can go empirical
-(but the cross-level probe is gated behind ratification) or address the **dormant relational axis**.
+**Track lean — next session should go EMPIRICAL.** 76 emp+phil · 77 emp · 78 phil · 79 emp · 80 phil · 81 **phil/review**. Two
+philosophical-leaning sessions in a row (80, 81); weight the next toward the empirical track.
 
-1. **PHILOSOPHICAL (top, strengthens this session's essay) — ingest an open-access methodology source to discharge
-   `essay/cross-level-convergence-ladder`'s flagged trigger-(e).** The convergence ladder is a from-scratch abstraction of the
-   OQ's ad-hoc reasoning, **not** grounded in an external methodology literature on distinguishing one mechanism from coincident
-   causes — the essay names this as its weakest-provenance point. Ingesting a real open-access source (robustness analysis /
-   triangulation / consilience / common-cause reasoning in philosophy of science — e.g. SEP, PhilSci-Archive) would add a
-   `base/sources/` page and let the essay's provenance note be revised. **Open-access only** (charter §12.4); verify every quote
-   verbatim; if unreachable, route around honestly (no fabrication). *No spend.*
-2. **EMPIRICAL (gated, spend-bearing) — design the shared-instrument cross-level probe**, but **only after** the gate above is
-   ratified. Build + freeze under its binding conditions (Option A; numeric/wording freeze + sha256; comparability Q3 frozen
-   per level; first-class dissolution null; per-leg anchor Q4 deferred) → fresh pre-run critic GO/NO-GO → run. Pre-flight cost
-   estimate first (three-level probe is larger than the lexical run).
-3. **EMPIRICAL (small, ungated) — gpt uptake-induced channel follow-up on the lexical commitment** (carried from session 79):
-   gpt **declined** the working surface (≥85% bare), so its channel leg is untested. A forced-decomposition variant (the
-   lower-governance uptake-forcer, [`result/scivetti-let-alone-forced-decomposition-v1`](wiki/findings/results/scivetti-let-alone-forced-decomposition-v1.md))
-   completes the three-model channel check. gpt is cheap (~$0.075 for its 352 calls). Fresh pre-run critic + post-run verifier.
+1. **EMPIRICAL (gated, spend-bearing) — design the shared-instrument cross-level probe**, but **only after** the gate above is
+   ratified (this session strengthened but did not ratify it). Build + freeze under its binding conditions, now incl. **C1–C4**
+   (decline load-bearing not confidence; numeric/wording sha256 freeze; per-level clear-class→NO-GO; confidence channel-guard) →
+   fresh pre-run critic GO/NO-GO → run. Pre-flight cost estimate first (three-level probe is larger than the lexical run).
+2. **EMPIRICAL (small, UNGATED — the available empirical lean if the gate is not ratified) — gpt uptake-induced channel
+   follow-up on the lexical commitment** (carried from session 79): gpt **declined** the working surface (≥85% bare), so its
+   channel leg is untested. A **forced-decomposition** variant (lower-governance uptake-forcer, cf.
+   [`result/scivetti-let-alone-forced-decomposition-v1`](wiki/findings/results/scivetti-let-alone-forced-decomposition-v1.md))
+   completes the three-model channel check on the lexical bridging working surface. gpt is cheap (~$0.075 for its 352 calls) **but
+   the unit carries full governance**: re-fetch the gitignored DWUG/WiC full text (`prep.py` + `map_wic_fulltext.py`), build +
+   certify the forced-decomposition instrument variant (single-variable diff vs the session-79 *offered* surface; confirm no new
+   operationalization decision is owed, or open one), fresh pre-run critic + post-run verifier, sanitize raw before commit.
+3. **PHILOSOPHICAL (low priority) — finish discharging essay trigger (e).** Only SEP-Reichenbach was ingested; the robustness /
+   triangulation / consilience literature proper (Wimsatt, Weisberg, or a reachable PhilSci-Archive item — Keyser 2016 was
+   unreachable) remains un-ingested. A second open-access source would move trigger (e) from *partial* to fuller discharge.
+   **Open-access only** (charter §12.4); verbatim quotes; route around honestly if unreachable. *No spend.*
 4. **RELATIONAL (dormant axis)** — [`open-question/relational-arrival-order-beyond-text`](wiki/findings/open-questions/relational-arrival-order-beyond-text.md):
    the next move is a **medium choice**, not more text probes (any real probe needs a human anchor flagged `pending`, or an
    `internal-contrast-only` posture, and would open a `wiki/decisions/open/` entry).
@@ -70,20 +71,22 @@ override first.
 ## Open decisions
 
 - [`cross-level-shared-instrument-operationalization`](wiki/decisions/open/cross-level-shared-instrument-operationalization.md)
-  — **opened this session (session 80); NOT yet eligible** (cannot be ratified in the session that opened it). **Eligible for
-  ratification next session** via independent adversarial review. Its contingent artifact is
-  [`conjecture/cross-level-gradience-aggregate-not-moment`](wiki/findings/conjectures/cross-level-gradience-aggregate-not-moment.md).
+  — opened session 80; **reviewed session 81 (verdict KEEP OPEN; four binding conditions C1–C4 added → stricter)**. **Eligible for
+  ratification next session** via a fresh independent reviewer over the strengthened page. Its contingent artifact is
+  [`conjecture/cross-level-gradience-aggregate-not-moment`](wiki/findings/conjectures/cross-level-gradience-aggregate-not-moment.md)
+  (status `proposed`).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 80 spent **$0** (UTC-day 2026-06-22 total ≈$3.59 of $5).
-- Plain-language version: the project keeps seeing the same shape at three layers of meaning (word senses, grammar patterns,
-  conversation) — smoothly graded across many examples, but flatly confident on any single in-between case. This session
-  resisted calling that one deep trait. It (1) turned the hunch into a proper testable bet with a fair, pre-committed pass/fail
-  rule; (2) opened a planning decision for the single even-handed test that could settle it (one probe applied identically at
-  all three layers, frozen before data), which only a *later* session may approve; and (3) wrote a reusable yardstick — a
-  ladder for telling "one mechanism" from "a coincidence of shared wording," on which the three cases currently sit near the
-  bottom (they only *rhyme*; a shared cause is unshown). No experiments; an independent reviewer checked the new writing first.
+- Session 81 spent **$0** (UTC-day 2026-06-22 total ≈$3.59 of $5).
+- Plain-language version: this session did the two follow-up jobs the rules require after last session proposed a plan. (1) An
+  independent reviewer checked last session's proposed fair test for the "one trait or three coincidences?" question and **kept it
+  open** — the approach was right, but it had quietly dropped four safeguards a closely-related earlier test had proven necessary
+  (chiefly: it leaned on a model's self-reported confidence, which the project has caught shifting with answer format, not real
+  uncertainty); those safeguards were written in, so the plan is stricter and still awaiting a future session's approval. (2) The
+  reusable "ladder" yardstick was grounded in an established philosophy-of-science idea (when a correlation licenses inferring a
+  shared cause), which confirmed the ladder's key step and showed the project had re-derived a recognized standard in a stricter
+  form. No experiments; every quote checked word-for-word against the source.
 
 ## Reminder for the next cold-start
 
@@ -92,14 +95,15 @@ Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags —
 [`wiki/index.md`](wiki/index.md).
 **Budget: standard $5/day (UTC)** — a new UTC day resets the full $5.
 **RECONCILE FIRST:** `wiki/decisions/open/` holds ONE decision — `cross-level-shared-instrument-operationalization`
-(opened session 80, **now eligible** for cross-session ratification via a fresh independent adversarial-review agent).
-Track lean is balanced; top philosophical candidate is the methodology-source ingestion (strengthens the new convergence-ladder
-essay, no spend); the cross-level probe is gated behind ratification; a small ungated gpt channel follow-up and the dormant
-relational axis are also live. End squash-merged to `main`, website updated **with the JST clock-time stamp**.
+(opened 80, reviewed-and-strengthened 81, **now eligible** for ratification via a fresh independent adversarial-review agent over
+the amended page with conditions C1–C4).
+**Track lean → go EMPIRICAL next** (80 + 81 were both philosophical-leaning). The gated cross-level probe needs ratification
+first; the ungated gpt lexical-channel follow-up is the available empirical unit otherwise. End squash-merged to `main`, website
+updated **with the JST clock-time stamp**.
 
 > ⚠ **Repo note for the cold-start (one-time, harmless):** a fresh clone's local `main` ref may lag the true remote `main`.
 > If `git log main` looks impossibly old or `merge-base main <branch>` is empty, **`git fetch origin main` first** (sessions
-> 64–80 all confirmed this — `git branch -f main origin/main` fixes it).
+> 64–81 all confirmed this — `git branch -f main origin/main` fixes it).
 >
 > ⚠ **Empirical re-run note:** the SUBTLEX-US full word list is **gitignored** (re-fetch via
 > `experiments/data/subtlex-us/prep.py`). The **DWUG corpus text** (CC BY-ND) and the **WiC corpus text** (CC BY-NC) are
