@@ -64,17 +64,34 @@ def reasoning_for(model):
 
 # ----- parsers (per-level pole tokens differ; UNCLEAR is shared) ------------------------
 def parse_commit_conf(content, pole1, pole2):
-    """Returns (call, conf): call in {pole1, pole2, 'UNCLEAR', None}; conf int 0-100 or None."""
+    """Returns (call, conf): call in {pole1, pole2, 'UNCLEAR', None}; conf int 0-100 or None.
+
+    Confidence is the integer that FOLLOWS the chosen call token. The frozen output format
+    (instrument.json shared_elicitation.confidence.format + each level's system prompt) is
+    "<TOKEN> <integer 0-100>, and nothing else". Parsing the *first* integer anywhere -- the
+    original build shorthand -- is a defect at the constructional/relational levels, whose
+    pole tokens READING1/READING2/FIGURE1/FIGURE2 CONTAIN a digit that gets captured as the
+    confidence (so "READING1 99" mis-parsed to 1), and for any reason-then-answer reply (a
+    "Round 5" stamp read as confidence 5). Reading the integer after the matched token
+    faithfully implements the frozen format for both one-line and reason-then-answer replies.
+    It changes NO frozen numeric value, band, threshold, wording, item, or class --
+    instrument.json sha256 is unchanged. Caught + validated against live outputs at pre-flight
+    (run session 2026-06-22); fresh independent critic re-GO obtained on this fix. The call
+    (decline) axis is unchanged: same (pole1, pole2, UNCLEAR) precedence as the original.
+    """
     if not content:
         return None, None
     cu = content.upper()
-    call_ = None
+    call_, after = None, None
     for tok in (pole1, pole2, "UNCLEAR"):
-        if tok in cu:
+        i = cu.find(tok)
+        if i != -1:
             call_ = tok
+            after = i + len(tok)  # confidence is the integer AFTER the matched token
             break
-    nums = re.findall(r"\d+", content)
-    conf = max(0, min(100, int(nums[0]))) if nums else None
+    seg = content[after:] if after is not None else content
+    m = re.search(r"\d+", seg)
+    conf = max(0, min(100, int(m.group()))) if m else None
     return call_, conf
 
 
