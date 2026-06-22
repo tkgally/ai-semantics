@@ -1,0 +1,317 @@
+{
+ "_meta": {
+  "n_boot": 10000,
+  "seed": 20260622,
+  "band": [
+   40,
+   60
+  ],
+  "variant": "forced-decomposition",
+  "slots": [
+   "B"
+  ],
+  "compares_to": [
+   "experiments/designs/lexical-bridging-context-v1/analysis.json",
+   "experiments/designs/lexical-bridging-context-working-surface-v1/analysis.json"
+  ]
+ },
+ "scopes": {
+  "dwug_plus_wic": {
+   "B": {
+    "model": "gpt-5.4-mini",
+    "n_items": {
+     "clear-same": 29,
+     "bridging": 24,
+     "clear-different": 35
+    },
+    "parse_success": {
+     "b_rel": [
+      88,
+      88
+     ],
+     "b_conf_conf": [
+      88,
+      88
+     ],
+     "c_third": [
+      88,
+      88
+     ],
+     "topic": [
+      88,
+      88
+     ]
+    },
+    "uptake": {
+     "b_rel": {
+      "n": 88,
+      "median_content_chars": 507.0,
+      "median_completion_tokens": 127.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "b_conf": {
+      "n": 88,
+      "median_content_chars": 398.5,
+      "median_completion_tokens": 105.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "c_third": {
+      "n": 88,
+      "median_content_chars": 427.0,
+      "median_completion_tokens": 114.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "topic": {
+      "n": 88,
+      "median_content_chars": 634.0,
+      "median_completion_tokens": 141.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     }
+    },
+    "position": {
+     "b_rel_means": {
+      "clear-different": 37.371,
+      "bridging": 61.833,
+      "clear-same": 84.655
+     },
+     "brid_in_band_40_60": false,
+     "gap_clearsame_minus_bridging_ci": [
+      12.1191,
+      33.7083
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      11.0706,
+      37.1142
+     ],
+     "between_pointwise": true,
+     "between_ci_strict": true
+    },
+    "confidence": {
+     "b_conf_means": {
+      "clear-different": 96.114,
+      "bridging": 91.25,
+      "clear-same": 93.621
+     },
+     "gap_clearsame_minus_bridging_ci": [
+      -0.7905,
+      5.4809
+     ],
+     "gap_cleardiff_minus_bridging_ci": [
+      2.543,
+      7.4828
+     ],
+     "lower_pointwise": true,
+     "lower_ci_strict": false
+    },
+    "decline": {
+     "pct_unclear": {
+      "clear-different": 0.0,
+      "bridging": 0.0,
+      "clear-same": 0.034
+     },
+     "gap_bridging_minus_clearsame_ci": [
+      -0.1111,
+      0.0
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      0.0,
+      0.0
+     ],
+     "elevated_pointwise": false,
+     "elevated_ci_strict": false
+    },
+    "dispersion_A_characterizing_only": {
+     "entropy_bits_means": {},
+     "present": false
+    },
+    "q3_topic_control": {
+     "n_bridging_pairs": 24,
+     "pearson_topic_vs_brel_on_bridging": 0.017
+    },
+    "precondition": {
+     "conf_ok": true,
+     "decline_ok": true,
+     "rel_poles_ok": true,
+     "met": true
+    },
+    "verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)"
+   }
+  },
+  "dwug_only": {
+   "B": {
+    "model": "gpt-5.4-mini",
+    "n_items": {
+     "clear-same": 9,
+     "bridging": 24,
+     "clear-different": 15
+    },
+    "parse_success": {
+     "b_rel": [
+      48,
+      48
+     ],
+     "b_conf_conf": [
+      48,
+      48
+     ],
+     "c_third": [
+      48,
+      48
+     ],
+     "topic": [
+      48,
+      48
+     ]
+    },
+    "uptake": {
+     "b_rel": {
+      "n": 48,
+      "median_content_chars": 532.5,
+      "median_completion_tokens": 130.0,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "b_conf": {
+      "n": 48,
+      "median_content_chars": 411.5,
+      "median_completion_tokens": 108.5,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "c_third": {
+      "n": 48,
+      "median_content_chars": 458.0,
+      "median_completion_tokens": 119.5,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     },
+     "topic": {
+      "n": 48,
+      "median_content_chars": 688.5,
+      "median_completion_tokens": 152.5,
+      "median_reasoning_tokens": 0.0,
+      "pct_final_tag": 100.0,
+      "pct_bare_lt40chars": 0.0
+     }
+    },
+    "position": {
+     "b_rel_means": {
+      "clear-different": 25.867,
+      "bridging": 61.833,
+      "clear-same": 86.0
+     },
+     "brid_in_band_40_60": false,
+     "gap_clearsame_minus_bridging_ci": [
+      12.9583,
+      35.6166
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      20.3333,
+      50.7009
+     ],
+     "between_pointwise": true,
+     "between_ci_strict": true
+    },
+    "confidence": {
+     "b_conf_means": {
+      "clear-different": 96.667,
+      "bridging": 91.25,
+      "clear-same": 92.667
+     },
+     "gap_clearsame_minus_bridging_ci": [
+      -4.15,
+      5.7857
+     ],
+     "gap_cleardiff_minus_bridging_ci": [
+      2.4231,
+      8.3333
+     ],
+     "lower_pointwise": true,
+     "lower_ci_strict": false
+    },
+    "decline": {
+     "pct_unclear": {
+      "clear-different": 0.0,
+      "bridging": 0.0,
+      "clear-same": 0.111
+     },
+     "gap_bridging_minus_clearsame_ci": [
+      -0.375,
+      0.0
+     ],
+     "gap_bridging_minus_cleardiff_ci": [
+      0.0,
+      0.0
+     ],
+     "elevated_pointwise": false,
+     "elevated_ci_strict": false
+    },
+    "dispersion_A_characterizing_only": {
+     "entropy_bits_means": {},
+     "present": false
+    },
+    "q3_topic_control": {
+     "n_bridging_pairs": 24,
+     "pearson_topic_vs_brel_on_bridging": 0.017
+    },
+    "precondition": {
+     "conf_ok": true,
+     "decline_ok": true,
+     "rel_poles_ok": true,
+     "met": true
+    },
+    "verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)"
+   }
+  }
+ },
+ "delta_vs_v1": {
+  "B": {
+   "model": "gpt-5.4-mini",
+   "bridging_b_conf": {
+    "v1": 95.667,
+    "ws": 91.25,
+    "delta": -4.417
+   },
+   "bridging_pct_unclear": {
+    "v1": 0.042,
+    "ws": 0.0,
+    "delta": -0.042
+   },
+   "v1_verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)",
+   "ws_verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)"
+  }
+ },
+ "delta_vs_offered_session79": {
+  "B": {
+   "model": "gpt-5.4-mini",
+   "bridging_b_conf": {
+    "offered": 92.25,
+    "forced": 91.25,
+    "delta": -1.0
+   },
+   "bridging_pct_unclear": {
+    "offered": 0.0,
+    "forced": 0.0,
+    "delta": 0.0
+   },
+   "b_conf_pct_bare": {
+    "offered": 90.9,
+    "forced": 0.0,
+    "delta": -90.9
+   },
+   "offered_verdict": "CLEAN NULL \u2014 bridging at clear-item position, confidence, and decline (graded scale + ungraded commitment)",
+   "forced_verdict": "PARTIAL \u2014 position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)"
+  }
+ }
+}

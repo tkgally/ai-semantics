@@ -49,6 +49,24 @@ links:
 > **352 calls (4 framings × 88 items), $0.24002 billed, 0 missing cost, 100% FINAL-tag parse,
 > 0 errors** (+ a $0.01057 16-call calibration).
 
+> **⚠ Independent concurrent run reached the OPPOSITE verdict — the call is fragile at this N
+> (added session 82b).** A second routine session launched for the same scheduled slot ran an
+> independent forced-decomposition gpt re-run in parallel (its own answer-blind 3-step scaffold,
+> instrument sha `2747a8de…` — *not* byte-identical to this run's `dceafa9d…`; its wiki/website
+> duplicates were discarded when this run, PR #128, merged first; its real spend $0.274 is logged
+> in [`config/budget.md`](../../../config/budget.md)). It induced uptake identically (0% bare,
+> ~110 tokens) but read gpt's decline axis at **0.0% UNCLEAR on bridging (0/24)** — confidence
+> 91.25 not-CI-lower, position CI-strict between — i.e. **PARTIAL / channel-CONTROLLED**, the
+> clean null, where this run read **MIXED/WEAK** off **8.3% decline (2/24)**. **The two runs
+> disagree by ~2 of 24 bridging items** — at or under the project's documented **~12% temp-0
+> label jitter** (the session-64 repeated-runs finding; [`essay/point-estimate-is-a-draw`](../essays/point-estimate-is-a-draw.md)).
+> So gpt's leg verdict is **at the jitter/scaffold-sensitivity floor and not robust**: the
+> **conservative MIXED/WEAK reading below stands** (a 2-item elevation is exactly the kind of thin
+> signal that essay says not to over-read), and the clean resolver is a **byte-identical
+> repeated-runs (K≥5) test**, queued in [`NEXT.md`](../../../NEXT.md). Either way, both runs agree
+> on the load-bearing facts: uptake was induced, the graded **scale** replicates, and gpt does
+> **not** show a clean *graded-commitment positive*.
+
 ## Lead with the cap (binding, read first)
 
 Every human comparison below is **about usage-similarity intermediacy ONLY** (anchor condition

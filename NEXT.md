@@ -2,10 +2,18 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** Session 82 (UTC 2026-06-22) spent **$0.25059** (gpt forced-decomposition run $0.24002
-+ calib $0.01057). **UTC-day 2026-06-22 total ≈ $3.84** (77 $0.756 + 79 ≈$2.83 + 82 $0.251) of $5.00, leaving ≈$1.16.
+**Standard cap: $5.00/day (UTC).** Session 82 (PR #128) spent **$0.25059**; a **concurrent duplicate session 82b (PR #129,
+disclosed below)** independently ran the same unit and spent **$0.27404** of REAL OpenRouter money on the same UTC day.
+**Corrected UTC-day 2026-06-22 total ≈ $4.11** (77 $0.756 + 79 ≈$2.83 + 82 $0.251 + 82b $0.274) of $5.00, leaving ≈$0.89.
 **If the next session is a new UTC day (2026-06-23+), the full $5 resets — check the clock** (`date -u`). Full ledger in
 [`config/budget.md`](config/budget.md). Check for any newer Tom override before spending.
+
+> **⚠ Concurrent-session collision (disclosed).** Two routine sessions were launched for the same slot and ran the gpt
+> forced-decomposition unit in parallel; **#128 (session 82) merged first** (verdict MIXED/WEAK, decline 8.3%=2/24); **#128b
+> (session 82b) lost the race** but reached the **opposite** verdict (PARTIAL/channel-CONTROLLED, decline 0.0%=0/24) with a
+> *different* scaffold. The whole gap is ~2 of 24 items — at/under the documented ~12% temp-0 jitter → **the gpt-leg verdict is
+> fragile and not robust.** 82b's wiki/website duplicates were discarded; its spend + the discrepancy are preserved in the
+> budget ledger, the result page's reconciliation note, and `experiments/designs/lexical-bridging-context-forced-decomposition-v1/concurrent-run-82b/`.
 
 ## State
 
@@ -55,12 +63,15 @@ is empirical and large, so a **philosophical balance unit** alongside it is heal
    never relaxes a band. **Pre-flight the cost** (three-level probe is larger than the 352-call lexical run; reuse the staged
    DWUG/WiC full-text + add constructional + relational items). If a per-leg anchor or an uncovered operationalization choice
    surfaces during the build, **open a new `wiki/decisions/open/` entry** rather than deciding it in-session.
-2. **EMPIRICAL (small, cheap — the cleaner residual of session 82) — a FREE-FORM MIN-LENGTH uptake-forcer.** Session 82's gpt
-   forced-decomposition used a *structured* 3-step scaffold, which (per the pre-run critic + the Scivetti Limits) **conflates
-   uptake with structure**. A free-form "you must write ≥N words of reasoning before FINAL" forcer (no step structure) isolates
-   uptake from structure — the cleaner test of whether gpt's weak commitment-softening is structure-induced or genuine. Single
-   manipulated variable vs the session-82 forced surface; gpt (± claude/gemini); under the same resolved lexical gates (likely no
-   new decision owed — confirm). Cheap (~$0.25). Build + certify + fresh pre-run critic + post-run verifier + sanitize.
+2. **EMPIRICAL (small, cheap, HIGH-VALUE — resolve the 82/82b verdict discrepancy) — a BYTE-IDENTICAL REPEATED-RUNS (K≥5) test
+   of gpt's forced-decomposition leg.** Sessions 82 and 82b disagreed on the gpt verdict (MIXED/WEAK vs channel-CONTROLLED) by
+   ~2 of 24 decline items — at/under the documented ~12% temp-0 jitter. The clean resolver is exactly the session-64 move: re-run
+   **one frozen instrument K≥5 times** at temp 0 over the same 88 items and read the **de-noised majority-vote / range** on the
+   decline axis (`essay/point-estimate-is-a-draw` trigger (a)). Pick #128's frozen instrument (`dceafa9d…`) as the canonical one,
+   freeze it, fresh pre-run critic, run K×88×(1–4 framings). Cheap (~$0.25–1.25 depending on K and framings). This turns a
+   fragile single-run verdict into a measured one and is the **honest closure** of the channel check. *(A separate FREE-FORM
+   MIN-LENGTH uptake-forcer — no step structure, to isolate uptake from scaffold structure — remains a distinct, lower-priority
+   residual; the structured 3-step scaffold conflates uptake with structure per the Scivetti Limits.)*
 3. **PHILOSOPHICAL (the balance unit; low priority but track-balancing) — finish discharging convergence-ladder essay trigger
    (e).** Only [`source/hitchcock-redei-2020-reichenbach-cc`](wiki/base/sources/hitchcock-redei-2020-reichenbach-cc.md)
    (SEP-Reichenbach) is ingested; the robustness/triangulation/consilience literature proper (Wimsatt, Weisberg, or a reachable
