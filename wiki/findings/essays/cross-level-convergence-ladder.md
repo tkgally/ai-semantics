@@ -53,8 +53,8 @@ ungraded / uncommitted** handling of the *single moment or item*. It then asks, 
 shape is "a **general constraint on distributional competence** … or … **three separate,
 level-specific facts that merely rhyme**." The companion conjecture
 [`conjecture/cross-level-gradience-aggregate-not-moment`](../conjectures/cross-level-gradience-aggregate-not-moment.md) makes the specific bet and names the
-shared-instrument probe that would test it; the decision
-[`decisions/open/cross-level-shared-instrument-operationalization`](../../decisions/open/cross-level-shared-instrument-operationalization.md) will fix that probe's yardstick.
+shared-instrument probe that would test it; the now-resolved decision
+[`decisions/resolved/cross-level-shared-instrument-operationalization`](../../decisions/resolved/cross-level-shared-instrument-operationalization.md) (ratified session 82, ADOPT DEFAULT) fixed that probe's yardstick.
 
 This essay is **none of those three things**. It is not the question (the OQ owns that), not the bet
 or its test (the conjecture and its decision own those). It is the **reusable standard** the
@@ -316,7 +316,7 @@ into information instead of a non-event.
 
 - **(a) The shared-instrument probe lands and reaches R2/R3.** If the conjecture's test
   ([`conjecture/cross-level-gradience-aggregate-not-moment`](../conjectures/cross-level-gradience-aggregate-not-moment.md), via
-  [`decisions/open/cross-level-shared-instrument-operationalization`](../../decisions/open/cross-level-shared-instrument-operationalization.md)) holds one commitment instrument
+  [`decisions/resolved/cross-level-shared-instrument-operationalization`](../../decisions/resolved/cross-level-shared-instrument-operationalization.md)) holds one commitment instrument
   fixed across levels and the gradience shape **survives** instrument-equalization (R2) or a break-test
   (R3), then for *that* shape a cross-level unification becomes assertable at the reached rung — and the
   "deflationary default" stance should be revised *for that shape specifically*, logged as a worked

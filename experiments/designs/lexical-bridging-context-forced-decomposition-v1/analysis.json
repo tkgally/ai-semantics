@@ -1,0 +1,169 @@
+{
+ "model": "openai/gpt-5.4-mini",
+ "scope": "dwug+wic",
+ "reps": 10000,
+ "seed": 20260622,
+ "uptake_manipulation_check": {
+  "b_rel": {
+   "forced": {
+    "median_completion_tokens": 113.5,
+    "median_pre_final_chars": 450.5,
+    "pct_bare_lt40chars": 0.0,
+    "pct_worked_ge40_prefinal_chars": 100.0,
+    "pct_numbered_ge2_steps": 73.9,
+    "median_reasoning_tokens": 0.0,
+    "n": 88
+   },
+   "offered": {
+    "median_completion_tokens": 14.0,
+    "pct_bare_lt40chars": 85.2,
+    "n": 88
+   }
+  },
+  "b_conf": {
+   "forced": {
+    "median_completion_tokens": 113.0,
+    "median_pre_final_chars": 431.0,
+    "pct_bare_lt40chars": 0.0,
+    "pct_worked_ge40_prefinal_chars": 100.0,
+    "pct_numbered_ge2_steps": 76.1,
+    "median_reasoning_tokens": 0.0,
+    "n": 88
+   },
+   "offered": {
+    "median_completion_tokens": 15.0,
+    "pct_bare_lt40chars": 90.9,
+    "n": 88
+   }
+  },
+  "c_third": {
+   "forced": {
+    "median_completion_tokens": 105.0,
+    "median_pre_final_chars": 403.5,
+    "pct_bare_lt40chars": 0.0,
+    "pct_worked_ge40_prefinal_chars": 100.0,
+    "pct_numbered_ge2_steps": 72.7,
+    "median_reasoning_tokens": 0.0,
+    "n": 88
+   },
+   "offered": {
+    "median_completion_tokens": 8.0,
+    "pct_bare_lt40chars": 98.9,
+    "n": 88
+   }
+  },
+  "topic": {
+   "forced": {
+    "median_completion_tokens": 114.5,
+    "median_pre_final_chars": 519.0,
+    "pct_bare_lt40chars": 0.0,
+    "pct_worked_ge40_prefinal_chars": 100.0,
+    "pct_numbered_ge2_steps": 75.0,
+    "median_reasoning_tokens": 0.0,
+    "n": 88
+   },
+   "offered": {
+    "median_completion_tokens": 14.0,
+    "pct_bare_lt40chars": 98.9,
+    "n": 88
+   }
+  }
+ },
+ "position_b_rel": {
+  "clear-different": {
+   "mean": 38.9,
+   "ci_lo": 29.1,
+   "ci_hi": 49.6,
+   "n_lemmas": 29
+  },
+  "bridging": {
+   "mean": 56.9,
+   "ci_lo": 48.2,
+   "ci_hi": 65.9,
+   "n_lemmas": 17
+  },
+  "clear-same": {
+   "mean": 82.5,
+   "ci_lo": 75.8,
+   "ci_hi": 89.0,
+   "n_lemmas": 25
+  }
+ },
+ "position_verdict": {
+  "bridging_in_midband": true,
+  "pointwise_between": true,
+  "ci_strict_between": true
+ },
+ "confidence_b_conf": {
+  "clear-different": {
+   "mean": 95.5,
+   "ci_lo": 93.4,
+   "ci_hi": 97.2,
+   "n_lemmas": 29
+  },
+  "bridging": {
+   "mean": 91.5,
+   "ci_lo": 89.2,
+   "ci_hi": 93.8,
+   "n_lemmas": 17
+  },
+  "clear-same": {
+   "mean": 92.7,
+   "ci_lo": 90.0,
+   "ci_hi": 94.9,
+   "n_lemmas": 25
+  }
+ },
+ "confidence_verdict": {
+  "bridging_pointwise_lower_than_both": true,
+  "bridging_ci_strict_lower_than_both": false
+ },
+ "decline_c_third_pct_unclear": {
+  "clear-different": [
+   2.9,
+   35
+  ],
+  "bridging": [
+   8.3,
+   24
+  ],
+  "clear-same": [
+   3.4,
+   29
+  ]
+ },
+ "decline_verdict": {
+  "bridging_elevated_vs_both": true
+ },
+ "topic_control_b_rel_vs_topic": {
+  "clear-different": {
+   "mean": 26.6,
+   "ci_lo": 20.2,
+   "ci_hi": 34.2,
+   "n_lemmas": 29
+  },
+  "bridging": {
+   "mean": 27.5,
+   "ci_lo": 21.9,
+   "ci_hi": 33.0,
+   "n_lemmas": 17
+  },
+  "clear-same": {
+   "mean": 57.1,
+   "ci_lo": 46.7,
+   "ci_hi": 68.3,
+   "n_lemmas": 25
+  }
+ },
+ "clear_class_precondition": {
+  "poles_separated_b_rel": 43.6,
+  "clear_same_conf": 92.7,
+  "clear_diff_conf": 95.5,
+  "clear_same_pct_unclear": 3.4,
+  "clear_diff_pct_unclear": 2.9
+ },
+ "verdict": {
+  "position_graded": true,
+  "commitment": "MIXED/WEAK (B and C disagree) -- per modification 3, not the null, not a clean positive"
+ }
+}

@@ -1,0 +1,59 @@
+{
+  "_provenance": {
+    "design": "forced-decomposition (uptake-INDUCING) follow-up to experiments/designs/lexical-bridging-context-working-surface-v1 (the offered working-surface re-run, session 79)",
+    "parent_offered_instrument": "experiments/designs/lexical-bridging-context-working-surface-v1/instrument.json",
+    "parent_offered_instrument_sha256": "64f2606ceb7b1c5670ff5d07a6159e261ac9b06fe6326ceb4b421def1a343e3c",
+    "grandparent_v1_instrument": "experiments/designs/lexical-bridging-context-v1/instrument.json",
+    "grandparent_v1_instrument_sha256": "901ea89f2ee146c74e8063c57d5f7c64484572e0414aab968b8a1ec5c337b52f",
+    "kind": "uptake-INDUCING follow-up (cf. result/scivetti-let-alone-forced-decomposition-v1), NOT a re-tune of any frozen instrument",
+    "what_changed": "ONE manipulated variable vs the session-79 OFFERED working surface: offered -> FORCED uptake. The offered surface said 'Think step by step ..., then FINAL: ...' (an affordance gpt DECLINED: >=85% bare one-token answers, median 15 tokens, 0% reasoning -- result/lexical-bridging-context-working-surface-v1). This variant REPLACES that opener with a MANDATORY, construction-neutral, answer-blind 3-step decomposition the model must complete before the FINAL line. The FINAL-format tail of each framing is preserved BYTE-IDENTICAL to the offered clause, so the parse is unchanged.",
+    "what_did_NOT_change": "(1) The TASK DESCRIPTION is byte-identical to v1 (transitively: each forced system = v1 task description + forced clause; verify_format_only.py proves it). (2) Reasoning-effort knob HELD CONSTANT at the v1/offered setting (gpt {\"enabled\": false}, reasoning_tokens expected 0) -- the decomposition is externalized in the VISIBLE output channel, exactly as the offered surface intended; this is a pure output-channel/uptake manipulation, not a reasoning-budget change. (3) Same 88 items (same gitignored full-text staged by v1 prep.py + map_wic_fulltext.py). (4) Same temperatures (0). (5) Same reading rule (per-axis: position by B/b_rel alone; confidence/dispersion by BOTH B/b_conf and C/c_third). (6) Same DWUG usage-similarity classes and the binding usage-similarity claim cap.",
+    "panel_scope": "gpt-5.4-mini ONLY (PANEL slot B). RATIONALE: claude and gemini already TOOK UP the offered surface fully (0% bare, full CoT) in result/lexical-bridging-context-working-surface-v1, so their channel legs are already exercised and answered there; only gpt DECLINED the offered surface, leaving its channel leg untested. This unit completes the three-model channel check by forcing gpt's uptake. The clear-class precondition (reading_rule.clear_class_precondition) is the internal benign-scaffold check: if gpt's clear classes still saturate under forced decomposition, the scaffold did not break the instrument.",
+    "governance_no_new_decision_owed": "Confirmed: NO new operationalization decision is owed. This is a format/instrument extension under the already-ratified wiki/decisions/resolved/lexical-bridging-context-operationalization.md + lexical-bridging-context-anchor.md, exactly as result/scivetti-let-alone-forced-decomposition-v1 was an extension under the ratified Scivetti answer-key/divergence gates. It changes only HOW the label is produced (the model must externalize), never WHAT is scored against the human anchor (same SAME/DIFFERENT/UNCLEAR + confidence + 0-100 instruments, same DWUG classes, same gold). The forced scaffold is answer-blind (reveals no gold) and sense/construction-neutral (names no polysemy / bridging / ambiguity; step 3 'compare the two uses' merely restates the task already in the verbatim task description, adding no information). NO demonstration items (forced decomposition, not few-shot), so the few-shot-leak caveat does not apply. A fresh independent pre-run critic GO/NO-GO + a budget pre-flight still gate the run.",
+    "uptake_clause": "essay/output-channel-confound: 'vary the channel' means vary the channel ACTUALLY USED. probe.py records per-call completion_tokens, reasoning_tokens, content length, and FINAL-tag presence, so analyze.py reports the UPTAKE MANIPULATION CHECK (offered: gpt >=85% bare -> forced: gpt worked %) as the crux. A residual decline of the FORCED surface (still bare) would itself be reported, not read as a survival.",
+    "created": "2026-06-22 (session 82)"
+  },
+
+  "channel_change": {
+    "from": "session-79 OFFERED working surface (max_tokens 2048 for gpt; FINAL: tag; effort held constant)",
+    "to": "FORCED decomposition (same max_tokens, same FINAL: tag, same effort) with a mandatory 3-step preamble",
+    "final_tag": "FINAL:",
+    "max_tokens_gpt": 2048,
+    "parse_rule": "IDENTICAL to the offered surface: extract the text after the LAST case-insensitive 'FINAL:' occurrence, then apply the v1 parse for that framing. If no FINAL tag, fall back to parsing the whole content (flagged no_tag, an uptake/format miss)."
+  },
+
+  "framing_forced_clause_replacements": {
+    "_note": "Each 'old' is the VERBATIM session-79 OFFERED answer clause (= the working-surface instrument's framing_answer_clause_replacements[fr]['new']). probe.py reconstructs the offered system from v1 + the offered instrument, asserts 'old' is a verbatim SUFFIX of that offered system, and replaces ONLY that suffix with 'new'. 'new' introduces NO new task content, NO new scale, NO new option, NO gold: it is a construction-neutral, answer-blind forcing of externalization. The FINAL-format tail of 'new' is byte-identical to 'old' after the opener, so the parse is unchanged.",
+    "b_rel": {
+      "old": "Think step by step about the two uses, then give your rating on a final line in the form:\nFINAL: <a single integer from 0 to 100>",
+      "new": "Do not answer immediately. First work through these three steps, writing at least one full sentence for each:\n1. Describe how the marked target word is used in Sentence 1.\n2. Describe how the marked target word is used in Sentence 2.\n3. Compare the two uses.\nThen give your rating on a final line in the form:\nFINAL: <a single integer from 0 to 100>"
+    },
+    "b_conf": {
+      "old": "Think step by step about the two uses, then give your decision and confidence on a final line in the form:\nFINAL: SAME 87   or   FINAL: DIFFERENT 40 — the word SAME or DIFFERENT, a space, then an integer 0-100.",
+      "new": "Do not answer immediately. First work through these three steps, writing at least one full sentence for each:\n1. Describe how the marked target word is used in Sentence 1.\n2. Describe how the marked target word is used in Sentence 2.\n3. Compare the two uses.\nThen give your decision and confidence on a final line in the form:\nFINAL: SAME 87   or   FINAL: DIFFERENT 40 — the word SAME or DIFFERENT, a space, then an integer 0-100."
+    },
+    "c_third": {
+      "old": "Think step by step about the two uses, then give your answer on a final line in the form:\nFINAL: SAME   or   FINAL: DIFFERENT   or   FINAL: UNCLEAR",
+      "new": "Do not answer immediately. First work through these three steps, writing at least one full sentence for each:\n1. Describe how the marked target word is used in Sentence 1.\n2. Describe how the marked target word is used in Sentence 2.\n3. Compare the two uses.\nThen give your answer on a final line in the form:\nFINAL: SAME   or   FINAL: DIFFERENT   or   FINAL: UNCLEAR"
+    },
+    "topic": {
+      "old": "Think step by step, then give your rating on a final line in the form:\nFINAL: <a single integer from 0 to 100>",
+      "new": "Do not answer immediately. First work through these three steps, writing at least one full sentence for each:\n1. Describe the overall topic and situation of Sentence 1 (ignoring the marked word).\n2. Describe the overall topic and situation of Sentence 2 (ignoring the marked word).\n3. Compare the two topics.\nThen give your rating on a final line in the form:\nFINAL: <a single integer from 0 to 100>"
+    }
+  },
+
+  "reading_rule": "IDENTICAL to v1 (lexical-bridging-context-v1/instrument.json -> reading_rule_frozen): position certified by B/b_rel alone; confidence/dispersion by BOTH B/b_conf and C/c_third. The witness-seek question is COMPARATIVE and gpt-scoped: does gpt's session-79/v1 ungraded-COMMITMENT posture (bridging confidence high, decline ~0) survive a GENUINELY-EXERCISED working surface now that uptake is forced? analyze.py reports the per-axis verdict for gpt AND a head-to-head delta vs gpt's OFFERED-surface numbers (recomputed from the committed working-surface raw), plus the uptake manipulation check.",
+
+  "verdict_states": {
+    "channel_controlled": "gpt now WORKS the steps (uptake forced) AND its commitment posture is unchanged -- bridging confidence not CI-strict lower than both clear classes AND bridging decline not elevated. gpt's ungraded-commitment null is then channel-controlled (joins gemini), and the lexical leg's 3/3 channel check is complete.",
+    "graded_under_surface": "gpt works the steps AND its commitment posture CRACKS on BOTH B and C (bridging confidence CI-strict lower AND decline elevated). Reported per the frozen rule as graded commitment under a forced surface for gpt.",
+    "mixed_weak": "gpt works the steps but B and C DISAGREE (e.g. confidence softens but decline does not, the claude-offered pattern) -> MIXED/WEAK per modification 3, NOT the null and NOT a clean positive. C4 of the resolved cross-level gate applies in spirit: a confidence shift unaccompanied by a decline shift is a self-report effect, not graded-moment evidence.",
+    "still_declined": "gpt STILL emits bare answers despite the forcing (uptake not achieved) -> inconclusive (channel-not-taken-up), reported as such, never as a survival."
+  },
+
+  "cost_control": {
+    "framings_run": ["b_rel", "b_conf", "c_third", "topic"],
+    "a_forced_dropped": "A dispersion (characterizing-only) is DROPPED -- it never enters the verdict (v1 condition g; the instrument's own cost_control sanctions dropping A). gpt-only, 4 framings x 88 items = 352 temp-0 calls.",
+    "preflight": "Run `python3 probe.py --calib 4` first for a MEASURED per-item cost (forced decomposition raises gpt completion tokens vs the bare offered answers). Multiply x (88/4) for the full-run projection. The offered-surface gpt share was small; forced externalization raises it, but the gpt-only 352-call run is expected well under the $2.50 single-run flag. Record billed usage.cost; do not run if it would take the UTC-day total over $5.00."
+  }
+}

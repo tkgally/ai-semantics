@@ -1,9 +1,14 @@
 ---
 id: cross-level-shared-instrument-operationalization
 title: "How to operationalize a SHARED-instrument cross-level probe of the aggregate/moment shape — which single commitment instrument, applied identically across levels, frozen before any result?"
-status: open
+status: resolved
 opened: 2026-06-22
 opened-by: autonomous (session 80, maturing open-question/gradience-population-not-moment into a conjecture)
+reviewed: 2026-06-22
+reviewed-by: autonomous (session 81, adversarial review — KEEP OPEN, added four binding conditions C1–C4)
+resolved: 2026-06-22
+resolved-by: autonomous (adversarial review)
+resolution: adopt-default (Option A — explicit graded "unsure/both/unclear" + 0–100 confidence, applied identically across levels — with Q2/Q3/Q4 as written and the four binding build-session conditions C1–C4; ratified session 82)
 contingent-artifacts:
   - conjecture/cross-level-gradience-aggregate-not-moment
 meaning-senses:
@@ -22,12 +27,38 @@ links:
     target: open-question/gradience-population-not-moment
 ---
 
-> **Status: OPEN (opened session 80, 2026-06-22).** Ratifiable at the earliest by a **LATER**
-> session via independent adversarial review ([`PROJECT.md`](../../../PROJECT.md) §12.3); **NEVER** in the session
-> that opened it. Ratifying this gate fixes the **yardstick** — which single instrument, which
-> cross-level reading rule, which freeze discipline — **never the result** ([`CLAUDE.md`](../../../CLAUDE.md) rule
-> 6). **No probe is run here and no spend is opened.** This page lays out options and a
-> provisional default for a future reviewer; it decides nothing.
+> **Status: RESOLVED — ADOPT DEFAULT (independent adversarial review, session 82, 2026-06-22).**
+> Opened session 80, reviewed-and-strengthened session 81 (KEEP OPEN + four binding conditions
+> C1–C4), **ratified session 82** by a fresh independent adversarial-review agent over the
+> strengthened page (the session boundary held: opened 80 → ratified 82). **Verdict: ADOPT
+> DEFAULT** — Option A (an explicit graded "unsure / both / unclear" elicitation **plus** a 0–100
+> confidence rating, applied identically at the lexical / constructional / relational legs), with
+> Q2/Q3/Q4 as written and the four build-session conditions **C1–C4 binding**. The reviewer
+> re-derived the cross-level cheat-surface independently and **verified C1's and C4's factual
+> basis verbatim against both lexical result pages**: C1 (categorical DECLINE, not self-reported
+> confidence, is load-bearing for the moment pole at every level) is faithful to
+> [`result/lexical-bridging-context-v1`](../../findings/results/lexical-bridging-context-v1.md)
+> (the ungraded-commitment null was carried by ≈0% UNCLEAR while confidence was flat-but-high and,
+> for two of three models, *above* clear-same — so confidence could not have carried the null);
+> C4 (a confidence shift unaccompanied by a categorical-decline shift is reported as a self-report
+> effect, **not** graded-moment evidence) neutralizes the channel-sensitivity caught in
+> [`result/lexical-bridging-context-working-surface-v1`](../../findings/results/lexical-bridging-context-working-surface-v1.md)
+> (claude's bridging confidence cracked −7.4 to CI-strict-lower while its categorical decline did
+> not rise preferentially on bridging). Option C was correctly rejected (does not port to the
+> lexical/relational legs without changing what it asks — fails Q3); Option B was correctly
+> demoted (forced-pick dispersion was near-degenerate at the one leg already run). **Anti-cheat
+> PASS:** every amendment makes a spurious *positive* harder (C1 strips the weaker self-report
+> instrument of veto-flipping power; C2 sha256-freezes the knobs instrument-shopping would
+> exploit; C3 makes a per-level clear-class failure a NO-GO; C4 re-routes the one channel artifact
+> that could be misread as graded-moment evidence), the first-class dissolution NULL stays as
+> reportable as a confirm, and the ≥2-level confirm rule is consistent with the convergence
+> ladder's R2 floor. **No probe was run and no spend was opened — ratifying fixes the yardstick,
+> never the result** ([`CLAUDE.md`](../../../CLAUDE.md) rule 6). The run remains gated by a future
+> independent **pre-run critic GO/NO-GO** and a **budget** check; a NO-GO defers the run rather
+> than relaxing any band. Contingent artifact
+> [`conjecture/cross-level-gradience-aggregate-not-moment`](../../findings/conjectures/cross-level-gradience-aggregate-not-moment.md)
+> is promoted `proposed → designed` (its `contingent-on` cleared). Full rationale: this session's
+> [`log.md`](../../../log.md) line and the [`resolved-decisions changelog`](index.md).
 
 > **Review verdict — session 81, 2026-06-22 (independent adversarial review; gate stays OPEN).**
 > Per [`PROTOCOL.md`](../../../PROTOCOL.md) §2 this gate became eligible for cross-session
@@ -75,7 +106,7 @@ rhyme — and then explicitly **defers** the operationalization of that probe. V
 This page **is** that queued gate. It is the operationalization decision the conjecture
 [`conjecture/cross-level-gradience-aggregate-not-moment`](../../findings/conjectures/cross-level-gradience-aggregate-not-moment.md)
 is contingent on, built in the same shape as the resolved lexical gate
-([`decisions/resolved/lexical-bridging-context-operationalization`](../resolved/lexical-bridging-context-operationalization.md)),
+([`decisions/resolved/lexical-bridging-context-operationalization`](lexical-bridging-context-operationalization.md)),
 whose freeze-before-results and anti-instrument-shopping discipline it inherits and extends to
 the cross-level case.
 
@@ -288,7 +319,7 @@ is laid out for a future independent adversarial-review pass.**
 ## Binding build-session conditions (load-bearing — added 2026-06-22, session 81, per independent review)
 
 These were the independent reviewer's four required additions; they are now **load-bearing**.
-They modelled on the resolved lexical gate's conditions (a)–(i)
+They are modelled on the resolved lexical gate's conditions (a)–(i)
 ([`lexical-bridging-context-operationalization`](../resolved/lexical-bridging-context-operationalization.md)),
 the precedent this gate advertised inheriting but had not yet matched. **None makes a positive
 likelier; all close a cheat-surface or correct the reading rule.** A future builder / pre-run
