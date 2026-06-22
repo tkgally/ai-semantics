@@ -24,6 +24,8 @@ links:
     target: essay/output-channel-confound
   - rel: depends-on
     target: source/hitchcock-redei-2020-reichenbach-cc
+  - rel: depends-on
+    target: source/heesen-bright-zucker-2019-triangulation
 ---
 
 # Essay: from rhyme to mechanism — a convergence ladder for cross-level pattern claims
@@ -261,6 +263,46 @@ correlation licenses more, sooner, in the unconstrained case than the project's 
 The ladder stands; it is now read as a deliberately conservative behavioral specialization of a
 recognized common-cause inference, not a from-scratch private yardstick.
 
+A second methodology literature grounds the same R1→R2 step from the complementary angle of
+**variety of evidence**. Where Reichenbach speaks to the *structure* a common cause must have
+(screening-off), the triangulation literature speaks to the *epistemic gain* from agreement across
+genuinely different methods. The canonical recent vindication is Heesen, Bright & Zucker's
+[`source/heesen-bright-zucker-2019-triangulation`](../../base/sources/heesen-bright-zucker-2019-triangulation.md),
+which reconstructs W. E. B. Du Bois's *methodological triangulation* — in the paper's words, "to use
+multiple methods simultaneously in the belief that, where one is uncertain about the reliability of any
+given method, if multiple methods yield the same answer that answer is confirmed more strongly than it
+could have been by any single method" — and shows, "using tools from voting theory," it "to be more
+likely to yield the correct answer than purism." The ladder's R1 (agreement under each leg's *own*
+instrument) → R2 (one instrument equalized across levels) is the project's **behavioral specialization
+of this variety-of-evidence idea**: agreement across distinct measurement legs is what makes R1 more
+than the bare rhyme of R0, exactly as triangulation makes multi-method agreement more than any single
+method. The mapping is rigorous at two further points and instructive at a third. First, the paper's
+vindication is explicitly conditional on the scientist's "**diffidence about the relative merits of the
+various methods**" — uncertainty about which leg is reliable is the *precondition* for agreement to be
+worth anything; this is the same posture as the ladder's deflationary default, which treats no single
+behavioral instrument as authoritative and so reads cross-leg agreement, not any one leg, as the
+evidential unit. Second, the result depends on the methods being *genuinely different* — which is the
+project's standing caveat under another name: **shared priors are not independent witnesses**, and two
+legs that co-vary through one method (R1's confound) are not the multiple *different* methods
+triangulation requires; equalizing the instrument at R2 is what forces the legs to be distinct
+witnesses rather than one instrument applied twice.
+
+The **instructive** point mirrors the Reichenbach tension precisely. The paper *vindicates*
+triangulation in a strikingly permissive form — agreement is confirmatory under diffidence "even when
+in fact only one of the methods is appropriate for the given research question." That is the
+variety-of-evidence bar located *below* the ladder's deflationary R2 floor: triangulation rewards mere
+agreement, where the ladder withholds the mechanism verdict until the instrument is equalized. As with
+Reichenbach, the gap is deliberate and not a correction: the paper licenses agreement-as-confirmation
+in general, while the ladder is a conservative behavioral specialization that, working over n=3
+commercial models whose instruments are confounded with the levels they measure, demands the stronger
+instrument-equalized test before reading agreement as one cause. So a second external literature
+*confirms* the family of inference — agreement across genuinely different witnesses is confirmatory —
+from a different direction than Reichenbach (variety-of-evidence rather than screening-off), while
+*relocating* the bar in the same permissive direction. This is a methodology **analogy**, not a
+derivation: the voting-theory result is not re-proved here, the mapping is at abstract-level provenance
+(the paper's full text is an image PDF, un-quotable), and the ladder's rungs are unchanged — now
+grounded against two recognized inference patterns from two angles rather than reinvented privately.
+
 ## Why a ladder and not a binary
 
 A binary — "is this shape one mechanism, yes or no?" — would force the project to either over-assert
@@ -340,21 +382,29 @@ into information instead of a non-event.
   instrument's native reading, R2 = a third instrument equalizing the contrast) or need a sibling. The
   present scope is cross-level; the cross-instrument extension is flagged, not asserted.
 
-- **(e) A methodological source that locates the bar differently — *partially discharged 2026-06-22*.**
+- **(e) A methodological source that locates the bar differently — *more fully discharged 2026-06-22*.**
   The ladder began as a from-scratch abstraction of the OQ's ad-hoc disanalogy-and-discriminator
-  reasoning. As of 2026-06-22 (session 81) this trigger is **partially discharged**: the essay now
-  ingests [`source/hitchcock-redei-2020-reichenbach-cc`](../../base/sources/hitchcock-redei-2020-reichenbach-cc.md),
-  the SEP entry on Reichenbach's Common Cause Principle, as the external methodology literature on
-  mechanism-vs-coincidence inference (see "Where the ladder meets the external literature"). The source
-  **confirmed** the ladder's discriminator — the R1→R2 step is the behavioral form of Reichenbach's
-  **screening-off / conditional-independence** condition — and **relocated** the bar: the principle is
-  *more permissive* than the ladder's deflationary default (a robust correlation already licenses
-  positing a common cause), so the ladder is now read as a deliberately conservative behavioral
-  specialization, not a refuted one. Residual weakness: one encyclopedia entry is not the whole
-  literature (robustness analysis / triangulation / consilience proper — e.g. Keyser on robustness, not
-  reachable open-access at ingest — remain un-ingested), and the ladder stays a *behavioral adaptation*
-  of these ideas, not a derivation from them. If a future source locates the bar elsewhere again,
-  re-derive.
+  reasoning. As of 2026-06-22 this trigger is **more fully discharged**: the R1→R2 discriminator is now
+  grounded against **two** open-access methodology literatures from **two angles**. First,
+  [`source/hitchcock-redei-2020-reichenbach-cc`](../../base/sources/hitchcock-redei-2020-reichenbach-cc.md)
+  (SEP, Reichenbach's Common Cause Principle) grounds it via **screening-off / conditional-independence**:
+  the R1→R2 step is the behavioral form of demanding the witnesses screen off rather than co-vary through a
+  shared method. Second,
+  [`source/heesen-bright-zucker-2019-triangulation`](../../base/sources/heesen-bright-zucker-2019-triangulation.md)
+  (Heesen, Bright & Zucker, *Synthese* 2019) grounds it via **variety of evidence / methodological
+  triangulation**: agreement across genuinely different methods confirms more strongly than any single
+  method, under the scientist's "diffidence" about which method is reliable — which is the ladder's
+  deflationary default, with R2's instrument-equalization forcing the legs to be the distinct witnesses
+  triangulation requires. Both sources **confirm** the family of inference and both **relocate** the bar
+  *more permissively* than the ladder (Reichenbach: a robust correlation already motivates positing a
+  common cause; triangulation: agreement confirms "even when in fact only one of the methods is
+  appropriate"), so the ladder is read as a deliberately conservative behavioral specialization of two
+  recognized inference patterns, not a refuted one. Honest residual: neither source is **robustness
+  analysis proper / consilience as a formal derivation** (e.g. Keyser on robustness was not reachable
+  open-access at ingest; the triangulation paper grounds variety-of-evidence but is not robustness
+  analysis); the triangulation source is at **abstract-level provenance** only (its full text is an image
+  PDF, un-quotable); and the ladder remains a *behavioral adaptation* of these ideas, not a derivation
+  from them. If a future source locates the bar elsewhere again, re-derive.
 
 ## What this essay is not
 
@@ -420,23 +470,32 @@ into information instead of a non-event.
   `internal-contrast-only`), and the essay's original argument is methodological, so it carries no
   resource-anchor obligation. The anchor-strength clause it states is a *constraint on* such claims, not
   a human-comparison the essay itself makes.
-- **Provenance note (partially strengthened 2026-06-22).** The general ladder *originated* as a
+- **Provenance note (further strengthened 2026-06-22).** The general ladder *originated* as a
   from-scratch abstraction of the ad-hoc reasoning in one in-repo open-question. As of 2026-06-22 it is
-  no longer ungrounded in external methodology: it now reads against
+  grounded against **two** open-access methodology sources from two angles. (i)
   [`source/hitchcock-redei-2020-reichenbach-cc`](../../base/sources/hitchcock-redei-2020-reichenbach-cc.md)
   (Reichenbach's Common Cause Principle), which **confirmed** the screening-off / independence
-  discriminator the ladder's R1→R2 step operationalizes and **relocated** the bar (the principle is more
-  permissive than the ladder's deflationary default; the ladder is a conservative behavioral
-  specialization). This was the essay's weakest provenance point — revision trigger (e) — and is now
-  *partially* discharged. It remains the weakest point: one SEP entry is not the full robustness /
-  triangulation / consilience literature (the most direct fit, Keyser's robustness-analysis paper, was
-  not reachable open-access at ingest), and the ladder remains a behavioral adaptation rather than a
-  derivation. Quotes leaned on are verbatim from the source page (double-fetch-confirmed): "Reichenbach's
-  Common Cause Principle says that when such a probabilistic correlation between *A* and *B* exists, this
-  is because one of the following causal relations exists …"; "In Reichenbach's terminology, *C* screens
-  *A* off from *B*."; "*conditionally independent*, given *C*"; "facilitating causal inference from
-  observed correlations"; "A number of authors have proposed counterexamples to the Common Cause
-  Principle."
+  discriminator the ladder's R1→R2 step operationalizes and **relocated** the bar more permissively.
+  (ii) [`source/heesen-bright-zucker-2019-triangulation`](../../base/sources/heesen-bright-zucker-2019-triangulation.md)
+  (Heesen, Bright & Zucker 2019), which grounds the same R1→R2 step from the **variety-of-evidence /
+  triangulation** angle — agreement across genuinely different methods, under "diffidence," confirms
+  more than any single method — and likewise relocates the bar more permissively. This was the essay's
+  weakest provenance point — revision trigger (e) — and is now *more fully* discharged, though still the
+  weakest point: neither source is robustness-analysis-proper / consilience as a formal derivation (the
+  most direct fit, Keyser's robustness-analysis paper, was not reachable open-access at ingest); the
+  triangulation source rests on **abstract-level provenance** only (its full text is an image PDF); and
+  the ladder remains a behavioral adaptation rather than a derivation. Reichenbach quotes leaned on are
+  verbatim from the source page (double-fetch-confirmed): "Reichenbach's Common Cause Principle says that
+  when such a probabilistic correlation between *A* and *B* exists, this is because one of the following
+  causal relations exists …"; "In Reichenbach's terminology, *C* screens *A* off from *B*."; "*conditionally
+  independent*, given *C*"; "facilitating causal inference from observed correlations"; "A number of
+  authors have proposed counterexamples to the Common Cause Principle." Triangulation quotes leaned on are
+  verbatim from the open-access abstract (double-fetch-confirmed, PhilSci-Archive): "to use multiple
+  methods simultaneously in the belief that, where one is uncertain about the reliability of any given
+  method, if multiple methods yield the same answer that answer is confirmed more strongly than it could
+  have been by any single method"; "using tools from voting theory"; "more likely to yield the correct
+  answer than purism"; "diffidence about the relative merits of the various methods"; "even when in fact
+  only one of the methods is appropriate for the given research question."
 
 ## Revision log
 
@@ -451,3 +510,22 @@ into information instead of a non-event.
   No empirical claim changed; the ladder itself is unchanged, now externally grounded. (The preferred
   fit, Keyser 2016 on robustness analysis, was not reachable open-access at ingest; SEP Reichenbach used
   as the confirmed-accessible primary.)
+- **2026-06-22 (session, philosophical track).** More fully discharged revision trigger (e): ingested a
+  second open-access methodology source,
+  [`source/heesen-bright-zucker-2019-triangulation`](../../base/sources/heesen-bright-zucker-2019-triangulation.md)
+  (Heesen, Bright & Zucker, "Vindicating methodological triangulation," *Synthese* 2019, CC BY 4.0),
+  grounding the R1→R2 discriminator from the **variety-of-evidence / triangulation** angle to complement
+  the Reichenbach **screening-off** angle. Added a two-paragraph extension to "Where the ladder meets the
+  external literature" mapping R1 (agreement under each leg's own instrument) → R2 (instrument equalized)
+  onto triangulation's multi-method-agreement, with the paper's "diffidence" assumption mapped onto the
+  ladder's deflationary default and the genuinely-different-methods requirement mapped onto the
+  shared-priors-are-not-independent-witnesses caveat; noted the same instructive tension as Reichenbach
+  (triangulation vindicates agreement "even when in fact only one of the methods is appropriate," locating
+  the bar *more permissively* than the ladder's R2 floor — confirming the family of inference while the
+  ladder stays a conservative behavioral specialization). Revised trigger (e) from "partially discharged"
+  to "more fully discharged" (two sources, two angles), kept honest residual (not robustness-analysis-proper /
+  consilience as a derivation; abstract-level provenance on the triangulation paper — full text is an image
+  PDF; still a behavioral adaptation). Updated the Provenance note to record both sources and their verbatim
+  quotes. Added `depends-on: source/heesen-bright-zucker-2019-triangulation` to `links:`. Status stays
+  `revised`. No empirical claim changed; no rung changed; the ladder itself is unchanged, now more fully
+  externally grounded. No human-comparison claim made.

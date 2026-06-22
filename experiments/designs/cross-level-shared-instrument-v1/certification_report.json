@@ -1,0 +1,100 @@
+{
+ "summary": {
+  "n_checks": 17,
+  "n_fail": 0,
+  "status": "PASS"
+ },
+ "counts": {
+  "constructional_items": 30,
+  "constructional_sets": 10,
+  "relational_items": 30,
+  "relational_sets": 10
+ },
+ "checks": [
+  {
+   "check": "instrument_sha256_matches",
+   "ok": true,
+   "detail": "live=3cdfe17871a1669e690fe0f6c46ba66a5af594d48c7aa83e90538faf7a35e28f frozen=3cdfe17871a1669e690fe0f6c46ba66a5af594d48c7aa83e90538faf7a35e28f"
+  },
+  {
+   "check": "cx_classes_exact",
+   "ok": true,
+   "detail": "found=['ambiguous', 'clear-reading1', 'clear-reading2']"
+  },
+  {
+   "check": "cx_fields_present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "cx_set_balance_1amb_2clear",
+   "ok": true,
+   "detail": "n_sets=10, counts={'clear-reading1': 10, 'ambiguous': 10, 'clear-reading2': 10}"
+  },
+  {
+   "check": "cx_ambiguous_no_reading_verbatim_in_stem",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "cx_clear_controls_rewritten_vs_ambiguous",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "cx_two_readings_distinct",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "rel_classes_exact",
+   "ok": true,
+   "detail": "found=['ambiguous-midrecord', 'clear-determinate', 'clear-other-determinate']"
+  },
+  {
+   "check": "rel_fields_present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "rel_set_balance_1amb_2clear",
+   "ok": true,
+   "detail": "n_sets=10"
+  },
+  {
+   "check": "rel_grid_distinct_K>=4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "rel_candidates_distinct",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "rel_ambiguous_dual_binding_same_round",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "rel_clear_single_binding",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "rel_term_is_nonce",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lexical_manifest_refs_resolve_and_sha_match",
+   "ok": true,
+   "detail": "stratum_csv: OK sha e7d36773cffa; wic_poles_csv: OK sha b8b1a7aa708e"
+  },
+  {
+   "check": "instrument_decline_wording_in_system_prompts",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+  "_provenance": {
+    "design": "experiments/designs/cross-level-shared-instrument-v1.md",
+    "note": "MANIFEST ONLY -- references the FROZEN lexical-bridging-context-v1 item files by sha256. NO corpus text here (DWUG/CCOHA is CC BY-ND and gitignored; WiC is CC BY-NC). To present an item to a model at run time, the run session stages the gitignored fulltext exactly as the lexical leg does (prep.py / prep_wic.py), then reads item_id + class from these frozen files. This leg's items are NOT re-authored; they are the lexical leg's already-frozen stratum, reused under the shared instrument.",
+    "reused_from": "experiments/designs/lexical-bridging-context-v1/"
+  },
+  "frozen_references": {
+    "stratum_csv": {
+      "path": "experiments/designs/lexical-bridging-context-v1/stratum.csv",
+      "sha256": "e7d36773cffaa8cccb90df229d518d75139b0666483f361a6ed867d405c8186d",
+      "classes": ["clear-same", "bridging", "clear-different"],
+      "pool": "48 DWUG pairs (clear-same 9 / bridging 24 / clear-different 15), ~20 lemmas; rater floor human_n>=3"
+    },
+    "wic_poles_csv": {
+      "path": "experiments/designs/lexical-bridging-context-v1/wic_poles.csv",
+      "sha256": "b8b1a7aa708eafbb71a9c19cdfe61926660d87f9a880552ab6fb5cf05c01c64d",
+      "classes": ["clear-same", "clear-different"],
+      "pool": "20 + 20 WiC clear-pole supplement (NEVER supplies bridging items)"
+    }
+  },
+  "class_map_to_shared_instrument": {
+    "clear-same": "clear-same (lexical level_noun = sense; expected non-elevated decline, high confidence)",
+    "bridging": "ambiguous-analogue (the moment-pole test class; expected handling tested per C1 on decline rate)",
+    "clear-different": "clear-different (expected non-elevated decline, high confidence)"
+  }
+}
