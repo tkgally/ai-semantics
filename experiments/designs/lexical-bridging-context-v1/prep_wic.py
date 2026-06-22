@@ -32,7 +32,18 @@ script is the committed, reproducible RECIPE, not the corpus. It:
   - emits a gitignored, local-only fulltext wic_poles_fulltext.jsonl (with sentences +
     char spans) whose schema matches the DWUG path so ONE probe can read both.
 
-SELECTION (deterministic, no API):
+TWO MODES (mirrors prep.py's re-map-the-frozen-stratum posture):
+  - RE-MAP (default whenever wic_poles.csv already exists): the committed manifest is the
+    FROZEN authority (its wic_line column is the 40 pole pointers). This script then ONLY
+    re-maps those exact wic_line rows to their WiC sentences + token offsets and emits the
+    gitignored fulltext; it does NOT re-select and does NOT overwrite the manifest. This is
+    the run-time path — a fresh clone stages the corpus for the frozen poles.
+  - FRESH-FREEZE (only when no manifest exists): the original seeded balanced selection,
+    used once to create the freeze. Made reproducible across processes by seeding
+    random.Random with a STRING key (random.Random's string seeding is salt-free, unlike
+    the builtin hash() of a tuple, which is PYTHONHASHSEED-salted — the 2026-06-22 fix).
+
+SELECTION (fresh-freeze path, deterministic, no API):
   SEED = 20260621; train split only. Candidates per gold class are sorted by a stable key
   (train line index) for reproducibility, capped to <=2 items per target lemma for
   diversity (relaxed only if a pole runs short, and the relaxation is reported), then
@@ -184,6 +195,62 @@ def select_pole(items, gold, rng):
     return chosen, relaxed
 
 
+def map_one(it):
+    """Attach validated token char spans to a train item; return it or None if unmappable."""
+    g1 = token_char_span(it["ctx1"], it["idx1"])
+    g2 = token_char_span(it["ctx2"], it["idx2"])
+    if g1 is None or g2 is None:
+        return None
+    it = dict(it)
+    it["span1"], it["surf1"] = [g1[0], g1[1]], g1[2]
+    it["span2"], it["surf2"] = [g2[0], g2[1]], g2[2]
+    return it
+
+
+def remap_frozen(items):
+    """RE-MAP path: stage the gitignored fulltext for the FROZEN wic_poles.csv pointers.
+
+    Reads the committed manifest's wic_line column (the 40 authoritative pole pointers),
+    maps each to its WiC sentences + spans, and emits the fulltext. Does NOT re-select and
+    does NOT touch the committed manifest/sha. Mirrors prep.py's re-map-the-stratum posture.
+    """
+    by_line = {it["wic_line"]: it for it in items}
+    with open(MANIFEST, newline="", encoding="utf-8") as f:
+        man_rows = list(csv.DictReader(f))
+    fulltext_rows, failures = [], []
+    for r in man_rows:
+        line = int(r["wic_line"])
+        it = by_line.get(line)
+        mapped = map_one(it) if it is not None else None
+        if mapped is None:
+            failures.append((r["item_id"], line))
+            continue
+        pole = r["pole"]
+        fulltext_rows.append({
+            "item_id": r["item_id"], "lemma": mapped["target"], "bridging_class": pole,
+            "ctx1": mapped["ctx1"], "span1": mapped["span1"], "surf1": mapped["surf1"],
+            "ctx2": mapped["ctx2"], "span2": mapped["span2"], "surf2": mapped["surf2"],
+            "human_median": NOMINAL_MEDIAN[pole], "human_n": None,
+        })
+    with open(FULLTEXT, "w", encoding="utf-8") as f:
+        for rec in fulltext_rows:
+            f.write(json.dumps(rec) + "\n")
+    man_sha = sha256_file(MANIFEST)
+    by_pole = Counter(r["bridging_class"] for r in fulltext_rows)
+    print(f"\nRE-MAP mode (frozen wic_poles.csv exists; manifest NOT rewritten).")
+    print(f"  manifest sha256 = {man_sha}  (frozen authority)")
+    print(f"  re-mapped {len(fulltext_rows)} / {len(man_rows)} frozen pole items "
+          f"(clear-same {by_pole.get('clear-same', 0)}, "
+          f"clear-different {by_pole.get('clear-different', 0)})")
+    if failures:
+        print(f"  {len(failures)} FAILED to map: {failures}")
+    else:
+        print("  all frozen pole items mapped (no failures).")
+    print(f"  wrote (gitignored, local-only) {FULLTEXT} ({len(fulltext_rows)} rows)")
+    return {"mode": "remap", "manifest_sha256": man_sha,
+            "mapped": len(fulltext_rows), "failures": failures}
+
+
 def main():
     extract, zip_sha = ensure_wic()
     items = load_train(extract)
@@ -191,12 +258,18 @@ def main():
     gold_counts = Counter(it["gold"] for it in items)
     print(f"  gold balance: T={gold_counts['T']}  F={gold_counts['F']}")
 
-    rng = random.Random(SEED)
+    # RE-MAP the frozen manifest if it exists (run-time path); fresh-freeze only otherwise.
+    if os.path.exists(MANIFEST):
+        out = remap_frozen(items)
+        print(f"\nWiC archive sha256 (recorded, not pinned): {zip_sha}")
+        return out
+
+    print("\nNO frozen wic_poles.csv found -> FRESH-FREEZE selection.")
     selected = {}
     relaxed_poles = []
-    # Order gold classes deterministically (T then F) and use a fresh seeded stream each.
+    # Order gold classes deterministically (T then F); string-keyed Random is salt-free.
     for gold in ("T", "F"):
-        rng_g = random.Random((SEED, gold).__hash__())
+        rng_g = random.Random(f"{SEED}-{gold}")
         sel, relaxed = select_pole(items, gold, rng_g)
         selected[gold] = sel
         if relaxed:
