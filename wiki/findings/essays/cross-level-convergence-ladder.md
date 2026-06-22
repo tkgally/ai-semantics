@@ -364,10 +364,14 @@ into information instead of a non-event.
   "deflationary default" stance should be revised *for that shape specifically*, logged as a worked
   climb. The ladder is unaffected; one shape moves up it.
 
-- **(b) A shape unified at R1 dissolves at R2.** If a cross-level shape that looked unified under each
-  leg's native instrument **vanishes** when the instrument is equalized, that does not weaken this essay
-  — it **confirms the ladder's value**, and should be logged as the worked example the "honest negative
-  is first-class" section anticipates: a rhyme correctly *not* promoted to a mechanism.
+- **(b) A shape unified at R1 dissolves at R2 — *FIRED 2026-06-22 (session 84)*.** If a cross-level shape
+  that looked unified under each leg's native instrument **vanishes** when the instrument is equalized,
+  that does not weaken this essay — it **confirms the ladder's value**, and should be logged as the worked
+  example the "honest negative is first-class" section anticipates: a rhyme correctly *not* promoted to a
+  mechanism. **This has now happened:** the graded-aggregate / discrete-moment shape dissolved at R2 in
+  [`result/cross-level-shared-instrument-v1`](../results/cross-level-shared-instrument-v1.md) (3/3 models;
+  discrete-on-moment only at the lexical level under the equalized instrument). The R2 floor held; the
+  rhyme was correctly not promoted. Logged in the revision log below.
 
 - **(c) The project adopts a representational method.** If the project ever gains
   mechanistic-interpretability or representational access to its panel (retiring the R-ceiling
@@ -529,3 +533,15 @@ into information instead of a non-event.
   quotes. Added `depends-on: source/heesen-bright-zucker-2019-triangulation` to `links:`. Status stays
   `revised`. No empirical claim changed; no rung changed; the ladder itself is unchanged, now more fully
   externally grounded. No human-comparison claim made.
+- **2026-06-22 (session 84).** **Revision trigger (b) FIRED — the anticipated worked example of a rhyme
+  correctly *not* promoted to a mechanism.** The shared-instrument cross-level probe ran:
+  [`result/cross-level-shared-instrument-v1`](../results/cross-level-shared-instrument-v1.md). Under one
+  frozen commitment instrument applied identically at all three levels, the graded-aggregate /
+  discrete-moment shape — unified at **R1** under each leg's native instrument — **dissolved at R2** (3/3
+  models: discrete-on-moment only at the lexical level; graded-on-moment at the constructional and
+  relational levels under the equalized instrument). Per trigger (b) this **confirms the ladder's value**
+  and does not weaken the essay: it is exactly the "honest negative is first-class" worked example the
+  essay anticipated — a cross-level family resemblance held *at* R1 and correctly *not* promoted to a
+  mechanism, because it failed instrument-equalization. The R2 floor did its job. Marked trigger (b)
+  **fired** in the triggers list (with the worked-example link). Status stays `revised`; no rung changed;
+  the ladder itself is unchanged. No human-comparison claim (the result is `internal-contrast-only`).

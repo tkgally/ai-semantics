@@ -30,6 +30,20 @@ links:
 
 # Open question: does an LLM's gradience live in the population of its judgments, not in any single moment?
 
+> **Update — the cleanest discriminator has RUN (2026-06-22, session 84): DISSOLUTION.** The
+> shared-instrument cross-level probe this page names below as "the cleanest discriminator" was
+> built, frozen, run, and verified:
+> [`result/cross-level-shared-instrument-v1`](../results/cross-level-shared-instrument-v1.md).
+> Under one frozen instrument applied identically at all three levels, the discrete-on-the-moment
+> posture holds **only at the lexical level**; at the constructional and relational levels the
+> same models take "UNCLEAR" elevated on the genuinely-ambiguous item — **3/3 models dissolve**.
+> So the question's **deflationary default is now evidenced, not merely assumed**: the three legs
+> rhyme but do **not** share one instrument-equalized property. The honest residual (the gate's
+> disclosed comparability crux): the three levels' "ambiguous" classes are not the same *kind* of
+> indeterminacy, so *why* the lexical leg is special is not isolated — but the unified "one
+> constraint" reading is not licensed. The page is kept as the record of the question and its
+> disanalogies; the discriminator's verdict is now in.
+>
 > **Status: open (scoping only).** This page runs nothing, opens no spend, and surfaces no
 > operationalization decision. It names a recurring **cross-level shape** the new lexical
 > result makes newly askable, states plainly where the parallel is loose, and lays out what

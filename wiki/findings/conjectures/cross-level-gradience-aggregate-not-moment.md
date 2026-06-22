@@ -7,7 +7,7 @@ meaning-senses:
   - referential
   - constructional
   - relational
-status: designed
+status: tested
 contingent-on: []
 created: 2026-06-22
 updated: 2026-06-22
@@ -26,6 +26,23 @@ links:
 
 # Conjecture: the aggregate/moment shape is one cross-level property, not three rhyming facts
 
+> **Status: TESTED → DISSOLUTION (2026-06-22, session 84). The bet LOSES; the deflationary
+> default stands.** The shared-instrument cross-level probe built under the resolved gate has now
+> been run and verified:
+> [`result/cross-level-shared-instrument-v1`](../results/cross-level-shared-instrument-v1.md).
+> Under **one** frozen shared instrument applied identically at the three levels, the
+> *discrete-on-the-moment* posture holds **only at the lexical level**; at the constructional and
+> relational levels the **same models** take the explicit "UNCLEAR" option **elevated** on the
+> genuinely-ambiguous item (graded-on-moment) — **3/3 models DISSOLVE**. This is exactly the
+> conjecture's pre-registered **falsify (dissolution)** outcome: the shape **does not survive
+> instrument-equalization**, so the cross-level parallel is **three rhyming, instrument-specific
+> facts**, not one shared property. Load-bearing caveat (the gate's disclosed Q3 comparability
+> residual): the three levels' "ambiguous" classes are not the same *kind* of indeterminacy (a
+> lexical usage-similarity midpoint vs a genuine structural / underdetermined both-or-neither), so
+> the *mechanism* of the split is not isolated — but the unified "one property" bet loses either
+> way, and the most natural reading of *why* is itself the deflationary one. The text below is
+> preserved as the original forward bet.
+>
 > **Status: designed (2026-06-22, session 82).** This page is a **forward bet**, not a result. It
 > opens **no spend** and runs **no probe**. Its operationalization gate
 > [`decisions/resolved/cross-level-shared-instrument-operationalization`](../../decisions/resolved/cross-level-shared-instrument-operationalization.md)
