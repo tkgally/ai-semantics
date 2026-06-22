@@ -37,6 +37,8 @@ links:
     target: concept/formal-vs-functional-competence
   - rel: depends-on
     target: source/li-2024-cot-serial
+  - rel: depends-on
+    target: result/lexical-bridging-context-working-surface-v1
 ---
 
 # Essay: the output channel is an instrument
@@ -257,6 +259,27 @@ gemini who reasoned 24/24, CoT medians ~1040 / ~1430 chars), the control's own p
 verdict is owed an uptake-inducing re-run, not recorded as a survival. Uptake became visible only because one
 model declined; the discipline it forces — check that the widened channel was taken, model by model — applies
 whether or not a given panel happens to make it visible.
+
+*Forward note (2026-06-22, session 79) — the channel-not-taken-up state recurs on a fresh instrument family,
+and the scope condition holds where the computation is not serial.* The lexical bridging-context probe's
+"ungraded commitment" null was re-run under a working surface
+([`result/lexical-bridging-context-working-surface-v1`](../results/lexical-bridging-context-working-surface-v1.md)).
+Two things this essay predicts both happened. **First, the uptake clause earned its keep again, on a different
+task:** of the three models, **gpt declined the surface** (≥85% bare one-token `FINAL:` answers across all four
+framings, medians 8–15 completion tokens) while claude and gemini took it up fully (medians ~200–280 tokens,
+0% bare). Had gpt's unchanged null been read as a survival, the panel would have looked uniformly
+channel-controlled — false; gpt simply re-ran the narrow channel under a wide one's clothing. **Second, the
+scope condition held.** This essay scopes the confound to *serial, externalizable* computation; a
+same/different-sense **commitment** is not that kind of computation, and indeed widening a *taken-up* channel
+did **not** dissolve the commitment posture (gemini's null survived intact; the categorical-decline instrument
+stayed ungraded for both models that took up the surface). The only movement was on **claude's self-reported
+confidence number** (it drifted CI-strict-lower under reflection while its categorical commitment held) — a
+self-report softening, not the wholesale dissolution a masked serial computation produces. So this is **neither
+a trigger-(a) masking** (no dissolution into concordance) **nor a clean trigger-(b) serial survival** (the
+capability is not serial); it is a **boundary case that confirms the scope** — the confound correctly does not
+bite a non-serial commitment — and a third independent witness that the **uptake clause is load-bearing**, not
+a hedge. The lesson sharpens: "vary the channel and check uptake" is the right discipline *even when you expect
+the confound not to bite*, because the non-uptake state can otherwise be mistaken for a clean survival.
 
 *Forward note (2026-06-20, session 62).* The "still seeking" above (the genuine trigger-(b) contrast case) is
 now **found, magnitude-caveated**: the powered re-run

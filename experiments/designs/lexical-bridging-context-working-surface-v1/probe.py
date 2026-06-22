@@ -31,10 +31,18 @@ import os
 import re
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.abspath(os.path.join(
     os.path.dirname(__file__), "..", "..", "lib")))
 from openrouter import PANEL, call, billed_cost  # noqa: E402
+
+# Concurrency for the API I/O (the calls are independent per item; openrouter.call is a
+# blocking urllib request, so a thread pool overlaps the network waits). Order is preserved
+# by mapping results back to item index. This changes ONLY wall-clock time, not any
+# instrument value, prompt, temperature, or parse — the requests sent are byte-identical to
+# the sequential version.
+WORKERS = int(os.environ.get("PROBE_WORKERS", "8"))
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SELF_INSTRUMENT = os.path.join(HERE, "instrument.json")
@@ -159,33 +167,46 @@ def uptake(content, usage):
             if isinstance(u.get("completion_tokens_details"), dict) else u.get("reasoning_tokens")}
 
 
+def _one(model, sys_prompt, it, temp):
+    return it, call(model, sys_prompt, user(it), temperature=temp,
+                    reasoning=reasoning_for(model), max_tokens=max_tokens_for(model))
+
+
 def run_single(framing, sys_prompt, items, model, parse):
-    recs = []
-    for it in items:
-        r = call(model, sys_prompt, user(it), temperature=0,
-                 reasoning=reasoning_for(model), max_tokens=max_tokens_for(model))
-        content = r.get("content")
-        seg, had_tag = final_segment(content)
-        rec = {"item_id": it["item_id"], "lemma": it["lemma"],
-               "bridging_class": it["bridging_class"], "source": it["source"],
-               "framing": framing, "raw": content, "final_seg": seg, "had_final_tag": had_tag,
-               "human_median": it["human_median"], "error": r.get("error"),
-               "usage": r.get("usage"), "uptake": uptake(content, r.get("usage"))}
-        if framing == "b_conf":
-            rec["pred"], rec["pred2"] = parse(seg)
-        else:
-            rec["pred"] = parse(seg)
-        recs.append(rec)
-    return recs
+    out = [None] * len(items)
+    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+        futs = {ex.submit(_one, model, sys_prompt, it, 0): i for i, it in enumerate(items)}
+        for fut, i in futs.items():
+            it, r = fut.result()
+            content = r.get("content")
+            seg, had_tag = final_segment(content)
+            rec = {"item_id": it["item_id"], "lemma": it["lemma"],
+                   "bridging_class": it["bridging_class"], "source": it["source"],
+                   "framing": framing, "raw": content, "final_seg": seg, "had_final_tag": had_tag,
+                   "human_median": it["human_median"], "error": r.get("error"),
+                   "usage": r.get("usage"), "uptake": uptake(content, r.get("usage"))}
+            if framing == "b_conf":
+                rec["pred"], rec["pred2"] = parse(seg)
+            else:
+                rec["pred"] = parse(seg)
+            out[i] = rec
+    return out
 
 
 def run_dispersion(framing, sys_prompt, items, model, n_samples, temp, parse):
+    # Flatten to (item_idx, sample_idx) tasks, run concurrently, regroup preserving order.
+    tasks = [(i, s) for i in range(len(items)) for s in range(n_samples)]
+    results = {}
+    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+        futs = {ex.submit(_one, model, sys_prompt, items[i], temp): (i, s) for (i, s) in tasks}
+        for fut, key in futs.items():
+            _, r = fut.result()
+            results[key] = r
     recs = []
-    for it in items:
+    for i, it in enumerate(items):
         picks, usages, raws, tags, ups = [], [], [], [], []
-        for _ in range(n_samples):
-            r = call(model, sys_prompt, user(it), temperature=temp,
-                     reasoning=reasoning_for(model), max_tokens=max_tokens_for(model))
+        for s in range(n_samples):
+            r = results[(i, s)]
             content = r.get("content")
             seg, had_tag = final_segment(content)
             picks.append(parse(seg)); usages.append(r.get("usage")); raws.append(content)
