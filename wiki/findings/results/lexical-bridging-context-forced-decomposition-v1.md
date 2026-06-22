@@ -131,7 +131,7 @@ not break the instrument** (the internal benign-scaffold check), and the result 
 | channel | clear-diff | **bridging** | clear-same | bridging lower than BOTH (CI-strict)? |
 |---|---:|---:|---:|---|
 | v1 (narrow) | 96.3 | **95.7** | 94.2 | no (above clear-same) |
-| offered (declined) | 93.7 | **92.3** | 93.9 | no (declined surface) |
+| offered (declined) | 93.7 | **92.2** | 93.9 | no (declined surface) |
 | **forced** | 95.5 | **91.5** [89.2, 93.8] | 92.7 | **no** — pointwise below both, but CI overlaps clear-same [90.0, 94.9] |
 
 ### Decline (C/`c_third` %UNCLEAR) — weakly elevated on bridging, thin, amid a general rise
