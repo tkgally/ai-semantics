@@ -1,0 +1,241 @@
+---
+type: open-question
+id: gradience-population-not-moment
+title: "Does an LLM's gradience live in the population of its judgments, not in any single moment? — a cross-level question the lexical result makes askable"
+meaning-senses:
+  - distributional
+  - referential
+  - constructional
+  - relational
+status: open
+contingent-on: []
+created: 2026-06-22
+updated: 2026-06-22
+links:
+  - rel: depends-on
+    target: result/lexical-bridging-context-v1
+  - rel: depends-on
+    target: essay/graded-scale-ungraded-commitment
+  - rel: depends-on
+    target: essay/aggregation-not-constitution
+  - rel: depends-on
+    target: essay/preference-without-commitment
+  - rel: depends-on
+    target: concept/distributional-meaning
+---
+
+# Open question: does an LLM's gradience live in the population of its judgments, not in any single moment?
+
+> **Status: open (scoping only).** This page runs nothing, opens no spend, and surfaces no
+> operationalization decision. It names a recurring **cross-level shape** the new lexical
+> result makes newly askable, states plainly where the parallel is loose, and lays out what
+> evidence would tell a *general constraint* apart from three facts that merely rhyme. It is
+> a **question**, not a position; the canonical *lexical* argument lives in
+> [`essay/graded-scale-ungraded-commitment`](../essays/graded-scale-ungraded-commitment.md)
+> and this page does not restate it.
+
+## The shape, and why it is now askable
+
+The lexical bridging probe ([`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md))
+returned a clean three-model null with a memorable shape: a model can be **graded across a
+population of items** while being **discrete / committed on the single item**. Its headline
+states it as "a graded **SCALE** with ungraded **COMMITMENT**," with bridging items placed at
+"an **intermediate relatedness position** … **yet** [met] with clear-item-level confidence,"
+glossed as "**Gradience in the ledger; none in the moment.**"
+
+Read next to two earlier essays, that shape looks less like a one-off and more like a pattern
+the project has now seen at **three semantic levels** — but whether it *is* one pattern is
+exactly the open question. Three legs, each verified against its own page:
+
+- **Lexical (sense).** The graded property is a *cross-item* scale; the single ambiguous use
+  draws *ungraded commitment*. The result page: "every panel model places the pair at an
+  **intermediate relatedness position** … **yet meets that same ambiguous item with
+  clear-item-level confidence, almost never takes the explicit "UNCLEAR" option, and shows
+  near-zero dispersion across forced re-samples**"
+  ([`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md)). The
+  conceptual fork is owned by
+  [`essay/graded-scale-ungraded-commitment`](../essays/graded-scale-ungraded-commitment.md):
+  "The scale lives in the *aggregate ordering*; commitment lives in the *item-level posture*.
+  One is logically free of the other."
+
+- **Relational (coordination).** The recoverable structure lives in the *content-bag of the
+  record* — the aggregate — not in anything constituted live in the moment.
+  [`essay/aggregation-not-constitution`](../essays/aggregation-not-constitution.md): "The
+  convention is recovered from the *set* of prior turns, not their *trajectory*," and
+  "A convention whose interpretation any fresh agent can recover from the content-bag of the
+  record is exactly what a shared distributional substrate predicts." (Its 2026-06-16 revision
+  adds an order-sensitive *latest-binding-wins* surplus, but stresses this stays "the **bottom
+  rung**," "**thin / single-reader-recoverable**" — still aggregate-recoverable, not
+  constituted in the moment.)
+
+- **Constructional (AANN).** A *graded preference* component, present in **all three** models,
+  dissociates from a *commitment* component, present in **one**.
+  [`essay/preference-without-commitment`](../essays/preference-without-commitment.md): "'use'
+  decomposes into a preference component (present in all three) and a commitment component
+  (present in one), and the two need not travel together," where the preference is "a graded
+  *distributional compatibility*" and the commitment "a defeasible *inferential commitment*."
+
+The crude common shape: a **graded / structured** property recoverable from the *aggregate*
+(the population of the model's judgments, or the content-bag of the record) sits beside a
+**discrete / ungraded / uncommitted** handling of the *single moment or item*.
+
+## The question, sharply
+
+> Is the "graded-in-the-aggregate, discrete-or-uncommitted-in-the-moment" shape a **general
+> constraint on distributional competence** — something a next-token-trained model carries
+> across levels because of how that training stores structure — or is it **three separate,
+> level-specific facts that merely rhyme**, measured by three different instruments and unified
+> only by a suggestive turn of phrase?
+
+This is a **conjecture-shaped question**, deliberately not a conjecture: the project has no
+single instrument that has tested the three legs against each other, so the unification is at
+present a *family resemblance among phrasings*, not a demonstrated mechanism. The honest
+default is the deflationary one (three rhyming facts) until a shared-instrument probe says
+otherwise.
+
+## How this differs from the lexical essay (read before citing either)
+
+[`essay/graded-scale-ungraded-commitment`](../essays/graded-scale-ungraded-commitment.md) is
+the **canonical home** for the lexical "population-vs-moment" argument — it argues, in the
+project's own voice, that a graded *scale* (cross-item) and graded *commitment* (within-item)
+are logically independent, and that the null combination is a substantive lexical finding. That
+essay's scope is **the lexical level**. This page is **broader and weaker**: it asks whether
+the *same fork generalizes across levels*, and what an affirmative answer would (and would not)
+imply for distributional competence generally. It makes no new argument about the lexical case;
+it borrows the lexical leg as one of three and points at the join. Where the essay asserts a
+fork, this page only asks whether a *cross-level* fork exists.
+
+## Where the parallel is loose (be skeptical)
+
+The three legs are **not the same measurement**, and the disanalogies are large enough that
+"one constraint" must be earned, not assumed:
+
+1. **Three different instruments measure the three "moments."** The "discrete / uncommitted"
+   pole is operationalized differently in each leg: lexical = **self-reported confidence +
+   categorical decline + forced-pick dispersion** on an ambiguous item; relational =
+   **content-bag recoverability** of a convention from a transcript by a fresh reader;
+   constructional = **NLI entailment commitment** (and a grammaticalized agreement reflex).
+   A shape that looks shared across confidence, recoverability, and entailment is shared only
+   *if* those instruments are tapping one underlying property — which is the very thing in
+   question, not a premise.
+
+2. **The "aggregate" is not one thing across legs.** Lexical: a *population of items* the model
+   rates. Relational: a *single record's content-set* (one transcript), recoverable by one
+   reader — "**single-reader-recoverable**" is the relational essay's own gloss, which is a
+   weaker, within-record notion than a population statistic. Constructional: a *graded
+   compatibility* signal within a forced choice. Calling all three "the aggregate" papers over
+   real differences in what is being aggregated.
+
+3. **The legs point in partly different directions.** Lexical and constructional contrast a
+   graded *placement/preference* against a discrete *commitment* — same direction. The
+   relational leg is about where *structure is recoverable from* (the set, not the trajectory),
+   which is adjacent but not identical to "graded vs. discrete." And the constructional
+   dissociation is **model-specific** (commitment present in one of three), while the lexical
+   commitment-null is **uniform (3/3)** — so even the two closest legs differ in whether the
+   "moment" pole is a panel fact or a per-model one.
+
+4. **One leg is human-anchored (capped); two are internal-contrast-only.** The lexical leg is
+   DWUG-anchored but **capped to usage-similarity, not sense-co-presence**; the constructional
+   leg rests on an **expert-stipulated scoring key, not human judgment data** (its result is
+   `internal-contrast-only`); the relational leg (aggregation-vs-constitution) is
+   `internal-contrast-only` too (no human comparison). The legs do not even make the same *kind* of
+   claim, so a unified statement would have to be stated at the weakest common strength.
+
+5. **All three are behavioral, small-N, n=3 models.** None is representational; each is
+   scoped to its own items/constructions/lemmas/register and to three 2026 commercial models.
+   A cross-level "constraint" asserted from three behavioral nulls/dissociations would be a
+   pattern-in-the-behavior, never a claim about the models' internals or about training
+   mechanics directly.
+
+So the unification is a **conjecture-shaped question**, not a demonstrated fact. Stated plainly:
+the three legs *rhyme*; whether they *share a cause* is unshown.
+
+## What would answer this
+
+Two broad kinds of evidence would move the question off its deflationary default, and one
+in-repo lever already exists:
+
+- **A shared-instrument cross-level probe.** The cleanest discriminator would hold *one*
+  commitment instrument fixed and apply it at more than one level — e.g. an explicit graded
+  "I'm unsure / both / unclear" elicitation used on a lexical bridging item, a constructional
+  ambiguous item, and a relational mid-record item, scored the same way. If the same model
+  shows graded-aggregate / discrete-moment under *one* instrument across levels, that is
+  evidence for a general constraint; if the shape appears under each level's *own* instrument
+  but dissolves when the instruments are equalized, that is evidence for three rhyming
+  instrument-specific facts. (This is scoping only — the operationalization of such a probe is
+  **not** decided here and would be a future `wiki/decisions/open/` candidate, with the same
+  freeze-before-results discipline the lexical and AANN designs imposed.)
+
+- **A within-level manipulation that stresses the "moment" pole.** Even without going
+  cross-level, a manipulation that *should* surface within-moment gradience if it exists —
+  more re-samples, paraphrase variants, an inducement to hedge — and finds the commitment still
+  ungraded would harden one leg; finding it *graded* under such a manipulation would weaken the
+  "discrete moment" reading and so weaken the cross-level pattern.
+
+- **The existing output-channel lever (a discriminating re-run).** The project's
+  [`essay/output-channel-confound`](../essays/output-channel-confound.md) establishes that "a
+  forced-format capability-*negative* is, until the channel is varied, indistinguishable from a
+  channel artifact and must be read as **channel-bounded**, never as a capacity verdict." The
+  lexical commitment-null was read off a constrained output channel (a forced same/different
+  call plus a confidence number / a categorical third option), so the "ungraded commitment"
+  finding is, on that essay's own logic, **channel-bounded until the channel is varied**: an
+  apparent absence of within-moment gradience could be the model declining to *externalize* a
+  hesitation a working surface would let it voice. A **working-surface re-run** of the lexical
+  bridging probe — letting the model reason before committing, uptake verified per the essay's
+  uptake clause — is therefore one concrete discriminating test: if hesitation appears on the
+  ambiguous item once the channel is wide, the "discrete moment" leg was partly a channel
+  artifact and the cross-level pattern loses that leg; if commitment survives a genuinely-used
+  wide channel, the leg is channel-*controlled* and the pattern is firmer. The output-channel
+  essay's three-state vocabulary (channel-bounded / channel-not-taken-up / channel-controlled)
+  is exactly the grid such a re-run would resolve into. (The scope caveat from that essay
+  applies: the confound bites only where the probed handling is *serial and externalizable* —
+  whether a same/different-sense commitment is that kind of computation is itself part of what
+  the re-run would reveal.)
+
+A "general constraint" reading is licensed only if the shape **survives equalizing the
+instrument** (or survives a channel-widening that the model takes up); short of that, the
+parsimonious reading is three level-specific facts that share a vocabulary, not a mechanism.
+
+## Scope and limits
+
+- **Behavioral, not representational.** Every leg is about what the models *do*; none touches
+  graded *representations*. A cross-level constraint, if found, would be a behavioral
+  regularity, not a claim about internals or about next-token training mechanics directly.
+- **The lexical leg is capped.** It is about human-rated *usage-similarity* intermediacy, never
+  certified sense co-presence ([`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md)'s
+  binding cap); any cross-level statement inherits that cap on its lexical leg.
+- **Small Ns, n=3 models, three 2026 commercial models.** No coverage claim; direction-of-shape
+  only, scoped to each leg's items/constructions/lemmas/register.
+- **Mixed anchor status.** Only one leg is human-anchored (the lexical leg, capped to
+  usage-similarity); the constructional and relational legs are both `internal-contrast-only`,
+  so a unified claim could be stated only at the weakest common strength, and the two
+  internal-contrast-only legs forbid any human comparison.
+- **No spend, no decision.** This page opens no probe, no budget, and ratifies nothing; the
+  shared-instrument operationalization and any anchor question are deferred to a future session
+  and a future `wiki/decisions/open/` entry, cross-session ratified.
+
+## Relation to the existing wedge
+
+- It **depends on** the new lexical result and the three essays it joins, and on
+  [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md) — the
+  null hypothesis whose reach this question probes (does next-token-trained distributional
+  structure carry gradience in the *population* but not the *moment*, across levels?). The
+  concept page's standing caution applies: a distributional success "does not settle the
+  formal/functional question" and is "silent on reference and on truth," so a cross-level
+  pattern in distributional behavior would be a statement *about distributional competence*,
+  not about meaning proper.
+- It does **not** restate
+  [`essay/graded-scale-ungraded-commitment`](../essays/graded-scale-ungraded-commitment.md)
+  (the lexical fork's canonical home) — it asks the **cross-level** question that essay's
+  lexical argument makes visible, and explicitly keeps the position-vs-question distinction.
+- It touches all three of the project's level-axes at once, which is itself a reason to hold it
+  at low confidence: a pattern that spans levels is also the pattern most likely to be an
+  artifact of how the project phrases its findings rather than of the models.
+
+## Status: open (scoping only)
+
+The question stands: **graded-in-the-population, discrete-in-the-moment** — one constraint on
+distributional competence, or three rhyming coincidences? The default until a shared-instrument
+or channel-varied probe says otherwise is the deflationary one. This page names the shape,
+flags the disanalogies that keep it from being over-unified, and records the discriminating
+tests — including the in-repo output-channel re-run — that a later session could run.
