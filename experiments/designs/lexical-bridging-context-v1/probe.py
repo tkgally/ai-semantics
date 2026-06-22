@@ -22,13 +22,18 @@ DATA/LICENCE: reads the gitignored local full text (DWUG/CCOHA is CC BY-ND; WiC 
 CC BY-NC). Committed raw records carry item_id + class + framing + model output + the
 human pole label only — NO corpus sentences. Cost = API-billed usage.cost.
 
-Reasoning is suppressed on every call (reasoning={"enabled": False}): every framing emits
-a short label or a single integer, so reasoning tokens are pure cost (v1's lexical run
-billed gemini ~$2.61 over reasoning-heavy calls — the known budget driver). The analysis
-is a SEPARATE step (analyze.py), not run here; this runner only collects raw outputs.
+Reasoning is suppressed per model: every framing emits a short label or a single integer,
+so reasoning tokens are pure cost (v1's lexical run billed gemini ~$2.61 over reasoning-heavy
+calls — the known budget driver). The suppression MODE is model-dependent (2026-06-22 fix):
+google/gemini-3.5-flash REJECTS reasoning={"enabled": False} with HTTP 400 ("Reasoning is
+mandatory for this endpoint and cannot be disabled"), so gemini uses the project's documented
+norm reasoning={"effort": "minimal"} (config/budget.md), while claude/gpt fully disable it.
+This is a transport detail; it touches no FROZEN instrument number. The analysis is a SEPARATE
+step (analyze.py); this runner only collects raw outputs.
 
 Run (a LATER, spend-bearing session, after the pre-run-critic GO and a budget pre-flight):
     OPENROUTER_API_KEY=... python3 probe.py
+    OPENROUTER_API_KEY=... PROBE_SLOTS=C python3 probe.py   # re-run only certain panel slots
 """
 import json
 import os
@@ -47,7 +52,12 @@ DWUG_FULLTEXT = os.path.abspath(os.path.join(
 WIC_FULLTEXT = os.path.abspath(os.path.join(
     HERE, "..", "..", "data", "wic", "wic_poles_fulltext.jsonl"))
 RAW = os.path.join(HERE, "raw")
-NO_REASONING = {"enabled": False}
+
+
+def reasoning_for(model):
+    """Per-model reasoning suppression. google/* rejects {"enabled": False} (HTTP 400),
+    so it uses the documented {"effort": "minimal"} norm; others fully disable reasoning."""
+    return {"effort": "minimal"} if model.startswith("google/") else {"enabled": False}
 
 
 def load_items():
@@ -118,7 +128,7 @@ def run_single(framing, sys_prompt, items, slot, model, parse):
     """One temp-0 call per item; parse stored under 'pred' (+ 'pred2' for b_conf)."""
     recs = []
     for it in items:
-        r = call(model, sys_prompt, user(it), temperature=0, reasoning=NO_REASONING)
+        r = call(model, sys_prompt, user(it), temperature=0, reasoning=reasoning_for(model))
         rec = {"item_id": it["item_id"], "lemma": it["lemma"],
                "bridging_class": it["bridging_class"], "source": it["source"],
                "framing": framing, "raw": r.get("content"),
@@ -139,7 +149,7 @@ def run_dispersion(framing, sys_prompt, items, slot, model, n_samples, temp, par
     for it in items:
         picks, usages, raws = [], [], []
         for _ in range(n_samples):
-            r = call(model, sys_prompt, user(it), temperature=temp, reasoning=NO_REASONING)
+            r = call(model, sys_prompt, user(it), temperature=temp, reasoning=reasoning_for(model))
             picks.append(parse(r.get("content")))
             usages.append(r.get("usage"))
             raws.append(r.get("content"))
@@ -165,8 +175,18 @@ def main():
     Q3 = cfg["instruments"]["Q3_context_control"]["framings"]
     c_opts = C["c_third"]["options"]
 
+    # Optional slot filter (e.g. PROBE_SLOTS=C to re-run only gemini without re-spending
+    # on already-collected A/B). Existing run_summary.json is merged, not clobbered.
+    want = os.environ.get("PROBE_SLOTS")
+    want_slots = set(want.split(",")) if want else set(PANEL)
+
     summary, total = {}, 0.0
+    sumpath = os.path.join(RAW, "run_summary.json")
+    if os.path.exists(sumpath):
+        summary = json.load(open(sumpath, encoding="utf-8"))
     for slot, model in PANEL.items():
+        if slot not in want_slots:
+            continue
         print(f"\n=== panel.{slot} {model} ===")
         t0 = time.time()
         allrecs, disp_usage = [], []
