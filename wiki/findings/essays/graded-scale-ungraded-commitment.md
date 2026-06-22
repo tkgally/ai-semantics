@@ -6,15 +6,17 @@ meaning-senses:
   - distributional
   - referential
   - human-comparison
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-06-22
 links:
   - rel: depends-on
     target: conjecture/lexical-sense-gradience
   - rel: depends-on
     target: result/lexical-sense-gradience-v1
+  - rel: depends-on
+    target: result/lexical-bridging-context-v1
   - rel: depends-on
     target: open-question/lexical-bridging-context-gradience
   - rel: depends-on
@@ -29,8 +31,29 @@ links:
 
 # Essay: graded scale, ungraded commitment
 
-> **Status: draft (2026-06-21). A philosophical-track essay arguing in the project's own voice,
-> written *before* the probe that would test it.** Its original contribution is conceptual: it
+> **REVISION (2026-06-22, session 77) — trigger (b) FIRED: the central possibility is now
+> realized.** The bridging probe ran ([`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md))
+> and returned exactly the combination this essay named: all three panel models place
+> human-rated usage-similarity-midpoint pairs at an **intermediate relatedness position** (the
+> within-item echo of v1's scale) yet meet them with **clear-item confidence**, almost never
+> take an "UNCLEAR" option, and show near-zero forced-pick dispersion — **graded scale,
+> ungraded commitment**, corroborated across all three commitment instruments, clear-class
+> precondition met. So "graded scale, ungraded commitment" graduates from a *conceptual fork*
+> to a *described feature* of the panel's behavior (scoped to the lemmas/register/instrument
+> probed; behavioral, not representational; usage-similarity, not certified sense co-presence).
+> The conceptual independence claim (the spine of the essay) is **unchanged and now
+> empirically exercised**: v1 had established only the scale, and the probe had to be run to
+> find what commitment does — they came apart, as argued. The empirical statement is carried by
+> [`claim/lexical-graded-scale-ungraded-commitment`](../claims/lexical-graded-scale-ungraded-commitment.md).
+> One honest qualification the probe adds: the *position/scale* reading partly tracks the
+> model's own topic-similarity rating (Q3 r 0.32–0.53), the within-item distributional shadow
+> this essay flagged as a third outcome — the **commitment** null is the shadow-robust part; the
+> scale is the part the bound-but-weak control qualifies. The original argument below stands as
+> written; "would" is now "did" for trigger (b).
+
+> **Status: revised (2026-06-22; draft 2026-06-21). A philosophical-track essay arguing in the
+> project's own voice, written *before* the probe that would test it; trigger (b) has since
+> fired (see the revision banner above).** Its original contribution is conceptual: it
 > argues that a *graded sense scale* (cross-item: the model rank-orders usage pairs the way humans
 > do) and *graded sense commitment* (within-item: the model is less sure on the single use that is
 > itself ambiguous) are **logically independent**, that the project's v1 result established only the
