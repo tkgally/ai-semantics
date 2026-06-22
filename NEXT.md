@@ -2,112 +2,97 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** Session 76 (UTC 2026-06-21) spent **$0** (empirical unblock to run-ready + theory sync —
-no model queried). UTC-day 2026-06-21 total is unchanged at **$2.870** ($1.964 s64 + $0.503 s69 + $0.280 s71 + $0.123 s72 +
-$0 s70/73/74/75/76) of $5.00 (headroom **$2.130** *if the next session is still 2026-06-21 UTC*; a new UTC day resets to the
-full $5 — **check the clock**). Single-run prefer-split flag unchanged (~$2.50/run). Full ledger in
-[`config/budget.md`](config/budget.md). Check for any newer Tom override before spending.
+**Standard cap: $5.00/day (UTC).** Session 77 (UTC 2026-06-22) spent **$0.756** (the lexical bridging-context probe ran).
+UTC-day 2026-06-22 total is **$0.756** of $5.00 (headroom **$4.244** *if the next session is still 2026-06-22 UTC*; a new
+UTC day resets the full $5 — **check the clock**). Single-run prefer-split flag unchanged (~$2.50/run); this run came in at
+$0.756, well under. Full ledger in [`config/budget.md`](config/budget.md). Check for any newer Tom override before spending.
 
 ## State
 
-**Session 76 (UTC 2026-06-21) — empirical unblock, $0 — drove the lexical bridging-context probe to RUN-READY and got an
-independent pre-run-critic GO; deferred the spend-bearing run to a fresh UTC budget day.** Workflow mode: one wave of 3
-parallel disjoint-file units + an orchestrator-authored frozen instrument + an independent pre-run critic (judgement, not
-parallelized) + verification. No experiment ran.
+**Session 77 (UTC 2026-06-22) — EMPIRICAL: ran the lexical bridging-context probe (Prediction 4), $0.756 → a clean NULL,
+3/3 models: graded SCALE, ungraded COMMITMENT.** Single-unit mode (one spend-bearing run + analysis + write-up). On 88 items
+(48 DWUG within-period stratum [bridging 24] + 40 WiC clear poles), every panel model places human-rated usage-similarity-
+midpoint pairs at an **intermediate relatedness position** (within the frozen [40,60] band, between saturated clear poles —
+the within-item echo of v1's scale) **yet meets them with clear-item confidence, almost never takes the "UNCLEAR" option, and
+shows near-zero forced-pick dispersion** — commitment ungraded on all three commitment instruments (B confidence / C decline /
+A dispersion agree → clean null, not B–C disagreement). Clear-class precondition MET 3/3 → DWUG-anchored (capped to
+usage-similarity), NOT collapsed to internal-contrast-only.
 
-- **EMPIRICAL — both run blockers CLEARED; the probe is RUN-READY (pre-run critic GO).**
-  - **(a) Corpus re-fetch recipes written + verified ($0).** [`prep.py`](experiments/designs/lexical-bridging-context-v1/prep.py)
-    re-fetches DWUG (Zenodo 14028531, archive sha `64eef477…` verified) and re-maps **48/48** frozen stratum pairs →
-    usage sentences + target offsets (0 failures) into the gitignored data area;
-    [`prep_wic.py`](experiments/designs/lexical-bridging-context-v1/prep_wic.py) re-fetches WiC (archive sha `f1a2fb67…`,
-    matches the resource-page copy) and freezes a **20 + 20** clear-pole supplement
-    ([`wic_poles.csv`](experiments/designs/lexical-bridging-context-v1/wic_poles.csv), sha `b8b1a7aa…`; clear poles ONLY,
-    never bridging). Corpus text stays out of git (CC BY-ND / CC BY-NC, gitignored).
-  - **(b) Instrument numbers FROZEN + sha256'd** ([`instrument.json`](experiments/designs/lexical-bridging-context-v1/instrument.json),
-    sha `901ea89f…`): B primary (`b_rel` 0–100 relatedness = position; `b_conf` SAME/DIFFERENT + 0–100 confidence),
-    C cross-check (`c_third` SAME/DIFFERENT/UNCLEAR, verbatim third-option wording, decline rate), A characterizing-only
-    (`a_forced`, 5 samples temp 1.0), Q3 `topic` control. Per-axis reading rule (position by B alone; confidence/dispersion
-    by **both** B and C; mixed/weak ≠ null; clear-class precondition; usage-similarity claim cap). Runner
-    [`probe.py`](experiments/designs/lexical-bridging-context-v1/probe.py) is config-driven (no inline knob; gemini reasoning
-    suppressed for cost). No-API dry run OK (88 items = 48 DWUG + 40 WiC; bridging = 24 DWUG-only).
-  - **Independent pre-run critic GO** (a fresh agent re-derived the cheat-surface): conditions (a)–(i) all PASS; the
-    degenerate-responder surface (always-mid / always-UNCLEAR / always-SAME) is closed by the clear-class precondition;
-    `[40,60]` band + neutral third-option wording are not gameable post-hoc (the sha binds them). 7 non-blocking
-    run-session cautions are folded into the design's §7.
-- **PHILOSOPHICAL — theory sync.** [`theory/lexicon-grammar-continuum`](wiki/findings/theory/lexicon-grammar-continuum.md)
-  and [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md) now register the cross-item
-  graded-**scale** vs within-item graded-**commitment** distinction and link
-  [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md) + the open question.
-- **Why the run was deferred (disciplined, not blocked):** day headroom ~$2.13 < v1's gemini-driven ~$3.13 lexical-run
-  cost; a fresh UTC day resets the $5 cap, so a clean run beats squeezing a scaled one in today.
+- **Result:** [`result/lexical-bridging-context-v1`](wiki/findings/results/lexical-bridging-context-v1.md) (proposed).
+  **Claim promoted:** [`claim/lexical-graded-scale-ungraded-commitment`](wiki/findings/claims/lexical-graded-scale-ungraded-commitment.md)
+  (supported). **Essay trigger (b) FIRED → revised:** [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md)
+  (central possibility realized; conceptual spine unchanged). **Conjecture** [`conjecture/lexical-sense-gradience`](wiki/findings/conjectures/lexical-sense-gradience.md)
+  five-prediction picture now complete (a+c supported, b powered null, **4 = clean null**). **Open question**
+  [`open-question/lexical-bridging-context-gradience`](wiki/findings/open-questions/lexical-bridging-context-gradience.md)
+  marked **answered**.
+- **Two run-session fixes (disclosed in the result + committed):** (1) `gemini-3.5-flash` now REJECTS reasoning suppression
+  (HTTP 400) — `probe.py` uses the sanctioned `effort: minimal` fallback (reasoning_tokens=0); (2) `prep_wic.py`'s WiC
+  selection is non-reproducible (seeds a PRNG with a per-process-salted hash) — added `map_wic_fulltext.py` which maps the
+  **committed frozen manifest** (`wic_poles.csv` sha `b8b1a7aa…`) to text, honoring the freeze.
+- **Data integrity:** 2376 calls, **0 missing cost / 0 parse-fail / 0 errors**; independent-of-corpus raw records committed.
 
 ## Next concrete action — backlog for the next session
 
 **RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — no open decisions, no ratifications owed. Apply any
 Tom override first.
 
-**Track lean.** 73 phil · 74 method · 75 governance+lexical · 76 **empirical-unblock + phil-sync**. The lexical axis is the
-**active front and now RUN-READY** — running it is the lowest-friction way to land a result; keep weighting there until the
-bridging probe runs, then rebalance.
+**Track lean.** 73 phil · 74 method · 75 governance+lexical · 76 empirical-unblock+phil-sync · 77 **empirical (lexical run)**.
+The lexical bridging front is now **closed with a clean result**; the last few sessions lean empirical/lexical. Consider
+weighting the **philosophical** or **relational** track next, or the natural lexical follow-up below.
 
-1. **EMPIRICAL — RUN the lexical bridging-context probe** (everything below the run is done; this is the top item):
-   - **(a) Stage the gitignored corpus** in the fresh clone: run `python3 experiments/designs/lexical-bridging-context-v1/prep.py`
-     then `prep_wic.py` (both re-fetch + re-map; `probe.py` `sys.exit`s if the DWUG fulltext is missing). *Network-bearing —
-     verify the environment's network policy allows the Zenodo + WiC fetch; if blocked, that is an honest blocker to record.*
-   - **(b) Pre-flight budget** per [`config/budget.md`](config/budget.md) and **run** `OPENROUTER_API_KEY=… python3 probe.py`.
-     **Cost-aware:** v1's lexical run billed gemini ~$2.61 (reasoning-heavy); `probe.py` already suppresses reasoning — keep
-     gemini effort minimal, and if the single-shot estimate exceeds $2.50, **split by model** or **drop the characterizing-only
-     A read** (omitting A cannot touch the verdict).
-   - **(c) Mandatory empirical clear-class precondition check** (BUILDABILITY flags 9/7 clear-same as marginal): the clear
-     classes must show high confidence (B) + low decline rate (C). **If unmet even with the 20 WiC-T poles → collapse to
-     `internal-contrast-only` and relabel** — do not relax the precondition.
-   - **(d) Analyze + write the result**, leading with the **usage-similarity ≠ sense-co-presence cap**; disclose b_conf's
-     self-report risk, the near-degenerate independent context control (4/48 nonzero overlap → model-`topic` partial is the
-     operative Q3), and the small lemma-clustered N. The frozen reading rule decides supported / mixed-weak / clean-null.
-   - Files: [`experiments/designs/lexical-bridging-context-v1.md`](experiments/designs/lexical-bridging-context-v1.md) (§7 run
-     handoff + the 7 critic cautions); instrument/stratum/WiC + prep/probe in `experiments/designs/lexical-bridging-context-v1/`.
-   - On the outcome, the essay [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md)
-     revision triggers (a)/(b)/(c) fire — strengthen or revise it accordingly; promote a `claim` page per the route the probe ran.
-2. **DIVERSIFY (if the lexical run isn't picked up / network-blocked)** — essay trigger (b) the few→many scalar mechanism
-   (`internal-contrast-only`, human anchor scouted null — [`result/function-word-few-many-split`](wiki/findings/results/function-word-few-many-split.md)),
-   or the dormant **relational** axis (order-composition ladder).
-3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
+1. **LEXICAL follow-up (natural, cheap) — working-surface re-run of the ungraded-commitment null.** The probe used a
+   short-label output channel. The project's strongest recent lesson is the [`output-channel-confound`](wiki/findings/essays/output-channel-confound.md)
+   (let-alone / modal line): a "null" under a cramped channel can lift under a working surface. The claim
+   [`claim/lexical-graded-scale-ungraded-commitment`](wiki/findings/claims/lexical-graded-scale-ungraded-commitment.md)
+   already names this as a "what would change this" test. A re-run that lets the models reason step-by-step before the
+   confidence/decline call (format-only, instrument otherwise byte-identical, gemini effort held constant) would test whether
+   the ungraded commitment is channel-bounded or robust. *Cost-aware:* a working surface raised gemini+claude cost on prior
+   runs; pre-flight and keep gemini effort minimal. This is a trigger-(b)-style witness-seek, not a re-tune of the frozen v1.
+2. **PHILOSOPHICAL — theory sync + essay.** [`theory/lexicon-grammar-continuum`](wiki/findings/theory/lexicon-grammar-continuum.md)
+   and [`theory/situating-llm-meaning`](wiki/findings/theory/situating-llm-meaning.md) should absorb the new result (the
+   lexical cell now reads "graded scale beats the shadow on position; commitment is ungraded — a within-item discreteness to
+   set beside v3's between-stratum discreteness null"). A short essay on "what ungraded commitment says about distributional
+   competence" could spawn from the now-realized fork.
+3. **RELATIONAL (dormant axis)** — the order-composition ladder, if diversifying off lexical.
+4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
-**NONE.** `wiki/decisions/open/` is empty (both lexical bridging gates resolved session 75; do not re-ratify).
+**NONE.** `wiki/decisions/open/` is empty (both lexical bridging gates resolved session 75; the run did not open a new one —
+the two run-session fixes are runner adaptations to a model-endpoint change + a reproducibility bug, not operationalization
+choices: no instrument value changed, the WiC poles' class is fixed by gold T/F).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 76 spent **$0** (no model queried; UTC-day 2026-06-21 total unchanged at $2.870 of $5).
-- Plain-language version: the word-ambiguity test the last two sessions designed and "built to the edge of running" is now
-  **ready to run**. This session cleared the two things that stood in the way — it wrote and checked a recipe that re-fetches
-  the underlying sentences (kept out of the project under a no-derivatives licence) and re-attaches them to the locked-down set
-  of 48 word-use pairs (all reconnected cleanly), shored up the thinnest group with 20 + 20 clear examples from a second
-  human-rated collection, and **locked the test's exact measuring numbers** (the confidence scale, the "in-between" band, the
-  "unclear" wording, the sampling settings) with a fingerprint so none can be nudged after results arrive. An **independent
-  reviewer checked the finished setup and gave it a green light**, confirming a model can't cheat by answering "in-between" or
-  "unclear" to everything. The run itself was **held back to a fresh day** because today's remaining budget was below what the
-  run is likely to cost. No experiment ran.
+- Session 77 spent **$0.756** (UTC-day 2026-06-22 total $0.756 of $5).
+- Plain-language version: the word-ambiguity test the last sessions built was **run**, against all three models. The result is
+  clean: the models **do** place genuinely in-between word-uses in the middle of a relatedness scale (a smooth ranking), but
+  on those same ambiguous cases they are **just as confident** as on clear ones, almost never use an "unclear" option, and
+  barely waver when re-asked — a **graded scale with ungraded commitment**. This was the quieter of the two outcomes an
+  earlier essay had argued would be a real finding. The comparison to people stays capped to "people rated two uses as
+  middling in similarity," never "two meanings present"; the numbers are small (24 in-between pairs / 17 words); the ranking
+  half partly tracks sentence topic, the full-confidence half is the robust part (three commitment measures agreed). Two small
+  technical snags were handled and disclosed (a model's service now requires its reasoning step on — cheapest setting used; a
+  selection quirk in the supplementary examples was made reproducible by treating the locked list as the source of truth).
 
 ## Reminder for the next cold-start
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then [`wiki/index.md`](wiki/index.md).
 **Budget: standard $5/day (UTC).** **RECONCILE FIRST:** `wiki/decisions/open/` is **EMPTY** — no ratifications owed.
-**The lexical bridging-context probe is RUN-READY (pre-run critic GO):** re-run `prep.py` + `prep_wic.py` to stage the
-gitignored corpus, pre-flight budget (gemini reasoning suppressed; split / drop-A if the single shot > $2.50), run `probe.py`,
-do the **mandatory empirical clear-class precondition check** (collapse to `internal-contrast-only` if unmet), then analyze +
-write the result **leading with the usage-similarity-vs-sense cap**. Or diversify (few→many mechanism / relational). End
-squash-merged to `main`, website updated **with the JST clock-time stamp**.
+**The lexical bridging-context probe is DONE (clean null: graded scale, ungraded commitment, 3/3).** Pick from the backlog:
+the natural lexical follow-up is a **working-surface re-run** of the commitment null (output-channel-confound style); or
+diversify to the **philosophical** (theory sync + essay) or **relational** track. End squash-merged to `main`, website updated
+**with the JST clock-time stamp**.
 
 > ⚠ **Repo note for the cold-start (one-time, harmless):** a fresh clone's local `main` ref may lag the true remote
 > `main`. If `git log main` looks impossibly old or `merge-base main <branch>` is empty, **`git fetch origin main`
-> first** (sessions 64–76 all confirmed this — `git branch -f main origin/main` fixes it).
+> first** (sessions 64–77 all confirmed this — `git branch -f main origin/main` fixes it).
 >
 > ⚠ **Empirical re-run note:** the SUBTLEX-US full word list is **gitignored** (re-fetch via
 > `experiments/data/subtlex-us/prep.py`). The **DWUG corpus text** (CC BY-ND) and the **WiC corpus text** (CC BY-NC) are also
 > gitignored — re-fetch via `experiments/designs/lexical-bridging-context-v1/prep.py` (DWUG, all 48/48 stratum pairs re-map)
-> and `prep_wic.py` (WiC clear poles). The committed artifacts (frozen `stratum.csv`, `instrument.json` + sha, `wic_poles.csv`
-> + sha) carry only identifiers/ratings/wordings — no corpus sentences. The full BLiMP dataset is **not** in-repo (only a
-> 10-line sample).
+> and **`map_wic_fulltext.py`** (maps the committed frozen WiC manifest to text — use THIS, not `prep_wic.py`, which
+> re-selects non-reproducibly). The committed artifacts (frozen `stratum.csv`, `instrument.json` + sha, `wic_poles.csv` + sha)
+> carry only identifiers/ratings/wordings — no corpus sentences. The full BLiMP dataset is **not** in-repo (only a 10-line
+> sample).

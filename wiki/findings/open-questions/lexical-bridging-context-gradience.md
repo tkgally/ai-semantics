@@ -5,7 +5,7 @@ title: "Do bridging (sense-ambiguous) contexts elicit intermediate, lower-confid
 meaning-senses:
   - distributional
   - referential
-status: open
+status: answered
 contingent-on: []
 created: 2026-06-21
 updated: 2026-06-21
@@ -19,6 +19,17 @@ links:
 ---
 
 # Open question: do bridging contexts elicit intermediate, lower-confidence sense behavior?
+
+> **ANSWERED (2026-06-22, session 77) → the first-class NULL.** The probe ran:
+> [`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md). On all
+> three panel models, bridging items draw an **intermediate relatedness position** (the
+> within-item echo of v1's scale) but **clear-item confidence**, a near-zero decline rate,
+> and near-zero forced-pick dispersion — **graded scale, ungraded commitment** (Prediction 4
+> not supported; the null reported as cleanly as a positive, per the gate). The clear-class
+> precondition was met (so DWUG-anchored, capped to usage-similarity, not collapsed). This
+> fires [`essay/graded-scale-ungraded-commitment`](../essays/graded-scale-ungraded-commitment.md)
+> revision trigger (b) and completes [`conjecture/lexical-sense-gradience`](../conjectures/lexical-sense-gradience.md)'s
+> five-prediction picture. The scoping content below is retained for the record.
 
 > **Update (2026-06-21, session 75) — both gates are now RATIFIED (cross-session); the probe is
 > buildable.** The two decisions this page surfaced were each ratified by an independent fresh-agent

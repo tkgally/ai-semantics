@@ -28,8 +28,12 @@ links:
 
 # Experiment design v1 — lexical bridging-context probe (within-item gradience)
 
-> **Status: draft — frozen stratum + frozen instrument + corpus-prep recipes; RUN-READY,
-> not yet run (session 76 build).** Both gates are ratified cross-session:
+> **Status: RUN 2026-06-22 (session 77) → [`result/lexical-bridging-context-v1`](../../wiki/findings/results/lexical-bridging-context-v1.md)
+> — Prediction 4 NULL (graded scale, ungraded commitment, 3/3; $0.756 billed). Two run-session
+> fixes disclosed in the result: gemini's reasoning endpoint now rejects suppression (used the
+> sanctioned `effort: minimal` fallback), and the WiC freeze was made reproducible via
+> `map_wic_fulltext.py` (the committed manifest is the freeze).** Build (session 76):
+> frozen stratum + frozen instrument + corpus-prep recipes; RUN-READY. Both gates are ratified cross-session:
 > [`decisions/resolved/lexical-bridging-context-operationalization`](../../wiki/decisions/resolved/lexical-bridging-context-operationalization.md)
 > (B-primary graded-confidence + C-categorical-cross-check fixed panel; A
 > characterizing-only; per-axis reading rule; numeric freeze before data) and
