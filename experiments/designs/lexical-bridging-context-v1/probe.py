@@ -22,10 +22,14 @@ DATA/LICENCE: reads the gitignored local full text (DWUG/CCOHA is CC BY-ND; WiC 
 CC BY-NC). Committed raw records carry item_id + class + framing + model output + the
 human pole label only — NO corpus sentences. Cost = API-billed usage.cost.
 
-Reasoning is suppressed on every call (reasoning={"enabled": False}): every framing emits
-a short label or a single integer, so reasoning tokens are pure cost (v1's lexical run
-billed gemini ~$2.61 over reasoning-heavy calls — the known budget driver). The analysis
-is a SEPARATE step (analyze.py), not run here; this runner only collects raw outputs.
+Reasoning is held to the cheapest working setting per model (see reasoning_for): every
+framing emits a short label or a single integer, so reasoning tokens are pure cost (v1's
+lexical run billed gemini ~$2.61 over reasoning-heavy calls — the known budget driver).
+claude/gpt take full suppression ({"enabled": False}); the google/gemini-3.5-flash
+endpoint rejects suppression as of 2026-06-22 ("Reasoning is mandatory ... cannot be
+disabled"), so it takes {"effort": "minimal"} (reasoning_tokens=0, the documented gemini
+fallback). The analysis is a SEPARATE step (analyze.py), not run here; this runner only
+collects raw outputs.
 
 Run (a LATER, spend-bearing session, after the pre-run-critic GO and a budget pre-flight):
     OPENROUTER_API_KEY=... python3 probe.py
@@ -47,7 +51,24 @@ DWUG_FULLTEXT = os.path.abspath(os.path.join(
 WIC_FULLTEXT = os.path.abspath(os.path.join(
     HERE, "..", "..", "data", "wic", "wic_poles_fulltext.jsonl"))
 RAW = os.path.join(HERE, "raw")
-NO_REASONING = {"enabled": False}
+
+
+def reasoning_for(model):
+    """Per-model reasoning config (cost-control knob, NOT a frozen instrument value).
+
+    The frozen instrument config (instrument.json) carries no reasoning setting; its
+    cost_control.gemini_note and the design §7 run handoff both direct the run session
+    to "keep gemini reasoning suppressed / effort minimal". As of the run session
+    (2026-06-22) the google/gemini-3.5-flash endpoint REJECTS reasoning suppression
+    ("Reasoning is mandatory for this endpoint and cannot be disabled", HTTP 400), so
+    {"enabled": False} is impossible there; the documented project fallback
+    {"effort": "minimal"} works, yields reasoning_tokens=0, valid short-label output,
+    and the cheapest per-call cost (the established gemini mitigation across the ledger).
+    claude/gpt still accept full suppression, so they keep {"enabled": False}. This is a
+    runner adaptation to a model-endpoint change, not an instrument re-threshold: no
+    instrument value (scale, band, wording, sample count, temperature, class) changes.
+    """
+    return {"effort": "minimal"} if model.startswith("google/") else {"enabled": False}
 
 
 def load_items():
@@ -118,7 +139,7 @@ def run_single(framing, sys_prompt, items, slot, model, parse):
     """One temp-0 call per item; parse stored under 'pred' (+ 'pred2' for b_conf)."""
     recs = []
     for it in items:
-        r = call(model, sys_prompt, user(it), temperature=0, reasoning=NO_REASONING)
+        r = call(model, sys_prompt, user(it), temperature=0, reasoning=reasoning_for(model))
         rec = {"item_id": it["item_id"], "lemma": it["lemma"],
                "bridging_class": it["bridging_class"], "source": it["source"],
                "framing": framing, "raw": r.get("content"),
@@ -139,7 +160,7 @@ def run_dispersion(framing, sys_prompt, items, slot, model, n_samples, temp, par
     for it in items:
         picks, usages, raws = [], [], []
         for _ in range(n_samples):
-            r = call(model, sys_prompt, user(it), temperature=temp, reasoning=NO_REASONING)
+            r = call(model, sys_prompt, user(it), temperature=temp, reasoning=reasoning_for(model))
             picks.append(parse(r.get("content")))
             usages.append(r.get("usage"))
             raws.append(r.get("content"))
