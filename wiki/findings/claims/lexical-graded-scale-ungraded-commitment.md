@@ -28,7 +28,7 @@ links:
 
 # Claim: graded scale, ungraded commitment (lexical, behavioral)
 
-> **Status: supported (2026-06-22, session 77; channel-checked session 79).** Supported by a
+> **Status: supported (2026-06-22, session 77; channel-checked sessions 79 + 82).** Supported by a
 > direct test, [`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md)
 > (3/3 panel models, clear-class precondition met), and the channel-artifact alternative named
 > below has since been tested:
@@ -40,6 +40,14 @@ links:
 > (it softens under reflection, CI-strict lower), and gpt **declined** the surface (inconclusive).
 > So the claim stands with a sharpened scope: the *categorical-commitment* component is
 > channel-controlled; the *self-reported-confidence* component is partly channel-sensitive (claude).
+> gpt's declined leg was then **uptake-FORCED (session 82** →
+> [`result/lexical-bridging-context-forced-decomposition-v1`](../results/lexical-bridging-context-forced-decomposition-v1.md)**):**
+> with the channel genuinely exercised (0% bare, median ~110 tokens), gpt's commitment shows a
+> **weak, non-robust softening** — confidence pointwise-softer (not CI-strict) **and** categorical
+> decline 8.3% (2/24, thin) → **MIXED/WEAK**, not a clean crack. So the three-model channel check
+> completes: the *categorical-commitment* component is channel-controlled for gemini and softens
+> weakly/ambiguously for claude (confidence) and gpt (decline) under genuine uptake — **never a clean
+> graded-commitment positive**; the graded **SCALE** (position) replicates throughout.
 > Direction-of-effect at small, lemma-clustered N — not a coverage claim.
 
 ## Statement
@@ -101,5 +109,9 @@ The clear-class precondition was met on all three models, so the result is ancho
   route is mostly closed — with the residual that claude's *self-reported confidence* component
   is partly channel-sensitive. A future probe showing the **categorical-decline** half (not just
   a self-report number) crack under a genuinely-used wide channel would still bound the claim.
-- A larger, lemma-disjoint bridging set, or an uptake-induced re-run for gpt (which declined the
-  working surface here), would widen the channel check beyond the two models that took it up.
+- A larger, lemma-disjoint bridging set would widen the channel check. (The **uptake-induced re-run
+  for gpt** named here as the next step has since run — session 82,
+  [`result/lexical-bridging-context-forced-decomposition-v1`](../results/lexical-bridging-context-forced-decomposition-v1.md):
+  forcing uptake yields a weak **MIXED/WEAK** softening, completing the three-model check; a
+  **free-form min-length** forcer that isolates uptake from scaffold structure is the cleaner
+  residual axis.)
