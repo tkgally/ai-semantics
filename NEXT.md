@@ -2,92 +2,89 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** Session 88 ran on UTC-day **2026-06-23** and spent **$0.59880**
-(calib $0.00518 + the K=5 repeated-runs resolver $0.59362). With session 87 ($0.12128), the UTC-day
-2026-06-23 total is **$0.720 of $5**. Full ledger in [`config/budget.md`](config/budget.md). **Check the
-clock (`date -u`)** — a later session may be a new UTC day (full $5 resets). Check for any newer Tom
-override before spending.
+**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-23** ran three sessions: s87 ($0.12128) + s88 ($0.59880)
++ **s89 ($0, no probe)** = **$0.720 of $5**. Full ledger in [`config/budget.md`](config/budget.md). **Check the
+clock (`date -u`)** — a later session is almost certainly a new UTC day (full $5 resets). Check for any newer
+Tom override before spending.
 
 ## State
 
-**Session 88 (JST 2026-06-23 / UTC 2026-06-23) — MIXED workflow, 2 waves, $0.599 spent.** Branch was even
-with `main` at start (session 87 merged as #135; no PR to land). Two waves landed:
+**Session 89 (JST 2026-06-23 / UTC 2026-06-23) — GOVERNANCE + PHILOSOPHICAL + MAINTENANCE, 1 wave, $0 (no
+probe).** Branch was even with `main` at start (s88 merged as #136; no PR to land). `decisions/open/` was EMPTY
+(no ratification owed). One wave (2 parallel generation subagents + a read-only adversarial coherence pass):
 
-- **Wave 1 (philosophical):** NEW
-  [`essay/layer-specialness-vs-always-resolvability`](wiki/findings/essays/layer-specialness-vs-always-resolvability.md)
-  — takes the within-lexical SURVIVAL result's **load-bearing caveat 1** and forks the surviving lexical
-  commit into **(A) layer-specialness** vs **(B) always-resolvability**; shows the SURVIVAL design can't
-  separate them (a balanced homonym is *both* lexical *and* resolvable); names the discriminating test — a
-  **genuinely-unresolvable lexical item** (a forced-both pun/zeugma, the lexical analogue of the relational
-  same-round dual binding), with the asymmetric prediction commit-under-(A)/decline-under-(B); held at R1,
-  deflationary (B) holds the burden. + NEW
-  [`source/falkum-vicente-2015-polysemy`](wiki/base/sources/falkum-vicente-2015-polysemy.md) (green-OA
-  *Lingua* editorial) discharging the **regular/systematic (Apresjan) polysemy** want flagged by
-  `ambiguity-kind-not-level` + `sennet-2021-ambiguity-sep`. Coherence pass clean (0 BLOCKERs; 3 SHOULD-FIX
-  applied).
-- **Wave 2 (empirical):** the cheap **K=5 byte-identical repeated-runs resolver** of the s82/82b decline
-  disagreement →
-  [`result/lexical-bridging-context-forced-decomposition-repeated-runs-v1`](wiki/findings/results/lexical-bridging-context-forced-decomposition-repeated-runs-v1.md):
-  **de-noised NULL/CHANNEL-CONTROLLED (s82b vindicated).** gpt's bridging decline is at the jitter floor
-  (per-run 1–2/24; majority-vote **1/24**) and **not** elevated over clear-same (majority-vote **3/29**); no
-  robust confidence crack (bridging−clear-same diff CI **[−4.64,+1.68] ∋ 0**). The s82 MIXED/WEAK 2/24 was a
-  high jitter draw; gpt's ungraded-commitment null is channel-controlled too, **like gemini's**. Disclosed
-  cross-session shift (clear-same decline 3.4 %→10.3 %) — a lower-bound datum for
-  [`essay/point-estimate-is-a-draw`](wiki/findings/essays/point-estimate-is-a-draw.md). 880 calls,
-  $0.59362, 0 missing, 440/440 + 440/440 parsed. Independent pre-run critic GO + post-run verifier
-  REPRODUCED. Parent forced-decomp result's discrepancy box now carries a RESOLVED note.
+- **GOVERNANCE (backlog top) — OPENED the forced-both operationalization decision:**
+  [`decisions/open/forced-both-lexical-operationalization`](wiki/decisions/open/forced-both-lexical-operationalization.md)
+  — the discriminating-test operationalization named by
+  [`essay/layer-specialness-vs-always-resolvability`](wiki/findings/essays/layer-specialness-vs-always-resolvability.md):
+  how to build + score a **genuinely-unresolvable (forced-both) lexical item** (pun/zeugma) so a probe can
+  separate **(A) layer-specialness** from **(B) always-resolvability**. Q1 certify forced-both vs a *leaning*
+  homonym; Q2 a **forced-single-application** instrument (so "it means both" is not a dodge); Q3 sha256-frozen
+  reading rule inheriting C1/C3/C4, commit held to a *higher* anti-cheat bar; Q4 `internal-contrast-only`
+  unless a sense-co-activation resource is separately cross-session ratified. **NOT runnable until ratified.**
+  Deflationary (B) holds the burden; expected first outcome is the essay's trigger (c).
+- **PHILOSOPHICAL — NEW source** [`source/pustejovsky-1991-generative-lexicon`](wiki/base/sources/pustejovsky-1991-generative-lexicon.md)
+  (OA, ACL Anthology J91-4003) grounding the **contrastive (homonymy) vs. complementary (logical-polysemy)**
+  distinction the forced-both wedge turns on — discharges the essay's flagged weakest-provenance point. Honesty
+  note: "copredication"/dot-objects are GL-1995, not the 1991 article (quotes only 1991 text).
+- **MAINTENANCE — folded** the s88 K=5 de-noising into
+  [`claim/lexical-graded-scale-ungraded-commitment`](wiki/findings/claims/lexical-graded-scale-ungraded-commitment.md):
+  gpt's leg → **channel-controlled null** (like gemini); **claude is now the lone CI-strict (confidence) crack.**
+  Coherence pass: 0 BLOCKER / 0 SHOULD-FIX / 2 cosmetic NITs (1 fixed). All quotes verbatim (incl. vs the live
+  Pustejovsky PDF). senselint 0 errors; linkify clean. Merged PR #137.
 
 ## Next concrete action — backlog for the next session
 
-**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — **no decision owed ratification**
-next session. Apply any Tom override first as always.
+**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` holds **ONE** decision —
+[`forced-both-lexical-operationalization`](wiki/decisions/open/forced-both-lexical-operationalization.md),
+**opened session 89 → ELIGIBLE for cross-session ratification next session** (the boundary will have held).
+Apply any Tom override first as always.
 
-**Track lean — recent: 85 PHIL · 86 gov+phil · 87 EMPIRICAL · 88 MIXED (phil essay+source + empirical
-resolver). Balanced → next can lean either; a runnable empirical unit is welcome if one exists.**
+**Track lean — recent: 86 gov+phil · 87 EMPIRICAL · 88 MIXED · 89 gov+phil+maint. Tilted philosophical/
+governance → next should lean EMPIRICAL if a runnable unit exists.**
 
-1. **GOVERNANCE/PHILOSOPHICAL (natural next) — OPEN the forced-both / genuinely-unresolvable-lexical-item
-   operationalization decision.**
-   [`essay/layer-specialness-vs-always-resolvability`](wiki/findings/essays/layer-specialness-vs-always-resolvability.md)
-   names the one probe that separates **layer-specialness (A)** from **always-resolvability (B)**: a lexical
-   item where **both senses are required at once** (a pun/zeugma), scored by a **forced-single-application**
-   instrument on which "it means both" is **not** a dodge. Building/running it needs a ratified
-   operationalization — what certifies "forced-both" vs a *leaning* homonym (leans suppress UNCLEAR → spurious
-   commit), how to score "both," the instrument, and the anchor posture (`internal-contrast-only` unless a
-   resource certifies co-activation). Surface it as a `wiki/decisions/open/` page with options + a provisional
-   default (the essay's certification-difficulty section sketches the shape). Ratifiable a *later* session;
-   **NOT runnable until ratified.**
-2. **MAINTENANCE (cheap) — fold the de-noised gpt leg into
-   [`claim/lexical-graded-scale-ungraded-commitment`](wiki/findings/claims/lexical-graded-scale-ungraded-commitment.md).**
-   The repeated-runs resolver de-noised gpt's leg from "weak softening (MIXED/WEAK)" to "channel-controlled
-   null, like gemini"; **claude is now the lone CI-strict (confidence) crack**. Update the claim page to the
-   sharpened three-model picture (gemini + de-noised gpt channel-controlled; claude's confidence crack only).
-3. **EMPIRICAL (reserve) — Option A cross-level matched-kind.** A *full* cross-level matched-kind statement
+1. **GOVERNANCE (eligible) — RATIFY (or keep open) the forced-both operationalization decision.**
+   [`decisions/open/forced-both-lexical-operationalization`](wiki/decisions/open/forced-both-lexical-operationalization.md)
+   was opened s89 and is ratifiable next session via an **independent fresh-agent adversarial review** (NOT the
+   orchestrator; PROTOCOL §2). The reviewer reads the four Qs + provisional defaults, spot-checks the verbatim
+   quotes, and returns adopt-defaults / adopt-another-option / keep-open-with-what's-missing + written
+   rationale; ratification fixes the *yardstick, never the result*. Honest expectation: the defaults are sound
+   but the *certifiability* of a clean forced-both item (Q1) is the genuinely hard part — keeping it open with a
+   named missing piece is a legitimate verdict. **Even if ratified, the probe is NOT auto-runnable** (needs a
+   fresh pre-run critic GO + budget; the essay's trigger (c) "cannot cleanly certify" may be the outcome).
+2. **EMPIRICAL (reserve) — Option A cross-level matched-kind.** A *full* cross-level matched-kind statement
    (the matched-ambiguity-kind gate's Option A, held in reserve) needs a reachable **Q2-a homonym
    sense-anchor** (a separate cross-session anchor decision) — not buildable until such a resource is found +
-   ratified. Don't open without checking reachability.
-4. **PHILOSOPHICAL (source) — the Cruse/Murphy/Lyons lexical-semantics monographs remain wanted** (likely
-   not OA; the regular-polysemy want was discharged this session). Check reachability before committing time.
-5. **RELATIONAL (dormant axis)** —
+   ratified. Don't open without checking reachability first.
+3. **PHILOSOPHICAL (source) — the Cruse/Murphy/Lyons lexical-semantics monographs remain wanted** (likely not
+   OA; the regular-polysemy + copredication/logical-polysemy wants are now discharged by Falkum & Vicente and
+   Pustejovsky 1991). Check reachability before committing time.
+4. **RELATIONAL (dormant axis)** —
    [`open-question/relational-arrival-order-beyond-text`](wiki/findings/open-questions/relational-arrival-order-beyond-text.md):
    the next move is a **medium choice**, not more text probes.
-6. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
+5. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
-- **NONE.** `wiki/decisions/open/` is empty. (The matched-ambiguity-kind gate was ratified s86 and its probe
-  ran s87 → SURVIVAL 3/3; the s82/82b forced-decomposition channel-check disagreement was resolved
-  empirically this session → de-noised NULL/channel-controlled.)
+- **ONE — eligible next session.**
+  [`decisions/open/forced-both-lexical-operationalization`](wiki/decisions/open/forced-both-lexical-operationalization.md)
+  — *opened session 89; ELIGIBLE for ratification next session* (cross-session boundary holds). Provisional
+  defaults: Q1 zeugma/co-predication frame + independent balance check (frozen); Q2 forced-single-application
+  instrument; Q3 sha256-frozen reading rule (C1/C3/C4 inherited; higher bar on commit); Q4
+  `internal-contrast-only` unless a co-activation resource is separately ratified. NOT runnable until ratified.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 88 spent **$0.59880** (calib $0.00518 + the K=5 resolver $0.59362). UTC-day 2026-06-23 total
-  (s87 + s88) ≈ **$0.72 of $5**.
-- Plain-language: the project (1) turned last session's surprise into a **sharper question** — is the
-  word-sense layer genuinely *special*, or do forked words just always leave *some* meaning to pick? — and
-  named the one experiment that could settle it (a word that means two things at once, like a pun); and (2)
-  **settled an old disagreement** by running the same word test five times and averaging: a small "2-of-24"
-  difference was just run-to-run randomness, so the models commit cleanly on the in-between words (no real
-  hedging). Two independent reviewers; about 60 cents.
+- Session 89 spent **$0** (no probe; governance + a source ingest + a claim-maintenance edit). UTC-day
+  2026-06-23 total (s87 + s88 + s89) ≈ **$0.72 of $5**.
+- Plain-language: this session did the careful **groundwork before** the next experiment rather than running
+  one. The open question — is the word-sense layer genuinely *special*, or do forked words just always leave
+  *some* meaning to pick? — can only be settled by a word that means two things at once (a pun). So the project
+  wrote down, in advance, *exactly how* such a test would have to be built and scored to be fair, as a proposed
+  methodology a **later** session will independently review before anything is built or run (and was honest that
+  building such a "both-at-once" word cleanly may prove too hard). It also added a classic open-access
+  linguistics paper to ground the distinction, and folded last session's re-measurement into the running
+  summary of the word-commitment finding.
 
 ## Reminder for the next cold-start
 
@@ -95,18 +92,13 @@ Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60)
 then [`wiki/index.md`](wiki/index.md).
 **Budget: standard $5/day (UTC)** — a new UTC day resets the full $5.
-**RECONCILE FIRST:** `wiki/decisions/open/` is **EMPTY** — no ratification owed.
-**Track lean → balanced; next can lean either.** Top backlog = OPEN the forced-both operationalization
-decision (the new essay's named discriminating test) / fold the de-noised gpt leg into the lexical claim /
-dormant relational.
+**RECONCILE FIRST:** `wiki/decisions/open/` holds **forced-both-lexical-operationalization** (opened s89) —
+**ELIGIBLE for cross-session ratification next session** via a fresh independent adversarial-review agent.
+**Track lean → lean EMPIRICAL if a runnable unit exists.** Top backlog = ratify (or keep open) the forced-both
+decision / Option A reserve (needs a homonym sense-anchor) / dormant relational.
 End squash-merged to `main`, website updated **with the JST clock-time stamp**.
 
 > ⚠ **Repo note for the cold-start (one-time, harmless):** a fresh clone's local `main` ref may lag the true remote `main`.
 > If `git log main` looks impossibly old or `merge-base main <branch>` is empty, **`git fetch origin main` first**
-> (`git branch -f main origin/main` fixes it).
->
-> ⚠ **Empirical re-run note:** SUBTLEX-US, DWUG (CC BY-ND), and WiC (CC BY-NC) are all gitignored. The K=5
-> resolver re-runs the frozen forced-decomposition instrument (sha `dceafa9d…`), which needs DWUG + WiC staged
-> via the v1 `prep.py` + `map_wic_fulltext.py` (both **reachable**: DWUG Zenodo 14028531 ~16 MB sha `64eef477…`;
-> WiC pilehvar.github.io sha `f1a2fb67…`; both match pins). Use `map_wic_fulltext.py` (NOT `prep_wic.py`, which
-> re-selects and overwrites the frozen manifest). Committed raw is sanitized (labels/counts only, no corpus text/CoT).
+> (`git branch -f main origin/main` fixes it). (This happened again at s89 cold-start: fresh clone's local main was 35534a8;
+> `git fetch origin main` → 5db1f20 = #136.)
