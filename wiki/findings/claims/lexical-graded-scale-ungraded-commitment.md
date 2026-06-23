@@ -10,7 +10,7 @@ status: supported
 anchor: resource/dwug-usage-graphs
 contingent-on: []
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-06-23
 links:
   - rel: supports
     target: essay/graded-scale-ungraded-commitment
@@ -20,6 +20,8 @@ links:
     target: result/lexical-bridging-context-v1
   - rel: depends-on
     target: result/lexical-bridging-context-working-surface-v1
+  - rel: depends-on
+    target: result/lexical-bridging-context-forced-decomposition-repeated-runs-v1
   - rel: anchors
     target: resource/dwug-usage-graphs
   - rel: depends-on
@@ -28,7 +30,7 @@ links:
 
 # Claim: graded scale, ungraded commitment (lexical, behavioral)
 
-> **Status: supported (2026-06-22, session 77; channel-checked sessions 79 + 82).** Supported by a
+> **Status: supported (2026-06-22, session 77; channel-checked sessions 79 + 82; gpt leg de-noised session 88, K=5 repeated runs).** Supported by a
 > direct test, [`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md)
 > (3/3 panel models, clear-class precondition met), and the channel-artifact alternative named
 > below has since been tested:
@@ -41,13 +43,21 @@ links:
 > So the claim stands with a sharpened scope: the *categorical-commitment* component is
 > channel-controlled; the *self-reported-confidence* component is partly channel-sensitive (claude).
 > gpt's declined leg was then **uptake-FORCED (session 82** →
-> [`result/lexical-bridging-context-forced-decomposition-v1`](../results/lexical-bridging-context-forced-decomposition-v1.md)**):**
-> with the channel genuinely exercised (0% bare, median ~110 tokens), gpt's commitment shows a
-> **weak, non-robust softening** — confidence pointwise-softer (not CI-strict) **and** categorical
-> decline 8.3% (2/24, thin) → **MIXED/WEAK**, not a clean crack. So the three-model channel check
-> completes: the *categorical-commitment* component is channel-controlled for gemini and softens
-> weakly/ambiguously for claude (confidence) and gpt (decline) under genuine uptake — **never a clean
-> graded-commitment positive**; the graded **SCALE** (position) replicates throughout.
+> [`result/lexical-bridging-context-forced-decomposition-v1`](../results/lexical-bridging-context-forced-decomposition-v1.md)**)**,
+> which read a **weak MIXED/WEAK softening** (bridging decline 8.3%, 2/24) — but a second routine
+> session re-ran the same forced surface and read **0/24 (channel-controlled null)**, a ~2-of-24-item
+> disagreement at/under the documented temp-0 jitter. A **K=5 byte-identical repeated-runs resolver
+> (session 88** →
+> [`result/lexical-bridging-context-forced-decomposition-repeated-runs-v1`](../results/lexical-bridging-context-forced-decomposition-repeated-runs-v1.md)**)**
+> **de-noised it: the s82 8.3% was a high jitter draw.** gpt's bridging decline sits at the jitter
+> floor (per-run 1–2/24; majority-vote **1/24**) and is **not** elevated over the clear-same class
+> (majority-vote **3/29**); the bridging−clear-same confidence difference CI **[−4.64,+1.68] ∋ 0** (no
+> robust crack). So **both** commitment instruments de-noise to "no bridging-preferential crack" —
+> **gpt's ungraded-commitment null is channel-controlled too, like gemini's.** That sharpens the
+> three-model picture: the *categorical-commitment* component is channel-controlled for **gemini and
+> (de-noised) gpt**, and the **lone remaining CI-strict crack is claude's** *self-reported confidence*
+> (it softens under reflection, decline held) — **never a clean graded-commitment positive**; the
+> graded **SCALE** (position) replicates throughout.
 > Direction-of-effect at small, lemma-clustered N — not a coverage claim.
 
 ## Statement
@@ -110,8 +120,12 @@ The clear-class precondition was met on all three models, so the result is ancho
   is partly channel-sensitive. A future probe showing the **categorical-decline** half (not just
   a self-report number) crack under a genuinely-used wide channel would still bound the claim.
 - A larger, lemma-disjoint bridging set would widen the channel check. (The **uptake-induced re-run
-  for gpt** named here as the next step has since run — session 82,
-  [`result/lexical-bridging-context-forced-decomposition-v1`](../results/lexical-bridging-context-forced-decomposition-v1.md):
-  forcing uptake yields a weak **MIXED/WEAK** softening, completing the three-model check; a
-  **free-form min-length** forcer that isolates uptake from scaffold structure is the cleaner
-  residual axis.)
+  for gpt** named here as the next step ran session 82 →
+  [`result/lexical-bridging-context-forced-decomposition-v1`](../results/lexical-bridging-context-forced-decomposition-v1.md)
+  and read a weak **MIXED/WEAK** softening; a session-82-vs-82b decline disagreement then **resolved
+  empirically** via a K=5 byte-identical repeated-runs resolver, session 88 →
+  [`result/lexical-bridging-context-forced-decomposition-repeated-runs-v1`](../results/lexical-bridging-context-forced-decomposition-repeated-runs-v1.md):
+  the 8.3% was a high jitter draw; de-noised, gpt's bridging decline is at the jitter floor (1/24
+  majority) and **not** bridging-preferential → **channel-controlled null, like gemini**, so claude
+  is now the lone CI-strict crack. A **free-form min-length** forcer that isolates uptake from
+  scaffold structure remains the cleaner residual axis.)
