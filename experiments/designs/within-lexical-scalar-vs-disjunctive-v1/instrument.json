@@ -1,0 +1,82 @@
+{
+  "_provenance": {
+    "design": "experiments/designs/within-lexical-scalar-vs-disjunctive-v1.md",
+    "gate": "wiki/decisions/resolved/matched-ambiguity-kind-cross-level.md (ADOPT DEFAULT, session 86: Q1 Option B, Q2-b internal-contrast-only for the disjunctive arm, Q3 reading rule as written, PLUS the binding nuisance-matching freeze)",
+    "inherited_instrument": "experiments/designs/cross-level-shared-instrument-v1/instrument.json levels.lexical (which itself generalises lexical-bridging-context-v1)",
+    "essay": "wiki/findings/essays/ambiguity-kind-not-level.md (the kind-not-level reading; this probe is its R2 test for the lexical case)",
+    "frozen": "2026-06-23 (build session; sha256 of THIS file is the C2 numeric/wording freeze hash; the run is gated by a FRESH independent pre-run critic GO/NO-GO + a budget pre-flight)",
+    "note": "ONE frozen lexical commitment instrument applied IDENTICALLY to two within-lexical arms that differ ONLY in the KIND of ambiguity of the stimulus: Arm 1 (scalar-bridging, DWUG human-rated usage-similarity midpoints, usage-similarity-capped) vs Arm 2 (disjunctive-homonym, author-built balanced-homonym contexts, internal-contrast-only). The instrument's system prompt, decline wording, confidence scale + mid-band, answer format, temperature, and per-axis reading rule are BYTE-IDENTICAL across the two arms (only the stimulus body differs, by kind). No value below may be added, dropped, re-worded, or re-thresholded after any model output is seen (gate Q3 freeze; the named anti-cheat violation is re-selecting the disjunctive class against model confidence -- foreclosed by this sha256 freeze). NO probe was run and NO spend was opened in the build session that froze this file."
+  },
+
+  "binding_conditions_quoted": {
+    "C1": "Per-axis separation. The categorical DECLINE (%UNCLEAR), not the confidence rating, is the load-bearing instrument for the moment/commitment pole. Confidence may corroborate but may NOT, on its own, flip a moment-axis verdict.",
+    "C2": "Numeric/wording freeze + sha256. Before the first probe call, record and sha256-hash: (i) the confidence scale and its exact numeric mid-band; (ii) the verbatim UNCLEAR decline wording; (iii) the per-arm operational definitions of the moment pole; (iv) the survival/collapse threshold. The matched-kind certification, the item ids, and the survival/collapse threshold are sha256-frozen here BEFORE any probe call.",
+    "C3": "Clear-class precondition -> NO-GO, per ARM. An arm is interpretable only if its clear classes (clear-same + clear-different) show HIGH confidence AND LOW decline under the shared instrument. An arm failing this collapses to weak / internal-contrast-only and contributes NO moment verdict. RUN-TIME check on data, encoded as a precondition gate in analyze.py.",
+    "C4": "Channel-sensitivity guard. A confidence shift on the ambiguous/disjunctive class WITHOUT a matching categorical-decline shift is reported as a SELF-REPORT effect, NOT as graded-moment evidence.",
+    "nuisance_matching_freeze": "Binding condition added at ratification (gate, session 86). Before any model call, the two lexical classes must be matched (or explicitly stratified/controlled) on register, token/sentence length, target-word frequency band, and syntactic frame, to the extent the pools allow; any residual imbalance is disclosed in the design doc and the result must lead with it as a co-confound. Recorded + sha256-frozen in nuisance_match.json (consumed by certify.py).",
+    "Q4_anchor": "This gate licenses NO human-comparison claim for the disjunctive arm. Arm 1 (DWUG scalar) keeps its inherited usage-similarity cap (NOT sense-co-presence). Arm 2 (author-built balanced homonyms) is internal-contrast-only (Q2-b). Any unified within-lexical statement is floored at internal-contrast-only for the disjunctive arm (weakest-common-strength). No anchor invented."
+  },
+
+  "shared_elicitation": {
+    "_what_is_held_identical": "The same three-option commit/decline frame (SAME / DIFFERENT / UNCLEAR) plus a 0-100 confidence rating, applied to BOTH arms. The system prompt, decline wording, confidence scale, mid-band, answer format, temperature, and reading rule are byte-identical across arms. The ONLY thing that varies is the stimulus body -- specifically its ambiguity KIND (scalar usage-similarity midpoint vs disjunctive balanced homonym), the level (lexical word-sense) held fixed.",
+    "_decline_wording_is_scalar_flavoured_disclosed": "The inherited UNCLEAR gloss ('the two uses are genuinely in between') is phrased for a SCALAR midpoint. It is inherited VERBATIM (gate: instrument unchanged) and applied to BOTH arms, so it is a CONSTANT, not a confound for the within-/cross-arm contrast. Its scalar flavour, if anything, SUPPRESSES UNCLEAR on a disjunctive ('both/neither', not 'in between') item -> it biases TOWARD survival, which is exactly why survival must clear the HIGHER anti-cheat bar (gate). Disclosed as a limit; not re-worded (re-wording would break the C2 freeze and the inherit-verbatim requirement).",
+    "confidence": {
+      "scale": [0, 100],
+      "intermediate_midpoint_band": [40, 60],
+      "_mid_band_basis": "Verbatim reuse of the lexical leg's frozen [40,60] band. 100 = completely certain; 0 = a pure guess. Per C1 it never flips a moment-axis verdict.",
+      "format": "the chosen label, a space, then an integer 0-100, and nothing else (e.g. 'SAME 87' or 'UNCLEAR 35')"
+    }
+  },
+
+  "level": "lexical (word-sense), HELD FIXED across both arms",
+  "level_noun": "sense",
+  "decline_wording_verbatim": "UNCLEAR -- the two uses are genuinely in between, so you cannot confidently decide whether the sense is the same or different.",
+  "system": "You are a linguistic annotator judging word meaning in context. You will see one target word, marked with «guillemets», in two sentences. Decide whether the target word has the SAME sense, a DIFFERENT sense, or whether the case is UNCLEAR -- the two uses are genuinely in between, so you cannot confidently decide whether the sense is the same or different. Then state how confident you are in that decision on a 0-100 scale (100 = completely certain, 0 = a pure guess). Answer with exactly one line: the word SAME, DIFFERENT, or UNCLEAR, a space, then an integer 0-100, and nothing else.",
+  "parse": "first token in {SAME,DIFFERENT,UNCLEAR} (case-insensitive) = call; integer AFTER the matched token (robust parser) = confidence",
+
+  "arms": {
+    "scalar": {
+      "id": "arm1-scalar-bridging",
+      "ambiguous_class": "bridging",
+      "clear_classes": ["clear-same", "clear-different"],
+      "stimulus_kind": "scalar -- DWUG human-rated usage-similarity midpoint (DURel ~ 2-3); a graded similarity with a NEARER POLE the model can lean to and resolve to same/different",
+      "items": "MANIFEST -> frozen DWUG bridging stratum (items_arm1.json -> lexical-bridging-context-v1/stratum.csv), reused unchanged",
+      "anchor": "usage-similarity (inherited cap; NOT sense-co-presence)",
+      "cluster_key": "lemma"
+    },
+    "disjunctive": {
+      "id": "arm2-disjunctive-homonym",
+      "ambiguous_class": "disjunctive",
+      "clear_classes": ["clear-same", "clear-different"],
+      "stimulus_kind": "disjunctive -- author-built BALANCED HOMONYM context: two unrelated senses both fully licensed with NO tie-break (no nearer pole); the same/different-SENSE judgment is genuinely both/neither",
+      "items": "committed, author-built (items_arm2.json); original text, internal-contrast-only",
+      "anchor": "internal-contrast-only (Q2-b; NO human-annotation claim; author-stipulated balance vetted by an independent pre-run critic, frozen before any output)",
+      "cluster_key": "surface"
+    }
+  },
+
+  "reading_rule_frozen": {
+    "_basis": "gate Q3 + binding conditions C1-C4 + the nuisance-matching freeze. Decline load-bearing for the moment pole (C1).",
+    "moment_axis": "Load-bearing instrument = the categorical DECLINE rate (%UNCLEAR) -- per C1, NOT the confidence rating. The 'discrete/uncommitted-on-the-moment' pole holds for an arm iff the model's decline rate on that arm's ambiguous class is NOT elevated above its clear classes.",
+    "C3_clear_class_precondition": "RUN-TIME, per arm: interpretable only if the clear classes (clear-same + clear-different) show HIGH confidence (mean > 70, above the [40,60] mid-band) AND LOW decline (< 0.20). An arm failing this collapses to weak / internal-contrast-only and contributes NO moment verdict. Checked on data in analyze.py; never re-worded to rescue an arm.",
+    "C4_self_report_guard": "A confidence shift on the disjunctive class WITHOUT a matching categorical-decline shift is reported as a SELF-REPORT effect, NOT as graded-moment evidence.",
+    "survival_vs_collapse_pre_committed": {
+      "_who_decides": "The DISJUNCTIVE arm's decline behaviour, per model, decides survival vs collapse. Both reported symmetrically; survival held to the HIGHER anti-cheat bar (it would partly revive the defeated unified conjecture).",
+      "COLLAPSE": "the disjunctive class's decline RISES: the within-arm decline gap (disjunctive - its own clear controls) has a clustered-bootstrap CI whose LOWER BOUND > 0. Confirms the deflationary/kind reading -- the lexical commit-without-hedging was an artifact of the SOFTER (scalar) bridging stimulus; the lexical leg declines a genuine disjunction the way the constructional/relational legs did. This is the WITHIN-ARM criterion (robust to the Arm1-vs-Arm2 register residual, since disjunctive and its clear controls share Arm 2's register).",
+      "SURVIVAL": "the disjunctive class's decline STAYS NEAR-ZERO (point estimate low) AND does NOT rise: (a) the within-arm decline gap CI lower bound is NOT > 0 (not elevated over its clear controls) AND (b) the cross-arm gap (disjunctive - scalar bridging) CI INCLUDES 0 (indistinguishable from the prior scalar-bridging leg). Strengthens 'lexical commit-without-hedging is special as a model fact about word-sense' and revives part of the unified conjecture -> HIGHER bar: requires BOTH (a) and (b), and the register residual (which cuts toward survival) is led with.",
+      "MIXED_INCONCLUSIVE": "any other pattern (e.g. within-arm not elevated but cross-arm distinguishable, or C3 fails for an arm, or N too thin) -> no clean survival/collapse verdict for that model; reported as such."
+    },
+    "no_instrument_shopping": "No value may be added, dropped, re-worded, or re-thresholded after any output is seen. One frozen instrument, both arms, this pre-committed survival/collapse map.",
+    "no_post_hoc_threshold": "No pass bar tuned after the run; all contrasts are ordinal with per-cluster (lemma / homonym surface) bootstrap uncertainty."
+  },
+
+  "claim_scope_cap": "Q4: NO human-comparison claim for the disjunctive arm. Arm 1 (scalar) human-comparison force capped to usage-similarity intermediacy (inherited; NOT sense-co-presence). Arm 2 (disjunctive) internal-contrast-only. Any unified within-lexical result is an INTERNAL within-model contrast floored at internal-contrast-only for the disjunctive arm. Behavioural, not representational. n=3 commercial 2026 models; small clustered N; direction-of-effect only. Lead every result with this.",
+
+  "cost_control": {
+    "calls_per_item_per_model": "1 temp-0 call per item (the single shared elicitation; one call yields both the decline call and the confidence integer).",
+    "item_counts": "Arm 1 = 48 DWUG (24 bridging + 9 clear-same + 15 clear-different). Arm 2 = 36 (12 disjunctive + 12 clear-same + 12 clear-different). Total 84 items x 3 models = 252 finding-bearing calls + 3 liveness.",
+    "gemini_note": "google/gemini-3.5-flash rejects reasoning suppression as of 2026-06-22; it takes the sanctioned {\"effort\":\"minimal\"} fallback (reasoning_tokens=0). claude/gpt take {\"enabled\":false}. No instrument value changes.",
+    "abort_usd": 0.60,
+    "preflight_estimate_usd": "0.10-0.25 for the full 3-model run (same shape as the cross-level run which billed $0.207 for 444 calls); well inside the $5/day cap and the $2.50 single-run flag."
+  }
+}
