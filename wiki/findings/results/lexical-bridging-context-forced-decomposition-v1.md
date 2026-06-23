@@ -61,9 +61,16 @@ links:
 > disagree by ~2 of 24 bridging items** — at or under the project's documented **~12% temp-0
 > label jitter** (the session-64 repeated-runs finding; [`essay/point-estimate-is-a-draw`](../essays/point-estimate-is-a-draw.md)).
 > So gpt's leg verdict is **at the jitter/scaffold-sensitivity floor and not robust**: the
-> **conservative MIXED/WEAK reading below stands** (a 2-item elevation is exactly the kind of thin
-> signal that essay says not to over-read), and the clean resolver is a **byte-identical
-> repeated-runs (K≥5) test**, queued in [`NEXT.md`](../../../NEXT.md). Either way, both runs agree
+> **conservative MIXED/WEAK reading below stood pending that test** (a 2-item elevation is exactly
+> the kind of thin signal that essay says not to over-read), and the clean resolver is a
+> **byte-identical repeated-runs (K≥5) test**, queued in [`NEXT.md`](../../../NEXT.md). **→ RESOLVED
+> 2026-06-23 (session 88): that test RAN
+> ([`result/lexical-bridging-context-forced-decomposition-repeated-runs-v1`](lexical-bridging-context-forced-decomposition-repeated-runs-v1.md))
+> → de-noised NULL/CHANNEL-CONTROLLED (the s82b reading): over K=5, gpt's bridging decline is at the
+> jitter floor (majority-vote 1/24) and is NOT elevated over the clear classes (clear-same
+> majority-vote 3/29), and confidence shows no robust crack ([−4.64, +1.68] ∋ 0) — so the MIXED/WEAK
+> 2/24 was a high jitter draw, and gpt's ungraded-commitment null is channel-controlled too, like
+> gemini's.** Either way, both runs agree
 > on the load-bearing facts: uptake was induced, the graded **scale** replicates, and gpt does
 > **not** show a clean *graded-commitment positive*.
 

@@ -1,0 +1,142 @@
+{
+ "k": 5,
+ "seed": 20260623,
+ "reps": 10000,
+ "decline_per_run_pct": {
+  "clear-same": [
+   10.3,
+   6.9,
+   10.3,
+   10.3,
+   17.2
+  ],
+  "bridging": [
+   4.2,
+   8.3,
+   8.3,
+   4.2,
+   8.3
+  ],
+  "clear-different": [
+   2.9,
+   2.9,
+   5.7,
+   2.9,
+   0.0
+  ]
+ },
+ "decline_range_pct": {
+  "clear-same": 10.3,
+  "bridging": 4.1,
+  "clear-different": 5.7
+ },
+ "bridging_n_items": 24,
+ "bridging_item_unclear_count_over_K": {
+  "contemplation_nn (lx-3-111)": 3,
+  "contemplation_nn (lx-3-112)": 2,
+  "bar_nn (lx-3-106)": 1,
+  "heel_nn (lx-3-118)": 1,
+  "lane_nn (lx-3-122)": 1
+ },
+ "bridging_churn": {
+  "n_churned": 5,
+  "frac": 0.208
+ },
+ "bridging_majority_vote_decline": {
+  "k_unclear_modal": 1,
+  "n": 24,
+  "pct": 4.2,
+  "wilson95": [
+   0.0074,
+   0.2024
+  ],
+  "lemma_clustered_boot95": [
+   0.0,
+   0.1304
+  ]
+ },
+ "bridging_mean_pairwise_unclear_agreement": 0.9,
+ "spans_s82_s82b": {
+  "draws_pct": [
+   4.2,
+   8.3,
+   8.3,
+   4.2,
+   8.3
+  ],
+  "min": 4.2,
+  "max": 8.3,
+  "s82_8.3_in_range": true,
+  "s82b_0.0_in_range": false
+ },
+ "confidence_per_run_mean": {
+  "clear-same": [
+   93.5,
+   93.1,
+   92.0,
+   93.1,
+   91.4
+  ],
+  "bridging": [
+   90.5,
+   91.2,
+   91.6,
+   90.0,
+   92.2
+  ],
+  "clear-different": [
+   95.1,
+   95.3,
+   96.3,
+   95.9,
+   96.0
+  ]
+ },
+ "confidence_range": {
+  "clear-same": 2.1,
+  "bridging": 2.2,
+  "clear-different": 1.2
+ },
+ "confidence_pooled_means": {
+  "bridging": 91.09,
+  "clear-same": 92.62
+ },
+ "confidence_bridging_minus_clearsame_diff95": [
+  -4.64,
+  1.68
+ ],
+ "confidence_robust_crack": false,
+ "clear_class_precondition_per_run": {
+  "clear_same_decline_pct": [
+   10.3,
+   6.9,
+   10.3,
+   10.3,
+   17.2
+  ],
+  "clear_diff_decline_pct": [
+   2.9,
+   2.9,
+   5.7,
+   2.9,
+   0.0
+  ],
+  "clear_same_conf_mean": [
+   93.5,
+   93.1,
+   92.0,
+   93.1,
+   91.4
+  ],
+  "clear_diff_conf_mean": [
+   95.1,
+   95.3,
+   96.3,
+   95.9,
+   96.0
+  ],
+  "all_runs_decline_lt20_conf_gt70": true
+ },
+ "clear_class_majority_decline_pct_max": 10.3,
+ "VERDICT": "NULL/CHANNEL-CONTROLLED de-noised: bridging majority-vote decline ~0 and not robustly elevated over clear classes -- the s82 MIXED/WEAK 2/24 was reading run-to-run jitter; the s82b null is the de-noised truth."
+}

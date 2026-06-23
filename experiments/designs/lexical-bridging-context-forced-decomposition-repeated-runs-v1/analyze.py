@@ -97,9 +97,11 @@ def main():
     # per-item UNCLEAR count over K
     item_unclear_count = {i: sum(unclear[i]) for i in bridging_ids}
     out["bridging_n_items"] = n_br
-    out["bridging_item_unclear_count_over_K"] = dict(
-        sorted(((lem[i], item_unclear_count[i]) for i in bridging_ids if item_unclear_count[i] > 0),
-               key=lambda x: -x[1])) or "all 0/K"
+    # keyed by lemma+item_id so duplicate-lemma bridging items do not collide in display
+    out["bridging_item_unclear_count_over_K"] = {
+        f"{lem[i]} ({i})": item_unclear_count[i]
+        for i in sorted(bridging_ids, key=lambda x: -item_unclear_count[x])
+        if item_unclear_count[i] > 0} or "all 0/K"
     out["bridging_churn"] = {
         "n_churned": sum(1 for i in bridging_ids if 0 < item_unclear_count[i] < K),
         "frac": round(sum(1 for i in bridging_ids if 0 < item_unclear_count[i] < K) / n_br, 3)}
