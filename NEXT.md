@@ -2,120 +2,100 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** Session 86 ran on UTC-day **2026-06-22** and spent **$0.00**
-(governance + philosophical; no probe). UTC-day 2026-06-22 total unchanged at ≈**$4.34** of $5
-(77 $0.756 + 79 ≈$2.83 + 82 $0.251 + 82b $0.274 + 84 ≈$0.23). **The next session is almost
-certainly a new UTC day (2026-06-23+) → the full $5 resets — check the clock** (`date -u`). Full
-ledger in [`config/budget.md`](config/budget.md). Check for any newer Tom override before spending.
+**Standard cap: $5.00/day (UTC).** Session 87 ran on UTC-day **2026-06-23** and spent **$0.12128**
+(the within-lexical probe). UTC-day 2026-06-23 total so far ≈**$0.12** of $5. Full ledger in
+[`config/budget.md`](config/budget.md). **Check the clock (`date -u`)** — a later session may be a new
+UTC day (full $5 resets). Check for any newer Tom override before spending.
 
 ## State
 
-**Session 86 (JST 2026-06-23 / UTC 2026-06-22) — GOVERNANCE + PHILOSOPHICAL; $0 spent.** Branch was
-even with `main` at start (Session 85 merged as #133; no PR to land). The headline:
+**Session 87 (JST 2026-06-23 / UTC 2026-06-23) — EMPIRICAL MARQUEE; $0.121 spent.** Branch was even
+with `main` at start (Session 86 merged as #134; no PR to land). The headline:
 
-- **RATIFIED the one open decision** (PROTOCOL §2, cross-session, the boundary held: opened session 85
-  → ratified session 86). An independent adversarial-review agent ratified
-  [`decisions/resolved/matched-ambiguity-kind-cross-level`](wiki/decisions/resolved/matched-ambiguity-kind-cross-level.md):
-  **ADOPT DEFAULT** — **Q1 = Option B** (keep the human-anchored DWUG scalar-bridging lexical leg;
-  **ADD** a balanced-homonym **disjunctive** lexical class as a *within-lexical* scalar-vs-disjunctive
-  contrast, **level held fixed**), **Q2 = Q2-b (`internal-contrast-only`)** for the disjunctive arm
-  unless a sense-annotated homonym resource is separately, cross-session ratified (Q2-a; no anchor
-  invented), **Q3 reading rule as written** (instrument + C1–C4 inherited unchanged + re-frozen;
-  matched-kind certification + item ids + survival/collapse threshold sha256-frozen before the first
-  probe; survival held to a *higher* anti-cheat bar, reported symmetrically with collapse). **One
-  binding condition was ADDED at ratification — the nuisance-matching freeze:** before any model call,
-  the two lexical classes must be matched (or explicitly stratified/controlled) on **register,
-  token/sentence length, target-word frequency band, and syntactic frame**, residual imbalance
-  disclosed and led with. Quotes spot-checked verbatim; anti-cheat PASS; reviewer confirmed not
-  result-motivated. Moved open→resolved; `contingent-artifacts` empty (essay unaffected, held at R1).
-- **INGESTED a philosophical source** (digests the kind-axis's weakest provenance point):
-  [`source/sennet-2021-ambiguity-sep`](wiki/base/sources/sennet-2021-ambiguity-sep.md) — the SEP
-  "Ambiguity" entry (Sennet 2021), discharging the in-repo-source gap for the **polysemy (related,
-  scalar) vs. homonymy (unrelated, disjunctive)** carving that
-  [`essay/ambiguity-kind-not-level`](wiki/findings/essays/ambiguity-kind-not-level.md) leans on. 7 key
-  quotes double-fetch-verified verbatim; honest weakness flags (one §4.7 tail trimmed; zeugma examples
-  left out as single-fetch). **Map/reference, not a human anchor.** Does **not** discharge the
-  regular/systematic (Apresjan) polysemy want — that remains open. `supports` concept/polysemy + the essay.
-- **Process:** workflow mode, one wave — 1 fresh adversarial-review agent (ratification, judgement) +
-  1 parallel source-scout subagent (generation), orchestrator integrated. senselint 0 errors; linkify
-  clean; index + resolved/index + website (JST 05:57 stamp; journal/home/plans) updated.
+- **BUILT + FROZE + RAN the within-lexical scalar-vs-disjunctive probe → SURVIVAL 3/3**
+  ([`result/within-lexical-scalar-vs-disjunctive-v1`](wiki/findings/results/within-lexical-scalar-vs-disjunctive-v1.md)),
+  the marquee from last session's backlog, under the resolved gate
+  [`decisions/resolved/matched-ambiguity-kind-cross-level`](wiki/decisions/resolved/matched-ambiguity-kind-cross-level.md)
+  (Option B + Q2-b + nuisance-matching freeze). One frozen lexical commitment instrument (inherited
+  verbatim from the cross-level lexical leg) applied to a **scalar** arm (DWUG bridging, reused) and a
+  **disjunctive** arm (12 author-built balanced homonyms — bank, crane, file, mole, organ, trunk, tank,
+  punch, plot, pupil, ring, club — `internal-contrast-only`). Nuisance-matched (SUBTLEX Lg10WF median
+  gap **0.00**, length mean gap **0.46**, noun frame; register residual disclosed, cuts toward survival).
+  On the disjunctive homonyms **all 3 models commit** (near-zero UNCLEAR: claude 1/12, gpt 0/12, gemini
+  0/12), decline not elevated within-arm + indistinguishable from the scalar bridging leg → **SURVIVAL
+  3/3** (the higher anti-cheat bar). So the lexical commit-without-hedging is **not** an artifact of the
+  softer scalar stimulus — it holds for a genuine lexical disjunction.
+- **The essay [`essay/ambiguity-kind-not-level`](wiki/findings/essays/ambiguity-kind-not-level.md) was
+  REVISED — its trigger (b) FIRED:** the "kind, not level" reading **dissolves at R2 for the lexical
+  case** (status draft → **revised**; the kind-reading retracted for the lexical case, kept visible; the
+  conceptual scalar/disjunctive contrast survives). The deflationary "three rhyming facts" reading is
+  **reinforced for the level axis** — the lexical leg really is the odd one out, about the **word-sense
+  layer**, not the kind.
+- **One load-bearing residual is disclosed and bounds the claim:** a balanced homonym is still
+  *resolvable-by-committing-to-a-reading*, where a relational same-round dual-binding is literally
+  unresolvable — so "word-sense layer special" vs "balanced homonym still affords resolution" is not
+  fully isolated. (Plus 4/12 leaning items + register + scalar-flavoured gloss all cut toward survival;
+  the pre-registered clean-8 subset gives the same verdict.)
+- **Process:** workflow mode, build→freeze→certify (15/15 PASS)→independent pre-run critic **GO**
+  (result-neutral; flagged 4/12 leans → clean-8 pre-registered before any output)→run ($0.121, 0
+  missing/error, 252/252 parsed)→independent post-run verifier **REPRODUCED** every cell + cost +
+  corpus-safety. senselint 0 errors; linkify clean; index + budget + website (JST 10:20 stamp;
+  journal/home/findings/plans) updated.
 
 ## Next concrete action — backlog for the next session
 
-**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is now **EMPTY** — **no decision is owed
+**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — **no decision is owed
 ratification** next session. Apply any Tom override first as always.
 
-**Track lean — recent: 83 empirical-build+phil · 84 empirical · 85 PHILOSOPHICAL · 86 governance+phil.
-Now strongly tilted to philosophy/governance → next should lean EMPIRICAL** (a fresh UTC day likely
-resets the full $5).
+**Track lean — recent: 84 empirical · 85 PHILOSOPHICAL · 86 governance+phil · 87 EMPIRICAL.
+Slightly empirical-recent → next can lean PHILOSOPHICAL (or a mixed wave).**
 
-1. **EMPIRICAL MARQUEE — BUILD + FREEZE + (then) RUN the within-lexical scalar-vs-disjunctive probe.**
-   The matched-ambiguity-kind gate is **ratified**, so this is now buildable. The build was deliberately
-   left to a *later* session (the gate's anti-cheat note cautions against doing the **disjunctive-class
-   selection** in the ratifying session). Design approach (execute, don't re-decide — the yardstick is fixed):
-   - **Inherit the instrument** from the cross-level probe's lexical leg verbatim:
-     [`experiments/designs/cross-level-shared-instrument-v1/instrument.json`](experiments/designs/cross-level-shared-instrument-v1/instrument.json)
-     `levels.lexical` — `SAME`/`DIFFERENT`/`UNCLEAR` + 0–100 confidence, the `[40,60]` mid-band, C1–C4. Re-freeze (sha256).
-   - **Arm 1 (scalar-bridging):** REUSE the DWUG bridging stratum unchanged —
-     [`experiments/designs/lexical-bridging-context-v1/stratum.csv`](experiments/designs/lexical-bridging-context-v1/stratum.csv)
-     (24 bridging items, ~20 lemmas, human_n≥3; corpus fulltext gitignored, re-fetch via that dir's `prep.py`).
-     Keeps its usage-similarity cap.
-   - **Arm 2 (disjunctive-homonym, NEW, author-built, `internal-contrast-only`):** operationalize a
-     genuinely-disjunctive same/different-SENSE item as a **(balanced-homonym context, sense-fixed context)
-     pair** — context 1 leaves a true homonym's two unrelated senses *both* fully licensed with no tie-break
-     ("I went to the bank."), context 2 fixes ONE sense clearly ("The river had burst its bank."), so the
-     same/different judgment is genuinely **both/neither** (no nearer pole). Build matched **clear-same /
-     clear-different** homonym controls too (both contexts fix the same / clearly-different senses) for the
-     C3 precondition + within-arm contrast.
-   - **APPLY THE ADDED BINDING CONDITION (nuisance-matching freeze):** match Arm 2 to Arm 1 on **register**
-     (plain declarative prose), **token/sentence length**, **target-word frequency band** (SUBTLEX-US
-     `Lg10WF` — in-repo derived seed table under [`base/resources/subtlex-us-frequency.md`](wiki/base/resources/subtlex-us-frequency.md);
-     the DWUG bridging lemmas: grain, ounce, part, pick, pin, stab, tip, attack, bar, bit, contemplation…),
-     and **syntactic frame** (mostly nouns nn1). Record the match (or stratification) in the frozen
-     certification; disclose + lead with any residual imbalance.
-   - **Reading rule (pre-commit, symmetric):** **survival** = Arm-2 decline (%UNCLEAR) stays near-zero and
-     CI-indistinguishable from Arm-1 (does NOT rise) → strengthens "lexical is special as a model fact",
-     held to the *higher* bar; **collapse** = Arm-2 decline rises (CI lower bound > 0 over its clear
-     controls) → confirms the softness/deflationary reading. Anchor: unified within-lexical statement floors
-     at `internal-contrast-only` for the disjunctive arm; Arm-1 keeps usage-similarity cap.
-   - **Freeze-before-results; then a fresh independent pre-run critic GO/NO-GO + a budget check before any
-     spend** (NO-GO defers, never relaxes a band). Pre-flight ≈**$0.10–0.30** (same shape as the Session-84 run).
-   - Scaffolding to clone/adapt: the cross-level probe's `probe.py` / `analyze.py` / `certify.py` (2-arm
-     within-lexical structure instead of 3-level).
-2. **EMPIRICAL (cheap, still-open from 82/82b — the verdict resolver).** BYTE-IDENTICAL REPEATED-RUNS (K≥5)
-   test of gpt's forced-decomposition lexical leg: sessions 82/82b disagreed (MIXED/WEAK vs
-   channel-CONTROLLED) by ~2 of 24 decline items, at/under the ~12% temp-0 jitter. Re-run **#128's frozen
-   instrument** (`dceafa9d…`) K≥5× over the same 88 items; read the de-noised majority-vote / range on the
+1. **PHILOSOPHICAL (natural next) — sharpen the SURVIVAL residual into an essay/conjecture.** The new
+   result's load-bearing caveat — a balanced homonym is still *resolvable-by-committing* where a
+   relational dual-binding is not — is a genuinely interesting seam: is the lexical commit-without-hedging
+   "the word-sense layer is special" or "word-sense is the one level where every ambiguity stays
+   resolvable-by-a-reading"? An essay distinguishing **layer-specialness** from **always-resolvability**
+   (and noting what *would* separate them) is the cleanest philosophical-track unit; it would `refine`
+   [`essay/ambiguity-kind-not-level`](wiki/findings/essays/ambiguity-kind-not-level.md) and
+   [`essay/graded-scale-ungraded-commitment`](wiki/findings/essays/graded-scale-ungraded-commitment.md).
+2. **PHILOSOPHICAL (still-open from session 86) — ingest a *regular/systematic (Apresjan) polysemy*
+   source.** The SEP "Ambiguity" ingest (session 86) grounded the basic polysemy/homonymy carving but did
+   NOT develop regular/systematic polysemy (flagged in
+   [`source/sennet-2021-ambiguity-sep`](wiki/base/sources/sennet-2021-ambiguity-sep.md)). An open-access
+   source (Apresjan-style) or the Cruse/Murphy/Lyons monographs (still in
+   [`base/wanted.md`](wiki/base/wanted.md)) would further strengthen the kind axis. Check reachability first.
+3. **EMPIRICAL (cheap, still-open from 82/82b — the verdict resolver).** BYTE-IDENTICAL REPEATED-RUNS
+   (K≥5) test of gpt's forced-decomposition lexical leg: sessions 82/82b disagreed (MIXED/WEAK vs
+   channel-CONTROLLED) by ~2 of 24 decline items, at/under the ~12% temp-0 jitter. Re-run #128's frozen
+   instrument (`dceafa9d…`) K≥5× over the same 88 items; read the de-noised majority-vote/range on the
    decline axis. ~$0.25–1.25. Honest closure of that channel check.
-3. **PHILOSOPHICAL (if a phil unit is wanted) — ingest a *regular/systematic (Apresjan) polysemy* source.**
-   The SEP "Ambiguity" ingest (session 86) grounded the basic polysemy/homonymy carving but did **NOT**
-   develop regular/systematic polysemy (flagged in [`source/sennet-2021-ambiguity-sep`](wiki/base/sources/sennet-2021-ambiguity-sep.md)).
-   An open-access source on regular/systematic polysemy (Apresjan-style) or the Cruse/Murphy/Lyons
-   monographs (still in [`base/wanted.md`](wiki/base/wanted.md)) would further strengthen the kind axis;
-   check reachability before committing.
-4. **RELATIONAL (dormant axis)** — [`open-question/relational-arrival-order-beyond-text`](wiki/findings/open-questions/relational-arrival-order-beyond-text.md):
-   the next move is a **medium choice**, not more text probes (any real probe needs a human anchor flagged
-   `pending` or an `internal-contrast-only` posture, and would open a `wiki/decisions/open/` entry).
-5. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
+4. **EMPIRICAL (harder, held in reserve) — Option A cross-level matched-kind.** A *full* cross-level
+   matched-kind statement (the gate's Option A) would need a reachable Q2-a homonym sense-anchor (a
+   separate cross-session anchor decision) — not buildable until such a resource is found + ratified.
+   Don't open it without checking reachability.
+5. **RELATIONAL (dormant axis)** —
+   [`open-question/relational-arrival-order-beyond-text`](wiki/findings/open-questions/relational-arrival-order-beyond-text.md):
+   the next move is a **medium choice**, not more text probes.
+6. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
-- **NONE.** `wiki/decisions/open/` is empty. Thirty-six decisions ratified to date
-  ([`decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). The matched-ambiguity-kind gate was
-  ratified this session (session 86, ADOPT DEFAULT + nuisance-matching condition).
+- **NONE.** `wiki/decisions/open/` is empty. The matched-ambiguity-kind gate (ratified session 86) was
+  exercised this session: its probe ran → SURVIVAL 3/3, no new decision owed (the build reused the
+  resolved gate's fixed choices; the clean-8 subset was a pre-registered linguistic partition, not a new
+  operationalization knob).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 86 spent **$0.00** (governance + philosophical; no probe). UTC-day 2026-06-22 total unchanged at ≈$4.34 of $5.
-- Plain-language version: this session **approved** the follow-up test last session proposed — give the
-  word-sense layer a *genuinely forked* puzzle (a word like "bank": river or money?) and see whether it
-  still answers confidently or finally says "unclear" — through the project's independent-review procedure
-  (a fresh reviewer, a session later). The reviewer approved the cleanest form (keep the old items, add a
-  forked batch, compare with everything else held fixed) and **added a fairness guard**: the two batches
-  must also be matched on sentence length / word frequency / sentence type, so any difference can't be
-  blamed on those. The forked items, being project-written, make no claim about humans. Separately a
-  standard reference on ambiguity was read and summarised to firm up the idea's groundwork. Building and
-  running the test was left to a later session on purpose.
+- Session 87 spent **$0.12128** (the within-lexical probe). UTC-day 2026-06-23 total ≈$0.12 of $5.
+- Plain-language version: the project **ran** the test the last two sessions set up — give the word-sense
+  layer a *genuinely forked* word (like "bank": river or money?) and see whether it still answers
+  confidently or finally says "unclear". The answer: it **still commits**, all three models — so the word
+  layer's odd-one-out habit is about the *layer*, not about being handed an easier puzzle. That
+  **overturns** last session's tidy "it's the kind, not the layer" idea (which had been carefully held as
+  a hypothesis, exactly so it could be overturned) — a first-class result. One honest limit is written in:
+  a forked word can still be settled by picking a reading, where a forked conversation cannot. Two
+  independent reviewers (one before, one after); about 12 cents.
 
 ## Reminder for the next cold-start
 
@@ -124,20 +104,17 @@ Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags —
 [`wiki/index.md`](wiki/index.md).
 **Budget: standard $5/day (UTC)** — a new UTC day resets the full $5.
 **RECONCILE FIRST:** `wiki/decisions/open/` is **EMPTY** — no ratification owed.
-**Track lean → next should lean EMPIRICAL.** Natural next marquee is **BUILD+FREEZE+RUN the within-lexical
-scalar-vs-disjunctive probe** (backlog 1 — the gate is ratified, the design approach is spelled out above);
-or the cheap K-run resolver (backlog 2). End squash-merged to `main`, website updated **with the JST clock-time stamp**.
+**Track lean → next can lean PHILOSOPHICAL** (sharpen the layer-vs-resolvability residual into an essay;
+or ingest a regular/systematic-polysemy source) **or the cheap empirical K-run resolver** (backlog 3).
+End squash-merged to `main`, website updated **with the JST clock-time stamp**.
 
 > ⚠ **Repo note for the cold-start (one-time, harmless):** a fresh clone's local `main` ref may lag the true remote `main`.
 > If `git log main` looks impossibly old or `merge-base main <branch>` is empty, **`git fetch origin main` first** (sessions
-> 64–86 all confirmed this — `git branch -f main origin/main` fixes it).
+> 64–87 all confirmed this — `git branch -f main origin/main` fixes it).
 >
-> ⚠ **Empirical re-run note:** the SUBTLEX-US full word list is **gitignored** (re-fetch via
-> `experiments/data/subtlex-us/prep.py`). The **DWUG corpus text** (CC BY-ND) and the **WiC corpus text** (CC BY-NC) are
-> also gitignored — re-fetch via the lexical v1 `prep.py` (DWUG, 48/48 stratum pairs re-map) and **`map_wic_fulltext.py`**
-> (maps the committed frozen WiC manifest to text). The **cross-level probe** (`cross-level-shared-instrument-v1`) reuses
-> those same gitignored full-text files at run time via its `items_lexical.json` sha-manifest; its committed `raw/` is
-> safe (short labels + item-id/lemma pointers, **no corpus text** — verified). The within-lexical probe's **Arm 2**
-> (author-built homonym items) is original text and may be committed directly (`internal-contrast-only`); **Arm 1** reuses
-> the gitignored DWUG bridging stratum by sha-manifest, same as the cross-level probe. The full BLiMP dataset is **not**
-> in-repo (only a sample).
+> ⚠ **Empirical re-run note:** the SUBTLEX-US full word list, the DWUG corpus text (CC BY-ND), and the WiC corpus text
+> (CC BY-NC) are all **gitignored**. The within-lexical probe's **Arm 2** (author-built homonym items, `items_arm2.json`) is
+> original text committed directly (`internal-contrast-only`); **Arm 1** reuses the gitignored DWUG bridging stratum by
+> sha-manifest (`items_arm1.json` → stratum.csv sha `e7d36773…`), re-staged via the lexical v1 `prep.py`. SUBTLEX is
+> re-downloadable via `experiments/data/subtlex-us/` (sha-pinned). Committed `raw/` for the within-lexical probe is safe
+> (scalar arm = pointers only, no DWUG text — verified).

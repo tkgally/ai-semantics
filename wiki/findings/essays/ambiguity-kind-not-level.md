@@ -7,13 +7,17 @@ meaning-senses:
   - referential
   - constructional
   - relational
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-06-23
 links:
   - rel: refines
     target: open-question/gradience-population-not-moment
+  - rel: contradicts
+    target: result/within-lexical-scalar-vs-disjunctive-v1
+  - rel: depends-on
+    target: result/within-lexical-scalar-vs-disjunctive-v1
   - rel: depends-on
     target: result/cross-level-shared-instrument-v1
   - rel: depends-on
@@ -34,8 +38,30 @@ links:
 
 # Essay: kind, not level
 
-> **Status: draft (2026-06-22). A philosophical-track essay arguing in the project's own
-> voice, written the session *after* the cross-level dissolution it re-reads.** Its original
+> **REVISION (2026-06-23, session 87) — the central reading DISSOLVED at R2 for the lexical case;
+> revision trigger (b) FIRED.** The matched-ambiguity-kind probe this essay motivated has now run:
+> [`result/within-lexical-scalar-vs-disjunctive-v1`](../results/within-lexical-scalar-vs-disjunctive-v1.md).
+> Its verdict is **SURVIVAL, 3/3 models** — on a genuinely-disjunctive **balanced homonym** (no
+> tie-break) the models **commit** (near-zero `UNCLEAR`) exactly as they do on a scalar bridging
+> midpoint, level held fixed. So the essay's central bet — that a *disjunctive* lexical item would
+> draw *decline*, showing the lexical specialness to be the **softness of the scalar stimulus** —
+> is **wrong for the lexical case**. Per the convergence ladder's symmetric standard this is a
+> **first-class result, not a failure**: it is the *more interesting* positive the essay itself
+> named under trigger (b) — the lexical commit-without-hedging is about the **word-sense layer**,
+> not the scalar-vs-disjunctive **kind** axis. The kind-reading is **retracted for the lexical
+> case** (kept visible below, per the project's retraction discipline). **One honest residual the
+> result discloses bounds how strong "layer" can be:** a balanced homonym is still
+> *resolvable-by-committing-to-a-reading*, where a relational same-round dual-binding is literally
+> unresolvable — so "word-sense is special" vs "a balanced homonym still affords a defensible
+> resolution" is not fully separated. The essay's *conceptual* contribution (the scalar/disjunctive
+> contrast as the better-shaped question) survives; only its empirical resolution flipped — and it
+> flipped against the essay. See the revised trigger (b) below. The original draft is preserved
+> unchanged beneath this banner.
+>
+> ---
+>
+> **Status: draft → revised (originally 2026-06-22). A philosophical-track essay arguing in the
+> project's own voice, written the session *after* the cross-level dissolution it re-reads.** Its original
 > contribution is a **re-reading**, not a new measurement: it argues that the dissolution in
 > [`result/cross-level-shared-instrument-v1`](../results/cross-level-shared-instrument-v1.md)
 > is most naturally read not as "three rhyming facts indexed by **level**" but as a single
@@ -281,7 +307,13 @@ project.
   items/models tested. This essay would be **strengthened** and a `claim` page (anchored or
   `internal-contrast-only` per the route the probe actually ran) would carry the empirical
   statement. The kind-reading is *promoted*, not the dead level-conjecture.
-- **(b) The probe runs and the lexical leg holds (commits even on a balanced homonym).** Then
+- **(b) The probe runs and the lexical leg holds (commits even on a balanced homonym). → FIRED
+  (2026-06-23, session 87): [`result/within-lexical-scalar-vs-disjunctive-v1`](../results/within-lexical-scalar-vs-disjunctive-v1.md)
+  returned SURVIVAL 3/3 — all three models commit on the balanced homonyms (near-zero `UNCLEAR`),
+  decline not elevated over their clear controls and indistinguishable from the scalar bridging
+  leg, the higher bar met. The kind-reading is retracted for the lexical case per this trigger; one
+  disclosed residual (a balanced homonym is still resolvable-by-committing, unlike a relational
+  dual-binding) bounds how strongly "layer" can be read.** Then
   "kind, not level" **dissolves at R2** for the lexical case: the lexical commit-without-hedging is
   about word-sense specifically, not about the kind of ambiguity, and this essay was wrong about
   its central reading. Per the ladder's symmetric standard this is a **first-class result, not a
