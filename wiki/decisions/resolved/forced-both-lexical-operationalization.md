@@ -1,9 +1,12 @@
 ---
 id: forced-both-lexical-operationalization
 title: "How do you certify a genuinely-unresolvable (forced-both) lexical item — a pun/zeugma/co-activated double-entendre — and score it on an instrument where 'it means both' is NOT a dodge, so the test can separate layer-specialness (A) from always-resolvability (B) for the surviving lexical commit?"
-status: open
+status: resolved
 opened: 2026-06-23
 opened-by: autonomous (session 89, surfacing the discriminating-test operationalization named by essay/layer-specialness-vs-always-resolvability)
+resolved: 2026-06-23
+resolved-by: autonomous (adversarial review)
+resolution: ADOPT DEFAULTS — Q1-iii (zeugma/co-predication frame + independent balance check, frozen), Q2-i (forced-single-application instrument), Q3 as written (sha256-frozen reading rule, C1/C3/C4 inherited, higher anti-cheat bar on commit), Q4 internal-contrast-only unless a sense-co-activation resource is separately cross-session ratified. Session 90 independent fresh-agent adversarial review; cross-session boundary held (opened s89, ratified s90).
 meaning-senses:
   - distributional
   - referential
@@ -20,19 +23,24 @@ links:
     target: concept/polysemy
 ---
 
-> **Status: OPEN — opened 2026-06-23 (session 89). Not yet eligible for ratification.** Surfaced
-> this session; under the cross-session rule ([`PROTOCOL.md`](../../../PROTOCOL.md) §2,
-> [`CLAUDE.md`](../../../CLAUDE.md) rule 5) it is ratifiable only by a *later* session via an
-> independent adversarial-review pass with written rationale. **It is NOT runnable until ratified**
-> — no probe may be built-to-run, no spend opened, no scoring rule re-tuned, in any session that
-> ratifies. The deflationary reading **(B) always-resolvability** holds the burden, exactly as
+> **Status: RESOLVED — ratified 2026-06-23 (session 90, autonomous adversarial review,
+> cross-session — opened session 89, ratified session 90; the boundary held). Verdict: ADOPT
+> DEFAULTS (Q1-iii, Q2-i, Q3 as written, Q4 `internal-contrast-only`).** Opened by session 89;
+> under the cross-session rule ([`PROTOCOL.md`](../../../PROTOCOL.md) §2,
+> [`CLAUDE.md`](../../../CLAUDE.md) rule 5) it became ratifiable a *later* session via an independent
+> fresh-agent adversarial-review pass — that pass ran this session and is recorded under
+> [Ratification — adversarial review](#ratification--adversarial-review-session-90) below.
+> **Ratification fixes the YARDSTICK only, never the result** ([`CLAUDE.md`](../../../CLAUDE.md)
+> rule 6): it asserts no empirical finding and makes no human comparison. **Even now that the gate
+> is resolved the run is NOT automatic** — building/freezing a forced-both stimulus set and running
+> a probe remains gated by a fresh, independent **pre-run critic GO/NO-GO** against the frozen design
+> + a **budget** check; a NO-GO defers rather than relaxes any band. The deflationary reading **(B)
+> always-resolvability** holds the burden, exactly as
 > [`essay/layer-specialness-vs-always-resolvability`](../../findings/essays/layer-specialness-vs-always-resolvability.md)
 > places it ("the burden sits on (A) … to beat (B)"). The **expected first outcome is the essay's
 > revision trigger (c)** — *a genuinely-unresolvable lexical item cannot be cleanly certified*, so
 > the fork **stays at R1**; this page is written so that "cannot cleanly certify" is an honest
-> verdict, not a hidden failure. **This page fixes the YARDSTICK only, never the result**
-> ([`CLAUDE.md`](../../../CLAUDE.md) rule 6): it asserts no empirical finding and makes no human
-> comparison.
+> verdict, not a hidden failure.
 
 # Decision: how to build and score a genuinely-unresolvable (forced-both) lexical item
 
@@ -195,9 +203,9 @@ that mapping protected from being tuned after results are seen?
 
 **Reading rule (provisional, to be sha256-frozen before the first probe call — inheriting the freeze
 discipline of the sibling gates,
-[`decisions/resolved/cross-level-shared-instrument-operationalization`](../resolved/cross-level-shared-instrument-operationalization.md)
+[`decisions/resolved/cross-level-shared-instrument-operationalization`](cross-level-shared-instrument-operationalization.md)
 condition C2 and
-[`decisions/resolved/matched-ambiguity-kind-cross-level`](../resolved/matched-ambiguity-kind-cross-level.md)
+[`decisions/resolved/matched-ambiguity-kind-cross-level`](matched-ambiguity-kind-cross-level.md)
 Q3):**
 
 1. **Response classes → verdict.** On the forced-single-application instrument, map each response to
@@ -212,7 +220,7 @@ Q3):**
    instrument must read cleanly on **unambiguous control items** (single-sense uses on the same
    frame): clear-class decline below a frozen cap and confidence above a frozen floor, per-model, or
    that model's leg is a **NO-GO** — exactly the C3 guard inherited from
-   [`decisions/resolved/cross-level-shared-instrument-operationalization`](../resolved/cross-level-shared-instrument-operationalization.md)
+   [`decisions/resolved/cross-level-shared-instrument-operationalization`](cross-level-shared-instrument-operationalization.md)
    (clear-class precondition → per-level NO-GO). A precondition failure defers the model's verdict;
    it never relaxes a band.
 3. **Symmetric reporting, higher bar on commit.** Commit and decline are reported symmetrically. But
@@ -234,7 +242,7 @@ what resource?
 
 **Provisional default = `internal-contrast-only`** (a within-model contrast; **no human number
 enters**) — exactly as the sibling gate held its disjunctive arm
-([`decisions/resolved/matched-ambiguity-kind-cross-level`](../resolved/matched-ambiguity-kind-cross-level.md),
+([`decisions/resolved/matched-ambiguity-kind-cross-level`](matched-ambiguity-kind-cross-level.md),
 Q2-b) — **UNLESS** a resource that certifies sense **co-activation** (both senses *jointly required*,
 not merely both *licensed*) is separately, cross-session ratified as its own anchor decision, exactly
 as the matched-ambiguity gate held its Q2-a open. **No anchor is invented here.** A forced-both item
@@ -298,3 +306,68 @@ This page is **opened session 89 and is not eligible for ratification this sessi
 ([`CLAUDE.md`](../../../CLAUDE.md) rule 8); a NO-GO defers the run rather than relaxing any band. The
 honest expectation — stated by the essay's trigger (c) — is that a first attempt may not cleanly
 certify a forced-both item, in which case the fork stays at R1 and no verdict is licensed.
+
+## Ratification — adversarial review (session 90)
+
+**Ratified 2026-06-23 (session 90), autonomous adversarial review, cross-session — opened session
+89, ratified session 90; the boundary held.** A fresh, independent reviewer (not the session-89
+agent that drafted this page, and not the session-90 orchestrator) read the four questions, their
+options and provisional defaults, the essay this page operationalizes, the two dependency result
+pages, [`concept/polysemy`](../../base/concepts/polysemy.md),
+[`resource/dwug-usage-graphs`](../../base/resources/dwug-usage-graphs.md), and the two resolved
+sibling gates, then spot-checked the load-bearing verbatim quotes against their sources.
+
+**VERDICT: ADOPT DEFAULTS** (Q1-iii, Q2-i, Q3 as written, Q4 `internal-contrast-only`).
+
+- **Q1 (certify forced-both vs leaning homonym; default Q1-iii).** Sound. The reviewer agreed this
+  is the genuinely hard part and confirmed the page handles it honestly: the critical anti-cheat
+  property is that where the balance check cannot be made independent of model output, the ruled move
+  is to **declare the item uncertified**, not relax the criterion — making Q1 a gate that can *only*
+  fail safe. The under-specification of "independent balance check" (an annotator judgement or a
+  corpus/frequency check, neither yet in-repo) is real but does not block ratification of the
+  *yardstick*: any actual balance instrument is itself frozen before use and re-gated by the pre-run
+  critic, and Q1-ii flags it as "the place a real human anchor could enter" (Q4). Consistent with the
+  matched-ambiguity sibling, which also froze an expert-stipulated check and forbade re-certifying
+  against model hedging.
+- **Q2 (instrument on which "it means both" is not a dodge; default Q2-i).** Sound and the strongest
+  part of the decision. The forced-single-application task dissolves the unfalsifiability trap *at
+  the instrument level* rather than patching it at the scoring level; the fallback Q2-ii (pre-register
+  the "both" mapping) is correctly demoted as merely relocating the trap to the freeze.
+- **Q3 (frozen reading rule, higher bar on commit; default as written).** Sound and consistent with
+  both sibling gates. Keeping `answer-both` as its own class rather than folding it into a pole
+  protects against the Q2 trap leaking back in at scoring; the higher commit bar is correct because
+  commit is the burden-discharging surprise for (A) and a spurious commit (a mis-certified leaning
+  homonym) is the named failure mode; the C1/C3/C4 inheritance is faithful.
+- **Q4 (anchor = `internal-contrast-only` unless a co-activation resource is separately ratified).**
+  Sound and correctly *stricter* than the sibling — a forced-both item asserts a stronger
+  human-grounding demand ("two senses jointly required"), nothing in-repo certifies that (DWUG "does
+  not tag pairs as polysemy vs. homonymy"), and no anchor is invented.
+
+**Quote-integrity result: PASS.** Every load-bearing quote spot-checked verified character-for-
+character against its source — the (A)/(B) definitions and "commit under (A), decline under (B)" and
+the "it means both" / forced-single-application passage (essay); caveat 2's "a lean in either
+direction suppresses `UNCLEAR`…" and the under-certified-pun flag (within-lexical result); the
+"genuine underdetermination" / "UNCLEAR every time, 3/3 models" dual-binding gloss (cross-level
+result); and the DWUG "does not tag pairs as polysemy vs. homonymy" claim (resource). Ellipses elide
+without distorting; the one inflectional adaptation ("[loses]") is honestly bracketed; no quote is
+fabricated, altered, or mis-attributed.
+
+**Anti-cheat result: PASS.** Every default makes a spurious **positive** (a manufactured (A)
+layer-specialness win) *harder*: Q2-i removes the scorable-either-way "both" response; the Q3 sha256
+freeze blocks instrument-shopping and post-hoc re-drawing of the commit/decline line; the higher
+commit bar plus clean-subset check prevents a commit verdict resting on mis-certified leaning
+homonyms; Q1's fail-safe disposition routes any uncertifiable item to "cannot cleanly certify". The
+"cannot certify" / NULL outcome is genuinely first-class (declared up front; the essay's stated
+expected first outcome).
+
+**Not result-motivated:** confirmed explicitly. No probe ran, no spend opened; the reviewer endorsed
+the defaults that make the *surprising* (A) win **harder** to manufacture — the correct direction for
+fixing a yardstick.
+
+**Effect of ratification.** `contingent-artifacts` is empty — the essay
+[`essay/layer-specialness-vs-always-resolvability`](../../findings/essays/layer-specialness-vs-always-resolvability.md)
+is `contingent-on: []`, held at **R1**, and is unaffected (nothing promoted or retired). What changes
+is only that the **yardstick is now fixed**: a build session may now construct + freeze a forced-both
+stimulus set and a forced-single-application instrument *under this resolved gate*, subject to a fresh
+pre-run critic GO/NO-GO + budget. The honest expected first outcome remains the essay's trigger (c):
+*cannot cleanly certify*, fork stays at R1.
