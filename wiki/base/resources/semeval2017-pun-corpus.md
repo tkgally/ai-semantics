@@ -29,11 +29,13 @@ links:
 > 748,424 bytes, sha256 above), extracted, and the gold files, DTD, the archive's README and LICENCE
 > files, and the task-paper abstract read directly. Counts, annotation format, and licence below are from the
 > primary files. The polysemy/homonymy split is a **disclosed proxy I computed** from the WordNet
-> sense keys, not a human label — see that section. **Anchor status: PENDING** — whether this
-> corpus may serve as the sense-**co-activation** / in-item-balance anchor that lifts the parked
-> forced-both lexical line is an open cross-session decision
-> ([`decisions/open/sense-coactivation-anchor-semeval-puns`](../../decisions/open/sense-coactivation-anchor-semeval-puns.md));
-> this page **does not** assert that anchor.
+> sense keys, not a human label — see that section. **Anchor status: RATIFIED (Q4 co-activation
+> only).** As of session 93 (2026-06-23) the cross-session adversarial-review pass **adopted** this
+> corpus as the gate's **Q4 sense-co-activation** anchor
+> ([`decisions/resolved/sense-coactivation-anchor-semeval-puns`](../../decisions/resolved/sense-coactivation-anchor-semeval-puns.md));
+> the ratification is scoped to sense **co-presence** and licenses **no** balance/dominance claim
+> (Q-B-1: a separate, frozen, not-model-based dominance step is still owed). The run is not
+> automatic — a forced-both build still needs a fresh pre-run critic GO + budget.
 
 This page catalogs the SemEval-2017 Task 7 pun corpus as the candidate resource the
 [`result/forced-both-lexical-build-attempt-v1`](../../findings/results/forced-both-lexical-build-attempt-v1.md)
@@ -218,13 +220,16 @@ modified, then you should abide by the terms of these licences."
 
 ## Pointer for next visit
 
-1. **The anchor is not yet ratified.** Read
-   [`decisions/open/sense-coactivation-anchor-semeval-puns`](../../decisions/open/sense-coactivation-anchor-semeval-puns.md);
-   a *later* session runs the independent adversarial-review ratification (cross-session rule). Do
-   not promote any forced-both result off `internal-contrast-only` until that decision resolves.
-2. **If ratified for co-activation but not balance,** the cleanest first design uses the corpus as
-   the **Q4 co-activation anchor** while still meeting Q1-ii by a separate, pre-registered dominance
-   step (or by adopting the decision's chosen posture). Do not relax the balance band to force a
+1. **The anchor is RATIFIED for co-activation (Q4) only** (session 93, 2026-06-23). Read
+   [`decisions/resolved/sense-coactivation-anchor-semeval-puns`](../../decisions/resolved/sense-coactivation-anchor-semeval-puns.md);
+   the adopted posture is Q-A (adopt as Q4 anchor) + Q-B-1 (co-activation does NOT discharge Q1-ii —
+   a separate dominance step is owed) + Q-C-1 (attested homographic puns may serve as forced-both
+   stimuli, homonym subset, sha256-frozen). A forced-both result may now lift off
+   `internal-contrast-only` **for the co-activation claim only**.
+2. **Co-activation ratified, balance NOT.** The cleanest first design uses the corpus as the **Q4
+   co-activation anchor** while still meeting Q1-ii by a separate, pre-registered dominance step
+   (e.g. the word-grain [`resource/homonym-meaning-dominance-norms`](homonym-meaning-dominance-norms.md)
+   plus a frozen, *argued* transfer-to-item step — Q-B-1). Do not relax the balance band to force a
    runnable item.
 3. **To build a probe,** freeze a homographic-item subset (id list + the homonymy criterion) and
    the reading rule under the existing forced-both gate *before* any model call (charter §8); commit

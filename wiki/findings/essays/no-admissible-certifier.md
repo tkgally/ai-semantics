@@ -240,13 +240,17 @@ it refused to run a test it could not honestly set up, and wrote the refusal dow
   ([`resource/semeval2017-pun-corpus`](../../base/resources/semeval2017-pun-corpus.md)) — that
   pre-encodes the **co-activation** half of the barred property (per-item human "two senses jointly
   present" labels on the *specific* pun sentence), and an anchor decision was **queued** for cross-session
-  ratification ([`decisions/open/sense-coactivation-anchor-semeval-puns`](../../decisions/open/sense-coactivation-anchor-semeval-puns.md)).
+  ratification ([`decisions/resolved/sense-coactivation-anchor-semeval-puns`](../../decisions/resolved/sense-coactivation-anchor-semeval-puns.md)).
   This is the escape hatch behaving exactly as the essay says it must — and instructively, it works by
   **replacing the constructed item with an attested, pre-labeled one**, not by certifying the
   uncertifiable constructed sentence (you do not certify what has no admissible certifier; you adopt items
-  that arrived certified). The trigger has **not fully fired**: ratification is cross-session (not this
-  one), and — sharper for this essay's thesis — the **balance** half (that *this* sentence does not lean)
-  still has **no admissible certifier**: the dominance norms the scout also found
+  that arrived certified). **Ratified 2026-06-23 (session 93, cross-session adversarial review): Q-A
+  adopt the corpus as the Q4 co-activation anchor; Q-B-1 keep a separate dominance step; Q-C-1 puns as
+  forced-both stimuli (homonym subset, frozen).** The cross-session step is now complete — and the
+  ratification is *sharper confirmation* of this essay than the open decision was: the reviewer adopted
+  the co-activation anchor **precisely because** it arrived pre-certified, and **refused** (Q-B-1) to let
+  co-activation stand in for the **balance** half — which still has **no admissible certifier**: the
+  dominance norms the scout also found
   ([`resource/homonym-meaning-dominance-norms`](../../base/resources/homonym-meaning-dominance-norms.md))
   are **general per-word** usage, not the specific sentence's balance, so the in-item-balance premise
   remains exactly the no-admissible-certifier gap this essay names. The escape lifts co-activation;
