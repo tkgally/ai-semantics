@@ -6,13 +6,15 @@ meaning-senses:
   - distributional
   - referential
   - relational
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-23
 updated: 2026-06-23
 links:
   - rel: refines
     target: essay/ambiguity-kind-not-level
+  - rel: depends-on
+    target: result/forced-both-lexical-build-attempt-v1
   - rel: refines
     target: essay/graded-scale-ungraded-commitment
   - rel: depends-on
@@ -44,6 +46,26 @@ links:
 > description over the same data, with no instrument yet equalizing "resolvability" across the
 > contrast. The deflationary default still holds the burden. **No new empirical claim; no human
 > comparison; the discriminating probe has not run.** Read the revision triggers before citing.
+>
+> **Revision (2026-06-23, session 91) — trigger (c) FIRED.** The discriminating probe was
+> *attempted* this session under the now-resolved gate
+> [`decisions/resolved/forced-both-lexical-operationalization`](../../decisions/resolved/forced-both-lexical-operationalization.md),
+> and the build **terminated at certification**: a genuinely-unresolvable lexical item **cannot be
+> cleanly certified** under autonomy →
+> [`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md).
+> Q1-i (the zeugma/co-predication frame) and Q2-i (the forced-single-application instrument) are both
+> buildable, but **Q1-ii — the independent, *not-model-based* balance check — is not satisfiable**:
+> the only routes are a human annotator on the constructed sentence (barred, no human subjects) or
+> the model's own output (forbidden, circular), and the one reachable corpus signal (SemCor per-sense
+> tag counts) is both too sparse (1/8 candidates powered) *and* measures **general-usage** balance,
+> not the **constructed sentence's** balance (which a co-predication frame sets by the relative pull
+> of its two complements). A **fresh independent reviewer** returned **VERDICT-SOUND** (the wall is
+> real, sits where pre-registered, not result-motivated). **No model ran; $0.** The fork **stays at
+> R1**; the deflationary **(B) keeps the burden**; the essay's conceptual contribution (the fork and
+> the single-reader-recoverability bridge) is **unchanged** — only its empirical resolution is
+> **deferred** until a sense-co-activation / in-item-balance resource is found and separately ratified
+> (which would also discharge the Q4 anchor). This is the honest expected first outcome, now realized
+> by attempt rather than anticipation. (Trigger (c) is logged at "Revision triggers" below.)
 
 ## The occasion
 
@@ -344,7 +366,13 @@ reading is true.
   per-model pattern), then no verdict is licensed and the fork **stays at R1** — a motivated but
   untested distinction. The essay's conceptual contribution (the layer/resolvability fork and the
   single-reader-recoverability bridge) survives; only its empirical resolution is deferred. This is
-  the honest expected first outcome.
+  the honest expected first outcome. **FIRED 2026-06-23 (session 91):** the build was attempted under
+  the resolved gate and terminated at certification — Q1-ii (the independent, not-model-based balance
+  check) is not satisfiable under no-human-subjects (the only routes are a barred human annotator or
+  forbidden model output; SemCor general-usage balance is both too sparse and the wrong measure for a
+  constructed sentence). A fresh independent reviewer returned VERDICT-SOUND →
+  [`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md).
+  The fork stays at R1; no model ran; $0.
 - **(d) The contrast generalizes to other levels or families.** If "resolvable-by-committing vs
   genuinely-both" turns out to predict commit/decline behavior at *other* levels (it already appears
   to at the relational level — the dual-binding declines), or in some other family the project

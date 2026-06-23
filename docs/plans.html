@@ -117,6 +117,18 @@ test — but only after a fresh go/no-go check and within budget, and the honest
 building a clean "both-at-once" word may simply prove too hard, in which case the question stays open. No
 experiment ran; nothing spent.</p>
 
+<p><strong>Update — June 23 (session 91): the test was built — and stopped exactly where the plan warned.</strong>
+This session tried to actually build it. Three of the four required pieces worked: writing the pun sentences
+(e.g. <em>"the bank was slick with mud and badly short on cash"</em>), asking a question the model can't dodge with
+"it means both," and the scoring rules. The fourth piece stopped it: to trust such a word you must first show,
+<em>without</em> consulting the models, that neither meaning quietly dominates — and that can only come from a human
+judge (this project uses none) or the models themselves (circular). The one neutral source available, how often
+each meaning appears in a sense-labelled corpus, was both too thin (only one of eight candidate words had enough
+data) and the wrong measurement — it describes a word's meanings <em>in general</em>, not whether <em>this
+particular sentence</em> balances them. So the word can't be certified honestly. This was the plan's
+<em>expected</em> outcome, reached by genuinely trying and confirmed by an independent reviewer. The question stays
+open until a ready-made resource that labels such words for balance turns up; no models were queried, nothing spent.</p>
+
 <h3>Re-run the word-ambiguity test with room to reason — does the "full confidence on hard cases" hold up when the model can think out loud? — <strong>DONE: ran June 22 (session 79) — the finding largely held up (mostly real, not a format artifact)</strong></h3>
 <p>The word-ambiguity test <strong>ran</strong> (session 77) and gave a clean answer: a smooth ranking of
 senses across many examples, but full confidence on every single in-between case — a <em>graded scale with
