@@ -177,6 +177,14 @@ The lexical conjecture's anchor decision RESOLVED 2026-05-29 ([`decisions/resolv
   why: alternative graded in-context similarity anchor if DWUG does not fit.
   status: wanted
 
+### Sense co-activation / in-item-balance anchor (for the parked forced-both lexical line)
+
+The forced-both build attempt ([`findings/results/forced-both-lexical-build-attempt-v1.md`](../findings/results/forced-both-lexical-build-attempt-v1.md), session 91) hit trigger (c): its Q1-ii — an independent, *not-model-based* check that neither sense **dominates** in a constructed forced-both item — had no honest route, and that page named "a released corpus of human-annotated puns/zeugmas with per-item balance or co-activation labels (none in-repo or on `wanted.md` today)" as the only unblocker.
+
+- [P1] Miller, T., Hempelmann, C.F. & Gurevych, I. 2017. "SemEval-2017 Task 7: Detection and Interpretation of English Puns." SemEval-2017, ACL; pp. 59–69.
+  why: human-annotated puns (~1298 homographic + ~1098 heterographic) with **per-item dual WordNet-sense gold on the actual sentence** — i.e. human sense **co-activation** labels for genuine forced-both items, the in-item evidence SemCor's general-usage proxy could not give. Candidate anchor for the forced-both gate's Q4 (sense co-activation) and the matched-ambiguity Option-A homonym sense-anchor.
+  status: **RECEIVED** (2026-06-23, session 92; fetched + sha256-hashed + inspected firsthand; catalogued as [`wiki/base/resources/semeval2017-pun-corpus.md`](resources/semeval2017-pun-corpus.md)). Licence MIXED (scorer Apache-2.0; data CC BY 4.0 with a CC BY-NC 4.0 PunoftheDay.com subset). **Anchor not yet ratified** — its use as the co-activation/in-item-balance anchor is the open cross-session decision [`wiki/decisions/open/sense-coactivation-anchor-semeval-puns.md`](../decisions/open/sense-coactivation-anchor-semeval-puns.md). Honest limit recorded in-page: it certifies sense **co-presence**, not a graded **balance/dominance** score, so whether it discharges Q1-ii (vs. only Q4) is part of that decision.
+
 ### Multimodal / grounded anchors (for the new multimodal / physical-AI axis)
 
 Scouted 2026-05-30 ([`base/resources/multimodal-anchor-scouting.md`](resources/multimodal-anchor-scouting.md)); license + URL verified, data not yet fetched. The axis's anchor-class choice is surfaced in [`decisions/resolved/multimodal-panel-and-grounding-theory`](../decisions/resolved/multimodal-panel-and-grounding-theory.md) (Q3).
