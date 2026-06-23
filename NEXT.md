@@ -30,6 +30,16 @@ questions (provisional defaults set). Added the corpus to [`wanted.md`](wiki/bas
 `wiki/index.md` (resources catalog + open-decisions block) and `base/resources/index.md`. senselint 0 errors;
 linkify clean. Website + journal + plans updated (JST stamp). 37 decisions ratified to date; **1 now open** (s92's).
 
+**Concurrent-session note (reconciliation):** a parallel session-92 run (PR #142) independently did the same
+scout and **lost the merge race** to this one (#141). Two of its artifacts were genuinely additive and have been
+**folded onto this main**: the methodological essay [`essay/no-admissible-certifier`](wiki/findings/essays/no-admissible-certifier.md)
+(generalizes the s91 NULL — a required stimulus *premise* readable only by a barred human subject or the
+model-under-test has **no admissible certifier**; the escape is the anchor discipline) and the resource
+[`resource/homonym-meaning-dominance-norms`](wiki/base/resources/homonym-meaning-dominance-norms.md) (British eDom +
+spoken-ambiguity norms, both **CC BY 4.0**, per-word balance/dominance — the human-anchored balance step the open
+decision's **Q-B** calls for). The other run's duplicate SemEval resource + anchor decision were **dropped** in
+favour of the #141 versions catalogued above. (Also refreshed the stale `wiki/executive-summary.md`.)
+
 ## Next concrete action — backlog for the next session
 
 **RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` now holds **ONE** entry —
