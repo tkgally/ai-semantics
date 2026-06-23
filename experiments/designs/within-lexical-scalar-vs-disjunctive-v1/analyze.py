@@ -44,6 +44,18 @@ CLEAR_DECLINE_MAX = 0.20
 CLEAR_CONF_MIN = 70
 NEAR_ZERO_DECLINE = 0.10  # "near-zero" point estimate for the survival criterion
 
+# PRE-REGISTERED clean subset (declared BEFORE any model output, on linguistic grounds only, by
+# the independent pre-run critic 2026-06-23). The critic judged 8/12 disjunctive balanced ctx1
+# contexts genuinely two-way and flagged 4 as leaning toward one sense (mole/punch/club mild,
+# pupil strong). Because each balanced ctx1 is paired with a sense-fixed ctx2, a lean in EITHER
+# direction suppresses UNCLEAR and biases TOWARD survival -> leaners erode the collapse signal.
+# So the within-arm collapse statistic is reported on BOTH all-12 and this clean-8 subset. This
+# is a fixed linguistic partition fixed pre-run, NOT a post-hoc re-selection against model
+# confidence (no model output existed when it was declared); items_arm2.json is unchanged.
+CLEAN_SUBSET = {"bank", "crane", "file", "organ", "trunk", "tank", "plot", "ring"}
+LEANING_DISCLOSED = {"mole": "toward spy (B)", "punch": "toward drink (B)",
+                     "club": "toward heirloom-stick (B)", "pupil": "toward student (B), strong"}
+
 
 def load_arm(arm, slot):
     p = os.path.join(RAW, f"{arm}_{slot}.json")
@@ -120,20 +132,28 @@ def analyze_arm(arm, slot):
             "C3_precondition_ok": precond_ok,
             "decline_elevated_within_arm": decline_elevated,
             "C4_confidence_only_self_report": c4_self_report_only,
-            "_amb_recs": amb}  # carried for the cross-arm gap; stripped before json dump
+            "_amb_recs": amb, "_clear_recs": clear}  # carried for gaps; stripped before json dump
 
 
 def per_model_verdict(slot, scalar, disj):
     if not (scalar and disj):
         return {"verdict": "WEAK (an arm is missing)"}
     cross = clustered_gap(disj["_amb_recs"], scalar["_amb_recs"], decline_stat)  # disj - bridging
+    # within-arm collapse statistic ALSO on the pre-registered clean-8 subset (robustness)
+    clean_amb = [r for r in disj["_amb_recs"] if r.get("cluster") in CLEAN_SUBSET]
+    clean_clear = [r for r in disj["_clear_recs"] if r.get("cluster") in CLEAN_SUBSET]
+    clean_gap = clustered_gap(clean_amb, clean_clear, decline_stat)
+    clean_decl = rates(clean_amb)[0]
     out = {"model": slot,
            "scalar_C3_ok": scalar["C3_precondition_ok"],
            "disjunctive_C3_ok": disj["C3_precondition_ok"],
-           "disjunctive_decline": disj["ambiguous"]["decline_rate"],
+           "disjunctive_decline_all12": disj["ambiguous"]["decline_rate"],
+           "disjunctive_decline_clean8": clean_decl,
            "scalar_bridging_decline": scalar["ambiguous"]["decline_rate"],
-           "within_arm_disj_gap_ci": disj["within_arm_decline_gap_ci_amb_minus_clear"],
-           "cross_arm_disj_minus_bridging_ci": cross}
+           "within_arm_disj_gap_ci_all12": disj["within_arm_decline_gap_ci_amb_minus_clear"],
+           "within_arm_disj_gap_ci_clean8": clean_gap,
+           "cross_arm_disj_minus_bridging_ci": cross,
+           "leaning_items_disclosed": LEANING_DISCLOSED}
     if not disj["C3_precondition_ok"]:
         out["verdict"] = "WEAK (disjunctive arm fails C3 clear-class precondition)"
         return out
@@ -170,6 +190,7 @@ def main():
         for r in (sc, dj):
             if r:
                 r.pop("_amb_recs", None)
+                r.pop("_clear_recs", None)
                 per.append(r)
                 print(json.dumps(r, indent=1))
     print("\n=== PER-MODEL SURVIVAL/COLLAPSE VERDICTS ===")

@@ -139,6 +139,23 @@ disjunctive). Direction-of-effect only; small clustered N → wide CIs, no cover
 named anti-cheat violation — **re-selecting the disjunctive class against model confidence** — is
 foreclosed by the sha256 freeze of `items_arm2.json` + the threshold **before** any output.
 
+### Pre-run critic GO + the pre-registered clean-8 subset (2026-06-23)
+
+A fresh independent pre-run critic returned **GO** (result-neutral; the freeze verified
+byte-for-byte). It judged **8/12** disjunctive balanced contexts genuinely two-way and flagged
+**4 as leaning** toward one sense: **mole** (→ spy), **punch** (→ drink), **club** (→
+heirloom-stick) — mild/moderate — and **pupil** (→ student) — strong. Its load-bearing
+observation: because each balanced `ctx1` is paired with a sense-fixed `ctx2`, a lean in *either*
+direction suppresses `UNCLEAR` (a sense-A lean → confident SAME; a sense-B lean → confident
+DIFFERENT) and so **biases toward survival** — leaning items erode the *collapse* signal, they do
+not pad collapse. Per the gate, a handful of mildly-leaning items are carried as a **disclosed
+limit** (8 clean remain), and `analyze.py` reports the within-arm collapse statistic on **both
+all-12 and a pre-registered clean-8 subset** (`CLEAN_SUBSET` = {bank, crane, file, organ, trunk,
+tank, plot, ring}). This subset is a **fixed linguistic partition declared before any model
+output** (not a post-hoc re-selection against model confidence; `items_arm2.json` is unchanged).
+The result must disclose the four leaning items, their direction, and that the lean cuts toward
+survival.
+
 ## 5. Anchor posture (Q4) and claim scope
 
 **No human-comparison claim for the disjunctive arm.** Arm 1 keeps its inherited usage-similarity
