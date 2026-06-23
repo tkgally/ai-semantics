@@ -97,11 +97,23 @@ restriction (unlike [`resource/semeval2017-pun-corpus`](semeval2017-pun-corpus.m
 
 ## Verification status (honest)
 
-- **Verified this session by direct fetch:** both CC BY 4.0 licenses; the item/rater counts (British eDom
+- **Verified session 92 by direct fetch:** both CC BY 4.0 licenses; the item/rater counts (British eDom
   100/100; spoken-ambiguity 182 words); the D-value "near 0 = balanced" definition; the eDom "estimate …
   how often each meaning … was implied" instruction; the "balanced and unbalanced" matching statement;
   the word-association-in-isolation method.
-- **Reported but not re-verified verbatim in-repo:** the exact author list of the *J. Cognition* spoken
-  norms (cited by DOI); the original (US) eDom 544-homonym norms' open fetchability (could **not** be
-  confirmed this session). The OSF data files were confirmed reachable but not downloaded/checksummed;
-  do that before any probe leans on per-word values.
+- **Data files DOWNLOADED + USED firsthand (session 94, 2026-06-23).** The two norm CSVs were fetched
+  from OSF this session — `British eDom norms - Norms File.csv` (OSF node `7k3eh`, file `pmbkm`, 19,219
+  bytes) and `RoddGilbert_WA_Dominance_Norms.csv` (OSF node `uy47w`, file `2mduw`, 72,571 bytes; the
+  spoken set is **Rodd & Gilbert**, author names now confirmed from the filenames) — and used to compute
+  the [`result/forced-both-lexical-build-attempt-v2`](../../findings/results/forced-both-lexical-build-attempt-v2.md)
+  frozen subset. They were not mirrored in-repo (CC BY 4.0 permits it, but only the *derived* balance
+  values are committed, in the design's `frozen_subset.json`).
+- **Cross-norm disagreement noted (session 94).** On the 5 words present in *both* sets within the v2
+  pun intersection (`calf`, `fan`, `mail`, `plot`, `pupil` → 11 items), the two human word-grain
+  instruments **disagree on the balanced/biased classification 11/11** (e.g. `calf` eDom min/total 0.476
+  = balanced but spoken D 0.605 = biased). The two norms measure related-but-distinct things (an
+  isolation-percentage estimate vs a word-association dominance) on different populations, so some
+  divergence is expected — but it bounds how much weight a *single* word-grain balance flag can carry,
+  and reinforces the "word-grain, not sentence-grain" limit below.
+- **Reported but not re-verified verbatim in-repo:** the original (US) eDom 544-homonym norms' open
+  fetchability (could **not** be confirmed session 92; not retried session 94, the British set sufficed).

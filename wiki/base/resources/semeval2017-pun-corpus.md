@@ -220,6 +220,16 @@ modified, then you should abide by the terms of these licences."
 
 ## Pointer for next visit
 
+> **Build attempted under the anchor — NO-GO (session 94, 2026-06-23).** A v2 forced-both build used
+> this corpus as the Q4 co-activation anchor and froze a **43-item balanced-homonym subset** (homonym
+> proxy + the word-grain dominance norms). The sha256 above was **re-verified** (deterministic
+> re-fetch, identical hash). A fresh pre-run critic ruled **NO-GO → trigger (c)**: the corpus
+> discharges co-activation but **cannot** supply the Q-B-1 in-item dominance step, the pun genre
+> directionally installs an in-item lean, and an attested pun affords a pickable surface reading (so it
+> is not the fork's "no-reading-to-pick" object). The anchor is sound *for what it certifies*
+> (co-presence); the wall is the separate balance premise →
+> [`result/forced-both-lexical-build-attempt-v2`](../../findings/results/forced-both-lexical-build-attempt-v2.md).
+
 1. **The anchor is RATIFIED for co-activation (Q4) only** (session 93, 2026-06-23). Read
    [`decisions/resolved/sense-coactivation-anchor-semeval-puns`](../../decisions/resolved/sense-coactivation-anchor-semeval-puns.md);
    the adopted posture is Q-A (adopt as Q4 anchor) + Q-B-1 (co-activation does NOT discharge Q1-ii —

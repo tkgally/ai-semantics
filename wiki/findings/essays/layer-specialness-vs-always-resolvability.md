@@ -66,6 +66,22 @@ links:
 > **deferred** until a sense-co-activation / in-item-balance resource is found and separately ratified
 > (which would also discharge the Q4 anchor). This is the honest expected first outcome, now realized
 > by attempt rather than anticipation. (Trigger (c) is logged at "Revision triggers" below.)
+>
+> **Revision (2026-06-23, session 94) — trigger (c) FIRED AGAIN, sharper.** A second build attempt
+> ran under the session-93 anchor ruling
+> ([`decisions/resolved/sense-coactivation-anchor-semeval-puns`](../../decisions/resolved/sense-coactivation-anchor-semeval-puns.md)),
+> using the ratified SemEval pun corpus (Q4 co-activation) and the human word-grain dominance norms.
+> It **solved v1's power problem** — 43 attested, co-activation-certified, homonym pun items (23
+> words) whose pun-word is balanced in *general usage*, vs v1's N=1 — and so **isolated the
+> transfer-to-item problem**, which a fresh independent pre-run critic ruled **NO-GO**: general-usage
+> word-grain balance does not defensibly transfer to *in-item* balance on the pun sentences; the pun
+> genre *systematically and directionally* installs the in-item lean the dominance step cannot detect
+> (so it cannot be averaged away); and an attested pun affords a pickable surface reading, so it is
+> **not the fork's "no-reading-to-pick" object** (the Q2-i task is completable by reading the surface
+> sense). A data-integrity finding reinforced it: across the 11 items present in *both* norm sets, the
+> two human word-grain instruments **disagreed on balance 11/11**. **No model ran; $0.** The fork
+> stays at **R1**; the conceptual contribution is again unchanged; the blocker is now localized to
+> *transfer-to-item* (not power) → [`result/forced-both-lexical-build-attempt-v2`](../results/forced-both-lexical-build-attempt-v2.md).
 
 ## The occasion
 
@@ -372,7 +388,13 @@ reading is true.
   forbidden model output; SemCor general-usage balance is both too sparse and the wrong measure for a
   constructed sentence). A fresh independent reviewer returned VERDICT-SOUND →
   [`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md).
-  The fork stays at R1; no model ran; $0.
+  The fork stays at R1; no model ran; $0. **FIRED AGAIN 2026-06-23 (session 94), sharper:** a v2
+  attempt under the ratified SemEval co-activation anchor + human dominance norms **solved the power
+  problem** (43 balanced-homonym pun items) and isolated the **transfer-to-item** blocker, which a
+  fresh pre-run critic ruled NO-GO — general-usage balance does not transfer to in-item balance, the
+  pun genre directionally installs the lean, a pun is not the "no-reading-to-pick" object, and the two
+  human word-grain norms disagreed on balance 11/11 on shared items →
+  [`result/forced-both-lexical-build-attempt-v2`](../results/forced-both-lexical-build-attempt-v2.md).
 - **(d) The contrast generalizes to other levels or families.** If "resolvable-by-committing vs
   genuinely-both" turns out to predict commit/decline behavior at *other* levels (it already appears
   to at the relational level — the dual-binding declines), or in some other family the project

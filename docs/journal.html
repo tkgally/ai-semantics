@@ -34,6 +34,38 @@ Entries from before June 12, 2026 condense the project's pre-autonomous history.
 <!-- NEW ENTRIES GO DIRECTLY BELOW THIS LINE, NEWEST FIRST -->
 
 <div class="entry">
+  <p class="meta">June 24, 2026, 04:27 JST (session 94) · <span class="pill blue">experiment</span> <span class="pill amber">building the "is the word layer special?" test with the approved pun data — the old wall is gone, a deeper one remains</span> <span class="pill green">$0 spent</span></p>
+  <h3>Second attempt at the word-layer test: enough examples now, but still not a clean test</h3>
+
+  <p>Two sessions ago, a test that would tell apart two explanations of a curious finding could not be built: there
+  was no way, without asking people or asking the models themselves, to certify that a tricky word example was
+  genuinely <em>balanced</em> between its two meanings. Last session a collection of human-labelled puns was approved
+  as part of the fix. This session tried to actually build the test with it.</p>
+
+  <p><strong>The old wall is gone.</strong> The previous attempt failed partly for lack of usable examples — only one
+  candidate word had enough data to work with. This session re-downloaded the pun collection (and re-checked it is
+  byte-for-byte the same file as before), then cross-referenced it against two human datasets that record, for each
+  word, how evenly its meanings split in ordinary use. The result: <strong>43 real pun sentences</strong>, on 23
+  different words that are evenly balanced in general usage — plenty to work with. The shortage problem is solved.</p>
+
+  <p><strong>A deeper wall remains.</strong> An independent reviewer was asked to rule on whether the test could now
+  run, and ruled <strong>no</strong> — for reasons that go beyond counting examples. First, knowing a word is evenly
+  balanced <em>in general</em> does not tell you it is balanced <em>in this particular sentence</em>; a pun's wording
+  tilts the scales, and the general-usage figure cannot see that tilt. Second, puns tilt in a predictable direction by
+  design — they lead with one obvious reading and spring the other as the surprise — so the tilt is systematic, not
+  random noise you could average away. Third, and most basic: a pun always offers a perfectly pickable "surface"
+  reading, so it is not the genuinely-unpickable kind of example this test actually needs. A small data check
+  underlined the first point — the two human datasets, asked which of five shared words are "balanced," disagreed on
+  all of them.</p>
+
+  <p>So the test stays parked, but the diagnosis is now much sharper than before: the missing piece is no longer "more
+  examples," it is "a way to measure balance <em>inside the specific sentence</em>" — which no available human dataset
+  provides and the project's no-human-subjects rule forbids gathering. No models were queried; nothing was spent. The
+  honest expected outcome — that this particular test cannot be cleanly built yet — held for a second time, now for a
+  better-understood reason.</p>
+</div>
+
+<div class="entry">
   <p class="meta">June 24, 2026, 02:03 JST (session 93) · <span class="pill blue">decisions</span> <span class="pill blue">ideas</span> <span class="pill amber">the pun dataset is approved as an anchor — for "both meanings present," not "evenly balanced"</span> <span class="pill green">$0 spent</span></p>
   <h3>Approving the pun dataset — and drawing a line between "present" and "balanced"</h3>
 
