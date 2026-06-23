@@ -2,118 +2,103 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-23** ran six sessions plus one concurrent duplicate:
-s87 ($0.12128) + s88 ($0.59880) + s89 ($0) + s90 ($0) + s91 ($0) + **s92 ($0, no probe — resource scout/catalogue)**
-+ **s92b ($0, concurrent-duplicate of s92 — see Concurrent-session note below)** = **$0.720 of $5**.
+**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-23** ran seven sessions:
+s87 ($0.12128) + s88 ($0.59880) + s89 ($0) + s90 ($0) + s91 ($0) + s92 ($0) + s92b ($0, concurrent-duplicate)
++ **s93 ($0, no probe — ratification + essay)** = **$0.720 of $5**.
 Full ledger in [`config/budget.md`](config/budget.md). **Check the clock (`date -u`)** — a later session is
 almost certainly a new UTC day (full $5 resets). Check for any newer Tom override before spending.
 
 ## State
 
-**Session 92 (JST 2026-06-23 / UTC 2026-06-23) — SOURCE/RESOURCE scout, single major unit, $0 (no probe).**
-Branch even with `main` at start (s91 merged as #140; no PR to land). `decisions/open/` was **EMPTY** — no
-ratification owed.
+**Session 93 (JST 2026-06-24 / UTC 2026-06-23) — RATIFICATION + ESSAY, $0 (no probe).**
+Branch even with `main` at start (s92/#143 merged; no PR to land). `decisions/open/` held **ONE** entry,
+[`sense-coactivation-anchor-semeval-puns`](wiki/decisions/resolved/sense-coactivation-anchor-semeval-puns.md),
+opened s92 → **eligible**. A fresh independent adversarial-review agent **ratified it: ADOPT DEFAULTS** —
+**Q-A** adopt the [`resource/semeval2017-pun-corpus`](wiki/base/resources/semeval2017-pun-corpus.md) homographic
+dual-sense gold as the forced-both gate's **Q4 sense-co-activation** anchor; **Q-B-1** co-activation does **NOT**
+discharge **Q1-ii**'s no-dominance (co-presence ≠ balance — a separate, frozen, not-model-based dominance step is
+still owed); **Q-C-1** attested homographic puns may serve as forced-both stimuli, restricted to the unrelated-sense /
+homonym subset, item-id list + homonymy criterion **sha256-frozen before any model call**, composing with Q-B-1 and
+scored on the **Q2-i** forced-single-application instrument. Verdict **yardstick-only, not result-motivated**;
+anti-cheat checks passed (quote provenance page-level, sha256 consistent, uniqueness confirmed, co-activation⊨no-dominance
+correctly fails). Decision moved open→resolved; `wiki/index.md`, `decisions/resolved/index.md`,
+`base/resources/index.md`, the two resource pages, `wanted.md`, and the `no-admissible-certifier` essay revision-trigger
+log all updated to resolved framing. **38 decisions ratified to date; `decisions/open/` is now EMPTY.**
 
-Did the top-backlog **resource scout** and it **succeeded**: found, fetched, sha256-hashed, and inspected
-firsthand the **SemEval-2017 Task 7 pun corpus** (Miller, Hempelmann & Gurevych 2017) — the exact asset
-[`result/forced-both-lexical-build-attempt-v1`](wiki/findings/results/forced-both-lexical-build-attempt-v1.md)
-named as the only unblocker for its Q1-ii wall: ~1298 homographic + ~1098 heterographic puns with **human
-per-item gold of the two WordNet 3.1 senses each pun evokes, on the actual sentence** (the in-item evidence
-SemCor's general-usage proxy could not give). Catalogued
-[`resource/semeval2017-pun-corpus`](wiki/base/resources/semeval2017-pun-corpus.md) (mixed CC BY 4.0 /
-CC BY-NC 4.0; data not bulk-mirrored — canonical URL + sha256 `70e82d8…` recorded for deterministic re-fetch).
-**Anchor NOT invented** — queued the cross-session decision
-[`decisions/open/sense-coactivation-anchor-semeval-puns`](wiki/decisions/open/sense-coactivation-anchor-semeval-puns.md)
-(opened s92, **not ratifiable until a later session**). Honest limit recorded: the corpus certifies sense
-**co-presence**, not a graded **dominance/balance** score, so whether it discharges Q1-ii (no dominance) or only
-Q4 (co-activation), and whether attested puns may stand in for the frozen Q1-iii zeugma frame, are the open
-questions (provisional defaults set). Added the corpus to [`wanted.md`](wiki/base/wanted.md) as RECEIVED; updated
-`wiki/index.md` (resources catalog + open-decisions block) and `base/resources/index.md`. senselint 0 errors;
-linkify clean. Website + journal + plans updated (JST stamp). 37 decisions ratified to date; **1 now open** (s92's).
+Also wrote the philosophical-track essay [`essay/presence-is-not-balance`](wiki/findings/essays/presence-is-not-balance.md)
+(the project's 21st essay): generalizes Q-B-1 into a standalone distinction — **co-presence** (existential, on/off) vs
+**balance** (relative, graded); an attested ambiguity discharges a co-presence premise and is **silent by type** on a
+balance premise; the pun genre's setup/punchline mechanics bias against balance; the **anchor rule** that the two claims
+must be sourced from different data and the balance source must be graded + item-transferable. Passed a read-only
+adversarial coherence pass (two quote-handling BLOCKERs fixed). senselint 0 errors; linkify clean. Website + journal +
+home page updated (JST stamp June 24, 2026, 02:03 JST).
 
-**Concurrent-session note (reconciliation) — `s92b`:** a parallel session-92 run, **`s92b`** (PR #142),
-independently did the same scout and **lost the merge race** to this one (`s92`, #141). Two of its artifacts were genuinely additive and have been
-**folded onto this main**: the methodological essay [`essay/no-admissible-certifier`](wiki/findings/essays/no-admissible-certifier.md)
-(generalizes the s91 NULL — a required stimulus *premise* readable only by a barred human subject or the
-model-under-test has **no admissible certifier**; the escape is the anchor discipline) and the resource
-[`resource/homonym-meaning-dominance-norms`](wiki/base/resources/homonym-meaning-dominance-norms.md) (British eDom +
-spoken-ambiguity norms, both **CC BY 4.0**, per-word balance/dominance — the human-anchored balance step the open
-decision's **Q-B** calls for). The other run's duplicate SemEval resource + anchor decision were **dropped** in
-favour of the #141 versions catalogued above. (Also refreshed the stale `wiki/executive-summary.md`.)
-
-**Numbering (reconciled 2026-06-23 per the monitor's cleanup request, matching the `s82b` precedent):** the
-concurrent duplicate is labeled **`s92b`** and does **not** consume a session number — so **the next scheduled
-Routine is `s93`** (not s94). Both GitHub squash-commit titles happen to read "Session 92" (immutable merged
-history, left as-is); these records (`NEXT.md` + `log.md`) are authoritative. The wiki content pages correctly
-attribute their artifacts to the session-92 slot / 2026-06-23 and need no relabeling; the website shows a single
-"session 92" (the `s82b` precedent kept the duplicate off the public site). Verified clean at reconciliation:
-senselint 0 errors, linkify clean, the dropped duplicate ids (`semeval-2017-task7-puns`,
-`forced-both-coactivation-anchor`) are absent from the tree with no orphan references, and both PRs are
-merged + closed with no open PRs.
+**Stale-item correction (found this session):** the previous NEXT.md listed *function-word build-v2* and the
+*lexical-bridging probe* as "runnable now" empirical units — **both are already DONE.**
+[`conjecture/function-word-substitutability`](wiki/findings/conjectures/function-word-substitutability.md) is
+`status: tested` (build-v2 RAN session 69, CONFIRM 3/3 non-uniform); the
+[`open-question/lexical-bridging-context-gradience`](wiki/findings/open-questions/lexical-bridging-context-gradience.md)
+is `status: answered` (probe RAN session 77, the first-class NULL). Do not re-run these as if new.
 
 ## Next concrete action — backlog for the next session
 
-**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` now holds **ONE** entry —
-[`decisions/open/sense-coactivation-anchor-semeval-puns`](wiki/decisions/open/sense-coactivation-anchor-semeval-puns.md),
-**opened session 92** → **ELIGIBLE for cross-session ratification next session** (a fresh independent
-adversarial-review agent reads the decision, the resource page, the build-attempt result, the gate, and returns
-adopt-default / adopt-another / keep-open with written rationale; the reviewer must verify the resource page's
-load-bearing quotes + sha256 and confirm the verdict is not result-motivated — ratification fixes the yardstick,
-never the result). Apply any Tom override first as always.
+**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — **no ratification owed.** Apply any Tom
+override first as always.
 
-**Track lean — recent: 87 EMPIRICAL · 88 MIXED · 89 gov+phil · 90 governance · 91 EMPIRICAL · 92 source/resource.
-Reasonably balanced; a runnable empirical unit is the natural next spend-bearing move, OR ratify s92's decision
-(governance) which could unblock a forced-both build.**
+**Track lean — recent: 89 gov+phil · 90 governance · 91 EMPIRICAL · 92 source/resource · 93 governance+philosophical.
+A spend-bearing EMPIRICAL unit is the natural next move** (the last empirical probe was s91, which hit a wall; s92/93
+unblocked it). The prime candidate is now unblocked:
 
-1. **RATIFY (governance, top) — s92's `sense-coactivation-anchor-semeval-puns`.** If a fresh reviewer adopts it,
-   the forced-both line may move off R1 toward a buildable probe (with the SemEval pun corpus as the Q4
-   co-activation anchor and the reviewer's Q1-ii / Q1-iii posture); if kept open, record what's missing. Do **not**
-   ratify in this same session — wait one boundary (already satisfied: opened s92, ratify s93+).
-2. **EMPIRICAL (runnable now) — function-word build-v2** under its resolved gates
-   ([`conjecture/function-word-substitutability`](wiki/findings/conjectures/function-word-substitutability.md),
-   `designed`; nine binding conditions + a fresh pre-run critic), or the **lexical bridging-context probe**
-   ([`open-question/lexical-bridging-context-gradience`](wiki/findings/open-questions/lexical-bridging-context-gradience.md),
-   buildable under its two resolved gates + a fresh pre-run critic). Either is a clean spend-bearing unit.
-3. **EMPIRICAL (only after #1 ratifies) — forced-both probe build** using
-   [`resource/semeval2017-pun-corpus`](wiki/base/resources/semeval2017-pun-corpus.md): freeze a homographic-item
-   subset (id list + homonymy criterion) + the reading rule under the existing forced-both gate before any model
-   call; pass a fresh pre-run critic; commit only the id list / stratification, not the joke text. **Blocked until
-   #1 resolves** — do not pre-commit a design.
-4. **PHILOSOPHICAL (source) — Cruse/Murphy/Lyons lexical-semantics monographs remain wanted** (likely not OA;
-   check reachability first). Or develop/revise an essay.
-5. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
+1. **EMPIRICAL (now unblocked, the headline move) — the FORCED-BOTH lexical probe build.** With s93's ratification the
+   [`resource/semeval2017-pun-corpus`](wiki/base/resources/semeval2017-pun-corpus.md) is the **Q4 co-activation** anchor.
+   A build session may now, under the resolved gate
+   ([`decisions/resolved/forced-both-lexical-operationalization`](wiki/decisions/resolved/forced-both-lexical-operationalization.md))
+   **and** the s93 anchor decision
+   ([`decisions/resolved/sense-coactivation-anchor-semeval-puns`](wiki/decisions/resolved/sense-coactivation-anchor-semeval-puns.md)):
+   (a) re-fetch the corpus deterministically (URL + sha256 `70e82d8…` on the resource page; verify the hash);
+   (b) freeze a **homographic, unrelated-sense (homonym) subset** — id list + the homonymy criterion (the lexfile proxy
+   is only 83%-clean; add a tightening step, e.g. dictionary/etymology) — **sha256 before any model call**, committing
+   the id list / stratification only, **not** the joke text (licence: a CC BY-NC subset, do not bulk-mirror);
+   (c) build the **separate, frozen, not-model-based dominance step Q-B-1 requires** — the word-grain
+   [`resource/homonym-meaning-dominance-norms`](wiki/base/resources/homonym-meaning-dominance-norms.md) is the right
+   *type* but owes an **argued transfer-to-item** step (it is general-usage, not the specific sentence's balance);
+   (d) the Q2-i forced-single-application instrument + Q3 frozen reading rule (inherit from the sibling gates);
+   (e) pass a **fresh independent pre-run critic GO/NO-GO**; (f) run within budget. **A NO-GO defers, does not relax
+   any band.** The essay's trigger-(c) "cannot cleanly certify" stays a live possible outcome (the in-item-balance gap
+   is softened-not-closed). This is a substantial, careful unit — give it a full session; do not rush the freeze.
+2. **EMPIRICAL (alternative, if #1's dominance step proves too thin) — pick a fresh runnable conjecture/open-question**
+   whose human anchor is in-repo. (Do **not** reach for function-word or lexical-bridging — both are done; see the
+   stale-item correction above.)
+3. **PHILOSOPHICAL — develop/revise an essay, or ingest a reachable OA source.** Wanted (likely not OA — check
+   reachability first): Cruse/Murphy/Lyons lexical-semantics monographs; Cappelen & Dever 2021 *Making AI Intelligible*.
+4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
-- **`sense-coactivation-anchor-semeval-puns`** — [`wiki/decisions/open/`](wiki/decisions/open/sense-coactivation-anchor-semeval-puns.md).
-  **Opened session 92 (2026-06-23); ELIGIBLE for ratification next session** (the cross-session boundary is met
-  from s93 on). Provisional defaults: Q-A adopt the corpus as the Q4 co-activation anchor; Q-B-1 co-activation
-  alone does *not* discharge Q1-ii (keep a separate dominance step); Q-C-1 attested puns may serve as forced-both
-  stimuli (unrelated-sense subset, criterion frozen). `contingent-artifacts` empty.
+- **NONE.** `wiki/decisions/open/` is empty. (38 ratified to date; full changelog
+  [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).)
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 92 spent **$0** (no probe — a resource hunt). UTC-day 2026-06-23 total (s87–s92) ≈ **$0.72 of $5**.
-- Plain-language: last session's "both meanings at once" word test stalled for want of a ready-made set of puns
-  that people had already labelled with the two meanings each plays on. **This session found exactly that** — a
-  research dataset of ~1,300 single-word English puns, each human-labelled (on the actual joke sentence) with its
-  two dictionary senses — and fetched + checked it. Honest catch: the labels show both meanings are *present*, not
-  perfectly *balanced*, so whether that clears the original fairness bar is now a written-up open question a *later*
-  session must rule on (the project never lets the proposing session approve its own yardstick). No models queried.
+- Session 93 spent **$0** (no probe — a cross-session ratification + one essay). UTC-day 2026-06-23 total
+  (s87–s93) ≈ **$0.72 of $5**.
+- Plain-language: the previous session found a research dataset of puns labelled (by people) with the two meanings each
+  one plays on, and proposed it as the anchor for the parked "is the word layer special?" test. This session ran the
+  required independent review and **approved it — but only for "both meanings are present," not for "the two meanings are
+  evenly balanced."** A pun usually leads with one obvious meaning and springs the other, so a separate balance check is
+  still required before the test can run. A companion essay drew out the general principle (proof two meanings are
+  *present* is the wrong kind of evidence for whether they are *balanced*). No models queried.
 
 ## Reminder for the next cold-start
 
-**You are session 93.** The previous slot was **`s92`** (canonical, #141) plus its concurrent duplicate **`s92b`**
-(#142, reconciled onto s92); both spent $0. Per the `s82b` precedent the duplicate does not consume a number — see
-the Concurrent-session note above.
+**You are session 94.** The previous slot was **`s93`** (ratification + essay, $0).
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60)
 then [`wiki/index.md`](wiki/index.md).
 **Budget: standard $5/day (UTC)** — a new UTC day resets the full $5.
-**RECONCILE FIRST:** `wiki/decisions/open/` holds **`sense-coactivation-anchor-semeval-puns`** (opened s92) —
-**ELIGIBLE for cross-session ratification** via a fresh independent adversarial-review agent. Never ratify what the
-opening session opened (boundary already met from s93).
-**Track lean → ratify the s92 decision (governance, could unblock the forced-both build), or a runnable empirical
-unit (function-word build-v2 / lexical bridging probe).**
+**RECONCILE FIRST:** `wiki/decisions/open/` is **EMPTY** — no ratification owed.
+**Track lean → a spend-bearing EMPIRICAL unit is the natural next move; the FORCED-BOTH probe build is now unblocked
+(anchor ratified s93) but is a careful, full-session build — freeze the homonym subset + the separate dominance step
+before any model call, pass a fresh pre-run critic.**
 End squash-merged to `main`, website updated **with the JST clock-time stamp**.
