@@ -1,0 +1,244 @@
+{
+ "per_arm": [
+  {
+   "arm": "scalar",
+   "model": "A",
+   "ambiguous_class": "bridging",
+   "ambiguous": {
+    "n": 24,
+    "decline_rate": 0.0,
+    "mean_conf": 84.16666666666667
+   },
+   "clear": {
+    "n": 24,
+    "decline_rate": 0.0,
+    "mean_conf": 89.33333333333333
+   },
+   "within_arm_decline_gap_ci_amb_minus_clear": [
+    0.0,
+    0.0
+   ],
+   "within_arm_conf_gap_ci_amb_minus_clear": [
+    -9.6625,
+    -0.2251
+   ],
+   "C3_precondition_ok": true,
+   "decline_elevated_within_arm": false,
+   "C4_confidence_only_self_report": true
+  },
+  {
+   "arm": "disjunctive",
+   "model": "A",
+   "ambiguous_class": "disjunctive",
+   "ambiguous": {
+    "n": 12,
+    "decline_rate": 0.08333333333333333,
+    "mean_conf": 86.41666666666667
+   },
+   "clear": {
+    "n": 24,
+    "decline_rate": 0.0,
+    "mean_conf": 97.58333333333333
+   },
+   "within_arm_decline_gap_ci_amb_minus_clear": [
+    0.0,
+    0.25
+   ],
+   "within_arm_conf_gap_ci_amb_minus_clear": [
+    -21.9583,
+    -2.875
+   ],
+   "C3_precondition_ok": true,
+   "decline_elevated_within_arm": false,
+   "C4_confidence_only_self_report": true
+  },
+  {
+   "arm": "scalar",
+   "model": "B",
+   "ambiguous_class": "bridging",
+   "ambiguous": {
+    "n": 24,
+    "decline_rate": 0.0,
+    "mean_conf": 95.41666666666667
+   },
+   "clear": {
+    "n": 24,
+    "decline_rate": 0.0,
+    "mean_conf": 97.5
+   },
+   "within_arm_decline_gap_ci_amb_minus_clear": [
+    0.0,
+    0.0
+   ],
+   "within_arm_conf_gap_ci_amb_minus_clear": [
+    -4.4545,
+    0.0256
+   ],
+   "C3_precondition_ok": true,
+   "decline_elevated_within_arm": false,
+   "C4_confidence_only_self_report": false
+  },
+  {
+   "arm": "disjunctive",
+   "model": "B",
+   "ambiguous_class": "disjunctive",
+   "ambiguous": {
+    "n": 12,
+    "decline_rate": 0.0,
+    "mean_conf": 97.66666666666667
+   },
+   "clear": {
+    "n": 24,
+    "decline_rate": 0.0,
+    "mean_conf": 99.0
+   },
+   "within_arm_decline_gap_ci_amb_minus_clear": [
+    0.0,
+    0.0
+   ],
+   "within_arm_conf_gap_ci_amb_minus_clear": [
+    -2.25,
+    -0.4583
+   ],
+   "C3_precondition_ok": true,
+   "decline_elevated_within_arm": false,
+   "C4_confidence_only_self_report": true
+  },
+  {
+   "arm": "scalar",
+   "model": "C",
+   "ambiguous_class": "bridging",
+   "ambiguous": {
+    "n": 24,
+    "decline_rate": 0.0,
+    "mean_conf": 98.54166666666667
+   },
+   "clear": {
+    "n": 24,
+    "decline_rate": 0.0,
+    "mean_conf": 100.0
+   },
+   "within_arm_decline_gap_ci_amb_minus_clear": [
+    0.0,
+    0.0
+   ],
+   "within_arm_conf_gap_ci_amb_minus_clear": [
+    -3.0,
+    0.0
+   ],
+   "C3_precondition_ok": true,
+   "decline_elevated_within_arm": false,
+   "C4_confidence_only_self_report": false
+  },
+  {
+   "arm": "disjunctive",
+   "model": "C",
+   "ambiguous_class": "disjunctive",
+   "ambiguous": {
+    "n": 12,
+    "decline_rate": 0.0,
+    "mean_conf": 99.16666666666667
+   },
+   "clear": {
+    "n": 24,
+    "decline_rate": 0.0,
+    "mean_conf": 100.0
+   },
+   "within_arm_decline_gap_ci_amb_minus_clear": [
+    0.0,
+    0.0
+   ],
+   "within_arm_conf_gap_ci_amb_minus_clear": [
+    -2.5,
+    0.0
+   ],
+   "C3_precondition_ok": true,
+   "decline_elevated_within_arm": false,
+   "C4_confidence_only_self_report": false
+  }
+ ],
+ "per_model_verdict": {
+  "A": {
+   "model": "A",
+   "scalar_C3_ok": true,
+   "disjunctive_C3_ok": true,
+   "disjunctive_decline_all12": 0.08333333333333333,
+   "disjunctive_decline_clean8": 0.125,
+   "scalar_bridging_decline": 0.0,
+   "within_arm_disj_gap_ci_all12": [
+    0.0,
+    0.25
+   ],
+   "within_arm_disj_gap_ci_clean8": [
+    0.0,
+    0.375
+   ],
+   "cross_arm_disj_minus_bridging_ci": [
+    0.0,
+    0.25
+   ],
+   "leaning_items_disclosed": {
+    "mole": "toward spy (B)",
+    "punch": "toward drink (B)",
+    "club": "toward heirloom-stick (B)",
+    "pupil": "toward student (B), strong"
+   },
+   "verdict": "SURVIVAL: disjunctive decline near-zero, NOT elevated within-arm, AND indistinguishable from scalar bridging (cross-arm CI includes 0) -> lexical commit-without-hedging survives a genuine disjunction (HIGHER bar met); register residual cuts toward survival -- led with"
+  },
+  "B": {
+   "model": "B",
+   "scalar_C3_ok": true,
+   "disjunctive_C3_ok": true,
+   "disjunctive_decline_all12": 0.0,
+   "disjunctive_decline_clean8": 0.0,
+   "scalar_bridging_decline": 0.0,
+   "within_arm_disj_gap_ci_all12": [
+    0.0,
+    0.0
+   ],
+   "within_arm_disj_gap_ci_clean8": [
+    0.0,
+    0.0
+   ],
+   "cross_arm_disj_minus_bridging_ci": [
+    0.0,
+    0.0
+   ],
+   "leaning_items_disclosed": {
+    "mole": "toward spy (B)",
+    "punch": "toward drink (B)",
+    "club": "toward heirloom-stick (B)",
+    "pupil": "toward student (B), strong"
+   },
+   "verdict": "SURVIVAL: disjunctive decline near-zero, NOT elevated within-arm, AND indistinguishable from scalar bridging (cross-arm CI includes 0) -> lexical commit-without-hedging survives a genuine disjunction (HIGHER bar met); register residual cuts toward survival -- led with"
+  },
+  "C": {
+   "model": "C",
+   "scalar_C3_ok": true,
+   "disjunctive_C3_ok": true,
+   "disjunctive_decline_all12": 0.0,
+   "disjunctive_decline_clean8": 0.0,
+   "scalar_bridging_decline": 0.0,
+   "within_arm_disj_gap_ci_all12": [
+    0.0,
+    0.0
+   ],
+   "within_arm_disj_gap_ci_clean8": [
+    0.0,
+    0.0
+   ],
+   "cross_arm_disj_minus_bridging_ci": [
+    0.0,
+    0.0
+   ],
+   "leaning_items_disclosed": {
+    "mole": "toward spy (B)",
+    "punch": "toward drink (B)",
+    "club": "toward heirloom-stick (B)",
+    "pupil": "toward student (B), strong"
+   },
+   "verdict": "SURVIVAL: disjunctive decline near-zero, NOT elevated within-arm, AND indistinguishable from scalar bridging (cross-arm CI includes 0) -> lexical commit-without-hedging survives a genuine disjunction (HIGHER bar met); register residual cuts toward survival -- led with"
+  }
+ },
+ "scope_cap": "NO human comparison; scalar capped to usage-similarity; disjunctive internal-contrast-only. Behavioural, n=3 commercial models, small clustered N, direction-of-effect only."
+}
