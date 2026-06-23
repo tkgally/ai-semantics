@@ -496,3 +496,14 @@ reading is true.
   grounds the regular/logical-vs-irregular polysemy carving and the conjunction/anaphora diagnostics
   for *logical* polysemy — but this essay's argument does not lean on it and it is **not cited in the
   body**; the contrast stands on the in-repo concept page and the results' disclosed residuals.
+  **The co-predication half of that flagged want was further discharged 2026-06-23** by
+  [`source/ortega-andres-2020-copredication`](../../base/sources/ortega-andres-2020-copredication.md),
+  which defines copredication by name, treats it as a diagnostic for *available, co-present* senses, and
+  frames the polysemy↔homonymy distinction as a **continuum** — closely-related polysemous senses
+  "activate each other, forming activation packages that facilitate copredication" (the forced-both
+  pole) while "meanings of homonymous words inhibit each other" (the rival/pickable pole) — exactly this
+  essay's forced-both-vs-rival contrast; the zeugma term stays grounded by
+  [`source/sennet-2021-ambiguity-sep`](../../base/sources/sennet-2021-ambiguity-sep.md). The essay's
+  body argument is unchanged and still does not lean on these sources; they strengthen the grounding the
+  provenance note flagged, and (per that thesis's own caveat) copredicability is "a question of degree
+  rather than an all-or-nothing matter," consistent with this essay's R1 caution.
