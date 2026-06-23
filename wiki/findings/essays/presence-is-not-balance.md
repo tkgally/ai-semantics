@@ -6,13 +6,15 @@ meaning-senses:
   - referential
   - distributional
   - human-comparison
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-23
 updated: 2026-06-23
 links:
   - rel: refines
     target: essay/no-admissible-certifier
+  - rel: depends-on
+    target: result/forced-both-lexical-build-attempt-v2
   - rel: depends-on
     target: result/forced-both-lexical-build-attempt-v1
   - rel: depends-on
@@ -185,7 +187,15 @@ least guaranteed.
   constructed frame — bounding the relative-pull effect rather than ignoring it — then the
   [`resource/homonym-meaning-dominance-norms`](../../base/resources/homonym-meaning-dominance-norms.md)
   route discharges balance after all, and this essay's "still owes a transfer step" clause is the thing
-  that was paid. Confirmation of the rule's shape, with the owed step now met.
+  that was paid. Confirmation of the rule's shape, with the owed step now met. **ATTEMPTED AND NOT MET
+  2026-06-23 (session 94):** the forced-both v2 build tried exactly this transfer — selecting attested
+  homographic pun items whose word is balanced in *general usage* by these norms (43 items, 23 words) —
+  and a fresh pre-run critic ruled the transfer **not arguable**: word-grain balance is the wrong grain
+  for a pun sentence's in-item balance, the genre directionally installs the lean (so it cannot be
+  averaged away), and — a fresh corroboration of this essay's core — the two human word-grain norms
+  **disagreed on balance 11/11** on the items present in both. The owed step was *not* paid; this
+  essay's "still owes a transfer step" clause stands, strengthened →
+  [`result/forced-both-lexical-build-attempt-v2`](../results/forced-both-lexical-build-attempt-v2.md).
 - **(c) An attested-ambiguity genre that is balance-unbiased.** The pun argument leans on a genre whose
   mechanics *bias toward* a dominant/recessive split. If some attested forced-both genre were shown to
   carry no such bias (its items are co-present **and** typically balanced by construction), then for
