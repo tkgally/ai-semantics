@@ -1,0 +1,90 @@
+{
+ "summary": {
+  "n_checks": 15,
+  "n_fail": 0,
+  "status": "PASS"
+ },
+ "counts": {
+  "arm2_items": 36,
+  "arm2_homonyms": 12,
+  "freq_median_gap": 0.0,
+  "length_mean_gap": 0.46
+ },
+ "checks": [
+  {
+   "check": "instrument_sha256_matches",
+   "ok": true,
+   "detail": "live=ac56f777c2ce2a8b frozen=ac56f777c2ce2a8b"
+  },
+  {
+   "check": "freeze_manifest_shas_resolve_and_match",
+   "ok": true,
+   "detail": "instrument: OK ac56f777c2ce; items_arm2: OK e3ed5d53b7a2; nuisance_match: OK 6bb536387256; arm1_stratum: OK e7d36773cffa"
+  },
+  {
+   "check": "arm2_classes_exact",
+   "ok": true,
+   "detail": "found=['clear-different', 'clear-same', 'disjunctive']"
+  },
+  {
+   "check": "arm2_set_balance_1disj_2clear",
+   "ok": true,
+   "detail": "n_sets=12, counts={'clear-same': 12, 'disjunctive': 12, 'clear-different': 12}"
+  },
+  {
+   "check": "arm2_fields_present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "arm2_spans_on_target",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "arm2_balanced_ctx1_no_gloss_word_planted",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "arm2_balanced_ctx1_distinct_from_fixed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "arm2_item_two_contexts_differ",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "nuisance_freq_median_gap_within_bound",
+   "ok": true,
+   "detail": "|median Lg10WF gap|=0.000 <= 0.4"
+  },
+  {
+   "check": "nuisance_length_mean_gap_within_bound",
+   "ok": true,
+   "detail": "|mean token gap|=0.46 <= 6.0"
+  },
+  {
+   "check": "nuisance_frame_recorded_nouns",
+   "ok": true,
+   "detail": "12/12 homonym targets are common nouns (nn), used as nouns in every context"
+  },
+  {
+   "check": "nuisance_register_residual_disclosed",
+   "ok": true,
+   "detail": "register residual note present"
+  },
+  {
+   "check": "decline_wording_in_system_prompt",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "single_shared_system_for_both_arms",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

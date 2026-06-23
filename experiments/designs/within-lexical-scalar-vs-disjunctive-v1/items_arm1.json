@@ -1,0 +1,26 @@
+{
+  "_provenance": {
+    "design": "experiments/designs/within-lexical-scalar-vs-disjunctive-v1.md",
+    "arm": "Arm 1 -- scalar-bridging (DWUG human-rated usage-similarity midpoints), REUSED UNCHANGED",
+    "note": "MANIFEST ONLY -- references the FROZEN lexical-bridging-context-v1 DWUG stratum by sha256. NO corpus text here (DWUG/CCOHA is CC BY-ND and gitignored). To present an item to a model at run time, the run session stages the gitignored fulltext exactly as the lexical leg does (experiments/designs/lexical-bridging-context-v1/prep.py), then reads item_id + class from the staged fulltext jsonl. This arm's items are NOT re-authored; they are the lexical leg's already-frozen stratum, reused under the shared instrument. Usage-similarity cap inherited.",
+    "reused_from": "experiments/designs/lexical-bridging-context-v1/",
+    "staged_fulltext": "experiments/data/dwug/lexical_bridging_v1_fulltext.jsonl (gitignored, local-only; produced by lexical-bridging-context-v1/prep.py)"
+  },
+  "frozen_references": {
+    "stratum_csv": {
+      "path": "experiments/designs/lexical-bridging-context-v1/stratum.csv",
+      "sha256": "e7d36773cffaa8cccb90df229d518d75139b0666483f361a6ed867d405c8186d",
+      "classes": ["clear-same", "bridging", "clear-different"],
+      "pool": "48 DWUG pairs (clear-same 9 / bridging 24 / clear-different 15), ~20 lemmas; rater floor human_n>=3"
+    }
+  },
+  "dwug_archive_pin": {
+    "zenodo": "14028531 (DWUG EN v3.0.0)",
+    "sha256": "64eef477154b82cb27925ab4ea8c030a8e23840b538dd06b6464aa1e55af2dbf"
+  },
+  "class_map_to_shared_instrument": {
+    "bridging": "ambiguous (the moment-pole / disjunctive-analogue test class for the SCALAR arm; expected handling tested per C1 on decline rate)",
+    "clear-same": "clear-same (expected non-elevated decline, high confidence; C3 control)",
+    "clear-different": "clear-different (expected non-elevated decline, high confidence; C3 control)"
+  }
+}
