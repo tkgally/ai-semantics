@@ -2,8 +2,9 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-23** ran six sessions: s87 ($0.12128) + s88 ($0.59880)
-+ s89 ($0) + s90 ($0) + s91 ($0) + **s92 ($0, no probe — resource scout/catalogue)** = **$0.720 of $5**.
+**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-23** ran six sessions plus one concurrent duplicate:
+s87 ($0.12128) + s88 ($0.59880) + s89 ($0) + s90 ($0) + s91 ($0) + **s92 ($0, no probe — resource scout/catalogue)**
++ **s92b ($0, concurrent-duplicate of s92 — see Concurrent-session note below)** = **$0.720 of $5**.
 Full ledger in [`config/budget.md`](config/budget.md). **Check the clock (`date -u`)** — a later session is
 almost certainly a new UTC day (full $5 resets). Check for any newer Tom override before spending.
 
@@ -30,8 +31,8 @@ questions (provisional defaults set). Added the corpus to [`wanted.md`](wiki/bas
 `wiki/index.md` (resources catalog + open-decisions block) and `base/resources/index.md`. senselint 0 errors;
 linkify clean. Website + journal + plans updated (JST stamp). 37 decisions ratified to date; **1 now open** (s92's).
 
-**Concurrent-session note (reconciliation):** a parallel session-92 run (PR #142) independently did the same
-scout and **lost the merge race** to this one (#141). Two of its artifacts were genuinely additive and have been
+**Concurrent-session note (reconciliation) — `s92b`:** a parallel session-92 run, **`s92b`** (PR #142),
+independently did the same scout and **lost the merge race** to this one (`s92`, #141). Two of its artifacts were genuinely additive and have been
 **folded onto this main**: the methodological essay [`essay/no-admissible-certifier`](wiki/findings/essays/no-admissible-certifier.md)
 (generalizes the s91 NULL — a required stimulus *premise* readable only by a barred human subject or the
 model-under-test has **no admissible certifier**; the escape is the anchor discipline) and the resource
@@ -39,6 +40,16 @@ model-under-test has **no admissible certifier**; the escape is the anchor disci
 spoken-ambiguity norms, both **CC BY 4.0**, per-word balance/dominance — the human-anchored balance step the open
 decision's **Q-B** calls for). The other run's duplicate SemEval resource + anchor decision were **dropped** in
 favour of the #141 versions catalogued above. (Also refreshed the stale `wiki/executive-summary.md`.)
+
+**Numbering (reconciled 2026-06-23 per the monitor's cleanup request, matching the `s82b` precedent):** the
+concurrent duplicate is labeled **`s92b`** and does **not** consume a session number — so **the next scheduled
+Routine is `s93`** (not s94). Both GitHub squash-commit titles happen to read "Session 92" (immutable merged
+history, left as-is); these records (`NEXT.md` + `log.md`) are authoritative. The wiki content pages correctly
+attribute their artifacts to the session-92 slot / 2026-06-23 and need no relabeling; the website shows a single
+"session 92" (the `s82b` precedent kept the duplicate off the public site). Verified clean at reconciliation:
+senselint 0 errors, linkify clean, the dropped duplicate ids (`semeval-2017-task7-puns`,
+`forced-both-coactivation-anchor`) are absent from the tree with no orphan references, and both PRs are
+merged + closed with no open PRs.
 
 ## Next concrete action — backlog for the next session
 
@@ -91,6 +102,10 @@ Reasonably balanced; a runnable empirical unit is the natural next spend-bearing
   session must rule on (the project never lets the proposing session approve its own yardstick). No models queried.
 
 ## Reminder for the next cold-start
+
+**You are session 93.** The previous slot was **`s92`** (canonical, #141) plus its concurrent duplicate **`s92b`**
+(#142, reconciled onto s92); both spent $0. Per the `s82b` precedent the duplicate does not consume a number — see
+the Concurrent-session note above.
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60)
