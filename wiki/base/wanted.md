@@ -72,10 +72,10 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 
 - [P2] Firth, J.R. 1957. "A synopsis of linguistic theory, 1930–55." In *Studies in Linguistic Analysis.* Blackwell.
   why: the "you shall know a word by the company it keeps" source — for the `distributional` tag.
-  status: wanted
+  status: **SECONDARY-ONLY / primary UNREACHABLE** (2026-06-24, session 102) → [`wiki/base/sources/firth-1957-synopsis.md`](sources/firth-1957-synopsis.md). No open-access full text found (the 1957 Blackwell Philological Society volume is behind library walls; the search-surfaced `lel.ed.ac.uk/.../firth.pdf` 404s; Internet Archive holds only controlled-lending scans). The famous line + "meaning by collocation" fragments are catalogued **via secondaries** (Brunila & LaViolette 2022, arXiv 2205.07750; Quote Investigator) with every quote flagged "primary NOT consulted." Stays listed: a later session reaching a legitimate full text should re-verify each quote against Firth's own pages.
 - [P2] Harris, Z.S. 1954. "Distributional Structure." *Word* 10(2–3): 146–162.
   why: the distributional hypothesis stated formally.
-  status: wanted
+  status: **RECEIVED** (2026-06-24, session 102) → [`wiki/base/sources/harris-1954-distributional-structure.md`](sources/harris-1954-distributional-structure.md). Full text read from a freely accessible Caltech-hosted scan of the *Word* original (its.caltech.edu/~matilde/...); the central hypothesis ("difference of meaning correlates with difference of distribution," p. 156), the all-elements-distributional claim (p. 146), and the oculist/eye-doctor example (pp. 156–157) verbatim with original pagination, plus Harris's own Bar-Hillel-footnote hedge that the correlation "cannot be established." Theory source, not a human anchor.
 
 ### Current wave on LLMs and meaning
 
@@ -175,7 +175,7 @@ The lexical conjecture's anchor decision RESOLVED 2026-05-29 ([`decisions/resolv
   status: catalogued (2026-05-30 — resource page created: wiki/base/resources/dwug-usage-graphs.md; see page for the license / scale / counts / fetchability / fit verification breakdown)
 - [P2] CoSimLex (SemEval-2020 Task 3). Graded human ratings of word similarity in context; released.
   why: alternative graded in-context similarity anchor if DWUG does not fit.
-  status: wanted
+  status: **RECEIVED as a `source` page** (2026-06-24, session 102) → [`wiki/base/sources/armendariz-2020-cosimlex.md`](sources/armendariz-2020-cosimlex.md). Armendariz et al. 2020, LREC (arXiv 1912.05320); 0-to-6 graded ratings, 27 EN MTurk annotators, built on SimLex-999, gold for SemEval-2020 Task 3 (GWSC). **Two corrections to the prior secondary characterization in [`resource/dwug-usage-graphs`](resources/dwug-usage-graphs.md), now primary-verified:** scale is **0 to 6** (not "0–10"), and Zenodo record 3989788 is the **distinct SemEval-Task-3 artifact** (CC BY 4.0), not the CoSimLex release proper, which states no license/URL in the paper. **Honest limit:** its unit is **different-word pairs across two contexts**, NOT DWUG's same-lemma usage pairs, so it does **not** fit the lexical-sense-gradience monotonicity clause out of the box (the DWUG "Fit assessment" preference stands). It is a `source` page, **NOT yet an anchor** — license + fetchability + released counts of the CoSimLex files must be firsthand-verified before any anchor use.
 
 ### Sense co-activation / in-item-balance anchor (for the parked forced-both lexical line)
 
