@@ -5,13 +5,17 @@ title: "Construct validity without a criterion — the project's operationalizat
 meaning-senses:
   - human-comparison
   - model-internal
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-06-24
 links:
   - rel: depends-on
     target: source/cronbach-meehl-1955-construct-validity
+  - rel: depends-on
+    target: source/messick-1995-validity-of-psychological-assessment
+  - rel: depends-on
+    target: source/freiesleben-2026-construct-validity-llm-benchmarks
   - rel: refines
     target: essay/no-admissible-certifier
   - rel: refines
@@ -26,8 +30,21 @@ links:
 
 # Essay: construct validity without a criterion
 
-> **Status: draft (2026-06-23). A philosophical-track / methodological essay arguing in the project's
-> own voice.** Its original contribution is a **reframing with a sharp diagnosis**: the project's
+> **Status: revised (2026-06-24, session 96 — trigger (d) fired). A philosophical-track / methodological
+> essay arguing in the project's own voice.** **Revision log.** *2026-06-24 (session 96):* trigger (d)
+> fired — two post-1955 validity sources were ingested:
+> [`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md)
+> (the unified-validity statement, and the **primary** source of *construct underrepresentation* and
+> *construct-irrelevant variance*) and
+> [`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md)
+> (a measurement-philosophy paper making the project's own framing choice — nomological-net construct
+> validity — for LLM capability benchmarks specifically). The *design-out / presence-is-not-balance →
+> construct-validity-hygiene* mapping, previously only *gestured* at in Messick's vocabulary, is now
+> **stated and sourced** in Messick's verbatim terms (see the fourth terminal-state bullet); a new
+> section, **"Does the reconstruction match the post-1955 consensus?"**, answers trigger (d)'s second
+> question (it largely does — Messick confirms and extends, Freiesleben independently corroborates the
+> framing in the LLM domain, and the realist alternative is acknowledged, not silently dropped). The
+> central diagnosis is unchanged. Its original contribution is a **reframing with a sharp diagnosis**: the project's
 > scattered operationalization-gate disciplines — freeze-before-run, the `internal-contrast-only`
 > terminal state, "no admissible certifier," "design-out-not-model-out," "presence-is-not-balance" —
 > are, in the classical vocabulary of measurement, a single thing: **construct validation** in
@@ -38,9 +55,11 @@ links:
 > than merely re-describing them: it says *why* so many lines land at `internal-contrast-only`, *why*
 > "no admissible certifier" is a structural boundary and not bad luck, and *why* the project's
 > negatives are read as ambiguous between instrument and theory. It contains **no new empirical
-> claim** and makes **no human comparison**; its one source
-> ([`source/cronbach-meehl-1955-construct-validity`](../../base/sources/cronbach-meehl-1955-construct-validity.md))
-> is a *methodology* anchor, explicitly **not** a human-comparison anchor, and licenses no claim about
+> claim** and makes **no human comparison**; its three sources
+> ([`source/cronbach-meehl-1955-construct-validity`](../../base/sources/cronbach-meehl-1955-construct-validity.md),
+> [`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md),
+> and [`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md))
+> are *methodology* sources, explicitly **not** human-comparison anchors, and license no claim about
 > any model. Read the revision triggers before citing.
 
 ## The occasion
@@ -199,17 +218,34 @@ away.
   pin the test leg independently, a negative can always be charged to the test or the design rather
   than the construct, exactly as Cronbach & Meehl say.
 
-- **"Design-out" and "presence-is-not-balance" are construct-validity hygiene.** A confound collinear
-  with the manipulation ([`essay/design-out-not-model-out`](design-out-not-model-out.md)) is an
-  irrelevant determiner of test variance that no analysis can separate from the construct of interest —
-  so the test partly measures something other than its construct, and the only fix is at construction.
-  Reading balance off a co-presence label ([`essay/presence-is-not-balance`](presence-is-not-balance.md))
-  is interpreting the test as measuring a construct (no-dominance) the evidence does not bear on — a
-  mismatch between the attribute claimed and the attribute the instrument actually reflects. Both are
-  guards on the *correspondence between instrument and construct* that construct validity is about. (The
-  later, sharper vocabulary for these two failure shapes — *construct-irrelevant variance* and
-  *construct under-representation* — is Messick's, not Cronbach & Meehl's; named here as a pointer, not
-  attributed to the 1955 paper, and not relied on.)
+- **"Design-out" and "presence-is-not-balance" are construct-validity hygiene — Messick's two threats,
+  named.** This bullet is the one trigger (d) sharpened: with
+  [`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md)
+  now in-repo, the mapping the founding-statement essay could only *gesture* at can be **stated in
+  Messick's own verbatim vocabulary**. Messick names exactly two ways a test can fail to correspond to
+  its construct: "There are two major threats to construct validity: In the one known as construct
+  underrepresentation, the assessment is too narrow and fails to include important dimensions or facets
+  of the construct. In the threat to validity known as construct-irrelevant variance, the assessment is
+  too broad, containing excess reliable variance associated with other distinct constructs as well as
+  method variance" ([`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md),
+  §"Sources of Invalidity"). The project's two construction-time gates are these two threats, one each:
+  - A confound collinear with the manipulation ([`essay/design-out-not-model-out`](design-out-not-model-out.md))
+    is, precisely, **construct-irrelevant variance** — "excess reliable variance associated with other
+    distinct constructs … that affects responses in a manner irrelevant to the interpreted construct"
+    (ibid.). The test is "too broad"; the only fix is at construction, exactly as the design-out essay
+    concludes.
+  - Reading balance off a co-presence label ([`essay/presence-is-not-balance`](presence-is-not-balance.md))
+    is, precisely, **construct underrepresentation** — interpreting a "too narrow" instrument (one that
+    certifies *presence* of two senses) as if it covered a "dimension or facet of the construct"
+    (*balance*) it does not include. The claimed attribute (no-dominance) is a facet the instrument fails
+    to represent.
+
+  Both are guards on the *correspondence between instrument and construct* that construct validity is
+  about, and Messick's verdict that "Both threats are operative in all assessments"
+  ([`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md),
+  §"Sources of Invalidity") is why the project treats both as standing hazards, designed against at
+  construction rather than diagnosed after the run. The vocabulary is no longer a pointer the essay
+  withholds reliance on; it is sourced and load-bearing.
 
 ## The constructive half: how a criterion-less project still validates
 
@@ -272,14 +308,99 @@ findings are cleaner *because* the project gave up the criterion leg; the bill i
 constructs can be validated only against the net, and some not at all until a resource turns up. That
 is a feature with a cost, named — not a deficiency to engineer around.
 
+## Does the reconstruction match the post-1955 consensus? (trigger (d), answered)
+
+The original essay rested on the *founding* statement of construct validity alone, and named as its
+weakest point that "the seventy years of revision and critique since … are uncatalogued, so the mapping
+is to the 1955 framework, not to the current consensus." Trigger (d) asked: ingest a later source and
+find out. Two were ingested. The verdict is **largely a match, with one honest gap and one acknowledged
+rival** — and the exercise turned up a sharpening the founding statement could not supply.
+
+**Messick (1995) confirms and extends.** Messick's unified validity reaches, from general measurement
+considerations, the same structural endpoint the essay reached from the project's special constraint.
+The essay argued that once the no-human-subjects rule removes the criterion leg, *construct validity is
+the only validation left*. Messick argues — for everyone, not just a criterion-less project — that
+content and criterion validation are not separate substitutable types but aspects of a single thing:
+"construct validity appears in every cell, which is fitting because the construct validity of score
+meaning is the integrating force that unifies validity issues into a unitary concept"
+([`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md),
+§"Meaning and Values in Test Validation"). The project's situation is therefore a *limiting case* of
+Messick's unification, not a deviation from it: where Messick subsumes the criterion leg under construct
+validity, the project has the criterion leg removed outright — but both land on construct validity as
+the whole of validity. And Messick's relocation of validity from the test to the inference — "Validity
+is not a property of the test or assessment as such, but rather of the meaning of the test scores"
+(ibid., §opening) — is the post-1955 consensus statement of exactly the discipline the project enforces
+when it refuses to read a probe's score as a property of the instrument. On both points the
+reconstruction matches the consensus, not merely the founding text.
+
+**The honest gap: the consequential aspect.** Messick goes somewhere the project's methodology essays do
+not. He folds the *social consequences of test use* and the *value implications of score meaning* into
+construct validity itself — "value implications are not ancillary but, rather, integral to score
+meaning"; "validity judgments are value judgments"
+([`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md),
+§"Meaning and Values in Test Validation"). The project's construct-validity discipline is, by Messick's
+lights, *incomplete*: it validates score meaning (the net of within-model contrasts) but has not
+theorized the consequences or value implications of interpreting a model's behavior as a capability.
+This is not a flaw in the reframing; it is a place the reconstruction is **narrower than the consensus**,
+flagged here rather than papered over. (Whether the consequential aspect even applies to a project that
+makes no high-stakes decisions about persons is itself an open question — but the essay should not claim
+a full match it does not have.)
+
+**Freiesleben (2026) independently corroborates the framing — in the LLM domain, for the project's own
+reason.** The strongest external check is that a measurement philosopher, writing specifically about
+attributing capabilities to LLMs from benchmark scores, makes the project's framing choice and makes it
+*for the project's own reason*. He argues "the nomological account developed by Cronbach and Meehl
+provides the most suitable theoretical framework for current LLM capability research," over both the
+inferential and the causal accounts
+([`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md),
+§1). And the reason he rejects the causal/realist account for LLMs is the project's own deflationary
+stance: "It is unclear what it would mean for a model to possess reasoning, theory of mind, or morality
+as internal attributes, rather than merely to exhibit behavioral patterns that resemble those associated
+with these constructs in humans" (ibid., §2.1). That is the project's "describe, don't litigate"
+posture, arrived at independently. The convergence is of *direction*, not result — Freiesleben reports
+no experiment and the project borrows no number from him — and it comes with the honest discounts that
+he is a single-author **preprint** (peer-review unconfirmed) and that his renderings of Messick and
+Borsboom are *secondary*. But as a check on whether the project's framing is idiosyncratic, it is
+about as good as an in-repo source can give: the same conclusion, in the same domain, from the same
+modesty about what is "inside" the model.
+
+**The sharpening the ingests enabled: a *second* amputation.** Reading the project's situation against
+the *three* accounts Freiesleben distinguishes — nomological (Cronbach & Meehl), inferential
+(Messick/Kane), and causal (Borsboom) — shows the criterion amputation is not the only one. Borsboom's
+causal account validates a test by a *realist* condition: "the construct must exist, and variations in
+measurement outcomes must be caused by variations in the state of that construct"
+([`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md),
+§2.1, Freiesleben's characterization of Borsboom). The project cannot meet that condition either — not
+by a budget rule but by its deflationary commitment: it declines to assert that a model *possesses* the
+attribute as an internal state that causally produces the behavior, which is the very claim the gates
+forbid reading off the model. So the project is barred from **two** of the three classical validation
+routes at once — the criterion leg (no human subjects) *and* the causal/realist leg (no ontological
+commitment to the construct living in the model) — and lands on the nomological net not by preference but
+because it is the **only one of the three** that asks neither for an external human criterion nor for a
+realist commitment about the model's interior. The founding-statement essay could diagnose the first
+amputation; it took the post-1955 sources (Borsboom's causal account, surfaced through Freiesleben) to
+see the second. This is the reframing earning trigger (d): the consensus did not overturn the
+reconstruction, it *deepened* it.
+
+**The rival, acknowledged not dropped.** None of this shows the nomological net is *correct* against
+Borsboom — only that it is what the project's constraints leave available. Borsboom's standing objection
+survives: on his view the net-elaboration program "is bound to fail because 'Few, if any, theoretical
+terms in psychology can be unambiguously identified in this way'"
+([`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md),
+§2.3, Borsboom quoted by Freiesleben). The project's reliance on the net is a *choice among contested
+accounts*, forced by its own rules, not a demonstration that the net is the right theory of validity.
+That is exactly the circularity cost the next section already books; the post-1955 ingest names the
+rival precisely instead of waving at it.
+
 ## What this essay is not
 
 - **Not a new empirical claim.** It is a reframing of the project's *methodology*. Every empirical
   sentence about a model in the essays it touches is left at its own page's stated strength; this essay
-  asserts nothing new about any model. Its one source is a 1955 measurement paper.
-- **Not a human comparison, and not a new anchor.** Cronbach & Meehl is a *methodology* anchor; it
-  supplies a theory of validity, not a human yardstick, and it explicitly cannot discharge any
-  empirical claim's human-anchor obligation. The essay imports no human number.
+  asserts nothing new about any model. Its sources are measurement-methodology texts (Cronbach & Meehl
+  1955, Messick 1995) and one philosophy-of-measurement preprint about LLM benchmarks (Freiesleben 2026).
+- **Not a human comparison, and not a new anchor.** All three sources are *methodology* sources; they
+  supply theories of validity, not human yardsticks, and none can discharge any empirical claim's
+  human-anchor obligation. The essay imports no human number.
 - **Not a claim the project consciously applied construct-validity theory.** The discipline was
   reconstructed from scratch over many sessions; the ingest lets it be *read against* the classical
   framework after the fact. The claim is that the two coincide, not that one was derived from the
@@ -289,9 +410,13 @@ is a feature with a cost, named — not a deficiency to engineer around.
   existing machinery (nomological-net elaboration, resource-anchoring) is the right and sufficient
   response to working without the criterion leg.
 - **Not a claim that construct validity is uncontested.** The 1955 framework was later revised and
-  criticized (Campbell & Fiske's convergent/discriminant validity; Messick's unified validity;
-  Borsboom's critiques) — none in-repo. The essay cites Cronbach & Meehl as the *origin and canonical
-  statement*, and trigger (d) queues the obvious follow-ups.
+  criticized; as of this revision two strands are in-repo — Messick's unified validity (primary) and,
+  through Freiesleben's secondary characterization, Borsboom's realist critique — while Campbell &
+  Fiske's convergent/discriminant validity and a *primary* Borsboom remain uncatalogued (trigger (e)).
+  The essay cites Cronbach & Meehl as the *origin and canonical statement*, treats Messick as the
+  consensus refinement, and explicitly records (in "Does the reconstruction match the post-1955
+  consensus?") that the nomological net is one contested account among others — chosen here because the
+  project's constraints bar the alternatives, not because the rivals are refuted.
 
 ## Revision triggers (read before citing)
 
@@ -312,13 +437,30 @@ is a feature with a cost, named — not a deficiency to engineer around.
   and could write a sharper negative. This would not overturn the essay (whose claim is about
   criterion-less *behavioral* validation) but would add the off-axis route, dovetailing with
   [`essay/undischargeable-negative`](undischargeable-negative.md)'s trigger (a).
-- **(d) A later validity source is ingested.** Campbell & Fiske (1959, convergent/discriminant
-  validity), Messick (unified validity, construct-irrelevant variance / under-representation), or
-  Borsboom et al. (the realist critique of construct validity) are uncatalogued. Ingesting one would
-  let the essay's "design-out / presence-is-not-balance as construct-validity hygiene" mapping be stated
-  in the precise later vocabulary it currently only gestures at, and would test whether the project's
-  reconstruction matches the *post-1955* consensus or only the founding statement. Flagged, not
+- **(d) A later validity source is ingested. — FIRED 2026-06-24 (session 96).** Messick (1995, unified
+  validity; the *construct underrepresentation* / *construct-irrelevant variance* vocabulary) and
+  Freiesleben (2026, the nomological account for LLM capability benchmarks) were ingested. Outcome: the
+  "design-out / presence-is-not-balance as construct-validity hygiene" mapping is now **stated and
+  sourced** in Messick's verbatim terms; the new section "Does the reconstruction match the post-1955
+  consensus?" records that the reconstruction *largely matches* (Messick's unification, with the project
+  as a limiting case; Freiesleben's independent corroboration in the LLM domain), names one honest gap
+  (the consequential/value aspect Messick adds, which the project has not theorized), and surfaces a
+  sharpening (the *second* amputation — the project is barred from Borsboom's causal/realist leg too, by
+  its deflationary commitment, not only from the criterion leg). The trigger is discharged; the residual
+  follow-ups move to (e).
+- **(e) A *primary* Campbell & Fiske 1959 or Borsboom 2004 is ingested.** The convergent/discriminant
+  (MTMM) vocabulary and the causal/realist account currently enter the essay only through *secondary*
+  channels — Messick cites Campbell & Fiske for the "external aspect," and Borsboom is engaged via
+  Freiesleben's characterization. Ingesting either *primary* would let the "second amputation" argument
+  (the causal/realist leg is also barred) be stated from Borsboom's own text rather than Freiesleben's
+  reading, and would let convergent/discriminant analysis be mapped to the convergence ladder directly.
+  If the primary Borsboom diverges from Freiesleben's rendering, this section is revised. Flagged, not
   assumed.
+- **(f) The consequential/value aspect is engaged.** Messick folds the social consequences and value
+  implications of test use into construct validity ("validity judgments are value judgments"); the
+  project's methodology has not theorized this. If a finding or essay ever turns on the *consequences*
+  of interpreting a model's behavior as a capability (e.g. a downstream-use or value-laden reading of a
+  contrast), the "honest gap" named above becomes live and this essay gains a consequential section.
 
 ## Honesty box
 
@@ -334,6 +476,13 @@ is a feature with a cost, named — not a deficiency to engineer around.
   design-out / presence-is-not-balance (construct-instrument correspondence hygiene) — together with the
   identification of the convergence ladder as the project's nomological-net-elaboration engine. **No
   empirical claim here is new, original, or reported.**
+- The **2026-06-24 revision adds one original sharpening**: read against the three accounts Freiesleben
+  distinguishes (nomological / inferential / causal), the project is barred from **two** of the three
+  validation routes — the criterion leg (no human subjects) *and* the causal/realist leg (no ontological
+  commitment that the construct lives in the model) — leaving the nomological net as the only route that
+  asks for neither. The founding-statement essay saw only the first amputation. This is a structural
+  observation about the project's constraints, not an empirical claim, and it does not assert the
+  nomological net is *correct* against Borsboom — only that it is what the constraints leave available.
 - The strongest sentences leaned on, at their stated strength, all from
   [`source/cronbach-meehl-1955-construct-validity`](../../base/sources/cronbach-meehl-1955-construct-validity.md):
   the four types and "The first two of these may be considered together as criterion-oriented
@@ -353,6 +502,23 @@ is a feature with a cost, named — not a deficiency to engineer around.
   network of associations or propositions in which it occurs". From [`CLAUDE.md`](../../../CLAUDE.md)
   rule 4: "No human subjects. Tom is the monitor, not a subject. All human bearing comes from existing
   resources …". Nothing here outruns those.
+- The strongest sentences added in the 2026-06-24 revision, at their stated strength: from
+  [`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md),
+  the two-threats definition ("In the one known as construct underrepresentation, the assessment is too
+  narrow … In the threat to validity known as construct-irrelevant variance, the assessment is too
+  broad, containing excess reliable variance …"), "Both threats are operative in all assessments,"
+  "Validity is not a property of the test or assessment as such, but rather of the meaning of the test
+  scores," "construct validity appears in every cell … the integrating force that unifies validity
+  issues into a unitary concept," and "validity judgments are value judgments"; from
+  [`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md)
+  (an arXiv **preprint**, peer-review unconfirmed, whose Messick/Borsboom renderings are **secondary**),
+  "the nomological account developed by Cronbach and Meehl provides the most suitable theoretical
+  framework for current LLM capability research," the realist-rejection sentence ("It is unclear what it
+  would mean for a model to possess reasoning, theory of mind, or morality as internal attributes …"),
+  Borsboom's two conditions as characterized ("the construct must exist, and variations in measurement
+  outcomes must be caused …"), and Borsboom quoted ("Few, if any, theoretical terms in psychology can be
+  unambiguously identified in this way"). The Borsboom material is used **only** at secondary strength
+  (Freiesleben's reading), never as a primary Borsboom statement.
 - **No human comparison** is made or owed: the essay is about *how the project validates its own probes*,
   not a contrast of model against human behavior. The constructs and the gate essays it touches are
   `internal-contrast-only` / methodological; the source it leans on is a methodology anchor that cannot
@@ -363,11 +529,16 @@ is a feature with a cost, named — not a deficiency to engineer around.
   [`essay/no-admissible-certifier`](no-admissible-certifier.md) and
   [`essay/presence-is-not-balance`](presence-is-not-balance.md) carry `human-comparison` while making
   none.)
-- **Provenance note.** The essay rests on one ingested methodology source (Cronbach & Meehl 1955) plus
-  five in-repo essays/the convergence-ladder. Its weakest point is that it engages only the *founding*
-  statement of construct validity; the seventy years of revision and critique since (Campbell & Fiske;
-  Messick; Borsboom) are uncatalogued, so the mapping is to the 1955 framework, not to the current
-  consensus — named as trigger (d), not dodged. The "construct-irrelevant variance / construct
-  under-representation" labels used for the design-out / presence-is-not-balance mapping are Messick's
-  later vocabulary, flagged in-text as a pointer and **not** attributed to or quoted from the 1955
-  paper.
+- **Provenance note (updated 2026-06-24).** The essay now rests on **three** methodology sources —
+  Cronbach & Meehl 1955 (founding statement), Messick 1995 (unified-validity consensus refinement), and
+  Freiesleben 2026 (the nomological account applied to LLM benchmarks) — plus five in-repo
+  essays/the convergence-ladder. The original weakest point (engaging only the founding statement) is
+  **largely discharged** by trigger (d): Messick supplies the post-1955 consensus and the
+  *construct-irrelevant variance / construct underrepresentation* vocabulary is now **sourced and
+  quoted** from Messick, not merely gestured at. Two weaknesses remain, named honestly: (i) the
+  convergent/discriminant (Campbell & Fiske) and causal/realist (Borsboom) accounts enter only through
+  *secondary* channels — Messick's citation and Freiesleben's characterization respectively — so a
+  *primary* ingest of either is still owed (trigger (e)); and (ii) Freiesleben is an arXiv **preprint**
+  (peer-review unconfirmed), so the LLM-domain corroboration is real but provisional. The consequential/
+  value aspect of Messick's unified validity is acknowledged as a **gap** in the reconstruction, not a
+  match (trigger (f)).
