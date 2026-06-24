@@ -9,7 +9,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-24
 links:
   - rel: refines
     target: conjecture/multimodal-lexical-grounding-divergence
@@ -201,10 +201,17 @@ candidates below are named only as the anchors a *future result* testing this hy
 (none is claimed to already cover it). Candidates, all in-repo except the fine-polysemy image set:
 
 - **Visual word-sense disambiguation (VWSD)** is the natural image-native task this grounding axis
-  should move to — already flagged in [`NEXT.md`](../../../NEXT.md) as the next grounding step. It is image-native (sense
-  selection *requires* the image) rather than image-as-add-on, so it directly instantiates the
-  under-determined regime. **Not in-repo as a typed resource**; would need scouting/fetch/verification
-  before it could anchor a result (returned for the wanted list below).
+  should move to. It is image-native (sense selection *requires* the image) rather than image-as-add-on,
+  so it directly instantiates the under-determined regime. **Now in-repo as a typed resource**
+  ([`resource/vwsd-semeval-2023`](../../base/resources/vwsd-semeval-2023.md), scouted/catalogued s97).
+  **Scope note (decision [`decisions/resolved/vwsd-grounding-headroom-dv`](../../decisions/resolved/vwsd-grounding-headroom-dv.md), ratified s99, ADOPT MODIFIED):**
+  VWSD's human gold is **binary correct-image selection**, not the **graded** relatedness signal
+  prediction 1 is written around. A VWSD probe therefore tests the conjecture's **gating *shape*** via a
+  **selection-accuracy interaction** (per-item text-only separability × image-induced selection
+  improvement, predicted negative) and is **explicitly not a test of prediction-1-as-written** (the
+  graded-Δ × separability interaction against a human relatedness gradient), which remains open for a
+  **future graded-image resource**. The VWSD operationalization, its binding pre-spend conditions, and
+  the distraction control are fixed by that resolved decision.
 - **The human sense anchor** for the relatedness/separation judgments would be WiC's binary
   same/different labels ([`resource/wic-word-in-context`](../../base/resources/wic-word-in-context.md))
   and/or the Princeton WordNet synset inventory
