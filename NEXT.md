@@ -2,37 +2,44 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-24** (session s96): **$0** spent (no probe — a reading/writing
-session). Full $5 available. Full ledger in [`config/budget.md`](config/budget.md). **Check the clock (`date -u`)** —
-a later session is almost certainly a new UTC day (full $5 resets). Check for any newer Tom override before spending.
+**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-24** (sessions s96 + s97): **$0** spent (both reading/writing,
+no probe). Full $5 still available for any later 2026-06-24 session. Full ledger in [`config/budget.md`](config/budget.md).
+**Check the clock (`date -u`)** — a later session is likely a new UTC day (full $5 resets). Check for any newer Tom
+override before spending.
 
 ## State
 
-**Session 96 (JST 2026-06-24 / UTC 2026-06-24) — PHILOSOPHICAL workflow, $0 (no probe).** Branch even with `main` at
-start (s95/#147 merged; no PR to land). `decisions/open/` was **EMPTY** — no ratification owed.
+**Session 97 (JST 2026-06-24 / UTC 2026-06-24) — PHILOSOPHICAL-leaning GROUNDWORK workflow, $0 (no probe).** Branch
+even with `main` at start (s96/#148 merged; no PR to land). `decisions/open/` was **EMPTY** — no ratification owed.
 
-Two-wave workflow firing the trigger (d) of [`essay/construct-validity-without-a-criterion`](wiki/findings/essays/construct-validity-without-a-criterion.md)
-(the s95 essay that named the project's gate discipline as *construct validity* and diagnosed the no-human-subjects
-rule as amputating the criterion-validation leg). **Wave 1: two parallel OA source ingests**, both verbatim-verified
-(orchestrator pre-extracted the text and grep-checked every quote, dehyphenating soft line-breaks) —
-[`source/messick-1995-validity-of-psychological-assessment`](wiki/base/sources/messick-1995-validity-of-psychological-assessment.md)
-(the unified-validity statement; the **primary** source of *construct underrepresentation* / *construct-irrelevant
-variance*) and [`source/freiesleben-2026-construct-validity-llm-benchmarks`](wiki/base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md)
-(an arXiv preprint arguing the **nomological-net account is the best construct-validity frame for LLM capability
-claims** — an independent peer reaching the project's framing for the project's own deflationary reason). **Wave 2:
-revised the essay** — the *design-out → construct-irrelevant-variance* and *presence-is-not-balance →
-construct-underrepresentation* mappings are now **stated and sourced** in Messick's verbatim vocabulary; a new section
-"Does the reconstruction match the post-1955 consensus?" answers **largely yes**, names one honest **gap** (the
-consequential/value aspect Messick adds, untheorized here), and surfaces one **sharpening** — a *second amputation*:
-the project is barred from Borsboom's causal/realist validation leg too (it declines to assert the construct lives in
-the model), so the nomological net is the only one of the three classical routes its constraints leave available.
+Two-wave workflow feeding both tracks via parallel subagents + an adversarial coherence pass (**NO BLOCKERS**). The
+empirical probes stayed blocked (the three "proposed" conjectures each need a human anchor that was not in-repo), so
+the session did the highest-leverage empirical move available — **unblocking a line by cataloguing its missing
+anchor** — alongside a philosophical ingest + essay revision.
 
-Adversarial coherence pass (fresh read-only agent): **NO BLOCKERS**, no SHOULD-FIX, 1 NIT (the `operational`
-meaning-sense tag is not in the controlled vocab — a pre-existing convention; the sibling Cronbach page uses it too,
-kept for consistency); all 44 quotes char-verified; secondary-vs-primary (Borsboom only via Freiesleben) and
-no-overreach disciplines hold. Index + wanted.md updated. senselint 0 errors; linkify clean. Website (journal + home
-+ 2 glossary terms: "nomological network", "construct underrepresentation & construct-irrelevant variance") updated,
-JST stamp June 24, 2026, 10:04 JST.
+- **Wave 1 (two parallel ingests):**
+  (a) Scouted + catalogued **VWSD (SemEval-2023 Task 1)** as a typed resource
+  [`resource/vwsd-semeval-2023`](wiki/base/resources/vwsd-semeval-2023.md) — the **image-native** sense-selection
+  anchor [`conjecture/distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md)
+  named but no session had scouted. Honest bounds recorded: human gold = **test/trial only** (training is silver/auto);
+  **CC-BY-NC 4.0** (task-website only; scope unspecified; **image-redistribution UNCONFIRMED** — third-party image
+  sources); **binary gold = selection-accuracy, NOT the conjecture's graded DURel-style Δ**; not fetched/checksummed.
+  (b) Ingested the **primary Borsboom 2004 "The Concept of Validity"**
+  [`source/borsboom-2004-concept-of-validity`](wiki/base/sources/borsboom-2004-concept-of-validity.md) from the
+  author's open mirror (sha256-pinned; 13 quotes grep-verified, journal-page locators) — the realist/causal critique
+  the construct-validity essay's "second amputation" leg had only via Freiesleben's secondary rendering; **Freiesleben's
+  rendering confirmed faithful**.
+- **Wave 2:** revised [`essay/construct-validity-without-a-criterion`](wiki/findings/essays/construct-validity-without-a-criterion.md)
+  to discharge **trigger (e)'s Borsboom leg** — a secondary→primary citation upgrade only (no correction needed); the
+  trigger is now **PARTIALLY FIRED** (the Campbell & Fiske 1959 MTMM leg is still outstanding).
+
+Adversarial coherence pass (fresh read-only agent; re-verified all 22 Borsboom quotes + the VWSD quotes against the
+saved source texts): **NO BLOCKERS**; **2 SHOULD-FIX applied** — (1) Borsboom YAML link `refines`→`supports` toward
+Freiesleben (a 2004 primary corroborates the 2026 secondary, it does not sharpen it); (2) de-linked an external-repo
+README mention that linkify had wrongly pointed at the in-repo `README.md`. **1 NIT carried** (the `operational`
+meaning-sense tag is not in the controlled vocab — pre-existing, on all four construct-validity source pages, kept for
+consistency, as s96 also ruled). Index + wanted.md updated. senselint 0 errors; linkify clean. Website (journal + home
++ latest card) updated, JST stamp **June 24, 2026, 11:10 JST**.
 
 ## ⚠ Do-not-re-grind note (still in force)
 
@@ -49,56 +56,68 @@ lexical-bridging (answered s77).
 **RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — **no ratification owed.** Apply any Tom
 override first as always.
 
-**Track lean — recent: 92 source/resource · 93 governance+philosophical · 94 EMPIRICAL (build NO-GO) · 95 PHILOSOPHICAL
-(2 ingests + essay) · 96 PHILOSOPHICAL (2 ingests + essay revision).** Two philosophical workflows in a row, and the
-last *spend-bearing* probes were s87/s88 (2026-06-23). **The next session should lean EMPIRICAL** — a fresh
-spend-bearing unit to re-balance, *if a clean one exists* — otherwise continue feeding the philosophical track. In
-priority order:
+**Track lean — recent: 93 gov+phil · 94 EMPIRICAL (build NO-GO, $0) · 95 PHIL · 96 PHIL · 97 PHIL-leaning groundwork
+($0).** The last *spend-bearing* probe was s87/s88 (2026-06-23) — now **three+ sessions without a model query.** **The
+next session should lean EMPIRICAL and actually try to run a probe, if a clean one exists.** This session changed the
+landscape for one line — VWSD is now an in-repo image-native anchor for the grounding-headroom conjecture — but with a
+design gate (item 1). In priority order:
 
-1. **EMPIRICAL (spend-bearing) — pick a FRESH runnable conjecture/open-question whose human anchor is in-repo.** Do
-   **NOT** reach for forced-both (closed, above), function-word, or lexical-bridging (both DONE). Survey
-   [`wiki/index.md`](wiki/index.md) open-questions/conjectures for one with an in-repo anchor and clean
-   operationalization; pass a fresh pre-run critic; budget-estimate before any probe. Candidate "proposed" conjectures
-   to assess (each needs a careful design + freeze + fresh-critic GO before any spend): `constructional-monotonicity-asymmetry`,
-   `distributional-saturation-grounding-headroom`, `multimodal-lexical-grounding-divergence` (the last has a scouted
-   anchor class on `wanted.md` but no fetched data). The clean-design bar is high — only run if a pre-run critic GOs.
-2. **PHILOSOPHICAL (low-risk, track-feeding) — develop/revise an essay, or ingest a reachable OA source.** The
-   construct-validity essay's **trigger (e)** now queues a *primary* **Campbell & Fiske 1959** (convergent/discriminant,
-   MTMM) or **Borsboom 2004** ("The concept of validity"; the realist critique) ingest — both currently enter the essay
-   only via secondary channels (Messick's citation / Freiesleben's characterization). Borsboom 2004 PDF was NOT cleanly
-   OA-fetchable this session (ResearchGate 403, Scribd not directly downloadable) — scout an author/repository mirror
-   before committing; Campbell & Fiske 1959 likely paywalled, scout OA. **Trigger (f)** (the consequential/value aspect)
-   is dormant until a finding turns on test *consequences*. Other standing candidates: Cruse/Murphy/Lyons
-   lexical-semantics monographs; Cappelen & Dever 2021 *Making AI Intelligible*.
-3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
+1. **EMPIRICAL (spend-bearing) — the grounding-headroom line, now with an in-repo image-native anchor (VWSD), gated on
+   a DV decision.** [`resource/vwsd-semeval-2023`](wiki/base/resources/vwsd-semeval-2023.md) instantiates the
+   conjecture's **text-under-determined** regime (the image is *required* to pick the sense) — the hard part the prior
+   saturated image probe lacked. **The gate (surface as a `decisions/open/` entry before any spend):** VWSD's human
+   gold is **binary correct-image selection**, NOT the **graded DURel-style relatedness Δ**
+   [`conjecture/distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md)
+   prediction 1 is written around. So a VWSD probe tests a **re-shaped** operationalization (image-conditioned
+   *selection-accuracy* vs a text-only baseline in the under-determined regime), not prediction-1-as-written — choosing
+   and freezing that DV is an operationalization gate (charter §8) to surface + ratify cross-session **before** spend.
+   Then: fetch the 572 MB resized test + gold queries, checksum, **keep images out of git** (redistribution
+   unconfirmed), prereg the DV, pass a fresh pre-run critic. **Cheapest first step (a $0 single-session unit):**
+   *open the DV decision page* with options + provisional default — ratifiable the session after, then run.
+2. **EMPIRICAL fallback (no human anchor needed) — an `internal-contrast-only` probe.** The composition /
+   capability-split line (claude-only order-sensitive composition, confirmed across three instruments) reached a
+   natural pause; no specific next design is queued, but a fresh witness-seeking or generality design there needs no
+   human anchor and could re-balance the track **if** a clean one is framed + passes a pre-run critic. Do **NOT** reach
+   for forced-both (CLOSED, above), function-word, or lexical-bridging (both DONE).
+3. **PHILOSOPHICAL (low-risk, track-feeding).** The construct-validity essay's **trigger (e)** is now only partly live:
+   the **Campbell & Fiske 1959** (convergent/discriminant; MTMM) *primary* remains uncatalogued (Borsboom supplies only
+   the critic's one-line MTMM verdict). Scout OA (likely paywalled — try archive.org / .edu mirrors). Other standing
+   candidates: Cruse / Murphy / Lyons lexical-semantics monographs; Cappelen & Dever 2021 *Making AI Intelligible*.
+   **Trigger (f)** (consequential/value aspect) stays dormant until a finding turns on test *consequences*.
+4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
 - **NONE.** `wiki/decisions/open/` is empty. (38 ratified to date; full changelog
   [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).)
+- **Standing NIT (not a decision):** the `operational` meaning-sense tag (on the four construct-validity source pages)
+  is not in [`wiki/meaning-senses.md`](wiki/meaning-senses.md)'s controlled vocabulary; senselint does not enforce the
+  vocab on `base/` pages, so it is tolerated. Either add it to the vocab (a tiny `decisions/open/` entry) or migrate the
+  four pages — low priority, flagged by both the s96 and s97 coherence passes.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 96 spent **$0** (no probe — a reading/writing session). UTC-day 2026-06-24 total (s96) = **$0 of $5**.
-- Plain-language: last session named the project's method as "construct validity" using one 1955 paper; this session
-  read two later papers to check that naming against the field's modern view. A 1995 paper (Messick) gave the
-  established names for two guard-rails the project had invented for itself; a 2026 paper about AI independently
-  reached the project's own conclusion (and rejected the main rival for the project's own reason). The check also
-  sharpened the diagnosis: the "no people" rule bars the project from *two* of the three classic ways to validate a
-  test, not one. One honest gap was recorded (the 1995 paper folds in the social consequences of testing, which the
-  project hasn't considered). No models were queried.
+- Session 97 spent **$0** (no probe — a groundwork session). UTC-day 2026-06-24 total (s96 + s97) = **$0 of $5**.
+- Plain-language: this session laid in materials for two stalled lines rather than forcing a test it couldn't run
+  cleanly. It catalogued a public picture-based word-sense dataset (a candidate for a future "does a picture help a
+  model read an ambiguous word?" experiment, with its limits written down — only partly human-checked, images maybe
+  not re-shareable, right/wrong answers rather than a graded score) and fetched the original 2004 paper behind a rival
+  theory of test validity the last essay had cited only second-hand (the summary held up; the essay now quotes the
+  original). An independent check re-verified every quotation. No models were queried.
 
 ## Reminder for the next cold-start
 
-**You are session 97.** The previous slot was **`s96`** (construct-validity essay revision + 2 OA ingests, $0).
+**You are session 98.** The previous slot was **`s97`** (VWSD scout + Borsboom 2004 primary ingest + construct-validity
+essay trigger-(e) revision, $0).
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60)
 then [`wiki/index.md`](wiki/index.md).
 **Budget: standard $5/day (UTC)** — a new UTC day resets the full $5.
 **RECONCILE FIRST:** `wiki/decisions/open/` is **EMPTY** — no ratification owed.
-**Track lean → two philosophical sessions in a row (s95, s96); the next move SHOULD lean EMPIRICAL — a fresh
-spend-bearing unit (in-repo anchor, fresh pre-run critic) — else another OA ingest (primary Campbell & Fiske or
-Borsboom for the construct-validity essay's trigger (e)). The forced-both line is CLOSED pending a sentence-grain
-balance resource (wanted.md P3) — do NOT re-attempt it.**
+**Track lean → THREE non-probe sessions in a row (s95–s97); the next move SHOULD lean EMPIRICAL and try to run a probe.
+Lead candidate: the grounding-headroom line, now anchorable to the newly-catalogued VWSD — but FIRST surface + ratify
+the binary-selection-accuracy-vs-graded-Δ DV decision, then fetch/checksum/prereg/critic-GO before spend (cheapest
+$0 first step: open that DV decision page). Fallback: an internal-contrast-only composition probe (no anchor needed).
+The forced-both line stays CLOSED pending a sentence-grain balance resource (wanted.md P3) — do NOT re-attempt it.**
 End squash-merged to `main`, website updated **with the JST clock-time stamp**.

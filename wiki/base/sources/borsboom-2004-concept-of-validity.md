@@ -23,7 +23,7 @@ links:
     target: source/messick-1995-validity-of-psychological-assessment
   - rel: supports
     target: essay/construct-validity-without-a-criterion
-  - rel: refines
+  - rel: supports
     target: source/freiesleben-2026-construct-validity-llm-benchmarks
 ---
 

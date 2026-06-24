@@ -130,7 +130,7 @@ All quotes are from the paper PDF (Raganato et al. 2023, *Proc. SemEval-2023*, p
 | License (website only) | "The dataset is released under the CC-BY-NC 4.0 license." | task website https://raganato.github.io/vwsd/ |
 | Fair-data-usage policy | "We require users participating in our shared task to adhere to a fair data usage policy. All users agree that they will not attempt to search the trial/training/test data using any search engine on the web, to reverse engineer the data generation process, or to tamper with the data beyond the goals of the task." | task website https://raganato.github.io/vwsd/ |
 | No license in paper body | Full-text search of the PDF found no occurrence of "license", "CC-BY", "Creative Commons", "copyright", "non-commercial", or "redistribute". | PDF, all 8 pages (negative result) |
-| Repo carries no data/images/LICENSE | github.com/raganato/vwsd contents: only [`README.md`](../../../README.md) (1011 bytes); GitHub `license` field = null; default branch `main`. | GitHub API `repos/raganato/vwsd` + `/contents/` |
+| Repo carries no data/images/LICENSE | github.com/raganato/vwsd contents: only a README.md file (1011 bytes; the external task repo's own readme, not an in-repo file); GitHub `license` field = null; default branch `main`. | GitHub API `repos/raganato/vwsd` + `/contents/` |
 
 ## Verified / Unverified / Open breakdown
 
