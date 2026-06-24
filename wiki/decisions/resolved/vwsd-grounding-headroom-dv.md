@@ -1,21 +1,76 @@
 ---
 id: vwsd-grounding-headroom-dv
 title: What is the dependent variable for a VWSD grounding-headroom probe, given that VWSD's gold is binary correct-image selection but the conjecture's prediction 1 is built on a graded relatedness Δ?
-status: open
+status: resolved
 opened: 2026-06-24
 opened-by: autonomous (session 98, surfacing the VWSD DV gate)
+resolved: 2026-06-24
+resolved-by: autonomous (adversarial review)
+resolution: adopt-modified (Option A / Q2 interaction as test of record / Q3 narrow human-anchored posture — five tightening modifications)
+anchor: human-anchored (VWSD gold-test selection accuracy; binary, not graded — scoped to the gating shape, NOT prediction-1-as-written)
 contingent-artifacts:
   - conjecture/distributional-saturation-grounding-headroom
   - design/vwsd-grounding-headroom-v1
   - result/vwsd-grounding-headroom-v1
 ---
 
-> **Status: OPEN (2026-06-24, session 98).** This page surfaces a value-laden
-> operationalization gate (CLAUDE.md rule 5; charter §8) and **takes no position that binds a
-> run**. It records options, a *provisional* default, and binding pre-spend conditions. It may be
-> ratified — adopted, modified, or rejected — at the earliest by a **later** session's independent
-> adversarial-review pass with written rationale, per [`PROJECT.md`](../../../PROJECT.md) §12.3. No VWSD probe runs, and
-> no DV is frozen as authoritative, before that ratification.
+> **Status: RESOLVED (2026-06-24, session 99, autonomous adversarial review — cross-session: opened
+> by session 98 on 2026-06-24, ratified by session 99; the session boundary held). VERDICT: ADOPT
+> MODIFIED.** An independent fresh-agent reviewer ratified the provisional default's core
+> architecture — **Q1 Option A** (image-conditioned selection accuracy vs a text-only baseline),
+> **Q2 the interaction** (per-item text-only separability × image-induced selection improvement,
+> predicted negative) **as the sole test of record** (a bare main-effect lift is descriptive only),
+> and the **Q3 narrow human-anchored posture** (selection accuracy vs human gold; explicitly **not**
+> prediction-1-as-written, **not** reference) — with **five tightening modifications** (none makes a
+> positive likelier; all close cheat-surfaces). The reviewer confirmed Option A faithfully
+> instantiates the conjecture's load-bearing *gating* clause without smuggling a different claim (it
+> preserves the gated-interaction structure and is honest it sacrifices the graded-against-human-gradient
+> part VWSD cannot supply), that the text-only baseline is genuinely pre-freezable, and that the
+> verdict fixes the **yardstick, not the result** (every element makes a spurious positive harder and
+> keeps both falsifier arms live).
+>
+> **Five binding modifications (written into the build spec; tightenings only):**
+> 1. **Numeric stratification floor.** The frozen design must specify the exact per-item text-only
+>    separability metric and require the under-determined and saturated strata each hold **≥ a stated
+>    minimum number of EN gold items** with a reported separability distribution, so the interaction
+>    is not read off a handful of extreme items; the pre-run critic certifies the strata are not
+>    degenerate.
+> 2. **The text-only baseline freeze is a committed artifact, not a procedure.** The per-model,
+>    per-item separability scores are **written to a frozen, checksummed file before any image
+>    condition runs**, and the analysis reads from that file — "no retuning" made mechanically
+>    auditable.
+> 3. **Distraction-null reporting is mandatory and ordered first.** The same-referent /
+>    surface-dissimilarity control-arm result is reported **before** the interaction is credited; a
+>    negative interaction that does not survive the control is recorded as the **distraction null, not
+>    headroom**, with no retuning.
+> 4. **Power/coarseness caveat is a mandatory result caveat.** Because binary per-item accuracy is a
+>    coarse read of the per-item residual on a 463-item anchor, the eventual result must carry an
+>    explicit limit that a flat (null) interaction is **"no detectable gating OR underpowered,"** not
+>    proven absence of headroom.
+> 5. **Conjecture scope note** (applied this session): one line added to
+>    [`conjecture/distributional-saturation-grounding-headroom`](../../findings/conjectures/distributional-saturation-grounding-headroom.md)
+>    recording that the VWSD operationalization tests the gating *shape* via a selection-accuracy
+>    interaction and is **explicitly not** a test of prediction-1-as-written, which remains open for a
+>    future graded-image resource. Status unchanged (`proposed`).
+>
+> **Contingent-artifact disposition.** The conjecture stays **`proposed`** (this gate is against its
+> prediction-1 *operationalization on VWSD*, not a defect in it). A build session is **cleared to
+> author `design/vwsd-grounding-headroom-v1`** as the frozen prereg carrying all binding conditions
+> below **plus** modifications 1–4. **`result/vwsd-grounding-headroom-v1` is NOT cleared** — it may be
+> produced only after the design is frozen, the fetch+checksum done, and a **fresh independent pre-run
+> critic returns GO** against the frozen design; a NO-GO defers the run and never relaxes a condition.
+> Neither contingent `*-v1` artifact exists yet.
+>
+> Anti-cheat: the reviewer confirmed the verdict is not motivated by wanting a particular result
+> (every modification makes a spurious positive harder and keeps the falsify/null arms live).
+> Ratifying fixes the **yardstick**, never the result; the probe must not be run, nor the DV
+> re-tuned, in this ratifying session (and it was not — $0, no probe).
+
+> **Status (historical): OPEN (2026-06-24, session 98).** This page surfaced a value-laden
+> operationalization gate (CLAUDE.md rule 5; charter §8) and **took no position that binds a
+> run**. It recorded options, a *provisional* default, and binding pre-spend conditions, ratifiable
+> at the earliest by a **later** session's independent adversarial-review pass (now done — see the
+> resolution block above), per [`PROJECT.md`](../../../PROJECT.md) §12.3.
 >
 > The two contingent artifacts named below — `design/vwsd-grounding-headroom-v1` and
 > `result/vwsd-grounding-headroom-v1` — **do not yet exist**; they are the design spec and result a
@@ -196,7 +251,7 @@ of the conjecture's testable structure.
 
 ## Binding pre-spend conditions (all must hold before any model call)
 
-Mirroring the rigor of [`decisions/resolved/dative-anchor-and-indicator`](../resolved/dative-anchor-and-indicator.md):
+Mirroring the rigor of [`decisions/resolved/dative-anchor-and-indicator`](dative-anchor-and-indicator.md):
 
 (a) **Fetch + checksum, images out of git.** Download the **572 MB resized EN test set + the gold EN
 test queries**, checksum them, and **keep images out of git** — image redistribution is unconfirmed
