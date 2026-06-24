@@ -122,10 +122,10 @@ Both were identified as candidates in the anchor decision. The 2026-05-30 verifi
 - Fetchable: YES, confirmed HTTP 200.
 
 **CoSimLex — not recommended for this conjecture.**
-- License: CC BY 4.0 (Zenodo record 3989788, confirmed 2026-05-30). More permissive than DWUG.
-- Design mismatch: CoSimLex measures similarity between **pairs of different words** (from SimLex-999) rated in two different contexts — "pairs of words, each annotated within two short text passages" (Zenodo record description). The lexical-sense-gradience conjecture requires graded similarity between **two usages of the same target lemma** (as in Usim / DWUG). CoSimLex cannot ground the conjecture's monotonicity clause; it addresses a different task (contextual word-pair similarity, not same-word usage-pair proximity).
-- Annotation scale: appears to be 0–10 (inferred from dataset values on HuggingFace; not confirmed verbatim from primary source — scale label remains unverified).
-- English coverage: ~333–340 word pairs (confirmed from multiple secondary sources).
+- License: **NOT stated in the CoSimLex paper** (no license or download URL in the text). The CC BY 4.0 on Zenodo record 3989788 is the **distinct SemEval-2020 Task 3 artifact**, not the CoSimLex release proper — a conflation corrected 2026-06-24 once the paper was read firsthand; see [`source/armendariz-2020-cosimlex`](../sources/armendariz-2020-cosimlex.md). The license of the CoSimLex release itself is unverified.
+- Design mismatch: CoSimLex measures similarity between **pairs of different words** (from SimLex-999) rated in two different contexts — confirmed from the primary (each word pair presented in two Wikipedia-sourced three-sentence contexts; [`source/armendariz-2020-cosimlex`](../sources/armendariz-2020-cosimlex.md), §4.1). The lexical-sense-gradience conjecture requires graded similarity between **two usages of the same target lemma** (as in Usim / DWUG). CoSimLex cannot ground the conjecture's monotonicity clause; it addresses a different task (contextual word-pair similarity, not same-word usage-pair proximity).
+- Annotation scale: **0 to 6** (verbatim, §4.2 of arXiv 1912.05320 — confirmed via [`source/armendariz-2020-cosimlex`](../sources/armendariz-2020-cosimlex.md); the earlier "0–10" here was an unverified HuggingFace-value inference and is **wrong**).
+- English coverage: **333 pairs (§3) / 341 entries as built (§5)** — paper-reported figures now read firsthand (the earlier "~333–340 from secondary sources" is superseded; released-data counts still to be confirmed against the files).
 - Fetchable: YES, HTTP 200.
 
 **Summary:** CoSimLex fails on design fit, not license. DWUG EN fits on design (graded usage-pair proximity for the same word), has a confirmed fetchable archive, a known scale, and adequate license for analysis — but the CC BY-ND label needs to be surfaced to Tom as a correction to the prior description ("CC BY"), and the diachronic-vs-synchronic extraction plan should be documented before running any probe.
@@ -165,7 +165,7 @@ If/when mirrored: place at `experiments/data/dwug/dwug_en.zip` (NOT in the wiki)
 | Agreement ρ .69 / α .61 (EN) | **VERIFIED** | Primary paper Table 3 (SPR/KRI) |
 | Within-time (synchronic) pair subset is extractable | **PARTIALLY VERIFIED** | EMNLP abstract mentions "diachronic and synchronic uses"; corpus spans two periods; details not inspected |
 | Data format (file structure inside dwug_en.zip) | **UNVERIFIED** | Archive not downloaded or inspected |
-| CoSimLex scale (0–10 exact labels) | **UNVERIFIED verbatim** | Only inferred from data values; primary paper not read |
+| CoSimLex scale = **0 to 6** (earlier "0–10" CORRECTED) | **VERIFIED verbatim** | §4.2 of arXiv 1912.05320, primary read 2026-06-24 via source/armendariz-2020-cosimlex |
 | Prior claim that DWUG is "CC BY" | **CORRECTED** | All DWUG EN/DE/ES/SV records carry CC BY-ND 4.0, not CC BY |
 
 ## Pointer for next visit
