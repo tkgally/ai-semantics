@@ -18,6 +18,8 @@ links:
     target: source/freiesleben-2026-construct-validity-llm-benchmarks
   - rel: depends-on
     target: source/borsboom-2004-concept-of-validity
+  - rel: depends-on
+    target: source/campbell-fiske-1959-mtmm
   - rel: refines
     target: essay/no-admissible-certifier
   - rel: refines
@@ -32,8 +34,22 @@ links:
 
 # Essay: construct validity without a criterion
 
-> **Status: revised (2026-06-24, session 97 — trigger (e)'s Borsboom leg fired). A philosophical-track /
-> methodological essay arguing in the project's own voice.** **Revision log.** *2026-06-24 (session 97):*
+> **Status: revised (2026-06-24, session 98 — trigger (e) FULLY FIRED: the Campbell & Fiske leg
+> discharged). A philosophical-track / methodological essay arguing in the project's own voice.**
+> **Revision log.** *2026-06-24 (session 98):* trigger (e)'s **last leg — Campbell & Fiske 1959 — fired**,
+> so the trigger is now **fully discharged**. The **primary** Campbell & Fiske 1959 MTMM paper was ingested
+> ([`source/campbell-fiske-1959-mtmm`](../../base/sources/campbell-fiske-1959-mtmm.md), from the UBC psychology
+> course OA mirror; 18 verbatim quotes, journal-page locators), so the convergent/discriminant-validation +
+> multitrait–multimethod vocabulary now enters the essay from Campbell & Fiske's **own text** rather than
+> only through Messick's citation and Borsboom's one-line critic's verdict. The contingency in this leg
+> ("if the primary diverges from the secondary characterizations, the section is revised") was checked and
+> **did not fire**: Borsboom's secondary "a favorable matrix configuration is not constitutive of validity"
+> (p. 1068) is consistent with Campbell & Fiske's own "Discriminative validation is not so easily achieved"
+> and "one can never establish that a trait, as measured, is differentiated from all other traits" (p. 103),
+> so only the secondary→primary citation upgrade was made — no correction. The MTMM **trait-method unit**
+> insight ("Each test or task … is a trait-method unit", p. 81) is now the primary-strength backing for the
+> project's "design-out-not-model-out" worry that a probe's behavior reflects the **method** (prompt format,
+> scoring rule, answer channel) as much as the targeted construct. *2026-06-24 (session 97):*
 > trigger (e)'s **Borsboom leg fired** — the **primary** Borsboom 2004 was ingested
 > ([`source/borsboom-2004-concept-of-validity`](../../base/sources/borsboom-2004-concept-of-validity.md)),
 > so the "second amputation" argument (the project is barred from the causal/realist leg too) is now
@@ -43,6 +59,7 @@ links:
 > verbatim on p. 1064), so no divergence revision was needed — only the secondary→primary citation upgrade.
 > **Campbell & Fiske 1959** (convergent/discriminant; MTMM) remains uncatalogued — Borsboom supplies only
 > the critic's one-line verdict on the matrix — so trigger (e) stays **partly live** for that leg.
+> *(Superseded by the session-98 entry above: the Campbell & Fiske leg was discharged session 98.)*
 > *2026-06-24 (session 96):* trigger (d)
 > fired — two post-1955 validity sources were ingested:
 > [`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md)
@@ -67,9 +84,11 @@ links:
 > than merely re-describing them: it says *why* so many lines land at `internal-contrast-only`, *why*
 > "no admissible certifier" is a structural boundary and not bad luck, and *why* the project's
 > negatives are read as ambiguous between instrument and theory. It contains **no new empirical
-> claim** and makes **no human comparison**; its three sources
+> claim** and makes **no human comparison**; its five sources
 > ([`source/cronbach-meehl-1955-construct-validity`](../../base/sources/cronbach-meehl-1955-construct-validity.md),
 > [`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md),
+> [`source/borsboom-2004-concept-of-validity`](../../base/sources/borsboom-2004-concept-of-validity.md),
+> [`source/campbell-fiske-1959-mtmm`](../../base/sources/campbell-fiske-1959-mtmm.md),
 > and [`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md))
 > are *methodology* sources, explicitly **not** human-comparison anchors, and license no claim about
 > any model. Read the revision triggers before citing.
@@ -420,9 +439,9 @@ rival in its own words instead of waving at it.
 - **Not a new empirical claim.** It is a reframing of the project's *methodology*. Every empirical
   sentence about a model in the essays it touches is left at its own page's stated strength; this essay
   asserts nothing new about any model. Its sources are measurement-methodology texts (Cronbach & Meehl
-  1955, Messick 1995, Borsboom 2004) and one philosophy-of-measurement preprint about LLM benchmarks
-  (Freiesleben 2026).
-- **Not a human comparison, and not a new anchor.** All four sources are *methodology* sources; they
+  1955, Campbell & Fiske 1959, Messick 1995, Borsboom 2004) and one philosophy-of-measurement preprint
+  about LLM benchmarks (Freiesleben 2026).
+- **Not a human comparison, and not a new anchor.** All five sources are *methodology* sources; they
   supply theories of validity, not human yardsticks, and none can discharge any empirical claim's
   human-anchor obligation. The essay imports no human number.
 - **Not a claim the project consciously applied construct-validity theory.** The discipline was
@@ -434,10 +453,10 @@ rival in its own words instead of waving at it.
   existing machinery (nomological-net elaboration, resource-anchoring) is the right and sufficient
   response to working without the criterion leg.
 - **Not a claim that construct validity is uncontested.** The 1955 framework was later revised and
-  criticized; as of this revision two rival strands are in-repo as **primaries** — Messick's unified
-  validity and Borsboom's realist/causal critique — with Freiesleben 2026 corroborating the framing
-  choice in the LLM domain, while Campbell & Fiske's convergent/discriminant (MTMM) framework remains
-  uncatalogued (trigger (e), Campbell & Fiske leg). The essay cites Cronbach & Meehl as the *origin and
+  criticized; as of this revision the relevant strands are in-repo as **primaries** — Cronbach & Meehl's
+  founding statement, Messick's unified validity, Borsboom's realist/causal critique, and Campbell &
+  Fiske's convergent/discriminant (MTMM) framework — with Freiesleben 2026 corroborating the framing
+  choice in the LLM domain. The essay cites Cronbach & Meehl as the *origin and
   canonical statement*, treats Messick as the consensus refinement, and explicitly records (in "Does the
   reconstruction match the post-1955 consensus?") that the nomological net is one contested account among
   others — chosen here because the project's constraints bar the alternatives, not because the rivals are
@@ -473,8 +492,24 @@ rival in its own words instead of waving at it.
   sharpening (the *second* amputation — the project is barred from Borsboom's causal/realist leg too, by
   its deflationary commitment, not only from the criterion leg). The trigger is discharged; the residual
   follow-ups move to (e).
-- **(e) A *primary* Campbell & Fiske 1959 or Borsboom 2004 is ingested. — PARTIALLY FIRED 2026-06-24
-  (session 97): Borsboom leg discharged; Campbell & Fiske leg still outstanding.** The **Borsboom 2004**
+- **(e) A *primary* Campbell & Fiske 1959 or Borsboom 2004 is ingested. — FULLY FIRED 2026-06-24
+  (Borsboom leg session 97; Campbell & Fiske leg session 98).** Both primaries are now in-repo. *Campbell
+  & Fiske leg (session 98):* the **primary** Campbell & Fiske 1959 MTMM paper was ingested
+  ([`source/campbell-fiske-1959-mtmm`](../../base/sources/campbell-fiske-1959-mtmm.md)), so the
+  convergent/discriminant + multitrait–multimethod vocabulary now enters from Campbell & Fiske's **own
+  text** — convergent validation as "a confirmation by independent measurement procedures" and discriminant
+  validation "required" alongside it (p. 81), the measure as a "trait-method unit" (p. 81), method variance
+  as itself a source of invalidity (p. 84), and the asymmetry that "convergence between two is a satisfactory
+  minimal requirement" while "Discriminative validation is not so easily achieved" (p. 103) — rather than
+  through Messick's citation or Borsboom's one-line critic's verdict. The contingency ("if the primary
+  diverges from the secondary characterization, revise") was checked and **did not fire**: Borsboom's
+  "a favorable matrix configuration is not constitutive of validity" (p. 1068) is consistent with Campbell
+  & Fiske's own discriminant-validation-is-hard verdict, so only the secondary→primary citation upgrade was
+  made, no correction. The trait-method-unit insight maps directly to the project's "design-out-not-model-out"
+  worry (method/format variance contaminates the construct read-off) and the convergence-over-single-probe
+  preference to the [`convergence ladder`](cross-level-convergence-ladder.md)'s R1→R2 rungs (agreement across
+  *different* instruments is what the project credits, exactly Campbell & Fiske's cross-method convergence).
+  *Borsboom leg (session 97):* the **Borsboom 2004**
   primary was ingested this session
   ([`source/borsboom-2004-concept-of-validity`](../../base/sources/borsboom-2004-concept-of-validity.md)),
   so the "second amputation" argument (the causal/realist leg is also barred) is now stated from Borsboom's
@@ -484,13 +519,10 @@ rival in its own words instead of waving at it.
   Borsboom diverges from Freiesleben's rendering, this section is revised") was checked and **did not fire**:
   Freiesleben's "two conditions" match Borsboom's own iff-thesis and the verbatim objection appears on
   p. 1064, so the rendering is faithful and only the secondary→primary citation upgrade was made — the
-  "second amputation" argument stands as written. **The Campbell & Fiske 1959 leg remains outstanding.**
-  The convergent/discriminant (MTMM) vocabulary still enters only through *secondary* channels — Messick
-  cites Campbell & Fiske for the "external aspect," and Borsboom supplies only the *critic's* one-line
-  verdict on the matrix ("a favorable matrix configuration is not constitutive of validity," p. 1068), not
-  Campbell & Fiske's own framework. Ingesting the *primary* Campbell & Fiske would let convergent/discriminant
-  analysis be mapped to the convergence ladder directly. The trigger therefore stays **partly live** for the
-  Campbell & Fiske leg only.
+  "second amputation" argument stands as written. *(As of session 97 the Campbell & Fiske 1959 leg was
+  still outstanding — the MTMM vocabulary then entered only through secondary channels, Messick's citation
+  of it for the "external aspect" and Borsboom's one-line critic's verdict; session 98 ingested the primary
+  and discharged it, per the session-98 paragraph above. The trigger is now fully discharged.)*
 - **(f) The consequential/value aspect is engaged.** Messick folds the social consequences and value
   implications of test use into construct validity ("validity judgments are value judgments"); the
   project's methodology has not theorized this. If a finding or essay ever turns on the *consequences*
@@ -573,20 +605,24 @@ rival in its own words instead of waving at it.
   [`essay/no-admissible-certifier`](no-admissible-certifier.md) and
   [`essay/presence-is-not-balance`](presence-is-not-balance.md) carry `human-comparison` while making
   none.)
-- **Provenance note (updated 2026-06-24, session 97).** The essay now rests on **four** methodology
+- **Provenance note (updated 2026-06-24, session 98).** The essay now rests on **five** methodology
   sources — Cronbach & Meehl 1955 (founding statement), Messick 1995 (unified-validity consensus
-  refinement), Borsboom 2004 (the realist/causal critique, the standing objection to the net), and
-  Freiesleben 2026 (the nomological account applied to LLM benchmarks) — plus five in-repo essays/the
-  convergence-ladder. The original weakest point (engaging only the founding statement) was **largely
-  discharged** by trigger (d) (Messick supplies the post-1955 consensus and the *construct-irrelevant
-  variance / construct underrepresentation* vocabulary is **sourced and quoted** from Messick), and the
-  "second amputation" leg is now **discharged to primary strength** by trigger (e)'s Borsboom leg: the
-  causal/realist account no longer rests on Freiesleben's secondary reading but on Borsboom 2004 directly,
-  and Freiesleben's rendering of Borsboom was checked against the primary and confirmed faithful, so
-  Freiesleben is retained only as *corroboration* of the framing choice, not as the source of the Borsboom
-  claims. Two weaknesses remain, named honestly: (i) the convergent/discriminant **Campbell & Fiske 1959**
-  (MTMM) framework is still uncatalogued — it enters only through *secondary* channels (Messick's citation,
-  and Borsboom's one-line critic's verdict on the matrix) — so a *primary* Campbell & Fiske ingest is still
-  owed (trigger (e), Campbell & Fiske leg); and (ii) Freiesleben is an arXiv **preprint** (peer-review
-  unconfirmed), so the LLM-domain corroboration is real but provisional. The consequential/value aspect of
-  Messick's unified validity is acknowledged as a **gap** in the reconstruction, not a match (trigger (f)).
+  refinement), Borsboom 2004 (the realist/causal critique, the standing objection to the net),
+  Campbell & Fiske 1959 (the convergent/discriminant + multitrait–multimethod framework, ingested at
+  primary strength session 98), and Freiesleben 2026 (the nomological account applied to LLM benchmarks)
+  — plus five in-repo essays/the convergence-ladder. The original weakest point (engaging only the founding
+  statement) was **largely discharged** by trigger (d) (Messick supplies the post-1955 consensus and the
+  *construct-irrelevant variance / construct underrepresentation* vocabulary is **sourced and quoted** from
+  Messick); the "second amputation" leg is **discharged to primary strength** by trigger (e)'s Borsboom leg
+  (the causal/realist account no longer rests on Freiesleben's secondary reading but on Borsboom 2004
+  directly, Freiesleben's rendering confirmed faithful and retained only as *corroboration*); and the
+  convergent/discriminant + MTMM vocabulary is **discharged to primary strength** by trigger (e)'s Campbell
+  & Fiske leg (session 98) — it now enters from Campbell & Fiske's own text, not Messick's citation or
+  Borsboom's one-line critic's verdict, with the secondary characterizations confirmed consistent (no
+  correction). **Trigger (e) is therefore fully discharged.** One provenance weakness remains, named
+  honestly: Freiesleben is an arXiv **preprint** (peer-review unconfirmed), so the LLM-domain corroboration
+  is real but provisional. (Separately, the four mid-century/realist methodology primaries — Cronbach &
+  Meehl, Campbell & Fiske, Messick, Borsboom — are reproduced from open-access mirrors of works still under
+  APA/journal copyright, not public-domain texts; quotes are short, attributed, and verbatim-verified.) The
+  consequential/value aspect of Messick's unified validity is acknowledged as a **gap** in the reconstruction,
+  not a match (trigger (f)).
