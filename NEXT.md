@@ -2,31 +2,37 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-24** (sessions s96–s101): **$4.260 spent** (all by s100 — the VWSD
-probe; s101 spent $0). **$0.74 left for any later 2026-06-24 session.** Full ledger in [`config/budget.md`](config/budget.md).
-**Check the clock (`date -u`)** — a later session is likely a new UTC day (full $5 resets). Check for any newer Tom
-override before spending.
+**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-24** (sessions s96–s102): **$4.260 spent** (all by s100 — the VWSD
+probe; s101 and s102 each spent $0). **$0.74 left for any remaining 2026-06-24 session.** Full ledger in
+[`config/budget.md`](config/budget.md). **Check the clock (`date -u`)** — a later session is almost certainly a new UTC
+day (full $5 resets). Check for any newer Tom override before spending.
 
 ## State
 
-**Session 101 (JST 2026-06-24 / UTC 2026-06-24) — PHILOSOPHICAL track-feed + EMPIRICAL scout. $0, no probe.**
-Branch even with `main` at start (s100/#152 merged; no PR to land). `decisions/open/` EMPTY — no ratification owed.
-1-wave workflow, 2 parallel subagents + fresh read-only adversarial coherence pass.
+**Session 102 (JST 2026-06-25 / UTC 2026-06-24) — PHILOSOPHICAL OA-ingest wave. $0, no probe.**
+Branch even with `main` at start (s101/#153 merged; no PR to land). `decisions/open/` EMPTY — no ratification owed.
+1-wave workflow, 2 parallel ingest subagents + a fresh read-only adversarial coherence pass.
 
-- **Absorbed the s100 VWSD result into the grounding theory + conjecture.** Both
-  [`theory/lexicon-grammar-continuum`](wiki/findings/theory/lexicon-grammar-continuum.md) (third-axis section +
-  status-hook) and [`conjecture/distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md)
-  (top status + "The proposal" lead) had framed the grounding axis as **"two negatives"**; now framed as **two bounded
-  clear-homonym negatives PLUS one inconclusive image-native VWSD run** ([`result/vwsd-grounding-headroom-v1`](wiki/findings/results/vwsd-grounding-headroom-v1.md))
-  that **neither confirms nor falsifies** the gating prediction — held the "not a clean third null" line throughout.
-  Coherence pass re-verified every s100 number vs the result page (all match), all links resolve; 1 BLOCKER + 1
-  SHOULD-FIX found and applied.
-- **Scouted the still-wanted graded-sense-image resource → NONE FOUND** (open channels, 2026-06-24). The field
-  bifurcates: graded sense-relatedness sets (DURel/CoSimLex/Usim/GWSC/SCWS) are **text-only**; image-paired word-sense
-  sets (VWSD, PolCLIP) use **binary/selection** gold. Strongest near-miss = **AdMIRe (SemEval-2025 Task 1, arXiv
-  2503.15358; CC BY 4.0 reported, NOT primary-verified)** — graded ordinal *image-ranking* of literal-vs-idiomatic
-  compound interpretation per usage, **wrong axis**. Recorded in [`wanted.md`](wiki/base/wanted.md) (Multimodal/grounded
-  section): the want **STAYS OPEN**.
+- **Ingested the two founding statements of the `distributional` tradition** (the concept page had cited both only as
+  "not in-repo"):
+  - [`source/harris-1954-distributional-structure`](wiki/base/sources/harris-1954-distributional-structure.md) —
+    **RECEIVED (primary).** Full text read from a freely-accessible Caltech-hosted scan of *Word* 10(2-3); "difference of
+    meaning correlates with difference of distribution" (p. 156), the oculist/eye-doctor example (pp. 156–157), and
+    Harris's own Bar-Hillel-footnote hedge, all verbatim with original pagination.
+  - [`source/firth-1957-synopsis`](wiki/base/sources/firth-1957-synopsis.md) — **SECONDARY-ONLY (primary unreachable).**
+    No OA full text exists; thin page, every Firth quote flagged via Brunila & LaViolette 2022 / Quote Investigator.
+    Carries the historiographic point that Firth's (situated) and Harris's (form-internal) versions **diverge**.
+    **NOTE: uses a deliberate non-standard `status: secondary-only`** (senselint does not validate source `status`;
+    logged 2026-06-24, not silent drift).
+- **Catalogued [`source/armendariz-2020-cosimlex`](wiki/base/sources/armendariz-2020-cosimlex.md)** — the Option-B
+  graded-anchor *alternative* to DWUG, as a **`source` page, NOT yet an anchor** (license + fetchability + released
+  counts still need a firsthand check). Reading the primary **corrected two now-refuted facts** on
+  [`resource/dwug-usage-graphs`](wiki/base/resources/dwug-usage-graphs.md): CoSimLex scale is **0-to-6** (not the
+  unverified "0–10"), and Zenodo record 3989788 is the **distinct SemEval-Task-3 artifact** (the CoSimLex paper itself
+  states no license/URL). Honest limit held throughout: CoSimLex rates **different-word pairs**, not DWUG's same-lemma
+  usage pairs, so it does **not** fit the lexical-sense-gradience monotonicity clause out of the box.
+- Coherence pass found 3 new pages **clean** (quote integrity, anchor discipline, sense-tags, links); its 2 SHOULD-FIXes
+  were the DWUG corrections above, applied. senselint 0 errors; linkify clean.
 
 ## ⚠ Do-not-re-grind note (still in force)
 
@@ -42,53 +48,56 @@ Branch even with `main` at start (s100/#152 merged; no PR to land). `decisions/o
 
 **RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — **no ratification owed.** Apply any Tom override.
 
-**Track lean — recent: 97 PHIL-gw · 98 PHIL-gw · 99 EMPIRICAL-reconcile · 100 EMPIRICAL-RUN ($4.26) · 101 PHIL+scout ($0).**
-Balanced; next can lean either. In rough priority order:
+**Track lean — recent: 99 EMPIRICAL-reconcile · 100 EMPIRICAL-RUN ($4.26) · 101 PHIL+scout ($0) · 102 PHIL-ingest ($0).**
+**Last two were philosophical → next should lean EMPIRICAL if a fresh UTC day gives budget.** In rough priority order:
 
-1. **PHILOSOPHICAL — a primary open-access ingest (recommended; $0).** Several charter-core lexical/constructional
-   primaries are still `wanted` and plausibly OA-reachable: **CoSimLex (SemEval-2020 Task 3, arXiv 1912.05320)** — a
-   graded in-context word-similarity *paper* (text-only; the alternative graded anchor to DWUG, [`wanted.md`](wiki/base/wanted.md) P2);
-   **Goldberg 1995/2006** (constructional, P1 — books, OA-uncertain, try author self-archives / chapter previews);
-   **Fillmore 1982/1985 frame semantics** (P2, ties the lexical↔grammatical wedges at the level of semantic theory).
-   Pick one reachable item, ingest with verbatim quotes + locators (no fabrication; mark `unreachable` honestly if so).
-2. **EMPIRICAL — a VWSD v2** only behind a fresh `decisions/open/` **DV-refinement** (non-caption text baseline so
-   "text separability" stops conflating linguistic under-determination with caption richness) + larger **stratified** N
-   from the 463 EN gold + **raised claude image-arm `max_tokens`** (s100 lost 6 claude image answers to truncation@16).
+1. **PHILOSOPHICAL, tractable + $0 (the natural follow-on to this session):** **revise
+   [`concept/distributional-meaning`](wiki/base/concepts/distributional-meaning.md)** to cite the now-in-repo Harris and
+   Firth source pages instead of "Firth (1957; not in-repo)" / "Harris (1954; not in-repo)" — and weave in the
+   **Firth↔Harris divergence** point (Firth's "company" is situational, Harris's form-internal; "the distributional
+   hypothesis" is two ideas). This was deliberately deferred from s102 (it *depends on* this wave's output, so it was a
+   later-wave unit). Small, sound, closes the loop. Possibly spawn a short essay on the divergence if it earns one.
+2. **EMPIRICAL — a VWSD v2** only behind a fresh `decisions/open/` **DV-refinement** decision (non-caption text baseline
+   so "text separability" stops conflating linguistic under-determination with caption richness) + larger **stratified**
+   N from the 463 EN gold + **raised claude image-arm `max_tokens`** (s100 lost 6 claude image answers to truncation@16).
    Captioning the full 4090 EN images is ~$7.3 (>cap) → subsample smartly or split across days. **Do not quietly
    re-run** — the DV change is value-laden, so surface it first; ratification is a *later* session's job.
-3. **PHILOSOPHICAL — develop/revise an essay** if an ingest or the s100 result spawns a revision trigger (the grounding
-   line now carries the third, inconclusive outcome — check whether any essay leans on the old "two negatives" framing).
+3. **PHILOSOPHICAL — another primary OA ingest ($0):** still-wanted charter-core items include **Goldberg 1995/2006**
+   (constructional, P1 — books, OA-uncertain; try author self-archives / chapter previews) and **Fillmore 1982/1985
+   frame semantics** (P2, ties the lexical↔grammatical wedges at the theory level). Pick one reachable item; mark
+   `unreachable` honestly if so (as Firth was this session).
 4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
-- **NONE.** `wiki/decisions/open/` is empty. (40 ratified to date; the VWSD DV gate ratified s99, BUILT+RUN s100,
-  absorbed into theory s101. Full changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).)
+- **NONE.** `wiki/decisions/open/` is empty. (40 ratified to date. Full changelog
+  [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).)
 - **Standing NIT (not a decision):** the `operational` meaning-sense tag (on the five construct-validity source pages)
   is not in [`wiki/meaning-senses.md`](wiki/meaning-senses.md)'s controlled vocabulary; senselint does not enforce vocab
-  on `base/` pages, so it is tolerated. Low priority.
+  on `base/` pages, so it is tolerated. Low priority. (Companion: s102 introduced a one-off `status: secondary-only` on
+  the Firth source page — deliberate, logged, not enforced by senselint.)
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 101 spent **$0** (UTC-day 2026-06-24 total stays $4.260 of $5, all from the s100 picture experiment).
-- Plain-language: a writing-and-bookkeeping session. Last session's picture-and-words experiment was written into the
-  project's theory **as an honest "inconclusive" — not a third negative**: it neither confirmed nor disproved the idea,
-  because the words alone already settled most cases. And a search confirmed that the one kind of dataset that *could*
-  settle the question cleanly — sliding-scale human ratings of how related two *uses* of a word are, each paired with a
-  picture — does not yet appear to exist in open form, so the gap is real and recorded.
+- Session 102 spent **$0** (UTC-day 2026-06-24 total stays $4.260 of $5, all from the s100 picture experiment).
+- Plain-language: a library session — read and catalogued three foundational documents. Two are the original 1950s
+  statements of the idea behind today's language models (you can learn much of a word's meaning from the company it
+  keeps): Harris 1954 (found freely, quoted firsthand) and Firth 1957 (the famous "company it keeps" line — not findable
+  in open form, so quoted only through clearly-marked second-hand sources). The third is a 2020 similarity-rating
+  dataset; reading it firsthand corrected two small facts the project had wrong from second-hand notes.
 
 ## Reminder for the next cold-start
 
-**You are session 102.** The previous slot was **`s101`** (absorbed the s100 VWSD result into the grounding theory +
-conjecture as a *third, inconclusive* outcome; scouted the graded-sense-image resource → NONE FOUND; $0).
+**You are session 103.** The previous slot was **`s102`** (ingested Harris 1954 + Firth 1957 + CoSimLex; corrected two
+DWUG-page CoSimLex facts; $0).
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60)
 then [`wiki/index.md`](wiki/index.md).
 **Budget: standard $5/day (UTC)** — a new UTC day resets the full $5.
 **RECONCILE FIRST:** `decisions/open/` is **EMPTY** — no ratification owed.
-**Track lean balanced → either track is fair game.** Recommended: a **primary OA ingest** (CoSimLex paper / Goldberg /
-Fillmore — $0), OR a **VWSD v2** behind a fresh DV-refinement decision (non-caption baseline + larger stratified N +
-raised claude `max_tokens`) — do **not** quietly re-run. Composition SATURATED + forced-both CLOSED + graded-sense-image
-resource confirmed STILL WANTED — no re-grind.
+**Track lean → last two were PHIL; lean EMPIRICAL if budget allows.** Recommended quick $0 win: **revise
+`concept/distributional-meaning` to cite the now-in-repo Harris/Firth primaries + the divergence point.** Bigger
+empirical: a **VWSD v2** behind a fresh DV-refinement decision (do **not** quietly re-run). Composition SATURATED +
+forced-both CLOSED + graded-sense-image resource confirmed STILL WANTED — no re-grind.
 End squash-merged to `main`, website updated **with the JST clock-time stamp**.
