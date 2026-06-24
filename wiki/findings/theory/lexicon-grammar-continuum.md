@@ -11,7 +11,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-30
-updated: 2026-06-22
+updated: 2026-06-24
 links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
@@ -33,6 +33,8 @@ links:
     target: result/lexical-perceptual-grounding-moderation-v1
   - rel: depends-on
     target: result/multimodal-grounding-image-v1
+  - rel: depends-on
+    target: result/vwsd-grounding-headroom-v1
   - rel: depends-on
     target: result/comparative-correlative-covariation-v1
   - rel: depends-on
@@ -102,7 +104,7 @@ this repo already catalogs that tie meaning to the world — Bender & Koller / L
 ([`concept/symbol-grounding-problem`](../../base/concepts/symbol-grounding-problem.md)), Barsalou's
 perceptual symbols ([`concept/embodied-cognition`](../../base/concepts/embodied-cognition.md)) —
 positioned to give the `grounded.perceptual` tag its first empirical exercise — which it now has, as
-**two negatives** (below).
+**two bounded clear-homonym negatives plus one inconclusive image-native selection run** (below).
 
 The axis is **designed to join this continuum, not sit beside it.** The first multimodal conjecture,
 [`conjecture/multimodal-lexical-grounding-divergence`](../conjectures/multimodal-lexical-grounding-divergence.md),
@@ -115,7 +117,8 @@ deliberately conditional: the third axis joins the continuum **only to the exten
 supports it** — a perceptual-redundancy null (the image changes nothing) would say grounding adds no
 sense signal these text models lack, which is a first-class negative, not a failure to integrate.
 
-**As of 2026-05-31 the grounding axis stands at two negatives, both for *clear homonyms*.** The
+**As of 2026-06-24 the grounding axis stands at two bounded clear-homonym negatives plus one
+inconclusive image-native selection run.** The first two are nulls, both for *clear homonyms*. The
 cheapest first contact, prediction 1 — a $0 Lancaster-norms moderation of the existing lexical
 result — **ran** → [`result/lexical-perceptual-grounding-moderation-v1`](../results/lexical-perceptual-grounding-moderation-v1.md):
 a word's perceptual groundedness does **not** predict how well a text-only model tracks its graded
@@ -130,9 +133,31 @@ grounding. The honest bound runs through both: the test is **least sensitive exa
 cleanest** — clear homonyms maximize both visual distinctness and text separability, so text
 saturates and the image has nothing to add. These are **bounded negatives for clear homonyms**, not a
 verdict on grounding: the cell where an image could still matter — **fine polysemy / abstract senses
-where text does not saturate** — is exactly the cell neither probe contains, and stays open. So the
-third axis is, so far, integrated as a pair of first-class negatives: on these models, for clear
-homonyms, perceptual input adds no sense signal the text distribution does not already supply.
+where text does not saturate** — is exactly the cell neither probe contains, and stays open. So
+those first two outcomes are integrated as **two** first-class negatives for clear homonyms (a third,
+inconclusive grounding outcome follows): on these models, for clear homonyms, perceptual input adds no
+sense signal the text distribution does not already supply.
+
+The third grounding outcome (session 100) is **inconclusive, not a clean negative**: the first **run**
+of an image-native VWSD probe of the gating *shape* of the grounding-headroom conjecture
+([`result/vwsd-grounding-headroom-v1`](../results/vwsd-grounding-headroom-v1.md)) **neither confirms
+nor falsifies** the gating prediction on VWSD. The intended saturated-vs-under-determined interaction
+was **not reported**: the caption-text baseline **saturated** (per-model accuracy .86–.88; 40/50 items
+text-separable by all three models), leaving only **7 under-determined items — below the
+pre-registered stratification floor of 8** — so the frozen fallback suppressed the binned interaction.
+What did read out: the **distraction control was clean** (word-ablated gold-selection pooled .093 ≈
+chance, picks spread across all ten positions, so image-conditioned selection is word/sense-driven,
+not surface-salience), and **real images gave no broad lift** over their captions (gpt was markedly
+*worse* with images, .60 vs .86; claude/gemini ≈ flat), with image-rescue in text-failed cells only
+4/16 = .25 — too thin to test. It is best read as a **bounded reappearance of the redundancy null**
+([`result/multimodal-grounding-image-v1`](../results/multimodal-grounding-image-v1.md)) in an
+image-native *selection* task — but **caption-leakage-confounded** (the "text" channel was
+gemini-authored captions that often name the referent) **and underpowered**. So it is **consistent
+with the conjecture's general posture** (once candidates are described in words the task largely solves
+from text, and the images add no broad lift) yet is **not a test of the gating interaction**, and
+prediction-1-as-written stays open for a future graded-image resource. The corrected count is
+therefore **two bounded clear-homonym negatives plus one inconclusive image-native selection run**, not
+three clean negatives.
 
 ## What this page predicts and forbids
 
@@ -153,7 +178,7 @@ The "beat the distributional shadow" test this page is built on sits inside a re
 - **The bridge probe** ([`result/coercion-sense-modulation-v1`](../results/coercion-sense-modulation-v1.md)) confirmed its direction with a surface-confound bound, and its proposed **v2 with a non-coercing transitive control** then **ran** ([`result/coercion-sense-modulation-v2`](../results/coercion-sense-modulation-v2.md)): the gap **partially de-confounds** — a small, **fine-scale-only, fragile** sense-specific residual survives a structure-matched conventional-transitive control (isolation gap cont +13.6/+6.1/+1.9, ≈0 on the coarse scale, carried by 3–4 of 8 verbs) **alongside a real surface component**. So v1's drop was a *mix* (mostly sense for claude, mostly surface for gemini); the bridge holds but is fainter than v1's raw gap implied. (See the bridge section above.)
 - **The lexical hard direction.** The **lexical v2** ([`result/lexical-polysemy-homonymy-v2`](../results/lexical-polysemy-homonymy-v2.md)) found the polysemy-vs-homonymy discreteness split **untestable at the DWUG anchor** (only 3 clean homonym lemmas) and pointed to a homonymy-enriched v3. That **v3 ran** ([`result/lexical-polysemy-homonymy-v3`](../results/lexical-polysemy-homonymy-v3.md)) on a homonymy-enriched WiC noun subset and returned a **powered null**: the panel separates WiC same/different equally well for homonyms and polysemes (AUC diff ≈ 0 in all six cells), and the lone positive (homonym different-senses floored more) **cannot be separated from plain graded distance** — it is lemma-concentrated, scale-quirk-amplified, and CI-fragile. So clause (b)'s distinctive **discrete-regime** bet is **not established** (now *powered*, not merely untestable), while the central bet (the graded signal, clauses a+c) still stands.
 - **The cross-axis model-ordering** check ([`result/cross-axis-lexical-constructional-ordering-v1`](../results/cross-axis-lexical-constructional-ordering-v1.md)) settled the ordering watch (failure transfers, strength does not, the bridge inverts — see the Update box above).
-- **The grounding axis** opened as two negatives for clear homonyms (prediction-1 moderation null + image-probe redundancy null — see the third-axis section above).
+- **The grounding axis** opened as two negatives for clear homonyms (prediction-1 moderation null + image-probe redundancy null) and, as of session 100, adds a **third, inconclusive** outcome: an image-native VWSD run of the gating shape ([`result/vwsd-grounding-headroom-v1`](../results/vwsd-grounding-headroom-v1.md)) that **neither confirms nor falsifies** the gating prediction (caption-text saturated, stratification floor not met, no broad image lift) — a caption-confounded, underpowered reappearance of the redundancy null, not a clean third negative. See the third-axis section above.
 
 - **The lexical bridging probe** (Prediction 4 of [`conjecture/lexical-sense-gradience`](../conjectures/lexical-sense-gradience.md)) — once listed here as an open trigger — has now **run** ([`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md), session 77, 2026-06-22) → **graded scale, ungraded commitment, a clean null 3/3**: models place bridging pairs at an intermediate *position* yet commit at clear-item confidence with ≈0 decline. This is a within-item discreteness, complementary to v3's between-stratum null. The position half is the bound-but-weak (Q3-shadowed) half; the ungraded-commitment half is robust.
 

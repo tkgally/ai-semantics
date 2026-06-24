@@ -18,6 +18,8 @@ links:
   - rel: depends-on
     target: result/multimodal-grounding-image-v1
   - rel: depends-on
+    target: result/vwsd-grounding-headroom-v1
+  - rel: depends-on
     target: result/lexical-sense-gradience-v1
   - rel: depends-on
     target: concept/grounding
@@ -31,7 +33,10 @@ links:
 
 > **Status: proposed (2026-05-31).** This is the project's **own theoretical proposal**, not an
 > imported claim and not an established result. It generalizes **two bounded, partly-underpowered
-> grounding nulls** into a single structural explanation and a forward, falsifiable prediction. It is
+> clear-homonym grounding nulls** (and is now joined by one **inconclusive** image-native VWSD run that
+> neither confirms nor falsifies its gating prediction — [`result/vwsd-grounding-headroom-v1`](../results/vwsd-grounding-headroom-v1.md),
+> detailed under "Human anchor" below) into a single
+> structural explanation and a forward, falsifiable prediction. It is
 > a forward bet, explicitly *not* confirmed, and it could be wrong (see "What would confirm / falsify"
 > and "Honesty"). It **sharpens** the sibling conjecture
 > [`conjecture/multimodal-lexical-grounding-divergence`](multimodal-lexical-grounding-divergence.md):
@@ -42,8 +47,10 @@ links:
 
 ## The proposal
 
-The project's grounding axis currently stands at **two negatives**, both obtained on **clear
-homonyms**:
+The project's grounding axis currently stands at **two clear-homonym negatives plus one inconclusive
+image-native VWSD run** (session 100, [`result/vwsd-grounding-headroom-v1`](../results/vwsd-grounding-headroom-v1.md),
+which neither confirms nor falsifies the gating prediction below — detailed under "Human anchor"). The
+two negatives, both obtained on **clear homonyms**, are:
 
 - a **text-side moderation null** — a word's static perceptual groundedness does not predict how well
   a text-only model tracks its graded senses
