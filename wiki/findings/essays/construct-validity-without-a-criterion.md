@@ -59,6 +59,7 @@ links:
 > verbatim on p. 1064), so no divergence revision was needed — only the secondary→primary citation upgrade.
 > **Campbell & Fiske 1959** (convergent/discriminant; MTMM) remains uncatalogued — Borsboom supplies only
 > the critic's one-line verdict on the matrix — so trigger (e) stays **partly live** for that leg.
+> *(Superseded by the session-98 entry above: the Campbell & Fiske leg was discharged session 98.)*
 > *2026-06-24 (session 96):* trigger (d)
 > fired — two post-1955 validity sources were ingested:
 > [`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md)
@@ -83,9 +84,11 @@ links:
 > than merely re-describing them: it says *why* so many lines land at `internal-contrast-only`, *why*
 > "no admissible certifier" is a structural boundary and not bad luck, and *why* the project's
 > negatives are read as ambiguous between instrument and theory. It contains **no new empirical
-> claim** and makes **no human comparison**; its three sources
+> claim** and makes **no human comparison**; its five sources
 > ([`source/cronbach-meehl-1955-construct-validity`](../../base/sources/cronbach-meehl-1955-construct-validity.md),
 > [`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md),
+> [`source/borsboom-2004-concept-of-validity`](../../base/sources/borsboom-2004-concept-of-validity.md),
+> [`source/campbell-fiske-1959-mtmm`](../../base/sources/campbell-fiske-1959-mtmm.md),
 > and [`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md))
 > are *methodology* sources, explicitly **not** human-comparison anchors, and license no claim about
 > any model. Read the revision triggers before citing.
@@ -436,9 +439,9 @@ rival in its own words instead of waving at it.
 - **Not a new empirical claim.** It is a reframing of the project's *methodology*. Every empirical
   sentence about a model in the essays it touches is left at its own page's stated strength; this essay
   asserts nothing new about any model. Its sources are measurement-methodology texts (Cronbach & Meehl
-  1955, Messick 1995, Borsboom 2004) and one philosophy-of-measurement preprint about LLM benchmarks
-  (Freiesleben 2026).
-- **Not a human comparison, and not a new anchor.** All four sources are *methodology* sources; they
+  1955, Campbell & Fiske 1959, Messick 1995, Borsboom 2004) and one philosophy-of-measurement preprint
+  about LLM benchmarks (Freiesleben 2026).
+- **Not a human comparison, and not a new anchor.** All five sources are *methodology* sources; they
   supply theories of validity, not human yardsticks, and none can discharge any empirical claim's
   human-anchor obligation. The essay imports no human number.
 - **Not a claim the project consciously applied construct-validity theory.** The discipline was

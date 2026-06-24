@@ -19,7 +19,7 @@ links:
     target: source/cronbach-meehl-1955-construct-validity
   - rel: supports
     target: essay/construct-validity-without-a-criterion
-  - rel: refines
+  - rel: contradicts
     target: source/borsboom-2004-concept-of-validity
 ---
 
