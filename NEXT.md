@@ -2,37 +2,38 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-24** (sessions s96–s102): **$4.260 spent** (all by s100 — the VWSD
-probe; s101 and s102 each spent $0). **$0.74 left for any remaining 2026-06-24 session.** Full ledger in
-[`config/budget.md`](config/budget.md). **Check the clock (`date -u`)** — a later session is almost certainly a new UTC
-day (full $5 resets). Check for any newer Tom override before spending.
+**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-24** (sessions s96–s103): **$4.260 spent** (all by s100 — the VWSD
+probe; s101, s102, s103 each spent $0). At s103 wind-up (20:45 UTC 2026-06-24) **~$0.74 left for any further 2026-06-24
+session.** Full ledger in [`config/budget.md`](config/budget.md). **Check the clock (`date -u`)** — a later session is
+almost certainly a new UTC day (full $5 resets). Check for any newer Tom override before spending.
 
 ## State
 
-**Session 102 (JST 2026-06-25 / UTC 2026-06-24) — PHILOSOPHICAL OA-ingest wave. $0, no probe.**
-Branch even with `main` at start (s101/#153 merged; no PR to land). `decisions/open/` EMPTY — no ratification owed.
-1-wave workflow, 2 parallel ingest subagents + a fresh read-only adversarial coherence pass.
+**Session 103 (JST 2026-06-25 / UTC 2026-06-24) — PHILOSOPHICAL distributional-lineage wave. $0, no probe.**
+Branch even with `main` at start (s102/#154 merged; no PR to land). `decisions/open/` EMPTY — no ratification owed.
+1-wave workflow, 3 parallel subagents (concept-revision + essay + source-ingest) + a fresh read-only adversarial
+coherence pass (no blockers; one optional NIT applied).
 
-- **Ingested the two founding statements of the `distributional` tradition** (the concept page had cited both only as
-  "not in-repo"):
-  - [`source/harris-1954-distributional-structure`](wiki/base/sources/harris-1954-distributional-structure.md) —
-    **RECEIVED (primary).** Full text read from a freely-accessible Caltech-hosted scan of *Word* 10(2-3); "difference of
-    meaning correlates with difference of distribution" (p. 156), the oculist/eye-doctor example (pp. 156–157), and
-    Harris's own Bar-Hillel-footnote hedge, all verbatim with original pagination.
-  - [`source/firth-1957-synopsis`](wiki/base/sources/firth-1957-synopsis.md) — **SECONDARY-ONLY (primary unreachable).**
-    No OA full text exists; thin page, every Firth quote flagged via Brunila & LaViolette 2022 / Quote Investigator.
-    Carries the historiographic point that Firth's (situated) and Harris's (form-internal) versions **diverge**.
-    **NOTE: uses a deliberate non-standard `status: secondary-only`** (senselint does not validate source `status`;
-    logged 2026-06-24, not silent drift).
-- **Catalogued [`source/armendariz-2020-cosimlex`](wiki/base/sources/armendariz-2020-cosimlex.md)** — the Option-B
-  graded-anchor *alternative* to DWUG, as a **`source` page, NOT yet an anchor** (license + fetchability + released
-  counts still need a firsthand check). Reading the primary **corrected two now-refuted facts** on
-  [`resource/dwug-usage-graphs`](wiki/base/resources/dwug-usage-graphs.md): CoSimLex scale is **0-to-6** (not the
-  unverified "0–10"), and Zenodo record 3989788 is the **distinct SemEval-Task-3 artifact** (the CoSimLex paper itself
-  states no license/URL). Honest limit held throughout: CoSimLex rates **different-word pairs**, not DWUG's same-lemma
-  usage pairs, so it does **not** fit the lexical-sense-gradience monotonicity clause out of the box.
-- Coherence pass found 3 new pages **clean** (quote integrity, anchor discipline, sense-tags, links); its 2 SHOULD-FIXes
-  were the DWUG corrections above, applied. senselint 0 errors; linkify clean.
+- **Revised [`concept/distributional-meaning`](wiki/base/concepts/distributional-meaning.md)** — the s102 follow-on. Replaced
+  the two "(not in-repo)" parentheticals with real links to the now-in-repo primaries: Harris cited as **primary-read**
+  ("difference of meaning correlates with difference of distribution," p. 156), Firth cited as **reliably attributed via
+  secondary sources** (never primary-read). Added a **"Historiographic caveat"** paragraph weaving the **Firth↔Harris
+  divergence** (Harris form-internal vs Firth situated "context of situation"; secondary-sourced via Brunila & LaViolette
+  2022), plus a cross-link to the new essay. Two `depends-on` links added to YAML.
+- **Wrote [`essay/two-distributional-hypotheses`](wiki/findings/essays/two-distributional-hypotheses.md)** — the project's
+  **23rd essay** (draft). Original **sorting**: "the distributional hypothesis" is two ideas; the next-token/embedding
+  objective instantiates the **Harris** (form-internal) reading and **not** the **Firth** (situated) one, so NLP's Firth
+  slogan "borrows Firth's words for Harris's idea" and **re-labels, not resolves**, the grounding question. Takes no side
+  on Piantadosi–Hill. No new empirical claim; revision trigger armed against the Firth-secondary dependency.
+- **Catalogued [`source/fillmore-1982-frame-semantics`](wiki/base/sources/fillmore-1982-frame-semantics.md)** — frame
+  semantics (charter-core lexical↔grammatical tie; ancestor of CxG/FrameNet). **Primary UNREACHABLE as OA** (Scribd JS-wall,
+  ResearchGate/academia.edu 403, 1976/1985 primaries paywalled). **`status: secondary-only`** (non-standard, like Firth;
+  logged): two opening sentences read firsthand via a registration-walled **2006-reprint preview** (pagination from p. 373,
+  NOT the 1982 original), the "By the term 'frame'…" definition via metaphorhacker.net (no locator). **No 1982-original page
+  number asserted as read.** Honest emptiness held throughout.
+- Coherence pass: **0 BLOCKERS** (quote integrity, primary/secondary discipline, anchor discipline, no smuggled empirical
+  claim, links/tags all clean); applied its one optional NIT (hedged the essay's "Firth's is situated" sub-head). senselint
+  0 errors; linkify clean. Approx subagent token use: ~143k across the 3 generators + ~50k coherence pass.
 
 ## ⚠ Do-not-re-grind note (still in force)
 
@@ -48,24 +49,25 @@ Branch even with `main` at start (s101/#153 merged; no PR to land). `decisions/o
 
 **RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — **no ratification owed.** Apply any Tom override.
 
-**Track lean — recent: 99 EMPIRICAL-reconcile · 100 EMPIRICAL-RUN ($4.26) · 101 PHIL+scout ($0) · 102 PHIL-ingest ($0).**
-**Last two were philosophical → next should lean EMPIRICAL if a fresh UTC day gives budget.** In rough priority order:
+**Track lean — recent: 99 EMPIRICAL-reconcile · 100 EMPIRICAL-RUN ($4.26) · 101 PHIL · 102 PHIL · 103 PHIL.**
+**THREE philosophical sessions in a row → next should lean EMPIRICAL if a fresh UTC day gives budget.** In rough priority:
 
-1. **PHILOSOPHICAL, tractable + $0 (the natural follow-on to this session):** **revise
-   [`concept/distributional-meaning`](wiki/base/concepts/distributional-meaning.md)** to cite the now-in-repo Harris and
-   Firth source pages instead of "Firth (1957; not in-repo)" / "Harris (1954; not in-repo)" — and weave in the
-   **Firth↔Harris divergence** point (Firth's "company" is situational, Harris's form-internal; "the distributional
-   hypothesis" is two ideas). This was deliberately deferred from s102 (it *depends on* this wave's output, so it was a
-   later-wave unit). Small, sound, closes the loop. Possibly spawn a short essay on the divergence if it earns one.
-2. **EMPIRICAL — a VWSD v2** only behind a fresh `decisions/open/` **DV-refinement** decision (non-caption text baseline
-   so "text separability" stops conflating linguistic under-determination with caption richness) + larger **stratified**
-   N from the 463 EN gold + **raised claude image-arm `max_tokens`** (s100 lost 6 claude image answers to truncation@16).
-   Captioning the full 4090 EN images is ~$7.3 (>cap) → subsample smartly or split across days. **Do not quietly
-   re-run** — the DV change is value-laden, so surface it first; ratification is a *later* session's job.
-3. **PHILOSOPHICAL — another primary OA ingest ($0):** still-wanted charter-core items include **Goldberg 1995/2006**
-   (constructional, P1 — books, OA-uncertain; try author self-archives / chapter previews) and **Fillmore 1982/1985
-   frame semantics** (P2, ties the lexical↔grammatical wedges at the theory level). Pick one reachable item; mark
-   `unreachable` honestly if so (as Firth was this session).
+1. **EMPIRICAL — a VWSD v2** (the standing top empirical lever) only behind a fresh `decisions/open/` **DV-refinement**
+   decision (non-caption text baseline so "text separability" stops conflating linguistic under-determination with caption
+   richness) + larger **stratified** N from the 463 EN gold + **raised claude image-arm `max_tokens`** (s100 lost 6 claude
+   image answers to truncation@16). Captioning the full 4090 EN images is ~$7.3 (>cap) → subsample smartly or split across
+   days. **Do not quietly re-run** — the DV change is value-laden, so surface it first; ratification is a *later* session's
+   job. (Needs a fresh UTC day for budget — at s103 wind-up only ~$0.74 remained on 2026-06-24.)
+2. **PHILOSOPHICAL — a constructional essay tying frame semantics to the distributional founders ($0):** now that
+   [`source/fillmore-1982-frame-semantics`](wiki/base/sources/fillmore-1982-frame-semantics.md) is in-repo, the natural
+   companion to this session's distributional essay is a short essay on Fillmore's "company" as a **structured knowledge
+   frame** vs Harris/Firth's **co-occurrence neighbourhood** — i.e. a third reading of "knowing a word by its company."
+   Possibly ties to the [`essay/two-distributional-hypotheses`](wiki/findings/essays/two-distributional-hypotheses.md)
+   sorting. Small, sound, $0.
+3. **PHILOSOPHICAL — another primary OA ingest ($0):** still-wanted charter-core item **Goldberg 1995/2006**
+   (constructional, P1 — books, OA-uncertain; try author self-archives / chapter previews). Or, if a later session reaches
+   a legitimate full text of **Fillmore 1982/1985**, re-verify the Fillmore source's quotes and consider promoting it from
+   `secondary-only`. Mark `unreachable` honestly if so (as Firth/Fillmore were).
 4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
@@ -74,30 +76,31 @@ Branch even with `main` at start (s101/#153 merged; no PR to land). `decisions/o
   [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).)
 - **Standing NIT (not a decision):** the `operational` meaning-sense tag (on the five construct-validity source pages)
   is not in [`wiki/meaning-senses.md`](wiki/meaning-senses.md)'s controlled vocabulary; senselint does not enforce vocab
-  on `base/` pages, so it is tolerated. Low priority. (Companion: s102 introduced a one-off `status: secondary-only` on
-  the Firth source page — deliberate, logged, not enforced by senselint.)
+  on `base/` pages, so it is tolerated. Low priority. **Companion:** two source pages now carry a deliberate non-standard
+  `status: secondary-only` (Firth s102, Fillmore s103) — primary-unreachable markers, logged, not enforced by senselint.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 102 spent **$0** (UTC-day 2026-06-24 total stays $4.260 of $5, all from the s100 picture experiment).
-- Plain-language: a library session — read and catalogued three foundational documents. Two are the original 1950s
-  statements of the idea behind today's language models (you can learn much of a word's meaning from the company it
-  keeps): Harris 1954 (found freely, quoted firsthand) and Firth 1957 (the famous "company it keeps" line — not findable
-  in open form, so quoted only through clearly-marked second-hand sources). The third is a 2020 similarity-rating
-  dataset; reading it firsthand corrected two small facts the project had wrong from second-hand notes.
+- Session 103 spent **$0** (UTC-day 2026-06-24 total stays $4.260 of $5, all from the s100 picture experiment).
+- Plain-language: a reading-and-writing session that built on the last one. It took the two 1950s statements of the idea
+  behind today's language models — "you can know a word by the company it keeps" — and showed they are really two different
+  ideas: Harris meant the neighbouring *words* (inside language), Firth meant the whole *situation* a word is used in.
+  Today's models, trained on text alone, only have Harris's half. A new short essay draws the consequence — quoting Firth's
+  famous line as the motto for these models borrows his words for Harris's idea and makes the models sound more grounded
+  than they are. The session also made an honest, thin page for a third classic (Fillmore's "frame semantics") whose
+  original couldn't be found freely.
 
 ## Reminder for the next cold-start
 
-**You are session 103.** The previous slot was **`s102`** (ingested Harris 1954 + Firth 1957 + CoSimLex; corrected two
-DWUG-page CoSimLex facts; $0).
+**You are session 104.** The previous slot was **`s103`** (revised the distributional concept page + wrote the
+two-distributional-hypotheses essay + catalogued Fillmore 1982 frame-semantics as secondary-only; $0).
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60)
 then [`wiki/index.md`](wiki/index.md).
-**Budget: standard $5/day (UTC)** — a new UTC day resets the full $5.
+**Budget: standard $5/day (UTC)** — a new UTC day resets the full $5; **check `date -u`** (s103 ran late on UTC 2026-06-24).
 **RECONCILE FIRST:** `decisions/open/` is **EMPTY** — no ratification owed.
-**Track lean → last two were PHIL; lean EMPIRICAL if budget allows.** Recommended quick $0 win: **revise
-`concept/distributional-meaning` to cite the now-in-repo Harris/Firth primaries + the divergence point.** Bigger
-empirical: a **VWSD v2** behind a fresh DV-refinement decision (do **not** quietly re-run). Composition SATURATED +
-forced-both CLOSED + graded-sense-image resource confirmed STILL WANTED — no re-grind.
-End squash-merged to `main`, website updated **with the JST clock-time stamp**.
+**Track lean → last THREE were PHIL; lean EMPIRICAL if budget allows.** Top empirical lever: a **VWSD v2** behind a fresh
+DV-refinement decision (do **not** quietly re-run). Good $0 phil fallback: a **frame-semantics-vs-distributional essay**
+now that Fillmore is in-repo. Composition SATURATED + forced-both CLOSED + graded-sense-image resource STILL WANTED — no
+re-grind. End squash-merged to `main`, website updated **with the JST clock-time stamp**.
