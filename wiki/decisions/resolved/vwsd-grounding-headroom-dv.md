@@ -56,10 +56,21 @@ contingent-artifacts:
 > **Contingent-artifact disposition.** The conjecture stays **`proposed`** (this gate is against its
 > prediction-1 *operationalization on VWSD*, not a defect in it). A build session is **cleared to
 > author `design/vwsd-grounding-headroom-v1`** as the frozen prereg carrying all binding conditions
-> below **plus** modifications 1–4. **`result/vwsd-grounding-headroom-v1` is NOT cleared** — it may be
+> below **plus** modifications 1–4. **[`result/vwsd-grounding-headroom-v1`](../../findings/results/vwsd-grounding-headroom-v1.md) is NOT cleared** — it may be
 > produced only after the design is frozen, the fetch+checksum done, and a **fresh independent pre-run
 > critic returns GO** against the frozen design; a NO-GO defers the run and never relaxes a condition.
 > Neither contingent `*-v1` artifact exists yet.
+>
+> **BUILT + RUN, session 100 (2026-06-24).** Both contingent artifacts now exist:
+> [`design/vwsd-grounding-headroom-v1`](../../../experiments/designs/vwsd-grounding-headroom-v1.md)
+> (frozen, all five mods) and [`result/vwsd-grounding-headroom-v1`](../../findings/results/vwsd-grounding-headroom-v1.md).
+> Data fetched + checksummed (images out of git). A fresh independent **pre-run critic returned GO**
+> (binding condition d) on a 50-item budget-bounded subset; the run honored every mod — the caption-text
+> baseline **saturated** (under-determined bin 7 < the mod-1 floor 8), so the **binned interaction was
+> suppressed** automatically; the **distraction null was reported first and is clean**; the power caveat
+> is foregrounded; an independent **post-run verifier reproduced** every number. Verdict: **neither
+> confirms nor falsifies** the gating prediction (caption-leakage confound + floor + underpower). The
+> yardstick this decision fixed held; the result claimed nothing the data does not carry.
 >
 > Anti-cheat: the reviewer confirmed the verdict is not motivated by wanting a particular result
 > (every modification makes a spurious positive harder and keeps the falsify/null arms live).
@@ -73,7 +84,7 @@ contingent-artifacts:
 > resolution block above), per [`PROJECT.md`](../../../PROJECT.md) §12.3.
 >
 > The two contingent artifacts named below — `design/vwsd-grounding-headroom-v1` and
-> `result/vwsd-grounding-headroom-v1` — **do not yet exist**; they are the design spec and result a
+> [`result/vwsd-grounding-headroom-v1`](../../findings/results/vwsd-grounding-headroom-v1.md) — **do not yet exist**; they are the design spec and result a
 > ratifying-then-building sequence would produce. The conjecture
 > [`conjecture/distributional-saturation-grounding-headroom`](../../findings/conjectures/distributional-saturation-grounding-headroom.md)
 > exists and stays `proposed`; this gate is queued against its prediction 1, not a defect in it.
