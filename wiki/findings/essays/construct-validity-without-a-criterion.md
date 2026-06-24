@@ -16,6 +16,8 @@ links:
     target: source/messick-1995-validity-of-psychological-assessment
   - rel: depends-on
     target: source/freiesleben-2026-construct-validity-llm-benchmarks
+  - rel: depends-on
+    target: source/borsboom-2004-concept-of-validity
   - rel: refines
     target: essay/no-admissible-certifier
   - rel: refines
@@ -30,8 +32,18 @@ links:
 
 # Essay: construct validity without a criterion
 
-> **Status: revised (2026-06-24, session 96 — trigger (d) fired). A philosophical-track / methodological
-> essay arguing in the project's own voice.** **Revision log.** *2026-06-24 (session 96):* trigger (d)
+> **Status: revised (2026-06-24, session 97 — trigger (e)'s Borsboom leg fired). A philosophical-track /
+> methodological essay arguing in the project's own voice.** **Revision log.** *2026-06-24 (session 97):*
+> trigger (e)'s **Borsboom leg fired** — the **primary** Borsboom 2004 was ingested
+> ([`source/borsboom-2004-concept-of-validity`](../../base/sources/borsboom-2004-concept-of-validity.md)),
+> so the "second amputation" argument (the project is barred from the causal/realist leg too) is now
+> stated from Borsboom's **own text** rather than Freiesleben's secondary characterization. Freiesleben's
+> rendering of Borsboom was checked against the primary and confirmed **faithful** (Borsboom's own
+> if-and-only-if thesis matches Freiesleben's "two conditions"; the "Few, if any …" objection appears
+> verbatim on p. 1064), so no divergence revision was needed — only the secondary→primary citation upgrade.
+> **Campbell & Fiske 1959** (convergent/discriminant; MTMM) remains uncatalogued — Borsboom supplies only
+> the critic's one-line verdict on the matrix — so trigger (e) stays **partly live** for that leg.
+> *2026-06-24 (session 96):* trigger (d)
 > fired — two post-1955 validity sources were ingested:
 > [`source/messick-1995-validity-of-psychological-assessment`](../../base/sources/messick-1995-validity-of-psychological-assessment.md)
 > (the unified-validity statement, and the **primary** source of *construct underrepresentation* and
@@ -358,19 +370,27 @@ stance: "It is unclear what it would mean for a model to possess reasoning, theo
 as internal attributes, rather than merely to exhibit behavioral patterns that resemble those associated
 with these constructs in humans" (ibid., §2.1). That is the project's "describe, don't litigate"
 posture, arrived at independently. The convergence is of *direction*, not result — Freiesleben reports
-no experiment and the project borrows no number from him — and it comes with the honest discounts that
-he is a single-author **preprint** (peer-review unconfirmed) and that his renderings of Messick and
-Borsboom are *secondary*. But as a check on whether the project's framing is idiosyncratic, it is
+no experiment and the project borrows no number from him — and it comes with the honest discount that
+he is a single-author **preprint** (peer-review unconfirmed). His renderings of Messick and Borsboom are
+*secondary*, but the essay no longer leans on them for the Borsboom material: the **primary** Borsboom 2004
+was ingested in session 97 (trigger (e)) and Freiesleben's rendering was checked against it and confirmed
+faithful, so Freiesleben now serves only as corroboration of the *framing choice*, not as the source of any
+Borsboom claim. As a check on whether the project's framing is idiosyncratic, it is
 about as good as an in-repo source can give: the same conclusion, in the same domain, from the same
 modesty about what is "inside" the model.
 
 **The sharpening the ingests enabled: a *second* amputation.** Reading the project's situation against
 the *three* accounts Freiesleben distinguishes — nomological (Cronbach & Meehl), inferential
 (Messick/Kane), and causal (Borsboom) — shows the criterion amputation is not the only one. Borsboom's
-causal account validates a test by a *realist* condition: "the construct must exist, and variations in
-measurement outcomes must be caused by variations in the state of that construct"
-([`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md),
-§2.1, Freiesleben's characterization of Borsboom). The project cannot meet that condition either — not
+causal account validates a test by a *realist* condition, now stated from his **own text** (the primary
+[`source/borsboom-2004-concept-of-validity`](../../base/sources/borsboom-2004-concept-of-validity.md) was
+ingested this session): "a test is valid for measuring an attribute if and only if (a) the attribute exists
+and (b) variations in the attribute causally produce variations in the outcomes of the measurement
+procedure" (Borsboom 2004, p. 1061), and, restated, "What is constitutive of validity is the existence of an
+attribute and its causal impact on scores" (ibid., p. 1068). (Freiesleben's secondary rendering of this as
+Borsboom's "two conditions" was checked against the primary and confirmed faithful, so the structural point
+is unchanged — only its citation is upgraded from secondary to primary.) The project cannot meet that
+condition either — not
 by a budget rule but by its deflationary commitment: it declines to assert that a model *possesses* the
 attribute as an internal state that causally produces the behavior, which is the very claim the gates
 forbid reading off the model. So the project is barred from **two** of the three classical validation
@@ -378,27 +398,31 @@ routes at once — the criterion leg (no human subjects) *and* the causal/realis
 commitment to the construct living in the model) — and lands on the nomological net not by preference but
 because it is the **only one of the three** that asks neither for an external human criterion nor for a
 realist commitment about the model's interior. The founding-statement essay could diagnose the first
-amputation; it took the post-1955 sources (Borsboom's causal account, surfaced through Freiesleben) to
-see the second. This is the reframing earning trigger (d): the consensus did not overturn the
-reconstruction, it *deepened* it.
+amputation; it took the post-1955 sources (Borsboom's causal account — first surfaced through Freiesleben
+in session 96, now sourced from Borsboom's primary text in session 97) to
+see the second. This is the reframing earning triggers (d) and (e): the consensus did not overturn the
+reconstruction, it *deepened* it, and the deepening now rests on Borsboom's own words.
 
 **The rival, acknowledged not dropped.** None of this shows the nomological net is *correct* against
-Borsboom — only that it is what the project's constraints leave available. Borsboom's standing objection
-survives: on his view the net-elaboration program "is bound to fail because 'Few, if any, theoretical
-terms in psychology can be unambiguously identified in this way'"
-([`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md),
-§2.3, Borsboom quoted by Freiesleben). The project's reliance on the net is a *choice among contested
-accounts*, forced by its own rules, not a demonstration that the net is the right theory of validity.
-That is exactly the circularity cost the next section already books; the post-1955 ingest names the
-rival precisely instead of waving at it.
+Borsboom — only that it is what the project's constraints leave available. With the primary
+[`source/borsboom-2004-concept-of-validity`](../../base/sources/borsboom-2004-concept-of-validity.md) now
+in-repo, the standing objection can be quoted directly: the net-elaboration program is bound to fail because
+"Few, if any, theoretical terms in psychology can be unambiguously identified in this way" (Borsboom 2004,
+p. 1064). Borsboom is no gentler with Messick's relocation of validity to score-meaning, flatly rejecting
+the very framing the project's consensus refinement rests on: "Validity is not a judgment at all. It is the
+property being judged" (ibid., p. 1063). The project's reliance on the net is therefore a *choice among
+contested accounts*, forced by its own rules, not a demonstration that the net is the right theory of
+validity. That is exactly the circularity cost the next section already books; the primary ingest names the
+rival in its own words instead of waving at it.
 
 ## What this essay is not
 
 - **Not a new empirical claim.** It is a reframing of the project's *methodology*. Every empirical
   sentence about a model in the essays it touches is left at its own page's stated strength; this essay
   asserts nothing new about any model. Its sources are measurement-methodology texts (Cronbach & Meehl
-  1955, Messick 1995) and one philosophy-of-measurement preprint about LLM benchmarks (Freiesleben 2026).
-- **Not a human comparison, and not a new anchor.** All three sources are *methodology* sources; they
+  1955, Messick 1995, Borsboom 2004) and one philosophy-of-measurement preprint about LLM benchmarks
+  (Freiesleben 2026).
+- **Not a human comparison, and not a new anchor.** All four sources are *methodology* sources; they
   supply theories of validity, not human yardsticks, and none can discharge any empirical claim's
   human-anchor obligation. The essay imports no human number.
 - **Not a claim the project consciously applied construct-validity theory.** The discipline was
@@ -410,13 +434,14 @@ rival precisely instead of waving at it.
   existing machinery (nomological-net elaboration, resource-anchoring) is the right and sufficient
   response to working without the criterion leg.
 - **Not a claim that construct validity is uncontested.** The 1955 framework was later revised and
-  criticized; as of this revision two strands are in-repo — Messick's unified validity (primary) and,
-  through Freiesleben's secondary characterization, Borsboom's realist critique — while Campbell &
-  Fiske's convergent/discriminant validity and a *primary* Borsboom remain uncatalogued (trigger (e)).
-  The essay cites Cronbach & Meehl as the *origin and canonical statement*, treats Messick as the
-  consensus refinement, and explicitly records (in "Does the reconstruction match the post-1955
-  consensus?") that the nomological net is one contested account among others — chosen here because the
-  project's constraints bar the alternatives, not because the rivals are refuted.
+  criticized; as of this revision two rival strands are in-repo as **primaries** — Messick's unified
+  validity and Borsboom's realist/causal critique — with Freiesleben 2026 corroborating the framing
+  choice in the LLM domain, while Campbell & Fiske's convergent/discriminant (MTMM) framework remains
+  uncatalogued (trigger (e), Campbell & Fiske leg). The essay cites Cronbach & Meehl as the *origin and
+  canonical statement*, treats Messick as the consensus refinement, and explicitly records (in "Does the
+  reconstruction match the post-1955 consensus?") that the nomological net is one contested account among
+  others — chosen here because the project's constraints bar the alternatives, not because the rivals are
+  refuted.
 
 ## Revision triggers (read before citing)
 
@@ -448,14 +473,24 @@ rival precisely instead of waving at it.
   sharpening (the *second* amputation — the project is barred from Borsboom's causal/realist leg too, by
   its deflationary commitment, not only from the criterion leg). The trigger is discharged; the residual
   follow-ups move to (e).
-- **(e) A *primary* Campbell & Fiske 1959 or Borsboom 2004 is ingested.** The convergent/discriminant
-  (MTMM) vocabulary and the causal/realist account currently enter the essay only through *secondary*
-  channels — Messick cites Campbell & Fiske for the "external aspect," and Borsboom is engaged via
-  Freiesleben's characterization. Ingesting either *primary* would let the "second amputation" argument
-  (the causal/realist leg is also barred) be stated from Borsboom's own text rather than Freiesleben's
-  reading, and would let convergent/discriminant analysis be mapped to the convergence ladder directly.
-  If the primary Borsboom diverges from Freiesleben's rendering, this section is revised. Flagged, not
-  assumed.
+- **(e) A *primary* Campbell & Fiske 1959 or Borsboom 2004 is ingested. — PARTIALLY FIRED 2026-06-24
+  (session 97): Borsboom leg discharged; Campbell & Fiske leg still outstanding.** The **Borsboom 2004**
+  primary was ingested this session
+  ([`source/borsboom-2004-concept-of-validity`](../../base/sources/borsboom-2004-concept-of-validity.md)),
+  so the "second amputation" argument (the causal/realist leg is also barred) is now stated from Borsboom's
+  **own text** — the if-and-only-if thesis (p. 1061), "What is constitutive of validity is the existence of
+  an attribute and its causal impact on scores" (p. 1068), and the "Few, if any …" objection (p. 1064) —
+  rather than from Freiesleben's secondary reading. The contingency in this trigger ("if the primary
+  Borsboom diverges from Freiesleben's rendering, this section is revised") was checked and **did not fire**:
+  Freiesleben's "two conditions" match Borsboom's own iff-thesis and the verbatim objection appears on
+  p. 1064, so the rendering is faithful and only the secondary→primary citation upgrade was made — the
+  "second amputation" argument stands as written. **The Campbell & Fiske 1959 leg remains outstanding.**
+  The convergent/discriminant (MTMM) vocabulary still enters only through *secondary* channels — Messick
+  cites Campbell & Fiske for the "external aspect," and Borsboom supplies only the *critic's* one-line
+  verdict on the matrix ("a favorable matrix configuration is not constitutive of validity," p. 1068), not
+  Campbell & Fiske's own framework. Ingesting the *primary* Campbell & Fiske would let convergent/discriminant
+  analysis be mapped to the convergence ladder directly. The trigger therefore stays **partly live** for the
+  Campbell & Fiske leg only.
 - **(f) The consequential/value aspect is engaged.** Messick folds the social consequences and value
   implications of test use into construct validity ("validity judgments are value judgments"); the
   project's methodology has not theorized this. If a finding or essay ever turns on the *consequences*
@@ -476,13 +511,15 @@ rival precisely instead of waving at it.
   design-out / presence-is-not-balance (construct-instrument correspondence hygiene) — together with the
   identification of the convergence ladder as the project's nomological-net-elaboration engine. **No
   empirical claim here is new, original, or reported.**
-- The **2026-06-24 revision adds one original sharpening**: read against the three accounts Freiesleben
+- The **2026-06-24 revisions add one original sharpening**: read against the three accounts Freiesleben
   distinguishes (nomological / inferential / causal), the project is barred from **two** of the three
   validation routes — the criterion leg (no human subjects) *and* the causal/realist leg (no ontological
   commitment that the construct lives in the model) — leaving the nomological net as the only route that
-  asks for neither. The founding-statement essay saw only the first amputation. This is a structural
-  observation about the project's constraints, not an empirical claim, and it does not assert the
-  nomological net is *correct* against Borsboom — only that it is what the constraints leave available.
+  asks for neither. The founding-statement essay saw only the first amputation. The sharpening was first
+  made in session 96 from Freiesleben's secondary characterization of Borsboom and, in session 97, restated
+  from the **primary** Borsboom 2004 (trigger (e)'s Borsboom leg). This is a structural observation about
+  the project's constraints, not an empirical claim, and it does not assert the nomological net is *correct*
+  against Borsboom — only that it is what the constraints leave available.
 - The strongest sentences leaned on, at their stated strength, all from
   [`source/cronbach-meehl-1955-construct-validity`](../../base/sources/cronbach-meehl-1955-construct-validity.md):
   the four types and "The first two of these may be considered together as criterion-oriented
@@ -511,14 +548,21 @@ rival precisely instead of waving at it.
   scores," "construct validity appears in every cell … the integrating force that unifies validity
   issues into a unitary concept," and "validity judgments are value judgments"; from
   [`source/freiesleben-2026-construct-validity-llm-benchmarks`](../../base/sources/freiesleben-2026-construct-validity-llm-benchmarks.md)
-  (an arXiv **preprint**, peer-review unconfirmed, whose Messick/Borsboom renderings are **secondary**),
-  "the nomological account developed by Cronbach and Meehl provides the most suitable theoretical
-  framework for current LLM capability research," the realist-rejection sentence ("It is unclear what it
-  would mean for a model to possess reasoning, theory of mind, or morality as internal attributes …"),
-  Borsboom's two conditions as characterized ("the construct must exist, and variations in measurement
-  outcomes must be caused …"), and Borsboom quoted ("Few, if any, theoretical terms in psychology can be
-  unambiguously identified in this way"). The Borsboom material is used **only** at secondary strength
-  (Freiesleben's reading), never as a primary Borsboom statement.
+  (an arXiv **preprint**, peer-review unconfirmed, used only to corroborate the *framing choice* in the LLM
+  domain), "the nomological account developed by Cronbach and Meehl provides the most suitable theoretical
+  framework for current LLM capability research," and the realist-rejection sentence ("It is unclear what it
+  would mean for a model to possess reasoning, theory of mind, or morality as internal attributes …").
+- The strongest sentences added in the 2026-06-24 (session 97) revision, at their stated strength, all from
+  the **primary** [`source/borsboom-2004-concept-of-validity`](../../base/sources/borsboom-2004-concept-of-validity.md):
+  the if-and-only-if thesis "a test is valid for measuring an attribute if and only if (a) the attribute
+  exists and (b) variations in the attribute causally produce variations in the outcomes of the measurement
+  procedure" (p. 1061); "What is constitutive of validity is the existence of an attribute and its causal
+  impact on scores" (p. 1068); the decisive objection "Few, if any, theoretical terms in psychology can be
+  unambiguously identified in this way" (p. 1064); the rejection of Messick "Validity is not a judgment at
+  all. It is the property being judged" (p. 1063); and the MTMM verdict "a favorable matrix configuration is
+  not constitutive of validity" (p. 1068). The Borsboom material is now used at **primary** strength;
+  Freiesleben's rendering of it was checked against the primary and confirmed faithful, so it is retained
+  only as **corroboration**, not as the source of the Borsboom claims.
 - **No human comparison** is made or owed: the essay is about *how the project validates its own probes*,
   not a contrast of model against human behavior. The constructs and the gate essays it touches are
   `internal-contrast-only` / methodological; the source it leans on is a methodology anchor that cannot
@@ -529,16 +573,20 @@ rival precisely instead of waving at it.
   [`essay/no-admissible-certifier`](no-admissible-certifier.md) and
   [`essay/presence-is-not-balance`](presence-is-not-balance.md) carry `human-comparison` while making
   none.)
-- **Provenance note (updated 2026-06-24).** The essay now rests on **three** methodology sources —
-  Cronbach & Meehl 1955 (founding statement), Messick 1995 (unified-validity consensus refinement), and
-  Freiesleben 2026 (the nomological account applied to LLM benchmarks) — plus five in-repo
-  essays/the convergence-ladder. The original weakest point (engaging only the founding statement) is
-  **largely discharged** by trigger (d): Messick supplies the post-1955 consensus and the
-  *construct-irrelevant variance / construct underrepresentation* vocabulary is now **sourced and
-  quoted** from Messick, not merely gestured at. Two weaknesses remain, named honestly: (i) the
-  convergent/discriminant (Campbell & Fiske) and causal/realist (Borsboom) accounts enter only through
-  *secondary* channels — Messick's citation and Freiesleben's characterization respectively — so a
-  *primary* ingest of either is still owed (trigger (e)); and (ii) Freiesleben is an arXiv **preprint**
-  (peer-review unconfirmed), so the LLM-domain corroboration is real but provisional. The consequential/
-  value aspect of Messick's unified validity is acknowledged as a **gap** in the reconstruction, not a
-  match (trigger (f)).
+- **Provenance note (updated 2026-06-24, session 97).** The essay now rests on **four** methodology
+  sources — Cronbach & Meehl 1955 (founding statement), Messick 1995 (unified-validity consensus
+  refinement), Borsboom 2004 (the realist/causal critique, the standing objection to the net), and
+  Freiesleben 2026 (the nomological account applied to LLM benchmarks) — plus five in-repo essays/the
+  convergence-ladder. The original weakest point (engaging only the founding statement) was **largely
+  discharged** by trigger (d) (Messick supplies the post-1955 consensus and the *construct-irrelevant
+  variance / construct underrepresentation* vocabulary is **sourced and quoted** from Messick), and the
+  "second amputation" leg is now **discharged to primary strength** by trigger (e)'s Borsboom leg: the
+  causal/realist account no longer rests on Freiesleben's secondary reading but on Borsboom 2004 directly,
+  and Freiesleben's rendering of Borsboom was checked against the primary and confirmed faithful, so
+  Freiesleben is retained only as *corroboration* of the framing choice, not as the source of the Borsboom
+  claims. Two weaknesses remain, named honestly: (i) the convergent/discriminant **Campbell & Fiske 1959**
+  (MTMM) framework is still uncatalogued — it enters only through *secondary* channels (Messick's citation,
+  and Borsboom's one-line critic's verdict on the matrix) — so a *primary* Campbell & Fiske ingest is still
+  owed (trigger (e), Campbell & Fiske leg); and (ii) Freiesleben is an arXiv **preprint** (peer-review
+  unconfirmed), so the LLM-domain corroboration is real but provisional. The consequential/value aspect of
+  Messick's unified validity is acknowledged as a **gap** in the reconstruction, not a match (trigger (f)).
