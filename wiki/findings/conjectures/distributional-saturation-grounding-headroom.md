@@ -212,6 +212,15 @@ candidates below are named only as the anchors a *future result* testing this hy
   graded-Δ × separability interaction against a human relatedness gradient), which remains open for a
   **future graded-image resource**. The VWSD operationalization, its binding pre-spend conditions, and
   the distraction control are fixed by that resolved decision.
+  **First run (session 100): [`result/vwsd-grounding-headroom-v1`](../results/vwsd-grounding-headroom-v1.md).**
+  On a frozen 50-item EN-gold subset the **caption-text baseline saturated** (per-model .86–.88; 40/50
+  text-separable), leaving only 7 under-determined items — **below the stratification floor**, so the
+  binned gating interaction was **not** reported. The **distraction control was clean** (word-ablated
+  gold-selection at chance .093) and **real images gave no broad lift** over their captions (gpt was
+  *worse* with images), rescuing only 4/16 text-failed cells. The run therefore **neither confirms nor
+  falsifies** the gating prediction on VWSD (caption-leakage confound + floor + underpower); it adds a
+  bounded reappearance of the redundancy null in an image-native selection task. The conjecture stays
+  **`proposed`**.
 - **The human sense anchor** for the relatedness/separation judgments would be WiC's binary
   same/different labels ([`resource/wic-word-in-context`](../../base/resources/wic-word-in-context.md))
   and/or the Princeton WordNet synset inventory
