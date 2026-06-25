@@ -28,6 +28,8 @@ links:
     target: source/weissweiler-2023-cxg-insight
   - rel: depends-on
     target: source/thrush-2022-winoground
+  - rel: depends-on
+    target: source/frege-1892-sense-and-reference
 ---
 
 # Compositionality and the Fregean principle
@@ -36,9 +38,9 @@ This page owns the **part–whole axis** of meaning: the principle of compositio
 
 ## 1. The principle of compositionality
 
-The **principle of compositionality** — usually attributed to Frege (the principle of compositionality and the `Sinn`/`Bedeutung` distinction, 1892; *not in-repo; characterization*) — states that the meaning of a complex expression is a **function of the meanings of its parts and of the way they are syntactically combined**. Nothing in the whole comes from nowhere: fix the parts and fix the mode of combination, and the meaning of the whole is determined.
+The **principle of compositionality** — usually attributed to Frege (now in-repo: [`source/frege-1892-sense-and-reference`](../sources/frege-1892-sense-and-reference.md)) — states that the meaning of a complex expression is a **function of the meanings of its parts and of the way they are syntactically combined**. Nothing in the whole comes from nowhere: fix the parts and fix the mode of combination, and the meaning of the whole is determined. **Provenance caveat (from the Frege source page):** what Frege 1892 states verbatim is the **substitution principle** — the reference (truth-value) of a sentence is unchanged when a part is replaced by a co-referring expression of different sense (Leibniz's *salva veritate*, p. 35) — together with an explicit transfer of the whole/part relation to the level of reference ("die Bedeutung eines Wortes Theil der Bedeutung des Satzes," pp. 35-36), which Frege himself flags as contestable ("anfechtbar"). The modern "meaning of the whole is a *function of* the meanings of the parts" slogan is a **later systematization**; cite Frege for the substitution principle and the `Sinn`/`Bedeutung` machinery, not for the slogan in those words.
 
-Two properties of natural language make the principle attractive as more than a slogan, and they are the standard motivation for it (Frege; Fodor & Lepore restate them as the argument's load-bearing data; both *not in-repo; characterization*):
+Two properties of natural language make the principle attractive as more than a slogan, and they are the standard motivation for it (Frege now in-repo; Fodor & Lepore restate them as the argument's load-bearing data, still *not in-repo; characterization*):
 
 - **Productivity** — a finite vocabulary and a finite stock of combinatory rules generate an unbounded number of well-formed expressions, including ones never encountered before. A compositional semantics explains how a speaker who has never met a sentence can nonetheless compute what it means.
 - **Systematicity** — the ability to understand *the dog chased the cat* is not independent of the ability to understand *the cat chased the dog*. The two are systematically related because they are built from the same parts under the same rules. Compositionality predicts exactly this clustering of abilities.
