@@ -42,7 +42,7 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 
 - [P1] Goldberg, A.E. 1995. *Constructions: A Construction Grammar Approach to Argument Structure.* Chicago.
   why: the canonical statement of constructions as form–meaning pairings; needed for `constructional` tag grounding.
-  status: wanted
+  status: **SECONDARY-ONLY / primary UNREACHABLE as OA** (2026-06-25, session 104) → [`source/goldberg-1995-constructions`](sources/goldberg-1995-constructions.md). In-print Chicago monograph, no OA full text or readable preview: publisher catalogue only; Google-Books preview JS-walled (served no body text); all Princeton self-archive routes HTTP 403; Sci-Hub not attempted (policy). The construction **definition** (p. 4) + caused-motion/way-construction **stimulus locators** (pp. 152, 163, 165, 199–218) are catalogued **via fetched named scholarly secondaries** (two Hans C. Boas CxG chapters quoting Goldberg 1995 verbatim with locators; one CxG preprint for framing; one excerpt-notes page for the p. 1 thesis — the weakest link, flagged), every quote flagged "primary NOT consulted." Theory source, **not a human anchor**. Stays listed: a later session reaching a legitimate full text should re-verify each quote/locator against Goldberg's own pages and consider promoting status (Firth/Fillmore precedent).
 - [P1] Goldberg, A.E. 2006. *Constructions at Work.* OUP.
   why: usage-based extension; bridges to distributional anchors.
   status: wanted
