@@ -39,6 +39,36 @@ against the observed `sep_i`/`leak_i` distributions — design condition e) runs
 claude `max_tokens=512`; re-measure claude's per-call cost first, condition d) then the DISTRACT
 control (its null reported FIRST), then writes the result + an independent post-run verifier.
 
+## Day-1 RESULTS (session 107, UTC 2026-06-25) — the OBSERVED distributions the pre-run critic reads
+
+The text-only freeze is complete (`python3 analyze.py` regenerates this). **No image arm has run.**
+
+- **TEXT (descriptor) arm accuracy** (over the frozen 120): claude **0.750** / gpt **0.725** /
+  gemini **0.808**. The non-caption Option-B descriptor baseline is **not saturated** (v1's
+  referent-naming captions ran .86–.88) — it leaves real text-failed headroom, the point of v2.
+- **Separability `sep_i`** (fraction of 3 models correct) over the 120: `{0: 16, 1/3: 19, 1: 85}`.
+  Strata: **under-determined (sep≤1/3) = 35**, intermediate (2/3) = **0**, **saturated (sep=1) = 85**.
+  **Both reported bins clear the ≥15 floor** (v1 failed at 7<8) → the binned interaction would be
+  **credited** next session. *Transparency:* the seeded draw rule (fill saturated first to guarantee
+  that floor) left **0 intermediate items**, so the continuous `sep_i` companion has a gap at 2/3;
+  the rule was fixed before the covariate was scored (`draw_stratified.py`), so it is not retuned.
+- **Option-A FLOOR calibration** (bare index labels; target chance 0.10): pooled **0.122**
+  Wilson[0.092, 0.160] (includes 0.10). claude 0.092 (clean), gpt 0.117 (near-clean), but
+  **gemini 0.158 Wilson[0.104, 0.234] — marginally ABOVE chance** (lower bound 0.104 > 0.10). The
+  linguistic context + a position/label prior is doing a little covert work for **gemini specifically**.
+  The design names an above-chance floor a **pre-run-critic NO-GO trigger**; here it is marginal and
+  gemini-only (pooled and claude/gpt are at/near chance), so it is **flagged, not auto-resolved** —
+  a load-bearing input to next session's GO/NO-GO.
+- **Option-C LEAK audit** (held-out gpt referent recovery; 0 none / 1 partial / 2 high):
+  **154 / 20 / 26** → high-leak rate **0.130**. Spearman(`leak_i`, `sep_i`) = **0.160** — a **weak**
+  positive (mild residual contamination, well short of the strong correlation that would trigger the
+  Option-C circularity warning). 13% of gold descriptors still let gpt recover the exact target word
+  (e.g. mustard seeds, whose visual form is itself near-diagnostic); this covariate is carried, not
+  regressed out.
+
+**Day-1 billed: $4.72482** (descriptors $4.01649 + text $0.53545 + floor $0.12724 + leak $0.02299 +
+preflights $0.02265). Recorded in [`config/budget.md`](../../../config/budget.md).
+
 ## What's committed vs out of git
 
 - **Committed:** the CC-BY-NC annotation overlay (`frozen/en.test.{data,gold}.v1.1.txt`), the built

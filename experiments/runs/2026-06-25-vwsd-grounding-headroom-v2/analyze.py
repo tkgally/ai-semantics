@@ -153,8 +153,9 @@ def main():
             common = [iid for iid in sep if iid in leak]
             if len(common) >= 3:
                 rho = spearman([leak[i]["leak_score"] for i in common], [sep[i] for i in common])
-                print(f"   Spearman(leak_i, sep_i) over {len(common)} items = "
-                      f"{rho:.3f}  (strong positive -> residual-contamination warning)")
+                mag = ("strong -> residual-contamination WARNING" if abs(rho) >= 0.4
+                       else "moderate" if abs(rho) >= 0.25 else "weak -> mild residual contamination")
+                print(f"   Spearman(leak_i, sep_i) over {len(common)} items = {rho:.3f}  ({mag})")
 
     # ---- RESULT sections (day 2+) ----
     if text and image:
