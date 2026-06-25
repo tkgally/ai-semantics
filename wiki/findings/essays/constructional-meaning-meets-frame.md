@@ -1,0 +1,90 @@
+---
+type: essay
+id: constructional-meaning-meets-frame
+title: Constructional meaning meets the frame — the argument-structure construction as a grammatical frame-evoker
+meaning-senses:
+  - constructional
+  - inferential
+status: draft
+contingent-on: []
+created: 2026-06-25
+updated: 2026-06-25
+links:
+  - rel: depends-on
+    target: concept/constructional-meaning
+  - rel: depends-on
+    target: concept/frame-and-prototype-semantics
+  - rel: depends-on
+    target: concept/coercion
+  - rel: depends-on
+    target: source/goldberg-1995-constructions
+  - rel: depends-on
+    target: source/fillmore-1982-frame-semantics
+  - rel: depends-on
+    target: essay/frame-semantics-third-company
+---
+
+# Essay: constructional meaning meets the frame
+
+> **Status: draft (2026-06-25). A philosophical-track essay arguing in the project's own voice; the grammatical companion to [`essay/frame-semantics-third-company`](frame-semantics-third-company.md).** It introduces **no new empirical claim**: every empirical assertion inside it cites the in-repo page that already carries it, and the original part is the argument — a *sorting* move that names the argument-structure construction as a grammatical frame-evoker, a cousin (by inheritance, not coincidence) of Fillmore's lexical frame. **Both** founding premises are **secondary-only**, never primary-read: Goldberg's construction definition and caused-motion examples are carried by [`source/goldberg-1995-constructions`](../../base/sources/goldberg-1995-constructions.md) *via* fetched named secondaries (Boas 2021 draft, attributed "Goldberg 1995: 4"; Boas "Cognitive Construction Grammar" chapter, attributed "Goldberg 1995: 152"), and the weakest "constructions carry meaning" thesis quote is carried via the IIT-Kanpur excerpt page (p. 1, no firsthand transcription, OCR slip flagged); Fillmore's frame definition is carried by [`source/fillmore-1982-frame-semantics`](../../base/sources/fillmore-1982-frame-semantics.md) *via* metaphorhacker.net **with no page locator**, with the paper's opening sentences read only via a 2006-reprint preview (pagination from p. 373, **not** the 1982 *Morning Calm* original). No primary page of either work is asserted as read here. **Revision trigger:** if a later session reaches the Goldberg 1995 primary or the Fillmore 1982 primary (or the full Geeraerts 2006 reprint) and finds the construction definition, the caused-motion examples, or the frame definition misstated by its secondary — or the locators wrong — revise or retract this essay's premise and re-state the sorting accordingly.
+
+## The position
+
+The companion essay [`essay/frame-semantics-third-company`](frame-semantics-third-company.md) sorted the *distributional* side: it named Fillmore's evoked frame as a third reading of "knowing a word by its company," alongside Harris's co-occurrence neighbourhood and Firth's situation, and left the grounding dispute open. This essay does the **grammatical** counterpart, and a different move. Where that essay sorts three *companies*, this one names a single *kinship*: the argument-structure construction in Goldberg's sense is itself a **frame-evoker**, doing for grammar what Fillmore's frame does for the lexicon. The bounded thesis is a sorting, not an empirical one. Fillmore's frame is a structured background of relational world-knowledge a *word* evokes; Goldberg's argument-structure construction carries content a *form* evokes that the parts do not supply. The two are not the same claim, but they are **cousins by inheritance** — Construction Grammar builds the "meaning" half of its form–meaning pairings *on* frame semantics — and naming the kinship locates precisely *what* the project's caused-motion and *way*-construction probes test a model against: not the verb's lexical frame but the **construction's** evoked scene. It leaves the grounding question — can form-distribution alone encode such a structured inferential background? — exactly where the companion essay left it: open, and declined.
+
+## A word evokes a frame; a form evokes a scene
+
+Start with the two founding statements, each at the provenance the source pages allow and no further.
+
+**The lexical side: Fillmore's frame.** A word's meaning, on frame semantics, is grasped only against a structured chunk of relational world-knowledge it evokes. The most-quoted statement of the frame notion, as the source page carries it:
+
+> "By the term 'frame' I have in mind any system of concepts related in such a way that to understand any one of them you have to understand the whole structure in which it fits…" (quoted *via* metaphorhacker.net 2014, attributing it to Fillmore 1982; the Fillmore primary was **not consulted** for this fragment and the secondary gives **no page number**; [`source/fillmore-1982-frame-semantics`](../../base/sources/fillmore-1982-frame-semantics.md), §"The definition of 'frame'")
+
+A frame is a structure of inferential relations among concepts: to have one node is to have the whole structure of relations it sits in. The standard illustration the concept page carries is the commercial-transaction scene that *buy* and *sell* both profile, with its fixed roles — buyer, seller, goods, money ([`concept/frame-and-prototype-semantics`](../../base/concepts/frame-and-prototype-semantics.md), §"Frame semantics: meaning against a structured background"). The evoking form, on the lexical side, is a **word**.
+
+**The grammatical side: Goldberg's construction.** A construction, on Construction Grammar, is a conventionalized pairing of form and meaning not fully predictable from its parts. The book's canonical definition, as the source page carries it:
+
+> "C is a CONSTRUCTION iffdef C is a form-meaning pair <Fi, Si> such that some aspect of Fi or some aspect of Si is not strictly predictable from C's component parts or from other previously established constructions" (quoted *via* Boas 2021 draft, which gives the locator "(Goldberg 1995: 4)"; the primary was **not consulted** for this fragment; [`source/goldberg-1995-constructions`](../../base/sources/goldberg-1995-constructions.md), §"The definition of a construction")
+
+And the book's opening thesis, at the weakest provenance the source page flags:
+
+> "it is argued that constructions themselves carry meaning, independently of the words in the sentence." (carried *via* the IIT-Kanpur "Book Excerptise" page, attributed p. 1, which does **not** claim firsthand transcription and shows an OCR slip; corroborated in substance, not verbatim, by the Boas framing; [`source/goldberg-1995-constructions`](../../base/sources/goldberg-1995-constructions.md), §"The thesis that constructions carry meaning")
+
+The argument-structure construction's content is unmistakable in the coercion cases, where the verb cannot supply the inference. The textbook caused-motion examples, as the source page lists them by Boas's attribution:
+
+> "a. They laughed the poor guy out of the room. b. Frank sneezed the tissue off the table. c. Mary urged Bill into the house." (quoted *via* the Boas "Cognitive Construction Grammar" chapter, attributed "(Goldberg 1995: 152)"; primary not consulted; [`source/goldberg-1995-constructions`](../../base/sources/goldberg-1995-constructions.md), §"The caused-motion examples")
+
+*Frank sneezed the tissue off the table* reads as *the sneezing caused the tissue to move* — but the intransitive *sneeze* denotes no motion and licenses no caused-motion entailment on its own. The inference is not in the verb and not in any single lexical part; it is contributed by the construction ([`concept/coercion`](../../base/concepts/coercion.md)). The evoking form, on the grammatical side, is an **argument-structure pattern**.
+
+So set the two side by side. A word (Fillmore) evokes a structured background of relational world-knowledge. An argument-structure pattern (Goldberg) evokes a structured causation-of-motion scene with its roles — an agent, a moved thing, a path. In both cases a **conventional form evokes a structured inferential background that its parts do not fully predict.** The construction does for the grammar what the frame does for the lexicon.
+
+## The sorting: cousins by inheritance, not coincidence
+
+The kinship is not a loose analogy the essay imposes. It is an **inheritance** the in-repo pages already record. Goldberg's construction does not pair a form with a truth-functional atom; it pairs a form with a *frame* — the caused-motion construction "evokes a causation-of-motion scene (an agent, a moved thing, a path)" exactly as a word evokes its frame ([`concept/frame-and-prototype-semantics`](../../base/concepts/frame-and-prototype-semantics.md), §"Frame semantics ties the lexical and grammatical wedges"). Construction Grammar cashes out the "meaning" half of a form–meaning pairing *in frames*: as the concept page puts it, "frame semantics is the semantic backbone of Construction Grammar," and Fillmore is a co-founder of the latter. The source page for Goldberg records the same direction of dependence: "Goldberg builds constructional meaning on Fillmore's frame semantics" ([`source/goldberg-1995-constructions`](../../base/sources/goldberg-1995-constructions.md), §"Bearing on this project"), and the Goldberg page is named the "constructional companion" to the Fillmore page "on the lexical↔grammatical link." So the two threads meet not by chance but because the grammatical one was *built on* the lexical one.
+
+That is what makes them cousins rather than identical claims. Name the meeting point and the difference precisely:
+
+- **Where they meet.** Both say: a conventional form evokes a structured *inferential* background that its parts do not fully predict. The background is a structure of relations among concepts (lexical frame) or among scene-roles (constructional scene) — in either case a structure of inferential relations, **not co-occurrence statistics**. This is exactly why both the Fillmore source and the constructional pages co-tag `inferential` alongside `constructional`: "the construction's meaning is exactly an inference the parts do not license" ([`source/goldberg-1995-constructions`](../../base/sources/goldberg-1995-constructions.md), §"Bearing on this project"; [`concept/constructional-meaning`](../../base/concepts/constructional-meaning.md)). The frame is shared currency.
+
+- **Where they differ.** The **evoking form** differs: a *word* (Fillmore, lexical) versus an *argument-structure pattern* (Goldberg, grammatical). And the constructional case sharpens the inferential point to its limit. In the coercion cases the verb is held constant and *stripped* of the relevant entailment, so the construction's content is exactly an inference the parts cannot license — the `constructional`+`inferential` co-tag at its hardest. The lexical frame profiles a background the word's own concept sits in; the construction's scene can *override* the verb's lexical frame, slotting *sneeze* into a causation-of-motion role its lexical frame does not supply ([`concept/coercion`](../../base/concepts/coercion.md); the frame redescription of this as "the construction's frame reshaping the verb's frame" is at [`concept/frame-and-prototype-semantics`](../../base/concepts/frame-and-prototype-semantics.md), §"Frame semantics ties the lexical and grammatical wedges"). Lexical frame: the word's own structured background. Constructional scene: a structured background the *form* can impose against the verb.
+
+The kinship, stated as a sorting and nothing more: the Fillmore (lexical) frame thread and the Goldberg (grammatical) construction thread are two ends of one semantic theory, sharing the "structured inferential background evoked by a conventional form" core, differing in the evoking form (word vs. argument-structure pattern), with the grammatical end inheriting the frame device from the lexical end rather than re-inventing it.
+
+## What naming it buys — and where the bound is
+
+The payoff is precision, the same discipline the companion essay holds to. Naming the construction as a grammatical frame-evoker locates *what* the project's constructional probes are testing a model against. When a caused-motion or *way*-construction probe asks whether a model draws the construction-contributed inference — *the tissue moved*, *the agent traversed the path* — it is **not** asking whether the model has the *verb's* lexical frame. *Sneeze* has no caused-motion in its lexical frame; that is the whole point of choosing it ([`concept/coercion`](../../base/concepts/coercion.md)). The probe is asking whether the model computes the inference the **construction's** evoked scene contributes and the parts do not license. The frame-evoker framing names that target exactly: the construction's scene, not the verb's frame, is what the model is being measured against. (The project's existing caused-motion and *way*-construction results live on the coercion page and its result links; this essay refers to them only generically through [`concept/coercion`](../../base/concepts/coercion.md) and asserts nothing new about any model.)
+
+And here the bound. Naming the construction as a frame-evoker does **not** show that any model has the frame, nor that form-distribution alone *can* encode such a structured inferential background. That last is the open question — and it is the same open question the companion essay names on the lexical side, now stated for the grammatical one. Whether a form-only competence can amount to a structured inferential background (lexical frame or constructional scene) is the live Piantadosi–Hill-versus-Bender–Koller dispute that the companion essay declines ([`essay/frame-semantics-third-company`](frame-semantics-third-company.md), §"Which 'company' a form-only objective can have"). **This essay declines it too.** It names where the construction-as-frame-evoker bears on the grounding question — the construction's scene is a structure of inferential relations, not a co-occurrence statistic, so a demonstration that a model tracks distributional contrast is silent on whether it computes the construction's contributed inference — and it stops there. It locates the question; it does not resolve it.
+
+## What this essay is not
+
+- **Not a primary reading of either founding work.** Goldberg's construction definition and caused-motion examples are secondary-only (via Boas, attributed "Goldberg 1995: 4" and "Goldberg 1995: 152"), the "constructions carry meaning" thesis is the weakest link (IIT-Kanpur excerpt, p. 1, OCR slip flagged), and Fillmore's frame definition is secondary-only (metaphorhacker.net, **no locator**), with the opening sentences via a 2006-reprint preview (pagination from p. 373). No primary page of either is asserted as read. The status blockquote's revision trigger is armed against exactly these dependencies.
+- **Not a new empirical claim.** It re-sorts existing in-repo material into a kinship; it measures nothing and asserts nothing new about any model. Every empirical-adjacent assertion — that the coercion inference is not in the verb, that the construction contributes it — cites the in-repo page that already carries it.
+- **Not a duplicate of the companion essay.** [`essay/frame-semantics-third-company`](frame-semantics-third-company.md) sorts the *distributional* "company" three ways (Harris / Firth / Fillmore) and asks whether the next-token objective instantiates any of them. This essay is about the *grammatical* side — the construction as a frame-evoker — and does not restate that three-way sorting; it borrows only the shared, explicitly-declined grounding dispute.
+- **Not a resolution of the grounding question.** It names where the construction-as-frame-evoker bears on whether form alone can encode structured inferential background, and leaves that question open, declining the Piantadosi–Hill-versus-Bender–Koller dispute exactly as the companion essay does.
+
+## Honesty box
+
+- The essay's *original* contribution is the **sorting / cousin move**: that the argument-structure construction (Goldberg) is itself a frame-evoker, doing for grammar what Fillmore's frame does for the lexicon; that the two threads are **cousins by inheritance** (Construction Grammar builds the "meaning" half of its pairings on frame semantics — an in-repo-recorded dependence, not a coincidence), meeting at "a conventional form evokes a structured inferential background its parts do not predict" and differing in the *evoking form* (word vs. argument-structure pattern), with the constructional case sharpening the inferential point to its limit because the verb cannot license the inference. The sorting is the contribution. It enters no empirical dispute and resolves no grounding question.
+- The strongest thing the essay asserts is that the construction-as-frame-evoker framing **names exactly what the project's caused-motion / way-construction probes test a model against** — the construction's evoked scene, not the verb's lexical frame — and that whether form-distribution alone can encode such a structured inferential background is left **open**, a special case of an explicitly-declined dispute. It does not assert that any model has, or lacks, the construction's frame.
+- Both founding premises are **secondary-only**: Goldberg 1995 (definition via Boas 2021 "Goldberg 1995: 4"; caused-motion examples via Boas CCxG "Goldberg 1995: 152"; the p. 1 "constructions carry meaning" thesis via the IIT-Kanpur excerpt page, the weakest link, OCR slip flagged) and Fillmore 1982 (frame definition via metaphorhacker.net, **no page locator**; opening sentences via a 2006-reprint preview, pagination from p. 373, not the 1982 original). No primary page of either is read-verified here. All provenance states are flagged throughout and in the status blockquote's revision trigger. Nothing here outruns those flags. The weakest single dependency is the p. 1 Goldberg thesis quote; the essay leans its core kinship on the *definition* (p. 4) and the caused-motion *examples* (p. 152), both carried by Boas with locators, rather than on that weakest quote.
