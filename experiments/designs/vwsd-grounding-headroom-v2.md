@@ -15,8 +15,18 @@ first-class Limitations of [`result/vwsd-grounding-headroom-v1`](../../wiki/find
 reasoning-then-truncation parse-fails). Operationalizes the **gating *shape*** of prediction 1 of
 [`conjecture/distributional-saturation-grounding-headroom`](../../wiki/findings/conjectures/distributional-saturation-grounding-headroom.md)
 on VWSD, **explicitly NOT prediction-1-as-written** (the graded-Δ × separability interaction), which
-stays open for a future graded-image resource. Run dir (placeholder date, NOT created):
-`experiments/runs/<date>-vwsd-grounding-headroom-v2/`.
+stays open for a future graded-image resource. Run dir:
+[`experiments/runs/2026-06-25-vwsd-grounding-headroom-v2/`](../runs/2026-06-25-vwsd-grounding-headroom-v2/README.md).
+
+> **BUILD STATUS — DAY 1 EXECUTED (session 107, UTC 2026-06-25).** The text-only condition-(b)
+> freeze is complete: the 1889 Option-B visual-form descriptors over the seeded 200-item pool, the
+> Option-C leak-audit, the descriptor-TEXT separability covariate, the stratified **N = 120** draw
+> (under-determined **35** / saturated **85** — **both clear the ≥ 15 floor**, unlike v1's 7 < 8),
+> and the Option-A floor arm are all generated + checksummed in the run dir. **No image / distract
+> arm has run.** Day-2+ (the IMAGE then DISTRACT arms) stays gated on a **fresh independent pre-run
+> critic GO** against the observed `sep_i`/`leak_i` distributions (condition e) and a re-measured
+> claude raised-`max_tokens` per-call cost (condition d). The `result/vwsd-grounding-headroom-v2`
+> still does not exist.
 
 > **This freezes the YARDSTICK only — no probe has run.** No descriptors are generated, no leak-audit
 > is scored, no images are fetched, no model call is made by freezing this design. The result
