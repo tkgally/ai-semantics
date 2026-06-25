@@ -1,0 +1,105 @@
+---
+type: theory
+id: statistical-preemption-and-constructional-productivity
+title: Statistical preemption and productivity — what a usage-based learning account does and does not let us read into a model's constructional behavior
+meaning-senses:
+  - constructional
+  - distributional
+  - inferential
+status: draft
+contingent-on: []
+created: 2026-06-25
+updated: 2026-06-25
+links:
+  - rel: depends-on
+    target: source/goldberg-2006-constructions-at-work
+  - rel: depends-on
+    target: concept/constructional-meaning
+  - rel: refines
+    target: theory/constructional-meaning-in-llms
+  - rel: depends-on
+    target: result/way-construction-traversal-v1
+  - rel: depends-on
+    target: result/argument-structure-coercion-v2
+  - rel: depends-on
+    target: result/caused-motion-near-miss-v2c
+  - rel: depends-on
+    target: result/coercion-implicit-cue-v2b
+  - rel: depends-on
+    target: conjecture/way-construction
+  - rel: depends-on
+    target: conjecture/caused-motion-construction
+  - rel: depends-on
+    target: open-question/distributional-vs-inferential-constructional
+  - rel: depends-on
+    target: open-question/constructional-vs-frequency-confound
+---
+
+# Theory (draft): statistical preemption and productivity as a reading of a model's constructional behavior
+
+> **Status: draft (2026-06-25). A synthesis page, not a result.** It introduces **no new empirical claim about any model.** It takes Goldberg's now-sourced 2006 account of how constructional generalizations are *learned and constrained* and asks a single, bounded question: if that account held of a model the way it is claimed to hold of human learners, *what would the model's behavior look like* — and which of the project's existing results would and would not count as evidence under that reading. Every model-behavior statement below is either a citation of an existing in-repo result's verdict or an explicitly hypothetical "would predict / would look like" framing. The load-bearing section is the last: Goldberg 2006 is a theory of **human** learning and is **NOT a human anchor**; matching a preemption prediction is **not** evidence a model learned the way humans do.
+
+## The theoretical object
+
+[`theory/constructional-meaning-in-llms`](constructional-meaning-in-llms.md) builds the project's evidence ladder (Tiers 0–4) for "has the model internalized a construction's meaning, not only its form." Its **Tier 3** paragraph already leans on Goldberg: generalization to held-out lexical material is "Goldberg's productivity criterion and the project's main defense against memorization," and the held-out-item check is named there as "the main defense." That thread was, until now, an unsourced appeal to "Goldberg's productivity criterion." [`source/goldberg-2006-constructions-at-work`](../../base/sources/goldberg-2006-constructions-at-work.md) supplies the provenance — Goldberg's own 2009 précis of the 2006 book — and with it a *second* lever the ladder has not yet used explicitly: **statistical preemption**. This page **refines** the main theory page by deepening exactly that Tier-3 thread into a two-lever reading (productivity *and* preemption), and by drawing the sharp bound that reading carries.
+
+The point is not to add a rung. It is to ask what a *learning-theoretic* gloss on the existing rungs does and does not license — and to name a framing for a future probe without designing or running it.
+
+## Goldberg's two levers — learning and constraint
+
+The 2006 book is the usage-based extension of Construction Grammar: it turns from *that* argument-structure patterns are meaningful pairings ([`concept/constructional-meaning`](../../base/concepts/constructional-meaning.md)) to *how* such generalizations are acquired from finite input and **constrained** so the learner avoids overgeneralizing. Two mechanisms carry that account, as the source page quotes them verbatim from Goldberg's précis:
+
+> "Two factors are argued to play a central role: statistical preemption or repeatedly witnessing a word in a competing pattern, and a pattern's degree of openness: the variability of the items that occur in a given pattern."
+
+**Lever 1 — productivity (degree of openness / type frequency).** A construction's productivity is the variability of items that occur in it; the more open the slot, the more readily the generalization extends to *new* items. This is the constructive side: it is what lets a learner apply a construction to material never heard in it.
+
+**Lever 2 — statistical preemption.** The constraining side. The learner has no direct negative evidence (no one says "*that* is ungrammatical"); instead, repeatedly hearing a *competing* pattern where another might have been expected is *indirect* negative evidence that the unheard one is not conventional. Crucially, the source page flags that preemption is **not raw token frequency** — it is *meaning-conditioned*:
+
+> "Upon repeated exposures to one construction in lieu of another construction with closely related meaning, the learner can infer that the second construction is not conventional."
+
+> "more specific knowledge always preempts general knowledge in production, as long as either would satisfy the functional demands of the context equally well."
+
+The worked case the précis uses is *She explained him the problem* (??) being preempted by the repeatedly-heard *She explained the problem to him*. The conclusion the book draws ties the two levers together:
+
+> "generalizations are constrained by the indirect negative evidence children receive involving statistical preemption of non-occurring patterns, together with conservative induction based on the degree of openness."
+
+This is, in Goldberg's terms, an account of **human** acquisition from frequency-structured input. The whole of this page hangs on keeping that fact in view.
+
+## What the account would predict a model's behavior to look like
+
+Suppose — purely as a reading, the "if it held" framing — that a model had internalized constructions the way the usage-based account describes. Each lever then predicts a *signature* in behavior. State these as predictions of the *theory under that supposition*, never as established facts about a model.
+
+**Productivity → generalization to held-out material.** If the model has the construction as an *open* schema rather than a stored list of seen instances, its constructional behavior should extend to lexical items it is unlikely to have seen *in that construction*. This is exactly the Tier-3 face already on the main ladder: held-out generalization converts a "the model stored these instances" story into a "the model has the schema" story. The usage-based account names *why* this is the right test — productivity *is* degree of openness — and the source page records the projection: the theses are "usable to frame a probe of whether a model's productivity/blocking behavior matches a preemption account." The productivity prediction is a **positive** signature: behavior should *appear on new items*.
+
+**Preemption → blocking / dispreference of an overgeneralized form when a conventional competitor exists.** If the model's generalizations are *constrained* the way preemption describes, then where a more specific conventional pattern reliably occupies a slot, the model should *disprefer* the overgeneralized competitor — not produce it, or rate it lower, *when a conventional alternative would do the same functional work*. The preemption prediction is therefore a **negative / asymmetric** signature: behavior should be *withheld or dispreferred* exactly where a competing pattern preempts. Note the two levers pull in opposite directions and are meant to: openness extends the generalization, preemption fences it. A model that matched *both* would over-extend a construction to new items **and** stop short of the specific cases a conventional competitor blocks.
+
+## How this maps onto the project's existing results
+
+The project's coercion / caused-motion / *way* line already exercises the *productivity* face directly, and touches the *preemption* face more obliquely. Read the existing verdicts under the two-lever gloss — accurately, and without strengthening any of them.
+
+**The productivity (generalization) face — the coercion/way line.** The construction overriding a non-motion verb to contribute an inference the verb cannot supply is the *generalization/productivity* face: the schema applies to material the verb's lexical frame does not license. [`result/way-construction-traversal-v1`](../results/way-construction-traversal-v1.md) reports its confirm bar "met by all three models on both instruments" (way path-traversal rate ≥77.8%, gap vs. the location control ≥77.7 pp), with the anti-motion stress category at ceiling for every model and the idiomatic over-generalization guard "at 0% for all models" — i.e. the traversal inference is drawn off the *construction*, not the surface "*way*" string. Its conjecture [`conjecture/way-construction`](../conjectures/way-construction.md) (status `tested`) carries Prediction 3 — robustness to verb semantics — as the construction-not-verb check. [`conjecture/caused-motion-construction`](../conjectures/caused-motion-construction.md) makes the productivity criterion explicit in its own confirm clause: the effect must hold "for **held-out / low-frequency verbs** as well as canonical ones," with its `weak` outcome defined as the effect holding "only for canonical high-frequency items and collaps[ing] on held-out verbs." That is Goldberg's degree-of-openness test, stated as a falsifier. The AANN line on the main ladder supplies the cleanest held-out instance the project owns: its Tier-3 result replicates the class gradient "on a locked, frequency-matched held-out adjective list" ([`theory/constructional-meaning-in-llms`](constructional-meaning-in-llms.md), Tier 3, with the honest caveat there that replication is uneven by noun class). So the *productivity* lever has in-repo behavioral hooks, and the project's existing held-out checks are precisely its operationalization.
+
+**The preemption (blocking) face — more oblique, and not cleanly isolated.** No project result was designed as a preemption probe, so read here with care. The closest behavioral analogue is the *cancellation/withholding* asymmetry the coercion line shows. [`result/argument-structure-coercion-v2`](../results/argument-structure-coercion-v2.md) finds that "all three models drop to floor on the cue items — affirm 0–20%, a 60–100 pp drop from canonical" when an explicit clause denies the inference, reading this as the v1 ceilings being "cue-sensitive, not a brittle template." [`result/caused-motion-near-miss-v2c`](../results/caused-motion-near-miss-v2c.md) shows the inference is "genuinely keyed on the construction form," with the construction affirmed at 100% but matched near-miss frames "withheld substantially" (a "62.5–100 pp [gap] under forced-choice"). These are *withholding* behaviors — but they are **not** preemption in Goldberg's sense. Preemption is "a competing *conventional* pattern blocks an overgeneralized one"; these results are "an explicit denial, or a non-constructional form, withholds an inference." The mechanisms are different, and the page must not conflate them. The honest statement is: the project has shown the construction-contributed inference is *cancellable and form-keyed*, which is a *precondition* for a preemption story (the model is not running a flat "this frame → yes" template), but it has **not** shown the meaning-conditioned-competitor blocking that *is* preemption. The result that most sharply bounds even the precondition is [`result/coercion-implicit-cue-v2b`](../results/coercion-implicit-cue-v2b.md): the models "do NOT block the impossible coercion from world knowledge alone — they need the explicit outcome statement," so the cancellation competence is "explicit-outcome parsing, not world-model integration." A genuine preemption signature would be subtler still than the world-knowledge integration that result already finds absent.
+
+So the map is asymmetric, and that asymmetry is itself the finding of this synthesis: the project has solid *productivity*-face hooks (held-out generalization, built into the conjectures' confirm bars and realized in the AANN Tier-3 result) and only *preconditions* for a *preemption*-face reading (cancellability and form-keying), with no isolated preemption test in the record.
+
+## The sharp bound — load-bearing honesty
+
+Everything above is a *reading*, and the reading licenses **no human-comparison claim**. Three points, each non-negotiable.
+
+**Goldberg 2006 is a theory of human learning and is NOT a human anchor.** The source page states this in its own "What it cannot ground" section: like the other theory primaries, it "grounds a *theory* a model may instantiate, never a result about a model — **it is NOT a human anchor.** (Its empirical content is about *human* language learning … that is not a project resource and confers no anchor here.)" A theory page does not need an `anchors:` link, and this one carries none, by design — but the deeper point is that no number on this page could be anchored *to Goldberg 2006* even if it wanted one, because the book's empirical content is about children acquiring English, not about any model. The project's actual human anchors for this construction line are elsewhere (the Scivetti CxNLI answer-key for the *way*/caused-motion conjectures; corpus production for the dative), and the off-ceiling coercion results are explicitly `internal-contrast-only`.
+
+**A model matching a preemption or productivity prediction is NOT evidence it learned the way humans do.** This is the project's standing distributional-vs-inferential tension ([`open-question/distributional-vs-inferential-constructional`](../open-questions/distributional-vs-inferential-constructional.md)) applied to a learning theory rather than to a single result. Distributional structure can produce **productivity-like** behavior — generalization to new items — without the open-schema construal Goldberg posits: a sufficiently rich co-occurrence model extends patterns to novel items for distributional reasons alone. And distributional structure can produce **blocking-like** behavior — dispreferring a form — without the *meaning-conditioned* inference preemption requires: a competing pattern that is simply *more frequent in context* will be preferred for frequency reasons, which is exactly the raw-token-frequency mechanism Goldberg's account is at pains to *distinguish itself from* (the source page's verbatim line: "frequency plays a role in the process of statistical preemption exactly because the preemption is statistical" — i.e. meaning-conditioned, not raw frequency). So the very feature that makes preemption a *human-learning* claim — that it is meaning-conditioned, not frequency-driven — is the feature a behavioral match cannot establish from the outside. A model can look productive and look preemption-constrained while running neither mechanism. This is the same wall [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md) names: separating constructional sensitivity from an n-gram/frequency confound is unsolved, and a preemption reading inherits that confound wholesale, because preemption's signature (a frequent competitor wins) is *behaviorally indistinguishable* from the frequency confound unless the meaning-conditioning is independently pinned down.
+
+**This page introduces no new empirical claim, and the grounding question stays open.** Nothing here asserts that any model has, or lacks, a usage-based construction. It sharpens what the *existing* results would and would not show under a productivity/preemption reading: they show productivity-face generalization (held-out items) and a cancellation/form-keying *precondition* for a preemption story, but they do not — and on the argument above, a purely behavioral text-only probe largely *cannot* — separate the human meaning-conditioned mechanism from a distributional one that mimics it. The grounding question ([`concept/constructional-meaning`](../../base/concepts/constructional-meaning.md)'s live tension, and the broader Piantadosi–Hill-versus-Bender–Koller dispute the project declines) is left exactly where the main theory page and the companion essays leave it: named, and open.
+
+## A testable framing for a future probe (named, not designed)
+
+The synthesis points at one framing a *later* session could turn into a design — recorded here as a framing only, with no items, thresholds, panel, or run attached. **A preemption-vs-productivity probe** would contrast (a) a construction's *productivity* signature — does the model extend the construction to genuinely held-out items, the Tier-3 test the conjectures already specify — against (b) a *preemption* signature constructed to be **meaning-conditioned, not frequency-driven**: does the model disprefer an overgeneralized form *specifically* where a conventional competitor of closely-related meaning reliably occupies the slot (Goldberg's *explained him the problem* / *explained the problem to him* shape), with the competitor's *frequency* controlled so that any blocking cannot be read off raw token counts. The whole difficulty — and the reason this is a framing and not a design — is the bound above: the probe would have to engineer the frequency control that lets a *meaning-conditioned* blocking be distinguished from a *frequency-conditioned* one, which is the unsolved [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md) restated. Absent that control, a "blocking" result is Tier-relevant evidence about distributional competition at most, **not** evidence of a preemption mechanism. This page does not claim the control is achievable; it names the framing and hands the design question forward.
+
+## Honesty box
+
+- **Original contribution.** The page's own move is a *mapping*: it pairs Goldberg's two learning levers — **productivity** (degree of openness / type frequency) and **statistical preemption** (meaning-conditioned indirect negative evidence) — onto the project's existing evidence apparatus, identifying productivity with the **held-out-item generalization test** already built into the Tier-3 rung and the *way*/caused-motion conjectures' confirm bars, and identifying preemption with a **blocking/dispreference** signature for which the project so far has only *preconditions* (the coercion line's cancellability and form-keying), not an isolated test. The asymmetry between the two faces — solid productivity hooks, only preconditions for preemption — is the synthesis's finding. It refines, and does not duplicate, [`theory/constructional-meaning-in-llms`](constructional-meaning-in-llms.md)'s Tier-3 paragraph.
+- **The sharp bound.** Goldberg 2006 is a theory of **human** acquisition and **NOT a human anchor**; this page carries no `anchors:` link and could not be anchored to the book if it tried. A model matching a productivity or preemption *prediction* is **not** evidence it learned the way humans do — distributional structure can mimic both productivity-like generalization and blocking-like dispreference without the meaning-conditioned mechanism Goldberg posits, and preemption's frequency-vs-meaning distinction is exactly the thing a purely behavioral match cannot settle ([`open-question/distributional-vs-inferential-constructional`](../open-questions/distributional-vs-inferential-constructional.md), [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md)).
+- **No new empirical claim; grounding open.** Nothing here asserts that any model has or lacks a usage-based construction. The page sharpens what existing results would and would not show under a preemption/productivity reading and names a *framing* for a future probe (productivity vs. a meaning-conditioned blocking signature, with the frequency confound controlled) **without designing or running it**. The grounding question — whether form-distribution alone can carry the construction's contributed inference — is named and left open, as on the main theory page and the companion essays.
+- **Provenance.** Every Goldberg quote is taken verbatim from [`source/goldberg-2006-constructions-at-work`](../../base/sources/goldberg-2006-constructions-at-work.md) as that page carries it — Goldberg's own 2009 *Cognitive Linguistics* précis of the 2006 book (author-primary text), **not** a primary reading of the book; the source page's `secondary-only` status and its single book-page locator (p. 5, for the construction definition, not quoted here) are inherited. No Goldberg quote beyond those on the source page is used. Every result verdict is quoted as the result page states it; no number is invented.
