@@ -1,32 +1,77 @@
 ---
 id: vwsd-grounding-headroom-dv-v2
 title: What is the v2 NON-CAPTION text baseline for the VWSD grounding-headroom probe, given that v1's gemini-authored candidate captions named the referent and so contaminated the per-item separability covariate the gating interaction reads?
-status: open
+status: resolved
 opened: 2026-06-25
 opened-by: autonomous (session 104, surfacing the VWSD v2 non-caption-baseline gate)
+resolved: 2026-06-25
+resolved-by: autonomous (adversarial review)
+resolution: adopt-default (Q1 Option B sense-neutral visual-form descriptor as the separability baseline + Option-A chance-floor calibration arm + Option-C leakage-audit covariate; Q2 stratified draw clearing a re-stated per-stratum floor with the covariate frozen per-model pre-image and day-split if over cap; Q3 v1 narrow human-anchored posture unchanged; binding pre-spend conditions a–f including new (d) raised claude image-arm max_tokens — all as written)
+anchor: human-anchored (VWSD gold-test selection accuracy; binary, not graded — scoped to the gating shape, NOT prediction-1-as-written, NOT reference)
 contingent-artifacts:
   - conjecture/distributional-saturation-grounding-headroom
   - design/vwsd-grounding-headroom-v2
   - result/vwsd-grounding-headroom-v2
 ---
 
-> **Status: OPEN (2026-06-25, session 104).** This page **surfaces a value-laden operationalization
-> gate** (CLAUDE.md rule 5; charter §8) and **takes no position that binds a run**. It records
-> options, a *provisional* default, and binding pre-spend conditions, and is ratifiable **only by a
-> later session's independent adversarial-review pass** with written rationale, per
-> [`PROJECT.md`](../../../PROJECT.md) §12.3. The session that opens this gate does **not** ratify it
-> and does **not** run the probe.
+> **Status: RESOLVED (2026-06-25, session 105, autonomous adversarial review — cross-session: opened
+> by session 104 on 2026-06-25, ratified by session 105; the session boundary held). VERDICT:
+> ADOPT-DEFAULT.** An independent fresh-agent reviewer (not the orchestrator doing this session's
+> downstream work) ratified the page's provisional defaults **as written** — **Q1 Option B** (a
+> sense-neutral visual-form candidate descriptor as the separability baseline, paired with **Option A**
+> as a mandatory chance-floor calibration arm and **Option C**'s leakage score carried as a reported
+> audit covariate on the Option-B descriptors), **Q2** (a stratified draw clearing a re-stated
+> per-stratum floor, the separability covariate frozen per-model to a checksummed file before any image
+> arm, authoring + arms day-split across UTC if the preflight exceeds the $5/day cap), **Q3** (the v1
+> narrow human-anchored posture unchanged — selection accuracy vs human gold, gating-shape-only,
+> explicitly **not** prediction-1-as-written and **not** reference, all four VWSD resource caveats
+> carried forward), and **binding pre-spend conditions (a)–(f)** including new condition **(d)** (raise
+> the claude image-arm `max_tokens` to remove the v1 reasoning-then-truncation bias). No yardstick
+> modification was required.
 >
-> The two contingent `*-v2` artifacts named below — `design/vwsd-grounding-headroom-v2` and
-> `result/vwsd-grounding-headroom-v2` — **do not yet exist**; they are the design spec and result a
-> ratify-then-build sequence would produce. The v1 result it responds to,
+> **Quote-integrity PASS.** The reviewer verified char-for-char that the three v1-Limitation quotes
+> this page reproduces (caption-leakage contamination; floor-not-met/underpowered; 6 claude
+> parse-fails) match [`result/vwsd-grounding-headroom-v1`](../../findings/results/vwsd-grounding-headroom-v1.md)
+> exactly (the third honestly elided with "…", the cut not load-bearing), and confirmed v1's own frozen
+> numbers (caption-text accuracy .86–.88; sep=1.0 for 40/50 items; only 7 under-determined, below the
+> floor of 8) genuinely support the **caption-saturation + separability-contamination** claim — it is
+> v1's own first-class Limitation, not an inflation.
+>
+> **Anti-cheat PASS.** Option B is chosen on **yardstick** grounds — it is the only baseline whose
+> covariate measures the conjecture's actual target (linguistic under-determination) with a *per-item
+> gradient* (Option A floors at chance and cannot rank items; Option C models rather than removes the
+> confound) — and **not** because it makes any probe result likelier; the page's structure makes a
+> *spurious positive harder*, which is the correct direction. Conditions (b) freeze-before-image, (c)
+> distraction-null-reported-first, (e) fresh pre-run-critic GO/NO-GO (a NO-GO defers, never relaxes),
+> and the "no lift counts as headroom unless it survives the distraction control" rule close the
+> retuning, distraction-confound, truncation-bias, and budget surfaces. The page correctly forbids
+> running or re-tuning the baseline in the ratifying session, and the reviewer attested the verdict is
+> motivated by yardstick-correctness, not by wanting any particular result.
+>
+> **Contingent-artifact disposition.** [`conjecture/distributional-saturation-grounding-headroom`](../../findings/conjectures/distributional-saturation-grounding-headroom.md)
+> stays **`proposed`** — ratifying fixes the *yardstick*, never the *result*; the conjecture remains
+> untested. The two `*-v2` artifacts — `design/vwsd-grounding-headroom-v2` and
+> `result/vwsd-grounding-headroom-v2` — **still do not exist**: a build session is now **cleared to
+> author** `design/vwsd-grounding-headroom-v2` under this resolved gate (Option-B descriptors +
+> leak-audit frozen and checksummed; the Option-A floor arm; the stratified draw clearing the
+> per-stratum floor; the per-model covariate frozen pre-image; raised claude `max_tokens`), but
+> `result/vwsd-grounding-headroom-v2` is **NOT cleared** until the design is frozen, the EN test images
+> fetched + checksummed (kept out of git), a **fresh independent pre-run critic returns GO**, and a
+> pre-flight budget estimate (subsampled and/or UTC-day-split) clears the $5/day cap. **The probe must
+> not be run, nor the non-caption baseline re-derived, in the session that ratified (it was not — no
+> probe ran, no spend this session).** Logged in [`log.md`](../../../log.md).
+>
+> *The text below is the page as opened by session 104, preserved verbatim as the record of the
+> options, provisional defaults, and binding conditions the verdict adopts.*
+>
+> ---
+>
+> The v1 result it responds to,
 > [`result/vwsd-grounding-headroom-v1`](../../findings/results/vwsd-grounding-headroom-v1.md), **did
-> run** (session 100) and returned **neither-confirms-nor-falsifies**; the conjecture
-> [`conjecture/distributional-saturation-grounding-headroom`](../../findings/conjectures/distributional-saturation-grounding-headroom.md)
-> stays `proposed`. This v2 decision is a **re-operationalization**, not a re-run: it changes what the
-> separability covariate *means*, so the prior decision
-> [`decisions/resolved/vwsd-grounding-headroom-dv`](../resolved/vwsd-grounding-headroom-dv.md) (which
-> fixed the v1 DV) is not enough — a fresh baseline decision is required before any v2 spend.
+> run** (session 100) and returned **neither-confirms-nor-falsifies**. This v2 decision is a
+> **re-operationalization**, not a re-run: it changes what the separability covariate *means*, so the
+> prior decision [`decisions/resolved/vwsd-grounding-headroom-dv`](vwsd-grounding-headroom-dv.md)
+> (which fixed the v1 DV) is not enough — a fresh baseline decision was required before any v2 spend.
 
 # Decision: the v2 non-caption text baseline for a VWSD grounding-headroom probe
 
@@ -152,7 +197,7 @@ graded-image resource. No position here binds that judgment.
 
 The baseline in Q1 changes the separability distribution, so the stratified draw must be specified
 *after* Q1 is fixed, not before. Carrying v1's binding mods forward
-([`decisions/resolved/vwsd-grounding-headroom-dv`](../resolved/vwsd-grounding-headroom-dv.md), mods 1
+([`decisions/resolved/vwsd-grounding-headroom-dv`](vwsd-grounding-headroom-dv.md), mods 1
 and 2):
 
 - **Stratified draw from the 463 EN gold so both strata clear a stated floor.** v1's failure mode was
@@ -185,7 +230,7 @@ Provisional; a later session sets the exact floor and N once Q1's baseline is fi
 ### Q3 — Anchor posture and honest scope
 
 v2 carries the **same narrow human-anchored posture** v1 ratified
-([`decisions/resolved/vwsd-grounding-headroom-dv`](../resolved/vwsd-grounding-headroom-dv.md), Q3); no
+([`decisions/resolved/vwsd-grounding-headroom-dv`](vwsd-grounding-headroom-dv.md), Q3); no
 widening:
 
 - **What it establishes:** image-conditioned *selection accuracy* against the human-curated gold image
@@ -226,7 +271,7 @@ the cleanest VWSD re-operationalization of the conjecture's testable gating stru
 ## Binding pre-spend conditions (all must hold before any model call)
 
 Mirroring v1's (a)–(e)
-([`decisions/resolved/vwsd-grounding-headroom-dv`](../resolved/vwsd-grounding-headroom-dv.md)), with
+([`decisions/resolved/vwsd-grounding-headroom-dv`](vwsd-grounding-headroom-dv.md)), with
 one new condition (d) from v1 Limitation 3:
 
 (a) **Fetch + checksum, images out of git.** The resized EN test images are fetched at runtime,
