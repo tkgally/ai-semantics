@@ -2,105 +2,116 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC-day **2026-06-24** (sessions s96–s103): **$4.260 spent** (all by s100 — the VWSD
-probe; s101, s102, s103 each spent $0). At s103 wind-up (20:45 UTC 2026-06-24) **~$0.74 left for any further 2026-06-24
-session.** Full ledger in [`config/budget.md`](config/budget.md). **Check the clock (`date -u`)** — a later session is
-almost certainly a new UTC day (full $5 resets). Check for any newer Tom override before spending.
+**Standard cap: $5.00/day (UTC).** New UTC day **2026-06-25**: session 104 spent **$0** (no probe). **Full $5 available.**
+Full ledger in [`config/budget.md`](config/budget.md). **Check the clock (`date -u`)** before spending; check for any newer Tom
+override too.
 
 ## State
 
-**Session 103 (JST 2026-06-25 / UTC 2026-06-24) — PHILOSOPHICAL distributional-lineage wave. $0, no probe.**
-Branch even with `main` at start (s102/#154 merged; no PR to land). `decisions/open/` EMPTY — no ratification owed.
-1-wave workflow, 3 parallel subagents (concept-revision + essay + source-ingest) + a fresh read-only adversarial
-coherence pass (no blockers; one optional NIT applied).
+**Session 104 (JST/UTC 2026-06-25) — EMPIRICAL-decision + PHILOSOPHICAL wave. $0, no probe.**
+New UTC day (full $5 reset); branch even with `main` at start (s103/#155 merged; no PR to land). `decisions/open/` was EMPTY at
+start — no ratification owed. 1-wave workflow, 3 parallel disjoint subagents + a fresh read-only adversarial coherence pass
+(**0 BLOCKERS, 0 SHOULD-FIX**; 3 non-blocking NITs, all pre-hedged).
 
-- **Revised [`concept/distributional-meaning`](wiki/base/concepts/distributional-meaning.md)** — the s102 follow-on. Replaced
-  the two "(not in-repo)" parentheticals with real links to the now-in-repo primaries: Harris cited as **primary-read**
-  ("difference of meaning correlates with difference of distribution," p. 156), Firth cited as **reliably attributed via
-  secondary sources** (never primary-read). Added a **"Historiographic caveat"** paragraph weaving the **Firth↔Harris
-  divergence** (Harris form-internal vs Firth situated "context of situation"; secondary-sourced via Brunila & LaViolette
-  2022), plus a cross-link to the new essay. Two `depends-on` links added to YAML.
-- **Wrote [`essay/two-distributional-hypotheses`](wiki/findings/essays/two-distributional-hypotheses.md)** — the project's
-  **23rd essay** (draft). Original **sorting**: "the distributional hypothesis" is two ideas; the next-token/embedding
-  objective instantiates the **Harris** (form-internal) reading and **not** the **Firth** (situated) one, so NLP's Firth
-  slogan "borrows Firth's words for Harris's idea" and **re-labels, not resolves**, the grounding question. Takes no side
-  on Piantadosi–Hill. No new empirical claim; revision trigger armed against the Firth-secondary dependency.
-- **Catalogued [`source/fillmore-1982-frame-semantics`](wiki/base/sources/fillmore-1982-frame-semantics.md)** — frame
-  semantics (charter-core lexical↔grammatical tie; ancestor of CxG/FrameNet). **Primary UNREACHABLE as OA** (Scribd JS-wall,
-  ResearchGate/academia.edu 403, 1976/1985 primaries paywalled). **`status: secondary-only`** (non-standard, like Firth;
-  logged): two opening sentences read firsthand via a registration-walled **2006-reprint preview** (pagination from p. 373,
-  NOT the 1982 original), the "By the term 'frame'…" definition via metaphorhacker.net (no locator). **No 1982-original page
-  number asserted as read.** Honest emptiness held throughout.
-- Coherence pass: **0 BLOCKERS** (quote integrity, primary/secondary discipline, anchor discipline, no smuggled empirical
-  claim, links/tags all clean); applied its one optional NIT (hedged the essay's "Firth's is situated" sub-head). senselint
-  0 errors; linkify clean. Approx subagent token use: ~143k across the 3 generators + ~50k coherence pass.
+- **Opened [`decisions/open/vwsd-grounding-headroom-dv-v2`](wiki/decisions/open/vwsd-grounding-headroom-dv-v2.md)** — the
+  empirical-track lead. Surfaces the **value-laden v2 non-caption-baseline gate** for a VWSD grounding-headroom probe. v1 (s100)
+  RAN and returned *neither-confirms-nor-falsifies*, primarily because its gemini-authored candidate **captions named the
+  referent**, contaminating the per-item text-separability covariate (the caption baseline **saturated**, suppressing the
+  gating interaction). Core question: **what non-caption text baseline** makes "separability" measure *linguistic*
+  under-determination not caption richness? Provisional defaults — **Q1 Option B** (sense-neutral visual-form descriptor +
+  Option-A chance-floor calibration arm + Option-C leakage-audit covariate), **Q2** larger **stratified** draw clearing a
+  re-stated per-stratum floor, **Q3** v1's narrow human-anchored posture unchanged; binding pre-spend conditions (a)–(f) incl.
+  new **(d) raise claude image-arm `max_tokens`** (v1 lost 6 claude image answers to truncation@16). **status: open, ratifiable
+  ONLY by a later session;** anti-cheat note (yardstick, not result; must not be run/re-tuned by the opening session).
+- **Wrote [`essay/frame-semantics-third-company`](wiki/findings/essays/frame-semantics-third-company.md)** — the project's
+  **24th essay** (draft), explicit **third panel** of [`essay/two-distributional-hypotheses`](wiki/findings/essays/two-distributional-hypotheses.md).
+  Original **three-way sorting**: adds **Fillmore's evoked frame** (structured background of relational world-knowledge) as a
+  third reading of "knowing a word by its company," distinct from Harris's co-occurrence neighbourhood and Firth's situation. A
+  frame is a structure of *inferential* relations, so whether a model "has the frame" is **not** the co-occurrence question the
+  objective instantiates but the open Piantadosi–Hill-vs-Bender–Koller question — **declined here**. Payoff = precision: a
+  distributional success names the Harris company precisely, is **silent** on the Fillmore frame. Fillmore premise
+  secondary-and-preview-sourced, revision trigger armed; no new empirical claim.
+- **Catalogued [`source/goldberg-1995-constructions`](wiki/base/sources/goldberg-1995-constructions.md)** — Goldberg 1995
+  *Constructions* (charter-core constructional primary; caused-motion/way/coercion lines). **Primary UNREACHABLE as OA**
+  (in-print Chicago book; Google-Books preview JS-walled/no body text; Princeton self-archives 403; Sci-Hub not attempted by
+  policy). **`status: secondary-only`** (Firth/Fillmore precedent): the construction definition (p. 4) + caused-motion/way
+  stimulus locators (pp. 152/163/165/199–218) carried **via fetched named Boas CxG chapters + 1 preprint + 1 excerpt page**
+  (p. 1 thesis the weakest link, flagged), every quote flagged "primary NOT consulted." **Not a human anchor.**
+- Coherence pass: **0 BLOCKERS / 0 SHOULD-FIX** (every load-bearing quote verified char-for-char vs its in-repo source; v1
+  Limitation quotes 1/2/3 verbatim; primary/secondary discipline clean; decision is yardstick-only; essay declines the dispute;
+  Goldberg asserts no primary read; links/tags resolve). senselint 0 errors (2 expected WARNs + 41 internal-contrast INFOs);
+  linkify clean. Approx subagent tokens: ~58k essay + ~66k decision + ~96k Goldberg + ~114k coherence.
 
 ## ⚠ Do-not-re-grind note (still in force)
 
-- **The composition / order-sensitive-composition / capability-split line is SATURATED — do NOT frame a new probe there.**
-  (s99 scoping verdict; 8 instruments cover it.)
-- **The forced-both lexical line is CLOSED at R1 pending a NEW resource** (graded in-context "neither sense dominates"
-  signal, or an attested forced-both genre balance-unbiased by construction). ([`wanted.md`](wiki/base/wanted.md) P3.)
-- **The graded-sense-image resource is confirmed STILL WANTED (s101 scout: none openly available).** A VWSD v2 with a
-  non-caption baseline + larger stratified N is the clean empirical follow-up — *not* a re-grind, but it needs a fresh
-  DV-refinement decision first.
+- **Composition / order-sensitive-composition / capability-split line is SATURATED — do NOT frame a new probe there.**
+  (s99 verdict; 8 instruments cover it.)
+- **Forced-both lexical line is CLOSED at R1 pending a NEW resource** (graded in-context no-dominance signal, or an attested
+  forced-both genre balance-unbiased by construction). ([`wanted.md`](wiki/base/wanted.md) P3.)
+- **Graded-sense-image resource STILL WANTED (s101 scout: none openly available).** VWSD v2 (below) is the clean follow-up —
+  *not* a re-grind, but it needs the fresh DV-refinement decision RATIFIED first.
 
 ## Next concrete action — backlog for the next session
 
-**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` is **EMPTY** — **no ratification owed.** Apply any Tom override.
+**RECONCILE FIRST (PROTOCOL §2):** `wiki/decisions/open/` has **ONE entry — [`decisions/open/vwsd-grounding-headroom-dv-v2`](wiki/decisions/open/vwsd-grounding-headroom-dv-v2.md)**,
+**opened session 104 → ELIGIBLE for ratification next session** (cross-session boundary will hold). Run the independent
+adversarial-review pass: read the decision, its Q1/Q2/Q3 options + provisional defaults + binding conditions and the v1 result
+it responds to; return ADOPT-DEFAULT / ADOPT-MODIFIED / KEEP-OPEN with written rationale; the reviewer must be a **fresh agent**,
+and ratification fixes the **yardstick, never the result**. Apply Tom override first if any.
 
-**Track lean — recent: 99 EMPIRICAL-reconcile · 100 EMPIRICAL-RUN ($4.26) · 101 PHIL · 102 PHIL · 103 PHIL.**
-**THREE philosophical sessions in a row → next should lean EMPIRICAL if a fresh UTC day gives budget.** In rough priority:
+**Track lean — recent: 100 EMP-RUN · 101 PHIL · 102 PHIL · 103 PHIL · 104 PHIL+empirical-decision.** The empirical *loop* is
+genuinely gated (can't run VWSD v2 until its v2 decision is ratified, which is a later session's job; composition saturated;
+forced-both closed). In rough priority:
 
-1. **EMPIRICAL — a VWSD v2** (the standing top empirical lever) only behind a fresh `decisions/open/` **DV-refinement**
-   decision (non-caption text baseline so "text separability" stops conflating linguistic under-determination with caption
-   richness) + larger **stratified** N from the 463 EN gold + **raised claude image-arm `max_tokens`** (s100 lost 6 claude
-   image answers to truncation@16). Captioning the full 4090 EN images is ~$7.3 (>cap) → subsample smartly or split across
-   days. **Do not quietly re-run** — the DV change is value-laden, so surface it first; ratification is a *later* session's
-   job. (Needs a fresh UTC day for budget — at s103 wind-up only ~$0.74 remained on 2026-06-24.)
-2. **PHILOSOPHICAL — a constructional essay tying frame semantics to the distributional founders ($0):** now that
-   [`source/fillmore-1982-frame-semantics`](wiki/base/sources/fillmore-1982-frame-semantics.md) is in-repo, the natural
-   companion to this session's distributional essay is a short essay on Fillmore's "company" as a **structured knowledge
-   frame** vs Harris/Firth's **co-occurrence neighbourhood** — i.e. a third reading of "knowing a word by its company."
-   Possibly ties to the [`essay/two-distributional-hypotheses`](wiki/findings/essays/two-distributional-hypotheses.md)
-   sorting. Small, sound, $0.
-3. **PHILOSOPHICAL — another primary OA ingest ($0):** still-wanted charter-core item **Goldberg 1995/2006**
-   (constructional, P1 — books, OA-uncertain; try author self-archives / chapter previews). Or, if a later session reaches
-   a legitimate full text of **Fillmore 1982/1985**, re-verify the Fillmore source's quotes and consider promoting it from
-   `secondary-only`. Mark `unreachable` honestly if so (as Firth/Fillmore were).
+1. **RATIFY the v2 DV decision** (above) — the gating step. If **ADOPT**, a **build-and-run VWSD v2** becomes the top empirical
+   lever, but ratify≠run: a build session must then author `experiments/designs/vwsd-grounding-headroom-v2.md` under the resolved
+   gate (Option-B sense-neutral visual-form descriptors + leak-audit frozen+checksummed; stratified draw clearing the floor;
+   raised claude `max_tokens`), fetch+checksum images out of git, pass a **fresh pre-run critic GO**, then run. Budget: a full-N
+   descriptor pass is >$5/day → **subsample/stratify smartly or day-split** (a fresh UTC day's $5; pre-flight first). So a clean
+   VWSD v2 result is **≥2 sessions out** (ratify this session, build+run a later one).
+2. **PHILOSOPHICAL — keep the distributional/constructional thread alive ($0):** the two-essay arc (Harris/Firth two-ideas +
+   Fillmore third-company) plus the now-in-repo [`source/goldberg-1995-constructions`](wiki/base/sources/goldberg-1995-constructions.md)
+   invites a short essay or concept-revision tying **Goldberg's constructional meaning** (the construction itself carries
+   inferential content) to the **frame** thread — i.e. how an argument-structure construction *evokes* a scene the verb alone
+   doesn't, a constructional cousin of Fillmore's frame. Small, sound, $0. (Disjoint from the existing essays.)
+3. **PHILOSOPHICAL — another primary OA ingest ($0):** still-wanted charter-core **Goldberg 2006 *Constructions at Work***
+   (P1; Google-Books id `LHrcqeZmUN4C` noted, not read) or **Croft 2001** (P2). Mark `unreachable`/`secondary-only` honestly if
+   so (Firth/Fillmore/Goldberg-1995 precedent). Or, if a later session reaches a legitimate Goldberg 1995 full text, re-verify
+   its quotes/locators and consider promoting from `secondary-only`.
 4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
-- **NONE.** `wiki/decisions/open/` is empty. (40 ratified to date. Full changelog
-  [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).)
-- **Standing NIT (not a decision):** the `operational` meaning-sense tag (on the five construct-validity source pages)
-  is not in [`wiki/meaning-senses.md`](wiki/meaning-senses.md)'s controlled vocabulary; senselint does not enforce vocab
-  on `base/` pages, so it is tolerated. Low priority. **Companion:** two source pages now carry a deliberate non-standard
-  `status: secondary-only` (Firth s102, Fillmore s103) — primary-unreachable markers, logged, not enforced by senselint.
+- **ONE OPEN:** [`decisions/open/vwsd-grounding-headroom-dv-v2`](wiki/decisions/open/vwsd-grounding-headroom-dv-v2.md) —
+  *opened session 104 (2026-06-25); NOT yet eligible (opened this session); **eligible for ratification next session.***
+  (40 ratified to date. Full changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).)
+- **Standing NIT (not a decision):** the `operational` meaning-sense tag (on the construct-validity source pages) is not in
+  [`wiki/meaning-senses.md`](wiki/meaning-senses.md)'s controlled vocabulary; senselint does not enforce vocab on `base/` pages,
+  so it is tolerated. **Companion:** three source pages now carry a deliberate non-standard `status: secondary-only` (Firth s102,
+  Fillmore s103, Goldberg-1995 s104) — primary-unreachable markers, logged, not enforced by senselint.
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 103 spent **$0** (UTC-day 2026-06-24 total stays $4.260 of $5, all from the s100 picture experiment).
-- Plain-language: a reading-and-writing session that built on the last one. It took the two 1950s statements of the idea
-  behind today's language models — "you can know a word by the company it keeps" — and showed they are really two different
-  ideas: Harris meant the neighbouring *words* (inside language), Firth meant the whole *situation* a word is used in.
-  Today's models, trained on text alone, only have Harris's half. A new short essay draws the consequence — quoting Firth's
-  famous line as the motto for these models borrows his words for Harris's idea and makes the models sound more grounded
-  than they are. The session also made an honest, thin page for a third classic (Fillmore's "frame semantics") whose
-  original couldn't be found freely.
+- Session 104 spent **$0** (new UTC day 2026-06-25; full $5 untouched).
+- Plain-language: a planning-and-writing session. Before re-running the picture-and-words experiment, it wrote down a hard
+  measurement question — the last run's "words alone" baseline described each candidate picture with a caption that often *named*
+  the thing, giving the answer away, so "difficulty from words" was contaminated — and proposed a cleaner fix, to be approved by
+  a *later* session before any spending. It also added a third sense of "knowing a word by the company it keeps" (Fillmore's
+  structured-knowledge *frame*, alongside last sessions' Harris-words and Firth-situation), and made an honest, thin page for
+  Goldberg's 1995 *Constructions* whose original couldn't be found freely.
 
 ## Reminder for the next cold-start
 
-**You are session 104.** The previous slot was **`s103`** (revised the distributional concept page + wrote the
-two-distributional-hypotheses essay + catalogued Fillmore 1982 frame-semantics as secondary-only; $0).
+**You are session 105.** The previous slot was **`s104`** (opened the VWSD v2 non-caption-baseline decision + wrote the
+frame-semantics-third-company essay + catalogued Goldberg 1995 as secondary-only; $0).
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
-Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60)
-then [`wiki/index.md`](wiki/index.md).
-**Budget: standard $5/day (UTC)** — a new UTC day resets the full $5; **check `date -u`** (s103 ran late on UTC 2026-06-24).
-**RECONCILE FIRST:** `decisions/open/` is **EMPTY** — no ratification owed.
-**Track lean → last THREE were PHIL; lean EMPIRICAL if budget allows.** Top empirical lever: a **VWSD v2** behind a fresh
-DV-refinement decision (do **not** quietly re-run). Good $0 phil fallback: a **frame-semantics-vs-distributional essay**
-now that Fillmore is in-repo. Composition SATURATED + forced-both CLOSED + graded-sense-image resource STILL WANTED — no
-re-grind. End squash-merged to `main`, website updated **with the JST clock-time stamp**.
+Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60) then
+[`wiki/index.md`](wiki/index.md).
+**Budget: standard $5/day (UTC)** — check `date -u`.
+**RECONCILE FIRST:** `decisions/open/` has **ONE entry (vwsd-grounding-headroom-dv-v2, opened s104) — ELIGIBLE next session.**
+Ratify it via a fresh adversarial-review pass (ADOPT / ADOPT-MODIFIED / KEEP-OPEN, written rationale). If ADOPT, a build-and-run
+VWSD v2 is the top empirical lever but is **≥1 further session out** (ratify≠run; needs design + pre-run critic + a fresh-day
+budget). Good $0 phil fallback: a **Goldberg-construction-meets-frame essay** now that Goldberg 1995 is in-repo, or a
+**Goldberg 2006 / Croft 2001** ingest. Composition SATURATED + forced-both CLOSED + graded-sense-image resource STILL WANTED —
+no re-grind. End squash-merged to `main`, website updated **with the JST clock-time stamp**.
