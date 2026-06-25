@@ -54,7 +54,7 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 
 - [P2] Putnam, H. 1975. "The Meaning of 'Meaning'." In *Mind, Language and Reality*, vol. 2. Cambridge.
   why: externalism; Twin Earth; the case the `referential.externalist` tag rests on.
-  status: wanted
+  status: **RECEIVED** (2026-06-25, session 110) → [`source/putnam-1975-meaning-of-meaning`](sources/putnam-1975-meaning-of-meaning.md). Read the **Minnesota Studies in the Philosophy of Science vol. 7 (1975) original** (pp. 131-193), open-access via the **UMN Digital Conservancy** DSpace REST bitstream API (the human-facing URLs hit an Azure WAF bot-wall / 403; reached by walking item→bundles→ORIGINAL bitstream UUID). Adobe Paper-Capture OCR scan, two-up; extracted with `pdftotext`. 8 headline quotes verified character-for-character (Twin Earth + "meanings just ain't in the head" p. 144 [elm/beech variant]; the two-assumptions wedge pp. 135-136; division of linguistic labor + universality hypothesis pp. 144-146; stereotype p. 147; indexical/`sameL` p. 152); OCR artifacts flagged inline. Cambridge reprint pagination (pp. 215-271) differs and was NOT used. Theory source, **not a human anchor**; closes the *conceptual* half of the `referential.externalist` gap, not the missing-reference-resource half. **Evans 1973** + **Burge 1979** still wanted.
 - [P3] Lewis, D. 1970. "General Semantics." *Synthese* 22.
   why: the Markerese argument — relevant to how we treat the form-vs-meaning line.
   status: wanted
@@ -225,7 +225,7 @@ The 2026-05-31 theory wave wrote five established-position concept pages that **
   status: wanted
 - [P3] Frege, G. 1892. "Über Sinn und Bedeutung" ("On Sense and Reference").
   why: the sense/reference distinction + the root of the truth-conditional pole and the principle of compositionality; underpins `truth-conditional-and-use-meaning` and [`base/concepts/compositionality.md`](concepts/compositionality.md).
-  status: wanted
+  status: **RECEIVED** (2026-06-25, session 110) → [`source/frege-1892-sense-and-reference`](sources/frege-1892-sense-and-reference.md). **Public-domain** original read from the **Deutsches Textarchiv** diplomatic Fraktur transcription (*Zeitschrift für Philosophie und philosophische Kritik* N.F. 100/1, pp. 25-50); plain-text export via `curl` (the page is JS-gated). 6 quote-blocks verified character-for-character incl. the long-s `ſ`. To stay clear of copyright, **only the PD German is quoted** with the project's own glosses — no Black / Geach-&-Black translation reproduced. Caveat: Frege states substitution-*salva-veritate* (p. 35), **not** the modern compositionality slogan (which he flags "anfechtbar"). Theory source, **not a human anchor**.
 - [P3] Tarski, A. 1933/1944. "The Concept of Truth in Formalized Languages" / "The Semantic Conception of Truth."
   why: the recursive truth-via-satisfaction definition the model-theoretic lineage is built on.
   status: wanted
