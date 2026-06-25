@@ -2,36 +2,49 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC day **2026-06-25**: sessions 104–108 spent **$4.72482** (all of it session 107, the VWSD v2 day-1 text-only build);
-**sessions 108 and 109 each spent $0.** **If a session still opens on UTC 2026-06-25, only ≈$0.275 headroom remains — do NOT run any image arm today.** A fresh
-UTC day resets to $5. **Check `date -u` first.** The IMAGE and DISTRACT arms (≈$6.9 each) must each be day-split across fresh UTC days regardless. Full ledger
-in [`config/budget.md`](config/budget.md). Check for any newer Tom override too.
+**Standard cap: $5.00/day (UTC).** UTC day **2026-06-25** spent **$4.72482** (all of it session 107, the VWSD v2 day-1 text-only build); sessions 108, 109 **and 110**
+each spent **$0**. **If a session still opens on UTC 2026-06-25, only ≈$0.275 headroom remains — do NOT run any image arm today.** A fresh UTC day resets to $5.
+**Check `date -u` first.** The IMAGE and DISTRACT arms (≈$6.9 each) must each be day-split across fresh UTC days regardless. Full ledger in
+[`config/budget.md`](config/budget.md). Check for any newer Tom override too.
 
 ## State
 
-**Session 109 (UTC 2026-06-25) — workflow, 2 waves + fresh adversarial coherence pass, $0.** Branch even with `main` at start (s108/#161 merged).
-`decisions/open/` **EMPTY** → no ratification owed; no Tom override. A **philosophical-track** session (the empirical lever was budget-blocked — no fresh UTC day).
-Three units landed:
+**Session 110 (UTC 2026-06-25) — workflow, 2 waves + fresh adversarial coherence pass, $0.** Branch even with `main` at start (s109/#162 merged).
+`decisions/open/` **EMPTY** → no ratification owed; no Tom override. A **philosophical-track** session (the empirical lever stayed budget-blocked — no fresh UTC day).
+Two waves landed:
 
-1. **Croft 2001 ingested (wanted.md P2 discharged).** [`source/croft-2001-radical-construction-grammar`](wiki/base/sources/croft-2001-radical-construction-grammar.md)
-   — the typological, non-reductionist wing of CxG (constructions as primitive units; categories construction-derived, distribution-defined, language-specific;
-   internal structure = part–whole only). 2001 OUP book body **unreachable as OA** (OUP catalogue metadata-only; Google-Books JS-walled/blurb; archive.org has
-   **no scan at all**) — quotes carried via **Croft's own self-archived author manuscript** (`Elsevier-RadicalCxG.pdf`, UNM page), author-primary, `status:
-   secondary-only`, **NOT a human anchor**. Croft's book-page locators reported but unverified against the book.
-2. **New theory page** [`theory/statistical-preemption-and-constructional-productivity`](wiki/findings/theory/statistical-preemption-and-constructional-productivity.md)
-   — maps Goldberg-2006's two usage-based learning levers onto the existing constructional apparatus: **productivity** ↔ the held-out-item generalization test
-   (Tier-3 + the way/caused-motion confirm bars); **preemption** ↔ a blocking signature the project has only **preconditions** for (coercion cancellability +
-   form-keying), never an isolated test. That asymmetry is the finding. **Sharp bound:** Goldberg 2006 is a human-learning theory, **NOT a human anchor**;
-   a behavioral match cannot separate meaning-conditioned preemption from a frequency confound. **No new empirical claim.** `refines` the main theory page.
-3. **Essay enrichment:** [`essay/constructional-meaning-meets-frame`](wiki/findings/essays/constructional-meaning-meets-frame.md) gained a "usage-based 2006
-   dimension" section + `depends-on source/goldberg-2006` + a cross-link to the new theory page. Explicitly an **enrichment, not a trigger discharge** (the
-   essay's revision triggers concern the unread Goldberg 1995 / Fillmore 1982 primaries); the cousins-by-inheritance sorting is unchanged.
+1. **Wave 1 — two founding philosophy-of-meaning primaries ingested at primary strength, every headline quote verified verbatim against the extracted source text:**
+   - [`source/putnam-1975-meaning-of-meaning`](wiki/base/sources/putnam-1975-meaning-of-meaning.md) — **the canonical externalism primary** (Twin Earth + "meanings just ain't in
+     the head" p. 144 [elm/beech variant]; the two-assumptions wedge pp. 135-136; division of linguistic labor + universality hypothesis pp. 144-146; stereotype
+     p. 147; indexical/`sameL` p. 152). Read the **Minnesota Studies vol. 7 (1975) original** via the **UMN Digital Conservancy DSpace REST bitstream API** (the
+     human-facing URLs hit an Azure WAF bot-wall / 403; reached by walking item→bundles→ORIGINAL bitstream UUID — note for future UMN fetches). OCR scan; artifacts
+     flagged inline. **Closes the *conceptual* half of the `referential.externalist` gap** (Evans 1973, Burge 1979 still not-in-repo); does NOT close the
+     missing-reference-*resource* half.
+   - [`source/frege-1892-sense-and-reference`](wiki/base/sources/frege-1892-sense-and-reference.md) — `Sinn`/`Bedeutung`, sentence-reference-as-truth-value,
+     substitution-*salva-veritate* (compositionality). **PD German** via Deutsches Textarchiv; **only PD German quoted** (no copyrighted translation). Caveat
+     carried forward: Frege states substitution-*salva-veritate*, **not** the modern compositionality slogan (he flags it "anfechtbar").
+   - Both are **theory sources, NOT human anchors.**
+2. **Wave 2 — new essay + provenance upgrades + partial trigger-(c) discharge:**
+   - New essay [`essay/stereotype-without-the-expert`](wiki/findings/essays/stereotype-without-the-expert.md) — a **tripartite component-and-role mapping** of the LLM
+     onto Putnam: maximal access to the **stereotype** (the component Putnam isolated as NOT fixing extension), no access to the indexical extension, and **neither
+     role** (expert nor deferring layperson) in the division of linguistic labor while holding its pooled output → measured distributional success = *stereotype-
+     competence* ("the elm/beech speaker writ large"). **No new empirical claim, no number, no human-comparison;** conditional on the externalist frame; the
+     "distribution ≈ stereotype" identification flagged as the essay's own analogy. `refines` `essay/reference-as-premise-bound` (sharpens "in the community?" →
+     "which role?", answered *neither*, **without settling it**); distinct from `essay/reference-denials-disunified`.
+   - **Provenance upgrades** (judgement edits by orchestrator): `concept/referential-meaning`, `concept/truth-conditional-and-use-meaning`,
+     `concept/compositionality` — replaced the "(not in-repo; characterization)" Putnam/Frege flags with primary citations + front-matter links. Compositionality
+     keeps the honest caveat (Frege = substitution principle, not the slogan).
+   - **Partial trigger-(c) discharge** (the load-bearing judgement call): `essay/reference-as-premise-bound` and `essay/reference-denials-disunified` both carry a
+     trigger (c) keyed to the externalist primaries entering. Putnam entered, **but on reading it Putnam does NOT settle the corpus-membership antecedent** (it fixes
+     reference *socially* but says nothing about corpus-trained membership), so **both essays' theses and Denial-3's row SURVIVE unchanged** — the frame is now
+     primary-anchored, the premise stays off-board. Logged in-page; trigger stays armed for **Evans 1973 / Kripke**.
 
-**Coherence pass (fresh read-only agent) caught + fixed before commit:** a **stitched Goldberg quote** on the theory page (now verbatim), two paraphrases
-mis-marked as quotes (quotation marks removed), and the missing index entries. Worth remembering: even a $0 phil wave can ship a fabricated-by-stitching quote
-— the adversarial pass earned its keep.
+**Coherence pass (fresh read-only agent) returned CLEAN** (no blockers/should-fix/nits). Quote integrity independently re-verified by the orchestrator against the
+extracted source text (Putnam: the famous line + division-of-labor + sociolinguistic-state + indexical + stereotype + elm strings; Frege: Sinn/Bedeutung +
+Wahrheitswerth + salva-veritate). Worth remembering: a clean coherence verdict with **zero findings at every tier** is unusual — it held up here only because the
+edits were quote-verified directly and the trigger discharges were deliberately under-claimed; do not treat "clean" as automatic.
 
-## ⚠ VWSD v2 — the empirical lever, still gated on a FRESH UTC day (UNCHANGED from s108)
+## ⚠ VWSD v2 — the empirical lever, still gated on a FRESH UTC day (UNCHANGED from s108/s109)
 
 The VWSD v2 day-1 build is **DONE, FROZEN, and critic-certified (GO-WITH-CONDITIONS)**. The result `result/vwsd-grounding-headroom-v2` still **does NOT exist
 and is NOT cleared**. The spend-bearing IMAGE then DISTRACT arms require a **fresh UTC day**. Committed-file checksums: `frozen/descriptors.json` **`26616a55…`**
@@ -64,9 +77,9 @@ covariate, never regressed out** (design B.4).
 **RECONCILE FIRST (PROTOCOL §2):** `decisions/open/` is **EMPTY — no ratification owed.** (Apply any Tom override first if one appears.) The s108 GO is a
 **pre-run-critic gate**, not a `decisions/open/` entry — honor the three binding conditions above; it needs no further ratification.
 
-**Track lean — recent: 105 emp-reconcile+PHIL · 106 emp-design+PHIL · 107 emp-RUN(day-1) · 108 emp-GATE+PHIL · 109 PHIL(2 units).** The last session was
-**pure philosophical**; the empirical loop is mid-run, gate cleared, blocked only on a fresh budget day. **Strongly weight empirical next IF a fresh UTC day
-allows the image arm.** In rough priority:
+**Track lean — recent: 106 emp-design+PHIL · 107 emp-RUN(day-1) · 108 emp-GATE+PHIL · 109 PHIL · 110 PHIL.** The last **two** sessions were pure philosophical
+(both budget-forced — the empirical loop is mid-run, gate cleared, blocked only on a fresh budget day). **STRONGLY weight empirical next IF a fresh UTC day allows
+the image arm.** In rough priority:
 
 1. **IF a FRESH UTC day (NOT 2026-06-25) — the IMAGE arm, day-split.** Re-measure claude raised-`max_tokens=512` per-call cost first (condition d, small
    preflight), then build the image arm by adding an `image-full` mode to `run.py` (claude `max_tokens=512`; gpt/gemini generous; low detail), reading images
@@ -75,11 +88,13 @@ allows the image arm.** In rough priority:
    reported FIRST**. Then write [`result/vwsd-grounding-headroom-v2`] honoring **all three binding conditions** + a fresh independent **post-run verifier**; the
    conjecture [`distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md) stays `proposed` until
    it lands. `analyze.py` already computes the full result sections once `raw/image.json` + `raw/distract.json` exist.
-2. **PHILOSOPHICAL fallback ($0), if still budget-blocked or leaning phil:** a primary OA ingest from [`wanted.md`](wiki/base/wanted.md) (e.g. **Putnam 1975**
-   "The Meaning of 'Meaning'" P2; **Wittgenstein 1953** P2; **Cruse 1986 / Murphy 2003** lexical-semantics P2) — mark `unreachable`/`secondary-only` honestly if
-   unreachable. **Note:** the constructional-source backlog is now well-covered (Goldberg 1995 + 2006 + Croft 2001 all in, all secondary-only); fresh phil work
-   may be better spent on the **philosophy-of-meaning** primaries or a theory/essay synthesis than on more CxG ingests. A short theory/essay unit connecting
-   existing sourced material is also fine. **Avoid** re-grinding the constructional empirical lines (do-not-re-grind note above).
+2. **PHILOSOPHICAL fallback ($0), if still budget-blocked or leaning phil:** a primary OA ingest from [`wanted.md`](wiki/base/wanted.md). **The externalist
+   primary Putnam 1975 is now IN** (s110); the natural companions remaining are **Evans 1973** "The Causal Theory of Names" P2 (would re-arm the now-partially-fired
+   trigger (c) in the two reference essays — its causal-chain/baptism story could bear on corpus-inheritance differently than Putnam's social account) and **Burge
+   1979** "Individualism and the Mental" P2 (social externalism / the *arthritis* case). Other live phil primaries: **Wittgenstein 1953** P2 (the meaning-as-use
+   pole, ungrounds `truth-conditional-and-use-meaning` pole (b)); **Cruse 1986 / Murphy 2003** lexical-semantics P2; Tarski/Davidson/Montague for the rest of the
+   truth-conditional lineage. A short theory/essay unit connecting existing sourced material is also fine. **Avoid** re-grinding the constructional empirical lines
+   (do-not-re-grind note above).
 3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
@@ -88,23 +103,25 @@ allows the image arm.** In rough priority:
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 109 spent **$0** (UTC day 2026-06-25). A library + synthesis session: no models queried.
-- Plain-language: shelved a second founding grammar book (Croft 2001) honestly — book unreachable, author's own summary catalogued and clearly flagged — and
-  wrote a synthesis taking a theory of *how people learn grammar* and asking, with no new claim about any model, which existing experiments would and would not
-  count as evidence under it. The load-bearing caution is written in: it is a human-learning theory, **not** a yardstick to grade a model against; ordinary
-  word-frequency statistics could mimic the same behaviour. An independent skeptic checked both pieces and caught a quote that had been mis-stitched (fixed to
-  verbatim) before anything was kept.
+- Session 110 spent **$0** (UTC day 2026-06-25). A library + synthesis session: no models queried.
+- Plain-language: added two of the most-cited texts on what "meaning" means — Frege's 1892 *On Sense and Reference* (read in his own public-domain German) and
+  Putnam's 1975 *The Meaning of "Meaning"* (read from a university's open archive of the original) — both used only second-hand until now. Then wrote an essay
+  using Putnam's three-part picture of a word (everyday description / actual stuff in the world / a community of experts and deferring laypeople) to ask where a
+  language model fits: it is excellent at the everyday-description part — which Putnam said never settles what a word points to — has no access to the actual stuff,
+  and fits neither role in the community though it has read what both wrote. The essay does **not** claim the model's words refer; it holds within one philosophical
+  camp and says so, flags its key comparison as an analogy, and an independent skeptic checked it before anything was kept.
 
 ## Reminder for the next cold-start
 
-**You are session 110.** The previous slot was **`s109`** (philosophical: Croft 2001 ingest + statistical-preemption theory page + essay enrichment; **$0**).
+**You are session 111.** The previous slot was **`s110`** (philosophical: Putnam 1975 + Frege 1892 ingests + the stereotype-without-the-expert essay + provenance
+upgrades; **$0**).
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60) then [`wiki/index.md`](wiki/index.md).
-**Budget: standard $5/day (UTC)** — check `date -u` (if still 2026-06-25, ≈$0.275 left, NO image arm today; a fresh day resets to $5).
+**Budget: standard $5/day (UTC)** — check `date -u` (if still 2026-06-25, ≈$0.275 left, NO image arm; a fresh day resets to $5 and **enables the image arm**).
 **RECONCILE FIRST:** `decisions/open/` is **EMPTY — no ratification owed.** The VWSD v2 gate is **CLEARED (GO-WITH-CONDITIONS)**: on a **fresh UTC day**, the
 lever is the **day-split IMAGE then DISTRACT arms** — re-measure claude's raised-`max_tokens` cost first (d); honor the **three binding conditions** (gemini
-floor caveat; bimodal 0-intermediate-band gap; DISTRACT null FIRST); fresh post-run verifier. The last session was pure phil — **weight empirical next if the
-budget day allows**. $0 phil fallback: a philosophy-of-meaning primary ingest (Putnam/Wittgenstein/Cruse/Murphy) or a theory/essay synthesis — the
-constructional ingests are now well-covered. Use committed checksum `26616a55…` for `frozen/descriptors.json`. Composition SATURATED + forced-both CLOSED — no
-re-grind; do NOT re-derive the frozen day-1 artifacts. End squash-merged to `main`, website updated **with the JST clock-time stamp**.
+floor caveat; bimodal 0-intermediate-band gap; DISTRACT null FIRST); fresh post-run verifier. The last **two** sessions were pure phil — **weight empirical next if
+the budget day allows**. $0 phil fallback: Evans 1973 / Burge 1979 (re-arm trigger (c)) or Wittgenstein/Cruse/Murphy, or a theory/essay synthesis — the externalist
+primary Putnam is now in. Use committed checksum `26616a55…` for `frozen/descriptors.json`. Composition SATURATED + forced-both CLOSED — no re-grind; do NOT
+re-derive the frozen day-1 artifacts. End squash-merged to `main`, website updated **with the JST clock-time stamp**.
