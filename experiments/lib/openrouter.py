@@ -64,9 +64,24 @@ RATE_CARD = {
     "google/gemini-3.5-flash": (1.50, 9.00),      # was (0.15, 0.60) — ~10x/15x too low
 }
 
+# Cached-input-read price (USD per 1M tokens) — the rate billed for the portion of the
+# prompt served from a cache hit, ~10x below the full prompt rate. Added 2026-06-26 after
+# the prompt-caching pilot (decision: prompt-caching-repeated-prefix-probes, ratified s114;
+# run experiments/runs/2026-06-26-prompt-caching-pilot/). estimated_cost() reads
+# usage.prompt_tokens_details.cached_tokens and charges those tokens at this rate instead
+# of the full prompt rate, so the pre-flight ESTIMATE stops over-counting a cached run.
+# The recorded headline figure is still billed_cost() (sums usage.cost) — unchanged. Values
+# from the live OpenRouter catalog (2026-06-26), corroborated by the pilot's measured
+# warm-read costs (gpt -82.7%, gemini/claude via explicit cache_control -82.7%/-91.4%).
+CACHE_READ = {
+    "anthropic/claude-sonnet-4.6": 0.30,
+    "openai/gpt-5.4-mini": 0.07,
+    "google/gemini-3.5-flash": 0.15,
+}
+
 
 def call(model, system, user, max_tokens=None, temperature=0, retries=4, timeout=120,
-         images=None, reasoning=None):
+         images=None, reasoning=None, cache_prefix=False):
     """One chat completion. Returns {content, usage, error}.
 
     `usage` carries the API-billed `cost` field because the request sets
@@ -93,6 +108,27 @@ def call(model, system, user, max_tokens=None, temperature=0, retries=4, timeout
     text probes are byte-for-byte identical. When images are present the user turn is
     built as the OpenAI/OpenRouter multimodal content array
     ([{type:text,...}, {type:image_url, image_url:{url:...}}, ...]).
+
+    PROMPT CACHING (cache_prefix, optional, added 2026-06-26 after the caching pilot —
+    decision: prompt-caching-repeated-prefix-probes, ratified s114). Default False, in
+    which case the request body is byte-identical to before (the system turn is sent as a
+    plain string), so EVERY existing probe is unaffected and every frozen design's
+    execution path is unchanged. When True, the system turn is wrapped as a single
+    cache_control breakpoint block — [{"type": "text", "text": system,
+    "cache_control": {"type": "ephemeral"}}] — marking the (typically large, repeated)
+    system prefix for caching. The pilot measured this as OUTPUT-NEUTRAL (byte-identical
+    answers cold vs cached on the panel) and a material input saving on repeated-prefix,
+    high-call-count probes: a warm read costs ~17% of a cold read on claude/gemini and gpt.
+    NOTES: (a) gpt caches the repeated prefix IMPLICITLY with no flag, so cache_prefix is
+    only needed for anthropic and google (the pilot found google's *implicit* caching does
+    NOT fire via OpenRouter's route — google needs this explicit breakpoint, like
+    anthropic). (b) Caching touches INPUT only; on reasoning-heavy google runs (reasoning
+    is now mandatory on gemini-3.5-flash and bills at the completion rate) the realized
+    saving on TOTAL cost shrinks because output+reasoning dominate. (c) The first call pays
+    a one-off cache-write premium (~1.25x input on anthropic), so caching pays off only
+    when the same prefix is re-sent many times within the cache TTL — i.e. exactly the
+    high-call-count probe case. (d) Adopt per-probe; the recorded cost stays usage.cost
+    (already cache-aware); estimated_cost() now discounts cached_tokens too.
     """
     key = os.environ["OPENROUTER_API_KEY"]
     if max_tokens is None:
@@ -109,10 +145,17 @@ def call(model, system, user, max_tokens=None, temperature=0, retries=4, timeout
                 user_content.append({"type": "image_url", "image_url": iu})
     else:
         user_content = user
+    # cache_prefix wraps the (repeated) system prefix in a cache_control breakpoint.
+    # Default False => plain string, byte-identical to the historical request body.
+    if cache_prefix:
+        system_content = [{"type": "text", "text": system,
+                           "cache_control": {"type": "ephemeral"}}]
+    else:
+        system_content = system
     body = {
         "model": model,
         "messages": [
-            {"role": "system", "content": system},
+            {"role": "system", "content": system_content},
             {"role": "user", "content": user_content},
         ],
         "temperature": temperature,
@@ -169,10 +212,23 @@ def estimated_cost(record_lists, model):
 
     Documented to UNDERCOUNT real spend ~4.5x (2026-05-30). Kept for parity with the
     historical ledger rows, not as the headline figure.
+
+    CACHE-AWARE (2026-06-26, caching-pilot precondition): tokens reported as served from
+    cache (usage.prompt_tokens_details.cached_tokens) are charged at the CACHE_READ rate
+    instead of the full prompt rate, so a cached run is no longer over-ESTIMATED. When no
+    cached_tokens are reported (the default, every cold run) the arithmetic is identical to
+    before: cached=0 => all prompt tokens at the full prompt rate.
     """
     pin, pout = RATE_CARD[model]
-    tin = tout = 0
+    cread = CACHE_READ.get(model, pin)
+    tin_full = tin_cached = tout = 0
     for recs in record_lists:
-        tin += sum((r.get("usage") or {}).get("prompt_tokens", 0) or 0 for r in recs)
-        tout += sum((r.get("usage") or {}).get("completion_tokens", 0) or 0 for r in recs)
-    return (tin * pin + tout * pout) / 1_000_000
+        for r in recs:
+            u = r.get("usage") or {}
+            pt = u.get("prompt_tokens", 0) or 0
+            cached = ((u.get("prompt_tokens_details") or {}).get("cached_tokens", 0)) or 0
+            cached = min(cached, pt)
+            tin_full += pt - cached
+            tin_cached += cached
+            tout += (u.get("completion_tokens", 0) or 0)
+    return (tin_full * pin + tin_cached * cread + tout * pout) / 1_000_000

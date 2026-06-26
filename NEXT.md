@@ -2,29 +2,32 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC day **2026-06-26** spent **$3.83276** (s112 VWSD v2 IMAGE arm $3.83238 + s113 $0.00019 MCP test + s114 $0). **Only ≈$1.17
-headroom remains on UTC 2026-06-26 — NOT enough for the DISTRACT arm (≈$3.8); do not start it today.** A fresh UTC day (**≥ 2026-06-27**) resets to $5 and
-re-enables the day-split DISTRACT arm — **that is the priority lever. Check `date -u` FIRST.** Full ledger in [`config/budget.md`](config/budget.md). Check for any
-newer Tom override too.
+**Standard cap: $5.00/day (UTC).** UTC day **2026-06-26** spent **≈$3.900** (s112 IMAGE $3.83238 + s113 $0.00019 + s114 $0 + **s115 prompt-caching pilot $0.06675**). Only
+**≈$1.10 headroom** remains on UTC 2026-06-26 — NOT enough for the DISTRACT arm (≈$3.8); **do not start it today.** A fresh UTC day (**≥ 2026-06-27**) resets to $5 and
+re-enables the day-split DISTRACT arm — **that is the priority lever. Check `date -u` FIRST.** Full ledger in [`config/budget.md`](config/budget.md). Check for any newer Tom override too.
 
 ## State
 
-**Session 114 (UTC 2026-06-26) — governance + maintenance, $0, no probe.** Same UTC day as s112/s113, headroom too thin for the empirical lever, so a $0 session.
-`decisions/open/` held **ONE** eligible entry at start → **RATIFIED**; no Tom override. What landed:
+**Session 115 (UTC 2026-06-26) — tooling pilot + philosophical ingest, $0.067, no research probe.** Same UTC day as s112–114, headroom too thin for the DISTRACT lever, so a
+two-track non-empirical-research session. `decisions/open/` was **EMPTY** at start → no ratification owed; no Tom override. What landed:
 
-1. **RECONCILE — `prompt-caching-repeated-prefix-probes` RATIFIED (ADOPT THE DEFAULT unchanged).** Opened s113 (Tom-directed), eligible this session
-   (cross-session boundary held). An independent fresh-agent adversarial review adopted the provisional default as written: **keep the probe harness on the
-   cold-read path** ([`experiments/lib/openrouter.py`](experiments/lib/openrouter.py) UNCHANGED); gate any caching behind a **$0-stakes matched cold-vs-cached
-   pilot** (byte-identical outputs + measured saving) before adoption; implicit-caching gemini/gpt first, Anthropic `cache_control` only if its share justifies it;
-   if the saving is small (the expected gemini case — output+reasoning at $9/MT dominate, caching touches only input), record the null and retire. **Code-checked
-   against openrouter.py:** `billed_cost()` sums the API-returned `usage.cost` (cache line items already folded in → recorded figure stays correct);
-   `RATE_CARD`/`estimated_cost()` model only `(prompt, completion)`, so a cached run would be **over-estimated** until a cache-aware term is added. Anti-cheat PASS
-   (no result depends on it). Moved to [`wiki/decisions/resolved/prompt-caching-repeated-prefix-probes.md`](wiki/decisions/resolved/prompt-caching-repeated-prefix-probes.md);
-   index count **41 → 42**; `decisions/open/` now **EMPTY**.
-2. **Refreshed [`wiki/executive-summary.md`](wiki/executive-summary.md)** (it had lagged at session 92 — ~20 sessions behind): new top entry stamped session 114 +
-   a plain-language catch-up of the 93–113 arc (the forked-word/SemEval line, the picture-and-words VWSD line with its DISTRACT control still owed, and the
-   externalist-primaries reading). No finding changed.
-3. **Website + index dashboard updated**; harnesses UNCHANGED.
+1. **PROMPT-CACHING PILOT — ran the $0-stakes measurement the s114-ratified decision authorized.** Run dir [`experiments/runs/2026-06-26-prompt-caching-pilot/`](experiments/runs/2026-06-26-prompt-caching-pilot/results.md).
+   Matched cold-vs-cached on one repeated-prefix probe class. **Outputs byte-identical cold vs cached on all 3 models** (output-neutral). MEASURED: **gpt implicit −82.7%** (auto, no flag),
+   **gemini explicit `cache_control` −82.7%** (its *implicit* caching did NOT fire via OpenRouter's route, contra the catalog flag), **claude explicit −91.4%** on reads — ~92–99% of the
+   prefix cached. **Two decision assumptions overturned:** (a) of the panel only gpt caches implicitly — gemini needs the explicit breakpoint like claude; (b) the saving is **material
+   (~83–91%), not the expected small null**, on input-dominated single-token-output probes (it shrinks only on reasoning-heavy gemini runs, where output+reasoning at $9/MT dominate).
+   **Action (resolution-authorized, default-OFF):** [`experiments/lib/openrouter.py`](experiments/lib/openrouter.py) gained an opt-in `call(..., cache_prefix=False)` (byte-identical
+   body when off → **no existing probe or frozen design perturbed**; verified) + a `CACHE_READ` card + cache-aware `estimated_cost()` (cached tokens discounted; identical to old formula
+   when `cached=0`). Pilot result appended to the resolved decision page; lever **not retired** (saving is material). **Adoption is per-probe.**
+2. **WITTGENSTEIN 1953 PI INGESTED** → [`source/wittgenstein-1953-philosophical-investigations`](wiki/base/sources/wittgenstein-1953-philosophical-investigations.md) (type source, status received, NOT a human anchor).
+   Closes the named `wanted.md` P2 gap + the "not in-repo; characterization" Wittgenstein leg of [`concept/truth-conditional-and-use-meaning`](wiki/base/concepts/truth-conditional-and-use-meaning.md) pole (b).
+   Two-route OA: **§§43/7/66/67 primary-direct** (PD German, wittgensteinproject.org); **English §§43/23/66/201/243 carried-via-secondary** (OA SEP); Anscombe translation NOT sourced
+   (copyright); §§201/243 at lower secondary-only strength. Coherence pass **independently re-verified all 12 quotes verbatim** against the cited sources. Concept page + `wanted.md` updated.
+3. **Coherence pass** (fresh read-only agent): 0 BLOCKERS; 2 SHOULD-FIX (index coverage → added to `wiki/index.md`; gpt/claude raw uncommitted → `gpt_claude_raw.json` written) + 1 NIT (§7
+   continuation hedge) — all applied. **senselint 0 errors** (2 expected WARN, 41 INFO); **linkify clean**. **Website + index dashboard updated** (JST 14:09, session 115).
+
+**Note for any future gemini run:** `gemini-3.5-flash` now **rejects** `reasoning:{enabled:false}` and `{effort:none}` (HTTP 400 "Reasoning is mandatory"); only `{effort:minimal}` is accepted.
+The project already uses `effort:minimal`, so nothing breaks — but do NOT try to fully suppress gemini reasoning.
 
 ## ⚠ VWSD v2 — the lever still points at the DISTRACT arm, then the result (UNCHANGED gate; IMAGE arm DONE, FROZEN)
 
@@ -50,69 +53,55 @@ cost is a measured number ($0.01244/call), not a placeholder — DISTRACT will c
 
 ## ⚠ Do-not-re-grind note (still in force)
 
-- **Composition / order-sensitive-composition / capability-split line is SATURATED — do NOT frame a new probe there.** (s99 verdict.)
-- **Forced-both lexical line is CLOSED at R1 pending a NEW resource** ([`wanted.md`](wiki/base/wanted.md) P3; SemEval pun corpus ratified s93 as a *partial* anchor —
-  co-activation only, no in-item balance, so Q1-ii dominance step still owed).
+- **Composition / order-sensitive-composition / capability-split line is SATURATED** (s99). **Forced-both lexical line CLOSED at R1 pending a NEW resource** (`wanted.md` P3).
 - **VWSD v2 day-1 + IMAGE arm are DONE, FROZEN** — do **not** re-generate descriptors / re-draw N=120 / re-run the IMAGE or any day-1 arm.
-- **The reference / internalism-vs-externalism philosophical cell is now effectively SATURATED** (confirmed s114): five+ cross-referential essays
-  ([`reference-as-premise-bound`](wiki/findings/essays/reference-as-premise-bound.md), [`reference-denials-disunified`](wiki/findings/essays/reference-denials-disunified.md),
-  [`stereotype-without-the-expert`](wiki/findings/essays/stereotype-without-the-expert.md), [`inherited-not-constituted`](wiki/findings/essays/inherited-not-constituted.md))
-  plus the concept and `situating-llm-meaning` theory pages already cover the membership antecedent, the "which role" sharpening, and the three-pole denial
-  disunity. **A new reference essay would be redundant padding** — weight $0 phil work toward a *different* region (see fallback below).
+- **The reference / internalism-vs-externalism philosophical cell is SATURATED** (s114) — a new reference essay is redundant padding; weight $0 phil work toward a *different* region.
+- **Prompt-caching is now MEASURED and adopted as a default-off opt-in** — do NOT re-run the pilot. The lever is available per-probe (`cache_prefix=True` for gemini/claude; gpt implicit).
 
 ## Next concrete action — backlog for the next session
 
-**RECONCILE FIRST (PROTOCOL §2):** `decisions/open/` is **EMPTY** — no ratification owed (apply any Tom override first if one appears). The s108 GO is a
-pre-run-critic gate, not a `decisions/open/` entry — already cleared; honor the three binding conditions above; no further ratification needed there.
+**RECONCILE FIRST (PROTOCOL §2):** `decisions/open/` is **EMPTY** — no ratification owed (apply any Tom override first if one appears). The s108 GO is a pre-run-critic gate already
+cleared; honor the three binding conditions above; no further ratification needed there.
 
-**Track lean — recent: 108 emp-GATE+PHIL · 109 PHIL · 110 PHIL · 111 PHIL · 112 emp-RUN(IMAGE) · 113 tooling · 114 governance+maintenance.** The empirical lever is
-mid-run and should keep firing the moment a fresh budget day allows. In rough priority:
+**Track lean — recent: 110 PHIL · 111 PHIL · 112 emp-RUN(IMAGE) · 113 tooling · 114 governance · 115 tooling-pilot+PHIL.** The empirical RESEARCH lever is mid-run and overdue to fire
+the moment a fresh budget day allows. In rough priority:
 
-1. **IF a FRESH UTC day (≥ 2026-06-27) — the DISTRACT arm, day-split, then the result.** Run `run.py distract-full` over the frozen 120 × 3 (code already in
-   `run.py`; word+phrase ablated, "pick the most prototypical/canonical/everyday image"; same images, low detail). ≈$3.8 → split into **two 60-item sub-batches**
-   (`IMG_LIMIT=60 python3 run.py distract-full` twice; each under the $2.50 flag), `$VWSD_IMAGES` set to the re-fetched zip (Drive id
-   `15ed8TXY9Pzk68_SCooFm7AfkeFtCd16Q`, sha `b9f2f1e1…af8f`; **keep out of git**). Then write [`result/vwsd-grounding-headroom-v2`] — **DISTRACT null reported and
-   credited FIRST**, then the binned image-rescue interaction, honoring all **three binding conditions** + a fresh independent **post-run verifier**; promote the
-   conjecture [`distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md) only as the evidence
-   warrants (stays `proposed` unless the result clears the gate). `analyze.py` already computes every result section once `raw/distract.json` exists.
-2. **PHILOSOPHICAL fallback ($0), only if still budget-blocked.** **Avoid the saturated reference/internalism cell** (see do-not-re-grind note). Live, *non-reference*
-   phil primaries worth ingesting (open-access permitting; never fabricate around an unreachable fetch): **Wittgenstein 1953** P2 (meaning-as-use, ungrounds
-   [`concept/truth-conditional-and-use-meaning`](wiki/base/concepts/truth-conditional-and-use-meaning.md) pole (b)); **Cruse 1986 / Murphy 2003** lexical-semantics
-   P2; the **internalist** primaries **Chomsky 2000 / Fodor 1987** *only if* they add something the saturated reference essays don't already carry. A theory/essay
-   synthesis on a non-reference region (the constructional/lexical empirical findings; the use-theoretic methodological bet) is also fine.
-3. **Optional, low-priority ($0): the prompt-caching pilot** the s114-resolved decision authorizes — a scoped, $0-stakes matched cold-vs-cached pair on one
-   repeated-prefix probe class to measure the real saving + confirm byte-identical outputs. Not urgent; not a correctness gate; do it only if no higher-value unit
-   is tractable.
-4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
+1. **IF a FRESH UTC day (≥ 2026-06-27) — the DISTRACT arm, day-split, then the result.** Run `run.py distract-full` over the frozen 120 × 3 (code already in `run.py`; word+phrase
+   ablated, "pick the most prototypical/canonical/everyday image"; same images, low detail). ≈$3.8 → split into **two 60-item sub-batches** (`IMG_LIMIT=60 python3 run.py distract-full`
+   twice; each under the $2.50 flag), `$VWSD_IMAGES` set to the re-fetched zip (Drive id `15ed8TXY9Pzk68_SCooFm7AfkeFtCd16Q`, sha `b9f2f1e1…af8f`; **keep out of git**). Then write
+   [`result/vwsd-grounding-headroom-v2`] — **DISTRACT null reported and credited FIRST**, then the binned image-rescue interaction, honoring all **three binding conditions** + a fresh
+   independent **post-run verifier**; promote the conjecture [`distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md)
+   only as the evidence warrants. `analyze.py` already computes every result section once `raw/distract.json` exists. *(Optional: the DISTRACT prompt re-sends a fixed instruction prefix
+   per item — `cache_prefix=True` on the gemini/claude calls would now cut input cost, but the bill is image-token-dominated so the saving is modest; not required.)*
+2. **PHILOSOPHICAL fallback ($0), only if still budget-blocked.** **Avoid the saturated reference/internalism cell.** Live, *non-reference* phil primaries worth ingesting (OA permitting):
+   **Cruse 1986 / Murphy 2003** lexical-semantics (likely book-walled like Goldberg/Croft — carry via author/secondary if so); or the **Tarski/Davidson/Montague** truth-conditional-pole
+   primaries (the remaining `wanted.md` legs of the truth-conditional gap, now that Frege + Wittgenstein are both in-repo). A non-reference theory/essay synthesis is also fine — but the
+   use-theoretic-method region is now well-covered (concept + theory pages + the Wittgenstein primary), so prefer a genuinely under-covered region.
+3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
-- **NONE OPEN.** `prompt-caching-repeated-prefix-probes` (opened s113) was **ratified s114** (ADOPT DEFAULT; harness unchanged; pilot-before-adopt). **42 ratified to
-  date.** Full changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+- **NONE OPEN.** `prompt-caching-repeated-prefix-probes` (opened s113, ratified s114) had its authorized **pilot run this session (s115)** and a "Pilot result" addendum appended to the
+  resolved page; **42 ratified to date.** Full changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 114 spent **$0** (UTC day 2026-06-26). A short governance + housekeeping session.
-- Plain-language: the budget for today was already mostly used by the picture experiment two sessions ago, so no experiment ran. The session settled the
-  money-saving question you flagged last session (whether to use the service's cheaper re-read pricing): an independent review said **leave the machinery as it is
-  for now**, and only switch caching on after a free trial proves it changes no model answer and actually saves a worthwhile amount — likely small on the costliest
-  runs, where the bill is the model's reasoning, not the repeated instructions. The spending records stay correct either way. The session also brought the
-  plain-language summary, which had fallen ~20 sessions behind, back up to date. The picture experiment's control (the same images with the word removed) is still
-  the next spending step and waits for a fresh budget day.
+- Session 115 spent **≈$0.067** (UTC day 2026-06-26; day total ≈$3.900 of $5.00).
+- Plain-language: the budget for today was mostly used by the picture experiment two sessions ago, so no new experiment ran. The session ran the free cost-saving trial you'd asked for
+  before switching the service's cheaper re-read pricing on — and it was a pleasant surprise: the saving is **large (about 83–91%) on the project's cheap one-word-answer runs**, not the
+  small amount we'd braced for, and the models' answers came back identical character-for-character. So the discount was switched on as an **optional, off-by-default** setting that leaves
+  every existing experiment untouched. (One wrinkle measurement caught: one model the project expected to discount automatically actually needs to be asked explicitly.) The session also
+  read and recorded the founding philosophy text behind the project's whole method — Wittgenstein's "a word's meaning is its use" — quoting it from a public-domain edition. The picture
+  experiment's word-removed control is still the next spending step and waits for a fresh budget day.
 
 ## Reminder for the next cold-start
 
-**You are session 115.** The previous slot was **`s114`** (governance + maintenance, $0: ratified `prompt-caching-repeated-prefix-probes` = ADOPT DEFAULT/harness
-unchanged; refreshed the executive summary from its session-92 lag; updated the website + index dashboard). Before s114 was **`s113`** (Tom-directed tooling,
-$0.00019: OpenRouter MCP eval + stale `RATE_CARD` fix + opened the prompt-caching decision). Before s113 was **`s112`** (VWSD v2 IMAGE arm ran — 360 clean picks,
-`raw/image.json` `6884eea0…430870`; **no result page — DISTRACT null owed first**; **$3.83238**).
-
-Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read [`wiki/executive-summary.md`](wiki/executive-summary.md)
-(now refreshed this session) then [`wiki/index.md`](wiki/index.md). **Budget: standard $5/day (UTC)** — check `date -u` (a FRESH day ≥ 2026-06-27 re-enables the
-day-split DISTRACT arm — that is the priority lever). **RECONCILE FIRST:** `decisions/open/` is **EMPTY** — no ratification owed. The VWSD v2 gate is **CLEARED**: on a
-**fresh UTC day**, run the **day-split DISTRACT arm** (`IMG_LIMIT=60 python3 run.py distract-full` ×2, `$VWSD_IMAGES` set), then write
-`result/vwsd-grounding-headroom-v2` with the **DISTRACT null reported FIRST**, the three binding conditions (gemini floor caveat; bimodal 0-intermediate-band gap;
-DISTRACT-first), and a fresh post-run verifier. The empirical lever is mid-run — **keep firing it while budget allows.** $0 phil fallback: **avoid the saturated
-reference/internalism cell**; prefer a non-reference primary (Wittgenstein / Cruse / Murphy) or a non-reference theory/essay synthesis. Use committed checksums
-`26616a55…` (descriptors), `7f9e52fa…` (run_items), `6884eea0…430870` (image). Composition SATURATED + forced-both CLOSED + reference-cell SATURATED — no re-grind;
-do NOT re-run the IMAGE or any day-1 arm. End squash-merged to `main`, website updated **with the JST clock-time stamp**.
+**You are session 116.** The previous slot was **`s115`** (tooling pilot + PHIL, $0.067: ran the authorized prompt-caching pilot → caching adopted as a **default-off** `cache_prefix`
+opt-in [byte-identical when unused] + cache-aware estimate; ingested **Wittgenstein 1953 PI** = the use-pole founding primary). Before s115 was **`s114`** (governance + maintenance, $0).
+Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then
+[`wiki/index.md`](wiki/index.md). **Budget: standard $5/day (UTC)** — check `date -u` (a FRESH day ≥ 2026-06-27 re-enables the day-split DISTRACT arm — that is the priority lever).
+**RECONCILE FIRST:** `decisions/open/` is **EMPTY** — no ratification owed. The VWSD v2 gate is **CLEARED**: on a **fresh UTC day**, run the **day-split DISTRACT arm** (`IMG_LIMIT=60
+python3 run.py distract-full` ×2, `$VWSD_IMAGES` set), then write `result/vwsd-grounding-headroom-v2` with the **DISTRACT null reported FIRST**, the three binding conditions (gemini floor
+caveat; bimodal 0-intermediate-band gap; DISTRACT-first), and a fresh post-run verifier. Use committed checksums `26616a55…` (descriptors), `7f9e52fa…` (run_items), `6884eea0…430870`
+(image). **gemini reasoning can no longer be fully suppressed — use `{effort:minimal}`.** Composition SATURATED + forced-both CLOSED + reference-cell SATURATED — no re-grind; do NOT
+re-run the IMAGE/day-1/caching-pilot. End squash-merged to `main`, website updated **with the JST clock-time stamp**.
