@@ -1,11 +1,14 @@
 ---
 id: prompt-caching-repeated-prefix-probes
 title: Should the probe harness use OpenRouter prompt caching on repeated-prefix probes to cut input cost, and how is that reconciled with cost accounting and reproducibility?
-status: open
+status: resolved
 opened: 2026-06-26
-opened-by: orchestrator
-contingent-artifacts:
-  - []
+opened-by: orchestrator (session 113, Tom-directed tooling pass)
+resolved: 2026-06-26
+resolved-by: autonomous (adversarial review)
+resolution: "ADOPT THE DEFAULT unchanged (session 114, independent fresh-agent adversarial review; opened s113, ratified s114, cross-session boundary held). The probe harness stays on the cold-read path; experiments/lib/openrouter.py is UNCHANGED. Caching is gated behind a $0-stakes matched cold-vs-cached pilot on one repeated-prefix probe class that must (a) confirm byte-identical outputs for the same frozen items/seed and (b) measure the actual usage.cost delta and input-token share; adopt only on probe classes where the pilot shows a material, output-neutral saving — implicit-caching models (gemini, gpt) first, Anthropic cache_control breakpoint only if its measured share justifies it; if the saving is small (the expected gemini case, where output+reasoning at $9/MT dominate), record the null and retire the lever; if caching is adopted, add a cache-aware input_cache_read/input_cache_write term to the RATE_CARD pre-flight estimate so it stops over-counting cached runs. Code-checked against openrouter.py: billed_cost() sums the API-returned usage.cost (cache line items already folded in → recorded figure stays correct automatically); RATE_CARD/estimated_cost() model only (prompt, completion), so a cached run would be over-ESTIMATED until the term is added. Yardstick fixed (the recorded-cost rule = sum usage.cost, and the cold-read reproducibility guarantee), never any result — no current or planned result depends on this decision."
+provisional-default: "[RATIFIED — see resolution above and the Ratification section below.] Leave the harness unchanged now; before adopting caching run a $0-stakes matched cold-vs-cached pilot on one repeated-prefix probe class; adopt only where it shows a material, output-neutral saving (implicit-caching models first); if the saving is small, record the null and leave the harness as-is."
+contingent-artifacts: []
 ---
 
 # Decision: prompt caching on repeated-prefix probes
@@ -89,3 +92,48 @@ it is a cost optimization, not a correctness gate; no current or planned result 
 it, and the existing cold-read path is correct and fully reproducible. If the pilot shows
 the input-token share is small across the project's actual probe mix, the honest outcome
 is to retire this lever rather than carry caching complexity for a marginal gain.
+
+## Ratification (session 114, 2026-06-26 — autonomous adversarial review)
+
+An independent fresh-agent adversarial-review pass (it did no downstream work this session) read this
+page, its options, the provisional default, and the relevant harness code, and returned **VERDICT: ADOPT
+THE DEFAULT as written** — the option that strictly dominates on the project's own stated priorities. The
+cross-session boundary held (opened session 113, ratified session 114).
+
+**Why the default dominates.** It changes nothing in the frozen execution path now, so cost-accounting
+correctness and byte-reproducibility are preserved by construction — there is nothing to perturb until a
+pilot has measured the effect. It gates adoption behind an empirical, $0-stakes measurement rather than an
+abstract assumption (the same operationalization discipline the project enforces elsewhere: measure first,
+then decide, and write the null if the lever is marginal). And it correctly names the one accounting gap
+adoption would open — the `RATE_CARD` pre-flight estimate over-counting a cached run — and queues the fix as
+a precondition of adoption rather than leaving it implicit. A more aggressive option (global enablement in
+`call()`) was rejected: it would add cache-TTL/eviction non-determinism to the realized-cost path with no
+measured payoff; and keeping the decision open was rejected because the page is complete (clear options, a
+defensible default, a named precondition, and a correct account of the accounting/reproducibility
+implications).
+
+**Code-check (verified against [`experiments/lib/openrouter.py`](../../../experiments/lib/openrouter.py)).**
+Both load-bearing factual claims on this page check out:
+
+- *Recorded cost stays correct automatically* — **VERIFIED.** `call()` sets `"usage": {"include": True}`
+  so OpenRouter returns the billed `usage.cost`; `billed_cost()` simply sums that returned figure
+  (`c = u.get("cost")`, `total += c`) with no rate-card arithmetic, so any cache-read/-write line items the
+  provider applies are already folded into the recorded total.
+- *Pre-flight estimate would over-count a cached run* — **VERIFIED.** `RATE_CARD` stores only a
+  `(prompt, completion)` price tuple per model and `estimated_cost()` charges every input token at the full
+  prompt rate with no discounted cache-read path, so a run that served part of its prefix from cache (billed
+  far below the prompt rate) would be *estimated* higher than *billed*. (Orthogonal to the docstring's note
+  that the estimate generally *under*-counts by omitting reasoning tokens — that is a completion-side gap.)
+  The page's magnitude analysis (choice 5) is corroborated by `RATE_CARD`'s gemini completion price
+  ($9/MT): caching touches only input, while output+reasoning drive the gemini bill, so the honest expected
+  pilot outcome is a small saving precisely where spend is highest.
+
+**Anti-cheat: PASS.** The verdict is not result-motivated — no current or planned result depends on this
+decision (it is a cost optimization, not a correctness gate), and adopting the default *strengthens* rather
+than weakens cost-accounting correctness (recorded cost stays `usage.cost`) and design reproducibility (the
+frozen cold-read path is untouched until a pilot proves output-neutrality).
+
+**Contingent artifacts: none** (`contingent-artifacts: []`) — nothing to promote or retire. The pilot this
+decision authorizes is new optional follow-on work (carried as a low-priority [`NEXT.md`](../../../NEXT.md) backlog item), not a
+contingent page awaiting promotion. The harnesses remain UNCHANGED, exactly as Tom directed when the
+decision was opened.
