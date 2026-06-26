@@ -6,7 +6,7 @@ meaning-senses:
   - referential
   - distributional
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-06-26
 links:
   - rel: refines
     target: concept/referential-meaning
@@ -14,6 +14,8 @@ links:
     target: concept/distributional-meaning
   - rel: depends-on
     target: resource/wic-graded-usage-similarity
+  - rel: depends-on
+    target: source/cruse-1986-lexical-semantics
 ---
 
 # Polysemy, homonymy, and graded word sense
@@ -30,6 +32,8 @@ Homonymy, by contrast, is discrete. *Bank* (riverside) and *bank* (financial) sh
 
 The lexicographer's tradition handles this contrast through sense-relation vocabulary — hyponymy, meronymy, antonymy, troponymy — but for this project's purposes the operative distinction is simply: does varying usage regularly produce *graded* relatedness judgements (polysemy), or does it produce a step function with no meaningful intermediate (homonymy)? That is the question the lexical wedge puts to an LLM.
 
+Cruse's *Lexical Semantics* (1986) supplies the lexical-semantics vocabulary for this contrast — though along a *different* axis than the project's relatedness gradient, a difference worth keeping straight. Cruse separates two ways context modifies a word's meaning ([`source/cruse-1986-lexical-semantics`](../sources/cruse-1986-lexical-semantics.md), Q2, secondary-strength): **contextual selection of senses** — the context picks one of several *discrete* senses, so the word is "ambiguous" — versus **contextual modulation** — the context works "within the scope of a single sense, modifying it in an unlimited number of ways by highlighting certain semantic traits and backgrounding others," so the word is "general" with respect to those traits, an effect "by nature not discrete but continuous and fluid." That is the **within-sense-vs-between-senses** axis (generality vs. ambiguity) — **not** the **relatedness-between-senses** axis (homonymy's unrelated senses vs. polysemy's related ones) this page's gradience claim runs on: discrete-but-related senses (the *paper* case above) are *selection* in Cruse's terms, not modulation. What Cruse gives the gradience program is *convergent* motivation from a different direction: he is reported to find "the contrast between polysemy and homonymy" unhelpful and to prefer "the contrast between discrete and continuous semantic variability," treating discreteness itself as a matter of degree ([`source/cruse-1986-lexical-semantics`](../sources/cruse-1986-lexical-semantics.md), Q5) — a lexical semanticist's own refusal of clean sense boundaries. His lexical unit ("a surface form along with a sense," Q4) is the object all these cuts range over.
+
 ## How this refines referential meaning: sense at fine grain
 
 Polysemy is a `referential.sense` phenomenon — Frege's `Sinn`, the mode of presentation, at fine grain. When someone uses *paper* to mean newspaper rather than academic article, the difference is not in reference (the denotation of "paper" in the abstract) but in which mode of presentation is operative: which cluster of descriptive and inferential associations the usage mobilizes. "Sense" in the Fregean tradition is the fine-grained vehicle; polysemy is what happens when one word carries multiple such vehicles that are related but not identical.
@@ -41,6 +45,8 @@ Note that polysemy does not touch the `referential.reference` or `referential.ex
 ## The distributional null: context-similarity as the shadow
 
 [`concept/distributional-meaning`](distributional-meaning.md) gives sense-in-context for free. A word embedded in different sentences occupies different distributional neighborhoods, and those neighborhoods encode something sense-like. The deflationary reading of any apparent LLM sense-tracking is that the model is simply responding to the *similarity of the two sentence contexts* — how much the surrounding words overlap — rather than to the *relatedness of the two senses* as such.
+
+This null is not an artifact of the LLM case; it is visible in the lexical-semantics tradition itself. Cruse takes "contextual normality" to be "the main mechanism for sense selection" ([`source/cruse-1986-lexical-semantics`](../sources/cruse-1986-lexical-semantics.md), Q3, secondary-strength), and because every word is general to some degree, the modulation view's own corollary is that a word has a (slightly) different meaning in every context it appears in — continuous with mere contextual variation. So the deflationary reading has a respectable lexical-semantics pedigree: the burden is on the *positive* claim to show that an LLM tracks sense-relatedness over and above context-normality, which is exactly what the context-similarity control is for.
 
 This is the lexical analogue of the constructional distributional shadow that runs through the project's grammatical probes (where the null is that an LLM reproduces construction form because of co-occurrence patterns, not because it encodes the construction's meaning). Here the null is: the apparent gradience in the LLM's same/different-sense signal is monotonic in context-similarity, and once context-similarity is held constant the sense-relatedness signal goes flat.
 
@@ -70,8 +76,8 @@ The polysemy-vs-homonymy contrast is the wedge's built-in internal control. It d
 
 ## Honest gaps
 
-The canonical lexical-semantics treatments of polysemy and sense-relation gradience — Cruse *Lexical Semantics* (1986), Murphy *Semantic Relations and the Lexicon* (2003), and Lyons *Semantics* (1977) — are on the wanted list ([`base/wanted.md`](../wanted.md)) and are **not yet in-repo**. No quote, page number, or finding from those works is attributed here, and none may be until a `source/` page with page-level provenance exists for them. The same applies to the Firth and Harris originals (the distributional-hypothesis sources) and the externalist tradition (Putnam, Evans), which are also in `wanted.md` and currently unverified.
+Cruse's *Lexical Semantics* (1986) is now in-repo as [`source/cruse-1986-lexical-semantics`](../sources/cruse-1986-lexical-semantics.md), but **at secondary strength only** — the in-copyright Cambridge primary was not consulted, and every Cruse claim is carried via named scholarly secondaries (Kilgarriff 1997, Mohammad & Hirst 2012, the in-repo CoSimLex page), with no page numbers asserted except one flagged, unverified locator. So the selection/modulation distinction and the lexical-unit / sense-relation vocabulary this page now leans on rest on a *secondary* reading of Cruse, not a verified primary. The other canonical treatments — Murphy *Semantic Relations and the Lexicon* (2003) and Lyons *Semantics* (1977) — remain on the wanted list ([`base/wanted.md`](../wanted.md)) and **not yet in-repo**; no quote, page number, or finding from them is attributed here. (The Firth and Harris distributional-hypothesis originals are in-repo; the externalist tradition — Putnam, Evans — is in-repo as theory sources, not anchors.)
 
-The current grounding of this concept page is therefore limited to: the ACL 2009 Erk/McCarthy/Gaylord finding as quoted via [`resource/wic-graded-usage-similarity`](../resources/wic-graded-usage-similarity.md), the conceptual treatment of `referential.sense` in [`concept/referential-meaning`](referential-meaning.md), and the distributional-null framing in [`concept/distributional-meaning`](distributional-meaning.md). That grounding is sufficient for the wedge-concept role this page plays, but the lexicographic treatment of gradience, bridging, and sense-relation vocabulary is pending the Cruse and Murphy ingestions. Until those sources are in-repo, references to "the lexicographer's picture" rest on common knowledge in the field, not on a citable in-repo source.
+The current grounding of this concept page is therefore: the ACL 2009 Erk/McCarthy/Gaylord finding as quoted via [`resource/wic-graded-usage-similarity`](../resources/wic-graded-usage-similarity.md); the selection/modulation distinction and sense-relation vocabulary via [`source/cruse-1986-lexical-semantics`](../sources/cruse-1986-lexical-semantics.md) (secondary-strength); the conceptual treatment of `referential.sense` in [`concept/referential-meaning`](referential-meaning.md); and the distributional-null framing in [`concept/distributional-meaning`](distributional-meaning.md). That grounding is sufficient for the wedge-concept role this page plays. The finer-grained lexicographic treatment of bridging and the full sense-relation taxonomy is still pending the Murphy ingestion and a *primary*-strength reach of Cruse.
 
 **Update (2026-06-23):** the **regular/systematic (Apresjan) polysemy** sub-kind — *patterned, productive* sense extensions shared across many words (animal-for-meat, container-for-contents, artist-for-works), distinct from *irregular/accidental* polysemy and from homonymy — is now grounded in-repo by [`source/falkum-vicente-2015-polysemy`](../sources/falkum-vicente-2015-polysemy.md) (open-access; the regular/logical-vs-irregular carving, the Apresjan criterion, the conjunction/anaphora diagnostics for *logical* polysemy, and the honest caveat that the regular/irregular line is "not clear-cut either"). It sharpens this page's "related senses" notion into "related *by a productive cross-lexical pattern*"; the Cruse/Murphy/Lyons monographs remain wanted.
