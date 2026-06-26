@@ -43,12 +43,25 @@ PANEL = {
 
 # Local rate card (USD per 1M tokens, prompt/completion) — kept ONLY as a fallback
 # estimate when usage.cost is absent (e.g. a provider that does not report cost). The
-# 2026-05-30 finding: this UNDERCOUNTS real spend ~4.5x, so it is a fallback, not the
-# headline. Prefer billed_cost() (sums usage.cost) for the recorded figure.
+# 2026-05-30 finding: a naive token-estimate UNDERCOUNTS real spend, so this is a
+# fallback, not the headline. Prefer billed_cost() (sums usage.cost) for the recorded
+# figure.
+#
+# CORRECTION 2026-06-26: the prior numbers (gpt 0.20/0.60, gemini 0.15/0.60) were
+# stale by ~4-15x against OpenRouter's live catalog and were a large part of why the
+# pre-flight estimate read so far below the bill (gemini in particular billed ~14.5x its
+# old estimate; see config/budget.md). Verified against the live OpenRouter endpoints
+# this date (catalog reachable via the optional `openrouter` design-time MCP server, or
+# the plain REST /api/v1/models endpoint — see config/mcp-servers.md). The headline
+# recorded cost is STILL the API-returned usage.cost via billed_cost(); these numbers
+# only sharpen the *pre-flight estimate*. Note the estimate remains a lower bound for
+# reasoning-heavy gemini runs: gemini bills internal-reasoning tokens at the COMPLETION
+# rate ($9/MT) and they are not separately modelled here — keep `reasoning` suppressed
+# or capped on large gemini runs and budget against the billed expectation.
 RATE_CARD = {
-    "anthropic/claude-sonnet-4.6": (3.0, 15.0),
-    "openai/gpt-5.4-mini": (0.20, 0.60),
-    "google/gemini-3.5-flash": (0.15, 0.60),
+    "anthropic/claude-sonnet-4.6": (3.0, 15.0),   # unchanged — was already accurate
+    "openai/gpt-5.4-mini": (0.75, 4.50),          # was (0.20, 0.60) — ~4x/7x too low
+    "google/gemini-3.5-flash": (1.50, 9.00),      # was (0.15, 0.60) — ~10x/15x too low
 }
 
 
