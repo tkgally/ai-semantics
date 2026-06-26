@@ -1,0 +1,17 @@
+{
+  "_note": "gpt + claude usage objects TRANSCRIBED FROM STDOUT. pilot.py writes raw.json only at end/abort; the run timed out mid-claude (claude's 7k-token calls are slow), so the live raw.json was not written. These records reproduce the usage figures printed to the run transcript by explore_usage.py (gpt true-cold/warm) and pilot.py (gpt warm x6, claude write/read). gemini's figures ARE in committed live files (gemini_raw.json, gemini_explicit_raw.json). All numbers reconcile (coherence pass, session 115).",
+  "gpt": [
+    {"src": "explore_usage.py", "read": "COLD", "model": "openai/gpt-5.4-mini", "usage": {"prompt_tokens": 6379, "completion_tokens": 5, "cost": 0.00480675, "prompt_tokens_details": {"cached_tokens": 0, "cache_write_tokens": 0}}, "content": "1"},
+    {"src": "explore_usage.py", "read": "WARM", "model": "openai/gpt-5.4-mini", "usage": {"prompt_tokens": 6379, "completion_tokens": 5, "cost": 0.00083235, "prompt_tokens_details": {"cached_tokens": 5888, "cache_write_tokens": 0}}, "content": "1"},
+    {"src": "pilot.py", "item": "river bank", "read": "COLD", "usage": {"prompt_tokens": 6379, "cost": 0.00083235, "prompt_tokens_details": {"cached_tokens": 5888}}, "content": "1"},
+    {"src": "pilot.py", "item": "river bank", "read": "WARM", "usage": {"prompt_tokens": 6379, "cost": 0.00083235, "prompt_tokens_details": {"cached_tokens": 5888}}, "content": "1"},
+    {"src": "pilot.py", "item": "banked the plane", "read": "COLD", "usage": {"prompt_tokens": 6380, "cost": 0.0008601, "prompt_tokens_details": {"cached_tokens": 5888}}, "content": "2"},
+    {"src": "pilot.py", "item": "banked the plane", "read": "WARM", "usage": {"prompt_tokens": 6380, "cost": 0.0008601, "prompt_tokens_details": {"cached_tokens": 5888}}, "content": "2"},
+    {"src": "pilot.py", "item": "deposited paycheck", "read": "COLD", "usage": {"prompt_tokens": 6378, "cost": 0.0008586, "prompt_tokens_details": {"cached_tokens": 5888}}, "content": "4"},
+    {"src": "pilot.py", "item": "deposited paycheck", "read": "WARM", "usage": {"prompt_tokens": 6378, "cost": 0.0008586, "prompt_tokens_details": {"cached_tokens": 5888}}, "content": "4"}
+  ],
+  "claude": [
+    {"src": "pilot.py", "item": "river bank", "read": "COLD", "model": "anthropic/claude-sonnet-4.6", "note": "explicit cache_control on system block; first call writes cache", "usage": {"prompt_tokens": 7226, "cost": 0.0271455, "prompt_tokens_details": {"cached_tokens": 0, "cache_write_tokens": 7190}}, "content": "1"},
+    {"src": "pilot.py", "item": "river bank", "read": "WARM", "model": "anthropic/claude-sonnet-4.6", "usage": {"prompt_tokens": 7226, "cost": 0.00234, "prompt_tokens_details": {"cached_tokens": 7190, "cache_write_tokens": 0}}, "content": "1"}
+  ]
+}

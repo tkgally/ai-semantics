@@ -137,3 +137,48 @@ frozen cold-read path is untouched until a pilot proves output-neutrality).
 decision authorizes is new optional follow-on work (carried as a low-priority [`NEXT.md`](../../../NEXT.md) backlog item), not a
 contingent page awaiting promotion. The harnesses remain UNCHANGED, exactly as Tom directed when the
 decision was opened.
+
+## Pilot result (session 115, 2026-06-26 — the authorized $0-stakes measurement, now run)
+
+The pilot the resolution gated adoption behind has **run** — a matched cold-vs-cached pair on one
+repeated-prefix probe class (a ~6.4k-token shared lexical-annotation prefix + short item stem, the shape of
+the project's high-call-count single-token-output probes). Full record + scripts:
+[`experiments/runs/2026-06-26-prompt-caching-pilot/`](../../../experiments/runs/2026-06-26-prompt-caching-pilot/results.md).
+Spend ≈ **$0.067** (under the single-run flag). **Outputs were byte-identical cold vs cached on all three
+models** (output-neutral, as required).
+
+**Measured savings (`usage.cost`, which is already net of the cache discount):**
+
+| Model | mechanism | no-cache | cached | saving | cached share |
+|-------|-----------|----------|--------|--------|--------------|
+| `gpt-5.4-mini` | implicit (automatic) | $0.004807 | $0.000832 | **−82.7%** | 92% |
+| `gemini-3.5-flash` | implicit **did not fire**; explicit `cache_control` | $0.006632 | $0.001149 | **−82.7%** | 92% (explicit) |
+| `claude-sonnet-4.6` | explicit `cache_control` | $0.027146 (write) | $0.002340 (read) | **−91.4%** on reads | 99% |
+
+**Two assumptions on this page were overturned by measurement:**
+
+1. **Gemini implicit caching does NOT fire via OpenRouter's route** (three identical-prefix calls all
+   reported `cached_tokens: 0`), despite the catalog's `supports_implicit_caching: true` in the table above.
+   Gemini realizes the saving **only with an explicit `cache_control` breakpoint** — it behaves like claude,
+   not gpt, for capture purposes. So choice (2)'s "restrict the lever to the implicit-caching models" framing
+   is wrong: of the panel, **only gpt caches implicitly**; gemini and claude both need the explicit breakpoint.
+2. **The saving is material (~83–91%), not the "small null" expected for gemini** — *on input-dominated
+   probes*. Choice (5)'s magnitude analysis (output+reasoning dominate) holds **only for reasoning-heavy
+   runs**. On the project's single-token-output, large-prefix, high-call-count probes the input is ~99% of
+   the bill, so caching cuts ~83–91% per call after the first. (Separately discovered: **reasoning is now
+   mandatory on `gemini-3.5-flash`** — `{enabled:false}`/`{effort:none}` are HTTP-400 rejected; only
+   `{effort:minimal}` is accepted — so the reasoning-cost driver can no longer be fully suppressed, and the
+   total saving on reasoning-heavy gemini runs shrinks toward the original expectation.)
+
+**Action taken (resolution-authorized, enabling capability only, default-OFF).** Because the pilot showed a
+material, output-neutral saving, the lever is adopted at the harness-*capability* level and the named
+precondition (cache-aware estimate) is discharged — both changes byte-identical to prior behaviour when
+unused (verified, `verify_harness.py`):
+[`experiments/lib/openrouter.py`](../../../experiments/lib/openrouter.py) gained (a) an opt-in
+`call(..., cache_prefix=False)` param (system turn wrapped in a `cache_control` block only when `True`; off →
+byte-identical body, so **no existing probe or frozen design is perturbed**), and (b) a `CACHE_READ` rate
+card + cache-aware `estimated_cost()` (cached tokens charged at the cache-read rate; identical to the old
+formula when `cached=0`). **Adoption is per-probe** — a future high-call-count probe passes `cache_prefix=True`
+(gemini/claude) or relies on implicit caching (gpt). Nothing was re-run; the recorded cost stays `usage.cost`.
+The lever is **not retired** (the saving is material, contra the expected gemini-null) but its realized size
+is probe-dependent (large on single-token-output probes, smaller on reasoning-heavy ones).
