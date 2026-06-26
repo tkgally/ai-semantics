@@ -30,6 +30,10 @@ links:
     target: source/thrush-2022-winoground
   - rel: depends-on
     target: source/frege-1892-sense-and-reference
+  - rel: depends-on
+    target: source/tarski-1944-semantic-conception-of-truth
+  - rel: depends-on
+    target: source/davidson-1967-truth-and-meaning
 ---
 
 # Compositionality and the Fregean principle
@@ -42,10 +46,10 @@ The **principle of compositionality** — usually attributed to Frege (now in-re
 
 Two properties of natural language make the principle attractive as more than a slogan, and they are the standard motivation for it (Frege now in-repo; Fodor & Lepore restate them as the argument's load-bearing data, still *not in-repo; characterization*):
 
-- **Productivity** — a finite vocabulary and a finite stock of combinatory rules generate an unbounded number of well-formed expressions, including ones never encountered before. A compositional semantics explains how a speaker who has never met a sentence can nonetheless compute what it means.
+- **Productivity** — a finite vocabulary and a finite stock of combinatory rules generate an unbounded number of well-formed expressions, including ones never encountered before. A compositional semantics explains how a speaker who has never met a sentence can nonetheless compute what it means. This finitude-for-an-infinitude point is stated as a requirement *on a theory of meaning* by Davidson (1967; **now in-repo**, [`source/davidson-1967-truth-and-meaning`](../sources/davidson-1967-truth-and-meaning.md)): a workable theory must be finitely stated yet cover "a potential infinitude of sentences" (p. 304) — the learnability argument that makes a part-to-whole function not optional but mandatory for a learnable language.
 - **Systematicity** — the ability to understand *the dog chased the cat* is not independent of the ability to understand *the cat chased the dog*. The two are systematically related because they are built from the same parts under the same rules. Compositionality predicts exactly this clustering of abilities.
 
-Compositionality in this strict, function-of-the-parts form is the **engine of formal / truth-conditional semantics**. In the Montague tradition (Montague's *PTQ* / "The Proper Treatment of Quantification", 1973, and the work Partee systematized into the textbook framework; *both not in-repo; characterization*), the meaning of an expression is computed by a homomorphism from a syntactic algebra to a semantic algebra: each syntactic rule of combination is paired with a semantic rule of combination, so the structure of the derivation *is* the structure of the meaning. The truth-conditional content this machinery delivers is the subject of the sibling page [`truth-conditional-and-use-meaning.md`](truth-conditional-and-use-meaning.md); here the relevant point is only that **compositionality is what lets that machinery run** — without a part-to-whole function, there is no homomorphism to build.
+Compositionality in this strict, function-of-the-parts form is the **engine of formal / truth-conditional semantics**. In the Montague tradition (Montague's *PTQ* / "The Proper Treatment of Quantification", 1973, and the work Partee systematized into the textbook framework; *both not in-repo; characterization* — though the recursive truth-via-satisfaction core the tradition presupposes is **now in-repo** as [`source/tarski-1944-semantic-conception-of-truth`](../sources/tarski-1944-semantic-conception-of-truth.md), where "a sentence is true if it is satisfied by all objects," §11), the meaning of an expression is computed by a homomorphism from a syntactic algebra to a semantic algebra: each syntactic rule of combination is paired with a semantic rule of combination, so the structure of the derivation *is* the structure of the meaning. The truth-conditional content this machinery delivers is the subject of the sibling page [`truth-conditional-and-use-meaning.md`](truth-conditional-and-use-meaning.md); here the relevant point is only that **compositionality is what lets that machinery run** — without a part-to-whole function, there is no homomorphism to build.
 
 A note this project must keep in view: the strict principle is usually stated as **lexical** compositionality — the "parts" are *words* (plus the syntactic mode of combination). That choice of what counts as a part is exactly what Construction Grammar contests.
 

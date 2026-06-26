@@ -2,32 +2,24 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC day **2026-06-26** spent **≈$3.900** (s112 IMAGE $3.83238 + s113 $0.00019 + s114 $0 + **s115 prompt-caching pilot $0.06675**). Only
-**≈$1.10 headroom** remains on UTC 2026-06-26 — NOT enough for the DISTRACT arm (≈$3.8); **do not start it today.** A fresh UTC day (**≥ 2026-06-27**) resets to $5 and
+**Standard cap: $5.00/day (UTC).** UTC day **2026-06-26** spent **≈$3.900** (s112 IMAGE $3.83238 + s113 $0.00019 + s114 $0 + s115 prompt-caching pilot $0.06675 + **s116 PHIL-ingest $0**). Only
+**≈$1.10 headroom** remains on UTC 2026-06-26 — NOT enough for the DISTRACT arm (≈$3.8); **do not start it on 2026-06-26.** A fresh UTC day (**≥ 2026-06-27**) resets to $5 and
 re-enables the day-split DISTRACT arm — **that is the priority lever. Check `date -u` FIRST.** Full ledger in [`config/budget.md`](config/budget.md). Check for any newer Tom override too.
 
 ## State
 
-**Session 115 (UTC 2026-06-26) — tooling pilot + philosophical ingest, $0.067, no research probe.** Same UTC day as s112–114, headroom too thin for the DISTRACT lever, so a
-two-track non-empirical-research session. `decisions/open/` was **EMPTY** at start → no ratification owed; no Tom override. What landed:
+**Session 116 (UTC 2026-06-26) — philosophical-track ingest wave, $0, no research probe.** Same UTC day as s112–115, headroom too thin for the DISTRACT lever, so a $0 two-track non-empirical
+session in workflow mode (1 ingest wave + read-only coherence pass + integration). `decisions/open/` was **EMPTY** at start → no ratification owed; no Tom override. What landed:
 
-1. **PROMPT-CACHING PILOT — ran the $0-stakes measurement the s114-ratified decision authorized.** Run dir [`experiments/runs/2026-06-26-prompt-caching-pilot/`](experiments/runs/2026-06-26-prompt-caching-pilot/results.md).
-   Matched cold-vs-cached on one repeated-prefix probe class. **Outputs byte-identical cold vs cached on all 3 models** (output-neutral). MEASURED: **gpt implicit −82.7%** (auto, no flag),
-   **gemini explicit `cache_control` −82.7%** (its *implicit* caching did NOT fire via OpenRouter's route, contra the catalog flag), **claude explicit −91.4%** on reads — ~92–99% of the
-   prefix cached. **Two decision assumptions overturned:** (a) of the panel only gpt caches implicitly — gemini needs the explicit breakpoint like claude; (b) the saving is **material
-   (~83–91%), not the expected small null**, on input-dominated single-token-output probes (it shrinks only on reasoning-heavy gemini runs, where output+reasoning at $9/MT dominate).
-   **Action (resolution-authorized, default-OFF):** [`experiments/lib/openrouter.py`](experiments/lib/openrouter.py) gained an opt-in `call(..., cache_prefix=False)` (byte-identical
-   body when off → **no existing probe or frozen design perturbed**; verified) + a `CACHE_READ` card + cache-aware `estimated_cost()` (cached tokens discounted; identical to old formula
-   when `cached=0`). Pilot result appended to the resolved decision page; lever **not retired** (saving is material). **Adoption is per-probe.**
-2. **WITTGENSTEIN 1953 PI INGESTED** → [`source/wittgenstein-1953-philosophical-investigations`](wiki/base/sources/wittgenstein-1953-philosophical-investigations.md) (type source, status received, NOT a human anchor).
-   Closes the named `wanted.md` P2 gap + the "not in-repo; characterization" Wittgenstein leg of [`concept/truth-conditional-and-use-meaning`](wiki/base/concepts/truth-conditional-and-use-meaning.md) pole (b).
-   Two-route OA: **§§43/7/66/67 primary-direct** (PD German, wittgensteinproject.org); **English §§43/23/66/201/243 carried-via-secondary** (OA SEP); Anscombe translation NOT sourced
-   (copyright); §§201/243 at lower secondary-only strength. Coherence pass **independently re-verified all 12 quotes verbatim** against the cited sources. Concept page + `wanted.md` updated.
-3. **Coherence pass** (fresh read-only agent): 0 BLOCKERS; 2 SHOULD-FIX (index coverage → added to `wiki/index.md`; gpt/claude raw uncommitted → `gpt_claude_raw.json` written) + 1 NIT (§7
-   continuation hedge) — all applied. **senselint 0 errors** (2 expected WARN, 41 INFO); **linkify clean**. **Website + index dashboard updated** (JST 14:09, session 115).
+1. **THREE truth-conditional / holism founding primaries ingested** (the genuinely under-covered region — the "SILENT cell" of [`concept/truth-conditional-and-use-meaning`](wiki/base/concepts/truth-conditional-and-use-meaning.md), now that Frege + Wittgenstein are both in-repo):
+   - [`source/tarski-1944-semantic-conception-of-truth`](wiki/base/sources/tarski-1944-semantic-conception-of-truth.md) — Convention T + schema "(T) X is true iff p" + snow-is-white (§4), satisfaction (§11), object-/meta-language + Liar (§§7–9). OA Chrucky transcription, §-located. **Honest limit:** 1944 article *outlines* the recursion the unread **1933 monograph** gives in full; Part II not fetched.
+   - [`source/davidson-1967-truth-and-meaning`](wiki/base/sources/davidson-1967-truth-and-meaning.md) — "to give truth conditions is a way of giving the meaning of a sentence" (p. 310), "(T) s is T iff p" (p. 309), finitude (p. 304), anti-entity (p. 307), holism (p. 308), Convention-T dependence. UH OA scan, page-located; Tarski-order *reversal* flagged as interpretation, not a quote. **1984 *Inquiries* NOT read.**
+   - [`source/quine-1951-two-dogmas`](wiki/base/sources/quine-1951-two-dogmas.md) — two dogmas (§I), analyticity/synonymy circle (§§I/IV), confirmation holism (corporate body §V–§VI; "unit of empirical significance is the whole of science" §VI), field-of-force (§VI). ditext/Chrucky OA — **a 1951/1961 composite, no PR pagination** (flagged; fine-grained §§1/3/4/6 quotes need a 1951 PR scan to re-verify). ***Word and Object* 1960 NOT in-repo.**
+   - All three are **theory sources, NOT human anchors** (licence no model-comparison claim). Coherence pass (fresh read-only agent): **0 BLOCKERS**, every famous quote verified against canonical wording; `referential` meaning-sense dropped from the Quine page on review (over-reach); Davidson venue nit trimmed.
+2. **Concept-page legs discharged** (orchestrator integration): [`concept/truth-conditional-and-use-meaning`](wiki/base/concepts/truth-conditional-and-use-meaning.md) (Tarski + Davidson legs — only Montague now "not in-repo"); [`concept/semantic-holism`](wiki/base/concepts/semantic-holism.md) (Quine 1951 + Davidson 1967 legs — *Word and Object* 1960 + *Inquiries* 1984 still out); [`concept/compositionality`](wiki/base/concepts/compositionality.md) (Davidson finitude/productivity + Tarski recursion-core notes — Montague PTQ still out). `wanted.md` statuses → RECEIVED; `wiki/index.md` catalog updated; typed-link graphs synced.
+3. **Verify + website.** senselint **0 errors** (2 expected WARN, 41 INFO); linkify clean. Website: journal entry + home-page status + 2 new glossary terms (`truth-conditions`, `holism`), JST 15:19, session 116.
 
-**Note for any future gemini run:** `gemini-3.5-flash` now **rejects** `reasoning:{enabled:false}` and `{effort:none}` (HTTP 400 "Reasoning is mandatory"); only `{effort:minimal}` is accepted.
-The project already uses `effort:minimal`, so nothing breaks — but do NOT try to fully suppress gemini reasoning.
+**Note for any future gemini run (unchanged):** `gemini-3.5-flash` now **rejects** `reasoning:{enabled:false}` and `{effort:none}` (HTTP 400 "Reasoning is mandatory"); only `{effort:minimal}` is accepted. The project already uses `effort:minimal`, so nothing breaks.
 
 ## ⚠ VWSD v2 — the lever still points at the DISTRACT arm, then the result (UNCHANGED gate; IMAGE arm DONE, FROZEN)
 
@@ -56,52 +48,52 @@ cost is a measured number ($0.01244/call), not a placeholder — DISTRACT will c
 - **Composition / order-sensitive-composition / capability-split line is SATURATED** (s99). **Forced-both lexical line CLOSED at R1 pending a NEW resource** (`wanted.md` P3).
 - **VWSD v2 day-1 + IMAGE arm are DONE, FROZEN** — do **not** re-generate descriptors / re-draw N=120 / re-run the IMAGE or any day-1 arm.
 - **The reference / internalism-vs-externalism philosophical cell is SATURATED** (s114) — a new reference essay is redundant padding; weight $0 phil work toward a *different* region.
-- **Prompt-caching is now MEASURED and adopted as a default-off opt-in** — do NOT re-run the pilot. The lever is available per-probe (`cache_prefix=True` for gemini/claude; gpt implicit).
+- **Prompt-caching is MEASURED and adopted as a default-off opt-in** (s115) — do NOT re-run the pilot. Lever available per-probe (`cache_prefix=True` for gemini/claude; gpt implicit).
+- **Truth-conditional + holism founding primaries are NOW IN-REPO** (s116: Tarski 1944, Davidson 1967, Quine 1951; Frege s110, Wittgenstein s115) — do NOT re-ingest. Of the truth-conditional/use fault-line, only **Montague PTQ 1973** remains not-in-repo (book-walled; expect secondary-only like Goldberg/Croft).
 
 ## Next concrete action — backlog for the next session
 
 **RECONCILE FIRST (PROTOCOL §2):** `decisions/open/` is **EMPTY** — no ratification owed (apply any Tom override first if one appears). The s108 GO is a pre-run-critic gate already
 cleared; honor the three binding conditions above; no further ratification needed there.
 
-**Track lean — recent: 110 PHIL · 111 PHIL · 112 emp-RUN(IMAGE) · 113 tooling · 114 governance · 115 tooling-pilot+PHIL.** The empirical RESEARCH lever is mid-run and overdue to fire
-the moment a fresh budget day allows. In rough priority:
+**Track lean — recent: 111 PHIL · 112 emp-RUN(IMAGE) · 113 tooling · 114 governance · 115 tooling-pilot+PHIL · 116 PHIL-ingest.** The empirical RESEARCH lever is mid-run and **overdue** —
+two consecutive non-empirical sessions now. Fire the DISTRACT arm the moment a fresh budget day allows. In rough priority:
 
-1. **IF a FRESH UTC day (≥ 2026-06-27) — the DISTRACT arm, day-split, then the result.** Run `run.py distract-full` over the frozen 120 × 3 (code already in `run.py`; word+phrase
-   ablated, "pick the most prototypical/canonical/everyday image"; same images, low detail). ≈$3.8 → split into **two 60-item sub-batches** (`IMG_LIMIT=60 python3 run.py distract-full`
-   twice; each under the $2.50 flag), `$VWSD_IMAGES` set to the re-fetched zip (Drive id `15ed8TXY9Pzk68_SCooFm7AfkeFtCd16Q`, sha `b9f2f1e1…af8f`; **keep out of git**). Then write
-   [`result/vwsd-grounding-headroom-v2`] — **DISTRACT null reported and credited FIRST**, then the binned image-rescue interaction, honoring all **three binding conditions** + a fresh
-   independent **post-run verifier**; promote the conjecture [`distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md)
-   only as the evidence warrants. `analyze.py` already computes every result section once `raw/distract.json` exists. *(Optional: the DISTRACT prompt re-sends a fixed instruction prefix
-   per item — `cache_prefix=True` on the gemini/claude calls would now cut input cost, but the bill is image-token-dominated so the saving is modest; not required.)*
-2. **PHILOSOPHICAL fallback ($0), only if still budget-blocked.** **Avoid the saturated reference/internalism cell.** Live, *non-reference* phil primaries worth ingesting (OA permitting):
-   **Cruse 1986 / Murphy 2003** lexical-semantics (likely book-walled like Goldberg/Croft — carry via author/secondary if so); or the **Tarski/Davidson/Montague** truth-conditional-pole
-   primaries (the remaining `wanted.md` legs of the truth-conditional gap, now that Frege + Wittgenstein are both in-repo). A non-reference theory/essay synthesis is also fine — but the
-   use-theoretic-method region is now well-covered (concept + theory pages + the Wittgenstein primary), so prefer a genuinely under-covered region.
+1. **IF a FRESH UTC day (≥ 2026-06-27) — the DISTRACT arm, day-split, then the result. (TOP PRIORITY — empirical track is overdue.)** Run `run.py distract-full` over the frozen 120 × 3
+   (code already in `run.py`; word+phrase ablated, "pick the most prototypical/canonical/everyday image"; same images, low detail). ≈$3.8 → split into **two 60-item sub-batches**
+   (`IMG_LIMIT=60 python3 run.py distract-full` twice; each under the $2.50 flag), `$VWSD_IMAGES` set to the re-fetched zip (Drive id `15ed8TXY9Pzk68_SCooFm7AfkeFtCd16Q`, sha `b9f2f1e1…af8f`;
+   **keep out of git**). Then write [`result/vwsd-grounding-headroom-v2`] — **DISTRACT null reported and credited FIRST**, then the binned image-rescue interaction, honoring all **three
+   binding conditions** + a fresh independent **post-run verifier**; promote the conjecture [`distributional-saturation-grounding-headroom`](wiki/findings/conjectures/distributional-saturation-grounding-headroom.md)
+   only as the evidence warrants. `analyze.py` already computes every result section once `raw/distract.json` exists.
+2. **PHILOSOPHICAL fallback ($0), only if still budget-blocked.** **Avoid** the saturated reference/internalism cell **and** the now-covered truth-conditional/use/holism founding region
+   (Frege+Tarski+Davidson+Wittgenstein+Quine all in). Genuinely under-covered live primaries: **Montague PTQ 1973 / Partee** (the one remaining truth-conditional founding leg — expect
+   book-walled, carry via author/secondary if so); the **prototype/frame** cluster (**Rosch 1975 / Rosch & Mervis 1975** family-resemblance experiments; **Fillmore 1982/1985** frame
+   semantics — both ground [`concept/frame-and-prototype-semantics`](wiki/base/concepts/frame-and-prototype-semantics.md), a less-developed region); or **Lewis 1970 "General
+   Semantics"** (the Markerese argument). A theory/essay synthesis in a genuinely under-covered region is also fine — but do NOT pad the well-covered cells.
 3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md) — **with the JST clock-time stamp** (mandatory).
 
 ## Open decisions
 
-- **NONE OPEN.** `prompt-caching-repeated-prefix-probes` (opened s113, ratified s114) had its authorized **pilot run this session (s115)** and a "Pilot result" addendum appended to the
-  resolved page; **42 ratified to date.** Full changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+- **NONE OPEN.** `decisions/open/` empty. **42 ratified to date.** Full changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- Session 115 spent **≈$0.067** (UTC day 2026-06-26; day total ≈$3.900 of $5.00).
-- Plain-language: the budget for today was mostly used by the picture experiment two sessions ago, so no new experiment ran. The session ran the free cost-saving trial you'd asked for
-  before switching the service's cheaper re-read pricing on — and it was a pleasant surprise: the saving is **large (about 83–91%) on the project's cheap one-word-answer runs**, not the
-  small amount we'd braced for, and the models' answers came back identical character-for-character. So the discount was switched on as an **optional, off-by-default** setting that leaves
-  every existing experiment untouched. (One wrinkle measurement caught: one model the project expected to discount automatically actually needs to be asked explicitly.) The session also
-  read and recorded the founding philosophy text behind the project's whole method — Wittgenstein's "a word's meaning is its use" — quoting it from a public-domain edition. The picture
-  experiment's word-removed control is still the next spending step and waits for a fresh budget day.
+- Session 116 spent **$0** (UTC day 2026-06-26; day total ≈$3.900 of $5.00 — unchanged, this was a reading session).
+- Plain-language: today's budget was already mostly used by the picture experiment two sessions ago, so no new experiment ran. The session instead read and recorded three founding texts
+  on the "truth-conditions" side of the theory of meaning — Tarski (making "is true" precise), Davidson (truth-conditions as a way of giving meaning), and Quine's "Two Dogmas" (the
+  "holism" idea that sentences face evidence only as a whole connected body — which bears on the strongest case for a language model having meaning). With Frege and Wittgenstein, read
+  earlier, four of the five founding texts of this old debate are now in the project's library, quoted at first hand. The picture experiment's word-removed control is still the next
+  spending step and waits for a fresh budget day.
 
 ## Reminder for the next cold-start
 
-**You are session 116.** The previous slot was **`s115`** (tooling pilot + PHIL, $0.067: ran the authorized prompt-caching pilot → caching adopted as a **default-off** `cache_prefix`
-opt-in [byte-identical when unused] + cache-aware estimate; ingested **Wittgenstein 1953 PI** = the use-pole founding primary). Before s115 was **`s114`** (governance + maintenance, $0).
+**You are session 117.** The previous slot was **`s116`** (PHIL-ingest, $0: Tarski 1944 + Davidson 1967 + Quine 1951 ingested = the truth-conditional + holism founding primaries; concept-page
+legs discharged on truth-conditional/holism/compositionality; only Montague PTQ now not-in-repo of that fault line). Before s116 was **`s115`** (tooling pilot + Wittgenstein PI, $0.067).
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`. Read [`wiki/executive-summary.md`](wiki/executive-summary.md) then
-[`wiki/index.md`](wiki/index.md). **Budget: standard $5/day (UTC)** — check `date -u` (a FRESH day ≥ 2026-06-27 re-enables the day-split DISTRACT arm — that is the priority lever).
-**RECONCILE FIRST:** `decisions/open/` is **EMPTY** — no ratification owed. The VWSD v2 gate is **CLEARED**: on a **fresh UTC day**, run the **day-split DISTRACT arm** (`IMG_LIMIT=60
-python3 run.py distract-full` ×2, `$VWSD_IMAGES` set), then write `result/vwsd-grounding-headroom-v2` with the **DISTRACT null reported FIRST**, the three binding conditions (gemini floor
-caveat; bimodal 0-intermediate-band gap; DISTRACT-first), and a fresh post-run verifier. Use committed checksums `26616a55…` (descriptors), `7f9e52fa…` (run_items), `6884eea0…430870`
-(image). **gemini reasoning can no longer be fully suppressed — use `{effort:minimal}`.** Composition SATURATED + forced-both CLOSED + reference-cell SATURATED — no re-grind; do NOT
-re-run the IMAGE/day-1/caching-pilot. End squash-merged to `main`, website updated **with the JST clock-time stamp**.
+[`wiki/index.md`](wiki/index.md). **Budget: standard $5/day (UTC)** — check `date -u` (a FRESH day ≥ 2026-06-27 re-enables the day-split DISTRACT arm — **that is the priority lever, and the
+empirical track is now overdue**). **RECONCILE FIRST:** `decisions/open/` is **EMPTY** — no ratification owed. The VWSD v2 gate is **CLEARED**: on a **fresh UTC day**, run the **day-split
+DISTRACT arm** (`IMG_LIMIT=60 python3 run.py distract-full` ×2, `$VWSD_IMAGES` set), then write `result/vwsd-grounding-headroom-v2` with the **DISTRACT null reported FIRST**, the three binding
+conditions (gemini floor caveat; bimodal 0-intermediate-band gap; DISTRACT-first), and a fresh post-run verifier. Use committed checksums `26616a55…` (descriptors), `7f9e52fa…` (run_items),
+`6884eea0…430870` (image). **gemini reasoning can no longer be fully suppressed — use `{effort:minimal}`.** Composition SATURATED + forced-both CLOSED + reference-cell SATURATED +
+truth-conditional/use/holism founding region COVERED — no re-grind; do NOT re-run the IMAGE/day-1/caching-pilot or re-ingest the founding primaries. End squash-merged to `main`, website
+updated **with the JST clock-time stamp**.
