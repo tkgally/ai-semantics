@@ -6,8 +6,10 @@ meaning-senses:
   - inferential
   - distributional
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-06-26
 links:
+  - rel: depends-on
+    target: source/dummett-1975-what-is-a-theory-of-meaning
   - rel: depends-on
     target: concept/inferential-meaning
   - rel: depends-on
@@ -34,11 +36,11 @@ This axis matters to the project for one sharp reason. The strongest pro-LLM-mea
 
 ## The spectrum (characterization)
 
-The three positions are best drawn through their canonical (and almost entirely **not-in-repo**) statements, characterized rather than quoted:
+The three positions are best drawn through their canonical statements. The two ends — atomism and holism — are characterized rather than quoted (Fodor's primary is not in-repo); the **middle position is now in-repo at primary strength** ([`source/dummett-1975-what-is-a-theory-of-meaning`](../sources/dummett-1975-what-is-a-theory-of-meaning.md), ingested 2026-06-26), so the molecularism bullet below quotes Dummett directly.
 
 - **Atomism.** Fodor's later view (e.g. Fodor & Lepore, *Holism: A Shopper's Guide*, 1992; not in-repo; characterization) is the limit case: the meaning of a primitive term is its (informational/nomic) relation to what it is about, fixed one term at a time, with inferential connections *not* constitutive of content. Atomism's payoff is exactly what holism struggles to deliver — two people, or two systems, can share a concept without sharing anything else — but it buys that by severing meaning from inferential role, which is the move inferentialism refuses.
 
-- **Molecularism.** Dummett ("What is a Theory of Meaning?", 1975/76; not in-repo; characterization) is the usual reference point: a theory of meaning should be *molecular*, assigning each expression a content graspable from a bounded body of knowledge, so that meaning is learnable piecemeal and a speaker can fully understand some sentences without understanding the whole language. Molecularism is the position that *wants* the benefits of inferential-role meaning without paying holism's price; the open problem it inherits is principled — which inferences are the meaning-constitutive subset, and which are merely collateral belief.
+- **Molecularism.** Dummett's "What is a Theory of Meaning?" (I, 1975; II, 1976) is the founding statement, now in-repo at primary strength ([`source/dummett-1975-what-is-a-theory-of-meaning`](../sources/dummett-1975-what-is-a-theory-of-meaning.md)). He concludes outright that "a theory of meaning… must accord with an atomistic, or at least a molecular, conception of language, not a holistic one" (essay I, *Seas of Language* reprint p. 21), and motivates it against holism by the piecemeal-learning argument: holism "can make no sense of the idea of knowing part of a language" (essay I, p. 32), whereas a molecular theory ties each capacity to "the theorems which relate to whole sentences" rather than to every axiom at once (essay II, p. 37) and must say how that knowledge is "manifested" in use (essay II, p. 41). Molecularism is the position that *wants* the benefits of inferential-role meaning without paying holism's price; the open problem it inherits is principled — which inferences are the meaning-constitutive subset, and which are merely collateral belief. That problem re-invokes the analytic/synthetic line Quine attacked, and Fodor & Lepore press it as the charge that molecularism is "an unstable resting point between atomism and holism" (both carried via SEP "Meaning Holism" §2.2, secondary; see the source page).
 
 - **Holism.** Quine's confirmation holism ("Two Dogmas of Empiricism", 1951; **now in-repo** at primary strength, [`source/quine-1951-two-dogmas`](../sources/quine-1951-two-dogmas.md); *Word and Object*, 1960, remains not in-repo) is the headwater: "our statements about the external world face the tribunal of sense experience not individually but only as a corporate body" (§V–§VI), so "The unit of empirical significance is the whole of science" (§VI) — there is no fact of the matter about the meaning of one sentence in isolation, and the analytic/synthetic distinction — the line between what a word *means* and what we merely *believe* using it — cannot be cleanly drawn, because "synonymy" is "no less in need of clarification than analyticity itself" (§I) and the attempt to define one through the other closes a circle: "So we are back at the problem of analyticity" (§IV). Davidson carries this into the theory of meaning: already in "Truth and Meaning" (1967; **now in-repo**, [`source/davidson-1967-truth-and-meaning`](../sources/davidson-1967-truth-and-meaning.md)) he holds that "only in the context of the language does a sentence (and therefore a word) have meaning" (p. 308) — the meanings of sentences are fixed together, by their place in the whole truth-theory for the language; the fuller radical-interpretation development (belief and meaning fixed together by interpreting a whole pattern of assent, *Inquiries into Truth and Interpretation*, 1984) remains not in-repo; characterization. On both, meaning lives in the web, not the node.
 
