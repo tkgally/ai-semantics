@@ -2,10 +2,15 @@
 
 ## ⚠ Budget note — read first
 
-**Standard cap: $5.00/day (UTC).** UTC day **2026-06-26** spent **$3.83238** (all of it session 112, the VWSD v2 IMAGE arm). **If a session
-still opens on UTC 2026-06-26, only ≈$1.17 headroom remains — NOT enough for the DISTRACT arm (≈$3.8); do not start it today.** A fresh UTC
-day resets to $5 and re-enables a day-split DISTRACT arm. **Check `date -u` FIRST.** Full ledger in [`config/budget.md`](config/budget.md).
-Check for any newer Tom override too.
+**Standard cap: $5.00/day (UTC).** UTC day **2026-06-26** spent **$3.83257** (session 112 VWSD v2 IMAGE arm $3.83238 + session 113 a $0.00019
+MCP liveness test). **If a session still opens on UTC 2026-06-26, only ≈$1.17 headroom remains — NOT enough for the DISTRACT arm (≈$3.8); do not
+start it today.** A fresh UTC day resets to $5 and re-enables a day-split DISTRACT arm. **Check `date -u` FIRST.** Full ledger in
+[`config/budget.md`](config/budget.md). Check for any newer Tom override too.
+
+**New tooling (s113, Tom-directed):** the pre-flight `RATE_CARD` in `experiments/lib/openrouter.py` was corrected (was 4–15× stale on gpt/gemini);
+an **optional** `openrouter` design-time MCP server is wired in `.mcp.json` for live price/param/latency lookups while *designing* a probe —
+**experiments and budgeting stay on the REST harness; the MCP server is never an experiment path or a source of recorded cost** (see
+[`config/mcp-servers.md`](config/mcp-servers.md)). The harnesses themselves are UNCHANGED.
 
 ## State
 
@@ -58,9 +63,13 @@ out**; the claude `max_tokens=512` cost is now a measured number ($0.01244/call)
 
 ## Next concrete action — backlog for the next session
 
-**RECONCILE FIRST (PROTOCOL §2):** `decisions/open/` is **EMPTY — no ratification owed.** (Apply any Tom override first if one appears.) The s108
-GO is a **pre-run-critic gate**, not a `decisions/open/` entry — it is already cleared; honor the three binding conditions above; no further
-ratification needed.
+**RECONCILE FIRST (PROTOCOL §2):** `decisions/open/` now holds **ONE** entry —
+[`prompt-caching-repeated-prefix-probes`](wiki/decisions/open/prompt-caching-repeated-prefix-probes.md), opened s113 (Tom-directed). It is
+**eligible for ratification by the next session** via the autonomous adversarial-review procedure (it was opened by an earlier session). It is a
+**cost optimization, not a correctness gate** — no current or planned result depends on it; the cheapest resolution path is the $0-stakes
+cold-vs-cached pilot it describes. Reconcile it (ratify / amend / defer with rationale), but it does **not** block the VWSD lever. (Apply any Tom
+override first if one appears.) The s108 GO is a **pre-run-critic gate**, not a `decisions/open/` entry — already cleared; honor the three binding
+conditions above; no further ratification needed there.
 
 **Track lean — recent: 107 emp-RUN(day-1) · 108 emp-GATE+PHIL · 109 PHIL · 110 PHIL · 111 PHIL · 112 emp-RUN(IMAGE).** The empirical lever is
 mid-run and should keep firing while a fresh budget day allows — finish it before swinging back to philosophy. In rough priority:
@@ -83,7 +92,11 @@ mid-run and should keep firing while a fresh budget day allows — finish it bef
 
 ## Open decisions
 
-- **NONE OPEN.** `decisions/open/` is empty. **41 ratified to date.** Full changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+- **ONE OPEN** (opened s113, Tom-directed): [`prompt-caching-repeated-prefix-probes`](wiki/decisions/open/prompt-caching-repeated-prefix-probes.md)
+  — whether to use OpenRouter prompt caching on repeated-prefix probes to cut input cost, and how that reconciles with cost accounting +
+  reproducibility. Provisional default: **leave the harness unchanged; run a $0-stakes cold-vs-cached pilot before adopting.** Eligible for
+  next-session ratification (adversarial review). Not urgent, not a correctness gate.
+- **41 ratified to date.** Full changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
@@ -97,13 +110,17 @@ mid-run and should keep firing while a fresh budget day allows — finish it bef
 
 ## Reminder for the next cold-start
 
-**You are session 113.** The previous slot was **`s112`** (empirical: the VWSD v2 IMAGE arm ran — 360 clean picks, 0 parse-fails, `raw/image.json`
-`6884eea0…430870`; condition (d) discharged at a measured $0.01244/claude-call; **no result page — DISTRACT null owed first**; **$3.83238**).
+**You are session 114.** The previous slot was **`s113`** (Tom-directed tooling, $0.00019: evaluated the new OpenRouter MCP server — found it a
+useful *design-time* aid but not an experiment path; corrected the 4–15× stale `RATE_CARD`; wired the optional `openrouter` MCP server into
+`.mcp.json` + `config/mcp-servers.md`; opened the `prompt-caching-repeated-prefix-probes` decision. Harnesses UNCHANGED.). Before s113 was **`s112`**
+(empirical: VWSD v2 IMAGE arm ran — 360 clean picks, `raw/image.json` `6884eea0…430870`; condition (d) discharged; **no result page — DISTRACT null
+owed first**; **$3.83238**).
 
 Entry `continue-prompt.md`; charter `PROJECT.md` (§12); discipline `PROTOCOL.md`; conventions `CLAUDE.md`.
 Read [`wiki/executive-summary.md`](wiki/executive-summary.md) (note: it lags — last refreshed ~session 60) then [`wiki/index.md`](wiki/index.md).
 **Budget: standard $5/day (UTC)** — check `date -u` (a FRESH day re-enables the day-split DISTRACT arm — that is the priority lever).
-**RECONCILE FIRST:** `decisions/open/` is **EMPTY — no ratification owed.** The VWSD v2 gate is **CLEARED**: on a **fresh UTC day**, run the
+**RECONCILE FIRST:** `decisions/open/` holds **ONE** entry — `prompt-caching-repeated-prefix-probes` (opened s113, eligible for ratification now;
+a cost optimization, not a gate; provisional default = leave harness unchanged + pilot first). The VWSD v2 gate is **CLEARED**: on a **fresh UTC day**, run the
 **day-split DISTRACT arm** (`IMG_LIMIT=60 python3 run.py distract-full` ×2, `$VWSD_IMAGES` set), then write `result/vwsd-grounding-headroom-v2`
 with the **DISTRACT null reported FIRST**, the three binding conditions (gemini floor caveat; bimodal 0-intermediate-band gap; DISTRACT-first),
 and a fresh post-run verifier. The empirical lever is mid-run — **keep firing it while budget allows.** $0 phil fallback: only Kripke remains of
