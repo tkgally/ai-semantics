@@ -25,6 +25,13 @@ IMAGES ARE OUT OF GIT (redistribution unconfirmed; resource/vwsd-semeval-2023 Li
 Read at runtime from $VWSD_IMAGES (local dir of resized EN candidates), never committed.
 The annotation overlay (queries+gold) and the descriptors ARE committed.
 
+DAY-2+ (the IMAGE then DISTRACT arms; session 112 ran the IMAGE arm). These are gated by the
+s108 pre-run-critic GO + a fresh UTC day; condition (d) raises claude image max_tokens 16 -> 512.
+Both are resumable + day-splittable: IMG_LIMIT=N caps fresh items per sub-batch, IMG_ABORT_USD
+hard-stops on THIS sub-batch's new spend (so each stays under the $2.50 single-run prudence flag):
+  image-full     IMAGE arm over the frozen 120 x 3 -> raw/image.json   [session 112: DONE]
+  distract-full  DISTRACT word-ablated control -> raw/distract.json    [NOT yet run; null reported FIRST]
+
 Usage:
   python3 run.py descriptor-preflight   # describe 8 pool images, print + per-image cost
   python3 run.py descriptor-full        # describe all unique pool images -> frozen/descriptors.json (resumable, cost-guarded)
@@ -34,6 +41,10 @@ Usage:
   python3 run.py text-full              # descriptor arm, 200 pool items -> raw/pool_text.json
   python3 run.py floor-preflight        # 2 draw items x panel, index-label arm, cost
   python3 run.py floor-full             # Option-A arm, frozen 120 -> raw/floor.json
+  python3 run.py image-preflight        # 2 draw items x panel, IMAGE arm, re-measured per-call cost (condition d)
+  IMG_LIMIT=60 python3 run.py image-full     # IMAGE arm sub-batch (resumable) -> raw/image.json
+  python3 run.py distract-preflight     # 2 draw items x panel, DISTRACT arm, cost
+  IMG_LIMIT=60 python3 run.py distract-full  # DISTRACT arm sub-batch (resumable) -> raw/distract.json
 """
 import base64, json, os, re, sys, hashlib
 
@@ -75,6 +86,27 @@ FLOOR_SYS = ("You are disambiguating a word's intended meaning. You will see a t
              "labels with no description. Choose the single candidate that best matches the "
              "intended meaning of the target word in the phrase. Answer with only the number, "
              "1 to 10.")
+# ----- IMAGE arm (the main grounding arm) and DISTRACT (word-ablated) control (design B.4 arms 4-5) -----
+# Prompts mirror v1 verbatim (run dir 2026-06-24-vwsd-grounding-headroom-v1) so the only
+# operationalization change is condition (d): claude image-arm max_tokens raised 16 -> 512.
+SEL_SYS_IMAGE = ("You are disambiguating a word's intended meaning. You will see a target "
+                 "word, a short phrase using it, and ten candidate images numbered 1 to 10 "
+                 "in order. Choose the single image that best matches the intended meaning "
+                 "of the target word in the phrase. Answer with only the number, 1 to 10.")
+DISTRACT_SYS = ("You will see ten images numbered 1 to 10 in order. With no other "
+                "information, choose the single image that is the most prototypical, "
+                "canonical, everyday depiction of a clearly recognizable common concept. "
+                "Answer with only the number, 1 to 10.")
+DISTRACT_USER = ("The ten candidate images follow, in order 1 to 10. Which one is the most "
+                 "prototypical, canonical, everyday image? Answer with only the number, 1 to 10.")
+# Condition (d): claude image-arm max_tokens raised 16 -> 512 so reasoning-then-answer is not
+# truncated before a parseable 1-10 selection; gpt/gemini keep a generous selection budget too.
+IMG_MAXTOK = {"claude": 512, "gpt": 512, "gemini": 512}
+# Day-split guards (charter §8 / design Budget condition f): per-sub-batch item cap + hard
+# cost abort, so each image/distract sub-batch stays under the $2.50 single-run prudence flag
+# and the running UTC tally stays under $5. Resume across UTC days by re-running (skips done items).
+IMG_ABORT_USD = float(os.environ.get("IMG_ABORT_USD", "2.40"))
+IMG_LIMIT = int(os.environ.get("IMG_LIMIT", "0"))  # 0 = no per-batch item cap (full arm)
 
 # ----- leak audit (Option C): held-out gpt recovers the referent from the gold descriptor -----
 LEAK_SYS = ("You are shown one short description of the visual form of an image, with no other "
@@ -178,6 +210,66 @@ def run_floor(it, mname):
             "gold_idx": it["gold_idx"], "pick": pick,
             "correct": (pick == it["gold_idx"]) if pick else None,
             "raw": r.get("content"), "usage": r.get("usage", {}), "error": r.get("error")}
+
+def image_user(it):
+    return (f"Target word: {it['word']}\nPhrase: {it['phrase']}\n"
+            "The ten candidate images follow, in order 1 to 10. Which image best matches "
+            "the intended meaning of the target word? Answer with only the number, 1 to 10.")
+
+def run_image(it, mname, arm):
+    """IMAGE / DISTRACT arm. arm='image' shows the word+phrase; arm='distract' ablates them.
+    parse_pick takes the FINAL emitted index (design condition d: with raised max_tokens the
+    model may reason aloud before the number)."""
+    imgs = [{"url": data_uri(name), "detail": "low"} for name in it["candidates"]]
+    sys_p = SEL_SYS_IMAGE if arm == "image" else DISTRACT_SYS
+    usr = image_user(it) if arm == "image" else DISTRACT_USER
+    r = call(MODELS[mname], sys_p, usr, images=imgs, max_tokens=IMG_MAXTOK[mname],
+             reasoning={"effort": "minimal"} if mname == "gemini" else None)
+    pick = parse_pick(r.get("content"))
+    return {"arm": arm, "item_id": it["id"], "word": it["word"], "model": mname,
+            "gold_idx": it["gold_idx"], "pick": pick,
+            "correct": (pick == it["gold_idx"]) if pick else None,
+            "raw": r.get("content"), "usage": r.get("usage", {}), "error": r.get("error")}
+
+def _run_image_arm(arm):
+    """Resumable, day-splittable driver for the IMAGE / DISTRACT arm over the frozen 120.
+    Accumulates into raw/<arm>.json; skips items already complete (all 3 models present);
+    stops after IMG_LIMIT fresh items (0 = no cap) or when the running billed cost crosses
+    IMG_ABORT_USD. Re-run on a later UTC day to finish the remaining items."""
+    if not IMAGES_DIR or not os.path.isdir(IMAGES_DIR):
+        sys.exit(f"$VWSD_IMAGES not set / not a dir: {IMAGES_DIR!r}")
+    items = load_run_items()
+    out = os.path.join(RAWDIR, f"{arm}.json")
+    recs = json.load(open(out)) if os.path.exists(out) else []
+    done = {iid for iid in {r["item_id"] for r in recs}
+            if sum(1 for r in recs if r["item_id"] == iid) >= len(MODELS)}
+    todo = [it for it in items if it["id"] not in done]
+    if IMG_LIMIT > 0:
+        todo = todo[:IMG_LIMIT]
+    prior = billed_cost([recs])[0]
+    print(f"{arm.upper()} arm: {len(done)}/{len(items)} items already complete; "
+          f"running this batch over {len(todo)} fresh items (prior billed ${prior:.4f}, "
+          f"this-batch abort ${IMG_ABORT_USD} of NEW spend).")
+    ran, batch_spend = 0, 0.0  # IMG_ABORT_USD guards THIS sub-batch's new spend only (day-split)
+    for it in todo:
+        batch = [run_image(it, m, arm) for m in MODELS]
+        recs.extend(batch)
+        batch_spend += billed_cost([batch])[0]
+        ran += 1
+        json.dump(recs, open(out, "w"), indent=2)  # checkpoint every item
+        picks = " ".join(f"{r['model']}:{r['pick']}" for r in batch)
+        print(f"  {it['id']:8s} {picks}   (this-batch ${batch_spend:.4f}, cum ${prior+batch_spend:.4f}, "
+              f"{ran} items this batch)")
+        if batch_spend > IMG_ABORT_USD:
+            print(f"  !! ABORT: this-batch billed ${batch_spend:.4f} > ${IMG_ABORT_USD}. "
+                  f"Checkpointed; rerun (next sub-batch) to resume.")
+            break
+    sha = hashlib.sha256(open(out, "rb").read()).hexdigest()
+    ndone = len({r["item_id"] for r in recs
+                 if sum(1 for x in recs if x["item_id"] == r["item_id"]) >= len(MODELS)})
+    nf = sum(1 for r in recs if r["pick"] is None)
+    _cost(recs, f"{arm.upper()} (cumulative)")
+    print(f"  wrote {out}  sha256={sha}  items-complete={ndone}/{len(items)}  parse-fails={nf}")
 
 # ---------- helpers ----------
 def _cost(recs, label):
@@ -318,6 +410,34 @@ def main():
         else:
             per = _cost(recs, "FLOOR-PREFLIGHT") / max(len(recs), 1)
             print(f"  per-(item,model) ${per:.5f}")
+
+    elif mode in ("image-preflight", "distract-preflight"):
+        arm = "image" if mode.startswith("image") else "distract"
+        if not IMAGES_DIR or not os.path.isdir(IMAGES_DIR):
+            sys.exit(f"$VWSD_IMAGES not set / not a dir: {IMAGES_DIR!r}")
+        items = load_run_items()[:2]
+        recs, per_model = [], {m: [0.0, 0] for m in MODELS}
+        for it in items:
+            for mname in MODELS:
+                rec = run_image(it, mname, arm)
+                recs.append(rec)
+                c = (rec["usage"] or {}).get("cost") or 0.0
+                per_model[mname][0] += c
+                per_model[mname][1] += 1
+                print(f"  {it['id']:8s} {mname:7s} -> pick={rec['pick']} correct={rec['correct']} "
+                      f"raw_len={len(rec['raw'] or '')} ${c:.5f}")
+        per = _cost(recs, mode.upper()) / max(len(recs), 1)
+        print(f"  per-(item,model) ${per:.5f}  (condition d: re-measured claude cost = "
+              f"${per_model['claude'][0]/max(per_model['claude'][1],1):.5f}/call)")
+        for m in MODELS:
+            print(f"    {m:7s}: ${per_model[m][0]/max(per_model[m][1],1):.5f}/call")
+        # full-arm extrapolation over the frozen 120
+        print(f"  extrapolated {arm} arm (120 items x 3 models): "
+              f"~${per*360:.3f} (vs design placeholder ~$6.9)")
+
+    elif mode in ("image-full", "distract-full"):
+        _run_image_arm("image" if mode.startswith("image") else "distract")
+
     else:
         print(__doc__)
 

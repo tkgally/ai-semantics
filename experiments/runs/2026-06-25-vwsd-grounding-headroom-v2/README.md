@@ -69,22 +69,57 @@ The text-only freeze is complete (`python3 analyze.py` regenerates this). **No i
 **Day-1 billed: $4.72482** (descriptors $4.01649 + text $0.53545 + floor $0.12724 + leak $0.02299 +
 preflights $0.02265). Recorded in [`config/budget.md`](../../../config/budget.md).
 
+## Day-2 (IMAGE arm) — session 112, UTC 2026-06-26 — DONE, but NOT a result yet
+
+The **IMAGE arm** (`run.py image-full`, design arm 4) ran over the frozen 120 × 3 models on the first
+fresh UTC day after the day-1 freeze. **This is the main grounding arm — but it is raw data, not a
+result. No grounding-headroom claim can be read from it until the DISTRACT control runs and its null
+is reported FIRST (binding condition 3 / design condition c). `result/vwsd-grounding-headroom-v2`
+still does NOT exist.** What landed:
+
+- `raw/image.json` — **360 records (120 items × 3 models), 0 missing-cost, 0 parse-fails**, sha256
+  **`6884eea0…430870`**. Candidate images low-detail, shown in dataset order; the word+phrase prompt is
+  byte-identical to v1's IMAGE arm except for **condition (d)** (claude `max_tokens` 16 → 512).
+- **Condition (d) discharged — claude's raised-`max_tokens` per-call cost re-measured, not assumed.**
+  The image-preflight + full arm measured claude at **$0.01244/call** (raised `max_tokens=512`), which
+  is **essentially v1's $0.0128**, *not* the design's conservative ~3× placeholder ($0.038). claude
+  emits the bare index digit (`raw_len=1` in the preflight), so the raised cap **removes the v1
+  truncation bias** (v1 had 6 claude parse-fails at `max_tokens=16`; here **0 parse-fails, all three
+  models**) **without materially raising cost**. Per-model billed: claude **$1.49279** / gpt
+  **$0.32269** ($0.00269/call) / gemini **$1.95487** ($0.01629/call). Full IMAGE arm **$3.77035**, far
+  under the ~$6.9 placeholder → the arm fit a **single** UTC day, run as **two sub-batches** (60 + 60,
+  ~$1.87 + ~$1.90 of new spend each) to keep every sub-batch under the $2.50 single-run prudence flag.
+- **Preliminary `analyze.py` numbers exist but carry NO weight yet** (DISTRACT null owed first). For
+  the record only, not as a finding: image accuracy claude **0.850** / gpt **0.592** / gemini **0.867**
+  (gpt is *lower* with images than its descriptor-text 0.725 — a not-yet-interpretable inversion). The
+  test-of-record cells (rescue 39/86 in text-failed cells; 238/274 in text-OK cells) are **printed but
+  uninterpretable** until the DISTRACT word-ablated control establishes how much of any image lift is
+  image-intrinsic salience rather than the word→sense→image mapping.
+
+**Day-2 billed: $3.83238** (IMAGE arm $3.77035 + image-preflight $0.06203). Recorded in
+[`config/budget.md`](../../../config/budget.md). **Next (a further fresh UTC day): the DISTRACT arm**
+(`run.py distract-full`, ~$3.8, day-split the same way), its **null reported and credited FIRST**,
+then `result/vwsd-grounding-headroom-v2` honoring the three binding conditions + a fresh independent
+post-run verifier.
+
 ## What's committed vs out of git
 
 - **Committed:** the CC-BY-NC annotation overlay (`frozen/en.test.{data,gold}.v1.1.txt`), the built
   item/pool sets, the frozen descriptors + leak audit + draw + covariate, and the raw call records
-  (text/floor + cost ledgers — text only, no image bytes).
+  (text/floor/**image** picks + cost ledgers — **text only, no image bytes**; `raw/image.json` records
+  the model's 1–10 selection and `usage.cost` per call, never the image data).
 - **OUT of git** (`.gitignore`; redistribution unconfirmed): the 572 MB resized EN test zip
   (sha256 `b9f2f1e1…af8f`) and the 4090 extracted candidate images. Fetched at runtime from the
   official task site (`raganato.github.io/vwsd`, Drive id `15ed8TXY…`), read via `$VWSD_IMAGES`,
   never re-hosted.
 
-## Reproduce (day 1)
+## Reproduce
 
 ```
 # fetch + extract the 572MB resized EN test images, verify sha256 b9f2f1e1…af8f
 export VWSD_IMAGES=/path/to/en_images
 export OPENROUTER_API_KEY=...
+# --- day 1 (text-only freeze; session 107) ---
 python3 build_items.py
 python3 build_pool.py
 python3 run.py descriptor-preflight     # eyeball policy + per-image cost
@@ -93,5 +128,11 @@ python3 run.py leak-full                # -> frozen/descriptors.json:leak
 python3 run.py text-full                # -> raw/pool_text.json  (separability covariate)
 python3 draw_stratified.py             # -> frozen/run_items.json + raw/text.json (the 120)
 python3 run.py floor-full              # -> raw/floor.json  (Option-A calibration)
-python3 analyze.py                     # day-1 sections (text acc, sep strata, floor, leak)
+# --- day 2 (IMAGE arm; session 112) ---
+python3 run.py image-preflight          # re-measure claude raised-max_tokens cost (condition d)
+IMG_LIMIT=60 python3 run.py image-full  # sub-batch 1 (60 items, <$2.50); resumable, cost-guarded
+IMG_LIMIT=60 python3 run.py image-full  # sub-batch 2 (remaining 60) -> raw/image.json (120/120)
+# --- day 3+ (DISTRACT control; NOT yet run) ---
+# IMG_LIMIT=60 python3 run.py distract-full   # x2 sub-batches -> raw/distract.json; null reported FIRST
+python3 analyze.py                     # day-1 sections + (once distract exists) the result sections
 ```
