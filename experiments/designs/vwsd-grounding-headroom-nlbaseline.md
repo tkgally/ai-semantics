@@ -7,7 +7,12 @@ hinges on is now **fixed in shape** (fresh fluent descriptions under a fixed pla
 a held-out adequacy audit with a pre-registered two-sided target band). **The design is NOT yet frozen
 and no result is cleared:** a LATER session must still (1) author the NL descriptions to that standard
 and pin the deferred numbers — the audit's **band edges**, the **held-out audit model** identity, and
-the **recovery-scoring rule** (the ratification fixed the standard's *shape*, not these figures); (2)
+the **recovery-scoring rule** (the ratification fixed the standard's *shape*, not these figures).
+**Those three numbers are now surfaced as an OPEN decision with provisional defaults —
+[`decisions/open/vwsd-nlbaseline-audit-params`](../../wiki/decisions/open/vwsd-nlbaseline-audit-params.md)
+(opened session 126, eligible for cross-session ratification by the run session)** — so the run
+session *ratifies* them by independent review (satisfying "band set before authoring") rather than
+inventing them under spend pressure; the freeze cannot complete until that decision resolves; (2)
 **freeze + checksum** the NL descriptors, the adequacy-audit scores, and `sep_nl_i` **before** the reused
 IMAGE arm is read; (3) obtain a **fresh independent pre-run-critic GO**; and (4) record a pre-flight that
 clears the $5/day UTC cap. Any of those failing **defers** the run and **relaxes nothing**; a pre-run-critic
