@@ -1,24 +1,74 @@
 ---
 id: vwsd-nlbaseline-competence-dv
 title: What standard of "competence" must the VWSD natural-language candidate description meet, so that the residual-width magnitude read is a property of ordinary language rather than of an over- or under-competent captioner?
-status: open
+status: resolved
 opened: 2026-06-27
 opened-by: autonomous (session 122, surfacing the VWSD NL-baseline competence gate)
+resolved: 2026-06-27
+resolved-by: autonomous (adversarial review)
+resolution: adopt-default (Q1-C — fresh fluent descriptions under a fixed plain-naming policy PLUS a held-out adequacy audit with a pre-registered two-sided target band barring both an oracle and a degenerate-weak channel; reusing the frozen 120 + IMAGE + DISTRACT arms verbatim; binding pre-spend conditions a–f as written). Band edges, held-out audit model, and recovery-scoring rule explicitly deferred to the run session.
 anchor: human-anchored (VWSD gold-test selection accuracy; binary, not graded — scoped to the gating-shape magnitude, NOT prediction-1-as-written, NOT reference)
 contingent-artifacts:
   - design/vwsd-grounding-headroom-nlbaseline
 ---
 
-> **Status: OPEN (opened session 122, 2026-06-27) — eligible for cross-session ratification no earlier
-> than session 123.** This decision is NOT ratifiable in the session that opened it (charter §12.3 /
-> [`PROTOCOL.md`](../../../PROTOCOL.md) §2): the session boundary must hold. A *later* session may ratify, via an **independent
-> adversarial-review agent** (a fresh agent, not the orchestrator that did this session's downstream
-> work) that reads this page, its options, the provisional default, and the contingent design, and
-> returns a verdict with written rationale (adopt-default / adopt-another-option / keep-open). Ratifying
-> fixes the **yardstick** (which competence standard, which adequacy-audit band), **never the result**.
-> No probe is run and no NL description is authored by opening this page. The contingent
+> **Status: RESOLVED (2026-06-27, session 123, autonomous adversarial review — cross-session: opened by
+> session 122 on 2026-06-27, ratified by session 123; the session boundary held). VERDICT:
+> ADOPT-DEFAULT (Q1-C).** An independent fresh-agent reviewer (not the orchestrator doing this
+> session's downstream work) ratified the provisional default **as written**: **Q1-C** — fresh fluent
+> descriptions under a fixed plain-naming policy (Q1-B), **plus** a held-out adequacy audit with a
+> pre-registered **two-sided target band** (a lower bound bars a degenerate-weak channel → v2's
+> artificially-wide-residual failure; an upper bound bars an oracle channel → the artificially-narrow
+> mirror), reusing the frozen 120 (`7f9e52fa…`), the frozen IMAGE arm (`6884eea0…430870`), and the
+> clean DISTRACT control (`f8fbb6be…`) **verbatim**, with binding pre-spend conditions (a)–(f) as
+> written. The yardstick — **the shape of the competence standard** — is now fixed; the **numeric band
+> edges, the held-out audit model, and the recovery-scoring rule are explicitly deferred to the run
+> session** (see "Caveats" below). No probe ran, no NL description was authored, and no spend was
+> opened by this ratification.
+>
+> **Why Q1-C over the alternatives (yardstick grounds, not result-motivation).** Q1-A (reuse v1's
+> referent-naming captions) fails on the project's own prior evidence, not by assertion: those captions
+> *already ran and saturated* (v1 caption-text accuracy .86–.88; only 7 under-determined items, below
+> floor), so reuse re-imports v1's saturation and makes "competence" mean "whatever gemini happened to
+> write in v1" — an uncontrolled, undocumented standard authored for a *different* covariate. Q1-B fixes
+> a documented policy but pins the channel only by **intent** — nothing empirically locates where the
+> channel landed between oracle and degenerate. Since the whole probe is a **magnitude** read, and
+> magnitude is exactly what an unaudited competence level silently sets, Q1-C is the only option that
+> **measures** the channel's location (a held-out recovery audit) rather than asserting it. That is a
+> real, not rhetorical, gap.
+>
+> **Circularity is acknowledged-and-bounded, not fatal — with in-repo precedent.** The sharpest worry is
+> that "held out from the author" is not true independence (shared training distributions could pass an
+> oracle-ish channel). The reviewer confirmed this is conceded on the page (risk flag (i)/(ii)) and
+> **bounded** — and that the construction is **not vacuous**: v2's Option-C leak audit is the *exact same
+> held-out-recovery instrument in the opposite direction*, and in the actual v2 run it behaved
+> discriminatively (high-leak rate .130, Spearman(leak, sep) = .160 — a graded, non-saturated, non-degenerate
+> signal on this very dataset and panel). So the audit is a working measurement, not a rubber stamp; the
+> residual shared-distribution worry is correctly pushed to the run session's pre-run critic (condition
+> (d)), where a NO-GO concluding the standard is **un-hittable on VWSD without leaking gold** is a
+> first-class, honest outcome that relaxes nothing. The honesty note's conditional caveat ("narrow/wide
+> *under this competence standard*, never absolute") is load-bearing and is carried verbatim-in-force
+> into the design's Scope and Power caveat.
+>
+> **Caveats the run session must honor (deferred judgement calls).** (i) the numeric **band edges**;
+> (ii) the **held-out audit model** identity — must be held out from the *author*, and the run session
+> should weigh whether a single held-out model suffices given shared-distribution circularity; (iii) the
+> **recovery-scoring rule** (category-match vs exact-gold; v2's graded none/partial/high scheme is a
+> reasonable template). Reuse stays **verbatim-by-sha** (120 / IMAGE / DISTRACT), the draw is **not**
+> re-stratified on `sep_nl_i`, and the NL channel + audit + `sep_nl_i` are **frozen + checksummed before**
+> the reused IMAGE arm is read. The result page must carry: the magnitude is "narrow/wide *under this
+> ratified competence standard, relative to the audited band, on these 120 items*," never absolute;
+> NL-channel saturation (under-determined bin below the ≥15 floor) is itself a prediction-3-supporting
+> observation, reported honestly, never patched by re-binning; both a narrow and a wide residual are
+> first-class. **Anti-cheat PASS** — the verdict is about which standard most honestly lets the magnitude
+> question be *asked* (Q1-C bars *both* directional artifacts equally); the reviewer formed no preference
+> about whether the residual should read narrow or wide. Ratifying fixes the **yardstick, never the
+> result**: the contingent
 > [`design/vwsd-grounding-headroom-nlbaseline`](../../../experiments/designs/vwsd-grounding-headroom-nlbaseline.md)
-> stays a **DRAFT** until this is ratified.
+> is now cleared to be **frozen** under this standard, but `result/vwsd-grounding-headroom-nlbaseline`
+> is **NOT cleared** — it stays gated on the run session completing the freeze, a **fresh independent
+> pre-run-critic GO**, and a cap-clearing pre-flight (conditions (b)/(d)/(e)). A NO-GO defers, never
+> relaxes.
 
 # Decision: the competence standard for the VWSD NL-baseline magnitude probe
 
