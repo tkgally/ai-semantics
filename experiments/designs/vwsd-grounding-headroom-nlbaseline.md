@@ -1,14 +1,18 @@
-# Design — VWSD grounding-headroom NL-baseline probe (magnitude follow-up; DRAFT)
+# Design — VWSD grounding-headroom NL-baseline probe (magnitude follow-up; CLEARED TO FREEZE)
 
-**Status:** draft design (2026-06-27, session 122) — contingent on the open operationalization
-decision [`decisions/open/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/open/vwsd-nlbaseline-competence-dv.md)
-(NOT yet ratified; NOT frozen; no pre-run critic GO sought yet). This page fixes a candidate
-**yardstick** only — it freezes nothing, generates nothing, and spends nothing. **Freezing and running
-are a LATER session's job**, and only *after* the open decision is ratified cross-session (charter
-§12.3) and a fresh independent pre-run critic returns GO. The competence standard the whole magnitude
-read hinges on is **deliberately left open** in the decision page, not smuggled in here; until that
-decision resolves, the new TEXT-NL arm's authoring policy is provisional and the whole design is
-contingent. Anchored (as a *future result* would be) to
+**Status:** cleared to freeze (competence standard ratified 2026-06-27, session 123) — the
+operationalization decision [`decisions/resolved/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/resolved/vwsd-nlbaseline-competence-dv.md)
+was **ratified cross-session (ADOPT-DEFAULT Q1-C)**, so the competence standard the whole magnitude read
+hinges on is now **fixed in shape** (fresh fluent descriptions under a fixed plain-naming policy **plus**
+a held-out adequacy audit with a pre-registered two-sided target band). **The design is NOT yet frozen
+and no result is cleared:** a LATER session must still (1) author the NL descriptions to that standard
+and pin the deferred numbers — the audit's **band edges**, the **held-out audit model** identity, and
+the **recovery-scoring rule** (the ratification fixed the standard's *shape*, not these figures); (2)
+**freeze + checksum** the NL descriptors, the adequacy-audit scores, and `sep_nl_i` **before** the reused
+IMAGE arm is read; (3) obtain a **fresh independent pre-run-critic GO**; and (4) record a pre-flight that
+clears the $5/day UTC cap. Any of those failing **defers** the run and **relaxes nothing**; a pre-run-critic
+NO-GO (e.g. the standard cannot be hit without leaking gold) is an allowed, honest outcome. Anchored (as a
+*future result* would be) to
 [`resource/vwsd-semeval-2023`](../../wiki/base/resources/vwsd-semeval-2023.md). Companion to the frozen
 [`design/vwsd-grounding-headroom-v2`](vwsd-grounding-headroom-v2.md) and the run it produced,
 [`result/vwsd-grounding-headroom-v2`](../../wiki/findings/results/vwsd-grounding-headroom-v2.md), whose
@@ -18,10 +22,11 @@ NOT now): `experiments/runs/<date>-vwsd-grounding-headroom-nlbaseline/`.
 > **This is a DRAFT, contingent on an OPEN decision — no probe, no freeze, no spend.** Authoring this
 > page generates no NL descriptors, scores no adequacy audit, fetches no images, and makes no model
 > call. The result `result/vwsd-grounding-headroom-nlbaseline` **does NOT exist and is NOT cleared**. It
-> is gated, by the open decision, on a *later session* completing all of: (1) the open decision
-> [`decisions/open/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/open/vwsd-nlbaseline-competence-dv.md)
-> **ratified cross-session** (no earlier than session 123) so the competence standard for the NL channel
-> is fixed; (2) the new TEXT-NL descriptors authored to that ratified standard, the adequacy audit
+> is gated on a *later session* completing all of: (1) **DONE** — the decision
+> [`decisions/resolved/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/resolved/vwsd-nlbaseline-competence-dv.md)
+> was **ratified cross-session (session 123, ADOPT-DEFAULT Q1-C)** so the competence standard for the NL
+> channel is fixed in shape (the band edges, audit model, and recovery-scoring rule stay to be pinned by
+> the authoring session); (2) the new TEXT-NL descriptors authored to that ratified standard, the adequacy audit
 > scored, and the recomputed separability covariate `sep_nl_i` all **frozen + checksummed BEFORE the
 > reused IMAGE arm is read** (mirrors v2 condition b); (3) a **fresh independent pre-run critic GO**
 > against the frozen NL-baseline design *and* the observed `sep_nl_i` + adequacy-audit distributions
@@ -65,7 +70,7 @@ is the fluent middle: a description that names the depicted referent *normally*,
 describer would, neither stripping identity (v2's artifact) nor reducing to a caption-string the model
 trivially matches (v1's saturation). Its whole result hinges on **the standard of "competence" the
 description channel is held to** — and that is exactly the value-laden gate this design refuses to
-settle on its own (see Limitation 1 of this design and the open decision).
+settle on its own (see Limitation 1 of this design and the ratified decision).
 
 **What this design tests — and explicitly does NOT.** It tests prediction 3 ("narrow headroom for
 concrete sense") of the conjecture, read as the **width of the residual a fluent text channel leaves**
@@ -123,7 +128,7 @@ Carried forward **unchanged** from v2 and the resolved v2 gate's Q3 (no widening
   the gold image shows behavior *sensitive to* the word→sense→image mapping, not a perceptual symbol
   system or reference-fixing); (iii) **not** an absolute magnitude — the residual width is *"how narrow
   under THIS competence standard"*, a property of a model-authored channel held to a fixed, audited
-  standard, never an absolute property of language (see the open decision's honesty note).
+  standard, never an absolute property of language (see the ratified decision's honesty note).
 - **Caveats carried to the result, verbatim in force** (all from
   [`resource/vwsd-semeval-2023`](../../wiki/base/resources/vwsd-semeval-2023.md)): **binary gold** (no
   graded signal); **limited annotator independence** (English annotators "includ[ed] the authors of
@@ -145,14 +150,14 @@ research with attribution. Anchored **only** to the gold test split.
 ## The new TEXT-NL arm (the only new text channel)
 
 A **competent natural-language candidate description** per unique candidate image in the frozen 120 —
-**names ALLOWED**, authored to the competence standard fixed by the open decision
-[`decisions/open/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/open/vwsd-nlbaseline-competence-dv.md).
+**names ALLOWED**, authored to the competence standard fixed by the ratified decision
+[`decisions/resolved/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/resolved/vwsd-nlbaseline-competence-dv.md).
 Unlike v2's Option-B descriptors, the NL description is permitted (indeed required) to name the depicted
 referent plainly and completely, as a competent describer would — *"a pile of mustard seeds"* is now
 allowed, where v2 barred it. The point is to measure the residual a *fluent* channel leaves, not a
 de-referented one.
 
-- **Author model + policy.** Fixed by the ratified open decision (provisional default: fresh fluent
+- **Author model + policy.** Fixed by the ratified decision (adopted default Q1-C: fresh fluent
   descriptions under a *"name the depicted referent plainly and completely, as a competent describer
   would"* policy, **plus** a held-out adequacy audit — option Q1-C). The authoring policy is **NOT**
   finalized here; it is whatever the cross-session ratification fixes.
@@ -219,7 +224,7 @@ re-binning. No post-hoc re-binning.
 N = 120 of the 463 EN gold, binary per-item accuracy, a coarse read of the magnitude. A narrow observed
 residual is **"narrow under this competence standard on these 120 items,"** not a proven law; a wide
 residual is the first refuting signal, not a refutation by itself. The magnitude is **competence-bound**
-(the open decision's central caveat): it is a property of the model-authored NL channel held to the
+(the ratified decision's central caveat): it is a property of the model-authored NL channel held to the
 ratified standard, never an absolute property of ordinary language. A flat/ambiguous read is **"no
 detectable magnitude difference OR underpowered,"** never proven.
 
@@ -248,7 +253,7 @@ rule the non-caption baseline un-authorable.
 ## Anti-cheat note (the guards this design honors)
 
 Freezing this design (a *later* session's act, not this one) fixes the **yardstick** — the NL
-description policy fixed by the open decision, the adequacy-audit target band, the reuse of the v2
+description policy fixed by the ratified decision, the adequacy-audit target band, the reuse of the v2
 frozen 120 / IMAGE / DISTRACT arms, the `sep_nl_i` covariate, the ≥15 floor, the anchor posture and
 scope — **never the result**. The NL descriptions and `sep_nl_i`, **once frozen + checksummed, are not
 re-derived after reading the reused IMAGE arm's rescue rate** — that commitment is what makes "no
