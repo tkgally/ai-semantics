@@ -97,10 +97,35 @@ still does NOT exist.** What landed:
   image-intrinsic salience rather than the word→sense→image mapping.
 
 **Day-2 billed: $3.83238** (IMAGE arm $3.77035 + image-preflight $0.06203). Recorded in
-[`config/budget.md`](../../../config/budget.md). **Next (a further fresh UTC day): the DISTRACT arm**
-(`run.py distract-full`, ~$3.8, day-split the same way), its **null reported and credited FIRST**,
-then `result/vwsd-grounding-headroom-v2` honoring the three binding conditions + a fresh independent
-post-run verifier.
+[`config/budget.md`](../../../config/budget.md).
+
+## Day-3 (DISTRACT arm) — session 121, UTC 2026-06-27 — DONE; result WRITTEN
+
+The **DISTRACT word-ablated control** (`run.py distract-full`, design arm 5) ran on the next fresh UTC
+day, completing the probe. Its null is **reported and credited FIRST** (binding condition 3).
+
+- `raw/distract.json` — **360 records (120 items × 3 models), 0 missing-cost, 0 parse-fails**, sha256
+  **`f8fbb6be…`**. Same images low-detail; prompt ablates the target word + trigger ("pick the most
+  prototypical / canonical / everyday image").
+- Run as **two 60-item sub-batches** ($1.87346 + $1.88971, each under the $2.50 single-run flag) +
+  `distract-preflight` $0.06184 → **$3.82501 day-3 billed**, under the $5/day cap. Per-model per-call
+  ≈ IMAGE (claude $0.01194 / gpt $0.00266 / gemini $0.01632).
+- **DISTRACT null CLEAN:** pooled 35/360 = **.097** Wilson[.071,.132]; per-model claude .133 / gpt .042
+  / gemini .117 — **no model's Wilson LB exceeds chance .10**. Gold images are not intrinsically
+  salient, so any image lift is creditable as word/sense-driven grounding, not salience.
+- **Result WRITTEN:** [`result/vwsd-grounding-headroom-v2`](../../../wiki/findings/results/vwsd-grounding-headroom-v2.md)
+  — **SUPPORTS the gating SHAPE, 3/3 models in direction**: image rescues the descriptor-text-failed
+  (under-determined) cells (pooled .453; per-model .500/.303/.609, all > chance) while adding no lift
+  where the descriptor already separates (saturated Δ −.122). First confirming-direction VWSD evidence.
+  Caveats foregrounded: gemini floor elevated (.158, LB > chance); gpt degrades overall (gating
+  sign-only); magnitude inflated by the de-referented Option-B channel (supports SHAPE, not the "narrow
+  headroom" magnitude bet); gating-shape-on-binary-selection, NOT prediction-1-as-written, NOT
+  reference. An **independent fresh-agent post-run verifier REPRODUCED** every finding-bearing number
+  from raw (1440/1440 records consistent) and confirmed the three binding conditions hold.
+
+**Day-3 billed: $3.82501** (DISTRACT $3.76317 + distract-preflight $0.06184). Recorded in
+[`config/budget.md`](../../../config/budget.md). The probe is **complete**; `analyze.py` regenerates
+every result section from the committed raw.
 
 ## What's committed vs out of git
 
@@ -132,7 +157,8 @@ python3 run.py floor-full              # -> raw/floor.json  (Option-A calibratio
 python3 run.py image-preflight          # re-measure claude raised-max_tokens cost (condition d)
 IMG_LIMIT=60 python3 run.py image-full  # sub-batch 1 (60 items, <$2.50); resumable, cost-guarded
 IMG_LIMIT=60 python3 run.py image-full  # sub-batch 2 (remaining 60) -> raw/image.json (120/120)
-# --- day 3+ (DISTRACT control; NOT yet run) ---
-# IMG_LIMIT=60 python3 run.py distract-full   # x2 sub-batches -> raw/distract.json; null reported FIRST
-python3 analyze.py                     # day-1 sections + (once distract exists) the result sections
+# --- day 3 (DISTRACT control; session 121) ---
+python3 run.py distract-preflight        # re-confirm per-call cost + image load
+IMG_LIMIT=60 python3 run.py distract-full # x2 sub-batches -> raw/distract.json; null reported FIRST
+python3 analyze.py                     # day-1 sections + the full result sections (image + distract present)
 ```

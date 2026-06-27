@@ -51,11 +51,11 @@ contingent-artifacts:
 > **Contingent-artifact disposition.** [`conjecture/distributional-saturation-grounding-headroom`](../../findings/conjectures/distributional-saturation-grounding-headroom.md)
 > stays **`proposed`** — ratifying fixes the *yardstick*, never the *result*; the conjecture remains
 > untested. The two `*-v2` artifacts — `design/vwsd-grounding-headroom-v2` and
-> `result/vwsd-grounding-headroom-v2` — **still do not exist**: a build session is now **cleared to
+> [`result/vwsd-grounding-headroom-v2`](../../findings/results/vwsd-grounding-headroom-v2.md) — **still do not exist**: a build session is now **cleared to
 > author** `design/vwsd-grounding-headroom-v2` under this resolved gate (Option-B descriptors +
 > leak-audit frozen and checksummed; the Option-A floor arm; the stratified draw clearing the
 > per-stratum floor; the per-model covariate frozen pre-image; raised claude `max_tokens`), but
-> `result/vwsd-grounding-headroom-v2` is **NOT cleared** until the design is frozen, the EN test images
+> [`result/vwsd-grounding-headroom-v2`](../../findings/results/vwsd-grounding-headroom-v2.md) is **NOT cleared** until the design is frozen, the EN test images
 > fetched + checksummed (kept out of git), a **fresh independent pre-run critic returns GO**, and a
 > pre-flight budget estimate (subsampled and/or UTC-day-split) clears the $5/day cap. **The probe must
 > not be run, nor the non-caption baseline re-derived, in the session that ratified (it was not — no
