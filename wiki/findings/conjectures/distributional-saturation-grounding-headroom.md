@@ -31,13 +31,17 @@ links:
 
 # Conjecture: the grounding-headroom hypothesis (the project's own forward bet on *where* perceptual input can help)
 
-> **Status: proposed (2026-05-31).** This is the project's **own theoretical proposal**, not an
-> imported claim and not an established result. It generalizes **two bounded, partly-underpowered
-> clear-homonym grounding nulls** (and is now joined by one **inconclusive** image-native VWSD run that
-> neither confirms nor falsifies its gating prediction — [`result/vwsd-grounding-headroom-v1`](../results/vwsd-grounding-headroom-v1.md),
+> **Status: proposed (2026-05-31; first confirming-direction evidence 2026-06-27).** This is the
+> project's **own theoretical proposal**, not an imported claim and not an established result. It
+> generalizes **two bounded, partly-underpowered clear-homonym grounding nulls** (joined first by one
+> **inconclusive** image-native VWSD run — [`result/vwsd-grounding-headroom-v1`](../results/vwsd-grounding-headroom-v1.md)
+> — and now by a **re-operationalized VWSD run that SUPPORTS the gating *shape*** of prediction 1,
+> 3/3 models in direction and distraction-controlled — [`result/vwsd-grounding-headroom-v2`](../results/vwsd-grounding-headroom-v2.md),
 > detailed under "Human anchor" below) into a single
 > structural explanation and a forward, falsifiable prediction. It is
-> a forward bet, explicitly *not* confirmed, and it could be wrong (see "What would confirm / falsify"
+> a forward bet whose gating shape now has **first supporting evidence on a binary selection task** but
+> is **not** otherwise confirmed (the "narrow headroom" magnitude sub-bet is untested; prediction-1-as-written
+> on a graded gradient is untested), and it could still be wrong (see "What would confirm / falsify"
 > and "Honesty"). It **sharpens** the sibling conjecture
 > [`conjecture/multimodal-lexical-grounding-divergence`](multimodal-lexical-grounding-divergence.md):
 > that page states the *divergence* bet and registers a *redundancy* and a *distraction* null as
@@ -226,8 +230,9 @@ candidates below are named only as the anchors a *future result* testing this hy
   gold-selection at chance .093) and **real images gave no broad lift** over their captions (gpt was
   *worse* with images), rescuing only 4/16 text-failed cells. The run therefore **neither confirms nor
   falsifies** the gating prediction on VWSD (caption-leakage confound + floor + underpower); it adds a
-  bounded reappearance of the redundancy null in an image-native selection task. The conjecture stays
-  **`proposed`**.
+  bounded reappearance of the redundancy null in an image-native selection task.
+  **Second run (sessions 107/112/121): [`result/vwsd-grounding-headroom-v2`](../results/vwsd-grounding-headroom-v2.md) — the re-operationalization (non-caption Option-B visual-form descriptor baseline, stratified N=120 clearing the ≥15 floor, raised claude `max_tokens`) makes the interaction testable and it SUPPORTS the gating *shape*, 3/3 models in direction:** with the word-ablated DISTRACT control clean (pooled .097 ≈ chance), the real image rescues the descriptor-text-failed (under-determined) cells (pooled .453; per-model .500/.303/.609, all > chance) while adding no lift where the descriptor already separates (saturated Δ −.122). This is the **first confirming-direction** evidence on the grounding axis, supporting prediction 1 (gating shape) and prediction 2 (regime-specific redundancy). Honest bounds carried: gemini's floor is elevated (.158, LB > chance), gpt degrades overall (gating sign-only for it), and the headroom **magnitude** is inflated by the de-referented descriptor channel — so prediction 3 ("narrow headroom") is **not** supported here, and the read is gating-shape-on-binary-selection, **not** prediction-1-as-written, **not** reference. The conjecture stays
+  **`proposed`** (one supporting run on binary selection; a later session may weigh `proposed → tested` and design the natural-language-baseline magnitude test).
 - **The human sense anchor** for the relatedness/separation judgments would be WiC's binary
   same/different labels ([`resource/wic-word-in-context`](../../base/resources/wic-word-in-context.md))
   and/or the Princeton WordNet synset inventory

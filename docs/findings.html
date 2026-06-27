@@ -322,28 +322,44 @@ was inconclusive. The smooth ranking reappeared throughout. So the "no hesitatio
 real feature, with the one nuance that a model's stated confidence can soften under reflection even
 as its actual commitment holds.</p>
 
-<h2>3 · Does seeing pictures help? So far, no clear sign — two negatives and one inconclusive try</h2>
+<h2>3 · Does seeing pictures help? A first sign that it does — but only in the gaps the words leave</h2>
 
 <p>An old and serious objection says text-only systems can't really mean anything because
 their words never touch the world (<a href="glossary.html#grounding">grounding</a>). The
-project has run two tests of whether perceptual contact helps these models with word
-senses, and both came back negative: words rated by people as more strongly tied to the
-senses are <em>not</em> tracked better by text-only models; and actually <em>showing</em>
-a model disambiguating photos does not improve its separation of clear homonyms — because
-the text alone already does that perfectly, leaving the picture nothing to add. Both
-negatives are honestly bounded (the second is a "no headroom" result, not "pictures are
-useless"), and they steer where the project looks next: at blurrier sense distinctions
-where text might genuinely run out.</p>
+project's standing bet is more specific: a picture can move how a model reads a word
+<em>only</em> in the cases the words themselves leave unsettled, and for everyday concrete
+words that room is small. Two early tests came back negative: words rated by people as more
+strongly tied to the senses are <em>not</em> tracked better by text-only models; and actually
+<em>showing</em> a model disambiguating photos did not improve its separation of clear
+homonyms — because the text alone already does that perfectly, leaving the picture nothing to
+add. A third try (the first to show real pictures, in a pick-the-matching-image task) was
+<strong>inconclusive</strong>: the written descriptions named what was in each picture, so
+the models could already choose correctly most of the time, and too few genuinely unsettled
+cases were left to run the intended comparison.</p>
 
-<p>A third picture experiment (the project's first to show a model real pictures, in a
-pick-the-matching-image task) was <strong>inconclusive</strong> — it neither confirmed nor
-disproved the idea. Short written descriptions of the candidate pictures already let the
-models choose correctly most of the time, so too few genuinely unsettled cases were left to
-run the intended comparison, and the real pictures gave no broad improvement over those
-descriptions. So the count stands at two honest negatives plus one "could not tell yet." The
-test that <em>could</em> settle it needs a kind of dataset that, a search this session
-confirmed, does not yet exist in open form: sliding-scale human ratings of how related two
-<em>uses</em> of a word are, each use paired with a disambiguating picture.</p>
+<p>This session re-ran that picture experiment properly, and for the first time it points the
+predicted way. The fix was to describe each candidate picture by its <em>visual form only</em>
+— shapes, colours, layout — with the describer forbidden from naming what the thing actually
+is (so "a dense cluster of small round yellowish particles," never "mustard seeds"). That
+leaves a real set of cases the words don't settle. The result: where those form-only
+descriptions left the sense unsettled, <strong>seeing the actual picture picked the right one
+about 45% of the time</strong> — far above the 1-in-10 you'd get by guessing — while the
+picture added <em>nothing</em> where the description already settled it. All three models
+showed this same pattern. Crucially, a control rules out the boring explanation: with the
+target word removed, the models pick the right picture only at chance, so the picture is
+helping with <em>word meaning</em>, not just being eye-catching.</p>
+
+<p>The honest bounds are kept up front. One of the three models actually got <em>worse</em>
+overall when shown pictures (its help showed up only in the unsettled cases, swamped by
+losses elsewhere); one model's no-information baseline sat slightly above pure chance, so its
+strong showing is discounted; and the <em>size</em> of the room-to-help here is partly
+manufactured by deliberately stripping the descriptions of names — so this shows the
+<strong>pattern</strong> the project predicted (pictures help in the gaps, not where text
+already wins), not that the gap is wide in ordinary language. And it is still about
+<em>picking the right image</em>, not a sliding-scale judgement of how related two senses are,
+and not about how words latch onto the world. So: two honest negatives, one "could not tell,"
+and now one run that supports the shape of the bet — the strongest sign yet on this question,
+carefully fenced.</p>
 
 <h2>4 · Is meaning built <em>between</em> speakers? First test says: not detectably</h2>
 
