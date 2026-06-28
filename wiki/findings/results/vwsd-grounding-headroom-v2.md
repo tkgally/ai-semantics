@@ -257,13 +257,16 @@ residual headroom for concrete sense is **narrow** (prediction 3). This run:
   *wide* (.453 rescue), but inflated by the de-referented channel (limit 1), so this neither confirms
   nor refutes prediction 3; a natural-language-baseline run is owed to test magnitude.
 
-The conjecture stays **`proposed`** (a single supporting run on a binary selection task, with the
-magnitude sub-bet untested, does not warrant promotion this session — and promotion would in any case
-be a later session's cross-session call, charter §12.3). What changes is that its grounding axis now
-carries a **confirming-direction** result alongside the two nulls and v1's inconclusive run; a future
-session may weigh promoting `proposed → tested` and may design the natural-language-baseline magnitude
-test. prediction-1-as-written (graded relatedness × separability) remains open for a future
-graded-image resource.
+At this run (session 121) the conjecture was held **`proposed`** — a single supporting run on a binary
+selection task, with the magnitude sub-bet untested, did not warrant promotion *that* session, and
+promotion is in any case a later session's cross-session call (charter §12.3). **Session 130 made that
+call: an independent cross-session adversarial review promoted the conjecture `proposed → tested` for the
+GATING SHAPE ONLY (predictions 1–2), with prediction 3 held explicitly UNTESTED** (see
+[`conjecture/distributional-saturation-grounding-headroom`](../conjectures/distributional-saturation-grounding-headroom.md),
+status block). This run is the confirming-direction evidence that promotion rests on — the grounding axis
+now carries a **confirming-direction** result alongside the two nulls and v1's inconclusive run.
+prediction-1-as-written (graded relatedness × separability) remains open for a future graded-image
+resource, and the magnitude (prediction 3) remains untested.
 
 ## Anti-cheat note (the binding guards, honored)
 

@@ -231,6 +231,43 @@ above. So the scouting note adds no new magnitude candidate beyond THINGS.
   *valid* below-floor rate, and "a **different** magnitude instrument … may be needed." This page does not
   re-open VWSD; it scopes what a new instrument would have to be.
 
+## Session-130 deeper scout (update, 2026-06-28)
+
+A $0 open-access scout (full detail + per-candidate provenance ledger in
+[`resource/multimodal-anchor-scouting`](../../base/resources/multimodal-anchor-scouting.md), "Session-130
+deeper scout") widened the hunt beyond the in-repo candidates above and **confirms, more strongly, that no
+resource clears the four requirements** — the two-axis wall holds across the open-access frontier:
+
+- **Graded same-word sense relatedness exists only *text-only*** (fails (c)): newly assessed **RAW-C /
+  SAW-C** (Trott & Bergen — graded same-word relatedness, the *right* construct, IAA 0.79, 112 words / 672
+  pairs; license + scale endpoints UNVERIFIED) joins DWUG / Usim / WiC in this class. **SID**
+  (SemEval-2017-derived, CC BY) is graded but text-only *and* between-word similarity (the CoSimLex
+  disqualifier).
+- **Graded *image* signals exist only over the *wrong construct*** (fail (b)-as-construct + (d)):
+  **Crisscrossed Captions (CxC)** is graded (0–5) + image-native but rates *whole-caption/scene* similarity,
+  no within-word sense structure (THINGS's failure mode on scenes); **PiCS** (CC BY 4.0), **MM-MDS**,
+  **Carlson-Image RSA**, and the **Mooney-THINGS** visual-ambiguity set are graded + image but rate
+  *object-category* similarity or *perceptual* recognizability, not word sense.
+- **Sense-tagged image resources are *binary/categorical*** (fail (b)): **BabelPic**, **VisualSem** (both
+  BabelNet non-commercial), **VerSe**, and VWSD itself.
+
+**THINGS-as-scaffolding, worked concretely:** a magnitude set *could* be built in principle (THINGSplus
+PD/CC0 images + the human similarity prior as a pre-stratifier), but it is **not tractable within this
+project's charter** — the spine (within-word polysemy) must be imported from a text resource (THINGS has
+none); THINGSplus gives one image per *concept* not per *sense* (so a two-sense design needs Wikimedia
+sourcing anyway, making THINGS's image role marginal); and — the fatal blocker — the indispensable
+**per-item graded human *sense*-relatedness labels over images** cannot come from THINGS (wrong construct)
+and cannot be produced here, because the project runs **no new human annotation** ([`CLAUDE.md`](../../../CLAUDE.md)
+always-on rule 4). Scaffolding cannot be promoted to anchor in-house.
+
+**Sharpened bottom line.** The magnitude (prediction 3) is **untested and, on current open resources,
+un-instrumentable** — the only route is an **externally-released** graded-image fine-polysemy set (or an
+external build) the project could then *ingest*; an in-house build is out of charter reach. No new typed
+`resource` page is warranted for the magnitude question. (Two newly-found candidates are catalog-worthy for
+*other* axes if those open: **RAW-C / SAW-C** as a second graded *text-side* lexical-gradience anchor
+alongside DWUG — pending license verification; **PiCS / CxC** for a future representational-alignment axis
+— never for word-sense relatedness.)
+
 ## Status: open (scoping only)
 
 This page runs nothing and ratifies nothing. It states the magnitude question, derives the four
