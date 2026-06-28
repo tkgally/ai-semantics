@@ -279,7 +279,7 @@ The wave-2 deepenings and original conjectures (2026-05-31) added these (the pag
   status: wanted
 - [P3] A defeasible-reasoning / non-monotonic-logic reference (e.g. Reiter, R. 1980. "A Logic for Default Reasoning." *Artificial Intelligence* 13; or a current survey).
   why: [`findings/conjectures/constructional-monotonicity-asymmetry.md`](../findings/conjectures/constructional-monotonicity-asymmetry.md) characterizes the add/cancel asymmetry as monotone-accumulation-vs-defeasance *by analogy only*; fetch first if the project ever leans on the formal mapping.
-  status: wanted
+  status: **PARTIALLY RECEIVED — survey ingested** (2026-06-28, session 131) → [`base/sources/strasser-antonelli-nonmonotonic-logic-sep.md`](sources/strasser-antonelli-nonmonotonic-logic-sep.md). SEP "Non-monotonic Logic" (Strasser & Antonelli, Winter 2024) at **encyclopedia-survey strength** grounds the formal monotony/defeasance/specificity-override vocabulary, upgrading the conjecture's mapping from "analogy only" to "grounded in a survey source." The **primary papers stay wanted**: Reiter 1980 (Default Logic), McCarthy 1980/1986 (circumscription), McDermott & Doyle 1980, KLM 1990 — journal/proceedings-walled, summarized by the survey but not ingested verbatim.
 
 The session-63 measurement-epistemics essay (2026-06-21) added this (methodology source; the essay rests on a single in-repo behavioral observation and explicitly does not fabricate the mechanism):
 
