@@ -17,6 +17,23 @@
 > artifacts are reusable verbatim; the re-attempt owes a cross-session-ratified re-grade + a fresh
 > critic GO, **no re-authoring spend**.
 
+> **SESSION 128 OUTCOME (2026-06-28): re-graded under the ratified VALID scorer → STILL DEFERRED (clean
+> degenerate NO-GO).** The scorer-validity decision was ratified cross-session (ADOPT Q-A WITH
+> MODIFICATIONS: held-out two-judge **cross-only category-match** re-grade of the stored guesses vs the
+> human gold `{word, phrase}`, band `[0.60,0.95]` fixed) and the stored auditor guesses were re-graded
+> (480 text-only calls, `regrade.py`, frozen rubric sha `55a67e39…` committed before the run; no images).
+> The re-graded band metric is **0.438** — *higher* than the literal-lemma 0.342 (the literal scorer was
+> partly under-counting) but **still below the 0.60 floor**, a **degenerate-side NO-GO**. A fresh
+> independent pre-run critic ([`PRERUN-CRITIC-REGRADE.md`](../runs/2026-06-28-vwsd-grounding-headroom-nlbaseline/PRERUN-CRITIC-REGRADE.md))
+> verified the 0.438 is a **valid** strict-recovery rate (HIGH verdicts not rubber-stamped; PARTIAL/NONE
+> not over-strict; κ 0.608) — **not** a scorer artifact this time — so the s127 "channel is competent"
+> optimism is not borne out, the IMAGE arm is **still not read**, and **prediction 3 remains UNTESTED.**
+> Outcome: [`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../../wiki/findings/results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md).
+> On VWSD this competence-audited fluent-channel route to the magnitude is **blocked under the ratified
+> standard**; a different magnitude instrument may be needed. (Non-blocking nuance queued in `NEXT.md`:
+> the band was calibrated on the literal-lemma floor; re-deriving it on the category-match metric would
+> only *raise* the floor, strengthening the NO-GO — it does not rescue the run.)
+
 **Status:** built + frozen, magnitude read deferred (competence standard ratified 2026-06-27, session 123) — the
 operationalization decision [`decisions/resolved/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/resolved/vwsd-nlbaseline-competence-dv.md)
 was **ratified cross-session (ADOPT-DEFAULT Q1-C)**, so the competence standard the whole magnitude read

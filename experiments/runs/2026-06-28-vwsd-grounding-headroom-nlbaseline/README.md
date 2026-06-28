@@ -56,6 +56,26 @@ items,"* never absolute.
 
 ## Results
 
-*(filled in after the run by the executing session — see the journal/log and
-`result/vwsd-grounding-headroom-nlbaseline` if it was cleared, or the deferral note if the pre-run
-critic returned NO-GO.)*
+**The magnitude read was DEFERRED at the adequacy-audit gate — twice, by two independent pre-run
+critics — and was never produced. The reused IMAGE arm was never read.**
+
+- **Session 127** (`PRERUN-CRITIC.md`): built + froze the channel (1158 NL descriptions; TEXT-NL arm
+  not saturated, acc .833/.767/.842; held-out adequacy audit). Under the ratified **deterministic
+  literal-target-word-lemma** scorer the two-auditor mean high-recovery = **0.342**, OUT OF BAND below
+  the `[0.60,0.95]` floor → **NO-GO**. The critic diagnosed this as a **scorer-validity artifact** and
+  surfaced [`decisions/.../vwsd-nlbaseline-recovery-scorer-validity`](../../../wiki/decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity.md).
+  → [`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../../../wiki/findings/results/vwsd-grounding-headroom-nlbaseline-audit-v1.md).
+- **Session 128** (`PRERUN-CRITIC-REGRADE.md`): the scorer-validity decision was **ratified** (ADOPT
+  Q-A WITH MODIFICATIONS) and the **stored** guesses re-graded under a held-out **two-judge cross-only
+  category-match** scorer (`regrade.py`; frozen rubric sha `55a67e39…` committed before the run; 480
+  text-only calls, no images). Band metric = **0.438** — *higher* than 0.342 (the literal scorer was
+  partly under-counting) but **still below the 0.60 floor**, a **clean degenerate NO-GO** a fresh
+  critic verified is a *valid* low rate (HIGH not rubber-stamped; PARTIAL/NONE not over-strict; κ
+  0.608), **not** a scorer artifact. So the s127 "channel is competent" optimism is not borne out, the
+  IMAGE arm is **still not read**, and **prediction 3 remains UNTESTED.**
+  → [`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../../../wiki/findings/results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md).
+
+**Re-grade artifacts (session 128):** `regrade.py` (harness), `frozen/regrade.json` (per-leg high-rates
++ band metric + grades), `raw/regrade_calls.json` (every raw verdict with the auditable WORD_REFERENT /
+RECOVERED_REFERENT / VERDICT fields). The reused IMAGE (`raw/image.json`) + DISTRACT (`raw/distract.json`)
+arms stay reusable verbatim, **unread**. Spend: re-grade $0.40582 (preflight $0.01301 + full $0.39281).

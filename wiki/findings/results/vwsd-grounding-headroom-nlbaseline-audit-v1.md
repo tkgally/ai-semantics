@@ -41,6 +41,15 @@ links:
 > 3) remains UNTESTED.** This page records the attempt and the methodological wall it hit, as a
 > first-class outcome; it makes **no** human-comparison claim (the magnitude vs human gold was never
 > read), hence `anchor: internal-contrast-only`.
+>
+> **Follow-through (session 128): [`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](vwsd-grounding-headroom-nlbaseline-regrade-v1.md).**
+> The scorer-validity decision this page surfaced was ratified, and the stored guesses were re-graded
+> under a held-out two-judge cross-only **category-match** scorer → **0.438**: higher than this page's
+> literal-lemma 0.342 (so the literal scorer *was* partly under-counting, as the s127 critic diagnosed)
+> but **still below the `[0.60,0.95]` floor** — a **clean degenerate NO-GO** a fresh critic verified is a
+> *valid* low rate, **not** a scorer artifact. So the s127 *"the channel is competent"* reading below is
+> **downgraded**: the channel's strict held-out referent recovery is genuinely below floor. IMAGE arm
+> still not read; prediction 3 still untested.
 
 ## What this run is, and why it stopped here
 
