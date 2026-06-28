@@ -1,0 +1,181 @@
+{
+ "thresholds": {
+  "asymmetry_pp": 0.2,
+  "fragility_pp": 0.1,
+  "cue_bar": 0.7,
+  "min_models": 2,
+  "b2": {
+   "add_con": 0.8,
+   "add_ctrl": 0.4,
+   "cancel_def": 0.8
+  }
+ },
+ "B2_GATE": {
+  "per_model": {
+   "A": {
+    "add_construction": 1.0,
+    "add_control": 0.0,
+    "cancel_default": 1.0
+   },
+   "B": {
+    "add_construction": 1.0,
+    "add_control": 0.0,
+    "cancel_default": 1.0
+   },
+   "C": {
+    "add_construction": 1.0,
+    "add_control": 0.0,
+    "cancel_default": 1.0
+   }
+  },
+  "add_con_models_ok": 3,
+  "add_ctrl_models_ok": 3,
+  "cancel_def_models_ok": 3,
+  "VERDICT": "GO"
+ },
+ "per_model": {
+  "A": {
+   "nli": {
+    "add_no_cue": 1.0,
+    "add_control": 0.2,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 0.5,
+    "cancel_cuefollow": 0.833
+   },
+   "fc": {
+    "add_no_cue": 1.0,
+    "add_control": 0.0,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 1.0,
+    "cancel_cuefollow": 0.833
+   }
+  },
+  "B": {
+   "nli": {
+    "add_no_cue": 1.0,
+    "add_control": 0.1,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 0.667,
+    "cancel_cuefollow": 1.0
+   },
+   "fc": {
+    "add_no_cue": 1.0,
+    "add_control": 0.0,
+    "add_cuefollow": 1.0,
+    "cancel_default": 0.833,
+    "cancel_no_cue": 0.833,
+    "cancel_cuefollow": 1.0
+   }
+  },
+  "C": {
+   "nli": {
+    "add_no_cue": 1.0,
+    "add_control": 0.0,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 0.333,
+    "cancel_cuefollow": 0.833
+   },
+   "fc": {
+    "add_no_cue": 1.0,
+    "add_control": 0.0,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 0.5,
+    "cancel_cuefollow": 0.667
+   }
+  }
+ },
+ "aggregate_nli": {
+  "add_no_cue": 1.0,
+  "add_control": 0.1,
+  "add_cuefollow": 1.0,
+  "cancel_default": 1.0,
+  "cancel_no_cue": 0.5,
+  "cancel_cuefollow": 0.889,
+  "asymmetry_add_minus_cancel": 0.5
+ },
+ "asymmetry_by_model_nli": {
+  "A": 0.5,
+  "B": 0.333,
+  "C": 0.667
+ },
+ "asymmetry_confirm_models": 3,
+ "asymmetry_symmetric_models": 0,
+ "asymmetry_reversal_models": 0,
+ "ASYMMETRY_VERDICT": "CONFIRMS (add easy / cancel hard, leg 1) \u2014 WITHIN-VERBAL",
+ "fragility_by_model": {
+  "A": {
+   "add_disagree": 0.0,
+   "cancel_disagree": 0.5,
+   "cancel_minus_add": 0.5
+  },
+  "B": {
+   "add_disagree": 0.0,
+   "cancel_disagree": 0.167,
+   "cancel_minus_add": 0.167
+  },
+  "C": {
+   "add_disagree": 0.0,
+   "cancel_disagree": 0.167,
+   "cancel_minus_add": 0.167
+  }
+ },
+ "fragility_confirm_models": 3,
+ "FRAGILITY_VERDICT": "CONFIRMS leg 2 (cancel more instrument-fragile)",
+ "add_cuefollow_robust_models": 3,
+ "cancel_cuefollow_robust_models": 3,
+ "cancel_construction_by_verb": {
+  "A_nli": {
+   "vase": 0,
+   "window": 1,
+   "snowman": 1,
+   "page": 1,
+   "egg": 0,
+   "tablet": 0
+  },
+  "A_fc": {
+   "vase": 0,
+   "window": 0,
+   "snowman": 0,
+   "page": 0,
+   "egg": 0,
+   "tablet": 0
+  },
+  "B_nli": {
+   "vase": 1,
+   "window": 1,
+   "snowman": 0,
+   "page": 0,
+   "egg": 0,
+   "tablet": 0
+  },
+  "B_fc": {
+   "vase": 0,
+   "window": 1,
+   "snowman": 0,
+   "page": 0,
+   "egg": 0,
+   "tablet": 0
+  },
+  "C_nli": {
+   "vase": 0,
+   "window": 1,
+   "snowman": 1,
+   "page": 1,
+   "egg": 1,
+   "tablet": 0
+  },
+  "C_fc": {
+   "vase": 0,
+   "window": 1,
+   "snowman": 0,
+   "page": 1,
+   "egg": 1,
+   "tablet": 0
+  }
+ }
+}
