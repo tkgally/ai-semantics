@@ -139,7 +139,10 @@ The decision pre-authorized "re-pair the cancel coercion before spend" for a B2 
 the failure is **structural to the ratified for-durative/semelfactive frame** (not a verb
 choice), the honest next step is a **cancel-arm re-design**, not a within-frame re-pair —
 which is a *yardstick* change and therefore a cross-session decision, surfaced (not ratified)
-this session in [`decisions/open/monotonicity-cancel-arm-redesign`](../../decisions/open/monotonicity-cancel-arm-redesign.md).
+in s135 and **ratified s136** in [`decisions/resolved/monotonicity-cancel-arm-redesign`](../../decisions/resolved/monotonicity-cancel-arm-redesign.md)
+(independent adversarial review: **ADOPT C1 telic-completion conditional on its own B2 calibration**,
+C2 privative fallback, then a principled-limit closure if both fail; the re-designed cancel arm must
+itself clear a fresh B2 default-at-ceiling gate before any asymmetry is read).
 [`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md)
 stays **`proposed`**: its decisive test is built and the add arm is ready, but it awaits a
 cancel arm that can reach matched ceiling.

@@ -67,10 +67,25 @@ links:
 > asymmetry was **not run** and **the asymmetry was never read**. A within-frame verb re-pair
 > is futile (structural floor); the cancel arm needs a re-design whose default is a
 > (near-)entailment at ceiling — surfaced for cross-session ratification in
-> [`decisions/open/monotonicity-cancel-arm-redesign`](../../decisions/open/monotonicity-cancel-arm-redesign.md).
+> [`decisions/resolved/monotonicity-cancel-arm-redesign`](../../decisions/resolved/monotonicity-cancel-arm-redesign.md).
 > One honest note this raises for the conjecture's own framing: part of what reads as
 > "cancellation is hard" may be that the cancelled inferences the project reaches for are
 > implicatures the models never held as entailments (weigh-question 4 of that decision).
+
+> **Cancel-arm re-design RATIFIED (2026-06-28, session 136) — conjecture still `proposed`.** An
+> independent fresh-agent adversarial review resolved [`decisions/resolved/monotonicity-cancel-arm-redesign`](../../decisions/resolved/monotonicity-cancel-arm-redesign.md):
+> **ADOPT C1 (telic-completion accomplishment cancellation) conditional on its own B2
+> default-at-ceiling calibration**, with **C2 (privative-modifier cancellation, requiring a
+> deliberate written scope-broadening of this conjecture) as the pre-authorized fallback**, then a
+> **principled-limit closure** ("the matched cancel arm is un-instrumentable at ceiling on a
+> strict-NLI panel") only if both C1 and C2 fail their B2 gates. This fixes *which cancel coercion to
+> try next* plus the unchanged requirement that it clear its own B2 gate before any asymmetry is read
+> — it does **not** test the bet. The conjecture advances to `tested` only after a B2-passing cancel
+> arm's matched battery runs (reusing the frozen B2-passing resultative ADD arm), read by the frozen
+> thresholds with the falsify arms live. The weigh-question-4 framing point is developed in
+> [`essay/nothing-to-cancel`](../essays/nothing-to-cancel.md): a cancel test built on an *implicature*
+> (nothing to cancel) is ill-posed for defeasance, so a fair cancel arm needs a *held entailment* as
+> its target — exactly what the B2 gate certifies.
 
 ## Statement
 
