@@ -417,6 +417,9 @@ The failure is **structural to the ratified for-durative/semelfactive frame**, n
 choice, so MOD-3's "re-pair the cancel coercion before spend" cannot be discharged by a
 within-frame verb swap — the cancel coercion needs a **re-design** (a yardstick change),
 surfaced for cross-session ratification in
-[`decisions/open/monotonicity-cancel-arm-redesign`](../open/monotonicity-cancel-arm-redesign.md).
-The spend-bearing asymmetry was **not run** and **never read**; the conjecture stays
+[`decisions/resolved/monotonicity-cancel-arm-redesign`](monotonicity-cancel-arm-redesign.md)
+(**ratified s136**: ADOPT C1 telic-completion conditional on its own B2 calibration, C2 privative
+fallback, then a principled-limit closure if both fail). This parent decision's add arm, B2
+machinery, and frozen thresholds stay resolved and unchanged — only the cancel coercion was ever
+in question. The spend-bearing asymmetry was **not run** and **never read**; the conjecture stays
 `proposed`.
