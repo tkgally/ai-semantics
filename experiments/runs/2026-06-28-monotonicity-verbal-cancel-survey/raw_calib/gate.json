@@ -1,0 +1,68 @@
+{
+ "gate": {
+  "ceiling": 0.8,
+  "min_models": 2,
+  "instrument": "NLI primary, label 0 = entailment"
+ },
+ "per_family": {
+  "implicative": {
+   "per_model_nli_primary": {
+    "A": {
+     "default_nli": 1.0,
+     "default_fc": 1.0
+    },
+    "B": {
+     "default_nli": 1.0,
+     "default_fc": 1.0
+    },
+    "C": {
+     "default_nli": 1.0,
+     "default_fc": 1.0
+    }
+   },
+   "models_ok": 3,
+   "VERDICT": "GO"
+  },
+  "factive": {
+   "per_model_nli_primary": {
+    "A": {
+     "default_nli": 1.0,
+     "default_fc": 1.0
+    },
+    "B": {
+     "default_nli": 1.0,
+     "default_fc": 1.0
+    },
+    "C": {
+     "default_nli": 1.0,
+     "default_fc": 1.0
+    }
+   },
+   "models_ok": 3,
+   "VERDICT": "GO"
+  },
+  "causative-inchoative": {
+   "per_model_nli_primary": {
+    "A": {
+     "default_nli": 1.0,
+     "default_fc": 1.0
+    },
+    "B": {
+     "default_nli": 1.0,
+     "default_fc": 0.8333333333333334
+    },
+    "C": {
+     "default_nli": 1.0,
+     "default_fc": 1.0
+    }
+   },
+   "models_ok": 3,
+   "VERDICT": "GO"
+  }
+ },
+ "summary": {
+  "implicative": "GO",
+  "factive": "GO",
+  "causative-inchoative": "GO"
+ }
+}
