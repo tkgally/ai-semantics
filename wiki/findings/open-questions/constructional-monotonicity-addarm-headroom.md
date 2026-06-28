@@ -32,7 +32,7 @@ links:
 
 > **Why this page exists.** The session-132 independent adversarial review of the
 > operationalization decision
-> [`decisions/open/constructional-monotonicity-generalization-operationalization`](../../decisions/open/constructional-monotonicity-generalization-operationalization.md)
+> [`decisions/resolved/constructional-monotonicity-generalization-operationalization`](../../decisions/resolved/constructional-monotonicity-generalization-operationalization.md)
 > returned **KEEP-OPEN**, and its **load-bearing blocker** is **undemonstrated add-arm
 > headroom** for the resultative add arm (the decision's provisional pair, Option A1 used
 > as the new-pair leg of Option A3). This page works that one blocker at the **design
@@ -250,7 +250,7 @@ monotone-slope-vs-cliff) is fine and continuous; **transporting its frozen numbe
   calibration probe a later session runs, not by this analysis.
 - **Ratifies nothing; freezes nothing.** It does not ratify the operationalization decision,
   does not pick a pair, and does not fix any threshold. The decision
-  [`decisions/open/constructional-monotonicity-generalization-operationalization`](../../decisions/open/constructional-monotonicity-generalization-operationalization.md) stays
+  [`decisions/resolved/constructional-monotonicity-generalization-operationalization`](../../decisions/resolved/constructional-monotonicity-generalization-operationalization.md) stays
   **open**; this page only sharpens its load-bearing blocker.
 - **Direction-of-effect, not magnitude; small-N intrinsic.** Any battery this feasibility
   analysis serves inherits the project's small-N, single-run, panel-as-subjects regime
@@ -277,7 +277,7 @@ froze the shapes into concrete numbers (construction affirm ≥ 0.80, control af
 post-run verifier reproduced every figure. **Verdict: both candidate constructions demonstrate
 headroom; the resultative degeneracy worry is refuted (verb-selected); the trap is real but
 verb-specific.** Prerequisite (1) is **discharged**. The operationalization decision
-[`decisions/open/constructional-monotonicity-generalization-operationalization`](../../decisions/open/constructional-monotonicity-generalization-operationalization.md)
+[`decisions/resolved/constructional-monotonicity-generalization-operationalization`](../../decisions/resolved/constructional-monotonicity-generalization-operationalization.md)
 **remains open** — prerequisites 2–4 (concrete main-battery thresholds, pre-frozen direction
 assignment, reconsidered scope) are still owed, and ratification is a later session's
 independent adversarial-review pass. This page is `answered`; it ratifies nothing.
