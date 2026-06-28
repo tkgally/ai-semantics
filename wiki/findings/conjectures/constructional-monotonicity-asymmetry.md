@@ -118,6 +118,22 @@ links:
 > limitation prominently. This amendment is **deliberate, not incidental** (MOD-2 satisfied); it
 > broadens what the conjecture is *about* and is logged here as a scope revision, not a result.
 
+> **STEP 1b (C2 privative) is a B2 GO (2026-06-28, session 137) — conjecture still
+> `proposed`; STEP 2 now unblocked.** The privative category-default calibration
+> ([`result/monotonicity-c2-privative-calibration-v1`](../results/monotonicity-c2-privative-calibration-v1.md))
+> is a clean **GO**: bare-head-noun category membership ("a gun" → "a weapon") is affirmed at
+> **1.00 in 3/3 models** under strict NLI (every one of 24 NLI defaults = entailment) — sharply
+> unlike the s135 "only once" (0.00) and the C1 completion default (0.25 / 0.375 / 0.75). So
+> category membership **is** a categorical entailment for the panel, and a privative cancel arm
+> can anchor a matched cancel arm at ceiling. The three calibrations now rank which cancel-side
+> defaults the panel holds as entailments (implicature: no; aspectual default: no; taxonomic:
+> yes) — vindicating the B2 gate. **STEP 2** (the matched battery, reusing the frozen
+> B2-passing resultative ADD arm) is unblocked; the conjecture advances to `tested` only after
+> it runs, read by the frozen thresholds with the falsify arms live. **Live caveat carried into
+> STEP 2 (M2):** the battery pairs a *verbal* ADD arm with a *nominal/adjectival* CANCEL arm, so
+> any C2 asymmetry is across a **domain difference** — a broadened, weaker version of the
+> original verbal-only bet, to be stated prominently on the result.
+
 ## Statement
 
 This is the **project's own, original** theoretical proposal — a forward bet generalizing a pattern that recurs across the argument-structure results, not an established finding. The descriptive observation it builds on is already recorded in [`concept/coercion`](../../base/concepts/coercion.md) and on the theory page ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md), "the tentative generalization the ladder should now carry"); this page names it, frames it as a **monotonicity** asymmetry, and states sharp confirmation/falsification criteria so the empirical loop can later pick it up. The two pages are kept complementary: the theory page states the asymmetry descriptively in the course of placing each result on its ladder; this page is the typed conjecture that *abstracts over* those results and proposes a mechanism and a generalization test. It does not duplicate the ladder; it points at it.
