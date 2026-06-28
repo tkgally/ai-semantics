@@ -5,7 +5,7 @@ title: LLM constructional inference is additive-easy but defeasance-hard (a mono
 meaning-senses:
   - constructional
   - inferential
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-05-31
 updated: 2026-06-28
@@ -86,6 +86,71 @@ links:
 > [`essay/nothing-to-cancel`](../essays/nothing-to-cancel.md): a cancel test built on an *implicature*
 > (nothing to cancel) is ill-posed for defeasance, so a fair cancel arm needs a *held entailment* as
 > its target — exactly what the B2 gate certifies.
+
+> **STEP 1 (C1 telic-completion) is a B2 NO-GO (2026-06-28, session 137) — conjecture still
+> `proposed`; routing to C2 with the M2 scope amendment below.** Following the decision's frozen
+> STEP 1, this session froze + ran the completion-default B2 calibration *first*
+> ([`result/monotonicity-c1-completion-calibration-v1`](../results/monotonicity-c1-completion-calibration-v1.md)):
+> the completion entailment of a simple-past accomplishment ("built the house" → "finished building
+> the house") is affirmed at only **0.25 / 0.375 / 0.75** (claude / gpt-mini / gemini) under strict
+> NLI — **0/3 models at the ≥ 0.80 ceiling**. Even completion — a far stronger default than the s135
+> "only once" — reads as **defeasible-not-categorical** under strict NLI (claude labels 2/8
+> accomplishments an active *contradiction* of completion). Per the frozen instruction this does
+> **not** relax the bar; it routes to **STEP 1b (C2 privative)**. This *reinforces* the
+> weigh-question-4 point ([`essay/nothing-to-cancel`](../essays/nothing-to-cancel.md)): the cancel-side
+> defaults the project reaches for are repeatedly inferences the panel does not hold as categorical
+> entailments — part of "cancellation is hard" is that there is *less held entailment to cancel* than
+> a human-semantics intuition expects. The asymmetry was **not** read; no battery ran.
+
+> **M2 — DELIBERATE conjecture-scope amendment (2026-06-28, session 137), executing the ratified
+> decision's pre-authorized C2 fallback.** The C1 NO-GO triggers STEP 1b (C2 = privative-modifier
+> cancellation), which the ratified decision ([`decisions/resolved/monotonicity-cancel-arm-redesign`](../../decisions/resolved/monotonicity-cancel-arm-redesign.md),
+> MOD-2) requires be preceded by a *written* scope-broadening. **Accordingly, the scope of this
+> conjecture is hereby broadened, deliberately:** the add-vs-cancel monotonicity asymmetry is no longer
+> tested over **verbal argument-structure constructions only**; it may be tested across **constructional
+> inference more broadly, including a nominal/adjectival privative cancel arm** (a bare head noun
+> entails its category — "a gun" ⊨ "a weapon" — and a privative modifier cancels it — "a fake gun" ⊭ a
+> weapon). The verbal-only abstraction is **relaxed**. **Live caveat (recorded, binding on any C2
+> result):** a C2 battery would pair a *verbal* ADD arm (the frozen resultative) with a
+> *nominal/adjectival* CANCEL arm, so the add-verbal/cancel-nominal **domain mismatch** is a real
+> confound on the asymmetry read — a C2 asymmetry is between *constructional inference types across a
+> domain difference*, not a clean within-domain verbal contrast, and any C2 result must state this
+> limitation prominently. This amendment is **deliberate, not incidental** (MOD-2 satisfied); it
+> broadens what the conjecture is *about* and is logged here as a scope revision, not a result.
+
+> **STEP 1b (C2 privative) is a B2 GO (2026-06-28, session 137) — conjecture still
+> `proposed`; STEP 2 now unblocked.** The privative category-default calibration
+> ([`result/monotonicity-c2-privative-calibration-v1`](../results/monotonicity-c2-privative-calibration-v1.md))
+> is a clean **GO**: bare-head-noun category membership ("a gun" → "a weapon") is affirmed at
+> **1.00 in 3/3 models** under strict NLI (every one of 24 NLI defaults = entailment) — sharply
+> unlike the s135 "only once" (0.00) and the C1 completion default (0.25 / 0.375 / 0.75). So
+> category membership **is** a categorical entailment for the panel, and a privative cancel arm
+> can anchor a matched cancel arm at ceiling. The three calibrations now rank which cancel-side
+> defaults the panel holds as entailments (implicature: no; aspectual default: no; taxonomic:
+> yes) — vindicating the B2 gate. **STEP 2** (the matched battery, reusing the frozen
+> B2-passing resultative ADD arm) is unblocked; the conjecture advances to `tested` only after
+> it runs, read by the frozen thresholds with the falsify arms live. **Live caveat carried into
+> STEP 2 (M2):** the battery pairs a *verbal* ADD arm with a *nominal/adjectival* CANCEL arm, so
+> any C2 asymmetry is across a **domain difference** — a broadened, weaker version of the
+> original verbal-only bet, to be stated prominently on the result.
+
+> **STEP 2 RAN — a WEAK CONFIRM; conjecture advances `proposed → tested` (2026-06-28, session
+> 137).** The matched C2 battery ran ([`result/monotonicity-c2-battery-v1`](../results/monotonicity-c2-battery-v1.md)):
+> add licensing is at **uniform perfect ceiling (1.00, 3/3)**, privative cancellation (suppression)
+> is **partial and item/model-dependent** (cancel_no_cue 0.75 / 0.625 / 0.875), the asymmetry is
+> **positive in 3/3 models** and clears the pre-registered 20 pp bar in **2/3** (claude +0.25, gpt
+> +0.375; gemini +0.125 below), with the cancel arm more instrument-fragile in 2/3 → **CONFIRMS by
+> the frozen rule** (both legs), so the conjecture is now `tested`, **supported on this leg**
+> (`internal-contrast-only`). **The support is weak and must not be over-stated:** (1) it spans a
+> deliberate **verbal-add / nominal-cancel domain difference** (M2) — not a clean within-verbal
+> contrast; (2) it is marginal in 2/3 models and a leave-one-out shows removing either of two
+> pre-flagged borderline privatives (*toy violin*, *plastic apple*, which fail to suppress) drops it
+> to 1/3; (3) small N, single run, no human baseline. With M1, the suppression shortfall is a genuine
+> *defeasance* shortfall (the category default cleared B2 at ceiling, so there was a held entailment
+> to cancel). The mechanism (LABELED speculation) is untouched; falsify arms did not fire (no
+> symmetric/reversal; M3 closure not triggered). This is a fourth construction pair showing the same
+> add-easy/cancel-hard shape, now with a B2-certified categorical default — bought at the cost of the
+> domain mismatch.
 
 ## Statement
 
