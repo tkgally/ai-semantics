@@ -5,13 +5,15 @@ title: "Does the resultative add arm have genuine headroom — and what design w
 meaning-senses:
   - constructional
   - inferential
-status: open
+status: answered
 contingent-on: []
 created: 2026-06-28
 updated: 2026-06-28
 links:
   - rel: refines
     target: conjecture/constructional-monotonicity-asymmetry
+  - rel: refines
+    target: result/addarm-headroom-calibration-v1
   - rel: depends-on
     target: open-question/constructional-monotonicity-generalization-design
   - rel: depends-on
@@ -27,6 +29,8 @@ links:
 ---
 
 # Open question: add-arm headroom for the monotonicity-generalization battery (design-level feasibility, not a probe)
+
+> **ANSWERED — 2026-06-28 (session 133): headroom DEMONSTRATED; the blocker is discharged.** The frozen calibration this page specified was run — [`result/addarm-headroom-calibration-v1`](../results/addarm-headroom-calibration-v1.md) ([`run record`](../../../experiments/runs/2026-06-28-addarm-headroom-calibration/README.md)). **Both** candidate add constructions clear the frozen headroom gate: **resultative** 10/12 verbs headroom-clean (construction affirm 1.000, control 0.250); **intrans-motion** 7/12 (construction 0.972, control 0.333). The s132 degeneracy worry is **not** borne out — a genuinely non-result-entailing control exists and the resultative add arm has real licensing-no-cue headroom against it. The default-coincidence trap is **real but verb-specific and avoidable**: only the telic/displacement verbs degenerate (resultative `freeze→solid`, `sharpen→sharp`; intrans `drift`, `slide`, `swing`, `bounce`). This **discharges prerequisite (1)** of the s132 review; it does **not** discharge prerequisites 2–4 and **ratifies nothing** (the operationalization decision stays `open`). The design-level analysis below stands as the spec the calibration executed.
 
 > **Why this page exists.** The session-132 independent adversarial review of the
 > operationalization decision
@@ -264,12 +268,18 @@ monotone-slope-vs-cliff) is fine and continuous; **transporting its frozen numbe
   `internal-contrast-only` per the ratified conflicting-cue posture; that posture was affirmed
   by the s132 review and is **not** re-examined here.
 
-## Status: open (design-level feasibility only)
+## Status: answered (the calibration ran; headroom demonstrated)
 
-This page does not run anything, demonstrates no headroom, picks no pair, and ratifies no
-gate. It restates the s132 KEEP-OPEN blocker, lays out why the resultative add arm risks
-degeneracy, states what a clean add control requires and how a later session would test it on
-frozen calibration items, surveys candidate add constructions with honest headroom
-assessments, and proposes provisional frozen-threshold *shapes* (not numbers). The
-operationalization decision remains open; the headroom blocker awaits a later session's frozen
-calibration probe and an independent adversarial-review ratification before any main probe runs.
+This page restated the s132 KEEP-OPEN blocker, laid out why the resultative add arm *risked*
+degeneracy, specified what a clean add control requires and how a later session would test it
+on frozen calibration items, surveyed candidate add constructions, and proposed provisional
+frozen-threshold *shapes*. Session 133 **executed that spec**: [`result/addarm-headroom-calibration-v1`](../results/addarm-headroom-calibration-v1.md)
+froze the shapes into concrete numbers (construction affirm ≥ 0.80, control affirm ≤ 0.40,
+≥ 4/12 clean), passed an independent pre-run critic, ran the probe ($0.068 billed), and a
+post-run verifier reproduced every figure. **Verdict: both candidate constructions demonstrate
+headroom; the resultative degeneracy worry is refuted (verb-selected); the trap is real but
+verb-specific.** Prerequisite (1) is **discharged**. The operationalization decision
+[`decisions/open/constructional-monotonicity-generalization-operationalization`](../../decisions/open/constructional-monotonicity-generalization-operationalization.md)
+**remains open** — prerequisites 2–4 (concrete main-battery thresholds, pre-frozen direction
+assignment, reconsidered scope) are still owed, and ratification is a later session's
+independent adversarial-review pass. This page is `answered`; it ratifies nothing.
