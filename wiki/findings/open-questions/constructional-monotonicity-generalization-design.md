@@ -5,7 +5,7 @@ title: "How would a matched-difficulty, ceiling-controlled battery test whether 
 meaning-senses:
   - constructional
   - inferential
-status: open
+status: answered
 contingent-on: []
 created: 2026-06-28
 updated: 2026-06-28
@@ -217,7 +217,7 @@ This page surfaces two decisions a future session must open and — per the cros
 here:
 
 1. **Operationalization gate** (created this session as a `wiki/decisions/open/` entry,
-   [`decisions/open/constructional-monotonicity-generalization-operationalization`](../../decisions/open/constructional-monotonicity-generalization-operationalization.md)):
+   [`decisions/resolved/constructional-monotonicity-generalization-operationalization`](../../decisions/resolved/constructional-monotonicity-generalization-operationalization.md)):
    **which** new add-vs-cancel construction pair(s) the matched-difficulty battery uses, and
    the **matched-difficulty / ceiling-certification criterion** (what must be true of the
    frozen item set so the comparison is *add-at-matched-structure vs cancel-at-matched-
@@ -261,13 +261,34 @@ here:
   **not** the matched-difficulty test. The generalization test lives in the cue arms, not the
   base answer key.
 
-## Status: open (scoping only)
+## Status: answered (both gates resolved, session 134)
 
-This page does not run anything and ratifies neither gate. It states the generalization
-test's confirm/falsify criteria, argues why a NEW construction pair is required, lists
-candidate pairs (with honest anchor status), fixes the matched-difficulty paradigm by
+This page did not run anything and ratified neither gate; it stated the generalization
+test's confirm/falsify criteria, argued why a NEW construction pair is required, listed
+candidate pairs (with honest anchor status), fixed the matched-difficulty paradigm by
 pointer to [`result/conative-cancel-direction-v2`](../results/conative-cancel-direction-v2.md),
-surfaces the human-anchor tension, and names the two gates with provisional defaults. The
-operationalization gate is opened as a companion `wiki/decisions/open/` page this session;
-both it and the human-anchor question await a **later** session's independent
-adversarial-review ratification before any probe runs.
+surfaced the human-anchor tension, and named the two gates with provisional defaults.
+
+**Both gates are now resolved** (RESOLVED 2026-06-28 by autonomous independent adversarial
+review — [`decisions/resolved/constructional-monotonicity-generalization-operationalization`](../../decisions/resolved/constructional-monotonicity-generalization-operationalization.md),
+ADOPT-WITH-MODS):
+
+1. **Operationalization gate → ratified.** Pair = a single new-pair `internal-contrast-only`
+   leg: **ADD = resultative** (verified headroom-clean pool, trap verbs `freeze`/`sharpen`
+   excluded) vs **CANCEL = the *for*-durative aspectual (semelfactive-iteration) coercion** —
+   genuinely beyond caused-motion / way / conative. Certification = B1 + B2 with frozen numbers
+   (add licensing-no-cue ≥ 0.80 & bare control ≤ 0.40 & cancel default ≥ 0.80, all in ≥2/3
+   models on a calibration subset, else re-pair; asymmetry read at a 20 pp margin; instrument
+   fragility at ≥10 pp). A3's anchored-replication leg was **dropped** as not earning its doubled
+   cost ([`result/scivetti-cxnli-answer-key-v1`](../results/scivetti-cxnli-answer-key-v1.md)
+   already covers the anchored base; base accuracy "is not the matched-difficulty test").
+2. **Human-anchor question → resolved** as `internal-contrast-only` for the new-pair leg (the
+   ratified [`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)
+   posture); a future human-rated constructional anchor stays queued in `wanted.md`, not blocked on.
+
+What remains is **execution only**, not design: a later spend-bearing session freezes-and-hashes
+the resultative-add + *for*-durative-cancel item set, runs the B2 blocking calibration subset,
+obtains an independent pre-run-critic GO, and runs the matched battery — reading it by the frozen
+thresholds with the falsify arms live. The conjecture
+[`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md)
+**stays `proposed`** until that battery runs.

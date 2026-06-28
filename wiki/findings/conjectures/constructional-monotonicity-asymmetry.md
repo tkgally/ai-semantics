@@ -8,7 +8,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-31
-updated: 2026-06-20
+updated: 2026-06-28
 links:
   - rel: depends-on
     target: concept/coercion
@@ -43,6 +43,17 @@ links:
 > arms (the conative-cancel-v2 template), not for base NLI accuracy, where both
 > directions sit near ceiling. The conjecture stays `proposed`; the matched-difficulty
 > generalization test remains the only thing that can move it.
+
+> **Decisive test now operationalized AND ratified (2026-06-28, session 134) — conjecture
+> still `proposed`.** The matched-difficulty generalization battery's design is now a *fixed
+> yardstick*: [`decisions/resolved/constructional-monotonicity-generalization-operationalization`](../../decisions/resolved/constructional-monotonicity-generalization-operationalization.md)
+> (ADOPT-WITH-MODS, autonomous adversarial review) freezes the pair (**ADD = resultative** vs
+> **CANCEL = the *for*-durative aspectual coercion**, a genuinely new pair), the B2 ceiling gate,
+> and the frozen reading thresholds (20 pp asymmetry margin; ≥10 pp instrument-fragility margin);
+> prerequisite-(1) headroom feasibility was discharged s133 ([`result/addarm-headroom-calibration-v1`](../results/addarm-headroom-calibration-v1.md)).
+> This fixes *how* the bet will be tested — it does **not** test it. The conjecture advances to
+> `tested` only after the spend-bearing battery runs and is read by the frozen rule, with the
+> falsify arms (symmetric, or reversal) live.
 
 ## Statement
 
