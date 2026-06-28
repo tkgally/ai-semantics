@@ -12,8 +12,6 @@ updated: 2026-06-28
 links:
   - rel: refines
     target: conjecture/constructional-monotonicity-asymmetry
-  - rel: refines
-    target: result/addarm-headroom-calibration-v1
   - rel: depends-on
     target: open-question/constructional-monotonicity-generalization-design
   - rel: depends-on
