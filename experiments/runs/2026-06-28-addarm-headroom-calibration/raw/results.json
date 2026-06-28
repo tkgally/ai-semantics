@@ -1,0 +1,718 @@
+{
+ "gate": {
+  "ceiling": 0.8,
+  "floor": 0.4,
+  "min_clean": 4
+ },
+ "by_construction": {
+  "intrans-motion": {
+   "n_verbs": 12,
+   "mean_construction_affirm_nli": 0.972,
+   "mean_control_affirm_nli": 0.333,
+   "clean_aggregate": [
+    "bob",
+    "float",
+    "rock",
+    "roll",
+    "spin",
+    "twirl",
+    "wobble"
+   ],
+   "n_clean_aggregate": 7,
+   "clean_in_2of3_models": [
+    "bob",
+    "float",
+    "rock",
+    "roll",
+    "spin",
+    "sway",
+    "twirl",
+    "wobble"
+   ],
+   "DEMONSTRATES_HEADROOM": true,
+   "verbs": {
+    "bob": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      1,
+      0
+     ]
+    },
+    "bounce": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      1,
+      0,
+      1
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.667,
+     "nli_headroom": 0.333,
+     "aggregate_clean": false,
+     "per_model_clean": 1,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      1,
+      0,
+      0
+     ]
+    },
+    "drift": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 1.0,
+     "nli_headroom": 0.0,
+     "aggregate_clean": false,
+     "per_model_clean": 0,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      1,
+      1,
+      1
+     ]
+    },
+    "float": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      1,
+      0
+     ]
+    },
+    "rock": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "roll": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      1,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.333,
+     "nli_headroom": 0.667,
+     "aggregate_clean": true,
+     "per_model_clean": 2,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      1,
+      0
+     ]
+    },
+    "slide": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 1.0,
+     "nli_headroom": 0.0,
+     "aggregate_clean": false,
+     "per_model_clean": 0,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      1,
+      1,
+      1
+     ]
+    },
+    "spin": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "sway": {
+     "nli_construction_affirm": [
+      0,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 0.667,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 0.667,
+     "aggregate_clean": false,
+     "per_model_clean": 2,
+     "fc_construction_affirm": [
+      0,
+      0,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "swing": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 1.0,
+     "nli_headroom": 0.0,
+     "aggregate_clean": false,
+     "per_model_clean": 0,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      1,
+      0
+     ]
+    },
+    "twirl": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "wobble": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  "resultative": {
+   "n_verbs": 12,
+   "mean_construction_affirm_nli": 1.0,
+   "mean_control_affirm_nli": 0.25,
+   "clean_aggregate": [
+    "beat",
+    "boil",
+    "cut",
+    "hammer",
+    "kick",
+    "paint",
+    "push",
+    "scrub",
+    "squeeze",
+    "wipe"
+   ],
+   "n_clean_aggregate": 10,
+   "clean_in_2of3_models": [
+    "beat",
+    "boil",
+    "cut",
+    "hammer",
+    "kick",
+    "paint",
+    "push",
+    "scrub",
+    "squeeze",
+    "wipe"
+   ],
+   "DEMONSTRATES_HEADROOM": true,
+   "verbs": {
+    "beat": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      1,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.333,
+     "nli_headroom": 0.667,
+     "aggregate_clean": true,
+     "per_model_clean": 2,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "boil": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "cut": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "freeze": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 1.0,
+     "nli_headroom": 0.0,
+     "aggregate_clean": false,
+     "per_model_clean": 0,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      1,
+      0,
+      1
+     ]
+    },
+    "hammer": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "kick": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "paint": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "push": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "scrub": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      1,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.333,
+     "nli_headroom": 0.667,
+     "aggregate_clean": true,
+     "per_model_clean": 2,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "sharpen": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 1.0,
+     "nli_headroom": 0.0,
+     "aggregate_clean": false,
+     "per_model_clean": 0,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      1,
+      1
+     ]
+    },
+    "squeeze": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      1,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.333,
+     "nli_headroom": 0.667,
+     "aggregate_clean": true,
+     "per_model_clean": 2,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    },
+    "wipe": {
+     "nli_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "nli_control_affirm": [
+      0,
+      0,
+      0
+     ],
+     "nli_construction_mean": 1.0,
+     "nli_control_mean": 0.0,
+     "nli_headroom": 1.0,
+     "aggregate_clean": true,
+     "per_model_clean": 3,
+     "fc_construction_affirm": [
+      1,
+      1,
+      1
+     ],
+     "fc_control_affirm": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  }
+ }
+}

@@ -215,3 +215,37 @@ four prerequisites below are supplied** (the first is the load-bearing blocker):
    feasibility-verified new-pair `internal-contrast-only` leg is the more honest and economical
    yardstick. The `internal-contrast-only` posture for the new-pair leg (weigh-question 4) was
    affirmed as correct and ratifiable on its own.
+
+## Prerequisite (1) DISCHARGED — session 133 (2026-06-28); decision stays OPEN
+
+The s132 blocker (prerequisite 1, "demonstrated add-arm headroom on frozen calibration items")
+is **discharged**. A frozen, pre-registered calibration probe was built, passed an independent
+pre-run critic (GO), run ($0.068 billed), and verified by an independent post-run agent (every
+number reproduced): [`result/addarm-headroom-calibration-v1`](../../findings/results/addarm-headroom-calibration-v1.md)
+([`run record`](../../../experiments/runs/2026-06-28-addarm-headroom-calibration/README.md);
+[`open-question/constructional-monotonicity-addarm-headroom`](../../findings/open-questions/constructional-monotonicity-addarm-headroom.md)
+now `answered`). On a frozen gate (construction licensing-no-cue affirm ≥ 0.80 **and** a
+non-construction control's affirm ≤ 0.40, ≥ 4/12 verbs):
+
+- **Resultative DEMONSTRATES HEADROOM** — 10/12 verbs headroom-clean (construction affirm
+  **1.000**, control **0.250**). The degeneracy worry is **not** borne out: a genuinely
+  non-result-entailing bare-transitive control exists ("hammered the metal" ⊬ "the metal became
+  flat"; "kicked the door" ⊬ "the door became open"). Only the genuinely telic `freeze→solid`
+  and `sharpen→sharp` had controls already at ceiling — the trap is **real but verb-specific and
+  avoidable by verb selection** (verified exclusion list: `freeze`, `sharpen`).
+- **Intrans-motion also DEMONSTRATES HEADROOM** — 7/12 aggregate (8 in ≥ 2/3 models;
+  construction **0.972**, control **0.333**), naming a cleaner-or-equal alternative add arm
+  (trap verbs: `drift`, `slide`, `swing`, `bounce`). This satisfies the prerequisite's explicit
+  "**or name a cleaner add construction**" branch.
+
+**What this means for ratification.** The load-bearing blocker is cleared, and the decision now
+has a **concrete usable verb pool + verified trap-exclusion list** for either construction. But
+prerequisites **2** (concrete frozen B2 ceiling cutoff + slope/cliff threshold as fixed numbers
+for the *main* battery item set — the calibration froze numbers for the *calibration*, not the
+main run), **3** (explicit pre-frozen add/cancel direction assignment for the chosen pair), and
+**4** (the reconsidered scope decision — whether A3's anchored-replication leg earns its doubled
+cost now that a single feasibility-verified new-pair `internal-contrast-only` leg is shown
+viable) are **still owed**. **The decision therefore stays `open`; this session ratifies
+nothing** (it produced the discharging evidence — anti-cheat §2 bars the producing session from
+also being the sole ratifier). A future session may re-attempt ratification once 2–4 are
+discharged; an independent fresh-agent review then fixes the yardstick (never the result).
