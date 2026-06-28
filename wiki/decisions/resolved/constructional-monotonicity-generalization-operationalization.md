@@ -404,3 +404,19 @@ session.**
   question resolved as `internal-contrast-only` for the new-pair leg).
 - [`open-question/constructional-monotonicity-addarm-headroom`](../../findings/open-questions/constructional-monotonicity-addarm-headroom.md)
   — already `answered` (s133); unchanged.
+
+## Post-ratification note — session 135 (2026-06-28): cancel arm hit a B2 NO-GO
+
+This decision **stays resolved** (its add arm, B2 machinery, and frozen thresholds are
+sound and unchanged). When s135 built the battery and ran the B2 gate, the **cancel arm
+failed**: the "only once" default — flagged *contestable* by MOD-3 — was affirmed at **0.00
+in 3/3 models** under both instruments, because single-occurrence is a defeasible quantity
+implicature, not a lexical entailment, so it cannot reach the matched ≥ 0.80 ceiling under
+strict NLI ([`result/monotonicity-generalization-b2-nogo-v1`](../../findings/results/monotonicity-generalization-b2-nogo-v1.md)).
+The failure is **structural to the ratified for-durative/semelfactive frame**, not a verb
+choice, so MOD-3's "re-pair the cancel coercion before spend" cannot be discharged by a
+within-frame verb swap — the cancel coercion needs a **re-design** (a yardstick change),
+surfaced for cross-session ratification in
+[`decisions/open/monotonicity-cancel-arm-redesign`](../open/monotonicity-cancel-arm-redesign.md).
+The spend-bearing asymmetry was **not run** and **never read**; the conjecture stays
+`proposed`.

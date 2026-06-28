@@ -55,6 +55,23 @@ links:
 > `tested` only after the spend-bearing battery runs and is read by the frozen rule, with the
 > falsify arms (symmetric, or reversal) live.
 
+> **Decisive test BUILT; cancel arm hit a B2 NO-GO (2026-06-28, session 135) — conjecture
+> stays `proposed`, asymmetry NOT read.** The battery was built, frozen, and its B2 ceiling
+> gate run ([`result/monotonicity-generalization-b2-nogo-v1`](../results/monotonicity-generalization-b2-nogo-v1.md)):
+> the **add arm is buildable at ceiling** (resultative construction 1.00 / control 0.00, 3/3
+> models), but the ratified **cancel arm fails the gate structurally** — its "only once"
+> default is affirmed at **0.00 in 3/3 models** under both instruments, because
+> single-occurrence is a defeasible quantity *implicature*, not a lexical entailment, so a
+> strict-NLI default cannot reach the matched ceiling for any semelfactive. Per the frozen
+> rule a B2 NO-GO **defers the run rather than relaxing the bar**, so the spend-bearing
+> asymmetry was **not run** and **the asymmetry was never read**. A within-frame verb re-pair
+> is futile (structural floor); the cancel arm needs a re-design whose default is a
+> (near-)entailment at ceiling — surfaced for cross-session ratification in
+> [`decisions/open/monotonicity-cancel-arm-redesign`](../../decisions/open/monotonicity-cancel-arm-redesign.md).
+> One honest note this raises for the conjecture's own framing: part of what reads as
+> "cancellation is hard" may be that the cancelled inferences the project reaches for are
+> implicatures the models never held as entailments (weigh-question 4 of that decision).
+
 ## Statement
 
 This is the **project's own, original** theoretical proposal — a forward bet generalizing a pattern that recurs across the argument-structure results, not an established finding. The descriptive observation it builds on is already recorded in [`concept/coercion`](../../base/concepts/coercion.md) and on the theory page ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md), "the tentative generalization the ladder should now carry"); this page names it, frames it as a **monotonicity** asymmetry, and states sharp confirmation/falsification criteria so the empirical loop can later pick it up. The two pages are kept complementary: the theory page states the asymmetry descriptively in the course of placing each result on its ladder; this page is the typed conjecture that *abstracts over* those results and proposes a mechanism and a generalization test. It does not duplicate the ladder; it points at it.
