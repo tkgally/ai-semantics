@@ -12,7 +12,7 @@
 > [`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../../wiki/findings/results/vwsd-grounding-headroom-nlbaseline-audit-v1.md);
 > run dir `experiments/runs/2026-06-28-vwsd-grounding-headroom-nlbaseline/` (`PRERUN-CRITIC.md`). The
 > magnitude read is now gated on a **valid recovery-scoring rule** —
-> [`decisions/open/vwsd-nlbaseline-recovery-scorer-validity`](../../wiki/decisions/open/vwsd-nlbaseline-recovery-scorer-validity.md)
+> [`decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity`](../../wiki/decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity.md)
 > (opened s127, eligible s128+; default Q-A = held-out model re-grade of category match). All frozen
 > artifacts are reusable verbatim; the re-attempt owes a cross-session-ratified re-grade + a fresh
 > critic GO, **no re-authoring spend**.

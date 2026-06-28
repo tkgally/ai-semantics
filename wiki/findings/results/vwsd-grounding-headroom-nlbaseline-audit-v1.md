@@ -107,7 +107,7 @@ literal-lemma scorer cannot see it.
   recovery scorer, the fluent NL channel cannot be **validly certified** on VWSD, because VWSD's
   polysemous target words are mostly not the common name a competent description uses. A valid audit
   needs a **category-match** scoring rule (a held-out model re-grade of the stored guesses), surfaced as
-  [`decisions/open/vwsd-nlbaseline-recovery-scorer-validity`](../../decisions/open/vwsd-nlbaseline-recovery-scorer-validity.md)
+  [`decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity`](../../decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity.md)
   (opened s127; provisional default Q-A; eligible s128+). The frozen descriptions, TEXT-NL arm, raw
   audit guesses, and reused IMAGE/DISTRACT arms are all **reusable verbatim** — the re-attempt owes a
   cross-session-ratified re-grade and a fresh critic GO, **no re-authoring spend**.
