@@ -169,3 +169,49 @@ ratifies.
 4. Is `internal-contrast-only` the honest posture for the new-pair leg, or does opening this
    line imply a human-comparison ambition that should make fetching a new human-rated
    constructional anchor a goal rather than an optional upgrade?
+
+## Ratification attempt 1 — session 132 (2026-06-28): KEEP-OPEN
+
+Per [`PROTOCOL.md`](../../../PROTOCOL.md) §2, the first cross-session boundary having passed
+(opened session 131, eligible session ≥ 132), an **independent fresh-agent adversarial review**
+read this decision, its companion scoping page, the conjecture, the cc-v2 paradigm and its
+governing decision, the conflicting-cue posture, the descriptive answer-key result, and the
+Scivetti resource, and returned **KEEP-OPEN**. The decision **remains `open`**; the yardstick is
+**not** frozen and the spend-bearing battery stays blocked. The review affirmed the surfacing
+discipline (freeze-and-hash, independent pre-run critic, live falsify arms, "fixes the yardstick
+never the result") as exemplary and ratifiable in posture — but identified concrete,
+must-discharge-before-freeze gaps. **A future session may re-attempt ratification only after the
+four prerequisites below are supplied** (the first is the load-bearing blocker):
+
+1. **Demonstrated add-arm headroom on frozen calibration items (the blocker).** Option A3 commits
+   to the **resultative** add arm (via A1), but the review judged its headroom *undemonstrated and
+   plausibly degenerate*: resultatives canonically attach to verbs whose action already co-occurs
+   with the result state, so a non-resultative control may supply the state-change entailment *for
+   free* — the AANN default-coincidence trap the decision itself names, with resultative already at
+   0.77–0.89 base accuracy in
+   [`result/scivetti-cxnli-answer-key-v1`](../../findings/results/scivetti-cxnli-answer-key-v1.md)
+   and no off-ceiling licensing signal there. If the add arm pins at ceiling with nothing to
+   measure, "add easy / cancel hard" becomes a near-tautology of the arm construction rather than a
+   finding — an *inadvertent* path to spurious confirmation (the anti-cheat concern runs toward a
+   degenerate add arm, not toward manufactured suppression). A future session must show, on frozen
+   calibration items *before* the main run, that a genuinely non-result-entailing control exists and
+   the resultative add arm has real licensing-no-cue headroom against it — **or name a cleaner add
+   construction**. The companion feasibility analysis opened this session,
+   [`open-question/constructional-monotonicity-addarm-headroom`](../../findings/open-questions/constructional-monotonicity-addarm-headroom.md),
+   begins this work at the design level (it does **not** demonstrate headroom — that needs a probe).
+2. **Concrete frozen thresholds for B2 and the slope rule.** B1+B2 re-uses the cc-v2 *reading-rule
+   shape*, but the review noted cc-v2's cliff/slope threshold was frozen **with its item set**
+   (item-set-specific, not a portable constant). The new pair therefore owes its **own** frozen
+   ceiling cutoff and slope threshold, as fixed numbers set before data — not inherited by pointer.
+   The decision currently leaves both as "e.g." placeholders.
+3. **An explicit, justified add/cancel direction assignment for the chosen pair, frozen in
+   advance** — especially relevant if A2 (Levin) is ever reconsidered, since Levin alternations
+   "are not all cleanly add vs cancel" and the direction call must not be chosen to fit.
+4. **A reconsidered scope decision once (1) is known.** With
+   [`result/scivetti-cxnli-answer-key-v1`](../../findings/results/scivetti-cxnli-answer-key-v1.md)
+   already covering the anchored base comparison (and finding it "small and inconsistent in sign,"
+   explicitly "not the matched-difficulty test"), the review questioned whether A3's second
+   (anchored-replication) leg earns its doubled build cost, or whether a single
+   feasibility-verified new-pair `internal-contrast-only` leg is the more honest and economical
+   yardstick. The `internal-contrast-only` posture for the new-pair leg (weigh-question 4) was
+   affirmed as correct and ratifiable on its own.
