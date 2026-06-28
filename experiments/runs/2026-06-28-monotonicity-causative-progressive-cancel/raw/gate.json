@@ -1,0 +1,111 @@
+{
+ "indicator": "affirm-the-result rate on 'The <obj> <inch>.' (NLI primary)",
+ "reading_rule": "report-the-rate; suppression_no_cue = 100 - progressive_affirm; conative-shaped pattern (default~ceiling, progressive suppressed, cue re-licenses) => build matched battery; no-suppression => sharpened principled-limit",
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "nli": {
+    "default": 100.0,
+    "progressive": 33.3,
+    "cue": 83.3,
+    "suppression_no_cue": 66.7,
+    "cue_following": 83.3,
+    "prog_to_cue_shift": 50.0,
+    "progressive_by_verb": {
+     "broke": 0,
+     "shattered": 1,
+     "melted": 1,
+     "tore": 0,
+     "cracked": 0,
+     "dissolved": 0
+    }
+   },
+   "fc": {
+    "default": 100.0,
+    "progressive": 0.0,
+    "cue": 83.3,
+    "suppression_no_cue": 100.0,
+    "cue_following": 83.3,
+    "prog_to_cue_shift": 83.3,
+    "progressive_by_verb": {
+     "broke": 0,
+     "shattered": 0,
+     "melted": 0,
+     "tore": 0,
+     "cracked": 0,
+     "dissolved": 0
+    }
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "nli": {
+    "default": 100.0,
+    "progressive": 33.3,
+    "cue": 100.0,
+    "suppression_no_cue": 66.7,
+    "cue_following": 100.0,
+    "prog_to_cue_shift": 66.7,
+    "progressive_by_verb": {
+     "broke": 1,
+     "shattered": 1,
+     "melted": 0,
+     "tore": 0,
+     "cracked": 0,
+     "dissolved": 0
+    }
+   },
+   "fc": {
+    "default": 66.7,
+    "progressive": 0.0,
+    "cue": 100.0,
+    "suppression_no_cue": 100.0,
+    "cue_following": 100.0,
+    "prog_to_cue_shift": 100.0,
+    "progressive_by_verb": {
+     "broke": 0,
+     "shattered": 0,
+     "melted": 0,
+     "tore": 0,
+     "cracked": 0,
+     "dissolved": 0
+    }
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "nli": {
+    "default": 100.0,
+    "progressive": 66.7,
+    "cue": 83.3,
+    "suppression_no_cue": 33.3,
+    "cue_following": 83.3,
+    "prog_to_cue_shift": 16.6,
+    "progressive_by_verb": {
+     "broke": 0,
+     "shattered": 1,
+     "melted": 1,
+     "tore": 1,
+     "cracked": 1,
+     "dissolved": 0
+    }
+   },
+   "fc": {
+    "default": 100.0,
+    "progressive": 50.0,
+    "cue": 66.7,
+    "suppression_no_cue": 50.0,
+    "cue_following": 66.7,
+    "prog_to_cue_shift": 16.7,
+    "progressive_by_verb": {
+     "broke": 0,
+     "shattered": 1,
+     "melted": 0,
+     "tore": 1,
+     "cracked": 1,
+     "dissolved": 0
+    }
+   }
+  }
+ }
+}
