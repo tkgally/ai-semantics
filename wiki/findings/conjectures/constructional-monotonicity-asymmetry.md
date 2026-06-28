@@ -23,6 +23,8 @@ links:
   - rel: depends-on
     target: result/conative-cancel-direction-v2
   - rel: depends-on
+    target: result/monotonicity-within-verbal-battery-v1
+  - rel: depends-on
     target: result/coercion-implicit-cue-v2b
   - rel: supports
     target: open-question/instrument-sensitivity-constructional-inference
@@ -151,6 +153,28 @@ links:
 > symmetric/reversal; M3 closure not triggered). This is a fourth construction pair showing the same
 > add-easy/cancel-hard shape, now with a B2-certified categorical default — bought at the cost of the
 > domain mismatch.
+
+> **CLEAN WITHIN-VERBAL CONFIRM — M2 DISCHARGED (2026-06-28, session 141); conjecture stays
+> `tested`, now on materially firmer footing.** The within-verbal battery ran
+> ([`result/monotonicity-within-verbal-battery-v1`](../results/monotonicity-within-verbal-battery-v1.md)):
+> the frozen resultative ADD arm (verbatim) paired with a **verbal** progressive CANCEL arm
+> (causative-inchoative; B2-default confirmed s139, suppression confirmed s140) — **both arms
+> verbal**, so the M2 domain mismatch is **gone**. Read by the same frozen s134 thresholds: B2 GO
+> (add construction 1.00 / control 0.00, cancel default 1.00, 3/3); add licensing at uniform ceiling
+> (1.00, 3/3); progressive suppression partial (cancel_no_cue 0.50 / 0.67 / 0.33); **asymmetry
+> +0.50 / +0.33 / +0.67 — ≥ 0.20 in 3/3 models** (confirm 3, symmetric 0, reversal 0); fragility leg
+> confirms 3/3; cue robust (add & cancel cue-follow 3/3); and crucially **leave-one-out robust at the
+> verdict level** (survives dropping any single cancel verb, worst case 2/3 — unlike the C2 confirm,
+> which fell to 1/3). So the generalization criterion is met by a **genuinely new verbal cancel
+> construction** (the progressive, beyond caused-motion / way / conative) on a **clean within-verbal
+> contrast**. **Honest, persisting caveats:** suppression is **partial and verb-uneven** (`window`/
+> shatter resists in all 3 models — punctual progressives read as culminated; gpt-5.4-mini sits
+> nearest the 0.20 bar precisely because it *suppresses the most* (4/6 verbs), giving the smallest
+> add-vs-cancel gap — best defeasance, smallest asymmetry); the add/cancel hypotheses are domain-matched but not surface-form
+> identical ("became stiff" vs "the vase broke"); small N, single run, `internal-contrast-only` (no
+> human baseline). The falsify arms were live and did not fire. This **discharges the M2 headline
+> caveat** the s137 confirm carried; what remains open is human comparison and whether the
+> partial/uneven suppression is defeasance *competence* or strict-NLI *labeling*.
 
 ## Statement
 

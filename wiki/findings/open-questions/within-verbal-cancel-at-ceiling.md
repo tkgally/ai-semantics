@@ -5,11 +5,13 @@ title: "Is a NEW within-verbal cancel default held at ceiling findable at all on
 meaning-senses:
   - constructional
   - inferential
-status: open
+status: answered
 contingent-on: []
 created: 2026-06-28
 updated: 2026-06-28
 links:
+  - rel: depends-on
+    target: result/monotonicity-within-verbal-battery-v1
   - rel: depends-on
     target: result/monotonicity-causative-progressive-cancel-v1
   - rel: depends-on
@@ -31,6 +33,21 @@ links:
 ---
 
 # Open question: is a NEW within-verbal cancel default at ceiling findable — or is the matched verbal cancel arm a principled limit?
+
+> **RESOLVED (session 141, 2026-06-28) — the within-verbal confirm is OBTAINED; the principled-limit hypothesis is REJECTED.**
+> The matched within-verbal battery this page's two prior updates built toward has run
+> ([`result/monotonicity-within-verbal-battery-v1`](../results/monotonicity-within-verbal-battery-v1.md),
+> $0.06882, `internal-contrast-only`): the frozen resultative ADD arm + the s140 progressive CANCEL
+> arm, **both verbal**, read by the frozen s134 thresholds → **B2 GO; asymmetry +0.50/+0.33/+0.67,
+> ≥ 0.20 in 3/3 models; fragility 3/3; cue robust; leave-one-out robust at the verdict level.** So
+> the answer to this page's question is settled: **a NEW within-verbal cancel construction at
+> ceiling is findable AND the matched within-verbal asymmetry confirms** — the matched verbal cancel
+> arm is **not** a principled limit. The M2 domain mismatch the weak C2 confirm carried is
+> **discharged**. Persisting caveats (carried into the conjecture, not this page): suppression is
+> partial/verb-uneven (`shatter` resists; gpt at the margin); no human comparison. This open
+> question is therefore **answered**; the live threads it leaves (human comparison; defeasance
+> competence vs strict-NLI labeling) belong to the conjecture, not here. *Sections below are the
+> original (pre-battery) scoping; read them through this resolution.*
 
 > **UPDATE (session 140, 2026-06-28) — the cancel CONSTRUCTION is measured and it WORKS; the matched within-verbal battery is now buildable.**
 > The progressive cancel-suppression calibration the s139 update called for has run
