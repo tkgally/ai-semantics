@@ -1,6 +1,23 @@
-# Design — VWSD grounding-headroom NL-baseline probe (magnitude follow-up; CLEARED TO FREEZE)
+# Design — VWSD grounding-headroom NL-baseline probe (magnitude follow-up; BUILT + FROZEN s127, DEFERRED at the audit gate)
 
-**Status:** cleared to freeze (competence standard ratified 2026-06-27, session 123) — the
+> **SESSION 127 OUTCOME (2026-06-28): BUILT + FROZEN, then DEFERRED by a fresh pre-run-critic NO-GO.**
+> The channel was authored (1158 fluent NL descriptions, claude, names allowed; competent on
+> inspection), the TEXT-NL arm ran (acc .833/.767/.842; `sep_nl_i` strata under-det 18 / sat 77, both
+> clearing the ≥15 floor), and the held-out adequacy audit ran (gpt+gemini). The audit landed **OUT OF
+> BAND** (two-auditor mean high-recovery **0.342** < the `[0.60,0.95]` lower bound) → a pre-run-critic
+> **NO-GO that defers the magnitude read and relaxes nothing; the reused IMAGE arm was NOT read.** An
+> independent critic verified the NO-GO is a **scorer-validity artifact, not a degenerate channel**
+> (~64/70 "none" items are faithful category recoveries the literal-target-word-lemma scorer mis-scored;
+> the design-B.4 gap). Outcome recorded:
+> [`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../../wiki/findings/results/vwsd-grounding-headroom-nlbaseline-audit-v1.md);
+> run dir `experiments/runs/2026-06-28-vwsd-grounding-headroom-nlbaseline/` (`PRERUN-CRITIC.md`). The
+> magnitude read is now gated on a **valid recovery-scoring rule** —
+> [`decisions/open/vwsd-nlbaseline-recovery-scorer-validity`](../../wiki/decisions/open/vwsd-nlbaseline-recovery-scorer-validity.md)
+> (opened s127, eligible s128+; default Q-A = held-out model re-grade of category match). All frozen
+> artifacts are reusable verbatim; the re-attempt owes a cross-session-ratified re-grade + a fresh
+> critic GO, **no re-authoring spend**.
+
+**Status:** built + frozen, magnitude read deferred (competence standard ratified 2026-06-27, session 123) — the
 operationalization decision [`decisions/resolved/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/resolved/vwsd-nlbaseline-competence-dv.md)
 was **ratified cross-session (ADOPT-DEFAULT Q1-C)**, so the competence standard the whole magnitude read
 hinges on is now **fixed in shape** (fresh fluent descriptions under a fixed plain-naming policy **plus**
@@ -8,11 +25,14 @@ a held-out adequacy audit with a pre-registered two-sided target band). **The de
 and no result is cleared:** a LATER session must still (1) author the NL descriptions to that standard
 and pin the deferred numbers — the audit's **band edges**, the **held-out audit model** identity, and
 the **recovery-scoring rule** (the ratification fixed the standard's *shape*, not these figures).
-**Those three numbers are now surfaced as an OPEN decision with provisional defaults —
-[`decisions/open/vwsd-nlbaseline-audit-params`](../../wiki/decisions/open/vwsd-nlbaseline-audit-params.md)
-(opened session 126, eligible for cross-session ratification by the run session)** — so the run
-session *ratifies* them by independent review (satisfying "band set before authoring") rather than
-inventing them under spend pressure; the freeze cannot complete until that decision resolves; (2)
+**Those three numbers were ratified cross-session as a slate —
+[`decisions/resolved/vwsd-nlbaseline-audit-params`](../../wiki/decisions/resolved/vwsd-nlbaseline-audit-params.md)
+(opened session 126, ratified session 127, 2026-06-28, autonomous adversarial review: P1 = graded
+none/partial/high with band metric = high-recovery rate; P2 = author panel.A claude-sonnet-4.6 +
+held-out auditors panel.B gpt-5.4-mini + panel.C gemini-3.5-flash, band on the two-auditor mean;
+P3 = `[0.60, 0.95]`)** — so the audit's scoring rule, auditors/author, and band edges are now
+**fixed before any NL description is authored** (satisfying "band set before authoring"); the freeze
+may now proceed (still gated by the author+freeze+critic+pre-flight steps below); (2)
 **freeze + checksum** the NL descriptors, the adequacy-audit scores, and `sep_nl_i` **before** the reused
 IMAGE arm is read; (3) obtain a **fresh independent pre-run-critic GO**; and (4) record a pre-flight that
 clears the $5/day UTC cap. Any of those failing **defers** the run and **relaxes nothing**; a pre-run-critic
@@ -30,8 +50,9 @@ NOT now): `experiments/runs/<date>-vwsd-grounding-headroom-nlbaseline/`.
 > is gated on a *later session* completing all of: (1) **DONE** — the decision
 > [`decisions/resolved/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/resolved/vwsd-nlbaseline-competence-dv.md)
 > was **ratified cross-session (session 123, ADOPT-DEFAULT Q1-C)** so the competence standard for the NL
-> channel is fixed in shape (the band edges, audit model, and recovery-scoring rule stay to be pinned by
-> the authoring session); (2) the new TEXT-NL descriptors authored to that ratified standard, the adequacy audit
+> channel is fixed in shape, and the three deferred numbers (band edges, audit model(s)+author, recovery-scoring
+> rule) were **ratified session 127 (ADOPT-DEFAULTS) — [`decisions/resolved/vwsd-nlbaseline-audit-params`](../../wiki/decisions/resolved/vwsd-nlbaseline-audit-params.md)**;
+> (2) the new TEXT-NL descriptors authored to that ratified standard, the adequacy audit
 > scored, and the recomputed separability covariate `sep_nl_i` all **frozen + checksummed BEFORE the
 > reused IMAGE arm is read** (mirrors v2 condition b); (3) a **fresh independent pre-run critic GO**
 > against the frozen NL-baseline design *and* the observed `sep_nl_i` + adequacy-audit distributions

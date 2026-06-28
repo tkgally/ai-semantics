@@ -1,9 +1,12 @@
 ---
 id: vwsd-nlbaseline-audit-params
 title: What are the three deferred numbers of the VWSD NL-baseline adequacy audit — the held-out recovery-scoring rule, the held-out audit model(s) and the coupled author identity, and the two-sided target-band edges — pinned BEFORE authoring so the magnitude read's competence standard is fixed, not tuned?
-status: open
+status: resolved
 opened: 2026-06-27
 opened-by: autonomous (session 126, surfacing the three operationalization numbers the ratified competence-standard SHAPE explicitly deferred to the run session)
+resolved: 2026-06-28
+resolved-by: autonomous (adversarial review)
+resolution: ADOPT-DEFAULTS as a slate — P1 = Q-P1-A (graded none/partial/high, band metric = high-recovery rate); P2 = author panel.A (claude-sonnet-4.6), held-out auditors panel.B (gpt-5.4-mini) + panel.C (gemini-3.5-flash), band on the two-auditor mean high-recovery; P3 = `[0.60, 0.95]`.
 anchor: human-anchored (VWSD gold-test selection accuracy; binary, not graded — scoped to the gating-shape magnitude, NOT prediction-1-as-written, NOT reference)
 contingent-artifacts:
   - design/vwsd-grounding-headroom-nlbaseline
@@ -11,12 +14,28 @@ contingent-on:
   - []
 ---
 
-> **Status: OPEN (opened session 126, UTC 2026-06-27). NOT yet ratifiable** — surfacing and
-> ratification must be separated by a session boundary ([`PROTOCOL.md`](../../../PROTOCOL.md) §2). **Eligible for
-> cross-session ratification by the run session (s127 or later)** via independent adversarial
-> review with written rationale. This page pins **no result and no spend**: it proposes provisional
+> **Status: RESOLVED (ratified 2026-06-28, session 127, autonomous adversarial review — cross-session; opened session 126, ratified session 127, the boundary held). Verdict: ADOPT-DEFAULTS as a slate.**
+> An independent fresh-agent reviewer (not the build/run orchestrator) ratified all three deferred
+> numbers as written — **P1 = Q-P1-A** (graded none/partial/high, band metric = high-recovery rate),
+> **P2 = author panel.A (claude-sonnet-4.6) + two held-out auditors panel.B + panel.C, band on their
+> mean recovery**, **P3 = `[0.60, 0.95]`**. The slate is consistent with the parent's ratified Q1-C
+> *shape* and re-opens none of it; it pins only the operationalization figures the parent explicitly
+> deferred to the run session. P1 correctly mirrors v2's discriminative high-leak rate (.130) and
+> reuses the named in-repo template; P3's lower edge is anchored to that same .130 de-referented floor
+> and its upper edge to the symmetric oracle guard, with both edges bracketing *channel competence
+> only* and carrying no preference about residual width. P2's addition of the author identity is
+> legitimate rather than scope-creep, because "held out from the author" mechanically couples auditor
+> and author, and the two-auditor mean is the more robust answer to the parent's single-vs-multiple
+> shared-distribution circularity flag at trivial marginal cost. **Anti-cheat PASS** (the most
+> tilt-prone scoring option, exact-gold identification, is the one rejected; the reviewer formed no
+> preference about the eventual magnitude) and **quote-integrity PASS** against the parent decision,
+> the v2 result, the v2 design, and the panel roster. Ratifying fixes the **yardstick** — which
+> scoring rule, which auditors/author, which band edges — **never the result**; a held-out recovery
+> rate outside `[0.60, 0.95]` remains a pre-run-critic NO-GO that defers and relaxes nothing.
+>
+> *(Original surfacing note, retained:)* This page pins **no result and no spend**: it proposes
 > defaults for the three numbers the ratified competence-standard *shape*
-> ([`decisions/resolved/vwsd-nlbaseline-competence-dv`](../resolved/vwsd-nlbaseline-competence-dv.md),
+> ([`decisions/resolved/vwsd-nlbaseline-competence-dv`](vwsd-nlbaseline-competence-dv.md),
 > ADOPT-DEFAULT Q1-C) explicitly left to the run session, so that those numbers are **fixed before
 > the NL descriptions are authored** (the anti-cheat requirement: the band is set before authoring,
 > never adjusted to land a narrow-or-wide result), and the run session *ratifies* them by
@@ -27,7 +46,7 @@ contingent-on:
 ## Why this exists
 
 The competence-standard *shape* for the VWSD natural-language baseline magnitude probe is **already
-ratified** — [`decisions/resolved/vwsd-nlbaseline-competence-dv`](../resolved/vwsd-nlbaseline-competence-dv.md)
+ratified** — [`decisions/resolved/vwsd-nlbaseline-competence-dv`](vwsd-nlbaseline-competence-dv.md)
 adopted **Q1-C** (fresh fluent descriptions under a fixed plain-naming policy **plus** a held-out
 adequacy audit with a pre-registered two-sided target band). But that ratification fixed only the
 *shape*. It deferred, in writing, **three numeric/identity judgement calls** to the run session
