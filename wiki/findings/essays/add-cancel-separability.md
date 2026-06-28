@@ -1,0 +1,112 @@
+---
+type: essay
+id: add-cancel-separability
+title: Are the two poles separable? The add/cancel monotonicity framing presupposes a joint in distributional meaning that the items have to earn
+meaning-senses:
+  - constructional
+  - inferential
+  - distributional
+status: draft
+contingent-on: []
+created: 2026-06-28
+updated: 2026-06-28
+links:
+  - rel: refines
+    target: conjecture/constructional-monotonicity-asymmetry
+  - rel: depends-on
+    target: concept/coercion
+  - rel: depends-on
+    target: concept/distributional-meaning
+  - rel: depends-on
+    target: result/scivetti-cxnli-answer-key-v1
+  - rel: depends-on
+    target: result/coercion-implicit-cue-v2b
+---
+
+# Essay: are the two poles separable?
+
+> **Status: draft (2026-06-28). A philosophical-track essay arguing in the project's own voice.** It introduces **no new empirical claim**: every empirical assertion cites the in-repo page that carries it, at that page's stated strength, and the original part is the argument — a conceptual caution about a *premise* of the add/cancel monotonicity framing. The essay **sharpens, does not refute**, the conjecture it leans on ([`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md), `status: proposed`). It makes **no human comparison**: the two results it cites carry either an answer-key human baseline used only descriptively or an `anchor: internal-contrast-only` within-model contrast. The **Revision triggers** section states in advance what would weaken or strengthen the worry; read it before citing the argument.
+
+## The position
+
+The conjecture frames the recurring add-easy / cancel-hard pattern as a **monotonicity** asymmetry: adding a construction-contributed entailment onto a non-licensing verb is monotone accumulation (easy), and cancelling a verb's lexical default is a defeasance operation (hard). That framing is sharp and useful. This essay questions a premise it has to stand on: that the **"added" entailment and the "default" entailment are cleanly separable** — that there is a construction-contributed layer distinct from what the bare lexical item already carries distributionally.
+
+The bounded thesis: **in a distributional meaning system the add/cancel separation is not guaranteed in advance — it is an operational achievement of careful item construction, not a pre-given joint in the meaning.** Two halves:
+
+1. When a control verb already co-occurs with the would-be-added entailment, the **add** operation has nothing to add — the baseline is already at the ceiling the construction was supposed to lift, so "the construction added this" is unmeasurable. This is the default-coincidence trap, and the project has already hit it head-on.
+2. Conversely, a **"default" that the construction overrides is itself just a strong distributional prior**, not a categorically different kind of content from the "added" entailment. Both poles are co-occurrence statistics; what makes one feel like a *default to be cancelled* and the other like *content to be added* is the *direction* and *strength* of a prior, not a difference in kind.
+
+Put together: the add/cancel dichotomy presupposes a clean cut between "what the lexical item brings" and "what the construction contributes," but distributional meaning does not hand that cut over for free. The recurring difficulty of building an add arm with genuine headroom is the **empirical shadow** of this conceptual entanglement — not a mere engineering nuisance to be tuned around. The consequence for the empirical line is the whole point, and it is stated as a sharpening: the conjecture's two poles are only as separable as the items make them, so a clean asymmetry result depends on **first earning a clean separation**.
+
+This is a conceptual caution about a premise. It is **not** a claim that the asymmetry is false, nor that the conjecture is wrong to pose it. It is a claim about what has to be true of the *items* before an asymmetry result can be read off them.
+
+## The empirical hooks, at their actual strength
+
+Two in-repo results carry the weight, quoted verbatim.
+
+**The add arm can lose its headroom because the control already does the work.** The clearest in-repo statement of the default-coincidence trap is the answer-key result's own reading of why the add/cancel difference does not appear at the base task. On the full Scivetti CxNLI base task, ADD (caused-motion ∪ way-manner) vs CANCEL (conative) accuracy is, in the result's words:
+
+> "claude 0.870 vs 0.962 (**−0.092**, cancel *higher*), gpt 0.855 vs 0.821 (+0.035), gemini 0.957 vs 0.936 (+0.021) — small and **inconsistent in sign**." ([`result/scivetti-cxnli-answer-key-v1`](../results/scivetti-cxnli-answer-key-v1.md), §Interpretation, point 3)
+
+The result reads this exactly as the conjecture's scope predicts — "at base ceiling both directions are near-ceiling and the conative is in fact *highest* for claude" — and warns that "the contrast here is **baseline-difficulty-confounded and is not the matched-difficulty test the conjecture requires**" (same point). That is the trap in its mildest form: at base answer-key level both poles sit near ceiling, so the add/cancel cut has no purchase. The deeper version of the same trap is the one this essay names — that when a control verb *already* licenses the would-be-added entailment, the add arm has *no headroom at all*, so the construction's "addition" is in principle unmeasurable by a shift-from-control design. The project has met that deeper version directly at a different construction (AANN), where "the default eats the construction" — that case is the subject of the sibling essay [`inference-default-coincidence`](inference-default-coincidence.md), and this essay does not re-derive it; it generalizes the worry to the add/cancel *framing* itself.
+
+**The "added" content the add arm registers is shallow — distributional, not a separate world-model layer.** When the add direction *does* register, what it registers is bounded. The implicit-cue result floors the added affirmation only under an explicit denial, not under an implied world-knowledge conflict:
+
+> "With only the in-premise immovability descriptor, affirm-caused-motion stays at **near-ceiling (implicit-wk 90–100%; the lone exception is gpt-5.4-mini under FC at 40%)**; only the **explicit** outcome denial drives it to **floor (0%, gpt-5.4-mini FC 10%)**. So the v2 cue-sensitivity is **explicit-outcome parsing, not world-model integration**." ([`result/coercion-implicit-cue-v2b`](../results/coercion-implicit-cue-v2b.md), §"One-line finding")
+
+That result is `anchor: internal-contrast-only`: its arms carry **no human-comparison claim** (its caveats: "**internal-contrast-only** with **no human baseline**"). It matters here because it tells us *what kind of thing* the "added" entailment is when the models supply it: an explicit-outcome parse layered on the construction's distribution, not a separately-represented world-model fact. If the "added" content is itself a distributional affirmation that an explicit denial can flip, then it is not obviously a *different kind* of content from the lexical "default" the cancel arm has to override — both are dispositions over the high-probability continuation. That is the entanglement this essay presses.
+
+## Why distributional meaning does not hand over the joint
+
+Cast the two poles in the vocabulary of [`concept/coercion`](../../base/concepts/coercion.md). The add/cancel framing imports a clean picture: the lexical item carries a *default* (what *kick* brings: completed contact), and the construction *contributes* a separate layer (what caused-motion brings: the object moved). Adding stacks the layer on; cancelling retracts the default. The picture is tidy because it treats the two as different *kinds* of content occupying different *slots*.
+
+But in a distributional system there is one currency. [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md) frames the next-token objective as one that "implicitly encodes distributional structure" — co-occurrence statistics, all the way down. On that view the verb's "lexical default" is a strong co-occurrence prior (*kick* co-occurs overwhelmingly with completed contact), and the construction's "contributed entailment" is *also* a co-occurrence regularity (the caused-motion frame co-occurs with caused-motion outcomes — this is the conjecture's own labeled-speculation mechanism, that "the construction's own co-occurrence statistics support the added entailment"). Both poles are priors. The difference the add/cancel framing leans on — "added layer" vs "lexical default" — is, in this currency, a difference of *direction and strength* between two priors, not a difference of *kind* between two sorts of content.
+
+Two consequences follow, and they are the substance of the worry.
+
+**First, the add arm's separability is contingent on the control.** A shift-from-control design measures "what the construction added" by subtracting a baseline. That subtraction only has somewhere to register if the baseline verb does **not** already co-occur with the entailment. When it does — when the control's distributional default already includes the would-be-added content — the add operation has nothing left to measure. Whether an add arm has headroom is therefore a fact about the *items' distributions*, established (or not) when the items were built, not a fact about the construction's place in the monotonicity scheme. The conjecture's own demand for "matched difficulty / ceiling control" is, read this way, exactly the demand to *engineer a separation that distributional meaning does not supply on its own*.
+
+**Second, the "default to be cancelled" is not a categorically harder kind of target — it is a stronger prior pointing the other way.** The cancel arm feels harder because the conative must hold down *kick*'s robust contact prior. But on the distributional reading that difficulty is a function of *how strong the prior is*, not of defeasance being a different logical operation the model lacks the machinery for. A weak-prior lexical default would presumably be easier to cancel; a strong-prior added entailment (a construction whose frame is overwhelmingly associated with its outcome) would presumably be easy to add and *hard to withhold*. The "add = monotone, cancel = defeasance" mapping is a clean logical characterization (the conjecture flags it is held "as analogy," no in-repo source grounding it), but the *behavioral* difficulty it predicts may track prior-strength on a continuum rather than the categorical add/cancel cut. (This is **labeled interpretation**, consistent with the conjecture's own deflationary mechanism, not a tested claim.)
+
+So the joint the framing presupposes — a clean line between lexical default and construction-contributed layer — is, in a distributional system, something the *items* have to earn by construction. Where they earn it (the conative cancel arm, off-ceiling and separable *because* its default runs the other way, on the conjecture's own account), the asymmetry is measurable. Where they do not (the AANN add arm, where the default already supplies the inference), the pole the framing names is simply unreachable. The add/cancel dichotomy is an **operational achievement of careful item construction, not a pre-given joint in distributional meaning** — and the recurring trouble building add arms with headroom is the empirical shadow of that, not an incidental nuisance.
+
+## How this sharpens the conjecture (not a refutation)
+
+This essay does not say the asymmetry is false. It says the conjecture's **two poles are only as separable as the items make them**. The conjecture already builds in the right discipline — "the decisive design feature in every case is **matched difficulty / ceiling control**" ([`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md), §"What would confirm / falsify"). The essay's contribution is to say *why* that discipline is load-bearing at the level of meaning, not just at the level of statistics: in a distributional system there is no antecedent guarantee that "added entailment" and "lexical default" name distinct, independently-measurable things. A clean asymmetry result therefore depends on **first earning a clean separation** — demonstrating, per item pair, that the add arm has genuine headroom (the control does not already supply the entailment) and that the cancel arm has a default genuinely strong enough to be a target. Absent that earned separation, an add/cancel comparison is comparing two cuts through one distribution, and any asymmetry it reports could be an artifact of where the items happened to fall.
+
+This is a constructive caution. It tells the generalization battery the conjecture awaits what it must show *before* its add/cancel numbers can be read as evidence about monotonicity: not just matched difficulty in the aggregate, but per-pair-demonstrated separability of the two poles.
+
+## Sibling note
+
+This essay shares the add/cancel parent observation with three siblings and cuts a different axis from each. It does **not** explain or assert the asymmetry; it questions the **separability of the two poles**.
+
+- [`essay/predictive-objective-favors-accumulation`](predictive-objective-favors-accumulation.md) **assumes the asymmetry is real and general** (conditionally, on the conjecture's open test) and explains its *direction* as the behavioral fingerprint of a next-token predictive objective — a predictor being monotone-friendly and defeasance-resistant. That essay is downstream of separability: it takes the two poles as given and reads a direction off them. This essay is upstream: it asks whether the two poles are cleanly distinct *kinds* of target at all, and argues they are an operational achievement, not a given. The relation is not one of the typed relation strings cleanly enough to encode in `links:` (it is neither `refines` nor `contradicts` that essay), so it is marked in prose only: that essay explains the asymmetry's direction; this one questions the premise that the asymmetry has two cleanly-separable poles to have a direction *between*.
+- [`essay/inference-default-coincidence`](inference-default-coincidence.md) is the worked instance of half of this essay's worry — at AANN, the construction's licensed inference *coincides* with the phrase's distributional default, so a shift-from-control design has no headroom ("the default eats the construction"). That essay is a **methodological** claim about one construction's add arm and what a ceiling-bounded null can teach. This essay **generalizes** that observation from a measurement limit at one construction into a conceptual caution about the add/cancel *framing* of the conjecture: the default-coincidence trap is not an AANN accident but a standing risk wherever "added entailment" and "lexical default" are assumed separable. It cites that essay's instance; it does not re-derive it.
+- [`essay/gradient-from-overlap`](gradient-from-overlap.md) sorts what a *gradient* licenses about a stored *representation* (a representation-vs-behavior axis, for lexical sense-gradience). Different target entirely; cited only to mark the boundary. This essay makes no representation claim and is about constructional add/cancel, not lexical gradients.
+- [`essay/compositionality-asymptote-not-wall`](compositionality-asymptote-not-wall.md) (sibling noted by title) is about how behavioral evidence falls short of a compositionality (homomorphism) target — a different target again, cited only to mark the boundary.
+
+## Revision triggers (read before citing)
+
+The worry is conditional and item-relative; the following concrete future evidence would weaken or strengthen it:
+
+- **(a) A clean add arm with genuine headroom on a NEW construction pair.** If a future matched-difficulty battery demonstrates an add arm whose control baseline is *off-ceiling* (the control verb does not already supply the entailment) and the construction registers a clean shift on a construction pair beyond caused-motion / way / conative, then the separability worry **weakens for that pair**: the two poles were earned as distinct, separable targets there. The essay narrows accordingly (moves toward `status: revised`, scoping the worry to pairs where separability has *not* been demonstrated).
+- **(b) Add arms keep collapsing to ceiling / degeneracy across constructions.** If, across the conjecture's generalization battery, add arms repeatedly lose headroom because controls already license the entailment (the AANN pattern recurring), the separability worry **strengthens**: the add/cancel cut is then systematically hard to instantiate, supporting the claim that it is an operational achievement rather than a given. The essay holds at `status: draft`/`live` with the worry reinforced.
+- **(c) A matched, ceiling-controlled battery shows a clean asymmetry with per-pair separability demonstrated.** If the conjecture's confirm test lands *with* per-pair evidence that each add arm had headroom and each cancel arm a genuine prior to override, then the asymmetry stands *and* the separation was earned — exactly the outcome this essay says is required. The essay is then **vindicated as a caution that was met**, not refuted: it moves to `status: revised`, recording that the separability precondition was discharged for that battery.
+- **(d) An in-repo non-monotonic-logic source that recasts the add/cancel mapping.** The "monotone accumulation vs defeasance" framing is held as analogy (the conjecture flags "no in-repo source treats the LLM-defeasance connection," held "as analogy"). If such a source enters the repo and gives the add/cancel distinction a principled formal basis as *different kinds* of operation, the "both poles are just priors, differing in direction and strength" interpretation must be re-checked against it and relativized.
+- **(e) Representational evidence separating the two poles internally.** This essay is behavioral and conceptual. If a mechanistic / representational probe were to separate an "added-entailment" internal signal from a "lexical-default" one, the separability the essay says is not given *behaviorally* might be given *representationally*; the worry would relativize to "by within-model behavioral contrast."
+
+## What this essay is not
+
+- **Not a claim that the asymmetry is false.** It is a caution about a premise — the separability of the two poles — not a verdict on the conjecture, which it **sharpens** by stating a precondition its generalization test must meet.
+- **Not a claim that the models lack defeasance, or that addition is genuine competence.** It inherits the conjecture's bounds: "Both directions are bounded; the claim is only about their *relative* reliability," and the add direction's withholding is "explicit-outcome parsing, not world-model integration" ([`result/coercion-implicit-cue-v2b`](../results/coercion-implicit-cue-v2b.md)).
+- **Not a human-comparison claim.** The implicit-cue arm is `anchor: internal-contrast-only`; the answer-key add/cancel contrast it cites is, by that result's own words, "baseline-difficulty-confounded and is not the matched-difficulty test the conjecture requires," used here only to display the trap, never as a human-comparison finding.
+- **Not a tested claim that the two poles are *the same* content.** "Both poles are priors differing in direction and strength" is **labeled interpretation**, consistent with the conjecture's deflationary mechanism; it is not upgraded to a result.
+- **Not a primary-source claim about non-monotonic logic.** The monotone/defeasance mapping is used as analogy, no more strongly than the conjecture states it.
+
+## Honesty box
+
+- The essay's **original** contribution is the **premise-level caution**: that the add/cancel monotonicity framing presupposes a clean joint between "construction-contributed layer" and "lexical default" which a distributional meaning system does not supply for free; that the add arm's separability is contingent on the control not already licensing the entailment (the default-coincidence trap, generalized from its AANN instance); that the "default" is itself just a strong distributional prior, not a categorically different kind of content; and that the add/cancel dichotomy is therefore an *operational achievement of careful item construction*, with the recurring difficulty of building a headroom-bearing add arm as its empirical shadow. This shape is the essay's own; no source page asserts it.
+- The strongest thing the essay asserts is a **sharpening, not a refutation**: a clean add/cancel asymmetry result depends on first earning a clean per-pair separation of the two poles, because in a distributional system that separation is not pre-given. It does **not** assert the asymmetry is false.
+- The interpretation that "both poles are priors differing in direction and strength, not in kind" is **labeled** as interpretation consistent with the conjecture's deflationary mechanism, not a tested claim.
+- **No human-comparison claim.** The answer-key add/cancel contrast is cited as a confounded display of the trap; the implicit-cue arm is `anchor: internal-contrast-only`. Neither is used as a human-comparison finding.
+- Every quotation is verified against its in-repo source page (page/section locators inline) and matches it verbatim; the numbers (−0.092 / +0.035 / +0.021; implicit-wk 90–100%; explicit floor 0%) are quoted from the answer-key result and the implicit-cue result and are not restated more strongly than those pages state them. No quotation or number is reconstructed from memory.
