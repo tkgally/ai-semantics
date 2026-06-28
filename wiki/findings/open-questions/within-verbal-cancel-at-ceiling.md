@@ -11,6 +11,8 @@ created: 2026-06-28
 updated: 2026-06-28
 links:
   - rel: depends-on
+    target: result/monotonicity-causative-progressive-cancel-v1
+  - rel: depends-on
     target: result/monotonicity-verbal-cancel-survey-v1
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
@@ -29,6 +31,23 @@ links:
 ---
 
 # Open question: is a NEW within-verbal cancel default at ceiling findable — or is the matched verbal cancel arm a principled limit?
+
+> **UPDATE (session 140, 2026-06-28) — the cancel CONSTRUCTION is measured and it WORKS; the matched within-verbal battery is now buildable.**
+> The progressive cancel-suppression calibration the s139 update called for has run
+> ([`result/monotonicity-causative-progressive-cancel-v1`](../results/monotonicity-causative-progressive-cancel-v1.md),
+> $0.02586, `internal-contrast-only`). In the matched conflicting-cue paradigm, the **progressive
+> suppresses the B2-confirmed result entailment in all three models** (NLI affirm drops from 100%
+> to 33/33/67%, suppression 66.7/66.7/33.3 pp; FC to 0/0/50%) and an explicit result-consequence
+> **cue re-licenses** it (positive shift in all 6 model×instrument cells) — the conative-shaped
+> cancel pattern, and on NLI *cleaner* than the original conative (gpt suppresses here where it
+> failed there). So the **first NEW within-verbal cancel arm beyond the conative is in hand**, and
+> the matched within-verbal add-vs-cancel **battery** (frozen ADD arm `80bd4b60b55a3e60` + this
+> progressive cancel arm, read by the frozen s134 thresholds) — which would deliver the clean
+> within-verbal generalization confirm that discharges M2 — is **buildable next** (not yet run; this
+> calibration pairs no ADD arm, so the conjecture is untested by it). Honest caveat: per-verb
+> suppression is uneven (`dissolved` suppresses cleanly everywhere, `shattered` resists in all NLI
+> files — punctual-verb progressives sometimes read as culminated), so the battery must keep the
+> per-verb breakdown visible. This question stays **open** until that battery runs.
 
 > **UPDATE (session 139, 2026-06-28) — path (ii) executed; the "scarcity" horn's un-findability reading is REFUTED, the question re-narrows.**
 > The cheap B2 calibration survey this page called for has run
