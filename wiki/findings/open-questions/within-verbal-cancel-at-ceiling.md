@@ -11,6 +11,8 @@ created: 2026-06-28
 updated: 2026-06-28
 links:
   - rel: depends-on
+    target: result/monotonicity-verbal-cancel-survey-v1
+  - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
   - rel: depends-on
     target: result/monotonicity-generalization-b2-nogo-v1
@@ -27,6 +29,30 @@ links:
 ---
 
 # Open question: is a NEW within-verbal cancel default at ceiling findable — or is the matched verbal cancel arm a principled limit?
+
+> **UPDATE (session 139, 2026-06-28) — path (ii) executed; the "scarcity" horn's un-findability reading is REFUTED, the question re-narrows.**
+> The cheap B2 calibration survey this page called for has run
+> ([`result/monotonicity-verbal-cancel-survey-v1`](../results/monotonicity-verbal-cancel-survey-v1.md),
+> $0.02482, `internal-contrast-only`). **All three NEW candidate verbal families clear B2 at
+> ceiling — NLI affirm 1.00 in 3/3 models each:** implicative ("managed to V" ⊨ "V-ed"), factive
+> ("realized that P" ⊨ P), and causative-inchoative ("broke the vase" ⊨ "the vase broke"). So
+> **held-at-ceiling verbal lexical defaults are findable** — the s135/C1 floors were specific to
+> *aspectual/quantity* (Gricean/defeasible) defaults, not verbal defaults in general, and the
+> **un-findability** reading of the "principled limit for want of a held verbal default" horn below
+> is **falsified** (the stronger *distributional* form — held defaults being rare among
+> constructionally-cancellable ones — is not settled; these three families were chosen as a-priori
+> near-categorical inference types). The limit
+> that remains is on the **cancel-CONSTRUCTION** side: of the three B2-passers, implicative and
+> factive are cancelled only by a **lexical-class swap / scopal flip** (not a constructional
+> add-vs-cancel of the conative type), while **causative-inchoative** supplies a genuine same-verb
+> constructional cancel — the **progressive/imperfective paradox** ("was breaking the vase" ⊭ "the
+> vase broke"). The question therefore narrows to: **does the causative-inchoative progressive
+> actually suppress the held result entailment in the matched paradigm** (un-measured; the
+> progressive is aspectual and so exposed to the C1-style weakness — measure, don't assume)? On a
+> clean suppression signal, the matched within-verbal battery (frozen ADD arm + causative-inchoative
+> progressive cancel) would deliver the clean within-verbal confirm. The survey ran nothing beyond
+> the calibration; the within-verbal confirm remains **un-obtained**. Sections below are the
+> original (pre-survey) scoping; read them through this update.
 
 > **Why this page exists.** The [`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md)
 > is now `status: tested` on a **weak** confirm ([`result/monotonicity-c2-battery-v1`](../results/monotonicity-c2-battery-v1.md)),
