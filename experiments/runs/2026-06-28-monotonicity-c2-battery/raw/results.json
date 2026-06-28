@@ -1,0 +1,103 @@
+{
+ "thresholds": {
+  "asymmetry_pp": 0.2,
+  "fragility_pp": 0.1,
+  "cue_bar": 0.7,
+  "min_models": 2
+ },
+ "per_model": {
+  "A": {
+   "nli": {
+    "add_no_cue": 1.0,
+    "add_control": 0.2,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 0.75,
+    "cancel_cuefollow": 1.0
+   },
+   "fc": {
+    "add_no_cue": 1.0,
+    "add_control": 0.0,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 0.75,
+    "cancel_cuefollow": 1.0
+   }
+  },
+  "B": {
+   "nli": {
+    "add_no_cue": 1.0,
+    "add_control": 0.1,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 0.625,
+    "cancel_cuefollow": 1.0
+   },
+   "fc": {
+    "add_no_cue": 1.0,
+    "add_control": 0.0,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 0.375,
+    "cancel_cuefollow": 1.0
+   }
+  },
+  "C": {
+   "nli": {
+    "add_no_cue": 1.0,
+    "add_control": 0.0,
+    "add_cuefollow": 1.0,
+    "cancel_default": 1.0,
+    "cancel_no_cue": 0.875,
+    "cancel_cuefollow": 1.0
+   },
+   "fc": {
+    "add_no_cue": 1.0,
+    "add_control": 0.0,
+    "add_cuefollow": 1.0,
+    "cancel_default": 0.875,
+    "cancel_no_cue": 1.0,
+    "cancel_cuefollow": 1.0
+   }
+  }
+ },
+ "aggregate_nli": {
+  "add_no_cue": 1.0,
+  "add_control": 0.1,
+  "add_cuefollow": 1.0,
+  "cancel_default": 1.0,
+  "cancel_no_cue": 0.75,
+  "cancel_cuefollow": 1.0,
+  "asymmetry_add_minus_cancel": 0.25
+ },
+ "asymmetry_by_model_nli": {
+  "A": 0.25,
+  "B": 0.375,
+  "C": 0.125
+ },
+ "asymmetry_confirm_models": 2,
+ "asymmetry_symmetric_models": 1,
+ "asymmetry_reversal_models": 0,
+ "ASYMMETRY_VERDICT": "CONFIRMS (add easy / cancel hard, leg 1)",
+ "fragility_by_model": {
+  "A": {
+   "add_disagree": 0.0,
+   "cancel_disagree": 0.0,
+   "cancel_minus_add": 0.0
+  },
+  "B": {
+   "add_disagree": 0.0,
+   "cancel_disagree": 0.25,
+   "cancel_minus_add": 0.25
+  },
+  "C": {
+   "add_disagree": 0.0,
+   "cancel_disagree": 0.125,
+   "cancel_minus_add": 0.125
+  }
+ },
+ "fragility_confirm_models": 2,
+ "FRAGILITY_VERDICT": "CONFIRMS leg 2 (cancel more instrument-fragile)",
+ "add_cuefollow_robust_models": 3,
+ "cancel_cuefollow_robust_models": 3
+}

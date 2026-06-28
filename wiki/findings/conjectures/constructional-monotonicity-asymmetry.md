@@ -5,7 +5,7 @@ title: LLM constructional inference is additive-easy but defeasance-hard (a mono
 meaning-senses:
   - constructional
   - inferential
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-05-31
 updated: 2026-06-28
@@ -133,6 +133,24 @@ links:
 > STEP 2 (M2):** the battery pairs a *verbal* ADD arm with a *nominal/adjectival* CANCEL arm, so
 > any C2 asymmetry is across a **domain difference** — a broadened, weaker version of the
 > original verbal-only bet, to be stated prominently on the result.
+
+> **STEP 2 RAN — a WEAK CONFIRM; conjecture advances `proposed → tested` (2026-06-28, session
+> 137).** The matched C2 battery ran ([`result/monotonicity-c2-battery-v1`](../results/monotonicity-c2-battery-v1.md)):
+> add licensing is at **uniform perfect ceiling (1.00, 3/3)**, privative cancellation (suppression)
+> is **partial and item/model-dependent** (cancel_no_cue 0.75 / 0.625 / 0.875), the asymmetry is
+> **positive in 3/3 models** and clears the pre-registered 20 pp bar in **2/3** (claude +0.25, gpt
+> +0.375; gemini +0.125 below), with the cancel arm more instrument-fragile in 2/3 → **CONFIRMS by
+> the frozen rule** (both legs), so the conjecture is now `tested`, **supported on this leg**
+> (`internal-contrast-only`). **The support is weak and must not be over-stated:** (1) it spans a
+> deliberate **verbal-add / nominal-cancel domain difference** (M2) — not a clean within-verbal
+> contrast; (2) it is marginal in 2/3 models and a leave-one-out shows removing either of two
+> pre-flagged borderline privatives (*toy violin*, *plastic apple*, which fail to suppress) drops it
+> to 1/3; (3) small N, single run, no human baseline. With M1, the suppression shortfall is a genuine
+> *defeasance* shortfall (the category default cleared B2 at ceiling, so there was a held entailment
+> to cancel). The mechanism (LABELED speculation) is untouched; falsify arms did not fire (no
+> symmetric/reversal; M3 closure not triggered). This is a fourth construction pair showing the same
+> add-easy/cancel-hard shape, now with a B2-certified categorical default — bought at the cost of the
+> domain mismatch.
 
 ## Statement
 
