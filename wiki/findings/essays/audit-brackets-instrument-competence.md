@@ -8,12 +8,16 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-06-28
 links:
   - rel: depends-on
     target: result/vwsd-grounding-headroom-v2
   - rel: depends-on
     target: design/vwsd-grounding-headroom-nlbaseline
+  - rel: depends-on
+    target: result/vwsd-grounding-headroom-nlbaseline-audit-v1
+  - rel: depends-on
+    target: result/vwsd-grounding-headroom-nlbaseline-regrade-v1
   - rel: refines
     target: conjecture/distributional-saturation-grounding-headroom
   - rel: depends-on
@@ -39,6 +43,26 @@ links:
 > NL-baseline result does not exist. The essay is bounded to `grounded.perceptual` /
 > `referential.sense` on binary VWSD gold; it ratifies nothing and pre-judges no result. Read the
 > revision triggers before citing.
+>
+> **Revision log.** *2026-06-28 (session 129):* the NL-baseline result the original draft called
+> "un-run and unmeasured … the NL-baseline result does not exist" now **exists** — built and audited at
+> session 127 ([`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../results/vwsd-grounding-headroom-nlbaseline-audit-v1.md))
+> and re-graded under a session-128-ratified valid two-judge category-match
+> scorer ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md))
+> → **0.438 strict referent-recovery, below the [0.60, 0.95] floor**, a clean degenerate-side NO-GO a
+> fresh independent critic verified is a *valid* low rate, not a scorer artifact. This **exercised the
+> essay's central device and it held**, firing **none** of the revision triggers below: **(a) did NOT
+> fire** — the two-sided band was **not** empty/un-hittable; it was reachable and the channel scored
+> *below* it, so the band's **degenerate-side guard fired exactly as designed** (the band working, not
+> failing — do not misread a below-floor channel as an un-hittable band); **(c) did NOT fire** — the
+> leak→adequacy duality **generalized**, the *same* held-out-recovery device was re-pointed into the
+> s128 adequacy audit rather than replaced by a new construction; **(b)/(d) are not yet engaged** — no
+> magnitude was read (the channel did not clear the floor), so no unaudited magnitude was accepted (b)
+> and no narrow-under-band magnitude returned (d). Net: the essay is **strengthened, not revised in
+> substance** — "bracket, don't assert" delivered an honest degenerate-side deferral on a real run. The
+> *estimation-epistemics* sequel — why the s127 expert hand-read over-credited and the instrument
+> corrected it across the floor — is developed in
+> [`essay/instrument-corrects-the-hand-read`](instrument-corrects-the-hand-read.md).
 
 ## The occasion: a probe that measures a size, not a shape
 
