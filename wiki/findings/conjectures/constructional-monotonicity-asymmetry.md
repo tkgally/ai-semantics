@@ -87,6 +87,37 @@ links:
 > (nothing to cancel) is ill-posed for defeasance, so a fair cancel arm needs a *held entailment* as
 > its target — exactly what the B2 gate certifies.
 
+> **STEP 1 (C1 telic-completion) is a B2 NO-GO (2026-06-28, session 137) — conjecture still
+> `proposed`; routing to C2 with the M2 scope amendment below.** Following the decision's frozen
+> STEP 1, this session froze + ran the completion-default B2 calibration *first*
+> ([`result/monotonicity-c1-completion-calibration-v1`](../results/monotonicity-c1-completion-calibration-v1.md)):
+> the completion entailment of a simple-past accomplishment ("built the house" → "finished building
+> the house") is affirmed at only **0.25 / 0.375 / 0.75** (claude / gpt-mini / gemini) under strict
+> NLI — **0/3 models at the ≥ 0.80 ceiling**. Even completion — a far stronger default than the s135
+> "only once" — reads as **defeasible-not-categorical** under strict NLI (claude labels 2/8
+> accomplishments an active *contradiction* of completion). Per the frozen instruction this does
+> **not** relax the bar; it routes to **STEP 1b (C2 privative)**. This *reinforces* the
+> weigh-question-4 point ([`essay/nothing-to-cancel`](../essays/nothing-to-cancel.md)): the cancel-side
+> defaults the project reaches for are repeatedly inferences the panel does not hold as categorical
+> entailments — part of "cancellation is hard" is that there is *less held entailment to cancel* than
+> a human-semantics intuition expects. The asymmetry was **not** read; no battery ran.
+
+> **M2 — DELIBERATE conjecture-scope amendment (2026-06-28, session 137), executing the ratified
+> decision's pre-authorized C2 fallback.** The C1 NO-GO triggers STEP 1b (C2 = privative-modifier
+> cancellation), which the ratified decision ([`decisions/resolved/monotonicity-cancel-arm-redesign`](../../decisions/resolved/monotonicity-cancel-arm-redesign.md),
+> MOD-2) requires be preceded by a *written* scope-broadening. **Accordingly, the scope of this
+> conjecture is hereby broadened, deliberately:** the add-vs-cancel monotonicity asymmetry is no longer
+> tested over **verbal argument-structure constructions only**; it may be tested across **constructional
+> inference more broadly, including a nominal/adjectival privative cancel arm** (a bare head noun
+> entails its category — "a gun" ⊨ "a weapon" — and a privative modifier cancels it — "a fake gun" ⊭ a
+> weapon). The verbal-only abstraction is **relaxed**. **Live caveat (recorded, binding on any C2
+> result):** a C2 battery would pair a *verbal* ADD arm (the frozen resultative) with a
+> *nominal/adjectival* CANCEL arm, so the add-verbal/cancel-nominal **domain mismatch** is a real
+> confound on the asymmetry read — a C2 asymmetry is between *constructional inference types across a
+> domain difference*, not a clean within-domain verbal contrast, and any C2 result must state this
+> limitation prominently. This amendment is **deliberate, not incidental** (MOD-2 satisfied); it
+> broadens what the conjecture is *about* and is logged here as a scope revision, not a result.
+
 ## Statement
 
 This is the **project's own, original** theoretical proposal — a forward bet generalizing a pattern that recurs across the argument-structure results, not an established finding. The descriptive observation it builds on is already recorded in [`concept/coercion`](../../base/concepts/coercion.md) and on the theory page ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md), "the tentative generalization the ladder should now carry"); this page names it, frames it as a **monotonicity** asymmetry, and states sharp confirmation/falsification criteria so the empirical loop can later pick it up. The two pages are kept complementary: the theory page states the asymmetry descriptively in the course of placing each result on its ladder; this page is the typed conjecture that *abstracts over* those results and proposes a mechanism and a generalization test. It does not duplicate the ladder; it points at it.
