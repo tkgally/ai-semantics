@@ -1,6 +1,23 @@
-# Design — VWSD grounding-headroom NL-baseline probe (magnitude follow-up; CLEARED TO FREEZE)
+# Design — VWSD grounding-headroom NL-baseline probe (magnitude follow-up; BUILT + FROZEN s127, DEFERRED at the audit gate)
 
-**Status:** cleared to freeze (competence standard ratified 2026-06-27, session 123) — the
+> **SESSION 127 OUTCOME (2026-06-28): BUILT + FROZEN, then DEFERRED by a fresh pre-run-critic NO-GO.**
+> The channel was authored (1158 fluent NL descriptions, claude, names allowed; competent on
+> inspection), the TEXT-NL arm ran (acc .833/.767/.842; `sep_nl_i` strata under-det 18 / sat 77, both
+> clearing the ≥15 floor), and the held-out adequacy audit ran (gpt+gemini). The audit landed **OUT OF
+> BAND** (two-auditor mean high-recovery **0.342** < the `[0.60,0.95]` lower bound) → a pre-run-critic
+> **NO-GO that defers the magnitude read and relaxes nothing; the reused IMAGE arm was NOT read.** An
+> independent critic verified the NO-GO is a **scorer-validity artifact, not a degenerate channel**
+> (~64/70 "none" items are faithful category recoveries the literal-target-word-lemma scorer mis-scored;
+> the design-B.4 gap). Outcome recorded:
+> [`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../../wiki/findings/results/vwsd-grounding-headroom-nlbaseline-audit-v1.md);
+> run dir `experiments/runs/2026-06-28-vwsd-grounding-headroom-nlbaseline/` (`PRERUN-CRITIC.md`). The
+> magnitude read is now gated on a **valid recovery-scoring rule** —
+> [`decisions/open/vwsd-nlbaseline-recovery-scorer-validity`](../../wiki/decisions/open/vwsd-nlbaseline-recovery-scorer-validity.md)
+> (opened s127, eligible s128+; default Q-A = held-out model re-grade of category match). All frozen
+> artifacts are reusable verbatim; the re-attempt owes a cross-session-ratified re-grade + a fresh
+> critic GO, **no re-authoring spend**.
+
+**Status:** built + frozen, magnitude read deferred (competence standard ratified 2026-06-27, session 123) — the
 operationalization decision [`decisions/resolved/vwsd-nlbaseline-competence-dv`](../../wiki/decisions/resolved/vwsd-nlbaseline-competence-dv.md)
 was **ratified cross-session (ADOPT-DEFAULT Q1-C)**, so the competence standard the whole magnitude read
 hinges on is now **fixed in shape** (fresh fluent descriptions under a fixed plain-naming policy **plus**
