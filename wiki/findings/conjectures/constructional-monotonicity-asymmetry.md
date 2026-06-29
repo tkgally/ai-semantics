@@ -28,6 +28,8 @@ links:
     target: result/coercion-implicit-cue-v2b
   - rel: supports
     target: open-question/instrument-sensitivity-constructional-inference
+  - rel: supports
+    target: open-question/monotonicity-human-comparison-leg
   - rel: depends-on
     target: result/scivetti-cxnli-answer-key-v1
 ---
@@ -230,6 +232,8 @@ A null on the generalization test (the asymmetry fails to extend beyond the thre
 A conjecture page needs no resource anchor (only `claim`/`result` pages do); naming a candidate is the project convention. The candidate human anchor for a matched-difficulty test is the **Scivetti CxNLI dataset** ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)), which carries human-annotated NLI triples for both add-type constructions (Caused-Motion, Way-Manner) and the cancel-type Conative, with an aggregate native-speaker baseline (≈0.90 on Exp 1). It can anchor an answer-key comparison — model NLI labels against the per-item gold labels on the *same* add vs cancel constructions — but it delivers a single adjudicated gold label per item, **not** a per-item human-rating gradient (confirmed by inspection; see the resource page's *Known limits*).
 
 Important scope note: the off-ceiling internal arms that establish the de-confounded asymmetry have so far been **internal-contrast-only** — the conative-cancel-v2 cue arm has no in-repo human norm, and that result carries `anchor: internal-contrast-only` by ratified decision ([`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)). So a future *result* testing this conjecture would need either (a) to confine its human-comparison claim to the Scivetti answer-key arms, or (b) to declare its off-ceiling arms internal-contrast-only, exactly as the existing cancel-direction result does. The conjecture does not assume a human gradient the anchor cannot supply.
+
+> **Scoping verdict (2026-06-29, session 144): the *asymmetry's* human-comparison leg is un-instrumentable on the project's available resources.** [`open-question/monotonicity-human-comparison-leg`](../open-questions/monotonicity-human-comparison-leg.md) scopes this in full. In short: the per-construction *arms* have a human comparison ([`result/scivetti-cxnli-answer-key-v1`](../results/scivetti-cxnli-answer-key-v1.md)), but the load-bearing **gap** does not, because the one held anchor (Scivetti) supplies a single binary gold rather than a graded *robustness* signal, offers no difficulty-matching across the add and cancel arms (the answer-key add-vs-cancel contrast is baseline-difficulty-confounded), and omits the project's actual cancel constructions (progressive / privative / completion / single-occurrence). This is a fact about the available resources and the no-human-subjects rule, not a falsification: the finding stays `internal-contrast-only` until an externally-released graded-cancellability resource over matched pairs turns up — at which point trigger (a) of [`essay/construct-validity-without-a-criterion`](../essays/construct-validity-without-a-criterion.md) would fire for this construct.
 
 ## Provenance and what is not claimed
 
