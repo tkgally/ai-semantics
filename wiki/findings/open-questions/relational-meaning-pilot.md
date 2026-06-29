@@ -30,6 +30,20 @@ links:
 > (v1 yardstick ratified 2026-06-12, autonomous adversarial review).
 > What follows is the design as run.
 
+> **CONSOLIDATED (2026-06-29) → [`theory/relational-meaning-in-llms`](../theory/relational-meaning-in-llms.md).**
+> The whole relational arc this pilot opened now has a dedicated synthesis page. Several "deferred"
+> arms named below have since been run or suspended: the **history-perturbation arm** ran (v2–v4 →
+> models track **text position, not stamped chronology**); a separate **coined-term reassignment**
+> line found a genuine `latest-binding-wins` **order-sensitivity positive** (falsifying
+> [`conjecture/commutative-convention`](../conjectures/commutative-convention.md), promoted to
+> [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md));
+> the **order-of-operations composition** C-series is panel-concordant RESPECTS-ORDER given a working
+> surface but **thin** (rung iii documented structurally closed for text-only stimuli); and the
+> **cross-family-dyad** arm was **built then suspended** ($0, witness-seeking-economics). The
+> still-genuinely-open frontier is a **non-transcript (rung-iv) instrument** and a **human order/path
+> anchor** — see the synthesis page's revision triggers. **Image referents** remain unrun. The
+> question stays formally open as the design-of-record below.
+
 ## The question
 
 The charter's distinctive axis is [`concept/relational-meaning`](../../base/concepts/relational-meaning.md) — meaning constituted *between* a model and a person, or between models — and notes that the existing multi-agent literature is about *coordination*, not *meaning-constitution* ([`PROJECT.md`](../../../PROJECT.md) §1). What is the smallest interactional setup whose results would count as evidence for or against meaning being constituted *between* agents, rather than computed *within* one and then aggregated?

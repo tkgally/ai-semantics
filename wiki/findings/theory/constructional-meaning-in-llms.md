@@ -452,6 +452,15 @@ Cautions that still bind: (i) all eleven results are single panel/date/run with 
 
 ## The under-explored axis: relational meaning
 
+> **This subsection is now a stub. The relational axis has its own dedicated synthesis page:
+> [`theory/relational-meaning-in-llms`](relational-meaning-in-llms.md) (2026-06-29)** — the recursive
+> theoretical object for the whole "second ladder" arc (the reference-game pilot, the coined-term
+> reassignment line with its `latest-binding-wins` order-sensitivity *positive*, the perturbation
+> v2–v4 text-position finding, the order-of-operations composition C-series, and the seven essays
+> built around them). What follows is the original v1-era summary, kept for continuity; the dedicated
+> page carries the current, fuller picture (a **thin-positive / floor-characterizing** arc, not the
+> "one bounded negative" this paragraph first recorded).
+
 Every rung above is a `model-internal` probe — it asks what a single model knows. The charter's distinctive axis, [`concept/relational-meaning`](../../base/concepts/relational-meaning.md) (meaning constituted *between* agents, not computed within one), is a *second ladder*. The standing IOU on it is **now partly paid: the relational pilot has run** ([`result/relational-reference-game-v1`](../results/relational-reference-game-v1.md), 2026-05-31) — the project's first relational *finding*, a **first-class null**.
 
 The pilot built the design [`open-question/relational-meaning-pilot`](../open-questions/relational-meaning-pilot.md) names: a two-AI iterated dyadic reference game, homogeneous dyads, whose load-bearing contrast is **trajectory-dependence** (does a fresh matcher's interpretation of an opaque coined term depend on the *ordered* history when the *content* is held identical and only the *order* is destroyed?). The result, uniform across all three panel families: **convergence without trajectory-dependence.** The history's *content* is load-bearing (it lifts a fresh matcher's accuracy well above the coined term alone), but its *order* is not (chronological ≈ shuffled ≈ reversed; no order-gap CI excludes 0). The coined convention is recovered from the *set* of prior turns, not their ordered trajectory — coordination, not constitution. This is the relational analogue of Open Tension 1: the deflationary `distributional` story (next-token predictors converging from co-occurrence content, a convergence that *survives* order-scrambling) holds. So the second ladder now has its first finding, but it is a characterization of the **floor**, not a positive bottom rung: the pilot shows what relational convergence looks like *without* the order-sensitivity that would mark constitution. (A second, Hawkins-anchored observation from the same run: the LLM dyads converge on referential *success* but, unlike humans, do **not compress** their referring expressions — convergence without entrainment.)
