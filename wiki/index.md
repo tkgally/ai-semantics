@@ -20,6 +20,7 @@ This page is the **project entry point**: start here to read the project's statu
 - [`NEXT.md`](../NEXT.md) — current state and the next concrete action / fan-out backlog.
 - [`log.md`](../log.md) — dated history of every run.
 - Current synthesis: [`findings/theory/constructional-meaning-in-llms.md`](findings/theory/constructional-meaning-in-llms.md) — the live theory page (evidence ladder + where each finding sits).
+- Relational-axis synthesis: [`findings/theory/relational-meaning-in-llms.md`](findings/theory/relational-meaning-in-llms.md) — the "second ladder" arc consolidated (reference-game null, coined-term reassignment order-sensitivity positive, perturbation v2–v4 text-position, order-composition C-series); a **thin-positive / floor-characterizing** arc — order-effects are real but model-internal/transcript-recoverable, constitution is not reached (rich rung structurally out of reach for text-only probes).
 - Philosophical-map synthesis: [`findings/theory/situating-llm-meaning.md`](findings/theory/situating-llm-meaning.md) — positions all findings on the classical map of meaning (where, if anywhere, LLM meaning lives; what each finding supports / strains / is silent on).
 
 ### Open decisions
