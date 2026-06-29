@@ -18,6 +18,8 @@ links:
   - rel: depends-on
     target: resource/scivetti-2025-cxnli-dataset
   - rel: depends-on
+    target: resource/scalar-implicature-anchor-scouting
+  - rel: depends-on
     target: result/monotonicity-within-verbal-battery-v1
   - rel: depends-on
     target: result/conative-cancel-direction-v2
@@ -50,10 +52,12 @@ links:
 Every result establishing the [`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md)
 — current decoder LLMs treat a construction's inferences as readily *additive* but resist *retraction* —
 carries `anchor: internal-contrast-only`: its force is a **within-model** contrast (add arm vs cancel arm
-at matched difficulty), with **no human-comparison claim**. The most recent and cleanest leg, the
-within-verbal battery ([`result/monotonicity-within-verbal-battery-v1`](../results/monotonicity-within-verbal-battery-v1.md)),
-states the open residue plainly: "what remains open is human comparison and whether the partial/uneven
-suppression is defeasance *competence* or strict-NLI *labeling*."
+at matched difficulty), with **no human-comparison claim**. The most recent and cleanest leg is the
+within-verbal battery ([`result/monotonicity-within-verbal-battery-v1`](../results/monotonicity-within-verbal-battery-v1.md));
+the conjecture records the residue it leaves plainly — "what remains open is human comparison and whether
+the partial/uneven suppression is defeasance *competence* or strict-NLI *labeling*"
+([`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md),
+the s141 within-verbal-confirm update).
 
 The conjecture names a **candidate** human anchor — the Scivetti CxNLI dataset
 ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md)), the
@@ -99,11 +103,11 @@ paradigm), not of base NLI accuracy.
 1. **Single binary gold, not a robustness gradient.** The asymmetry is measured as a *graded* contrast —
    how reliably an added entailment is affirmed (near-ceiling) versus how reliably a default is *suppressed
    under a conflicting cue* (off-ceiling, instrument-fragile). The human anchor would have to encode a
-   comparable human *robustness/cancellability* signal. Scivetti does not: by inspection it "gives one
-   adjudicated gold label per item, not a per-item human distribution"
+   comparable human *robustness/cancellability* signal. Scivetti does not: by inspection "the release
+   gives a single adjudicated gold label per item, not a per-item multi-rater distribution"
    ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md),
-   *Known limits*: "The human bearing is an aggregate accuracy/agreement figure, not per-item graded human
-   inference ratings"). A binary entailment/neutral/contradiction gold cannot say *how robustly* a human
+   *What it can ground*), and its *Known limits* put it plainly: "The human bearing is an aggregate
+   accuracy/agreement figure, not per-item graded human inference ratings". A binary entailment/neutral/contradiction gold cannot say *how robustly* a human
    holds a default against a cue. The conjecture page already concedes this: the anchor "delivers a single
    adjudicated gold label per item, **not** a per-item human-rating gradient … The conjecture does not
    assume a human gradient the anchor cannot supply."
@@ -142,6 +146,19 @@ and cannot build one in-house (it would require forbidden fresh human-subject el
 is an **externally-released** graded-cancellability dataset over matched constructional pairs — parallel to
 the grounding-magnitude page's "the only route is an externally-released graded-image set"
 ([`open-question/grounding-magnitude-instrument`](grounding-magnitude-instrument.md)).
+
+**The nearest external candidate already scouted, and why even it falls short.** The closest thing to a
+graded human *cancellability* signal the project has surveyed is the scalar-implicature line
+([`resource/scalar-implicature-anchor-scouting`](../../base/resources/scalar-implicature-anchor-scouting.md),
+`status: scouting`): van Tiel-style *scalar diversity* data measures a per-scale **graded human inference
+rate** — exactly the kind of "how robustly is a defeasible inference drawn/cancelled" signal a binary gold
+lacks. But that scout already concluded "the human-comparison upgrade stays blocked" (no clean, licensed,
+on-target open dataset found), and even an ideal scalar-diversity set would supply only a **cancel-side**
+human signal (defeasibility rates), with **no matched human add-licensing arm** and **no construction
+overlap** with the project's actual cancel arms (progressive / privative / completion) — so it could not
+yield the matched *gap* this page is about. It is recorded here as the nearest miss, which *confirms* the
+verdict rather than softening it: the missing instrument is genuinely absent across the resources scouted so
+far, not merely un-looked-for.
 
 ## Surfaced-not-dismissed routes (each blocked, but recorded)
 
