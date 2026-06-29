@@ -9,10 +9,12 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-06-30
 links:
   - rel: depends-on
     target: source/cao-2025-semantic-relation-knowledge
+  - rel: depends-on
+    target: source/cao-2025-distinctive-cooccurrence-antonymy
   - rel: depends-on
     target: source/diera-2026-encode-semantic-relations
   - rel: depends-on
@@ -55,6 +57,20 @@ links:
 > now carries a primary anchor (below), and one phrase was sharpened (J&K, with Charles & Miller, deny
 > *free* substitutability; the substitution is *within* co-occurrence sentences). No empirical claim
 > about the panel changed; the deflationary reading is unchanged and now better-grounded.
+>
+> **Revision (session 149, 2026-06-30).** Trigger (d) fired a *second* time, on the further primary
+> source it was left live for: [`source/cao-2025-distinctive-cooccurrence-antonymy`](../../base/sources/cao-2025-distinctive-cooccurrence-antonymy.md)
+> (Cao, Yamada & Tokunaga 2025, \*SEM; COCA, a cross-relation/cross-PoS co-occurrence study by the
+> same group as Cao et al. 2025a). It bears on the essay's flagged **adjectival→nominal extrapolation**
+> in the *confirming* direction on the **co-occurrence-strength leg** (antonym pairs co-occur
+> distinctively for **nouns/verbs/adverbs**, not only adjectives) and supplies the **cross-relation
+> comparison J&K lacked** (antonymy is the relation with the *highest* co-occurrence strength, the only
+> consistent order preference, and the shortest span, distinctively above synonymy/hypernymy/holonymy).
+> One residual is preserved, not closed: this source measures strength/order/distance only and
+> *explicitly cannot say* "in which lexical and dependency constructions two words … occur", so the
+> specific **parallel-contrastive-frame mechanism for nouns stays inferential** (J&K measured it for
+> adjectives; this paper only *speculates* it for the rest). No empirical claim about the panel changed;
+> the deflationary reading is unchanged and better-grounded across parts of speech.
 
 ## The convergence
 
@@ -123,7 +139,22 @@ substituting for one another in otherwise identical or near-identical phrases**"
 honesty caveats J&K force: the substitution is *within co-occurrence sentences*, not free global
 interchangeability — J&K, following Charles & Miller, deny that antonyms are generally substitutable
 in single-member contexts; and their evidence is on **predicative adjectives in one corpus**, so its
-extension to nominal antonymy is the essay's plausible extrapolation, not a J&K measurement.) On
+extension to nominal antonymy is the essay's plausible extrapolation, not a J&K measurement.) That
+extrapolation's **co-occurrence-strength leg** now carries its own primary measurement:
+[`source/cao-2025-distinctive-cooccurrence-antonymy`](../../base/sources/cao-2025-distinctive-cooccurrence-antonymy.md)
+(Cao, Yamada & Tokunaga 2025, on COCA) finds antonym pairs "**co-occur with high strength, in a
+preferred linear order, and within short spans**" (Abstract) **across nouns, verbs, adjectives and
+adverbs**, and — the cross-relation comparison J&K could not make — "**consistently distinctive from
+all other relations across all metrics used**" (§6) — antonymy pairs "**consistently yield both the
+highest G² scores … and the largest percentage … of significant co-occurring pairs across all PoS**"
+(§4). So antonymy is not merely co-occurrence-dense in absolute terms but *distinctively the
+most* co-occurrence-dense relation, for nouns as for adjectives — which is exactly the corpus fact the
+shadow-is-largest reading needs. The residual the extrapolation still carries is narrower than before:
+Cao et al. measure strength/order/distance only and state they "**can not answer in which lexical and
+dependency constructions two words … occur**" (Limitations), so the specific *parallel-contrastive-
+frame* mechanism remains a J&K measurement for adjectives and the authors' (and this essay's)
+*conjecture* for nouns — they note only that the strong lexical pairing "**might enhance their
+suitability for parallel constructions**" (§5). On
 Harris's form-internal contrast measure, "**difference of meaning correlates with difference of
 distribution**"
 ([`source/harris-1954-distributional-structure`](../../base/sources/harris-1954-distributional-structure.md),
@@ -323,14 +354,24 @@ the clean falsifier of the pure-shadow reading.
   Scherp: HTML section locators, camera-ready not consulted). If a closer reading overturns "antonymy
   best / synonymy hardest", the empirical premise of the essay changes and the reading must be revised.
 - **(d) A primary antonymy-distribution literature is ingested that bears on the contrastive-frame
-  claim. — FIRED, session 148 (confirming).**
-  [`source/justeson-katz-1991-antonym-cooccurrence`](../../base/sources/justeson-katz-1991-antonym-cooccurrence.md)
-  was catalogued and *confirms* (does not complicate) the characterization, which now carries a primary
-  corpus anchor rather than resting on Harris alone; the substitutability phrasing was sharpened to
-  match J&K's *within-co-occurrence* (not free) substitution. The trigger stays live for a **further**
-  primary source that would *complicate* the picture — e.g. a corpus study showing antonym
-  co-occurrence is *not* contrastive-frame-concentrated for some relation class, or one bearing on
-  *nominal* antonymy (J&K is adjectives-only), which would force a revision of the extrapolation.
+  claim. — FIRED twice (s148, s149), both confirming.**
+  *Session 148:* [`source/justeson-katz-1991-antonym-cooccurrence`](../../base/sources/justeson-katz-1991-antonym-cooccurrence.md)
+  was catalogued and *confirms* the characterization, which now carries a primary corpus anchor rather
+  than resting on Harris alone; the substitutability phrasing was sharpened to match J&K's
+  *within-co-occurrence* (not free) substitution.
+  *Session 149:* the further primary source the trigger was left live for —
+  [`source/cao-2025-distinctive-cooccurrence-antonymy`](../../base/sources/cao-2025-distinctive-cooccurrence-antonymy.md)
+  (Cao, Yamada & Tokunaga 2025, COCA) — was catalogued. It *confirms* the adjectival→nominal
+  extrapolation on the **co-occurrence-strength leg** (antonym co-occurrence is distinctive across
+  nouns/verbs/adverbs, not only adjectives) and adds the **cross-relation** measurement that antonymy
+  is the *distinctively most* co-occurrence-dense relation; the thesis paragraph and Honesty box were
+  updated. It does **not** complicate the reading; it leaves one **narrower residual still inferential**
+  (the *parallel-contrastive-frame* mechanism for nouns — measured by J&K for adjectives, only
+  *speculated* by Cao et al. for other PoS). The trigger now stays live only for a source that would
+  *genuinely complicate*: a construction-type corpus study showing nominal (or some-class) antonym
+  co-occurrences are **not** concentrated in parallel/contrastive frames (Cao et al. did not measure
+  construction type), or any primary source overturning antonymy's cross-relation co-occurrence
+  distinctiveness — either would force a revision of the now-better-grounded extrapolation.
 
 ## Honesty box
 
@@ -365,8 +406,14 @@ the clean falsifier of the pure-shadow reading.
   chance" (p. 3); "we find a strong trend for the antonyms to occur in syntactically parallel and
   usually lexically identical structures" (§3, p. 11); "antonyms co-occur sententially mainly by
   substituting for one another in otherwise identical or near-identical phrases" (p. 13) — a 1991
-  Brown-Corpus study of predicative adjectives, **not** an LLM result. All on older/smaller/non-panel
-  models or pre-LLM theory/corpus work.
+  Brown-Corpus study of predicative adjectives, **not** an LLM result. From
+  [`source/cao-2025-distinctive-cooccurrence-antonymy`](../../base/sources/cao-2025-distinctive-cooccurrence-antonymy.md)
+  — "We find that antonymy is distinctive in three respects: antonym pairs co-occur with high strength,
+  in a preferred linear order, and within short spans" (Abstract); "antonymy is consistently distinctive
+  from all other relations across all metrics used" (§6); and the construction caveat, "We … can not
+  answer in which lexical and dependency constructions two words are likely to occur" (Limitations) — a
+  2025 COCA corpus study at lemma+PoS level, **not** an LLM result and **not** a construction-type
+  measurement. All on older/smaller/non-panel models or pre-LLM/corpus work.
 - The strongest thing the essay asserts is that the convergent antonymy-outlier **is predicted by, is
   consistent with, and raises the prior on** the distributional-shadow null — and that the cross-method
   convergence supports rather than rebuts it. It explicitly does **not** assert the residual is zero, a
