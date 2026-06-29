@@ -16,6 +16,10 @@ links:
   - rel: depends-on
     target: source/diera-2026-encode-semantic-relations
   - rel: depends-on
+    target: source/justeson-katz-1991-antonym-cooccurrence
+  - rel: depends-on
+    target: source/harris-1954-distributional-structure
+  - rel: depends-on
     target: concept/distributional-meaning
   - rel: depends-on
     target: concept/inferential-meaning
@@ -42,6 +46,15 @@ links:
 > frontier-panel relatum probe with a contrastive-frame distributional control shows antonymy
 > competence *surviving* the control, revise the deflationary reading for that case (see the triggers
 > at the end).
+>
+> **Revision (session 148, 2026-06-29).** Trigger (d) fired in the *confirming* direction: the primary
+> corpus study of antonym co-occurrence,
+> [`source/justeson-katz-1991-antonym-cooccurrence`](../../base/sources/justeson-katz-1991-antonym-cooccurrence.md)
+> (Justeson & Katz 1991, Brown Corpus, predicative adjectives), was ingested. It *measures* the
+> contrastive-frame characterization the essay had grounded only in Harris — so that characterization
+> now carries a primary anchor (below), and one phrase was sharpened (J&K, with Charles & Miller, deny
+> *free* substitutability; the substitution is *within* co-occurrence sentences). No empirical claim
+> about the panel changed; the deflationary reading is unchanged and now better-grounded.
 
 ## The convergence
 
@@ -94,13 +107,31 @@ observation and makes it the argument.
 The claim is this. **Antonymy is the relation where the distributional shadow is largest, so it is the
 relation where the "over and above" residual that a genuine competence claim must show is smallest.**
 Antonym pairs do not merely co-occur; they recur in tight, near-symmetric *contrastive frames* —
-"X and Y", "neither X nor Y", "from X to Y", "X not Y", "X versus Y" — and they substitute into very
-nearly identical environments. On Harris's form-internal contrast measure, "**difference of meaning
-correlates with difference of distribution**"
+conjoined "X and Y" and repeated phrases with one antonym substituted for the other (illustratively,
+"X not Y", "neither X nor Y", "from X to Y", "X versus Y") — and *when they co-occur* they
+substitute for one another in otherwise near-identical environments. This is not just an intuition
+read off Harris: it is a measured corpus fact. The primary corpus-linguistic study of antonym
+co-occurrence,
+[`source/justeson-katz-1991-antonym-cooccurrence`](../../base/sources/justeson-katz-1991-antonym-cooccurrence.md)
+(Justeson & Katz 1991, on the Brown Corpus), confirms "**antonymous adjectives do co-occur within the
+same sentence much more often than is expected by chance**" (p. 3) and that they do so in highly
+regular contrastive frames — "**we find a strong trend for the antonyms to occur in syntactically
+parallel and usually lexically identical structures**" (§3, p. 11), with "**63% (139/219) of antonym
+co-occurrences … in lexically identical structures**" and "**Fully 164 (75%) … in conjoined syntactic
+structures**" (§3, pp. 11-12); in their summary, "**antonyms co-occur sententially mainly by
+substituting for one another in otherwise identical or near-identical phrases**" (p. 13). (Two
+honesty caveats J&K force: the substitution is *within co-occurrence sentences*, not free global
+interchangeability — J&K, following Charles & Miller, deny that antonyms are generally substitutable
+in single-member contexts; and their evidence is on **predicative adjectives in one corpus**, so its
+extension to nominal antonymy is the essay's plausible extrapolation, not a J&K measurement.) On
+Harris's form-internal contrast measure, "**difference of meaning correlates with difference of
+distribution**"
 ([`source/harris-1954-distributional-structure`](../../base/sources/harris-1954-distributional-structure.md),
-p. 156), antonymy is the relation where the relational structure is *most fully written into the
+p. 156), antonymy is then the relation where the relational structure is *most fully written into the
 distribution itself*: producing the antonym of a cue is, to a first approximation, completing a
-contrastive frame the training corpus is saturated with. So "antonymy is the one relation models do
+contrastive frame the *corpus* is measurably saturated with — a Brown-Corpus fact (J&K), which the
+essay reads forward to a model's training distribution as its own flagged extrapolation, not a J&K
+measurement of any model's training data. So "antonymy is the one relation models do
 well" is not, on its face, a triumph of relational competence over distribution — it is the lexical
 wedge's **distributional shadow cast most fully**, the one relation where the deflationary null is
 hardest to reject because there is least daylight between the relation and its distributional trace.
@@ -260,11 +291,15 @@ the clean falsifier of the pure-shadow reading.
   distributional shadow is *largest* there, that the residual is therefore *smallest* and hardest to
   detect, and that the cross-method convergence *raises the prior* on the deflationary reading. An
   over-and-above component may exist; neither paper isolates it, and the essay does not deny it.
-- **Not a primary reading of any antonymy-distribution literature** beyond what the in-repo sources
-  state. The claim that antonym pairs recur in tight contrastive frames is offered as the essay's own
-  characterization of why the two cited results pattern as they do, grounded in Harris's form-internal
-  contrast measure as the in-repo source states it; it is not attributed to any external corpus study
-  the project has not read.
+- **The contrastive-frame claim now rests on a primary corpus source, read at its stated scope.** As
+  of session 148 the claim that antonym pairs recur in tight contrastive frames is anchored to
+  [`source/justeson-katz-1991-antonym-cooccurrence`](../../base/sources/justeson-katz-1991-antonym-cooccurrence.md)
+  (Justeson & Katz 1991), a primary Brown-Corpus study of **predicative adjectives** whose purpose was
+  a psycholinguistic *acquisition* theory, not an LLM result. The essay uses it only for the corpus
+  fact (above-chance co-occurrence in parallel/conjoined/repeated-substituted frames); the *deflationary
+  reading* of what that fact implies for models remains the essay's own argument, not J&K's. The
+  extension from adjectival to nominal antonymy, and the read-forward to a model's training
+  distribution, are the essay's plausible interpretive moves, flagged as such — not J&K measurements.
 - **Not a cross-level convergence claim.** The convergence-ladder logic is *applied* here to a
   cross-*method* case as a screening-off argument; the ladder itself is about cross-*level* claims and
   makes no assertion about this case (see the explicit flag in the screening-off section).
@@ -288,9 +323,14 @@ the clean falsifier of the pure-shadow reading.
   Scherp: HTML section locators, camera-ready not consulted). If a closer reading overturns "antonymy
   best / synonymy hardest", the empirical premise of the essay changes and the reading must be revised.
 - **(d) A primary antonymy-distribution literature is ingested that bears on the contrastive-frame
-  claim.** The essay's characterization of antonym pairs as contrastive-frame-saturated is grounded
-  only in Harris's form-internal measure as stated in-repo. If a primary corpus-linguistic source on
-  antonym co-occurrence is catalogued and complicates that picture, revise the characterization.
+  claim. — FIRED, session 148 (confirming).**
+  [`source/justeson-katz-1991-antonym-cooccurrence`](../../base/sources/justeson-katz-1991-antonym-cooccurrence.md)
+  was catalogued and *confirms* (does not complicate) the characterization, which now carries a primary
+  corpus anchor rather than resting on Harris alone; the substitutability phrasing was sharpened to
+  match J&K's *within-co-occurrence* (not free) substitution. The trigger stays live for a **further**
+  primary source that would *complicate* the picture — e.g. a corpus study showing antonym
+  co-occurrence is *not* contrastive-frame-concentrated for some relation class, or one bearing on
+  *nominal* antonymy (J&K is adjectives-only), which would force a revision of the extrapolation.
 
 ## Honesty box
 
@@ -319,8 +359,14 @@ the clean falsifier of the pure-shadow reading.
   consistent difficulty ordering across models, with antonymy easiest, followed by hyponymy, then
   hypernymy, and synonymy hardest … antonymy approaches ceiling on Llama" (§4.1). From
   [`source/harris-1954-distributional-structure`](../../base/sources/harris-1954-distributional-structure.md)
-  — "difference of meaning correlates with difference of distribution" (p. 156). All on
-  older/smaller/non-panel models or pre-LLM theory.
+  — "difference of meaning correlates with difference of distribution" (p. 156). From
+  [`source/justeson-katz-1991-antonym-cooccurrence`](../../base/sources/justeson-katz-1991-antonym-cooccurrence.md)
+  — "antonymous adjectives do co-occur within the same sentence much more often than is expected by
+  chance" (p. 3); "we find a strong trend for the antonyms to occur in syntactically parallel and
+  usually lexically identical structures" (§3, p. 11); "antonyms co-occur sententially mainly by
+  substituting for one another in otherwise identical or near-identical phrases" (p. 13) — a 1991
+  Brown-Corpus study of predicative adjectives, **not** an LLM result. All on older/smaller/non-panel
+  models or pre-LLM theory/corpus work.
 - The strongest thing the essay asserts is that the convergent antonymy-outlier **is predicted by, is
   consistent with, and raises the prior on** the distributional-shadow null — and that the cross-method
   convergence supports rather than rebuts it. It explicitly does **not** assert the residual is zero, a
