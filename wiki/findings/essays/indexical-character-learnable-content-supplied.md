@@ -89,6 +89,21 @@ This is offered as a *re-reading that coheres*, not as new evidence. The convers
 > model no origo of its own (trigger (b)). The thesis stands at draft strength, now with one
 > failed-falsification behind the character half.
 
+> **Update (2026-06-30, session 155): trigger (b) sharpened, not fired.**
+> A sibling essay, [`essay/origo-supplied-not-occupied`](origo-supplied-not-occupied.md), argues that
+> trigger (b) as written above conflates **three** claims the content half runs together — (i) an
+> *architectural* claim (the model occupies no Kaplanian context), (ii) a *channel* claim (every origo,
+> including a tool-return, reaches the model as **described** text), and (iii) a behavioral *as-if*
+> question (does the model spontaneously treat a clock/location tool-return as its deictic anchor for an
+> unanchored ‘now’/‘here’?). Its conclusion: a tool-clock probe tests only (iii); by this essay's own
+> channel reasoning a tool-return is still "text the model conditions on," so even a clean positive on
+> (iii) leaves (i)/(ii) untouched — the **strong** reading of the content half is plausibly *not*
+> settleable by any text-channel (tool-augmented) behavioral probe (a documented in-principle limit,
+> sibling to [`essay/reference-as-premise-bound`](reference-as-premise-bound.md) and
+> [`essay/transcript-ceiling`](transcript-ceiling.md)). The genuinely-testable residue (iii) is
+> pre-registered, honestly scoped, as [`conjecture/tool-origo-deictic-anchor`](../conjectures/tool-origo-deictic-anchor.md).
+> This **refines** trigger (b); it does not move the thesis (no probe was run this session).
+
 ## Honest summary
 
 For a text-only language model, an indexical's meaning comes apart exactly along Kaplan's seam. The **character** — the convention-fixed rule — sits on the distributional side of the project's divide, where such a model is at home; the **content** — the value at an occupied context — sits on the grounding side, where the model has no context of its own and must take whatever the text describes. The model therefore has indexical *character* without an indexical *origo*: it applies the rule, faithfully, to a context it is told about but is not in. That is a sharper, more located statement of "premise-bound, not evidence-bound" than the reference essay could give — and it is offered, like that essay, as a structural diagnosis, with no human comparison and no measurement of its own.
