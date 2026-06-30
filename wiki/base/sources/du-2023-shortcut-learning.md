@@ -9,7 +9,7 @@ authors:
   - Tao, Dacheng
   - Hu, Xia
 year: 2023
-venue: "*Communications of the ACM* 67(1):110–120 (2023, Review Article). Preprint arXiv:2208.11857 (cs.CL, cs.LG), submitted 2022-08-25; ar5iv HTML used for body quotes."
+venue: "Published as *Communications of the ACM* 67(1):110–120 (January 2024), DOI 10.1145/3596490 (Review Article). Preprint arXiv:2208.11857 (cs.CL, cs.LG), v1 2022-08-25, v2 2023-05-07. Cited here as 'Du et al. 2023' (the preprint year, as in Cao et al.); ar5iv HTML used for body quotes."
 arxiv: "2208.11857"
 doi: 10.1145/3596490
 url: https://arxiv.org/abs/2208.11857
@@ -46,9 +46,10 @@ pre-empted, and Du et al. is a **foil**, not a forerunner.
 
 ## What it is
 
-A peer-reviewed **review article** (Communications of the ACM 67(1):110–120, 2023; preprint
-arXiv:2208.11857, submitted 2022-08-25) by **Mengnan Du, Fengxiang He, Na Zou, Dacheng Tao, and Xia
-Hu**. It surveys the **shortcut-learning and robustness problem** for language models in natural
+A peer-reviewed **review article** (Communications of the ACM 67(1):110–120, **January 2024**;
+preprint arXiv:2208.11857, v1 2022-08-25 / v2 2023-05-07) by **Mengnan Du, Fengxiang He, Na Zou,
+Dacheng Tao, and Xia Hu** — cited throughout as "Du et al. 2023" following the preprint year and the
+secondary (Cao et al.) that introduced it; same work. It surveys the **shortcut-learning and robustness problem** for language models in natural
 language understanding (NLU): the concepts, detection methods, origins, and mitigation, plus future
 directions and a prompt-based-paradigm coda. It is a **methodology/critique source about model
 behavior**, **not** a human-annotated resource and **not** a result about the project's panel
@@ -57,15 +58,18 @@ origin of the "shortcut" framing the lexical wedge inherited second-hand through
 
 ## Provenance
 
-Title, full author list, submission date (2022-08-25), subject categories (cs.CL, cs.LG), CACM
-acceptance note, and **license (Creative Commons Attribution 4.0, CC BY 4.0)** were read from the
-arXiv abs page (https://arxiv.org/abs/2208.11857) on 2026-06-30. Because the paper is **CC BY 4.0**,
-verbatim quotation (and even verbatim mirroring) is permitted with attribution. **All body quotes
-below are taken from the ar5iv HTML full text (https://ar5iv.labs.arxiv.org/html/2208.11857)**,
-fetched and stripped to text on 2026-06-30 and verified character-for-character; quote locators are
-the **section numbers/headings from that HTML** (no CACM print page numbers were taken from the open
-HTML). One typographic apostrophe in the §8 quote ("survey's") is the source's curly `’`, reproduced
-as-is.
+Title, full author list, submission dates (v1 2022-08-25, v2 2023-05-07), subject categories (cs.CL,
+cs.LG), and **license (Creative Commons Attribution 4.0, CC BY 4.0)** were read from the arXiv abs
+page (https://arxiv.org/abs/2208.11857) on 2026-06-30. The **published-venue details — *Communications
+of the ACM* 67(1):110–120, January 2024, DOI 10.1145/3596490 — were confirmed from the DBLP record**
+(https://dblp.org/rec/journals/cacm/DuHZTH24), **not** the arXiv abs page (which carries no
+journal-ref line). Because the paper is **CC BY 4.0**, verbatim quotation (and even verbatim mirroring)
+is permitted with attribution. **All body quotes below are taken from the ar5iv HTML full text
+(https://ar5iv.labs.arxiv.org/html/2208.11857)** (which renders the latest version), fetched and
+stripped to text on 2026-06-30 and verified character-for-character; quote locators are the **section
+numbers/headings from that HTML** — note that **one definitional quote is from the Figure 2 caption**
+(flagged inline), and no CACM print page numbers were attached to individual quotes. One typographic
+apostrophe in the §8 quote ("survey's") is the source's curly `’`, reproduced as-is.
 
 ## Abstract (verbatim, from the ar5iv HTML)
 
@@ -96,10 +100,11 @@ distribution**:
 > to adversarial attacks. Non-robust features are oriented from biases in the training data and come in
 > different formats." (§2.1)
 
-And the **robust pole** is defined as **high-level semantic understanding**:
+And the **robust pole** is defined — in the **Figure 2 caption** (within §2.1) — as **high-level
+semantic understanding**:
 
 > "In contrast, robust features denote features of high-level semantic understanding that are robust to
-> changes in the input." (§2.1)
+> changes in the input." (§2.1, Figure 2 caption)
 
 The Introduction states the same idea as reliance on spurious correlations / dataset artifacts:
 
@@ -132,11 +137,13 @@ The survey concludes that **distributional / data-driven training alone cannot r
 > "As a result, it is preferable to combine the data-driven scheme with domain knowledge by
 > incorporating knowledge at various stages of training." (§6.1 "Introducing More Domain Knowledge")
 
-> "In the future, the data-driven paradigm should be combined with domain knowledge at every stage of
-> model design and evaluation to advance the field of LLMs." (§6.1)
+And the Conclusions restate the bottom line (quoted here in source order):
 
 > "The key takeaways from this survey’s analysis are that the current pure data-driven training
 > paradigm for LLMs is insufficient for high-level natural language understanding." (§8 Conclusions)
+
+> "In the future, the data-driven paradigm should be combined with domain knowledge at every stage of
+> model design and evaluation to advance the field of LLMs." (§8 Conclusions)
 
 This is the load-bearing point for the in-repo bearing below: Du et al. places the
 transferable/robust pole **outside** what pure distributional training reaches, treating it as a
@@ -161,9 +168,9 @@ feature.
      essay's distinctive claim is that **both** poles are **distributional** — the transferable pole is
      an abstracted contrast direction that *travels*, still a creature of the corpus — so a
      co-occurrence control grades *locality*, not *distribution-vs-not*. Du et al. holds the **opposite**
-     on exactly this axis: it defines robust features as "**high-level semantic understanding**" (§2.1)
-     and concludes "**pure data-driven training … is insufficient for high-level natural language
-     understanding**" (§8), recommending non-data-driven "**domain knowledge**" (§6.1). It thus locates
+     on exactly this axis: it defines robust features as "**high-level semantic understanding**" (§2.1,
+     Fig. 2 caption) and concludes "**pure data-driven training … is insufficient for high-level natural
+     language understanding**" (§8), recommending non-data-driven "**domain knowledge**" (§6.1, §8). It thus locates
      the transferable/robust pole *outside* distribution — a concrete instance of the very mis-cut the
      essay names (treating "shortcut vs robust" as "distributional vs understanding-beyond-distribution").
      So on its load-bearing point the essay stands, and Du et al. sharpens it as a worked example.

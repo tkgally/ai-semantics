@@ -213,9 +213,9 @@ load-bearing claim is not merely "the cut is generalization-scope." It is that *
 **distributional** — the transferable pole is an abstracted contrast direction that *travels*, still a
 creature of the corpus — so a co-occurrence control grades *locality*, not *distribution-versus-not*.
 On exactly this axis Du et al. take the **opposite** side. They define the robust pole as "**features
-of high-level semantic understanding**" (§2.1), conclude that "**the current pure data-driven training
-paradigm for LLMs is insufficient for high-level natural language understanding**" (§8), and recommend
-combining "**the data-driven scheme with domain knowledge**" (§6.1). That places the
+of high-level semantic understanding**" (§2.1, Fig. 2 caption), conclude that "**the current pure
+data-driven training paradigm for LLMs is insufficient for high-level natural language understanding**"
+(§8), and recommend combining "**the data-driven scheme with domain knowledge**" (§6.1). That places the
 transferable/robust pole **outside** what pure distributional (data-driven) training reaches — it
 treats transfer as a *different kind* of thing ("understanding and reasoning"), not as
 distributional generalization. Which is to say: Du et al. is a **clean instance of the very mis-cut
@@ -270,7 +270,7 @@ form-internal competence, the contrastive-frame control grades locality, not dis
   fails to transfer, not "no knowledge" — so the essay's reframing of the contrast as
   generalization-scope **was anticipated** and is now credited (the Honesty box is updated). But Du et
   al. define the robust pole as "high-level semantic understanding" that "pure data-driven training" is
-  "insufficient" for (§2.1, §8), placing transfer *outside* distribution — the essay's load-bearing
+  "insufficient" for (§2.1 Fig. 2, §8), placing transfer *outside* distribution — the essay's load-bearing
   claim (transfer is itself distributional; a co-occurrence control grades locality, not
   distribution-vs-not) is therefore **not** pre-empted, and Du et al. now serves as a worked example of
   the mis-cut. Trigger retired; no further reading of this primary is owed.
