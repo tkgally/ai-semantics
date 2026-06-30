@@ -7,9 +7,8 @@ meaning-senses:
   - distributional
   - model-internal
 status: proposed
-anchor: pending
-contingent-on:
-  - indexical-character-anchor-type
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-06-30
 updated: 2026-06-30
 links:
@@ -156,9 +155,12 @@ native" reading — including under embedding and multi-step temporal arithmetic
   [`source/braun-2015-indexicals-sep`](../../base/sources/braun-2015-indexicals-sep.md) (Kaplan,
   survey strength). Concepts: [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md),
   [`concept/referential-meaning`](../../base/concepts/referential-meaning.md).
-- **Anchor: `pending`**, contingent on [`decisions/open/indexical-character-anchor-type`](../../decisions/open/indexical-character-anchor-type.md)
-  (provisional default: internal-contrast-only — the result makes no human-comparison claim;
-  opened session 154, ratifiable next session per charter §12.3). No human anchor is fabricated.
+- **Anchor: `internal-contrast-only`** (terminal), ratified 2026-06-30 (session 155, autonomous
+  adversarial review) via [`decisions/resolved/indexical-character-anchor-type`](../../decisions/resolved/indexical-character-anchor-type.md):
+  the result makes **no human-comparison claim** — its headline is a within-model accuracy against a
+  stipulated answer key — so no resource anchor is required. The ratification fixes the **yardstick,
+  not the result**: the ceiling figures and the "non-falsification, not proof" reading are unchanged.
+  No human anchor is fabricated.
 - Independent fresh-agent **pre-run critic**: **GO-WITH-NOTES** (no blockers; verified every date
   gold + weekday by hand, found no genuinely ambiguous item, confirmed key tightness and anchor
   honesty; two analysis-layer date-format SHOULD-FIXes applied to `analyze.py` before the run —
@@ -171,7 +173,7 @@ native" reading — including under embedding and multi-step temporal arithmetic
 
 ## Status
 
-`status: proposed`, `anchor: pending`, `contingent-on: [indexical-character-anchor-type]`. What is
-`proposed` is the project's reading (a non-falsification, not a proof). Promotion of the anchor
-field to the terminal `internal-contrast-only` awaits next-session ratification; promotion of the
-finding past `proposed` awaits Tom's review.
+`status: proposed`, `anchor: internal-contrast-only` (terminal; ratified 2026-06-30, session 155,
+autonomous adversarial review — see [`decisions/resolved/indexical-character-anchor-type`](../../decisions/resolved/indexical-character-anchor-type.md)),
+`contingent-on: []`. What is `proposed` is the project's reading (a non-falsification, not a proof).
+The anchor field is now terminal; promotion of the finding past `proposed` awaits Tom's review.
