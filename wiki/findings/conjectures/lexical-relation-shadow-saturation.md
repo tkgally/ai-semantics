@@ -75,6 +75,8 @@ Either of (1) or (2) on its own is weak support; both together, same-direction o
 
 Either outcome falsifies shadow-saturation. A third, non-falsifying outcome worth pre-naming: the residuals could be **flat across relations** (no relation clearly separates), which would be a null — it would neither confirm the antonymy-specific bet nor establish that some other relation is the shadow-saturated one.
 
+**Interpretation caveat (companion essay, s150).** [`essay/shortcut-vs-competence-mis-cut`](../essays/shortcut-vs-competence-mis-cut.md) argues that falsifier 1's gloss — a large surviving residual ⇒ "genuine relational structure rather than a cast shadow" — **over-reads the control**: a residual over a co-occurrence statistic separates *local* cue-use from **transferable** distributional generalization (still distributional), not distribution from non-distribution. On that reading a surviving residual falsifies *local*-shadow-saturation but does **not** establish competence beyond distribution. This is a **relabeling flagged for cross-session ratification** (`PROJECT.md` §12.3), not yet applied to the falsifier wording above.
+
 ## Blockers — why this is recorded, not run
 
 This conjecture is **recorded for a future session, not a queued next move.** Three blockers, stated honestly:

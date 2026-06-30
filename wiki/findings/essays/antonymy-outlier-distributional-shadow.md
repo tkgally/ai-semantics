@@ -342,7 +342,13 @@ the clean falsifier of the pure-shadow reading.
   [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)'s
   probe (or any equivalent) runs and antonymy competence clears daylight above a contrastive-frame
   distributional baseline, the pure-shadow reading is wrong for that case — revise the deflationary
-  reading to "shadow plus a measured residual," scoped to the panel tested.
+  reading to "shadow plus a measured residual," scoped to the panel tested. *Interpretation caveat
+  (companion essay, s150):* [`essay/shortcut-vs-competence-mis-cut`](shortcut-vs-competence-mis-cut.md)
+  argues this "surviving residual ⇒ over-and-above distribution" gloss over-reads a co-occurrence
+  control — a residual over such a control grades *local* versus **transferable** distributional
+  generalization (still distributional), so a survivor falsifies *local*-shadow-saturation but does
+  not establish competence beyond distribution. A relabeling flagged for cross-session ratification
+  ([`PROJECT.md`](../../../PROJECT.md) §12.3), not yet applied to this trigger's wording.
 - **(b) A method genuinely independent of the training distribution agrees on the antonymy outlier.**
   The screening-off argument turns on both Cao's and Diera & Scherp's methods being downstream of the
   same training-time co-occurrence. If a method that is *not* downstream of that distribution (a clean
