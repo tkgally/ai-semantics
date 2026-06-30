@@ -6,13 +6,15 @@ meaning-senses:
   - distributional
   - inferential
   - referential
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-30
 updated: 2026-06-30
 links:
   - rel: depends-on
     target: source/cao-2025-distinctive-cooccurrence-antonymy
+  - rel: depends-on
+    target: source/du-2023-shortcut-learning
   - rel: depends-on
     target: source/diera-2026-encode-semantic-relations
   - rel: depends-on
@@ -31,7 +33,9 @@ links:
 
 # Essay: shortcut versus competence mis-cuts the disentanglement
 
-> **Status: draft (2026-06-30). A philosophical-track essay arguing in the project's own voice.**
+> **Status: revised (2026-06-30, session 152 — revision trigger (d) discharged: the "shortcut"
+> primary Du et al. 2023 is now read and credited; see §"Prior art"). A philosophical-track essay
+> arguing in the project's own voice.**
 > It introduces **no new empirical claim** and makes **no human comparison of its own**: every
 > empirical assertion cites the in-repo `source` page that carries it, at that page's stated
 > strength. The original contribution is a **conceptual correction** to the framing the project (and
@@ -183,6 +187,52 @@ competence" invites.
   their motivating phrase as its own operational target — which the conjecture's falsifier wording
   currently half-does.
 
+## Prior art: Du et al.'s shortcut learning (trigger (d), discharged — partial credit)
+
+The "shortcut" Cao et al. reach for is a citation to a primary, **Du et al. 2023** (now in the
+library: [`source/du-2023-shortcut-learning`](../../base/sources/du-2023-shortcut-learning.md)). When
+this essay was first written, that primary was unread and the carving was taken at Cao et al.'s
+one-clause face value; revision trigger (d) was left live for the reading. The primary has now been
+read, and the verdict is **partial**, in both directions — so this section both **credits** the prior
+art and shows where the correction still bites.
+
+**The credit (where Du et al. anticipates this essay).** Du et al. do **not** define a shortcut as
+"no knowledge." Their shortcut/robust contrast is a **generalization-scope** axis: a shortcut is reliance on
+**non-robust features** that "**do help generalization for … test sets that share the same
+distribution with training data**" — they *work locally* — but "**cannot generalize to OOD test
+sets**" — they *do not transfer* (§2.1). That is, structurally, this essay's **local-versus-transferable**
+cut, and the shortcut-learning literature already locates the contrast there: a shortcut is a
+*locally-working* feature that fails to travel, not the absence of any feature. So the move this essay
+makes against the *knowledge-presence* reading — insisting the low pole is **local cue-use**, not "no
+competence" — is **anticipated** by the primary, and the reframing of the contrast as
+**generalization-scope** is not this essay's invention. Credit where due: the local/transferable axis
+is the shortcut-learning literature's own.
+
+**Where the correction still bites (why Du et al. is a foil, not a forerunner).** This essay's
+load-bearing claim is not merely "the cut is generalization-scope." It is that **both** poles are
+**distributional** — the transferable pole is an abstracted contrast direction that *travels*, still a
+creature of the corpus — so a co-occurrence control grades *locality*, not *distribution-versus-not*.
+On exactly this axis Du et al. take the **opposite** side. They define the robust pole as "**features
+of high-level semantic understanding**" (§2.1, Fig. 2 caption), conclude that "**the current pure
+data-driven training paradigm for LLMs is insufficient for high-level natural language understanding**"
+(§8), and recommend combining "**the data-driven scheme with domain knowledge**" (§6.1). That places the
+transferable/robust pole **outside** what pure distributional (data-driven) training reaches — it
+treats transfer as a *different kind* of thing ("understanding and reasoning"), not as
+distributional generalization. Which is to say: Du et al. is a **clean instance of the very mis-cut
+this essay names** — "shortcut versus robust" read as "distributional versus understanding-beyond-
+distribution." The primary does not pre-empt the correction; it exhibits the thing being corrected.
+
+**Net effect on the essay.** Trigger (d) fires *partially*: the generalization-scope framing is
+credited to the prior art (and this essay's originality narrows accordingly, see the Honesty box);
+but the essay's distinctive claim — that the transferable pole is itself distributional, so no
+co-occurrence control certifies non-distributional competence — stands, now with Du et al. as a
+worked example rather than a competitor. One honest scope caveat carries the credit: Du et al. is
+about **supervised NLU classification** (NLI/QA/reading comprehension) under fine-tuning, with a
+*task-defined* intended solution and BERT/RoBERTa-generation models; the generalization-scope analogy
+(local/IID vs transferable/OOD) transfers cleanly to the lexical wedge, but the supervised
+spurious-vs-causal-feature machinery transfers only loosely, and nothing here is a result about the
+project's panel.
+
 ## Why this is not the two-hypotheses essay restated
 
 [`essay/two-distributional-hypotheses`](two-distributional-hypotheses.md) sorts distributional success
@@ -213,11 +263,17 @@ form-internal competence, the contrastive-frame control grades locality, not dis
   unblocked (anchor-adoption step) and antonymy shows no separable residual at all, there is nothing
   for the local/transferable gloss to apply to for antonymy, and the essay's operational bite narrows
   to the relations that do show a residual.
-- **(d) A reading of Du et al. (2023) — the "shortcut" source Cao et al. cite — is ingested and
-  defines "shortcut" in a way that already anticipates this distinction.** The essay treats "shortcut"
-  as Cao et al. deploy it (an unread secondary use); if the primary turns out to mean by "shortcut"
-  something closer to "local cue-use" already, the essay's correction is partly pre-empted and should
-  credit it. (Du et al. 2023 is not in the library; this is a flag, not a claim about its contents.)
+- **(d) DISCHARGED 2026-06-30 (session 152) — partial pre-emption, credited.** Du et al. (2023) — the
+  "shortcut" source Cao et al. cite — has been ingested ([`source/du-2023-shortcut-learning`](../../base/sources/du-2023-shortcut-learning.md))
+  and read. The verdict (see §"Prior art" above): the primary's shortcut/robust contrast **is** a
+  generalization-scope (IID-vs-OOD) axis — a shortcut is a *locally-working* non-robust feature that
+  fails to transfer, not "no knowledge" — so the essay's reframing of the contrast as
+  generalization-scope **was anticipated** and is now credited (the Honesty box is updated). But Du et
+  al. define the robust pole as "high-level semantic understanding" that "pure data-driven training" is
+  "insufficient" for (§2.1 Fig. 2, §8), placing transfer *outside* distribution — the essay's load-bearing
+  claim (transfer is itself distributional; a co-occurrence control grades locality, not
+  distribution-vs-not) is therefore **not** pre-empted, and Du et al. now serves as a worked example of
+  the mis-cut. Trigger retired; no further reading of this primary is owed.
 
 ## Honesty box
 
@@ -227,7 +283,16 @@ form-internal competence, the contrastive-frame control grades locality, not dis
   transferable distributional generalization**, both grades of one corpus-borne achievement; and
   (iii) the operational consequence — a residual over any co-occurrence control separates local
   cue-use from transfer, **not** distribution from non-distribution, so a surviving residual is the
-  shadow's transferable grade, not evidence of competence beyond distribution. The Harris/Firth
+  shadow's transferable grade, not evidence of competence beyond distribution. **Credit (trigger (d),
+  s152):** part (ii) — reframing the contrast as **generalization-scope** (local/IID vs
+  transferable/OOD) rather than knowledge-presence — is **anticipated by the shortcut-learning
+  literature** ([`source/du-2023-shortcut-learning`](../../base/sources/du-2023-shortcut-learning.md),
+  §2.1, whose "shortcut" is a non-robust feature that works in-distribution but fails to transfer); the
+  essay claims no originality there. The **genuinely original** part is (iii) read against the
+  *distributional hypothesis* — that the transferable pole is **itself distributional**, so a
+  co-occurrence control grades locality rather than certifying non-distributional competence — which is
+  exactly where Du et al. take the opposite view (robust features = "high-level semantic understanding",
+  data-driven training "insufficient"), so the primary is a foil, not a forerunner. The Harris/Firth
   ancestor frame is borrowed (with an explicit orthogonality flag) from
   [`essay/two-distributional-hypotheses`](two-distributional-hypotheses.md); the beat-the-shadow test
   is [`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md)'s; the deflationary
