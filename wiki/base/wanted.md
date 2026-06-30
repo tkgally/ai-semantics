@@ -79,6 +79,9 @@ These are seeds, not commitments — drop any that turn out not to bear on gramm
 - [P3] Brandom, R.B. 1994. *Making It Explicit.* Harvard. (or *Articulating Reasons*, 2000.)
   why: the systematic statement of inferentialism — content fixed by an expression's position in a web of material inferences, not by prior relation to objects; grounds the philosophical framing cited as "not in-repo" in [`concept/inferential-meaning`](concepts/inferential-meaning.md). Fetch only if a finding leans on the normative-inferentialism distinction.
   status: wanted
+- [P2] Kaplan, D. 1989a. "Demonstratives." In *Themes from Kaplan*, Almog/Perry/Wettstein (eds.), OUP, pp. 481–563.
+  why: the **primary** behind the `character`/`content` distinction the indexicality corner rests on; [`source/braun-2015-indexicals-sep`](sources/braun-2015-indexicals-sep.md) carries it at **survey strength** only, and [`essay/indexical-character-learnable-content-supplied`](../findings/essays/indexical-character-learnable-content-supplied.md) trigger (a) is armed for it (the "character = linguistic meaning" identification is reported with Braun's "_usually_" hedge — check it against Kaplan's own text). Fetch if/when an indexicality finding or essay leans harder on the factorization; OA route unconfirmed (in-print OUP volume — likely SECONDARY-ONLY, Goldberg/Croft precedent).
+  status: wanted
 
 ### Firth / Harris originals
 
