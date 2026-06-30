@@ -41,14 +41,62 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
+_MONTHS = {m.lower(): i for i, m in enumerate(
+    ["", "January", "February", "March", "April", "May", "June", "July", "August",
+     "September", "October", "November", "December"]) if m}
+_MABBR = {m[:3]: i for m, i in _MONTHS.items()}
+_MON = {**_MONTHS, **_MABBR}
+
+
+def extract_iso(s):
+    """Extract the FIRST date in `s` as zero-padded ISO, or None. Handles (per pre-run critic
+    SHOULD-FIX 1/2) zero-padded AND non-padded ISO, plus English '1 March 2026' / 'March 1st,
+    2026' / 'July 2nd 2026' forms with optional ordinals. Only WIDENS acceptance of correct
+    surface forms — it never turns a wrong date into a right one."""
+    if not s:
+        return None
+    t = s.lower()
+    m = re.search(r"(\d{4})-(\d{1,2})-(\d{1,2})", t)
+    if m:
+        y, mo, d = map(int, m.groups())
+    else:
+        mn = "|".join(sorted(_MON, key=len, reverse=True))
+        # "<month> <day> <year>" with optional ordinal/comma
+        m = re.search(rf"\b({mn})\.?\s+(\d{{1,2}})(?:st|nd|rd|th)?,?\s+(\d{{4}})\b", t)
+        if m:
+            mo, d, y = _MON[m.group(1)], int(m.group(2)), int(m.group(3))
+        else:
+            # "<day> <month> <year>" with optional ordinal
+            m = re.search(rf"\b(\d{{1,2}})(?:st|nd|rd|th)?\s+({mn})\.?,?\s+(\d{{4}})\b", t)
+            if not m:
+                return None
+            d, mo, y = int(m.group(1)), _MON[m.group(2)], int(m.group(3))
+    try:
+        return date(y, mo, d).isoformat()
+    except ValueError:
+        return None
+
+
+def gold_of(rec):
+    """The ISO gold for a date item = the ISO-form entry in its accept list."""
+    for a in rec["accept"]:
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", a):
+            return a
+    return None
+
+
 def correct(rec):
     a = norm(rec.get("answer"))
-    return any(acc in a for acc in rec["accept"])
+    if any(acc in a for acc in rec["accept"]):
+        return True
+    if rec.get("atype") == "date":
+        g = gold_of(rec)
+        return g is not None and extract_iso(rec.get("answer")) == g
+    return False
 
 
 def iso_in(s):
-    m = re.search(r"(\d{4}-\d{2}-\d{2})", s or "")
-    return m.group(1) if m else None
+    return extract_iso(s)
 
 
 def c4_error_kind(rec):
