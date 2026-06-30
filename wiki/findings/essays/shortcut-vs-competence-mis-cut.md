@@ -167,7 +167,9 @@ competence" invites.
   (a) and the conjecture's falsifier 1 currently call it. (Those triggers should be re-read as
   *local*-shadow falsifiers — they bound how local the shadow is, not whether competence transcends
   distribution. This essay flags the relabeling; ratifying it into those pages is a separate
-  cross-session step, [`PROJECT.md`](../../../PROJECT.md) §12.3.)
+  cross-session step, [`PROJECT.md`](../../../PROJECT.md) §12.3. **Ratified s151** — an independent
+  adversarial-review pass adopted the relabeling into both pages' wording, `resolved-by: autonomous
+  (adversarial review)`; the flagged pointers there are now resolution notes.)
 - **It does not say there is no fact of the matter, or that non-distributional competence is
   incoherent.** Reference and grounding are genuine over-and-above questions — the project's grounding
   arc exists precisely because there is a residual distribution cannot supply. The point is narrower:
