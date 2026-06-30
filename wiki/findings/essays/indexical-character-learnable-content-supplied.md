@@ -77,6 +77,18 @@ This is offered as a *re-reading that coheres*, not as new evidence. The convers
 - **(c) The model fails the pure-character task.** A probe showing a model systematically *mis-applies* an indexical's rule to a clearly described context (e.g. resolves ‘I’ to the wrong stipulated agent at rates inconsistent with command of the convention) would contradict the "character is distributionally native" half and force a downgrade of that claim.
 - **(d) A non-Kaplanian account undercuts the factorization.** A source (relativist, contextualist, or other) that denies the clean character/content two-level split, or shows the cases the project cares about do not factor that way, requires re-stating the thesis at its contested strength.
 
+> **Update (2026-06-30, session 154): trigger (c) was run as a behavioral probe and did not fire.**
+> [`result/indexical-character-application-v1`](../results/indexical-character-application-v1.md)
+> asked the panel to resolve indexicals to their content against fully **described** origos
+> (plain, speaker-relative rebinding, embedded reported speech with a narrator distractor, and
+> multi-step date arithmetic); all three models scored at ceiling (120/120). This is a
+> **non-falsification** of the "character is distributionally native" half — the affordance
+> survived its first behavioral test under the described regime — and, by construction, **not a
+> proof** of it (a ceiling cannot establish an affordance; only a failure could have falsified it).
+> The **content** half is untouched: the probe stays entirely in the described regime and gives the
+> model no origo of its own (trigger (b)). The thesis stands at draft strength, now with one
+> failed-falsification behind the character half.
+
 ## Honest summary
 
 For a text-only language model, an indexical's meaning comes apart exactly along Kaplan's seam. The **character** — the convention-fixed rule — sits on the distributional side of the project's divide, where such a model is at home; the **content** — the value at an occupied context — sits on the grounding side, where the model has no context of its own and must take whatever the text describes. The model therefore has indexical *character* without an indexical *origo*: it applies the rule, faithfully, to a context it is told about but is not in. That is a sharper, more located statement of "premise-bound, not evidence-bound" than the reference essay could give — and it is offered, like that essay, as a structural diagnosis, with no human comparison and no measurement of its own.
