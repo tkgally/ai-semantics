@@ -1,0 +1,512 @@
+[
+  {
+    "id": "c1-01",
+    "ind": "I",
+    "atype": "entity",
+    "context": "On 14 March 2026, addressing her students in Berlin, Dr. Elena Lopez said: \"I will hand back your essays next week.\"",
+    "question": "Who does \"I\" refer to?",
+    "accept": [
+      "lopez",
+      "elena"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c1-02",
+    "ind": "you",
+    "atype": "entity",
+    "context": "Maria said to Tomas: \"You left your umbrella at my house yesterday.\"",
+    "question": "Who does \"You\" refer to?",
+    "accept": [
+      "tomas"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c1-03",
+    "ind": "here",
+    "atype": "place",
+    "context": "Speaking at a press conference in Nairobi, the health minister announced: \"We will build the new children's hospital here.\"",
+    "question": "Which place does \"here\" refer to?",
+    "accept": [
+      "nairobi"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c1-04",
+    "ind": "now",
+    "atype": "date",
+    "context": "Writing in her diary on 2 July 2026, Priya noted: \"Right now everything feels uncertain, but I am hopeful.\"",
+    "question": "What calendar date does \"Right now\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "2 jul 2026",
+      "2 july 2026",
+      "2026-07-02",
+      "july 2 2026",
+      "july 2, 2026"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c1-05",
+    "ind": "today",
+    "atype": "date",
+    "context": "In a speech delivered on 9 November 2026, the mayor declared: \"Today we open the new public library.\"",
+    "question": "What calendar date does \"Today\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "2026-11-09",
+      "9 nov 2026",
+      "9 november 2026",
+      "november 9 2026",
+      "november 9, 2026"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c1-06",
+    "ind": "my",
+    "atype": "entity",
+    "context": "Carlos wrote to his sister: \"My car broke down again on the motorway.\"",
+    "question": "Whose car is \"My car\"?",
+    "accept": [
+      "carlos"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c1-07",
+    "ind": "this",
+    "atype": "place",
+    "context": "Addressing a rally in Lima, the candidate declared: \"This city deserves a better transport system.\"",
+    "question": "Which city does \"This city\" refer to?",
+    "accept": [
+      "lima"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c1-08",
+    "ind": "you",
+    "atype": "entity",
+    "context": "Anna texted Ben: \"I think I saw you at the farmers' market this morning.\"",
+    "question": "Who does \"you\" refer to?",
+    "accept": [
+      "ben"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c1-09",
+    "ind": "I",
+    "atype": "entity",
+    "context": "During a radio interview, the novelist Haruki Stone remarked: \"I wrote my first book when I was twenty.\"",
+    "question": "Who does \"I\" refer to?",
+    "accept": [
+      "stone",
+      "haruki"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c1-10",
+    "ind": "here",
+    "atype": "place",
+    "context": "Stranded overnight at Denver International Airport, Jordan messaged a friend: \"I'm going to be stuck here until the morning flights resume.\"",
+    "question": "Which place does \"here\" refer to?",
+    "accept": [
+      "denver",
+      "airport"
+    ],
+    "cond": "C1"
+  },
+  {
+    "id": "c2-01",
+    "ind": "I",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Ann (to Ben): \"I'll bring the signed documents tomorrow.\"\nTurn 2 \u2014 Ben (to Ann): \"Thanks. I'll review them and email you my notes by Friday.\"",
+    "question": "In Turn 2, who does \"I\" refer to?",
+    "accept": [
+      "ben"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c2-02",
+    "ind": "you",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Ann (to Ben): \"I'll bring the signed documents tomorrow.\"\nTurn 2 \u2014 Ben (to Ann): \"Thanks. I'll review them and email you my notes by Friday.\"",
+    "question": "In Turn 2, who does \"you\" refer to?",
+    "accept": [
+      "ann"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c2-03",
+    "ind": "me",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Carlos (to Dana): \"Can you send me the photos from the trip?\"\nTurn 2 \u2014 Dana (to Carlos): \"Of course. I already uploaded them to your shared folder.\"",
+    "question": "In Turn 1, who does \"me\" refer to?",
+    "accept": [
+      "carlos"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c2-04",
+    "ind": "your",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Carlos (to Dana): \"Can you send me the photos from the trip?\"\nTurn 2 \u2014 Dana (to Carlos): \"Of course. I already uploaded them to your shared folder.\"",
+    "question": "In Turn 2, whose shared folder is \"your shared folder\"?",
+    "accept": [
+      "carlos"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c2-05",
+    "ind": "I",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Elif (to Frank): \"I left my keys in your office.\"\nTurn 2 \u2014 Frank (to Elif): \"I found them. I'll drop them off at your place tonight.\"\nTurn 3 \u2014 Elif (to Frank): \"Perfect \u2014 I'll wait for you there.\"",
+    "question": "In Turn 2, who does \"I\" refer to?",
+    "accept": [
+      "frank"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c2-06",
+    "ind": "your",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Elif (to Frank): \"I left my keys in your office.\"\nTurn 2 \u2014 Frank (to Elif): \"I found them. I'll drop them off at your place tonight.\"\nTurn 3 \u2014 Elif (to Frank): \"Perfect \u2014 I'll wait for you there.\"",
+    "question": "In Turn 2, whose place is \"your place\"?",
+    "accept": [
+      "elif"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c2-07",
+    "ind": "you",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Elif (to Frank): \"I left my keys in your office.\"\nTurn 2 \u2014 Frank (to Elif): \"I found them. I'll drop them off at your place tonight.\"\nTurn 3 \u2014 Elif (to Frank): \"Perfect \u2014 I'll wait for you there.\"",
+    "question": "In Turn 3, who does \"you\" refer to?",
+    "accept": [
+      "frank"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c2-08",
+    "ind": "I",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Grace (to Hiro): \"You promised you'd help me move on Saturday.\"\nTurn 2 \u2014 Hiro (to Grace): \"I did, and I'll be at your apartment by nine.\"",
+    "question": "In Turn 2, who does \"I\" refer to?",
+    "accept": [
+      "hiro"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c2-09",
+    "ind": "your",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Grace (to Hiro): \"You promised you'd help me move on Saturday.\"\nTurn 2 \u2014 Hiro (to Grace): \"I did, and I'll be at your apartment by nine.\"",
+    "question": "In Turn 2, whose apartment is \"your apartment\"?",
+    "accept": [
+      "grace"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c2-10",
+    "ind": "me",
+    "atype": "entity",
+    "context": "Turn 1 \u2014 Ines (to Jamal): \"I think you forgot to pay me back.\"\nTurn 2 \u2014 Jamal (to Ines): \"Sorry! I'll transfer the money to your account today.\"",
+    "question": "In Turn 1, who does \"me\" refer to (in \"pay me back\")?",
+    "accept": [
+      "ines"
+    ],
+    "cond": "C2"
+  },
+  {
+    "id": "c3-01",
+    "ind": "I",
+    "atype": "entity",
+    "context": "A biographer, writing in 2025, records the following: Abraham Lincoln once told a friend, \"I have been turning this problem over in my mind for years.\"",
+    "question": "In the quoted sentence, who does \"I\" refer to?",
+    "accept": [
+      "lincoln"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c3-02",
+    "ind": "here",
+    "atype": "place",
+    "context": "A journalist reporting from London interviewed a witness who had been in Cairo during the storm. The witness said: \"I was standing right here when the roof came down.\"",
+    "question": "Which place does \"here\" refer to in the witness's sentence?",
+    "accept": [
+      "cairo"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c3-03",
+    "ind": "you",
+    "atype": "entity",
+    "context": "In her memoir, Olga recalls a moment from her childhood: her grandmother knelt down, looked at the young Olga, and said, \"You will do great things one day.\"",
+    "question": "In the grandmother's sentence, who does \"you\" refer to?",
+    "accept": [
+      "olga"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c3-04",
+    "ind": "tomorrow",
+    "atype": "date",
+    "context": "Reviewing a cold case on 10 June 2026, a detective read aloud a letter that the suspect had written on 3 February 2026. The letter said: \"I am going to leave the country tomorrow.\"",
+    "question": "What calendar date does \"tomorrow\" refer to in the letter? Answer in YYYY-MM-DD.",
+    "accept": [
+      "2026-02-04",
+      "4 feb 2026",
+      "4 february 2026",
+      "february 4 2026",
+      "february 4, 2026"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c3-05",
+    "ind": "I",
+    "atype": "entity",
+    "context": "At a conference in Toronto, Professor Adeyemi quoted a remark her mentor, Professor Brandt, had made years earlier: \"I never trusted a tidy dataset.\"",
+    "question": "In the quoted remark, who does \"I\" refer to?",
+    "accept": [
+      "brandt"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c3-06",
+    "ind": "here",
+    "atype": "place",
+    "context": "A tour guide in Athens told the group about a soldier from Sparta. According to the guide, the soldier had once written home: \"I wish I could stay here forever; I have never seen mountains like these.\" The soldier wrote this while stationed in the Alps.",
+    "question": "Which place does \"here\" refer to in the soldier's letter?",
+    "accept": [
+      "alps"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c3-07",
+    "ind": "tomorrow",
+    "atype": "date",
+    "context": "On 1 September 2026, a manager forwarded an old message a client had sent on 20 May 2026. The client's message read: \"Please ship the order tomorrow.\"",
+    "question": "What calendar date does \"tomorrow\" refer to in the client's message? Answer in YYYY-MM-DD.",
+    "accept": [
+      "2026-05-21",
+      "21 may 2026",
+      "may 21 2026",
+      "may 21, 2026"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c3-08",
+    "ind": "you",
+    "atype": "entity",
+    "context": "A historian describes a scene: the general, addressing his lieutenant Reyes before the battle, said, \"You will lead the left flank at dawn.\"",
+    "question": "In the general's sentence, who does \"you\" refer to?",
+    "accept": [
+      "reyes"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c3-09",
+    "ind": "my",
+    "atype": "entity",
+    "context": "In a documentary, the narrator reads from the journal of the explorer Nansen: \"My hands are too cold to write much tonight.\"",
+    "question": "Whose hands are \"My hands\" in the journal entry?",
+    "accept": [
+      "nansen"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c3-10",
+    "ind": "yesterday",
+    "atype": "date",
+    "context": "Speaking on 30 December 2026, an archivist described a postcard that a traveler had written on 15 March 2026. The postcard said: \"We arrived yesterday after a long crossing.\"",
+    "question": "What calendar date does \"yesterday\" refer to on the postcard? Answer in YYYY-MM-DD.",
+    "accept": [
+      "14 mar 2026",
+      "14 march 2026",
+      "2026-03-14",
+      "march 14 2026",
+      "march 14, 2026"
+    ],
+    "cond": "C3"
+  },
+  {
+    "id": "c4-01",
+    "ind": "the day before yesterday",
+    "atype": "date",
+    "context": "Reference date: 27 February 2026 (a Friday). On that date someone wrote: \"I finished the report the day before yesterday.\"",
+    "question": "What calendar date does \"the day before yesterday\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "2026-02-25",
+      "25 feb 2026",
+      "25 february 2026",
+      "february 25 2026",
+      "february 25, 2026"
+    ],
+    "gold_iso": "2026-02-25",
+    "cond": "C4"
+  },
+  {
+    "id": "c4-02",
+    "ind": "the day after tomorrow",
+    "atype": "date",
+    "context": "Reference date: 27 February 2026 (a Friday). On that date someone wrote: \"The results come out the day after tomorrow.\"",
+    "question": "What calendar date does \"the day after tomorrow\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "1 mar 2026",
+      "1 march 2026",
+      "2026-03-01",
+      "march 1 2026",
+      "march 1, 2026"
+    ],
+    "gold_iso": "2026-03-01",
+    "cond": "C4"
+  },
+  {
+    "id": "c4-03",
+    "ind": "yesterday",
+    "atype": "date",
+    "context": "Reference date: 10 July 2026 (a Friday). On that date someone wrote: \"I posted the parcel yesterday.\"",
+    "question": "What calendar date does \"yesterday\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "2026-07-09",
+      "9 jul 2026",
+      "9 july 2026",
+      "july 9 2026",
+      "july 9, 2026"
+    ],
+    "gold_iso": "2026-07-09",
+    "cond": "C4"
+  },
+  {
+    "id": "c4-04",
+    "ind": "tomorrow",
+    "atype": "date",
+    "context": "Reference date: 10 July 2026 (a Friday). On that date someone wrote: \"We set off tomorrow.\"",
+    "question": "What calendar date does \"tomorrow\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "11 jul 2026",
+      "11 july 2026",
+      "2026-07-11",
+      "july 11 2026",
+      "july 11, 2026"
+    ],
+    "gold_iso": "2026-07-11",
+    "cond": "C4"
+  },
+  {
+    "id": "c4-05",
+    "ind": "in three days",
+    "atype": "date",
+    "context": "Reference date: 15 April 2026 (a Wednesday). On that date someone wrote: \"The inspection happens in three days.\"",
+    "question": "What calendar date does \"in three days\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "18 apr 2026",
+      "18 april 2026",
+      "2026-04-18",
+      "april 18 2026",
+      "april 18, 2026"
+    ],
+    "gold_iso": "2026-04-18",
+    "cond": "C4"
+  },
+  {
+    "id": "c4-06",
+    "ind": "three days ago",
+    "atype": "date",
+    "context": "Reference date: 15 April 2026 (a Wednesday). On that date someone wrote: \"I sent the invoice three days ago.\"",
+    "question": "What calendar date does \"three days ago\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "12 apr 2026",
+      "12 april 2026",
+      "2026-04-12",
+      "april 12 2026",
+      "april 12, 2026"
+    ],
+    "gold_iso": "2026-04-12",
+    "cond": "C4"
+  },
+  {
+    "id": "c4-07",
+    "ind": "a week from today",
+    "atype": "date",
+    "context": "Reference date: 1 October 2026 (a Thursday). On that date someone wrote: \"The lease ends a week from today.\"",
+    "question": "What calendar date does \"a week from today\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "2026-10-08",
+      "8 oct 2026",
+      "8 october 2026",
+      "october 8 2026",
+      "october 8, 2026"
+    ],
+    "gold_iso": "2026-10-08",
+    "cond": "C4"
+  },
+  {
+    "id": "c4-08",
+    "ind": "two weeks ago",
+    "atype": "date",
+    "context": "Reference date: 1 October 2026 (a Thursday). On that date someone wrote: \"I moved in two weeks ago.\"",
+    "question": "What calendar date does \"two weeks ago\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "17 sep 2026",
+      "17 september 2026",
+      "2026-09-17",
+      "september 17 2026",
+      "september 17, 2026"
+    ],
+    "gold_iso": "2026-09-17",
+    "cond": "C4"
+  },
+  {
+    "id": "c4-09",
+    "ind": "next Monday",
+    "atype": "date",
+    "context": "Reference date: 5 May 2026 (a Tuesday). On that date someone wrote: \"Let's meet next Monday.\" Here \"next Monday\" means the first Monday strictly after the reference date.",
+    "question": "What calendar date does \"next Monday\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "11 may 2026",
+      "2026-05-11",
+      "may 11 2026",
+      "may 11, 2026"
+    ],
+    "gold_iso": "2026-05-11",
+    "cond": "C4"
+  },
+  {
+    "id": "c4-10",
+    "ind": "this coming Friday",
+    "atype": "date",
+    "context": "Reference date: 5 May 2026 (a Tuesday). On that date someone wrote: \"The deadline is this coming Friday.\" Here \"this coming Friday\" means the first Friday on or after the reference date.",
+    "question": "What calendar date does \"this coming Friday\" refer to? Answer in YYYY-MM-DD.",
+    "accept": [
+      "2026-05-08",
+      "8 may 2026",
+      "may 8 2026",
+      "may 8, 2026"
+    ],
+    "gold_iso": "2026-05-08",
+    "cond": "C4"
+  }
+]
