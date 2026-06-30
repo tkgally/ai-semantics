@@ -338,17 +338,20 @@ the clean falsifier of the pure-shadow reading.
 ## Revision triggers (read before citing)
 
 - **(a) A frontier-panel relatum probe with a contrastive-frame control shows antonymy competence
-  surviving the control.** This is the clean falsifier. If
+  surviving the control.** This is the clean falsifier of the **local**-shadow reading. If
   [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)'s
   probe (or any equivalent) runs and antonymy competence clears daylight above a contrastive-frame
   distributional baseline, the pure-shadow reading is wrong for that case — revise the deflationary
-  reading to "shadow plus a measured residual," scoped to the panel tested. *Interpretation caveat
-  (companion essay, s150):* [`essay/shortcut-vs-competence-mis-cut`](shortcut-vs-competence-mis-cut.md)
+  reading to "**local** shadow plus a measured *transferable*-distributional residual," scoped to the
+  panel tested — the residual being read as transferable (still-distributional) generalization, **not**
+  as competence beyond distribution (a co-occurrence control cannot certify the latter). *Interpretation
+  note (companion essay, s150; ratified s151):* [`essay/shortcut-vs-competence-mis-cut`](shortcut-vs-competence-mis-cut.md)
   argues this "surviving residual ⇒ over-and-above distribution" gloss over-reads a co-occurrence
   control — a residual over such a control grades *local* versus **transferable** distributional
   generalization (still distributional), so a survivor falsifies *local*-shadow-saturation but does
-  not establish competence beyond distribution. A relabeling flagged for cross-session ratification
-  ([`PROJECT.md`](../../../PROJECT.md) §12.3), not yet applied to this trigger's wording.
+  not establish competence beyond distribution. Ratified into this trigger s151 (an independent
+  adversarial-review pass confirmed the relabeling fixes a *yardstick*, not a result, and keeps the
+  falsifier's teeth). `resolved-by: autonomous (adversarial review)`.
 - **(b) A method genuinely independent of the training distribution agrees on the antonymy outlier.**
   The screening-off argument turns on both Cao's and Diera & Scherp's methods being downstream of the
   same training-time co-occurrence. If a method that is *not* downstream of that distribution (a clean
