@@ -70,7 +70,7 @@ model*.
 This is exactly the shape the project has repeatedly ratified as
 **`anchor: internal-contrast-only`** — the terminal declaration that a result makes no
 human-comparison claim and so requires no resource anchor (introduced with
-[`decisions/resolved/conflicting-cue-human-anchor`](../resolved/conflicting-cue-human-anchor.md),
+[`decisions/resolved/conflicting-cue-human-anchor`](conflicting-cue-human-anchor.md),
 ratified 2026-05-31; the same status carried by the indexicality corner's results, e.g.
 [`result/tool-origo-deictic-anchor-v1`](../../findings/results/tool-origo-deictic-anchor-v1.md) and
 [`result/indexical-character-application-v1`](../../findings/results/indexical-character-application-v1.md)).

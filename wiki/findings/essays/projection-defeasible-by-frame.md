@@ -113,8 +113,11 @@ collapse is not a random shortfall; it is the collapse the distributional descri
 
 Note the direction of the inference carefully. The SEP source records that even the *human* pattern
 is defeasible at the conditional antecedent — projection there is graded, not a clean survival rule.
-So the collapse is not, by itself, a "the model is wrong" finding; a graded human pattern makes a
-graded model pattern unsurprising. The essay's claim is narrower and about *description*: given that
+So the collapse is not, by itself, a "the model is wrong" finding: the conditional antecedent is a
+frame where projection is *independently* graded (the source documents this as a property of the
+construction, not a fact about any particular population), so a graded model pattern there is
+unsurprising and needs no human-comparison claim to read. The essay's claim is narrower and about
+*description*: given that
 the model's grading tracks the *frame's* surface-reliability rather than being frame-invariant, the
 distributional description fits the observed shape better than the "computes a presupposition/assertion
 split" description does. That is consistent with the source's own "typically project, but often do
@@ -178,3 +181,18 @@ Either way the essay's *core* description — projection here is frame-shaped, n
 survives; what the rescue probe adjudicates is whether the specific conditional collapse is a
 rescuable cue effect or a fixed limit. A third trigger: if the underlying result's numbers move on
 re-run, this essay's empirical premises move with them and the reading is re-examined here in-page.
+
+**Revision — 2026-07-01 (session 159): the puncture test fired toward the genuine-limit reading.**
+The rescue probe ran the same session ([`result/conditional-projection-rescue-v1`](../results/conditional-projection-rescue-v1.md)):
+verdict **ROBUST-COLLAPSE**. The base arm reproduced the s158 conditional collapse *exactly*
+(presup-endorse 0.42 / 0.17 / 0.17), and **no** framing — speaker-commitment, consequent-position, or
+speaker-belief — restored projection for ≥2/3 models. So the conditional collapse is **not** a mere
+surface-cue artifact of the neutral query; it is a robust within-panel boundary of the text-trained
+behavior, which is the "genuine limit" branch of the trigger above. This **strengthens** the essay's
+core reading (frame-shaped defeasibility) and resolves its own puncture test toward a *fixed* rather
+than *rescuable* conditional collapse. Two honest qualifications the result adds: **claude alone** is
+rescued by an explicit commitment framing (0.42 → 0.75), so for one model the collapse is partly a
+framing effect (it does not generalize — gpt's commitment framing *lowers* its endorsement); and
+**gemini** returns UNCLEAR to presupposition *and* entailment alike under a conditional, so its
+collapse is a blanket refusal to extract from a hypothetical rather than a P-specific failure — a
+texture the "frame-conditioned" description accommodates but did not predict in that specific form.
