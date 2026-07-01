@@ -196,3 +196,50 @@ framing effect (it does not generalize — gpt's commitment framing *lowers* its
 **gemini** returns UNCLEAR to presupposition *and* entailment alike under a conditional, so its
 collapse is a blanket refusal to extract from a hypothetical rather than a P-specific failure — a
 texture the "frame-conditioned" description accommodates but did not predict in that specific form.
+
+**Revision — 2026-07-01 (session 161): the conditional collapse is trigger-general — replicated on
+four new families — with one trigger-side qualification.**
+A generalization test ran the byte-identical instrument on **four brand-new trigger families the
+instrument was never tuned on** — temporal-clause ("before/after/since"), manner-adverb,
+"only"-focus, and quantifier ("both/each")
+([`result/projection-trigger-inventory-v1`](../results/projection-trigger-inventory-v1.md), verdict
+**MIXED**). This is the strongest kind of evidence for the essay's core reading, and it lands on the
+side the essay argues.
+
+- **The conditional collapse replicates on triggers it was never designed around.** The result reports
+  the conditional-antecedent frame "**collapses** presupposition survival for all three
+  (P = 0.25 / 0.17 / 0.00) — the same s158/s159 collapse, now **replicated on four brand-new trigger
+  families**." A collapse that reproduces on triggers the instrument never saw is powerful evidence
+  that it is the **frame**, not the item or the trigger, that governs whether the presupposition
+  survives — which is exactly this essay's thesis. The result page draws the same inference in its own
+  words: that the collapse reproduces "on four trigger families it was never tuned on **strengthens**
+  the [essay/projection-defeasible-by-frame] reading that projection here is **frame-shaped, not item-
+  or trigger-scattered**: the frame, not the trigger, governs whether the presupposition survives."
+- **The negation cell stayed textbook-clean on the new families.** Under negation the signature was
+  "clean and large in all three (P endorsed 0.67–0.75 while the matched entailment cancels to
+  **0.00**)" — the same frame-split (survival under negation, collapse under the conditional) the essay
+  is built on, now holding panel-wide on triggers outside the original set.
+
+**One honest trigger-side qualification — a refinement, not a retraction.** The s160 pooled verdict
+was MIXED (only 1/3, claude-sonnet-4.6, cleared the frozen survival floor), and the sibling
+per-family decomposition ([`result/projection-trigger-inventory-family-decomposition-v1`](../results/projection-trigger-inventory-family-decomposition-v1.md)) locates the
+weakening in **one trigger family** — **manner adverbs** — which contributes essentially zero
+projection asymmetry in all three models: its presupposition and matched entailment move together and
+cancel jointly under negation, consistent with the scope-ambiguity of manner adverbs under negation
+the pre-registration flagged (temporal / "only" / quantifier project cleanly panel-wide). This is a
+genuine *trigger-side* modulation the essay should own. It sharpens rather than weakens the
+frame-shaped thesis, by separating two questions the essay had run together: **whether a trigger
+projects at all** (a prior, trigger-side property) from **whether a genuinely-projective trigger's
+presupposition survives a given frame** (the frame effect the essay is about). The right refinement:
+*the frame governs survival for a trigger that is cleanly projective to begin with; a trigger that is
+independently non-projective — scope-ambiguous, like manner — shows no asymmetry for the frame to
+modulate.* The overwhelming pattern is frame-governed; the manner family is the case that shows the
+frame effect presupposes something to act on.
+
+The essay's *core* description — projection here is frame-shaped, not item-scattered — therefore
+survives and is strengthened: the conditional collapse is now trigger-general across eight families,
+and the one wobble is explained by a trigger's prior non-projectivity, not by any breakdown of the
+frame effect. The existing disclaimers stand unchanged: this remains `internal-contrast-only`, one
+grammatical corner, a claim about *description* not mechanism, with no human comparison. The s160
+run's own scope is identical — "**within-model contrast only; no human comparison**," and its
+`anchor: internal-contrast-only` was ratified by an independent session-161 adversarial review.

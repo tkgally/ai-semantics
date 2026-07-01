@@ -6,9 +6,8 @@ meaning-senses:
   - inferential
   - distributional
 status: proposed
-anchor: pending
-contingent-on:
-  - projection-trigger-inventory-internal-contrast-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-07-01
 updated: 2026-07-01
 links:
@@ -70,15 +69,17 @@ does **not** certify that a model *represents* presupposition-vs-assertion seman
 endorsement of an inference under embedding off forced-choice answers (text-consistency is not
 mechanism).
 
-**Anchor is `anchor: pending`**, contingent on
-[`decisions/open/projection-trigger-inventory-internal-contrast-anchor`](../../decisions/open/projection-trigger-inventory-internal-contrast-anchor.md),
-opened this session. This run **reuses the byte-identical scoring path** (`analyze.py` diff-identical
-to s158; `SYS` / `QUERY` / `FRAMES` unchanged) as the already-ratified
+**Anchor is `anchor: internal-contrast-only`** (terminal), ratified by an independent fresh-agent
+adversarial review in **session 161** —
+[`decisions/resolved/projection-trigger-inventory-internal-contrast-anchor`](../../decisions/resolved/projection-trigger-inventory-internal-contrast-anchor.md)
+(ADOPT A). This run **reuses the byte-identical scoring path** (`analyze.py` diff-identical to s158,
+verified by the reviewer at diff=0; `SYS` / `QUERY` / `FRAMES` / thresholds unchanged) as the
+already-ratified
 [`decisions/resolved/presupposition-projection-internal-contrast-anchor`](../../decisions/resolved/presupposition-projection-internal-contrast-anchor.md),
-so the same `internal-contrast-only` reasoning applies — but per charter §12.3 a terminal
-`internal-contrast-only` status is **not** self-ratifiable in the session that opened its decision.
-An independent later session ratifies; until then the anchor stays `pending`. Ratification will fix
-the **yardstick, never the result** — every number and the MIXED verdict below stand regardless.
+so the same `internal-contrast-only` reasoning transferred: every quantity feeding the verdict is a
+within-model rate over the model's own YES/NO/UNCLEAR answers, with no human key anywhere in the
+scoring path. Ratification fixed the **yardstick, never the result** — every number and the MIXED
+verdict below stand unchanged.
 
 ## What ran
 
@@ -162,8 +163,8 @@ is now worked across **three probes** (s158 projection, s159 conditional-rescue,
 
 ## Honest bounds
 
-- **Behavioral, within-model, no human comparison** (see Scope). `anchor: pending` until independent
-  ratification; makes no claim a model *computes* projection.
+- **Behavioral, within-model, no human comparison** (see Scope). `anchor: internal-contrast-only`
+  (ratified session 161); makes no claim a model *computes* projection.
 - **Two families are theoretically harder triggers.** Manner-adverb presuppositions are
   scope-ambiguous under negation, and "only"'s prejacent status is contested; the pre-run critic
   passed both as valid-but-weaker (disclosed in [`PREREG.md`](../../../experiments/runs/2026-07-01-projection-trigger-inventory/PREREG.md)
