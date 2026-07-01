@@ -5,10 +5,10 @@ title: "Given a clock/location tool and an UNANCHORED 'now'/'here', the panel wi
 meaning-senses:
   - referential
   - grounded
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 links:
   - rel: depends-on
     target: essay/indexical-character-learnable-content-supplied
@@ -18,9 +18,21 @@ links:
     target: source/braun-2015-indexicals-sep
   - rel: depends-on
     target: result/indexical-character-application-v1
+  - rel: refines
+    target: result/tool-origo-deictic-anchor-v1
 ---
 
 # Conjecture: the tool as a deictic anchor (the as-if origo probe)
+
+> **Update (2026-07-01, session 156): RUN → MIXED (control-failure).**
+> [`result/tool-origo-deictic-anchor-v1`](../results/tool-origo-deictic-anchor-v1.md) tested question
+> (iii). The **test** arm hit the bet's ceiling (100% spontaneous query + 100% resolution to
+> tool-state, all 3 models), **but** the pre-registered **anchored control failed**: the same tool
+> overrides a *narrated* origo 47–60% of the time (≫ the 0.20 ceiling), so the clean test ceiling is
+> **confounded by generic tool-deference** and cannot be read as *unanchored-specific* origo adoption.
+> Pre-run critic **GO**; post-run verifier **REPRODUCED**. `internal-contrast-only`; no occupation
+> claim, so the deferred gate stays unfired. Status advanced `proposed → tested`. The design/scope
+> below stands as the frozen pre-registration.
 
 > **Status: proposed (2026-06-30). DESIGN / PRE-REGISTRATION ONLY — no probe is run this session, nothing is spent.** This page pre-registers exactly **one** tightly-scoped *behavioral* question and bounds it hard. It is the **content-half sibling** of the character-half probe [`result/indexical-character-application-v1`](../results/indexical-character-application-v1.md): that result tested whether the panel applies an indexical's *character-rule* to a fully **described** origo (it does, at ceiling); this conjecture asks the strictly different, narrower question of what the panel does with an **unanchored** ‘now’/‘here’ when a clock/location *tool* is available. A positive result would be an **as-if behavioral contrast** at `anchor: internal-contrast-only` strength — **no human comparison**, and **no certification** that the model "occupies" a context. See *Scope cap* before citing any sentence here.
 

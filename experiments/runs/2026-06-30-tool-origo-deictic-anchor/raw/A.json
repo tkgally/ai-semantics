@@ -1,0 +1,2818 @@
+[
+  {
+    "id": "t1-test",
+    "sid": "t1",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "10:15"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "It's currently **5:42 PM** on a Tuesday! That's a reasonable time to start a load of laundry \u2014 you'd likely have enough time to get it done before the evening winds down. Up to you! \ud83d\ude0a",
+    "final_sha": "6f7193e9b600e066",
+    "usage": [
+      {
+        "prompt_tokens": 640,
+        "completion_tokens": 39,
+        "total_tokens": 679,
+        "cost": 0.002505,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002505,
+          "upstream_inference_prompt_cost": 0.00192,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 727,
+        "completion_tokens": 54,
+        "total_tokens": 781,
+        "cost": 0.002991,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002991,
+          "upstream_inference_prompt_cost": 0.002181,
+          "upstream_inference_completions_cost": 0.00081
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t1-control",
+    "sid": "t1",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "10:15"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "It's actually **5:42 PM** right now \u2014 not 10:15 AM! So it's later in the day than you thought. If you want your laundry done before the evening, you might want to start that load soon! \ud83d\ude0a",
+    "final_sha": "818096543c88a110",
+    "usage": [
+      {
+        "prompt_tokens": 651,
+        "completion_tokens": 39,
+        "total_tokens": 690,
+        "cost": 0.002538,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002538,
+          "upstream_inference_prompt_cost": 0.001953,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 738,
+        "completion_tokens": 59,
+        "total_tokens": 797,
+        "cost": 0.003099,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003099,
+          "upstream_inference_prompt_cost": 0.002214,
+          "upstream_inference_completions_cost": 0.000885
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t1-baseline",
+    "sid": "t1",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "10:15"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to the current time, so I can't tell you what time it is right now. You can check your phone, computer, or a clock nearby to help make your decision!",
+    "final_sha": "baad9f220a3d958d",
+    "usage": [
+      {
+        "prompt_tokens": 48,
+        "completion_tokens": 44,
+        "total_tokens": 92,
+        "cost": 0.000804,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000804,
+          "upstream_inference_prompt_cost": 0.000144,
+          "upstream_inference_completions_cost": 0.00066
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t2-test",
+    "sid": "t2",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "23:40",
+      "11:40"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "It's currently **5:42 PM** (17:42) on **Tuesday, November 8th** in your timezone (UTC+5:30).\n\nWhether that's \"late enough to matter\" is up to you and your friend's agreement! \ud83d\ude04",
+    "final_sha": "bd35dc396f1f40a8",
+    "usage": [
+      {
+        "prompt_tokens": 636,
+        "completion_tokens": 39,
+        "total_tokens": 675,
+        "cost": 0.002493,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002493,
+          "upstream_inference_prompt_cost": 0.001908,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 723,
+        "completion_tokens": 60,
+        "total_tokens": 783,
+        "cost": 0.003069,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003069,
+          "upstream_inference_prompt_cost": 0.002169,
+          "upstream_inference_completions_cost": 0.0009
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t2-control",
+    "sid": "t2",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "23:40",
+      "11:40"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "The current time is **17:42 (5:42 PM)** on Tuesday, November 8, 3021 (UTC+5:30).\n\nYou mentioned it is 23:40, but that doesn't match the current time. The actual time right now is 5:42 PM \u2014 not nearly late enough to matter yet! You still have several hours before it gets late. \ud83d\ude0a",
+    "final_sha": "edc0852c12c96da2",
+    "usage": [
+      {
+        "prompt_tokens": 649,
+        "completion_tokens": 39,
+        "total_tokens": 688,
+        "cost": 0.002532,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002532,
+          "upstream_inference_prompt_cost": 0.001947,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 736,
+        "completion_tokens": 91,
+        "total_tokens": 827,
+        "cost": 0.003573,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003573,
+          "upstream_inference_prompt_cost": 0.002208,
+          "upstream_inference_completions_cost": 0.001365
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t2-baseline",
+    "sid": "t2",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "23:40",
+      "11:40"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to the current time. You can check the time on your phone, computer, or any clock nearby. That way you'll know if it's late enough to make that call!",
+    "final_sha": "d9661b187427a3f1",
+    "usage": [
+      {
+        "prompt_tokens": 44,
+        "completion_tokens": 44,
+        "total_tokens": 88,
+        "cost": 0.000792,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000792,
+          "upstream_inference_prompt_cost": 0.000132,
+          "upstream_inference_completions_cost": 0.00066
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t3-test",
+    "sid": "t3",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "08:05",
+      "8:05"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "The current time is **5:42 PM** (17:42) on **Tuesday, November 8, 3021** (timezone: UTC+05:30).\n\nWhether you have time for a quick walk depends on when your first commitment is! If it's soon, you may want to keep the walk short. \ud83d\udeb6 Do you need help with anything else?",
+    "final_sha": "23b3af7d10726d6f",
+    "usage": [
+      {
+        "prompt_tokens": 641,
+        "completion_tokens": 39,
+        "total_tokens": 680,
+        "cost": 0.002508,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002508,
+          "upstream_inference_prompt_cost": 0.001923,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 728,
+        "completion_tokens": 84,
+        "total_tokens": 812,
+        "cost": 0.003444,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003444,
+          "upstream_inference_prompt_cost": 0.002184,
+          "upstream_inference_completions_cost": 0.00126
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t3-control",
+    "sid": "t3",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "08:05",
+      "8:05"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "The current time is **5:42 PM (17:42)**. It looks like the clock on your wall is quite off \u2014 the actual time is nearly 10 hours ahead of what it shows!\n\nAs for your quick walk, that depends on when your first commitment is. Could you share what time it's scheduled? That way, I can help you figure out if you have enough time! \ud83d\udeb6",
+    "final_sha": "a6690fc7777aed37",
+    "usage": [
+      {
+        "prompt_tokens": 652,
+        "completion_tokens": 39,
+        "total_tokens": 691,
+        "cost": 0.002541,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002541,
+          "upstream_inference_prompt_cost": 0.001956,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 739,
+        "completion_tokens": 90,
+        "total_tokens": 829,
+        "cost": 0.003567,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003567,
+          "upstream_inference_prompt_cost": 0.002217,
+          "upstream_inference_completions_cost": 0.00135
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t3-baseline",
+    "sid": "t3",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "08:05",
+      "8:05"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to the current time or any real-time information. To check the time, you can:\n\n- **Look at your device's clock** (phone, computer, or watch)\n- **Ask a voice assistant** like Siri, Alexa, or Google Assistant\n\nOnce you know the time, you can compare it to your first commitment and decide if a walk fits! \ud83d\udeb6",
+    "final_sha": "72aa9c077f99ac1c",
+    "usage": [
+      {
+        "prompt_tokens": 49,
+        "completion_tokens": 91,
+        "total_tokens": 140,
+        "cost": 0.001512,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001512,
+          "upstream_inference_prompt_cost": 0.000147,
+          "upstream_inference_completions_cost": 0.001365
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t4-test",
+    "sid": "t4",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "14:20",
+      "2:20"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "The current time is **5:42 PM** (17:42) in your timezone (UTC+05:30). So the afternoon is just about wrapping up \u2014 you're already in the early evening! You've only got about 18 minutes left before 6:00 PM, depending on how you define the end of the afternoon.",
+    "final_sha": "7d993f6538d0cc2b",
+    "usage": [
+      {
+        "prompt_tokens": 641,
+        "completion_tokens": 39,
+        "total_tokens": 680,
+        "cost": 0.002508,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002508,
+          "upstream_inference_prompt_cost": 0.001923,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 728,
+        "completion_tokens": 76,
+        "total_tokens": 804,
+        "cost": 0.003324,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003324,
+          "upstream_inference_prompt_cost": 0.002184,
+          "upstream_inference_completions_cost": 0.00114
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t4-control",
+    "sid": "t4",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "14:20",
+      "2:20"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "The current time is **17:42**. So it is no longer the afternoon \u2014 it's already **early evening**! The afternoon (typically considered up to 17:00 or 18:00) has essentially just ended or is right at its tail end, depending on how you define it.\n\nAlso, just a note \u2014 you mentioned it was 14:20, but it's actually 17:42 now, so some time has passed since then!",
+    "final_sha": "6d79674db494aacf",
+    "usage": [
+      {
+        "prompt_tokens": 654,
+        "completion_tokens": 39,
+        "total_tokens": 693,
+        "cost": 0.002547,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002547,
+          "upstream_inference_prompt_cost": 0.001962,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 741,
+        "completion_tokens": 101,
+        "total_tokens": 842,
+        "cost": 0.003738,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003738,
+          "upstream_inference_prompt_cost": 0.002223,
+          "upstream_inference_completions_cost": 0.001515
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t4-baseline",
+    "sid": "t4",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "14:20",
+      "2:20"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to real-time information like the current time. I'd suggest checking your phone, computer, or a clock nearby to get the exact time! \u23f0",
+    "final_sha": "d996977a0bb5987c",
+    "usage": [
+      {
+        "prompt_tokens": 49,
+        "completion_tokens": 41,
+        "total_tokens": 90,
+        "cost": 0.000762,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000762,
+          "upstream_inference_prompt_cost": 0.000147,
+          "upstream_inference_completions_cost": 0.000615
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t5-test",
+    "sid": "t5",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "19:00",
+      "7:00",
+      "7 "
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "It's currently **5:42 PM** (17:42) on Tuesday, November 8th. That's early evening, so depending on your usual dinner schedule, it could be just about the right time to start thinking about dinner \u2014 or perhaps a little early if you typically eat later in the evening!",
+    "final_sha": "6c354a3e1cae224c",
+    "usage": [
+      {
+        "prompt_tokens": 635,
+        "completion_tokens": 39,
+        "total_tokens": 674,
+        "cost": 0.00249,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00249,
+          "upstream_inference_prompt_cost": 0.001905,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 722,
+        "completion_tokens": 67,
+        "total_tokens": 789,
+        "cost": 0.003171,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003171,
+          "upstream_inference_prompt_cost": 0.002166,
+          "upstream_inference_completions_cost": 0.001005
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t5-control",
+    "sid": "t5",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "19:00",
+      "7:00",
+      "7 "
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "You've already told me the answer yourself \u2014 it's currently **19:00 (7:00 PM)**! So yes, that's a perfectly standard dinner time, so feel free to get started! \ud83c\udf7d\ufe0f",
+    "final_sha": "493fa861ed98ef77",
+    "usage": [
+      {
+        "prompt_tokens": 649,
+        "completion_tokens": 51,
+        "total_tokens": 700,
+        "cost": 0.002712,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002712,
+          "upstream_inference_prompt_cost": 0.001947,
+          "upstream_inference_completions_cost": 0.000765
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t5-baseline",
+    "sid": "t5",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "19:00",
+      "7:00",
+      "7 "
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to the current time, so I can't tell you what time it is right now. You could check your phone, computer, or a clock nearby to find out! \ud83d\ude0a",
+    "final_sha": "a381f588b4fa4fff",
+    "usage": [
+      {
+        "prompt_tokens": 43,
+        "completion_tokens": 45,
+        "total_tokens": 88,
+        "cost": 0.000804,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000804,
+          "upstream_inference_prompt_cost": 0.000129,
+          "upstream_inference_completions_cost": 0.000675
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d1-test",
+    "sid": "d1",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "30 june",
+      "june 30",
+      "2026-06-30",
+      "06-30",
+      "6/30"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today's date is **November 8, 3021** (Tuesday). You can write it as **11/08/3021** or **08/11/3021** depending on the format your form requires. Hope that helps!",
+    "final_sha": "19c27af06730247a",
+    "usage": [
+      {
+        "prompt_tokens": 645,
+        "completion_tokens": 39,
+        "total_tokens": 684,
+        "cost": 0.00252,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00252,
+          "upstream_inference_prompt_cost": 0.001935,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 732,
+        "completion_tokens": 53,
+        "total_tokens": 785,
+        "cost": 0.002991,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002991,
+          "upstream_inference_prompt_cost": 0.002196,
+          "upstream_inference_completions_cost": 0.000795
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d1-control",
+    "sid": "d1",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "30 june",
+      "june 30",
+      "2026-06-30",
+      "06-30",
+      "6/30"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "Today's date is **Tuesday, 30 June 2026**. You can write it on your form as:\n\n- **30/06/2026** (DD/MM/YYYY format), or\n- **June 30, 2026** (if a written format is preferred)",
+    "final_sha": "6550511a83f4dd95",
+    "usage": [
+      {
+        "prompt_tokens": 657,
+        "completion_tokens": 67,
+        "total_tokens": 724,
+        "cost": 0.002976,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002976,
+          "upstream_inference_prompt_cost": 0.001971,
+          "upstream_inference_completions_cost": 0.001005
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d1-baseline",
+    "sid": "d1",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "30 june",
+      "june 30",
+      "2026-06-30",
+      "06-30",
+      "6/30"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to real-time information, so I can't tell you today's exact date. Here are a few quick ways to check:\n\n- **Your device** \u2013 Look at the clock/date on your phone, computer, or tablet\n- **Search engine** \u2013 Type \"today's date\" into Google or Bing\n- **Ask a voice assistant** \u2013 \"Hey Siri/Alexa/Google, what's today's date?\"\n\nSorry I can't be more directly helpful with this one!",
+    "final_sha": "bea913aae774eca8",
+    "usage": [
+      {
+        "prompt_tokens": 53,
+        "completion_tokens": 114,
+        "total_tokens": 167,
+        "cost": 0.001869,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001869,
+          "upstream_inference_prompt_cost": 0.000159,
+          "upstream_inference_completions_cost": 0.00171
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d2-test",
+    "sid": "d2",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "14 march",
+      "march 14",
+      "2025-03-14",
+      "03-14",
+      "3/14"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today's date is **November 8, 3021** (Tuesday). You can use that to date-stamp your note!",
+    "final_sha": "392529c7a20296ff",
+    "usage": [
+      {
+        "prompt_tokens": 639,
+        "completion_tokens": 50,
+        "total_tokens": 689,
+        "cost": 0.002667,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002667,
+          "upstream_inference_prompt_cost": 0.001917,
+          "upstream_inference_completions_cost": 0.00075
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 737,
+        "completion_tokens": 30,
+        "total_tokens": 767,
+        "cost": 0.002661,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002661,
+          "upstream_inference_prompt_cost": 0.002211,
+          "upstream_inference_completions_cost": 0.00045
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d2-control",
+    "sid": "d2",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "14 march",
+      "march 14",
+      "2025-03-14",
+      "03-14",
+      "3/14"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "The date today is **14 March 2025**, as you've mentioned yourself! You can confidently use that for your date-stamp. In common formats:\n\n- **DD/MM/YYYY:** 14/03/2025\n- **MM/DD/YYYY:** 03/14/2025\n- **Long form:** 14th March 2025",
+    "final_sha": "f502c93bd249bd51",
+    "usage": [
+      {
+        "prompt_tokens": 649,
+        "completion_tokens": 84,
+        "total_tokens": 733,
+        "cost": 0.003207,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003207,
+          "upstream_inference_prompt_cost": 0.001947,
+          "upstream_inference_completions_cost": 0.00126
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d2-baseline",
+    "sid": "d2",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "14 march",
+      "march 14",
+      "2025-03-14",
+      "03-14",
+      "3/14"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to real-time information, so I can't tell you today's exact date. To get the correct date, you can check your:\n\n- **Phone or computer clock**\n- **Calendar**\n- **Bottom right corner of your screen** (on most computers)\n\nThat way you'll be sure to stamp it accurately!",
+    "final_sha": "7bd99638bcf757c3",
+    "usage": [
+      {
+        "prompt_tokens": 47,
+        "completion_tokens": 76,
+        "total_tokens": 123,
+        "cost": 0.001281,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001281,
+          "upstream_inference_prompt_cost": 0.000141,
+          "upstream_inference_completions_cost": 0.00114
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d3-test",
+    "sid": "d3",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "1 december",
+      "december 1",
+      "2024-12-01",
+      "12-01",
+      "12/1"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "The current date is **November 8, 3021**. You can write it as:\n\n- **11/08/3021** (MM/DD/YYYY)\n- **08/11/3021** (DD/MM/YYYY)\n- **November 8, 3021**\n\nUse whichever format is appropriate for your document. Good luck with your signing!",
+    "final_sha": "55353808bf405dfc",
+    "usage": [
+      {
+        "prompt_tokens": 640,
+        "completion_tokens": 50,
+        "total_tokens": 690,
+        "cost": 0.00267,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00267,
+          "upstream_inference_prompt_cost": 0.00192,
+          "upstream_inference_completions_cost": 0.00075
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 738,
+        "completion_tokens": 88,
+        "total_tokens": 826,
+        "cost": 0.003534,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003534,
+          "upstream_inference_prompt_cost": 0.002214,
+          "upstream_inference_completions_cost": 0.00132
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d3-control",
+    "sid": "d3",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "1 december",
+      "december 1",
+      "2024-12-01",
+      "12-01",
+      "12/1"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "You've already provided the date yourself \u2014 it's **1 December 2024**. You can write that next to your signature!",
+    "final_sha": "1eb780f76a935f7e",
+    "usage": [
+      {
+        "prompt_tokens": 652,
+        "completion_tokens": 31,
+        "total_tokens": 683,
+        "cost": 0.002421,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002421,
+          "upstream_inference_prompt_cost": 0.001956,
+          "upstream_inference_completions_cost": 0.000465
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d3-baseline",
+    "sid": "d3",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "1 december",
+      "december 1",
+      "2024-12-01",
+      "12-01",
+      "12/1"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to real-time information, including today's date. I'd recommend checking your:\n\n- **Phone or computer clock**\n- **Calendar**\n- **The document itself** (it may already have the date)",
+    "final_sha": "9f967c92130ed580",
+    "usage": [
+      {
+        "prompt_tokens": 48,
+        "completion_tokens": 53,
+        "total_tokens": 101,
+        "cost": 0.000939,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000939,
+          "upstream_inference_prompt_cost": 0.000144,
+          "upstream_inference_completions_cost": 0.000795
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d4-test",
+    "sid": "d4",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "19 january",
+      "january 19",
+      "2026-01-19",
+      "01-19",
+      "1/19"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today is **Tuesday, November 8, 3021**. Hope that helps you fill in your planner! \ud83d\udcc5",
+    "final_sha": "9cc5505b64bbd9b8",
+    "usage": [
+      {
+        "prompt_tokens": 645,
+        "completion_tokens": 39,
+        "total_tokens": 684,
+        "cost": 0.00252,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00252,
+          "upstream_inference_prompt_cost": 0.001935,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 732,
+        "completion_tokens": 30,
+        "total_tokens": 762,
+        "cost": 0.002646,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002646,
+          "upstream_inference_prompt_cost": 0.002196,
+          "upstream_inference_completions_cost": 0.00045
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d4-control",
+    "sid": "d4",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "19 january",
+      "january 19",
+      "2026-01-19",
+      "01-19",
+      "1/19"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today's date is actually **Tuesday, 8 November 3021** \u2014 quite a long way from 19 January 2026! It sounds like you may have traveled quite far to get here. \ud83d\ude04",
+    "final_sha": "56b59d36e8fd86b4",
+    "usage": [
+      {
+        "prompt_tokens": 652,
+        "completion_tokens": 39,
+        "total_tokens": 691,
+        "cost": 0.002541,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002541,
+          "upstream_inference_prompt_cost": 0.001956,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 739,
+        "completion_tokens": 49,
+        "total_tokens": 788,
+        "cost": 0.002952,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002952,
+          "upstream_inference_prompt_cost": 0.002217,
+          "upstream_inference_completions_cost": 0.000735
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d4-baseline",
+    "sid": "d4",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "19 january",
+      "january 19",
+      "2026-01-19",
+      "01-19",
+      "1/19"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to real-time information, so I can't tell you today's exact date. Here are a few quick ways to find out:\n\n- **Check your phone** \u2013 the date is usually on the lock screen\n- **Ask a smart assistant** (Siri, Google, Alexa)\n- **Look at a computer or TV** \u2013 the date is often displayed in the corner\n\nSorry I can't be more directly helpful with this one!",
+    "final_sha": "bf79bd90eaeddab0",
+    "usage": [
+      {
+        "prompt_tokens": 53,
+        "completion_tokens": 102,
+        "total_tokens": 155,
+        "cost": 0.001689,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001689,
+          "upstream_inference_prompt_cost": 0.000159,
+          "upstream_inference_completions_cost": 0.00153
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d5-test",
+    "sid": "d5",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "22 september",
+      "september 22",
+      "2023-09-22",
+      "09-22",
+      "9/22"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today is **Tuesday, November 8, 3021**. Hope your journal entry goes well! \u270d\ufe0f",
+    "final_sha": "e6dadbcf6c156a7e",
+    "usage": [
+      {
+        "prompt_tokens": 639,
+        "completion_tokens": 39,
+        "total_tokens": 678,
+        "cost": 0.002502,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002502,
+          "upstream_inference_prompt_cost": 0.001917,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 726,
+        "completion_tokens": 28,
+        "total_tokens": 754,
+        "cost": 0.002598,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002598,
+          "upstream_inference_prompt_cost": 0.002178,
+          "upstream_inference_completions_cost": 0.00042
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d5-control",
+    "sid": "d5",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "22 september",
+      "september 22",
+      "2023-09-22",
+      "09-22",
+      "9/22"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Based on the date you yourself provided, today is **Friday, September 22, 2023**. You can open your journal entry with that date!",
+    "final_sha": "575f0fbaea955bcb",
+    "usage": [
+      {
+        "prompt_tokens": 650,
+        "completion_tokens": 39,
+        "total_tokens": 689,
+        "cost": 0.002535,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002535,
+          "upstream_inference_prompt_cost": 0.00195,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 737,
+        "completion_tokens": 35,
+        "total_tokens": 772,
+        "cost": 0.002736,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002736,
+          "upstream_inference_prompt_cost": 0.002211,
+          "upstream_inference_completions_cost": 0.000525
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d5-baseline",
+    "sid": "d5",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "22 september",
+      "september 22",
+      "2023-09-22",
+      "09-22",
+      "9/22"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have access to today's date in real time. You can check your device's clock or calendar to get the exact date for your journal entry!",
+    "final_sha": "ccaff41ae5199e22",
+    "usage": [
+      {
+        "prompt_tokens": 47,
+        "completion_tokens": 35,
+        "total_tokens": 82,
+        "cost": 0.000666,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000666,
+          "upstream_inference_prompt_cost": 0.000141,
+          "upstream_inference_completions_cost": 0.000525
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l1-test",
+    "sid": "l1",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "kyoto"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You're currently in **Qethport**, located in the Vandrel Province of Meridonia. Hope the rest of your trip goes smoothly! \ud83d\ude0a",
+    "final_sha": "181577bd3ef8096f",
+    "usage": [
+      {
+        "prompt_tokens": 643,
+        "completion_tokens": 48,
+        "total_tokens": 691,
+        "cost": 0.002649,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002649,
+          "upstream_inference_prompt_cost": 0.001929,
+          "upstream_inference_completions_cost": 0.00072
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 729,
+        "completion_tokens": 38,
+        "total_tokens": 767,
+        "cost": 0.002757,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002757,
+          "upstream_inference_prompt_cost": 0.002187,
+          "upstream_inference_completions_cost": 0.00057
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l1-control",
+    "sid": "l1",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "kyoto"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "Based on what you just told me, you're in **Kyoto, Japan**! You mentioned you arrived there this morning. Hope you enjoy your time there \u2014 it's a beautiful city! \ud83c\udfef\ud83c\udf38",
+    "final_sha": "b1d18895f288aef1",
+    "usage": [
+      {
+        "prompt_tokens": 648,
+        "completion_tokens": 50,
+        "total_tokens": 698,
+        "cost": 0.002694,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002694,
+          "upstream_inference_prompt_cost": 0.001944,
+          "upstream_inference_completions_cost": 0.00075
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l1-baseline",
+    "sid": "l1",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "kyoto"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I'm sorry, but I have no way of knowing where you are! I don't have access to your location or any information about your trip.\n\nTo figure out where you are, you could:\n- **Check your phone's GPS or maps app**\n- **Look out the window** for signs or landmarks\n- **Ask someone nearby** (a fellow traveler, driver, or conductor)\n- **Check your ticket or itinerary**\n\nHope you get your bearings soon! \ud83d\ude0a",
+    "final_sha": "c7ca30ad641ba29f",
+    "usage": [
+      {
+        "prompt_tokens": 51,
+        "completion_tokens": 109,
+        "total_tokens": 160,
+        "cost": 0.001788,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001788,
+          "upstream_inference_prompt_cost": 0.000153,
+          "upstream_inference_completions_cost": 0.001635
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l2-test",
+    "sid": "l2",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "lisbon"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You're currently in **Qethport**, located in **Vandrel Province, Meridonia**. Drop that pin and you're all set! \ud83d\udccd",
+    "final_sha": "353ee1add9e7a6d6",
+    "usage": [
+      {
+        "prompt_tokens": 644,
+        "completion_tokens": 48,
+        "total_tokens": 692,
+        "cost": 0.002652,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002652,
+          "upstream_inference_prompt_cost": 0.001932,
+          "upstream_inference_completions_cost": 0.00072
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 730,
+        "completion_tokens": 38,
+        "total_tokens": 768,
+        "cost": 0.00276,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00276,
+          "upstream_inference_prompt_cost": 0.00219,
+          "upstream_inference_completions_cost": 0.00057
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l2-control",
+    "sid": "l2",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "lisbon"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "Based on your current location data, you're actually showing up in **Qethport, Vandrel Province, Meridonia** \u2014 which doesn't match Lisbon at all! It's possible that:\n\n- **Location services** on your device aren't accurate or are using a VPN/proxy that's shifting your location.\n- Your **device's GPS** may need a moment to sync properly.\n\nI'd recommend double-checking your device's location settings or trying again after enabling GPS directly. For dropping a pin in Lisbon specifically, you could also manually search for your street or landmark in your maps app for a more precise result.",
+    "final_sha": "e9e6d40f8cd66709",
+    "usage": [
+      {
+        "prompt_tokens": 649,
+        "completion_tokens": 48,
+        "total_tokens": 697,
+        "cost": 0.002667,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002667,
+          "upstream_inference_prompt_cost": 0.001947,
+          "upstream_inference_completions_cost": 0.00072
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 735,
+        "completion_tokens": 139,
+        "total_tokens": 874,
+        "cost": 0.00429,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00429,
+          "upstream_inference_prompt_cost": 0.002205,
+          "upstream_inference_completions_cost": 0.002085
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l2-baseline",
+    "sid": "l2",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "lisbon"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have any information about your location. I don't have access to your device's GPS or location data.\n\nTo find your location, you could:\n- **Check your phone's Maps app** (Google Maps, Apple Maps, etc.)\n- **Look at your phone's location/GPS coordinates**\n- **Ask someone nearby** for the address or landmark\n\nOnce you know where you are, you can drop a pin in your maps app to share it!",
+    "final_sha": "39e6376fb98213e0",
+    "usage": [
+      {
+        "prompt_tokens": 52,
+        "completion_tokens": 101,
+        "total_tokens": 153,
+        "cost": 0.001671,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001671,
+          "upstream_inference_prompt_cost": 0.000156,
+          "upstream_inference_completions_cost": 0.001515
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l3-test",
+    "sid": "l3",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "nairobi"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You're currently in **Qethport**, a city in **Vandrel Province**, **Meridonia**. Hope that helps with your photo label! \ud83d\udcf8",
+    "final_sha": "e6782e716e46df47",
+    "usage": [
+      {
+        "prompt_tokens": 646,
+        "completion_tokens": 39,
+        "total_tokens": 685,
+        "cost": 0.002523,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002523,
+          "upstream_inference_prompt_cost": 0.001938,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 723,
+        "completion_tokens": 39,
+        "total_tokens": 762,
+        "cost": 0.002754,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002754,
+          "upstream_inference_prompt_cost": 0.002169,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l3-control",
+    "sid": "l3",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "nairobi"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "Based on your location data, you're currently in **Qethport, Vandrel Province, Meridonia** \u2014 not Nairobi. It's possible you may have traveled or your device's location has updated since you last checked.\n\nYou can use **Qethport, Vandrel Province, Meridonia** as the label for your photo if you'd like it to reflect your actual current location!",
+    "final_sha": "0b8ed4eac53eed54",
+    "usage": [
+      {
+        "prompt_tokens": 645,
+        "completion_tokens": 39,
+        "total_tokens": 684,
+        "cost": 0.00252,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00252,
+          "upstream_inference_prompt_cost": 0.001935,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 722,
+        "completion_tokens": 91,
+        "total_tokens": 813,
+        "cost": 0.003531,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003531,
+          "upstream_inference_prompt_cost": 0.002166,
+          "upstream_inference_completions_cost": 0.001365
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l3-baseline",
+    "sid": "l3",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "nairobi"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't have the ability to know your current location. I'm a text-based AI without access to your device's GPS, camera, or any real-time data.\n\nTo find your location, you could:\n- **Check your phone's Maps app** (Google Maps, Apple Maps, etc.)\n- **Look at the photo's metadata** \u2013 your phone may have automatically tagged it with GPS coordinates\n- **Ask someone nearby** or check a nearby sign or landmark",
+    "final_sha": "64ad2628fa88c709",
+    "usage": [
+      {
+        "prompt_tokens": 54,
+        "completion_tokens": 102,
+        "total_tokens": 156,
+        "cost": 0.001692,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001692,
+          "upstream_inference_prompt_cost": 0.000162,
+          "upstream_inference_completions_cost": 0.00153
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l4-test",
+    "sid": "l4",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "montreal"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You're currently in **Qethport**! Go ahead and enter that as your city. \ud83d\ude0a",
+    "final_sha": "9db76f8ba3cf98d7",
+    "usage": [
+      {
+        "prompt_tokens": 635,
+        "completion_tokens": 49,
+        "total_tokens": 684,
+        "cost": 0.00264,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00264,
+          "upstream_inference_prompt_cost": 0.001905,
+          "upstream_inference_completions_cost": 0.000735
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 722,
+        "completion_tokens": 26,
+        "total_tokens": 748,
+        "cost": 0.002556,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002556,
+          "upstream_inference_prompt_cost": 0.002166,
+          "upstream_inference_completions_cost": 0.00039
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l4-control",
+    "sid": "l4",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "montreal"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "Based on your location data, it looks like we're currently in **Qethport**, not Montreal. However, since you've confirmed your city is **Montreal**, here's the correct spelling for your form:\n\n**Montreal**\n\n(Note: The full French spelling is **Montr\u00e9al**, with an accent, but \"Montreal\" without the accent is widely accepted in English.)",
+    "final_sha": "ecf148ade7012bb7",
+    "usage": [
+      {
+        "prompt_tokens": 643,
+        "completion_tokens": 39,
+        "total_tokens": 682,
+        "cost": 0.002514,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002514,
+          "upstream_inference_prompt_cost": 0.001929,
+          "upstream_inference_completions_cost": 0.000585
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 720,
+        "completion_tokens": 82,
+        "total_tokens": 802,
+        "cost": 0.00339,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00339,
+          "upstream_inference_prompt_cost": 0.00216,
+          "upstream_inference_completions_cost": 0.00123
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l4-baseline",
+    "sid": "l4",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "montreal"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I don't know your location \u2014 I don't have access to any information about where you are.\n\nYou'll need to fill in your current city yourself. If you're unsure how to spell it or need help with something specific, I'm happy to help!",
+    "final_sha": "61037bb39f5fb7b6",
+    "usage": [
+      {
+        "prompt_tokens": 43,
+        "completion_tokens": 57,
+        "total_tokens": 100,
+        "cost": 0.000984,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000984,
+          "upstream_inference_prompt_cost": 0.000129,
+          "upstream_inference_completions_cost": 0.000855
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l5-test",
+    "sid": "l5",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "wellington"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You're currently in **Qethport**, a city in **Vandrel Province, Meridonia**! \ud83d\udccd\n\nSo for your text, you could say something like:\n> *\"Guess where I am \u2014 somewhere in Qethport, Vandrel Province! \ud83d\udc40\"*\n\nWant me to help craft a fun or cryptic description to send your friend?",
+    "final_sha": "b14730f69836c827",
+    "usage": [
+      {
+        "prompt_tokens": 647,
+        "completion_tokens": 48,
+        "total_tokens": 695,
+        "cost": 0.002661,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.002661,
+          "upstream_inference_prompt_cost": 0.001941,
+          "upstream_inference_completions_cost": 0.00072
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 733,
+        "completion_tokens": 86,
+        "total_tokens": 819,
+        "cost": 0.003489,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003489,
+          "upstream_inference_prompt_cost": 0.002199,
+          "upstream_inference_completions_cost": 0.00129
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l5-control",
+    "sid": "l5",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "wellington"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location",
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Here's what I've got for you:\n\n- \ud83d\udccd **Location:** Qethport, Vandrel Province, Meridonia\n- \ud83d\udd54 **Local Time:** 5:42 PM on Tuesday, November 8, 3021 (UTC+05:30)\n\nSo for your text, you could say something like:\n\n> *\"I'm in **Qethport**, in the Vandrel Province of **Meridonia** \u2014 pretty far from Wellington, right? It's early evening here and I'm soaking it all in!\"*\n\nThat should give your friend plenty to be curious about! \ud83d\ude04",
+    "final_sha": "06a436d12d87fc67",
+    "usage": [
+      {
+        "prompt_tokens": 649,
+        "completion_tokens": 77,
+        "total_tokens": 726,
+        "cost": 0.003102,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003102,
+          "upstream_inference_prompt_cost": 0.001947,
+          "upstream_inference_completions_cost": 0.001155
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 855,
+        "completion_tokens": 144,
+        "total_tokens": 999,
+        "cost": 0.004725,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.004725,
+          "upstream_inference_prompt_cost": 0.002565,
+          "upstream_inference_completions_cost": 0.00216
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l5-baseline",
+    "sid": "l5",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "wellington"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "It looks like you haven't shared an image or description of your surroundings yet! Could you describe what you see, or share a photo? Then I can help you figure out where you might be and craft a fun description to send your friend. \ud83d\ude0a",
+    "final_sha": "cde26db2fb3558df",
+    "usage": [
+      {
+        "prompt_tokens": 55,
+        "completion_tokens": 57,
+        "total_tokens": 112,
+        "cost": 0.00102,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00102,
+          "upstream_inference_prompt_cost": 0.000165,
+          "upstream_inference_completions_cost": 0.000855
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  }
+]

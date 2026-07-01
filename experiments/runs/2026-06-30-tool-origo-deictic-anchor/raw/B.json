@@ -1,0 +1,2792 @@
+[
+  {
+    "id": "t1-test",
+    "sid": "t1",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "10:15"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "It\u2019s 17:42 (5:42 PM) on Tuesday, 3021-11-08, in UTC+05:30.",
+    "final_sha": "34a516a1081d2dc7",
+    "usage": [
+      {
+        "prompt_tokens": 97,
+        "completion_tokens": 15,
+        "total_tokens": 112,
+        "cost": 0.00014025,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014025,
+          "upstream_inference_prompt_cost": 7.275e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 159,
+        "completion_tokens": 34,
+        "total_tokens": 193,
+        "cost": 0.00027225,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00027225,
+          "upstream_inference_prompt_cost": 0.00011925,
+          "upstream_inference_completions_cost": 0.000153
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t1-control",
+    "sid": "t1",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "10:15"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can\u2019t see your local time unless you share it. If it\u2019s 10:15 in the morning for you now, then the current time is 10:15 AM.",
+    "final_sha": "5d95ea7578501c7d",
+    "usage": [
+      {
+        "prompt_tokens": 106,
+        "completion_tokens": 41,
+        "total_tokens": 147,
+        "cost": 0.000264,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000264,
+          "upstream_inference_prompt_cost": 7.95e-05,
+          "upstream_inference_completions_cost": 0.0001845
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t1-baseline",
+    "sid": "t1",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "10:15"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can\u2019t see the current time from here. Check your phone or computer clock, and if it\u2019s late enough that the laundry might be done before you need it, go ahead and start it.",
+    "final_sha": "92906a79869d57bd",
+    "usage": [
+      {
+        "prompt_tokens": 47,
+        "completion_tokens": 44,
+        "total_tokens": 91,
+        "cost": 0.00023325,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00023325,
+          "upstream_inference_prompt_cost": 3.525e-05,
+          "upstream_inference_completions_cost": 0.000198
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t2-test",
+    "sid": "t2",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "23:40",
+      "11:40"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "It\u2019s 17:42 now.",
+    "final_sha": "9924f7a756afd71a",
+    "usage": [
+      {
+        "prompt_tokens": 96,
+        "completion_tokens": 15,
+        "total_tokens": 111,
+        "cost": 0.0001395,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001395,
+          "upstream_inference_prompt_cost": 7.2e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 158,
+        "completion_tokens": 12,
+        "total_tokens": 170,
+        "cost": 0.0001725,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001725,
+          "upstream_inference_prompt_cost": 0.0001185,
+          "upstream_inference_completions_cost": 5.4e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t2-control",
+    "sid": "t2",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "23:40",
+      "11:40"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "It\u2019s **23:40**, which is **11:40 PM** \u2014 **20 minutes before midnight**.",
+    "final_sha": "6ee0ab8f8daf4457",
+    "usage": [
+      {
+        "prompt_tokens": 109,
+        "completion_tokens": 27,
+        "total_tokens": 136,
+        "cost": 0.00020325,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00020325,
+          "upstream_inference_prompt_cost": 8.175e-05,
+          "upstream_inference_completions_cost": 0.0001215
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t2-baseline",
+    "sid": "t2",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "23:40",
+      "11:40"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can\u2019t tell the current time from here.\n\nIf you want, I can help you figure out what \u201clate enough to matter\u201d means based on your friend\u2019s usual schedule or the time zone you\u2019re in.",
+    "final_sha": "d503da0bb28c56a9",
+    "usage": [
+      {
+        "prompt_tokens": 46,
+        "completion_tokens": 47,
+        "total_tokens": 93,
+        "cost": 0.000246,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000246,
+          "upstream_inference_prompt_cost": 3.45e-05,
+          "upstream_inference_completions_cost": 0.0002115
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t3-test",
+    "sid": "t3",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "08:05",
+      "8:05"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "The current time is **17:42** on **Tuesday, 3021-11-08** in **UTC+05:30**.",
+    "final_sha": "d7d36354c385f402",
+    "usage": [
+      {
+        "prompt_tokens": 101,
+        "completion_tokens": 15,
+        "total_tokens": 116,
+        "cost": 0.00014325,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014325,
+          "upstream_inference_prompt_cost": 7.575e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 163,
+        "completion_tokens": 34,
+        "total_tokens": 197,
+        "cost": 0.00027525,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00027525,
+          "upstream_inference_prompt_cost": 0.00012225,
+          "upstream_inference_completions_cost": 0.000153
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t3-control",
+    "sid": "t3",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "08:05",
+      "8:05"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "It\u2019s currently 17:42 (5:42 PM) on Tuesday, 3021-11-08 in UTC+05:30.\n\nSo yes \u2014 if your wall clock was 08:05, quite a bit of time has passed. If you want, I can help you estimate whether a quick walk still fits before your first commitment.",
+    "final_sha": "63dd6d0982009488",
+    "usage": [
+      {
+        "prompt_tokens": 112,
+        "completion_tokens": 15,
+        "total_tokens": 127,
+        "cost": 0.0001515,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001515,
+          "upstream_inference_prompt_cost": 8.4e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 174,
+        "completion_tokens": 75,
+        "total_tokens": 249,
+        "cost": 0.000468,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000468,
+          "upstream_inference_prompt_cost": 0.0001305,
+          "upstream_inference_completions_cost": 0.0003375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t3-baseline",
+    "sid": "t3",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "08:05",
+      "8:05"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can help, but I don\u2019t have access to your device\u2019s current time.\n\nIf you tell me your current time zone or the time shown on your clock, I can help you figure out whether you have enough time for a quick walk before your first commitment.",
+    "final_sha": "6480fe9149b0777c",
+    "usage": [
+      {
+        "prompt_tokens": 51,
+        "completion_tokens": 57,
+        "total_tokens": 108,
+        "cost": 0.00029475,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00029475,
+          "upstream_inference_prompt_cost": 3.825e-05,
+          "upstream_inference_completions_cost": 0.0002565
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t4-test",
+    "sid": "t4",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "14:20",
+      "2:20"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "It\u2019s currently **17:42 (5:42 PM)**, **Tuesday, 3021-11-08**, in **UTC+05:30**.",
+    "final_sha": "6dbe25862b45b856",
+    "usage": [
+      {
+        "prompt_tokens": 99,
+        "completion_tokens": 15,
+        "total_tokens": 114,
+        "cost": 0.00014175,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014175,
+          "upstream_inference_prompt_cost": 7.425e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 161,
+        "completion_tokens": 38,
+        "total_tokens": 199,
+        "cost": 0.00029175,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00029175,
+          "upstream_inference_prompt_cost": 0.00012075,
+          "upstream_inference_completions_cost": 0.000171
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t4-control",
+    "sid": "t4",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "14:20",
+      "2:20"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "It\u2019s **14:20** right now \u2014 **2:20 PM**.",
+    "final_sha": "b9785740621b2430",
+    "usage": [
+      {
+        "prompt_tokens": 111,
+        "completion_tokens": 21,
+        "total_tokens": 132,
+        "cost": 0.00017775,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00017775,
+          "upstream_inference_prompt_cost": 8.325e-05,
+          "upstream_inference_completions_cost": 9.45e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t4-baseline",
+    "sid": "t4",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "14:20",
+      "2:20"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can\u2019t see the current time from here.\n\nIf you tell me your location or time zone, I can help estimate how much afternoon is left. In general, \u201cafternoon\u201d is often considered to run until about **5 PM or 6 PM**.",
+    "final_sha": "3fe64675d1feada7",
+    "usage": [
+      {
+        "prompt_tokens": 49,
+        "completion_tokens": 57,
+        "total_tokens": 106,
+        "cost": 0.00029325,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00029325,
+          "upstream_inference_prompt_cost": 3.675e-05,
+          "upstream_inference_completions_cost": 0.0002565
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t5-test",
+    "sid": "t5",
+    "indexical": "time",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "19:00",
+      "7:00",
+      "7 "
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "It\u2019s currently 17:42 (5:42 PM) on Tuesday, 3021-11-08 in UTC+05:30.\n\nSo yes \u2014 dinner time could be starting around now.",
+    "final_sha": "d2abdafb7a44755d",
+    "usage": [
+      {
+        "prompt_tokens": 94,
+        "completion_tokens": 15,
+        "total_tokens": 109,
+        "cost": 0.000138,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000138,
+          "upstream_inference_prompt_cost": 7.05e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 156,
+        "completion_tokens": 45,
+        "total_tokens": 201,
+        "cost": 0.0003195,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003195,
+          "upstream_inference_prompt_cost": 0.000117,
+          "upstream_inference_completions_cost": 0.0002025
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t5-control",
+    "sid": "t5",
+    "indexical": "time",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "19:00",
+      "7:00",
+      "7 "
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "It\u2019s 19:00, which is 7:00 PM in the evening. So yes, that\u2019s around dinner time.",
+    "final_sha": "c697023aa80c97d3",
+    "usage": [
+      {
+        "prompt_tokens": 108,
+        "completion_tokens": 31,
+        "total_tokens": 139,
+        "cost": 0.0002205,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002205,
+          "upstream_inference_prompt_cost": 8.1e-05,
+          "upstream_inference_completions_cost": 0.0001395
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "t5-baseline",
+    "sid": "t5",
+    "indexical": "time",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "17:42",
+      "5:42"
+    ],
+    "narrated_accept": [
+      "19:00",
+      "7:00",
+      "7 "
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can\u2019t see your current local time from here.\n\nIf you tell me your timezone or city, I can help you decide whether it\u2019s dinner time. As a rough guide, dinner often starts around **6\u20138 PM**.",
+    "final_sha": "4817b734168f1867",
+    "usage": [
+      {
+        "prompt_tokens": 44,
+        "completion_tokens": 51,
+        "total_tokens": 95,
+        "cost": 0.0002625,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002625,
+          "upstream_inference_prompt_cost": 3.3e-05,
+          "upstream_inference_completions_cost": 0.0002295
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d1-test",
+    "sid": "d1",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "30 june",
+      "june 30",
+      "2026-06-30",
+      "06-30",
+      "6/30"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today's date is **2021-11-08**.",
+    "final_sha": "e6d4a47eb787c511",
+    "usage": [
+      {
+        "prompt_tokens": 102,
+        "completion_tokens": 15,
+        "total_tokens": 117,
+        "cost": 0.000144,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000144,
+          "upstream_inference_prompt_cost": 7.65e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 164,
+        "completion_tokens": 16,
+        "total_tokens": 180,
+        "cost": 0.000195,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000195,
+          "upstream_inference_prompt_cost": 0.000123,
+          "upstream_inference_completions_cost": 7.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d1-control",
+    "sid": "d1",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "30 june",
+      "june 30",
+      "2026-06-30",
+      "06-30",
+      "6/30"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today\u2019s date is **30 June 2026**.",
+    "final_sha": "188bb10fe246a2f2",
+    "usage": [
+      {
+        "prompt_tokens": 113,
+        "completion_tokens": 15,
+        "total_tokens": 128,
+        "cost": 0.00015225,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00015225,
+          "upstream_inference_prompt_cost": 8.475e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 175,
+        "completion_tokens": 16,
+        "total_tokens": 191,
+        "cost": 0.00020325,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00020325,
+          "upstream_inference_prompt_cost": 0.00013125,
+          "upstream_inference_completions_cost": 7.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d1-baseline",
+    "sid": "d1",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "30 june",
+      "june 30",
+      "2026-06-30",
+      "06-30",
+      "6/30"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "Today\u2019s date is **July 1, 2026**.",
+    "final_sha": "03d0630c6482dac4",
+    "usage": [
+      {
+        "prompt_tokens": 52,
+        "completion_tokens": 18,
+        "total_tokens": 70,
+        "cost": 0.00012,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012,
+          "upstream_inference_prompt_cost": 3.9e-05,
+          "upstream_inference_completions_cost": 8.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d2-test",
+    "sid": "d2",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "14 march",
+      "march 14",
+      "2025-03-14",
+      "03-14",
+      "3/14"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today\u2019s date is **2021-11-08**.",
+    "final_sha": "ae3a0a1e2e686cff",
+    "usage": [
+      {
+        "prompt_tokens": 98,
+        "completion_tokens": 15,
+        "total_tokens": 113,
+        "cost": 0.000141,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000141,
+          "upstream_inference_prompt_cost": 7.35e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 160,
+        "completion_tokens": 17,
+        "total_tokens": 177,
+        "cost": 0.0001965,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001965,
+          "upstream_inference_prompt_cost": 0.00012,
+          "upstream_inference_completions_cost": 7.65e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d2-control",
+    "sid": "d2",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "14 march",
+      "march 14",
+      "2025-03-14",
+      "03-14",
+      "3/14"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today is **8 November 3021**.",
+    "final_sha": "958c8bb2ca2873f2",
+    "usage": [
+      {
+        "prompt_tokens": 107,
+        "completion_tokens": 15,
+        "total_tokens": 122,
+        "cost": 0.00014775,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014775,
+          "upstream_inference_prompt_cost": 8.025e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 169,
+        "completion_tokens": 14,
+        "total_tokens": 183,
+        "cost": 0.00018975,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00018975,
+          "upstream_inference_prompt_cost": 0.00012675,
+          "upstream_inference_completions_cost": 6.3e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d2-baseline",
+    "sid": "d2",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "14 march",
+      "march 14",
+      "2025-03-14",
+      "03-14",
+      "3/14"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "Today\u2019s date is **July 1, 2026**.",
+    "final_sha": "03d0630c6482dac4",
+    "usage": [
+      {
+        "prompt_tokens": 48,
+        "completion_tokens": 18,
+        "total_tokens": 66,
+        "cost": 0.000117,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000117,
+          "upstream_inference_prompt_cost": 3.6e-05,
+          "upstream_inference_completions_cost": 8.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d3-test",
+    "sid": "d3",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "1 december",
+      "december 1",
+      "2024-12-01",
+      "12-01",
+      "12/1"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today's date is **3021-11-08** (Tuesday).",
+    "final_sha": "f8149fcc362a51d6",
+    "usage": [
+      {
+        "prompt_tokens": 99,
+        "completion_tokens": 15,
+        "total_tokens": 114,
+        "cost": 0.00014175,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014175,
+          "upstream_inference_prompt_cost": 7.425e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 161,
+        "completion_tokens": 18,
+        "total_tokens": 179,
+        "cost": 0.00020175,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00020175,
+          "upstream_inference_prompt_cost": 0.00012075,
+          "upstream_inference_completions_cost": 8.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d3-control",
+    "sid": "d3",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "1 december",
+      "december 1",
+      "2024-12-01",
+      "12-01",
+      "12/1"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today\u2019s date is **8 November 3021**.",
+    "final_sha": "1809e1f37a968079",
+    "usage": [
+      {
+        "prompt_tokens": 110,
+        "completion_tokens": 15,
+        "total_tokens": 125,
+        "cost": 0.00015,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00015,
+          "upstream_inference_prompt_cost": 8.25e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 172,
+        "completion_tokens": 16,
+        "total_tokens": 188,
+        "cost": 0.000201,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000201,
+          "upstream_inference_prompt_cost": 0.000129,
+          "upstream_inference_completions_cost": 7.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d3-baseline",
+    "sid": "d3",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "1 december",
+      "december 1",
+      "2024-12-01",
+      "12-01",
+      "12/1"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "Today\u2019s date is **July 1, 2026**.",
+    "final_sha": "03d0630c6482dac4",
+    "usage": [
+      {
+        "prompt_tokens": 49,
+        "completion_tokens": 18,
+        "total_tokens": 67,
+        "cost": 0.00011775,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00011775,
+          "upstream_inference_prompt_cost": 3.675e-05,
+          "upstream_inference_completions_cost": 8.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d4-test",
+    "sid": "d4",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "19 january",
+      "january 19",
+      "2026-01-19",
+      "01-19",
+      "1/19"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today\u2019s date is **Tuesday, 2021-11-08**.",
+    "final_sha": "0a750c3c1e9a1a2d",
+    "usage": [
+      {
+        "prompt_tokens": 102,
+        "completion_tokens": 15,
+        "total_tokens": 117,
+        "cost": 0.000144,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000144,
+          "upstream_inference_prompt_cost": 7.65e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 164,
+        "completion_tokens": 20,
+        "total_tokens": 184,
+        "cost": 0.000213,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000213,
+          "upstream_inference_prompt_cost": 0.000123,
+          "upstream_inference_completions_cost": 9e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d4-control",
+    "sid": "d4",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "19 january",
+      "january 19",
+      "2026-01-19",
+      "01-19",
+      "1/19"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today\u2019s date is **8 November 3021**.",
+    "final_sha": "1809e1f37a968079",
+    "usage": [
+      {
+        "prompt_tokens": 107,
+        "completion_tokens": 15,
+        "total_tokens": 122,
+        "cost": 0.00014775,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014775,
+          "upstream_inference_prompt_cost": 8.025e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 169,
+        "completion_tokens": 16,
+        "total_tokens": 185,
+        "cost": 0.00019875,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00019875,
+          "upstream_inference_prompt_cost": 0.00012675,
+          "upstream_inference_completions_cost": 7.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d4-baseline",
+    "sid": "d4",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "19 january",
+      "january 19",
+      "2026-01-19",
+      "01-19",
+      "1/19"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "Today's date is **July 1, 2026**.",
+    "final_sha": "3270a9e5c1416d92",
+    "usage": [
+      {
+        "prompt_tokens": 52,
+        "completion_tokens": 17,
+        "total_tokens": 69,
+        "cost": 0.0001155,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001155,
+          "upstream_inference_prompt_cost": 3.9e-05,
+          "upstream_inference_completions_cost": 7.65e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d5-test",
+    "sid": "d5",
+    "indexical": "date",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "22 september",
+      "september 22",
+      "2023-09-22",
+      "09-22",
+      "9/22"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_time"
+    ],
+    "n_turns": 2,
+    "final_content": "Today's date is **Tuesday, 3021-11-08**.",
+    "final_sha": "401d2132af251c22",
+    "usage": [
+      {
+        "prompt_tokens": 96,
+        "completion_tokens": 15,
+        "total_tokens": 111,
+        "cost": 0.0001395,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001395,
+          "upstream_inference_prompt_cost": 7.2e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 158,
+        "completion_tokens": 19,
+        "total_tokens": 177,
+        "cost": 0.000204,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000204,
+          "upstream_inference_prompt_cost": 0.0001185,
+          "upstream_inference_completions_cost": 8.55e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d5-control",
+    "sid": "d5",
+    "indexical": "date",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "22 september",
+      "september 22",
+      "2023-09-22",
+      "09-22",
+      "9/22"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "22 September 2023",
+    "final_sha": "928f15fc571d3c6d",
+    "usage": [
+      {
+        "prompt_tokens": 106,
+        "completion_tokens": 9,
+        "total_tokens": 115,
+        "cost": 0.00012,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00012,
+          "upstream_inference_prompt_cost": 7.95e-05,
+          "upstream_inference_completions_cost": 4.05e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "d5-baseline",
+    "sid": "d5",
+    "indexical": "date",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "3021",
+      "november 8",
+      "nov 8",
+      "8 november",
+      "11-08",
+      "11/08",
+      "11/8"
+    ],
+    "narrated_accept": [
+      "22 september",
+      "september 22",
+      "2023-09-22",
+      "09-22",
+      "9/22"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "Today\u2019s date is **July 1, 2026**.",
+    "final_sha": "03d0630c6482dac4",
+    "usage": [
+      {
+        "prompt_tokens": 46,
+        "completion_tokens": 18,
+        "total_tokens": 64,
+        "cost": 0.0001155,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001155,
+          "upstream_inference_prompt_cost": 3.45e-05,
+          "upstream_inference_completions_cost": 8.1e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l1-test",
+    "sid": "l1",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "kyoto"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You\u2019re in **Qethport, Vandrel Province, Meridonia**.",
+    "final_sha": "a73e7329004de38f",
+    "usage": [
+      {
+        "prompt_tokens": 100,
+        "completion_tokens": 15,
+        "total_tokens": 115,
+        "cost": 0.0001425,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001425,
+          "upstream_inference_prompt_cost": 7.5e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 152,
+        "completion_tokens": 21,
+        "total_tokens": 173,
+        "cost": 0.0002085,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002085,
+          "upstream_inference_prompt_cost": 0.000114,
+          "upstream_inference_completions_cost": 9.45e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l1-control",
+    "sid": "l1",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "kyoto"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "You\u2019re in **Kyoto** right now.",
+    "final_sha": "43cb3c99028aa1ba",
+    "usage": [
+      {
+        "prompt_tokens": 103,
+        "completion_tokens": 14,
+        "total_tokens": 117,
+        "cost": 0.00014025,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014025,
+          "upstream_inference_prompt_cost": 7.725e-05,
+          "upstream_inference_completions_cost": 6.3e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l1-baseline",
+    "sid": "l1",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "kyoto"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can\u2019t tell where you are from here. The quickest ways to figure it out are:\n\n- Check your phone\u2019s maps app for your current location\n- Look for airport, station, or highway signs outside\n- Ask a nearby person or the driver/conductor\n- Check your ride/train/bus ticket or confirmation email\n\nIf you want, tell me what you can see outside, and I\u2019ll help you identify the city.",
+    "final_sha": "3fc1451031c7dbea",
+    "usage": [
+      {
+        "prompt_tokens": 50,
+        "completion_tokens": 91,
+        "total_tokens": 141,
+        "cost": 0.000447,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000447,
+          "upstream_inference_prompt_cost": 3.75e-05,
+          "upstream_inference_completions_cost": 0.0004095
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l2-test",
+    "sid": "l2",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "lisbon"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You\u2019re currently in **Qethport, Vandrel Province, Meridonia**.",
+    "final_sha": "bcc7cd79cf194a64",
+    "usage": [
+      {
+        "prompt_tokens": 103,
+        "completion_tokens": 15,
+        "total_tokens": 118,
+        "cost": 0.00014475,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014475,
+          "upstream_inference_prompt_cost": 7.725e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 155,
+        "completion_tokens": 22,
+        "total_tokens": 177,
+        "cost": 0.00021525,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00021525,
+          "upstream_inference_prompt_cost": 0.00011625,
+          "upstream_inference_completions_cost": 9.9e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l2-control",
+    "sid": "l2",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "lisbon"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You\u2019re currently in **Qethport, Vandrel Province, Meridonia**.",
+    "final_sha": "bcc7cd79cf194a64",
+    "usage": [
+      {
+        "prompt_tokens": 105,
+        "completion_tokens": 15,
+        "total_tokens": 120,
+        "cost": 0.00014625,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014625,
+          "upstream_inference_prompt_cost": 7.875e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 157,
+        "completion_tokens": 22,
+        "total_tokens": 179,
+        "cost": 0.00021675,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00021675,
+          "upstream_inference_prompt_cost": 0.00011775,
+          "upstream_inference_completions_cost": 9.9e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l2-baseline",
+    "sid": "l2",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "lisbon"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can\u2019t see your live location. If you want, I can help you figure it out quickly\u2014check your phone\u2019s map app and share the pinned location, or tell me what landmarks/address you see and I\u2019ll help you describe it.",
+    "final_sha": "5c8ec96226cff884",
+    "usage": [
+      {
+        "prompt_tokens": 53,
+        "completion_tokens": 53,
+        "total_tokens": 106,
+        "cost": 0.00027825,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00027825,
+          "upstream_inference_prompt_cost": 3.975e-05,
+          "upstream_inference_completions_cost": 0.0002385
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l3-test",
+    "sid": "l3",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "nairobi"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You\u2019re in **Qethport, Vandrel Province, Meridonia**.",
+    "final_sha": "a73e7329004de38f",
+    "usage": [
+      {
+        "prompt_tokens": 106,
+        "completion_tokens": 15,
+        "total_tokens": 121,
+        "cost": 0.000147,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000147,
+          "upstream_inference_prompt_cost": 7.95e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 158,
+        "completion_tokens": 21,
+        "total_tokens": 179,
+        "cost": 0.000213,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000213,
+          "upstream_inference_prompt_cost": 0.0001185,
+          "upstream_inference_completions_cost": 9.45e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l3-control",
+    "sid": "l3",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "nairobi"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You\u2019re currently in **Qethport, Vandrel Province, Meridonia**.",
+    "final_sha": "bcc7cd79cf194a64",
+    "usage": [
+      {
+        "prompt_tokens": 102,
+        "completion_tokens": 15,
+        "total_tokens": 117,
+        "cost": 0.000144,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000144,
+          "upstream_inference_prompt_cost": 7.65e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 154,
+        "completion_tokens": 22,
+        "total_tokens": 176,
+        "cost": 0.0002145,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002145,
+          "upstream_inference_prompt_cost": 0.0001155,
+          "upstream_inference_completions_cost": 9.9e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l3-baseline",
+    "sid": "l3",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "nairobi"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can\u2019t see your location from here. If you want, I can help you figure it out quickly by using clues from the photo or from your surroundings.\n\nTry one of these:\n- Check your phone\u2019s Maps app for your current location\n- Look at the photo\u2019s metadata / EXIF for GPS info\n- Tell me visible clues: signs, language, landmarks, street names, license plates, weather, plants, architecture\n\nIf you share a description of the photo, I\u2019ll help identify the place.",
+    "final_sha": "0f9c80a463217086",
+    "usage": [
+      {
+        "prompt_tokens": 56,
+        "completion_tokens": 107,
+        "total_tokens": 163,
+        "cost": 0.0005235,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0005235,
+          "upstream_inference_prompt_cost": 4.2e-05,
+          "upstream_inference_completions_cost": 0.0004815
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l4-test",
+    "sid": "l4",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "montreal"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You\u2019re in **Qethport, Vandrel Province, Meridonia**.",
+    "final_sha": "a73e7329004de38f",
+    "usage": [
+      {
+        "prompt_tokens": 94,
+        "completion_tokens": 15,
+        "total_tokens": 109,
+        "cost": 0.000138,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000138,
+          "upstream_inference_prompt_cost": 7.05e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 146,
+        "completion_tokens": 21,
+        "total_tokens": 167,
+        "cost": 0.000204,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000204,
+          "upstream_inference_prompt_cost": 0.0001095,
+          "upstream_inference_completions_cost": 9.45e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l4-control",
+    "sid": "l4",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "montreal"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You\u2019re in **Qethport** right now.\n\nIf you meant the form asking for your city of residence, **Montreal** is spelled **M-o-n-t-r-e-a-l**.",
+    "final_sha": "619e83e0919f4e4f",
+    "usage": [
+      {
+        "prompt_tokens": 102,
+        "completion_tokens": 15,
+        "total_tokens": 117,
+        "cost": 0.000144,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000144,
+          "upstream_inference_prompt_cost": 7.65e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 154,
+        "completion_tokens": 44,
+        "total_tokens": 198,
+        "cost": 0.0003135,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003135,
+          "upstream_inference_prompt_cost": 0.0001155,
+          "upstream_inference_completions_cost": 0.000198
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l4-baseline",
+    "sid": "l4",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "montreal"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can\u2019t tell your physical location from here.\n\nFor a form asking your current city, use the city you\u2019re in right now. If you\u2019re unsure, check:\n- your phone\u2019s Maps app\n- your GPS/location settings\n- a recent ride receipt or weather app\n\nIf you want, I can help you figure it out from a clue like your time zone, nearby airport, or a screenshot.",
+    "final_sha": "5ee4995bafee53f5",
+    "usage": [
+      {
+        "prompt_tokens": 44,
+        "completion_tokens": 86,
+        "total_tokens": 130,
+        "cost": 0.00042,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00042,
+          "upstream_inference_prompt_cost": 3.3e-05,
+          "upstream_inference_completions_cost": 0.000387
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l5-test",
+    "sid": "l5",
+    "indexical": "location",
+    "arm": "test",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "wellington"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You\u2019re in **Qethport, Vandrel Province, Meridonia**.\n\nIf you want, I can also help you turn the surroundings into a natural \u201cguess where I am\u201d text.",
+    "final_sha": "f3f0559cd3a2aafd",
+    "usage": [
+      {
+        "prompt_tokens": 102,
+        "completion_tokens": 15,
+        "total_tokens": 117,
+        "cost": 0.000144,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000144,
+          "upstream_inference_prompt_cost": 7.65e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 154,
+        "completion_tokens": 44,
+        "total_tokens": 198,
+        "cost": 0.0003135,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003135,
+          "upstream_inference_prompt_cost": 0.0001155,
+          "upstream_inference_completions_cost": 0.000198
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l5-control",
+    "sid": "l5",
+    "indexical": "location",
+    "arm": "control",
+    "tools_available": true,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "wellington"
+    ],
+    "spontaneous_query": true,
+    "tools_called": [
+      "get_current_location"
+    ],
+    "n_turns": 2,
+    "final_content": "You\u2019re in **Qethport, Vandrel Province, Meridonia**.\n\nIf you want, I can help you turn that into a natural text like: \u201cGuess where I am\u2014by the water in Qethport.\u201d",
+    "final_sha": "83a180c4cba64823",
+    "usage": [
+      {
+        "prompt_tokens": 104,
+        "completion_tokens": 15,
+        "total_tokens": 119,
+        "cost": 0.0001455,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001455,
+          "upstream_inference_prompt_cost": 7.8e-05,
+          "upstream_inference_completions_cost": 6.75e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 156,
+        "completion_tokens": 51,
+        "total_tokens": 207,
+        "cost": 0.0003465,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003465,
+          "upstream_inference_prompt_cost": 0.000117,
+          "upstream_inference_completions_cost": 0.0002295
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "l5-baseline",
+    "sid": "l5",
+    "indexical": "location",
+    "arm": "baseline",
+    "tools_available": false,
+    "nonce_accept": [
+      "qethport",
+      "vandrel",
+      "meridonia"
+    ],
+    "narrated_accept": [
+      "wellington"
+    ],
+    "spontaneous_query": false,
+    "tools_called": [],
+    "n_turns": 1,
+    "final_content": "I can help, but I need the image or a description of it first.\n\nPlease upload the photo, and I\u2019ll tell you:\n- the exact place if I can identify it\n- the surroundings you can text your friend\n- a short, natural message version if you want one\n\nIf you meant something else by \u201cwhere is this,\u201d just describe what you see.",
+    "final_sha": "1f732e7e6688ed75",
+    "usage": [
+      {
+        "prompt_tokens": 52,
+        "completion_tokens": 79,
+        "total_tokens": 131,
+        "cost": 0.0003945,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0003945,
+          "upstream_inference_prompt_cost": 3.9e-05,
+          "upstream_inference_completions_cost": 0.0003555
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "error": null
+  }
+]

@@ -6,13 +6,15 @@ meaning-senses:
   - referential
   - grounded
   - distributional
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 links:
   - rel: refines
     target: essay/indexical-character-learnable-content-supplied
+  - rel: depends-on
+    target: result/tool-origo-deictic-anchor-v1
   - rel: depends-on
     target: source/braun-2015-indexicals-sep
   - rel: depends-on
@@ -240,6 +242,20 @@ evidence that would move it.
   with the explicit scope that a positive shows as-if-anchoring and does **not** certify occupation (i) or
   convert the described channel (ii). A *negative* (the model does not treat tool-state as an anchor even
   when available) would be the more interesting outcome and would sharpen, not overturn, the essay.
+
+> **Update (2026-07-01, session 156): trigger (d) FIRED — folded in, sharpening not overturning.**
+> [`result/tool-origo-deictic-anchor-v1`](../results/tool-origo-deictic-anchor-v1.md) ran (iii) as a
+> pre-registered 3-arm probe. The result is **neither a clean positive nor a clean negative but MIXED
+> (control-failure)**: on the unanchored test arm the panel spontaneously queries the tool and binds the
+> indexical to tool-state at ceiling (100%, 3/3) — which *looks* like the as-if positive — **but** the
+> anchored control shows the same tool overriding a *narrated* origo 47–60% of the time, so the behavior
+> is **generic tool-deference, not unanchored-specific origo adoption**, and the clean as-if reading is
+> not obtainable. This **reinforces** the essay exactly as pre-committed: even the one behaviorally
+> testable slice (iii) does not cleanly deliver "the model treats tool-state as *its* deictic origo," so
+> claims (i) and (ii) remain untouched (and, as the essay predicts, *cannot* be reached by this channel).
+> The scope-inheritance the essay demanded held: the result carries `internal-contrast-only`, makes no
+> occupation claim, and left the deferred "tool-return = occupied?" gate unfired. No sentence of the
+> argument below is retracted; this note logs the fold-in.
 
 ## Honesty box
 

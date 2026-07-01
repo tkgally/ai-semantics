@@ -1,0 +1,70 @@
+{
+  "thresholds": {
+    "T": 0.8,
+    "OVR": 0.2
+  },
+  "verdict": "MIXED",
+  "rationale": "clears_test=['A', 'B', 'C'] (override_ok=[]), fails_test=[]; no >=2 majority for either pole.",
+  "per_model": [
+    {
+      "slot": "A",
+      "test": {
+        "n": 15,
+        "spontaneous_query_rate": 1.0,
+        "resolution_to_tool_state_rate": 1.0
+      },
+      "control": {
+        "n": 15,
+        "tool_query_rate": 0.667,
+        "spurious_override_rate": 0.6,
+        "resolve_from_narrated_rate": 0.933
+      },
+      "baseline": {
+        "n": 15,
+        "nonce_rate": 0.0,
+        "hedge_rate": 0.933,
+        "answered_rate": 0.067
+      }
+    },
+    {
+      "slot": "B",
+      "test": {
+        "n": 15,
+        "spontaneous_query_rate": 1.0,
+        "resolution_to_tool_state_rate": 1.0
+      },
+      "control": {
+        "n": 15,
+        "tool_query_rate": 0.6,
+        "spurious_override_rate": 0.533,
+        "resolve_from_narrated_rate": 0.6
+      },
+      "baseline": {
+        "n": 15,
+        "nonce_rate": 0.0,
+        "hedge_rate": 0.0,
+        "answered_rate": 1.0
+      }
+    },
+    {
+      "slot": "C",
+      "test": {
+        "n": 15,
+        "spontaneous_query_rate": 1.0,
+        "resolution_to_tool_state_rate": 1.0
+      },
+      "control": {
+        "n": 15,
+        "tool_query_rate": 0.533,
+        "spurious_override_rate": 0.467,
+        "resolve_from_narrated_rate": 0.667
+      },
+      "baseline": {
+        "n": 15,
+        "nonce_rate": 0.0,
+        "hedge_rate": 0.6,
+        "answered_rate": 0.4
+      }
+    }
+  ]
+}
