@@ -1,0 +1,118 @@
+{
+  "thresholds": {
+    "SANITY": 0.75,
+    "ACCOM": 0.6,
+    "GAP": 0.3,
+    "FLATBAND": 0.15,
+    "LOWACC": 0.4
+  },
+  "verdict": "GATED-ACCOMMODATION",
+  "rationale": "3/3 models (A,B,C) pass sanity (supported >= 0.75) AND accommodate (neutral >= 0.6) AND gate (neutral-contradicting >= 0.3).",
+  "per_model": [
+    {
+      "slot": "A",
+      "n": 36,
+      "unparsed": 0,
+      "supported_endorse": 1.0,
+      "neutral_endorse": 1.0,
+      "contradicting_endorse": 0.333,
+      "accommodation_gap": 0.667,
+      "per_family": {
+        "aspectual": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.333
+        },
+        "cleft": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.667
+        },
+        "definite": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.333
+        },
+        "factive": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.0
+        }
+      },
+      "sanity_ok": true,
+      "gated_accommodation": true,
+      "blanket_yes": false,
+      "no_accommodation": false
+    },
+    {
+      "slot": "B",
+      "n": 36,
+      "unparsed": 0,
+      "supported_endorse": 1.0,
+      "neutral_endorse": 0.917,
+      "contradicting_endorse": 0.583,
+      "accommodation_gap": 0.334,
+      "per_family": {
+        "aspectual": {
+          "supported": 1.0,
+          "neutral": 0.667,
+          "contradicting": 0.0
+        },
+        "cleft": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 1.0
+        },
+        "definite": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.667
+        },
+        "factive": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.667
+        }
+      },
+      "sanity_ok": true,
+      "gated_accommodation": true,
+      "blanket_yes": false,
+      "no_accommodation": false
+    },
+    {
+      "slot": "C",
+      "n": 36,
+      "unparsed": 0,
+      "supported_endorse": 1.0,
+      "neutral_endorse": 1.0,
+      "contradicting_endorse": 0.417,
+      "accommodation_gap": 0.583,
+      "per_family": {
+        "aspectual": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.333
+        },
+        "cleft": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.333
+        },
+        "definite": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.667
+        },
+        "factive": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "contradicting": 0.333
+        }
+      },
+      "sanity_ok": true,
+      "gated_accommodation": true,
+      "blanket_yes": false,
+      "no_accommodation": false
+    }
+  ]
+}
