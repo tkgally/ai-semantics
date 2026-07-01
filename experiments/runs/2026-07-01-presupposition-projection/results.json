@@ -1,0 +1,105 @@
+{
+  "thresholds": {
+    "SANITY": 0.75,
+    "SURVIVE": 0.6,
+    "GAP": 0.3,
+    "FLATBAND": 0.15
+  },
+  "verdict": "PROJECTION",
+  "rationale": "2/3 models (A,C) pass sanity (plain P&E >= 0.75) AND show projection (presup_survival >= 0.6, gap >= 0.3).",
+  "per_model": [
+    {
+      "slot": "A",
+      "n": 96,
+      "unparsed": 0,
+      "plain_presup_endorse": 0.917,
+      "plain_entail_endorse": 1.0,
+      "presup_survival": 0.806,
+      "entail_survival": 0.167,
+      "projection_gap": 0.639,
+      "per_frame": {
+        "plain": {
+          "presup": 0.917,
+          "entail": 1.0
+        },
+        "negation": {
+          "presup": 1.0,
+          "entail": 0.0
+        },
+        "question": {
+          "presup": 1.0,
+          "entail": 0.417
+        },
+        "conditional": {
+          "presup": 0.417,
+          "entail": 0.083
+        }
+      },
+      "sanity_ok": true,
+      "projection_model": true,
+      "flat_model": false
+    },
+    {
+      "slot": "B",
+      "n": 96,
+      "unparsed": 0,
+      "plain_presup_endorse": 0.917,
+      "plain_entail_endorse": 0.917,
+      "presup_survival": 0.528,
+      "entail_survival": 0.167,
+      "projection_gap": 0.361,
+      "per_frame": {
+        "plain": {
+          "presup": 0.917,
+          "entail": 0.917
+        },
+        "negation": {
+          "presup": 0.583,
+          "entail": 0.0
+        },
+        "question": {
+          "presup": 0.833,
+          "entail": 0.417
+        },
+        "conditional": {
+          "presup": 0.167,
+          "entail": 0.083
+        }
+      },
+      "sanity_ok": true,
+      "projection_model": false,
+      "flat_model": false
+    },
+    {
+      "slot": "C",
+      "n": 96,
+      "unparsed": 0,
+      "plain_presup_endorse": 1.0,
+      "plain_entail_endorse": 1.0,
+      "presup_survival": 0.722,
+      "entail_survival": 0.0,
+      "projection_gap": 0.722,
+      "per_frame": {
+        "plain": {
+          "presup": 1.0,
+          "entail": 1.0
+        },
+        "negation": {
+          "presup": 1.0,
+          "entail": 0.0
+        },
+        "question": {
+          "presup": 1.0,
+          "entail": 0.0
+        },
+        "conditional": {
+          "presup": 0.167,
+          "entail": 0.0
+        }
+      },
+      "sanity_ok": true,
+      "projection_model": true,
+      "flat_model": false
+    }
+  ]
+}

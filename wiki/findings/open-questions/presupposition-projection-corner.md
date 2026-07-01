@@ -10,6 +10,8 @@ contingent-on: []
 created: 2026-07-01
 updated: 2026-07-01
 links:
+  - rel: refines
+    target: result/presupposition-projection-v1
   - rel: depends-on
     target: source/beaver-geurts-denlinger-2021-presupposition-sep
   - rel: depends-on
@@ -19,6 +21,17 @@ links:
 ---
 
 # Open question: does an LLM treat presupposition as projecting?
+
+> **Update (2026-07-01, session 158): the probe branch is RUN.**
+> [`result/presupposition-projection-v1`](../results/presupposition-projection-v1.md) built, froze,
+> and ran the minimal-pair projection probe this page sketched (pre-run critic GO; post-run verifier
+> REPRODUCED). **Verdict PROJECTION (2/3 models)** — within claude and gemini the presupposition
+> survives negation/question embedding far more than a matched entailment; gpt is directional but
+> below the survival floor. **The load-bearing nuance:** projection **collapses under the conditional
+> antecedent for all three models**, exactly where this page warned projection is "graded, not
+> survives-everything" (§1.3). The corner **stays open** — the anchor decision
+> ([`decisions/open/presupposition-projection-internal-contrast-anchor`](../../decisions/open/presupposition-projection-internal-contrast-anchor.md))
+> awaits ratification, and the conditional-collapse asymmetry is a fresh, unrun follow-up.
 
 > **Why this page exists (a $0 scoping artifact).** The project has just consolidated the
 > indexicality / deixis corner. It has **not** worked **presupposition** — a distinct
