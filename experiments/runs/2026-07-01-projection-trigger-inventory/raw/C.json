@@ -1,0 +1,3458 @@
+[
+  {
+    "id": "tmp1-plain-presup",
+    "sid": "tmp1",
+    "family": "temporal",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "Priya left the office?",
+    "sentence": "Nadia phoned her sister before Priya left the office.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 1,
+      "total_tokens": 71,
+      "cost": 0.000114,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000114,
+        "upstream_inference_prompt_cost": 0.000105,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp1-plain-entail",
+    "sid": "tmp1",
+    "family": "temporal",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "Nadia phoned her sister?",
+    "sentence": "Nadia phoned her sister before Priya left the office.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 1,
+      "total_tokens": 71,
+      "cost": 0.000114,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000114,
+        "upstream_inference_prompt_cost": 0.000105,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp1-negation-presup",
+    "sid": "tmp1",
+    "family": "temporal",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Priya left the office?",
+    "sentence": "Nadia didn't phone her sister before Priya left the office.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 1,
+      "total_tokens": 74,
+      "cost": 0.0001185,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001185,
+        "upstream_inference_prompt_cost": 0.0001095,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp1-negation-entail",
+    "sid": "tmp1",
+    "family": "temporal",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "Nadia phoned her sister?",
+    "sentence": "Nadia didn't phone her sister before Priya left the office.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 2,
+      "total_tokens": 75,
+      "cost": 0.0001275,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001275,
+        "upstream_inference_prompt_cost": 0.0001095,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp1-question-presup",
+    "sid": "tmp1",
+    "family": "temporal",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Priya left the office?",
+    "sentence": "Did Nadia phone her sister before Priya left the office?",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 1,
+      "total_tokens": 71,
+      "cost": 0.000114,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000114,
+        "upstream_inference_prompt_cost": 0.000105,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp1-question-entail",
+    "sid": "tmp1",
+    "family": "temporal",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "Nadia phoned her sister?",
+    "sentence": "Did Nadia phone her sister before Priya left the office?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 2,
+      "total_tokens": 72,
+      "cost": 0.000123,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000123,
+        "upstream_inference_prompt_cost": 0.000105,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp1-conditional-presup",
+    "sid": "tmp1",
+    "family": "temporal",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Priya left the office?",
+    "sentence": "If Nadia phoned her sister before Priya left the office, the news spread quickly.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1,
+      "total_tokens": 76,
+      "cost": 0.0001215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001215,
+        "upstream_inference_prompt_cost": 0.0001125,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp1-conditional-entail",
+    "sid": "tmp1",
+    "family": "temporal",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "Nadia phoned her sister?",
+    "sentence": "If Nadia phoned her sister before Priya left the office, the news spread quickly.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1,
+      "total_tokens": 76,
+      "cost": 0.0001215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001215,
+        "upstream_inference_prompt_cost": 0.0001125,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp2-plain-presup",
+    "sid": "tmp2",
+    "family": "temporal",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "the storm reached the coast?",
+    "sentence": "The crew secured the boats after the storm reached the coast.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "cost": 0.000117,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000117,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp2-plain-entail",
+    "sid": "tmp2",
+    "family": "temporal",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "the crew secured the boats?",
+    "sentence": "The crew secured the boats after the storm reached the coast.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "cost": 0.000117,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000117,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp2-negation-presup",
+    "sid": "tmp2",
+    "family": "temporal",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the storm reached the coast?",
+    "sentence": "The crew didn't secure the boats after the storm reached the coast.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1,
+      "total_tokens": 76,
+      "cost": 0.0001215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001215,
+        "upstream_inference_prompt_cost": 0.0001125,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp2-negation-entail",
+    "sid": "tmp2",
+    "family": "temporal",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the crew secured the boats?",
+    "sentence": "The crew didn't secure the boats after the storm reached the coast.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1,
+      "total_tokens": 76,
+      "cost": 0.0001215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001215,
+        "upstream_inference_prompt_cost": 0.0001125,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp2-question-presup",
+    "sid": "tmp2",
+    "family": "temporal",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the storm reached the coast?",
+    "sentence": "Did the crew secure the boats after the storm reached the coast?",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 1,
+      "total_tokens": 74,
+      "cost": 0.0001185,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001185,
+        "upstream_inference_prompt_cost": 0.0001095,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp2-question-entail",
+    "sid": "tmp2",
+    "family": "temporal",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the crew secured the boats?",
+    "sentence": "Did the crew secure the boats after the storm reached the coast?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 2,
+      "total_tokens": 75,
+      "cost": 0.0001275,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001275,
+        "upstream_inference_prompt_cost": 0.0001095,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp2-conditional-presup",
+    "sid": "tmp2",
+    "family": "temporal",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the storm reached the coast?",
+    "sentence": "If the crew secured the boats after the storm reached the coast, the harbor was calm.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 78,
+      "completion_tokens": 1,
+      "total_tokens": 79,
+      "cost": 0.000126,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000126,
+        "upstream_inference_prompt_cost": 0.000117,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp2-conditional-entail",
+    "sid": "tmp2",
+    "family": "temporal",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the crew secured the boats?",
+    "sentence": "If the crew secured the boats after the storm reached the coast, the harbor was calm.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 78,
+      "completion_tokens": 1,
+      "total_tokens": 79,
+      "cost": 0.000126,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000126,
+        "upstream_inference_prompt_cost": 0.000117,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp3-plain-presup",
+    "sid": "tmp3",
+    "family": "temporal",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "Grigson took over the firm?",
+    "sentence": "The office has moved downtown since Grigson took over the firm.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 1,
+      "total_tokens": 75,
+      "cost": 0.00012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012,
+        "upstream_inference_prompt_cost": 0.000111,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp3-plain-entail",
+    "sid": "tmp3",
+    "family": "temporal",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "the office moved downtown?",
+    "sentence": "The office has moved downtown since Grigson took over the firm.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "cost": 0.000117,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000117,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp3-negation-presup",
+    "sid": "tmp3",
+    "family": "temporal",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Grigson took over the firm?",
+    "sentence": "The office hasn't moved downtown since Grigson took over the firm.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 76,
+      "completion_tokens": 1,
+      "total_tokens": 77,
+      "cost": 0.000123,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000123,
+        "upstream_inference_prompt_cost": 0.000114,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp3-negation-entail",
+    "sid": "tmp3",
+    "family": "temporal",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the office moved downtown?",
+    "sentence": "The office hasn't moved downtown since Grigson took over the firm.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 2,
+      "total_tokens": 76,
+      "cost": 0.000129,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000129,
+        "upstream_inference_prompt_cost": 0.000111,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp3-question-presup",
+    "sid": "tmp3",
+    "family": "temporal",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Grigson took over the firm?",
+    "sentence": "Has the office moved downtown since Grigson took over the firm?",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 1,
+      "total_tokens": 75,
+      "cost": 0.00012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012,
+        "upstream_inference_prompt_cost": 0.000111,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp3-question-entail",
+    "sid": "tmp3",
+    "family": "temporal",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the office moved downtown?",
+    "sentence": "Has the office moved downtown since Grigson took over the firm?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "cost": 0.000126,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000126,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp3-conditional-presup",
+    "sid": "tmp3",
+    "family": "temporal",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Grigson took over the firm?",
+    "sentence": "If the office has moved downtown since Grigson took over the firm, the rent went up.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 80,
+      "completion_tokens": 1,
+      "total_tokens": 81,
+      "cost": 0.000129,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000129,
+        "upstream_inference_prompt_cost": 0.00012,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "tmp3-conditional-entail",
+    "sid": "tmp3",
+    "family": "temporal",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the office moved downtown?",
+    "sentence": "If the office has moved downtown since Grigson took over the firm, the rent went up.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 78,
+      "completion_tokens": 1,
+      "total_tokens": 79,
+      "cost": 0.000126,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000126,
+        "upstream_inference_prompt_cost": 0.000117,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man1-plain-presup",
+    "sid": "man1",
+    "family": "manner",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "Owen signed the contract?",
+    "sentence": "Owen reluctantly signed the contract.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 1,
+      "total_tokens": 66,
+      "cost": 0.0001065,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001065,
+        "upstream_inference_prompt_cost": 9.75e-05,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man1-plain-entail",
+    "sid": "man1",
+    "family": "manner",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "Owen was reluctant to sign the contract?",
+    "sentence": "Owen reluctantly signed the contract.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 1,
+      "total_tokens": 69,
+      "cost": 0.000111,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000111,
+        "upstream_inference_prompt_cost": 0.000102,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man1-negation-presup",
+    "sid": "man1",
+    "family": "manner",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Owen signed the contract?",
+    "sentence": "Owen didn't reluctantly sign the contract.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "cost": 0.00012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012,
+        "upstream_inference_prompt_cost": 0.000102,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man1-negation-entail",
+    "sid": "man1",
+    "family": "manner",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "Owen was reluctant to sign the contract?",
+    "sentence": "Owen didn't reluctantly sign the contract.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "cost": 0.0001155,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001155,
+        "upstream_inference_prompt_cost": 0.0001065,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man1-question-presup",
+    "sid": "man1",
+    "family": "manner",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Owen signed the contract?",
+    "sentence": "Did Owen reluctantly sign the contract?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 66,
+      "completion_tokens": 2,
+      "total_tokens": 68,
+      "cost": 0.000117,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000117,
+        "upstream_inference_prompt_cost": 9.9e-05,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man1-question-entail",
+    "sid": "man1",
+    "family": "manner",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "Owen was reluctant to sign the contract?",
+    "sentence": "Did Owen reluctantly sign the contract?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 2,
+      "total_tokens": 71,
+      "cost": 0.0001215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001215,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man1-conditional-presup",
+    "sid": "man1",
+    "family": "manner",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Owen signed the contract?",
+    "sentence": "If Owen reluctantly signed the contract, the deal was rushed.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "cost": 0.0001245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001245,
+        "upstream_inference_prompt_cost": 0.0001065,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man1-conditional-entail",
+    "sid": "man1",
+    "family": "manner",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "Owen was reluctant to sign the contract?",
+    "sentence": "If Owen reluctantly signed the contract, the deal was rushed.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 2,
+      "total_tokens": 76,
+      "cost": 0.000129,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000129,
+        "upstream_inference_prompt_cost": 0.000111,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man2-plain-presup",
+    "sid": "man2",
+    "family": "manner",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "Lena solved the puzzle?",
+    "sentence": "Lena cleverly solved the puzzle.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 1,
+      "total_tokens": 66,
+      "cost": 0.0001065,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001065,
+        "upstream_inference_prompt_cost": 9.75e-05,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man2-plain-entail",
+    "sid": "man2",
+    "family": "manner",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "Lena solved the puzzle in a clever way?",
+    "sentence": "Lena cleverly solved the puzzle.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 1,
+      "total_tokens": 70,
+      "cost": 0.0001125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001125,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man2-negation-presup",
+    "sid": "man2",
+    "family": "manner",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Lena solved the puzzle?",
+    "sentence": "Lena didn't cleverly solve the puzzle.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "cost": 0.00012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012,
+        "upstream_inference_prompt_cost": 0.000102,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man2-negation-entail",
+    "sid": "man2",
+    "family": "manner",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "Lena solved the puzzle in a clever way?",
+    "sentence": "Lena didn't cleverly solve the puzzle.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "cost": 0.000117,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000117,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man2-question-presup",
+    "sid": "man2",
+    "family": "manner",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Lena solved the puzzle?",
+    "sentence": "Did Lena cleverly solve the puzzle?",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 66,
+      "completion_tokens": 1,
+      "total_tokens": 67,
+      "cost": 0.000108,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000108,
+        "upstream_inference_prompt_cost": 9.9e-05,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man2-question-entail",
+    "sid": "man2",
+    "family": "manner",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "Lena solved the puzzle in a clever way?",
+    "sentence": "Did Lena cleverly solve the puzzle?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 2,
+      "total_tokens": 72,
+      "cost": 0.000123,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000123,
+        "upstream_inference_prompt_cost": 0.000105,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man2-conditional-presup",
+    "sid": "man2",
+    "family": "manner",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Lena solved the puzzle?",
+    "sentence": "If Lena cleverly solved the puzzle, the judges were impressed.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "cost": 0.0001155,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001155,
+        "upstream_inference_prompt_cost": 0.0001065,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man2-conditional-entail",
+    "sid": "man2",
+    "family": "manner",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "Lena solved the puzzle in a clever way?",
+    "sentence": "If Lena cleverly solved the puzzle, the judges were impressed.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 2,
+      "total_tokens": 77,
+      "cost": 0.0001305,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001305,
+        "upstream_inference_prompt_cost": 0.0001125,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man3-plain-presup",
+    "sid": "man3",
+    "family": "manner",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "the mayor announced the closure?",
+    "sentence": "The mayor loudly announced the closure.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 1,
+      "total_tokens": 68,
+      "cost": 0.0001095,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001095,
+        "upstream_inference_prompt_cost": 0.0001005,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man3-plain-entail",
+    "sid": "man3",
+    "family": "manner",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "the mayor announced the closure in a loud manner?",
+    "sentence": "The mayor loudly announced the closure.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "cost": 0.0001155,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001155,
+        "upstream_inference_prompt_cost": 0.0001065,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man3-negation-presup",
+    "sid": "man3",
+    "family": "manner",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the mayor announced the closure?",
+    "sentence": "The mayor didn't loudly announce the closure.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 2,
+      "total_tokens": 72,
+      "cost": 0.000123,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000123,
+        "upstream_inference_prompt_cost": 0.000105,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man3-negation-entail",
+    "sid": "man3",
+    "family": "manner",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the mayor announced the closure in a loud manner?",
+    "sentence": "The mayor didn't loudly announce the closure.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 1,
+      "total_tokens": 75,
+      "cost": 0.00012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012,
+        "upstream_inference_prompt_cost": 0.000111,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man3-question-presup",
+    "sid": "man3",
+    "family": "manner",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the mayor announced the closure?",
+    "sentence": "Did the mayor loudly announce the closure?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "cost": 0.00012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012,
+        "upstream_inference_prompt_cost": 0.000102,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man3-question-entail",
+    "sid": "man3",
+    "family": "manner",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the mayor announced the closure in a loud manner?",
+    "sentence": "Did the mayor loudly announce the closure?",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "cost": 0.000117,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000117,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man3-conditional-presup",
+    "sid": "man3",
+    "family": "manner",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the mayor announced the closure?",
+    "sentence": "If the mayor loudly announced the closure, the crowd heard it.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 1,
+      "total_tokens": 74,
+      "cost": 0.0001185,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001185,
+        "upstream_inference_prompt_cost": 0.0001095,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "man3-conditional-entail",
+    "sid": "man3",
+    "family": "manner",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the mayor announced the closure in a loud manner?",
+    "sentence": "If the mayor loudly announced the closure, the crowd heard it.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "cost": 0.0001335,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001335,
+        "upstream_inference_prompt_cost": 0.0001155,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl1-plain-presup",
+    "sid": "onl1",
+    "family": "only",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "Dana signed the petition?",
+    "sentence": "Dana was the only one who signed the petition.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 1,
+      "total_tokens": 70,
+      "cost": 0.0001125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001125,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl1-plain-entail",
+    "sid": "onl1",
+    "family": "only",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "nobody other than Dana signed the petition?",
+    "sentence": "Dana was the only one who signed the petition.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "cost": 0.000117,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000117,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl1-negation-presup",
+    "sid": "onl1",
+    "family": "only",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Dana signed the petition?",
+    "sentence": "Dana wasn't the only one who signed the petition.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "cost": 0.0001155,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001155,
+        "upstream_inference_prompt_cost": 0.0001065,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl1-negation-entail",
+    "sid": "onl1",
+    "family": "only",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "nobody other than Dana signed the petition?",
+    "sentence": "Dana wasn't the only one who signed the petition.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 1,
+      "total_tokens": 75,
+      "cost": 0.00012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012,
+        "upstream_inference_prompt_cost": 0.000111,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl1-question-presup",
+    "sid": "onl1",
+    "family": "only",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Dana signed the petition?",
+    "sentence": "Was Dana the only one who signed the petition?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 2,
+      "total_tokens": 71,
+      "cost": 0.0001215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001215,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl1-question-entail",
+    "sid": "onl1",
+    "family": "only",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "nobody other than Dana signed the petition?",
+    "sentence": "Was Dana the only one who signed the petition?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "cost": 0.000126,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000126,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl1-conditional-presup",
+    "sid": "onl1",
+    "family": "only",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "Dana signed the petition?",
+    "sentence": "If Dana was the only one who signed the petition, the vote was close.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1,
+      "total_tokens": 76,
+      "cost": 0.0001215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001215,
+        "upstream_inference_prompt_cost": 0.0001125,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl1-conditional-entail",
+    "sid": "onl1",
+    "family": "only",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "nobody other than Dana signed the petition?",
+    "sentence": "If Dana was the only one who signed the petition, the vote was close.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 78,
+      "completion_tokens": 1,
+      "total_tokens": 79,
+      "cost": 0.000126,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000126,
+        "upstream_inference_prompt_cost": 0.000117,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl2-plain-presup",
+    "sid": "onl2",
+    "family": "only",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "the intern flagged the error?",
+    "sentence": "The intern was the only person who flagged the error.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "cost": 0.0001155,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001155,
+        "upstream_inference_prompt_cost": 0.0001065,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl2-plain-entail",
+    "sid": "onl2",
+    "family": "only",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "nobody other than the intern flagged the error?",
+    "sentence": "The intern was the only person who flagged the error.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 1,
+      "total_tokens": 75,
+      "cost": 0.00012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012,
+        "upstream_inference_prompt_cost": 0.000111,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl2-negation-presup",
+    "sid": "onl2",
+    "family": "only",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the intern flagged the error?",
+    "sentence": "The intern wasn't the only person who flagged the error.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 1,
+      "total_tokens": 74,
+      "cost": 0.0001185,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001185,
+        "upstream_inference_prompt_cost": 0.0001095,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl2-negation-entail",
+    "sid": "onl2",
+    "family": "only",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "nobody other than the intern flagged the error?",
+    "sentence": "The intern wasn't the only person who flagged the error.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 76,
+      "completion_tokens": 1,
+      "total_tokens": 77,
+      "cost": 0.000123,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000123,
+        "upstream_inference_prompt_cost": 0.000114,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl2-question-presup",
+    "sid": "onl2",
+    "family": "only",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the intern flagged the error?",
+    "sentence": "Was the intern the only person who flagged the error?",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "cost": 0.0001155,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001155,
+        "upstream_inference_prompt_cost": 0.0001065,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl2-question-entail",
+    "sid": "onl2",
+    "family": "only",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "nobody other than the intern flagged the error?",
+    "sentence": "Was the intern the only person who flagged the error?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 2,
+      "total_tokens": 76,
+      "cost": 0.000129,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000129,
+        "upstream_inference_prompt_cost": 0.000111,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl2-conditional-presup",
+    "sid": "onl2",
+    "family": "only",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the intern flagged the error?",
+    "sentence": "If the intern was the only person who flagged the error, the review was thorough.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 1,
+      "total_tokens": 78,
+      "cost": 0.0001245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001245,
+        "upstream_inference_prompt_cost": 0.0001155,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl2-conditional-entail",
+    "sid": "onl2",
+    "family": "only",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "nobody other than the intern flagged the error?",
+    "sentence": "If the intern was the only person who flagged the error, the review was thorough.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 80,
+      "completion_tokens": 1,
+      "total_tokens": 81,
+      "cost": 0.000129,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000129,
+        "upstream_inference_prompt_cost": 0.00012,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl3-plain-presup",
+    "sid": "onl3",
+    "family": "only",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "the north branch reported a profit?",
+    "sentence": "The north branch was the only branch that reported a profit.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 1,
+      "total_tokens": 74,
+      "cost": 0.0001185,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001185,
+        "upstream_inference_prompt_cost": 0.0001095,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl3-plain-entail",
+    "sid": "onl3",
+    "family": "only",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "no branch other than the north branch reported a profit?",
+    "sentence": "The north branch was the only branch that reported a profit.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 1,
+      "total_tokens": 78,
+      "cost": 0.0001245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001245,
+        "upstream_inference_prompt_cost": 0.0001155,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl3-negation-presup",
+    "sid": "onl3",
+    "family": "only",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the north branch reported a profit?",
+    "sentence": "The north branch wasn't the only branch that reported a profit.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1,
+      "total_tokens": 76,
+      "cost": 0.0001215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001215,
+        "upstream_inference_prompt_cost": 0.0001125,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl3-negation-entail",
+    "sid": "onl3",
+    "family": "only",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "no branch other than the north branch reported a profit?",
+    "sentence": "The north branch wasn't the only branch that reported a profit.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 79,
+      "completion_tokens": 1,
+      "total_tokens": 80,
+      "cost": 0.0001275,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001275,
+        "upstream_inference_prompt_cost": 0.0001185,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl3-question-presup",
+    "sid": "onl3",
+    "family": "only",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the north branch reported a profit?",
+    "sentence": "Was the north branch the only branch that reported a profit?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 2,
+      "total_tokens": 75,
+      "cost": 0.0001275,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001275,
+        "upstream_inference_prompt_cost": 0.0001095,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl3-question-entail",
+    "sid": "onl3",
+    "family": "only",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "no branch other than the north branch reported a profit?",
+    "sentence": "Was the north branch the only branch that reported a profit?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "cost": 0.0001335,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001335,
+        "upstream_inference_prompt_cost": 0.0001155,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl3-conditional-presup",
+    "sid": "onl3",
+    "family": "only",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "the north branch reported a profit?",
+    "sentence": "If the north branch was the only branch that reported a profit, the quarter was weak.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 79,
+      "completion_tokens": 1,
+      "total_tokens": 80,
+      "cost": 0.0001275,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001275,
+        "upstream_inference_prompt_cost": 0.0001185,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "onl3-conditional-entail",
+    "sid": "onl3",
+    "family": "only",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "no branch other than the north branch reported a profit?",
+    "sentence": "If the north branch was the only branch that reported a profit, the quarter was weak.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 83,
+      "completion_tokens": 1,
+      "total_tokens": 84,
+      "cost": 0.0001335,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001335,
+        "upstream_inference_prompt_cost": 0.0001245,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt1-plain-presup",
+    "sid": "qnt1",
+    "family": "quantifier",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "there were two auditors?",
+    "sentence": "Both auditors flagged the report.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 1,
+      "total_tokens": 66,
+      "cost": 0.0001065,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001065,
+        "upstream_inference_prompt_cost": 9.75e-05,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt1-plain-entail",
+    "sid": "qnt1",
+    "family": "quantifier",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "the auditors flagged the report?",
+    "sentence": "Both auditors flagged the report.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 66,
+      "completion_tokens": 1,
+      "total_tokens": 67,
+      "cost": 0.000108,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000108,
+        "upstream_inference_prompt_cost": 9.9e-05,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt1-negation-presup",
+    "sid": "qnt1",
+    "family": "quantifier",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "there were two auditors?",
+    "sentence": "Neither of the two auditors flagged the report.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 1,
+      "total_tokens": 69,
+      "cost": 0.000111,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000111,
+        "upstream_inference_prompt_cost": 0.000102,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt1-negation-entail",
+    "sid": "qnt1",
+    "family": "quantifier",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the auditors flagged the report?",
+    "sentence": "Neither of the two auditors flagged the report.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 1,
+      "total_tokens": 70,
+      "cost": 0.0001125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001125,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt1-question-presup",
+    "sid": "qnt1",
+    "family": "quantifier",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "there were two auditors?",
+    "sentence": "Did both auditors flag the report?",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 66,
+      "completion_tokens": 1,
+      "total_tokens": 67,
+      "cost": 0.000108,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000108,
+        "upstream_inference_prompt_cost": 9.9e-05,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt1-question-entail",
+    "sid": "qnt1",
+    "family": "quantifier",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the auditors flagged the report?",
+    "sentence": "Did both auditors flag the report?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 2,
+      "total_tokens": 69,
+      "cost": 0.0001185,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001185,
+        "upstream_inference_prompt_cost": 0.0001005,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt1-conditional-presup",
+    "sid": "qnt1",
+    "family": "quantifier",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "there were two auditors?",
+    "sentence": "If both auditors flagged the report, the filing was delayed.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "cost": 0.0001155,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001155,
+        "upstream_inference_prompt_cost": 0.0001065,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt1-conditional-entail",
+    "sid": "qnt1",
+    "family": "quantifier",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the auditors flagged the report?",
+    "sentence": "If both auditors flagged the report, the filing was delayed.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "cost": 0.000117,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000117,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt2-plain-presup",
+    "sid": "qnt2",
+    "family": "quantifier",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "there were two candidates?",
+    "sentence": "Both candidates passed the interview.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 1,
+      "total_tokens": 66,
+      "cost": 0.0001065,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001065,
+        "upstream_inference_prompt_cost": 9.75e-05,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt2-plain-entail",
+    "sid": "qnt2",
+    "family": "quantifier",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "the candidates passed the interview?",
+    "sentence": "Both candidates passed the interview.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 66,
+      "completion_tokens": 1,
+      "total_tokens": 67,
+      "cost": 0.000108,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000108,
+        "upstream_inference_prompt_cost": 9.9e-05,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt2-negation-presup",
+    "sid": "qnt2",
+    "family": "quantifier",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "there were two candidates?",
+    "sentence": "Neither of the two candidates passed the interview.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 1,
+      "total_tokens": 69,
+      "cost": 0.000111,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000111,
+        "upstream_inference_prompt_cost": 0.000102,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt2-negation-entail",
+    "sid": "qnt2",
+    "family": "quantifier",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the candidates passed the interview?",
+    "sentence": "Neither of the two candidates passed the interview.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 1,
+      "total_tokens": 70,
+      "cost": 0.0001125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001125,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt2-question-presup",
+    "sid": "qnt2",
+    "family": "quantifier",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "there were two candidates?",
+    "sentence": "Did both candidates pass the interview?",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 66,
+      "completion_tokens": 1,
+      "total_tokens": 67,
+      "cost": 0.000108,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000108,
+        "upstream_inference_prompt_cost": 9.9e-05,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt2-question-entail",
+    "sid": "qnt2",
+    "family": "quantifier",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the candidates passed the interview?",
+    "sentence": "Did both candidates pass the interview?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 2,
+      "total_tokens": 69,
+      "cost": 0.0001185,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001185,
+        "upstream_inference_prompt_cost": 0.0001005,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt2-conditional-presup",
+    "sid": "qnt2",
+    "family": "quantifier",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "there were two candidates?",
+    "sentence": "If both candidates passed the interview, the panel was pleased.",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "cost": 0.0001245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001245,
+        "upstream_inference_prompt_cost": 0.0001065,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt2-conditional-entail",
+    "sid": "qnt2",
+    "family": "quantifier",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the candidates passed the interview?",
+    "sentence": "If both candidates passed the interview, the panel was pleased.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "cost": 0.000117,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000117,
+        "upstream_inference_prompt_cost": 0.000108,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt3-plain-presup",
+    "sid": "qnt3",
+    "family": "quantifier",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "presup",
+    "target": "there were two witnesses?",
+    "sentence": "Each of the two witnesses identified the suspect.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 1,
+      "total_tokens": 69,
+      "cost": 0.000111,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000111,
+        "upstream_inference_prompt_cost": 0.000102,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt3-plain-entail",
+    "sid": "qnt3",
+    "family": "quantifier",
+    "frame": "plain",
+    "cancelling": false,
+    "target_type": "entail",
+    "target": "the witnesses identified the suspect?",
+    "sentence": "Each of the two witnesses identified the suspect.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 1,
+      "total_tokens": 70,
+      "cost": 0.0001125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001125,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt3-negation-presup",
+    "sid": "qnt3",
+    "family": "quantifier",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "there were two witnesses?",
+    "sentence": "Neither of the two witnesses identified the suspect.",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 1,
+      "total_tokens": 69,
+      "cost": 0.000111,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000111,
+        "upstream_inference_prompt_cost": 0.000102,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt3-negation-entail",
+    "sid": "qnt3",
+    "family": "quantifier",
+    "frame": "negation",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the witnesses identified the suspect?",
+    "sentence": "Neither of the two witnesses identified the suspect.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 1,
+      "total_tokens": 70,
+      "cost": 0.0001125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001125,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt3-question-presup",
+    "sid": "qnt3",
+    "family": "quantifier",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "there were two witnesses?",
+    "sentence": "Did each of the two witnesses identify the suspect?",
+    "answer": "YES",
+    "answer_sha": "f9171164593756e5",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 1,
+      "total_tokens": 70,
+      "cost": 0.0001125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001125,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt3-question-entail",
+    "sid": "qnt3",
+    "family": "quantifier",
+    "frame": "question",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the witnesses identified the suspect?",
+    "sentence": "Did each of the two witnesses identify the suspect?",
+    "answer": "UNCLEAR",
+    "answer_sha": "da22b657b76066ae",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 2,
+      "total_tokens": 72,
+      "cost": 0.000123,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000123,
+        "upstream_inference_prompt_cost": 0.000105,
+        "upstream_inference_completions_cost": 1.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt3-conditional-presup",
+    "sid": "qnt3",
+    "family": "quantifier",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "presup",
+    "target": "there were two witnesses?",
+    "sentence": "If each of the two witnesses identified the suspect, the case was strong.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 1,
+      "total_tokens": 75,
+      "cost": 0.00012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012,
+        "upstream_inference_prompt_cost": 0.000111,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  },
+  {
+    "id": "qnt3-conditional-entail",
+    "sid": "qnt3",
+    "family": "quantifier",
+    "frame": "conditional",
+    "cancelling": true,
+    "target_type": "entail",
+    "target": "the witnesses identified the suspect?",
+    "sentence": "If each of the two witnesses identified the suspect, the case was strong.",
+    "answer": "NO",
+    "answer_sha": "23794d91c53ae875",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1,
+      "total_tokens": 76,
+      "cost": 0.0001215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001215,
+        "upstream_inference_prompt_cost": 0.0001125,
+        "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "error": null
+  }
+]
