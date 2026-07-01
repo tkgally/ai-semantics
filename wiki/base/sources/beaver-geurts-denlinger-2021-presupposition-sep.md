@@ -27,7 +27,7 @@ The Stanford Encyclopedia of Philosophy (SEP) survey entry on **presupposition**
 
 This is a philosophy-of-language / linguistic-semantics source about **human language**. It makes no claim about LLMs. The project uses it only as an a-priori interpretive frame and as the scoping source for a fresh grammatical corner; see *What it grounds*.
 
-**Provenance.** All quotes below were verified verbatim against the dated archived edition (a frozen snapshot) at `https://plato.stanford.edu/archives/fall2024/entries/presupposition/` (retrieved 2026-07-01), whose body carries the Thu Jan 7, 2021 substantive-revision text. Section names are the locators; SEP entries are not paginated. The entry uses **typographic quotation marks** (" ") around mentioned expressions and an arrow (→) to display an inference from a sentence to its presupposition; these are reproduced as written, and italicized words in the original are marked with underscores. The full author list and preferred citation were confirmed against the entry's "Author and Citation Information" page (`https://plato.stanford.edu/cgi-bin/encyclopedia/archinfo.cgi?entry=presupposition`), which gives the preferred citation "Beaver, David I., Bart Geurts, and Kristie Denlinger, 'Presupposition', _The Stanford Encyclopedia of Philosophy_ …"; the footer copyright line "Copyright © 2021 by David I. Beaver … Bart Geurts … Kristie Denlinger" was verified against the archived page directly, fixing the substantive-revision year at **2021** (hence this page's id/year).
+**Provenance.** All quotes below were verified verbatim against the dated archived edition (a frozen snapshot) at `https://plato.stanford.edu/archives/fall2024/entries/presupposition/` (retrieved 2026-07-01), whose body carries the Thu Jan 7, 2021 substantive-revision text. Section names are the locators; SEP entries are not paginated. The entry uses **typographic quotation marks** (" ") around mentioned expressions and an arrow (→) to display an inference from a sentence to its presupposition; these are reproduced as written, and italicized words in the original are marked with underscores. The full author list and preferred citation were confirmed against the entry's "Author and Citation Information" page (`https://plato.stanford.edu/cgi-bin/encyclopedia/archinfo.cgi?entry=presupposition`), which gives the preferred citation "Beaver, David I., Bart Geurts, and Kristie Denlinger, 'Presupposition', _The Stanford Encyclopedia of Philosophy_ …"; the footer copyright line "Copyright © 2021 by David I. Beaver … Bart Geurts … Kristie Denlinger" was verified against the archived page directly, fixing the substantive-revision year at **2021** (hence this page's id/year). **Accommodation quotes (§5, §5.1) added 2026-07-01 (session 161):** retrieved from the same archived edition and cross-checked across two independent retrievals for consistency; the displayed Karttunen 1974: 191 passage matches the widely-cited original ("the rule rather than the exception"; "the listener is entitled and expected to extend it as required"), and the bracketed ellipsis […] marks a cut in the entry's own block quotation, reproduced as printed.
 
 ## The typology it provides
 
@@ -78,12 +78,52 @@ And it is explicit that projection is defeasible, not absolute — the "projecti
 
 > "Presuppositions typically project, but often do not, and most of the empirical and theoretical work on presupposition since the 1970s has been taken up with the task of describing and explaining when presuppositions project, and when they don't."
 
+### Accommodation
+
+A second, distinct presuppositional phenomenon the entry surveys, complementary to projection: when a
+speaker uses a sentence whose presupposition is **not** already satisfied in the conversational
+context, the hearer may quietly **add** it — treat the backgrounded content as given — rather than
+reject the utterance. From **§5 ("Accommodation")**:
+
+> "The most important feature of the satisfaction model not covered in the description above is
+> accommodation. Accommodation was first discussed by Karttunen (1974) and Stalnaker (1974), though
+> only named as such by Lewis (1979)."
+
+The entry introduces the concept with Karttunen's own statement of it (§5, quoting Karttunen 1974:
+191):
+
+> "Ordinary conversation does not always proceed in the ideal orderly fashion described earlier.
+> People do make leaps and shortcuts by using sentences whose presuppositions are not satisfied in the
+> conversational context. This is the rule rather than the exception […] I think we can maintain that a
+> sentence is always taken to be an increment to a context that satisfies its presuppositions. If the
+> current conversational context does not suffice, the listener is entitled and expected to extend it
+> as required."
+
+The entry is explicit that accommodation is **contested** and **not uniform** — two bounds the project
+must carry when it uses the notion. On its contested status (§5):
+
+> "If this looks reasonably straightforward, the reader should be warned that accommodation is among
+> the more contentious topics in presupposition theory."
+
+And on its non-uniformity — accommodation is easier for some triggers/contexts than others (§5.1,
+"Global and Local Accommodation"):
+
+> "One last issue we would like to mention is that accommodation isn't always equally easy (or hard)."
+
+The entry's accommodation material is organized under **§5 ("Accommodation")** with subsections **§5.1
+("Global and Local Accommodation")**, **§5.2 ("Accommodating Presuppositions in Satisfaction
+Framework")**, and **§5.3 ("Resolving and Accommodating Presuppositions in DRT")** — a "where is the
+presupposition added?" (global vs. local) axis and two framework-specific treatments (the satisfaction
+model and DRT). The project imports only the top-level phenomenon (a hearer extends the context to
+satisfy an unmet presupposition), not the competing formal treatments.
+
 ## What it grounds in this project (relevance)
 
 This source supplies an **a-priori** semantic frame for a grammatical corner the project has not yet worked: **presupposition and projection**. Its specific use is to license the scoping open-question [`open-question/presupposition-projection-corner`](../../findings/open-questions/presupposition-projection-corner.md), which sketches (does not run) a minimal-pair probe of whether a model treats a triggered presupposition as *surviving* an entailment-cancelling embedding (negation / question / conditional antecedent) while a matched ordinary entailment does not.
 
 - The projection contrast is a clean **behavioral** wedge: the diagnostic is *survival under embedding*, a forced-choice or inference judgment, not a distributional similarity. It therefore falls under [`concept/inferential-meaning`](../concepts/inferential-meaning.md) (which inferences a construction licenses to and from) — and, because triggers have characteristic distributions a next-token learner is well suited to, it sits against the [`concept/distributional-meaning`](../concepts/distributional-meaning.md) null (a model may reproduce the trigger's *distribution* without treating its presupposition as projecting).
 - The frame is a-priori: it tells the project *where* in the grammar the projection signature lives (a fixed inventory of triggers, a fixed set of entailment-cancelling environments) **before** any probe. The open-question owns the application and makes **no** human-vs-LLM empirical claim.
+- **Accommodation** (the §5 material added this session) supplies a **second, distinct** presuppositional corner beyond projection: not *survival under embedding* but *supplying an unmet presupposition to make sense of an utterance*. It scopes the sketch open-question [`open-question/presupposition-accommodation-corner`](../../findings/open-questions/presupposition-accommodation-corner.md), which sketches (does not run) whether a model treats a triggered presupposition as *given* when it is new to the context, and whether that behavior is graded by trigger/context the way the source says human accommodation is ("isn't always equally easy (or hard)", §5.1). The a-priori bounds carry over: the source flags accommodation as **contested** (§5) and **non-uniform** (§5.1), so any probe reads a within-model behavioral pattern, never a human accommodation baseline.
 
 **Honest bounds (these matter):**
 
