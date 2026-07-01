@@ -29,9 +29,10 @@ links:
 > survives negation/question embedding far more than a matched entailment; gpt is directional but
 > below the survival floor. **The load-bearing nuance:** projection **collapses under the conditional
 > antecedent for all three models**, exactly where this page warned projection is "graded, not
-> survives-everything" (§1.3). The corner **stays open** — the anchor decision
-> ([`decisions/open/presupposition-projection-internal-contrast-anchor`](../../decisions/open/presupposition-projection-internal-contrast-anchor.md))
-> awaits ratification, and the conditional-collapse asymmetry is a fresh, unrun follow-up.
+> survives-everything" (§1.3). The corner **stays open** — the anchor decision was **ratified**
+> session 159 (ADOPT A, `internal-contrast-only`;
+> [`decisions/resolved/presupposition-projection-internal-contrast-anchor`](../../decisions/resolved/presupposition-projection-internal-contrast-anchor.md)),
+> and the conditional-collapse asymmetry is worked by the session-159 rescue follow-up.
 
 > **Why this page exists (a $0 scoping artifact).** The project has just consolidated the
 > indexicality / deixis corner. It has **not** worked **presupposition** — a distinct

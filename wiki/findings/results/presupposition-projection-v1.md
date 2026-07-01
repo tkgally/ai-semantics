@@ -6,9 +6,8 @@ meaning-senses:
   - inferential
   - distributional
 status: proposed
-anchor: pending
-contingent-on:
-  - presupposition-projection-internal-contrast-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-07-01
 updated: 2026-07-01
 links:
@@ -57,10 +56,13 @@ more than the matched-entailment leg, within the same model* — **not** *the mo
 projection judgments*. No human projectivity baseline is claimed, measured, or needed. The result
 does **not** certify that a model *represents* presupposition-vs-assertion semantically; it reads
 endorsement of an inference under embedding off forced-choice answers (text-consistency is not
-mechanism). Anchor is **`anchor: pending`** on
-[`decisions/open/presupposition-projection-internal-contrast-anchor`](../../decisions/open/presupposition-projection-internal-contrast-anchor.md)
-(provisional default: `internal-contrast-only`), **surfaced not self-ratified** this session — an
-independent later session ratifies (charter §12.3). Until then this page is contingent.
+mechanism). Anchor is **`anchor: internal-contrast-only`** — **ratified** by an independent
+session-159 adversarial review
+([`decisions/resolved/presupposition-projection-internal-contrast-anchor`](../../decisions/resolved/presupposition-projection-internal-contrast-anchor.md);
+the reviewer checked `analyze.py`/`prep.py` and confirmed every threshold scores only the
+within-model P-vs-E gap — no human key, no gold label, no external dataset). The within-model
+contrast makes no human-comparison claim, so no resource anchor is required. Ratification fixed the
+**yardstick, never the result** — every number and caveat below stands unchanged.
 
 ## What ran
 

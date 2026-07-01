@@ -6,8 +6,7 @@ meaning-senses:
   - inferential
   - distributional
 status: tested
-contingent-on:
-  - presupposition-projection-internal-contrast-anchor
+contingent-on: []
 created: 2026-07-01
 updated: 2026-07-01
 links:
@@ -30,9 +29,8 @@ links:
 > (frozen [`PREREG.md`](../../../experiments/runs/2026-07-01-presupposition-projection/PREREG.md),
 > manifest sha `e3a04cdd…`). Read the *Scope cap* before citing any sentence: this is a
 > **within-model** contrast at `internal-contrast-only` strength (**no human comparison**), and its
-> terminal anchor status is **pending** a decision opened this session
-> ([`decisions/open/presupposition-projection-internal-contrast-anchor`](../../decisions/open/presupposition-projection-internal-contrast-anchor.md)),
-> ratifiable only by a later independent session.
+> terminal anchor status was **ratified** by an independent session-159 adversarial review
+> ([`decisions/resolved/presupposition-projection-internal-contrast-anchor`](../../decisions/resolved/presupposition-projection-internal-contrast-anchor.md)).
 
 ## The bet
 
@@ -66,9 +64,9 @@ The measure is a **within-model** contrast (P leg vs. E leg of the *same* base),
 human projection judgments — **no human baseline is claimed, measured, or needed**. It does not
 certify that the model *represents* presupposition-vs-assertion semantically; it reads endorsement
 of an inference under embedding off forced-choice answers. Any reading beyond this within-model
-behavioral contrast is out of scope. The `internal-contrast-only` terminal status is **not**
-self-ratified in the running session; it is `anchor: pending` on the decision named in
-`contingent-on:` until a later independent session ratifies (charter §12.3).
+behavioral contrast is out of scope. The `internal-contrast-only` terminal status was **ratified**
+by an independent session-159 adversarial review
+([`decisions/resolved/presupposition-projection-internal-contrast-anchor`](../../decisions/resolved/presupposition-projection-internal-contrast-anchor.md)).
 
 ## How this differs from the project's existing lines
 
