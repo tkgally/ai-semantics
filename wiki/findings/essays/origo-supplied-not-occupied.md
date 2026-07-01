@@ -27,11 +27,14 @@ links:
     target: essay/conversation-as-text-not-timeline
   - rel: depends-on
     target: result/indexical-character-application-v1
+  - rel: depends-on
+    target: source/clark-chalmers-1998-extended-mind
 ---
 
 # Essay: the origo is supplied, never occupied
 
-> **Status: draft (2026-06-30). A philosophical-track essay arguing in the project's own voice.** Its
+> **Status: revised (created 2026-06-30; revised s156 [trigger (d)] and s157 [trigger (b)]). A
+> philosophical-track essay arguing in the project's own voice.** Its
 > contribution is a *structural diagnosis*, not a new empirical result: it sharpens **trigger (b)** of the
 > parent essay [`essay/indexical-character-learnable-content-supplied`](indexical-character-learnable-content-supplied.md)
 > by separating three claims that essay's "content" half runs together, and arguing that a tool-augmented
@@ -188,6 +191,78 @@ addition that this essay's three-way split makes mandatory:
    *argued* default, and a stronger claim must pass an independent adversarial-review ratification, not be
    smuggled in by a probe that only ever tested (iii).
 
+## Trigger (b), fired: the extended mind presses on claim (ii), but does not carry occupation for free
+
+Trigger (b) named "an extended-mind / active-externalist account on which tool-mediated access
+constitutes occupying a context." That account is now in-repo:
+[`source/clark-chalmers-1998-extended-mind`](../../base/sources/clark-chalmers-1998-extended-mind.md),
+the founding statement of active externalism. Its **parity principle** — "if, as we confront some task,
+a part of the world functions as a process which, _were it done in the head_, we would have no hesitation
+in recognizing as part of the cognitive process, then that part of the world _is_ … part of the cognitive
+process" — together with the four "glue and trust" conditions on when an external resource (Otto's
+notebook) counts as part of the cognitive system, is exactly the lever the trigger anticipated. So the
+trigger **fires**, and honesty requires the re-scoping it pre-committed: **claim (ii) is scoped to a
+non-extended-mind reading of "occupied."** On an extended-mind metasemantics, a tool-return a system
+reliably queries and endorses need not be "merely another described channel"; it could be a constituent of
+the system's context-fixing apparatus, and then the described/occupied line this essay draws would fall in
+a different place. Claim (ii) does not refute that reading; it presupposes its denial. That concession is
+the fold-in.
+
+But firing the trigger is not the same as the account *carrying* occupation, and the content of this
+fold-in is *why the extended-mind route to an occupied origo does not come for free* — on the source's own
+terms and against the project's own behavioral evidence. Three points, none of which the bare trigger
+anticipated.
+
+**First — the parity/occupation gap.** Clark & Chalmers argue that an external resource can be part of a
+**cognitive process** — a belief-store, a piece of memory. That is not yet the claim that the system is
+the **agent, time, location, and world of a context of utterance** in Kaplan's structured sense
+([`source/braun-2015-indexicals-sep`](../../base/sources/braun-2015-indexicals-sep.md), §3.2). Being part
+of a cognitive process and *occupying a Kaplanian context* are different notions; the parity principle
+delivers the first, and trigger (b)'s "constitutes occupying a context" needs the second. Even granting
+extended cognition in full, the step from "the clock tool is part of the system's cognition" to "the system
+is thereby *at* a time it occupies as its origo" is an additional argument Clark & Chalmers do not make
+(the source page flags exactly this). So the account, accepted, weakens claim (ii)'s *generality* — it
+denies the tool-return is *necessarily* merely described — without on its own establishing that the
+tool-return *is* an occupied origo.
+
+**Second — the four conditions cut against the tool-case as the models actually use it.** The extended-mind
+account is selective: a resource counts as constitutive only if it meets demanding conditions — reliably
+available and typically invoked, directly accessible, **automatically endorsed on retrieval**, and
+**consciously endorsed at some point in the past**. The last two are a *calibrated-trust* clause: Otto's
+notebook is constitutive because he has earned, standing reason to trust it. The project's one behavioral
+probe of tool-deference cuts against the models' tool-use meeting that clause.
+[`result/tool-origo-deictic-anchor-v1`](../results/tool-origo-deictic-anchor-v1.md) found the panel treats
+even a **nonce** tool returning **manifestly impossible** values — a location "Qethport," a date in 3021 —
+as authoritative, overriding an explicitly narrated origo 47–60% of the time (strongest for location,
+weakest for date). That is **indiscriminate** endorsement, not the earned, reliability-grounded trust the
+past-endorsement condition demands. On Clark & Chalmers's own criteria, a tool trusted sight-unseen —
+endorsed with no past endorsement and no calibration — is *not* the coupling that makes a resource
+constitutive; it is closer to a failure of trust than to the glue that binds Otto to his notebook. So the
+very behavioral fact that might look like a hook for the extended-mind reading — the models *do* treat the
+tool's value as authoritative, even over narrated context, the instrument outranking the report — turns
+out, read through the four conditions, to be evidence that the tool-case as the models use it **fails** the
+account's constitutive test rather than passing it. The models over-couple; extended-mind coupling is
+selective.
+
+**Third — the residual disagreement is premise-bound, not evidence-bound.** Suppose the first two points
+are answered — a determined externalist bridges the parity/occupation gap and stipulates a tool that meets
+the four conditions. Even then, whether the resulting coupling *constitutes* occupying a context is not a
+hidden empirical fact a probe uncovers; it is fixed by which metasemantics of "occupied" one adopts. A
+deflationist and an extended-mind theorist can agree on every behavioral fact — the model queries the tool,
+endorses the return, resolves ‘now’ — and still disagree on whether that *is* occupation. This is exactly
+the structure claim (i) already had and that [`essay/reference-as-premise-bound`](reference-as-premise-bound.md)
+named: the dispute lives upstream of behavior. So trigger (b) does not convert claim (ii) into an empirical
+question; it **relocates** claim (ii)'s residual disagreement to a metasemantic premise about occupation,
+joining claim (i) on the premise-bound side of the ledger.
+
+**Net.** Trigger (b) fires and bounds the essay: claim (ii) holds *unconditionally* only on a
+non-extended-mind reading of "occupied," and the essay is now explicitly scoped that way. But the
+extended-mind reading does not overturn the essay's verdict — it does not deliver an occupied origo for free
+(the parity/occupation gap), the project's own evidence shows the tool-case as the models use it *failing*
+the account's constitutive conditions (indiscriminate nonce-deference is not calibrated trust), and whatever
+residual force the reading has is premise-bound, not settleable by any probe. Claim (ii) is **bounded, not
+broken**; no sentence of the argument above it is retracted.
+
 ## What this does NOT show
 
 - **No human comparison, in either direction.** The essay makes a *structural* claim about what a
@@ -257,6 +332,18 @@ evidence that would move it.
 > occupation claim, and left the deferred "tool-return = occupied?" gate unfired. No sentence of the
 > argument below is retracted; this note logs the fold-in.
 
+> **Update (2026-07-01, session 157): trigger (b) FIRED — folded in, bounding not overturning.**
+> The extended-mind / active-externalist account trigger (b) named is now in-repo
+> ([`source/clark-chalmers-1998-extended-mind`](../../base/sources/clark-chalmers-1998-extended-mind.md),
+> Clark & Chalmers 1998). As pre-committed, **claim (ii) is re-scoped to a non-extended-mind reading of
+> "occupied."** The fold-in (see "Trigger (b), fired") argues the account **bounds but does not overturn**
+> claim (ii): even granted, it does not carry Kaplanian context-occupation for free (the parity/occupation
+> gap — being part of a *cognitive process* ≠ occupying an agent/time/location/world context); the
+> project's own behavioral evidence ([`result/tool-origo-deictic-anchor-v1`](../results/tool-origo-deictic-anchor-v1.md))
+> shows the models' indiscriminate deference to a *nonce* clock/location tool *failing* Clark & Chalmers's
+> calibrated-trust conditions rather than meeting them; and any residual force is premise-bound, not
+> probe-settleable. No argument is retracted; claim (ii) is bounded, not broken.
+
 ## Honesty box
 
 - The essay's **original** contribution is the **three-way split** of the parent essay's content half —
@@ -270,7 +357,15 @@ evidence that would move it.
   same family as [`essay/reference-as-premise-bound`](reference-as-premise-bound.md) (premise-bound) and
   [`essay/transcript-ceiling`](transcript-ceiling.md) (medium-bound), not a proof that no method whatever
   could. The limits section bounds it to the text-channel frame and to a non-extended-mind reading of
-  "occupied"; triggers (a) and (b) name what would move it.
+  "occupied"; trigger (a) names what would still move it, and **trigger (b) has now fired** — the
+  extended-mind account is evaluated in "Trigger (b), fired" and found to **bound** claim (ii) (scoping it
+  to a non-extended-mind reading) rather than overturn it, since even granted it does not carry occupation
+  for free and the models' nonce-tool deference fails its calibrated-trust conditions.
+- The **evaluation of the extended-mind account against the four "glue and trust" conditions** — the
+  argument that indiscriminate deference to a *nonce* tool ([`result/tool-origo-deictic-anchor-v1`](../results/tool-origo-deictic-anchor-v1.md))
+  is not the calibrated coupling Clark & Chalmers require, so the tool-case as the models use it *fails*
+  the account's constitutive test — is the essay's own contribution; it re-reads an existing result through
+  the source's criteria and adds **no new empirical claim**.
 - **No human comparison** is made or owed: the posture is `internal-contrast-only`, every cited result is
   internal-contrast-only, and the claim is strictly about what a text-channel probe of an LLM can and
   cannot reach. No human-annotated resource is invoked or fabricated.
