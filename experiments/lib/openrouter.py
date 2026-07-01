@@ -186,6 +186,67 @@ def call(model, system, user, max_tokens=None, temperature=0, retries=4, timeout
     return {"content": None, "usage": {}, "error": last}
 
 
+def call_tools(model, messages, tools=None, tool_choice=None, max_tokens=None,
+               temperature=0, retries=4, timeout=120, reasoning=None):
+    """One chat completion that supports FUNCTION/TOOL calling. Returns {message, usage, error}.
+
+    WHY A SEPARATE FUNCTION (added 2026-06-30 for the as-if origo probe,
+    experiments/runs/2026-06-30-tool-origo-deictic-anchor). The workhorse `call()` above takes a
+    single (system, user) pair, sends the user turn as plain text, and returns only the assistant
+    `content` string. A tool-calling probe needs three things `call()` deliberately does not do:
+      1. accept a FULL OpenAI-format `messages` array (so the caller can build a multi-turn loop:
+         user -> assistant tool_call -> tool result -> assistant final);
+      2. forward a `tools` list (OpenAI/OpenRouter function schemas) and an optional `tool_choice`;
+      3. return the RAW assistant `message` dict (which may carry `tool_calls` AND/OR `content`),
+         not just the content string, so the caller can detect a SPONTANEOUS tool call.
+    Keeping this separate leaves `call()` byte-identical, so every existing text probe is unaffected.
+
+    The `usage` dict carries the API-billed `cost` (request sets `"usage": {"include": true}`), so
+    billed_cost() works on records written by a call_tools() loop exactly as for call().
+
+    `tools` is None for a plain (no-tool) turn — used by this probe's no-tool baseline arm, which
+    is then byte-equivalent to a plain chat completion over the same messages. google/* models burn
+    the visible-output budget on reasoning tokens under a small cap (config/models.md caveat), so
+    they default to a large max_tokens unless overridden; pass reasoning={"effort":"minimal"} to
+    cap gemini reasoning as elsewhere in the codebase.
+    """
+    key = os.environ["OPENROUTER_API_KEY"]
+    if max_tokens is None:
+        max_tokens = 4096 if model.startswith("google/") else 512
+    body = {
+        "model": model,
+        "messages": messages,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+        "usage": {"include": True},  # <- makes OpenRouter return the billed usage.cost
+    }
+    if tools is not None:
+        body["tools"] = tools
+    if tool_choice is not None:
+        body["tool_choice"] = tool_choice
+    if reasoning is not None:
+        body["reasoning"] = reasoning
+    last = None
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(
+                URL,
+                data=json.dumps(body).encode(),
+                headers={"Authorization": f"Bearer {key}",
+                         "Content-Type": "application/json"},
+            )
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                d = json.load(r)
+            msg = d["choices"][0]["message"]
+            return {"message": msg, "usage": d.get("usage", {})}
+        except urllib.error.HTTPError as e:
+            last = f"HTTP {e.code}: {e.read().decode()[:200]}"
+        except Exception as e:  # noqa: BLE001
+            last = f"{type(e).__name__}: {e}"
+        time.sleep(2 ** attempt)
+    return {"message": None, "usage": {}, "error": last}
+
+
 def billed_cost(record_lists):
     """ACTUAL billed USD: sum the API-returned usage.cost across record lists.
 
