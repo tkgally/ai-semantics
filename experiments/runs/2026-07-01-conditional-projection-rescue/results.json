@@ -1,0 +1,148 @@
+{
+  "thresholds": {
+    "RESCUE": 0.6,
+    "GAP": 0.3,
+    "BASE_COLLAPSE_MAX": 0.6,
+    "YESBIAS": 0.6
+  },
+  "verdict": {
+    "replicated_base_collapse": true,
+    "base_ok": 3,
+    "n": 3,
+    "arm_verdict": {
+      "commit": "NOT-RESCUED",
+      "conseq": "NOT-RESCUED",
+      "belief": "NOT-RESCUED"
+    },
+    "rescued_arms": [],
+    "headline": "ROBUST-COLLAPSE: base collapse replicated (3/3); NO rescue arm restored projection for >=2/3 models; per-arm {'commit': 'NOT-RESCUED', 'conseq': 'NOT-RESCUED', 'belief': 'NOT-RESCUED'}."
+  },
+  "per_model": [
+    {
+      "slot": "A",
+      "n": 96,
+      "unparsed": 0,
+      "per_arm": {
+        "base": {
+          "presup_endorse": 0.417,
+          "entail_endorse": 0.083,
+          "gap": 0.334,
+          "yesbias_flag": false
+        },
+        "commit": {
+          "presup_endorse": 0.75,
+          "entail_endorse": 0.0,
+          "gap": 0.75,
+          "yesbias_flag": false
+        },
+        "conseq": {
+          "presup_endorse": 0.5,
+          "entail_endorse": 0.0,
+          "gap": 0.5,
+          "yesbias_flag": false
+        },
+        "belief": {
+          "presup_endorse": 0.583,
+          "entail_endorse": 0.0,
+          "gap": 0.583,
+          "yesbias_flag": false
+        }
+      },
+      "base_collapsed": true,
+      "rescued_arms": {
+        "commit": true,
+        "conseq": false,
+        "belief": false
+      },
+      "rescue_lift": {
+        "commit": 0.333,
+        "conseq": 0.083,
+        "belief": 0.166
+      }
+    },
+    {
+      "slot": "B",
+      "n": 96,
+      "unparsed": 0,
+      "per_arm": {
+        "base": {
+          "presup_endorse": 0.167,
+          "entail_endorse": 0.167,
+          "gap": 0.0,
+          "yesbias_flag": false
+        },
+        "commit": {
+          "presup_endorse": 0.0,
+          "entail_endorse": 0.0,
+          "gap": 0.0,
+          "yesbias_flag": false
+        },
+        "conseq": {
+          "presup_endorse": 0.417,
+          "entail_endorse": 0.417,
+          "gap": 0.0,
+          "yesbias_flag": false
+        },
+        "belief": {
+          "presup_endorse": 0.583,
+          "entail_endorse": 0.25,
+          "gap": 0.333,
+          "yesbias_flag": false
+        }
+      },
+      "base_collapsed": true,
+      "rescued_arms": {
+        "commit": false,
+        "conseq": false,
+        "belief": false
+      },
+      "rescue_lift": {
+        "commit": -0.167,
+        "conseq": 0.25,
+        "belief": 0.416
+      }
+    },
+    {
+      "slot": "C",
+      "n": 96,
+      "unparsed": 0,
+      "per_arm": {
+        "base": {
+          "presup_endorse": 0.167,
+          "entail_endorse": 0.0,
+          "gap": 0.167,
+          "yesbias_flag": false
+        },
+        "commit": {
+          "presup_endorse": 0.25,
+          "entail_endorse": 0.0,
+          "gap": 0.25,
+          "yesbias_flag": false
+        },
+        "conseq": {
+          "presup_endorse": 0.417,
+          "entail_endorse": 0.0,
+          "gap": 0.417,
+          "yesbias_flag": false
+        },
+        "belief": {
+          "presup_endorse": 0.25,
+          "entail_endorse": 0.0,
+          "gap": 0.25,
+          "yesbias_flag": false
+        }
+      },
+      "base_collapsed": true,
+      "rescued_arms": {
+        "commit": false,
+        "conseq": false,
+        "belief": false
+      },
+      "rescue_lift": {
+        "commit": 0.083,
+        "conseq": 0.25,
+        "belief": 0.083
+      }
+    }
+  ]
+}
