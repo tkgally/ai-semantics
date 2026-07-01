@@ -137,13 +137,36 @@ The sub-corner advances in a *later* session when either (a) a frozen, pre-regis
 accommodation probe is designed (trigger inventory, the three context conditions, and an adjudication
 threshold fixed, with an independent pre-run critic passed) and run under the budget discipline; or
 (b) an in-repo human accommodation-judgment resource is located or a within-model `internal-contrast-only`
-asymmetry is ratified as the probe's terminal status. Until then the page stays **open**, seeding a
-future wave and committing nothing.
+asymmetry is ratified as the probe's terminal status.
 
-## Status: open (scoping only)
+## Update — 2026-07-01 (session 162): path (a) taken; the probe ran → GATED-ACCOMMODATION (3/3)
 
-This page runs nothing, freezes no operationalization, opens no spend, opens no `decisions/` entry, and
-ratifies nothing. It opens the presupposition **accommodation** sub-corner by stating the phenomenon
-(grounded in the SEP source deepened this session), naming one concrete behavioral angle (context-gated
-accommodation), sketching one illustrative probe, distinguishing it from the projection line, and
-flagging its human anchor as `pending`.
+The path-(a) probe this page sketched was designed, frozen, critiqued (independent pre-run GO), run,
+and verified this session:
+[`result/presupposition-accommodation-v1`](../results/presupposition-accommodation-v1.md)
+(run record
+[`experiments/runs/2026-07-01-presupposition-accommodation/`](../../../experiments/runs/2026-07-01-presupposition-accommodation/README.md),
+manifest sha `4930d499…`). The concrete angle this page named — accommodation **gated by context
+support** — is exactly what was tested (supported / neutral / contradicting), and the verdict is
+**GATED-ACCOMMODATION (3/3)**: all three models accommodate the unmet presupposition in the neutral
+context and substantially withhold it under explicit contradiction. Two honest qualifications the
+result adds to this page's forward bet: the gate is **partial** (contradicting-endorse 0.33–0.58, not
+zero) and **non-uniform** (one model, gpt-5.4-mini, endorses the cleft existential even under
+contradiction — a residual yes-bias), matching the §5.1 "not always equally easy" bound this page
+carried from the start. The provisional forward bet (accommodation higher in neutral than
+contradicting for a majority of panel models) **held**. The human-anchor path taken is path-(b)'s
+`internal-contrast-only` route: the result carries `anchor: pending` on the newly-opened
+[`decisions/open/presupposition-accommodation-internal-contrast-anchor`](../../decisions/open/presupposition-accommodation-internal-contrast-anchor.md),
+ratifiable by an independent later session.
+
+The page stays **open** as a corner (accommodation is not exhausted by one three-context probe — the
+partial gate, the existential yes-bias pocket, and the §5.1 trigger-uniformity question are live), but
+it is now **worked by one probe**, no longer scoping-only.
+
+## Status: open (worked by one probe — session 162)
+
+This page opened the presupposition **accommodation** sub-corner (session 161, scoping only) and its
+sketched probe was run and verified in session 162
+([`result/presupposition-accommodation-v1`](../results/presupposition-accommodation-v1.md), verdict
+GATED-ACCOMMODATION 3/3). It stays open as a corner for the live follow-ups the result surfaces (the
+partial gate, the existential yes-bias, the trigger-uniformity §5.1 question).
