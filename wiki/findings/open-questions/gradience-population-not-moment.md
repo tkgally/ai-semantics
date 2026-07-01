@@ -10,7 +10,7 @@ meaning-senses:
 status: open
 contingent-on: []
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-07-01
 links:
   - rel: depends-on
     target: result/lexical-bridging-context-v1
@@ -24,6 +24,12 @@ links:
     target: essay/aggregation-not-constitution
   - rel: depends-on
     target: essay/preference-without-commitment
+  - rel: depends-on
+    target: result/presupposition-projection-v1
+  - rel: depends-on
+    target: essay/projection-defeasible-by-frame
+  - rel: depends-on
+    target: result/conditional-projection-rescue-v1
   - rel: depends-on
     target: concept/distributional-meaning
 ---
@@ -93,6 +99,32 @@ exactly the open question. Three legs, each verified against its own page:
   (present in one), and the two need not travel together," where the preference is "a graded
   *distributional compatibility*" and the commitment "a defeasible *inferential commitment*."
 
+- **Presupposition / projection (CANDIDATE — a different axis; sessions 158–159).** The projection
+  probe ([`result/presupposition-projection-v1`](../results/presupposition-projection-v1.md))
+  returns a within-model **PROJECTION** verdict (per-model projection gaps **+0.64** / **+0.72**,
+  with the third model directional at **+0.36**), but the interesting structure is *frame-shaped*:
+  the same panel projects a presupposition **near-perfectly under negation and strongly under
+  questions, yet projection COLLAPSES under the conditional antecedent for all three models**
+  (presupposition-survival **0.42 / 0.17 / 0.17** in the conditional frame). The
+  [`essay/projection-defeasible-by-frame`](../essays/projection-defeasible-by-frame.md) reading
+  glosses this as "projection is defeasible **by frame, not by item**" — near-total endorsement
+  under some embedding frames and near-absent under the conditional frame, a *frame-graded* pattern
+  in aggregate, **while within any single frame the models answer near-categorically** (a discrete
+  per-item response). That is the population/moment rhyme once more: graded across the set of
+  embedding environments, discrete inside each one. **But this leg is the weakest of the four and
+  must be argued into the pattern, not counted in.** The graded axis here is *embedding frames*,
+  **not a population of items or lemmas** — so it is a *different axis* from the other three legs,
+  and calling it an instance of "graded-in-the-population" is a stretch that has to be earned. It
+  is `internal-contrast-only` (the result page's ratified anchor: a within-model P-vs-E contrast,
+  **no human comparison permitted**), so it can join a human-anchored leg only at the weakest
+  common strength and forbids any human comparison. It is **behavioral, not representational**,
+  like the other legs. And the frame-shaped reading is a **draft** essay at `internal-contrast-only`
+  strength — a description-fit argument, not a demonstrated mechanism. (A same-session rescue probe,
+  [`result/conditional-projection-rescue-v1`](../results/conditional-projection-rescue-v1.md),
+  found the conditional collapse **robust** — it reproduced the 0.42 / 0.17 / 0.17 cell exactly and
+  no framing restored panel projection — which firms the *frame-graded* shape but changes none of
+  the disanalogies above.)
+
 The crude common shape: a **graded / structured** property recoverable from the *aggregate*
 (the population of the model's judgments, or the content-bag of the record) sits beside a
 **discrete / ungraded / uncommitted** handling of the *single moment or item*.
@@ -141,8 +173,14 @@ The three legs are **not the same measurement**, and the disanalogies are large 
    rates. Relational: a *single record's content-set* (one transcript), recoverable by one
    reader — "**single-reader-recoverable**" is the relational essay's own gloss, which is a
    weaker, within-record notion than a population statistic. Constructional: a *graded
-   compatibility* signal within a forced choice. Calling all three "the aggregate" papers over
-   real differences in what is being aggregated.
+   compatibility* signal within a forced choice. The projection candidate is the sharpest case of
+   this: its graded axis is a **population of embedding *frames*** (negation / question /
+   conditional), **not a population of items or lemmas at all** — the model is discrete inside each
+   frame and graded *across frames*. That is a rhyme on a *different axis*, so counting it as
+   "graded-in-the-population" is exactly the kind of over-unification this list exists to police;
+   the burden is on any future probe to show the frame-axis and the item/lemma-axis are the same
+   phenomenon, not to assume it. Calling all four "the aggregate" papers over real differences in
+   what is being aggregated.
 
 3. **The legs point in partly different directions.** Lexical and constructional contrast a
    graded *placement/preference* against a discrete *commitment* — same direction. The
@@ -152,12 +190,16 @@ The three legs are **not the same measurement**, and the disanalogies are large 
    commitment-null is **uniform (3/3)** — so even the two closest legs differ in whether the
    "moment" pole is a panel fact or a per-model one.
 
-4. **One leg is human-anchored (capped); two are internal-contrast-only.** The lexical leg is
-   DWUG-anchored but **capped to usage-similarity, not sense-co-presence**; the constructional
+4. **One leg is human-anchored (capped); the other three are internal-contrast-only.** The lexical
+   leg is DWUG-anchored but **capped to usage-similarity, not sense-co-presence**; the constructional
    leg rests on an **expert-stipulated scoring key, not human judgment data** (its result is
    `internal-contrast-only`); the relational leg (aggregation-vs-constitution) is
-   `internal-contrast-only` too (no human comparison). The legs do not even make the same *kind* of
-   claim, so a unified statement would have to be stated at the weakest common strength.
+   `internal-contrast-only` too (no human comparison). The projection candidate is
+   `internal-contrast-only` as well — a ratified within-model P-vs-E contrast that **forbids human
+   comparison** — so it can join the human-anchored lexical leg only at the weakest common strength.
+   The legs do not even make the same *kind* of claim, so a unified statement would have to be stated
+   at the weakest common strength, and the three internal-contrast-only legs forbid any human
+   comparison.
 
 5. **All three are behavioral, small-N, n=3 models.** None is representational; each is
    scoped to its own items/constructions/lemmas/register and to three 2026 commercial models.
@@ -211,9 +253,19 @@ in-repo lever already exists:
   cross-level pattern **keeps its lexical leg, now channel-checked** — with the honest residual that
   one model's confidence self-report is partly channel-sensitive and one model's leg is untested.
 
+- **A cross-axis test for the projection candidate specifically.** The projection leg rhymes on a
+  *different* axis (embedding frames, not a population of items/lemmas), so before it could count as
+  part of this pattern at all, a probe would have to show that the frame-graded / discrete-in-frame
+  shape is the *same* phenomenon as the item/lemma-graded / discrete-in-item shape the other legs
+  carry — e.g. one instrument that elicits both a graded across-frame profile and a graded
+  across-item profile from the same model on the same trigger, and asks whether the "discrete
+  moment" pole coincides. This session only **names** the projection candidate and flags its
+  disanalogies; it runs no such test, so the leg is a *candidate* and not yet a fourth member of the
+  pattern.
+
 A "general constraint" reading is licensed only if the shape **survives equalizing the
 instrument** (or survives a channel-widening that the model takes up); short of that, the
-parsimonious reading is three level-specific facts that share a vocabulary, not a mechanism.
+parsimonious reading is level-specific facts that share a vocabulary, not a mechanism.
 
 ## Scope and limits
 
@@ -254,7 +306,10 @@ parsimonious reading is three level-specific facts that share a vocabulary, not 
 ## Status: open (scoping only)
 
 The question stands: **graded-in-the-population, discrete-in-the-moment** — one constraint on
-distributional competence, or three rhyming coincidences? The default until a shared-instrument
-or channel-varied probe says otherwise is the deflationary one. This page names the shape,
-flags the disanalogies that keep it from being over-unified, and records the discriminating
-tests — including the in-repo output-channel re-run — that a later session could run.
+distributional competence, or several rhyming coincidences? The default until a shared-instrument,
+cross-axis, or channel-varied probe says otherwise is the deflationary one. This page names the
+shape, flags the disanalogies that keep it from being over-unified, and records the discriminating
+tests — including the in-repo output-channel re-run — that a later session could run. The
+presupposition/projection leg added 2026-07-01 (sessions 158–159) is a **candidate only, on a
+different axis**: this session names it and its disanalogies, and counts nothing; a cross-axis or
+shared-instrument test would be needed before it could join the pattern.
