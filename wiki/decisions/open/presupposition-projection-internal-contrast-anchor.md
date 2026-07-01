@@ -32,7 +32,7 @@ ratified 2026-05-31; the same status carried by the indexicality corner's result
 
 But per charter §12.3 and `PROTOCOL.md §2`, that terminal status is **not** self-ratifiable in the
 session that opened it. So this decision is **opened, not closed**, this session. The contingent
-result `result/presupposition-projection-v1` (created in the run session; see the run record)
+result [`result/presupposition-projection-v1`](../../findings/results/presupposition-projection-v1.md) (created in the run session; see the run record)
 carries **`anchor: pending`** with this decision in its `contingent-on:` until an independent later
 session ratifies.
 

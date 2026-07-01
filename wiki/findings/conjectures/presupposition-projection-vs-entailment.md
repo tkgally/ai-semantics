@@ -5,12 +5,14 @@ title: "Under negation/question/conditional embedding, the panel endorses a base
 meaning-senses:
   - inferential
   - distributional
-status: proposed
+status: tested
 contingent-on:
   - presupposition-projection-internal-contrast-anchor
 created: 2026-07-01
 updated: 2026-07-01
 links:
+  - rel: refines
+    target: result/presupposition-projection-v1
   - rel: depends-on
     target: open-question/presupposition-projection-corner
   - rel: depends-on
