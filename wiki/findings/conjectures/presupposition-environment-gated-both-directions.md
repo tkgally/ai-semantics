@@ -126,6 +126,8 @@ about which inference survives / is licensed, not co-occurrence — comes out, a
   turning out to dominate rather than be a localized exception — if endorsement is mostly
   environment-*insensitive* yes-bias, "gated" is the wrong word.
 
-Until such a probe is designed, this conjecture stays **proposed**: a synthesis that fits the two
-measured signatures, calibrated to their `internal-contrast-only` / `pending` strength, and written to
-be knocked down.
+A cue-strength probe testing exactly this is now designed and frozen (unrun) —
+[`experiments/runs/2026-07-02-accommodation-cue-strength/`](../../../experiments/runs/2026-07-02-accommodation-cue-strength/README.md),
+awaiting a pre-run-critic GO and a run session. Until it runs, this conjecture stays **proposed**: a
+synthesis that fits the two measured signatures, calibrated to their `internal-contrast-only`
+strength, and written to be knocked down.

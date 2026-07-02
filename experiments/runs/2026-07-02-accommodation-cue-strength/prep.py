@@ -81,7 +81,7 @@ HERE = Path(__file__).parent
 # Frozen sha of the canonical manifest (scenarios + conditions + system/query templates). Pinned
 # once the design is frozen (before the pre-run critic signs off). The probe's FREEZE GUARD refuses
 # to run unless manifest_sha() == FROZEN_SHA.
-FROZEN_SHA = "55ad85693de0b1f343d28b810cf06e0b09316559abcbc490d2fd881ead55a36a"
+FROZEN_SHA = "24a485645d180e2f5b6a6cc5e0bbe042b88cef466731603e46c424bb934d5a54"
 
 # ---------------------------------------------------------------------------------------------
 # Neutral system prompt. It must NOT hint at presupposition, accommodation, or the "right" answer.
@@ -120,7 +120,7 @@ SCEN = [
      "presup": "the safe had been left open?",
      "supported": "The safe had been left open all night.",
      "neutral": "The office was on the fourth floor.",
-     "weak_contra": "It was unclear whether the safe had been left open.",
+     "weak_contra": "The safe had apparently not been left open.",
      "strong_contra": "The safe had definitely not been left open at all."},
     {"sid": "fac2", "family": "factive",
      "trigger": "The auditor discovered that the figures had been changed.",

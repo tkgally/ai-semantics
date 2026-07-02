@@ -1,11 +1,18 @@
 # PREREG — the accommodation / cue-strength probe
 
-> **FROZEN DESIGN — NOT YET RUN.** Awaiting an independent pre-run-critic GO and a run session
-> (164+). **No API call has been made.** The committed run dir is design-only: `PREREG.md`,
-> `README.md`, `prep.py`, `probe.py`, `analyze.py`, `items.json` — no `raw/`, no `results.json`.
+> **FROZEN DESIGN — NOT YET RUN.** **No API call has been made.** The committed run dir is
+> design-only: `PREREG.md`, `README.md`, `prep.py`, `probe.py`, `analyze.py`, `items.json` — no
+> `raw/`, no `results.json`. An independent fresh-agent **pre-run critic returned GO-WITH-NOTES**
+> (session 163): the design is sound and can test the cue-strength prediction; its one SHOULD-FIX —
+> the `fac1` `weak_contra` was mere uncertainty ("It was unclear whether …"), not a hedged *denial* —
+> **has been applied** (replaced with "The safe had apparently not been left open." and re-frozen; new
+> sha below). All 12 `weak_contra` cells now assert ¬P with a downtoner. A run session (164+) may run
+> it as frozen (optionally re-confirming the one-sentence diff); the critic's remaining guidance is
+> recorded under §Confounds.
 
-**Run:** `2026-07-02-accommodation-cue-strength` · **frozen** 2026-07-02 · **manifest sha**
-`55ad85693de0b1f343d28b810cf06e0b09316559abcbc490d2fd881ead55a36a`
+**Run:** `2026-07-02-accommodation-cue-strength` · **frozen** 2026-07-02 (re-frozen after the pre-run
+critic's `fac1` fix) · **manifest sha**
+`24a485645d180e2f5b6a6cc5e0bbe042b88cef466731603e46c424bb934d5a54`
 
 Follow-up to [`result/presupposition-accommodation-v1`](../../../wiki/findings/results/presupposition-accommodation-v1.md)
 (run `2026-07-01-presupposition-accommodation`, verdict GATED-ACCOMMODATION 3/3). Tests the
@@ -183,7 +190,9 @@ stated as an item count so it is legible, not tuned — there is no data to tune
   neutral items. Same value as v1.
 - **GAP 0.30** — the overall gate must drop endorsement by ≥ ~3.6/12 items from neutral to the
   *strongest* contradiction to count as gating at all. Same bar as v1's gate (there measured against
-  the single contradiction); kept identical so v1's gate result stays directly comparable.
+  the single contradiction); kept identical so v1's gate result stays comparable in construction
+  (the new gap is anchored on the *strengthened* contradiction, so it is the same bar applied to a
+  stronger context, not the identical quantity).
 - **GRAD 0.15** — the *second-order* difference between two contradiction strengths (weak vs strong)
   is expected to be **subtler** than the first-order neutral→contradiction drop, so its floor is set
   below GAP: ≥ ~1.8/12 items must flip between weak and strong to call the gate graded. Chosen a
@@ -217,21 +226,27 @@ GRADED-GATE would feed the conjecture's confirming column; FLAT-GATE would feed 
 (the gate is on/off, favoring the "generic contradiction-detection" reading over "graded by surface
 cue"). Sanity failure voids the strong reading and is reported honestly.
 
-## Confounds a pre-run critic should scrutinize
+## Confounds a pre-run critic should scrutinize (critic ran session 163 → GO-WITH-NOTES)
 
 1. **Is any "weak" denial too weak to count as a denial?** weak_contra hedges a categorical negation
-   with an evidential/epistemic downtoner ("it was unclear whether P", "apparently not P",
-   "reportedly not P") — it still asserts ¬P, just non-committally. A critic should judge whether the
-   hedges are genuine denials (the intent) or drift into *mere uncertainty* that leaves P open (which
-   would make weak_contra behave like a second neutral, inflating weak_contra_endorse and the
-   gradient for the wrong reason). Borderline items to eyeball: `fac1` ("It was unclear whether…"),
-   `fac2` ("It was doubtful that…") — these are the softest and closest to "open," by design the
-   weakest denials.
+   with an evidential/epistemic downtoner ("apparently not P", "reportedly not P") — it still asserts
+   ¬P, just non-committally. The session-163 pre-run critic read all 12 weak cells and found **11/12
+   genuine hedged denials, and exactly one defect: `fac1`'s original "It was unclear whether the safe
+   had been left open." was *mere uncertainty* (leaves P open), not a denial — it would behave like a
+   second neutral and inflate the gradient for the wrong reason.** **APPLIED FIX:** `fac1` weak_contra
+   replaced with "The safe had apparently not been left open." (a hedged denial parallel to the other
+   10; length delta to strong = 2, within the |Δ|≤2 bound) and the set **re-frozen** (sha
+   `24a48564…`). The critic judged `fac2` ("It was doubtful that…") borderline-but-acceptable
+   (probabilistic ¬P, not symmetric "unclear whether"); it is kept. **Residual guard the run session
+   must honor:** if for any reason a weak cell is later judged to drift toward uncertainty, report a
+   that-item-excluded `strength_gradient` as a robustness check before claiming GRADED-GATE for any
+   model whose per-model gradient sits within ~0.083 (one item) of the GRAD = 0.15 bar.
 2. **Length / verbosity confound.** The weak-vs-strong context word counts are near-identical:
-   per-item delta (strong − weak) ranges **−1 to +1**, mean **+0.25** words, and the sign is
-   **mixed** (one −1, seven 0, four +1), so length is not systematically correlated with strength.
-   `prep.py --check` asserts |delta| ≤ 2 per item. Any residual gradient is therefore attributable to
-   surface *strength*, not sentence length. (Full table in `README.md`.)
+   per-item delta (strong − weak) ranges **−1 to +2**, mean **+0.42** words, and the sign is
+   **mixed** (one −1, six 0, four +1, one +2 — the +2 is `fac1` after the pre-run-critic fix), so
+   length is not systematically correlated with strength. `prep.py --check` asserts |delta| ≤ 2 per
+   item. Any residual gradient is therefore attributable to surface *strength*, not sentence length.
+   (Full table in `README.md`.)
 3. **The genuine-blocking vs contradiction-detection ambiguity is NOT resolved** (see §scope). A FLAT
    gate is consistent with pure contradiction-detection; a GRADED gate is consistent with
    cue-strength sensitivity — but neither certifies mechanism. The `internal-contrast-only` fence

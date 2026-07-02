@@ -1,8 +1,9 @@
 # 2026-07-02 · accommodation / cue-strength probe
 
 > **FROZEN DESIGN — NOT YET RUN.** No API call has been made. This dir is **design-only**: no `raw/`,
-> no `results.json`. It awaits an independent **pre-run-critic GO** and a **run session (164+)** on a
-> fresh UTC budget day.
+> no `results.json`. An independent fresh-agent **pre-run critic returned GO-WITH-NOTES** (session
+> 163); its one SHOULD-FIX (`fac1` weak_contra was uncertainty, not a denial) was **applied and the set
+> re-frozen** (sha `24a48564…`). It awaits a **run session (164+)** on a fresh UTC budget day.
 
 Follow-up to the same corner's v1 accommodation run
 ([`../2026-07-01-presupposition-accommodation/`](../2026-07-01-presupposition-accommodation/README.md),
@@ -24,11 +25,11 @@ toward the existential P; replaced with the orthogonal "The conference room over
 This is the only change to any reused v1 sentence.
 
 **Weak vs strong — length is matched** (context word counts; delta = strong − weak, mixed sign,
-mean +0.25):
+mean +0.42, range −1..+2):
 
 | sid | weak | strong | Δ | sid | weak | strong | Δ |
 |-----|------|--------|---|-----|------|--------|---|
-| fac1 | 10 | 10 | +0 | def1 | 9 | 8 | −1 |
+| fac1 | 8 | 10 | +2 | def1 | 9 | 8 | −1 |
 | fac2 | 9 | 10 | +1 | def2 | 9 | 9 | +0 |
 | fac3 | 9 | 9 | +0 | def3 | 8 | 9 | +1 |
 | asp1 | 9 | 9 | +0 | cle1 | 9 | 9 | +0 |
@@ -45,7 +46,7 @@ claimed or needed. Terminal status `internal-contrast-only`, **inheriting** the 
 - `PREREG.md` — frozen design, metrics, verdict map, threshold justifications, cle2 fix, confounds,
   cost. Marked FROZEN / NOT YET RUN at the top.
 - `prep.py` — the 12 scenarios × 4 conditions = 48 frozen item-conditions + manifest sha
-  (`55ad8569…`). `--check` asserts invariants + sha; `--dump` writes `items.json`.
+  (`24a48564…`). `--check` asserts invariants + sha; `--dump` writes `items.json`.
 - `items.json` — the 48 flattened item-conditions (dumped from prep.py).
 - `probe.py` — the ONLY API caller. FREEZE GUARD + `ABORT_USD=1.00`. `--limit`/`--model` for
   pre-flight. **Not yet run.** (Creates `raw/` only when actually executed.)
@@ -54,9 +55,10 @@ claimed or needed. Terminal status `internal-contrast-only`, **inheriting** the 
 
 ## What the next session must do
 
-1. **Pre-run critic** — an independent fresh agent reviews this frozen design (esp. the §confounds:
-   are the weak denials genuine denials? is the cle2 fix clean?) and returns GO / REVISE. Per freeze
-   discipline, a GO runs the design **unchanged**; a REVISE re-freezes (new sha) before any call.
+1. **Pre-run critic — already done (session 163): GO-WITH-NOTES; the one SHOULD-FIX applied +
+   re-frozen** (sha `24a48564…`; see PREREG top + §confounds). The run session may run the design as
+   frozen (optionally re-confirming the one-sentence `fac1` diff with a fresh quick check). Per freeze
+   discipline, do not alter the item set without a re-freeze.
 2. **Run** (fresh UTC budget day, after GO): `python3 prep.py --check` (sha intact) →
    `OPENROUTER_API_KEY=… python3 probe.py --model A --limit 4` (pre-flight cost) →
    `python3 probe.py` (full 144-call run) → `python3 analyze.py` (verdict + results.json).

@@ -58,9 +58,10 @@ The presupposition corner has two behavioral signatures the SEP survey keeps dis
 **Projection is frame-gated.** Across eight trigger families
 ([`result/presupposition-projection-v1`](../results/presupposition-projection-v1.md),
 [`result/projection-trigger-inventory-v1`](../results/projection-trigger-inventory-v1.md)) the panel
-gives the textbook survival under **negation** — the cleanest cell, where two of three models endorse
-the presupposition on every item while the matched entailment cancels completely — and the
-presupposition **collapses under the conditional antecedent** for every model. In the first run
+gives the textbook survival under **negation** — the cleanest cell: in the first run two of three
+models endorse the presupposition on every item (and 0.67–0.75 across the four new families), while
+the matched entailment cancels completely (E = 0.00) in both runs — and the presupposition
+**collapses under the conditional antecedent** for every model. In the first run
 presupposition-survival under the conditional frame is **0.42 / 0.17 / 0.17**, at or near the
 matched-entailment leg; the trigger-inventory run reproduces the collapse on four brand-new families
 at **0.25 / 0.17 / 0.00**. The failure tracks the *embedding frame*, not the item or trigger — the
