@@ -37,6 +37,10 @@ quietly dormant: if the last several sessions were all one track, weight the bac
 
 ## 3. The session, step by step
 
+0. **Start the clock.** Your very first shell command this session is
+   `tools/session-clock.sh start` — it stamps the session's start time so the
+   wind-up can report the total session duration on the website (`PROTOCOL.md §5b`).
+   Do this before reading or doing anything else.
 1. **Cold start.** Read `NEXT.md`, then `wiki/index.md`, then only the pages the work needs.
    If `NEXT.md` says a previous PR failed to merge, land it before anything else.
 2. **Reconcile decisions** (`PROTOCOL.md §2`): apply any Tom override; then for each

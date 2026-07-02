@@ -17,6 +17,12 @@ Both modes obey the same non-negotiables (§1, §2, §5, §6) and the same chart
 
 ## 1. Read (cold start) — both modes
 
+**First, start the session clock.** Before reading anything, run
+`tools/session-clock.sh start`. It records the session's start time (to a
+gitignored, ephemeral `.session-clock`) so the wind-up can report the total
+session duration on the website (§5b). Running it again later in the session is
+safe — it keeps the original start. Then read:
+
 1. `NEXT.md` — state, the next action(s), what is blocked.
 2. `wiki/index.md` — catalog of typed pages. Do not read individual pages until you know which ones the next action needs.
 3. `wiki/decisions/open/` — list filenames; read only those that touch the next action.
@@ -128,22 +134,28 @@ reference to the human monitor — see charter §12.5 and `docs/README.md`):
 
 1. **Append a journal entry** for this session (`docs/journal.html`): what was done, in plain
    words; any autonomous ratifications (Ruling 1 requires these be reported); spend. **Stamp it
-   with the date *and the Japan-time (JST) clock time* and the session number as a numeral** —
-   format `Month D, YYYY, HH:MM JST (session N)`, e.g. `June 20, 2026, 12:06 JST (session 50)`.
-   This JST clock-time stamp is mandatory on every new entry from session 44 onward (the
-   easy-to-drop part — sessions 48–49 forgot it; do not). See the recipe below.
+   with the session's start *and* end Japan-time (JST) clock times, the total session duration,
+   and the session number as a numeral** — format
+   `Month D, YYYY, HH:MM–HH:MM JST (session N) · total Xh Ym`, e.g.
+   `June 20, 2026, 09:41–12:06 JST (session 50) · total 2h 25m`. The start–end stamp is mandatory
+   on every new entry from session 166 onward (earlier entries carried an end-only `HH:MM JST`
+   stamp — do not revise them). Get it mechanically with the recipe below; do not guess the times.
 2. **Refresh the home page** status block (`docs/index.html`): current state, latest-session
-   summary, and the **last-updated date *with the JST clock time*** (same `HH:MM JST` stamp as
-   the journal entry).
+   summary, and the **last-updated date *with the JST clock time and the session total*** (e.g.
+   `July 2, 2026, 18:00 JST · session took 1h 49m`).
 3. **Touch the pages the session's work changed:** findings → `docs/findings.html`; plans/ideas →
    `docs/plans.html`; any new technical term used on the site → define it in `docs/glossary.html`.
 
-**JST clock-time recipe (do this, don't guess the time).** Get the stamp mechanically with
-`TZ=Asia/Tokyo date "+%B %-d, %Y, %H:%M JST"` (no need to be minute-exact). **Gotcha:** the JST
-stamp date can differ from the **UTC budget day** in `config/budget.md` — JST is UTC+9, so e.g.
-`01:51 JST June 20` is `16:51 UTC June 19`, still the June-19 budget day. Stamp the site in JST;
-track spend in UTC; never conflate the two. Earlier entries (before session 44) keep their
-original spelled-out numbering and date-only stamps — do not revise them.
+**JST clock-time + duration recipe (do this, don't guess).** Run
+`tools/session-clock.sh report N` (with this session's number as `N`). It reads the start time
+recorded by `session-clock.sh start` at §1, takes *now* as the end, and prints the start and end
+JST clock times, the total elapsed, and a ready-to-paste journal stamp. (If you forgot to start
+the clock, it says so and gives an end-only stamp — start the clock next time; do not fabricate a
+duration.) **Gotcha:** the JST stamp date can differ from the **UTC budget day** in
+`config/budget.md` — JST is UTC+9, so e.g. `01:51 JST June 20` is `16:51 UTC June 19`, still the
+June-19 budget day. Stamp the site in JST; track spend in UTC; never conflate the two. Earlier
+entries (before session 44) keep their original spelled-out numbering and date-only stamps — do
+not revise them.
 
 Skipping this step — or dropping the JST clock time from the stamp — is a protocol violation even
 in a tiny session — the site is the monitor's only window.
@@ -226,6 +238,7 @@ Stop cleanly at the wind-up point — which means **after** the squash-merge has
 - Did two subagents collide on a shared file?
 - Did I wait on a process by name-match (`pgrep -f`) instead of its PID or a completion notification? Did I leave a background task or wait-loop running at wind-up?
 - Did I leave work uncommitted, unmerged, or the website stale?
+- Did I start the session clock (§1) and report the total duration in the journal stamp (§5b)?
 - Did the website state anything more strongly than the wiki does?
 - Did I exceed (or fail to record) the day's OpenRouter spend?
 

@@ -135,3 +135,30 @@ Stdlib-only Python 3. The tool tries `import yaml` (PyYAML) for robust front-mat
 - **New relation:** add it to `ALLOWED_RELATIONS`.
 - **New meaning-sense:** add a `### \`tagname\`` heading under `## Tags` in `wiki/meaning-senses.md`; senselint picks it up dynamically.
 - **New check:** add a `check_*` function and call it in `main()` under the appropriate loop.
+
+## session-clock.sh
+
+`tools/session-clock.sh` records how long a session takes, wall-clock, from its start to the
+website wind-up — the number reported on the public journal (`PROTOCOL.md §5b`). Sessions carry no
+other record of their *start*: the journal stamp, the commits, and the merge all land at the *end*,
+so without this the total duration could not be read back.
+
+```
+tools/session-clock.sh start            # FIRST action of a session (PROTOCOL §1)
+tools/session-clock.sh report [N]       # at the website step (PROTOCOL §5b); N = session number
+tools/session-clock.sh start --force    # deliberately reset the start (rarely needed)
+```
+
+- **`start`** writes the start epoch to `.session-clock` at the repo root. That file is
+  **gitignored and ephemeral** — it lives only inside the run's container and is never committed;
+  the duration it feeds is persisted only in the committed journal entry. `start` does **not**
+  overwrite an existing clock, so calling it again mid-session (e.g. after a context summary)
+  keeps the true start.
+- **`report [N]`** reads `.session-clock`, takes *now* as the end, and prints the start and end
+  JST clock times, the total elapsed (`Xh Ym`), and a ready-to-paste journal stamp
+  (`Month D, YYYY, HH:MM–HH:MM JST (session N) · total Xh Ym`; both dates are spelled out if the
+  session crossed JST midnight). If no clock was started it says so and gives an end-only stamp —
+  it never invents a duration.
+
+All clock times are Japan time (JST) to match the website convention; elapsed is computed from
+epoch seconds, so it is timezone-safe. Stdlib `date` only; no Python.

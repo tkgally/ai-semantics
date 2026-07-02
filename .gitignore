@@ -6,6 +6,10 @@ __pycache__/
 .venv/
 venv/
 
+# Session clock (ephemeral per-run start timestamp written by tools/session-clock.sh;
+# lives only inside the run container, reported into the journal, never committed)
+.session-clock
+
 # Editor / OS
 .DS_Store
 .idea/
