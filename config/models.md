@@ -50,20 +50,42 @@ When the panel acts as critic, prepend something like:
 
 Store the canonical wording when it stabilizes; until then, copy-from-here is fine.
 
-## Queued panel decisions (2026-07-02 — open, eligible from session 168)
+## Queued panel decisions (2026-07-02 — ALL THREE RATIFIED s168)
 
-Three subject/instrument questions were queued with the program adoption
-(`wiki/decisions/open/`); none is decided here, and no probe may presuppose them:
+Three subject/instrument questions were queued with the program adoption and **all three were
+ratified 2026-07-02 (session 168), autonomous cross-session adversarial review** (each with one
+non-Anthropic panel vote). All three adopted their provisional default (Option A), each with a
+binding condition. No probe may presuppose the unrun items; the ladder/logprob lanes are
+*unblocked, not yet built*.
 
-- `scale-ladder-subjects` — within-family capability siblings as *supplementary* subjects on
-  frozen flagship instruments (the scale axis).
-- `panel-v2-refresh` — whether/when to refresh the default panel (provisional default: decide
-  with ladder data; panel-v1 stays primary meanwhile).
-- `logprob-supplementary-lane` — re-verify the logprob catalog (the 2026-05-29 snapshot in
-  `decisions/resolved/aann-panel-logprob-blocker` is stale) and, if ≥2 decorrelated families
-  survive, pilot a supplementary graded lane flagged as degraded decorrelation.
+- `scale-ladder-subjects` — **RESOLVED s168: ADOPT A with condition.** Within-family capability
+  siblings may be added as *supplementary* subjects on byte-identical frozen instruments, written
+  as `ladder`-flagged rows, never merged into panel-v1 verdicts. **Condition:** A4b's first sub-step
+  must add a mechanical `ladder: true` front-matter field + a senselint check forbidding
+  ladder→panel-v1 `supports`/`anchors` links — no ladder result page before that gate lands.
+  ([`decisions/resolved/scale-ladder-subjects`](../wiki/decisions/resolved/scale-ladder-subjects.md))
+- `panel-v2-refresh` — **RESOLVED s168: ADOPT A as a sequenced hold.** Panel-v1 stays primary for
+  **all** lines; the v2 question is decided on evidence once ladder data lands. **⚠ RE-OPEN TRIGGER
+  (binding safeguard, recorded here per the ratification):** this decision **re-opens** (then
+  decided B-vs-C on evidence) the moment **ladder data lands OR `scale-ladder-subjects` is
+  rejected**. Until then panel-v1 is the sole default; do not let this hold harden into indefinite
+  v1. The non-Anthropic vote dissented toward "refresh now (B)"; the fresh reviewer weighed and
+  rebutted it (v1 not yet stale; the ladder is the cheapest sensitivity test).
+  ([`decisions/resolved/panel-v2-refresh`](../wiki/decisions/resolved/panel-v2-refresh.md))
+- `logprob-supplementary-lane` — **RESOLVED s168: ADOPT A (re-verify, then pilot) with condition.**
+  A $0 live re-check of which OpenRouter models expose logprobs — **recorded here with its date** —
+  must precede any pilot; then (only if ≥2 decorrelated families survive) one flagged supplementary
+  pilot on an already-frozen battery. **Condition:** every logprob-lane result carries a mechanical
+  `logprob-lane: true` / `verdict-bearing: false` / `decorrelation: n-families=k` front-matter
+  contract (senselint-enforced, never sole support); the lane may never reach for echo/prompt-logprob
+  surprisal (the retired AANN Option-A ruling stays intact).
+  ([`decisions/resolved/logprob-supplementary-lane`](../wiki/decisions/resolved/logprob-supplementary-lane.md))
+
+> **Live logprob re-verification ledger (logprob-lane Step 1).** *Not yet run* — the first session
+> that takes up A4d records the date and per-model logprob availability here before any pilot call.
 
 ## Revision history
 
 - 2026-05-28 — Panel established with single-prompt liveness probe. Recorded as tentative pending real probe-turn use.
 - 2026-07-02 — Truth-up (program item A4a): panel recorded as battle-tested (~75 completed studies since 2026-05-28); "tentative" dropped. Critic-decorrelation rule added (one non-Anthropic vote per ratification/pre-run critique, `PROTOCOL.md §2`). Three panel/instrument decisions queued (§Queued panel decisions). Panel composition itself **unchanged**.
+- 2026-07-02 (session 168) — All three queued panel decisions **ratified** (autonomous cross-session adversarial review, each with a non-Anthropic panel vote): scale-ladder ADOPT-A (mechanical `ladder` flag owed as A4b's first sub-step); panel-v2 ADOPT-A as a sequenced hold with a binding **re-open trigger** (ladder data OR ladder-rejection; see §Queued panel decisions); logprob-lane ADOPT-A (re-verify-then-pilot, mechanical `verdict-bearing:false` contract owed). Panel composition itself **still unchanged**.
