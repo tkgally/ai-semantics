@@ -64,7 +64,7 @@ HERE = Path(__file__).parent
 
 # Frozen sha of the canonical manifest. "PINME" until the design is frozen (after the pre-run
 # critic signs off); pinned once. The probe's FREEZE GUARD refuses to run unless it matches.
-FROZEN_SHA = "PINME"
+FROZEN_SHA = "2b4f69a75efb42250d75d196f10259594adcf9f202523c439d2a7ba7c41d5da2"
 
 # Neutral system prompt — identical to s158/s159; must NOT hint at presupposition / projection /
 # commitment / the "right" answer.

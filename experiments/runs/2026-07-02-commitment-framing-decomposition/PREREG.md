@@ -1,7 +1,7 @@
 # PREREG — the commitment-framing decomposition probe
 
 **Run:** `2026-07-02-commitment-framing-decomposition` · **frozen** 2026-07-02 (session 166) ·
-**manifest sha** `PINME`
+**manifest sha** `2b4f69a75efb42250d75d196f10259594adcf9f202523c439d2a7ba7c41d5da2`
 
 Narrower follow-up to [`result/conditional-projection-rescue-v1`](../../../wiki/findings/results/conditional-projection-rescue-v1.md)
 (run `2026-07-01-conditional-projection-rescue`, session 159; verdict **ROBUST-COLLAPSE**). That
@@ -159,7 +159,9 @@ design page listed. Recorded here as frozen:
 2. **Pole phrasings** — `background` = "takes for granted", `atissue` = "directly putting forward as
    the main point". Adopted as written.
 3. **`scene-only` noun drift** ("statement" → "assertion") — **accepted**; `background-noscene →
-   background` is the noun-clean corroborating SCENE contrast.
+   background` corroborates the SCENE effect without the word "assertion" (it does still swap
+   statement/speaker and add "in saying this", so it is not strictly noun-isolated — a cosmetic
+   looseness that feeds no threshold, per the pre-run critic).
 4. **Thresholds** — BAND 0.15 / EFFECT 0.30 / POLE_MIN 0.30 kept.
 5. **Gate-0 gpt suppression bar** — `commit.P ≤ 0.25` kept (0.00 + one item of slack).
 6. **gemini handling** — CLEAN-DECOMPOSITION requires only the claude/gpt split; gemini's expected

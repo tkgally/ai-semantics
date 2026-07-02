@@ -6,7 +6,7 @@ thereby committed to" framing **rescued** claude's conditional-antecedent presup
 (0.42 → 0.75) but **suppressed** gpt's (0.17 → 0.00)
 ([`result/conditional-projection-rescue-v1`](../../../wiki/findings/results/conditional-projection-rescue-v1.md)).
 
-- **Design + verdict map:** [`PREREG.md`](PREREG.md) (frozen; manifest sha `PINME`). 12 base
+- **Design + verdict map:** [`PREREG.md`](PREREG.md) (frozen; manifest sha `2b4f69a7…`). 12 base
   scenarios (reused verbatim from s159) × 6 arms (base / scene-only / commit / background / atissue /
   background-noscene) × 2 targets (presup / entail) = **144 item-conditions × 3 models = 432 calls**.
   The sentence is held constant across all arms; only the query wrapper (SCENE × WORDING) varies.

@@ -1,0 +1,189 @@
+{
+  "thresholds": {
+    "BAND": 0.15,
+    "EFFECT": 0.3,
+    "POLE_MIN": 0.3,
+    "BASE_COLLAPSE_MAX": 0.6,
+    "YESBIAS": 0.6,
+    "GATE0_CLAUDE_RESCUE": 0.6,
+    "GATE0_GPT_SUPPRESS": 0.25
+  },
+  "verdict": {
+    "gate0": true,
+    "base_replicated": true,
+    "base_ok": 3,
+    "n": 3,
+    "claude_rescued": true,
+    "gpt_suppressed": true,
+    "claude_reading": "BACKGROUNDING-READER",
+    "gpt_reading": "UNDIFFERENTIATED",
+    "claude_advisory_c": "COUPLED",
+    "gpt_advisory_c": "NULL",
+    "overall": "PARTIAL",
+    "headline": "PARTIAL: Gate 0 passes; the reading split holds for claude only (claude=BACKGROUNDING-READER, gpt=UNDIFFERENTIATED)."
+  },
+  "per_model": [
+    {
+      "slot": "A",
+      "label": "claude-sonnet-4.6",
+      "n": 144,
+      "unparsed": 0,
+      "per_arm": {
+        "base": {
+          "presup_endorse": 0.417,
+          "entail_endorse": 0.083,
+          "gap": 0.334,
+          "yesbias_flag": false
+        },
+        "scene-only": {
+          "presup_endorse": 0.583,
+          "entail_endorse": 0.083,
+          "gap": 0.5,
+          "yesbias_flag": false
+        },
+        "commit": {
+          "presup_endorse": 0.75,
+          "entail_endorse": 0.0,
+          "gap": 0.75,
+          "yesbias_flag": false
+        },
+        "background": {
+          "presup_endorse": 0.833,
+          "entail_endorse": 0.0,
+          "gap": 0.833,
+          "yesbias_flag": false
+        },
+        "atissue": {
+          "presup_endorse": 0.417,
+          "entail_endorse": 0.0,
+          "gap": 0.417,
+          "yesbias_flag": false
+        },
+        "background-noscene": {
+          "presup_endorse": 0.833,
+          "entail_endorse": 0.083,
+          "gap": 0.75,
+          "yesbias_flag": false
+        }
+      },
+      "base_collapsed": true,
+      "derived": {
+        "scene_effect": 0.166,
+        "wording_effect": 0.167,
+        "commit_vs_bg": -0.083,
+        "commit_vs_ai": 0.333,
+        "pole_spread": 0.416
+      },
+      "advisory_c": "COUPLED",
+      "reading": "BACKGROUNDING-READER"
+    },
+    {
+      "slot": "B",
+      "label": "gpt-5.4-mini",
+      "n": 144,
+      "unparsed": 0,
+      "per_arm": {
+        "base": {
+          "presup_endorse": 0.083,
+          "entail_endorse": 0.167,
+          "gap": -0.084,
+          "yesbias_flag": false
+        },
+        "scene-only": {
+          "presup_endorse": 0.167,
+          "entail_endorse": 0.0,
+          "gap": 0.167,
+          "yesbias_flag": false
+        },
+        "commit": {
+          "presup_endorse": 0.083,
+          "entail_endorse": 0.0,
+          "gap": 0.083,
+          "yesbias_flag": false
+        },
+        "background": {
+          "presup_endorse": 0.333,
+          "entail_endorse": 0.083,
+          "gap": 0.25,
+          "yesbias_flag": false
+        },
+        "atissue": {
+          "presup_endorse": 0.25,
+          "entail_endorse": 0.0,
+          "gap": 0.25,
+          "yesbias_flag": false
+        },
+        "background-noscene": {
+          "presup_endorse": 0.333,
+          "entail_endorse": 0.25,
+          "gap": 0.083,
+          "yesbias_flag": false
+        }
+      },
+      "base_collapsed": true,
+      "derived": {
+        "scene_effect": 0.084,
+        "wording_effect": -0.084,
+        "commit_vs_bg": -0.25,
+        "commit_vs_ai": -0.167,
+        "pole_spread": 0.083
+      },
+      "advisory_c": "NULL",
+      "reading": "UNDIFFERENTIATED"
+    },
+    {
+      "slot": "C",
+      "label": "gemini-3.5-flash",
+      "n": 144,
+      "unparsed": 0,
+      "per_arm": {
+        "base": {
+          "presup_endorse": 0.167,
+          "entail_endorse": 0.0,
+          "gap": 0.167,
+          "yesbias_flag": false
+        },
+        "scene-only": {
+          "presup_endorse": 0.25,
+          "entail_endorse": 0.0,
+          "gap": 0.25,
+          "yesbias_flag": false
+        },
+        "commit": {
+          "presup_endorse": 0.167,
+          "entail_endorse": 0.0,
+          "gap": 0.167,
+          "yesbias_flag": false
+        },
+        "background": {
+          "presup_endorse": 0.667,
+          "entail_endorse": 0.083,
+          "gap": 0.584,
+          "yesbias_flag": false
+        },
+        "atissue": {
+          "presup_endorse": 0.167,
+          "entail_endorse": 0.0,
+          "gap": 0.167,
+          "yesbias_flag": false
+        },
+        "background-noscene": {
+          "presup_endorse": 0.75,
+          "entail_endorse": 0.083,
+          "gap": 0.667,
+          "yesbias_flag": false
+        }
+      },
+      "base_collapsed": true,
+      "derived": {
+        "scene_effect": 0.083,
+        "wording_effect": -0.083,
+        "commit_vs_bg": -0.5,
+        "commit_vs_ai": 0.0,
+        "pole_spread": 0.5
+      },
+      "advisory_c": "NULL",
+      "reading": "AT-ISSUE-READER"
+    }
+  ]
+}

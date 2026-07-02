@@ -5,7 +5,7 @@ title: commitment-framing model-difference probe v1 — decomposing why an expli
 meaning-senses:
   - inferential
   - distributional
-status: provisional
+status: run
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-02
@@ -29,7 +29,13 @@ links:
 
 # Design — commitment-framing model-difference probe v1
 
-**Status: DESIGN AWAITING AN INDEPENDENT PRE-RUN CRITIC. NOT FROZEN. DO NOT RUN THIS SESSION.**
+**RUN 2026-07-02 (session 166).** Pre-run critic GO (all six decisions accepted the provisional
+defaults), frozen at manifest sha `2b4f69a7…`, run (432 calls, $0.0834), post-run verifier CONFIRMED.
+Verdict **PARTIAL**. Result: [`result/commitment-framing-model-difference-v1`](../../wiki/findings/results/commitment-framing-model-difference-v1.md);
+run record [`experiments/runs/2026-07-02-commitment-framing-decomposition/`](../runs/2026-07-02-commitment-framing-decomposition/README.md).
+The spec below is the frozen design as executed (only the FROZEN_SHA was pinned after critic sign-off).
+
+**Status (before the run): DESIGN AWAITING AN INDEPENDENT PRE-RUN CRITIC. NOT FROZEN.**
 Running is spend-bearing and requires (a) a fresh-agent pre-run critique that re-derives every
 predicted signature from the stimulus text, and (b) a fresh-budget/day decision per `PROTOCOL.md`
 §6b. This page specifies the frozen-ready spec; a **later** session freezes the manifest sha, runs
