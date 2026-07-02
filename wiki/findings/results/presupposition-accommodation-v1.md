@@ -6,11 +6,10 @@ meaning-senses:
   - inferential
   - distributional
 status: proposed
-anchor: pending
-contingent-on:
-  - presupposition-accommodation-internal-contrast-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 links:
   - rel: operationalizes
     target: open-question/presupposition-accommodation-corner
@@ -71,13 +70,14 @@ between the two contexts, not a claim that the model computes accommodation. The
 visible directly in the data (see cleft, below), so the alternative reading is not hypothetical — it
 is part of the picture.
 
-**Anchor is `anchor: pending`**, contingent on
-[`decisions/open/presupposition-accommodation-internal-contrast-anchor`](../../decisions/open/presupposition-accommodation-internal-contrast-anchor.md),
-opened this session (session 162). The design's terminal status would be `internal-contrast-only`
-(every quantity feeding the verdict is a within-model endorsement rate over the model's own
-YES/NO/UNCLEAR answers — no human key in the scoring path), but per charter §12.3 that terminal
-status is **not** self-ratified in the session that ran the probe; an independent later session
-ratifies. Until then this result carries `pending`.
+**Anchor is `anchor: internal-contrast-only`** (terminal), ratified 2026-07-02 (session 163) by an
+independent fresh-agent adversarial review —
+[`decisions/resolved/presupposition-accommodation-internal-contrast-anchor`](../../decisions/resolved/presupposition-accommodation-internal-contrast-anchor.md),
+opened session 162, ratified session 163 (the cross-session boundary held per charter §12.3). Every
+quantity feeding the verdict is a within-model endorsement rate over the model's own YES/NO/UNCLEAR
+answers — no human key in the scoring path — so the within-model contrast needs no resource anchor.
+Ratification fixed the **yardstick, never the result**: every number and caveat below stands as
+written.
 
 ## What ran
 
@@ -180,8 +180,8 @@ discipline the design the critic reviewed was run unchanged, and both are docume
 
 ## Honest bounds
 
-- **Behavioral, within-model, no human comparison** (see Scope). `anchor: pending` →
-  `internal-contrast-only` on independent ratification; makes no claim a model *computes*
+- **Behavioral, within-model, no human comparison** (see Scope). `anchor: internal-contrast-only`
+  (ratified session 163); makes no claim a model *computes*
   accommodation, and admits the yes-bias+contradiction-detection alternative reading explicitly.
 - **The gate is partial and one family is a yes-bias pocket.** GATED-ACCOMMODATION is the panel
   verdict, not a per-family or per-model clean block; contradicting-endorse 0.33–0.58 and B/cleft =

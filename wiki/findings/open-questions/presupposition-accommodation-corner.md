@@ -155,9 +155,9 @@ zero) and **non-uniform** (one model, gpt-5.4-mini, endorses the cleft existenti
 contradiction — a residual yes-bias), matching the §5.1 "not always equally easy" bound this page
 carried from the start. The provisional forward bet (accommodation higher in neutral than
 contradicting for a majority of panel models) **held**. The human-anchor path taken is path-(b)'s
-`internal-contrast-only` route: the result carries `anchor: pending` on the newly-opened
-[`decisions/open/presupposition-accommodation-internal-contrast-anchor`](../../decisions/open/presupposition-accommodation-internal-contrast-anchor.md),
-ratifiable by an independent later session.
+`internal-contrast-only` route: the result now carries `anchor: internal-contrast-only`, ratified
+session 163 by an independent cross-session adversarial review
+([`decisions/resolved/presupposition-accommodation-internal-contrast-anchor`](../../decisions/resolved/presupposition-accommodation-internal-contrast-anchor.md)).
 
 The page stays **open** as a corner (accommodation is not exhausted by one three-context probe — the
 partial gate, the existential yes-bias pocket, and the §5.1 trigger-uniformity question are live), but
