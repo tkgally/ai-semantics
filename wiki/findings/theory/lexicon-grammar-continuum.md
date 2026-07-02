@@ -17,6 +17,18 @@ links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
   - rel: depends-on
+    target: open-question/constructional-vs-frequency-confound
+  - rel: depends-on
+    target: open-question/distributional-vs-inferential-constructional
+  - rel: depends-on
+    target: result/comparative-correlative-covariation-powered
+  - rel: depends-on
+    target: result/aann-inferential-v4
+  - rel: depends-on
+    target: claim/comparative-correlative-covariation
+  - rel: depends-on
+    target: essay/shadow-depth-cross-cuts-grain
+  - rel: depends-on
     target: result/lexical-sense-gradience-v1
   - rel: depends-on
     target: result/lexical-bridging-context-v1
@@ -214,6 +226,114 @@ three clean negatives.
 ## Theoretical situating
 
 The "beat the distributional shadow" test this page is built on sits inside a recognizable philosophical frame, mapped on [`theory/situating-llm-meaning`](situating-llm-meaning.md): the graded sense signal it vindicates is a **use / prototype** picture of word meaning ([`concept/truth-conditional-and-use-meaning`](../../base/concepts/truth-conditional-and-use-meaning.md), [`concept/frame-and-prototype-semantics`](../../base/concepts/frame-and-prototype-semantics.md)) rather than a discrete truth-conditional inventory; the conceptual-role upgrade it implies inherits the **holism** objection ([`concept/semantic-holism`](../../base/concepts/semantic-holism.md)), which the cross-axis dissociation mildly strains; and the third (grounding) axis's two negatives are generalized into the project's own [`conjecture/distributional-saturation-grounding-headroom`](../conjectures/distributional-saturation-grounding-headroom.md) — perceptual input can act only in the residual the text distribution under-determines. Whether any of this amounts to "meaning" is the eliminativist↔deflationary↔descriptivist question, left to [`concept/deflationary-and-eliminativist-llm-meaning`](../../base/concepts/deflationary-and-eliminativist-llm-meaning.md).
+
+## Closing the two founding open-questions (session 170)
+
+Two open-questions were written on **2026-05-28**, at the project's start, as the constructional wedge's
+**method spine**: [`open-question/constructional-vs-frequency-confound`](../open-questions/constructional-vs-frequency-confound.md)
+(is a form-level gap *construction* or *n-gram frequency*?) and, downstream of it,
+[`open-question/distributional-vs-inferential-constructional`](../open-questions/distributional-vs-inferential-constructional.md)
+(granting the model sees the construction, is its sensitivity *distributional* or genuinely *inferential*?).
+Each demanded the same deliverable: **name which discriminating move the project treats as load-bearing, and
+write it somewhere it cannot be quietly relaxed after a null.** Both demands are now met — the first by *this
+page's* shadow-control apparatus, the second by the shadow-depth reading it grew — so both are **closed as
+founding questions**, with the residual live threads narrowed and re-homed rather than left as loop-spawning
+questions. The closure is argued here, and each page is marked `answered` pointing back to this section.
+
+### Q1 — the frequency confound: answered by the matched-same-material control + measured residual
+
+The question listed five candidate discriminating moves and asked the project to commit to one. The commitment
+the apparatus actually made is **not** move (1) as literally written — *proxy-corpus frequency residualization* —
+because that move presupposes an observable training distribution, and the panel is **closed-weight**: the
+question flagged this itself ("frequency is not directly observable for closed LLMs"). What the project adopted
+instead is the **behavioral analogue** of the question's moves (4)+(1): a **matched control that reuses the
+construction's own surface material** (so a frequency-only account predicts *no* gap), against which a
+**residual is measured with an interval**. This *is* the "beat the distributional shadow" test the whole page is
+built on — the frequency confound and the distributional shadow are the same deflation named twice — so the
+answer to Q1 is the spine of this theory, not an addendum to it.
+
+The worked exemplar is the **comparative correlative**. CC items assert covariation for ~100% of cases; matched
+non-CC controls that **reuse the very same scalar words** assert it for only ~12% — a construction-isolation gap
+of **≈87 pp** with a 95% interval whose lower bound (**≈78 pp**) clears both a pre-registered 30-pp gate and a
+null, replicated on **136 fresh disjoint items, 3/3 models**, verifier-reproduced
+([`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md),
+building on [`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md)).
+A frequency-only account of that gap has to explain why the *same words* in a non-CC frame do not carry the
+inference — which is exactly the discrimination Q1 asked for, instantiated and now promoted to a citable claim
+([`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)). Move (5),
+cross-model *decorrelation*, is **not** the signature the CC result supplies — the ~87pp gap is cross-model
+*convergent* (all three models land together), which is the opposite of move (5)'s "divergence that does not
+track corpus overlap." The anti-frequency weight in this closure therefore rests on the **matched-material
+control** (moves 4/1's spirit), not on move (5); cross-model decorrelation remains an unexploited avenue.
+
+**What closing Q1 does and does not claim.** It closes the *methodological* question — the project has a
+discriminating design, its threshold is **frozen where it cannot be quietly relaxed after a null** — the
+matched-control gap ≥ 30 pp, item-committed before running, in
+[`decisions/resolved/constructional-divergence-operationalization`](../../decisions/resolved/constructional-divergence-operationalization.md)
+(the exact "written down so it cannot be relaxed" artifact Q1 asked for), backed by the general
+powered-residual discipline of [`PROTOCOL.md`](../../../PROTOCOL.md) §3–§4 — and it has a worked positive. It does **not** claim the confound
+is *dissolved for every probe*: the control is a **behavioral same-material** control, not a proxy-corpus
+frequency model, so it rules out "the same surface string is just more probable" but cannot fully rule out that
+a sufficiently rich latent n-gram interpolation reconstructs the residual — the irreducible bound the question
+named under "generalization and frequency are entangled." That bound is now a **known, bounded caveat carried on
+each result**, not an unanswered founding question.
+
+### Q2 — distributional vs inferential: answered *thinly*, and re-homed as a narrower live thread
+
+Q2 assumed Q1 settled and asked the finer question: is constructional sensitivity a *characteristic
+distribution* (sense 1) or genuine *inferential role* (sense 2)? It demanded the project name which move
+suffices to apply the `inferential` tag over `distributional`-only. The discriminating design it called for —
+move (1), *inference under distributional pressure*, plus a convergence check across instruments — was **built
+and run** on the AANN construction: v3 hit the exact wall Q2 predicted (the inferentially-licensed reading *was*
+the distributional default, so the two coincided and nothing could move,
+[`result/aann-inferential-v3`](../results/aann-inferential-v3.md)); v4 **escaped** it with a
+distributive-default control that gave the construction headroom, and the construction then shifted unification
+paraphrase-selection in all three models (Δ² **+0.78 / +0.70 / +0.96**, net of a lexical cue) —
+[`result/aann-inferential-v4`](../results/aann-inferential-v4.md).
+
+The project's **settled position** on what that buys is the answer to Q2, and it is a *thin* one, argued through
+the shadow-depth reading ([`essay/shadow-depth-cross-cuts-grain`](../essays/shadow-depth-cross-cuts-grain.md)):
+**distributional and inferential do not collapse — but the boundary between them is a shadow-depth gradient, not a
+clean line, and the inferential-specific signal is securable only model-by-model.** The v4 shift rises to a
+genuine **cross-instrument** inferential signal (paraphrase + NLI + the grammaticalized singular-agreement
+reflex all converging) in **exactly one of three models** (gpt-5.4-mini); for the other two the paraphrase-preference
+shift stays ambiguous between a rich distributional/constructional preference and entailment commitment — the
+very sense-(1)/sense-(2) gap Q2 is about. So the answer to Q2's sharpest form — *can the constructional wedge
+ever produce evidence that bites inferentialism specifically?* — is **yes, but thinly**: the convergence test
+(NLI + the grammaticalized-agreement sub-probe agreeing with the paraphrase shift), **ratified as the AANN
+probe's operationalization** ([`decisions/resolved/aann-inferential-operationalization`](../../decisions/resolved/aann-inferential-operationalization.md),
+with the agreement sub-probe the load-bearing discriminator), is the project's **worked sufficiency criterion
+for *concluding* inferential role** — the evidential bar for reading a result as inferential-specific, distinct
+from the `inferential` front-matter *tag*, which the project applies liberally to any probe that *targets*
+inferential role (e.g. the v3 null is tagged `inferential`). On the current panel that bar is met by 1/3 models,
+not the panel. This also discharges the
+[`meaning-senses.md`](../../meaning-senses.md) open issue that Q2 pointed at ("should `distributional` and
+`inferential` collapse?"): **no** — a purpose-built convergence design *can* separate them — but the separation
+is model-specific and shadow-depth-graded, so the inferential *reading* is earned per result, never by a probe
+any distributional model would also pass.
+
+**What closing Q2 does and does not claim.** It closes Q2 *as a founding question*: the discriminating
+apparatus exists and fires, the sufficiency criterion is named (cross-instrument convergence), and the project's
+position (thin, model-specific inferential role on a shadow-depth gradient) is written into this page and the
+shadow-depth essay. The **residual live thread** — *is the paraphrase-preference shift inferential role for the
+2/3 models where the convergence test does not yet fire?* — is **narrower** than the founding question and is
+carried by the named downstream artifacts ([`result/aann-inferential-v4`](../results/aann-inferential-v4.md)'s
+convergence discriminator, [`open-question/instrument-sensitivity-constructional-inference`](../open-questions/instrument-sensitivity-constructional-inference.md),
+and the shadow-depth essay's revision triggers), not re-filed as a founding open-question. Closing the founding
+question is a statement that it has been *metabolized into the apparatus and the standing position* — not that
+the distributional/inferential question is empirically exhausted.
+
+### One consequence for the continuum's headline
+
+Reading these two closures together tightens what "beat the distributional shadow" *means* on this page. Q1's
+closure says the test is **real and passable** — a same-material control leaves a measured residual at the
+construction grain. Q2's closure says the residual, when you probe *what kind* of meaning it is, is **thin on the
+inferential axis** and **graded by shadow-depth** rather than cleanly inferential. That is the same qualification
+the shadow-depth essay places on the headline from the other direction: the beaters are real and local, and the
+inferential surplus over the distributional shadow is a matter of degree, secured per model, not a clean
+competence the panel uniformly has. The two founding questions, closed, leave the continuum's positive **intact
+but calibrated** — a residual over the shadow exists and is measurable (Q1); how *inferential* that residual is
+remains a thin, model-specific, shadow-depth-graded matter (Q2).
 
 ## Status and revision hook
 
