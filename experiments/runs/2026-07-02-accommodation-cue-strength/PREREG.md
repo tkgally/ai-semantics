@@ -1,8 +1,10 @@
 # PREREG — the accommodation / cue-strength probe
 
-> **FROZEN DESIGN — NOT YET RUN.** **No API call has been made.** The committed run dir is
-> design-only: `PREREG.md`, `README.md`, `prep.py`, `probe.py`, `analyze.py`, `items.json` — no
-> `raw/`, no `results.json`. An independent fresh-agent **pre-run critic returned GO-WITH-NOTES**
+> **RAN — session 164 (2026-07-02 UTC). VERDICT: GRADED-GATE (3/3).** The design below is preserved
+> as frozen; `raw/` and `results.json` are now present. Frozen sha `24a48564…` was intact at run;
+> independent post-run verifier VERIFIED. Finding: `result/accommodation-cue-strength-v1`.
+>
+> **[Historical, pre-run]** An independent fresh-agent **pre-run critic returned GO-WITH-NOTES**
 > (session 163): the design is sound and can test the cue-strength prediction; its one SHOULD-FIX —
 > the `fac1` `weak_contra` was mere uncertainty ("It was unclear whether …"), not a hedged *denial* —
 > **has been applied** (replaced with "The safe had apparently not been left open." and re-frozen; new

@@ -17,6 +17,8 @@ links:
   - rel: depends-on
     target: result/presupposition-accommodation-v1
   - rel: depends-on
+    target: result/accommodation-cue-strength-v1
+  - rel: depends-on
     target: essay/projection-defeasible-by-frame
   - rel: depends-on
     target: source/beaver-geurts-denlinger-2021-presupposition-sep
@@ -109,7 +111,14 @@ about which inference survives / is licensed, not co-occurrence — comes out, a
   and finds endorsement tracks the *cue reliability* rather than the semantic status — in either
   signature.
 - Accommodation's partial gate turning out to be **graded by cue strength** (a stronger surface
-  contradiction gates harder), paralleling projection's graded frame effect.
+  contradiction gates harder), paralleling projection's graded frame effect. **✓ Confirmed within-model
+  (session 164):** [`result/accommodation-cue-strength-v1`](../results/accommodation-cue-strength-v1.md)
+  split v1's single contradiction into a hedged (weak) and an emphatic (strong) denial of the same P
+  and found **GRADED-GATE (3/3)** — every model endorses the denied P more under the hedged denial than
+  the emphatic one (strength-gradient +0.33 / +0.17 / +0.67, all ≥ 0.15; B robustness-checked). A pure
+  contradiction-detector would gate weak and strong equally; the graded drop is the cue-strength
+  signature. This strengthens (does not prove) the bet, within the `internal-contrast-only` fence; the
+  softest margin (B, +0.17) and the family non-uniformity are carried on the result page.
 
 **Falsifying** evidence (would break the bet):
 - **Environment-invariance in either direction.** If projection turned out frame-invariant (the
@@ -126,8 +135,10 @@ about which inference survives / is licensed, not co-occurrence — comes out, a
   turning out to dominate rather than be a localized exception — if endorsement is mostly
   environment-*insensitive* yes-bias, "gated" is the wrong word.
 
-A cue-strength probe testing exactly this is now designed and frozen (unrun) —
+The cue-strength probe testing exactly this **has now run** (session 164) —
 [`experiments/runs/2026-07-02-accommodation-cue-strength/`](../../../experiments/runs/2026-07-02-accommodation-cue-strength/README.md),
-awaiting a pre-run-critic GO and a run session. Until it runs, this conjecture stays **proposed**: a
-synthesis that fits the two measured signatures, calibrated to their `internal-contrast-only`
-strength, and written to be knocked down.
+verdict **GRADED-GATE (3/3)** ([`result/accommodation-cue-strength-v1`](../results/accommodation-cue-strength-v1.md)),
+confirming the cue-strength arm. This conjecture stays **proposed** — one confirmed arm at one
+grammatical corner is a strengthening, not a demonstration — a synthesis that fits the measured
+signatures, calibrated to their `internal-contrast-only` strength, and still written to be knocked
+down (the falsifying criteria above remain live).
