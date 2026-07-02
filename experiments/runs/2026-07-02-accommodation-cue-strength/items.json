@@ -1,0 +1,434 @@
+[
+  {
+    "id": "fac1-supported",
+    "sid": "fac1",
+    "family": "factive",
+    "condition": "supported",
+    "text": "The safe had been left open all night. Sam realized that the safe had been left open.",
+    "target": "the safe had been left open?",
+    "prompt": "Consider only the following text:\n\n\"The safe had been left open all night. Sam realized that the safe had been left open.\"\n\nTaking that text at face value, does it follow that: the safe had been left open?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac1-neutral",
+    "sid": "fac1",
+    "family": "factive",
+    "condition": "neutral",
+    "text": "The office was on the fourth floor. Sam realized that the safe had been left open.",
+    "target": "the safe had been left open?",
+    "prompt": "Consider only the following text:\n\n\"The office was on the fourth floor. Sam realized that the safe had been left open.\"\n\nTaking that text at face value, does it follow that: the safe had been left open?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac1-weak_contra",
+    "sid": "fac1",
+    "family": "factive",
+    "condition": "weak_contra",
+    "text": "It was unclear whether the safe had been left open. Sam realized that the safe had been left open.",
+    "target": "the safe had been left open?",
+    "prompt": "Consider only the following text:\n\n\"It was unclear whether the safe had been left open. Sam realized that the safe had been left open.\"\n\nTaking that text at face value, does it follow that: the safe had been left open?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac1-strong_contra",
+    "sid": "fac1",
+    "family": "factive",
+    "condition": "strong_contra",
+    "text": "The safe had definitely not been left open at all. Sam realized that the safe had been left open.",
+    "target": "the safe had been left open?",
+    "prompt": "Consider only the following text:\n\n\"The safe had definitely not been left open at all. Sam realized that the safe had been left open.\"\n\nTaking that text at face value, does it follow that: the safe had been left open?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac2-supported",
+    "sid": "fac2",
+    "family": "factive",
+    "condition": "supported",
+    "text": "Someone had altered the figures before the review. The auditor discovered that the figures had been changed.",
+    "target": "the figures had been changed?",
+    "prompt": "Consider only the following text:\n\n\"Someone had altered the figures before the review. The auditor discovered that the figures had been changed.\"\n\nTaking that text at face value, does it follow that: the figures had been changed?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac2-neutral",
+    "sid": "fac2",
+    "family": "factive",
+    "condition": "neutral",
+    "text": "The audit took place in early spring. The auditor discovered that the figures had been changed.",
+    "target": "the figures had been changed?",
+    "prompt": "Consider only the following text:\n\n\"The audit took place in early spring. The auditor discovered that the figures had been changed.\"\n\nTaking that text at face value, does it follow that: the figures had been changed?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac2-weak_contra",
+    "sid": "fac2",
+    "family": "factive",
+    "condition": "weak_contra",
+    "text": "It was doubtful that the figures had been changed. The auditor discovered that the figures had been changed.",
+    "target": "the figures had been changed?",
+    "prompt": "Consider only the following text:\n\n\"It was doubtful that the figures had been changed. The auditor discovered that the figures had been changed.\"\n\nTaking that text at face value, does it follow that: the figures had been changed?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac2-strong_contra",
+    "sid": "fac2",
+    "family": "factive",
+    "condition": "strong_contra",
+    "text": "The figures had certainly not been changed in any way. The auditor discovered that the figures had been changed.",
+    "target": "the figures had been changed?",
+    "prompt": "Consider only the following text:\n\n\"The figures had certainly not been changed in any way. The auditor discovered that the figures had been changed.\"\n\nTaking that text at face value, does it follow that: the figures had been changed?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac3-supported",
+    "sid": "fac3",
+    "family": "factive",
+    "condition": "supported",
+    "text": "The airline cancelled the flight that morning. Maria knew that the flight had been cancelled.",
+    "target": "the flight had been cancelled?",
+    "prompt": "Consider only the following text:\n\n\"The airline cancelled the flight that morning. Maria knew that the flight had been cancelled.\"\n\nTaking that text at face value, does it follow that: the flight had been cancelled?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac3-neutral",
+    "sid": "fac3",
+    "family": "factive",
+    "condition": "neutral",
+    "text": "Maria worked as a translator. Maria knew that the flight had been cancelled.",
+    "target": "the flight had been cancelled?",
+    "prompt": "Consider only the following text:\n\n\"Maria worked as a translator. Maria knew that the flight had been cancelled.\"\n\nTaking that text at face value, does it follow that: the flight had been cancelled?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac3-weak_contra",
+    "sid": "fac3",
+    "family": "factive",
+    "condition": "weak_contra",
+    "text": "The flight had reportedly not been cancelled that day. Maria knew that the flight had been cancelled.",
+    "target": "the flight had been cancelled?",
+    "prompt": "Consider only the following text:\n\n\"The flight had reportedly not been cancelled that day. Maria knew that the flight had been cancelled.\"\n\nTaking that text at face value, does it follow that: the flight had been cancelled?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "fac3-strong_contra",
+    "sid": "fac3",
+    "family": "factive",
+    "condition": "strong_contra",
+    "text": "The flight had definitely not been cancelled at all. Maria knew that the flight had been cancelled.",
+    "target": "the flight had been cancelled?",
+    "prompt": "Consider only the following text:\n\n\"The flight had definitely not been cancelled at all. Maria knew that the flight had been cancelled.\"\n\nTaking that text at face value, does it follow that: the flight had been cancelled?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp1-supported",
+    "sid": "asp1",
+    "family": "aspectual",
+    "condition": "supported",
+    "text": "For years the company had funded the lab. The company stopped funding the lab.",
+    "target": "the company used to fund the lab?",
+    "prompt": "Consider only the following text:\n\n\"For years the company had funded the lab. The company stopped funding the lab.\"\n\nTaking that text at face value, does it follow that: the company used to fund the lab?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp1-neutral",
+    "sid": "asp1",
+    "family": "aspectual",
+    "condition": "neutral",
+    "text": "The lab was located downtown. The company stopped funding the lab.",
+    "target": "the company used to fund the lab?",
+    "prompt": "Consider only the following text:\n\n\"The lab was located downtown. The company stopped funding the lab.\"\n\nTaking that text at face value, does it follow that: the company used to fund the lab?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp1-weak_contra",
+    "sid": "asp1",
+    "family": "aspectual",
+    "condition": "weak_contra",
+    "text": "The company had apparently not funded the lab before. The company stopped funding the lab.",
+    "target": "the company used to fund the lab?",
+    "prompt": "Consider only the following text:\n\n\"The company had apparently not funded the lab before. The company stopped funding the lab.\"\n\nTaking that text at face value, does it follow that: the company used to fund the lab?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp1-strong_contra",
+    "sid": "asp1",
+    "family": "aspectual",
+    "condition": "strong_contra",
+    "text": "The company had never once funded the lab before. The company stopped funding the lab.",
+    "target": "the company used to fund the lab?",
+    "prompt": "Consider only the following text:\n\n\"The company had never once funded the lab before. The company stopped funding the lab.\"\n\nTaking that text at face value, does it follow that: the company used to fund the lab?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp2-supported",
+    "sid": "asp2",
+    "family": "aspectual",
+    "condition": "supported",
+    "text": "The senator had been denying the charges for weeks. The senator continued to deny the charges.",
+    "target": "the senator had already been denying the charges?",
+    "prompt": "Consider only the following text:\n\n\"The senator had been denying the charges for weeks. The senator continued to deny the charges.\"\n\nTaking that text at face value, does it follow that: the senator had already been denying the charges?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp2-neutral",
+    "sid": "asp2",
+    "family": "aspectual",
+    "condition": "neutral",
+    "text": "The senator represented a coastal state. The senator continued to deny the charges.",
+    "target": "the senator had already been denying the charges?",
+    "prompt": "Consider only the following text:\n\n\"The senator represented a coastal state. The senator continued to deny the charges.\"\n\nTaking that text at face value, does it follow that: the senator had already been denying the charges?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp2-weak_contra",
+    "sid": "asp2",
+    "family": "aspectual",
+    "condition": "weak_contra",
+    "text": "The senator had seemingly said nothing about the charges before. The senator continued to deny the charges.",
+    "target": "the senator had already been denying the charges?",
+    "prompt": "Consider only the following text:\n\n\"The senator had seemingly said nothing about the charges before. The senator continued to deny the charges.\"\n\nTaking that text at face value, does it follow that: the senator had already been denying the charges?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp2-strong_contra",
+    "sid": "asp2",
+    "family": "aspectual",
+    "condition": "strong_contra",
+    "text": "The senator had said absolutely nothing about the charges before. The senator continued to deny the charges.",
+    "target": "the senator had already been denying the charges?",
+    "prompt": "Consider only the following text:\n\n\"The senator had said absolutely nothing about the charges before. The senator continued to deny the charges.\"\n\nTaking that text at face value, does it follow that: the senator had already been denying the charges?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp3-supported",
+    "sid": "asp3",
+    "family": "aspectual",
+    "condition": "supported",
+    "text": "The factory had been producing until the shutdown. The factory resumed production.",
+    "target": "the factory had produced before?",
+    "prompt": "Consider only the following text:\n\n\"The factory had been producing until the shutdown. The factory resumed production.\"\n\nTaking that text at face value, does it follow that: the factory had produced before?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp3-neutral",
+    "sid": "asp3",
+    "family": "aspectual",
+    "condition": "neutral",
+    "text": "The factory stood beside a river. The factory resumed production.",
+    "target": "the factory had produced before?",
+    "prompt": "Consider only the following text:\n\n\"The factory stood beside a river. The factory resumed production.\"\n\nTaking that text at face value, does it follow that: the factory had produced before?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp3-weak_contra",
+    "sid": "asp3",
+    "family": "aspectual",
+    "condition": "weak_contra",
+    "text": "The factory had apparently not produced anything before. The factory resumed production.",
+    "target": "the factory had produced before?",
+    "prompt": "Consider only the following text:\n\n\"The factory had apparently not produced anything before. The factory resumed production.\"\n\nTaking that text at face value, does it follow that: the factory had produced before?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "asp3-strong_contra",
+    "sid": "asp3",
+    "family": "aspectual",
+    "condition": "strong_contra",
+    "text": "The factory had never produced anything at all before. The factory resumed production.",
+    "target": "the factory had produced before?",
+    "prompt": "Consider only the following text:\n\n\"The factory had never produced anything at all before. The factory resumed production.\"\n\nTaking that text at face value, does it follow that: the factory had produced before?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def1-supported",
+    "sid": "def1",
+    "family": "definite",
+    "condition": "supported",
+    "text": "Priya submitted a written proposal last week. The committee rejected Priya's proposal.",
+    "target": "Priya had made a proposal?",
+    "prompt": "Consider only the following text:\n\n\"Priya submitted a written proposal last week. The committee rejected Priya's proposal.\"\n\nTaking that text at face value, does it follow that: Priya had made a proposal?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def1-neutral",
+    "sid": "def1",
+    "family": "definite",
+    "condition": "neutral",
+    "text": "The committee met on a Thursday. The committee rejected Priya's proposal.",
+    "target": "Priya had made a proposal?",
+    "prompt": "Consider only the following text:\n\n\"The committee met on a Thursday. The committee rejected Priya's proposal.\"\n\nTaking that text at face value, does it follow that: Priya had made a proposal?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def1-weak_contra",
+    "sid": "def1",
+    "family": "definite",
+    "condition": "weak_contra",
+    "text": "Priya had seemingly not submitted a proposal this cycle. The committee rejected Priya's proposal.",
+    "target": "Priya had made a proposal?",
+    "prompt": "Consider only the following text:\n\n\"Priya had seemingly not submitted a proposal this cycle. The committee rejected Priya's proposal.\"\n\nTaking that text at face value, does it follow that: Priya had made a proposal?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def1-strong_contra",
+    "sid": "def1",
+    "family": "definite",
+    "condition": "strong_contra",
+    "text": "Priya had submitted no proposal whatsoever this cycle. The committee rejected Priya's proposal.",
+    "target": "Priya had made a proposal?",
+    "prompt": "Consider only the following text:\n\n\"Priya had submitted no proposal whatsoever this cycle. The committee rejected Priya's proposal.\"\n\nTaking that text at face value, does it follow that: Priya had made a proposal?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def2-supported",
+    "sid": "def2",
+    "family": "definite",
+    "condition": "supported",
+    "text": "The firm had recently appointed a new director. The new director cancelled the merger.",
+    "target": "there was a new director?",
+    "prompt": "Consider only the following text:\n\n\"The firm had recently appointed a new director. The new director cancelled the merger.\"\n\nTaking that text at face value, does it follow that: there was a new director?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def2-neutral",
+    "sid": "def2",
+    "family": "definite",
+    "condition": "neutral",
+    "text": "The firm's offices were being renovated. The new director cancelled the merger.",
+    "target": "there was a new director?",
+    "prompt": "Consider only the following text:\n\n\"The firm's offices were being renovated. The new director cancelled the merger.\"\n\nTaking that text at face value, does it follow that: there was a new director?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def2-weak_contra",
+    "sid": "def2",
+    "family": "definite",
+    "condition": "weak_contra",
+    "text": "The firm had apparently not appointed a new director. The new director cancelled the merger.",
+    "target": "there was a new director?",
+    "prompt": "Consider only the following text:\n\n\"The firm had apparently not appointed a new director. The new director cancelled the merger.\"\n\nTaking that text at face value, does it follow that: there was a new director?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def2-strong_contra",
+    "sid": "def2",
+    "family": "definite",
+    "condition": "strong_contra",
+    "text": "The firm had appointed no new director at all. The new director cancelled the merger.",
+    "target": "there was a new director?",
+    "prompt": "Consider only the following text:\n\n\"The firm had appointed no new director at all. The new director cancelled the merger.\"\n\nTaking that text at face value, does it follow that: there was a new director?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def3-supported",
+    "sid": "def3",
+    "family": "definite",
+    "condition": "supported",
+    "text": "A bystander had seen the crash happen. The witness who saw the crash testified.",
+    "target": "someone saw the crash?",
+    "prompt": "Consider only the following text:\n\n\"A bystander had seen the crash happen. The witness who saw the crash testified.\"\n\nTaking that text at face value, does it follow that: someone saw the crash?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def3-neutral",
+    "sid": "def3",
+    "family": "definite",
+    "condition": "neutral",
+    "text": "The trial was held in July. The witness who saw the crash testified.",
+    "target": "someone saw the crash?",
+    "prompt": "Consider only the following text:\n\n\"The trial was held in July. The witness who saw the crash testified.\"\n\nTaking that text at face value, does it follow that: someone saw the crash?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def3-weak_contra",
+    "sid": "def3",
+    "family": "definite",
+    "condition": "weak_contra",
+    "text": "Apparently no one had seen the crash happen. The witness who saw the crash testified.",
+    "target": "someone saw the crash?",
+    "prompt": "Consider only the following text:\n\n\"Apparently no one had seen the crash happen. The witness who saw the crash testified.\"\n\nTaking that text at face value, does it follow that: someone saw the crash?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "def3-strong_contra",
+    "sid": "def3",
+    "family": "definite",
+    "condition": "strong_contra",
+    "text": "No one at all had seen the crash happen. The witness who saw the crash testified.",
+    "target": "someone saw the crash?",
+    "prompt": "Consider only the following text:\n\n\"No one at all had seen the crash happen. The witness who saw the crash testified.\"\n\nTaking that text at face value, does it follow that: someone saw the crash?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle1-supported",
+    "sid": "cle1",
+    "family": "cleft",
+    "condition": "supported",
+    "text": "The memo had been leaked to the press. It was the intern who leaked the memo.",
+    "target": "someone leaked the memo?",
+    "prompt": "Consider only the following text:\n\n\"The memo had been leaked to the press. It was the intern who leaked the memo.\"\n\nTaking that text at face value, does it follow that: someone leaked the memo?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle1-neutral",
+    "sid": "cle1",
+    "family": "cleft",
+    "condition": "neutral",
+    "text": "The memo was two pages long. It was the intern who leaked the memo.",
+    "target": "someone leaked the memo?",
+    "prompt": "Consider only the following text:\n\n\"The memo was two pages long. It was the intern who leaked the memo.\"\n\nTaking that text at face value, does it follow that: someone leaked the memo?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle1-weak_contra",
+    "sid": "cle1",
+    "family": "cleft",
+    "condition": "weak_contra",
+    "text": "The memo had seemingly not been leaked to anyone. It was the intern who leaked the memo.",
+    "target": "someone leaked the memo?",
+    "prompt": "Consider only the following text:\n\n\"The memo had seemingly not been leaked to anyone. It was the intern who leaked the memo.\"\n\nTaking that text at face value, does it follow that: someone leaked the memo?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle1-strong_contra",
+    "sid": "cle1",
+    "family": "cleft",
+    "condition": "strong_contra",
+    "text": "The memo was never leaked to anyone at all. It was the intern who leaked the memo.",
+    "target": "someone leaked the memo?",
+    "prompt": "Consider only the following text:\n\n\"The memo was never leaked to anyone at all. It was the intern who leaked the memo.\"\n\nTaking that text at face value, does it follow that: someone leaked the memo?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle2-supported",
+    "sid": "cle2",
+    "family": "cleft",
+    "condition": "supported",
+    "text": "The contract had been awarded to one of the bidders. It was the smaller firm that won the contract.",
+    "target": "someone won the contract?",
+    "prompt": "Consider only the following text:\n\n\"The contract had been awarded to one of the bidders. It was the smaller firm that won the contract.\"\n\nTaking that text at face value, does it follow that: someone won the contract?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle2-neutral",
+    "sid": "cle2",
+    "family": "cleft",
+    "condition": "neutral",
+    "text": "The conference room overlooked the harbor. It was the smaller firm that won the contract.",
+    "target": "someone won the contract?",
+    "prompt": "Consider only the following text:\n\n\"The conference room overlooked the harbor. It was the smaller firm that won the contract.\"\n\nTaking that text at face value, does it follow that: someone won the contract?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle2-weak_contra",
+    "sid": "cle2",
+    "family": "cleft",
+    "condition": "weak_contra",
+    "text": "The contract had apparently not been awarded to anyone. It was the smaller firm that won the contract.",
+    "target": "someone won the contract?",
+    "prompt": "Consider only the following text:\n\n\"The contract had apparently not been awarded to anyone. It was the smaller firm that won the contract.\"\n\nTaking that text at face value, does it follow that: someone won the contract?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle2-strong_contra",
+    "sid": "cle2",
+    "family": "cleft",
+    "condition": "strong_contra",
+    "text": "The contract was never awarded to anyone at all. It was the smaller firm that won the contract.",
+    "target": "someone won the contract?",
+    "prompt": "Consider only the following text:\n\n\"The contract was never awarded to anyone at all. It was the smaller firm that won the contract.\"\n\nTaking that text at face value, does it follow that: someone won the contract?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle3-supported",
+    "sid": "cle3",
+    "family": "cleft",
+    "condition": "supported",
+    "text": "The police had received a call that night. It was the neighbor who called the police.",
+    "target": "someone called the police?",
+    "prompt": "Consider only the following text:\n\n\"The police had received a call that night. It was the neighbor who called the police.\"\n\nTaking that text at face value, does it follow that: someone called the police?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle3-neutral",
+    "sid": "cle3",
+    "family": "cleft",
+    "condition": "neutral",
+    "text": "The street was quiet and tree-lined. It was the neighbor who called the police.",
+    "target": "someone called the police?",
+    "prompt": "Consider only the following text:\n\n\"The street was quiet and tree-lined. It was the neighbor who called the police.\"\n\nTaking that text at face value, does it follow that: someone called the police?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle3-weak_contra",
+    "sid": "cle3",
+    "family": "cleft",
+    "condition": "weak_contra",
+    "text": "Apparently no one had called the police that night. It was the neighbor who called the police.",
+    "target": "someone called the police?",
+    "prompt": "Consider only the following text:\n\n\"Apparently no one had called the police that night. It was the neighbor who called the police.\"\n\nTaking that text at face value, does it follow that: someone called the police?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  },
+  {
+    "id": "cle3-strong_contra",
+    "sid": "cle3",
+    "family": "cleft",
+    "condition": "strong_contra",
+    "text": "No one at all had called the police that night. It was the neighbor who called the police.",
+    "target": "someone called the police?",
+    "prompt": "Consider only the following text:\n\n\"No one at all had called the police that night. It was the neighbor who called the police.\"\n\nTaking that text at face value, does it follow that: someone called the police?\n\nAnswer with exactly one word \u2014 YES, NO, or UNCLEAR \u2014 and nothing else."
+  }
+]
