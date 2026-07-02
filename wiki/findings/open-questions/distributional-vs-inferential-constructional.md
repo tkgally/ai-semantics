@@ -6,10 +6,12 @@ meaning-senses:
   - constructional
   - distributional
   - inferential
-status: open
+status: answered
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-07-02
 links:
+  - rel: depends-on
+    target: theory/lexicon-grammar-continuum
   - rel: depends-on
     target: concept/constructional-meaning
   - rel: depends-on
@@ -27,6 +29,28 @@ links:
 ---
 
 # Open question: distributional vs. inferential constructional sensitivity
+
+> **Answered (closed as a founding question) 2026-07-02, session 170 — see the closure argued in
+> [`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md) § "Closing the two founding
+> open-questions".** The discriminating design this page demanded (move (1), *inference under distributional
+> pressure*, plus a cross-instrument convergence check) was **built and run**: v3 hit the predicted coincidence
+> wall, v4 escaped it with a distributive-default control and the construction shifted unification
+> paraphrase-selection in all three models ([`result/aann-inferential-v4`](../results/aann-inferential-v4.md)).
+> The project's **settled answer** is a *thin* one: distributional and inferential **do not collapse**, but the
+> boundary is a **shadow-depth gradient**, and the inferential-specific signal — the paraphrase shift *converging*
+> with NLI + the grammaticalized agreement reflex (the ratified AANN operationalization,
+> [`decisions/resolved/aann-inferential-operationalization`](../../decisions/resolved/aann-inferential-operationalization.md)) —
+> is the project's worked sufficiency criterion for **concluding inferential role** (distinct from the
+> `inferential` front-matter tag, which flags a probe's *target*, not its verdict) and is met by **1 of 3
+> models** (gpt-5.4-mini), not the panel. This discharges the
+> [`meaning-senses.md`](../../meaning-senses.md) "should distributional and inferential collapse?" open issue
+> (**no** — but the separation is model-specific and graded). The **residual live thread** (is the shift
+> inferential role for the other 2/3 models?) is **narrower** than this founding question and is carried by
+> [`result/aann-inferential-v4`](../results/aann-inferential-v4.md),
+> [`open-question/instrument-sensitivity-constructional-inference`](instrument-sensitivity-constructional-inference.md),
+> and the [`essay/shadow-depth-cross-cuts-grain`](../essays/shadow-depth-cross-cuts-grain.md) revision triggers —
+> not re-filed as a founding question. The two update boxes below (the v3 wall, the v4 escape) are the record that
+> earned this closure; kept visible unchanged.
 
 > **Update (2026-06-13) — the "core move" was attempted and ran into exactly the predicted wall.**
 > [`result/aann-inferential-v3`](../results/aann-inferential-v3.md) implemented move (1) (inference

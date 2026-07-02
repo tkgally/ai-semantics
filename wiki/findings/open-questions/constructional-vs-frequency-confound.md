@@ -6,10 +6,12 @@ meaning-senses:
   - constructional
   - distributional
   - inferential
-status: open
+status: answered
 created: 2026-05-28
-updated: 2026-05-29
+updated: 2026-07-02
 links:
+  - rel: depends-on
+    target: theory/lexicon-grammar-continuum
   - rel: depends-on
     target: concept/constructional-meaning
   - rel: depends-on
@@ -23,6 +25,22 @@ links:
 ---
 
 # Open question: constructional meaning vs. the frequency confound
+
+> **Answered (closed as a founding question) 2026-07-02, session 170 — see the closure argued in
+> [`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md) § "Closing the two founding
+> open-questions".** The deliverable this page demanded — *name the discriminating move the project treats as
+> load-bearing, and write it where it cannot be quietly relaxed* — is met by the continuum's **shadow-control
+> apparatus**. Because the panel is closed-weight, the project could not adopt move (1) as literally written
+> (proxy-corpus frequency residualization) and instead committed to the **behavioral analogue of moves (4)+(1)**:
+> a **matched control that reuses the construction's own surface material** (so a frequency-only account predicts
+> no gap), against which a **residual is measured with an interval**. Worked exemplar: the comparative correlative
+> — CC items assert covariation ~100%, matched non-CC controls reusing the *same scalar words* ~12%, a
+> construction-isolation gap **≈87 pp [95% CI lb ≈78]**, 136 fresh disjoint items, 3/3 models, verifier-reproduced
+> ([`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md);
+> promoted to [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)).
+> The **residual live bound** the question named (a rich latent n-gram interpolation could still reconstruct the
+> residual; the control is behavioral-same-material, not a proxy-corpus frequency model) is now a **known caveat
+> carried on each result**, not an unanswered founding question. Body kept below unchanged.
 
 ## The question
 

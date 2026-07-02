@@ -151,13 +151,15 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   a session with nothing substantive owed does a light check and stops — [`PROTOCOL.md`](../PROTOCOL.md) §0/§A1.
 - **C2 Website cadence — ruled by Tom:** one journal entry per JST day, no clock stamps —
   [`PROTOCOL.md`](../PROTOCOL.md) §5b.
-- **C3 `[ ]` Close the founding open questions.**
+- **C3 `[x]` Close the founding open questions** (s170 → closure argued in
+  [`theory/lexicon-grammar-continuum`](findings/theory/lexicon-grammar-continuum.md) § "Closing the two
+  founding open-questions"; both open-questions marked `answered`).
   [`open-question/constructional-vs-frequency-confound`](findings/open-questions/constructional-vs-frequency-confound.md)
-  and
+  answered by the shadow-control apparatus (matched same-material control + measured residual; worked
+  exemplar the CC ≈87pp gap, closed-weight bound stated); and
   [`open-question/distributional-vs-inferential-constructional`](findings/open-questions/distributional-vs-inferential-constructional.md)
-  (both 2026-05-28) are implicitly answered by the shadow-control apparatus and the
-  thin-inferential positioning; consolidate into the continuum theory page and close, with the
-  closure argued in-page.
+  answered *thinly* by the shadow-depth positioning (inferential role secured 1/3 models via cross-instrument
+  convergence; boundary a shadow-depth gradient; residual thread re-homed, not re-filed as a founding question).
 - **C4 Instrument stopping rule** — [`PROTOCOL.md`](../PROTOCOL.md) §3.
 - **C5 Decorrelated review votes** — [`PROTOCOL.md`](../PROTOCOL.md) §2/§A3.
 
@@ -190,5 +192,6 @@ B6, C4) extend them.
 | Date | Item | What landed |
 |------|------|-------------|
 | 2026-07-02 | adoption | Program adopted (Tom); institutional layer built (special session): program page, PROTOCOL §3–§4, generated index, note type, predictions.md seed, models.md truth-up, site repairs, three subject decisions queued. |
+| 2026-07-02 (s170) | C3 | **Both founding open-questions closed** (`answered`): the frequency-confound and the distributional-vs-inferential questions (both 2026-05-28) consolidated into [`theory/lexicon-grammar-continuum`](findings/theory/lexicon-grammar-continuum.md)'s new closure section. Q1 answered by the shadow-control apparatus (matched same-material control + measured residual; CC ≈87pp exemplar; closed-weight bound kept honest); Q2 answered *thinly* — inferential role secured 1/3 models via cross-instrument convergence, boundary a shadow-depth gradient, residual thread re-homed. Philosophical/consolidation unit; $0. |
 | 2026-07-02 (s169) | A2a, A3a | **A2a first powered confirmation landed:** CC covariation → [`result/comparative-correlative-covariation-powered`](findings/results/comparative-correlative-covariation-powered.md) (136 fresh disjoint items on the byte-frozen v1 instrument; MAGNITUDE-CONFIRMED; pre-run critic + non-Anthropic vote GO, post-run verifier REPRODUCED 0 discrepancies). Construction-isolation assertion gap ≈87pp [95% CI lb ≈78], inverse-flip 97–100%, no atypical collapse, 3/3 — magnitude+interval attached to the CC claim (was direction-only). $0.531 billed. **A3a decision RATIFIED:** the s168-opened human-projection-anchor decision → resolved ADOPT-A (adopt none yet; all four datasets still license-unverified — fresh reviewer reproduced the null via GitHub HTML repo pages; non-Anthropic vote converged). |
 | 2026-07-02 (s168) | A4b/A4c/A4d, A3a, B1 | All three queued subject decisions **ratified** (autonomous adversarial review + non-Anthropic votes): scale-ladder ADOPT-A (A4b unblocked, mechanical `ladder` flag owed first), panel-v2 ADOPT-A sequenced-hold with re-open trigger (A4c decided), logprob-lane ADOPT-A (A4d unblocked, re-verify-then-pilot). **A3a** presupposition human-projection-anchor scout landed ($0): all 4 datasets license-UNVERIFIED → anchor decision opened (adopt none yet). **B1** first claims-promotion review landed: CC covariation → [`claim/comparative-correlative-covariation`](findings/claims/comparative-correlative-covariation.md) (`supported`, scoped directional; magnitude deferred to A2a). |
