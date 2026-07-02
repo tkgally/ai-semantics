@@ -12,7 +12,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-30
-updated: 2026-06-29
+updated: 2026-07-02
 links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
@@ -99,6 +99,33 @@ The two sources reach the same finding from opposite directions and are **prior-
 Read through *this page's own test*, that convergence is **deflationary**, not a competence win — the reading is argued in [`essay/antonymy-outlier-distributional-shadow`](../essays/antonymy-outlier-distributional-shadow.md). The lexical pole's "beat the distributional shadow" skeleton asks whether relation structure is tracked **over and above** co-occurrence; antonymy is the relation where the shadow is **largest** — antonym pairs recur in tight, near-symmetric *contrastive frames* (conjoined "X and Y" and repeated-with-substitution phrases; "neither X nor Y", "from X to Y", "X versus Y" illustrative), a characterization now carrying a **primary corpus anchor** (Justeson & Katz 1991 on the Brown Corpus: antonyms co-occur far above chance, "**63% (139/219) … in lexically identical structures**", "**Fully 164 (75%) … in conjoined syntactic structures**" — [`source/justeson-katz-1991-antonym-cooccurrence`](../../base/sources/justeson-katz-1991-antonym-cooccurrence.md), §3, pp. 11-12; predicative adjectives, pre-LLM, not a panel claim), so antonymy is **maximally Harris-recoverable** and the "over-and-above" residual a competence claim must show is **smallest** there. So the lexical pole is not a single "graded scale beats the shadow" cell but a **relation-type gradient**: antonymy sits at the **shadow-saturated end** (smallest residual), with **meronymy and hyponymy** retaining a **larger residual** (part-whole and the hierarchical relations are less written into a symmetric contrastive frame). At the relation grain, the relation a model looks best at is the relation where "looking good" is *least* informative about anything beyond co-occurrence — the deflationary mirror of the graded-sense axis's positive. One rigor point the essay adds: the *cross-method* agreement (behavioral + representational) does **not** screen off the shared cause — both probes are downstream of the same training-time co-occurrence — so it *raises the prior* on the shadow reading rather than triangulating a competence (an *application* of the convergence ladder's screening-off concept to a cross-method case, **not** a claim the ladder itself makes).
 
 The **panel-level** version of this gradient is the bet registered in [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md): on the project's own panel, against a contrastive-frame distributional control, antonymy is the relation whose recovery is **least separable** from the control (smallest control-adjusted residual), while meronymy/hyponymy keep a larger one. It is **recorded, not run** — spend-bearing; `anchor: pending` (the natural human anchor, Cao's released `ProbeResponses` relata, is **not adopted**: no LICENSE file, and a 10,507-vs-10,546 probe-count discrepancy still to reconcile); and no transfer from the prior-art models. So the relation-type axis enters the continuum as **prior-art plus a blocked conjecture**: it `refines` the lexical pole by predicting *which* relation least beats the shadow, complementing — not displacing — the established graded-sense positive ([`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md)). Nothing here is a panel finding, and the panel test of the gradient is owed.
+
+### Both poles are internally graded by shadow-depth — a second axis orthogonal to grain
+
+> **Update (2026-07-02, session 165).** The relation-type gradient above is one instance of a more
+> general structure that the presupposition line now makes visible at the *other* pole too, argued in
+> [`essay/shadow-depth-cross-cuts-grain`](../essays/shadow-depth-cross-cuts-grain.md). Run this page's
+> single test — *does the gradient beat the distributional shadow?* — across the whole cline and it
+> sorts phenomena **not by grain but by shadow-depth**: how much of the phenomenon is already written
+> into surface co-occurrence. That axis **cross-cuts** grain. Each pole turns out to hold *both* a
+> demonstrated **shadow-beater** and a **shadow-saturated corner**:
+>
+> - **Lexical pole:** graded sense gradience ([`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md), beater — survives the topic-partial) vs antonymy relation-recovery (shadow-saturated — smallest over-and-above residual; [`essay/antonymy-outlier-distributional-shadow`](../essays/antonymy-outlier-distributional-shadow.md)).
+> - **Grammatical pole:** the comparative-correlative covariation inference ([`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md), beater — clears matched same-word controls) vs the **presupposition corner** (shadow-saturated — environment-gated in both signatures, cue-strength-graded; [`essay/presupposition-environment-gated`](../essays/presupposition-environment-gated.md), [`result/accommodation-cue-strength-v1`](../results/accommodation-cue-strength-v1.md)).
+>
+> So **presupposition marks the grammatical pole's shadow-saturated end just as antonymy marks the
+> lexical pole's** — the same structural move at both grains. This **sharpens** the continuum (adds a
+> second ordering axis, orthogonal to grain, and locates the grammatical pole's shadow-saturated corner
+> where the page previously recorded only the lexical pole's) and **complicates** the headline below:
+> "beats the distributional null at both grains" is true of the *beaters* at both grains, but the
+> grammatical pole is **not uniformly** a shadow-beater — its presupposition corner, on this reading, is
+> not. **Calibration inherited from the essay:** the two shadow-*saturated* placements are
+> **readings/bets, not controlled failures** — no matched distributional control has been run on the
+> panel for either the antonymy corner (prior-art + the blocked
+> [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md))
+> or the presupposition corner (`internal-contrast-only`, no human comparison); the beaters, by
+> contrast, *pass* a measured control. Shadow-depth is a property of the **phenomenon**, silent on which
+> model tracks which (it does not touch the cross-axis competence dissociation below).
 
 ## The empirical bridge: coercion is where the two grains touch
 
