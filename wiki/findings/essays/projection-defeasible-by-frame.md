@@ -8,12 +8,18 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 links:
   - rel: refines
     target: result/presupposition-projection-v1
   - rel: depends-on
     target: result/presupposition-projection-v1
+  - rel: depends-on
+    target: result/projection-trigger-inventory-v1
+  - rel: depends-on
+    target: result/conditional-projection-rescue-v1
+  - rel: depends-on
+    target: result/commitment-framing-model-difference-v1
   - rel: depends-on
     target: source/beaver-geurts-denlinger-2021-presupposition-sep
   - rel: depends-on
@@ -243,3 +249,54 @@ frame effect. The existing disclaimers stand unchanged: this remains `internal-c
 grammatical corner, a claim about *description* not mechanism, with no human comparison. The s160
 run's own scope is identical — "**within-model contrast only; no human comparison**," and its
 `anchor: internal-contrast-only` was ratified by an independent session-161 adversarial review.
+
+**Revision — 2026-07-02 (session 166): the claude commit-rescue is a *backgrounding-inclusive
+reading* of "committed"; gpt's non-rescue is a *general floor*, not a narrow reading; and gemini is
+not a fixed blanket-refuser.**
+The s159 revision above left three model-level textures unexplained: claude alone was rescued by the
+commitment framing (0.42 → 0.75), gpt's commitment framing *lowered* its endorsement, and gemini
+returned UNCLEAR to presupposition and entailment alike. A follow-up decomposed all three, holding the
+conditional sentence fixed and varying only the question wrapper across a scene × wording factorial
+with two deliberately-poled anchor arms — "everything the speaker *takes for granted*" (backgrounding)
+and "only … the *main point*" (at-issue)
+([`result/commitment-framing-model-difference-v1`](../results/commitment-framing-model-difference-v1.md),
+verdict **PARTIAL**). It sharpens — and in one place corrects — the s159 revision:
+
+- **claude: the rescue is a backgrounding-inclusive reading of "committed."** claude's neutral commit
+  endorsement (0.75) clusters with the backgrounding pole (0.83) and sits well above the at-issue pole
+  (0.42): it reads "everything the speaker is committed to" as *reaching* the backgrounded
+  presupposition. So "for one model the collapse is partly a framing effect" sharpens to a named
+  reading — claude recovers projection when, and because, the question is framed to reach backgrounded
+  content and it reads commitment inclusively. (Honest limit: this classification is a ~1-item margin,
+  direction-only; and the recovery couples the speaker-scene with the wording, which the probe could
+  not cleanly separate — its scene- and wording-effects are equal at +0.17 each.)
+- **gpt: the non-rescue is a general floor, not a narrow reading.** The natural guess — that gpt reads
+  "committed" *restrictively* (at-issue) and so refuses the backgrounded content — is **refuted**: gpt
+  keeps presupposition-endorsement low under *every* framing tested, including the explicit "takes for
+  granted" pole (max 0.33), so the two poles barely separate for it (spread 0.08). Its
+  commitment-framing suppression is therefore not a wording-specific narrow reading but a *general*
+  reluctance to extract the projected presupposition from the conditional antecedent, which no framing
+  here lifts. This **retires** the narrow-reading conjecture the s159 revision floated and, if
+  anything, *strengthens* the genuine-limit reading for gpt: its conditional collapse resists not only
+  the three s159 rescues but the whole wording factorial.
+- **gemini: not a fixed blanket-refuser — its extraction is itself wording-gated.** The s159 revision
+  described gemini's collapse as "a blanket refusal to extract from a hypothetical." That is too strong
+  at the metalinguistic level: under the backgrounding-pole wording gemini answers freely and endorses
+  the presupposition (0.67), and it was *not* blanket-UNCLEAR on this probe (11 of 144 answers). So
+  gemini's willingness to extract a backgrounded inference from the *same* conditional is gated by how
+  the question is worded — which fits the frame-conditioned reading better than a fixed refusal does,
+  rather than contradicting it.
+
+**Bearing on the thesis (calibrated).** None of this disturbs the essay's core description — projection
+here is frame-shaped, and endorsement is movable by surface framing rather than fixed by a
+frame-invariant semantic representation. It adds *model-level* texture: the movability is heterogeneous
+across the panel (claude highly framing-sensitive and backgrounding-inclusive; gpt barely
+framing-movable — its poles do not separate and it stays low, the backgrounding wording lifting it only
+to 0.33; gemini framing-sensitive, with its neutral "committed" sitting at its own at-issue pole — a
+between-poles position, not a commit-induced lift, since its commit arm did not move off base). One caution the
+probe itself forces, kept in front: the two anchor poles are *elicitation-designed* to pull apart — a
+system that genuinely *computed* a presupposition/assertion split would also answer the backgrounding
+question high and the at-issue question low — so where each model's *neutral* wording lands is a fact
+about that model's reading of "committed," **not** by itself new evidence for the
+distributional-over-semantic reading. The essay's disclaimers stand unchanged: `internal-contrast-only`,
+one grammatical corner, a claim about description not mechanism, no human comparison.
