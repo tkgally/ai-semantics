@@ -15,6 +15,8 @@ this session lives in `NEXT.md`. If anything here conflicts with `PROJECT.md`, t
 - `PROJECT.md` — the charter. §12 is the autonomous-era amendment (ratified by Tom 2026-06-12):
   two tracks, governance, budget, website, merge duty. Re-read §12 if in doubt; the rest as needed.
 - `PROTOCOL.md` — the per-run discipline. Follow it end-to-end, every session, no exceptions.
+- `wiki/program.md` — the standing program (adopted 2026-07-02): the medium-term slate of
+  empirical and consolidation work. Sessions draw units from it and tick what they advance.
 - `CLAUDE.md` — schema and conventions (auto-loaded). The ten always-on rules bind every step.
 - `NEXT.md` — the baton: current state, the backlog, open decisions and their eligibility.
 - A human (Tom) monitors the project through the public website and holds a **standing
@@ -37,32 +39,36 @@ quietly dormant: if the last several sessions were all one track, weight the bac
 
 ## 3. The session, step by step
 
-0. **Start the clock.** Your very first shell command this session is
-   `tools/session-clock.sh start` — it stamps the session's start time so the
-   wind-up can report the total session duration on the website (`PROTOCOL.md §5b`).
-   Do this before reading or doing anything else.
-1. **Cold start.** Read `NEXT.md`, then `wiki/index.md`, then only the pages the work needs.
+1. **Cold start.** Read `NEXT.md`, then `wiki/program.md` (the standing program — pick units
+   that advance it), then navigate via `wiki/index.md` (a generated one-line-per-page catalog;
+   scan or grep it, don't read it whole) to only the pages the work needs.
    If `NEXT.md` says a previous PR failed to merge, land it before anything else.
 2. **Reconcile decisions** (`PROTOCOL.md §2`): apply any Tom override; then for each
    `wiki/decisions/open/` entry opened in an *earlier* session, run the independent
-   adversarial-review ratification. Never ratify what this session opened.
+   adversarial-review ratification (routing one vote through a non-Anthropic panel model).
+   Never ratify what this session opened.
 3. **Plan and execute** in workflow mode (`PROTOCOL.md §A`): 2–3 waves of parallel bounded
-   units drawn from both tracks, each wave followed by an adversarial coherence pass,
-   each wave committed. Judgement is never parallelized; experiments keep their independent
-   pre-run critic and post-run verifier.
-4. **Spend discipline:** up to **$5.00 (UTC calendar day)** in OpenRouter billed cost, all
-   sessions that day combined — check today's ledger rows in `config/budget.md` first,
-   pre-flight-estimate every probe, record actuals after.
-5. **Verify** (`PROTOCOL.md §5`): senselint 0 errors; linkify clean; provenance and
-   human-anchor checks by hand; website consistency.
-6. **Update the public website** (`PROTOCOL.md §5b`): journal entry, home-page status, and any
-   touched pages under `docs/`. Plain language, glossary-linked, no repo links, never refer to
-   the monitor, never overstate. This step is mandatory even in a tiny session.
+   units drawn from both tracks and the program, each wave followed by an adversarial
+   coherence pass, each wave committed. Prefer fewer, deeper units (`PROTOCOL.md §3`).
+   Judgement is never parallelized; experiments keep their independent pre-run critic and
+   post-run verifier.
+4. **Spend discipline** (`PROTOCOL.md §4`): up to **$5.00 (UTC calendar day)** in OpenRouter
+   billed cost, all sessions that day combined — check today's ledger rows in
+   `config/budget.md` first, pre-flight-estimate every probe, record actuals after. Size a
+   claim-carrying probe to powered N (~100–150 items): the cap is a ceiling, not a target,
+   but chronic under-use on load-bearing lines is a defect.
+5. **Verify** (`PROTOCOL.md §5`): build-index regenerated; senselint 0 errors; linkify clean;
+   provenance and human-anchor checks by hand; website consistency.
+6. **Website — daily roll-up** (`PROTOCOL.md §5b`): if this session landed substantive work,
+   create or extend **today's** journal entry (one per JST calendar day) and refresh the home
+   page. Plain language, glossary-linked, no repo links, never refer to the monitor, never
+   overstate. A maintenance-only session skips this step.
 7. **Land it** (`PROTOCOL.md §6`): commit, push, open a PR, **squash-merge to `main`**, confirm
    `main` advanced.
-8. **Hand off** (`PROTOCOL.md §7`): rewrite `NEXT.md`, append one line to `log.md`. Before
-   stopping, kill every background task/loop this session started and confirm a clean process
-   table and clean `git status` — then stop.
+8. **Hand off** (`PROTOCOL.md §7`): rewrite `NEXT.md`, tick advanced program items in
+   `wiki/program.md`, append one line to `log.md`. Before stopping, kill every background
+   task/loop this session started and confirm a clean process table and clean `git status` —
+   then stop.
 
 **Running long commands / waiting.** Probes (`probe.py full`, `certify.py run`) take minutes.
 Launch them with the harness's `run_in_background: true` and rely on the completion notification
@@ -77,6 +83,8 @@ replayed commands) and the loop spins forever. Any unavoidable poll needs a dead
 - **Ambitious in scope, rigorous in claim.** Pursue real questions, including new directions the
   charter's focus can support — and keep every written claim no stronger than its evidence.
   Honest negatives are first-class results.
+- **Deep over busy.** One powered probe, one promotion review, or one finished consolidation
+  beats several micro-units. When nothing substantive is owed, reconcile, verify, and stop.
 - **Never fabricate** — quotes, page numbers, datasets, anchors, numbers. If something is
   unreachable, say so and route around it.
 - **Surface, don't smuggle.** Value-laden methodological choices become `wiki/decisions/open/`

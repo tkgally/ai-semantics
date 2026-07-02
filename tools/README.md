@@ -1,5 +1,30 @@
 # tools/README.md
 
+## build-index.py
+
+`tools/build-index.py` regenerates the **page catalog** in `wiki/index.md` — everything between
+its `BEGIN GENERATED CATALOG` / `END GENERATED CATALOG` markers — from page front-matter, **one
+line per page** (adopted 2026-07-02 with the program; enforces the 2026-06-18
+`wiki-frontmatter-ergonomics` slimming intent after the hand-maintained catalog regrew to
+~600 KB). The header above the markers stays hand-maintained; the block between them is owned by
+this tool and must never be hand-edited.
+
+```
+python3 tools/build-index.py           # rewrite the generated block in place
+python3 tools/build-index.py --check   # report-only; exit 1 if the block is stale
+```
+
+- Covers: open decisions (+ a resolved-count pointer line), base concepts/sources/resources,
+  `wanted.md`, all findings types (including `note` when the directory exists), experiment
+  designs, and run records (newest first, linked via their READMEs).
+- Line format: link (label = path, so senselint check 6 always matches) — title, truncated —
+  `**status**` — anchor state for claims/results (`anchored` / `internal-contrast-only` /
+  `anchor: pending`) — updated/created date. Details live on the pages, not in the catalog.
+- Uses `senselint.py`'s front-matter parser, so the two tools can never disagree about a page.
+- Run it **first** at the verification step (`PROTOCOL.md §5`): new, renamed, or retyped pages
+  self-register; a page missing from the catalog after a run means its front-matter is broken
+  (senselint will say how).
+
 ## linkify.py
 
 `tools/linkify.py` makes the wiki **clickable**: it rewrites in-repo references written as backticked code spans into relative markdown links, so a reader can navigate page-to-page in any markdown viewer.
@@ -138,14 +163,15 @@ Stdlib-only Python 3. The tool tries `import yaml` (PyYAML) for robust front-mat
 
 ## session-clock.sh
 
-`tools/session-clock.sh` records how long a session takes, wall-clock, from its start to the
-website wind-up — the number reported on the public journal (`PROTOCOL.md §5b`). Sessions carry no
-other record of their *start*: the journal stamp, the commits, and the merge all land at the *end*,
-so without this the total duration could not be read back.
+**Optional since 2026-07-02** — the journal clock-stamp mandate was dropped with the program
+adoption ([`program-2026-07-adoption`](../wiki/decisions/resolved/program-2026-07-adoption.md));
+no protocol step requires this tool. It remains available for when a wall-clock duration is
+wanted: sessions carry no other record of their *start* (the commits and the merge all land at
+the *end*), so without it a total duration cannot be read back.
 
 ```
-tools/session-clock.sh start            # FIRST action of a session (PROTOCOL §1)
-tools/session-clock.sh report [N]       # at the website step (PROTOCOL §5b); N = session number
+tools/session-clock.sh start            # optionally, near session start
+tools/session-clock.sh report [N]       # optionally, at wind-up; N = session number
 tools/session-clock.sh start --force    # deliberately reset the start (rarely needed)
 ```
 

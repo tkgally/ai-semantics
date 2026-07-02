@@ -1,13 +1,17 @@
 #!/bin/sh
 # session-clock.sh — record a session's start clock time and report total elapsed.
 #
-# The autonomous run discipline (PROTOCOL.md) has no record of when a session's
-# *initial prompt* fired: the journal JST stamp, the commits, and the merge all
-# land at the *end* of a session, so "start -> merge" wall-clock could not be
-# read back. This helper closes that gap.
+# OPTIONAL since 2026-07-02: the journal clock-stamp mandate was dropped with the
+# program adoption (decisions/resolved/program-2026-07-adoption.md) — nothing in
+# PROTOCOL.md requires this tool anymore. Kept because it is harmless and
+# occasionally useful: run `start` early if you might want a duration figure later.
 #
-#   tools/session-clock.sh start            # FIRST action of a session (PROTOCOL §1)
-#   tools/session-clock.sh report [N]       # at the website step (PROTOCOL §5b)
+# Sessions carry no other record of when their *initial prompt* fired: the
+# commits and the merge all land at the *end* of a session, so "start -> merge"
+# wall-clock cannot be read back without it.
+#
+#   tools/session-clock.sh start            # optionally, near session start
+#   tools/session-clock.sh report [N]       # optionally, at wind-up
 #
 # `start` writes the start epoch to .session-clock (gitignored, ephemeral — it
 # lives only inside the run's container and is never committed). It does NOT
