@@ -15,6 +15,10 @@ links:
   - rel: depends-on
     target: result/presupposition-projection-v1
   - rel: depends-on
+    target: result/projection-trigger-inventory-v1
+  - rel: depends-on
+    target: result/conditional-projection-rescue-v1
+  - rel: depends-on
     target: result/commitment-framing-model-difference-v1
   - rel: depends-on
     target: source/beaver-geurts-denlinger-2021-presupposition-sep
@@ -286,8 +290,10 @@ verdict **PARTIAL**). It sharpens — and in one place corrects — the s159 rev
 **Bearing on the thesis (calibrated).** None of this disturbs the essay's core description — projection
 here is frame-shaped, and endorsement is movable by surface framing rather than fixed by a
 frame-invariant semantic representation. It adds *model-level* texture: the movability is heterogeneous
-across the panel (claude highly framing-sensitive and backgrounding-inclusive; gpt framing-insensitive
-at a low floor; gemini framing-sensitive but reading the neutral "committed" narrowly). One caution the
+across the panel (claude highly framing-sensitive and backgrounding-inclusive; gpt barely
+framing-movable — its poles do not separate and it stays low, the backgrounding wording lifting it only
+to 0.33; gemini framing-sensitive, with its neutral "committed" sitting at its own at-issue pole — a
+between-poles position, not a commit-induced lift, since its commit arm did not move off base). One caution the
 probe itself forces, kept in front: the two anchor poles are *elicitation-designed* to pull apart — a
 system that genuinely *computed* a presupposition/assertion split would also answer the backgrounding
 question high and the at-issue question low — so where each model's *neutral* wording lands is a fact
