@@ -6,10 +6,9 @@ meaning-senses:
   - inferential
   - distributional
 status: proposed
-contingent-on:
-  - presupposition-accommodation-internal-contrast-anchor
+contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 links:
   - rel: depends-on
     target: result/presupposition-projection-v1
@@ -93,8 +92,9 @@ about which inference survives / is licensed, not co-occurrence — comes out, a
 - **No mechanism.** "Better described as distributional" is a claim about which *description* fits the
   behavioral pattern, not about what the models compute internally. No internal-representation claim,
   either way.
-- **No human comparison.** Both underlying results are within-model contrasts
-  (`internal-contrast-only`, ratified for the projection line; `anchor: pending` for accommodation).
+- **No human comparison.** Both underlying results are within-model contrasts, each
+  `internal-contrast-only` (ratified for the projection line in sessions 159/161, and for the
+  accommodation line in session 163).
   Nothing here compares the panel to human projection or accommodation judgments; none were measured.
   The SEP material enters only as an a-priori map of *where in the grammar* each signature is
   environment-sensitive, never as a baseline.
