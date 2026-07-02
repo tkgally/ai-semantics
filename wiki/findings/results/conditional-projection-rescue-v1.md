@@ -180,3 +180,13 @@ robust, not a query artifact) and adjudicates the puncture test of
 genuine-limit reading. Opens a possible narrower follow-up (why does an explicit *commitment* framing
 rescue claude but *suppress* gpt? — a model-difference in how "speaker commitment" is read), left for a
 later session.
+
+**Update (session 166): that follow-up ran** →
+[`result/commitment-framing-model-difference-v1`](commitment-framing-model-difference-v1.md) (verdict
+**PARTIAL**). The model difference reproduced. **claude** reads "committed" **inclusively** (a
+backgrounding-reader: its `commit` presup-endorse 0.75 clusters with a "takes for granted" pole 0.83,
+above a "main point" pole 0.42) — that is *why* commit rescues it. But **gpt's suppression is NOT the
+predicted narrow reading**: it keeps presup-endorse low under *every* framing including the explicitly
+backgrounding pole (max 0.33), so its poles do not separate — a **general** low-projection floor, which
+retires the "gpt reads commitment restrictively" conjecture. The scene-vs-wording confound (advisory c
+above) stays **coupled** for claude (scene +0.17, wording +0.17), not cleanly decomposed.
