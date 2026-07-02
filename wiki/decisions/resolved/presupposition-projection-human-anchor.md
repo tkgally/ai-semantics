@@ -1,11 +1,28 @@
 ---
 id: presupposition-projection-human-anchor
 title: "Adopt which, if any, external HUMAN projection-variability dataset as a human anchor for the presupposition/projection line?"
-status: open
+status: resolved
 opened: 2026-07-02
 opened-by: session 168 (program A3a scout)
+resolved: 2026-07-02
+resolved-by: autonomous (adversarial review)
+resolution: "ADOPT DEFAULT (Option A: adopt none yet; re-scout licenses later). Ratified session 169, autonomous cross-session adversarial review + one non-Anthropic panel vote (gpt-5.4-mini, converged on A) — opened by session 168, ratified s169; the boundary held. The load-bearing check (License genuinely verified) FAILS for every candidate: the fresh reviewer independently reproduced the scout's null via three routes this session — GitHub license API (HTTP 403 through the proxy), authenticated gh CLI (403, repo-scoped to this project only), and the public HTML repo pages, which render a license in the sidebar when one exists and confirmed 'No license shown' for github.com/mcdm/CommitmentBank (file listing carries no LICENSE/COPYING), github.com/judith-tonhauser/projective-probability (no LICENSE), and github.com/nyu-mll/nope (README: no data-use terms). No data license file or explicit data-use statement was retrieved for any candidate. Because Options B and C are each explicitly contingent on license verification ('until verified, collapses into Option A'), they are unreachable this session by their own terms; Option D (permanent rejection) was considered and rejected because it forecloses a real knowledge upgrade permanently on a grain objection (aggregate-rate vs item-matched) that is a bound, not a validity defect, whereas A preserves that optionality at zero cost. Adopts no anchor and creates no new artifact, so the three existing projection results (presupposition-projection-v1, conditional-projection-rescue-v1, projection-trigger-inventory-v1) stay internal-contrast-only, untouched (Check 4 confirmed by direct read of their front-matter). Fixes the yardstick, never a result — the verdict rests solely on verified license-absence and is independent of which direction a future model-vs-human comparison would come out. Environment note for the re-scout: the GitHub license-metadata API route is unreadable from an autonomous session (proxy 403 + repo-scoped token), so the future verification must use a genuinely external route — an author email, or an OSF/Zenodo deposit carrying an explicit license — not merely re-trying the API. No contingent artifacts to promote or retire (field empty). Logged in log.md."
 contingent-artifacts: []
 ---
+
+> **RESOLVED 2026-07-02 (session 169) — ADOPT A (adopt none yet; re-scout licenses later).** Autonomous
+> cross-session adversarial review (fresh agent, distinct from the s168 opener) + one non-Anthropic panel
+> vote (gpt-5.4-mini), **both converged on A**. The reviewer independently reproduced the scout's null by a
+> route the scout had not tried — the public GitHub HTML repo pages (which show a license in the sidebar
+> when one exists): **"No license shown"** for `mcdm/CommitmentBank`, `judith-tonhauser/projective-probability`,
+> and `nyu-mll/nope`; the license API and `gh` CLI both returned 403 in this environment. **No candidate's
+> data license could be verified**, so Options B/C (each contingent on verification) collapse into A by their
+> own terms, and D (permanent rejection) was rejected as foreclosing a real upgrade on a grain objection that
+> is a bound, not a defect. The three existing projection results stay `internal-contrast-only`, untouched.
+> **Re-scout note:** the GitHub license API is unreadable from an autonomous session (proxy 403 +
+> repo-scoped token) — a later verification must use a genuinely external route (author email, or an
+> OSF/Zenodo deposit with an explicit license), not a re-try of the API. Full rationale in the `resolution:`
+> field above. The text below is the original decision as opened by session 168.
 
 # Decision: adopt an external HUMAN projection-variability anchor for the projection line
 
@@ -17,9 +34,9 @@ it. Tom's standing override outranks any autonomous ratification.
 ## Why this exists — and how it differs from the already-resolved projection decisions
 
 The project already has **`internal-contrast-only`** ratifications for the projection line —
-[`decisions/resolved/presupposition-projection-internal-contrast-anchor`](../resolved/presupposition-projection-internal-contrast-anchor.md),
-[`decisions/resolved/projection-trigger-inventory-internal-contrast-anchor`](../resolved/projection-trigger-inventory-internal-contrast-anchor.md),
-and [`decisions/resolved/presupposition-accommodation-internal-contrast-anchor`](../resolved/presupposition-accommodation-internal-contrast-anchor.md).
+[`decisions/resolved/presupposition-projection-internal-contrast-anchor`](presupposition-projection-internal-contrast-anchor.md),
+[`decisions/resolved/projection-trigger-inventory-internal-contrast-anchor`](projection-trigger-inventory-internal-contrast-anchor.md),
+and [`decisions/resolved/presupposition-accommodation-internal-contrast-anchor`](presupposition-accommodation-internal-contrast-anchor.md).
 **This decision is different.** Those fixed the *within-model contrast* as needing **no** human anchor
 (the results make no human comparison). **This** decision asks the opposite-facing question: **should
 the project adopt an external HUMAN projection dataset to build a NEW, additional `human-comparison`
