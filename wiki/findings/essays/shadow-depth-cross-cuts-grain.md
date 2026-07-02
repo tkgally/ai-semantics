@@ -82,9 +82,10 @@ At the *same* grain there is a **shadow-saturated corner**: relation-type recove
 [`essay/antonymy-outlier-distributional-shadow`](antonymy-outlier-distributional-shadow.md) reads the
 convergent finding that antonymy is the relation models recover best as deflationary — antonym pairs
 recur in tight contrastive frames, so antonymy is the relation where the distributional shadow is
-*largest* and the over-and-above residual a competence claim must show is *smallest*. "The relation a
-model looks best at is the relation where looking good is least informative about anything beyond
-co-occurrence." So the lexical pole is not one cell but a **relation-type gradient**: a shadow-beater
+*largest* and the over-and-above residual a competence claim must show is *smallest*. "The relation at
+which models look best is precisely the relation at which 'looking good' is least informative about
+anything over and above co-occurrence." So the lexical pole is not one cell but a **relation-type
+gradient**: a shadow-beater
 (graded sense) at one end, a shadow-saturated corner (antonymy) at the other — both at the word grain.
 
 ## The grammatical pole is *also* internally graded by shadow-depth
@@ -115,8 +116,8 @@ competence. What the within-model probes find instead is that its behavior is fu
   ([`result/presupposition-accommodation-v1`](../results/presupposition-accommodation-v1.md), verdict
   GATED-ACCOMMODATION 3/3).
 
-There is no residual here that a surface-cue account cannot reconstruct: the environment-gated
-description predicts both signatures directly, and a frame-/context-*invariant* represented split
+There is no residual here, on this reading, that a surface-cue account cannot reconstruct: the
+environment-gated description predicts both signatures directly, and a frame-/context-*invariant* represented split
 would predict the invariance the panel does **not** show. This is exactly what a shadow-saturated
 corner looks like at the construction grain — a phenomenon whose within-model behavior is written into
 how reliably the licensing environment leaves the trigger's cue on the surface.
@@ -137,7 +138,7 @@ Sensitivity to *how strongly* a contradiction is worded can look like sophistica
 computing something finer than a surface switch.
 
 It is not evidence against the shadow reading; it is what *makes the shadow deep here*. As the result
-page states, a **cue-strength–sensitive distributional learner predicts exactly this graded gate**: a
+page argues, a **cue-strength–sensitive distributional learner predicts exactly this graded gate**: a
 learner that follows the surface cue, weighting it by its reliability, will back off a denied
 presupposition in proportion to how strongly the surface denies it. Graded ≠ "computes the split." The
 grading tells you the surface cue is being read at fine resolution, not that a represented
