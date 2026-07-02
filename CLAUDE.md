@@ -1,18 +1,18 @@
 # CLAUDE.md — schema and conventions
 
-Read this file every run. It encodes how `ai-semantics` is shaped. The charter is `PROJECT.md` (autonomous-era amendment: §12); the run discipline is `PROTOCOL.md`; the session entry point is `continue-prompt.md`. This file is the day-to-day cheat sheet.
+Read this file every run. It encodes how `ai-semantics` is shaped. The charter is `PROJECT.md` (autonomous-era amendment: §12); the run discipline is `PROTOCOL.md`; the standing program is `wiki/program.md` (adopted 2026-07-02); the session entry point is `continue-prompt.md`. This file is the day-to-day cheat sheet.
 
 ## Always-on rules
 
-1. **Read first, write second.** Start a run by reading `continue-prompt.md`, then `NEXT.md`, then `wiki/index.md`, then only the pages your next action needs. Do not load the whole wiki.
+1. **Read first, write second.** Start a run by reading `continue-prompt.md`, then `NEXT.md`, then `wiki/program.md`, then only the pages your next action needs — navigating via `wiki/index.md`, a tool-generated one-line-per-page catalog (scan or grep the sections you need; never hand-edit its generated part — `tools/build-index.py` owns it). Do not load the whole wiki.
 2. **Charter takes precedence.** If something here contradicts `PROJECT.md`, fix this file; don't drift.
-3. **Run discipline.** Follow `PROTOCOL.md` end-to-end every run, including the verification gates before commit. **Every autonomous session defaults to workflow mode** — a multiagent dynamic workflow (orchestrator + parallel subagents + an adversarial coherence pass); 2–3 waves unless an explicit end time says otherwise. See `PROTOCOL.md §0` and `§A`. Single-unit mode is the fallback for small or surgical tasks. Workflow mode parallelizes *generation*, never *judgement*: the gates, the human-anchor discipline, the no-fabrication rule, and "surface decisions, never ratify them in the session that opened them" all still bind.
+3. **Run discipline.** Follow `PROTOCOL.md` end-to-end every run, including the verification gates before commit. **Every autonomous session defaults to workflow mode** — a multiagent dynamic workflow (orchestrator + parallel subagents + an adversarial coherence pass); 2–3 waves unless an explicit end time says otherwise. See `PROTOCOL.md §0` and `§A`. Single-unit mode is the fallback for small or surgical tasks — or one deep unit. Workflow mode parallelizes *generation*, never *judgement*: the gates, the human-anchor discipline, the no-fabrication rule, and "surface decisions, never ratify them in the session that opened them" all still bind. Unit selection is **program-guided** (`wiki/program.md`; `PROTOCOL.md §3`): prefer fewer, deeper units, and when nothing substantive is owed, reconcile, verify, and stop rather than pad.
 4. **No human subjects.** Tom is the monitor, not a subject. All human bearing comes from existing resources (treebanks, sense-annotated corpora, dictionaries, acceptability sets, construction inventories). See `wiki/base/resources/`.
 5. **No silent gate skipping.** When you hit an operationalization or human-anchor question, write a page to `wiki/decisions/open/` with options and a provisional default; mark downstream artifacts contingent; surface in `NEXT.md`. **Ratification is autonomous and cross-session** (`PROJECT.md` §12.3): only a *later* session may ratify, via an independent adversarial-review pass with written rationale, recorded `resolved-by: autonomous (adversarial review)`. Tom's standing override outranks any autonomous ratification.
 6. **Modest, realistic claims.** Keep every claim calibrated to its evidence; never inflate for novelty. The project's purpose is to extend **genuine human knowledge and understanding** using AI tools — not to produce publishable research or pad a CV (`PROJECT.md` §1). When in doubt, under-claim, and write the null. Ratifying an anchor or operationalization fixes the *yardstick*, never the *result*.
 7. **Two tracks, inter-feeding** (`PROJECT.md` §12.1). The empirical loop and the philosophical exploration are both first-class: empirical results revise essays and theory; essays spawn conjectures. No fixed endpoint; scope may extend outward while meaning — especially lexical and grammatical meaning — stays the focus.
-8. **Budget: USD 5.00 per calendar day (UTC)** in OpenRouter spend, tracked as billed `usage.cost` in `config/budget.md`. Pre-flight estimate before any probe; record the actual after.
-9. **The website is part of every session.** Update `docs/` (journal entry + home-page status, plus whatever pages the session's work touched) before the final commit — `PROTOCOL.md §5b`. Plain language; glossary-linked; no repo links; never name or refer to the monitor; never state a finding more strongly than the wiki does. **Stamp the journal entry with the session's start *and* end JST clock times and the total duration** (format `Month D, YYYY, HH:MM–HH:MM JST (session N) · total Xh Ym`); stamp the home-page "last updated" with the end time and the total. This needs the clock running: `tools/session-clock.sh start` is the session's first action (`PROTOCOL.md §1`) and `tools/session-clock.sh report N` prints the ready-to-paste stamp at wind-up. Easy to forget — don't (`PROTOCOL.md §5b`).
+8. **Budget: USD 5.00 per calendar day (UTC)** in OpenRouter spend, tracked as billed `usage.cost` in `config/budget.md`. Pre-flight estimate before any probe; record the actual after. The cap is a ceiling, not a target — a claim-carrying probe uses powered N (~100–150 items, `PROTOCOL.md §4`), and chronic under-use on load-bearing lines is itself a defect.
+9. **The website rolls up daily** (`PROTOCOL.md §5b`; amended by Tom 2026-07-02). One journal entry per JST calendar day: a session that lands substantive work (spend, or findings/essays/theory/decision changes) **creates or extends today's entry**, refreshes the home-page status block, and replaces "The latest" with the day's entry; a maintenance-only session skips the site. Plain language; glossary-linked; no repo links; never name or refer to the monitor; never state a finding more strongly than the wiki does. Datelines carry the date and session number(s) only — the clock-stamp mandate was dropped 2026-07-02 (`tools/session-clock.sh` stays available, optional).
 10. **End merged, end clean.** Every session ends commit → push → PR → **squash-merge to `main`**, confirmed (`PROTOCOL.md §6`). If the merge cannot land, "land PR #N" goes at the top of `NEXT.md`. Before stopping, kill every background task/loop the session started and verify a clean process table + clean `git status` (`PROTOCOL.md §7`). **Never detect process completion by name-match** — `pgrep -f`/`pkill -f` on a command substring matches the `claude` launcher and spins forever; prefer the harness's `run_in_background`, or wait on an exact captured PID (`PROTOCOL.md §6b`).
 
 ## Page types
@@ -29,7 +29,8 @@ Every page under `wiki/findings/` declares its type in a YAML front-matter block
 | `result` | `wiki/findings/results/` | Experiment result, linked to its design and data. |
 | `theory` | `wiki/findings/theory/` | Synthesis page — the recursive theoretical object. |
 | `open-question` | `wiki/findings/open-questions/` | A live, unresolved question that can spawn a loop turn. |
-| `essay` | `wiki/findings/essays/` | Original philosophical work (the philosophical track's first-class artifact): a position the project argues in its own voice, citing in-repo sources/findings, with explicit revision triggers. Re-examined as evidence moves; revisions are logged in-page, retractions kept visible. |
+| `essay` | `wiki/findings/essays/` | Original philosophical work (the philosophical track's first-class artifact): a position the project argues in its own voice, citing in-repo sources/findings, with explicit revision triggers. Re-examined as evidence moves; revisions are logged in-page, retractions kept visible. New essays must clear the bar in `PROTOCOL.md §3` (fired trigger, new literature, or new falsifiable bet). |
+| `note` | `wiki/findings/notes/` | A session record containing **no new measurement** — build gates, calibration GO/NO-GOs, $0 re-analyses, method records (added 2026-07-02, program B6). Keeps the audit trail without inflating the evidence base; a `note` is never cited as sole support for a claim. |
 
 ## YAML front-matter schema
 
@@ -47,6 +48,7 @@ status: proposed            # for claim/result: proposed | supported | contested
                             # for conjecture: proposed | designed | tested | retired
                             # for theory: draft | live | superseded
                             # for essay: draft | live | revised | retracted
+                            # for note: recorded
 contingent-on:              # wiki/decisions/open/ ids this depends on; empty if none
   - []
 created: 2026-05-28
@@ -104,18 +106,28 @@ Every page under `wiki/findings/` must declare at least one entry in `meaning-se
 
 ## Verification before commit
 
-`tools/senselint.py` and `tools/linkify.py` now exist; run them, then do the two judgement checks by hand. (Full detail in `PROTOCOL.md §5` and `tools/README.md`.)
+Run the three tools, then do the judgement checks by hand. (Full detail in `PROTOCOL.md §5` and `tools/README.md`.)
 
-1. **senselint** — `python3 tools/senselint.py` reports **0 errors**. Mechanically covers front-matter, meaning-senses vocabulary, typed-link relations + resolution, anchor discipline, index coverage, and inline-link integrity. Expected residue: a WARN on `wanted.md` (no front-matter) and INFO notes on contingent pages.
-2. **linkify** — `python3 tools/linkify.py` then `--check` shows 0 remaining: cross-references are clickable links to existing pages.
-3. **provenance** (by hand) — every claim/result cites an in-repo `source` or `resource` page that bears on it (not just exists), with quotes matching the source page verbatim. Essays cite in-repo sources/findings the same way; an essay's *original* argument needs no anchor, but any empirical assertion inside it does.
-4. **human-anchor** (by hand) — every empirical claim about LLM meaning carries an `anchors:` link to a `resource` page, OR a `wiki/decisions/open/` entry queuing the anchor question.
-5. **website-consistency** (by hand) — the `docs/` update for this session exists and states nothing more strongly than the wiki (`PROTOCOL.md §5b`).
+1. **build-index** — `python3 tools/build-index.py` regenerates the `wiki/index.md` catalog from front-matter (one line per page); new/renamed pages self-register. Hand-edit only the header above its markers.
+2. **senselint** — `python3 tools/senselint.py` reports **0 errors**. Mechanically covers front-matter, meaning-senses vocabulary, typed-link relations + resolution, anchor discipline, index coverage, and inline-link integrity. Expected residue: a WARN on `wanted.md` (no front-matter) and INFO notes on contingent pages.
+3. **linkify** — `python3 tools/linkify.py` then `--check` shows 0 remaining: cross-references are clickable links to existing pages.
+4. **provenance** (by hand) — every claim/result cites an in-repo `source` or `resource` page that bears on it (not just exists), with quotes matching the source page verbatim. Essays cite in-repo sources/findings the same way; an essay's *original* argument needs no anchor, but any empirical assertion inside it does.
+5. **human-anchor** (by hand) — every empirical claim about LLM meaning carries an `anchors:` link to a `resource` page, OR a `wiki/decisions/open/` entry queuing the anchor question.
+6. **website-consistency** (by hand) — if this session landed substantive work, today's `docs/` journal entry exists (created or extended) and states nothing more strongly than the wiki (`PROTOCOL.md §5b`).
 
 ## What to write, what not to write
 
-- **Write:** typed claims, nulls, conjectures, summarized sources with page-level provenance, short exact quotes.
+- **Write:** typed claims, nulls, conjectures, notes (method records), summarized sources with page-level provenance, short exact quotes.
 - **Do not write:** wholesale source text, paper drafts, marketing copy. The project is finding-centered, not paper-producing.
+
+## Program discipline (one-liners; full rules in `PROTOCOL.md §3–§4`)
+
+- Replicated + controlled results get queued **promotion reviews** → `claim` pages (cross-session, adversarial). The claims layer is what compounds.
+- A `theory` page with >3 update boxes gets a **clean second edition** (`supersedes` link) at the next touch.
+- A new `essay` needs a fired trigger, new literature, or a new falsifiable bet — else revise in-page.
+- After 3 null-yielding instrument redesigns on one construct, a cross-session review decides whether the line continues.
+- Every registered bet gets a row in `wiki/predictions.md`; outcomes update it the same session.
+- Claim-carrying probes use powered N (~100–150 items); ratifications and pre-run critiques route one vote through a non-Anthropic panel model.
 
 ## When to update this file
 

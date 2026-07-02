@@ -180,6 +180,8 @@ TYPE_DIR_MAP = {
     'theory':        'wiki/findings/theory',
     'open-question': 'wiki/findings/open-questions',
     'essay':         'wiki/findings/essays',
+    # notes — session records with no new measurement (added 2026-07-02, program B6)
+    'note':          'wiki/findings/notes',
     # experiments/designs — referenced by some pages
     'design':        'experiments/designs',
 }
