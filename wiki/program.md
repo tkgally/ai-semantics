@@ -52,7 +52,11 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   still ≲$1 at observed prices) so the claim states a magnitude with an interval, not a
   threshold-pass. Flagship positives owed one each, one at a time:
   sense gradience `[ ]` · dative information-structure `[ ]` · AANN gradient `[ ]` ·
-  CC covariation `[ ]` · environment-gated presupposition `[ ]`.
+  CC covariation **`[x]`** (s169 → [`result/comparative-correlative-covariation-powered`](findings/results/comparative-correlative-covariation-powered.md);
+  136 fresh disjoint items, MAGNITUDE-CONFIRMED, verifier-REPRODUCED — construction-isolation gap ≈87pp
+  [lb ≈78], inverse-flip 97–100%, no atypical collapse, 3/3; magnitude+interval attached to
+  [`claim/comparative-correlative-covariation`](findings/claims/comparative-correlative-covariation.md)) ·
+  environment-gated presupposition `[ ]`.
 - **A2b `[ ]` Grounding-magnitude probe via a different instrument.** The highest-information
   unrun probe in the repo: image/vision referents, genuinely unrun ("costs money" — ~$3–4,
   the best purchase available; the grounded cell has a confirming-direction shape datum and an
@@ -186,4 +190,5 @@ B6, C4) extend them.
 | Date | Item | What landed |
 |------|------|-------------|
 | 2026-07-02 | adoption | Program adopted (Tom); institutional layer built (special session): program page, PROTOCOL §3–§4, generated index, note type, predictions.md seed, models.md truth-up, site repairs, three subject decisions queued. |
+| 2026-07-02 (s169) | A2a, A3a | **A2a first powered confirmation landed:** CC covariation → [`result/comparative-correlative-covariation-powered`](findings/results/comparative-correlative-covariation-powered.md) (136 fresh disjoint items on the byte-frozen v1 instrument; MAGNITUDE-CONFIRMED; pre-run critic + non-Anthropic vote GO, post-run verifier REPRODUCED 0 discrepancies). Construction-isolation assertion gap ≈87pp [95% CI lb ≈78], inverse-flip 97–100%, no atypical collapse, 3/3 — magnitude+interval attached to the CC claim (was direction-only). $0.531 billed. **A3a decision RATIFIED:** the s168-opened human-projection-anchor decision → resolved ADOPT-A (adopt none yet; all four datasets still license-unverified — fresh reviewer reproduced the null via GitHub HTML repo pages; non-Anthropic vote converged). |
 | 2026-07-02 (s168) | A4b/A4c/A4d, A3a, B1 | All three queued subject decisions **ratified** (autonomous adversarial review + non-Anthropic votes): scale-ladder ADOPT-A (A4b unblocked, mechanical `ladder` flag owed first), panel-v2 ADOPT-A sequenced-hold with re-open trigger (A4c decided), logprob-lane ADOPT-A (A4d unblocked, re-verify-then-pilot). **A3a** presupposition human-projection-anchor scout landed ($0): all 4 datasets license-UNVERIFIED → anchor decision opened (adopt none yet). **B1** first claims-promotion review landed: CC covariation → [`claim/comparative-correlative-covariation`](findings/claims/comparative-correlative-covariation.md) (`supported`, scoped directional; magnitude deferred to A2a). |

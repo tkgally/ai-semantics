@@ -224,12 +224,14 @@ def main():
                        "data", "comparative-correlative-powered", "items.csv")
     out = os.path.abspath(out)
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    # guard: no scale_pair id may collide with v1's frozen pairs
-    v1_pairs = {"lecture", "ticket", "cafe", "building", "lighting", "music", "trail_v1",
+    # guard (ENFORCED): no scale_pair id may collide with v1's frozen pairs. These are v1's
+    # actual ids (experiments/runs/2026-05-29-comparative-correlative-probe-v1/build_items.py);
+    # our v1 "trail" pair was renamed "footpath" precisely so this assertion stays clean.
+    v1_pairs = {"lecture", "ticket", "cafe", "building", "lighting", "music", "trail",
                 "queue", "class", "dish", "phone", "roast", "river", "garden",
                 "pebble", "wallpaper", "soup", "doorway", "curtains", "map"}
-    # note: "trail" here (narrowness/spacing) is a DIFFERENT pair from v1's "trail" (steepness);
-    # renamed guard entry to avoid a false collision while still being disjoint in content.
+    collide = {p[0] for p in PAIRS} & v1_pairs
+    assert not collide, f"scale_pair id collides with v1 frozen set: {sorted(collide)}"
     rows = []
     for pair in PAIRS:
         pid, typ, dim1, dim2 = pair[0], pair[1], pair[2], pair[3]

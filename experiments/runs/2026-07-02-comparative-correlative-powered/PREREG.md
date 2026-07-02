@@ -1,6 +1,8 @@
 # PREREG — comparative-correlative covariation, POWERED re-run (A2a)
 
-**Date:** 2026-07-02 (session 169) · **Status at write time:** DESIGN — pre-run critic pending; NOT frozen, NOT run.
+**Date:** 2026-07-02 (session 169) · **Status:** FROZEN + RUN. Both reviewers GO-WITH-NOTES (no blockers).
+
+> **FREEZE (before any probe call).** `sha256(items.csv) = 7662bd0a17f565813c4d364a37e75d7c9b70456711604d555de34249ae1fcb85` (34 pairs × 4 forms = 136 items). Instrument byte-frozen from v1. **Gates cleared:** independent fresh-agent **pre-run critic → GO-WITH-NOTES** (all 34 golds verified correct; instrument byte-identical to v1; cluster bootstrap sound; `internal-contrast-only` correct; one SHOULD-FIX = dead-code disjointness guard in `build_items.py`, since wired into an enforced assertion — items unchanged, sha stable). Non-Anthropic decorrelation vote (gpt-5.4-mini) → GO-WITH-NOTES (no gold errors; flagged mild world-knowledge lean in a few typical pairs, which the fresh critic confirmed is *conservative* for the T1 gap — an obvious direction raises the matched-control assertion rate and shrinks the gap). `footpath` NIT (soft world-knowledge conflict in the neutral bucket) left as-is: gold is correct and the mild conflict tests construction-over-world-knowledge, within design tolerance.
 **Program item:** A2a (powered confirmation). **Claim it feeds:** [`claim/comparative-correlative-covariation`](../../../wiki/findings/claims/comparative-correlative-covariation.md) — its *Bounds* says "A magnitude+CI is **owed to the A2a powered re-run**; until it runs, this claim states direction/ordering only."
 **Prior runs (frozen, not re-tuned):** v1 [`.../2026-05-29-comparative-correlative-probe-v1`](../2026-05-29-comparative-correlative-probe-v1/README.md), v2, v3.
 

@@ -1,0 +1,176 @@
+{
+ "per_model": {
+  "A": {
+   "model": "anthropic/claude-sonnet-4.6",
+   "n_fc": 136,
+   "n_nli": 136,
+   "na": {
+    "fc": 0,
+    "nli": 0
+   },
+   "point": {
+    "fc_cc_accuracy_pct": 100.0,
+    "fc_T1_assertion_gap_pp": 86.8,
+    "fc_inverse_flip_pct": 100.0,
+    "fc_positive_increase_pct": 100.0,
+    "fc_typ_minus_atyp_pp": 0.0,
+    "fc_atypical_assertion_pct": 100.0,
+    "nli_cc_accuracy_pct": 100.0,
+    "nli_cc_vs_ctrl_gap_pp": 0.0
+   },
+   "ci95": {
+    "fc_cc_accuracy_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_T1_assertion_gap_pp": [
+     77.9,
+     94.1
+    ],
+    "fc_inverse_flip_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_positive_increase_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_typ_minus_atyp_pp": [
+     0.0,
+     0.0
+    ],
+    "fc_atypical_assertion_pct": [
+     100.0,
+     100.0
+    ],
+    "nli_cc_accuracy_pct": [
+     100.0,
+     100.0
+    ],
+    "nli_cc_vs_ctrl_gap_pp": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "B": {
+   "model": "openai/gpt-5.4-mini",
+   "n_fc": 136,
+   "n_nli": 136,
+   "na": {
+    "fc": 0,
+    "nli": 0
+   },
+   "point": {
+    "fc_cc_accuracy_pct": 100.0,
+    "fc_T1_assertion_gap_pp": 88.2,
+    "fc_inverse_flip_pct": 100.0,
+    "fc_positive_increase_pct": 100.0,
+    "fc_typ_minus_atyp_pp": 0.0,
+    "fc_atypical_assertion_pct": 100.0,
+    "nli_cc_accuracy_pct": 95.6,
+    "nli_cc_vs_ctrl_gap_pp": -2.9
+   },
+   "ci95": {
+    "fc_cc_accuracy_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_T1_assertion_gap_pp": [
+     77.9,
+     97.1
+    ],
+    "fc_inverse_flip_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_positive_increase_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_typ_minus_atyp_pp": [
+     0.0,
+     0.0
+    ],
+    "fc_atypical_assertion_pct": [
+     100.0,
+     100.0
+    ],
+    "nli_cc_accuracy_pct": [
+     91.2,
+     100.0
+    ],
+    "nli_cc_vs_ctrl_gap_pp": [
+     -8.8,
+     2.9
+    ]
+   }
+  },
+  "C": {
+   "model": "google/gemini-3.5-flash",
+   "n_fc": 136,
+   "n_nli": 136,
+   "na": {
+    "fc": 0,
+    "nli": 0
+   },
+   "point": {
+    "fc_cc_accuracy_pct": 98.5,
+    "fc_T1_assertion_gap_pp": 86.8,
+    "fc_inverse_flip_pct": 97.1,
+    "fc_positive_increase_pct": 100.0,
+    "fc_typ_minus_atyp_pp": 5.0,
+    "fc_atypical_assertion_pct": 95.0,
+    "nli_cc_accuracy_pct": 97.1,
+    "nli_cc_vs_ctrl_gap_pp": -2.9
+   },
+   "ci95": {
+    "fc_cc_accuracy_pct": [
+     95.6,
+     100.0
+    ],
+    "fc_T1_assertion_gap_pp": [
+     77.9,
+     94.1
+    ],
+    "fc_inverse_flip_pct": [
+     91.2,
+     100.0
+    ],
+    "fc_positive_increase_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_typ_minus_atyp_pp": [
+     0.0,
+     16.7
+    ],
+    "fc_atypical_assertion_pct": [
+     83.3,
+     100.0
+    ],
+    "nli_cc_accuracy_pct": [
+     92.6,
+     100.0
+    ],
+    "nli_cc_vs_ctrl_gap_pp": [
+     -7.4,
+     0.0
+    ]
+   }
+  }
+ },
+ "gates": {
+  "T1_ge_30pp": "3/3",
+  "T2_flip_ge_70pct": "3/3",
+  "T3_atypical_within_15pp": "3/3",
+  "confirm": ">=2/3 each"
+ },
+ "meta": {
+  "b_boot": 2000,
+  "seed": 20260702,
+  "n_pairs": 34,
+  "n_items": 136,
+  "bootstrap": "cluster over scale_pair"
+ }
+}
