@@ -58,30 +58,46 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   the best purchase available; the grounded cell has a confirming-direction shape datum and an
   untested magnitude). Needs a fresh design + decision trail; the VWSD fluent-channel route is
   closed and stays closed.
-- **A3a `[ ]` Re-anchor the presupposition line to human projection data.** Scout +
+- **A3a `[x]` (scouted s168) Re-anchor the presupposition line to human projection data.** Scout +
   license-check (never adopt unverified): **CommitmentBank**, **MegaVeridicality** (White &
   Rawlins), the **Tonhauser/Degen projection-variability datasets**, **NOPE**. If adoption
   succeeds, the conditional-antecedent collapse becomes interesting in either direction
   (human ratings dip too → the panel tracks human projection variability; they don't → a
   quantified model–human divergence). Open the anchor decision with the scout results.
+  **Done s168:** [`resource/presupposition-projection-human-anchor-scouting`](base/resources/presupposition-projection-human-anchor-scouting.md)
+  — **all four datasets license-UNVERIFIED** (no `LICENSE` file in any repo; NOPE's only license
+  string is arXiv paper-only CC BY-SA). Anchor decision opened
+  ([`decisions/open/presupposition-projection-human-anchor`](decisions/open/presupposition-projection-human-anchor.md),
+  default: adopt none yet, re-scout licenses; CommitmentBank the strongest target *if* a later
+  session verifies its terms — the only candidate covering the antecedent-of-conditional).
 - **A3b `[ ]` BLiMP forced-choice sweep.** The resource sits idle: 67k human-validated minimal
   pairs, CC-BY, already cataloged. A selected-paradigm sweep (determiner–noun agreement near
   AANN; NPIs; quantifiers) is cheap and human-agreement-anchored. Design + critic first.
 - **A3c `[ ]` Lancaster norms $0 re-analysis.** Cross sensorimotor strength with the existing
   lexical results — flagged by the base survey as available without an API call.
 - **A4a `[x]` models.md truth-up** (special session 2026-07-02 — panel marked battle-tested).
-- **A4b `[ ]` Within-family size ladders on flagship instruments** — *contingent on*
-  [`decisions/open/scale-ladder-subjects`](decisions/open/scale-ladder-subjects.md). Does
-  shadow-beating grow, shrink, or hold with capability? Converts the standing "single-panel,
-  n=3" caveat into a measured dimension.
-- **A4c `[ ]` Panel v2** — *contingent on*
-  [`decisions/open/panel-v2-refresh`](decisions/open/panel-v2-refresh.md). Keep panel-v1 for
-  continuity replications regardless.
-- **A4d `[ ]` Logprob supplementary lane** — *contingent on*
-  [`decisions/open/logprob-supplementary-lane`](decisions/open/logprob-supplementary-lane.md)
-  (fresh catalog re-verification first; a premise-change on
+- **A4b `[ ]` Within-family size ladders on flagship instruments** — **UNBLOCKED s168**
+  ([`decisions/resolved/scale-ladder-subjects`](decisions/resolved/scale-ladder-subjects.md)
+  ratified ADOPT-A). Does shadow-beating grow, shrink, or hold with capability? Converts the
+  standing "single-panel, n=3" caveat into a measured dimension. **Binding first sub-step (the
+  ratification condition):** add a mechanical `ladder: true` front-matter field + a senselint check
+  forbidding any `supports`/`anchors` link from a ladder-flagged page into a panel-v1 claim/result —
+  *no ladder result page may be written before that gate lands*. Riders: "clean first runs" =
+  execution-clean, not result-clean; correlated siblings never pooled with the cross-family panel.
+- **A4c `[x]` Panel v2 — DECIDED s168 as a sequenced hold**
+  ([`decisions/resolved/panel-v2-refresh`](decisions/resolved/panel-v2-refresh.md) ratified ADOPT-A).
+  Panel-v1 stays primary for **all** lines; the v2 question re-opens (then decided B-vs-C on
+  evidence) the moment **ladder data lands OR `scale-ladder-subjects` is rejected** — the re-open
+  trigger is written into [`config/models.md`](../config/models.md) and [`NEXT.md`](../NEXT.md). The
+  non-Anthropic vote dissented toward "refresh now"; the fresh reviewer weighed and rebutted it.
+- **A4d `[ ]` Logprob supplementary lane** — **UNBLOCKED s168**
+  ([`decisions/resolved/logprob-supplementary-lane`](decisions/resolved/logprob-supplementary-lane.md)
+  ratified ADOPT-A: re-verify then pilot; a premise-change on
   [`decisions/resolved/aann-panel-logprob-blocker`](decisions/resolved/aann-panel-logprob-blocker.md),
-  not a re-litigation).
+  not a re-litigation). **Gated on:** a $0 live logprob re-verification **recorded with its date in
+  [`config/models.md`](../config/models.md) before any pilot**; every logprob-lane result carries a
+  senselint-enforced `logprob-lane`/`verdict-bearing:false` contract; never echo/prompt-logprob
+  surprisal; pilot only on an already-frozen battery (A3b BLiMP the natural target).
 - **A5 `[ ]` Production-side alternation battery.** Extend the dative pattern (the
   best-designed result, anchored to a human *production* direction): free generation scored by
   frozen parsers — given/new manipulations → produced alternant; genitive alternation,
@@ -94,11 +110,13 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
 
 ## B. Consolidation program
 
-- **B1 `[ ]` Claims promotion.** Procedure now in [`PROTOCOL.md`](../PROTOCOL.md) §3. Candidates the review
+- **B1 `[~]` Claims promotion (first landed s168).** Procedure now in [`PROTOCOL.md`](../PROTOCOL.md) §3. Candidates the review
   judged already earned on the corpus's own standards (one promotion review each,
-  cross-session, adversarial): CC covariation `[ ]` · sense-gradience/ungraded-commitment pair
-  `[ ]` · AANN behavioral gradient `[ ]` · dative information-structure `[ ]` ·
-  output-channel/working-surface `[ ]` · environment-gated presupposition `[ ]`.
+  cross-session, adversarial): CC covariation **`[x]`** (s168 → [`claim/comparative-correlative-covariation`](findings/claims/comparative-correlative-covariation.md),
+  `supported`, scoped directional/ordering; magnitude deferred to the A2a powered re-run) ·
+  sense-gradience/ungraded-commitment pair `[ ]` · AANN behavioral gradient `[ ]` ·
+  dative information-structure `[ ]` · output-channel/working-surface `[ ]` ·
+  environment-gated presupposition `[ ]`.
 - **B2 `[ ]` Theory second editions.**
   [`theory/constructional-meaning-in-llms`](findings/theory/constructional-meaning-in-llms.md)
   (a changelog) `[ ]` and
@@ -168,3 +186,4 @@ B6, C4) extend them.
 | Date | Item | What landed |
 |------|------|-------------|
 | 2026-07-02 | adoption | Program adopted (Tom); institutional layer built (special session): program page, PROTOCOL §3–§4, generated index, note type, predictions.md seed, models.md truth-up, site repairs, three subject decisions queued. |
+| 2026-07-02 (s168) | A4b/A4c/A4d, A3a, B1 | All three queued subject decisions **ratified** (autonomous adversarial review + non-Anthropic votes): scale-ladder ADOPT-A (A4b unblocked, mechanical `ladder` flag owed first), panel-v2 ADOPT-A sequenced-hold with re-open trigger (A4c decided), logprob-lane ADOPT-A (A4d unblocked, re-verify-then-pilot). **A3a** presupposition human-projection-anchor scout landed ($0): all 4 datasets license-UNVERIFIED → anchor decision opened (adopt none yet). **B1** first claims-promotion review landed: CC covariation → [`claim/comparative-correlative-covariation`](findings/claims/comparative-correlative-covariation.md) (`supported`, scoped directional; magnitude deferred to A2a). |

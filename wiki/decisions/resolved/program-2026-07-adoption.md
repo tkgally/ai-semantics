@@ -65,10 +65,10 @@ is now part of the cold-start reading path):
 (D4) remain documented, dormant options (see
 [`cloud-compute-path`](cloud-compute-path.md) and `wiki/base/wanted.md`); the panel/scaling
 subject decisions (D3) were **queued, not decided** — three decision pages opened this session
-for normal cross-session ratification (or Tom's ruling):
-[`../open/scale-ladder-subjects.md`](../open/scale-ladder-subjects.md),
-[`../open/panel-v2-refresh.md`](../open/panel-v2-refresh.md),
-[`../open/logprob-supplementary-lane.md`](../open/logprob-supplementary-lane.md).
+for normal cross-session ratification (or Tom's ruling) — all three **ratified s168** and now at:
+[`scale-ladder-subjects`](scale-ladder-subjects.md),
+[`panel-v2-refresh`](panel-v2-refresh.md),
+[`logprob-supplementary-lane`](logprob-supplementary-lane.md).
 
 **Anti-cheat note.** This adoption changes *direction and process*, not findings: no verdict,
 threshold, anchor, or result page is touched by it. Where a program item interacts with a
