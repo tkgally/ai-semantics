@@ -23,28 +23,34 @@ are for the lead agent updating the site each session (`PROTOCOL.md §5b`; chart
 ## Per-session update checklist
 
 - `journal.html` — add one entry directly below the `<!-- NEW ENTRIES GO ... -->` marker,
-  newest first. Include: **date with the Japan-time (JST) clock time** of when the entry is
-  written, and the **session number as a numeral** — e.g. `June 20, 2026, 00:01 JST (session 44)`
-  — pill tags (`experiments` / `theory` / `housekeeping`, plus `no experiments · $0 spent` when
-  true), what was done in plain words, spend, and any ratifications.
-- `index.html` — refresh the "Status at a glance" box (last-updated date **with JST clock time**,
-  phase, study count, current focus, spending posture) and replace "The latest" with a short
-  version of the new journal entry.
+  newest first. Include: the **session's start and end Japan-time (JST) clock times, the total
+  duration, and the session number as a numeral** — e.g.
+  `June 20, 2026, 09:41–12:06 JST (session 50) · total 2h 25m` — pill tags (`experiments` /
+  `theory` / `housekeeping`, plus `no experiments · $0 spent` when true), what was done in plain
+  words, spend, and any ratifications.
+- `index.html` — refresh the "Status at a glance" box (last-updated date **with the JST clock time
+  and the session total**, e.g. `July 2, 2026, 18:00 JST · session took 1h 49m`; plus phase, study
+  count, current focus, spending posture) and replace "The latest" with a short version of the new
+  journal entry.
 
-**Session-stamp format (from session 44 onward) — mandatory, easy to forget.** Each new session
-entry carries the date followed by the JST clock time at which the site is built near the end of
-that session (no need to be minute-exact), and writes the session number as a numeral
-(`session 44`, not `forty-fourth session`). Get the stamp mechanically — don't guess the time:
-`TZ=Asia/Tokyo date "+%B %-d, %Y, %H:%M JST"`. This applies **going forward only** — earlier
-entries keep their original spelled-out numbering and date-only stamps; do not revise them.
+**Session-stamp format — mandatory, easy to forget.** From session 166 onward each new journal
+entry carries the session's **start–end JST clock times and total duration**
+(`Month D, YYYY, HH:MM–HH:MM JST (session N) · total Xh Ym`); the session number is a numeral
+(`session 166`, not `one-hundred-sixty-sixth session`). Get the stamp mechanically — don't guess:
+`tools/session-clock.sh report N` prints a ready-to-paste stamp (it reads the start time recorded
+by `tools/session-clock.sh start`, the session's first action per `PROTOCOL.md §1`). This applies
+**going forward only** — earlier entries keep their stamps (spelled-out numbering + date-only
+before session 44; end-only `HH:MM JST` for sessions 44–165); do not revise them.
 
-> ⚠ **The JST clock time is the part that gets dropped.** Sessions 44–47 included it; sessions
-> 48–49 reverted to a bare date and had to be flagged. Treat the `HH:MM JST` clock time as a
-> non-optional field of the stamp on both the journal entry and the home-page "Last updated"
-> line. The requirement is now also encoded in `PROTOCOL.md §5b` and `CLAUDE.md` rule 9 (the
-> files read every session); this note is the detailed version. **Gotcha:** the JST stamp date
-> can differ from the UTC budget day (JST = UTC+9), so e.g. `01:51 JST June 20` is the June-19
-> UTC budget day — stamp the site in JST, track spend in UTC.
+> ⚠ **The clock stamp is the part that gets dropped.** Sessions 48–49 dropped the JST time
+> entirely and had to be flagged; from session 166 the stamp also carries a start time and a
+> total, which only exist if `session-clock.sh start` ran at the very beginning. Treat the
+> start–end clock times and the total as non-optional fields of the stamp on the journal entry,
+> and the end time + total as non-optional on the home-page "Last updated" line. The requirement
+> is also encoded in `PROTOCOL.md §1/§5b` and `CLAUDE.md` rule 9 (the files read every session);
+> this note is the detailed version. **Gotcha:** the JST stamp date can differ from the UTC budget
+> day (JST = UTC+9), so e.g. `01:51 JST June 20` is the June-19 UTC budget day — stamp the site in
+> JST, track spend in UTC.
 - `findings.html` — only when a finding changed: update the relevant section *and* the
   "current through" date line.
 - `plans.html` — keep "Queued next" honest: remove what got done, add what's now queued;
