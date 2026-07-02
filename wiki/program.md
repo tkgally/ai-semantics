@@ -110,11 +110,13 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
 
 ## B. Consolidation program
 
-- **B1 `[ ]` Claims promotion.** Procedure now in [`PROTOCOL.md`](../PROTOCOL.md) §3. Candidates the review
+- **B1 `[~]` Claims promotion (first landed s168).** Procedure now in [`PROTOCOL.md`](../PROTOCOL.md) §3. Candidates the review
   judged already earned on the corpus's own standards (one promotion review each,
-  cross-session, adversarial): CC covariation `[ ]` · sense-gradience/ungraded-commitment pair
-  `[ ]` · AANN behavioral gradient `[ ]` · dative information-structure `[ ]` ·
-  output-channel/working-surface `[ ]` · environment-gated presupposition `[ ]`.
+  cross-session, adversarial): CC covariation **`[x]`** (s168 → [`claim/comparative-correlative-covariation`](findings/claims/comparative-correlative-covariation.md),
+  `supported`, scoped directional/ordering; magnitude deferred to the A2a powered re-run) ·
+  sense-gradience/ungraded-commitment pair `[ ]` · AANN behavioral gradient `[ ]` ·
+  dative information-structure `[ ]` · output-channel/working-surface `[ ]` ·
+  environment-gated presupposition `[ ]`.
 - **B2 `[ ]` Theory second editions.**
   [`theory/constructional-meaning-in-llms`](findings/theory/constructional-meaning-in-llms.md)
   (a changelog) `[ ]` and
@@ -184,4 +186,4 @@ B6, C4) extend them.
 | Date | Item | What landed |
 |------|------|-------------|
 | 2026-07-02 | adoption | Program adopted (Tom); institutional layer built (special session): program page, PROTOCOL §3–§4, generated index, note type, predictions.md seed, models.md truth-up, site repairs, three subject decisions queued. |
-| 2026-07-02 (s168) | A4a→A4d, A3a | All three queued subject decisions **ratified** (autonomous adversarial review + non-Anthropic votes): scale-ladder ADOPT-A (A4b unblocked, mechanical `ladder` flag owed first), panel-v2 ADOPT-A sequenced-hold with re-open trigger (A4c decided), logprob-lane ADOPT-A (A4d unblocked, re-verify-then-pilot). **A3a** presupposition human-projection-anchor scout landed ($0): all 4 datasets license-UNVERIFIED → anchor decision opened (adopt none yet). |
+| 2026-07-02 (s168) | A4b/A4c/A4d, A3a, B1 | All three queued subject decisions **ratified** (autonomous adversarial review + non-Anthropic votes): scale-ladder ADOPT-A (A4b unblocked, mechanical `ladder` flag owed first), panel-v2 ADOPT-A sequenced-hold with re-open trigger (A4c decided), logprob-lane ADOPT-A (A4d unblocked, re-verify-then-pilot). **A3a** presupposition human-projection-anchor scout landed ($0): all 4 datasets license-UNVERIFIED → anchor decision opened (adopt none yet). **B1** first claims-promotion review landed: CC covariation → [`claim/comparative-correlative-covariation`](findings/claims/comparative-correlative-covariation.md) (`supported`, scoped directional; magnitude deferred to A2a). |
