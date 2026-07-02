@@ -297,7 +297,7 @@ now**. The most on-target dataset (CommitmentBank, conditional-antecedent human 
 license-unverified; the broadest (NOPE) is license-unverified beyond its paper-only CC BY-SA; the two
 predicate/variability norms (MegaVeridicality, Degen & Tonhauser) are license-unverified. So
 `internal-contrast-only` stays the honest posture, and the anchor question is opened — not ratified —
-in [`decisions/open/presupposition-projection-human-anchor`](../../decisions/open/presupposition-projection-human-anchor.md).
+in [`decisions/resolved/presupposition-projection-human-anchor`](../../decisions/resolved/presupposition-projection-human-anchor.md) (ratified s169: ADOPT-A — adopt none yet; licenses still unverified).
 
 ---
 

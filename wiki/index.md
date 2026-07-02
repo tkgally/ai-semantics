@@ -35,9 +35,9 @@ Standing references:
 
 ### Decisions — open
 
-55 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+56 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/presupposition-projection-human-anchor.md`](decisions/open/presupposition-projection-human-anchor.md) — Adopt which, if any, external HUMAN projection-variability dataset as a human anchor for the presupposition/projection line? · **open**
+*(none)*
 
 ### Base — concepts
 
@@ -412,6 +412,7 @@ Standing references:
 
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
+- [`experiments/runs/2026-07-02-comparative-correlative-powered/`](../experiments/runs/2026-07-02-comparative-correlative-powered/README.md)
 - [`experiments/runs/2026-07-02-commitment-framing-decomposition/`](../experiments/runs/2026-07-02-commitment-framing-decomposition/README.md)
 - [`experiments/runs/2026-07-02-accommodation-cue-strength/`](../experiments/runs/2026-07-02-accommodation-cue-strength/README.md)
 - [`experiments/runs/2026-07-01-projection-trigger-inventory/`](../experiments/runs/2026-07-01-projection-trigger-inventory/README.md)

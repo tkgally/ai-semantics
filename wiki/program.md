@@ -67,7 +67,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   **Done s168:** [`resource/presupposition-projection-human-anchor-scouting`](base/resources/presupposition-projection-human-anchor-scouting.md)
   — **all four datasets license-UNVERIFIED** (no `LICENSE` file in any repo; NOPE's only license
   string is arXiv paper-only CC BY-SA). Anchor decision opened
-  ([`decisions/open/presupposition-projection-human-anchor`](decisions/open/presupposition-projection-human-anchor.md),
+  ([`decisions/resolved/presupposition-projection-human-anchor`](decisions/resolved/presupposition-projection-human-anchor.md),
   default: adopt none yet, re-scout licenses; CommitmentBank the strongest target *if* a later
   session verifies its terms — the only candidate covering the antecedent-of-conditional).
 - **A3b `[ ]` BLiMP forced-choice sweep.** The resource sits idle: 67k human-validated minimal
