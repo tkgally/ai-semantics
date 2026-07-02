@@ -5,7 +5,7 @@ title: "The presupposition corner is environment-gated in both directions — on
 meaning-senses:
   - inferential
   - distributional
-status: draft
+status: live
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-02
@@ -21,6 +21,8 @@ links:
     target: result/projection-trigger-inventory-v1
   - rel: depends-on
     target: result/presupposition-accommodation-v1
+  - rel: depends-on
+    target: result/accommodation-cue-strength-v1
   - rel: depends-on
     target: concept/distributional-meaning
   - rel: depends-on
@@ -190,12 +192,19 @@ owns that the accommodation signature is the softer of the two.
 
 An essay in this project must name what evidence revises or retracts it. These are the punctures.
 
-- **If a queued cue-strength probe shows accommodation's gate is *not* graded by contradiction
-  strength** — i.e. a stronger surface contradiction does not gate harder, and the gate is on/off
-  rather than graded — then the "graded distributional cue" gloss on the accommodation leg is strained.
-  Revise toward a cleaner contradiction-detection reading of that signature (which is still
-  distributional, but no longer the same *graded environment-reliability* story that unifies it with
-  projection).
+- **If a cue-strength probe shows accommodation's gate is *not* graded by contradiction strength** —
+  i.e. a stronger surface contradiction does not gate harder, and the gate is on/off rather than
+  graded — then the "graded distributional cue" gloss on the accommodation leg is strained. Revise
+  toward a cleaner contradiction-detection reading of that signature (which is still distributional,
+  but no longer the same *graded environment-reliability* story that unifies it with projection).
+  **✓ This probe has now run (session 164) and did NOT fire this trigger.**
+  [`result/accommodation-cue-strength-v1`](../results/accommodation-cue-strength-v1.md) split the
+  single contradiction into a hedged and an emphatic denial of the same P and found **GRADED-GATE
+  (3/3)** — every model backs off the denied P harder under the emphatic denial (strength-gradient
+  +0.33 / +0.17 / +0.67). The gate is graded, so the "graded distributional cue" gloss holds and the
+  accommodation leg now parallels projection's graded frame effect as this essay proposed. The margin
+  is thin for one model (gpt-5.4-mini, +0.17, robustness-checked) and per-family non-uniform — the
+  reading is supported, not settled. The remaining triggers below stay live.
 - **If either signature turns out environment-*invariant*** — projection frame-invariant (the
   presupposition survives, or fails, uniformly across negation / question / conditional), or
   accommodation context-invariant (P supplied — or withheld — regardless of
@@ -211,7 +220,21 @@ An essay in this project must name what evidence revises or retracts it. These a
 - **If either underlying result's numbers move on re-run**, the empirical premises above move with
   them and this reading is re-examined here in-page.
 
-Until such probes are run, this stays a **draft** synthesis: a reading that fits the two measured
-signatures, calibrated to their `internal-contrast-only` strength, generalizing the sibling essay's
-frame-shaped claim to the corner's other signature, and written so a single environment-invariant
-result could knock it down.
+This is now a **live** synthesis rather than a draft: the one probe it explicitly hung its
+draft status on — the cue-strength test of the accommodation leg — has run and **confirmed** the
+graded-cue reading (GRADED-GATE 3/3). It remains a reading that fits the measured signatures,
+calibrated to their `internal-contrast-only` strength, generalizing the sibling essay's frame-shaped
+claim to the corner's other signature, and still written so a single environment-invariant result
+could knock it down (the falsifying triggers above stay live; promotion to `live` fixes the reading's
+status, not the underlying evidence's strength — small Ns, three models, one corner).
+
+---
+
+**Revision log.**
+- *2026-07-02 (session 164), draft → live.* The queued cue-strength probe named in the first revision
+  trigger ran ([`result/accommodation-cue-strength-v1`](../results/accommodation-cue-strength-v1.md),
+  GRADED-GATE 3/3): the accommodation gate is graded by surface-contradiction strength, confirming the
+  graded-cue gloss and the projection-parallel this essay argued. The trigger did **not** fire (it
+  fires on a FLAT gate); the reading is supported. Promoted to `live`; no argument retracted. The
+  softest margin (B, +0.17) and family non-uniformity are noted as carried texture, and every
+  falsifying trigger remains live.

@@ -1,9 +1,11 @@
 # 2026-07-02 · accommodation / cue-strength probe
 
-> **FROZEN DESIGN — NOT YET RUN.** No API call has been made. This dir is **design-only**: no `raw/`,
-> no `results.json`. An independent fresh-agent **pre-run critic returned GO-WITH-NOTES** (session
-> 163); its one SHOULD-FIX (`fac1` weak_contra was uncertainty, not a denial) was **applied and the set
-> re-frozen** (sha `24a48564…`). It awaits a **run session (164+)** on a fresh UTC budget day.
+> **RAN — session 164 (2026-07-02 UTC). VERDICT: GRADED-GATE (3/3).** Frozen sha `24a48564…` intact
+> at run; pre-run critic GO-WITH-NOTES (session 163, `fac1` fix applied + re-frozen); **independent
+> post-run verifier VERIFIED** every rate/gradient/verdict from `raw/` by its own route (incl. the
+> B-margin robustness check). Billed **$0.0259** (+ $0.0013 pre-flight). Finding:
+> [`result/accommodation-cue-strength-v1`](../../../wiki/findings/results/accommodation-cue-strength-v1.md).
+> `raw/` and `results.json` are now present.
 
 Follow-up to the same corner's v1 accommodation run
 ([`../2026-07-01-presupposition-accommodation/`](../2026-07-01-presupposition-accommodation/README.md),

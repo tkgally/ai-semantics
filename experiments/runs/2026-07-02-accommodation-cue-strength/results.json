@@ -1,0 +1,144 @@
+{
+  "thresholds": {
+    "SANITY": 0.75,
+    "ACCOM": 0.6,
+    "GAP": 0.3,
+    "GRAD": 0.15,
+    "FLATBAND": 0.1,
+    "NOGATEBAND": 0.15,
+    "LOWACC": 0.4
+  },
+  "verdict": "GRADED-GATE",
+  "rationale": "3/3 models (A,B,C) pass sanity (supported >= 0.75) AND accommodate (neutral >= 0.6) AND gate HARDER under a stronger contradiction (weak-endorse - strong-endorse >= 0.15): the accommodation gate is GRADED by cue strength, the cue-strength prediction of the environment-gated conjecture.",
+  "per_model": [
+    {
+      "slot": "A",
+      "n": 48,
+      "unparsed": 0,
+      "supported_endorse": 1.0,
+      "neutral_endorse": 1.0,
+      "weak_contra_endorse": 0.417,
+      "strong_contra_endorse": 0.083,
+      "strength_gradient": 0.334,
+      "accommodation_gap": 0.917,
+      "per_family": {
+        "aspectual": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 0.333,
+          "strong_contra": 0.333
+        },
+        "cleft": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 1.0,
+          "strong_contra": 0.0
+        },
+        "definite": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 0.0,
+          "strong_contra": 0.0
+        },
+        "factive": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 0.333,
+          "strong_contra": 0.0
+        }
+      },
+      "sanity_ok": true,
+      "accommodates": true,
+      "graded_gate": true,
+      "flat_gate": false,
+      "blanket_yes": false,
+      "no_accommodation": false
+    },
+    {
+      "slot": "B",
+      "n": 48,
+      "unparsed": 0,
+      "supported_endorse": 1.0,
+      "neutral_endorse": 1.0,
+      "weak_contra_endorse": 0.667,
+      "strong_contra_endorse": 0.5,
+      "strength_gradient": 0.167,
+      "accommodation_gap": 0.5,
+      "per_family": {
+        "aspectual": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 0.333,
+          "strong_contra": 0.0
+        },
+        "cleft": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 1.0,
+          "strong_contra": 0.667
+        },
+        "definite": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 0.333,
+          "strong_contra": 0.333
+        },
+        "factive": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 1.0,
+          "strong_contra": 1.0
+        }
+      },
+      "sanity_ok": true,
+      "accommodates": true,
+      "graded_gate": true,
+      "flat_gate": false,
+      "blanket_yes": false,
+      "no_accommodation": false
+    },
+    {
+      "slot": "C",
+      "n": 48,
+      "unparsed": 0,
+      "supported_endorse": 1.0,
+      "neutral_endorse": 1.0,
+      "weak_contra_endorse": 0.833,
+      "strong_contra_endorse": 0.167,
+      "strength_gradient": 0.666,
+      "accommodation_gap": 0.833,
+      "per_family": {
+        "aspectual": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 0.667,
+          "strong_contra": 0.0
+        },
+        "cleft": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 1.0,
+          "strong_contra": 0.333
+        },
+        "definite": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 1.0,
+          "strong_contra": 0.0
+        },
+        "factive": {
+          "supported": 1.0,
+          "neutral": 1.0,
+          "weak_contra": 0.667,
+          "strong_contra": 0.333
+        }
+      },
+      "sanity_ok": true,
+      "accommodates": true,
+      "graded_gate": true,
+      "flat_gate": false,
+      "blanket_yes": false,
+      "no_accommodation": false
+    }
+  ]
+}
