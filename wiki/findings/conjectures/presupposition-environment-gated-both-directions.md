@@ -120,6 +120,25 @@ about which inference survives / is licensed, not co-occurrence — comes out, a
   signature. This strengthens (does not prove) the bet, within the `internal-contrast-only` fence; the
   softest margin (B, +0.17) and the family non-uniformity are carried on the result page.
 
+**A related within-model probe that is deliberately NOT counted as confirming evidence (session 166).**
+The commitment-framing decomposition
+([`result/commitment-framing-model-difference-v1`](../results/commitment-framing-model-difference-v1.md),
+verdict PARTIAL) held the conditional sentence fixed and varied only the *metalinguistic question
+wording* (from "everything the speaker takes for granted" to "only … the main point"), finding that
+one model's (claude's) presupposition-endorsement is strongly movable by that wording while another's
+(gpt's) is not. It is tempting to read this as another instance of "endorsement follows the surface
+cue" — but it is **not** logged as a confirming arm, and the reason is a discipline this conjecture
+should state: the two anchor wordings are *elicitation-designed to separate*, so a system that
+genuinely **computed** a presupposition/assertion split would *also* answer the backgrounding question
+high and the at-issue question low. A metalinguistic question that names "what is taken for granted"
+versus "the main point" therefore cannot, on its own, discriminate the distributional description from
+the semantic one — unlike the confirming criteria above, which vary the *licensing environment*
+(embedding frame, context support, cue strength) while holding the trigger's semantic status fixed. The
+s166 result does, however, bear on the projection line's *model-level texture*: it retires the
+"gpt reads 'committed' restrictively" reading (gpt keeps projection low under every framing, a general
+floor, not a narrow reading — see [`essay/projection-defeasible-by-frame`](../essays/projection-defeasible-by-frame.md)),
+which removes one alternative story but neither confirms nor falsifies this bet.
+
 **Falsifying** evidence (would break the bet):
 - **Environment-invariance in either direction.** If projection turned out frame-invariant (the
   presupposition survives, or fails, uniformly across negation / question / conditional), or
