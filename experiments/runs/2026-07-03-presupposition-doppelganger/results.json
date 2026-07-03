@@ -1,0 +1,391 @@
+{
+  "thresholds": {
+    "SANITY": 0.6,
+    "RESID": 0.3,
+    "FLATBAND": 0.15
+  },
+  "powered_families": [
+    "factive",
+    "aspectual",
+    "cleft"
+  ],
+  "projecting_frames": [
+    "negation",
+    "question"
+  ],
+  "family_verdicts": {
+    "factive": {
+      "verdict": "BEATS-DOPPELGANGER",
+      "rationale": "3/3 models residual >= 0.3 \u2014 endorsement KEYED TO THE TRIGGER WORD-FORM (NOT 'beats the shadow', NOT a move to the beater side; a verb-sensitive surface-cue account reconstructs a D1 residual).",
+      "per_model_labels": {
+        "A": "beats",
+        "B": "beats",
+        "C": "beats"
+      }
+    },
+    "aspectual": {
+      "verdict": "BEATS-DOPPELGANGER",
+      "rationale": "3/3 models residual >= 0.3 \u2014 endorsement KEYED TO THE TRIGGER WORD-FORM (NOT 'beats the shadow', NOT a move to the beater side; a verb-sensitive surface-cue account reconstructs a D1 residual).",
+      "per_model_labels": {
+        "A": "beats",
+        "B": "beats",
+        "C": "beats"
+      }
+    },
+    "cleft": {
+      "verdict": "BEATS-DOPPELGANGER",
+      "rationale": "2/3 models residual >= 0.3 \u2014 endorsement KEYED TO THE TRIGGER WORD-FORM (NOT 'beats the shadow', NOT a move to the beater side; a verb-sensitive surface-cue account reconstructs a D1 residual). [N1: panel reduced to 2 sanity-passing models \u2014 verdict rests on 2/2.]",
+      "per_model_labels": {
+        "A": "beats",
+        "B": "control_failed",
+        "C": "beats"
+      }
+    },
+    "pooled": {
+      "verdict": "BEATS-DOPPELGANGER",
+      "rationale": "3/3 models residual >= 0.3 \u2014 endorsement KEYED TO THE TRIGGER WORD-FORM (NOT 'beats the shadow', NOT a move to the beater side; a verb-sensitive surface-cue account reconstructs a D1 residual).",
+      "per_model_labels": {
+        "A": "beats",
+        "B": "beats",
+        "C": "beats"
+      }
+    }
+  },
+  "headline_family_primary": {
+    "factive": "BEATS-DOPPELGANGER",
+    "aspectual": "BEATS-DOPPELGANGER",
+    "cleft": "BEATS-DOPPELGANGER"
+  },
+  "pooled_secondary": "BEATS-DOPPELGANGER",
+  "sensitivity": {
+    "pooled": [
+      {
+        "RESID": 0.25,
+        "FLATBAND": 0.1,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.25,
+        "FLATBAND": 0.15,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.25,
+        "FLATBAND": 0.2,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.3,
+        "FLATBAND": 0.1,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.3,
+        "FLATBAND": 0.15,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.3,
+        "FLATBAND": 0.2,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.35,
+        "FLATBAND": 0.1,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.35,
+        "FLATBAND": 0.15,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.35,
+        "FLATBAND": 0.2,
+        "verdict": "BEATS-DOPPELGANGER"
+      }
+    ],
+    "cleft": [
+      {
+        "RESID": 0.25,
+        "FLATBAND": 0.1,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.25,
+        "FLATBAND": 0.15,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.25,
+        "FLATBAND": 0.2,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.3,
+        "FLATBAND": 0.1,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.3,
+        "FLATBAND": 0.15,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.3,
+        "FLATBAND": 0.2,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.35,
+        "FLATBAND": 0.1,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.35,
+        "FLATBAND": 0.15,
+        "verdict": "BEATS-DOPPELGANGER"
+      },
+      {
+        "RESID": 0.35,
+        "FLATBAND": 0.2,
+        "verdict": "BEATS-DOPPELGANGER"
+      }
+    ]
+  },
+  "per_model": [
+    {
+      "slot": "A",
+      "n": 198,
+      "unparsed": 0,
+      "blocks": {
+        "pooled": {
+          "trigger_project": 0.972,
+          "doppel_project": 0.194,
+          "residual": 0.778,
+          "n_trigger_proj": 36,
+          "n_doppel_proj": 36,
+          "conditional_residual": 0.333,
+          "conditional_trigger": 0.333,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.333,
+          "d2_endorse": 0.0,
+          "d2_residual": 0.972
+        },
+        "factive": {
+          "trigger_project": 0.917,
+          "doppel_project": 0.083,
+          "residual": 0.834,
+          "n_trigger_proj": 12,
+          "n_doppel_proj": 12,
+          "conditional_residual": 0.0,
+          "conditional_trigger": 0.0,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 0.917
+        },
+        "aspectual": {
+          "trigger_project": 1.0,
+          "doppel_project": 0.0,
+          "residual": 1.0,
+          "n_trigger_proj": 12,
+          "n_doppel_proj": 12,
+          "conditional_residual": 0.667,
+          "conditional_trigger": 0.667,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 1.0
+        },
+        "cleft": {
+          "trigger_project": 1.0,
+          "doppel_project": 0.5,
+          "residual": 0.5,
+          "n_trigger_proj": 12,
+          "n_doppel_proj": 12,
+          "conditional_residual": 0.333,
+          "conditional_trigger": 0.333,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 1.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 1.0
+        },
+        "definite": {
+          "trigger_project": 1.0,
+          "doppel_project": 0.0,
+          "residual": 1.0,
+          "n_trigger_proj": 8,
+          "n_doppel_proj": 8,
+          "conditional_residual": 1.0,
+          "conditional_trigger": 1.0,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 1.0
+        }
+      }
+    },
+    {
+      "slot": "B",
+      "n": 198,
+      "unparsed": 0,
+      "blocks": {
+        "pooled": {
+          "trigger_project": 0.694,
+          "doppel_project": 0.222,
+          "residual": 0.472,
+          "n_trigger_proj": 36,
+          "n_doppel_proj": 36,
+          "conditional_residual": 0.056,
+          "conditional_trigger": 0.056,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 0.944,
+          "plain_doppel_endorse": 0.333,
+          "d2_endorse": 0.056,
+          "d2_residual": 0.638
+        },
+        "factive": {
+          "trigger_project": 0.75,
+          "doppel_project": 0.167,
+          "residual": 0.583,
+          "n_trigger_proj": 12,
+          "n_doppel_proj": 12,
+          "conditional_residual": 0.0,
+          "conditional_trigger": 0.0,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 0.75
+        },
+        "aspectual": {
+          "trigger_project": 0.75,
+          "doppel_project": 0.0,
+          "residual": 0.75,
+          "n_trigger_proj": 12,
+          "n_doppel_proj": 12,
+          "conditional_residual": 0.167,
+          "conditional_trigger": 0.167,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 0.833,
+          "plain_doppel_endorse": 0.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 0.75
+        },
+        "cleft": {
+          "trigger_project": 0.583,
+          "doppel_project": 0.5,
+          "residual": 0.083,
+          "n_trigger_proj": 12,
+          "n_doppel_proj": 12,
+          "conditional_residual": 0.0,
+          "conditional_trigger": 0.0,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 1.0,
+          "d2_endorse": 0.167,
+          "d2_residual": 0.416
+        },
+        "definite": {
+          "trigger_project": 0.875,
+          "doppel_project": 0.0,
+          "residual": 0.875,
+          "n_trigger_proj": 8,
+          "n_doppel_proj": 8,
+          "conditional_residual": 0.0,
+          "conditional_trigger": 0.0,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 0.875
+        }
+      }
+    },
+    {
+      "slot": "C",
+      "n": 198,
+      "unparsed": 0,
+      "blocks": {
+        "pooled": {
+          "trigger_project": 1.0,
+          "doppel_project": 0.056,
+          "residual": 0.944,
+          "n_trigger_proj": 36,
+          "n_doppel_proj": 36,
+          "conditional_residual": 0.278,
+          "conditional_trigger": 0.278,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.333,
+          "d2_endorse": 0.0,
+          "d2_residual": 1.0
+        },
+        "factive": {
+          "trigger_project": 1.0,
+          "doppel_project": 0.167,
+          "residual": 0.833,
+          "n_trigger_proj": 12,
+          "n_doppel_proj": 12,
+          "conditional_residual": 0.0,
+          "conditional_trigger": 0.0,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 1.0
+        },
+        "aspectual": {
+          "trigger_project": 1.0,
+          "doppel_project": 0.0,
+          "residual": 1.0,
+          "n_trigger_proj": 12,
+          "n_doppel_proj": 12,
+          "conditional_residual": 0.833,
+          "conditional_trigger": 0.833,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 1.0
+        },
+        "cleft": {
+          "trigger_project": 1.0,
+          "doppel_project": 0.0,
+          "residual": 1.0,
+          "n_trigger_proj": 12,
+          "n_doppel_proj": 12,
+          "conditional_residual": 0.0,
+          "conditional_trigger": 0.0,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 1.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 1.0
+        },
+        "definite": {
+          "trigger_project": 1.0,
+          "doppel_project": 0.0,
+          "residual": 1.0,
+          "n_trigger_proj": 8,
+          "n_doppel_proj": 8,
+          "conditional_residual": 0.0,
+          "conditional_trigger": 0.0,
+          "conditional_doppel": 0.0,
+          "plain_trigger_endorse": 1.0,
+          "plain_doppel_endorse": 0.0,
+          "d2_endorse": 0.0,
+          "d2_residual": 1.0
+        }
+      }
+    }
+  ],
+  "scope": "internal-contrast-only (within-model residual; no human comparison). anchor: pending.",
+  "asymmetry_note": "null (SHADOW-SATURATED) = cleanly-licensed diagnostic prize; a positive (BEATS) residual is under-licensed \u2014 'keyed to the trigger word-form', reconstructable by a verb-sensitive surface-cue account, does not fire the essay's revision trigger (B1/B2)."
+}
