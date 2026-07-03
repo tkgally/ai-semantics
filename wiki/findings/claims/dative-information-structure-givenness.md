@@ -1,7 +1,7 @@
 ---
 type: claim
 id: dative-information-structure-givenness
-title: The dative alternation's information-structure (givenness) effect is a twice-replicated, human-direction-anchored, shortcut-immune production-preference positive for 2 of 3 panel models (claude + gemini robust; gpt's v1 CONFIRM did not replicate — WEAK, CI includes 0); a directional/ordering claim with magnitude+interval deferred to the owed powered re-run
+title: The dative alternation's information-structure (givenness) effect is a twice-observed, human-direction-anchored, shortcut-immune production-preference positive for 2 of 3 panel models (claude + gemini robust; gpt's v1 CONFIRM did not replicate — WEAK, CI includes 0); a directional/ordering claim with magnitude+interval deferred to the owed powered re-run
 meaning-senses:
   - constructional
   - inferential
@@ -31,7 +31,7 @@ links:
     target: essay/concordant-verdict-hides-spread
 ---
 
-# Claim: the dative alternation's information-structure (givenness) effect is a twice-replicated, shortcut-immune production-preference positive — for 2 of 3 panel models
+# Claim: the dative alternation's information-structure (givenness) effect is a twice-observed, shortcut-immune production-preference positive — for 2 of 3 panel models
 
 > **Status: supported (2026-07-03).** Cross-session, independent, adversarial claims-promotion review
 > ([`PROTOCOL.md §3`](../../../PROTOCOL.md); program item B1) of the dative **givenness**
