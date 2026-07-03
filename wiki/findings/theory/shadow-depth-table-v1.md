@@ -53,6 +53,11 @@ links:
 > [`decisions/open/shadow-depth-table-row-inclusion`](../../decisions/open/shadow-depth-table-row-inclusion.md)
 > (this page is `contingent-on` it, pending cross-session ratification). Read the two honesty
 > boxes at the foot before citing.
+>
+> *(`anchor: internal-contrast-only` on the front-matter means only that **this arrangement adds no
+> new human comparison** — three of its beater rows carry their own human anchors, stated in the
+> anchor column and shown standing; the front-matter label governs the page's own claim, not its
+> rows'.)*
 
 ## What this table is
 
@@ -175,8 +180,9 @@ caveats.
 
 ## Honesty box 1 — what is original here, and what is not
 
-The **original** contribution is the **arrangement**: collating five weeks of ratified results into
-one object sorted by shadow-depth, with row forms and anchor types made explicit so the beater/
+The **original** contribution is the **arrangement**: collating five weeks of independently
+verified, operationalization-ratified results (each `status: proposed`, gated by a pre-run critic
+and a recompute-from-raw verifier) into one object sorted by shadow-depth, with row forms and anchor types made explicit so the beater/
 saturated boundary and the internal-contrast/human-anchored boundary are both legible. The
 **shadow-depth reading** is from [`essay/shadow-depth-cross-cuts-grain`](../essays/shadow-depth-cross-cuts-grain.md);
 the **continuum frame** from [`theory/lexicon-grammar-continuum`](lexicon-grammar-continuum.md); every
@@ -185,7 +191,8 @@ re-analyzed.
 
 ## Honesty box 2 — weakest where it most needs strength
 
-The table is strongest on the beater side (four ratified, controlled, interval-bearing results) and
+The table is strongest on the beater side (four verified, controlled, interval-bearing results —
+each `status: proposed`, not a promoted claim) and
 **weakest on the saturated side**, which is the half that carries the essay's structural claim. The
 two saturated corners are **readings/bets, not controlled failures to beat a shadow**: no matched
 distributional control has been run on the panel for either. So the table demonstrates the
