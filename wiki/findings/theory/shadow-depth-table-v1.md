@@ -10,8 +10,7 @@ meaning-senses:
   - human-comparison
 status: draft
 anchor: internal-contrast-only
-contingent-on:
-  - shadow-depth-table-row-inclusion
+contingent-on: []
 created: 2026-07-03
 updated: 2026-07-03
 links:
@@ -48,11 +47,11 @@ links:
 > **no new measurement and no new human comparison.** It arranges results that already exist — each
 > cited at its source page's stated strength — along the shadow-depth axis of
 > [`essay/shadow-depth-cross-cuts-grain`](../essays/shadow-depth-cross-cuts-grain.md), so the
-> continuum reading becomes one legible object. Its inclusion and presentation rules are surfaced,
-> not smuggled: they are the provisional default of
-> [`decisions/open/shadow-depth-table-row-inclusion`](../../decisions/open/shadow-depth-table-row-inclusion.md)
-> (this page is `contingent-on` it, pending cross-session ratification). Read the two honesty
-> boxes at the foot before citing.
+> continuum reading becomes one legible object. Its inclusion and presentation rules were surfaced,
+> not smuggled, and are now the **ratified** default (adopt-A on all three sub-questions) of
+> [`decisions/resolved/shadow-depth-table-row-inclusion`](../../decisions/resolved/shadow-depth-table-row-inclusion.md)
+> (ratified session 172, autonomous adversarial review + a non-Anthropic panel vote; anchor-discipline
+> and modesty tests both PASS, no result changed). Read the two honesty boxes at the foot before citing.
 >
 > *(`anchor: internal-contrast-only` on the front-matter means only that **this arrangement adds no
 > new human comparison** — three of its beater rows carry their own human anchors, stated in the
@@ -174,9 +173,10 @@ caveats.
   fragile case: a further replication that pushed claude or gemini's shift toward zero would matter.)
 - **A new controlled probe lands** (any A1/A2 item with a named control + CI) → it is added as a new
   beater row in the same edition, keeping the table the live roll-up the program intends.
-- **The row-inclusion decision is ratified differently** →
-  [`decisions/open/shadow-depth-table-row-inclusion`](../../decisions/open/shadow-depth-table-row-inclusion.md)
-  may replace the provisional default (e.g. admit only form (i)); the table is rebuilt to match.
+- **The row-inclusion decision is reopened and re-ratified differently** → the ratified default
+  ([`decisions/resolved/shadow-depth-table-row-inclusion`](../../decisions/resolved/shadow-depth-table-row-inclusion.md),
+  adopt-A on all three) stands as of session 172; only a *materially different* row-form or
+  anchor-type presentation would reopen it (e.g. admit only form (i)), and the table is rebuilt to match.
 
 ## Honesty box 1 — what is original here, and what is not
 
