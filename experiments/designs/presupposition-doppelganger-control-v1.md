@@ -44,10 +44,50 @@ links:
 
 Program item **A1a** ([`wiki/program.md`](../../wiki/program.md)): the matched surface-cue control the
 shadow-depth essay names as **owed**. It is the flagship's highest-leverage empirical unit because it
-converts the presupposition *reading* in the shadow-depth table into a **measured** row — either a
-measured saturated row (fails to beat the doppelgänger) or a move to the beater side (a residual over
-the doppelgänger). Sibling runs mirrored: `2026-07-01-presupposition-projection`,
-`2026-07-01-presupposition-accommodation`.
+converts the presupposition *reading* in the shadow-depth table into a **measured** row. Its
+well-licensed prize is the **null** — a measured shadow-saturated row that discharges the owed
+control (see the pre-run critic note below). Sibling runs mirrored:
+`2026-07-01-presupposition-projection`, `2026-07-01-presupposition-accommodation`.
+
+## Pre-run critic verdict (session 172): GO-WITH-CONDITIONS
+
+An independent fresh-agent pre-run critic (design-level; the run is a later session) + one
+non-Anthropic panel vote (`panel.B` = `openai/gpt-5.4-mini`, cutoff-aware preamble) returned
+**GO-WITH-CONDITIONS**. **Fabrication check: all six SEP quotes verbatim + correctly located; the
+provenance note on the doppelgänger substitutions is honest.** Two BLOCKERS were **applied to this
+design and to its decision page this session**; four SHOULD-FIX and two NITs are **binding
+conditions on the freezing session** (recorded here so they cannot be lost):
+
+- **B1 (applied).** A positive D1 residual does **not** license "beats the distributional shadow" and
+  does **not** fire the essay's revision trigger — a verb-sensitive surface-cue account reconstructs
+  it (D1 varies the *word*, unlike the CC beater which varies only the construction). The BEATS
+  mapping is downgraded accordingly throughout (see "The one question" and "What each outcome feeds").
+- **B2 (applied).** The null and positive outcomes are **not epistemically symmetric**: the null
+  (SHADOW-SATURATED) is the cleanly-licensed diagnostic; the positive is under-licensed/confounded.
+  Stated in "The one question" and the verdict map.
+- **S1 (freezing session).** **Drop the definite family from the powered/verdict-bearing pooled
+  residual** — its D1 is not a matched control (trigger and doppelgänger share almost no surface
+  material; the cue does not degrade, it is a different sentence). Carry definites as
+  exploratory/D2-only, or redesign to hold subject+predicate constant under an opaque operator.
+- **S2 (freezing session).** The four families are **heterogeneous control types** (cleft = clean
+  construction-grain; factive/aspectual = lexical, subject to B1's confound; definite = broken).
+  Report **per-family as primary**, pooled only as secondary; the cleft family carries the most
+  interpretable (construction-grain) signal.
+- **S3 (freezing session).** Relabel the powered N honestly: only the two projecting frames carry the
+  residual, so it rests on **~64 residual-bearing conditions/model (32 trigger + 32 doppelgänger)**,
+  ~32 obs/leg/model — a real ~5× upgrade on the 12-scenario pilot, adequate for direction-of-effect,
+  but **not 128**; dropping definites (S1) lowers it further, so consider **5–6 scenarios per
+  remaining family** to hold residual-N up.
+- **S4 (freezing session).** Report **verdict-map sensitivity** under nearby cutoffs (e.g. RESID
+  0.25/0.35, FLATBAND 0.10/0.20) so the 0.15–0.30 MIXED band reads as an honest indifference region.
+- **N1 (freezing session).** Sanity may reduce the panel to 2 models (projection-v1's gpt scored 0.53
+  < 0.60); flag any 2/2 verdict so it is not read as 3-model.
+- **N2 (for the record).** Dropping the conditional frame *raises* trigger_project and works *against*
+  the (preferred, saturated) null — evidence the exclusion is not a self-serving positive-hunt; the
+  conditional is reported descriptively regardless of result.
+
+The critic confirmed the conditional-frame exclusion is legitimate pre-registration (projection-v1
+dates 2026-07-01, predates this design; its 0.42/0.17/0.17 collapse is the published grounding).
 
 ## The one question (nothing wider)
 
@@ -61,9 +101,25 @@ the doppelgänger). Sibling runs mirrored: `2026-07-01-presupposition-projection
 > endorse the same content just as much (a **measured** shadow-saturated corner)?
 
 The measure is a **within-model residual**: `trigger P-endorse − doppelgänger P-endorse`, over the
-cancelling frames where the trigger projects. A pure surface-cue follower behaves the **same** on
-both legs (null residual); a system tracking the presupposition/assertion split behaves **differently**
-(positive residual).
+cancelling frames where the trigger projects. **The two outcomes are NOT epistemically symmetric
+(pre-run critic B1/B2, session 172 — read before citing):**
+
+- A **null residual** (trigger ≈ doppelgänger) is the **cleanly-licensed, diagnostic** outcome: the
+  model endorses `P` equally for "didn't realize that S" and "didn't suspect that S", i.e. it is
+  **not** tracking factivity and is following something cruder than even the trigger word — a genuine
+  **shadow-saturated** signature that soundly supports the essay's placement.
+- A **positive residual** is **under-licensed** and does **not** by itself show "presupposition beats
+  the distributional shadow." A *crude* surface-cue follower (keyed to bare complement presence)
+  gives a null; but a **verb-sensitive** surface-cue follower — which any distributional next-token
+  learner is, since `realize` and `suspect` have sharply different distributions — *also* produces a
+  **positive** residual. So a positive residual shows at most that the model's endorsement is **keyed
+  to the trigger word-form above bare complement presence** — a lexical/constructional discrimination
+  that is itself distributionally encoded — **not** a residual over-and-above co-occurrence. The
+  decisive disanalogy with the comparative-correlative beater: CC clears controls that reuse the
+  **same words** and vary only the construction; D1 (factive/aspectual) varies the **word**, so any
+  residual is attributable to the words' different distributions. (The **cleft** family is the
+  exception — it holds the content words constant and varies only the cleft structure — see the
+  per-family note under Metrics.)
 
 ## Grounding in the source (SEP §1.1–§1.3)
 
@@ -236,13 +292,20 @@ RESID    = 0.30   per-model residual floor to count as "beats the doppelgänger"
 FLATBAND = 0.15   per-model |residual| below which trigger ≈ doppelgänger (shadow-saturated).
 ```
 
-- **BEATS-DOPPELGANGER** — ≥ 2/3 **sanity-passing** models have `residual ≥ RESID`. → the
-  presupposition beats a **matched surface-cue** shadow; the corner **moves toward the beater side**
-  of the shadow-depth table (a measured residual over a matched control).
+**The two verdicts are not epistemically symmetric (B2): the null is the diagnostic outcome, the
+positive is under-licensed.**
+
+- **BEATS-DOPPELGANGER** — ≥ 2/3 **sanity-passing** models have `residual ≥ RESID`. → the model's
+  endorsement is **keyed to the trigger word-form above bare complement presence** — a
+  lexical/constructional discrimination. **This does NOT establish "beats the distributional shadow"
+  and does NOT move the corner to the beater side** (B1): a verb-sensitive surface-cue account
+  reconstructs a D1 residual. It **warrants re-examining** the placement, weighted toward the
+  **cleft** family (the one construction-grain leg); it does not fire the essay's revision trigger.
 - **SHADOW-SATURATED (FLAT)** — ≥ 2/3 sanity-passing models have `|residual| < FLATBAND`. → the
   doppelgänger endorses the same content just as much; a surface-cue account has **no residual to
-  answer for**. This is a **first-class MEASURED result** written as such (charter §4) — it converts
-  the essay's *reading* into a measured saturated row, the whole point of the control.
+  answer for**. This is the **cleanly-licensed, first-class MEASURED result** (charter §4) — it
+  converts the essay's *reading* into a measured saturated row, the whole point of the control, and
+  is the higher-value outcome for the flagship.
 - **MIXED** — anything else (sanity failure, split panel, partial signal). Reported honestly; no
   shadow claim made.
 
@@ -265,14 +328,18 @@ powered upgrade PROTOCOL §4 asks of a claim-carrying probe, while staying well 
 
 ## What each outcome feeds
 
-- **BEATS-DOPPELGANGER** → the presupposition corner **moves toward the beater side** of the
-  shadow-depth table ([`theory/shadow-depth-table-v1`](../../wiki/findings/theory/shadow-depth-table-v1.md)),
-  and fires the first Revision trigger of
-  [`essay/shadow-depth-cross-cuts-grain`](../../wiki/findings/essays/shadow-depth-cross-cuts-grain.md)
-  ("a matched-control probe showed the presupposition corner beats a distributional shadow"): the
-  grammatical pole would then carry **two beaters**, not a beater and a saturated corner. Strength
-  gated by whether **D2** corroborates D1 (if only D1, the lexical-distribution confound keeps the
-  move weak).
+- **BEATS-DOPPELGANGER** → the model's endorsement is **keyed to the trigger word-form above bare
+  complement presence** — a lexical/constructional discrimination. **This does NOT fire the essay's
+  first Revision trigger and does NOT move the corner to the beater side** (pre-run critic B1). The
+  essay's trigger requires "a residual a surface-cue account **cannot reconstruct**, held stably
+  across frames and contexts"; a D1 residual is trivially reconstructable by a **verb-sensitive**
+  surface-cue account (different trigger word = different surface cue), and D2 (descriptive, does not
+  compose with the frames) cannot demonstrate cross-frame stability. So neither D1 nor D1+D2 clears
+  the essay's bar. The honest reading of a positive residual: it **warrants re-examining** the
+  placement (the endorsement is not merely following bare complement content), **not** a move off the
+  saturated end. The **cleft** family's residual is the partial exception — it holds the content words
+  constant and varies only the construction, so a cleft residual is the one leg that speaks (weakly)
+  to a construction-grain shadow rather than a lexical one; report it separately (S2).
 - **SHADOW-SATURATED (null residual)** → a **measured saturated row**: the presupposition placement in
   the shadow-depth table stops being a reading/bet and becomes a controlled failure-to-beat-a-shadow,
   parallel to (and stronger than) the antonymy corner. Written as a null (charter §4) — the honest,

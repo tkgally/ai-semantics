@@ -27,12 +27,22 @@ The projection run ([`result/presupposition-projection-v1`](../../findings/resul
 already carries a within-base matched-**entailment** control (P vs. E on the same base). The new
 increment this decision governs is a **surface-cue doppelgänger**: items that carry the *same*
 surface cue (the trigger word-form and its local frame) but **lack** the presuppositional structure.
-A pure surface-cue follower behaves the **same** on trigger and doppelgänger; a system tracking the
-presupposition/assertion split behaves **differently**. The **residual** = (trigger P-endorsement
-under cancelling frames) − (doppelgänger P-endorsement under the same frames). A residual reliably
-> 0 across models = presupposition beats the surface-cue shadow (moves toward the beater side of the
-shadow-depth table). A null residual = shadow-saturated (a **measured** saturated row, not a
-reading). Both outcomes are first-class.
+The **residual** = (trigger P-endorsement under cancelling frames) − (doppelgänger P-endorsement
+under the same frames). **The two outcomes are not epistemically symmetric** (pre-run critic B1/B2,
+s172 — see the Pre-run critic input section below):
+
+- A **null residual** = **shadow-saturated**, a **measured** saturated row (not a reading). This is
+  the **cleanly-licensed diagnostic** outcome: the model endorses the content equally for the trigger
+  and its non-presupposing doppelgänger, so it is not tracking the presuppositional structure — the
+  whole point of the control, and the higher-value outcome for the flagship.
+- A **positive residual** does **NOT** establish "presupposition beats the surface-cue shadow" and
+  does **not** move the corner to the beater side. A *verb-sensitive* surface-cue follower — which any
+  distributional learner is — reconstructs a D1 residual, because D1 varies the trigger **word** (its
+  distribution differs), unlike the comparative-correlative beater which varies only the construction
+  over the **same words**. A positive residual shows at most that endorsement is **keyed to the
+  trigger word-form above bare complement presence** — itself distributionally encoded — and merely
+  **warrants re-examining** the placement (weighted toward the cleft family, the one construction-grain
+  leg). Both outcomes are reported first-class; the asymmetry in what each licenses is stated.
 
 Constructing a "same surface cue, no presuppositional structure" doppelgänger is value-laden and
 non-obvious, and the residual's scoring key involves genuine sub-choices. This page surfaces both
@@ -109,9 +119,11 @@ panel verdict map?
   RESID    = 0.30   per-model residual floor to count as "beats the doppelgänger".
   FLATBAND = 0.15   per-model |residual| below which trigger ≈ doppelgänger (shadow-saturated).
   ```
-  - **BEATS-DOPPELGANGER** — ≥ 2/3 sanity-passing models have `residual ≥ RESID`. → presupposition
-    beats the surface-cue shadow; the corner **moves toward the beater side** of the shadow-depth
-    table (a measured residual over a matched surface-cue control).
+  - **BEATS-DOPPELGANGER** — ≥ 2/3 sanity-passing models have `residual ≥ RESID`. → the endorsement
+    is **keyed to the trigger word-form above bare complement presence** (a lexical/constructional
+    discrimination). **NOT** "beats the distributional shadow" and **NOT** a move to the beater side
+    (pre-run critic B1: a verb-sensitive surface-cue account reconstructs a D1 residual). Warrants
+    re-examining the placement, weighted toward the cleft family; does not fire the essay's trigger.
   - **SHADOW-SATURATED (FLAT)** — ≥ 2/3 sanity-passing models have `|residual| < FLATBAND`. → the
     doppelgänger endorses the same content just as much; a surface-cue account has **no residual to
     answer for**. This converts the essay's *reading* into a **measured saturated row** — the whole
@@ -133,6 +145,34 @@ is written to this default in **provisional** language and states nothing more s
 source result/essay pages. The eventual result would carry `anchor: internal-contrast-only` (or
 `anchor: pending`) — a within-model contrast making **no human comparison** — surfaced via this
 decision, **never self-ratified** in the session that runs it.
+
+## Pre-run critic input (session 172)
+
+The contingent design was reviewed this session by an independent fresh-agent pre-run critic + one
+non-Anthropic panel vote (`panel.B`) → **GO-WITH-CONDITIONS** (fabrication check PASS: all SEP quotes
+verbatim + located). Two conceptual corrections were **applied to both this decision and the design
+this session** — they sharpen the provisional default rather than replace it, so the default remains
+ratifiable:
+
+- **B1.** A positive residual does not license "beats the distributional shadow" (a verb-sensitive
+  surface-cue account reconstructs a D1 residual, since D1 varies the *word*); the BEATS mapping is
+  corrected throughout to "keyed to the trigger word-form above bare complement presence — warrants
+  re-examination, not a move to the beater side." The **cleft** family is the partial exception (it
+  varies only the construction over the same words).
+- **B2.** The null (SHADOW-SATURATED) is the cleanly-licensed diagnostic outcome; the positive is
+  under-licensed. Stated in the framing and verdict map.
+
+Four **binding conditions on the freezing session** (carried in the design page, not resolved here):
+**S1** drop the definite family from the powered residual (its D1 is not a matched control — trigger
+and doppelgänger share almost no surface material) → exploratory/D2-only or redesign; **S2** report
+per-family as primary (the families are heterogeneous control types), pooled only secondary; **S3**
+relabel the powered N honestly (only ~64 residual-bearing conditions/model carry the residual, not
+128; consider 5–6 scenarios per remaining family); **S4** report verdict-map sensitivity under nearby
+cutoffs. NITs: **N1** a sanity failure may reduce the panel to 2 models (flag any 2/2 verdict);
+**N2** the conditional-frame exclusion works *against* the preferred null, so it is not a positive-hunt.
+
+A **later** ratifying session should confirm B1/B2 are honestly reflected and that the freezing
+session honors S1–S4 before the probe runs.
 
 ## Ratification note
 
