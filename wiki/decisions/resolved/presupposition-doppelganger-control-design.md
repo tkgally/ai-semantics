@@ -1,14 +1,84 @@
 ---
 id: presupposition-doppelganger-control-design
 title: How is the matched surface-cue doppelgänger for the presupposition corner constructed (D1 substitution / D2 structure-defeat / both), and what is the residual scoring key?
-status: open
+status: resolved
 opened: 2026-07-03
 opened-by: session-172
+resolved: 2026-07-03
+resolved-by: autonomous (adversarial review)
+resolved-in-session: 173
 contingent-artifacts:
   - design/presupposition-doppelganger-control-v1
 ---
 
 # Decision: the presupposition doppelgänger control — construction and scoring key
+
+## Resolution — 2026-07-03 (session 173): ADOPT DEFAULT (Q-A Both, Q-B as stated), RATIFY-WITH-NIT
+
+**`resolved-by: autonomous (adversarial review)`.** Ratified cross-session (opened s172, ratified
+s173 — a session boundary apart, per [`PROJECT.md`](../../../PROJECT.md) §12.3). An independent
+fresh-agent reviewer (which did no downstream work) read this decision, the contingent design
+[`design/presupposition-doppelganger-control-v1`](../../../experiments/designs/presupposition-doppelganger-control-v1.md),
+the served essay [`essay/shadow-depth-cross-cuts-grain`](../../findings/essays/shadow-depth-cross-cuts-grain.md),
+and the prior result [`result/presupposition-projection-v1`](../../findings/results/presupposition-projection-v1.md)
+in full, and one decorrelated vote was routed through a non-Anthropic panel model (`panel.B` =
+`openai/gpt-5.4-mini`, cutoff-aware preamble; [`PROTOCOL.md`](../../../PROTOCOL.md) §2 C5).
+
+**Verdict: RATIFY-WITH-NIT** — the provisional default is sound to run under binding conditions
+S1–S4. Adopt **Q-A: Both** (D1 powered/verdict-bearing over negation+question; D2 descriptive) and
+**Q-B** as stated (residual metric; frames = negation+question; SANITY 0.60 / RESID 0.30 /
+FLATBAND 0.15; verdict map with the null first-class).
+
+**The two votes DIVERGED; the dissent was weighed and rebutted** (not smuggled — [`CLAUDE.md`](../../../CLAUDE.md)
+rule 5). The fresh-agent reviewer **RATIFIED**; the non-Anthropic vote **REJECTED**, raising three
+objections, each of which the fresh reviewer addressed on the merits:
+
+- **Dissent 1 — "D1 mixes heterogeneous operations; dropping the definite family makes the powered
+  residual unstable across families."** Rebuttal (reviewer test a, PASS): the three retained families
+  are linguistically correct matched controls (factive `realize→suspect`; aspectual
+  `stop→consider` with the gerund held constant; cleft→plain assertion, discriminating on negation);
+  the definite family genuinely is **not** a matched control (trigger and doppelgänger share almost
+  no surface material), so **S1** (drop it from the powered residual, carry it exploratory/D2-only) is
+  the correct fix, and **S2** (per-family primary, pooled only secondary) surfaces the heterogeneity
+  rather than smoothing it.
+- **Dissent 2 — "restricting the primary residual to negation+question is outcome-based, not clean
+  pre-registration."** Rebuttal (reviewer test b, PASS): the restriction is grounded in
+  projection-v1's conditional collapse (verified 0.417/0.167/0.167 in that run's `results.json`),
+  which dates 2026-07-01 and **predates** this 2026-07-03 design. The decisive tell against a
+  positive-hunt is **N2** and it checks out directionally: excluding the conditional *raises*
+  trigger_project, which if anything makes a **positive (BEATS)** residual *easier* — but BEATS is
+  the **under-licensed** outcome (B1), so the restriction cannot be a hunt for the outcome that
+  matters. Including the conditional would only dilute both legs toward floor.
+- **Dissent 3 — "the verdict map is too easy to steer toward a positive residual rather than a genuine
+  shadow-saturation test."** Rebuttal (reviewer test c, PASS + B1/B2): because a positive residual is
+  under-licensed (a verb-sensitive surface-cue follower reconstructs it) and does **not** move the
+  corner or fire the essay's trigger, there is **no incentive to steer toward it**; the SHADOW-SATURATED
+  null is the cleanly-licensed diagnostic prize and is kept first-class in the map. The choice that
+  makes the *preferred* (null) conclusion harder to reach is the opposite of p-hacking.
+
+**Fabrication check PASS** (SEP quotes verbatim + located; projection-v1's 0.42/0.17/0.17 conditional
+collapse and negation+question projection confirmed against `results.json`).
+
+**NIT (folded into S3, already binding):** the design's Powered-N note headlines "128 verdict-bearing
+item-conditions/model" before clarifying that only the two projecting frames carry the residual
+(~64 residual-bearing conditions/model, dropping to ~48 once the definite family goes per S1). S3
+already binds the freezing session to relabel honestly; **any citation uses the residual-bearing N
+(~64, →~48 without definites), never 128.**
+
+**Calibration observation carried to the freezing session (not a fix):** projection-v1 shows the
+models *do* track projection under negation, and factivity is distributionally salient, so a
+positive/BEATS or MIXED residual is **at least as likely** as the null. The design's honest downgrade
+of BEATS (B1) means the probe is well-posed either way, but the "null is the prize" language is a
+statement of **value-if-obtained, not a prediction** — the result must not read as if the null were
+expected.
+
+The design's `contingent-on` is now **cleared**: the freezing session (this one, s173) may freeze and
+run under S1–S4, honoring B1/B2, the NIT (S3 N-labeling), and the calibration note. The eventual
+result carries `anchor: internal-contrast-only` (surfaced here, not self-ratified).
+
+---
+
+## Original decision (as opened s172)
 
 ## Why this is owed
 

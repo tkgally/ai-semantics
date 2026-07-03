@@ -35,9 +35,9 @@ Standing references:
 
 ### Decisions — open
 
-57 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+58 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/presupposition-doppelganger-control-design.md`](decisions/open/presupposition-doppelganger-control-design.md) — How is the matched surface-cue doppelgänger for the presupposition corner constructed (D1 substitution / D2 structure-defeat / both), and what is the residual scoring ke… · **open**
+*(none)*
 
 ### Base — concepts
 
@@ -415,6 +415,7 @@ Standing references:
 
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
+- [`experiments/runs/2026-07-03-presupposition-doppelganger/`](../experiments/runs/2026-07-03-presupposition-doppelganger/README.md)
 - [`experiments/runs/2026-07-02-comparative-correlative-powered/`](../experiments/runs/2026-07-02-comparative-correlative-powered/README.md)
 - [`experiments/runs/2026-07-02-commitment-framing-decomposition/`](../experiments/runs/2026-07-02-commitment-framing-decomposition/README.md)
 - [`experiments/runs/2026-07-02-accommodation-cue-strength/`](../experiments/runs/2026-07-02-accommodation-cue-strength/README.md)

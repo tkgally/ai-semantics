@@ -8,8 +8,7 @@ meaning-senses:
   - constructional
 status: draft
 anchor: pending
-contingent-on:
-  - presupposition-doppelganger-control-design
+contingent-on: []
 created: 2026-07-03
 updated: 2026-07-03
 links:
