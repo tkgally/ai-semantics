@@ -35,7 +35,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
 
 ## A. Empirical program
 
-- **A1a `[~]` Presupposition distributional control.** Design + run the matched
+- **A1a `[x]` Presupposition distributional control.** Design + run the matched
   surface-cue control the shadow-depth essay names as owed: doppelgänger items (trigger
   word-forms in frames carrying the cue without the presuppositional structure) and
   cue-scrambled variants, so "environment-gated = surface-cue-following" is *tested* the way
@@ -45,9 +45,15 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   GO-WITH-CONDITIONS, non-Anthropic vote weighed). Two BLOCKERS **applied this session** (B1: a positive
   residual does *not* license "beats the distributional shadow" — a verb-sensitive surface-cue account
   reconstructs a D1 residual, so the honest prize is the **null**; B2: null/positive not epistemically
-  symmetric). Freeze+run **owed next**, gated on ratifying
-  [`decisions/open/presupposition-doppelganger-control-design`](decisions/open/presupposition-doppelganger-control-design.md)
-  (opened s172) and honoring critic conditions **S1** (drop the definite family from the powered residual),
+  symmetric). **RATIFIED + RUN s173** ([`decisions/resolved/presupposition-doppelganger-control-design`](decisions/resolved/presupposition-doppelganger-control-design.md),
+  RATIFY-WITH-NIT; non-Anthropic vote dissented REJECT and was rebutted). → [`result/presupposition-doppelganger-control-v1`](findings/results/presupposition-doppelganger-control-v1.md):
+  **VERDICT BEATS-DOPPELGANGER** (pooled +0.78/+0.47/+0.94) but **under-licensed** (B1) — word-form-keyed,
+  surface-cue-reconstructable, the essay's revision trigger does **not** fire, the corner does **not** move to the
+  beater side, the clean flat null did not obtain; post-run verifier REPRODUCED (0 discrepancies). Revised
+  [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md) +
+  [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md) in-page; anchor decision opened
+  ([`decisions/open/presupposition-doppelganger-internal-contrast-anchor`](decisions/open/presupposition-doppelganger-internal-contrast-anchor.md), s174+).
+  Froze+ran honoring critic conditions **S1** (drop the definite family from the powered residual),
   **S2** (per-family primary), **S3** (true residual-N ≈64/model, not 128), **S4** (threshold sensitivity).
 - **A1b `[ ]` Antonymy shadow-saturation probe.** Run
   [`conjecture/lexical-relation-shadow-saturation`](findings/conjectures/lexical-relation-shadow-saturation.md)
@@ -204,7 +210,8 @@ B6, C4) extend them.
 
 | Date | Item | What landed |
 |------|------|-------------|
-| 2026-07-03 (s172) | RECONCILE, A1a | **Ratified `shadow-depth-table-row-inclusion`** (adopt-A ×3; autonomous adversarial review + non-Anthropic vote; anchor-discipline + modesty PASS; table `contingent-on` cleared, stands as v1). **A1a design landed** → [`design/presupposition-doppelganger-control-v1`](../experiments/designs/presupposition-doppelganger-control-v1.md) (matched surface-cue doppelgänger control; pre-run critic GO-WITH-CONDITIONS; two BLOCKERS applied this session — a positive residual does *not* license "beats the shadow", the **null** is the diagnostic prize; S1–S4 carried to the freezing session). Opened [`decisions/open/presupposition-doppelganger-control-design`](decisions/open/presupposition-doppelganger-control-design.md) (s172, ratifiable s173+). Freeze+run owed next. $0.006 (two panel votes). |
+| 2026-07-03 (s173) | RECONCILE, A1a | **Ratified `presupposition-doppelganger-control-design`** (RATIFY-WITH-NIT; autonomous adversarial review + one non-Anthropic vote that **dissented REJECT and was weighed and rebutted**; design `contingent-on` cleared). **A1a FROZEN + RUN** → [`result/presupposition-doppelganger-control-v1`](findings/results/presupposition-doppelganger-control-v1.md): the matched surface-cue doppelgänger control (22 scenarios, 594 calls, honoring S1–S4). **VERDICT BEATS-DOPPELGANGER** (pooled +0.78/+0.47/+0.94; per-family factive 3/3, aspectual 3/3, cleft 2/3 with gpt control-failing; robust across all 9 S4 cutoffs) — but **UNDER-LICENSED** (B1/B2): word-form-keyed, surface-cue-reconstructable, so it does **not** beat the distributional shadow and does **not** move the corner to the beater side; the clean flat null did **not** obtain. Pre-run critic GO + non-Anthropic GO-WITH-NIT; post-run verifier REPRODUCED (0 discrepancies). Revised [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md) + [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md) in-page. Anchor decision opened (`presupposition-doppelganger-internal-contrast-anchor`, s174+). $0.107 ($0.103 probe + votes/pre-flight). |
+| 2026-07-03 (s172) | RECONCILE, A1a | **Ratified `shadow-depth-table-row-inclusion`** (adopt-A ×3; autonomous adversarial review + non-Anthropic vote; anchor-discipline + modesty PASS; table `contingent-on` cleared, stands as v1). **A1a design landed** → [`design/presupposition-doppelganger-control-v1`](../experiments/designs/presupposition-doppelganger-control-v1.md) (matched surface-cue doppelgänger control; pre-run critic GO-WITH-CONDITIONS; two BLOCKERS applied this session — a positive residual does *not* license "beats the shadow", the **null** is the diagnostic prize; S1–S4 carried to the freezing session). Opened [`decisions/resolved/presupposition-doppelganger-control-design`](decisions/resolved/presupposition-doppelganger-control-design.md) (s172, ratified s173). Freeze+run owed next. $0.006 (two panel votes). |
 | 2026-07-03 (s171) | A1c | **Flagship shadow-depth table v1 assembled** → [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md): five weeks of results as one measured object sorted by shadow-depth. Four beater rows (residual over a named distributional control + 95% CI, at both grains: CC ≈87pp internal-contrast; dative within-item shift 2/3; AANN partial-ρ\|freq human-anchored; sense gradience partial-ρ\|topic human-anchored) beside two saturated corners marked as readings/bets (presupposition, antonymy — controls owed). No new measurement, no new human comparison, no cross-row magnitude comparison. Row-inclusion/presentation surfaced as [`decisions/resolved/shadow-depth-table-row-inclusion`](decisions/resolved/shadow-depth-table-row-inclusion.md) (ratified s172); table `contingent-on` it. $0; fresh-agent adversarial coherence pass → SAFE TO LAND (2 NITs fixed). |
 | 2026-07-02 | adoption | Program adopted (Tom); institutional layer built (special session): program page, PROTOCOL §3–§4, generated index, note type, predictions.md seed, models.md truth-up, site repairs, three subject decisions queued. |
 | 2026-07-02 (s170) | C3 | **Both founding open-questions closed** (`answered`): the frequency-confound and the distributional-vs-inferential questions (both 2026-05-28) consolidated into [`theory/lexicon-grammar-continuum`](findings/theory/lexicon-grammar-continuum.md)'s new closure section. Q1 answered by the shadow-control apparatus (matched same-material control + measured residual; CC ≈87pp exemplar; closed-weight bound kept honest); Q2 answered *thinly* — inferential role secured 1/3 models via cross-instrument convergence, boundary a shadow-depth gradient, residual thread re-homed. Philosophical/consolidation unit; $0. |

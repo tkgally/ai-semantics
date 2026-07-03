@@ -31,6 +31,8 @@ links:
   - rel: depends-on
     target: essay/presupposition-environment-gated
   - rel: depends-on
+    target: result/presupposition-doppelganger-control-v1
+  - rel: depends-on
     target: result/presupposition-accommodation-v1
   - rel: depends-on
     target: result/accommodation-cue-strength-v1
@@ -41,6 +43,14 @@ links:
 ---
 
 # Theory (draft): the shadow-depth table, v1
+
+> **UPDATE (2026-07-03, s173): the presupposition saturated corner's control has RUN** (program A1a →
+> [`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md)).
+> Verdict BEATS-DOPPELGANGER but **under-licensed** (word-form-keyed, surface-cue-reconstructable): the
+> corner is neither a measured flat-null nor a beater-side move, so it **stays in the saturated section**
+> as a *reading with a measured caveat*. No beater row added; no number in the beater table changed. The
+> corner row's status cell + "what the arranged object shows" §2 are updated in-page; this remains v1
+> (the row-inclusion ratification stands).
 
 > **Status: draft (2026-07-03, session 171). The program's flagship deliverable
 > ([`wiki/program.md`](../../program.md) §"Flagship deliverable"; item A1c).** This page introduces
@@ -113,7 +123,7 @@ caveats.
 
 | phenomenon | grain / pole | why placed deep (the shadow reconstructs the behavior) | status of the placement | source |
 |---|---|---|---|---|
-| **Presupposition (projection + accommodation)** | construction (grammatical) | behavior is fully described by *follow the surface cue; reliability set by the environment*: projection collapses under the conditional antecedent (survival **0.42 / 0.17 / 0.17**), accommodation gated by context support (neutral **1.00 / 0.92 / 1.00** vs contradicting **0.33 / 0.58 / 0.42**), and the gate is cue-strength-**graded** — a *deeper* shadow, not a computed split | **reading/bet.** `internal-contrast-only`; **no matched distributional control run** (that control is owed — program **A1a**). Not a measured failure to beat a shadow | [`essay/presupposition-environment-gated`](../essays/presupposition-environment-gated.md), [`result/presupposition-accommodation-v1`](../results/presupposition-accommodation-v1.md), [`result/accommodation-cue-strength-v1`](../results/accommodation-cue-strength-v1.md) |
+| **Presupposition (projection + accommodation)** | construction (grammatical) | behavior is fully described by *follow the surface cue; reliability set by the environment*: projection collapses under the conditional antecedent (survival **0.42 / 0.17 / 0.17**), accommodation gated by context support (neutral **1.00 / 0.92 / 1.00** vs contradicting **0.33 / 0.58 / 0.42**), and the gate is cue-strength-**graded** — a *deeper* shadow, not a computed split | **reading, control now RUN (2026-07-03, A1a).** The matched surface-cue doppelgänger control [`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md) returned **BEATS-DOPPELGANGER** (pooled residual +0.78 / +0.47 / +0.94) — **under-licensed** (word-form-keyed; surface-cue-reconstructable; cleft leg no clean cross-panel residual). So: **not** the flat null, **not** a beater-side move. Stays a saturated **reading with a measured caveat**; `internal-contrast-only` (`anchor: pending`) | [`essay/presupposition-environment-gated`](../essays/presupposition-environment-gated.md), [`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md), [`result/presupposition-accommodation-v1`](../results/presupposition-accommodation-v1.md), [`result/accommodation-cue-strength-v1`](../results/accommodation-cue-strength-v1.md) |
 | **Antonymy relation recovery** | word (lexical) | antonymy is the relation models recover best (Cao 𝒮≈0.57 vs ≈0.30; Diera "antonymy easiest") *and* the relation whose distributional shadow is largest — antonym pairs recur in tight contrastive frames (Justeson & Katz: 75% in conjoined structures), so the over-and-above residual is smallest exactly where the model looks best | **reading/bet.** Prior-art on **non-panel** models + the **blocked** [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md) (`anchor: pending`, unrun). No panel contrastive-frame control | [`essay/antonymy-outlier-distributional-shadow`](../essays/antonymy-outlier-distributional-shadow.md) |
 
 ## What the arranged object shows
@@ -125,13 +135,17 @@ caveats.
    grains**, and the two saturated corners at the deep end **at both grains**. This is the essay's
    structural claim, now displayed rather than argued — and it is the reason the table exists.
 
-2. **The beater side is genuinely measured; the saturated side is not.** The evidential asymmetry
-   the essay insists on is visible as a table boundary: everything above the second header has a
-   residual over a named control with a CI; everything below it has a *reading*. The saturated
-   corners are where the discriminating controls are **owed**, not where they have been run and
-   failed. Program **A1a** (the presupposition doppelgänger/cue-scrambled control) and the blocked
-   antonymy conjecture are exactly the probes that would convert a saturated *reading* into a
-   measured saturated *row* — or move the phenomenon to the beater side.
+2. **The beater side is genuinely measured; the saturated side is now partly measured
+   (2026-07-03).** The evidential asymmetry the essay insists on is visible as a table boundary:
+   everything above the second header has a residual over a named control with a CI; everything below
+   it has a *reading*. **Update:** program **A1a**'s presupposition doppelgänger control has now RUN
+   ([`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md)),
+   and the outcome is instructive precisely because it lands in **neither** clean pole: the corner is
+   **not** a measured flat-null (the doppelgänger *is* discriminated, BEATS-DOPPELGANGER) and **not** a
+   measured shadow-beater (the residual is word-form-keyed and surface-cue-reconstructable, so it does
+   not move to the beater side). It converts the presupposition *reading* into a *reading with a
+   measured caveat*, not into either kind of row. The antonymy corner's control (the blocked conjecture)
+   remains **owed**.
 
 3. **The two row forms both survive their shadow, differently.** Form (i) shows the residual as a
    large within-model gap the same words in a plain frame do not produce (CC ≈87 pp; the dative

@@ -6,13 +6,15 @@ meaning-senses:
   - distributional
   - inferential
   - constructional
-status: draft
+status: revised
 contingent-on: []
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-03
 links:
   - rel: refines
     target: theory/lexicon-grammar-continuum
+  - rel: depends-on
+    target: result/presupposition-doppelganger-control-v1
   - rel: depends-on
     target: essay/antonymy-outlier-distributional-shadow
   - rel: depends-on
@@ -37,7 +39,23 @@ links:
 
 # Shadow-depth, not grain
 
-> **Status: draft (2026-07-02). A philosophical-track essay in the project's own voice.**
+> **REVISION (2026-07-03, s173) — the presupposition corner's owed control has RUN; the first revision
+> trigger does NOT fire; the placement stands in a weakened form.**
+> [`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md)
+> ran the matched surface-cue doppelgänger control this essay named as owed. Verdict
+> **BEATS-DOPPELGANGER** (pooled residual +0.78 / +0.47 / +0.94): the panel discriminates the trigger
+> from a matched non-presupposing doppelgänger, so the corner is **not behaviorally FLAT**. But this is
+> the **under-licensed** outcome — the residual is **keyed to the trigger word-form** and
+> **surface-cue-reconstructable** (the powered D1 controls vary the *word*; the one construction-grain leg,
+> cleft, gives no clean cross-panel residual — gpt near-flat and control-failing, claude/gemini carried by
+> a negation-frame surface cue). So it is **not** "a residual a surface-cue account cannot reconstruct,
+> held stably across frames" — the first revision trigger's exact bar — and the trigger **does not fire**.
+> **Net:** the corner moves from *pure reading/bet* to *reading with a measured caveat*: shadow-saturated
+> in this essay's precise sense (its residual is one a surface-cue account can reconstruct), though **not
+> flat**. It is **not** moved to the beater side. The Honesty box's "weakest where it most needs strength"
+> bullet is updated accordingly below.
+
+> **Status: revised (2026-07-03, was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
 > It introduces **no new empirical claim** and makes **no human comparison of its own**. Every
 > empirical assertion cites the in-repo `result` or `essay` page that carries it, at that page's
 > stated strength. Its two load-bearing empirical inputs on the *shadow-saturated* side — the
@@ -196,11 +214,18 @@ the targets, and is silent on which model tracks which.
 
 ## Revision triggers (read before citing)
 
-- **The presupposition placement is a bet; a matched control could move it.** If a matched-control
-  probe showed the presupposition corner **beats** a distributional shadow — a residual a surface-cue
-  account cannot reconstruct, held stably across frames and contexts — then "shadow-saturated" is the
-  wrong placement for it, and the grammatical pole would have *two* beaters rather than a beater and a
-  saturated corner. (Symmetrically for antonymy: if the blocked
+- **The presupposition placement is a bet; a matched control could move it. — PARTIALLY DISCHARGED
+  2026-07-03 (s173); the trigger did NOT fire.** The matched-control probe
+  [`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md)
+  ran. It did **not** show a residual a surface-cue account cannot reconstruct held stably across frames:
+  the verdict was BEATS-DOPPELGANGER but **under-licensed** (word-form-keyed; the powered D1 legs vary the
+  word; the cleft leg gives no clean cross-panel residual). So the placement is **not** overturned — the
+  grammatical pole does **not** gain a second beater. What *did* change: the corner is not behaviorally
+  flat. This trigger now fires only if a **construction-grain-only** control (a cleft-family battery with
+  the question-frame confound removed) produced a residual not reducible to a surface cue. If a
+  matched-control probe *had* shown the corner beats a distributional shadow — a residual a surface-cue
+  account cannot reconstruct, held stably across frames and contexts — then "shadow-saturated" would be the
+  wrong placement, and the grammatical pole would have *two* beaters. (Symmetrically for antonymy: if the blocked
   [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)
   ran and antonymy competence survived a contrastive-frame control, the lexical saturated corner moves.)
 - **If either signature turns environment-*invariant*.** The presupposition corner's saturated status
@@ -242,10 +267,16 @@ the targets, and is silent on which model tracks which.
   `internal-contrast-only` within-model contrasts (no human projection/accommodation baseline was
   measured); the antonymy input is prior-art on non-panel models plus a blocked conjecture. The essay
   reads *descriptions*, not what the models compute internally.
-- **Weakest where it most needs strength.** The two shadow-saturated placements are **readings/bets**,
-  not controlled failures-to-beat-a-shadow: no matched distributional control has been run on the panel
-  for either the antonymy corner or the presupposition corner that would show them *failing* the way the
-  beaters *pass*. The strongest thing the essay asserts is that shadow-depth is the **better-fitting
+- **Weakest where it most needs strength — now partly measured on the presupposition side (2026-07-03).**
+  The antonymy corner remains a **reading/bet** (no matched contrastive-frame control run on the panel). The
+  presupposition corner has now had its matched surface-cue control **run**
+  ([`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md)):
+  it is **not** a clean controlled failure-to-beat-a-shadow (the doppelgänger *is* discriminated —
+  BEATS-DOPPELGANGER, not the flat null) and **not** a controlled shadow-beater (the residual is
+  word-form-keyed and surface-cue-reconstructable). It lands in the **under-licensed middle** — measured,
+  but neither pole — so "shadow-saturated in the precise sense that the residual is surface-cue-
+  reconstructable" is now a *measured caveat*, not a bare reading, while the strong flat-null form is
+  disconfirmed. The strongest thing the essay asserts is still that shadow-depth is the **better-fitting
   structural ordering** of the continuum and cross-cuts grain — offered at weak evidential strength (n=3
-  models, small synthetic item sets, direction-of-effect only, one corner per pole on the saturated
-  side), as the reading to knock down, not as a demonstrated property of language models.
+  models, small synthetic item sets, direction-of-effect only), as the reading to knock down, not as a
+  demonstrated property of language models.
