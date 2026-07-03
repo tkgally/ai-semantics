@@ -1,14 +1,50 @@
 ---
 id: shadow-depth-table-row-inclusion
 title: What qualifies as a row of the shadow-depth table, and how are heterogeneous row forms (within-model residual vs model–human correlation; internal-contrast vs human-anchored) presented on one shadow-depth axis?
-status: open
+status: resolved
 opened: 2026-07-03
 opened-by: session-171
+resolved: 2026-07-03
+resolved-by: autonomous (adversarial review)
+resolved-in-session: 172
 contingent-artifacts:
   - theory/shadow-depth-table-v1
 ---
 
 # Decision: shadow-depth-table row-inclusion and presentation
+
+## Resolution — 2026-07-03 (session 172): ADOPT DEFAULT A on all three sub-questions
+
+**`resolved-by: autonomous (adversarial review)`.** Ratified cross-session (opened s171,
+ratified s172 — a session boundary apart, per [`PROJECT.md`](../../../PROJECT.md) §12.3). An
+independent fresh-agent reviewer (which did no downstream work) read the decision, the three
+sub-questions, and the contingent artifact
+[`theory/shadow-depth-table-v1`](../../findings/theory/shadow-depth-table-v1.md) **in full**, and
+one decorrelated vote was routed through a non-Anthropic panel model (`panel.B` =
+`openai/gpt-5.4-mini`, cutoff-aware preamble; [`PROTOCOL.md`](../../../PROTOCOL.md) §2 C5). Both
+**converged on adopt-A across all three**.
+
+- **(1) What counts as a row → A.** Admit both residual forms (matched-material residual and
+  partialled correlation), typed by a **row-form column**; option B would discard three ratified,
+  powered, control-bearing results, and the partial-ρ form *is* the shadow-strip the continuum is
+  built on.
+- **(2) Mixing anchor types → A.** One table, an explicit **anchor column**, and a hard prose
+  "no cross-row magnitude comparison" rule; the reviewer verified the fence is real (row-form +
+  anchor columns + the rule stated three times, backstopped by unit-incommensurability), so the
+  internal-contrast CC magnitude is never presentable as a model–human magnitude.
+- **(3) Ordering → A.** Coarse beater-vs-saturated bins only; a fine scalar shadow-depth is
+  explicitly disclaimed and rank-order inference beyond the bins forbidden in text; the two
+  saturated corners stay marked as readings/bets with the discriminating controls named as owed.
+
+**Anchor-discipline test: PASS. Modesty test: PASS.** The reviewer confirmed the artifact
+faithfully implements the ratified default — no BLOCKER, no SHOULD-FIX; one non-gating NIT (the
+row-form column sits 5th of 7 in a wide table, fully mitigated by a dedicated pre-table prose
+section and unit-incommensurability). Ratification fixed the **yardstick, not any result**: no
+number changed. The contingent artifact's `contingent-on` marking is cleared and the table stands
+as v1. New controlled probes are added as rows to the same edition (A1a/A2 items); a *materially
+different* row-form or anchor-type presentation would reopen this decision.
+
+---
 
 ## Question
 
