@@ -7,9 +7,8 @@ meaning-senses:
   - distributional
   - constructional
 status: proposed
-anchor: pending
-contingent-on:
-  - presupposition-doppelganger-internal-contrast-anchor
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-07-03
 updated: 2026-07-03
 links:
@@ -72,12 +71,16 @@ more than the matched doppelgänger leg, within the same model* — not that the
 judgment. No human doppelgänger/projection baseline is claimed, measured, or needed. The result does not
 certify that a model *represents* a presupposition/assertion split (endorsement under embedding is read
 off forced-choice answers; text-consistency is not mechanism), and does not adjudicate the projection
-problem. **Anchor is `anchor: pending`** on
-[`decisions/open/presupposition-doppelganger-internal-contrast-anchor`](../../decisions/open/presupposition-doppelganger-internal-contrast-anchor.md)
-(opened this session) → eventual `internal-contrast-only`, ratified only by an independent **later**
-session (charter §12.3), structurally parallel to the three already-ratified sibling anchors
+problem. **Anchor: `internal-contrast-only`** — ratified s174 (autonomous adversarial review that
+independently traced the full scoring path + one non-Anthropic panel vote, both converging on Option A),
+[`decisions/resolved/presupposition-doppelganger-internal-contrast-anchor`](../../decisions/resolved/presupposition-doppelganger-internal-contrast-anchor.md)
+(opened s173, ratified s174 — the surfacing/ratifying session boundary held; charter §12.3). The measure
+is a difference of the model's **own** endorsement rates (`residual = trigger_project − doppel_project`);
+no human key, gold label, or external annotated dataset enters the scoring path, and the anchor conclusion
+is orthogonal to the BEATS/SATURATED/MIXED verdict. Structurally parallel to the three already-ratified
+sibling anchors
 ([`decisions/resolved/presupposition-projection-internal-contrast-anchor`](../../decisions/resolved/presupposition-projection-internal-contrast-anchor.md)
-and siblings). **Not self-ratified here.**
+and siblings). **Not self-ratified in the run session.**
 
 ## What ran
 
