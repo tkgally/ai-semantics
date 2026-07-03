@@ -52,7 +52,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   beater side, the clean flat null did not obtain; post-run verifier REPRODUCED (0 discrepancies). Revised
   [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md) +
   [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md) in-page; anchor decision opened
-  ([`decisions/open/presupposition-doppelganger-internal-contrast-anchor`](decisions/open/presupposition-doppelganger-internal-contrast-anchor.md), s174+).
+  ([`decisions/resolved/presupposition-doppelganger-internal-contrast-anchor`](decisions/resolved/presupposition-doppelganger-internal-contrast-anchor.md), ratified s174 → `internal-contrast-only`).
   Froze+ran honoring critic conditions **S1** (drop the definite family from the powered residual),
   **S2** (per-family primary), **S3** (true residual-N ≈64/model, not 128), **S4** (threshold sensitivity).
 - **A1b `[ ]` Antonymy shadow-saturation probe.** Run
