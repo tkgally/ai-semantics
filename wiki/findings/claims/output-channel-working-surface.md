@@ -32,6 +32,8 @@ links:
   - rel: depends-on
     target: result/scivetti-let-alone-powered-rerun-v1
   - rel: depends-on
+    target: result/scivetti-let-alone-repeated-runs-v1
+  - rel: depends-on
     target: result/lexical-bridging-context-working-surface-v1
   - rel: supports
     target: essay/output-channel-confound
@@ -157,8 +159,9 @@ replication of the masking: a different instrument family (single-premise NLI), 
 capability (scalar constructional inference), a human-anchored yardstick — same flip under the same
 format-only manipulation. The **direction** of the wide-channel at-baseline level for claude/gemini
 is corroborated across three wide-channel runs (offered surface 0.792 / 0.917; forced decomposition
-0.833 / 0.875; powered re-run 0.708 / 0.909), with claude's level jittering ~0.12 per run — the
-within-item paired lift itself (p = 0.035) was measured once per model.
+0.833 / 0.875; powered re-run 0.727 / 0.909 combined-33, 0.708 / 0.875 on the identical 24 test
+items), with claude's level jittering ~0.12 per run (its powered-run draw fell below the baseline
+interval) — the within-item paired lift itself (p = 0.035) was measured once per model.
 
 ## The boundary control — where the channel does NOT flip the verdict
 
@@ -191,7 +194,7 @@ denied a surface, and leaves a genuine (non-serial) commitment posture standing.
   0.90** → CONFIRMS-RESIDUAL, with uptake 33/33 and the session-60 test accuracy reproduced exactly
   (0.583 → 0.583). The same run exposed **~12% temp-0 run-to-run label flips** (claude, a
   baseline-matcher, fell 0.833 → 0.708 on identical items via 3 adverse flips), so the residual is
-  **directional with magnitude unpinned**; the K=5 repeated-run follow-up recorded on that page
+  **directional with magnitude unpinned**; the K=5 repeated-run follow-up ([`result/scivetti-let-alone-repeated-runs-v1`](../results/scivetti-let-alone-repeated-runs-v1.md))
   found gpt's residual below 0.90 **in every one of five runs** (de-noised majority-vote 0.606),
   with model-specific swing (gpt ~±0.12 / claude ~0.06 / gemini ~0.03). So part of one model's
   let-alone gap is channel-bounded (uptake helps) and part **survives a genuinely-exercised wide
@@ -318,7 +321,7 @@ failure inconclusive; and (iv) with uptake forced, gpt's let-alone shows a direc
 below-baseline channel-controlled residual (0.636, CI hi 0.778 < 0.90; held in 5/5 repeated runs;
 magnitude unpinned by ~12% temp-0 label stochasticity). `supported` attaches to exactly that —
 not to any unindexed capability claim, universal instrument law, mechanism, ranking, or
-representational reading, all disclaimed above. The eight underlying result pages remain
+representational reading, all disclaimed above. The nine underlying result pages remain
 `status: proposed` (this promotion consolidates; it does not restate their per-run readings).
 `contingent-on: []` — the governing operationalizations and anchors (the CxNLI answer-key anchor,
 the Option-C internal-contrast-only frame) are ratified. Resolved-by: autonomous (adversarial

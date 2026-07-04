@@ -16,6 +16,8 @@ links:
   - rel: supersedes
     target: theory/constructional-meaning-in-llms
   - rel: depends-on
+    target: claim/output-channel-working-surface
+  - rel: depends-on
     target: claim/comparative-correlative-covariation
   - rel: depends-on
     target: claim/dative-information-structure-givenness
@@ -170,8 +172,9 @@ Three senses are in play and kept separate:
 - **Inferential** — meaning as inferential role: a construction means what it licenses you to
   infer. Piantadosi & Hill 2022
   ([`source/piantadosi-hill-2022-meaning-without-reference`](../../base/sources/piantadosi-hill-2022-meaning-without-reference.md))
-  supply the framing under which inference-preservation counts as genuinely semantic: human
-  cognition is approximated by an account "in which meaning arises from conceptual role," where
+  supply the framing under which inference-preservation counts as genuinely semantic: LLMs work
+  in a way that approximates a compelling account of human cognition "in which meaning arises
+  from conceptual role," where
   "conceptual role is defined by the relationships between internal representational states"
   (abstract, verbatim). The top of the ladder is inferential for exactly this reason.
 - **Constructional** — the form–meaning pairing itself, the thing the probe is for.
@@ -316,7 +319,7 @@ Piantadosi & Hill's sense. Current state, by line:
 - *Function words* — the most abstract constructional bet reached this rung
   ([`result/function-word-swap-run-v2`](../results/function-word-swap-run-v2.md)): swapping a
   function word flips a 3-way NLI label vastly more often than swapping a frequency+length-matched
-  content word (contrast +0.340 / +0.825 / +0.859, content-swap flips near zero), strong support
+  content word (contrast claude +0.340 / gpt +0.825 / gemini +0.859, content-swap flips near zero), strong support
   for the constructional reading over the matched-frequency distributional null. But the load is
   **type-specific, not uniform across closed-class items** — subordinator and
   existential→universal swaps flip near-totally, the future→conditional modal was null under NLI,
@@ -373,8 +376,10 @@ under a working surface (step-by-step + `FINAL:` tag, format-only change) — cl
 gemini 0.667 → 0.917 on the same items, control preserved
 ([`result/scivetti-let-alone-working-surface-v1`](../results/scivetti-let-alone-working-surface-v1.md)) —
 so what looked like a scalar-phrasal competence boundary was substantially a channel artifact
-(gpt-5.4-mini did not recover, but declined the offered surface — channel non-uptake, not a
-demonstrated channel-controlled failure). The general discipline — every behavioral
+(gpt-5.4-mini declined the offered surface — channel non-uptake; with uptake forced it lifted
+partially but a below-baseline channel-controlled residual survived in five of five repeated
+runs — the full line, with its boundary control, is consolidated in
+[`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md)). The general discipline — every behavioral
 capability-negative owes a channel control — is argued in
 [`essay/output-channel-confound`](../essays/output-channel-confound.md).
 
