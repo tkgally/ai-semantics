@@ -50,20 +50,24 @@ itself) adds that. The project's central question was whether language models ac
 <em>use</em> this pattern-level meaning or just recognize the pattern's shape.</p>
 
 <ul>
-  <li><strong>The "grammar of giving" — choosing a phrasing by what's familiar: two of three models,
-  on replication (June 20).</strong> English lets you say <em>"Mary gave John the book"</em> or
+  <li><strong>The "grammar of giving" — choosing a phrasing by what's familiar: all three models, with a
+  measured size (July 4).</strong> English lets you say <em>"Mary gave John the book"</em> or
   <em>"Mary gave the book to John"</em>, and people tend to put the already-familiar thing first.
   Shown a context that makes the recipient familiar, the models leaned toward the recipient-first
   phrasing; make the thing-given familiar, and they leaned the other way — the human pattern. The
   effect held even on items built so that a model merely preferring "the shorter thing first" would
   have to go the opposite way, and the models' preferences also tracked, more loosely, a real dataset
-  of how thousands of attested sentences were actually phrased. <strong>The test was then re-run on a
-  completely fresh set of sentences</strong>, and the picture sharpened: two of the three models
-  repeated their result almost exactly, but the third's earlier pass <em>did not hold up</em> — on the
-  new items its effect shrank to nearly zero. So the honest summary is "two of three track it
-  robustly," and the gap between the strongest and weakest model is even wider than it first looked.
-  This is a model following a soft <em>preference</em>, not the harder feat of drawing an inference the
-  words don't supply. (Independent re-checks reproduced every number from the raw data both times.)
+  of how thousands of attested sentences were actually phrased. <strong>The test was re-run twice more on
+  completely fresh sentences</strong> — a middle-size run where the picture looked like "two of three
+  track it, the third barely," and then a <strong>large 100-item run that put an actual size, with a
+  margin of error, on each model</strong>. That larger run corrected the picture: <em>all three</em>
+  models show the effect (each clears zero), and the third model's earlier near-zero showing turned out
+  to be small-sample noise — at the larger size its effect is small but real and lands right back on its
+  very first run's value. The honest texture the project keeps in front: the three effect <em>sizes</em>
+  span nearly nine-to-one, and the smallest is real but tiny — a tidy "all three agree" verdict
+  concealing a wide spread. This is a model following a soft <em>preference</em>, not the harder feat of
+  drawing an inference the words don't supply. (Independent re-checks reproduced every number from the
+  raw data all three times, and stress-tested the borderline model.)
   <em>One natural extension was reviewed and set aside (June 20):</em> the strongest discourse pull in the
   human data is whether the receiver is a <strong>pronoun</strong> ("gave <em>him</em> the book"), but an
   independent review found this factor can't be tested cleanly with the project's tools — a pronoun is short
@@ -235,14 +239,16 @@ itself) adds that. The project's central question was whether language models ac
   &mdash; an ~87-point gap (margin of error about 78&ndash;95), the same across all three models. That firms <em>how big and how reliable</em>
   the effect is; it is still a size, not a depth-of-understanding verdict (most scores sit near the top of the scale), and one of the
   three models still slips specifically when the pattern is negated &mdash; both kept in plain view.</li>
-  <li><strong>A second grammar result became a citable claim (July 3) &mdash; scoped to two of three models.</strong> The models&rsquo;
+  <li><strong>A second grammar result became a citable claim (July 3), then got its size measured (July 4).</strong> The models&rsquo;
   choice between two ways of phrasing a &ldquo;give&rdquo; sentence (&ldquo;gave the library the book&rdquo; vs. &ldquo;gave the book to the
   library&rdquo;) shifts with what the surrounding conversation has already mentioned &mdash; the same direction people go in a large
   collection of real usage. Seen twice on fresh sentences and immune by design to simple length-and-order shortcuts, this was
-  <strong>promoted to a claim</strong> &mdash; but a carefully scoped one: it holds robustly for two of the three models while the
-  third&rsquo;s effect does not clear zero on new sentences, and it states the <em>direction</em> of the effect, not yet its exact
-  size (a larger measured run is owed for that). The two-of-three split and the not-yet-measured size are kept in plain view, not
-  averaged away.</li>
+  <strong>promoted to a claim</strong> on July 3, then on July 4 <strong>re-run on 100 all-new sentence-sets to attach an actual size
+  with a margin of error</strong>. The larger run both discharged the &ldquo;size not yet measured&rdquo; limit and corrected the
+  &ldquo;two of three&rdquo; scoping: at the larger size <em>all three</em> models show the effect (each clears zero), and the third
+  model&rsquo;s earlier near-zero showing was small-sample noise (its effect is small but real, back on its first-run value). Kept in
+  plain view, not averaged away: the three effect sizes span nearly nine-to-one and the smallest is real but tiny &mdash; and this is
+  a soft <em>preference</em>, anchored to the <em>direction</em> people choose (not a comparison of sizes to people).</li>
   <li><strong>But the computation has limits.</strong> The models follow what a sentence
   explicitly says over what common sense says: told a sneeze moved a bolted-down statue
   with the impossibility only implied, they accept it; only an explicit denial makes them

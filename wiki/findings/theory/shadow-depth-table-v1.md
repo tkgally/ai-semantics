@@ -12,7 +12,7 @@ status: draft
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-04
 links:
   - rel: operationalizes
     target: essay/shadow-depth-cross-cuts-grain
@@ -25,7 +25,7 @@ links:
   - rel: depends-on
     target: result/aann-behavioral-gradient-v2
   - rel: depends-on
-    target: result/dative-information-structure-v2
+    target: result/dative-information-structure-powered
   - rel: depends-on
     target: essay/antonymy-outlier-distributional-shadow
   - rel: depends-on
@@ -115,7 +115,7 @@ caveats.
 | phenomenon | grain / pole | distributional control (the shadow) | residual over the control | row form | anchor | source |
 |---|---|---|---|---|---|---|
 | **Comparative-correlative covariation** | construction (grammatical) | matched **same-word** non-CC controls (same scalar words, no CC syntax) | construction-isolation assertion gap **≈87 pp** — 86.8 / 88.2 / 86.8, 95% CI lower bound **≈78 pp**; controls still assert ≈12% (off-ceiling) | (i) matched-material | internal-contrast-only | [`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md) |
-| **Dative information-structure** | construction (grammatical) | within-item shift design — length/order/position **immune by construction** | within-item DOC-shift **+0.325 [0.286, 0.362] / +0.018 [−0.011, 0.047] / +0.500 [0.458, 0.537]**; **2/3 CONFIRM** (gpt WEAK, CI includes 0) | (i) matched-material (by design) | human — Bresnan `languageR::dative` production direction (direction only) | **[`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)** · [`result/dative-information-structure-v2`](../results/dative-information-structure-v2.md) |
+| **Dative information-structure** | construction (grammatical) | within-item shift design — length/order/position **immune by construction** | within-item DOC-shift, **powered N=100**: claude **+0.316 [0.298, 0.334]** / gemini **+0.524 [0.506, 0.542]** / gpt **+0.056 [0.039, 0.074]**; **3/3 CONFIRM at power** (gpt small but clears zero — its v2 WEAK was founding-N noise; ~9× spread) | (i) matched-material (by design) | human — Bresnan `languageR::dative` production direction (direction only) | **[`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)** · [`result/dative-information-structure-powered`](../results/dative-information-structure-powered.md) |
 | **AANN acceptability gradient** | construction (grammatical) | **Zipf word-frequency** (partialled); noun-class marginal | partial ρ \| frequency **0.692 / 0.661 / 0.736** (base cell-level ρ 0.702 [0.61,0.77] / 0.684 [0.60,0.75] / 0.751 [0.68,0.81]); held-out replication on unseen adjectives | (ii) partialled correlation | human — Mahowald Exp-2 MTurk gradient | [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md) |
 | **Lexical sense gradience** | word (lexical) | model's own **topic/context-similarity** rating (partialled); lexical overlap (near-degenerate) | partial ρ \| topic **0.52 / 0.50 / 0.73** (base DURel ρ 0.679 [0.59,0.75] / 0.601 [0.49,0.69] / 0.804 [0.75,0.85]) | (ii) partialled correlation | human — DWUG DURel median (human–human ρ 0.69) | [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) |
 
@@ -169,10 +169,12 @@ caveats.
   sets, one saturated corner per pole, the discriminating control still owed). A matched-control
   probe could move either corner to the beater side; the table would then gain a row and lose a bet.
 - **Behavioral, not representational; single runs; small N; n=3 models.** Every source page's scope
-  bound carries onto its row unchanged. gpt-5.4-mini's dative WEAK (CI includes 0) is shown, not
-  hidden — the dative row is a **2/3** beater, and the panel-label-hides-spread discipline of
-  [`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md) applies to
-  it.
+  bound carries onto its row unchanged. The dative row now carries its **powered N=100 magnitudes**
+  (s175): it is a **3/3-CONFIRM-at-power** beater, but gpt's is a tiny effect (+0.056, ~9× below gemini,
+  63/100 items positive) that flickered WEAK at v2's founding N — shown, not hidden — so the
+  panel-label-hides-spread discipline of
+  [`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md) applies to it
+  in an even sharper form (a 3/3 concordant label at power still hides a ~9× spread).
 
 ## Revision triggers (read before citing)
 
