@@ -8,7 +8,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-20
-updated: 2026-06-21
+updated: 2026-07-04
 links:
   - rel: depends-on
     target: result/dative-information-structure-v1
@@ -242,6 +242,19 @@ CONFIRM" hides precisely the dissociation the project exists to describe.
   the *strength* of "in strongest form" weakens, though the qualitative point — a concordant label can
   hide a spread — survives as long as any non-trivial spread remains. A replication is the cleanest way
   to firm or soften this essay's empirical spine.
+
+> **⬆ Update (2026-07-04, session 175) — trigger (c) tested at power; it does NOT fire in the weakening
+> direction, and the essay's spine is *firmed*.** The owed dative powered re-run
+> ([`result/dative-information-structure-powered`](../results/dative-information-structure-powered.md);
+> 100 fresh main items) measured the spread at **≈9.3×** (gemini +0.524 ≫ claude +0.316 ≫ gpt +0.056) —
+> matching **v1's ≈9×**, *not* v2's inflated ≈27×. So (i) the spread did **not** compress (trigger (c)'s
+> weakening condition is not met — "in strongest form" stands); and (ii) v2's apparent *widening* to 27×
+> was itself a small-N artifact (gpt's v2 dip to +0.018), so the true spread is **stable at ~9× across
+> three runs**. The sharpest datum yet for this essay: even a **3/3 concordant CONFIRM at powered N**
+> (gpt's v2 WEAK did not hold — it clears zero at +0.056) hides a ~9× magnitude spread and a member that
+> flickered below detection at founding N. Reading the per-model magnitudes rather than the concordant
+> label is exactly what would have flagged gpt as the fragile member — and now shows its effect is real
+> but an order of magnitude small. The bet row is [`predictions.md`](../../predictions.md).
 
 ## What this essay is not
 
