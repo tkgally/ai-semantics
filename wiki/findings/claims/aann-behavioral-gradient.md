@@ -1,7 +1,7 @@
 ---
 type: claim
 id: aann-behavioral-gradient
-title: The AANN acceptability gradient is a single-run, powered, frequency- and noun-class-guarded behavioral positive — all three panel models' prompted AANN acceptability rank-tracks the human Exp-2 MTurk gradient (cell-level ρ 0.68–0.75, CIs exclude 0), survives a Zipf word-frequency partial (the distributional shadow-beater) and a noun-class marginal guard, and generalizes to frequency-matched held-out adjectives at the overall grain (0.75–0.83) — but that held-out productivity is noun-class-dependent and FAILS in the temporal stratum (v2b, uniformly negative). Tier-2 gradient tracking, NOT the Tier-0 form ceiling and NOT the Tier-4 inferential line
+title: The AANN acceptability gradient is a powered, frequency- and noun-class-guarded behavioral positive, cross-date replicated on fresh disjoint items (graded gradient, rep2) — all three panel models' prompted AANN acceptability rank-tracks the human Exp-2 MTurk gradient (cell-level ρ 0.68–0.75, CIs exclude 0), survives a Zipf word-frequency partial (the distributional shadow-beater) and a noun-class marginal guard, and generalizes to frequency-matched held-out adjectives at the overall grain (0.75–0.83) — but that held-out productivity is noun-class-dependent and FAILS in the temporal stratum (v2b, uniformly negative), and one model's coarse Tier-0 form-preference can wobble at the margin (rep2). Tier-2 gradient tracking, NOT the Tier-0 form ceiling and NOT the Tier-4 inferential line
 meaning-senses:
   - constructional
   - distributional
@@ -17,6 +17,8 @@ links:
     target: resource/mahowald-2023-aann-stimuli
   - rel: depends-on
     target: result/aann-behavioral-gradient-v2
+  - rel: depends-on
+    target: result/aann-behavioral-gradient-rep2
   - rel: depends-on
     target: result/aann-temporal-heldout-v2b
   - rel: supports
@@ -46,6 +48,26 @@ links:
 > **PROMOTE-SCOPED**, converging with this fresh-agent verdict on the same single-run, frequency-guarded,
 > temporal-stratum-qualified scope.)*
 >
+> **Update (2026-07-04, session 178) — the single-run lead caveat is DISCHARGED for the graded
+> gradient (cross-date, fresh items).** The owed A2a second-date powered re-run landed:
+> [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) — the
+> **byte-identical frozen v2 instrument** on **408 fresh anchored items drawn disjoint from v2 (0
+> shared)**, against the **byte-identical human anchor**, 1,782 calls, $0.3092, 0 missing; fresh-agent
+> pre-run critic GO + non-Anthropic vote GO-WITH-CONDITIONS + fresh-agent post-run verifier
+> **REPRODUCED (0 discrepancies)**. **The frequency- and noun-class-guarded anchored gradient
+> replicates for all three models** — cell ρ **0.692 [0.603,0.762] / 0.702 [0.617,0.770] / 0.735
+> [0.658,0.795]**, every CI overlapping v2's, partial-ρ\|Zipf 0.687/0.690/0.722 — so the claim's
+> core (graded gradient net of frequency) now stands on **two dates and disjoint items, 3/3**, not one
+> run. The conjecture-level **SUPPORTED verdict also replicates**, but **via A+C**: on this occasion
+> **gpt-5.4-mini's Tier-0 manipulation check dropped to 18/24** (genuine, clean single-letter misses,
+> all on the marginal *objects + negative-evaluative* items — "gruesome three paintings", "ugly three
+> desks"), so B is **Tier-0-excluded from the support count even though its graded gradient is
+> undiminished** (0.702, CI overlaps v2). This *sharpens* the scope, it does not weaken it: the
+> **graded gradient-tracking** statement (what `supported` attaches to) is robust across dates and
+> items for all three; the coarse **binary form-ceiling** can wobble at the margin for one model. The
+> held-out overall positive also re-passed 3/3 (same frozen items, second date) and the temporal hole
+> reproduced for A and C. See *Bounds* (first bullet, amended).
+>
 > **This promotion is deliberately SCOPED.** Unlike its two sibling claims —
 > [`claim/comparative-correlative-covariation`](comparative-correlative-covariation.md) (three runs + a powered re-run) and
 > [`claim/dative-information-structure-givenness`](dative-information-structure-givenness.md) (three
@@ -56,7 +78,10 @@ links:
 > table requires (frequency partial + noun-class guard), and its **within-run held-out arm** is a
 > genuine fresh-items replication of the class gradient — but that within-run replication is
 > **partial** (the temporal noun class fails), and there is **no second-date replication of the
-> overall positive**. The claim is scoped to exactly that.
+> overall positive**. The claim is scoped to exactly that. *(This last bound was the promotion-time
+> state; it is **discharged for the graded gradient** by the 2026-07-04 update box above —
+> [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) supplies the
+> second-date fresh-item replication, 3/3 with overlapping CIs.)*
 
 ## Statement
 
@@ -273,14 +298,19 @@ inference.
 
 ## Bounds
 
-- **Single run for the positive gradient (the lead caveat).** The anchored gradient and its overall
-  held-out replication rest on one pre-registered occasion (2026-06-12). There is **no second-date
-  replication of the overall positive**; the only second date (v2b) replicates the *temporal hole*.
-  What partly substitutes is the **within-run** held-out arm (fresh lexical material) — a genuine
-  fresh-items replication under PROTOCOL §3's "replicated (fresh items or a second run)" criterion,
-  but one that shares its run's nuisance factors and is itself partial (temporal fails). This is why
-  the promotion is **scoped**, and why a second-date powered re-run of the overall gradient remains
-  the natural next strengthening (mirroring the sibling CC and dative claims' powered re-runs).
+- **The graded gradient now replicates cross-date on fresh items (2026-07-04, amended — was "single
+  run for the positive gradient").** The anchored gradient was originally supported on one
+  pre-registered occasion (2026-06-12, v2). The owed second-date powered re-run
+  ([`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md), 2026-07-04)
+  **replicates it on 408 fresh items drawn disjoint from v2 (0 shared), against the same human anchor,
+  3/3 with overlapping CIs** — so the graded-gradient statement no longer rests on a single occasion.
+  The one dimension the replication did **not** fully reproduce is the **binary Tier-0 form-ceiling**
+  for one model: gpt-5.4-mini fell to 18/24 on the marginal objects/evaluative items this occasion,
+  Tier-0-excluding it from the *conjecture-level* verdict (which is SUPPORTED via A+C) while leaving
+  its *graded gradient* intact. Read the discharge precisely: it is the **gradient** (the claim's
+  target) that is now two-date-and-fresh-item replicated; the coarse form-preference can wobble at the
+  margin. The temporal held-out hole ([`result/aann-temporal-heldout-v2b`](../results/aann-temporal-heldout-v2b.md))
+  is unchanged; the within-run held-out arm remains the productivity defense as before.
 - **Powered N is already in hand (unlike the founding-N sibling promotions).** The human side is 204
   cells over 3,600 ratings (n = 6–28 per cell, median 18); the model side is 408 anchored + 60
   held-out items. So this claim states a **magnitude with intervals now**, not a threshold-pass
@@ -341,8 +371,10 @@ a Zipf frequency partial** (0.6919 / 0.6607 / 0.7363) **and a noun-class margina
 frequency-matched held-out adjectives at the overall grain** (0.8336 / 0.8143 / 0.7525). `supported`
 attaches to that Tier-2 gradient-tracking statement and its Tier-3 held-out control, **with the
 load-bearing qualifiers** that held-out productivity is **noun-class-dependent** (the temporal stratum
-is uniformly negative, v2b) and that the positive gradient rests on a **single run** (no cross-date
-replication of the overall positive; the within-run held-out arm is its fresh-items replication). It
+is uniformly negative, v2b) and that — post the 2026-07-04 update box — the graded gradient is now
+**cross-date replicated on fresh disjoint items** (rep2, 3/3, CIs overlap v2), with the residual
+single-occasion note applying to the *overall Tier-0-passing composition* (rep2's conjecture-level
+SUPPORTED rests on A+C, gpt Tier-0-excluded that occasion) rather than to the graded gradient itself. It
 does **not** attach to a representation claim, a Tier-4 inference-licensing claim, a panel-uniform
 human-level-competence reading, or an item-level parity claim — all explicitly disclaimed above. The
 two underlying results remain `status: proposed` (this promotion consolidates them). `contingent-on:
