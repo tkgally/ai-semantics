@@ -10,10 +10,10 @@ meaning-senses:
   - constructional
   - relational
   - functional-vs-formal
-status: draft
+status: superseded
 contingent-on: []
 created: 2026-05-31
-updated: 2026-06-28
+updated: 2026-07-04
 links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
@@ -104,6 +104,14 @@ links:
 ---
 
 # Theory (draft): situating the project's findings on a philosophical map of meaning
+
+> **SUPERSEDED (2026-07-04)** by the clean second edition
+> [`theory/situating-llm-meaning-v2`](situating-llm-meaning-v2.md), per the theory-edition rule
+> ([`PROTOCOL.md`](../../../PROTOCOL.md) §3: more than ~3 update boxes forces a rewrite). This page
+> is kept visible as history — do not update it further; cite the second edition. The second edition
+> restates the position around the promoted claims layer (five `claim` pages), the two powered
+> magnitudes (dative 3/3, CC), the cross-date-replicated AANN gradient this page's revision hook
+> awaited, and the flagship shadow-depth table.
 
 ## What this page is, and is not
 
