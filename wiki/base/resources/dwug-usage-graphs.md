@@ -14,7 +14,7 @@ meaning-senses:
   - human-comparison
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-04
 links:
   - rel: anchors
     target: conjecture/lexical-sense-gradience
@@ -27,6 +27,8 @@ links:
 # DWUG — Diachronic Word Usage Graphs (Schlechtweg et al. 2021)
 
 > **Verification status (2026-05-30):** License VERIFIED (CC BY-ND 4.0, not plain CC BY — a correction to `wanted.md`/anchor-decision wording). DURel annotation scale VERIFIED verbatim. Total-judgment count VERIFIED from primary source. DWUG EN download URL fetchable (HTTP 200). Per-lemma (40), per-usage-pair (29k), and agreement (ρ .69 / α .61) counts for DWUG EN VERIFIED from the primary Table 3 (independent pass 2026-05-30); annotator count VERIFIED = **9 for EN** (the "4" was only the starting count — a correction to the earlier draft). See the Verified / Unverified / Open breakdown at the end of this page. **Anchor status: carries `anchors:` link contingent on Tom's ratification of the license assessment and the diachronic-vs-synchronic fit note below** — the intellectual fit is established (graded human usage-similarity signal, same DURel tradition as Usim, 4-point graded scale) but the ND license restriction and the diachronic design are both open questions the orchestrator should surface to Tom before promoting any result.
+>
+> **Update (2026-07-04, session 177): the "contingent on Tom's ratification" wording above is stale and is superseded — the anchor is settled.** Tom ratified the Option-B direction (a graded set, not Usim) on 2026-05-29 ([`decisions/resolved/lexical-sense-gradience-anchor`](../../decisions/resolved/lexical-sense-gradience-anchor.md)); the license (CC BY-ND 4.0) and fit facts above were verified 2026-05-30 and the license correction was recorded on that decision page without reopening it. Since then the DWUG anchor has been relied on by cross-session ratified decisions ([`decisions/resolved/lexical-bridging-context-anchor`](../../decisions/resolved/lexical-bridging-context-anchor.md), 2026-06-21, which confirmed DWUG as the only in-repo resource carrying a graded, multi-rater, per-pair human intermediacy signal) and by two adversarial promotion reviews whose claims are human-anchored to it ([`claim/lexical-graded-scale-ungraded-commitment`](../../findings/claims/lexical-graded-scale-ungraded-commitment.md); [`claim/lexical-sense-gradience`](../../findings/claims/lexical-sense-gradience.md), which carries the diachronic-design caveat in its scope). The 2026-05-30 sentence is kept visible as history; no result or claim was contingent on it (`contingent-on: []` was and remains correct).
 
 This page catalogs the DWUG (Diachronic Word Usage Graphs) resource — the Option-B candidate anchor ratified by Tom on 2026-05-29 for [`conjecture/lexical-sense-gradience`](../../findings/conjectures/lexical-sense-gradience.md). The anchor decision [`decisions/resolved/lexical-sense-gradience-anchor`](../../decisions/resolved/lexical-sense-gradience-anchor.md) identified DWUG as the leading candidate; this page records what was actually confirmed on 2026-05-30.
 
