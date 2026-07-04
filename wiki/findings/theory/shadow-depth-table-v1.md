@@ -116,8 +116,8 @@ caveats.
 |---|---|---|---|---|---|---|
 | **Comparative-correlative covariation** | construction (grammatical) | matched **same-word** non-CC controls (same scalar words, no CC syntax) | construction-isolation assertion gap **≈87 pp** — 86.8 / 88.2 / 86.8, 95% CI lower bound **≈78 pp**; controls still assert ≈12% (off-ceiling) | (i) matched-material | internal-contrast-only | [`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md) |
 | **Dative information-structure** | construction (grammatical) | within-item shift design — length/order/position **immune by construction** | within-item DOC-shift, **powered N=100**: claude **+0.316 [0.298, 0.334]** / gemini **+0.524 [0.506, 0.542]** / gpt **+0.056 [0.039, 0.074]**; **3/3 CONFIRM at power** (gpt small but clears zero — its v2 WEAK was founding-N noise; ~9× spread) | (i) matched-material (by design) | human — Bresnan `languageR::dative` production direction (direction only) | **[`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)** · [`result/dative-information-structure-powered`](../results/dative-information-structure-powered.md) |
-| **AANN acceptability gradient** | construction (grammatical) | **Zipf word-frequency** (partialled); noun-class marginal | partial ρ \| frequency **0.692 / 0.661 / 0.736** (base cell-level ρ 0.702 [0.61,0.77] / 0.684 [0.60,0.75] / 0.751 [0.68,0.81]); held-out replication on unseen adjectives | (ii) partialled correlation | human — Mahowald Exp-2 MTurk gradient | [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md) |
-| **Lexical sense gradience** | word (lexical) | model's own **topic/context-similarity** rating (partialled); lexical overlap (near-degenerate) | partial ρ \| topic **0.52 / 0.50 / 0.73** (base DURel ρ 0.679 [0.59,0.75] / 0.601 [0.49,0.69] / 0.804 [0.75,0.85]) | (ii) partialled correlation | human — DWUG DURel median (human–human ρ 0.69) | [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) |
+| **AANN acceptability gradient** | construction (grammatical) | **Zipf word-frequency** (partialled); noun-class marginal | partial ρ \| frequency **0.692 / 0.661 / 0.736** (base cell-level ρ 0.702 [0.61,0.77] / 0.684 [0.60,0.75] / 0.751 [0.68,0.81]); held-out replication on unseen adjectives, **noun-class-dependent** (temporal stratum negative, v2b) | (ii) partialled correlation | human — Mahowald Exp-2 MTurk gradient | **[`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)** · [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md) |
+| **Lexical sense gradience** | word (lexical) | model's own **topic/context-similarity** rating (partialled); lexical overlap (near-degenerate) | partial ρ \| topic **0.52 / 0.50 / 0.73** (base DURel ρ 0.679 [0.59,0.75] / 0.601 [0.49,0.69] / 0.804 [0.75,0.85]) | (ii) partialled correlation | human — DWUG DURel median (human–human ρ 0.69) | **[`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)** · [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) |
 
 ### Saturated corners — a placed reading, no matched-control panel result (deep shadow)
 
@@ -207,9 +207,15 @@ re-analyzed.
 
 ## Honesty box 2 — weakest where it most needs strength
 
-The table is strongest on the beater side (four verified, controlled, interval-bearing results — the
-**dative** row now promoted to [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)
-(2/3, direction-only, magnitude deferred to the owed powered re-run), the other three `status: proposed`) and
+The table is strongest on the beater side (four verified, controlled, interval-bearing results — and, as
+of session 176, **all four beater rows are now promoted to `claim` pages**, so the flagship's claims
+layer is complete: [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)
+(three runs + a powered re-run; magnitude attached), [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)
+(three runs incl. a powered re-run; **3/3 at power**, magnitude+interval attached), [`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)
+(one powered run + a *partial* held-out replication — temporal stratum fails; scoped, single-run-flagged) and
+[`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md) (one powered run, N=200; direction/agreement
+scope, single-run-flagged). Each promotion is a cross-session adversarial review that scopes the claim to exactly
+what its result licenses — the two 2026-07 promotions are deliberately single-run-scoped, not full-scope) and
 **weakest on the saturated side**, which is the half that carries the essay's structural claim. The
 two saturated corners are **readings/bets, not controlled failures to beat a shadow**: no matched
 distributional control has been run on the panel for either. So the table demonstrates the
