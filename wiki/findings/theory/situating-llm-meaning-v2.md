@@ -184,10 +184,11 @@ states it with full caveats):
   But the **cancel** direction is harder and instrument-fragile, the **divergent-form**
   generalization fails, and the add-direction "withholding" turned out to be explicit-outcome
   parsing, not world-model integration. Reached the top rung; bounded there. Two human-anchored
-  Tier-2 positives now sit on the axis: the **dative alternation** — the more capable decoders track
-  the given-before-new information-structure constraint in the human production direction on a
-  length/animacy-matched within-item shift, **3/3 at powered N** (claude +0.316, gemini +0.524, gpt
-  +0.056 — real but ~9× smaller), [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md);
+  Tier-2 positives now sit on the axis: the **dative alternation** — the panel tracks the
+  given-before-new information-structure constraint in the human production direction on a
+  length/animacy-matched within-item shift, **3/3 at powered N** (claude +0.316, gemini +0.524
+  robustly; gpt +0.056 — real but ~9× smaller, its earlier "fragile third member" reading corrected
+  by the powered run), [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md);
   and the **AANN construction** (*a beautiful three days*), whose graded acceptability rank-tracks
   the human MTurk gradient net of word-frequency, cross-date replicated 3/3
   ([`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)).
@@ -328,7 +329,7 @@ is bounded. Supported as a description of behavior; silent on the underlying rep
 **Formal vs functional competence — the AANN case shows form near-ceiling, meaning graded above it,
 and the form ceiling can wobble at the margin.** The AANN line separates two indicators the map keeps
 distinct: a **Tier-0 form-acceptability** ceiling (does the model know *a beautiful three days* is
-well-formed and its degenerate variants are not — near-perfect, 22–24/24) and, *above* it, the
+well-formed and its degenerate variants are not — near-perfect, 23–24/24) and, *above* it, the
 **Tier-2 graded gradient** (does its acceptability track *how* acceptable, by adjective and noun
 class — the promoted positive). The functional-vs-formal reading the project has repeated — that
 current decoders can carry graded *meaning*-sensitivity riding on top of near-perfect *form*
