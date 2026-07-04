@@ -1,7 +1,7 @@
 ---
 type: result
 id: aann-behavioral-gradient-rep2
-title: AANN behavioral gradient — second-date, fresh-item powered REPLICATION (rep2); the anchored acceptability gradient replicates cross-date for all three models (cell ρ 0.69 / 0.70 / 0.74, every CI overlapping v2, frequency- and noun-class-guarded), and the conjecture-level SUPPORTED verdict replicates via A+C — with one honest new wrinkle: gpt-5.4-mini's Tier-0 manipulation check dropped to 18/24 on the objects/evaluative items this occasion, excluding it from the support count even though its graded gradient is undiminished
+title: AANN behavioral gradient — second-date, fresh-item powered REPLICATION (rep2); the anchored acceptability gradient replicates cross-date for all three models (cell ρ 0.69 / 0.70 / 0.74, every CI overlapping v2, frequency- and noun-class-guarded), and the conjecture-level SUPPORTED verdict replicates via A+C — with one honest new wrinkle, gpt-5.4-mini's Tier-0 manipulation check dropping to 18/24 on the objects/evaluative items this occasion, excluding it from the support count even though its graded gradient is undiminished
 meaning-senses:
   - constructional
   - distributional
@@ -111,9 +111,11 @@ contradicts the claim: the graded-gradient property (what the claim asserts) is 
 and items for all three; the coarse binary form-ceiling can wobble at the margin.
 
 (A and C both pass Tier-0 cleanly. C's two misses are **verbose "Neither sentence is grammatically
-correct or natural in English…" prose** on the two `no_plural` items, mis-scored "A" by the
-first-bare-token parser — the identical defect v2 flagged for C; setting those two aside would only
-*raise* C's count. A's two misses are clean single letters. Neither changes any gate.)
+correct or natural in English…" prose** on the two `no_plural` items: in **both**, C's *stated* pick
+is **B — the AANN answer** ("B is the marginally more coherent option"), but the first-bare-token
+parser grabbed the article "a" from the surrounding prose and scored "A" — the identical defect v2
+flagged for C. **Corrected to C's stated intent, C is 24/24.** A's two misses are clean single
+letters. Neither changes any gate — C passes at 22/24 as scored, 24/24 corrected.)
 
 ## Held-out arm (bonus — byte-identical items, second date)
 
@@ -173,5 +175,9 @@ anti-cheat clean; criterion falsifiable). Non-Anthropic decorrelation vote (`ope
 **GO-WITH-CONDITIONS**, three conditions honored (bootstrap procedure stated: 10,000-resample
 percentile bootstrap over the 204 cells, per-model, seed 20260612; post-exclusion candidate counts
 reported; read scoped to cross-date replication). Freeze: PREREG committed before any model call.
-Post-run: independent fresh-agent verifier, own code, recomputed every gate from raw. **[verifier
-verdict inserted on completion.]**
+Post-run: independent fresh-agent verifier, own code (own rank/Spearman/partial/bootstrap, seed
+20260612), recomputed every gate from raw — **REPRODUCED, 0 discrepancies**: every per-model number,
+CI (to the digit), the SUPPORTED verdict, the B-on-Tier-0 exclusion (B's gradient itself passes all
+four gates), the C parse-artifact (both C misses stated "B", the AANN answer), the three-way v2 CI
+overlap, corpus safety (longest non-Tier-0 raw string 3 chars; human tables + instrument sha-identical
+to v2; anchored items 0-shared with v2), and the $0.309183 → $0.3092 billed cost all checked out.
