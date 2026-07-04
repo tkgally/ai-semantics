@@ -8,10 +8,10 @@ meaning-senses:
   - distributional
   - inferential
   - relational
-status: draft
+status: superseded
 contingent-on: []
 created: 2026-05-28
-updated: 2026-06-21
+updated: 2026-07-04
 links:
   - rel: depends-on
     target: result/dative-information-structure-v1
@@ -104,6 +104,12 @@ links:
 ---
 
 # Theory (draft): evidence for constructional meaning in LLMs
+
+> **SUPERSEDED (2026-07-04)** by the clean second edition
+> [`theory/constructional-meaning-in-llms-v2`](constructional-meaning-in-llms-v2.md), per the
+> theory-edition rule ([`PROTOCOL.md`](../../../PROTOCOL.md) §3: more than ~3 update boxes forces a
+> rewrite). This page is kept visible as history — do not update it further; cite the second
+> edition.
 
 ## The theoretical object
 
