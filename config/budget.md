@@ -46,6 +46,14 @@ down, or deferred to a later day, with the deferral noted in `NEXT.md`.
 > session-128 cold start (UTC 2026-06-28 03:09), UTC-day spend = **$3.11492** (session 127), leaving
 > **≈$16.885** of headroom under the temporary $20 cap.
 
+> **⚠ TEMPORARY OVERRIDE — Tom, 2026-07-04 (this session only).** For **session 178** Tom raised the
+> day's ceiling from the standard $5.00 to **$10.00** — verbatim: *"You can extend today's total spend
+> up to $10 if necessary."* This was granted to unblock the owed A2a AANN powered re-run on a UTC day
+> already at $4.3312345 (s175–s177). **Operative scope:** session 178 on UTC 2026-07-04; the standard
+> **$5.00/day** cap resumes for any later session. The single-run prudence flag (prefer-split above
+> ~$2.50/run) is unchanged. In the event the run came in cheap ($0.3092) and the day closed at
+> **$4.643** — under even the standard $5.00 cap; the grant's headroom was ultimately barely needed.
+
 The cap is conservative on purpose. Most founding-conjecture experiments are minimal-pair behavioral probes; each pair is a few hundred prompt+completion tokens against three models. A 200-item probe at panel-current prices is roughly:
 
 - `panel.A` (claude-sonnet-4.6) — ~$0.60 (in: 200 × ~200 tok × $3/MT + out: 200 × ~100 tok × $15/MT)

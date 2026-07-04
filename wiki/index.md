@@ -179,7 +179,7 @@ Standing references:
 
 ### Findings — claims
 
-- [`findings/claims/aann-behavioral-gradient.md`](findings/claims/aann-behavioral-gradient.md) — The AANN acceptability gradient is a single-run, powered, frequency- and noun-class-guarded behavioral positive — all three panel models' prompted AANN acceptability ran… · **supported** · anchored · (2026-07-04)
+- [`findings/claims/aann-behavioral-gradient.md`](findings/claims/aann-behavioral-gradient.md) — The AANN acceptability gradient is a powered, frequency- and noun-class-guarded behavioral positive, cross-date replicated on fresh disjoint items (graded gradient, rep2… · **supported** · anchored · (2026-07-04)
 - [`findings/claims/comparative-correlative-covariation.md`](findings/claims/comparative-correlative-covariation.md) — The 2026 decoder panel reliably tracks the comparative correlative's covariation structure and direction on the tested instruments — a robust, construction-driven direct… · **supported** · anchored · (2026-07-02)
 - [`findings/claims/constructional-divergent-form-generalization-gap.md`](findings/claims/constructional-divergent-form-generalization-gap.md) — LLMs track constructional form–meaning pairings up to a point but show a large generalization gap on syntactically identical, semantically divergent forms · **proposed** · anchored · (2026-05-29)
 - [`findings/claims/cxg-probing-surprisal-validity.md`](findings/claims/cxg-probing-surprisal-validity.md) — Surprisal contrast on form–meaning minimal pairs is a valid (but bounded) operationalization of constructional meaning sensitivity in LLMs · **proposed** · anchored · (2026-05-28)

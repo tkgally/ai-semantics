@@ -1,7 +1,7 @@
 ---
 type: claim
 id: aann-behavioral-gradient
-title: The AANN acceptability gradient is a single-run, powered, frequency- and noun-class-guarded behavioral positive — all three panel models' prompted AANN acceptability rank-tracks the human Exp-2 MTurk gradient (cell-level ρ 0.68–0.75, CIs exclude 0), survives a Zipf word-frequency partial (the distributional shadow-beater) and a noun-class marginal guard, and generalizes to frequency-matched held-out adjectives at the overall grain (0.75–0.83) — but that held-out productivity is noun-class-dependent and FAILS in the temporal stratum (v2b, uniformly negative). Tier-2 gradient tracking, NOT the Tier-0 form ceiling and NOT the Tier-4 inferential line
+title: The AANN acceptability gradient is a powered, frequency- and noun-class-guarded behavioral positive, cross-date replicated on fresh disjoint items (graded gradient, rep2) — all three panel models' prompted AANN acceptability rank-tracks the human Exp-2 MTurk gradient (cell-level ρ 0.68–0.75, CIs exclude 0), survives a Zipf word-frequency partial (the distributional shadow-beater) and a noun-class marginal guard, and generalizes to frequency-matched held-out adjectives at the overall grain (0.75–0.83) — but that held-out productivity is noun-class-dependent and FAILS in the temporal stratum (v2b, uniformly negative), and one model's coarse Tier-0 form-preference can wobble at the margin (rep2). Tier-2 gradient tracking, NOT the Tier-0 form ceiling and NOT the Tier-4 inferential line
 meaning-senses:
   - constructional
   - distributional
@@ -78,7 +78,10 @@ links:
 > table requires (frequency partial + noun-class guard), and its **within-run held-out arm** is a
 > genuine fresh-items replication of the class gradient — but that within-run replication is
 > **partial** (the temporal noun class fails), and there is **no second-date replication of the
-> overall positive**. The claim is scoped to exactly that.
+> overall positive**. The claim is scoped to exactly that. *(This last bound was the promotion-time
+> state; it is **discharged for the graded gradient** by the 2026-07-04 update box above —
+> [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) supplies the
+> second-date fresh-item replication, 3/3 with overlapping CIs.)*
 
 ## Statement
 
@@ -368,8 +371,10 @@ a Zipf frequency partial** (0.6919 / 0.6607 / 0.7363) **and a noun-class margina
 frequency-matched held-out adjectives at the overall grain** (0.8336 / 0.8143 / 0.7525). `supported`
 attaches to that Tier-2 gradient-tracking statement and its Tier-3 held-out control, **with the
 load-bearing qualifiers** that held-out productivity is **noun-class-dependent** (the temporal stratum
-is uniformly negative, v2b) and that the positive gradient rests on a **single run** (no cross-date
-replication of the overall positive; the within-run held-out arm is its fresh-items replication). It
+is uniformly negative, v2b) and that — post the 2026-07-04 update box — the graded gradient is now
+**cross-date replicated on fresh disjoint items** (rep2, 3/3, CIs overlap v2), with the residual
+single-occasion note applying to the *overall Tier-0-passing composition* (rep2's conjecture-level
+SUPPORTED rests on A+C, gpt Tier-0-excluded that occasion) rather than to the graded gradient itself. It
 does **not** attach to a representation claim, a Tier-4 inference-licensing claim, a panel-uniform
 human-level-competence reading, or an item-level parity claim — all explicitly disclaimed above. The
 two underlying results remain `status: proposed` (this promotion consolidates them). `contingent-on:

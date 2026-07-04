@@ -16,8 +16,6 @@ links:
   - rel: supports
     target: claim/aann-behavioral-gradient
   - rel: supports
-    target: result/aann-behavioral-gradient-v2
-  - rel: supports
     target: conjecture/aann-construction
   - rel: anchors
     target: resource/mahowald-2023-aann-stimuli
