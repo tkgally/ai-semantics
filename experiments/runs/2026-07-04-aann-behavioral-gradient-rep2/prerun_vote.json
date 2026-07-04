@@ -1,0 +1,29 @@
+{
+ "ts": "2026-07-04T11:52:12Z",
+ "model": "openai/gpt-5.4-mini",
+ "content": "VERDICT: GO-WITH-CONDITIONS\n\nCONDITIONS:\n1. Pre-specify the exact bootstrap procedure used for the \u201cCI overlaps v2\u2019s interval\u201d rule, including resampling unit, number of resamples, and whether comparison is per-model or pooled, so the failure/success criterion is unambiguous.\n2. Explicitly report the number of candidate items per cell after excluding v2 items, to document that the disjoint sampling does not create uneven cell quality or hidden sparsity.\n3. Keep the interpretation strictly scoped to \u201ccross-date replication on fresh items from the same anchor\u201d and do not claim a broader replication of the original item set or a stronger generalization than the design supports.\n\nKEY REASONS: This is a legitimate second-date replication of the anchored gradient because the anchor is unchanged, the instrument is byte-identical, and the new items are disjoint from v2, so it does test whether the earlier cell-level effect transfers to fresh sentences. The preregistered rule is falsifiable in practice: it can fail if fewer than two Tier-0-passing models clear the rho/CI criterion, or if the CI shifts downward enough to miss v2\u2019s interval. The main caveat is that disjoint sampling changes item composition, which is not a flaw if treated as the point of replication, but it does mean the result is about cross-item robustness rather than literal remeasurement of the same stimuli. Temperature 0 does not trivialize this because the items are fresh; it only reduces within-item stochasticity, which is appropriate for a frozen probe.",
+ "error": null,
+ "usage": {
+  "prompt_tokens": 806,
+  "completion_tokens": 326,
+  "total_tokens": 1132,
+  "cost": 0.0020715,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0020715,
+   "upstream_inference_prompt_cost": 0.0006045,
+   "upstream_inference_completions_cost": 0.001467
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}
