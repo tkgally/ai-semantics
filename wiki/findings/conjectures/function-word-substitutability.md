@@ -9,7 +9,7 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-05-28
-updated: 2026-06-21
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/constructional-meaning
@@ -130,6 +130,16 @@ ratified freeze-and-hash + pre-run-critic GO/NO-GO is what binds that.
 > pooled magnitude is dominated by it. Prediction 3 holds at the content-CLASS level (all 4 classes
 > fn>ct) but **not** at the function-word-TYPE level. Full result + per-arm tables:
 > [`result/function-word-swap-run-v2`](../results/function-word-swap-run-v2.md).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The `will`→`would` near-null above was
+> subsequently **relocated to the instrument**: a second inferential indicator
+> ([`result/function-word-modal-second-instrument`](../results/function-word-modal-second-instrument.md),
+> 2026-06-21) reused the frozen modal items verbatim and changed only the indicator (3-way NLI → a
+> forced-choice modal-force preference) — `will`→`would` then **registers in all three models**
+> (shift +0.300 / +0.550 / +0.850, every bootstrap CI clear of zero) where NLI had flipped 0/20,
+> 0/20, 3/20. The modal null is instrument-relative (an NLI-calibration fact), not a fact about the
+> grammatical relation.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## Notes / caveats
 

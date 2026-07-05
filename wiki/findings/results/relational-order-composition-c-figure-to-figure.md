@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/relational-order-composition-c-easier-k4
@@ -166,6 +166,14 @@ The on-signature easing has now been tried, so the reporting discipline calls fo
 - **(ii) Implicated-but-un-eased axes:** **chaining itself** — a **worked-example scaffold** (demonstrate that both stamped moves must be applied) and **fewer chaining steps**. The single-move signature surviving the read-off easing implicates *these* specifically.
 - **(iii) Structural bound on the remaining search:** **none yet** for this thin-side composition capability (unlike the rich-side rung (iii), which has the [`essay/transcript-ceiling`](../essays/transcript-ceiling.md) closure). No argument yet shows a worked example or fewer-steps design *cannot* carry a witness.
 - **(iv) Reopen condition:** a cheap, well-targeted probe on an un-eased implicated axis — a worked-example-scaffold or fewer-chaining-steps composition design. Such a probe would reopen the search; until one is run, the search is **suspended, not closed**.
+  **→ MET 2026-06-19, and the search is REOPENED-AND-RESOLVED-POSITIVE — a WITNESS was found.** The
+  execution-format easing ([`result/relational-order-composition-c-reasoning-scaffold`](relational-order-composition-c-reasoning-scaffold.md)),
+  on this run's **byte-identical** figure-to-figure trials, changed only the response format (forced
+  single token → working surface, reasoning-effort held constant): both gemini (DIRECT 0.656 →
+  **1.000**) and gpt (DIRECT 0.250 → **0.969**) cleared the on-demand gate and spontaneously ordered
+  by stamps on COMP → **all three models RESPECTS-ORDER; the split dissolves 3/3**. The single-move
+  signature was an artifact of denying a working surface, not a chaining-capacity limit. *(Added
+  s183, mirroring the resolution recorded on the worked-example sibling.)*
 
 ## Honesty box
 

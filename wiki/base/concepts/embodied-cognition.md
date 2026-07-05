@@ -7,7 +7,7 @@ meaning-senses:
   - grounded.perceptual
   - grounded.causal
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: source/barsalou-1999-perceptual-symbol-systems
@@ -67,11 +67,11 @@ Any finding tagged `grounded.perceptual` in this project should carry an explici
 
 ## The externalist gap
 
-The project's `referential.externalist` sub-tag (Putnam/Evans) is currently un-anchored in-repo — neither Putnam 1975 nor Evans 1973 is yet ingested (both in [`wiki/base/wanted.md`](../wanted.md)). Embodiment and externalism are related but distinct: the externalist holds that reference is fixed by causal-historical chains and social facts *external to the individual*; the embodied cognition theorist holds that concepts are constituted by *individual* sensorimotor states. Harnad's account is closer to the externalist — the grounding is by causal contact with the world — but Barsalou's focus is on individual simulation, making it more internalist (the records are in the individual brain).
+The project's `referential.externalist` sub-tag (Putnam/Evans) is no longer characterization-only — the externalist primaries are now substantially in-repo: [`source/putnam-1975-meaning-of-meaning`](../sources/putnam-1975-meaning-of-meaning.md) (session 110), [`source/evans-1973-causal-theory-of-names`](../sources/evans-1973-causal-theory-of-names.md) and [`source/burge-1979-individualism-and-the-mental`](../sources/burge-1979-individualism-and-the-mental.md) (both session 111; the session-111 correction on [`concept/referential-meaning`](referential-meaning.md) records that Evans *rejects* the pure baptism-chain picture — reference tracks the dominant causal source of a community's body of information). Only **Kripke**, the baptism-chain pole Evans criticizes, remains not-in-repo (queued in [`wiki/base/wanted.md`](../wanted.md)); these are theory sources, not human anchors, so the missing reference-*resource* gap stands. Embodiment and externalism are related but distinct: the externalist holds that reference is fixed by causal-historical chains and social facts *external to the individual*; the embodied cognition theorist holds that concepts are constituted by *individual* sensorimotor states. Harnad's account is closer to the externalist — the grounding is by causal contact with the world — but Barsalou's focus is on individual simulation, making it more internalist (the records are in the individual brain).
 
 The practical import for this project: the `grounded.causal` sub-tag can be used for both Harnad-style causal-contact stories and Lyre-style world-model stories, but the `referential.externalist` question (Twin Earth, division of linguistic labor) is a separate axis that embodiment does not close. A model that has sensorimotor grounding in some sense might still fail the externalist criterion — its "water" might refer to H₂O in its training data without the model being in the causal-social chain that fixes what "water" refers to in human linguistic practice. These are the **empirical cousin** and the **un-anchored philosophical question** respectively, and they should not be conflated.
 
-This wiki will record that embodiment/grounding is the empirical cousin of the still-unanchored externalist question — the two overlap (both require something beyond distributional form) but neither subsumes the other. When the Putnam and Evans sources are ingested, the relationship can be made precise.
+This wiki records that embodiment/grounding is the empirical cousin of the externalist question — the two overlap (both require something beyond distributional form) but neither subsumes the other. The Putnam and Evans (and Burge) sources are now ingested (sessions 110–111, above), and the relationship is made precise on [`concept/referential-meaning`](referential-meaning.md) (its internalism/externalism section and the grounding-nulls reading).
 
 ## Summary of sub-tag assignments
 
@@ -80,5 +80,5 @@ This wiki will record that embodiment/grounding is the empirical cousin of the s
 | Concepts constituted by modal simulation (Barsalou) | `grounded.perceptual` |
 | Causal contact with world via sensorimotor loop (Harnad) | `grounded.causal` |
 | Multimodal model's perceptual representations (VLM probing) | `grounded.perceptual` |
-| Reference fixed by causal-historical chain (Putnam/Evans) | `referential.externalist` (un-anchored) |
+| Reference fixed by causal-historical chain (Putnam/Evans) | `referential.externalist` (primaries in-repo, sessions 110–111; still no reference-*resource* anchor) |
 | Joint action, shared norms, social grounding (not covered here) | `grounded.social` |

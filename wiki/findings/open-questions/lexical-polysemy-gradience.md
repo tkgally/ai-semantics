@@ -8,7 +8,7 @@ meaning-senses:
   - human-comparison
 status: open
 created: 2026-05-29
-updated: 2026-05-31
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/polysemy
@@ -35,6 +35,16 @@ links:
 # Open question: graded polysemy vs. discrete sense in LLMs
 
 > **Update / what landed (2026-05-31) — largely answered by the lexical line; one sub-arm stands as a powered null.** This seed question spawned [`conjecture/lexical-sense-gradience`](../conjectures/lexical-sense-gradience.md), which has since been tested across three results. The headline (hypotheses 1 vs 2 below): **graded-sense tracking IS present, not a collapse to discreteness.** [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) found every panel model's graded sense-relatedness rating **monotonic in the human DURel median** (Spearman 0.60–0.83, in/above the human inter-annotator range ≈0.69), and this monotonicity **survives a context-similarity control** — so hypothesis 3 (the **distributional shadow**) is ruled out as the whole story (clauses a + c). The **distinctive sub-question** — whether the model treats homonymy as a *separate discrete regime* beyond graded distance (hypothesis 2 as a positive prediction, conjecture clause b) — is **not established**: [`result/lexical-polysemy-homonymy-v2`](../results/lexical-polysemy-homonymy-v2.md) found it untestable at the DWUG anchor (only 3 clean homonym lemmas; bimodality precondition unmet), and [`result/lexical-polysemy-homonymy-v3`](../results/lexical-polysemy-homonymy-v3.md), run on a homonymy-enriched WiC noun subset, returned a **powered null** on the discreteness-separation test (rating separates same/different equally well for homonyms and polysemes, AUC diff ≈ 0). The one positive — homonym different-sense pairs floored more — **cannot be distinguished from plain graded distance** (a single continuous relatedness axis, with homonyms further out, predicts exactly this; the discreteness/graded-distance confound is intrinsic to a lemma-level WiC contrast). So the model behaves as a **graded sense tracker with no demonstrated extra discrete homonymy regime** — consistent with the lexicographer's gradience picture, but the bimodal "discrete floor for homonyms vs intermediate band for polysemy" is *not* shown. **Kept open** (Tom's call, 2026-05-31), though largely addressed: the core graded-vs-discrete question this page poses is resolved in the graded direction with a real human anchor; the residual discrete-regime sub-arm is tracked on the conjecture/result pages as a powered null (not falsified). The over-/under-splitting arm (model sense inventory vs a human inventory) was deliberately **not** carried by the conjecture and remains untouched. (Status note: Tom elected 2026-05-31 to keep this question **open** rather than "answered", because the distinctive discrete-regime sub-arm is a *powered null, not a positive resolution* — so the question is held live for a future clause-(b) test on a graded, homonymy-enriched anchor.)
+
+> **Pointer (2026-07-05, session 183 — wiki-coherence pass; the page stays `open` per Tom's
+> 2026-05-31 status note).** Two later artifacts extend the box above. The named **bridging-context**
+> move ran in session 77 — graded *scale*, ungraded *commitment* — and is consolidated as
+> [`claim/lexical-graded-scale-ungraded-commitment`](../claims/lexical-graded-scale-ungraded-commitment.md).
+> And the central graded arm (clauses a+c) was promoted in session 176 as
+> [`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md), then cross-date replicated
+> in session 181 ([`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md),
+> 3/3 on fresh pair-disjoint items).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## The question
 

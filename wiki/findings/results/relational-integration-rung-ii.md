@@ -9,7 +9,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: claim/relational-order-sensitive-reassignment
@@ -32,6 +32,14 @@ links:
 > integrate at ceiling — they compose the two turns rather than discarding the earlier one.** Still
 > **thin / single-reader-recoverable**; this does **not** approach constitution. `anchor:
 > internal-contrast-only` (within-model contrast over balanced content; no human-comparison claim).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** Both items this page names as
+> untested were since tested: order-sensitive integration in the strong sense ran as
+> [`result/relational-order-composition-c`](relational-order-composition-c.md) (2026-06-18, Option
+> C — non-commuting operations), and the harder-load caveat was bounded by
+> [`result/relational-integration-depth`](relational-integration-depth.md) (2026-06-17 —
+> integration survives burial depth 2, in the claim's favour).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## The question (precise)
 

@@ -10,7 +10,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-14
-updated: 2026-06-15
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/conative-preference-commitment-v1
@@ -90,7 +90,7 @@ It also bounds the strength of the convergent case honestly. The result page's s
 
 ## What this means for the evidence ladder
 
-The constructional evidence ladder ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)) orders evidence from form-acceptability up to **Tier 4 — inference-licensing**, "the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense." The ladder makes a structural prediction: "The tiers should rise together; a model with genuine constructional competence should not be strong at Tier 4 while failing Tier 2 on the same construction" (§"What the theory predicts and forbids"). The instrument-sensitivity question already flagged that this prediction "may need an instrument-stability clause: 'the tiers should rise together, *and the competence at each tier should be instrument-stable*'" ([`open-question/instrument-sensitivity-constructional-inference`](../open-questions/instrument-sensitivity-constructional-inference.md), §(b)).
+The constructional evidence ladder ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)) orders evidence from form-acceptability up to **Tier 4 — inference-licensing**, "the strongest text-internal rung and the one that earns the `inferential` tag in Piantadosi & Hill's sense." *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) — cited here as the edition this essay engaged.)* The ladder makes a structural prediction: "The tiers should rise together; a model with genuine constructional competence should not be strong at Tier 4 while failing Tier 2 on the same construction" (§"What the theory predicts and forbids"). The instrument-sensitivity question already flagged that this prediction "may need an instrument-stability clause: 'the tiers should rise together, *and the competence at each tier should be instrument-stable*'" ([`open-question/instrument-sensitivity-constructional-inference`](../open-questions/instrument-sensitivity-constructional-inference.md), §(b)).
 
 The v4 dissociation sharpens that complication into a finer one. It is not only that *competence at a tier* can be instrument-unstable; it is that the two instruments at the top of the ladder are testing *two different constructs*. The forced-choice paraphrase arm and the NLI entailment arm are both used to probe Tier-4-adjacent meaning-tracking — but one indexes graded distributional compatibility (which paraphrase fits) and the other indexes inferential commitment (is the entailment true). When these dissociate broadly, the "tiers rise together" assumption is not merely complicated by noise; it is challenged by a *type* difference between the rungs. The rung that paraphrase/disambiguation evidence supports and the rung that entailment-licensing supports **can come apart** — and the v4 PARTIAL shows they do, for two of three models, with the disagreement off-ceiling and the largest on record.
 

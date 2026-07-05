@@ -10,7 +10,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-07-05
 links:
   - rel: refines
     target: open-question/gradience-population-not-moment
@@ -165,7 +165,10 @@ The project already has a five-rung **evidence ladder**, on
 [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md): Tier 0
 form-acceptability < Tier 1 surprisal-contrast < Tier 2 gradient semantic tracking < Tier 3
 generalization < Tier 4 inference-licensing, compressed by that page as "**form-acceptability <
-surprisal-contrast < gradient semantic tracking < generalization < inference-licensing**." The
+surprisal-contrast < gradient semantic tracking < generalization < inference-licensing**."
+*(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+— the evidence ladder is carried unchanged in structure into the second edition; cited here as the
+edition this essay engaged.)* The
 convergence ladder borrows that page's *format* — graded rungs, each subsuming those below, placements
 made explicit — and the borrowing is deliberate. But the two ladders grade **different things**, and
 conflating them would be a category error this essay must forbid up front.

@@ -12,7 +12,7 @@ status: draft
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-03
-updated: 2026-07-04
+updated: 2026-07-05
 links:
   - rel: operationalizes
     target: essay/shadow-depth-cross-cuts-grain
@@ -40,6 +40,10 @@ links:
     target: conjecture/lexical-relation-shadow-saturation
   - rel: depends-on
     target: concept/distributional-meaning
+  - rel: depends-on
+    target: result/aann-behavioral-gradient-rep2
+  - rel: depends-on
+    target: result/lexical-sense-gradience-rep2
 ---
 
 # Theory (draft): the shadow-depth table, v1
@@ -114,7 +118,7 @@ caveats.
 
 | phenomenon | grain / pole | distributional control (the shadow) | residual over the control | row form | anchor | source |
 |---|---|---|---|---|---|---|
-| **Comparative-correlative covariation** | construction (grammatical) | matched **same-word** non-CC controls (same scalar words, no CC syntax) | construction-isolation assertion gap **≈87 pp** — 86.8 / 88.2 / 86.8, 95% CI lower bound **≈78 pp**; controls still assert ≈12% (off-ceiling) | (i) matched-material | internal-contrast-only | [`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md) |
+| **Comparative-correlative covariation** | construction (grammatical) | matched **same-word** non-CC controls (same scalar words, no CC syntax) | construction-isolation assertion gap **≈87 pp** — 86.8 / 88.2 / 86.8, 95% CI lower bound **≈78 pp**; controls still assert ≈12% (off-ceiling) | (i) matched-material | internal-contrast-only | **[`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)** · [`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md) |
 | **Dative information-structure** | construction (grammatical) | within-item shift design — length/order/position **immune by construction** | within-item DOC-shift, **powered N=100**: claude **+0.316 [0.298, 0.334]** / gemini **+0.524 [0.506, 0.542]** / gpt **+0.056 [0.039, 0.074]**; **3/3 CONFIRM at power** (gpt small but clears zero — its v2 WEAK was founding-N noise; ~9× spread) | (i) matched-material (by design) | human — Bresnan `languageR::dative` production direction (direction only) | **[`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)** · [`result/dative-information-structure-powered`](../results/dative-information-structure-powered.md) |
 | **AANN acceptability gradient** | construction (grammatical) | **Zipf word-frequency** (partialled); noun-class marginal | partial ρ \| frequency **0.692 / 0.661 / 0.736** (base cell-level ρ 0.702 [0.61,0.77] / 0.684 [0.60,0.75] / 0.751 [0.68,0.81]); **replicated cross-date on fresh disjoint items 3/3** (rep2: base ρ 0.692 / 0.702 / 0.735, partial 0.687/0.690/0.722, all CIs overlap v2 — the graded gradient's single-run caveat discharged); held-out replication on unseen adjectives, **noun-class-dependent** (temporal stratum negative, v2b) | (ii) partialled correlation | human — Mahowald Exp-2 MTurk gradient | **[`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)** · [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) · [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md) |
 | **Lexical sense gradience** | word (lexical) | model's own **topic/context-similarity** rating (partialled); lexical overlap (near-degenerate) | partial ρ \| topic **0.52 / 0.50 / 0.73** (base DURel ρ 0.679 [0.59,0.75] / 0.601 [0.49,0.69] / 0.804 [0.75,0.85]); **replicated cross-date on fresh pair-disjoint items 3/3** (rep2: base ρ 0.715 / 0.528 / 0.808, partial\|topic 0.604/0.392/0.657, all CIs overlap v1 — single-run flag discharged; pair-disjoint, 61/357 usages recombine, so not usage-independent) | (ii) partialled correlation | human — DWUG DURel median (human–human ρ 0.69) | **[`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)** · [`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md) · [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) |
@@ -212,12 +216,14 @@ of session 176, **all four beater rows are now promoted to `claim` pages**, so t
 layer is complete: [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)
 (three runs + a powered re-run; magnitude attached), [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)
 (three runs incl. a powered re-run; **3/3 at power**, magnitude+interval attached), [`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)
-(one powered run + a *partial* held-out replication — temporal stratum fails; scoped, single-run-flagged) and
+(one powered run + a *partial* held-out replication — temporal stratum fails; scoped,
+single-run-flagged at promotion, **flag since discharged for the graded gradient** by the s178
+cross-date rep2, consistent with this table's AANN row) and
 [`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md) (N=200 ×2 dates, **cross-date replicated 3/3
 on fresh pair-disjoint items** s181; direction/agreement scope, **single-run flag discharged** — pair-disjoint but
 61/357 usages recombine, so not usage-independent). Each promotion is a cross-session adversarial review that scopes
 the claim to exactly what its result licenses — both 2026-07 promotions were single-run-scoped at promotion, and
-sense-gradience's flag has since been discharged by its cross-date re-run) and
+both flags have since been discharged by cross-date re-runs (AANN s178, sense-gradience s181)) and
 **weakest on the saturated side**, which is the half that carries the essay's structural claim. The
 two saturated corners are **readings/bets, not controlled failures to beat a shadow**: no matched
 distributional control has been run on the panel for either. So the table demonstrates the

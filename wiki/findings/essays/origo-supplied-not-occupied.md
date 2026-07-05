@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-30
-updated: 2026-07-01
+updated: 2026-07-05
 links:
   - rel: refines
     target: essay/indexical-character-learnable-content-supplied
@@ -100,7 +100,10 @@ system prompt says it is June 30, 2026" and "a tool call returned `2026-06-30T14
 described origos, both reach the model through the one channel. So a tool **does not convert a described
 origo into an occupied one.** It only adds another *described* channel — a more dynamic, externally-sourced
 one, but a described one all the same. This is the claim that does the work, and it is defensible precisely
-because it is the parent essay's own channel logic, not a new premise.
+because it is the parent essay's own channel logic, not a new premise. (Literature kin: situation
+semantics already pries apart the **topic/"described" situation** a statement is *about* from the
+**utterance situation** a speaker is *in* — [`source/kratzer-2021-situations-sep`](../../base/sources/kratzer-2021-situations-sep.md),
+§3 — the nearest pre-existing seam of this described-vs-occupied origo distinction.)
 
 **(iii) The behavioral *as-if* question — the genuinely testable residue.** Given a clock/location tool,
 does the model *spontaneously treat tool-state as the deictic anchor* for an unanchored ‘now’/‘here’ —

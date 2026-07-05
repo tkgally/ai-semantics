@@ -9,7 +9,7 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: refines
     target: open-question/constructional-monotonicity-addarm-headroom
@@ -57,7 +57,7 @@ For two candidate ADD constructions, the no-cue **licensing gap** per verb. Each
 
 This **discharges the s132 review's blocker (prerequisite 1)**: a genuinely non-result-entailing control demonstrably exists, and the resultative add arm has real licensing-no-cue headroom against it — so the resultative arm is **not** degenerate when verb-selected away from the telic trap verbs (`freeze`, `sharpen`). It also (a) **names a cleaner-or-equal alternative** (intrans-motion, with its own verified verb pool), satisfying the prerequisite's explicit "or" branch, and (b) hands the operationalization decision a **concrete usable verb pool** and a **verified trap-verb exclusion list** for whichever construction it later freezes.
 
-It does **not** discharge prerequisites 2–4 (concrete frozen thresholds for the main battery; an explicit pre-frozen add/cancel direction assignment; the reconsidered scope decision), and it **does not ratify** the operationalization decision — that remains a later session's independent adversarial-review pass.
+It does **not** discharge prerequisites 2–4 (concrete frozen thresholds for the main battery; an explicit pre-frozen add/cancel direction assignment; the reconsidered scope decision), and it **does not ratify** the operationalization decision — that remains a later session's independent adversarial-review pass. *[Update, s183: that review happened — ratification attempt 2 (session 134, same day, 2026-06-28) returned ADOPT-WITH-MODS, resolving [`decisions/resolved/constructional-monotonicity-generalization-operationalization`](../../decisions/resolved/constructional-monotonicity-generalization-operationalization.md), with this calibration's verb pool and trap-verb exclusions adopted into the frozen pairing.]*
 
 ## What this does and does not license
 

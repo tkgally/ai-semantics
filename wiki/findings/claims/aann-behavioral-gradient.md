@@ -11,7 +11,7 @@ status: supported
 anchor: resource/mahowald-2023-aann-stimuli
 contingent-on: []
 created: 2026-07-04
-updated: 2026-07-04
+updated: 2026-07-05
 links:
   - rel: anchors
     target: resource/mahowald-2023-aann-stimuli
@@ -196,7 +196,9 @@ covariate**.
   and human cell means leaves the alignment essentially intact (raw ρ 0.702 / 0.684 / 0.751 → partial
   ρ 0.692 / 0.661 / 0.736). The rank information about the human gradient the model carries is
   therefore *over and above* what unigram frequency supplies. This is the ladder's discipline made
-  concrete: per [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md),
+  concrete: per [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
+  *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  — cited here as the edition this page engaged.)*,
   "A Tier-2 evaluative-adjective effect is only evidence for meaning *if* unigram frequency is
   controlled; otherwise it collapses back to Tier 1." Here it does not collapse.
 - **Noun-class marginal guard.** The pre-run critic added this gate precisely because "a degenerate

@@ -8,7 +8,7 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-05-31
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/coercion
@@ -180,7 +180,7 @@ links:
 
 ## Statement
 
-This is the **project's own, original** theoretical proposal — a forward bet generalizing a pattern that recurs across the argument-structure results, not an established finding. The descriptive observation it builds on is already recorded in [`concept/coercion`](../../base/concepts/coercion.md) and on the theory page ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md), "the tentative generalization the ladder should now carry"); this page names it, frames it as a **monotonicity** asymmetry, and states sharp confirmation/falsification criteria so the empirical loop can later pick it up. The two pages are kept complementary: the theory page states the asymmetry descriptively in the course of placing each result on its ladder; this page is the typed conjecture that *abstracts over* those results and proposes a mechanism and a generalization test. It does not duplicate the ladder; it points at it.
+This is the **project's own, original** theoretical proposal — a forward bet generalizing a pattern that recurs across the argument-structure results, not an established finding. The descriptive observation it builds on is already recorded in [`concept/coercion`](../../base/concepts/coercion.md) and on the theory page ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md), "the tentative generalization the ladder should now carry") *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) — cited here as the edition this page engaged.)*; this page names it, frames it as a **monotonicity** asymmetry, and states sharp confirmation/falsification criteria so the empirical loop can later pick it up. The two pages are kept complementary: the theory page states the asymmetry descriptively in the course of placing each result on its ladder; this page is the typed conjecture that *abstracts over* those results and proposes a mechanism and a generalization test. It does not duplicate the ladder; it points at it.
 
 The proposal, in one sentence: **current decoder LLMs treat a construction's inferences as readily *additive* — they license a construction-contributed entailment layered onto a non-licensing verb — but resist *retraction* — they suppress a lexically-default entailment far less reliably.** Cast in the vocabulary of inference: the models look better at *monotone accumulation* of entailments (add a new one) than at *defeasance* (cancel a default one). Adding is the easy direction; cancelling is the hard direction.
 

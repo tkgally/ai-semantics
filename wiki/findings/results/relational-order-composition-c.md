@@ -9,7 +9,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: claim/relational-order-sensitive-reassignment
@@ -46,6 +46,17 @@ links:
 > a later 2026-06-18 session — the generality re-run named by
 > [`essay/capability-split`](../essays/capability-split.md) trigger (a); see *Third-model extension*
 > below.)
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The "claude-only capability" reading
+> below **dissolved the next day**: the elicitation-witness search found a working surface under
+> which **all three** models compose the two non-commuting moves —
+> [`result/relational-order-composition-c-reasoning-scaffold`](relational-order-composition-c-reasoning-scaffold.md)
+> (2026-06-19; split dissolves 3/3). The capability gap was a **channel/format** gap, not a
+> competence gap — the mechanism now consolidated in
+> [`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md) (s177) and
+> recorded on [`essay/capability-split`](../essays/capability-split.md) (trigger (b) FIRED — split
+> dissolved). *(Back-annotation: this page's DIRECT-gate numbers under the original terse channel
+> stand unchanged; what changed is what they license.)*
 
 ## The question (precise)
 
@@ -166,7 +177,9 @@ It does **NOT** show:
 
 - **Not rich constitution, not path-dependence (rung iii).** See point 2; the adjudication settled
   this before any data.
-- **Not a both-model finding — and now confirmed not a panel finding.** Only claude clears the
+- **Not a both-model finding — and now confirmed not a panel finding** *(under this page's terse
+  channel; the s183 update box above records that a working surface later dissolved the split 3/3)*.
+  Only claude clears the
   on-demand gate. **Both** gemini and gpt are uninterpretable here (an instrument-capability limit for
   each, not a clean order-blind null). So order-sensitive composition is occupied **by claude alone**
   across the full three-model panel — a **one-of-three** capability, not a property of "the panel" or

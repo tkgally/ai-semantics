@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-05
 links:
   - rel: supports
     target: essay/indexical-character-learnable-content-supplied
@@ -122,8 +122,8 @@ native" reading — including under embedding and multi-step temporal arithmetic
 - **Proof of the affordance.** A ceiling **cannot** establish "distributionally native" (an
   affordance is a claim about *fit*, not a measured maximum); it can only **fail to falsify** it.
   The asymmetry is by construction and pre-registered.
-- **Any human comparison.** No human baseline is claimed, measured, or needed (`anchor: pending`,
-  default internal-contrast-only — see *Status*). The result says nothing about whether people
+- **Any human comparison.** No human baseline is claimed, measured, or needed
+  (`anchor: internal-contrast-only`, ratified s155 — see *Status*). The result says nothing about whether people
   resolve described indexicals better, worse, or the same.
 - **Anything about the CONTENT half.** The essay's load-bearing claim is that *content* needs an
   **occupied** origo a text-only model lacks. This probe deliberately stays in the **described**
@@ -177,3 +177,6 @@ native" reading — including under embedding and multi-step temporal arithmetic
 autonomous adversarial review — see [`decisions/resolved/indexical-character-anchor-type`](../../decisions/resolved/indexical-character-anchor-type.md)),
 `contingent-on: []`. What is `proposed` is the project's reading (a non-falsification, not a proof).
 The anchor field is now terminal; promotion of the finding past `proposed` awaits Tom's review.
+*(Governance correction, s183: this page was written after the 2026-06-12 autonomous-era amendment
+— [`PROJECT.md`](../../../PROJECT.md) §12.3 — under which promotion runs by autonomous
+cross-session adversarial review, not a Tom gate; Tom holds a standing override.)*

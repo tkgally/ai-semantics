@@ -12,7 +12,7 @@ status: proposed
 anchor: resource/lancaster-sensorimotor-norms
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-05
 links:
   - rel: anchors
     target: resource/lancaster-sensorimotor-norms
@@ -182,8 +182,9 @@ a null about *perceptual grounding*, not an artifact of these covariates.
   not independent evidence.
 - **Inherits v1's reliability caveats** (S3: half the gold rests on 2 annotators) — the n≥3 pass
   preserves the durel null but is itself small (46 pairs).
-- **Contingent on the open multimodal decision** (Q3 anchor-class): provisional until Tom ratifies;
-  the anchors (DWUG + Lancaster) are both in-repo and page-grounded.
+- **Was contingent on the open multimodal decision** (Q3 anchor-class): provisional until Tom
+  ratified (resolved 2026-05-31; see l.54–55 of this page — `contingent-on: []`); the anchors
+  (DWUG + Lancaster) are both in-repo and page-grounded.
 
 ## Provenance / verification
 

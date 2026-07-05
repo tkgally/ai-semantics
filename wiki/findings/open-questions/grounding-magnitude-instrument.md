@@ -9,7 +9,7 @@ meaning-senses:
 status: open
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/distributional-saturation-grounding-headroom
@@ -271,8 +271,11 @@ alongside DWUG — pending license verification; **PiCS / CxC** for a future rep
 ## Status: open (scoping only)
 
 This page runs nothing and ratifies nothing. It states the magnitude question, derives the four
-requirements from the VWSD block, assesses the in-repo candidates against them, and names THINGS (as
-scaffolding, not anchor) as the one candidate worth a future $0 deeper scout — with the explicit caveat
-that the graded sense-relatedness labels and a non-de-referenced, certifiable text channel would still
-have to be *built*, not read off any existing resource. Prediction 3 ("narrow headroom for concrete
-sense") remains **UNTESTED**.
+requirements from the VWSD block, assesses the in-repo candidates against them, and named THINGS (as
+scaffolding, not anchor) as the one candidate worth a deeper scout — a scout that has since **run**
+(the session-130 deeper scout, above): its verdict is that the magnitude question is, on current open
+resources, **un-instrumentable in-repo** — the indispensable graded sense-relatedness labels over
+images cannot be produced in-house (no new human annotation), so an **externally-released**
+graded-image fine-polysemy set is the only route. Prediction 3 ("narrow headroom for concrete
+sense") remains **UNTESTED**. *(Closing aligned with the page's own s130 scout section by the
+2026-07-05 session-183 wiki-coherence pass; nothing measured or decided changes.)*

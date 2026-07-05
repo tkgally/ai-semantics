@@ -9,9 +9,9 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 links:
-  - rel: supports
+  - rel: depends-on
     target: source/scivetti-2025-beyond-memorization
   - rel: anchors
     target: resource/scivetti-2025-cxnli-dataset
@@ -19,7 +19,7 @@ links:
     target: theory/constructional-meaning-in-llms
   - rel: supports
     target: claim/formal-competence-aann-ceiling
-  - rel: refines
+  - rel: depends-on
     target: result/cxnli-distinction-divergence-v1
 ---
 
@@ -31,7 +31,7 @@ links:
 
 Current state-of-the-art LLMs track phrasal-constructional form–meaning pairings **up to a point**, but exhibit a large generalization gap — a drop of **over 40%** (reported for GPT-o1) — when the *same* syntactic form carries a *divergent* constructional meaning, measured against a native-speaker baseline (≈0.90 on the base inference task, ≈0.83 on the divergent-form task). This is evidence that the construction-level competence current LLMs display is, in those models, partly **form-bound** rather than fully meaning-general: it falls short of the human ability to deploy the appropriate constructional semantics for syntactically identical but semantically divergent instances.
 
-The claim is about the *aggregate, cross-construction* published result (the >40% headline drop) and the *aggregate* native-speaker baseline, not about any single construction. Per-construction breakdowns (caused-motion, conative, way-manner) are a separate, finer claim gated by the three open anchor decisions ([`decisions/resolved/caused-motion-anchor`](../../decisions/resolved/caused-motion-anchor.md), [`decisions/resolved/conative-anchor`](../../decisions/resolved/conative-anchor.md), [`decisions/resolved/way-construction-anchor`](../../decisions/resolved/way-construction-anchor.md)); this claim deliberately does not rest on them and is therefore `contingent-on: []`.
+The claim is about the *aggregate, cross-construction* published result (the >40% headline drop) and the *aggregate* native-speaker baseline, not about any single construction. Per-construction breakdowns (caused-motion, conative, way-manner) are a separate, finer claim gated by the three (since-resolved) anchor decisions ([`decisions/resolved/caused-motion-anchor`](../../decisions/resolved/caused-motion-anchor.md), [`decisions/resolved/conative-anchor`](../../decisions/resolved/conative-anchor.md), [`decisions/resolved/way-construction-anchor`](../../decisions/resolved/way-construction-anchor.md)); this claim deliberately does not rest on them and is therefore `contingent-on: []`.
 
 ## Grounds
 

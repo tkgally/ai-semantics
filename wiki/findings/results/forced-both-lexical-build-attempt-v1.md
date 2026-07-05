@@ -9,7 +9,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: essay/layer-specialness-vs-always-resolvability
@@ -34,6 +34,18 @@ links:
 > the wall is real, sits exactly where the gate and essay pre-registered it, and the verdict is not
 > result-motivated. Build artifacts + reproducible balance check:
 > [`experiments/designs/forced-both-lexical-v1/`](../../../experiments/designs/forced-both-lexical-v1/).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The resource gap named under "What
+> would lift it off R1" was resolved the same day: the SemEval-2017 pun corpus was ratified as the
+> Q4 sense-co-activation anchor in session 93
+> ([`decisions/resolved/sense-coactivation-anchor-semeval-puns`](../../decisions/resolved/sense-coactivation-anchor-semeval-puns.md)),
+> and the second build attempt
+> [`result/forced-both-lexical-build-attempt-v2`](forced-both-lexical-build-attempt-v2.md)
+> (2026-06-23, session 94) solved this page's power problem (43 attested balanced-homonym pun
+> items vs the 1/8 here) — but terminated again at certification, closing the
+> dense-balance-resource route with a reason: the transfer-to-item dominance step is not
+> satisfiable for the pun genre. The fork stays at R1.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## Lead with the cap (binding, read first)
 
@@ -196,4 +208,4 @@ cd experiments/designs/forced-both-lexical-v1 && python3 balance_check.py   # wr
 
 Artifacts: [`experiments/designs/forced-both-lexical-v1/`](../../../experiments/designs/forced-both-lexical-v1/)
 (`candidate_items.json` — 8 co-predication frames + Q2-i tasks; `balance_check.py` + `balance_check.json`
-— the Q1-ii SemCor check; [`README.md`](../../../README.md)).
+— the Q1-ii SemCor check; [`README.md`](../../../experiments/designs/forced-both-lexical-v1/README.md)).

@@ -11,7 +11,7 @@ status: proposed
 anchor: human-anchored
 contingent-on: []
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/distributional-saturation-grounding-headroom
@@ -51,6 +51,17 @@ links:
 > already carried below). **360 DISTRACT calls, `usage.cost`-summed, 0 missing-cost, 0 parse-fails;
 > $3.76317 billed** (two ~60-item sub-batches, $1.873 + $1.890, each under the $2.50 single-run
 > flag), + $0.062 preflight → **$3.825 day total**, under the $5/day cap.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The natural-language-baseline run owed
+> by Limitation 1 was built and frozen, then twice stopped short of a magnitude read:
+> [`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](vwsd-grounding-headroom-nlbaseline-audit-v1.md)
+> (session 127, deferred at the adequacy-audit gate) and
+> [`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](vwsd-grounding-headroom-nlbaseline-regrade-v1.md)
+> (session 128, re-graded under a ratified valid scorer — 0.438, still below the [0.60, 0.95]
+> competence floor). The magnitude was then documented un-instrumentable on current open resources —
+> [`open-question/grounding-magnitude-instrument`](../open-questions/grounding-magnitude-instrument.md)
+> (an externally-released graded-image fine-polysemy set is the only route).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## What was run
 

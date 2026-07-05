@@ -9,7 +9,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/presupposition-projection-v1
@@ -170,6 +170,9 @@ is now worked across **three probes** (s158 projection, s159 conditional-rescue,
   passed both as valid-but-weaker (disclosed in [`PREREG.md`](../../../experiments/runs/2026-07-01-projection-trigger-inventory/PREREG.md)
   §"Known weak pairs"). Part of the smaller gap may be these harder triggers rather than a general
   weakening — the per-family split is in `results.json`/raw for a later session to decompose.
+  *[Pointer, s183: that decomposition happened —
+  [`result/projection-trigger-inventory-family-decomposition-v1`](projection-trigger-inventory-family-decomposition-v1.md)
+  (s161, $0 re-analysis): the weaker pooled gap is driven by the manner-adverb family.]*
 - **Small Ns, n=3 models, three 2026 commercial models, project-authored synthetic items.** No
   coverage claim; direction-of-effect only, scoped to these families/frames.
 - **MIXED is a real split, not a null.** The gap is positive and same-signed in all three; the

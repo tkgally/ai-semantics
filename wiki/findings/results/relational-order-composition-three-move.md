@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/relational-order-composition-c-reasoning-scaffold
@@ -28,6 +28,8 @@ links:
     target: essay/witness-seeking-economics
   - rel: refines
     target: concept/relational-meaning
+  - rel: supports
+    target: claim/output-channel-working-surface
 ---
 
 # Result: three-move (deeper-composition) extension — the working-surface composition witness SURVIVES a deeper serial load

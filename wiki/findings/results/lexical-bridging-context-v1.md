@@ -10,7 +10,7 @@ status: proposed
 anchor: resource/dwug-usage-graphs
 contingent-on: []
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-07-05
 links:
   - rel: operationalizes
     target: open-question/lexical-bridging-context-gradience
@@ -26,6 +26,8 @@ links:
     target: resource/wic-word-in-context
   - rel: depends-on
     target: concept/polysemy
+  - rel: supports
+    target: claim/lexical-graded-scale-ungraded-commitment
 ---
 
 # Result: lexical bridging-context probe v1 — graded scale, ungraded commitment
@@ -38,6 +40,17 @@ links:
 > [`decisions/resolved/lexical-bridging-context-anchor`](../../decisions/resolved/lexical-bridging-context-anchor.md));
 > instrument frozen+sha256'd before the run; independent pre-run critic GO (session 76).
 > **2376 calls, $0.756 billed, 0 missing cost, 0 parse failures, 0 errors.**
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The commitment leg was later
+> channel-checked and qualified: [`result/lexical-bridging-context-working-surface-v1`](lexical-bridging-context-working-surface-v1.md)
+> (session 79) found the null largely channel-controlled but read claude **MIXED/WEAK** under a
+> format-only working surface (self-reported confidence softened; categorical decline held), with
+> gpt declining the surface. [`result/lexical-bridging-context-forced-decomposition-v1`](lexical-bridging-context-forced-decomposition-v1.md)
+> (session 82) then forced gpt's uptake (MIXED/WEAK at the jitter floor), and
+> [`result/lexical-bridging-context-forced-decomposition-repeated-runs-v1`](lexical-bridging-context-forced-decomposition-repeated-runs-v1.md)
+> (session 88) de-noised that leg to the channel-controlled null. The consolidated statement is
+> [`claim/lexical-graded-scale-ungraded-commitment`](../claims/lexical-graded-scale-ungraded-commitment.md).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## Lead with the cap (binding, read first)
 

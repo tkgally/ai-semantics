@@ -10,7 +10,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: anchors
     target: resource/scivetti-2025-cxnli-dataset
@@ -26,6 +26,8 @@ links:
     target: essay/undischargeable-negative
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
+  - rel: supports
+    target: claim/output-channel-working-surface
 ---
 
 # Result: POWERED let-alone forced-decomposition re-run (trigger-(g))
@@ -250,6 +252,10 @@ on this construction is now temp-0 label stochasticity (~12% per run), not item 
 
 `status: proposed`, `contingent-on: []` (the governing operationalization decision and the
 Scivetti anchor are both ratified). What is `proposed` is the project's reading. Promotion
-past `proposed` awaits Tom's review. The natural next probe is **not** more items (the
+past `proposed` awaits Tom's review. *(Governance note, s183: since the autonomous-era amendment
+of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous
+cross-session adversarial review; Tom holds a standing override. The promotion in fact landed:
+[`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md), s177.)*
+The natural next probe is **not** more items (the
 ceiling is reached) but a **repeated-run / multi-sample** design to characterize the temp-0
 label distribution and pin the residual magnitude — recorded as the trigger-(g) redirect.

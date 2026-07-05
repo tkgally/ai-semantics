@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-07-05
 links:
   - rel: refines
     target: essay/no-admissible-certifier
@@ -29,7 +29,8 @@ links:
 
 # Essay: presence is not balance
 
-> **Status: draft (2026-06-23). A philosophical-track / methodological essay arguing in the
+> **Status: revised (drafted 2026-06-23; revised 2026-06-23, session 94 — trigger (b) attempted
+> and not met). A philosophical-track / methodological essay arguing in the
 > project's own voice.** Its original move is a distinction — between a **co-presence** premise (two
 > senses are both in play in an item) and a **balance** premise (neither of the two dominates) — and
 > the claim that *an attested ambiguity can discharge the first and is structurally silent on the

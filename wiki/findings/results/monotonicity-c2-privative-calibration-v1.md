@@ -9,7 +9,7 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
@@ -132,6 +132,11 @@ battery; read by the frozen s134 thresholds (asymmetry 20 pp; instrument-fragili
 cue ≥ 0.70); post-run verifier recomputes. **M1:** the STEP-2 result must state that this B2
 pass is what licenses reading any suppression failure as defeasance. The conjecture advances to
 `tested` only after that battery runs.
+
+*[Pointer, s183: STEP 2 ran the same day — [`result/monotonicity-c2-battery-v1`](monotonicity-c2-battery-v1.md)
+WEAK CONFIRM (s137; conjecture advanced to `tested`); the within-verbal follow-up
+[`result/monotonicity-within-verbal-battery-v1`](monotonicity-within-verbal-battery-v1.md) then
+CONFIRMED 3/3 (s141, M2 discharged).]*
 
 ## Provenance
 

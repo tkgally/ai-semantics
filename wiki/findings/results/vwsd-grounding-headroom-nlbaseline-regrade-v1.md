@@ -11,7 +11,7 @@ anchor: internal-contrast-only
 contingent-on:
   - []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/vwsd-grounding-headroom-nlbaseline-audit-v1
@@ -112,6 +112,10 @@ that defers the magnitude read and relaxes nothing** (run-dir
   intrinsically hard (a held-out reader recovers "a horse show," not "the Appendix Quarter Horse"), the
   two are not separated here and both defer the read. A **different magnitude instrument** (e.g. the
   conjecture's contemplated graded-image / fine-polysemy resource) may be needed to test prediction 3.
+  *[Pointer, s183: that instrument question was then scoped —
+  [`open-question/grounding-magnitude-instrument`](../open-questions/grounding-magnitude-instrument.md):
+  no in-repo resource clears the requirements; an externally-released graded-image fine-polysemy set
+  is the only route.]*
 
 ## A non-blocking yardstick nuance (surfaced, not acted on)
 

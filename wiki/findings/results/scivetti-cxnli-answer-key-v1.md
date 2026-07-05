@@ -9,7 +9,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: anchors
     target: resource/scivetti-2025-cxnli-dataset
@@ -194,7 +194,11 @@ ratified constructions for the per-construction human comparison; descriptive el
 the Scivetti anchor are both ratified; this result uses only aggregate/answer-key
 bearing). What is `proposed` is the project's reading. Promotion past `proposed`-level
 awaits Tom's review and ideally a replication or alternate-framing sweep of the
-`let-alone` failure (the discriminating signal).
+`let-alone` failure (the discriminating signal). *(Governance note, s183: since the
+autonomous-era amendment of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion
+runs by autonomous cross-session adversarial review; Tom holds a standing override. The promotion
+in fact landed: [`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md),
+s177.)*
 
 > **Follow-up (2026-06-20, session 58): the `let-alone` failure was largely an
 > output-channel artifact.** The alternate-framing sweep this Status line called for has

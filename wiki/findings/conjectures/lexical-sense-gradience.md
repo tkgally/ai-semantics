@@ -9,7 +9,7 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-31
+updated: 2026-07-05
 links:
   - rel: refines
     target: open-question/lexical-polysemy-gradience
@@ -26,6 +26,16 @@ links:
 # Conjecture: graded sense-relatedness tracking in LLMs (the lexical wedge)
 
 > **Status: tested — clauses (a)+(c) SUPPORTED (v1, 2026-05-30); clause (b) NOT ESTABLISHED — a powered null at the WiC anchor (v3, 2026-05-31), after an untestable-at-DWUG null (v2); Prediction 4 (bridging contexts) RUN 2026-06-22 → a clean NULL (graded scale, ungraded commitment, 3/3).** The conjecture's five-prediction picture is now complete: [`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md) ran the last untested clause and found that all three models place human-rated usage-similarity-midpoint (bridging) pairs at an **intermediate relatedness position** (the within-item echo of the v1 scale) but meet them with **clear-item confidence**, almost never take an explicit "UNCLEAR" option, and show near-zero forced-pick dispersion — a **graded scale with ungraded commitment** (the prediction's first-class null, certified on all three commitment instruments, clear-class precondition met, capped to usage-similarity). So the *scale* is graded; the *commitment* is not. Anchor for (a)+(c) = **DWUG EN** ([`resource/dwug-usage-graphs`](../../base/resources/dwug-usage-graphs.md)); anchor for the clause-(b) discreteness test = **WiC binary same/different** ([`resource/wic-word-in-context`](../../base/resources/wic-word-in-context.md), Tom decision 3a). The first lexical probe ran → [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md): all three models' graded ratings are **monotonic in the human DURel median** (Spearman 0.60–0.83, in/above the human IAA of 0.69) — **clause (a)** — and the monotonicity **survives a context-similarity control** — **clause (c)**. The **polysemy-vs-homonymy intermediate-regime, clause (b) / prediction 2**, ran first as v2 → [`result/lexical-polysemy-homonymy-v2`](../results/lexical-polysemy-homonymy-v2.md): **untestable at DWUG** (only 3 clean homonym lemmas; every test non-significant; bimodality precondition fails). v3 then ran the clean test on a **homonymy-enriched WiC noun subset** → [`result/lexical-polysemy-homonymy-v3`](../results/lexical-polysemy-homonymy-v3.md): the **headline discreteness-separation prediction (P-b-ii) is a powered NULL** — the rating separates WiC T/F equally well for homonyms and polysemes (AUC diff ≈ 0, every permutation p 0.73–0.96; ceiling-ish AUC 0.78–0.91 in both strata, itself re-confirming clause a). The **only positive** — homonym different-sense pairs floored more than polyseme-F (gemini, claude-durel) — **cannot be distinguished from plain graded distance** (homonym senses *are* more unrelated, which v1 already showed the panel tracks), is half-driven by one lemma (`case`), partly a gemini scale-use quirk, and its clustering-honest CIs cross zero. So clause (b) — that polysemy is treated as a **separate discrete regime** *beyond* graded distance — **remains unestablished**, now via an adequately-powered test that diagnoses *why* (the discreteness/graded-distance confound is intrinsic to a lemma-level WiC contrast; a pair-level human-distance-matched contrast WiC cannot supply would be needed). The conjecture's *central bet (a+c)* is supported; its *distinctive bet (b)* is **not established** (powered null on the separation test), not falsified.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The supported central bet — clauses
+> (a)+(c) — has since been promoted and cross-date replicated: session 176 promoted it at
+> direction/agreement scope as [`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)
+> (cross-session adversarial review), and session 181 landed the owed replication
+> [`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md) — the byte-frozen
+> instrument on 200 fresh pair-disjoint DWUG pairs replicates 3/3 (every rep2 base ρ within v1's 95%
+> CI, the topic-partial shadow-beater surviving on both framings), discharging the claim's single-run
+> flag for the direction/agreement core. Clause (b) is untouched (its powered null stays unpromoted).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## Statement
 

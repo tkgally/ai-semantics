@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/comparative-correlative-covariation-v2
@@ -24,6 +24,8 @@ links:
     target: concept/inferential-meaning
   - rel: depends-on
     target: open-question/instrument-sensitivity-constructional-inference
+  - rel: supports
+    target: claim/comparative-correlative-covariation
 ---
 
 # Result: comparative-correlative probe v3 (embedded CC / operator scope)

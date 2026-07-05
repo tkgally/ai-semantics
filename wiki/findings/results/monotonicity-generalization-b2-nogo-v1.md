@@ -9,7 +9,7 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
@@ -31,6 +31,16 @@ links:
 > human-comparison claim** — it measures only within-model affirm rates to decide whether
 > the ratified arms can be built at matched ceiling. Pre-registration, run record, every
 > number: [`experiments/runs/2026-06-28-monotonicity-generalization-battery/`](../../../experiments/runs/2026-06-28-monotonicity-generalization-battery/README.md).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The awaited cancel arms landed the
+> same UTC day: [`result/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md)
+> (session 137, B2 GO — category default 1.00 in 3/3),
+> [`result/monotonicity-c2-battery-v1`](monotonicity-c2-battery-v1.md) (session 137, WEAK CONFIRM
+> across the M2 domain mismatch), and [`result/monotonicity-within-verbal-battery-v1`](monotonicity-within-verbal-battery-v1.md)
+> (session 141, within-verbal CONFIRM — asymmetry ≥ 0.20 in 3/3 models, M2 discharged).
+> [`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md)
+> is now `tested`. *(Back-annotation added by a maintenance pass; nothing measured or decided on
+> this page changes.)*
 
 ## Why this ran
 

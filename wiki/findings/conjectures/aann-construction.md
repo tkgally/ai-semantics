@@ -8,12 +8,10 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-05-28
-updated: 2026-06-12
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/constructional-meaning
-  - rel: refines
-    target: open-question/relational-meaning-pilot
   - rel: operationalizes
     target: design/aann-construction-v2
   - rel: depends-on
@@ -21,6 +19,18 @@ links:
 ---
 
 # Conjecture: LLMs treat the AANN construction as a productive unit
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The gradient half of this conjecture
+> has since been promoted and cross-date replicated. Session 176 promoted the line as
+> [`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md) (cross-session adversarial
+> review); session 178 landed the second-date powered replication
+> [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) — the anchored
+> gradient replicates for all three models on 408 fresh items disjoint from v2 (cell ρ
+> 0.692 / 0.702 / 0.735, every CI overlapping v2), with one recorded wobble: gpt-5.4-mini's Tier-0
+> manipulation check fell to 18/24 that occasion (Tier-0-excluding it from the conjecture-level
+> support count, which replicates via A+C, while its graded gradient is undiminished), and the
+> temporal held-out hole reproduced for claude and gemini (A, C).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## Statement
 

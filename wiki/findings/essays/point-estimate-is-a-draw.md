@@ -8,7 +8,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/scivetti-let-alone-powered-rerun-v1
@@ -234,6 +234,7 @@ numbers are mush."
   estimates are draws" to "single-run point estimates *on hard, near-chance, functional instruments* are
   draws," sharpening the bite to the cell where it was measured. The discipline (ask whether the gap
   clears the jitter) is unaffected; only the claimed *prevalence* of large jitter moves.
+  **→ FIRED (see the revision block above — 2026-06-21, session 64).**
 - **(b) Jitter shown to be a transferable constant.** If repeated runs across several instruments found a
   stable jitter magnitude, the discipline would harden from a qualitative "ask whether the gap clears it"
   into a quantitative correction (inflate small-effect intervals by a measured factor). Nothing in-repo
@@ -254,6 +255,8 @@ numbers are mush."
   the project rests weight on (e.g. a future small CONFIRM) were re-run and found **stable** across
   repeats, that effect graduates from "provisional pending a repeated run" to a finding that has cleared
   this read — and stands as a worked example that the discipline *passes* results, not only flags them.
+  *(The s64 revision block above records gpt's below-baseline residual as a worked confirmation of this
+  (d) case; the bet ledger keeps (d) itself open.)*
 
 ## Honesty box
 

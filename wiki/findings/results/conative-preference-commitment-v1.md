@@ -10,7 +10,7 @@ meaning-senses:
 status: supported
 contingent-on: []
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-07-05
 links:
   - rel: contradicts
     target: conjecture/preference-commitment-generality
@@ -30,6 +30,8 @@ links:
     target: theory/constructional-meaning-in-llms
   - rel: anchors
     target: resource/scivetti-2025-cxnli-dataset
+  - rel: refines
+    target: result/conative-commitment-replication-v2
 ---
 
 # Result: conative preference/commitment double contrast v1
@@ -47,6 +49,15 @@ contact not guaranteed), a cancel-direction construction supplying the inference
 run record: [`experiments/runs/2026-06-15-conative-preference-commitment-v1/`](../../../experiments/runs/2026-06-15-conative-preference-commitment-v1/README.md).
 Governed by the ratified [`decisions/resolved/fresh-construction-inferential-generalization`](../../decisions/resolved/fresh-construction-inferential-generalization.md)
 (Option A — the conative; ratified 2026-06-15).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The single-model COMMITMENT-ONLY
+> anomaly reported below (claude Δ²_commit = +0.46) was put to a same-day fresh-verb-set
+> replication and **failed to replicate** —
+> [`result/conative-commitment-replication-v2`](conative-commitment-replication-v2.md): "VERDICT:
+> FAILS TO REPLICATE"; the effect is read as verb-set noise and is not carried forward. The
+> AANN-specific scope of the dissociation is what survives, promoted as
+> [`claim/preference-commitment-dissociation-aann-specific`](../claims/preference-commitment-dissociation-aann-specific.md).
+> *(Back-annotation: this page's numbers and INCONCLUSIVE verdict stand unchanged.)*
 
 ## Headline — VERDICT: INCONCLUSIVE; the dissociation did not generalize
 
@@ -142,7 +153,9 @@ essay as a scope-limiting datum (the conceptual "two constructs" point stands; t
 
 ### For the theory page
 
-[`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md): the
+[`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md) *(superseded
+s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) —
+cited here as the edition this result fed)*: the
 instrument-sensitivity story is now construction-particular. The two instruments *can* dissociate
 (AANN), but the *way* they dissociate does not transfer to the conative, and on the conative the
 weaker paraphrase instrument is the one that fails to show a construction-specific signal at all.

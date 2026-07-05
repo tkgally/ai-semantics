@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-07-05
 links:
   - rel: refines
     target: conjecture/aann-construction
@@ -41,6 +41,16 @@ links:
 > (unification = AANN-licensed) is **EXPERT-STIPULATED** (the design author's coding of the
 > published AANN semantics — Solt 2007 unit-coercion; Dalrymple & King 2019; Bylinina & Nouwen
 > 2018, named not quoted, not in-repo), a scoring key, **not** human judgment data.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The engineered-distributive control
+> this page's close asks for was built the same day (2026-06-13):
+> [`result/aann-inferential-v4`](aann-inferential-v4.md) replaced the ceiling-pinned bare-plural
+> control with a distributive-default control (DDC) and moved the Tier-4 verdict from this NULL to
+> PARTIAL. The claude/gemini agreement-ceiling reading here was later unsettled by
+> [`result/aann-agreement-reflex-v5`](aann-agreement-reflex-v5.md) (2026-06-14): on fresh held-out
+> items claude comes off the ceiling on the temporal subset — v5 reads the v3/v4 ceiling as
+> item-set-bound, not a stable fact.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 The first run of the AANN **inferential** probe, testing the half of
 [`conjecture/aann-construction`](../conjectures/aann-construction.md) that v2 left untested. v2
@@ -158,7 +168,9 @@ false`). The null is not an artefact of the single disputed coding.
   **distributive**, so the construction has somewhere to move the inference *to*.
 - The agreement reflex is a genuine `constructional` + `functional-vs-formal` signal in
   gpt-5.4-mini: the construction's grammaticalized singular agreement is tracked AANN-specifically.
-  Within the evidence ladder of [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md),
+  Within the evidence ladder of [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
+  *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  — cited here as the edition this page engaged.)*,
   this sits at the **form/agreement** rung, not the inference rung — consistent with the recurring
   pattern that AANN competence is strong on *form* (v2 gradient; Tier-0 ceilings) and unproven on
   *inferential use*.

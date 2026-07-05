@@ -8,7 +8,7 @@ meaning-senses:
 status: open
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: source/beaver-geurts-denlinger-2021-presupposition-sep
@@ -170,3 +170,10 @@ sketched probe was run and verified in session 162
 ([`result/presupposition-accommodation-v1`](../results/presupposition-accommodation-v1.md), verdict
 GATED-ACCOMMODATION 3/3). It stays open as a corner for the live follow-ups the result surfaces (the
 partial gate, the existential yes-bias, the trigger-uniformity §5.1 question).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The "partial gate" follow-up named
+> above has since run (session 164):
+> [`result/accommodation-cue-strength-v1`](../results/accommodation-cue-strength-v1.md) — verdict
+> **GRADED-GATE (3/3)**: every model backs off a denied presupposition harder under an emphatic
+> denial than under a hedged one, so the partial gate is graded by surface-contradiction strength.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*

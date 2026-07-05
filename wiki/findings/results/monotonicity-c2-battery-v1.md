@@ -9,7 +9,7 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: supports
     target: conjecture/constructional-monotonicity-asymmetry
@@ -36,6 +36,13 @@ links:
 > models, and a leave-one-out shows it is **sensitive to single pre-flagged borderline items**.
 > Pre-registration, run record, every number:
 > [`experiments/runs/2026-06-28-monotonicity-c2-battery/`](../../../experiments/runs/2026-06-28-monotonicity-c2-battery/README.md).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The M2 domain mismatch this page
+> carries as its headline caveat was DISCHARGED the same UTC day by
+> [`result/monotonicity-within-verbal-battery-v1`](monotonicity-within-verbal-battery-v1.md)
+> (session 141): a domain-matched, both-arms-verbal battery confirmed the asymmetry ≥ 0.20 in 3/3
+> models, leave-one-out robust at the verdict level (unlike this confirm's fragility).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## Why this ran, and what makes it fair (M1)
 

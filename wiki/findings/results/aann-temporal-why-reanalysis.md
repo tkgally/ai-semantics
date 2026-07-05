@@ -9,7 +9,7 @@ status: proposed
 anchor: resource/mahowald-2023-aann-stimuli
 contingent-on: []
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/aann-temporal-heldout-v2b
@@ -162,7 +162,7 @@ Run dir
 [`experiments/runs/2026-06-13-aann-temporal-why-analysis/`](../../../experiments/runs/2026-06-13-aann-temporal-why-analysis/README.md):
 `analyze_why.py` (self-contained, reads the two frozen run dirs' raw + stimuli; **$0, no API
 import**; Spearman conventions copied verbatim from the frozen `analyze.py` files),
-`findings.json` (every figure above), [`README.md`](../../../README.md). The v2b temporal cell-grain ρ reproduces
+`findings.json` (every figure above), [`README.md`](../../../experiments/runs/2026-06-13-aann-temporal-why-analysis/README.md). The v2b temporal cell-grain ρ reproduces
 exactly (−0.20 / −0.40 / −0.40) as a provenance gate before any new conclusion. Human means
 from [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahowald-2023-aann-stimuli.md)
 (Experiment-2 `adjexp_turk.csv` adjective×noun gradient, via the v2 `human_class_means.csv`

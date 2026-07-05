@@ -8,7 +8,7 @@ meaning-senses:
   - human-comparison
 status: answered
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: claim/constructional-divergent-form-generalization-gap
@@ -32,7 +32,7 @@ links:
 
 # Open question: from an external divergence gap to a project-run result
 
-> **Answered 2026-05-29 (first pass) — see [`result/cxnli-distinction-divergence-v1`](../results/cxnli-distinction-divergence-v1.md).** The minimal project-run probe this question asks for was built and run: the panel-as-subjects on Scivetti's own base (Exp1) vs. distinction (Exp2) NLI items, 5 argument-structure constructions, the ratified NLI instrument. Result: the divergent-form gap **reproduces** on the 2026 panel (mean ≈39 pp base→distinction drop; 30/45/41 pp for the three models), convergent in direction, with the **conative collapsing hardest** (55–75 pp). The external claim now has project-owned evidence. **Second pass, same day — the named follow-up is also done: [`result/conative-minimal-pair-divergence-v1`](../results/conative-minimal-pair-divergence-v1.md)** built the project's *own* verb-held-constant conative minimal pairs (not Scivetti's items) **with the memorization/frequency arm** (typical vs. atypical objects), and found the conative non-completion contrast is largely tracked (forced-choice gap 42–88 pp, 3/3 models) and persists on low-frequency objects — *refining* the distinction probe's "conative collapses hardest" (the collapse there was partly the adversarial difficulty of Scivetti's distinction items). Remaining un-run: the same own-stimulus treatment for caused-motion and *way*.
+> **Answered 2026-05-29 (first pass) — see [`result/cxnli-distinction-divergence-v1`](../results/cxnli-distinction-divergence-v1.md).** The minimal project-run probe this question asks for was built and run: the panel-as-subjects on Scivetti's own base (Exp1) vs. distinction (Exp2) NLI items, 5 argument-structure constructions, the ratified NLI instrument. Result: the divergent-form gap **reproduces** on the 2026 panel (mean ≈39 pp base→distinction drop; 30/45/41 pp for the three models), convergent in direction, with the **conative collapsing hardest** (55–75 pp). The external claim now has project-owned evidence. **Second pass, same day — the named follow-up is also done: [`result/conative-minimal-pair-divergence-v1`](../results/conative-minimal-pair-divergence-v1.md)** built the project's *own* verb-held-constant conative minimal pairs (not Scivetti's items) **with the memorization/frequency arm** (typical vs. atypical objects), and found the conative non-completion contrast is largely tracked (forced-choice gap 42–88 pp, 3/3 models) and persists on low-frequency objects — *refining* the distinction probe's "conative collapses hardest" (the collapse there was partly the adversarial difficulty of Scivetti's distinction items). Remaining un-run: the same own-stimulus treatment for caused-motion and *way*. *[Since discharged — both ran: [`result/caused-motion-minimal-pair-divergence-v1`](../results/caused-motion-minimal-pair-divergence-v1.md), [`result/way-construction-traversal-v1`](../results/way-construction-traversal-v1.md).]*
 
 ## The question
 

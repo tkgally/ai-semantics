@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-05
 links:
   - rel: supports
     target: theory/lexicon-grammar-continuum
@@ -63,7 +63,7 @@ Mean relatedness per arm (durel 1–4 / cont 0–100):
 ## Caveats (lead with these — the first is decisive)
 
 - **Surface-vs-sense confound (inherent; the pre-run critic's I1).** The coerced sentence-2 always carries **added object+path argument structure** that the `control-elab` arm lacks — that is what coercion *is*. So the positive gap **cannot by itself separate "the model registers a SENSE shift" from "the model rates any added transitive/path structure as less verb-related."** This result therefore makes only the **internal-contrast** claim (coerced rated less verb-related than a matched elaboration) and **does not** establish that the model represents coercion as lexical sense modulation in a human-validated way. The `polysemy-anchor` arm shows pure sense shift *can* drive low ratings (no added structure, reads lowest), but it does not control the coerced arm's surface confound. **REFINED 2026-05-31** — the clean follow-up ran: [`result/coercion-sense-modulation-v2`](coercion-sense-modulation-v2.md) adds a structure-matched non-coercing transitive control and finds the gap **partially de-confounds**: a small, **fine-scale-only, fragile** sense-specific residual survives (isolation gap cont +13.6/+6.1/+1.9, ≈0 on the 4-point scale, carried by 3–4 of 8 verbs), alongside a **real surface component** — so v1's gap was a *mix* (mostly sense for claude, mostly surface for gemini), not a pure surface artifact but not a strong sense claim either.
-- **No human gold.** Constructed items; no in-repo human relatedness rating for them, so no human-comparison claim (the *instrument* is DWUG-validated, the *items* are the project's own). Internal-contrast-only, anchor pending.
+- **No human gold.** Constructed items; no in-repo human relatedness rating for them, so no human-comparison claim (the *instrument* is DWUG-validated, the *items* are the project's own). Internal-contrast-only.
 - **Small N, single run, text-only.** 12 coerced verbs (6 cm / 6 way), 6 controls-paired, 6 anchors; one temp-0 pass per model. Read the pattern (positive gap, three-way ordering, cm>way, gemini smallest), not the exact values. `huff`-the-wrapper is the most marginal coercion; the polysemy floor mixes homonymy (`bank`/`charge`) and polysemy (`run`/`set`), so it is high-variance.
 
 ## Where it sits

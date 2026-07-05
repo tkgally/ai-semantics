@@ -10,7 +10,7 @@ status: proposed
 anchor: human-anchored
 contingent-on: []
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/dative-alternation-information-structure
@@ -24,6 +24,8 @@ links:
     target: concept/constructional-meaning
   - rel: supports
     target: theory/constructional-meaning-in-llms
+  - rel: supports
+    target: claim/dative-information-structure-givenness
 ---
 
 # Result: the dative alternation tracks information structure — fresh-item replication (v2)
@@ -42,6 +44,17 @@ links:
 > [`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md) is vindicated,
 > not weakened. **Human-anchored** to the same Bresnan et al. (2007) `languageR::dative` production
 > surface as v1.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The powered re-run
+> ([`result/dative-information-structure-powered`](dative-information-structure-powered.md), s175:
+> 100 fresh disjoint items on the byte-frozen instrument) **reversed this page's headline
+> qualification**: at N=100 the panel is **CONFIRM 3/3**, and gpt's WEAK did **not** hold — its
+> main-arm shift recovers v1's +0.056 with a CI clear of zero (+0.056 [0.039, 0.074]); this page's
+> +0.018 dip is best read as founding-N item noise. The order-of-magnitude spread **does**
+> reproduce (~9.3×, v1's 9×, not this page's 27×). The line was promoted s174 →
+> [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)
+> (magnitudes+intervals attached s175). *(Back-annotation: nothing measured on this page changes —
+> the v2 numbers stand as this run's record.)*
 
 ## What was replicated, and why
 
@@ -125,7 +138,9 @@ its graded `FINAL:` line on the first call (matching v1's clean data).
 ## Reading on the evidence ladder
 
 This **refines** v1's Tier-2 (gradient semantic tracking) positive on
-[`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)'s ladder. The
+[`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)'s ladder
+*(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) —
+cited here as the edition this result fed)*. The
 *panel* verdict survives replication (CONFIRM, 2/3), and for **claude and gemini** the effect is now
 twice-observed at near-identical magnitude on disjoint items — about as solid as a single-lab,
 single-decoder behavioral result can be without a third date or a logprob channel. But the replication

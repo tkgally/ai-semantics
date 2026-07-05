@@ -10,7 +10,7 @@ meaning-senses:
 status: supported
 contingent-on: []
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: design/conative-commitment-replication-v2
@@ -24,6 +24,8 @@ links:
     target: theory/constructional-meaning-in-llms
   - rel: anchors
     target: resource/scivetti-2025-cxnli-dataset
+  - rel: supports
+    target: claim/preference-commitment-dissociation-aann-specific
 ---
 
 # Result: conative COMMITMENT-ONLY direct replication v2
@@ -119,7 +121,9 @@ construction; this does not prove AANN-uniqueness — see Honest limits.)
 datum from v1 is reinforced — the conceptual "two constructs" point stands, but the conative provides
 no positive instance of the dissociation in *either* direction once the v1 anomaly is retired (logged
 as a revision-log entry, no trigger fired — the essay's triggers are AANN-internal). For
-[`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md): the
+[`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
+*(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+— cited here as the edition this page engaged.)*: the
 instrument-sensitivity story stays construction-particular, and the conative now reads as a clean
 "no-dissociation" construction for all three models on both instruments.
 

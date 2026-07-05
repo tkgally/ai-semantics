@@ -9,7 +9,7 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: open-question/within-verbal-cancel-at-ceiling
@@ -200,6 +200,12 @@ clean within-verbal confirm the conjecture wants and discharge the M2 caveat:
 
 This is a legitimate future unit; it is not forced, and the conjecture's status does not move
 until such a battery runs.
+
+*[Pointer, s183: both steps ran the same UTC day — step 1 as
+[`result/monotonicity-causative-progressive-cancel-v1`](monotonicity-causative-progressive-cancel-v1.md)
+(s140: the progressive suppresses the result-state default in all three models), step 2 as
+[`result/monotonicity-within-verbal-battery-v1`](monotonicity-within-verbal-battery-v1.md)
+(s141: within-verbal CONFIRM 3/3, M2 discharged).]*
 
 ## Provenance
 

@@ -10,7 +10,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 links:
   - rel: supports
     target: conjecture/conative-construction
@@ -96,4 +96,4 @@ The contact-cancellation is **construction-specific**, not a generic "*at* = ate
 
 ## Status
 
-`status: proposed`. Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []` (governing operationalization ratified). Promotion past `proposed` awaits Tom's review. The standing caveat is the gpt-5.4-mini NLI failure and the instrument-fragility it reveals.
+`status: proposed`. Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []` (governing operationalization ratified). Promotion past `proposed` awaits Tom's review. *(Governance note, s183: since the autonomous-era amendment of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous cross-session adversarial review; Tom holds a standing override.)* The standing caveat is the gpt-5.4-mini NLI failure and the instrument-fragility it reveals.

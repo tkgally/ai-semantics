@@ -51,7 +51,8 @@ quietly dormant: if the last several sessions were all one track, weight the bac
    units drawn from both tracks and the program, each wave followed by an adversarial
    coherence pass, each wave committed. Prefer fewer, deeper units (`PROTOCOL.md §3`).
    Judgement is never parallelized; experiments keep their independent pre-run critic and
-   post-run verifier.
+   post-run verifier. **While the wiki-coherence campaign (§5 below) is open, its next phase
+   is a standing candidate for the session's deep unit — check §5 before picking.**
 4. **Spend discipline** (`PROTOCOL.md §4`): up to **$5.00 (UTC calendar day)** in OpenRouter
    billed cost, all sessions that day combined — check today's ledger rows in
    `config/budget.md` first, pre-flight-estimate every probe, record actuals after. Size a
@@ -92,3 +93,40 @@ replayed commands) and the loop spins forever. Any unavoidable poll needs a dead
 - **No fixed endpoint.** Do not manufacture a finale or pad a session to look productive; the
   project compounds by small sound increments. When the session's work is landed and merged,
   stop.
+
+## 5. Standing campaign: wiki coherence (Tom-directed, opened session 183 — DELETE this section when the campaign closes)
+
+On 2026-07-05 Tom directed (standing override) that the project devote effort to **polishing the
+wiki for coherence and unity**: update out-of-date pages, add links, eliminate needless
+repetition, resolve contradictions, and surface future-research ideas — because as the project
+grows, wiki-wide coherence is load-bearing for both the researcher and the monitor. Session 183
+ran the full audit (all ~370 pages, six read-only auditors) and fixed the misleading tranche;
+the campaign continues across sessions until its phases close.
+
+**The live ledger is [`wiki/maintenance.md`](wiki/maintenance.md)** — read it before campaign
+work; it records what was audited, what was fixed, what was deliberately left, and the per-phase
+checklists. Phases (each sized as one session's deep unit; a light phase may share its session
+with an owed empirical design/scout so the empirical track never stalls):
+
+1. **P1 `[x]` (s183):** full audit + fix tranche (BLOCKERs + batches) + this plan + the ledger +
+   the exec-summary regeneration (B4) + two queued convention decisions.
+2. **P2:** ratify the two s183 decisions; apply whichever ratifies (per-page status
+   normalization notes; the meaning-senses tag change); fix the audit's deferred SHOULD-FIX
+   remainder listed in the ledger (§"Deferred to P2").
+3. **P3:** program **B6** — the `note`-type reclassification sweep (~10 measurement-free result
+   pages → `wiki/findings/notes/`), which is coherence work in program clothing; plus the
+   orphan-source cures the ledger lists.
+4. **P4:** reader on-ramp deepening — the remaining concept-page refreshes (each concept points
+   at the current findings that bear on it), and the ideas-harvest triage (promote the strongest
+   audit seeds into properly-formed open-question pages or backlog items; drop the rest with a
+   line of rationale in the ledger).
+5. **P5 (close-out):** a light spot re-audit (one fresh agent, sampled pages), close the ledger
+   with a dated summary, **delete this §5**, and note the closure in `log.md`.
+
+**Campaign rules (bind every phase):** maintenance-class work — no finding changes in either
+direction; history-preserving edits only (dated update boxes / bracketed notes, per the
+conventions documented in `CLAUDE.md` s183); every standing fence in `NEXT.md` still binds (no
+essay merges — the web is load-bearing; no re-runs/re-promotions; cite the theory v2s); anything
+value-laden goes to `wiki/decisions/open/`, never applied in the session that opens it; the
+website is touched only if a campaign session changes something reader-substantive (else it is a
+maintenance session per `PROTOCOL.md §5b`).

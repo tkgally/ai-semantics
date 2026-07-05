@@ -12,7 +12,7 @@ status: tested
 anchor: pending
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-31
+updated: 2026-07-05
 links:
   - rel: refines
     target: open-question/lexical-polysemy-gradience
@@ -100,6 +100,10 @@ as movement toward the independent human signal.**
   philosophy. The grounding axis currently stands at **two bounded negatives for clear homonyms**
   (a text-side moderation null and an image-side redundancy null — see the Predictions section), not
   at confirmation; fine polysemy and a genuinely image-native task are the honest next directions.
+  *(The image-native task has since run twice — [`result/vwsd-grounding-headroom-v1`](../results/vwsd-grounding-headroom-v1.md),
+  [`result/vwsd-grounding-headroom-v2`](../results/vwsd-grounding-headroom-v2.md) — and the sibling
+  [`conjecture/distributional-saturation-grounding-headroom`](distributional-saturation-grounding-headroom.md)
+  carries that arc.)*
 - It is a clean test on the seam between [`concept/distributional-meaning`](../../base/concepts/distributional-meaning.md)
   and [`concept/grounding`](../../base/concepts/grounding.md): does perceptual input add `referential.sense`-relevant
   signal *beyond the distributional shadow*, or has a strong text model already saturated it?

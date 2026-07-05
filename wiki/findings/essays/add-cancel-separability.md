@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: refines
     target: conjecture/constructional-monotonicity-asymmetry
@@ -27,7 +27,7 @@ links:
 
 # Essay: are the two poles separable?
 
-> **Status: revised (2026-06-28). A philosophical-track essay arguing in the project's own voice.** It introduces **no new empirical claim**: every empirical assertion cites the in-repo page that carries it, at that page's stated strength, and the original part is the argument — a conceptual caution about a *premise* of the add/cancel monotonicity framing. The essay **sharpens, does not refute**, the conjecture it leans on ([`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md), `status: proposed`). It makes **no human comparison**: the three results it cites carry either an answer-key human baseline used only descriptively or an `anchor: internal-contrast-only` within-model contrast. The **Revision triggers** section states in advance what would weaken or strengthen the worry; read it before citing the argument.
+> **Status: revised (2026-06-28). A philosophical-track essay arguing in the project's own voice.** It introduces **no new empirical claim**: every empirical assertion cites the in-repo page that carries it, at that page's stated strength, and the original part is the argument — a conceptual caution about a *premise* of the add/cancel monotonicity framing. The essay **sharpens, does not refute**, the conjecture it leans on ([`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md), `status: proposed` *at writing; since `tested` — the sibling essay [`nothing-to-cancel`](nothing-to-cancel.md) records the move*). It makes **no human comparison**: the three results it cites carry either an answer-key human baseline used only descriptively or an `anchor: internal-contrast-only` within-model contrast. The **Revision triggers** section states in advance what would weaken or strengthen the worry; read it before citing the argument.
 
 ## Revision — 2026-06-28 (session 133)
 

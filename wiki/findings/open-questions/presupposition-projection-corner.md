@@ -8,7 +8,7 @@ meaning-senses:
 status: open
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/presupposition-projection-v1
@@ -33,6 +33,22 @@ links:
 > session 159 (ADOPT A, `internal-contrast-only`;
 > [`decisions/resolved/presupposition-projection-internal-contrast-anchor`](../../decisions/resolved/presupposition-projection-internal-contrast-anchor.md)),
 > and the conditional-collapse asymmetry is worked by the session-159 rescue follow-up.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The corner kept moving after the box
+> above. Session 160 widened the probe to more trigger families
+> ([`result/projection-trigger-inventory-v1`](../results/projection-trigger-inventory-v1.md), verdict
+> MIXED — the asymmetry generalizes in direction to four more families, clears the pre-registered bar
+> for 1/3 models, and the conditional-frame collapse replicates on the new triggers; session 161
+> added its family decomposition,
+> [`result/projection-trigger-inventory-family-decomposition-v1`](../results/projection-trigger-inventory-family-decomposition-v1.md)).
+> Session 162 raised the bridging conjecture
+> [`conjecture/presupposition-environment-gated-both-directions`](../conjectures/presupposition-environment-gated-both-directions.md)
+> (projection frame-gated, accommodation context-gated — one environment-gated signature). And the
+> session-173 matched surface-cue control
+> ([`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md))
+> returned **BEATS-DOPPELGANGER** (pooled +0.78 / +0.47 / +0.94, 3/3) but is read as
+> **under-licensed** — the residual is trigger word-form-keyed and surface-cue-reconstructable.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 > **Why this page exists (a $0 scoping artifact).** The project has just consolidated the
 > indexicality / deixis corner. It has **not** worked **presupposition** — a distinct

@@ -9,7 +9,7 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
@@ -152,6 +152,11 @@ frozen privative B2 calibration ("a gun" ⊨ "a weapon"; "a fake gun" cancels it
 B2-passing resultative ADD arm, sha `80bd4b60b55a3e60`); a second NO-GO triggers the
 **principled-limit closure** (the matched cancel arm is un-instrumentable at ceiling on a
 strict-NLI panel without a categorically-held lexical-entailment default).
+
+*[Pointer, s183: this path ran the same day — [`result/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md)
+GO (s137), [`result/monotonicity-c2-battery-v1`](monotonicity-c2-battery-v1.md) WEAK CONFIRM (s137),
+then [`result/monotonicity-within-verbal-battery-v1`](monotonicity-within-verbal-battery-v1.md)
+CONFIRM 3/3 (s141, M2 discharged).]*
 
 ## Provenance
 

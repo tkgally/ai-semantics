@@ -168,6 +168,7 @@ are in §C.
 | The grounding arc supplies a genuinely non-distributional residual for a lexical relation (a referential/grounded probe isolating antonymy competence answering to reference/perception) | [`essay/shortcut-vs-competence-mis-cut`](findings/essays/shortcut-vs-competence-mis-cut.md) (b) | **open** | Depends on the A2b grounding-magnitude instrument. |
 | A certified Option-C gap the adjudication gate judges genuinely non-single-reader-recoverable would puncture the transcript ceiling for the relational axis | [`essay/transcript-ceiling`](findings/essays/transcript-ceiling.md) (a) | **open** | Tested 2026-06-18 → not activated (gap adjudicated thin; ceiling holds); trigger stays live for other certified Option-C designs. |
 | The relational track crossing from thin order-sensitivity to genuine between-agent constitution would move the relational cell from "topic two, unreached" to "partially reached" | [`essay/two-topics-language-as-object`](findings/essays/two-topics-language-as-object.md) (d) | **open** | Same target as the relational-positive bet (§B theory). |
+| A **cleft-only, construction-grain doppelgänger battery** (cleft-family expansion, negation-only discriminating cell, question-frame confound controlled) yielding a residual **not reducible to a negation-frame surface cue** moves the presupposition corner toward the beater side; landing flat or frame-reducible **settles the corner as a measured non-beater at construction grain**. Either outcome discharges the bet; a word-varying re-run discharges nothing | [`essay/under-licensed-middle`](findings/essays/under-licensed-middle.md) (registered s174) | **open** | The one instrument the s173 doppelgänger result names as able in principle to reach past its B1 lexical bound. *(Row added s183 — the bet was registered on-page s174 and program B3's record names it; its absence here was a back-fill gap.)* |
 
 ---
 
@@ -187,8 +188,12 @@ contradicts the secondary): [`essay/constructional-meaning-meets-frame`](finding
 [`essay/indexical-character-learnable-content-supplied`](findings/essays/indexical-character-learnable-content-supplied.md) (a) (Kaplan 1989a) + its child
 [`essay/origo-supplied-not-occupied`](findings/essays/origo-supplied-not-occupied.md) (c),
 [`essay/two-topics-language-as-object`](findings/essays/two-topics-language-as-object.md) (a) (Lewis 1969),
-[`essay/reference-as-premise-bound`](findings/essays/reference-as-premise-bound.md) (f), [`essay/reference-denials-disunified`](findings/essays/reference-denials-disunified.md) (b)(e),
+[`essay/reference-denials-disunified`](findings/essays/reference-denials-disunified.md) (b)(e),
 [`essay/stereotype-without-the-expert`](findings/essays/stereotype-without-the-expert.md) (c)(d)(e), and the **Kripke** residue of the externalist-primaries bet (§A) across the reference essays.
+Distinct from the ingestion bets but likewise external-literature-contingent:
+[`essay/reference-as-premise-bound`](findings/essays/reference-as-premise-bound.md) (f) awaits a
+*published voice arguing the LM-reference dispute is settled by a measurement* — an external event,
+not a source fetch *(regrouped s183; it was previously mis-filed under the ingestion clause)*.
 
 **Awaiting release of an external human resource / anchor** (would license a currently-forbidden
 human comparison, or ground an unanchored leg): [`essay/output-channel-confound`](findings/essays/output-channel-confound.md) (e),
@@ -224,6 +229,12 @@ sibling/underlying result moves — a re-read prompt, not an empirical bet):
 [`essay/construct-validity-without-a-criterion`](findings/essays/construct-validity-without-a-criterion.md) (f), [`essay/under-licensed-middle`](findings/essays/under-licensed-middle.md) (parent-placement / numbers-move),
 and the "if the underlying numbers move on re-run" guard shared by [`essay/presupposition-environment-gated`](findings/essays/presupposition-environment-gated.md),
 [`essay/projection-defeasible-by-frame`](findings/essays/projection-defeasible-by-frame.md), and [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md).
+
+**Method-posture essays whose triggers are audit-outcome-contingent** (named here so the per-page
+audit is complete — full trigger lists on-page; none has a scoreboard side):
+[`essay/design-out-not-model-out`](findings/essays/design-out-not-model-out.md) (a)–(d) and
+[`essay/audit-brackets-instrument-competence`](findings/essays/audit-brackets-instrument-competence.md) (a)–(c)
+*(added s183; both were previously unnamed in the ledger despite §C's completeness promise)*.
 
 **Source-reading bets still open** (a bet with a side — will the secondary survive the primary? —
 but awaiting an ingestion the project has not yet done, so tracked here not in §A):

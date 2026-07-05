@@ -13,7 +13,7 @@ meaning-senses:
   - distributional
 status: received
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-07-05
 links:
   - rel: supports
     target: concept/polysemy
@@ -31,7 +31,7 @@ This is a philosophy-of-language source about **human language**. It makes no cl
 
 ## Why it bears on this project (the scalar-vs-disjunctive axis)
 
-The project's lexical wedge rests on a distinction between **polysemy** (related senses, graded/scalar) and **homonymy** (unrelated senses sharing a form by accident, discrete/disjunctive). Until this ingestion, [`concept/polysemy`](../concepts/polysemy.md) carried that distinction on "common knowledge in the field" — its own *Honest gaps* section flags the canonical lexicographic sources (Cruse, Murphy, Lyons) as **not yet in-repo**, so the lexicographer's contrast had no citable in-repo source. The essay [`essay/ambiguity-kind-not-level`](../../findings/essays/ambiguity-kind-not-level.md) leans on exactly this contrast — a **scalar** ambiguity (a similarity midpoint, with a nearer pole, e.g. a polysemy bridging item) vs. a **disjunctive** ambiguity (two complete readings, no nearer pole, e.g. a balanced homonym) — and that essay's *own provenance note* names "a future ingest of a semantics/lexicography source on the polysemy-vs-homonymy ... ambiguity distinction" as its **weakest provenance point**, observing that "the contrast stands on the in-repo [`concept/polysemy`] and the result's caveat alone."
+The project's lexical wedge rests on a distinction between **polysemy** (related senses, graded/scalar) and **homonymy** (unrelated senses sharing a form by accident, discrete/disjunctive). Until this ingestion, [`concept/polysemy`](../concepts/polysemy.md) carried that distinction on "common knowledge in the field" — at this page's ingest time its *Honest gaps* section flagged the canonical lexicographic sources (Cruse, Murphy, Lyons) as **not yet in-repo**, so the lexicographer's contrast had no citable in-repo source. (Since updated: Cruse 1986 entered at secondary strength on 2026-06-26, [`source/cruse-1986-lexical-semantics`](cruse-1986-lexical-semantics.md), and the concept page now leans on it; Murphy and Lyons remain wanted.) The essay [`essay/ambiguity-kind-not-level`](../../findings/essays/ambiguity-kind-not-level.md) leans on exactly this contrast — a **scalar** ambiguity (a similarity midpoint, with a nearer pole, e.g. a polysemy bridging item) vs. a **disjunctive** ambiguity (two complete readings, no nearer pole, e.g. a balanced homonym) — and that essay's *own provenance note* names "a future ingest of a semantics/lexicography source on the polysemy-vs-homonymy ... ambiguity distinction" as its **weakest provenance point**, observing that "the contrast stands on the in-repo [`concept/polysemy`] and the result's caveat alone."
 
 Sennet's entry is a reference-quality, open-access philosophy source that states the **homonymy/polysemy carving** directly (lexical ambiguity = "two or more lexical entries that correspond to the same word"; polysemy = "a single lexeme" with "interestingly related" meanings) and separately states the **ambiguity-vs-vagueness/generality** distinction and the **zeugma diagnostic**. It thereby supplies the in-repo source the concept page's *Honest gaps* and the essay's provenance note both call for — grounding the *framing* of the scalar/disjunctive contrast, not any empirical result.
 

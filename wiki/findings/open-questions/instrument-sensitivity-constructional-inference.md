@@ -8,7 +8,7 @@ meaning-senses:
   - functional-vs-formal
 status: open
 created: 2026-05-29
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/conative-minimal-pair-divergence-v1
@@ -109,6 +109,17 @@ links:
 > instrument in graded, model-specific ways — now sharpened on the output-channel axis to a *partial* effect.
 > The page **stays `open`**.
 
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The output-channel mechanism the two
+> boxes above track (sessions 59–60) has since been consolidated into a promoted claim:
+> [`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md) (session 177,
+> cross-session adversarial promotion review) — a forced single-token channel can mask a
+> serial-inference capability, with the format-only flip replicated across **two task families**
+> (relational order-composition; let-alone scalar-construction NLI) and **three geometry axes**
+> (operation pair / alt-pair, grid size K=6, composition depth / three-move), and a **boundary
+> control** carried (the bridging-context commitment null survives the identical channel control, so
+> the effect is computation-specific, not universal).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
+
 ## The question
 
 When we probe whether an LLM tracks a construction's characteristic inference, the measured competence can depend on *how we ask*. A binary or 3-way NLI entailment judgment ("does sentence A entail sentence B?") and a forced-choice elicitation ("based only on the sentence, did the event complete? YES / NO / CANT_TELL") are both ratified operationalizations in this project, running in parallel on the same frozen items — yet they can return materially different answers for the same model on the same construction.
@@ -159,7 +170,7 @@ One interpretation of instrument-sensitivity is that it marks shallow or `functi
 A design that treats **per-model instrument-disagreement** as the dependent variable rather than a nuisance. The key features:
 
 1. **Cross-instrument × cross-construction matrix.** Run NLI × forced-choice (× possibly a third instrument, e.g. cloze/continuation) on the *same* frozen items across the *same* panel, measuring instrument-disagreement score per model per construction — not just reporting gaps as a by-product of a conjecture test.
-2. **Pre-register which instrument is primary.** Fix this before seeing results — it is an operationalization gate (charter §8 and the project's `constructional-divergence-operationalization` precedent). Choosing the "winning" instrument post-hoc would re-import the confound the question is about. Any new operationalization gate would be queued for Tom, not self-resolved.
+2. **Pre-register which instrument is primary.** Fix this before seeing results — it is an operationalization gate (charter §8 and the project's `constructional-divergence-operationalization` precedent). Choosing the "winning" instrument post-hoc would re-import the confound the question is about. Any new operationalization gate would be queued as a decision — since 2026-06-12, ratified by autonomous cross-session review; [`PROJECT.md`](../../../PROJECT.md) §12.3.
 3. **Check concentration.** Is instrument-disagreement concentrated in particular *models* (gpt-5.4-mini in both results so far) or particular *constructions* (cancel-direction / conative so far)? The cancel-direction constructions (conative, where the construction must suppress a lexically-default entailment) appear harder and more instrument-sensitive than add-direction constructions (caused-motion, way, comparative-correlative — all near ceiling on both instruments). Whether this is a cancel/add structural asymmetry or a difficulty-level confound is the first hypothesis to check.
 4. **Check whether instrument-disagreement is itself systematic.** If NLI consistently under-states competence relative to forced-choice for certain model × construction combinations, that is a finding about the NLI framing's default-entailment pull (the conative collapse looks like NLI pulling toward a "yes" default when the verb's typical reading is completion). If the direction of disagreement varies, a framing-noise story is more plausible than a systematic bias story.
 

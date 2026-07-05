@@ -9,13 +9,13 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-05-28
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/constructional-meaning
   - rel: depends-on
     target: resource/languageR-dative-corpus
-  - rel: supports
+  - rel: depends-on
     target: result/dative-information-structure-v1
 ---
 
@@ -29,6 +29,18 @@ links:
 > (Spearman ρ 0.48–0.83) strengthens but is non-decisive by pre-registration. Human-anchored to
 > [`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md). Caveat: single
 > panel/date/run, small item N, a graded-preference (not logprob) measure.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The single-run caveat above was
+> discharged in stages: the fresh-item v2 ran session 53
+> ([`result/dative-information-structure-v2`](../results/dative-information-structure-v2.md), CONFIRM
+> 2/3 — gpt WEAK on that occasion); the A2a powered re-run landed session 175
+> ([`result/dative-information-structure-powered`](../results/dative-information-structure-powered.md))
+> with **PANEL CONFIRM 3/3 at N=100** — claude +0.316 [0.298,0.334], gemini +0.524 [0.506,0.542],
+> gpt +0.056 [0.039,0.074] — so gpt's v2 WEAK did not hold at power (its shift clears zero at N=100,
+> recovering its v1 value; the v2 dip reads as founding-N item noise); and the line was promoted
+> session 174 as
+> [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 > **Operationalization RATIFIED 2026-06-20 (session 50, ADOPT MODIFIED).** The human anchor is
 > in-repo ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md) —

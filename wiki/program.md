@@ -59,7 +59,12 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`conjecture/lexical-relation-shadow-saturation`](findings/conjectures/lexical-relation-shadow-saturation.md)
   in its internal-contrast form now — the corpus-side controls are already in-repo (Justeson &
   Katz; Cao co-occurrence data); only the human-compared form stays blocked on its unlicensed
-  anchor.
+  anchor. **[Corrected s183, per the s182 scout (this page's 2026-07-05 s182 ledger row): the
+  corpus-side control *data* are NOT in-repo — only the source-page summaries are. The
+  internal-contrast control must be built from scratch (WordNet relation pairs + a co-occurrence
+  baseline from in-repo SubTLEX-US or a corpus; `nltk`/WordNet + `numpy` install cleanly), and
+  scoring "recovery" without a human gold is the value-laden crux — so A1b is a fresh design +
+  decision-trail unit first, run only after cross-session ratification.]**
 - **A1c `[x]` Shadow-depth table v1** (s171 → [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md);
   four beater rows — CC covariation, dative info-structure, AANN gradient, sense gradience — each a residual over a
   named distributional control with a 95% CI, plus the antonymy/presupposition corners as marked readings/bets;
@@ -85,7 +90,11 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   unrun probe in the repo: image/vision referents, genuinely unrun ("costs money" — ~$3–4,
   the best purchase available; the grounded cell has a confirming-direction shape datum and an
   untested magnitude). Needs a fresh design + decision trail; the VWSD fluent-channel route is
-  closed and stays closed.
+  closed and stays closed. **[Corrected s183, per the s130 deeper scout + the s182 backlog check
+  ([`open-question/grounding-magnitude-instrument`](findings/open-questions/grounding-magnitude-instrument.md)):
+  the magnitude is UN-INSTRUMENTABLE with in-repo resources, and an in-house build is barred by
+  the no-human-subjects rule — so the realistic A2b unit is a license-checked SCOUT for an
+  externally released graded-image fine-polysemy sense set, not a design/run.]**
 - **A3a `[x]` (scouted s168) Re-anchor the presupposition line to human projection data.** Scout +
   license-check (never adopt unverified): **CommitmentBank**, **MegaVeridicality** (White &
   Rawlins), the **Tonhauser/Degen projection-variability datasets**, **NOPE**. If adoption
@@ -98,11 +107,16 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   ([`decisions/resolved/presupposition-projection-human-anchor`](decisions/resolved/presupposition-projection-human-anchor.md),
   default: adopt none yet, re-scout licenses; CommitmentBank the strongest target *if* a later
   session verifies its terms — the only candidate covering the antecedent-of-conditional).
+  **Ratified s169** (ADOPT-A: adopt none yet; the fresh reviewer reproduced the license null).
 - **A3b `[ ]` BLiMP forced-choice sweep.** The resource sits idle: 67k human-validated minimal
   pairs, CC-BY, already cataloged. A selected-paradigm sweep (determiner–noun agreement near
   AANN; NPIs; quantifiers) is cheap and human-agreement-anchored. Design + critic first.
 - **A3c `[ ]` Lancaster norms $0 re-analysis.** Cross sensorimotor strength with the existing
-  lexical results — flagged by the base survey as available without an API call.
+  lexical results — flagged by the base survey as available without an API call. **[Scope note,
+  s183: a moderated re-analysis against the v1 sense-gradience result already ran 2026-05-30 —
+  [`result/lexical-perceptual-grounding-moderation-v1`](findings/results/lexical-perceptual-grounding-moderation-v1.md),
+  clean null. This item is scoped to crossing the norms with the *post-v1* lexical results (rep2,
+  polysemy/homonymy, bridging) — a session that re-runs the v1 cross duplicates done work.]**
 - **A4a `[x]` models.md truth-up** (special session 2026-07-02 — panel marked battle-tested).
 - **A4b `[ ]` Within-family size ladders on flagship instruments** — **UNBLOCKED s168**
   ([`decisions/resolved/scale-ladder-subjects`](decisions/resolved/scale-ladder-subjects.md)
@@ -185,8 +199,11 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   New-essay bar in PROTOCOL §3.
 - **B4 Reading surfaces.** index.md slimmed + generated `[x]` (special session 2026-07-02,
   `tools/build-index.py`); executive summary relabeled a checkpoint digest `[x]` — **full
-  regeneration owed `[ ]`** at the first consolidation session; public home-page "latest"
-  repaired `[x]`; models.md `[x]`.
+  regeneration DONE `[x]`** (s183, wiki-coherence campaign P1 →
+  [`executive-summary.md`](executive-summary.md) rewritten current through the six promoted
+  claims, four powered replications, both theory second editions, the flagship table, and the
+  honest negatives; the next regeneration is owed at the next consolidation *checkpoint*, not on
+  a fixed clock); public home-page "latest" repaired `[x]`; models.md `[x]`.
 - **B5 `[x]` Prediction ledger.** [`predictions.md`](predictions.md) seeded `[x]`; **back-fill
   sweep DONE** (s180 → the full historical sweep: all 18 conjectures, 50 essays, 8 theory pages
   read via parallel extractors, each bet quoted verbatim with status taken only from on-page
@@ -228,7 +245,9 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`decisions/resolved/cloud-compute-path`](decisions/resolved/cloud-compute-path.md). Dormant;
   nothing waits on it.
 - **D3 Ratify the queued subject decisions** at will (the three under `decisions/open/`);
-  otherwise the normal cross-session process handles them.
+  otherwise the normal cross-session process handles them. **[Discharged: all three were ratified
+  autonomously s168; `decisions/open/` has been empty since — the lever that remains live for Tom
+  is the panel-v2 re-open trigger recorded in [`config/models.md`](../config/models.md).]**
 - **D4 Paywalled ingestion:** the OA-reachable literature is near-exhausted;
   [`wiki/base/wanted.md`](base/wanted.md) documents each unreachable primary (Goldberg 1995/2006, Kaplan, the
   Sterken & Cappelen volume, …). A small batch would raise the philosophical track's ceiling.

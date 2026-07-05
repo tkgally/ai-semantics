@@ -6,10 +6,10 @@ meaning-senses:
   - model-internal
   - functional-vs-formal
   - relational
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-18
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: refines
     target: essay/undischargeable-negative
@@ -543,6 +543,11 @@ empty fourth box.
   both left gemini and gpt below the on-demand gate (the scaffold: gemini 0.625, gpt 0.156), while claude
   stayed at ceiling. So no witness has yet appeared — the trigger stays **live** for the one remaining
   un-eased axis (**fewer chaining steps**, near its ≥2-move floor) or a different/easier operation pair.
+  **→ FIRED 2026-06-19** (see the REOPENED-AND-RESOLVED-POSITIVE update above): the witness appeared
+  on a **fifth axis this enumeration did not name** — the execution-format / working-surface easing
+  ([`result/relational-order-composition-c-reasoning-scaffold`](../results/relational-order-composition-c-reasoning-scaffold.md)),
+  which flipped gemini **and** gpt to RESPECTS-ORDER on byte-identical trials. The existence
+  question settled positive; the annotation is placed at the trigger itself per the s183 convention.
   If such a future well-targeted easing lets gemini or gpt clear the gate, the witness fires, the existence
   question is settled positive, and this essay's reading of the K=4 non-witness as "off-signature, weak" is
   *confirmed* (the right axis carried the witness the wrong axes could not). The essay is corroborated, not

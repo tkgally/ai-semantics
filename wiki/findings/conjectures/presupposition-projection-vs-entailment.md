@@ -8,7 +8,7 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/presupposition-projection-v1
@@ -24,13 +24,23 @@ links:
 
 # Conjecture: presupposition projects above a matched entailment (within-model)
 
-> **Status: proposed (2026-07-01, session 158). Pre-registration for the run
-> [`experiments/runs/2026-07-01-presupposition-projection/`](../../../experiments/runs/2026-07-01-presupposition-projection/README.md)**
-> (frozen [`PREREG.md`](../../../experiments/runs/2026-07-01-presupposition-projection/PREREG.md),
-> manifest sha `e3a04cdd…`). Read the *Scope cap* before citing any sentence: this is a
+> **Status: tested** *(originally proposed 2026-07-01, session 158, as the pre-registration for the run
+> [`experiments/runs/2026-07-01-presupposition-projection/`](../../../experiments/runs/2026-07-01-presupposition-projection/README.md),
+> frozen [`PREREG.md`](../../../experiments/runs/2026-07-01-presupposition-projection/PREREG.md),
+> manifest sha `e3a04cdd…`)*. Read the *Scope cap* before citing any sentence: this is a
 > **within-model** contrast at `internal-contrast-only` strength (**no human comparison**), and its
 > terminal anchor status was **ratified** by an independent session-159 adversarial review
 > ([`decisions/resolved/presupposition-projection-internal-contrast-anchor`](../../decisions/resolved/presupposition-projection-internal-contrast-anchor.md)).
+
+> **Outcome (run 2026-07-01, s158; box added 2026-07-05, session 183 — wiki-coherence pass, fixing
+> a recorded front-matter/blockquote mismatch).** The run landed as
+> [`result/presupposition-projection-v1`](../results/presupposition-projection-v1.md): **PROJECTION
+> 2/3** — claude and gemini show the pre-registered within-model projection asymmetry (P endorsed
+> above E under the cancelling frames); the panel-level signal carries a **conditional-antecedent
+> collapse** (the antecedent frame is where projection thins). The line then ran the trigger
+> inventory (s160), the environment-gated conjecture (s165), and the doppelgänger control (s173 —
+> BEATS-DOPPELGANGER but under-licensed). *(Back-annotation: the s180 log verified this mismatch;
+> this box records the outcome the front-matter's `tested` already reflected.)*
 
 ## The bet
 

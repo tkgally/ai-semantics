@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/relational-order-composition-c
@@ -180,6 +180,14 @@ provenance below).
   difference to on-demand composition.
 - **The negative is undischargeable, not closed.** This bounds the Option-C negative to survive a
   K=6→K=4 easing; it does not prove incapability. A still-easier instrument is the live next probe.
+  **→ Resolution (added s183): the witness was found 2026-06-19.** The execution-format easing
+  ([`result/relational-order-composition-c-reasoning-scaffold`](relational-order-composition-c-reasoning-scaffold.md)),
+  on the byte-identical figure-to-figure trials, changed only the response format (forced single
+  token → working surface, reasoning-effort held constant): both gemini (DIRECT 0.594 here →
+  1.000) and gpt (DIRECT 0.438 here → 0.969) cleared the on-demand gate and spontaneously ordered
+  by stamps on COMP → **all three models RESPECTS-ORDER; the split dissolves 3/3**. The search
+  resolved positive: the single-move signature was an artifact of denying a working surface, not a
+  chaining-capacity limit.
 - **claude emitted CoT despite the forced format**, as at K=6 — the post-run verifier confirmed the
   last-line extraction is the genuine final answer and matches the independently-derived target; the
   RESPECTS-ORDER verdict rests on transparent reasoned ordering, not a black-box token.

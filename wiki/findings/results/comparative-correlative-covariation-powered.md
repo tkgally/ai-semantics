@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-05
 links:
   - rel: supports
     target: claim/comparative-correlative-covariation
@@ -77,4 +77,4 @@ Typical − atypical FC accuracy is 0 / 0 / 5 pp — the panel handles the delib
 - **gpt-5.4-mini's v3 operator-embedding crack is not re-tested here** (this run uses only asserted/inverse CCs and controls, as v1 did); that non-uniformity lives in [`result/comparative-correlative-covariation-v3`](comparative-correlative-covariation-v3.md) and is unaffected.
 
 ## Relation to the claim and conjecture
-This run **supports** [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md) by attaching the magnitude+interval its *Bounds* deferred, upgrading the construction-isolation / direction / robustness legs from direction-only to magnitude-bearing (the human-comparison leg is unchanged). For [`conjecture/comparative-correlative-construction`](../conjectures/comparative-correlative-construction.md), the powered run confirms the covariation-reading direction on fresh items; it says nothing new about the conjecture's "narrows-but-does-not-close" human-gap clause (no human arm here). On the shadow-depth reading ([`essay/shadow-depth-cross-cuts-grain`](../essays/shadow-depth-cross-cuts-grain.md)) it firms the CC's status as the grammatical pole's **shadow-beater** with a measured, interval-bearing construction-isolation contrast — a candidate row for the flagship shadow-depth table (A1c).
+This run **supports** [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md) by attaching the magnitude+interval its *Bounds* deferred, upgrading the construction-isolation / direction / robustness legs from direction-only to magnitude-bearing (the human-comparison leg is unchanged). For [`conjecture/comparative-correlative-construction`](../conjectures/comparative-correlative-construction.md), the powered run confirms the covariation-reading direction on fresh items; it says nothing new about the conjecture's "narrows-but-does-not-close" human-gap clause (no human arm here). On the shadow-depth reading ([`essay/shadow-depth-cross-cuts-grain`](../essays/shadow-depth-cross-cuts-grain.md)) it firms the CC's status as the grammatical pole's **shadow-beater** with a measured, interval-bearing construction-isolation contrast — a candidate row for the flagship shadow-depth table (A1c). *[Update, s183: the table exists — [`theory/shadow-depth-table-v1`](../theory/shadow-depth-table-v1.md) (session 171); the CC construction-isolation gap is its first beater row, sourced from this run, and the table's claims layer cites [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md).]*

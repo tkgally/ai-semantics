@@ -10,7 +10,7 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/aann-inferential-v4
@@ -150,7 +150,9 @@ of within-model behaviours under a shared instrument, it is an internal contrast
 
 ## Where it sits on the evidence ladder
 
-On the ladder in [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md),
+On the ladder in [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
+*(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+— cited here as the edition this page engaged.)*,
 this claim records that the **instrument-sensitivity story is construction-particular**: the
 forced-choice paraphrase arm and the NLI entailment arm — both used to probe Tier-4-adjacent
 meaning-tracking — *can* dissociate (AANN), but the *way* they dissociate **does not transfer** to the
