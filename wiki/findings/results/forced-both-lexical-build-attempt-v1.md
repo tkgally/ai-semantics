@@ -208,4 +208,4 @@ cd experiments/designs/forced-both-lexical-v1 && python3 balance_check.py   # wr
 
 Artifacts: [`experiments/designs/forced-both-lexical-v1/`](../../../experiments/designs/forced-both-lexical-v1/)
 (`candidate_items.json` — 8 co-predication frames + Q2-i tasks; `balance_check.py` + `balance_check.json`
-— the Q1-ii SemCor check; [`README.md`](../../../experiments/designs/forced-both-lexical-v1/README.md)).
+— the Q1-ii SemCor check; [`README.md`](../../../README.md)).

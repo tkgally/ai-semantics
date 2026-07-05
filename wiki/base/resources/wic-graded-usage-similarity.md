@@ -12,7 +12,7 @@ meaning-senses:
   - referential
   - human-comparison
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 links:
   - rel: anchors
     target: conjecture/lexical-sense-gradience
@@ -90,5 +90,5 @@ Together they let the conjecture's **discriminating control** be set up: hold co
 
 1. **Re-attempt to retrieve the actual ratings file.** The advertised Box link 404'd and the McCarthy mirror 503'd on 2026-05-29. Try again later, or email katrin.erk@utexas.edu (the page's stated contact) for a current download; if/when retrieved, check the in-file license/README and **mirror into `experiments/data/usim/`** (not the wiki) if terms permit, otherwise work against it in place. **This is the remaining blocker** — counts and scale are already verified (above).
 2. **Resolve the license question.** No explicit data license was found, only a courtesy email request. Until an explicit license (or author permission) is on record, treat reuse conservatively; this, together with fetchability, is what keeps the page at `external-only`.
-3. **DONE 2026-05-29** — the anchor decision is resolved ([`decisions/resolved/lexical-sense-gradience-anchor`](../../decisions/resolved/lexical-sense-gradience-anchor.md), **Option B**: a different graded set, not Usim). Next: **identify + verify the replacement graded anchor** — fetch/verify **DWUG** (graded usage-similarity, CC BY — strongest candidate on license + availability) or **CoSimLex** (SemEval-2020 T3 graded in-context similarity); confirm license + scale + counts + fetchability, then mirror it and write its own resource page. WiC stays the binary cross-check.
+3. **DONE 2026-05-29** — the anchor decision is resolved ([`decisions/resolved/lexical-sense-gradience-anchor`](../../decisions/resolved/lexical-sense-gradience-anchor.md), **Option B**: a different graded set, not Usim). Next: **identify + verify the replacement graded anchor** — fetch/verify **DWUG** (graded usage-similarity, CC BY — strongest candidate on license + availability) or **CoSimLex** (SemEval-2020 T3 graded in-context similarity); confirm license + scale + counts + fetchability, then mirror it and write its own resource page. WiC stays the binary cross-check. **The "Next" step is ALSO DONE, 2026-05-30** — DWUG was verified (license/scale/counts/fetchability) and adopted as the replacement graded anchor with its own resource page, [`resource/dwug-usage-graphs`](dwug-usage-graphs.md). **License correction recorded there:** DWUG is **CC BY-ND 4.0**, *not* plain "CC BY" as this pointer says (the ND restriction bars distributing modified versions; analysis + verbatim mirroring are fine — the archive is kept gitignored, recipe-not-corpus).
 4. Add WordNet + SemCor/OntoNotes as their own resource page(s) if/when the over-/under-splitting arm of the conjecture is pursued.

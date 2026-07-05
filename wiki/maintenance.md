@@ -12,7 +12,7 @@ maintenance accretes here.
 ## The s183 full audit
 
 **Method.** Six parallel read-only auditors over disjoint slices (results ×2; claims + theory +
-conjectures + open-questions; essays + `ideas.md` + `predictions.md`; sources + concepts +
+conjectures + open-questions; essays + [`ideas.md`](ideas.md) + [`predictions.md`](predictions.md); sources + concepts +
 `wanted.md`; resources + resolved decisions + top-level surfaces), each checking seven defect
 kinds (stale status, stale pointer, contradiction, missing link, repetition, convention drift,
 research seeds) against a shared ground-truth brief. All ~370 pages opened; the spine
@@ -60,8 +60,8 @@ finding/status), ~110 SHOULD-FIX, the rest NIT. Plus ~30 research seeds (harvest
 - **Top-level surfaces:** [`executive-summary.md`](executive-summary.md) fully regenerated
   (program **B4** ticked — it had been ~59 sessions stale and self-contradictory);
   [`predictions.md`](predictions.md) completed (the missing under-licensed-middle cleft-battery
-  §B row; two essays named in §C; one mis-filed contingency regrouped); `program.md` item bodies
-  reconciled with its own ledger rows (A1b, A2b, A3a, A3c, D3, B4); the `index.md` header now
+  §B row; two essays named in §C; one mis-filed contingency regrouped); [`program.md`](program.md) item bodies
+  reconciled with its own ledger rows (A1b, A2b, A3a, A3c, D3, B4); the [`index.md`](index.md) header now
   leads the syntheses with the flagship table; `multimodal-anchor-scouting.md` got the
   front-matter it predated (clearing the one undocumented senselint WARN).
 - **Conventions documented in [`CLAUDE.md`](../CLAUDE.md)** (same-commit rule): the `anchors`
@@ -188,7 +188,7 @@ splitting arm.
   inferential-meaning/deflationary done or partially done s183; the rest checked); ideas-harvest
   triage (Tier 1 → formed pages or backlog rows; Tiers 2–3 kept here with one-line dispositions).
 - **P5** — spot re-audit (fresh agent, sampled pages incl. every s183-fixed BLOCKER); close this
-  ledger with a dated summary; delete `continue-prompt.md` §5; log the closure.
+  ledger with a dated summary; delete [`continue-prompt.md`](../continue-prompt.md) §5; log the closure.
 
 ## Ledger
 

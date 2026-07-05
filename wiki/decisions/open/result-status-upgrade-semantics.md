@@ -41,7 +41,7 @@ Nothing here changes any finding; it is pure status semantics. But status fields
   *Theory:* operative syntheses may move `draft → live` at their next substantive touch; a
   `live` page that gains a `supersedes` successor becomes `superseded`.
 - **B.** Freeze current statuses as-is and only document the two observed conventions in
-  `CLAUDE.md` (describe, don't normalize). Cheapest; leaves the flagship-vs-gate inversion
+  [`CLAUDE.md`](../../../CLAUDE.md) (describe, don't normalize). Cheapest; leaves the flagship-vs-gate inversion
   standing.
 - **C.** Mass-normalize now: all un-promoted results to `proposed` in one sweep. Cleanest graph,
   but rewrites ~10 pages' metadata without per-page judgement, and a gate page's `supported`

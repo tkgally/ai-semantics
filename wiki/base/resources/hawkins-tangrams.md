@@ -15,7 +15,7 @@ meaning-senses:
   - human-comparison
 contingent-on: []
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-07-05
 links:
   - rel: anchors
     target: open-question/relational-meaning-pilot
@@ -97,7 +97,7 @@ Specifically it grounds:
 Be honest about the limits — they are sharp:
 
 - **It does NOT anchor the live-vs-shuffled trajectory-dependence measure — the pilot's load-bearing contrast.** The corpus records *live* human dyads only; it contains **no order-scrambled / shuffled-history replay condition** and **no single-agent-with-self baseline**. The live-vs-shuffled gap is **NOVEL to the LLM probe** and is **NOT anchored by Hawkins**. Hawkins grounds the human convergence/entrainment baseline (commitment c), not the discriminating trajectory-dependence contrast (commitments a–b). This is stated as ratified in [`decisions/resolved/relational-fetchable-anchor`](../../decisions/resolved/relational-fetchable-anchor.md): "the live-vs-shuffled trajectory-dependence measure (novel to the LLM probe) is still not anchored by Hawkins." A relational *positive* cannot be earned from this corpus alone.
-- **It supplements, does not replace, the ratified theoretical anchor.** Clark & Wilkes-Gibbs 1986 remains the ratified theoretical reference ([`decisions/resolved/relational-anchor-shortlist`](../../decisions/resolved/relational-anchor-shortlist.md), Option A); Hawkins is the fetchable empirical *replication* of that paradigm. It does not discharge the C&W-G fetch obligation for any claim that turns on the original demonstration.
+- **It supplements, does not replace, the ratified theoretical anchor.** Clark & Wilkes-Gibbs 1986 remains the ratified theoretical reference ([`decisions/resolved/relational-anchor-shortlist`](../../decisions/resolved/relational-anchor-shortlist.md), Option A); Hawkins is the fetchable empirical *replication* of that paradigm. It does not discharge the C&W-G fetch obligation for any claim that turns on the original demonstration. *(That obligation has since been discharged: C&W-G 1986 was fetched primary-direct in session 134, 2026-06-28 — [`resource/clark-wilkes-gibbs-1986-referring`](clark-wilkes-gibbs-1986-referring.md).)*
 - **No reference/externalism, no LLM-vs-human meaning claim by itself.** The corpus is a human convergence baseline; it does not by itself license a claim that an LLM *means* anything. It bears on `relational` convergence dynamics, not on `referential.reference` or `referential.externalist`.
 - **Tangram referents are deliberately hard-to-name and culture/visual-specific.** Calibration transfers to LLM dyads only insofar as the LLM referents are matched in difficulty; the corpus does not certify that any chosen LLM referent set is comparably hard.
 - **Not a constructional or lexical-sense resource.** It carries no minimal pairs, no sense annotation, no acceptability ratings; it cannot anchor constructional or lexical-gradience probes (that is DWUG / CxG territory).
@@ -150,5 +150,5 @@ To reproduce: download the file to `experiments/data/hawkins-tangrams/tangrams.c
 
 1. **Anchor use is bounded:** Hawkins grounds the human convergence/entrainment *baseline* (commitment c of the pilot's bar) — NOT the live-vs-shuffled trajectory-dependence contrast (commitments a–b), which is novel to the LLM probe and unanchored by any human resource. Keep this distinction in any relational `result` that links here.
 2. **Fetch the primary paper** when convenient to verify the "open corpus / >15,000 utterances" statement verbatim and the e12845 details against the PDF (currently secondary).
-3. **Clark & Wilkes-Gibbs 1986 remains the ratified theoretical anchor** and is still unfetched ([`base/wanted.md`](../wanted.md)); Hawkins supplements, does not replace it.
+3. **Clark & Wilkes-Gibbs 1986 remains the ratified theoretical anchor** and is still unfetched ([`base/wanted.md`](../wanted.md)); Hawkins supplements, does not replace it. *(Stale as of session 134, 2026-06-28: C&W-G 1986 is now FETCHED primary-direct and catalogued as [`resource/clark-wilkes-gibbs-1986-referring`](clark-wilkes-gibbs-1986-referring.md); the supplements-not-replaces relation stands.)*
 4. **Re-download + sha256-verify** before any analysis run (the raw is gitignored); the derivation is reproducible via `derive.py`.

@@ -2,7 +2,7 @@
 type: resource
 id: things-data-triplets
 title: THINGS-data behavioral triplet odd-one-out similarity judgments (Hebart et al. 2023)
-status: scouted
+status: scouting
 url: https://osf.io/f5rn6/
 url-note: "Behavioral triplet odd-one-out data: OSF project https://osf.io/f5rn6/ ('THINGS-odd-one-out'). Also mirrored on Figshare+ as 'THINGS-data: Behavioral odd-one-out data and code' (https://plus.figshare.com/articles/dataset/THINGS-data_Behavioral_odd-one-out_data_and_code/20552784; part of collection DOI 10.25452/figshare.plus.c.6161151). The THINGS *images* themselves live in a separate OSF project (https://osf.io/jum2f/, Hebart et al. 2019 PLOS ONE) with DIFFERENT terms (academic-use-only — see License). Paper: eLife 12:e82580 (https://elifesciences.org/articles/82580). NOTHING FETCHED in-repo this session; routes verified from landing pages only."
 paper: "Hebart, M. N., Contier, O., Teichmann, L., Rockter, A. H., Zheng, C. Y., Kidder, A., Corriveau, A., Vaziri-Pashkam, M., & Baker, C. I. (2023). THINGS-data, a multimodal collection of large-scale datasets for investigating object representations in human brain and behavior. eLife, 12, e82580. https://doi.org/10.7554/eLife.82580"
@@ -14,7 +14,7 @@ meaning-senses:
   - human-comparison
 contingent-on: []
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/grounding

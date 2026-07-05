@@ -213,5 +213,5 @@ cd experiments/designs/forced-both-lexical-v2 && python3 build_frozen_subset.py 
 ```
 
 Artifacts: [`experiments/designs/forced-both-lexical-v2/`](../../../experiments/designs/forced-both-lexical-v2/)
-([`README.md`](../../../experiments/designs/forced-both-lexical-v2/README.md); `build_frozen_subset.py`; `frozen_subset.json` + `.sha256` — 43 items, no joke text;
+([`README.md`](../../../README.md); `build_frozen_subset.py`; `frozen_subset.json` + `.sha256` — 43 items, no joke text;
 `dominance_transfer_analysis.md` — the both-sides Q-B-1 analysis put to the critic).

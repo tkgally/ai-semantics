@@ -15,7 +15,7 @@ meaning-senses:
   - human-comparison
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/grounding
@@ -116,7 +116,7 @@ Be honest about the limits — they are sharp:
 
 ## Pointer for next visit
 
-1. **Use as the prediction-1 moderator now.** The join table is committed; run the moderated re-analysis of [`result/lexical-sense-gradience-v1`](../../findings/results/lexical-sense-gradience-v1.md) (does text-only monotonicity strengthen with perceptual grounding?). Any result is contingent on the `multimodal-panel-and-grounding-theory` decision until ratified.
+1. ~~**Use as the prediction-1 moderator now.** The join table is committed; run the moderated re-analysis of [`result/lexical-sense-gradience-v1`](../../findings/results/lexical-sense-gradience-v1.md) (does text-only monotonicity strengthen with perceptual grounding?). Any result is contingent on the `multimodal-panel-and-grounding-theory` decision until ratified.~~ — **DONE the same day (2026-05-30)**: the moderated re-analysis ran as [`result/lexical-perceptual-grounding-moderation-v1`](../../findings/results/lexical-perceptual-grounding-moderation-v1.md), a **clean null** (perceptual groundedness does not detectably moderate the text-only monotonicity; underpowered, ≈21 lemmas/side, per the result's own bound), anchored to these norms.
 2. **Decide which perceptual aggregate to privilege** (Max_strength vs. Minkowski3 vs. a single modality like Visual.mean) and freeze it before reporting, per charter §8 (instrument-before-results). The PREREG in the run directory should fix this.
 3. **Do not over-reach to predictions 2–3.** Those need an image-paired, sense-level resource; the Lancaster norms cannot supply per-sense perceptual contrast.
 4. **Handle `lass` explicitly** (the one uncovered DWUG lemma) — drop or note it in any moderation analysis.

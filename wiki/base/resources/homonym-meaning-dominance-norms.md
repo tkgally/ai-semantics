@@ -2,7 +2,7 @@
 type: resource
 id: homonym-meaning-dominance-norms
 title: "Homonym meaning-dominance norms (British eDom 2016; Spoken-ambiguity dominance norms, J. Cognition 2023) — per-WORD human sense-balance for selecting balanced homonyms"
-status: scouted
+status: scouting
 url: https://openpsychologydata.metajnl.com/articles/10.5334/jopd.28
 paper: "Maciejewski, G. & Klepousniotou, E. 2016. Relative Meaning Frequencies for 100 Homonyms: British eDom Norms. J. Open Psychology Data 4(1), DOI 10.5334/jopd.28. — Companion: Dominance Norms and Data for Spoken Ambiguous Words in British English, J. Cognition, DOI 10.5334/joc.194 (author list per the article page; cited by DOI)."
 license: "CC BY 4.0 (both datasets) — verified verbatim 2026-06-23 from the two article pages."
@@ -11,7 +11,7 @@ meaning-senses:
   - human-comparison
 contingent-on: []
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/polysemy
@@ -21,7 +21,9 @@ links:
 
 > **Status: scouted (2026-06-23, session 92).** Both datasets' licenses (CC BY 4.0), reachability (OSF +
 > open-access journal), and the load-bearing schema facts were verified this session by direct fetch.
-> **Neither has been fetched/checksummed/mirrored in-repo**, and no probe yet uses them. They are
+> **Neither has been fetched/checksummed/mirrored in-repo**, and no probe yet uses them. *(Since
+> superseded — see "Verification status" below: both norm CSVs were **downloaded from OSF and used
+> firsthand in session 94, 2026-06-23**, to build the forced-both v2 frozen subset.)* They are
 > catalogued together because they are the same *kind* of signal — **per-word human meaning-dominance**
 > from which a researcher can select *balanced* homonyms — and because that signal is **a better-anchored
 > version of the general-usage balance proxy** the session-91 forced-both build attempt used (SemCor tag
@@ -91,9 +93,11 @@ CC BY 4.0 — permissive, attribution-only; reuse and adaptation permitted (comm
 restriction (unlike [`resource/semeval2017-pun-corpus`](semeval2017-pun-corpus.md)).
 
 - British eDom: article https://openpsychologydata.metajnl.com/articles/10.5334/jopd.28 ; data OSF
-  `osf.io/7k3eh` (verified reachable; **not yet fetched in-repo**).
+  `osf.io/7k3eh` (verified reachable; **not yet fetched in-repo** *[stale — fetched + used firsthand
+  session 94; see "Verification status" below]*).
 - Spoken-ambiguity dominance norms: article DOI 10.5334/joc.194 ; data OSF `osf.io/uy47w` (verified
-  reachable; **not yet fetched in-repo**).
+  reachable; **not yet fetched in-repo** *[stale — fetched + used firsthand session 94; see
+  "Verification status" below]*).
 
 ## Verification status (honest)
 
