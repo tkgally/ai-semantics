@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-14
-updated: 2026-06-14
+updated: 2026-07-05
 links:
   - rel: refines
     target: conjecture/aann-construction
@@ -159,7 +159,9 @@ carry — none changes the frozen verdict, all constrain its reading:
   verdict is **unchanged** (v5 tests only the agreement-reflex generalization, not the paraphrase/NLI
   inferential question).
 - On the evidence ladder of
-  [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md), this sits at
+  [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
+  *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  — cited here as the edition this page engaged.)*, this sits at
   the **form/agreement rung**, not the inference rung. It strengthens the recurring AANN pattern
   (strong and now panel-generalizing on *form/agreement*; inferential *use* uneven across models and
   instruments per v4) by showing the agreement reflex is robust to held-out items and present in two of

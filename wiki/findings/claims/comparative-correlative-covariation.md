@@ -10,10 +10,12 @@ meaning-senses:
 status: supported
 contingent-on: []
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-05
 links:
   - rel: supports
     target: conjecture/comparative-correlative-construction
+  - rel: supports
+    target: theory/shadow-depth-table-v1
   - rel: depends-on
     target: result/comparative-correlative-covariation-v1
   - rel: depends-on
@@ -72,7 +74,7 @@ The claim's "construction-driven, not lexical" force rests on the matched contro
 The **only** human anchor for this construction in-repo is the Scivetti CxNLI CC subset ([`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md); ratified [`decisions/resolved/comparative-correlative-anchor`](../../decisions/resolved/comparative-correlative-anchor.md)). Inspection (2026-05-29) confirmed it delivers a **single adjudicated gold label per item plus an aggregate ≈0.90 native-speaker baseline — an answer key, NOT a per-item multi-rater gradient.** So the human-comparison statement here is **answer-key agreement on 30 CC items on one run (v1)**: panel NLI accuracy 93–100% at or above ≈0.90. The v2/v3 hard arms (conflicting-cue, composition, negated/hedged CC) have **no in-repo human norm** and are `internal-contrast-only` by ratified decision ([`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)); **no human-comparison claim is made for them.**
 
 ## Where it sits on the evidence ladder
-On the ladder in [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md) this is a **Tier-4 (inference-licensing) positive with a Tier-3 (atypical/generalization) control passed**, stress-tested for conflicting-cue, multi-step composition, and operator scope. It is the project's **most robust constructional positive** and patterns with the theory's recurring observation that current decoders handle the **add / easy direction** of the upper ladder at ceiling. The theory page's standing caution travels with it unchanged: this is the "easy direction," and ceiling on a modest instrument bounds how deep a reading it licenses.
+On the ladder in [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md) *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) — cited here as the edition this page engaged.)* this is a **Tier-4 (inference-licensing) positive with a Tier-3 (atypical/generalization) control passed**, stress-tested for conflicting-cue, multi-step composition, and operator scope. It is the project's **most robust constructional positive** and patterns with the theory's recurring observation that current decoders handle the **add / easy direction** of the upper ladder at ceiling. The theory page's standing caution travels with it unchanged: this is the "easy direction," and ceiling on a modest instrument bounds how deep a reading it licenses.
 
 ## What this claim does NOT say
 - **Magnitude (internal-contrast legs) now landed with intervals; still no human-comparison magnitude.** The A2a powered re-run ([`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md), 2026-07-02, 136 fresh disjoint items, verifier-REPRODUCED) attaches the interval the founding runs could not: the **construction-isolation assertion gap is ≈87 pp** (86.8 / 88.2 / 86.8; 95% CIs excluding the 30pp gate and the null, lower bound ≈78 pp, 3/3 models), inverse-flip 97–100% and atypical-pair robustness (typ−atyp ≤ 5 pp) at/near ceiling with tight CIs. So the **internal-contrast** legs now state a magnitude+interval, not a threshold-pass. What is still **not** a magnitude: the **human-comparison** leg (the v1 Scivetti answer-key parity is single-run, 30 items, unchanged — the powered run made no human comparison), and the caveat below still binds — the near-ceiling rates give a precise magnitude, not a depth-of-processing verdict.

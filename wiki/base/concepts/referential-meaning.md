@@ -6,7 +6,7 @@ meaning-senses:
   - referential
   - grounded
 created: 2026-05-28
-updated: 2026-05-31
+updated: 2026-06-25
 links:
   - rel: depends-on
     target: source/bender-koller-2020-climbing

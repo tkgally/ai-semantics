@@ -11,7 +11,7 @@ status: proposed
 anchor: human-anchored
 contingent-on: []
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/distributional-saturation-grounding-headroom
@@ -47,6 +47,14 @@ links:
 > / $1.565 distract); **$4.091 with the $0.887 caption pass**; **$4.260 day total** with ~$0.17
 > preflights, under the $5/day cap. 6 image parse-fails (all claude, reasoning-then-truncation on
 > rare-phrasing items — see Limitations).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The re-operationalized v2 ran
+> (sessions 107/112/121): [`result/vwsd-grounding-headroom-v2`](vwsd-grounding-headroom-v2.md)
+> removed this run's caption confound and returned the first confirming-direction positive
+> (gated-rescue shape: the image rescues descriptor-text-failed cells, 3/3 models in direction,
+> distraction-controlled), and [`conjecture/distributional-saturation-grounding-headroom`](../conjectures/distributional-saturation-grounding-headroom.md)
+> was promoted `tested` (gating shape only) in session 130.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## What was run
 

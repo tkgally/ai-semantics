@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/relational-order-composition-c-reasoning-scaffold
@@ -24,6 +24,8 @@ links:
     target: claim/relational-order-sensitive-reassignment
   - rel: refines
     target: concept/relational-meaning
+  - rel: supports
+    target: claim/output-channel-working-surface
 ---
 
 # Result: larger-grid (K=6) generality re-run — the working-surface witness REPLICATES on a bigger grid
@@ -201,7 +203,9 @@ read.
   0.861, DIRECT at ceiling throughout) is the kind of pattern the **>2-move** (deeper-composition)
   probe — the natural [`essay/output-channel-confound`](../essays/output-channel-confound.md) trigger
   contrast case — would sharpen: does a bigger *serial-depth* demand (rather than a bigger *state*)
-  produce a negative that survives the working surface?
+  produce a negative that survives the working surface? *[Pointer, s183: that probe ran —
+  [`result/relational-order-composition-three-move`](relational-order-composition-three-move.md):
+  the witness survives depth 3, all three models RESPECTS-ORDER.]*
 
 ## Honesty box
 

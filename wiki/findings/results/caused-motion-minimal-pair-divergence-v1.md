@@ -10,7 +10,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 links:
   - rel: supports
     target: conjecture/caused-motion-construction
@@ -77,7 +77,12 @@ This places caused-motion alongside the comparative correlative as an upper-ladd
 
 ## Limits
 
-- **Ceiling result** — the main caution; harder controls are the natural v2.
+- **Ceiling result** — the main caution; harder controls are the natural v2. *[Update, s183: the
+  harder controls ran — [`result/argument-structure-coercion-v2`](argument-structure-coercion-v2.md)
+  (same day, 2026-05-29: the ceiling survived a conflicting cue, cue-sensitive not a brittle
+  template) and [`result/caused-motion-near-miss-v2c`](caused-motion-near-miss-v2c.md) (2026-05-30:
+  the causation inference is genuinely form-keyed, withheld for near-miss frames carrying the same
+  content).]*
 - **N=10 verbs, single run/date, both instruments.** Cross-model + cross-instrument convergence is the robustness signal.
 - **Animate-object cm items** (laugh/whistle/yawn/snore/shudder) are a softer caused-motion (volitional self-mover); reported split — the inanimate-propulsion core is the crisp case. **shudder/shiver verbs themselves denote body-motion**, so a positive cm there is less diagnostic of pure constructional coercion (kept for the atypical arm, not load-bearing).
 - **ctrl-sep changes two things at once** (construction absent *and* a salient competing cause present); it isolates causal attribution but not the construction in pure isolation.
@@ -91,4 +96,4 @@ This places caused-motion alongside the comparative correlative as an upper-ladd
 
 ## Status
 
-`status: proposed`. Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []`. Promotion past `proposed` awaits Tom's review. The standing caveat is the ceiling: this confirms the conjecture's prediction but a harder instrument is needed to probe the strength of the underlying competence.
+`status: proposed`. Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []`. Promotion past `proposed` awaits Tom's review. *(Governance note, s183: since the autonomous-era amendment of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous cross-session adversarial review; Tom holds a standing override.)* The standing caveat is the ceiling: this confirms the conjecture's prediction but a harder instrument is needed to probe the strength of the underlying competence.

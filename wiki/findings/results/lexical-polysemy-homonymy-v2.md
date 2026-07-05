@@ -10,7 +10,7 @@ status: proposed
 anchor: resource/dwug-usage-graphs
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/lexical-sense-gradience-v1
@@ -26,7 +26,7 @@ links:
 
 # Result: lexical v2 — polysemy vs homonymy (clause b) — a NULL / not-established
 
-**One-line (write the null first):** re-analyzing the **already-collected** lexical-v1 ratings (no new API spend) under a frozen etymological polysemy/homonymy stratification of the 43 DWUG EN lemmas, the conjecture's *distinctive* bet — clause (b), that homonymy is treated as a **discrete floor** while polysemy keeps an **intermediate** regime — is **not established**. DWUG EN contains only **3 clean general-English homonym lemmas** (`ball`, `plane`, `prop`; 16 pairs); the matched-human homonym−polysemy gap is tiny and mixed-sign (−3.8 to +0.7), **every** whole-lemma permutation test is non-significant (p 0.29–1.0), and the b3 **precondition fails** (homonym lemmas are *not* more bimodal than polysemy lemmas in the human gold). A residual weak hint survives only at the ordinal floor (homonym pairs sit at the model floor somewhat more than polysemy at human ≤2) but is confounded with scale-floor and circularity. **The honest finding is methodological: this anchor cannot test clause (b); a homonymy-enriched set is required (lexical v3).** The clean monotonicity of v1 (clause a) does decompose cleanly into *both* strata.
+**One-line (write the null first):** re-analyzing the **already-collected** lexical-v1 ratings (no new API spend) under a frozen etymological polysemy/homonymy stratification of the 43 DWUG EN lemmas, the conjecture's *distinctive* bet — clause (b), that homonymy is treated as a **discrete floor** while polysemy keeps an **intermediate** regime — is **not established**. DWUG EN contains only **3 clean general-English homonym lemmas** (`ball`, `plane`, `prop`; 16 pairs); the matched-human homonym−polysemy gap is tiny and mixed-sign (−3.8 to +0.7), **every** whole-lemma permutation test is non-significant (p 0.29–1.0), and the b3 **precondition fails** (homonym lemmas are *not* more bimodal than polysemy lemmas in the human gold). A residual weak hint survives only at the ordinal floor (homonym pairs sit at the model floor somewhat more than polysemy at human ≤2) but is confounded with scale-floor and circularity. **The honest finding is methodological: this anchor cannot test clause (b); a homonymy-enriched set is required (lexical v3).** *[Pointer, s183: the homonymy-enriched v3 ran 2026-05-31 — [`result/lexical-polysemy-homonymy-v3`](lexical-polysemy-homonymy-v3.md), a better-powered null on the discreteness test.]* The clean monotonicity of v1 (clause a) does decompose cleanly into *both* strata.
 
 Run record: [`experiments/runs/2026-05-30-lexical-polysemy-homonymy-v2/`](../../../experiments/runs/2026-05-30-lexical-polysemy-homonymy-v2/README.md). Design: [`design/lexical-polysemy-homonymy-v2`](../../../experiments/designs/lexical-polysemy-homonymy-v2.md). Gate: [`decisions/resolved/lexical-sense-gradience-operationalization`](../../decisions/resolved/lexical-sense-gradience-operationalization.md) Q2. Anchor: [`resource/dwug-usage-graphs`](../../base/resources/dwug-usage-graphs.md). Cost **$0.00** (re-analysis). An independent adversarial pre-write critic forced this null framing (see Provenance).
 

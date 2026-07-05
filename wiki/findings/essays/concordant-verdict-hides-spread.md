@@ -8,7 +8,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-20
-updated: 2026-07-04
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/dative-information-structure-v1
@@ -22,12 +22,15 @@ links:
     target: open-question/instrument-sensitivity-constructional-inference
   - rel: depends-on
     target: concept/formal-vs-functional-competence
+  - rel: depends-on
+    target: result/dative-information-structure-powered
 ---
 
 # Essay: a concordant verdict still hides a spread
 
-> **Status: draft (2026-06-20). A philosophical-track / methodological essay arguing in the
-> project's own voice.** Its original contribution is a *reading discipline*, not an empirical
+> **Status: revised (drafted 2026-06-20; revised 2026-06-20, session 53 [trigger (c) — strengthened]
+> and 2026-06-21, session 63 — see the Revision log). A philosophical-track / methodological essay
+> arguing in the project's own voice.** Its original contribution is a *reading discipline*, not an empirical
 > claim: when a panel returns a **concordant** verdict — every model clears the bar — the binary
 > label "CONFIRM" can still conceal an order-of-magnitude spread in *how cleanly* the models track
 > the same constraint, and a reader who stops at the label will over-read "they all do it" into

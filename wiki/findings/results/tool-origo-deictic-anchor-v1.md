@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/tool-origo-deictic-anchor
@@ -222,4 +222,6 @@ attributable to an unanchored-specific "treat-the-tool-as-origo" disposition. Re
 
 `status: proposed`, `anchor: internal-contrast-only`, `contingent-on: []`. What is `proposed` is the
 project's reading (a MIXED / control-failure — the ceiling is confounded, not a confirmation).
-Promotion past `proposed` awaits Tom's review.
+Promotion past `proposed` awaits Tom's review. *(Governance note, s183: since the autonomous-era
+amendment of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous
+cross-session adversarial review; Tom holds a standing override.)*

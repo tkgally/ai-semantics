@@ -9,7 +9,7 @@ status: proposed
 anchor: resource/mahowald-2023-aann-stimuli
 contingent-on: []
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/aann-behavioral-gradient-v2
@@ -17,6 +17,8 @@ links:
     target: design/aann-temporal-heldout-v2b
   - rel: anchors
     target: resource/mahowald-2023-aann-stimuli
+  - rel: supports
+    target: claim/aann-behavioral-gradient
 ---
 
 # Result: the temporal held-out stratum (v2b) — a real hole in AANN productivity, not a small-n fluke
@@ -121,3 +123,9 @@ arm, `results.json`, and `VERIFIER-REPORT.md` (independent re-derivation, 0 mism
 Refines [`result/aann-behavioral-gradient-v2`](aann-behavioral-gradient-v2.md) (caveat 2);
 anchored to [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahowald-2023-aann-stimuli.md);
 `contingent-on: []`.
+
+*Pointer (s183): the "why" was later decomposed by the $0 re-analysis
+[`result/aann-temporal-why-reanalysis`](aann-temporal-why-reanalysis.md) (H1 human-gradient
+compression explains the low power; a localized H4 quant×temporal cell inversion carries the
+negative sign), and the temporal hole is echoed for claude and gemini by the second-date held-out
+arm of [`result/aann-behavioral-gradient-rep2`](aann-behavioral-gradient-rep2.md).*

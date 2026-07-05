@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/relational-history-perturbation-v2
@@ -39,6 +39,18 @@ links:
 > mismatches**; it also flagged and corrected an over-claim in the first-pass reading — see
 > §"Reading it honestly"). Run record:
 > [`experiments/runs/2026-06-13-relational-history-perturbation-v3/`](../../../experiments/runs/2026-06-13-relational-history-perturbation-v3/README.md).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The next day
+> [`result/relational-history-perturbation-v4`](relational-history-perturbation-v4.md) (2026-06-14)
+> decoupled position from chronology within-arm — the answer is text position, not stamped
+> chronology, the reading this instrument could not earn.
+> [`conjecture/commutative-convention`](../conjectures/commutative-convention.md) was then
+> **FALSIFIED and retired 2026-06-16** via
+> [`result/relational-spontaneous-recency-a`](relational-spontaneous-recency-a.md) (Option A,
+> session 20; with the [`result/relational-stamp-comprehension-b`](relational-stamp-comprehension-b.md)
+> gate, session 18), and the positive was promoted to
+> [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## Why a v3 at all
 

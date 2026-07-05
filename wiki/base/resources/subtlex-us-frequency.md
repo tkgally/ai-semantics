@@ -14,7 +14,7 @@ meaning-senses:
   - human-comparison
 contingent-on: []
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/distributional-meaning
@@ -116,8 +116,10 @@ The limits are sharp and worth stating so no later session over-reads it:
   these as form-level frequencies, not lemma- or sense-level.
 - **It is not an acceptability or entailment resource.** SUBTLEX-US says nothing about whether
   a swap is grammatical, natural, or inference-altering. It cannot anchor the **indicator**
-  (Q2, entailment-flip / forced-choice) — that needs BLiMP/NLI (a separate, not-yet-fetched
-  fetch-and-catalogue-first resource) and is only the optional Posture-2 upgrade.
+  (Q2, entailment-flip / forced-choice) — that needs BLiMP/NLI, and BLiMP was in fact fetched +
+  catalogued the same day (2026-06-21): [`resource/blimp`](blimp.md) (acceptability only; the
+  entailment-flip indicator still wants a human NLI set). It remains only the optional Posture-2
+  upgrade.
 - **Subtitle-corpus register.** Frequencies reflect conversational film/TV English; very
   formal or technical vocabulary is under-counted relative to a balanced corpus.
 

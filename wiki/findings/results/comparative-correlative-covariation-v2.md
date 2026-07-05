@@ -11,7 +11,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/comparative-correlative-covariation-v1
@@ -23,6 +23,8 @@ links:
     target: concept/constructional-meaning
   - rel: depends-on
     target: concept/inferential-meaning
+  - rel: supports
+    target: claim/comparative-correlative-covariation
 ---
 
 # Result: comparative-correlative probe v2 (off-ceiling)
@@ -68,4 +70,4 @@ Two checks rule out the shallow reading the v1 caveat worried about:
 
 ## Bearing
 
-**Refines** [`result/comparative-correlative-covariation-v1`](comparative-correlative-covariation-v1.md) (the v1 ceiling is not task-easiness — it survives conflicting-cue + composition). Feeds [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md): the CC sits as the project's most robust constructional positive, contrasting with the **shallower** caused-motion coercion-cancellation ([`result/coercion-implicit-cue-v2b`](coercion-implicit-cue-v2b.md)) — both consistent with one disposition: *follow the stated construction over world knowledge*, right for the CC, questionable for the impossible coercion. Internal-contrast-only by ratified decision ([`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md), 2026-05-31). Cost **$0.109 billed** (token-estimate $0.026 undercounts; see [`config/budget.md`](../../../config/budget.md)); 0 NA / 114 calls.
+**Refines** [`result/comparative-correlative-covariation-v1`](comparative-correlative-covariation-v1.md) (the v1 ceiling is not task-easiness — it survives conflicting-cue + composition). Feeds [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md) *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) — cited here as the edition this page engaged.)*: the CC sits as the project's most robust constructional positive, contrasting with the **shallower** caused-motion coercion-cancellation ([`result/coercion-implicit-cue-v2b`](coercion-implicit-cue-v2b.md)) — both consistent with one disposition: *follow the stated construction over world knowledge*, right for the CC, questionable for the impossible coercion. Internal-contrast-only by ratified decision ([`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md), 2026-05-31). Cost **$0.109 billed** (token-estimate $0.026 undercounts; see [`config/budget.md`](../../../config/budget.md)); 0 NA / 114 calls.

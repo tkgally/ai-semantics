@@ -6,10 +6,10 @@ meaning-senses:
   - model-internal
   - functional-vs-formal
   - relational
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-19
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: refines
     target: essay/undischargeable-negative
@@ -32,19 +32,20 @@ links:
   - rel: depends-on
     target: result/relational-order-composition-three-move
   - rel: depends-on
-    target: result/scivetti-let-alone-working-surface-v1
-  - rel: depends-on
     target: concept/formal-vs-functional-competence
   - rel: depends-on
     target: source/li-2024-cot-serial
   - rel: depends-on
     target: result/lexical-bridging-context-working-surface-v1
+  - rel: supports
+    target: claim/output-channel-working-surface
 ---
 
 # Essay: the output channel is an instrument
 
-> **Status: draft (2026-06-19). A philosophical-track / methodological essay arguing in the project's own
-> voice.** Its original contribution is a **named confound and the control that disarms it**: the *output
+> **Status: revised (drafted 2026-06-19; revised 2026-06-20, sessions 58–62 [triggers (a) and (b) fired,
+> (b) magnitude-caveated] and 2026-06-22, session 79). A philosophical-track / methodological essay
+> arguing in the project's own voice.** Its original contribution is a **named confound and the control that disarms it**: the *output
 > channel* through which a model is required to answer — a forced single token versus a working surface on
 > which it may externalize its computation — is a **degree of freedom of the instrument, not a neutral
 > readout**. A channel too narrow to carry a multi-step computation can **mask** a capability the model has;
@@ -511,6 +512,8 @@ output bound, as much as the input bound, has been shown not to be doing the wor
   **descriptive + contamination-caveated** (let-alone items are public; an answer-key match cannot distinguish
   learned construction-meaning from memory) and never reads as "gpt cannot" (undischargeable-negative); what
   fired is the *contrast-case shape* the control's diagnostic value needs, not a capability verdict.
+  *(Consolidation note, s183: this output-channel/working-surface line was consolidated into
+  [`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md), promoted s177.)*
 - **(c) A wide-channel positive shown to be channel-scaffolded artifact.** If a capability that appears only
   *with* a working surface were shown to be an artifact of the scaffold doing the computation the model cannot
   do internally (e.g., the model copying a procedure verbatim without composing), the symmetric hazard this

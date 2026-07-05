@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/relational-order-composition-c-reasoning-scaffold
@@ -26,6 +26,8 @@ links:
     target: claim/relational-order-sensitive-reassignment
   - rel: refines
     target: concept/relational-meaning
+  - rel: supports
+    target: claim/output-channel-working-surface
 ---
 
 # Result: alt-pair generality re-run — the working-surface witness REPLICATES on a different non-commuting pair

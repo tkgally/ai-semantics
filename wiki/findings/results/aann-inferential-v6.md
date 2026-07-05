@@ -11,7 +11,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-14
-updated: 2026-06-14
+updated: 2026-07-05
 links:
   - rel: refines
     target: conjecture/aann-construction
@@ -33,6 +33,8 @@ links:
     target: open-question/distributional-vs-inferential-constructional
   - rel: supports
     target: open-question/instrument-sensitivity-constructional-inference
+  - rel: supports
+    target: claim/preference-commitment-dissociation-aann-specific
 ---
 
 # Result: AANN inferential probe v6 — PARTIAL (a clean powered replication of v4)
@@ -132,7 +134,11 @@ convergence is **not a single-date / small-N artifact** — it replicates includ
 distributionally-dispreferred singular-agreement reflex (the one signal a distributional
 account cannot easily fake); and the claude/gemini ceiling on the agreement reflex
 reproduces on a second, larger sample (a stable duration/distance singular-agreement
-tendency, not a failure of the contrast).
+tendency, not a failure of the contrast). *[Reconciliation note, s183:
+[`result/aann-agreement-reflex-v5`](aann-agreement-reflex-v5.md), run the same day
+(2026-06-14), found claude off the ceiling on its temporal held-out items, clearing the
+pre-registered bar (+0.333) — v5 reads the ceiling as item-set-bound, and the two pages
+measure different (mechanically disjoint) item sets, so the readings do not conflict.]*
 
 ## What the result is, and what bounds it
 
@@ -181,7 +187,9 @@ category (`category_changes: false`; Δ² excl-disputed +0.872 / +0.590 / +0.923
   level in all three** — and the effect is stable across two disjoint, fresh item sets.
   It is still **not** SUPPORTED outright (no ≥2-model cross-instrument convergence) and
   is no longer reachable as a clean null.
-- Within the evidence ladder of [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md),
+- Within the evidence ladder of [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
+  *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  — cited here as the edition this page engaged.)*,
   this confirms the AANN line's first **Tier-4 (inference-licensing)** signal as a
   replicable, powered effect for gpt-5.4-mini, with the standing caution that a
   forced-choice paraphrase preference is weaker evidence than a converging NLI +

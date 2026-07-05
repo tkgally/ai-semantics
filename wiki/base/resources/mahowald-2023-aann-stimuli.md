@@ -8,12 +8,14 @@ license: MIT (LICENSE file verified in the mirrored repo, 2026-06-12; "Copyright
 paper: https://arxiv.org/abs/2301.12564
 venue: EACL 2023
 created: 2026-05-28
-updated: 2026-06-12
+updated: 2026-07-05
 links:
   - rel: anchors
     target: conjecture/aann-construction
   - rel: anchors
     target: claim/formal-competence-aann-ceiling
+  - rel: anchors
+    target: claim/aann-behavioral-gradient
 ---
 
 # Mahowald 2023 — AANN stimulus suite and human acceptability ratings
@@ -77,11 +79,11 @@ What it **cannot** ground:
 
 ## Features most likely to be cited
 
-When the AANN probe runs, expect citations to:
+The AANN probes have now run (behavioral v2, 2026-06-12; cross-date replication rep2, session 178, 2026-07-04 — the earlier surprisal instrument was retired by the ratified behavioral operationalization), and the citations landed where expected:
 
 - **Exp. 1 contrasts** (AANN vs. default vs. four degenerate variants) — the cleanest baseline.
-- **Adjective-type × noun-type interaction** (Mahowald Fig. 3 and Exp. 2) — for the prediction in the conjecture that *evaluative* adjectives behave differently from *neutral measure* adjectives.
-- The **human MTurk ratings** as the gradient anchor against which a panel-model surprisal contrast would be regressed.
+- **Adjective-type × noun-type interaction** (Mahowald Fig. 3 and Exp. 2) — for the prediction in the conjecture that *evaluative* adjectives behave differently from *neutral measure* adjectives; this Exp-2 cell space is exactly what the ran probes regress against.
+- The **human MTurk ratings** as the gradient anchor — consumed by the *behavioral* (prompted 0–100 acceptability) instrument rather than the originally-envisaged surprisal contrast: [`claim/aann-behavioral-gradient`](../../findings/claims/aann-behavioral-gradient.md) (promoted session 176; rep2 discharged its single-run caveat, session 178) records all three panel models rank-tracking the human Exp-2 gradient at cell grain (ρ 0.68–0.75, CIs excluding 0), surviving a Zipf-frequency partial.
 
 ## Pointer for next visit
 

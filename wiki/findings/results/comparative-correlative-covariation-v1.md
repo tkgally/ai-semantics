@@ -10,7 +10,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: design/comparative-correlative-v1
@@ -24,6 +24,8 @@ links:
     target: source/weissweiler-2022-comparative-correlative
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
+  - rel: supports
+    target: claim/comparative-correlative-covariation
 ---
 
 # Result: comparative-correlative covariation-inference probe v1
@@ -82,7 +84,7 @@ Per the conjecture's own falsification table, this outcome "would *refine* the c
 ## What this result does and does not license (modesty, charter §1/§2.6, CLAUDE.md rule 6)
 
 **Does license**, narrowly and provisionally:
-- For *this instrument, this panel, this date*, current instruction-tuned decoder LLMs deploy the comparative correlative's proportional-covariation meaning at human-comparable rates, and the deployment is driven by the construction (T1), tracks direction (T2), and survives an n-gram control (T3). On the [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md) evidence ladder this is a **positive Tier-4 (inference-licensing) result with a Tier-3 (generalization/atypical) control passed** — the first positive upper-ladder result of the project's own design.
+- For *this instrument, this panel, this date*, current instruction-tuned decoder LLMs deploy the comparative correlative's proportional-covariation meaning at human-comparable rates, and the deployment is driven by the construction (T1), tracks direction (T2), and survives an n-gram control (T3). On the [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md) evidence ladder *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) — cited here as the edition this result fed)* this is a **positive Tier-4 (inference-licensing) result with a Tier-3 (generalization/atypical) control passed** — the first positive upper-ladder result of the project's own design.
 
 **Does NOT license:**
 - **Ceiling is weak evidence for the strong reading.** When a task saturates, it stops discriminating; a ceiling result cannot distinguish "robust constructional competence" from "the task was too easy for these models." The probe shows the 2022 encoder dissociation is *not reproduced by this instrument on these models* — it does **not** show the construction is processed in any particular deep way. This is the single most important limit.
@@ -109,3 +111,15 @@ Per the conjecture's own falsification table, this outcome "would *refine* the c
 ## Status
 
 `status: proposed`. The numbers are recorded and reproducible from the committed code + frozen items; what is `proposed` is the project's reading of them. The result is **not** promoted past `proposed` pending: (i) a harder v2 that escapes the ceiling, and (ii) Tom's review of the overshoot relative to the conjecture's "not closing" clause. `contingent-on: []` — both governing decisions are ratified.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** Both pendings landed long ago: the
+> harder v2 **and** v3 ran 2026-05-30 (see
+> [`result/comparative-correlative-covariation-v2`](comparative-correlative-covariation-v2.md),
+> [`result/comparative-correlative-covariation-v3`](comparative-correlative-covariation-v3.md)),
+> and promotion — autonomous cross-session review since the 2026-06-12 amendment
+> ([`PROJECT.md`](../../../PROJECT.md) §12.3), not a Tom gate — happened s168:
+> [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)
+> (`supported`, direction-scoped), with the powered magnitude attached s169
+> ([`result/comparative-correlative-covariation-powered`](comparative-correlative-covariation-powered.md):
+> 136 fresh disjoint items, gap ≈87pp [lb ≈78], 3/3). *(Back-annotation: this page's numbers and
+> reading stand unchanged.)*

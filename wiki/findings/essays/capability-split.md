@@ -5,10 +5,10 @@ title: A capability split is not a panel property — what a one-model positive 
 meaning-senses:
   - model-internal
   - relational
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/relational-order-composition-c
@@ -24,11 +24,15 @@ links:
     target: concept/relational-meaning
   - rel: depends-on
     target: concept/formal-vs-functional-competence
+  - rel: depends-on
+    target: result/relational-order-composition-c-worked-example
+  - rel: depends-on
+    target: result/relational-order-composition-c-reasoning-scaffold
 ---
 
 # Essay: a capability split is not a panel property
 
-> **Status: draft (2026-06-18). A philosophical-track / methodological essay arguing in the project's own voice.** Its original contribution is a *reporting discipline*, not an empirical claim: when a panel **splits** on a probe — some models pass, some are uninterpretable — the finding must be attributed to the **model(s) that showed it**, never averaged into a claim about "the panel" or "LLMs." There is **no new empirical claim** here and **no human comparison** anywhere (the result it reads, [`result/relational-order-composition-c`](../results/relational-order-composition-c.md), is `internal-contrast-only`; the human leg is unanchored in-repo). Every empirical sentence cites the in-repo page that carries it, at that page's stated strength, and the recommendation is hedged as a recommendation throughout. Read the revision triggers before citing.
+> **Status: revised (drafted 2026-06-18; revised 2026-06-18 [five logged revision notes] and 2026-06-19 [trigger (b) FIRED — the split dissolved under a working surface]; see the revision blocks below). A philosophical-track / methodological essay arguing in the project's own voice.** Its original contribution is a *reporting discipline*, not an empirical claim: when a panel **splits** on a probe — some models pass, some are uninterpretable — the finding must be attributed to the **model(s) that showed it**, never averaged into a claim about "the panel" or "LLMs." There is **no new empirical claim** here and **no human comparison** anywhere (the result it reads, [`result/relational-order-composition-c`](../results/relational-order-composition-c.md), is `internal-contrast-only`; the human leg is unanchored in-repo). Every empirical sentence cites the in-repo page that carries it, at that page's stated strength, and the recommendation is hedged as a recommendation throughout. Read the revision triggers before citing.
 >
 > **Revision (2026-06-18, later session — evidence moved, logged per essay discipline).** The essay was written when the Option-C probe had run on **two** models (claude RESPECTS-ORDER, gemini UNINTERPRETABLE). Its **revision trigger (a)** — "a third (or further) composing model" — was then tested directly: the same frozen instrument was re-run on `gpt-5.4-mini` (panel.B, the third panel model). gpt did **not** compose: it failed the on-demand gate harder than gemini (DIRECT 0.194 < 0.80 → **UNINTERPRETABLE**), so trigger (a) did **not** fire in the composing direction. The effect on the argument is to **sharpen**, not overturn it: order-sensitive composition is now confirmed a **one-of-three** capability (claude alone), with **two** separately-trained models unable to compose two non-commuting moves on demand in this instrument. The thesis (read splits as splits; never average) stands, strengthened. Sentences below that said "two-model" / "both panel models" have been updated to the three-model panel; the "thing to watch" widens from *claude > gemini* to *claude > {gemini, gpt}*. Trigger (a) stays **live** for any *further* model that might compose.
 >

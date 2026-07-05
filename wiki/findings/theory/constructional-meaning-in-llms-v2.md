@@ -11,7 +11,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-07-04
-updated: 2026-07-04
+updated: 2026-07-05
 links:
   - rel: supersedes
     target: theory/constructional-meaning-in-llms
@@ -50,6 +50,10 @@ links:
   - rel: depends-on
     target: result/cxnli-distinction-divergence-v1
   - rel: depends-on
+    target: result/aann-behavioral-gradient-rep2
+  - rel: depends-on
+    target: result/lexical-sense-gradience-rep2
+  - rel: depends-on
     target: theory/shadow-depth-table-v1
   - rel: depends-on
     target: theory/lexicon-grammar-continuum
@@ -83,6 +87,18 @@ links:
 
 # Theory (second edition): evidence for constructional meaning in LLMs
 
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** Two single-run flags this edition
+> carries were discharged after it was written, one by a replication this page's own trigger
+> named: **(i)** the AANN gradient's cross-date replication landed s178
+> ([`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md): 408
+> fresh disjoint items on the byte-frozen instrument, gradient replicates 3/3, cell ρ
+> 0.692/0.702/0.735 — the "second-date AANN gradient replication" trigger below **fired**, so the
+> Tier-2 section's single-run flag is dropped; the noun-class dependence and gpt's Tier-0 18/24
+> wobble are carried on the claim); **(ii)** the lexical sense-gradience single-run flag was
+> discharged s181 ([`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md):
+> replicates 3/3, pair-disjoint — direction/agreement core only). Inline "single-run" phrasings
+> below are bracket-annotated where they occur; the position itself is unchanged.
+
 ## The theoretical object
 
 This is the clean second edition of the project's first synthesis page, forced by the
@@ -113,12 +129,15 @@ The first edition ran 2026-05-28 → 2026-06-21. It was written before any probe
 own design had run, and it grew by accretion as roughly two dozen results landed. Three things now
 exist that did not exist in June, and this edition is organized around them:
 
-1. **A claims layer.** Four results lines have been promoted, by cross-session adversarial review,
+1. **A claims layer.** Five results lines have been promoted, by cross-session adversarial review,
    to typed `claim` pages: [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md),
    [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md),
-   [`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md), and (at the lexical
-   grain) [`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md). The ladder's
-   rungs are now occupied by claims, not only by single results.
+   [`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md), (at the lexical
+   grain) [`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md), and — same
+   session as this edition, methodological rather than a beater —
+   [`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md). The
+   ladder's rungs are now occupied by claims, not only by single results. *("Four" → "Five"
+   corrected s183; the fifth was promoted the session this edition was written.)*
 2. **Powered magnitudes with intervals.** The A2a powered re-runs attached what the founding-N
    runs could not: the CC construction-isolation gap of ≈87 pp (136 fresh items, s169) and the
    dative's per-model shifts at N=100 (3/3 CONFIRM with a ~9× spread, s175).
@@ -260,7 +279,8 @@ promoted claims now occupy this rung:
   shadow controls — a Zipf word-frequency partial (partial ρ 0.66–0.74) and a noun-class marginal
   guard. This is the rung's discipline made concrete: a Tier-2 gradient is evidence only *if*
   frequency is controlled; here it does not collapse. The claim is deliberately **single-run
-  scoped** — no cross-date replication of the overall positive exists.
+  scoped** — no cross-date replication of the overall positive exists. *(Since discharged for the
+  graded gradient: rep2, s178 — see the update box at the head of this page.)*
 
 Tier 2 is where Lyre's graded framing does real work: the prediction is monotonic correspondence
 with a human gradient, not a hard flip.
@@ -337,7 +357,7 @@ shadow? — runs at the word grain, where the promoted
 shadow-beater: on 200 DWUG pairs the panel's graded sense-relatedness rating rank-tracks the human
 DURel median (ρ 0.60–0.83, in/above the human inter-annotator range ≈0.69) and survives partialling
 the model's own topic-similarity rating (partial ρ 0.50–0.75) — single-run, direction/agreement
-scope. It bears on *this* page only as the demonstration that the shadow-beating test is not
+scope *(single-run flag since discharged, s181 rep2 — see the update box at the head of this page)*. It bears on *this* page only as the demonstration that the shadow-beating test is not
 construction-specific: the cline has a measured beater at both grains. Depth, the hard-direction
 nulls (polysemy/homonymy discreteness), and the coercion bridge live on
 [`theory/lexicon-grammar-continuum`](lexicon-grammar-continuum.md).
@@ -438,8 +458,10 @@ the thin, per-model reading of inferential role the continuum page argues).
   channel/instrument control first (the `let-alone` lesson).
 
 It also forbids stating a promoted claim above its scoped strength: the dative's 3/3 is not
-uniformity (~9× spread); the AANN gradient positive is single-run and its held-out generalization
-noun-class-dependent (temporal negative — never "generalizes to novel adjectives" unqualified);
+uniformity (~9× spread); the AANN gradient positive is single-run *(flag since discharged, s178
+rep2)* and its held-out generalization
+noun-class-dependent (temporal negative — never "generalizes to novel adjectives" unqualified;
+this caveat stands after the replication);
 the AANN Tier-4 is convergent in one model; the CC's ceiling caution travels with its ≈87 pp.
 
 ## Open tensions
@@ -479,7 +501,9 @@ bet; it registers no new falsifiable bet of its own.
   CC isolation gap fails on a fresh powered set → the corresponding rung placement is withdrawn
   (the shadow-depth table names the same trigger).
 - **A second-date AANN gradient replication** lands (the scoped claim's named strengthening) →
-  the Tier-2 section drops its single-run flag.
+  the Tier-2 section drops its single-run flag. **→ FIRED s178**
+  ([`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md));
+  discharged via the s183 update box at the head of this page.
 
 The first edition's genuinely-open triggers that this edition retires as *discharged*: the AANN
 logprob blocker (resolved by the ratified behavioral instrument, run and promoted), the lexical

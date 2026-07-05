@@ -10,7 +10,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: source/janssen-zimmermann-montague-semantics-sep
@@ -90,7 +90,7 @@ The extensional shadow is not the homomorphism. Here is the gap, stated carefull
 
 > "These narrow the distributional-only explanation; they do not eliminate it" ([`concept/compositionality`](../../base/concepts/compositionality.md), §4).
 
-That word **narrow** is the whole point of "asymptote." Each new probe — a fresh held-out item set, a deeper composition chain, a new coercion construction — excludes a further band of non-homomorphic alternatives. The deflationary "richer distributional shortcut" is pushed into an ever-smaller corner. The project's evidence ladder ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)) is built to climb exactly this gradient: its Tier-3 generalization rung is "the project's main defense against memorization," and each rung is "harder to fake with distributional structure alone." This is monotone approach. It is also genuine progress: a run is *worth doing* because it moves the question.
+That word **narrow** is the whole point of "asymptote." Each new probe — a fresh held-out item set, a deeper composition chain, a new coercion construction — excludes a further band of non-homomorphic alternatives. The deflationary "richer distributional shortcut" is pushed into an ever-smaller corner. The project's evidence ladder ([`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)) is built to climb exactly this gradient: its Tier-3 generalization rung is "the project's main defense against memorization," and each rung is "harder to fake with distributional structure alone." *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) — cited here as the edition this essay engaged.)* This is monotone approach. It is also genuine progress: a run is *worth doing* because it moves the question.
 
 **But the approach never arrives, for two compounding reasons.** First, the finite-probe underdetermination above never empties: there is always a next non-homomorphic function that agrees on everything tested so far, so no finite ladder reaches "is a homomorphism" with certainty — only "has survived every distributional alternative we could build." Second, and deeper, "realizes a homomorphism" is a claim about the *mechanism* — the form of the computation — and the project's standing position is that behavior does not settle mechanism. [`essay/undischargeable-negative`](undischargeable-negative.md) holds that the question of what a model *can* or *is* doing internally is not closable from behavior alone; the homomorphism-vs-dense-graph question is that question in its compositional form. Even a model that matched a homomorphism's extension *everywhere* would leave open whether the matching map is computed homomorphically or is an extensionally-equivalent non-homomorphic function — a question behavior is the wrong instrument to ask.
 

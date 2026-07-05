@@ -12,7 +12,7 @@ meaning-senses:
   - inferential
   - human-comparison
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 resolved-anchor-for: "caused-motion, conative, way-construction, comparative-correlative (ratified by Tom 2026-05-29)"
 links:
   - rel: depends-on
@@ -144,6 +144,23 @@ More generally the dataset can ground:
   conative 78 / intransitive-motion 69 / let-alone 24 / resultative 66 / way-manner 33 =
   390; balanced 130/130/130 across the three labels), sha-pinned in the run's
   `stimuli-manifest.json` (upstream commit `82699473`).
+- **2026-06-20** — the let-alone follow-up line (three probes, same day, chasing the answer-key
+  run's single cross-model failure): [`result/scivetti-let-alone-working-surface-v1`](../../findings/results/scivetti-let-alone-working-surface-v1.md)
+  (the near-chance let-alone failure is largely an **output-channel artifact** — 2 of 3 models
+  reach the ≈0.90 human baseline once given a working surface; the weakest model largely declines
+  the surface and does not recover), [`result/scivetti-let-alone-forced-decomposition-v1`](../../findings/results/scivetti-let-alone-forced-decomposition-v1.md)
+  (forcing the weakest model to actually use the surface partly closes its gap but leaves a
+  below-baseline residual), and [`result/scivetti-let-alone-powered-rerun-v1`](../../findings/results/scivetti-let-alone-powered-rerun-v1.md)
+  (the residual confirmed at higher N; ~12% temp-0 label stochasticity exposed as the new binding
+  limit).
+- **2026-06-21** — [`result/scivetti-let-alone-repeated-runs-v1`](../../findings/results/scivetti-let-alone-repeated-runs-v1.md):
+  five repeated temp-0 runs pin the jitter — gpt's below-baseline residual is robust to
+  run-to-run noise (every draw < 0.90); "gemini is deterministic" softens to "gemini is most
+  stable".
+- **2026-07-04 (session 177)** — the line consolidated into
+  [`claim/output-channel-working-surface`](../../findings/claims/output-channel-working-surface.md)
+  (`status: supported`, promote-scoped, cross-session adversarial review), **human-anchored to
+  this dataset's ≈0.90 native-speaker baseline** (`anchor: resource/scivetti-2025-cxnli-dataset`).
 
 ## Pointer for next visit
 

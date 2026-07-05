@@ -10,7 +10,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-07-05
 links:
   - rel: anchors
     target: resource/scivetti-2025-cxnli-dataset
@@ -24,6 +24,8 @@ links:
     target: essay/output-channel-confound
   - rel: depends-on
     target: essay/undischargeable-negative
+  - rel: supports
+    target: claim/output-channel-working-surface
 ---
 
 # Result: repeated-run temp-0 jitter measurement (let-alone forced-decomposition)
@@ -239,6 +241,10 @@ hi 0.753 < 0.90; every one of five runs < 0.90), pinning the magnitude the sourc
 
 `status: proposed`, `contingent-on: []` (the governing operationalization decision and the Scivetti
 anchor are both ratified). What is `proposed` is the project's reading. Promotion past `proposed`
-awaits Tom's review. This result **discharges** the trigger-(g) / trigger-(a) repeated-run redirect:
+awaits Tom's review. *(Governance note, s183: since the autonomous-era amendment of 2026-06-12 —
+[`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous cross-session adversarial
+review; Tom holds a standing override. The promotion in fact landed:
+[`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md), s177.)*
+This result **discharges** the trigger-(g) / trigger-(a) repeated-run redirect:
 the jitter is pinned (near-chance-concentrated, ceiling-protected, model-specific), and gpt's
 residual is established robust to it. No further repeated-run power is owed on this construction.

@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-14
-updated: 2026-06-14
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/relational-history-perturbation-v3
@@ -46,6 +46,18 @@ links:
 > frozen PREREG:
 > [`PREREG.md`](../../../experiments/runs/2026-06-14-relational-history-perturbation-v4/PREREG.md).
 > **`anchor: internal-contrast-only`** (within-model contrast; no human-comparison claim).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The "stays `proposed`" reading below
+> was overtaken two days later:
+> [`conjecture/commutative-convention`](../conjectures/commutative-convention.md) was **falsified
+> and retired 2026-06-16** in the regime that can test it —
+> [`result/relational-spontaneous-recency-a`](relational-spontaneous-recency-a.md) (with
+> [`result/relational-stamp-comprehension-b`](relational-stamp-comprehension-b.md) supplying the
+> stamp-comprehension gate) found both models recovering the term by most-recent binding,
+> spontaneously, at ceiling; the positive was promoted →
+> [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md).
+> *(Back-annotation: v4's own position-vs-chronology numbers stand unchanged; they localized the
+> confound the A/B pair then resolved.)*
 
 ## What v4 changed, and why it is still the same instrument
 

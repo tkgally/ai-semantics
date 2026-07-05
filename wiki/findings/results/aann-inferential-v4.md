@@ -11,7 +11,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-07-05
 links:
   - rel: refines
     target: conjecture/aann-construction
@@ -31,6 +31,8 @@ links:
     target: open-question/distributional-vs-inferential-constructional
   - rel: supports
     target: open-question/instrument-sensitivity-constructional-inference
+  - rel: supports
+    target: claim/preference-commitment-dissociation-aann-specific
 ---
 
 # Result: AANN inferential probe v4 — PARTIAL (a real construction shift, convergent in one model)
@@ -45,6 +47,14 @@ links:
 > (unification = AANN-licensed) is **EXPERT-STIPULATED** (Solt 2007 unit-coercion; Dalrymple &
 > King 2019; Bylinina & Nouwen 2018, named not quoted, not in-repo), a scoring key, **not** human
 > judgment data.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The "small N (23 base items), single
+> run, single date" caveat below was discharged by the powered replication
+> [`result/aann-inferential-v6`](aann-inferential-v6.md) (2026-06-14; 40 fresh held-out adjectives,
+> identical instrument — the PARTIAL replicates cell-for-cell). The dissociation this page surfaced
+> (paraphrase preference without NLI commitment) was later promoted, with its conative
+> non-reproduction, to [`claim/preference-commitment-dissociation-aann-specific`](../claims/preference-commitment-dissociation-aann-specific.md).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 The second attempt at the **inferential half** of [`conjecture/aann-construction`](../conjectures/aann-construction.md),
 redesigned to remove the named cause of the v3 null. v3
@@ -193,7 +203,9 @@ Recomputing the paraphrase double contrast excluding it changes no model's categ
   models** and **at the paraphrase level in the other two**. It is **not** SUPPORTED outright (no
   ≥2-model convergence) and **no longer a clean null**. Any reading of the conjecture's inferential
   clause as established across the panel stays unsupported.
-- Within the evidence ladder of [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md),
+- Within the evidence ladder of [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
+  *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  — cited here as the edition this page engaged.)*,
   this is the AANN line's first **Tier-4 (inference-licensing)** signal that clears its bar — but
   only for gpt-5.4-mini, and with the standing caution that a forced-choice paraphrase preference is
   weaker evidence than a converging NLI + agreement shift. It reinforces the recurring AANN pattern

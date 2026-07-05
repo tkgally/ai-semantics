@@ -12,7 +12,7 @@ status: proposed
 anchor: resource/wordnet-sense-inventory
 contingent-on: []
 created: 2026-05-31
-updated: 2026-05-31
+updated: 2026-07-05
 links:
   - rel: anchors
     target: resource/wordnet-sense-inventory
@@ -41,6 +41,18 @@ links:
 > mismatches). The anchor decision [`decisions/resolved/multimodal-image-anchor`](../../decisions/resolved/multimodal-image-anchor.md)
 > was **ratified 2026-05-31 (Tom: "A stands")** — `contingent-on: []`; the null stands on its
 > WordNet sense-inventory anchor, scoped to the binary same/different-synset separation.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The grounding axis moved after this
+> page: [`result/vwsd-grounding-headroom-v1`](vwsd-grounding-headroom-v1.md) (session 100) saturated
+> its caption baseline and was inconclusive on the gating prediction, then
+> [`result/vwsd-grounding-headroom-v2`](vwsd-grounding-headroom-v2.md) (session 121) returned the
+> first confirming-direction positive (gated-rescue shape, 3/3 models in direction), and
+> [`conjecture/distributional-saturation-grounding-headroom`](../conjectures/distributional-saturation-grounding-headroom.md)
+> was promoted `tested` (gating shape only) in session 130. The fine-polysemy magnitude was
+> documented un-instrumentable on current open resources —
+> [`open-question/grounding-magnitude-instrument`](../open-questions/grounding-magnitude-instrument.md)
+> (an externally-released graded-image set is the only route).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## One-line finding
 

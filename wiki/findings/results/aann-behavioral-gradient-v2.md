@@ -10,7 +10,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-07-05
 links:
   - rel: supports
     target: conjecture/aann-construction
@@ -20,9 +20,22 @@ links:
     target: claim/formal-competence-aann-ceiling
   - rel: refines
     target: theory/constructional-meaning-in-llms
+  - rel: supports
+    target: claim/aann-behavioral-gradient
 ---
 
 # Result: AANN behavioral gradient probe v2 — SUPPORTED
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The follow-up this page's caveat 2
+> asked for landed: [`result/aann-temporal-heldout-v2b`](aann-temporal-heldout-v2b.md) widened the
+> temporal held-out cells 5× and found the stratum uniformly negative for all three models,
+> sharpening the caveat into a finding (held-out productivity is noun-class-dependent). The line was
+> promoted in session 176 to [`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)
+> (scoped to Tier-2 gradient tracking), and the cross-date replication
+> [`result/aann-behavioral-gradient-rep2`](aann-behavioral-gradient-rep2.md) (session 178; 408 fresh
+> items drawn disjoint from this run) replicated the anchored gradient 3/3 with overlapping CIs,
+> discharging the claim's single-run caveat for the graded gradient.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 The first run of the AANN probe, under the behavioral instrument ratified 2026-06-12
 ([`decisions/resolved/aann-behavioral-operationalization`](../../decisions/resolved/aann-behavioral-operationalization.md),

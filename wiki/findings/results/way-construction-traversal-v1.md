@@ -10,7 +10,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 links:
   - rel: supports
     target: conjecture/way-construction
@@ -63,7 +63,7 @@ gpt-5.4-mini's only way-form non-affirms are **hum, eat, chat** (NLI) and **hum,
 
 1. **The way-construction's path-traversal entailment is drawn off the construction, above the ratified bar by all three models.** With the (non-motion) verb held constant and toggled against a plain locative, all three models read the self-motion inference from the *construction*, not the verb. This **confirms** the conjecture at its stated bar — the conjecture's three predictions (prediction 1 — way ≥70%; prediction 2 — gap ≥30 pp vs. controls; prediction 3 — robust to verb semantics, i.e. anti-motion holds) are all met, and the *added* over-generalization guard (idiomatic *way* → low) — not one of the conjecture's stated predictions but a design-level robustness check — also passes.
 2. **It is the construction, not the surface "*way*" string.** The idiomatic guard (surface *POSS way* + non-spatial goal) is at 0% for all models, and the location control near floor — two independent ways the result rules out a surface-string heuristic. Together with ctrl-motion at ceiling (the indicator fires when motion is lexical), the contrast is clean.
-3. **The set of three argument-structure probes now sketches a consistent picture.** Across conative (cancel an entailment — harder, instrument-fragile), caused-motion (add a causation-of-motion entailment — ceiling), and now way (add a self-motion entailment — above bar, near ceiling): current decoders **license a construction-contributed inference readily** and **suppress a lexically-default one less readily**. The way-construction is an "add" case and patterns with caused-motion (easy direction), consistent with the asymmetry flagged in [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md).
+3. **The set of three argument-structure probes now sketches a consistent picture.** Across conative (cancel an entailment — harder, instrument-fragile), caused-motion (add a causation-of-motion entailment — ceiling), and now way (add a self-motion entailment — above bar, near ceiling): current decoders **license a construction-contributed inference readily** and **suppress a lexically-default one less readily**. The way-construction is an "add" case and patterns with caused-motion (easy direction), consistent with the asymmetry flagged in [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md). *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) — cited here as the edition this page engaged.)*
 4. **The one cross-model split is interpretively benign.** gpt-5.4-mini's 4–5 non-affirms are scattered across the manner and activity categories (not a clean verb class); for the *eat/chat/snack* subset a real metaphorical-progress alternative makes CANT_TELL cautious-not-wrong, and it affirms the harder anti-motion items at 100%. The divergence is itself data (charter §6) but does not undercut the confirm.
 
 This places the way-construction alongside the comparative correlative and caused-motion as an upper-ladder **positive at/near ceiling** (Tier 4 inference-licensing, with the Tier-3 anti-motion / frequency-stress control passed).
@@ -93,4 +93,4 @@ This places the way-construction alongside the comparative correlative and cause
 
 ## Status
 
-`status: proposed`. Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []`. Promotion past `proposed` awaits Tom's review. The standing caveat is the ceiling: this confirms the conjecture's prediction but a harder instrument is needed to probe the strength of the underlying competence.
+`status: proposed`. Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []`. Promotion past `proposed` awaits Tom's review. *(Governance note, s183: since the autonomous-era amendment of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous cross-session adversarial review; Tom holds a standing override.)* The standing caveat is the ceiling: this confirms the conjecture's prediction but a harder instrument is needed to probe the strength of the underlying competence.

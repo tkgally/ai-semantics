@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-07-02
-updated: 2026-07-03
+updated: 2026-07-05
 links:
   - rel: refines
     target: theory/lexicon-grammar-continuum
@@ -235,7 +235,13 @@ the targets, and is silent on which model tracks which.
 - **If a shadow-beater fails to replicate.** The parallel needs a beater at each pole. If CC
   covariation or lexical sense gradience failed to replicate — or their shadow-controls (matched
   same-word controls; partialled topic-similarity) turned out not to hold — the "each pole has a
-  beater" half of the structure weakens.
+  beater" half of the structure weakens. **→ FIRED-FOR (both halves):** CC powered s169
+  ([`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md),
+  via [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md));
+  sense-gradience rep2 s181
+  ([`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md), via
+  [`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)) — the beaters replicated
+  rather than failed.
 - **If the graded gate turned out FLAT on re-run** (endorsement insensitive to contradiction strength),
   the "deep shadow, not computed split" gloss on the accommodation corner would need re-stating —
   though a flat gate is *also* a distributional story (pure contradiction-detection), so it would not

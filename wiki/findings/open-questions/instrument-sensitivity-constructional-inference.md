@@ -8,7 +8,7 @@ meaning-senses:
   - functional-vs-formal
 status: open
 created: 2026-05-29
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/conative-minimal-pair-divergence-v1
@@ -38,7 +38,7 @@ links:
 > 2. **A general pragmatics/entailment NLI-vs-FC effect.** [`result/caused-motion-near-miss-v2c`](../results/caused-motion-near-miss-v2c.md) found a **second, non-model-specific** source: the caused-motion causation inference is genuinely form-keyed (construction 100% affirm vs near-miss withheld), but the construction-vs-near-miss gap is **smaller under NLI than forced-choice uniformly across all three models** — NLI admits the Gricean post-hoc causal reading that forced-choice's strict-entailment framing withholds. This is a content-level instrument effect tracking the pragmatics/entailment boundary, distinct from the gpt-specific cracks.
 > 3. **A pervasiveness bound.** [`result/instrument-disagreement-reanalysis-v1`](../results/instrument-disagreement-reanalysis-v1.md) (read-only, $0) turned the anecdote into a descriptive statistic across two existing runs: **large instrument disagreement (50.0 pp) is confined to the single gpt-5.4-mini × conative cell**; the other eight cells (claude/gemini × conative, all three models × both add-direction constructions in coercion-v2) show ≤20.8 pp, mostly ≤10 pp. So instrument fragility is **not pervasive** in this panel — though the add-direction cells' agreement is partly ceiling/floor compression, not demonstrated invariance (the re-analysis is descriptive, no significance test).
 >
-> Net: instrument sensitivity now has **two identified sources** — a model-specific logical-slip mechanism (gpt-5.4-mini's excluded-middle over-inference, FC-localized) and a general NLI-vs-FC pragmatics/entailment effect (NLI more permissive of Gricean inference, uniform across models) — and the re-analysis **bounds its pervasiveness** to one model × construction cell at the large end. The page **stays `open`**: it is a standing methodological question that conditions how every Tier-4 result is read, and the "serious answer" below (a dedicated cross-instrument × cross-construction design with a pre-registered primary instrument and an operationalization gate queued for Tom) has **not** been run — these three results motivate and partially characterize the question, they do not close it.
+> Net: instrument sensitivity now has **two identified sources** — a model-specific logical-slip mechanism (gpt-5.4-mini's excluded-middle over-inference, FC-localized) and a general NLI-vs-FC pragmatics/entailment effect (NLI more permissive of Gricean inference, uniform across models) — and the re-analysis **bounds its pervasiveness** to one model × construction cell at the large end. The page **stays `open`**: it is a standing methodological question that conditions how every Tier-4 result is read, and the "serious answer" below (a dedicated cross-instrument × cross-construction design with a pre-registered primary instrument and a queued operationalization gate — *since the 2026-06-12 amendment, gates are ratified by autonomous cross-session review, [`PROJECT.md`](../../../PROJECT.md) §12.3, not by Tom*) has **not** been run — these three results motivate and partially characterize the question, they do not close it.
 >
 > **Update (2026-06-13, fifth session) — the AANN inferential v4 produces the *largest* FC-vs-NLI
 > disagreement in the record, and it is *not* a ceiling artifact.**
@@ -109,6 +109,17 @@ links:
 > instrument in graded, model-specific ways — now sharpened on the output-channel axis to a *partial* effect.
 > The page **stays `open`**.
 
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The output-channel mechanism the two
+> boxes above track (sessions 59–60) has since been consolidated into a promoted claim:
+> [`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md) (session 177,
+> cross-session adversarial promotion review) — a forced single-token channel can mask a
+> serial-inference capability, with the format-only flip replicated across **two task families**
+> (relational order-composition; let-alone scalar-construction NLI) and **three geometry axes**
+> (operation pair / alt-pair, grid size K=6, composition depth / three-move), and a **boundary
+> control** carried (the bridging-context commitment null survives the identical channel control, so
+> the effect is computation-specific, not universal).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
+
 ## The question
 
 When we probe whether an LLM tracks a construction's characteristic inference, the measured competence can depend on *how we ask*. A binary or 3-way NLI entailment judgment ("does sentence A entail sentence B?") and a forced-choice elicitation ("based only on the sentence, did the event complete? YES / NO / CANT_TELL") are both ratified operationalizations in this project, running in parallel on the same frozen items — yet they can return materially different answers for the same model on the same construction.
@@ -159,7 +170,7 @@ One interpretation of instrument-sensitivity is that it marks shallow or `functi
 A design that treats **per-model instrument-disagreement** as the dependent variable rather than a nuisance. The key features:
 
 1. **Cross-instrument × cross-construction matrix.** Run NLI × forced-choice (× possibly a third instrument, e.g. cloze/continuation) on the *same* frozen items across the *same* panel, measuring instrument-disagreement score per model per construction — not just reporting gaps as a by-product of a conjecture test.
-2. **Pre-register which instrument is primary.** Fix this before seeing results — it is an operationalization gate (charter §8 and the project's `constructional-divergence-operationalization` precedent). Choosing the "winning" instrument post-hoc would re-import the confound the question is about. Any new operationalization gate would be queued for Tom, not self-resolved.
+2. **Pre-register which instrument is primary.** Fix this before seeing results — it is an operationalization gate (charter §8 and the project's `constructional-divergence-operationalization` precedent). Choosing the "winning" instrument post-hoc would re-import the confound the question is about. Any new operationalization gate would be queued as a decision — since 2026-06-12, ratified by autonomous cross-session review; [`PROJECT.md`](../../../PROJECT.md) §12.3.
 3. **Check concentration.** Is instrument-disagreement concentrated in particular *models* (gpt-5.4-mini in both results so far) or particular *constructions* (cancel-direction / conative so far)? The cancel-direction constructions (conative, where the construction must suppress a lexically-default entailment) appear harder and more instrument-sensitive than add-direction constructions (caused-motion, way, comparative-correlative — all near ceiling on both instruments). Whether this is a cancel/add structural asymmetry or a difficulty-level confound is the first hypothesis to check.
 4. **Check whether instrument-disagreement is itself systematic.** If NLI consistently under-states competence relative to forced-choice for certain model × construction combinations, that is a finding about the NLI framing's default-entailment pull (the conative collapse looks like NLI pulling toward a "yes" default when the verb's typical reading is completion). If the direction of disagreement varies, a framing-noise story is more plausible than a systematic bias story.
 
@@ -183,5 +194,5 @@ The current evidence base (two own-design probes, one stark cross-instrument div
 
 - The conative and coercion-v2 harnesses already run both instruments; a re-analysis summarizing per-model, per-construction instrument-disagreement as a named statistic (e.g. |NLI gap − FC gap|) could be done as a read-only pass before any new stimuli are generated.
 - The most informative new probe would be a **harder** cancel-direction construction paired with a matched add-direction construction, run on both instruments simultaneously, with the primary instrument pre-registered. The add/cancel asymmetry hypothesis (cancel-direction is harder *and* more instrument-fragile) is the first thing to test.
-- Any new operationalization gate for this question follows the same discipline as `constructional-divergence-operationalization`: write and freeze the design; queue the primary-instrument choice for Tom before running; do not self-resolve.
+- Any new operationalization gate for this question follows the same discipline as `constructional-divergence-operationalization`: write and freeze the design; queue the primary-instrument choice as a `wiki/decisions/open/` entry before running *(ratified cross-session per [`PROJECT.md`](../../../PROJECT.md) §12.3 since 2026-06-12; Tom's standing override outranks)*; never self-resolve in the session that opens it.
 - This question does not block any current work — the existing result pages report both instruments in full, so instrument-disagreement is already in the record. The gap is that it has no typed home to spawn a dedicated loop turn.

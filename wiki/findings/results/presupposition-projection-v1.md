@@ -9,7 +9,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/presupposition-projection-vs-entailment
@@ -37,6 +37,18 @@ entailment** on the same base (the semantics literature's "hallmark of presuppos
 [`experiments/runs/2026-07-01-presupposition-projection/`](../../../experiments/runs/2026-07-01-presupposition-projection/README.md);
 frozen [`PREREG.md`](../../../experiments/runs/2026-07-01-presupposition-projection/PREREG.md),
 manifest sha `e3a04cdd…`.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** Later artifacts on this line:
+> [`result/conditional-projection-rescue-v1`](conditional-projection-rescue-v1.md) (session 159,
+> ROBUST-COLLAPSE — the conditional collapse replicated exactly and resisted the rescue framings);
+> [`result/projection-trigger-inventory-v1`](projection-trigger-inventory-v1.md) (session 160,
+> MIXED) with its $0 per-family decomposition
+> [`result/projection-trigger-inventory-family-decomposition-v1`](projection-trigger-inventory-family-decomposition-v1.md)
+> (session 161); and [`result/presupposition-doppelganger-control-v1`](presupposition-doppelganger-control-v1.md)
+> (session 173: BEATS-DOPPELGANGER pooled 3/3, but the under-licensed outcome — the residual is
+> keyed to the trigger word-form and surface-cue-reconstructable; `anchor: internal-contrast-only`
+> ratified s174). *(Back-annotation added by a maintenance pass; nothing measured or decided on
+> this page changes.)*
 
 **One-line finding.** The pre-registered verdict is **PROJECTION**: **2 of 3 models** (claude-sonnet-4.6,
 gemini-3.5-flash) pass the plain-frame sanity floor **and** endorse the presupposition under the
@@ -136,7 +148,7 @@ aspectual family gives the widest separation.
   behaves differently from a matched entailment under embedding: it survives negation and (mostly)
   questions where the entailment is cancelled. This is a **within-model behavioral reproduction of the
   projection asymmetry** the semantics literature documents — read off forced-choice endorsements, at
-  `internal-contrast-only` strength (pending ratification).
+  `internal-contrast-only` strength.
 - **What the data do NOT support.** (i) No human comparison — the models are not shown to match human
   projection judgments (none were measured). (ii) No mechanism claim — endorsing a projected inference
   is text-consistent-with projection, not evidence the model *computes* a presupposition/assertion

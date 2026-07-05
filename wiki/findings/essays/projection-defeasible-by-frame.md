@@ -5,10 +5,10 @@ title: "Projection is defeasible by frame, not by item — a distributional sign
 meaning-senses:
   - inferential
   - distributional
-status: draft
+status: revised
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/presupposition-projection-v1

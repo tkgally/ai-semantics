@@ -9,7 +9,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/forced-both-lexical-build-attempt-v1

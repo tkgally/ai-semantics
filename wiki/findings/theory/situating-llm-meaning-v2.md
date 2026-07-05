@@ -14,7 +14,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-07-04
-updated: 2026-07-04
+updated: 2026-07-05
 links:
   - rel: supersedes
     target: theory/situating-llm-meaning
@@ -82,6 +82,17 @@ links:
 
 # Theory (second edition): situating the project's findings on a philosophical map of meaning
 
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The revision hook below that awaited
+> "the sense-gradience second run that would lift its single-run flag" **fired s181**:
+> [`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md) replicates
+> 3/3 on 200 fresh pair-disjoint DWUG pairs, and the
+> [`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md) single-run flag is
+> discharged for its direction/agreement core (the AANN gradient's counterpart flag had been
+> discharged s178 by [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md)).
+> Inline "single-run" phrasings below are bracket-annotated where they occur. **No cell moves** —
+> exactly as this edition predicted for a replication that lands positive; the map is again
+> better-anchored, not bolder.
+
 > **This is the clean second edition**, forced by the theory-edition rule
 > ([`PROTOCOL.md`](../../../PROTOCOL.md) §3): the first edition
 > ([`theory/situating-llm-meaning`](situating-llm-meaning.md), kept visible as history) had
@@ -133,7 +144,9 @@ review** ([`PROTOCOL.md`](../../../PROTOCOL.md) §3), so the map's fixed points 
 typed `claim` pages rather than single result pages — and two of them carry **powered magnitudes
 with intervals** attached by fresh-item re-runs. That is a real firming of the evidence base. It
 does **not** relocate any cell: every promotion is deliberately *scoped* to exactly what its result
-licenses (two are explicitly single-run-flagged; the AANN one carries a noun-class-dependent
+licenses (two are explicitly single-run-flagged *(both flags since discharged for their scoped
+cores — AANN s178, sense-gradience s181; see the update box at the head of this page)*; the AANN
+one carries a noun-class-dependent
 held-out failure; the dative one displays a ~9× cross-model spread), and none of the five touches
 the three "between/beyond" loci where the synthesis stays negative or silent. The claims layer makes
 the sketch **better-anchored**, not bolder.
@@ -196,7 +209,8 @@ states it with full caveats):
   sense-relatedness rating rank-tracks the human DURel median (Spearman **0.60–0.83**, in or above
   the human inter-annotator range ~0.69) and **survives a topic-similarity partial** (partial ρ|topic
   0.50–0.75) — it beats the distributional shadow, promoted at direction/agreement scope
-  ([`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md), single-run-flagged). The
+  ([`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md), single-run-flagged
+  *(flag since discharged, s181 rep2 — see the update box)*). The
   *distinctive* discrete-regime bet (polysemy vs homonymy as a separate switch) is a **powered null**.
   And whether the model also carries graded *commitment* has **run** → **ungraded commitment, a clean
   null 3/3** ([`result/lexical-bridging-context-v1`](../results/lexical-bridging-context-v1.md)): the
@@ -488,7 +502,8 @@ negatives, and the one positive-side datum is direction-only, magnitude untested
 relational order-sensitivity positive as **constitution** (it is thin latest-binding-wins); (iii)
 **flattening the four loci** — model-internal, referential, grounded, and relational meaning are
 empirically distinct here and the verdicts differ across them; (iv) reading the powered/promoted
-status of the five claims as *panel-uniform competence* — each is scoped (single-run flags, a
+status of the five claims as *panel-uniform competence* — each is scoped (single-run flags *(since
+discharged — see the update box)*, a
 noun-class-dependent held-out failure, a ~9× cross-model spread), and the promotions fix the
 *yardstick*, never the *result*; (v) treating the philosophical placements as results — they are
 interpretation over the fixed points, and the *fixed points* are what a future run may revise.
@@ -515,7 +530,8 @@ exceeds ~3 update boxes) when any still-soft cell moves:
   argues against the latter);
 - a **new controlled grammatical or lexical beater** lands, or one of the five promoted claims is
   contested, retired, or gains/loses a cross-date replication (e.g. the sense-gradience second run
-  that would lift its single-run flag);
+  that would lift its single-run flag **→ landed s181, flag lifted — see the update box**; the
+  hook stays live for the other named events);
 - the **form-ceiling-can-wobble-while-the-graded-gradient-holds** observation (the AANN cross-date
   wrinkle) is either replicated into a placeable regularity or shown to be occasion-specific noise —
   the one genuinely new seed this edition records without yet placing.

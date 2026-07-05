@@ -63,6 +63,16 @@ links:                      # typed links to other pages (see §Typed links)
 
 `base/` pages use the same shape; `meaning-senses` is recommended but not required there.
 
+**Essay status discipline** (documented 2026-07-05, s183, from corpus practice — the dominant
+convention made explicit): front-matter `status:` is authoritative, and the opening blockquote's
+first line restates it with the original dates kept visible (e.g. `**Status: revised (drafted
+2026-06-20; revised 2026-06-23 …)**`). A dated in-page Revision/Update block that **changes,
+scopes, or corrects content** ⇒ `status: revised`; a pure-confirmation trigger annotation may
+leave `draft`. A fired trigger gets its `→ FIRED …` annotation **at the trigger itself** (not
+only in a revision block). `updated:` equals the date of the newest dated change. The two July
+presupposition essays' blockquote-free **Thesis.**-plus-revision-log opening is a blessed
+variant.
+
 ## Typed links
 
 Use only these relation strings in `links:` and in inline prose where typing matters:
@@ -72,8 +82,20 @@ Use only these relation strings in `links:` and in inline prose where typing mat
 - `refines` — page A is a sharpening of B.
 - `depends-on` — page A presupposes B (resource, anchor, or earlier claim).
 - `operationalizes` — page A turns construct B into an indicator.
-- `anchors` — page A is the human resource grounding B (only `resource` → `claim/result`).
+- `anchors` — page A declares B as the human resource grounding it (used **on** the
+  `claim`/`result`/`conjecture`/`open-question` page, **targeting** a `resource` — corrected
+  2026-07-05 s183: this line previously stated the reverse direction, contradicting universal
+  practice and what `senselint.py` check 4 actually enforces).
 - `supersedes` — page A replaces B (for theory revisions).
+
+**Edition citations** (documented 2026-07-05, s183). When a theory page is superseded (new `-v2`
+page with a `supersedes` link; old page banner + `status: superseded`), inbound references are
+**not** mass-retargeted: quotes and historical engagements keep citing the edition they quote —
+the v1 stays a legitimate citation target for provenance, and its banner routes readers to the
+live edition. Only prose that presents the superseded edition **as the current position** gets a
+one-time bracketed edition pointer at first use (`*(superseded sNNN by … — cited here as the
+edition this page engaged)*`). Front-matter links to the old edition stay as historical graph
+edges.
 
 A `claim` or `result` without at least one `anchors` link to a `resource` is a defect unless **either** (a) explicitly marked `anchor: pending` with a `wiki/decisions/open/` entry it names in `contingent-on:`, **or** (b) explicitly marked `anchor: internal-contrast-only` — a ratified terminal declaration that the result makes **no human-comparison claim** (its force is a within-model contrast), so no resource anchor is required. The terminal state (b) is for results ratified as internal-contrast-only (introduced 2026-05-31 with `decisions/resolved/conflicting-cue-human-anchor`, ratified by Tom; from 2026-06-12 such ratifications follow the autonomous cross-session procedure, `PROJECT.md` §12.3); use it only after such ratification, never to dodge a genuine human-anchor obligation. `senselint.py` check 4 enforces all three states.
 

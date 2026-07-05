@@ -9,7 +9,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 links:
   - rel: supports
     target: claim/constructional-divergent-form-generalization-gap
@@ -97,4 +97,4 @@ The two own-design results this session point in **opposite directions, consiste
 
 ## Status
 
-`status: proposed`. Numbers reproducible from the committed code + `raw/results.json` against a local Scivetti clone. What is `proposed` is the project's reading; `contingent-on: []` (the governing operationalization decision is ratified and the result uses only aggregate/answer-key bearing). Promotion past `proposed` awaits Tom's review and, ideally, the project's *own* minimal-pair conative probe (the most consistent signal here) to corroborate the construction-specific locus.
+`status: proposed`. Numbers reproducible from the committed code + `raw/results.json` against a local Scivetti clone. What is `proposed` is the project's reading; `contingent-on: []` (the governing operationalization decision is ratified and the result uses only aggregate/answer-key bearing). Promotion past `proposed` awaits Tom's review and, ideally, the project's *own* minimal-pair conative probe (the most consistent signal here) to corroborate the construction-specific locus. *(Governance note, s183: since the autonomous-era amendment of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous cross-session adversarial review; Tom holds a standing override.)* *[Update, s183: the corroborating probe ran the same day (2026-05-29) — [`result/conative-minimal-pair-divergence-v1`](conative-minimal-pair-divergence-v1.md) corroborated the construction-specific locus (gpt-5.4-mini again the weakest conative reader) and refined the collapse reading: with verb held constant the panel partly tracks the conative's non-completion contrast, so the collapse here partly reflects the adversarial difficulty of Scivetti's distinction items, not a blanket inability to read the conative.]*

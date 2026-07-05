@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/relational-order-composition-c-worked-example
@@ -30,6 +30,8 @@ links:
     target: essay/capability-split
   - rel: refines
     target: concept/relational-meaning
+  - rel: supports
+    target: claim/output-channel-working-surface
 ---
 
 # Result: execution-format witness-seeking re-run — a WITNESS; a working surface flips gemini and gpt to RESPECTS-ORDER

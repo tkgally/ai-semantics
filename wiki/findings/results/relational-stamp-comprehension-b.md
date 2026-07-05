@@ -9,7 +9,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/relational-history-perturbation-v4
@@ -33,6 +33,15 @@ links:
 > **not** move [`conjecture/commutative-convention`](../conjectures/commutative-convention.md)
 > off `proposed`. `anchor: internal-contrast-only` (within-model behavioural check over
 > byte-identical content; no human-comparison claim — ratified 2026-06-16).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The Option-A arm this gate earned ran
+> the same day: [`result/relational-spontaneous-recency-a`](relational-spontaneous-recency-a.md)
+> (session 20) found both models recover a reassigned term by its most-recent binding and fired the
+> conjecture's own falsification clause —
+> [`conjecture/commutative-convention`](../conjectures/commutative-convention.md) was retired
+> (FALSIFIED, 2026-06-16) and the positive promoted to
+> [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## The question (precise)
 

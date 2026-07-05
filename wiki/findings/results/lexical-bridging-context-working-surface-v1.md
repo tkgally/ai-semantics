@@ -11,7 +11,7 @@ status: proposed
 anchor: resource/dwug-usage-graphs
 contingent-on: []
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/lexical-bridging-context-v1
@@ -27,6 +27,8 @@ links:
     target: resource/dwug-usage-graphs
   - rel: depends-on
     target: resource/wic-word-in-context
+  - rel: supports
+    target: claim/output-channel-working-surface
 ---
 
 # Result: working-surface re-run of the lexical bridging-context probe
@@ -47,6 +49,14 @@ links:
 > **GO** (format-only diff confirmed byte-level). **1056 calls (4 temp-0 framings × 88 items ×
 > 3 models; the characterizing-only A dispersion dropped for cost per the instrument's own
 > sanction), $2.412 billed, 0 missing cost, 100% FINAL-tag parse, 0 fallbacks.**
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** gpt's inconclusive non-uptake leg
+> was later closed: [`result/lexical-bridging-context-forced-decomposition-v1`](lexical-bridging-context-forced-decomposition-v1.md)
+> (session 82) forced uptake with a mandatory answer-blind 3-step decomposition (0% bare) and read
+> a weak MIXED/WEAK softening at the jitter floor, and the K=5 byte-identical resolver
+> [`result/lexical-bridging-context-forced-decomposition-repeated-runs-v1`](lexical-bridging-context-forced-decomposition-repeated-runs-v1.md)
+> (session 88) de-noised it to the channel-controlled null, like gemini's.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## Lead with the cap (binding, read first)
 

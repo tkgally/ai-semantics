@@ -9,7 +9,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-06-29
-updated: 2026-06-30
+updated: 2026-07-05
 anchor: pending
 links:
   - rel: depends-on
@@ -84,6 +84,7 @@ This conjecture is **recorded for a future session, not a queued next move.** Th
 1. **Spend-bearing.** It is a panel probe over six relations across three frontier models, so it would draw OpenRouter budget against the USD 5.00/day cap. A pre-flight estimate and the budget discipline of [`PROTOCOL.md`](../../../PROTOCOL.md)/[`config/budget.md`](../../../config/budget.md) apply before any run.
 2. **No adopted human anchor.** The natural anchor is the released **human relata** from Cao's `hancules/ProbeResponses` — 48 MTurk Master annotators' open-ended noun relata over the six relations, "a candidate future `resource`," **not an adopted anchor.** Two concrete blockers stand in the way, both recorded on the source page ([`source/cao-2025-semantic-relation-knowledge`](../../base/sources/cao-2025-semantic-relation-knowledge.md), "Resource / anchor potential"): **"No LICENSE file and no license statement were present in the repo on 2026-06-29"** so license status is "unknown — a blocker for adopting it as an anchor until clarified"; and a **count discrepancy** — "the paper §6.1 states 10,507 probes; the released GitHub README states 10,546." Adopting it is therefore "a separate, cross-session step (PROJECT.md §12.3): it requires fetching and cataloguing `human_responses.json` as its own `resource` page, resolving the missing license, and reconciling the 10,507/10,546 count discrepancy." Until that `resource` page exists with a resolved license, this conjecture's `anchor` stays **pending** and any test of it is **BLOCKED on the anchor**.
 3. **No transfer from the prior art.** Per the Cao source page, that paper's gap-to-human result "**does not transfer**" to the project's panel "without re-running the probe on them" — so the prior-art numbers cannot stand in for a panel result; the probe must actually run on claude-sonnet-4.6 / gpt-5.4-mini / gemini-3.5-flash. Diera & Scherp likewise tested only Pythia/GPT-2/Llama-3.1 and "**No transfer of these representational results to the panel is established**" ([`source/diera-2026-encode-semantic-relations`](../../base/sources/diera-2026-encode-semantic-relations.md), "What it cannot ground").
+4. **No in-repo co-occurrence control data (added 2026-07-05, session 183, from the s182 backlog scout).** The session-182 backlog scout found **no** in-repo Cao or Justeson–Katz co-occurrence data files under `experiments/` — only the source-page summaries — so the contrastive-frame internal-contrast control must be **built from scratch** (co-occurrence from the in-repo SubTLEX-US corpus + WordNet relation pairs; nltk/WordNet and numpy install cleanly, tested s182). The from-scratch design is queued as program item A1b.
 
 No `decisions/open/` entry is opened by this page: it records a bet, it does not make a value-laden methodological choice. The anchor-adoption decision (license + count reconciliation) is the cross-session step that a *later* session must take before this conjecture can be tested.
 

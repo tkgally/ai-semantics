@@ -8,7 +8,7 @@ meaning-senses:
 status: answered
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: refines
     target: conjecture/constructional-monotonicity-asymmetry
@@ -28,7 +28,7 @@ links:
 
 # Open question: add-arm headroom for the monotonicity-generalization battery (design-level feasibility, not a probe)
 
-> **ANSWERED — 2026-06-28 (session 133): headroom DEMONSTRATED; the blocker is discharged.** The frozen calibration this page specified was run — [`result/addarm-headroom-calibration-v1`](../results/addarm-headroom-calibration-v1.md) ([`run record`](../../../experiments/runs/2026-06-28-addarm-headroom-calibration/README.md)). **Both** candidate add constructions clear the frozen headroom gate: **resultative** 10/12 verbs headroom-clean (construction affirm 1.000, control 0.250); **intrans-motion** 7/12 (construction 0.972, control 0.333). The s132 degeneracy worry is **not** borne out — a genuinely non-result-entailing control exists and the resultative add arm has real licensing-no-cue headroom against it. The default-coincidence trap is **real but verb-specific and avoidable**: only the telic/displacement verbs degenerate (resultative `freeze→solid`, `sharpen→sharp`; intrans `drift`, `slide`, `swing`, `bounce`). This **discharges prerequisite (1)** of the s132 review; it does **not** discharge prerequisites 2–4 and **ratifies nothing** (the operationalization decision stays `open`). The design-level analysis below stands as the spec the calibration executed.
+> **ANSWERED — 2026-06-28 (session 133): headroom DEMONSTRATED; the blocker is discharged.** The frozen calibration this page specified was run — [`result/addarm-headroom-calibration-v1`](../results/addarm-headroom-calibration-v1.md) ([`run record`](../../../experiments/runs/2026-06-28-addarm-headroom-calibration/README.md)). **Both** candidate add constructions clear the frozen headroom gate: **resultative** 10/12 verbs headroom-clean (construction affirm 1.000, control 0.250); **intrans-motion** 7/12 (construction 0.972, control 0.333). The s132 degeneracy worry is **not** borne out — a genuinely non-result-entailing control exists and the resultative add arm has real licensing-no-cue headroom against it. The default-coincidence trap is **real but verb-specific and avoidable**: only the telic/displacement verbs degenerate (resultative `freeze→solid`, `sharpen→sharp`; intrans `drift`, `slide`, `swing`, `bounce`). This **discharges prerequisite (1)** of the s132 review; it does **not** discharge prerequisites 2–4 and **ratifies nothing** (the operationalization decision stays `open` *(since ratified s134)*). The design-level analysis below stands as the spec the calibration executed.
 
 > **Why this page exists.** The session-132 independent adversarial review of the
 > operationalization decision

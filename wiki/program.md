@@ -59,7 +59,12 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`conjecture/lexical-relation-shadow-saturation`](findings/conjectures/lexical-relation-shadow-saturation.md)
   in its internal-contrast form now — the corpus-side controls are already in-repo (Justeson &
   Katz; Cao co-occurrence data); only the human-compared form stays blocked on its unlicensed
-  anchor.
+  anchor. **[Corrected s183, per the s182 scout (this page's 2026-07-05 s182 ledger row): the
+  corpus-side control *data* are NOT in-repo — only the source-page summaries are. The
+  internal-contrast control must be built from scratch (WordNet relation pairs + a co-occurrence
+  baseline from in-repo SubTLEX-US or a corpus; `nltk`/WordNet + `numpy` install cleanly), and
+  scoring "recovery" without a human gold is the value-laden crux — so A1b is a fresh design +
+  decision-trail unit first, run only after cross-session ratification.]**
 - **A1c `[x]` Shadow-depth table v1** (s171 → [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md);
   four beater rows — CC covariation, dative info-structure, AANN gradient, sense gradience — each a residual over a
   named distributional control with a 95% CI, plus the antonymy/presupposition corners as marked readings/bets;
@@ -85,7 +90,11 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   unrun probe in the repo: image/vision referents, genuinely unrun ("costs money" — ~$3–4,
   the best purchase available; the grounded cell has a confirming-direction shape datum and an
   untested magnitude). Needs a fresh design + decision trail; the VWSD fluent-channel route is
-  closed and stays closed.
+  closed and stays closed. **[Corrected s183, per the s130 deeper scout + the s182 backlog check
+  ([`open-question/grounding-magnitude-instrument`](findings/open-questions/grounding-magnitude-instrument.md)):
+  the magnitude is UN-INSTRUMENTABLE with in-repo resources, and an in-house build is barred by
+  the no-human-subjects rule — so the realistic A2b unit is a license-checked SCOUT for an
+  externally released graded-image fine-polysemy sense set, not a design/run.]**
 - **A3a `[x]` (scouted s168) Re-anchor the presupposition line to human projection data.** Scout +
   license-check (never adopt unverified): **CommitmentBank**, **MegaVeridicality** (White &
   Rawlins), the **Tonhauser/Degen projection-variability datasets**, **NOPE**. If adoption
@@ -98,11 +107,16 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   ([`decisions/resolved/presupposition-projection-human-anchor`](decisions/resolved/presupposition-projection-human-anchor.md),
   default: adopt none yet, re-scout licenses; CommitmentBank the strongest target *if* a later
   session verifies its terms — the only candidate covering the antecedent-of-conditional).
+  **Ratified s169** (ADOPT-A: adopt none yet; the fresh reviewer reproduced the license null).
 - **A3b `[ ]` BLiMP forced-choice sweep.** The resource sits idle: 67k human-validated minimal
   pairs, CC-BY, already cataloged. A selected-paradigm sweep (determiner–noun agreement near
   AANN; NPIs; quantifiers) is cheap and human-agreement-anchored. Design + critic first.
 - **A3c `[ ]` Lancaster norms $0 re-analysis.** Cross sensorimotor strength with the existing
-  lexical results — flagged by the base survey as available without an API call.
+  lexical results — flagged by the base survey as available without an API call. **[Scope note,
+  s183: a moderated re-analysis against the v1 sense-gradience result already ran 2026-05-30 —
+  [`result/lexical-perceptual-grounding-moderation-v1`](findings/results/lexical-perceptual-grounding-moderation-v1.md),
+  clean null. This item is scoped to crossing the norms with the *post-v1* lexical results (rep2,
+  polysemy/homonymy, bridging) — a session that re-runs the v1 cross duplicates done work.]**
 - **A4a `[x]` models.md truth-up** (special session 2026-07-02 — panel marked battle-tested).
 - **A4b `[ ]` Within-family size ladders on flagship instruments** — **UNBLOCKED s168**
   ([`decisions/resolved/scale-ladder-subjects`](decisions/resolved/scale-ladder-subjects.md)
@@ -185,8 +199,11 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   New-essay bar in PROTOCOL §3.
 - **B4 Reading surfaces.** index.md slimmed + generated `[x]` (special session 2026-07-02,
   `tools/build-index.py`); executive summary relabeled a checkpoint digest `[x]` — **full
-  regeneration owed `[ ]`** at the first consolidation session; public home-page "latest"
-  repaired `[x]`; models.md `[x]`.
+  regeneration DONE `[x]`** (s183, wiki-coherence campaign P1 →
+  [`executive-summary.md`](executive-summary.md) rewritten current through the six promoted
+  claims, four powered replications, both theory second editions, the flagship table, and the
+  honest negatives; the next regeneration is owed at the next consolidation *checkpoint*, not on
+  a fixed clock); public home-page "latest" repaired `[x]`; models.md `[x]`.
 - **B5 `[x]` Prediction ledger.** [`predictions.md`](predictions.md) seeded `[x]`; **back-fill
   sweep DONE** (s180 → the full historical sweep: all 18 conjectures, 50 essays, 8 theory pages
   read via parallel extractors, each bet quoted verbatim with status taken only from on-page
@@ -228,7 +245,9 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`decisions/resolved/cloud-compute-path`](decisions/resolved/cloud-compute-path.md). Dormant;
   nothing waits on it.
 - **D3 Ratify the queued subject decisions** at will (the three under `decisions/open/`);
-  otherwise the normal cross-session process handles them.
+  otherwise the normal cross-session process handles them. **[Discharged: all three were ratified
+  autonomously s168; later decisions cycle through the normal cross-session process (2 open as of s183) — the lever that remains live for Tom
+  is the panel-v2 re-open trigger recorded in [`config/models.md`](../config/models.md).]**
 - **D4 Paywalled ingestion:** the OA-reachable literature is near-exhausted;
   [`wiki/base/wanted.md`](base/wanted.md) documents each unreachable primary (Goldberg 1995/2006, Kaplan, the
   Sterken & Cappelen volume, …). A small batch would raise the philosophical track's ceiling.
@@ -246,6 +265,7 @@ B6, C4) extend them.
 
 | Date | Item | What landed |
 |------|------|-------------|
+| 2026-07-05 (s183) | B4 (+ campaign) | **Wiki-coherence campaign opened (Tom's standing override) — P1 done, and the B4 executive-summary full regeneration landed inside it.** Six parallel read-only auditors swept all ~370 wiki pages against the current evidence (~170 issues; 12 BLOCKERs — including both live theory v2 editions still asserting "single-run" where their own named triggers had fired s178/s181); orchestrator verified and fixed every BLOCKER itself, five directive-driven fix agents applied the batch tranche (~100 pages of dated, history-preserving back-annotations; 13 governance-note corrections of the pre-autonomous "awaits Tom's review" formula; ~25 edition pointers; ~20 claim back-links), and a fresh adversarial coherence pass reviewed the diff. [`executive-summary.md`](executive-summary.md) **regenerated in full (B4 `[x]`** — was ~59 sessions stale); [`predictions.md`](predictions.md) completed (missing cleft-battery §B row; §C completeness); this page's A1b/A2b/A3a/A3c/D3 item bodies reconciled with its own ledger; `CLAUDE.md` `anchors` direction corrected + two conventions documented (edition citations; essay status discipline); the one undocumented senselint WARN cleared. **Two decisions opened** (result-status semantics; meaning-senses methodology tags — eligible s184). Campaign plan → [`continue-prompt.md`](../continue-prompt.md) §5 (P1–P5); ledger + ~30-seed ideas harvest → [`maintenance.md`](maintenance.md). The findings themselves checked out: no measured number, verdict, or claim scope was wrong (one off-by-one annotator tally recomputed from raw and corrected). $0; website rolled up (JST 2026-07-05 entry extended to s179–183). |
 | 2026-07-05 (s182) | B3 | **Ideas index built — the B3 "the ideas" sub-item; the merges deprioritized.** → [`ideas.md`](ideas.md): an additive reading index sorting the ~50 essays into **12 genuinely distinct contributions** (8 substantive positions on meaning + 4 methodological/measurement-epistemic disciplines), a two-line abstract + member essays (anchor first) each; **all 50 essays map to exactly one primary cluster** (coherence-pass verified). Workflow mode: 5 parallel read-only extractors over all 50 essays → orchestrator synthesis (judgement not parallelized) → 1 read-only adversarial coherence pass (**NO BLOCKERS**; 1 SHOULD-FIX [presence-is-not-balance filed by topic in §4 is also cluster-12's "Messick's two threats" material — cross-referenced in both] + 1 NIT [cluster-1 pole-split hedge tightened] applied). Wired into the [`index.md`](index.md) standing-refs header; stale header theory links retargeted to the **-v2** second editions. **The finding that re-scoped B3:** the named merge families are **not redundant clutter but a load-bearing, densely cross-referenced web** — [`essay/undischargeable-negative`](findings/essays/undischargeable-negative.md) is the single most-cited essay (~30 pages), the reading-discipline essays a dozen-plus each, each carrying its own [`predictions.md`](predictions.md) bets + revision triggers cited elsewhere → destructive merges are high-churn / low-value; the **additive index is the B3 lever**, merges deprioritized. Also recorded for the empirical backlog: **A2b** grounding-magnitude is un-instrumentable in-repo (an *external* resource is owed, not a design); **A1b** antonymy has no in-repo control data (a *build-from-scratch* design is owed; `nltk`/`numpy` install cleanly). $0 (no probe, no votes); website rolled up (JST 2026-07-05 entry extended to s179–s182). |
 | 2026-07-05 (s181) | A2a | **Lexical sense-gradience cross-date re-run — the LAST owed A2a re-run; single-run flag discharged (replicates 3/3).** → [`result/lexical-sense-gradience-rep2`](findings/results/lexical-sense-gradience-rep2.md): the byte-frozen v1 sense-gradience instrument (`analyze.py` sha-identical; `probe.py` differs only in the single input-path constant, `diff`-verified) on **200 fresh DWUG EN pairs drawn disjoint from v1** (seed 20260705; every v1 pair excluded pre-sampling → **0 shared pairs**, asserted + independently re-verified; 61/357 usages recombine — **pair-disjoint, not usage-disjoint**), fresh date, DWUG archive sha identical to v1. Workflow mode: independent fresh-agent **pre-run critic → NO-GO on B1** (the frozen `probe.py` read v1's input filename, risking a silent v1-preds/rep2-gold join on colliding `lx-{level}-{idx}` ids) **→ fixed** (point the single `FULLTEXT` constant at the rep2 items) **+ smoke-tested before spend** (ids match manifest, 1-item live call parses all framings, $0.002) + one non-Anthropic decorrelation vote (`openai/gpt-5.4-mini`, **GO-WITH-CONDITIONS**, all conditions honored); `probe.py` **1,800 calls, 0 NA, 0 missing cost**; independent fresh-agent **post-run verifier REPRODUCED** (0 discrepancies, max abs diff 0.0005/24 stats; disjointness + anti-cheat independently confirmed). **VERDICT REPLICATES 3/3**: every base ρ within v1's 95% CI, all CIs overlap (durel 0.715/0.528/0.808, cont 0.739/0.631/0.801), topic-partial shadow-beater survives 3/3 both framings (0.60/0.39/0.66 durel); gpt weakest/most-elicitation-sensitive (ordinal 0.528, partial\|topic 0.392 — down from v1, still positive/non-collapsing). [`claim/lexical-sense-gradience`](findings/claims/lexical-sense-gradience.md) **single-run flag discharged** for the direction/agreement core (NOT usage-independent, NOT a twice-powered independent magnitude); shadow-depth-table row + [`predictions.md`](predictions.md) shadow-beaters bet (now **fired-for both halves**) updated. **$0.68507 billed** (day UTC 2026-07-05, fresh $0.00 prior; far below v1's $3.134 — gemini's reasoning burn was an anomaly). Website rolled up (JST 2026-07-05 entry extended to s179–s181). |
 | 2026-07-05 (s180) | B5 | **Prediction-ledger back-fill sweep — DONE.** [`predictions.md`](predictions.md) rebuilt from a handful of seeded rows into the full scored ledger. Workflow mode: 5 parallel read-only extractors (3 essay slices + conjectures + theory) swept all 18 conjectures, 50 essays, 8 theory pages, each registered bet returned with a verbatim on-page quote and status taken *only* from on-page text; orchestrator integrated (judgement not parallelized), a fresh read-only adversarial verifier re-checked every §A status + a quote/number/link sample against source pages → **no BLOCKERs**, 2 SHOULD-FIX applied (a `fired-against`→`discharged` relabel on the doppelgänger trigger to match the essay's own status word; a two-topics (d) double-registration collapsed). Structured as **§A resolved bets** (the calibration record — ~50 predictions with their landed outcomes, including the honest losses: commutativity falsified, cross-level dissolution, ambiguity kind-reading retracted, cross-axis ordering disconfirmed), **§B open project-runnable bets**, **§C standing triggers not scored** (external-contingent + self-discipline, named per page). Scope rule (what earns a scored row) + one-row-per-bet dedup/co-registration convention documented on-page. $0 (no probe, no votes); website rolled up (JST 2026-07-05 entry extended to cover s179–s180). |

@@ -9,7 +9,7 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-05-28
-updated: 2026-05-29
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/constructional-meaning
@@ -23,7 +23,20 @@ links:
 
 # Conjecture: LLMs track the conative alternation's non-completion meaning
 
-> **Tested 2026-05-29** (workflow mode) → [`result/conative-minimal-pair-divergence-v1`](../results/conative-minimal-pair-divergence-v1.md). The project's own verb-held-constant minimal pairs were built (frozen pre-run), and the panel run as subjects on both instruments. **P1 (the core "use" prediction) is confirmed at the ratified bar**: the transitive−conative affirm-contact gap is ≥30 pp in 3/3 models under forced-choice (42–88 pp) and 2/3 under NLI (54–67 pp), replicating across verbs. **P3 (frequency-orthogonal) and P2 (verb-class specificity) are supported.** The standing caveat: **gpt-5.4-mini fails the conative entirely under NLI** (calls *kicked at the ball* an entailment of contact) yet partly recovers under forced-choice — an instrument-fragility the single-instrument framing would have hidden. Status → `tested` (supported, modest); promotion past `proposed`-level reading awaits Tom's review.
+> **Tested 2026-05-29** (workflow mode) → [`result/conative-minimal-pair-divergence-v1`](../results/conative-minimal-pair-divergence-v1.md). The project's own verb-held-constant minimal pairs were built (frozen pre-run), and the panel run as subjects on both instruments. **P1 (the core "use" prediction) is confirmed at the ratified bar**: the transitive−conative affirm-contact gap is ≥30 pp in 3/3 models under forced-choice (42–88 pp) and 2/3 under NLI (54–67 pp), replicating across verbs. **P3 (frequency-orthogonal) and P2 (verb-class specificity) are supported.** The standing caveat: **gpt-5.4-mini fails the conative entirely under NLI** (calls *kicked at the ball* an entailment of contact) yet partly recovers under forced-choice — an instrument-fragility the single-instrument framing would have hidden. Status → `tested` (supported, modest); promotion past `proposed`-level reading awaits Tom's review. *(Governance note, s183: since the autonomous-era amendment of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous cross-session adversarial review; Tom holds a standing override.)*
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The de-confound line this construction
+> owed has since landed (2026-06-15):
+> [`result/conative-preference-commitment-v1`](../results/conative-preference-commitment-v1.md) found
+> the AANN-style preference component **absorbed by the bare-*at* lexical cue** (no
+> construction-specific paraphrase signal once the cue is netted out — bearing directly on this page's
+> own *Weak* clause about *at* as a generic atelic marker) plus a single-model **commitment-only
+> anomaly** (claude Δ²_commit +0.46); the same-day fresh-verb-set replication
+> [`result/conative-commitment-replication-v2`](../results/conative-commitment-replication-v2.md)
+> returned **FAILS TO REPLICATE** — the +0.46 reads as verb-set-specific noise and is **retired**. The
+> consolidated cross-construction close is
+> [`claim/preference-commitment-dissociation-aann-specific`](../claims/preference-commitment-dissociation-aann-specific.md).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## Statement
 

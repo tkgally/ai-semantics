@@ -10,7 +10,7 @@ meaning-senses:
 status: open
 contingent-on: []
 created: 2026-06-22
-updated: 2026-07-01
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/lexical-bridging-context-v1
@@ -305,11 +305,20 @@ parsimonious reading is level-specific facts that share a vocabulary, not a mech
 
 ## Status: open (scoping only)
 
-The question stands: **graded-in-the-population, discrete-in-the-moment** — one constraint on
-distributional competence, or several rhyming coincidences? The default until a shared-instrument,
-cross-axis, or channel-varied probe says otherwise is the deflationary one. This page names the
-shape, flags the disanalogies that keep it from being over-unified, and records the discriminating
-tests — including the in-repo output-channel re-run — that a later session could run. The
-presupposition/projection leg added 2026-07-01 (sessions 158–159) is a **candidate only, on a
-different axis**: this session names it and its disanalogies, and counts nothing; a cross-axis or
-shared-instrument test would be needed before it could join the pattern.
+The question — **graded-in-the-population, discrete-in-the-moment**: one constraint on
+distributional competence, or several rhyming coincidences? — has had its cleanest discriminator
+run (see the update box at the top): the shared-instrument cross-level probe ran in session 84 and
+returned **DISSOLUTION**
+([`result/cross-level-shared-instrument-v1`](../results/cross-level-shared-instrument-v1.md)) —
+under one frozen instrument the discrete-on-the-moment posture holds only at the lexical level, so
+the unified "one constraint" reading is not licensed. The typed bet,
+[`conjecture/cross-level-gradience-aggregate-not-moment`](../conjectures/cross-level-gradience-aggregate-not-moment.md),
+is `tested`: its pre-registered dissolution outcome obtained. What stays live on this page is the
+**residue**: the presupposition/projection leg added 2026-07-01 (sessions 158–159) remains a
+**candidate only, on a different (frame) axis** — named with its disanalogies, counting nothing
+until a cross-axis or shared-instrument test could speak to it — and the gate's disclosed
+**comparability crux** (the three levels' "ambiguous" classes are not the same *kind* of
+indeterminacy, so *why* the lexical leg is special is not isolated). The page stays `open` as the
+record of the question, its disanalogies, and that residue. *(Closing paragraph rewritten
+2026-07-05, session 183 — wiki-coherence pass — to record the verdict the top update box already
+carries; nothing measured changes.)*

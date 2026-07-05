@@ -1,4 +1,29 @@
+---
+type: resource
+id: multimodal-anchor-scouting
+title: "Multimodal anchor scouting — feasibility catalog (2026-05-30) + graded-image magnitude-instrument deeper scout (session 130)"
+meaning-senses:
+  - grounded.perceptual
+  - human-comparison
+  - distributional
+status: scouting
+contingent-on: []
+created: 2026-05-30
+updated: 2026-07-05
+links:
+  - rel: depends-on
+    target: concept/grounding
+  - rel: depends-on
+    target: conjecture/distributional-saturation-grounding-headroom
+  - rel: depends-on
+    target: open-question/grounding-magnitude-instrument
+---
+
 # Multimodal anchor scouting — feasibility catalog
+
+> *(Front-matter added 2026-07-05, session 183 — wiki-coherence pass. This page predates the
+> front-matter convention for scouting records; the two later sibling scouting pages carry it, and
+> senselint flagged this one as the only undocumented WARN. Content below is untouched.)*
 
 **Scouted:** 2026-05-30. **Purpose:** anchor-feasibility note for a future probe of whether vision-language models (VLMs) interpret lexical/grammatical meaning differently from text-only models. This is a *scouting* note, not a typed resource page; it covers multiple candidates and ends with a ranked recommendation. The project's recurring rule applies: a resource must be cited by the *specific human-annotated feature* that bears on the claim, never by existence alone.
 

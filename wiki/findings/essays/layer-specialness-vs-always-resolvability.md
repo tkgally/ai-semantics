@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-07-05
 links:
   - rel: refines
     target: essay/ambiguity-kind-not-level
@@ -33,8 +33,9 @@ links:
 
 # Essay: layer-specialness or always-resolvability
 
-> **Status: draft (2026-06-23, session 87). A philosophical-track essay arguing in the project's
-> own voice, written the *same* session as the result it re-reads.** Its original contribution is a
+> **Status: revised (drafted 2026-06-23, session 87; revised same day, sessions 91 and 94 —
+> trigger (c) fired twice, see the revision paragraphs below). A philosophical-track essay arguing
+> in the project's own voice, written the *same* session as the result it re-reads.** Its original contribution is a
 > **fork and a named test**, not a finding: it takes the one residual that
 > [`result/within-lexical-scalar-vs-disjunctive-v1`](../results/within-lexical-scalar-vs-disjunctive-v1.md)
 > discloses as *load-bearing* (its caveat 1) and splits the surviving lexical commit into two rival

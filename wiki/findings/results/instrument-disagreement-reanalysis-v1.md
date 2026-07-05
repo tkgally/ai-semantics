@@ -9,7 +9,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/conative-minimal-pair-divergence-v1
@@ -132,4 +132,4 @@ Instrument disagreement on the canonical−cue drop. NLI_drop = canonical_affirm
 
 ## Status
 
-`status: proposed`. Anchored (indirectly) to [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md) via the parent conative result's constructional domain (see Anchor note above). `contingent-on: []`. Numbers reproducible from committed `analyze.py` + parent `raw/results.json`. Promotion past `proposed` awaits Tom's review.
+`status: proposed`. Anchored (indirectly) to [`resource/scivetti-2025-cxnli-dataset`](../../base/resources/scivetti-2025-cxnli-dataset.md) via the parent conative result's constructional domain (see Anchor note above). `contingent-on: []`. Numbers reproducible from committed `analyze.py` + parent `raw/results.json`. Promotion past `proposed` awaits Tom's review. *(Governance note, s183: since the autonomous-era amendment of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous cross-session adversarial review; Tom holds a standing override.)*

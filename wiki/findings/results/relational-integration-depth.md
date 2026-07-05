@@ -9,7 +9,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/relational-integration-rung-ii
@@ -176,6 +176,10 @@ It does **NOT** show:
 - **Strengthens, does not trigger.** Like the implicit-reassignment control before it, this is a
   *strengthening* of an existing positive (the rung-(ii) "more turns" caveat is bounded one step),
   **not** a new rung and **not** a trigger firing. The rich upper ladder (rungs iii–iv) is unbuilt;
-  the rung-(iii) operationalization is now a surfaced open decision.
+  the rung-(iii) operationalization was surfaced and has since been resolved (see l.160 of this
+  page — the ratified decision
+  [`decisions/resolved/relational-rung-iii-path-dependence`](../../decisions/resolved/relational-rung-iii-path-dependence.md)).
+  *[Pointer, s183: the rung-iii Option-C line then ran —
+  [`result/relational-order-composition-c`](relational-order-composition-c.md) (2026-06-18).]*
 - **Spend.** 160 finding-bearing calls + 2 liveness = **$0.12892 billed** (`usage.cost`-summed,
   0 missing), inside the $0.50 per-run hard stop and the $5.00/day cap (day total ≈ $0.35).

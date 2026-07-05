@@ -9,7 +9,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-07-05
 links:
   - rel: operationalizes
     target: open-question/presupposition-accommodation-corner
@@ -161,7 +161,8 @@ The presupposition corner now has **both** of its behavioral signatures measured
 
 Both are **environment-gated** rather than blanket: the models track whether the *licensing context*
 permits the presuppositional inference, in both directions. That parallel is a candidate for a
-philosophical bridge (queued in [`NEXT.md`](../../../NEXT.md)), not asserted here.
+philosophical bridge (queued in [`NEXT.md`](../../../NEXT.md)), not asserted here. *[Pointer, s183:
+that bridge landed — [`essay/presupposition-environment-gated`](../essays/presupposition-environment-gated.md).]*
 
 ## Pre-run critic SHOULD-FIX items (carried as stated limitations)
 

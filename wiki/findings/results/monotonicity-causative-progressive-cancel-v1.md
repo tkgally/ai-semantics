@@ -9,7 +9,7 @@ status: supported
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/monotonicity-verbal-cancel-survey-v1
@@ -147,6 +147,10 @@ placed in the common conflicting-cue paradigm, read by the **frozen s134 thresho
 verifier. A positive asymmetry there would be the **clean within-verbal generalization confirm** —
 **no domain mismatch** (both arms verbal) — that discharges the M2 caveat the weak C2 confirm
 carries. This is a legitimate next unit; the conjecture's status does not move until it runs.
+
+*[Pointer, s183: the unblocked unit ran the same UTC day —
+[`result/monotonicity-within-verbal-battery-v1`](monotonicity-within-verbal-battery-v1.md)
+(s141): CONFIRMS 3/3 (asymmetry ≥ 0.20 in all three models), M2 discharged.]*
 
 ## Provenance
 

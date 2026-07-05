@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: resource/subtlex-us-frequency
@@ -44,6 +44,15 @@ links:
 > 1.406). The set passes minimal-pair integrity, the length-only-reader check (asymmetry 0.0), and
 > the no-leak check; it does **not** pass every shortcut-reader check. Both extra failures are
 > fixable in build-v2 and are now binding conditions of the resolved decision.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The widened build-v2 ran the same day
+> (2026-06-21): [`result/function-word-swap-run-v2`](function-word-swap-run-v2.md) reached 206
+> certified matched items (inventory-widening per the resolved decision, certification `"ok": true`
+> before any model output) and returned **CONFIRM 3/3** — function-word swaps flip NLI far more than
+> frequency+length-matched content-word swaps. The conjecture
+> [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md)
+> is now `tested`.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## What was attempted
 

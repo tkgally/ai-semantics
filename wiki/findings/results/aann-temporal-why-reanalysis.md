@@ -9,7 +9,7 @@ status: proposed
 anchor: resource/mahowald-2023-aann-stimuli
 contingent-on: []
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/aann-temporal-heldout-v2b

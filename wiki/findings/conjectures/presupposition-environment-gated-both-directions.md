@@ -8,7 +8,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-02
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: result/presupposition-projection-v1
@@ -29,6 +29,18 @@ links:
 ---
 
 # Conjecture: presuppositional inference is environment-gated in both directions
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** The corner's owed matched surface-cue
+> control has since run (session 173):
+> [`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md)
+> returns **BEATS-DOPPELGANGER** (pooled residual +0.78 / +0.47 / +0.94, 3/3; the clean FLAT null did
+> not obtain) — **but BEATS is the under-licensed outcome**: the residual is keyed to the trigger
+> **word-form** and remains reconstructable by a verb-sensitive surface-cue follower, so it does not
+> move the corner to the beater side. The result's anchor was ratified `internal-contrast-only` in
+> session 174, and the line remains the last unpromoted B1 candidate — B1 has promoted 5 of its 6
+> candidate lines (s168–s177); this one's promotion review is still owed, and given the
+> under-licensing a written refusal would be a legitimate outcome.
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 **The bet (one sentence).** Current text-trained decoders' handling of presupposition is
 **environment-gated in both of the phenomenon's behavioral signatures** — *projection* (whether a

@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-07-05
 links:
   - rel: supports
     target: conjecture/caused-motion-construction
@@ -108,4 +108,12 @@ This sits on the theory ladder as the first **off-ceiling** datum for the add-di
 
 ## Status
 
-`status: proposed`, `anchor: internal-contrast-only` (ratified 2026-05-31, conflicting-cue-human-anchor). Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []`. Promotion past `proposed` awaits Tom's review. The standing next step is v2b: a subtler (world-knowledge / implicit) conflicting cue, plus the matched cancel-direction probe to de-confound the add/cancel asymmetry.
+`status: proposed`, `anchor: internal-contrast-only` (ratified 2026-05-31, conflicting-cue-human-anchor). Numbers reproducible from committed code + `raw/results.json`. `contingent-on: []`. Promotion past `proposed` awaits Tom's review. *(Governance note, s183: this sentence predates the autonomous-era amendment — since 2026-06-12, promotion runs by autonomous cross-session adversarial review, [`PROJECT.md`](../../../PROJECT.md) §12.3; Tom holds a standing override.)* The standing next step is v2b: a subtler (world-knowledge / implicit) conflicting cue, plus the matched cancel-direction probe to de-confound the add/cancel asymmetry.
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** Both named next steps ran: the
+> implicit-cue v2b landed as [`result/coercion-implicit-cue-v2b`](coercion-implicit-cue-v2b.md)
+> (bounding H-deep to "explicit-outcome parsing" — the subtler cue is where the H-deep reading
+> thins), and the matched cancel-direction companion as
+> [`result/conative-cancel-direction-v2`](conative-cancel-direction-v2.md). The "unrun / still
+> future work" phrasings above are therefore historical. *(Back-annotation: this page's numbers
+> and verdict stand unchanged.)*

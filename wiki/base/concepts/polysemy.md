@@ -6,7 +6,7 @@ meaning-senses:
   - referential
   - distributional
 created: 2026-05-29
-updated: 2026-06-26
+updated: 2026-07-05
 links:
   - rel: refines
     target: concept/referential-meaning
@@ -54,6 +54,20 @@ The discriminating feature of the polysemy/homonymy contrast is precisely that i
 
 ## What in-repo evidence bears
 
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** This section was written before the
+> wedge ran; the state it describes is historical. Since then: **DWUG EN was adopted as the graded
+> anchor** ([`resource/dwug-usage-graphs`](../resources/dwug-usage-graphs.md) — the "replacement"
+> this section names as a candidate), the probe ran and replicated —
+> [`result/lexical-sense-gradience-v1`](../../findings/results/lexical-sense-gradience-v1.md)
+> (graded tracking, topic-control survives) and
+> [`result/lexical-sense-gradience-rep2`](../../findings/results/lexical-sense-gradience-rep2.md)
+> (s181, replicates 3/3) — and the line was **promoted**:
+> [`claim/lexical-sense-gradience`](../../findings/claims/lexical-sense-gradience.md) (s176,
+> direction/agreement scope; single-run flag discharged s181). The polysemy-vs-homonymy discrete
+> contrast also ran: [`result/lexical-polysemy-homonymy-v3`](../../findings/results/lexical-polysemy-homonymy-v3.md)
+> is a **powered null** — no separate discreteness switch was detected by that instrument. The
+> paragraphs below stand as the record of the measurement space as first mapped.
+
 The one in-repo resource that directly operationalizes this concept is [`resource/wic-graded-usage-similarity`](../resources/wic-graded-usage-similarity.md), which catalogs two datasets:
 
 - **Usim** (Erk, McCarthy & Gaylord, ACL 2009 / Computational Linguistics 2013): human-rated graded usage-similarity on a 5-point scale ("1 — completely different … 5 — identical"), covering 34 lemmas and 1530 usage-pair comparisons (SPAIRs), each rated by 3 annotators. Usim does not require annotators to commit to a discrete sense label; it asks directly how similar two usages are. This is the instrument whose scale is calibrated to the gradience question. The resource page quotes the ACL 2009 abstract verbatim:
@@ -72,7 +86,9 @@ This concept grounds the **lexical wedge** — the cluster consisting of [`open-
 
 In the project's meaning-sense tagging, this concept sits at the intersection of `referential` (polysemy is about `referential.sense`, modes of presentation at fine grain) and `distributional` (the null is always a distributional-context-similarity reduction). When a finding on this wedge is written up, it should tag both senses and specify which is bearing the empirical weight — distributional context-similarity as the null to be beaten, referential.sense as the positive claim when the null is beaten. The concept does **not** touch the `relational` axis: the polysemy probe is `model-internal` (one model's sense behavior) plus `human-comparison` (against human-rated usage similarity or binary same/different labels). It also does not touch `referential.reference` or `referential.externalist` — sense distinctions between polysemous usages do not require a world-relation or causal-chain story.
 
-The polysemy-vs-homonymy contrast is the wedge's built-in internal control. It does not need to be engineered separately: homonym pairs are the discreteness floor, polysemous pairs are the gradience case, and the same probe can be run across both. A model that shows an intermediate regime for polysemy but a floor for homonymy — and does so after the context-similarity control — is the signature the conjecture predicts.
+The polysemy-vs-homonymy contrast is the wedge's built-in internal control. It does not need to be engineered separately: homonym pairs are the discreteness floor, polysemous pairs are the gradience case, and the same probe can be run across both. A model that shows an intermediate regime for polysemy but a floor for homonymy — and does so after the context-similarity control — is the signature the conjecture predicts. *(Since tested: the homonymy-enriched v3 run — v2’s set had too few clean homonyms to try — did **not** find that signature —
+[`result/lexical-polysemy-homonymy-v3`](../../findings/results/lexical-polysemy-homonymy-v3.md) is a
+powered null on the discrete-regime bet; the graded-tracking half is what survived and was promoted.)*
 
 ## Honest gaps
 

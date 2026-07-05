@@ -10,7 +10,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/relational-meaning
@@ -56,7 +56,9 @@ links:
 > composition line, and the seven essays the philosophical track has built around them. It **promotes
 > and expands** the relational subsection of
 > [`theory/constructional-meaning-in-llms`](constructional-meaning-in-llms.md) (§"The under-explored
-> axis: relational meaning") — that page records the relational axis as "one bounded negative" and
+> axis: relational meaning") *(superseded s177 by
+> [`theory/constructional-meaning-in-llms-v2`](constructional-meaning-in-llms-v2.md) — cited here as
+> the edition this page engaged.)* — that page records the relational axis as "one bounded negative" and
 > defers the rest; this page carries the now-substantial arc. Every empirical number below is copied
 > verbatim from the result page that carries it; almost every trajectory/order finding is
 > `anchor: internal-contrast-only` (a within-model contrast making **no human-comparison claim**), and

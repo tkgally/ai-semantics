@@ -10,7 +10,7 @@ status: proposed
 anchor: human-anchored
 contingent-on: []
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: conjecture/dative-alternation-information-structure
@@ -20,6 +20,8 @@ links:
     target: concept/constructional-meaning
   - rel: supports
     target: theory/constructional-meaning-in-llms
+  - rel: supports
+    target: claim/dative-information-structure-givenness
 ---
 
 # Result: the dative alternation tracks information structure (v1)
@@ -135,7 +137,9 @@ its graded `FINAL:` line on the first call.
 ## Reading on the evidence ladder
 
 This is a **Tier-2 (gradient semantic tracking) positive** on
-[`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)'s ladder — the
+[`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)'s ladder
+*(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) —
+cited here as the edition this result fed)* — the
 rung the dative line was placed at — and the project's **first human-anchored Tier-2 result from a probe
 of its own design** (the AANN gradient result is human-anchored to an acceptability gradient; the dative
 here is anchored to a corpus *production* surface, a different and arguably stronger human signal for a
@@ -154,7 +158,13 @@ the lexical items cannot supply.
   item set: claude (+0.325) and gemini (+0.500) reproduced almost exactly, but **gpt's CONFIRM did
   not replicate** — its shift fell to +0.018 with a CI including zero (WEAK). The panel verdict holds
   at CONFIRM but drops to 2/3, and the order-of-magnitude effect-size spread widened rather than
-  compressed.
+  compressed. **Then reversed at power (s175):**
+  [`result/dative-information-structure-powered`](dative-information-structure-powered.md) (100
+  fresh disjoint items, byte-frozen instrument) restored **CONFIRM 3/3** — gpt recovers this page's
+  +0.056 with a CI clear of zero (+0.056 [0.039, 0.074]; the v2 dip was founding-N item noise) —
+  and pinned the spread at ~9.3×, this page's 9×. Magnitudes+intervals now live on
+  [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)
+  (promoted s174).
 - **Production preference, not acceptability rating.** The corpus anchors the human *production* direction
   (what speakers choose in context), which is the right anchor for this production-preference indicator;
   it is **not** a per-item human acceptability rating. The Bresnan & Ford (2010) graded-rating anchor was

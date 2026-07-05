@@ -15,7 +15,7 @@ meaning-senses:
   - human-comparison
 contingent-on: []
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-05
 links:
   - rel: depends-on
     target: concept/polysemy
@@ -36,6 +36,8 @@ links:
 > **UPDATE 2026-06-24 (session 100): FETCHED + checksummed, and first probe RUN.** The 572MB resized EN test images + the gold EN queries were downloaded (Drive, no registration), checksummed, and used — **images kept out of git** (redistribution unconfirmed). The first probe anchored to this resource ran: [`result/vwsd-grounding-headroom-v1`](../../findings/results/vwsd-grounding-headroom-v1.md) (the caption-text baseline saturated; clean distraction null; no broad image lift; gating neither confirmed nor falsified). See `local-path` for checksums.
 >
 > **UPDATE 2026-06-25 (session 107): re-fetched (same checksums) and the v2 re-operationalization day-1 RAN.** The 572 MB resized EN zip was re-downloaded and re-verified — **sha256 `b9f2f1e1…af8f`, exact match to the session-100 fetch** — and the gold EN candidate set (4090 images) re-extracted; images again **kept out of git**. The text-only day-1 of the v2 build (frozen design [`design/vwsd-grounding-headroom-v2`](../../../experiments/designs/vwsd-grounding-headroom-v2.md)) ran against it: 1889 Option-B visual-form descriptors, the Option-C leak audit, the descriptor-TEXT separability covariate, and a stratified N = 120 draw clearing the ≥ 15 per-stratum floor. No image arm has run; `result/vwsd-grounding-headroom-v2` does **not** yet exist. The anchor (the 463 EN gold test) and all four caveats are unchanged.
+>
+> **UPDATE 2026-07-05 (session 183 — wiki-coherence pass): the line has since run to its documented end; the s107 box above is historical.** The v2 image arm **ran and exists** — [`result/vwsd-grounding-headroom-v2`](../../findings/results/vwsd-grounding-headroom-v2.md) (the gated-rescue-shape positive; the conjecture was promoted `tested`, s130). The owed natural-language-baseline follow-ups also landed: [`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../../findings/results/vwsd-grounding-headroom-nlbaseline-audit-v1.md) and [`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../../findings/results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md), governed by [`decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity`](../../decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity.md). The **fluent-channel magnitude route is closed** ([`open-question/grounding-magnitude-instrument`](../../findings/open-questions/grounding-magnitude-instrument.md): the magnitude question is un-instrumentable with in-repo resources; an externally released graded set is the only route — program A2b is a scout, not a design). Pointer-for-next-visit item 1 below is **discharged** (the probe ran); items 2–4 stand.
 
 This page catalogs **VWSD (SemEval-2023 Task 1)** — named on `wanted.md` (P3) and in [`conjecture/distributional-saturation-grounding-headroom`](../../findings/conjectures/distributional-saturation-grounding-headroom.md) as the **image-native** sense-selection anchor: the regime where sense selection *requires* the image rather than treating the image as an add-on. It is the natural instrument for that conjecture's "under-determined" stratum (prediction 1, headroom gating). The companion scouting catalog [`base/resources/multimodal-anchor-scouting.md`](multimodal-anchor-scouting.md) covers the broader VLM-anchor landscape; this page is the focused VWSD scout.
 

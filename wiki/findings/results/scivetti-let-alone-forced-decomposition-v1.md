@@ -10,7 +10,7 @@ meaning-senses:
 status: proposed
 contingent-on: []
 created: 2026-06-20
-updated: 2026-06-20
+updated: 2026-07-05
 links:
   - rel: anchors
     target: resource/scivetti-2025-cxnli-dataset
@@ -30,6 +30,8 @@ links:
     target: theory/constructional-meaning-in-llms
   - rel: depends-on
     target: source/li-2024-cot-serial
+  - rel: supports
+    target: claim/output-channel-working-surface
 ---
 
 # Result: let-alone forced-decomposition (uptake-inducing) probe v1
@@ -260,4 +262,7 @@ Scivetti anchor are both ratified). What is `proposed` is the project's reading.
 past `proposed` awaits Tom's review and a **powered** robustness arm on gpt's below-baseline
 residual (more let-alone items, the disjoint train-split items, or a free-form uptake-forcer
 that separates uptake from scaffold structure — the next witness axes the
-undischargeable-negative discipline names).
+undischargeable-negative discipline names). *(Governance note, s183: since the autonomous-era
+amendment of 2026-06-12 — [`PROJECT.md`](../../../PROJECT.md) §12.3 — promotion runs by autonomous
+cross-session adversarial review; Tom holds a standing override. The promotion in fact landed:
+[`claim/output-channel-working-surface`](../claims/output-channel-working-surface.md), s177.)*

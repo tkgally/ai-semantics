@@ -10,7 +10,7 @@ status: proposed
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-07-05
 links:
   - rel: refines
     target: result/relational-reference-game-v1
@@ -37,6 +37,20 @@ links:
 > field re-derived from raw from scratch, zero mismatches; verdict rule-walk confirmed, "no
 > dodging in either direction"). Run record:
 > [`experiments/runs/2026-06-12-relational-history-perturbation-v2/`](../../../experiments/runs/2026-06-12-relational-history-perturbation-v2/README.md).
+
+> **Update (2026-07-05, session 183 — wiki-coherence pass).** This line moved on:
+> [`result/relational-history-perturbation-v3`](relational-history-perturbation-v3.md) (2026-06-13)
+> re-ran the test on a clean instrument and supersedes this run at the verdict level (still
+> INCONCLUSIVE, now located as direction-fragile), and
+> [`result/relational-history-perturbation-v4`](relational-history-perturbation-v4.md) (2026-06-14)
+> decoupled the confound — the answer is text position, not stamped chronology.
+> [`conjecture/commutative-convention`](../conjectures/commutative-convention.md) was then
+> **FALSIFIED and retired 2026-06-16** via
+> [`result/relational-spontaneous-recency-a`](relational-spontaneous-recency-a.md) (Option A,
+> session 20; with the [`result/relational-stamp-comprehension-b`](relational-stamp-comprehension-b.md)
+> gate, session 18), and the positive was promoted to
+> [`claim/relational-order-sensitive-reassignment`](../claims/relational-order-sensitive-reassignment.md).
+> *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 ## What ran
 
