@@ -1,0 +1,153 @@
+{
+ "per_model": {
+  "A": {
+   "model": "claude-sonnet-4.6",
+   "durel": {
+    "n": 200,
+    "rho_sense_human": 0.715,
+    "rho_ci95": [
+     0.642,
+     0.777
+    ],
+    "partial_ctrl_overlap": 0.71,
+    "partial_ctrl_topic": 0.604,
+    "rho_sense_topic": 0.631,
+    "rho_sense_human_n>=3": 0.702,
+    "n_ge3": 64,
+    "na": 0,
+    "mean_by_human_level": {
+     "1.0": 1.52,
+     "1.5": 1.76,
+     "2.0": 2.25,
+     "2.5": 2.23,
+     "3.0": 2.78,
+     "3.5": 2.88,
+     "4.0": 3.38
+    }
+   },
+   "cont": {
+    "n": 200,
+    "rho_sense_human": 0.739,
+    "rho_ci95": [
+     0.664,
+     0.799
+    ],
+    "partial_ctrl_overlap": 0.735,
+    "partial_ctrl_topic": 0.64,
+    "rho_sense_topic": 0.631,
+    "rho_sense_human_n>=3": 0.626,
+    "n_ge3": 64,
+    "na": 0,
+    "mean_by_human_level": {
+     "1.0": 13.12,
+     "1.5": 19.82,
+     "2.0": 38.25,
+     "2.5": 40.31,
+     "3.0": 62.16,
+     "3.5": 66.88,
+     "4.0": 78.69
+    }
+   }
+  },
+  "B": {
+   "model": "gpt-5.4-mini",
+   "durel": {
+    "n": 200,
+    "rho_sense_human": 0.528,
+    "rho_ci95": [
+     0.409,
+     0.639
+    ],
+    "partial_ctrl_overlap": 0.52,
+    "partial_ctrl_topic": 0.392,
+    "rho_sense_topic": 0.504,
+    "rho_sense_human_n>=3": 0.496,
+    "n_ge3": 64,
+    "na": 0,
+    "mean_by_human_level": {
+     "1.0": 1.5,
+     "1.5": 1.82,
+     "2.0": 2.3,
+     "2.5": 2.0,
+     "3.0": 2.46,
+     "3.5": 2.62,
+     "4.0": 3.19
+    }
+   },
+   "cont": {
+    "n": 200,
+    "rho_sense_human": 0.631,
+    "rho_ci95": [
+     0.53,
+     0.723
+    ],
+    "partial_ctrl_overlap": 0.626,
+    "partial_ctrl_topic": 0.506,
+    "rho_sense_topic": 0.616,
+    "rho_sense_human_n>=3": 0.535,
+    "n_ge3": 64,
+    "na": 0,
+    "mean_by_human_level": {
+     "1.0": 21.26,
+     "1.5": 22.76,
+     "2.0": 39.35,
+     "2.5": 28.85,
+     "3.0": 60.58,
+     "3.5": 62.88,
+     "4.0": 82.1
+    }
+   }
+  },
+  "C": {
+   "model": "gemini-3.5-flash",
+   "durel": {
+    "n": 200,
+    "rho_sense_human": 0.808,
+    "rho_ci95": [
+     0.748,
+     0.852
+    ],
+    "partial_ctrl_overlap": 0.807,
+    "partial_ctrl_topic": 0.657,
+    "rho_sense_topic": 0.707,
+    "rho_sense_human_n>=3": 0.778,
+    "n_ge3": 64,
+    "na": 0,
+    "mean_by_human_level": {
+     "1.0": 1.38,
+     "1.5": 1.76,
+     "2.0": 2.35,
+     "2.5": 2.23,
+     "3.0": 2.98,
+     "3.5": 3.38,
+     "4.0": 3.71
+    }
+   },
+   "cont": {
+    "n": 200,
+    "rho_sense_human": 0.801,
+    "rho_ci95": [
+     0.74,
+     0.848
+    ],
+    "partial_ctrl_overlap": 0.798,
+    "partial_ctrl_topic": 0.639,
+    "rho_sense_topic": 0.731,
+    "rho_sense_human_n>=3": 0.742,
+    "n_ge3": 64,
+    "na": 0,
+    "mean_by_human_level": {
+     "1.0": 10.1,
+     "1.5": 18.82,
+     "2.0": 42.55,
+     "2.5": 37.0,
+     "3.0": 63.76,
+     "3.5": 78.5,
+     "4.0": 88.48
+    }
+   }
+  }
+ },
+ "n_items": 200,
+ "reading_rule": "P1 Spearman(model sense, human DURel); P3 partial Spearman controlling for lexical overlap and model topic-similarity; report-the-correlation"
+}
