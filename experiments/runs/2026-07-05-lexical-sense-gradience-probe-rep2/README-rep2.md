@@ -22,15 +22,21 @@ full-scope, magnitude-bearing edition.
 
 ## What is frozen and what changed (the ONLY differences from v1)
 
-The instrument is **byte-identical to v1** — verified by sha256:
+The instrument's **behavioral logic and analysis are byte-frozen from v1**. The pre-run critic
+(below) caught that a *fully* byte-identical `probe.py` would read v1's input filename
+(`lexical_v1_fulltext.jsonl`) and — because v1 and rep2 both number items `lx-{level}-{idx}` —
+could silently join v1 predictions to rep2 gold. The fix (critic's option a) changes **one
+constant**: `probe.py`'s `FULLTEXT` path now points at this run's items. sha256:
 
-| file | sha256 | identical to v1? |
+| file | sha256 | vs v1 |
 |---|---|---|
-| `probe.py`   | `e5eebabec7490eb1297cf68276d3c69b6b67bdaea8824c0b0ab61ddc52a5e0cf` | **yes** |
-| `analyze.py` | `60c127980863ce1192b3b420b608ecac5bbf987b31e0b783d74a718938c40266` | **yes** |
+| `probe.py`   | `63a804cbd327ebe0ff570f2e806b2aa34d7e257f8ecd9255753b94dfa79fbf48` | **the single `FULLTEXT` input-path constant** `lexical_v1…`→`lexical_rep2…` (+ an explanatory comment); the three framing system prompts, guillemet item rendering, parsing, temperature-0 panel loop are line-for-line identical (`diff` shows only these lines) |
+| `analyze.py` | `60c127980863ce1192b3b420b608ecac5bbf987b31e0b783d74a718938c40266` | **byte-identical** (`diff -q` clean) — the load-bearing statistics (Spearman, partials, bootstrap CI, per-level means) are frozen |
 
-The build recipe `build_items_rep2.py` differs from v1's `build_items.py` in **exactly three
-mechanical ways, none touching the design**:
+So what is frozen is the **load-bearing part** — every prompt the model sees, the parsing, the
+three framings, and all analysis math — and the only `probe.py` change is which frozen item file
+it loads. The build recipe `build_items_rep2.py` differs from v1's `build_items.py` in **three
+selection-affecting ways, plus one hardening**:
 
 1. **SEED** `20260530` → `20260705` (a fresh draw, fresh date).
 2. **v1-exclusion:** every pair frozen in the v1 manifest (`{id1,id2}`, 200 pairs over 373
@@ -39,6 +45,8 @@ mechanical ways, none touching the design**:
    shared pairs**).
 3. new output paths (this run dir + a rep2-specific gitignored full-text file), so v1's frozen
    files are never touched.
+4. *(hardening, does not touch selection)* `ensure_dwug()` now `assert`s the archive sha256
+   equals the pinned value (v1 only printed it) — so a wrong-archive download fails loudly.
 
 Everything else — the Q4 within-period filter, the ≥2-judgment requirement, `N_PER_LEVEL=50`,
 `PER_LEMMA_LEVEL_CAP=4`, the B1 span-recovery fix, the B2 span-sanity gate, the overlap
@@ -56,7 +64,7 @@ report-the-correlation reading rule — is **byte-identical** to v1.
   pool after v1-exclusion is large at every level (919 / 3126 / 1056 / 3366), so the disjoint
   draw is unforced.
 - Human-median distribution (rep2): 1.0 ×50 · 1.5 ×17 · 2.0 ×20 · 2.5 ×13 · 3.0 ×50 · 3.5 ×8 ·
-  4.0 ×42. **n≥3-annotator subset: 64/200** (v1: 49/200 — a slightly *more* reliable gold this
+  4.0 ×42. **n≥3-annotator subset: 64/200** (v1: 48/200 — a slightly *more* reliable gold this
   draw; `analyze.py` reports the n≥3 subset ρ as the S3 robustness check either way).
 
 ### Disjointness — the honest scope (pair-level, not usage-level)
@@ -89,6 +97,38 @@ sentences**).
 - Gates run this session: independent fresh-agent **pre-run critic**; one **non-Anthropic
   decorrelation vote** (probe REST path); independent fresh-agent **post-run verifier**
   (recompute from raw).
+
+## Pre-run gates (recorded)
+
+**Independent fresh-agent pre-run critic — verdict NO-GO → fixed → re-verified.** The critic
+verified byte-identity of the analysis/prompt logic (`diff` clean), the disjointness (independently
+reproduced **0 shared pairs**, 200 pairs, 41 lemmas, 50/50/50/50 balance, the exact median
+distribution), the anti-cheat (human gold never enters any prompt), and the cost/power — but caught
+one **BLOCKER (B1):** the byte-frozen `probe.py` read v1's input filename, which either crashes
+(the v1 fulltext is absent) or, if that file were regenerated, would **silently join v1 predictions
+to rep2 gold** (colliding `lx-{level}-{idx}` ids). **Fixed** by pointing `probe.py`'s single
+`FULLTEXT` constant at the rep2 items (critic option a; recomputed sha above) and **smoke-tested**
+before any spend: the resolved input is `lexical_rep2_fulltext.jsonl` (200 items), its item_ids
+**equal** the manifest's (0 mismatch), and a 1-item end-to-end call returned parseable ratings on
+all three framings that join to the manifest (smoke cost $0.002004). The critic's interpretation
+CONDITIONS are carried to the result/claim: **C1** — disjoint at the pair level but 61/357 usages
+recombine, so v1+rep2 are **not** two fully independent draws (no naive pooling/meta-as-independent;
+keep the "fresh pairs, recombined usages" framing, never AANN-style "0 shared items"); **C2** — v1's
+S1 (near-degenerate overlap control), S2 (model-internal topic partial = modest, not a clean
+sense/topic dissociation), S4 (homonymy floor) carry forward unchanged — lifting the single-run flag
+licenses only the **direction/agreement** magnitude, not a representational reading; **C3** — the
+n≥3 gold is better this draw (64 vs 48) but half-integer levels stay 2-rater, not reliable gold.
+Two NITs (v1 n≥3 stated 49, actually 48; "exactly three" build-diff wording) fixed in this README.
+
+**Non-Anthropic decorrelation vote (`openai/gpt-5.4-mini`, probe REST path) — GO-WITH-CONDITIONS**
+($0.001507 + a truncated first call $0.000860; cutoff-aware preamble). No hard blocker; endorsed
+pair-level disjointness as a legitimate replication unit *for a claim about correlations over
+pairwise judgments*, while stressing it is weaker than usage-level ("fresh pairs" replication, not
+"fully new underlying evidence"); told to keep the pair/usage overlap quantified **in the writeup,
+not a footnote**; and to guard against upgrading to a broad model-understanding / general-lexical
+reading or implying the re-run resolves more than **cross-date stability of the same instrument**
+(it does not address instrument fragility or lemma-specific dependence). All conditions converge with
+the critic's and are honored here and on the result page.
 
 ## Results / cost
 

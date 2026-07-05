@@ -27,8 +27,14 @@ sys.path.insert(0, os.path.abspath(os.path.join(
 from openrouter import PANEL, call, billed_cost, estimated_cost  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# REP2: the ONLY line changed from the v1 probe.py — the input-data path points at this run's
+# frozen rep2 items (lexical_rep2_fulltext.jsonl), not v1's. All behavioral logic below (the
+# three framing system prompts, guillemet item rendering, parsing, temperature-0 panel loop) is
+# byte-identical to v1. This also removes the item-id collision hazard the pre-run critic flagged:
+# v1 and rep2 both number items lx-{level}-{idx}, so a shared input filename could silently join
+# v1 predictions to rep2 gold; a rep2-specific input file makes that impossible.
 FULLTEXT = os.path.abspath(os.path.join(HERE, "..", "..", "data", "dwug",
-                                        "lexical_v1_fulltext.jsonl"))
+                                        "lexical_rep2_fulltext.jsonl"))
 RAW = os.path.join(HERE, "raw")
 
 DUREL_SYS = (
