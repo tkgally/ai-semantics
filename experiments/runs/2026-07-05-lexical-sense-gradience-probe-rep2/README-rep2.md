@@ -132,4 +132,26 @@ the critic's and are honored here and on the result page.
 
 ## Results / cost
 
-*(filled after the run)*
+**1800 calls, 0 NA in every arm, 0 missing cost. Total billed $0.68507**
+(claude $0.41022 / gpt $0.10133 / gemini $0.17352). **Far below v1's $3.134** — gemini billed
+$0.174 here vs $2.606 in v1 (its reasoning-token burn on this instrument is date/item-dependent,
+not fixed; v1's spike was an anomaly). Well under the $2.50 single-run flag and the fresh $5/day cap.
+
+**Headline: REPLICATES 3/3.** Spearman ρ(model sense, human DURel median), n=200, v1 → rep2:
+
+| model · framing | v1 ρ (CI) | rep2 ρ (CI) | partial\|topic v1→rep2 |
+|---|---|---|---|
+| claude · durel | 0.679 (.59–.75) | 0.715 (.642–.777) | 0.52 → 0.604 |
+| claude · cont  | 0.696 (.61–.78) | 0.739 (.664–.799) | 0.54 → 0.640 |
+| gpt · durel    | 0.601 (.49–.69) | 0.528 (.409–.639) | 0.50 → 0.392 |
+| gpt · cont     | 0.675 (.58–.75) | 0.631 (.530–.723) | 0.58 → 0.506 |
+| gemini · durel | 0.804 (.75–.85) | 0.808 (.748–.852) | 0.73 → 0.657 |
+| gemini · cont  | 0.825 (.76–.87) | 0.801 (.740–.848) | 0.75 → 0.639 |
+
+Every rep2 base ρ falls within v1's CI (all overlap, all clear of zero); the topic partial survives
+3/3 both framings. gpt is again the weakest and most elicitation-sensitive corner (ordinal durel
+0.528, partial|topic 0.392 — down from v1, still positive/non-collapsing, CI overlaps). Single-run
+flag on the direction/agreement claim **discharged**. Full reading:
+[`result/lexical-sense-gradience-rep2`](../../../wiki/findings/results/lexical-sense-gradience-rep2.md).
+Independently re-verified from raw by a fresh-agent post-run verifier (recompute; verdict recorded on
+the landing commit).

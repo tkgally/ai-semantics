@@ -1,7 +1,7 @@
 ---
 type: claim
 id: lexical-sense-gradience
-title: "On 200 DWUG EN within-period usage pairs, the panel's graded sense-relatedness rating rank-tracks the human DURel median (Spearman 0.60–0.83, in/above the human inter-annotator range) and the monotonic signal survives partialling the model's own topic-similarity rating — a single-run, powered, human-anchored lexical shadow-beater, promoted at direction/agreement scope with magnitude flagged single-run"
+title: "On 200 DWUG EN within-period usage pairs, the panel's graded sense-relatedness rating rank-tracks the human DURel median (Spearman 0.60–0.83, in/above the human inter-annotator range) and the monotonic signal survives partialling the model's own topic-similarity rating — a powered, human-anchored lexical shadow-beater, cross-date replicated 3/3 on fresh pair-disjoint items (single-run flag discharged), promoted at direction/agreement scope"
 meaning-senses:
   - distributional
   - referential
@@ -10,12 +10,14 @@ status: supported
 anchor: resource/dwug-usage-graphs
 contingent-on: []
 created: 2026-07-04
-updated: 2026-07-04
+updated: 2026-07-05
 links:
   - rel: anchors
     target: resource/dwug-usage-graphs
   - rel: depends-on
     target: result/lexical-sense-gradience-v1
+  - rel: depends-on
+    target: result/lexical-sense-gradience-rep2
   - rel: supports
     target: conjecture/lexical-sense-gradience
   - rel: supports
@@ -65,6 +67,26 @@ links:
 > `usage.cost` $0.003639 for both s176 promotion votes combined — and returned **PROMOTE-SCOPED**,
 > converging with this fresh-agent verdict and endorsing the same single-run, direction/agreement scope.
 > Convergence is comfort; no divergence to weigh.)*
+
+> **Update — 2026-07-05, session 181: the single-run flag is DISCHARGED for the direction/agreement
+> core (cross-date replicated 3/3).** The owed A2a re-run landed —
+> [`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md): the **byte-frozen
+> instrument** on **200 fresh DWUG pairs drawn disjoint from v1** (0 shared pairs; 61/357 usages
+> recombine — pair-disjoint, not usage-disjoint), fresh date, seed 20260705. **Every rep2 base ρ falls
+> within v1's 95% CI and every CI overlaps** (claude durel 0.679→0.715, cont 0.696→0.739; gpt 0.601→0.528,
+> 0.675→0.631; gemini 0.804→0.808, 0.825→0.801), and the **topic-partial shadow-beater survives 3/3 on
+> both framings** (partial\|topic 0.60/0.39/0.66 durel, 0.64/0.51/0.64 cont). 1800 calls, 0 NA,
+> **$0.68507** (far below v1's $3.134 — gemini's reasoning burn was an anomaly, not a fixed cost).
+> Fresh-agent post-run verifier **REPRODUCED (0 discrepancies, max abs diff 0.0005 / 24 stats)**; pre-run
+> fresh-agent critic (NO-GO on a frozen-probe input-path bug, fixed + smoke-tested) + non-Anthropic vote
+> GO-WITH-CONDITIONS. **What this discharges:** the *single-run* caveat on the **direction/agreement**
+> core — the graded ρ vs the DURel median and its survival of the topic partial are now cross-date
+> replicated, not one draw. **What it does NOT upgrade** (pre-run critic C1 + vote): this is **cross-date
+> stability of the same instrument on fresh pairs from the same finite corpus** — **not** two fully
+> independent draws, **not** a twice-powered independent magnitude, **not** a representational or broad
+> "model understanding" reading. The scope stays direction/agreement; gpt remains the weakest,
+> most-elicitation-sensitive corner (ordinal durel 0.528, partial\|topic 0.392 — down from v1, still
+> positive/non-collapsing, CI overlaps). Full-scope, magnitude-vs-human promotion still not licensed.
 
 ## Statement
 
@@ -222,10 +244,13 @@ separates sense from topic."
 - **Not a magnitude-vs-human, and not a per-item human agreement.** The human anchor grounds
   **direction + aggregate agreement** (in/above IAA) only. The magnitudes are within-run; the per-item
   gold is 2-rater-noisy for 151/200 pairs.
-- **Not a replicated or twice-powered magnitude.** The magnitudes carry their single-run 95% intervals,
-  but this instrument-and-control combination has run **once** — unlike the CC and dative magnitudes,
-  which were attached by powered re-runs on fresh disjoint items. The dual `durel`/`cont` framing is
-  within-run instrument robustness, **not** a fresh-item replication.
+- **Not a twice-powered *independent* magnitude (though now cross-date replicated).** As of 2026-07-05
+  the direction/agreement is replicated on a second date (rep2, fresh pair-disjoint items) — so it is no
+  longer single-run. But rep2 shares 61/357 usages with v1 (pair-disjoint, not usage-disjoint), so unlike
+  the CC and dative magnitudes — attached by powered re-runs on **fully** fresh disjoint items — this is
+  cross-date *stability of the same instrument*, not two independent draws; the magnitudes are reported as
+  a **replicated direction/agreement**, not pooled into a single tighter interval, and still **not**
+  compared to a human effect size.
 - **Not a representational claim.** Behavioral rank-tracking only; silent on whether the models carry
   graded sense *representations* (the deferred small-model representation lane).
 - **Not the polysemy-vs-homonymy discreteness separation.** Clause (b) is a separate powered null; the
@@ -241,12 +266,15 @@ separates sense from topic."
 
 ## Bounds
 
-- **Single run (the lead bound).** One date, one temperature-0 draw, one panel. The direction and the
-  in/above-IAA agreement are robust *within* that run (N=200, two framings, CIs clear of zero), and the
-  underlying phenomenon is corroborated across fresh anchors (v3 WiC, bridging) — but the **specific
-  result** (graded ρ vs the DURel median with the topic partial) is **not replicated**. A second run on
-  fresh DWUG pairs, a second draw, or a second date would be the natural strengthening (and would open
-  the door to a full-scope, magnitude-bearing promotion).
+- **Cross-date replicated, pair-disjoint (the lead bound, updated 2026-07-05).** The direction/agreement
+  core is now confirmed on **two dates** — v1 (2026-05-30, N=200) and rep2 (2026-07-05, N=200 fresh pairs
+  drawn disjoint from v1): every base ρ within v1's CI, the topic partial surviving 3/3 both framings
+  ([`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md)). This **discharges
+  the single-run flag** on the direction/agreement claim. What it does **not** reach: rep2 is disjoint at
+  the **pair** level but **61/357 usages recombine** v1 usages (DWUG's corpus is finite), so v1+rep2 are
+  **not two fully independent draws** — this is cross-date stability of the same instrument on fresh pairs,
+  weaker than the CC/dative/AANN re-runs' fresh-item independence, and the magnitudes are **not pooled or
+  meta-analyzed as independent**. A full-scope, magnitude-vs-human promotion remains unlicensed.
 - **The topic control is model-internal.** A surviving `partial | topic` is modest support that the
   sense signal isn't merely echoed context similarity; it is not a fully independent control, and a
   collapse would have been ambiguous. The lexical-overlap control is near-degenerate and rules out only
@@ -300,13 +328,16 @@ does, and the scope above is drawn so that nothing outruns the one result page t
 EN within-period pairs, all three panel models' graded sense-relatedness rating rank-tracks the human
 DURel median (durel ρ 0.60–0.80, cont ρ 0.68–0.83, all CIs clear of zero), the panel sits in/above the
 human–human IAA range (ρ ≈ 0.69), and the monotonic signal survives a modest, model-internal
-topic-similarity partial (partial ρ | topic 0.50–0.75). `supported` attaches to the **direction**, the
-**in/above-IAA agreement**, and the **survives-the-topic-shadow** reading (clause c, at its stated
-strength) — **not** to a human comparison of *sizes*, **not** to a per-item human comparison, **not** to
-a *replicated* or twice-powered magnitude (single run; magnitudes carry their single-run intervals), and
-**not** to a representational or discreteness reading, all explicitly disclaimed above. The underlying
-result remains `status: proposed` (this promotion consolidates it; it does not restate the per-run
-reading). `contingent-on: []` — the governing anchor and operationalization decisions are ratified. The
-owed non-Anthropic decorrelation vote was routed and converged **PROMOTE-SCOPED** (status box); the
-natural next strengthening is a second run (fresh DWUG pairs / second draw / second date), which would
-license a full-scope, magnitude-bearing edition.
+topic-similarity partial (partial ρ | topic 0.50–0.75), **now cross-date replicated 3/3 on 200 fresh
+pair-disjoint DWUG pairs** (rep2, 2026-07-05; every base ρ within v1's CI, topic partial surviving both
+framings). `supported` attaches to the **direction**, the **in/above-IAA agreement**, and the
+**survives-the-topic-shadow** reading (clause c, at its stated strength) — **not** to a human comparison
+of *sizes*, **not** to a per-item human comparison, **not** to a twice-powered *independent* magnitude
+(rep2 is pair-disjoint but shares 61/357 usages with v1 — cross-date instrument stability, not two
+independent draws; magnitudes are not pooled), and **not** to a representational or discreteness reading,
+all explicitly disclaimed above. The underlying results remain `status: proposed` (this claim
+consolidates them). `contingent-on: []` — the governing anchor and operationalization decisions are
+ratified. The owed non-Anthropic decorrelation vote converged **PROMOTE-SCOPED** (status box); the
+**single-run flag named as the next strengthening has now landed** (rep2) — what remains for a
+full-scope, magnitude-vs-human edition is a **usage-independent** re-run (a different corpus / generated
+items) and a human effect-size anchor, neither yet in hand.
