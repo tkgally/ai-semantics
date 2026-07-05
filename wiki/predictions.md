@@ -168,7 +168,7 @@ are in §C.
 | The grounding arc supplies a genuinely non-distributional residual for a lexical relation (a referential/grounded probe isolating antonymy competence answering to reference/perception) | [`essay/shortcut-vs-competence-mis-cut`](findings/essays/shortcut-vs-competence-mis-cut.md) (b) | **open** | Depends on the A2b grounding-magnitude instrument. |
 | A certified Option-C gap the adjudication gate judges genuinely non-single-reader-recoverable would puncture the transcript ceiling for the relational axis | [`essay/transcript-ceiling`](findings/essays/transcript-ceiling.md) (a) | **open** | Tested 2026-06-18 → not activated (gap adjudicated thin; ceiling holds); trigger stays live for other certified Option-C designs. |
 | The relational track crossing from thin order-sensitivity to genuine between-agent constitution would move the relational cell from "topic two, unreached" to "partially reached" | [`essay/two-topics-language-as-object`](findings/essays/two-topics-language-as-object.md) (d) | **open** | Same target as the relational-positive bet (§B theory). |
-| A **cleft-only, construction-grain doppelgänger battery** (cleft-family expansion, negation-only discriminating cell, question-frame confound controlled) yielding a residual **not reducible to a negation-frame surface cue** moves the presupposition corner toward the beater side; landing flat or frame-reducible **settles the corner as a measured non-beater at construction grain**. Either outcome discharges the bet; a word-varying re-run discharges nothing | [`essay/under-licensed-middle`](findings/essays/under-licensed-middle.md) (registered s174) | **open** | The one instrument the s173 doppelgänger result names as able in principle to reach past its B1 lexical bound. *(Row added s183 — the bet was registered on-page s174 and program B3's record names it; its absence here was a back-fill gap.)* |
+| A **cleft-only, construction-grain doppelgänger battery** (cleft-family expansion, negation-only discriminating cell, question-frame confound controlled) yielding a residual **not reducible to a negation-frame surface cue** moves the presupposition corner toward the beater side; landing flat or frame-reducible **settles the corner as a measured non-beater at construction grain**. Either outcome discharges the bet; a word-varying re-run discharges nothing | [`essay/under-licensed-middle`](findings/essays/under-licensed-middle.md) (registered s174) | **open** | The one instrument the s173 doppelgänger result names as able in principle to reach past its B1 lexical bound. *(Row added s183 — the bet was registered on-page s174 and the program's s174 ledger row names it; its absence here was a back-fill gap.)* |
 
 ---
 
@@ -233,7 +233,7 @@ and the "if the underlying numbers move on re-run" guard shared by [`essay/presu
 **Method-posture essays whose triggers are audit-outcome-contingent** (named here so the per-page
 audit is complete — full trigger lists on-page; none has a scoreboard side):
 [`essay/design-out-not-model-out`](findings/essays/design-out-not-model-out.md) (a)–(d) and
-[`essay/audit-brackets-instrument-competence`](findings/essays/audit-brackets-instrument-competence.md) (a)–(c)
+[`essay/audit-brackets-instrument-competence`](findings/essays/audit-brackets-instrument-competence.md) (a)–(e)
 *(added s183; both were previously unnamed in the ledger despite §C's completeness promise)*.
 
 **Source-reading bets still open** (a bet with a side — will the secondary survive the primary? —

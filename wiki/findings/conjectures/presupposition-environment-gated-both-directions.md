@@ -37,8 +37,9 @@ links:
 > not obtain) — **but BEATS is the under-licensed outcome**: the residual is keyed to the trigger
 > **word-form** and remains reconstructable by a verb-sensitive surface-cue follower, so it does not
 > move the corner to the beater side. The result's anchor was ratified `internal-contrast-only` in
-> session 174, and the line remains the last unpromoted B1 candidate (the session-177 review promoted
-> 5/6, with this line's refusal recorded as legitimate given the under-licensing).
+> session 174, and the line remains the last unpromoted B1 candidate — B1 has promoted 5 of its 6
+> candidate lines (s168–s177); this one's promotion review is still owed, and given the
+> under-licensing a written refusal would be a legitimate outcome.
 > *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
 **The bet (one sentence).** Current text-trained decoders' handling of presupposition is

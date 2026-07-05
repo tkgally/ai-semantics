@@ -16,7 +16,7 @@
 
 Opened s183 (by the audit; never ratifiable in the opening session — **s184+ may ratify**, PROTOCOL §2: fresh adversarial reviewer + one non-Anthropic vote each):
 
-1. [`decisions/open/result-status-upgrade-semantics`](wiki/decisions/open/result-status-upgrade-semantics.md) — what `status: supported` on a RESULT page means / who flips it (default A: event-based transitions; deprecate supported-at-creation; theory v2s may go `live` at next touch). ~10 pages' statuses untouched pending this.
+1. [`decisions/open/result-status-upgrade-semantics`](wiki/decisions/open/result-status-upgrade-semantics.md) — what `status: supported` on a RESULT page means / who flips it (default A: event-based transitions; deprecate supported-at-creation; theory v2s may go `live` at next touch). ~13 pages' statuses untouched pending this.
 2. [`decisions/open/meaning-senses-methodology-tags`](wiki/decisions/open/meaning-senses-methodology-tags.md) — the 6 methodology sources' undeclared tags (default A: one new `measurement-epistemic` tag + 6 mechanical retags + vocabulary edit).
 
 Ratifying + applying these = the first half of campaign **P2**.
@@ -39,7 +39,7 @@ Ratifying + applying these = the first half of campaign **P2**.
 ## ⚠ Do-not-re-grind (in force)
 
 - **(s183) Do NOT re-audit the whole wiki** — P1 is done; work from [`wiki/maintenance.md`](wiki/maintenance.md)'s lists. Do NOT flip the ~10 `supported`-at-creation result statuses before the decision ratifies. Do NOT mass-retarget theory-v1 references (edition-citation convention in `CLAUDE.md` governs; the v1 banners route readers).
-- **(s182) No B3 destructive essay merges** (load-bearing web; [`wiki/ideas.md`](wiki/ideas.md) is the map). **(s181) All five flagship A2a re-runs DONE** — no re-runs/re-promotions; a full-scope sense-gradience magnitude edition needs a usage-independent re-run + a human effect-size anchor (neither in hand). **(s179) Cite the theory -v2s;** never restate situating-v2 as a verdict flip. **(s170) Founding questions stay closed.** **(s168–)** no A3a dataset adoption without a verified DATA license.
+- **(s182) No B3 destructive essay merges** (load-bearing web; [`wiki/ideas.md`](wiki/ideas.md) is the map). **(s181) All four flagship A2a re-runs DONE (CC/dative/AANN/sense-gradience)** — no re-runs/re-promotions; a full-scope sense-gradience magnitude edition needs a usage-independent re-run + a human effect-size anchor (neither in hand). **(s179) Cite the theory -v2s;** never restate situating-v2 as a verdict flip. **(s170) Founding questions stay closed.** **(s168–)** no A3a dataset adoption without a verified DATA license.
 
 ## Next concrete actions — backlog for session 184 (PROTOCOL §3: fewer, deeper)
 

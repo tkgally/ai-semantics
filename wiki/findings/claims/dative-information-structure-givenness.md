@@ -216,7 +216,7 @@ magnitudes with intervals, with gpt's small-but-clearing effect and the ~9× spr
 
 ## Where it sits on the evidence ladder
 
-On [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)'s ladder *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) — cited here as the edition this page engaged.)* this is
+On [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)'s ladder *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md) — cited here as the edition this page engaged.)* this is
 a **Tier-2 (gradient semantic tracking) positive**, human-anchored to a corpus production surface — for
 claude and gemini now *thrice-observed at near-identical magnitude on disjoint items, powered*. It patterns with the
 project's recurring **add/easy-direction** observation: current decoders track a well-described soft

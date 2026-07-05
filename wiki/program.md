@@ -246,7 +246,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   nothing waits on it.
 - **D3 Ratify the queued subject decisions** at will (the three under `decisions/open/`);
   otherwise the normal cross-session process handles them. **[Discharged: all three were ratified
-  autonomously s168; `decisions/open/` has been empty since — the lever that remains live for Tom
+  autonomously s168; later decisions cycle through the normal cross-session process (2 open as of s183) — the lever that remains live for Tom
   is the panel-v2 re-open trigger recorded in [`config/models.md`](../config/models.md).]**
 - **D4 Paywalled ingestion:** the OA-reachable literature is near-exhausted;
   [`wiki/base/wanted.md`](base/wanted.md) documents each unreachable primary (Goldberg 1995/2006, Kaplan, the

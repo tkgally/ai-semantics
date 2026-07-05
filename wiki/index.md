@@ -40,7 +40,7 @@ Standing references:
 59 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
 - [`decisions/open/meaning-senses-methodology-tags.md`](decisions/open/meaning-senses-methodology-tags.md) — The six measurement-epistemics source pages use meaning-sense tags (`operational`, `methodological`) that are not in the controlled vocabulary — add the tag(s), or retag? · **open**
-- [`decisions/open/result-status-upgrade-semantics.md`](decisions/open/result-status-upgrade-semantics.md) — Decision: result-page status semantics (and the theory `draft`/`live` labeling)
+- [`decisions/open/result-status-upgrade-semantics.md`](decisions/open/result-status-upgrade-semantics.md) — What does `status: supported` mean on a RESULT page — who may set it, when — and should operative theory pages be `live` rather than `draft`? · **open**
 
 ### Base — concepts
 

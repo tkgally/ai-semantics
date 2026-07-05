@@ -168,8 +168,8 @@ If/when mirrored: place at `experiments/data/dwug/dwug_en.zip` (NOT in the wiki)
 | DWUG EN 29k judged usage pairs (2021 paper; v3.0.0 archive ~69k) | **VERIFIED** | Primary paper Table 3 (JUD); v3.0.0 size per WUGsite |
 | Annotators = **9 for EN** (started from 4) | **VERIFIED / PRIOR DRAFT CORRECTED** | Table 3 (AN=9) + §4.1 "9/8/5 total annotators for EN/DE/SV"; earlier "~4" was the starting count only |
 | Agreement ρ .69 / α .61 (EN) | **VERIFIED** | Primary paper Table 3 (SPR/KRI) |
-| Within-time (synchronic) pair subset is extractable | **PARTIALLY VERIFIED** | EMNLP abstract mentions "diachronic and synchronic uses"; corpus spans two periods; details not inspected |
-| Data format (file structure inside dwug_en.zip) | **UNVERIFIED** | Archive not downloaded or inspected |
+| Within-time (synchronic) pair subset is extractable | **PARTIALLY VERIFIED** *(superseded s183: the v1 build extracted exactly this subset — 200 within-period pairs — so VERIFIED in practice; see the update box)* | EMNLP abstract mentions "diachronic and synchronic uses"; corpus spans two periods; details not inspected |
+| Data format (file structure inside dwug_en.zip) | **UNVERIFIED** *(superseded s183: archive downloaded, sha-pinned, and parsed by the v1/rep2 builds; see the update box)* | Archive not downloaded or inspected |
 | CoSimLex scale = **0 to 6** (earlier "0–10" CORRECTED) | **VERIFIED verbatim** | §4.2 of arXiv 1912.05320, primary read 2026-06-24 via source/armendariz-2020-cosimlex |
 | Prior claim that DWUG is "CC BY" | **CORRECTED** | All DWUG EN/DE/ES/SV records carry CC BY-ND 4.0, not CC BY |
 

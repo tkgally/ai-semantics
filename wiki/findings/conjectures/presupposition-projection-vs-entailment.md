@@ -38,7 +38,7 @@ links:
 > 2/3** — claude and gemini show the pre-registered within-model projection asymmetry (P endorsed
 > above E under the cancelling frames); the panel-level signal carries a **conditional-antecedent
 > collapse** (the antecedent frame is where projection thins). The line then ran the trigger
-> inventory (s160), the environment-gated conjecture (s165), and the doppelgänger control (s173 —
+> inventory (s160), the environment-gated conjecture (s162), and the doppelgänger control (s173 —
 > BEATS-DOPPELGANGER but under-licensed). *(Back-annotation: the s180 log verified this mismatch;
 > this box records the outcome the front-matter's `tested` already reflected.)*
 

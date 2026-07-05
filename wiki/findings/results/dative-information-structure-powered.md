@@ -149,7 +149,7 @@ v1/v2's clean data).
 
 This **refines** v1/v2's Tier-2 (gradient semantic tracking) positive on
 [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)'s ladder
-*(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+*(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
 — cited here as the edition this page engaged.)*, and it
 **tightens the panel reading rather than narrowing it**: v2 had narrowed "all three track it" to "two of
 three robustly," but the powered re-run shows the third member's effect **is** real (clears zero at N=100,

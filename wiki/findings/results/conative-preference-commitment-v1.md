@@ -30,8 +30,6 @@ links:
     target: theory/constructional-meaning-in-llms
   - rel: anchors
     target: resource/scivetti-2025-cxnli-dataset
-  - rel: refines
-    target: result/conative-commitment-replication-v2
 ---
 
 # Result: conative preference/commitment double contrast v1

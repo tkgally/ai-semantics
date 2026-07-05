@@ -56,7 +56,7 @@ links:
 > composition line, and the seven essays the philosophical track has built around them. It **promotes
 > and expands** the relational subsection of
 > [`theory/constructional-meaning-in-llms`](constructional-meaning-in-llms.md) (§"The under-explored
-> axis: relational meaning") *(Superseded s177 by
+> axis: relational meaning") *(superseded s177 by
 > [`theory/constructional-meaning-in-llms-v2`](constructional-meaning-in-llms-v2.md) — cited here as
 > the edition this page engaged.)* — that page records the relational axis as "one bounded negative" and
 > defers the rest; this page carries the now-substantial arc. Every empirical number below is copied

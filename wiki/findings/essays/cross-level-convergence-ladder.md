@@ -166,7 +166,7 @@ The project already has a five-rung **evidence ladder**, on
 form-acceptability < Tier 1 surprisal-contrast < Tier 2 gradient semantic tracking < Tier 3
 generalization < Tier 4 inference-licensing, compressed by that page as "**form-acceptability <
 surprisal-contrast < gradient semantic tracking < generalization < inference-licensing**."
-*(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+*(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
 — the evidence ladder is carried unchanged in structure into the second edition; cited here as the
 edition this essay engaged.)* The
 convergence ladder borrows that page's *format* — graded rungs, each subsuming those below, placements

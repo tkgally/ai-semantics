@@ -188,7 +188,7 @@ category (`category_changes: false`; Δ² excl-disputed +0.872 / +0.590 / +0.923
   It is still **not** SUPPORTED outright (no ≥2-model cross-instrument convergence) and
   is no longer reachable as a clean null.
 - Within the evidence ladder of [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
-  *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
   — cited here as the edition this page engaged.)*,
   this confirms the AANN line's first **Tier-4 (inference-licensing)** signal as a
   replicable, powered effect for gpt-5.4-mini, with the standing caution that a

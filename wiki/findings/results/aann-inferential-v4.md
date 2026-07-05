@@ -204,7 +204,7 @@ Recomputing the paraphrase double contrast excluding it changes no model's categ
   ≥2-model convergence) and **no longer a clean null**. Any reading of the conjecture's inferential
   clause as established across the panel stays unsupported.
 - Within the evidence ladder of [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
-  *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
   — cited here as the edition this page engaged.)*,
   this is the AANN line's first **Tier-4 (inference-licensing)** signal that clears its bar — but
   only for gpt-5.4-mini, and with the standing caution that a forced-choice paraphrase preference is

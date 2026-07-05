@@ -151,7 +151,7 @@ of within-model behaviours under a shared instrument, it is an internal contrast
 ## Where it sits on the evidence ladder
 
 On the ladder in [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
-*(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+*(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
 — cited here as the edition this page engaged.)*,
 this claim records that the **instrument-sensitivity story is construction-particular**: the
 forced-choice paraphrase arm and the NLI entailment arm — both used to probe Tier-4-adjacent

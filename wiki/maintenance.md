@@ -82,13 +82,18 @@ finding/status), ~110 SHOULD-FIX, the rest NIT. Plus ~30 research seeds (harvest
   banners route readers; the edition-citation convention (now in CLAUDE.md) is the durable fix.
 - **No essay merges** (standing s182 fence: the essay web is load-bearing; the additive
   [`ideas.md`](ideas.md) is the map).
-- **No result-status flips.** The ~10 `supported`-at-creation result pages stand untouched
+- **No result-status flips.** The ~13 `supported`-at-creation result pages stand untouched
   pending the queued decision — normalizing them now would apply a default in the session that
   opened it.
 - **No `anchor:` field normalization.** Two live value styles coexist (`human-anchored` ×5 —
   including the s175 flagship — vs `resource/<id>` ×14); both are readable, senselint accepts
   both; recorded here as benign variance.
 - **Superseded pages' bodies byte-untouched** (banners verified correct).
+- **One typed-link deletion, recorded here** (the campaign's only removal outside the sanctioned
+  classes): [`conjecture/aann-construction`](findings/conjectures/aann-construction.md) carried a spurious `refines →
+  open-question/relational-meaning-pilot` edge (no reciprocal relationship; the pilot page says
+  the constructional conjectures do not touch the relational axis) — deleted s183 rather than
+  annotated, because a wrong machine-graph edge has no historical value a note would preserve.
 - **Resolved decision pages untouched** (archival; only the changelog index's over-claim about
   `resolved-by` fields was softened).
 
@@ -116,8 +121,7 @@ finding/status), ~110 SHOULD-FIX, the rest NIT. Plus ~30 research seeds (harvest
   (senselint tolerates); decide whether to bless or rehome at the next senselint touch.
 - The remaining "pending Tom's review" archaisms inside old status boxes of pages no fix row
   touched (way/conative conjecture boxes were fixed; a final grep-sweep at P2 catches stragglers).
-- Barwise & Perry 1983 wanted.md entry (kratzer source points at a nonexistent entry) — being
-  handled by fix agent 3; verify landed, else do at P2.
+- Barwise & Perry 1983 wanted.md entry — **DONE s183** (the kratzer pointer now resolves).
 - Spot-check that every fix agent's inserted relative link survives `linkify --check` (P1 exit
   gate re-runs it; re-verify at P2 cold-start).
 - `homonym-meaning-dominance-norms` front-matter now reads `status: scouting` (the F27 vocabulary
@@ -197,4 +201,4 @@ splitting arm.
 
 | Date | Session | What happened |
 |------|---------|---------------|
-| 2026-07-05 | s183 | Campaign opened (Tom-directed). Full six-slice audit (~370 pages, ~170 issues, 12 BLOCKERs); orchestrator fixed all BLOCKERs; five fix agents applied the batch tranche; exec-summary regenerated (B4 ticked); predictions.md completed; program.md reconciled; CLAUDE.md conventions corrected/documented; 2 decisions queued; this ledger + the continue-prompt §5 plan written. $0. |
+| 2026-07-05 | s183 | Campaign opened (Tom-directed). Full six-slice audit (~370 pages, ~170 issues, 12 BLOCKERs); orchestrator fixed all BLOCKERs; five fix agents applied the batch tranche; exec-summary regenerated (B4 ticked); predictions.md completed; program.md reconciled; CLAUDE.md conventions corrected/documented; 2 decisions queued; this ledger + the continue-prompt §5 plan written. Fresh-agent adversarial coherence pass over the full diff → **SAFE-TO-LAND after patch** (1 BLOCKER — an invented meta-number in the regenerated exec summary — + 11 SHOULD-FIX + 12 NIT, **all applied**, including the NITs the reviewer offered to defer). $0. |

@@ -76,7 +76,7 @@ explained by surface co-occurrence statistics? The flagship object is the **shad
 residual over a named distributional control, with confidence intervals.
 
 **Six promoted claims** now carry the picture; the four "shadow-beater" rows have all been
-**replicated on fresh items at proper sample sizes**, four to eight weeks after first being seen:
+**replicated on fresh items at proper sample sizes**, two to five weeks after first being seen:
 
 - **Comparative correlative** (*the more X, the more Y*): the construction — not its words —
   drives the covariation inference. Isolation gap **≈87 percentage points** over same-word
@@ -93,7 +93,7 @@ residual over a named distributional control, with confidence intervals.
   model's coarse yes/no form-judgment wobbled at the margin (18/24) on the second date even
   though its graded gradient held — [`claim/aann-behavioral-gradient`](findings/claims/aann-behavioral-gradient.md).
 - **Word-sense gradience**: the models' graded sense-relatedness judgments track human judgments
-  (DWUG) at or above human inter-annotator agreement, survive a topic-similarity control, and
+  (DWUG) largely at or above human inter-annotator agreement, survive a topic-similarity control, and
   **replicated on fresh word pairs** — [`claim/lexical-sense-gradience`](findings/claims/lexical-sense-gradience.md).
   The companion negative is just as load-bearing: the models carry the graded *scale* but not the
   lexicographer's within-item *hesitation* ([`claim/lexical-graded-scale-ungraded-commitment`](findings/claims/lexical-graded-scale-ungraded-commitment.md)),
@@ -107,7 +107,7 @@ residual over a named distributional control, with confidence intervals.
 
 Around the beaters, the honest boundary results:
 
-- **Presupposition** behaves *environment-gatedly* (it projects under negation and questions,
+- **Presupposition** behaves *environment-gatedly* (in two of the three models it projects under negation and questions,
   collapses in conditional antecedents), and it **beat a word-form doppelgänger control — but
   under-licensed**: the control is word-form-keyed, so a surface-cue account survives, and the
   line remains deliberately **unpromoted**. This is the clearest case of the project refusing its
@@ -167,7 +167,7 @@ fifth easing.
 ## Bookkeeping
 
 Budget: **$5.00/day (UTC)**, tracked per-run in [`config/budget.md`](../config/budget.md);
-biggest single day so far ≈ $4.3, most days well under $1. Decisions: **59 resolved, 2 open**
+biggest single day so far ≈ $4.6, most days well under $1. Decisions: **59 resolved, 2 open**
 (both opened s183 by the coherence audit: result-status semantics; two undeclared meaning-sense
 tags — ratifiable from s184). The public website carries one plain-language journal entry per
 day; it never states a finding more strongly than the wiki does.

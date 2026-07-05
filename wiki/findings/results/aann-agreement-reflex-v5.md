@@ -160,7 +160,7 @@ carry — none changes the frozen verdict, all constrain its reading:
   inferential question).
 - On the evidence ladder of
   [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
-  *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
   — cited here as the edition this page engaged.)*, this sits at
   the **form/agreement rung**, not the inference rung. It strengthens the recurring AANN pattern
   (strong and now panel-generalizing on *form/agreement*; inferential *use* uneven across models and

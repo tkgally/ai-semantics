@@ -1,6 +1,6 @@
 ---
 id: result-status-upgrade-semantics
-title: What does `status: supported` mean on a RESULT page — who may set it, when — and should operative theory pages be `live` rather than `draft`?
+title: "What does `status: supported` mean on a RESULT page — who may set it, when — and should operative theory pages be `live` rather than `draft`?"
 status: open
 opened: 2026-07-05
 opened-by: session-183
@@ -15,7 +15,7 @@ The schema ([`CLAUDE.md`](../../../CLAUDE.md)) gives results the vocabulary
 `proposed | supported | contested | retired` but no *transition rule*. Practice has diverged
 silently, in both directions:
 
-- **~10 result pages carry `status: supported` self-assigned at creation** with no in-page
+- **~13 result pages carry `status: supported` self-assigned at creation** with no in-page
   promotion or replication record (the monotonicity gate/calibration family,
   `third-construction-headroom-harvest-v1`, `addarm-headroom-calibration-v1`, several
   function-word pages) — while the project's *thrice-replicated flagship results*
@@ -35,7 +35,7 @@ Nothing here changes any finding; it is pure status semantics. But status fields
 - **A (provisional default).** *Results:* `status` on a result page describes the **reading's
   lifecycle**, and only a **recorded event** moves it — a dated in-page note naming the session
   and the ground (a replication, a promotion review citing it, or a contested/retired call).
-  `supported`-at-creation is deprecated going forward; the ~10 existing pages get a one-line
+  `supported`-at-creation is deprecated going forward; the ~13 existing pages get a one-line
   dated normalization note **at the next touch of each page** (no mass edit; the note may either
   justify keeping `supported` — e.g. a $0 gate whose "support" is mechanical — or set `proposed`).
   *Theory:* operative syntheses may move `draft → live` at their next substantive touch; a
@@ -44,7 +44,7 @@ Nothing here changes any finding; it is pure status semantics. But status fields
   [`CLAUDE.md`](../../../CLAUDE.md) (describe, don't normalize). Cheapest; leaves the flagship-vs-gate inversion
   standing.
 - **C.** Mass-normalize now: all un-promoted results to `proposed` in one sweep. Cleanest graph,
-  but rewrites ~10 pages' metadata without per-page judgement, and a gate page's `supported`
+  but rewrites ~13 pages' metadata without per-page judgement, and a gate page's `supported`
   arguably *is* the right description of a mechanical check that passed.
 
 ## Provisional default

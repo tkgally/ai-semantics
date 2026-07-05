@@ -169,7 +169,7 @@ false`). The null is not an artefact of the single disputed coding.
 - The agreement reflex is a genuine `constructional` + `functional-vs-formal` signal in
   gpt-5.4-mini: the construction's grammaticalized singular agreement is tracked AANN-specifically.
   Within the evidence ladder of [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
-  *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
   — cited here as the edition this page engaged.)*,
   this sits at the **form/agreement** rung, not the inference rung — consistent with the recurring
   pattern that AANN competence is strong on *form* (v2 gradient; Tier-0 ceilings) and unproven on

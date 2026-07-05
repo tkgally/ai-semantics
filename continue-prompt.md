@@ -129,4 +129,5 @@ conventions documented in `CLAUDE.md` s183); every standing fence in `NEXT.md` s
 essay merges — the web is load-bearing; no re-runs/re-promotions; cite the theory v2s); anything
 value-laden goes to `wiki/decisions/open/`, never applied in the session that opens it; the
 website is touched only if a campaign session changes something reader-substantive (else it is a
-maintenance session per `PROTOCOL.md §5b`).
+maintenance session per `PROTOCOL.md §5b`; autonomous ratifications always appear in the day’s
+entry, per Ruling 1).

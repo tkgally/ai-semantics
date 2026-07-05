@@ -197,7 +197,7 @@ covariate**.
   ρ 0.692 / 0.661 / 0.736). The rank information about the human gradient the model carries is
   therefore *over and above* what unigram frequency supplies. This is the ladder's discipline made
   concrete: per [`theory/constructional-meaning-in-llms`](../theory/constructional-meaning-in-llms.md)
-  *(Superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
+  *(superseded s177 by [`theory/constructional-meaning-in-llms-v2`](../theory/constructional-meaning-in-llms-v2.md)
   — cited here as the edition this page engaged.)*,
   "A Tier-2 evaluative-adjective effect is only evidence for meaning *if* unigram frequency is
   controlled; otherwise it collapses back to Tier 1." Here it does not collapse.
