@@ -23,9 +23,10 @@ Standing references:
 
 - [`meaning-senses.md`](meaning-senses.md) — the controlled vocabulary every findings page must tag against.
 - [`predictions.md`](predictions.md) — the registered-bet ledger (every bet, its status, its outcome).
+- [`ideas.md`](ideas.md) — a reading index over the ~50 essays, sorted by the ~dozen genuinely distinct contributions (a navigation surface, not an argument).
 - [`executive-summary.md`](executive-summary.md) — plain-language **checkpoint digest**, regenerated at consolidation checkpoints (its header says how stale it is; last full regeneration 2026-06-27, session 124).
 - [`../log.md`](../log.md) — dated one-line history of every run.
-- Current syntheses: [`findings/theory/constructional-meaning-in-llms.md`](findings/theory/constructional-meaning-in-llms.md) (the grammatical wedge — second edition owed, program B2), [`findings/theory/situating-llm-meaning.md`](findings/theory/situating-llm-meaning.md) (the four-loci map — second edition owed), [`findings/theory/lexicon-grammar-continuum.md`](findings/theory/lexicon-grammar-continuum.md) (the continuum + shadow-depth axis), [`findings/theory/relational-meaning-in-llms.md`](findings/theory/relational-meaning-in-llms.md), [`findings/theory/statistical-preemption-and-constructional-productivity.md`](findings/theory/statistical-preemption-and-constructional-productivity.md).
+- Current syntheses: [`findings/theory/constructional-meaning-in-llms-v2.md`](findings/theory/constructional-meaning-in-llms-v2.md) (the grammatical wedge, 2nd ed.), [`findings/theory/situating-llm-meaning-v2.md`](findings/theory/situating-llm-meaning-v2.md) (the four-loci map, 2nd ed.), [`findings/theory/lexicon-grammar-continuum.md`](findings/theory/lexicon-grammar-continuum.md) (the continuum + shadow-depth axis), [`findings/theory/relational-meaning-in-llms.md`](findings/theory/relational-meaning-in-llms.md), [`findings/theory/statistical-preemption-and-constructional-productivity.md`](findings/theory/statistical-preemption-and-constructional-productivity.md).
 
 ## Pages
 
