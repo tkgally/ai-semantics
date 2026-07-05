@@ -120,6 +120,9 @@ finding/status), ~110 SHOULD-FIX, the rest NIT. Plus ~30 research seeds (harvest
   handled by fix agent 3; verify landed, else do at P2.
 - Spot-check that every fix agent's inserted relative link survives `linkify --check` (P1 exit
   gate re-runs it; re-verify at P2 cold-start).
+- `homonym-meaning-dominance-norms` front-matter now reads `status: scouting` (the F27 vocabulary
+  normalization) while its body records the data fetched + used firsthand (s94) — a one-word
+  status re-grade (`catalogued` or `verified`) is plausibly owed; decide at P2 with the page open.
 
 ## Ideas harvest — research seeds surfaced by the audit (P4 triages; do not silently drop)
 
