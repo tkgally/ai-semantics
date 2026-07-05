@@ -14,7 +14,7 @@ The ideas fall into two families, loosely tracking the project's two tracks: **s
 
 ### 1. The distributional shadow, and shadow-depth as a measured axis
 
-The single test that organizes the project — *does a meaning gradient beat its matched distributional (co-occurrence) control?* — paired with the insight that phenomena sort by **shadow-depth**: how much of the behavior is already written into co-occurrence. That axis is *orthogonal to grain*, so each of the lexical and grammatical poles splits into a shadow-beater and a shadow-saturated corner.
+The single test that organizes the project — *does a meaning gradient beat its matched distributional (co-occurrence) control?* — paired with the insight that phenomena sort by **shadow-depth**: how much of the behavior is already written into co-occurrence. That axis is *orthogonal to grain*, so each pole is read as splitting into a shadow-beater and a (more tentatively placed) shadow-saturated corner — the saturated placements a reading/bet, not a controlled result, and the presupposition corner in particular sits, post-control, in an *under-licensed middle*.
 
 - [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md) *(anchor)* — the continuum's single test sorts phenomena by shadow-depth, a second axis that cross-cuts the word↔construction cline.
 - [`essay/two-distributional-hypotheses`](findings/essays/two-distributional-hypotheses.md) — "the distributional hypothesis" is two ideas (Harris's form-internal vs Firth's situated); the next-token objective instantiates Harris, not Firth.
@@ -53,7 +53,7 @@ These models rank-order word senses smoothly (a graded *scale*, tracking human j
 
 - [`essay/graded-scale-ungraded-commitment`](findings/essays/graded-scale-ungraded-commitment.md) *(anchor)* — scale and commitment are logically independent; the null combination would be as real a finding as a positive.
 - [`essay/preference-without-commitment`](findings/essays/preference-without-commitment.md) — a paraphrase-preference and an entailment-commitment index two different constructs; where they dissociate, "does the model use the meaning?" has no single answer.
-- [`essay/presence-is-not-balance`](findings/essays/presence-is-not-balance.md) — an attested ambiguity discharges *co-presence* but is silent (by type) on *balance*; the two must be anchored separately.
+- [`essay/presence-is-not-balance`](findings/essays/presence-is-not-balance.md) — an attested ambiguity discharges *co-presence* but is silent (by type) on *balance*; the two must be anchored separately (topically about lexical sense, but methodologically a construct-validity–hygiene point — see §12).
 - [`essay/ambiguity-kind-not-level`](findings/essays/ambiguity-kind-not-level.md) — the commit/decline split tracks *kind* of indeterminacy (scalar vs disjunctive), not level; its lexical bet was tested and **retracted** (models committed).
 - [`essay/layer-specialness-vs-always-resolvability`](findings/essays/layer-specialness-vs-always-resolvability.md) — the surviving lexical commit admits two rival readings the design cannot separate; a genuinely-unresolvable item would tell them apart.
 - [`essay/gradient-from-overlap`](findings/essays/gradient-from-overlap.md) — declining to read the gradient as a stored prototype repeats the prototype tradition's own discipline; the open question is *which overlap space* the gradient lives in.
@@ -139,6 +139,8 @@ A cluster of disciplines for constructing and reading behavioral instruments. **
 - [`essay/audit-brackets-instrument-competence`](findings/essays/audit-brackets-instrument-competence.md) — a magnitude read's dominant uncertainty is the instrument's own competence; bracket it between two symmetric failure modes rather than assert it.
 - [`essay/instrument-corrects-the-hand-read`](findings/essays/instrument-corrects-the-hand-read.md) — a careful adversarial eyeball is an optimistic point estimate a frozen, held-out, strict-rubric instrument moves downward.
 - [`essay/cross-level-convergence-ladder`](findings/essays/cross-level-convergence-ladder.md) — R0 shared vocabulary → R-ceiling mechanistic identity; assert a cross-level unification only at the rung the evidence has reached.
+
+*Also here, by role:* the anchor names `design-out-not-model-out` and [`essay/presence-is-not-balance`](findings/essays/presence-is-not-balance.md) (filed under §4 by topic) as **Messick's two construct-validity threats** — so *presence-is-not-balance* is a construct-validity–hygiene point as much as a lexical-sense one.
 
 ---
 
