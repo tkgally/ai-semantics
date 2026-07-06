@@ -9,10 +9,10 @@ venue: "arXiv:2603.15121v1 [cs.LG]"
 url: https://arxiv.org/abs/2603.15121
 access: open-access
 meaning-senses:
-  - operational
+  - measurement-epistemic
 status: received
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-06
 links: []
 ---
 

@@ -69,9 +69,9 @@ finding/status), ~110 SHOULD-FIX, the rest NIT. Plus ~30 research seeds (harvest
   (quotes cite the edition they quote; only as-if-current prose gets a pointer; no mass
   retargeting); the **essay status discipline** (front-matter authoritative; blockquote restates
   it; content-changing revision ⇒ `revised`; fired triggers annotated at the trigger).
-- **Two decisions queued** (ratifiable from s184):
-  [`decisions/open/result-status-upgrade-semantics`](decisions/open/result-status-upgrade-semantics.md)
-  and [`decisions/open/meaning-senses-methodology-tags`](decisions/open/meaning-senses-methodology-tags.md).
+- **Two decisions queued** (ratifiable from s184; **both ratified ADOPT-A + resolved s184**):
+  [`decisions/resolved/result-status-upgrade-semantics`](decisions/resolved/result-status-upgrade-semantics.md)
+  and [`decisions/resolved/meaning-senses-methodology-tags`](decisions/resolved/meaning-senses-methodology-tags.md).
 - **One number corrected from raw:** sense-gradience v1's two-annotator count is 152/200 (n≥3 =
   48), not 151; the v1 page and run README carry dated corrections (rep2's "(v1: 48/200)" was
   right).
@@ -111,22 +111,41 @@ finding/status), ~110 SHOULD-FIX, the rest NIT. Plus ~30 research seeds (harvest
 - Result pages use two update-record shapes (dated boxes vs inline bracketed notes); both are
   dated and attributable — not worth normalizing.
 
-## Deferred to P2 (the SHOULD-FIX remainder)
+## Deferred to P2 (the SHOULD-FIX remainder) — **CLEARED s184 (2026-07-06)**
 
-- Apply whichever option the two queued decisions ratify (per-page status-normalization notes;
-  the meaning-senses tag change + vocabulary edit).
-- `updated:` dates on a handful of spine pages whose newest in-page box postdates the field but
-  which no s183 row touched (auditor C's truncated-NIT list; low value, zero risk).
-- `operationalizes: design/...` front-matter targets point outside the wiki type system
-  (senselint tolerates); decide whether to bless or rehome at the next senselint touch.
-- The remaining "pending Tom's review" archaisms inside old status boxes of pages no fix row
-  touched (way/conative conjecture boxes were fixed; a final grep-sweep at P2 catches stragglers).
+**P2 status (s184):** both decisions ratified ADOPT-A (fresh reviewer + non-Anthropic vote
+converged on each) and applied; the remainder below cleared. Details in the ledger row.
+
+- ✅ **Apply the two ratified decisions.** Both ADOPT-A. *Result-status:* the event-based
+  transition rule documented in [`../CLAUDE.md`](../CLAUDE.md) ("Result and theory status
+  discipline") — mechanical-gate vs reading-bearing sort; `supported` for reading-bearing lines
+  lives on the claim layer; gate pages may be *created* `supported`; result `status` declared
+  non-ranking/possibly-stale until normalized; theory `draft → live` deferred to each page's next
+  substantive touch. **No result page mass-edited; no theory page flipped to `live` this
+  maintenance session** (per option A's no-mass-edit clause). *Meaning-senses tags:*
+  `measurement-epistemic` added to [`meaning-senses.md`](meaning-senses.md) (gloss broadened to
+  cover common-cause/convergence epistemics; How-to-tag guardrail added) + the six `base/sources/`
+  pages retagged (Borsboom keeps `referential`). Resolved pages:
+  [`decisions/resolved/result-status-upgrade-semantics`](decisions/resolved/result-status-upgrade-semantics.md),
+  [`decisions/resolved/meaning-senses-methodology-tags`](decisions/resolved/meaning-senses-methodology-tags.md).
+- ✅ **`updated:` date sweep.** The 7 pages P2 substantively touched (way-construction + 6 retagged
+  sources) bumped to 2026-07-06. The spine (theory/claims) lag-scan found **no genuine
+  update-box lags** — the two heuristic hits were citation/event dates in prose
+  (`relational-order-sensitive-reassignment`'s "attempted 2026-06-20" narrative; a 1-day
+  cxg-page citation), not lagging update boxes. Confirms auditor C's "low value" read.
+- ✅ **`operationalizes: design/...` targets — BLESSED.** 11 findings pages carry an
+  `operationalizes → design/<id>` link (senselint already tolerates it). Documented as a blessed
+  exception in [`../CLAUDE.md`](../CLAUDE.md) (Typed links): a conjecture/result is operationalized
+  by its frozen `experiments/designs/` design; all other typed-link targets stay in-wiki.
+- ✅ **"pending Tom's review" grep-sweep.** Only one genuine straggler
+  ([`conjecture/way-construction`](findings/conjectures/way-construction.md)'s tested-box) lacked a
+  note — governance-noted s184. The other 14 hits already carry the s183 governance note/correction
+  (indexical uses "Governance *correction*", which the s183 grep missed).
 - Barwise & Perry 1983 wanted.md entry — **DONE s183** (the kratzer pointer now resolves).
-- Spot-check that every fix agent's inserted relative link survives `linkify --check` (P1 exit
-  gate re-runs it; re-verify at P2 cold-start).
-- `homonym-meaning-dominance-norms` front-matter now reads `status: scouting` (the F27 vocabulary
-  normalization) while its body records the data fetched + used firsthand (s94) — a one-word
-  status re-grade (`catalogued` or `verified`) is plausibly owed; decide at P2 with the page open.
+- ✅ **linkify `--check`** re-verified clean at the P2 verification gate.
+- ✅ **`homonym-meaning-dominance-norms` regraded** `scouting → verified` (its own blockquote
+  records the norms fetched from OSF and used firsthand s94, licenses verified verbatim — matching
+  the WordNet resource's `verified` grade); dated regrade note added.
 
 ## Ideas harvest — research seeds surfaced by the audit (P4 triages; do not silently drop)
 
@@ -186,7 +205,9 @@ splitting arm.
 
 ## Phase checklists
 
-- **P2** — ratify + apply the two decisions; the Deferred list above; re-verify agent links.
+- **P2 `[x]` (s184)** — both decisions ratified ADOPT-A + applied; the Deferred list above cleared;
+  agent links re-verified. Paired with the A1b antonymy design (the campaign rule permits sharing a
+  session with an owed empirical unit). Next: **P3** (program B6 note-sweep + orphan cures).
 - **P3** — program B6 note-sweep (~10 pages; create `findings/notes/`); orphan cures
   (kratzer/zeng verified linked; any remaining zero-inbound sources listed then linked or
   marked peripheral).
@@ -201,4 +222,5 @@ splitting arm.
 
 | Date | Session | What happened |
 |------|---------|---------------|
+| 2026-07-06 | s184 | **P2 done** (paired with the A1b antonymy design). Both s183-opened decisions **ratified ADOPT-A** — fresh adversarial reviewer + one non-Anthropic decorrelation vote (`openai/gpt-5.4-mini`) **converged on each** ($0.002774 for the two votes). *result-status-upgrade-semantics:* event-based transition rule documented in CLAUDE.md (mechanical-gate vs reading-bearing sort; `supported` lives on the claim layer for reading-bearing lines; gate pages may be created `supported`; status non-ranking/possibly-stale until normalized; theory draft→live deferred to next substantive touch) — **no result mass-edited, no theory flipped to `live`** (option A's no-mass-edit clause). *meaning-senses-methodology-tags:* `measurement-epistemic` tag added (broadened gloss + How-to-tag guardrail) + six `base/sources/` retags. Deferred-to-P2 remainder cleared: `operationalizes: design/<id>` **blessed** in CLAUDE.md; one pending-Tom straggler (way-construction) noted; `homonym-meaning-dominance-norms` regraded `scouting → verified`; 7 touched pages' `updated:` bumped; spine lag-scan found only citation-date false positives; linkify clean. $0.002774 (two ratification votes). |
 | 2026-07-05 | s183 | Campaign opened (Tom-directed). Full six-slice audit (~370 pages, ~170 issues, 12 BLOCKERs); orchestrator fixed all BLOCKERs; five fix agents applied the batch tranche; exec-summary regenerated (B4 ticked); predictions.md completed; program.md reconciled; CLAUDE.md conventions corrected/documented; 2 decisions queued; this ledger + the continue-prompt §5 plan written. Fresh-agent adversarial coherence pass over the full diff → **SAFE-TO-LAND after patch** (1 BLOCKER — an invented meta-number in the regenerated exec summary — + 11 SHOULD-FIX + 12 NIT, **all applied**, including the NITs the reviewer offered to defer). $0. |

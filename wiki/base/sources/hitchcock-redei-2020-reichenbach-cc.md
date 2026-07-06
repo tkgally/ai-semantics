@@ -10,10 +10,10 @@ venue: "Stanford Encyclopedia of Philosophy (Spring 2024 Edition / first publish
 url: https://plato.stanford.edu/entries/physics-Rpcc/
 access: open-access
 meaning-senses:
-  - methodological
+  - measurement-epistemic
 status: received
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-07-06
 links:
   - rel: supports
     target: essay/cross-level-convergence-ladder

@@ -73,6 +73,38 @@ only in a revision block). `updated:` equals the date of the newest dated change
 presupposition essays' blockquote-free **Thesis.**-plus-revision-log opening is a blessed
 variant.
 
+**Result and theory status discipline** (ratified 2026-07-06, s184, autonomous cross-session
+adversarial review — [`decisions/resolved/result-status-upgrade-semantics`](wiki/decisions/resolved/result-status-upgrade-semantics.md);
+fresh reviewer + non-Anthropic vote both ADOPT-A). A `result` page's `status:` describes the
+**reading's lifecycle**, and only a **recorded dated event** moves it — a replication, a promotion
+review citing it, or a contested/retired call, noted in-page with the session and ground. Two kinds
+of result sort differently:
+
+- **Reading-bearing results** (an interpretive confirm / mechanism / beater reading): the honest
+  resting state is `proposed` — what is `proposed` is the *reading*, not the numbers. When such a
+  line replicates and survives its controls, `supported` is earned by the **promotion review that
+  writes the `claim`** and lives **on the claim layer**; the result page itself stays `proposed`
+  (or moves to `contested`/`retired`). So a replicated-and-promoted result is still `proposed`,
+  with support migrated to its claim — the flagship pattern (`result/comparative-correlative-covariation-v1`
+  is `proposed`; `claim/comparative-correlative-covariation` is `supported`).
+- **Mechanical-gate / feasibility / calibration results** (the finding *is* a check that passed or a
+  build/feasibility outcome): `supported` may be the honest description, and such a page **may be
+  created at `supported`** — the in-page gate outcome is itself the dated recorded event (no
+  artificial create-`proposed`-then-annotate two-step).
+
+`supported`-at-creation is **deprecated for reading-bearing results** going forward; the ~15
+existing `supported`-at-creation result pages are **not mass-edited** — each gets a one-line dated
+normalization note (keep `supported` if a genuine gate, else set `proposed`) **at its next touch**.
+Result front-matter `status` is therefore **non-ranking and possibly-stale until normalized**: it is
+not a strength ordering, and readers/tools must not treat it as one — the page's opening blockquote
+and the claim layer are authoritative (`senselint.py` does not read `status`). Untouched siblings in
+one line may sit at divergent statuses until normalized; that is expected, not a contradiction.
+`theory` syntheses may move `draft → live` at their **next substantive touch** (a `live` page that
+later gains a `supersedes` successor becomes `superseded`) — deferred to each page's next
+substantive edition, not applied in a maintenance pass. The `claim` convention (`supported` earned
+by the promotion review) and the `conjecture` axis (`proposed | designed | tested | retired`) are
+untouched by this rule.
+
 ## Typed links
 
 Use only these relation strings in `links:` and in inline prose where typing matters:
@@ -81,7 +113,11 @@ Use only these relation strings in `links:` and in inline prose where typing mat
 - `contradicts` — page A makes B less likely.
 - `refines` — page A is a sharpening of B.
 - `depends-on` — page A presupposes B (resource, anchor, or earlier claim).
-- `operationalizes` — page A turns construct B into an indicator.
+- `operationalizes` — page A turns construct B into an indicator. Its target **may be a
+  `design/<id>` artifact** (a frozen design under `experiments/designs/`, outside the wiki type
+  system) — this is a blessed exception (s184, wiki-coherence P2): a conjecture/result is
+  operationalized by the frozen design that turns it into a probe, and `senselint.py` tolerates the
+  `design/` target. All other typed-link targets stay in-wiki (`type/id`).
 - `anchors` — page A declares B as the human resource grounding it (used **on** the
   `claim`/`result`/`conjecture`/`open-question` page, **targeting** a `resource` — corrected
   2026-07-05 s183: this line previously stated the reverse direction, contradicting universal

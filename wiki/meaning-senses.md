@@ -53,12 +53,19 @@ Meaning constituted between a model and a person, or between models — the unde
 ### `human-comparison`
 Meaning understood by setting LLM behavior against existing human-generated evidence — the third axis. Tag here when the finding's force comes specifically from a contrast or alignment with a treebank, sense inventory, acceptability norm, or other human-anchored resource.
 
+### `measurement-epistemic`
+About the **measurement of meaning** rather than a sense of meaning itself: operationalization, construct validity, instrument competence, and the epistemics of reading convergent measurements (common-cause vs. coincidence). This is a **meta-category, not a sense of meaning** — it labels sources and essays that ground *how* the project measures, not *what* an expression means. Added 2026-07-06 (s184) by [`decisions/resolved/meaning-senses-methodology-tags`](decisions/resolved/meaning-senses-methodology-tags.md) (ADOPT-A), so the `meaning-senses` field matches a family the project had already named ([`ideas.md`](ideas.md) §II, "Methodological / measurement-epistemic disciplines").
+
+- Used chiefly on `base/sources/` methodology ingests — construct validity (Cronbach & Meehl, Messick, Campbell & Fiske, Borsboom, Freiesleben) and the epistemics of convergent evidence (Hitchcock & Rédei on Reichenbach's common-cause principle) — and on the measurement-epistemic essays (ideas.md cluster §II) that need no meaning-sense claim.
+- Guardrail (see "How to tag" below): legitimate ONLY where the page makes no sense-of-meaning claim; it never substitutes for an apt sense tag on a page that does bear on a sense of meaning.
+
 ## How to tag (rules of thumb)
 
 - A finding can carry multiple tags; do not force a single one.
 - If you cannot decide between tags, the page probably needs sharpening first.
 - If the sense you mean is not in this list, propose an addition in `decisions/open/` rather than inventing a tag inline.
 - "Meaning" used without a clear tag in prose is a lint defect; reword.
+- `measurement-epistemic` is legitimate as a solo or co-tag **only for a page making no sense-of-meaning claim** (a methodology source, a measurement-epistemic essay). A page that *does* bear on a sense of meaning must still carry the apt sense tag(s) and must **not** substitute `measurement-epistemic` for them.
 
 ## Open issues with the typology
 

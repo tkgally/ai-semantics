@@ -110,9 +110,12 @@ with an owed empirical design/scout so the empirical track never stalls):
 
 1. **P1 `[x]` (s183):** full audit + fix tranche (BLOCKERs + batches) + this plan + the ledger +
    the exec-summary regeneration (B4) + two queued convention decisions.
-2. **P2:** ratify the two s183 decisions; apply whichever ratifies (per-page status
-   normalization notes; the meaning-senses tag change); fix the audit's deferred SHOULD-FIX
-   remainder listed in the ledger (§"Deferred to P2").
+2. **P2 `[x]` (s184):** both s183 decisions **ratified ADOPT-A** (fresh reviewer + non-Anthropic
+   vote converged on each); applied (result-status transition rule → `CLAUDE.md`; the
+   `measurement-epistemic` tag + six retags → `meaning-senses.md`); the ledger's "Deferred to P2"
+   remainder cleared. **No result mass-edited, no theory flipped to `live`** (option A's
+   no-mass-edit clause — per-page normalization happens at each page's next touch). Paired with the
+   A1b antonymy design.
 3. **P3:** program **B6** — the `note`-type reclassification sweep (~10 measurement-free result
    pages → `wiki/findings/notes/`), which is coherence work in program clothing; plus the
    orphan-source cures the ledger lists.
