@@ -3,115 +3,141 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s184+s185+s186 together spent ≈ $0.4768**, booked to **UTC 2026-07-06** (s184 $0.002774 + s185
-$0.00303375 + **s186 $0.4710** — the A1b probe $0.4661 + 4 review votes $0.00442 + smoke/liveness
-~$0.0005). So if `date -u` still shows **2026-07-06**, the day stands at **≈$0.4768 of $5.00**
-(~$4.52 headroom); if **2026-07-07+**, a **fresh $5.00**. Ledger: [`config/budget.md`](config/budget.md).
+**s187 spent $0** (all subagents harness-model; the coherence pass read-only; no probe, no votes). So
+the UTC 2026-07-06 day total is unchanged from s186: **s184+s185+s186 ≈ $0.4768** (s184 $0.002774 +
+s185 $0.00303375 + s186 $0.4710). If `date -u` still shows **2026-07-06**, the day stands at
+**≈$0.4768 of $5.00** (~$4.52 headroom); if **2026-07-07+**, a **fresh $5.00**. Ledger:
+[`config/budget.md`](config/budget.md).
 
-## State — s186 ($0.4661 probe): A1b antonymy shadow-saturation RAN → conjecture FALSIFIED
+## State — s187 ($0): campaign P4 done (concept on-ramps + ideas triage) + the decoupling essay
 
-Single deep-unit session (workflow-mode's blessed fallback for one gated powered probe). Froze +
-ran the A1b antonymy shadow-saturation probe
-([`experiments/runs/2026-07-06-antonymy-shadow-saturation/`](experiments/runs/2026-07-06-antonymy-shadow-saturation/);
-[`result/lexical-relation-shadow-saturation-v1`](wiki/findings/results/lexical-relation-shadow-saturation-v1.md)).
-Built the frozen 6-WordNet-noun-relation item set (N=130/relation, freq-matched) + a
-**contrastive-frame G² distributional control from a fetched Simple English Wikipedia dump**
-(CC BY-SA 4.0, 21.3M sentences — the corpus lift the design flagged). **Two full pre-run review
-rounds** (fresh critic + non-Anthropic vote each): **round 1 both NO-GO** (caught a stale-control
-bug — 322 cues missing after a gold-rule change — + a gold-size confound); corrected (rebuilt
-control; **hit@3** co-primary + size-matched + relation-agnostic **sent** control + calibration gate;
-operationalized the verdict); **round 2 both GO-WITH-CONDITIONS**, honored. Ran the panel (2,730
-calls, 6 empty/0 error, $0.4661, 3× parallel per-model); **post-run verifier reproduced every
-figure**.
+Workflow mode, one wave of 4 parallel bounded units + a read-only adversarial coherence pass +
+orchestrator integration. Drew both tracks; **leaned philosophical/consolidation** (the empirical
+track ran s186; the two-track balance favored the other way).
 
-**VERDICT: FALSIFIED (both clauses).** Antonymy is **not** the least-separable relation — its HIT@3
-residual (+0.61–0.67) is among the *largest*; **meronymy** is smallest 3/3. Raw recovery does **not**
-track corpus cue-strength (Spearman −0.086; antonymy tops cue-strength but **hypernymy** tops
-recovery; meronymy 2nd-most-cued yet worst-recovered). Residual arm **descriptive-only** per the
-pre-registered calibration gate (control 𝒮 0.029 explains ~nothing), so the sharp finding is the
-**cue-strength–recovery decoupling**, not a precise residual magnitude. Frame-ablation: antonym
-recovery **survives** frame suppression. Fired essay
-[`antonymy-outlier-distributional-shadow`](wiki/findings/essays/antonymy-outlier-distributional-shadow.md)
-trigger (a) (surviving direction, scoped local-shadow per s151; `status: revised`); moved the
-[`theory/shadow-depth-table-v1`](wiki/findings/theory/shadow-depth-table-v1.md) antonymy corner (did
-NOT saturate); [`predictions.md`](wiki/predictions.md) bet a **loss**; conjecture `proposed → tested`.
+- **CONSOLIDATION — wiki-coherence campaign P4 `[x]`** ([`wiki/maintenance.md`](wiki/maintenance.md)).
+  **Concept on-ramp deepening:** the 3 stale foundational concepts that predated the s183 pass and
+  had no current-findings on-ramp were deepened — [`concept/distributional-meaning`](wiki/base/concepts/distributional-meaning.md)
+  (new "what the findings say about the distributional null" section → the shadow-depth table, the 4
+  beater claims, the s186 antonymy result), [`concept/symbol-grounding-problem`](wiki/base/concepts/symbol-grounding-problem.md)
+  (grounding nulls + headroom conjecture + magnitude OQ), [`concept/referential-meaning`](wiki/base/concepts/referential-meaning.md)
+  (sense-gradience claim + s186 result on `referential.sense`); the 6 s183-touched-but-not-"done"
+  concepts verified (5 deepened, `semantic-holism` already-current/untouched). All history-preserving;
+  **no finding changed**. **Ideas-harvest triage:** 3 new open-questions + full 9-seed disposition (below).
+- **PHILOSOPHICAL — the decoupling essay `[x]`** ([`essay/cue-strength-recovery-decoupling`](wiki/findings/essays/cue-strength-recovery-decoupling.md),
+  `status: draft`). Reads the s186 **cue-strength–recovery decoupling** (raw contrastive-frame
+  co-occurrence cue-strength does NOT predict which of the 6 relations the panel recovers; Spearman
+  −0.086, 3/3): breaks the identification *cue-strength ≈ shadow-depth*, insists it is a
+  **within-distributional** fact (NOT "recovery is non-distributional"), registers a **new falsifiable
+  bet** ([`predictions.md`](wiki/predictions.md) §B: H1 the decoupling replicates / H2 a
+  taxonomic/definitional-structure proxy out-predicts cue-strength — crude gold-fan-out already broken
+  by s186's own numbers). Cross-ref added to [`essay/antonymy-outlier-distributional-shadow`](wiki/findings/essays/antonymy-outlier-distributional-shadow.md).
+- **Coherence-pass fixes applied (no BLOCKERs; 4 SHOULD-FIX + 3 NIT):** predictions.md H1/H2 row +
+  §C trigger (d); dropped `embodied-cognition`'s 2 cyclic `result→` front-matter edges (both results
+  already `depends-on` the concept — kept body pointers); essay session 186→187; meronymy range
+  0.14→0.12 low-bound; one open-question over-quote tightened; **reconciled [`theory/shadow-depth-table-v1`](wiki/findings/theory/shadow-depth-table-v1.md)
+  Honesty-box-2** (it still said "no matched control has run for either saturated corner" — stale: both
+  ran, presupposition s173 under-licensed, antonymy s186 falsified → the saturated half is
+  measured-and-**weakened** at both poles, not merely argued).
 
 ## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**No decisions were opened this session** (the A1b run's value-laden choices were all ratified s185;
-the s186 freeze corrections were mechanical/scoring fixes surfaced by pre-run review, not new
-value-laden gates). Nothing to reconcile at s187 cold-start. 62 resolved to date
-([`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
+**No decisions were opened this session.** The essay's H1/H2 bet is a predictions.md entry (a
+philosophical prediction, not a value-laden methodology gate); the 3 open-questions freeze no
+operationalization and open no decisions; P4 was maintenance + triage. **Nothing to reconcile at s188
+cold-start.** 62 resolved to date ([`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
 
-## ⚠ Campaign state (Tom-directed; read `continue-prompt.md` §5 + `wiki/maintenance.md` before campaign work)
+## ⚠ Campaign state — P4 done; ONLY P5 (close-out) remains
 
-- **P1 `[x]` (s183); P2 `[x]` (s184); P3 `[x]` (s185). P4 STILL OWED** — the A1b deep unit took the
-  whole of s186, so campaign P4 did **not** advance. **P4 next:** concept on-ramp deepening (each of
-  the 17 concepts points at the current findings bearing on it) + **ideas-harvest triage** (Tier-1
-  audit seeds in [`wiki/maintenance.md`](wiki/maintenance.md) → open-question pages / backlog rows;
-  Tiers 2–3 kept with one-line dispositions). P5 = close-out (light spot re-audit, close ledger,
-  delete continue-prompt §5). P4 is a light-to-medium phase — a good deep unit for a session, or it
-  can share with a cheap empirical scout.
+Read [`continue-prompt.md`](continue-prompt.md) §5 + [`wiki/maintenance.md`](wiki/maintenance.md)
+before campaign work. **P1 `[x]` (s183); P2 `[x]` (s184); P3 `[x]` (s185); P4 `[x]` (s187).**
+**P5 (close-out) is the LAST phase:** a light spot re-audit (one fresh agent, sampled pages incl.
+every s183-fixed BLOCKER + the s187-touched pages), close the [`wiki/maintenance.md`](wiki/maintenance.md)
+ledger with a dated summary, **delete continue-prompt §5**, and note the closure in `log.md`. P5 is
+light — a good companion for an empirical unit (the campaign never stalls the empirical track).
 
-## ⚠ Empirical backlog (A1b now DONE — pick the next-most-owed)
+## ⚠ Ideas-harvest dispositions (s187 — recorded, do not re-triage)
 
-- **NEW (from A1b): adjective-antonymy replication.** The A1b run is **noun-scoped** (WordNet's
-  taxonomic relations are nominal). J&K's contrastive-frame signature is *adjectival*; a 2-relation
-  (antonymy vs synonymy) adjective replication of the frame-ablation + residual arm would test
-  whether the noun-scoped falsification holds where the contrastive frame is strongest. Cheap
-  (reuse the frozen pipeline; adjectives have 996 antonym cues; the Wikipedia control already built).
-  A natural, well-scoped next empirical unit.
-- **NEW (from A1b): the cue-strength–recovery decoupling** — the most-cued relation (antonymy) is
-  not the best-recovered (hypernymy); the 2nd-most-cued (meronymy) is worst-recovered. Logged in the
-  result as a seed; could spawn an essay or a follow-up conjecture (what *does* predict relation-wise
-  recovery, if not corpus cue-strength?).
-- **A2b grounding magnitude** = external-resource **SCOUT only** (un-instrumentable in-repo;
-  [`open-question/grounding-magnitude-instrument`](wiki/findings/open-questions/grounding-magnitude-instrument.md)).
-  Ledger Tier-1 seed #4 (RAW-C/SAW-C license scout) is the adjacent text-side scout.
-- **A3b BLiMP forced-choice sweep** — 67k human-validated minimal pairs, CC-BY, cataloged; a
-  selected-paradigm sweep is cheap + human-agreement-anchored. Design + critic first.
-- **A5 production-side alternation battery** (genitive / particle / locative, each with human
-  corpus direction anchors); **A6 cross-linguistic replication scout** (UD in-scope).
-- **B1 last promotion** (environment-gated presupposition): weigh honestly; a written refusal is
-  legitimate (the s173 doppelgänger left it under-licensed).
+3 promoted → open-questions; 1 discharged; 5 kept-as-backlog with typed homes (full table in
+[`wiki/maintenance.md`](wiki/maintenance.md) §"Ideas harvest"):
+- **NEW open-questions (candidates for future empirical units):**
+  [`open-question/aann-quant-temporal-inversion`](wiki/findings/open-questions/aann-quant-temporal-inversion.md)
+  (**human anchor already in-repo** — Mahowald Exp-2; the cleanest-anchored, the one cell where every
+  model inverts the human gradient on "a scant three days"),
+  [`open-question/lexical-regular-polysemy-productivity`](wiki/findings/open-questions/lexical-regular-polysemy-productivity.md)
+  (the lexical "wug-test" — productivity on nonce nouns; distributional null neutralized by construction;
+  human arm scout-gated else internal-contrast),
+  [`open-question/graded-privativity-gradient`](wiki/findings/open-questions/graded-privativity-gradient.md)
+  (privativity gradient; human arm scout-gated).
+- Seed #1 (frame-ablation) **discharged** by s186. #2/#4/#7/#8/#9 kept-as-backlog (typed homes).
+
+## ⚠ Empirical backlog (pick the next-most-owed — the empirical track is owed after s187's phil lean)
+
+- **NEW & clean: [`open-question/aann-quant-temporal-inversion`](wiki/findings/open-questions/aann-quant-temporal-inversion.md)**
+  — a targeted probe of the one AANN cell where the panel inverts the human gradient; **Mahowald Exp-2
+  anchor is in-repo** (rare — most new OQs are scout-gated). Design + critic first. A strong, cheap,
+  human-anchored empirical pick.
+- **adjective-antonymy replication** (cheap, reuses the s186 frozen pipeline + the Simple-Wikipedia
+  control): tests whether the noun-scoped falsification holds where J&K's contrastive frame is strongest
+  (adjectival). Also the **H1 half** of the decoupling essay's bet (does the decoupling replicate?).
+- **the decoupling essay's H2** (does a taxonomic/definitional-structure proxy out-predict cue-strength
+  for relation recovery?) — a $0-ish re-analysis over the s186 run's WordNet structure could pilot it.
+- **A2b grounding magnitude** = external-resource SCOUT only ([`open-question/grounding-magnitude-instrument`](wiki/findings/open-questions/grounding-magnitude-instrument.md));
+  ledger Tier-1 #4 (RAW-C/SAW-C license scout) is the adjacent text-side scout.
+- **A3b BLiMP forced-choice sweep** (67k human-validated pairs, CC-BY, cataloged; design + critic first);
+  **A5 production-side alternation battery**; **A6 cross-linguistic replication scout** (UD in-scope).
+- **B1 last promotion** (environment-gated presupposition): weigh honestly; a written refusal is legitimate.
+
+## ⚠ Theory-edition flag (carry)
+
+[`theory/shadow-depth-table-v1`](wiki/findings/theory/shadow-depth-table-v1.md) now carries **3 dated
+update boxes** (s173 presupposition, s186 antonymy row, s187 honesty-box reconciliation) — at the
+PROTOCOL §3 ">3 boxes → clean second edition" threshold. **A v2 is owed at this page's next substantive
+touch** (flagged in the s187 honesty-box note). Not forced in a maintenance pass; do it at the next
+edition-worthy edit.
 
 ## ⚠ Env notes (carry)
 
-- `nltk`/WordNet + `numpy` install via `pip install nltk numpy` + `nltk.download('wordnet')` (used
-  s186). **SubTLEX-US is unigram-only**; the A1b co-occurrence control came from a **fetched Simple
-  English Wikipedia dump** (`experiments/runs/2026-07-06-antonymy-shadow-saturation/build_cooc.py` is
-  the recipe; dump gitignored, re-fetchable; `control.json` committed, `counts.json` [27MB]
-  gitignored). Corpus streaming: ~5 min for 21.3M sentences. **Run long probes with harness
-  `run_in_background: true`; parallelize per-model (`probe.py --model A/B/C`) for ~3× wall-clock** —
-  shell `&`-backgrounding gets killed when the Bash tool returns (learned s186); never name-match
-  waits (PROTOCOL §6b). openrouter MCP flaky — use the probe REST path for votes
-  (`experiments/lib/openrouter.py`, `max_tokens≈500`). Commit signing impossible: set `user.email
-  noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at cold-start;
-  `git checkout -B <branch> origin/main` if the branch is gone.
+- `nltk`/WordNet + `numpy` install via `pip install nltk numpy` + `nltk.download('wordnet')`.
+  **SubTLEX-US is unigram-only**; the A1b co-occurrence control came from a **fetched Simple English
+  Wikipedia dump** (`experiments/runs/2026-07-06-antonymy-shadow-saturation/build_cooc.py` recipe; dump
+  gitignored/re-fetchable; `control.json` committed). **Run long probes with harness `run_in_background:
+  true`; parallelize per-model** — shell `&`-backgrounding gets killed when the Bash tool returns
+  (learned s186); never name-match waits (PROTOCOL §6b). openrouter MCP flaky — use the probe REST path
+  for votes (`experiments/lib/openrouter.py`, `max_tokens≈500`). Commit signing impossible: `user.email
+  noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at cold-start; `git checkout -B
+  <branch> origin/main` if the branch is gone. **Subagent file-writes are atomic but a triage agent may
+  write several files — wait for ALL wave agents to complete before committing/coherence-passing** (s187:
+  the ideas-triage agent wrote 3 open-questions, not 1).
 
 ## ⚠ Do-not-re-grind (in force)
 
-- **(s186) A1b antonymy is RUN + FALSIFIED — do NOT re-run it.** Do NOT re-open its ratified gates
-  (Q1-C/Q2-A/Q3). The Simple English Wikipedia control is built and committed (control.json); do NOT
-  re-scout the corpus license (Wikipedia CC BY-SA verified s185). An **adjective** replication is new
-  work, not a re-run. The result is noun-scoped by design (WordNet taxonomy is nominal).
-- **(s185) note-sweep P3 done — do NOT re-run.** **(s184) Do NOT mass-edit `supported`-at-creation
-  results; do NOT flip theory to `live` off a non-substantive touch.** **(s183) Do NOT re-audit the
-  whole wiki** — work from [`wiki/maintenance.md`](wiki/maintenance.md). Do NOT mass-retarget
-  theory-v1 refs. **(s182) No B3 destructive essay merges.** **(s181) A2a re-runs DONE.** **(s179)
-  Cite theory -v2s.** **(s170) Founding questions stay closed.** **(s168–)** no corpus/dataset
+- **(s187) Campaign P4 is DONE — do NOT re-deepen the concepts or re-triage the ideas harvest.** The
+  decoupling essay is written (don't re-write; revise in-page if evidence moves). The 3 new
+  open-questions are opened (don't duplicate). The shadow-depth-table honesty-box is reconciled (the v2
+  is owed at next substantive touch, not now).
+- **(s186) A1b antonymy is RUN + FALSIFIED — do NOT re-run it** or re-open its ratified gates
+  (Q1-C/Q2-A/Q3); do NOT re-scout its corpus (Wikipedia CC BY-SA verified s185). An **adjective**
+  replication is new work. **(s185) note-sweep P3 done — do NOT re-run.** **(s184) Do NOT mass-edit
+  `supported`-at-creation results; do NOT flip theory to `live` off a non-substantive touch.** **(s183)
+  Do NOT re-audit the whole wiki** — work from [`wiki/maintenance.md`](wiki/maintenance.md). Do NOT
+  mass-retarget theory-v1 refs. **(s182) No B3 destructive essay merges.** **(s181) A2a re-runs DONE.**
+  **(s179) Cite theory -v2s.** **(s170) Founding questions stay closed.** **(s168–)** no corpus/dataset
   adoption without a verified license.
 
-## Next concrete actions — backlog for session 187 (PROTOCOL §3: fewer, deeper)
+## Next concrete actions — backlog for session 188 (PROTOCOL §3: fewer, deeper; lean empirical)
 
-1. **CONSOLIDATION — campaign P4 (owed, deferred from s186):** concept on-ramp deepening + ideas
-   triage (from [`wiki/maintenance.md`](wiki/maintenance.md)). A good deep consolidation unit.
-2. **EMPIRICAL — adjective-antonymy replication** (cheap, reuses the s186 pipeline + control) OR an
-   A2b/A3b/A6 scout. Keeps the empirical track moving; pairs well with P4.
-3. **PHILOSOPHICAL — the cue-strength–recovery decoupling** could spawn an essay or conjecture (what
-   predicts relation-wise recovery if not corpus cue-strength?) — a fired-observation seed from s186.
-4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md): a substantive session → extend **today's** JST
-   entry (check `TZ=Asia/Tokyo date`).
+1. **EMPIRICAL (most-owed — track balance):** the [`open-question/aann-quant-temporal-inversion`](wiki/findings/open-questions/aann-quant-temporal-inversion.md)
+   probe (Mahowald-anchored, cheap, human-comparison) OR the adjective-antonymy replication (reuses s186
+   pipeline; also the decoupling essay's H1). Design + fresh-agent critic + non-Anthropic vote first;
+   freeze-before-run; run next session after any new gate ratifies.
+2. **CONSOLIDATION — campaign P5 close-out (light):** spot re-audit + close the ledger + delete
+   continue-prompt §5 + log the closure. Pairs well with (1) so the empirical track leads and the
+   campaign closes.
+3. **PHILOSOPHICAL:** the decoupling essay's H2 (what predicts recovery if not cue-strength?) could be
+   piloted as a $0 re-analysis over the s186 WordNet structure; or develop another seed.
+4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md): a substantive session → extend **today's** JST entry
+   (check `TZ=Asia/Tokyo date`).
 
 ## Open decisions
 
@@ -119,32 +145,28 @@ value-laden gates). Nothing to reconcile at s187 cold-start. 62 resolved to date
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This session built and ran the "opposites" experiment planned over the two prior sessions, and the
-  project's own advance guess turned out **wrong** — in an informative way. The idea was that a
-  model's fluency with opposites (hot/cold) might be nothing more than an echo of how often opposites
-  keep company in text. Against a word-company baseline built from ~21 million sentences of openly
-  licensed Wikipedia text, the models' opposites **clearly beat** that baseline (so not a mere echo),
-  opposites weren't even the relationship the models handled best (naming a general category was), and
-  how much a relationship keeps company in text didn't predict how well the models recovered it at
-  all. One honesty note kept the claim modest: the baseline was a weak yardstick, so the crisp result
-  is that mismatch, not a precise "how far beyond" figure. Before any money was spent the plan was
-  double-checked by two independent reviewers twice over, who caught two real bugs that were fixed
-  first; an independent reviewer re-checked the final numbers against the raw outputs. About $0.47
-  spent. If you want the maintenance campaign (now at phase 4) paced differently, a line anywhere in
-  the repo outranks the plan.
+- This session did no experiments and spent nothing. It followed up the previous session's "opposites"
+  puzzle — that how often related words keep company in text did not predict how well the models handle a
+  relationship — by writing up a careful reading of it (one measure of word-company failing is not
+  "meaning isn't about word-statistics") plus a testable guess: maybe how *central* a relationship is to
+  how we define words (naming the general kind something is) matters more than raw word-company. It opened
+  three new research questions for the backlog, the most vivid a "wug-test" for word meaning (teach a made-up
+  animal word, see if the model extends the pattern that lets an animal's name also name its meat), and it
+  finished the concept-page half of the standing wiki tidy-up — leaving only a light close-out. If you want
+  the maintenance campaign (now at its final phase) or the empirical/philosophical balance paced differently,
+  a line anywhere in the repo outranks the plan.
 
 ## Reminder for the next cold-start
 
-**You are session 187.** Entry [`continue-prompt.md`](continue-prompt.md) (note its **§5 campaign
-section**, at **P4 — still owed**); charter [`PROJECT.md`](PROJECT.md) (§12); discipline
-[`PROTOCOL.md`](PROTOCOL.md) (§3–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
+**You are session 188.** Entry [`continue-prompt.md`](continue-prompt.md) (note its **§5 campaign
+section — now at P5, the close-out, the last phase**); charter [`PROJECT.md`](PROJECT.md) (§12);
+discipline [`PROTOCOL.md`](PROTOCOL.md) (§3–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
 [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md),
-[`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC
-— check `date -u`; s184+s185+s186 spent ≈$0.4768** (2026-07-06). **RECONCILE: ZERO decisions open.**
-Most-owed: **campaign P4** (concept on-ramps + ideas triage, deferred from s186), pairing with a
-cheap empirical unit — the new **adjective-antonymy replication** (reuses the s186 pipeline) or an
-A2b/A3b/A6 scout; or develop the **cue-strength–recovery decoupling** seed. Do NOT: re-run/re-open
-A1b (RUN + falsified), re-scout its corpus, re-run the note-sweep, re-audit the wiki, mass-edit
-`supported`-at-creation results, flip theory to `live` off a non-substantive touch, B3 merges, A2a
-re-runs, founding-question re-opens, unlicensed corpus adoption. End squash-merged to `main`;
-`git fetch --prune` at cold-start.
+[`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC —
+check `date -u`; s184–187 spent ≈$0.4768** (2026-07-06; s187 was $0). **RECONCILE: ZERO decisions open.**
+Most-owed: **lean empirical** (the aann-quant-temporal probe [Mahowald-anchored] or the adjective-antonymy
+replication) paired with **campaign P5 close-out** (light — closes the campaign). Do NOT: re-run/re-open
+A1b, re-deepen P4 concepts, re-triage the harvest, re-audit the wiki, mass-edit `supported`-at-creation
+results, flip theory to `live` off a non-substantive touch, B3 merges, A2a re-runs, founding-question
+re-opens, unlicensed corpus adoption. A `theory/shadow-depth-table-v1` **v2 is owed at its next
+substantive touch** (3 update boxes). End squash-merged to `main`; `git fetch --prune` at cold-start.

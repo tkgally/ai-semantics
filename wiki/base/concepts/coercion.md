@@ -6,7 +6,7 @@ meaning-senses:
   - constructional
   - inferential
 created: 2026-05-29
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: refines
     target: concept/constructional-meaning
@@ -45,4 +45,5 @@ The discriminating arm paired each canonical coercion with the same construction
 
 - Tag coercion findings `constructional` (the meaning is in the form–meaning pairing) and co-tag `inferential` whenever the probe turns on whether the construction's inference-licensing is tracked — which, for coercion, it almost always does.
 - Coercion is the cleanest available wedge for separating constructional **meaning** from constructional **form**: the verb cannot explain the inference, so the memorization-vs-construction-knowledge confound that Weissweiler et al. name ([`source/weissweiler-2023-cxg-insight`](../sources/weissweiler-2023-cxg-insight.md), §3.1) bites less hard when the coerced inference holds for atypical, low-frequency-in-construction verbs (a Tier-3 control the caused-motion and *way* probes passed).
+- **The lexicon–grammar bridge (does coercion also read as a *sense* shift?).** A distinct question is whether a coerced use registers as a shift in the verb's **lexical sense** — the model rating the coerced use as *less sense-related* to the bare verb. [`result/coercion-sense-modulation-v2`](../../findings/results/coercion-sense-modulation-v2.md) finds it does, but only weakly: a small, fragile, fine-scale-only sense-specific residual (the isolation gap over a structure-matched non-coercing transitive control is +13.6 / +6.1 / +1.9 continuous points, claude > gpt > gemini; ≈ 0 on the coarse 4-point scale, carried by only 3–4 of 8 verbs) survives, alongside a real added-argument-structure surface component — so v1's raw coercion-as-sense-shift gap is only *partially* de-confounded (strongest for claude, essentially surface for gemini). Internal-contrast-only; it is the coercion end of the lexicon↔grammar bridge, [`theory/lexicon-grammar-continuum`](../../findings/theory/lexicon-grammar-continuum.md).
 - Keep the standing caution from all four result pages: **ceiling on relatively easy controls is weak evidence for any strong "deep processing" reading.** Coercion is a strong probe in principle; the project's positive results on it are real but read modestly, and the strength of the underlying competence still wants a harder instrument.

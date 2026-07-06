@@ -7,7 +7,7 @@ meaning-senses:
   - inferential
   - distributional
 created: 2026-05-31
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: source/janssen-zimmermann-montague-semantics-sep
@@ -78,6 +78,8 @@ The charter's "describe, don't litigate" posture and the project's recurring **d
 - **[`result/lexical-polysemy-homonymy-v3`](../../findings/results/lexical-polysemy-homonymy-v3.md) — STRAINS the classical truth-conditional picture; SILENT on its strongest form.** The classical truth-conditional/lexicographic expectation is *discrete senses with a sharp polysemy/homonymy switch* — homonyms are two entries, polysemes one, and a competent system should treat them as different *kinds*. v3 is a **powered null** on exactly that switch: the panel's graded rating does **not** separate WiC same/different-sense pairs any better for homonyms than for polysemes (AUC_homonym − AUC_polyseme ≈ 0 in all 6 model×framing cells; permutation p 0.73–0.96), which strains the "discrete switch" expectation and is consistent with a single graded-use axis (homonyms simply sitting further out on it). The one positive — homonym different-sense pairs piling at the "unrelated" floor more than polyseme-F pairs — **cannot be separated from plain graded distance** (homonyms *are* more unrelated; it is half-driven by one lemma `case`, partly a gemini scale-use quirk, and its clustering-honest CIs cross zero). *Be scrupulous:* the result page states its design **cannot distinguish a discrete sense boundary from monotone graded distance** at all. So on the *strongest* truth-conditional claim — that a sharp discrete regime exists underneath — v3 is **SILENT, not decisive**; it removes a positive sign that a discreteness advocate would have wanted, nothing more. A null is "no detectable effect, or underpowered-for-the-discrete-reading," never "discreteness proven absent."
 
 - **The truth-conditional pole is the SILENT cell for LLMs here.** No in-repo resource anchors *truth-conditions* or a *world-relation* for any model (the gap [`concept/referential-meaning`](referential-meaning.md) flags). Truth-conditional LLM meaning is un-probed **by construction** — the project measures use, and has no yardstick for the world-relation. Every "support for the use pole" above is therefore *relative*: it is support for the use picture over a *discrete-sense* construal, not a measured defeat of a truth-conditional one.
+
+- **Where the whole evidence base is positioned on this axis.** The project's synthesis map places these lexical results — and the rest of the findings — on this very truth-conditional ↔ use axis: [`theory/situating-llm-meaning-v2`](../../findings/theory/situating-llm-meaning-v2.md) reads the lexical gradience positive as *use over truth-conditional at the lexical grain*, and adds two human-anchored **grammatical** Tier-2 positives that sharpen the same reading at the construction grain — the **dative alternation** (its two alternants are truth-conditionally identical, so a preference shift by what is discourse-*given* tracks a pure information-packaging / use distinction, 3/3 at powered N) and the **AANN** graded-acceptability gradient — while keeping the truth-conditional pole itself **silent** for LLMs, exactly as this page does. That map is the natural next click for how the use-vs-truth-conditional axis is scored across the project's whole evidence base; it is a *positioning* of the findings, not new data.
 
 ## Tensions and where they are developed
 
