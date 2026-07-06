@@ -12,7 +12,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-05-30
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
@@ -30,6 +30,8 @@ links:
     target: essay/shadow-depth-cross-cuts-grain
   - rel: depends-on
     target: result/lexical-sense-gradience-v1
+  - rel: depends-on
+    target: result/lexical-relation-shadow-saturation-v1
   - rel: depends-on
     target: result/lexical-bridging-context-v1
   - rel: depends-on
@@ -154,6 +156,25 @@ The **panel-level** version of this gradient is the bet registered in [`conjectu
 > or the presupposition corner (`internal-contrast-only`, no human comparison); the beaters, by
 > contrast, *pass* a measured control. Shadow-depth is a property of the **phenomenon**, silent on which
 > model tracks which (it does not touch the cross-axis competence dissociation below).
+
+> **Update (2026-07-06, session 188 — wiki-coherence campaign P5).** The **panel** test of the
+> relation-type gradient — the [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)
+> named "recorded, not run" and "prior-art plus a blocked conjecture" in the two sections above (s147,
+> s165) — has since **RUN (session 186) and been FALSIFIED** →
+> [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md).
+> On the project's own panel, against a contrastive-frame co-occurrence control, **antonymy is not the
+> shadow-saturated relation**: it carries one of the **largest** control-adjusted residuals (HIT@3
+> **+0.61–0.67**), with **meronymy** the **smallest** — the reverse of the "antonymy smallest residual /
+> meronymy & hyponymy larger" ordering the boxes above predict. Raw recovery does **not** track corpus
+> cue-strength (across-relation Spearman **−0.086**; **hypernymy**, not antonymy, is best-recovered), and
+> antonym recovery **survives frame suppression**. So the lexical pole's "shadow-saturated corner" did
+> **not** sit where this page placed it — **the corner moved**; the pre-s186 statements above are the
+> superseded prior-art reading (Cao/Diera on non-panel models still stand as prior-art; the *panel bet*
+> lost). Read at the strength the internal-contrast control licenses
+> ([`essay/shortcut-vs-competence-mis-cut`](../essays/shortcut-vs-competence-mis-cut.md)): this falsifies
+> the *local-shadow-saturation* reading, not "antonymy competence beyond distribution." *(This page now
+> carries >3 dated update boxes — a clean **v2 second edition** is owed at its next substantive touch,
+> per [`PROTOCOL.md`](../../../PROTOCOL.md) §3.)*
 
 ## The empirical bridge: coercion is where the two grains touch
 

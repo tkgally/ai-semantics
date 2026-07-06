@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: source/cao-2025-distinctive-cooccurrence-antonymy
@@ -27,6 +27,8 @@ links:
     target: essay/two-distributional-hypotheses
   - rel: refines
     target: conjecture/lexical-relation-shadow-saturation
+  - rel: depends-on
+    target: result/lexical-relation-shadow-saturation-v1
   - rel: refines
     target: theory/lexicon-grammar-continuum
 ---
@@ -43,6 +45,18 @@ links:
 > blocked [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)'s
 > control could and could not show if it ever ran. It does not change any in-repo empirical verdict;
 > it changes the *interpretation label* attached to a contrast.
+
+> **Update (2026-07-06, s188 — wiki-coherence campaign P5): the conjecture has RUN (s186), and it
+> vindicated this essay's reading.** The [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)
+> this essay calls "blocked" **ran at session 186** (via the ratified `internal-contrast-only` route that
+> sidesteps the "no adopted human anchor" blocker) →
+> [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md).
+> Antonym recovery **survived** the contrastive-frame control by a wide margin (HIT@3 residual
+> **+0.61–0.67**), and the result page reads that surviving residual **exactly as this essay prescribes** —
+> as grading **local vs transferable distributional** generalization, *not* distribution vs
+> non-distribution. So this essay's central relabeling is the interpretation the run actually used; its
+> "flat residuals" trigger did **not** fire (the residuals were large, not flat). The "blocked" phrasing
+> below is the pre-s186 status, superseded and kept visible.
 
 ## The framing this essay corrects
 
