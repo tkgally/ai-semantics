@@ -8,7 +8,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-20
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: result/dative-information-structure-v1
@@ -24,12 +24,15 @@ links:
     target: concept/formal-vs-functional-competence
   - rel: depends-on
     target: result/dative-information-structure-powered
+  - rel: depends-on
+    target: result/aann-behavioral-gradient-rep2
 ---
 
 # Essay: a concordant verdict still hides a spread
 
 > **Status: revised (drafted 2026-06-20; revised 2026-06-20, session 53 [trigger (c) — strengthened]
-> and 2026-06-21, session 63 — see the Revision log). A philosophical-track / methodological essay
+> and 2026-06-21, session 63; extended 2026-07-06, session 184 [a third texture — the form-ceiling
+> wobble] — see the Revision log). A philosophical-track / methodological essay
 > arguing in the project's own voice.** Its original contribution is a *reading discipline*, not an empirical
 > claim: when a panel returns a **concordant** verdict — every model clears the bar — the binary
 > label "CONFIRM" can still conceal an order-of-magnitude spread in *how cleanly* the models track
@@ -130,6 +133,53 @@ which instruments* — and this essay's clean claim is only about the first. But
 a single panel-level label, whether "CONFIRM" or "PARTIAL", is a *summary*, and a summary of a
 heterogeneous panel throws away the heterogeneity unless something is built to keep it.
 
+> **⬆ Update (2026-07-06, session 184) — a third texture, one level down: a coarse *binary* indicator
+> can be more fragile than the *graded* one it summarizes (the AANN form-ceiling wobble).** The two
+> textures above both flatten *across* the panel. A cross-date AANN replication surfaced a third,
+> orthogonal to the panel axis: within a **single** model, two indicators of the **same** competence,
+> read at two grains, can diverge in *stability* — and the coarser, more summary-like one can be the
+> *less* robust. In [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md)
+> (s178) gpt-5.4-mini's **binary Tier-0 form-ceiling** — the coarse pass/fail manipulation check
+> "does it prefer the AANN order at all?" — dropped from a clean pass to **18/24**, failing the
+> ≥20/24 gate **entirely on the marginal *objects + negative-evaluative* items** (*gruesome three
+> paintings*, *ugly three desks*): genuine single-letter misses **systematically concentrated on the
+> marginal cells** (a real behavioral fact this occasion, verified not a parse/scoring artifact),
+> **not** run-to-run jitter — **while its graded acceptability gradient stayed undiminished** (cell ρ
+> 0.702, CI overlapping v2's 0.684, replicating 3/3). A reader who took the **binary** indicator for "gpt's
+> AANN competence" would have called it newly fragile; a reader who took the **graded** indicator
+> would have called it unchanged. Both are honest readings of different indicators of one behavior,
+> and they disagree.
+>
+> **The cause is grain, and that is the point.** A binary gate is a **threshold over few (24) items**
+> that a handful of genuine marginal misses can flip; the graded ρ **aggregates over 204 cells** and
+> is buffered against them. So *which indicator you read determines the fragility verdict* — the same
+> reading error the essay names for panels (a coarse summary discards structure the finer measure
+> keeps), pushed down to the **indicator** level. There is a functional-vs-formal sting the last
+> section can now sharpen, but it must be stated exactly: one naively expects the **formal** ceiling
+> (categorical *is-it-well-formed*) to be the robust part and the **functional** gradient (soft
+> *how-acceptable* tracking) to be the fragile part, and here that ordering **inverts** — but the
+> honest cause is that the formal competence was *measured coarsely* (a few-item binary gate) and the
+> functional one *finely* (an aggregate ρ), **not** that formal competence is intrinsically the more
+> brittle. The discipline extends cleanly: **name the indicator and its grain, and never let a coarse
+> binary indicator stand in for the graded one** — a model can *fail the gate* on the marginal cells
+> and *keep the gradient* everywhere, and reporting only the former manufactures a fragility the
+> graded data denies, exactly as reporting only a concordant label manufactures a uniformity the
+> spread denies.
+>
+> **Bounds (a marked observation, not a new claim):** one model (gpt-5.4-mini), one construction
+> (AANN), one cross-date comparison (v2→rep2). The misses are **genuine signal on marginal items**,
+> which is what distinguishes this from [`essay/point-estimate-is-a-draw`](point-estimate-is-a-draw.md):
+> that essay's jitter is *noise* a re-run averages out, whereas this wobble is a **genuine behavioral
+> fact concentrated on the same marginal cells** (systematic signal, not a scoring artifact) — a
+> coarse binary gate can move for **either** reason (systematic signal *or* noise), and the two must
+> be told apart before either is read. Whether *this* wobble recurs or was occasion-specific is
+> itself open: [`theory/situating-llm-meaning-v2`](../theory/situating-llm-meaning-v2.md) carries it
+> as awaiting replication into a placeable regularity or a showing that it is occasion-specific noise
+> (v2 passed Tier-0 at 23/24; rep2 failed at 18/24, so the *drop* is occasion-new). The
+> graded-gradient property the AANN claim actually asserts replicated 3/3; only the coarse
+> form-ceiling *indicator* moved, and only at the margin. No panel-scoped or human-comparison claim
+> is added.
+
 ## The reading discipline
 
 The fix is small and continuous with what [`essay/capability-split`](capability-split.md) already
@@ -187,6 +237,15 @@ CONFIRM" hides precisely the dissociation the project exists to describe.
 
 ## Revision log
 
+- **2026-07-06 (session 184), a third texture added — the AANN form-ceiling wobble; no clause
+  changed.** The cross-date AANN datum that [`theory/situating-llm-meaning-v2`](../theory/situating-llm-meaning-v2.md)
+  had logged as an *unplaced* seed was placed here, as a third texture of heterogeneity a coarse
+  label flattens (see the dated Update block in "Two textures" above): a coarse **binary** indicator
+  can be more fragile than the **graded** one it summarizes — a matter of measurement *grain* (a
+  few-item threshold vs an aggregate ρ), not intrinsic formal fragility, and genuine signal rather
+  than jitter. No clause of the reading discipline changes; no empirical/panel/human claim is added;
+  whether the wobble recurs stays open (the theory page carries that). `depends-on
+  result/aann-behavioral-gradient-rep2` added; status stays `revised`.
 - **2026-06-21 (session 63), a measurement-level sibling named — no clause changed; honesty-box caveat
   given teeth.** A later result,
   [`result/scivetti-let-alone-powered-rerun-v1`](../results/scivetti-let-alone-powered-rerun-v1.md),
