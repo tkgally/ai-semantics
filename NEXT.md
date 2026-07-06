@@ -2,56 +2,149 @@
 
 ## ⚠ Budget note — read first
 
-**Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap. **s184+s185 together spent $0.00580775**, booked to **UTC 2026-07-06** (s184 two ratification votes $0.002774 + s185 one ratification vote $0.00303375; no experiment ran either session). So if `date -u` still shows **2026-07-06**, the day stands at **$0.00580775 of $5.00** (~**$4.99** headroom); if **2026-07-07+**, a **fresh $5.00**. Ledger: [`config/budget.md`](config/budget.md). Sizing rule ([`PROTOCOL.md`](PROTOCOL.md) §4): claim-carrying probes use powered N (~100–150 items); prefer-split above ~$2.50/run. **The A1b antonymy probe pre-flights at ≈$0.8–1.6** (short outputs, ~4,300–5,400 calls) and is **now runnable** — its decision ratified s185 and a license-verified corpus was scouted s185 (below).
+**Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
+**s184+s185+s186 together spent ≈ $0.4768**, booked to **UTC 2026-07-06** (s184 $0.002774 + s185
+$0.00303375 + **s186 $0.4710** — the A1b probe $0.4661 + 4 review votes $0.00442 + smoke/liveness
+~$0.0005). So if `date -u` still shows **2026-07-06**, the day stands at **≈$0.4768 of $5.00**
+(~$4.52 headroom); if **2026-07-07+**, a **fresh $5.00**. Ledger: [`config/budget.md`](config/budget.md).
 
-## State — s185 ($0.00303): A1b decision RATIFIED (ADOPT DEFAULTS); corpus SCOUTED (Wikipedia clears); campaign P3 note-sweep DONE (12 pages)
+## State — s186 ($0.4661 probe): A1b antonymy shadow-saturation RAN → conjecture FALSIFIED
 
-Workflow mode, 2 waves + a **CLEAN** adversarial coherence pass. **Wave 1 (RECONCILE):** [`decisions/resolved/antonymy-internal-contrast-scoring`](wiki/decisions/resolved/antonymy-internal-contrast-scoring.md) **ratified ADOPT DEFAULTS** — a fresh reviewer **ADOPT-DEFAULTS** + one non-Anthropic decorrelation vote (`openai/gpt-5.4-mini`) **converged**: **Q1-C** (faithful contrastive-frame G² control primary + labelled embedding sensitivity, run gated on a corpus license scout), **Q2-A** (WordNet-definitional-target Soundness hit-rate residual), **Q3 `internal-contrast-only`**. Anti-cheat PASS (the defaults lean *away* from easy confirmation), faithfulness confirmed; the reviewer verified the "no co-occurrence data in-repo" premise firsthand. **Four freeze-time conditions recorded** (chiefly **condition 1**: Cao-2025b ranks only 4 relations [hyper/hypo→HYP, holo/mero→HOL] but the probe tests 6, so clause-2 cue-strength granularity must resolve at freeze). Design promoted `anchor: pending → internal-contrast-only`, `contingent-on` cleared. The resolved-index changelog also backfilled the two s184 entries it was missing (now **62 resolved**).
+Single deep-unit session (workflow-mode's blessed fallback for one gated powered probe). Froze +
+ran the A1b antonymy shadow-saturation probe
+([`experiments/runs/2026-07-06-antonymy-shadow-saturation/`](experiments/runs/2026-07-06-antonymy-shadow-saturation/);
+[`result/lexical-relation-shadow-saturation-v1`](wiki/findings/results/lexical-relation-shadow-saturation-v1.md)).
+Built the frozen 6-WordNet-noun-relation item set (N=130/relation, freq-matched) + a
+**contrastive-frame G² distributional control from a fetched Simple English Wikipedia dump**
+(CC BY-SA 4.0, 21.3M sentences — the corpus lift the design flagged). **Two full pre-run review
+rounds** (fresh critic + non-Anthropic vote each): **round 1 both NO-GO** (caught a stale-control
+bug — 322 cues missing after a gold-rule change — + a gold-size confound); corrected (rebuilt
+control; **hit@3** co-primary + size-matched + relation-agnostic **sent** control + calibration gate;
+operationalized the verdict); **round 2 both GO-WITH-CONDITIONS**, honored. Ran the panel (2,730
+calls, 6 empty/0 error, $0.4661, 3× parallel per-model); **post-run verifier reproduced every
+figure**.
 
-**Wave 2a (A1b corpus scout):** [`resource/cooccurrence-corpus-scouting`](wiki/base/resources/cooccurrence-corpus-scouting.md) — 8 candidates, every "clears" license read **firsthand**. **English Wikipedia (official Wikimedia dumps, CC BY-SA 4.0 + GFDL) CLEARS the bar** (orchestrator spot-checked dumps.wikimedia.org/legal.html) → **the A1b run is NOT license-blocked**; **C4 (ODC-BY)** verified fallback; **Leipzig (CC BY-NC)** flagged search-summary-only (Anubis bot wall — read the terms directly at freeze); UD-EWT/Brown license-clean but too small; **OpenSubtitles / COCA / OSCAR NOT adoptable** (no grant / restricted-paid / text-unlicensed — the "Cao used it ≠ open" discipline). Adopts nothing — a **license verdict only**; the freeze still owes the fetch/build.
-
-**Wave 2b (campaign P3 / program B6):** 12 measurement-free result pages → `note` (see Campaign state). Coherence pass **CLEAN, zero BLOCKERs**.
+**VERDICT: FALSIFIED (both clauses).** Antonymy is **not** the least-separable relation — its HIT@3
+residual (+0.61–0.67) is among the *largest*; **meronymy** is smallest 3/3. Raw recovery does **not**
+track corpus cue-strength (Spearman −0.086; antonymy tops cue-strength but **hypernymy** tops
+recovery; meronymy 2nd-most-cued yet worst-recovered). Residual arm **descriptive-only** per the
+pre-registered calibration gate (control 𝒮 0.029 explains ~nothing), so the sharp finding is the
+**cue-strength–recovery decoupling**, not a precise residual magnitude. Frame-ablation: antonym
+recovery **survives** frame suppression. Fired essay
+[`antonymy-outlier-distributional-shadow`](wiki/findings/essays/antonymy-outlier-distributional-shadow.md)
+trigger (a) (surviving direction, scoped local-shadow per s151; `status: revised`); moved the
+[`theory/shadow-depth-table-v1`](wiki/findings/theory/shadow-depth-table-v1.md) antonymy corner (did
+NOT saturate); [`predictions.md`](wiki/predictions.md) bet a **loss**; conjecture `proposed → tested`.
 
 ## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**No open decisions.** The antonymy decision (s184-opened) ratified s185. Nothing to reconcile at s186 cold-start. 62 resolved to date ([`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
+**No decisions were opened this session** (the A1b run's value-laden choices were all ratified s185;
+the s186 freeze corrections were mechanical/scoring fixes surfaced by pre-run review, not new
+value-laden gates). Nothing to reconcile at s187 cold-start. 62 resolved to date
+([`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
 
 ## ⚠ Campaign state (Tom-directed; read `continue-prompt.md` §5 + `wiki/maintenance.md` before campaign work)
 
-- **P1 `[x]` (s183); P2 `[x]` (s184); P3 `[x]` (s185).** **P4 next:** concept on-ramp deepening (each of the 17 concepts points at the current findings bearing on it — several done s183; the rest checked) + **ideas-harvest triage** (Tier-1 audit seeds in [`wiki/maintenance.md`](wiki/maintenance.md) → properly-formed open-question pages or backlog rows; Tiers 2–3 kept in the ledger with one-line dispositions). P5 = close-out (light spot re-audit, close the ledger, delete continue-prompt §5).
-- P4 is a light-to-medium phase; the campaign rule lets it **share a session** with the owed A1b freeze/run.
+- **P1 `[x]` (s183); P2 `[x]` (s184); P3 `[x]` (s185). P4 STILL OWED** — the A1b deep unit took the
+  whole of s186, so campaign P4 did **not** advance. **P4 next:** concept on-ramp deepening (each of
+  the 17 concepts points at the current findings bearing on it) + **ideas-harvest triage** (Tier-1
+  audit seeds in [`wiki/maintenance.md`](wiki/maintenance.md) → open-question pages / backlog rows;
+  Tiers 2–3 kept with one-line dispositions). P5 = close-out (light spot re-audit, close ledger,
+  delete continue-prompt §5). P4 is a light-to-medium phase — a good deep unit for a session, or it
+  can share with a cheap empirical scout.
 
-## ⚠ Empirical backlog
+## ⚠ Empirical backlog (A1b now DONE — pick the next-most-owed)
 
-- **A1b antonymy — RATIFIED + CORPUS-SCOUTED; the RUN is the most-owed unit.** Design: [`design/lexical-relation-shadow-saturation-v1`](experiments/designs/lexical-relation-shadow-saturation-v1.md); scout: [`resource/cooccurrence-corpus-scouting`](wiki/base/resources/cooccurrence-corpus-scouting.md). **s186: FREEZE + RUN.** Freeze `prep.py`: **(1)** build the WordNet 6-relation item set (`nltk`; adjectives-primary + a noun stratum where pairs exist, frequency-matched on SubTLEX-US `Lg10WF`, highest-G² outliers capped, per-relation POS reported, no pooling across POS); **(2)** fetch/build the **contrastive-frame G² baseline** from a Wikipedia (sub)dump — the "contrastive-frame G²" construction (which frames / window / weighting) is the project's own synthesis, frozen in `prep.py` (**condition 3**); honor **condition 1** (compute a **6-relation** cue-strength ranking from the same corpus [preferred — baseline does double duty], or restrict clause 2 to Cao's 4-relation mapping and report the collapse); record the **proxy-corpus fence** (**condition 2**); **(3)** fix k / N / thresholds / verdict map, with the **flat-residual null** and **inverted** outcome pre-named first-class; commit PREREG before any model call. Then independent pre-run critic + one non-Anthropic vote; `ABORT_USD` ≈$2.5; **RUN** (powered N ~120–150 cues/relation, ≈$0.8–1.6); post-run verifier recomputes from raw. **Scale caveat:** fetching + processing a Wikipedia dump for G² is a real engineering lift — if it does not fit one session, **split** (freeze `prep.py` + the corpus build in one; PREREG + run in the next), and/or **run the frame-ablation arm first** (a within-model manipulation needing **NO** external corpus — the corpus-free complement; cheap, survives any corpus delay).
-- **A2b grounding magnitude** = external-resource **SCOUT only** (un-instrumentable in-repo; [`open-question/grounding-magnitude-instrument`](wiki/findings/open-questions/grounding-magnitude-instrument.md)). Ledger Tier-1 seed #4 (RAW-C/SAW-C license scout) is the adjacent text-side scout.
-- **B1 last promotion** (environment-gated presupposition): weigh honestly; a written refusal is legitimate (the s173 doppelgänger left it under-licensed).
+- **NEW (from A1b): adjective-antonymy replication.** The A1b run is **noun-scoped** (WordNet's
+  taxonomic relations are nominal). J&K's contrastive-frame signature is *adjectival*; a 2-relation
+  (antonymy vs synonymy) adjective replication of the frame-ablation + residual arm would test
+  whether the noun-scoped falsification holds where the contrastive frame is strongest. Cheap
+  (reuse the frozen pipeline; adjectives have 996 antonym cues; the Wikipedia control already built).
+  A natural, well-scoped next empirical unit.
+- **NEW (from A1b): the cue-strength–recovery decoupling** — the most-cued relation (antonymy) is
+  not the best-recovered (hypernymy); the 2nd-most-cued (meronymy) is worst-recovered. Logged in the
+  result as a seed; could spawn an essay or a follow-up conjecture (what *does* predict relation-wise
+  recovery, if not corpus cue-strength?).
+- **A2b grounding magnitude** = external-resource **SCOUT only** (un-instrumentable in-repo;
+  [`open-question/grounding-magnitude-instrument`](wiki/findings/open-questions/grounding-magnitude-instrument.md)).
+  Ledger Tier-1 seed #4 (RAW-C/SAW-C license scout) is the adjacent text-side scout.
+- **A3b BLiMP forced-choice sweep** — 67k human-validated minimal pairs, CC-BY, cataloged; a
+  selected-paradigm sweep is cheap + human-agreement-anchored. Design + critic first.
+- **A5 production-side alternation battery** (genitive / particle / locative, each with human
+  corpus direction anchors); **A6 cross-linguistic replication scout** (UD in-scope).
+- **B1 last promotion** (environment-gated presupposition): weigh honestly; a written refusal is
+  legitimate (the s173 doppelgänger left it under-licensed).
 
 ## ⚠ Env notes (carry)
 
-- `nltk`/WordNet + `numpy` install cleanly via `pip install nltk numpy` + `nltk.download('wordnet')` (tested s182; WordNet 3.0 License verified — [`resource/wordnet-sense-inventory`](wiki/base/resources/wordnet-sense-inventory.md)). **SubTLEX-US is unigram-only** (no co-occurrence — confirmed s184; the A1b G² baseline must come from a **fetched** corpus — s185 scout → **Wikipedia CC BY-SA 4.0**, C4 fallback). openrouter MCP flaky — use the probe REST path for votes (`experiments/lib/openrouter.py`, `max_tokens=~500`). Commit signing impossible (cosmetic): set `user.email noreply@anthropic.com` + `user.name Claude`; the authoritative commit is the squash-merge. Long probes: `run_in_background: true`; **never name-match waits** (PROTOCOL §6b). `git fetch --prune` at cold-start; `git checkout -B <branch> origin/main` if the branch is gone.
+- `nltk`/WordNet + `numpy` install via `pip install nltk numpy` + `nltk.download('wordnet')` (used
+  s186). **SubTLEX-US is unigram-only**; the A1b co-occurrence control came from a **fetched Simple
+  English Wikipedia dump** (`experiments/runs/2026-07-06-antonymy-shadow-saturation/build_cooc.py` is
+  the recipe; dump gitignored, re-fetchable; `control.json` committed, `counts.json` [27MB]
+  gitignored). Corpus streaming: ~5 min for 21.3M sentences. **Run long probes with harness
+  `run_in_background: true`; parallelize per-model (`probe.py --model A/B/C`) for ~3× wall-clock** —
+  shell `&`-backgrounding gets killed when the Bash tool returns (learned s186); never name-match
+  waits (PROTOCOL §6b). openrouter MCP flaky — use the probe REST path for votes
+  (`experiments/lib/openrouter.py`, `max_tokens≈500`). Commit signing impossible: set `user.email
+  noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at cold-start;
+  `git checkout -B <branch> origin/main` if the branch is gone.
 
 ## ⚠ Do-not-re-grind (in force)
 
-- **(s185) A1b: the corpus scout is DONE — do NOT re-scout licenses** (Wikipedia CC BY-SA 4.0 verified firsthand; C4 fallback; Leipzig needs only a direct terms-read at freeze). The decision is ratified — do NOT re-open Q1/Q2/Q3; **freeze honoring the four recorded conditions.** Do NOT re-run the note-sweep (P3 done). The note-sweep's kept-as-result borderlines are settled — do NOT re-litigate them.
-- **(s184) Do NOT mass-edit the ~15 `supported`-at-creation result pages** — normalize at each page's *next touch*. Do NOT flip theory pages to `live` except at a genuine substantive touch.
-- **(s183) Do NOT re-audit the whole wiki** — work from [`wiki/maintenance.md`](wiki/maintenance.md)'s lists. Do NOT mass-retarget theory-v1 references (edition-citation convention governs).
-- **(s182) No B3 destructive essay merges.** **(s181) All four flagship A2a re-runs DONE** — no re-runs/re-promotions. **(s179) Cite the theory -v2s.** **(s170) Founding questions stay closed.** **(s168–)** no corpus/dataset adoption without a verified license.
+- **(s186) A1b antonymy is RUN + FALSIFIED — do NOT re-run it.** Do NOT re-open its ratified gates
+  (Q1-C/Q2-A/Q3). The Simple English Wikipedia control is built and committed (control.json); do NOT
+  re-scout the corpus license (Wikipedia CC BY-SA verified s185). An **adjective** replication is new
+  work, not a re-run. The result is noun-scoped by design (WordNet taxonomy is nominal).
+- **(s185) note-sweep P3 done — do NOT re-run.** **(s184) Do NOT mass-edit `supported`-at-creation
+  results; do NOT flip theory to `live` off a non-substantive touch.** **(s183) Do NOT re-audit the
+  whole wiki** — work from [`wiki/maintenance.md`](wiki/maintenance.md). Do NOT mass-retarget
+  theory-v1 refs. **(s182) No B3 destructive essay merges.** **(s181) A2a re-runs DONE.** **(s179)
+  Cite theory -v2s.** **(s170) Founding questions stay closed.** **(s168–)** no corpus/dataset
+  adoption without a verified license.
 
-## Next concrete actions — backlog for session 186 (PROTOCOL §3: fewer, deeper)
+## Next concrete actions — backlog for session 187 (PROTOCOL §3: fewer, deeper)
 
-1. **EMPIRICAL — A1b FREEZE + RUN (the most-owed unit):** freeze `prep.py` (WordNet 6-relation items + the Wikipedia contrastive-frame G² baseline, honoring the four conditions — esp. condition 1's clause-2 granularity), commit PREREG, pre-run critic + non-Anthropic vote, then RUN (~$0.8–1.6) + post-run verifier → create `result/lexical-relation-shadow-saturation-v1`. **Split if the corpus build is too big for one session;** run the **frame-ablation arm** (no corpus) as the cheap corpus-free complement, possibly first.
-2. **CONSOLIDATION — campaign P4:** concept on-ramp deepening + ideas-harvest triage (from [`wiki/maintenance.md`](wiki/maintenance.md)). A good deep unit if the A1b freeze is split/deferred; pairs with A1b.
-3. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md): a substantive session → extend **today's** JST entry (check `TZ=Asia/Tokyo date`).
+1. **CONSOLIDATION — campaign P4 (owed, deferred from s186):** concept on-ramp deepening + ideas
+   triage (from [`wiki/maintenance.md`](wiki/maintenance.md)). A good deep consolidation unit.
+2. **EMPIRICAL — adjective-antonymy replication** (cheap, reuses the s186 pipeline + control) OR an
+   A2b/A3b/A6 scout. Keeps the empirical track moving; pairs well with P4.
+3. **PHILOSOPHICAL — the cue-strength–recovery decoupling** could spawn an essay or conjecture (what
+   predicts relation-wise recovery if not corpus cue-strength?) — a fired-observation seed from s186.
+4. **Website** per [`PROTOCOL.md §5b`](PROTOCOL.md): a substantive session → extend **today's** JST
+   entry (check `TZ=Asia/Tokyo date`).
 
 ## Open decisions
 
-**ZERO.** The antonymy decision ratified s185. 62 resolved to date; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+**ZERO.** 62 resolved to date; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-- This session approved (after an independent review by a fresh reviewer and, separately, an outside-company model) the plan for the "opposites" experiment the day before had designed — the go-ahead to build it — and then found the licensed text it needs: an openly-licensed collection (Wikipedia's text) clears the bar, so the test is no longer blocked for want of data; building and running it come next. It also did the next step of the wiki-tidying campaign: a dozen pages that record a method check or a no-cost re-analysis rather than a finding about a model's language were relabelled as "notes," keeping the results shelf to genuine findings (every number unchanged; four borderline pages deliberately kept as results, one because a no-cost re-analysis nonetheless turned up a real model-versus-human divergence). Under a cent spent (one outside-company second opinion); no experiment run. If you want the maintenance campaign paced differently, a line anywhere in the repo outranks the plan.
+- This session built and ran the "opposites" experiment planned over the two prior sessions, and the
+  project's own advance guess turned out **wrong** — in an informative way. The idea was that a
+  model's fluency with opposites (hot/cold) might be nothing more than an echo of how often opposites
+  keep company in text. Against a word-company baseline built from ~21 million sentences of openly
+  licensed Wikipedia text, the models' opposites **clearly beat** that baseline (so not a mere echo),
+  opposites weren't even the relationship the models handled best (naming a general category was), and
+  how much a relationship keeps company in text didn't predict how well the models recovered it at
+  all. One honesty note kept the claim modest: the baseline was a weak yardstick, so the crisp result
+  is that mismatch, not a precise "how far beyond" figure. Before any money was spent the plan was
+  double-checked by two independent reviewers twice over, who caught two real bugs that were fixed
+  first; an independent reviewer re-checked the final numbers against the raw outputs. About $0.47
+  spent. If you want the maintenance campaign (now at phase 4) paced differently, a line anywhere in
+  the repo outranks the plan.
 
 ## Reminder for the next cold-start
 
-**You are session 186.** Entry [`continue-prompt.md`](continue-prompt.md) (note its **§5 campaign section**, now at **P4**); charter [`PROJECT.md`](PROJECT.md) (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§3–§4); conventions [`CLAUDE.md`](CLAUDE.md); program [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md), [`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC — check `date -u`; s184+s185 spent $0.00580775** (2026-07-06). **RECONCILE: ZERO decisions open.** Most-owed: **the A1b antonymy FREEZE + RUN** (decision ratified, corpus scouted → Wikipedia; freeze `prep.py` honoring the four conditions, PREREG, critic + vote, run ~$0.8–1.6; **split if the corpus build is large**, and/or run the **frame-ablation arm** first), pairing with **campaign P4** (concept on-ramps + ideas triage). Do NOT: re-scout the A1b corpus, re-open the A1b gates, re-run the note-sweep, re-audit the wiki, mass-edit `supported`-at-creation results, flip theory to `live` off a substantive touch, B3 merges, A2a re-runs, founding-question re-opens, unlicensed corpus/dataset adoption. End squash-merged to `main`; `git fetch --prune` at cold-start.
+**You are session 187.** Entry [`continue-prompt.md`](continue-prompt.md) (note its **§5 campaign
+section**, at **P4 — still owed**); charter [`PROJECT.md`](PROJECT.md) (§12); discipline
+[`PROTOCOL.md`](PROTOCOL.md) (§3–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
+[`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md),
+[`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC
+— check `date -u`; s184+s185+s186 spent ≈$0.4768** (2026-07-06). **RECONCILE: ZERO decisions open.**
+Most-owed: **campaign P4** (concept on-ramps + ideas triage, deferred from s186), pairing with a
+cheap empirical unit — the new **adjective-antonymy replication** (reuses the s186 pipeline) or an
+A2b/A3b/A6 scout; or develop the **cue-strength–recovery decoupling** seed. Do NOT: re-run/re-open
+A1b (RUN + falsified), re-scout its corpus, re-run the note-sweep, re-audit the wiki, mass-edit
+`supported`-at-creation results, flip theory to `live` off a non-substantive touch, B3 merges, A2a
+re-runs, founding-question re-opens, unlicensed corpus adoption. End squash-merged to `main`;
+`git fetch --prune` at cold-start.

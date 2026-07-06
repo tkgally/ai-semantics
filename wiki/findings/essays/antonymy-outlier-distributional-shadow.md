@@ -6,10 +6,10 @@ meaning-senses:
   - distributional
   - inferential
   - human-comparison
-status: draft
+status: revised
 contingent-on: []
 created: 2026-06-29
-updated: 2026-06-30
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: source/cao-2025-semantic-relation-knowledge
@@ -71,6 +71,31 @@ links:
 > specific **parallel-contrastive-frame mechanism for nouns stays inferential** (J&K measured it for
 > adjectives; this paper only *speculates* it for the rest). No empirical claim about the panel changed;
 > the deflationary reading is unchanged and better-grounded across parts of speech.
+>
+> **Revision (session 186, 2026-07-06) — the headline trigger (a) FIRED, in the *surviving*
+> direction; the deflationary reading is SCOPED, not confirmed.** The frontier-panel relatum probe the
+> headline trigger named was run — [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)
+> (program A1b; 6 WordNet noun relations, N=130 each; a contrastive-frame G² control built from a
+> fetched Simple English Wikipedia dump; two pre-run review rounds; post-run verifier). **The panel's
+> antonym recovery does NOT saturate against the contrastive-frame control — it exceeds it by a wide
+> margin** (HIT@3 residual +0.61–0.67, among the *largest* of the six relations; the *smallest*
+> residual is meronymy, 3/3), and the frame-ablation arm shows antonym recovery **survives frame
+> suppression** (neutral HIT 0.84–0.90; removing the contrastive scaffold does not collapse it). So on
+> the panel, "antonymy recovery is the distributional shadow showing through" is **not** the whole
+> story: antonym recovery is largely **un**explained by *this* contrastive-frame co-occurrence control.
+> Per the s151-ratified interpretation note, a residual over a co-occurrence control grades **local vs
+> transferable** distributional generalization, not distribution vs non-distribution — so what is
+> revised is the **local**-shadow reading: antonym recovery is *not* nothing but local frame-completion.
+> This does **not** promote antonymy to competence-beyond-distribution (a co-occurrence control cannot
+> certify that). Two further panel facts complicate the essay's convergence premise: raw recovery does
+> **not** track corpus cue-strength (Spearman −0.086), and antonymy is **not** the best-recovered
+> relation on the panel — **hypernymy** is (the essay's "antonymy is the relation models recover best",
+> true of Cao's/Diera's non-panel models, does **not** transfer to the panel). The corpus premise
+> holds (antonymy *is* the most distributionally cued relation, measured from our own corpus, 𝒮 0.077
+> vs 0.010–0.028); what fails is the inference from cueing to recovery. Reading revised to: *the
+> distributional shadow is largest for antonymy, but on the frontier panel it does not saturate
+> antonym recovery, and cueing does not predict recovery* — scoped to the panel and to the local
+> control. `status: draft → revised`.
 
 ## The convergence
 
@@ -338,7 +363,12 @@ the clean falsifier of the pure-shadow reading.
 ## Revision triggers (read before citing)
 
 - **(a) A frontier-panel relatum probe with a contrastive-frame control shows antonymy competence
-  surviving the control.** This is the clean falsifier of the **local**-shadow reading. If
+  surviving the control. → FIRED s186 (2026-07-06), in the surviving direction** —
+  [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md):
+  panel antonym recovery exceeds the contrastive-frame control (HIT@3 residual +0.61–0.67) and
+  survives frame suppression; the local-shadow reading is revised (scoped, per the s151 note — not
+  competence-beyond-distribution). See the s186 revision box at the top. This is the clean falsifier
+  of the **local**-shadow reading. If
   [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)'s
   probe (or any equivalent) runs and antonymy competence clears daylight above a contrastive-frame
   distributional baseline, the pure-shadow reading is wrong for that case — revise the deflationary

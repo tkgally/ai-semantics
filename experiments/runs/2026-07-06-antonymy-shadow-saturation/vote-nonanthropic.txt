@@ -1,0 +1,13 @@
+VERDICT: NO-GO
+
+- **BLOCKER:** The control is not clearly “what co-occurrence alone predicts.” You’ve hard-coded a very specific, relation-skewed set of contrastive frames and a top-3 precision metric. That is not a neutral distributional baseline; it bakes in a theory of antonymy and contrast into the control itself. **Fix:** define a broader, relation-agnostic distributional control (same candidate space, same scoring target) and pre-register why these frames are not already relation-laden.
+
+- **BLOCKER:** The residual is not well-posed as a separability measure because model and control are scored on the same gold but the gold cardinalities differ wildly by relation. “Same gold” does not cancel fan-out; it changes the denominator structure and makes residuals non-comparable across relations. **Fix:** use a matched evaluation set or a calibration scheme that equalizes gold size/fan-out across relations before computing residuals.
+
+- **BLOCKER:** Your hypotheses are entangled with the control’s known asymmetry: you already state antonymy is far more distributionally cued. That makes “antonymy smallest residual” partly pre-decided, and the test risks becoming “which relation is easiest under a control designed to favor antonymy?” **Fix:** justify ex ante why the control should not differentially advantage antonymy, or add an orthogonal control family that does not privilege contrast.
+
+- **SHOULD-FIX:** The verdict map is not cleanly exhaustive. “SHADOW-SATURATED-FLAT” depends on CI overlap with all others on 2/3 models, but overlap is not a decision rule for equality, and “MIXED” can swallow many heterogeneous outcomes. **Fix:** define a single primary estimand and a formal decision rule based on ordered residual contrasts with multiplicity control.
+
+- **SHOULD-FIX:** “Model recovery uniformly high” makes the residual collapse toward raw recovery, which you note, but then the test stops probing the control claim. That means the outcome space is not fully diagnostic of your intended question. **Fix:** add a calibration check showing the control explains a nontrivial fraction of variance before interpreting residual rank order; otherwise treat results as descriptive only.
+
+[billed $0.002704; model openai/gpt-5.4-mini]

@@ -6,11 +6,11 @@ meaning-senses:
   - distributional
   - inferential
   - human-comparison
-status: proposed
+status: tested
 contingent-on: []
 created: 2026-06-29
 updated: 2026-07-06
-anchor: pending
+anchor: internal-contrast-only
 links:
   - rel: depends-on
     target: essay/antonymy-outlier-distributional-shadow
@@ -44,6 +44,20 @@ The companion essay [`essay/antonymy-outlier-distributional-shadow`](../essays/a
 
 This is a lexical-pole instance of the single test that organizes the continuum theory: "**does a meaning gradient beat the distributional shadow?**" ([`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md)). Here the unit is a *relation* rather than a graded sense scale, and the bet is not that some relation beats the shadow but that one relation — antonymy — is the one that **most fails to**, because for antonymy the shadow already does the work.
 
+> **TESTED + FALSIFIED 2026-07-06 (s186) → [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md).**
+> The internal-contrast probe ran on the panel (6 WordNet noun relations, N=130 each, contrastive-frame
+> G² control from Simple English Wikipedia; two pre-run review rounds; post-run verifier). **Both
+> confirmation clauses fail:** antonymy is **not** the least-separable relation — it carries one of the
+> *largest* residuals (HIT@3 +0.61–0.67), not the smallest (meronymy is smallest, 3/3); and raw
+> recovery does **not** track corpus cue-strength (Spearman −0.086 — antonymy tops cue-strength but
+> **hypernymy** tops recovery). The pre-registered calibration gate fired, so the residual arm is
+> descriptive-only (the top-3 co-occurrence control explains almost nothing), which does not rescue the
+> bet — its premise was that co-occurrence *saturates* antonymy recovery, and the opposite obtains. The
+> frame-ablation arm shows antonym recovery **survives** frame suppression. Read at the strength a
+> co-occurrence control licenses (s151 note): this falsifies the **local**-shadow-saturation reading,
+> not more. The [`predictions.md`](../../predictions.md) bet is a **loss** (honest negative). `status:
+> proposed → tested`; `anchor: pending → internal-contrast-only`.
+>
 > **Design landed 2026-07-06 (s184; program A1b); gates ratified s185.** The internal-contrast operationalization is drafted — [`design/lexical-relation-shadow-saturation-v1`](../../../experiments/designs/lexical-relation-shadow-saturation-v1.md) — with **three value-laden gates** ([`decisions/resolved/antonymy-internal-contrast-scoring`](../../decisions/resolved/antonymy-internal-contrast-scoring.md) — **ratified ADOPT DEFAULTS s185** by a fresh reviewer + a converging non-Anthropic vote): **Q1-C** what the distributional control *is* (the s182/s183 scouts confirmed **no co-occurrence data in-repo** — SubTLEX-US is unigram-only, so the faithful contrastive-frame G² control must be built from a fetched, license-verified corpus, with a static-embedding cosine only as a labelled sensitivity check), **Q2-A** how relatum recovery is scored with no human gold (WordNet-definitional target + a model-vs-control hit-rate residual), **Q3 `internal-contrast-only`** anchor. A **frame-ablation arm** (recovery with the J&K contrastive frame present vs suppressed) is the within-model complement needing no external corpus. **Nothing frozen, nothing run;** the conjecture stays `proposed` until the design freezes — the gates are ratified, but the run still owes its co-occurrence-corpus license scout + `prep.py` freeze (with a freeze-time condition: clause 2's cue-strength ranking must resolve Cao's 4-relation vs the probe's 6-relation granularity). Run s185+.
 
 ### Which meaning-senses this is, and is not
