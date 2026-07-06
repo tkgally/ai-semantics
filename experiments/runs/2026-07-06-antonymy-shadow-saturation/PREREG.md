@@ -39,6 +39,25 @@ replication is named future work**, not run here. One POS ⇒ no cross-POS pooli
   artifact.
 - Gold = **word-form level** (Cao's task granularity), aggregated over all senses of the cue;
   relata single-word, SubTLEX Lg10WF ≥ 1.5. Max pairwise cue overlap across relations = 11.
+- **Gold-relation rule (frozen; fix found via pre-run smoke test, before any scored data):**
+  antonymy/synonymy/holonymy/meronymy = **direct (one-hop)** WordNet relata; **hypernymy and
+  hyponymy = transitive closure (depth ≤ 4)** — the prompts invite ANY more-general category /
+  specific kind, and the model naturally gives valid multi-hop relata (admiration→feeling→emotion),
+  so direct-only would unevenly under-credit the inherently-chained taxonomic relations vs one-hop
+  antonymy. This makes gold-set sizes differ by relation (a real WordNet fan-out property: antonymy
+  mean≈1.1, hyponymy mean≈24, max 486). Two guards below neutralize any size artifact.
+
+**Gold-size guards (both pre-registered, before any model call):**
+- The **residual** (𝒮(model) − 𝒮(control)) scores model AND control against the *same* gold per
+  relation, so the fan-out effect is present in both terms and largely cancels — the residual is
+  the model's *advantage over blind co-occurrence*, size-controlled by construction. A large gold
+  set *raises* the control's 𝒮 too, which *lowers* that relation's residual — i.e. transitive
+  hyponymy biases hyponymy toward a *small* residual, which is *against* the conjecture
+  (it predicts hyponymy keeps a *large* residual). So the size choice is conservative, not
+  confirmation-seeking.
+- A **size-matched sensitivity** re-runs the residual ranking on only cues with |gold| ≤ 5 across
+  all six relations, so the cross-relation ranking is checked on a gold-size-comparable subset.
+  Reported alongside the primary. Per-relation gold sizes are reported in full.
 
 ## The distributional control (Q1-C, frozen in `control.json`)
 
@@ -78,28 +97,65 @@ Panel = `config/models.md` slots A/B/C, temperature 0, zero-shot, single-turn; `
   "neither X nor ___", "from X to ___"), the essay's antonymy-cuing signature. Enters the
   **frame-ablation arm** only.
 
-## Scoring (Q2-A, frozen in `analyze.py`)
+## Scoring (Q2-A + a gold-size-insensitive companion, frozen in `analyze.py`)
 
-- **Soundness** 𝒮 = (produced words that are WordNet gold) / (words produced) — Cao's metric,
-  precision over produced; 0-produced cue → NA (dropped). Both model and control get 3 slots and
-  are scored by the same 𝒮 against the same gold (symmetric, fair).
-- **residual(rel, model) = 𝒮(model, neutral) − 𝒮(control)**, paired per cue, bootstrap 95% CI
-  over cues (B=2000, seed 20260706). PRIMARY uses the frame control; SENSITIVITY uses sent.
-- **Clause-2 corpus cue-strength ranking** = mean 𝒮(control, frame) per relation (the 6-relation
-  ranking the corpus supplies — condition 1 route (a)). Clause-2 secondary = Spearman of the raw
-  𝒮(model) relation ranking against it; antonymy predicted top of both.
-- **Frame-ablation (descriptive):** antonymy 𝒮(model, frame) − 𝒮(model, neutral) per model.
+Two per-cue scorers (both frozen; the second added at freeze to neutralize the gold-fan-out
+confound both pre-run reviewers flagged — antonymy gold≈1 caps precision at 1/3 when the model
+volunteers 3 words, mechanically depressing antonymy 𝒮 toward a small residual):
+
+- **Soundness 𝒮** = (produced words in gold) / (words produced) — Cao's precision-over-produced
+  (the ratified Q2-A). 0-produced cue → NA (dropped).
+- **HIT@3** = 1 if any produced word is in gold else 0 — gold-size-insensitive (a hit is a hit
+  regardless of over-production). **Co-primary**, per the reviews.
+
+Both scorers applied identically to model and control (same 3-slot budget, same gold). **residual =
+score(model, neutral) − score(control)**, paired per cue, bootstrap 95% CI over cues (B=2000, seed
+20260706). Controls: **frame** (contrastive-frame G², mechanism-specific) and **sent**
+(all-intrasentential G², relation-agnostic). **Size-matched** view = frame control on |gold| ≤ 5
+cues (per-relation n reported). Clause-2 and frame-ablation as before, reported for both scorers.
+
+- **Clause-2 corpus cue-strength** = mean 𝒮(control) per relation (the 6-relation ranking the
+  corpus supplies — condition 1 route (a)); reported for BOTH controls (NIT: clause-1 and clause-2
+  share the frame control under route (a) — disclosed, not independent). Antonymy predicted top.
+- **%gold-in-V reported per relation** (the control can only propose relata that are in V; an
+  asymmetry the reviews flagged — reported so its direction is auditable).
+- **Frame-ablation (descriptive):** antonymy score(frame) − score(neutral) per model, both scorers.
 
 ## Verdict map (FROZEN — no post-hoc tuning)
 
-Primary = the frame-control residual ranking. n=3 models, orderings not coefficients.
+n=3 models, orderings not coefficients. Per single (control, cue-subset) view the outcome is:
+- **antonymy-smallest** iff antonymy has the smallest residual on **≥2/3** models with meronymy
+  and/or hyponymy visibly larger;
+- **flat** iff antonymy's residual 95% CI overlaps every other relation's on ≥2/3 models;
+- **inverted** iff a weakly-cued relation (meronymy/holonymy) has the smallest residual on ≥2/3;
+- **mixed** otherwise.
 
-- **CONFIRMS** iff antonymy has the **smallest** residual on **≥2/3** models, with meronymy
-  and/or hyponymy visibly larger.
-- **SHADOW-SATURATED-FLAT (null)** iff residuals are flat — antonymy's residual 95% CI overlaps
-  every other relation's on ≥2/3 models.
-- **INVERTED** iff a weakly-cued relation (meronymy/holonymy) has the smallest residual on ≥2/3.
-- **MIXED/NO-MAJORITY** otherwise.
+**Six views** (dual scorer × dual control, plus two size-matched): `soundness_frame`,
+`soundness_sent`, `soundness_sizematched`, `hit_frame`, `hit_sent`, `hit_sizematched`. Per view the
+per-model smallest-residual relation and the antonymy-smallest count (/3) are reported. Headline
+(frozen logic in `analyze.py`):
+
+- **CONFIRMS-ROBUST** — antonymy smallest on ≥2/3 models under **all four frame views**
+  (soundness+hit × full+size-matched) **AND both sent views** (relation-agnostic — the neutral
+  baseline the vote demanded).
+- **CONFIRMS-FRAME-SPECIFIC** — robust under the four frame views but **not** the sent views ⇒ the
+  panel's antonymy recovery is saturated by the *contrastive-frame* shadow specifically, not by
+  generic co-occurrence. Reported as scoped, not a bare confirm.
+- **SHADOW-SATURATED-FLAT** — antonymy's hit-frame residual CI overlaps all others on ≥2/3.
+- **INVERTED** — the smallest-residual relation (hit-frame) is one of the **two measured
+  weakest-cued relations** (bottom-2 by frame cue-strength, computed from the corpus — SHOULD-FIX 5;
+  the earlier hard-coded "meronymy/holonymy" gloss was wrong, meronymy is 2nd-strongest cued) on
+  ≥2/3.
+- **MIXED/NO-MAJORITY** — otherwise.
+
+"Visibly larger" (the CONFIRMS side-condition) is operationalized as **CI-separation**: antonymy
+residual CI-upper < meronymy or hyponymy residual CI-lower (reported as a count /3), not left vague.
+
+**Calibration gate (formalizes the vote's SHOULD-FIX):** if mean 𝒮(control) is negligible and the
+soundness residual ranking merely reproduces the raw-𝒮(model) ranking (Spearman ≈ 1, reported per
+model), the residual arm is reported **descriptively only** — the control explains too little for
+the residual to be a separability measure — and weight shifts to clause-2 (corpus cue-strength) and
+the frame-ablation arm. Pre-named, not a post-hoc downgrade.
 
 **Pre-registered instrument caveat (named before the run):** the control is blind top-k=3
 precision, structurally low in absolute terms (antonymy control 𝒮≈0.077, others 0.010–0.023 —

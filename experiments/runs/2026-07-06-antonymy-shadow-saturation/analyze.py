@@ -1,29 +1,26 @@
 #!/usr/bin/env python3
 """analyze.py — scoring + verdict for the A1b antonymy shadow-saturation probe.
 
-Recomputes everything from raw/ + items.json + control.json. No thresholds are tuned here
-after seeing results (anti-cheat); the verdict map is the one frozen in PREREG.md.
+Recomputes everything from raw/ + items.json + control.json. No threshold is tuned after
+seeing results (anti-cheat); the verdict map is the one frozen in PREREG.md.
 
-Metrics (Q2-A, ratified):
-- 𝒮(model, rel) = mean over cues of Soundness = (produced words that are WordNet gold) /
-  (words produced), Cao's Soundness (precision over produced). 0-produced cue -> NA (dropped).
-- 𝒮(control, rel, variant) = same, over the control's top-k co-occurrence candidates.
-- residual(rel, model, variant) = 𝒮(model, neutral) − 𝒮(control, variant).
-  PRIMARY variant = frame (contrastive-frame G²); SENSITIVITY = sent (all-intrasentential G²).
-- Verdict (frozen): CONFIRMS iff antonymy has the SMALLEST residual on >=2/3 models with
-  meronymy and/or hyponymy visibly larger; SHADOW-SATURATED-FLAT iff residuals flat (the
-  antonymy residual's 95% CI overlaps every other relation's on >=2/3 models); INVERTED iff a
-  weakly-cued relation (meronymy/holonymy) has the smallest residual on >=2/3.
-- Clause-2 (secondary): Spearman of the raw-𝒮(model) relation ranking vs the corpus
-  cue-strength ranking (= 𝒮(control, frame) per relation, the 6-relation ranking the corpus
-  supplies — condition 1 route (a)); antonymy predicted top of both.
-- Frame-ablation (descriptive): antonymy 𝒮(model, frame) − 𝒮(model, neutral), per model.
+Two per-cue scorers, both frozen (Q2-A + the gold-size-insensitive companion the pre-run
+reviews required):
+- SOUNDNESS 𝒮 = (produced words in gold)/(words produced)  — Cao precision-over-produced.
+- HIT@k       = 1 if any produced word is in gold else 0     — gold-size-insensitive (a hit is
+                a hit regardless of over-production; neutralizes the antonymy-ceiling confound
+                the reviewers flagged: gold size 1 caps 𝒮 at 1/3 when the model volunteers 3).
 
-Bootstrap 95% CIs over cues (percentile, B=2000, seed fixed).
+residual(rel, model, scorer) = score(model, neutral) − score(control), paired per cue, bootstrap
+95% CI over cues. Controls: frame-G² (mechanism-specific) + sent-G² (relation-agnostic, the
+neutral baseline). Size-matched view = frame control on cues |gold|≤GOLD_CAP.
+
+Verdict is taken over multiple views (dual-control × two scorers × size-matched); the headline is
+CONFIRMS-ROBUST / CONFIRMS-FRAME-SPECIFIC / SHADOW-SATURATED-FLAT / INVERTED / MIXED, plus a
+calibration gate (if residual just reproduces raw recovery, report descriptive-only). n=3 models,
+orderings not coefficients.
 """
 import json
-import math
-import os
 import random
 from pathlib import Path
 
@@ -32,28 +29,32 @@ RELS = ["antonymy", "synonymy", "hypernymy", "hyponymy", "holonymy", "meronymy"]
 SLOTS = ["A", "B", "C"]
 B_BOOT = 2000
 BOOT_SEED = 20260706
+GOLD_CAP = 5
 
 
 def soundness(produced, gold):
     if not produced:
         return None
-    hits = sum(1 for w in produced if w in gold)
-    return hits / len(produced)
+    return sum(1 for w in produced if w in gold) / len(produced)
 
 
-def load_gold():
+def hit(produced, gold):
+    if not produced:
+        return None
+    return 1.0 if any(w in gold for w in produced) else 0.0
+
+
+def load_items():
     items = json.load(open(HERE / "items.json"))
-    gold = {}
-    order = {}
+    gold, order = {}, {}
     for r in RELS:
         order[r] = [it["cue"] for it in items["items"][r]]
         for it in items["items"][r]:
             gold[(r, it["cue"])] = set(it["gold"])
-    return gold, order, items
+    return items, gold, order
 
 
-def control_scores(order, gold):
-    """Per (rel, variant): dict cue -> 𝒮(control)."""
+def control_scores(order, gold, scorer):
     ctrl = json.load(open(HERE / "control.json"))["cues"]
     out = {}
     for r in RELS:
@@ -61,15 +62,13 @@ def control_scores(order, gold):
             d = {}
             for cue in order[r]:
                 cand = [v for v, g, o in ctrl.get(cue, {}).get(variant, [])]
-                d[cue] = soundness(cand, gold[(r, cue)])
+                d[cue] = scorer(cand, gold[(r, cue)])
             out[(r, variant)] = d
     return out
 
 
-def model_scores(gold, order):
-    """Per (slot, rel, arm): dict cue -> 𝒮(model)."""
-    out = {}
-    miss = {}
+def model_scores(gold, order, scorer):
+    out, miss = {}, {}
     for slot in SLOTS:
         for r in RELS:
             for arm in (("neutral", "frame") if r == "antonymy" else ("neutral",)):
@@ -82,7 +81,7 @@ def model_scores(gold, order):
                 for row in rows:
                     if not row["words"]:
                         empt += 1
-                    d[row["cue"]] = soundness(row["words"], gold[(r, row["cue"])])
+                    d[row["cue"]] = scorer(row["words"], gold[(r, row["cue"])])
                 out[(slot, r, arm)] = d
                 miss[(slot, r, arm)] = empt
     return out, miss
@@ -94,19 +93,16 @@ def mean_ci(vals):
         return None, None, None, 0
     m = sum(v) / len(v)
     rng = random.Random(BOOT_SEED)
-    boots = []
     n = len(v)
-    for _ in range(B_BOOT):
-        s = sum(v[rng.randrange(n)] for _ in range(n)) / n
-        boots.append(s)
-    boots.sort()
-    return m, boots[int(0.025 * B_BOOT)], boots[int(0.975 * B_BOOT)], len(v)
+    boots = sorted(sum(v[rng.randrange(n)] for _ in range(n)) / n for _ in range(B_BOOT))
+    return m, boots[int(0.025 * B_BOOT)], boots[int(0.975 * B_BOOT)], n
 
 
-def residual_ci(model_d, ctrl_d):
-    """Paired residual per cue then bootstrap; cues where either is NA are dropped."""
+def residual_ci(model_d, ctrl_d, keep=None):
     diffs = []
     for cue in model_d:
+        if keep is not None and cue not in keep:
+            continue
         mv, cv = model_d[cue], ctrl_d.get(cue)
         if mv is None or cv is None:
             continue
@@ -116,10 +112,7 @@ def residual_ci(model_d, ctrl_d):
     m = sum(diffs) / len(diffs)
     rng = random.Random(BOOT_SEED)
     n = len(diffs)
-    boots = []
-    for _ in range(B_BOOT):
-        boots.append(sum(diffs[rng.randrange(n)] for _ in range(n)) / n)
-    boots.sort()
+    boots = sorted(sum(diffs[rng.randrange(n)] for _ in range(n)) / n for _ in range(B_BOOT))
     return m, boots[int(0.025 * B_BOOT)], boots[int(0.975 * B_BOOT)], n
 
 
@@ -136,136 +129,241 @@ def spearman(a, b):
     return 1 - 6 * d2 / (n * (n * n - 1))
 
 
-def main():
-    gold, order, items = load_gold()
-    ctrl = control_scores(order, gold)
-    mod, miss = model_scores(gold, order)
-
-    report = {"n_per_rel": items["n_per_rel"], "relations": RELS,
-              "raw_soundness": {}, "control_soundness": {}, "residual": {},
-              "frame_ablation": {}, "clause2_spearman": {}, "verdict": {}}
-
-    # raw 𝒮(model, neutral) + control 𝒮 per relation
-    for slot in SLOTS:
-        report["raw_soundness"][slot] = {}
-        for r in RELS:
-            d = mod.get((slot, r, "neutral"), {})
-            m, lo, hi, n = mean_ci(list(d.values()))
-            report["raw_soundness"][slot][r] = {"mean": m, "ci": [lo, hi], "n": n,
-                                                "empty": miss.get((slot, r, "neutral"), 0)}
+def resid_table(mod, ctrl, scorer_name, order=None, keep_by_rel=None):
+    """{slot: {rel: {mean,ci,n}}} for the frame control (+sent stored separately)."""
+    out = {}
     for variant in ("frame", "sent"):
-        report["control_soundness"][variant] = {}
-        for r in RELS:
-            m, lo, hi, n = mean_ci(list(ctrl[(r, variant)].values()))
-            report["control_soundness"][variant][r] = {"mean": m, "ci": [lo, hi], "n": n}
-
-    # residuals (primary=frame, sensitivity=sent)
-    for variant in ("frame", "sent"):
-        report["residual"][variant] = {}
+        out[variant] = {}
         for slot in SLOTS:
-            report["residual"][variant][slot] = {}
+            out[variant][slot] = {}
             for r in RELS:
                 md = mod.get((slot, r, "neutral"), {})
-                cd = ctrl[(r, variant)]
-                m, lo, hi, n = residual_ci(md, cd)
-                report["residual"][variant][slot][r] = {"mean": m, "ci": [lo, hi], "n": n}
+                keep = keep_by_rel[r] if keep_by_rel else None
+                m, lo, hi, n = residual_ci(md, ctrl[(r, variant)], keep=keep)
+                out[variant][slot][r] = {"mean": m, "ci": [lo, hi], "n": n}
+    return out
 
-    # frame-ablation (antonymy): 𝒮(frame) − 𝒮(neutral) per model
+
+def ant_smallest_count(view):
+    c = 0
     for slot in SLOTS:
-        nd = mod.get((slot, "antonymy", "neutral"), {})
-        fd = mod.get((slot, "antonymy", "frame"), {})
-        diffs = [fd[c] - nd[c] for c in nd if c in fd and nd[c] is not None and fd[c] is not None]
-        if diffs:
-            m = sum(diffs) / len(diffs)
-            rng = random.Random(BOOT_SEED)
-            n = len(diffs)
-            boots = sorted(sum(diffs[rng.randrange(n)] for _ in range(n)) / n for _ in range(B_BOOT))
-            report["frame_ablation"][slot] = {
-                "mean_delta": m, "ci": [boots[int(0.025*B_BOOT)], boots[int(0.975*B_BOOT)]],
-                "n": n,
-                "s_neutral": sum(nd[c] for c in nd if nd[c] is not None)/max(1, sum(1 for c in nd if nd[c] is not None)),
-                "s_frame": sum(fd[c] for c in fd if fd[c] is not None)/max(1, sum(1 for c in fd if fd[c] is not None))}
+        vals = {r: view[slot][r]["mean"] for r in RELS if view[slot][r]["mean"] is not None}
+        if vals and min(vals, key=vals.get) == "antonymy":
+            c += 1
+    return c
 
-    # clause-2: raw-𝒮(model) ranking vs corpus cue-strength (𝒮 control frame) ranking
-    cue_strength = [report["control_soundness"]["frame"][r]["mean"] or 0.0 for r in RELS]
+
+def smallest_per_model(view):
+    out = {}
     for slot in SLOTS:
-        raw = [report["raw_soundness"][slot][r]["mean"] or 0.0 for r in RELS]
-        rho = spearman(raw, cue_strength)
-        ant_top_raw = RELS[max(range(6), key=lambda i: raw[i])] == "antonymy"
-        report["clause2_spearman"][slot] = {"rho": rho, "antonymy_top_raw": ant_top_raw}
-    report["clause2_spearman"]["antonymy_top_cue_strength"] = (
-        RELS[max(range(6), key=lambda i: cue_strength[i])] == "antonymy")
+        vals = {r: view[slot][r]["mean"] for r in RELS if view[slot][r]["mean"] is not None}
+        out[slot] = min(vals, key=vals.get) if vals else None
+    return out
 
-    # verdict per model + overall (PRIMARY = frame residual)
-    def smallest(slot, variant):
-        res = report["residual"][variant][slot]
-        vals = {r: res[r]["mean"] for r in RELS if res[r]["mean"] is not None}
-        return min(vals, key=vals.get) if vals else None
 
-    def flat(slot, variant):
-        res = report["residual"][variant][slot]
-        a = res["antonymy"]
+def main():
+    items, gold, order = load_items()
+    ctrl_S = control_scores(order, gold, soundness)
+    ctrl_H = control_scores(order, gold, hit)
+    modS, missS = model_scores(gold, order, soundness)
+    modH, _ = model_scores(gold, order, hit)
+
+    rep = {"n_per_rel": items["n_per_rel"], "relations": RELS}
+
+    # gold sizes + %gold-in-V + small subset
+    vocab = set(json.load(open(HERE / "vocab.json"))["vocab"])
+    rep["gold_size"], small = {}, {}
+    for r in RELS:
+        sizes = sorted(len(gold[(r, c)]) for c in order[r])
+        in_v = [sum(1 for w in gold[(r, c)] if w in vocab) / max(1, len(gold[(r, c)]))
+                for c in order[r]]
+        rep["gold_size"][r] = {"mean": round(sum(sizes) / len(sizes), 2),
+                               "median": sizes[len(sizes) // 2], "max": sizes[-1],
+                               "n_le_cap": sum(1 for s in sizes if s <= GOLD_CAP),
+                               "pct_gold_in_V": round(sum(in_v) / len(in_v), 3)}
+        small[r] = {c for c in order[r] if len(gold[(r, c)]) <= GOLD_CAP}
+
+    # raw model soundness + hit; control soundness + hit
+    rep["raw_soundness"], rep["raw_hit"] = {}, {}
+    for slot in SLOTS:
+        rep["raw_soundness"][slot], rep["raw_hit"][slot] = {}, {}
+        for r in RELS:
+            m, lo, hi, n = mean_ci(list(modS.get((slot, r, "neutral"), {}).values()))
+            rep["raw_soundness"][slot][r] = {"mean": m, "ci": [lo, hi], "n": n,
+                                             "empty": missS.get((slot, r, "neutral"), 0)}
+            m2, l2, h2, n2 = mean_ci(list(modH.get((slot, r, "neutral"), {}).values()))
+            rep["raw_hit"][slot][r] = {"mean": m2, "ci": [l2, h2], "n": n2}
+    rep["control_soundness"], rep["control_hit"] = {}, {}
+    for variant in ("frame", "sent"):
+        rep["control_soundness"][variant], rep["control_hit"][variant] = {}, {}
+        for r in RELS:
+            m, lo, hi, n = mean_ci(list(ctrl_S[(r, variant)].values()))
+            rep["control_soundness"][variant][r] = {"mean": m, "ci": [lo, hi], "n": n}
+            m2, l2, h2, n2 = mean_ci(list(ctrl_H[(r, variant)].values()))
+            rep["control_hit"][variant][r] = {"mean": m2, "ci": [l2, h2], "n": n2}
+
+    # residual tables: soundness + hit (full) and size-matched (both scorers, frame)
+    rep["residual_soundness"] = resid_table(modS, ctrl_S, "soundness")
+    rep["residual_hit"] = resid_table(modH, ctrl_H, "hit")
+    rep["residual_soundness_sizematched"] = resid_table(
+        modS, ctrl_S, "soundness", keep_by_rel=small)["frame"]
+    rep["residual_hit_sizematched"] = resid_table(
+        modH, ctrl_H, "hit", keep_by_rel=small)["frame"]
+
+    # frame-ablation (antonymy): 𝒮(frame) − 𝒮(neutral), + hit
+    rep["frame_ablation"] = {}
+    for slot in SLOTS:
+        for label, md in (("soundness", modS), ("hit", modH)):
+            nd = md.get((slot, "antonymy", "neutral"), {})
+            fd = md.get((slot, "antonymy", "frame"), {})
+            diffs = [fd[c] - nd[c] for c in nd if c in fd and nd[c] is not None and fd[c] is not None]
+            if diffs:
+                m = sum(diffs) / len(diffs)
+                rng = random.Random(BOOT_SEED)
+                n = len(diffs)
+                bs = sorted(sum(diffs[rng.randrange(n)] for _ in range(n)) / n for _ in range(B_BOOT))
+                rep["frame_ablation"].setdefault(slot, {})[label] = {
+                    "mean_delta": round(m, 4), "ci": [round(bs[int(0.025*B_BOOT)], 4),
+                                                      round(bs[int(0.975*B_BOOT)], 4)], "n": n,
+                    "neutral": round(sum(v for v in nd.values() if v is not None)/max(1, sum(1 for v in nd.values() if v is not None)), 4),
+                    "frame": round(sum(v for v in fd.values() if v is not None)/max(1, sum(1 for v in fd.values() if v is not None)), 4)}
+
+    # clause-2: raw ranking vs corpus cue-strength (control 𝒮), reported for BOTH controls
+    rep["clause2"] = {}
+    for cvar in ("frame", "sent"):
+        cue_strength = [rep["control_soundness"][cvar][r]["mean"] or 0.0 for r in RELS]
+        top_cs = RELS[max(range(6), key=lambda i: cue_strength[i])]
+        per = {}
+        for slot in SLOTS:
+            raw = [rep["raw_soundness"][slot][r]["mean"] or 0.0 for r in RELS]
+            per[slot] = {"rho": round(spearman(raw, cue_strength), 3),
+                         "antonymy_top_raw": RELS[max(range(6), key=lambda i: raw[i])] == "antonymy"}
+        rep["clause2"][cvar] = {"cue_strength_top": top_cs, "per_model": per,
+                                "antonymy_top_cue_strength": top_cs == "antonymy"}
+
+    # ------- headline verdict over views (frozen logic) -------
+    def visibly_larger(view, slot):
+        """antonymy residual CI-separated-below meronymy AND/OR hyponymy for this model."""
+        a = view[slot]["antonymy"]
         if a["mean"] is None:
             return False
-        overlaps = 0
-        for r in RELS:
-            if r == "antonymy":
+        for r in ("meronymy", "hyponymy"):
+            o = view[slot][r]
+            if o["mean"] is not None and a["ci"][1] < o["ci"][0]:
+                return True
+        return False
+
+    def flat_count(view):
+        c = 0
+        for slot in SLOTS:
+            a = view[slot]["antonymy"]
+            if a["mean"] is None:
                 continue
-            o = res[r]
-            if o["mean"] is None:
-                continue
-            # CI overlap
-            if not (a["ci"][1] < o["ci"][0] or o["ci"][1] < a["ci"][0]):
-                overlaps += 1
-        return overlaps == 5  # antonymy indistinguishable from all others
+            ov = sum(1 for r in RELS if r != "antonymy" and view[slot][r]["mean"] is not None
+                     and not (a["ci"][1] < view[slot][r]["ci"][0] or view[slot][r]["ci"][1] < a["ci"][0]))
+            if ov == 5:
+                c += 1
+        return c
 
-    for variant in ("frame", "sent"):
-        sm = {slot: smallest(slot, variant) for slot in SLOTS}
-        n_ant_smallest = sum(1 for s in SLOTS if sm[s] == "antonymy")
-        n_flat = sum(1 for s in SLOTS if flat(s, variant))
-        n_inverted = sum(1 for s in SLOTS if sm[s] in ("meronymy", "holonymy"))
-        if n_ant_smallest >= 2:
-            v = "CONFIRMS"
-        elif n_flat >= 2:
-            v = "SHADOW-SATURATED-FLAT"
-        elif n_inverted >= 2:
-            v = "INVERTED"
-        else:
-            v = "MIXED/NO-MAJORITY"
-        report["verdict"][variant] = {"smallest_per_model": sm,
-                                      "antonymy_smallest_count": n_ant_smallest,
-                                      "flat_count": n_flat, "inverted_count": n_inverted,
-                                      "verdict": v}
+    # measured weakly-cued relations = bottom-2 by frame cue-strength (SHOULD-FIX 5)
+    cs_frame = [(r, rep["control_soundness"]["frame"][r]["mean"] or 0.0) for r in RELS]
+    weak = {r for r, _ in sorted(cs_frame, key=lambda x: x[1])[:2]}
+    rep["weakly_cued_relations"] = sorted(weak)
 
-    json.dump(report, open(HERE / "results.json", "w"), indent=1)
+    views = {
+        "soundness_frame": rep["residual_soundness"]["frame"],
+        "soundness_sent": rep["residual_soundness"]["sent"],
+        "soundness_sizematched": rep["residual_soundness_sizematched"],
+        "hit_frame": rep["residual_hit"]["frame"],
+        "hit_sent": rep["residual_hit"]["sent"],
+        "hit_sizematched": rep["residual_hit_sizematched"],
+    }
+    ant_counts = {k: ant_smallest_count(v) for k, v in views.items()}
+    smalls = {k: smallest_per_model(v) for k, v in views.items()}
+    vlarge = {k: sum(1 for s in SLOTS if visibly_larger(v, s)) for k, v in views.items()}
+    inverted = {k: sum(1 for s in SLOTS if smalls[k][s] in weak) for k, v in views.items()}
 
-    # human-readable
-    print("=" * 70)
-    print("PRIMARY residual (frame-G²): 𝒮(model,neutral) − 𝒮(control,frame)")
+    # calibration: does residual just reproduce raw ranking? (frame, soundness)
+    calib = {}
     for slot in SLOTS:
-        print(f"\n model {slot}:")
-        res = report["residual"]["frame"][slot]
-        for r in RELS:
-            o = res[r]
-            if o["mean"] is not None:
-                print(f"   {r:12s} resid={o['mean']:+.3f} [{o['ci'][0]:+.3f},{o['ci'][1]:+.3f}] "
-                      f"(raw 𝒮={report['raw_soundness'][slot][r]['mean']:.3f}, "
-                      f"ctrl 𝒮={report['control_soundness']['frame'][r]['mean']:.3f})")
-        print(f"   smallest residual: {report['verdict']['frame']['smallest_per_model'][slot]}")
-    print("\nVERDICT (frame, primary):", report["verdict"]["frame"]["verdict"],
-          report["verdict"]["frame"])
-    print("VERDICT (sent, sensitivity):", report["verdict"]["sent"]["verdict"])
-    print("\nClause-2 (raw ranking vs corpus cue-strength):")
+        raw = [rep["raw_soundness"][slot][r]["mean"] or 0.0 for r in RELS]
+        resid = [rep["residual_soundness"]["frame"][slot][r]["mean"] or 0.0 for r in RELS]
+        calib[slot] = round(spearman(raw, resid), 3)
+    mean_ctrl_S = sum(rep["control_soundness"]["frame"][r]["mean"] or 0 for r in RELS) / 6
+
+    frame_views = ["soundness_frame", "hit_frame", "soundness_sizematched", "hit_sizematched"]
+    sent_views = ["soundness_sent", "hit_sent"]
+    robust_frame = all(ant_counts[v] >= 2 for v in frame_views)
+    robust_sent = all(ant_counts[v] >= 2 for v in sent_views)
+    if robust_frame and robust_sent:
+        headline = "CONFIRMS-ROBUST"
+    elif robust_frame:
+        headline = "CONFIRMS-FRAME-SPECIFIC"
+    elif flat_count(rep["residual_hit"]["frame"]) >= 2:
+        headline = "SHADOW-SATURATED-FLAT"
+    elif inverted["hit_frame"] >= 2:
+        headline = "INVERTED"
+    else:
+        headline = "MIXED/NO-MAJORITY"
+
+    rep["headline"] = {
+        "verdict": headline,
+        "antonymy_smallest_counts": ant_counts,
+        "smallest_per_model": smalls,
+        "visibly_larger_counts": vlarge,
+        "inverted_counts": inverted,
+        "flat_count_hit_frame": flat_count(rep["residual_hit"]["frame"]),
+        "calibration_spearman_resid_vs_raw": calib,
+        "mean_control_soundness_frame": round(mean_ctrl_S, 4),
+        "note": ("CONFIRMS requires antonymy-smallest on >=2/3 under all 4 frame views "
+                 "(soundness+hit, full+sizematched); ROBUST adds both sent views. If calibration "
+                 "Spearman ~1 and mean control soundness negligible, the residual arm is "
+                 "descriptive-only and weight shifts to clause-2 + frame-ablation (PREREG gate).")}
+
+    json.dump(rep, open(HERE / "results.json", "w"), indent=1)
+    _print(rep, views, ant_counts, smalls)
+
+
+def _print(rep, views, ant_counts, smalls):
+    print("=" * 74)
+    print("HEADLINE:", rep["headline"]["verdict"])
+    print("antonymy-smallest counts (/3) per view:", ant_counts)
+    print("smallest-residual per model per view:")
+    for k in views:
+        print(f"   {k:26s} {smalls[k]}")
+    print("calibration Spearman(resid,raw) per model:", rep["headline"]["calibration_spearman_resid_vs_raw"])
+    print("mean control soundness (frame):", rep["headline"]["mean_control_soundness_frame"])
+    print("\nPRIMARY residual — HIT@3, frame control  (𝒮hit(model)−𝒮hit(control)):")
     for slot in SLOTS:
-        c = report["clause2_spearman"][slot]
-        print(f"   {slot}: rho={c['rho']:+.3f} antonymy_top_raw={c['antonymy_top_raw']}")
-    print("   antonymy top of cue-strength:", report["clause2_spearman"]["antonymy_top_cue_strength"])
-    print("\nFrame-ablation (antonymy 𝒮frame − 𝒮neutral):")
+        v = rep["residual_hit"]["frame"][slot]
+        print(f"  {slot}: " + "  ".join(
+            f"{r[:4]}={v[r]['mean']:+.2f}[{v[r]['ci'][0]:+.2f},{v[r]['ci'][1]:+.2f}]"
+            for r in RELS if v[r]["mean"] is not None))
+    print("\nSoundness residual, frame control:")
     for slot in SLOTS:
-        fa = report["frame_ablation"].get(slot)
+        v = rep["residual_soundness"]["frame"][slot]
+        print(f"  {slot}: " + "  ".join(f"{r[:4]}={v[r]['mean']:+.2f}" for r in RELS if v[r]["mean"] is not None))
+    print("\nRaw recovery (soundness) + control cue-strength per relation:")
+    for r in RELS:
+        cs = rep["control_soundness"]["frame"][r]["mean"]
+        raws = [rep["raw_soundness"][s][r]["mean"] for s in SLOTS]
+        print(f"   {r:12s} raw 𝒮 A/B/C={['%.2f'%x if x is not None else 'NA' for x in raws]}  "
+              f"ctrl-frame 𝒮={cs:.3f}")
+    print("\nClause-2:", {k: rep["clause2"][k]["antonymy_top_cue_strength"] for k in rep["clause2"]},
+          "| per-model rho (frame):", {s: rep["clause2"]["frame"]["per_model"][s]["rho"] for s in SLOTS})
+    print("Frame-ablation (antonymy):")
+    for slot in SLOTS:
+        fa = rep["frame_ablation"].get(slot, {})
         if fa:
-            print(f"   {slot}: Δ={fa['mean_delta']:+.3f} [{fa['ci'][0]:+.3f},{fa['ci'][1]:+.3f}] "
-                  f"(neutral {fa['s_neutral']:.3f} → frame {fa['s_frame']:.3f})")
+            s = fa.get("soundness", {}); h = fa.get("hit", {})
+            print(f"   {slot}: 𝒮 {s.get('neutral')}→{s.get('frame')} (Δ{s.get('mean_delta'):+}) | "
+                  f"hit {h.get('neutral')}→{h.get('frame')} (Δ{h.get('mean_delta'):+})")
+    print("\nGold sizes / %gold-in-V:")
+    for r in RELS:
+        g = rep["gold_size"][r]
+        print(f"   {r:12s} mean={g['mean']:5.1f} median={g['median']:3d} max={g['max']:3d} "
+              f"|gold|<={GOLD_CAP}:{g['n_le_cap']:3d}  %gold-in-V={g['pct_gold_in_V']}")
+    print("weakly-cued (bottom-2 cue-strength):", rep["weakly_cued_relations"])
     print("\nresults.json written.")
 
 

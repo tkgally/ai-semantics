@@ -98,11 +98,16 @@ def relata(lem, syn, rel, freq):
             if l.name() != lem.name():
                 out.add(l.name().replace("_", " ").lower())
     elif rel == "hypernymy":
-        for s in syn.hypernyms():
+        # transitive closure (depth<=4): the prompt invites ANY more-general category the
+        # cue is a kind of, so a valid multi-hop ancestor (admiration->feeling->emotion) is
+        # a correct relatum, not a miss. Direct-only would unevenly under-credit the chain
+        # relations vs the inherently one-hop antonymy/synonymy. Fix found via pre-run smoke
+        # test (s186), before any scored model data — a yardstick fix, not result-tuning.
+        for s in syn.closure(lambda x: x.hypernyms(), depth=4):
             for l in s.lemmas():
                 out.add(l.name().replace("_", " ").lower())
     elif rel == "hyponymy":
-        for s in syn.hyponyms():
+        for s in syn.closure(lambda x: x.hyponyms(), depth=4):   # transitive closure, depth<=4
             for l in s.lemmas():
                 out.add(l.name().replace("_", " ").lower())
     elif rel == "holonymy":
