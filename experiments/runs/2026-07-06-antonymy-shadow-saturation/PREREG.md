@@ -166,6 +166,32 @@ control by as much as its other-relation production does, i.e. the model's anton
 not "saturated" by a top-3 contrastive-frame control. Clause-2 (corpus cue-strength) and the
 frame-ablation arm are informative under any primary verdict, and are reported regardless.
 
+## Locked thresholds (round-2 pre-run conditions — fixed BEFORE any model call)
+
+The round-2 non-Anthropic vote (GO-WITH-CONDITIONS) asked that every rule be locked exactly now,
+not chosen after seeing results. Locked:
+
+1. **Two co-primaries combined by conjunction, no cherry-pick.** The headline is a *conjunction*
+   across views — CONFIRMS requires antonymy-smallest on ≥2/3 models under **all four** frame views
+   (soundness × {full, size-matched} AND hit × {full, size-matched}). Neither scorer alone, and
+   neither cue-subset alone, can produce a CONFIRMS. Both scorers' full tables are reported.
+2. **Size-match rule locked.** Subset = cues with |gold| ≤ 5 by the frozen `items.json` gold (no
+   re-binning, no post-hoc cap change). Residual bootstrapped over the retained per-relation cues;
+   per-relation retained n is **reported** and is: antonymy 130, meronymy 104, holonymy 115,
+   synonymy 114, hyponymy 59, **hypernymy 32** (hypernymy's size-matched arm is lower-powered —
+   flagged, read as ranking not coefficient).
+3. **INVERTED set predeclared from the FROZEN frame cue-strength ranking** (mean 𝒮(control,frame),
+   computed from the frozen control with no model involvement): antonymy 0.0769 > meronymy 0.0282 >
+   holonymy 0.0256 > hypernymy 0.0231 > synonymy 0.0103 ≳ hyponymy 0.0103. **Bottom-2 =
+   {synonymy, hyponymy}** = the INVERTED set (tie policy: bottom-2 by these frozen values; the two
+   are within 0.0001 and are jointly the pair regardless of tie-break).
+4. **Calibration gate as a hard rule.** The residual arm is reported **descriptive-only** iff
+   **mean 𝒮(control,frame) < 0.05 AND median-over-models Spearman(residual-ranking, raw-ranking)
+   ≥ 0.90** — i.e. the control explains almost nothing and the residual just reproduces raw
+   recovery. (Pre-run mean 𝒮(control,frame) = 0.028 already < 0.05, so this gate will very likely
+   fire on the Spearman condition; the honest consequence — weight to clause-2 + frame-ablation — is
+   accepted in advance.)
+
 ## Spend
 
 Pre-flight: 6×130 neutral + 130 antonymy-frame, ×3 models ≈ **2,730 calls**, short outputs →

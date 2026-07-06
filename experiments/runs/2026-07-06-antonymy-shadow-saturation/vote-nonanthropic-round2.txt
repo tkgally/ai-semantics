@@ -1,0 +1,9 @@
+VERDICT: GO-WITH-CONDITIONS
+
+- SHOULD-FIX: The hit@3 co-primary helps with gold-size bias, but it does not fully replace precision. Keep Soundness as the main efficacy metric and predefine how to combine/report the two co-primaries to avoid post hoc cherry-picking.
+- SHOULD-FIX: The size-matched view improves comparability, but the matching rule needs to be fully locked now: exact binning/matching algorithm, what happens when a cue drops out, and whether model-wise denominators stay identical across relations.
+- NIT: The sentence-level G2 control is a meaningful correction and does reduce the antonymy-favoring asymmetry. The scoped “CONFIRMS-FRAME-SPECIFIC” fallback is appropriately conservative.
+- SHOULD-FIX: The “inverted” criterion is now better, but “bottom-2 by corpus cue-strength” should be fixed before seeing results, with the full ranking and tie policy predeclared to prevent re-labelling after the fact.
+- SHOULD-FIX: The calibration gate is good, but the descriptive-only fallback must be written as a hard decision rule in advance, including what counts as “Spearman ~1” and “negligible” control soundness.
+
+[billed $0.001720; openai/gpt-5.4-mini]

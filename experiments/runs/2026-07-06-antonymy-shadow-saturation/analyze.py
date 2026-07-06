@@ -293,7 +293,9 @@ def main():
 
     frame_views = ["soundness_frame", "hit_frame", "soundness_sizematched", "hit_sizematched"]
     sent_views = ["soundness_sent", "hit_sent"]
-    robust_frame = all(ant_counts[v] >= 2 for v in frame_views)
+    # round-2 critic condition 1: CONFIRMS requires antonymy-smallest AND meronymy/hyponymy
+    # CI-separated-larger (visibly_larger) on >=2/3, per frame view — not a bare argmin.
+    robust_frame = all(ant_counts[v] >= 2 and vlarge[v] >= 2 for v in frame_views)
     robust_sent = all(ant_counts[v] >= 2 for v in sent_views)
     if robust_frame and robust_sent:
         headline = "CONFIRMS-ROBUST"
@@ -306,8 +308,15 @@ def main():
     else:
         headline = "MIXED/NO-MAJORITY"
 
+    # locked calibration gate: descriptive-only iff control explains ~nothing AND residual
+    # merely reproduces raw recovery (PREREG: mean 𝒮(control,frame)<0.05 AND median Spearman>=0.90)
+    calib_median = sorted(calib.values())[len(calib) // 2] if calib else 0.0
+    descriptive_only = (mean_ctrl_S < 0.05) and (calib_median >= 0.90)
+
     rep["headline"] = {
         "verdict": headline,
+        "residual_descriptive_only": descriptive_only,
+        "calibration_median_spearman": calib_median,
         "antonymy_smallest_counts": ant_counts,
         "smallest_per_model": smalls,
         "visibly_larger_counts": vlarge,
