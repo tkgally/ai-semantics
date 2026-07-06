@@ -1,20 +1,20 @@
 ---
-type: result
+type: note
 id: vwsd-grounding-headroom-nlbaseline-regrade-v1
 title: "VWSD NL-baseline magnitude run — re-graded under the ratified VALID (category-match) scorer, and STILL deferred (clean degenerate NO-GO): the held-out two-judge cross-only category-match re-grade of the stored auditor guesses puts the fluent referent-naming channel's strict referent-recovery at 0.438, BELOW the [0.60,0.95] competence floor. So the s128 scorer-validity fix did NOT rescue the channel — a fresh independent critic verified the 0.438 is a VALID rate (HIGH verdicts not rubber-stamped; PARTIAL/NONE not over-strict; inter-judge kappa 0.608), not a scorer artifact, so the s127 'the channel is competent, ~64/70 are faithful recoveries' optimism is not borne out. IMAGE arm STILL not read; prediction 3 ('narrow headroom') STILL untested. No magnitude result. $0.406."
 meaning-senses:
   - grounded.perceptual
   - distributional
   - referential.sense
-status: proposed
+status: recorded
 anchor: internal-contrast-only
 contingent-on:
   - []
 created: 2026-06-28
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
-    target: result/vwsd-grounding-headroom-nlbaseline-audit-v1
+    target: note/vwsd-grounding-headroom-nlbaseline-audit-v1
   - rel: depends-on
     target: conjecture/distributional-saturation-grounding-headroom
   - rel: depends-on
@@ -29,8 +29,10 @@ links:
 
 # Result: the VWSD NL-baseline magnitude run, re-graded under the ratified valid scorer, is STILL deferred — a clean degenerate NO-GO, not a scorer artifact this time
 
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A re-grade of the already-stored auditor guesses that is STILL deferred (clean degenerate NO-GO); no magnitude was read — a re-analysis/deferral record, not a new measurement. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
+
 > **Status: proposed (2026-06-28, session 128).** The follow-through on
-> [`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](vwsd-grounding-headroom-nlbaseline-audit-v1.md)
+> [`note/vwsd-grounding-headroom-nlbaseline-audit-v1`](vwsd-grounding-headroom-nlbaseline-audit-v1.md)
 > (the s127 build+freeze+deferral). Session 128 cross-session **ratified a valid recovery-scorer**
 > ([`decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity`](../../decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity.md),
 > ADOPT Q-A WITH MODIFICATIONS) and **re-graded the stored auditor guesses** under it. The re-graded
@@ -43,7 +45,7 @@ links:
 
 ## What this is (and why it stopped here, again)
 
-[`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](vwsd-grounding-headroom-nlbaseline-audit-v1.md)
+[`note/vwsd-grounding-headroom-nlbaseline-audit-v1`](vwsd-grounding-headroom-nlbaseline-audit-v1.md)
 deferred the s127 magnitude run because the held-out adequacy audit read OUT OF BAND under the ratified
 **deterministic literal-target-word-lemma** scorer (two-auditor mean high-recovery **0.342** < the floor
 0.60). An independent s127 critic diagnosed that as a **scorer-validity artifact** (VWSD target words are

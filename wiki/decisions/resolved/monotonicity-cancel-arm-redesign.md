@@ -9,7 +9,7 @@ opened: 2026-06-28
 opened-by: autonomous (session 135, on the B2 NO-GO building the ratified battery)
 contingent-artifacts:
   - conjecture/constructional-monotonicity-asymmetry
-  - result/monotonicity-generalization-b2-nogo-v1
+  - note/monotonicity-generalization-b2-nogo-v1
 ---
 
 > **Status: RESOLVED 2026-06-28 (session 136) — ADOPT C1 (conditional) with C2 fallback and a
@@ -34,7 +34,7 @@ indicator affirm-"happened only once". MOD-3 flagged that default as *contestabl
 prescribed the failure path: **a B2 NO-GO re-pairs the cancel coercion before any spend**.
 
 Session 135 built and froze the battery and ran the B2 gate. The gate is a **NO-GO**
-([`result/monotonicity-generalization-b2-nogo-v1`](../../findings/results/monotonicity-generalization-b2-nogo-v1.md)):
+([`note/monotonicity-generalization-b2-nogo-v1`](../../findings/notes/monotonicity-generalization-b2-nogo-v1.md)):
 the add arm passes cleanly (construction 1.00 / control 0.00, 3/3 models), but the cancel
 **default** affirm ("only once") is **0.00 in 3/3 models under both NLI and forced-choice** —
 uniform NLI label 1 (neutral). The failure is **structural, not verb-selection**:
@@ -136,7 +136,7 @@ Per [`PROTOCOL.md`](../../../PROTOCOL.md) §2, an **independent fresh-agent adve
 the s135 session that opened this decision, and not this session's essay-writing units) read this
 decision in full, its options, the provisional default, the two downstream contingent artifacts
 ([`conjecture/constructional-monotonicity-asymmetry`](../../findings/conjectures/constructional-monotonicity-asymmetry.md),
-[`result/monotonicity-generalization-b2-nogo-v1`](../../findings/results/monotonicity-generalization-b2-nogo-v1.md)),
+[`note/monotonicity-generalization-b2-nogo-v1`](../../findings/notes/monotonicity-generalization-b2-nogo-v1.md)),
 the parent ratified yardstick, the cc-v2 paradigm, the s133 add-arm headroom calibration, and the
 frozen battery, and returned **ADOPT C1 (telic-completion) CONDITIONAL on its own B2 calibration**,
 with **C2 (privative) as the pre-authorized fallback** and a **principled-limit closure** only if both

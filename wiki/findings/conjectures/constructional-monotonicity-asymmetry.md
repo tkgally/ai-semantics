@@ -54,14 +54,14 @@ links:
 > (ADOPT-WITH-MODS, autonomous adversarial review) freezes the pair (**ADD = resultative** vs
 > **CANCEL = the *for*-durative aspectual coercion**, a genuinely new pair), the B2 ceiling gate,
 > and the frozen reading thresholds (20 pp asymmetry margin; ≥10 pp instrument-fragility margin);
-> prerequisite-(1) headroom feasibility was discharged s133 ([`result/addarm-headroom-calibration-v1`](../results/addarm-headroom-calibration-v1.md)).
+> prerequisite-(1) headroom feasibility was discharged s133 ([`note/addarm-headroom-calibration-v1`](../notes/addarm-headroom-calibration-v1.md)).
 > This fixes *how* the bet will be tested — it does **not** test it. The conjecture advances to
 > `tested` only after the spend-bearing battery runs and is read by the frozen rule, with the
 > falsify arms (symmetric, or reversal) live.
 
 > **Decisive test BUILT; cancel arm hit a B2 NO-GO (2026-06-28, session 135) — conjecture
 > stays `proposed`, asymmetry NOT read.** The battery was built, frozen, and its B2 ceiling
-> gate run ([`result/monotonicity-generalization-b2-nogo-v1`](../results/monotonicity-generalization-b2-nogo-v1.md)):
+> gate run ([`note/monotonicity-generalization-b2-nogo-v1`](../notes/monotonicity-generalization-b2-nogo-v1.md)):
 > the **add arm is buildable at ceiling** (resultative construction 1.00 / control 0.00, 3/3
 > models), but the ratified **cancel arm fails the gate structurally** — its "only once"
 > default is affirmed at **0.00 in 3/3 models** under both instruments, because
@@ -94,7 +94,7 @@ links:
 > **STEP 1 (C1 telic-completion) is a B2 NO-GO (2026-06-28, session 137) — conjecture still
 > `proposed`; routing to C2 with the M2 scope amendment below.** Following the decision's frozen
 > STEP 1, this session froze + ran the completion-default B2 calibration *first*
-> ([`result/monotonicity-c1-completion-calibration-v1`](../results/monotonicity-c1-completion-calibration-v1.md)):
+> ([`note/monotonicity-c1-completion-calibration-v1`](../notes/monotonicity-c1-completion-calibration-v1.md)):
 > the completion entailment of a simple-past accomplishment ("built the house" → "finished building
 > the house") is affirmed at only **0.25 / 0.375 / 0.75** (claude / gpt-mini / gemini) under strict
 > NLI — **0/3 models at the ≥ 0.80 ceiling**. Even completion — a far stronger default than the s135
@@ -124,7 +124,7 @@ links:
 
 > **STEP 1b (C2 privative) is a B2 GO (2026-06-28, session 137) — conjecture still
 > `proposed`; STEP 2 now unblocked.** The privative category-default calibration
-> ([`result/monotonicity-c2-privative-calibration-v1`](../results/monotonicity-c2-privative-calibration-v1.md))
+> ([`note/monotonicity-c2-privative-calibration-v1`](../notes/monotonicity-c2-privative-calibration-v1.md))
 > is a clean **GO**: bare-head-noun category membership ("a gun" → "a weapon") is affirmed at
 > **1.00 in 3/3 models** under strict NLI (every one of 24 NLI defaults = entailment) — sharply
 > unlike the s135 "only once" (0.00) and the C1 completion default (0.25 / 0.375 / 0.75). So

@@ -1,16 +1,16 @@
 ---
-type: result
+type: note
 id: function-word-swap-build-v1
 title: Function-word swap probe — build v1 is a NO-GO; faithful frequency+length matching starves the matched set to ~66 clean items (well below the ≥200 target), and the the→a determiner swap admits no frequency-matched content control at all
 meaning-senses:
   - constructional
   - distributional
   - inferential
-status: proposed
+status: recorded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-21
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: resource/subtlex-us-frequency
@@ -23,6 +23,8 @@ links:
 ---
 
 # Function-word swap probe — build v1: a certified NO-GO (matching starves the set)
+
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A BUILD / feasibility result; no model was called ($0) — it records a matching-vs-power NO-GO, not a finding about LLM behavior. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
 
 > **This is a BUILD / feasibility result, not a model result. No model was called ($0).** It
 > records what the build session learned trying to construct the frozen, certified
@@ -46,7 +48,7 @@ links:
 > fixable in build-v2 and are now binding conditions of the resolved decision.
 
 > **Update (2026-07-05, session 183 — wiki-coherence pass).** The widened build-v2 ran the same day
-> (2026-06-21): [`result/function-word-swap-run-v2`](function-word-swap-run-v2.md) reached 206
+> (2026-06-21): [`result/function-word-swap-run-v2`](../results/function-word-swap-run-v2.md) reached 206
 > certified matched items (inventory-widening per the resolved decision, certification `"ok": true`
 > before any model output) and returned **CONFIRM 3/3** — function-word swaps flip NLI far more than
 > frequency+length-matched content-word swaps. The conjecture

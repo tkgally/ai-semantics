@@ -61,13 +61,13 @@ links:
   - rel: depends-on
     target: result/vwsd-grounding-headroom-v2
   - rel: depends-on
-    target: result/vwsd-grounding-headroom-nlbaseline-regrade-v1
+    target: note/vwsd-grounding-headroom-nlbaseline-regrade-v1
   - rel: depends-on
     target: result/multimodal-grounding-image-v1
   - rel: depends-on
     target: result/lexical-bridging-context-v1
   - rel: depends-on
-    target: result/cross-axis-lexical-constructional-ordering-v1
+    target: note/cross-axis-lexical-constructional-ordering-v1
   - rel: depends-on
     target: essay/concordant-verdict-hides-spread
   - rel: depends-on
@@ -224,7 +224,7 @@ states it with full caveats):
   the image rescues cells where a de-referented descriptor under-determined the sense, 3/3 in
   direction, distraction-controlled), but the headroom **magnitude** is untested and its
   competence-audited fluent-channel route on VWSD is now **blocked** (a 0.438 NO-GO,
-  [`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+  [`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
   The cell is *not* flipped to positive.
 - **Relational — negative on constitution, but order-sensitive-but-thin where order disambiguates.**
   Homogeneous LLM dyads coordinate and reuse a coined convention, but the convention is recovered
@@ -237,7 +237,7 @@ states it with full caveats):
 - **Cross-axis — the competences dissociate.** Lexical and grammatical skill transfer as *failure*
   (the weakest lexical tracker is the most fragile grammatically) but not as *strength*, and the
   same-instrument coercion bridge inverts the lexical order
-  ([`result/cross-axis-lexical-constructional-ordering-v1`](../results/cross-axis-lexical-constructional-ordering-v1.md);
+  ([`note/cross-axis-lexical-constructional-ordering-v1`](../notes/cross-axis-lexical-constructional-ordering-v1.md);
   n=3 models — orderings, not a coefficient).
 
 ## The map: the questions the classical positions answer
@@ -391,7 +391,7 @@ image rescues the cells where a de-referented descriptor under-determined the se
 prediction 1. But the headroom **magnitude** is inflated by the deliberately de-referented descriptor
 channel and stays untested; the owed fluent natural-language baseline ran and returned a **0.438
 strict referent-recovery NO-GO, below the [0.60, 0.95] competence floor**
-([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)),
+([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)),
 so the competence-audited fluent-channel route to the magnitude is **blocked on VWSD** — only a
 *different* magnitude instrument (a graded-image / fine-polysemy resource) could move it. The cell is
 therefore **"two nulls + v1-inconclusive + a first confirming-direction gating-shape result,

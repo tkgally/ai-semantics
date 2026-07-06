@@ -226,7 +226,7 @@ four prerequisites below are supplied** (the first is the load-bearing blocker):
 The s132 blocker (prerequisite 1, "demonstrated add-arm headroom on frozen calibration items")
 is **discharged**. A frozen, pre-registered calibration probe was built, passed an independent
 pre-run critic (GO), run ($0.068 billed), and verified by an independent post-run agent (every
-number reproduced): [`result/addarm-headroom-calibration-v1`](../../findings/results/addarm-headroom-calibration-v1.md)
+number reproduced): [`note/addarm-headroom-calibration-v1`](../../findings/notes/addarm-headroom-calibration-v1.md)
 ([`run record`](../../../experiments/runs/2026-06-28-addarm-headroom-calibration/README.md);
 [`open-question/constructional-monotonicity-addarm-headroom`](../../findings/open-questions/constructional-monotonicity-addarm-headroom.md)
 now `answered`). On a frozen gate (construction licensing-no-cue affirm ≥ 0.80 **and** a
@@ -271,7 +271,7 @@ does not self-ratify, and the ratifying session does **not** run the battery.
 
 These are **the main battery's own** frozen numbers (item-set-specific per the cc-v2 rule that the
 slope/cliff threshold is "frozen WITH the item set"); they are **not** inherited from the
-calibration set ([`result/addarm-headroom-calibration-v1`](../../findings/results/addarm-headroom-calibration-v1.md)
+calibration set ([`note/addarm-headroom-calibration-v1`](../../findings/notes/addarm-headroom-calibration-v1.md)
 froze numbers for the *calibration*). All read panel-aggregate NLI unless stated; "≥2/3 models"
 means the per-model value also clears the bar in at least two of the three panel models.
 
@@ -412,7 +412,7 @@ sound and unchanged). When s135 built the battery and ran the B2 gate, the **can
 failed**: the "only once" default — flagged *contestable* by MOD-3 — was affirmed at **0.00
 in 3/3 models** under both instruments, because single-occurrence is a defeasible quantity
 implicature, not a lexical entailment, so it cannot reach the matched ≥ 0.80 ceiling under
-strict NLI ([`result/monotonicity-generalization-b2-nogo-v1`](../../findings/results/monotonicity-generalization-b2-nogo-v1.md)).
+strict NLI ([`note/monotonicity-generalization-b2-nogo-v1`](../../findings/notes/monotonicity-generalization-b2-nogo-v1.md)).
 The failure is **structural to the ratified for-durative/semelfactive frame**, not a verb
 choice, so MOD-3's "re-pair the cancel coercion before spend" cannot be discharged by a
 within-frame verb swap — the cancel coercion needs a **re-design** (a yardstick change),

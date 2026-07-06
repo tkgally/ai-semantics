@@ -82,7 +82,7 @@ pre-determined context" (*J. Cognition* 10.5334/joc.194, verified verbatim 2026-
   forced-both gate's Q1-ii requirement. A homonym balanced in **general usage** can still **lean in its
   specific sentence**, because (per the session-91 attempt's structural finding) a co-predication frame's
   in-item balance "is set by the *relative pull of the two complements*"
-  ([`result/forced-both-lexical-build-attempt-v1`](../../findings/results/forced-both-lexical-build-attempt-v1.md)),
+  ([`note/forced-both-lexical-build-attempt-v1`](../../findings/notes/forced-both-lexical-build-attempt-v1.md)),
   which no general-usage statistic sees. So these norms **soften but do not eliminate** the Q1-ii gap;
   they re-supply, with a better anchor, the general-balance proxy that attempt already judged
   insufficient. They are **not** a co-activation resource (use
@@ -113,7 +113,7 @@ restriction (unlike [`resource/semeval2017-pun-corpus`](semeval2017-pun-corpus.m
   from OSF this session — `British eDom norms - Norms File.csv` (OSF node `7k3eh`, file `pmbkm`, 19,219
   bytes) and `RoddGilbert_WA_Dominance_Norms.csv` (OSF node `uy47w`, file `2mduw`, 72,571 bytes; the
   spoken set is **Rodd & Gilbert**, author names now confirmed from the filenames) — and used to compute
-  the [`result/forced-both-lexical-build-attempt-v2`](../../findings/results/forced-both-lexical-build-attempt-v2.md)
+  the [`note/forced-both-lexical-build-attempt-v2`](../../findings/notes/forced-both-lexical-build-attempt-v2.md)
   frozen subset. They were not mirrored in-repo (CC BY 4.0 permits it, but only the *derived* balance
   values are committed, in the design's `frozen_subset.json`).
 - **Cross-norm disagreement noted (session 94).** On the 5 words present in *both* sets within the v2

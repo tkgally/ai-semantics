@@ -1,15 +1,15 @@
 ---
-type: result
+type: note
 id: forced-both-lexical-build-attempt-v1
 title: "Forced-both lexical probe — BUILD ATTEMPT under the resolved gate terminates at certification (trigger (c)): a genuinely-unresolvable lexical item cannot be cleanly certified without human subjects (barred) or model output (forbidden); the layer-specialness vs always-resolvability fork stays at R1. No model run; $0."
 meaning-senses:
   - distributional
   - referential
-status: proposed
+status: recorded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-23
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: essay/layer-specialness-vs-always-resolvability
@@ -22,6 +22,8 @@ links:
 ---
 
 # Result: forced-both lexical probe — build attempt terminates at certification (trigger (c))
+
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A build attempt that terminates at certification (trigger (c)); no model was queried ($0) — a build-feasibility record, not a measurement of any model. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
 
 > **Status: proposed (2026-06-23, session 91).** A **build attempt** for the discriminating test
 > named by [`essay/layer-specialness-vs-always-resolvability`](../essays/layer-specialness-vs-always-resolvability.md),
@@ -40,7 +42,7 @@ links:
 > Q4 sense-co-activation anchor in session 93
 > ([`decisions/resolved/sense-coactivation-anchor-semeval-puns`](../../decisions/resolved/sense-coactivation-anchor-semeval-puns.md)),
 > and the second build attempt
-> [`result/forced-both-lexical-build-attempt-v2`](forced-both-lexical-build-attempt-v2.md)
+> [`note/forced-both-lexical-build-attempt-v2`](forced-both-lexical-build-attempt-v2.md)
 > (2026-06-23, session 94) solved this page's power problem (43 attested balanced-homonym pun
 > items vs the 1/8 here) — but terminated again at certification, closing the
 > dense-balance-resource route with a reason: the transfer-to-item dominance step is not
@@ -94,7 +96,7 @@ is **not** the blocker.
 The gate requires certifying, *independent of model output*, that neither sense **dominates**, because
 a lean **suppresses** `UNCLEAR` and so an under-certified "pun" that is really a leaning homonym
 "would bias toward commit and spuriously support (A)"
-([`result/within-lexical-scalar-vs-disjunctive-v1`](within-lexical-scalar-vs-disjunctive-v1.md),
+([`result/within-lexical-scalar-vs-disjunctive-v1`](../results/within-lexical-scalar-vs-disjunctive-v1.md),
 caveat 2). Two routes to that certification exist, and **both are closed under autonomy**:
 
 1. **An independent human annotator on the constructed sentence.** Closed: the project takes **no

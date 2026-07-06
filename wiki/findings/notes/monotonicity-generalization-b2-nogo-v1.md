@@ -1,20 +1,20 @@
 ---
-type: result
+type: note
 id: monotonicity-generalization-b2-nogo-v1
 title: Monotonicity-generalization battery — B2 ceiling gate NO-GO; the add arm is buildable at ceiling but the ratified for-durative cancel arm is not, because its "only once" default is a defeasible implicature the panel floors under strict NLI
 meaning-senses:
   - constructional
   - inferential
-status: supported
+status: recorded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
   - rel: refines
-    target: result/addarm-headroom-calibration-v1
+    target: note/addarm-headroom-calibration-v1
   - rel: refines
     target: result/conative-cancel-direction-v2
   - rel: depends-on
@@ -22,6 +22,8 @@ links:
 ---
 
 # Result: monotonicity-generalization battery — B2 ceiling-gate NO-GO
+
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A design-feasibility B2 ceiling-gate outcome (NO-GO); the spend-bearing battery was not run — a gate record, no finding about LLM meaning. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
 
 > **Design-feasibility gate outcome, `internal-contrast-only`.** This records the **B2
 > blocking ceiling gate** firing on the matched-difficulty add-vs-cancel battery — the
@@ -33,10 +35,10 @@ links:
 > number: [`experiments/runs/2026-06-28-monotonicity-generalization-battery/`](../../../experiments/runs/2026-06-28-monotonicity-generalization-battery/README.md).
 
 > **Update (2026-07-05, session 183 — wiki-coherence pass).** The awaited cancel arms landed the
-> same UTC day: [`result/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md)
+> same UTC day: [`note/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md)
 > (session 137, B2 GO — category default 1.00 in 3/3),
-> [`result/monotonicity-c2-battery-v1`](monotonicity-c2-battery-v1.md) (session 137, WEAK CONFIRM
-> across the M2 domain mismatch), and [`result/monotonicity-within-verbal-battery-v1`](monotonicity-within-verbal-battery-v1.md)
+> [`result/monotonicity-c2-battery-v1`](../results/monotonicity-c2-battery-v1.md) (session 137, WEAK CONFIRM
+> across the M2 domain mismatch), and [`result/monotonicity-within-verbal-battery-v1`](../results/monotonicity-within-verbal-battery-v1.md)
 > (session 141, within-verbal CONFIRM — asymmetry ≥ 0.20 in 3/3 models, M2 discharged).
 > [`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md)
 > is now `tested`. *(Back-annotation added by a maintenance pass; nothing measured or decided on
@@ -94,7 +96,7 @@ instruments here):
 
 - **ADD passes cleanly:** the resultative licenses the result-state entailment at ceiling
   ("hammered the metal flat" ⊨ "the metal became flat"), the bare control does not
-  ("hammered the metal" ⊭ it) — re-confirming [`result/addarm-headroom-calibration-v1`](addarm-headroom-calibration-v1.md)
+  ("hammered the metal" ⊭ it) — re-confirming [`note/addarm-headroom-calibration-v1`](addarm-headroom-calibration-v1.md)
   on the frozen main items, in 3/3 models on both instruments.
 - **CANCEL fails at floor:** every cancel `default` item (flash, jump, cough, nod), in all
   three models, returned NLI label **1 (neutral)** — never **0 (entailment)** — so affirm =
@@ -109,7 +111,7 @@ failures, NO-GO confirmed.
 
 ## Why this is structural, not a bad verb pool
 
-The matched conflicting-cue paradigm ([`result/conative-cancel-direction-v2`](conative-cancel-direction-v2.md))
+The matched conflicting-cue paradigm ([`result/conative-cancel-direction-v2`](../results/conative-cancel-direction-v2.md))
 requires the cancelled inference to sit **at ceiling on the bare frame**, so that
 suppression has something to suppress. cc-v2's cancel direction worked because the
 transitive's contact entailment *is* a near-ceiling lexical entailment ("kicked the ball"
@@ -164,9 +166,9 @@ cancel arm that can reach matched ceiling.
   and independently recomputed from the per-call `raw_calib/*.json` by a read-only post-run
   verifier (exact match; 72/72 priced, 0 parse failures).
 - The matched-ceiling requirement and the cc-v2 contact-entailment ceiling (91.7–100%) are
-  quoted from [`result/conative-cancel-direction-v2`](conative-cancel-direction-v2.md); the
+  quoted from [`result/conative-cancel-direction-v2`](../results/conative-cancel-direction-v2.md); the
   add-arm headroom context (resultative construction 1.000 / control 0.250) from
-  [`result/addarm-headroom-calibration-v1`](addarm-headroom-calibration-v1.md). The
+  [`note/addarm-headroom-calibration-v1`](addarm-headroom-calibration-v1.md). The
   contestable-default failure path is the ratified decision's own MOD-3.
 - Spend: **$0.01720 billed** (UTC 2026-06-28), the calibration probe only; the asymmetry
   battery was not run.

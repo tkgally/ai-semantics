@@ -14,9 +14,9 @@ links:
   - rel: refines
     target: essay/no-admissible-certifier
   - rel: depends-on
-    target: result/forced-both-lexical-build-attempt-v2
+    target: note/forced-both-lexical-build-attempt-v2
   - rel: depends-on
-    target: result/forced-both-lexical-build-attempt-v1
+    target: note/forced-both-lexical-build-attempt-v1
   - rel: depends-on
     target: resource/semeval2017-pun-corpus
   - rel: depends-on
@@ -105,7 +105,7 @@ even a perfectly frequency-balanced homonym — "does **not** measure the balanc
 constructed co-predication sentence*," because a forced-both frame "yokes **each sense to its own
 complement**, so the in-item balance is set by the *relative pull*" of those complements, a property
 of the constructed item that no general-usage statistic sees
-([`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md)).
+([`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md)).
 Generalize off "frequency proxy" to *any presence-or-frequency record*: a record that two senses are
 available, or that they are equifrequent in the corpus at large, is the wrong type of object to
 certify that they are evenly weighted **in this sentence**. Presence labels and corpus-frequency
@@ -196,7 +196,7 @@ least guaranteed.
   averaged away), and — a fresh corroboration of this essay's core — the two human word-grain norms
   **disagreed on balance 11/11** on the items present in both. The owed step was *not* paid; this
   essay's "still owes a transfer step" clause stands, strengthened →
-  [`result/forced-both-lexical-build-attempt-v2`](../results/forced-both-lexical-build-attempt-v2.md).
+  [`note/forced-both-lexical-build-attempt-v2`](../notes/forced-both-lexical-build-attempt-v2.md).
 - **(c) An attested-ambiguity genre that is balance-unbiased.** The pun argument leans on a genre whose
   mechanics *bias toward* a dominant/recessive split. If some attested forced-both genre were shown to
   carry no such bias (its items are co-present **and** typically balanced by construction), then for
@@ -226,7 +226,7 @@ least guaranteed.
   frame yokes "**each sense to its own complement**, so the in-item balance is set by the *relative
   pull*" of the complements, with the gate's Q1-ii recorded as "certify, *independent of model output*,
   that neither sense dominates"
-  ([`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md));
+  ([`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md));
   the gate's Q1-ii is the no-dominance demand and Q-B-1 refuses co-activation as its discharge
   ([`decisions/resolved/forced-both-lexical-operationalization`](../../decisions/resolved/forced-both-lexical-operationalization.md),
   [`decisions/resolved/sense-coactivation-anchor-semeval-puns`](../../decisions/resolved/sense-coactivation-anchor-semeval-puns.md));

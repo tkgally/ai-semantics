@@ -6,9 +6,8 @@ meaning-senses:
   - distributional
   - inferential
 status: draft
-anchor: pending
-contingent-on:
-  - antonymy-internal-contrast-scoring
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-07-06
 updated: 2026-07-06
 links:
@@ -27,13 +26,28 @@ links:
 # Design v1 — lexical-relation shadow-saturation (antonymy internal-contrast)
 
 **A design + decision-trail unit (program A1b). Status: DESIGN, NOT FROZEN (s184, 2026-07-06).**
-Three value-laden gates are **OPEN** and routed to
-[`decisions/open/antonymy-internal-contrast-scoring`](../../wiki/decisions/open/antonymy-internal-contrast-scoring.md):
+Three value-laden gates were routed to
+[`decisions/resolved/antonymy-internal-contrast-scoring`](../../wiki/decisions/resolved/antonymy-internal-contrast-scoring.md):
 **Q1** (what the distributional control *is*), **Q2** (how "recovery" is scored with no human gold),
 **Q3** (the `anchor: internal-contrast-only` declaration). Nothing here is frozen; no `prep.py`
-exists yet; **no probe may run** until the decision ratifies (s185+) and Q1–Q3 are fixed. Per
-[`program.md`](../../wiki/program.md) A1b and `NEXT.md`: **design s184, ratify + run s185.** This
-page operationalizes [`conjecture/lexical-relation-shadow-saturation`](../../wiki/findings/conjectures/lexical-relation-shadow-saturation.md).
+exists yet. This page operationalizes [`conjecture/lexical-relation-shadow-saturation`](../../wiki/findings/conjectures/lexical-relation-shadow-saturation.md).
+
+> **Update (2026-07-06, session 185 — GATES RATIFIED, still not frozen).** The decision
+> [`decisions/resolved/antonymy-internal-contrast-scoring`](../../wiki/decisions/resolved/antonymy-internal-contrast-scoring.md)
+> **ratified ADOPT DEFAULTS** (fresh adversarial reviewer **+** one non-Anthropic decorrelation vote,
+> converging): **Q1-C** (faithful contrastive-frame G² control primary + labelled embedding sensitivity,
+> the run gated on a corpus license scout), **Q2-A** (WordNet-target Soundness hit-rate residual), **Q3
+> `internal-contrast-only`** (now set in front-matter; `contingent-on` cleared). Four freeze-time
+> conditions are recorded on the resolved decision; the load-bearing one is **condition 1 (clause-2
+> granularity):** Cao-2025b ranks only **four** relations (ANT/SYN/HYP/HOL — it collapses hyper/hypo→HYP
+> and holo/mero→HOL), but this probe tests **six**, collapsing exactly the hyponymy and meronymy the
+> design names as the "larger residual" contrast set; at freeze, clause 2 must either have the Q1-A
+> corpus supply a **6-relation** cue-strength ranking (preferred — baseline does double duty) or be
+> restricted to Cao's 4-relation mapping with the collapse reported. Conditions 2–4 (proxy-corpus fence;
+> "contrastive-frame G²" is the project's own synthesis, frozen in `prep.py`; the Q3 gloss covers
+> model-vs-distributional-baseline) are carried into the freeze. **Still DESIGN, NOT FROZEN** — the run
+> owes its corpus license scout, the `prep.py` freeze + PREREG, the pre-run critic + non-Anthropic vote,
+> then the run. Per [`program.md`](../../wiki/program.md) A1b: **design s184, ratified s185, run s185+.**
 
 ---
 
@@ -138,7 +152,7 @@ it is not a graded human judgment.
   k≈3–5, fixed at freeze); the control produces its own ranked *k* candidates (Q1). Both are scored
   against WordNet relatum membership (Q2).
 
-## GATE Q1 — the distributional control (NOT fixed; routed to the decision)
+## GATE Q1 — the distributional control (RATIFIED s185: Q1-C — faithful G² primary + labelled embedding sensitivity, run gated on a corpus license scout)
 
 **The crux the s182/s183 scouts surfaced: there is NO co-occurrence data in-repo.** SubTLEX-US is a
 pure **unigram** frequency norm (no bigram/co-occurrence column), and its underlying 51M-word
@@ -169,7 +183,7 @@ default marked; ratify at s185):
 would answer an easier question than the conjecture asks. The decision surfaces whether the weaker
 control is acceptable as primary, or whether the faithful control's corpus dependency must be paid.
 
-## GATE Q2 — recovery scoring without a human gold (NOT fixed; routed to the decision)
+## GATE Q2 — recovery scoring without a human gold (RATIFIED s185: Q2-A — WordNet-target Soundness hit-rate residual)
 
 How is "recovery" scored when there is no human gold set of correct relata? Options (provisional
 default marked):
@@ -225,7 +239,7 @@ help), which is itself informative.
   pass/fail.
 - **n = 3, orderings not coefficients** (scope cap 4). No pooling across models or POS.
 
-## GATE Q3 — anchor declaration (NOT fixed; needs the internal-contrast-only ratification)
+## GATE Q3 — anchor declaration (RATIFIED s185: internal-contrast-only)
 
 Provisional default: **`anchor: internal-contrast-only`** — a ratified terminal declaration that the
 result makes **no human-comparison claim** (its force is a model-vs-control within-instrument
@@ -261,13 +275,17 @@ pre-flight is re-estimated at freeze once k and N are fixed.
 - **Registers a `predictions.md` row** at freeze (the antonymy-smallest-residual bet), outcome scored
   the run session.
 
-## Handoff (what s185 does)
+## Handoff (what s185 does, and what remains)
 
-1. **Ratify** [`decisions/open/antonymy-internal-contrast-scoring`](../../wiki/decisions/open/antonymy-internal-contrast-scoring.md)
+1. **Ratify** [`decisions/resolved/antonymy-internal-contrast-scoring`](../../wiki/decisions/resolved/antonymy-internal-contrast-scoring.md)
    (fresh reviewer + one non-Anthropic vote): fix Q1 (control), Q2 (scoring), Q3 (anchor).
+   **✅ DONE s185 — ADOPT DEFAULTS (Q1-C / Q2-A / Q3 internal-contrast-only), both reviewers converged.**
 2. If Q1 resolves to A/C: run the **license scout** for a co-occurrence corpus first (own resource
-   page + verified license; never adopt unverified — s168 discipline).
-3. **Freeze:** write `prep.py` (WordNet item build, frequency-matched, outlier-capped), fix k / N /
-   thresholds / verdict map, commit PREREG before any model call; independent pre-run critic + one
-   non-Anthropic vote; `ABORT_USD` set.
-4. **Run** on the panel; post-run verifier recomputes from raw. Powered N per PROTOCOL §4.
+   page + verified license; never adopt unverified — s168 discipline). **Q1 resolved C → scout owed;
+   run s185 (see the [`base/resources/`](../../wiki/base/resources/) scout page + `NEXT.md`).**
+3. **Freeze (remaining):** write `prep.py` (WordNet item build, frequency-matched, outlier-capped),
+   fix k / N / thresholds / verdict map — honoring the four ratified freeze-time conditions, chiefly
+   **condition 1** (clause 2 must resolve Cao's 4-relation vs the probe's 6-relation cue-strength
+   granularity) — commit PREREG before any model call; independent pre-run critic + one non-Anthropic
+   vote; `ABORT_USD` set.
+4. **Run (remaining)** on the panel; post-run verifier recomputes from raw. Powered N per PROTOCOL §4.

@@ -14,7 +14,7 @@ links:
   - rel: refines
     target: essay/ambiguity-kind-not-level
   - rel: depends-on
-    target: result/forced-both-lexical-build-attempt-v1
+    target: note/forced-both-lexical-build-attempt-v1
   - rel: refines
     target: essay/graded-scale-ungraded-commitment
   - rel: depends-on
@@ -53,7 +53,7 @@ links:
 > [`decisions/resolved/forced-both-lexical-operationalization`](../../decisions/resolved/forced-both-lexical-operationalization.md),
 > and the build **terminated at certification**: a genuinely-unresolvable lexical item **cannot be
 > cleanly certified** under autonomy →
-> [`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md).
+> [`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md).
 > Q1-i (the zeugma/co-predication frame) and Q2-i (the forced-single-application instrument) are both
 > buildable, but **Q1-ii — the independent, *not-model-based* balance check — is not satisfiable**:
 > the only routes are a human annotator on the constructed sentence (barred, no human subjects) or
@@ -82,7 +82,7 @@ links:
 > sense). A data-integrity finding reinforced it: across the 11 items present in *both* norm sets, the
 > two human word-grain instruments **disagreed on balance 11/11**. **No model ran; $0.** The fork
 > stays at **R1**; the conceptual contribution is again unchanged; the blocker is now localized to
-> *transfer-to-item* (not power) → [`result/forced-both-lexical-build-attempt-v2`](../results/forced-both-lexical-build-attempt-v2.md).
+> *transfer-to-item* (not power) → [`note/forced-both-lexical-build-attempt-v2`](../notes/forced-both-lexical-build-attempt-v2.md).
 
 ## The occasion
 
@@ -388,14 +388,14 @@ reading is true.
   check) is not satisfiable under no-human-subjects (the only routes are a barred human annotator or
   forbidden model output; SemCor general-usage balance is both too sparse and the wrong measure for a
   constructed sentence). A fresh independent reviewer returned VERDICT-SOUND →
-  [`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md).
+  [`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md).
   The fork stays at R1; no model ran; $0. **FIRED AGAIN 2026-06-23 (session 94), sharper:** a v2
   attempt under the ratified SemEval co-activation anchor + human dominance norms **solved the power
   problem** (43 balanced-homonym pun items) and isolated the **transfer-to-item** blocker, which a
   fresh pre-run critic ruled NO-GO — general-usage balance does not transfer to in-item balance, the
   pun genre directionally installs the lean, a pun is not the "no-reading-to-pick" object, and the two
   human word-grain norms disagreed on balance 11/11 on shared items →
-  [`result/forced-both-lexical-build-attempt-v2`](../results/forced-both-lexical-build-attempt-v2.md).
+  [`note/forced-both-lexical-build-attempt-v2`](../notes/forced-both-lexical-build-attempt-v2.md).
 - **(d) The contrast generalizes to other levels or families.** If "resolvable-by-committing vs
   genuinely-both" turns out to predict commit/decline behavior at *other* levels (it already appears
   to at the relational level — the dual-binding declines), or in some other family the project

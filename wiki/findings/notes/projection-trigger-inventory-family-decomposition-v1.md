@@ -1,15 +1,15 @@
 ---
-type: result
+type: note
 id: projection-trigger-inventory-family-decomposition-v1
 title: "Per-family decomposition of the s160 MIXED verdict: the weaker pooled gap is driven by ONE family (manner adverbs, zero within-model asymmetry in all three models); temporal / only / quantifier all show clean positive gaps panel-wide"
 meaning-senses:
   - inferential
   - distributional
-status: proposed
+status: recorded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-06
 links:
   - rel: refines
     target: result/projection-trigger-inventory-v1
@@ -29,8 +29,10 @@ links:
 
 # Result: per-family decomposition of the s160 projection trigger-inventory MIXED verdict
 
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A pure re-analysis of the already-committed session-160 raw (no new model calls, $0) under the byte-identical scoring path — a $0 re-analysis, not a new measurement. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
+
 A **pure re-analysis** of the already-committed session-160 raw
-([`result/projection-trigger-inventory-v1`](projection-trigger-inventory-v1.md), verdict **MIXED**).
+([`result/projection-trigger-inventory-v1`](../results/projection-trigger-inventory-v1.md), verdict **MIXED**).
 No new model calls, **no spend ($0)**, no probe — this page recomputes the same pre-registered
 metrics (`presup_survival`, `entail_survival`, `projection_gap`) *split by trigger family*, using the
 **byte-identical scoring path** (the `parse_endorse` regex `\b(yes|no|unclear)\b` from

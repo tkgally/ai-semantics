@@ -21,7 +21,7 @@ links:
   - rel: depends-on
     target: concept/distributional-meaning
   - rel: refines
-    target: result/function-word-swap-build-v1
+    target: note/function-word-swap-build-v1
 ---
 
 # Function-word swaps flip NLI far more than matched content-word swaps — CONFIRM 3/3, non-uniformly
@@ -40,7 +40,7 @@ links:
 > unparsed). This is the first **model** result for
 > [`conjecture/function-word-substitutability`](../conjectures/function-word-substitutability.md);
 > it follows the build feasibility result
-> [`result/function-word-swap-build-v1`](function-word-swap-build-v1.md).
+> [`note/function-word-swap-build-v1`](../notes/function-word-swap-build-v1.md).
 
 ## Design (frozen, ratified)
 

@@ -19,11 +19,11 @@ links:
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
   - rel: depends-on
-    target: result/monotonicity-generalization-b2-nogo-v1
+    target: note/monotonicity-generalization-b2-nogo-v1
   - rel: depends-on
-    target: result/monotonicity-c1-completion-calibration-v1
+    target: note/monotonicity-c1-completion-calibration-v1
   - rel: depends-on
-    target: result/monotonicity-c2-privative-calibration-v1
+    target: note/monotonicity-c2-privative-calibration-v1
   - rel: depends-on
     target: result/monotonicity-c2-battery-v1
   - rel: depends-on
@@ -144,7 +144,7 @@ C2-privative result, which tabulates all three):
 | completion ("built the house" → "finished building it"), C1 | aspectual default (defeasible) | 0.25 / 0.375 / 0.75 | no | verbal |
 | category membership ("a gun" → "a weapon"), C2 | taxonomic **lexical entailment** | 1.00 / 1.00 / 1.00 | **yes** | **nominal** |
 
-(Numbers verified verbatim against [`result/monotonicity-c2-privative-calibration-v1`](../results/monotonicity-c2-privative-calibration-v1.md),
+(Numbers verified verbatim against [`note/monotonicity-c2-privative-calibration-v1`](../notes/monotonicity-c2-privative-calibration-v1.md),
 §"The contrast this sharpens"; the `domain` column is this page's own annotation, not part of the source
 table.) Two facts fall out:
 
@@ -154,10 +154,10 @@ table.) Two facts fall out:
    §"What this does and does not license").
 2. **Both *verbal* cancel defaults tried for the generalization floored**, and one structurally: s135 calls
    the single-occurrence floor structural — "no choice of semelfactive verb can lift this default to the
-   ≥ 0.80 ceiling" ([`result/monotonicity-generalization-b2-nogo-v1`](../results/monotonicity-generalization-b2-nogo-v1.md),
+   ≥ 0.80 ceiling" ([`note/monotonicity-generalization-b2-nogo-v1`](../notes/monotonicity-generalization-b2-nogo-v1.md),
    §"Why this is structural, not a bad verb pool") — because single-occurrence is an implicature, not an
    entailment; and C1 completion read as "defeasible-not-categorical … 0/3 models reach the ≥ 0.80
-   ceiling" ([`result/monotonicity-c1-completion-calibration-v1`](../results/monotonicity-c1-completion-calibration-v1.md),
+   ceiling" ([`note/monotonicity-c1-completion-calibration-v1`](../notes/monotonicity-c1-completion-calibration-v1.md),
    §"One-line finding"), even though, by standard event semantics, a quantized simple-past accomplishment
    *does* entail culmination. So a categorically-held **verbal** cancel default is, so far, scarce on this
    panel: the conative's completed-contact (91.7–100%) is the one clear instance, and it is the original

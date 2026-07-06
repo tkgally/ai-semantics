@@ -1,0 +1,30 @@
+{
+ "ts": "2026-07-06T03:50:33Z",
+ "decision": "antonymy-internal-contrast-scoring",
+ "model": "openai/gpt-5.4-mini",
+ "content": "Q1: C  \nQ2: A  \nQ3: ADOPT internal-contrast-only  \nOVERALL: ADOPT-WITH-CHANGES  \nREASONS: Q1: C is the right methodological choice because the primary control should match the conjecture\u2019s target relation class \u2014 contrastive-frame co-occurrence \u2014 and B changes the estimand to generic embedding similarity, which risks making the probe easier to \u201cconfirm\u201d for the wrong reason. The honest block is preferable to silently downgrading the control, and the sensitivity arm with B is useful only as a secondary robustness check, not as the main yardstick. Q2: A is acceptable as a no-human-gold yardstick because WordNet-validity is a definitional target and the residual is explicitly model-minus-control, which fits the internal-contrast design; it is not a measure of human competence, but that is fine here. The main caveat is that hit-rate residuals can miss rank-structure differences and depend on k/calibration, so the pre-freezing of k, caps, and strata is essential. Q3: adopt internal-contrast-only, but only as an anchor on scope, not as a claim that the phenomenon is non-distributional; the design is still coherent if it says \u201cno human comparison\u201d because the comparison is model versus control within an instrument, not model versus humans. The wording must not imply that distributional statistics are irrelevant \u2014 indeed, they are the point of the conjecture \u2014 only that no human gold standard is being used as the evaluation axis.  \nCONDITIONS: 1) If a license-verified corpus cannot be fetched, the run should remain blocked on Q1-A/C for the primary control rather than substituting B as if it were equivalent. 2) Report B only as a sensitivity analysis, clearly labeled as a different control family (similarity, not contrastive co-occurrence). 3) Keep the frozen k/stratification/outlier rules fixed before any probing and predeclare the flat-residual and inverted outcomes as first-class possibilities.",
+ "error": null,
+ "usage": {
+  "prompt_tokens": 1495,
+  "completion_tokens": 425,
+  "total_tokens": 1920,
+  "cost": 0.00303375,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.00303375,
+   "upstream_inference_prompt_cost": 0.00112125,
+   "upstream_inference_completions_cost": 0.0019125
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ }
+}

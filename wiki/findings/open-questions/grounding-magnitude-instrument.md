@@ -14,7 +14,7 @@ links:
   - rel: depends-on
     target: conjecture/distributional-saturation-grounding-headroom
   - rel: depends-on
-    target: result/vwsd-grounding-headroom-nlbaseline-regrade-v1
+    target: note/vwsd-grounding-headroom-nlbaseline-regrade-v1
   - rel: depends-on
     target: result/vwsd-grounding-headroom-v2
   - rel: depends-on
@@ -56,7 +56,7 @@ image arm is read — was built and frozen but **deferred at the adequacy-audit 
 re-graded under a ratified valid scorer at session 128 and **still blocked**: the fluent channel's strict
 held-out referent-recovery is **0.438**, below the ratified `[0.60, 0.95]` competence floor, and a fresh
 independent critic verified that 0.438 is a *valid* low rate, not a scorer artifact
-([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
 The block has a two-horned cause the run could not separate: either the model-authored channel genuinely
 under-recovers the specific sense, **or** VWSD's polysemous targets make *specific*-referent recovery
 from a description alone intrinsically hard (a held-out reader recovers "a horse show," not "the Appendix
@@ -83,7 +83,7 @@ The block teaches four requirements. Each is read off a cited result/decision, n
 - **(a) A certified-competent text/description channel on the *specific target items*.** This is the
   failure mode that blocked VWSD: the fluent referent-naming channel's strict held-out referent-recovery
   was 0.438, below the `[0.60, 0.95]` floor, a *valid* rate not a scorer artifact
-  ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+  ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
   A magnitude read requires that the text channel be *demonstrably able* to name/identify the target sense
   on the items used — otherwise "text-failed" conflates "text under-determines" with "the channel can't
   speak the target," and the residual's size is uninterpretable.
@@ -151,7 +151,7 @@ image-native instrument the gating shape was confirmed on.
   accuracy*, not *graded similarity*," and "No inter-annotator agreement is reported."
 - **(a) certified-competent fluent channel on the target items: BLOCKED** — the magnitude follow-through's
   fluent channel reads 0.438 strict referent-recovery, below floor, a valid low rate
-  ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)),
+  ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)),
   with the targets' technical/proper-noun nature a diagnosed contributor.
 - **Verdict:** **blocked for magnitude** (it served the gating *shape* fine, and remains the gating-shape
   instrument). Its block is *why* this page exists; it is not a re-attempt target.
@@ -226,7 +226,7 @@ above. So the scouting note adds no new magnitude candidate beyond THINGS.
   manufactured. That build is the unit a real prediction-3 test would require; the conjecture already names
   "a fine-polysemy image set … **not yet in-repo**" as that unit.
 - **None of this rescues VWSD, and a re-attempt owes a genuinely new instrument.** Per the do-not-re-grind
-  discipline ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)):
+  discipline ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)):
   the VWSD competence-audited-fluent-channel route is blocked under the ratified standard, the 0.438 is a
   *valid* below-floor rate, and "a **different** magnitude instrument … may be needed." This page does not
   re-open VWSD; it scopes what a new instrument would have to be.

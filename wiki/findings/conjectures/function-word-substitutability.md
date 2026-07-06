@@ -97,7 +97,7 @@ ratified freeze-and-hash + pre-run-critic GO/NO-GO is what binds that.
 > check (0.1212 > 0.12; the `because`-arm content gap 1.335 < function gap 1.406). *(Correction,
 > session 68: an earlier wording here said "certified SOUND on every matching/shortcut-reader/
 > integrity check" — that overstated it; see the corrected
-> [`result/function-word-swap-build-v1`](../results/function-word-swap-build-v1.md).)* Under
+> [`note/function-word-swap-build-v1`](../notes/function-word-swap-build-v1.md).)* Under
 > faithful matching only **~66 clean items** survive: a *length-only* reader forces a signed **+1**
 > content length-match (every function swap is +1 char), and the frequency∩length∩coherence
 > intersection is thin — the person-noun route dies (no open-class noun at Lg10WF ≈ 3.33 with +1
@@ -113,7 +113,7 @@ ratified freeze-and-hash + pre-run-critic GO/NO-GO is what binds that.
 > frequency tolerance + per-pair signed-Δlen gate) + capped carrier-authoring, also requiring the
 > freq-only residual to be fixed and the ≥200/≥4-class bar kept. The conjecture stays **`designed`**
 > and untested; build-v2 (the widened set) runs under a fresh pre-run critic. See
-> [`result/function-word-swap-build-v1`](../results/function-word-swap-build-v1.md).
+> [`note/function-word-swap-build-v1`](../notes/function-word-swap-build-v1.md).
 
 > **Build-v2 RUN (2026-06-21, session 69) — CONFIRM 3/3, non-uniformly. Conjecture now `tested`.**
 > The widened set (206 matched items, 4 content classes, four function arms `because`/`some`/`will`/`few`)

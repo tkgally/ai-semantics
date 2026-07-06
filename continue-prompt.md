@@ -116,9 +116,13 @@ with an owed empirical design/scout so the empirical track never stalls):
    remainder cleared. **No result mass-edited, no theory flipped to `live`** (option A's
    no-mass-edit clause — per-page normalization happens at each page's next touch). Paired with the
    A1b antonymy design.
-3. **P3:** program **B6** — the `note`-type reclassification sweep (~10 measurement-free result
-   pages → `wiki/findings/notes/`), which is coherence work in program clothing; plus the
-   orphan-source cures the ledger lists.
+3. **P3 `[x]` (s185):** program **B6** — the `note`-type reclassification sweep (**12**
+   measurement-free result pages → `wiki/findings/notes/`, dir created; each a dated
+   history-preserving box, no finding changed, sole-support guardrail clear; 4 finding-bearing
+   borderlines kept as results); plus the orphan-source cures (kratzer/zeng re-confirmed;
+   barrie-tornberg + mahowald-judgments linked; strasser-antonelli left peripheral, its
+   essay-trigger-(d) question flagged for a future session). Adversarial coherence pass CLEAN.
+   Paired with the A1b ratify + corpus scout. **P4 next.**
 4. **P4:** reader on-ramp deepening — the remaining concept-page refreshes (each concept points
    at the current findings that bear on it), and the ideas-harvest triage (promote the strongest
    audit seeds into properly-formed open-question pages or backlog items; drop the rest with a

@@ -43,7 +43,7 @@ manifest sha `e3a04cdd…`.
 > ROBUST-COLLAPSE — the conditional collapse replicated exactly and resisted the rescue framings);
 > [`result/projection-trigger-inventory-v1`](projection-trigger-inventory-v1.md) (session 160,
 > MIXED) with its $0 per-family decomposition
-> [`result/projection-trigger-inventory-family-decomposition-v1`](projection-trigger-inventory-family-decomposition-v1.md)
+> [`note/projection-trigger-inventory-family-decomposition-v1`](../notes/projection-trigger-inventory-family-decomposition-v1.md)
 > (session 161); and [`result/presupposition-doppelganger-control-v1`](presupposition-doppelganger-control-v1.md)
 > (session 173: BEATS-DOPPELGANGER pooled 3/3, but the under-licensed outcome — the residual is
 > keyed to the trigger word-form and surface-cue-reconstructable; `anchor: internal-contrast-only`

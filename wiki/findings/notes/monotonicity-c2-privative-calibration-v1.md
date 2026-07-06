@@ -1,29 +1,31 @@
 ---
-type: result
+type: note
 id: monotonicity-c2-privative-calibration-v1
 title: C2 privative B2 calibration — GO; bare-head-noun category membership IS a categorical entailment at ceiling (3/3 models, 1.00), unlike the s135/C1 defaults, so a privative cancel arm can be built at matched ceiling
 meaning-senses:
   - constructional
   - inferential
-status: supported
+status: recorded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
   - rel: refines
-    target: result/monotonicity-c1-completion-calibration-v1
+    target: note/monotonicity-c1-completion-calibration-v1
   - rel: depends-on
     target: concept/coercion
 ---
 
 # Result: C2 privative-modifier B2 calibration — GO
 
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A design-feasibility B2 calibration (GO); it certifies a cancel arm is buildable at ceiling, reads no asymmetry, and makes no human-comparison claim — a gate record. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
+
 > **Design-feasibility calibration, `internal-contrast-only`.** This records **STEP 1b**
 > of the ratified cancel-arm re-design ([`decisions/resolved/monotonicity-cancel-arm-redesign`](../../decisions/resolved/monotonicity-cancel-arm-redesign.md)),
-> reached on the C1 NO-GO ([`result/monotonicity-c1-completion-calibration-v1`](monotonicity-c1-completion-calibration-v1.md))
+> reached on the C1 NO-GO ([`note/monotonicity-c1-completion-calibration-v1`](monotonicity-c1-completion-calibration-v1.md))
 > after the **M2** conjecture-scope amendment. A fresh **B2 default-at-ceiling gate** on the
 > **C2 privative** cancel direction: does a bare head noun entail its superordinate category
 > ("Sam bought a gun" → "Sam bought a weapon")? The gate is a clean **GO** — affirm **1.00 in
@@ -133,9 +135,9 @@ cue ≥ 0.70); post-run verifier recomputes. **M1:** the STEP-2 result must stat
 pass is what licenses reading any suppression failure as defeasance. The conjecture advances to
 `tested` only after that battery runs.
 
-*[Pointer, s183: STEP 2 ran the same day — [`result/monotonicity-c2-battery-v1`](monotonicity-c2-battery-v1.md)
+*[Pointer, s183: STEP 2 ran the same day — [`result/monotonicity-c2-battery-v1`](../results/monotonicity-c2-battery-v1.md)
 WEAK CONFIRM (s137; conjecture advanced to `tested`); the within-verbal follow-up
-[`result/monotonicity-within-verbal-battery-v1`](monotonicity-within-verbal-battery-v1.md) then
+[`result/monotonicity-within-verbal-battery-v1`](../results/monotonicity-within-verbal-battery-v1.md) then
 CONFIRMED 3/3 (s141, M2 discharged).]*
 
 ## Provenance
@@ -145,8 +147,8 @@ CONFIRMED 3/3 (s141, M2 discharged).]*
   and independently recomputed from the per-call `raw_calib/*.json` by a read-only post-run
   verifier (exact match; 48/48 priced, 0 missing, 0 parse failures).
 - The s135 floor (0.00, 3/3) and C1 numbers (0.25 / 0.375 / 0.75) are quoted from
-  [`result/monotonicity-generalization-b2-nogo-v1`](monotonicity-generalization-b2-nogo-v1.md)
-  and [`result/monotonicity-c1-completion-calibration-v1`](monotonicity-c1-completion-calibration-v1.md).
+  [`note/monotonicity-generalization-b2-nogo-v1`](monotonicity-generalization-b2-nogo-v1.md)
+  and [`note/monotonicity-c1-completion-calibration-v1`](monotonicity-c1-completion-calibration-v1.md).
   The C2 fallback, the M2 precondition, and the GO → STEP 2 routing are the ratified decision's
   own STEP 1b.
 - Spend: **$0.01087 billed** (UTC 2026-06-28), the calibration probe only; no battery run.

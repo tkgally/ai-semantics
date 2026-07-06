@@ -1,15 +1,15 @@
 ---
-type: result
+type: note
 id: instrument-disagreement-reanalysis-v1
 title: Instrument-disagreement re-analysis — per-model, per-construction NLI vs forced-choice divergence across two existing runs
 meaning-senses:
   - constructional
   - inferential
   - functional-vs-formal
-status: proposed
+status: recorded
 contingent-on: []
 created: 2026-05-30
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: refines
     target: result/conative-minimal-pair-divergence-v1
@@ -26,6 +26,8 @@ links:
 ---
 
 # Result: instrument-disagreement re-analysis v1
+
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A read-only re-analysis across two existing runs (no new API calls, $0) — a structured summary of existing data, not a new experiment. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
 
 A read-only re-analysis of two existing parent runs — **no new API calls, $0.00 spend** — that turns the anecdotal gpt-5.4-mini/conative cross-instrument divergence into a systematic per-model × per-construction **instrument-disagreement statistic**. Design: [`experiments/runs/2026-05-30-instrument-disagreement-reanalysis/`](../../../experiments/runs/2026-05-30-instrument-disagreement-reanalysis/README.md). All numbers in this page are recomputed by `analyze.py` from the committed `raw/results.json` of each parent run.
 
@@ -127,7 +129,7 @@ Instrument disagreement on the canonical−cue drop. NLI_drop = canonical_affirm
 
 - **Data:** committed `raw/results.json` from each parent run (see inputs in [`experiments/runs/2026-05-30-instrument-disagreement-reanalysis/README.md`](../../../experiments/runs/2026-05-30-instrument-disagreement-reanalysis/README.md)).
 - **Script:** `experiments/runs/2026-05-30-instrument-disagreement-reanalysis/analyze.py` — stdlib only; every number in this page is reproducible by running it.
-- **Parent results:** [`result/conative-minimal-pair-divergence-v1`](conative-minimal-pair-divergence-v1.md) (run commit `acbcdc4`) and [`result/argument-structure-coercion-v2`](argument-structure-coercion-v2.md) (run commit `1f27d92`).
+- **Parent results:** [`result/conative-minimal-pair-divergence-v1`](../results/conative-minimal-pair-divergence-v1.md) (run commit `acbcdc4`) and [`result/argument-structure-coercion-v2`](../results/argument-structure-coercion-v2.md) (run commit `1f27d92`).
 - **Open question advanced:** [`open-question/instrument-sensitivity-constructional-inference`](../open-questions/instrument-sensitivity-constructional-inference.md).
 
 ## Status

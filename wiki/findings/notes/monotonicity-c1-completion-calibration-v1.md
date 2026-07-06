@@ -1,25 +1,27 @@
 ---
-type: result
+type: note
 id: monotonicity-c1-completion-calibration-v1
 title: C1 telic-completion B2 calibration — NO-GO; the completion default of a simple-past accomplishment is read as defeasible-not-categorical under strict NLI (0/3 models at ceiling), so even completion cannot anchor a matched cancel arm
 meaning-senses:
   - constructional
   - inferential
-status: supported
+status: recorded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
   - rel: refines
-    target: result/monotonicity-generalization-b2-nogo-v1
+    target: note/monotonicity-generalization-b2-nogo-v1
   - rel: depends-on
     target: concept/coercion
 ---
 
 # Result: C1 telic-completion B2 calibration — NO-GO
+
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A design-feasibility B2 calibration (NO-GO); no asymmetry was read and it makes no human-comparison claim — a gate record. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
 
 > **Design-feasibility calibration, `internal-contrast-only`.** This records **STEP 1**
 > of the ratified cancel-arm re-design ([`decisions/resolved/monotonicity-cancel-arm-redesign`](../../decisions/resolved/monotonicity-cancel-arm-redesign.md)):
@@ -38,7 +40,7 @@ links:
 The s135 B2 gate was a NO-GO on the ratified *for*-durative/semelfactive cancel arm:
 the "only once" default floored at 0.00 in 3/3 models because single-occurrence is a
 defeasible Gricean *implicature*, not a lexical entailment
-([`result/monotonicity-generalization-b2-nogo-v1`](monotonicity-generalization-b2-nogo-v1.md)).
+([`note/monotonicity-generalization-b2-nogo-v1`](monotonicity-generalization-b2-nogo-v1.md)).
 An independent adversarial review **ratified** a re-design
 ([`decisions/resolved/monotonicity-cancel-arm-redesign`](../../decisions/resolved/monotonicity-cancel-arm-redesign.md)):
 **ADOPT C1 (telic-completion) conditional on its own B2 calibration**, with C2 (privative)
@@ -153,9 +155,9 @@ B2-passing resultative ADD arm, sha `80bd4b60b55a3e60`); a second NO-GO triggers
 **principled-limit closure** (the matched cancel arm is un-instrumentable at ceiling on a
 strict-NLI panel without a categorically-held lexical-entailment default).
 
-*[Pointer, s183: this path ran the same day — [`result/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md)
-GO (s137), [`result/monotonicity-c2-battery-v1`](monotonicity-c2-battery-v1.md) WEAK CONFIRM (s137),
-then [`result/monotonicity-within-verbal-battery-v1`](monotonicity-within-verbal-battery-v1.md)
+*[Pointer, s183: this path ran the same day — [`note/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md)
+GO (s137), [`result/monotonicity-c2-battery-v1`](../results/monotonicity-c2-battery-v1.md) WEAK CONFIRM (s137),
+then [`result/monotonicity-within-verbal-battery-v1`](../results/monotonicity-within-verbal-battery-v1.md)
 CONFIRM 3/3 (s141, M2 discharged).]*
 
 ## Provenance
@@ -165,7 +167,7 @@ CONFIRM 3/3 (s141, M2 discharged).]*
   and independently recomputed from the per-call `raw_calib/*.json` by a read-only post-run
   verifier (exact match; 48/48 priced, 0 missing, 0 parse failures).
 - The s135 floor (0.00, 3/3) and the resultative add-arm ceiling (1.00 / 0.00) are quoted
-  from [`result/monotonicity-generalization-b2-nogo-v1`](monotonicity-generalization-b2-nogo-v1.md).
+  from [`note/monotonicity-generalization-b2-nogo-v1`](monotonicity-generalization-b2-nogo-v1.md).
   The C1-conditional-on-calibration structure and the NO-GO → C2 routing are the ratified
   decision's own STEP 1.
 - Spend: **$0.01151 billed** (UTC 2026-06-28), the calibration probe only; no battery run.
