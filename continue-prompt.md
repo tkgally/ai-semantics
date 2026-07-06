@@ -51,8 +51,7 @@ quietly dormant: if the last several sessions were all one track, weight the bac
    units drawn from both tracks and the program, each wave followed by an adversarial
    coherence pass, each wave committed. Prefer fewer, deeper units (`PROTOCOL.md §3`).
    Judgement is never parallelized; experiments keep their independent pre-run critic and
-   post-run verifier. **While the wiki-coherence campaign (§5 below) is open, its next phase
-   is a standing candidate for the session's deep unit — check §5 before picking.**
+   post-run verifier.
 4. **Spend discipline** (`PROTOCOL.md §4`): up to **$5.00 (UTC calendar day)** in OpenRouter
    billed cost, all sessions that day combined — check today's ledger rows in
    `config/budget.md` first, pre-flight-estimate every probe, record actuals after. Size a
@@ -93,48 +92,3 @@ replayed commands) and the loop spins forever. Any unavoidable poll needs a dead
 - **No fixed endpoint.** Do not manufacture a finale or pad a session to look productive; the
   project compounds by small sound increments. When the session's work is landed and merged,
   stop.
-
-## 5. Standing campaign: wiki coherence (Tom-directed, opened session 183 — DELETE this section when the campaign closes)
-
-On 2026-07-05 Tom directed (standing override) that the project devote effort to **polishing the
-wiki for coherence and unity**: update out-of-date pages, add links, eliminate needless
-repetition, resolve contradictions, and surface future-research ideas — because as the project
-grows, wiki-wide coherence is load-bearing for both the researcher and the monitor. Session 183
-ran the full audit (all ~370 pages, six read-only auditors) and fixed the misleading tranche;
-the campaign continues across sessions until its phases close.
-
-**The live ledger is [`wiki/maintenance.md`](wiki/maintenance.md)** — read it before campaign
-work; it records what was audited, what was fixed, what was deliberately left, and the per-phase
-checklists. Phases (each sized as one session's deep unit; a light phase may share its session
-with an owed empirical design/scout so the empirical track never stalls):
-
-1. **P1 `[x]` (s183):** full audit + fix tranche (BLOCKERs + batches) + this plan + the ledger +
-   the exec-summary regeneration (B4) + two queued convention decisions.
-2. **P2 `[x]` (s184):** both s183 decisions **ratified ADOPT-A** (fresh reviewer + non-Anthropic
-   vote converged on each); applied (result-status transition rule → `CLAUDE.md`; the
-   `measurement-epistemic` tag + six retags → `meaning-senses.md`); the ledger's "Deferred to P2"
-   remainder cleared. **No result mass-edited, no theory flipped to `live`** (option A's
-   no-mass-edit clause — per-page normalization happens at each page's next touch). Paired with the
-   A1b antonymy design.
-3. **P3 `[x]` (s185):** program **B6** — the `note`-type reclassification sweep (**12**
-   measurement-free result pages → `wiki/findings/notes/`, dir created; each a dated
-   history-preserving box, no finding changed, sole-support guardrail clear; 4 finding-bearing
-   borderlines kept as results); plus the orphan-source cures (kratzer/zeng re-confirmed;
-   barrie-tornberg + mahowald-judgments linked; strasser-antonelli left peripheral, its
-   essay-trigger-(d) question flagged for a future session). Adversarial coherence pass CLEAN.
-   Paired with the A1b ratify + corpus scout. **P4 next.**
-4. **P4:** reader on-ramp deepening — the remaining concept-page refreshes (each concept points
-   at the current findings that bear on it), and the ideas-harvest triage (promote the strongest
-   audit seeds into properly-formed open-question pages or backlog items; drop the rest with a
-   line of rationale in the ledger).
-5. **P5 (close-out):** a light spot re-audit (one fresh agent, sampled pages), close the ledger
-   with a dated summary, **delete this §5**, and note the closure in `log.md`.
-
-**Campaign rules (bind every phase):** maintenance-class work — no finding changes in either
-direction; history-preserving edits only (dated update boxes / bracketed notes, per the
-conventions documented in `CLAUDE.md` s183); every standing fence in `NEXT.md` still binds (no
-essay merges — the web is load-bearing; no re-runs/re-promotions; cite the theory v2s); anything
-value-laden goes to `wiki/decisions/open/`, never applied in the session that opens it; the
-website is touched only if a campaign session changes something reader-substantive (else it is a
-maintenance session per `PROTOCOL.md §5b`; autonomous ratifications always appear in the day’s
-entry, per Ruling 1).

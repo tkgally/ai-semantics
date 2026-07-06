@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-07-02
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: refines
     target: theory/lexicon-grammar-continuum
@@ -17,6 +17,8 @@ links:
     target: result/presupposition-doppelganger-control-v1
   - rel: depends-on
     target: essay/antonymy-outlier-distributional-shadow
+  - rel: depends-on
+    target: result/lexical-relation-shadow-saturation-v1
   - rel: depends-on
     target: essay/presupposition-environment-gated
   - rel: depends-on
@@ -55,13 +57,36 @@ links:
 > flat**. It is **not** moved to the beater side. The Honesty box's "weakest where it most needs strength"
 > bullet is updated accordingly below.
 
-> **Status: revised (2026-07-03, was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
+> **REVISION (2026-07-06, s188 — wiki-coherence campaign P5) — the antonymy corner's owed panel control
+> has RUN (s186) and the lexical shadow-saturated reading is FALSIFIED; the corner MOVED.**
+> The [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)
+> this essay calls "a blocked conjecture" with "no matched contrastive-frame control … run on the
+> project's panel" **ran at session 186** →
+> [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md).
+> The panel result **falsifies** the antonymy shadow-saturation reading this essay places at the lexical
+> pole: antonymy is **not** the smallest-residual relation — it carries one of the **largest** (HIT@3
+> residual **+0.61–0.67**), with **meronymy** smallest; raw recovery does **not** track cue-strength
+> (across-relation Spearman **−0.086**; **hypernymy**, not antonymy, best-recovered); and antonym recovery
+> **survives frame suppression**. So the essay's structural thesis — each pole holds a shadow-beater
+> **and** a shadow-saturated corner — is now **measured-and-weakened at the lexical pole**: the antonymy
+> corner did **not** sit where the reading placed it. This **fires** the essay's symmetric antonymy
+> revision trigger below. The body's "blocked conjecture" / "no control run" phrasing is the **pre-s186**
+> reading, superseded and kept visible. Scoped to the *local-shadow* reading per
+> [`essay/shortcut-vs-competence-mis-cut`](shortcut-vs-competence-mis-cut.md) (a co-occurrence control
+> cannot certify competence-beyond-distribution — s186 falsifies the local-saturation reading only).
+> **Both** shadow-saturated corners are now measured (presupposition s173, under-licensed, above;
+> antonymy s186, falsified) — the structural re-description stands, but the lexical pole's *intact*
+> saturated corner does not.
+
+> **Status: revised (2026-07-06 — antonymy corner falsified on the panel, s186; earlier 2026-07-03; was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
 > It introduces **no new empirical claim** and makes **no human comparison of its own**. Every
 > empirical assertion cites the in-repo `result` or `essay` page that carries it, at that page's
 > stated strength. Its two load-bearing empirical inputs on the *shadow-saturated* side — the
 > antonymy relation-recovery reading and the presupposition corner — are **not measured failures to
 > beat a distributional shadow**: the antonymy input is prior-art plus a blocked conjecture
-> ([`essay/antonymy-outlier-distributional-shadow`](antonymy-outlier-distributional-shadow.md)), and
+> ([`essay/antonymy-outlier-distributional-shadow`](antonymy-outlier-distributional-shadow.md)) *(pre-s186
+> wording — the antonymy input has **since been measured**: s186 falsified the shadow-saturated reading; see
+> the s186 revision box above)*, and
 > the presupposition inputs are `internal-contrast-only` within-model contrasts with **no human
 > comparison** ([`result/presupposition-accommodation-v1`](../results/presupposition-accommodation-v1.md),
 > [`result/accommodation-cue-strength-v1`](../results/accommodation-cue-strength-v1.md)). Placing
@@ -228,6 +253,11 @@ the targets, and is silent on which model tracks which.
   wrong placement, and the grammatical pole would have *two* beaters. (Symmetrically for antonymy: if the blocked
   [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)
   ran and antonymy competence survived a contrastive-frame control, the lexical saturated corner moves.)
+  **→ FIRED (2026-07-06, s186):** the conjecture **ran** and antonym recovery **survived** a
+  contrastive-frame control (HIT@3 residual +0.61–0.67; survives frame suppression) →
+  [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md).
+  The lexical saturated corner **moved** — antonymy is not shadow-saturated on the panel (meronymy is the
+  smallest-residual relation). See the s186 revision box at top.
 - **If either signature turns environment-*invariant*.** The presupposition corner's saturated status
   depends on the environment-gating being real. If projection turned frame-invariant, or accommodation
   context-invariant, the [`essay/presupposition-environment-gated`](presupposition-environment-gated.md)
@@ -273,8 +303,10 @@ the targets, and is silent on which model tracks which.
   `internal-contrast-only` within-model contrasts (no human projection/accommodation baseline was
   measured); the antonymy input is prior-art on non-panel models plus a blocked conjecture. The essay
   reads *descriptions*, not what the models compute internally.
-- **Weakest where it most needs strength — now partly measured on the presupposition side (2026-07-03).**
-  The antonymy corner remains a **reading/bet** (no matched contrastive-frame control run on the panel). The
+- **Weakest where it most needs strength — now measured on both sides (presupposition 2026-07-03; antonymy 2026-07-06, s186).**
+  The antonymy corner — previously "a reading/bet (no matched contrastive-frame control run on the panel)" —
+  **has now had that control RUN (session 186): the antonymy shadow-saturation reading is FALSIFIED on the
+  panel** (see the s186 revision box at top). The
   presupposition corner has now had its matched surface-cue control **run**
   ([`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md)):
   it is **not** a clean controlled failure-to-beat-a-shadow (the doppelgänger *is* discriminated —
