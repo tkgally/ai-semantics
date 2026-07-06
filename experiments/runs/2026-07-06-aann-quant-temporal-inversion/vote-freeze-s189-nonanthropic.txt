@@ -1,0 +1,13 @@
+VERDICT: **NO-GO**
+
+- **BLOCKER:** The verdict logic is **not invariant to baseline choice**. Using `B_m^min = MIN(ambig,pos,neg)` makes `d_m(j)` partly a function of whichever non-quant cell is lowest, not just the quant item set. That can force/forbid CLASS vs LEXICAL in a way that is **tunable after seeing data**. **Fix:** predefine a single, fixed reference baseline (e.g., pooled non-quant mean on the same arm) or a contrast model estimated independently of the classification threshold.
+
+- **BLOCKER:** The **NULL-first gate is not cleanly reachable/falsifiable** as written because “pooled quant-cell mean is NOT the lowest of the 4 class cells” depends on how the 4 class cells are formed and on the same data later used for shape. This can collapse distinct outcomes into NULL by construction. **Fix:** separate the null test from the shape test with an independent pre-registered statistic and fixed decision tree.
+
+- **BLOCKER:** The **item set is not neutral for class-vs-lexical testing**. You explicitly mix Mahowald-attested items with widened items, and some widened items are acknowledged as carrying over from other conditions. That means the probe is already partly answering “these lexemes vs those lexemes,” not “whole quantity class vs few lexical items.” **Fix:** either freeze a balanced, theory-agnostic lexicon sample or explicitly stratify the hypothesis test by source list and pre-register subgroup analysis.
+
+- **SHOULD-FIX:** “ARM 2 internal-contrast” is acceptable only if you never treat it as human-grounded evidence. Right now the writeup risks implying semantic interpretation from a purely internal ordering. **Fix:** label Arm 2 strictly as model-internal calibration and forbid any human-comparison language in its analysis.
+
+- **NIT / SHOULD-FIX:** “Tourish-template exclusion recompute is gate-bearing” sounds like a hidden flexibility point. **Fix:** freeze the exclusion rule, the exact template list, and whether exclusion is primary or sensitivity-only before spending.
+
+[billed $0.002713; model openai/gpt-5.4-mini; s189 freeze-stage decorrelation vote]

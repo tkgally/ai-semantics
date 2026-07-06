@@ -1,15 +1,21 @@
-# 2026-07-06 — AANN quant×temporal inversion (DESIGN-STAGE ONLY)
+# 2026-07-06 — AANN quant×temporal inversion (class-vs-lexical widening probe)
 
-This directory holds the **session-188 design-stage** artifacts for the
-`aann-quant-temporal-inversion-v1` probe. **No probe has run; $0 of experiment spend.**
-The design (`experiments/designs/aann-quant-temporal-inversion-v1.md`) is **frozen-to-be**,
-contingent on `wiki/decisions/open/aann-quant-temporal-inversion-design.md` (opened s188).
+Operationalizes [`open-question/aann-quant-temporal-inversion`]; refines
+[`result/aann-temporal-why-reanalysis`] (the one AANN cell where every panel model inverts the human
+gradient — quant×temporal, "a scant three days": humans-highest, models-lowest). **Is that inversion
+the whole quantity-adjective class or a few lexical items?**
 
-Contents (s188):
-- `vote-design.py` / `vote-design-nonanthropic.txt` — the PROTOCOL §A3 non-Anthropic
-  decorrelation vote on the design (QA companion to the fresh-agent design pre-run critic;
-  the fresh agent keeps verdict authority). One `openai/gpt-5.4-mini` call via the probe REST path.
+## Session record
 
-The probe **freezes (prep.py + PREREG) and RUNS a later session**, only after the decision
-ratifies (cross-session adversarial review + non-Anthropic vote), with a freeze-stage pre-run
-critic and a post-run recompute-from-raw verifier.
+- **s188 (design stage):** `REVIEW-design-s188.md`, `vote-design.py`/`vote-design-nonanthropic.txt`
+  — the design pre-run critic (GO-WITH-CONDITIONS) + non-Anthropic vote (NO-GO, convergent). Decision
+  `decisions/open/aann-quant-temporal-inversion-design` opened.
+- **s189 (ratify + freeze + run):** decision **ratified ADOPT-WITH-CHANGES** (Q1-C human-N-gated /
+  **Q2-B monotone-primary** / Q3-A) → `wiki/decisions/resolved/aann-quant-temporal-inversion-design.md`.
+  Froze: `prep.py` → `stimuli.json` (K=20 quant modifiers × 10 balanced items + 60 non-quant reference
+  + 24 Tier-0 + 40 4-pt; 972 calls), `PREREG.md`, `analyze.py` (new §6 verdict logic, self-tested).
+  `probe.py` byte-identical to v2b except `ABORT_USD`. `vote-ratify-s189*` = the ratification
+  decorrelation vote; freeze-stage critic + vote below. Ran the panel; `results.json`;
+  `VERIFIER-REPORT.md`; result → [`result/aann-quant-temporal-inversion-v1`].
+
+Reproduce: `python3 prep.py` → `python3 analyze.py --selftest` → `python3 probe.py` → `python3 analyze.py`.

@@ -5,10 +5,9 @@ title: "AANN quant×temporal inversion — class-vs-lexical widening probe (v1):
 meaning-senses:
   - constructional
   - human-comparison
-status: "DESIGN, NOT FROZEN (design s188, 2026-07-06; contingent on decisions/open/aann-quant-temporal-inversion-design; freeze + run a LATER session after that decision ratifies)"
-anchor: pending
-contingent-on:
-  - aann-quant-temporal-inversion-design
+status: "RATIFIED + FROZEN s189 (design s188; decision ratified s189 ADOPT-WITH-CHANGES [Q1-C human-N-gated / Q2-B primary / Q3-A]; run + result follow in the same session — see experiments/runs/2026-07-06-aann-quant-temporal-inversion/)"
+anchor: "hybrid (Arm 1 anchored → resource/mahowald-2023-aann-stimuli; Arm 2 internal-contrast-only)"
+contingent-on: []
 created: 2026-07-06
 updated: 2026-07-06
 links:
