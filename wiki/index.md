@@ -37,9 +37,9 @@ Standing references:
 
 ### Decisions — open
 
-62 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+63 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/aann-quant-temporal-inversion-design.md`](decisions/open/aann-quant-temporal-inversion-design.md) — AANN quant×temporal inversion probe — anchor scope (anchored-narrow vs wide-unanchored vs hybrid), the class-vs-lexical scoring threshold, and the non-quant reference ba… · **open**
+*(none)*
 
 ### Base — concepts
 
@@ -203,6 +203,7 @@ Standing references:
 - [`findings/results/aann-inferential-v3.md`](findings/results/aann-inferential-v3.md) — AANN inferential v3 — the construction does NOT shift unification-vs-distributive inference at the paraphrase or NLI instruments (a first-class null, ceiling-bounded); t… · **proposed** · internal-contrast-only · (2026-07-05)
 - [`findings/results/aann-inferential-v4.md`](findings/results/aann-inferential-v4.md) — AANN inferential v4 — with a distributive-default control that finally gives the construction headroom, the AANN shifts unification paraphrase-selection in all three mod… · **proposed** · internal-contrast-only · (2026-07-05)
 - [`findings/results/aann-inferential-v6.md`](findings/results/aann-inferential-v6.md) — AANN inferential v6 — powered panel replication of v4 on 40 fresh held-out adjectives REPLICATES the PARTIAL result; the paraphrase double-contrast shift holds in all th… · **proposed** · internal-contrast-only · (2026-07-05)
+- [`findings/results/aann-quant-temporal-inversion-v1.md`](findings/results/aann-quant-temporal-inversion-v1.md) — AANN quant×temporal inversion: class or lexical? — NULL. The located inversion does not reproduce on a widened quantity-modifier set; it was an inventory artifact of the… · **proposed** · anchored · (2026-07-06)
 - [`findings/results/aann-temporal-heldout-v2b.md`](findings/results/aann-temporal-heldout-v2b.md) — AANN held-out productivity is noun-class-dependent — the widened temporal stratum does NOT replicate the human gradient (a powered confirmation of v2 caveat 2) · **proposed** · anchored · (2026-07-05)
 - [`findings/results/aann-temporal-why-reanalysis.md`](findings/results/aann-temporal-why-reanalysis.md) — WHY the temporal AANN class fails to replicate the held-out gradient — a $0 re-analysis splits it into a compressed human gradient (H1) plus a localized quantity-adjecti… · **proposed** · anchored · (2026-07-05)
 - [`findings/results/accommodation-cue-strength-v1.md`](findings/results/accommodation-cue-strength-v1.md) — The accommodation gate is GRADED by surface-contradiction strength (verdict GRADED-GATE 3/3): every model backs off a denied presupposition harder under an emphatic deni… · **proposed** · internal-contrast-only · (2026-07-02)
@@ -293,7 +294,7 @@ Standing references:
 
 ### Findings — open-questions
 
-- [`findings/open-questions/aann-quant-temporal-inversion.md`](findings/open-questions/aann-quant-temporal-inversion.md) — Is the quant×temporal AANN inversion — the one cell where every model rates 'a scant three days' LOW where humans rate it HIGH — the whole quantity-adjective class or a… · **open** · (2026-07-06)
+- [`findings/open-questions/aann-quant-temporal-inversion.md`](findings/open-questions/aann-quant-temporal-inversion.md) — Is the quant×temporal AANN inversion — the one cell where every model rates 'a scant three days' LOW where humans rate it HIGH — the whole quantity-adjective class or a… · **answered** · (2026-07-06)
 - [`findings/open-questions/constructional-divergence-probe.md`](findings/open-questions/constructional-divergence-probe.md) — What minimal project-run probe would turn the external constructional-divergence gap into a project result? · **answered** · (2026-07-05)
 - [`findings/open-questions/constructional-monotonicity-addarm-headroom.md`](findings/open-questions/constructional-monotonicity-addarm-headroom.md) — Does the resultative add arm have genuine headroom — and what design would a clean, non-degenerate add control for the monotonicity-generalization battery require? · **answered** · (2026-07-05)
 - [`findings/open-questions/constructional-monotonicity-generalization-design.md`](findings/open-questions/constructional-monotonicity-generalization-design.md) — How would a matched-difficulty, ceiling-controlled battery test whether the add/cancel monotonicity asymmetry generalizes to a NEW construction pair — and which pair, wi… · **answered** · (2026-06-28)
@@ -391,7 +392,7 @@ Standing references:
 - [`experiments/designs/aann-construction-v3-inferential.md`](../experiments/designs/aann-construction-v3-inferential.md) — AANN construction probe v3 — inferential (unification + whole-evaluation), AANN-vs-control shift, paraphrase-FC primary + NLI convergent + grammaticalized agreement disc… · **ran 2026-06-13 → NULL (ceiling-bounded); see result/aann-inferential-…** · (2026-06-13)
 - [`experiments/designs/aann-construction-v4-inferential.md`](../experiments/designs/aann-construction-v4-inferential.md) — AANN construction probe v4 — inferential (unification + whole-evaluation), DOUBLE-CONTRAST against a distributive-default control with a within-design lexical-cue contro… · **drafted — pre-run critic pending (NOT YET RUN; no model calls made)** · (2026-06-13)
 - [`experiments/designs/aann-construction-v6-inferential.md`](../experiments/designs/aann-construction-v6-inferential.md) — Design — AANN inferential v6: POWERED PANEL REPLICATION of v4 (fresh held-out adjectives, wider N)
-- [`experiments/designs/aann-quant-temporal-inversion-v1.md`](../experiments/designs/aann-quant-temporal-inversion-v1.md) — AANN quant×temporal inversion — class-vs-lexical widening probe (v1): is the one panel-wide model-vs-human inversion cell (humans rate 'a scant three days' HIGHEST, ever… · **DESIGN, NOT FROZEN (design s188, 2026-07-06; contingent on decisions/…** · (2026-07-06)
+- [`experiments/designs/aann-quant-temporal-inversion-v1.md`](../experiments/designs/aann-quant-temporal-inversion-v1.md) — AANN quant×temporal inversion — class-vs-lexical widening probe (v1): is the one panel-wide model-vs-human inversion cell (humans rate 'a scant three days' HIGHEST, ever… · **RATIFIED + FROZEN s189 (design s188; decision ratified s189 ADOPT-WIT…** · (2026-07-06)
 - [`experiments/designs/aann-temporal-heldout-v2b.md`](../experiments/designs/aann-temporal-heldout-v2b.md) — AANN temporal held-out widening (v2b) — addendum under the ratified v2 behavioral instrument, resolving caveat 2 of the v2 result · **pre-freeze (independent pre-run critic returned GO after fixes, 2026-…** · (2026-06-13)
 - [`experiments/designs/argument-structure-coercion-v2.md`](../experiments/designs/argument-structure-coercion-v2.md) — argument-structure coercion probe v2 — escaping the v1 ceiling on the two "add-direction" positives (caused-motion + way), with conflicting-cue / coercion-resisting / gr… · **provisional** · (2026-05-29)
 - [`experiments/designs/caused-motion-construction-v1.md`](../experiments/designs/caused-motion-construction-v1.md) — Design: caused-motion minimal-pair probe v1

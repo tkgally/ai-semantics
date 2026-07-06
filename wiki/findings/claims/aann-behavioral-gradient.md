@@ -103,6 +103,14 @@ The claim is **scoped and qualified**, never panel-uniform-competence:
   uniformly negative** (cell-grain ρ **−0.20 / −0.40 / −0.40**, adjective-grain **−0.139 / −0.028 /
   −0.046** at powered widening — see *Held-out generalization*). Productivity is real at the overall
   grain and **uneven by noun class**; this is a load-bearing qualifier, not a footnote.
+  *(Update 2026-07-06, s189: the temporal stratum's negative sign is now understood to be an **inventory
+  artifact**, not a quant-class property. A widened K=20 quantity-modifier probe
+  ([`result/aann-quant-temporal-inversion-v1`](../results/aann-quant-temporal-inversion-v1.md), VERDICT
+  NULL) found the quant×temporal cell rises to 2nd of four classes for all three models once the modifier
+  set is widened; only the thin held-out sample's low-frequency large-magnitude items [towering/colossal/
+  ample] invert. This does **not** widen the claim's scope — it narrows the temporal caveat to
+  "sensitive to a few marginal low-frequency adjectives," not "quantity adjectives invert." The v2b
+  held-out temporal negatives above are faithful to that specific sample.)*
 - **Single run for the positive gradient.** The anchored gradient and its overall held-out
   replication come from one pre-registered occasion; the only second date in the line
   ([`result/aann-temporal-heldout-v2b`](../results/aann-temporal-heldout-v2b.md)) replicates and

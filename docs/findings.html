@@ -145,10 +145,19 @@ itself) adds that. The project's central question was whether language models ac
   the human ratings for time-words are bunched into the <em>narrowest range of any noun type</em>
   (about a third the spread of the noun types that carried the positive result) — so there is
   barely any gradient there to track, and low scores are partly a measurement-power problem.
-  Second, the negative direction is driven almost entirely by one odd corner — "a scant three
-  days", which people rate <em>highest</em> but every model rates <em>lowest</em>; remove that
-  single corner and every model lines up positively again. So the time-word gap is real but
-  partly an artifact of a flat target plus one outlier, not a wholesale failure. All of this is
+  Second, the negative direction is driven almost entirely by one odd corner — quantity words on
+  time nouns ("a scant three days"), which people rate <em>highest</em> but every model rated
+  <em>lowest</em>; remove that single corner and every model lines up positively again. So the
+  time-word gap is real but partly an artifact of a flat target plus one outlier, not a wholesale
+  failure. <strong>(Updated July 6, 2026:)</strong> a follow-up test widened that corner &mdash;
+  twenty quantity words instead of the handful the earlier probe used, on a balanced set of time
+  phrases &mdash; and <strong>the reversal dissolved</strong>: on the broad set the models rate
+  quantity-on-time phrasings <em>second</em> of four kinds, not lowest. The apparent reversal traced
+  to a few rare, large-size words the earlier sample over-used ("a towering three days", "a colossal
+  three days"), which are genuinely odd; ordinary quantity words &mdash; and even "a scant three
+  days" itself &mdash; come out rated natural. So this one corner is an artefact of an unrepresentative
+  word sample, not a real hole in how models handle quantity words; the project&rsquo;s advance bet
+  that the reversal was real is recorded as a loss. All of this is
   gradient-<em>tracking</em>, consistent with a productive pattern; whether the models use the
   construction's <em>meaning</em> (a unified, evaluated stretch) was the next question — and it
   has now been tested twice. <strong>The current answer (updated June 13) is a carefully bounded

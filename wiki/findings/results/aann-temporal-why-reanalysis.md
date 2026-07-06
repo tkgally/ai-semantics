@@ -35,6 +35,20 @@ links:
 > Run record:
 > [`experiments/runs/2026-06-13-aann-temporal-why-analysis/`](../../../experiments/runs/2026-06-13-aann-temporal-why-analysis/README.md).
 
+> **Update 2026-07-06 (s189) — H4's interpretation is now scoped: the located inversion does NOT
+> generalize.** The forward widening probe named in *What would decide it* ran
+> ([`result/aann-quant-temporal-inversion-v1`](aann-quant-temporal-inversion-v1.md); the class-vs-lexical
+> decider). **VERDICT: NULL** — on a widened K=20 quantity-modifier set, the quant×temporal cell is no
+> longer the lowest of the four adjective classes for any model (it rises to 2nd, below *ambig*). The
+> *location* of the negative sign in this frozen held-out sample stands as described below, but its
+> *interpretation* as a quant-**class** productivity hole does not: it was carried by the specific
+> low-frequency, large-magnitude, semantically-marginal held-out adjectives (*towering, colossal, sizable,
+> lavish, ample*) — the widened result shows only those invert, while natural higher-frequency quantity
+> modifiers (and the *scant/mere* small-quantity items) do not, with per-modifier inversion tracking Zipf
+> frequency. So H4 is an **inventory artifact**, not a class effect — H3 (frequency ruled out) held at the
+> *class* level but re-emerges at the *item* level once the inventory is widened. The four-class table
+> below is faithful to its sample; read it as sample-specific, not class-general.
+
 ## What this re-analysis is (and is not)
 
 It runs **no new conditions** and makes **no model calls**. `analyze_why.py` re-reads the
