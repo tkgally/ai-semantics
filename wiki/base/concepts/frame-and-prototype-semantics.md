@@ -7,7 +7,7 @@ meaning-senses:
   - referential
   - distributional
 created: 2026-05-31
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: source/rosch-mervis-1975-family-resemblances
@@ -57,6 +57,8 @@ Fillmore is a co-founder of Construction Grammar, and frames are how CxG cashes 
 Read through frame semantics, those "abstract constellations" are frames evoked at the constructional grain. This is why the lexical and grammatical wedges are not two unrelated tracks but the two ends of one semantic theory: a word evokes a frame (lexical end) and a construction evokes a frame (grammatical end), and [`theory/lexicon-grammar-continuum`](../../findings/theory/lexicon-grammar-continuum.md) works out the empirical version of that single cline. The point of this page is to add the *semantic-theoretic* reason the continuum holds: frames are the shared currency at both grains.
 
 This also relocates the project's `constructional` findings. When the project reads a model as deploying a construction's contributed inference — caused-motion's *the object moved*, the *way*-construction's *the agent traversed the path* ([`concept/coercion`](coercion.md)) — that can be redescribed as the model **evoking the construction's frame** and profiling its roles. The grammatical results are not this page's central evidence (the prototype mapping below is), so this stays a redescription, not a new claim: the coercion bridge ([`concept/coercion`](coercion.md), and [`theory/lexicon-grammar-continuum`](../../findings/theory/lexicon-grammar-continuum.md)'s bridge section) is, in frame terms, the construction's frame reshaping the verb's frame — *sneeze* slotted into the caused-motion scene takes on a causation-of-motion role its lexical frame does not supply.
+
+**The project's own-voice development (two essays).** The frame reading here is carried further in the philosophical track, and both essays build on this page: [`essay/frame-semantics-third-company`](../../findings/essays/frame-semantics-third-company.md) names Fillmore's evoked frame as a *third* reading of "knowing a word by its company" — distinct from Harris's co-occurrence neighbourhood and Firth's situation, and orthogonal to the co-occurrence a next-token objective instantiates — and [`essay/constructional-meaning-meets-frame`](../../findings/essays/constructional-meaning-meets-frame.md) does the grammatical counterpart, naming the argument-structure construction as itself a **frame-evoker**, a cousin-by-inheritance of Fillmore's lexical frame (Construction Grammar builds the semantic half of its form–meaning pairings on frame semantics rather than re-inventing it). Both are *sorting* moves that locate — and explicitly decline — the open question of whether form-distribution alone can encode a structured *inferential* background; neither adds an empirical claim.
 
 ## Prototype and graded-category semantics: the central mapping
 

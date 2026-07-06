@@ -6,7 +6,7 @@ meaning-senses:
   - referential
   - grounded
 created: 2026-05-28
-updated: 2026-06-25
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: source/bender-koller-2020-climbing
@@ -46,7 +46,7 @@ For the project's purposes three sub-positions must be kept separate; the contro
 
 The referential axis is where the LLM-meaning debate stops being a matter of degree and becomes a matter of kind. The three sub-positions sort an LLM very differently:
 
-- On **sense**, an LLM has a plausible, almost trivial, claim: distributional training produces fine-grained discriminations between modes of presentation, and "sense as position in an inferential/associative web" is close to what next-token prediction optimizes for. A sense-only construal of meaning is roughly the inferentialist escape hatch (see [`concept/inferential-meaning`](inferential-meaning.md)).
+- On **sense**, an LLM has a plausible, almost trivial, claim: distributional training produces fine-grained discriminations between modes of presentation, and "sense as position in an inferential/associative web" is close to what next-token prediction optimizes for. A sense-only construal of meaning is roughly the inferentialist escape hatch (see [`concept/inferential-meaning`](inferential-meaning.md)). *(Measured instance, added 2026-07-06:* [`claim/lexical-sense-gradience`](../../findings/claims/lexical-sense-gradience.md) is the project's measured case of exactly this sense-tracking — across 200 DWUG EN usage pairs the panel's graded sense-relatedness rating rank-tracks the human DURel median (ρ 0.60–0.83, in/above the human inter-annotator range) and survives partialling out the model's own topic-similarity shadow, cross-date replicated 3/3; it is scoped to `referential.sense` **direction/agreement** and makes **no** reference claim. [`result/lexical-relation-shadow-saturation-v1`](../../findings/results/lexical-relation-shadow-saturation-v1.md) (s186) bears on the same sub-position from the sense-web side at internal-contrast strength — the panel recovers WordNet lexical-relation structure, and that recovery is **not** predicted by corpus co-occurrence cue-strength.)*
 - On **reference**, the claim is contested. Tracking the distribution of "water" is not obviously the same as referring to H₂O; the distributional signal is, by construction, silent on the extension.
 - On **externalist reference-fixing**, the case is at its weakest, and this is exactly where Bender & Koller's form-only critique bites hardest. Their argument is that a system exposed only to *form* has no access to the relation that connects form to anything beyond it. They give that relation a formal shape:
 

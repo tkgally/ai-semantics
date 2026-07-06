@@ -7,7 +7,7 @@ meaning-senses:
   - grounded.perceptual
   - grounded.causal
 created: 2026-05-30
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: source/barsalou-1999-perceptual-symbol-systems
@@ -17,6 +17,12 @@ links:
     target: concept/grounding
   - rel: depends-on
     target: concept/symbol-grounding-problem
+  - rel: depends-on
+    target: result/lexical-perceptual-grounding-moderation-v1
+  - rel: depends-on
+    target: result/multimodal-grounding-image-v1
+  - rel: depends-on
+    target: conjecture/distributional-saturation-grounding-headroom
 ---
 
 # Embodied Cognition and Sensorimotor Theories of Meaning
@@ -64,6 +70,16 @@ Here is a taxonomy of what is and is not testable with current model architectur
 ### The calibration warning
 
 Any finding tagged `grounded.perceptual` in this project should carry an explicit acknowledgement that demonstrating good performance on a perceptual task (e.g., visual question answering, affordance queries) is **not the same as** demonstrating that the model has Barsalou-style modal simulators. Statistical regularity in training data can support good behavior on many perceptual probes without grounding in the theoretical sense. The distinction between "the model gets the right answer" and "the model has a perceptual symbol system" is exactly the Harnad regress re-stated for model behavior: the right answer could be correct for purely distributional reasons.
+
+### What the project's own grounding probes found (added 2026-07-06)
+
+The calibration warning above is not only a caution stated in the abstract — it is what the project's grounding probes actually met. Three `grounded`-tagged findings, all depending on this page, make the embodiment contact concrete:
+
+- **A word's perceptual groundedness does not predict how well a text-only model tracks its senses** — a clean but underpowered NULL, and the project's first `grounded`-tagged result ([`result/lexical-perceptual-grounding-moderation-v1`](../../findings/results/lexical-perceptual-grounding-moderation-v1.md)). Re-analyzing DWUG graded-sense ratings moderated by the Lancaster Sensorimotor Norms, the sense-tracking monotonicity is *not* stronger for perceptually grounded lemmas (if anything a weak opposite tilt, driven by gpt-5.4-mini). Read as "no detectable moderation, or an effect this design cannot resolve," **not** as evidence against grounding.
+- **Showing the depicting image does not improve the panel's sense separation for clear homonyms** — a *redundancy* NULL, the project's first image-input probe ([`result/multimodal-grounding-image-v1`](../../findings/results/multimodal-grounding-image-v1.md)) — because the text-only panel already separates those senses perfectly (AUC = 1.000). This is the Harnad regress restated behaviorally: redundant (or good) performance on a perceptual probe is silent on whether the model has a perceptual symbol system, and the test is least sensitive exactly where clear homonyms make vision and text *both* maximally separating.
+- **The forward bet that generalizes the two nulls** — [`conjecture/distributional-saturation-grounding-headroom`](../../findings/conjectures/distributional-saturation-grounding-headroom.md): perceptual input can move lexical-sense behavior *only* in the residual the text distribution under-determines, and for concrete sense that residual is empirically narrow. Its gating *shape* has first confirming-direction support (a re-operationalized VWSD run, 3/3 models in direction), but the headroom *magnitude* is untested and — on current open resources — un-instrumentable, so the conjecture rests at `tested` (gating shape only), not established.
+
+The embodiment reading of all three: where the text distribution already saturates a sense distinction, the *degree* a picture adds is ≈ 0 — consistent with the calibration warning that statistical regularity can carry perceptual-probe behavior without Barsalou-style modal simulators, and leaving the strong grounding claim **bounded, not refuted**.
 
 ## The externalist gap
 
