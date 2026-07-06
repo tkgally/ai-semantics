@@ -37,9 +37,9 @@ Standing references:
 
 ### Decisions — open
 
-61 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+62 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/antonymy-internal-contrast-scoring.md`](decisions/open/antonymy-internal-contrast-scoring.md) — A1b antonymy internal-contrast — what the distributional control IS (no co-occurrence data in-repo), how to score relatum recovery with no human gold, and the internal-c… · **open**
+*(none)*
 
 ### Base — concepts
 
@@ -429,6 +429,7 @@ Standing references:
 
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
+- `experiments/runs/2026-07-06-s185-antonymy-ratification-vote/` (no README)
 - `experiments/runs/2026-07-06-s184-ratification-votes/` (no README)
 - `experiments/runs/2026-07-05-lexical-sense-gradience-probe-rep2/` (no README)
 - [`experiments/runs/2026-07-04-aann-behavioral-gradient-rep2/`](../experiments/runs/2026-07-04-aann-behavioral-gradient-rep2/README.md)

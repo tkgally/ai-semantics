@@ -66,13 +66,16 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   scoring "recovery" without a human gold is the value-laden crux — so A1b is a fresh design +
   decision-trail unit first, run only after cross-session ratification.]** **[DESIGN landed s184
   → [`design/lexical-relation-shadow-saturation-v1`](../experiments/designs/lexical-relation-shadow-saturation-v1.md);
-  three gates opened as [`decisions/open/antonymy-internal-contrast-scoring`](decisions/open/antonymy-internal-contrast-scoring.md)
-  (eligible s185): Q1 the control (the s184 design confirmed SubTLEX-US is unigram-only — **no**
-  co-occurrence data — so the contrastive-frame control must be **fetched** from a license-verified
-  corpus or substituted by an embedding proxy, gated on a scout), Q2 the no-human-gold recovery
-  scoring (default: WordNet-definitional target + model-vs-control hit-rate residual), Q3 the
-  `internal-contrast-only` anchor; plus a frame-ablation arm. **Nothing frozen, nothing run.** Item
-  stays `[ ]` until the run. Ratify + run s185.]**
+  three gates **ratified ADOPT DEFAULTS s185** ([`decisions/resolved/antonymy-internal-contrast-scoring`](decisions/resolved/antonymy-internal-contrast-scoring.md);
+  fresh reviewer + non-Anthropic vote converged): **Q1-C** the control (the s184 design confirmed
+  SubTLEX-US is unigram-only — **no** co-occurrence data — so the faithful contrastive-frame G²
+  control must be **fetched** from a license-verified corpus, embedding cosine only a labelled
+  sensitivity check, gated on a scout), **Q2-A** the no-human-gold recovery scoring
+  (WordNet-definitional target + model-vs-control hit-rate residual), **Q3 `internal-contrast-only`**
+  anchor; plus a frame-ablation arm. Four freeze-time conditions recorded on the resolved decision
+  (chief: clause-2 4-vs-6-relation cue-strength granularity). **Nothing frozen, nothing run.** Item
+  stays `[ ]` until the run — s185 ratified the gates + ran the corpus license scout (see the s185
+  ledger row); the freeze + run follow.]**
 - **A1c `[x]` Shadow-depth table v1** (s171 → [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md);
   four beater rows — CC covariation, dative info-structure, AANN gradient, sense gradience — each a residual over a
   named distributional control with a 95% CI, plus the antonymy/presupposition corners as marked readings/bets;
