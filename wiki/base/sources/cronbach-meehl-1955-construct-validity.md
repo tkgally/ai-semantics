@@ -10,10 +10,10 @@ venue: "Psychological Bulletin 52(4): 281–302"
 url: https://psychclassics.yorku.ca/Cronbach/construct.htm
 access: open-access-mirror
 meaning-senses:
-  - operational
+  - measurement-epistemic
 status: received
 created: 2026-06-23
-updated: 2026-06-23
+updated: 2026-07-06
 links: []
 ---
 

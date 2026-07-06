@@ -10,10 +10,10 @@ venue: "Psychological Bulletin 56(2): 81–105"
 url: https://www2.psych.ubc.ca/~schaller/528Readings/CampbellFiske1959.pdf
 access: open-access-mirror
 meaning-senses:
-  - operational
+  - measurement-epistemic
 status: received
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-06
 links:
   - rel: supports
     target: source/cronbach-meehl-1955-construct-validity

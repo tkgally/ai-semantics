@@ -14,7 +14,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-07-04
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: supersedes
     target: theory/situating-llm-meaning
@@ -352,7 +352,12 @@ in the same breath: on that occasion `gpt-5.4-mini`'s coarse Tier-0 form check d
 entirely on the marginal *objects + negative-evaluative* items, even as its graded gradient stayed
 undiminished. So the coarse binary form-ceiling can be *more fragile at the margin* than the graded
 sensitivity it supposedly presupposes — a datum the map records but does not yet know how to place,
-noted as a live seed rather than a settled cell.
+noted as a live seed rather than a settled cell. *(Placed 2026-07-06, s184: the measurement-epistemic
+reading of this wrinkle — a coarse **binary** indicator can be more fragile than the **graded** one
+it summarizes, because of measurement grain, not intrinsic formal fragility — is now a third texture
+in [`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md). The map
+still carries the form-ceiling/gradient relation as an unsettled theoretical cell; what found a home
+is the *reading discipline* for it.)*
 
 **Holism — the project's own positives inherit its objection; the dissociation is a mild strain on
 its strongest form.** Distributional models are holistic by construction, and the conceptual-role

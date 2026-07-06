@@ -12,10 +12,10 @@ url: https://dennyborsboom.com/wp-content/uploads/2017/01/borsboomvalidity2004.p
 access: open-access-mirror
 meaning-senses:
   - referential
-  - operational
+  - measurement-epistemic
 status: received
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-06
 links:
   - rel: contradicts
     target: source/cronbach-meehl-1955-construct-validity

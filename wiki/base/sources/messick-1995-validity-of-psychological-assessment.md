@@ -9,10 +9,10 @@ venue: "American Psychologist 50(9): 741–749"
 url: https://people.bath.ac.uk/edspd/Weblinks/MA_Ass/Resources/Quality%20issues/Messick%201995%20AP.pdf
 access: open-access-mirror
 meaning-senses:
-  - operational
+  - measurement-epistemic
 status: received
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-06
 links: []
 ---
 

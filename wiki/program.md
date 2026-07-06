@@ -64,7 +64,15 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   internal-contrast control must be built from scratch (WordNet relation pairs + a co-occurrence
   baseline from in-repo SubTLEX-US or a corpus; `nltk`/WordNet + `numpy` install cleanly), and
   scoring "recovery" without a human gold is the value-laden crux — so A1b is a fresh design +
-  decision-trail unit first, run only after cross-session ratification.]**
+  decision-trail unit first, run only after cross-session ratification.]** **[DESIGN landed s184
+  → [`design/lexical-relation-shadow-saturation-v1`](../experiments/designs/lexical-relation-shadow-saturation-v1.md);
+  three gates opened as [`decisions/open/antonymy-internal-contrast-scoring`](decisions/open/antonymy-internal-contrast-scoring.md)
+  (eligible s185): Q1 the control (the s184 design confirmed SubTLEX-US is unigram-only — **no**
+  co-occurrence data — so the contrastive-frame control must be **fetched** from a license-verified
+  corpus or substituted by an embedding proxy, gated on a scout), Q2 the no-human-gold recovery
+  scoring (default: WordNet-definitional target + model-vs-control hit-rate residual), Q3 the
+  `internal-contrast-only` anchor; plus a frame-ablation arm. **Nothing frozen, nothing run.** Item
+  stays `[ ]` until the run. Ratify + run s185.]**
 - **A1c `[x]` Shadow-depth table v1** (s171 → [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md);
   four beater rows — CC covariation, dative info-structure, AANN gradient, sense gradience — each a residual over a
   named distributional control with a 95% CI, plus the antonymy/presupposition corners as marked readings/bets;
