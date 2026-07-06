@@ -5,7 +5,7 @@ title: "Is the quant×temporal AANN inversion — the one cell where every model
 meaning-senses:
   - constructional
   - human-comparison
-status: open
+status: answered
 contingent-on: []
 created: 2026-07-06
 updated: 2026-07-06
@@ -21,6 +21,21 @@ links:
 ---
 
 # Open question: is the quant×temporal AANN inversion a class effect or a lexical effect?
+
+> **ANSWERED 2026-07-06 (s189) — NEITHER; it is an inventory artifact. VERDICT: NULL.**
+> The widened probe ran ([`result/aann-quant-temporal-inversion-v1`](../results/aann-quant-temporal-inversion-v1.md),
+> under [`design/aann-quant-temporal-inversion-v1`](../../../experiments/designs/aann-quant-temporal-inversion-v1.md)
+> and the ratified [`decisions/resolved/aann-quant-temporal-inversion-design`](../../decisions/resolved/aann-quant-temporal-inversion-design.md)).
+> On a widened K=20 quantity-modifier set (rated on an identical balanced temporal frame), the quant cell
+> is **no longer the lowest of the four adjective classes for any of the three models** — it rises to
+> **2nd** (below *ambig*, above *pos/neg*). The located inversion **does not reproduce**: it was an
+> artifact of the thin held-out quant inventory, which over-weighted **low-frequency, large-magnitude,
+> semantically-marginal** adjectives (*towering, colossal, sizable, lavish, ample*). Those are exactly
+> the modifiers that invert on the widened set (towering 3/3); the natural higher-frequency ones do not,
+> and per-modifier inversion tracks **Zipf frequency** (+0.28–0.37). **This page's own hypothesis is
+> falsified in passing:** the *scant/mere/measly/paltry* small-quantity items named below as the likely
+> carriers do **not** invert. Arm 1 confirms the dissolution on Mahowald's own attested quant set (0–1/10
+> modifiers inverting). The [`predictions.md`](../../predictions.md) bet lost; written as the clean, pre-named NULL.
 
 > **Why this page exists (a $0 scoping artifact).** A read-only re-analysis
 > ([`result/aann-temporal-why-reanalysis`](../results/aann-temporal-why-reanalysis.md)) pinned the
