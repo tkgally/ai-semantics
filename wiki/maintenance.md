@@ -180,6 +180,22 @@ as open-questions/backlog items):**
    11/11 on shared words; a ready-made instrument-sensitivity object for the measurement track.
    *(homonym-meaning-dominance-norms, s94 note)*
 
+**Triage dispositions (s187, campaign P4 — 3 promoted, 1 discharged, 5 kept-as-backlog with typed
+homes; none silently dropped):** #1 **discharged** (s186 A1b ran a frame-ablation arm — antonym
+recovery survives frame suppression, [`result/lexical-relation-shadow-saturation-v1`](findings/results/lexical-relation-shadow-saturation-v1.md));
+#2 **backlog** ($0 re-analysis with a typed home — the [`essay/capability-split`](findings/essays/capability-split.md)
+trigger (c); meta/capability, not lexical/grammatical meaning); #3 **promoted →**
+[`open-question/lexical-regular-polysemy-productivity`](findings/open-questions/lexical-regular-polysemy-productivity.md)
+(the lexical wug-test); #4 **backlog** (a scout, already tracked in
+[`open-question/grounding-magnitude-instrument`](findings/open-questions/grounding-magnitude-instrument.md)
++ [`resource/multimodal-anchor-scouting`](base/resources/multimodal-anchor-scouting.md)); #5
+**promoted →** [`open-question/graded-privativity-gradient`](findings/open-questions/graded-privativity-gradient.md);
+#6 **promoted →** [`open-question/aann-quant-temporal-inversion`](findings/open-questions/aann-quant-temporal-inversion.md)
+(human anchor already in-repo, Mahowald Exp-2); #7 **backlog** (already a named-and-suspended arm of
+[`open-question/relational-meaning-pilot`](findings/open-questions/relational-meaning-pilot.md)); #8
+**backlog** ($0 revision / orphan-cure unit, not question-shaped); #9 **backlog** ($0 note-type case
+study, recorded in the `homonym-meaning-dominance-norms` s94 note).
+
 **Tier 2 — good, needs a scout or a design decision first:** human-anchored scalar-implicature
 divergence (van Tiel scalar-diversity / VAQUUM license scouts; the few→many split is
 twice-observed); Bresnan & Ford 2010 per-item ratings scout (a human dative effect-*size*
@@ -191,6 +207,12 @@ discreteness test's missing ingredient); human order/path-sensitivity anchor sco
 relational synthesis's IOU); cross-instrument jitter table (K≈5 re-runs on 2–3 instruments —
 point-estimate trigger (b)); behavioral projectivity re-ranking of the SEP trigger taxonomy
 (manner adverbs non-projective, *only* projects cleanly).
+
+*(s187 note: the "frontier-panel replication of the Cao six-relation battery (internal-contrast
+form)" seed above is **partially addressed** — s186's A1b [`result/lexical-relation-shadow-saturation-v1`](findings/results/lexical-relation-shadow-saturation-v1.md)
+ran a same-task six-WordNet-noun-relation panel battery against a distributional control, falsifying
+the shadow-saturation conjecture; a fuller Cao-parallel replication [all six as Cao framed them,
+distinguishability metric] remains live. No other Tier-2/3 seed was resolved by s186.)*
 
 **Tier 3 — recorded textures and method seeds (cite when relevant; no unit owed):** gpt's
 length-modulated givenness wrinkle (twice-reproduced, reported-not-read); measure-class-dependent
@@ -216,10 +238,21 @@ splitting arm.
   left **peripheral** — its two-essay trigger-(d) tension is a finding-adjacent question for a future
   session, out of maintenance scope). Adversarial coherence pass **CLEAN (zero BLOCKERs)**. Paired
   with the A1b ratify + corpus scout. Next: **P4**.
-- **P4** — concept on-ramp deepening (each of the 17 concepts points at the current findings
-  bearing on it — polysemy/relational/constructional/multimodal-compositionality/grounding/
-  inferential-meaning/deflationary done or partially done s183; the rest checked); ideas-harvest
-  triage (Tier 1 → formed pages or backlog rows; Tiers 2–3 kept here with one-line dispositions).
+- **P4 `[x]` (s187)** — concept on-ramp deepening + ideas-harvest triage **done**. **Concepts:** the
+  3 stale foundational pages that predated the s183 pass and lacked a current-findings on-ramp deepened
+  (`distributional-meaning` → the shadow-depth table + 4 beater claims + s186 antonymy result;
+  `symbol-grounding-problem` → the grounding nulls + headroom conjecture + magnitude OQ;
+  `referential-meaning` → the sense-gradience claim + s186 result on `referential.sense`); the 6
+  s183-touched-but-not-"done" concepts verified (5 deepened — coercion, frame-and-prototype,
+  truth-conditional-and-use, embodied-cognition, formal-vs-functional; `semantic-holism` already-current,
+  untouched). All history-preserving; no finding changed. **Ideas triage:** 3 new open-questions
+  (regular-polysemy wug-test #3; quant×temporal AANN inversion #6 [Mahowald-anchored]; graded privativity
+  #5), 1 seed discharged (#1, by s186), 5 kept-as-backlog with typed homes — full disposition in the
+  "Ideas harvest" section above. **Adversarial coherence pass: no BLOCKERs** (4 SHOULD-FIX + 3 NIT, all
+  applied at integration: predictions.md row added, embodied-cognition front-matter cycle dropped, essay
+  session# fixed, shadow-depth-table honesty-box-2 staleness reconciled, meronymy range + an over-quote
+  tightened). Paired with the philosophical-track decoupling essay (both tracks, this session leaning
+  philosophical). Next: **P5** (close-out).
 - **P5** — spot re-audit (fresh agent, sampled pages incl. every s183-fixed BLOCKER); close this
   ledger with a dated summary; delete [`continue-prompt.md`](../continue-prompt.md) §5; log the closure.
 
@@ -227,6 +260,7 @@ splitting arm.
 
 | Date | Session | What happened |
 |------|---------|---------------|
+| 2026-07-06 | s187 | **P4 done** (concept on-ramp deepening + ideas-harvest triage) — the campaign's next phase, deferred from s186. Workflow mode: 4 parallel bounded units (2 concept slices + ideas triage + a philosophical essay) → read-only adversarial coherence pass → orchestrator integration. **Concepts:** 3 stale foundational on-ramps deepened (`distributional-meaning`, `symbol-grounding-problem`, `referential-meaning` — none had pointed at the current findings; now → shadow-depth table, the 4 beater claims, the grounding nulls + headroom conjecture, the s186 antonymy result), + 6 s183-touched concepts verified (5 deepened, `semantic-holism` already-current). History-preserving; **no finding changed** (coherence pass verified every figure/quote against source). **Ideas triage:** 3 new open-questions ([`lexical-regular-polysemy-productivity`](findings/open-questions/lexical-regular-polysemy-productivity.md), [`aann-quant-temporal-inversion`](findings/open-questions/aann-quant-temporal-inversion.md), [`graded-privativity-gradient`](findings/open-questions/graded-privativity-gradient.md)); seed #1 discharged (s186 ran its frame-ablation); 5 kept-as-backlog with typed homes; full 9-seed disposition recorded. **Coherence pass: no BLOCKERs** — 4 SHOULD-FIX + 3 NIT all applied (predictions.md H1/H2 bet row [PROTOCOL §3]; embodied-cognition front-matter cycle dropped; essay session 186→187; **shadow-depth-table honesty-box-2 staleness reconciled** — both saturated corners' controls have run [presupposition s173 under-licensed, antonymy s186 falsified], flagged v2-owed at next touch; meronymy range 0.14→0.12 low-bound; one over-quote tightened). Also landed the philosophical [`essay/cue-strength-recovery-decoupling`](findings/essays/cue-strength-recovery-decoupling.md) (own-voice; new falsifiable bet). $0 (no model calls — all subagents harness-model, coherence pass read-only). |
 | 2026-07-06 | s185 | **P3 done** (program B6 note-sweep + orphan cures; paired with the A1b decision ratification + corpus scout). **12 result pages → `note`** (`type: note`, `status: recorded`), moved to `wiki/findings/notes/` (dir created): the build/feasibility gates (`forced-both-lexical-build-attempt-v1/v2`, `function-word-swap-build-v1`, `addarm-headroom-calibration-v1`, `monotonicity-c1-completion-calibration-v1`, `-generalization-b2-nogo-v1`, `-c2-privative-calibration-v1`), the two VWSD NL-baseline deferrals (`-audit-v1`, `-regrade-v1`), and the three $0 re-analyses (`cross-axis-lexical-constructional-ordering-v1`, `instrument-disagreement-reanalysis-v1`, `projection-trigger-inventory-family-decomposition-v1`). Each carries a dated reclassification box; **every measured value byte-identical** (coherence pass word-diffed all 12: only type/status/updated/box/links changed). Sole-support guardrail **clear** (no `claims/` page cites any of the 12). **4 finding-bearing borderlines kept as results** (conservative bias): `aann-temporal-why-reanalysis` (a $0 re-analysis, but human-anchored to Mahowald with a *new* model-vs-human divergence), `monotonicity-causative-progressive-cancel-v1` (measured suppression, not a buildability gate), `lexical-perceptual-grounding-moderation-v1` (human-anchored NULL), `function-word-few-many-split` (a new interpretive-mechanism finding). ~40 files' inbound links rewritten (`result/<id> → note/<id>` in front-matter targets, prose labels, and paths — incl. superseded theory v1, path-only). Orphan cures as in the P3 checklist above. **Adversarial coherence pass: CLEAN, zero BLOCKERs** (2 cosmetic NITs, no action). $0 (no model calls in P3). |
 | 2026-07-06 | s184 | **P2 done** (paired with the A1b antonymy design). Both s183-opened decisions **ratified ADOPT-A** — fresh adversarial reviewer + one non-Anthropic decorrelation vote (`openai/gpt-5.4-mini`) **converged on each** ($0.002774 for the two votes). *result-status-upgrade-semantics:* event-based transition rule documented in CLAUDE.md (mechanical-gate vs reading-bearing sort; `supported` lives on the claim layer for reading-bearing lines; gate pages may be created `supported`; status non-ranking/possibly-stale until normalized; theory draft→live deferred to next substantive touch) — **no result mass-edited, no theory flipped to `live`** (option A's no-mass-edit clause). *meaning-senses-methodology-tags:* `measurement-epistemic` tag added (broadened gloss + How-to-tag guardrail) + six `base/sources/` retags. Deferred-to-P2 remainder cleared: `operationalizes: design/<id>` **blessed** in CLAUDE.md; one pending-Tom straggler (way-construction) noted; `homonym-meaning-dominance-norms` regraded `scouting → verified`; 7 touched pages' `updated:` bumped; spine lag-scan found only citation-date false positives; linkify clean. $0.002774 (two ratification votes). |
 | 2026-07-05 | s183 | Campaign opened (Tom-directed). Full six-slice audit (~370 pages, ~170 issues, 12 BLOCKERs); orchestrator fixed all BLOCKERs; five fix agents applied the batch tranche; exec-summary regenerated (B4 ticked); predictions.md completed; program.md reconciled; CLAUDE.md conventions corrected/documented; 2 decisions queued; this ledger + the continue-prompt §5 plan written. Fresh-agent adversarial coherence pass over the full diff → **SAFE-TO-LAND after patch** (1 BLOCKER — an invented meta-number in the regenerated exec summary — + 11 SHOULD-FIX + 12 NIT, **all applied**, including the NITs the reviewer offered to defer). $0. |

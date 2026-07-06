@@ -54,7 +54,7 @@ Productivity is the diagnostic. So:
 > contents, the works) that the productive pattern predicts, while **withholding** an extension the
 > pattern does *not* license (an idiosyncratic/irregular sense, or an unrelated homonymic sense)? And
 > is productivity **uniform across patterns**, or **graded** — stronger for tightly-constraining
-> patterns, weaker where the pattern "loosely constrains its extended sense" (the source's own caveat)?
+> patterns, weaker where the pattern only "loosely constrains" its extended sense (the source page's gradience note)?
 
 ## Why it matters for lexical meaning
 
@@ -93,7 +93,7 @@ A minimal-pair, forced-choice / inference design over **authored nonce nouns**:
    is not extending.
 4. **Pattern-gradedness arm.** Cross several patterns (animal-for-meat, container-for-contents,
    artist-for-works, tree-for-wood, institution-for-building) and read whether productivity is uniform
-   or graded — the source's "degrees to which a pattern loosely constrains its extended sense."
+   or graded — the source page notes the pattern-membership is itself gradient (degrees to which a pattern only "loosely constrains" its extended sense).
 
 The null is first-class and must be declared up front: **no productive extension** (the model treats
 the nonce word's frame-fixed sense as its only sense, declining the metonymic extension) is a clean

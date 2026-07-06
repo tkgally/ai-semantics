@@ -17,12 +17,6 @@ links:
     target: concept/grounding
   - rel: depends-on
     target: concept/symbol-grounding-problem
-  - rel: depends-on
-    target: result/lexical-perceptual-grounding-moderation-v1
-  - rel: depends-on
-    target: result/multimodal-grounding-image-v1
-  - rel: depends-on
-    target: conjecture/distributional-saturation-grounding-headroom
 ---
 
 # Embodied Cognition and Sensorimotor Theories of Meaning

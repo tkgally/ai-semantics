@@ -96,6 +96,11 @@ links:
 > distributional shadow is largest for antonymy, but on the frontier panel it does not saturate
 > antonym recovery, and cueing does not predict recovery* — scoped to the panel and to the local
 > control. `status: draft → revised`.
+>
+> The **cross-relation** generalization of this complication — that raw contrastive-frame cue-strength
+> decouples from recovery across *all six* relations, not only at antonymy, and what that does to using
+> cue-strength as a stand-in for shadow-depth — is developed in
+> [`essay/cue-strength-recovery-decoupling`](cue-strength-recovery-decoupling.md) (s187).
 
 ## The convergence
 

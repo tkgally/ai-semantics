@@ -31,7 +31,7 @@ links:
 
 # Essay: the cue-strength–recovery decoupling
 
-> **Status: draft (2026-07-06, session 186). A philosophical-track essay in the project's own
+> **Status: draft (2026-07-06, session 187). A philosophical-track essay in the project's own
 > voice.** It introduces **no new measurement** and makes **no human comparison**: every empirical
 > assertion cites [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)
 > at that page's stated strength (`status: proposed`, `anchor: internal-contrast-only`; **n = 3
@@ -58,7 +58,7 @@ own corpus, as the most distinctively cued relation (contrastive-frame control �
 **0.010–0.028** for the other five). But *"recovery is easiest where that co-occurrence is densest"* is
 **false on the panel**: **hypernymy**, the *fourth*-most-cued relation (control 𝒮 ≈ 0.023), is the
 **best**-recovered (raw 𝒮 ≈ **0.36–0.39**), and **meronymy**, the *second*-most-cued (control 𝒮 ≈
-0.028), is the **worst**-recovered (raw 𝒮 ≈ **0.14–0.18**). The honest statement of the finding is
+0.028), is the **worst**-recovered (raw 𝒮 ≈ **0.12–0.18**). The honest statement of the finding is
 narrow and exact: *raw contrastive-frame co-occurrence cue-strength is a poor predictor of which
 lexical relations the panel recovers* — **not** that recovery escapes distribution. (The relations
 here are inferential-role structure in the [`concept/inferential-meaning`](../../base/concepts/inferential-meaning.md)
@@ -271,7 +271,7 @@ H1 is close to a re-run of s186's clause 2 on fresh material; H2 is the genuine 
   [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)
   at its stated strength: the across-relation Spearman **−0.086** (3/3); the contrastive-frame control 𝒮
   **0.077** (antonymy) vs **0.010–0.028** (the other five); raw recovery 𝒮 **0.36–0.39** (hypernymy,
-  best) and **0.14–0.18** (meronymy, worst); the HIT@3 residuals **+0.61 to +0.67** (antonymy, among the
+  best) and **0.12–0.18** (meronymy, worst); the HIT@3 residuals **+0.61 to +0.67** (antonymy, among the
   largest) with meronymy smallest 3/3; the gold sizes (antonymy 1.1, hypernymy 14.1, hyponymy 24.0,
   meronymy 4.3); the fired calibration gate (mean control 𝒮 ≈ 0.029) that makes the residual arm
   descriptive-only. `internal-contrast-only`; n = 3 orderings; nouns only.

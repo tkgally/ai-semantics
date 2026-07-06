@@ -232,3 +232,20 @@ distributional control has been run on the panel for either. So the table demons
 project has measured that the shadow can be beaten at both grains, and it has a well-argued but
 uncontrolled reading that each grain also has a corner where the shadow is deep enough to leave no
 residual — the controls that would settle the second half are named and owed.*
+
+> **Update (2026-07-06, s187 — coherence reconciliation).** This box lagged the page's own rows:
+> **both** saturated corners' matched controls have since **run**, so "no matched distributional
+> control has been run on the panel for either" and "the controls … are named and owed" are
+> **superseded**. Presupposition ran s173 ([`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md))
+> — **BEATS-DOPPELGANGER but under-licensed** (word-form-keyed, surface-cue-reconstructable), so it
+> stays a *reading-with-a-measured-caveat*, not a clean saturated result. Antonymy ran s186
+> ([`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md))
+> — **FALSIFIED**: antonym recovery clears wide daylight above the contrastive-frame control, so the
+> corner **did not saturate** and its reading **moved** (see the antonymy row above; the cross-relation
+> reading is developed in [`essay/cue-strength-recovery-decoupling`](../essays/cue-strength-recovery-decoupling.md)).
+> **Net:** the saturated half is now **measured and weaker than this box states** — neither corner is a
+> clean uncontrolled reading (presupposition under-licensed, antonymy falsified), so "each pole has a
+> shadow-saturated corner" is a **controlled-and-weakened** structural claim at both poles, not merely
+> an argued one. The original text is kept for history; read it with this update. (Three dated update
+> boxes now sit on this v1 — the theory-edition rule, [`PROTOCOL.md`](../../../PROTOCOL.md) §3, is at
+> its threshold; a clean v2 is owed at this page's next substantive touch.)
