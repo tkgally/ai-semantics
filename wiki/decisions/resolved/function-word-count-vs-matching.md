@@ -49,7 +49,7 @@ links:
 > reviewer declined the easier (less-authoring) path because it is unsound — not to change a
 > result — and the boundary held (opened session 67, no model output exists). Build-v2 binding
 > conditions are in **§Ratified resolution** below. See
-> [`result/function-word-swap-build-v1`](../../findings/results/function-word-swap-build-v1.md)
+> [`note/function-word-swap-build-v1`](../../findings/notes/function-word-swap-build-v1.md)
 > (corrected this session) and `experiments/runs/2026-06-21-function-word-vs-content-swap/`.
 
 ## Ratified resolution — binding conditions for build-v2

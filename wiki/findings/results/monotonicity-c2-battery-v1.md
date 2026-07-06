@@ -16,7 +16,7 @@ links:
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
   - rel: refines
-    target: result/monotonicity-c2-privative-calibration-v1
+    target: note/monotonicity-c2-privative-calibration-v1
   - rel: refines
     target: result/conative-cancel-direction-v2
   - rel: depends-on
@@ -165,7 +165,7 @@ confirms nor refutes it.
   and independently recomputed from the per-call `raw/*.json` by a read-only post-run verifier
   (exact match; 324/324 priced, 0 missing, 0 parse failures; leave-one-out diagnostic run).
 - The ADD arm is the s135 frozen resultative arm reused byte-for-byte (sha `80bd4b60b55a3e60`); the
-  C2 default ceiling (1.00, 3/3) is from [`result/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md);
+  C2 default ceiling (1.00, 3/3) is from [`note/monotonicity-c2-privative-calibration-v1`](../notes/monotonicity-c2-privative-calibration-v1.md);
   the matched conflicting-cue paradigm and the off-ceiling/fragile cancel pattern are from
   [`result/conative-cancel-direction-v2`](conative-cancel-direction-v2.md). M1/M2 are the ratified
   decision's own modifications.

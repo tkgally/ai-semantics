@@ -1,15 +1,15 @@
 ---
-type: result
+type: note
 id: addarm-headroom-calibration-v1
 title: Add-arm headroom calibration — a genuinely non-entailing control exists and the resultative add arm has real licensing headroom; the default-coincidence trap is real but verb-specific and avoidable
 meaning-senses:
   - constructional
   - inferential
-status: supported
+status: recorded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-28
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: refines
     target: open-question/constructional-monotonicity-addarm-headroom
@@ -22,6 +22,8 @@ links:
 ---
 
 # Result: add-arm headroom calibration v1
+
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A design-feasibility calibration (pure instrument design); it decides whether an add arm can be built and tests no conjecture — a feasibility record. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
 
 > **Design-feasibility calibration, `internal-contrast-only`.** This result decides whether a non-degenerate **add arm** can be built for a future monotonicity-generalization battery; it is **not** a test of [`conjecture/constructional-monotonicity-asymmetry`](../conjectures/constructional-monotonicity-asymmetry.md) and makes **no human-comparison claim** — it measures only within-model construction-vs-control affirm rates. The `internal-contrast-only` posture follows the same ratified logic as the conflicting-cue arms ([`decisions/resolved/conflicting-cue-human-anchor`](../../decisions/resolved/conflicting-cue-human-anchor.md)); this calibration is even further from a human claim (pure instrument design). Pre-registration, run record, and every number: [`experiments/runs/2026-06-28-addarm-headroom-calibration/`](../../../experiments/runs/2026-06-28-addarm-headroom-calibration/README.md).
 
@@ -63,10 +65,10 @@ It does **not** discharge prerequisites 2–4 (concrete frozen thresholds for th
 
 - **Does:** establish that a non-degenerate add arm with genuine headroom **can be built** (the feasibility the s132 blocker required) for both candidate constructions; supply the verb pools and trap exclusions.
 - **Does not:** test the monotonicity conjecture (this measures feasibility only, never add-vs-cancel); make any human comparison (`internal-contrast-only`); or ratify the operationalization decision.
-- **Limits:** small-N (12 verbs/construction), single run, panel-as-instrument — a direction-of-feasibility signal, not a magnitude. The **bare-transitive is one control framing**, not the only conceivable one; a verb failing here fails *this* control, which is why the verdict is read per-verb so the clean subset survives a few degenerate verbs. The add direction's *depth* remains bounded ([`result/coercion-implicit-cue-v2b`](coercion-implicit-cue-v2b.md): "explicit-outcome parsing, not world-model integration") — a headroom-clean add arm is a buildable instrument, not a standalone competence claim.
+- **Limits:** small-N (12 verbs/construction), single run, panel-as-instrument — a direction-of-feasibility signal, not a magnitude. The **bare-transitive is one control framing**, not the only conceivable one; a verb failing here fails *this* control, which is why the verdict is read per-verb so the clean subset survives a few degenerate verbs. The add direction's *depth* remains bounded ([`result/coercion-implicit-cue-v2b`](../results/coercion-implicit-cue-v2b.md): "explicit-outcome parsing, not world-model integration") — a headroom-clean add arm is a buildable instrument, not a standalone competence claim.
 
 ## Provenance
 
 - Every figure is reproduced verbatim from [`experiments/runs/2026-06-28-addarm-headroom-calibration/raw/results.json`](../../../experiments/runs/2026-06-28-addarm-headroom-calibration/README.md) and was independently recomputed from the per-call `raw/*.json` by a read-only post-run verifier (exact match; 288/288 priced, 0 parse failures).
-- The degeneracy worry this addresses is quoted from [`decisions/resolved/constructional-monotonicity-generalization-operationalization`](../../decisions/resolved/constructional-monotonicity-generalization-operationalization.md) ("Ratification attempt 1 — session 132") and [`open-question/constructional-monotonicity-addarm-headroom`](../open-questions/constructional-monotonicity-addarm-headroom.md); the base-accuracy context (resultative 0.77–0.89) from [`result/scivetti-cxnli-answer-key-v1`](scivetti-cxnli-answer-key-v1.md), *Per-construction accuracy*.
+- The degeneracy worry this addresses is quoted from [`decisions/resolved/constructional-monotonicity-generalization-operationalization`](../../decisions/resolved/constructional-monotonicity-generalization-operationalization.md) ("Ratification attempt 1 — session 132") and [`open-question/constructional-monotonicity-addarm-headroom`](../open-questions/constructional-monotonicity-addarm-headroom.md); the base-accuracy context (resultative 0.77–0.89) from [`result/scivetti-cxnli-answer-key-v1`](../results/scivetti-cxnli-answer-key-v1.md), *Per-construction accuracy*.
 - Spend: **$0.06833 billed** (UTC 2026-06-28).

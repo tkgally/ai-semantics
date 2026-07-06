@@ -18,7 +18,7 @@ links:
   - rel: depends-on
     target: result/vwsd-grounding-headroom-v2
   - rel: depends-on
-    target: result/vwsd-grounding-headroom-nlbaseline-regrade-v1
+    target: note/vwsd-grounding-headroom-nlbaseline-regrade-v1
   - rel: depends-on
     target: result/lexical-sense-gradience-v1
   - rel: refines
@@ -57,7 +57,7 @@ words — is the content of prediction 3 of
 and two attempts to read it have now stopped short. v2 could not read it because its under-determined
 stratum was manufactured; the natural-language-baseline successor designed to fix that was built, frozen,
 and deferred when its fluent channel scored **0.438** strict held-out referent-recovery, "still below
-the 0.60 floor" ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+the 0.60 floor" ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
 The magnitude open-question then surveyed every in-repo candidate and concluded that "**No in-repo
 resource is a drop-in magnitude instrument.**"
 ([`open-question/grounding-magnitude-instrument`](../open-questions/grounding-magnitude-instrument.md)).
@@ -224,7 +224,7 @@ specific items (requirement (a)), an image can carry the sense (requirement (c))
 signal lets Δ be read as a width, not a sign (requirement (b)). The magnitude open-question already names
 the build that would meet this — the conjecture's "a fine-polysemy image set ... **not yet in-repo**" —
 and flags that, on VWSD, "a **different** magnitude instrument ... may be needed"
-([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
 A resource or build meeting all four requirements that yielded a **clean positive magnitude** would
 *discharge* this difficulty entirely: it would show the self-concealment is defeasible by construction,
 even if not by off-the-shelf means.
@@ -303,7 +303,7 @@ essay's difficulty is *named and then dissolved* — the better outcome, and the
   run "says nothing about the **size** of the residual a fluent text channel would leave"
   ([`result/vwsd-grounding-headroom-v2`](../results/vwsd-grounding-headroom-v2.md), Limitation 1); the
   blocked channel — "0.438," "still below the 0.60 floor," and "a **different** magnitude instrument ...
-  may be needed" ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md));
+  may be needed" ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md));
   and the open-question's four requirements, "Requirements (a) and (b) are in tension on VWSD," and "**No
   in-repo resource is a drop-in magnitude instrument.**"
   ([`open-question/grounding-magnitude-instrument`](../open-questions/grounding-magnitude-instrument.md)).

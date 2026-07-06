@@ -54,9 +54,9 @@ links:
 
 > **Update (2026-07-05, session 183 — wiki-coherence pass).** The natural-language-baseline run owed
 > by Limitation 1 was built and frozen, then twice stopped short of a magnitude read:
-> [`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](vwsd-grounding-headroom-nlbaseline-audit-v1.md)
+> [`note/vwsd-grounding-headroom-nlbaseline-audit-v1`](../notes/vwsd-grounding-headroom-nlbaseline-audit-v1.md)
 > (session 127, deferred at the adequacy-audit gate) and
-> [`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](vwsd-grounding-headroom-nlbaseline-regrade-v1.md)
+> [`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)
 > (session 128, re-graded under a ratified valid scorer — 0.438, still below the [0.60, 0.95]
 > competence floor). The magnitude was then documented un-instrumentable on current open resources —
 > [`open-question/grounding-magnitude-instrument`](../open-questions/grounding-magnitude-instrument.md)

@@ -1,17 +1,17 @@
 ---
-type: result
+type: note
 id: vwsd-grounding-headroom-nlbaseline-audit-v1
 title: "VWSD NL-baseline magnitude run — BUILT + FROZEN, then DEFERRED at the adequacy-audit gate (pre-run-critic NO-GO): the fluent referent-naming NL channel was authored (1158 descriptions, competent on inspection) and the TEXT-NL arm is not saturated (under-det 18 / sat 77), but the held-out adequacy audit reads OUT OF BAND (two-auditor mean high-recovery 0.342 < the [0.60,0.95] floor) for a reason an independent critic verified is a SCORER-VALIDITY artifact, not a degenerate channel — the ratified deterministic scorer needs the literal target-word lemma, but VWSD target words are mostly technical/variant/proper-noun forms a competent description names by common name (~64/70 'none' items are faithful category recoveries mis-scored). Magnitude read deferred; IMAGE arm NOT read; the narrow-headroom (prediction 3) bet stays UNTESTED. No magnitude result. $3.115."
 meaning-senses:
   - grounded.perceptual
   - distributional
   - referential.sense
-status: proposed
+status: recorded
 anchor: internal-contrast-only
 contingent-on:
   - []
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-07-06
 links:
   - rel: depends-on
     target: conjecture/distributional-saturation-grounding-headroom
@@ -27,9 +27,11 @@ links:
 
 # Result: the VWSD NL-baseline magnitude run was built and frozen, then deferred at the adequacy-audit gate (pre-run-critic NO-GO) — a scorer-validity wall, not a finding about grounding
 
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A build+freeze+adequacy-audit that DEFERRED at the gate (pre-run-critic NO-GO); no magnitude was read and it makes no human- or within-model claim — a feasibility/deferral record. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
+
 > **Status: proposed (2026-06-28, session 127).** A **build + freeze + audit attempt** of the
 > natural-language-baseline magnitude probe owed by
-> [`result/vwsd-grounding-headroom-v2`](vwsd-grounding-headroom-v2.md)'s first-class Limitation 1
+> [`result/vwsd-grounding-headroom-v2`](../results/vwsd-grounding-headroom-v2.md)'s first-class Limitation 1
 > ("a natural-language-baseline run is owed to test magnitude"). Built under the ratified competence
 > standard [`decisions/resolved/vwsd-nlbaseline-competence-dv`](../../decisions/resolved/vwsd-nlbaseline-competence-dv.md)
 > (Q1-C) with the three audit numbers ratified s127
@@ -42,7 +44,7 @@ links:
 > first-class outcome; it makes **no** human-comparison claim (the magnitude vs human gold was never
 > read), hence `anchor: internal-contrast-only`.
 >
-> **Follow-through (session 128): [`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](vwsd-grounding-headroom-nlbaseline-regrade-v1.md).**
+> **Follow-through (session 128): [`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](vwsd-grounding-headroom-nlbaseline-regrade-v1.md).**
 > The scorer-validity decision this page surfaced was ratified, and the stored guesses were re-graded
 > under a held-out two-judge cross-only **category-match** scorer → **0.438**: higher than this page's
 > literal-lemma 0.342 (so the literal scorer *was* partly under-counting, as the s127 critic diagnosed)

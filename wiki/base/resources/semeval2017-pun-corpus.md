@@ -38,7 +38,7 @@ links:
 > automatic — a forced-both build still needs a fresh pre-run critic GO + budget.
 
 This page catalogs the SemEval-2017 Task 7 pun corpus as the candidate resource the
-[`result/forced-both-lexical-build-attempt-v1`](../../findings/results/forced-both-lexical-build-attempt-v1.md)
+[`note/forced-both-lexical-build-attempt-v1`](../../findings/notes/forced-both-lexical-build-attempt-v1.md)
 page named as the thing that would lift its **Q1-ii wall** — "a released corpus of human-annotated
 puns/zeugmas with per-item balance or co-activation labels (none in-repo or on `wanted.md` today)".
 It is now in-repo (catalogued) and on [`wanted.md`](../wanted.md) as **RECEIVED**.
@@ -228,7 +228,7 @@ modified, then you should abide by the terms of these licences."
 > directionally installs an in-item lean, and an attested pun affords a pickable surface reading (so it
 > is not the fork's "no-reading-to-pick" object). The anchor is sound *for what it certifies*
 > (co-presence); the wall is the separate balance premise →
-> [`result/forced-both-lexical-build-attempt-v2`](../../findings/results/forced-both-lexical-build-attempt-v2.md).
+> [`note/forced-both-lexical-build-attempt-v2`](../../findings/notes/forced-both-lexical-build-attempt-v2.md).
 
 1. **The anchor is RATIFIED for co-activation (Q4) only** (session 93, 2026-06-23). Read
    [`decisions/resolved/sense-coactivation-anchor-semeval-puns`](../../decisions/resolved/sense-coactivation-anchor-semeval-puns.md);

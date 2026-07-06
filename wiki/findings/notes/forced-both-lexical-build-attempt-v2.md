@@ -1,18 +1,18 @@
 ---
-type: result
+type: note
 id: forced-both-lexical-build-attempt-v2
 title: "Forced-both lexical probe — BUILD ATTEMPT v2 under the ratified SemEval co-activation anchor terminates again at certification (trigger (c)): power is solved (43 attested balanced-homonym pun items) but the Q-B-1 transfer-to-item dominance step is not satisfiable and a pun is not the fork's 'no-reading-to-pick' object. Fresh pre-run critic NO-GO; no model run; $0."
 meaning-senses:
   - distributional
   - referential
-status: proposed
+status: recorded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-06-23
-updated: 2026-07-05
+updated: 2026-07-06
 links:
   - rel: depends-on
-    target: result/forced-both-lexical-build-attempt-v1
+    target: note/forced-both-lexical-build-attempt-v1
   - rel: depends-on
     target: essay/layer-specialness-vs-always-resolvability
   - rel: depends-on
@@ -26,6 +26,8 @@ links:
 ---
 
 # Result: forced-both lexical probe — build attempt v2 terminates again at certification (trigger (c))
+
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A second build attempt that terminates again at certification (fresh pre-run-critic NO-GO); no model was queried ($0) — a build-feasibility record, not a measurement. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
 
 > **Status: proposed (2026-06-23, session 94).** The **second** build attempt for the discriminating
 > test of [`essay/layer-specialness-vs-always-resolvability`](../essays/layer-specialness-vs-always-resolvability.md),
@@ -102,7 +104,7 @@ context"
 A pun sentence *is* a biasing context. v1's structural finding generalizes exactly: in-item balance
 "is set by the *relative pull of the two complements* … a property of the constructed item no
 general-frequency statistic can see"
-([`result/forced-both-lexical-build-attempt-v1`](forced-both-lexical-build-attempt-v1.md)) — for a
+([`note/forced-both-lexical-build-attempt-v1`](forced-both-lexical-build-attempt-v1.md)) — for a
 pun, the relative pull of setup vs punchline, invisible to a per-word norm. The dominance norms
 "soften but do not eliminate the Q1-ii gap; they re-supply, with a better anchor, the general-balance
 proxy that attempt already judged insufficient"
@@ -116,13 +118,13 @@ works by leading the reader down a salient default reading and then springing a 
 sense" — so the in-item lean is **directional** (toward the surface/setup sense) and present *by
 construction in the genre*. A directional, same-signed bias **cannot be averaged away** across 43
 items, so the one move that might rescue a noisy word-grain proxy (aggregate over items) is
-unavailable. Per [`result/within-lexical-scalar-vs-disjunctive-v1`](within-lexical-scalar-vs-disjunctive-v1.md)
+unavailable. Per [`result/within-lexical-scalar-vs-disjunctive-v1`](../results/within-lexical-scalar-vs-disjunctive-v1.md)
 caveat 2, a lean "*suppresses* `UNCLEAR`" → biases toward **commit** → manufactures a spurious **(A)**
 — exactly the failure mode Q1-ii exists to foreclose, now installed by the genre itself.
 
 **3. A pun is not the fork's "no-reading-to-pick" object.** The discriminating stimulus must be the
 lexical analogue of the relational dual-binding — "*literally unresolvable* … there is no reading to
-pick" ([`result/within-lexical-scalar-vs-disjunctive-v1`](within-lexical-scalar-vs-disjunctive-v1.md),
+pick" ([`result/within-lexical-scalar-vs-disjunctive-v1`](../results/within-lexical-scalar-vs-disjunctive-v1.md),
 caveat 1). An attested pun *affords* a pickable surface reading — that is the setup; picking it merely
 misses the joke, it does not make the sentence anomalous. So the Q2-i forced-single-application task
 is **completable** on a pun by reading the surface sense, and the expected response is

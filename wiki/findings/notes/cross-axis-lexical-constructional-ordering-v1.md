@@ -1,16 +1,16 @@
 ---
-type: result
+type: note
 id: cross-axis-lexical-constructional-ordering-v1
 title: Cross-axis model-ordering v1 — does a model's lexical gradience strength predict its constructional performance? Only at the bottom (the weakest model is weakest on both); at the top the two axes dissociate, and the same-instrument bridge inverts the order
 meaning-senses:
   - constructional
   - referential
   - human-comparison
-status: proposed
+status: recorded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-07-06
 links:
   - rel: supports
     target: theory/lexicon-grammar-continuum
@@ -24,9 +24,11 @@ links:
 
 # Result: cross-axis lexical↔constructional model-ordering v1
 
-**One-line:** a read-only re-analysis (no new data, **no API spend, $0**) tabulating each panel model's **lexical** gradience strength ([`result/lexical-sense-gradience-v1`](lexical-sense-gradience-v1.md), durel Spearman ρ) against its per-model **constructional** numbers across eleven own-design grammatical results. The lexical order (**gemini 0.80 > claude 0.68 > gpt 0.60**) predicts constructional competence **only at the bottom** — gpt-5.4-mini is weakest lexically *and* the most fragile constructionally — but **not at the top**: gemini (strongest lexically) only ties claude on the add-direction positives, and on the one result that runs the *same instrument* on both axes (the coercion-sense-modulation bridge) the order **inverts** (claude > gpt > gemini). So lexical and constructional competence **dissociate** at the model level. Confirms the early "no" the bridge result and [`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md) flagged.
+> **Reclassified 2026-07-06 (session 185, campaign P3 / program B6): result → note.** A read-only re-analysis (no new data, no API spend, $0) tabulating already-committed per-model numbers — a $0 re-analysis, not a new measurement. Per the `note` page type (CLAUDE.md) it carries **no new measurement about LLM meaning**; `status: recorded`. History-preserving reclassification — nothing measured, scoped, or decided on this page changes.
 
-Run record: [`experiments/runs/2026-05-30-cross-axis-model-ordering/`](../../../experiments/runs/2026-05-30-cross-axis-model-ordering/README.md). Read-only re-analysis (no design page; like [`result/instrument-disagreement-reanalysis-v1`](instrument-disagreement-reanalysis-v1.md)). Advances [`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md)'s explicit watch item ("whether the model strongest lexically is also strong on the constructional inference probes").
+**One-line:** a read-only re-analysis (no new data, **no API spend, $0**) tabulating each panel model's **lexical** gradience strength ([`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md), durel Spearman ρ) against its per-model **constructional** numbers across eleven own-design grammatical results. The lexical order (**gemini 0.80 > claude 0.68 > gpt 0.60**) predicts constructional competence **only at the bottom** — gpt-5.4-mini is weakest lexically *and* the most fragile constructionally — but **not at the top**: gemini (strongest lexically) only ties claude on the add-direction positives, and on the one result that runs the *same instrument* on both axes (the coercion-sense-modulation bridge) the order **inverts** (claude > gpt > gemini). So lexical and constructional competence **dissociate** at the model level. Confirms the early "no" the bridge result and [`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md) flagged.
+
+Run record: [`experiments/runs/2026-05-30-cross-axis-model-ordering/`](../../../experiments/runs/2026-05-30-cross-axis-model-ordering/README.md). Read-only re-analysis (no design page; like [`note/instrument-disagreement-reanalysis-v1`](instrument-disagreement-reanalysis-v1.md)). Advances [`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md)'s explicit watch item ("whether the model strongest lexically is also strong on the constructional inference probes").
 
 ## What was re-analyzed
 
@@ -57,7 +59,7 @@ Across the **9 discriminating** (non-ceiling) results, mean ρ(lexical, construc
 
 1. **The one robust cross-axis thread is at the *bottom*: gpt-5.4-mini is weakest on both.** It is the weakest lexical tracker (ρ 0.60) and the most fragile model on the constructional side — last or failing on way-v1, the conative (NLI collapse to −8 pp), conative-cancel-v2 (0% suppression under NLI), coercion-implicit-v2b (40%), and CC-v3 (60% FC, the excluded-middle slip). In **every** discriminating result gpt-5.4-mini is ranked last. *That* strand is lexical-order-consistent and drives the +0.71 mean ρ.
 2. **The *top* of the order does not transfer — the axes dissociate.** gemini's lexical supremacy (ρ 0.80, above the human inter-annotator 0.69) does **not** make it uniquely strongest constructionally: it ties claude at ceiling on the add-direction positives, and claude beats it on way-v1, CC-v3, and the distinction drop. The mean ρ is carried almost entirely by the shared bottom rank, not by the top.
-3. **The same-instrument bridge inverts the order — the sharpest datum.** [`result/coercion-sense-modulation-v1`](coercion-sense-modulation-v1.md) is the only result that runs the *identical* lexical relatedness instrument on constructional stimuli, so it is the fairest cross-axis comparison. There the order is **claude (31.4) > gpt (20.5) > gemini (8.3)** — a near-inversion of the lexical order: **the strongest pure lexical tracker registers the *smallest* coercion-induced sense shift.** A model can be an excellent graded-sense rater yet treat a coerced verb as "still basically the same word." This is the cleanest evidence that lexical-gradience skill and constructional-coercion sensitivity are **distinct competences**.
+3. **The same-instrument bridge inverts the order — the sharpest datum.** [`result/coercion-sense-modulation-v1`](../results/coercion-sense-modulation-v1.md) is the only result that runs the *identical* lexical relatedness instrument on constructional stimuli, so it is the fairest cross-axis comparison. There the order is **claude (31.4) > gpt (20.5) > gemini (8.3)** — a near-inversion of the lexical order: **the strongest pure lexical tracker registers the *smallest* coercion-induced sense shift.** A model can be an excellent graded-sense rater yet treat a coerced verb as "still basically the same word." This is the cleanest evidence that lexical-gradience skill and constructional-coercion sensitivity are **distinct competences**.
 
 **Net:** the continuum thesis's "should not dissociate sharply" prediction is **partially disconfirmed**. The grain-to-grain link holds for *failure* (a weak model is weak everywhere) but not for *strength* (the best lexical model is not the best constructional model, and on the most comparable measure the orders invert). The wedges are unified as *targets* (one form–meaning cline) but the underlying model competences are **separable** — exactly what [`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md) said the behavioral evidence "cannot settle" about a shared *mechanism*, now with a concrete dissociation rather than an open guess.
 
@@ -72,5 +74,5 @@ Across the **9 discriminating** (non-ceiling) results, mean ρ(lexical, construc
 ## Where it sits
 
 - **Supports** [`theory/lexicon-grammar-continuum`](../theory/lexicon-grammar-continuum.md) by resolving its flagged watch item — and qualifies the continuum thesis: targets unified, competences dissociated (strongly at the top, invertingly on the bridge).
-- **Depends on** the lexical predictor ([`result/lexical-sense-gradience-v1`](lexical-sense-gradience-v1.md)) and the bridge ([`result/coercion-sense-modulation-v1`](coercion-sense-modulation-v1.md)); tabulates the nine other own-design results.
+- **Depends on** the lexical predictor ([`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md)) and the bridge ([`result/coercion-sense-modulation-v1`](../results/coercion-sense-modulation-v1.md)); tabulates the nine other own-design results.
 - Adds a cross-axis datum to [`open-question/instrument-sensitivity-constructional-inference`](../open-questions/instrument-sensitivity-constructional-inference.md): gpt-5.4-mini's bottom-rank consistency co-occurs with its instrument-fragility (the conative/CC-v3 cracks), so "weakest tracker" and "most instrument-fragile" are the same model.

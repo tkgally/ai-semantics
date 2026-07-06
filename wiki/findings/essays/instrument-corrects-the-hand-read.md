@@ -12,9 +12,9 @@ created: 2026-06-28
 updated: 2026-06-28
 links:
   - rel: depends-on
-    target: result/vwsd-grounding-headroom-nlbaseline-regrade-v1
+    target: note/vwsd-grounding-headroom-nlbaseline-regrade-v1
   - rel: depends-on
-    target: result/vwsd-grounding-headroom-nlbaseline-audit-v1
+    target: note/vwsd-grounding-headroom-nlbaseline-audit-v1
   - rel: refines
     target: essay/audit-brackets-instrument-competence
   - rel: refines
@@ -56,7 +56,7 @@ The sequence, stated only at the strength the result pages state it.
 The fluent natural-language description channel was authored and frozen, and its held-out adequacy audit
 was scored by the ratified *deterministic literal-target-word-lemma* recovery scorer. It read
 **0.342**, out of band below the 0.60 floor
-([`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../results/vwsd-grounding-headroom-nlbaseline-audit-v1.md)).
+([`note/vwsd-grounding-headroom-nlbaseline-audit-v1`](../notes/vwsd-grounding-headroom-nlbaseline-audit-v1.md)).
 A fresh independent pre-run critic did not stop at the number. It **hand-read the items** and diagnosed
 the failure as a *scoring-validity artifact*, not a degenerate channel:
 
@@ -64,7 +64,7 @@ the failure as a *scoring-validity artifact*, not a degenerate channel:
 > the ~70 'none' items are faithful category recoveries mis-scored** — e.g. `thymus`→'thyme',
 > `ara`→'macaw', `aquila`→'eagle', `mescal`→'mezcal' … The channel is, on inspection, naming referents
 > competently; the literal-lemma scorer cannot see it"
-> ([`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../results/vwsd-grounding-headroom-nlbaseline-audit-v1.md)).
+> ([`note/vwsd-grounding-headroom-nlbaseline-audit-v1`](../notes/vwsd-grounding-headroom-nlbaseline-audit-v1.md)).
 
 This is the hand-read in its strongest form. It is *adversarial* (the critic was hunting for reasons to
 refuse the run), it is *competent* (the diagnosis that VWSD target words are technical/Latinate/variant
@@ -82,7 +82,7 @@ The stored guesses were re-graded under it. The instrument read **0.438**:
 > "The two-judge cross-only band metric is **0.438**, *higher* than the literal-lemma 0.342 (so the
 > literal scorer **was** partly under-counting, as diagnosed) but **still below the 0.60 floor** — a
 > **degenerate-side NO-GO**"
-> ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+> ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
 
 And on the s127 critic's stronger claim — that the channel was *competent* — the instrument's verdict is
 explicit:
@@ -91,7 +91,7 @@ explicit:
 > under a strict standard, **partial** (the auditor recovered the *scene / a hypernym / a co-present
 > object*, not the *specific* depicted referent), not high. So the s127 *'the channel is competent'*
 > optimism is **not borne out** by the rigorous re-grade"
-> ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+> ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
 
 The two readings of the *same stored guesses* disagree, and they disagree across the decision boundary:
 the hand-read said competent (above floor); the instrument said 0.438 (below floor).
@@ -110,11 +110,11 @@ over-strict on PARTIAL/NONE:
 > … the rubric working as designed, **not** literal string-matching … Not too strict (the mirror
 > PARTIAL/NONE side) … Reaching the 0.60 floor would require **39 of 103 partials** to be wrongly-demoted
 > highs; the critic found at most a handful of borderline cases — an order of magnitude short"
-> ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+> ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
 
 > "Inter-judge agreement: pooled exact 0/1/2 = 0.683, high-vs-not = 0.808, Cohen-κ(high) = **0.608**
 > (substantial) … **0.438 is a valid strict-referent-category-recovery rate.**"
-> ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+> ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
 
 So the correction is not a swap of one unverified guess for another. The hand-read was partly right (the
 literal scorer *was* under-counting; 0.342 → 0.438 is the rescue it earned) and the instrument credits
@@ -142,7 +142,7 @@ demands identity.
 Second, **the cheapness of the hand-read is precisely what makes it tempting to stop there.** A
 hand-read of 70 items costs a careful reviewer an hour and no API spend; the instrument cost \$0.39 of
 re-grade plus a ratification and a fresh critic pass
-([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
 When the cheap read and the expensive read are expected to agree, the temptation is to bank the cheap
 one. This episode is the standing counterexample: the cheap read and the expensive read **disagreed by a
 decision-relevant margin**, and only the expensive one was right. The lesson is to resist the temptation
@@ -174,7 +174,7 @@ below floor). The discipline did **both** halves correctly here. It *partly resc
 literal scorer — 0.342 → 0.438 is the band conceding the s127 critic's valid point. And then it **held
 the line**: the rescued, valid, two-sided-audited number was *still below the floor*, so the read was
 deferred again — "the s128 scorer-validity fix did NOT rescue the channel"
-([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
+([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md)).
 The hand-read would have proceeded to the magnitude read; the instrument-plus-band **deferred a channel
 that genuinely does not clear the floor even after the scorer artifact was removed.** The band did not
 merely correct a measurement error in the channel's favor and then wave it through; it corrected the
@@ -264,19 +264,19 @@ No other essay in the directory owns this thesis: the eyeball/instrument bias co
 - The in-repo facts leaned on, at their stated strength and verified against the source files: the s127
   literal-lemma **0.342** and the critic's hand-read that "Roughly 64 of the ~70 'none' items are faithful
   category recoveries mis-scored"
-  ([`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../results/vwsd-grounding-headroom-nlbaseline-audit-v1.md));
+  ([`note/vwsd-grounding-headroom-nlbaseline-audit-v1`](../notes/vwsd-grounding-headroom-nlbaseline-audit-v1.md));
   the s128 re-grade **0.438**, "still below the 0.60 floor," the both-directions validity check ("all 105
   cross-leg HIGH verdicts," "39 of 103 partials," "Cohen-κ(high) = 0.608," "0.438 is a valid
   strict-referent-category-recovery rate"), and "the s127 *'the channel is competent'* optimism is **not
   borne out**"
-  ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md));
+  ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md));
   the ratified scorer fix "ADOPT Q-A WITH MODIFICATIONS" (held-out two-judge cross-only category-match)
   and "the problem is the ruler, not the instrument"
   ([`decision/vwsd-nlbaseline-recovery-scorer-validity`](../../decisions/resolved/vwsd-nlbaseline-recovery-scorer-validity.md)).
   Nothing here outruns those pages.
 - **Provenance note.** The "~64/70 'faithful category recoveries'" phrasing is the **s127 critic's
   hand-read language, quoted from the audit-v1 result page that records it**
-  ([`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../results/vwsd-grounding-headroom-nlbaseline-audit-v1.md));
+  ([`note/vwsd-grounding-headroom-nlbaseline-audit-v1`](../notes/vwsd-grounding-headroom-nlbaseline-audit-v1.md));
   the regrade-v1 page recounts the same hand-read in its own words ("most of the literal-'none' items the
   s127 critic eyeballed as 'faithful category recoveries'"). Both are in-repo, page-level; the underlying
   per-item critic notes (run-dir `PRERUN-CRITIC.md` / `PRERUN-CRITIC-REGRADE.md`) are referenced by the

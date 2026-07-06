@@ -58,7 +58,7 @@ The conjecture: current LLMs treat AANN as a **productive construction** in Gold
 
 ## Human anchor
 
-Catalogued as [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahowald-2023-aann-stimuli.md) (status: `external-only` until a future run mirrors the released repo). Mahowald 2023 (EACL) — templatic AANN stimulus generator plus MTurk acceptability ratings — supersedes the earlier "Weissweiler line" pointer in the bootstrap version of this conjecture; the Weissweiler CxG-probing papers remain a candidate secondary anchor. The anchor question was resolved 2026-05-29: Mahowald 2023 is the ratified AANN anchor (see [`decisions/resolved/aann-stimulus-source`](../../decisions/resolved/aann-stimulus-source.md)).
+Catalogued as [`resource/mahowald-2023-aann-stimuli`](../../base/resources/mahowald-2023-aann-stimuli.md) (status: `external-only` until a future run mirrors the released repo). Mahowald 2023 (EACL) — templatic AANN stimulus generator plus MTurk acceptability ratings ([`source/mahowald-2023-aann-judgments`](../../base/sources/mahowald-2023-aann-judgments.md)) — supersedes the earlier "Weissweiler line" pointer in the bootstrap version of this conjecture; the Weissweiler CxG-probing papers remain a candidate secondary anchor. The anchor question was resolved 2026-05-29: Mahowald 2023 is the ratified AANN anchor (see [`decisions/resolved/aann-stimulus-source`](../../decisions/resolved/aann-stimulus-source.md)).
 
 → Anchor and operationalization decisions (both ratified 2026-05-29):
 

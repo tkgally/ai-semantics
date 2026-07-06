@@ -17,7 +17,7 @@ links:
   - rel: depends-on
     target: resource/semeval2017-pun-corpus
   - rel: depends-on
-    target: result/forced-both-lexical-build-attempt-v1
+    target: note/forced-both-lexical-build-attempt-v1
   - rel: depends-on
     target: essay/layer-specialness-vs-always-resolvability
   - rel: depends-on
@@ -45,7 +45,7 @@ links:
 
 ## Why this is queued
 
-The [`result/forced-both-lexical-build-attempt-v1`](../../findings/results/forced-both-lexical-build-attempt-v1.md)
+The [`note/forced-both-lexical-build-attempt-v1`](../../findings/notes/forced-both-lexical-build-attempt-v1.md)
 build (session 91) hit **trigger (c)**: the discriminating test that would separate **(A)
 layer-specialness** from **(B) always-resolvability** could not be *cleanly certified*, because its
 **Q1-ii** — an independent, *not-model-based* check that neither sense **dominates** in a constructed
@@ -135,7 +135,7 @@ this).
 > ratified session 93. No probe ran; ratification fixes the **yardstick only**.
 
 The reviewer read the decision, the [`resource/semeval2017-pun-corpus`](../../base/resources/semeval2017-pun-corpus.md)
-page, the [`result/forced-both-lexical-build-attempt-v1`](../../findings/results/forced-both-lexical-build-attempt-v1.md)
+page, the [`note/forced-both-lexical-build-attempt-v1`](../../findings/notes/forced-both-lexical-build-attempt-v1.md)
 build attempt, the resolved gate [`decisions/resolved/forced-both-lexical-operationalization`](forced-both-lexical-operationalization.md),
 the [`essay/layer-specialness-vs-always-resolvability`](../../findings/essays/layer-specialness-vs-always-resolvability.md)
 fork, [`decisions/resolved/matched-ambiguity-kind-cross-level`](matched-ambiguity-kind-cross-level.md),

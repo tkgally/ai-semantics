@@ -15,9 +15,9 @@ links:
   - rel: depends-on
     target: design/vwsd-grounding-headroom-nlbaseline
   - rel: depends-on
-    target: result/vwsd-grounding-headroom-nlbaseline-audit-v1
+    target: note/vwsd-grounding-headroom-nlbaseline-audit-v1
   - rel: depends-on
-    target: result/vwsd-grounding-headroom-nlbaseline-regrade-v1
+    target: note/vwsd-grounding-headroom-nlbaseline-regrade-v1
   - rel: refines
     target: conjecture/distributional-saturation-grounding-headroom
   - rel: depends-on
@@ -46,9 +46,9 @@ links:
 >
 > **Revision log.** *2026-06-28 (session 129):* the NL-baseline result the original draft called
 > "un-run and unmeasured … the NL-baseline result does not exist" now **exists** — built and audited at
-> session 127 ([`result/vwsd-grounding-headroom-nlbaseline-audit-v1`](../results/vwsd-grounding-headroom-nlbaseline-audit-v1.md))
+> session 127 ([`note/vwsd-grounding-headroom-nlbaseline-audit-v1`](../notes/vwsd-grounding-headroom-nlbaseline-audit-v1.md))
 > and re-graded under a session-128-ratified valid two-judge category-match
-> scorer ([`result/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../results/vwsd-grounding-headroom-nlbaseline-regrade-v1.md))
+> scorer ([`note/vwsd-grounding-headroom-nlbaseline-regrade-v1`](../notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md))
 > → **0.438 strict referent-recovery, below the [0.60, 0.95] floor**, a clean degenerate-side NO-GO a
 > fresh independent critic verified is a *valid* low rate, not a scorer artifact. This **exercised the
 > essay's central device and it held**, firing **none** of the revision triggers below: **(a) did NOT

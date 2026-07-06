@@ -15,7 +15,7 @@ contingent-artifacts:
   - result/comparative-correlative-covariation-v2
   - result/comparative-correlative-covariation-v3
   - result/conative-cancel-direction-v2
-  - result/cross-axis-lexical-constructional-ordering-v1
+  - note/cross-axis-lexical-constructional-ordering-v1
 ---
 
 # Decision: human anchor for the conflicting-cue coercion result
@@ -51,7 +51,7 @@ Promoted results: [`result/argument-structure-coercion-v2`](../../findings/resul
 [`result/comparative-correlative-covariation-v2`](../../findings/results/comparative-correlative-covariation-v2.md),
 [`result/comparative-correlative-covariation-v3`](../../findings/results/comparative-correlative-covariation-v3.md),
 [`result/conative-cancel-direction-v2`](../../findings/results/conative-cancel-direction-v2.md),
-[`result/cross-axis-lexical-constructional-ordering-v1`](../../findings/results/cross-axis-lexical-constructional-ordering-v1.md).
+[`note/cross-axis-lexical-constructional-ordering-v1`](../../findings/notes/cross-axis-lexical-constructional-ordering-v1.md).
 
 ---
 

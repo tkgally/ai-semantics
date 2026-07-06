@@ -228,7 +228,7 @@ side the essay argues.
 
 **One honest trigger-side qualification — a refinement, not a retraction.** The s160 pooled verdict
 was MIXED (only 1/3, claude-sonnet-4.6, cleared the frozen survival floor), and the sibling
-per-family decomposition ([`result/projection-trigger-inventory-family-decomposition-v1`](../results/projection-trigger-inventory-family-decomposition-v1.md)) locates the
+per-family decomposition ([`note/projection-trigger-inventory-family-decomposition-v1`](../notes/projection-trigger-inventory-family-decomposition-v1.md)) locates the
 weakening in **one trigger family** — **manner adverbs** — which contributes essentially zero
 projection asymmetry in all three models: its presupposition and matched entailment move together and
 cancel jointly under negation, consistent with the scope-ambiguity of manner adverbs under negation

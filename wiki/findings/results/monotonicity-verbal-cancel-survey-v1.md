@@ -16,9 +16,9 @@ links:
   - rel: depends-on
     target: conjecture/constructional-monotonicity-asymmetry
   - rel: refines
-    target: result/monotonicity-c2-privative-calibration-v1
+    target: note/monotonicity-c2-privative-calibration-v1
   - rel: refines
-    target: result/monotonicity-c1-completion-calibration-v1
+    target: note/monotonicity-c1-completion-calibration-v1
   - rel: depends-on
     target: concept/coercion
 ---
@@ -39,10 +39,10 @@ links:
 
 The conjecture is `tested` on a **weak** confirm bought across the M2 **verbal-add /
 nominal-cancel domain mismatch**: the only B2-passing cancel default to date was *nominal*
-(C2 taxonomic "a gun" ⊨ "a weapon", [`result/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md)),
+(C2 taxonomic "a gun" ⊨ "a weapon", [`note/monotonicity-c2-privative-calibration-v1`](../notes/monotonicity-c2-privative-calibration-v1.md)),
 while both *verbal* cancel defaults tried floored B2 — s135 single-occurrence (a Gricean
 implicature, 0.00/0.00/0.00) and C1 telic completion (a defeasible aspectual default,
-0.25/0.375/0.75, [`result/monotonicity-c1-completion-calibration-v1`](monotonicity-c1-completion-calibration-v1.md)).
+0.25/0.375/0.75, [`note/monotonicity-c1-completion-calibration-v1`](../notes/monotonicity-c1-completion-calibration-v1.md)).
 The open-question framed the worry that this is a **near-principled limit**: maybe the verbal
 defaults the project can reach for are *disproportionately* implicatures/defeasible defaults,
 so a clean within-verbal generalization confirm is un-instrumentable for want of a
@@ -127,7 +127,7 @@ separates cleanly by **inference type**, not by verbal-vs-nominal:
 | **factive** ("realized that P" → "P"), this survey | **factive presupposition→entailment** | **1.00 / 1.00 / 1.00** | **yes** | **verbal** |
 | **causative-inchoative** ("broke the vase" → "the vase broke"), this survey | **lexical result entailment** | **1.00 / 1.00 / 1.00** | **yes** | **verbal** |
 
-(s135/C1/C2 **numbers** quoted verbatim from [`result/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md),
+(s135/C1/C2 **numbers** quoted verbatim from [`note/monotonicity-c2-privative-calibration-v1`](../notes/monotonicity-c2-privative-calibration-v1.md),
 §"The contrast this sharpens"; row labels lightly reworded for this table's columns; the bottom
 three rows are this survey's measured result.) The
 pattern that emerges: **what the panel holds at ceiling is the *categorical-entailment* defaults
@@ -213,8 +213,8 @@ until such a battery runs.
   from the per-call `raw_calib/*.json` by a read-only post-run verifier (exact match; 108/108
   priced, 0 missing, 0 parse failures, 0 errors).
 - The s135 / C1 / C2 ladder **numbers** are quoted verbatim from
-  [`result/monotonicity-c2-privative-calibration-v1`](monotonicity-c2-privative-calibration-v1.md)
-  and [`result/monotonicity-c1-completion-calibration-v1`](monotonicity-c1-completion-calibration-v1.md)
+  [`note/monotonicity-c2-privative-calibration-v1`](../notes/monotonicity-c2-privative-calibration-v1.md)
+  and [`note/monotonicity-c1-completion-calibration-v1`](../notes/monotonicity-c1-completion-calibration-v1.md)
   (their row labels lightly reworded to fit this table's columns).
   The within-verbal limit and its two resolution paths are stated in
   [`open-question/within-verbal-cancel-at-ceiling`](../open-questions/within-verbal-cancel-at-ceiling.md).

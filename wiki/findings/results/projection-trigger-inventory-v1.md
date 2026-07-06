@@ -171,7 +171,7 @@ is now worked across **three probes** (s158 projection, s159 conditional-rescue,
   §"Known weak pairs"). Part of the smaller gap may be these harder triggers rather than a general
   weakening — the per-family split is in `results.json`/raw for a later session to decompose.
   *[Pointer, s183: that decomposition happened —
-  [`result/projection-trigger-inventory-family-decomposition-v1`](projection-trigger-inventory-family-decomposition-v1.md)
+  [`note/projection-trigger-inventory-family-decomposition-v1`](../notes/projection-trigger-inventory-family-decomposition-v1.md)
   (s161, $0 re-analysis): the weaker pooled gap is driven by the manner-adverb family.]*
 - **Small Ns, n=3 models, three 2026 commercial models, project-authored synthetic items.** No
   coverage claim; direction-of-effect only, scoped to these families/frames.

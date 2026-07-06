@@ -16,7 +16,7 @@ links:
   - rel: depends-on
     target: essay/undischargeable-negative
   - rel: depends-on
-    target: result/forced-both-lexical-build-attempt-v1
+    target: note/forced-both-lexical-build-attempt-v1
   - rel: depends-on
     target: essay/layer-specialness-vs-always-resolvability
 ---
@@ -53,7 +53,7 @@ fixed the yardstick for building such an item. The build was attempted; it
 
 > "**The forced-both lexical item cannot be cleanly certified — the blocker is Q1-ii, the independent
 > (not-model-based) balance check, exactly where the gate and essay said it would be.**"
-> ([`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md))
+> ([`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md))
 
 Three of the gate's four questions were satisfiable. The fourth — certify, *without consulting the
 model*, that neither sense dominates the constructed sentence — was not. And the result page is exact
@@ -62,7 +62,7 @@ about *why* it was not, in a sentence that is this essay's seed:
 > "The only instruments that could read the constructed item's balance directly are (i) a human
 > annotator on that sentence (closed) or (ii) the model's own response (forbidden — the circular
 > operationalization-tuning failure the gate exists to prevent)."
-> ([`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md))
+> ([`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md))
 
 Two readers, both barred. That is not a statement about how hard the balance is to measure; it is a
 statement that *every instrument that could measure it is ruled out in advance*. The essay's claim is
@@ -117,20 +117,20 @@ The session-91 in-item balance is exactly this profile, and the result page walk
 A human annotator on the constructed sentence is "closed: the project takes **no human subjects**
 … all human bearing comes from *existing* resources, none of which rate these author-constructed
 sentences"
-([`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md)).
+([`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md)).
 The model's own response is "forbidden — the circular operationalization-tuning failure the gate exists
 to prevent." That leaves only an existing corpus signal, and the one that decomposes word frequency by
 sense (SemCor via WordNet) fails for a *deeper* reason than sparsity:
 
 > "A SemCor balance ratio measures **general-usage** sense balance across the corpus. It does **not**
 > measure the balance of the *specific constructed co-predication sentence*."
-> ([`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md))
+> ([`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md))
 
 This is the part that turns an accident into a boundary. The premise P here is not a property of a word
 in general; it is a property of *the particular sentence the project constructed*. No pre-existing
 resource rates a sentence that did not exist until the build wrote it. So even a perfectly
 frequency-balanced word "leaves Q1-ii's in-item balance uncertified"
-([`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md)):
+([`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md)):
 the only readers of a *constructed item's* balance are a human looking at that item or the model parsing
 it, and both are barred. The premise has no admissible certifier, and the gate's fail-safe disposition
 fires: declare the item uncertified, run no model, spend nothing.
@@ -158,7 +158,7 @@ whole force is that there *is* an admissible fix: change the construction. The g
 **you cannot design it out either** — and for an instructive reason. In-item balance is *constituted by
 the construction*: as the session-91 result page found, a co-predication frame sets the balance by "the
 relative pull of the two complements"
-([`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md)),
+([`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md)),
 so the very act of building the sentence creates the property. You cannot design the property away
 without designing the stimulus away (an unbalanced forced-both item is not the stimulus the fork needs).
 The property is simultaneously *made by construction* and *unreadable without a barred instrument*. So
@@ -180,7 +180,7 @@ released corpus of human-annotated puns/zeugmas with per-item co-activation or b
 exactly such a certifier — and the forced-both result page says so, listing as the thing that would lift
 its wall "a released corpus of human-annotated puns/zeugmas with per-item balance or co-activation
 labels (none in-repo or on `wanted.md` today)"
-([`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md)).
+([`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md)).
 
 This is why the uncertifiable-premise gap and the project's **resource-anchor discipline** are two views
 of one thing. The anchor rule — every empirical claim about LLM meaning carries an `anchors:` link to a
@@ -286,7 +286,7 @@ it refused to run a test it could not honestly set up, and wrote the refusal dow
   construction-time fix), and the identification of the **resource-anchor discipline as the gap's only
   in-discipline escape**. **No empirical claim here is new, original, or reported.**
 - The strongest sentences leaned on, at their stated strength:
-  - From [`result/forced-both-lexical-build-attempt-v1`](../results/forced-both-lexical-build-attempt-v1.md):
+  - From [`note/forced-both-lexical-build-attempt-v1`](../notes/forced-both-lexical-build-attempt-v1.md):
     "**The forced-both lexical item cannot be cleanly certified — the blocker is Q1-ii, the independent
     (not-model-based) balance check, exactly where the gate and essay said it would be.**"; "The only
     instruments that could read the constructed item's balance directly are (i) a human annotator on that

@@ -40,7 +40,7 @@ links:
 > MIXED — the asymmetry generalizes in direction to four more families, clears the pre-registered bar
 > for 1/3 models, and the conditional-frame collapse replicates on the new triggers; session 161
 > added its family decomposition,
-> [`result/projection-trigger-inventory-family-decomposition-v1`](../results/projection-trigger-inventory-family-decomposition-v1.md)).
+> [`note/projection-trigger-inventory-family-decomposition-v1`](../notes/projection-trigger-inventory-family-decomposition-v1.md)).
 > Session 162 raised the bridging conjecture
 > [`conjecture/presupposition-environment-gated-both-directions`](../conjectures/presupposition-environment-gated-both-directions.md)
 > (projection frame-gated, accommodation context-gated — one environment-gated signature). And the
