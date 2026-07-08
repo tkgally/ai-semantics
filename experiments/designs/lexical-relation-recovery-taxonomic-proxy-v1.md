@@ -42,6 +42,17 @@ Per PROTOCOL §3/§A1 and the A1b precedent (design s184 → ratified s185 → r
 ratifiable s193+, run after ratification.** The design opens a decision; a probe that opens a
 value-laden decision is not run in the session that opens it.
 
+> **Pre-run DESIGN review (s192, 2026-07-08) — GO-WITH-CONDITIONS; no BLOCKERS; FABRICATION-CHECK PASS.**
+> Independent fresh-agent pre-run critic (verdict authority) **+** one non-Anthropic decorrelation vote
+> (`openai/gpt-5.4-mini`, $0.0035265), both **GO-WITH-CONDITIONS**, recorded in
+> [`REVIEW-design-s192.md`](../runs/2026-07-08-relation-recovery-taxonomic-proxy-design/REVIEW-design-s192.md).
+> Faithfulness + anti-cheat PASS; every load-bearing quote/number verified against source. **Six
+> freeze-time conditions bound to the freeze** (see the *Freeze-time conditions* section at the foot of
+> this page). One live **Q2 divergence carried to the s193 ratifier**: the non-Anthropic vote picks
+> **Q2-B (C4 primary)** over the design's default Q2-C (Wikipedia primary + C4 sensitivity), and the
+> critic binds a Wikipedia-only scope-cap with C4 strongly preferred — the ratifier weighs whether C4
+> becomes primary/co-primary. **Nothing frozen, nothing run; the gates are ratified s193+, not now.**
+
 ---
 
 ## Why this unit is owed now (and why it is doubly-motivated)
@@ -343,3 +354,38 @@ at freeze. Re-estimated at freeze once k and per-relation N are fixed.
    independent pre-run critic + one non-Anthropic vote; `ABORT_USD` set.
 4. **Run (after freeze)** on the panel; post-run verifier recomputes every figure from raw. Powered N
    per PROTOCOL §4.
+
+## Freeze-time conditions (bound s192 by the pre-run review; honor all six at freeze)
+
+From the s192 fresh-agent critic (verdict authority) + non-Anthropic vote
+([`REVIEW-design-s192.md`](../runs/2026-07-08-relation-recovery-taxonomic-proxy-design/REVIEW-design-s192.md)).
+All are PREREG/`prep.py` specifications, not gate rewrites; they bind the freeze session:
+
+1. **Q1 verdict-of-record binding.** PREREG states as a hard commitment that the **across-relation (n=6)
+   result is the sole verdict of record for H1 and H2**; the item-level cue-depth arm is
+   **descriptive/robustness-only** and can never on its own fire H2 or upgrade an across-relation
+   H2-loss to a win. A level-divergence is a pre-named first-class outcome.
+2. **Close the ρ_cue band gap.** Exhaustive, mutually-exclusive H1 bands over the whole line (no
+   uncovered [+0.3, +0.5] middle), and a **numeric** H2 margin for "|ρ_proxy| clearly greater than
+   |ρ_cue|," fixed before any model call (replace the illustrative "e.g." thresholds above).
+3. **Q2 register scope-cap + C4.** A Wikipedia-only H1-REPLICATES reading carries an explicit
+   same-source-family / register-decorrelation-untested scope note and does not claim to fully discharge
+   H1's "different corpus" route; **C4 strongly preferred as co-primary, or run whenever tractable**,
+   reason documented if deferred. *(The non-Anthropic vote dissented toward Q2-B, C4-primary — the s193
+   ratifier weighs this.)*
+4. **Clarify "byte-frozen."** Byte-identity applies to the **G²/co-occurrence computation** (`FRAME_WIN`,
+   connective set, K, weighting, `signed_g2`) — verified unchanged against s186 `build_cooc.py`; the
+   per-corpus sentence-streaming/IO adapter necessarily changes but must not touch any counting/weighting
+   logic.
+5. **Q3 multiple-comparison rule + Hearst sign.** IS-A depth primary, Hearst-frame proxy secondary;
+   freeze the Hearst construction **and its theory-set predicted sign** before any corpus counting on the
+   fresh cues; a Hearst-only H2 win (IS-A depth loses) is reported as a **qualified/weaker** result, not
+   an equal-status H2-WINS.
+6. **Disjointness + fresh-N reporting.** Exclude the exact committed 780 s186 cue lemmas with asserted
+   per-relation 0-overlap; report the achieved fresh per-relation N (antonymy expected ~100, capped by
+   WordNet nominal sparsity).
+
+**Construct-validity scope caveat (not a gate):** IS-A depth and the recovery-scoring key share a source
+(WordNet); mitigated by the pilot's gold-independent cue-first-synset depth ("a property of the cue, not
+a restatement of the answer set"). Carry as a scope caveat on the eventual result; Q4 stays
+internal-contrast-only.

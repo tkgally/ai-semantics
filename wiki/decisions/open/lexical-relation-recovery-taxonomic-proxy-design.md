@@ -36,6 +36,16 @@ Nothing here changes any finding; it fixes the **yardstick** for a probe that ha
 eligible from **session 193** (never the opening session), per [`PROJECT.md`](../../../PROJECT.md) §12.3:
 independent adversarial review + one non-Anthropic panel vote; Tom's standing override outranks.
 
+> **Pre-run review already on record (s192, design-stage — NOT the ratification).** The design carrying
+> these gates cleared a fresh-agent pre-run critic + one non-Anthropic vote, both **GO-WITH-CONDITIONS**,
+> fabrication-check PASS ([`REVIEW-design-s192.md`](../../../experiments/runs/2026-07-08-relation-recovery-taxonomic-proxy-design/REVIEW-design-s192.md)).
+> **For the s193 ratifier:** both reviewers converged on Q1-C, Q3-A, Q4 internal-contrast-only, but
+> **diverged on Q2** — the non-Anthropic vote picked **Q2-B (C4 primary)**, arguing full Wikipedia is
+> "too close to the original register" (same source family as s186's Simple Wikipedia) to be a strong
+> H1 falsifier; the critic kept Q2-C with a Wikipedia-only scope-cap and "C4 strongly preferred." **Weigh
+> whether C4 should be primary/co-primary rather than a sensitivity arm.** Six freeze-time conditions are
+> recorded on the design; ratification fixes the gates, the freeze honors the conditions.
+
 ## Gate Q1 — level of analysis for H2 (the anti-goalpost-moving gate; load-bearing)
 
 The essay registered H2 as an **across-relation rank** hypothesis (recovery rank vs proxy rank over the
