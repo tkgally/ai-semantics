@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Music Engines · gallery</title>
+<style>
+  *{box-sizing:border-box} html,body{margin:0;height:100%}
+  body{font-family:"Iowan Old Style",Palatino,Georgia,serif; color:#eef1f7; min-height:100%;
+    background:radial-gradient(1100px 640px at 80% -12%, #1c2136 0%, rgba(28,33,54,0) 60%),
+      radial-gradient(900px 600px at 4% 112%, #241a2e 0%, rgba(36,26,46,0) 55%), #0e1016;
+    display:flex; align-items:flex-start; justify-content:center; padding:44px 18px 64px}
+  .wrap{width:100%; max-width:820px}
+  .kicker{font-family:ui-monospace,Menlo,monospace; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#c8a86a; font-weight:700}
+  h1{font-size:38px; margin:6px 0 0; letter-spacing:.2px}
+  .lede{color:#9aa3b8; font-size:16px; line-height:1.6; margin:12px 0 30px; max-width:64ch}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+  @media (max-width:660px){ .grid{grid-template-columns:1fr} }
+  a.card{display:block; text-decoration:none; color:inherit; border:1px solid #2a3145; border-radius:16px; overflow:hidden;
+    background:linear-gradient(180deg,#171c2b,#141824); transition:transform .14s ease, border-color .14s, box-shadow .14s}
+  a.card:hover{transform:translateY(-3px); border-color:#c8a86a; box-shadow:0 22px 48px -26px rgba(0,0,0,.6)}
+  .swatch{height:96px; display:flex; align-items:flex-end; padding:14px 16px}
+  .s1{background:linear-gradient(120deg,#1b2338 0%,#2a3350 55%,#c8a86a 140%)}
+  .s2{background:linear-gradient(120deg,#221a30 0%,#3a2740 50%,#e2a17c 135%)}
+  .num{font-family:ui-monospace,monospace; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.85);
+    background:rgba(0,0,0,.28); padding:4px 9px; border-radius:999px; backdrop-filter:blur(3px)}
+  .body{padding:16px 18px 20px}
+  .body h2{margin:0 0 4px; font-size:22px}
+  .style{font-family:ui-monospace,monospace; font-size:12px; color:#8fb3e0; letter-spacing:.03em}
+  .s2 ~ .body .style{color:#c58fb8}
+  .desc{color:#9aa3b8; font-size:14px; line-height:1.55; margin:10px 0 12px}
+  .tags{display:flex; flex-wrap:wrap; gap:6px}
+  .tag{font-family:ui-monospace,monospace; font-size:11px; color:#aeb7cc; border:1px solid #2a3145; border-radius:999px; padding:2px 8px}
+  .ver{font-family:ui-monospace,monospace; font-size:11px; color:#7fd18a}
+  .note{margin-top:30px; color:#7c8598; font-size:12.5px; font-family:ui-monospace,monospace; line-height:1.7}
+  .note b{color:#aeb7cc; font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="kicker">Procedural Music</span>
+  <h1>Engines</h1>
+  <p class="lede">Two self-contained generative-music engines. Each composes a fresh piece from a text
+     seed and performs it live in the browser with the Web Audio API — no samples, no libraries, no
+     network. Pick a seed, tweak the dials, and leave feedback as exportable JSON.</p>
+
+  <div class="grid">
+    <a class="card" href="engine-01-tonal-classical.html">
+      <div class="swatch s1"><span class="num">Engine 01 · v0.2.0</span></div>
+      <div class="body">
+        <h2>Tonal Classical</h2>
+        <div class="style">chamber · diatonic · rounded ternary</div>
+        <p class="desc">A through-composed miniature: a singing melody over Alberti accompaniment and
+           bass, in an intro + A B A′ + coda shape — performed with rubato, phrase dynamics, and
+           human timing.</p>
+        <div class="tags"><span class="tag">rubato</span><span class="tag">7-voice form</span><span class="tag">major / minor</span><span class="ver">↑ v0.2.0</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="engine-02-lofi-chillhop.html">
+      <div class="swatch s2"><span class="num">Engine 02 · v0.1.0</span></div>
+      <div class="body">
+        <h2>Lo-Fi Chillhop</h2>
+        <div class="style">boom-bap · jazz 7ths · swung loop</div>
+        <p class="desc">The contrast: a dusty, looping beat — synthesized drums, a warm electric-piano
+           comping ninth chords, round sub-bass, and vinyl crackle. Swing, laid-back timing, and a
+           sidechain pump carry the groove.</p>
+        <div class="tags"><span class="tag">swing</span><span class="tag">sidechain</span><span class="tag">vinyl</span></div>
+      </div>
+    </a>
+  </div>
+
+  <p class="note">
+    <b>Engine 01 — what changed in v0.2.0</b> (from first-take feedback):<br>
+    • click / clipping at the end fixed — click-free envelopes + a master limiter + a clean tail fade<br>
+    • less mechanical — seeded micro-timing, phrase &amp; metric dynamics, rubato, articulation, chord roll<br>
+    • faster default tempo — 132 bpm (was 118)
+  </p>
+</div>
+</body>
+</html>

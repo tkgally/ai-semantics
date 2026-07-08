@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Engine 01 · Tonal Classical</title>
+<style>
+  :root{
+    --bg:#0e1016; --bg2:#141824; --panel:#171c2b; --panel2:#1c2234;
+    --ink:#eef1f7; --muted:#9aa3b8; --line:#2a3145;
+    --accent:#c8a86a; --accent2:#8fb3e0; --good:#7fd18a; --shadow:rgba(0,0,0,.45);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    background:
+      radial-gradient(1200px 700px at 78% -10%, #1b2338 0%, rgba(27,35,56,0) 60%),
+      radial-gradient(900px 600px at 5% 110%, #201a2c 0%, rgba(32,26,44,0) 55%),
+      var(--bg);
+    color:var(--ink); -webkit-font-smoothing:antialiased; min-height:100%;
+    display:flex; align-items:flex-start; justify-content:center; padding:32px 18px 60px;
+  }
+  .wrap{width:100%; max-width:860px}
+  header.hd{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:6px}
+  .kicker{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:12px;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:600}
+  h1{font-size:34px; margin:2px 0 0; font-weight:600; letter-spacing:.2px}
+  .ver{font-family:ui-monospace,monospace; font-size:12px; color:var(--muted);
+    border:1px solid var(--line); padding:2px 8px; border-radius:999px}
+  .sub{color:var(--muted); font-size:15px; margin:8px 0 22px; line-height:1.5}
+
+  .card{background:linear-gradient(180deg,var(--panel),var(--bg2));
+    border:1px solid var(--line); border-radius:var(--radius); box-shadow:0 18px 40px -24px var(--shadow)}
+
+  .stage{padding:20px 20px 18px}
+  .transport{display:flex; align-items:center; gap:16px; flex-wrap:wrap}
+  .play{appearance:none; border:none; cursor:pointer; width:60px; height:60px; border-radius:50%;
+    background:radial-gradient(120% 120% at 30% 25%, #f0d9a6, var(--accent)); color:#241c0c;
+    display:grid; place-items:center; box-shadow:0 8px 22px -6px rgba(200,168,106,.6); transition:transform .12s ease, filter .12s}
+  .play:hover{filter:brightness(1.06)} .play:active{transform:scale(.95)}
+  .play svg{width:24px; height:24px; margin-left:2px}
+  .play.playing svg{margin-left:0}
+  .nowplaying{flex:1 1 auto; min-width:220px}
+  .np-key{font-size:20px; font-weight:600}
+  .np-form{color:var(--muted); font-size:13.5px; margin-top:2px; font-family:ui-monospace,monospace; letter-spacing:.02em}
+  .section-pill{display:inline-block; margin-top:8px; font-size:12px; font-family:ui-monospace,monospace;
+    color:var(--accent2); border:1px solid var(--line); border-radius:999px; padding:3px 10px; letter-spacing:.06em}
+
+  .viz{margin-top:16px; height:88px; width:100%; border-radius:10px; background:
+     linear-gradient(180deg,#0c0f18,#0a0d15); border:1px solid var(--line); display:block}
+
+  .progress{margin-top:12px; height:6px; border-radius:999px; background:#0b0e17; border:1px solid var(--line); overflow:hidden}
+  .progress > i{display:block; height:100%; width:0%;
+    background:linear-gradient(90deg,var(--accent),#f0d9a6); transition:width .08s linear}
+
+  .controls{display:grid; grid-template-columns:repeat(2,1fr); gap:16px 26px; padding:18px 20px 22px; border-top:1px solid var(--line)}
+  @media (max-width:640px){ .controls{grid-template-columns:1fr} }
+  .ctl{display:flex; flex-direction:column; gap:7px}
+  .ctl .lab{display:flex; justify-content:space-between; align-items:baseline; font-size:12.5px; color:var(--muted);
+    font-family:ui-monospace,monospace; letter-spacing:.08em; text-transform:uppercase}
+  .ctl .val{color:var(--ink); font-weight:600}
+  input[type=range]{-webkit-appearance:none; appearance:none; width:100%; height:4px; border-radius:999px;
+    background:linear-gradient(90deg,var(--accent) 0%,var(--accent) var(--pct,50%),#2c3448 var(--pct,50%),#2c3448 100%); outline:none; cursor:pointer}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none; width:16px; height:16px; border-radius:50%;
+    background:#f3e5c4; border:2px solid var(--accent); box-shadow:0 2px 6px rgba(0,0,0,.4); cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:16px; height:16px; border-radius:50%; background:#f3e5c4; border:2px solid var(--accent); cursor:pointer}
+
+  .seedrow{display:flex; gap:8px; align-items:stretch}
+  .seedrow input[type=text]{flex:1; min-width:0; background:#0c1019; border:1px solid var(--line); color:var(--ink);
+    border-radius:9px; padding:9px 11px; font-family:ui-monospace,monospace; font-size:13px; letter-spacing:.05em}
+  .seedrow input[type=text]:focus{outline:none; border-color:var(--accent)}
+  .btn{appearance:none; cursor:pointer; border:1px solid var(--line); background:var(--panel2); color:var(--ink);
+    border-radius:9px; padding:0 12px; font-family:ui-monospace,monospace; font-size:12px; letter-spacing:.04em; transition:border-color .12s, background .12s}
+  .btn:hover{border-color:var(--accent); background:#212840}
+  .seg{display:flex; border:1px solid var(--line); border-radius:9px; overflow:hidden}
+  .seg button{flex:1; appearance:none; border:none; cursor:pointer; background:transparent; color:var(--muted);
+    padding:9px 8px; font-family:ui-monospace,monospace; font-size:12.5px; letter-spacing:.05em; transition:background .12s,color .12s}
+  .seg button.on{background:linear-gradient(180deg,#2a3146,#232a3d); color:var(--accent)}
+  select{width:100%; background:#0c1019; border:1px solid var(--line); color:var(--ink); border-radius:9px;
+    padding:9px 11px; font-family:ui-monospace,monospace; font-size:13px}
+  select:focus{outline:none; border-color:var(--accent)}
+
+  .feedback{margin-top:22px}
+  .feedback .card{padding:18px 20px 20px}
+  .fb-h{display:flex; align-items:center; gap:10px; margin-bottom:12px}
+  .fb-h h2{font-size:16px; margin:0; font-weight:600}
+  .fb-h .hint{color:var(--muted); font-size:12.5px}
+  .stars{display:flex; gap:6px; margin:4px 0 14px}
+  .star{font-size:26px; cursor:pointer; color:#39415a; transition:color .1s, transform .1s; line-height:1}
+  .star:hover{transform:scale(1.12)}
+  .star.on{color:var(--accent)}
+  textarea{width:100%; min-height:88px; resize:vertical; background:#0c1019; border:1px solid var(--line); color:var(--ink);
+    border-radius:10px; padding:11px 12px; font-family:inherit; font-size:14px; line-height:1.5}
+  textarea:focus{outline:none; border-color:var(--accent)}
+  .fb-actions{display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; align-items:center}
+  .fb-actions .btn.primary{background:linear-gradient(180deg,#d8bd82,#c8a86a); color:#241c0c; border-color:transparent; font-weight:600; padding:10px 16px}
+  .fb-actions .grow{flex:1}
+  .toast{font-size:12.5px; color:var(--good); font-family:ui-monospace,monospace; opacity:0; transition:opacity .2s}
+  .toast.show{opacity:1}
+  pre.json{margin:14px 0 0; background:#080b12; border:1px solid var(--line); border-radius:10px; padding:12px 14px;
+    font-family:ui-monospace,monospace; font-size:12px; color:#c5cee0; overflow:auto; max-height:220px; display:none; white-space:pre-wrap; word-break:break-word}
+  footer.ft{margin-top:22px; color:var(--muted); font-size:12px; text-align:center; line-height:1.6; font-family:ui-monospace,monospace}
+  a{color:var(--accent2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hd">
+    <span class="kicker">Engine 01</span>
+    <h1>Tonal Classical</h1>
+    <span class="ver" id="verBadge">v0.2.0</span>
+  </header>
+  <p class="sub">A miniature for a small chamber ensemble, composed on the fly from a seed. Diatonic
+     harmony, a singing melody, and a rounded-ternary shape — performed with human timing, phrase
+     dynamics, and a touch of rubato rather than a metronome.</p>
+
+  <div class="card">
+    <div class="stage">
+      <div class="transport">
+        <button class="play" id="playBtn" aria-label="Play">
+          <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <div class="nowplaying">
+          <div class="np-key" id="keyLabel">C major</div>
+          <div class="np-form">intro · A · B · A′ · coda</div>
+          <span class="section-pill" id="sectionPill">ready</span>
+        </div>
+      </div>
+      <canvas class="viz" id="viz" width="1600" height="176"></canvas>
+      <div class="progress"><i id="progBar"></i></div>
+    </div>
+
+    <div class="controls">
+      <div class="ctl" style="grid-column:1/-1">
+        <div class="lab"><span>Seed</span><span class="val" id="seedEcho">tvc4pn</span></div>
+        <div class="seedrow">
+          <input type="text" id="seedInput" value="tvc4pn" spellcheck="false" autocomplete="off" />
+          <button class="btn" id="shuffleBtn" title="Random seed">⟳ shuffle</button>
+        </div>
+      </div>
+
+      <div class="ctl">
+        <div class="lab"><span>Tempo</span><span class="val"><span id="bpmVal">132</span> bpm</span></div>
+        <input type="range" id="bpm" min="72" max="184" step="1" value="132" />
+      </div>
+
+      <div class="ctl">
+        <div class="lab"><span>Mode</span><span class="val" id="modeVal">major</span></div>
+        <div class="seg" id="modeSeg">
+          <button data-mode="major" class="on">major</button>
+          <button data-mode="minor">minor</button>
+        </div>
+      </div>
+
+      <div class="ctl">
+        <div class="lab"><span>Tonic</span><span class="val" id="tonicVal">C4</span></div>
+        <select id="tonic">
+          <option>C4</option><option>Db4</option><option>D4</option><option>Eb4</option>
+          <option>E4</option><option>F4</option><option>Gb4</option><option>G4</option>
+          <option>Ab4</option><option>A4</option><option>Bb4</option><option>B4</option>
+        </select>
+      </div>
+
+      <div class="ctl">
+        <div class="lab"><span>Reverb</span><span class="val"><span id="revVal">0.28</span></span></div>
+        <input type="range" id="reverb" min="0" max="1" step="0.01" value="0.28" />
+      </div>
+
+      <div class="ctl">
+        <div class="lab"><span>Volume</span><span class="val"><span id="volVal">0.62</span></span></div>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.62" />
+      </div>
+    </div>
+  </div>
+
+  <div class="feedback">
+    <div class="card">
+      <div class="fb-h">
+        <h2>Feedback</h2>
+        <span class="hint">Rate this take and jot what you heard — export the JSON below.</span>
+      </div>
+      <div class="stars" id="stars" role="radiogroup" aria-label="Rating">
+        <span class="star" data-v="1">★</span><span class="star" data-v="2">★</span>
+        <span class="star" data-v="3">★</span><span class="star" data-v="4">★</span>
+        <span class="star" data-v="5">★</span>
+      </div>
+      <textarea id="comment" placeholder="What worked, what didn't — articulation, tempo, timbre, any clicks or clipping…"></textarea>
+      <div class="fb-actions">
+        <button class="btn primary" id="copyBtn">Copy feedback JSON</button>
+        <button class="btn" id="dlBtn">Download .json</button>
+        <button class="btn" id="showBtn">Show JSON</button>
+        <span class="grow"></span>
+        <span class="toast" id="toast">copied ✓</span>
+      </div>
+      <pre class="json" id="jsonOut"></pre>
+    </div>
+  </div>
+
+  <footer class="ft">
+    tonal-classical · deterministic from seed · rendered live with the Web Audio API · no samples, no network
+  </footer>
+</div>
+
+<script>
+"use strict";
+/* ============================================================================
+   Engine 01 — Tonal Classical  ·  v0.2.0
+   A self-contained procedural composer + performer.
+
+   v0.2.0 changes (from feedback on v0.1.0):
+     • FIX click/clipping at the end of the last note:
+         - every note uses a click-free envelope (no exponentialRamp-to-zero; the
+           release decays toward a -80 dB floor via setTargetAtTime, and the
+           oscillator is stopped only well after it is inaudible);
+         - a master limiter (DynamicsCompressor) + headroom stop voice sums from
+           clipping;
+         - the whole piece ends on a gentle master fade so the final tail can never
+           be truncated into a click.
+     • HUMANISE the performance (was "mechanical"):
+         - seeded micro-timing jitter (less on strong beats),
+         - metric + phrase-arc velocity shaping, agogic accents,
+         - rubato (tempo eases at phrase ends; a real ritardando in the coda),
+         - articulation varies (legato melody vs. lighter accompaniment),
+         - chords are rolled slightly rather than struck dead-flat,
+         - gentle vibrato on longer melody notes.
+     • FASTER default tempo: 132 bpm (was 118).
+   ========================================================================== */
+
+/* ----------------------------- seeded PRNG ------------------------------- */
+function xmur3(str){
+  let h = 1779033703 ^ str.length;
+  for (let i=0;i<str.length;i++){ h = Math.imul(h ^ str.charCodeAt(i), 3432918353); h = (h<<13)|(h>>>19); }
+  return function(){ h = Math.imul(h ^ (h>>>16), 2246822507); h = Math.imul(h ^ (h>>>13), 3266489909); h ^= h>>>16; return h>>>0; };
+}
+function sfc32(a,b,c,d){
+  return function(){
+    a|=0;b|=0;c|=0;d|=0;
+    let t=(a+b|0)+d|0; d=d+1|0; a=b^(b>>>9); b=(c+(c<<3))|0; c=(c<<21)|(c>>>11); c=c+t|0;
+    return (t>>>0)/4294967296;
+  };
+}
+function makeRng(seedStr){ const s=xmur3(String(seedStr)); return sfc32(s(),s(),s(),s()); }
+const R = {
+  f:(rng,a,b)=>a+(b-a)*rng(),
+  i:(rng,a,b)=>Math.floor(a+(b-a+1)*rng()),
+  pick:(rng,arr)=>arr[Math.floor(rng()*arr.length)],
+  chance:(rng,p)=>rng()<p,
+  // approx-gaussian in [-1,1], centered, tails thin (sum of 3 uniforms)
+  gauss:(rng)=>((rng()+rng()+rng())/1.5 - 1),
+};
+
+/* ----------------------------- music theory ------------------------------ */
+const NOTE_TO_SEMI = {C:0,'C#':1,Db:1,D:2,'D#':3,Eb:3,E:4,F:5,'F#':6,Gb:6,G:7,'G#':8,Ab:8,A:9,'A#':10,Bb:10,B:11};
+function parseNote(n){ const m=/^([A-G][#b]?)(-?\d+)$/.exec(n); return NOTE_TO_SEMI[m[1]] + (parseInt(m[2],10)+1)*12; } // C4 = 60
+function midiToFreq(m){ return 440*Math.pow(2,(m-69)/12); }
+const SCALES = { major:[0,2,4,5,7,9,11], minor:[0,2,3,5,7,8,10] };
+
+// pitch of a scale index (can wrap octaves, negative ok), relative to tonic midi
+function scalePitch(tonic, scale, idx){ const oct=Math.floor(idx/7); const deg=((idx%7)+7)%7; return tonic + 12*oct + scale[deg]; }
+// pitch-class set of a diatonic triad rooted at scale degree `deg` (0-based)
+function triadPCs(scale, deg){ return [deg,deg+2,deg+4].map(i=>((scale[((i%7)+7)%7])%12+12)%12); }
+
+/* Diatonic progressions per section. Each entry = scale degree (0-based: 0=I..6=vii°).
+   Templates are picked by seed; all resolve tonally. Half cadence ends on 4 (V),
+   authentic cadence ends 4→0 (V→I). Antecedent: HC. Consequent / coda: PAC.       */
+const PROG = {
+  antecedent: [ [0,3,1,4], [0,5,1,4], [0,3,4,4], [0,1,4,4] ],   // ...→ V   (half cadence)
+  consequent: [ [0,3,4,0], [5,3,4,0], [0,4,5,4,0].slice(0,4), [0,1,4,0] ], // ...→ I
+  bridgeA:    [ [3,4,5,2], [1,4,0,5], [3,0,1,4], [5,3,1,4] ],   // wanders
+  bridgeB:    [ [3,1,4,4], [1,4,0,4], [5,1,4,4], [3,4,5,4] ],   // ...→ V, prepares return
+  coda:       [ [0,3,0,4,0], [0,4,0,4,0], [3,0,4,0,0] ],        // plagal/authentic close
+};
+
+/* ----------------------------- composition ------------------------------- */
+// Returns a piece object: { key, form, bars, events:[{v,midi,beat,dur,vel,roll,legato}], sections:[{name,startBeat,endBeat}] }
+function compose(seedStr, mode){
+  const rng = makeRng(seedStr + '|' + mode);
+  const scale = SCALES[mode];
+  const T = 0; // work relative to tonic=0; transposition applied at render time
+  const BEATS = 4;
+
+  // register centres, as SCALE INDICES relative to the tonic (index 7 = one octave up)
+  const MEL_C = 7;    // melody sings about an octave above the tonic
+  const ACC_C = 0;    // accompaniment around the tonic octave
+
+  const events = [];
+  const sections = [];
+  let bar = 0;
+
+  const strongOfBeat = (b)=>{ const p=((b%BEATS)+BEATS)%BEATS; return p===0?1 : (p===2?0.72 : (Number.isInteger(p)?0.5:0.32)); };
+
+  // resolve a scale-index near a target that belongs to a triad; optional leading-tone raise for minor V
+  function chordIndexNear(deg, targetIdx){
+    const set = new Set([deg%7,(deg+2)%7,(deg+4)%7]);
+    let best=targetIdx, bestD=99;
+    for (let k=targetIdx-4;k<=targetIdx+4;k++){ if(set.has(((k%7)+7)%7)){ const d=Math.abs(k-targetIdx); if(d<bestD){bestD=d;best=k;} } }
+    return best;
+  }
+  function idxToMidi(idx, chordDeg){
+    let m = scalePitch(T, scale, idx);
+    if (mode==='minor' && chordDeg===4 && (((idx%7)+7)%7)===6) m += 1; // raise leading tone under V
+    return m;
+  }
+
+  // --- accompaniment for one bar over a given chord degree ---
+  function accompany(startBeat, deg, style){
+    // build a compact triad around ACC_C
+    const rootIdx = chordIndexNear(deg, ACC_C-1);
+    const tones = [rootIdx, rootIdx+2, rootIdx+4].map(i=>idxToMidi(i,deg)).sort((a,b)=>a-b);
+    if (style==='alberti'){
+      const patt=[0,2,1,2, 0,2,1,2];      // low-high-mid-high (classic Alberti), 8 eighths
+      for (let j=0;j<8;j++){
+        events.push({v:'acc', midi:tones[patt[j]], beat:startBeat+j*0.5, dur:0.5, vel:0.40, legato:0.92});
+      }
+    } else if (style==='broken'){
+      const patt=[0,1,2,1];               // gentle broken chord, 4 quarters
+      for (let j=0;j<4;j++) events.push({v:'acc', midi:tones[patt[j]], beat:startBeat+j, dur:1, vel:0.42, legato:0.9});
+    } else { // 'block' — rolled chord, held; contrast texture for the B section
+      for (const beatOff of [0,2]){
+        tones.forEach((m,k)=> events.push({v:'acc', midi:m, beat:startBeat+beatOff, dur:1.9, vel:0.38, legato:0.98, roll:k*0.018}));
+      }
+    }
+    return tones;
+  }
+
+  // --- bass for one bar ---
+  function bassLine(startBeat, deg, nextDeg, cadence){
+    const b0 = scalePitch(T, scale, chordIndexNear(deg,-7)); // deep chord root (~C3 when tonic is C4)
+    events.push({v:'bass', midi:b0, beat:startBeat, dur:2, vel:0.62, legato:0.95});
+    // beat 3: the fifth, or a passing tone walking toward the next root at a cadence
+    if (cadence){
+      const step = scalePitch(T, scale, chordIndexNear(deg,-7)+1);
+      events.push({v:'bass', midi:step, beat:startBeat+3, dur:1, vel:0.5, legato:0.9});
+    } else {
+      const fifth = scalePitch(T, scale, chordIndexNear(deg,-7)+2);
+      events.push({v:'bass', midi:fifth, beat:startBeat+2, dur:2, vel:0.5, legato:0.92});
+    }
+  }
+
+  // --- melody for one bar: rhythm cell + chord-anchored, stepwise contour ---
+  const MEL_RHYTHMS = [
+    [1,1,1,1],[2,1,1],[1,1,2],[0.5,0.5,1,2],[1,0.5,0.5,1,1],
+    [1.5,0.5,1,1],[2,2],[1,1,0.5,0.5,1],[0.5,0.5,0.5,0.5,2]
+  ];
+  let melPrev = MEL_C + 0; // last melody scale-INDEX (start on tonic, high octave)
+  function melodyBar(startBeat, deg, opts){
+    opts = opts||{};
+    const rhythm = opts.rhythm || R.pick(rng, MEL_RHYTHMS);
+    let b = startBeat, out=[];
+    for (let k=0;k<rhythm.length;k++){
+      const dur = rhythm[k];
+      const strong = strongOfBeat(b);
+      let idx;
+      if (k===0 || strong>=0.7 || dur>=1.5){
+        idx = chordIndexNear(deg, melPrev + (R.chance(rng,0.5)? 0 : (R.chance(rng,0.5)?1:-1)));
+      } else {
+        // stepwise passing/neighbour from previous
+        const dir = R.chance(rng, melPrev>MEL_C+3?0.32 : (melPrev<MEL_C-1?0.72:0.5)) ? 1 : -1;
+        idx = melPrev + dir;
+        if (R.chance(rng,0.22)) idx = melPrev; // repeated tone
+      }
+      // keep melody in a comfortable ambitus
+      if (idx > MEL_C+7) idx -= 7; if (idx < MEL_C-3) idx += 7;
+      const midi = idxToMidi(idx, deg);
+      out.push({v:'mel', midi, beat:b, dur, vel:0.9, legato: dur>=1.5?0.98:0.9});
+      melPrev = idx; b += dur;
+    }
+    // cadential resolution: if this bar ends a phrase, aim last note at a stable tone
+    if (opts.cadence && out.length){
+      const last = out[out.length-1];
+      const target = opts.cadence==='authentic' ? MEL_C : (R.chance(rng,0.5)?MEL_C+1:MEL_C+4);
+      const idx = chordIndexNear(deg, target);
+      last.midi = idxToMidi(idx, deg); melPrev = idx;
+    }
+    out.forEach(e=>events.push(e));
+    return out;
+  }
+
+  // build a full 8-bar section (two 4-bar phrases). Returns the melody (as events) for reuse.
+  function buildSection(name, progA, progB, accStyle, cadences){
+    const startBeat = bar*BEATS;
+    sections.push({name, startBeat, endBeat:(bar+8)*BEATS});
+    const chords = progA.concat(progB);        // 8 degrees, one per bar
+    // pad/truncate to exactly 8
+    while (chords.length<8) chords.push(0);
+    const melBars = [];
+    for (let i=0;i<8;i++){
+      const deg = chords[i];
+      const bBeat = (bar+i)*BEATS;
+      // accompaniment + bass
+      accompany(bBeat, deg, accStyle);
+      const cadenceBar = (i===3)||(i===7);
+      bassLine(bBeat, deg, chords[(i+1)%8], cadenceBar);
+      // melody
+      const cad = (i===3)? (cadences[0]) : (i===7? cadences[1] : null);
+      melBars.push(melodyBar(bBeat, deg, {cadence:cad}));
+    }
+    bar += 8;
+    return {chords, melBars, startBeat};
+  }
+
+  // ---- INTRO (4 bars): tonic prolongation, arpeggiated, sets the key ----
+  (function intro(){
+    const startBeat = bar*BEATS;
+    sections.push({name:'intro', startBeat, endBeat:(bar+4)*BEATS});
+    const introChords=[0,4,0,0];
+    for (let i=0;i<4;i++){
+      const deg=introChords[i]; const bBeat=(bar+i)*BEATS;
+      // rising arpeggio in the accompaniment register, sparse melody entrance in bar 3-4
+      const rootIdx = chordIndexNear(deg, ACC_C-1);
+      const tones=[rootIdx,rootIdx+2,rootIdx+4,rootIdx+7].map(x=>idxToMidi(x,deg));
+      const seq = i<2 ? [0,1,2,3] : [0,2,1,3];
+      for (let j=0;j<4;j++) events.push({v:'acc', midi:tones[seq[j]], beat:bBeat+j, dur: (i<2?0.95:1.4), vel:0.34+0.02*j, legato:0.9});
+      // deep pedal on the tonic
+      events.push({v:'bass', midi:scalePitch(T,scale,chordIndexNear(deg,-7)), beat:bBeat, dur:4, vel:0.5, legato:0.98});
+      if (i>=2){ // melody peeks in, anacrusis to A
+        const idx = chordIndexNear(0, MEL_C+ (i===2?2:0));
+        events.push({v:'mel', midi:idxToMidi(idx,deg), beat:bBeat+ (i===2?2:2.5), dur:i===2?2:1.5, vel:0.7, legato:0.98});
+        melPrev = idx;
+      }
+    }
+    bar += 4;
+  })();
+
+  // ---- A (8 bars) ----
+  const A = buildSection('A',
+      R.pick(rng,PROG.antecedent), R.pick(rng,PROG.consequent),
+      R.chance(rng,0.7)?'alberti':'broken', ['half','authentic']);
+
+  // ---- B (8 bars): contrasting texture + wandering harmony, ends on V ----
+  const B = buildSection('B',
+      R.pick(rng,PROG.bridgeA), R.pick(rng,PROG.bridgeB),
+      'block', ['half','half']);
+
+  // ---- A′ (8 bars): the A melody returns, lightly ornamented, fuller cadence ----
+  (function reprise(){
+    const startBeat = bar*BEATS;
+    sections.push({name:"A′", startBeat, endBeat:(bar+8)*BEATS});
+    for (let i=0;i<8;i++){
+      const deg=A.chords[i]; const bBeat=(bar+i)*BEATS;
+      accompany(bBeat, deg, R.chance(rng,0.6)?'alberti':'broken');
+      bassLine(bBeat, deg, A.chords[(i+1)%8], (i===3)||(i===7));
+      // reuse A's melody for this bar, shifted to the new bar, with light ornament
+      const srcBar = A.melBars[i];
+      const shift = bBeat - (A.startBeat + i*BEATS);
+      srcBar.forEach((e,ei)=>{
+        let midi=e.midi, beat=e.beat+shift, dur=e.dur, vel=Math.min(1,e.vel+0.03);
+        events.push({v:'mel', midi, beat, dur, vel, legato:e.legato});
+        // ornament: occasional upper-neighbour grace before a longer melody note
+        if (dur>=1 && R.chance(rng,0.22)){
+          events.push({v:'mel', midi:midi+ (mode==='minor'?1:2), beat:beat-0.22, dur:0.2, vel:vel*0.7, legato:0.7});
+        }
+      });
+    }
+    bar += 8;
+  })();
+
+  // ---- CODA (4-5 bars): plagal/authentic close on a held tonic ----
+  (function coda(){
+    const prog = R.pick(rng, PROG.coda);
+    const startBeat = bar*BEATS;
+    sections.push({name:'coda', startBeat, endBeat:(bar+prog.length)*BEATS});
+    for (let i=0;i<prog.length;i++){
+      const deg=prog[i]; const bBeat=(bar+i)*BEATS; const last=(i===prog.length-1);
+      if (last){
+        // final tonic chord — all voices land together (with a tiny roll), long and soft
+        const rootIdx=chordIndexNear(deg, ACC_C-1);
+        events.push({v:'bass', midi:scalePitch(T,scale,chordIndexNear(deg,-7)), beat:bBeat, dur:6, vel:0.5, legato:1});
+        const triad=[rootIdx,rootIdx+2,rootIdx+4].map(x=>idxToMidi(x,deg));
+        triad.forEach((m,k)=>events.push({v:'acc', midi:m, beat:bBeat, dur:5.5, vel:0.34, legato:1, roll:k*0.02}));
+        events.push({v:'mel', midi:idxToMidi(chordIndexNear(deg,MEL_C),deg), beat:bBeat, dur:5.5, vel:0.62, legato:1, roll:0.05});
+      } else {
+        accompany(bBeat, deg, 'broken');
+        bassLine(bBeat, deg, prog[i+1], i===prog.length-2);
+        melodyBar(bBeat, deg, {cadence: i===prog.length-2?'authentic':null, rhythm:[2,1,1]});
+      }
+    }
+    bar += prog.length;
+  })();
+
+  return { key:null, mode, bars:bar, beats:bar*BEATS, events, sections };
+}
+
+/* ------------------------------- audio ----------------------------------- */
+let actx = null, master = null;
+
+// master chain:  preGain -> limiter -> [dry + convolver(wet)] -> out(volume) -> destination
+function buildMaster(ctx){
+  const preGain = ctx.createGain();  preGain.gain.value = 0.85;                 // headroom
+  const limiter = ctx.createDynamicsCompressor();
+  limiter.threshold.value=-6; limiter.knee.value=6; limiter.ratio.value=12;
+  limiter.attack.value=0.003; limiter.release.value=0.18;
+  const dry = ctx.createGain(); dry.gain.value = 0.82;
+  const conv = ctx.createConvolver(); conv.buffer = makeIR(ctx, 2.2, 2.6);
+  const wet = ctx.createGain(); wet.gain.value = 0.28;
+  const out = ctx.createGain(); out.gain.value = 0.62;
+
+  preGain.connect(limiter);
+  limiter.connect(dry); dry.connect(out);
+  limiter.connect(conv); conv.connect(wet); wet.connect(out);
+  out.connect(ctx.destination);
+  return {preGain, limiter, dry, conv, wet, out, userVol:0.62};
+}
+function ensureAudio(){
+  if (actx) return;
+  actx = new (window.AudioContext||window.webkitAudioContext)();
+  master = buildMaster(actx);
+}
+
+// synthesise an exponentially-decaying-noise impulse response (a plausible small hall)
+function makeIR(ctx, seconds, decay){
+  const rate=ctx.sampleRate, len=Math.floor(seconds*rate);
+  const buf=ctx.createBuffer(2,len,rate);
+  for (let ch=0; ch<2; ch++){
+    const d=buf.getChannelData(ch);
+    for (let i=0;i<len;i++){
+      const t=i/len;
+      // a little early-reflection sparkle then smooth tail
+      d[i]=(Math.random()*2-1)*Math.pow(1-t,decay)*(1-0.25*Math.cos(t*Math.PI*8));
+    }
+  }
+  return buf;
+}
+
+// one note. Click-free by construction (see header). dest = master.preGain.
+function playNote(v, freq, t0, dur, vel){
+  const now=t0;
+  const g=actx.createGain();
+  const filt=actx.createBiquadFilter(); filt.type='lowpass';
+  // per-voice timbre + envelope
+  let peak, env, cutoff, oscs=[];
+  if (v==='mel'){
+    peak=0.20*vel; env={a:0.014,d:0.13,s:0.62,r:0.30};
+    cutoff=1400+2600*vel;
+    const o1=actx.createOscillator(); o1.type='triangle';
+    const o2=actx.createOscillator(); o2.type='sawtooth';
+    const o2g=actx.createGain(); o2g.gain.value=0.16;             // saw only adds a little edge
+    o1.frequency.value=freq; o2.frequency.value=freq;
+    o1.detune.value=-5; o2.detune.value=+6;                        // gentle chorus warmth
+    o1.connect(g); o2.connect(o2g); o2g.connect(g);
+    oscs=[o1,o2];
+    // vibrato on longer notes
+    if (dur>0.45){
+      const lfo=actx.createOscillator(); lfo.type='sine'; lfo.frequency.value=5.2+Math.random()*0.6;
+      const lg=actx.createGain(); lg.gain.value=0; lfo.connect(lg); lg.connect(o1.detune); lg.connect(o2.detune);
+      lg.gain.setValueAtTime(0, now);
+      lg.gain.linearRampToValueAtTime(0, now+Math.min(0.25,dur*0.4));
+      lg.gain.linearRampToValueAtTime(6.5, now+Math.min(0.55,dur*0.8)); // ~6.5 cents, eases in
+      lfo.start(now); lfo.stop(now+dur+0.4);
+    }
+  } else if (v==='acc'){
+    peak=0.15*vel; env={a:0.008,d:0.10,s:0.42,r:0.20};
+    cutoff=1100+1500*vel;
+    const o1=actx.createOscillator(); o1.type='triangle'; o1.frequency.value=freq;
+    const o2=actx.createOscillator(); o2.type='triangle'; o2.frequency.value=freq; o2.detune.value=7;
+    const o2g=actx.createGain(); o2g.gain.value=0.5; o1.connect(g); o2.connect(o2g); o2g.connect(g);
+    oscs=[o1,o2];
+  } else { // bass
+    peak=0.24*vel; env={a:0.018,d:0.18,s:0.78,r:0.28};
+    cutoff=420+500*vel;
+    const o1=actx.createOscillator(); o1.type='sine'; o1.frequency.value=freq;
+    const o2=actx.createOscillator(); o2.type='triangle'; o2.frequency.value=freq; o2.detune.value=-4;
+    const o2g=actx.createGain(); o2g.gain.value=0.35; o1.connect(g); o2.connect(o2g); o2g.connect(g);
+    oscs=[o1,o2];
+  }
+  filt.frequency.value=cutoff; filt.Q.value=0.6;
+  g.connect(filt); filt.connect(master.preGain);
+
+  // ---- click-free ADSR ----
+  const FLOOR=0.0006;
+  const relStart = now + Math.max(dur, env.a+env.d+0.03);
+  const gg=g.gain;
+  gg.setValueAtTime(FLOOR, now);
+  gg.linearRampToValueAtTime(peak, now+env.a);                    // attack
+  gg.linearRampToValueAtTime(peak*env.s+FLOOR, now+env.a+env.d);  // decay to sustain
+  gg.setValueAtTime(peak*env.s+FLOOR, relStart);                  // hold sustain
+  gg.setTargetAtTime(FLOOR, relStart, env.r/4.5);                 // release (asymptotic — no ramp-to-0 click)
+  const stopAt = relStart + env.r*1.8 + 0.06;                     // stop only once inaudible
+  for (const o of oscs){ o.start(now); o.stop(stopAt); }
+  return stopAt;
+}
+
+/* --------------------------- performance layer --------------------------- */
+// convert a composed piece into a scheduled, humanised performance and play it.
+const player = {
+  playing:false, raf:0, startTime:0, endTime:0, sections:[], oscStops:[], onended:null,
+};
+
+function buildTempoMap(piece, bpm){
+  // per-beat effective duration with subtle rubato: ease at phrase ends, ritardando in coda.
+  const baseBeat = 60/bpm;
+  const totalBeats = piece.beats;
+  const codaStart = piece.sections[piece.sections.length-1].startBeat;
+  const times = new Float64Array(totalBeats+1);
+  let t=0.28; // a touch of pre-roll so nothing starts exactly at t=0
+  for (let b=0;b<totalBeats;b++){
+    times[b]=t;
+    // phrase-end lengthening: last beat of each 4-bar (16-beat) phrase, and each bar's downbeat feel
+    const inPhrase = b % 16;
+    let factor = 1;
+    if (inPhrase>=14) factor *= 1 + 0.09*((inPhrase-13)/2);          // gentle breath at phrase end
+    if (b>=codaStart) factor *= 1 + 0.55*((b-codaStart)/Math.max(1,(totalBeats-codaStart))); // ritardando
+    t += baseBeat*factor;
+  }
+  times[totalBeats]=t;
+  return times;
+}
+function beatToTime(times, beat){
+  const i=Math.floor(beat); const frac=beat-i;
+  if (i>=times.length-1) return times[times.length-1] + (beat-(times.length-1))*(times[times.length-1]-times[times.length-2]);
+  return times[i] + frac*(times[i+1]-times[i]);
+}
+
+function performPiece(piece, cfg){
+  ensureAudio();
+  try{ if (actx.state==='suspended' && actx.resume){ const r=actx.resume(); if(r&&r.catch) r.catch(()=>{}); } }catch(e){/* offline ctx: ignore */}
+  stopPlayback(true); // clear any prior
+
+  const perfRng = makeRng(cfg.seed + '|perf|' + cfg.mode);
+  const times = buildTempoMap(piece, cfg.bpm);
+  // compose() worked with the tonic pinned at MIDI 0 (pitches are tonic-relative);
+  // add the chosen tonic's MIDI here to transpose the whole piece into the real register.
+  const base = parseNote(cfg.tonic); // e.g. C4 = 60
+
+  master.userVol = cfg.volume;
+  master.out.gain.cancelScheduledValues(actx.currentTime);
+  master.out.gain.setValueAtTime(cfg.volume, actx.currentTime);
+  master.wet.gain.setValueAtTime(reverbToWet(cfg.reverb), actx.currentTime);
+  master.dry.gain.setValueAtTime(0.9-0.35*cfg.reverb, actx.currentTime);
+
+  const t0abs = actx.currentTime + 0.06;
+  player.startTime = t0abs;
+  let maxStop = t0abs;
+
+  // metric/phrase velocity shaping + micro-timing, per event
+  for (const e of piece.events){
+    // humanised onset
+    const nominal = beatToTime(times, e.beat);
+    const beatInBar = ((e.beat%4)+4)%4;
+    const strong = beatInBar===0?1 : (beatInBar===2?0.7 : (Number.isInteger(beatInBar)?0.5:0.3));
+    const jitterAmt = (e.v==='bass'?0.010 : e.v==='acc'?0.014 : 0.018) * (1.15-strong);
+    let onset = t0abs + nominal + R.gauss(perfRng)*jitterAmt + (e.roll||0);
+    // legato/staccato sounding duration
+    const nextBeatTime = beatToTime(times, e.beat+e.dur);
+    let sdur = (nextBeatTime - nominal) * (e.legato!=null?e.legato:0.9);
+    sdur = Math.max(0.08, sdur);
+    // phrase-arc dynamics: raised-cosine hump across each 16-beat phrase, + metric accent + agogic
+    const phasePos = (e.beat%16)/16;
+    const arc = 0.82 + 0.18*Math.sin(Math.PI*phasePos);
+    let vel = e.vel * arc * (0.8+0.34*strong) * (1 + 0.05*R.gauss(perfRng));
+    if (e.dur>=1.5) vel*=1.04; // agogic: longer notes lean in a little
+    vel = Math.max(0.05, Math.min(1.15, vel));
+
+    const midi = e.midi + base; // compose() pitches are tonic-relative around 0; add chosen tonic midi
+    const freq = midiToFreq(midi);
+    const st = playNote(e.v, freq, onset, sdur, vel);
+    if (st>maxStop) maxStop=st;
+  }
+
+  // ---- clean ending: gently fade the master just after the last tail, so no click can occur ----
+  const tail = maxStop + 2.4;             // let the reverb ring
+  master.out.gain.setValueAtTime(cfg.volume, maxStop);
+  master.out.gain.linearRampToValueAtTime(0.0001, maxStop+2.2);
+  player.endTime = tail;
+  player.sections = piece.sections.map(s=>({name:s.name, t:t0abs+beatToTime(times,s.startBeat)}));
+  player.playing = true;
+
+  // schedule the natural stop
+  player._endTimer = setTimeout(()=>{ finishPlayback(); }, (tail-actx.currentTime)*1000 + 60);
+  runVizLoop();
+}
+
+function reverbToWet(r){ return 0.06 + 0.5*r; }
+
+function finishPlayback(){
+  if (!player.playing) return;
+  player.playing=false;
+  cancelAnimationFrame(player.raf);
+  clearTimeout(player._endTimer);
+  // restore master volume for next play
+  if (master){ master.out.gain.cancelScheduledValues(actx.currentTime); master.out.gain.setValueAtTime(master.userVol, actx.currentTime); }
+  if (player.onended) player.onended();
+}
+
+function stopPlayback(silent){
+  clearTimeout(player._endTimer);
+  cancelAnimationFrame(player.raf);
+  if (actx && master && player.playing){
+    // fast, click-free fade then leave nodes to expire
+    const t=actx.currentTime;
+    master.out.gain.cancelScheduledValues(t);
+    master.out.gain.setValueAtTime(Math.max(0.0001,master.out.gain.value), t);
+    master.out.gain.linearRampToValueAtTime(0.0001, t+0.09);
+    setTimeout(()=>{ if(master){ master.out.gain.setValueAtTime(master.userVol, actx.currentTime); } }, 140);
+  }
+  player.playing=false;
+  if (!silent && player.onended) player.onended();
+}
+
+/* -------------------------------- UI ------------------------------------- */
+const $ = s=>document.querySelector(s);
+const state = { seed:'tvc4pn', bpm:132, mode:'major', tonic:'C4', reverb:0.28, volume:0.62, rating:0 };
+let piece = null, pieceKey='';
+
+function recompose(){
+  piece = compose(state.seed, state.mode);
+  pieceKey = state.seed+'|'+state.mode;
+  updateKeyLabel();
+}
+function pcName(tonic){ return /^([A-G][#b]?)/.exec(tonic)[1]; }
+function updateKeyLabel(){ $('#keyLabel').textContent = pcName(state.tonic)+' '+state.mode; }
+function formString(){ return 'intro + rounded ternary (A B A′) + coda'; }
+
+/* transport */
+const playBtn=$('#playBtn'), playIcon=$('#playIcon');
+function setPlayingUI(on){
+  playBtn.classList.toggle('playing',on);
+  playIcon.innerHTML = on ? '<path d="M7 6h4v12H7zM13 6h4v12h-4z"/>' : '<path d="M8 5v14l11-7z"/>';
+  playBtn.setAttribute('aria-label', on?'Stop':'Play');
+  if(!on){ $('#sectionPill').textContent='ready'; $('#progBar').style.width='0%'; }
+}
+player.onended = ()=> setPlayingUI(false);
+
+playBtn.addEventListener('click', ()=>{
+  if (player.playing){ stopPlayback(); setPlayingUI(false); return; }
+  if (!piece || pieceKey!==state.seed+'|'+state.mode) recompose();
+  performPiece(piece, {...state});
+  setPlayingUI(true);
+});
+
+/* viz + progress */
+const viz=$('#viz'), vctx=viz.getContext('2d');
+function runVizLoop(){
+  const draw=()=>{
+    if (!player.playing){ return; }
+    const now=actx.currentTime;
+    const p=Math.max(0,Math.min(1,(now-player.startTime)/(player.endTime-player.startTime)));
+    $('#progBar').style.width=(p*100).toFixed(1)+'%';
+    // current section label
+    let cur='intro';
+    for (const s of player.sections){ if (now>=s.t) cur=s.name; }
+    $('#sectionPill').textContent = cur;
+    drawViz(now);
+    player.raf=requestAnimationFrame(draw);
+  };
+  cancelAnimationFrame(player.raf);
+  player.raf=requestAnimationFrame(draw);
+}
+// lightweight staff-of-light visual driven by the analyser-free clock (deterministic look)
+let vizPhase=0;
+function drawViz(now){
+  const w=viz.width, h=viz.height; vctx.clearRect(0,0,w,h);
+  vctx.fillStyle='rgba(10,13,21,1)'; vctx.fillRect(0,0,w,h);
+  const t=now-player.startTime;
+  // faint staff lines
+  vctx.strokeStyle='rgba(120,140,180,0.10)'; vctx.lineWidth=1;
+  for(let i=1;i<5;i++){ const y=h*i/5; vctx.beginPath(); vctx.moveTo(0,y); vctx.lineTo(w,y); vctx.stroke(); }
+  // three flowing ribbons ~ the three voices
+  const cols=['#c8a86a','#8fb3e0','#7f8fd1'];
+  const amps=[0.30,0.18,0.12], sp=[1.0,1.7,0.6], off=[0.5,0.42,0.66];
+  for(let v=0; v<3; v++){
+    vctx.beginPath();
+    for(let x=0;x<=w;x+=8){
+      const ph=x/w*6.28*(2+v) + t*sp[v]*2.2 + v*1.7;
+      const y=h*off[v] + Math.sin(ph)*h*amps[v]*(0.6+0.4*Math.sin(t*0.8+v));
+      x===0?vctx.moveTo(x,y):vctx.lineTo(x,y);
+    }
+    vctx.strokeStyle=cols[v]; vctx.globalAlpha=0.5+0.2*v; vctx.lineWidth=2.2-v*0.5; vctx.stroke();
+  }
+  vctx.globalAlpha=1;
+  // moving playhead
+  const w2=viz.width, p=Math.max(0,Math.min(1,(now-player.startTime)/(player.endTime-player.startTime)));
+  vctx.strokeStyle='rgba(240,217,166,0.8)'; vctx.lineWidth=2;
+  vctx.beginPath(); vctx.moveTo(p*w2,0); vctx.lineTo(p*w2,h); vctx.stroke();
+}
+
+/* controls wiring */
+function setRangeFill(el){ const min=+el.min,max=+el.max,val=+el.value; el.style.setProperty('--pct',((val-min)/(max-min)*100)+'%'); }
+['bpm','reverb','volume'].forEach(id=>setRangeFill($('#'+id)));
+
+$('#seedInput').addEventListener('input', e=>{ state.seed=e.target.value.trim()||'seed'; $('#seedEcho').textContent=state.seed; recompose(); });
+$('#shuffleBtn').addEventListener('click', ()=>{
+  const chars='abcdefghijklmnopqrstuvwxyz0123456789'; let s='';
+  for(let i=0;i<6;i++) s+=chars[Math.floor(Math.random()*chars.length)];
+  state.seed=s; $('#seedInput').value=s; $('#seedEcho').textContent=s; recompose();
+});
+$('#bpm').addEventListener('input', e=>{ state.bpm=+e.target.value; $('#bpmVal').textContent=state.bpm; setRangeFill(e.target); });
+$('#reverb').addEventListener('input', e=>{ state.reverb=+e.target.value; $('#revVal').textContent=state.reverb.toFixed(2); setRangeFill(e.target);
+  if(master){ master.wet.gain.setTargetAtTime(reverbToWet(state.reverb),actx.currentTime,0.05); master.dry.gain.setTargetAtTime(0.9-0.35*state.reverb,actx.currentTime,0.05);} });
+$('#volume').addEventListener('input', e=>{ state.volume=+e.target.value; $('#volVal').textContent=state.volume.toFixed(2); setRangeFill(e.target);
+  if(master){ master.userVol=state.volume; if(player.playing) master.out.gain.setTargetAtTime(state.volume,actx.currentTime,0.03);} });
+$('#modeSeg').addEventListener('click', e=>{ const b=e.target.closest('button'); if(!b)return;
+  [...e.currentTarget.children].forEach(c=>c.classList.remove('on')); b.classList.add('on');
+  state.mode=b.dataset.mode; $('#modeVal').textContent=state.mode; recompose(); });
+$('#tonic').addEventListener('change', e=>{ state.tonic=e.target.value; $('#tonicVal').textContent=state.tonic; updateKeyLabel(); });
+
+/* feedback */
+const stars=[...document.querySelectorAll('.star')];
+function paintStars(n){ stars.forEach(s=>s.classList.toggle('on', +s.dataset.v<=n)); }
+stars.forEach(s=>{
+  s.addEventListener('mouseenter',()=>paintStars(+s.dataset.v));
+  s.addEventListener('mouseleave',()=>paintStars(state.rating));
+  s.addEventListener('click',()=>{ state.rating=+s.dataset.v; paintStars(state.rating); });
+});
+function feedbackObject(){
+  return {
+    engine:'tonal-classical', version:'0.2.0', seed:state.seed,
+    bpm:state.bpm, mode:state.mode, tonic:state.tonic,
+    reverb:+state.reverb.toFixed(2), volume:+state.volume.toFixed(2),
+    rating:String(state.rating||''), comment:$('#comment').value,
+    form:formString(), key:pcName(state.tonic)+' '+state.mode,
+    submittedAt:new Date().toISOString()
+  };
+}
+function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1600); }
+$('#copyBtn').addEventListener('click', async()=>{
+  const json=JSON.stringify(feedbackObject(),null,2);
+  try{ await navigator.clipboard.writeText(json); toast('copied ✓'); }
+  catch{ $('#jsonOut').style.display='block'; $('#jsonOut').textContent=json; toast('select & copy ↓'); }
+});
+$('#dlBtn').addEventListener('click', ()=>{
+  const json=JSON.stringify(feedbackObject(),null,2);
+  const blob=new Blob([json],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download=`feedback-tonal-classical-${state.seed}.json`; a.click(); URL.revokeObjectURL(a.href); toast('downloaded ✓');
+});
+$('#showBtn').addEventListener('click', ()=>{
+  const pre=$('#jsonOut'); const vis=pre.style.display==='block';
+  pre.style.display=vis?'none':'block'; if(!vis) pre.textContent=JSON.stringify(feedbackObject(),null,2);
+  $('#showBtn').textContent=vis?'Show JSON':'Hide JSON';
+});
+
+/* init */
+recompose();
+setPlayingUI(false);
+window.addEventListener('keydown', e=>{ if(e.code==='Space' && e.target.tagName!=='TEXTAREA' && e.target.tagName!=='INPUT'){ e.preventDefault(); playBtn.click(); } });
+</script>
+</body>
+</html>
