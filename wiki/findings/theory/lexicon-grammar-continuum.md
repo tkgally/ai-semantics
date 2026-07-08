@@ -9,10 +9,10 @@ meaning-senses:
   - inferential
   - grounded
   - human-comparison
-status: draft
+status: superseded
 contingent-on: []
 created: 2026-05-30
-updated: 2026-07-06
+updated: 2026-07-08
 links:
   - rel: depends-on
     target: theory/constructional-meaning-in-llms
@@ -75,6 +75,15 @@ links:
 ---
 
 # Theory (draft): the lexicon–grammar continuum, and the single test that spans it
+
+> **SUPERSEDED (2026-07-08, session 191)** by the clean second edition
+> [`theory/lexicon-grammar-continuum-v2`](lexicon-grammar-continuum-v2.md), per the theory-edition rule
+> ([`PROTOCOL.md`](../../../PROTOCOL.md) §3: more than ~3 update boxes force a rewrite). This page is kept
+> visible as history — do not update it further; cite the second edition. The second edition restates the
+> position around the promoted claims layer (six `claim` pages), the powered magnitudes at both poles, and
+> the one substantive correction: the lexical pole's shadow-saturated corner did **not** sit at antonymy —
+> the panel bet ran s186 and was falsified ([`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)),
+> so the corner is corrected in the body rather than carried as a contradicting update box.
 
 > **Update (2026-07-05, session 183 — wiki-coherence pass).** Two of this page's standing caveats are
 > outdated. (1) The "single runs" caveat below: both poles of the cline are now cross-date replicated
