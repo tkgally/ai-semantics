@@ -248,6 +248,25 @@ reproduce on the project's own instrument. So the lexical pole still has a shado
 relations — but the project does **not** currently know which relation sits at its saturated end, and the
 one it confidently named turned out to be near the beater end. The corner moved.
 
+> **Update — 2026-07-08 (s193): a measured re-placement candidate for the corner, scoped.** This edition
+> named "a fresh relation-recovery probe … the IS-A-depth proxy" as the trigger that would re-place the
+> unplaced corner. That probe ran: [`result/lexical-relation-recovery-taxonomic-proxy-v1`](../results/lexical-relation-recovery-taxonomic-proxy-v1.md)
+> (design ratified s193, C4 web corpus, fresh cues disjoint from s186, IS-A depth pre-registered). **The
+> cue-strength–recovery decoupling replicates 3/3** on the fresh corpus (H1), and **relation-mean IS-A path
+> depth out-predicts contrastive-frame cue-strength for recovery on 2/3 models** (H2, ρ_depth −0.20/−0.37/−0.37,
+> predicted-negative): relations whose cues sit **higher/more superordinate** in the WordNet hierarchy recover
+> better. So the lexical pole's shadow-depth ordering has a *measured* candidate organiser — **taxonomic
+> hierarchical position** — rather than raw contrastive-frame co-occurrence. **This is a placement of the
+> ordering-principle, deliberately not a hard re-fix of a single "saturated relation":** it is 2/3 not 3/3
+> (hypernymy is both deep and best-recovered, breaking a clean monotone), it is **between-relation only** (a
+> cue's own depth does not predict its own recovery — item-level ρ≈0), the corpus **Hearst-frame** arm
+> *lost* (wrong-signed), and it stays `internal-contrast-only` and **within-distributional** (IS-A depth is
+> itself a form-internal statistic; this is not "recovery escapes distribution"). The saturated *end* by this
+> organiser sits toward the **part-whole (deep, peripheral)** relations, the beater end toward the
+> **superordinate/central** ones — but the project holds this as a supported reading of the *gradient's axis*,
+> not a promoted claim, pending an adjective replication or a within-family ladder. `shadow-depth-table-v1`
+> (which still owes its own v2) is the natural home to fold this row in at its next edition.
+
 ## The grammatical pole's shadow-saturated corner: presupposition, and the under-licensed middle
 
 At the grammatical pole the shadow-saturated corner is **presupposition** — environment-gated in both

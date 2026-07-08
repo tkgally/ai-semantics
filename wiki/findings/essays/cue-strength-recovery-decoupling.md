@@ -6,10 +6,10 @@ meaning-senses:
   - distributional
   - inferential
   - measurement-epistemic
-status: draft
+status: revised
 contingent-on: []
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-07-08
 links:
   - rel: depends-on
     target: result/lexical-relation-shadow-saturation-v1
@@ -31,8 +31,10 @@ links:
 
 # Essay: the cue-strength–recovery decoupling
 
-> **Status: draft (2026-07-06, session 187). A philosophical-track essay in the project's own
-> voice.** It introduces **no new measurement** and makes **no human comparison**: every empirical
+> **Status: revised (drafted 2026-07-06 session 187; revised 2026-07-08 session 193 — the registered
+> H1/H2 bets have now been discharged by a fresh probe; see the dated revision at "The new bet").** A
+> philosophical-track essay in the project's own voice. It introduces **no new measurement** and makes
+> **no human comparison**: every empirical
 > assertion cites [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)
 > at that page's stated strength (`status: proposed`, `anchor: internal-contrast-only`; **n = 3
 > orderings, not coefficients**; **nouns only**; the residual arm **descriptive-only** because the
@@ -214,6 +216,26 @@ The decoupling is registered as a falsifiable bet with two halves, one safe and 
 H1 is close to a re-run of s186's clause 2 on fresh material; H2 is the genuine risk — it predicts a
 *specific* replacement predictor and can lose cleanly even if H1 wins.
 
+> **Revision — 2026-07-08 (s193): both bets discharged by a fresh probe.**
+> [`result/lexical-relation-recovery-taxonomic-proxy-v1`](../results/lexical-relation-recovery-taxonomic-proxy-v1.md)
+> ran the fresh test the design
+> [`design/lexical-relation-recovery-taxonomic-proxy-v1`](../../../experiments/designs/lexical-relation-recovery-taxonomic-proxy-v1.md)
+> operationalized (gates ratified s193; fresh cues disjoint from s186; a **different** corpus family,
+> C4 web text; IS-A depth pre-registered before recovery). **H1 REPLICATES 3/3** (ρ_cue near-zero on
+> a fresh corpus — the safer bet holds; the decoupling is not corpus-specific). **H2 fires-FOR at 2/3**
+> — the pre-registered primary proxy, IS-A path depth, out-predicts cue-strength (predicted negative
+> direction). So this essay's central reading is now **empirically supported, not just conjectured**:
+> raw contrastive-frame cue-strength is a poor recovery predictor *and* a taxonomic-structure statistic
+> (hierarchical position) does better. **The reading is scoped, not upgraded, by three honest limits
+> the run surfaced:** H2 is 2/3 (not 3/3 — hypernymy is both deep and best-recovered, capping one
+> model's depth correlation); the effect is **between-relation, not within-cue** (item-level depth→recovery
+> ρ ≈ 0); and the corpus **Hearst-frame** operationalization of the "definitional-frame statistic"
+> candidate **lost** (wrong-signed), so the surviving taxonomic answer is *structural hierarchy*, not
+> *corpus genus-naming frequency*. All still `internal-contrast-only`, nouns only, within-distributional
+> — H2 winning is one form-internal statistic out-ranking another, never recovery escaping distribution.
+> The essay's thesis stands and is strengthened; the "what might predict recovery" section is no longer
+> only a hypothesis for that grain.
+
 ## What this essay is not
 
 - **Not a human comparison.** The essay imports no human recovery baseline and asserts nothing about how
@@ -241,10 +263,21 @@ H1 is close to a re-run of s186's clause 2 on fresh material; H2 is the genuine 
   different control corpus, or the adjective-antonymy replication shows the across-relation cue-strength↔recovery
   rank correlation back near-positive (≥2/3 models), the decoupling was set- or corpus-specific: scope the
   reading to s186's noun-relation/Simple-Wikipedia setting or retract it. (This is H1's falsifier.)
+  **→ TESTED, DID NOT FIRE s193** ([`result/lexical-relation-recovery-taxonomic-proxy-v1`](../results/lexical-relation-recovery-taxonomic-proxy-v1.md)):
+  on fresh cues + a different corpus family (C4 web text), ρ_cue = +0.14/+0.09/+0.09, all near-zero,
+  3/3 — the decoupling **replicated**, so it was not a Simple-Wikipedia artifact and the reading stands
+  (not scoped down, not retracted).
 - **(b) A pre-registered taxonomic-structure proxy is measured against recovery.** If some IS-A /
   definitional-structure statistic out-predicts cue-strength on recovery rank, H2 is fired-for and the
   "what predicts recovery" question has an answer to promote; if none does, H2 is fired-against and the
   question reopens with taxonomic structure ruled out as the filler. Either outcome discharges H2.
+  **→ FIRED-FOR s193** ([`result/lexical-relation-recovery-taxonomic-proxy-v1`](../results/lexical-relation-recovery-taxonomic-proxy-v1.md)):
+  the pre-registered **primary** proxy, IS-A path depth, out-predicts cue-strength on 2/3 models
+  (ρ_depth −0.20/−0.37/−0.37, predicted negative, margin cleared on B and C) — H2 discharged, fired-for.
+  Two caveats travel with it: the corpus **Hearst-frame** second arm **lost** (correlated in the
+  *opposite* direction to its positive prediction), and the depth effect is **between-relation only**
+  (a cue's own depth does not predict its own recovery; item-level ρ ≈ 0). So the surviving answer is
+  *hierarchical position at the relation grain*, not corpus definitional-frame frequency.
 - **(c) The underlying s186 numbers move on re-run.** If a replication shrinks the decoupling (the Spearman
   crosses toward zero-positive, or the hypernymy-tops-recovery / meronymy-bottoms ordering breaks), the
   empirical premise moves and this reading is re-examined in-page.

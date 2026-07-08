@@ -1,0 +1,223 @@
+{
+ "relations": [
+  "antonymy",
+  "synonymy",
+  "hypernymy",
+  "hyponymy",
+  "holonymy",
+  "meronymy"
+ ],
+ "n_per_rel": {
+  "antonymy": 87,
+  "synonymy": 120,
+  "hypernymy": 120,
+  "hyponymy": 120,
+  "holonymy": 120,
+  "meronymy": 120
+ },
+ "corpus": "C4 (allenai/c4 en, shards 00000-00002, ODC-BY)",
+ "predictors": {
+  "cue_strength_frame": {
+   "antonymy": 0.1494,
+   "synonymy": 0.0056,
+   "hypernymy": 0.0083,
+   "hyponymy": 0.0361,
+   "holonymy": 0.0308,
+   "meronymy": 0.0194
+  },
+  "isa_depth": {
+   "antonymy": 6.126,
+   "synonymy": 6.95,
+   "hypernymy": 7.008,
+   "hyponymy": 6.375,
+   "holonymy": 7.2,
+   "meronymy": 6.867
+  },
+  "hearst_density": {
+   "antonymy": 0.0137,
+   "synonymy": 0.0126,
+   "hypernymy": 0.0123,
+   "hyponymy": 0.0147,
+   "holonymy": 0.0142,
+   "meronymy": 0.0146
+  }
+ },
+ "cue_strength_sent": {
+  "antonymy": 0.1494,
+  "synonymy": 0.0167,
+  "hypernymy": 0.0333,
+  "hyponymy": 0.0333,
+  "holonymy": 0.042,
+  "meronymy": 0.0528
+ },
+ "recovery_soundness": {
+  "A": {
+   "antonymy": 0.3238,
+   "synonymy": 0.2119,
+   "hypernymy": 0.3782,
+   "hyponymy": 0.2403,
+   "holonymy": 0.1306,
+   "meronymy": 0.1204
+  },
+  "B": {
+   "antonymy": 0.3314,
+   "synonymy": 0.1931,
+   "hypernymy": 0.3653,
+   "hyponymy": 0.2361,
+   "holonymy": 0.0958,
+   "meronymy": 0.1458
+  },
+  "C": {
+   "antonymy": 0.3697,
+   "synonymy": 0.2139,
+   "hypernymy": 0.4028,
+   "hyponymy": 0.2333,
+   "holonymy": 0.1639,
+   "meronymy": 0.1722
+  }
+ },
+ "recovery_hit": {
+  "A": {
+   "antonymy": 0.954,
+   "synonymy": 0.4746,
+   "hypernymy": 0.6975,
+   "hyponymy": 0.4,
+   "holonymy": 0.3333,
+   "meronymy": 0.2689
+  },
+  "B": {
+   "antonymy": 0.9425,
+   "synonymy": 0.45,
+   "hypernymy": 0.625,
+   "hyponymy": 0.425,
+   "holonymy": 0.2417,
+   "meronymy": 0.3333
+  },
+  "C": {
+   "antonymy": 0.9425,
+   "synonymy": 0.475,
+   "hypernymy": 0.7333,
+   "hyponymy": 0.4417,
+   "holonymy": 0.3917,
+   "meronymy": 0.3583
+  }
+ },
+ "empties": {
+  "A": {
+   "antonymy": 0,
+   "synonymy": 2,
+   "hypernymy": 1,
+   "hyponymy": 0,
+   "holonymy": 0,
+   "meronymy": 1
+  },
+  "B": {
+   "antonymy": 0,
+   "synonymy": 0,
+   "hypernymy": 0,
+   "hyponymy": 0,
+   "holonymy": 0,
+   "meronymy": 0
+  },
+  "C": {
+   "antonymy": 0,
+   "synonymy": 0,
+   "hypernymy": 0,
+   "hyponymy": 0,
+   "holonymy": 0,
+   "meronymy": 0
+  }
+ },
+ "across_relation_soundness": {
+  "A": {
+   "rho_cue": 0.143,
+   "rho_depth": -0.2,
+   "rho_hearst": -0.543
+  },
+  "B": {
+   "rho_cue": 0.086,
+   "rho_depth": -0.371,
+   "rho_hearst": -0.486
+  },
+  "C": {
+   "rho_cue": 0.086,
+   "rho_depth": -0.371,
+   "rho_hearst": -0.486
+  }
+ },
+ "across_relation_hit": {
+  "A": {
+   "rho_cue": 0.143,
+   "rho_depth": -0.314,
+   "rho_hearst": -0.657
+  },
+  "B": {
+   "rho_cue": 0.086,
+   "rho_depth": -0.486,
+   "rho_hearst": -0.6
+  },
+  "C": {
+   "rho_cue": 0.143,
+   "rho_depth": -0.314,
+   "rho_hearst": -0.657
+  }
+ },
+ "item_level_secondary": {
+  "NOTE": "DESCRIPTIVE/ROBUSTNESS-ONLY per Q1-C + freeze-condition 1 \u2014 NON-DECISIVE; cannot fire H2 or upgrade an across-relation H2-loss.",
+  "per_model_rho_depth_vs_recovery": {
+   "A": {
+    "n": 683,
+    "rho_depth_recovery": 0.055
+   },
+   "B": {
+    "n": 687,
+    "rho_depth_recovery": 0.008
+   },
+   "C": {
+    "n": 687,
+    "rho_depth_recovery": 0.042
+   }
+  }
+ },
+ "headline": {
+  "H1": "DECOUPLING-REPLICATES",
+  "H1_bands_per_model": {
+   "A": "REPLICATES",
+   "B": "REPLICATES",
+   "C": "REPLICATES"
+  },
+  "H1_rho_cue_per_model": {
+   "A": 0.143,
+   "B": 0.086,
+   "C": 0.086
+  },
+  "H2": "TAXONOMIC-PROXY-WINS (IS-A depth, primary)",
+  "H2_rho_depth_per_model": {
+   "A": -0.2,
+   "B": -0.371,
+   "C": -0.371
+  },
+  "H2_rho_hearst_per_model": {
+   "A": -0.543,
+   "B": -0.486,
+   "C": -0.486
+  },
+  "H2_depth_win_per_model": {
+   "A": false,
+   "B": true,
+   "C": true
+  },
+  "H2_hearst_win_per_model": {
+   "A": false,
+   "B": false,
+   "C": false
+  },
+  "level_divergence": true,
+  "thresholds": {
+   "H1_REPL_MAX": 0.3,
+   "H1_BREAK_MIN": 0.5,
+   "H2_MARGIN": 0.2,
+   "MAJ": 2
+  }
+ }
+}
