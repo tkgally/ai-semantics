@@ -1,0 +1,15 @@
+VERDICT: **GO-WITH-CONDITIONS**
+
+- **BLOCKER:** H1/H2 are *mostly* pre-specified, but the verdict map still allows post hoc discretion via “PARTIAL/AMBIGUOUS” and “QUALIFIED/weaker” language. **Fix:** write a single decision table that maps each possible `(rho_cue, rho_depth, rho_hearst)` region to one label with no interpretive escape hatches.
+
+- **BLOCKER:** H2 is not fully insulated from proxy shopping: you have a primary proxy plus a second arm, and the second can become narratively useful if the first fails. **Fix:** lock the analysis hierarchy now: IS-A depth is the only primary H2 test; Hearst is strictly an ancillary sensitivity analysis with a predeclared non-inferiority threshold or no claim.
+
+- **SHOULD-FIX:** The “across-relation n=6 is the sole verdict of record” is good, but item-level regression being reported invites analytic cherry-picking after seeing results. **Fix:** place item-level results in an appendix and forbid any inferential language from them.
+
+- **SHOULD-FIX:** H2 “wins” depend on `|rho_proxy| - |rho_cue| >= 0.20` plus sign, which can make weak negative proxy/cue relations look like meaningful differences. **Fix:** require both absolute effect size and directional superiority to exceed thresholds separately, not just a delta in magnitudes.
+
+- **NIT:** “Freshness” is strong, but 0 overlap on lemmas doesn’t rule out semantic near-duplicates or shared distributional neighborhoods. Not fatal, just not perfect anti-leakage. **Fix:** add a semantic-neighborhood exclusion rule or report nearest-neighbor overlap checks.
+
+- **NIT:** H2 is *indeed* at some risk of appearing rigged if the IS-A depth ordering is already aligned with your predicted direction, but that is not by itself fatal because the predictor is frozen and pre-recovery. The real risk is only if you allow proxy substitution or threshold drift. **Fix:** timestamp and hash the exact predictor vector, thresholds, and corpus query code before any scoring.
+
+[billed $0.002853; model openai/gpt-5.4-mini; s193 freeze-stage vote]
