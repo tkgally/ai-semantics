@@ -7,10 +7,10 @@ meaning-senses:
   - inferential
   - measurement-epistemic
 status: draft
-anchor: pending
-contingent-on:
-  - lexical-relation-recovery-taxonomic-proxy-design
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-07-08
+updated: 2026-07-08
 links:
   - rel: operationalizes
     target: essay/cue-strength-recovery-decoupling
@@ -29,11 +29,21 @@ links:
 # Design v1 — lexical-relation recovery vs a pre-registered taxonomic proxy (H1 + H2)
 
 **A design + decision-trail unit (program A-lexical; the empirical discharge of the decoupling essay's
-bets). Status: DESIGN, NOT FROZEN (s192, 2026-07-08).** Four value-laden gates are routed to
-[`decisions/open/lexical-relation-recovery-taxonomic-proxy-design`](../../wiki/decisions/open/lexical-relation-recovery-taxonomic-proxy-design.md):
+bets). Status: DESIGN — gates RATIFIED s193; freeze in progress (s193, 2026-07-08).** Four value-laden
+gates were routed to and **RATIFIED** at
+[`decisions/resolved/lexical-relation-recovery-taxonomic-proxy-design`](../../wiki/decisions/resolved/lexical-relation-recovery-taxonomic-proxy-design.md):
 **Q1** (level of analysis for H2 — the anti-goalpost-moving gate), **Q2** (the fresh control corpus),
 **Q3** (the second pre-registered proxy arm), **Q4** (the `anchor: internal-contrast-only` declaration).
-Nothing here is frozen; no `prep.py` exists yet. This page operationalizes
+
+> **RATIFIED s193 (2026-07-08) — RATIFY-WITH-CHANGES: Q1-C / Q2-B (C4 PRIMARY) / Q3-A / Q4
+> internal-contrast-only.** Fresh-agent adversarial ratifier (verdict authority) + one non-Anthropic
+> decorrelation vote **converged on all four gates including the one change from the provisional
+> defaults: Q2 → B (C4 primary).** Full English Wikipedia is demoted to an *optional* same-family
+> sensitivity arm — it is too close to s186's Simple-Wikipedia encyclopedic register to be a strong H1
+> falsifier, and under ~30 GB free disk C4 (streamable in bounded ~350 MB shards) is both the stronger
+> fresh test and the tractable one. Design promoted `anchor: pending → internal-contrast-only`,
+> `contingent-on` cleared. Six freeze-time conditions + three ratifier riders bind the freeze
+> ([`REVIEW-ratify-s193.md`](../runs/2026-07-08-relation-recovery-taxonomic-proxy/REVIEW-ratify-s193.md)). This page operationalizes
 [`essay/cue-strength-recovery-decoupling`](../../wiki/findings/essays/cue-strength-recovery-decoupling.md)
 (the registered H1/H2 bet, [`predictions.md`](../../wiki/predictions.md) §B) and carries forward the
 frozen proxy specification from [`note/taxonomic-proxy-recovery-pilot-v1`](../../wiki/findings/notes/taxonomic-proxy-recovery-pilot-v1.md).
