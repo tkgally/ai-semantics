@@ -37,9 +37,9 @@ Standing references:
 
 ### Decisions — open
 
-63 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+64 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/lexical-relation-recovery-taxonomic-proxy-design.md`](decisions/open/lexical-relation-recovery-taxonomic-proxy-design.md) — Fresh relation-recovery / taxonomic-proxy probe (H1 + H2) — the four value-laden gates: level of analysis for H2 (anti-goalpost), the fresh control corpus, the second pr… · **open**
+*(none)*
 
 ### Base — concepts
 
@@ -446,6 +446,7 @@ Standing references:
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
 - `experiments/runs/2026-07-08-relation-recovery-taxonomic-proxy-design/` (no README)
+- `experiments/runs/2026-07-08-relation-recovery-taxonomic-proxy/` (no README)
 - `experiments/runs/2026-07-06-s185-antonymy-ratification-vote/` (no README)
 - `experiments/runs/2026-07-06-s184-ratification-votes/` (no README)
 - `experiments/runs/2026-07-06-antonymy-shadow-saturation/` (no README)
