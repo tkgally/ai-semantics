@@ -1,0 +1,23 @@
+Verb-relation feasibility measurement for the s198 verb-relation decoupling DESIGN.
+Measures, per candidate WordNet VERB relation, how many frequency-band-eligible cue verbs
+supply >=1 single-word in-band relatum — before and after excluding all prior cue lemmas
+(s186 nouns, s193 fresh nouns, s196 adjectives) as a homograph guard. Also reports the
+troponymy-depth (min_depth over the cue's first verb synset) distribution — the H2 analog.
+Nothing here is frozen; this is design-time feasibility only.
+prior cue lemmas to exclude (homograph guard): 1740
+
+Relation      | in-band cues | fresh(excl prior) | median gold size
+  antonymy    |   200        |   140             | 1
+  synonymy    |  1874        |  1448             | 3
+  hypernymy   |  2580        |  2006             | 9
+  troponymy   |  1479        |  1136             | 6
+  entailment  |   320        |   242             | 2
+  cause       |   173        |   126             | 2
+  alsosee     |     1        |     0             | 0
+  verbgroup   |   553        |   429             | 2
+
+troponymy fresh pool: min_depth n=1136 range 0-11 mean 2.24 distinct 12
+
+hypernymy fresh pool: min_depth n=2006 range 0-11 mean 2.47 distinct 12
+
+entailment fresh pool: min_depth n=242 range 0-8 mean 2.24 distinct 9
