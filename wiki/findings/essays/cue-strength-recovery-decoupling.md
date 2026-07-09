@@ -36,7 +36,10 @@ links:
 > home POS scopes the decoupling to NOUNS [H1-PARTIAL across the POS boundary], while its antonymy-shadow
 > half strengthened; revised 2026-07-09 session 197 — the NOUN-scoped decoupling promoted to
 > [`claim/lexical-relation-recovery-cue-strength-decoupling`](../claims/lexical-relation-recovery-cue-strength-decoupling.md)
-> and the general POS-structural bet registered as a conjecture; see the dated revision boxes).** A
+> and the general POS-structural bet registered as a conjecture; revised 2026-07-09 session 199 — the
+> decisive VERB test ran and the cross-POS generalization was FALSIFIED [DECOUPLING-BREAKS 2/3 on verbs,
+> the conjecture retired], the noun reading untouched and now shown noun-specific across both non-noun
+> POS; see the dated revision boxes).** A
 > philosophical-track essay in the project's own voice. It introduces **no new measurement** and makes
 > **no human comparison**: every empirical
 > assertion cites [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)
@@ -283,6 +286,25 @@ H1 is close to a re-run of s186's clause 2 on fresh material; H2 is the genuine 
 > [`conjecture/decoupling-lexical-hierarchy-pos-generality`](../conjectures/decoupling-lexical-hierarchy-pos-generality.md)
 > (verbs, with troponymy, the decisive test). The s193 result stays `status: proposed` (support migrates
 > to the claim layer).
+
+> **Revision — 2026-07-09 (s199): the cross-POS generalization is FALSIFIED on verbs; the noun reading
+> stands.** The verb test the s197 box named as decisive **ran** →
+> [`result/lexical-relation-recovery-verb-decoupling-v1`](../results/lexical-relation-recovery-verb-decoupling-v1.md):
+> **DECOUPLING-BREAKS (2/3)** — on WordNet verb relations, across-relation recovery rank **re-tracks**
+> contrastive-frame cue-strength (ρ_cue +0.49 / +0.60 / +0.54; HIT@3 co-primary +0.71 / +0.77 / +0.54),
+> the *adjective* band, **not** the noun band. So the POS-structural conjecture
+> [`conjecture/decoupling-lexical-hierarchy-pos-generality`](../conjectures/decoupling-lexical-hierarchy-pos-generality.md)
+> is **retired/falsified**: a POS with a verified troponymy hierarchy still shows cue-strength predicting
+> recovery, so "hierarchy ⇒ decoupling" is wrong and hierarchy-presence alone does not explain the
+> noun/adjective contrast. **The essay's noun reading is untouched** — indeed the clean decoupling is now
+> shown **absent on both non-noun POS** (adjectives s196, verbs s199), so it is firmly a **noun-specific**
+> phenomenon, exactly as the nouns-only claim scopes it. What the verb data *do* suggest (a candidate, not
+> a registered bet): the decoupling is clean when the inventory has a strongly-recovered low-cue-strength
+> taxonomic relation (nouns' hypernymy — and note hypernymy is STILL the best-recovered verb relation) AND
+> **lacks** sparse low-recovery/low-cue-strength relations that re-align the tail (verbs' entailment +
+> cause, which carry the break). A finer structural story than "has a hierarchy," which this result does
+> not establish. The H2 troponymy-depth mechanism was pre-registered UNDER-POWERED on verbs (degenerate
+> depth spread) and stays untested there.
 
 ## What this essay is not
 

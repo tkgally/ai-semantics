@@ -93,6 +93,14 @@ The claim is **scoped and qualified**, never a universal or cross-POS statement:
   taxonomy**, so nothing scrambles the ordering. The decoupling is therefore a **noun** phenomenon,
   carried by a taxonomic relation adjectives lack. This is a bound on the claim, and part of why the claim
   is well-scoped — not a support for it.
+  **(Update s199 — a SECOND non-noun POS confirms the boundary.)** The verb test that would have extended
+  the decoupling to a second *hierarchical* POS came out **DECOUPLING-BREAKS (2/3)**
+  ([`result/lexical-relation-recovery-verb-decoupling-v1`](../results/lexical-relation-recovery-verb-decoupling-v1.md);
+  ρ_cue +0.49/+0.60/+0.54): despite a verified verb troponymy hierarchy, cue-strength re-tracks recovery.
+  So the clean decoupling is absent on **both** non-noun POS (adjectives and verbs) and the cross-POS
+  generalization is **falsified** ([`conjecture/decoupling-lexical-hierarchy-pos-generality`](../conjectures/decoupling-lexical-hierarchy-pos-generality.md)
+  retired). This tightens — does not weaken — the claim's nouns-only scope; the claim's `supported` status
+  and its noun evidence are unchanged.
 - **The verdict of record is an across-relation (n = 6) Spearman; no magnitude/interval is claimed.** n =
   6 is a wide-CI rank correlation; the promoted statement is qualitative and directional — *near-zero
   across-relation rank correlation, ≤ +0.30, 3/3, on two corpus families* — with the **powered item-level
