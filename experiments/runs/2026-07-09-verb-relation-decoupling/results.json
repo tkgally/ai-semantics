@@ -1,0 +1,245 @@
+{
+ "relations": [
+  "antonymy",
+  "synonymy",
+  "hypernymy",
+  "troponymy",
+  "entailment",
+  "cause"
+ ],
+ "n_per_rel": {
+  "antonymy": 130,
+  "synonymy": 130,
+  "hypernymy": 130,
+  "troponymy": 130,
+  "entailment": 130,
+  "cause": 126
+ },
+ "corpus": "C4 (allenai/c4 en, shards 00000-00002, ODC-BY)",
+ "cause_included": true,
+ "cause_achieved_n": 126,
+ "b1_depth_spread": {
+  "core4_nonant_relations": [
+   "synonymy",
+   "hypernymy",
+   "troponymy",
+   "entailment"
+  ],
+  "degen_max_range": 0.5,
+  "depth_degenerate": true,
+  "depth_sd": 0.3039,
+  "mean_trop_depth": {
+   "antonymy": 1.577,
+   "cause": 1.69,
+   "entailment": 2.154,
+   "hypernymy": 2.192,
+   "synonymy": 2.208,
+   "troponymy": 2.431
+  },
+  "non_antonymy_incl_cause_range": 0.741,
+  "verdict_driving_core4_nonant_range": 0.277
+ },
+ "predictors": {
+  "cue_strength_frame": {
+   "antonymy": 0.0923,
+   "synonymy": 0.0308,
+   "hypernymy": 0.0207,
+   "troponymy": 0.0487,
+   "entailment": 0.0051,
+   "cause": 0.0106
+  },
+  "mean_trop_depth": {
+   "antonymy": 1.577,
+   "synonymy": 2.208,
+   "hypernymy": 2.192,
+   "troponymy": 2.431,
+   "entailment": 2.154,
+   "cause": 1.69
+  }
+ },
+ "cue_strength_sent": {
+  "antonymy": 0.0615,
+  "synonymy": 0.0256,
+  "hypernymy": 0.0284,
+  "troponymy": 0.0513,
+  "entailment": 0.0179,
+  "cause": 0.0185
+ },
+ "recovery_soundness": {
+  "A": {
+   "antonymy": 0.2795,
+   "synonymy": 0.2923,
+   "hypernymy": 0.4077,
+   "troponymy": 0.1949,
+   "entailment": 0.0974,
+   "cause": 0.1032
+  },
+  "B": {
+   "antonymy": 0.2782,
+   "synonymy": 0.2654,
+   "hypernymy": 0.35,
+   "troponymy": 0.1795,
+   "entailment": 0.0923,
+   "cause": 0.1124
+  },
+  "C": {
+   "antonymy": 0.2923,
+   "synonymy": 0.2808,
+   "hypernymy": 0.4128,
+   "troponymy": 0.1872,
+   "entailment": 0.1154,
+   "cause": 0.0979
+  }
+ },
+ "recovery_hit": {
+  "A": {
+   "antonymy": 0.7846,
+   "synonymy": 0.5769,
+   "hypernymy": 0.7615,
+   "troponymy": 0.4154,
+   "entailment": 0.2615,
+   "cause": 0.246
+  },
+  "B": {
+   "antonymy": 0.7769,
+   "synonymy": 0.5385,
+   "hypernymy": 0.6769,
+   "troponymy": 0.3769,
+   "entailment": 0.2308,
+   "cause": 0.2619
+  },
+  "C": {
+   "antonymy": 0.7615,
+   "synonymy": 0.5462,
+   "hypernymy": 0.7692,
+   "troponymy": 0.4154,
+   "entailment": 0.3077,
+   "cause": 0.2222
+  }
+ },
+ "empties": {
+  "A": {
+   "antonymy": 0,
+   "synonymy": 0,
+   "hypernymy": 0,
+   "troponymy": 0,
+   "entailment": 0,
+   "cause": 0
+  },
+  "B": {
+   "antonymy": 0,
+   "synonymy": 0,
+   "hypernymy": 0,
+   "troponymy": 0,
+   "entailment": 0,
+   "cause": 0
+  },
+  "C": {
+   "antonymy": 0,
+   "synonymy": 0,
+   "hypernymy": 0,
+   "troponymy": 0,
+   "entailment": 0,
+   "cause": 0
+  }
+ },
+ "across_relation_soundness": {
+  "A": {
+   "rho_cue": 0.486,
+   "rho_depth": 0.257
+  },
+  "B": {
+   "rho_cue": 0.6,
+   "rho_depth": 0.029
+  },
+  "C": {
+   "rho_cue": 0.543,
+   "rho_depth": 0.086
+  }
+ },
+ "across_relation_hit": {
+  "A": {
+   "rho_cue": 0.714,
+   "rho_depth": -0.086
+  },
+  "B": {
+   "rho_cue": 0.771,
+   "rho_depth": -0.143
+  },
+  "C": {
+   "rho_cue": 0.543,
+   "rho_depth": 0.086
+  }
+ },
+ "item_level_secondary": {
+  "NOTE": "DESCRIPTIVE/ROBUSTNESS-ONLY per Q1-C \u2014 NON-DECISIVE; cannot fire H2 or upgrade an across-relation H2 result.",
+  "per_model_rho_depth_vs_recovery": {
+   "A": {
+    "n": 776,
+    "rho_depth_recovery": -0.019
+   },
+   "B": {
+    "n": 776,
+    "rho_depth_recovery": -0.016
+   },
+   "C": {
+    "n": 776,
+    "rho_depth_recovery": 0.007
+   }
+  }
+ },
+ "antonymy_frame_ablation": {
+  "NOTE": "descriptive hedge (condition 7); frame-present vs neutral antonymy soundness \u2014 bears on the local antonymy-shadow reading, not on H1/H2.",
+  "per_model": {
+   "A": {
+    "neutral_soundness": 0.2795,
+    "frame_soundness": 0.5449
+   },
+   "B": {
+    "neutral_soundness": 0.2782,
+    "frame_soundness": 0.5821
+   },
+   "C": {
+    "neutral_soundness": 0.2923,
+    "frame_soundness": 0.5359
+   }
+  }
+ },
+ "calibration_note": {
+  "mean_control_frame_soundness": 0.0347,
+  "note": "H1/H2 are RANK tests over per-relation control soundness \u2014 well defined regardless of the residual-arm calibration floor."
+ },
+ "headline": {
+  "H1": "DECOUPLING-BREAKS",
+  "H1_bands_per_model": {
+   "A": "INCONCLUSIVE",
+   "B": "BREAKS",
+   "C": "BREAKS"
+  },
+  "H1_rho_cue_per_model": {
+   "A": 0.486,
+   "B": 0.6,
+   "C": 0.543
+  },
+  "H2": "DEPTH-FAILS (UNDER-POWERED / NON-FALSIFYING per B1 \u2014 the non-antonymy CORE-4 depth spread is degenerate; this does NOT fire conjecture-falsifier-2)",
+  "H2_raw": "DEPTH-FAILS",
+  "depth_degenerate": true,
+  "H2_rho_depth_per_model": {
+   "A": 0.257,
+   "B": 0.029,
+   "C": 0.086
+  },
+  "H2_depth_win_per_model": {
+   "A": false,
+   "B": false,
+   "C": false
+  },
+  "thresholds": {
+   "H1_REPL_MAX": 0.3,
+   "H1_BREAK_MIN": 0.5,
+   "H2_MARGIN": 0.2,
+   "MAJ": 2,
+   "DEGEN_MAX_RANGE": 0.5
+  }
+ }
+}

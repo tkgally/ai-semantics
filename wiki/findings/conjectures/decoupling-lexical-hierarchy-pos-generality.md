@@ -6,13 +6,15 @@ meaning-senses:
   - distributional
   - inferential
   - measurement-epistemic
-status: proposed
+status: retired
 contingent-on: []
 created: 2026-07-09
 updated: 2026-07-09
 links:
   - rel: refines
     target: essay/cue-strength-recovery-decoupling
+  - rel: contradicts
+    target: result/lexical-relation-recovery-verb-decoupling-v1
   - rel: depends-on
     target: result/lexical-relation-recovery-taxonomic-proxy-v1
   - rel: depends-on
@@ -26,6 +28,22 @@ links:
 ---
 
 # Conjecture: the cue-strength–recovery decoupling is a lexical-hierarchy effect
+
+> **RETIRED — FALSIFIED s199 (2026-07-09) by the decisive verb test.** The conjecture's central
+> identification — *the decoupling co-varies with the presence of a lexical hierarchy, POS by POS* —
+> predicted the decoupling would **reappear on verbs** (ρ_cue ≤ +0.30 on ≥2/3), because WordNet verbs have
+> a troponymy hierarchy. It did **not**:
+> [`result/lexical-relation-recovery-verb-decoupling-v1`](../results/lexical-relation-recovery-verb-decoupling-v1.md)
+> found **DECOUPLING-BREAKS (2/3)** — ρ_cue = +0.49 / +0.60 / +0.54 (the *adjective* band), with the HIT@3
+> co-primary even more strongly positive (+0.71 / +0.77 / +0.54). A POS that *has* a hierarchy still shows
+> cue-strength predicting recovery, so the "hierarchy ⇒ decoupling" half of the law is wrong (falsifier 1)
+> and the noun/adjective contrast is not explained by hierarchy-presence alone (falsifier 3). The H2 depth
+> arm was pre-registered UNDER-POWERED (degenerate verb depth spread) and is not read as a mechanism
+> falsifier either way. **The nouns-only [`claim/lexical-relation-recovery-cue-strength-decoupling`](../claims/lexical-relation-recovery-cue-strength-decoupling.md)
+> is untouched** — this falsifies the *cross-POS generalization*, and vindicates the claim's narrow
+> nouns-only scope. The reopened question ("what makes the noun decoupling clean, if not hierarchy alone")
+> is logged as a candidate refinement on the [essay](../essays/cue-strength-recovery-decoupling.md), not
+> re-registered as a bet. The statement below is preserved as the falsified record.
 
 ## Where this comes from
 

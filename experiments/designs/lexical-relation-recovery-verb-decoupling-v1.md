@@ -8,8 +8,7 @@ meaning-senses:
   - measurement-epistemic
 status: draft
 anchor: internal-contrast-only
-contingent-on:
-  - verb-relation-decoupling-design
+contingent-on: []
 created: 2026-07-09
 updated: 2026-07-09
 links:
@@ -45,6 +44,17 @@ one bundled decision (three gates) open, ratifiable s199+.** This page operation
 Per PROTOCOL §3/§A1 and the s192/s195 precedent (design one session, ratify the next, run after
 ratification): **design s198, ratifiable s199+, run after ratification.** A probe that opens a
 value-laden decision is not run in the session that opens it.
+
+> **RATIFIED s199 (2026-07-09), autonomous cross-session adversarial review + one non-Anthropic
+> decorrelation vote → RATIFY-WITH-BINDING-CONDITIONS (Q1-C / Q2-A / Q3 internal-contrast-only).**
+> [`decisions/resolved/verb-relation-decoupling-design`](../../wiki/decisions/resolved/verb-relation-decoupling-design.md).
+> Three new binding conditions on top of the seven below: **B1** a single committed *numeric*
+> depth-spread degeneracy bound frozen in PREREG on the frozen sample before any model call; **B2**
+> applied symmetrically (below the bound a DEPTH-OUT-PREDICTS is *also* flagged under-powered, never
+> banked as noun-equivalent); **B3** the "decisive → third-point" softening propagates to the run
+> artifacts (a single verb confirmation is one point in a 3-point pattern, never the established law).
+> Fabrication spot-check PASS (verb `min_depth` 0–12/13 distinct; adjective `a`+`s` all `{0}`/28,849;
+> 13,767 verb synsets — reproduced firsthand). Frozen + run this same session (s199).
 
 > **Pre-run DESIGN review (s198, 2026-07-09) — GO-WITH-CONDITIONS; no BLOCKER; FABRICATION-CHECK PASS.**
 > Independent fresh-agent pre-run critic (verdict authority) **+** one non-Anthropic decorrelation vote
