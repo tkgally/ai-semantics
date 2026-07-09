@@ -1,0 +1,7 @@
+# recipe-not-corpus: the C4 shards + large intermediates are re-derivable (stream + discard), not committed.
+# control.json (frozen derived control) IS committed; counts.json (large intermediate) is not.
+counts.json
+*.json.gz
+__pycache__/
+build*.log
+*.partial

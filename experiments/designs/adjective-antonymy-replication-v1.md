@@ -6,10 +6,9 @@ meaning-senses:
   - distributional
   - inferential
   - measurement-epistemic
-status: draft
-anchor: pending
-contingent-on:
-  - adjective-antonymy-replication-design
+status: frozen
+anchor: internal-contrast-only
+contingent-on: []
 created: 2026-07-09
 updated: 2026-07-09
 links:
@@ -47,6 +46,14 @@ saturation: **predicative adjectives**. Per PROTOCOL §3/§A1 and the A1b/s192 p
 session, ratify the next, run after ratification): **design s195, ratifiable s196+, run after
 ratification.** A probe that opens a value-laden decision is not run in the session that opens it.
 
+> **RATIFIED s196 (2026-07-09), autonomous cross-session adversarial review — Q1-C / Q2-A / Q3
+> internal-contrast-only ADOPTED.** Fresh-agent reviewer (verdict authority) + convergent fresh
+> non-Anthropic vote (`panel.B`); `anchor: pending` → `internal-contrast-only`, `contingent-on:`
+> cleared. One added freeze condition **C8** (frame-ablation numeric decision rule). Record:
+> [`decisions/resolved/adjective-antonymy-replication-design`](../../wiki/decisions/resolved/adjective-antonymy-replication-design.md),
+> [`REVIEW-ratify-s196.md`](../runs/2026-07-09-adjective-antonymy-replication/REVIEW-ratify-s196.md).
+> Frozen + run s196 → [`result/adjective-antonymy-replication-v1`](../../wiki/findings/results/adjective-antonymy-replication-v1.md).
+>
 > **Pre-run DESIGN review (s195, 2026-07-09) — GO-WITH-CONDITIONS; no BLOCKERS; FABRICATION-CHECK PASS.**
 > Independent fresh-agent pre-run critic (verdict authority) **+** one non-Anthropic decorrelation vote
 > (`panel.B`, $0.00269775, via the probe REST path, PROTOCOL §A3), both **GO/ADOPT with conditions**,
