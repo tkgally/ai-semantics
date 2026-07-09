@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-29
-updated: 2026-07-06
+updated: 2026-07-09
 links:
   - rel: depends-on
     target: source/cao-2025-semantic-relation-knowledge
@@ -37,7 +37,9 @@ links:
 
 # Essay: the antonymy outlier is the distributional shadow showing through
 
-> **Status: draft (2026-06-29). A philosophical-track essay arguing in the project's own voice.**
+> **Status: revised (drafted 2026-06-29; revised 2026-06-29/06-30 [triggers d, twice, confirming],
+> 2026-07-06 s186 [trigger a fired on nouns, surviving direction], 2026-07-09 s196 [trigger a fired
+> again on adjectives, verdict-bearing]). A philosophical-track essay arguing in the project's own voice.**
 > It introduces **no new empirical claim** and makes **no human comparison of its own**: every
 > empirical assertion inside it cites the in-repo `source` page that carries it, at that page's
 > stated strength. The original contribution is the **argument** — a reading of *why* antonymy is
@@ -101,6 +103,28 @@ links:
 > decouples from recovery across *all six* relations, not only at antonymy, and what that does to using
 > cue-strength as a stand-in for shadow-depth — is developed in
 > [`essay/cue-strength-recovery-decoupling`](cue-strength-recovery-decoupling.md) (s187).
+>
+> **Revision (session 196, 2026-07-09) — trigger (a) fired AGAIN in J&K's home POS (adjectives), and
+> here it is VERDICT-BEARING, not descriptive-only; the surviving-direction reading is at its most
+> robust.** The adjective-antonymy replication ran —
+> [`result/adjective-antonymy-replication-v1`](../results/adjective-antonymy-replication-v1.md) (four
+> WordNet adjective relations; the same byte-frozen contrastive-frame G² control on C4). Two things make
+> this the strongest form of the s186 falsifier. **(i) The control is genuinely strong on adjective
+> antonymy** — J&K measured the frame-saturation *on predicative adjectives*, and it shows: frozen
+> control HIT@3 for antonymy is **0.364**, ≈3× the other three relations (0.115–0.185). **(ii) The
+> calibration gate CLEARS** (mean control-frame 𝒮 0.069 ≥ 0.05, vs the noun run's 0.029 that forced the
+> residual arm to descriptive-only) — so the residual is **verdict-bearing** here. Against that strong,
+> verdict-bearing control, panel antonym recovery still clears **wide daylight**: HIT@3 residual
+> **+0.52/+0.52/+0.54**, the *largest* of the four relations 3/3 (CI floor ≈ +0.42, above every other
+> relation's mean) → **ANT-CLEARS-CONTROL 3/3**; frame-ablation **SURVIVES-SUPPRESSION 3/3** (removing
+> J&K's own contrastive scaffold does not collapse recovery). So *where J&K measured the frame saturation*,
+> antonym recovery is **not** the distributional shadow showing through a co-occurrence control — it
+> exceeds it decisively. Still **scoped, not promoted** (the s151 relabeling holds): this falsifies the
+> *local*-shadow reading in the home POS and reads the residual as **transferable-distributional**
+> generalization, **not** competence-beyond-distribution. `internal-contrast-only`; no human comparison —
+> J&K's 63%/75% figures stay motivation, never a model-vs-J&K claim. (The *cross-relation* decoupling
+> the companion essay develops did **not** cross the POS boundary — see that essay's 2026-07-09 revision —
+> but that is a fact about the recovery *ordering*, not about antonymy's own clearance, which strengthens.)
 
 ## The convergence
 
@@ -368,11 +392,16 @@ the clean falsifier of the pure-shadow reading.
 ## Revision triggers (read before citing)
 
 - **(a) A frontier-panel relatum probe with a contrastive-frame control shows antonymy competence
-  surviving the control. → FIRED s186 (2026-07-06), in the surviving direction** —
-  [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md):
-  panel antonym recovery exceeds the contrastive-frame control (HIT@3 residual +0.61–0.67) and
-  survives frame suppression; the local-shadow reading is revised (scoped, per the s151 note — not
-  competence-beyond-distribution). See the s186 revision box at the top. This is the clean falsifier
+  surviving the control. → FIRED s186 (2026-07-06) on nouns AND AGAIN s196 (2026-07-09) on adjectives,
+  both in the surviving direction; the adjective firing is VERDICT-BEARING** —
+  [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)
+  (nouns: HIT@3 residual +0.61–0.67, residual arm descriptive-only because the calibration gate fired)
+  and [`result/adjective-antonymy-replication-v1`](../results/adjective-antonymy-replication-v1.md)
+  (adjectives, J&K's measured home POS: residual **+0.52/+0.52/+0.54** the largest 3/3, **verdict-bearing**
+  because the calibration gate CLEARED against a control that is itself strong on antonymy, HIT@3 0.364;
+  frame-ablation survives 3/3). Panel antonym recovery exceeds the contrastive-frame control and survives
+  frame suppression in **both** parts of speech; the local-shadow reading is revised (scoped, per the
+  s151 note — not competence-beyond-distribution). See the s186 + s196 revision boxes at the top. This is the clean falsifier
   of the **local**-shadow reading. If
   [`conjecture/lexical-relation-shadow-saturation`](../conjectures/lexical-relation-shadow-saturation.md)'s
   probe (or any equivalent) runs and antonymy competence clears daylight above a contrastive-frame

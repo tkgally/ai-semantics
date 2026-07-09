@@ -1,0 +1,263 @@
+{
+ "relations": [
+  "antonymy",
+  "synonymy",
+  "similar",
+  "alsosee"
+ ],
+ "n_per_rel": {
+  "antonymy": 130,
+  "synonymy": 130,
+  "similar": 130,
+  "alsosee": 130
+ },
+ "pos": "adjective",
+ "corpus": "C4 (allenai/c4 en, shards 00000-00002, ODC-BY)",
+ "cue_strength_frame_soundness": {
+  "antonymy": 0.1214,
+  "synonymy": 0.0465,
+  "similar": 0.0462,
+  "alsosee": 0.0615
+ },
+ "cue_strength_sent_soundness": {
+  "antonymy": 0.1487,
+  "synonymy": 0.0388,
+  "similar": 0.0487,
+  "alsosee": 0.0487
+ },
+ "recovery_soundness": {
+  "A": {
+   "antonymy": 0.309,
+   "synonymy": 0.2171,
+   "similar": 0.2051,
+   "alsosee": 0.1872
+  },
+  "B": {
+   "antonymy": 0.3167,
+   "synonymy": 0.2205,
+   "similar": 0.1923,
+   "alsosee": 0.2051
+  },
+  "C": {
+   "antonymy": 0.3205,
+   "synonymy": 0.2128,
+   "similar": 0.1949,
+   "alsosee": 0.159
+  }
+ },
+ "recovery_hit": {
+  "A": {
+   "antonymy": 0.8769,
+   "synonymy": 0.4496,
+   "similar": 0.4846,
+   "alsosee": 0.4692
+  },
+  "B": {
+   "antonymy": 0.8846,
+   "synonymy": 0.4692,
+   "similar": 0.4385,
+   "alsosee": 0.5077
+  },
+  "C": {
+   "antonymy": 0.8923,
+   "synonymy": 0.4385,
+   "similar": 0.4538,
+   "alsosee": 0.4231
+  }
+ },
+ "empties_neutral": {
+  "A": {
+   "antonymy": 0,
+   "synonymy": 1,
+   "similar": 0,
+   "alsosee": 0
+  },
+  "B": {
+   "antonymy": 0,
+   "synonymy": 0,
+   "similar": 0,
+   "alsosee": 0
+  },
+  "C": {
+   "antonymy": 0,
+   "synonymy": 0,
+   "similar": 0,
+   "alsosee": 0
+  }
+ },
+ "headline": {
+  "PRIMARY_antonymy_shadow": "ANT-CLEARS-CONTROL",
+  "antonymy_verdict_per_model": {
+   "A": "CLEARS",
+   "B": "CLEARS",
+   "C": "CLEARS"
+  },
+  "antonymy_hit_residual_per_model": {
+   "A": {
+    "antonymy": 0.5194,
+    "synonymy": 0.3203,
+    "similar": 0.3692,
+    "alsosee": 0.2846
+   },
+   "B": {
+    "antonymy": 0.5194,
+    "synonymy": 0.3411,
+    "similar": 0.3231,
+    "alsosee": 0.3231
+   },
+   "C": {
+    "antonymy": 0.5349,
+    "synonymy": 0.3178,
+    "similar": 0.3385,
+    "alsosee": 0.2385
+   }
+  },
+  "calibration_gate_fired": false,
+  "mean_control_frame_soundness": 0.0689,
+  "CALIB_FLOOR": 0.05,
+  "frame_ablation": "SURVIVES-SUPPRESSION",
+  "frame_ablation_per_model": {
+   "A": {
+    "neutral_hit": 0.8769,
+    "frame_hit": 0.7846,
+    "survives_suppression": true
+   },
+   "B": {
+    "neutral_hit": 0.8846,
+    "frame_hit": 0.7769,
+    "survives_suppression": true
+   },
+   "C": {
+    "neutral_hit": 0.8923,
+    "frame_hit": 0.8923,
+    "survives_suppression": true
+   }
+  },
+  "H1_coprimary": "H1-PARTIAL/AMBIGUOUS",
+  "H1_bands_per_model": {
+   "A": "PARTIAL",
+   "B": "BREAKS",
+   "C": "PARTIAL"
+  },
+  "H1_rho_cue_soundness_per_model": {
+   "A": 0.4,
+   "B": 0.8,
+   "C": 0.4
+  },
+  "H1_rho_cue_hit_per_model": {
+   "A": 0.4,
+   "B": 1.0,
+   "C": 0.2
+  },
+  "item_level_secondary_rho": {
+   "A": 0.268,
+   "B": 0.272,
+   "C": 0.241
+  },
+  "thresholds": {
+   "H1_REPL_MAX": 0.3,
+   "H1_BREAK_MIN": 0.5,
+   "CALIB_FLOOR": 0.05,
+   "ANT_NEARZERO": 0.1,
+   "DELTA_ABLATE": 0.15,
+   "MAJ": 2
+  }
+ },
+ "antonymy_shadow_residual_ci": {
+  "A": {
+   "antonymy": {
+    "mean": 0.5194,
+    "lo": 0.4186,
+    "hi": 0.6202,
+    "n": 129
+   },
+   "synonymy": {
+    "mean": 0.3203,
+    "lo": 0.2344,
+    "hi": 0.4141,
+    "n": 128
+   },
+   "similar": {
+    "mean": 0.3692,
+    "lo": 0.2692,
+    "hi": 0.4692,
+    "n": 130
+   },
+   "alsosee": {
+    "mean": 0.2846,
+    "lo": 0.1923,
+    "hi": 0.3769,
+    "n": 130
+   }
+  },
+  "B": {
+   "antonymy": {
+    "mean": 0.5194,
+    "lo": 0.4186,
+    "hi": 0.6202,
+    "n": 129
+   },
+   "synonymy": {
+    "mean": 0.3411,
+    "lo": 0.2558,
+    "hi": 0.4341,
+    "n": 129
+   },
+   "similar": {
+    "mean": 0.3231,
+    "lo": 0.2231,
+    "hi": 0.4154,
+    "n": 130
+   },
+   "alsosee": {
+    "mean": 0.3231,
+    "lo": 0.2308,
+    "hi": 0.4154,
+    "n": 130
+   }
+  },
+  "C": {
+   "antonymy": {
+    "mean": 0.5349,
+    "lo": 0.4341,
+    "hi": 0.6357,
+    "n": 129
+   },
+   "synonymy": {
+    "mean": 0.3178,
+    "lo": 0.2248,
+    "hi": 0.4109,
+    "n": 129
+   },
+   "similar": {
+    "mean": 0.3385,
+    "lo": 0.2462,
+    "hi": 0.4308,
+    "n": 130
+   },
+   "alsosee": {
+    "mean": 0.2385,
+    "lo": 0.1462,
+    "hi": 0.3308,
+    "n": 130
+   }
+  }
+ },
+ "item_level_secondary": {
+  "NOTE": "DESCRIPTIVE/ROBUSTNESS-ONLY per Q1-C + C7 \u2014 NON-DECISIVE; cannot fire/break H1.",
+  "per_model": {
+   "A": {
+    "n": 517,
+    "rho_cuestrength_recovery": 0.268
+   },
+   "B": {
+    "n": 518,
+    "rho_cuestrength_recovery": 0.272
+   },
+   "C": {
+    "n": 518,
+    "rho_cuestrength_recovery": 0.241
+   }
+  }
+ }
+}
