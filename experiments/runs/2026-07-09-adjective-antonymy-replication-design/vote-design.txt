@@ -1,0 +1,13 @@
+Q1: **ADOPT-C**  
+Q2: **ADOPT-A**  
+Q3: **ADOPT-internal-contrast-only**
+
+- **Fairness:** mostly yes. The outcomes are genuinely reachable *if* the preregistered thresholds are not tuned ex post. The main risk is that the antonymy-shadow clause and the decoupling clause may still be too entangled with the same relation-frequency regime; ensure the success/failure region is not trivially predetermined by the relation mix.
+- **Non-question-begging:** acceptable in principle. You’ve frozen the predictor/control construction, split primary vs co-primary, and named nulls. But the “ANTONYMY-SHADOW” verdict needs an explicit, relation-agnostic decision rule for “largest vs smallest/near-zero,” or it can become narrative-fit.
+- **H2 honesty:** yes, the design is right that adjectives cannot replicate the noun IS-A proxy as stated, and it is honest to drop H2 rather than smuggle in a derivative proxy. Good call.
+- **Blocker:** the calibration gate is under-specified. “Too weak to recover WordNet relata” needs a numeric floor and a failure protocol *before* freeze; otherwise the descriptive-only fallback is too flexible.
+- **Blocker:** Q1 with 4 relations is low-powered for rank inference and somewhat redundant (synonymy vs similar-to are near-duplicates). If you keep C, predefine how ties/near-ties are handled and what effect size constitutes meaningful decoupling.
+- **Blocker:** the “cue-strength -> recovery” arm should not be called robustness-only if it can still sway interpretation. Either lock it as purely exploratory, or specify multiplicity control and a separate inference lane.
+- **Bottom line:** conceptually sound and honest, but freeze only after tightening the calibration floor and the exact decision rule for the antonymy-shadow verdict.
+
+[billed $0.002698; model openai/gpt-5.4-mini; s195 design vote]
