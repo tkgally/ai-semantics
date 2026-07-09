@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-07-06
-updated: 2026-07-08
+updated: 2026-07-09
 links:
   - rel: depends-on
     target: result/lexical-relation-shadow-saturation-v1
@@ -31,8 +31,10 @@ links:
 
 # Essay: the cue-strength–recovery decoupling
 
-> **Status: revised (drafted 2026-07-06 session 187; revised 2026-07-08 session 193 — the registered
-> H1/H2 bets have now been discharged by a fresh probe; see the dated revision at "The new bet").** A
+> **Status: revised (drafted 2026-07-06 session 187; revised 2026-07-08 session 193 — H1/H2 discharged
+> by a fresh noun probe; revised 2026-07-09 session 196 — the adjective-antonymy replication in J&K's
+> home POS scopes the decoupling to NOUNS [H1-PARTIAL across the POS boundary], while its antonymy-shadow
+> half strengthened; see the dated revision boxes).** A
 > philosophical-track essay in the project's own voice. It introduces **no new measurement** and makes
 > **no human comparison**: every empirical
 > assertion cites [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)
@@ -185,8 +187,11 @@ The decoupling could be less than it looks, and the reading is bounded according
   bounds the claim: the decoupling is specifically of **contrastive-frame** cue-strength from recovery.
 - **n = 3, orderings not coefficients; nouns only.** The finding is three models agreeing on a rank
   scramble, over WordNet's noun relations, with the taxonomic relations that exist only for nouns. The
-  named adjective-antonymy replication (Justeson & Katz's home part of speech) has not run; a different
-  panel, or adjectival relations, could behave differently.
+  named adjective-antonymy replication (Justeson & Katz's home part of speech) **has now run (s196) and
+  the decoupling did NOT cleanly cross the POS boundary** (H1-PARTIAL; item-level ρ ≈ +0.25) — precisely
+  because adjectives lack the taxonomic (hypernymy) relation that carries the noun scramble; the reading
+  is scoped to nouns accordingly (2026-07-09 revision box). A different panel could still behave
+  differently.
 - **The residual magnitudes are descriptive.** Because the calibration gate fired, nothing here should be
   read as a precise measurement of how *much* co-occurrence explains each relation. The essay leans only
   on the *ordering* facts (which relation out-ranks which on cue-strength and on recovery), which the
@@ -236,6 +241,28 @@ H1 is close to a re-run of s186's clause 2 on fresh material; H2 is the genuine 
 > The essay's thesis stands and is strengthened; the "what might predict recovery" section is no longer
 > only a hypothesis for that grain.
 
+> **Revision — 2026-07-09 (s196): the decoupling is scoped to NOUNS — it does not cross the POS boundary.**
+> The third freshness route trigger (a) named — the **adjective-antonymy replication** in J&K's home POS
+> — ran: [`result/adjective-antonymy-replication-v1`](../results/adjective-antonymy-replication-v1.md).
+> Over four WordNet **adjective** relations (antonymy, synonymy, similar-to, also-see; 130 fresh cues
+> each; the same byte-frozen contrastive-frame G² control on C4), the across-relation decoupling **did
+> not cleanly replicate**: ρ_cue = **+0.4/+0.8/+0.4** (soundness) → **H1-PARTIAL/AMBIGUOUS** (no clean
+> replicate at ≤+0.30, no clean 2/3 break), and the **powered item-level arm agrees** — a cue's own
+> cue-strength positively predicts its own recovery, ρ ≈ **+0.25** on all three models (against the noun
+> run's item-level ρ ≈ 0). **On adjectives, contrastive-frame cue-strength partially *recovers* its
+> predictive power.** The reason is structural, and it sharpens rather than refutes the thesis: on nouns
+> the decoupling was carried by **hypernymy** — a *low*-cue-strength but taxonomically central relation —
+> being *best*-recovered, scrambling the recovery rank against cue-strength. **Adjectives have no
+> hypernymy** (no IS-A taxonomy — the same fact that makes H2 untestable), and the most-cued adjective
+> relation, antonymy, is *also* the best-recovered, so nothing scrambles the ordering. **The decoupling
+> is therefore a noun phenomenon, carried by a taxonomic relation adjectives lack** — not a universal
+> fact about frontier lexical recovery. This scopes the essay's central reading to the **noun** grain;
+> it does not retract it (the decoupling replicated 3/3 across two noun corpora, s186+s193), and the
+> antonymy-shadow half of the same probe *strengthened* (see the antonymy-outlier essay). **Consequence
+> for promotion:** the decoupling→`claim` route this replication was meant to open is **blocked** — a
+> claim needs the decoupling to hold across POS, and it did not; the s193 result stays a `result`.
+> `internal-contrast-only`, adjectives only, within-distributional throughout.
+
 ## What this essay is not
 
 - **Not a human comparison.** The essay imports no human recovery baseline and asserts nothing about how
@@ -267,6 +294,14 @@ H1 is close to a re-run of s186's clause 2 on fresh material; H2 is the genuine 
   on fresh cues + a different corpus family (C4 web text), ρ_cue = +0.14/+0.09/+0.09, all near-zero,
   3/3 — the decoupling **replicated**, so it was not a Simple-Wikipedia artifact and the reading stands
   (not scoped down, not retracted).
+  **→ TESTED AGAIN s196, adjective-antonymy route (J&K's home POS): the decoupling DID NOT cleanly
+  replicate — H1-PARTIAL** ([`result/adjective-antonymy-replication-v1`](../results/adjective-antonymy-replication-v1.md)):
+  over four adjective relations ρ_cue = +0.4/+0.8/+0.4 (item-level ρ ≈ +0.25, all 3) — cue-strength
+  partially recovers its predictive power on adjectives. Not a clean 2/3 break, so trigger (a) did not
+  *fire against* at the pre-registered bar; but combined with the powered item-level agreement it marks a
+  **POS boundary**: the clean decoupling is noun-specific (carried by hypernymy, which adjectives lack).
+  The reading is **scoped to nouns** (see the 2026-07-09 revision box), not retracted; the
+  decoupling→`claim` promotion is **blocked**.
 - **(b) A pre-registered taxonomic-structure proxy is measured against recovery.** If some IS-A /
   definitional-structure statistic out-predicts cue-strength on recovery rank, H2 is fired-for and the
   "what predicts recovery" question has an answer to promote; if none does, H2 is fired-against and the
