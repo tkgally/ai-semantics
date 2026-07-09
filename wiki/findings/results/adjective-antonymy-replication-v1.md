@@ -169,10 +169,17 @@ ordering (because antonymy tops both) can both hold at once.
   +0.25). The essay's thesis is re-scoped: the decoupling is a **noun** phenomenon, carried by the
   taxonomic relations adjectives lack; on adjectives cue-strength partially predicts recovery. Revised
   in-page.
-- **NO claim promotion.** The design's stated aim — a second/third replication of the decoupling across
-  corpus **and** POS as the route to promoting the s193 result to a `claim` — is **not** discharged: the
-  decoupling did not cleanly replicate on adjectives. The s193 decoupling result stays a `result`; the
-  decoupling `claim` is **blocked** pending a within-family or same-POS replication that holds.
+- **NO cross-POS claim promotion.** The design's stated aim — a second/third replication of the decoupling
+  across corpus **and** POS as the route to promoting the s193 result to a **cross-POS** `claim` — is
+  **not** discharged: the decoupling did not cleanly replicate on adjectives, so the cross-POS claim is
+  **blocked**. **However (s197):** a cross-session adversarial promotion review (PROTOCOL §3) decided the
+  narrower, unadjudicated question and promoted a **NOUN-scoped** H1 claim,
+  [`claim/lexical-relation-recovery-cue-strength-decoupling`](../claims/lexical-relation-recovery-cue-strength-decoupling.md)
+  (`supported`; s186+s193, two corpus families) — with **this result cited as the characterized POS
+  boundary (a bound, not a support)**. So the s186/s193 line is now consolidated at the noun grain; this
+  adjective result is a bound on that claim and keeps `status: proposed`. The general POS-structural bet
+  this boundary suggests is registered as
+  [`conjecture/decoupling-lexical-hierarchy-pos-generality`](../conjectures/decoupling-lexical-hierarchy-pos-generality.md).
 - **[`predictions.md`](../../predictions.md)** — the decoupling essay's trigger (a) row updated (adjective
   route: did-not-replicate-cleanly, POS-bounded); the antonymy-shadow row updated (falsification
   replicates + strengthens in the home POS).

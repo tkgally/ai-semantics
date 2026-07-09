@@ -34,7 +34,9 @@ links:
 > **Status: revised (drafted 2026-07-06 session 187; revised 2026-07-08 session 193 — H1/H2 discharged
 > by a fresh noun probe; revised 2026-07-09 session 196 — the adjective-antonymy replication in J&K's
 > home POS scopes the decoupling to NOUNS [H1-PARTIAL across the POS boundary], while its antonymy-shadow
-> half strengthened; see the dated revision boxes).** A
+> half strengthened; revised 2026-07-09 session 197 — the NOUN-scoped decoupling promoted to
+> [`claim/lexical-relation-recovery-cue-strength-decoupling`](../claims/lexical-relation-recovery-cue-strength-decoupling.md)
+> and the general POS-structural bet registered as a conjecture; see the dated revision boxes).** A
 > philosophical-track essay in the project's own voice. It introduces **no new measurement** and makes
 > **no human comparison**: every empirical
 > assertion cites [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)
@@ -259,9 +261,28 @@ H1 is close to a re-run of s186's clause 2 on fresh material; H2 is the genuine 
 > fact about frontier lexical recovery. This scopes the essay's central reading to the **noun** grain;
 > it does not retract it (the decoupling replicated 3/3 across two noun corpora, s186+s193), and the
 > antonymy-shadow half of the same probe *strengthened* (see the antonymy-outlier essay). **Consequence
-> for promotion:** the decoupling→`claim` route this replication was meant to open is **blocked** — a
-> claim needs the decoupling to hold across POS, and it did not; the s193 result stays a `result`.
+> for promotion:** the **cross-POS** decoupling→`claim` route this replication was meant to open is
+> **blocked** — a cross-POS claim needs the decoupling to hold across POS, and it did not.
 > `internal-contrast-only`, adjectives only, within-distributional throughout.
+
+> **Revision — 2026-07-09 (s197): the NOUN-scoped decoupling was promoted to a `claim`; the cross-POS
+> claim stays blocked.** A cross-session, independent, adversarial promotion review
+> ([`PROTOCOL.md §3`](../../../PROTOCOL.md)) decided the narrower question the s196 box left open — not
+> the (blocked) cross-POS claim, but a **nouns-only** one. Verdict: **PROMOTE-NOUN-SCOPED** →
+> [`claim/lexical-relation-recovery-cue-strength-decoupling`](../claims/lexical-relation-recovery-cue-strength-decoupling.md)
+> (`supported`): across the six WordNet **noun** relations, raw contrastive-frame cue-strength does not
+> rank-predict panel recovery — a near-zero across-relation Spearman (3/3) on **two corpus families**
+> (s186 + s193), corroborated by the **powered item-level ρ ≈ 0**, `internal-contrast-only`,
+> within-distributional. The claim promotes **H1 (the absence) only**; **H2 (taxonomic depth) is held
+> out** (single-run, 2/3, between-relation, Hearst arm lost), and s196 is cited as the claim's
+> **characterized POS boundary** (a bound). The non-Anthropic decorrelation vote dissented **REFUSE**
+> (a replicated absence is too close to a descriptive result); the divergence is weighed on the claim's
+> Anti-cheat, and honored by the claim's deliberate narrowness. The general POS-structural bet the s196
+> boundary suggests — the decoupling reappears in any POS with a lexical hierarchy, vanishes in any
+> without — is now registered as
+> [`conjecture/decoupling-lexical-hierarchy-pos-generality`](../conjectures/decoupling-lexical-hierarchy-pos-generality.md)
+> (verbs, with troponymy, the decisive test). The s193 result stays `status: proposed` (support migrates
+> to the claim layer).
 
 ## What this essay is not
 

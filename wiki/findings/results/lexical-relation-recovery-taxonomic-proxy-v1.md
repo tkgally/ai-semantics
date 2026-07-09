@@ -182,3 +182,13 @@ taxonomic-depth story is about **relation categories**, not about individual cue
   scoped between-relation, 2/3, internal-contrast, within-distribution.
 - A candidate future promotion review (adjective replication or a within-family ladder would strengthen
   the 2/3 H2); a `claim` is **not** written from this single run.
+
+> **Consolidation note — 2026-07-09 (s197).** A cross-session adversarial promotion review (PROTOCOL §3)
+> consolidated the **H1 decoupling** of this result together with s186 into a NOUN-scoped `claim`,
+> [`claim/lexical-relation-recovery-cue-strength-decoupling`](../claims/lexical-relation-recovery-cue-strength-decoupling.md)
+> (`supported`; two corpus families 3/3 + powered item-level ρ≈0). This page keeps `status: proposed`
+> (reading-bearing result; support migrates to the claim layer). **H2 (IS-A depth) was deliberately NOT
+> promoted** — single-run, 2/3, between-relation, Hearst arm lost — exactly as this page's own closing
+> line anticipated; H2 stays a result-level directional observation awaiting the within-family / verb
+> replication the claim and [`conjecture/decoupling-lexical-hierarchy-pos-generality`](../conjectures/decoupling-lexical-hierarchy-pos-generality.md)
+> name. The non-Anthropic vote dissented REFUSE (weighed on the claim's Anti-cheat).
