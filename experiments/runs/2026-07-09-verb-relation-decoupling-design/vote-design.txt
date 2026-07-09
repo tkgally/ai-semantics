@@ -1,0 +1,13 @@
+Q1: **ADOPT-C**  
+Q2: **ADOPT-A**  
+Q3: **ADOPT-internal-contrast-only**
+
+- **Fair enough in principle, but only if the preregistered decision bands are truly symmetric and fixed.** As written, the test is not obviously question-begging: reappearance, breakage, depth-outpredicts, depth-fails, and null are all reachable.
+- **Main threat:** the “breaks” band is not purely about hierarchy; it also absorbs any POS-shifted artifact in G2, relation inventory, or cue-selection. That’s okay only if those are frozen and the same recovery/scoring pipeline is used.
+- **Verbs are a better third point than adjectives**, yes: they preserve a real IS-A-like hierarchy while changing POS, so they separate “hierarchy present” from “no hierarchy.” That part is sound.
+- **H2 transfer to verbs is plausible and properly conservative with A**: using the same min_depth-style proxy preserves the noun mechanism. A richer proxy would muddy the registered replication logic.
+- **But the decisive claim is still not cleanly isolated from relation-set composition.** Verbs add entailment/cause/synonymy/verbgroup quirks that can distort rank order independent of hierarchy. If cause is conditionally included, that rule must be locked before any inspection.
+- **Big blocker risk:** “fresh in-band cue counts” and the homograph guard need an explicit, exact operational definition for lemma/sense handling. Otherwise the fresh/disjoint claim is under-specified and vulnerable to post hoc filtering.
+- **Another blocker:** if some relations end up too thin after matching, you need a pre-registered fallback that doesn’t let you silently reweight the core test.
+
+[billed $0.002881; model openai/gpt-5.4-mini; s198 verb-design vote]

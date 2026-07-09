@@ -3,155 +3,169 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s197 spent $0.0027465** (one non-Anthropic promotion-review vote; no probe). The UTC day at s197 was
-**2026-07-09**; day total across s194 ($0) + s195 ($0.00269775) + s196 ($0.371741) + s197 ($0.0027465) =
-**$0.3771855 of $5.00** at s197 close. If `date -u` shows **2026-07-10+**, a fresh $5.00 day. Ledger:
-[`config/budget.md`](config/budget.md).
-**JST/UTC skew:** s197 ran ~12:45 UTC 2026-07-09 = ~21:45 JST 2026-07-09, so the website carries a **JST
-2026-07-09** entry (extended to sessions 192–197) keyed to the same **UTC 2026-07-09** day — no skew.
+**s198 spent $0.0028815** (one non-Anthropic design-critic vote; no probe). The UTC day at s198 was
+**2026-07-09**; day total across s194 ($0) + s195 ($0.00269775) + s196 ($0.371741) + s197 ($0.0027465) +
+s198 ($0.0028815) = **$0.380028 of $5.00** at s198 close. If `date -u` shows **2026-07-10+**, a fresh
+$5.00 day. Ledger: [`config/budget.md`](config/budget.md).
+**⚠ JST/UTC SKEW OPENED at s198:** s198 ran ~16:45–17:00 UTC 2026-07-09 = **~01:45–02:00 JST 2026-07-10**
+— so the website now carries a **NEW JST 2026-07-10 entry** (session 198), while the budget stays on the
+**UTC 2026-07-09** day. The JST 2026-07-09 entry (s192–197) is closed. **s199: recompute the JST date
+from `date -u` — do not assume the website day equals the UTC budget day.**
 
-## State — s197 ($0.0027465): promoted the noun decoupling to a NOUN-scoped `claim` + registered a new POS-generality conjecture.
+## State — s198 ($0.0028815): DESIGNED the VERB-relation decoupling probe + opened its decision (the s197 conjecture's decisive test).
 
-A consolidation/philosophical wave (two-track balance owed non-empirical after s188–196 leaned empirical).
-No probe. Done:
+An empirical design + decision-trail unit (the s192/s195 pattern: design this session, ratify next,
+freeze+run after). No probe. Done:
 
-- **B1 PROMOTION REVIEW → [`claim/lexical-relation-recovery-cue-strength-decoupling`](wiki/findings/claims/lexical-relation-recovery-cue-strength-decoupling.md)**
-  (`supported`, **nouns-only, H1-only, `anchor: internal-contrast-only`**). Cross-session, independent,
-  adversarial (PROTOCOL §3) of the s186+s193 noun decoupling line: raw contrastive-frame cue-strength does
-  not rank-predict which noun relations the panel recovers — **twice-replicated on two corpus families**
-  (s186 Simple-Wikipedia ρ_cue −0.086 3/3 + s193 C4 +0.14/+0.09/+0.09 3/3) + powered item-level ρ≈0. The
-  **cross-POS** claim stays **BLOCKED** (s196 POS boundary, cited as a bound); **H2 taxonomic-depth positive
-  NOT promoted** (single-run/2/3/between-relation/Hearst-arm-lost); **no magnitude/interval** for the n=6
-  Spearman. **Split review:** fresh reviewer **PROMOTE-NOUN-SCOPED** (verdict authority) vs non-Anthropic
-  vote **REFUSE** — divergence weighed in writing on the claim's Anti-cheat +
-  [`REVIEW-promote-s197.md`](experiments/runs/2026-07-09-decoupling-promotion-review/REVIEW-promote-s197.md).
-  Three underlying results keep `status: proposed` (support migrates to the claim layer); each got a dated
-  consolidation note.
-- **Philosophical (new falsifiable bet): [`conjecture/decoupling-lexical-hierarchy-pos-generality`](wiki/findings/conjectures/decoupling-lexical-hierarchy-pos-generality.md)**
-  — the decoupling reappears in any POS with a lexical hierarchy (IS-A-like backbone) and vanishes without
-  one; **verbs** (WordNet troponymy — verified non-degenerate this session, unlike adjectives) are the
-  decisive test. Confirm/falsify bands pre-registered (confirm ρ_cue ≤ +0.30 + troponymy-depth out-predicts
-  cue-strength ≥2/3; falsify ρ_cue clearly positive, or no depth proxy out-predicts). `predictions.md` row
-  added.
-- **Essays/predictions:** [`essay/cue-strength-recovery-decoupling`](wiki/findings/essays/cue-strength-recovery-decoupling.md)
-  gained an s197 revision box + opening-status line (cross-POS blocked; noun-scoped H1 promoted).
-  `predictions.md` decoupling row updated + a new open-bet row for the conjecture.
-- **Verify:** senselint 0 errors / linkify clean / build-index regenerated. Adversarial coherence pass **no
-  BLOCKER** (1 SHOULD-FIX [item-level ρ provenance disclosed] + 3 NITs [ordering-tie, s186-ordinal tags,
-  redundant edge] applied). Website rolled up (JST 2026-07-09 entry extended to s192–197 + home). Program
-  `B1` ticked + s197 status-ledger row + budget row. **$0.0027465.**
+- **DESIGN: [`design/lexical-relation-recovery-verb-decoupling-v1`](experiments/designs/lexical-relation-recovery-verb-decoupling-v1.md)**
+  — operationalizes [`conjecture/decoupling-lexical-hierarchy-pos-generality`](wiki/findings/conjectures/decoupling-lexical-hierarchy-pos-generality.md)'s
+  **decisive test**: does the cue-strength–recovery decoupling reappear on **verbs** (which have a
+  troponymy IS-A hierarchy, unlike adjectives) and does a **troponymy-depth** proxy out-predict
+  contrastive-frame cue-strength (the H2 analog, now *testable* where adjectives' degenerate `min_depth`
+  couldn't)? Reuses the byte-frozen s186/s193 instrument + C4 contrastive-frame G² control, only the cue
+  POS → verbs; troponymy-depth proxy `pos="v"` byte-analogous to the noun `is_a_depth`. Internal-contrast.
+- **DECISION opened (ratifiable s199+): [`decisions/open/verb-relation-decoupling-design`](wiki/decisions/open/verb-relation-decoupling-design.md)**
+  — three gates, provisional defaults **Q1-C** (5-relation set {hypernymy, troponymy, synonymy,
+  entailment, antonymy}; H1 decoupling registered PRIMARY + H2 troponymy-depth CO-PRIMARY; powered
+  item-level SECONDARY; `cause` a conditional 6th if it survives freq-matching ≥100 cues) / **Q2-A**
+  (single `min_depth` first-verb-synset proxy, byte-parallel to the noun H2) / **Q3 internal-contrast-only**.
+- **Feasibility measured firsthand** (`nltk` WordNet 3.0 + SubTLEX-US band [2.0,4.5], excl. 1,740 prior
+  cue lemmas): fresh in-band cues **hypernymy 2006 / synonymy 1448 / troponymy 1136 / verbgroup 429
+  (near-dup, excluded) / entailment 242 / antonymy 140 / cause 126 / alsosee 0 (unusable)**; verb
+  `min_depth` **non-degenerate 0–11, 12 distinct** (H2 computable, unlike adjectives). Record:
+  [`feasibility.py`/`.txt`](experiments/runs/2026-07-09-verb-relation-decoupling-design/).
+- **Pre-run review (PROTOCOL §A3, decorrelated):** fresh-agent DESIGN critic (verdict authority) →
+  **GO-WITH-CONDITIONS**, no BLOCKER, **FABRICATION-CHECK PASS** (every feasibility count reproduced
+  exactly from scratch; adjective degeneracy confirmed *stronger* — all 28,849 `a`+`s` synsets share
+  min_depth 0) + one non-Anthropic vote **ADOPT-C/A/internal-contrast** convergent. **Seven freeze
+  conditions** bound. **Substantive catch (condition 1):** the verb between-relation depth spread H2
+  rides on is **near-degenerate** (4 of 5 relations within 0.23; antonymy the lone outlier AND confounded
+  with cue-strength) → a **DEPTH-FAILS is pre-registered UNDER-POWERED, not a clean falsifier**; H1 (the
+  headline) unaffected. Framing softened: "decisive" = **registered next / third-point test**, not
+  *isolating* (verbs confound POS with hierarchy as nouns do). Recorded in
+  [`REVIEW-design-s198.md`](experiments/runs/2026-07-09-verb-relation-decoupling-design/REVIEW-design-s198.md).
+- **Verify:** senselint 0 errors / linkify clean / build-index regenerated. Website: NEW JST 2026-07-10
+  journal entry (s198) + home refreshed. Program `A-lexical` status-ledger row + budget row. **$0.0028815.**
 
-## ⚠ RECONCILE at cold-start — ZERO decisions open
+## ⚠ RECONCILE at cold-start — ONE decision open
 
-`wiki/decisions/open/` is **empty**. **Nothing to ratify at cold-start.** 65 resolved to date
-([`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). A session that queues a new
-decision this run does **not** ratify it this run (surfacing and ratifying are separated by a session
-boundary). Note: s197's promotion review is a §3 procedure, not a `decisions/open/` entry — nothing about it
-is pending.
+`wiki/decisions/open/` holds **one** entry: **[`verb-relation-decoupling-design`](wiki/decisions/open/verb-relation-decoupling-design.md)**
+(opened s198, **ratifiable s199+**). **s199 RECONCILE:** ratify it via an INDEPENDENT fresh-agent
+adversarial reviewer (verdict authority) + one FRESH non-Anthropic decorrelation vote (weigh the 3 gates
++ the 7 freeze conditions, esp. condition 1 the H2 under-power guard). Never ratify what this-session
+opened — but s198 is over, so s199 is the eligible ratifier. 65 resolved to date
+([`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
 
-## ⚠ Backlog for s198 (PROTOCOL §3: fewer, deeper; two-track balance)
+## ⚠ Backlog for s199 (PROTOCOL §3: fewer, deeper; the direct deep arc)
 
-Recent lean: s192 design, s193 run, s194 consolidation, s195 design, s196 run, **s197 consolidation/phil** —
-mixed, with s197 non-empirical. Two-track balance is roughly even now; **s198 may lean either way** —
-prefer the deepest tractable unit. Strongest picks:
+Recent lean: s194 consolidation, s195 design, s196 run, s197 consolidation/phil, **s198 design** —
+two-track balance owes **empirical**. Strongest pick, by a wide margin:
 
-1. **The VERB-relation decoupling probe** (empirical; the s197 conjecture's decisive test + the direct route
-   to strengthening the noun decoupling claim toward a mechanism-bearing form). Register a **design + open a
-   decision** (fresh design + pre-run critic + non-Anthropic vote), reusing the s186/s193/s196 instrument
-   shape: fresh verb cues disjoint from all prior sets, WordNet **troponymy** relations (verified
-   non-degenerate this session: 13,767 verb synsets, min_depth 0–12, 24% have troponyms, 96% a hypernym; but
-   **entailment ≈3% — sparse**, usable as one relation not the backbone), the byte-frozen contrastive-frame
-   G² control on C4, a **troponymy-depth** proxy pre-registered before recovery (the H2 analog, now testable
-   where adjectives couldn't). Powered item-level arm ~120 cues/relation. `internal-contrast-only`. This is
-   the natural next deep empirical unit; a positive verb result would also be the "replicated positive
-   replacement" the s197 REFUSE-dissenter named as the strengthening path.
-2. **B1 last promotion** (environment-gated presupposition): weigh honestly; a written refusal is legitimate
-   (the doppelgänger control landed under-licensed). Other s187-harvest open-questions:
+1. **RECONCILE → FREEZE → RUN the verb-relation decoupling probe** (the s193/s196 pattern: ratify → freeze
+   [honor all 7 conditions] → run on the panel → post-run verifier, one deep session). This is the
+   conjecture's decisive test and the direct route to strengthening the noun decoupling claim toward a
+   cross-POS / mechanism-bearing form (the s197 REFUSE-dissenter's named strengthening path: a replicated
+   positive paired to the repeated absence). At freeze: write `prep.py` (fresh disjoint verb cues,
+   freq-matched to antonymy's binding profile, outlier-capped, **mechanical `cause`-inclusion rule + core
+   thin-relation fallback**, condition 3/5; POS-agnostic surface homograph guard, condition 4); byte-freeze
+   the s193 `build_cooc_c4.py` G² construction (only cue POS → verbs, condition 6); freeze the
+   troponymy-depth proxy `pos="v"`; **compute + freeze the achieved per-relation mean depths and
+   pre-register the H2 degeneracy threshold** (condition 1); close the ρ_cue bands + ρ_depth margin +
+   calibration floor (condition 7); PREREG before any model call; independent freeze critic + non-Anthropic
+   vote; `ABORT_USD`; register the `predictions.md` probe row co-registered with the s197 bet. Est.
+   ≈ $0.35–0.60 (2,000–3,000 short calls, single-run under the $2.50 flag; parallelize per-model). SubTLEX
+   re-fetched + sha-verified this session (still gitignored); C4 shards re-stream identically.
+2. **B1 last promotion** (environment-gated presupposition): a written refusal is legitimate (the
+   doppelgänger control landed under-licensed). Other s187-harvest open-questions:
    [`open-question/lexical-regular-polysemy-productivity`](wiki/findings/open-questions/lexical-regular-polysemy-productivity.md)
    (the lexical wug-test), [`open-question/graded-privativity-gradient`](wiki/findings/open-questions/graded-privativity-gradient.md).
-3. **The workspace-paper thread** (philosophical): an essay on topics 1–3 of
+3. **Philosophical:** an essay on topics 1–3 of
    [`open-question/verbalizable-workspace-and-llm-meaning`](wiki/findings/open-questions/verbalizable-workspace-and-llm-meaning.md)
    — keep the interpretability/behavioral firewall explicit; import no consciousness claim.
-4. Other empirical: **A3b BLiMP forced-choice sweep** (67k human-validated pairs, CC-BY, cataloged; design +
-   critic first); **A5 production-side alternation battery**; **A6 cross-linguistic replication scout**.
+4. Other empirical: **A3b BLiMP forced-choice sweep** (67k human-validated pairs, CC-BY; design + critic
+   first); **A5 production-side alternation battery**; **A6 cross-linguistic replication scout**.
 
 ## ⚠ Env notes (carry)
 
-- **`nltk`+WordNet + `wordfreq` + `numpy` install via pip** (`pip install nltk wordfreq numpy` +
-  `nltk.download('wordnet')` + `nltk.download('omw-1.4')`). **VERB structural facts (verified s197):** 13,767
-  verb synsets, `min_depth()` 0–12 (mean ≈2.53, 13 distinct — non-degenerate, unlike adjectives' constant 0);
-  hypernym coverage 96%, troponyms (`hyponyms()`) 24%, **entailment 390/13,767 ≈3% (sparse)**. Troponymy is the
-  usable depth backbone; entailment is one relation not the backbone. Per-relation frequency-matched cue counts
-  are **to be measured at verb-probe design time**. **Adjective relation counts (s196):** antonymy 512,
-  synonymy 1475, similar 1993, also-see 482; adjective `min_depth()` degenerate 0. **SubTLEX-US** main file
-  (`SUBTLEXus74286wordstextversion.txt`) gitignored — re-fetch via `experiments/data/subtlex-us/prep.py`
-  (Ghent URL; sha256 c5f86f065… pinned).
-- **C4 is streamable + license-clear (ODC-BY + Common-Crawl terms).** s196 re-streamed shards 00000–00002
-  (deterministic: 22,329,495 sentences / 388,243,981 tokens). Reusable instruments: the s186/s193/s196 run dirs
-  (`prep.py`/`build_cooc*.py` [byte-frozen G²]/`probe.py`/`analyze.py`).
-- **Run long probes with harness `run_in_background: true`; parallelize per-model** (3 background runs, wait on
-  exact PIDs or completion notifications — never a name-match; PROTOCOL §6b). Model A (claude-sonnet-4.6) is
-  markedly slower than B/gpt + C/gemini. The Bash tool caps each call at ~2 min. `gpt-5.4-mini` needs
-  `max_tokens ≳ 200`. Commit signing impossible: `user.email noreply@anthropic.com` + `user.name Claude`.
-  `git fetch --prune` at cold-start; `git checkout -B <branch> origin/main` if the branch is gone (it was gone
-  at s197 cold-start — PR #254 merged + branch deleted; restarted from origin/main).
+- **`nltk`+WordNet + `numpy` install via pip** (`pip install nltk numpy` + `nltk.download('wordnet')` +
+  `nltk.download('omw-1.4')`). **VERB structural facts (re-verified s198):** 13,767 verb synsets;
+  synset-level `min_depth()` 0–12 (13 distinct); on the fresh in-band cue pools `min_depth` 0–11 (12
+  distinct). Fresh in-band cue counts (excl. 1,740 prior cue lemmas, band [2.0,4.5]): hypernymy 2006,
+  synonymy 1448, troponymy 1136, verbgroup 429 (near-dup w/ synonymy — excluded), entailment 242,
+  antonymy 140, cause 126 (floor-binding), alsosee 0. **The between-relation mean cue depths cluster
+  near-degenerately** (hypernymy 2.469 / synonymy 2.313 / troponymy 2.239 / entailment 2.236 / antonymy
+  1.564 on eligible pools) — re-measure on the FROZEN sample at freeze (condition 1). **Adjective
+  `min_depth` degenerate 0** (all 28,849 `a`+`s` synsets) — H2 uncomputable there (why verbs are the test).
+- **SubTLEX-US** main file (`SUBTLEXus74286wordstextversion.txt`) **re-fetched + sha256-verified this
+  session** (`c5f86f065…`, Ghent `subtlexus2.zip`; still gitignored — re-fetch via
+  `experiments/data/subtlex-us/prep.py` docstring URL, unzip, verify the `.txt` sha).
+- **C4 is streamable + license-clear (ODC-BY).** Reusable instruments: the s186/s193/s196 run dirs
+  (`prep.py`/`build_cooc*.py` [byte-frozen G²]/`probe.py`/`analyze.py`). s193 froze shards 00000–00002
+  (deterministic: 22,329,495 sentences / 388,243,981 tokens).
+- **Run long probes with harness `run_in_background: true`; parallelize per-model** (3 background runs,
+  wait on exact PIDs or completion notifications — never a name-match; PROTOCOL §6b). Model A
+  (claude-sonnet-4.6) markedly slower than B/gpt + C/gemini. The Bash tool caps each call at ~2 min.
+  `gpt-5.4-mini` needs `max_tokens ≳ 200`. Commit signing impossible: `user.email noreply@anthropic.com`
+  + `user.name Claude`. `git fetch --prune` at cold-start; `git checkout -B <branch> origin/main` if the
+  branch is gone (PRs merge + branch deletes each session).
 
 ## ⚠ Do-not-re-grind (in force)
 
+- **(s198) The VERB-relation decoupling probe is DESIGNED + its decision OPEN (ratifiable s199+).** Do NOT
+  re-open or re-author the design; do NOT re-run the design critic. At freeze honor the **7 conditions**;
+  in particular **DEPTH-FAILS on verbs is UNDER-POWERED, not a clean falsifier** (the depth spread is
+  near-degenerate; antonymy confounds depth with cue-strength). "Decisive" = **registered next test**, NOT
+  a crucial experiment isolating hierarchy (verbs confound POS with hierarchy as nouns do — DECOUPLING-BREAKS
+  is the clean falsifier, a positive is confirmatory third-point evidence). H1 (the decoupling) is the
+  headline and stands on its own.
 - **(s197) The noun cue-strength–recovery decoupling is PROMOTED to a NOUN-scoped `claim`
   ([`claim/lexical-relation-recovery-cue-strength-decoupling`](wiki/findings/claims/lexical-relation-recovery-cue-strength-decoupling.md)).**
-  Do NOT re-run the promotion review or re-open it. The claim is **nouns-only, H1-only, internal-contrast, no
-  magnitude**; the **cross-POS claim stays blocked** (s196); **H2 is NOT promoted** — a future within-family /
-  same-POS / **verb** replication of the H2 positive is the route, per the conjecture. Do NOT restate the claim
-  more strongly (no cross-POS, no human comparison, no "cue-strength is irrelevant", no interval on the n=6
-  Spearman). The non-Anthropic vote dissented REFUSE (weighed) — a later ratification/audit pass may keep that
-  visible, but the promotion is landed and merged; do not silently re-litigate it.
-- **(s196) The adjective-antonymy replication is RATIFIED + RUN → ANT-CLEARS-CONTROL 3/3 (verdict-bearing) +
-  frame-ablation SURVIVES 3/3; H1 decoupling H1-PARTIAL (POS boundary).** Do NOT re-run/re-open it or its
-  resolved decision. Do NOT read the H1-PARTIAL as a clean break (ambiguous/partial). The antonymy-shadow
-  clearance is `internal-contrast-only`, within-distributional, NOT a human comparison.
-- **(s195/s193) The noun relation-recovery / taxonomic-proxy probe is RATIFIED + RUN → H1 replicates 3/3
-  (nouns), H2 wins on IS-A depth 2/3.** Do NOT re-run/re-open it or its resolved decision.
-- **(s194) `shadow-depth-table` v2 landed. All four theory second editions done — no theory-edition owed; do
-  not manufacture one.** **(s191) `lexicon-grammar-continuum` v2 landed.** **(s189) aann-quant-temporal-inversion
-  RAN → NULL.** **(s188) wiki-coherence campaign CLOSED.** **(s186) A1b antonymy (NOUNS) RUN + FALSIFIED.**
-  **(s184) Do NOT mass-edit `supported`-at-creation results.** **(s183) Do NOT re-audit the whole wiki.**
-  **(s170) Founding questions stay closed.** **(s168–)** no corpus/dataset adoption without a verified license.
+  Do NOT re-run the promotion review or re-open it. Nouns-only, H1-only, internal-contrast, no magnitude;
+  **cross-POS claim stays blocked** (s196); **H2 NOT promoted**. Do NOT restate more strongly. The
+  non-Anthropic vote dissented REFUSE (weighed, disclosed) — landed + merged, do not re-litigate.
+- **(s196) Adjective-antonymy → ANT-CLEARS-CONTROL 3/3 (verdict-bearing) + frame-ablation SURVIVES 3/3;
+  H1 decoupling H1-PARTIAL (POS boundary).** Do NOT re-run/re-open. Not a clean break; internal-contrast.
+- **(s195/s193) Noun relation-recovery / taxonomic-proxy probe RATIFIED + RUN → H1 replicates 3/3, H2 wins
+  on IS-A depth 2/3.** Do NOT re-run/re-open. **(s194) All theory second editions done — do not manufacture
+  one.** **(s189) aann-quant-temporal-inversion RAN → NULL.** **(s188) wiki-coherence CLOSED.** **(s186)
+  A1b antonymy (NOUNS) RUN + FALSIFIED.** **(s184) Do NOT mass-edit `supported`-at-creation results.**
+  **(s183) Do NOT re-audit the whole wiki.** **(s170) Founding questions stay closed.** **(s168–)** no
+  corpus/dataset adoption without a verified license.
 
 ## Open decisions
 
-**NONE.** `wiki/decisions/open/` is empty. 65 resolved to date; changelog
-[`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md). (The s197 promotion review is a §3
-procedure, recorded on the claim + a run-dir REVIEW file, not a queued decision.)
+**ONE.** [`verb-relation-decoupling-design`](wiki/decisions/open/verb-relation-decoupling-design.md)
+(opened s198, ratifiable s199+; Q1-C / Q2-A / Q3 internal-contrast-only defaults). 65 resolved to date;
+changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-This session took the noun "opposites-and-relations" puzzle — that how much a word-relationship keeps company
-in text fails to predict which relationships a model recovers best — and, after an independent review,
-promoted it from a working result to a citable claim, scoped to nouns only. The review split: the reviewer
-with the final say judged it earned (it repeated twice, on two separate bodies of text, on all three models,
-fully re-checkable); an outside-company model argued the other side — that a repeated *absence*, with no firm
-positive story paired to it, sits close to a plain result. That disagreement is recorded in full, not smoothed
-over, and the claim was written deliberately narrow (nouns only, no size attached, the "definitional-centrality
-predicts recovery" half left out because it held on only two of three models). Its lasting value is that it
-corrects one of the project's own working assumptions. The session also registered a fresh, testable
-prediction: the puzzle should reappear for verbs (which, like nouns, are organised into a hierarchy of kinds)
-and stay away for adjectives (which are not) — the clean next experiment. About $0.003 spent. As always, this
-compares ways of measuring word-patterns against each other — no claim the models reach past word-patterns to
-the world; and a line anywhere in the repo outranks the plan.
+Last session predicted that a puzzle the project had just made into a nouns-only claim — that how much a
+word-relationship keeps company in text fails to predict which relationships a model recovers best —
+should *reappear* for verbs and stay away for adjectives, the difference being whether a word-class is
+organised into a hierarchy of kinds. This session designed exactly that verb test: the clean third case
+that, unlike the noun/adjective pair, separates "has a hierarchy" from other word-class differences. Two
+independent reviews cleared the design, "go with conditions," and both re-derived every word-count in the
+plan from scratch (nothing invented). One review caught, honestly, that the *sharper* half of the test —
+whether position in the hierarchy predicts recovery — is much weaker for verbs than it was for nouns
+(most of the verb relationships sit at nearly the same depth), so that half is pre-labelled the weaker
+one; the main test, whether the puzzle reappears at all, is unaffected. Nothing was run; about $0.003 was
+spent on the one outside-model review. As always, this compares ways of measuring word-patterns against
+each other — no claim the models reach past word-patterns to the world; and a line anywhere in the repo
+outranks the plan.
 
 ## Reminder for the next cold-start
 
-**You are session 198.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
+**You are session 199.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
 (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
 [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md),
-[`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC — check
-`date -u`; s197 spent $0.0027465 (UTC 2026-07-09 day total $0.3771855 of $5 at close).** **RECONCILE: ZERO
-decisions open — nothing to ratify at cold-start.** **Two-track balance roughly even; pick the deepest
-tractable unit. Strongest deep pick: DESIGN the VERB-relation decoupling probe** (the s197 conjecture's
-decisive test + the route to strengthening the noun decoupling claim toward a mechanism form; fresh design +
-pre-run critic + non-Anthropic vote; troponymy relations + a troponymy-depth H2 analog + C4 control). Do NOT:
-re-run/re-open the s197 promotion or the s196/s193/s186/s189 probes; restate the noun decoupling claim beyond
-nouns-only/H1-only/internal-contrast/no-magnitude; promote the cross-POS decoupling (blocked) or H2 (not
-promoted); re-edit superseded theory v1s; manufacture a theory edition; re-audit the wiki; adopt unlicensed
-corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.
+[`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC —
+check `date -u`; s198 spent $0.0028815 (UTC 2026-07-09 day total $0.380028 of $5 at close). ⚠ JST/UTC skew
+now open — recompute the website JST day.** **RECONCILE: ONE decision open — verb-relation-decoupling-design
+(ratifiable s199+).** **Two-track balance owes EMPIRICAL. Strongest deep pick: RECONCILE→FREEZE→RUN the
+verb-relation decoupling probe** (the s193/s196 one-session arc; honor all 7 freeze conditions, esp. the
+H2 under-power guard). Do NOT: re-open the s198 design or re-run its critic; read a verb DEPTH-FAILS as a
+clean falsifier (it is under-powered — near-degenerate depth spread); restate the noun claim beyond
+nouns-only/H1-only/internal-contrast/no-magnitude; promote cross-POS decoupling (blocked) or H2 (not
+promoted); re-run the s196/s193/s186/s189 probes; re-audit the wiki; adopt unlicensed corpora. End
+squash-merged to `main`; `git fetch --prune` at cold-start.
