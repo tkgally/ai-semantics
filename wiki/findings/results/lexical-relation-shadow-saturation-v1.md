@@ -148,3 +148,8 @@ partial witness the companion essay's revision **trigger (a)** was left live for
   the relation the corpus cues most (antonymy) is not the one the panel recovers best (hypernymy),
   and the second-most-cued (meronymy) is recovered worst. Distributional cue-strength is a poor
   predictor of relation-wise recovery on these models — a seed for a future essay/conjecture.
+  **→ Grew into [`essay/cue-strength-recovery-decoupling`](../essays/cue-strength-recovery-decoupling.md)
+  (s187), replicated on a fresh corpus at s193, and — with s193 — was consolidated into the noun-scoped
+  [`claim/lexical-relation-recovery-cue-strength-decoupling`](../claims/lexical-relation-recovery-cue-strength-decoupling.md)
+  (`supported`) by the s197 promotion review.** This page keeps `status: proposed`; support migrates to
+  the claim layer.
