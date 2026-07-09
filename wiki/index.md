@@ -37,9 +37,9 @@ Standing references:
 
 ### Decisions — open
 
-65 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+66 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/verb-relation-decoupling-design.md`](decisions/open/verb-relation-decoupling-design.md) — Verb-relation decoupling probe — the value-laden gates: the verb relation inventory + registered primary clause (H1 decoupling), the troponymy-depth proxy specification… · **open**
+*(none)*
 
 ### Base — concepts
 
@@ -453,6 +453,7 @@ Standing references:
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
 - `experiments/runs/2026-07-09-verb-relation-decoupling-design/` (no README)
+- `experiments/runs/2026-07-09-verb-relation-decoupling/` (no README)
 - `experiments/runs/2026-07-09-decoupling-promotion-review/` (no README)
 - `experiments/runs/2026-07-09-adjective-antonymy-replication-design/` (no README)
 - `experiments/runs/2026-07-09-adjective-antonymy-replication/` (no README)
