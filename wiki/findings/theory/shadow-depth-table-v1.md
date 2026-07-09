@@ -8,11 +8,11 @@ meaning-senses:
   - inferential
   - referential
   - human-comparison
-status: draft
+status: superseded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-03
-updated: 2026-07-06
+updated: 2026-07-09
 links:
   - rel: operationalizes
     target: essay/shadow-depth-cross-cuts-grain
@@ -47,6 +47,13 @@ links:
 ---
 
 # Theory (draft): the shadow-depth table, v1
+
+> **⚠ SUPERSEDED (2026-07-09, session 194).** This first edition is replaced by the clean second edition
+> [`theory/shadow-depth-table-v2`](shadow-depth-table-v2.md), which restates the table around the promoted
+> claims layer and folds in the s193 measured ordering-axis candidate for the lexical relation-recovery
+> corner (taxonomic hierarchical position). This page is kept visible as history — cite it for the July
+> record and for the three dated update boxes below; **cite v2 for the project's current position.** No
+> measured number changed between editions; the readings laid over the saturated side did.
 
 > **UPDATE (2026-07-03, s173): the presupposition saturated corner's control has RUN** (program A1a →
 > [`result/presupposition-doppelganger-control-v1`](../results/presupposition-doppelganger-control-v1.md)).
