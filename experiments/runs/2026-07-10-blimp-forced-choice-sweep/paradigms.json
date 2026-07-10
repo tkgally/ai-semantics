@@ -1,0 +1,480 @@
+{
+ "manifest": {
+  "seed": 20260710,
+  "n_per_paradigm": 30,
+  "f4_floor": 0.6,
+  "n_selected": 40,
+  "n_calls_expected": 7200,
+  "selection_rule": "Q1-B via the maximal defensible WHOLE-CATEGORY rule: every paradigm in the on-axis linguistics_term categories (determiner_noun_agreement; the local + distractor split of subject_verb_agreement; npi_licensing; quantifiers; island_effects; filler_gap_dependency); no within-category hand-picking; selection references only BLiMP's own structural metadata, human-agreement-blind. subject_verb_agreement split by the structural `distractor_` marker.",
+  "strata": {
+   "local": {
+    "rank": 1,
+    "desc": "shallow-local (adjacent agreement, n-gram/local-window detectable)"
+   },
+   "medium": {
+    "rank": 2,
+    "desc": "medium (agreement across an intervener)"
+   },
+   "scope": {
+    "rank": 3,
+    "desc": "deep-scope (c-command polarity/quantifier licensing, non-adjacent)"
+   },
+   "island": {
+    "rank": 4,
+    "desc": "deep-structural (long-distance filler-gap / island constraints)"
+   }
+  },
+  "shallow_strata": [
+   "local"
+  ],
+  "deep_strata": [
+   "island",
+   "scope"
+  ],
+  "paradigms": [
+   {
+    "uid": "adjunct_island",
+    "category": "island_effects",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.94,
+    "f4_pass": true,
+    "sha256_full": "ecc71c452516de03deeb9262b4203e45220dc52727327a08eef07c79c01eac8b",
+    "n_pairs": 30
+   },
+   {
+    "uid": "complex_NP_island",
+    "category": "island_effects",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.804444444444444,
+    "f4_pass": true,
+    "sha256_full": "1c92472731dd9a21eb222d64bee756042a3763c3797b5283d5b84ab8e3cbb74c",
+    "n_pairs": 30
+   },
+   {
+    "uid": "coordinate_structure_constraint_complex_left_branch",
+    "category": "island_effects",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.9,
+    "f4_pass": true,
+    "sha256_full": "47e0e04efeb320449a8eb2ac722b895041a8609580fec2880dbc719f50fba194",
+    "n_pairs": 30
+   },
+   {
+    "uid": "coordinate_structure_constraint_object_extraction",
+    "category": "island_effects",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.908947368421053,
+    "f4_pass": true,
+    "sha256_full": "d01c27a7a893f3ec071a7913efa504d297671d86a987f26ddb565de914db2fd7",
+    "n_pairs": 30
+   },
+   {
+    "uid": "determiner_noun_agreement_1",
+    "category": "determiner_noun_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.957836257309941,
+    "f4_pass": true,
+    "sha256_full": "f48065fd760d0fd1a895012860d38bdf3c2ac115cd221e521684cc430c0f1855",
+    "n_pairs": 30
+   },
+   {
+    "uid": "determiner_noun_agreement_2",
+    "category": "determiner_noun_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.948947368421053,
+    "f4_pass": true,
+    "sha256_full": "8ae7eff7c7bd384ff5ef3113984834f4d78b34559203aa9d5cb14ea8394291a9",
+    "n_pairs": 30
+   },
+   {
+    "uid": "determiner_noun_agreement_irregular_1",
+    "category": "determiner_noun_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.92,
+    "f4_pass": true,
+    "sha256_full": "4f350e88db9e29e53ae96f1f0b5991c7809fd4fd403190907330b721e1e6e264",
+    "n_pairs": 30
+   },
+   {
+    "uid": "determiner_noun_agreement_irregular_2",
+    "category": "determiner_noun_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.85,
+    "f4_pass": true,
+    "sha256_full": "d688af0ccd0614d24a936e0929276784f37554f3ad3e247c3bade8dcaa9099df",
+    "n_pairs": 30
+   },
+   {
+    "uid": "determiner_noun_agreement_with_adj_2",
+    "category": "determiner_noun_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.96,
+    "f4_pass": true,
+    "sha256_full": "8d2828d7dfbfc3f7191024514060fedb033ea2e232304f63448c33051a85d2b3",
+    "n_pairs": 30
+   },
+   {
+    "uid": "determiner_noun_agreement_with_adj_irregular_1",
+    "category": "determiner_noun_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.937777777777778,
+    "f4_pass": true,
+    "sha256_full": "1f4c6e42a48f4220afec629679641479feac3883cd7fa346d9e9e129cd7e8f55",
+    "n_pairs": 30
+   },
+   {
+    "uid": "determiner_noun_agreement_with_adj_irregular_2",
+    "category": "determiner_noun_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.85,
+    "f4_pass": true,
+    "sha256_full": "aa3f297a7ce0c03b5fc00458834f89e54eb855973be098497f766a390b4bc669",
+    "n_pairs": 30
+   },
+   {
+    "uid": "determiner_noun_agreement_with_adjective_1",
+    "category": "determiner_noun_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.95,
+    "f4_pass": true,
+    "sha256_full": "2c3de4e7b7aea499fb7cf1b23b9c3b63662289880f991b9ffabe5ceb94cf7430",
+    "n_pairs": 30
+   },
+   {
+    "uid": "distractor_agreement_relational_noun",
+    "category": "subject_verb_agreement",
+    "stratum": "medium",
+    "stratum_rank": 2,
+    "human_agreement": 0.81,
+    "f4_pass": true,
+    "sha256_full": "37c1553f4c6594b162256edce0f6b40bad1898b311c8aaa69605b526b6494a34",
+    "n_pairs": 30
+   },
+   {
+    "uid": "distractor_agreement_relative_clause",
+    "category": "subject_verb_agreement",
+    "stratum": "medium",
+    "stratum_rank": 2,
+    "human_agreement": 0.856842105263158,
+    "f4_pass": true,
+    "sha256_full": "854728b6db8f23f12583f7332b654835351eaedb50783e6f2a3bf6c101b8c422",
+    "n_pairs": 30
+   },
+   {
+    "uid": "existential_there_quantifiers_1",
+    "category": "quantifiers",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.94,
+    "f4_pass": true,
+    "sha256_full": "4bd0f6dee3c1824b51b0dafb9fce2b00933e8053fcd4a7b99b6202e1b8b49f9e",
+    "n_pairs": 30
+   },
+   {
+    "uid": "existential_there_quantifiers_2",
+    "category": "quantifiers",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.764210526315789,
+    "f4_pass": true,
+    "sha256_full": "b1a80f4ebebae90a90927259f95b680059020e6bb4e38e64a41eb8e53bc3f617",
+    "n_pairs": 30
+   },
+   {
+    "uid": "irregular_plural_subject_verb_agreement_1",
+    "category": "subject_verb_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.94,
+    "f4_pass": true,
+    "sha256_full": "0066174143671bffa54232d89254d14221afab666273edfefdfb625fbb75e226",
+    "n_pairs": 30
+   },
+   {
+    "uid": "irregular_plural_subject_verb_agreement_2",
+    "category": "subject_verb_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.95,
+    "f4_pass": true,
+    "sha256_full": "9b22db814e7b7251f4abafe8beb9616f2f46eaa58f7cdb701cbc737cc8f1a124",
+    "n_pairs": 30
+   },
+   {
+    "uid": "left_branch_island_echo_question",
+    "category": "island_effects",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.91,
+    "f4_pass": true,
+    "sha256_full": "7dadbe3c5a5ceadb78b9408807ac88230ddd748abfe8de8121f064e2bce94ad8",
+    "n_pairs": 30
+   },
+   {
+    "uid": "left_branch_island_simple_question",
+    "category": "island_effects",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.99,
+    "f4_pass": true,
+    "sha256_full": "e2a64b8a1b7b8d94f931018cf9325836e9c79953a01379233da255eac5e8cd71",
+    "n_pairs": 30
+   },
+   {
+    "uid": "matrix_question_npi_licensor_present",
+    "category": "npi_licensing",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.98,
+    "f4_pass": true,
+    "sha256_full": "657c9d6e6d50a9cd651881fcbc57cef2fd998611f6f53158ed05e48822fcd2b5",
+    "n_pairs": 30
+   },
+   {
+    "uid": "npi_present_1",
+    "category": "npi_licensing",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.83,
+    "f4_pass": true,
+    "sha256_full": "9aa85dc5c2b0d85ea51f21db50d6d327ab5b45d1669e386d54b1360d3ac954af",
+    "n_pairs": 30
+   },
+   {
+    "uid": "npi_present_2",
+    "category": "npi_licensing",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.98,
+    "f4_pass": true,
+    "sha256_full": "52fcfa230a40ae27998273cc08ecd062aad17025c92389df3404a85ed519909b",
+    "n_pairs": 30
+   },
+   {
+    "uid": "only_npi_licensor_present",
+    "category": "npi_licensing",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.92,
+    "f4_pass": true,
+    "sha256_full": "475c6595187a32e4dcfb868d3db90394e89669a94a9312ebd60f88dad1665f1c",
+    "n_pairs": 30
+   },
+   {
+    "uid": "only_npi_scope",
+    "category": "npi_licensing",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.72,
+    "f4_pass": true,
+    "sha256_full": "ca1f0671643e37936515f02125036bc2904ab9b35c4689b0e7a3ea3914e571f6",
+    "n_pairs": 30
+   },
+   {
+    "uid": "regular_plural_subject_verb_agreement_1",
+    "category": "subject_verb_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.95,
+    "f4_pass": true,
+    "sha256_full": "1a18d94062c8e792c0a200a3b00dff0e051a92bb084c05e9b5e5c73bee32a620",
+    "n_pairs": 30
+   },
+   {
+    "uid": "regular_plural_subject_verb_agreement_2",
+    "category": "subject_verb_agreement",
+    "stratum": "local",
+    "stratum_rank": 1,
+    "human_agreement": 0.95,
+    "f4_pass": true,
+    "sha256_full": "e5b4668811e63b00ac4c9569cb9553281a39c21df43256905ad78e59ae24942c",
+    "n_pairs": 30
+   },
+   {
+    "uid": "sentential_negation_npi_licensor_present",
+    "category": "npi_licensing",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.927894736842105,
+    "f4_pass": true,
+    "sha256_full": "c43405aca13ba4aa6ad87f9b051e4ba5fc458f24e683cfe0af23e6e09ec7268b",
+    "n_pairs": 30
+   },
+   {
+    "uid": "sentential_negation_npi_scope",
+    "category": "npi_licensing",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.81,
+    "f4_pass": true,
+    "sha256_full": "6c341ccc39c94bea45c0412986751bf2f6eca48626728e30e23d2b6a22c8b949",
+    "n_pairs": 30
+   },
+   {
+    "uid": "sentential_subject_island",
+    "category": "island_effects",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.606315789473684,
+    "f4_pass": true,
+    "sha256_full": "a286b67cc5912aafeb06750b38923abf3338786ffa4309e0a6a07b1dbe2444bd",
+    "n_pairs": 30
+   },
+   {
+    "uid": "superlative_quantifiers_1",
+    "category": "quantifiers",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.91,
+    "f4_pass": true,
+    "sha256_full": "bebc5c5ff28cf226cc35293c60cde1fcf7565a7b58cb219d01ac8908b952a497",
+    "n_pairs": 30
+   },
+   {
+    "uid": "superlative_quantifiers_2",
+    "category": "quantifiers",
+    "stratum": "scope",
+    "stratum_rank": 3,
+    "human_agreement": 0.85,
+    "f4_pass": true,
+    "sha256_full": "4bef08f3e6bd3fbb46021dda34000f3c00222c5576babe4882a8541f6820a106",
+    "n_pairs": 30
+   },
+   {
+    "uid": "wh_island",
+    "category": "island_effects",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.73,
+    "f4_pass": true,
+    "sha256_full": "77824ca8c0008fb7a204e785ca2dcee1b2803f666bb545bd95cb8a51e04f1a4c",
+    "n_pairs": 30
+   },
+   {
+    "uid": "wh_questions_object_gap",
+    "category": "filler_gap_dependency",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.85,
+    "f4_pass": true,
+    "sha256_full": "685c74eb8c199f30a24bba1bfabf9d9dff7962a64430e62b9b5f61d5369241ff",
+    "n_pairs": 30
+   },
+   {
+    "uid": "wh_questions_subject_gap",
+    "category": "filler_gap_dependency",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.98,
+    "f4_pass": true,
+    "sha256_full": "3c33e4efc7182824211ff3288694cf010f4ce84f85c8df67410d784139c722b3",
+    "n_pairs": 30
+   },
+   {
+    "uid": "wh_questions_subject_gap_long_distance",
+    "category": "filler_gap_dependency",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.848888888888889,
+    "f4_pass": true,
+    "sha256_full": "985bae202dbc5566b9b5c51bd77dd9d1dbcd87e0f38e008c34a11d7aa07db788",
+    "n_pairs": 30
+   },
+   {
+    "uid": "wh_vs_that_no_gap",
+    "category": "filler_gap_dependency",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.97,
+    "f4_pass": true,
+    "sha256_full": "6a25d0d1499e9f522696a62ce9dba8c49f58c5446fddc6d852bf562d1016163c",
+    "n_pairs": 30
+   },
+   {
+    "uid": "wh_vs_that_no_gap_long_distance",
+    "category": "filler_gap_dependency",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.919473684210526,
+    "f4_pass": true,
+    "sha256_full": "968faf59602a67f9cfd7c2e91a314a3f7342fd5daf41c21cadd25288fc85fdcf",
+    "n_pairs": 30
+   },
+   {
+    "uid": "wh_vs_that_with_gap",
+    "category": "filler_gap_dependency",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.77,
+    "f4_pass": true,
+    "sha256_full": "56f1ca988a8ca368234f12359792c414fdfec2891154e3f8ce6404da1d3f3212",
+    "n_pairs": 30
+   },
+   {
+    "uid": "wh_vs_that_with_gap_long_distance",
+    "category": "filler_gap_dependency",
+    "stratum": "island",
+    "stratum_rank": 4,
+    "human_agreement": 0.746842105263158,
+    "f4_pass": true,
+    "sha256_full": "3cb19100d6384264e512801e96c20e172a3c0c7778276b80ed60c65e97b86ab5",
+    "n_pairs": 30
+   }
+  ],
+  "excluded_categories": {
+   "anaphor_agreement": "Reflexive gender/number agreement is a binding-domain phenomenon (same rationale as binding); excluded to keep the agreement strata about controller-target morphological agreement only.",
+   "argument_structure": "Verb argument-realization well-formedness (causative/inchoative/transitive/passive/drop-argument): a lexical-semantic selection phenomenon, not a locality-graded structural dependency.",
+   "binding": "Binding-domain / coreference (principle A): a c-command+domain referential-dependency constraint on a different axis than morphological agreement / polarity licensing / filler-gap extraction \u2014 not on the locality-of-agreement/extraction cline.",
+   "control_raising": "Control/raising A-movement + PRO: a distinct movement/interpretation axis; several items are existential-there raising that would confound with the there-quantifier items.",
+   "ellipsis": "Ellipsis (n-bar) licensing: a distinct anaphoric/deletion phenomenon; only 2 paradigms.",
+   "irregular_forms": "Morphological irregularity (past-participle forms): a morphological-lexical contrast, not a structural dependency.",
+   "s-selection": "Semantic selectional restriction (animacy): lexical-semantic, off the structural-locality axis."
+  },
+  "excluded_paradigms": [
+   "anaphor_gender_agreement [anaphor_agreement]",
+   "anaphor_number_agreement [anaphor_agreement]",
+   "animate_subject_passive [s-selection]",
+   "animate_subject_trans [s-selection]",
+   "causative [argument_structure]",
+   "drop_argument [argument_structure]",
+   "ellipsis_n_bar_1 [ellipsis]",
+   "ellipsis_n_bar_2 [ellipsis]",
+   "existential_there_object_raising [control_raising]",
+   "existential_there_subject_raising [control_raising]",
+   "expletive_it_object_raising [control_raising]",
+   "inchoative [argument_structure]",
+   "intransitive [argument_structure]",
+   "irregular_past_participle_adjectives [irregular_forms]",
+   "irregular_past_participle_verbs [irregular_forms]",
+   "passive_1 [argument_structure]",
+   "passive_2 [argument_structure]",
+   "principle_A_c_command [binding]",
+   "principle_A_case_1 [binding]",
+   "principle_A_case_2 [binding]",
+   "principle_A_domain_1 [binding]",
+   "principle_A_domain_2 [binding]",
+   "principle_A_domain_3 [binding]",
+   "principle_A_reconstruction [binding]",
+   "tough_vs_raising_1 [control_raising]",
+   "tough_vs_raising_2 [control_raising]",
+   "transitive [argument_structure]"
+  ],
+  "note_404": [
+   "coordinate_structure_constraint_subject_extraction (human 0.514)",
+   "wh_questions_object_gap_long_distance (human 0.47)"
+  ],
+  "note_404_reason": "2 human-validation-CSV rows have NO data file on master (404) \u2014 excluded for data-availability (structural), NOT for their human-agreement values; both happen to be low-agreement, flagged as a limitation (their absence removes 2 of the hardest human points, mildly conservative for reading 1)."
+ }
+}

@@ -170,6 +170,23 @@ pole's. Both poles are structurally parallel: each carries a shadow-beater and a
 corner. Grain does not separate the beaters from the saturated corners; shadow-depth does, at both
 grains.
 
+> **CORROBORATION (2026-07-10, s205) — a broad grammar-side depth gradient, measured, that TRACKS the
+> human one.** The [`result/blimp-forced-choice-sweep-v1`](../results/blimp-forced-choice-sweep-v1.md)
+> BLiMP forced-choice sweep (40 human-agreement-anchored paradigms, behavioral 2AFC, n=3) puts a
+> measurement under the grammatical-pole depth claim above. Within the panel, forced-choice error
+> concentrates on the structurally-deep paradigms (islands, quantifier/NPI scope, long-distance
+> filler-gap; accuracy ≈0.81–0.92) relative to shallow-local agreement (≈0.98–0.99): **DEPTH-GRADED 3/3**
+> (shallow−deep gap +0.111/+0.168/+0.070). That is the grammatical pole's internal shadow-depth grading,
+> now across 40 paradigms rather than only the CC beater + presupposition corner. **But the gradient
+> TRACKS the human difficulty profile** — the panel's per-paradigm accuracy aligns with the per-paradigm
+> human agreement (ρ_prof +0.606/+0.543/+0.628, all CIs>0, PROFILE-ALIGNED 3/3, descriptive-only per
+> C8), and the panel's deep-contrast dip is *comparable to* the human dip (TRACKS-DIP 2/3), not
+> disproportionately larger. **This sharpens, not overturns, the placement:** the shadow-depth axis is
+> real at the construction grain, and here it is a *shared* human–model difficulty axis, not a
+> model-specific deficit — consistent with the essay's "the daylight between a phenomenon and its
+> distributional trace" reading (people, too, find the deep contrasts harder). No revision trigger fires
+> against. Absolute accuracy (0.87–0.94) stays a contamination upper bound and carries no weight here.
+
 ## Why the graded gate does *not* rescue a "computes the split" reading
 
 The one place this could seem to break is the accommodation gate's **grading**. The follow-up probe

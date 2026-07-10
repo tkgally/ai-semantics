@@ -1,0 +1,33 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "usage": {
+    "prompt_tokens": 915,
+    "completion_tokens": 501,
+    "total_tokens": 1416,
+    "cost": 0.00294075,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00294075,
+      "upstream_inference_prompt_cost": 0.00068625,
+      "upstream_inference_completions_cost": 0.0022545
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "billed_cost": [
+    0.00294075,
+    1,
+    0
+  ],
+  "error": null,
+  "content": "1. **GO-WITH-CONDITIONS**\n\n2. **Fatal flaw(s):**\n   - **Possible construct leakage in \u201cdepth\u201d stratification.** Your \u201cshallow vs deep\u201d split is not purely structural if the deep bucket mixes **NPI licensing + quantifiers + islands + filler-gap**, which are heterogeneous phenomena with different difficulty and error modes. That does **not** make the probe invalid, but it **does** make R2/R2h interpretation weaker than the label \u201cdepth\u201d suggests. This is a design risk, not a stop-the-run flaw.\n   - **R2/R2h are sensitive to category composition, not just depth.** Because the shallow bucket is only local agreement (plus medium distractor) while deep includes multiple distinct constructions, any mean-gap result can be driven by category mix rather than a true depth effect. Again, not fatal, but it is a real identifiability issue.\n   - **Excluding low-agreement paradigms for data availability can bias human anchoring.** You say they are excluded for 404/data availability rather than value, but if those paradigms are systematically harder, removing them could inflate human-baseline coherence. Since they\u2019re frozen out for access reasons, this is acceptable only if you explicitly treat R1 as a **40-paradigm observed-set** metric, not as \u201cfull on-axis BLiMP.\u201d Otherwise it\u2019s a definitional mismatch.\n\n3. **Biggest residual risk + one freeze condition:**\n   - **Biggest residual risk:** the probe\u2019s conclusions may be dominated by **category-composition effects** and **test-set idiosyncrasies** rather than the intended \u201cshallow vs deep\u201d construct.\n   - **Freeze condition to add:** precommit that **all interpretation of R2/R2h is limited to \u201cthis exact frozen panel\u201d** and not generalized as a universal depth effect; additionally, report **per-category means** alongside the shallow/deep aggregate so readers can see whether one category is carrying the result.\n\n4. **Anti-cheat:**\n   - **None** in the instrument as written. The prompt is neutral, the order-balancing is appropriate, and I do not see any obvious setup aimed at forcing a preferred outcome. The only caveat is that the **panel composition itself** could favor a desired narrative if someone later selectively emphasizes the shallow/deep aggregate over the category breakdown."
+}

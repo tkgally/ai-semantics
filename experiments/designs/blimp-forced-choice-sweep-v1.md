@@ -7,9 +7,8 @@ meaning-senses:
   - human-comparison
   - measurement-epistemic
 status: frozen
-anchor: pending
-contingent-on:
-  - blimp-forced-choice-sweep-design
+anchor: resource/blimp
+contingent-on: []
 created: 2026-07-10
 updated: 2026-07-10
 links:
@@ -46,11 +45,18 @@ value-laden decision is not run in the session that opens it.
 > `resource` link to [`resource/blimp`](../../wiki/base/resources/blimp.md), not a `pending`/`internal`
 > dodge (Gate Q3).
 >
-> **DESIGN — three gates open (Q1 paradigm set + depth axis; Q2 forced-choice elicitation; Q3
-> contamination-scope + anchor). Nothing frozen, nothing run.** Provisional defaults Q1-B / Q2-A / Q3-A,
-> surfaced in [`decisions/open/blimp-forced-choice-sweep-design`](../../wiki/decisions/open/blimp-forced-choice-sweep-design.md).
-> The pre-run critic (fresh agent + one non-Anthropic decorrelation vote) was run s204; its conditions
-> bind the freeze — see *Freeze-time conditions* at the foot.
+> **RATIFIED s205 (2026-07-10, autonomous cross-session adversarial review): Q1-B / Q2-A / Q3-A.**
+> Fresh-agent reviewer (verdict authority) RATIFY-WITH-CONDITIONS + convergent fresh non-Anthropic vote
+> (`gpt-5.4-mini`, $0.0025515); record
+> [`decisions/resolved/blimp-forced-choice-sweep-design`](../../wiki/decisions/resolved/blimp-forced-choice-sweep-design.md)
+> + [`REVIEW-ratify-s205.md`](../runs/2026-07-10-blimp-forced-choice-sweep/REVIEW-ratify-s205.md). The
+> anchor is now earned (`anchor: resource/blimp`, human-comparison — the result page carries the
+> `anchors: resource/blimp` typed link); `contingent-on` cleared. **Q1-B is realized by the maximal
+> defensible whole-category rule** (every paradigm in the on-axis `linguistics_term` categories → **40
+> paradigms**; off-axis categories excluded with structural reasons), which removes all within-stratum
+> curation DoF and makes ρ_prof genuinely powered (n=40). **Added binding condition C8** (below): reading
+> 1 is non-promotable without a training-frequency confound control; absent it, reading 1 runs but is
+> **descriptive/directional only**. Frozen for the run s205 — see the run's `PREREG.md`; F2–F7 + C8 bind.
 
 ---
 
@@ -430,3 +436,22 @@ raised three blockers the vote missed; **F1 is discharged this session**, F2–F
   two half-sweeps if the freeze re-estimate exceeds $2.50** (a hard rule keyed to the re-estimate, not a
   "must consider"); PREREG committed before any model call; independent pre-run critic + one
   non-Anthropic vote at freeze.
+- **C8 (BLOCKER — added s205 ratification; the fresh reviewer's promotion-blocking condition).** The
+  PRIMARY reading-1 verdict (PROFILE-ALIGNED) is **non-promotable to a `claim`** unless a
+  training-frequency confound has been controlled — because non-uniform, human-agreement-correlated
+  contamination (frequent local-agreement constructions being *both* human-easy *and* most-memorized;
+  rare island/scope contrasts *both* human-harder *and* less-memorized) can inflate ρ_prof by a
+  training-frequency artifact **with perfectly healthy across-paradigm variance, which F3 does not
+  catch**. Satisfy C8 by **either** the F7 content-word-swap arm on ≥2 shallow + ≥2 deep paradigms
+  (original-vs-swapped accuracy, pre-registered), **or** a pre-registered corpus-frequency covariate for
+  each construction partialled from ρ_prof — decided and frozen in PREREG before any model call. **Absent
+  either, reading 1 may run and be reported descriptively/directionally only** (exactly the F2 low-n
+  downgrade), and promotion waits on a later session that adds the control. **Symmetric-F2 binding
+  reading:** descriptive-only vs promotable status is fixed at freeze by the achieved-n power calc,
+  applied identically regardless of the observed sign of ρ_prof — so a PROFILE-DIVERGES null is a
+  first-class descriptive null, never a quietly-invoked escape hatch. *(s205 realization: this run
+  defers the C8 control — reading 1 is descriptive/directional + non-promotable-on-this-run; a
+  per-paradigm absolute-accuracy dispersion contamination diagnostic is reported. The verdict-bearing
+  outputs this run are reading 2 (within-panel depth gradient) and reading 2h (human-anchored
+  excess-over-dip); the C8 frequency control is the pre-registered next step for a promotion-prep
+  session.)*

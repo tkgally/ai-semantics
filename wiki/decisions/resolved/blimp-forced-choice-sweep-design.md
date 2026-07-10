@@ -1,25 +1,38 @@
 ---
 id: blimp-forced-choice-sweep-design
 title: "BLiMP forced-choice sweep (A3b) — the value-laden gates: the paradigm set + depth axis (Q1), the forced-choice elicitation + position-bias control (Q2), and the contamination scope + human-comparison anchor declaration (Q3)"
-status: open
+status: resolved
 opened: 2026-07-10
 opened-by: session-204
-resolved:
-resolved-by:
-resolution:
+resolved: 2026-07-10
+resolved-by: autonomous (adversarial review)
+resolution: "ADOPT DEFAULTS — Q1-B (depth-stratified subset, realized at freeze as the maximal defensible whole-category rule: every paradigm in the on-axis linguistics_term categories → 40 paradigms, ≥16 floor cleared with margin, ρ_prof genuinely powered at n=40; off-axis categories excluded with structural reasons) / Q2-A (both-orders position-bias-netted 2AFC) / Q3-A (relative profile + depth gradient load-bearing; absolute accuracy an upper bound; HUMAN-COMPARISON anchor via resource/blimp, NOT internal-contrast-only). Ratified s205 by a fresh-agent adversarial reviewer (verdict authority) + a convergent fresh non-Anthropic decorrelation vote (panel.B, $0.0025515). Added binding freeze condition C8: a PROFILE-ALIGNED (reading 1) verdict is NON-PROMOTABLE to a claim without a training-frequency confound control (the F7 content-word-swap arm on ≥2 shallow + ≥2 deep paradigms, OR a pre-registered corpus-frequency covariate partialled from ρ_prof), frozen in PREREG before any model call; absent it, reading 1 runs but is reported descriptively/directionally only. The vote's mechanical anti-cherry-pick sharpening is satisfied by the whole-category selection rule (no within-stratum hand-picking). F1 discharged s204; F2–F7 + C8 bind the freeze."
 contingent-artifacts:
   - design/blimp-forced-choice-sweep-v1
 ---
 
 # Decision: the value-laden gates of the BLiMP forced-choice sweep (A3b)
 
-> **OPENED — session 204 (2026-07-10). NOT yet eligible** (a decision is never ratifiable in the
-> session that opened it; PROTOCOL §2). Eligible for cross-session adversarial ratification **s205+**.
-> Provisional defaults: **Q1-B / Q2-A / Q3-A**. The contingent artifact is the frozen design
-> [`design/blimp-forced-choice-sweep-v1`](../../../experiments/designs/blimp-forced-choice-sweep-v1.md);
-> until ratified it carries `anchor: pending` naming this decision in `contingent-on:`. Tom's standing
-> override outranks. **Ratification fixes the yardstick, never the result** — if a reviewer is motivated
-> by wanting a particular accuracy outcome, that is the anti-cheat violation; stop.
+> **RESOLVED — session 205 (2026-07-10), autonomous cross-session adversarial review.**
+> **ADOPT DEFAULTS on all three gates: Q1-B / Q2-A / Q3-A.** A fresh-agent adversarial reviewer (verdict
+> authority; independent of the s204 design author) returned **RATIFY-WITH-CONDITIONS**; a **fresh**
+> non-Anthropic decorrelation vote (`panel.B` = `gpt-5.4-mini`, $0.0025515) converged per-gate
+> (Q1-B / Q2-A / Q3-A). Full record:
+> [`REVIEW-ratify-s205.md`](../../../experiments/runs/2026-07-10-blimp-forced-choice-sweep/REVIEW-ratify-s205.md).
+> **Added binding condition C8** (frequency-confound → reading 1 non-promotable without a control; see the
+> resolution field and the design's freeze conditions). The contingent design
+> [`design/blimp-forced-choice-sweep-v1`](../../../experiments/designs/blimp-forced-choice-sweep-v1.md)
+> drops `anchor: pending` → the earned `anchors: resource/blimp` human-comparison declaration and clears
+> `contingent-on:` at freeze. Tom's standing override outranks. **Ratification fixes the yardstick, never
+> the result.**
+>
+> **Realization of Q1-B at freeze (F6-sharp + the vote's mechanical anti-cherry-pick rule).** Rather than
+> hand-pick ~16 paradigms, the freeze takes the maximal defensible subset: **every paradigm in the
+> on-axis `linguistics_term` categories** (determiner–noun agreement; the local + distractor split of
+> subject–verb agreement; NPI licensing; quantifiers; island effects; filler-gap dependency) → **40
+> paradigms**, with off-axis categories (binding, anaphor agreement, argument structure, s-selection,
+> control/raising, irregular forms, ellipsis) excluded for stated structural reasons. This removes
+> within-stratum curation DoF entirely and makes ρ_prof genuinely powered (n=40).
 
 This probe compares the panel's **behavioral forced-choice accuracy** on a selected set of BLiMP
 minimal-pair paradigms against BLiMP's **per-paradigm human agreement** (the load-bearing human anchor,
