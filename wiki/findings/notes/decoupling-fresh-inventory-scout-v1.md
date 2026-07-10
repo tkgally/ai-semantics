@@ -142,6 +142,15 @@ license*).
 feasibility + cross-lingual-competence scout must land first.** Not runnable this session or next
 without that scout.
 
+> **→ The recommended C4 cue-strength scout RAN s202**
+> ([`note/decoupling-within-noun-cue-strength-scout-v1`](decoupling-within-noun-cue-strength-scout-v1.md)).
+> Its measured answer **flips recommendation 2**: a C2-dissociating within-noun pair is **NOT cleanly
+> assemblable**, and the reason corrects this note's own framing — the blocker is not the tail (both C2
+> arms' tail elements exist) but the **head**: instance-hypernymy, nominated below as the fresh C1 head
+> disaligner, is measured **cue-strength-RICH** (2nd-highest of 8 fresh sub-types), so it cannot be the
+> low-cue head both arms need. **Honest pivot → A6.** Read that note's verdict, not the "provisionally
+> favored: within-noun" line below, as the current route standing.
+
 ## Provisional recommendation (for the design session; not ratified here)
 
 1. **Both routes are legitimate natural-experiment forward tests** of C1∧C2; neither is disqualified by
