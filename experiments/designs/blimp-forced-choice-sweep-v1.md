@@ -216,11 +216,14 @@ readings 1 and 2), and cost.
     `sentential_negation_npi_scope`, `existential_there_quantifiers_1`;
   - **deep-structural (islands / long-distance):** `wh_island`, `adjunct_island`,
     `coordinate_structure_constraint_subject_extraction`.
-  Enough spread for a per-model Spearman over ~10 points and a clean shallow-vs-deep stratum contrast;
-  includes the AANN-adjacent family (program relevance); every listed paradigm has a per-paradigm human
-  agreement in `human_validation_summary.csv` (the five examples above are drawn from exactly this set).
-  **The exact final list + the shallow/medium/deep assignment are frozen in PREREG before any model
-  call.** Cost is bounded (§Cost).
+  the ~10 paradigms listed above are the *seed* of the set; **the s204 pre-run critic raised the floor
+  to ≥16 paradigms** (F2) — a per-model Spearman over ~10 points is badly under-powered (at n≈10 a ρ of
+  +0.4 is indistinguishable from 0), so the freeze must expand toward the top of the range / beyond and
+  state the achieved-n power in PREREG, or reading 1 is descriptive-only. Every listed paradigm has a
+  per-paradigm human agreement in the now-committed `human_validation_summary.csv` (the example values
+  above are verbatim from it). **The exact final list (≥16) + the shallow/medium/deep assignment are
+  frozen in PREREG before any model call, by a structural locality rule independent of the
+  human-agreement values (F6).** Cost is bounded (§Cost).
 - **Q1-C — the full 67-paradigm sweep.** Most complete; supports a genuine "BLiMP overall" panel score.
   But ~5.6× the calls of Q1-B, dilutes the depth-axis focus with off-theme categories (binding,
   ellipsis, irregular forms, control/raising), and pushes cost toward / past the prefer-split flag.
@@ -291,16 +294,29 @@ BLiMP per-paradigm human agreement (`total_mean`). ρ_prof(m) = Spearman over th
 - **Reading 1 (verdict-bearing, human-anchored) — PROFILE-ALIGNED** iff ρ_prof(m) is **clearly positive**
   (band frozen at freeze, e.g. > +0.4) on **≥2/3** models. **PROFILE-DIVERGES** iff ρ_prof(m) is
   **near-zero or negative** (e.g. < +0.2) on ≥2/3. The **[+0.2,+0.4] middle band is a pre-registered
-  INCONCLUSIVE** outcome (no uncovered dead-zone; exact bands fixed before any model call).
-- **Reading 2 (verdict-bearing, internal-contrast) — DEPTH-GRADED** iff mean `acc` on the shallow-local
-  stratum **exceeds** the deep (islands + NPI-scope) stratum by a pre-registered margin on ≥2/3 models;
-  **DEPTH-FLAT** iff not. Reported alongside the human depth profile (humans also dip on the deep end —
-  so DEPTH-GRADED is *expected* and its interest is its *size* and whether it exceeds the human dip).
+  INCONCLUSIVE** outcome (no uncovered dead-zone; exact bands fixed before any model call). **Power
+  (F2):** the bands are calibrated to the achieved paradigm-count n at freeze (≥16); if n is too small
+  to distinguish the bands, reading 1 is reported **descriptively with its CI** and is **non-promotable
+  on this run alone**.
+- **Reading 2 (verdict-bearing, STRICTLY within-panel / internal-contrast) — DEPTH-GRADED** iff mean
+  `acc` on the shallow-local stratum **exceeds** the deep (islands + NPI-scope) stratum by a
+  pre-registered margin on ≥2/3 models; **DEPTH-FLAT** iff not. This uses **no human key** — purely the
+  panel's own shallow-vs-deep accuracy gap. Subject to F4 (sub-0.6-agreement paradigms are excluded from
+  the accuracy strata, kept only in reading 1's profile Spearman).
+- **Reading 2h (human-anchored sub-reading, split out per F5) — EXCEEDS-HUMAN-DIP** iff the panel's
+  shallow-minus-deep accuracy gap is **larger** than the human shallow-minus-deep agreement gap on ≥2/3
+  models (the panel finds the deep contrasts *disproportionately* harder than humans do); **TRACKS-DIP**
+  iff comparable. Because it references `H(p)`, this is a **human-comparison** quantity and is reported
+  under the human-anchored umbrella, never under the internal-contrast label (F5).
 - **Pre-named nulls (first-class):** ρ_prof near-zero (panel difficulty structure unrelated to the human
   one); DEPTH-FLAT (the panel is uniformly at ceiling / floor, e.g. contamination saturates every
   paradigm — itself an informative contamination signal); or a **position-bias blowout** (order-flip
   rate so high that consistency accuracy collapses) — pre-registered as an INSTRUMENT-FAILURE outcome
   that voids the accuracy readings and is reported as such, not silently dropped.
+- **Saturation/range guard (F3):** if a model's across-paradigm accuracy **variance is near zero** (all
+  paradigms near ceiling), ρ_prof(m) is computed over near-constant values = noise → reported as
+  **INCONCLUSIVE**, not a coefficient. Per-model absolute-accuracy dispersion is reported as a
+  contamination diagnostic (a frequency-driven pseudo-alignment vs a structural one).
 - **Anti-cheat fence (PROTOCOL §B):** the paradigm list, the stratum assignment, the subsample seed +
   N, the elicitation prompt + both orders, the ρ_prof bands, and the depth-margin threshold are **all
   frozen in `PREREG.md` before any model call**. No band, stratum, or paradigm is added/dropped after
@@ -340,8 +356,10 @@ once the paradigm list + N + orders are fixed.
 
 ## Handoff (what s204 did, and what remains)
 
-1. **s204 (this session):** wrote this design; **verified the per-paradigm human anchor firsthand**
-   (the `human_validation_summary.csv` header + example rows above); opened
+1. **s204 (this session):** wrote this design; **verified AND committed the per-paradigm human anchor**
+   (`experiments/data/blimp/human_validation_summary.csv`, sha256 `ea0e7c21…`) and extended
+   [`resource/blimp`](../../wiki/base/resources/blimp.md) with the per-paradigm profile (discharging the
+   critic's Blocker 1 / F1); opened
    [`decisions/open/blimp-forced-choice-sweep-design`](../../wiki/decisions/open/blimp-forced-choice-sweep-design.md)
    (Q1–Q3, provisional defaults Q1-B / Q2-A / Q3-A); ran the design pre-run critic (fresh agent) + one
    non-Anthropic decorrelation vote (recorded under
@@ -359,5 +377,56 @@ once the paradigm list + N + orders are fixed.
 
 ## Freeze-time conditions (bind the freeze session; from the s204 pre-run review — honor all at freeze)
 
-*(Populated from the s204 fresh-agent critic + non-Anthropic decorrelation vote; see
-[`experiments/runs/2026-07-10-blimp-forced-choice-sweep-design/REVIEW-design-s204.md`](../runs/2026-07-10-blimp-forced-choice-sweep-design/REVIEW-design-s204.md).)*
+From the s204 fresh-agent pre-run critic (verdict authority; **GO-WITH-CONDITIONS**, no NO-GO, no
+fabrication) + the non-Anthropic decorrelation vote (`gpt-5.4-mini`, GO-WITH-CONDITIONS, convergent on
+Q1-B/Q2-A/Q3-A), recorded in
+[`REVIEW-design-s204.md`](../runs/2026-07-10-blimp-forced-choice-sweep-design/REVIEW-design-s204.md) +
+[`VOTE-s204.json`](../runs/2026-07-10-blimp-forced-choice-sweep-design/VOTE-s204.json). The critic
+raised three blockers the vote missed; **F1 is discharged this session**, F2–F7 bind the freeze:
+
+- **F1 (BLOCKER — DISCHARGED s204).** *"The per-paradigm human anchor is not in the repo."* The critic
+  grepped and found the per-paradigm numbers only in this design / the decision / `program.md`, not in
+  `resource/blimp.md` (which carried only the aggregate 96.4%) — so the `anchors: resource/blimp`
+  declaration over-read the resource. **Fixed this session:** `human_validation_summary.csv` fetched +
+  **committed** (`experiments/data/blimp/human_validation_summary.csv`, 3,057 bytes, sha256
+  `ea0e7c21de6b9df2fd8a94d0b175e84ea57627e4cbfa1fcba4ef8b3d0fba1b2d`, 69 rows), and
+  [`resource/blimp`](../../wiki/base/resources/blimp.md) extended with a *"Per-paradigm human agreement"*
+  subsection cataloguing the columns, the 0.47–0.99 range, and every UID this design cites. The anchor
+  is now genuinely in-repo; the Q3-A `anchors: resource/blimp` declaration is *earned* once Q3 ratifies.
+  (The design keeps `anchor: pending` until the Q3 gate ratifies s205+.)
+- **F2 (BLOCKER — power).** The PRIMARY reading is a Spearman over the selected paradigms; at n≈10 a
+  ρ_prof of +0.4 is not distinguishable from 0 (the ~0.05 two-sided threshold at n=10 is ρ≈0.64).
+  **Freeze ≥16 paradigms** across the four strata (or adopt Q1-C, the full 67), and **state the
+  achieved-n power for ρ_prof in PREREG**. If n stays low, reading 1 is **descriptive/directional
+  only** (report ρ with its CI, framed "consistent with alignment/divergence"), **never a decided
+  PROFILE-ALIGNED claim, and non-promotable to a `claim` on this run alone.** *(This raises Q1-B's floor
+  from the "~9–12" first draft to ≥16; the decision page's Q1 carries the condition.)*
+- **F3 (BLOCKER — contamination uniformity).** The "memorization inflates uniformly, so the relative
+  profile is robust" premise is load-bearing and untested; if exposure correlates with human-ease
+  (frequent local-agreement constructions are both human-easy *and* most memorized) it inflates ρ_prof
+  **spuriously**. Pre-register a **saturation/range guard:** if a model's across-paradigm accuracy
+  variance is near zero (all near ceiling), ρ_prof(m) is **INCONCLUSIVE**, not a coefficient. Report
+  per-model absolute-accuracy dispersion as a contamination diagnostic.
+- **F4 (SHOULD-FIX — gold reliability).** Low-human-agreement paradigms have contested gold labels
+  (e.g. `coordinate_structure_constraint_subject_extraction` human 0.514 ≈ chance). Set a
+  **human-agreement floor ≈0.6** for paradigms entering the reading-2 *accuracy* contrast; sub-floor
+  paradigms stay in the reading-1 profile Spearman but are reported **descriptively**, since "accuracy"
+  against a shaky key is not grammatical competence.
+- **F5 (SHOULD-FIX — label integrity; applied in-design this session).** The reading-2 "exceeds the
+  human dip" quantity uses `H(p)`, so it is **not** internal-contrast. Applied above: reading 2 is kept
+  **strictly within-panel** (shallow-vs-deep accuracy gradient, no human baseline), and the
+  "excess-over-the-human-dip" comparison is moved under a **human-anchored sub-reading (2h)** in the
+  verdict map. No human-baselined quantity wears the internal-contrast label.
+- **F6 (panel-vote + critic condition).** Publish the final **selected** paradigms **and the excluded
+  ones with reasons**, plus the paradigm→stratum mapping, in PREREG **before any model call**, decided
+  **solely on syntactic/structural (locality) criteria with no reference to expected model performance
+  or to the human-agreement values** (keeps reading 1 and the depth stratification independent — the
+  vote's load-bearing condition).
+- **F7 (recommended, not blocking).** Add a **bounded content-word-swap contamination arm** on 2–3
+  paradigms (one shallow, one deep) — swap open-class content words from a controlled list, re-check the
+  minimal contrast survives, compare original-vs-swapped accuracy — turning "we assume uniform
+  inflation" into "we checked whether swapping surface strings moves accuracy."
+- Carry the design's own fences: gemini reasoning suppressed/capped; a hard `ABORT_USD`; **split into
+  two half-sweeps if the freeze re-estimate exceeds $2.50** (a hard rule keyed to the re-estimate, not a
+  "must consider"); PREREG committed before any model call; independent pre-run critic + one
+  non-Anthropic vote at freeze.

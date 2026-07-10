@@ -23,8 +23,12 @@ contingent-artifacts:
 
 This probe compares the panel's **behavioral forced-choice accuracy** on a selected set of BLiMP
 minimal-pair paradigms against BLiMP's **per-paradigm human agreement** (the load-bearing human anchor,
-`raw_results/summary/human_validation_summary.csv`; verified firsthand s204 — see the design's
-*Grounding*). Three choices are value-laden and must be fixed by a later session before the freeze.
+now **committed in-repo** — `experiments/data/blimp/human_validation_summary.csv`, sha256 `ea0e7c21…`;
+the per-paradigm profile catalogued in [`resource/blimp`](../../base/resources/blimp.md), discharging
+the s204 critic's Blocker 1 / F1 this session). Three choices are value-laden and must be fixed by a
+later session before the freeze. **The s204 pre-run critic (verdict authority) returned
+GO-WITH-CONDITIONS with the freeze conditions F1–F7 recorded on the design; F1 is discharged, F2–F7
+bind the freeze.**
 
 ## Q1 — the paradigm set + the depth axis
 
@@ -34,14 +38,17 @@ objection; the full sweep removes the objection at the cost of focus and spend.
 
 - **Q1-A — AANN-adjacent agreement family only.** Tightest program link; **no depth spread** (all
   human-easy local agreement), so neither reading is testable. Rejected in the design.
-- **Q1-B (provisional default) — a depth-stratified ~9–12-paradigm set across four strata**
-  (shallow-local determiner–noun / regular subject–verb agreement; medium distractor agreement;
-  deep-scope NPI / quantifier; deep-structural islands / long-distance), each with a published
-  per-paradigm human agreement. Enough spread for a ~10-point per-model profile Spearman and a clean
-  shallow-vs-deep contrast; includes the AANN-adjacent family. **Binding condition:** the exact final
-  paradigm list **and** the shallow/medium/deep stratum assignment are frozen in PREREG by a written,
-  paradigm-agnostic locality rule **before any model call**, and the subset is reported as selected, not
-  exhaustive.
+- **Q1-B (provisional default) — a depth-stratified set across four strata** (shallow-local
+  determiner–noun / regular subject–verb agreement; medium distractor agreement; deep-scope NPI /
+  quantifier; deep-structural islands / long-distance), each with a published per-paradigm human
+  agreement; includes the AANN-adjacent family. **Binding conditions (from the s204 critic):** (i) the
+  set is frozen at **≥16 paradigms** (F2) — the ~9–12 first draft is under-powered for reading 1's
+  per-model Spearman (at n≈10 a ρ of +0.4 is indistinguishable from 0); if n stays low, reading 1 is
+  descriptive-only and non-promotable on the run alone; (ii) the exact final list **and** the stratum
+  assignment are frozen in PREREG **before any model call** by a written locality rule that references
+  **only structural/syntactic criteria, independent of the human-agreement values** (F6, the vote's
+  load-bearing condition), and the excluded paradigms are published with reasons; (iii) the subset is
+  reported as selected, not exhaustive.
 - **Q1-C — the full 67-paradigm sweep.** Supports a genuine "BLiMP overall" score and removes the
   curation objection, but ~5.6× the calls, dilutes the depth focus with off-theme categories, and pushes
   cost toward the prefer-split flag. A reviewer who judges the curated subset too fishing-prone may

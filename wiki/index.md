@@ -139,7 +139,7 @@ Standing references:
 
 ### Base — resources
 
-- [`base/resources/blimp.md`](base/resources/blimp.md) — BLiMP — Benchmark of Linguistic Minimal Pairs for English (Warstadt et al. 2020) · **catalogued** · (2026-06-21)
+- [`base/resources/blimp.md`](base/resources/blimp.md) — BLiMP — Benchmark of Linguistic Minimal Pairs for English (Warstadt et al. 2020) · **catalogued** · (2026-07-10)
 - [`base/resources/clark-wilkes-gibbs-1986-referring.md`](base/resources/clark-wilkes-gibbs-1986-referring.md) — Clark & Wilkes-Gibbs 1986 — Referring as a Collaborative Process (tangram referential-communication study) · **verified** · (2026-06-28)
 - [`base/resources/cooccurrence-corpus-scouting.md`](base/resources/cooccurrence-corpus-scouting.md) — Co-occurrence corpus scouting — license survey for a fetched running-text corpus to compute the A1b contrastive-frame G² control (no co-occurrence data in-repo) · **scouting** · (2026-07-06)
 - [`base/resources/dwug-usage-graphs.md`](base/resources/dwug-usage-graphs.md) — DWUG — Diachronic Word Usage Graphs (Schlechtweg et al. 2021) · **verified** · (2026-07-05)
