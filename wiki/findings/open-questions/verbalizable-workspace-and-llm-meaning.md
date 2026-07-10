@@ -120,3 +120,16 @@ Recorded at Tom's request as a note that the paper exists, what it claims, and w
 touches. The most likely first move, if any, is **philosophical** — an essay weighing the
 mechanistic-vs-behavioral relationship on one of topics 1–3 (the essay bar in [`PROTOCOL.md`](../../../PROTOCOL.md)
 §3 governs whether it is warranted) — not an empirical unit. Until then this stays a flag.
+
+**Update (2026-07-10, s203): that first move was taken for topics 1–3.**
+[`essay/mechanistic-behavioral-firewall`](../essays/mechanistic-behavioral-firewall.md) argues the
+project's own position — the mechanistic–behavioral **firewall** as **mutual non-entailment** (a
+verbalizable-representation finding and a distributional-shadow finding operationalize different
+constructs, so neither confirms nor refutes the other; a firewall, not a hierarchy) — working topics 1
+(the seam from the inside), 2 (working-surface corroboration-of-premise ≠ verdict), and 3 (a mechanistic
+correlate for verbal report *relocates* the project's self-report skepticism, does not soften it). It
+resolves this page's provisional "orthogonal until an essay argues otherwise" posture toward *orthogonal
+by construction*, and registers a falsifiable bridging-law bet ([`predictions.md`](../../predictions.md) §C).
+This page **stays open**: topics 4 (the situating map's model-internal cell — a revision-*input* for its
+next substantive touch) and 5 (the "concept" vocabulary guard, partly folded into the essay's topic-1
+close) remain live, and the essay imports nothing into the behavioral evidence base.
