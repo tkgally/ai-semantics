@@ -145,7 +145,16 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   default: adopt none yet, re-scout licenses; CommitmentBank the strongest target *if* a later
   session verifies its terms — the only candidate covering the antecedent-of-conditional).
   **Ratified s169** (ADOPT-A: adopt none yet; the fresh reviewer reproduced the license null).
-- **A3b `[~]` BLiMP forced-choice sweep.** The resource sits idle: 67k human-validated minimal
+- **A3b `[x]` BLiMP forced-choice sweep — RATIFIED + FROZEN + RUN s205 → [`result/blimp-forced-choice-sweep-v1`](findings/results/blimp-forced-choice-sweep-v1.md).**
+  Gates ratified s205 ([`decisions/resolved/blimp-forced-choice-sweep-design`](decisions/resolved/blimp-forced-choice-sweep-design.md),
+  Q1-B/Q2-A/Q3-A + binding C8), frozen (40 on-axis paradigms by the human-agreement-blind whole-category rule),
+  run (7,200 calls, $1.3349), verifier-REPRODUCED. **R2 DEPTH-GRADED 3/3** (error concentrates on
+  structurally-deep paradigms — a broad grammar-side shadow-depth gradient) — the verdict-bearing,
+  within-panel output; **R1 PROFILE-ALIGNED 3/3** (ρ_prof +0.54–0.63, panel hard where humans are hard) but
+  **descriptive/non-promotable this run per C8** (training-frequency confound control deferred to a
+  promotion-prep session); **R2h TRACKS-DIP 2/3** (the panel's deep-contrast dip ≈ the human dip, not larger).
+  Absolute accuracy 0.87–0.94 = contamination upper bound. Below: the original item text (for the record).
+  *(Original item:)* The resource sits idle: 67k human-validated minimal
   pairs, CC-BY, already cataloged. A selected-paradigm sweep (determiner–noun agreement near
   AANN; NPIs; quantifiers) is cheap and human-agreement-anchored. Design + critic first.
   **[DESIGN landed s204 → [`design/blimp-forced-choice-sweep-v1`](../experiments/designs/blimp-forced-choice-sweep-v1.md):
@@ -156,7 +165,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   panel per-paradigm forced-choice accuracy track the per-paradigm human-agreement profile; (2 SECONDARY,
   within-panel) a shadow-depth gradient — does error concentrate on structurally-deep paradigms
   (islands/NPI-scope) vs locally-detectable ones (adjacent agreement). Three gates opened
-  ([`decisions/open/blimp-forced-choice-sweep-design`](decisions/open/blimp-forced-choice-sweep-design.md),
+  ([`decisions/resolved/blimp-forced-choice-sweep-design`](decisions/resolved/blimp-forced-choice-sweep-design.md),
   provisional defaults Q1-B paradigm set + depth axis / Q2-A 2AFC both-orders position-bias-netted /
   Q3-A relative readings load-bearing + human-comparison anchor). Pre-run critic (fresh agent + one
   non-Anthropic decorrelation vote, `gpt-5.4-mini`, $0.00269775 → **GO-WITH-CONDITIONS**, converging
