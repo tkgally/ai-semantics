@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-07-06
-updated: 2026-07-09
+updated: 2026-07-10
 links:
   - rel: depends-on
     target: result/lexical-relation-shadow-saturation-v1
@@ -39,7 +39,10 @@ links:
 > and the general POS-structural bet registered as a conjecture; revised 2026-07-09 session 199 — the
 > decisive VERB test ran and the cross-POS generalization was FALSIFIED [DECOUPLING-BREAKS 2/3 on verbs,
 > the conjecture retired], the noun reading untouched and now shown noun-specific across both non-noun
-> POS; see the dated revision boxes).** A
+> POS; revised 2026-07-10 session 200 — the reopened "what carries the clean decoupling" question
+> registered as a successor bet: a **relation-inventory-SHAPE** account [`conjecture/decoupling-relation-inventory-shape`](../conjectures/decoupling-relation-inventory-shape.md)
+> [two conditions — a head disaligner AND no aligned tail — not hierarchy-presence], demoting the essay's
+> own taxonomic-structure reading from sufficient to necessary; see the dated revision boxes).** A
 > philosophical-track essay in the project's own voice. It introduces **no new measurement** and makes
 > **no human comparison**: every empirical
 > assertion cites [`result/lexical-relation-shadow-saturation-v1`](../results/lexical-relation-shadow-saturation-v1.md)
@@ -305,6 +308,29 @@ H1 is close to a re-run of s186's clause 2 on fresh material; H2 is the genuine 
 > cause, which carry the break). A finer structural story than "has a hierarchy," which this result does
 > not establish. The H2 troponymy-depth mechanism was pre-registered UNDER-POWERED on verbs (degenerate
 > depth spread) and stays untested there.
+
+> **Revision — 2026-07-10 (s200): the reopened question is now a registered bet — the decoupling is a
+> relation-inventory-SHAPE effect, not a hierarchy-presence effect.** The candidate the s199 box logged
+> ("clean when the inventory has a strongly-recovered low-cue-strength taxonomic relation AND lacks sparse
+> low-recovery/low-cue-strength relations that re-align the tail") is promoted from a candidate note to a
+> falsifiable **conjecture** — [`conjecture/decoupling-relation-inventory-shape`](../conjectures/decoupling-relation-inventory-shape.md),
+> the successor to the retired POS-hierarchy bet. It states a **two-condition** account: the clean
+> decoupling needs both **(C1)** a *head disaligner* — a low-cue-strength but high-recovery relation
+> (taxonomic centrality / hypernymy supplies it, present in **both** nouns and verbs) — **and (C2)** *no
+> aligned tail* — the worst-recovered relations must not also be the lowest-cue-strength ones. The three
+> POS sort cleanly on this: nouns satisfy both (decoupling); adjectives violate C1 (no head disaligner —
+> antonymy is both most-cued and best-recovered); **verbs satisfy C1 but violate C2** (their worst-recovered
+> relations, entailment 0.0051 and cause 0.0106, are their lowest-cue-strength ones — an *aligned* tail that
+> outvotes the still-present hypernymy scramble, per the s199 leave-one-out). The single discriminating
+> feature between nouns' decoupling and verbs' break is thus **the cue-strength of the worst-recovered
+> relations** — anti-aligned/cue-rich in nouns (meronymy 0.028, holonymy 0.026), aligned/cue-poor in verbs
+> — **not** the presence of a hierarchy. This **demotes the essay's own "taxonomic structure predicts
+> recovery" reading from sufficient to merely necessary (C1)**: the head mechanism is real but incomplete,
+> since it operates on verbs where the decoupling is absent. The bet is at explicit risk of unfalsifiable
+> re-description (a post-hoc partition of three scatters), so its confirm/falsify criteria force a
+> *fresh-inventory* test (a within-noun sub-inventory contrast, or the A6 cross-linguistic scout) the
+> current data cannot settle; registered in [`predictions.md`](../../predictions.md). Still
+> `internal-contrast-only`, within-distributional; the nouns-only claim is untouched.
 
 ## What this essay is not
 
