@@ -8,13 +8,13 @@ url-note: "Code + data repo. Mirror dataset also at HuggingFace nyu-mll/blimp (l
 paper: "Warstadt, A., Parrish, A., Liu, H., Mohananey, A., Peng, W., Wang, S.-F., & Bowman, S. R. (2020). BLiMP: The Benchmark of Linguistic Minimal Pairs for English. Transactions of the Association for Computational Linguistics, 8, 377-392."
 venue: "Transactions of the Association for Computational Linguistics (TACL), Volume 8 (2020). https://aclanthology.org/2020.tacl-1.25/"
 license: "CC-BY (the repo README states 'BLiMP is distributed under a CC-BY license' linking creativecommons.org/licenses/by/4.0/; the HuggingFace mirror nyu-mll/blimp lists 'cc-by-4.0'). VERIFIED 2026-06-21. Note: the GitHub repo has no standalone LICENSE *file* in its tree — the license is asserted in the README prose only."
-local-path: "experiments/data/blimp/determiner_noun_agreement_1.sample.jsonl (a SMALL 10-line sample only; the full 67-paradigm dataset is NOT committed — re-fetchable from the repo's data/ directory)"
+local-path: "experiments/data/blimp/determiner_noun_agreement_1.sample.jsonl (a SMALL 10-line sample of one paradigm) AND experiments/data/blimp/human_validation_summary.csv (the FULL per-paradigm human-agreement summary, 3,057 bytes, sha256 ea0e7c21de6b9df2fd8a94d0b175e84ea57627e4cbfa1fcba4ef8b3d0fba1b2d, committed 2026-07-10 s204). The full 67,000-pair dataset itself is NOT committed — re-fetchable from the repo's data/ directory."
 meaning-senses:
   - constructional
   - human-comparison
 contingent-on: []
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-07-10
 links:
   - rel: depends-on
     target: concept/distributional-meaning
@@ -122,7 +122,44 @@ were asked, per item, to pick the acceptable member of the minimal pair, and 96.
 aggregate rate at which their forced choice agreed with the template-assigned `good`/`bad`
 label. The repo also ships "Full human validation judgments" in its `raw_results` folder
 (per the README). The figure functions as a **human ceiling / baseline** against which LM
-forced-choice accuracy is read; the Mahowald-2024 source in this repo cites it that way —
+forced-choice accuracy is read.
+
+#### Per-paradigm human agreement (committed + verified firsthand 2026-07-10, s204)
+
+The aggregate 96.4% is not the only human signal BLiMP ships: the repo's
+`raw_results/summary/human_validation_summary.csv` carries a **per-paradigm** human-agreement rate.
+That file was fetched, inspected, and **committed to this repo** this session
+(`experiments/data/blimp/human_validation_summary.csv`, 3,057 bytes, sha256
+`ea0e7c21de6b9df2fd8a94d0b175e84ea57627e4cbfa1fcba4ef8b3d0fba1b2d`; **69 per-condition rows**). Its
+columns are **`Condition,accepted,total_mean,count`** — `Condition` = the per-paradigm UID; `total_mean`
+= the per-paradigm human agreement rate; `count` ≈ 97–100 human judgments per paradigm. Per-paradigm
+human agreement **ranges from 0.47 to 0.99** across the 69 conditions:
+
+- **Lowest (humans themselves divided):** `wh_questions_object_gap_long_distance` **0.47**,
+  `coordinate_structure_constraint_subject_extraction` **0.514**, `sentential_subject_island` **0.606**,
+  `only_npi_scope` **0.72**, `wh_island` **0.73** — long-distance / island / NPI-scope contrasts.
+- **Highest (near-unanimous):** `transitive` / `left_branch_island_simple_question` /
+  `irregular_past_participle_adjectives` / `anaphor_number_agreement` **0.99**,
+  `wh_questions_subject_gap` **0.98**.
+- **Local agreement (mid-high):** `determiner_noun_agreement_1` **0.958**,
+  `determiner_noun_agreement_with_adjective_1` **0.95**, `regular_plural_subject_verb_agreement_1`
+  **0.95**; distractor agreement **0.81** (`..._relational_noun`) / **0.857** (`..._relative_clause`);
+  `npi_present_1` **0.83**, `sentential_negation_npi_scope` **0.81**, `existential_there_quantifiers_1`
+  **0.94**, `adjunct_island` **0.94** (all values verbatim from the committed CSV).
+
+**What this grounds (and what it does not).** The per-paradigm `total_mean` is a genuine **human
+difficulty profile** across grammatical phenomena — a real human-comparison anchor for "are models hard
+where humans are hard" (the profile the A3b forced-choice sweep design measures against;
+[`design/blimp-forced-choice-sweep-v1`](../../../experiments/designs/blimp-forced-choice-sweep-v1.md)).
+Two honest limits: (i) **it is an agreement rate, not a graded acceptability norm** — `total_mean` is
+the fraction of human validators who endorsed the template's `good`/`bad` label, so a low value
+(e.g. 0.514, near chance) means the **gold label itself is contested**, not that the contrast is
+"hard" in a graded sense — any use of a sub-~0.6-agreement paradigm as a model-accuracy gold must flag
+that the key is shaky; (ii) **the summary has 69 rows, not the paper's 67 paradigms** — the two extra
+`Condition` rows are noted but not reconciled here (use the committed CSV as the operative per-UID
+source, and re-derive counts before quoting a paradigm total).
+
+The Mahowald-2024 source in this repo cites the aggregate figure as a baseline —
 "86% on BLiMP (cf. human baseline of 89%)" in that paper refers to a model's score vs a
 human baseline (note: 89% is the figure that source quotes; the original BLiMP paper's own
 aggregate human-agreement figure is 96.4% — the two numbers come from different
@@ -196,11 +233,15 @@ The limits are sharp and stated so no later session over-reads BLiMP:
   full file 468,642 bytes, 1,000 lines, sha256
   `f48065fd760d0fd1a895012860d38bdf3c2ac115cd221e521684cc430c0f1855`. Its field schema was
   parsed and confirmed firsthand.
-- **In-repo handling (recipe-not-corpus):** only a **10-line sample** is committed —
-  `experiments/data/blimp/determiner_noun_agreement_1.sample.jsonl`, 4,702 bytes, sha256
-  `0a05d83fae0e255f0faf3bd7907596079bf82463f283b98403c2d549c114b6e8`. The full
-  67,000-pair dataset is **not** committed (CC-BY permits redistribution, but it is large
-  and trivially re-fetchable from the repo `data/` directory).
+- **In-repo handling (recipe-not-corpus for the pair data; full summary for the human anchor):**
+  the **minimal-pair data** keeps its recipe-not-corpus posture — only a **10-line sample** is
+  committed (`experiments/data/blimp/determiner_noun_agreement_1.sample.jsonl`, 4,702 bytes, sha256
+  `0a05d83fae0e255f0faf3bd7907596079bf82463f283b98403c2d549c114b6e8`; the full 67,000-pair dataset is
+  **not** committed, CC-BY, trivially re-fetchable from `data/`). The **per-paradigm human-agreement
+  summary is committed in full** (it is a small 3 KB summary, not the corpus, and it is the load-bearing
+  human anchor): `experiments/data/blimp/human_validation_summary.csv`, **3,057 bytes, 69 rows, sha256
+  `ea0e7c21de6b9df2fd8a94d0b175e84ea57627e4cbfa1fcba4ef8b3d0fba1b2d`** (fetched + committed 2026-07-10,
+  s204; CC-BY, attribution to Warstadt et al. 2020).
 
 ## Known limits / scope
 
@@ -225,8 +266,9 @@ The limits are sharp and stated so no later session over-reads BLiMP:
 | Each pair = acceptable vs unacceptable sentence; template-generated | **VERIFIED** | Abstract + fetched file inspection |
 | JSON field schema (sentence_good/bad, field, linguistics_term, UID, pairID, method flags) | **VERIFIED (firsthand)** | Parsed `determiner_noun_agreement_1.jsonl` this session |
 | Human aggregate agreement = 96.4% (forced choice of acceptable member) | **VERIFIED** | TACL abstract |
+| Per-paradigm human agreement (`total_mean`, range 0.47–0.99, 69 rows) | **VERIFIED (firsthand; committed)** | `human_validation_summary.csv` fetched + committed s204, sha256 `ea0e7c21…` |
 | 12 phenomenon categories exist; category names | **VERIFIED (names corroborated by filenames)** | README "12 possible values"; 67 filenames map onto the 12 |
-| Per-category paradigm counts | **NOT RE-DERIVED THIS SESSION** | Stated in the paper; not independently re-verified here |
+| Per-category paradigm counts; 67-vs-69 summary-row discrepancy | **NOT RE-DERIVED / NOT RECONCILED** | Paper states 67; the committed summary CSV has 69 `Condition` rows — flagged, not reconciled |
 | License: CC-BY / cc-by-4.0 | **VERIFIED** | Repo README prose + HF nyu-mll/blimp license field |
 | Standalone LICENSE file in repo tree | **NOT PRESENT** | README-prose assertion only (GitHub tree shows no LICENSE file) |
 | "89% human baseline" (Mahowald 2024) vs 96.4% (BLiMP paper) | **BOTH VERIFIED, DISTINCT** | mahowald-2024-dissociating quote vs BLiMP abstract — different measurements |
