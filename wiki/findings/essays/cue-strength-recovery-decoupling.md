@@ -322,9 +322,11 @@ H1 is close to a re-run of s186's clause 2 on fresh material; H2 is the genuine 
 > antonymy is both most-cued and best-recovered); **verbs satisfy C1 but violate C2** (their worst-recovered
 > relations, entailment 0.0051 and cause 0.0106, are their lowest-cue-strength ones — an *aligned* tail that
 > outvotes the still-present hypernymy scramble, per the s199 leave-one-out). The single discriminating
-> feature between nouns' decoupling and verbs' break is thus **the cue-strength of the worst-recovered
-> relations** — anti-aligned/cue-rich in nouns (meronymy 0.028, holonymy 0.026), aligned/cue-poor in verbs
-> — **not** the presence of a hierarchy. This **demotes the essay's own "taxonomic structure predicts
+> feature between nouns' decoupling and verbs' break is thus **whether the worst-recovered relations sit at
+> the cue-strength floor** — read on the shared frame-G²/C4 scale (s193 nouns, s199 verbs): the noun
+> worst-recovered pair (meronymy 0.019, holonymy 0.031) sits *off* the floor, which the low-cued hypernymy
+> (0.008) and synonymy (0.006) occupy; the verb worst-recovered pair (entailment 0.0051, cause 0.0106) *is*
+> the floor — **not** the presence of a hierarchy. This **demotes the essay's own "taxonomic structure predicts
 > recovery" reading from sufficient to merely necessary (C1)**: the head mechanism is real but incomplete,
 > since it operates on verbs where the decoupling is absent. The bet is at explicit risk of unfalsifiable
 > re-description (a post-hoc partition of three scatters), so its confirm/falsify criteria force a

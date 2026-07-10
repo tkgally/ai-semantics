@@ -85,10 +85,11 @@ dropping hypernymy *raises* it to 0.7–0.9. The break is a **tail** effect, not
 >   ranking. Taxonomic centrality supplies it: **hypernymy** is the head disaligner in *both* nouns and
 >   verbs (low-cue, best-recovered). Adjectives have none — their most-cued relation (antonymy) is *also*
 >   their best-recovered, so the head is aligned.
-> - **(C2) No aligned tail.** The **worst-recovered** relations must **not** also be the
->   **lowest-cue-strength** relations. When the recovery-tail is instead **cue-strength-rich** (an
->   *anti*-aligned tail), it reinforces the decoupling; when the recovery-tail is **cue-strength-poor** (an
->   *aligned* tail), it re-tracks recovery with cue-strength and can outvote the head disaligner.
+> - **(C2) No aligned tail.** The **worst-recovered** relations must **not** sit at the
+>   **cue-strength floor** — must not also be the lowest-cue-strength relations. When the recovery-tail is
+>   instead off the floor (up to a **cue-strength-rich**, *anti*-aligned tail), it reinforces the
+>   decoupling; when the recovery-tail *is* the cue-strength floor (an *aligned* tail), it re-tracks
+>   recovery with cue-strength and can outvote the head disaligner.
 >
 > The clean decoupling appears **iff both C1 and C2 hold**. The retired conjecture captured only C1
 > (via "has a hierarchy"). Verbs satisfy C1 but **violate C2** (their worst-recovered relations,
@@ -99,11 +100,27 @@ dropping hypernymy *raises* it to 0.7–0.9. The break is a **tail** effect, not
 > decouple, and any that violates C2 should not, *regardless of whether it has a hierarchy.*
 
 The single most discriminating feature between the decoupling (nouns) and its break (verbs), given that
-both satisfy C1, is therefore **the cue-strength of the worst-recovered relations**: on nouns the
-worst-recovered relations are **meronymy** (frame-G² **0.028**, the *second*-most-cued of the six) and
-**holonymy** (0.026, third-most-cued) — an anti-aligned, cue-strength-rich tail; on verbs they are
-**entailment** (0.0051) and **cause** (0.0106) — an aligned, cue-strength-poor tail. That flip, not the
-presence or absence of a hierarchy, is where the two POS part.
+both satisfy C1, is therefore **where the worst-recovered relations sit in the cue-strength ordering**.
+Read this on the **same metric and corpus family for both POS** — contrastive-frame **G² on C4** (the
+s193 noun run and the s199 verb run share it) — so the comparison is same-scale, not a mix of summaries:
+
+- **Nouns (s193, frame-G² on C4).** The cue-strength floor is **synonymy (0.006)** and **hypernymy
+  (0.008)** — and hypernymy, at the floor, is the **best**-recovered relation (the C1 head disaligner).
+  The **worst**-recovered relations, **meronymy (0.019)** and **holonymy (0.031)**, sit **off** that floor
+  (mid-pack; holonymy is in fact among the more-cued). So the recovery-tail is **not** the cue-strength
+  floor → **C2 holds**.
+- **Verbs (s199, frame-G² on C4).** The cue-strength floor is **entailment (0.0051)** and **cause
+  (0.0106)** — and those two are the **worst**-recovered relations, while hypernymy (0.0207), just off the
+  floor, is again best-recovered. So the recovery-tail **is** the cue-strength floor → **C2 fails**, and
+  it outvotes the head disaligner (s199 leave-one-out: dropping entailment or cause restores ρ_cue ≈
+  0.10–0.30).
+
+That flip — *does the recovery-tail coincide with the cue-strength floor?* — not the presence or absence of
+a hierarchy, is where the two POS part. (On the earlier s186 noun corpus the same rank fact reads even more
+sharply under that run's **control-𝒮** summary, where meronymy/holonymy are the *second*/third-most-cued of
+the six — an outright anti-aligned tail; but that is a *different* contrastive-frame summary on a different
+corpus, so the load-bearing statement is the **within-POS rank** one above on the shared frame-G²/C4 scale,
+not a same-scale magnitude claim across summaries.)
 
 ## Why this is a real advance over the retired conjecture, not a rename
 
