@@ -194,6 +194,20 @@ s196/s199 precedent for reading a boundary from converging under-powered and pow
   a **C2-*dissociating*** sub-inventory pair is assemblable; within-noun is favored as the lower-cost
   first move (no license, no POS confound), A6 as the higher-freshness license-gated alternative. Route
   not ratified; the design session chooses.
+  **→ C4 cue-strength scout RAN s202** ([`note/decoupling-within-noun-cue-strength-scout-v1`](../notes/decoupling-within-noun-cue-strength-scout-v1.md);
+  $0, no model call): the within-noun route to a *fully-fresh* forward test of C2 is **NOT cleanly
+  constructible** — not for lack of tail material (both C2 arms' tail elements exist: member_meronymy at
+  the cue-strength floor, part_holonymy at the ceiling), but because the fresh inventory lacks a **low-cue
+  C1 head disaligner**: the s201 candidate, **instance-hypernymy**, is measured **cue-strength-rich**
+  (frame-G²/C4 0.031, 2nd-highest of 8; robust across freq-matched + hit@3), the opposite of the predicted
+  low-cue role — so it cannot be the head both arms must share. **Honest pivot → A6** (or a hybrid reusing
+  coarse hypernymy as a non-fresh fixed head). This refines C1: a gold-construction control (in the note)
+  finds coarse hypernymy stays cue-strength-**poor under both** depth-4-closure and direct gold
+  (0.0083 / 0.0056) while instance-hypernymy is cue-**rich** — so *"taxonomic centrality supplies a
+  low-cue head disaligner"* holds for **ordinary** hypernymy but **not** for the *instance* relation: not
+  every IS-A relation is a head disaligner, only the ones whose kind-terms keep little contrastive-frame
+  company. The bet's status is untouched — the scout measures a corpus predictor, not recovery, and
+  confirms/weakens nothing.
 - **Necessity of C1 rests on two POS; C2 rests on the nouns-vs-verbs flip.** "Adjectives lack a head
   disaligner" and "verbs' tail is cue-strength-poor" are each single-inventory facts; a second adjective- or
   verb-family inventory could complicate them. The retired conjecture's warning against reading a 2–3-point
