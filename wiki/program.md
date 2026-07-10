@@ -145,9 +145,24 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   default: adopt none yet, re-scout licenses; CommitmentBank the strongest target *if* a later
   session verifies its terms — the only candidate covering the antecedent-of-conditional).
   **Ratified s169** (ADOPT-A: adopt none yet; the fresh reviewer reproduced the license null).
-- **A3b `[ ]` BLiMP forced-choice sweep.** The resource sits idle: 67k human-validated minimal
+- **A3b `[~]` BLiMP forced-choice sweep.** The resource sits idle: 67k human-validated minimal
   pairs, CC-BY, already cataloged. A selected-paradigm sweep (determiner–noun agreement near
   AANN; NPIs; quantifiers) is cheap and human-agreement-anchored. Design + critic first.
+  **[DESIGN landed s204 → [`design/blimp-forced-choice-sweep-v1`](../experiments/designs/blimp-forced-choice-sweep-v1.md):
+  a depth-stratified, HUMAN-agreement-anchored behavioral forced-choice sweep — the distinguishing
+  feature is a **genuine human-comparison** line (the per-paradigm human agreement in BLiMP's
+  `human_validation_summary.csv`, verified firsthand s204: per-paradigm `total_mean` ~0.47–0.99), NOT
+  internal-contrast-only. Two readings: (1 PRIMARY, human-anchored) per-model profile alignment — does
+  panel per-paradigm forced-choice accuracy track the per-paradigm human-agreement profile; (2 SECONDARY,
+  within-panel) a shadow-depth gradient — does error concentrate on structurally-deep paradigms
+  (islands/NPI-scope) vs locally-detectable ones (adjacent agreement). Three gates opened
+  ([`decisions/open/blimp-forced-choice-sweep-design`](decisions/open/blimp-forced-choice-sweep-design.md),
+  provisional defaults Q1-B paradigm set + depth axis / Q2-A 2AFC both-orders position-bias-netted /
+  Q3-A relative readings load-bearing + human-comparison anchor). Pre-run critic (fresh agent + one
+  non-Anthropic decorrelation vote, `gpt-5.4-mini`, $0.00269775 → **GO-WITH-CONDITIONS**, converging
+  Q1-B/Q2-A/Q3-A; load-bearing condition: lock the paradigm-selection + stratum-assignment rule ex ante
+  on **structural criteria only**, independent of the human-agreement values). **Ratifiable s205+; freeze
+  + run after ratification.** Item stays `[~]` until the run.]**
 - **A3c `[ ]` Lancaster norms $0 re-analysis.** Cross sensorimotor strength with the existing
   lexical results — flagged by the base survey as available without an API call. **[Scope note,
   s183: a moderated re-analysis against the v1 sense-gradience result already ran 2026-05-30 —
