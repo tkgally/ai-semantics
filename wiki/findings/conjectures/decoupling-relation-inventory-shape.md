@@ -186,6 +186,14 @@ s196/s199 precedent for reading a boundary from converging under-powered and pow
   the natural first move is a **within-noun sub-inventory** contrast (no POS confound) or the **A6
   cross-linguistic** scout, each needing its own frozen design, pre-run critic, and cross-session
   ratification before any spend.
+  **→ Feasibility scouted s201** ([`note/decoupling-fresh-inventory-scout-v1`](../notes/decoupling-fresh-inventory-scout-v1.md)):
+  both routes are legitimate **natural-experiment** forward tests (recovery is *observed* for either, so
+  "recovery isn't designable a priori" disqualifies neither); raw material is abundant, including a
+  fresh, **un-probed** candidate head disaligner (`instance-hypernymy`). The binding step for the
+  within-noun route is a **$0-to-modest C4 cue-strength scout** of the fresh sub-types, to learn whether
+  a **C2-*dissociating*** sub-inventory pair is assemblable; within-noun is favored as the lower-cost
+  first move (no license, no POS confound), A6 as the higher-freshness license-gated alternative. Route
+  not ratified; the design session chooses.
 - **Necessity of C1 rests on two POS; C2 rests on the nouns-vs-verbs flip.** "Adjectives lack a head
   disaligner" and "verbs' tail is cue-strength-poor" are each single-inventory facts; a second adjective- or
   verb-family inventory could complicate them. The retired conjecture's warning against reading a 2–3-point
