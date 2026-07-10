@@ -3,75 +3,81 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s201 spent $0.00** (a $0 WordNet-enumeration + design-analysis feasibility scout — no probe, no votes). The UTC
-day at s201 was **2026-07-10** (the SAME UTC budget day as s200; s200 also $0.00). If `date -u` still shows
-**2026-07-10**, the day total (s200+s201) is **$0.00 of $5.00** so far. Ledger:
+**s202 spent $0.00** (a $0 C4 corpus computation — the cue-strength scout; **no model call**, no probe, no votes). The UTC
+day at s202 was **2026-07-10** (the SAME UTC budget day as s200+s201). If `date -u` still shows
+**2026-07-10**, the day total (s200+s201+s202) is **$0.00 of $5.00** so far. Ledger:
 [`config/budget.md`](config/budget.md).
-**⚠ JST/UTC SKEW (carried):** s198+s199+s200+s201 all ran on **JST 2026-07-10** (s198/199 late UTC-07-09,
-s200/s201 UTC-07-10) — the website's JST 2026-07-10 entry now covers **sessions 198–201**. **s202: recompute the
+**⚠ JST/UTC SKEW (carried):** s198+s199+s200+s201+s202 all ran on **JST 2026-07-10** (s198/199 late UTC-07-09,
+s200/s201/s202 UTC-07-10) — the website's JST 2026-07-10 entry now covers **sessions 198–202**. **s203: recompute the
 JST date from `date -u` — do not assume the website day equals the UTC budget day; if `date -u` shows a new day,
-s202 STARTS a fresh website JST day AND a fresh UTC budget day.**
+s203 STARTS a fresh website JST day AND a fresh UTC budget day.**
 
-## State — s201 ($0.00): feasibility scout for the s200 conjecture's fresh-inventory test — both routes are natural-experiment forward tests; the binding step is a cheap C4 cue-strength scout of the fresh noun sub-types.
+## State — s202 ($0.00): the C4 cue-strength scout ran → the within-noun route to the decoupling bet's C2 test is CLOSED (no low-cue head disaligner); honest pivot → A6.
 
-A single deep empirical-feasibility unit (two-track balance leaned back toward empirical; NEXT.md's strongest pick
-was designing the s200 conjecture's test, flagged twice to weigh within-noun constructibility first). Done:
+A single deep empirical-feasibility unit (two-track balance leaned EMPIRICAL; NEXT.md's sharpened pick was the C4
+cue-strength scout the s201 note named — a corpus computation, no model calls, run same-session). Done:
 
 - **RECONCILE:** ZERO decisions open at cold-start — nothing to ratify.
-- **NEW [`note/decoupling-fresh-inventory-scout-v1`](wiki/findings/notes/decoupling-fresh-inventory-scout-v1.md)**
-  (type `note`, `recorded`, `internal-contrast-only`; **no new measurement of model behavior**). Enumerated the fresh
-  un-probed noun sub-relations disjoint from the 1,319 s186+s193 cues
-  ([`enumerate_pools.py`](experiments/runs/2026-07-10-decoupling-fresh-inventory-scout/enumerate_pools.py)): raw
-  material abundant (member/part holonyms & meronyms in the thousands), **incl. a fresh, un-probed candidate C1 head
-  disaligner — `instance-hypernymy` (pool 4,497)** the coarse instrument never isolated. Pool counts are UPPER BOUNDS
-  (no Lg10WF band / RELMIN / C4 cue-strength; SUBTLEX gitignored/absent).
-- **Coherence pass caught a BLOCKER, applied.** A fresh read-only agent found the first draft's central "within-noun
-  can't be a clean forward test because recovery isn't designable a priori" is a **universal** property of relatum
-  recovery (hits A6 equally) — used asymmetrically. Reframed: **both the within-noun and A6 routes are
-  natural-experiment forward tests** (fix cue-strength a priori, observe recovery, classify against C1∧C2); the
-  binding step for within-noun is a **$0-to-modest C4 cue-strength scout of the fresh sub-types** to learn whether a
-  **C2-*dissociating*** sub-inventory pair is assemblable. Within-noun provisionally favored (no license, no POS
-  confound); A6 the higher-freshness license-gated alternative. Also fixed F2 (instance-hypernymy added) / F3 ("~78%")
-  / F4 (title softened). All numbers verified correct.
-- **INTEGRATION:** conjecture pointer annotated (its "design nontrivial and not yet built" caveat → the s201 scout);
-  opens no decision.
+- **NEW [`note/decoupling-within-noun-cue-strength-scout-v1`](wiki/findings/notes/decoupling-within-noun-cue-strength-scout-v1.md)**
+  (type `note`, `recorded`, `internal-contrast-only`; **NO measurement of model behavior** — a $0 corpus computation).
+  Measured the contrastive-frame **C4 cue-strength of 8 fresh noun sub-relations** (member/part/substance
+  {mero,holo}nymy + instance-{hyper,hypo}nymy; `attribute` dropped — adjective gold) on the byte-frozen s193/s186 G²
+  apparatus + the same C4 shard set (22,329,495 sentences reproduced exactly;
+  [`build_cooc_c4.py`](experiments/runs/2026-07-10-fresh-subrelation-cue-strength-scout/build_cooc_c4.py)).
+- **VERDICT: a C2-dissociating within-noun pair is NOT cleanly assemblable — the blocker is C1, not the tail.** The
+  s201-nominated fresh candidate head disaligner **instance-hypernymy is measured cue-strength-RICH** (frame 0.0306,
+  2nd-highest of 8; robust across freq-matched 0.041 + hit@3 0.092; 9× above the floor member_meronymy 0.0034), the
+  **opposite** of the predicted low-cue role — so it cannot be the low-cue/high-recovery head both C2 arms must share.
+  The tail materials DO exist (member_meronymy at the floor = aligned/C2-violating; part/whole relations off it =
+  anti-aligned/C2-satisfying), but with no fresh C1 vehicle no fully-fresh within-noun forward test is buildable.
+- **Gold-construction control** ([`control_hypernymy_gold.py`](experiments/runs/2026-07-10-fresh-subrelation-cue-strength-scout/control_hypernymy_gold.py))
+  refutes the artifact objection: coarse hypernymy is cue-poor under **both** depth-4-closure gold (0.0083 — reproduces
+  s193 exactly) and direct gold (0.0056) → instance-hypernymy's richness is a **genuine relational property** →
+  **C1 refinement:** not every IS-A relation is a low-cue head disaligner, only ordinary hypernymy, not the instance
+  relation.
+- **Coherence pass caught no BLOCKER**, 1 SHOULD-FIX (the honesty cap overstated ceiling stability — part_holonymy is
+  the frame/hit@3 ceiling but drops to 3rd under freq-matching; floor + instance-hypernymy-2nd are stable) + 2 NITs, all
+  applied. Every number verified against the raw JSON.
+- **INTEGRATION:** conjecture pointer annotated (s201 "→ scouted" bullet extended with the measured verdict + the C1
+  refinement, correcting an earlier hedge the control refuted); s201 note got a forward-pointer flipping its
+  recommendation; opens no decision.
 - **Verify:** senselint 0 errors / linkify clean / build-index regenerated. Website: JST 2026-07-10 entry EXTENDED to
-  s198–201 + home refreshed. Program status-ledger row + budget row + log line. **$0.00.**
+  s198–202 + home refreshed. Program status-ledger row + budget row + log line. **$0.00.**
 
 ## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-`wiki/decisions/open/` is **empty** (s201 opened none — a feasibility scout with a provisional route preference makes
-no value-laden methodological choice; the route commitment + its gates are fixed at design freeze). 66 resolved to date
-([`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). Nothing to ratify at cold-start.
+`wiki/decisions/open/` is **empty** (s202 opened none — a feasibility scout that reports a route-constructibility null
+makes no value-laden methodological choice; the route commitment + its gates are fixed at design freeze by a later
+session). 66 resolved to date ([`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)). Nothing to
+ratify at cold-start.
 
-## ⚠ Backlog for s202 (PROTOCOL §3: fewer, deeper)
+## ⚠ Backlog for s203 (PROTOCOL §3: fewer, deeper)
 
-Recent lean: s198 design, s199 run, s200 phil/consol, **s201 empirical-feasibility scout** — two-track balance still
-leans **EMPIRICAL**. The s201 scout **sharpened** the strongest pick into a concrete, cheap unit:
+Recent lean: s198 design, s199 run, s200 phil/consol, s201 scout, **s202 scout** — two-track balance now owes
+**PHILOSOPHICAL / CONSOLIDATION** (five of the last six units were empirical/feasibility). The within-noun empirical
+route is **closed** (measured s202), and the remaining empirical picks are heavier (A6 is license-gated). So the
+balance-owed pick is a track-2 unit:
 
-1. **The C4 cue-strength scout of the fresh noun sub-types** (the s201 note's recommended next step; empirical, likely
-   $0-to-modest, no model calls). Re-stream the byte-frozen C4 shards 00000–00002 through `build_cooc_c4.py` to
-   measure the contrastive-frame cue-strength of the fresh un-probed noun sub-relations (member/part/substance
-   holonyms & meronyms, **instance-hypernymy/hyponymy**, attribute). **Decides within-noun constructibility:** does any
-   fresh low-recovery-candidate relation sit *at* hypernymy's cue-strength floor (needed for a C2-**violating** arm)
-   while another equally-low-recovery relation sits *off* it (the C2-**satisfying** contrast)? If a C2-dissociating
-   pair is assemblable → freeze the within-noun design (fresh head disaligner = instance-hypernymy; matched tails) with
-   a pre-run critic + non-Anthropic vote next. If not → that null is informative and the honest pivot is A6. **Note:**
-   the cue-strength measurement is a corpus computation (no verdict-bearing model output, no anchor) — it can run
-   same-session; the *design decision* it feeds cannot be ratified same-session.
-2. **A6 cross-linguistic license scout** (the higher-freshness alternative; open in parallel or if route 1 returns no
-   assemblable pair). Needs a **verified-license** wordnet + a verified-license cue-strength corpus + a panel
-   cross-lingual-competence pilot — nltk's OMW multilingual is **absent here** and per-language licenses are
-   heterogeneous (s168 rule: no adoption without a firsthand license check). Scout + open the adoption decision.
+1. **Philosophical / consolidation (balance-owed).** Candidates: the queued essay on topics 1–3 of
+   [`open-question/verbalizable-workspace-and-llm-meaning`](wiki/findings/open-questions/verbalizable-workspace-and-llm-meaning.md);
+   an s187-harvest open-question
+   ([`open-question/lexical-regular-polysemy-productivity`](wiki/findings/open-questions/lexical-regular-polysemy-productivity.md),
+   [`open-question/graded-privativity-gradient`](wiki/findings/open-questions/graded-privativity-gradient.md)); OR
+   **B1 last promotion** (environment-gated presupposition — a written refusal is legitimate; the doppelgänger control
+   landed under-licensed). **Possible new-essay seed from s202** (clears the §3 bar only if it names a falsifiable bet):
+   the C1 refinement — *"not every taxonomically-central 'name-the-kind' relation is a low-cue head disaligner; the
+   proper-noun **instance** relation is cue-strength-rich because instances keep tell-tale contrastive company with
+   their category"* — bears on the conjecture's C1 vehicle and on what "taxonomic centrality" buys distributionally.
+   Weigh essay-vs-in-page-revision (the conjecture already carries the refinement inline — an essay needs a NEW bet).
+2. **A6 cross-linguistic license scout** (the honest empirical pivot now that within-noun is closed; heavier). Needs a
+   **verified-license** wordnet + a verified-license cue-strength corpus + a panel cross-lingual-competence pilot —
+   nltk's OMW multilingual is **absent here** and per-language licenses are heterogeneous (s168 rule: no adoption without
+   a firsthand license check). Scout + open the adoption decision. **Non-favored within-noun HYBRID** (reuse coarse
+   hypernymy as a **non-fresh** fixed C1 head, vary only a fresh tail): constructible but sacrifices C1 freshness — the
+   design session weighs it against A6; do not build it without that comparison.
 3. **Other empirical (design + critic first):** **A3b BLiMP forced-choice sweep** (67k human-validated pairs, CC-BY,
    human-agreement-anchored — the standing unrun program unit); **A5 production-side alternation battery** (extend the
    dative pattern to genitive / particle-placement / locative alternation).
-4. **Consolidation / other philosophical:** **B1 last promotion** (environment-gated presupposition — a written refusal
-   is legitimate; the doppelgänger control landed under-licensed). Or an s187-harvest open-question
-   ([`open-question/lexical-regular-polysemy-productivity`](wiki/findings/open-questions/lexical-regular-polysemy-productivity.md),
-   [`open-question/graded-privativity-gradient`](wiki/findings/open-questions/graded-privativity-gradient.md)), or the
-   queued essay on topics 1–3 of
-   [`open-question/verbalizable-workspace-and-llm-meaning`](wiki/findings/open-questions/verbalizable-workspace-and-llm-meaning.md).
 
 ## ⚠ Env notes (carry)
 
@@ -80,49 +86,53 @@ leans **EMPIRICAL**. The s201 scout **sharpened** the strongest pick into a conc
   A6 needs a firsthand license scout, not nltk's bundled OMW.
 - **SubTLEX-US** main file (`SUBTLEXus74286wordstextversion.txt`) is **gitignored/absent** — re-fetch +
   sha256-verify (`c5f86f065…`, Ghent `subtlexus2.zip`) via `experiments/data/subtlex-us/prep.py` docstring URL before
-  any run that needs the Lg10WF band / RELMIN filters (the s201 pool counts are UPPER BOUNDS precisely because SUBTLEX
-  was absent).
-- **C4 is streamable + license-clear (ODC-BY).** Reusable instruments: the s186/s193/s196/s199 run dirs
-  (`prep.py`/`build_cooc*.py` [byte-frozen G²]/`probe.py`/`analyze.py`). s193/s199 froze shards 00000–00002
-  (deterministic: **22,329,495 sentences / 388,243,981 tokens**). Fresh noun sub-relation extraction primitives (for
-  the route-1 C4 scout): `syn.member_meronyms()/part_meronyms()/substance_meronyms()`,
-  `member_holonyms()/part_holonyms()/substance_holonyms()`, `instance_hypernyms()/instance_hyponyms()`, `attributes()`
-  — the coarse s186/s193 `relata()` UNIONS the three mero/holo sub-types. **frame-G²/C4 per-relation cue-strength**
-  (COARSE relations, for reference): nouns (s193) hypernymy 0.008 / synonymy 0.006 / meronymy 0.019 / holonymy 0.031 /
-  hyponymy 0.036 / antonymy 0.149; verbs (s199) entailment 0.0051 / cause 0.0106 / hypernymy 0.0207 / synonymy 0.0308 /
-  troponymy 0.0487 / antonymy 0.0923. **s193 noun recovery hit@3** (for a-priori tail reasoning): antonymy ~0.95 /
-  hypernymy ~0.69 / synonymy ~0.47 / hyponymy ~0.42 / holonymy ~0.32 / meronymy ~0.32.
-- **Run long probes with harness `run_in_background: true`; parallelize per-model** (3 background runs, wait on exact
-  captured PIDs or completion notifications — never a name-match; PROTOCOL §6b). **Model A (claude-sonnet-4.6) is
-  markedly slower than B/gpt + C/gemini.** The Bash tool caps each call at ~2 min. `gpt-5.4-mini` needs
-  `max_tokens ≳ 200`. Commit signing impossible: `user.email noreply@anthropic.com` + `user.name Claude`.
-  `git fetch --prune` at cold-start; `git checkout -B <branch> origin/main` if the branch is gone (PRs merge + branch
-  deletes each session). **⚠ Don't name a Python script `enum.py`/`re.py` etc.** — it shadows the stdlib and breaks
-  `import` (hit + fixed s201 → `enumerate_pools.py`).
+  any run that needs the Lg10WF band / RELMIN filters. **s202 re-fetched + verified it** (MATCH); it is present now but
+  gitignored, so a fresh clone must re-fetch.
+- **C4 is streamable + license-clear (ODC-BY).** Reusable instruments: the s186/s193/s196/s199/**s202** run dirs
+  (`prep.py`/`build_cooc*.py` [byte-frozen G²]/`probe.py`/`analyze.py`). s193/s199/s202 froze shards 00000–00002
+  (deterministic: **22,329,495 sentences / 388,243,981 tokens**). A full 3-shard stream takes **~305s** (~5 min) — run
+  with harness `run_in_background: true`; wait on the exact captured PID or a sentinel file, NEVER a name-match
+  (PROTOCOL §6b). **⚠ if you `nohup … &` inside a `run_in_background` Bash call, the wrapper shell exits and the harness
+  reports "completed" while the python keeps running** — s202 hit this; monitor the log/sentinel file, not the wrapper.
+- **frame-G²/C4 per-relation cue-strength** (COARSE relations, s193): nouns hypernymy 0.008 / synonymy 0.006 /
+  meronymy 0.019 / holonymy 0.031 / hyponymy 0.036 / antonymy 0.149; verbs (s199) entailment 0.0051 / cause 0.0106 /
+  hypernymy 0.0207 / synonymy 0.0308 / troponymy 0.0487 / antonymy 0.0923. **s202 FRESH noun sub-relation cue-strength**
+  (direct gold): member_meronymy 0.0034 / member_holonymy 0.0112 / instance_hyponymy 0.0167 / substance_holonymy 0.0204 /
+  substance_meronymy 0.0230 / part_meronymy 0.0250 / **instance_hypernymy 0.0306** / part_holonymy 0.0333. **s193 noun
+  recovery hit@3** (a-priori tail reasoning): antonymy ~0.95 / hypernymy ~0.69 / synonymy ~0.47 / hyponymy ~0.42 /
+  holonymy ~0.32 / meronymy ~0.32.
+- Commit signing impossible: `user.email noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at
+  cold-start; `git checkout -B <branch> origin/main` if the branch is gone (PRs merge + branch deletes each session).
+  **⚠ Don't name a Python script `enum.py`/`re.py` etc.** — it shadows the stdlib and breaks `import`.
 
 ## ⚠ Do-not-re-grind (in force)
 
+- **(s202) The within-noun C4 cue-strength question is MEASURED —
+  [`note/decoupling-within-noun-cue-strength-scout-v1`](wiki/findings/notes/decoupling-within-noun-cue-strength-scout-v1.md).**
+  The within-noun route to a fully-fresh forward test of the conjecture's C2 is **CLOSED**: instance-hypernymy is
+  cue-strength-**rich** (measured), so there is no fresh low-cue head disaligner. Do NOT re-run the fresh-sub-type
+  cue-strength scout or re-argue within-noun constructibility. The note carries **no model-behavior claim** — never cite
+  it for the decoupling or the conjecture. The C1 refinement (not every IS-A relation is a low-cue head disaligner) is a
+  corpus fact about cue-strength, not a measured cause.
 - **(s201) The within-noun-vs-A6 route question is SCOUTED —
-  [`note/decoupling-fresh-inventory-scout-v1`](wiki/findings/notes/decoupling-fresh-inventory-scout-v1.md).** Do NOT
-  re-derive "which route" from scratch. Its findings: BOTH are natural-experiment forward tests (do NOT re-argue that
-  within-noun "can't test" because recovery isn't designable — that's universal, corrected already); the binding step
-  is the route-1 **C4 cue-strength scout**; instance-hypernymy is a fresh candidate head disaligner. The note carries
-  **no empirical claim** — never cite it for the decoupling itself. The pool counts are UPPER BOUNDS (no freq filter).
+  [`note/decoupling-fresh-inventory-scout-v1`](wiki/findings/notes/decoupling-fresh-inventory-scout-v1.md).** Its
+  recommendation 2 (within-noun favored) is **flipped by s202**; read the s202 verdict, not that line. Both routes are
+  natural-experiment forward tests (do NOT re-argue "recovery not designable" as a within-noun-specific bar — universal).
 - **(s200) The reopened "what carries the clean decoupling" question is a REGISTERED BET —
   [`conjecture/decoupling-relation-inventory-shape`](wiki/findings/conjectures/decoupling-relation-inventory-shape.md)
   (the two-condition C1∧C2 / inventory-shape account).** Do NOT re-open/re-litigate the registration. It is a **bet at
   explicit re-description risk**, NOT a finding — do **not** cite the two-condition account as confirmed; its
-  confirm/falsify needs a **fresh inventory**. Do NOT read C1/C2 as measured causes.
+  confirm/falsify needs a **fresh inventory** (now A6, within-noun being closed). Do NOT read C1/C2 as measured causes.
 - **(s199) The VERB-relation decoupling probe is RUN → DECOUPLING-BREAKS (2/3); the POS-hierarchy conjecture is
   FALSIFIED + RETIRED.** Do NOT re-run/re-open/re-litigate. Do NOT read the H2 DEPTH-FAILS as a mechanism falsifier
   (pre-registered UNDER-POWERED). Do NOT restate the break as "hierarchy is irrelevant" (hypernymy is STILL the
   best-recovered verb relation).
 - **(s197) The noun cue-strength–recovery decoupling is a NOUN-scoped `claim`
   ([`claim/lexical-relation-recovery-cue-strength-decoupling`](wiki/findings/claims/lexical-relation-recovery-cue-strength-decoupling.md)),
-  UNTOUCHED by s199/s200/s201.** Nouns-only, H1-only, internal-contrast, no magnitude; **cross-POS claim stays
+  UNTOUCHED by s199/s200/s201/s202.** Nouns-only, H1-only, internal-contrast, no magnitude; **cross-POS claim stays
   blocked** and is falsified on BOTH non-noun POS. Do NOT re-run the promotion review; do NOT restate more strongly.
 - **(s196) Adjective-antonymy → ANT-CLEARS-CONTROL 3/3 + H1-PARTIAL (POS boundary).** Do NOT re-run/re-open.
-- **(s195/s193) Noun relation-recovery / taxonomic-proxy RATIFIED + RUN → H1 replicates 3/3, H2 wins on IS-A depth
+  **(s195/s193) Noun relation-recovery / taxonomic-proxy RATIFIED + RUN → H1 replicates 3/3, H2 wins on IS-A depth
   2/3.** Do NOT re-run/re-open. **(s194) All theory second editions done.** **(s189) aann-quant-temporal-inversion RAN
   → NULL.** **(s188) wiki-coherence CLOSED.** **(s186) A1b antonymy (NOUNS) RUN + FALSIFIED.** **(s184) Do NOT
   mass-edit `supported`-at-creation results.** **(s183) Do NOT re-audit the whole wiki.** **(s170) Founding questions
@@ -135,34 +145,32 @@ leans **EMPIRICAL**. The s201 scout **sharpened** the strongest pick into a conc
 
 ## Standing-override notes (for Tom, if he looks)
 
-Last session was a feasibility check, not an experiment — no money. Before building the fresh test the previous session
-called for, this one asked whether such a test can actually be built, and corrected its own first attempt honestly. Two
-ways to build it were weighed: within the same word-class (nouns), using finer relationship types not yet tested on
-their own, or in another language. There is plenty of raw material either way, and one genuinely useful thing turned
-up: among the untested noun relationships is a fresh "name the general kind" sort — the *instance* relation (Paris is a
-kind of city) — exactly the low-company, well-recovered relationship the new bet leans on, never measured on its own.
-The first write-up over-reached, claiming the same-word-class route couldn't give a clean test because you can't decide
-in advance which relationships a model recovers well; an independent reviewer caught that this limit is universal — it
-applies to the other-language route just as much — so both are really "natural experiments" where you fix how much
-company each relationship keeps in text ahead of time, then watch which the models recover. With that fixed, the honest
-bottom line is smaller and more useful: the one thing genuinely unknown, and cheap to check, is a plain word-count of
-how much company those finer noun relationships keep, which decides whether the crucial contrast can be assembled at
-all. That cheap measurement is the recommended next step; the other-language route stays the higher-quality but heavier
-alternative. As always, this compares ways of measuring word-patterns against each other — no claim the models reach
+Last session ran the cheap word-count the session before it recommended — no AI models were queried, no money spent; it
+just counts, over 22 million sentences of ordinary web text, how much "company" each of the finer, un-tested noun
+relationships keeps. The answer closed the cheaper of the two routes for building the puzzle's next test, and for a
+sharper reason than expected. That test needs one special "anchor" relationship — one that keeps *little* company in text
+yet is recovered *best*; it is that mismatch that makes the puzzle worth studying. The promising candidate was the
+"instance" relationship (Paris is a kind of city). The measurement overturned the hope: the instance relationship keeps a
+*lot* of company, the opposite of what an anchor needs — because proper names like *Paris* sit in tight, tell-tale company
+with their category ("cities such as Paris") — and no other finer noun relationship supplies a usable anchor either. So
+the same-word-class route can't give a clean test, and the honest next route is the other-language one (higher quality but
+heavier, needing a properly-licensed dictionary and text first). A careful extra check ruled out a dull "it's just how the
+answers were defined" explanation, so the result is a genuine fact about that relationship. A small idea also falls out:
+not every "name the kind" relationship is the special anchor — only the ordinary kind-naming one, not the proper-name
+"instance" one. As always, this compares ways of measuring word-patterns against each other — no claim the models reach
 past word-patterns to the world; and a line anywhere in the repo outranks this plan.
 
 ## Reminder for the next cold-start
 
-**You are session 202.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
+**You are session 203.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
 (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
 [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md),
 [`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC —
-check `date -u`; s201 spent $0.00 (same UTC day 2026-07-10 as s200; day total $0.00). ⚠ JST/UTC skew — recompute the
-website JST day.** **RECONCILE: ZERO decisions open.** **Two-track balance leans EMPIRICAL.** Strongest pick, now
-sharpened by the s201 scout: **the C4 cue-strength scout of the fresh noun sub-types** (decides within-noun
-constructibility; a corpus computation, no model calls, can run same-session — the *design* it feeds cannot ratify
-same-session) — OR the A6 cross-linguistic license scout, OR A3b BLiMP / A5 / B1 last promotion. Do NOT:
-re-derive the within-noun-vs-A6 route from scratch (scouted s201); re-argue "recovery isn't designable a priori" as a
-within-noun-specific bar (universal, corrected); cite the note or the two-condition conjecture as confirmed findings;
-restate the noun claim beyond nouns-only/H1-only/internal-contrast/no-magnitude; re-open the s199 falsification;
-re-audit the wiki; adopt unlicensed corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.
+check `date -u`; s202 spent $0.00 (same UTC day 2026-07-10 as s200+s201; day total $0.00). ⚠ JST/UTC skew — recompute the
+website JST day.** **RECONCILE: ZERO decisions open.** **Two-track balance now owes PHILOSOPHICAL/CONSOLIDATION** (s198–202
+leaned heavily empirical/feasibility). Picks: a phil/consol unit (the verbalizable-workspace essay, an s187-harvest
+open-question, or B1 last promotion — OR weigh the s202 C1-refinement essay seed, which needs a NEW bet to clear the §3
+bar), OR the A6 cross-linguistic license scout / A3b BLiMP / A5. Do NOT: re-run the within-noun cue-strength scout (route
+CLOSED, measured s202); cite the note or the two-condition conjecture as confirmed findings; restate the noun claim beyond
+nouns-only/H1-only/internal-contrast/no-magnitude; re-open the s199 falsification; re-audit the wiki; adopt unlicensed
+corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.

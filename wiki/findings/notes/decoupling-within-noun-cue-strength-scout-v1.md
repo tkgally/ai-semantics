@@ -115,18 +115,18 @@ the cue-strength half of that prediction:** instance-hypernymy is the **2nd-high
 8 fresh sub-types (frame 0.0306; **robust** — freq-matched 0.041, hit@3 0.092 both keep it near the top),
 sitting **9× above** the fresh-inventory floor (member_meronymy 0.0034), not at it. Because a head
 disaligner is **low-cue by definition**, a measured **high**-cue relation **cannot** be one — *regardless
-of its recovery.* And no other fresh sub-type qualifies: the two relations at the cue-strength floor
-(member_meronymy 0.0034, member_holonymy 0.0112) are both **low-recovery**-predicted, so the floor is
-occupied by aligned (low-cue/low-recovery) relations, not a disaligner. **The fresh noun sub-inventory
+of its recovery.* And no other fresh sub-type qualifies: the two **lowest-cue** relations
+(member_meronymy 0.0034, member_holonymy 0.0112) are both **low-recovery**-predicted, so the bottom of
+the cue-strength ordering is occupied by aligned (low-cue/low-recovery) relations, not a disaligner. **The fresh noun sub-inventory
 therefore patterns like adjectives — no head disaligner — not like the coarse noun set.**
 
 **2. The tail is *not* the blocker — both C2 arms' tail materials exist.** The recovery-tail (the
 low-recovery-predicted meronymy/holonymy sub-types) genuinely **spans** the cue-strength range: one
 low-recovery relation, **member_meronymy**, sits **at** the floor (0.0034) — an *aligned* tail element,
-the C2-**violating** ingredient (like verbs' entailment/cause) — while another, **part_holonymy**, sits
-**at the ceiling** (0.0333) — an *anti-aligned* tail element, the C2-**satisfying** ingredient (like the
-coarse holonymy that kept the noun tail off the floor). So the raw tail materials for **both** C2 arms
-are present within nouns.
+the C2-**violating** ingredient (like verbs' entailment/cause) — while others (**part_holonymy** 0.0333,
+**part_meronymy** 0.0250) sit **well off** the floor near the top of the ordering — *anti-aligned* tail
+elements, the C2-**satisfying** ingredient (like the coarse holonymy that kept the noun tail off the
+floor). So the raw tail materials for **both** C2 arms are present within nouns.
 
 **3. …but both arms require a *shared* C1 head disaligner, and there is none.** A clean C2 dissociation
 holds C1 fixed (a head disaligner present in **both** arms) and varies only the tail. With no fresh
@@ -151,9 +151,10 @@ s193 coarse-hypernymy cues** on the same C4 shard set + frozen apparatus under *
 instance-hypernymy uses does **not** lift its cue-strength toward instance-hypernymy's 0.0306 — it *drops*
 it (0.0083 → 0.0056). Coarse hypernymy is cue-strength-**poor under both golds**; instance-hypernymy is
 cue-strength-**rich**. So the gap is **not** a direct-vs-closure gold artifact — it is a genuine relational
-property: the *instance* relation's kind-terms (national_capital, city, town, author, …) sit in strongly
-contrastive-framed company with their proper-noun instances (*"Paris and other capitals"*, *"scientists
-such as Darwin"*), whereas ordinary hypernymy's superordinates do not, under either gold. Two consequences:
+property: the *instance* relation's proper-noun cues (Paris, Darwin, …) keep strong contrastive-framed
+company with their kind-terms and co-instances (*"Paris and other capitals"*, *"cities such as Paris"*),
+so the gold kind-term lands in the frame control's top-k; ordinary hypernymy's common-noun cues and their
+abstract superordinates do not, under either gold. Two consequences:
 (i) the fresh-vs-coarse comparison the C1 read leans on is **not** confounded by gold construction; (ii) a
 genuine refinement of the conjecture's C1 — *"taxonomic centrality supplies a low-cue head disaligner"*
 holds for **ordinary** hypernymy (low-cue under both golds, 0.006–0.008) but **fails for
@@ -194,8 +195,11 @@ ones whose kind-terms keep little contrastive-frame company.
   gold-construction control above quantifies it. The **within-fresh-inventory** comparison (all 8 sub-types
   on direct gold) is apples-to-apples and is what the C1/C2 read stands on.
 - **Sparse sub-types under-power the tail (member_meronymy n=99, substance_holonymy n=49, substance_meronymy
-  n=58).** The floor/ceiling identities are stable across frame + freq-matched + hit@3, but a frozen design
-  would re-power them.
+  n=58).** The **floor** identity (member_meronymy) is stable across frame + freq-matched + hit@3, and
+  instance-hypernymy is robustly 2nd on all three; the **ceiling** relation is part_holonymy on frame and
+  hit@3 but part_meronymy under freq-matching — either way a low-recovery part/whole relation sits well off
+  the floor, and instance-hypernymy is never at the floor, so the C1 read is unaffected. A frozen design
+  would re-power the sparse sub-types.
 - **The route pivot opens no decision.** Reporting feasibility and a favored next route makes no value-laden
   methodological commitment; the route choice + its gates are fixed at design freeze by a later session.
 - **Within-distributional throughout.** Every quantity (cue-strength, predicted recovery) is form-internal;
