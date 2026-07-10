@@ -35,6 +35,8 @@ BOOT = 5000
 SEED = 20260710
 SHALLOW = {"local"}
 DEEP = {"scope", "island"}
+F4_FLOOR = 0.60             # F4: paradigms below this are dropped from the reading-2 accuracy strata
+                            # (contested gold). Inert this run (all 40 clear it) but enforced in code.
 
 
 def spearman(x, y):
@@ -87,7 +89,9 @@ def load(slot):
 
 
 def strat_mean(per, keys):
-    v = [per[u]["acc"] for u in UIDS if per[u]["stratum"] in keys]
+    # F4: only paradigms clearing the 0.60 human-agreement floor enter the reading-2 accuracy strata.
+    v = [per[u]["acc"] for u in UIDS
+         if per[u]["stratum"] in keys and PARA[u]["human_agreement"] >= F4_FLOOR]
     return float(np.mean(v)), len(v)
 
 
@@ -112,14 +116,21 @@ def main():
         sh, nsh = strat_mean(per, SHALLOW)
         dp, ndp = strat_mean(per, DEEP)
         md, nmd = strat_mean(per, {"medium"})
+        mean_cons = float(np.nanmean([per[u]["consistency"] for u in UIDS]))
+        # per-category means (freeze-vote condition: show whether one category carries R2)
+        cats = sorted({PARA[u]["category"] for u in UIDS})
+        by_cat = {c: round(float(np.mean([per[u]["acc"] for u in UIDS if PARA[u]["category"] == c])), 4)
+                  for c in cats}
         result["per_model"][slot] = {
             "rho_prof": rho, "rho_ci": [float(lo), float(hi)], "acc_sd": acc_sd,
             "saturated_F3": saturated,
             "mean_abs_acc": float(acc.mean()), "acc_min": float(acc.min()), "acc_max": float(acc.max()),
+            "mean_consistency_acc": mean_cons,
             "shallow_acc": sh, "deep_acc": dp, "medium_acc": md,
             "depth_gap": sh - dp,
             "ans1_rate": diag["ans1_rate"], "poslock_rate": diag["poslock_rate"],
             "n_calls": diag["n_calls"],
+            "per_category_acc": by_cat,
             "per_paradigm": {u: round(per[u]["acc"], 4) for u in UIDS},
         }
 
@@ -146,7 +157,15 @@ def main():
     # instrument-failure guard
     instr_fail = maj(lambda s: pm[s]["poslock_rate"] > POSLOCK_FAIL and abs(pm[s]["ans1_rate"] - 0.5) > ANS1_EXTREME)
 
+    # per-category human agreement (observed-set context for R1)
+    cats = sorted({PARA[u]["category"] for u in UIDS})
+    human_by_cat = {c: round(float(np.mean([PARA[u]["human_agreement"] for u in UIDS
+                                            if PARA[u]["category"] == c])), 4) for c in cats}
     result["readings"] = {
+        "observed_set_note": ("R1/R2/R2h are over the 40-paradigm OBSERVED on-axis set, not full BLiMP; "
+                              "verdicts scope to THIS frozen panel, not a universal depth law (freeze-vote "
+                              "condition)."),
+        "human_by_category": human_by_cat,
         "human_shallow_acc": hsh, "human_deep_acc": hdp, "human_gap": human_gap,
         "R1_profile_alignment": r1 + " (DESCRIPTIVE/DIRECTIONAL ONLY — non-promotable this run per C8)",
         "R1_rho_by_model": {s: [round(pm[s]["rho_prof"], 3)] + [round(x, 3) for x in pm[s]["rho_ci"]] for s in SLOTS},
@@ -167,7 +186,8 @@ def main():
               f"{m['acc_min']:.2f}-{m['acc_max']:.2f}){'  <F3-SATURATED>' if m['saturated_F3'] else ''}")
         print(f"     rho_prof {m['rho_prof']:+.3f}  CI[{m['rho_ci'][0]:+.3f},{m['rho_ci'][1]:+.3f}]")
         print(f"     acc shallow {m['shallow_acc']:.3f} / medium {m['medium_acc']:.3f} / deep {m['deep_acc']:.3f}"
-              f"  depth-gap {m['depth_gap']:+.3f}")
+              f"  depth-gap {m['depth_gap']:+.3f}   consistency {m['mean_consistency_acc']:.3f}")
+        print(f"     per-category: " + "  ".join(f"{c}={v:.2f}" for c, v in m["per_category_acc"].items()))
         print(f"     ans1_rate {m['ans1_rate']:.3f}  poslock {m['poslock_rate']:.3f}")
     r = result["readings"]
     print("\n--- VERDICTS ---")
