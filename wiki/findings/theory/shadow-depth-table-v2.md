@@ -330,7 +330,14 @@ difficulty profile**, so it appears to be an axis people share rather than a mod
   **replicates** R1 promotes the human-comparison ordering-axis reading toward a claim (the program's first
   broad human-anchored grammatical-competence claim) and this row hardens; a control that shows ρ_prof is
   frequency-driven **breaks** R1 and the row keeps only the within-panel DEPTH-GRADED gradient (R2). Either
-  outcome revises this section.
+  outcome revises this section. **→ FIRED (2026-07-11, s210): the C8 chain CLOSED with R1 REFUSED
+  promotion.** The covariate arm SURVIVED (s208, robustness) but the exact-string-memorization swap arm
+  ([`result/blimp-swap-arm-v1`](../results/blimp-swap-arm-v1.md)) returned **SWAP-INCONCLUSIVE** — R1 did
+  **not** achieve SWAP-STABLE (the deep-scope stratum dropped on 3/3, Δ̄acc −0.06 to −0.09, CIs exclude 0),
+  so per G8 (SURVIVES ∧ SWAP-STABLE required) **R1 is not promoted**. It did not cleanly *break* either —
+  the deep drop is confounded by a +0.20 C4 pretraining-frequency gap. Net: **form (iv) stays exactly as
+  written — DEPTH-GRADED (R2, within-panel) load-bearing, PROFILE-ALIGNED (R1) descriptive-only — but its
+  promotion path is now CLOSED, not pending.** No numbers below change.
 - **A new controlled probe lands** (any A1/A2 item with a named control + CI) → it is added as a new beater
   row in the same edition, keeping the table the live roll-up the program intends.
 - **The row-inclusion decision is reopened and re-ratified differently** → the ratified default

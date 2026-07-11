@@ -14,7 +14,7 @@ meaning-senses:
   - human-comparison
 contingent-on: []
 created: 2026-06-21
-updated: 2026-07-05
+updated: 2026-07-11
 links:
   - rel: depends-on
     target: concept/distributional-meaning
@@ -64,6 +64,26 @@ measures. The signal is a **corpus frequency count**, not a human rating task �
 bearing is that it is compiled from human-produced language and is **validated against human
 lexical-processing latencies** (the variance-accounted-for tables in Brysbaert & New 2009).
 
+> **PoS upgrade fetched (2026-07-11, s210 — pointer item 4 discharged).** For the BLiMP R1
+> content-word-swap arm (Q2-B, [`decisions/resolved/blimp-swap-arm-design`](../../decisions/resolved/blimp-swap-arm-design.md)),
+> the **2012 "SUBTLEX-US frequency list with PoS and Zipf information"** file was fetched +
+> checksummed this session: `subtlexus1.zip` (sha256 `458128f90a28c4f396cb2a5b23ac93c56f745ee8cfca9be2afedad4091d15090`)
+> → `SUBTLEX-US frequency list with PoS and Zipf information.xlsx` (sha256
+> `3a8cb93a4e28988c2ce722a63f6b8d394acdc42ebe2ab6e1f0e484ee0d4167a7`), from the **same Ghent
+> University landing page** as the 2009 list. It carries the same 74,286 word forms plus a
+> published **`Dom_PoS_SUBTLEX`** column (dominant part of speech: Name / Noun / Verb / Adjective /
+> Adverb / …, empirically tagged over the corpus) and `Percentage_dom_PoS`; `Lg10WF` is stored as a
+> spreadsheet formula, so the swap build recomputes it from `FREQcount` as `log10(FREQcount+1)` —
+> identical to the 2009 definition. **License posture identical to the 2009 file** (no formal string;
+> open-for-research + citation request; Brysbaert, New & Keuleers 2012) → handled **recipe-not-corpus**
+> (the full xlsx gitignored + sha256-pinned in
+> [`.../2026-07-11-blimp-swap-arm/build_swap.py`](../../../experiments/runs/2026-07-11-blimp-swap-arm/build_swap.py);
+> only the recipe + derived pool sizes/sha travel in `selection.json`). This supplies the **auditable,
+> published POS labelling** the swap arm's Q2-B needs, removing the hand-curation degree of freedom the
+> plain 2009 file would have required. Citation: Brysbaert, M., New, B., & Keuleers, E. (2012). Adding
+> part-of-speech information to the SUBTLEX-US word frequencies. *Behavior Research Methods* 44(4):
+> 991–997.
+
 ## What it can ground
 
 This is the section that matters (charter rule: cite a resource by the *feature* that bears).
@@ -108,8 +128,9 @@ The limits are sharp and worth stating so no later session over-reads it:
   closed class** (determiners, modals, subordinators, quantifiers); the norm only supplies
   their frequencies, not their grammatical category.
 - **The plain-text 2009 list carries no part-of-speech.** Selecting frequency-matched *content*
-  controls by PoS would need the separate "SUBTLEX-US with PoS information" file (Brysbaert,
-  New & Keuleers 2012), which is **not fetched** — the closed-class stoplist used to keep the
+  controls by PoS needs the separate "SUBTLEX-US with PoS information" file (Brysbaert, New &
+  Keuleers 2012), **fetched + sha256-pinned 2026-07-11 (s210)** for the swap arm (see the
+  provenance blockquote above); on the plain 2009 file the closed-class stoplist used to keep the
   candidate pool open-class is a convenience filter, not a PoS annotation.
 - **Word-form frequency aggregates over senses and PoS.** A single `Lg10WF` per orthographic
   form mixes, e.g., *will* the modal with *will* the noun/verb. The build session must treat
@@ -158,7 +179,8 @@ The limits are sharp and worth stating so no later session over-reads it:
 | Function-word swap-target frequencies + within-pair gaps | **VERIFIED (computed this session)** | `function-word-seed-frequencies.csv` |
 | File: 3,298,971 bytes, sha256 c5f86f06… | **VERIFIED (downloaded this session)** | curl from subtlexus2.zip, 2026-06-21 |
 | Formal license (CC/GPL) | **NONE FOUND** | No license string on the landing page |
-| Part-of-speech per word | **NOT IN FETCHED FILE** | Needs the separate 2012 "with PoS" file (not fetched) |
+| Part-of-speech per word (2009 plain file) | **NOT IN 2009 FILE** | Word-form frequencies only |
+| Part-of-speech per word (2012 with-PoS file) | **VERIFIED (fetched 2026-07-11, s210)** | `Dom_PoS_SUBTLEX` column, xlsx sha256 `3a8cb93a…4167a7`; used for the swap arm's Q2-B |
 | Sense- or lemma-level frequency | **NOT PROVIDED** | Word-form counts aggregate over senses/PoS |
 
 ## Pointer for next visit
@@ -174,5 +196,7 @@ The limits are sharp and worth stating so no later session over-reads it:
 3. **Do not over-reach to the indicator.** SUBTLEX-US cannot anchor the entailment-flip /
    forced-choice indicator (Q2). A BLiMP/NLI human backing is the separate, optional,
    fetch-and-catalogue-first Posture-2 upgrade — it never blocks the within-model run.
-4. **PoS upgrade if needed.** If auditable PoS-based content-control selection is wanted,
-   fetch the 2012 "SUBTLEX-US with PoS information" file and extend this page.
+4. **PoS upgrade — DONE (2026-07-11, s210).** Auditable PoS-based content-control selection was
+   wanted for the BLiMP swap arm; the 2012 "SUBTLEX-US with PoS" file was fetched + sha256-pinned
+   and this page extended (see the provenance blockquote near the top). `Dom_PoS_SUBTLEX` is now
+   the auditable POS source for that probe's Q2-B.

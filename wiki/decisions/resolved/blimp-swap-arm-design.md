@@ -1,21 +1,32 @@
 ---
 id: blimp-swap-arm-design
 title: "BLiMP R1 content-word-swap arm (C8 promotion-prep, Q1-C's second required control) — the value-laden operationalization gates: paradigm & item selection (Q1), the swap operationalization (Q2 — the crux), and grammaticality re-validation without human subjects (Q3)"
-status: open
+status: resolved
 opened: 2026-07-11
 opened-by: session-209
-resolved:
-resolved-by:
-resolution:
+resolved: 2026-07-11
+resolved-by: autonomous (adversarial review)
+resolution: "ADOPT-WITH-MODIFICATION — Q1-A (6 frame-safe paradigms: regular det–noun + regular subject–verb agreement shallow, npi_licensing ∪ quantifiers deep; island/filler-gap + irregular_* EXCLUDED; ORIGINAL re-run fresh, N≈100 paired items/paradigm) / Q2-B (adopted over the Q2-A default, converging with the s210 non-Anthropic vote — POS read from the published 2012 SUBTLEX-US-with-PoS file rather than hand-curated, removing the last build DoF; frequency MATCH norm stays SUBTLEX-US Lg10WF, human-validated; Q2-C rejected as a match norm, retained as the mandatory G-freq-pretraining diagnostic; fallback to Q2-A if the 2012 file's freeze-time license check or POS coverage fails) / Q3-A (mechanical re-validation + researcher spot-audit; bounded CANDIDACY, a later cross-session review writes the claim). BUILD RULING: noun + proper-name (+ attributive-adjective)-only swapping ACCEPTED as an adequate exact-string-memorization control (verbs/adverbs held fixed — the frame-safe subset with no subcategorization frame; verb-swap-with-valence-guard deferred as a stronger-perturbation sensitivity arm), CONDITIONAL on the new G-coverage. NEW freeze conditions: G-coverage (report per-paradigm swap coverage + surface edit distance; pre-register a coverage floor; a low-coverage paradigm's SWAP-STABLE is flagged weak and EXCLUDED from the ≥2/3 stratum verdict; record the perturbation bound) + G-margin-justification (justify the ±0.05 equivalence margin in PREREG as a pre-registered practical-equivalence threshold). Candidacy bounded by six residual confounds (construction-frequency/template-difficulty; deep-pole/island generality cost; noun-only perturbation bound; C4 pretraining-proxy; shallow-ceiling weight-of-evidence on the deep-3; contamination upper bound). Ratified s210 by a fresh-agent adversarial reviewer (verdict authority, independent of the s209 design author) + a convergent fresh non-Anthropic decorrelation vote (panel.B = gpt-5.4-mini, $0.004039, Q1-A/Q2-B/Q3-A). All s209 freeze conditions (G5-plus, G-frame, G-metric, G-power, G-lexicon-determinism, G-freq, G-freq-pretraining, G3′) carry; G8 (SURVIVES ∧ SWAP-STABLE required for promotion candidacy) inherited."
 contingent-artifacts:
   - design/blimp-swap-arm-v1
 ---
 
 # Decision: the value-laden operationalization gates of the BLiMP R1 content-word-swap arm (A3b, C8 promotion-prep)
 
-> **OPEN — session 209 (2026-07-11).** Ratifiable **s210+** (never the opening session; PROTOCOL §2). A
-> fresh-agent adversarial reviewer + one non-Anthropic decorrelation vote fix Q1–Q3 next session; freeze +
-> run follow. Tom's standing override outranks any autonomous ratification.
+> **RESOLVED — session 210 (2026-07-11), autonomous cross-session adversarial review.**
+> **ADOPT-WITH-MODIFICATION: Q1-A / Q2-B / Q3-A + noun-only-swap (conditional on G-coverage) + G-margin-justification.**
+> A fresh-agent adversarial ratification reviewer (verdict authority, independent of the s209 design author)
+> returned **ADOPT-WITH-MODIFICATION**; a **fresh** non-Anthropic decorrelation vote (`panel.B` =
+> `gpt-5.4-mini`, $0.004039) returned **RATIFY-WITH-CONDITIONS** and converged per-gate (Q1-A / Q2-B / Q3-A).
+> The single modification is **Q2 A→B**: read POS from the published 2012 SUBTLEX-US-with-PoS file (reachable
+> + license-consistent, established this session) instead of a hand-curated lexicon, removing the last build
+> DoF; the frequency **match** stays SUBTLEX-US `Lg10WF`. Full record:
+> [`REVIEW-ratify-s210.md`](../../../experiments/runs/2026-07-11-blimp-swap-arm/REVIEW-ratify-s210.md) +
+> [`VOTE-ratify-s210.json`](../../../experiments/runs/2026-07-11-blimp-swap-arm/VOTE-ratify-s210.json). The
+> design is promoted (`contingent-on` cleared). **Freeze conditions carry** (G5-plus, G-frame, G-metric,
+> G-power, G-lexicon-determinism, G-freq, G-freq-pretraining, G3′, G8) **plus the two new ones**
+> (G-coverage, G-margin-justification); freeze + run this session. Tom's standing override outranks this
+> autonomous ratification.
 >
 > **s209 pre-run critique + in-design discharge.** The fresh-agent critic (verdict authority) returned
 > **GO-WITH-CONDITIONS** (concur Q1-A / Q2-A / Q3-A; provenance + anchor **CLEAN**) with **two BLOCKERS**,
@@ -39,7 +50,7 @@ contingent-artifacts:
 ## What is (and is NOT) at stake
 
 Binding condition **G8** of the ratified C8 design
-([`decisions/resolved/blimp-profile-frequency-control-design`](../resolved/blimp-profile-frequency-control-design.md))
+([`decisions/resolved/blimp-profile-frequency-control-design`](blimp-profile-frequency-control-design.md))
 made the **content-word-swap arm** of Q1-C **required for a human-comparison PROMOTION** of
 [`result/blimp-forced-choice-sweep-v1`](../../findings/results/blimp-forced-choice-sweep-v1.md)'s reading
 **R1 PROFILE-ALIGNED**. The s208 **covariate arm** already returned **SURVIVES-COVARIATE 3/3**

@@ -29,6 +29,16 @@ links:
 
 # Design v1 — BLiMP R1 content-word-swap arm (program A3b, C8 promotion-prep, the swap half of Q1-C)
 
+> **RATIFIED + FROZEN + RUN (2026-07-11, s210).** Gates ratified ADOPT-WITH-MODIFICATION **Q1-A / Q2-B /
+> Q3-A** (+ G-coverage, G-margin-justification;
+> [`decisions/resolved/blimp-swap-arm-design`](../../wiki/decisions/resolved/blimp-swap-arm-design.md)),
+> frozen + built (G5-plus verifier reproduced the build byte-identically), gate-reviewed (freeze critic
+> GO-WITH-CONDITIONS), run (~$1.34, 7,200 calls), verifier-checked. **Outcome: SWAP-INCONCLUSIVE — R1 is
+> NOT SWAP-STABLE → REFUSED promotion** ([`result/blimp-swap-arm-v1`](../../wiki/findings/results/blimp-swap-arm-v1.md)).
+> The deep-scope stratum dropped on 3/3 (Δ̄acc −0.06 to −0.09, CIs exclude 0) but the drop is confounded by
+> a +0.20 C4 pretraining-frequency gap, so it is neither SWAP-STABLE nor a clean memorization signal. The
+> honest successor is a **C4-frequency-matched** swap arm.
+
 **A design + decision-trail unit — the content-word-swap behavioral control that binding condition **G8** of
 the ratified C8 design names as *required for a human-comparison PROMOTION* of reading R1. Status: DESIGN —
 three operationalization gates open, ratifiable s210+.** This page operationalizes the **swap arm** of the
