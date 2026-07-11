@@ -1,0 +1,119 @@
+{
+ "seed": 20260711,
+ "sel_seed": 77770711,
+ "band": 0.1,
+ "target_n": 100,
+ "pool_sizes": {
+  "names": 4835,
+  "nouns_sg": 20400,
+  "adjs": 7870
+ },
+ "pool_sha_partial": "84c6d388784d694b5e6b9984d997ac6771af255738fd2df55340bc32ba476515",
+ "subtlex_xlsx_sha256": "3a8cb93a4e28988c2ce722a63f6b8d394acdc42ebe2ab6e1f0e484ee0d4167a7",
+ "swappability_scores": {
+  "determiner_noun_agreement_1": 1.7375,
+  "determiner_noun_agreement_2": 2.125,
+  "regular_plural_subject_verb_agreement_1": 1.375,
+  "regular_plural_subject_verb_agreement_2": 0.5875,
+  "matrix_question_npi_licensor_present": 1.45,
+  "npi_present_1": 1.3875,
+  "npi_present_2": 1.4875,
+  "only_npi_licensor_present": 1.4625,
+  "only_npi_scope": 2.8875,
+  "sentential_negation_npi_licensor_present": 1.55,
+  "sentential_negation_npi_scope": 3.0375,
+  "existential_there_quantifiers_1": 1.7125,
+  "existential_there_quantifiers_2": 1.4625,
+  "superlative_quantifiers_1": 1.9625,
+  "superlative_quantifiers_2": 1.95
+ },
+ "selected_shallow": [
+  "determiner_noun_agreement_2",
+  "determiner_noun_agreement_1",
+  "regular_plural_subject_verb_agreement_1"
+ ],
+ "selected_deep": [
+  "sentential_negation_npi_scope",
+  "only_npi_scope",
+  "superlative_quantifiers_1"
+ ],
+ "paradigm_sha256": {
+  "determiner_noun_agreement_1": "f48065fd760d0fd1a895012860d38bdf3c2ac115cd221e521684cc430c0f1855",
+  "determiner_noun_agreement_2": "8ae7eff7c7bd384ff5ef3113984834f4d78b34559203aa9d5cb14ea8394291a9",
+  "regular_plural_subject_verb_agreement_1": "1a18d94062c8e792c0a200a3b00dff0e051a92bb084c05e9b5e5c73bee32a620",
+  "regular_plural_subject_verb_agreement_2": "e5b4668811e63b00ac4c9569cb9553281a39c21df43256905ad78e59ae24942c",
+  "matrix_question_npi_licensor_present": "657c9d6e6d50a9cd651881fcbc57cef2fd998611f6f53158ed05e48822fcd2b5",
+  "npi_present_1": "9aa85dc5c2b0d85ea51f21db50d6d327ab5b45d1669e386d54b1360d3ac954af",
+  "npi_present_2": "52fcfa230a40ae27998273cc08ecd062aad17025c92389df3404a85ed519909b",
+  "only_npi_licensor_present": "475c6595187a32e4dcfb868d3db90394e89669a94a9312ebd60f88dad1665f1c",
+  "only_npi_scope": "ca1f0671643e37936515f02125036bc2904ab9b35c4689b0e7a3ea3914e571f6",
+  "sentential_negation_npi_licensor_present": "c43405aca13ba4aa6ad87f9b051e4ba5fc458f24e683cfe0af23e6e09ec7268b",
+  "sentential_negation_npi_scope": "6c341ccc39c94bea45c0412986751bf2f6eca48626728e30e23d2b6a22c8b949",
+  "existential_there_quantifiers_1": "4bd0f6dee3c1824b51b0dafb9fce2b00933e8053fcd4a7b99b6202e1b8b49f9e",
+  "existential_there_quantifiers_2": "b1a80f4ebebae90a90927259f95b680059020e6bb4e38e64a41eb8e53bc3f617",
+  "superlative_quantifiers_1": "bebc5c5ff28cf226cc35293c60cde1fcf7565a7b58cb219d01ac8908b952a497",
+  "superlative_quantifiers_2": "4bef08f3e6bd3fbb46021dda34000f3c00222c5576babe4882a8541f6820a106"
+ },
+ "build_report": [
+  {
+   "uid": "determiner_noun_agreement_2",
+   "stratum": "shallow",
+   "family": "det_noun",
+   "n_usable": 100,
+   "drops_in_scan": 4,
+   "mean_coverage": 0.975,
+   "mean_nsub": 2.07,
+   "below_floor": false
+  },
+  {
+   "uid": "determiner_noun_agreement_1",
+   "stratum": "shallow",
+   "family": "det_noun",
+   "n_usable": 100,
+   "drops_in_scan": 14,
+   "mean_coverage": 0.985,
+   "mean_nsub": 2.06,
+   "below_floor": false
+  },
+  {
+   "uid": "regular_plural_subject_verb_agreement_1",
+   "stratum": "shallow",
+   "family": "sv",
+   "n_usable": 100,
+   "drops_in_scan": 5,
+   "mean_coverage": 0.704,
+   "mean_nsub": 1.51,
+   "below_floor": false
+  },
+  {
+   "uid": "sentential_negation_npi_scope",
+   "stratum": "deep",
+   "family": "deep",
+   "n_usable": 100,
+   "drops_in_scan": 2,
+   "mean_coverage": 0.983,
+   "mean_nsub": 3.04,
+   "below_floor": false
+  },
+  {
+   "uid": "only_npi_scope",
+   "stratum": "deep",
+   "family": "deep",
+   "n_usable": 100,
+   "drops_in_scan": 1,
+   "mean_coverage": 0.967,
+   "mean_nsub": 3.09,
+   "below_floor": false
+  },
+  {
+   "uid": "superlative_quantifiers_1",
+   "stratum": "deep",
+   "family": "deep",
+   "n_usable": 100,
+   "drops_in_scan": 0,
+   "mean_coverage": 0.983,
+   "mean_nsub": 2.0,
+   "below_floor": false
+  }
+ ]
+}

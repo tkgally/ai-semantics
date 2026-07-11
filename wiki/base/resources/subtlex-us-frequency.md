@@ -14,7 +14,7 @@ meaning-senses:
   - human-comparison
 contingent-on: []
 created: 2026-06-21
-updated: 2026-07-05
+updated: 2026-07-11
 links:
   - rel: depends-on
     target: concept/distributional-meaning
@@ -63,6 +63,26 @@ word-form counts were taken over the 51M tokens, then transformed to per-million
 measures. The signal is a **corpus frequency count**, not a human rating task — its human
 bearing is that it is compiled from human-produced language and is **validated against human
 lexical-processing latencies** (the variance-accounted-for tables in Brysbaert & New 2009).
+
+> **PoS upgrade fetched (2026-07-11, s210 — pointer item 4 discharged).** For the BLiMP R1
+> content-word-swap arm (Q2-B, [`decisions/resolved/blimp-swap-arm-design`](../../decisions/resolved/blimp-swap-arm-design.md)),
+> the **2012 "SUBTLEX-US frequency list with PoS and Zipf information"** file was fetched +
+> checksummed this session: `subtlexus1.zip` (sha256 `458128f90a28c4f396cb2a5b23ac93c56f745ee8cfca9be2afedad4091d15090`)
+> → `SUBTLEX-US frequency list with PoS and Zipf information.xlsx` (sha256
+> `3a8cb93a4e28988c2ce722a63f6b8d394acdc42ebe2ab6e1f0e484ee0d4167a7`), from the **same Ghent
+> University landing page** as the 2009 list. It carries the same 74,286 word forms plus a
+> published **`Dom_PoS_SUBTLEX`** column (dominant part of speech: Name / Noun / Verb / Adjective /
+> Adverb / …, empirically tagged over the corpus) and `Percentage_dom_PoS`; `Lg10WF` is stored as a
+> spreadsheet formula, so the swap build recomputes it from `FREQcount` as `log10(FREQcount+1)` —
+> identical to the 2009 definition. **License posture identical to the 2009 file** (no formal string;
+> open-for-research + citation request; Brysbaert, New & Keuleers 2012) → handled **recipe-not-corpus**
+> (the full xlsx gitignored + sha256-pinned in
+> [`.../2026-07-11-blimp-swap-arm/build_swap.py`](../../../experiments/runs/2026-07-11-blimp-swap-arm/build_swap.py);
+> only the recipe + derived pool sizes/sha travel in `selection.json`). This supplies the **auditable,
+> published POS labelling** the swap arm's Q2-B needs, removing the hand-curation degree of freedom the
+> plain 2009 file would have required. Citation: Brysbaert, M., New, B., & Keuleers, E. (2012). Adding
+> part-of-speech information to the SUBTLEX-US word frequencies. *Behavior Research Methods* 44(4):
+> 991–997.
 
 ## What it can ground
 
