@@ -118,6 +118,7 @@ def main():
     instr_fail = maj(lambda s: pm[s]["poslock_rate"] > POSLOCK_FAIL and abs(pm[s]["ans1_rate"] - 0.5) > ANS1_EXTREME)
 
     # G-freq achieved match gap (from the frozen subs: |Lg10WF(orig) − Lg10WF(sub)| where both known)
+    result["g_freq"] = g_freq_report()
     result["readings"] = {
         "verdict": verdict,
         "combined_promotion": ("CANDIDATE (SURVIVES-COVARIATE ∧ SWAP-STABLE) — a later cross-session review writes the claim"
@@ -149,6 +150,35 @@ def main():
 
     if args.c4:
         c4_diagnostic()
+
+
+def g_freq_report():
+    """G-freq (freeze-critic condition 3): achieved per-word |Lg10WF(orig) − Lg10WF(sub)| distribution
+    over the frozen substitutions (both known in the lexicon). Names whose original is absent from the
+    lexicon (matched to the pool median) are reported separately."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("build_swap", HERE / "build_swap.py")
+    bs = importlib.util.module_from_spec(spec); spec.loader.exec_module(bs)
+    lex = bs.load_lexicon()
+    gaps, name_unmatched, n_subs = [], 0, 0
+    by_type = {}
+    for uid in UIDS:
+        for p in ITEMS["items"][uid]:
+            for sub in p["subs"]:
+                typ, orig, new = sub[0], sub[1].lower(), sub[2].lower()
+                n_subs += 1
+                lo = lex.get(orig, {}).get("lg"); ln = lex.get(new, {}).get("lg")
+                if typ == "name" and lo is None:
+                    name_unmatched += 1; continue
+                if lo is not None and ln is not None:
+                    g = abs(lo - ln); gaps.append(g); by_type.setdefault(typ, []).append(g)
+    gaps = np.array(gaps) if gaps else np.array([0.0])
+    return {"n_subs": n_subs, "n_gaps_measured": int(len(gaps)),
+            "mean_abs_gap": round(float(gaps.mean()), 4), "max_abs_gap": round(float(gaps.max()), 4),
+            "p95_abs_gap": round(float(np.percentile(gaps, 95)), 4),
+            "frac_within_0.10": round(float((gaps <= 0.10 + 1e-9).mean()), 4),
+            "name_orig_unmatched": name_unmatched,
+            "mean_gap_by_type": {t: round(float(np.mean(v)), 4) for t, v in by_type.items()}}
 
 
 def c4_diagnostic():
