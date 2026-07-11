@@ -184,7 +184,12 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   pretraining-frequency gap** (swap words SUBTLEX-matched but ~1.6× rarer in pretraining), so it is not a
   clean memorization signal either. **The C8 chain CLOSES: R1 stays descriptive/non-promotable, the
   form-(iv) row keeps only DEPTH-GRADED.** Honest successor: a **C4-frequency-matched** swap arm (and/or a
-  verb-swap arm with a valence guard).]**
+  verb-swap arm with a valence guard). **s211 (phil/consol): the downstream essay
+  [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md) reconciled to the
+  closed chain** — its s205 CORROBORATION box's "No revision trigger fires against" superseded; the
+  human-shared (R1) gloss weakened to a non-swap-stable, non-promotable, C4-confounded descriptive reading;
+  the within-panel DEPTH-GRADED (R2) half untouched; structural thesis untouched. The "if the underlying
+  numbers move on re-run" self-discipline guard (predictions §C) is marked FIRED on-page. $0, no vote.]**
   Below: the original item text (for the record).
   *(Original item:)* The resource sits idle: 67k human-validated minimal
   pairs, CC-BY, already cataloged. A selected-paradigm sweep (determiner–noun agreement near

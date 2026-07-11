@@ -9,10 +9,12 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-07-02
-updated: 2026-07-06
+updated: 2026-07-11
 links:
   - rel: refines
     target: theory/lexicon-grammar-continuum
+  - rel: depends-on
+    target: result/blimp-swap-arm-v1
   - rel: depends-on
     target: result/presupposition-doppelganger-control-v1
   - rel: depends-on
@@ -78,7 +80,35 @@ links:
 > antonymy s186, falsified) — the structural re-description stands, but the lexical pole's *intact*
 > saturated corner does not.
 
-> **Status: revised (2026-07-06 — antonymy corner falsified on the panel, s186; earlier 2026-07-03; was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
+> **REVISION (2026-07-11, s211) — the s205 corroboration's *human-shared* reading (R1) has been probed
+> for swap-stability and REFUSED promotion; its DEPTH-GRADED half stands, its human-shared half is now a
+> non-swap-stable descriptive reading.**
+> The s205 CORROBORATION box below reads the grammar-side BLiMP depth gradient as "a *shared* human–model
+> difficulty axis, not a model-specific deficit" and closes "No revision trigger fires against." That was
+> written while R1 (PROFILE-ALIGNED) was descriptive-only *pending* the C8 confound controls. Those
+> controls have now run and the C8 chain is CLOSED: the covariate arm SURVIVED (s208, robustness), but the
+> exact-string-memorization **content-word-swap arm** returned SWAP-INCONCLUSIVE →
+> [`result/blimp-swap-arm-v1`](../results/blimp-swap-arm-v1.md). Replacing the exact BLiMP content words
+> with novel SUBTLEX-frequency-matched same-POS words **lowers deep-scope accuracy on all three models**
+> (signed Δ̄acc −0.095 / −0.057 / −0.072, all CIs exclude 0), so **R1 is NOT SWAP-STABLE → REFUSED
+> promotion per G8**. What this changes here: the s205 box's DEPTH-GRADED (R2, within-panel, load-bearing)
+> half is **untouched** — and consistent with the swap arm, since the deep stratum is exactly where the
+> drop concentrates while the shallow stratum sits near ceiling; but its **PROFILE-ALIGNED (R1) human-shared** half
+> is downgraded from "descriptive corroboration, no trigger fires against" to a **descriptive reading whose
+> promotion has been refused and which is not robust to lexical identity**. Crucially this does **not**
+> flip the axis to a *model-specific deficit* either: the deep drop is **confounded by a +0.204 C4
+> pretraining-frequency gap** (the swap words, though SUBTLEX-matched to *humans*, are ~1.6× rarer in web
+> training text), so it is neither a clean exact-string-memorization signal nor a clean refutation of the
+> descriptive R1 alignment. **Net for this essay:** the structural thesis (shadow-depth cross-cuts grain;
+> each pole a beater + a saturated corner) is untouched — the swap arm bears only on the s205 *corroboration*,
+> not on the load-bearing inputs — and the grammatical-pole depth-grading is reinforced; only the
+> "human-shared difficulty axis" gloss is now a non-promotable, non-swap-stable, C4-confounded descriptive
+> reading. The s205 box's closing "No revision trigger fires against" is **superseded** by this box and the
+> Honesty-box bullet below; the depth-grading corroboration it carries is kept. This **fires** the essay's
+> "if the underlying numbers move on re-run" self-discipline guard (predictions §C) — re-examined in-page,
+> reading weakened, not overturned.
+
+> **Status: revised (2026-07-11 — the s205 grammar-side corroboration's R1 human-shared reading probed for swap-stability and REFUSED promotion, s210/s211; 2026-07-06 antonymy corner falsified on the panel, s186; earlier 2026-07-03; was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
 > It introduces **no new empirical claim** and makes **no human comparison of its own**. Every
 > empirical assertion cites the in-repo `result` or `essay` page that carries it, at that page's
 > stated strength. Its two load-bearing empirical inputs on the *shadow-saturated* side — the
@@ -186,6 +216,13 @@ grains.
 > model-specific deficit — consistent with the essay's "the daylight between a phenomenon and its
 > distributional trace" reading (people, too, find the deep contrasts harder). No revision trigger fires
 > against. Absolute accuracy (0.87–0.94) stays a contamination upper bound and carries no weight here.
+> **→ UPDATED (2026-07-11, s211): the "No revision trigger fires against" clause is SUPERSEDED.** The
+> C8 controls this box's R1 reading was descriptive-only *pending* have run; the content-word-swap arm
+> ([`result/blimp-swap-arm-v1`](../results/blimp-swap-arm-v1.md)) REFUSED R1 promotion (deep-scope drops
+> under frequency-matched fresh words, C4-confounded). The **DEPTH-GRADED (R2)** half above stands
+> (untouched, and consistent with the swap arm); the **human-shared (R1)** gloss is now non-swap-stable and
+> non-promotable. See the s211
+> revision box at top.
 
 ## Why the graded gate does *not* rescue a "computes the split" reading
 
@@ -294,7 +331,13 @@ the targets, and is silent on which model tracks which.
   though a flat gate is *also* a distributional story (pure contradiction-detection), so it would not
   by itself move presupposition off the saturated end.
 - **If the underlying numbers move**, the empirical premises above move with them and this reading is
-  re-examined in-page.
+  re-examined in-page. **→ FIRED (2026-07-11, s211):** the s205 grammar-side corroboration's R1
+  (PROFILE-ALIGNED, human-shared) reading was probed for swap-stability and REFUSED promotion —
+  [`result/blimp-swap-arm-v1`](../results/blimp-swap-arm-v1.md), SWAP-INCONCLUSIVE, deep-scope Δ̄acc
+  −0.06 to −0.09 (CIs exclude 0), C4-frequency-confounded. Re-examined in-page (top revision box + s205-box
+  annotation + Honesty-box bullet below): the DEPTH-GRADED (R2) half stands (untouched, consistent with the
+  swap arm), the human-shared (R1) half is weakened to a non-swap-stable descriptive reading. The
+  structural thesis is untouched.
 
 ## Honesty box
 
@@ -335,3 +378,15 @@ the targets, and is silent on which model tracks which.
   structural ordering** of the continuum and cross-cuts grain — offered at weak evidential strength (n=3
   models, small synthetic item sets, direction-of-effect only), as the reading to knock down, not as a
   demonstrated property of language models.
+- **The s205 corroboration's human-shared framing did not survive its promotion controls (s210/s211).**
+  The s205 CORROBORATION box imported a *human-comparison* reading of the grammar-side depth axis (R1,
+  PROFILE-ALIGNED — the panel is hard where humans are hard) as descriptive-only corroboration. Its C8
+  promotion controls have since run and the chain is CLOSED: the covariate arm survived (robustness), but
+  the exact-string-swap arm REFUSED R1 ([`result/blimp-swap-arm-v1`](../results/blimp-swap-arm-v1.md), not
+  SWAP-STABLE), and the deep drop is C4-pretraining-frequency-confounded. So the essay's strongest
+  grammar-side corroboration — the one it leaned on for "*shared* human–model difficulty axis, not a
+  model-specific deficit" — is now a **non-swap-stable, non-promotable, confounded descriptive reading**.
+  The **within-panel DEPTH-GRADED** grading it also carries is untouched (and consistent with the swap
+  arm — the deep stratum is where the drop concentrates). This is the essay's
+  weakest-where-it-most-needs-strength point on the grammatical pole's *human-comparison* leg: the depth
+  axis is real within the panel, but the claim that it is a *shared* human axis is honestly **not made**.
