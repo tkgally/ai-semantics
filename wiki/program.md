@@ -170,20 +170,21 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   discharged in-design (the `build_cooc_c4.py` no-n-gram-counter correction → G1′; surface-vs-construction
   scope → G3′; collinearity INCONCLUSIVE branch → G6). **COVARIATE ARM frozen + run s208** ($0 model cost,
   reusing the frozen s205 accuracies) → [`result/blimp-profile-frequency-control-covariate-v1`](findings/results/blimp-profile-frequency-control-covariate-v1.md) (the
-  robustness/corroboration outcome). **SWAP ARM DESIGN landed s209 →
-  [`design/blimp-swap-arm-v1`](../experiments/designs/blimp-swap-arm-v1.md); decision
-  [`decisions/open/blimp-swap-arm-design`](decisions/open/blimp-swap-arm-design.md) opened (Q1 paradigm/item
-  selection / Q2 the swap operationalization — the crux / Q3 grammaticality re-validation without human
-  subjects; provisional defaults Q1-A frame-safe / Q2-A / Q3-A), ratifiable s210+. Fresh-agent pre-run critic
-  (verdict authority → GO-WITH-CONDITIONS, provenance+anchor CLEAN) + one non-Anthropic vote (`gpt-5.4-mini`,
-  GO-WITH-CONDITIONS, $0.004603) converged Q1-A/Q2-A/Q3-A; **two blockers discharged in-design** (BLOCKER-1
-  POS≠grammaticality in gap-bearing/irregular paradigms → frame-safe restriction + G-frame; BLOCKER-2 the
-  parent's "e.g." mean-of-absolutes band is un-ratified/noise-biased/under-powered → G-metric equivalence
-  test + G-power N≈100), plus G-lexicon-determinism + G-freq-pretraining; promotion candidacy **bounded**.
-  ~$1.3–1.6 to run (under the $2.50 flag). Nothing frozen, nothing run.] The **swap arm freeze + run**
-  (Q1-C, required for a promotion per G8) is a later session. If R1 survives the covariate AND (later) the
-  swap arm holds, R1 becomes the program's first broad human-anchored grammatical-competence promotion
-  candidate; if either breaks, the table's form-(iv) row keeps only DEPTH-GRADED.]**
+  robustness/corroboration outcome). **SWAP ARM RATIFIED + FROZEN + RUN s210 →
+  [`result/blimp-swap-arm-v1`](findings/results/blimp-swap-arm-v1.md): SWAP-INCONCLUSIVE — R1 NOT
+  SWAP-STABLE → REFUSED promotion.** Design [`design/blimp-swap-arm-v1`](../experiments/designs/blimp-swap-arm-v1.md);
+  decision [`decisions/resolved/blimp-swap-arm-design`](decisions/resolved/blimp-swap-arm-design.md) ratified
+  s210 (ADOPT-WITH-MODIFICATION **Q1-A / Q2-B / Q3-A** + G-coverage + G-margin-justification; the modification
+  = Q2 A→B, POS read from the published 2012 SUBTLEX-US-with-PoS file). Frozen + built (G5-plus verifier
+  byte-identical reproduction) + gate-reviewed (freeze critic GO-WITH-CONDITIONS, over the freeze vote's
+  NO-GO on reasoned grounds) + run (~$1.34, 7,200 calls, 0 errors) + post-run verifier (CONFIRMED, every
+  figure reproduced). **The deep-scope stratum dropped on 3/3** (Δ̄acc −0.095/−0.057/−0.072, all CIs exclude
+  0 — deep DROPS 3/3 by the PREREG prose rule; INCONCLUSIVE by the stricter coded whole-CI rule), so per G8
+  (SURVIVES ∧ SWAP-STABLE required) **R1 is not promoted**; but the drop is **confounded by a +0.204 C4
+  pretraining-frequency gap** (swap words SUBTLEX-matched but ~1.6× rarer in pretraining), so it is not a
+  clean memorization signal either. **The C8 chain CLOSES: R1 stays descriptive/non-promotable, the
+  form-(iv) row keeps only DEPTH-GRADED.** Honest successor: a **C4-frequency-matched** swap arm (and/or a
+  verb-swap arm with a valence guard).]**
   Below: the original item text (for the record).
   *(Original item:)* The resource sits idle: 67k human-validated minimal
   pairs, CC-BY, already cataloged. A selected-paradigm sweep (determiner–noun agreement near

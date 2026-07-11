@@ -50,7 +50,7 @@ contingent-artifacts:
 ## What is (and is NOT) at stake
 
 Binding condition **G8** of the ratified C8 design
-([`decisions/resolved/blimp-profile-frequency-control-design`](../resolved/blimp-profile-frequency-control-design.md))
+([`decisions/resolved/blimp-profile-frequency-control-design`](blimp-profile-frequency-control-design.md))
 made the **content-word-swap arm** of Q1-C **required for a human-comparison PROMOTION** of
 [`result/blimp-forced-choice-sweep-v1`](../../findings/results/blimp-forced-choice-sweep-v1.md)'s reading
 **R1 PROFILE-ALIGNED**. The s208 **covariate arm** already returned **SURVIVES-COVARIATE 3/3**

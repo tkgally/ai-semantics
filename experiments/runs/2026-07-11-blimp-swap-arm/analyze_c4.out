@@ -1,0 +1,25 @@
+=== BLiMP swap arm — results (s210) ===
+selected shallow=['determiner_noun_agreement_2', 'determiner_noun_agreement_1', 'regular_plural_subject_verb_agreement_1']  deep=['sentential_negation_npi_scope', 'only_npi_scope', 'superlative_quantifiers_1']
+coverage: determiner..=0.97  determiner..=0.98  regular..=0.70  sentential..=0.98  only..=0.97  superlative..=0.98   (floor 0.5; excluded NONE)
+
+[A] ans1=0.390 poslock=0.220 n_calls=2400
+    shallow Δ̄=-0.0300 CI[-0.0500,-0.0150] n=300  within±0.05=True drops=False
+    deep    Δ̄=-0.0946 CI[-0.1199,-0.0709] n=296  within±0.05=False drops=True
+    per-paradigm Δacc: determ=-0.025  determ=-0.015  regula=-0.050  senten=-0.083  only=-0.069  superl=-0.120
+
+[B] ans1=0.492 poslock=0.147 n_calls=2400
+    shallow Δ̄=-0.0333 CI[-0.0533,-0.0150] n=300  within±0.05=False drops=False
+    deep    Δ̄=-0.0567 CI[-0.0950,-0.0183] n=300  within±0.05=False drops=False
+    per-paradigm Δacc: determ=-0.030  determ=-0.015  regula=-0.055  senten=-0.070  only=-0.020  superl=-0.080
+
+[C] ans1=0.429 poslock=0.156 n_calls=2400
+    shallow Δ̄=-0.0267 CI[-0.0450,-0.0117] n=300  within±0.05=True drops=False
+    deep    Δ̄=-0.0717 CI[-0.0950,-0.0483] n=300  within±0.05=False drops=False
+    per-paradigm Δacc: determ=-0.020  determ=+0.000  regula=-0.060  senten=-0.075  only=-0.075  superl=-0.065
+
+--- VERDICT ---
+SWAP: SWAP-INCONCLUSIVE | NEITHER (SWAP-INCONCLUSIVE)
+instrument-failure: False
+
+--- G-freq-pretraining (C4 pretraining-proxy, 3000000 sentences) ---
+  orig mean log-C4 2.8171  swap 2.6136  gap(orig−swap) +0.2036  (zero-rate orig 0.0 / swap 0.0228)
