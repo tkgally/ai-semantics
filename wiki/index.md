@@ -37,9 +37,9 @@ Standing references:
 
 ### Decisions — open
 
-67 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+68 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/blimp-profile-frequency-control-design.md`](decisions/open/blimp-profile-frequency-control-design.md) — BLiMP profile-alignment frequency control (C8 promotion-prep) — the value-laden gates: the control strategy (Q1: covariate vs swap arm vs both), the frequency proxy (Q2… · **open**
+*(none)*
 
 ### Base — concepts
 
@@ -462,6 +462,7 @@ Standing references:
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
 - `experiments/runs/2026-07-11-blimp-frequency-control-design/` (no README)
+- `experiments/runs/2026-07-11-blimp-frequency-control/` (no README)
 - `experiments/runs/2026-07-10-fresh-subrelation-cue-strength-scout/` (no README)
 - `experiments/runs/2026-07-10-decoupling-fresh-inventory-scout/` (no README)
 - `experiments/runs/2026-07-10-blimp-forced-choice-sweep-design/` (no README)
