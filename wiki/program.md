@@ -160,7 +160,20 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   within-panel output; **R1 PROFILE-ALIGNED 3/3** (ρ_prof +0.54–0.63, panel hard where humans are hard) but
   **descriptive/non-promotable this run per C8** (training-frequency confound control deferred to a
   promotion-prep session); **R2h TRACKS-DIP 2/3** (the panel's deep-contrast dip ≈ the human dip, not larger).
-  Absolute accuracy 0.87–0.94 = contamination upper bound. Below: the original item text (for the record).
+  Absolute accuracy 0.87–0.94 = contamination upper bound.
+  **C8 promotion-prep DESIGN landed s207 → [`design/blimp-profile-frequency-control-v1`](../experiments/designs/blimp-profile-frequency-control-v1.md);
+  decision [`decisions/open/blimp-profile-frequency-control-design`](decisions/open/blimp-profile-frequency-control-design.md)
+  opened (Q1 control strategy / Q2 frequency proxy — the crux / Q3 promotion rule; provisional defaults
+  Q1-A/Q2-A/Q3-A). Fresh-agent pre-run critic (verdict authority) + one non-Anthropic vote (`gpt-5.4-mini`,
+  $0.0042) both GO-WITH-CONDITIONS and converge on Q1-C (the content-word-swap arm required for a
+  *promotion*; the $0-model-cost corpus-frequency covariate alone — reusing the frozen s205 accuracies —
+  earns only a robustness result). Three critic blockers discharged in-design (the `build_cooc_c4.py`
+  "byte-reuse n-gram counting" misdescription — no n-gram counter exists → G1′; surface-vs-construction
+  scope caveat → G3′; collinearity INCONCLUSIVE branch → G6); provenance + anchor CLEAN; G1′–G8 bind the
+  freeze. Ratifiable s208+; freeze + run after ratification. If R1 survives + (per G8) the swap arm holds,
+  R1 becomes the program's first broad human-anchored grammatical-competence promotion candidate; if it
+  breaks, the table's form-(iv) row keeps only DEPTH-GRADED.]**
+  Below: the original item text (for the record).
   *(Original item:)* The resource sits idle: 67k human-validated minimal
   pairs, CC-BY, already cataloged. A selected-paradigm sweep (determiner–noun agreement near
   AANN; NPIs; quantifiers) is cheap and human-agreement-anchored. Design + critic first.
