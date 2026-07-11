@@ -1,0 +1,31 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "usage": {
+    "prompt_tokens": 1424,
+    "completion_tokens": 696,
+    "total_tokens": 2120,
+    "cost": 0.0042,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0042,
+      "upstream_inference_prompt_cost": 0.001068,
+      "upstream_inference_completions_cost": 0.003132
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "billed_cost": 0.0042,
+  "error": null,
+  "content": "1. **Overall vote: GO-WITH-CONDITIONS**\n\nThis is a defensible control plan **only if** you treat the frequency control as a **sensitivity analysis / promotion gate**, not as dispositive proof. The main weakness is residual confounding from the proxy\u2019s mismatch to actual training exposure.\n\n2. **Per-gate votes**\n\n- **Q1: C** \u2014 Best design. Construction-frequency control and swap arm target different failure modes; together they are complementary, not redundant.  \n- **Q2: C** \u2014 If the goal is a training-frequency confound control, use the most literal construction-level proxy available. Bigram/trigram familiarity is too lexical; detectability margin is too entangled with the hypothesis.  \n- **Q3: A** \u2014 Correct. Keep this as a separate promotion gate, not a claim-writing step. It preserves the distinction between a controlled result and a promotable claim.\n\n3. **Single biggest methodological risk + one freeze-time condition**\n\n- **Biggest risk:** the frequency proxy may be too weakly aligned with actual pretraining exposure, so a \u201csurvives control\u201d result could still be confounded, and a \u201cbreaks\u201d result could be an over-control artifact if the proxy absorbs genuine structure.\n- **Add this freeze-time condition:** pre-register a **proxy-validity audit** before looking at model outcomes: show the chosen F(p) has a nontrivial, directionally sensible relation to an external frequency benchmark or a held-out human familiarity proxy, and fix one primary F definition plus one pre-specified sensitivity variant. No post hoc proxy tuning.\n\n4. **Is the covariate alone strong enough, or is the swap arm needed?**\n\nThe covariate **alone is not strong enough** to license a human-comparison promotion. Reusing the already-known accuracies and partialling a corpus-frequency proxy can tell you whether the R1 correlation survives one specific adjustment, but it cannot separate **construction-frequency confounding** from **residual lexical familiarity, detectability, or proxy misspecification**. The swap arm is needed to test a different causal channel: exact-string memorization / item-specific lexical support. If you want a credible promotion review, **both** are preferable: the covariate for construction-frequency control and the swap arm for a memorization sanity check. Without the swap arm, a surviving partial rho is still too vulnerable to the \u201cproxy not target\u201d objection.\n\n5. **Any place it looks aimed at a desired result?**\n\n**Yes, a few spots.**\n\n- The **SURVIVES/BREAKS bands** are fine in principle, but the explicit mention of a \u201cpromotion-review candidate\u201d plus a note that the claim is written later is good separation; still, any thresholding scheme can be tuned to favor a preferred narrative.  \n- The phrase **\u201cfresh freeze critic checks the recipe was not tuned to preserve/kill rho\u201d** is appropriate, but it also signals real concern that the proxy choice may be outcome-shaped.  \n- The biggest \u201caimed\u201d risk is **Q2 B**: calling the detectability margin a \u201cconservative sensitivity arm\u201d while acknowledging it may strip genuine shared structure is honest, but it is also the sort of control that can be selected because it tends to break the result. I would keep it only as pre-named sensitivity, never as a decision gate.",
+  "n": 1,
+  "n_missing": 0
+}
