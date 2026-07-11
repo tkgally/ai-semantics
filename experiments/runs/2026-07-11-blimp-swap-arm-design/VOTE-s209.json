@@ -1,0 +1,31 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "usage": {
+    "prompt_tokens": 1968,
+    "completion_tokens": 695,
+    "total_tokens": 2663,
+    "cost": 0.0046035,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0046035,
+      "upstream_inference_prompt_cost": 0.001476,
+      "upstream_inference_completions_cost": 0.0031275
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "billed_cost": 0.0046035,
+  "n": 1,
+  "n_missing": 0,
+  "error": null,
+  "content": "1. **Overall verdict: GO-WITH-CONDITIONS.**  \n   The arm is directionally right: it tests exact-string / lexical memorization without reusing the already-known accuracies. But it still leaves enough room for construction-level and selectional confounds that the result should bound, not license, promotion unless the frozen recipe and exclusion rules are very tight.\n\n2. **Per-gate votes**\n   - **Q1: A** \u2014 Best of the options because it is accuracy-blind and re-runs originals fresh, preserving a clean within-session delta; still, 3+3 is a bit thin for stability, so the stratum split should be predeclared and not adjusted post hoc.\n   - **Q2: A** \u2014 Strongest primary choice: human-validated frequency norm, POS-preserved, and recipe-frozen. B is cleaner for POS but introduces a fetch/licensing dependency; C reuses the confounded corpus-family proxy and should stay secondary only.\n   - **Q3: A** \u2014 Appropriate if the claim remains out-of-session and the procedure is purely mechanical plus logged exclusions. B imports an additional model judgment; C is overclaiming and should be rejected.\n\n3. **Biggest methodological risk + freeze-time condition**\n   - **Biggest risk:** **selectional anomaly / residual grammaticality drift** after content-word swapping. Even with POS and frequency matching, novel words can create odd selectional preferences, semantic implausibility, or accidental cue shifts that change difficulty for reasons unrelated to memorization.\n   - **Add freeze-time condition:** require a **pre-registered exclusion list and audit on semantic/selectional sanity**, with a fixed rule that any swapped item failing either (i) native-like dictionary attestation / corpus attestation for the exact inflected form, or (ii) a blind mechanical sanity screen for argument structure / subcategorization compatibility, is dropped before scoring.\n\n4. **Is this strong enough to license promotion candidacy?**\n   **Not quite as stated.** SWAP-STABLE plus SURVIVES-COVARIATE substantially weakens the \u201cmemorized exact strings / raw word frequency\u201d story, but a residual confound remains: **construction-level familiarity and item-template difficulty**. The swap preserves the closed-class skeleton, so if some paradigms are simply easier because of the construction itself, or because the novel substitutions alter selectional fit in subtly systematic ways, both arms can still be jointly positive without establishing that the panel tracks human grammatical difficulty in the intended sense. So I\u2019d allow only a **bounded promotion candidacy**, explicitly limited to \u201cnot explained by exact-string memorization or the tested surface frequency proxy,\u201d not a full human-comparison claim.\n\n5. **Aimed at a desired result / anti-cheat?**\n   **Yes, one concern:** Q1\u2019s \u201cchoose paradigms by deterministic SWAPPABILITY score\u201d is fine as a design principle, but the **shallow/deep 3+3 split and the 0.05 thresholds** look somewhat outcome-shaped unless they were frozen before inspecting any swap results. Also, the \u201cSWAP-STABLE iff within-stratum mean |Delta-acc| <= 0.05 on both strata for >=2/3 models\u201d rule is asymmetric in a way that can soften failure modes; it should be explicitly justified as a sensitivity threshold, not a convenience cutoff."
+}
