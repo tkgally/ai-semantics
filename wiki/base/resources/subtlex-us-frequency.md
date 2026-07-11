@@ -128,8 +128,9 @@ The limits are sharp and worth stating so no later session over-reads it:
   closed class** (determiners, modals, subordinators, quantifiers); the norm only supplies
   their frequencies, not their grammatical category.
 - **The plain-text 2009 list carries no part-of-speech.** Selecting frequency-matched *content*
-  controls by PoS would need the separate "SUBTLEX-US with PoS information" file (Brysbaert,
-  New & Keuleers 2012), which is **not fetched** — the closed-class stoplist used to keep the
+  controls by PoS needs the separate "SUBTLEX-US with PoS information" file (Brysbaert, New &
+  Keuleers 2012), **fetched + sha256-pinned 2026-07-11 (s210)** for the swap arm (see the
+  provenance blockquote above); on the plain 2009 file the closed-class stoplist used to keep the
   candidate pool open-class is a convenience filter, not a PoS annotation.
 - **Word-form frequency aggregates over senses and PoS.** A single `Lg10WF` per orthographic
   form mixes, e.g., *will* the modal with *will* the noun/verb. The build session must treat
@@ -178,7 +179,8 @@ The limits are sharp and worth stating so no later session over-reads it:
 | Function-word swap-target frequencies + within-pair gaps | **VERIFIED (computed this session)** | `function-word-seed-frequencies.csv` |
 | File: 3,298,971 bytes, sha256 c5f86f06… | **VERIFIED (downloaded this session)** | curl from subtlexus2.zip, 2026-06-21 |
 | Formal license (CC/GPL) | **NONE FOUND** | No license string on the landing page |
-| Part-of-speech per word | **NOT IN FETCHED FILE** | Needs the separate 2012 "with PoS" file (not fetched) |
+| Part-of-speech per word (2009 plain file) | **NOT IN 2009 FILE** | Word-form frequencies only |
+| Part-of-speech per word (2012 with-PoS file) | **VERIFIED (fetched 2026-07-11, s210)** | `Dom_PoS_SUBTLEX` column, xlsx sha256 `3a8cb93a…4167a7`; used for the swap arm's Q2-B |
 | Sense- or lemma-level frequency | **NOT PROVIDED** | Word-form counts aggregate over senses/PoS |
 
 ## Pointer for next visit
@@ -194,5 +196,7 @@ The limits are sharp and worth stating so no later session over-reads it:
 3. **Do not over-reach to the indicator.** SUBTLEX-US cannot anchor the entailment-flip /
    forced-choice indicator (Q2). A BLiMP/NLI human backing is the separate, optional,
    fetch-and-catalogue-first Posture-2 upgrade — it never blocks the within-model run.
-4. **PoS upgrade if needed.** If auditable PoS-based content-control selection is wanted,
-   fetch the 2012 "SUBTLEX-US with PoS information" file and extend this page.
+4. **PoS upgrade — DONE (2026-07-11, s210).** Auditable PoS-based content-control selection was
+   wanted for the BLiMP swap arm; the 2012 "SUBTLEX-US with PoS" file was fetched + sha256-pinned
+   and this page extended (see the provenance blockquote near the top). `Dom_PoS_SUBTLEX` is now
+   the auditable POS source for that probe's Q2-B.
