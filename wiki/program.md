@@ -108,6 +108,13 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   corner **as a measured internal-contrast ordering-axis reading** — taxonomic hierarchical position (IS-A
   depth), 2/3, between-relation, Hearst-arm-lost, within-distributional, **not a promoted claim**; v1
   `status: superseded` + banner, body kept visible; index standing-refs retargeted to v2; $0.)
+  **s206: the s205 BLiMP grammar-side depth gradient folded into v2 as a new measured form (iv)** — a dated
+  update box + a "grammar-side depth axis, measured directly across 40 paradigms" section: DEPTH-GRADED 3/3
+  (within-panel, verdict-bearing) + PROFILE-ALIGNED 3/3 (imported human-comparison reading of the ordering
+  axis, **descriptive-only/non-promotable per C8**), kept strictly apart from the beater rows (no
+  shadow-stripping control); the grammatical pole's ordering moved from two arranged endpoints to a directly
+  measured, human-shared axis; one update box (well under the >3 edition threshold); fresh-agent coherence
+  pass NO BLOCKERS + 2 SHOULD-FIX applied; $0.
 - **A2a Powered confirmations (standing habit, now [`PROTOCOL.md`](../PROTOCOL.md) §4).** Any line about to
   carry a claim gets a fresh-item powered re-run at ~100–150 items (~10× founding-era counts;
   still ≲$1 at observed prices) so the claim states a magnitude with an interval, not a
