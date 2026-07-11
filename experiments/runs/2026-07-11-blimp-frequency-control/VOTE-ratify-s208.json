@@ -1,0 +1,31 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "usage": {
+    "prompt_tokens": 1486,
+    "completion_tokens": 441,
+    "total_tokens": 1927,
+    "cost": 0.003099,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.003099,
+      "upstream_inference_prompt_cost": 0.0011145,
+      "upstream_inference_completions_cost": 0.0019845
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "billed_cost": 0.003099,
+  "n": 1,
+  "n_missing": 0,
+  "error": null,
+  "content": "1. **Overall: RATIFY-WITH-CONDITIONS**\n\n2. **Per-gate vote**\n- **Q1: C** \u2014 The stated crux is a training-frequency confound; a covariate-only analysis is acceptable for a robustness pass, but the swap arm is the more credible promotion-grade control because it directly probes the memorization/frequency channel rather than modeling it.\n- **Q2: A** \u2014 Lowest-risk primary proxy: it is cheap, preregistrable, and less entangled with the outcome structure than construction-level or depth-like proxies; treat it explicitly as a surface-familiarity control, not as construction frequency.\n- **Q3: A** \u2014 Correctly separates control from claim promotion; the control session should not itself become the place where the claim is \u201cwon,\u201d only where promotion eligibility is determined.\n\n3. **G8 binding?**\n- **Y** \u2014 For a promotion claim, yes: covariate-only control is too vulnerable to proxy-misspecification and over-control disputes. But this should be framed as a policy about evidentiary status, not a substantive assumption that the covariate arm is useless.\n\n4. **Biggest residual risk + one freeze-time condition**\n- **Biggest residual risk:** the chosen frequency proxy may still be a poor stand-in for the actual confound, so a \u201ccontrolled\u201d partial rho could be either under-controlled (residual memorization/familiarity) or over-controlled (stripping genuine shared difficulty structure).\n- **Add at freeze time:** pre-register the exact F(p) counting recipe and threshold handling, and require an ex ante negative control showing the same pipeline returns near-zero association on a scrambled paradigm-to-frequency mapping.\n\n5. **Anti-cheat / desired-result check**\n- **Potentially aimed at a desired result:** the Q1-C + Q3-A combination is somewhat result-favorable in a promotion sense because it preserves a path to a promotable outcome while still permitting a weaker robustness story if the covariate arm fails. That said, the rationale is defensible if the goal is a promotion-grade confound control rather than outcome steering."
+}

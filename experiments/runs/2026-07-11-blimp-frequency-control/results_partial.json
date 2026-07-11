@@ -1,0 +1,93 @@
+{
+ "reading": "COVARIATE ARM (Q1-C covariate component). Per G8: robustness/corroboration only; the deferred swap arm is required for a PROMOTION. Anchor: resource/blimp (human-comparison).",
+ "corr_F_H_spearman": 0.2595,
+ "corr_F_H_sens_spearman": 0.2537,
+ "collinearity_bands": {
+  "low": 0.2,
+  "high": 0.7
+ },
+ "verdict": "SURVIVES-COVARIATE",
+ "n_models_partial_ci_excludes_0": 3,
+ "per_model": {
+  "A": {
+   "raw_rho": 0.6063,
+   "partial_rho": 0.5717,
+   "partial_ci": [
+    0.3085,
+    0.774
+   ],
+   "drop": 0.0345,
+   "ci_excludes_0": true,
+   "p_boot_pos": 1.0
+  },
+  "B": {
+   "raw_rho": 0.5432,
+   "partial_rho": 0.5104,
+   "partial_ci": [
+    0.2253,
+    0.7182
+   ],
+   "drop": 0.0328,
+   "ci_excludes_0": true,
+   "p_boot_pos": 0.9996
+  },
+  "C": {
+   "raw_rho": 0.6278,
+   "partial_rho": 0.6064,
+   "partial_ci": [
+    0.3288,
+    0.7939
+   ],
+   "drop": 0.0213,
+   "ci_excludes_0": true,
+   "p_boot_pos": 1.0
+  }
+ },
+ "per_model_sensitivity_bi_only": {
+  "A": {
+   "partial_rho": 0.5732,
+   "partial_ci": [
+    0.3051,
+    0.7729
+   ],
+   "ci_excludes_0": true
+  },
+  "B": {
+   "partial_rho": 0.5086,
+   "partial_ci": [
+    0.2328,
+    0.7143
+   ],
+   "ci_excludes_0": true
+  },
+  "C": {
+   "partial_rho": 0.6098,
+   "partial_ci": [
+    0.361,
+    0.7945
+   ],
+   "ci_excludes_0": true
+  }
+ },
+ "neg_control_scrambleH_partial": {
+  "A": -0.4013,
+  "B": -0.2748,
+  "C": -0.0926
+ },
+ "neg_control_scrambleF_partial": {
+  "A": 0.6097,
+  "B": 0.5826,
+  "C": 0.6502
+ },
+ "proxy_validity_audit_G7": {
+  "F_vs_unigram_logfreq_spearman": 0.4812,
+  "F_vs_mean_wordlen_spearman": -0.3525,
+  "note": "Predicted before reading the partial: F tracks lexical frequency (strong +) and is shorter-word-heavier (Zipf, -). A failure here downgrades F to descriptive."
+ },
+ "scope": [
+  "Controls R1 only (not R2/R2h).",
+  "Q2-A controls SURFACE-LEXICAL familiarity, NOT construction frequency (G3').",
+  "C4 is a PROXY for the panel's unknown pretraining distribution (G3').",
+  "Covariate arm = robustness/corroboration; swap arm (deferred) required for promotion (G8)."
+ ]
+}

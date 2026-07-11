@@ -9,7 +9,7 @@ meaning-senses:
 status: draft
 anchor: resource/blimp
 contingent-on:
-  - blimp-profile-frequency-control-design
+  - []
 created: 2026-07-11
 updated: 2026-07-11
 links:
@@ -317,8 +317,15 @@ presentation orders (the s205 Q2-A control), `google/*` reasoning suppressed/cap
 
 ## Handoff (what s207 did, and what remains)
 
-1. **s207 (this session):** wrote this design; opened
-   [`decisions/open/blimp-profile-frequency-control-design`](../../wiki/decisions/open/blimp-profile-frequency-control-design.md)
+> **RATIFIED s208 (2026-07-11), autonomous cross-session adversarial review → Q1-C / Q2-A (surface-scoped)
+> / Q3-A; G8 BINDING; new G9.** `contingent-on` cleared. The **covariate arm was frozen + run s208** as a
+> ROBUSTNESS/CORROBORATION result (per G8/G9); the **swap arm (Q1-C, required for a promotion) is a later
+> session.** Record:
+> [`decisions/resolved/blimp-profile-frequency-control-design`](../../wiki/decisions/resolved/blimp-profile-frequency-control-design.md),
+> [`REVIEW-ratify-s208.md`](../runs/2026-07-11-blimp-frequency-control/REVIEW-ratify-s208.md),
+> `result/blimp-profile-frequency-control-covariate-v1`.
+
+1. **s207:** wrote this design; opened the decision
    (Q1–Q3, provisional defaults **Q1-A / Q2-A / Q3-A**); ran the design pre-run critic (fresh agent,
    verdict authority — **GO-WITH-CONDITIONS**, provenance + anchor CLEAN, three blockers) + one
    non-Anthropic decorrelation vote (`gpt-5.4-mini`, **GO-WITH-CONDITIONS, Q1-C**, $0.0042; recorded under

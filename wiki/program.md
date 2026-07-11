@@ -162,17 +162,18 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   promotion-prep session); **R2h TRACKS-DIP 2/3** (the panel's deep-contrast dip ≈ the human dip, not larger).
   Absolute accuracy 0.87–0.94 = contamination upper bound.
   **C8 promotion-prep DESIGN landed s207 → [`design/blimp-profile-frequency-control-v1`](../experiments/designs/blimp-profile-frequency-control-v1.md);
-  decision [`decisions/open/blimp-profile-frequency-control-design`](decisions/open/blimp-profile-frequency-control-design.md)
-  opened (Q1 control strategy / Q2 frequency proxy — the crux / Q3 promotion rule; provisional defaults
-  Q1-A/Q2-A/Q3-A). Fresh-agent pre-run critic (verdict authority) + one non-Anthropic vote (`gpt-5.4-mini`,
-  $0.0042) both GO-WITH-CONDITIONS and converge on Q1-C (the content-word-swap arm required for a
-  *promotion*; the $0-model-cost corpus-frequency covariate alone — reusing the frozen s205 accuracies —
-  earns only a robustness result). Three critic blockers discharged in-design (the `build_cooc_c4.py`
-  "byte-reuse n-gram counting" misdescription — no n-gram counter exists → G1′; surface-vs-construction
-  scope caveat → G3′; collinearity INCONCLUSIVE branch → G6); provenance + anchor CLEAN; G1′–G8 bind the
-  freeze. Ratifiable s208+; freeze + run after ratification. If R1 survives + (per G8) the swap arm holds,
-  R1 becomes the program's first broad human-anchored grammatical-competence promotion candidate; if it
-  breaks, the table's form-(iv) row keeps only DEPTH-GRADED.]**
+  decision [`decisions/resolved/blimp-profile-frequency-control-design`](decisions/resolved/blimp-profile-frequency-control-design.md)
+  (Q1 control strategy / Q2 frequency proxy — the crux / Q3 promotion rule). **RATIFIED s208** (fresh-agent
+  reviewer RATIFY-WITH-MODIFICATION + convergent non-Anthropic vote `gpt-5.4-mini` $0.003099): **Q1-C /
+  Q2-A (surface-scoped) / Q3-A; G8 BINDING** (covariate arm alone = robustness/corroboration; swap arm
+  required for a *promotion*); **new G9** (staging/labeling honesty). The three s207 critic blockers were
+  discharged in-design (the `build_cooc_c4.py` no-n-gram-counter correction → G1′; surface-vs-construction
+  scope → G3′; collinearity INCONCLUSIVE branch → G6). **COVARIATE ARM frozen + run s208** ($0 model cost,
+  reusing the frozen s205 accuracies) → [`result/blimp-profile-frequency-control-covariate-v1`](findings/results/blimp-profile-frequency-control-covariate-v1.md) (the
+  robustness/corroboration outcome). The **swap arm** (Q1-C, required for a promotion per G8) is a later
+  session. If R1 survives the covariate AND (later) the swap arm holds, R1 becomes the program's first
+  broad human-anchored grammatical-competence promotion candidate; if either breaks, the table's form-(iv)
+  row keeps only DEPTH-GRADED.]**
   Below: the original item text (for the record).
   *(Original item:)* The resource sits idle: 67k human-validated minimal
   pairs, CC-BY, already cataloged. A selected-paradigm sweep (determiner–noun agreement near
