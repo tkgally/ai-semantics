@@ -12,10 +12,12 @@ status: draft
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-09
-updated: 2026-07-09
+updated: 2026-07-11
 links:
   - rel: supersedes
     target: theory/shadow-depth-table-v1
+  - rel: depends-on
+    target: result/blimp-forced-choice-sweep-v1
   - rel: operationalizes
     target: essay/shadow-depth-cross-cuts-grain
   - rel: refines
@@ -86,7 +88,24 @@ links:
 >
 > *(`anchor: internal-contrast-only` on the front-matter means only that **this arrangement adds no new
 > human comparison** — three of its beater rows carry their own human anchors, stated in the anchor column
-> and shown standing; the front-matter label governs the page's own claim, not its rows'.)*
+> and shown standing; the front-matter label governs the page's own claim, not its rows'. **The s206 BLiMP
+> addition below imports a human-comparison reading *of the ordering axis itself* (R1, PROFILE-ALIGNED), but
+> at its source-page strength it is descriptive-only and non-promotable under C8, so this page still runs no
+> new human comparison and asserts no human-comparison claim of its own — the `internal-contrast-only` label
+> stands, and the imported reading is displayed with its C8 caveat attached wherever it appears.**)*
+
+> **Update (2026-07-11, session 206) — the grammar-side depth axis is now measured *directly* across 40
+> paradigms, and (descriptively) it appears human-shared.** Until now the grammatical pole's shadow-depth
+> ordering rested on exactly two arranged *endpoints*: the comparative-correlative beater at the shallow end
+> and the presupposition corner at the deep end. The s205 BLiMP forced-choice sweep
+> ([`result/blimp-forced-choice-sweep-v1`](../results/blimp-forced-choice-sweep-v1.md)) populates the axis
+> *between* those poles with a 40-paradigm within-panel measurement — **DEPTH-GRADED 3/3** — and adds the
+> table's first *imported* human-comparison reading *of the ordering axis itself* (**PROFILE-ALIGNED 3/3**,
+> descriptive-only and non-promotable per C8). It enters below as a **new measured form (iv)**, kept
+> strictly apart from the beater rows: see **"The grammar-side depth axis, measured directly"**. No beater
+> or saturated number changed; the grammatical pole's ordering is now measured rather than arranged, and the
+> do-not-over-read caveats travel with it (contamination upper bound, C8 descriptive-only, 40 selected
+> paradigms).
 
 ## What this table is
 
@@ -192,6 +211,56 @@ owed first), and **not** a human comparison. It is the measured *ordering axis* 
 gradient — the strongest state this table has yet reached on the deep side at the lexical pole, and still
 a reading rather than a claim.
 
+## The grammar-side depth axis, measured directly across 40 paradigms (s205 BLiMP — added s206)
+
+The v2 body above orders the **grammatical pole** by shadow-depth using two arranged *endpoints* — the
+comparative-correlative beater (shallow) and the presupposition corner (deep). The s205 BLiMP forced-choice
+sweep ([`result/blimp-forced-choice-sweep-v1`](../results/blimp-forced-choice-sweep-v1.md); design ratified
+s205, 40 on-axis paradigms selected **human-agreement-blind** by a whole-category structural rule, 30 pairs
+× both 2AFC orders × 3 models, 7,200 calls, verifier-REPRODUCED) fills that axis in *between* the two poles
+with a direct 40-paradigm measurement. It carries **two readings that must be read at their exact stated
+strength**, and it is a **fourth measured form (iv)** — a within-panel difficulty gradient by structural
+depth, plus a human-profile-alignment correlation — kept **strictly apart** from the beater rows (no
+shadow-stripping matched control was run, so it makes **no over-and-above residual claim**) and from the
+form-(iii) predictor comparison:
+
+1. **DEPTH-GRADED 3/3 (within-panel, verdict-bearing).** Forced-choice error concentrates on the
+   structurally-deep paradigms — islands, quantifier/NPI scope, long-distance filler-gap (accuracy
+   ≈0.81–0.92) — relative to shallow-local agreement — adjacent determiner–noun / regular subject–verb
+   (≈0.98–0.99). Shallow-minus-deep accuracy gap **+0.111 / +0.168 / +0.070** (claude / gpt / gemini), each
+   ≥ the pre-registered +0.05 margin. This is the grammar-side depth ordering the table is built on,
+   **measured across 40 paradigms** rather than inferred from two arranged corners.
+2. **PROFILE-ALIGNED 3/3 (human-comparison, DESCRIPTIVE ONLY per C8).** Per-model Spearman of per-paradigm
+   forced-choice accuracy against BLiMP's per-paradigm **human agreement** is positive on all three:
+   ρ_prof **+0.606 [.357,.795] / +0.543 [.260,.736] / +0.628 [.368,.799]** (all CIs exclude 0). The panel
+   is hard *where people are hard*. And the panel's deep-contrast dip is *comparable to* the human dip
+   (human depth-gap +0.065; panel−human = +0.046 / +0.103 / +0.005 — **TRACKS-DIP 2/3**, only gpt EXCEEDS),
+   so the grammar-side axis reads as a **shared human–model difficulty structure**, not a model-specific
+   deficit. This is the **first human-comparison reading of the ordering axis itself** on this table — but
+   it is **non-promotable on this run** (binding **C8**: a positive ρ_prof could be inflated by a
+   training-frequency confound — frequent local-agreement constructions are plausibly both human-easy and
+   most-memorized — so R1 is reported directionally until a later session adds the pre-registered
+   training-frequency control; a PROFILE-DIVERGES null would have been reported the same descriptive way).
+
+Three honest limits travel with this row, and none may be dropped when it is cited:
+
+- **Absolute accuracy (0.87–0.94) is a contamination upper bound, never the headline.** BLiMP is synthetic,
+  2019, widely trained on; the load-bearing readings are the *relative* profile (R1) and the *within-panel*
+  gradient (R2), both robust to a roughly-uniform memorization boost (no F3 saturation: SD 0.11–0.15).
+- **Acceptability, not inference; behavioral 2AFC, not logprob; a 40-paradigm selected observed set** (not
+  the full 67; two low-agreement paradigms had no data file on master and were excluded, mildly
+  conservative for R1). Verdicts scope to this frozen panel, not a universal depth law.
+- **It is not a beater row and not a promoted claim.** No matched shadow-stripping control was run, so
+  form (iv) makes no residual-over-the-shadow claim; R1's human-comparison leg is descriptive/non-promotable
+  (C8), R2 is a within-panel gradient. It **strengthens the grammatical pole's ordering from arranged to
+  measured**, and shows that ordering is human-shared — it does not move any corner to the beater side.
+
+So the grammatical pole of this table now reads: a demonstrated shadow-**beater** (CC, promoted claim) at
+the shallow end, a shadow-**saturated** corner (presupposition, under-licensed middle) at the deep end, and
+**between them a directly-measured 40-paradigm within-panel depth gradient (R2)** — the axis is measured,
+not merely arranged — that, on a descriptive reading (R1, non-promotable per C8), **tracks the human
+difficulty profile**, so it appears to be an axis people share rather than a model-specific deficit.
+
 ## What the arranged object shows
 
 1. **Each pole carries a beater and a saturated corner, and grain does not separate them.** The
@@ -219,10 +288,13 @@ a reading rather than a claim.
 
 ## What it does not show (binding — the same bounds as every source row)
 
-- **No new measurement, no new human comparison.** This is an arrangement of existing results. The CC
-  row's ≈87 pp is a **within-model** magnitude (`internal-contrast-only`) and must **not** be read against
-  the human-anchored rows as if commensurable; the human-anchored rows compare a model gradient to a human
-  gradient, a different quantity.
+- **No new measurement, no new human comparison of the page's own.** This is an arrangement of existing
+  results. The CC row's ≈87 pp is a **within-model** magnitude (`internal-contrast-only`) and must **not**
+  be read against the human-anchored rows as if commensurable; the human-anchored rows compare a model
+  gradient to a human gradient, a different quantity. The s206 BLiMP row (form iv) *imports* a
+  human-comparison reading of the ordering axis (R1, PROFILE-ALIGNED), but at source-page strength it is
+  **descriptive-only and non-promotable per C8** — the page runs no new human comparison and asserts no
+  human-comparison claim; the imported reading carries its C8 caveat wherever it is cited.
 - **No fine ordering among the beaters.** The residual forms and CIs are not commensurable, so the table
   orders only coarsely (beater vs saturated, per pole). It does **not** claim CC's shadow is "shallower"
   than sense gradience's, or rank the beaters by residual size (decision default, question 3).
@@ -253,6 +325,12 @@ a reading rather than a claim.
 - **A beater fails to replicate, or its shadow-control turns out not to hold** → that row leaves the
   shallow end and the "each pole has a beater" half weakens. (The dative's gpt member is already the
   fragile case: a further replication that pushed claude or gemini's shift toward zero would matter.)
+- **The grammar-side depth axis (s205 BLiMP, form iv) is re-tested** → the PROFILE-ALIGNED reading (R1) is
+  descriptive-only under C8. A later session that adds the pre-registered training-frequency control and
+  **replicates** R1 promotes the human-comparison ordering-axis reading toward a claim (the program's first
+  broad human-anchored grammatical-competence claim) and this row hardens; a control that shows ρ_prof is
+  frequency-driven **breaks** R1 and the row keeps only the within-panel DEPTH-GRADED gradient (R2). Either
+  outcome revises this section.
 - **A new controlled probe lands** (any A1/A2 item with a named control + CI) → it is added as a new beater
   row in the same edition, keeping the table the live roll-up the program intends.
 - **The row-inclusion decision is reopened and re-ratified differently** → the ratified default
@@ -301,4 +379,8 @@ measured — not merely argued — that each grain also has a corner where the b
 returns something weaker than a beater: an under-licensed middle at the grammatical pole, and at the lexical
 pole a relation-recovery gradient whose ordering is a taxonomic-hierarchy reading rather than a raw
 co-occurrence one. Neither saturated corner is a clean flat null, and the lexical corner's ordering axis is
-a supported reading, not a promoted claim.*
+a supported reading, not a promoted claim.* And, from s206, the grammatical pole's shadow-depth axis is no
+longer only two arranged endpoints: the s205 BLiMP sweep measured it directly across 40 paradigms
+(DEPTH-GRADED 3/3, within-panel) and — descriptively, R1 non-promotable per C8 — found it *tracks the human
+difficulty profile*, so the grammar-side ordering is now measured rather than arranged, and appears to be an
+axis people share.
