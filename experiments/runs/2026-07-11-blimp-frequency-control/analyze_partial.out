@@ -1,0 +1,9 @@
+=== BLiMP R1 frequency control — covariate arm (s208) ===
+proxy-validity audit (G7): F vs unigram-logfreq rho=+0.481 (expect strong +),  F vs mean-word-length rho=-0.352 (expect -)
+corr(F,H) Spearman = +0.2595  (bands: |r|<0.2 absent / |r|>0.7 over-control)
+[A] raw rho +0.606 -> partial +0.572 CI[+0.308,+0.774] (excl 0)  drop +0.035  bi-only partial +0.573
+[B] raw rho +0.543 -> partial +0.510 CI[+0.225,+0.718] (excl 0)  drop +0.033  bi-only partial +0.509
+[C] raw rho +0.628 -> partial +0.606 CI[+0.329,+0.794] (excl 0)  drop +0.021  bi-only partial +0.610
+NC scramble-H partial (expect ~0): {'A': -0.4013, 'B': -0.2748, 'C': -0.0926}
+NC scramble-F partial (expect ~raw): {'A': 0.6097, 'B': 0.5826, 'C': 0.6502}
+VERDICT: SURVIVES-COVARIATE   (partial CI excludes 0 on 3/3)

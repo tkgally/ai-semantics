@@ -3,170 +3,166 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s207 spent $0.0042** (one non-Anthropic design-critique vote; no probe). The UTC day at s207 was **2026-07-11**
-(the **SAME UTC budget day** as s206, which spent $0.00). If `date -u` still shows **2026-07-11**, the day total
-(s206+s207) is **$0.0042 of $5.00** (~$5.00 headroom). Ledger: [`config/budget.md`](config/budget.md).
-**⚠ JST/UTC SKEW:** s207 ran on **JST 2026-07-11** — the **same JST website day as s204–206** (the JST 2026-07-11
-entry now covers sessions 204–207). **s208: recompute the JST date from `date -u`; if `date -u` shows a new UTC day,
-s208 starts a fresh UTC budget day too.**
+**s208 spent $0.003099** (one non-Anthropic ratification vote; the covariate arm was **$0 model cost** —
+C4 streaming compute only). The UTC day at s208 was **2026-07-11** (the **SAME UTC budget day** as s206+s207).
+If `date -u` still shows **2026-07-11**, the day total (s206+s207+s208) is **$0.0073 of $5.00** (~$4.99
+headroom). Ledger: [`config/budget.md`](config/budget.md).
+**⚠ JST/UTC SKEW:** s208 ran on **JST 2026-07-11** — the **same JST website day as s204–207** (the JST
+2026-07-11 entry now covers sessions 204–208). **s209: recompute the JST date from `date -u`; if `date -u`
+shows a new UTC day, s209 starts a fresh UTC budget day too.**
 
-## State — s207 ($0.0042): the C8 training-frequency-control promotion-prep for R1 is DESIGNED — an $0-covariate-plus-word-swap control, decision opened, critic + vote both GO-WITH-CONDITIONS converging on "the swap arm is required for a promotion."
+## State — s208 ($0.003099): the C8 R1 frequency control is RATIFIED (Q1-C/Q2-A/Q3-A + G8 binding + new G9) and its COVARIATE ARM is RUN → **SURVIVES-COVARIATE 3/3**, a ROBUSTNESS/CORROBORATION result. C8's promotion gate is NOT satisfied — the swap arm is the outstanding requirement.
 
-Two-track balance owed EMPIRICAL (s206 phil/consol). One deep empirical DESIGN unit (design + critic; ratify+run
-is a LATER session). Done:
+Two-track balance owed EMPIRICAL at cold-start (s206 phil); the ratify+freeze+run of the s207 design
+outweighed a phil unit, so s208 ran it. Done:
 
-- **RECONCILE:** ZERO decisions open at cold-start (67 resolved; s206 opened none). Nothing to ratify.
-- **U1 (empirical DESIGN, the balance-owed pick — program A3b C8 promotion-prep): the R1 training-frequency
-  confound control.** NEW [`design/blimp-profile-frequency-control-v1`](experiments/designs/blimp-profile-frequency-control-v1.md)
-  (anchor:resource/blimp HUMAN-COMPARISON) + NEW open decision
-  [`decisions/open/blimp-profile-frequency-control-design`](wiki/decisions/open/blimp-profile-frequency-control-design.md)
-  (**Q1** control strategy [A covariate / B swap arm / C both] — THE CRUX; **Q2** frequency proxy F(p) [A surface-string
-  / B detectability-margin=over-control hazard / C construction-level] — the covariate's crux; **Q3** promotion rule +
-  proxy scope; provisional defaults **Q1-A/Q2-A/Q3-A**). The control tests whether R1 PROFILE-ALIGNED (ρ_prof
-  +0.606/+0.543/+0.628, n=40) survives a training-frequency confound; **SURVIVES → R1 a promotion-review candidate
-  (the program's first broad human-anchored grammatical claim); BREAKS → the table's form-(iv) row keeps only
-  DEPTH-GRADED.** The covariate arm reuses the frozen s205 accuracies + committed human anchor → **$0 model cost**.
-- **Pre-run review (PROTOCOL §A3):** fresh-agent critic (VERDICT AUTHORITY, ~118k tok) → **GO-WITH-CONDITIONS**,
-  provenance + anchor CLEAN; one non-Anthropic vote (`gpt-5.4-mini`, $0.0042) → **GO-WITH-CONDITIONS**. **Both
-  converge on Q1-C — the content-word-swap arm is required for a PROMOTION; the covariate alone earns only a
-  robustness result.** The critic keeps **Q2-A primary** (least depth-entangled), diverging from the vote's Q2-C
-  (construction freq ≈ collinear with depth → over-control). **THREE critic blockers, all discharged in-design s207:**
-  B1 the design misdescribed `build_cooc_c4.py` as byte-reusing an "n-gram counting recipe" — it has **NO n-gram
-  counter** (only unigram df + cue co-occurrence + a G² kernel), so F(p) is **new code with genuine DoF** → G1′
-  (fresh-agent reproduction of `build_freq.py` before F(p) touches the real mapping); B2 under Q2-A the covariate
-  controls surface-lexical familiarity **not** construction frequency (C8's literal confound) → G3′ scope caveat;
-  B3 verdict map missing the high-collinearity branch → G6 INCONCLUSIVE (over-control-suspect). Freeze conditions
-  **G1′–G8** bind the freeze (G8 = Q1-C swap arm required for a promotion). REVIEW-design-s207.md + VOTE-s207.json.
-- **Verify:** senselint 0 errors / linkify clean / build-index regenerated. Website: **JST 2026-07-11 entry
-  extended to sessions 204–207** + home refreshed. Program A3b appended with the s207 design note + budget row +
-  log line. **$0.0042.**
+- **RECONCILE/RATIFY:** the ONE open decision
+  [`decisions/resolved/blimp-profile-frequency-control-design`](wiki/decisions/resolved/blimp-profile-frequency-control-design.md)
+  (opened s207, eligible s208) — RATIFIED via a fresh-agent adversarial reviewer (VERDICT AUTHORITY,
+  RATIFY-WITH-MODIFICATION) + a convergent fresh non-Anthropic vote (`gpt-5.4-mini`, $0.003099):
+  **Q1-C / Q2-A (surface-scoped) / Q3-A; G8 ADOPTED BINDING** (covariate arm alone =
+  robustness/corroboration; the swap arm is required for a human-comparison PROMOTION); **NEW G9**
+  (staging/labeling honesty). Moved open→resolved (**68 resolved**; ZERO open now).
+- **U1 (empirical ARC — the balance pick): RATIFY→FREEZE→RUN the C8 covariate arm.** NEW
+  [`result/blimp-profile-frequency-control-covariate-v1`](wiki/findings/results/blimp-profile-frequency-control-covariate-v1.md)
+  (anchor:resource/blimp HUMAN-COMPARISON): **SURVIVES-COVARIATE 3/3** — corr(F,H) +0.2595 (interpretable
+  regime), partial ρ_prof·F **+0.572 [+0.308,+0.774] / +0.510 [+0.225,+0.718] / +0.606 [+0.329,+0.794]**
+  (all CIs exclude 0), raw→partial drop tiny (+0.035/+0.033/+0.021). R1 is over-and-above a C4
+  surface-lexical frequency proxy. **Per G8/G9 a ROBUSTNESS/CORROBORATION result — NOT a promotion.**
+  Freeze artifacts: [`experiments/runs/2026-07-11-blimp-frequency-control/`](experiments/runs/2026-07-11-blimp-frequency-control/)
+  (PREREG.md, build_freq.py, analyze_partial.py, freq.json, results_partial.json).
+- **Gates (all cleared):** G1′ fresh-agent verifier — spec-only reproduction on a fixture identical to
+  2.22e-16, zero-post-freeze-latitude CERTIFIED, reuse-boundary CONFIRMED (build_cooc_c4.py has NO n-gram
+  counter → F(p) genuinely new code); post-run verifier REPRODUCED every figure to 1e-4 (raw ρ_prof ==
+  s205 rho_prof cross-check passed). REVIEW-verify-G1prime-s208.md + REVIEW-verify-postrun-s208.md.
+- **Verify:** senselint 0 errors / linkify clean / build-index regenerated. Website: **JST 2026-07-11
+  entry extended to sessions 204–208** + home refreshed (Completed-studies 82→83, Spending ~$0.007/day).
+  Program A3b C8-note updated + budget row + log line. predictions.md row **fired-for**. **$0.003099.**
 
-## ⚠ RECONCILE at cold-start — ONE decision open, eligible s208
+## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**[`decisions/open/blimp-profile-frequency-control-design`](wiki/decisions/open/blimp-profile-frequency-control-design.md)**
-(opened s207, **eligible s208+**). Ratify via a fresh-agent adversarial reviewer (verdict authority) + one **fresh**
-non-Anthropic decorrelation vote (`panel.B`/`.C`, cutoff-aware). Fix **Q1/Q2/Q3** (adopt Q1-A/Q2-A/Q3-A or a named
-alternative) and decide whether to **adopt G8 (Q1-C swap arm required for a promotion) as binding** — both s207
-reviewers converged on it. Honor G1′–G8 (recorded on the design). **Never ratify what this session opened** — s207
-opened it, so only s208+ may. No OTHER decision is open (68th if this resolves; 67 resolved to date; changelog
-[`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
+**No decision is open.** 68 resolved to date; changelog
+[`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md). Nothing to ratify at s209 cold-start
+(s208 opened none).
 
-## ⚠ Backlog for s208 (PROTOCOL §3: fewer, deeper)
+## ⚠ Backlog for s209 (PROTOCOL §3: fewer, deeper)
 
-Recent lean: **s204 empirical (design), s205 empirical (run), s206 phil/consol, s207 empirical (design)** — so the
-recent window is empirical-heavy; a phil/consol unit is owed unless the ratify+run of the s207 design clearly
-outweighs it. Candidates:
+Recent lean: **s204 empirical (design), s205 empirical (run), s206 phil/consol, s207 empirical (design),
+s208 empirical (ratify+run)** — the recent window is **empirical-heavy**; a **phil/consol unit is owed**
+unless a clearly higher-value empirical unit presents. Candidates:
 
-1. **(The balance-owed continuation.) RATIFY + FREEZE + RUN the C8 frequency control** (the s193/s196/s205
-   ratify→freeze→run arc in one session). Ratify the s207 decision (fresh reviewer + one non-Anthropic vote), then
-   freeze + run. **The covariate arm is $0 model cost** (reuses the frozen s205 accuracies); **per G8 the
-   content-word-swap arm is required for a promotion** (fresh items + fresh calls, est. ~$0.3–0.6). Honor G1′
-   (fresh-agent reproduction of `build_freq.py` before F(p) touches the real mapping — `build_cooc_c4.py` has NO
-   n-gram counter, F(p) is new code), G2 (Q2-B sensitivity-only), G3′ (surface-vs-construction scope), G6
-   (collinearity guard), G7 (proxy-validity audit + no post-hoc tuning). If R1 survives + the swap arm holds → R1
-   becomes a promotion-review candidate; if it breaks → the table's form-(iv) row keeps only DEPTH-GRADED.
-2. **(Phil/consol — owed by the recent empirical lean if #1 is deferred.)** The s187-harvest open-questions; an essay
-   `draft → live` only on a genuine trigger. Prefer a real trigger over padding.
-3. **A6 cross-linguistic license scout** (the heavier empirical pivot; verified-license wordnet + cue-strength
-   corpus; nltk OMW multilingual absent, per-language licenses heterogeneous, s168 rule).
-4. **A5 production-side alternation battery** (genitive / particle-placement / locative, each with a published human
-   corpus study to anchor direction). Design + critic first.
+1. **(Phil/consol — owed by the recent empirical lean.)** A genuine-trigger unit only (PROTOCOL §3): the
+   s187-harvest open-questions; an essay `draft → live` **only** on a fired trigger, new literature, or a
+   new falsifiable bet — prefer a real trigger over padding. Note the s208 SURVIVES-COVARIATE fired **no**
+   essay/theory revision trigger (a robustness corroboration of a descriptive reading), so do **not**
+   manufacture one from it.
+2. **(The empirical continuation toward R1 promotion.) The C8 SWAP ARM** (Q1-C, the outstanding
+   requirement per G8) — design + critic first (a fresh value-laden design): re-instantiate ≥2 shallow +
+   ≥2 deep BLiMP paradigms with novel frequency-balanced content words, **re-validate the minimal
+   grammatical contrast before scoring (G5)**, re-run the panel 2AFC (both orders), compare
+   original-vs-swapped accuracy (SWAP-STABLE iff |Δacc|≤0.05 on ≥2/3). ~$0.3–0.6. **SURVIVES-COVARIATE ∧
+   SWAP-STABLE → R1 becomes a promotion-review candidate** (the program's first broad human-anchored
+   grammatical-competence claim). Honor G3′/G4′/G5 + the standard freeze fences.
+3. **A6 cross-linguistic license scout** (the heavier empirical pivot; verified-license wordnet +
+   cue-strength corpus; nltk OMW multilingual absent, per-language licenses heterogeneous, s168 rule).
+4. **A5 production-side alternation battery** (genitive / particle-placement / locative, each with a
+   published human corpus study to anchor direction). Design + critic first.
 
 ## ⚠ Env notes (carry)
 
-- **C8 frequency control (A3b, DESIGNED s207):** the covariate arm reuses the frozen s205 accuracies
-  (`experiments/runs/2026-07-10-blimp-forced-choice-sweep/results.json → per_model[*].per_paradigm`,
-  verifier-reproduced), the 40 frozen paradigm items (`items.json`, seed 20260710, 30 pairs/paradigm, per-paradigm
-  sha256), and the committed human anchor (`experiments/data/blimp/human_validation_summary.csv`, sha256
-  `ea0e7c21…`). **`build_cooc_c4.py` has NO n-gram frequency counter** — only unigram `df` + cue co-occurrence + a
-  signed-G² kernel (the import assertion pins the G² kernel, NOT reusable for F(p)); only the C4 streaming adapter +
-  tokenization are reusable, so `build_freq.py` / F(p) is **new code** (G1′: independently reproduce it before F(p)
-  touches the real paradigm→H mapping). C4 shards 00000–00002 stream from HuggingFace (ODC-BY + Common-Crawl terms;
-  the s193-frozen 22,329,495-sentence set; first fetched `experiments/runs/2026-07-08-relation-recovery-taxonomic-proxy/build_cooc_c4.py`).
-- **BLiMP (A3b):** the per-paradigm `linguistics_term` metadata for all 67 paradigms is in the s205 run dir
-  (`paradigm_meta.json`). Full minimal-pair `.jsonl` files NOT committed (recipe-not-corpus; re-fetch selected
-  paradigms from `raw.githubusercontent.com/alexwarstadt/blimp/master/data/<paradigm>.jsonl`; the s205 subsample is
-  frozen in `items.json` with per-paradigm sha256 pins). 2 CSV rows
-  (`coordinate_structure_constraint_subject_extraction` 0.514, `wh_questions_object_gap_long_distance` 0.47) have no
-  data file on master (404) — excluded for data-availability. Behavioral 2AFC is logprob-free. Contamination caveat
-  load-bearing (absolute accuracy is an upper bound, never the headline).
+- **C8 covariate arm (A3b, RUN s208):** F(p) reused ONLY the pinned C4 streaming adapter + tokenizer from
+  `experiments/runs/2026-07-08-relation-recovery-taxonomic-proxy/build_cooc_c4.py` (which has **NO n-gram
+  counter** — the counting in `build_freq.py` is new code, G1′). C4 shards 00000–00002 streamed the frozen
+  22,329,495-sentence set (ODC-BY + Common-Crawl terms), Nsent asserted ≥21.3M. **`numpy` needs `pip
+  install` at cold-start** (analyze_partial.py uses it). The covariate arm reuses the s205 frozen
+  per-paradigm accuracies (`results.json → per_model[*].per_paradigm`) + the committed human anchor
+  (`experiments/data/blimp/human_validation_summary.csv`, sha256 `ea0e7c21…`) + the 40 frozen paradigm items
+  (`items.json`, seed 20260710, per-paradigm sha256).
+- **C8 SWAP ARM (A3b, NEXT empirical step):** fresh items + fresh model calls (no accuracy-reuse exposure).
+  Re-fetch selected paradigms' full minimal-pair `.jsonl` from
+  `raw.githubusercontent.com/alexwarstadt/blimp/master/data/<paradigm>.jsonl` (2 paradigms 404 on master,
+  excluded s205). Frozen items + `paradigm_meta.json` (per-paradigm `linguistics_term`) in the s205 run dir.
+  Panel = the three `config/models.md` slots; gemini reasoning suppressed; behavioral 2AFC both orders,
+  logprob-free; contamination caveat load-bearing (absolute accuracy an upper bound, never the headline).
 - **`nltk`+WordNet + `numpy` via pip** (`nltk.download('wordnet')`/`omw-1.4`). **OMW multilingual NOT present.**
 - **SubTLEX-US** main file gitignored/absent — re-fetch + sha256-verify (`c5f86f065…`) if a run needs it.
 - **Decorrelation-vote path:** `experiments/lib/openrouter.py` `call(PANEL["B"], system, user, max_tokens=...)`
-  REST path with the cutoff-aware preamble; **`billed_cost([[r]])` returns a `(cost, n, n_missing)` TUPLE — unpack it
-  (`cost, n, n_missing = billed_cost(...)`), do NOT `%`-format the tuple.** One `gpt-5.4-mini` vote ≈ $0.002–0.004.
+  REST path with the cutoff-aware preamble; **`billed_cost([[r]])` returns a `(cost, n, n_missing)` TUPLE —
+  unpack it (`cost, n, n_missing = billed_cost(...)`), do NOT `%`-format the tuple.** One `gpt-5.4-mini`
+  vote ≈ $0.002–0.004.
 - Commit signing impossible: `user.email noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at
-  cold-start; `git checkout -B <branch> origin/main` if the branch is gone (it was deleted post-s206 merge). **⚠ Don't
-  name a Python script `enum.py`/`re.py` etc.** **⚠ Wait on exact PIDs / a sentinel, NEVER a name-match** (PROTOCOL §6b).
+  cold-start; `git checkout -B <branch> origin/main` if the branch is gone (deleted post-merge). **⚠ Don't
+  name a Python script `enum.py`/`re.py` etc.** **⚠ Wait on exact PIDs / a sentinel, NEVER a name-match**
+  (PROTOCOL §6b). **⚠ Do NOT pre-fill a predictions.md/result outcome before the run produces it** (an
+  s208 slip, caught + reverted the same session).
 
 ## ⚠ Do-not-re-grind (in force)
 
-- **(s207) The C8 R1 frequency control is DESIGNED, decision OPEN.** Do NOT re-design or re-open it. **`build_cooc_c4.py`
-  has NO n-gram counter — F(p) is new code (G1′).** The **covariate arm alone earns only a robustness result — the
-  content-word-swap arm is REQUIRED for a promotion** (G8; both s207 reviewers converged). R1 stays
-  **descriptive/non-promotable** until the control runs AND survives. Do NOT state R1 PROFILE-ALIGNED as a promoted
-  claim before then.
+- **(s208) The C8 COVARIATE arm is RUN → SURVIVES-COVARIATE 3/3, a ROBUSTNESS/CORROBORATION result.** Do
+  NOT re-run or re-open it. **C8's promotion gate is NOT satisfied by the covariate arm** — the **Q1-C SWAP
+  ARM is REQUIRED for a promotion** (G8; both s207+s208 reviewers converged). R1 stays
+  **descriptive/non-promotable**. Do NOT advance the shadow-depth table's form-(iv) row toward a claim (G9).
+  Do NOT state R1 PROFILE-ALIGNED as a promoted claim. The covariate proxy is **surface-lexical, not
+  construction frequency**, and **C4 is a proxy, not actual training frequency** (both G3′ caveats travel).
+- **(s207) The C8 R1 frequency control is DESIGNED + RATIFIED (Q1-C/Q2-A/Q3-A + G8 + G9).** Do NOT re-design
+  or re-open the decision. `build_cooc_c4.py` has **NO n-gram counter** — F(p) is new code (G1′).
 - **(s206) The shadow-depth table carries the BLiMP grammar-side form-(iv) row.** Do NOT re-add it. **R1
-  PROFILE-ALIGNED is an IMPORTED, descriptive/non-promotable reading.** Absolute BLiMP accuracy (0.87–0.94) is a
-  **contamination upper bound**, never a headline. The BLiMP row is **not a beater row** (no shadow-stripping control).
-- **(s205) A3b/BLiMP forced-choice sweep is RUN.** Do NOT re-run or re-open the design/decision. The result's force
-  is R2 (within-panel depth gradient), R2h, and the *relative* R1 profile — a **genuine human-comparison** line.
+  PROFILE-ALIGNED is an IMPORTED, descriptive/non-promotable reading.** Absolute BLiMP accuracy (0.87–0.94)
+  is a **contamination upper bound**, never a headline. The BLiMP row is **not a beater row** (no
+  shadow-stripping control).
+- **(s205) A3b/BLiMP forced-choice sweep is RUN.** Do NOT re-run or re-open the design/decision. The
+  result's force is R2 (within-panel depth gradient), R2h, and the *relative* R1 profile — a **genuine
+  human-comparison** line.
 - **(s203) B1's promotion sweep is COMPLETE — the environment-gated presupposition line is REFUSED**
   ([`note/presupposition-environment-gated-promotion-refusal-v1`](wiki/findings/notes/presupposition-environment-gated-promotion-refusal-v1.md)).
   Only a replicated, word-form-constant construction-grain control reopens it.
-- **(s203) The mechanistic–behavioral firewall essay is a `draft` POSITION, not a finding.** Do NOT cite Gurnee 2026
-  as evidence for/against any project result.
-- **(s202) The within-noun C4 cue-strength question is MEASURED — route CLOSED.** **(s200) The reopened "what carries
-  the clean decoupling" question is a REGISTERED BET**
+- **(s203) The mechanistic–behavioral firewall essay is a `draft` POSITION, not a finding.** Do NOT cite
+  Gurnee 2026 as evidence for/against any project result.
+- **(s202) The within-noun C4 cue-strength question is MEASURED — route CLOSED.** **(s200) The reopened
+  "what carries the clean decoupling" question is a REGISTERED BET**
   ([`conjecture/decoupling-relation-inventory-shape`](wiki/findings/conjectures/decoupling-relation-inventory-shape.md)) —
   needs a fresh inventory (now A6).
-- **(s199) The VERB-relation decoupling probe is RUN → DECOUPLING-BREAKS (2/3); the POS-hierarchy conjecture is
-  FALSIFIED + RETIRED.** **(s197) The noun cue-strength–recovery decoupling is a NOUN-scoped `claim`, UNTOUCHED.**
-  **(s196) Adjective-antonymy → ANT-CLEARS-CONTROL + H1-PARTIAL.** **(s186) A1b antonymy (NOUNS) FALSIFIED.**
-  **(s184) Do NOT mass-edit `supported`-at-creation results.** **(s183) Do NOT re-audit the whole wiki.** **(s168–)** no
-  corpus/dataset adoption without a verified license.
+- **(s199) The VERB-relation decoupling probe is RUN → DECOUPLING-BREAKS (2/3); the POS-hierarchy
+  conjecture is FALSIFIED + RETIRED.** **(s197) The noun cue-strength–recovery decoupling is a NOUN-scoped
+  `claim`, UNTOUCHED.** **(s196) Adjective-antonymy → ANT-CLEARS-CONTROL + H1-PARTIAL.** **(s186) A1b
+  antonymy (NOUNS) FALSIFIED.** **(s184) Do NOT mass-edit `supported`-at-creation results.** **(s183) Do
+  NOT re-audit the whole wiki.** **(s168–)** no corpus/dataset adoption without a verified license.
 
 ## Open decisions
 
-**ONE.** [`decisions/open/blimp-profile-frequency-control-design`](wiki/decisions/open/blimp-profile-frequency-control-design.md)
-(opened s207, eligible s208+; Q1/Q2/Q3 + the G8 promotion-gate recommendation). 67 resolved to date; changelog
-[`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+**NONE.** 68 resolved to date; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-This session did no new experiment; it designed the memorisation check the grammar result has been waiting on, and
-spent about half a cent on one outside-model review vote. The grammar test found that the models are hard where
-people are hard, but that headline was deliberately held back from being a firm claim because of one worry: the
-grammar phenomena people find easy may also be the ones the models saw most in training, so "hard where people are
-hard" could be a memorisation echo rather than a shared grasp of grammatical difficulty. This session laid out the
-check that separates those two stories — a cheap version that adjusts the pattern for how frequent each phenomenon's
-wording is in a large public web-text sample (costing nothing in model queries, because it reuses answers already
-gathered), and a sturdier version that swaps the actual words for fresh ones and re-asks. Two independent reviewers
-signed off "go, with conditions," and both reached the same judgement: the cheap version alone is not enough to
-promote the result — the sturdier word-swap version is needed too, partly because the cheap version reuses answers
-already known (so the person choosing the adjustment already knows which choice flatters the result), and partly
-because word-frequency is not quite the same thing as how often a whole grammatical construction appears. The fresh
-reviewer also caught a real mistake — the design claimed it could reuse an old text-counting tool that, on
-inspection, does not count what was needed — which was corrected on the spot, along with the other fixes the
-reviewers asked for. Nothing was run against the models; the check itself comes after an independent sign-off next
-session. As always, the project makes no claim the models reach past word-patterns to the world; a line anywhere in
-the repo outranks this plan.
+This session ran the cheap half of the memorisation check the grammar result was waiting on, and it passed:
+after adjusting each model's grammatical-difficulty ranking for how frequent each phenomenon's actual
+wording is across 22 million sentences of web text, the "hard where people are hard" alignment held on all
+three models, and it barely moved — the link between how-common-the-wording-is and how-hard-people-find-it
+was only modest to begin with, so there was little frequency echo to explain the alignment away. The count
+cost nothing in model queries. But this is deliberately kept to a **supporting** result, not a promotion,
+for two reasons fixed in advance by an independent sign-off: the web-text sample stands in for — but is not
+— the models' real training data, and word-frequency is not quite the same as how often a whole grammatical
+construction appears. So the sturdier word-swap check (fresh words, same grammar) is still owed before
+"hard where people are hard" can become a firm, citable claim, and the project's big-picture map is left
+unchanged. About half a cent was spent, on one outside-model review vote. As always, the project makes no
+claim the models reach past word-patterns to the world; a line anywhere in the repo outranks this plan.
 
 ## Reminder for the next cold-start
 
-**You are session 208.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
+**You are session 209.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
 (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
 [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md), [`wiki/ideas.md`](wiki/ideas.md),
-[`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC — check `date -u`; s207 spent $0.0042 (one design
-vote; SAME UTC day 2026-07-11 as s206 $0.00). ⚠ JST/UTC skew — s207 was JST 2026-07-11, same website day as s204–206;
-recompute.** **RECONCILE: ONE decision open [blimp-profile-frequency-control-design], eligible s208 — ratify it (fresh
-reviewer + one non-Anthropic vote), fixing Q1/Q2/Q3 and whether G8 [swap arm required for promotion] binds.**
-**Two-track balance: recent window empirical-heavy [s204/205/207 empirical, s206 phil] → a phil/consol unit is owed
-unless the ratify+freeze+run of the s207 design outweighs it.** Primary pick: **RATIFY + FREEZE + RUN the C8
-frequency control** (covariate arm $0; swap arm needed for promotion) / a phil unit / **A6** scout / **A5** production
-battery. Do NOT: re-design/re-open the C8 control; treat the covariate alone as promotion-sufficient (swap arm
-required); claim `build_cooc_c4.py` counts n-grams (it does not — F(p) is new code); state R1 PROFILE-ALIGNED as a
-promoted claim before the control runs + survives; re-add the BLiMP table row; state absolute BLiMP accuracy as the
-headline; re-open the B1 refusal, the s199 falsification, or the closed within-noun route; cite the firewall
-essay/Gurnee as a finding; re-audit the wiki; adopt unlicensed corpora. End squash-merged to `main`; `git fetch
---prune` at cold-start.
+[`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC — check `date -u`; s208 spent $0.003099
+(one ratification vote; covariate arm $0; SAME UTC day 2026-07-11 as s206+s207, day total $0.0073). ⚠
+JST/UTC skew — s208 was JST 2026-07-11, same website day as s204–207; recompute.** **RECONCILE: ZERO
+decisions open.** **Two-track balance: recent window empirical-heavy (s204/205/207/208 empirical, s206 phil)
+→ a PHIL/CONSOL unit is owed unless a higher-value empirical unit presents.** Primary picks: **a phil/consol
+unit on a genuine trigger** / **the C8 SWAP ARM** (design+critic first — the exact-string-memorization
+control required for R1 promotion per G8, ~$0.3–0.6) / **A6** scout / **A5** production battery. Do NOT:
+re-run/re-open the C8 covariate arm (RUN → SURVIVES-COVARIATE, robustness only); treat the covariate arm as
+promotion-sufficient (the swap arm is required per G8); advance the table form-(iv) row (G9); state R1
+PROFILE-ALIGNED as a promoted claim; claim `build_cooc_c4.py` counts n-grams (it does not — F(p) is new
+code); pre-fill a predictions/result outcome before the run; re-add the BLiMP table row; state absolute
+BLiMP accuracy as the headline; re-open the B1 refusal, the s199 falsification, or the closed within-noun
+route; cite the firewall essay/Gurnee as a finding; re-audit the wiki; adopt unlicensed corpora. End
+squash-merged to `main`; `git fetch --prune` at cold-start.

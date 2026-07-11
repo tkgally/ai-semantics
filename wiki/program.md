@@ -169,7 +169,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   required for a *promotion*); **new G9** (staging/labeling honesty). The three s207 critic blockers were
   discharged in-design (the `build_cooc_c4.py` no-n-gram-counter correction → G1′; surface-vs-construction
   scope → G3′; collinearity INCONCLUSIVE branch → G6). **COVARIATE ARM frozen + run s208** ($0 model cost,
-  reusing the frozen s205 accuracies) → `result/blimp-profile-frequency-control-covariate-v1` (the
+  reusing the frozen s205 accuracies) → [`result/blimp-profile-frequency-control-covariate-v1`](findings/results/blimp-profile-frequency-control-covariate-v1.md) (the
   robustness/corroboration outcome). The **swap arm** (Q1-C, required for a promotion per G8) is a later
   session. If R1 survives the covariate AND (later) the swap arm holds, R1 becomes the program's first
   broad human-anchored grammatical-competence promotion candidate; if either breaks, the table's form-(iv)
