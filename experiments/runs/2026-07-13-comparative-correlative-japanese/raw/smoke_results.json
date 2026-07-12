@@ -1,0 +1,1116 @@
+{
+ "gate": "each model >= 10/12 AND panel mean >= 0.90",
+ "panel_mean_acc": 1.0,
+ "each_ge_10": true,
+ "verdict": "GO",
+ "billed_usd": 0.011609,
+ "per_model": {
+  "A": {
+   "model": "anthropic/claude-sonnet-4.6",
+   "correct": 12,
+   "n": 12,
+   "acc": 1.0,
+   "na": 0,
+   "recs": [
+    {
+     "id": "rain",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 190,
+      "completion_tokens": 6,
+      "total_tokens": 196,
+      "cost": 0.00066,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.00066,
+       "upstream_inference_prompt_cost": 0.00057,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "heat",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 186,
+      "completion_tokens": 6,
+      "total_tokens": 192,
+      "cost": 0.000648,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000648,
+       "upstream_inference_prompt_cost": 0.000558,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "price",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 186,
+      "completion_tokens": 6,
+      "total_tokens": 192,
+      "cost": 0.000648,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000648,
+       "upstream_inference_prompt_cost": 0.000558,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "noise",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 195,
+      "completion_tokens": 6,
+      "total_tokens": 201,
+      "cost": 0.000675,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000675,
+       "upstream_inference_prompt_cost": 0.000585,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "light",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 191,
+      "completion_tokens": 6,
+      "total_tokens": 197,
+      "cost": 0.000663,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000663,
+       "upstream_inference_prompt_cost": 0.000573,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "dog",
+     "gold": "undetermined",
+     "pred": "undetermined",
+     "raw": "不明",
+     "usage": {
+      "prompt_tokens": 186,
+      "completion_tokens": 6,
+      "total_tokens": 192,
+      "cost": 0.000648,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000648,
+       "upstream_inference_prompt_cost": 0.000558,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "wind",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 184,
+      "completion_tokens": 6,
+      "total_tokens": 190,
+      "cost": 0.000642,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000642,
+       "upstream_inference_prompt_cost": 0.000552,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "study",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 188,
+      "completion_tokens": 6,
+      "total_tokens": 194,
+      "cost": 0.000654,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000654,
+       "upstream_inference_prompt_cost": 0.000564,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "book",
+     "gold": "undetermined",
+     "pred": "undetermined",
+     "raw": "不明",
+     "usage": {
+      "prompt_tokens": 186,
+      "completion_tokens": 6,
+      "total_tokens": 192,
+      "cost": 0.000648,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000648,
+       "upstream_inference_prompt_cost": 0.000558,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "sun",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 183,
+      "completion_tokens": 6,
+      "total_tokens": 189,
+      "cost": 0.000639,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000639,
+       "upstream_inference_prompt_cost": 0.000549,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "garden",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 191,
+      "completion_tokens": 6,
+      "total_tokens": 197,
+      "cost": 0.000663,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000663,
+       "upstream_inference_prompt_cost": 0.000573,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "stone",
+     "gold": "undetermined",
+     "pred": "undetermined",
+     "raw": "不明",
+     "usage": {
+      "prompt_tokens": 183,
+      "completion_tokens": 6,
+      "total_tokens": 189,
+      "cost": 0.000639,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000639,
+       "upstream_inference_prompt_cost": 0.000549,
+       "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    }
+   ]
+  },
+  "B": {
+   "model": "openai/gpt-5.4-mini",
+   "correct": 12,
+   "n": 12,
+   "acc": 1.0,
+   "na": 0,
+   "recs": [
+    {
+     "id": "rain",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 154,
+      "completion_tokens": 6,
+      "total_tokens": 160,
+      "cost": 0.0001425,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001425,
+       "upstream_inference_prompt_cost": 0.0001155,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "heat",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 156,
+      "completion_tokens": 6,
+      "total_tokens": 162,
+      "cost": 0.000144,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000144,
+       "upstream_inference_prompt_cost": 0.000117,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "price",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 153,
+      "completion_tokens": 6,
+      "total_tokens": 159,
+      "cost": 0.00014175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.00014175,
+       "upstream_inference_prompt_cost": 0.00011475,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "noise",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 162,
+      "completion_tokens": 6,
+      "total_tokens": 168,
+      "cost": 0.0001485,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001485,
+       "upstream_inference_prompt_cost": 0.0001215,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "light",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 158,
+      "completion_tokens": 6,
+      "total_tokens": 164,
+      "cost": 0.0001455,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001455,
+       "upstream_inference_prompt_cost": 0.0001185,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "dog",
+     "gold": "undetermined",
+     "pred": "undetermined",
+     "raw": "不明",
+     "usage": {
+      "prompt_tokens": 151,
+      "completion_tokens": 6,
+      "total_tokens": 157,
+      "cost": 0.00014025,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.00014025,
+       "upstream_inference_prompt_cost": 0.00011325,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "wind",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 153,
+      "completion_tokens": 6,
+      "total_tokens": 159,
+      "cost": 0.00014175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.00014175,
+       "upstream_inference_prompt_cost": 0.00011475,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "study",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 158,
+      "completion_tokens": 6,
+      "total_tokens": 164,
+      "cost": 0.0001455,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001455,
+       "upstream_inference_prompt_cost": 0.0001185,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "book",
+     "gold": "undetermined",
+     "pred": "undetermined",
+     "raw": "不明",
+     "usage": {
+      "prompt_tokens": 153,
+      "completion_tokens": 6,
+      "total_tokens": 159,
+      "cost": 0.00014175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.00014175,
+       "upstream_inference_prompt_cost": 0.00011475,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "sun",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 149,
+      "completion_tokens": 6,
+      "total_tokens": 155,
+      "cost": 0.00013875,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.00013875,
+       "upstream_inference_prompt_cost": 0.00011175,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "garden",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 153,
+      "completion_tokens": 6,
+      "total_tokens": 159,
+      "cost": 0.00014175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.00014175,
+       "upstream_inference_prompt_cost": 0.00011475,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "stone",
+     "gold": "undetermined",
+     "pred": "undetermined",
+     "raw": "不明",
+     "usage": {
+      "prompt_tokens": 149,
+      "completion_tokens": 6,
+      "total_tokens": 155,
+      "cost": 0.00013875,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.00013875,
+       "upstream_inference_prompt_cost": 0.00011175,
+       "upstream_inference_completions_cost": 2.7e-05
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    }
+   ]
+  },
+  "C": {
+   "model": "google/gemini-3.5-flash",
+   "correct": 12,
+   "n": 12,
+   "acc": 1.0,
+   "na": 0,
+   "recs": [
+    {
+     "id": "rain",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 109,
+      "completion_tokens": 1,
+      "total_tokens": 110,
+      "cost": 0.0001725,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001725,
+       "upstream_inference_prompt_cost": 0.0001635,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "heat",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 108,
+      "completion_tokens": 1,
+      "total_tokens": 109,
+      "cost": 0.000171,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000171,
+       "upstream_inference_prompt_cost": 0.000162,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "price",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 108,
+      "completion_tokens": 1,
+      "total_tokens": 109,
+      "cost": 0.000171,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000171,
+       "upstream_inference_prompt_cost": 0.000162,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "noise",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 113,
+      "completion_tokens": 1,
+      "total_tokens": 114,
+      "cost": 0.0001785,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001785,
+       "upstream_inference_prompt_cost": 0.0001695,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "light",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 110,
+      "completion_tokens": 1,
+      "total_tokens": 111,
+      "cost": 0.000174,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000174,
+       "upstream_inference_prompt_cost": 0.000165,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "dog",
+     "gold": "undetermined",
+     "pred": "undetermined",
+     "raw": "不明",
+     "usage": {
+      "prompt_tokens": 107,
+      "completion_tokens": 1,
+      "total_tokens": 108,
+      "cost": 0.0001695,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001695,
+       "upstream_inference_prompt_cost": 0.0001605,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "wind",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 113,
+      "completion_tokens": 1,
+      "total_tokens": 114,
+      "cost": 0.0001785,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001785,
+       "upstream_inference_prompt_cost": 0.0001695,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "study",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 107,
+      "completion_tokens": 1,
+      "total_tokens": 108,
+      "cost": 0.0001695,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001695,
+       "upstream_inference_prompt_cost": 0.0001605,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "book",
+     "gold": "undetermined",
+     "pred": "undetermined",
+     "raw": "不明",
+     "usage": {
+      "prompt_tokens": 108,
+      "completion_tokens": 1,
+      "total_tokens": 109,
+      "cost": 0.000171,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000171,
+       "upstream_inference_prompt_cost": 0.000162,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "sun",
+     "gold": "decrease",
+     "pred": "decrease",
+     "raw": "減少",
+     "usage": {
+      "prompt_tokens": 106,
+      "completion_tokens": 1,
+      "total_tokens": 107,
+      "cost": 0.000168,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.000168,
+       "upstream_inference_prompt_cost": 0.000159,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "garden",
+     "gold": "increase",
+     "pred": "increase",
+     "raw": "増加",
+     "usage": {
+      "prompt_tokens": 113,
+      "completion_tokens": 1,
+      "total_tokens": 114,
+      "cost": 0.0001785,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001785,
+       "upstream_inference_prompt_cost": 0.0001695,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    },
+    {
+     "id": "stone",
+     "gold": "undetermined",
+     "pred": "undetermined",
+     "raw": "不明",
+     "usage": {
+      "prompt_tokens": 107,
+      "completion_tokens": 1,
+      "total_tokens": 108,
+      "cost": 0.0001695,
+      "is_byok": false,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "cache_write_tokens": 0,
+       "audio_tokens": 0,
+       "video_tokens": 0
+      },
+      "cost_details": {
+       "upstream_inference_cost": 0.0001695,
+       "upstream_inference_prompt_cost": 0.0001605,
+       "upstream_inference_completions_cost": 9e-06
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "image_tokens": 0,
+       "audio_tokens": 0
+      }
+     },
+     "error": null
+    }
+   ]
+  }
+ }
+}

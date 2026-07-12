@@ -196,12 +196,37 @@ symmetric across families, feeding only the bounded covariate. (3) Lead-agent Ja
 weaker instrument than a native human auditor (barred by no-human-subjects) — the smoke gate + the
 non-Anthropic Japanese-fidelity vote (pre-run critic) are the corroborating checks.
 
+## Pre-run critic outcome + applied condition (C1)
+
+Independent pre-run gates ran on the **first** freeze (`items.csv` sha `2d212d92…`): a **fresh-agent
+critic (verdict authority) → GO** (hand-checked all 34 antecedents + all 34 cc-inverse consequents +
+every na-adj/verb antecedent + a machine gold cross-tab [zero deviations] + a live sha match + source
+honesty; no blockers, no gold errors), and a **non-Anthropic decorrelation vote** (`gpt-5.4-mini`,
+$0.011173, [`VOTE-critic-s215.json`](../runs/2026-07-13-comparative-correlative-japanese/VOTE-critic-s215.json))
+→ **NO-GO**, whose one *substantive* reservation (its ctrl-single `より` objection is a design misread —
+single-scale ⇒ undetermined, as in the German arm) was that a few **cc-inverse** consequents express
+dim2's decrease *indirectly* via an antonym rather than negating the named scale, so the inverse-flip
+(a **secondary** signature; the **primary** T1 construction-isolation gap is immune — a mis-read inverse
+still ASSERTS *some* direction, contributing to T1) could attenuate for reasons other than the
+construction.
+
+**C1 APPLIED (German-C1 pattern, before any probe call):** the four cc-inverse consequents both the vote
+and the fresh critic's minor notes independently touched were made **explicitly scale-decreasing**, gold
+unchanged (still `decrease`/`2`) — a strict improvement removing the reviewer disagreement:
+`summer` 酸っぱくなった→**甘みが減った**; `startup` 大胆になった→**慎重でなくなった**; `brochure` 疑った→
+**信頼しなくなった**; `stapler` 淡く沈んだ→**暗くなった**. Re-frozen (new shas below); the change is a
+subset-strengthening of items the verdict-authority reviewer already judged gold-correct, so no
+re-review was owed, but the four edited items were re-self-audited (antecedent unchanged; consequent now
+names the scale's fall directly). The remaining antonym inverses (roman, clinic, theater, curry, current,
+hall, lampshade, gallery) the fresh critic verified as clearly inverting the named scale are kept
+(mirrors German's `ungeduldiger`).
+
 ## Freeze
 
-`sha256(items.csv) = 2d212d92b1cfd3600bb09c8e835a472b7c948520fc37ea6af521cbd9fcd13047`
-(136 items = 34 pairs × 4 forms). `sha256(freq_control.json) = 5b780f98239edc972b3c99051c2d38487141d15dcac8230fff39e68cea49f5b2`.
-Both committed **before** any probe call. Independent pre-run critic (fresh agent + one non-Anthropic
-decorrelation vote, Japanese-fidelity audit) + the smoke test gate precede the run.
+`sha256(items.csv) = 31597d2901cfe68ce54fa1aa393975ec139a8bb1dfe4b9e8de273aa83f5b8b8c`
+(136 items = 34 pairs × 4 forms; the post-C1 freeze). `sha256(freq_control.json) = 02d275a1c72c1bf4d979e5c6e6508fc5b6a2ff9a168ce8f0788a5633ff9e4b94`.
+Both committed **before** any probe call. (First freeze, pre-C1: items `2d212d92…` / freq `5b780f98…`.)
+The smoke test gate precedes the run.
 
 ## Budget
 

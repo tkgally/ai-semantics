@@ -7,8 +7,8 @@ typologically-distant successor to the German replication. Governed by
 `internal-contrast-only` — no human comparison.
 
 ## Files
-- `build_items.py` → `../../data/comparative-correlative-japanese/items.csv` (136 items, FROZEN sha `2d212d92…`).
-- `build_cooc_ja.py` → `freq_control.json` (Q2-B UD-Japanese-GSD freq/co-occurrence via janome, FROZEN sha `5b780f98…`).
+- `build_items.py` → `../../data/comparative-correlative-japanese/items.csv` (136 items, FROZEN post-C1 sha `31597d29…`; pre-C1 `2d212d92…`).
+- `build_cooc_ja.py` → `freq_control.json` (Q2-B UD-Japanese-GSD freq/co-occurrence via janome, FROZEN post-C1 sha `02d275a1…`).
 - `probe.py` — the two-instrument (FC + NLI) all-Japanese probe (816 calls).
 - `smoke.py` — Japanese-competence gate (36 calls; each model ≥10/12 AND panel mean ≥0.90 → GO).
 - `analyze.py` — magnitudes + 95% CIs (cluster bootstrap over pairs, B=2000, seed 20260713) + Q2-B readout.

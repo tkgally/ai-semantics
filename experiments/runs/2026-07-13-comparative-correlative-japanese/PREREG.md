@@ -4,11 +4,13 @@
 [`decisions/resolved/cross-linguistic-cc-replication-scope`](../../../wiki/decisions/resolved/cross-linguistic-cc-replication-scope.md)
 (Q1-C / Q2-B / Q3-A). Full design: [`design/comparative-correlative-japanese-v1`](../../designs/comparative-correlative-japanese-v1.md).
 
-> **FREEZE (before any probe call).**
-> `sha256(items.csv) = 2d212d92b1cfd3600bb09c8e835a472b7c948520fc37ea6af521cbd9fcd13047` (136 items).
-> `sha256(freq_control.json) = 5b780f98239edc972b3c99051c2d38487141d15dcac8230fff39e68cea49f5b2`.
+> **FREEZE (post-C1, before any probe call).**
+> `sha256(items.csv) = 31597d2901cfe68ce54fa1aa393975ec139a8bb1dfe4b9e8de273aa83f5b8b8c` (136 items).
+> `sha256(freq_control.json) = 02d275a1c72c1bf4d979e5c6e6508fc5b6a2ff9a168ce8f0788a5633ff9e4b94`.
 > Instrument shape byte-parallel to the frozen English powered + German CC instruments; the only
 > deliberate change is the target LANGUAGE (English `the…the` / German `je…desto` → Japanese `〜ば〜ほど`).
+> First freeze (pre-C1): items `2d212d92…` / freq `5b780f98…`; C1 = 4 cc-inverse consequents made
+> explicitly scale-decreasing per the pre-run critic (see the design's *Pre-run critic outcome* section).
 
 **Program item:** A6 (cross-linguistic replication), the **Japanese** (stronger, typologically-distant)
 arm — the committed-but-conditional successor the scope decision names (Q1-C), unblocked by the German
