@@ -9,10 +9,12 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-07-02
-updated: 2026-07-11
+updated: 2026-07-12
 links:
   - rel: refines
     target: theory/lexicon-grammar-continuum
+  - rel: depends-on
+    target: result/comparative-correlative-german-v1
   - rel: depends-on
     target: result/blimp-swap-arm-v1
   - rel: depends-on
@@ -108,7 +110,7 @@ links:
 > "if the underlying numbers move on re-run" self-discipline guard (predictions §C) — re-examined in-page,
 > reading weakened, not overturned.
 
-> **Status: revised (2026-07-11 — the s205 grammar-side corroboration's R1 human-shared reading probed for swap-stability and REFUSED promotion, s210/s211; 2026-07-06 antonymy corner falsified on the panel, s186; earlier 2026-07-03; was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
+> **Status: revised (2026-07-12 — the grammatical-pole CC beater gains a cross-linguistic (German) within-model replication, a *partial* discharge of the English-n-gram worry, s213/s214 [strengthening corroboration, no reading changed]; 2026-07-11 — the s205 grammar-side corroboration's R1 human-shared reading probed for swap-stability and REFUSED promotion, s210/s211; 2026-07-06 antonymy corner falsified on the panel, s186; earlier 2026-07-03; was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
 > It introduces **no new empirical claim** and makes **no human comparison of its own**. Every
 > empirical assertion cites the in-repo `result` or `essay` page that carries it, at that page's
 > stated strength. Its two load-bearing empirical inputs on the *shadow-saturated* side — the
@@ -172,7 +174,31 @@ covariation inference ([`result/comparative-correlative-covariation-v1`](../resu
 matched non-CC controls that reuse the *same words* (assertion gap **+80–90 pp**), flip direction on
 inverse-CC items (**95–100%**), and hold on deliberately absurd scale pairs — so the inference is
 keyed to the **construction**, not to the scalar vocabulary, above matched controls that share the
-surface material. That is a construction-grain phenomenon with a genuine over-and-above residual.
+surface material. That is a construction-grain phenomenon with a genuine over-and-above residual —
+and, as of the s213 German replication (corroboration box below), a residual now shown to survive a
+change of language, so it is not merely the most frequent English CC template being pattern-matched.
+
+> **CORROBORATION (2026-07-12, s214) — the grammatical pole's shadow-beater now replicates
+> cross-linguistically, in a language whose CC uses different surface statistics; the English-n-gram
+> deflation is *partially* discharged.** The one lingering deflationary reading of the CC beater above
+> is that its residual is keyed not to the *construction* but to the specific English *the…the*
+> n-gram — the most frequent English CC template — so that "beats the shadow" would mean only "matches
+> a very common English string." [`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md)
+> (s213) ported the **frozen** English instrument to German `je…desto/umso` — a different function-word
+> realization with verb-final subordinate order — and the construction-isolation contrast **reproduces
+> 3/3**: the panel asserts a covariation direction for ~100% of German CC items but only 7–10% of
+> matched **same-word** non-CC controls (isolation gap **+92.6 / +88.2 / +88.2 pp**, all 95% CI lower
+> bounds ≥ +79, ≈ the English ≈87 pp), flips direction on inverse CCs (100 / 97 / 97%), holds on
+> deliberately absurd scale pairs (95–100%), and does **not** track UD-German-GSD corpus
+> frequency/co-occurrence. So the beater's residual survives a **surface-statistics change**: it is a
+> beater on a *different* language's construction, not on one language's template. Read at its exact
+> strength — this **strengthens, it does not create**, the placement: CC was already a beater on its
+> English residual; German shows that residual is not a single language's n-gram. It is **within-model,
+> `internal-contrast-only`** (no non-English CC human dataset exists — **no** human comparison, **no**
+> German-competence claim), and German is a **modest** lever (typologically close, its CC itself
+> frequent), so the discharge is **partial**, not full; the typologically-distant Japanese arm
+> (`-ba…hodo`) is the stronger, committed-but-conditional successor. No revision trigger fires against —
+> the beater held, and held harder.
 
 And now, from the presupposition line, the grammatical pole has a **shadow-saturated corner** of its
 own. The presupposition corner is, on a semantic theory's telling, a represented presupposition/
@@ -325,7 +351,12 @@ the targets, and is silent on which model tracks which.
   sense-gradience rep2 s181
   ([`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md), via
   [`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)) — the beaters replicated
-  rather than failed.
+  rather than failed. **→ FURTHER FIRED-FOR (the CC beater, 2026-07-12, s213/s214):** the CC
+  construction-isolation contrast also replicates **cross-linguistically** in German
+  ([`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md); +92.6
+  / +88.2 / +88.2 pp), so the grammatical-pole beater survives a change of language, not only a fresh
+  English item set — a *partial* discharge of the English-n-gram worry (German a modest lever;
+  internal-contrast-only). See the s214 corroboration box above.
 - **If the graded gate turned out FLAT on re-run** (endorsement insensitive to contradiction strength),
   the "deep shadow, not computed split" gloss on the accommodation corner would need re-stating —
   though a flat gate is *also* a distributional story (pure contradiction-detection), so it would not
@@ -352,7 +383,9 @@ the targets, and is silent on which model tracks which.
   stated strength: Spearman 0.60–0.83 and the topic-partial survival from
   [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md); the CC assertion gap
   (+80–90 pp), inverse-flip (95–100%), and 3/3 gates from
-  [`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md);
+  [`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md),
+  and the German cross-linguistic replication (+92.6/+88.2/+88.2 pp; internal-contrast-only, partial
+  discharge only) from [`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md);
   projection survival/collapse (E = 0.00; 0.42/0.17/0.17) from
   [`result/presupposition-projection-v1`](../results/presupposition-projection-v1.md); the
   accommodation gate (neutral 1.00/0.92/1.00, contradicting 0.33/0.58/0.42) from

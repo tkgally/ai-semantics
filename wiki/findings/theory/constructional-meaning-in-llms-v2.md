@@ -11,7 +11,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-07-04
-updated: 2026-07-05
+updated: 2026-07-12
 links:
   - rel: supersedes
     target: theory/constructional-meaning-in-llms
@@ -33,6 +33,8 @@ links:
     target: claim/preference-commitment-dissociation-aann-specific
   - rel: depends-on
     target: result/comparative-correlative-covariation-powered
+  - rel: depends-on
+    target: result/comparative-correlative-german-v1
   - rel: depends-on
     target: result/dative-information-structure-powered
   - rel: depends-on
@@ -315,7 +317,15 @@ Piantadosi & Hill's sense. Current state, by line:
   epistemic hedging. The standing cautions travel: the per-item rates are at or near ceiling, so
   the magnitude is precise but licenses no depth-of-processing verdict; the powered legs are
   `internal-contrast-only`; the single human-comparison leg (v1's 30 Scivetti CC items, answer-key
-  agreement 93–100% vs the ≈0.90 native baseline) is narrow and single-run.
+  agreement 93–100% vs the ≈0.90 native baseline) is narrow and single-run. *(Strengthened s213/s214:
+  the construction-isolation contrast now replicates **cross-linguistically** — a frozen German port to
+  `je…desto/umso` reproduces the isolation gap +92.6/+88.2/+88.2 pp, the inverse-flip 100/97/97%, and
+  the absurd-pair robustness 95–100%, and does not track UD-German-GSD frequency/co-occurrence
+  ([`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md)). So the
+  Tier-4 CC reading is "keyed to the construction, not the scalar words" **and** not merely
+  English-`the…the`-n-gram matching — a **partial** discharge of the n-gram worry, German being a modest
+  typologically-close lever. `internal-contrast-only`: no human comparison, no German-competence claim;
+  the claim's formal scope stays English. Does not change the Tier-4 placement — it hardens it.)*
 - *Add-direction coercion* — caused-motion and *way* draw their construction-contributed
   entailments onto non-motion verbs at or near ceiling, and the near-miss form control
   ([`result/caused-motion-near-miss-v2c`](../results/caused-motion-near-miss-v2c.md)) shows the
