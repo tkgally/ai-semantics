@@ -243,10 +243,24 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   frozen parsers — given/new manipulations → produced alternant; genitive alternation,
   particle placement, locative alternation, each with published human corpus studies to anchor
   direction. Start with one sibling as a calibrated second row.
-- **A6 `[ ]` Cross-linguistic replication scout.** Same-construction/different-surface-statistics
-  replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
+- **A6 `[~]` Cross-linguistic replication scout — SCOUTED s212.** Same-construction/different-surface-
+  statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked
   resources first (UD treebanks in-scope; open Japanese norms exist); one flagship construction.
+  **[SCOUT landed s212 → [`resource/cross-linguistic-cc-replication-scouting`](base/resources/cross-linguistic-cc-replication-scouting.md):
+  a cross-linguistic CC replication is **feasible now** as a behavioral, project-authored,
+  **internal-contrast-only** forced-choice port of the English CC design (no external corpus license
+  blocks the core same-word-control leg; UD German-GSD + Japanese-GSD annotations CC BY-SA 4.0 confirmed
+  in-scope for an optional corpus-matched control). Two findings shape it: **(1) no non-English CC
+  human-judged dataset surfaced** (Weissweiler 2022 + Scivetti CxNLI are English-only), so a non-English
+  arm carries **no human-comparison leg** (`internal-contrast-only`); **(2)** the core CC leg is already
+  internal-contrast (same-word non-CC controls) so it needs only project-authored target-language items —
+  no human subjects, sub-$1. German CC (`je…desto/umso`) form verified from the analytic literature =
+  the well-documented/high-competence but *modest*-surface-distance default; Japanese (`-ba…hodo`) = the
+  *stronger* lever (typologically distant) but form-unverified + needs a panel-competence smoke test.
+  Three value-laden gates opened ([`decisions/open/cross-linguistic-cc-replication-scope`](decisions/open/cross-linguistic-cc-replication-scope.md),
+  provisional defaults **Q1-A German / Q2-A same-word controls / Q3-A internal-contrast-only**);
+  **ratifiable s213+, design+run after ratification.** Item stays `[~]` until the run.]**
 
 ## B. Consolidation program
 
