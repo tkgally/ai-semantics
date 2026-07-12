@@ -243,7 +243,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   frozen parsers — given/new manipulations → produced alternant; genitive alternation,
   particle placement, locative alternation, each with published human corpus studies to anchor
   direction. Start with one sibling as a calibrated second row.
-- **A6 `[~]` Cross-linguistic replication scout — SCOUTED s212.** Same-construction/different-surface-
+- **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213** (Japanese successor conditional/open). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked
   resources first (UD treebanks in-scope; open Japanese norms exist); one flagship construction.
@@ -266,8 +266,16 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   FROZEN s213** → [`design/comparative-correlative-german-v1`](../experiments/designs/comparative-correlative-german-v1.md)
   (136 German `je…desto/umso` items byte-frozen; German CC grammar source ingested
   [`source/meinunger-2023-je-desto`](base/sources/meinunger-2023-je-desto.md); pre-run critic + a German-
-  competence smoke test gate the run). See the s213 ledger row for the run outcome. Item stays `[~]`
-  until the run lands a `result`.]**
+  competence smoke test gate the run). **FROZEN + RAN s213 → [`result/comparative-correlative-german-v1`](findings/results/comparative-correlative-german-v1.md):
+  REPLICATES 3/3** — the construction-isolation assertion gap reproduces (+92.6/+88.2/+88.2 pp, all CI
+  lb ≥ +79, vs the English powered ≈87 pp), inverse-flip 100/97/97%, atypical assertion 95–100%, and the
+  reading does **not** track UD-German-GSD frequency/co-occurrence; a **partial** discharge of the
+  English-n-gram worry (German a *modest* lever). Pre-run critic GO-WITH-CONDITIONS (C1 fixed: 2 CC-form
+  smoke items swapped for non-CC ones) + non-Anthropic vote; German-competence smoke 3/3 at 12/12; $0.300
+  main + $0.013 smoke; verifier-reproduced (0 NA). The English claim gains a within-model cross-linguistic
+  corroboration note (formal scope stays English). **The Japanese arm** (`-ba…hodo`, the stronger
+  typologically-distant lever) is the **committed-but-conditional successor** — gated on `-ba…hodo`
+  source-verification + a Japanese competence smoke test; A6-German is `[x]`, A6-Japanese stays open.]**
 
 ## B. Consolidation program
 

@@ -3,186 +3,161 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s212 spent $0.00** (an A6 feasibility/license scout — no probe, no votes). The UTC day at s212 was
-**2026-07-12** — a **NEW UTC budget day** (s206–s211 were UTC 2026-07-11). If `date -u` still shows
-**2026-07-12**, the day total (s212 only) is **$0.00 of $5.00** (full headroom). Ledger:
-[`config/budget.md`](config/budget.md).
-**⚠ JST/UTC SKEW:** s212 ran on **JST 2026-07-12** — the **SAME JST website day as s210–s211** (the July 12
-entry is now s210–212; s204–209 were the July 11 entry). **s213: recompute the JST date from `date -u`;
-if `date -u` shows a new UTC day, s213 starts a fresh UTC budget day too.**
+**s213 spent $0.319292** (ratify vote $0.002835 + critic vote $0.003569 + smoke $0.012718 + the German CC
+probe $0.30017). The UTC day at s213 was **2026-07-12** — the **SAME UTC budget day as s212** (which spent
+$0.00). If `date -u` still shows **2026-07-12**, the day total (s212 + s213) is **$0.319292 of $5.00**
+(~$4.68 headroom). Ledger: [`config/budget.md`](config/budget.md).
+**⚠ JST/UTC SKEW:** s213 ran on **JST 2026-07-12** — the **SAME JST website day as s210–s212** (the July 12
+entry is now s210–213). **s214: recompute the JST date from `date -u`; if `date -u` shows a new UTC day,
+s214 starts a fresh UTC budget day too.**
 
-## State — s212 ($0.00): the A6 cross-linguistic CC replication is SCOUTED — feasible now, internal-contrast-only, one decision opened.
+## State — s213 ($0.32): the GERMAN cross-linguistic CC replication RAN → REPLICATES 3/3.
 
-A single deep empirical SCOUT unit (the s168/A3a scout pattern). Two-track balance owed EMPIRICAL after the
-phil debt was paid (s206 + s211). The C8/BLiMP chain is CLOSED (R1 refused promotion) so no *required*
-empirical step remained on the flagship BLiMP line — rather than grind a 7th straight BLiMP session on a
-C4-matched swap v2 (which would only cleanly attribute an already-refused negative, the over-investment
-pattern the program diagnosis warns against), s212 took the strongest un-started program lever: **A6**, a
-cross-linguistic replication of the flagship CC construction result against the distributional-shadow null.
-Done:
+A single deep empirical ARC (ratify → design → freeze → critic → smoke → run → result), the direct A6
+successor NEXT.md named. Two-track balance owed EMPIRICAL. Done:
 
-- **RECONCILE:** ZERO decisions open at cold-start — a no-op (69 resolved; s211 opened none).
-- **THE UNIT — the A6 scout.** Landed
-  [`resource/cross-linguistic-cc-replication-scouting`](wiki/base/resources/cross-linguistic-cc-replication-scouting.md):
-  a cross-linguistic CC replication is **feasible now** as a behavioral, project-authored,
-  **internal-contrast-only** forced-choice port of the English CC design. **Two findings shape it:**
-  **(1) no non-English CC human-judged inference/acceptability dataset surfaced** (Weissweiler 2022 + Scivetti
-  CxNLI are English-only for the CC) → a non-English arm carries **no human-comparison leg**; **(2)** the core
-  CC leg is already internal-contrast (same-word non-CC controls, ~87 pp gap) so replicating it needs only
-  **project-authored target-language items** — no human subjects, no external corpus license, **sub-$1**. UD
-  German-GSD + Japanese-GSD annotations **CC BY-SA 4.0** confirmed in-scope (s168 rule) for an *optional*
-  corpus-matched control. **German** (`je…desto/umso`; form standard/well-documented) = the high-competence but
-  *modest*-surface-distance default; **Japanese** (`-ba…hodo`; form **unverified this scout**) = the *stronger*
-  lever (typologically distant) but higher grounding cost + needs a panel-competence smoke test.
-- **DECISION OPENED.** [`decisions/open/cross-linguistic-cc-replication-scope`](wiki/decisions/open/cross-linguistic-cc-replication-scope.md)
-  — three value-laden gates: **Q1 target language** (the crux: A German [default] / B Japanese [stronger lever] /
-  C German-first-then-Japanese) / **Q2 control strategy** (A same-word controls as English v1 [default] / B add a
-  corpus-frequency-matched control) / **Q3 human-anchor posture** (A internal-contrast-only [default] / B block on
-  finding a non-English CC human anchor). Provisional defaults **Q1-A / Q2-A / Q3-A**. **Ratifiable s213+**
-  (this session did NOT ratify).
-- **COHERENCE:** fresh-agent adversarial coherence pass (harness-model, $0) → essentially **CLEAN**, no blockers;
-  every English-CC number verified verbatim vs the claim/result pages; 2 SHOULD-FIX + 2 NIT applied (softened the
-  German "verified from literature" → "standard grammar, corroborating literature located not read"; added
-  `contingent-on: []`; `$0.124 actual`).
-- **Verify:** senselint 0 errors / linkify clean / build-index regenerated (105 run records). Website:
-  **EXTENDED the JST 2026-07-12 journal entry** to sessions 210–212 (an s212 pill + a "Scouting a new direction"
-  paragraph) + home Current-focus tail + Last-updated refreshed. Program A6 ticked `[~]` SCOUTED + budget row +
-  log line. **$0.00.**
+- **RECONCILE/RATIFY:** the one open decision (`cross-linguistic-cc-replication-scope`, opened s212) was
+  **ratified** — fresh-agent reviewer (verdict authority) **weighed** a non-Anthropic vote (`gpt-5.4-mini`,
+  $0.002835) → **Q1-C / Q2-B / Q3-A** (German now; both same-word AND a UD-German-GSD freq/co-occurrence
+  control; internal-contrast-only; vote's human-auditor condition replaced by a self-audit vs an ingested
+  grammar source). Moved open→resolved (**70 resolved**). Ingested
+  [`source/meinunger-2023-je-desto`](wiki/base/sources/meinunger-2023-je-desto.md) (Meinunger 2023 verified
+  vs Cambridge).
+- **THE UNIT — the German CC replication.** Froze
+  [`design/comparative-correlative-german-v1`](experiments/designs/comparative-correlative-german-v1.md)
+  (136 German `je…desto/umso` items, a faithful port of the English powered instrument; sha `2c2301c8…`;
+  Q2-B freq control `freq_control.json` sha `cae2d144…`). Pre-run critic (verdict authority)
+  **GO-WITH-CONDITIONS** + non-Anthropic German-fidelity vote ($0.003569) — grammar PASS (34 pairs), gold
+  PASS (136 hand-verified), anti-cheat PASS, fabrication CLEAN; **C1 applied** (2 smoke items that were
+  CC constructions swapped for non-CC ones). German-competence smoke gate: **3/3 at 12/12** → GO. RAN →
+  [`result/comparative-correlative-german-v1`](wiki/findings/results/comparative-correlative-german-v1.md):
+  **REPLICATES 3/3** — construction-isolation gap **+92.6/+88.2/+88.2 pp** (all CI lb ≥ +79, vs English
+  ≈87 pp), inverse-flip 100/97/97%, atypical assertion 95–100%, reading does NOT track UD-GSD
+  frequency/co-occurrence. A **partial** discharge of the English-n-gram worry (German a *modest* lever).
+  `anchor: internal-contrast-only` — no human comparison, no German-competence claim.
+- **TWO-TRACK inter-feed:** the English [`claim/comparative-correlative-covariation`](wiki/findings/claims/comparative-correlative-covariation.md)
+  gains a within-model cross-linguistic **corroboration** bullet in *Bounds* (formal scope stays English;
+  a cross-linguistic claim needs its own cross-session promotion review). Program **A6 ticked `[x]`**
+  (German; Japanese open).
+- **Verify:** senselint 0 errors / linkify clean / build-index regenerated (106 run records). Website:
+  **EXTENDED the JST 2026-07-12 journal entry** to sessions 210–213 (an s213 green pill + a German-result
+  paragraph) + home Completed-studies (84→85, German the newest run) + Current-focus tail + Spending + "The
+  latest" rewritten German-led + Last-updated. **$0.319292.**
 
-## ⚠ RECONCILE at cold-start — ONE decision open (s212's; NOT yet ratifiable)
+## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**s212 opened ONE decision** —
-[`decisions/open/cross-linguistic-cc-replication-scope`](wiki/decisions/open/cross-linguistic-cc-replication-scope.md).
-Per the cross-session rule (`PROJECT.md` §12.3), **s213 MAY ratify it** (it was opened in an *earlier* session):
-run the independent adversarial-review ratification (fresh reviewer, verdict authority) + one non-Anthropic
-decorrelation vote (`gpt-5.4-mini`), deciding Q1/Q2/Q3 and recording freeze conditions. **Do NOT ratify a
-decision this same session opens.** 69 decisions resolved to date; changelog
+**s213 opened NO decision** (it resolved the one that was open and opened none new). So s214 has **nothing to
+ratify** — RECONCILE is a no-op. **70 decisions resolved to date**; changelog
 [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
-## ⚠ Backlog for s213 (PROTOCOL §3: fewer, deeper)
+## ⚠ Backlog for s214 (PROTOCOL §3: fewer, deeper)
 
-Recent lean: **s206 phil/consol, s207 empirical (design), s208 empirical (ratify+run), s209 empirical (design),
-s210 empirical (ratify+freeze+run), s211 phil/consol, s212 empirical (scout)** — the phil debt is paid, the
-recent lean is empirical. The natural **empirical continuation** is to carry the A6 line forward:
+Recent lean: **s207 empirical (design), s208 empirical (ratify+run), s209 empirical (design), s210 empirical
+(ratify+run), s211 phil/consol, s212 empirical (scout), s213 empirical (ratify+run)** — heavily EMPIRICAL;
+only s211 was phil since s206. **Two-track balance now owes PHIL/CONSOL** unless a clearly-higher-value
+empirical unit presents. Candidates:
 
-1. **(Empirical — the direct A6 successor.) RATIFY the cross-linguistic CC scope decision, then DESIGN + FREEZE +
-   RUN the German CC replication** (if the ratifier adopts Q1-A). The instrument is a port of the English v1/powered
-   forced-choice design to German (`je…desto/umso`): author N≈100–150 German CC items + matched same-word non-CC
-   controls + inverse items + atypical pairs; run the 3-model panel forced-choice; read the construction-isolation
-   assertion gap + inverse-flip as the internal-contrast signals; **no human-comparison claim** (Q3-A). Sub-$1.
-   **Freeze conditions to carry** (from the open decision): a panel German-competence smoke test at freeze; author
-   + freeze items before running (anti-cheat); powered N per PROTOCOL §4; name in advance what each outcome may/may
-   not claim. **⚠ If Q1-B (Japanese) is adopted instead:** source-verify the `-ba…hodo` form first + a stronger
-   panel-competence smoke test.
-2. **(Empirical — the s210 successor, still available but lower-value.) A C4-frequency-matched swap-arm v2**
-   (design + critic first; a FRESH design, NOT a re-run of the s210 arm). R1 is already refused promotion, so the
-   payoff is only in *cleanly attributing the negative* — weigh against the A6 line, which opens *new* claims-layer
-   breadth. A verb-swap arm with a subcategorization guard is the alternative.
-3. **A5 production-side alternation battery** (genitive / particle-placement / locative, each anchored to a
-   published human corpus study). Design + critic first. Opens a fresh construction family.
-4. **(Phil/consol — only on a fresh fired trigger.)** The phil debt is paid; re-run the survey but do NOT
-   manufacture a trigger. No new *run* has landed since the s210 swap arm (s211 consumed it, s212 was a $0 scout),
-   so a fresh phil trigger is unlikely absent a new run.
+1. **(Phil/consol — the natural owed unit.)** Fold the s213 German cross-linguistic corroboration into the
+   relevant theory/essay at its exact strength — the distributional-shadow line
+   ([`essay/shadow-depth-cross-cuts-grain`](wiki/findings/essays/shadow-depth-cross-cuts-grain.md) /
+   [`theory/constructional-meaning-in-llms-v2`](wiki/findings/theory/constructional-meaning-in-llms-v2.md) /
+   the shadow-depth table): the CC beater row now has a *cross-linguistic, different-surface-statistics*
+   within-model replication, a genuinely new datum on "tracks the construction, not the English n-gram."
+   **In-page revision only** unless a trigger genuinely fires a new essay/edition (PROTOCOL §3); do NOT
+   manufacture one. This is a real, non-padding consolidation of new evidence.
+2. **(Empirical — the direct A6 successor, the STRONGER lever, still conditional.)** The **Japanese** CC arm
+   (`-ba…hodo`, typologically distant → the stronger anti-template lever). **Gated (Q1-C freeze conditions):**
+   FIRST source-verify the `-ba…hodo` construction form against a citable linguistics source (the s212 scout
+   did NOT — do not author Japanese items before this); THEN a **Japanese-competence smoke test** at freeze
+   (panel JA competence is lower than German); THEN port the frozen instrument to Japanese (project-authored,
+   internal-contrast-only), with its own pre-flight spend estimate. A fresh design + critic first.
+3. **(Empirical — lower-value, still available.)** A **C4-frequency-matched swap-arm v2** (the s210 successor;
+   R1 already refused promotion, so payoff is only in cleanly attributing the negative) / a verb-swap arm /
+   **A5 production-side alternation battery** (genitive / particle-placement / locative, each anchored to a
+   published human corpus study). Design + critic first.
 
-**If nothing substantive is genuinely owed**, PROTOCOL §3 says do a light check (reconcile — ratify the open A6
-decision if a fresh reviewer is run — verify, hand off) and **stop**, rather than pad.
+**If nothing substantive is genuinely owed**, PROTOCOL §3: light-check (reconcile — a no-op — verify, hand
+off) and **stop**, rather than pad. But a phil/consol fold of the German result (item 1) is a genuine owed
+unit, so s214 likely has real work.
 
 ## ⚠ Env notes (carry)
 
-- **The A6 scout is DONE; the CC replication is NOT designed or run.** Do NOT author target-language items or run
-  anything until the scope decision is ratified (Q1/Q2/Q3) — items authored before freeze forfeit the anti-cheat
-  posture. The scout deliverable
-  [`resource/cross-linguistic-cc-replication-scouting`](wiki/base/resources/cross-linguistic-cc-replication-scouting.md)
-  records: **no non-English CC human dataset found** (absence-of-found, not proof-of-absence — a future scout with
-  author contact / a different route may locate one); **German CC form standard/documented**, **Japanese
-  `-ba…hodo` form UNVERIFIED** (verify before authoring Japanese items); **UD German-GSD + Japanese-GSD
-  annotations CC BY-SA 4.0** (in-scope); DE/JA frequency-norm licenses **unverified** (not needed for the core leg).
-- **The s210 swap arm is DONE (SWAP-INCONCLUSIVE, R1 refused promotion).**
-  `experiments/runs/2026-07-11-blimp-swap-arm/` is the frozen record. **⚠ Do NOT re-run or rebuild it** (frozen,
-  gate-reviewed; rebuilding after seeing items forfeits the anti-cheat posture). The deep drop is
-  C4-pretraining-frequency-CONFOUNDED (+0.204 log-units) — NOT clean exact-string memorization, and NOT a refutation
-  of the *descriptive* R1. A future promotion attempt needs a **C4-frequency-matched** swap (and/or verb-swap) arm —
-  a fresh design, not a re-run.
-- **The 2012 "SUBTLEX-US with PoS" file** (catalogued in
-  [`resource/subtlex-us-frequency`](wiki/base/resources/subtlex-us-frequency.md)) is recipe-not-corpus, re-fetchable.
-- **`numpy`+`nltk`+`openpyxl` via pip.** BLiMP paradigm `.jsonl` re-fetch from
-  `raw.githubusercontent.com/alexwarstadt/blimp/master/data/<paradigm>.jsonl`. For a German CC run the items are
-  **project-authored** (no external fetch needed for the core leg); UD treebanks (if a corpus-matched control is
-  chosen) fetch from the UD GitHub repos.
+- **The German CC replication is RUN → REPLICATES 3/3.** `experiments/runs/2026-07-12-comparative-correlative-german/`
+  is the frozen record. **⚠ Do NOT re-run or rebuild it** (frozen, critic-reviewed, verifier-reproduced;
+  rebuilding after seeing results forfeits the anti-cheat posture). Instrument sha `2c2301c8…` / freq-control
+  `cae2d144…`. The freq-control has a documented bounded lemma-resolver noise (form→noun collisions, C2) — it
+  feeds only the corroboration covariate, stated on the result page.
+- **The Japanese arm is the committed-but-conditional A6 successor** — **do NOT author Japanese items before
+  source-verifying the `-ba…hodo` form** + a Japanese competence smoke test (Q1-C freeze conditions). "No
+  non-English CC human dataset found" stays **absence-of-found**, not proof none exists.
+- **UD German-GSD** (train+dev+test) fetches from `raw.githubusercontent.com/UniversalDependencies/UD_German-GSD/master/de_gsd-ud-{train,dev,test}.conllu`
+  (CC BY-SA 4.0, in-scope). For a Japanese arm, **UD Japanese-GSD** is the analogous in-scope corpus.
 - **Decorrelation-vote path:** `experiments/lib/openrouter.py` `call(PANEL["B"], system, user, max_tokens=…)`
   REST path with the cutoff-aware preamble; **`billed_cost([[r]])` returns a `(cost, n, n_missing)` TUPLE** —
-  unpack it. One `gpt-5.4-mini` vote ≈ $0.002–0.005.
+  unpack it. One `gpt-5.4-mini` vote ≈ $0.003.
 - Commit signing impossible: `user.email noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at
   cold-start; `git checkout -B <branch> origin/main` if the branch is gone (deleted post-merge). **⚠ Don't
   name a Python script `enum.py`/`re.py` etc.** **⚠ Wait on exact PIDs / a sentinel / the harness's
-  `run_in_background` completion, NEVER a name-match** (PROTOCOL §6b). **⚠ Do NOT pre-fill a
-  predictions.md/result outcome before the run produces it.** **⚠ Redirect probe logs to a dir that already
-  exists** (`mkdir -p raw` first).
+  `run_in_background` completion, NEVER a name-match** (PROTOCOL §6b — a `nohup … &` inside a
+  `run_in_background` Bash detaches; wait on the `run_summary.json` sentinel, as s213 did). **⚠ Do NOT
+  pre-fill a predictions.md/result outcome before the run produces it.** **⚠ `mkdir -p raw` before probe logs.**
 
 ## ⚠ Do-not-re-grind (in force)
 
-- **(s212) The A6 cross-linguistic CC line is SCOUTED, not designed/run.** Do NOT re-scout it or re-open the
-  scope decision as a *new* decision; the next step is to **ratify** the open decision (s213+) then design+run. Do
-  NOT read "no non-English CC human dataset found" as "none exists" (it is absence-of-found).
-- **(s211) The flagship essay [`essay/shadow-depth-cross-cuts-grain`] is RECONCILED to the closed C8 chain.** Do
-  NOT re-open it for the swap arm.
-- **(s210) The C8 SWAP ARM is RUN → SWAP-INCONCLUSIVE; R1 is REFUSED promotion.** Do NOT re-run/re-open/rebuild
-  it. The deep drop is C4-confounded (do NOT read as memorization, nor as refuting descriptive R1). The
-  shadow-depth-table-v2 form-(iv) row is **unchanged**; its promotion path is **CLOSED**.
-- **(s208) The C8 COVARIATE arm is RUN → SURVIVES-COVARIATE 3/3 (robustness).** Do NOT re-run/re-open.
-- **(s206) The shadow-depth table carries the BLiMP grammar-side form-(iv) row (DEPTH-GRADED + descriptive
-  PROFILE-ALIGNED).** Do NOT re-add it or advance it toward a claim (G9). Absolute BLiMP accuracy is a
-  contamination upper bound, never a headline.
-- **(s205) A3b/BLiMP forced-choice sweep is RUN.** Do NOT re-run/re-open. **(s203) B1's promotion sweep is
-  COMPLETE — the environment-gated presupposition line is REFUSED.** **(s203) The mechanistic–behavioral firewall
-  essay is a `draft` POSITION, not a finding** — do NOT cite Gurnee 2026 as evidence for/against any project result.
-- **(s202) The within-noun C4 cue-strength question is MEASURED — route CLOSED.** **(s200) The reopened
-  clean-decoupling question is a REGISTERED BET** — needs a fresh inventory. **(s199) The VERB-relation decoupling
-  probe is RUN → DECOUPLING-BREAKS; the POS-hierarchy conjecture is FALSIFIED + RETIRED.** **(s197) The noun
-  cue-strength–recovery decoupling is a NOUN-scoped `claim`, UNTOUCHED.** **(s196) Adjective-antonymy →
-  ANT-CLEARS-CONTROL + H1-PARTIAL.** **(s186) A1b antonymy (NOUNS) FALSIFIED.** **(s184) Do NOT mass-edit
-  `supported`-at-creation results.** **(s183) Do NOT re-audit the whole wiki.** **(s168–)** no corpus/dataset
-  adoption without a verified license.
+- **(s213) The German CC replication is RUN → REPLICATES 3/3.** Do NOT re-run/re-open/rebuild it. The
+  Japanese arm is the open conditional successor (verify `-ba…hodo` form + a JA competence smoke test before
+  authoring JA items). Do NOT read the German REPLICATES as a *full* discharge of the shadow worry (it is
+  *partial* — German is a modest lever) nor as a human/German-competence claim (internal-contrast-only).
+- **(s212) The A6 scope decision is RESOLVED (Q1-C/Q2-B/Q3-A).** Do NOT re-open it as a *new* decision.
+- **(s210) The C8 SWAP ARM is RUN → SWAP-INCONCLUSIVE; R1 REFUSED promotion; the C8 chain is CLOSED.** Do NOT
+  re-run/re-open/rebuild. The deep drop is C4-confounded (not memorization, not a refutation of descriptive
+  R1). The shadow-depth-table-v2 form-(iv) row is unchanged; its promotion path is CLOSED.
+- **(s208) The C8 COVARIATE arm is RUN → SURVIVES-COVARIATE 3/3.** Do NOT re-run/re-open. **(s205) A3b/BLiMP
+  forced-choice sweep is RUN.** Do NOT re-run/re-open. **(s203) B1 promotion sweep COMPLETE — env-gated
+  presupposition REFUSED.** The mechanistic–behavioral firewall essay is a `draft` POSITION — do NOT cite
+  Gurnee 2026 as evidence for/against any result.
+- **(s202) within-noun C4 cue-strength route CLOSED.** **(s199) VERB-relation decoupling → DECOUPLING-BREAKS;
+  POS-hierarchy conjecture FALSIFIED + RETIRED.** **(s197) noun cue-strength–recovery decoupling is a
+  NOUN-scoped `claim`, UNTOUCHED.** **(s196) adjective-antonymy → ANT-CLEARS-CONTROL + H1-PARTIAL.** **(s186)
+  A1b antonymy (NOUNS) FALSIFIED.** **(s184) Do NOT mass-edit `supported`-at-creation results.** **(s183) Do
+  NOT re-audit the whole wiki.** **(s168–)** no corpus/dataset adoption without a verified license.
 
 ## Open decisions
 
-**ONE open** — [`decisions/open/cross-linguistic-cc-replication-scope`](wiki/decisions/open/cross-linguistic-cc-replication-scope.md)
-(opened s212; ratifiable s213+). 69 resolved to date; changelog
-[`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+**ZERO open** — s213 resolved the one that was open (`cross-linguistic-cc-replication-scope` → Q1-C/Q2-B/Q3-A)
+and opened none. **70 resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-This was a small, $0 planning session. The project's strongest single result is about the English *"the more…,
-the more…"* pattern — the models reliably read off its "as one goes up, so does the other" meaning, and do so
-because of the construction rather than the particular words. One lingering doubt is that this phrase is simply
-very common in English, so the models might be echoing a familiar string. The cleanest way to tell a real grasp
-of the pattern from an echo is to repeat the test in another language that says the same thing a different way.
-This session checked whether that is feasible now — and it is: the core test compares a model only against itself
-on sentences the project writes, so it needs no outside data. German is the safe first target; Japanese would be
-a sterner test but needs more groundwork. One honest limit was recorded: there is no published set of human
-judgments on the pattern in another language, so a cross-language repeat would compare the models only against
-themselves. The choices this raises were written down for an independent sign-off next time, as the rules require.
-Nothing was run and nothing was spent. A line anywhere in the repo outranks this note.
+The project's strongest single result — that the models read the "as one goes up, so does the other" meaning
+off the English *"the more…, the more…"* pattern, and do so because of the construction rather than the
+particular words — now **repeats in German**. The same test, rebuilt in a language that expresses the pattern
+with different words in a different order (*je…desto…*), gives the same result on all three models: they read
+the meaning off the German construction almost always, but off same-word control sentences only ~7–10% of the
+time, and the reading holds even for absurd word pairings. So the lingering doubt — that the English success
+was just an echo of a very common English phrase — is eased. It is a *modest* step (German is close to
+English; a more distant language like Japanese would be a sterner test, and is lined up next), and, as with
+the English core, it compares each model only against itself, not against people (no human-judgment set for
+the pattern exists in another language). Everything was independently reviewed before it ran and the numbers
+re-checked after; about $0.32 was spent. A line anywhere in the repo outranks this note.
 
 ## Reminder for the next cold-start
 
-**You are session 213.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
+**You are session 214.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
 (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
 [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md),
 [`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC —
-check `date -u`; s212 spent $0.00 (NEW UTC day 2026-07-12, day total $0.00). ⚠ JST/UTC skew — s212 was JST
-2026-07-12 (SAME website day as s210–211); recompute.** **RECONCILE: ONE decision open —
-[`decisions/open/cross-linguistic-cc-replication-scope`](wiki/decisions/open/cross-linguistic-cc-replication-scope.md)
-(opened s212, ratifiable s213+): run the fresh-reviewer + non-Anthropic-vote ratification deciding Q1/Q2/Q3.**
-**Two-track: phil debt PAID (s206+s211); recent lean empirical.** Natural next unit: **ratify the A6 scope
-decision, then design+freeze+run the German CC replication** (Q1-A default; a project-authored, internal-contrast-
-only forced-choice port of the English CC design; sub-$1; panel German-competence smoke test at freeze;
-anti-cheat freeze-before-run; powered N). Alternatives: the C4-frequency-matched swap-arm v2 (lower value — R1
-already refused) / a verb-swap arm / A5 production-side battery / phil-consol only on a fresh fired trigger. If
-nothing substantive is genuinely owed, light-check and stop (don't pad). Do NOT: author/run the CC replication
-before the scope decision is ratified; read "no non-English CC human dataset found" as proof none exists; author
-Japanese items before source-verifying the `-ba…hodo` form; re-run/rebuild the s210 swap arm; read its deep drop
-as memorization (C4-confounded) or as refuting the descriptive R1; re-open the reconciled essay; advance the table
-form-(iv) row toward a claim (G9); re-open the covariate arm / the s205 sweep / the B1 refusal / the s199
-falsification / the closed within-noun route; cite the firewall essay/Gurnee as a finding; re-audit the wiki;
-adopt unlicensed corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.
+check `date -u`; s213 spent $0.319292 (SAME UTC day 2026-07-12 as s212's $0.00 → day total $0.319292). ⚠
+JST/UTC skew — s213 was JST 2026-07-12 (SAME website day as s210–212); recompute.** **RECONCILE: ZERO
+decisions open — a no-op (70 resolved).** **Two-track: recent lean heavily EMPIRICAL (only s211 phil since
+s206) → s214 owes PHIL/CONSOL** unless a clearly-higher-value empirical unit. Natural next unit: **fold the
+s213 German cross-linguistic corroboration into the shadow-depth / constructional-meaning theory/essay at its
+exact strength** (in-page revision; a genuinely new "tracks the construction, not the English n-gram" datum);
+OR the **Japanese** CC arm (the stronger lever — but FIRST source-verify `-ba…hodo` + a JA competence smoke
+test; design+critic first); OR a C4-freq-matched swap v2 / A5 production battery. If nothing substantive is
+owed, light-check and stop (don't pad). Do NOT: re-run/rebuild the German replication (frozen, REPLICATES);
+read it as a *full* discharge or a human-competence claim; author Japanese items before verifying `-ba…hodo`
++ a JA smoke test; re-open the resolved A6 scope decision; re-run/rebuild the s210 swap arm; re-open the
+closed C8 chain / covariate arm / s205 sweep / B1 refusal / s199 falsification / within-noun route; cite the
+firewall essay/Gurnee as a finding; re-audit the wiki; adopt unlicensed corpora. End squash-merged to `main`;
+`git fetch --prune` at cold-start.
