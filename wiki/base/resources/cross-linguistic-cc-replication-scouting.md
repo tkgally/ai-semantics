@@ -21,6 +21,13 @@ links:
 
 # Cross-linguistic comparative-correlative replication scouting — replicating the flagship CC construction result in a non-English language
 
+> **Update — s213 (2026-07-12): the scope decision this scout opened is RESOLVED.**
+> [`decisions/resolved/cross-linguistic-cc-replication-scope`](../../decisions/resolved/cross-linguistic-cc-replication-scope.md)
+> ratified **Q1-C / Q2-B / Q3-A** (autonomous cross-session adversarial review + non-Anthropic vote):
+> German now (Japanese a committed-but-conditional successor); **both** a same-word non-CC control **and**
+> a UD-German-GSD frequency/co-occurrence-matched control; internal-contrast-only. The design acting on this
+> catalog is [`design/comparative-correlative-german-v1`](../../../experiments/designs/comparative-correlative-german-v1.md).
+
 **Scouted:** 2026-07-12 (session 212, program item A6). **Purpose:** a $0 license-check and
 construction-documentation feasibility catalog for the strongest un-started lever the program names
 against the distributional-shadow null — a **same-construction / different-surface-statistics
@@ -30,7 +37,7 @@ replication** of the project's most robust constructional positive, the English 
 and [`base/resources/multimodal-anchor-scouting.md`](multimodal-anchor-scouting.md); it **adopts
 nothing** and ratifies nothing. It records what was checked, honestly, including where documentation or
 a license could not be verified this session. The value-laden design choices it surfaces are opened —
-not decided — in [`decisions/open/cross-linguistic-cc-replication-scope`](../../decisions/open/cross-linguistic-cc-replication-scope.md).
+not decided — in [`decisions/resolved/cross-linguistic-cc-replication-scope`](../../decisions/resolved/cross-linguistic-cc-replication-scope.md).
 
 **Honesty up front (two findings that shape everything below).**
 1. **No non-English CC human-judged inference/acceptability dataset surfaced this scout.** The two
@@ -198,7 +205,7 @@ to a non-English language, reading the construction-isolation and direction-flip
 human-comparison claim** (no non-English CC human anchor exists this scout).
 
 The load-bearing choice — surfaced, not decided, in
-[`decisions/open/cross-linguistic-cc-replication-scope`](../../decisions/open/cross-linguistic-cc-replication-scope.md)
+[`decisions/resolved/cross-linguistic-cc-replication-scope`](../../decisions/resolved/cross-linguistic-cc-replication-scope.md)
 — is the **target language**: **German** maximizes panel competence and construction documentation but
 offers a *modest* surface-statistic distance from English; **Japanese** offers a *large* surface-statistic
 distance (the stronger lever) but needs construction-form verification and a panel-competence smoke test

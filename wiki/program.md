@@ -258,9 +258,16 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   no human subjects, sub-$1. German CC (`je…desto/umso`) form verified from the analytic literature =
   the well-documented/high-competence but *modest*-surface-distance default; Japanese (`-ba…hodo`) = the
   *stronger* lever (typologically distant) but form-unverified + needs a panel-competence smoke test.
-  Three value-laden gates opened ([`decisions/open/cross-linguistic-cc-replication-scope`](decisions/open/cross-linguistic-cc-replication-scope.md),
-  provisional defaults **Q1-A German / Q2-A same-word controls / Q3-A internal-contrast-only**);
-  **ratifiable s213+, design+run after ratification.** Item stays `[~]` until the run.]**
+  Three value-laden gates opened ([`decisions/resolved/cross-linguistic-cc-replication-scope`](decisions/resolved/cross-linguistic-cc-replication-scope.md),
+  provisional defaults **Q1-A German / Q2-A same-word controls / Q3-A internal-contrast-only**).
+  **RATIFIED s213** (autonomous cross-session adversarial review + non-Anthropic vote): **Q1-C / Q2-B / Q3-A**
+  — German now (Japanese a committed-but-conditional successor); **both** a same-word non-CC control **and**
+  a UD-German-GSD frequency/co-occurrence-matched control; internal-contrast-only. **DESIGN landed +
+  FROZEN s213** → [`design/comparative-correlative-german-v1`](../experiments/designs/comparative-correlative-german-v1.md)
+  (136 German `je…desto/umso` items byte-frozen; German CC grammar source ingested
+  [`source/meinunger-2023-je-desto`](base/sources/meinunger-2023-je-desto.md); pre-run critic + a German-
+  competence smoke test gate the run). See the s213 ledger row for the run outcome. Item stays `[~]`
+  until the run lands a `result`.]**
 
 ## B. Consolidation program
 
