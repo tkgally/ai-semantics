@@ -9,12 +9,14 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-07-02
-updated: 2026-07-12
+updated: 2026-07-13
 links:
   - rel: refines
     target: theory/lexicon-grammar-continuum
   - rel: depends-on
     target: result/comparative-correlative-german-v1
+  - rel: depends-on
+    target: result/comparative-correlative-japanese-v1
   - rel: depends-on
     target: result/blimp-swap-arm-v1
   - rel: depends-on
@@ -110,7 +112,7 @@ links:
 > "if the underlying numbers move on re-run" self-discipline guard (predictions §C) — re-examined in-page,
 > reading weakened, not overturned.
 
-> **Status: revised (2026-07-12 — the grammatical-pole CC beater gains a cross-linguistic (German) within-model replication, a *partial* discharge of the English-n-gram worry, s213/s214 [strengthening corroboration, no reading changed]; 2026-07-11 — the s205 grammar-side corroboration's R1 human-shared reading probed for swap-stability and REFUSED promotion, s210/s211; 2026-07-06 antonymy corner falsified on the panel, s186; earlier 2026-07-03; was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
+> **Status: revised (2026-07-13 — the CC beater's cross-linguistic corroboration extends to Japanese `〜ば〜ほど`, a *stronger-but-still-partial* discharge of the English-n-gram worry [typologically distant, no overt comparative morpheme], s215/s216 [strengthening corroboration, no reading changed]; 2026-07-12 — the grammatical-pole CC beater gains a cross-linguistic (German) within-model replication, a *partial* discharge of the English-n-gram worry, s213/s214 [strengthening corroboration, no reading changed]; 2026-07-11 — the s205 grammar-side corroboration's R1 human-shared reading probed for swap-stability and REFUSED promotion, s210/s211; 2026-07-06 antonymy corner falsified on the panel, s186; earlier 2026-07-03; was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
 > It introduces **no new empirical claim** and makes **no human comparison of its own**. Every
 > empirical assertion cites the in-repo `result` or `essay` page that carries it, at that page's
 > stated strength. Its two load-bearing empirical inputs on the *shadow-saturated* side — the
@@ -175,8 +177,9 @@ matched non-CC controls that reuse the *same words* (assertion gap **+80–90 pp
 inverse-CC items (**95–100%**), and hold on deliberately absurd scale pairs — so the inference is
 keyed to the **construction**, not to the scalar vocabulary, above matched controls that share the
 surface material. That is a construction-grain phenomenon with a genuine over-and-above residual —
-and, as of the s213 German replication (corroboration box below), a residual now shown to survive a
-change of language, so it is not merely the most frequent English CC template being pattern-matched.
+and, as of the s213 German and s215 Japanese replications (corroboration box below), a residual now
+shown to survive a change of language — including to a language with **no comparative word at all** — so
+it is not merely the most frequent English CC template being pattern-matched.
 
 > **CORROBORATION (2026-07-12, s214) — the grammatical pole's shadow-beater now replicates
 > cross-linguistically, in a language whose CC uses different surface statistics; the English-n-gram
@@ -197,8 +200,26 @@ change of language, so it is not merely the most frequent English CC template be
 > `internal-contrast-only`** (no non-English CC human dataset exists — **no** human comparison, **no**
 > German-competence claim), and German is a **modest** lever (typologically close, its CC itself
 > frequent), so the discharge is **partial**, not full; the typologically-distant Japanese arm
-> (`-ba…hodo`) is the stronger, committed-but-conditional successor. No revision trigger fires against —
+> (`〜ば〜ほど`) is the stronger, committed-but-conditional successor. No revision trigger fires against —
 > the beater held, and held harder.
+>
+> **→ EXTENDED (2026-07-13, s215/s216) — the stronger Japanese lever ran, and the beater held there too.**
+> The committed successor named above has now run:
+> [`result/comparative-correlative-japanese-v1`](../results/comparative-correlative-japanese-v1.md) (s215)
+> ported the same frozen instrument to Japanese `〜ば〜ほど` and reproduced the construction-isolation
+> contrast **3/3** — isolation gap **+94.1 / +83.8 / +95.6 pp** (all 95% CI lower bounds ≥ +75, ≈ the
+> English ≈87 pp and the German ≈90 pp), inverse-flip 100 / 100 / 97%, absurd-pair robustness 100 / 95 /
+> 95%, not tracking UD-Japanese-GSD frequency/co-occurrence. Japanese is the **sterner** test *by
+> construction*: it builds the "the more X, the more Y" meaning with SOV, agglutinative, verb-final syntax
+> and — decisively — **no overt comparative morpheme** (no `-er`/`more`/`mehr`/`desto`; the "more" is
+> carried entirely by the ば…ほど frame plus predicate repetition). So the residual survives a
+> surface-statistics change **far larger than German's**, in a language where there is no comparative
+> *word* for the panel to be echoing — a **stronger** (than German) partial discharge of the
+> English-`the…the`-n-gram deflation, though **still partial** and still `internal-contrast-only`: two
+> non-English languages is not "all," the comparison stays each model against itself (no non-English CC
+> human set exists — **no** human comparison, **no** Japanese-competence claim), and `gpt-5.4-mini` is
+> again the weakest arm (T1 +83.8). The CC claim's formal scope stays English. This **strengthens
+> further, still does not create**, the placement; no revision trigger fires against.
 
 And now, from the presupposition line, the grammatical pole has a **shadow-saturated corner** of its
 own. The presupposition corner is, on a semantic theory's telling, a represented presupposition/
@@ -354,9 +375,12 @@ the targets, and is silent on which model tracks which.
   rather than failed. **→ FURTHER FIRED-FOR (the CC beater, 2026-07-12, s213/s214):** the CC
   construction-isolation contrast also replicates **cross-linguistically** in German
   ([`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md); +92.6
-  / +88.2 / +88.2 pp), so the grammatical-pole beater survives a change of language, not only a fresh
-  English item set — a *partial* discharge of the English-n-gram worry (German a modest lever;
-  internal-contrast-only). See the s214 corroboration box above.
+  / +88.2 / +88.2 pp) **and Japanese**
+  ([`result/comparative-correlative-japanese-v1`](../results/comparative-correlative-japanese-v1.md);
+  +94.1 / +83.8 / +95.6 pp, on `〜ば〜ほど` — no comparative morpheme), so the grammatical-pole beater
+  survives a change of language, not only a fresh English item set — a *stronger-but-still-partial*
+  discharge of the English-n-gram worry (Japanese a typologically-distant lever with no comparative word;
+  internal-contrast-only). See the s214/s216 corroboration box above.
 - **If the graded gate turned out FLAT on re-run** (endorsement insensitive to contradiction strength),
   the "deep shadow, not computed split" gloss on the accommodation corner would need re-stating —
   though a flat gate is *also* a distributional story (pure contradiction-detection), so it would not
@@ -384,8 +408,10 @@ the targets, and is silent on which model tracks which.
   [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md); the CC assertion gap
   (+80–90 pp), inverse-flip (95–100%), and 3/3 gates from
   [`result/comparative-correlative-covariation-v1`](../results/comparative-correlative-covariation-v1.md),
-  and the German cross-linguistic replication (+92.6/+88.2/+88.2 pp; internal-contrast-only, partial
-  discharge only) from [`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md);
+  and the German (+92.6/+88.2/+88.2 pp) and Japanese (+94.1/+83.8/+95.6 pp, `〜ば〜ほど`, no comparative
+  morpheme) cross-linguistic replications (both internal-contrast-only, a stronger-but-still-partial
+  discharge only) from [`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md)
+  and [`result/comparative-correlative-japanese-v1`](../results/comparative-correlative-japanese-v1.md);
   projection survival/collapse (E = 0.00; 0.42/0.17/0.17) from
   [`result/presupposition-projection-v1`](../results/presupposition-projection-v1.md); the
   accommodation gate (neutral 1.00/0.92/1.00, contradicting 0.33/0.58/0.42) from
