@@ -1,0 +1,5442 @@
+[
+ {
+  "item_id": "roman-cc-positive",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "小説の厚さ",
+  "dim2": "読者の辛抱強さ",
+  "sentence": "小説が厚ければ厚いほど、読者は辛抱強くなった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "小説の厚さが増すと、読者の辛抱強さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：小説が厚ければ厚いほど、読者は辛抱強くなった。\n小説の厚さが増すと、この文章は読者の辛抱強さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7175683975219727,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roman-cc-inverse",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "小説の厚さ",
+  "dim2": "読者の辛抱強さ",
+  "sentence": "小説が厚ければ厚いほど、読者は飽きっぽくなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "小説の厚さが増すと、読者の辛抱強さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：小説が厚ければ厚いほど、読者は飽きっぽくなった。\n小説の厚さが増すと、この文章は読者の辛抱強さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7829358577728271,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roman-ctrl-two",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "小説の厚さ",
+  "dim2": "読者の辛抱強さ",
+  "sentence": "小説は厚かった。読者は辛抱強かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "小説の厚さが増すと、読者の辛抱強さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：小説は厚かった。読者は辛抱強かった。\n小説の厚さが増すと、この文章は読者の辛抱強さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.2377727031707764,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roman-ctrl-single",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "小説の厚さ",
+  "dim2": "読者の辛抱強さ",
+  "sentence": "小説は前作より厚かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "小説の厚さが増すと、読者の辛抱強さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：小説は前作より厚かった。\n小説の厚さが増すと、この文章は読者の辛抱強さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8299803733825684,
+  "usage": {
+   "prompt_tokens": 107,
+   "completion_tokens": 1,
+   "total_tokens": 108,
+   "cost": 0.0001695,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001695,
+    "upstream_inference_prompt_cost": 0.0001605,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oven-cc-positive",
+  "scale_pair": "oven",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "オーブンの熱さ",
+  "dim2": "客の数",
+  "sentence": "オーブンが熱ければ熱いほど、客が増えた。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "オーブンの熱さが増すと、客の数も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：オーブンが熱ければ熱いほど、客が増えた。\nオーブンの熱さが増すと、この文章は客の数についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7363276481628418,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oven-cc-inverse",
+  "scale_pair": "oven",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "オーブンの熱さ",
+  "dim2": "客の数",
+  "sentence": "オーブンが熱ければ熱いほど、客が減った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "オーブンの熱さが増すと、客の数も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：オーブンが熱ければ熱いほど、客が減った。\nオーブンの熱さが増すと、この文章は客の数についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9035696983337402,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oven-ctrl-two",
+  "scale_pair": "oven",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "オーブンの熱さ",
+  "dim2": "客の数",
+  "sentence": "オーブンは熱かった。客が大勢来た。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "オーブンの熱さが増すと、客の数も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：オーブンは熱かった。客が大勢来た。\nオーブンの熱さが増すと、この文章は客の数についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.815528392791748,
+  "usage": {
+   "prompt_tokens": 108,
+   "completion_tokens": 1,
+   "total_tokens": 109,
+   "cost": 0.000171,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000171,
+    "upstream_inference_prompt_cost": 0.000162,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oven-ctrl-single",
+  "scale_pair": "oven",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "オーブンの熱さ",
+  "dim2": "客の数",
+  "sentence": "オーブンはいつもより熱かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "オーブンの熱さが増すと、客の数も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：オーブンはいつもより熱かった。\nオーブンの熱さが増すと、この文章は客の数についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8937764167785645,
+  "usage": {
+   "prompt_tokens": 105,
+   "completion_tokens": 1,
+   "total_tokens": 106,
+   "cost": 0.0001665,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001665,
+    "upstream_inference_prompt_cost": 0.0001575,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-cc-positive",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "セミナーの大きさ",
+  "dim2": "議論の量",
+  "sentence": "セミナーが大きければ大きいほど、議論が増えた。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "セミナーの大きさが増すと、議論の量も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：セミナーが大きければ大きいほど、議論が増えた。\nセミナーの大きさが増すと、この文章は議論の量についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6376247406005859,
+  "usage": {
+   "prompt_tokens": 106,
+   "completion_tokens": 1,
+   "total_tokens": 107,
+   "cost": 0.000168,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000168,
+    "upstream_inference_prompt_cost": 0.000159,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-cc-inverse",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "セミナーの大きさ",
+  "dim2": "議論の量",
+  "sentence": "セミナーが大きければ大きいほど、議論が減った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "セミナーの大きさが増すと、議論の量も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：セミナーが大きければ大きいほど、議論が減った。\nセミナーの大きさが増すと、この文章は議論の量についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8327353000640869,
+  "usage": {
+   "prompt_tokens": 107,
+   "completion_tokens": 1,
+   "total_tokens": 108,
+   "cost": 0.0001695,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001695,
+    "upstream_inference_prompt_cost": 0.0001605,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-ctrl-two",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "セミナーの大きさ",
+  "dim2": "議論の量",
+  "sentence": "セミナーは大きかった。議論は活発だった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "セミナーの大きさが増すと、議論の量も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：セミナーは大きかった。議論は活発だった。\nセミナーの大きさが増すと、この文章は議論の量についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7298910617828369,
+  "usage": {
+   "prompt_tokens": 106,
+   "completion_tokens": 1,
+   "total_tokens": 107,
+   "cost": 0.000168,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000168,
+    "upstream_inference_prompt_cost": 0.000159,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-ctrl-single",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "セミナーの大きさ",
+  "dim2": "議論の量",
+  "sentence": "セミナーは講義より大きかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "セミナーの大きさが増すと、議論の量も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：セミナーは講義より大きかった。\nセミナーの大きさが増すと、この文章は議論の量についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9365551471710205,
+  "usage": {
+   "prompt_tokens": 103,
+   "completion_tokens": 1,
+   "total_tokens": 104,
+   "cost": 0.0001635,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001635,
+    "upstream_inference_prompt_cost": 0.0001545,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "summer-cc-positive",
+  "scale_pair": "summer",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "夏の暑さ",
+  "dim2": "りんごの甘さ",
+  "sentence": "夏が暑ければ暑いほど、りんごは甘くなった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "夏の暑さが増すと、りんごの甘さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：夏が暑ければ暑いほど、りんごは甘くなった。\n夏の暑さが増すと、この文章はりんごの甘さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.1763851642608643,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "summer-cc-inverse",
+  "scale_pair": "summer",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "夏の暑さ",
+  "dim2": "りんごの甘さ",
+  "sentence": "夏が暑ければ暑いほど、りんごの甘みが減った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "夏の暑さが増すと、りんごの甘さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：夏が暑ければ暑いほど、りんごの甘みが減った。\n夏の暑さが増すと、この文章はりんごの甘さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9829573631286621,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "summer-ctrl-two",
+  "scale_pair": "summer",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "夏の暑さ",
+  "dim2": "りんごの甘さ",
+  "sentence": "夏は暑かった。りんごは甘かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "夏の暑さが増すと、りんごの甘さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：夏は暑かった。りんごは甘かった。\n夏の暑さが増すと、この文章はりんごの甘さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8301513195037842,
+  "usage": {
+   "prompt_tokens": 108,
+   "completion_tokens": 1,
+   "total_tokens": 109,
+   "cost": 0.000171,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000171,
+    "upstream_inference_prompt_cost": 0.000162,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "summer-ctrl-single",
+  "scale_pair": "summer",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "夏の暑さ",
+  "dim2": "りんごの甘さ",
+  "sentence": "夏は去年より暑かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "夏の暑さが増すと、りんごの甘さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：夏は去年より暑かった。\n夏の暑さが増すと、この文章はりんごの甘さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9418103694915771,
+  "usage": {
+   "prompt_tokens": 104,
+   "completion_tokens": 1,
+   "total_tokens": 105,
+   "cost": 0.000165,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000165,
+    "upstream_inference_prompt_cost": 0.000156,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "road-cc-positive",
+  "scale_pair": "road",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "道路の広さ",
+  "dim2": "運転手の速さ",
+  "sentence": "道路が広ければ広いほど、運転手は速く走った。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "道路の広さが増すと、運転手の速さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：道路が広ければ広いほど、運転手は速く走った。\n道路の広さが増すと、この文章は運転手の速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8909077644348145,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "road-cc-inverse",
+  "scale_pair": "road",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "道路の広さ",
+  "dim2": "運転手の速さ",
+  "sentence": "道路が広ければ広いほど、運転手はゆっくり走った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "道路の広さが増すと、運転手の速さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：道路が広ければ広いほど、運転手はゆっくり走った。\n道路の広さが増すと、この文章は運転手の速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.769890308380127,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "road-ctrl-two",
+  "scale_pair": "road",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "道路の広さ",
+  "dim2": "運転手の速さ",
+  "sentence": "道路は広かった。運転手は速く走った。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "道路の広さが増すと、運転手の速さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：道路は広かった。運転手は速く走った。\n道路の広さが増すと、この文章は運転手の速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.022925615310669,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "road-ctrl-single",
+  "scale_pair": "road",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "道路の広さ",
+  "dim2": "運転手の速さ",
+  "sentence": "道路は旧道より広かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "道路の広さが増すと、運転手の速さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：道路は旧道より広かった。\n道路の広さが増すと、この文章は運転手の速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6731388568878174,
+  "usage": {
+   "prompt_tokens": 105,
+   "completion_tokens": 1,
+   "total_tokens": 106,
+   "cost": 0.0001665,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001665,
+    "upstream_inference_prompt_cost": 0.0001575,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "gallery-cc-positive",
+  "scale_pair": "gallery",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "ギャラリーの暗さ",
+  "dim2": "来場者のささやき",
+  "sentence": "ギャラリーが暗ければ暗いほど、来場者はひそひそと話した。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "ギャラリーの暗さが増すと、来場者のささやきも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：ギャラリーが暗ければ暗いほど、来場者はひそひそと話した。\nギャラリーの暗さが増すと、この文章は来場者のささやきについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9364204406738281,
+  "usage": {
+   "prompt_tokens": 121,
+   "completion_tokens": 1,
+   "total_tokens": 122,
+   "cost": 0.0001905,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001905,
+    "upstream_inference_prompt_cost": 0.0001815,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "gallery-cc-inverse",
+  "scale_pair": "gallery",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "ギャラリーの暗さ",
+  "dim2": "来場者のささやき",
+  "sentence": "ギャラリーが暗ければ暗いほど、来場者は声高に話した。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "ギャラリーの暗さが増すと、来場者のささやきも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：ギャラリーが暗ければ暗いほど、来場者は声高に話した。\nギャラリーの暗さが増すと、この文章は来場者のささやきについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8780393600463867,
+  "usage": {
+   "prompt_tokens": 119,
+   "completion_tokens": 1,
+   "total_tokens": 120,
+   "cost": 0.0001875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001875,
+    "upstream_inference_prompt_cost": 0.0001785,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "gallery-ctrl-two",
+  "scale_pair": "gallery",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "ギャラリーの暗さ",
+  "dim2": "来場者のささやき",
+  "sentence": "ギャラリーは暗かった。来場者はひそひそと話した。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ギャラリーの暗さが増すと、来場者のささやきも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ギャラリーは暗かった。来場者はひそひそと話した。\nギャラリーの暗さが増すと、この文章は来場者のささやきについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.1926062107086182,
+  "usage": {
+   "prompt_tokens": 118,
+   "completion_tokens": 1,
+   "total_tokens": 119,
+   "cost": 0.000186,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000186,
+    "upstream_inference_prompt_cost": 0.000177,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "gallery-ctrl-single",
+  "scale_pair": "gallery",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "ギャラリーの暗さ",
+  "dim2": "来場者のささやき",
+  "sentence": "ギャラリーはロビーより暗かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ギャラリーの暗さが増すと、来場者のささやきも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ギャラリーはロビーより暗かった。\nギャラリーの暗さが増すと、この文章は来場者のささやきについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9414958953857422,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-cc-positive",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "スタートアップの規模",
+  "dim2": "投資家の慎重さ",
+  "sentence": "スタートアップが大きければ大きいほど、投資家は慎重になった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "スタートアップの規模が増すと、投資家の慎重さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：スタートアップが大きければ大きいほど、投資家は慎重になった。\nスタートアップの規模が増すと、この文章は投資家の慎重さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8282177448272705,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-cc-inverse",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "スタートアップの規模",
+  "dim2": "投資家の慎重さ",
+  "sentence": "スタートアップが大きければ大きいほど、投資家は慎重でなくなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "スタートアップの規模が増すと、投資家の慎重さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：スタートアップが大きければ大きいほど、投資家は慎重でなくなった。\nスタートアップの規模が増すと、この文章は投資家の慎重さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7269644737243652,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-ctrl-two",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "スタートアップの規模",
+  "dim2": "投資家の慎重さ",
+  "sentence": "スタートアップは大きかった。投資家は慎重だった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "スタートアップの規模が増すと、投資家の慎重さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：スタートアップは大きかった。投資家は慎重だった。\nスタートアップの規模が増すと、この文章は投資家の慎重さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8393785953521729,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-ctrl-single",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "スタートアップの規模",
+  "dim2": "投資家の慎重さ",
+  "sentence": "スタートアップは競合より大きかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "スタートアップの規模が増すと、投資家の慎重さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：スタートアップは競合より大きかった。\nスタートアップの規模が増すと、この文章は投資家の慎重さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7614498138427734,
+  "usage": {
+   "prompt_tokens": 107,
+   "completion_tokens": 1,
+   "total_tokens": 108,
+   "cost": 0.0001695,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001695,
+    "upstream_inference_prompt_cost": 0.0001605,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "harbor-cc-positive",
+  "scale_pair": "harbor",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "港の忙しさ",
+  "dim2": "魚の値段",
+  "sentence": "港が忙しければ忙しいほど、魚の値段が上がった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "港の忙しさが増すと、魚の値段も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：港が忙しければ忙しいほど、魚の値段が上がった。\n港の忙しさが増すと、この文章は魚の値段についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8752124309539795,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "harbor-cc-inverse",
+  "scale_pair": "harbor",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "港の忙しさ",
+  "dim2": "魚の値段",
+  "sentence": "港が忙しければ忙しいほど、魚の値段が下がった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "港の忙しさが増すと、魚の値段も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：港が忙しければ忙しいほど、魚の値段が下がった。\n港の忙しさが増すと、この文章は魚の値段についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8522346019744873,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "harbor-ctrl-two",
+  "scale_pair": "harbor",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "港の忙しさ",
+  "dim2": "魚の値段",
+  "sentence": "港は忙しかった。魚の値段は高かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "港の忙しさが増すと、魚の値段も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：港は忙しかった。魚の値段は高かった。\n港の忙しさが増すと、この文章は魚の値段についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8954155445098877,
+  "usage": {
+   "prompt_tokens": 108,
+   "completion_tokens": 1,
+   "total_tokens": 109,
+   "cost": 0.000171,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000171,
+    "upstream_inference_prompt_cost": 0.000162,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "harbor-ctrl-single",
+  "scale_pair": "harbor",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "港の忙しさ",
+  "dim2": "魚の値段",
+  "sentence": "港は冬より忙しかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "港の忙しさが増すと、魚の値段も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：港は冬より忙しかった。\n港の忙しさが増すと、この文章は魚の値段についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8695461750030518,
+  "usage": {
+   "prompt_tokens": 103,
+   "completion_tokens": 1,
+   "total_tokens": 104,
+   "cost": 0.0001635,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001635,
+    "upstream_inference_prompt_cost": 0.0001545,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "clinic-cc-positive",
+  "scale_pair": "clinic",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "待合室の暖かさ",
+  "dim2": "患者の眠気",
+  "sentence": "待合室が暖かければ暖かいほど、患者は眠くなった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "待合室の暖かさが増すと、患者の眠気も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：待合室が暖かければ暖かいほど、患者は眠くなった。\n待合室の暖かさが増すと、この文章は患者の眠気についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.1442220211029053,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 1,
+   "total_tokens": 116,
+   "cost": 0.0001815,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001815,
+    "upstream_inference_prompt_cost": 0.0001725,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "clinic-cc-inverse",
+  "scale_pair": "clinic",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "待合室の暖かさ",
+  "dim2": "患者の眠気",
+  "sentence": "待合室が暖かければ暖かいほど、患者は目が冴えた。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "待合室の暖かさが増すと、患者の眠気も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：待合室が暖かければ暖かいほど、患者は目が冴えた。\n待合室の暖かさが増すと、この文章は患者の眠気についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 1.0204248428344727,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1,
+   "total_tokens": 117,
+   "cost": 0.000183,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000183,
+    "upstream_inference_prompt_cost": 0.000174,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "clinic-ctrl-two",
+  "scale_pair": "clinic",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "待合室の暖かさ",
+  "dim2": "患者の眠気",
+  "sentence": "待合室は暖かかった。患者は眠そうだった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "待合室の暖かさが増すと、患者の眠気も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：待合室は暖かかった。患者は眠そうだった。\n待合室の暖かさが増すと、この文章は患者の眠気についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8638250827789307,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "clinic-ctrl-single",
+  "scale_pair": "clinic",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "待合室の暖かさ",
+  "dim2": "患者の眠気",
+  "sentence": "待合室は廊下より暖かかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "待合室の暖かさが増すと、患者の眠気も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：待合室は廊下より暖かかった。\n待合室の暖かさが増すと、この文章は患者の眠気についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.91579270362854,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "vineyard-cc-positive",
+  "scale_pair": "vineyard",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "ぶどう畑の険しさ",
+  "dim2": "摘み手の賃金",
+  "sentence": "ぶどう畑が険しければ険しいほど、摘み手の賃金が上がった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "ぶどう畑の険しさが増すと、摘み手の賃金も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：ぶどう畑が険しければ険しいほど、摘み手の賃金が上がった。\nぶどう畑の険しさが増すと、この文章は摘み手の賃金についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8241794109344482,
+  "usage": {
+   "prompt_tokens": 120,
+   "completion_tokens": 1,
+   "total_tokens": 121,
+   "cost": 0.000189,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000189,
+    "upstream_inference_prompt_cost": 0.00018,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "vineyard-cc-inverse",
+  "scale_pair": "vineyard",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "ぶどう畑の険しさ",
+  "dim2": "摘み手の賃金",
+  "sentence": "ぶどう畑が険しければ険しいほど、摘み手の賃金が下がった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "ぶどう畑の険しさが増すと、摘み手の賃金も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：ぶどう畑が険しければ険しいほど、摘み手の賃金が下がった。\nぶどう畑の険しさが増すと、この文章は摘み手の賃金についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9058558940887451,
+  "usage": {
+   "prompt_tokens": 120,
+   "completion_tokens": 1,
+   "total_tokens": 121,
+   "cost": 0.000189,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000189,
+    "upstream_inference_prompt_cost": 0.00018,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "vineyard-ctrl-two",
+  "scale_pair": "vineyard",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "ぶどう畑の険しさ",
+  "dim2": "摘み手の賃金",
+  "sentence": "ぶどう畑は険しかった。摘み手の賃金は高かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ぶどう畑の険しさが増すと、摘み手の賃金も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ぶどう畑は険しかった。摘み手の賃金は高かった。\nぶどう畑の険しさが増すと、この文章は摘み手の賃金についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8825266361236572,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1,
+   "total_tokens": 117,
+   "cost": 0.000183,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000183,
+    "upstream_inference_prompt_cost": 0.000174,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "vineyard-ctrl-single",
+  "scale_pair": "vineyard",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "ぶどう畑の険しさ",
+  "dim2": "摘み手の賃金",
+  "sentence": "ぶどう畑は果樹園より険しかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ぶどう畑の険しさが増すと、摘み手の賃金も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ぶどう畑は果樹園より険しかった。\nぶどう畑の険しさが増すと、この文章は摘み手の賃金についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8479597568511963,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pool-cc-positive",
+  "scale_pair": "pool",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "プールの冷たさ",
+  "dim2": "泳者の泳ぐ距離",
+  "sentence": "プールが冷たければ冷たいほど、泳者は長く泳いだ。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "プールの冷たさが増すと、泳者の泳ぐ距離も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：プールが冷たければ冷たいほど、泳者は長く泳いだ。\nプールの冷たさが増すと、この文章は泳者の泳ぐ距離についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.0175864696502686,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pool-cc-inverse",
+  "scale_pair": "pool",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "プールの冷たさ",
+  "dim2": "泳者の泳ぐ距離",
+  "sentence": "プールが冷たければ冷たいほど、泳者は短く泳いだ。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "プールの冷たさが増すと、泳者の泳ぐ距離も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：プールが冷たければ冷たいほど、泳者は短く泳いだ。\nプールの冷たさが増すと、この文章は泳者の泳ぐ距離についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7877616882324219,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 1,
+   "total_tokens": 116,
+   "cost": 0.0001815,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001815,
+    "upstream_inference_prompt_cost": 0.0001725,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pool-ctrl-two",
+  "scale_pair": "pool",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "プールの冷たさ",
+  "dim2": "泳者の泳ぐ距離",
+  "sentence": "プールは冷たかった。泳者は長く泳いだ。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "プールの冷たさが増すと、泳者の泳ぐ距離も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：プールは冷たかった。泳者は長く泳いだ。\nプールの冷たさが増すと、この文章は泳者の泳ぐ距離についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.0132808685302734,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pool-ctrl-single",
+  "scale_pair": "pool",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "プールの冷たさ",
+  "dim2": "泳者の泳ぐ距離",
+  "sentence": "プールは海より冷たかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "プールの冷たさが増すと、泳者の泳ぐ距離も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：プールは海より冷たかった。\nプールの冷たさが増すと、この文章は泳者の泳ぐ距離についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8946595191955566,
+  "usage": {
+   "prompt_tokens": 107,
+   "completion_tokens": 1,
+   "total_tokens": 108,
+   "cost": 0.0001695,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001695,
+    "upstream_inference_prompt_cost": 0.0001605,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "shelves-cc-positive",
+  "scale_pair": "shelves",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "棚の高さ",
+  "dim2": "司書の歩く速さ",
+  "sentence": "棚が高ければ高いほど、司書は速く歩いた。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "棚の高さが増すと、司書の歩く速さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：棚が高ければ高いほど、司書は速く歩いた。\n棚の高さが増すと、この文章は司書の歩く速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.2437562942504883,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "shelves-cc-inverse",
+  "scale_pair": "shelves",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "棚の高さ",
+  "dim2": "司書の歩く速さ",
+  "sentence": "棚が高ければ高いほど、司書はゆっくり歩いた。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "棚の高さが増すと、司書の歩く速さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：棚が高ければ高いほど、司書はゆっくり歩いた。\n棚の高さが増すと、この文章は司書の歩く速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.822455644607544,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "shelves-ctrl-two",
+  "scale_pair": "shelves",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "棚の高さ",
+  "dim2": "司書の歩く速さ",
+  "sentence": "棚は高かった。司書は速く歩いた。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "棚の高さが増すと、司書の歩く速さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：棚は高かった。司書は速く歩いた。\n棚の高さが増すと、この文章は司書の歩く速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7986562252044678,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "shelves-ctrl-single",
+  "scale_pair": "shelves",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "棚の高さ",
+  "dim2": "司書の歩く速さ",
+  "sentence": "棚は閲覧机より高かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "棚の高さが増すと、司書の歩く速さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：棚は閲覧机より高かった。\n棚の高さが増すと、この文章は司書の歩く速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.0676865577697754,
+  "usage": {
+   "prompt_tokens": 106,
+   "completion_tokens": 1,
+   "total_tokens": 107,
+   "cost": 0.000168,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000168,
+    "upstream_inference_prompt_cost": 0.000159,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-cc-positive",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "バンドの音の大きさ",
+  "dim2": "踊る人の数",
+  "sentence": "バンドの音が大きければ大きいほど、踊る人が増えた。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "バンドの音の大きさが増すと、踊る人の数も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：バンドの音が大きければ大きいほど、踊る人が増えた。\nバンドの音の大きさが増すと、この文章は踊る人の数についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8825504779815674,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-cc-inverse",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "バンドの音の大きさ",
+  "dim2": "踊る人の数",
+  "sentence": "バンドの音が大きければ大きいほど、踊る人が減った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "バンドの音の大きさが増すと、踊る人の数も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：バンドの音が大きければ大きいほど、踊る人が減った。\nバンドの音の大きさが増すと、この文章は踊る人の数についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9291386604309082,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-ctrl-two",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "バンドの音の大きさ",
+  "dim2": "踊る人の数",
+  "sentence": "バンドの音は大きかった。踊る人は多かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "バンドの音の大きさが増すと、踊る人の数も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：バンドの音は大きかった。踊る人は多かった。\nバンドの音の大きさが増すと、この文章は踊る人の数についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7016079425811768,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-ctrl-single",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "バンドの音の大きさ",
+  "dim2": "踊る人の数",
+  "sentence": "バンドの音は前座より大きかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "バンドの音の大きさが増すと、踊る人の数も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：バンドの音は前座より大きかった。\nバンドの音の大きさが増すと、この文章は踊る人の数についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8416831493377686,
+  "usage": {
+   "prompt_tokens": 108,
+   "completion_tokens": 1,
+   "total_tokens": 109,
+   "cost": 0.000171,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000171,
+    "upstream_inference_prompt_cost": 0.000162,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "field-cc-positive",
+  "scale_pair": "field",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "畑の平らさ",
+  "dim2": "農家の収穫",
+  "sentence": "畑が平らであればあるほど、農家の収穫が増えた。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "畑の平らさが増すと、農家の収穫も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：畑が平らであればあるほど、農家の収穫が増えた。\n畑の平らさが増すと、この文章は農家の収穫についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.3519887924194336,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "field-cc-inverse",
+  "scale_pair": "field",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "畑の平らさ",
+  "dim2": "農家の収穫",
+  "sentence": "畑が平らであればあるほど、農家の収穫が減った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "畑の平らさが増すと、農家の収穫も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：畑が平らであればあるほど、農家の収穫が減った。\n畑の平らさが増すと、この文章は農家の収穫についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8999683856964111,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "field-ctrl-two",
+  "scale_pair": "field",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "畑の平らさ",
+  "dim2": "農家の収穫",
+  "sentence": "畑は平らだった。農家の収穫は多かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "畑の平らさが増すと、農家の収穫も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：畑は平らだった。農家の収穫は多かった。\n畑の平らさが増すと、この文章は農家の収穫についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8485541343688965,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "field-ctrl-single",
+  "scale_pair": "field",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "畑の平らさ",
+  "dim2": "農家の収穫",
+  "sentence": "畑は斜面より平らだった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "畑の平らさが増すと、農家の収穫も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：畑は斜面より平らだった。\n畑の平らさが増すと、この文章は農家の収穫についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6941318511962891,
+  "usage": {
+   "prompt_tokens": 107,
+   "completion_tokens": 1,
+   "total_tokens": 108,
+   "cost": 0.0001695,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001695,
+    "upstream_inference_prompt_cost": 0.0001605,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "brochure-cc-positive",
+  "scale_pair": "brochure",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "パンフレットの美しさ",
+  "dim2": "買い手の信頼",
+  "sentence": "パンフレットが美しければ美しいほど、買い手はそれを信頼した。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "パンフレットの美しさが増すと、買い手の信頼も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：パンフレットが美しければ美しいほど、買い手はそれを信頼した。\nパンフレットの美しさが増すと、この文章は買い手の信頼についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.0288987159729004,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 1,
+   "total_tokens": 116,
+   "cost": 0.0001815,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001815,
+    "upstream_inference_prompt_cost": 0.0001725,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "brochure-cc-inverse",
+  "scale_pair": "brochure",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "パンフレットの美しさ",
+  "dim2": "買い手の信頼",
+  "sentence": "パンフレットが美しければ美しいほど、買い手はそれを信頼しなくなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "パンフレットの美しさが増すと、買い手の信頼も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：パンフレットが美しければ美しいほど、買い手はそれを信頼しなくなった。\nパンフレットの美しさが増すと、この文章は買い手の信頼についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7626221179962158,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1,
+   "total_tokens": 117,
+   "cost": 0.000183,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000183,
+    "upstream_inference_prompt_cost": 0.000174,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "brochure-ctrl-two",
+  "scale_pair": "brochure",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "パンフレットの美しさ",
+  "dim2": "買い手の信頼",
+  "sentence": "パンフレットは美しかった。買い手はそれを信頼した。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "パンフレットの美しさが増すと、買い手の信頼も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：パンフレットは美しかった。買い手はそれを信頼した。\nパンフレットの美しさが増すと、この文章は買い手の信頼についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.1807169914245605,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "brochure-ctrl-single",
+  "scale_pair": "brochure",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "パンフレットの美しさ",
+  "dim2": "買い手の信頼",
+  "sentence": "パンフレットはチラシより美しかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "パンフレットの美しさが増すと、買い手の信頼も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：パンフレットはチラシより美しかった。\nパンフレットの美しさが増すと、この文章は買い手の信頼についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6968193054199219,
+  "usage": {
+   "prompt_tokens": 108,
+   "completion_tokens": 1,
+   "total_tokens": 109,
+   "cost": 0.000171,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000171,
+    "upstream_inference_prompt_cost": 0.000162,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-cc-positive",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "劇場の暗さ",
+  "dim2": "観客のざわめき",
+  "sentence": "劇場が暗ければ暗いほど、観客はざわついた。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "劇場の暗さが増すと、観客のざわめきも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：劇場が暗ければ暗いほど、観客はざわついた。\n劇場の暗さが増すと、この文章は観客のざわめきについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.1945807933807373,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1,
+   "total_tokens": 117,
+   "cost": 0.000183,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000183,
+    "upstream_inference_prompt_cost": 0.000174,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-cc-inverse",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "劇場の暗さ",
+  "dim2": "観客のざわめき",
+  "sentence": "劇場が暗ければ暗いほど、観客は静かになった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "劇場の暗さが増すと、観客のざわめきも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：劇場が暗ければ暗いほど、観客は静かになった。\n劇場の暗さが増すと、この文章は観客のざわめきについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8742971420288086,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 1,
+   "total_tokens": 116,
+   "cost": 0.0001815,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001815,
+    "upstream_inference_prompt_cost": 0.0001725,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-ctrl-two",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "劇場の暗さ",
+  "dim2": "観客のざわめき",
+  "sentence": "劇場は暗かった。観客はざわついた。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "劇場の暗さが増すと、観客のざわめきも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：劇場は暗かった。観客はざわついた。\n劇場の暗さが増すと、この文章は観客のざわめきについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6647143363952637,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-ctrl-single",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "劇場の暗さ",
+  "dim2": "観客のざわめき",
+  "sentence": "劇場はゲネプロのときより暗かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "劇場の暗さが増すと、観客のざわめきも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：劇場はゲネプロのときより暗かった。\n劇場の暗さが増すと、この文章は観客のざわめきについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8019602298736572,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-cc-positive",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "カレーの辛さ",
+  "dim2": "客のおしゃべり",
+  "sentence": "カレーが辛ければ辛いほど、客はおしゃべりになった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "カレーの辛さが増すと、客のおしゃべりも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：カレーが辛ければ辛いほど、客はおしゃべりになった。\nカレーの辛さが増すと、この文章は客のおしゃべりについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.675433874130249,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-cc-inverse",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "カレーの辛さ",
+  "dim2": "客のおしゃべり",
+  "sentence": "カレーが辛ければ辛いほど、客は無口になった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "カレーの辛さが増すと、客のおしゃべりも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：カレーが辛ければ辛いほど、客は無口になった。\nカレーの辛さが増すと、この文章は客のおしゃべりについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9154055118560791,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-ctrl-two",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "カレーの辛さ",
+  "dim2": "客のおしゃべり",
+  "sentence": "カレーは辛かった。客はよくしゃべった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "カレーの辛さが増すと、客のおしゃべりも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：カレーは辛かった。客はよくしゃべった。\nカレーの辛さが増すと、この文章は客のおしゃべりについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.018369436264038,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-ctrl-single",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "カレーの辛さ",
+  "dim2": "客のおしゃべり",
+  "sentence": "カレーは前菜より辛かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "カレーの辛さが増すと、客のおしゃべりも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：カレーは前菜より辛かった。\nカレーの辛さが増すと、この文章は客のおしゃべりについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6369855403900146,
+  "usage": {
+   "prompt_tokens": 106,
+   "completion_tokens": 1,
+   "total_tokens": 107,
+   "cost": 0.000168,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000168,
+    "upstream_inference_prompt_cost": 0.000159,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "syllabus-cc-positive",
+  "scale_pair": "syllabus",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "シラバスの長さ",
+  "dim2": "学生の熱意",
+  "sentence": "シラバスが長ければ長いほど、学生は熱心になった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "シラバスの長さが増すと、学生の熱意も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：シラバスが長ければ長いほど、学生は熱心になった。\nシラバスの長さが増すと、この文章は学生の熱意についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8465754985809326,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "syllabus-cc-inverse",
+  "scale_pair": "syllabus",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "シラバスの長さ",
+  "dim2": "学生の熱意",
+  "sentence": "シラバスが長ければ長いほど、学生は無気力になった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "シラバスの長さが増すと、学生の熱意も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：シラバスが長ければ長いほど、学生は無気力になった。\nシラバスの長さが増すと、この文章は学生の熱意についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8032543659210205,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "syllabus-ctrl-two",
+  "scale_pair": "syllabus",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "シラバスの長さ",
+  "dim2": "学生の熱意",
+  "sentence": "シラバスは長かった。学生は熱心だった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "シラバスの長さが増すと、学生の熱意も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：シラバスは長かった。学生は熱心だった。\nシラバスの長さが増すと、この文章は学生の熱意についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.79085373878479,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "syllabus-ctrl-single",
+  "scale_pair": "syllabus",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "シラバスの長さ",
+  "dim2": "学生の熱意",
+  "sentence": "シラバスは前学期より長かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "シラバスの長さが増すと、学生の熱意も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：シラバスは前学期より長かった。\nシラバスの長さが増すと、この文章は学生の熱意についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8121259212493896,
+  "usage": {
+   "prompt_tokens": 109,
+   "completion_tokens": 1,
+   "total_tokens": 110,
+   "cost": 0.0001725,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001725,
+    "upstream_inference_prompt_cost": 0.0001635,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "current-cc-positive",
+  "scale_pair": "current",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "流れの速さ",
+  "dim2": "釣り人の苛立ち",
+  "sentence": "流れが速ければ速いほど、釣り人はいらだった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "流れの速さが増すと、釣り人の苛立ちも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：流れが速ければ速いほど、釣り人はいらだった。\n流れの速さが増すと、この文章は釣り人の苛立ちについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6847934722900391,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "current-cc-inverse",
+  "scale_pair": "current",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "流れの速さ",
+  "dim2": "釣り人の苛立ち",
+  "sentence": "流れが速ければ速いほど、釣り人は落ち着いた。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "流れの速さが増すと、釣り人の苛立ちも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：流れが速ければ速いほど、釣り人は落ち着いた。\n流れの速さが増すと、この文章は釣り人の苛立ちについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.6619131565093994,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "current-ctrl-two",
+  "scale_pair": "current",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "流れの速さ",
+  "dim2": "釣り人の苛立ち",
+  "sentence": "流れは速かった。釣り人はいらだっていた。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "流れの速さが増すと、釣り人の苛立ちも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：流れは速かった。釣り人はいらだっていた。\n流れの速さが増すと、この文章は釣り人の苛立ちについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8430063724517822,
+  "usage": {
+   "prompt_tokens": 109,
+   "completion_tokens": 1,
+   "total_tokens": 110,
+   "cost": 0.0001725,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001725,
+    "upstream_inference_prompt_cost": 0.0001635,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "current-ctrl-single",
+  "scale_pair": "current",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "流れの速さ",
+  "dim2": "釣り人の苛立ち",
+  "sentence": "流れは明け方より速かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "流れの速さが増すと、釣り人の苛立ちも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：流れは明け方より速かった。\n流れの速さが増すと、この文章は釣り人の苛立ちについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9568905830383301,
+  "usage": {
+   "prompt_tokens": 105,
+   "completion_tokens": 1,
+   "total_tokens": 106,
+   "cost": 0.0001665,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001665,
+    "upstream_inference_prompt_cost": 0.0001575,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kitchen-cc-positive",
+  "scale_pair": "kitchen",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "厨房のきれいさ",
+  "dim2": "料理人の雑談",
+  "sentence": "厨房がきれいであればあるほど、料理人はよく雑談した。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "厨房のきれいさが増すと、料理人の雑談も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：厨房がきれいであればあるほど、料理人はよく雑談した。\n厨房のきれいさが増すと、この文章は料理人の雑談についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.3736631870269775,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kitchen-cc-inverse",
+  "scale_pair": "kitchen",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "厨房のきれいさ",
+  "dim2": "料理人の雑談",
+  "sentence": "厨房がきれいであればあるほど、料理人は口数が少なくなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "厨房のきれいさが増すと、料理人の雑談も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：厨房がきれいであればあるほど、料理人は口数が少なくなった。\n厨房のきれいさが増すと、この文章は料理人の雑談についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7606940269470215,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kitchen-ctrl-two",
+  "scale_pair": "kitchen",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "厨房のきれいさ",
+  "dim2": "料理人の雑談",
+  "sentence": "厨房はきれいだった。料理人はよく雑談した。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "厨房のきれいさが増すと、料理人の雑談も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：厨房はきれいだった。料理人はよく雑談した。\n厨房のきれいさが増すと、この文章は料理人の雑談についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8894054889678955,
+  "usage": {
+   "prompt_tokens": 109,
+   "completion_tokens": 1,
+   "total_tokens": 110,
+   "cost": 0.0001725,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001725,
+    "upstream_inference_prompt_cost": 0.0001635,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kitchen-ctrl-single",
+  "scale_pair": "kitchen",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "厨房のきれいさ",
+  "dim2": "料理人の雑談",
+  "sentence": "厨房は食料庫よりきれいだった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "厨房のきれいさが増すと、料理人の雑談も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：厨房は食料庫よりきれいだった。\n厨房のきれいさが増すと、この文章は料理人の雑談についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.0042471885681152,
+  "usage": {
+   "prompt_tokens": 106,
+   "completion_tokens": 1,
+   "total_tokens": 107,
+   "cost": 0.000168,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000168,
+    "upstream_inference_prompt_cost": 0.000159,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "path-cc-positive",
+  "scale_pair": "path",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "小道の狭さ",
+  "dim2": "登山者の間隔",
+  "sentence": "小道が狭ければ狭いほど、登山者の間隔が広がった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "小道の狭さが増すと、登山者の間隔も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：小道が狭ければ狭いほど、登山者の間隔が広がった。\n小道の狭さが増すと、この文章は登山者の間隔についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9496972560882568,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "path-cc-inverse",
+  "scale_pair": "path",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "小道の狭さ",
+  "dim2": "登山者の間隔",
+  "sentence": "小道が狭ければ狭いほど、登山者の間隔が縮まった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "小道の狭さが増すと、登山者の間隔も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：小道が狭ければ狭いほど、登山者の間隔が縮まった。\n小道の狭さが増すと、この文章は登山者の間隔についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7477543354034424,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "path-ctrl-two",
+  "scale_pair": "path",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "小道の狭さ",
+  "dim2": "登山者の間隔",
+  "sentence": "小道は狭かった。登山者の間隔は広かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "小道の狭さが増すと、登山者の間隔も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：小道は狭かった。登山者の間隔は広かった。\n小道の狭さが増すと、この文章は登山者の間隔についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.2202889919281006,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "path-ctrl-single",
+  "scale_pair": "path",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "小道の狭さ",
+  "dim2": "登山者の間隔",
+  "sentence": "小道は林道より狭かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "小道の狭さが増すと、登山者の間隔も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：小道は林道より狭かった。\n小道の狭さが増すと、この文章は登山者の間隔についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.3095903396606445,
+  "usage": {
+   "prompt_tokens": 106,
+   "completion_tokens": 1,
+   "total_tokens": 107,
+   "cost": 0.000168,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000168,
+    "upstream_inference_prompt_cost": 0.000159,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auction-cc-positive",
+  "scale_pair": "auction",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "競売場の明るさ",
+  "dim2": "収集家の滞在時間",
+  "sentence": "競売場が明るければ明るいほど、収集家は長く留まった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "競売場の明るさが増すと、収集家の滞在時間も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：競売場が明るければ明るいほど、収集家は長く留まった。\n競売場の明るさが増すと、この文章は収集家の滞在時間についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7692301273345947,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1,
+   "total_tokens": 117,
+   "cost": 0.000183,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000183,
+    "upstream_inference_prompt_cost": 0.000174,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auction-cc-inverse",
+  "scale_pair": "auction",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "競売場の明るさ",
+  "dim2": "収集家の滞在時間",
+  "sentence": "競売場が明るければ明るいほど、収集家は早く立ち去った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "競売場の明るさが増すと、収集家の滞在時間も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：競売場が明るければ明るいほど、収集家は早く立ち去った。\n競売場の明るさが増すと、この文章は収集家の滞在時間についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7852182388305664,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 1,
+   "total_tokens": 118,
+   "cost": 0.0001845,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001845,
+    "upstream_inference_prompt_cost": 0.0001755,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auction-ctrl-two",
+  "scale_pair": "auction",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "競売場の明るさ",
+  "dim2": "収集家の滞在時間",
+  "sentence": "競売場は明るかった。収集家は長く留まった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "競売場の明るさが増すと、収集家の滞在時間も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：競売場は明るかった。収集家は長く留まった。\n競売場の明るさが増すと、この文章は収集家の滞在時間についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.0317764282226562,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auction-ctrl-single",
+  "scale_pair": "auction",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "競売場の明るさ",
+  "dim2": "収集家の滞在時間",
+  "sentence": "競売場は金庫室より明るかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "競売場の明るさが増すと、収集家の滞在時間も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：競売場は金庫室より明るかった。\n競売場の明るさが増すと、この文章は収集家の滞在時間についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.797128438949585,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soil-cc-positive",
+  "scale_pair": "soil",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "土の砂っぽさ",
+  "dim2": "水やりの頻度",
+  "sentence": "土が砂っぽければ砂っぽいほど、庭師はよく水をやった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "土の砂っぽさが増すと、水やりの頻度も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：土が砂っぽければ砂っぽいほど、庭師はよく水をやった。\n土の砂っぽさが増すと、この文章は水やりの頻度についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7907314300537109,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 1,
+   "total_tokens": 116,
+   "cost": 0.0001815,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001815,
+    "upstream_inference_prompt_cost": 0.0001725,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soil-cc-inverse",
+  "scale_pair": "soil",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "土の砂っぽさ",
+  "dim2": "水やりの頻度",
+  "sentence": "土が砂っぽければ砂っぽいほど、庭師はあまり水をやらなくなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "土の砂っぽさが増すと、水やりの頻度も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：土が砂っぽければ砂っぽいほど、庭師はあまり水をやらなくなった。\n土の砂っぽさが増すと、この文章は水やりの頻度についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.759636640548706,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1,
+   "total_tokens": 117,
+   "cost": 0.000183,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000183,
+    "upstream_inference_prompt_cost": 0.000174,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soil-ctrl-two",
+  "scale_pair": "soil",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "土の砂っぽさ",
+  "dim2": "水やりの頻度",
+  "sentence": "土は砂っぽかった。庭師はよく水をやった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "土の砂っぽさが増すと、水やりの頻度も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：土は砂っぽかった。庭師はよく水をやった。\n土の砂っぽさが増すと、この文章は水やりの頻度についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.6780400276184082,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "soil-ctrl-single",
+  "scale_pair": "soil",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "土の砂っぽさ",
+  "dim2": "水やりの頻度",
+  "sentence": "土は粘土の花壇より砂っぽかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "土の砂っぽさが増すと、水やりの頻度も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：土は粘土の花壇より砂っぽかった。\n土の砂っぽさが増すと、この文章は水やりの頻度についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9406323432922363,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hall-cc-positive",
+  "scale_pair": "hall",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "会場の大きさ",
+  "dim2": "ファンの盛り上がり",
+  "sentence": "会場が大きければ大きいほど、ファンは盛り上がった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "会場の大きさが増すと、ファンの盛り上がりも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：会場が大きければ大きいほど、ファンは盛り上がった。\n会場の大きさが増すと、この文章はファンの盛り上がりについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6935100555419922,
+  "usage": {
+   "prompt_tokens": 109,
+   "completion_tokens": 1,
+   "total_tokens": 110,
+   "cost": 0.0001725,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001725,
+    "upstream_inference_prompt_cost": 0.0001635,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hall-cc-inverse",
+  "scale_pair": "hall",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "会場の大きさ",
+  "dim2": "ファンの盛り上がり",
+  "sentence": "会場が大きければ大きいほど、ファンはおとなしくなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "会場の大きさが増すと、ファンの盛り上がりも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：会場が大きければ大きいほど、ファンはおとなしくなった。\n会場の大きさが増すと、この文章はファンの盛り上がりについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 1.056034803390503,
+  "usage": {
+   "prompt_tokens": 109,
+   "completion_tokens": 1,
+   "total_tokens": 110,
+   "cost": 0.0001725,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001725,
+    "upstream_inference_prompt_cost": 0.0001635,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hall-ctrl-two",
+  "scale_pair": "hall",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "会場の大きさ",
+  "dim2": "ファンの盛り上がり",
+  "sentence": "会場は大きかった。ファンは盛り上がった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "会場の大きさが増すと、ファンの盛り上がりも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：会場は大きかった。ファンは盛り上がった。\n会場の大きさが増すと、この文章はファンの盛り上がりについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.0423462390899658,
+  "usage": {
+   "prompt_tokens": 107,
+   "completion_tokens": 1,
+   "total_tokens": 108,
+   "cost": 0.0001695,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001695,
+    "upstream_inference_prompt_cost": 0.0001605,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hall-ctrl-single",
+  "scale_pair": "hall",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "会場の大きさ",
+  "dim2": "ファンの盛り上がり",
+  "sentence": "会場はクラブより大きかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "会場の大きさが増すと、ファンの盛り上がりも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：会場はクラブより大きかった。\n会場の大きさが増すと、この文章はファンの盛り上がりについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8183369636535645,
+  "usage": {
+   "prompt_tokens": 103,
+   "completion_tokens": 1,
+   "total_tokens": 104,
+   "cost": 0.0001635,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001635,
+    "upstream_inference_prompt_cost": 0.0001545,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teacup-cc-positive",
+  "scale_pair": "teacup",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "ティーカップの丸さ",
+  "dim2": "渋滞の長さ",
+  "sentence": "ティーカップが丸ければ丸いほど、渋滞は長くなった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "ティーカップの丸さが増すと、渋滞の長さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：ティーカップが丸ければ丸いほど、渋滞は長くなった。\nティーカップの丸さが増すと、この文章は渋滞の長さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9497618675231934,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teacup-cc-inverse",
+  "scale_pair": "teacup",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "ティーカップの丸さ",
+  "dim2": "渋滞の長さ",
+  "sentence": "ティーカップが丸ければ丸いほど、渋滞は短くなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "ティーカップの丸さが増すと、渋滞の長さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：ティーカップが丸ければ丸いほど、渋滞は短くなった。\nティーカップの丸さが増すと、この文章は渋滞の長さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8356461524963379,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teacup-ctrl-two",
+  "scale_pair": "teacup",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "ティーカップの丸さ",
+  "dim2": "渋滞の長さ",
+  "sentence": "ティーカップは丸かった。渋滞は長かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ティーカップの丸さが増すと、渋滞の長さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ティーカップは丸かった。渋滞は長かった。\nティーカップの丸さが増すと、この文章は渋滞の長さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8648135662078857,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teacup-ctrl-single",
+  "scale_pair": "teacup",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "ティーカップの丸さ",
+  "dim2": "渋滞の長さ",
+  "sentence": "ティーカップは湯のみより丸かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ティーカップの丸さが増すと、渋滞の長さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ティーカップは湯のみより丸かった。\nティーカップの丸さが増すと、この文章は渋滞の長さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9037039279937744,
+  "usage": {
+   "prompt_tokens": 107,
+   "completion_tokens": 1,
+   "total_tokens": 108,
+   "cost": 0.0001695,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001695,
+    "upstream_inference_prompt_cost": 0.0001605,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "carpet-cc-positive",
+  "scale_pair": "carpet",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "じゅうたんの赤さ",
+  "dim2": "エレベーターの速さ",
+  "sentence": "じゅうたんが赤ければ赤いほど、エレベーターは速くなった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "じゅうたんの赤さが増すと、エレベーターの速さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：じゅうたんが赤ければ赤いほど、エレベーターは速くなった。\nじゅうたんの赤さが増すと、この文章はエレベーターの速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9765834808349609,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 1,
+   "total_tokens": 118,
+   "cost": 0.0001845,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001845,
+    "upstream_inference_prompt_cost": 0.0001755,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "carpet-cc-inverse",
+  "scale_pair": "carpet",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "じゅうたんの赤さ",
+  "dim2": "エレベーターの速さ",
+  "sentence": "じゅうたんが赤ければ赤いほど、エレベーターは遅くなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "じゅうたんの赤さが増すと、エレベーターの速さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：じゅうたんが赤ければ赤いほど、エレベーターは遅くなった。\nじゅうたんの赤さが増すと、この文章はエレベーターの速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9145760536193848,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 1,
+   "total_tokens": 118,
+   "cost": 0.0001845,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001845,
+    "upstream_inference_prompt_cost": 0.0001755,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "carpet-ctrl-two",
+  "scale_pair": "carpet",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "じゅうたんの赤さ",
+  "dim2": "エレベーターの速さ",
+  "sentence": "じゅうたんは赤かった。エレベーターは速かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "じゅうたんの赤さが増すと、エレベーターの速さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：じゅうたんは赤かった。エレベーターは速かった。\nじゅうたんの赤さが増すと、この文章はエレベーターの速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.0095231533050537,
+  "usage": {
+   "prompt_tokens": 115,
+   "completion_tokens": 1,
+   "total_tokens": 116,
+   "cost": 0.0001815,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001815,
+    "upstream_inference_prompt_cost": 0.0001725,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "carpet-ctrl-single",
+  "scale_pair": "carpet",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "じゅうたんの赤さ",
+  "dim2": "エレベーターの速さ",
+  "sentence": "じゅうたんはカーテンより赤かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "じゅうたんの赤さが増すと、エレベーターの速さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：じゅうたんはカーテンより赤かった。\nじゅうたんの赤さが増すと、この文章はエレベーターの速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.2113020420074463,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pancake-cc-positive",
+  "scale_pair": "pancake",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "パンケーキの柔らかさ",
+  "dim2": "山の高さ",
+  "sentence": "パンケーキが柔らかければ柔らかいほど、山は高くそびえた。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "パンケーキの柔らかさが増すと、山の高さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：パンケーキが柔らかければ柔らかいほど、山は高くそびえた。\nパンケーキの柔らかさが増すと、この文章は山の高さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.233903408050537,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pancake-cc-inverse",
+  "scale_pair": "pancake",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "パンケーキの柔らかさ",
+  "dim2": "山の高さ",
+  "sentence": "パンケーキが柔らかければ柔らかいほど、山は低くなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "パンケーキの柔らかさが増すと、山の高さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：パンケーキが柔らかければ柔らかいほど、山は低くなった。\nパンケーキの柔らかさが増すと、この文章は山の高さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.865847110748291,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pancake-ctrl-two",
+  "scale_pair": "pancake",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "パンケーキの柔らかさ",
+  "dim2": "山の高さ",
+  "sentence": "パンケーキは柔らかかった。山は高くそびえていた。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "パンケーキの柔らかさが増すと、山の高さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：パンケーキは柔らかかった。山は高くそびえていた。\nパンケーキの柔らかさが増すと、この文章は山の高さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.717308521270752,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pancake-ctrl-single",
+  "scale_pair": "pancake",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "パンケーキの柔らかさ",
+  "dim2": "山の高さ",
+  "sentence": "パンケーキはワッフルより柔らかかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "パンケーキの柔らかさが増すと、山の高さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：パンケーキはワッフルより柔らかかった。\nパンケーキの柔らかさが増すと、この文章は山の高さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7804045677185059,
+  "usage": {
+   "prompt_tokens": 106,
+   "completion_tokens": 1,
+   "total_tokens": 107,
+   "cost": 0.000168,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000168,
+    "upstream_inference_prompt_cost": 0.000159,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stapler-cc-positive",
+  "scale_pair": "stapler",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "ホチキスの重さ",
+  "dim2": "夕日の明るさ",
+  "sentence": "ホチキスが重ければ重いほど、夕日は明るく輝いた。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "ホチキスの重さが増すと、夕日の明るさも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：ホチキスが重ければ重いほど、夕日は明るく輝いた。\nホチキスの重さが増すと、この文章は夕日の明るさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9659528732299805,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1,
+   "total_tokens": 117,
+   "cost": 0.000183,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000183,
+    "upstream_inference_prompt_cost": 0.000174,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stapler-cc-inverse",
+  "scale_pair": "stapler",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "ホチキスの重さ",
+  "dim2": "夕日の明るさ",
+  "sentence": "ホチキスが重ければ重いほど、夕日は暗くなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "ホチキスの重さが増すと、夕日の明るさも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：ホチキスが重ければ重いほど、夕日は暗くなった。\nホチキスの重さが増すと、この文章は夕日の明るさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.6624951362609863,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stapler-ctrl-two",
+  "scale_pair": "stapler",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "ホチキスの重さ",
+  "dim2": "夕日の明るさ",
+  "sentence": "ホチキスは重かった。夕日は明るく輝いていた。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ホチキスの重さが増すと、夕日の明るさも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ホチキスは重かった。夕日は明るく輝いていた。\nホチキスの重さが増すと、この文章は夕日の明るさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7220191955566406,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stapler-ctrl-single",
+  "scale_pair": "stapler",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "ホチキスの重さ",
+  "dim2": "夕日の明るさ",
+  "sentence": "ホチキスはテープカッターより重かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ホチキスの重さが増すと、夕日の明るさも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ホチキスはテープカッターより重かった。\nホチキスの重さが増すと、この文章は夕日の明るさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9842777252197266,
+  "usage": {
+   "prompt_tokens": 110,
+   "completion_tokens": 1,
+   "total_tokens": 111,
+   "cost": 0.000174,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000174,
+    "upstream_inference_prompt_cost": 0.000165,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sock-cc-positive",
+  "scale_pair": "sock",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "靴下の縞の多さ",
+  "dim2": "雷の大きさ",
+  "sentence": "靴下の縞が多ければ多いほど、雷は大きく鳴った。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "靴下の縞の多さが増すと、雷の大きさも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：靴下の縞が多ければ多いほど、雷は大きく鳴った。\n靴下の縞の多さが増すと、この文章は雷の大きさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8717591762542725,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sock-cc-inverse",
+  "scale_pair": "sock",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "靴下の縞の多さ",
+  "dim2": "雷の大きさ",
+  "sentence": "靴下の縞が多ければ多いほど、雷は小さく鳴った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "靴下の縞の多さが増すと、雷の大きさも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：靴下の縞が多ければ多いほど、雷は小さく鳴った。\n靴下の縞の多さが増すと、この文章は雷の大きさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8345944881439209,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sock-ctrl-two",
+  "scale_pair": "sock",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "靴下の縞の多さ",
+  "dim2": "雷の大きさ",
+  "sentence": "靴下には縞が多かった。雷は大きく鳴った。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "靴下の縞の多さが増すと、雷の大きさも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：靴下には縞が多かった。雷は大きく鳴った。\n靴下の縞の多さが増すと、この文章は雷の大きさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7555859088897705,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sock-ctrl-single",
+  "scale_pair": "sock",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "靴下の縞の多さ",
+  "dim2": "雷の大きさ",
+  "sentence": "靴下は手袋より縞が多かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "靴下の縞の多さが増すと、雷の大きさも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：靴下は手袋より縞が多かった。\n靴下の縞の多さが増すと、この文章は雷の大きさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7135956287384033,
+  "usage": {
+   "prompt_tokens": 108,
+   "completion_tokens": 1,
+   "total_tokens": 109,
+   "cost": 0.000171,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000171,
+    "upstream_inference_prompt_cost": 0.000162,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampshade-cc-positive",
+  "scale_pair": "lampshade",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "ランプシェードの広さ",
+  "dim2": "ヨーグルトの酸っぱさ",
+  "sentence": "ランプシェードが広ければ広いほど、ヨーグルトは酸っぱくなった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "ランプシェードの広さが増すと、ヨーグルトの酸っぱさも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：ランプシェードが広ければ広いほど、ヨーグルトは酸っぱくなった。\nランプシェードの広さが増すと、この文章はヨーグルトの酸っぱさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7212841510772705,
+  "usage": {
+   "prompt_tokens": 119,
+   "completion_tokens": 1,
+   "total_tokens": 120,
+   "cost": 0.0001875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001875,
+    "upstream_inference_prompt_cost": 0.0001785,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampshade-cc-inverse",
+  "scale_pair": "lampshade",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "ランプシェードの広さ",
+  "dim2": "ヨーグルトの酸っぱさ",
+  "sentence": "ランプシェードが広ければ広いほど、ヨーグルトは甘くなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "ランプシェードの広さが増すと、ヨーグルトの酸っぱさも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：ランプシェードが広ければ広いほど、ヨーグルトは甘くなった。\nランプシェードの広さが増すと、この文章はヨーグルトの酸っぱさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6944456100463867,
+  "usage": {
+   "prompt_tokens": 118,
+   "completion_tokens": 1,
+   "total_tokens": 119,
+   "cost": 0.000186,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000186,
+    "upstream_inference_prompt_cost": 0.000177,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampshade-ctrl-two",
+  "scale_pair": "lampshade",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "ランプシェードの広さ",
+  "dim2": "ヨーグルトの酸っぱさ",
+  "sentence": "ランプシェードは広かった。ヨーグルトは酸っぱかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ランプシェードの広さが増すと、ヨーグルトの酸っぱさも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ランプシェードは広かった。ヨーグルトは酸っぱかった。\nランプシェードの広さが増すと、この文章はヨーグルトの酸っぱさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8096387386322021,
+  "usage": {
+   "prompt_tokens": 117,
+   "completion_tokens": 1,
+   "total_tokens": 118,
+   "cost": 0.0001845,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001845,
+    "upstream_inference_prompt_cost": 0.0001755,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampshade-ctrl-single",
+  "scale_pair": "lampshade",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "ランプシェードの広さ",
+  "dim2": "ヨーグルトの酸っぱさ",
+  "sentence": "ランプシェードは台座より広かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "ランプシェードの広さが増すと、ヨーグルトの酸っぱさも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：ランプシェードは台座より広かった。\nランプシェードの広さが増すと、この文章はヨーグルトの酸っぱさについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7762846946716309,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "keyboard-cc-positive",
+  "scale_pair": "keyboard",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "キーボードのほこりっぽさ",
+  "dim2": "収穫の多さ",
+  "sentence": "キーボードがほこりっぽければほこりっぽいほど、収穫が増えた。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "キーボードのほこりっぽさが増すと、収穫の多さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：キーボードがほこりっぽければほこりっぽいほど、収穫が増えた。\nキーボードのほこりっぽさが増すと、この文章は収穫の多さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6799533367156982,
+  "usage": {
+   "prompt_tokens": 121,
+   "completion_tokens": 1,
+   "total_tokens": 122,
+   "cost": 0.0001905,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001905,
+    "upstream_inference_prompt_cost": 0.0001815,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "keyboard-cc-inverse",
+  "scale_pair": "keyboard",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "キーボードのほこりっぽさ",
+  "dim2": "収穫の多さ",
+  "sentence": "キーボードがほこりっぽければほこりっぽいほど、収穫が減った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "キーボードのほこりっぽさが増すと、収穫の多さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：キーボードがほこりっぽければほこりっぽいほど、収穫が減った。\nキーボードのほこりっぽさが増すと、この文章は収穫の多さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7149085998535156,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 1,
+   "total_tokens": 123,
+   "cost": 0.000192,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000192,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "keyboard-ctrl-two",
+  "scale_pair": "keyboard",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "キーボードのほこりっぽさ",
+  "dim2": "収穫の多さ",
+  "sentence": "キーボードはほこりっぽかった。収穫は多かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "キーボードのほこりっぽさが増すと、収穫の多さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：キーボードはほこりっぽかった。収穫は多かった。\nキーボードのほこりっぽさが増すと、この文章は収穫の多さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9210765361785889,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1,
+   "total_tokens": 117,
+   "cost": 0.000183,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000183,
+    "upstream_inference_prompt_cost": 0.000174,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "keyboard-ctrl-single",
+  "scale_pair": "keyboard",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "キーボードのほこりっぽさ",
+  "dim2": "収穫の多さ",
+  "sentence": "キーボードはモニターよりほこりっぽかった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "キーボードのほこりっぽさが増すと、収穫の多さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：キーボードはモニターよりほこりっぽかった。\nキーボードのほこりっぽさが増すと、この文章は収穫の多さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6942918300628662,
+  "usage": {
+   "prompt_tokens": 113,
+   "completion_tokens": 1,
+   "total_tokens": 114,
+   "cost": 0.0001785,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001785,
+    "upstream_inference_prompt_cost": 0.0001695,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "balloon-cc-positive",
+  "scale_pair": "balloon",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "風船の輝き",
+  "dim2": "井戸の深さ",
+  "sentence": "風船が光れば光るほど、井戸は深くなった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "風船の輝きが増すと、井戸の深さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：風船が光れば光るほど、井戸は深くなった。\n風船の輝きが増すと、この文章は井戸の深さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7044637203216553,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "balloon-cc-inverse",
+  "scale_pair": "balloon",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "風船の輝き",
+  "dim2": "井戸の深さ",
+  "sentence": "風船が光れば光るほど、井戸は浅くなった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "風船の輝きが増すと、井戸の深さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：風船が光れば光るほど、井戸は浅くなった。\n風船の輝きが増すと、この文章は井戸の深さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.6768589019775391,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "balloon-ctrl-two",
+  "scale_pair": "balloon",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "風船の輝き",
+  "dim2": "井戸の深さ",
+  "sentence": "風船は光っていた。井戸は深かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "風船の輝きが増すと、井戸の深さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：風船は光っていた。井戸は深かった。\n風船の輝きが増すと、この文章は井戸の深さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6963403224945068,
+  "usage": {
+   "prompt_tokens": 111,
+   "completion_tokens": 1,
+   "total_tokens": 112,
+   "cost": 0.0001755,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001755,
+    "upstream_inference_prompt_cost": 0.0001665,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "balloon-ctrl-single",
+  "scale_pair": "balloon",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "風船の輝き",
+  "dim2": "井戸の深さ",
+  "sentence": "風船はリボンより光っていた。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "風船の輝きが増すと、井戸の深さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：風船はリボンより光っていた。\n風船の輝きが増すと、この文章は井戸の深さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.436539649963379,
+  "usage": {
+   "prompt_tokens": 108,
+   "completion_tokens": 1,
+   "total_tokens": 109,
+   "cost": 0.000171,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000171,
+    "upstream_inference_prompt_cost": 0.000162,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "envelope-cc-positive",
+  "scale_pair": "envelope",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "封筒のしわの多さ",
+  "dim2": "列車の速さ",
+  "sentence": "封筒のしわが多ければ多いほど、列車は速く走った。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "封筒のしわの多さが増すと、列車の速さも増す。",
+  "nli_gold": "0",
+  "prompt": "文章：封筒のしわが多ければ多いほど、列車は速く走った。\n封筒のしわの多さが増すと、この文章は列車の速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6337180137634277,
+  "usage": {
+   "prompt_tokens": 119,
+   "completion_tokens": 1,
+   "total_tokens": 120,
+   "cost": 0.0001875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001875,
+    "upstream_inference_prompt_cost": 0.0001785,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "envelope-cc-inverse",
+  "scale_pair": "envelope",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "封筒のしわの多さ",
+  "dim2": "列車の速さ",
+  "sentence": "封筒のしわが多ければ多いほど、列車は遅く走った。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "封筒のしわの多さが増すと、列車の速さも増す。",
+  "nli_gold": "2",
+  "prompt": "文章：封筒のしわが多ければ多いほど、列車は遅く走った。\n封筒のしわの多さが増すと、この文章は列車の速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8233489990234375,
+  "usage": {
+   "prompt_tokens": 119,
+   "completion_tokens": 1,
+   "total_tokens": 120,
+   "cost": 0.0001875,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0001875,
+    "upstream_inference_prompt_cost": 0.0001785,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "envelope-ctrl-two",
+  "scale_pair": "envelope",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "封筒のしわの多さ",
+  "dim2": "列車の速さ",
+  "sentence": "封筒にはしわが多かった。列車は速く走った。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "封筒のしわの多さが増すと、列車の速さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：封筒にはしわが多かった。列車は速く走った。\n封筒のしわの多さが増すと、この文章は列車の速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7235569953918457,
+  "usage": {
+   "prompt_tokens": 116,
+   "completion_tokens": 1,
+   "total_tokens": 117,
+   "cost": 0.000183,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000183,
+    "upstream_inference_prompt_cost": 0.000174,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "envelope-ctrl-single",
+  "scale_pair": "envelope",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "封筒のしわの多さ",
+  "dim2": "列車の速さ",
+  "sentence": "封筒は小包よりしわが多かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "封筒のしわの多さが増すと、列車の速さも増す。",
+  "nli_gold": "1",
+  "prompt": "文章：封筒は小包よりしわが多かった。\n封筒のしわの多さが増すと、この文章は列車の速さについてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6719028949737549,
+  "usage": {
+   "prompt_tokens": 112,
+   "completion_tokens": 1,
+   "total_tokens": 113,
+   "cost": 0.000177,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000177,
+    "upstream_inference_prompt_cost": 0.000168,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pinecone-cc-positive",
+  "scale_pair": "pinecone",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "松ぼっくりのべたつき",
+  "dim2": "散髪の値段",
+  "sentence": "松ぼっくりがべたつけばべたつくほど、散髪の値段が上がった。",
+  "fc_gold": "increase",
+  "nli_hypothesis": "松ぼっくりのべたつきが増すと、散髪の値段も増す。",
+  "nli_gold": "0",
+  "prompt": "文章：松ぼっくりがべたつけばべたつくほど、散髪の値段が上がった。\n松ぼっくりのべたつきが増すと、この文章は散髪の値段についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "増加",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.0101640224456787,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 1,
+   "total_tokens": 123,
+   "cost": 0.000192,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000192,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pinecone-cc-inverse",
+  "scale_pair": "pinecone",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "松ぼっくりのべたつき",
+  "dim2": "散髪の値段",
+  "sentence": "松ぼっくりがべたつけばべたつくほど、散髪の値段が下がった。",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "松ぼっくりのべたつきが増すと、散髪の値段も増す。",
+  "nli_gold": "2",
+  "prompt": "文章：松ぼっくりがべたつけばべたつくほど、散髪の値段が下がった。\n松ぼっくりのべたつきが増すと、この文章は散髪の値段についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "減少",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7080168724060059,
+  "usage": {
+   "prompt_tokens": 122,
+   "completion_tokens": 1,
+   "total_tokens": 123,
+   "cost": 0.000192,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000192,
+    "upstream_inference_prompt_cost": 0.000183,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pinecone-ctrl-two",
+  "scale_pair": "pinecone",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "松ぼっくりのべたつき",
+  "dim2": "散髪の値段",
+  "sentence": "松ぼっくりはべたついていた。散髪の値段は高かった。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "松ぼっくりのべたつきが増すと、散髪の値段も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：松ぼっくりはべたついていた。散髪の値段は高かった。\n松ぼっくりのべたつきが増すと、この文章は散髪の値段についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.1351897716522217,
+  "usage": {
+   "prompt_tokens": 118,
+   "completion_tokens": 1,
+   "total_tokens": 119,
+   "cost": 0.000186,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000186,
+    "upstream_inference_prompt_cost": 0.000177,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pinecone-ctrl-single",
+  "scale_pair": "pinecone",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "松ぼっくりのべたつき",
+  "dim2": "散髪の値段",
+  "sentence": "松ぼっくりはどんぐりよりべたついていた。",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "松ぼっくりのべたつきが増すと、散髪の値段も増す。",
+  "nli_gold": "1",
+  "prompt": "文章：松ぼっくりはどんぐりよりべたついていた。\n松ぼっくりのべたつきが増すと、この文章は散髪の値段についてどう示唆していますか？「増加」「減少」「不明」で答えてください。",
+  "raw": "不明",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6624939441680908,
+  "usage": {
+   "prompt_tokens": 114,
+   "completion_tokens": 1,
+   "total_tokens": 115,
+   "cost": 0.00018,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00018,
+    "upstream_inference_prompt_cost": 0.000171,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+]

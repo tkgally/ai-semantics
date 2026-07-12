@@ -1,0 +1,218 @@
+{
+ "per_model": {
+  "A": {
+   "model": "anthropic/claude-sonnet-4.6",
+   "n_fc": 136,
+   "n_nli": 136,
+   "na": {
+    "fc": 0,
+    "nli": 0
+   },
+   "point": {
+    "fc_cc_accuracy_pct": 100.0,
+    "fc_T1_assertion_gap_pp": 94.1,
+    "fc_inverse_flip_pct": 100.0,
+    "fc_positive_increase_pct": 100.0,
+    "fc_typ_minus_atyp_pp": 0.0,
+    "fc_atypical_assertion_pct": 100.0,
+    "nli_cc_accuracy_pct": 100.0,
+    "nli_cc_vs_ctrl_gap_pp": 2.9
+   },
+   "ci95": {
+    "fc_cc_accuracy_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_T1_assertion_gap_pp": [
+     88.2,
+     98.5
+    ],
+    "fc_inverse_flip_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_positive_increase_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_typ_minus_atyp_pp": [
+     0.0,
+     0.0
+    ],
+    "fc_atypical_assertion_pct": [
+     100.0,
+     100.0
+    ],
+    "nli_cc_accuracy_pct": [
+     100.0,
+     100.0
+    ],
+    "nli_cc_vs_ctrl_gap_pp": [
+     0.0,
+     7.4
+    ]
+   }
+  },
+  "B": {
+   "model": "openai/gpt-5.4-mini",
+   "n_fc": 136,
+   "n_nli": 136,
+   "na": {
+    "fc": 0,
+    "nli": 0
+   },
+   "point": {
+    "fc_cc_accuracy_pct": 98.5,
+    "fc_T1_assertion_gap_pp": 83.8,
+    "fc_inverse_flip_pct": 100.0,
+    "fc_positive_increase_pct": 97.1,
+    "fc_typ_minus_atyp_pp": 5.0,
+    "fc_atypical_assertion_pct": 95.0,
+    "nli_cc_accuracy_pct": 89.7,
+    "nli_cc_vs_ctrl_gap_pp": -4.4
+   },
+   "ci95": {
+    "fc_cc_accuracy_pct": [
+     95.6,
+     100.0
+    ],
+    "fc_T1_assertion_gap_pp": [
+     75.0,
+     91.2
+    ],
+    "fc_inverse_flip_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_positive_increase_pct": [
+     91.2,
+     100.0
+    ],
+    "fc_typ_minus_atyp_pp": [
+     0.0,
+     16.7
+    ],
+    "fc_atypical_assertion_pct": [
+     83.3,
+     100.0
+    ],
+    "nli_cc_accuracy_pct": [
+     82.4,
+     95.6
+    ],
+    "nli_cc_vs_ctrl_gap_pp": [
+     -14.7,
+     5.9
+    ]
+   }
+  },
+  "C": {
+   "model": "google/gemini-3.5-flash",
+   "n_fc": 136,
+   "n_nli": 136,
+   "na": {
+    "fc": 0,
+    "nli": 0
+   },
+   "point": {
+    "fc_cc_accuracy_pct": 98.5,
+    "fc_T1_assertion_gap_pp": 95.6,
+    "fc_inverse_flip_pct": 97.1,
+    "fc_positive_increase_pct": 100.0,
+    "fc_typ_minus_atyp_pp": 5.0,
+    "fc_atypical_assertion_pct": 95.0,
+    "nli_cc_accuracy_pct": 97.1,
+    "nli_cc_vs_ctrl_gap_pp": -2.9
+   },
+   "ci95": {
+    "fc_cc_accuracy_pct": [
+     95.6,
+     100.0
+    ],
+    "fc_T1_assertion_gap_pp": [
+     89.7,
+     100.0
+    ],
+    "fc_inverse_flip_pct": [
+     91.2,
+     100.0
+    ],
+    "fc_positive_increase_pct": [
+     100.0,
+     100.0
+    ],
+    "fc_typ_minus_atyp_pp": [
+     0.0,
+     16.7
+    ],
+    "fc_atypical_assertion_pct": [
+     83.3,
+     100.0
+    ],
+    "nli_cc_accuracy_pct": [
+     92.6,
+     100.0
+    ],
+    "nli_cc_vs_ctrl_gap_pp": [
+     -7.4,
+     0.0
+    ]
+   }
+  }
+ },
+ "gates": {
+  "T1_ge_30pp": "3/3",
+  "T2_flip_ge_70pct": "3/3",
+  "T3_atypical_within_15pp": "3/3",
+  "confirm": ">=2/3 each"
+ },
+ "freq_control": {
+  "recipe": "UD-Japanese-GSD `# text =` sentences + items BOTH tokenized with janome 0.5.0 (IPAdic); content = NOUN(名詞, minus numeral/pronoun/non-independent/suffix subtypes)+ADJ(形容詞) base forms; per-lemma per-million frequency + per-pair co-occurrence (# sentences with >=2 distinct pair content lemmas). FROZEN before the run. Consistency choice (Japanese is unsegmented): one janome basis across corpus and items, not the treebank gold UniDic lemmas — a bounded covariate, the primary co-occurrence control is the typical/atypical split.",
+  "corpus_meta": {
+   "n_sentences": 8100,
+   "n_content_tokens": 57535,
+   "n_distinct_content_lemmas": 17074
+  },
+  "per_model": {
+   "A": {
+    "model": "anthropic/claude-sonnet-4.6",
+    "spearman_ccassert_vs_meanfreq": null,
+    "spearman_isogap_vs_meanfreq": 0.056,
+    "spearman_ctrlassert_vs_cooc": -0.326,
+    "cc_assert_typical_mean": 1.0,
+    "cc_assert_atypical_mean": 1.0
+   },
+   "B": {
+    "model": "openai/gpt-5.4-mini",
+    "spearman_ccassert_vs_meanfreq": -0.151,
+    "spearman_isogap_vs_meanfreq": 0.195,
+    "spearman_ctrlassert_vs_cooc": -0.052,
+    "cc_assert_typical_mean": 1.0,
+    "cc_assert_atypical_mean": 0.95
+   },
+   "C": {
+    "model": "google/gemini-3.5-flash",
+    "spearman_ccassert_vs_meanfreq": 0.169,
+    "spearman_isogap_vs_meanfreq": 0.132,
+    "spearman_ctrlassert_vs_cooc": 0.042,
+    "cc_assert_typical_mean": 1.0,
+    "cc_assert_atypical_mean": 0.95
+   }
+  },
+  "corpus_side_split": {
+   "typical_mean_freq_per_million": 226.47,
+   "atypical_mean_freq_per_million": 267.73,
+   "typical_cooc_ge2": 0.71,
+   "atypical_cooc_ge2": 1.1
+  }
+ },
+ "meta": {
+  "b_boot": 2000,
+  "seed": 20260713,
+  "n_pairs": 34,
+  "n_items": 136,
+  "bootstrap": "cluster over scale_pair",
+  "language": "Japanese",
+  "ported_from": "2026-07-02-comparative-correlative-powered"
+ }
+}

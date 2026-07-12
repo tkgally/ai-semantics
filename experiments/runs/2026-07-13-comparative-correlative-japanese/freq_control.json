@@ -1,0 +1,914 @@
+{
+ "recipe": "UD-Japanese-GSD `# text =` sentences + items BOTH tokenized with janome 0.5.0 (IPAdic); content = NOUN(名詞, minus numeral/pronoun/non-independent/suffix subtypes)+ADJ(形容詞) base forms; per-lemma per-million frequency + per-pair co-occurrence (# sentences with >=2 distinct pair content lemmas). FROZEN before the run. Consistency choice (Japanese is unsegmented): one janome basis across corpus and items, not the treebank gold UniDic lemmas — a bounded covariate, the primary co-occurrence control is the typical/atypical split.",
+ "tokenizer": "janome 0.5.0 (IPAdic, bundled)",
+ "source": "https://raw.githubusercontent.com/UniversalDependencies/UD_Japanese-GSD/master/ja_gsd-ud-{train,dev,test}.conllu",
+ "license": "CC BY-SA 4.0 (UD Japanese-GSD annotations; README verified firsthand s215, in scope s168)",
+ "corpus_meta": {
+  "n_sentences": 8100,
+  "n_content_tokens": 57535,
+  "n_distinct_content_lemmas": 17074
+ },
+ "pairs": {
+  "roman": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "小説",
+    "厚い",
+    "読者",
+    "辛抱強い",
+    "っぽい",
+    "前作"
+   ],
+   "oov_content_words": [
+    "辛抱強い"
+   ],
+   "freq_per_million": {
+    "小説": 208.569,
+    "厚い": 52.142,
+    "読者": 104.284,
+    "辛抱強い": 0.0,
+    "っぽい": 69.523,
+    "前作": 86.904
+   },
+   "mean_freq_per_million": 86.904,
+   "median_freq_per_million": 86.904,
+   "n_content_lemmas": 6,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "oven": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "オーブン",
+    "熱い",
+    "客",
+    "大勢"
+   ],
+   "oov_content_words": [
+    "オーブン"
+   ],
+   "freq_per_million": {
+    "オーブン": 0.0,
+    "熱い": 34.761,
+    "客": 504.041,
+    "大勢": 52.142
+   },
+   "mean_freq_per_million": 147.736,
+   "median_freq_per_million": 52.142,
+   "n_content_lemmas": 4,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "seminar": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "セミナー",
+    "大きい",
+    "議論",
+    "活発",
+    "講義"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "セミナー": 156.427,
+    "大きい": 990.701,
+    "議論": 225.949,
+    "活発": 17.381,
+    "講義": 52.142
+   },
+   "mean_freq_per_million": 288.52,
+   "median_freq_per_million": 156.427,
+   "n_content_lemmas": 5,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 2
+  },
+  "summer": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "夏",
+    "暑い",
+    "りんご",
+    "甘い",
+    "甘み"
+   ],
+   "oov_content_words": [
+    "りんご",
+    "甘み"
+   ],
+   "freq_per_million": {
+    "夏": 469.28,
+    "暑い": 34.761,
+    "りんご": 0.0,
+    "甘い": 86.904,
+    "甘み": 0.0
+   },
+   "mean_freq_per_million": 118.189,
+   "median_freq_per_million": 34.761,
+   "n_content_lemmas": 5,
+   "n_oov": 2,
+   "cooc_sentences_ge2": 0
+  },
+  "road": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "道路",
+    "広い",
+    "運転",
+    "速い",
+    "旧道"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "道路": 243.33,
+    "広い": 590.945,
+    "運転": 451.899,
+    "速い": 52.142,
+    "旧道": 52.142
+   },
+   "mean_freq_per_million": 278.092,
+   "median_freq_per_million": 243.33,
+   "n_content_lemmas": 5,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 2
+  },
+  "gallery": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "ギャラリー",
+    "暗い",
+    "来場",
+    "声高",
+    "ロビー"
+   ],
+   "oov_content_words": [
+    "声高"
+   ],
+   "freq_per_million": {
+    "ギャラリー": 34.761,
+    "暗い": 121.665,
+    "来場": 121.665,
+    "声高": 0.0,
+    "ロビー": 86.904
+   },
+   "mean_freq_per_million": 72.999,
+   "median_freq_per_million": 86.904,
+   "n_content_lemmas": 5,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 1
+  },
+  "startup": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "スタート",
+    "アップ",
+    "大きい",
+    "投資",
+    "慎重",
+    "競合"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "スタート": 243.33,
+    "アップ": 260.711,
+    "大きい": 990.701,
+    "投資": 225.949,
+    "慎重": 34.761,
+    "競合": 52.142
+   },
+   "mean_freq_per_million": 301.266,
+   "median_freq_per_million": 243.33,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 2
+  },
+  "harbor": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "港",
+    "忙しい",
+    "魚",
+    "値段",
+    "高い",
+    "冬"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "港": 104.284,
+    "忙しい": 104.284,
+    "魚": 191.188,
+    "値段": 451.899,
+    "高い": 1373.077,
+    "冬": 156.427
+   },
+   "mean_freq_per_million": 396.86,
+   "median_freq_per_million": 191.188,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 1
+  },
+  "clinic": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "待合室",
+    "暖かい",
+    "患者",
+    "眠い",
+    "目",
+    "廊下"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "待合室": 34.761,
+    "暖かい": 34.761,
+    "患者": 278.092,
+    "眠い": 17.381,
+    "目": 590.945,
+    "廊下": 17.381
+   },
+   "mean_freq_per_million": 162.22,
+   "median_freq_per_million": 34.761,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 0
+  },
+  "vineyard": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "ぶどう",
+    "畑",
+    "険しい",
+    "摘み",
+    "賃金",
+    "高い",
+    "果樹"
+   ],
+   "oov_content_words": [
+    "摘み",
+    "果樹",
+    "畑",
+    "険しい"
+   ],
+   "freq_per_million": {
+    "ぶどう": 17.381,
+    "畑": 0.0,
+    "険しい": 0.0,
+    "摘み": 0.0,
+    "賃金": 69.523,
+    "高い": 1373.077,
+    "果樹": 0.0
+   },
+   "mean_freq_per_million": 208.569,
+   "median_freq_per_million": 0.0,
+   "n_content_lemmas": 7,
+   "n_oov": 4,
+   "cooc_sentences_ge2": 0
+  },
+  "pool": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "プール",
+    "冷たい",
+    "泳者",
+    "長い",
+    "短い",
+    "海"
+   ],
+   "oov_content_words": [
+    "泳者"
+   ],
+   "freq_per_million": {
+    "プール": 34.761,
+    "冷たい": 34.761,
+    "泳者": 0.0,
+    "長い": 434.518,
+    "短い": 225.949,
+    "海": 364.995
+   },
+   "mean_freq_per_million": 182.497,
+   "median_freq_per_million": 225.949,
+   "n_content_lemmas": 6,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 2
+  },
+  "shelves": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "棚",
+    "高い",
+    "司書",
+    "速い",
+    "閲覧",
+    "机"
+   ],
+   "oov_content_words": [
+    "司書"
+   ],
+   "freq_per_million": {
+    "棚": 17.381,
+    "高い": 1373.077,
+    "司書": 0.0,
+    "速い": 52.142,
+    "閲覧": 52.142,
+    "机": 17.381
+   },
+   "mean_freq_per_million": 252.021,
+   "median_freq_per_million": 52.142,
+   "n_content_lemmas": 6,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "band": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "バンド",
+    "音",
+    "大きい",
+    "多い",
+    "前座"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "バンド": 208.569,
+    "音": 121.665,
+    "大きい": 990.701,
+    "多い": 2711.393,
+    "前座": 34.761
+   },
+   "mean_freq_per_million": 813.418,
+   "median_freq_per_million": 208.569,
+   "n_content_lemmas": 5,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 3
+  },
+  "field": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "畑",
+    "平ら",
+    "農家",
+    "収穫",
+    "多い",
+    "斜面"
+   ],
+   "oov_content_words": [
+    "平ら",
+    "畑"
+   ],
+   "freq_per_million": {
+    "畑": 0.0,
+    "平ら": 0.0,
+    "農家": 104.284,
+    "収穫": 34.761,
+    "多い": 2711.393,
+    "斜面": 34.761
+   },
+   "mean_freq_per_million": 480.867,
+   "median_freq_per_million": 34.761,
+   "n_content_lemmas": 6,
+   "n_oov": 2,
+   "cooc_sentences_ge2": 1
+  },
+  "brochure": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "パンフレット",
+    "美しい",
+    "買い手",
+    "信頼",
+    "チラシ"
+   ],
+   "oov_content_words": [
+    "パンフレット",
+    "買い手"
+   ],
+   "freq_per_million": {
+    "パンフレット": 0.0,
+    "美しい": 139.046,
+    "買い手": 0.0,
+    "信頼": 208.569,
+    "チラシ": 156.427
+   },
+   "mean_freq_per_million": 100.808,
+   "median_freq_per_million": 139.046,
+   "n_content_lemmas": 5,
+   "n_oov": 2,
+   "cooc_sentences_ge2": 0
+  },
+  "theater": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "劇場",
+    "暗い",
+    "観客",
+    "静か",
+    "ゲネプロ"
+   ],
+   "oov_content_words": [
+    "ゲネプロ"
+   ],
+   "freq_per_million": {
+    "劇場": 173.807,
+    "暗い": 121.665,
+    "観客": 52.142,
+    "静か": 104.284,
+    "ゲネプロ": 0.0
+   },
+   "mean_freq_per_million": 90.38,
+   "median_freq_per_million": 104.284,
+   "n_content_lemmas": 5,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "curry": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "カレー",
+    "辛い",
+    "客",
+    "おしゃべり",
+    "無口",
+    "前菜"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "カレー": 121.665,
+    "辛い": 104.284,
+    "客": 504.041,
+    "おしゃべり": 17.381,
+    "無口": 17.381,
+    "前菜": 17.381
+   },
+   "mean_freq_per_million": 130.355,
+   "median_freq_per_million": 104.284,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 0
+  },
+  "syllabus": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "シラバス",
+    "長い",
+    "学生",
+    "熱心",
+    "無気力",
+    "学期"
+   ],
+   "oov_content_words": [
+    "シラバス",
+    "学期",
+    "無気力"
+   ],
+   "freq_per_million": {
+    "シラバス": 0.0,
+    "長い": 434.518,
+    "学生": 451.899,
+    "熱心": 52.142,
+    "無気力": 0.0,
+    "学期": 0.0
+   },
+   "mean_freq_per_million": 156.427,
+   "median_freq_per_million": 52.142,
+   "n_content_lemmas": 6,
+   "n_oov": 3,
+   "cooc_sentences_ge2": 0
+  },
+  "current": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "流れ",
+    "速い",
+    "釣り"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "流れ": 208.569,
+    "速い": 52.142,
+    "釣り": 52.142
+   },
+   "mean_freq_per_million": 104.284,
+   "median_freq_per_million": 52.142,
+   "n_content_lemmas": 3,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 0
+  },
+  "kitchen": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "厨房",
+    "きれい",
+    "料理",
+    "雑談",
+    "口数",
+    "少ない",
+    "食料"
+   ],
+   "oov_content_words": [
+    "厨房",
+    "雑談"
+   ],
+   "freq_per_million": {
+    "厨房": 0.0,
+    "きれい": 191.188,
+    "料理": 938.559,
+    "雑談": 0.0,
+    "口数": 17.381,
+    "少ない": 643.087,
+    "食料": 69.523
+   },
+   "mean_freq_per_million": 265.677,
+   "median_freq_per_million": 69.523,
+   "n_content_lemmas": 7,
+   "n_oov": 2,
+   "cooc_sentences_ge2": 2
+  },
+  "path": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "小道",
+    "狭い",
+    "登山",
+    "間隔",
+    "広い",
+    "林道"
+   ],
+   "oov_content_words": [
+    "小道"
+   ],
+   "freq_per_million": {
+    "小道": 0.0,
+    "狭い": 156.427,
+    "登山": 69.523,
+    "間隔": 34.761,
+    "広い": 590.945,
+    "林道": 17.381
+   },
+   "mean_freq_per_million": 144.84,
+   "median_freq_per_million": 69.523,
+   "n_content_lemmas": 6,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 1
+  },
+  "auction": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "競売",
+    "明るい",
+    "収集",
+    "長い",
+    "早い",
+    "金庫"
+   ],
+   "oov_content_words": [
+    "競売",
+    "金庫"
+   ],
+   "freq_per_million": {
+    "競売": 0.0,
+    "明るい": 243.33,
+    "収集": 121.665,
+    "長い": 434.518,
+    "早い": 260.711,
+    "金庫": 0.0
+   },
+   "mean_freq_per_million": 176.704,
+   "median_freq_per_million": 243.33,
+   "n_content_lemmas": 6,
+   "n_oov": 2,
+   "cooc_sentences_ge2": 0
+  },
+  "soil": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "土",
+    "砂",
+    "っぽい",
+    "庭師",
+    "水",
+    "粘土",
+    "花壇"
+   ],
+   "oov_content_words": [
+    "庭師",
+    "粘土",
+    "花壇"
+   ],
+   "freq_per_million": {
+    "土": 104.284,
+    "砂": 17.381,
+    "っぽい": 69.523,
+    "庭師": 0.0,
+    "水": 243.33,
+    "粘土": 0.0,
+    "花壇": 0.0
+   },
+   "mean_freq_per_million": 62.074,
+   "median_freq_per_million": 17.381,
+   "n_content_lemmas": 7,
+   "n_oov": 3,
+   "cooc_sentences_ge2": 0
+  },
+  "hall": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "会場",
+    "大きい",
+    "ファン",
+    "おとなしい",
+    "クラブ"
+   ],
+   "oov_content_words": [
+    "おとなしい"
+   ],
+   "freq_per_million": {
+    "会場": 330.234,
+    "大きい": 990.701,
+    "ファン": 312.853,
+    "おとなしい": 0.0,
+    "クラブ": 434.518
+   },
+   "mean_freq_per_million": 413.661,
+   "median_freq_per_million": 330.234,
+   "n_content_lemmas": 5,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "teacup": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "ティー",
+    "カップ",
+    "丸い",
+    "渋滞",
+    "長い",
+    "短い",
+    "湯のみ"
+   ],
+   "oov_content_words": [
+    "丸い",
+    "湯のみ"
+   ],
+   "freq_per_million": {
+    "ティー": 52.142,
+    "カップ": 86.904,
+    "丸い": 0.0,
+    "渋滞": 52.142,
+    "長い": 434.518,
+    "短い": 225.949,
+    "湯のみ": 0.0
+   },
+   "mean_freq_per_million": 121.665,
+   "median_freq_per_million": 52.142,
+   "n_content_lemmas": 7,
+   "n_oov": 2,
+   "cooc_sentences_ge2": 2
+  },
+  "carpet": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "じゅうたん",
+    "赤い",
+    "エレベーター",
+    "速い",
+    "遅い",
+    "カーテン"
+   ],
+   "oov_content_words": [
+    "じゅうたん"
+   ],
+   "freq_per_million": {
+    "じゅうたん": 0.0,
+    "赤い": 139.046,
+    "エレベーター": 17.381,
+    "速い": 52.142,
+    "遅い": 156.427,
+    "カーテン": 17.381
+   },
+   "mean_freq_per_million": 63.729,
+   "median_freq_per_million": 52.142,
+   "n_content_lemmas": 6,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "pancake": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "パンケーキ",
+    "柔らかい",
+    "山",
+    "高い",
+    "低い",
+    "ワッフル"
+   ],
+   "oov_content_words": [
+    "パンケーキ"
+   ],
+   "freq_per_million": {
+    "パンケーキ": 0.0,
+    "柔らかい": 86.904,
+    "山": 173.807,
+    "高い": 1373.077,
+    "低い": 278.092,
+    "ワッフル": 17.381
+   },
+   "mean_freq_per_million": 321.544,
+   "median_freq_per_million": 173.807,
+   "n_content_lemmas": 6,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 3
+  },
+  "stapler": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "ホチキス",
+    "重い",
+    "夕日",
+    "明るい",
+    "暗い",
+    "テープ",
+    "カッター"
+   ],
+   "oov_content_words": [
+    "ホチキス"
+   ],
+   "freq_per_million": {
+    "ホチキス": 0.0,
+    "重い": 104.284,
+    "夕日": 17.381,
+    "明るい": 243.33,
+    "暗い": 121.665,
+    "テープ": 17.381,
+    "カッター": 17.381
+   },
+   "mean_freq_per_million": 74.489,
+   "median_freq_per_million": 17.381,
+   "n_content_lemmas": 7,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 2
+  },
+  "sock": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "靴下",
+    "縞",
+    "多い",
+    "雷",
+    "大きい",
+    "小さい",
+    "手袋"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "靴下": 17.381,
+    "縞": 34.761,
+    "多い": 2711.393,
+    "雷": 34.761,
+    "大きい": 990.701,
+    "小さい": 382.376,
+    "手袋": 17.381
+   },
+   "mean_freq_per_million": 598.393,
+   "median_freq_per_million": 34.761,
+   "n_content_lemmas": 7,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 2
+  },
+  "lampshade": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "ランプ",
+    "シェード",
+    "広い",
+    "ヨーグルト",
+    "酸っぱい",
+    "甘い",
+    "台座"
+   ],
+   "oov_content_words": [
+    "シェード",
+    "ヨーグルト",
+    "台座",
+    "酸っぱい"
+   ],
+   "freq_per_million": {
+    "ランプ": 17.381,
+    "シェード": 0.0,
+    "広い": 590.945,
+    "ヨーグルト": 0.0,
+    "酸っぱい": 0.0,
+    "甘い": 86.904,
+    "台座": 0.0
+   },
+   "mean_freq_per_million": 99.319,
+   "median_freq_per_million": 0.0,
+   "n_content_lemmas": 7,
+   "n_oov": 4,
+   "cooc_sentences_ge2": 0
+  },
+  "keyboard": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "キーボード",
+    "っぽい",
+    "ほこり",
+    "収穫",
+    "多い",
+    "モニター"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "キーボード": 52.142,
+    "っぽい": 69.523,
+    "ほこり": 34.761,
+    "収穫": 34.761,
+    "多い": 2711.393,
+    "モニター": 69.523
+   },
+   "mean_freq_per_million": 495.351,
+   "median_freq_per_million": 69.523,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 1
+  },
+  "balloon": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "風船",
+    "井戸",
+    "深い",
+    "浅い",
+    "リボン"
+   ],
+   "oov_content_words": [
+    "風船"
+   ],
+   "freq_per_million": {
+    "風船": 0.0,
+    "井戸": 17.381,
+    "深い": 225.949,
+    "浅い": 69.523,
+    "リボン": 52.142
+   },
+   "mean_freq_per_million": 72.999,
+   "median_freq_per_million": 52.142,
+   "n_content_lemmas": 5,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "envelope": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "封筒",
+    "しわ",
+    "多い",
+    "列車",
+    "速い",
+    "遅い",
+    "小包"
+   ],
+   "oov_content_words": [
+    "しわ",
+    "小包"
+   ],
+   "freq_per_million": {
+    "封筒": 17.381,
+    "しわ": 0.0,
+    "多い": 2711.393,
+    "列車": 243.33,
+    "速い": 52.142,
+    "遅い": 156.427,
+    "小包": 0.0
+   },
+   "mean_freq_per_million": 454.382,
+   "median_freq_per_million": 52.142,
+   "n_content_lemmas": 7,
+   "n_oov": 2,
+   "cooc_sentences_ge2": 0
+  },
+  "pinecone": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "松ぼっくり",
+    "散髪",
+    "値段",
+    "高い",
+    "どんぐり"
+   ],
+   "oov_content_words": [
+    "どんぐり"
+   ],
+   "freq_per_million": {
+    "松ぼっくり": 17.381,
+    "散髪": 34.761,
+    "値段": 451.899,
+    "高い": 1373.077,
+    "どんぐり": 0.0
+   },
+   "mean_freq_per_million": 375.424,
+   "median_freq_per_million": 34.761,
+   "n_content_lemmas": 5,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 1
+  }
+ }
+}
