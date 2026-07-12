@@ -1,0 +1,5442 @@
+[
+ {
+  "item_id": "roman-cc-positive",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Dicke des Romans",
+  "dim2": "die Geduld des Lesers",
+  "sentence": "Je dicker der Roman war, desto geduldiger blieb der Leser.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je dicker der Roman war, desto geduldiger blieb der Leser.\nHypothese: Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8886463642120361,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roman-cc-inverse",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Dicke des Romans",
+  "dim2": "die Geduld des Lesers",
+  "sentence": "Je dicker der Roman war, desto ungeduldiger wurde der Leser.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je dicker der Roman war, desto ungeduldiger wurde der Leser.\nHypothese: Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.0412263870239258,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roman-ctrl-two",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Dicke des Romans",
+  "dim2": "die Geduld des Lesers",
+  "sentence": "Der Roman war dick. Der Leser war geduldig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Roman war dick. Der Leser war geduldig.\nHypothese: Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.6877832412719727,
+  "usage": {
+   "prompt_tokens": 154,
+   "completion_tokens": 1,
+   "total_tokens": 155,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000231,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roman-ctrl-single",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Dicke des Romans",
+  "dim2": "die Geduld des Lesers",
+  "sentence": "Der Roman war dicker als der letzte.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Roman war dicker als der letzte.\nHypothese: Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7894868850708008,
+  "usage": {
+   "prompt_tokens": 152,
+   "completion_tokens": 1,
+   "total_tokens": 153,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000228,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oefen-cc-positive",
+  "scale_pair": "oefen",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Hitze der Öfen",
+  "dim2": "die Zahl der Kunden",
+  "sentence": "Je heißer die Öfen liefen, desto mehr Kunden kamen.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je heißer die Öfen liefen, desto mehr Kunden kamen.\nHypothese: Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.7103819847106934,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oefen-cc-inverse",
+  "scale_pair": "oefen",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Hitze der Öfen",
+  "dim2": "die Zahl der Kunden",
+  "sentence": "Je heißer die Öfen liefen, desto weniger Kunden kamen.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je heißer die Öfen liefen, desto weniger Kunden kamen.\nHypothese: Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.7491118907928467,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oefen-ctrl-two",
+  "scale_pair": "oefen",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Hitze der Öfen",
+  "dim2": "die Zahl der Kunden",
+  "sentence": "Die Öfen liefen heiß. Viele Kunden kamen.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Öfen liefen heiß. Viele Kunden kamen.\nHypothese: Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.77292799949646,
+  "usage": {
+   "prompt_tokens": 153,
+   "completion_tokens": 1,
+   "total_tokens": 154,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002295,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oefen-ctrl-single",
+  "scale_pair": "oefen",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Hitze der Öfen",
+  "dim2": "die Zahl der Kunden",
+  "sentence": "Die Öfen liefen heißer als sonst.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Öfen liefen heißer als sonst.\nHypothese: Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.764136791229248,
+  "usage": {
+   "prompt_tokens": 152,
+   "completion_tokens": 1,
+   "total_tokens": 153,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000228,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-cc-positive",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Größe des Seminars",
+  "dim2": "die Menge der Diskussion",
+  "sentence": "Je größer das Seminar war, desto mehr Diskussion entstand.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je größer das Seminar war, desto mehr Diskussion entstand.\nHypothese: Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8974041938781738,
+  "usage": {
+   "prompt_tokens": 152,
+   "completion_tokens": 1,
+   "total_tokens": 153,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000228,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-cc-inverse",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Größe des Seminars",
+  "dim2": "die Menge der Diskussion",
+  "sentence": "Je größer das Seminar war, desto weniger Diskussion entstand.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je größer das Seminar war, desto weniger Diskussion entstand.\nHypothese: Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8296918869018555,
+  "usage": {
+   "prompt_tokens": 152,
+   "completion_tokens": 1,
+   "total_tokens": 153,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000228,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-ctrl-two",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Größe des Seminars",
+  "dim2": "die Menge der Diskussion",
+  "sentence": "Das Seminar war groß. Die Diskussion war lebhaft.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Seminar war groß. Die Diskussion war lebhaft.\nHypothese: Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.824385404586792,
+  "usage": {
+   "prompt_tokens": 152,
+   "completion_tokens": 1,
+   "total_tokens": 153,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000228,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-ctrl-single",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Größe des Seminars",
+  "dim2": "die Menge der Diskussion",
+  "sentence": "Das Seminar war größer als die Vorlesung.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Seminar war größer als die Vorlesung.\nHypothese: Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.724987268447876,
+  "usage": {
+   "prompt_tokens": 151,
+   "completion_tokens": 1,
+   "total_tokens": 152,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0002265,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sommer-cc-positive",
+  "scale_pair": "sommer",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Trockenheit des Sommers",
+  "dim2": "die Süße der Äpfel",
+  "sentence": "Je trockener der Sommer war, desto süßer wurden die Äpfel.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je trockener der Sommer war, desto süßer wurden die Äpfel.\nHypothese: Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.9732615947723389,
+  "usage": {
+   "prompt_tokens": 161,
+   "completion_tokens": 1,
+   "total_tokens": 162,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002415,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sommer-cc-inverse",
+  "scale_pair": "sommer",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Trockenheit des Sommers",
+  "dim2": "die Süße der Äpfel",
+  "sentence": "Je trockener der Sommer war, desto saurer wurden die Äpfel.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je trockener der Sommer war, desto saurer wurden die Äpfel.\nHypothese: Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8285458087921143,
+  "usage": {
+   "prompt_tokens": 161,
+   "completion_tokens": 1,
+   "total_tokens": 162,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002415,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sommer-ctrl-two",
+  "scale_pair": "sommer",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Trockenheit des Sommers",
+  "dim2": "die Süße der Äpfel",
+  "sentence": "Der Sommer war trocken. Die Äpfel waren süß.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Sommer war trocken. Die Äpfel waren süß.\nHypothese: Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7746715545654297,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sommer-ctrl-single",
+  "scale_pair": "sommer",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Trockenheit des Sommers",
+  "dim2": "die Süße der Äpfel",
+  "sentence": "Der Sommer war trockener als im Vorjahr.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Sommer war trockener als im Vorjahr.\nHypothese: Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 2.164963483810425,
+  "usage": {
+   "prompt_tokens": 155,
+   "completion_tokens": 1,
+   "total_tokens": 156,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002325,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "autobahn-cc-positive",
+  "scale_pair": "autobahn",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Breite der Autobahn",
+  "dim2": "die Geschwindigkeit der Fahrer",
+  "sentence": "Je breiter die Autobahn war, desto schneller fuhren die Fahrer.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je breiter die Autobahn war, desto schneller fuhren die Fahrer.\nHypothese: Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.7609231472015381,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "autobahn-cc-inverse",
+  "scale_pair": "autobahn",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Breite der Autobahn",
+  "dim2": "die Geschwindigkeit der Fahrer",
+  "sentence": "Je breiter die Autobahn war, desto langsamer fuhren die Fahrer.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je breiter die Autobahn war, desto langsamer fuhren die Fahrer.\nHypothese: Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.842400074005127,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "autobahn-ctrl-two",
+  "scale_pair": "autobahn",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Breite der Autobahn",
+  "dim2": "die Geschwindigkeit der Fahrer",
+  "sentence": "Die Autobahn war breit. Die Fahrer fuhren schnell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Autobahn war breit. Die Fahrer fuhren schnell.\nHypothese: Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.872826099395752,
+  "usage": {
+   "prompt_tokens": 153,
+   "completion_tokens": 1,
+   "total_tokens": 154,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002295,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "autobahn-ctrl-single",
+  "scale_pair": "autobahn",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Breite der Autobahn",
+  "dim2": "die Geschwindigkeit der Fahrer",
+  "sentence": "Die Autobahn war breiter als die alte Straße.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Autobahn war breiter als die alte Straße.\nHypothese: Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.9877233505249023,
+  "usage": {
+   "prompt_tokens": 152,
+   "completion_tokens": 1,
+   "total_tokens": 153,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000228,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "galerie-cc-positive",
+  "scale_pair": "galerie",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Dunkelheit der Galerie",
+  "dim2": "das Flüstern der Besucher",
+  "sentence": "Je dunkler die Galerie war, desto mehr flüsterten die Besucher.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je dunkler die Galerie war, desto mehr flüsterten die Besucher.\nHypothese: Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.9649395942687988,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "galerie-cc-inverse",
+  "scale_pair": "galerie",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Dunkelheit der Galerie",
+  "dim2": "das Flüstern der Besucher",
+  "sentence": "Je dunkler die Galerie war, desto weniger flüsterten die Besucher.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je dunkler die Galerie war, desto weniger flüsterten die Besucher.\nHypothese: Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.860759973526001,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "galerie-ctrl-two",
+  "scale_pair": "galerie",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Dunkelheit der Galerie",
+  "dim2": "das Flüstern der Besucher",
+  "sentence": "Die Galerie war dunkel. Die Besucher flüsterten.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Galerie war dunkel. Die Besucher flüsterten.\nHypothese: Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.1604461669921875,
+  "usage": {
+   "prompt_tokens": 155,
+   "completion_tokens": 1,
+   "total_tokens": 156,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002325,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "galerie-ctrl-single",
+  "scale_pair": "galerie",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Dunkelheit der Galerie",
+  "dim2": "das Flüstern der Besucher",
+  "sentence": "Die Galerie war dunkler als das Foyer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Galerie war dunkler als das Foyer.\nHypothese: Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 4.570446491241455,
+  "usage": {
+   "prompt_tokens": 154,
+   "completion_tokens": 1,
+   "total_tokens": 155,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000231,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-cc-positive",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Größe des Start-ups",
+  "dim2": "die Vorsicht der Investoren",
+  "sentence": "Je größer das Start-up war, desto vorsichtiger wurden die Investoren.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je größer das Start-up war, desto vorsichtiger wurden die Investoren.\nHypothese: Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.1904795169830322,
+  "usage": {
+   "prompt_tokens": 161,
+   "completion_tokens": 1,
+   "total_tokens": 162,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002415,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-cc-inverse",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Größe des Start-ups",
+  "dim2": "die Vorsicht der Investoren",
+  "sentence": "Je größer das Start-up war, desto unvorsichtiger wurden die Investoren.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je größer das Start-up war, desto unvorsichtiger wurden die Investoren.\nHypothese: Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.810570240020752,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-ctrl-two",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Größe des Start-ups",
+  "dim2": "die Vorsicht der Investoren",
+  "sentence": "Das Start-up war groß. Die Investoren waren vorsichtig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Start-up war groß. Die Investoren waren vorsichtig.\nHypothese: Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8897356986999512,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-ctrl-single",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Größe des Start-ups",
+  "dim2": "die Vorsicht der Investoren",
+  "sentence": "Das Start-up war größer als sein Rivale.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Start-up war größer als sein Rivale.\nHypothese: Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8495731353759766,
+  "usage": {
+   "prompt_tokens": 155,
+   "completion_tokens": 1,
+   "total_tokens": 156,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002325,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hafen-cc-positive",
+  "scale_pair": "hafen",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Betriebsamkeit des Hafens",
+  "dim2": "der Preis für Fisch",
+  "sentence": "Je betriebsamer der Hafen war, desto höher stieg der Preis für Fisch.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je betriebsamer der Hafen war, desto höher stieg der Preis für Fisch.\nHypothese: Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.3078439235687256,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hafen-cc-inverse",
+  "scale_pair": "hafen",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Betriebsamkeit des Hafens",
+  "dim2": "der Preis für Fisch",
+  "sentence": "Je betriebsamer der Hafen war, desto niedriger fiel der Preis für Fisch.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je betriebsamer der Hafen war, desto niedriger fiel der Preis für Fisch.\nHypothese: Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.2183864116668701,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hafen-ctrl-two",
+  "scale_pair": "hafen",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Betriebsamkeit des Hafens",
+  "dim2": "der Preis für Fisch",
+  "sentence": "Der Hafen war betriebsam. Der Preis für Fisch war hoch.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Hafen war betriebsam. Der Preis für Fisch war hoch.\nHypothese: Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7966458797454834,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hafen-ctrl-single",
+  "scale_pair": "hafen",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Betriebsamkeit des Hafens",
+  "dim2": "der Preis für Fisch",
+  "sentence": "Der Hafen war betriebsamer als im Winter.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Hafen war betriebsamer als im Winter.\nHypothese: Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7811176776885986,
+  "usage": {
+   "prompt_tokens": 153,
+   "completion_tokens": 1,
+   "total_tokens": 154,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002295,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wartezimmer-cc-positive",
+  "scale_pair": "wartezimmer",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Wärme des Wartezimmers",
+  "dim2": "die Schläfrigkeit der Patienten",
+  "sentence": "Je wärmer das Wartezimmer war, desto schläfriger wurden die Patienten.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je wärmer das Wartezimmer war, desto schläfriger wurden die Patienten.\nHypothese: Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8217349052429199,
+  "usage": {
+   "prompt_tokens": 163,
+   "completion_tokens": 1,
+   "total_tokens": 164,
+   "cost": 0.0002535,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002535,
+    "upstream_inference_prompt_cost": 0.0002445,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wartezimmer-cc-inverse",
+  "scale_pair": "wartezimmer",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Wärme des Wartezimmers",
+  "dim2": "die Schläfrigkeit der Patienten",
+  "sentence": "Je wärmer das Wartezimmer war, desto wacher wurden die Patienten.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je wärmer das Wartezimmer war, desto wacher wurden die Patienten.\nHypothese: Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.888340950012207,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wartezimmer-ctrl-two",
+  "scale_pair": "wartezimmer",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Wärme des Wartezimmers",
+  "dim2": "die Schläfrigkeit der Patienten",
+  "sentence": "Das Wartezimmer war warm. Die Patienten waren schläfrig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Wartezimmer war warm. Die Patienten waren schläfrig.\nHypothese: Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8743417263031006,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wartezimmer-ctrl-single",
+  "scale_pair": "wartezimmer",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Wärme des Wartezimmers",
+  "dim2": "die Schläfrigkeit der Patienten",
+  "sentence": "Das Wartezimmer war wärmer als der Flur.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Wartezimmer war wärmer als der Flur.\nHypothese: Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.9105308055877686,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "weinberg-cc-positive",
+  "scale_pair": "weinberg",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Steilheit des Weinbergs",
+  "dim2": "der Lohn der Pflücker",
+  "sentence": "Je steiler der Weinberg war, desto höher stieg der Lohn der Pflücker.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je steiler der Weinberg war, desto höher stieg der Lohn der Pflücker.\nHypothese: Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.9133846759796143,
+  "usage": {
+   "prompt_tokens": 165,
+   "completion_tokens": 1,
+   "total_tokens": 166,
+   "cost": 0.0002565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002565,
+    "upstream_inference_prompt_cost": 0.0002475,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "weinberg-cc-inverse",
+  "scale_pair": "weinberg",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Steilheit des Weinbergs",
+  "dim2": "der Lohn der Pflücker",
+  "sentence": "Je steiler der Weinberg war, desto niedriger fiel der Lohn der Pflücker.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je steiler der Weinberg war, desto niedriger fiel der Lohn der Pflücker.\nHypothese: Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8269343376159668,
+  "usage": {
+   "prompt_tokens": 165,
+   "completion_tokens": 1,
+   "total_tokens": 166,
+   "cost": 0.0002565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002565,
+    "upstream_inference_prompt_cost": 0.0002475,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "weinberg-ctrl-two",
+  "scale_pair": "weinberg",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Steilheit des Weinbergs",
+  "dim2": "der Lohn der Pflücker",
+  "sentence": "Der Weinberg war steil. Der Lohn der Pflücker war hoch.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Weinberg war steil. Der Lohn der Pflücker war hoch.\nHypothese: Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7694072723388672,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "weinberg-ctrl-single",
+  "scale_pair": "weinberg",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Steilheit des Weinbergs",
+  "dim2": "der Lohn der Pflücker",
+  "sentence": "Der Weinberg war steiler als der Obstgarten.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Weinberg war steiler als der Obstgarten.\nHypothese: Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7939276695251465,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "becken-cc-positive",
+  "scale_pair": "becken",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Kälte des Beckens",
+  "dim2": "die Zahl der Bahnen",
+  "sentence": "Je kälter das Becken war, desto mehr Bahnen schwammen die Schwimmer.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je kälter das Becken war, desto mehr Bahnen schwammen die Schwimmer.\nHypothese: Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8151979446411133,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "becken-cc-inverse",
+  "scale_pair": "becken",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Kälte des Beckens",
+  "dim2": "die Zahl der Bahnen",
+  "sentence": "Je kälter das Becken war, desto weniger Bahnen schwammen die Schwimmer.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je kälter das Becken war, desto weniger Bahnen schwammen die Schwimmer.\nHypothese: Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8915109634399414,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "becken-ctrl-two",
+  "scale_pair": "becken",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Kälte des Beckens",
+  "dim2": "die Zahl der Bahnen",
+  "sentence": "Das Becken war kalt. Die Schwimmer schwammen viele Bahnen.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Becken war kalt. Die Schwimmer schwammen viele Bahnen.\nHypothese: Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.1047358512878418,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "becken-ctrl-single",
+  "scale_pair": "becken",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Kälte des Beckens",
+  "dim2": "die Zahl der Bahnen",
+  "sentence": "Das Becken war kälter als das Meer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Becken war kälter als das Meer.\nHypothese: Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8540909290313721,
+  "usage": {
+   "prompt_tokens": 153,
+   "completion_tokens": 1,
+   "total_tokens": 154,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002295,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "regale-cc-positive",
+  "scale_pair": "regale",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Höhe der Regale",
+  "dim2": "das Tempo der Bibliothekare",
+  "sentence": "Je höher die Regale waren, desto schneller gingen die Bibliothekare.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je höher die Regale waren, desto schneller gingen die Bibliothekare.\nHypothese: Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.1055772304534912,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "regale-cc-inverse",
+  "scale_pair": "regale",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Höhe der Regale",
+  "dim2": "das Tempo der Bibliothekare",
+  "sentence": "Je höher die Regale waren, desto langsamer gingen die Bibliothekare.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je höher die Regale waren, desto langsamer gingen die Bibliothekare.\nHypothese: Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.7573611736297607,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "regale-ctrl-two",
+  "scale_pair": "regale",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Höhe der Regale",
+  "dim2": "das Tempo der Bibliothekare",
+  "sentence": "Die Regale waren hoch. Die Bibliothekare gingen schnell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Regale waren hoch. Die Bibliothekare gingen schnell.\nHypothese: Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.0411674976348877,
+  "usage": {
+   "prompt_tokens": 154,
+   "completion_tokens": 1,
+   "total_tokens": 155,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000231,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "regale-ctrl-single",
+  "scale_pair": "regale",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Höhe der Regale",
+  "dim2": "das Tempo der Bibliothekare",
+  "sentence": "Die Regale waren höher als die Lesetische.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Regale waren höher als die Lesetische.\nHypothese: Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8240566253662109,
+  "usage": {
+   "prompt_tokens": 153,
+   "completion_tokens": 1,
+   "total_tokens": 154,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002295,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-cc-positive",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Lautstärke der Band",
+  "dim2": "die Größe der tanzenden Menge",
+  "sentence": "Je lauter die Band spielte, desto größer wurde die tanzende Menge.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je lauter die Band spielte, desto größer wurde die tanzende Menge.\nHypothese: Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.0472865104675293,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-cc-inverse",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Lautstärke der Band",
+  "dim2": "die Größe der tanzenden Menge",
+  "sentence": "Je lauter die Band spielte, desto kleiner wurde die tanzende Menge.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je lauter die Band spielte, desto kleiner wurde die tanzende Menge.\nHypothese: Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.7398760318756104,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-ctrl-two",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Lautstärke der Band",
+  "dim2": "die Größe der tanzenden Menge",
+  "sentence": "Die Band war laut. Die tanzende Menge war groß.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Band war laut. Die tanzende Menge war groß.\nHypothese: Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8194293975830078,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-ctrl-single",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Lautstärke der Band",
+  "dim2": "die Größe der tanzenden Menge",
+  "sentence": "Die Band war lauter als die Vorband.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Band war lauter als die Vorband.\nHypothese: Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7979531288146973,
+  "usage": {
+   "prompt_tokens": 154,
+   "completion_tokens": 1,
+   "total_tokens": 155,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000231,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "feld-cc-positive",
+  "scale_pair": "feld",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Ebenheit des Feldes",
+  "dim2": "der Ertrag der Bauern",
+  "sentence": "Je ebener das Feld war, desto größer wurde der Ertrag der Bauern.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je ebener das Feld war, desto größer wurde der Ertrag der Bauern.\nHypothese: Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.7987737655639648,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "feld-cc-inverse",
+  "scale_pair": "feld",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Ebenheit des Feldes",
+  "dim2": "der Ertrag der Bauern",
+  "sentence": "Je ebener das Feld war, desto kleiner wurde der Ertrag der Bauern.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je ebener das Feld war, desto kleiner wurde der Ertrag der Bauern.\nHypothese: Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8297293186187744,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "feld-ctrl-two",
+  "scale_pair": "feld",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Ebenheit des Feldes",
+  "dim2": "der Ertrag der Bauern",
+  "sentence": "Das Feld war eben. Der Ertrag der Bauern war groß.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Feld war eben. Der Ertrag der Bauern war groß.\nHypothese: Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8347823619842529,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "feld-ctrl-single",
+  "scale_pair": "feld",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Ebenheit des Feldes",
+  "dim2": "der Ertrag der Bauern",
+  "sentence": "Das Feld war ebener als der Hang.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Feld war ebener als der Hang.\nHypothese: Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7972581386566162,
+  "usage": {
+   "prompt_tokens": 152,
+   "completion_tokens": 1,
+   "total_tokens": 153,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000228,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "broschuere-cc-positive",
+  "scale_pair": "broschuere",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "der Glanz der Broschüre",
+  "dim2": "das Vertrauen der Käufer",
+  "sentence": "Je glänzender die Broschüre war, desto mehr vertrauten die Käufer der Broschüre.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je glänzender die Broschüre war, desto mehr vertrauten die Käufer der Broschüre.\nHypothese: Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8062722682952881,
+  "usage": {
+   "prompt_tokens": 168,
+   "completion_tokens": 1,
+   "total_tokens": 169,
+   "cost": 0.000261,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000261,
+    "upstream_inference_prompt_cost": 0.000252,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "broschuere-cc-inverse",
+  "scale_pair": "broschuere",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "der Glanz der Broschüre",
+  "dim2": "das Vertrauen der Käufer",
+  "sentence": "Je glänzender die Broschüre war, desto weniger vertrauten die Käufer der Broschüre.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je glänzender die Broschüre war, desto weniger vertrauten die Käufer der Broschüre.\nHypothese: Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8448572158813477,
+  "usage": {
+   "prompt_tokens": 168,
+   "completion_tokens": 1,
+   "total_tokens": 169,
+   "cost": 0.000261,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000261,
+    "upstream_inference_prompt_cost": 0.000252,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "broschuere-ctrl-two",
+  "scale_pair": "broschuere",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "der Glanz der Broschüre",
+  "dim2": "das Vertrauen der Käufer",
+  "sentence": "Die Broschüre war glänzend. Die Käufer vertrauten ihr.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Broschüre war glänzend. Die Käufer vertrauten ihr.\nHypothese: Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7466132640838623,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "broschuere-ctrl-single",
+  "scale_pair": "broschuere",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "der Glanz der Broschüre",
+  "dim2": "das Vertrauen der Käufer",
+  "sentence": "Die Broschüre war glänzender als der Flyer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Broschüre war glänzender als der Flyer.\nHypothese: Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.6944613456726074,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-cc-positive",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Dunkelheit des Theaters",
+  "dim2": "die Unruhe des Publikums",
+  "sentence": "Je dunkler das Theater war, desto unruhiger wurde das Publikum.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je dunkler das Theater war, desto unruhiger wurde das Publikum.\nHypothese: Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8516511917114258,
+  "usage": {
+   "prompt_tokens": 161,
+   "completion_tokens": 1,
+   "total_tokens": 162,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002415,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-cc-inverse",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Dunkelheit des Theaters",
+  "dim2": "die Unruhe des Publikums",
+  "sentence": "Je dunkler das Theater war, desto ruhiger wurde das Publikum.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je dunkler das Theater war, desto ruhiger wurde das Publikum.\nHypothese: Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8565621376037598,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-ctrl-two",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Dunkelheit des Theaters",
+  "dim2": "die Unruhe des Publikums",
+  "sentence": "Das Theater war dunkel. Das Publikum war unruhig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Theater war dunkel. Das Publikum war unruhig.\nHypothese: Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7861478328704834,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-ctrl-single",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Dunkelheit des Theaters",
+  "dim2": "die Unruhe des Publikums",
+  "sentence": "Das Theater war dunkler als bei der Generalprobe.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Theater war dunkler als bei der Generalprobe.\nHypothese: Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.6401047706604004,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-cc-positive",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Schärfe des Currys",
+  "dim2": "die Gesprächigkeit der Gäste",
+  "sentence": "Je schärfer das Curry war, desto gesprächiger wurden die Gäste.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je schärfer das Curry war, desto gesprächiger wurden die Gäste.\nHypothese: Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.7525036334991455,
+  "usage": {
+   "prompt_tokens": 161,
+   "completion_tokens": 1,
+   "total_tokens": 162,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002415,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-cc-inverse",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Schärfe des Currys",
+  "dim2": "die Gesprächigkeit der Gäste",
+  "sentence": "Je schärfer das Curry war, desto stiller wurden die Gäste.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je schärfer das Curry war, desto stiller wurden die Gäste.\nHypothese: Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8988876342773438,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-ctrl-two",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Schärfe des Currys",
+  "dim2": "die Gesprächigkeit der Gäste",
+  "sentence": "Das Curry war scharf. Die Gäste waren gesprächig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Curry war scharf. Die Gäste waren gesprächig.\nHypothese: Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.9172220230102539,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-ctrl-single",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Schärfe des Currys",
+  "dim2": "die Gesprächigkeit der Gäste",
+  "sentence": "Das Curry war schärfer als die Vorspeise.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Das Curry war schärfer als die Vorspeise.\nHypothese: Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.786691427230835,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lehrplan-cc-positive",
+  "scale_pair": "lehrplan",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Länge des Lehrplans",
+  "dim2": "die Begeisterung der Studenten",
+  "sentence": "Je länger der Lehrplan war, desto begeisterter wirkten die Studenten.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je länger der Lehrplan war, desto begeisterter wirkten die Studenten.\nHypothese: Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.7048192024230957,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lehrplan-cc-inverse",
+  "scale_pair": "lehrplan",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Länge des Lehrplans",
+  "dim2": "die Begeisterung der Studenten",
+  "sentence": "Je länger der Lehrplan war, desto lustloser wirkten die Studenten.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je länger der Lehrplan war, desto lustloser wirkten die Studenten.\nHypothese: Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.769676685333252,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lehrplan-ctrl-two",
+  "scale_pair": "lehrplan",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Länge des Lehrplans",
+  "dim2": "die Begeisterung der Studenten",
+  "sentence": "Der Lehrplan war lang. Die Studenten waren begeistert.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Lehrplan war lang. Die Studenten waren begeistert.\nHypothese: Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7812464237213135,
+  "usage": {
+   "prompt_tokens": 154,
+   "completion_tokens": 1,
+   "total_tokens": 155,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000231,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lehrplan-ctrl-single",
+  "scale_pair": "lehrplan",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Länge des Lehrplans",
+  "dim2": "die Begeisterung der Studenten",
+  "sentence": "Der Lehrplan war länger als im letzten Semester.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Lehrplan war länger als im letzten Semester.\nHypothese: Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7891256809234619,
+  "usage": {
+   "prompt_tokens": 153,
+   "completion_tokens": 1,
+   "total_tokens": 154,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002295,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stroemung-cc-positive",
+  "scale_pair": "stroemung",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Geschwindigkeit der Strömung",
+  "dim2": "die Frustration der Angler",
+  "sentence": "Je schneller die Strömung war, desto frustrierter wurden die Angler.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je schneller die Strömung war, desto frustrierter wurden die Angler.\nHypothese: Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8700451850891113,
+  "usage": {
+   "prompt_tokens": 161,
+   "completion_tokens": 1,
+   "total_tokens": 162,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002415,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stroemung-cc-inverse",
+  "scale_pair": "stroemung",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Geschwindigkeit der Strömung",
+  "dim2": "die Frustration der Angler",
+  "sentence": "Je schneller die Strömung war, desto gelassener wurden die Angler.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je schneller die Strömung war, desto gelassener wurden die Angler.\nHypothese: Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.0043702125549316,
+  "usage": {
+   "prompt_tokens": 161,
+   "completion_tokens": 1,
+   "total_tokens": 162,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002415,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stroemung-ctrl-two",
+  "scale_pair": "stroemung",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Geschwindigkeit der Strömung",
+  "dim2": "die Frustration der Angler",
+  "sentence": "Die Strömung war schnell. Die Angler waren frustriert.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Strömung war schnell. Die Angler waren frustriert.\nHypothese: Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7482485771179199,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stroemung-ctrl-single",
+  "scale_pair": "stroemung",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Geschwindigkeit der Strömung",
+  "dim2": "die Frustration der Angler",
+  "sentence": "Die Strömung war schneller als im Morgengrauen.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Strömung war schneller als im Morgengrauen.\nHypothese: Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8863589763641357,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kueche-cc-positive",
+  "scale_pair": "kueche",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Ordnung in der Küche",
+  "dim2": "das Geplauder der Köche",
+  "sentence": "Je ordentlicher die Küche war, desto mehr plauderten die Köche.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je ordentlicher die Küche war, desto mehr plauderten die Köche.\nHypothese: Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.7918899059295654,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kueche-cc-inverse",
+  "scale_pair": "kueche",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Ordnung in der Küche",
+  "dim2": "das Geplauder der Köche",
+  "sentence": "Je ordentlicher die Küche war, desto weniger plauderten die Köche.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je ordentlicher die Küche war, desto weniger plauderten die Köche.\nHypothese: Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.904179573059082,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kueche-ctrl-two",
+  "scale_pair": "kueche",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Ordnung in der Küche",
+  "dim2": "das Geplauder der Köche",
+  "sentence": "Die Küche war ordentlich. Die Köche plauderten.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Küche war ordentlich. Die Köche plauderten.\nHypothese: Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.4972245693206787,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kueche-ctrl-single",
+  "scale_pair": "kueche",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Ordnung in der Küche",
+  "dim2": "das Geplauder der Köche",
+  "sentence": "Die Küche war ordentlicher als die Speisekammer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Küche war ordentlicher als die Speisekammer.\nHypothese: Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7021734714508057,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfad-cc-positive",
+  "scale_pair": "pfad",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Enge des Pfades",
+  "dim2": "der Abstand der Wanderer",
+  "sentence": "Je enger der Pfad war, desto größer wurde der Abstand der Wanderer.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je enger der Pfad war, desto größer wurde der Abstand der Wanderer.\nHypothese: Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.387061357498169,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfad-cc-inverse",
+  "scale_pair": "pfad",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Enge des Pfades",
+  "dim2": "der Abstand der Wanderer",
+  "sentence": "Je enger der Pfad war, desto kleiner wurde der Abstand der Wanderer.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je enger der Pfad war, desto kleiner wurde der Abstand der Wanderer.\nHypothese: Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.7980239391326904,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfad-ctrl-two",
+  "scale_pair": "pfad",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Enge des Pfades",
+  "dim2": "der Abstand der Wanderer",
+  "sentence": "Der Pfad war eng. Der Abstand der Wanderer war groß.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Pfad war eng. Der Abstand der Wanderer war groß.\nHypothese: Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.1039273738861084,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfad-ctrl-single",
+  "scale_pair": "pfad",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Enge des Pfades",
+  "dim2": "der Abstand der Wanderer",
+  "sentence": "Der Pfad war enger als der Fahrweg.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Pfad war enger als der Fahrweg.\nHypothese: Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7253508567810059,
+  "usage": {
+   "prompt_tokens": 154,
+   "completion_tokens": 1,
+   "total_tokens": 155,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000231,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auktionssaal-cc-positive",
+  "scale_pair": "auktionssaal",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Helligkeit des Auktionssaals",
+  "dim2": "das Verweilen der Sammler",
+  "sentence": "Je heller der Auktionssaal war, desto länger verweilten die Sammler.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je heller der Auktionssaal war, desto länger verweilten die Sammler.\nHypothese: Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8971672058105469,
+  "usage": {
+   "prompt_tokens": 168,
+   "completion_tokens": 1,
+   "total_tokens": 169,
+   "cost": 0.000261,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000261,
+    "upstream_inference_prompt_cost": 0.000252,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auktionssaal-cc-inverse",
+  "scale_pair": "auktionssaal",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Helligkeit des Auktionssaals",
+  "dim2": "das Verweilen der Sammler",
+  "sentence": "Je heller der Auktionssaal war, desto kürzer verweilten die Sammler.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je heller der Auktionssaal war, desto kürzer verweilten die Sammler.\nHypothese: Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.7972409725189209,
+  "usage": {
+   "prompt_tokens": 169,
+   "completion_tokens": 1,
+   "total_tokens": 170,
+   "cost": 0.0002625,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002625,
+    "upstream_inference_prompt_cost": 0.0002535,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auktionssaal-ctrl-two",
+  "scale_pair": "auktionssaal",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Helligkeit des Auktionssaals",
+  "dim2": "das Verweilen der Sammler",
+  "sentence": "Der Auktionssaal war hell. Die Sammler verweilten lange.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Auktionssaal war hell. Die Sammler verweilten lange.\nHypothese: Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.9335463047027588,
+  "usage": {
+   "prompt_tokens": 166,
+   "completion_tokens": 1,
+   "total_tokens": 167,
+   "cost": 0.000258,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000258,
+    "upstream_inference_prompt_cost": 0.000249,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auktionssaal-ctrl-single",
+  "scale_pair": "auktionssaal",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Helligkeit des Auktionssaals",
+  "dim2": "das Verweilen der Sammler",
+  "sentence": "Der Auktionssaal war heller als der Tresorraum.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Auktionssaal war heller als der Tresorraum.\nHypothese: Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8443474769592285,
+  "usage": {
+   "prompt_tokens": 163,
+   "completion_tokens": 1,
+   "total_tokens": 164,
+   "cost": 0.0002535,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002535,
+    "upstream_inference_prompt_cost": 0.0002445,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "boden-cc-positive",
+  "scale_pair": "boden",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "der Sandanteil des Bodens",
+  "dim2": "die Häufigkeit des Gießens",
+  "sentence": "Je sandiger der Boden war, desto mehr goss der Gärtner.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je sandiger der Boden war, desto mehr goss der Gärtner.\nHypothese: Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8815751075744629,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "boden-cc-inverse",
+  "scale_pair": "boden",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "der Sandanteil des Bodens",
+  "dim2": "die Häufigkeit des Gießens",
+  "sentence": "Je sandiger der Boden war, desto weniger goss der Gärtner.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je sandiger der Boden war, desto weniger goss der Gärtner.\nHypothese: Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.856745719909668,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "boden-ctrl-two",
+  "scale_pair": "boden",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "der Sandanteil des Bodens",
+  "dim2": "die Häufigkeit des Gießens",
+  "sentence": "Der Boden war sandig. Der Gärtner goss oft.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Boden war sandig. Der Gärtner goss oft.\nHypothese: Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.806797981262207,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "boden-ctrl-single",
+  "scale_pair": "boden",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "der Sandanteil des Bodens",
+  "dim2": "die Häufigkeit des Gießens",
+  "sentence": "Der Boden war sandiger als das Lehmbeet.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Boden war sandiger als das Lehmbeet.\nHypothese: Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8430836200714111,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "halle-cc-positive",
+  "scale_pair": "halle",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Größe der Halle",
+  "dim2": "die Ausgelassenheit der Fans",
+  "sentence": "Je größer die Halle war, desto ausgelassener wurden die Fans.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je größer die Halle war, desto ausgelassener wurden die Fans.\nHypothese: Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.7977213859558105,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "halle-cc-inverse",
+  "scale_pair": "halle",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Größe der Halle",
+  "dim2": "die Ausgelassenheit der Fans",
+  "sentence": "Je größer die Halle war, desto gesitteter wurden die Fans.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je größer die Halle war, desto gesitteter wurden die Fans.\nHypothese: Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.0792841911315918,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "halle-ctrl-two",
+  "scale_pair": "halle",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Größe der Halle",
+  "dim2": "die Ausgelassenheit der Fans",
+  "sentence": "Die Halle war groß. Die Fans waren ausgelassen.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Halle war groß. Die Fans waren ausgelassen.\nHypothese: Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8227226734161377,
+  "usage": {
+   "prompt_tokens": 154,
+   "completion_tokens": 1,
+   "total_tokens": 155,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000231,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "halle-ctrl-single",
+  "scale_pair": "halle",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Größe der Halle",
+  "dim2": "die Ausgelassenheit der Fans",
+  "sentence": "Die Halle war größer als der Club.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Halle war größer als der Club.\nHypothese: Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.0099925994873047,
+  "usage": {
+   "prompt_tokens": 151,
+   "completion_tokens": 1,
+   "total_tokens": 152,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0002265,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teetasse-cc-positive",
+  "scale_pair": "teetasse",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Rundheit der Teetasse",
+  "dim2": "die Länge des Staus",
+  "sentence": "Je runder die Teetasse war, desto länger wurde der Stau.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je runder die Teetasse war, desto länger wurde der Stau.\nHypothese: Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.0210392475128174,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teetasse-cc-inverse",
+  "scale_pair": "teetasse",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Rundheit der Teetasse",
+  "dim2": "die Länge des Staus",
+  "sentence": "Je runder die Teetasse war, desto kürzer wurde der Stau.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je runder die Teetasse war, desto kürzer wurde der Stau.\nHypothese: Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 1.303027629852295,
+  "usage": {
+   "prompt_tokens": 161,
+   "completion_tokens": 1,
+   "total_tokens": 162,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002415,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teetasse-ctrl-two",
+  "scale_pair": "teetasse",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Rundheit der Teetasse",
+  "dim2": "die Länge des Staus",
+  "sentence": "Die Teetasse war rund. Der Stau war lang.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Teetasse war rund. Der Stau war lang.\nHypothese: Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.773674726486206,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teetasse-ctrl-single",
+  "scale_pair": "teetasse",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Rundheit der Teetasse",
+  "dim2": "die Länge des Staus",
+  "sentence": "Die Teetasse war runder als die Tasse.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Teetasse war runder als die Tasse.\nHypothese: Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.0673649311065674,
+  "usage": {
+   "prompt_tokens": 156,
+   "completion_tokens": 1,
+   "total_tokens": 157,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000234,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teppich-cc-positive",
+  "scale_pair": "teppich",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Röte des Teppichs",
+  "dim2": "die Geschwindigkeit des Aufzugs",
+  "sentence": "Je roter der Teppich war, desto schneller fuhr der Aufzug.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je roter der Teppich war, desto schneller fuhr der Aufzug.\nHypothese: Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8135044574737549,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teppich-cc-inverse",
+  "scale_pair": "teppich",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Röte des Teppichs",
+  "dim2": "die Geschwindigkeit des Aufzugs",
+  "sentence": "Je roter der Teppich war, desto langsamer fuhr der Aufzug.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je roter der Teppich war, desto langsamer fuhr der Aufzug.\nHypothese: Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.9860429763793945,
+  "usage": {
+   "prompt_tokens": 163,
+   "completion_tokens": 1,
+   "total_tokens": 164,
+   "cost": 0.0002535,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002535,
+    "upstream_inference_prompt_cost": 0.0002445,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teppich-ctrl-two",
+  "scale_pair": "teppich",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Röte des Teppichs",
+  "dim2": "die Geschwindigkeit des Aufzugs",
+  "sentence": "Der Teppich war rot. Der Aufzug fuhr schnell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Teppich war rot. Der Aufzug fuhr schnell.\nHypothese: Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.833418607711792,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teppich-ctrl-single",
+  "scale_pair": "teppich",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Röte des Teppichs",
+  "dim2": "die Geschwindigkeit des Aufzugs",
+  "sentence": "Der Teppich war roter als die Vorhänge.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Teppich war roter als die Vorhänge.\nHypothese: Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7728185653686523,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfannkuchen-cc-positive",
+  "scale_pair": "pfannkuchen",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Lockerheit des Pfannkuchens",
+  "dim2": "die Höhe des Berges",
+  "sentence": "Je lockerer der Pfannkuchen war, desto höher ragte der Berg.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je lockerer der Pfannkuchen war, desto höher ragte der Berg.\nHypothese: Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.871821403503418,
+  "usage": {
+   "prompt_tokens": 163,
+   "completion_tokens": 1,
+   "total_tokens": 164,
+   "cost": 0.0002535,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002535,
+    "upstream_inference_prompt_cost": 0.0002445,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfannkuchen-cc-inverse",
+  "scale_pair": "pfannkuchen",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Lockerheit des Pfannkuchens",
+  "dim2": "die Höhe des Berges",
+  "sentence": "Je lockerer der Pfannkuchen war, desto niedriger ragte der Berg.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je lockerer der Pfannkuchen war, desto niedriger ragte der Berg.\nHypothese: Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8187432289123535,
+  "usage": {
+   "prompt_tokens": 164,
+   "completion_tokens": 1,
+   "total_tokens": 165,
+   "cost": 0.000255,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000255,
+    "upstream_inference_prompt_cost": 0.000246,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfannkuchen-ctrl-two",
+  "scale_pair": "pfannkuchen",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Lockerheit des Pfannkuchens",
+  "dim2": "die Höhe des Berges",
+  "sentence": "Der Pfannkuchen war locker. Der Berg ragte hoch.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Pfannkuchen war locker. Der Berg ragte hoch.\nHypothese: Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8238110542297363,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfannkuchen-ctrl-single",
+  "scale_pair": "pfannkuchen",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Lockerheit des Pfannkuchens",
+  "dim2": "die Höhe des Berges",
+  "sentence": "Der Pfannkuchen war lockerer als die Waffel.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Pfannkuchen war lockerer als die Waffel.\nHypothese: Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7519512176513672,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hefter-cc-positive",
+  "scale_pair": "hefter",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "das Gewicht des Hefters",
+  "dim2": "die Helligkeit des Sonnenuntergangs",
+  "sentence": "Je schwerer der Hefter war, desto heller brannte der Sonnenuntergang.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je schwerer der Hefter war, desto heller brannte der Sonnenuntergang.\nHypothese: Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.772303581237793,
+  "usage": {
+   "prompt_tokens": 163,
+   "completion_tokens": 1,
+   "total_tokens": 164,
+   "cost": 0.0002535,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002535,
+    "upstream_inference_prompt_cost": 0.0002445,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hefter-cc-inverse",
+  "scale_pair": "hefter",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "das Gewicht des Hefters",
+  "dim2": "die Helligkeit des Sonnenuntergangs",
+  "sentence": "Je schwerer der Hefter war, desto blasser brannte der Sonnenuntergang.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je schwerer der Hefter war, desto blasser brannte der Sonnenuntergang.\nHypothese: Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8637642860412598,
+  "usage": {
+   "prompt_tokens": 164,
+   "completion_tokens": 1,
+   "total_tokens": 165,
+   "cost": 0.000255,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000255,
+    "upstream_inference_prompt_cost": 0.000246,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hefter-ctrl-two",
+  "scale_pair": "hefter",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "das Gewicht des Hefters",
+  "dim2": "die Helligkeit des Sonnenuntergangs",
+  "sentence": "Der Hefter war schwer. Der Sonnenuntergang brannte hell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Hefter war schwer. Der Sonnenuntergang brannte hell.\nHypothese: Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8075516223907471,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hefter-ctrl-single",
+  "scale_pair": "hefter",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "das Gewicht des Hefters",
+  "dim2": "die Helligkeit des Sonnenuntergangs",
+  "sentence": "Der Hefter war schwerer als der Klebeband-Abroller.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Hefter war schwerer als der Klebeband-Abroller.\nHypothese: Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.9054157733917236,
+  "usage": {
+   "prompt_tokens": 161,
+   "completion_tokens": 1,
+   "total_tokens": 162,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002415,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "socke-cc-positive",
+  "scale_pair": "socke",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "das Streifenmuster der Socke",
+  "dim2": "die Lautstärke des Donners",
+  "sentence": "Je gestreifter die Socke war, desto lauter krachte der Donner.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je gestreifter die Socke war, desto lauter krachte der Donner.\nHypothese: Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.8916704654693604,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "socke-cc-inverse",
+  "scale_pair": "socke",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "das Streifenmuster der Socke",
+  "dim2": "die Lautstärke des Donners",
+  "sentence": "Je gestreifter die Socke war, desto leiser krachte der Donner.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je gestreifter die Socke war, desto leiser krachte der Donner.\nHypothese: Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8329832553863525,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "socke-ctrl-two",
+  "scale_pair": "socke",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "das Streifenmuster der Socke",
+  "dim2": "die Lautstärke des Donners",
+  "sentence": "Die Socke war gestreift. Der Donner krachte laut.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Socke war gestreift. Der Donner krachte laut.\nHypothese: Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.4979405403137207,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "socke-ctrl-single",
+  "scale_pair": "socke",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "das Streifenmuster der Socke",
+  "dim2": "die Lautstärke des Donners",
+  "sentence": "Die Socke war gestreifter als der Handschuh.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Socke war gestreifter als der Handschuh.\nHypothese: Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.6963365077972412,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampenschirm-cc-positive",
+  "scale_pair": "lampenschirm",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Breite des Lampenschirms",
+  "dim2": "die Säure des Joghurts",
+  "sentence": "Je breiter der Lampenschirm war, desto saurer schmeckte der Joghurt.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je breiter der Lampenschirm war, desto saurer schmeckte der Joghurt.\nHypothese: Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.9605002403259277,
+  "usage": {
+   "prompt_tokens": 165,
+   "completion_tokens": 1,
+   "total_tokens": 166,
+   "cost": 0.0002565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002565,
+    "upstream_inference_prompt_cost": 0.0002475,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampenschirm-cc-inverse",
+  "scale_pair": "lampenschirm",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Breite des Lampenschirms",
+  "dim2": "die Säure des Joghurts",
+  "sentence": "Je breiter der Lampenschirm war, desto süßer schmeckte der Joghurt.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je breiter der Lampenschirm war, desto süßer schmeckte der Joghurt.\nHypothese: Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.80763840675354,
+  "usage": {
+   "prompt_tokens": 165,
+   "completion_tokens": 1,
+   "total_tokens": 166,
+   "cost": 0.0002565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002565,
+    "upstream_inference_prompt_cost": 0.0002475,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampenschirm-ctrl-two",
+  "scale_pair": "lampenschirm",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Breite des Lampenschirms",
+  "dim2": "die Säure des Joghurts",
+  "sentence": "Der Lampenschirm war breit. Der Joghurt schmeckte sauer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Lampenschirm war breit. Der Joghurt schmeckte sauer.\nHypothese: Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 1.072972297668457,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampenschirm-ctrl-single",
+  "scale_pair": "lampenschirm",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Breite des Lampenschirms",
+  "dim2": "die Säure des Joghurts",
+  "sentence": "Der Lampenschirm war breiter als der Sockel.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Lampenschirm war breiter als der Sockel.\nHypothese: Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8748657703399658,
+  "usage": {
+   "prompt_tokens": 157,
+   "completion_tokens": 1,
+   "total_tokens": 158,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002355,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tastatur-cc-positive",
+  "scale_pair": "tastatur",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "der Staub auf der Tastatur",
+  "dim2": "die Größe der Ernte",
+  "sentence": "Je staubiger die Tastatur war, desto größer fiel die Ernte aus.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je staubiger die Tastatur war, desto größer fiel die Ernte aus.\nHypothese: Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 1.0667471885681152,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tastatur-cc-inverse",
+  "scale_pair": "tastatur",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "der Staub auf der Tastatur",
+  "dim2": "die Größe der Ernte",
+  "sentence": "Je staubiger die Tastatur war, desto kleiner fiel die Ernte aus.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je staubiger die Tastatur war, desto kleiner fiel die Ernte aus.\nHypothese: Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8708882331848145,
+  "usage": {
+   "prompt_tokens": 160,
+   "completion_tokens": 1,
+   "total_tokens": 161,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.00024,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tastatur-ctrl-two",
+  "scale_pair": "tastatur",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "der Staub auf der Tastatur",
+  "dim2": "die Größe der Ernte",
+  "sentence": "Die Tastatur war staubig. Die Ernte fiel groß aus.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Tastatur war staubig. Die Ernte fiel groß aus.\nHypothese: Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.8171372413635254,
+  "usage": {
+   "prompt_tokens": 158,
+   "completion_tokens": 1,
+   "total_tokens": 159,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.000237,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tastatur-ctrl-single",
+  "scale_pair": "tastatur",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "der Staub auf der Tastatur",
+  "dim2": "die Größe der Ernte",
+  "sentence": "Die Tastatur war staubiger als der Monitor.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Die Tastatur war staubiger als der Monitor.\nHypothese: Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7161428928375244,
+  "usage": {
+   "prompt_tokens": 154,
+   "completion_tokens": 1,
+   "total_tokens": 155,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000231,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ballon-cc-positive",
+  "scale_pair": "ballon",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "der Glanz des Ballons",
+  "dim2": "die Tiefe des Brunnens",
+  "sentence": "Je glänzender der Ballon war, desto tiefer reichte der Brunnen.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je glänzender der Ballon war, desto tiefer reichte der Brunnen.\nHypothese: Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.6463735103607178,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ballon-cc-inverse",
+  "scale_pair": "ballon",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "der Glanz des Ballons",
+  "dim2": "die Tiefe des Brunnens",
+  "sentence": "Je glänzender der Ballon war, desto flacher reichte der Brunnen.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je glänzender der Ballon war, desto flacher reichte der Brunnen.\nHypothese: Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.8159630298614502,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ballon-ctrl-two",
+  "scale_pair": "ballon",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "der Glanz des Ballons",
+  "dim2": "die Tiefe des Brunnens",
+  "sentence": "Der Ballon war glänzend. Der Brunnen reichte tief.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Ballon war glänzend. Der Brunnen reichte tief.\nHypothese: Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7165415287017822,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ballon-ctrl-single",
+  "scale_pair": "ballon",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "der Glanz des Ballons",
+  "dim2": "die Tiefe des Brunnens",
+  "sentence": "Der Ballon war glänzender als das Band.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Ballon war glänzender als das Band.\nHypothese: Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7510590553283691,
+  "usage": {
+   "prompt_tokens": 155,
+   "completion_tokens": 1,
+   "total_tokens": 156,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002325,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "umschlag-cc-positive",
+  "scale_pair": "umschlag",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Zerknitterung des Umschlags",
+  "dim2": "die Geschwindigkeit des Zuges",
+  "sentence": "Je zerknitterter der Umschlag war, desto schneller fuhr der Zug.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je zerknitterter der Umschlag war, desto schneller fuhr der Zug.\nHypothese: Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.9041590690612793,
+  "usage": {
+   "prompt_tokens": 164,
+   "completion_tokens": 1,
+   "total_tokens": 165,
+   "cost": 0.000255,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000255,
+    "upstream_inference_prompt_cost": 0.000246,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "umschlag-cc-inverse",
+  "scale_pair": "umschlag",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Zerknitterung des Umschlags",
+  "dim2": "die Geschwindigkeit des Zuges",
+  "sentence": "Je zerknitterter der Umschlag war, desto langsamer fuhr der Zug.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je zerknitterter der Umschlag war, desto langsamer fuhr der Zug.\nHypothese: Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.7280552387237549,
+  "usage": {
+   "prompt_tokens": 165,
+   "completion_tokens": 1,
+   "total_tokens": 166,
+   "cost": 0.0002565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002565,
+    "upstream_inference_prompt_cost": 0.0002475,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "umschlag-ctrl-two",
+  "scale_pair": "umschlag",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Zerknitterung des Umschlags",
+  "dim2": "die Geschwindigkeit des Zuges",
+  "sentence": "Der Umschlag war zerknittert. Der Zug fuhr schnell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Umschlag war zerknittert. Der Zug fuhr schnell.\nHypothese: Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7402129173278809,
+  "usage": {
+   "prompt_tokens": 162,
+   "completion_tokens": 1,
+   "total_tokens": 163,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000243,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "umschlag-ctrl-single",
+  "scale_pair": "umschlag",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Zerknitterung des Umschlags",
+  "dim2": "die Geschwindigkeit des Zuges",
+  "sentence": "Der Umschlag war zerknitterter als das Paket.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Umschlag war zerknitterter als das Paket.\nHypothese: Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7232882976531982,
+  "usage": {
+   "prompt_tokens": 159,
+   "completion_tokens": 1,
+   "total_tokens": 160,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002385,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tannenzapfen-cc-positive",
+  "scale_pair": "tannenzapfen",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Klebrigkeit des Tannenzapfens",
+  "dim2": "der Preis des Haarschnitts",
+  "sentence": "Je klebriger der Tannenzapfen war, desto teurer wurde der Haarschnitt.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.",
+  "nli_gold": "0",
+  "prompt": "Prämisse: Je klebriger der Tannenzapfen war, desto teurer wurde der Haarschnitt.\nHypothese: Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.\nRelation:",
+  "raw": "0",
+  "error": null,
+  "pred": "0",
+  "dt": 0.9252204895019531,
+  "usage": {
+   "prompt_tokens": 169,
+   "completion_tokens": 1,
+   "total_tokens": 170,
+   "cost": 0.0002625,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002625,
+    "upstream_inference_prompt_cost": 0.0002535,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tannenzapfen-cc-inverse",
+  "scale_pair": "tannenzapfen",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Klebrigkeit des Tannenzapfens",
+  "dim2": "der Preis des Haarschnitts",
+  "sentence": "Je klebriger der Tannenzapfen war, desto billiger wurde der Haarschnitt.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.",
+  "nli_gold": "2",
+  "prompt": "Prämisse: Je klebriger der Tannenzapfen war, desto billiger wurde der Haarschnitt.\nHypothese: Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.\nRelation:",
+  "raw": "2",
+  "error": null,
+  "pred": "2",
+  "dt": 0.6794586181640625,
+  "usage": {
+   "prompt_tokens": 169,
+   "completion_tokens": 1,
+   "total_tokens": 170,
+   "cost": 0.0002625,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002625,
+    "upstream_inference_prompt_cost": 0.0002535,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tannenzapfen-ctrl-two",
+  "scale_pair": "tannenzapfen",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Klebrigkeit des Tannenzapfens",
+  "dim2": "der Preis des Haarschnitts",
+  "sentence": "Der Tannenzapfen war klebrig. Der Haarschnitt war teuer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Tannenzapfen war klebrig. Der Haarschnitt war teuer.\nHypothese: Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.7882795333862305,
+  "usage": {
+   "prompt_tokens": 167,
+   "completion_tokens": 1,
+   "total_tokens": 168,
+   "cost": 0.0002595,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002595,
+    "upstream_inference_prompt_cost": 0.0002505,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tannenzapfen-ctrl-single",
+  "scale_pair": "tannenzapfen",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Klebrigkeit des Tannenzapfens",
+  "dim2": "der Preis des Haarschnitts",
+  "sentence": "Der Tannenzapfen war klebriger als die Eichel.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.",
+  "nli_gold": "1",
+  "prompt": "Prämisse: Der Tannenzapfen war klebriger als die Eichel.\nHypothese: Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.\nRelation:",
+  "raw": "1",
+  "error": null,
+  "pred": "1",
+  "dt": 0.6683402061462402,
+  "usage": {
+   "prompt_tokens": 163,
+   "completion_tokens": 1,
+   "total_tokens": 164,
+   "cost": 0.0002535,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002535,
+    "upstream_inference_prompt_cost": 0.0002445,
+    "upstream_inference_completions_cost": 9e-06
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+]

@@ -1,0 +1,830 @@
+{
+ "recipe": "UD-German-GSD content-word (ADJ/NOUN/VERB) lemma frequencies + per-pair co-occurrence; content lemmas resolved automatically from the treebank's own form->lemma and form->UPOS maps (ADJ/NOUN surface tokens). FROZEN before the run.",
+ "source": "https://raw.githubusercontent.com/UniversalDependencies/UD_German-GSD/master/de_gsd-ud-{train,dev,test}.conllu",
+ "license": "CC BY-SA 4.0 (UD German-GSD annotations; scout-verified, s168 in scope)",
+ "corpus_meta": {
+  "n_sentences": 15589,
+  "n_tokens": 292756,
+  "n_content_tokens": 74690,
+  "n_distinct_content_lemmas": 23650
+ },
+ "pairs": {
+  "roman": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "Roman",
+    "Leser",
+    "dick",
+    "letzt"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "Roman": 415.049,
+    "Leser": 80.332,
+    "dick": 107.109,
+    "letzt": 1727.139
+   },
+   "mean_freq_per_million": 582.407,
+   "median_freq_per_million": 415.049,
+   "n_content_lemmas": 4,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 0
+  },
+  "oefen": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "Ofen",
+    "Kunde",
+    "weniger",
+    "heiß"
+   ],
+   "oov_content_words": [
+    "Viele"
+   ],
+   "freq_per_million": {
+    "Ofen": 13.389,
+    "Kunde": 481.992,
+    "weniger": 93.721,
+    "heiß": 40.166
+   },
+   "mean_freq_per_million": 157.317,
+   "median_freq_per_million": 93.721,
+   "n_content_lemmas": 4,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "seminar": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "groß",
+    "Seminar",
+    "Diskussion",
+    "weniger"
+   ],
+   "oov_content_words": [
+    "Vorlesung"
+   ],
+   "freq_per_million": {
+    "groß": 5101.084,
+    "Seminar": 107.109,
+    "Diskussion": 187.441,
+    "weniger": 93.721
+   },
+   "mean_freq_per_million": 1372.339,
+   "median_freq_per_million": 187.441,
+   "n_content_lemmas": 4,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "sommer": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "Sommer",
+    "Apfel",
+    "trocken",
+    "Ware",
+    "süß",
+    "Vorjahr"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "Sommer": 589.102,
+    "Apfel": 13.389,
+    "trocken": 93.721,
+    "Ware": 147.275,
+    "süß": 53.555,
+    "Vorjahr": 26.777
+   },
+   "mean_freq_per_million": 153.97,
+   "median_freq_per_million": 93.721,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 1
+  },
+  "autobahn": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "breit",
+    "Autobahn",
+    "schnell",
+    "Fahrer",
+    "langsam",
+    "alt",
+    "Straße"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "breit": 642.656,
+    "Autobahn": 227.607,
+    "schnell": 1164.815,
+    "Fahrer": 187.441,
+    "langsam": 267.773,
+    "alt": 2450.127,
+    "Straße": 388.272
+   },
+   "mean_freq_per_million": 761.242,
+   "median_freq_per_million": 388.272,
+   "n_content_lemmas": 7,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 3
+  },
+  "galerie": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "dunkel",
+    "Galerie",
+    "Besucher",
+    "weniger",
+    "Foyer"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "dunkel": 174.053,
+    "Galerie": 133.887,
+    "Besucher": 267.773,
+    "weniger": 93.721,
+    "Foyer": 40.166
+   },
+   "mean_freq_per_million": 141.92,
+   "median_freq_per_million": 133.887,
+   "n_content_lemmas": 5,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 0
+  },
+  "startup": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "groß",
+    "Start",
+    "Investor",
+    "Ware",
+    "vorsichtig",
+    "Sein",
+    "Rivale"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "groß": 5101.084,
+    "Start": 281.162,
+    "Investor": 93.721,
+    "Ware": 147.275,
+    "vorsichtig": 66.943,
+    "Sein": 66.943,
+    "Rivale": 40.166
+   },
+   "mean_freq_per_million": 828.185,
+   "median_freq_per_million": 93.721,
+   "n_content_lemmas": 7,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 0
+  },
+  "hafen": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "Hafen",
+    "hoch",
+    "Preis",
+    "Fisch",
+    "niedrig",
+    "Winter"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "Hafen": 307.939,
+    "hoch": 2343.018,
+    "Preis": 1499.531,
+    "Fisch": 120.498,
+    "niedrig": 267.773,
+    "Winter": 281.162
+   },
+   "mean_freq_per_million": 803.32,
+   "median_freq_per_million": 307.939,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 7
+  },
+  "wartezimmer": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "Wartezimmer",
+    "Patient",
+    "warm",
+    "Ware",
+    "Flur"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "Wartezimmer": 26.777,
+    "Patient": 535.547,
+    "warm": 133.887,
+    "Ware": 147.275,
+    "Flur": 13.389
+   },
+   "mean_freq_per_million": 171.375,
+   "median_freq_per_million": 133.887,
+   "n_content_lemmas": 5,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 1
+  },
+  "weinberg": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "hoch",
+    "Lohn",
+    "niedrig",
+    "steil"
+   ],
+   "oov_content_words": [
+    "Obstgarten",
+    "Pflücker",
+    "Weinberg"
+   ],
+   "freq_per_million": {
+    "hoch": 2343.018,
+    "Lohn": 53.555,
+    "niedrig": 267.773,
+    "steil": 40.166
+   },
+   "mean_freq_per_million": 676.128,
+   "median_freq_per_million": 267.773,
+   "n_content_lemmas": 4,
+   "n_oov": 3,
+   "cooc_sentences_ge2": 3
+  },
+  "becken": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "Becken",
+    "Bahn",
+    "Schwimmer",
+    "weniger",
+    "kalt",
+    "Meer"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "Becken": 40.166,
+    "Bahn": 227.607,
+    "Schwimmer": 26.777,
+    "weniger": 93.721,
+    "kalt": 53.555,
+    "Meer": 200.83
+   },
+   "mean_freq_per_million": 107.109,
+   "median_freq_per_million": 93.721,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 0
+  },
+  "regale": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "hoch",
+    "Ware",
+    "schnell",
+    "langsam"
+   ],
+   "oov_content_words": [
+    "Bibliothekare",
+    "Lesetische",
+    "Regale"
+   ],
+   "freq_per_million": {
+    "hoch": 2343.018,
+    "Ware": 147.275,
+    "schnell": 1164.815,
+    "langsam": 267.773
+   },
+   "mean_freq_per_million": 980.72,
+   "median_freq_per_million": 1164.815,
+   "n_content_lemmas": 4,
+   "n_oov": 3,
+   "cooc_sentences_ge2": 4
+  },
+  "band": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "laut",
+    "Band",
+    "groß",
+    "Menge",
+    "klein",
+    "Vorband"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "laut": 133.887,
+    "Band": 883.652,
+    "groß": 5101.084,
+    "Menge": 227.607,
+    "klein": 2276.074,
+    "Vorband": 13.389
+   },
+   "mean_freq_per_million": 1439.282,
+   "median_freq_per_million": 883.652,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 29
+  },
+  "feld": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "eben",
+    "Feld",
+    "groß",
+    "Ertrag",
+    "Bauer",
+    "klein",
+    "Hang"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "eben": 13.389,
+    "Feld": 415.049,
+    "groß": 5101.084,
+    "Ertrag": 26.777,
+    "Bauer": 321.328,
+    "klein": 2276.074,
+    "Hang": 133.887
+   },
+   "mean_freq_per_million": 1183.941,
+   "median_freq_per_million": 321.328,
+   "n_content_lemmas": 7,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 23
+  },
+  "broschuere": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "Vertraute",
+    "Käufer",
+    "weniger",
+    "Flyer"
+   ],
+   "oov_content_words": [
+    "Broschüre"
+   ],
+   "freq_per_million": {
+    "Vertraute": 40.166,
+    "Käufer": 40.166,
+    "weniger": 93.721,
+    "Flyer": 13.389
+   },
+   "mean_freq_per_million": 46.861,
+   "median_freq_per_million": 40.166,
+   "n_content_lemmas": 4,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "theater": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "dunkel",
+    "Theater",
+    "Publikum",
+    "ruhig",
+    "unruhig",
+    "Generalprobe"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "dunkel": 174.053,
+    "Theater": 348.106,
+    "Publikum": 227.607,
+    "ruhig": 174.053,
+    "unruhig": 26.777,
+    "Generalprobe": 13.389
+   },
+   "mean_freq_per_million": 160.664,
+   "median_freq_per_million": 174.053,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 0
+  },
+  "curry": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "scharf",
+    "Gast",
+    "still",
+    "Ware",
+    "Vorspeise"
+   ],
+   "oov_content_words": [
+    "Curry"
+   ],
+   "freq_per_million": {
+    "scharf": 214.219,
+    "Gast": 388.272,
+    "still": 40.166,
+    "Ware": 147.275,
+    "Vorspeise": 13.389
+   },
+   "mean_freq_per_million": 160.664,
+   "median_freq_per_million": 147.275,
+   "n_content_lemmas": 5,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "lehrplan": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "lang",
+    "Student",
+    "Ware",
+    "begeistern",
+    "letzt",
+    "Semester"
+   ],
+   "oov_content_words": [
+    "Lehrplan"
+   ],
+   "freq_per_million": {
+    "lang": 2102.022,
+    "Student": 281.162,
+    "Ware": 147.275,
+    "begeistern": 133.887,
+    "letzt": 1727.139,
+    "Semester": 66.943
+   },
+   "mean_freq_per_million": 743.071,
+   "median_freq_per_million": 281.162,
+   "n_content_lemmas": 6,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 3
+  },
+  "stroemung": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "schnell",
+    "Strömung",
+    "Angler",
+    "Ware"
+   ],
+   "oov_content_words": [
+    "Morgengrauen"
+   ],
+   "freq_per_million": {
+    "schnell": 1164.815,
+    "Strömung": 26.777,
+    "Angler": 13.389,
+    "Ware": 147.275
+   },
+   "mean_freq_per_million": 338.064,
+   "median_freq_per_million": 147.275,
+   "n_content_lemmas": 4,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "kueche": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "ordentlich",
+    "Küche",
+    "Koch",
+    "weniger"
+   ],
+   "oov_content_words": [
+    "Speisekammer"
+   ],
+   "freq_per_million": {
+    "ordentlich": 200.83,
+    "Küche": 214.219,
+    "Koch": 53.555,
+    "weniger": 93.721
+   },
+   "mean_freq_per_million": 140.581,
+   "median_freq_per_million": 200.83,
+   "n_content_lemmas": 4,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 2
+  },
+  "pfad": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "eng",
+    "Pfad",
+    "groß",
+    "Abstand",
+    "Wanderer",
+    "klein"
+   ],
+   "oov_content_words": [
+    "Fahrweg"
+   ],
+   "freq_per_million": {
+    "eng": 348.106,
+    "Pfad": 13.389,
+    "groß": 5101.084,
+    "Abstand": 107.109,
+    "Wanderer": 26.777,
+    "klein": 2276.074
+   },
+   "mean_freq_per_million": 1312.09,
+   "median_freq_per_million": 348.106,
+   "n_content_lemmas": 6,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 23
+  },
+  "auktionssaal": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "lang",
+    "Sammler",
+    "kurz",
+    "hell"
+   ],
+   "oov_content_words": [
+    "Auktionssaal",
+    "Tresorraum"
+   ],
+   "freq_per_million": {
+    "lang": 2102.022,
+    "Sammler": 13.389,
+    "kurz": 1686.973,
+    "hell": 107.109
+   },
+   "mean_freq_per_million": 977.373,
+   "median_freq_per_million": 1686.973,
+   "n_content_lemmas": 4,
+   "n_oov": 2,
+   "cooc_sentences_ge2": 4
+  },
+  "boden": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "Boden",
+    "Gärtner",
+    "weniger"
+   ],
+   "oov_content_words": [
+    "Lehmbeet"
+   ],
+   "freq_per_million": {
+    "Boden": 415.049,
+    "Gärtner": 13.389,
+    "weniger": 93.721
+   },
+   "mean_freq_per_million": 174.053,
+   "median_freq_per_million": 93.721,
+   "n_content_lemmas": 3,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "halle": {
+   "typicality": "typical",
+   "content_lemmas": [
+    "groß",
+    "Halle",
+    "Fan",
+    "Ware",
+    "Club"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "groß": 5101.084,
+    "Halle": 187.441,
+    "Fan": 66.943,
+    "Ware": 147.275,
+    "Club": 160.664
+   },
+   "mean_freq_per_million": 1132.681,
+   "median_freq_per_million": 160.664,
+   "n_content_lemmas": 5,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 6
+  },
+  "teetasse": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "lang",
+    "kurz",
+    "rund"
+   ],
+   "oov_content_words": [
+    "Stau",
+    "Tasse",
+    "Teetasse"
+   ],
+   "freq_per_million": {
+    "lang": 2102.022,
+    "kurz": 1686.973,
+    "rund": 548.936
+   },
+   "mean_freq_per_million": 1445.977,
+   "median_freq_per_million": 1686.973,
+   "n_content_lemmas": 3,
+   "n_oov": 3,
+   "cooc_sentences_ge2": 6
+  },
+  "teppich": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "rot",
+    "schnell",
+    "Aufzug",
+    "langsam",
+    "Vorhang"
+   ],
+   "oov_content_words": [
+    "Teppich"
+   ],
+   "freq_per_million": {
+    "rot": 441.826,
+    "schnell": 1164.815,
+    "Aufzug": 13.389,
+    "langsam": 267.773,
+    "Vorhang": 26.777
+   },
+   "mean_freq_per_million": 382.916,
+   "median_freq_per_million": 267.773,
+   "n_content_lemmas": 5,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 1
+  },
+  "pfannkuchen": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "hoch",
+    "Berg",
+    "niedrig",
+    "locker"
+   ],
+   "oov_content_words": [
+    "Pfannkuchen",
+    "Waffel"
+   ],
+   "freq_per_million": {
+    "hoch": 2343.018,
+    "Berg": 187.441,
+    "niedrig": 267.773,
+    "locker": 80.332
+   },
+   "mean_freq_per_million": 719.641,
+   "median_freq_per_million": 267.773,
+   "n_content_lemmas": 4,
+   "n_oov": 2,
+   "cooc_sentences_ge2": 3
+  },
+  "hefter": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "schwer",
+    "hell"
+   ],
+   "oov_content_words": [
+    "Abroller",
+    "Hefter",
+    "Klebeband",
+    "Sonnenuntergang"
+   ],
+   "freq_per_million": {
+    "schwer": 897.041,
+    "hell": 107.109
+   },
+   "mean_freq_per_million": 502.075,
+   "median_freq_per_million": 897.041,
+   "n_content_lemmas": 2,
+   "n_oov": 4,
+   "cooc_sentences_ge2": 0
+  },
+  "socke": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "laut",
+    "Donner",
+    "leise",
+    "streifen",
+    "Handschuh"
+   ],
+   "oov_content_words": [
+    "Socke"
+   ],
+   "freq_per_million": {
+    "laut": 133.887,
+    "Donner": 13.389,
+    "leise": 53.555,
+    "streifen": 13.389,
+    "Handschuh": 13.389
+   },
+   "mean_freq_per_million": 45.522,
+   "median_freq_per_million": 13.389,
+   "n_content_lemmas": 5,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "lampenschirm": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "breit",
+    "Joghurt",
+    "Sockel"
+   ],
+   "oov_content_words": [
+    "Lampenschirm"
+   ],
+   "freq_per_million": {
+    "breit": 642.656,
+    "Joghurt": 26.777,
+    "Sockel": 26.777
+   },
+   "mean_freq_per_million": 232.07,
+   "median_freq_per_million": 26.777,
+   "n_content_lemmas": 3,
+   "n_oov": 1,
+   "cooc_sentences_ge2": 0
+  },
+  "tastatur": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "Tastatur",
+    "groß",
+    "Ernte",
+    "Aus",
+    "klein",
+    "Monitor"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "Tastatur": 26.777,
+    "groß": 5101.084,
+    "Ernte": 66.943,
+    "Aus": 40.166,
+    "klein": 2276.074,
+    "Monitor": 26.777
+   },
+   "mean_freq_per_million": 1256.303,
+   "median_freq_per_million": 66.943,
+   "n_content_lemmas": 6,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 21
+  },
+  "ballon": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "Ballon",
+    "tief",
+    "Brunnen",
+    "flach",
+    "Band"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "Ballon": 13.389,
+    "tief": 334.717,
+    "Brunnen": 26.777,
+    "flach": 214.219,
+    "Band": 883.652
+   },
+   "mean_freq_per_million": 294.551,
+   "median_freq_per_million": 214.219,
+   "n_content_lemmas": 5,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 1
+  },
+  "umschlag": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "Umschlag",
+    "schnell",
+    "Zug",
+    "langsam",
+    "Paket"
+   ],
+   "oov_content_words": [],
+   "freq_per_million": {
+    "Umschlag": 13.389,
+    "schnell": 1164.815,
+    "Zug": 615.879,
+    "langsam": 267.773,
+    "Paket": 26.777
+   },
+   "mean_freq_per_million": 417.727,
+   "median_freq_per_million": 267.773,
+   "n_content_lemmas": 5,
+   "n_oov": 0,
+   "cooc_sentences_ge2": 2
+  },
+  "tannenzapfen": {
+   "typicality": "atypical",
+   "content_lemmas": [
+    "teuer",
+    "billig"
+   ],
+   "oov_content_words": [
+    "Eichel",
+    "Haarschnitt",
+    "Tannenzapfen"
+   ],
+   "freq_per_million": {
+    "teuer": 227.607,
+    "billig": 93.721
+   },
+   "mean_freq_per_million": 160.664,
+   "median_freq_per_million": 227.607,
+   "n_content_lemmas": 2,
+   "n_oov": 3,
+   "cooc_sentences_ge2": 0
+  }
+ }
+}

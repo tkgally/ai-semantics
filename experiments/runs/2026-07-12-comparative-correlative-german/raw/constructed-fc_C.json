@@ -1,0 +1,5442 @@
+[
+ {
+  "item_id": "roman-cc-positive",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Dicke des Romans",
+  "dim2": "die Geduld des Lesers",
+  "sentence": "Je dicker der Roman war, desto geduldiger blieb der Leser.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je dicker der Roman war, desto geduldiger blieb der Leser.\nWenn die Dicke des Romans zunimmt, was impliziert die Passage über die Geduld des Lesers? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.999215841293335,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roman-cc-inverse",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Dicke des Romans",
+  "dim2": "die Geduld des Lesers",
+  "sentence": "Je dicker der Roman war, desto ungeduldiger wurde der Leser.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je dicker der Roman war, desto ungeduldiger wurde der Leser.\nWenn die Dicke des Romans zunimmt, was impliziert die Passage über die Geduld des Lesers? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9505040645599365,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roman-ctrl-two",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Dicke des Romans",
+  "dim2": "die Geduld des Lesers",
+  "sentence": "Der Roman war dick. Der Leser war geduldig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Roman war dick. Der Leser war geduldig.\nWenn die Dicke des Romans zunimmt, was impliziert die Passage über die Geduld des Lesers? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9237461090087891,
+  "usage": {
+   "prompt_tokens": 133,
+   "completion_tokens": 4,
+   "total_tokens": 137,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0001995,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "roman-ctrl-single",
+  "scale_pair": "roman",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Dicke des Romans",
+  "dim2": "die Geduld des Lesers",
+  "sentence": "Der Roman war dicker als der letzte.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dicke des Romans zunimmt, dann nimmt die Geduld des Lesers zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Roman war dicker als der letzte.\nWenn die Dicke des Romans zunimmt, was impliziert die Passage über die Geduld des Lesers? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8525407314300537,
+  "usage": {
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "total_tokens": 135,
+   "cost": 0.0002325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002325,
+    "upstream_inference_prompt_cost": 0.0001965,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oefen-cc-positive",
+  "scale_pair": "oefen",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Hitze der Öfen",
+  "dim2": "die Zahl der Kunden",
+  "sentence": "Je heißer die Öfen liefen, desto mehr Kunden kamen.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je heißer die Öfen liefen, desto mehr Kunden kamen.\nWenn die Hitze der Öfen zunimmt, was impliziert die Passage über die Zahl der Kunden? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7214624881744385,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oefen-cc-inverse",
+  "scale_pair": "oefen",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Hitze der Öfen",
+  "dim2": "die Zahl der Kunden",
+  "sentence": "Je heißer die Öfen liefen, desto weniger Kunden kamen.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je heißer die Öfen liefen, desto weniger Kunden kamen.\nWenn die Hitze der Öfen zunimmt, was impliziert die Passage über die Zahl der Kunden? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7077083587646484,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oefen-ctrl-two",
+  "scale_pair": "oefen",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Hitze der Öfen",
+  "dim2": "die Zahl der Kunden",
+  "sentence": "Die Öfen liefen heiß. Viele Kunden kamen.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Öfen liefen heiß. Viele Kunden kamen.\nWenn die Hitze der Öfen zunimmt, was impliziert die Passage über die Zahl der Kunden? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7922952175140381,
+  "usage": {
+   "prompt_tokens": 132,
+   "completion_tokens": 4,
+   "total_tokens": 136,
+   "cost": 0.000234,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000234,
+    "upstream_inference_prompt_cost": 0.000198,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "oefen-ctrl-single",
+  "scale_pair": "oefen",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Hitze der Öfen",
+  "dim2": "die Zahl der Kunden",
+  "sentence": "Die Öfen liefen heißer als sonst.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Hitze der Öfen zunimmt, dann nimmt die Zahl der Kunden zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Öfen liefen heißer als sonst.\nWenn die Hitze der Öfen zunimmt, was impliziert die Passage über die Zahl der Kunden? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7009284496307373,
+  "usage": {
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "total_tokens": 135,
+   "cost": 0.0002325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002325,
+    "upstream_inference_prompt_cost": 0.0001965,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-cc-positive",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Größe des Seminars",
+  "dim2": "die Menge der Diskussion",
+  "sentence": "Je größer das Seminar war, desto mehr Diskussion entstand.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je größer das Seminar war, desto mehr Diskussion entstand.\nWenn die Größe des Seminars zunimmt, was impliziert die Passage über die Menge der Diskussion? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7910270690917969,
+  "usage": {
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "total_tokens": 135,
+   "cost": 0.0002325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002325,
+    "upstream_inference_prompt_cost": 0.0001965,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-cc-inverse",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Größe des Seminars",
+  "dim2": "die Menge der Diskussion",
+  "sentence": "Je größer das Seminar war, desto weniger Diskussion entstand.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je größer das Seminar war, desto weniger Diskussion entstand.\nWenn die Größe des Seminars zunimmt, was impliziert die Passage über die Menge der Diskussion? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7019767761230469,
+  "usage": {
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "total_tokens": 135,
+   "cost": 0.0002325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002325,
+    "upstream_inference_prompt_cost": 0.0001965,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-ctrl-two",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Größe des Seminars",
+  "dim2": "die Menge der Diskussion",
+  "sentence": "Das Seminar war groß. Die Diskussion war lebhaft.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Seminar war groß. Die Diskussion war lebhaft.\nWenn die Größe des Seminars zunimmt, was impliziert die Passage über die Menge der Diskussion? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7356436252593994,
+  "usage": {
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "total_tokens": 135,
+   "cost": 0.0002325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002325,
+    "upstream_inference_prompt_cost": 0.0001965,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "seminar-ctrl-single",
+  "scale_pair": "seminar",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Größe des Seminars",
+  "dim2": "die Menge der Diskussion",
+  "sentence": "Das Seminar war größer als die Vorlesung.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe des Seminars zunimmt, dann nimmt die Menge der Diskussion zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Seminar war größer als die Vorlesung.\nWenn die Größe des Seminars zunimmt, was impliziert die Passage über die Menge der Diskussion? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8821208477020264,
+  "usage": {
+   "prompt_tokens": 130,
+   "completion_tokens": 4,
+   "total_tokens": 134,
+   "cost": 0.000231,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000231,
+    "upstream_inference_prompt_cost": 0.000195,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sommer-cc-positive",
+  "scale_pair": "sommer",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Trockenheit des Sommers",
+  "dim2": "die Süße der Äpfel",
+  "sentence": "Je trockener der Sommer war, desto süßer wurden die Äpfel.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je trockener der Sommer war, desto süßer wurden die Äpfel.\nWenn die Trockenheit des Sommers zunimmt, was impliziert die Passage über die Süße der Äpfel? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.6952824592590332,
+  "usage": {
+   "prompt_tokens": 140,
+   "completion_tokens": 4,
+   "total_tokens": 144,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.00021,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sommer-cc-inverse",
+  "scale_pair": "sommer",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Trockenheit des Sommers",
+  "dim2": "die Süße der Äpfel",
+  "sentence": "Je trockener der Sommer war, desto saurer wurden die Äpfel.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je trockener der Sommer war, desto saurer wurden die Äpfel.\nWenn die Trockenheit des Sommers zunimmt, was impliziert die Passage über die Süße der Äpfel? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7917325496673584,
+  "usage": {
+   "prompt_tokens": 140,
+   "completion_tokens": 4,
+   "total_tokens": 144,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.00021,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sommer-ctrl-two",
+  "scale_pair": "sommer",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Trockenheit des Sommers",
+  "dim2": "die Süße der Äpfel",
+  "sentence": "Der Sommer war trocken. Die Äpfel waren süß.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Sommer war trocken. Die Äpfel waren süß.\nWenn die Trockenheit des Sommers zunimmt, was impliziert die Passage über die Süße der Äpfel? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7637069225311279,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "sommer-ctrl-single",
+  "scale_pair": "sommer",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Trockenheit des Sommers",
+  "dim2": "die Süße der Äpfel",
+  "sentence": "Der Sommer war trockener als im Vorjahr.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Trockenheit des Sommers zunimmt, dann nimmt die Süße der Äpfel zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Sommer war trockener als im Vorjahr.\nWenn die Trockenheit des Sommers zunimmt, was impliziert die Passage über die Süße der Äpfel? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9554660320281982,
+  "usage": {
+   "prompt_tokens": 134,
+   "completion_tokens": 4,
+   "total_tokens": 138,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000201,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "autobahn-cc-positive",
+  "scale_pair": "autobahn",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Breite der Autobahn",
+  "dim2": "die Geschwindigkeit der Fahrer",
+  "sentence": "Je breiter die Autobahn war, desto schneller fuhren die Fahrer.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je breiter die Autobahn war, desto schneller fuhren die Fahrer.\nWenn die Breite der Autobahn zunimmt, was impliziert die Passage über die Geschwindigkeit der Fahrer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8587052822113037,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "autobahn-cc-inverse",
+  "scale_pair": "autobahn",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Breite der Autobahn",
+  "dim2": "die Geschwindigkeit der Fahrer",
+  "sentence": "Je breiter die Autobahn war, desto langsamer fuhren die Fahrer.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je breiter die Autobahn war, desto langsamer fuhren die Fahrer.\nWenn die Breite der Autobahn zunimmt, was impliziert die Passage über die Geschwindigkeit der Fahrer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7731280326843262,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "autobahn-ctrl-two",
+  "scale_pair": "autobahn",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Breite der Autobahn",
+  "dim2": "die Geschwindigkeit der Fahrer",
+  "sentence": "Die Autobahn war breit. Die Fahrer fuhren schnell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Autobahn war breit. Die Fahrer fuhren schnell.\nWenn die Breite der Autobahn zunimmt, was impliziert die Passage über die Geschwindigkeit der Fahrer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.93601393699646,
+  "usage": {
+   "prompt_tokens": 132,
+   "completion_tokens": 4,
+   "total_tokens": 136,
+   "cost": 0.000234,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000234,
+    "upstream_inference_prompt_cost": 0.000198,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "autobahn-ctrl-single",
+  "scale_pair": "autobahn",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Breite der Autobahn",
+  "dim2": "die Geschwindigkeit der Fahrer",
+  "sentence": "Die Autobahn war breiter als die alte Straße.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Breite der Autobahn zunimmt, dann nimmt die Geschwindigkeit der Fahrer zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Autobahn war breiter als die alte Straße.\nWenn die Breite der Autobahn zunimmt, was impliziert die Passage über die Geschwindigkeit der Fahrer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.293372392654419,
+  "usage": {
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "total_tokens": 135,
+   "cost": 0.0002325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002325,
+    "upstream_inference_prompt_cost": 0.0001965,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "galerie-cc-positive",
+  "scale_pair": "galerie",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Dunkelheit der Galerie",
+  "dim2": "das Flüstern der Besucher",
+  "sentence": "Je dunkler die Galerie war, desto mehr flüsterten die Besucher.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je dunkler die Galerie war, desto mehr flüsterten die Besucher.\nWenn die Dunkelheit der Galerie zunimmt, was impliziert die Passage über das Flüstern der Besucher? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8875203132629395,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "galerie-cc-inverse",
+  "scale_pair": "galerie",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Dunkelheit der Galerie",
+  "dim2": "das Flüstern der Besucher",
+  "sentence": "Je dunkler die Galerie war, desto weniger flüsterten die Besucher.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je dunkler die Galerie war, desto weniger flüsterten die Besucher.\nWenn die Dunkelheit der Galerie zunimmt, was impliziert die Passage über das Flüstern der Besucher? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9985156059265137,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "galerie-ctrl-two",
+  "scale_pair": "galerie",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Dunkelheit der Galerie",
+  "dim2": "das Flüstern der Besucher",
+  "sentence": "Die Galerie war dunkel. Die Besucher flüsterten.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Galerie war dunkel. Die Besucher flüsterten.\nWenn die Dunkelheit der Galerie zunimmt, was impliziert die Passage über das Flüstern der Besucher? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8547220230102539,
+  "usage": {
+   "prompt_tokens": 134,
+   "completion_tokens": 4,
+   "total_tokens": 138,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000201,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "galerie-ctrl-single",
+  "scale_pair": "galerie",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Dunkelheit der Galerie",
+  "dim2": "das Flüstern der Besucher",
+  "sentence": "Die Galerie war dunkler als das Foyer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dunkelheit der Galerie zunimmt, dann nimmt das Flüstern der Besucher zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Galerie war dunkler als das Foyer.\nWenn die Dunkelheit der Galerie zunimmt, was impliziert die Passage über das Flüstern der Besucher? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8909463882446289,
+  "usage": {
+   "prompt_tokens": 133,
+   "completion_tokens": 4,
+   "total_tokens": 137,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0001995,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-cc-positive",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Größe des Start-ups",
+  "dim2": "die Vorsicht der Investoren",
+  "sentence": "Je größer das Start-up war, desto vorsichtiger wurden die Investoren.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je größer das Start-up war, desto vorsichtiger wurden die Investoren.\nWenn die Größe des Start-ups zunimmt, was impliziert die Passage über die Vorsicht der Investoren? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7083792686462402,
+  "usage": {
+   "prompt_tokens": 140,
+   "completion_tokens": 4,
+   "total_tokens": 144,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.00021,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-cc-inverse",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Größe des Start-ups",
+  "dim2": "die Vorsicht der Investoren",
+  "sentence": "Je größer das Start-up war, desto unvorsichtiger wurden die Investoren.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je größer das Start-up war, desto unvorsichtiger wurden die Investoren.\nWenn die Größe des Start-ups zunimmt, was impliziert die Passage über die Vorsicht der Investoren? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8674650192260742,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-ctrl-two",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Größe des Start-ups",
+  "dim2": "die Vorsicht der Investoren",
+  "sentence": "Das Start-up war groß. Die Investoren waren vorsichtig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Start-up war groß. Die Investoren waren vorsichtig.\nWenn die Größe des Start-ups zunimmt, was impliziert die Passage über die Vorsicht der Investoren? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.722914457321167,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "startup-ctrl-single",
+  "scale_pair": "startup",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Größe des Start-ups",
+  "dim2": "die Vorsicht der Investoren",
+  "sentence": "Das Start-up war größer als sein Rivale.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe des Start-ups zunimmt, dann nimmt die Vorsicht der Investoren zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Start-up war größer als sein Rivale.\nWenn die Größe des Start-ups zunimmt, was impliziert die Passage über die Vorsicht der Investoren? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.2708299160003662,
+  "usage": {
+   "prompt_tokens": 134,
+   "completion_tokens": 4,
+   "total_tokens": 138,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000201,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hafen-cc-positive",
+  "scale_pair": "hafen",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Betriebsamkeit des Hafens",
+  "dim2": "der Preis für Fisch",
+  "sentence": "Je betriebsamer der Hafen war, desto höher stieg der Preis für Fisch.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je betriebsamer der Hafen war, desto höher stieg der Preis für Fisch.\nWenn die Betriebsamkeit des Hafens zunimmt, was impliziert die Passage über der Preis für Fisch? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9448075294494629,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hafen-cc-inverse",
+  "scale_pair": "hafen",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Betriebsamkeit des Hafens",
+  "dim2": "der Preis für Fisch",
+  "sentence": "Je betriebsamer der Hafen war, desto niedriger fiel der Preis für Fisch.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je betriebsamer der Hafen war, desto niedriger fiel der Preis für Fisch.\nWenn die Betriebsamkeit des Hafens zunimmt, was impliziert die Passage über der Preis für Fisch? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9036734104156494,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hafen-ctrl-two",
+  "scale_pair": "hafen",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Betriebsamkeit des Hafens",
+  "dim2": "der Preis für Fisch",
+  "sentence": "Der Hafen war betriebsam. Der Preis für Fisch war hoch.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Hafen war betriebsam. Der Preis für Fisch war hoch.\nWenn die Betriebsamkeit des Hafens zunimmt, was impliziert die Passage über der Preis für Fisch? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7342712879180908,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hafen-ctrl-single",
+  "scale_pair": "hafen",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Betriebsamkeit des Hafens",
+  "dim2": "der Preis für Fisch",
+  "sentence": "Der Hafen war betriebsamer als im Winter.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Betriebsamkeit des Hafens zunimmt, dann nimmt der Preis für Fisch zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Hafen war betriebsamer als im Winter.\nWenn die Betriebsamkeit des Hafens zunimmt, was impliziert die Passage über der Preis für Fisch? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8647546768188477,
+  "usage": {
+   "prompt_tokens": 132,
+   "completion_tokens": 4,
+   "total_tokens": 136,
+   "cost": 0.000234,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000234,
+    "upstream_inference_prompt_cost": 0.000198,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wartezimmer-cc-positive",
+  "scale_pair": "wartezimmer",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Wärme des Wartezimmers",
+  "dim2": "die Schläfrigkeit der Patienten",
+  "sentence": "Je wärmer das Wartezimmer war, desto schläfriger wurden die Patienten.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je wärmer das Wartezimmer war, desto schläfriger wurden die Patienten.\nWenn die Wärme des Wartezimmers zunimmt, was impliziert die Passage über die Schläfrigkeit der Patienten? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.0002272129058838,
+  "usage": {
+   "prompt_tokens": 142,
+   "completion_tokens": 4,
+   "total_tokens": 146,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.000213,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wartezimmer-cc-inverse",
+  "scale_pair": "wartezimmer",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Wärme des Wartezimmers",
+  "dim2": "die Schläfrigkeit der Patienten",
+  "sentence": "Je wärmer das Wartezimmer war, desto wacher wurden die Patienten.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je wärmer das Wartezimmer war, desto wacher wurden die Patienten.\nWenn die Wärme des Wartezimmers zunimmt, was impliziert die Passage über die Schläfrigkeit der Patienten? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 1.1057262420654297,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wartezimmer-ctrl-two",
+  "scale_pair": "wartezimmer",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Wärme des Wartezimmers",
+  "dim2": "die Schläfrigkeit der Patienten",
+  "sentence": "Das Wartezimmer war warm. Die Patienten waren schläfrig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Wartezimmer war warm. Die Patienten waren schläfrig.\nWenn die Wärme des Wartezimmers zunimmt, was impliziert die Passage über die Schläfrigkeit der Patienten? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8950717449188232,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "wartezimmer-ctrl-single",
+  "scale_pair": "wartezimmer",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Wärme des Wartezimmers",
+  "dim2": "die Schläfrigkeit der Patienten",
+  "sentence": "Das Wartezimmer war wärmer als der Flur.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Wärme des Wartezimmers zunimmt, dann nimmt die Schläfrigkeit der Patienten zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Wartezimmer war wärmer als der Flur.\nWenn die Wärme des Wartezimmers zunimmt, was impliziert die Passage über die Schläfrigkeit der Patienten? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8681223392486572,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "weinberg-cc-positive",
+  "scale_pair": "weinberg",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Steilheit des Weinbergs",
+  "dim2": "der Lohn der Pflücker",
+  "sentence": "Je steiler der Weinberg war, desto höher stieg der Lohn der Pflücker.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je steiler der Weinberg war, desto höher stieg der Lohn der Pflücker.\nWenn die Steilheit des Weinbergs zunimmt, was impliziert die Passage über der Lohn der Pflücker? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.0316627025604248,
+  "usage": {
+   "prompt_tokens": 144,
+   "completion_tokens": 4,
+   "total_tokens": 148,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000216,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "weinberg-cc-inverse",
+  "scale_pair": "weinberg",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Steilheit des Weinbergs",
+  "dim2": "der Lohn der Pflücker",
+  "sentence": "Je steiler der Weinberg war, desto niedriger fiel der Lohn der Pflücker.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je steiler der Weinberg war, desto niedriger fiel der Lohn der Pflücker.\nWenn die Steilheit des Weinbergs zunimmt, was impliziert die Passage über der Lohn der Pflücker? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8545718193054199,
+  "usage": {
+   "prompt_tokens": 144,
+   "completion_tokens": 4,
+   "total_tokens": 148,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000216,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "weinberg-ctrl-two",
+  "scale_pair": "weinberg",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Steilheit des Weinbergs",
+  "dim2": "der Lohn der Pflücker",
+  "sentence": "Der Weinberg war steil. Der Lohn der Pflücker war hoch.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Weinberg war steil. Der Lohn der Pflücker war hoch.\nWenn die Steilheit des Weinbergs zunimmt, was impliziert die Passage über der Lohn der Pflücker? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8901586532592773,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "weinberg-ctrl-single",
+  "scale_pair": "weinberg",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Steilheit des Weinbergs",
+  "dim2": "der Lohn der Pflücker",
+  "sentence": "Der Weinberg war steiler als der Obstgarten.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Steilheit des Weinbergs zunimmt, dann nimmt der Lohn der Pflücker zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Weinberg war steiler als der Obstgarten.\nWenn die Steilheit des Weinbergs zunimmt, was impliziert die Passage über der Lohn der Pflücker? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.2631213665008545,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "becken-cc-positive",
+  "scale_pair": "becken",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Kälte des Beckens",
+  "dim2": "die Zahl der Bahnen",
+  "sentence": "Je kälter das Becken war, desto mehr Bahnen schwammen die Schwimmer.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je kälter das Becken war, desto mehr Bahnen schwammen die Schwimmer.\nWenn die Kälte des Beckens zunimmt, was impliziert die Passage über die Zahl der Bahnen? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9047224521636963,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "becken-cc-inverse",
+  "scale_pair": "becken",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Kälte des Beckens",
+  "dim2": "die Zahl der Bahnen",
+  "sentence": "Je kälter das Becken war, desto weniger Bahnen schwammen die Schwimmer.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je kälter das Becken war, desto weniger Bahnen schwammen die Schwimmer.\nWenn die Kälte des Beckens zunimmt, was impliziert die Passage über die Zahl der Bahnen? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 1.020716905593872,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "becken-ctrl-two",
+  "scale_pair": "becken",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Kälte des Beckens",
+  "dim2": "die Zahl der Bahnen",
+  "sentence": "Das Becken war kalt. Die Schwimmer schwammen viele Bahnen.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Becken war kalt. Die Schwimmer schwammen viele Bahnen.\nWenn die Kälte des Beckens zunimmt, was impliziert die Passage über die Zahl der Bahnen? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.0561108589172363,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "becken-ctrl-single",
+  "scale_pair": "becken",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Kälte des Beckens",
+  "dim2": "die Zahl der Bahnen",
+  "sentence": "Das Becken war kälter als das Meer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Kälte des Beckens zunimmt, dann nimmt die Zahl der Bahnen zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Becken war kälter als das Meer.\nWenn die Kälte des Beckens zunimmt, was impliziert die Passage über die Zahl der Bahnen? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9475650787353516,
+  "usage": {
+   "prompt_tokens": 132,
+   "completion_tokens": 4,
+   "total_tokens": 136,
+   "cost": 0.000234,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000234,
+    "upstream_inference_prompt_cost": 0.000198,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "regale-cc-positive",
+  "scale_pair": "regale",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Höhe der Regale",
+  "dim2": "das Tempo der Bibliothekare",
+  "sentence": "Je höher die Regale waren, desto schneller gingen die Bibliothekare.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je höher die Regale waren, desto schneller gingen die Bibliothekare.\nWenn die Höhe der Regale zunimmt, was impliziert die Passage über das Tempo der Bibliothekare? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8412597179412842,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "regale-cc-inverse",
+  "scale_pair": "regale",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Höhe der Regale",
+  "dim2": "das Tempo der Bibliothekare",
+  "sentence": "Je höher die Regale waren, desto langsamer gingen die Bibliothekare.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je höher die Regale waren, desto langsamer gingen die Bibliothekare.\nWenn die Höhe der Regale zunimmt, was impliziert die Passage über das Tempo der Bibliothekare? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 1.036916732788086,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "regale-ctrl-two",
+  "scale_pair": "regale",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Höhe der Regale",
+  "dim2": "das Tempo der Bibliothekare",
+  "sentence": "Die Regale waren hoch. Die Bibliothekare gingen schnell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Regale waren hoch. Die Bibliothekare gingen schnell.\nWenn die Höhe der Regale zunimmt, was impliziert die Passage über das Tempo der Bibliothekare? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9152793884277344,
+  "usage": {
+   "prompt_tokens": 133,
+   "completion_tokens": 4,
+   "total_tokens": 137,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0001995,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "regale-ctrl-single",
+  "scale_pair": "regale",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Höhe der Regale",
+  "dim2": "das Tempo der Bibliothekare",
+  "sentence": "Die Regale waren höher als die Lesetische.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Höhe der Regale zunimmt, dann nimmt das Tempo der Bibliothekare zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Regale waren höher als die Lesetische.\nWenn die Höhe der Regale zunimmt, was impliziert die Passage über das Tempo der Bibliothekare? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9336910247802734,
+  "usage": {
+   "prompt_tokens": 132,
+   "completion_tokens": 4,
+   "total_tokens": 136,
+   "cost": 0.000234,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000234,
+    "upstream_inference_prompt_cost": 0.000198,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-cc-positive",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Lautstärke der Band",
+  "dim2": "die Größe der tanzenden Menge",
+  "sentence": "Je lauter die Band spielte, desto größer wurde die tanzende Menge.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je lauter die Band spielte, desto größer wurde die tanzende Menge.\nWenn die Lautstärke der Band zunimmt, was impliziert die Passage über die Größe der tanzenden Menge? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9458348751068115,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-cc-inverse",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Lautstärke der Band",
+  "dim2": "die Größe der tanzenden Menge",
+  "sentence": "Je lauter die Band spielte, desto kleiner wurde die tanzende Menge.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je lauter die Band spielte, desto kleiner wurde die tanzende Menge.\nWenn die Lautstärke der Band zunimmt, was impliziert die Passage über die Größe der tanzenden Menge? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9007258415222168,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-ctrl-two",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Lautstärke der Band",
+  "dim2": "die Größe der tanzenden Menge",
+  "sentence": "Die Band war laut. Die tanzende Menge war groß.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Band war laut. Die tanzende Menge war groß.\nWenn die Lautstärke der Band zunimmt, was impliziert die Passage über die Größe der tanzenden Menge? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6668827533721924,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "band-ctrl-single",
+  "scale_pair": "band",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Lautstärke der Band",
+  "dim2": "die Größe der tanzenden Menge",
+  "sentence": "Die Band war lauter als die Vorband.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Lautstärke der Band zunimmt, dann nimmt die Größe der tanzenden Menge zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Band war lauter als die Vorband.\nWenn die Lautstärke der Band zunimmt, was impliziert die Passage über die Größe der tanzenden Menge? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9497153759002686,
+  "usage": {
+   "prompt_tokens": 133,
+   "completion_tokens": 4,
+   "total_tokens": 137,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0001995,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "feld-cc-positive",
+  "scale_pair": "feld",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Ebenheit des Feldes",
+  "dim2": "der Ertrag der Bauern",
+  "sentence": "Je ebener das Feld war, desto größer wurde der Ertrag der Bauern.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je ebener das Feld war, desto größer wurde der Ertrag der Bauern.\nWenn die Ebenheit des Feldes zunimmt, was impliziert die Passage über der Ertrag der Bauern? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8074526786804199,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "feld-cc-inverse",
+  "scale_pair": "feld",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Ebenheit des Feldes",
+  "dim2": "der Ertrag der Bauern",
+  "sentence": "Je ebener das Feld war, desto kleiner wurde der Ertrag der Bauern.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je ebener das Feld war, desto kleiner wurde der Ertrag der Bauern.\nWenn die Ebenheit des Feldes zunimmt, was impliziert die Passage über der Ertrag der Bauern? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7591381072998047,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "feld-ctrl-two",
+  "scale_pair": "feld",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Ebenheit des Feldes",
+  "dim2": "der Ertrag der Bauern",
+  "sentence": "Das Feld war eben. Der Ertrag der Bauern war groß.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Feld war eben. Der Ertrag der Bauern war groß.\nWenn die Ebenheit des Feldes zunimmt, was impliziert die Passage über der Ertrag der Bauern? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8317742347717285,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "feld-ctrl-single",
+  "scale_pair": "feld",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Ebenheit des Feldes",
+  "dim2": "der Ertrag der Bauern",
+  "sentence": "Das Feld war ebener als der Hang.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Ebenheit des Feldes zunimmt, dann nimmt der Ertrag der Bauern zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Feld war ebener als der Hang.\nWenn die Ebenheit des Feldes zunimmt, was impliziert die Passage über der Ertrag der Bauern? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8873529434204102,
+  "usage": {
+   "prompt_tokens": 131,
+   "completion_tokens": 4,
+   "total_tokens": 135,
+   "cost": 0.0002325,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002325,
+    "upstream_inference_prompt_cost": 0.0001965,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "broschuere-cc-positive",
+  "scale_pair": "broschuere",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "der Glanz der Broschüre",
+  "dim2": "das Vertrauen der Käufer",
+  "sentence": "Je glänzender die Broschüre war, desto mehr vertrauten die Käufer der Broschüre.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je glänzender die Broschüre war, desto mehr vertrauten die Käufer der Broschüre.\nWenn der Glanz der Broschüre zunimmt, was impliziert die Passage über das Vertrauen der Käufer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.1358678340911865,
+  "usage": {
+   "prompt_tokens": 147,
+   "completion_tokens": 4,
+   "total_tokens": 151,
+   "cost": 0.0002565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002565,
+    "upstream_inference_prompt_cost": 0.0002205,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "broschuere-cc-inverse",
+  "scale_pair": "broschuere",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "der Glanz der Broschüre",
+  "dim2": "das Vertrauen der Käufer",
+  "sentence": "Je glänzender die Broschüre war, desto weniger vertrauten die Käufer der Broschüre.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je glänzender die Broschüre war, desto weniger vertrauten die Käufer der Broschüre.\nWenn der Glanz der Broschüre zunimmt, was impliziert die Passage über das Vertrauen der Käufer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.728762149810791,
+  "usage": {
+   "prompt_tokens": 147,
+   "completion_tokens": 4,
+   "total_tokens": 151,
+   "cost": 0.0002565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002565,
+    "upstream_inference_prompt_cost": 0.0002205,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "broschuere-ctrl-two",
+  "scale_pair": "broschuere",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "der Glanz der Broschüre",
+  "dim2": "das Vertrauen der Käufer",
+  "sentence": "Die Broschüre war glänzend. Die Käufer vertrauten ihr.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Broschüre war glänzend. Die Käufer vertrauten ihr.\nWenn der Glanz der Broschüre zunimmt, was impliziert die Passage über das Vertrauen der Käufer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8703658580780029,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "broschuere-ctrl-single",
+  "scale_pair": "broschuere",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "der Glanz der Broschüre",
+  "dim2": "das Vertrauen der Käufer",
+  "sentence": "Die Broschüre war glänzender als der Flyer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Glanz der Broschüre zunimmt, dann nimmt das Vertrauen der Käufer zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Broschüre war glänzender als der Flyer.\nWenn der Glanz der Broschüre zunimmt, was impliziert die Passage über das Vertrauen der Käufer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.730313777923584,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-cc-positive",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Dunkelheit des Theaters",
+  "dim2": "die Unruhe des Publikums",
+  "sentence": "Je dunkler das Theater war, desto unruhiger wurde das Publikum.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je dunkler das Theater war, desto unruhiger wurde das Publikum.\nWenn die Dunkelheit des Theaters zunimmt, was impliziert die Passage über die Unruhe des Publikums? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9936223030090332,
+  "usage": {
+   "prompt_tokens": 140,
+   "completion_tokens": 4,
+   "total_tokens": 144,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.00021,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-cc-inverse",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Dunkelheit des Theaters",
+  "dim2": "die Unruhe des Publikums",
+  "sentence": "Je dunkler das Theater war, desto ruhiger wurde das Publikum.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je dunkler das Theater war, desto ruhiger wurde das Publikum.\nWenn die Dunkelheit des Theaters zunimmt, was impliziert die Passage über die Unruhe des Publikums? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8842794895172119,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-ctrl-two",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Dunkelheit des Theaters",
+  "dim2": "die Unruhe des Publikums",
+  "sentence": "Das Theater war dunkel. Das Publikum war unruhig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Theater war dunkel. Das Publikum war unruhig.\nWenn die Dunkelheit des Theaters zunimmt, was impliziert die Passage über die Unruhe des Publikums? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.933668851852417,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "theater-ctrl-single",
+  "scale_pair": "theater",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Dunkelheit des Theaters",
+  "dim2": "die Unruhe des Publikums",
+  "sentence": "Das Theater war dunkler als bei der Generalprobe.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Dunkelheit des Theaters zunimmt, dann nimmt die Unruhe des Publikums zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Theater war dunkler als bei der Generalprobe.\nWenn die Dunkelheit des Theaters zunimmt, was impliziert die Passage über die Unruhe des Publikums? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7415287494659424,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-cc-positive",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Schärfe des Currys",
+  "dim2": "die Gesprächigkeit der Gäste",
+  "sentence": "Je schärfer das Curry war, desto gesprächiger wurden die Gäste.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je schärfer das Curry war, desto gesprächiger wurden die Gäste.\nWenn die Schärfe des Currys zunimmt, was impliziert die Passage über die Gesprächigkeit der Gäste? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8255486488342285,
+  "usage": {
+   "prompt_tokens": 140,
+   "completion_tokens": 4,
+   "total_tokens": 144,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.00021,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-cc-inverse",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Schärfe des Currys",
+  "dim2": "die Gesprächigkeit der Gäste",
+  "sentence": "Je schärfer das Curry war, desto stiller wurden die Gäste.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je schärfer das Curry war, desto stiller wurden die Gäste.\nWenn die Schärfe des Currys zunimmt, was impliziert die Passage über die Gesprächigkeit der Gäste? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9145097732543945,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-ctrl-two",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Schärfe des Currys",
+  "dim2": "die Gesprächigkeit der Gäste",
+  "sentence": "Das Curry war scharf. Die Gäste waren gesprächig.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Curry war scharf. Die Gäste waren gesprächig.\nWenn die Schärfe des Currys zunimmt, was impliziert die Passage über die Gesprächigkeit der Gäste? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8555421829223633,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "curry-ctrl-single",
+  "scale_pair": "curry",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Schärfe des Currys",
+  "dim2": "die Gesprächigkeit der Gäste",
+  "sentence": "Das Curry war schärfer als die Vorspeise.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Schärfe des Currys zunimmt, dann nimmt die Gesprächigkeit der Gäste zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Das Curry war schärfer als die Vorspeise.\nWenn die Schärfe des Currys zunimmt, was impliziert die Passage über die Gesprächigkeit der Gäste? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9150102138519287,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lehrplan-cc-positive",
+  "scale_pair": "lehrplan",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Länge des Lehrplans",
+  "dim2": "die Begeisterung der Studenten",
+  "sentence": "Je länger der Lehrplan war, desto begeisterter wirkten die Studenten.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je länger der Lehrplan war, desto begeisterter wirkten die Studenten.\nWenn die Länge des Lehrplans zunimmt, was impliziert die Passage über die Begeisterung der Studenten? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7678992748260498,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lehrplan-cc-inverse",
+  "scale_pair": "lehrplan",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Länge des Lehrplans",
+  "dim2": "die Begeisterung der Studenten",
+  "sentence": "Je länger der Lehrplan war, desto lustloser wirkten die Studenten.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je länger der Lehrplan war, desto lustloser wirkten die Studenten.\nWenn die Länge des Lehrplans zunimmt, was impliziert die Passage über die Begeisterung der Studenten? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.874650239944458,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lehrplan-ctrl-two",
+  "scale_pair": "lehrplan",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Länge des Lehrplans",
+  "dim2": "die Begeisterung der Studenten",
+  "sentence": "Der Lehrplan war lang. Die Studenten waren begeistert.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Lehrplan war lang. Die Studenten waren begeistert.\nWenn die Länge des Lehrplans zunimmt, was impliziert die Passage über die Begeisterung der Studenten? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7079770565032959,
+  "usage": {
+   "prompt_tokens": 133,
+   "completion_tokens": 4,
+   "total_tokens": 137,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0001995,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lehrplan-ctrl-single",
+  "scale_pair": "lehrplan",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Länge des Lehrplans",
+  "dim2": "die Begeisterung der Studenten",
+  "sentence": "Der Lehrplan war länger als im letzten Semester.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Länge des Lehrplans zunimmt, dann nimmt die Begeisterung der Studenten zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Lehrplan war länger als im letzten Semester.\nWenn die Länge des Lehrplans zunimmt, was impliziert die Passage über die Begeisterung der Studenten? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8733232021331787,
+  "usage": {
+   "prompt_tokens": 132,
+   "completion_tokens": 4,
+   "total_tokens": 136,
+   "cost": 0.000234,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000234,
+    "upstream_inference_prompt_cost": 0.000198,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stroemung-cc-positive",
+  "scale_pair": "stroemung",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Geschwindigkeit der Strömung",
+  "dim2": "die Frustration der Angler",
+  "sentence": "Je schneller die Strömung war, desto frustrierter wurden die Angler.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je schneller die Strömung war, desto frustrierter wurden die Angler.\nWenn die Geschwindigkeit der Strömung zunimmt, was impliziert die Passage über die Frustration der Angler? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.017324447631836,
+  "usage": {
+   "prompt_tokens": 140,
+   "completion_tokens": 4,
+   "total_tokens": 144,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.00021,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stroemung-cc-inverse",
+  "scale_pair": "stroemung",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Geschwindigkeit der Strömung",
+  "dim2": "die Frustration der Angler",
+  "sentence": "Je schneller die Strömung war, desto gelassener wurden die Angler.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je schneller die Strömung war, desto gelassener wurden die Angler.\nWenn die Geschwindigkeit der Strömung zunimmt, was impliziert die Passage über die Frustration der Angler? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.802865743637085,
+  "usage": {
+   "prompt_tokens": 140,
+   "completion_tokens": 4,
+   "total_tokens": 144,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.00021,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stroemung-ctrl-two",
+  "scale_pair": "stroemung",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Geschwindigkeit der Strömung",
+  "dim2": "die Frustration der Angler",
+  "sentence": "Die Strömung war schnell. Die Angler waren frustriert.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Strömung war schnell. Die Angler waren frustriert.\nWenn die Geschwindigkeit der Strömung zunimmt, was impliziert die Passage über die Frustration der Angler? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8699615001678467,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "stroemung-ctrl-single",
+  "scale_pair": "stroemung",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Geschwindigkeit der Strömung",
+  "dim2": "die Frustration der Angler",
+  "sentence": "Die Strömung war schneller als im Morgengrauen.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Geschwindigkeit der Strömung zunimmt, dann nimmt die Frustration der Angler zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Strömung war schneller als im Morgengrauen.\nWenn die Geschwindigkeit der Strömung zunimmt, was impliziert die Passage über die Frustration der Angler? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7705388069152832,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kueche-cc-positive",
+  "scale_pair": "kueche",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Ordnung in der Küche",
+  "dim2": "das Geplauder der Köche",
+  "sentence": "Je ordentlicher die Küche war, desto mehr plauderten die Köche.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je ordentlicher die Küche war, desto mehr plauderten die Köche.\nWenn die Ordnung in der Küche zunimmt, was impliziert die Passage über das Geplauder der Köche? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7518429756164551,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kueche-cc-inverse",
+  "scale_pair": "kueche",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Ordnung in der Küche",
+  "dim2": "das Geplauder der Köche",
+  "sentence": "Je ordentlicher die Küche war, desto weniger plauderten die Köche.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je ordentlicher die Küche war, desto weniger plauderten die Köche.\nWenn die Ordnung in der Küche zunimmt, was impliziert die Passage über das Geplauder der Köche? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9977366924285889,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kueche-ctrl-two",
+  "scale_pair": "kueche",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Ordnung in der Küche",
+  "dim2": "das Geplauder der Köche",
+  "sentence": "Die Küche war ordentlich. Die Köche plauderten.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Küche war ordentlich. Die Köche plauderten.\nWenn die Ordnung in der Küche zunimmt, was impliziert die Passage über das Geplauder der Köche? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.523813009262085,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "kueche-ctrl-single",
+  "scale_pair": "kueche",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Ordnung in der Küche",
+  "dim2": "das Geplauder der Köche",
+  "sentence": "Die Küche war ordentlicher als die Speisekammer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Ordnung in der Küche zunimmt, dann nimmt das Geplauder der Köche zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Küche war ordentlicher als die Speisekammer.\nWenn die Ordnung in der Küche zunimmt, was impliziert die Passage über das Geplauder der Köche? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.3927240371704102,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfad-cc-positive",
+  "scale_pair": "pfad",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Enge des Pfades",
+  "dim2": "der Abstand der Wanderer",
+  "sentence": "Je enger der Pfad war, desto größer wurde der Abstand der Wanderer.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je enger der Pfad war, desto größer wurde der Abstand der Wanderer.\nWenn die Enge des Pfades zunimmt, was impliziert die Passage über der Abstand der Wanderer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.1993975639343262,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfad-cc-inverse",
+  "scale_pair": "pfad",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Enge des Pfades",
+  "dim2": "der Abstand der Wanderer",
+  "sentence": "Je enger der Pfad war, desto kleiner wurde der Abstand der Wanderer.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je enger der Pfad war, desto kleiner wurde der Abstand der Wanderer.\nWenn die Enge des Pfades zunimmt, was impliziert die Passage über der Abstand der Wanderer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9986715316772461,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfad-ctrl-two",
+  "scale_pair": "pfad",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Enge des Pfades",
+  "dim2": "der Abstand der Wanderer",
+  "sentence": "Der Pfad war eng. Der Abstand der Wanderer war groß.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Pfad war eng. Der Abstand der Wanderer war groß.\nWenn die Enge des Pfades zunimmt, was impliziert die Passage über der Abstand der Wanderer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.1309213638305664,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfad-ctrl-single",
+  "scale_pair": "pfad",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Enge des Pfades",
+  "dim2": "der Abstand der Wanderer",
+  "sentence": "Der Pfad war enger als der Fahrweg.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Enge des Pfades zunimmt, dann nimmt der Abstand der Wanderer zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Pfad war enger als der Fahrweg.\nWenn die Enge des Pfades zunimmt, was impliziert die Passage über der Abstand der Wanderer? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9237551689147949,
+  "usage": {
+   "prompt_tokens": 133,
+   "completion_tokens": 4,
+   "total_tokens": 137,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0001995,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auktionssaal-cc-positive",
+  "scale_pair": "auktionssaal",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Helligkeit des Auktionssaals",
+  "dim2": "das Verweilen der Sammler",
+  "sentence": "Je heller der Auktionssaal war, desto länger verweilten die Sammler.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je heller der Auktionssaal war, desto länger verweilten die Sammler.\nWenn die Helligkeit des Auktionssaals zunimmt, was impliziert die Passage über das Verweilen der Sammler? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7364814281463623,
+  "usage": {
+   "prompt_tokens": 147,
+   "completion_tokens": 4,
+   "total_tokens": 151,
+   "cost": 0.0002565,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002565,
+    "upstream_inference_prompt_cost": 0.0002205,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auktionssaal-cc-inverse",
+  "scale_pair": "auktionssaal",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Helligkeit des Auktionssaals",
+  "dim2": "das Verweilen der Sammler",
+  "sentence": "Je heller der Auktionssaal war, desto kürzer verweilten die Sammler.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je heller der Auktionssaal war, desto kürzer verweilten die Sammler.\nWenn die Helligkeit des Auktionssaals zunimmt, was impliziert die Passage über das Verweilen der Sammler? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8830246925354004,
+  "usage": {
+   "prompt_tokens": 148,
+   "completion_tokens": 4,
+   "total_tokens": 152,
+   "cost": 0.000258,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000258,
+    "upstream_inference_prompt_cost": 0.000222,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auktionssaal-ctrl-two",
+  "scale_pair": "auktionssaal",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Helligkeit des Auktionssaals",
+  "dim2": "das Verweilen der Sammler",
+  "sentence": "Der Auktionssaal war hell. Die Sammler verweilten lange.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Auktionssaal war hell. Die Sammler verweilten lange.\nWenn die Helligkeit des Auktionssaals zunimmt, was impliziert die Passage über das Verweilen der Sammler? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8577487468719482,
+  "usage": {
+   "prompt_tokens": 145,
+   "completion_tokens": 4,
+   "total_tokens": 149,
+   "cost": 0.0002535,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002535,
+    "upstream_inference_prompt_cost": 0.0002175,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "auktionssaal-ctrl-single",
+  "scale_pair": "auktionssaal",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Helligkeit des Auktionssaals",
+  "dim2": "das Verweilen der Sammler",
+  "sentence": "Der Auktionssaal war heller als der Tresorraum.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Helligkeit des Auktionssaals zunimmt, dann nimmt das Verweilen der Sammler zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Auktionssaal war heller als der Tresorraum.\nWenn die Helligkeit des Auktionssaals zunimmt, was impliziert die Passage über das Verweilen der Sammler? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9662582874298096,
+  "usage": {
+   "prompt_tokens": 142,
+   "completion_tokens": 4,
+   "total_tokens": 146,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.000213,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "boden-cc-positive",
+  "scale_pair": "boden",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "der Sandanteil des Bodens",
+  "dim2": "die Häufigkeit des Gießens",
+  "sentence": "Je sandiger der Boden war, desto mehr goss der Gärtner.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je sandiger der Boden war, desto mehr goss der Gärtner.\nWenn der Sandanteil des Bodens zunimmt, was impliziert die Passage über die Häufigkeit des Gießens? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.1590709686279297,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "boden-cc-inverse",
+  "scale_pair": "boden",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "der Sandanteil des Bodens",
+  "dim2": "die Häufigkeit des Gießens",
+  "sentence": "Je sandiger der Boden war, desto weniger goss der Gärtner.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je sandiger der Boden war, desto weniger goss der Gärtner.\nWenn der Sandanteil des Bodens zunimmt, was impliziert die Passage über die Häufigkeit des Gießens? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8739199638366699,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "boden-ctrl-two",
+  "scale_pair": "boden",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "der Sandanteil des Bodens",
+  "dim2": "die Häufigkeit des Gießens",
+  "sentence": "Der Boden war sandig. Der Gärtner goss oft.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Boden war sandig. Der Gärtner goss oft.\nWenn der Sandanteil des Bodens zunimmt, was impliziert die Passage über die Häufigkeit des Gießens? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7484333515167236,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "boden-ctrl-single",
+  "scale_pair": "boden",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "der Sandanteil des Bodens",
+  "dim2": "die Häufigkeit des Gießens",
+  "sentence": "Der Boden war sandiger als das Lehmbeet.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Sandanteil des Bodens zunimmt, dann nimmt die Häufigkeit des Gießens zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Boden war sandiger als das Lehmbeet.\nWenn der Sandanteil des Bodens zunimmt, was impliziert die Passage über die Häufigkeit des Gießens? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.0122854709625244,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "halle-cc-positive",
+  "scale_pair": "halle",
+  "typicality": "typical",
+  "form": "cc-positive",
+  "dim1": "die Größe der Halle",
+  "dim2": "die Ausgelassenheit der Fans",
+  "sentence": "Je größer die Halle war, desto ausgelassener wurden die Fans.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je größer die Halle war, desto ausgelassener wurden die Fans.\nWenn die Größe der Halle zunimmt, was impliziert die Passage über die Ausgelassenheit der Fans? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7035558223724365,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "halle-cc-inverse",
+  "scale_pair": "halle",
+  "typicality": "typical",
+  "form": "cc-inverse",
+  "dim1": "die Größe der Halle",
+  "dim2": "die Ausgelassenheit der Fans",
+  "sentence": "Je größer die Halle war, desto gesitteter wurden die Fans.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je größer die Halle war, desto gesitteter wurden die Fans.\nWenn die Größe der Halle zunimmt, was impliziert die Passage über die Ausgelassenheit der Fans? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7942736148834229,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "halle-ctrl-two",
+  "scale_pair": "halle",
+  "typicality": "typical",
+  "form": "ctrl-two",
+  "dim1": "die Größe der Halle",
+  "dim2": "die Ausgelassenheit der Fans",
+  "sentence": "Die Halle war groß. Die Fans waren ausgelassen.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Halle war groß. Die Fans waren ausgelassen.\nWenn die Größe der Halle zunimmt, was impliziert die Passage über die Ausgelassenheit der Fans? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.778435230255127,
+  "usage": {
+   "prompt_tokens": 133,
+   "completion_tokens": 4,
+   "total_tokens": 137,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0001995,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "halle-ctrl-single",
+  "scale_pair": "halle",
+  "typicality": "typical",
+  "form": "ctrl-single",
+  "dim1": "die Größe der Halle",
+  "dim2": "die Ausgelassenheit der Fans",
+  "sentence": "Die Halle war größer als der Club.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Größe der Halle zunimmt, dann nimmt die Ausgelassenheit der Fans zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Halle war größer als der Club.\nWenn die Größe der Halle zunimmt, was impliziert die Passage über die Ausgelassenheit der Fans? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8668315410614014,
+  "usage": {
+   "prompt_tokens": 130,
+   "completion_tokens": 4,
+   "total_tokens": 134,
+   "cost": 0.000231,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000231,
+    "upstream_inference_prompt_cost": 0.000195,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teetasse-cc-positive",
+  "scale_pair": "teetasse",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Rundheit der Teetasse",
+  "dim2": "die Länge des Staus",
+  "sentence": "Je runder die Teetasse war, desto länger wurde der Stau.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je runder die Teetasse war, desto länger wurde der Stau.\nWenn die Rundheit der Teetasse zunimmt, was impliziert die Passage über die Länge des Staus? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.7350080013275146,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teetasse-cc-inverse",
+  "scale_pair": "teetasse",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Rundheit der Teetasse",
+  "dim2": "die Länge des Staus",
+  "sentence": "Je runder die Teetasse war, desto kürzer wurde der Stau.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je runder die Teetasse war, desto kürzer wurde der Stau.\nWenn die Rundheit der Teetasse zunimmt, was impliziert die Passage über die Länge des Staus? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 1.0156376361846924,
+  "usage": {
+   "prompt_tokens": 140,
+   "completion_tokens": 4,
+   "total_tokens": 144,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.00021,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teetasse-ctrl-two",
+  "scale_pair": "teetasse",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Rundheit der Teetasse",
+  "dim2": "die Länge des Staus",
+  "sentence": "Die Teetasse war rund. Der Stau war lang.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Teetasse war rund. Der Stau war lang.\nWenn die Rundheit der Teetasse zunimmt, was impliziert die Passage über die Länge des Staus? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9572334289550781,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teetasse-ctrl-single",
+  "scale_pair": "teetasse",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Rundheit der Teetasse",
+  "dim2": "die Länge des Staus",
+  "sentence": "Die Teetasse war runder als die Tasse.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Rundheit der Teetasse zunimmt, dann nimmt die Länge des Staus zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Teetasse war runder als die Tasse.\nWenn die Rundheit der Teetasse zunimmt, was impliziert die Passage über die Länge des Staus? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8619415760040283,
+  "usage": {
+   "prompt_tokens": 135,
+   "completion_tokens": 4,
+   "total_tokens": 139,
+   "cost": 0.0002385,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002385,
+    "upstream_inference_prompt_cost": 0.0002025,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teppich-cc-positive",
+  "scale_pair": "teppich",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Röte des Teppichs",
+  "dim2": "die Geschwindigkeit des Aufzugs",
+  "sentence": "Je roter der Teppich war, desto schneller fuhr der Aufzug.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je roter der Teppich war, desto schneller fuhr der Aufzug.\nWenn die Röte des Teppichs zunimmt, was impliziert die Passage über die Geschwindigkeit des Aufzugs? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.970402717590332,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teppich-cc-inverse",
+  "scale_pair": "teppich",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Röte des Teppichs",
+  "dim2": "die Geschwindigkeit des Aufzugs",
+  "sentence": "Je roter der Teppich war, desto langsamer fuhr der Aufzug.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je roter der Teppich war, desto langsamer fuhr der Aufzug.\nWenn die Röte des Teppichs zunimmt, was impliziert die Passage über die Geschwindigkeit des Aufzugs? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 1.151932716369629,
+  "usage": {
+   "prompt_tokens": 142,
+   "completion_tokens": 4,
+   "total_tokens": 146,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.000213,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teppich-ctrl-two",
+  "scale_pair": "teppich",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Röte des Teppichs",
+  "dim2": "die Geschwindigkeit des Aufzugs",
+  "sentence": "Der Teppich war rot. Der Aufzug fuhr schnell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Teppich war rot. Der Aufzug fuhr schnell.\nWenn die Röte des Teppichs zunimmt, was impliziert die Passage über die Geschwindigkeit des Aufzugs? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9619364738464355,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "teppich-ctrl-single",
+  "scale_pair": "teppich",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Röte des Teppichs",
+  "dim2": "die Geschwindigkeit des Aufzugs",
+  "sentence": "Der Teppich war roter als die Vorhänge.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Röte des Teppichs zunimmt, dann nimmt die Geschwindigkeit des Aufzugs zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Teppich war roter als die Vorhänge.\nWenn die Röte des Teppichs zunimmt, was impliziert die Passage über die Geschwindigkeit des Aufzugs? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9051909446716309,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfannkuchen-cc-positive",
+  "scale_pair": "pfannkuchen",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Lockerheit des Pfannkuchens",
+  "dim2": "die Höhe des Berges",
+  "sentence": "Je lockerer der Pfannkuchen war, desto höher ragte der Berg.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je lockerer der Pfannkuchen war, desto höher ragte der Berg.\nWenn die Lockerheit des Pfannkuchens zunimmt, was impliziert die Passage über die Höhe des Berges? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9252009391784668,
+  "usage": {
+   "prompt_tokens": 142,
+   "completion_tokens": 4,
+   "total_tokens": 146,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.000213,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfannkuchen-cc-inverse",
+  "scale_pair": "pfannkuchen",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Lockerheit des Pfannkuchens",
+  "dim2": "die Höhe des Berges",
+  "sentence": "Je lockerer der Pfannkuchen war, desto niedriger ragte der Berg.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je lockerer der Pfannkuchen war, desto niedriger ragte der Berg.\nWenn die Lockerheit des Pfannkuchens zunimmt, was impliziert die Passage über die Höhe des Berges? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7297475337982178,
+  "usage": {
+   "prompt_tokens": 143,
+   "completion_tokens": 4,
+   "total_tokens": 147,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002145,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfannkuchen-ctrl-two",
+  "scale_pair": "pfannkuchen",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Lockerheit des Pfannkuchens",
+  "dim2": "die Höhe des Berges",
+  "sentence": "Der Pfannkuchen war locker. Der Berg ragte hoch.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Pfannkuchen war locker. Der Berg ragte hoch.\nWenn die Lockerheit des Pfannkuchens zunimmt, was impliziert die Passage über die Höhe des Berges? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.0342841148376465,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "pfannkuchen-ctrl-single",
+  "scale_pair": "pfannkuchen",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Lockerheit des Pfannkuchens",
+  "dim2": "die Höhe des Berges",
+  "sentence": "Der Pfannkuchen war lockerer als die Waffel.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Lockerheit des Pfannkuchens zunimmt, dann nimmt die Höhe des Berges zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Pfannkuchen war lockerer als die Waffel.\nWenn die Lockerheit des Pfannkuchens zunimmt, was impliziert die Passage über die Höhe des Berges? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9836452007293701,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hefter-cc-positive",
+  "scale_pair": "hefter",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "das Gewicht des Hefters",
+  "dim2": "die Helligkeit des Sonnenuntergangs",
+  "sentence": "Je schwerer der Hefter war, desto heller brannte der Sonnenuntergang.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je schwerer der Hefter war, desto heller brannte der Sonnenuntergang.\nWenn das Gewicht des Hefters zunimmt, was impliziert die Passage über die Helligkeit des Sonnenuntergangs? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8781495094299316,
+  "usage": {
+   "prompt_tokens": 142,
+   "completion_tokens": 4,
+   "total_tokens": 146,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.000213,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hefter-cc-inverse",
+  "scale_pair": "hefter",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "das Gewicht des Hefters",
+  "dim2": "die Helligkeit des Sonnenuntergangs",
+  "sentence": "Je schwerer der Hefter war, desto blasser brannte der Sonnenuntergang.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je schwerer der Hefter war, desto blasser brannte der Sonnenuntergang.\nWenn das Gewicht des Hefters zunimmt, was impliziert die Passage über die Helligkeit des Sonnenuntergangs? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.9881496429443359,
+  "usage": {
+   "prompt_tokens": 143,
+   "completion_tokens": 4,
+   "total_tokens": 147,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002145,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hefter-ctrl-two",
+  "scale_pair": "hefter",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "das Gewicht des Hefters",
+  "dim2": "die Helligkeit des Sonnenuntergangs",
+  "sentence": "Der Hefter war schwer. Der Sonnenuntergang brannte hell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Hefter war schwer. Der Sonnenuntergang brannte hell.\nWenn das Gewicht des Hefters zunimmt, was impliziert die Passage über die Helligkeit des Sonnenuntergangs? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8678393363952637,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "hefter-ctrl-single",
+  "scale_pair": "hefter",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "das Gewicht des Hefters",
+  "dim2": "die Helligkeit des Sonnenuntergangs",
+  "sentence": "Der Hefter war schwerer als der Klebeband-Abroller.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn das Gewicht des Hefters zunimmt, dann nimmt die Helligkeit des Sonnenuntergangs zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Hefter war schwerer als der Klebeband-Abroller.\nWenn das Gewicht des Hefters zunimmt, was impliziert die Passage über die Helligkeit des Sonnenuntergangs? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.6895177364349365,
+  "usage": {
+   "prompt_tokens": 140,
+   "completion_tokens": 4,
+   "total_tokens": 144,
+   "cost": 0.000246,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000246,
+    "upstream_inference_prompt_cost": 0.00021,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "socke-cc-positive",
+  "scale_pair": "socke",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "das Streifenmuster der Socke",
+  "dim2": "die Lautstärke des Donners",
+  "sentence": "Je gestreifter die Socke war, desto lauter krachte der Donner.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je gestreifter die Socke war, desto lauter krachte der Donner.\nWenn das Streifenmuster der Socke zunimmt, was impliziert die Passage über die Lautstärke des Donners? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.8609664440155029,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "socke-cc-inverse",
+  "scale_pair": "socke",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "das Streifenmuster der Socke",
+  "dim2": "die Lautstärke des Donners",
+  "sentence": "Je gestreifter die Socke war, desto leiser krachte der Donner.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je gestreifter die Socke war, desto leiser krachte der Donner.\nWenn das Streifenmuster der Socke zunimmt, was impliziert die Passage über die Lautstärke des Donners? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8546504974365234,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "socke-ctrl-two",
+  "scale_pair": "socke",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "das Streifenmuster der Socke",
+  "dim2": "die Lautstärke des Donners",
+  "sentence": "Die Socke war gestreift. Der Donner krachte laut.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Socke war gestreift. Der Donner krachte laut.\nWenn das Streifenmuster der Socke zunimmt, was impliziert die Passage über die Lautstärke des Donners? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.8459861278533936,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "socke-ctrl-single",
+  "scale_pair": "socke",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "das Streifenmuster der Socke",
+  "dim2": "die Lautstärke des Donners",
+  "sentence": "Die Socke war gestreifter als der Handschuh.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn das Streifenmuster der Socke zunimmt, dann nimmt die Lautstärke des Donners zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Socke war gestreifter als der Handschuh.\nWenn das Streifenmuster der Socke zunimmt, was impliziert die Passage über die Lautstärke des Donners? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.682077169418335,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampenschirm-cc-positive",
+  "scale_pair": "lampenschirm",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Breite des Lampenschirms",
+  "dim2": "die Säure des Joghurts",
+  "sentence": "Je breiter der Lampenschirm war, desto saurer schmeckte der Joghurt.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je breiter der Lampenschirm war, desto saurer schmeckte der Joghurt.\nWenn die Breite des Lampenschirms zunimmt, was impliziert die Passage über die Säure des Joghurts? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.66180419921875,
+  "usage": {
+   "prompt_tokens": 144,
+   "completion_tokens": 4,
+   "total_tokens": 148,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000216,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampenschirm-cc-inverse",
+  "scale_pair": "lampenschirm",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Breite des Lampenschirms",
+  "dim2": "die Säure des Joghurts",
+  "sentence": "Je breiter der Lampenschirm war, desto süßer schmeckte der Joghurt.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je breiter der Lampenschirm war, desto süßer schmeckte der Joghurt.\nWenn die Breite des Lampenschirms zunimmt, was impliziert die Passage über die Säure des Joghurts? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9794702529907227,
+  "usage": {
+   "prompt_tokens": 144,
+   "completion_tokens": 4,
+   "total_tokens": 148,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000216,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampenschirm-ctrl-two",
+  "scale_pair": "lampenschirm",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Breite des Lampenschirms",
+  "dim2": "die Säure des Joghurts",
+  "sentence": "Der Lampenschirm war breit. Der Joghurt schmeckte sauer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Lampenschirm war breit. Der Joghurt schmeckte sauer.\nWenn die Breite des Lampenschirms zunimmt, was impliziert die Passage über die Säure des Joghurts? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.832319974899292,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "lampenschirm-ctrl-single",
+  "scale_pair": "lampenschirm",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Breite des Lampenschirms",
+  "dim2": "die Säure des Joghurts",
+  "sentence": "Der Lampenschirm war breiter als der Sockel.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Breite des Lampenschirms zunimmt, dann nimmt die Säure des Joghurts zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Lampenschirm war breiter als der Sockel.\nWenn die Breite des Lampenschirms zunimmt, was impliziert die Passage über die Säure des Joghurts? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 1.2490026950836182,
+  "usage": {
+   "prompt_tokens": 136,
+   "completion_tokens": 4,
+   "total_tokens": 140,
+   "cost": 0.00024,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.00024,
+    "upstream_inference_prompt_cost": 0.000204,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tastatur-cc-positive",
+  "scale_pair": "tastatur",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "der Staub auf der Tastatur",
+  "dim2": "die Größe der Ernte",
+  "sentence": "Je staubiger die Tastatur war, desto größer fiel die Ernte aus.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je staubiger die Tastatur war, desto größer fiel die Ernte aus.\nWenn der Staub auf der Tastatur zunimmt, was impliziert die Passage über die Größe der Ernte? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9500117301940918,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tastatur-cc-inverse",
+  "scale_pair": "tastatur",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "der Staub auf der Tastatur",
+  "dim2": "die Größe der Ernte",
+  "sentence": "Je staubiger die Tastatur war, desto kleiner fiel die Ernte aus.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je staubiger die Tastatur war, desto kleiner fiel die Ernte aus.\nWenn der Staub auf der Tastatur zunimmt, was impliziert die Passage über die Größe der Ernte? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8824231624603271,
+  "usage": {
+   "prompt_tokens": 139,
+   "completion_tokens": 4,
+   "total_tokens": 143,
+   "cost": 0.0002445,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002445,
+    "upstream_inference_prompt_cost": 0.0002085,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tastatur-ctrl-two",
+  "scale_pair": "tastatur",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "der Staub auf der Tastatur",
+  "dim2": "die Größe der Ernte",
+  "sentence": "Die Tastatur war staubig. Die Ernte fiel groß aus.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Tastatur war staubig. Die Ernte fiel groß aus.\nWenn der Staub auf der Tastatur zunimmt, was impliziert die Passage über die Größe der Ernte? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9261484146118164,
+  "usage": {
+   "prompt_tokens": 137,
+   "completion_tokens": 4,
+   "total_tokens": 141,
+   "cost": 0.0002415,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002415,
+    "upstream_inference_prompt_cost": 0.0002055,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tastatur-ctrl-single",
+  "scale_pair": "tastatur",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "der Staub auf der Tastatur",
+  "dim2": "die Größe der Ernte",
+  "sentence": "Die Tastatur war staubiger als der Monitor.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Staub auf der Tastatur zunimmt, dann nimmt die Größe der Ernte zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Die Tastatur war staubiger als der Monitor.\nWenn der Staub auf der Tastatur zunimmt, was impliziert die Passage über die Größe der Ernte? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.887075662612915,
+  "usage": {
+   "prompt_tokens": 133,
+   "completion_tokens": 4,
+   "total_tokens": 137,
+   "cost": 0.0002355,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002355,
+    "upstream_inference_prompt_cost": 0.0001995,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ballon-cc-positive",
+  "scale_pair": "ballon",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "der Glanz des Ballons",
+  "dim2": "die Tiefe des Brunnens",
+  "sentence": "Je glänzender der Ballon war, desto tiefer reichte der Brunnen.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je glänzender der Ballon war, desto tiefer reichte der Brunnen.\nWenn der Glanz des Ballons zunimmt, was impliziert die Passage über die Tiefe des Brunnens? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.9890167713165283,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ballon-cc-inverse",
+  "scale_pair": "ballon",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "der Glanz des Ballons",
+  "dim2": "die Tiefe des Brunnens",
+  "sentence": "Je glänzender der Ballon war, desto flacher reichte der Brunnen.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je glänzender der Ballon war, desto flacher reichte der Brunnen.\nWenn der Glanz des Ballons zunimmt, was impliziert die Passage über die Tiefe des Brunnens? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.8821208477020264,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ballon-ctrl-two",
+  "scale_pair": "ballon",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "der Glanz des Ballons",
+  "dim2": "die Tiefe des Brunnens",
+  "sentence": "Der Ballon war glänzend. Der Brunnen reichte tief.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Ballon war glänzend. Der Brunnen reichte tief.\nWenn der Glanz des Ballons zunimmt, was impliziert die Passage über die Tiefe des Brunnens? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7933576107025146,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "ballon-ctrl-single",
+  "scale_pair": "ballon",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "der Glanz des Ballons",
+  "dim2": "die Tiefe des Brunnens",
+  "sentence": "Der Ballon war glänzender als das Band.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn der Glanz des Ballons zunimmt, dann nimmt die Tiefe des Brunnens zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Ballon war glänzender als das Band.\nWenn der Glanz des Ballons zunimmt, was impliziert die Passage über die Tiefe des Brunnens? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9824752807617188,
+  "usage": {
+   "prompt_tokens": 134,
+   "completion_tokens": 4,
+   "total_tokens": 138,
+   "cost": 0.000237,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000237,
+    "upstream_inference_prompt_cost": 0.000201,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "umschlag-cc-positive",
+  "scale_pair": "umschlag",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Zerknitterung des Umschlags",
+  "dim2": "die Geschwindigkeit des Zuges",
+  "sentence": "Je zerknitterter der Umschlag war, desto schneller fuhr der Zug.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je zerknitterter der Umschlag war, desto schneller fuhr der Zug.\nWenn die Zerknitterung des Umschlags zunimmt, was impliziert die Passage über die Geschwindigkeit des Zuges? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 1.2659327983856201,
+  "usage": {
+   "prompt_tokens": 143,
+   "completion_tokens": 4,
+   "total_tokens": 147,
+   "cost": 0.0002505,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002505,
+    "upstream_inference_prompt_cost": 0.0002145,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "umschlag-cc-inverse",
+  "scale_pair": "umschlag",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Zerknitterung des Umschlags",
+  "dim2": "die Geschwindigkeit des Zuges",
+  "sentence": "Je zerknitterter der Umschlag war, desto langsamer fuhr der Zug.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je zerknitterter der Umschlag war, desto langsamer fuhr der Zug.\nWenn die Zerknitterung des Umschlags zunimmt, was impliziert die Passage über die Geschwindigkeit des Zuges? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 0.7359278202056885,
+  "usage": {
+   "prompt_tokens": 144,
+   "completion_tokens": 4,
+   "total_tokens": 148,
+   "cost": 0.000252,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000252,
+    "upstream_inference_prompt_cost": 0.000216,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "umschlag-ctrl-two",
+  "scale_pair": "umschlag",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Zerknitterung des Umschlags",
+  "dim2": "die Geschwindigkeit des Zuges",
+  "sentence": "Der Umschlag war zerknittert. Der Zug fuhr schnell.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Umschlag war zerknittert. Der Zug fuhr schnell.\nWenn die Zerknitterung des Umschlags zunimmt, was impliziert die Passage über die Geschwindigkeit des Zuges? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9712724685668945,
+  "usage": {
+   "prompt_tokens": 141,
+   "completion_tokens": 4,
+   "total_tokens": 145,
+   "cost": 0.0002475,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.0002475,
+    "upstream_inference_prompt_cost": 0.0002115,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "umschlag-ctrl-single",
+  "scale_pair": "umschlag",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Zerknitterung des Umschlags",
+  "dim2": "die Geschwindigkeit des Zuges",
+  "sentence": "Der Umschlag war zerknitterter als das Paket.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Zerknitterung des Umschlags zunimmt, dann nimmt die Geschwindigkeit des Zuges zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Umschlag war zerknitterter als das Paket.\nWenn die Zerknitterung des Umschlags zunimmt, was impliziert die Passage über die Geschwindigkeit des Zuges? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7485284805297852,
+  "usage": {
+   "prompt_tokens": 138,
+   "completion_tokens": 4,
+   "total_tokens": 142,
+   "cost": 0.000243,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000243,
+    "upstream_inference_prompt_cost": 0.000207,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tannenzapfen-cc-positive",
+  "scale_pair": "tannenzapfen",
+  "typicality": "atypical",
+  "form": "cc-positive",
+  "dim1": "die Klebrigkeit des Tannenzapfens",
+  "dim2": "der Preis des Haarschnitts",
+  "sentence": "Je klebriger der Tannenzapfen war, desto teurer wurde der Haarschnitt.",
+  "fc_gold": "increase",
+  "nli_hypothesis": "Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.",
+  "nli_gold": "0",
+  "prompt": "Passage: Je klebriger der Tannenzapfen war, desto teurer wurde der Haarschnitt.\nWenn die Klebrigkeit des Tannenzapfens zunimmt, was impliziert die Passage über der Preis des Haarschnitts? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ZUNAHME",
+  "error": null,
+  "pred": "increase",
+  "dt": 0.886777400970459,
+  "usage": {
+   "prompt_tokens": 148,
+   "completion_tokens": 4,
+   "total_tokens": 152,
+   "cost": 0.000258,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000258,
+    "upstream_inference_prompt_cost": 0.000222,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tannenzapfen-cc-inverse",
+  "scale_pair": "tannenzapfen",
+  "typicality": "atypical",
+  "form": "cc-inverse",
+  "dim1": "die Klebrigkeit des Tannenzapfens",
+  "dim2": "der Preis des Haarschnitts",
+  "sentence": "Je klebriger der Tannenzapfen war, desto billiger wurde der Haarschnitt.",
+  "fc_gold": "decrease",
+  "nli_hypothesis": "Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.",
+  "nli_gold": "2",
+  "prompt": "Passage: Je klebriger der Tannenzapfen war, desto billiger wurde der Haarschnitt.\nWenn die Klebrigkeit des Tannenzapfens zunimmt, was impliziert die Passage über der Preis des Haarschnitts? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "ABNAHME",
+  "error": null,
+  "pred": "decrease",
+  "dt": 1.7051868438720703,
+  "usage": {
+   "prompt_tokens": 148,
+   "completion_tokens": 4,
+   "total_tokens": 152,
+   "cost": 0.000258,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000258,
+    "upstream_inference_prompt_cost": 0.000222,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tannenzapfen-ctrl-two",
+  "scale_pair": "tannenzapfen",
+  "typicality": "atypical",
+  "form": "ctrl-two",
+  "dim1": "die Klebrigkeit des Tannenzapfens",
+  "dim2": "der Preis des Haarschnitts",
+  "sentence": "Der Tannenzapfen war klebrig. Der Haarschnitt war teuer.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Tannenzapfen war klebrig. Der Haarschnitt war teuer.\nWenn die Klebrigkeit des Tannenzapfens zunimmt, was impliziert die Passage über der Preis des Haarschnitts? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.7244362831115723,
+  "usage": {
+   "prompt_tokens": 146,
+   "completion_tokens": 4,
+   "total_tokens": 150,
+   "cost": 0.000255,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000255,
+    "upstream_inference_prompt_cost": 0.000219,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ },
+ {
+  "item_id": "tannenzapfen-ctrl-single",
+  "scale_pair": "tannenzapfen",
+  "typicality": "atypical",
+  "form": "ctrl-single",
+  "dim1": "die Klebrigkeit des Tannenzapfens",
+  "dim2": "der Preis des Haarschnitts",
+  "sentence": "Der Tannenzapfen war klebriger als die Eichel.",
+  "fc_gold": "undetermined",
+  "nli_hypothesis": "Wenn die Klebrigkeit des Tannenzapfens zunimmt, dann nimmt der Preis des Haarschnitts zu.",
+  "nli_gold": "1",
+  "prompt": "Passage: Der Tannenzapfen war klebriger als die Eichel.\nWenn die Klebrigkeit des Tannenzapfens zunimmt, was impliziert die Passage über der Preis des Haarschnitts? Antworte mit ZUNAHME, ABNAHME oder UNBESTIMMT.",
+  "raw": "UNBESTIMMT",
+  "error": null,
+  "pred": "undetermined",
+  "dt": 0.9517538547515869,
+  "usage": {
+   "prompt_tokens": 142,
+   "completion_tokens": 4,
+   "total_tokens": 146,
+   "cost": 0.000249,
+   "is_byok": false,
+   "prompt_tokens_details": {
+    "cached_tokens": 0,
+    "cache_write_tokens": 0,
+    "audio_tokens": 0,
+    "video_tokens": 0
+   },
+   "cost_details": {
+    "upstream_inference_cost": 0.000249,
+    "upstream_inference_prompt_cost": 0.000213,
+    "upstream_inference_completions_cost": 3.6e-05
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0,
+    "image_tokens": 0,
+    "audio_tokens": 0
+   }
+  }
+ }
+]
