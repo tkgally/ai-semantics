@@ -12,7 +12,7 @@ status: draft
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-09
-updated: 2026-07-11
+updated: 2026-07-12
 links:
   - rel: supersedes
     target: theory/shadow-depth-table-v1
@@ -24,6 +24,8 @@ links:
     target: theory/lexicon-grammar-continuum-v2
   - rel: depends-on
     target: claim/comparative-correlative-covariation
+  - rel: depends-on
+    target: result/comparative-correlative-german-v1
   - rel: depends-on
     target: claim/dative-information-structure-givenness
   - rel: depends-on
@@ -107,6 +109,19 @@ links:
 > do-not-over-read caveats travel with it (contamination upper bound, C8 descriptive-only, 40 selected
 > paradigms).
 
+> **Update (2026-07-12, session 214) — the CC beater row gains a cross-linguistic (German) within-model
+> replication.** The shallow-end grammatical beater — comparative-correlative covariation — now carries a
+> **cross-linguistic** replication: [`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md)
+> (s213) ported the frozen English instrument to German `je…desto/umso` and reproduced the
+> construction-isolation gap 3/3 (+92.6 / +88.2 / +88.2 pp), the inverse-flip, and the absurd-pair
+> robustness, without tracking UD-German-GSD frequency/co-occurrence. This is annotated **in the existing
+> CC row** (not a new row — it is the *same phenomenon* in a different language), and it does not change any
+> number or the beater/saturated structure: it **hardens** the CC row by showing its residual survives a
+> surface-statistics change (a *partial* discharge of the English-`the…the`-n-gram worry — German a modest
+> typologically-close lever). Stays **`internal-contrast-only`**: no human comparison, no German-competence
+> claim; the CC claim's formal scope stays English. The stronger, committed-but-conditional successor is the
+> typologically-distant Japanese arm.
+
 ## What this table is
 
 The lexicon–grammar continuum ([`theory/lexicon-grammar-continuum-v2`](lexicon-grammar-continuum-v2.md))
@@ -157,7 +172,7 @@ quoted from the linked source page at its stated strength; see that page for ful
 
 | phenomenon | grain / pole | distributional control (the shadow) | residual over the control | row form | anchor | source |
 |---|---|---|---|---|---|---|
-| **Comparative-correlative covariation** | construction (grammatical) | matched **same-word** non-CC controls (same scalar words, no CC syntax) | construction-isolation assertion gap **≈87 pp** — 86.8 / 88.2 / 86.8, 95% CI lower bound **≈78 pp**; controls still assert ≈12% (off-ceiling) | (i) matched-material | internal-contrast-only | **[`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)** · [`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md) |
+| **Comparative-correlative covariation** | construction (grammatical) | matched **same-word** non-CC controls (same scalar words, no CC syntax) | construction-isolation assertion gap **≈87 pp** — 86.8 / 88.2 / 86.8, 95% CI lower bound **≈78 pp**; controls still assert ≈12% (off-ceiling). **Cross-linguistically replicated (German, s213):** the same frozen instrument ported to `je…desto/umso` gives +92.6 / +88.2 / +88.2 pp (CI lb ≥ +79), inverse-flip 100/97/97%, absurd-pair 95–100%, not tracking UD-German-GSD freq/co-occurrence — the residual survives a **surface-statistics change** (a *partial* discharge of the English-n-gram worry; internal-contrast-only, no human/German-competence claim) | (i) matched-material | internal-contrast-only | **[`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)** · [`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md) · [`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md) |
 | **Dative information-structure** | construction (grammatical) | within-item shift design — length/order/position **immune by construction** | within-item DOC-shift, **powered N=100**: claude **+0.316 [0.298, 0.334]** / gemini **+0.524 [0.506, 0.542]** / gpt **+0.056 [0.039, 0.074]**; **3/3 CONFIRM at power** (gpt small but clears zero — its v2 WEAK was founding-N noise; ~9× spread) | (i) matched-material (by design) | human — Bresnan `languageR::dative` production direction (direction only) | **[`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)** · [`result/dative-information-structure-powered`](../results/dative-information-structure-powered.md) |
 | **AANN acceptability gradient** | construction (grammatical) | **Zipf word-frequency** (partialled); noun-class marginal | partial ρ \| frequency **0.692 / 0.661 / 0.736** (base cell-level ρ 0.702 [0.61,0.77] / 0.684 [0.60,0.75] / 0.751 [0.68,0.81]); **replicated cross-date on fresh disjoint items 3/3** (rep2: base ρ 0.692 / 0.702 / 0.735, partial 0.687/0.690/0.722, all CIs overlap v2 — the graded gradient's single-run caveat discharged); held-out replication on unseen adjectives, **noun-class-dependent** (temporal stratum negative, v2b) | (ii) partialled correlation | human — Mahowald Exp-2 MTurk gradient | **[`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)** · [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) · [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md) |
 | **Lexical sense gradience** | word (lexical) | model's own **topic/context-similarity** rating (partialled); lexical overlap (near-degenerate) | partial ρ \| topic **0.52 / 0.50 / 0.73** (base DURel ρ 0.679 [0.59,0.75] / 0.601 [0.49,0.69] / 0.804 [0.75,0.85]); **replicated cross-date on fresh pair-disjoint items 3/3** (rep2: base ρ 0.715 / 0.528 / 0.808, partial\|topic 0.604/0.392/0.657, all CIs overlap v1 — single-run flag discharged; pair-disjoint, 61/357 usages recombine, so not usage-independent) | (ii) partialled correlation | human — DWUG DURel median (human–human ρ 0.69) | **[`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)** · [`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md) · [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) |
