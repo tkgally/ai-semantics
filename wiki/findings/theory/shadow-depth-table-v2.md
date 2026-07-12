@@ -12,7 +12,7 @@ status: draft
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-09
-updated: 2026-07-12
+updated: 2026-07-13
 links:
   - rel: supersedes
     target: theory/shadow-depth-table-v1
@@ -26,6 +26,8 @@ links:
     target: claim/comparative-correlative-covariation
   - rel: depends-on
     target: result/comparative-correlative-german-v1
+  - rel: depends-on
+    target: result/comparative-correlative-japanese-v1
   - rel: depends-on
     target: claim/dative-information-structure-givenness
   - rel: depends-on
@@ -122,6 +124,22 @@ links:
 > claim; the CC claim's formal scope stays English. The stronger, committed-but-conditional successor is the
 > typologically-distant Japanese arm.
 
+> **Update (2026-07-13, session 215/216) — the CC beater row's cross-linguistic annotation extends to
+> Japanese `〜ば〜ほど`, the stronger lever.** The successor named at the end of the s214 box has run:
+> [`result/comparative-correlative-japanese-v1`](../results/comparative-correlative-japanese-v1.md) (s215)
+> ported the same frozen instrument to Japanese `〜ば〜ほど` and reproduced the construction-isolation gap 3/3
+> (+94.1 / +83.8 / +95.6 pp, all CI lb ≥ +75), the inverse-flip (100/100/97%), and the absurd-pair
+> robustness (100/95/95%), without tracking UD-Japanese-GSD frequency/co-occurrence. Japanese is the
+> **sterner** lever — typologically distant (SOV, agglutinative, verb-final) and, decisively, with **no
+> overt comparative morpheme** (the "more" is carried by the ば…ほど frame + predicate repetition) — so the
+> residual survives a surface-statistics change **larger than German's**, in a language with no comparative
+> *word* to echo. Annotated **in the same existing CC row** (not a new row — same phenomenon, third
+> language), and it changes no number and no beater/saturated structure: it **hardens** the CC row
+> **further**, from "partial" toward a **stronger-but-still-partial** discharge of the English-n-gram worry.
+> Stays **`internal-contrast-only`**: no human comparison, no Japanese-competence claim; the CC claim's
+> formal scope stays English. Two non-English languages is still not "all"; `gpt-5.4-mini` again weakest
+> (T1 +83.8).
+
 ## What this table is
 
 The lexicon–grammar continuum ([`theory/lexicon-grammar-continuum-v2`](lexicon-grammar-continuum-v2.md))
@@ -172,7 +190,7 @@ quoted from the linked source page at its stated strength; see that page for ful
 
 | phenomenon | grain / pole | distributional control (the shadow) | residual over the control | row form | anchor | source |
 |---|---|---|---|---|---|---|
-| **Comparative-correlative covariation** | construction (grammatical) | matched **same-word** non-CC controls (same scalar words, no CC syntax) | construction-isolation assertion gap **≈87 pp** — 86.8 / 88.2 / 86.8, 95% CI lower bound **≈78 pp**; controls still assert ≈12% (off-ceiling). **Cross-linguistically replicated (German, s213):** the same frozen instrument ported to `je…desto/umso` gives +92.6 / +88.2 / +88.2 pp (CI lb ≥ +79), inverse-flip 100/97/97%, absurd-pair 95–100%, not tracking UD-German-GSD freq/co-occurrence — the residual survives a **surface-statistics change** (a *partial* discharge of the English-n-gram worry; internal-contrast-only, no human/German-competence claim) | (i) matched-material | internal-contrast-only | **[`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)** · [`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md) · [`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md) |
+| **Comparative-correlative covariation** | construction (grammatical) | matched **same-word** non-CC controls (same scalar words, no CC syntax) | construction-isolation assertion gap **≈87 pp** — 86.8 / 88.2 / 86.8, 95% CI lower bound **≈78 pp**; controls still assert ≈12% (off-ceiling). **Cross-linguistically replicated (German s213, Japanese s215):** the same frozen instrument ported to German `je…desto/umso` gives +92.6 / +88.2 / +88.2 pp (CI lb ≥ +79), and to Japanese `〜ば〜ほど` — **no overt comparative morpheme** — gives +94.1 / +83.8 / +95.6 pp (CI lb ≥ +75), both with inverse-flip ~100/97–100% and absurd-pair 95–100%, neither tracking UD-treebank freq/co-occurrence — the residual survives a **surface-statistics change** in two non-English languages including one with no comparative word (a *stronger-but-still-partial* discharge of the English-n-gram worry; internal-contrast-only, no human/target-language-competence claim) | (i) matched-material | internal-contrast-only | **[`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md)** · [`result/comparative-correlative-covariation-powered`](../results/comparative-correlative-covariation-powered.md) · [`result/comparative-correlative-german-v1`](../results/comparative-correlative-german-v1.md) · [`result/comparative-correlative-japanese-v1`](../results/comparative-correlative-japanese-v1.md) |
 | **Dative information-structure** | construction (grammatical) | within-item shift design — length/order/position **immune by construction** | within-item DOC-shift, **powered N=100**: claude **+0.316 [0.298, 0.334]** / gemini **+0.524 [0.506, 0.542]** / gpt **+0.056 [0.039, 0.074]**; **3/3 CONFIRM at power** (gpt small but clears zero — its v2 WEAK was founding-N noise; ~9× spread) | (i) matched-material (by design) | human — Bresnan `languageR::dative` production direction (direction only) | **[`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)** · [`result/dative-information-structure-powered`](../results/dative-information-structure-powered.md) |
 | **AANN acceptability gradient** | construction (grammatical) | **Zipf word-frequency** (partialled); noun-class marginal | partial ρ \| frequency **0.692 / 0.661 / 0.736** (base cell-level ρ 0.702 [0.61,0.77] / 0.684 [0.60,0.75] / 0.751 [0.68,0.81]); **replicated cross-date on fresh disjoint items 3/3** (rep2: base ρ 0.692 / 0.702 / 0.735, partial 0.687/0.690/0.722, all CIs overlap v2 — the graded gradient's single-run caveat discharged); held-out replication on unseen adjectives, **noun-class-dependent** (temporal stratum negative, v2b) | (ii) partialled correlation | human — Mahowald Exp-2 MTurk gradient | **[`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)** · [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) · [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md) |
 | **Lexical sense gradience** | word (lexical) | model's own **topic/context-similarity** rating (partialled); lexical overlap (near-degenerate) | partial ρ \| topic **0.52 / 0.50 / 0.73** (base DURel ρ 0.679 [0.59,0.75] / 0.601 [0.49,0.69] / 0.804 [0.75,0.85]); **replicated cross-date on fresh pair-disjoint items 3/3** (rep2: base ρ 0.715 / 0.528 / 0.808, partial\|topic 0.604/0.392/0.657, all CIs overlap v1 — single-run flag discharged; pair-disjoint, 61/357 usages recombine, so not usage-independent) | (ii) partialled correlation | human — DWUG DURel median (human–human ρ 0.69) | **[`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)** · [`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md) · [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) |

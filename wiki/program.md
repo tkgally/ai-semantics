@@ -285,8 +285,17 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   verifier REPRODUCED (0 discrepancies); $0.296 main + $0.012 smoke. A **stronger-but-still-partial**
   discharge of the English-n-gram worry (two non-English languages ≠ all; within-model, `internal-contrast-only`,
   no human/Japanese-competence claim; formal scope stays English). Claim gains the Japanese cross-linguistic
-  bullet; the deeper essay/theory/shadow-depth-table fold is deferred to a next-session phil/consol unit
-  (German precedent s213→s214). **Both A6 arms `[x]`.**]**
+  bullet (s215); **the deeper essay/theory/shadow-depth-table fold LANDED s216** (phil/consol, $0, the
+  German-s214 pattern) — folded at exactly the earned force (stronger-but-still-partial, within-model,
+  `internal-contrast-only`, no human/Japanese-competence claim, formal scope stays English) into
+  [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md) (an EXTENDED
+  addendum to the s214 German corroboration box + pointer/trigger/Honesty-box annotations),
+  [`theory/constructional-meaning-in-llms-v2`](findings/theory/constructional-meaning-in-llms-v2.md) (an
+  inline bracketed strengthening note on the Tier-4 CC bullet, no new box), and
+  [`theory/shadow-depth-table-v2`](findings/theory/shadow-depth-table-v2.md) (the CC beater ROW extended +
+  one compact update box → 3 dated boxes, ≤3, no v3 forced); fresh-agent adversarial coherence pass
+  SAFE-TO-LAND. In-page revisions only, no new essay/edition. **Both A6 arms `[x]`; the A6 line is now
+  fully consolidated.**]**
 
 ## B. Consolidation program
 

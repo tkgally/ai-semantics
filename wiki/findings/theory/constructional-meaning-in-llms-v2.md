@@ -11,7 +11,7 @@ meaning-senses:
 status: draft
 contingent-on: []
 created: 2026-07-04
-updated: 2026-07-12
+updated: 2026-07-13
 links:
   - rel: supersedes
     target: theory/constructional-meaning-in-llms
@@ -35,6 +35,8 @@ links:
     target: result/comparative-correlative-covariation-powered
   - rel: depends-on
     target: result/comparative-correlative-german-v1
+  - rel: depends-on
+    target: result/comparative-correlative-japanese-v1
   - rel: depends-on
     target: result/dative-information-structure-powered
   - rel: depends-on
@@ -325,7 +327,16 @@ Piantadosi & Hill's sense. Current state, by line:
   Tier-4 CC reading is "keyed to the construction, not the scalar words" **and** not merely
   English-`the…the`-n-gram matching — a **partial** discharge of the n-gram worry, German being a modest
   typologically-close lever. `internal-contrast-only`: no human comparison, no German-competence claim;
-  the claim's formal scope stays English. Does not change the Tier-4 placement — it hardens it.)*
+  the claim's formal scope stays English. Does not change the Tier-4 placement — it hardens it. **Further
+  strengthened s215/s216:** the same instrument ported to **Japanese** `〜ば〜ほど`
+  ([`result/comparative-correlative-japanese-v1`](../results/comparative-correlative-japanese-v1.md))
+  reproduces the isolation gap +94.1/+83.8/+95.6 pp (CI lb ≥ +75), inverse-flip 100/100/97%, and
+  absurd-pair robustness 100/95/95%, not tracking UD-Japanese-GSD frequency/co-occurrence — on a
+  construction with **no overt comparative morpheme at all** (SOV, agglutinative; the "more" carried by the
+  ば…ほど frame + predicate repetition). So the reading is not even Germanic-template matching, since it
+  holds where there is no comparative word — a **stronger-but-still-partial** discharge (two non-English
+  languages ≠ all; within-model; `internal-contrast-only`, no Japanese-competence claim; formal scope stays
+  English).)*
 - *Add-direction coercion* — caused-motion and *way* draw their construction-contributed
   entailments onto non-motion verbs at or near ceiling, and the near-miss form control
   ([`result/caused-motion-near-miss-v2c`](../results/caused-motion-near-miss-v2c.md)) shows the

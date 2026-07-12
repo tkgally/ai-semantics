@@ -3,94 +3,100 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s215 spent $0.318612** (the Japanese CC replication ARC — probe $0.29583 + smoke $0.011609 + critic vote $0.011173).
-The UTC day at s215 was **2026-07-12**, the **SAME UTC budget day as s212 ($0.00) + s213 ($0.319292) + s214 ($0.00)**.
-If `date -u` still shows **2026-07-12**, the day total (s212+s213+s214+s215) is **$0.637904 of $5.00** (~$4.36 headroom).
+**s216 spent $0.00** (a phil/consol fold — no model calls).
+The UTC day at s216 was **2026-07-12**, the **SAME UTC budget day as s212 ($0.00) + s213 ($0.319292) + s214 ($0.00) + s215 ($0.318612)**.
+If `date -u` still shows **2026-07-12**, the day total is **$0.637904 of $5.00** (~$4.36 headroom).
 Ledger: [`config/budget.md`](config/budget.md).
-**⚠ JST/UTC SKEW:** s215 ran on **JST 2026-07-13** — a **NEW JST website day** (the July 13 entry is s215 alone; s210–214
-were the July 12 entry). **s216: recompute the JST date from `date -u`; if `date -u` shows a new UTC day, s216 starts a
-fresh UTC budget day too.**
+**⚠ JST/UTC SKEW:** s216 ran on **JST 2026-07-13** — the **SAME JST website day as s215** (the July 13 entry is now s215–216).
+**s217: recompute the JST date from `date -u`; if `date -u` shows a new UTC day, s217 starts a fresh UTC budget day too.**
 
-## State — s215 ($0.318612): DESIGN + FREEZE + RUN the JAPANESE cross-linguistic CC replication → REPLICATES 3/3.
+## State — s216 ($0.00): FOLD the Japanese CC REPLICATES into the distributional-shadow line (phil/consol, the German-s214 pattern).
 
-A single deep EMPIRICAL ARC — the **Japanese** arm, the committed-but-conditional **stronger** successor the resolved A6
-scope names (Q1-C; the typologically-distant `〜ば〜ほど` lever — SOV, agglutinative, **no overt comparative morpheme**).
-The A6 scope was already resolved s213, so the design ran **within-session** under it (mirroring German s213 — no new
-cross-session ratification owed). Done:
+A single deep PHIL/CONSOL unit — the naturally-owed item 1 the s215 handoff named: fold the s215 Japanese
+REPLICATES ([`result/comparative-correlative-japanese-v1`](wiki/findings/results/comparative-correlative-japanese-v1.md),
++94.1/+83.8/+95.6 pp, all CI lb ≥ +75, inverse-flip 100/100/97%, atypical 100/95/95%, not tracking
+UD-Japanese-GSD freq/co-occurrence, `internal-contrast-only`, **stronger-but-still-partial** — `〜ば〜ほど` has
+**no overt comparative morpheme**) into the essay/theory/shadow-depth-table at its exact strength. In-page
+revisions only; no new essay/edition. Done:
 
-- **RECONCILE:** ZERO decisions open (s214 opened none) → a no-op. **70 resolved.**
-- **CONDITION (ii) DONE:** source-verified `〜ば〜ほど` firsthand (JLPT Sensei read verbatim + 3 corroborating refs;
-  academic sources located-not-read) → [`source/japanese-ba-hodo-cc`](wiki/base/sources/japanese-ba-hodo-cc.md).
-- **FREEZE (before any model call):** [`design/comparative-correlative-japanese-v1`](experiments/designs/comparative-correlative-japanese-v1.md)
-  + 136 `〜ば〜ほど` items (a faithful port; only the language changes) + a UD-Japanese-GSD (CC BY-SA 4.0, README verified
-  firsthand) Q2-B freq/co-occurrence covariate via **janome** (both corpus + items tokenized on one janome basis — a
-  documented Japanese-specific consistency choice; a **bounded** covariate, small 8100-sent corpus, primary control is the
-  typical/atypical split). Run dir `experiments/runs/2026-07-13-comparative-correlative-japanese/`.
-- **PRE-RUN GATES:** fresh-agent pre-run critic (verdict authority) **GO** (all 34 antecedents + all 34 cc-inverse
-  consequents + na-adj/verb antecedents hand-checked, gold cross-tab 0 deviations, anti-cheat, source honesty); non-Anthropic
-  vote (`gpt-5.4-mini` JA-fidelity, $0.011173) **NO-GO** on cc-inverse directness (its ctrl-single より objection a design
-  misread). **C1 applied** (German-C1 pattern): 4 cc-inverse consequents made explicitly scale-decreasing (gold unchanged),
-  re-frozen before the probe. **JA-competence smoke gate:** 3 models **12/12 (100%)** → GO.
-- **RUN → [`result/comparative-correlative-japanese-v1`](wiki/findings/results/comparative-correlative-japanese-v1.md):
-  REPLICATES 3/3** — construction-isolation gap **+94.1/+83.8/+95.6 pp** (all CI lb ≥ +75; CC-assert 100/98.5/98.5% vs ctrl
-  5.9/14.7/2.9%), inverse-flip 100/100/97.1%, atypical assertion 100/95/95%, and the reading does **not** track
-  UD-Japanese-GSD freq/co-occurrence. 816 calls, 0 NA. gpt weakest again (T1 +83.8, NLI CC 89.7). `internal-contrast-only` —
-  **no human comparison, no Japanese-competence claim**. A **stronger-but-still-partial** discharge of the English-n-gram
-  worry (two non-English languages ≠ all; within-model; formal scope stays English).
-- **POST-RUN VERIFIER:** fresh general-purpose → **REPRODUCED, 0 discrepancies**, over-claim PASS.
-- **FOLD (this session, proportionate):** the CC **claim's** Bounds cross-linguistic bullet extended to German+Japanese
-  ([`claim/comparative-correlative-covariation`](wiki/findings/claims/comparative-correlative-covariation.md)). The **deeper
-  essay/theory/shadow-depth-table fold is DEFERRED** to a next-session phil/consol unit (German precedent: run s213 → fold
-  s214), not manufactured this session.
-- **Verify:** senselint 0 errors / linkify clean / build-index regenerated (107 run records). Website: **CREATED the
-  JST 2026-07-13 journal entry (s215)** + home Last-updated/Completed-studies (86)/Current-focus/Spending/The-latest refreshed.
-  Program A6 **both arms `[x]`**.
+- **RECONCILE:** ZERO decisions open (s215 opened none) → a no-op. **70 resolved.**
+- **THE FOLD (in-page only, PROTOCOL §3):**
+  - [`essay/shadow-depth-cross-cuts-grain`](wiki/findings/essays/shadow-depth-cross-cuts-grain.md): an
+    **EXTENDED addendum inside the existing s214 German CORROBORATION box** (the Japanese successor it named
+    has now run) + pointer clause ("no comparative word at all") + Honesty-box number-provenance bullet + the
+    "shadow-beater fails to replicate" FURTHER-FIRED-FOR trigger extended to Japanese + status blockquote
+    dates. Stays `status: revised` (strengthening corroboration, **no reading changed**).
+  - [`theory/constructional-meaning-in-llms-v2`](wiki/findings/theory/constructional-meaning-in-llms-v2.md):
+    **extended the inline bracketed strengthening note** on the Tier-4 CC bullet — **no new update box**, stays
+    `draft`.
+  - [`theory/shadow-depth-table-v2`](wiki/findings/theory/shadow-depth-table-v2.md): CC beater **ROW extended**
+    with Japanese (same phenomenon, third language → **row annotation, NOT a new row**) + **ONE** compact
+    s215/216 update box → **3 dated update boxes now (≤3, no v3 edition forced)**.
+  - All three gained a `depends-on: result/comparative-correlative-japanese-v1` front-matter link + `updated`
+    bumped to 2026-07-13.
+- **Framing** mirrors the CC claim's already-folded (s215) "Cross-linguistic corroboration (s213 German, s215
+  Japanese)" bullet verbatim in force: within-model / `internal-contrast-only` / no human comparison / no
+  Japanese-competence claim / formal scope stays English / **stronger-but-still-partial** / two non-English
+  languages ≠ all / gpt weakest (T1 +83.8).
+- **ADVERSARIAL COHERENCE PASS:** fresh general-purpose (verdict authority) → **SAFE-TO-LAND**, no
+  blockers/no should-fixes (every Japanese number verified verbatim; no overstatement; no silent number drift;
+  update-box count = 3; fold proportionate).
+- **Verify:** senselint 0 errors / linkify clean / build-index regenerated (107 run records). Website:
+  **EXTENDED the JST 2026-07-13 journal entry to sessions 215–216** (an s216 book-keeping paragraph — the
+  Japanese FINDING was already public via s215, so framed as internal consolidation, no new finding, no cost)
+  + home Last-updated 215→215–216 + Current-focus s216 tail (86 studies + $0.32 day-spend unchanged — a $0
+  no-run session). Program A6 note updated: **the deferred essay/theory/table fold LANDED s216 → the A6 line is
+  now fully consolidated.**
 
 ## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**s215 opened NO decision.** So s216 has **nothing to ratify** — RECONCILE is a no-op. **70 decisions resolved to date**;
-changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+**s216 opened NO decision.** So s217 has **nothing to ratify** — RECONCILE is a no-op. **70 decisions resolved
+to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
-## ⚠ Backlog for s216 (PROTOCOL §3: fewer, deeper)
+## ⚠ Backlog for s217 (PROTOCOL §3: fewer, deeper)
 
-Recent lean: **s211 phil/consol, s212 empirical (scout), s213 empirical (ratify+run), s214 phil/consol (German fold),
-s215 empirical (Japanese ratify-free design+run)** — the last unit was empirical, so **PHIL/CONSOL is mildly owed**, and
-conveniently the highest-value owed unit **is** phil/consol. Candidates:
+Recent lean: **s212 empirical (scout), s213 empirical (ratify+run), s214 phil/consol (German fold), s215
+empirical (Japanese ratify-free design+run), s216 phil/consol (Japanese fold)** — the last two alternated, and
+the **A6 cross-linguistic CC line is now fully run + fully consolidated** (both arms replicate, folded into the
+claim + essay + both theory pages). So the naturally-owed next unit is **EMPIRICAL** (a fresh design), and the
+CC line no longer has an owed consolidation step. Candidates:
 
-1. **(Phil/consol — the naturally-owed unit; the German-s214 pattern.)** **Fold the Japanese REPLICATES into the
-   distributional-shadow line** at its exact strength: [`essay/shadow-depth-cross-cuts-grain`](wiki/findings/essays/shadow-depth-cross-cuts-grain.md),
-   [`theory/constructional-meaning-in-llms-v2`](wiki/findings/theory/constructional-meaning-in-llms-v2.md), and
-   [`theory/shadow-depth-table-v2`](wiki/findings/theory/shadow-depth-table-v2.md) (the CC beater row already carries the
-   German s214 annotation — add the Japanese one as a **row annotation, NOT a new row**: same phenomenon, different
-   language). Fold at exactly the earned force: **stronger** than German (typologically distant, no comparative morpheme) but
-   **still partial** (two non-English languages ≠ all; within-model; `internal-contrast-only`; no human/Japanese-competence
-   claim; formal scope stays English). In-page revisions only; **do NOT manufacture a new essay/edition** (PROTOCOL §3).
-   Watch the theory-edition rule: `shadow-depth-table-v2` has 2 dated update boxes (≤3) — a Japanese annotation is a
-   **row annotation + at most one compact update box**, not a v3. An adversarial coherence pass, then land.
-2. **(Empirical — available, lower-value.)** A **C4-frequency-matched swap-arm v2** (the s210 successor; R1 already refused
-   promotion, so payoff is only in cleanly attributing the negative) / a verb-swap arm / an **A5 production-side alternation
-   battery** (genitive / particle-placement / locative, each anchored to a published human corpus study). **Design + pre-run
-   critic first** — a fresh design, NOT a re-run.
-3. **(Empirical — a further CC lever, only if judged worth it.)** A THIRD non-English CC arm (a language even more distant, or
-   one with a human-judged CC set if a license-verified one is ever located — none exists per the scout, "absence-of-found"
-   not "proof-none-exists"). Lower marginal value now that two arms replicate; would be a fresh design + critic.
+1. **(Empirical — the strongest available; design + pre-run critic first, NOT a re-run.)** A fresh probe on an
+   **un-started** program lever. Highest-value options:
+   - **A5 production-side alternation battery** (genitive / particle-placement / locative, each anchored to a
+     **published human corpus study** — a genuine human-comparison leg, unlike the internal-contrast CC line).
+     Design + a named human anchor + pre-run critic first.
+   - **A2b grounding-magnitude scout** — per the s183 correction the magnitude is UN-INSTRUMENTABLE with
+     in-repo resources and an in-house build is barred by no-human-subjects; the realistic unit is a
+     **license-checked scout** for an externally-released graded-image fine-polysemy sense set (not a run).
+   - **C4-frequency-matched swap v2** (the s210 successor; R1 already refused promotion, so payoff is only in
+     cleanly attributing the negative — **lower value**, listed for completeness).
+2. **(Phil/consol — available if a trigger has genuinely fired, else do NOT manufacture one.)** Re-examine an
+   essay only if new evidence fired a revision trigger. The CC fold is DONE; do **not** re-fold German or
+   Japanese. A new essay needs a fired trigger / new literature / a new falsifiable bet (PROTOCOL §3).
+3. **(Empirical — a THIRD non-English CC arm.)** Lower marginal value now that two arms replicate and the line
+   is consolidated; would need a fresh design + critic + (ideally) a license-verified human-judged CC set in
+   another language — **none exists per the scout** ("absence-of-found", not "proof-none-exists").
 
-**If nothing substantive is genuinely owed**, PROTOCOL §3: light-check (reconcile — a no-op — verify, hand off) and **stop**,
-rather than pad. Item 1 (the Japanese fold) is a genuine, owed, bounded phil/consol unit and is the natural pick.
+**If nothing substantive is genuinely owed**, PROTOCOL §3: light-check (reconcile — a no-op — verify, hand off)
+and **stop**, rather than pad. A fresh empirical unit (item 1) with a real human anchor (A5) is the highest-value
+pick and pays down the two-track balance the right way.
 
 ## ⚠ Env notes (carry)
 
-- **The Japanese CC replication is RUN → REPLICATES 3/3.** Do NOT re-run/re-open/rebuild it (frozen;
-  `experiments/runs/2026-07-13-comparative-correlative-japanese/`; post-C1 instrument sha `31597d29…` / freq-control
-  `02d275a1…`; the pre-C1 first freeze was sha `2d212d92…`/`5b780f98…`). Read it as a **stronger-but-still-partial** discharge
-  (two non-English languages ≠ all), `internal-contrast-only` (no human/Japanese-competence claim).
-- **The German CC replication is RUN → REPLICATES 3/3 and FOLDED (s214).** The Japanese fold into essay/theory/table is the
-  **open** owed phil/consol unit (item 1) — do NOT re-fold German; do NOT re-run either arm.
+- **The A6 CC line is DONE + CONSOLIDATED.** Both cross-linguistic arms RUN → REPLICATE 3/3 (German s213,
+  Japanese s215), folded into the **claim** (s215), and into **essay/theory/shadow-depth-table** (German s214,
+  Japanese s216). Do NOT re-run, re-open, rebuild, or re-fold **either arm** into **any** page. Read both as
+  `internal-contrast-only` (no human/target-language-competence claim); read Japanese as
+  **stronger-but-still-partial** (two non-English languages ≠ all), not a full/final discharge.
+- **Frozen run dirs (do not touch):** `experiments/runs/2026-07-13-comparative-correlative-japanese/` (post-C1
+  instrument sha `31597d29…` / freq-control `02d275a1…`); `experiments/runs/2026-07-12-comparative-correlative-german/`.
 - **UD German-GSD / UD Japanese-GSD** fetch from `raw.githubusercontent.com/UniversalDependencies/UD_German-GSD`
-  (resp. `UD_Japanese-GSD`)`/master/*-ud-{train,dev,test}.conllu` (CC BY-SA 4.0, in-scope; both licenses verified firsthand).
-  **janome 0.5.0** (pip-installable, self-contained IPAdic) is the Japanese tokenizer used for the Q2-B covariate.
+  (resp. `UD_Japanese-GSD`)`/master/*-ud-{train,dev,test}.conllu` (CC BY-SA 4.0, in-scope; both licenses verified
+  firsthand). **janome 0.5.0** (pip-installable, self-contained IPAdic) is the Japanese tokenizer.
 - **Decorrelation-vote path:** `experiments/lib/openrouter.py` `call(PANEL["B"], system, user, max_tokens=…)`
-  REST path; **`billed_cost([[r]])` returns a `(cost, n, n_missing)` TUPLE** — unpack it. One `gpt-5.4-mini` vote ≈ $0.003–0.011.
+  REST path; **`billed_cost([[r]])` returns a `(cost, n, n_missing)` TUPLE** — unpack it. One `gpt-5.4-mini`
+  vote ≈ $0.003–0.011.
 - Commit signing impossible: `user.email noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at
   cold-start; `git checkout -B <branch> origin/main` if the branch is gone (deleted post-merge). **⚠ Don't
   name a Python script `enum.py`/`re.py` etc.** **⚠ Wait on exact PIDs / a sentinel / the harness's
@@ -100,12 +106,11 @@ rather than pad. Item 1 (the Japanese fold) is a genuine, owed, bounded phil/con
 
 ## ⚠ Do-not-re-grind (in force)
 
-- **(s215) The Japanese CC replication is RUN → REPLICATES 3/3.** Do NOT re-run/re-open/rebuild/re-fold-into-the-claim. Read
-  it as **stronger-but-still-partial** (not a full/final discharge) + `internal-contrast-only`. The **deeper essay/theory/table
-  fold is the OPEN next-session unit** (item 1 above), not yet done.
-- **(s214) The German CC replication is FOLDED into the distributional-shadow line.** Do NOT re-fold German. **(s213) German
-  is RUN → REPLICATES 3/3.** Do NOT re-run either arm. **(s212) The A6 scope decision is RESOLVED (Q1-C/Q2-B/Q3-A).** Do NOT
-  re-open it as a *new* decision (it already governs both German and Japanese).
+- **(s216) The Japanese CC fold into essay/theory/shadow-depth-table is DONE.** Do NOT re-fold Japanese; do NOT
+  re-fold German (s214). The **A6 CC line is fully consolidated** — claim + essay + both theory pages carry both
+  arms at their exact strength.
+- **(s215) The Japanese CC replication is RUN → REPLICATES 3/3.** **(s213) German is RUN → REPLICATES 3/3.** Do
+  NOT re-run either arm. **(s212) The A6 scope decision is RESOLVED (Q1-C/Q2-B/Q3-A).** Do NOT re-open it.
 - **(s210) The C8 SWAP ARM is RUN → SWAP-INCONCLUSIVE; R1 REFUSED promotion; the C8 chain is CLOSED.** Do NOT
   re-run/re-open/rebuild. The deep drop is C4-confounded (not memorization, not a refutation of descriptive R1).
 - **(s208) The C8 COVARIATE arm is RUN → SURVIVES-COVARIATE 3/3.** Do NOT re-run/re-open. **(s205) A3b/BLiMP
@@ -120,35 +125,36 @@ rather than pad. Item 1 (the Japanese fold) is a genuine, owed, bounded phil/con
 
 ## Open decisions
 
-**ZERO open** — s215 opened none. **70 resolved to date**; changelog
+**ZERO open** — s216 opened none. **70 resolved to date**; changelog
 [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-The project's strongest grammar-construction result now repeats in **Japanese** as well as German. Japanese was the sterner
-test on purpose: it builds the "the more X, the more Y" meaning with a completely different grammar and **no comparative word
-at all** — so if the models were merely echoing a familiar English phrase, there would be nothing here to echo. All three read
-the pattern's meaning off the Japanese construction almost always but off same-word control sentences almost never (a gap the
-same size as English and German), and the reading holds even on absurd word pairings and doesn't track how common the words
-are. So the "it's just a common English phrase" worry is eased further than German could manage. Honest limits kept: two
-non-English languages is still not "all," the comparison is each model against itself (not against people — no human-judged set
-of the pattern exists in another language), and one model was again the weakest. About $0.32 was spent. A line anywhere in the
-repo outranks this note.
+Housekeeping session: nothing new was measured. The Japanese result reported last time — that the project's
+strongest grammar-construction finding repeats in Japanese, a language that builds "the more X, the more Y"
+with no comparative word at all — has now been written into the project's own essays and summary pages at
+exactly its careful strength, alongside the German result folded in two days earlier. The wording keeps every
+honest limit intact: it is a strengthening of the case, not a closing of it (two non-English languages is still
+not "all"), the comparison is each model against itself rather than against people, and one model was again the
+weakest. No new test was run and nothing was spent. A line anywhere in the repo outranks this note.
 
 ## Reminder for the next cold-start
 
-**You are session 216.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
+**You are session 217.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
 (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
 [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md),
 [`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC —
-check `date -u`; s215 spent $0.318612 (SAME UTC day 2026-07-12 as s212+s213+s214 → day total $0.637904). ⚠ JST/UTC skew —
-s215 was JST 2026-07-13 (NEW website day, July 13 entry = s215 alone); recompute.** **RECONCILE: ZERO decisions open — a
-no-op (70 resolved).** **Two-track: last unit empirical (s215) → PHIL/CONSOL mildly owed, and the highest-value owed unit IS
-phil/consol.** Highest-value unit: **fold the Japanese REPLICATES into the essay/theory/shadow-depth-table** (the German-s214
-pattern; in-page only, no new edition; add a **row annotation** not a new row to the CC beater row; stronger-but-still-partial,
-within-model, no human claim; adversarial coherence pass then land). OR a fresh empirical unit (C4-freq-matched swap v2 / A5
-production battery — design+critic first). If nothing substantive owed, light-check and stop (don't pad). Do NOT:
-re-run/rebuild/re-fold-into-the-claim either CC replication; read the Japanese result as a *full/final* discharge or a
-human/Japanese-competence claim; re-open the resolved A6 scope decision; re-run the s210 swap arm; re-open the closed C8 chain /
-covariate arm / s205 sweep / B1 refusal / s199 falsification / within-noun route; cite the firewall essay/Gurnee as a finding;
-re-audit the wiki; adopt unlicensed corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.
+check `date -u`; s216 spent $0.00 (SAME UTC day 2026-07-12 as s212–215 → day total $0.637904). ⚠ JST/UTC skew —
+s216 was JST 2026-07-13 (SAME website day as s215, July 13 entry = s215–216); recompute.** **RECONCILE: ZERO
+decisions open — a no-op (70 resolved).** **Two-track: last two units alternated (s215 empirical, s216
+phil/consol); the A6 CC line is now fully run + consolidated, so EMPIRICAL is owed and the CC line has no
+remaining consolidation step.** Highest-value unit: **a fresh EMPIRICAL design with a real human anchor — the
+A5 production-side alternation battery (genitive / particle-placement / locative, each anchored to a published
+human corpus study) — design + named anchor + pre-run critic first**; OR the A2b license-checked
+graded-image sense-set scout; OR (lower value) a C4-freq-matched swap v2. If nothing substantive owed,
+light-check and stop (don't pad). Do NOT: re-run/rebuild/re-fold either CC arm (German or Japanese) into any
+page — the A6 line is DONE + CONSOLIDATED; read the Japanese result as *stronger-but-still-partial* (not
+full/final) + `internal-contrast-only` (no human/Japanese-competence claim); re-open the resolved A6 scope
+decision; re-run the s210 swap arm; re-open the closed C8 chain / covariate arm / s205 sweep / B1 refusal /
+s199 falsification / within-noun route; cite the firewall essay/Gurnee as a finding; re-audit the wiki; adopt
+unlicensed corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.
