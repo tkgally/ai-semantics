@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-17-relational-integration-depth</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">3.9 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-17-relational-integration-depth/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-frozen-relational-integration-under-load-probe-burial-depth-2">PREREG (FROZEN) — relational INTEGRATION-UNDER-LOAD probe (burial depth 2)</h1>
+<p><strong>FROZEN 2026-06-17 after independent pre-run critic GO</strong> (fresh agent: reproduced the sha; re-derived every shortcut bound from scratch — position 0.125, single-attr ≤0.25, every drop-one-turn reader exactly 0.50 incl. RECENT-TWO, full integrator 1.000; false-positive of a true-0.50 reader clearing the bar ≈ 3% [k≥31/48]; ALL FIXTURES PASS; ruled <strong>no new decision owed</strong>; BLOCKERS none, SHOULD-FIX none). Internal-contrast-only (the ratified relational posture; no human comparison; no new decision
+owed — a depth generalization of an established within-model contrast with a symmetric verdict map).</p>
+<h2 id="frozen-stimuli">Frozen stimuli</h2>
+<ul>
+<li><code>stimuli.json</code> sha256 = <strong><code>7f0197fb24834a80cd7e6d3364708b2eb23a484567d93f5423187c66d2f984ef</code></strong></li>
+<li><code>python3 build_trials.py</code> is deterministic (SEED0=20260617); accepted placement offsets
+  INTEG=2397, DIRECT=76 (smallest that balances the slot tie-breaks). Re-running reproduces the sha.</li>
+</ul>
+<h2 id="question">Question</h2>
+<p>result/relational-integration-rung-ii (depth 1) showed both models INTEGRATE a compatible earlier
+turn at ceiling, but is SATURATED and flags "more turns" as untested harder load. <strong>Does integration
+survive greater BURIAL DEPTH?</strong> Three compatible stamped turns (earliest=shape, middle=pattern,
+latest=color) over a 2×2×2 = 8-figure grid; the earliest (shape) turn is buried under two later
+turns. A RECENT-TWO reader that keeps the latest two and DROPS the buried earliest scores exactly
+0.50. Beating 0.50 requires retaining all three including the deeply-buried earliest.</p>
+<h2 id="panel-elicitation-frozen">Panel &amp; elicitation (frozen)</h2>
+<ul>
+<li>Models: <code>claude-sonnet-4.6</code> (PANEL.A) + <code>gemini-3.5-flash</code> (PANEL.C). gemini <code>reasoning:{effort:minimal}</code>.</li>
+<li>K=8 present figures; <code>N_BLOCKS_INTEG=6</code> → 48 INTEG/model; <code>N_BLOCKS_DIRECT=4</code> → 32 DIRECT/model.
+  <strong>80 records/model × 2 = 160 finding-bearing calls.</strong></li>
+<li>Forced single-label; <code>MAX_TOKENS=512</code> (length-truncated replies never parsed); one stern retry
+  then NA. <code>HARD_STOP_USD=0.50</code> on projected billed cost. Pre-flight ≈ $0.15.</li>
+</ul>
+<h2 id="frozen-thresholds-verdict-map">Frozen thresholds &amp; verdict map</h2>
+<ul>
+<li><code>pos_chance</code> = 1/8 = 0.125; <code>SINGLE_ATTR_CEILING</code> = 0.25; <code>TWO_ATTR_CEILING</code> = 0.50;
+  <code>DIRECT_FLOOR</code> = 0.80; integration bar = INTEG target-rate Wilson-95 <strong>lower bound &gt; 0.50</strong>.</li>
+<li><strong>UNINTERPRETABLE</strong> — <code>direct_acc &lt; 0.80</code> (on-demand conjunction-of-three failed here).</li>
+<li><strong>INTEGRATION-UNDER-LOAD</strong> — DIRECT gate passed AND INTEG target Wilson-95 LB &gt; 0.50 ⇒ the buried
+  earliest turn survives depth-2 load; rung-(ii) integration is robust to "more turns".</li>
+<li><strong>PARTIAL-OR-OVERWRITE</strong> — DIRECT gate passed AND INTEG target Wilson-95 LB ≤ 0.50 ⇒ a turn is
+  shed under load (the earliest most plausibly, as an elevated twin_shape/recent-two rate); bounds
+  the integration claim to depth 1.</li>
+</ul>
+<h2 id="shortcut-proofing-certified-at-build-on-idealized-reader-fixtures">Shortcut-proofing (certified at build + on idealized-reader fixtures)</h2>
+<p><code>build_trials.assert_balance</code> proves per subset (re-derivable by the critic): grid-position
+follower = 0.125 exactly; figure-identity preference ≤ 0.125 (16+ constant-figure pickers + 20 000
+random orderings); every single-attribute reader ≤ 0.25 under four tie-breaks; every two-attribute
+(drop-one-turn) reader = exactly 0.50 under four tie-breaks; full integrator = 1.000; frequency
+flat; 3 distinct rounds with earliest(shape) &lt; middle(pattern) &lt; latest(color). <code>fixtures/
+make_fixtures.py</code> certifies the verdict map on six idealized readers (<code>integrator</code> →
+INTEGRATION-UNDER-LOAD; <code>recent_two</code> / <code>overwrite</code> → PARTIAL-OR-OVERWRITE; <code>gridpos</code> / <code>figpref</code> /
+<code>direct_fail</code> → UNINTERPRETABLE). <strong>ALL FIXTURES PASS.</strong></p>
+<h2 id="anti-cheat">Anti-cheat</h2>
+<p>Symmetric verdict map: a ceiling STRENGTHENS the rung-(ii) reading; a drop to ~0.50 BOUNDS it.
+Neither is the "wanted" result; the bar is pre-registered; the roster is shortcut-proof by
+construction; the stimuli sha is frozen before any finding-bearing call. The result stays
+<code>anchor: internal-contrast-only</code> regardless of outcome.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>conative-minimal-pair-divergence-v1.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">wiki</a> <span class="sep">/</span> <a href="../index.html">findings</a> <span class="sep">/</span> <a href="index.html">results</a> <span class="sep">/</span> <span class="cur">conative-minimal-pair-divergence-v1.md</span></nav>
+<main>
+<header class="page-head">
+<h1>conative-minimal-pair-divergence-v1.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">11.7 KB</span> &middot; <code class="fpath">wiki/findings/results/conative-minimal-pair-divergence-v1.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>type</th><td>result</td></tr><tr><th>id</th><td>conative-minimal-pair-divergence-v1</td></tr><tr><th>title</th><td>The project&#x27;s own verb-held-constant conative minimal pairs — 2/3 models cleanly cancel the completed-contact entailment for &quot;V at NP&quot;, but one model (gpt-5.4-mini) fails it entirely under NLI while partly recovering under forced-choice</td></tr><tr><th>meaning-senses</th><td><ul class='fm-list'><li>constructional</li><li>inferential</li><li>distributional</li><li>human-comparison</li></ul></td></tr><tr><th>status</th><td>proposed</td></tr><tr><th>contingent-on</th><td><span class='muted'>(none)</span></td></tr><tr><th>created</th><td>2026-05-29</td></tr><tr><th>updated</th><td>2026-07-05</td></tr><tr><th>links</th><td><ul class='fm-list'><li>rel: supports, target: conjecture/conative-construction</li><li>rel: refines, target: result/cxnli-distinction-divergence-v1</li><li>rel: supports, target: claim/constructional-divergent-form-generalization-gap</li><li>rel: anchors, target: resource/scivetti-2025-cxnli-dataset</li><li>rel: depends-on, target: open-question/constructional-vs-frequency-confound</li><li>rel: depends-on, target: theory/constructional-meaning-in-llms</li></ul></td></tr></table></div><div class='md'><h1 id="result-conative-minimal-pair-probe-v1">Result: conative minimal-pair probe v1</h1>
+<p>The project's <strong>own verb-held-constant</strong> test of <a href="../conjectures/conative-construction.md.html"><code>conjecture/conative-construction</code></a> — the cleaner follow-up to <a href="cxnli-distinction-divergence-v1.md.html"><code>result/cxnli-distinction-divergence-v1</code></a>, which found the conative the single hardest construction on Scivetti's items but could not separate the construction from the verb. Here the <strong>verb is identical across the two frames</strong> (<em>Maria kicked the ball</em> vs. <em>Maria kicked at the ball</em>), so any difference in the completed-contact inference is <code>constructional</code>, not lexical. Design + frozen stimuli: <a href="../../../experiments/designs/conative-construction-v1.md.html"><code>design/conative-construction-v1</code></a>; run record: <a href="../../../experiments/runs/2026-05-29-conative-minimal-pair-probe-v1/README.md.html"><code>experiments/runs/2026-05-29-conative-minimal-pair-probe-v1/</code></a>.</p>
+<p><strong>One-line finding:</strong> the conjecture's core prediction (P1) <strong>holds</strong> — the panel affirms completed contact far less for the conative <em>at</em>-frame than for the matched transitive (forced-choice gap <strong>42–88 pp, all 3 models</strong>; NLI gap <strong>54–67 pp</strong> for 2 of 3). The effect <strong>replicates across verbs</strong>, <strong>persists for low-frequency objects</strong> (no memorization-artifact collapse, P3), and is <strong>construction-specific</strong> (much weaker for non-alternating control verbs, P2). The discriminating wrinkle: <strong>gpt-5.4-mini fails the conative entirely under the NLI instrument</strong> (it calls <em>all</em> 24 conative items "entailment" — <em>kicked at the ball</em> ⊨ <em>made contact</em>) yet <strong>partly recovers under forced-choice</strong> (gap 42 pp). The same model was the hardest-hit in the distinction probe — a convergent signal that gpt-5.4-mini is the panel's weakest conative reader.</p>
+<h2 id="what-ran">What ran</h2>
+<ul>
+<li><strong>Panel</strong> (<a href="../../../config/models.md.html"><code>config/models.md</code></a>): <code>anthropic/claude-sonnet-4.6</code> (A), <code>openai/gpt-5.4-mini</code> (B), <code>google/gemini-3.5-flash</code> (C), as subjects (charter §6). Temperature 0; <strong>both instruments</strong> (NLI 0/1/2 + forced-choice YES/NO/CANT_TELL), the ratified divergence operationalization. <strong>0 NA across all 336 calls.</strong></li>
+<li><strong>Stimuli</strong> (the project's own, frozen pre-run; <code>items.csv</code> sha256[:16] <code>9ae53279dc483827</code>): 12 Levin (1993) conative-alternation verbs × {typical, atypical} object × {transitive, conative}; + 4 non-alternating control verbs (touch/kiss/break/shatter). Primary indicator = <strong>affirm completed-contact rate</strong> (FC YES, or NLI entailment).</li>
+<li><strong>Cost</strong> (actual, token usage): <strong>$0.071</strong> (A $0.049 / B $0.003 / C $0.020). Well under the $5 single-run flag.</li>
+</ul>
+<h2 id="results">Results</h2>
+<p>Affirm completed-contact rate (%) and the <strong>transitive − conative gap</strong> (the conjecture's P1 quantity; predicted ≥30 pp). 24 items/frame/model for the conative-class arm.</p>
+<table>
+<thead>
+<tr>
+<th>model</th>
+<th>instrument</th>
+<th style="text-align: right;">transitive</th>
+<th style="text-align: right;">conative</th>
+<th style="text-align: right;"><strong>gap</strong></th>
+<th style="text-align: center;">verbs with +gap</th>
+<th style="text-align: center;">verbs gap ≥30</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>claude-sonnet-4.6</td>
+<td>NLI</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">46%</td>
+<td style="text-align: right;"><strong>+54 pp</strong></td>
+<td style="text-align: center;">8/12</td>
+<td style="text-align: center;">8/12</td>
+</tr>
+<tr>
+<td>claude-sonnet-4.6</td>
+<td>FC</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;"><strong>+67 pp</strong></td>
+<td style="text-align: center;">8/12</td>
+<td style="text-align: center;">8/12</td>
+</tr>
+<tr>
+<td>gpt-5.4-mini</td>
+<td>NLI</td>
+<td style="text-align: right;">92%</td>
+<td style="text-align: right;"><strong>100%</strong></td>
+<td style="text-align: right;"><strong>−8 pp</strong></td>
+<td style="text-align: center;">0/12</td>
+<td style="text-align: center;">0/12</td>
+</tr>
+<tr>
+<td>gpt-5.4-mini</td>
+<td>FC</td>
+<td style="text-align: right;">92%</td>
+<td style="text-align: right;">50%</td>
+<td style="text-align: right;"><strong>+42 pp</strong></td>
+<td style="text-align: center;">7/12</td>
+<td style="text-align: center;">7/12</td>
+</tr>
+<tr>
+<td>gemini-3.5-flash</td>
+<td>NLI</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;"><strong>+67 pp</strong></td>
+<td style="text-align: center;">8/12</td>
+<td style="text-align: center;">8/12</td>
+</tr>
+<tr>
+<td>gemini-3.5-flash</td>
+<td>FC</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">13%</td>
+<td style="text-align: right;"><strong>+88 pp</strong></td>
+<td style="text-align: center;">11/12</td>
+<td style="text-align: center;">11/12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>P1 (core) — confirmed at the ratified bar.</strong> The ≥30 pp gap holds in <strong>3/3 models under forced-choice</strong> and <strong>2/3 under NLI</strong>, and it <strong>replicates across verbs</strong> (8/12 for claude and gemini; 7/12 for gpt under FC) rather than being carried by one verb. The single failing cell is gpt-5.4-mini under NLI (see below).</p>
+<h3 id="p3-frequency-memorization-control-confirmed">P3 (frequency / memorization control) — confirmed</h3>
+<p>The gap <strong>does not depend on object frequency</strong>: typical-object vs. atypical-object gaps differ by ≤ 8.4 pp in every model×instrument cell (claude NLI 58→50; claude FC 67→67; gemini NLI 67→67; gemini FC 83→92; gpt FC 42→42). The non-completion reading <strong>persists for low-frequency objects</strong> (<em>kicked at the gourd</em>, <em>struck at the cymbal</em>), so it is not plausibly a memorized-typical-string artifact — direct support for the constructional (not n-gram) account of the contrast (<a href="../open-questions/constructional-vs-frequency-confound.md.html"><code>open-question/constructional-vs-frequency-confound</code></a>).</p>
+<h3 id="p2-verb-class-specificity-supported-with-a-nuance">P2 (verb-class specificity) — supported, with a nuance</h3>
+<p>The contact-cancellation is <strong>construction-specific</strong>, not a generic "<em>at</em> = atelic" effect. Control (non-alternating) verbs show a much smaller gap than conative-class verbs in 5 of 6 model×instrument cells. Cleanest under NLI for claude: the control-conative gap is <strong>−25 pp</strong> (claude reads the <em>anomalous</em> <em>touched at the wall</em> as entailing contact <em>more</em> than the control transitive) while the genuine conative gap is <strong>+54 pp</strong> — claude specifically cancels contact for the licit conative, not for <em>at</em> in general. The nuance: under forced-choice, control verbs still show a ~25 pp gap in every model, so <em>at</em> on an anomalous string does pull affirm-rate down somewhat — but far less (≈25 pp) than the genuine conative (≈42–88 pp).</p>
+<h3 id="the-cross-instrument-divergence-the-discriminating-result">The cross-instrument divergence (the discriminating result)</h3>
+<p><strong>gpt-5.4-mini under NLI labels all 24 conative items "entailment" (0)</strong> — it treats <em>kicked at the ball</em> as entailing <em>made contact with the ball</em>, the opposite of the construction's meaning, with a 0/12 verb replication. Yet the <strong>same model under forced-choice</strong> answers CANT_TELL on half the conative items (gap +42 pp). So the conative non-completion inference is <strong>latent but instrument-fragile</strong> in gpt-5.4-mini: the forced-choice "based only on the sentence" framing surfaces it; the NLI entailment framing collapses it to a default "yes, contact." Claude and gemini are stable across both instruments. This is exactly the kind of cross-model + cross-instrument divergence the panel design exists to surface (charter §6), and it converges with the distinction probe, where gpt-5.4-mini was the hardest-hit model overall.</p>
+<h2 id="interpretation-modest">Interpretation (modest)</h2>
+<ol>
+<li><strong>The conative's non-completion meaning is partly available to current decoders — more so than the Scivetti distinction items suggested.</strong> With clean verb-held-constant minimal pairs, claude and gemini cancel the completed-contact entailment 54–88 pp of the way, and even gpt-5.4-mini does under forced-choice. This <strong>refines</strong> <a href="cxnli-distinction-divergence-v1.md.html"><code>result/cxnli-distinction-divergence-v1</code></a>: the conative "collapse" there (panel 20–45% correct) reflects partly the <em>adversarial difficulty</em> of Scivetti's distinction items, not a blanket inability to read the conative — a clean minimal-pair contrast is substantially easier. Both can be true: the construction's core contrast is largely tracked, while the harder divergent-form items defeat it.</li>
+<li><strong>The contrast is constructional, not lexical or distributional.</strong> Verb held constant (P1), persists on low-frequency objects (P3), specific to alternating verbs (P2). This is the cleanest verb-control the wedge has run, and it points at <code>inferential</code>/<code>constructional</code> tracking rather than an n-gram shadow.</li>
+<li><strong>Instrument framing is a first-class variable.</strong> A model can carry the inference under one elicitation and lose it under another (gpt-5.4-mini). Single-instrument results over-state or under-state competence; the divergence is the datum.</li>
+</ol>
+<h2 id="what-this-licenses-does-not-license">What this licenses / does not license</h2>
+<p><strong>Licenses:</strong> a project-owned, revisable statement that current decoders partly track the conative alternation's non-completion meaning with verb held constant (P1 confirmed at the ratified bar, P2/P3 supported), promoting <a href="../conjectures/conative-construction.md.html"><code>conjecture/conative-construction</code></a> to <code>tested</code> (supported, with the gpt-NLI divergence as the standing caveat).</p>
+<p><strong>Does NOT license:</strong>
+- <strong>A "models understand the conative" claim.</strong> This is behavioral affirm-rate on one contrast; 2/3 models still leave 13–46% of conative items affirming contact, and gpt-5.4-mini fails the NLI framing outright. "Partly tracks, instrument-fragile" is the calibrated reading.
+- <strong>A tight magnitude or item-matched human comparison.</strong> N = 12 verbs (24 items/frame); single run; the Scivetti anchor is an answer-key + aggregate baseline, and these are the project's <em>own</em> items, so the human bearing is to the <em>phenomenon</em> (the conative is a real, learnable contrast with a ≈0.90/0.83 native baseline), not an item-matched accuracy.
+- <strong>A model-internal or grounding claim.</strong> Behavioral only.</p>
+<h2 id="limits">Limits</h2>
+<ul>
+<li><strong>N = 12 verbs, single run, single date, two instruments.</strong> Cross-model + cross-instrument convergence/divergence is the robustness signal, not any single cell's precision.</li>
+<li><strong><code>swat</code>'s transitive contact is the softest of the set</strong> (swatting can miss); noted at design time. The effect is robust across the other 11 verbs, so this does not carry it.</li>
+<li><strong>Control arm is N = 4 verbs</strong> and its conative cell is an <em>anomalous</em> string (gold <code>NA</code>); the P2 conclusion rests on the gap being much smaller than the conative-class gap, not on a clean control baseline. gpt-5.4-mini also labelled 2/24 transitive items "contradiction" under NLI (minor parse-of-meaning noise).</li>
+<li><strong>Verb-neutral "made contact with" predicate</strong> reads most naturally for impact verbs; chosen to hold the hypothesis constant across verbs.</li>
+<li><strong>Shared priors (charter §2.5):</strong> three decoders are not three independent witnesses; the independent bearing is the Levin/Scivetti human anchor.</li>
+</ul>
+<h2 id="provenance">Provenance</h2>
+<ul>
+<li>Conjecture: <a href="../conjectures/conative-construction.md.html"><code>conjecture/conative-construction</code></a> (P1/P2/P3, confirm/falsify criteria). Operationalization: <a href="../../decisions/resolved/constructional-divergence-operationalization.md.html"><code>decisions/resolved/constructional-divergence-operationalization</code></a> (ratified; both instruments, 30/15-pp thresholds, frozen pre-run). Anchor: <a href="../../decisions/resolved/conative-anchor.md.html"><code>decisions/resolved/conative-anchor</code></a> → <a href="../../base/resources/scivetti-2025-cxnli-dataset.md.html"><code>resource/scivetti-2025-cxnli-dataset</code></a>. Verb-class inventory: Levin (1993) conative alternation classes.</li>
+<li>Complements/refines: <a href="cxnli-distinction-divergence-v1.md.html"><code>result/cxnli-distinction-divergence-v1</code></a>; supports <a href="../claims/constructional-divergent-form-generalization-gap.md.html"><code>claim/constructional-divergent-form-generalization-gap</code></a>.</li>
+<li>Run record + code + full (unredacted, own-stimuli) outputs + cost: <a href="../../../experiments/runs/2026-05-29-conative-minimal-pair-probe-v1/README.md.html"><code>experiments/runs/2026-05-29-conative-minimal-pair-probe-v1/</code></a>. Every number here is reproducible from the committed <code>raw/results.json</code>.</li>
+</ul>
+<h2 id="status">Status</h2>
+<p><code>status: proposed</code>. Numbers reproducible from committed code + <code>raw/results.json</code>. <code>contingent-on: []</code> (governing operationalization ratified). Promotion past <code>proposed</code> awaits Tom's review. <em>(Governance note, s183: since the autonomous-era amendment of 2026-06-12 — <a href="../../../PROJECT.md.html"><code>PROJECT.md</code></a> §12.3 — promotion runs by autonomous cross-session adversarial review; Tom holds a standing override.)</em> The standing caveat is the gpt-5.4-mini NLI failure and the instrument-fragility it reveals.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

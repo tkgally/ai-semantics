@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>README.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../index.html">home</a> <span class="sep">/</span> <a href="index.html">docs</a> <span class="sep">/</span> <span class="cur">README.md</span></nav>
+<main>
+<header class="page-head">
+<h1>README.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">4.8 KB</span> &middot; <code class="fpath">docs/README.md</code></p>
+</header>
+<div class='md'><h1 id="docs-the-public-site-maintenance-notes">docs/ — the public site (maintenance notes)</h1>
+<p>This directory is the <strong>public GitHub Pages site</strong> ("Meaning in the Age of AI"), served from
+<code>main</code>/<code>docs</code>. It is <em>not</em> linked from the site itself and is not part of the wiki. These notes
+are for the lead agent updating the site (<code>PROTOCOL.md §5b</code>; charter §12.5; cadence amended by
+Tom 2026-07-02, <code>wiki/decisions/resolved/program-2026-07-adoption.md</code>).</p>
+<blockquote>
+<p><strong>FROZEN — do not touch: <code>docs/complete-project-20260717/</code>.</strong> That subdirectory is a
+<strong>one-time, self-contained HTML snapshot of the entire repository</strong> (every wiki page, experiment
+record, script, and config rendered as a readable web page), built 2026-07-13 at Tom's request so
+he could share a public link to the full project during a presentation. It has its <strong>own</strong>
+<code>style.css</code> and its own <code>index.html</code> entrance; it is <strong>not</strong> part of the regular six-page site and
+is <strong>not</strong> regenerated per session. <strong>Regular sessions must never edit, rebuild, move, or delete
+it, and the per-session site-update checklist below does not apply to it.</strong> The normal maintenance
+targets are only the six generated pages listed under "Update checklist" (<code>index.html</code>,
+<code>journal.html</code>, <code>findings.html</code>, <code>plans.html</code>, <code>glossary.html</code>, <code>about.html</code>). Leave the snapshot
+exactly as-is unless Tom explicitly asks for it to be changed or removed.</p>
+</blockquote>
+<h2 id="standing-content-rules-from-the-2026-06-12-rulings-do-not-relax">Standing content rules (from the 2026-06-12 rulings — do not relax)</h2>
+<ol>
+<li><strong>Audience:</strong> a hands-off, interested, non-technical reader. Plain language everywhere.</li>
+<li><strong>Glossary discipline:</strong> any technical term used on the site is defined in <code>glossary.html</code>
+   and linked at first use on a page (<code>&lt;a href="glossary.html#anchor-id"&gt;</code>).</li>
+<li><strong>Never</strong> name, address, or refer to the human monitor beyond the standing footer phrase
+   ("with human involvement limited to monitoring").</li>
+<li><strong>Never</strong> link to the repository (it is private), to file paths, or to wiki page names.
+   Describe; don't cite internal structure.</li>
+<li><strong>AI disclosure stays:</strong> the footer on every page and the About page state plainly that the
+   project is run autonomously by an AI (Claude).</li>
+<li><strong>No overstatement:</strong> nothing on the site may be stated more strongly than the corresponding
+   wiki page states it. Nulls keep their prominence. This is verification check 5.</li>
+<li><strong>Report ratifications:</strong> every autonomous decision ratification must appear in that
+   session's journal entry (governance Ruling 1).</li>
+</ol>
+<h2 id="update-checklist-one-journal-entry-per-jst-day-amended-2026-07-02">Update checklist — one journal entry per JST day (amended 2026-07-02)</h2>
+<p><strong>Who updates:</strong> any session that lands substantive work — spend, or changes to
+findings/essays/theory/decisions. A maintenance-only or deferred session skips the site
+entirely (its record is <code>log.md</code>). The old per-session duty and the 2026-06-30 clock-stamp
+mandate were <strong>dropped 2026-07-02</strong> (Tom's ruling); entries from before that date keep their
+per-session cadence and stamps — do not revise them.</p>
+<ul>
+<li><code>journal.html</code> — <strong>create or extend today's entry</strong> directly below the
+  <code>&lt;!-- NEW ENTRIES GO ... --&gt;</code> marker, newest first. If today (JST) has no entry yet,
+  prepend one; if it does, extend it so the single entry covers all of the day's landed
+  sessions (rework the summary/pills, fold in a paragraph, update the day's spend). Dateline:
+  <code>Month D, YYYY (session N)</code> or <code>(sessions N–M)</code> — numerals, <strong>no clock times or durations</strong>.
+  Include pill tags (<code>experiments</code> / <code>theory</code> / <code>housekeeping</code>, plus <code>$0 spent</code> when true),
+  what was done in plain words, spend, and <strong>any ratifications</strong> (Ruling 1 — mandatory).</li>
+<li><code>index.html</code> — refresh the "Status at a glance" box (last-updated date + session number(s),
+  phase, study count, current focus, spending posture) and <strong>replace</strong> "The latest" with the
+  day's entry. "The latest" holds exactly one entry — never let a feed accrete there (the
+  pre-2026-07-02 feed rotted 30 sessions stale before it was cut).</li>
+<li><strong>Gotcha:</strong> the site's JST dateline can differ from the UTC budget day (JST = UTC+9) —
+  date the site in JST, track spend in UTC, never conflate the two.</li>
+<li><code>findings.html</code> — only when a finding changed: update the relevant section <em>and</em> the
+  "current through" date line.</li>
+<li><code>plans.html</code> — keep "Queued next" honest: remove what got done, add what's now queued;
+  update the dated line.</li>
+<li><code>glossary.html</code> — add an entry for any new technical term the session's updates introduced.</li>
+<li>Footer "Last updated" date on <strong>every</strong> page touched (they all share the same footer text;
+  keep them in sync — simplest is to update all six). Footer dates are date-only (no clock
+  time) since 2026-07-02.</li>
+</ul>
+<h2 id="technical">Technical</h2>
+<ul>
+<li>Static HTML + one stylesheet (<code>style.css</code>); <strong>no build step, no JavaScript</strong>. Keep it that way.</li>
+<li><code>.nojekyll</code> disables Jekyll processing — leave it in place.</li>
+<li>Keep markup conventions as-is (<code>entry</code> cards, <code>status-box</code>, <code>glossary</code> dl, <code>caveat</code> box,
+  <code>pill</code> tags) so pages stay visually consistent without a framework.</li>
+</ul></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

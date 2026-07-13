@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>common.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-13-genitive-alternation-animacy</a> <span class="sep">/</span> <span class="cur">common.py</span></nav>
+<main>
+<header class="page-head">
+<h1>common.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">8.2 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-13-genitive-alternation-animacy/common.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;common.py -- shared machinery for the GENITIVE-alternation possessor-animacy probe.</span>
+
+<span class="sd">Indicator (ratified decisions/resolved/genitive-alternation-anchor-and-indicator, Q2 Option (i)):</span>
+<span class="sd">a logprob-free GRADED FORCED-CHOICE. Given a possessive proposition with the possessum held fixed,</span>
+<span class="sd">the model distributes 100 points by naturalness between the two phrasings of the SAME proposition --</span>
+<span class="sd">the s-genitive (&quot;the judge&#39;s decision&quot;) and the of-genitive (&quot;the decision of the judge&quot;). We read</span>
+<span class="sd">s-preference = s_points / (s_points + of_points) in [0,1].</span>
+
+<span class="sd">The finding-bearing measure is the WITHIN-FRAME animacy shift (see analyze.py):</span>
+<span class="sd">    shift(frame) = mean(s-pref | animate possessor) - mean(s-pref | inanimate possessor)</span>
+<span class="sd">Human direction (Dubois et al. 2023): animate -&gt; s-genitive, so shift &gt; 0. The s-gen&lt;-&gt;A/B mapping</span>
+<span class="sd">is counterbalanced and the parser is target-blind (keys on reply position, not on which option is</span>
+<span class="sd">the s-genitive). Port of the byte-frozen dative/CC graded instrument.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.error</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;lib&quot;</span><span class="p">)))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openrouter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PANEL</span><span class="p">,</span> <span class="n">URL</span><span class="p">,</span> <span class="n">billed_cost</span>  <span class="c1"># noqa: E402,F401</span>
+
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">)</span>
+<span class="n">LEDGER_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="s2">&quot;cost-ledger.json&quot;</span><span class="p">)</span>
+
+<span class="n">MODELS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">],</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">],</span> <span class="s2">&quot;gpt&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">]}</span>
+
+<span class="n">MAX_TOKENS</span> <span class="o">=</span> <span class="mi">400</span>   <span class="c1"># brief justification then the FINAL line; gemini needs headroom for reasoning</span>
+<span class="n">REASONING</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;google/&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;effort&quot;</span><span class="p">:</span> <span class="s2">&quot;minimal&quot;</span><span class="p">}}</span>
+
+<span class="c1"># Pre-registered hard stop on PROJECTED total billed cost. Pre-flight: 312 trials x 3 models = 936</span>
+<span class="c1"># calls, short forced-choice output. At observed dative/CC forced-choice prices (the CC powered run</span>
+<span class="c1"># billed ~$0.30 for ~800 calls) =&gt; expect ~$0.35-0.70. HARD stop $1.30: above the expectation so</span>
+<span class="c1"># per-call variance does not spuriously trip, well below the $2.50 single-run prudence flag and the</span>
+<span class="c1"># $5/day cap (today&#39;s UTC-2026-07-13 spend before this run is ~$0.005). Pure budget gate, fixed</span>
+<span class="c1"># before any model call; never touches measurement or the frozen stimuli sha.</span>
+<span class="n">HARD_STOP_USD</span> <span class="o">=</span> <span class="mf">1.30</span>
+
+<span class="n">SYS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;You are a careful native speaker of English judging how natural different phrasings sound. &quot;</span>
+       <span class="s2">&quot;You MAY think briefly, but you MUST end your reply with a line in EXACTLY this form: &quot;</span>
+       <span class="s2">&quot;FINAL: A=&lt;number&gt;, B=&lt;number&gt; -- two whole numbers that add up to 100, giving more points &quot;</span>
+       <span class="s2">&quot;to the more natural phrasing.&quot;</span><span class="p">)</span>
+
+<span class="n">USER_TMPL</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="si">{setup}</span><span class="s2">Here are two ways to phrase the same thing:</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;A) </span><span class="si">{option_a}</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;B) </span><span class="si">{option_b}</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;Distribute 100 points between A and B according to how natural each phrasing sounds &quot;</span>
+    <span class="s2">&quot;(more points = more natural; the two numbers must add up to 100).</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;End with a line of the form: FINAL: A=&lt;number&gt;, B=&lt;number&gt;.&quot;</span><span class="p">)</span>
+
+<span class="n">STERN</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">IMPORTANT: end with a line EXACTLY like &#39;FINAL: A=70, B=30&#39; -- two whole &quot;</span>
+         <span class="s2">&quot;numbers adding to 100.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">reasoning_for</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">pref</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">REASONING</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">pref</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">val</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_user</span><span class="p">(</span><span class="n">trial</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Nonce trials carry a one-clause gloss establishing the possessor&#39;s animacy (never its</span>
+<span class="sd">    orthography). Typical trials have no setup clause.&quot;&quot;&quot;</span>
+    <span class="n">gloss</span> <span class="o">=</span> <span class="n">trial</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;gloss&quot;</span><span class="p">)</span>
+    <span class="n">setup</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Imagine </span><span class="si">{</span><span class="n">gloss</span><span class="si">}</span><span class="s2">. &quot;</span> <span class="k">if</span> <span class="n">gloss</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">USER_TMPL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">setup</span><span class="o">=</span><span class="n">setup</span><span class="p">,</span> <span class="n">option_a</span><span class="o">=</span><span class="n">trial</span><span class="p">[</span><span class="s2">&quot;option_a&quot;</span><span class="p">],</span> <span class="n">option_b</span><span class="o">=</span><span class="n">trial</span><span class="p">[</span><span class="s2">&quot;option_b&quot;</span><span class="p">])</span>
+
+
+<span class="n">_FINAL_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;final\s*[:\-]*\s*a\s*=\s*(\d{1,3})\s*[,;/ ]+\s*b\s*=\s*(\d{1,3})&quot;</span><span class="p">)</span>
+<span class="n">_ANY_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\ba\s*=\s*(\d{1,3})\s*[,;/ ]+\s*b\s*=\s*(\d{1,3})&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_graded</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">txt</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">finals</span> <span class="o">=</span> <span class="n">_FINAL_RE</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">low</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">finals</span><span class="p">:</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">finals</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="s2">&quot;final-tag&quot;</span>
+    <span class="n">anys</span> <span class="o">=</span> <span class="n">_ANY_RE</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">low</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">anys</span><span class="p">:</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">anys</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="s2">&quot;any-pair&quot;</span>
+    <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">s_pref</span><span class="p">(</span><span class="n">a_points</span><span class="p">,</span> <span class="n">b_points</span><span class="p">,</span> <span class="n">s_is_a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;s-genitive preference in [0,1]: s_points / (s_points + of_points).&quot;&quot;&quot;</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">a_points</span> <span class="o">+</span> <span class="n">b_points</span>
+    <span class="k">if</span> <span class="n">total</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">s_pts</span> <span class="o">=</span> <span class="n">a_points</span> <span class="k">if</span> <span class="n">s_is_a</span> <span class="k">else</span> <span class="n">b_points</span>
+    <span class="k">return</span> <span class="n">s_pts</span> <span class="o">/</span> <span class="n">total</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">call_fr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">system</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">retries</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+            <span class="n">reasoning</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;OPENROUTER_API_KEY&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">max_tokens</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">max_tokens</span> <span class="o">=</span> <span class="mi">4096</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;google/&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="mi">64</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">model</span><span class="p">,</span>
+            <span class="s2">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">system</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">user</span><span class="p">}],</span>
+            <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="n">temperature</span><span class="p">,</span> <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="n">max_tokens</span><span class="p">,</span>
+            <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;include&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}}</span>
+    <span class="k">if</span> <span class="n">reasoning</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">body</span><span class="p">[</span><span class="s2">&quot;reasoning&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">reasoning</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">retries</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>
+                <span class="n">URL</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">body</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span>
+                <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">})</span>
+            <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+                    <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">,</span> <span class="p">{}),</span> <span class="s2">&quot;finish_reason&quot;</span><span class="p">:</span> <span class="n">ch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;finish_reason&quot;</span><span class="p">)}</span>
+        <span class="k">except</span> <span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;HTTP </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()[:</span><span class="mi">150</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># noqa: BLE001</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">attempt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;finish_reason&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">last</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_reply</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;finish_reason&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;length&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">parse_graded</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">call_graded</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
+    <span class="n">rsn</span> <span class="o">=</span> <span class="n">reasoning_for</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">call_fr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">SYS</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="n">MAX_TOKENS</span><span class="p">,</span> <span class="n">reasoning</span><span class="o">=</span><span class="n">rsn</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="n">parse_reply</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">,</span> <span class="p">{})]</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">call_fr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">SYS</span><span class="p">,</span> <span class="n">user</span> <span class="o">+</span> <span class="n">STERN</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="n">MAX_TOKENS</span><span class="p">,</span> <span class="n">reasoning</span><span class="o">=</span><span class="n">rsn</span><span class="p">)</span>
+    <span class="n">a2</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">mode2</span> <span class="o">=</span> <span class="n">parse_reply</span><span class="p">(</span><span class="n">r2</span><span class="p">)</span>
+    <span class="n">usages</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">),</span> <span class="n">r2</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">))</span> <span class="k">if</span> <span class="n">u</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">a2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">r2</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">mode2</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">usages</span>
+    <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">usages</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">flat_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">):</span>
+    <span class="n">flat</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">flat</span> <span class="o">+=</span> <span class="p">[{</span><span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">}</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">u</span> <span class="k">if</span> <span class="n">x</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">u</span><span class="p">:</span>
+            <span class="n">flat</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">u</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">billed_cost</span><span class="p">([</span><span class="n">flat</span><span class="p">])</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ledger_load</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">LEDGER_PATH</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">LEDGER_PATH</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ledger_total</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s2">&quot;billed_usd&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ledger_load</span><span class="p">())</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ledger_append</span><span class="p">(</span><span class="n">phase</span><span class="p">,</span> <span class="n">calls</span><span class="p">,</span> <span class="n">billed</span><span class="p">,</span> <span class="n">missing</span><span class="p">,</span> <span class="n">note</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">entries</span> <span class="o">=</span> <span class="n">ledger_load</span><span class="p">()</span>
+    <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;phase&quot;</span><span class="p">:</span> <span class="n">phase</span><span class="p">,</span> <span class="s2">&quot;calls&quot;</span><span class="p">:</span> <span class="n">calls</span><span class="p">,</span> <span class="s2">&quot;billed_usd&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">billed</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                    <span class="s2">&quot;missing_cost_fields&quot;</span><span class="p">:</span> <span class="n">missing</span><span class="p">,</span> <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="n">note</span><span class="p">,</span>
+                    <span class="s2">&quot;ts_utc&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()})</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">entries</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">LEDGER_PATH</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s2">&quot;billed_usd&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  [ledger] </span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2">: $</span><span class="si">{</span><span class="n">billed</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">calls</span><span class="si">}</span><span class="s2"> calls, </span><span class="si">{</span><span class="n">missing</span><span class="si">}</span><span class="s2"> missing) &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;-&gt; cumulative $</span><span class="si">{</span><span class="n">total</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2"> (hard stop $</span><span class="si">{</span><span class="n">HARD_STOP_USD</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">total</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">check_hard_stop</span><span class="p">(</span><span class="n">projected_additional_usd</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
+    <span class="n">spent</span> <span class="o">=</span> <span class="n">ledger_total</span><span class="p">()</span>
+    <span class="n">projected</span> <span class="o">=</span> <span class="n">spent</span> <span class="o">+</span> <span class="n">projected_additional_usd</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  [gate] </span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2">: spent $</span><span class="si">{</span><span class="n">spent</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> + projected $</span><span class="si">{</span><span class="n">projected_additional_usd</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;= $</span><span class="si">{</span><span class="n">projected</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (hard stop $</span><span class="si">{</span><span class="n">HARD_STOP_USD</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">projected</span> <span class="o">&gt;</span> <span class="n">HARD_STOP_USD</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;HARD STOP: projected total $</span><span class="si">{</span><span class="n">projected</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> exceeds the pre-registered &quot;</span>
+                 <span class="sa">f</span><span class="s2">&quot;$</span><span class="si">{</span><span class="n">HARD_STOP_USD</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> cap. Re-design; do not push through.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">append_jsonl</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">rec</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">read_jsonl</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">ln</span><span class="p">)</span> <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">f</span> <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

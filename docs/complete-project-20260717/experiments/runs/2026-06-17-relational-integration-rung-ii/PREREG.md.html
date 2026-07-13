@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-17-relational-integration-rung-ii</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">3.4 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-17-relational-integration-rung-ii/PREREG.md</code></p>
+</header>
+<div class='md'><h2 id="frozen-stimuli">Frozen stimuli</h2>
+<ul>
+<li><code>stimuli.json</code> sha256 = <strong><code>b80772e67497810462ce2fa441766c2afebb44b98216a8b4e5e7cf5d89feeb16</code></strong></li>
+<li>Built by <code>build_trials.py</code> (no API), seed <code>SEED0 = 20260617</code>. 80 records/model (48 INTEG + 32
+  DIRECT), 2 models → <strong>160 finding-bearing calls</strong>.</li>
+</ul>
+<h2 id="hypothesis-question">Hypothesis &amp; question</h2>
+<p>Does an earlier, <strong>non-terminal</strong> turn <strong>survive</strong> into a coined term's recovered referent when it
+is <em>compatible</em> with the latest turn (refinement, not replacement), or does the established
+latest-binding-wins <strong>OVERWRITE</strong> rule discard it? Climbs from rung (i) toward rung (ii) of
+<a href="../../../wiki/findings/essays/update-is-not-constitution.md.html"><code>essay/update-is-not-constitution</code></a>;
+fills <a href="../../../wiki/findings/claims/relational-order-sensitive-reassignment.md.html"><code>claim/relational-order-sensitive-reassignment</code></a>
+scope limit 2; tests essay revision trigger (a). <strong>Internal-contrast-only; no human comparison.</strong></p>
+<h2 id="design-frozen">Design (frozen)</h2>
+<p>DAX is constrained over two stamped rounds about a 2×2 figure grid: <strong>earlier</strong> (low stamp) gives a
+<strong>shape</strong>, <strong>latest</strong> (high stamp) gives a <strong>pattern</strong>; exactly one present figure is the both-match
+<strong>target</strong>. Each constraint matches 2 of 4 figures, so any single-attribute reader scores 0.50; only
+conjoining both turns is unique.</p>
+<ul>
+<li><strong>INTEG (headline):</strong> "Which figure does DAX refer to?" — no combine instruction. Score
+  <code>target_rate = P(pick == both-match)</code>. Diagnostics: <code>latest_only</code> (overwrite kept the latest
+  pattern only), <code>earlier_only</code>, <code>neither</code>, grid-position rates.</li>
+<li><strong>DIRECT (gate):</strong> explicit restatement of both constraints. Score <code>direct_acc</code>.</li>
+</ul>
+<h2 id="pre-registered-thresholds-frozen">Pre-registered thresholds (frozen)</h2>
+<ul>
+<li><code>OVERWRITE_CEILING = 0.50</code> — every single-attribute reader's INTEG score (proven at build).</li>
+<li><code>DIRECT_FLOOR = 0.80</code> — on-demand conjunction gate.</li>
+<li>Integration bar = INTEG <code>target_rate</code> Wilson-95 <strong>lower bound &gt; 0.50</strong>.</li>
+</ul>
+<h2 id="verdict-map-frozen-per-model">Verdict map (frozen, per model)</h2>
+<table>
+<thead>
+<tr>
+<th>condition</th>
+<th>verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>direct_acc &lt; 0.80</code></td>
+<td><strong>UNINTERPRETABLE</strong></td>
+</tr>
+<tr>
+<td>DIRECT pass <strong>and</strong> INTEG target Wilson-LB <strong>&gt; 0.50</strong></td>
+<td><strong>INTEGRATION</strong> (rung ii: earlier turn survives)</td>
+</tr>
+<tr>
+<td>DIRECT pass <strong>and</strong> INTEG target Wilson-LB <strong>≤ 0.50</strong></td>
+<td><strong>OVERWRITE-OR-WEAKER</strong> (rung i only; thin verdict sharpened)</td>
+</tr>
+</tbody>
+</table>
+<p>Both outcomes are <strong>thin / single-reader-recoverable</strong>; neither approaches constitution. A null
+(OVERWRITE-OR-WEAKER) <em>sharpens</em> the thin overwrite reading (essay trigger (a)); a positive
+(INTEGRATION) climbs one thin rung.</p>
+<h2 id="shortcut-proofing-certified-pre-run">Shortcut-proofing (certified pre-run)</h2>
+<p><code>build_trials.assert_balance</code>: constant-grid-slot follower = 1/K exactly; figure-identity
+preference = 1/K (within-block target uniformity; 16 constant-figure pickers + 20 000 random
+orderings); every single-attribute reader (4 tie-breaks × 2 attributes) = 0.50 exactly; frequency
+flat. <code>fixtures/make_fixtures.py</code>: only a genuine integrator yields INTEGRATION; every
+position/identity/single-attribute shortcut → OVERWRITE-OR-WEAKER (if on-demand passes) or
+UNINTERPRETABLE. <strong>ALL FIXTURE ASSERTS PASS.</strong></p>
+<h2 id="spend-frozen">Spend (frozen)</h2>
+<p>Pre-flight ≈ $0.11 billed (160 calls; Option-A billed $0.124 for 160 like calls). <code>HARD_STOP_USD =
+0.50</code> on projected total. Record actual <code>usage.cost</code> after.</p>
+<h2 id="anti-cheat">Anti-cheat</h2>
+<p>The verdict map is symmetric and pre-registered: a null is a first-class result (sharpens thin),
+a positive climbs one thin rung — neither is "the win." No threshold may be retuned after seeing
+data. <code>anchor: internal-contrast-only</code> (ratified for the relational line 2026-06-16).</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

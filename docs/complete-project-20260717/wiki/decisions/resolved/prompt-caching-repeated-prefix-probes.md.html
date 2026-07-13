@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>prompt-caching-repeated-prefix-probes.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">wiki</a> <span class="sep">/</span> <a href="../index.html">decisions</a> <span class="sep">/</span> <a href="index.html">resolved</a> <span class="sep">/</span> <span class="cur">prompt-caching-repeated-prefix-probes.md</span></nav>
+<main>
+<header class="page-head">
+<h1>prompt-caching-repeated-prefix-probes.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">15.1 KB</span> &middot; <code class="fpath">wiki/decisions/resolved/prompt-caching-repeated-prefix-probes.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>id</th><td>prompt-caching-repeated-prefix-probes</td></tr><tr><th>title</th><td>Should the probe harness use OpenRouter prompt caching on repeated-prefix probes to cut input cost, and how is that reconciled with cost accounting and reproducibility?</td></tr><tr><th>status</th><td>resolved</td></tr><tr><th>opened</th><td>2026-06-26</td></tr><tr><th>opened-by</th><td>orchestrator (session 113, Tom-directed tooling pass)</td></tr><tr><th>resolved</th><td>2026-06-26</td></tr><tr><th>resolved-by</th><td>autonomous (adversarial review)</td></tr><tr><th>resolution</th><td>ADOPT THE DEFAULT unchanged (session 114, independent fresh-agent adversarial review; opened s113, ratified s114, cross-session boundary held). The probe harness stays on the cold-read path; experiments/lib/openrouter.py is UNCHANGED. Caching is gated behind a $0-stakes matched cold-vs-cached pilot on one repeated-prefix probe class that must (a) confirm byte-identical outputs for the same frozen items/seed and (b) measure the actual usage.cost delta and input-token share; adopt only on probe classes where the pilot shows a material, output-neutral saving — implicit-caching models (gemini, gpt) first, Anthropic cache_control breakpoint only if its measured share justifies it; if the saving is small (the expected gemini case, where output+reasoning at $9/MT dominate), record the null and retire the lever; if caching is adopted, add a cache-aware input_cache_read/input_cache_write term to the RATE_CARD pre-flight estimate so it stops over-counting cached runs. Code-checked against openrouter.py: billed_cost() sums the API-returned usage.cost (cache line items already folded in → recorded figure stays correct automatically); RATE_CARD/estimated_cost() model only (prompt, completion), so a cached run would be over-ESTIMATED until the term is added. Yardstick fixed (the recorded-cost rule = sum usage.cost, and the cold-read reproducibility guarantee), never any result — no current or planned result depends on this decision.</td></tr><tr><th>provisional-default</th><td>[RATIFIED — see resolution above and the Ratification section below.] Leave the harness unchanged now; before adopting caching run a $0-stakes matched cold-vs-cached pilot on one repeated-prefix probe class; adopt only where it shows a material, output-neutral saving (implicit-caching models first); if the saving is small, record the null and leave the harness as-is.</td></tr><tr><th>contingent-artifacts</th><td><span class='muted'>(none)</span></td></tr></table></div><div class='md'><h1 id="decision-prompt-caching-on-repeated-prefix-probes">Decision: prompt caching on repeated-prefix probes</h1>
+<h2 id="why-this-exists">Why this exists</h2>
+<p>Most probes in this project send the <strong>same system prompt</strong> (and often a long shared
+instruction/few-shot prefix) across hundreds of calls that differ only in a short item
+stem. The live OpenRouter catalog (checked 2026-06-26 via the optional <code>openrouter</code>
+design-time MCP server — see <a href="../../../config/mcp-servers.md.html"><code>config/mcp-servers.md</code></a>)
+shows that the panel models price a <strong>cached input read</strong> far below a fresh input read:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>prompt (in) $/MT</th>
+<th><code>input_cache_read</code> $/MT</th>
+<th>implicit caching</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>anthropic/claude-sonnet-4.6</code></td>
+<td>3.00</td>
+<td>0.30</td>
+<td>— (explicit <code>cache_control</code>)</td>
+</tr>
+<tr>
+<td><code>google/gemini-3.5-flash</code></td>
+<td>1.50</td>
+<td>0.15</td>
+<td><code>supports_implicit_caching: true</code></td>
+</tr>
+<tr>
+<td><code>openai/gpt-5.4-mini</code></td>
+<td>0.75</td>
+<td>0.07</td>
+<td>implicit</td>
+</tr>
+</tbody>
+</table>
+<p>So the repeated prefix — which is currently re-billed at the full input rate on every
+call — is in principle ~10x cheaper to re-read from cache. With the budget regularly
+pushing the $5/day cap, that is a real lever worth examining. <strong>But</strong> turning it on
+touches two things the project is strict about — cost accounting and reproducibility — so
+it is surfaced as a decision rather than silently switched on. Tom's standing instruction
+this session was explicit: <strong>keep the experimental harnesses unchanged for now</strong>; this
+page records the question and a provisional default, it does not act.</p>
+<h2 id="the-live-choices">The live choices</h2>
+<ol>
+<li><strong>Adopt caching at all, and where.</strong> Options: (a) leave the harness as-is (every call a
+   fresh input read — current state, simplest, fully deterministic accounting); (b) enable
+   caching only on the demonstrably repeated-prefix, high-call-count probes (e.g. the
+   multi-hundred-call lexical / VWSD / AANN runs) where the prefix dominates input
+   tokens; (c) enable it globally in <code>call()</code>. The prefix has to be genuinely large and
+   re-sent for caching to pay — short-system / long-item probes get little.</li>
+<li><strong>Explicit vs implicit.</strong> Gemini and gpt cache implicitly (no code change needed — the
+   provider may already be giving a partial discount, which would show up in <code>usage.cost</code>
+   today); Anthropic needs an explicit <code>cache_control</code> breakpoint on the prefix. Decide
+   whether to add the Anthropic breakpoint, or restrict the lever to the implicit-caching
+   models only.</li>
+<li><strong>Cost-accounting reconciliation.</strong> <code>billed_cost()</code> already sums the API-returned
+   <code>usage.cost</code>, which <em>includes</em> cache-read/-write line items, so the <strong>recorded</strong> figure
+   stays correct automatically. The open question is the <strong>pre-flight estimate</strong>: the
+   <code>RATE_CARD</code> models only prompt/completion, not <code>input_cache_read</code> / <code>input_cache_write</code>,
+   so an estimate would over-count a cached run. Decide whether the estimate needs a
+   cache-aware term or whether "estimate is a conservative upper bound" is acceptable.</li>
+<li><strong>Reproducibility / validity.</strong> Does serving part of the prompt from cache change model
+   outputs versus a cold call? Expectation: no (cache affects billing/latency, not the
+   computed logits for a given exact prompt), but this should be <strong>verified on a small
+   matched cold-vs-cached pilot</strong> before any finding-bearing run depends on it, because the
+   project freezes designs and must not let a cost optimization perturb the measured
+   behavior. Cache TTL/eviction also makes realized savings non-deterministic run-to-run —
+   acceptable for cost, not for any artifact that must be byte-reproducible.</li>
+<li><strong>Magnitude — is it worth the complexity?</strong> On the reasoning-heavy gemini runs that
+   actually drive the bill, <strong>output + internal-reasoning tokens</strong> (billed at $9/MT)
+   dominate, and caching only touches <em>input</em>. So the saving may be modest precisely where
+   spend is highest. Decide against a measured estimate of input-token share per probe
+   class, not in the abstract.</li>
+</ol>
+<h2 id="provisional-default-in-force-until-a-later-session-ratifies-not-acted-on-this-session">Provisional default (in force until a later session ratifies — NOT acted on this session)</h2>
+<p><strong>Do not change the harness now.</strong> Keep every probe on the current cold-read path
+(<code>experiments/lib/openrouter.py</code> unchanged), so accounting and reproducibility stay exactly
+as they are. <em>Before</em> adopting caching, run a scoped, $0-stakes <strong>pilot</strong> on one
+repeated-prefix probe class: a matched cold-vs-cached pair (same frozen items, same seed)
+that (a) confirms outputs are identical, and (b) measures the actual <code>usage.cost</code> delta
+and the input-token share. Adopt caching only on probe classes where the pilot shows a
+material, output-neutral saving — option (1b), implicit-caching models first (no code
+change beyond reading what the provider already discounts), Anthropic <code>cache_control</code>
+added only if its measured share justifies the breakpoint. If the pilot shows the saving
+is small (the likely gemini case), record that null and leave the harness as-is. The
+recorded cost stays <code>usage.cost</code>; if caching is adopted, add a cache-aware term to the
+pre-flight <code>RATE_CARD</code> estimate so it stops over-counting.</p>
+<h2 id="notes-for-the-resolver">Notes for the resolver</h2>
+<p>A later session may ratify via the autonomous adversarial-review procedure (<a href="../../../PROJECT.md.html"><code>PROJECT.md</code></a>
+§12.3) — never the session that opened this. The cheapest first step is just the pilot:
+it is $0-budget-stakes (a few dozen calls on already-frozen stimuli) and turns choices
+(1), (4) and (5) from speculation into measured numbers. The decision is <strong>not urgent</strong> —
+it is a cost optimization, not a correctness gate; no current or planned result depends on
+it, and the existing cold-read path is correct and fully reproducible. If the pilot shows
+the input-token share is small across the project's actual probe mix, the honest outcome
+is to retire this lever rather than carry caching complexity for a marginal gain.</p>
+<h2 id="ratification-session-114-2026-06-26-autonomous-adversarial-review">Ratification (session 114, 2026-06-26 — autonomous adversarial review)</h2>
+<p>An independent fresh-agent adversarial-review pass (it did no downstream work this session) read this
+page, its options, the provisional default, and the relevant harness code, and returned <strong>VERDICT: ADOPT
+THE DEFAULT as written</strong> — the option that strictly dominates on the project's own stated priorities. The
+cross-session boundary held (opened session 113, ratified session 114).</p>
+<p><strong>Why the default dominates.</strong> It changes nothing in the frozen execution path now, so cost-accounting
+correctness and byte-reproducibility are preserved by construction — there is nothing to perturb until a
+pilot has measured the effect. It gates adoption behind an empirical, $0-stakes measurement rather than an
+abstract assumption (the same operationalization discipline the project enforces elsewhere: measure first,
+then decide, and write the null if the lever is marginal). And it correctly names the one accounting gap
+adoption would open — the <code>RATE_CARD</code> pre-flight estimate over-counting a cached run — and queues the fix as
+a precondition of adoption rather than leaving it implicit. A more aggressive option (global enablement in
+<code>call()</code>) was rejected: it would add cache-TTL/eviction non-determinism to the realized-cost path with no
+measured payoff; and keeping the decision open was rejected because the page is complete (clear options, a
+defensible default, a named precondition, and a correct account of the accounting/reproducibility
+implications).</p>
+<p><strong>Code-check (verified against <a href="../../../experiments/lib/openrouter.py.html"><code>experiments/lib/openrouter.py</code></a>).</strong>
+Both load-bearing factual claims on this page check out:</p>
+<ul>
+<li><em>Recorded cost stays correct automatically</em> — <strong>VERIFIED.</strong> <code>call()</code> sets <code>"usage": {"include": True}</code>
+  so OpenRouter returns the billed <code>usage.cost</code>; <code>billed_cost()</code> simply sums that returned figure
+  (<code>c = u.get("cost")</code>, <code>total += c</code>) with no rate-card arithmetic, so any cache-read/-write line items the
+  provider applies are already folded into the recorded total.</li>
+<li><em>Pre-flight estimate would over-count a cached run</em> — <strong>VERIFIED.</strong> <code>RATE_CARD</code> stores only a
+  <code>(prompt, completion)</code> price tuple per model and <code>estimated_cost()</code> charges every input token at the full
+  prompt rate with no discounted cache-read path, so a run that served part of its prefix from cache (billed
+  far below the prompt rate) would be <em>estimated</em> higher than <em>billed</em>. (Orthogonal to the docstring's note
+  that the estimate generally <em>under</em>-counts by omitting reasoning tokens — that is a completion-side gap.)
+  The page's magnitude analysis (choice 5) is corroborated by <code>RATE_CARD</code>'s gemini completion price
+  ($9/MT): caching touches only input, while output+reasoning drive the gemini bill, so the honest expected
+  pilot outcome is a small saving precisely where spend is highest.</li>
+</ul>
+<p><strong>Anti-cheat: PASS.</strong> The verdict is not result-motivated — no current or planned result depends on this
+decision (it is a cost optimization, not a correctness gate), and adopting the default <em>strengthens</em> rather
+than weakens cost-accounting correctness (recorded cost stays <code>usage.cost</code>) and design reproducibility (the
+frozen cold-read path is untouched until a pilot proves output-neutrality).</p>
+<p><strong>Contingent artifacts: none</strong> (<code>contingent-artifacts: []</code>) — nothing to promote or retire. The pilot this
+decision authorizes is new optional follow-on work (carried as a low-priority <a href="../../../NEXT.md.html"><code>NEXT.md</code></a> backlog item), not a
+contingent page awaiting promotion. The harnesses remain UNCHANGED, exactly as Tom directed when the
+decision was opened.</p>
+<h2 id="pilot-result-session-115-2026-06-26-the-authorized-0-stakes-measurement-now-run">Pilot result (session 115, 2026-06-26 — the authorized $0-stakes measurement, now run)</h2>
+<p>The pilot the resolution gated adoption behind has <strong>run</strong> — a matched cold-vs-cached pair on one
+repeated-prefix probe class (a ~6.4k-token shared lexical-annotation prefix + short item stem, the shape of
+the project's high-call-count single-token-output probes). Full record + scripts:
+<a href="../../../experiments/runs/2026-06-26-prompt-caching-pilot/results.md.html"><code>experiments/runs/2026-06-26-prompt-caching-pilot/</code></a>.
+Spend ≈ <strong>$0.067</strong> (under the single-run flag). <strong>Outputs were byte-identical cold vs cached on all three
+models</strong> (output-neutral, as required).</p>
+<p><strong>Measured savings (<code>usage.cost</code>, which is already net of the cache discount):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>mechanism</th>
+<th>no-cache</th>
+<th>cached</th>
+<th>saving</th>
+<th>cached share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gpt-5.4-mini</code></td>
+<td>implicit (automatic)</td>
+<td>$0.004807</td>
+<td>$0.000832</td>
+<td><strong>−82.7%</strong></td>
+<td>92%</td>
+</tr>
+<tr>
+<td><code>gemini-3.5-flash</code></td>
+<td>implicit <strong>did not fire</strong>; explicit <code>cache_control</code></td>
+<td>$0.006632</td>
+<td>$0.001149</td>
+<td><strong>−82.7%</strong></td>
+<td>92% (explicit)</td>
+</tr>
+<tr>
+<td><code>claude-sonnet-4.6</code></td>
+<td>explicit <code>cache_control</code></td>
+<td>$0.027146 (write)</td>
+<td>$0.002340 (read)</td>
+<td><strong>−91.4%</strong> on reads</td>
+<td>99%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Two assumptions on this page were overturned by measurement:</strong></p>
+<ol>
+<li><strong>Gemini implicit caching does NOT fire via OpenRouter's route</strong> (three identical-prefix calls all
+   reported <code>cached_tokens: 0</code>), despite the catalog's <code>supports_implicit_caching: true</code> in the table above.
+   Gemini realizes the saving <strong>only with an explicit <code>cache_control</code> breakpoint</strong> — it behaves like claude,
+   not gpt, for capture purposes. So choice (2)'s "restrict the lever to the implicit-caching models" framing
+   is wrong: of the panel, <strong>only gpt caches implicitly</strong>; gemini and claude both need the explicit breakpoint.</li>
+<li><strong>The saving is material (~83–91%), not the "small null" expected for gemini</strong> — <em>on input-dominated
+   probes</em>. Choice (5)'s magnitude analysis (output+reasoning dominate) holds <strong>only for reasoning-heavy
+   runs</strong>. On the project's single-token-output, large-prefix, high-call-count probes the input is ~99% of
+   the bill, so caching cuts ~83–91% per call after the first. (Separately discovered: <strong>reasoning is now
+   mandatory on <code>gemini-3.5-flash</code></strong> — <code>{enabled:false}</code>/<code>{effort:none}</code> are HTTP-400 rejected; only
+   <code>{effort:minimal}</code> is accepted — so the reasoning-cost driver can no longer be fully suppressed, and the
+   total saving on reasoning-heavy gemini runs shrinks toward the original expectation.)</li>
+</ol>
+<p><strong>Action taken (resolution-authorized, enabling capability only, default-OFF).</strong> Because the pilot showed a
+material, output-neutral saving, the lever is adopted at the harness-<em>capability</em> level and the named
+precondition (cache-aware estimate) is discharged — both changes byte-identical to prior behaviour when
+unused (verified, <code>verify_harness.py</code>):
+<a href="../../../experiments/lib/openrouter.py.html"><code>experiments/lib/openrouter.py</code></a> gained (a) an opt-in
+<code>call(..., cache_prefix=False)</code> param (system turn wrapped in a <code>cache_control</code> block only when <code>True</code>; off →
+byte-identical body, so <strong>no existing probe or frozen design is perturbed</strong>), and (b) a <code>CACHE_READ</code> rate
+card + cache-aware <code>estimated_cost()</code> (cached tokens charged at the cache-read rate; identical to the old
+formula when <code>cached=0</code>). <strong>Adoption is per-probe</strong> — a future high-call-count probe passes <code>cache_prefix=True</code>
+(gemini/claude) or relies on implicit caching (gpt). Nothing was re-run; the recorded cost stays <code>usage.cost</code>.
+The lever is <strong>not retired</strong> (the saving is material, contra the expected gemini-null) but its realized size
+is probe-dependent (large on single-token-output probes, smaller on reasoning-heavy ones).</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

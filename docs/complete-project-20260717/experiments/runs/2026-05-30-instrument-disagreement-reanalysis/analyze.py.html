@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-30-instrument-disagreement-reanalysis</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">13.5 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-30-instrument-disagreement-reanalysis/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Instrument-disagreement re-analysis (2026-05-30).</span>
+
+<span class="sd">READ-ONLY re-analysis of two parent runs; NO new API calls, $0.00 spend.</span>
+
+<span class="sd">For each model x construction/condition x instrument, we compute:</span>
+<span class="sd">  - The affirm rate (= affirm-contact for conative, affirm-inference for coercion v2)</span>
+<span class="sd">  - The KEY gap: transitive-conative gap (conative run) or canonical-cue drop (coercion run)</span>
+<span class="sd">  - The instrument-disagreement statistic:</span>
+<span class="sd">      signed disagreement  = NLI_gap - FC_gap   (positive =&gt; NLI shows larger gap)</span>
+<span class="sd">      absolute disagreement = |NLI_gap - FC_gap| (magnitude regardless of direction)</span>
+
+<span class="sd">For the coercion v2 run the &quot;gap&quot; is the canonical-minus-cue drop,</span>
+<span class="sd">which is the construction&#39;s core discriminator (parallel to the conative gap).</span>
+
+<span class="sd">Sanity-check targets (from parent result pages):</span>
+<span class="sd">  conative FC gaps:  42-88 pp  (3/3 models)</span>
+<span class="sd">  conative NLI gaps: 54-67 pp  (2/3 models; gpt NLI = -8 pp)</span>
+
+<span class="sd">Arithmetic is entirely from the committed raw/results.json files in each parent run.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">RUNS_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">))</span>
+
+<span class="n">CONATIVE_RESULTS</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+    <span class="n">RUNS_DIR</span><span class="p">,</span>
+    <span class="s2">&quot;2026-05-29-conative-minimal-pair-probe-v1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;raw&quot;</span><span class="p">,</span> <span class="s2">&quot;results.json&quot;</span>
+<span class="p">)</span>
+<span class="n">COERCION_RESULTS</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+    <span class="n">RUNS_DIR</span><span class="p">,</span>
+    <span class="s2">&quot;2026-05-29-argument-structure-coercion-probe-v2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;raw&quot;</span><span class="p">,</span> <span class="s2">&quot;results.json&quot;</span>
+<span class="p">)</span>
+
+<span class="n">PANEL</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;claude-sonnet-4.6&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;gemini-3.5-flash&quot;</span><span class="p">}</span>
+<span class="n">MODEL_SHORT</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;claude-sonnet-4.6&quot;</span><span class="p">:</span> <span class="s2">&quot;claude&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="s2">&quot;gpt&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gemini-3.5-flash&quot;</span><span class="p">:</span> <span class="s2">&quot;gemini&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># ── helpers ─────────────────────────────────────────────────────────────────</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sgn</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return &#39;+&#39; / &#39;-&#39; / &#39; 0&#39; prefix for display.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;None&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;+</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">absdiff</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">b</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">signed</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;NLI_gap - FC_gap.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">b</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+
+<span class="c1"># ── load parent results ─────────────────────────────────────────────────────</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_conative</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return per-model NLI and FC gaps for the conative run.</span>
+
+<span class="sd">    The parent gap is:  transitive_affirm - conative_affirm (pp)</span>
+<span class="sd">    Positive =&gt; construction-class gap is present.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">CONATIVE_RESULTS</span><span class="p">))</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PANEL</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">pm</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">pm</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">name</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;unexpected model name: </span><span class="si">{</span><span class="n">pm</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">nli_gap</span> <span class="o">=</span> <span class="n">pm</span><span class="p">[</span><span class="s2">&quot;nli&quot;</span><span class="p">][</span><span class="s2">&quot;gap_pp&quot;</span><span class="p">]</span>   <span class="c1"># conative-class gap under NLI</span>
+        <span class="n">fc_gap</span>  <span class="o">=</span> <span class="n">pm</span><span class="p">[</span><span class="s2">&quot;fc&quot;</span><span class="p">][</span><span class="s2">&quot;gap_pp&quot;</span><span class="p">]</span>    <span class="c1"># conative-class gap under FC</span>
+        <span class="n">rows</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;nli_trans&quot;</span><span class="p">:</span> <span class="n">pm</span><span class="p">[</span><span class="s2">&quot;nli&quot;</span><span class="p">][</span><span class="s2">&quot;transitive_affirm&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;nli_conative&quot;</span><span class="p">:</span> <span class="n">pm</span><span class="p">[</span><span class="s2">&quot;nli&quot;</span><span class="p">][</span><span class="s2">&quot;conative_affirm&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;nli_gap&quot;</span><span class="p">:</span> <span class="n">nli_gap</span><span class="p">,</span>
+            <span class="s2">&quot;fc_trans&quot;</span><span class="p">:</span> <span class="n">pm</span><span class="p">[</span><span class="s2">&quot;fc&quot;</span><span class="p">][</span><span class="s2">&quot;transitive_affirm&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;fc_conative&quot;</span><span class="p">:</span> <span class="n">pm</span><span class="p">[</span><span class="s2">&quot;fc&quot;</span><span class="p">][</span><span class="s2">&quot;conative_affirm&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;fc_gap&quot;</span><span class="p">:</span> <span class="n">fc_gap</span><span class="p">,</span>
+            <span class="s2">&quot;signed_disagree&quot;</span><span class="p">:</span> <span class="n">signed</span><span class="p">(</span><span class="n">nli_gap</span><span class="p">,</span> <span class="n">fc_gap</span><span class="p">),</span>
+            <span class="s2">&quot;abs_disagree&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">absdiff</span><span class="p">(</span><span class="n">nli_gap</span><span class="p">,</span> <span class="n">fc_gap</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="n">rows</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_coercion</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return per-model x per-construction NLI and FC drops (canonical-minus-cue).</span>
+
+<span class="sd">    The &quot;gap&quot; used here = canonical_minus_cue_drop, which is the main discriminator</span>
+<span class="sd">    in the coercion v2 result page (parallel role to the conative gap).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">COERCION_RESULTS</span><span class="p">))</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PANEL</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">pm</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="n">pm</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">name</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;unexpected model name: </span><span class="si">{</span><span class="n">pm</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">rows</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">con</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;caused-motion&quot;</span><span class="p">,</span> <span class="s2">&quot;way&quot;</span><span class="p">):</span>
+            <span class="n">nli</span> <span class="o">=</span> <span class="n">pm</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">con</span><span class="si">}</span><span class="s2">_nli&quot;</span><span class="p">]</span>
+            <span class="n">fc</span>  <span class="o">=</span> <span class="n">pm</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">con</span><span class="si">}</span><span class="s2">_fc&quot;</span><span class="p">]</span>
+            <span class="n">nli_drop</span> <span class="o">=</span> <span class="n">nli</span><span class="p">[</span><span class="s2">&quot;canonical_minus_cue_drop&quot;</span><span class="p">]</span>
+            <span class="n">fc_drop</span>  <span class="o">=</span> <span class="n">fc</span><span class="p">[</span><span class="s2">&quot;canonical_minus_cue_drop&quot;</span><span class="p">]</span>
+            <span class="n">nli_canon</span> <span class="o">=</span> <span class="n">nli</span><span class="p">[</span><span class="s2">&quot;canonical&quot;</span><span class="p">]</span>
+            <span class="n">fc_canon</span>  <span class="o">=</span> <span class="n">fc</span><span class="p">[</span><span class="s2">&quot;canonical&quot;</span><span class="p">]</span>
+            <span class="n">nli_cue</span>   <span class="o">=</span> <span class="n">nli</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">]</span>
+            <span class="n">fc_cue</span>    <span class="o">=</span> <span class="n">fc</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">]</span>
+            <span class="n">rows</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="n">con</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;nli_canon&quot;</span><span class="p">:</span> <span class="n">nli_canon</span><span class="p">,</span>
+                <span class="s2">&quot;nli_cue&quot;</span><span class="p">:</span>   <span class="n">nli_cue</span><span class="p">,</span>
+                <span class="s2">&quot;nli_drop&quot;</span><span class="p">:</span>  <span class="n">nli_drop</span><span class="p">,</span>
+                <span class="s2">&quot;fc_canon&quot;</span><span class="p">:</span>  <span class="n">fc_canon</span><span class="p">,</span>
+                <span class="s2">&quot;fc_cue&quot;</span><span class="p">:</span>    <span class="n">fc_cue</span><span class="p">,</span>
+                <span class="s2">&quot;fc_drop&quot;</span><span class="p">:</span>   <span class="n">fc_drop</span><span class="p">,</span>
+                <span class="s2">&quot;signed_disagree&quot;</span><span class="p">:</span> <span class="n">signed</span><span class="p">(</span><span class="n">nli_drop</span><span class="p">,</span> <span class="n">fc_drop</span><span class="p">),</span>
+                <span class="s2">&quot;abs_disagree&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">absdiff</span><span class="p">(</span><span class="n">nli_drop</span><span class="p">,</span> <span class="n">fc_drop</span><span class="p">),</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="p">}</span>
+    <span class="k">return</span> <span class="n">rows</span>
+
+
+<span class="c1"># ── sanity check ─────────────────────────────────────────────────────────────</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sanity_check_conative</span><span class="p">(</span><span class="n">con_rows</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Verify recomputed gaps match the parent result page&#39;s stated ranges.</span>
+
+<span class="sd">    The parent page rounds displayed values: e.g. raw 41.7 pp appears as &quot;42 pp&quot;.</span>
+<span class="sd">    We check against raw value ranges, allowing ±0.5 pp for display rounding.</span>
+<span class="sd">    Parent page states: FC gaps 42-88 pp (3/3); NLI gaps 54-67 pp (2/3);</span>
+<span class="sd">    gpt NLI gap = -8 pp (stated as ~-8 pp, raw = -8.3 pp).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">con_rows</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">fc</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;fc_gap&quot;</span><span class="p">]</span>
+        <span class="n">nli</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;nli_gap&quot;</span><span class="p">]</span>
+        <span class="n">short</span> <span class="o">=</span> <span class="n">MODEL_SHORT</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="c1"># All 3 models FC gap: parent says 42-88 pp; raw gpt value is 41.7 (rounds to 42)</span>
+        <span class="c1"># Allow &gt;=41.5 to accommodate rounding of the stated lower bound of 42</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mf">41.5</span> <span class="o">&lt;=</span> <span class="n">fc</span> <span class="o">&lt;=</span> <span class="mf">88.5</span><span class="p">):</span>
+            <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SANITY FAIL: </span><span class="si">{</span><span class="n">short</span><span class="si">}</span><span class="s2"> FC gap=</span><span class="si">{</span><span class="n">fc</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> pp, expected 42-88 pp range &quot;</span>
+                          <span class="sa">f</span><span class="s2">&quot;(41.5-88.5 after rounding allowance)&quot;</span><span class="p">)</span>
+        <span class="c1"># NLI: claude and gemini in 54-67; gpt at -8 (raw -8.3)</span>
+        <span class="k">if</span> <span class="n">short</span> <span class="o">==</span> <span class="s2">&quot;gpt&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span> <span class="o">&lt;=</span> <span class="n">nli</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">6</span><span class="p">):</span>
+                <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SANITY FAIL: </span><span class="si">{</span><span class="n">short</span><span class="si">}</span><span class="s2"> NLI gap=</span><span class="si">{</span><span class="n">nli</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> pp, expected ~-8 pp&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">54</span> <span class="o">&lt;=</span> <span class="n">nli</span> <span class="o">&lt;=</span> <span class="mf">67.5</span><span class="p">):</span>
+                <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SANITY FAIL: </span><span class="si">{</span><span class="n">short</span><span class="si">}</span><span class="s2"> NLI gap=</span><span class="si">{</span><span class="n">nli</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> pp, expected 54-67 pp&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">errors</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sanity_check_coercion</span><span class="p">(</span><span class="n">cor_rows</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Verify recomputed drops are internally consistent (all 0-100 pp range).&quot;&quot;&quot;</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">cor_rows</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">con</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cons</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">instr</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;nli&quot;</span><span class="p">,</span> <span class="s2">&quot;fc&quot;</span><span class="p">):</span>
+                <span class="n">drop</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">instr</span><span class="si">}</span><span class="s2">_drop&quot;</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">drop</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">drop</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">):</span>
+                    <span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;SANITY FAIL: </span><span class="si">{</span><span class="n">MODEL_SHORT</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">con</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">instr</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2"> &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;drop=</span><span class="si">{</span><span class="n">drop</span><span class="si">}</span><span class="s2">, expected 0-100 pp&quot;</span>
+                    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">errors</span>
+
+
+<span class="c1"># ── pretty tables ──────────────────────────────────────────────────────────</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fmt_conative_table</span><span class="p">(</span><span class="n">con_rows</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the main conative instrument-disagreement table as a markdown string.&quot;&quot;&quot;</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;## Table 1: Conative probe — instrument disagreement on the transitive−conative gap&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;The &#39;gap&#39; is the transitive_affirm − conative_affirm difference (pp). &quot;</span>
+                 <span class="s2">&quot;Signed = NLI_gap − FC_gap; abs = |NLI_gap − FC_gap|.&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;| model | NLI trans | NLI conative | NLI gap | FC trans | FC conative | FC gap | &quot;</span>
+                 <span class="s2">&quot;signed (NLI−FC) | abs |&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;|---|---:|---:|---:|---:|---:|---:|---:|---:|&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">con_rows</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">short</span> <span class="o">=</span> <span class="n">MODEL_SHORT</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">short</span><span class="si">}</span><span class="s2"> &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_trans&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_conative&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_gap&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_trans&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_conative&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_gap&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;signed_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;abs_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> pp |&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fmt_coercion_table</span><span class="p">(</span><span class="n">cor_rows</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the coercion v2 instrument-disagreement table as a markdown string.&quot;&quot;&quot;</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;## Table 2: Coercion v2 — instrument disagreement on the canonical−cue drop&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;The &#39;drop&#39; is the canonical_minus_cue_drop (pp). &quot;</span>
+                 <span class="s2">&quot;Signed = NLI_drop − FC_drop; abs = |NLI_drop − FC_drop|.&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;| model | construction | NLI canon | NLI cue | NLI drop | &quot;</span>
+                 <span class="s2">&quot;FC canon | FC cue | FC drop | signed (NLI−FC) | abs |&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;|---|---|---:|---:|---:|---:|---:|---:|---:|---:|&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">cor_rows</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">short</span> <span class="o">=</span> <span class="n">MODEL_SHORT</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">con</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cons</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">short</span><span class="si">}</span><span class="s2"> &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">con</span><span class="si">}</span><span class="s2"> &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_canon&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_cue&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_drop&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_canon&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_cue&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_drop&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;signed_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;abs_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> pp |&quot;</span>
+            <span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fmt_summary_table</span><span class="p">(</span><span class="n">con_rows</span><span class="p">,</span> <span class="n">cor_rows</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a compact summary of absolute disagreement per model x construction.&quot;&quot;&quot;</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;## Table 3: Summary — absolute instrument disagreement (|NLI gap − FC gap|) per cell&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;| model | construction | run | NLI gap | FC gap | abs disagree |&quot;</span><span class="p">)</span>
+    <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;|---|---|---|---:|---:|---:|&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">con_rows</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">short</span> <span class="o">=</span> <span class="n">MODEL_SHORT</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">short</span><span class="si">}</span><span class="s2"> | conative | conative-v1 &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_gap&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_gap&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;abs_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> pp |&quot;</span>
+        <span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">cor_rows</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">short</span> <span class="o">=</span> <span class="n">MODEL_SHORT</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">con</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cons</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">short</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">con</span><span class="si">}</span><span class="s2"> | coercion-v2 &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_drop&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_drop&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;| </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;abs_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> pp |&quot;</span>
+            <span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+
+<span class="c1"># ── main ───────────────────────────────────────────────────────────────────</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== INSTRUMENT DISAGREEMENT RE-ANALYSIS (2026-05-30) ===&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Read-only re-analysis of two parent runs — no new API calls, $0.00 spend.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">con_rows</span> <span class="o">=</span> <span class="n">load_conative</span><span class="p">()</span>
+    <span class="n">cor_rows</span> <span class="o">=</span> <span class="n">load_coercion</span><span class="p">()</span>
+
+    <span class="c1"># ── sanity checks ──────────────────────────────────────────────────────</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Sanity checks (must pass before proceeding) ---&quot;</span><span class="p">)</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="n">sanity_check_conative</span><span class="p">(</span><span class="n">con_rows</span><span class="p">)</span> <span class="o">+</span> <span class="n">sanity_check_coercion</span><span class="p">(</span><span class="n">cor_rows</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">errors</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;STOP — sanity check failures:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">errors</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  All sanity checks PASSED — recomputed numbers reconcile with parent result pages.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># ── print tables ───────────────────────────────────────────────────────</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">fmt_conative_table</span><span class="p">(</span><span class="n">con_rows</span><span class="p">)</span>
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">fmt_coercion_table</span><span class="p">(</span><span class="n">cor_rows</span><span class="p">)</span>
+    <span class="n">t3</span> <span class="o">=</span> <span class="n">fmt_summary_table</span><span class="p">(</span><span class="n">con_rows</span><span class="p">,</span> <span class="n">cor_rows</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">t3</span><span class="p">)</span>
+
+    <span class="c1"># ── narrative summary ──────────────────────────────────────────────────</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Narrative summary ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conative run:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">con_rows</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">short</span> <span class="o">=</span> <span class="n">MODEL_SHORT</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">short</span><span class="si">:</span><span class="s2">7s</span><span class="si">}</span><span class="s2">: NLI gap=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_gap&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2">pp  FC gap=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_gap&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2">pp  &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;abs_disagree=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;abs_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">pp  signed(NLI-FC)=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;signed_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2">pp&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coercion v2:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">cor_rows</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">short</span> <span class="o">=</span> <span class="n">MODEL_SHORT</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">con</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cons</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">short</span><span class="si">:</span><span class="s2">7s</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">con</span><span class="si">:</span><span class="s2">13s</span><span class="si">}</span><span class="s2">: NLI drop=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nli_drop&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2">pp  FC drop=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;fc_drop&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2">pp  &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;abs_disagree=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;abs_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">pp  signed(NLI-FC)=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;signed_disagree&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2">pp&quot;</span><span class="p">)</span>
+
+    <span class="c1"># ── write markdown table file ──────────────────────────────────────────</span>
+    <span class="n">md_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;instrument-disagreement-table.md&quot;</span><span class="p">)</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;# Instrument-disagreement table</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;Recomputed 2026-05-30 by `analyze.py` from the committed `raw/results.json` &quot;</span>
+        <span class="s2">&quot;of the two parent runs. No new API calls; $0.00 spend.</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;**Parent runs:**</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;- `experiments/runs/2026-05-29-conative-minimal-pair-probe-v1/` &quot;</span>
+        <span class="s2">&quot;(git commit `acbcdc4`)</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;- `experiments/runs/2026-05-29-argument-structure-coercion-probe-v2/` &quot;</span>
+        <span class="s2">&quot;(git commit `1f27d92`)</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;All figures are recomputed from the raw JSON; arithmetic shown in &quot;</span>
+        <span class="s2">&quot;[Table 1](#table-1) and [Table 2](#table-2); &quot;</span>
+        <span class="s2">&quot;[Table 3](#table-3) is the compact summary.</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">md_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+        <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">t1</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">t2</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">t3</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Wrote </span><span class="si">{</span><span class="n">md_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

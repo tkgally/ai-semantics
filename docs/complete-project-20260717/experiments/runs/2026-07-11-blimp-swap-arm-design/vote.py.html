@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>vote.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-11-blimp-swap-arm-design</a> <span class="sep">/</span> <span class="cur">vote.py</span></nav>
+<main>
+<header class="page-head">
+<h1>vote.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">9.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-11-blimp-swap-arm-design/vote.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;s209 — one NON-ANTHROPIC decorrelation vote on the BLiMP R1 CONTENT-WORD-SWAP arm design gates.</span>
+<span class="sd">PROTOCOL §2/§A3: QA input to the fresh-agent critic (who keeps verdict authority). panel.B (gpt-5.4-mini),</span>
+<span class="sd">cutoff-aware preamble. Records usage.cost via billed_cost(). Writes VOTE-s209.json + prints a summary.&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;lib&quot;</span><span class="p">)))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openrouter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PANEL</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="n">billed_cost</span>
+
+<span class="n">PREAMBLE</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Today is 2026-07-11. You may encounter references to papers, datasets, or models that postdate &quot;</span>
+    <span class="s2">&quot;your training cutoff. Treat post-cutoff recency as neutral: a paper you do not recognize is not &quot;</span>
+    <span class="s2">&quot;for that reason fabricated. Where you must rely on what you know, label it as such.&quot;</span>
+<span class="p">)</span>
+
+<span class="n">SYSTEM</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">PREAMBLE</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">You are an independent, adversarial PRE-RUN design critic for an autonomous &quot;</span>
+    <span class="s2">&quot;research project on LLM meaning. Your job is to find fatal flaws BEFORE any money is spent, and to &quot;</span>
+    <span class="s2">&quot;vote GO / GO-WITH-CONDITIONS / NO-GO on each value-laden gate. Be skeptical and concrete. &quot;</span>
+    <span class="s2">&quot;Ratification fixes the measuring yardstick, never the desired result — flag any choice that looks &quot;</span>
+    <span class="s2">&quot;aimed at a particular outcome. Reply in compact structured prose.&quot;</span>
+<span class="p">)</span>
+
+<span class="n">USER</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Design under review: a CONTENT-WORD-SWAP behavioral control (the second required arm of a two-arm</span>
+<span class="s2">training-confound control) for one already-run result.</span>
+
+<span class="s2">Background. An earlier probe (BLiMP forced-choice sweep: 40 human-validated English grammatical minimal-pair</span>
+<span class="s2">paradigms, 3 closed chat models, temperature 0, behavioral 2-alternative forced choice, both orders)</span>
+<span class="s2">produced reading R1 = PROFILE-ALIGNED: per model, the Spearman across the 40 paradigms of the model&#39;s</span>
+<span class="s2">per-paradigm forced-choice accuracy vs BLiMP&#39;s per-paradigm HUMAN agreement is positive on all three</span>
+<span class="s2">(rho_prof = +0.606 / +0.543 / +0.628, n=40, all CIs exclude 0). Interpretation: &quot;the panel is grammatically</span>
+<span class="s2">hard where humans are hard.&quot; A binding freeze condition (C8/G8) declared R1 NON-PROMOTABLE to a claim</span>
+<span class="s2">without controlling a training-frequency confound, and required BOTH: (arm 1) a corpus-frequency covariate</span>
+<span class="s2">partialled from rho_prof — ALREADY RUN, returned SURVIVES-COVARIATE 3/3 (partial rho +0.572/+0.510/+0.606),</span>
+<span class="s2">a ROBUSTNESS result, NOT a promotion, because it reuses the already-known accuracies and controls only a</span>
+<span class="s2">SURFACE-LEXICAL C4 frequency proxy; and (arm 2) THIS content-word-swap arm, which G8 makes REQUIRED for any</span>
+<span class="s2">human-comparison PROMOTION. Promotion candidacy requires SURVIVES (arm 1) AND SWAP-STABLE (arm 2).</span>
+
+<span class="s2">What the swap arm tests. BLiMP is public and contamination-bounded (absolute accuracy 0.87-0.94 = an upper</span>
+<span class="s2">bound). If the panel is right on the frozen BLiMP items partly because it has SEEN those exact strings, then</span>
+<span class="s2">rho_prof partly measures which paradigms were better memorized, not shared grammatical-difficulty structure.</span>
+<span class="s2">Replace the OPEN-CLASS content words (nouns, main-verb lemmas, adjectives, adverbs, proper names) with</span>
+<span class="s2">NOVEL, FREQUENCY-MATCHED words, re-inflected to preserve morphology, while holding EXACT the contrast locus</span>
+<span class="s2">(the one token that differs between the good and bad member) and the whole closed-class functional skeleton</span>
+<span class="s2">(determiners, auxiliaries, complementizers, negation, quantifiers, wh-words, prepositions). If per-paradigm</span>
+<span class="s2">accuracy is STABLE under swap, the profile does not ride on exact-string memorization. Fresh items + fresh</span>
+<span class="s2">calls =&gt; the swapped accuracies are UNKNOWN at freeze, so (unlike the covariate arm) the designer cannot</span>
+<span class="s2">tune the swap to a target; the only DoF is the build, fenced by a fresh-agent verifier reproducing the</span>
+<span class="s2">swap-build from the frozen recipe before any item is scored.</span>
+
+<span class="s2">Scope honesty (stated in the design): SWAP-STABLE rules out exact-string / lexical-item memorization; it</span>
+<span class="s2">does NOT control CONSTRUCTION frequency (a content-swapped island is still a rare construction) — that is</span>
+<span class="s2">the covariate arm&#39;s job, and even both arms reach construction frequency only indirectly. anchor = BLiMP</span>
+<span class="s2">human agreement (human-comparison), never internal-contrast-only.</span>
+
+<span class="s2">This design turns the swap-arm operationalization into three gates (it does NOT re-open Q1-C/Q2-A/Q3-A/G8,</span>
+<span class="s2">all already ratified — only HOW the swap arm is built and scored).</span>
+
+<span class="s2">Q1 (paradigm &amp; item selection — accuracy-blind AND human-agreement-blind):</span>
+<span class="s2">  A [DEFAULT] = 3 shallow + 3 deep = 6 paradigms, chosen within each depth stratum by a deterministic</span>
+<span class="s2">      SWAPPABILITY score (count of open-class positions swappable without touching the contrast locus; ties</span>
+<span class="s2">      by UID alphabetical), blind to accuracy and human agreement; ORIGINAL condition = the frozen 30 items</span>
+<span class="s2">      per paradigm RE-RUN FRESH this session (so Delta-acc = acc_swap - acc_orig is a within-run PAIRED</span>
+<span class="s2">      quantity, no known-accuracy exposure). ~2160 calls, ~$0.3-0.5.</span>
+<span class="s2">  B = the &gt;=2 + &gt;=2 minimum (4 paradigms); cheaper, but no within-stratum replication.</span>
+<span class="s2">  C = reuse the frozen prior original accuracies as the baseline (don&#39;t re-run originals); halves calls but</span>
+<span class="s2">      re-imports the known-accuracy exposure the swap arm exists to escape.</span>
+
+<span class="s2">Q2 (THE CRUX — the swap operationalization: frequency-balancing norm + POS/morphology preservation):</span>
+<span class="s2">  A [DEFAULT] = SUBTLEX-US Lg10WF banding (a HUMAN-VALIDATED subtitle frequency norm, license-verified,</span>
+<span class="s2">      recipe-not-corpus) + a FROZEN hand-curated POS-labelled content lexicon; each replacement matched</span>
+<span class="s2">      within +-0.10 Lg10WF of the original, same POS, re-inflected. The plain 2009 SUBTLEX file has NO POS,</span>
+<span class="s2">      so POS labelling is a curation DoF (frozen + verifier-reproduced).</span>
+<span class="s2">  B = fetch + license-check the 2012 &quot;SUBTLEX-US with PoS&quot; file for auditable POS selection (removes the</span>
+<span class="s2">      curation DoF; adds a not-yet-in-repo fetch under a no-unlicensed-adoption rule; fall back to A if the</span>
+<span class="s2">      license check fails).</span>
+<span class="s2">  C = C4 log-frequency banding (reuse the covariate arm&#39;s machinery): balances the swap on the SAME corpus</span>
+<span class="s2">      family as the covariate arm, but on a PRETRAINING PROXY, not the human-validated norm. Sensitivity</span>
+<span class="s2">      cross-check only; rejected as primary.</span>
+
+<span class="s2">Q3 (grammaticality re-validation WITHOUT human subjects + promotion scope):</span>
+<span class="s2">  A [DEFAULT] = mechanical construction-preservation + integrity check (POS/morphology match; contrast locus</span>
+<span class="s2">      byte-identical; real-word membership in-band; no new agreement coincidence); a broken pair is dropped,</span>
+<span class="s2">      logged, reported; a paradigm below a usable-pair floor is dropped and power re-stated; the lead</span>
+<span class="s2">      spot-audits a fixed sample AS RESEARCHER (not a human-subject acceptability task). SWAP-STABLE (with</span>
+<span class="s2">      the prior SURVIVES) =&gt; R1 becomes a promotion-review CANDIDATE (a later, separate, cross-session</span>
+<span class="s2">      adversarial review writes the claim). SWAP-DROPS =&gt; R1 refused; the shadow-depth table&#39;s grammar-side</span>
+<span class="s2">      row keeps only its within-panel DEPTH-GRADED sibling.</span>
+<span class="s2">  B = add an automated acceptability screen (frozen parser / off-panel LLM) to drop semantically anomalous</span>
+<span class="s2">      swaps; tighter, but its own DoF and risks importing a model&#39;s grammaticality opinion into the</span>
+<span class="s2">      instrument.</span>
+<span class="s2">  C = treat SWAP-STABLE as writing the R1 claim this session (no separate promotion review).</span>
+
+<span class="s2">Verdict (INHERITED from the already-ratified parent design, not re-opened): SWAP-STABLE iff within-stratum</span>
+<span class="s2">mean |Delta-acc| &lt;= 0.05 on BOTH the shallow and deep strata for &gt;=2/3 models; SWAP-DROPS iff mean</span>
+<span class="s2">Delta-acc &lt;= -0.05 within a stratum on &gt;=2/3; else SWAP-INCONCLUSIVE. Both orders, position-bias netted;</span>
+<span class="s2">the s205 INSTRUMENT-FAILURE guard carried verbatim. Cost of the RUN ~$0.3-0.5; ABORT_USD ~1.0. This design</span>
+<span class="s2">session&#39;s only spend is this one vote.</span>
+
+<span class="s2">Give, concisely:</span>
+<span class="s2">1. Overall GO / GO-WITH-CONDITIONS / NO-GO on running this swap arm after gate ratification.</span>
+<span class="s2">2. A per-gate vote: Q1 (A/B/C), Q2 (A/B/C), Q3 (A/B/C), each one line of rationale.</span>
+<span class="s2">3. The single biggest methodological risk in the SWAP CONSTRUCTION itself (grammaticality / frequency /</span>
+<span class="s2">   selectional anomaly), and the one freeze-time condition you would add.</span>
+<span class="s2">4. Is the swap arm as designed a strong enough control that SWAP-STABLE + the prior SURVIVES-COVARIATE</span>
+<span class="s2">   jointly license a HUMAN-COMPARISON promotion CANDIDACY (a later review still writes the claim)? Or is</span>
+<span class="s2">   there a residual confound both arms miss that should bound the candidacy? One paragraph.</span>
+<span class="s2">5. Any place the design looks aimed at a desired result (anti-cheat), or &quot;none&quot;.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">],</span> <span class="n">SYSTEM</span><span class="p">,</span> <span class="n">USER</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">1600</span><span class="p">)</span>
+    <span class="n">cost</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n_missing</span> <span class="o">=</span> <span class="n">billed_cost</span><span class="p">([[</span><span class="n">r</span><span class="p">]])</span>  <span class="c1"># billed_cost returns (cost, n, n_missing)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">],</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">),</span>
+           <span class="s2">&quot;billed_cost&quot;</span><span class="p">:</span> <span class="n">cost</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;n_missing&quot;</span><span class="p">:</span> <span class="n">n_missing</span><span class="p">,</span>
+           <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">),</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;VOTE-s209.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== NON-ANTHROPIC DECORRELATION VOTE (panel.B =&quot;</span><span class="p">,</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">],</span> <span class="s2">&quot;) ===&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;billed_cost: $</span><span class="si">%.6f</span><span class="s2"> (n=</span><span class="si">%d</span><span class="s2">, missing=</span><span class="si">%d</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">cost</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">n_missing</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;error:&quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

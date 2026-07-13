@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>way-construction-traversal-v1.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">wiki</a> <span class="sep">/</span> <a href="../index.html">findings</a> <span class="sep">/</span> <a href="index.html">results</a> <span class="sep">/</span> <span class="cur">way-construction-traversal-v1.md</span></nav>
+<main>
+<header class="page-head">
+<h1>way-construction-traversal-v1.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">13.8 KB</span> &middot; <code class="fpath">wiki/findings/results/way-construction-traversal-v1.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>type</th><td>result</td></tr><tr><th>id</th><td>way-construction-traversal-v1</td></tr><tr><th>title</th><td>The project&#x27;s own way-construction minimal pairs — all three models draw the path-traversal entailment from non-motion verbs above the ratified bar, with gpt-5.4-mini the conservative outlier on consumption verbs</td></tr><tr><th>meaning-senses</th><td><ul class='fm-list'><li>constructional</li><li>inferential</li><li>distributional</li><li>human-comparison</li></ul></td></tr><tr><th>status</th><td>proposed</td></tr><tr><th>contingent-on</th><td><span class='muted'>(none)</span></td></tr><tr><th>created</th><td>2026-05-29</td></tr><tr><th>updated</th><td>2026-07-05</td></tr><tr><th>links</th><td><ul class='fm-list'><li>rel: supports, target: conjecture/way-construction</li><li>rel: supports, target: result/caused-motion-minimal-pair-divergence-v1</li><li>rel: anchors, target: resource/scivetti-2025-cxnli-dataset</li><li>rel: depends-on, target: open-question/constructional-vs-frequency-confound</li><li>rel: depends-on, target: theory/constructional-meaning-in-llms</li></ul></td></tr></table></div><div class='md'><h1 id="result-way-construction-minimal-pair-probe-v1">Result: way-construction minimal-pair probe v1</h1>
+<p>The project's <strong>own</strong> test of <a href="../conjectures/way-construction.md.html"><code>conjecture/way-construction</code></a> — the third own-design argument-structure minimal-pair probe, completing the set begun by <a href="conative-minimal-pair-divergence-v1.md.html"><code>result/conative-minimal-pair-divergence-v1</code></a> (the construction <em>removes</em> an entailment) and <a href="caused-motion-minimal-pair-divergence-v1.md.html"><code>result/caused-motion-minimal-pair-divergence-v1</code></a> (the construction <em>adds</em> a transitive causation-of-motion entailment). The way-construction is the converse-flavoured "add" case: it coerces a <strong>self-motion / path-traversal</strong> entailment onto non-motion verbs — <em>Mia whistled her way down the hall</em> entails Mia moved down the hall, though <em>whistle</em> denotes no displacement (Goldberg 1995, ch. 9). Design + frozen stimuli: <a href="../../../experiments/designs/way-construction-v1.md.html"><code>design/way-construction-v1</code></a>; run record: <a href="../../../experiments/runs/2026-05-29-way-construction-probe-v1/README.md.html"><code>experiments/runs/2026-05-29-way-construction-probe-v1/</code></a>.</p>
+<p><strong>One-line finding:</strong> the conjecture's confirm bar is <strong>met by all three models on both instruments</strong> — way rate <strong>77.8–100%</strong>, gap (way − location control) <strong>77.7–100 pp</strong>, in <strong>3/3 models</strong>, and the anti-motion stress category (the predicted verb-reading weak spot) <strong>holds at or near ceiling for every model</strong>. Two models (claude, gemini) are at/near ceiling; <strong>gpt-5.4-mini is the conservative outlier</strong> — its only non-affirms (4–5 items: <em>hum, eat, chat</em>, and under forced-choice <em>snack</em>) it reads as "may or may not have moved." The over-generalization guard (idiomatic <em>way</em>) sits at <strong>0%</strong> for all models and the location control near <strong>floor</strong>, so this is not surface-string detection. Lead caveat (as for the CC and caused-motion results): <strong>ceiling on relatively easy controls is weak evidence for any strong "deep processing" reading.</strong></p>
+<h2 id="what-ran">What ran</h2>
+<ul>
+<li><strong>Panel</strong> (<a href="../../../config/models.md.html"><code>config/models.md</code></a>): claude-sonnet-4.6 (A), gpt-5.4-mini (B), gemini-3.5-flash (C), as subjects. Both instruments (NLI 0/1/2 + forced-choice YES/NO/CANT_TELL); temperature 0; the ratified divergence operationalization. <strong>0 NA across all 360 calls.</strong></li>
+<li><strong>Stimuli</strong> (project's own, frozen pre-run; <code>items.csv</code> sha256[:16] <code>536977843dff18a5</code>): 18 non-motion verbs (6 manner, 6 activity, 6 anti-motion) × 3 forms — <strong>way</strong> (construction), <strong>ctrl-loc</strong> (same verb, locative of the same scene; the discriminating control), <strong>ctrl-motion</strong> (motion lexicalized in a "<em>walked …, V-ing</em>" frame; the positive floor) — plus 6 <strong>idiomatic</strong> over-generalization guards (<em>talked her way out of trouble</em>). Indicator = <strong>affirm path-traversal rate</strong> (FC YES, or NLI entailment) on "<em>&lt;Subj&gt; moved from one place to another.</em>"</li>
+<li><strong>Cost</strong> (actual): <strong>$0.072</strong> (A $0.052 / B $0.003 / C $0.016). Well under the $5 flag.</li>
+</ul>
+<h2 id="results">Results</h2>
+<p>Affirm path-traversal rate (%). Confirm bar: way ≥70%, gap ≥30 pp vs. the location control, in ≥2/3 models, holding for the anti-motion category.</p>
+<table>
+<thead>
+<tr>
+<th>model</th>
+<th>instr.</th>
+<th style="text-align: right;">way</th>
+<th style="text-align: right;">ctrl-loc</th>
+<th style="text-align: right;">ctrl-motion</th>
+<th style="text-align: right;">idiom</th>
+<th style="text-align: right;"><strong>gap</strong></th>
+<th style="text-align: center;">manner / activity / anti</th>
+<th style="text-align: center;">verbs way-yes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>claude-sonnet-4.6</td>
+<td>NLI</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;"><strong>+100</strong></td>
+<td style="text-align: center;">100 / 100 / 100</td>
+<td style="text-align: center;">18/18</td>
+</tr>
+<tr>
+<td>claude-sonnet-4.6</td>
+<td>FC</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;"><strong>+100</strong></td>
+<td style="text-align: center;">100 / 100 / 100</td>
+<td style="text-align: center;">18/18</td>
+</tr>
+<tr>
+<td>gpt-5.4-mini</td>
+<td>NLI</td>
+<td style="text-align: right;">83.3%</td>
+<td style="text-align: right;">5.6%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;"><strong>+77.7</strong></td>
+<td style="text-align: center;">83.3 / 66.7 / 100</td>
+<td style="text-align: center;">15/18</td>
+</tr>
+<tr>
+<td>gpt-5.4-mini</td>
+<td>FC</td>
+<td style="text-align: right;">77.8%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;"><strong>+77.8</strong></td>
+<td style="text-align: center;">83.3 / 50.0 / 100</td>
+<td style="text-align: center;">14/18</td>
+</tr>
+<tr>
+<td>gemini-3.5-flash</td>
+<td>NLI</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">11.1%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;"><strong>+88.9</strong></td>
+<td style="text-align: center;">100 / 100 / 100</td>
+<td style="text-align: center;">18/18</td>
+</tr>
+<tr>
+<td>gemini-3.5-flash</td>
+<td>FC</td>
+<td style="text-align: right;">94.4%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;"><strong>+94.4</strong></td>
+<td style="text-align: center;">100 / 100 / 83.3</td>
+<td style="text-align: center;">17/18</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Confirm bar met by all three models on both instruments</strong> (way ≥77.8%, gap ≥77.7 pp). claude and gemini affirm the traversal entailment for essentially every verb (18/18; gemini 17/18 under FC); gpt-5.4-mini for 14–15/18.</li>
+<li><strong>ctrl-loc near floor (0–11.1%):</strong> when the same verb appears with a plain locative ("<em>Mia whistled in the hall</em>") instead of the construction, no model reads path-traversal. This is the discriminating control and the floor of the gap.</li>
+<li><strong>ctrl-motion = 100% everywhere (the positive floor):</strong> when motion is lexicalized ("<em>Mia walked down the hall, whistling</em>"), every model affirms traversal. This validates the indicator — a low way rate would mean "not reading the construction," not "doesn't understand the question."</li>
+<li><strong>idiomatic guard = 0% everywhere:</strong> for bleached/metaphorical <em>way</em> with a non-spatial goal ("<em>talked her way out of trouble</em>", "<em>worked his way up the company</em>"), no model affirms literal traversal. So the way-form affirmations are <strong>not</strong> mere detection of the surface string "<em>POSS way</em>."</li>
+<li><strong>P3 (verb-reading guard):</strong> the anti-motion category — the predicted collapse point for a model reading the <em>verb</em> rather than the construction — is at ceiling for claude and gemini-NLI (100%) and <strong>100% for gpt-5.4-mini on both instruments</strong>. No model shows the verb-reading failure mode. gemini's single anti-motion FC non-affirm is <em>waited his way up the queue</em> (CANT_TELL) — the most marginal item in the set.</li>
+</ul>
+<h3 id="gpt-54-minis-misses-are-scattered-not-the-anti-motion-stress-items">gpt-5.4-mini's misses are scattered, not the anti-motion stress items</h3>
+<p>gpt-5.4-mini's only way-form non-affirms are <strong>hum, eat, chat</strong> (NLI) and <strong>hum, eat, chat, snack</strong> (FC) — all judged <em>neutral / CANT_TELL</em>. They do <strong>not</strong> form a clean semantic class: <em>hum</em> is a manner-of-sound verb (categorized <code>manner</code>), while <em>eat, chat, snack</em> are <code>activity</code> verbs. For <em>eat/chat/snack</em> a metaphorical "made progress through" reading is genuinely available alongside the literal-traversal one (one can plausibly <em>eat across a buffet</em> without walking its length), so CANT_TELL there is defensible caution; <em>hum</em> (<em>hummed his way through the crowd</em>) has a clearly physical path, so its non-affirm is closer to arbitrary conservatism. The unifying point is <strong>not</strong> a tidy verb-class effect but that gpt applies a <strong>more conservative entailment bar</strong> — crucially, <strong>not</strong> the predicted verb-reading failure: it affirms the <em>anti-motion</em> items (<em>waited/rested/knelt his way</em>) at <strong>100%</strong>, where the literal reading is the only one available. This mirrors gpt-5.4-mini's role as the divergent, instrument-sensitive model in the <a href="conative-minimal-pair-divergence-v1.md.html"><code>result/conative-minimal-pair-divergence-v1</code></a> probe.</p>
+<h2 id="interpretation-modest">Interpretation (modest)</h2>
+<ol>
+<li><strong>The way-construction's path-traversal entailment is drawn off the construction, above the ratified bar by all three models.</strong> With the (non-motion) verb held constant and toggled against a plain locative, all three models read the self-motion inference from the <em>construction</em>, not the verb. This <strong>confirms</strong> the conjecture at its stated bar — the conjecture's three predictions (prediction 1 — way ≥70%; prediction 2 — gap ≥30 pp vs. controls; prediction 3 — robust to verb semantics, i.e. anti-motion holds) are all met, and the <em>added</em> over-generalization guard (idiomatic <em>way</em> → low) — not one of the conjecture's stated predictions but a design-level robustness check — also passes.</li>
+<li><strong>It is the construction, not the surface "<em>way</em>" string.</strong> The idiomatic guard (surface <em>POSS way</em> + non-spatial goal) is at 0% for all models, and the location control near floor — two independent ways the result rules out a surface-string heuristic. Together with ctrl-motion at ceiling (the indicator fires when motion is lexical), the contrast is clean.</li>
+<li><strong>The set of three argument-structure probes now sketches a consistent picture.</strong> Across conative (cancel an entailment — harder, instrument-fragile), caused-motion (add a causation-of-motion entailment — ceiling), and now way (add a self-motion entailment — above bar, near ceiling): current decoders <strong>license a construction-contributed inference readily</strong> and <strong>suppress a lexically-default one less readily</strong>. The way-construction is an "add" case and patterns with caused-motion (easy direction), consistent with the asymmetry flagged in <a href="../theory/constructional-meaning-in-llms.md.html"><code>theory/constructional-meaning-in-llms</code></a>. <em>(superseded s177 by <a href="../theory/constructional-meaning-in-llms-v2.md.html"><code>theory/constructional-meaning-in-llms-v2</code></a> — cited here as the edition this page engaged.)</em></li>
+<li><strong>The one cross-model split is interpretively benign.</strong> gpt-5.4-mini's 4–5 non-affirms are scattered across the manner and activity categories (not a clean verb class); for the <em>eat/chat/snack</em> subset a real metaphorical-progress alternative makes CANT_TELL cautious-not-wrong, and it affirms the harder anti-motion items at 100%. The divergence is itself data (charter §6) but does not undercut the confirm.</li>
+</ol>
+<p>This places the way-construction alongside the comparative correlative and caused-motion as an upper-ladder <strong>positive at/near ceiling</strong> (Tier 4 inference-licensing, with the Tier-3 anti-motion / frequency-stress control passed).</p>
+<h2 id="what-this-licenses-does-not-license">What this licenses / does not license</h2>
+<p><strong>Licenses:</strong> a project-owned statement that current decoders draw the way-construction's path-traversal entailment onto non-motion verbs above the ratified bar (3/3 models, both instruments), with the location control, the over-generalization guard, and the anti-motion verb-reading guard all passed — promoting <a href="../conjectures/way-construction.md.html"><code>conjecture/way-construction</code></a> to <code>tested</code> (supported).</p>
+<p><strong>Does NOT license:</strong>
+- <strong>A strong "deep constructional processing" claim.</strong> Like the CC and caused-motion results, this is <strong>ceiling on relatively easy controls</strong> (ctrl-loc is a plain locative; the way items are well-formed canonical or marked-but-interpretable coercions). Ceiling discriminates poorly — a harder instrument (conflicting cues; verbs that <em>contradict</em> motion in a fully resolved context) could separate the models. The calibrated reading is "the construction-contributed traversal inference is reliably available," not "the model has deep motion-event semantics."
+- <strong>A tight item-matched human comparison.</strong> N=18 verbs, single run; the Scivetti anchor is answer-key/aggregate and these are the project's own items (phenomenon-level comparison: the way-construction is a real construction with a ≈0.90/0.83 native baseline in Scivetti's CxNLI).
+- <strong>A model-internal or grounding claim.</strong> Behavioral only.</p>
+<h2 id="limits">Limits</h2>
+<ul>
+<li><strong>Ceiling result</strong> — the main caution; a coercion-resisting / conflicting-cue v2 is the natural follow-up (queued).</li>
+<li><strong>N=18 verbs, single run/date, both instruments.</strong> Cross-model + cross-instrument convergence is the robustness signal; the one divergence (gpt-5.4-mini on consumption verbs) is reported in full.</li>
+<li><strong>Directional-PP vs locative confound (documented, not tuned away):</strong> the <em>way</em> form uses a directional PP ("<em>down the hall</em>") and ctrl-loc a locative ("<em>in the hall</em>"). The bare directional form ("<em>*Mia whistled down the hall</em>") is <strong>ungrammatical</strong> for these non-motion verbs <em>without</em> the construction — which is itself the construction's signature, but means the way-vs-loc gap is not a pure "<em>way</em>"-string toggle. The idiomatic guard (surface <em>way</em>, non-spatial goal → 0%) bounds the "is it just the string?" worry; full reasoning in the run's <code>build_items.py</code> header.</li>
+<li><strong>Anti-motion items are deliberately marked.</strong> <em>Waited/rested/knelt/crouched/paused/lingered his way</em> are marginal way-constructions; each path-PP is spatial so the traversal gold holds <em>if</em> the string is parsed as a way-construction at all. That all three models affirm them at/near ceiling is itself the prediction-3 result.</li>
+<li><strong>Shared priors (charter §2.5):</strong> three decoders are not three independent witnesses; the independent bearing is the Goldberg/Scivetti human anchor.</li>
+</ul>
+<h2 id="provenance">Provenance</h2>
+<ul>
+<li>Conjecture: <a href="../conjectures/way-construction.md.html"><code>conjecture/way-construction</code></a>. Operationalization: <a href="../../decisions/resolved/constructional-divergence-operationalization.md.html"><code>decisions/resolved/constructional-divergence-operationalization</code></a> (ratified). Anchor: <a href="../../decisions/resolved/way-construction-anchor.md.html"><code>decisions/resolved/way-construction-anchor</code></a> → <a href="../../base/resources/scivetti-2025-cxnli-dataset.md.html"><code>resource/scivetti-2025-cxnli-dataset</code></a>. Inventory seed: Goldberg (1995, ch. 9).</li>
+<li>Companions: <a href="conative-minimal-pair-divergence-v1.md.html"><code>result/conative-minimal-pair-divergence-v1</code></a>, <a href="caused-motion-minimal-pair-divergence-v1.md.html"><code>result/caused-motion-minimal-pair-divergence-v1</code></a>.</li>
+<li>Run record + code + full (own-stimuli) outputs + cost: <a href="../../../experiments/runs/2026-05-29-way-construction-probe-v1/README.md.html"><code>experiments/runs/2026-05-29-way-construction-probe-v1/</code></a>. Every number reproducible from the committed <code>raw/results.json</code>.</li>
+</ul>
+<h2 id="status">Status</h2>
+<p><code>status: proposed</code>. Numbers reproducible from committed code + <code>raw/results.json</code>. <code>contingent-on: []</code>. Promotion past <code>proposed</code> awaits Tom's review. <em>(Governance note, s183: since the autonomous-era amendment of 2026-06-12 — <a href="../../../PROJECT.md.html"><code>PROJECT.md</code></a> §12.3 — promotion runs by autonomous cross-session adversarial review; Tom holds a standing override.)</em> The standing caveat is the ceiling: this confirms the conjecture's prediction but a harder instrument is needed to probe the strength of the underlying competence.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

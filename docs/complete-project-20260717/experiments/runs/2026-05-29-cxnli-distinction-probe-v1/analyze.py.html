@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-29-cxnli-distinction-probe-v1</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">3.1 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-29-cxnli-distinction-probe-v1/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Analyze the CxNLI base-vs-distinction probe (2026-05-29).</span>
+
+<span class="sd">Per-construction and overall:</span>
+<span class="sd">  - base accuracy (Exp1 subsample)  vs  distinction accuracy (Exp2)</span>
+<span class="sd">  - the DROP (base - distinction) — the quantity Scivetti reports as &gt;40% for GPT-o1</span>
+<span class="sd">Compares to the Scivetti human baselines (Exp1 ~0.90, Exp2 ~0.83) and the published</span>
+<span class="sd">GPT-o1 &gt;40% aggregate drop. No threshold retuning: the ratified divergence threshold</span>
+<span class="sd">machinery (constructional-divergence-operationalization) governs interpretation;</span>
+<span class="sd">here we report the raw drop and let the result page interpret against the fixed</span>
+<span class="sd">human/published references.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">)</span>
+<span class="n">PANEL</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;claude-sonnet-4.6&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;gemini-3.5-flash&quot;</span><span class="p">}</span>
+<span class="n">CXNS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;causative-with-CxN&quot;</span><span class="p">,</span> <span class="s2">&quot;caused-motion&quot;</span><span class="p">,</span> <span class="s2">&quot;conative&quot;</span><span class="p">,</span> <span class="s2">&quot;intransitive-motion&quot;</span><span class="p">,</span> <span class="s2">&quot;resultative&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="n">arm</span><span class="p">,</span> <span class="n">slot</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">arm</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">acc</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="n">cxn</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">sel</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="n">cxn</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;cxn&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">cxn</span><span class="p">]</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">sel</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pred&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">p</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">p</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;pred&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">]))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;per_model&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;references&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;scivetti_human_exp1&quot;</span><span class="p">:</span> <span class="mf">0.90</span><span class="p">,</span> <span class="s2">&quot;scivetti_human_exp2&quot;</span><span class="p">:</span> <span class="mf">0.83</span><span class="p">,</span>
+        <span class="s2">&quot;scivetti_gpt_o1_drop&quot;</span><span class="p">:</span> <span class="s2">&quot;&gt;40% (aggregate, published)&quot;</span><span class="p">}}</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">========== CxNLI BASE vs DISTINCTION — project-run replication ==========&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Human baselines: Exp1(base)~0.90  Exp2(distinction)~0.83  |  GPT-o1 published drop &gt;40%</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;model&#39;</span><span class="si">:</span><span class="s2">&lt;20</span><span class="si">}{</span><span class="s1">&#39;baseAcc&#39;</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}{</span><span class="s1">&#39;distAcc&#39;</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}{</span><span class="s1">&#39;DROP pp&#39;</span><span class="si">:</span><span class="s2">&gt;9</span><span class="si">}</span><span class="s2">   per-construction drop (base-&gt;dist)&quot;</span><span class="p">)</span>
+    <span class="n">agg</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PANEL</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">&quot;base&quot;</span><span class="p">,</span> <span class="n">slot</span><span class="p">);</span> <span class="n">d</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="s2">&quot;distinction&quot;</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+        <span class="n">ba</span><span class="p">,</span> <span class="n">bn</span> <span class="o">=</span> <span class="n">acc</span><span class="p">(</span><span class="n">b</span><span class="p">);</span> <span class="n">da</span><span class="p">,</span> <span class="n">dn</span> <span class="o">=</span> <span class="n">acc</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="n">drop</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">ba</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">da</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">round</span><span class="p">((</span><span class="n">ba</span> <span class="o">-</span> <span class="n">da</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">percx</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">cxn</span> <span class="ow">in</span> <span class="n">CXNS</span><span class="p">:</span>
+            <span class="n">bca</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">acc</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">cxn</span><span class="p">);</span> <span class="n">dca</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">acc</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">cxn</span><span class="p">)</span>
+            <span class="n">percx</span><span class="p">[</span><span class="n">cxn</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="n">bca</span><span class="p">,</span> <span class="s2">&quot;dist&quot;</span><span class="p">:</span> <span class="n">dca</span><span class="p">,</span>
+                          <span class="s2">&quot;drop_pp&quot;</span><span class="p">:</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">bca</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">dca</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">round</span><span class="p">((</span><span class="n">bca</span> <span class="o">-</span> <span class="n">dca</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)}</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="n">slot</span><span class="p">],</span> <span class="s2">&quot;base_acc&quot;</span><span class="p">:</span> <span class="n">ba</span><span class="p">,</span> <span class="s2">&quot;dist_acc&quot;</span><span class="p">:</span> <span class="n">da</span><span class="p">,</span>
+                                  <span class="s2">&quot;drop_pp&quot;</span><span class="p">:</span> <span class="n">drop</span><span class="p">,</span> <span class="s2">&quot;base_n&quot;</span><span class="p">:</span> <span class="n">bn</span><span class="p">,</span> <span class="s2">&quot;dist_n&quot;</span><span class="p">:</span> <span class="n">dn</span><span class="p">,</span>
+                                  <span class="s2">&quot;na&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">b</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pred&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">),</span>
+                                         <span class="s2">&quot;dist&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">d</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pred&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)},</span>
+                                  <span class="s2">&quot;per_construction&quot;</span><span class="p">:</span> <span class="n">percx</span><span class="p">}</span>
+        <span class="n">agg</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="n">drop</span>
+        <span class="n">cxstr</span> <span class="o">=</span> <span class="s2">&quot;  &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">][:</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">percx</span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="s1">&#39;drop_pp&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">CXNS</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">&lt;20</span><span class="si">}{</span><span class="n">ba</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">7.0f</span><span class="si">}</span><span class="s2">%</span><span class="si">{</span><span class="n">da</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">7.0f</span><span class="si">}</span><span class="s2">%</span><span class="si">{</span><span class="n">drop</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2">pp   </span><span class="si">{</span><span class="n">cxstr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">mean drop across panel: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">agg</span><span class="o">.</span><span class="n">values</span><span class="p">())</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">agg</span><span class="p">)</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> pp &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;(Scivetti GPT-o1 published: &gt;40%)&quot;</span><span class="p">)</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="s2">&quot;results.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">wrote </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;results.json&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

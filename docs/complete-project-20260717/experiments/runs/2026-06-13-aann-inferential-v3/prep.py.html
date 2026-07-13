@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>prep.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-13-aann-inferential-v3</a> <span class="sep">/</span> <span class="cur">prep.py</span></nav>
+<main>
+<header class="page-head">
+<h1>prep.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">18.3 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-13-aann-inferential-v3/prep.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;AANN inferential v3 — stimulus authoring (NO model calls).</span>
+
+<span class="sd">Authors the frozen items for the inferential probe and writes stimuli.json.</span>
+<span class="sd">The items are HAND-AUTHORED here (not model-generated): each base item carries</span>
+<span class="sd">its AANN sentence, its lexically-matched non-AANN control, the unification (U) /</span>
+<span class="sd">distributive (D) paraphrase pair, the NLI hypotheses, the was/were agreement</span>
+<span class="sd">pair, the noun class, the per-item local-fluency direction, the EXPERT-STIPULATED</span>
+<span class="sd">expected-inference key, and any item-level literature-dispute flag. The Tier-0</span>
+<span class="sd">forced-choice pairs (well-formed vs the 4 Mahowald degenerate variants) are built</span>
+<span class="sd">mechanically from the base AANN frames.</span>
+
+<span class="sd">Frozen discipline (Condition 8): everything here is fixed before any model call.</span>
+<span class="sd">This script asserts the two mechanical guarantees the design promises:</span>
+<span class="sd">  - lexical-overlap PARITY between U and D paraphrases (Condition 2): neither</span>
+<span class="sd">    paraphrase shares more premise content lemmas than the other (equal, or</span>
+<span class="sd">    within a tolerance of 1 with the direction recorded);</span>
+<span class="sd">  - A/B COUNTERBALANCE of the U/D paraphrase order and of the was/were order is</span>
+<span class="sd">    balanced across items (seeded), to block position bias.</span>
+
+<span class="sd">Run: python3 prep.py   (writes stimuli.json; makes NO network calls)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">20260613</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------------------------------------------------------</span>
+<span class="c1"># Expert-stipulated key (Condition 5/6). The unification reading is the</span>
+<span class="c1"># AANN-licensed answer. This is the DESIGN AUTHOR&#39;S coding of the published AANN</span>
+<span class="c1"># semantics — the unification/whole-evaluation analysis the conjecture page</span>
+<span class="c1"># describes and the constraint literature NAMES (Solt 2007 unit-coercion;</span>
+<span class="c1"># Dalrymple &amp; King 2019; Bylinina &amp; Nouwen 2018). Those papers are NOT in-repo;</span>
+<span class="c1"># they are named only as the analyses this stipulation rests on. NO quotes are</span>
+<span class="c1"># fabricated from them. The key is a SCORING KEY, not a human anchor.</span>
+<span class="n">KEY_PROVENANCE</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;EXPERT-STIPULATED. The unification/whole-evaluation reading is the &quot;</span>
+    <span class="s2">&quot;AANN-licensed answer per the design author&#39;s coding of the published AANN &quot;</span>
+    <span class="s2">&quot;semantics (Solt 2007 unit-coercion; Dalrymple &amp; King 2019; Bylinina &amp; &quot;</span>
+    <span class="s2">&quot;Nouwen 2018 — named as the analyses the stipulation rests on, NOT quoted; &quot;</span>
+    <span class="s2">&quot;they are not in-repo). This is a scoring key, not a behavioral-human anchor.&quot;</span>
+<span class="p">)</span>
+
+<span class="n">CHIEF_COST</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;The v3 can never say &#39;models draw the inference the way humans do&#39; — only &quot;</span>
+    <span class="s2">&quot;that the construction shifts inferential behaviour relative to a matched &quot;</span>
+    <span class="s2">&quot;control, in the direction the published semantics predicts.&quot;</span>
+<span class="p">)</span>
+
+<span class="n">STOPWORDS</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span>
+    <span class="s2">&quot;a an the and or of in on at to for was were is are be been it its they &quot;</span>
+    <span class="s2">&quot;them each one single continuous stretch whole individually that this we &quot;</span>
+    <span class="s2">&quot;i he she his her their there as what we needed which formed taken&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">content_lemmas</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Crude content-word set for the lexical-overlap parity check (lemma-ish:</span>
+<span class="sd">    lowercase, strip trailing &#39;s&#39;/&#39;ing&#39;/&#39;ly&#39; so &#39;days&#39;~&#39;day&#39;, &#39;gruelling&#39;</span>
+<span class="sd">    stays distinct). Stopwords removed; numerals kept as words.&quot;&quot;&quot;</span>
+    <span class="n">toks</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-z]+&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">toks</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">STOPWORDS</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">lem</span> <span class="o">=</span> <span class="n">t</span>
+        <span class="k">if</span> <span class="n">lem</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;ly&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">lem</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">lem</span> <span class="o">=</span> <span class="n">lem</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">lem</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;ing&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">lem</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">lem</span> <span class="o">=</span> <span class="n">lem</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">lem</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">lem</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">lem</span> <span class="o">=</span> <span class="n">lem</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">lem</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">overlap_count</span><span class="p">(</span><span class="n">premise</span><span class="p">,</span> <span class="n">paraphrase</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">content_lemmas</span><span class="p">(</span><span class="n">premise</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">content_lemmas</span><span class="p">(</span><span class="n">paraphrase</span><span class="p">))</span>
+
+
+<span class="c1"># ---------------------------------------------------------------------------</span>
+<span class="c1"># BASE ITEMS. Hand-authored. Each tuple:</span>
+<span class="c1">#   id, adj, num, noun, nounclass, aann, control, U-paraphrase, D-paraphrase,</span>
+<span class="c1">#   nli_premise_subject_aann, nli_premise_subject_control,</span>
+<span class="c1">#   agr_aann, agr_control, local_fluency, key_disputed(reason|None)</span>
+<span class="c1"># Adjectives kept evaluatively-loaded (the construction&#39;s semantics is partly</span>
+<span class="c1"># evaluative). Items where world-knowledge ALONE forces unification are avoided.</span>
+<span class="c1"># nounclass in {temporal, distance, object} (Mahowald measure-noun classes).</span>
+<span class="c1">#</span>
+<span class="c1"># The U and D paraphrases are written to keep premise content-lemma overlap</span>
+<span class="c1"># EQUAL (parity asserted below). Both describe the same numeral+noun, differing</span>
+<span class="c1"># only in unification (&quot;one continuous stretch, ... as a whole&quot;) vs distributive</span>
+<span class="c1"># (&quot;each ... individually&quot;); the evaluative adjective appears in BOTH.</span>
+<span class="c1"># ---------------------------------------------------------------------------</span>
+
+<span class="c1"># helper builders keep U/D wording templates parallel so overlap parity holds</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">U</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">adj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2"> formed one continuous stretch, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2"> as a whole.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">D</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">adj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Each of the </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2"> was individually </span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">NLI_uni</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2"> were a single continuous stretch.&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">NLI_whole</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">adj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;The stretch as a whole was </span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2">.&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">NLI_distrib</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">adj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Each </span><span class="si">{</span><span class="n">noun_sg</span><span class="p">(</span><span class="n">noun</span><span class="p">)</span><span class="si">}</span><span class="s2"> individually was </span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2">.&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">noun_sg</span><span class="p">(</span><span class="n">noun</span><span class="p">):</span>
+    <span class="c1"># S1 fix (2026-06-13 repair session): &quot;yards&quot; -&gt; &quot;yard&quot; (was &quot;yards&quot;, giving</span>
+    <span class="c1"># the ungrammatical foil &quot;Each yards individually was lonely&quot;).</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;hours&quot;</span><span class="p">:</span> <span class="s2">&quot;hour&quot;</span><span class="p">,</span> <span class="s2">&quot;weeks&quot;</span><span class="p">:</span> <span class="s2">&quot;week&quot;</span><span class="p">,</span> <span class="s2">&quot;months&quot;</span><span class="p">:</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;years&quot;</span><span class="p">:</span> <span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">:</span> <span class="s2">&quot;mile&quot;</span><span class="p">,</span> <span class="s2">&quot;yards&quot;</span><span class="p">:</span> <span class="s2">&quot;yard&quot;</span><span class="p">,</span> <span class="s2">&quot;pounds&quot;</span><span class="p">:</span> <span class="s2">&quot;pound&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;dollars&quot;</span><span class="p">:</span> <span class="s2">&quot;dollar&quot;</span><span class="p">,</span> <span class="s2">&quot;acres&quot;</span><span class="p">:</span> <span class="s2">&quot;acre&quot;</span><span class="p">,</span> <span class="s2">&quot;kilos&quot;</span><span class="p">:</span> <span class="s2">&quot;kilo&quot;</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">noun</span><span class="p">,</span> <span class="n">noun</span><span class="p">)</span>
+
+
+<span class="n">RAW_ITEMS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># ---- temporal ----</span>
+    <span class="p">(</span><span class="s2">&quot;beautiful&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">,</span> <span class="s2">&quot;days&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We spent a beautiful three days in Rome.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We spent three beautiful days in Rome.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;gruelling&quot;</span><span class="p">,</span> <span class="s2">&quot;five&quot;</span><span class="p">,</span> <span class="s2">&quot;days&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She endured a gruelling five days at sea.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She endured five gruelling days at sea.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;glorious&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;weeks&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;They had a glorious two weeks on the coast.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;They had two glorious weeks on the coast.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;miserable&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">,</span> <span class="s2">&quot;weeks&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He survived a miserable three weeks in quarantine.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He survived three miserable weeks in quarantine.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;restful&quot;</span><span class="p">,</span> <span class="s2">&quot;four&quot;</span><span class="p">,</span> <span class="s2">&quot;months&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We took a restful four months off work.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We took four restful months off work.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;punishing&quot;</span><span class="p">,</span> <span class="s2">&quot;six&quot;</span><span class="p">,</span> <span class="s2">&quot;months&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The crew faced a punishing six months of drought.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The crew faced six punishing months of drought.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;memorable&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;years&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She had a memorable two years abroad.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She had two memorable years abroad.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;turbulent&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">,</span> <span class="s2">&quot;years&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The country endured a turbulent three years.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The country endured three turbulent years.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;sleepless&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">,</span> <span class="s2">&quot;hours&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He passed a sleepless three hours before dawn.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He passed three sleepless hours before dawn.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;hectic&quot;</span><span class="p">,</span> <span class="s2">&quot;five&quot;</span><span class="p">,</span> <span class="s2">&quot;hours&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We worked a hectic five hours straight.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We worked five hectic hours straight.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="c1"># ---- distance ----</span>
+    <span class="p">(</span><span class="s2">&quot;scenic&quot;</span><span class="p">,</span> <span class="s2">&quot;five&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We hiked a scenic five miles along the ridge.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We hiked five scenic miles along the ridge.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;gruelling&quot;</span><span class="p">,</span> <span class="s2">&quot;ten&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She ran a gruelling ten miles in the heat.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She ran ten gruelling miles in the heat.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;muddy&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;They trudged a muddy three miles to the camp.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;They trudged three muddy miles to the camp.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;punishing&quot;</span><span class="p">,</span> <span class="s2">&quot;twenty&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He cycled a punishing twenty miles uphill.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He cycled twenty punishing miles uphill.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;breathtaking&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We drove a breathtaking two miles along the cliff.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We drove two breathtaking miles along the cliff.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;steep&quot;</span><span class="p">,</span> <span class="s2">&quot;four&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The trail climbed a steep four miles to the pass.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The trail climbed four steep miles to the pass.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;lonely&quot;</span><span class="p">,</span> <span class="s2">&quot;thirty&quot;</span><span class="p">,</span> <span class="s2">&quot;yards&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She swam a lonely thirty yards to shore.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She swam thirty lonely yards to shore.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;yard-count items are at the edge of the AANN measure-noun inventory; &quot;</span>
+     <span class="s2">&quot;Mahowald&#39;s distance class centers on miles, so &#39;yards&#39; coding is less &quot;</span>
+     <span class="s2">&quot;settled&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;treacherous&quot;</span><span class="p">,</span> <span class="s2">&quot;eight&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We sailed a treacherous eight miles around the headland.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We sailed eight treacherous miles around the headland.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="c1"># ---- object / measure class DROPPED in the 2026-06-13 repair (see README</span>
+    <span class="c1"># B1/B2): the &quot;formed one continuous stretch&quot; unification paraphrase is</span>
+    <span class="c1"># anomalous for mass/area nouns (pounds/acres/kilos are not a stretch), and</span>
+    <span class="c1"># the dollar items dropped their plural measure noun and were not well-formed</span>
+    <span class="c1"># AANN of the target shape. Per the pre-authorized repair list the object</span>
+    <span class="c1"># class is dropped rather than re-authored; temporal + distance (genuine</span>
+    <span class="c1"># extents, for which the &quot;continuous stretch&quot; unification reading is the</span>
+    <span class="c1"># natural one) are high-quality and sufficient. The result is scoped to</span>
+    <span class="c1"># temporal + distance measure nouns only.</span>
+    <span class="c1"># ---- a few more temporal/distance, balanced classes ----</span>
+    <span class="p">(</span><span class="s2">&quot;blissful&quot;</span><span class="p">,</span> <span class="s2">&quot;four&quot;</span><span class="p">,</span> <span class="s2">&quot;days&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We enjoyed a blissful four days by the lake.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We enjoyed four blissful days by the lake.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;brutal&quot;</span><span class="p">,</span> <span class="s2">&quot;six&quot;</span><span class="p">,</span> <span class="s2">&quot;weeks&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;Recruits faced a brutal six weeks of training.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;Recruits faced six brutal weeks of training.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;frantic&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;days&quot;</span><span class="p">,</span> <span class="s2">&quot;temporal&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;They had a frantic two days before the launch.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;They had two frantic days before the launch.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;dazzling&quot;</span><span class="p">,</span> <span class="s2">&quot;seven&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We skied a dazzling seven miles of fresh powder.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;We skied seven dazzling miles of fresh powder.&quot;</span><span class="p">,</span> <span class="s2">&quot;neutral&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;relentless&quot;</span><span class="p">,</span> <span class="s2">&quot;twelve&quot;</span><span class="p">,</span> <span class="s2">&quot;miles&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She marched a relentless twelve miles through the storm.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She marched twelve relentless miles through the storm.&quot;</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># 23 base items after the object class was dropped in repair: temporal 13,</span>
+<span class="c1"># distance 10 (was 32 = temporal 13 / distance 10 / object 9).</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">RAW_ITEMS</span><span class="p">)</span> <span class="o">==</span> <span class="mi">23</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">RAW_ITEMS</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">nclass</span><span class="p">,</span> <span class="n">aann</span><span class="p">,</span> <span class="n">control</span><span class="p">,</span> <span class="n">local_fluency</span><span class="p">,</span> <span class="n">disputed</span><span class="p">)</span> <span class="ow">in</span> \
+            <span class="nb">enumerate</span><span class="p">(</span><span class="n">RAW_ITEMS</span><span class="p">):</span>
+        <span class="n">uni</span> <span class="o">=</span> <span class="n">U</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">adj</span><span class="p">)</span>
+        <span class="n">dis</span> <span class="o">=</span> <span class="n">D</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">adj</span><span class="p">)</span>
+        <span class="c1"># lexical-overlap parity check (Condition 2): both paraphrases measured</span>
+        <span class="c1"># against the AANN premise. Templates are parallel by construction, but</span>
+        <span class="c1"># we assert it mechanically and record the counts.</span>
+        <span class="n">ov_u</span> <span class="o">=</span> <span class="n">overlap_count</span><span class="p">(</span><span class="n">aann</span><span class="p">,</span> <span class="n">uni</span><span class="p">)</span>
+        <span class="n">ov_d</span> <span class="o">=</span> <span class="n">overlap_count</span><span class="p">(</span><span class="n">aann</span><span class="p">,</span> <span class="n">dis</span><span class="p">)</span>
+        <span class="c1"># seeded counterbalance of the U/D letter and the was/were letter</span>
+        <span class="n">fc_letter_uni</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span> <span class="k">if</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="s2">&quot;B&quot;</span>
+        <span class="n">agr_letter_was</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span> <span class="k">if</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="s2">&quot;B&quot;</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;v3-</span><span class="si">{</span><span class="n">nclass</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;adj&quot;</span><span class="p">:</span> <span class="n">adj</span><span class="p">,</span> <span class="s2">&quot;num&quot;</span><span class="p">:</span> <span class="n">num</span><span class="p">,</span> <span class="s2">&quot;noun&quot;</span><span class="p">:</span> <span class="n">noun</span><span class="p">,</span> <span class="s2">&quot;nounclass&quot;</span><span class="p">:</span> <span class="n">nclass</span><span class="p">,</span>
+            <span class="s2">&quot;aann&quot;</span><span class="p">:</span> <span class="n">aann</span><span class="p">,</span> <span class="s2">&quot;control&quot;</span><span class="p">:</span> <span class="n">control</span><span class="p">,</span>
+            <span class="c1"># Arm A paraphrase forced choice</span>
+            <span class="s2">&quot;paraphrase_unification&quot;</span><span class="p">:</span> <span class="n">uni</span><span class="p">,</span>
+            <span class="s2">&quot;paraphrase_distributive&quot;</span><span class="p">:</span> <span class="n">dis</span><span class="p">,</span>
+            <span class="s2">&quot;fc_letter_unification&quot;</span><span class="p">:</span> <span class="n">fc_letter_uni</span><span class="p">,</span>   <span class="c1"># counterbalance (block bias)</span>
+            <span class="s2">&quot;lexical_overlap&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;unification&quot;</span><span class="p">:</span> <span class="n">ov_u</span><span class="p">,</span> <span class="s2">&quot;distributive&quot;</span><span class="p">:</span> <span class="n">ov_d</span><span class="p">,</span>
+                                <span class="s2">&quot;parity_ok&quot;</span><span class="p">:</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ov_u</span> <span class="o">-</span> <span class="n">ov_d</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">,</span>
+                                <span class="s2">&quot;direction&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;equal&quot;</span> <span class="k">if</span> <span class="n">ov_u</span> <span class="o">==</span> <span class="n">ov_d</span>
+                                              <span class="k">else</span> <span class="s2">&quot;unification&quot;</span> <span class="k">if</span> <span class="n">ov_u</span> <span class="o">&gt;</span> <span class="n">ov_d</span>
+                                              <span class="k">else</span> <span class="s2">&quot;distributive&quot;</span><span class="p">)},</span>
+            <span class="c1"># Arm B NLI hypotheses (affirm/withhold)</span>
+            <span class="s2">&quot;nli&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;unification_hyp&quot;</span><span class="p">:</span> <span class="n">NLI_uni</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">),</span>
+                <span class="s2">&quot;whole_eval_hyp&quot;</span><span class="p">:</span> <span class="n">NLI_whole</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">adj</span><span class="p">),</span>
+                <span class="s2">&quot;distributive_foil&quot;</span><span class="p">:</span> <span class="n">NLI_distrib</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">adj</span><span class="p">),</span>
+            <span class="p">},</span>
+            <span class="c1"># Agreement sub-probe (load-bearing discriminator)</span>
+            <span class="s2">&quot;agreement&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;aann_frame&quot;</span><span class="p">:</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A </span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2"> ___ what we needed.&quot;</span><span class="p">),</span>
+                <span class="s2">&quot;control_frame&quot;</span><span class="p">:</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2"> ___ what &quot;</span>
+                                  <span class="sa">f</span><span class="s2">&quot;we needed.&quot;</span><span class="p">),</span>
+                <span class="s2">&quot;aann_expected&quot;</span><span class="p">:</span> <span class="s2">&quot;was&quot;</span><span class="p">,</span>      <span class="c1"># singular reflex</span>
+                <span class="s2">&quot;control_expected&quot;</span><span class="p">:</span> <span class="s2">&quot;were&quot;</span><span class="p">,</span>  <span class="c1"># plural</span>
+                <span class="s2">&quot;agr_letter_was&quot;</span><span class="p">:</span> <span class="n">agr_letter_was</span><span class="p">,</span>  <span class="c1"># counterbalance</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;local_fluency&quot;</span><span class="p">:</span> <span class="n">local_fluency</span><span class="p">,</span>   <span class="c1"># which paraphrase is locally fluent</span>
+            <span class="s2">&quot;expected_inference_key&quot;</span><span class="p">:</span> <span class="s2">&quot;unification&quot;</span><span class="p">,</span>  <span class="c1"># the AANN-licensed answer</span>
+            <span class="s2">&quot;key_provenance&quot;</span><span class="p">:</span> <span class="s2">&quot;expert-stipulated&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;key_disputed&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">disputed</span><span class="p">),</span>
+            <span class="s2">&quot;key_dispute_reason&quot;</span><span class="p">:</span> <span class="n">disputed</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="c1"># ---- lexical-overlap parity assertion (Condition 2) ----</span>
+    <span class="c1"># SCOPE OF THIS METRIC (S2, documented in the 2026-06-13 repair): the parity</span>
+    <span class="c1"># check measures how much *premise content* (the adjective, numeral, and</span>
+    <span class="c1"># measure noun — the only content lemmas both paraphrases can echo from the</span>
+    <span class="c1"># premise) each paraphrase shares with the premise. It DELIBERATELY excludes</span>
+    <span class="c1"># the unification/distributive contrast vocabulary (&quot;continuous stretch /</span>
+    <span class="c1"># whole&quot; vs &quot;each / individually&quot;) via STOPWORDS, because those words ARE the</span>
+    <span class="c1"># experimental manipulation and must not be scored as &quot;overlap&quot; — counting</span>
+    <span class="c1"># them would penalise the very contrast we test. Because the U/D templates are</span>
+    <span class="c1"># parallel by construction, both paraphrases carry the same {adj, num, noun}</span>
+    <span class="c1"># premise content, so parity holds at equality. The metric is thus a</span>
+    <span class="c1"># construction-time guarantee, not a discriminating filter: it certifies the</span>
+    <span class="c1"># model cannot pick a paraphrase merely because it repeats more of the premise.</span>
+    <span class="n">bad</span> <span class="o">=</span> <span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;lexical_overlap&quot;</span><span class="p">][</span><span class="s2">&quot;parity_ok&quot;</span><span class="p">]]</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">bad</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;lexical-overlap parity violated (|U-D|&gt;1) for: </span><span class="si">{</span><span class="n">bad</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="c1"># ---- counterbalance balance assertion (Condition 1/2: block position bias)</span>
+    <span class="n">n_u_is_a</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;fc_letter_unification&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span>
+    <span class="n">n_was_is_a</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span>
+                     <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;agreement&quot;</span><span class="p">][</span><span class="s2">&quot;agr_letter_was&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span>
+    <span class="c1"># seeded; require roughly balanced (within ~25% of half of the item count)</span>
+    <span class="n">half</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">tol</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">n_u_is_a</span> <span class="o">-</span> <span class="n">half</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">tol</span><span class="p">,</span> <span class="n">n_u_is_a</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">n_was_is_a</span> <span class="o">-</span> <span class="n">half</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">tol</span><span class="p">,</span> <span class="n">n_was_is_a</span>
+
+    <span class="c1"># ---- under-pressure subset (Condition 4) ----</span>
+    <span class="n">under_pressure</span> <span class="o">=</span> <span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span>
+                      <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;local_fluency&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;distributive&quot;</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">under_pressure</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">under_pressure</span><span class="p">)</span>
+
+    <span class="c1"># ---- disputed-coding subset (Condition 6) ----</span>
+    <span class="n">disputed_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;key_disputed&quot;</span><span class="p">]]</span>
+
+    <span class="c1"># ---- Tier-0 pairs: well-formed AANN vs 4 Mahowald degenerate variants ----</span>
+    <span class="c1"># built from the first 6 base AANN sentences, like v2/v2b (6 tuples x 4 = 24)</span>
+    <span class="n">tier0</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">variants</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;reverse_mods&quot;</span><span class="p">,</span> <span class="s2">&quot;no_mod&quot;</span><span class="p">,</span> <span class="s2">&quot;no_plural&quot;</span><span class="p">,</span> <span class="s2">&quot;no_a&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">[:</span><span class="mi">6</span><span class="p">]:</span>
+        <span class="n">adj</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">noun</span> <span class="o">=</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;adj&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;num&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;noun&quot;</span><span class="p">]</span>
+        <span class="n">wf</span> <span class="o">=</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;aann&quot;</span><span class="p">]</span>            <span class="c1"># well-formed AANN</span>
+        <span class="c1"># degenerate edits on the noun-phrase span &quot;a &lt;adj&gt; &lt;num&gt; &lt;noun&gt;&quot;</span>
+        <span class="n">span</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;a </span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">edits</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;reverse_mods&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;a </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>     <span class="c1"># a three beautiful days</span>
+            <span class="s2">&quot;no_mod&quot;</span><span class="p">:</span>       <span class="sa">f</span><span class="s2">&quot;a </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>           <span class="c1"># a three days</span>
+            <span class="s2">&quot;no_plural&quot;</span><span class="p">:</span>    <span class="sa">f</span><span class="s2">&quot;a </span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun_sg</span><span class="p">(</span><span class="n">noun</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>  <span class="c1"># a beautiful three day</span>
+            <span class="s2">&quot;no_a&quot;</span><span class="p">:</span>         <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>       <span class="c1"># beautiful three days</span>
+        <span class="p">}</span>
+        <span class="k">assert</span> <span class="n">span</span> <span class="ow">in</span> <span class="n">wf</span><span class="p">,</span> <span class="p">(</span><span class="n">span</span><span class="p">,</span> <span class="n">wf</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">variants</span><span class="p">:</span>
+            <span class="n">ill</span> <span class="o">=</span> <span class="n">wf</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">span</span><span class="p">,</span> <span class="n">edits</span><span class="p">[</span><span class="n">v</span><span class="p">])</span>
+            <span class="n">aann_pos</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span> <span class="k">if</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="s2">&quot;B&quot;</span>  <span class="c1"># counterbalanced</span>
+            <span class="n">pair</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;tier0-</span><span class="si">{</span><span class="n">adj</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;contrast&quot;</span><span class="p">:</span> <span class="n">v</span><span class="p">,</span>
+                    <span class="s2">&quot;aann_position&quot;</span><span class="p">:</span> <span class="n">aann_pos</span><span class="p">}</span>
+            <span class="k">if</span> <span class="n">aann_pos</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span><span class="p">:</span>
+                <span class="n">pair</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">],</span> <span class="n">pair</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wf</span><span class="p">,</span> <span class="n">ill</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">pair</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">],</span> <span class="n">pair</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ill</span><span class="p">,</span> <span class="n">wf</span>
+            <span class="n">tier0</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">tier0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">24</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tier0</span><span class="p">)</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="n">SEED</span><span class="p">,</span>
+        <span class="s2">&quot;design&quot;</span><span class="p">:</span> <span class="s2">&quot;experiments/designs/aann-construction-v3-inferential.md&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;governing_decision&quot;</span><span class="p">:</span>
+            <span class="s2">&quot;wiki/decisions/resolved/aann-inferential-operationalization.md&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;anchor&quot;</span><span class="p">:</span> <span class="s2">&quot;internal-contrast-only&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;chief_cost_statement&quot;</span><span class="p">:</span> <span class="n">CHIEF_COST</span><span class="p">,</span>
+        <span class="s2">&quot;expected_inference_key_provenance&quot;</span><span class="p">:</span> <span class="n">KEY_PROVENANCE</span><span class="p">,</span>
+        <span class="s2">&quot;primary_instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;A (paraphrase forced-choice)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;convergent_instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;B (entailment NLI)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;load_bearing_discriminator&quot;</span><span class="p">:</span> <span class="s2">&quot;agreement (was/were) sub-probe&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;noun_classes&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">({</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;nounclass&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">}),</span>
+        <span class="s2">&quot;counts&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;base_items&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">),</span>
+            <span class="s2">&quot;by_nounclass&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;nounclass&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">)</span>
+                             <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">({</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;nounclass&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">})},</span>
+            <span class="s2">&quot;under_pressure_distributive&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">under_pressure</span><span class="p">),</span>
+            <span class="s2">&quot;key_disputed&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">disputed_ids</span><span class="p">),</span>
+            <span class="s2">&quot;tier0_pairs&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">tier0</span><span class="p">),</span>
+            <span class="s2">&quot;fc_unification_letter_A&quot;</span><span class="p">:</span> <span class="n">n_u_is_a</span><span class="p">,</span>
+            <span class="s2">&quot;agr_was_letter_A&quot;</span><span class="p">:</span> <span class="n">n_was_is_a</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;under_pressure_ids&quot;</span><span class="p">:</span> <span class="n">under_pressure</span><span class="p">,</span>
+        <span class="s2">&quot;key_disputed_ids&quot;</span><span class="p">:</span> <span class="n">disputed_ids</span><span class="p">,</span>
+        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="n">items</span><span class="p">,</span>
+        <span class="s2">&quot;tier0&quot;</span><span class="p">:</span> <span class="n">tier0</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">build</span><span class="p">()</span>
+    <span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;stimuli.json&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;wrote stimuli.json (NO model calls)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  base items: </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;base_items&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">  by class: </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;by_nounclass&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  under-pressure (distributive locally-fluent): &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;under_pressure_distributive&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  key-disputed (item-level flags): </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;key_disputed&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;-&gt; </span><span class="si">{</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;key_disputed_ids&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  tier0 pairs: </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;tier0_pairs&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  counterbalance: U-letter=A on </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;fc_unification_letter_A&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;/</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;base_items&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">; was-letter=A on </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;agr_was_letter_A&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;/</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;base_items&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  lexical-overlap parity: PASS (asserted)&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

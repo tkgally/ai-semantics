@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>README.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-20-scivetti-cxnli-answer-key</a> <span class="sep">/</span> <span class="cur">README.md</span></nav>
+<main>
+<header class="page-head">
+<h1>README.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">2.4 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-20-scivetti-cxnli-answer-key/README.md</code></p>
+</header>
+<div class='md'><h1 id="2026-06-20-scivetti-cxnli-answer-key-probe">2026-06-20 — Scivetti CxNLI answer-key probe</h1>
+<p><strong>What this run is.</strong> The first time the project scores the panel against the
+<strong>actual human-annotated</strong> Scivetti CxNLI items, rather than the project's own
+synthetic minimal pairs. Zero-shot 3-way NLI on the full 390-item Experiment-1 test
+set, per-item accuracy vs the released gold labels, vs the ≈0.90 native-speaker
+baseline. Runs under the <strong>ratified</strong> anchor
+<a href="../../../wiki/base/resources/scivetti-2025-cxnli-dataset.md.html"><code>resource/scivetti-2025-cxnli-dataset</code></a>
+(Tom, 2026-05-29); bears on the four CxG conjectures (caused-motion / conative /
+way-manner / comparative-correlative) and, descriptively, on
+<a href="../../../wiki/findings/conjectures/constructional-monotonicity-asymmetry.md.html"><code>conjecture/constructional-monotonicity-asymmetry</code></a>.</p>
+<p>Full pre-registration: <code>PREREG-draft.md</code> → freezes to <code>PREREG.md</code> after the
+independent pre-run critic GO.</p>
+<h2 id="files">Files</h2>
+<table>
+<thead>
+<tr>
+<th>file</th>
+<th>role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prep.py</code></td>
+<td>fetch+parse+freeze recipe (NO API); writes <code>stimuli-manifest.json</code> (hash + counts, NO item text); <code>--check</code> re-verifies the upstream sha</td>
+</tr>
+<tr>
+<td><code>stimuli-manifest.json</code></td>
+<td>the frozen hash + per-construction / per-label counts + provenance</td>
+</tr>
+<tr>
+<td><code>probe.py</code></td>
+<td>panel NLI calls — the ONLY API caller; freeze-guarded (PREREG + analyze + sha re-check); <code>ABORT_USD = 0.60</code>; raw stores item-id+gold+label only</td>
+</tr>
+<tr>
+<td><code>analyze.py</code></td>
+<td>frozen analysis (per-construction accuracy + Wilson CI, overall vs 0.90, confusion, add-vs-cancel descriptive); <code>--selftest</code></td>
+</tr>
+<tr>
+<td><code>PREREG-draft.md</code></td>
+<td>pre-registration draft (→ <code>PREREG.md</code> after pre-run-critic GO)</td>
+</tr>
+<tr>
+<td><code>raw/</code></td>
+<td>per-model NLI labels (NO premise/hypothesis text) + <code>cost-log.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="recipe-not-corpus">Recipe-not-corpus</h2>
+<p>The upstream repo has <strong>no license file</strong>, so per project rules the raw NLI item text
+is <strong>not</strong> committed — it lives gitignored under <code>experiments/data/scivetti/</code>
+(re-clone <code>github.com/melissatorgbi/beyond-memorization</code> @ <code>82699473</code>). The committed
+artifacts are the recipe (<code>prep.py</code>), the hash-manifest, and the derived accuracies.</p>
+<h2 id="stimuli-freeze-hash">Stimuli freeze hash</h2>
+<p><code>stimuli-manifest.json</code> sha256[:16] = <strong><code>1c5cffb18c5ef78e</code></strong> (390 items, 130/130/130
+label balance). <code>python3 prep.py --check</code> reproduces it.</p>
+<h2 id="verified-offline">Verified offline</h2>
+<ul>
+<li><code>python3 prep.py</code> → 390 items, balance asserts PASS, sha above.</li>
+<li><code>python3 prep.py --check</code> → PASS.</li>
+<li><code>python3 analyze.py --selftest</code> → <code>selftest PASS</code>.</li>
+<li><code>probe.py</code> NOT run until <code>PREREG.md</code> is frozen (post pre-run-critic GO).</li>
+</ul></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

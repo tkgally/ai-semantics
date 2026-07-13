@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_items.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-28-addarm-headroom-calibration</a> <span class="sep">/</span> <span class="cur">build_items.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_items.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">9.4 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-28-addarm-headroom-calibration/build_items.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Build + freeze the ADD-ARM HEADROOM CALIBRATION item set (2026-06-28, session 133).</span>
+
+<span class="sd">Pre-registration (charter s8): EMITS experiments/data/addarm-headroom-calibration/items.csv,</span>
+<span class="sd">run + committed BEFORE any probe call, sha256-hashed. This discharges (or fails to</span>
+<span class="sd">discharge) the s132 KEEP-OPEN BLOCKER on the operationalization decision</span>
+<span class="sd">(wiki/decisions/open/constructional-monotonicity-generalization-operationalization):</span>
+<span class="sd">&quot;Demonstrated add-arm headroom on frozen calibration items&quot; -- show, on frozen items</span>
+<span class="sd">BEFORE any main run, that a genuinely NON-result-entailing control exists and the add</span>
+<span class="sd">arm has real licensing-no-cue headroom against it -- OR name a cleaner add construction.</span>
+<span class="sd">The design-level companion is open-question/constructional-monotonicity-addarm-headroom.</span>
+
+<span class="sd">WHAT THIS MEASURES (the headroom question, stated sharply)</span>
+<span class="sd">---------------------------------------------------------</span>
+<span class="sd">For a candidate ADD construction, the discriminating quantity is the no-cue LICENSING GAP:</span>
+
+<span class="sd">  construction arm: &quot;&lt;subj&gt; hammered the metal flat.&quot;   -&gt; hyp &quot;The metal became flat.&quot;</span>
+<span class="sd">                    The construction LICENSES the added entailment. Want CEILING affirm.</span>
+<span class="sd">  control arm     : &quot;&lt;subj&gt; hammered the metal.&quot;        -&gt; hyp &quot;The metal became flat.&quot;</span>
+<span class="sd">                    Same verb + arguments, construction REMOVED. Does the bare default</span>
+<span class="sd">                    already supply the added entailment? Want OFF-CEILING (low) affirm.</span>
+
+<span class="sd">  per-verb headroom = construction_affirm - control_affirm.</span>
+
+<span class="sd">A verb has REAL headroom only if the construction licenses the entailment (high) AND the</span>
+<span class="sd">control does NOT already supply it (low). If the control is already at ceiling on the</span>
+<span class="sd">entailment -- the AANN default-coincidence trap -- the construction&#39;s contribution has</span>
+<span class="sd">nowhere to show, and &quot;add easy&quot; becomes a tautology of the arm construction rather than a</span>
+<span class="sd">finding (open-question/constructional-monotonicity-addarm-headroom, &quot;Why the resultative</span>
+<span class="sd">add arm risks degeneracy&quot;).</span>
+
+<span class="sd">TWO CANDIDATE CONSTRUCTIONS (both flagged live by the s132 feasibility page)</span>
+<span class="sd">---------------------------------------------------------------------------</span>
+<span class="sd">- RESULTATIVE: the decision&#39;s PROVISIONAL add arm (Option A1 used as A3&#39;s new-pair leg),</span>
+<span class="sd">  flagged AT-RISK / undemonstrated. Verbs span the canonicity spectrum: some manner verbs</span>
+<span class="sd">  whose bare default plausibly does NOT entail the result (hammer flat, kick open, paint</span>
+<span class="sd">  white...), some telic verbs whose default plausibly DOES (wipe clean, freeze solid,</span>
+<span class="sd">  sharpen sharp...). The calibration sorts them empirically.</span>
+<span class="sd">- INTRANSITIVE-MOTION: a Scivetti construction flagged PLAUSIBLE-BUT-UNVERIFIED. Manner-of-</span>
+<span class="sd">  motion verb + directional PP adds translational motion (change of location). Verbs span:</span>
+<span class="sd">  manner verbs with no inherent displacement (spin, float, sway...) vs verbs whose bare</span>
+<span class="sd">  default already entails displacement (roll, slide, drift). Added entailment phrased</span>
+<span class="sd">  GENERICALLY (&quot;moved to a different place&quot;), NOT goal-specific, so an off-ceiling control</span>
+<span class="sd">  reflects the construction&#39;s contribution, not an unmentioned goal noun.</span>
+
+<span class="sd">FROZEN READING RULE (the headroom gate) -- set HERE, before any data; see PREREG.md.</span>
+<span class="sd">A verb is HEADROOM-CLEAN if, in the panel aggregate (mean of 3 models, NLI primary):</span>
+<span class="sd">  construction licensing affirm &gt;= 0.80 (at/near ceiling) AND control default affirm &lt;= 0.40</span>
+<span class="sd">  (off ceiling; ~chance for a 3-way YES/NO/CANT_TELL, baseline ~0.33).</span>
+<span class="sd">A CONSTRUCTION DEMONSTRATES HEADROOM if &gt;= 4 of its 12 verbs are headroom-clean in the</span>
+<span class="sd">panel aggregate AND &gt;= 1 such verb is headroom-clean in &gt;= 2/3 models individually.</span>
+<span class="sd">Falsify arm is LIVE: if a construction&#39;s controls are mostly at ceiling (the degeneracy</span>
+<span class="sd">worry borne out) it FAILS the gate, recorded as such -- no threshold relaxed after data.</span>
+
+<span class="sd">HUMAN ANCHOR: none asserted. This is an INTERNAL design-feasibility calibration -- it</span>
+<span class="sd">makes NO human-comparison claim (it measures only within-model construction-vs-control</span>
+<span class="sd">affirm rates to decide whether a future battery&#39;s add arm can be built). No human label</span>
+<span class="sd">invented. (The future battery&#39;s anchor posture is the decision&#39;s job, not this page&#39;s.)</span>
+
+<span class="sd">Run: python3 build_items.py   (no API; writes + hashes the frozen CSV)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># ---------------------------------------------------------------------------</span>
+<span class="c1"># RESULTATIVE: (verb, past, object, result_adjective)</span>
+<span class="c1"># result hypothesis = &quot;The &lt;object&gt; became &lt;result_adjective&gt;.&quot;</span>
+<span class="c1"># Verbs chosen to span the control-canonicity spectrum (see module docstring).</span>
+<span class="c1"># PREDICTED off-ceiling control (manner verb; bare default does NOT entail result):</span>
+<span class="c1">#   hammer/flat, paint/white, kick/open, push/open, cut/short, beat/stiff,</span>
+<span class="c1">#   boil/thick, squeeze/dry</span>
+<span class="c1"># PREDICTED at/near-ceiling control (telic verb; bare default ~entails result -&gt; trap):</span>
+<span class="c1">#   wipe/clean, scrub/clean, freeze/solid, sharpen/sharp</span>
+<span class="c1"># The probe SORTS them; predictions are not used in scoring.</span>
+<span class="n">RESULTATIVE</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;hammer&quot;</span><span class="p">,</span>  <span class="s2">&quot;hammered&quot;</span><span class="p">,</span>  <span class="s2">&quot;metal&quot;</span><span class="p">,</span>   <span class="s2">&quot;flat&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span>   <span class="s2">&quot;painted&quot;</span><span class="p">,</span>   <span class="s2">&quot;fence&quot;</span><span class="p">,</span>   <span class="s2">&quot;white&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;kick&quot;</span><span class="p">,</span>    <span class="s2">&quot;kicked&quot;</span><span class="p">,</span>    <span class="s2">&quot;door&quot;</span><span class="p">,</span>    <span class="s2">&quot;open&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;push&quot;</span><span class="p">,</span>    <span class="s2">&quot;pushed&quot;</span><span class="p">,</span>    <span class="s2">&quot;gate&quot;</span><span class="p">,</span>    <span class="s2">&quot;open&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;cut&quot;</span><span class="p">,</span>     <span class="s2">&quot;cut&quot;</span><span class="p">,</span>       <span class="s2">&quot;rope&quot;</span><span class="p">,</span>    <span class="s2">&quot;short&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;beat&quot;</span><span class="p">,</span>    <span class="s2">&quot;beat&quot;</span><span class="p">,</span>      <span class="s2">&quot;cream&quot;</span><span class="p">,</span>   <span class="s2">&quot;stiff&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;boil&quot;</span><span class="p">,</span>    <span class="s2">&quot;boiled&quot;</span><span class="p">,</span>    <span class="s2">&quot;sauce&quot;</span><span class="p">,</span>   <span class="s2">&quot;thick&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;squeeze&quot;</span><span class="p">,</span> <span class="s2">&quot;squeezed&quot;</span><span class="p">,</span>  <span class="s2">&quot;sponge&quot;</span><span class="p">,</span>  <span class="s2">&quot;dry&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;wipe&quot;</span><span class="p">,</span>    <span class="s2">&quot;wiped&quot;</span><span class="p">,</span>     <span class="s2">&quot;counter&quot;</span><span class="p">,</span> <span class="s2">&quot;clean&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;scrub&quot;</span><span class="p">,</span>   <span class="s2">&quot;scrubbed&quot;</span><span class="p">,</span>  <span class="s2">&quot;pot&quot;</span><span class="p">,</span>     <span class="s2">&quot;clean&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;freeze&quot;</span><span class="p">,</span>  <span class="s2">&quot;froze&quot;</span><span class="p">,</span>     <span class="s2">&quot;pond&quot;</span><span class="p">,</span>    <span class="s2">&quot;solid&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;sharpen&quot;</span><span class="p">,</span> <span class="s2">&quot;sharpened&quot;</span><span class="p">,</span> <span class="s2">&quot;knife&quot;</span><span class="p">,</span>   <span class="s2">&quot;sharp&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># ---------------------------------------------------------------------------</span>
+<span class="c1"># INTRANSITIVE-MOTION: (verb, past, subject_noun, directional_PP)</span>
+<span class="c1"># displacement hypothesis = &quot;The &lt;subject_noun&gt; moved to a different place.&quot;</span>
+<span class="c1"># PREDICTED off-ceiling control (manner verb; bare default does NOT entail displacement):</span>
+<span class="c1">#   spin, float, sway, bob, wobble, swing, twirl, rock, bounce</span>
+<span class="c1"># PREDICTED at/near-ceiling control (verb default ~entails displacement -&gt; trap):</span>
+<span class="c1">#   roll, slide, drift</span>
+<span class="n">INTRANS_MOTION</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;spin&quot;</span><span class="p">,</span>   <span class="s2">&quot;spun&quot;</span><span class="p">,</span>     <span class="s2">&quot;coin&quot;</span><span class="p">,</span>    <span class="s2">&quot;across the table&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">,</span>  <span class="s2">&quot;floated&quot;</span><span class="p">,</span>  <span class="s2">&quot;bottle&quot;</span><span class="p">,</span>  <span class="s2">&quot;into the cave&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;sway&quot;</span><span class="p">,</span>   <span class="s2">&quot;swayed&quot;</span><span class="p">,</span>   <span class="s2">&quot;lantern&quot;</span><span class="p">,</span> <span class="s2">&quot;toward the door&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;bob&quot;</span><span class="p">,</span>    <span class="s2">&quot;bobbed&quot;</span><span class="p">,</span>   <span class="s2">&quot;buoy&quot;</span><span class="p">,</span>    <span class="s2">&quot;out past the pier&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;wobble&quot;</span><span class="p">,</span> <span class="s2">&quot;wobbled&quot;</span><span class="p">,</span>  <span class="s2">&quot;top&quot;</span><span class="p">,</span>     <span class="s2">&quot;off the shelf&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;swing&quot;</span><span class="p">,</span>  <span class="s2">&quot;swung&quot;</span><span class="p">,</span>    <span class="s2">&quot;rope&quot;</span><span class="p">,</span>    <span class="s2">&quot;over the fence&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;twirl&quot;</span><span class="p">,</span>  <span class="s2">&quot;twirled&quot;</span><span class="p">,</span>  <span class="s2">&quot;dancer&quot;</span><span class="p">,</span>  <span class="s2">&quot;across the stage&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;rock&quot;</span><span class="p">,</span>   <span class="s2">&quot;rocked&quot;</span><span class="p">,</span>   <span class="s2">&quot;cradle&quot;</span><span class="p">,</span>  <span class="s2">&quot;across the floor&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;bounce&quot;</span><span class="p">,</span> <span class="s2">&quot;bounced&quot;</span><span class="p">,</span>  <span class="s2">&quot;ball&quot;</span><span class="p">,</span>    <span class="s2">&quot;over the wall&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;roll&quot;</span><span class="p">,</span>   <span class="s2">&quot;rolled&quot;</span><span class="p">,</span>   <span class="s2">&quot;barrel&quot;</span><span class="p">,</span>  <span class="s2">&quot;down the hill&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;slide&quot;</span><span class="p">,</span>  <span class="s2">&quot;slid&quot;</span><span class="p">,</span>     <span class="s2">&quot;puck&quot;</span><span class="p">,</span>    <span class="s2">&quot;into the net&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;drift&quot;</span><span class="p">,</span>  <span class="s2">&quot;drifted&quot;</span><span class="p">,</span>  <span class="s2">&quot;boat&quot;</span><span class="p">,</span>    <span class="s2">&quot;toward the rocks&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">SUBJECTS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Maria&quot;</span><span class="p">,</span> <span class="s2">&quot;Jordan&quot;</span><span class="p">,</span> <span class="s2">&quot;Priya&quot;</span><span class="p">,</span> <span class="s2">&quot;Tomas&quot;</span><span class="p">,</span> <span class="s2">&quot;Lena&quot;</span><span class="p">,</span> <span class="s2">&quot;Omar&quot;</span><span class="p">,</span> <span class="s2">&quot;Nina&quot;</span><span class="p">,</span> <span class="s2">&quot;Carlos&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Aisha&quot;</span><span class="p">,</span> <span class="s2">&quot;Sam&quot;</span><span class="p">,</span> <span class="s2">&quot;Wei&quot;</span><span class="p">,</span> <span class="s2">&quot;Dana&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">rows</span><span class="p">():</span>
+    <span class="n">out</span><span class="p">,</span> <span class="n">si</span> <span class="o">=</span> <span class="p">[],</span> <span class="mi">0</span>
+    <span class="c1"># RESULTATIVE: transitive resultative needs a human subject.</span>
+    <span class="k">for</span> <span class="n">verb</span><span class="p">,</span> <span class="n">past</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">RESULTATIVE</span><span class="p">:</span>
+        <span class="n">subj</span> <span class="o">=</span> <span class="n">SUBJECTS</span><span class="p">[</span><span class="n">si</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">SUBJECTS</span><span class="p">)];</span> <span class="n">si</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">obj_np</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;the </span><span class="si">{</span><span class="n">obj</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">hyp</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">obj</span><span class="si">}</span><span class="s2"> became </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="c1"># construction arm: licenses the added (result-state) entailment -&gt; want ceiling</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;res-</span><span class="si">{</span><span class="n">verb</span><span class="si">}</span><span class="s2">-construction&quot;</span><span class="p">,</span> <span class="n">construction</span><span class="o">=</span><span class="s2">&quot;resultative&quot;</span><span class="p">,</span>
+            <span class="n">stem</span><span class="o">=</span><span class="n">verb</span><span class="p">,</span> <span class="n">condition</span><span class="o">=</span><span class="s2">&quot;construction&quot;</span><span class="p">,</span> <span class="n">difficulty</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="n">sentence</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subj</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">past</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">obj_np</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">,</span>
+            <span class="n">nli_hypothesis</span><span class="o">=</span><span class="n">hyp</span><span class="p">,</span> <span class="n">nli_gold</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">fc_gold</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span><span class="p">,</span> <span class="n">affirm_correct</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">))</span>
+        <span class="c1"># control arm: bare transitive, construction removed -&gt; measurement (report-the-rate)</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;res-</span><span class="si">{</span><span class="n">verb</span><span class="si">}</span><span class="s2">-control&quot;</span><span class="p">,</span> <span class="n">construction</span><span class="o">=</span><span class="s2">&quot;resultative&quot;</span><span class="p">,</span>
+            <span class="n">stem</span><span class="o">=</span><span class="n">verb</span><span class="p">,</span> <span class="n">condition</span><span class="o">=</span><span class="s2">&quot;control&quot;</span><span class="p">,</span> <span class="n">difficulty</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+            <span class="n">sentence</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subj</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">past</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">obj_np</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">,</span>
+            <span class="n">nli_hypothesis</span><span class="o">=</span><span class="n">hyp</span><span class="p">,</span> <span class="n">nli_gold</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">,</span> <span class="n">fc_gold</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">,</span> <span class="n">affirm_correct</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">))</span>
+    <span class="c1"># INTRANSITIVE-MOTION: the moving thing is the subject; no separate agent.</span>
+    <span class="k">for</span> <span class="n">verb</span><span class="p">,</span> <span class="n">past</span><span class="p">,</span> <span class="n">noun</span><span class="p">,</span> <span class="n">pp</span> <span class="ow">in</span> <span class="n">INTRANS_MOTION</span><span class="p">:</span>
+        <span class="n">noun_np</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">hyp</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">noun</span><span class="si">}</span><span class="s2"> moved to a different place.&quot;</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;im-</span><span class="si">{</span><span class="n">verb</span><span class="si">}</span><span class="s2">-construction&quot;</span><span class="p">,</span> <span class="n">construction</span><span class="o">=</span><span class="s2">&quot;intrans-motion&quot;</span><span class="p">,</span>
+            <span class="n">stem</span><span class="o">=</span><span class="n">verb</span><span class="p">,</span> <span class="n">condition</span><span class="o">=</span><span class="s2">&quot;construction&quot;</span><span class="p">,</span> <span class="n">difficulty</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+            <span class="n">sentence</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">noun_np</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">past</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">pp</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">,</span>
+            <span class="n">nli_hypothesis</span><span class="o">=</span><span class="n">hyp</span><span class="p">,</span> <span class="n">nli_gold</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">fc_gold</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span><span class="p">,</span> <span class="n">affirm_correct</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">))</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;im-</span><span class="si">{</span><span class="n">verb</span><span class="si">}</span><span class="s2">-control&quot;</span><span class="p">,</span> <span class="n">construction</span><span class="o">=</span><span class="s2">&quot;intrans-motion&quot;</span><span class="p">,</span>
+            <span class="n">stem</span><span class="o">=</span><span class="n">verb</span><span class="p">,</span> <span class="n">condition</span><span class="o">=</span><span class="s2">&quot;control&quot;</span><span class="p">,</span> <span class="n">difficulty</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+            <span class="n">sentence</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">noun_np</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">past</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">,</span>
+            <span class="n">nli_hypothesis</span><span class="o">=</span><span class="n">hyp</span><span class="p">,</span> <span class="n">nli_gold</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">,</span> <span class="n">fc_gold</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">,</span> <span class="n">affirm_correct</span><span class="o">=</span><span class="s2">&quot;NA&quot;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+                                       <span class="s2">&quot;addarm-headroom-calibration&quot;</span><span class="p">,</span> <span class="s2">&quot;items.csv&quot;</span><span class="p">))</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">rs</span> <span class="o">=</span> <span class="n">rows</span><span class="p">()</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">,</span> <span class="s2">&quot;construction&quot;</span><span class="p">,</span> <span class="s2">&quot;stem&quot;</span><span class="p">,</span> <span class="s2">&quot;condition&quot;</span><span class="p">,</span> <span class="s2">&quot;difficulty&quot;</span><span class="p">,</span> <span class="s2">&quot;sentence&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nli_hypothesis&quot;</span><span class="p">,</span> <span class="s2">&quot;nli_gold&quot;</span><span class="p">,</span> <span class="s2">&quot;fc_gold&quot;</span><span class="p">,</span> <span class="s2">&quot;affirm_correct&quot;</span><span class="p">]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">cols</span><span class="p">);</span> <span class="n">w</span><span class="o">.</span><span class="n">writeheader</span><span class="p">();</span> <span class="n">w</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()[:</span><span class="mi">16</span><span class="p">]</span>
+    <span class="n">nres</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;construction&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;resultative&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span><span class="si">}</span><span class="s2"> items (</span><span class="si">{</span><span class="n">nres</span><span class="si">}</span><span class="s2"> resultative + </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span><span class="o">-</span><span class="n">nres</span><span class="si">}</span><span class="s2"> intrans-motion) -&gt; </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  resultative: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">RESULTATIVE</span><span class="p">)</span><span class="si">}</span><span class="s2"> verbs x (construction/control); &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;intrans-motion: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">INTRANS_MOTION</span><span class="p">)</span><span class="si">}</span><span class="s2"> verbs x (construction/control)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  sha256[:16] = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">  (freeze hash; record in PREREG + README)&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

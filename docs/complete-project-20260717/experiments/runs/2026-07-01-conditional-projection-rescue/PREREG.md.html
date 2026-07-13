@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-01-conditional-projection-rescue</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">9.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-01-conditional-projection-rescue/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-the-conditional-projection-rescue-follow-up-probe">PREREG — the conditional-projection-rescue follow-up probe</h1>
+<p><strong>Run:</strong> <code>2026-07-01-conditional-projection-rescue</code> · <strong>frozen</strong> 2026-07-01 (session 159) ·
+<strong>manifest sha</strong> <code>c88ef626abd1f0b8cb22e19dd27b7b96b7016ed634b79de3cabe2e399079fe54</code></p>
+<p>Follow-up to <a href="../../../wiki/findings/results/presupposition-projection-v1.md.html"><code>result/presupposition-projection-v1</code></a>
+(run <code>2026-07-01-presupposition-projection</code>, session 158). That result found verdict <strong>PROJECTION
+(2/3)</strong> but a sharp, across-panel <strong>COLLAPSE of projection under the conditional-antecedent frame</strong>:
+presupposition-survival under the conditional frame was <strong>0.42 / 0.17 / 0.17</strong> (claude / gpt /
+gemini), at or near the matched-entailment leg, while negation was textbook-clean and questions
+projected strongly. Frozen <em>before</em> any probe call; the FREEZE GUARD in <code>probe.py</code> refuses to run
+unless the manifest sha above is intact.</p>
+<h2 id="the-one-question-nothing-wider">The one question (nothing wider)</h2>
+<blockquote>
+<p>Is the conditional-antecedent projection collapse <strong>rescuable</strong> by an explicit framing, or is it a
+<strong>robust</strong> feature of the text-trained projection behavior? Concretely: does reframing the
+conditional as a sincere speaker <strong>commitment</strong>, or moving the trigger <strong>out of the antecedent</strong>,
+or asking about the speaker's <strong>belief</strong>, restore presupposition-endorsement above the collapsed
+BASE level (and above the matched-entailment leg)?</p>
+</blockquote>
+<p>The measure is a <strong>within-model contrast</strong>: (i) P-vs-E endorsement WITHIN each arm (E is the yes-bias
+control), and (ii) P endorsement ACROSS arms relative to a BASE arm that replicates the s158
+conditional cell verbatim.</p>
+<h2 id="scope-cap-load-bearing-read-before-citing-any-result">Scope cap — LOAD-BEARING (read before citing any result)</h2>
+<p>A positive (rescue) or negative (robust collapse) is a <strong>within-model behavioral contrast ONLY</strong>. It
+does <strong>not</strong>:
+- make <strong>any human comparison</strong> — no human projectivity / projection-judgment baseline is claimed,
+  measured, or needed. The signal is <em>P endorsement changes (or not) across framings within the same
+  model</em>, and <em>P survives more than E within an arm</em>.
+- certify that the model <strong>represents</strong> presupposition vs. assertion, or that it "computes"
+  projection; the contrast is behavioral (endorsement of an inference under embedding/framing), read
+  off forced-choice answers. Text-consistency is not mechanism.
+- adjudicate the projection problem or any theory of presupposition filtering; the CONSEQ arm uses
+  standard consequent-projection as an operationalization of "non-antecedent position", not as a
+  claim about how filtering works.</p>
+<p><strong>Anchor discipline.</strong> This follow-up stays strictly within the within-model contrast whose terminal
+<code>internal-contrast-only</code> status was <strong>ratified</strong> for the parent line this session
+(<a href="../../../wiki/decisions/resolved/presupposition-projection-internal-contrast-anchor.md.html"><code>decisions/resolved/presupposition-projection-internal-contrast-anchor</code></a>,
+session 159, autonomous adversarial review). So the result carries <strong><code>anchor: internal-contrast-only</code></strong>
+and opens <strong>no new anchor decision</strong>.</p>
+<h2 id="panel-settings">Panel &amp; settings</h2>
+<p>Panel per <a href="../../../config/models.md.html"><code>config/models.md</code></a>: <code>panel.A</code> = anthropic/claude-sonnet-4.6,
+<code>panel.B</code> = openai/gpt-5.4-mini, <code>panel.C</code> = google/gemini-3.5-flash. Temperature 0; zero-shot;
+text-only, single-turn (no tools); gemini <code>reasoning={"effort":"minimal"}</code> (config/models.md caveat);
+billed <code>usage.cost</code> recorded. The system prompt
+("You are a careful reader. Answer the user's question directly.") — identical to s158 — never
+mentions presupposition, projection, or the "right" answer.</p>
+<h2 id="design-12-base-scenarios-reused-verbatim-from-s158-x-4-arms-x-2-targets-96-item-conditions">Design — 12 base scenarios (REUSED VERBATIM from s158) x 4 arms x 2 targets = 96 item-conditions</h2>
+<p><code>prep.py</code> freezes the items. The 12 scenarios reuse <strong>verbatim</strong> s158's frozen <code>SCEN</code>: same sids,
+same <code>presup</code>/<code>entail</code> targets, same <strong>antecedent-conditional</strong> sentences (four trigger families —
+factive / aspectual / definite / cleft — 3 each). New per scenario: a <code>cond_consequent</code> sentence
+(the same trigger relocated to the consequent of a conditional with a neutral, unrelated antecedent).</p>
+<p>The <strong>four arms</strong> factorize cleanly:</p>
+<table>
+<thead>
+<tr>
+<th>arm</th>
+<th>sentence</th>
+<th>query wrapper</th>
+<th>isolates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>base</strong></td>
+<td>antecedent-conditional (s158)</td>
+<td>s158 plain query, VERBATIM</td>
+<td>replication anchor</td>
+</tr>
+<tr>
+<td><strong>commit</strong></td>
+<td>antecedent-conditional (s158)</td>
+<td>"A speaker sincerely asserts …; considering everything the speaker is thereby committed to, does it follow that: {target}"</td>
+<td>FRAMING (commitment)</td>
+</tr>
+<tr>
+<td><strong>conseq</strong></td>
+<td>trigger in CONSEQUENT, neutral antecedent</td>
+<td>s158 plain query</td>
+<td>POSITION (out of antecedent)</td>
+</tr>
+<tr>
+<td><strong>belief</strong></td>
+<td>antecedent-conditional (s158)</td>
+<td>"A speaker sincerely asserts …; does the speaker believe that: {target}"</td>
+<td>FRAMING (speaker belief)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>base</code> and <code>conseq</code> share the query and differ only in the sentence → isolates trigger <strong>position</strong>.</li>
+<li><code>base</code>, <code>commit</code>, <code>belief</code> share the antecedent-conditional sentence and differ only in the query →
+  isolates <strong>framing</strong>.</li>
+</ul>
+<p>Each item is one forced-choice completion answered <strong>YES / NO / UNCLEAR</strong>; <code>endorsed</code> == YES
+(<code>analyze.py</code>). The three-way choice lets a non-endorsed inference be marked UNCLEAR rather than
+forced to a false YES.</p>
+<p><strong>The rescue signature.</strong> In <code>base</code>, presup-endorse is expected <strong>LOW</strong> (reproducing the s158
+collapse). A rescue arm restores projection if its presup-endorse climbs back <strong>above the RESCUE
+floor</strong> <em>and</em> its (presup − entail) gap re-opens — while the E leg stays low (a framing that merely
+inflates YES lifts E too, caught by the yes-bias flag).</p>
+<h2 id="why-the-plain-frame-sanity-is-not-re-run">Why the plain-frame sanity is not re-run</h2>
+<p>s158 already established the plain-frame sanity floor (plain presup-endorse 0.92 / 0.92 / 1.00; plain
+entail-endorse 1.00 / 0.92 / 1.00) on these exact base scenarios — the models <em>do</em> endorse both legs
+when the base is plainly asserted. Re-running it would be re-grinding a frozen result. This probe's
+internal validity anchors are instead <strong>BASE replication</strong> (must reproduce the collapse) and the
+<strong>CONSEQ position control</strong> (a non-antecedent environment where projection is expected to survive).</p>
+<h2 id="metrics-pre-specified-direction-fixed-see-analyzepy">Metrics (pre-specified, direction fixed) — see <code>analyze.py</code></h2>
+<p>Per (model, arm), from parsed answers:
+- <strong>presup_endorse</strong> — P-endorse rate over the arm's 12 items.
+- <strong>entail_endorse</strong> — E-endorse rate over the arm's 12 items (yes-bias control).
+- <strong>gap</strong> = presup_endorse − entail_endorse (within-arm projection signal).
+- <strong>rescue_lift</strong> = arm presup_endorse − base presup_endorse (per rescue arm).</p>
+<h2 id="verdict-map-thresholds-fixed-now-may-be-tightened-never-loosened">Verdict map (thresholds fixed NOW; may be tightened, never loosened)</h2>
+<div class="highlight"><pre><span></span><code>RESCUE            = 0.60   per-model per-arm presup_endorse floor to count projection RESTORED.
+GAP               = 0.30   per-model per-arm (presup - entail) floor to count RESTORED.
+BASE_COLLAPSE_MAX = 0.60   base presup_endorse must be BELOW this for &gt;=2/3 models to confirm the
+                           s158 collapse replicated (design-validity anchor).
+YESBIAS           = 0.60   per-arm entail_endorse at/above this flags a yes-shift confound on that arm.
+</code></pre></div>
+
+<ul>
+<li>Per rescue arm (commit / conseq / belief), panel level: <strong>RESCUED</strong> if ≥2/3 models rescued
+  (presup_endorse ≥ RESCUE AND gap ≥ GAP); <strong>NOT-RESCUED</strong> if ≥2/3 models have presup_endorse &lt;
+  RESCUE; <strong>MIXED</strong> otherwise.</li>
+<li><strong>Overall:</strong></li>
+<li>If BASE did <strong>not</strong> replicate the collapse (&lt;2/3 models below BASE_COLLAPSE_MAX) →
+    <strong>REPLICATION-ANOMALY</strong>; rescue readings caveated (the collapse itself did not reproduce).</li>
+<li>Else if ≥1 rescue arm is RESCUED → <strong>PARTIAL/RESCUED</strong> (name which lever restores projection).</li>
+<li>Else → <strong>ROBUST-COLLAPSE</strong> (the conditional-antecedent collapse survives all three framings — a
+    within-panel limit of the text-trained behavior).</li>
+</ul>
+<p>A robust collapse is a first-class result and is written as such (charter §4). A rescue is equally
+first-class and would reframe the s158 collapse as a <strong>surface-cue artifact</strong> of the neutral query
+rather than a deep limit.</p>
+<h2 id="cost">Cost</h2>
+<p>96 conditions × 3 models = 288 single-turn, single-word completions — the same size and shape as
+s158, which billed <strong>$0.0486</strong>. Pre-flight expectation <strong>≈ $0.05</strong> (gemini's minimal-reasoning tokens
+dominate). <code>ABORT_USD = 1.00</code> hard-stops a runaway; far under the $2.50 single-run flag and the
+$5.00/day cap (UTC-2026-07-01 spend before this run: $0.0486). A real pre-flight (<code>--limit</code> on one
+model) is measured and recorded before the full run.</p>
+<h2 id="what-each-outcome-would-feed">What each outcome would feed</h2>
+<ul>
+<li><strong>PARTIAL/RESCUED</strong> → the conditional collapse is (at least partly) an artifact of framing/position,
+  not a hard limit; strengthens the "frame-conditioned distributional regularity" reading of
+  <a href="../../../wiki/findings/essays/projection-defeasible-by-frame.md.html"><code>essay/projection-defeasible-by-frame</code></a>;
+  the s158 result's Interpretation gains a rescue caveat (numbers unchanged).</li>
+<li><strong>ROBUST-COLLAPSE</strong> → the collapse is robust to commitment / position / belief framing — a genuine
+  within-panel limit of the text-trained projection behavior; strengthens the "genuine limit" reading.</li>
+<li><strong>REPLICATION-ANOMALY</strong> → the s158 conditional cell did not reproduce under a fresh run; reported
+  honestly, no rescue claim, and flags instability in the parent result's conditional cell.</li>
+</ul></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

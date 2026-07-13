@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>harvest.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-13-relational-history-perturbation-v3</a> <span class="sep">/</span> <span class="cur">harvest.py</span></nav>
+<main>
+<header class="page-head">
+<h1>harvest.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">9.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-13-relational-history-perturbation-v3/harvest.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;harvest.py — fresh description harvest for ALL THREE models (v3 fix 2, uniform).</span>
+
+<span class="sd">Design (experiments/designs/relational-history-perturbation-v3.md §Stimuli plan):</span>
+<span class="sd">per (model x figure), ONE harvest call mirroring the v1 director framing — the 6-figure</span>
+<span class="sd">array with the target marked, the v1 &lt;=12-word budget — requesting 8 candidate</span>
+<span class="sd">descriptions in a numbered list, temperature 0.</span>
+
+<span class="sd">BATCH-HARVEST RATIONALE, DISCLOSED (design open issue 2 for the pre-run critic): 8</span>
+<span class="sd">candidates in one numbered-list call is cheap and deterministic (temperature 0); the</span>
+<span class="sd">worry that list-generation yields a different register than one-at-a-time generation is</span>
+<span class="sd">explicitly left to the critic — if the critic rules the other way, switch to</span>
+<span class="sd">one-description-per-call at temperature 0.8 BEFORE the stimuli freeze.</span>
+
+<span class="sd">SHORTFALL PROCEDURE (pre-registered): if, after certification, a figure has fewer than 6</span>
+<span class="sd">certified descriptions, `harvest.py topup` makes ONE top-up call for that figure at</span>
+<span class="sd">temperature 0.8, logged with phase=&quot;topup&quot;. If still short after re-certification, that</span>
+<span class="sd">model&#39;s sample count drops and the reduced cluster count is recorded in PREREG.md BEFORE</span>
+<span class="sd">the stimuli freeze.</span>
+
+<span class="sd">Harvest raw is STIMULUS-CONSTRUCTION data: kept, never analyzed as findings (v2 rule S2,</span>
+<span class="sd">extended).</span>
+
+<span class="sd">MECHANICAL FILTERS AT HARVEST TIME (critic S4, 2026-06-13): the &lt;=12-word budget is</span>
+<span class="sd">enforced HERE, before certification — over-budget lines are logged in the harvest record</span>
+<span class="sd">(`dropped_over_budget`) and never become candidates, so they cannot reach a certification</span>
+<span class="sd">call. certify.py keeps its own budget check as defense in depth. A length-truncated</span>
+<span class="sd">harvest reply (finish_reason == &quot;length&quot;, critic blocker 2) drops its LAST parsed line</span>
+<span class="sd">(possibly cut mid-text), logged as `dropped_truncated_tail`. Deduplication (within figure</span>
+<span class="sd">+ against the twin) stays in certify.py, which needs the cross-figure view.</span>
+
+<span class="sd">Usage (from repo root or this dir):</span>
+<span class="sd">  python3 harvest.py plan      # no API calls: prints planned calls + cost estimate</span>
+<span class="sd">  python3 harvest.py harvest   # 18 calls (3 models x 6 figures), temperature 0</span>
+<span class="sd">  python3 harvest.py topup     # &lt;=18 calls, temperature 0.8, only for shortfall figures</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HERE</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">common</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">MODELS</span><span class="p">,</span> <span class="n">MODEL_SEED_OFFSET</span><span class="p">,</span> <span class="n">SEED0</span><span class="p">,</span> <span class="n">N_CAND</span><span class="p">,</span> <span class="n">WORD_BUDGET</span><span class="p">,</span> <span class="n">RAW</span><span class="p">,</span>  <span class="c1"># noqa: E402</span>
+                    <span class="n">call_fr</span><span class="p">,</span> <span class="n">load_figures</span><span class="p">,</span> <span class="n">grid_block</span><span class="p">,</span> <span class="n">reasoning_for</span><span class="p">,</span> <span class="n">flat_cost</span><span class="p">,</span>
+                    <span class="n">ledger_append</span><span class="p">,</span> <span class="n">check_hard_stop</span><span class="p">,</span> <span class="n">append_jsonl</span><span class="p">,</span> <span class="n">read_jsonl</span><span class="p">)</span>
+
+<span class="n">HARVEST_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="s2">&quot;harvest.jsonl&quot;</span><span class="p">)</span>
+<span class="n">REPORT_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;certification_report.json&quot;</span><span class="p">)</span>
+<span class="n">EST_PER_CALL</span> <span class="o">=</span> <span class="mf">0.003</span>  <span class="c1"># director-shaped, generous (design table: &lt;=36 calls ~ $0.05)</span>
+
+<span class="c1"># v1 director framing (game.py DIRECTOR_SYS), adapted only to ask for a numbered list of</span>
+<span class="c1"># N_CAND candidates instead of a single description.</span>
+<span class="n">HARVEST_SYS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;You are playing a reference game with a partner. You both see the SAME set of abstract &quot;</span>
+    <span class="s2">&quot;figures, but each in a DIFFERENT private order with DIFFERENT labels, so you CANNOT refer to &quot;</span>
+    <span class="s2">&quot;a figure by its label or position -- only by describing what it looks like. Each figure is an &quot;</span>
+    <span class="s2">&quot;8x8 grid of &#39;#&#39; (filled) and &#39;.&#39; (empty). You are the DIRECTOR: describe the TARGET figure so &quot;</span>
+    <span class="s2">&quot;your partner can pick it out of their own copies. Give </span><span class="si">{n}</span><span class="s2"> DIFFERENT candidate descriptions &quot;</span>
+    <span class="s2">&quot;of the TARGET, each at most </span><span class="si">{budget}</span><span class="s2"> words; a short memorable label is best. Reply with ONLY &quot;</span>
+    <span class="s2">&quot;a numbered list (1. to </span><span class="si">{n}</span><span class="s2">.), one description per line, no preamble.&quot;</span><span class="p">)</span>
+
+<span class="n">NUM_RE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^\s*\d+\s*[.)]\s*(.+?)\s*$&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">director_array</span><span class="p">(</span><span class="n">mname</span><span class="p">,</span> <span class="n">figs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;One deterministic director permutation per model, constant across its 6 harvest</span>
+<span class="sd">    calls (mirrors v1, where the director array was constant within a game).&quot;&quot;&quot;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">SEED0</span> <span class="o">^</span> <span class="mh">0xD17</span> <span class="o">^</span> <span class="n">MODEL_SEED_OFFSET</span><span class="p">[</span><span class="n">mname</span><span class="p">])</span>
+    <span class="n">ids</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">figs</span><span class="p">)</span>
+    <span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="p">[(</span><span class="sa">f</span><span class="s2">&quot;D</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">cid</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cid</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ids</span><span class="p">)]</span>
+    <span class="n">label_of</span> <span class="o">=</span> <span class="p">{</span><span class="n">cid</span><span class="p">:</span> <span class="n">lab</span> <span class="k">for</span> <span class="n">lab</span><span class="p">,</span> <span class="n">cid</span> <span class="ow">in</span> <span class="n">order</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">order</span><span class="p">,</span> <span class="n">label_of</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_candidates</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Numbered-list lines -&gt; candidate strings (normalized whitespace, outer quotes off).&quot;&quot;&quot;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="p">(</span><span class="n">txt</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">NUM_RE</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">ln</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">m</span><span class="p">:</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">c</span><span class="p">:</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">harvest_call</span><span class="p">(</span><span class="n">mname</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">figs</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">temperature</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
+    <span class="n">d_order</span><span class="p">,</span> <span class="n">d_label</span> <span class="o">=</span> <span class="n">director_array</span><span class="p">(</span><span class="n">mname</span><span class="p">,</span> <span class="n">figs</span><span class="p">)</span>
+    <span class="n">d_block</span> <span class="o">=</span> <span class="n">grid_block</span><span class="p">(</span><span class="n">d_order</span><span class="p">,</span> <span class="n">figs</span><span class="p">)</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Your figures:</span><span class="se">\n</span><span class="si">{</span><span class="n">d_block</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">TARGET: </span><span class="si">{</span><span class="n">d_label</span><span class="p">[</span><span class="n">fid</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Give </span><span class="si">{</span><span class="n">N_CAND</span><span class="si">}</span><span class="s2"> different candidate descriptions of the TARGET &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;(each &lt;= </span><span class="si">{</span><span class="n">WORD_BUDGET</span><span class="si">}</span><span class="s2"> words).&quot;</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">call_fr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">HARVEST_SYS</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">N_CAND</span><span class="p">,</span> <span class="n">budget</span><span class="o">=</span><span class="n">WORD_BUDGET</span><span class="p">),</span> <span class="n">user</span><span class="p">,</span>
+                <span class="n">max_tokens</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="n">temperature</span><span class="p">,</span> <span class="n">reasoning</span><span class="o">=</span><span class="n">reasoning_for</span><span class="p">(</span><span class="n">model</span><span class="p">))</span>
+    <span class="n">cands</span> <span class="o">=</span> <span class="n">parse_candidates</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">))</span>
+    <span class="c1"># critic blocker 2: a length-truncated list&#39;s LAST parsed line may be cut mid-text —</span>
+    <span class="c1"># drop it (logged), never let a truncated tail become a candidate.</span>
+    <span class="n">dropped_tail</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;finish_reason&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;length&quot;</span> <span class="ow">and</span> <span class="n">cands</span><span class="p">:</span>
+        <span class="n">dropped_tail</span> <span class="o">=</span> <span class="p">[</span><span class="n">cands</span><span class="o">.</span><span class="n">pop</span><span class="p">()]</span>
+    <span class="c1"># critic S4: enforce the &lt;=12-word budget mechanically AT HARVEST, before</span>
+    <span class="c1"># certification — over-budget lines never reach a certification call.</span>
+    <span class="n">over</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cands</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="o">&gt;</span> <span class="n">WORD_BUDGET</span><span class="p">]</span>
+    <span class="n">cands</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cands</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="o">&lt;=</span> <span class="n">WORD_BUDGET</span><span class="p">]</span>
+    <span class="n">rec</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;phase&quot;</span><span class="p">:</span> <span class="n">phase</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">mname</span><span class="p">,</span> <span class="s2">&quot;fig&quot;</span><span class="p">:</span> <span class="n">fid</span><span class="p">,</span> <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="n">temperature</span><span class="p">,</span>
+           <span class="s2">&quot;n_candidates&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">cands</span><span class="p">),</span> <span class="s2">&quot;candidates&quot;</span><span class="p">:</span> <span class="n">cands</span><span class="p">,</span>
+           <span class="s2">&quot;dropped_over_budget&quot;</span><span class="p">:</span> <span class="n">over</span><span class="p">,</span> <span class="s2">&quot;dropped_truncated_tail&quot;</span><span class="p">:</span> <span class="n">dropped_tail</span><span class="p">,</span>
+           <span class="s2">&quot;finish_reason&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;finish_reason&quot;</span><span class="p">),</span>
+           <span class="s2">&quot;raw&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">,</span> <span class="p">{})],</span> <span class="s2">&quot;err&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">)}</span>
+    <span class="n">append_jsonl</span><span class="p">(</span><span class="n">HARVEST_PATH</span><span class="p">,</span> <span class="n">rec</span><span class="p">)</span>
+    <span class="n">note</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  ERR=</span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">+</span> \
+           <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  over-budget dropped=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">over</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">over</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">+</span> \
+           <span class="p">(</span><span class="s2">&quot;  TRUNCATED tail dropped&quot;</span> <span class="k">if</span> <span class="n">dropped_tail</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">mname</span><span class="si">:</span><span class="s2">7s</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">fid</span><span class="si">}</span><span class="s2"> [</span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2"> t=</span><span class="si">{</span><span class="n">temperature</span><span class="si">}</span><span class="s2">]: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cands</span><span class="p">)</span><span class="si">}</span><span class="s2"> candidates</span><span class="si">{</span><span class="n">note</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rec</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">shortfall_figs</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;(model, fig) pairs with &lt; 6 certified descriptions, per certification_report.json.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">REPORT_PATH</span><span class="p">):</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;topup requires certification_report.json — run certify.py first.&quot;</span><span class="p">)</span>
+    <span class="n">rep</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">REPORT_PATH</span><span class="p">))</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">md</span> <span class="ow">in</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;models&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">fid</span><span class="p">,</span> <span class="n">fd</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">md</span><span class="p">[</span><span class="s2">&quot;figures&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">fd</span><span class="p">[</span><span class="s2">&quot;certified_n&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">fd</span><span class="p">[</span><span class="s2">&quot;certified_n&quot;</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;plan&quot;</span>
+    <span class="n">figs</span> <span class="o">=</span> <span class="n">load_figures</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;plan&quot;</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">MODELS</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">figs</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PLAN: harvest = </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> calls (3 models x 6 figures, 1 call each, temperature 0); &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;topup &lt;= </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> more at temperature 0.8 (shortfall only).&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  est. $</span><span class="si">{</span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">EST_PER_CALL</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> harvest (+ up to the same in top-ups); &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;design table: &lt;=36 calls ~ $0.05. No API call made by `plan`.&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;harvest&quot;</span><span class="p">:</span>
+        <span class="n">existing</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">read_jsonl</span><span class="p">(</span><span class="n">HARVEST_PATH</span><span class="p">)</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;phase&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;harvest&quot;</span><span class="p">]</span>
+        <span class="n">done</span> <span class="o">=</span> <span class="p">{(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;fig&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">existing</span><span class="p">}</span>
+        <span class="n">todo</span> <span class="o">=</span> <span class="p">[(</span><span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">MODELS</span> <span class="k">for</span> <span class="n">fid</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">figs</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">done</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">todo</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;harvest already complete (all 18 records in raw/harvest.jsonl).&quot;</span><span class="p">)</span>
+        <span class="n">check_hard_stop</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">todo</span><span class="p">)</span> <span class="o">*</span> <span class="n">EST_PER_CALL</span><span class="p">,</span> <span class="s2">&quot;harvest&quot;</span><span class="p">)</span>
+        <span class="n">recs</span> <span class="o">=</span> <span class="p">[</span><span class="n">harvest_call</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">MODELS</span><span class="p">[</span><span class="n">m</span><span class="p">],</span> <span class="n">figs</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;harvest&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">fid</span> <span class="ow">in</span> <span class="n">todo</span><span class="p">]</span>
+        <span class="n">tot</span><span class="p">,</span> <span class="n">have</span><span class="p">,</span> <span class="n">miss</span> <span class="o">=</span> <span class="n">flat_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+        <span class="n">ledger_append</span><span class="p">(</span><span class="s2">&quot;harvest&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">),</span> <span class="n">tot</span><span class="p">,</span> <span class="n">miss</span><span class="p">,</span>
+                      <span class="s2">&quot;stimulus-construction data; never analyzed as findings&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;topup&quot;</span><span class="p">:</span>
+        <span class="n">prior_topup</span> <span class="o">=</span> <span class="p">{(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;fig&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">read_jsonl</span><span class="p">(</span><span class="n">HARVEST_PATH</span><span class="p">)</span>
+                       <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;phase&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;topup&quot;</span><span class="p">}</span>
+        <span class="n">short</span> <span class="o">=</span> <span class="n">shortfall_figs</span><span class="p">()</span>
+        <span class="n">todo</span> <span class="o">=</span> <span class="p">[(</span><span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">short</span> <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">prior_topup</span><span class="p">]</span>
+        <span class="n">skipped</span> <span class="o">=</span> <span class="p">[(</span><span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">short</span> <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">)</span> <span class="ow">in</span> <span class="n">prior_topup</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">fid</span> <span class="ow">in</span> <span class="n">skipped</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">fid</span><span class="si">}</span><span class="s2">: still short AFTER its one top-up — sample count drops; &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;record the reduced cluster count in PREREG.md before the freeze.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">todo</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;no figures need (or are still eligible for) a top-up.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="n">check_hard_stop</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">todo</span><span class="p">)</span> <span class="o">*</span> <span class="n">EST_PER_CALL</span><span class="p">,</span> <span class="s2">&quot;topup&quot;</span><span class="p">)</span>
+        <span class="n">recs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">todo</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  top-up </span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">fid</span><span class="si">}</span><span class="s2"> (certified so far: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">/6)&quot;</span><span class="p">)</span>
+            <span class="n">recs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">harvest_call</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">MODELS</span><span class="p">[</span><span class="n">m</span><span class="p">],</span> <span class="n">figs</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s2">&quot;topup&quot;</span><span class="p">))</span>
+        <span class="n">tot</span><span class="p">,</span> <span class="n">have</span><span class="p">,</span> <span class="n">miss</span> <span class="o">=</span> <span class="n">flat_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+        <span class="n">ledger_append</span><span class="p">(</span><span class="s2">&quot;harvest-topup&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">),</span> <span class="n">tot</span><span class="p">,</span> <span class="n">miss</span><span class="p">,</span>
+                      <span class="s2">&quot;one top-up per shortfall figure at temperature 0.8 (pre-registered)&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;re-run certify.py to certify the new candidates.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;usage: harvest.py [plan|harvest|topup]&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

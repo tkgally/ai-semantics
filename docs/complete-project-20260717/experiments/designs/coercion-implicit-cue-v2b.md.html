@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>coercion-implicit-cue-v2b.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../index.html">home</a> <span class="sep">/</span> <a href="../index.html">experiments</a> <span class="sep">/</span> <a href="index.html">designs</a> <span class="sep">/</span> <span class="cur">coercion-implicit-cue-v2b.md</span></nav>
+<main>
+<header class="page-head">
+<h1>coercion-implicit-cue-v2b.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">5.1 KB</span> &middot; <code class="fpath">experiments/designs/coercion-implicit-cue-v2b.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>type</th><td>design</td></tr><tr><th>id</th><td>coercion-implicit-cue-v2b</td></tr><tr><th>title</th><td>caused-motion v2b — does the model block an impossible coercion from an implicit world-knowledge cue, or does it need the explicit outcome statement?</td></tr><tr><th>meaning-senses</th><td><ul class='fm-list'><li>constructional</li><li>inferential</li><li>distributional</li><li>human-comparison</li></ul></td></tr><tr><th>status</th><td>provisional</td></tr><tr><th>anchor</th><td>pending</td></tr><tr><th>contingent-on</th><td><span class='muted'>(none)</span></td></tr><tr><th>created</th><td>2026-05-30</td></tr><tr><th>updated</th><td>2026-05-30</td></tr><tr><th>links</th><td><ul class='fm-list'><li>rel: refines, target: result/argument-structure-coercion-v2</li><li>rel: operationalizes, target: conjecture/caused-motion-construction</li><li>rel: depends-on, target: design/argument-structure-coercion-v2</li><li>rel: depends-on, target: concept/coercion</li><li>rel: depends-on, target: resource/scivetti-2025-cxnli-dataset</li></ul></td></tr></table></div><div class='md'><h1 id="experiment-design-v2b-caused-motion-implicit-world-knowledge-cue">Experiment design v2b — caused-motion, implicit (world-knowledge) cue</h1>
+<blockquote>
+<p><strong>Status: provisional.</strong> The <strong>v2b</strong> the add-direction v2 explicitly deferred (its README: "the cue is an <em>explicit verbal denial</em> … a subtler world-knowledge cue is v2b"). Governed by the <strong>same ratified gate</strong> (<a href="../../wiki/decisions/resolved/cc-v2-difficulty-operationalization.md.html"><code>decisions/resolved/cc-v2-difficulty-operationalization</code></a>: conflicting-cue primary + graded ladder + report-the-rate) — <strong>no new decision</strong>; <code>contingent-on: []</code>.</p>
+</blockquote>
+<h2 id="why-what-the-explicit-cue-v2-left-open">Why — what the explicit-cue v2 left open</h2>
+<p><a href="../../wiki/findings/results/argument-structure-coercion-v2.md.html"><code>result/argument-structure-coercion-v2</code></a> showed the caused-motion / way ceilings are cue-sensitive: under an <strong>explicit</strong> outcome denial ("…off the table, <strong>but the napkin never moved</strong>") all three models drop to floor (H-deep over H-default). But the explicit clause directly contradicts the hypothesis <strong>in the premise</strong>; it does not test whether the model integrates <strong>world knowledge</strong> to block a <em>physically impossible</em> coercion when <strong>no outcome is stated</strong>. That is the subtler, more demanding cue.</p>
+<h2 id="manipulation-verb-path-held-constant-object-cue-type-varied">Manipulation (verb + path held constant; object + cue type varied)</h2>
+<p>Hypothesis: <em>"&lt;subj&gt;'s &lt;gerund&gt; caused &lt;obj&gt; to move."</em></p>
+<table>
+<thead>
+<tr>
+<th>condition</th>
+<th>difficulty</th>
+<th>example</th>
+<th>affirm-motion gold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>canonical</code></td>
+<td>1</td>
+<td>Maria sneezed the dust off the pedestal.</td>
+<td>YES (light object; the v1/v2 ceiling anchor)</td>
+</tr>
+<tr>
+<td><code>implicit-wk</code></td>
+<td>2</td>
+<td>Maria sneezed the <strong>bolted-down bust</strong> off the pedestal.</td>
+<td>NO — world knowledge (bolted-down) blocks it; <strong>no outcome stated</strong> (contestable, see anchor)</td>
+</tr>
+<tr>
+<td><code>explicit</code></td>
+<td>3</td>
+<td>Maria sneezed the bolted-down bust off the pedestal, <strong>but it never budged.</strong></td>
+<td>NO — outcome stated (the v2-style cue, here as the within-experiment calibration)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key discriminator: implicit-wk affirm vs explicit affirm.</strong> If they are comparably low, the model blocks the impossible coercion <strong>from world knowledge alone</strong> (a stronger H-deep signal than v2 established). If implicit-wk affirm is much higher, the model <strong>needs the explicit outcome statement</strong> — the v2 cue-sensitivity was outcome-parsing, not world-model integration.</p>
+<h2 id="instrument-note-reported-not-corrected">Instrument note (reported, not corrected)</h2>
+<p>Under <strong>NLI</strong> the implicit-wk premise <em>asserts</em> the caused motion; the conflict is only with <strong>external</strong> world knowledge about "bolted-down", so a premise-internal NLI reading may affirm. Under <strong>FC</strong> ("is it true that …") world knowledge is more naturally engaged. The <strong>NLI-vs-FC gap on the implicit-wk cell is itself a first-class datum</strong> (cf. <a href="../../wiki/findings/open-questions/instrument-sensitivity-constructional-inference.md.html"><code>open-question/instrument-sensitivity-constructional-inference</code></a>); both instruments are kept and reported separately, as ratified.</p>
+<h2 id="indicator-reading-rule-anchor">Indicator, reading rule, anchor</h2>
+<p>Indicator: affirm-caused-motion rate per condition (FC YES / NLI entailment), temperature 0, logprob-free, both instruments. <strong>Reading rule (ratified report-the-rate):</strong> report the implicit-vs-explicit gap and the two canonical→cue drops per instrument; no manufactured pass bar; either reading is first-class. <strong>Human anchor: pending / internal-contrast-only</strong> (Option-4 logic, same as v2) — Scivetti has no conflicting-cue / impossible-coercion items and the "correct" reading of a physically-impossible coercion is contestable for humans, so <strong>no human-level claim</strong> on the cue cells; no human label invented. The <code>canonical</code> arm keeps the v1/v2 phenomenon-level caused-motion anchor (<a href="../../wiki/base/resources/scivetti-2025-cxnli-dataset.md.html"><code>resource/scivetti-2025-cxnli-dataset</code></a>).</p>
+<h2 id="scope-documented-not-retuned">Scope (documented, not retuned)</h2>
+<p>This v2b runs the <strong>world-knowledge cue</strong> axis only (the headline piece v2 deferred). The other deferred arms — <strong>near-miss form controls</strong> and <strong>multi-step composition</strong> — remain for a later run; running the most-discriminating axis in full (10 scenes × {canonical, implicit-wk, explicit}) is a scope choice fixed before the build, not a retune.</p>
+<h2 id="harness-freeze-budget">Harness / freeze / budget</h2>
+<p>Reuses the v2 harness verbatim. Items frozen before any probe call (<code>items.csv</code> sha256[:16] <code>9aad20a22d183402</code>, after the pre-run critique verb fixes; 30 items = 10 scenes × 3 conditions). 30 × 2 instruments × 3 models = 180 calls; expected ≈ $0.03–0.05 (cf. v1 caused-motion $0.044). Pre-flight per <a href="../../config/budget.md.html"><code>config/budget.md</code></a>.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>prep.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">data</a> <span class="sep">/</span> <a href="index.html">subtlex-us</a> <span class="sep">/</span> <span class="cur">prep.py</span></nav>
+<main>
+<header class="page-head">
+<h1>prep.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">6.0 KB</span> &middot; <code class="fpath">experiments/data/subtlex-us/prep.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;SUBTLEX-US frequency-norm fetch + derive recipe (recipe-not-corpus).</span>
+
+<span class="sd">The full 74,286-word list is gitignored; this script is the committed, reproducible</span>
+<span class="sd">recipe that (1) documents the download + sha256 pin, and (2) derives the small,</span>
+<span class="sd">committed seed-frequency table the function-word probe build session starts from.</span>
+
+<span class="sd">Resource page: wiki/base/resources/subtlex-us-frequency.md</span>
+<span class="sd">Decision (yardstick): wiki/decisions/resolved/function-word-anchor-design.md (Q1 norm)</span>
+
+<span class="sd">Download (verified 2026-06-21):</span>
+<span class="sd">    https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexus/subtlexus2.zip</span>
+<span class="sd">    -&gt; SUBTLEXus74286wordstextversion.txt</span>
+<span class="sd">    sha256 = c5f86f065fc5d057fbf366433b8c5ca550aa7c24e128362dea4394f2b29c86e4</span>
+
+<span class="sd">Columns (tab-separated): Word  FREQcount  CDcount  FREQlow  Cdlow  SUBTLWF  Lg10WF  SUBTLCD  Lg10CD</span>
+<span class="sd">  FREQcount = raw count in the 51M-word subtitle corpus</span>
+<span class="sd">  Lg10WF    = log10(FREQcount+1)  -- the matching variable the probe uses</span>
+<span class="sd">  SUBTLWF   = frequency per million words</span>
+
+<span class="sd">Citation: Brysbaert, M., &amp; New, B. (2009). Moving beyond Kucera and Francis: A critical</span>
+<span class="sd">evaluation of current word frequency norms and the introduction of a new and improved</span>
+<span class="sd">word frequency measure for American English. Behavior Research Methods, 41(4), 977-990.</span>
+
+<span class="sd">NOTE ON SCOPE: this script ONLY emits the seed frequencies + a *candidate* content-word</span>
+<span class="sd">pool. It does NOT freeze or select the probe&#39;s items -- that is the build session&#39;s job,</span>
+<span class="sd">under an independent pre-run critic, per the resolved decision. The candidate pool is a</span>
+<span class="sd">convenience, explicitly not the frozen set.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">CORPUS</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;SUBTLEXus74286wordstextversion.txt&quot;</span><span class="p">)</span>
+<span class="n">SHA256</span> <span class="o">=</span> <span class="s2">&quot;c5f86f065fc5d057fbf366433b8c5ca550aa7c24e128362dea4394f2b29c86e4&quot;</span>
+<span class="n">OUT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;function-word-seed-frequencies.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># The function-word swap pairs the conjecture/decision name (the -&gt; a; will -&gt; would;</span>
+<span class="c1"># because -&gt; although; some -&gt; every). Each pair is a swap-OUT / swap-IN.</span>
+<span class="n">FUNCTION_PAIRS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;determiner: definite -&gt; indefinite&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;will&quot;</span><span class="p">,</span> <span class="s2">&quot;would&quot;</span><span class="p">,</span> <span class="s2">&quot;modal: future -&gt; conditional/irrealis&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;because&quot;</span><span class="p">,</span> <span class="s2">&quot;although&quot;</span><span class="p">,</span> <span class="s2">&quot;subordinator: causal -&gt; concessive&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;some&quot;</span><span class="p">,</span> <span class="s2">&quot;every&quot;</span><span class="p">,</span> <span class="s2">&quot;quantifier: existential -&gt; universal&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># A closed-class stoplist used ONLY to keep the candidate content pool open-class.</span>
+<span class="c1"># (Not a linguistic claim about the function/content boundary -- a convenience filter.)</span>
+<span class="n">CLOSED_CLASS</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">the a an this that these those some any every each all both either neither no none</span>
+<span class="s2">i you he she it we they me him her us them my your his its our their mine yours hers ours theirs</span>
+<span class="s2">am is are was were be been being do does did doing have has had having</span>
+<span class="s2">will would shall should can could may might must ought need dare</span>
+<span class="s2">to of in on at by for with from into onto upon over under above below between among through</span>
+<span class="s2">during before after since until till about against around as than then so such</span>
+<span class="s2">and or but nor yet because although though while whereas if unless whether</span>
+<span class="s2">not no nor very too just only even still also again here there where when why how what which who whom whose</span>
+<span class="s2">one two three four five six seven eight nine ten</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;latin-1&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">header</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">wi</span><span class="p">,</span> <span class="n">fi</span><span class="p">,</span> <span class="n">li</span> <span class="o">=</span> <span class="n">header</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Word&quot;</span><span class="p">),</span> <span class="n">header</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;FREQcount&quot;</span><span class="p">),</span> <span class="n">header</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Lg10WF&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">li</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">p</span><span class="p">[</span><span class="n">wi</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">fi</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">li</span><span class="p">])))</span>
+    <span class="k">return</span> <span class="n">rows</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">check_sha</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">h</span> <span class="o">!=</span> <span class="n">SHA256</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sha256 mismatch: got </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">, expected </span><span class="si">{</span><span class="n">SHA256</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">h</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">CORPUS</span><span class="p">):</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;missing </span><span class="si">{</span><span class="n">CORPUS</span><span class="si">}</span><span class="s2">; download subtlexus2.zip per the docstring first.&quot;</span><span class="p">)</span>
+    <span class="n">check_sha</span><span class="p">(</span><span class="n">CORPUS</span><span class="p">)</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">CORPUS</span><span class="p">)</span>
+    <span class="n">by_word</span> <span class="o">=</span> <span class="p">{</span><span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">fc</span><span class="p">,</span> <span class="n">lg</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">fc</span><span class="p">,</span> <span class="n">lg</span><span class="p">)</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">}</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># 1) the function-word swap targets + within-pair log-frequency gaps</span>
+    <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">gloss</span> <span class="ow">in</span> <span class="n">FUNCTION_PAIRS</span><span class="p">:</span>
+        <span class="n">ra</span><span class="p">,</span> <span class="n">rb</span> <span class="o">=</span> <span class="n">by_word</span><span class="p">[</span><span class="n">a</span><span class="p">],</span> <span class="n">by_word</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+        <span class="n">gap</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ra</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">rb</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s2">&quot;function-swap-out&quot;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">freqcount</span><span class="o">=</span><span class="n">ra</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lg10wf</span><span class="o">=</span><span class="n">ra</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                        <span class="n">pair</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">-&gt;</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">within_pair_lg10_gap</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">gap</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">note</span><span class="o">=</span><span class="n">gloss</span><span class="p">))</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s2">&quot;function-swap-in&quot;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">freqcount</span><span class="o">=</span><span class="n">rb</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lg10wf</span><span class="o">=</span><span class="n">rb</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                        <span class="n">pair</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">-&gt;</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">within_pair_lg10_gap</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">gap</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">note</span><span class="o">=</span><span class="n">gloss</span><span class="p">))</span>
+
+    <span class="c1"># 2) candidate open-class content controls within +/-0.10 Lg10WF of each mid-band</span>
+    <span class="c1">#    function word (the/a are too high-frequency to match an open-class word, so the</span>
+    <span class="c1">#    band is anchored on would/some/every/because). Candidates are sorted by frequency</span>
+    <span class="c1">#    proximity; the build session does the certified final selection, NOT this script.</span>
+    <span class="n">anchors</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;would&quot;</span><span class="p">,</span> <span class="s2">&quot;some&quot;</span><span class="p">,</span> <span class="s2">&quot;every&quot;</span><span class="p">,</span> <span class="s2">&quot;because&quot;</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">anc</span> <span class="ow">in</span> <span class="n">anchors</span><span class="p">:</span>
+        <span class="n">target_lg</span> <span class="o">=</span> <span class="n">by_word</span><span class="p">[</span><span class="n">anc</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">cands</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">fc</span><span class="p">,</span> <span class="n">lg</span><span class="p">)</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+            <span class="n">wl</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">wl</span> <span class="ow">in</span> <span class="n">CLOSED_CLASS</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">w</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lg</span> <span class="o">-</span> <span class="n">target_lg</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mf">0.10</span><span class="p">:</span>
+                <span class="n">cands</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">abs</span><span class="p">(</span><span class="n">lg</span> <span class="o">-</span> <span class="n">target_lg</span><span class="p">),</span> <span class="n">w</span><span class="p">,</span> <span class="n">fc</span><span class="p">,</span> <span class="n">lg</span><span class="p">))</span>
+        <span class="n">cands</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">d</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">fc</span><span class="p">,</span> <span class="n">lg</span> <span class="ow">in</span> <span class="n">cands</span><span class="p">[:</span><span class="mi">12</span><span class="p">]:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s2">&quot;content-candidate&quot;</span><span class="p">,</span> <span class="n">word</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">freqcount</span><span class="o">=</span><span class="n">fc</span><span class="p">,</span> <span class="n">lg10wf</span><span class="o">=</span><span class="n">lg</span><span class="p">,</span>
+                            <span class="n">pair</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;~</span><span class="si">{</span><span class="n">anc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">within_pair_lg10_gap</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+                            <span class="n">note</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;open-class candidate within 0.10 Lg10WF of &#39;</span><span class="si">{</span><span class="n">anc</span><span class="si">}</span><span class="s2">&#39; (NOT frozen)&quot;</span><span class="p">))</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUT</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">wtr</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;role&quot;</span><span class="p">,</span> <span class="s2">&quot;word&quot;</span><span class="p">,</span> <span class="s2">&quot;freqcount&quot;</span><span class="p">,</span> <span class="s2">&quot;lg10wf&quot;</span><span class="p">,</span>
+                                            <span class="s2">&quot;pair&quot;</span><span class="p">,</span> <span class="s2">&quot;within_pair_lg10_gap&quot;</span><span class="p">,</span> <span class="s2">&quot;note&quot;</span><span class="p">])</span>
+        <span class="n">wtr</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">out</span><span class="p">:</span>
+            <span class="n">wtr</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote </span><span class="si">{</span><span class="n">OUT</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows); corpus sha256 OK (</span><span class="si">{</span><span class="n">SHA256</span><span class="p">[:</span><span class="mi">12</span><span class="p">]</span><span class="si">}</span><span class="s2">...)&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

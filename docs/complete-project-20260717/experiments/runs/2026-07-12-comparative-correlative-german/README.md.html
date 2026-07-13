@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>README.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-12-comparative-correlative-german</a> <span class="sep">/</span> <span class="cur">README.md</span></nav>
+<main>
+<header class="page-head">
+<h1>README.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">1.7 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-12-comparative-correlative-german/README.md</code></p>
+</header>
+<div class='md'><h1 id="2026-07-12-german-comparative-correlative-replication-a6-s213">2026-07-12 — German comparative-correlative replication (A6, s213)</h1>
+<p>Cross-linguistic replication of the flagship English CC construction-isolation result in <strong>German</strong>
+(<code>je…desto/umso</code>), testing whether the covariation reading is construction-driven rather than
+English-n-gram-driven. Governed by
+<a href="../../../wiki/decisions/resolved/cross-linguistic-cc-replication-scope.md.html"><code>decisions/resolved/cross-linguistic-cc-replication-scope</code></a>
+(Q1-C / Q2-B / Q3-A, ratified s213). Design:
+<a href="../../designs/comparative-correlative-german-v1.md.html"><code>design/comparative-correlative-german-v1</code></a>.
+<strong>Internal-contrast-only</strong> (no non-English CC human dataset exists).</p>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>build_items.py</code> → <code>data/comparative-correlative-german/items.csv</code> — 34 German scale pairs × 4 forms
+  = 136 items (FROZEN, sha in PREREG). A faithful port of the English powered instrument; only the
+  target language changes.</li>
+<li><code>build_cooc_de.py</code> → <code>freq_control.json</code> — Q2-B UD-German-GSD (CC BY-SA 4.0) frequency/co-occurrence
+  control (FROZEN before the run).</li>
+<li><code>smoke.py</code> → <code>raw/smoke_results.json</code> — German-competence gate (each model ≥10/12 AND mean ≥0.90).</li>
+<li><code>probe.py</code> → <code>raw/</code> — the German FC + NLI probe (run only after the critic GO + smoke GO).</li>
+<li><code>analyze.py</code> → <code>raw/results.json</code> — magnitudes + 95% CIs (cluster bootstrap over pairs) + freq control.</li>
+<li><code>PREREG.md</code> — frozen pre-registration + item self-audit (condition viii).</li>
+<li><code>REVIEW-ratify-s213.md</code> / <code>VOTE-ratify-s213.json</code> — the scope-decision ratification record.</li>
+<li><code>REVIEW-critic-s213.md</code> / <code>VOTE-critic-s213.json</code> — the pre-run critic record (added at critic step).</li>
+</ul>
+<h2 id="order-of-operations-anti-cheat">Order of operations (anti-cheat)</h2>
+<p>build_items → build_cooc_de → <strong>freeze (sha)</strong> → pre-run critic → smoke gate → probe → analyze.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

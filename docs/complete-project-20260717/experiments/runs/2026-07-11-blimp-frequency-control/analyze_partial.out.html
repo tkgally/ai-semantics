@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze_partial.out — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-11-blimp-frequency-control</a> <span class="sep">/</span> <span class="cur">analyze_partial.out</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze_partial.out</h1>
+<p class="subtitle"><span class="ftype">output</span> &middot; <span class="fsize">779 B</span> &middot; <code class="fpath">experiments/runs/2026-07-11-blimp-frequency-control/analyze_partial.out</code></p>
+</header>
+<pre class='plain'>=== BLiMP R1 frequency control — covariate arm (s208) ===
+proxy-validity audit (G7): F vs unigram-logfreq rho=+0.481 (expect strong +),  F vs mean-word-length rho=-0.352 (expect -)
+corr(F,H) Spearman = +0.2595  (bands: |r|&lt;0.2 absent / |r|&gt;0.7 over-control)
+[A] raw rho +0.606 -&gt; partial +0.572 CI[+0.308,+0.774] (excl 0)  drop +0.035  bi-only partial +0.573
+[B] raw rho +0.543 -&gt; partial +0.510 CI[+0.225,+0.718] (excl 0)  drop +0.033  bi-only partial +0.509
+[C] raw rho +0.628 -&gt; partial +0.606 CI[+0.329,+0.794] (excl 0)  drop +0.021  bi-only partial +0.610
+NC scramble-H partial (expect ~0): {&#x27;A&#x27;: -0.4013, &#x27;B&#x27;: -0.2748, &#x27;C&#x27;: -0.0926}
+NC scramble-F partial (expect ~raw): {&#x27;A&#x27;: 0.6097, &#x27;B&#x27;: 0.5826, &#x27;C&#x27;: 0.6502}
+VERDICT: SURVIVES-COVARIATE   (partial CI excludes 0 on 3/3)
+</pre>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

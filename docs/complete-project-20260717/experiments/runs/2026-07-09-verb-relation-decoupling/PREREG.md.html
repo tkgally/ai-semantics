@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-09-verb-relation-decoupling</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">12.4 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-09-verb-relation-decoupling/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-verb-relation-decoupling-probe-h-verb-1-h-verb-2">PREREG — VERB-relation decoupling probe (H-verb-1 + H-verb-2)</h1>
+<p><strong>Frozen s199, 2026-07-09, BEFORE any model call.</strong> Design:
+<a href="../../designs/lexical-relation-recovery-verb-decoupling-v1.md.html"><code>design/lexical-relation-recovery-verb-decoupling-v1</code></a>.
+Gates RATIFIED s199:
+<a href="../../../wiki/decisions/resolved/verb-relation-decoupling-design.md.html"><code>decisions/resolved/verb-relation-decoupling-design</code></a>
+— <strong>Q1-C / Q2-A / Q3 internal-contrast-only</strong>, with three additional binding conditions <strong>B1–B3</strong> on top
+of the seven design-page freeze conditions. This file freezes the item set, the control, the depth proxy
+(spec + predicted sign), the corpus, the verdict map with numeric thresholds, the B1 numeric degeneracy
+bound, and the anti-cheat fence. Nothing below may be touched after recovery is observed.</p>
+<h2 id="the-question-nothing-wider">The question (nothing wider)</h2>
+<p>On a <strong>fresh</strong> relatum-production probe over WordNet <strong>verb</strong> relations, run on the panel against a
+contrastive-frame G² control byte-frozen from the s193 <code>build_cooc_c4.py</code> (only the cue POS and candidate
+pool V changing to verbs), with a <strong>troponymy-depth proxy pre-registered before recovery is observed</strong>:
+<strong>(H-verb-1)</strong> does across-relation recovery rank <strong>decouple</strong> from contrastive-frame cue-strength on
+verbs (near-zero or negative ρ_cue, the noun band) — confirming "hierarchy ⇒ decoupling" out of nouns —
+or does cue-strength <strong>regain</strong> predictive power (clearly positive ρ_cue, the adjective band),
+<strong>falsifying</strong> the conjecture's central identification despite the verified verb hierarchy? <strong>(H-verb-2)</strong>
+does a pre-registered troponymy-depth proxy (<code>min_depth</code> of the cue's first verb synset; predicted sign
+<strong>negative</strong>) <strong>out-predict</strong> contrastive-frame cue-strength for recovery rank, ≥2/3 models? <strong>Internal-
+contrast only</strong> (Q3): recovery is scored against WordNet, a shared target that cancels in the head-to-head;
+both predictors are corpus/lexicon statistics; no human baseline enters.</p>
+<h2 id="frozen-artifacts-built-committed-before-any-model-call">Frozen artifacts (built + committed BEFORE any model call)</h2>
+<ul>
+<li><strong><code>items.json</code></strong> (<code>prep.py</code>, SEED 20260709): FRESH cue verbs per relation, <strong>POS-agnostic-surface
+  DISJOINT</strong> from the <strong>1,740</strong> committed prior cue lemmas (s186 nouns + s193 fresh nouns + s196
+  adjectives; asserted 0 overlap, all relations — freeze-condition 4). Each cue carries its word-form
+  gold relatum set (relata() the verb parallel of s186) <strong>and</strong> its <code>trop_depth</code>
+  (<code>wn.synsets(cue,'v')[0].min_depth()</code>; Q2-A). Frequency band Lg10WF ∈ [2.0, 4.5], matched to
+  <strong>antonymy's</strong> fresh per-bin profile (the binding relation, freeze-condition 3). <strong>ACHIEVED per-relation
+  N (freeze finding):</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>relation</th>
+<th>N</th>
+<th>Lg10WF median</th>
+<th>mean trop-depth</th>
+<th>gold median</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>antonymy</td>
+<td>130</td>
+<td>2.979</td>
+<td>1.577</td>
+<td>1</td>
+</tr>
+<tr>
+<td>synonymy</td>
+<td>130</td>
+<td>2.982</td>
+<td>2.208</td>
+<td>4</td>
+</tr>
+<tr>
+<td>hypernymy</td>
+<td>130</td>
+<td>2.986</td>
+<td>2.192</td>
+<td>10</td>
+</tr>
+<tr>
+<td>troponymy</td>
+<td>130</td>
+<td>2.955</td>
+<td>2.431</td>
+<td>6</td>
+</tr>
+<tr>
+<td>entailment</td>
+<td>130</td>
+<td>2.933</td>
+<td>2.154</td>
+<td>2</td>
+</tr>
+<tr>
+<td>cause</td>
+<td>126</td>
+<td>2.795</td>
+<td>1.690</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>776 verdict-bearing cues.</strong> trop-depth resolved 100%. <strong><code>cause</code> INCLUDED</strong> as a 6th relation by the
+  <strong>mechanical rule (freeze-condition 5): achieved matched-N = 126 ≥ CAUSE_MIN (100)</strong> → the arm is
+  6-point. All CORE relations clear the thin-relation floor (CORE_FLOOR 80; freeze-condition 3).</p>
+<ul>
+<li>
+<p><strong><code>vocab.json</code></strong> (<code>prep.py</code>): the control's candidate pool V = all single-word SubTLEX <strong>verbs</strong>
+  (Lg10WF ≥ 2.0), |V| = 2,645.</p>
+</li>
+<li>
+<p><strong><code>control.json</code> / <code>counts.json</code></strong> (<code>build_cooc_c4.py</code>): the contrastive-frame G² control on <strong>C4</strong>.
+  <strong>Freeze-condition 6 (byte-freeze integrity):</strong> <code>signed_g2</code> + <code>compute_control</code> produce <strong>byte-identical
+  output</strong> to the s193 <code>build_cooc_c4.py</code> (verified by assertion — a battery of inputs + a synthetic
+  <code>compute_control</code> case; K, FRAME_WIN, CONNECTIVES identical); only the <strong>cue POS (→verbs)</strong> and
+  <strong>candidate pool V (→verbs)</strong> change. The s193 nominal <strong>Hearst arm is DROPPED</strong> (Q2-C rejected — verb
+  troponymy has no clean corpus frame; the single H2 vehicle is the structural depth proxy). Corpus: C4
+  (<code>allenai/c4</code> en) shards <strong>00000–00002</strong> (the s193-frozen set), streamed and discarded; volume asserted
+  ≥ s186's 21.3M sentences / ~320M tokens. ODC-BY (+ Common-Crawl terms — travels to the result
+  provenance).</p>
+</li>
+</ul>
+<h2 id="frozen-predictor-vectors-pre-recovery-legitimate-to-state-no-model-data-existed-when-computed">Frozen predictor vectors (pre-recovery — legitimate to state; NO model data existed when computed)</h2>
+<ul>
+<li><strong>Troponymy-depth (H2 proxy, predicted NEGATIVE), per relation:</strong> antonymy 1.577 · cause 1.690 ·
+  entailment 2.154 · hypernymy 2.192 · synonymy 2.208 · troponymy 2.431.</li>
+<li><strong>Cue-strength (contrastive-frame G² soundness, H1 predictor), per relation</strong> (frozen in <code>control.json</code>
+  from the C4 stream + the frozen gold, before any model call): antonymy <strong>0.0923</strong> · troponymy 0.0487 ·
+  synonymy 0.0308 · hypernymy 0.0207 · cause 0.0106 · entailment 0.0051 (mean control-frame soundness
+  0.0347 — non-degenerate, top-3 produced for ~every cue).</li>
+</ul>
+<p><strong>Note the confound made explicit (condition 2 / B2):</strong> <strong>antonymy is BOTH the highest-cue-strength
+relation (0.0923) AND the shallowest-depth relation (1.577)</strong> — its contrastive frames literally <em>are</em>
+antonym frames — so on verbs ρ_cue-positive and ρ_depth-negative are <strong>aligned</strong> through antonymy (the
+reverse of the noun case, where low-cue-strength hypernymy was taxonomically central and <em>disaligned</em>
+them). This is exactly why the frozen depth spread is DEGENERATE (B1) and H2 is under-powered
+symmetrically (B2). H1 is unaffected: cue-strength's rank {antonymy &gt; troponymy &gt; synonymy &gt; hypernymy &gt;
+cause &gt; entailment} is a well-defined predictor independent of depth.</p>
+<h2 id="b1-the-numeric-degeneracy-bound-the-s199-ratifiers-binding-condition-frozen-pre-recovery">B1 — the NUMERIC degeneracy bound (the s199 ratifier's binding condition; frozen pre-recovery)</h2>
+<p>The between-relation troponymy-depth spread is <strong>near-degenerate</strong> on verbs (the s198 critic's catch).
+B1 requires a <strong>single committed numeric bound</strong>, computed on the <strong>frozen freq-matched sample</strong> before
+any model call, decided outcome-independently. As ratified, the bound is on the <strong>non-antonymy CORE-4
+mean-depth range</strong> {synonymy, hypernymy, troponymy, entailment} — the fixed backbone, independent of the
+mechanical <code>cause</code> decision:</p>
+<blockquote>
+<p><strong><code>DEGEN_MAX_RANGE = 0.50</code>.</strong> The depth spread is <strong>DEGENERATE</strong> iff the non-antonymy CORE-4 mean-depth
+range &lt; 0.50. Rationale (pre-committed, not tuned): at a within-relation depth SD ≈ 2 and N ≈ 130, one
+standard error of a relation mean ≈ 0.18, so a 4-relation range must clear ≈ 2.5–3 SE (≈ 0.5) to be a
+real, above-sampling-noise depth test.</p>
+</blockquote>
+<p><strong>FROZEN VERDICT (on the frozen sample): DEGENERATE.</strong> Achieved non-antonymy CORE-4 range = <strong>0.277</strong>
+(troponymy 2.431 − entailment 2.154) &lt; 0.50. [Transparency: the cause-inclusive non-antonymy range is
+0.741 and the full-set depth SD is 0.304 — both recorded in <code>items.json</code>, neither drives the verdict; the
+non-degeneracy of the wider set rides on <code>cause</code> (1.69) and antonymy (1.577), and antonymy's shallow depth
+is <strong>confounded</strong> with its high contrastive-frame cue-strength.]</p>
+<p><strong>B2 — symmetric application.</strong> Because the spread is DEGENERATE, H2 is under-powered <strong>symmetrically</strong>:
+a <strong>DEPTH-FAILS</strong> is reported UNDER-POWERED / <strong>non-falsifying</strong> (does NOT fire conjecture-falsifier-2),
+<strong>AND</strong> a <strong>DEPTH-OUT-PREDICTS</strong> is flagged UNDER-POWERED — <strong>not banked as mechanistically equivalent to
+the noun H2</strong> (possibly antonymy/cause-driven). <code>analyze.py</code> applies this automatically from the frozen
+<code>b1_depth_spread.depth_degenerate</code> flag.</p>
+<h2 id="panel-elicitation-byte-identical-to-s186s196-neutral-arm">Panel &amp; elicitation (byte-identical to s186/s196 neutral arm)</h2>
+<p>Panel = <a href="../../../config/models.md.html"><code>config/models.md</code></a> <code>panel.A/.B/.C</code> (never hardcode slugs).
+Temperature 0, zero-shot, single-turn, neutral system prompt; <code>google/*</code> gets
+<code>reasoning={"effort":"minimal"}</code>. NEUTRAL prompt scaffold + <code>parse_words</code> + the antonymy/synonymy GLOSS
+lines byte-identical to s186 <code>probe.py</code>; the verb-specific gloss lines are the POS parallel. <strong>Two arms:</strong>
+neutral (all 6 relations) + an <strong>antonymy frame-ablation</strong> arm (antonymy only; the corpus-free hedge
+against a calibration-gate refire, condition 7 — descriptive, bears on the antonymy-shadow reading, not
+on H1/H2). <code>ABORT_USD = 1.50</code>. Every call records <code>usage.cost</code>.</p>
+<h2 id="metrics">Metrics</h2>
+<ul>
+<li><strong>Recovery 𝒮</strong> (per relation) = mean raw <strong>Soundness</strong> (Cao precision-over-produced). <strong>HIT@3</strong> =
+  gold-size-insensitive co-primary.</li>
+<li><strong>Cue-strength</strong> (per relation) = mean 𝒮(control top-3, frame variant).</li>
+<li><strong>ρ_cue / ρ_depth</strong> = across-relation Spearman (<strong>tie-naive</strong> — the authoritative s186/s193 pipeline) of
+  recovery against each predictor, <strong>per model</strong>.</li>
+</ul>
+<h2 id="verdict-map-frozen-direction-fixed-exhaustive-bands">Verdict map (FROZEN; direction fixed; exhaustive bands)</h2>
+<p><strong>Verdict of record = the ACROSS-RELATION result</strong> (Q1-C). The item-level cue/depth regression is
+<strong>descriptive/robustness-only, NON-DECISIVE</strong>.</p>
+<p><strong>H-verb-1 (the registered decoupling) — exhaustive, mutually-exclusive bands on primary (soundness) ρ_cue:</strong>
+- <strong>DECOUPLING-REAPPEARS</strong> iff ρ_cue <strong>≤ +0.30</strong> on <strong>≥2/3</strong> models (near-zero or negative; the noun band).
+- <strong>DECOUPLING-BREAKS</strong> iff ρ_cue <strong>&gt; +0.50</strong> on <strong>≥2/3</strong> models (cue-strength recovers its predictive
+  power despite the verified verb hierarchy — the clean falsifier of the conjecture's central
+  identification, fires conjecture-falsifier-1).
+- <strong>H1-INCONCLUSIVE</strong> otherwise (the (+0.30, +0.50] gap or no ≥2/3 majority) — pre-named first-class,
+  broken by the powered item-level arm.</p>
+<p><strong>H-verb-2 (troponymy-depth; predicted NEGATIVE) — numeric margin, THEN the B1/B2 under-power gate:</strong>
+- Depth <strong>wins</strong> for a model iff <strong>|ρ_depth| − |ρ_cue| ≥ 0.20</strong> AND ρ_depth is <strong>negative</strong>.
+- <strong>DEPTH-OUT-PREDICTS</strong> iff depth wins on <strong>≥2/3</strong>; <strong>DEPTH-FAILS</strong> otherwise.
+- <strong>B1/B2 gate (frozen DEGENERATE):</strong> a DEPTH-FAILS is reported <strong>under-powered/non-falsifying</strong>; a
+  DEPTH-OUT-PREDICTS is reported <strong>under-powered, not noun-equivalent</strong>. Neither is read as
+  mechanistically equivalent to the noun H2 (condition 2: antonymy depth×cue-strength confound).</p>
+<p><strong>Pre-named nulls (first-class):</strong> ρ_cue in the INCONCLUSIVE band with the item-level arm also ambiguous;
+or DECOUPLING-REAPPEARS but DEPTH-FAILS (decoupling without the named mechanism — but under-powered on
+verbs, so uninformative about mechanism); or the across-relation and item-level arms <strong>diverge</strong> (reported,
+not resolved by fiat).</p>
+<p><strong>n = 3 models; orderings, not coefficients; VERBS only. No pooling across models or POS.</strong></p>
+<h2 id="what-each-outcome-feeds-b3-softening-applied-a-third-point-never-the-established-law">What each outcome feeds (B3 softening applied — a THIRD point, never the established law)</h2>
+<ul>
+<li><strong>DECOUPLING-REAPPEARS:</strong> "hierarchy ⇒ decoupling" gains its first out-of-noun confirmation — <strong>one
+  point in a three-point pattern</strong> (nouns + adjectives + verbs) a future review would weigh toward
+  broadening the noun claim; NOT the established POS-structural law, and NOT an isolation of hierarchy
+  (verbs confound POS with hierarchy as nouns do). Still <code>internal-contrast-only</code>, within-distribution.</li>
+<li><strong>DECOUPLING-BREAKS:</strong> a POS that <em>has</em> a hierarchy still shows cue-strength predicting recovery — the
+  sharpest result; the conjecture's central identification collapses. First-class negative.</li>
+<li><strong>H2 (either branch):</strong> under-powered on verbs by B1/B2 — informative only weakly; never noun-equivalent.</li>
+<li><strong>A <a href="../../../wiki/predictions.md.html"><code>predictions.md</code></a> probe row</strong> is registered at freeze (co-registered
+  with the s197 conjecture bet, not double-scored); outcome updated the run session.</li>
+</ul>
+<h2 id="anti-cheat-fence-protocol-b-the-ten-conditions">Anti-cheat fence (PROTOCOL §B; the ten conditions)</h2>
+<p>The fresh disjoint cue sets, the band [2.0,4.5] outlier cap, k=3, the relation inventory (incl. the
+mechanical <code>cause</code>-inclusion rule + the CORE thin-relation floor), the troponymy-depth proxy spec + its
+predicted negative sign, the ρ_cue bands, the ρ_depth margin, and the <strong>B1 numeric degeneracy bound</strong>
+(0.50 on the non-antonymy CORE-4 range) are <strong>all frozen here BEFORE any model call</strong>. No band, proxy, or
+threshold is touched after recovery is seen. DECOUPLING-BREAKS, DEPTH-FAILS/DEPTH-OUT-PREDICTS (both
+under-powered by B1/B2), and the nulls are pre-named first-class. The G² computation is byte-frozen vs
+s193 (condition 6). <code>internal-contrast-only</code> — recovery scored vs WordNet, a shared target that cancels;
+predictors are corpus/lexicon statistics; no human baseline.</p>
+<p><strong>Construct-validity scope caveats (carried to the result, not gates):</strong> (a) gold is all-sense while the
+depth proxy is first-synset (byte-identical to the noun run); (b) hypernymy gold median ≈ 10 vs antonymy's
+≈ 1 — a gold-size confound, mitigated by the HIT@3 co-primary, disclosed; (c) the corpus is a proxy for
+the panel's pretraining distribution (fence carried).</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>multimodal-anchor-scouting.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">wiki</a> <span class="sep">/</span> <a href="../index.html">base</a> <span class="sep">/</span> <a href="index.html">resources</a> <span class="sep">/</span> <span class="cur">multimodal-anchor-scouting.md</span></nav>
+<main>
+<header class="page-head">
+<h1>multimodal-anchor-scouting.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">59.8 KB</span> &middot; <code class="fpath">wiki/base/resources/multimodal-anchor-scouting.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>type</th><td>resource</td></tr><tr><th>id</th><td>multimodal-anchor-scouting</td></tr><tr><th>title</th><td>Multimodal anchor scouting — feasibility catalog (2026-05-30) + graded-image magnitude-instrument deeper scout (session 130)</td></tr><tr><th>meaning-senses</th><td><ul class='fm-list'><li>grounded.perceptual</li><li>human-comparison</li><li>distributional</li></ul></td></tr><tr><th>status</th><td>scouting</td></tr><tr><th>contingent-on</th><td><span class='muted'>(none)</span></td></tr><tr><th>created</th><td>2026-05-30</td></tr><tr><th>updated</th><td>2026-07-05</td></tr><tr><th>links</th><td><ul class='fm-list'><li>rel: depends-on, target: concept/grounding</li><li>rel: depends-on, target: conjecture/distributional-saturation-grounding-headroom</li><li>rel: depends-on, target: open-question/grounding-magnitude-instrument</li></ul></td></tr></table></div><div class='md'><h1 id="multimodal-anchor-scouting-feasibility-catalog">Multimodal anchor scouting — feasibility catalog</h1>
+<blockquote>
+<p><em>(Front-matter added 2026-07-05, session 183 — wiki-coherence pass. This page predates the
+front-matter convention for scouting records; the two later sibling scouting pages carry it, and
+senselint flagged this one as the only undocumented WARN. Content below is untouched.)</em></p>
+</blockquote>
+<p><strong>Scouted:</strong> 2026-05-30. <strong>Purpose:</strong> anchor-feasibility note for a future probe of whether vision-language models (VLMs) interpret lexical/grammatical meaning differently from text-only models. This is a <em>scouting</em> note, not a typed resource page; it covers multiple candidates and ends with a ranked recommendation. The project's recurring rule applies: a resource must be cited by the <em>specific human-annotated feature</em> that bears on the claim, never by existence alone.</p>
+<p><strong>Multimodal axis design constraint:</strong> any anchor chosen here must be buildable so it can later join the text-based lexical↔grammatical continuum (<a href="../../findings/theory/lexicon-grammar-continuum.md.html"><code>theory/lexicon-grammar-continuum</code></a>). The clearest join: the visual/perceptual grounding signal should be comparable to the project's existing DURel-style sense-relatedness signal — ideally graded, human-produced, tied to specific words or object concepts.</p>
+<hr />
+<h2 id="candidate-1-things-things-data-odd-one-out-triplet-judgments-spose-embeddings">Candidate 1: THINGS / THINGS-data — odd-one-out triplet judgments + SPoSE embeddings</h2>
+<p><strong>What it is.</strong> THINGS-data (Hebart, Contier, King et al., eLife 2023) is a large-scale collection of human behavioral similarity judgments over 1,854 systematically sampled object concepts, each with multiple naturalistic images. The human signal is a triplet odd-one-out task: participants see three objects and indicate which is most dissimilar. The dataset collects <strong>4.70 million triplet judgments</strong> from <strong>12,340–14,025 participants</strong> (two counts appear in sources; the eLife 2023 paper reports 12,340 in one passage). From these judgments, a <strong>66-dimensional embedding</strong> (SPoSE) of object similarity was derived, with dimensions interpretable as perceptual and conceptual object properties (colorful, animal-related, etc.).</p>
+<p><strong>Who made it / is the signal human.</strong> Yes. Judgments were crowdsourced via online platforms; each trial is a single human similarity choice. No gold label was imposed top-down; the embedding is derived entirely from aggregated human choices.</p>
+<p><strong>License (verified).</strong> The eLife 2023 paper and associated repositories use a <strong>CC0 license</strong> — confirmed via web search citing the eLife publication directly ("A CC0 license was added to all software and data"). The behavioral data are deposited at OSF (doi: 10.17605/OSF.IO/F5RN6) and the Figshare record (figshare.com/articles/dataset/20552784). The THINGS image set itself has a separate, more restrictive license (academic use only for the full set; CC0 for the THINGSplus subset of 1,854 license-free images). For the <em>behavioral/triplet data alone</em> — the human similarity judgments — the CC0 license applies. <em>Caveat: the CC0 claim comes from a secondary source citing the eLife paper; the OSF record itself was not directly inspectable in this run. Mark as "verified via secondary source, not directly from the OSF README."</em></p>
+<p><strong>Fetchability.</strong> OSF project at https://osf.io/f5rn6/; SPoSE code at https://github.com/ViCCo-Group/SPoSE. <code>pip install osfclient; osf -p f5rn6 clone THINGS-behavior</code> per the THINGS initiative website. URL confirmed reachable (HTTPS 200 not directly tested this run — fetchability is <em>likely</em> given OSF's stability and CC0 designation, but not independently curl-verified).</p>
+<p><strong>What meaning-claim it could anchor.</strong> The human triplet judgments ground a claim about <em>perceptual/conceptual object similarity</em> — specifically: does a VLM's internal representation of an object concept track the same similarity structure that humans use? This is the perceptual analogue of the project's DURel-graded lexical-sense probe: instead of asking "do two usages of the same word feel similar to humans?", it asks "do two object images feel similar to humans?" The bridge to the project's lexical program: if a VLM's word representation for <em>dog</em> and <em>wolf</em> is closer than for <em>dog</em> and <em>hammer</em>, and human triplet judgments agree, that is convergent evidence that distributional training recovers some of the graded <em>conceptual</em> similarity structure humans use — a perceptual analogue of clause (a) in <a href="../../findings/conjectures/lexical-sense-gradience.md.html"><code>conjecture/lexical-sense-gradience</code></a>. A VLM that additionally processes images could be compared to a text-only model on the same judgments: divergence would be evidence that grounding shifts the similarity structure.</p>
+<p><strong>What it cannot anchor.</strong> THINGS covers object <em>concepts</em>, not word <em>senses</em>. It cannot ground a polysemy/homonymy-style claim (THINGS has one concept per image-set; it does not have usage-pair proximity for the same word in different senses). It cannot ground a grammatical/constructional claim. The graded signal is over concept-pairs, not sense-pairs; the lexical program's DURel tradition is a closer instrument for within-word gradience. THINGS triplet data cannot directly test whether an LLM tracks <em>lexical</em> sense relatedness — it tests <em>conceptual</em> object similarity, a broader, more perceptual target.</p>
+<p><strong>Recommendation: promising — verify more before cataloguing as full resource.</strong> The scale (4.7M judgments, 12k+ participants), the CC0 license, and the OSF availability make this the strongest multimodal behavioral anchor found in this search. The conceptual similarity signal is genuinely human-produced and graded, matching the project's preference for continuous human signals over binary gold. The main open question is whether the project's VLM probe would target <em>image</em> similarity (requires a VLM with vision input) or <em>word-concept</em> similarity (which text-only models could also be tested on, using the SPoSE concept labels). The join to the lexical↔grammatical continuum requires an explicit design decision: treat THINGS as an image-grounded perceptual anchor or as a concept-similarity anchor that both text and vision models can be probed on. That design question should be surfaced to Tom before this is catalogued as a full resource page.</p>
+<hr />
+<h2 id="candidate-2-winoground-visio-linguistic-compositionality-benchmark">Candidate 2: Winoground — visio-linguistic compositionality benchmark</h2>
+<p><strong>What it is.</strong> Winoground (Thrush, Jiang, Bartolo, Singh, Williams, Kiela &amp; Ross 2022, CVPR — author list per <a href="../sources/thrush-2022-winoground.md.html"><code>source/thrush-2022-winoground</code></a>, verified against arXiv 2204.03162) is a 400-item benchmark for evaluating whether vision-and-language models can correctly match two images and two captions where the captions share identical words but differ only in word order (and therefore in meaning). Example: <em>"there is a mug in some grass"</em> vs. <em>"there is some grass in a mug"</em> — same words, opposite meanings. The dataset was hand-curated by expert annotators, who also applied rich fine-grained tags for error analysis. Images come from Getty Images.</p>
+<p><strong>Who made it / is the signal human.</strong> Yes. The 400 examples were created by expert human annotators at Facebook/Meta AI Research; no automatic generation was used for caption construction. The images were licensed from Getty Images and hand-matched to caption pairs. The gold label is the correct image-caption matching, determined by the expert curation process. Human baseline was not reported as a crowd-sourced participant study — it is an expert-curated correctness label, not a distributional human-judgment signal.</p>
+<p><strong>License (verified / partially).</strong> The dataset is hosted at https://huggingface.co/datasets/facebook/winoground with <em>gated access</em>: users must log in and agree to research-only use ("you also agree that you are using it solely for research purposes"). The full license agreement is described as "available in the dataset files" but is not stated in the public README. The arXiv paper (2204.03162) shows a CC BY 4.0 icon for the <em>paper</em>, but this likely does not extend to the images (which remain under Getty Images terms). <em>Status: the license for the benchmark data itself is UNVERIFIED — it requires authenticating to HuggingFace and reading the dataset-internal license file. The gated access and Getty Images provenance strongly suggest the images carry a research-only restriction that would prohibit redistribution.</em></p>
+<p><strong>Fetchability.</strong> Gated access via HuggingFace requires a user account and agreement; the dataset files are not directly downloadable without authentication. The text annotations (captions, tags) may have a more permissive license than the images.</p>
+<p><strong>What meaning-claim it could anchor.</strong> Winoground bears on <em>compositional</em> meaning — specifically the question of whether a VLM can distinguish the semantic contribution of word <em>order</em> (a grammatical/structural signal) from bag-of-words content. This is close to the constructional program's spirit (a construction's form determines its meaning) extended to the visual domain. It could anchor a claim such as: "VLMs fail to use compositional meaning when image-caption matching requires distinguishing role-structure (subject vs. object) indicated by word order." This is a <em>ceiling/binary</em> claim, not a graded one — Winoground has 400 items and a binary correct/incorrect response, not a graded human similarity signal.</p>
+<p><strong>What it cannot anchor.</strong> Winoground cannot ground a graded perceptual-similarity claim (it is binary, not continuous). It cannot ground a lexical polysemy or sense-gradience claim. The human signal is an expert-curatorial correctness label, not a distributional human-judgment distribution — it is more like a benchmark answer key than a gradient human norm. It tests <em>visual</em> compositionality, not lexical sense; the join to the lexical↔grammatical continuum would require a separate design step.</p>
+<p><strong>Recommendation: drop for now / revisit if compositional-VLM probe becomes a target.</strong> The gated access + unverified/restrictive license make this difficult to catalog responsibly. The binary signal is weaker than the project's preference for graded human anchors. The fit to the current lexical/grammatical program is indirect — it tests visual compositionality, not lexical sense or constructional inference per se. If Tom decides to open a compositional VLM axis (e.g., <em>does a VLM use the caused-motion construction's argument-structure meaning when processing image-caption pairs?</em>), Winoground becomes relevant as a benchmark; until then it is off-scope.</p>
+<hr />
+<h2 id="candidate-3-lancaster-sensorimotor-norms-perceptualaction-strength-ratings-for-40k-words">Candidate 3: Lancaster Sensorimotor Norms — perceptual/action strength ratings for ~40k words</h2>
+<p><strong>What it is.</strong> The Lancaster Sensorimotor Norms (Lynott, Connell, Brysbaert, Brand &amp; Carney 2020, <em>Behavior Research Methods</em> 52(3): 1271–1291) provide human ratings of <strong>39,707 English words</strong> on <strong>11 sensorimotor dimensions</strong>: six perceptual modalities (auditory, gustatory, haptic, interoceptive, olfactory, visual) and five action effectors (foot/leg, hand/arm, head, mouth/throat, torso). Each word received ratings from <strong>at least 10 participants</strong>; words averaged 18.0 ratings on the perceptual side and 19.1 on the action side. Total rater pool: <strong>3,500 unique participants</strong> via Amazon Mechanical Turk (experienced raters with &gt;100 tasks and &gt;97% approval; recruited via TurkPrime). The ratings are mean sensorimotor strength scores on a 0–5 scale per dimension.</p>
+<p><strong>Who made it / is the signal human.</strong> Yes. Each rating is a direct human judgment of how strongly a given word is experienced through that modality or action effector (e.g., "to what extent do you experience <em>thunder</em> through hearing?"). The signal is a multi-rater mean, not a derived or automatic label.</p>
+<p><strong>License (verified).</strong> <strong>CC BY 4.0</strong> — confirmed verbatim from the PMC full text of the paper: "Creative Commons Attribution 4.0 International License (CC-BY), which permits use, sharing, adaptation, distribution, and reproduction in any medium." Data are deposited on OSF at https://osf.io/7emr6/ and the Lancaster University interactive tool at https://www.lancaster.ac.uk/psychology/lsnorms/. This is one of the cleanest licenses in this shortlist — fully permissive for research and derivative use.</p>
+<p><strong>Fetchability.</strong> OSF at https://osf.io/7emr6/ — OSF is a stable, open repository. The Lancaster University web tool allows word lookup and export. <em>Direct URL curl-verification not performed this run; OSF is structurally stable. Mark as likely-fetchable, not independently curl-verified.</em></p>
+<p><strong>What meaning-claim it could anchor.</strong> This is a TEXT resource about perceptual grounding: it tells you, for each of ~40k English words, <em>how perceptually grounded</em> it is and <em>through which modality</em>. It directly bridges the project's lexical program to the multimodal/grounded axis. Specifically:</p>
+<ul>
+<li>It could anchor a claim of the form: "words that humans rate as highly visually or haptically grounded are tracked more accurately in sense-relatedness judgments by VLMs than by text-only models." The sensorimotor scores become a continuous moderator variable — the graded perceptual grounding of a word — and the DV is the model's accuracy relative to the DWUG human DURel baseline.</li>
+<li>It could operationalize a <em>gradient of groundedness</em> for words already in the DWUG EN set (all 40 DWUG EN lemmas can be looked up in the Sensorimotor Norms, since the norms cover ~40k words) — producing a within-DWUG control variable.</li>
+<li>It could ground a claim about whether the <em>type</em> of grounding (visual vs. haptic vs. auditory) predicts VLM advantage over text-only models — the perceptual-modality-specificity question.</li>
+</ul>
+<p><strong>What it cannot anchor.</strong> The norms are a <em>word-level</em> resource, not a <em>usage-pair</em> resource. They do not carry graded usage-pair proximity (that is DWUG's contribution). They cannot directly replace the DWUG anchor for the monotonicity/gradience probe. They cannot anchor a constructional-inference claim (the norms are about word properties, not construction meaning). They do not carry image data or any visual grounding of their own — they are human <em>verbal</em> ratings of perceptual associations.</p>
+<p><strong>Recommendation: catalog as a full resource page now — the cleanest text-side bridge to the multimodal axis.</strong> CC BY 4.0, ~40k words, 3,500 MTurk raters, stable OSF deposit, directly citable by word-lookup against existing DWUG lemmas. The norms can be incorporated into the existing lexical probe as a moderator variable with minimal additional design: annotate each DWUG EN lemma with its Lancaster visual/haptic/auditory strength score, then ask whether monotonicity (the project's established positive from <a href="../../findings/results/lexical-sense-gradience-v1.md.html"><code>result/lexical-sense-gradience-v1</code></a>) is stronger for highly grounded words. This is actionable under Tom's no-local-compute constraint because it requires only a lookup table, not a new API probe. The data should be fetchable from OSF without authentication.</p>
+<hr />
+<h2 id="candidate-4a-snli-ve-visual-entailment-xie-et-al-2019">Candidate 4a: SNLI-VE — visual entailment (Xie et al. 2019)</h2>
+<p><strong>What it is.</strong> SNLI-VE (Xie et al. 2019, arXiv 1901.06706) repurposes the Stanford NLI (SNLI) corpus by replacing each <em>textual</em> premise with the corresponding Flickr30k photograph. The result is a three-way image-text entailment task (entailment / neutral / contradiction). Scale: approximately 565,286 premise-hypothesis pairs. Repository: https://github.com/necla-ml/SNLI-VE.</p>
+<p><strong>Who made it / is the signal human.</strong> Partially and problematically. The <em>hypothesis labels</em> (entailment/neutral/contradiction) come from the original SNLI crowdworker annotations — which are human. However, the <em>premise replacement</em> (image for text) was done <strong>automatically</strong> by matching SNLI sentences to the Flickr30k images they originally described. This automatic construction introduced a well-documented label-noise problem: "the automatic way in which SNLI-VE has been assembled gives rise to a large number of errors in the labels" — approximately <strong>31% error rate in the neutral class</strong>, ~1% in entailment and contradiction (from the e-SNLI-VE critique, arXiv 2004.03744). A corrected version (SNLI-VE-2.0 / e-SNLI-VE-2.0) exists but still carries the auto-derived construction artifact. The README acknowledges label noise and recommends dropping the neutral class for quality-sensitive uses.</p>
+<p><strong>License.</strong> Not stated in the repository README or the arXiv paper (per this search). SNLI-VE inherits license constraints from SNLI (which is under a research-use license from the Stanford NLP Group) and Flickr30k (which carries Flickr image terms). <em>Status: license UNVERIFIED. The combination of inherited licenses from multiple sources, none of which are clearly open, makes this a license-risk item.</em></p>
+<p><strong>Fetchability.</strong> GitHub repository confirmed reachable at https://github.com/necla-ml/SNLI-VE. Whether images are freely downloadable (Flickr30k images) is a separate question governed by Flickr30k terms.</p>
+<p><strong>What it could anchor / what it cannot.</strong> Even setting aside label noise: SNLI-VE tests whether a VLM can judge image-text entailment on SNLI-style natural-language hypotheses. The human signal is the original SNLI crowdworker label — but that label was about <em>text-text</em> entailment; its transfer to <em>image-text</em> entailment is the auto-derived step that introduced noise. The neutral class — where the most interesting "uncertain grounding" cases live — is the most corrupted. For anchoring a <em>meaning</em> claim, this is a significant problem: the cases where meaning matters most (the graded, uncertain cases) are the most noisy.</p>
+<p><strong>Recommendation: drop.</strong> The auto-derived label construction, the 31% neutral-class error rate, the unverified license, and the Flickr30k image-access complication collectively make SNLI-VE a poor anchor for this project's standards (charter rule: cite by the <em>feature</em> that actually bears; the auto-derived construction undermines the claim that the label is a clean human judgment). Use VALSE instead for image-text meaning probing.</p>
+<hr />
+<h2 id="candidate-4b-nlvr2-natural-language-visual-reasoning-suhr-et-al-2019">Candidate 4b: NLVR2 — natural language visual reasoning (Suhr et al. 2019)</h2>
+<p><strong>What it is.</strong> NLVR2 (Suhr, Zhou, Zhang, Zhang, Bai &amp; Artzi 2019, ACL; arXiv 1811.00491) contains <strong>107,292 examples</strong> of human-written English sentences paired with pairs of natural photographs; each sentence is labeled true or false about the image pair. Sentences were collected by crowd-sourcing with a built-in balance constraint (each sentence appears with both true and false labels, controlling for language bias). Images are natural photographs. Repository: https://github.com/lil-lab/nlvr; project page: https://lil.nlp.cornell.edu/nlvr/.</p>
+<p><strong>Who made it / is the signal human.</strong> Yes. Both the <em>sentences</em> (human-written by crowdworkers) and the <em>truth-value labels</em> (determined by the corpus construction + verified by human annotators) are human-produced. The anti-bias construction procedure (each sentence appears with true and false label contexts) is a methodological strength.</p>
+<p><strong>License.</strong> The <em>annotations</em> (sentences and binary labels) are <strong>CC BY 4.0</strong> — confirmed from the GitHub README. The images are not licensed by the corpus creators (they do not hold image copyright); image access requires filling out a Google Form for direct access (or using the provided download scripts that pull from original URLs). <em>Status: annotation license verified as CC BY 4.0; image license is a non-trivial access barrier.</em></p>
+<p><strong>Fetchability.</strong> Annotations (text + labels) are freely downloadable from GitHub. Direct image access requires a Google Form request. This is a partial access barrier — unlike DWUG or Lancaster Norms, you cannot curl the images without an extra step.</p>
+<p><strong>What it could anchor.</strong> NLVR2 tests whether a VLM uses spatial, set, counting, and comparative reasoning to ground natural language about image pairs. The human signal is genuine (human-written, balanced labels). It could anchor a claim about whether VLMs correctly use <em>quantificational or spatial meaning</em> (a grammatical/semantic claim) when processing paired images and sentences. This is closer to the project's constructional program than THINGS or Winoground: it tests argument-structure-adjacent meaning (set relations, spatial prepositions, comparatives) grounded in visual scenes.</p>
+<p><strong>What it cannot anchor.</strong> NLVR2 is a binary true/false benchmark, not a graded human signal. It cannot anchor a polysemy/gradience claim. The image-access barrier complicates replication. The task is synthetic in the sense that the sentence is written <em>about</em> the images — the human-written sentences are not naturally occurring usage instances; they are elicited descriptions. The fit to the project's DURel-style graded signal is poor.</p>
+<p><strong>Recommendation: promising but not first-priority — note for a future constructional VLM axis.</strong> NLVR2 has the cleanest human provenance of the image-text entailment candidates (genuine human-written sentences, CC BY 4.0 annotations, anti-bias design). If the project opens a "VLM constructional inference" axis — parallel to the text-only constructional program but with images in the loop — NLVR2 would be the recommended anchor for spatial/quantificational meaning. For now it is off-scope; note in the return report as a future-axis candidate.</p>
+<hr />
+<h2 id="candidate-4c-valse-linguistic-phenomena-in-vlms-parcalabescu-et-al-2022">Candidate 4c: VALSE — linguistic phenomena in VLMs (Parcalabescu et al. 2022)</h2>
+<p><strong>What it is.</strong> VALSE (Parcalabescu, Cafagna, Muradjan, Frank, Calixto &amp; Gatt 2022, ACL) is a benchmark of approximately <strong>6,800 validated image-foil-caption triples</strong> covering six linguistic phenomena: existence (505 items), plurality (851), counting (2,459), spatial relations (535), actions (1,633), and coreference (812). Each instance pairs an image with a correct caption and a <em>foil</em> caption — a near-synonym differing in one word or phrase — and the task is to identify which caption describes the image. Repository: https://github.com/Heidelberg-NLP/VALSE.</p>
+<p><strong>Who made it / is the signal human.</strong> Hybrid: foils were generated using a mix of automatic methods (masked language modeling, SpanBERT, template transformations) and then validated by crowdworkers (Amazon Mechanical Turk, 3 annotators per sample). A sample is included only if at least 2/3 annotators confirmed the foil does NOT describe the image. 87.7% of generated instances passed this filter. The gold label (which caption is correct) is the human-validation-confirmed caption, not a fully human-constructed one. Inter-annotator agreement is low to moderate (Krippendorff's α: 0.23–0.64, mean 0.42).</p>
+<p><strong>License.</strong> The GitHub repository carries an <strong>MIT license</strong>. The paper itself is CC BY 4.0 (ACL 2022). <em>MIT license confirmed via GitHub repository fetch.</em> Images and captions are drawn from existing datasets (e.g., SWiG); their licenses vary and are not all open.</p>
+<p><strong>Fetchability.</strong> GitHub repository at https://github.com/Heidelberg-NLP/VALSE reachable. The data files themselves are in the repo; image access depends on the original datasets from which images were drawn. Partial access barrier on images.</p>
+<p><strong>What it could anchor.</strong> VALSE tests whether VLMs use specific <em>linguistic</em> meanings (existence, plurality, number, spatial prepositions, verbal events, coreference) when processing image-caption pairs. The six phenomena map onto the project's grammatical/semantic interests: spatial relations and actions are constructionally relevant; existence and plurality are quantificational. The human-validated foil structure (confirmed by 3 MTurk annotators per item) gives the gold labels human provenance — stronger than SNLI-VE's auto-derived labels, weaker than NLVR2's fully human-written sentences. The moderately low inter-annotator agreement (α mean 0.42) is a known limitation that the authors acknowledge.</p>
+<p><strong>What it cannot anchor.</strong> VALSE is a benchmark, not a graded human norm. It cannot anchor a gradience/polysemy claim. The foils are automatically generated and human-<em>validated</em> (not human-<em>created</em>), so the human signal is confirmatory rather than constitutive. The low IAA on some phenomena limits how strongly one can claim the gold labels reflect human consensus. Image licenses are a patchwork.</p>
+<p><strong>Recommendation: promising for a future VLM-constructional axis, but weaker than NLVR2 on provenance.</strong> The MIT license on the data repo is the cleanest license in the image-text entailment group. The linguistic-phenomena framing (spatial, action, existence) maps well onto the constructional program. However, the hybrid foil generation + moderate IAA make the human anchor weaker than this project's standard (DWUG had ρ = 0.69 IAA; VALSE mean α = 0.42). If a VLM constructional-inference axis opens, prefer NLVR2 for the cleaner human provenance, and VALSE as a secondary/parallel benchmark covering a wider range of phenomena.</p>
+<hr />
+<h2 id="ranked-recommendation">Ranked recommendation</h2>
+<p><strong>Best first anchor for a multimodal lexical-meaning probe: Lancaster Sensorimotor Norms (Candidate 3).</strong></p>
+<p>Rationale:
+1. <strong>Actionable now, no new probe required.</strong> The project already has 40 DWUG EN lemmas and a verified DURel-based lexical result (<a href="../../findings/results/lexical-sense-gradience-v1.md.html"><code>result/lexical-sense-gradience-v1</code></a>). The Lancaster Norms can be used as a lookup-table moderator: annotate each DWUG lemma with its visual/haptic/auditory sensorimotor strength score and ask whether the project's established monotonicity result (Spearman ρ 0.60–0.83) is stronger for highly grounded words. This requires no new API probe — only a table join and a subgroup Spearman correlation. It respects Tom's no-local-compute constraint.
+2. <strong>Clean license (CC BY 4.0), stable OSF deposit, no authentication barrier.</strong> This is the only candidate in the shortlist with a fully verified, permissive, open license that has been confirmed verbatim from the primary paper.
+3. <strong>Direct bridge to the lexical↔grammatical continuum.</strong> The sensorimotor grounding of a word is a continuous variable that could explain <em>why</em> some DWUG lemmas are tracked better than others — a mechanistic moderator, not a separate probe. This extends the existing result rather than opening a new axis.
+4. <strong>What it requires before cataloguing as a full resource page:</strong> (a) Tom fetches the OSF deposit or the Lancaster web interface export; (b) the 40 DWUG EN lemmas are cross-referenced against the norms (all are likely covered in 39,707 words); (c) a design decision is made about which sensorimotor dimensions to use (visual strength alone? all-modalities composite?). This is a small, bounded fetch task.</p>
+<p><strong>Second choice: THINGS-data triplet judgments (Candidate 1).</strong> If Tom decides to open a VLM-vs-text-only comparison axis (does image grounding change concept similarity structure?), the THINGS triplet data — CC0, 4.7M human judgments, OSF-hosted — is the strongest fully-behavioral graded signal available. The design question (image-grounded probe vs. concept-label probe) must be resolved first.</p>
+<p><strong>Third / future-axis: NLVR2 (Candidate 4b)</strong> for a VLM constructional-inference axis (spatial/quantificational meaning), then <strong>VALSE (Candidate 4c)</strong> as a secondary benchmark covering a wider phenomenon range. Both require a new axis decision before they become relevant.</p>
+<p><strong>Drop: Winoground</strong> (unverified/restrictive license, Getty Images provenance, gated access) and <strong>SNLI-VE</strong> (auto-derived labels, 31% neutral-class error, unverified license).</p>
+<hr />
+<h2 id="candidates-with-unverified-elements">Candidates with unverified elements</h2>
+<table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Unverified element</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>THINGS-data</td>
+<td>CC0 claim is from a secondary source (eLife article description); OSF README not directly inspected this run</td>
+<td>Low — eLife is a peer-reviewed publisher with strict open-data requirements; OSF CC0 is consistent with eLife's open-data policy</td>
+</tr>
+<tr>
+<td>THINGS-data</td>
+<td>HTTPS 200 on the OSF download URL not directly curl-verified</td>
+<td>Low — OSF is stable; the dataset has been cited and downloaded widely</td>
+</tr>
+<tr>
+<td>Lancaster Norms</td>
+<td>OSF record (https://osf.io/7emr6/) not directly fetched; CC BY confirmed from PMC paper body</td>
+<td>Low — PMC text is authoritative; OSF is stable</td>
+</tr>
+<tr>
+<td>Lancaster Norms</td>
+<td>Exact coverage of DWUG EN lemmas in the 39,707-word set not confirmed</td>
+<td>Low — the norms cover 39,707 common English words; all DWUG EN content words are almost certainly included</td>
+</tr>
+<tr>
+<td>Winoground</td>
+<td>Dataset-internal license not inspected (gated access required)</td>
+<td>High — licensing is the primary risk here; do not catalog without resolving</td>
+</tr>
+<tr>
+<td>SNLI-VE</td>
+<td>License not stated anywhere in the inspected sources</td>
+<td>High — inherited licenses from SNLI + Flickr30k are both restricted</td>
+</tr>
+<tr>
+<td>VALSE</td>
+<td>Image licenses from source datasets (SWiG etc.) not fully inspected</td>
+<td>Medium — MIT on the repo data itself is good; image licensing is a known patchwork problem in VLM benchmarks</td>
+</tr>
+<tr>
+<td>NLVR2</td>
+<td>Image access requires Google Form; direct image URL availability not confirmed</td>
+<td>Low-medium — annotations are CC BY 4.0 and freely available; images are the access barrier</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="proposed-additions-to-wantedmd">Proposed additions to <code>wanted.md</code></h2>
+<p>The following should be added to <code>wanted.md</code> when the orchestrator integrates this report. These are not editorial additions — they are the concrete fetch tasks this scouting generates.</p>
+<p><strong>P1 (next, actionable now):</strong>
+- Lancaster Sensorimotor Norms (Lynott, Connell, Brysbaert, Brand &amp; Carney 2020). <em>Behavior Research Methods</em> 52(3): 1271–1291. OSF: https://osf.io/7emr6/. CC BY 4.0.
+  - why: the cleanest text-side bridge to the multimodal axis; use as a moderator on the existing DWUG lexical result (annotate DWUG EN lemmas with visual/haptic strength, ask whether monotonicity is stronger for highly grounded words). Requires Tom to download the OSF spreadsheet and cross-reference against the 40 DWUG EN lemmas. No new API probe needed.
+  - status: wanted (scouted 2026-05-30; license + counts + OSF URL verified; full data not yet fetched)</p>
+<p><strong>P2 (soon, requires design decision first):</strong>
+- THINGS-data behavioral triplet judgments (Hebart, Contier, King et al., eLife 2023). OSF: https://osf.io/f5rn6/. CC0.
+  - why: 4.7M graded human perceptual-similarity judgments over 1,854 object concepts — the strongest available multimodal behavioral anchor for a VLM-vs-text-only comparison. Requires a design decision on the probe structure (image-grounded or concept-label) before the anchor is operationally useful.
+  - status: wanted (scouted 2026-05-30; CC0 + OSF availability confirmed via secondary sources; direct OSF README not inspected)</p>
+<p><strong>P3 (eventually, pending axis decision):</strong>
+- NLVR2 corpus annotations (Suhr et al. 2019). GitHub: https://github.com/lil-lab/nlvr. CC BY 4.0 annotations.
+  - why: 107k human-written sentences + binary true/false labels over image pairs; the cleanest human provenance in the image-text entailment group; relevant if a VLM constructional-inference axis opens.
+  - status: wanted (scouted 2026-05-30; annotation license + annotation access verified; image access requires Google Form)</p>
+<hr />
+<h2 id="decision-the-orchestrator-should-surface-to-tom">Decision the orchestrator should surface to Tom</h2>
+<p><strong>Which anchor class to privilege for a multimodal probe?</strong> There are two structurally different options:</p>
+<p><strong>Option A (text-side grounding moderator):</strong> Use Lancaster Sensorimotor Norms as a moderator on the existing text-based lexical result. No new VLM probe, no image input required. Tests: <em>do text-only LLMs track lexical sense better for perceptually grounded words?</em> This is actionable now and extends the current result without a new experiment.</p>
+<p><strong>Option B (image-grounded perceptual anchor):</strong> Use THINGS-data triplet judgments to compare VLM (with image input) vs. text-only model on object concept similarity. Requires a new probe design, a VLM model in the panel, and a design decision on how to present the 1,854 THINGS concepts to both model types. This is a genuinely new axis but requires more setup and a new API budget.</p>
+<p>The two options are not mutually exclusive — they could be sequenced (Option A first, as a moderator analysis on existing data; Option B as the first VLM probe if the result is interesting). The orchestrator should surface this choice to Tom before any resource is catalogued or any probe is designed for the multimodal axis.</p>
+<hr />
+<h2 id="session-130-deeper-scout-a-graded-image-fine-polysemy-magnitude-instrument">Session-130 deeper scout: a graded-image fine-polysemy MAGNITUDE instrument</h2>
+<p><strong>Scouted:</strong> 2026-06-28. <strong>Why this section exists.</strong> <a href="../../findings/open-questions/grounding-magnitude-instrument.md.html"><code>open-question/grounding-magnitude-instrument</code></a> records that the VWSD competence-audited-fluent-channel route to prediction 3's <em>magnitude</em> ("for concrete sense the headroom is <strong>empirically narrow</strong>" — <a href="../../findings/conjectures/distributional-saturation-grounding-headroom.md.html"><code>conjecture/distributional-saturation-grounding-headroom</code></a>, prediction 3) is <strong>blocked</strong> (the fluent channel's strict held-out referent-recovery is 0.438, below the ratified <code>[0.60,0.95]</code> floor — <a href="../../findings/notes/vwsd-grounding-headroom-nlbaseline-regrade-v1.md.html"><code>note/vwsd-grounding-headroom-nlbaseline-regrade-v1</code></a>), and that <strong>no in-repo resource is a drop-in magnitude instrument</strong>. That page names THINGS as worth a "$0 deeper scout … as scaffolding, not the anchor." This section goes deeper: it hunts open-access for <strong>genuinely NEW</strong> candidates the open-question page has not assessed, and it works the THINGS-as-scaffolding build-feasibility question concretely. <strong>$0; web search/fetch only; no model run.</strong> The four requirements a valid magnitude instrument must satisfy (verbatim source: the open-question page) are summarized here as: <strong>(a)</strong> a <em>certified-competent text/description channel on the specific target items</em>; <strong>(b)</strong> a <em>graded</em> (per-item, continuous/ordinal) <em>human signal</em>, not a binary selection gold; <strong>(c)</strong> <em>image-native or fine-polysemy material where the senses are perceptually distinguishable</em>; <strong>(d)</strong> the <em>de-referencing trap avoided</em> (under-determination intrinsic to the material's fine/abstract senses, not manufactured by stripping referent names). The recurring rule applies: cite each candidate by the <em>specific human-annotated feature</em> that bears, never by existence.</p>
+<h3 id="1-new-candidates-assessed-against-ad-task-1">(1) New candidates assessed against (a)–(d) [Task 1]</h3>
+<p>The hunt targeted three families the open-question page flags: (i) <em>graded</em> multimodal/visual-WSD datasets; (ii) "visual polysemy" / sense-tagged image datasets (BabelPic, VisualSem, ImageNet/WordNet senses, VerSe); (iii) graded cross-modal semantic-similarity datasets (Crisscrossed Captions/CxC, multimodal STS) — checking in each case whether the gradedness is over <em>word senses</em> vs caption/object similarity. A fourth family surfaced unbidden and is included: graded <em>image-similarity</em> MDS/relatedness norms. <strong>The structural finding up front:</strong> every newly-found resource fails on the <em>same axis pair</em> — it is either <strong>graded same-word sense-relatedness but text-only</strong> (fails (c)), or <strong>graded + image but the wrong construct</strong> (whole-caption or whole-object similarity, no within-word sense structure → fails (b)-as-construct and (d)), or <strong>image + sense-tagged but binary/categorical</strong> (fails (b)). None is a graded <em>word-sense</em> relatedness signal carried <em>with</em> disambiguating images.</p>
+<h4 id="candidate-5-raw-c-saw-c-graded-same-word-sense-relatedness-text-only">Candidate 5: RAW-C / SAW-C — graded same-word sense relatedness, TEXT-ONLY</h4>
+<ul>
+<li><strong>What it is.</strong> RAW-C (Trott &amp; Bergen 2021, ACL, <em>"Relatedness of Ambiguous Words—in Context"</em>, arXiv 2105.13266; repo github.com/seantrott/raw-c) is a lexical resource of <strong>graded human relatedness judgments</strong> for <strong>112 ambiguous English words</strong> across <strong>672 minimal sentence pairs</strong> (each word in 4 sentences, 2 per sense → four Different-Sense + two Same-Sense pairs per word), plus human sense-dominance estimates. SAW-C is the Spanish analogue (<strong>812 sentence pairs</strong>, surfaced via a secondary paper).</li>
+<li><strong>(b) graded human signal: YES — and the RIGHT construct.</strong> This is <strong>graded same-word sense relatedness</strong> — exactly the DURel-tradition construct DWUG carries, and the construct THINGS/CxC lack. Each pair is two <em>usages of one ambiguous word</em>; the rating is how related those two senses are. The repo exposes a <code>mean_relatedness</code> column; reported <strong>leave-one-annotator-out IAA = 0.79</strong> (VERIFIED from the GitHub README via search). Scale endpoints were <strong>not stated verbatim on the repo landing page</strong> this session (the README references the mean but did not display the endpoints in the fetched view) — secondary descriptions and the DURel lineage indicate a graded ordinal (commonly 0–4); mark the <strong>exact scale endpoints UNVERIFIED</strong>, the gradedness itself VERIFIED.</li>
+<li><strong>(c) image-native / perceptual material: NO.</strong> Confirmed text-only from two independent fetches: "RAW-C is purely textual … no mention of images, visual stimuli, or perceptual material." There is no image arm at all.</li>
+<li><strong>(a)/(d):</strong> the de-referencing trap is <em>not</em> triggered (the under-determination is intrinsic — these are genuinely fine polysemes rated by humans), and a text channel can be built on the items — but with <strong>no image (c)</strong>, there is nothing for grounding to move, so (a) and (d) are moot.</li>
+<li><strong>License:</strong> <strong>UNVERIFIED.</strong> No LICENSE file or license statement was visible in the fetched README this session; the arXiv paper PDF did not render. Do <strong>not</strong> assume open terms without reading the repo LICENSE directly.</li>
+<li><strong>Verdict:</strong> <strong>insufficient — fails (c) decisively (text-only).</strong> Same class as DWUG / Usim / WiC: it <em>proves the graded same-word sense-relatedness signal (b) exists and is reusable</em> (and is arguably a cleaner same-/different-sense design than DWUG, with explicit per-word same-sense and different-sense pairs), but it carries <strong>no image arm</strong>, so it cannot supply the disambiguating image the magnitude Δ toggles. It is a <em>build ingredient</em> (the graded-label side), not an instrument.</li>
+</ul>
+<h4 id="candidate-6-crisscrossed-captions-cxc-graded-image-but-whole-captionscene-similarity-no-word-sense-structure">Candidate 6: Crisscrossed Captions (CxC) — graded + image, but WHOLE-CAPTION/SCENE similarity, no word-sense structure</h4>
+<ul>
+<li><strong>What it is.</strong> CxC (Parekh, Baldridge, Cer, Waters, Yang 2021, EACL, arXiv 2004.15020; repo github.com/google-research-datasets/Crisscrossed-Captions) extends MS-COCO dev/test with <strong>continuous (0–5) human semantic-similarity ratings</strong> for <strong>caption↔caption, image↔image, and image↔caption</strong> pairs: <strong>267,095 pairs</strong> from <strong>1,335,475 independent judgments</strong> (annotator counts 170 text-text / 61 image-image / 113 image-text).</li>
+<li><strong>(b) graded human signal: YES, but over the WRONG unit.</strong> The ratings are graded (0–5, intermediate values encouraged), but they measure <strong>whole-sentence / whole-image / scene similarity</strong>, <em>not</em> word-sense relatedness. Verbatim from the fetch: the ratings are "graded, denser annotations for relationships between and among captions and images"; "CxC contains no isolated target-word structure … without focusing on specific ambiguous words in context." The rating criterion is <strong>Semantic Textual Similarity (STS)</strong> extended to images — caption-level, not lexeme-level.</li>
+<li><strong>(c) image-native: YES</strong> (it is built on MS-COCO photographs) — this is the part it <em>does</em> satisfy.</li>
+<li><strong>(d) de-referencing trap / construct: FAILS the construct, in the THINGS way.</strong> Because there is <strong>no single ambiguous target word isolated and rated for sense relatedness across contexts</strong>, there is no within-word polysemy structure for the magnitude Δ to be defined over. The under-determination CxC could exhibit is <em>scene-description</em> under-determination, not <em>fine-sense</em> under-determination of one lexeme — the exact construct mismatch that disqualified THINGS (object similarity) and that prediction 3 is not about.</li>
+<li><strong>License:</strong> <strong>UNVERIFIED.</strong> "The paper does not specify a license in the provided content"; the repo hosts annotations to be merged with MS-COCO (whose images carry their own terms). Mark license UNVERIFIED; the MS-COCO image-terms layer is an additional barrier.</li>
+<li><strong>Verdict:</strong> <strong>insufficient — fails (b)-as-construct and (d).</strong> CxC is the strongest <em>graded + image-native</em> resource found, but its gradedness is over <strong>caption/scene similarity</strong>, not <strong>word-sense relatedness</strong>. It is THINGS's failure mode transposed to scenes: right <em>shape</em> (graded + image), wrong <em>axis</em> (holistic similarity, not within-word sense). It cannot read prediction 3's magnitude.</li>
+</ul>
+<h4 id="candidate-7-babelpic-sense-tagged-images-but-binary-human-signal-recognizability-non-commercial-license">Candidate 7: BabelPic — sense-tagged images, but BINARY human signal (recognizability), non-commercial license</h4>
+<ul>
+<li><strong>What it is.</strong> BabelPic (Calabrese, Bevilacqua, Navigli 2020, ACL, <em>"Fatality Killed the Cat or: BabelPic"</em>; sapienzanlp.github.io/babelpic) is a hand-labeled dataset of <strong>14,931 images tagged with 2,733 non-concrete BabelNet synsets</strong>, built by cleaning BabelNet's image-synset associations.</li>
+<li><strong>(b) graded human signal: NO — binary.</strong> The human contribution is <strong>binary recognizability validation</strong>: raters were asked "if the labels are visually recognizable," and image-synset associations were cleaned (kept/dropped). There is no per-item <em>graded sense-relatedness</em> signal — the gold is a categorical image↔synset tag, not a continuous relatedness rating.</li>
+<li><strong>(c) image-native / sense-distinguishable: PARTLY</strong> (images are tagged to specific senses, and the dataset deliberately targets non-concrete concepts) — but with no graded signal, (c) alone cannot carry a magnitude read.</li>
+<li><strong>License:</strong> BabelPic depends on <strong>BabelNet's non-commercial license</strong> (babelnet.org/license) — a restriction inherited via the synset tagging. Image redistribution terms are the usual web-image patchwork (UNVERIFIED per-image).</li>
+<li><strong>Verdict:</strong> <strong>insufficient — fails (b) (binary, not graded).</strong> Useful only as a <em>sense-tagged image inventory</em>, not a magnitude instrument. Same disqualifier as VWSD's binary gold, with an added non-commercial-license constraint.</li>
+</ul>
+<h4 id="candidate-8-visualsem-sense-tagged-images-at-scale-but-no-graded-human-judgments-non-commercial-license">Candidate 8: VisualSem — sense-tagged images at scale, but NO graded human judgments, non-commercial license</h4>
+<ul>
+<li><strong>What it is.</strong> VisualSem (Alberts et al. 2021; github.com/iacercalixto/visualsem) is a multilingual multimodal knowledge graph: <strong>89,896 nodes</strong> (each linked to a BabelNet id / WordNet id / Wikipedia article), <strong>~930,000 images</strong> associated to nodes, <strong>1.3M glosses</strong>, 1.5M relation tuples.</li>
+<li><strong>(b) graded human signal: NO.</strong> Fetch verdict: "No evidence of graded or continuous human judgments. The data structure appears categorical — nodes either have associated images/glosses or they don't." The image↔sense links are categorical, not a graded relatedness rating.</li>
+<li><strong>(c):</strong> images are sense-tagged (linked to BabelNet/WordNet senses) — but again, no graded signal.</li>
+<li><strong>License:</strong> released <strong>under BabelNet's non-commercial license</strong> (verbatim: "released under BabelNet's non-commercial license"). Non-commercial restriction inherited.</li>
+<li><strong>Verdict:</strong> <strong>insufficient — fails (b) (categorical, not graded).</strong> A large sense-tagged image graph, not a graded-sense-relatedness instrument.</li>
+</ul>
+<h4 id="candidate-9-sense-identification-dataset-sid-graded-similarity-sense-ids-cc-by-but-text-only-and-between-word-similarity">Candidate 9: Sense Identification Dataset (SID) — graded similarity + sense IDs, CC BY, but TEXT-ONLY and <em>between-word</em> similarity</h4>
+<ul>
+<li><strong>What it is.</strong> SID (PMC7494475, <em>"Sense identification data: A dataset for lexical semantics"</em>; Mendeley Data doi 10.17632/r5fbdpvnkk.1) takes <strong>SemEval-2017 Task 2</strong> word pairs — which carry <strong>graded human similarity on a 0–4 Likert scale</strong> ("0 … 'totally dissimilar and unrelated' to 4 … 'very similar'") — and adds manually-annotated BabelNet <strong>sense identifiers</strong> "coherent with the word pair and with the similarity score." <strong>492 word pairs / 984 terms</strong>; 3 annotators; CC BY; Mendeley-hosted.</li>
+<li><strong>(b) graded human signal: YES (0–4)</strong> — VERIFIED verbatim — <strong>but it is <em>between-word</em> similarity</strong> (how similar <em>word A</em> is to <em>word B</em>), not <em>within-word sense relatedness</em> (two usages of one ambiguous word). That is the <strong>CoSimLex disqualifier</strong> already recorded in <a href="dwug-usage-graphs.md.html"><code>dwug-usage-graphs.md</code></a>: a different relation. The added sense IDs disambiguate which senses the pair invokes, but the <em>rating</em> is still word-pair similarity, not a graded Δ over one lexeme's senses.</li>
+<li><strong>(c) image-native: NO.</strong> Fetch verdict: "this is text-only … No visual or perceptual material is included" (TSV files only).</li>
+<li><strong>License: CC BY</strong> (VERIFIED via fetch). The cleanest license in this batch — but irrelevant given the construct and modality failures.</li>
+<li><strong>Verdict:</strong> <strong>insufficient — fails (c) (text-only) and (b)-as-construct (between-word, not within-word sense).</strong> Catalogued here so a future scout does not re-rediscover it as a false positive: "graded + sense-annotated" is true but it is <em>word-pair</em> similarity without images.</li>
+</ul>
+<h4 id="candidate-10-family-graded-image-similarity-mds-relatedness-norms-pics-mm-mds-carlson-image-rsa-mooney-things-graded-image-but-object-category-construct-the-things-failure-mode-no-polysemy">Candidate 10 (family): graded IMAGE-similarity MDS / relatedness norms — PiCS, MM-MDS, Carlson-Image RSA, Mooney-THINGS — graded + image, but OBJECT-CATEGORY construct (the THINGS failure mode), no polysemy</h4>
+<p>This family surfaced repeatedly and is the closest "graded + image" relative of THINGS; all share THINGS's construct gap.</p>
+<ul>
+<li><strong>PiCS</strong> (Pictures by Category and Similarity; PMC12208956; OSF osf.io/yvb8h; <strong>CC BY 4.0</strong>, VERIFIED): <strong>1,200 images / 20 object categories</strong>, similarity from the Spatial Arrangement Method (SpAM), 334 participants. Fetch verdict: "Object-category similarity … It is not designed for word-sense disambiguation or semantic relatedness of ambiguous terms"; "No … single ambiguous word with different senses." (Also note: the primary release is <strong>MDS-derived distances</strong>, not raw graded ratings — a further gap.)</li>
+<li><strong>MM-MDS</strong> (PMC4229237): MDS similarity ratings for <strong>240 object categories</strong> from the Massive Memory Picture Database — same object-category construct.</li>
+<li><strong>"Carlson-Image" word-to-word-similarity-adapted-for-images</strong> (the RSA-alignment method paper, arXiv 2412.00577): the word-to-word semantic-similarity rating task was "adapted to accommodate relatedness ratings for images," exemplars cropped on gray backgrounds — but the relatedness is over <strong>object exemplars/concepts</strong>, not word senses (paper PDF did <strong>not render</strong> this session — <strong>UNVERIFIED</strong> beyond the search snippet; flagged honestly).</li>
+<li><strong>Mooney-THINGS visual-ambiguity dataset</strong> ("Determinants of visual ambiguity resolution," biorxiv 2025.05.28.656283 / Nature Comms Psych s44271-026-00441-8): Mooney (two-tone) images of the <strong>1,854 THINGS objects</strong> from THINGSplus paired with <strong>&gt;100,000 behavioural ratings from &gt;1,000 participants</strong>. This is the most eye-catching new THINGS-family graded-image resource — but its construct is <strong>visual ambiguity resolution</strong> (can a degraded two-tone image be recognized, and what makes it ambiguous), <strong>not lexical polysemy / word-sense relatedness</strong>. The "ambiguity" is <em>perceptual</em> (is this blob a camel or a dog?), not <em>semantic</em> (which sense of "crane"?). Related THINGS-family release for completeness: <strong>Drawings of THINGS</strong> (Springer BRM 2025, PMC12858628) — 1,854-concept drawing dataset, again whole-object.</li>
+<li><strong>(b) graded: mostly YES; (c) image-native: YES; but (b)-as-construct and (d): FAIL.</strong> Every member rates <strong>whole-object / whole-image / category similarity</strong> (or perceptual recognizability), with <strong>no within-word sense structure</strong>. They are THINGS's exact disqualifier, replicated across the cognitive-science image-norm literature: graded + image is <em>available and even abundant</em>, but always on the <strong>object-similarity / perceptual axis</strong>, never on the <strong>word-sense-relatedness axis</strong>.</li>
+<li><strong>Verdict:</strong> <strong>insufficient — fails (b)-as-construct and (d), uniformly.</strong> They confirm, from outside THINGS, that the "graded human relatedness over images" signal that exists in the world is <strong>object/scene similarity</strong>, not lexical sense relatedness. This is the structural reason the magnitude instrument has to be <em>built</em>, not found.</li>
+</ul>
+<h4 id="also-checked-no-new-magnitude-candidate">Also checked, no new magnitude candidate</h4>
+<ul>
+<li><strong>VerSe</strong> (Gella et al., Visual Verb Sense Disambiguation): <strong>binary</strong> verb-sense labels with images — fails (b), same class as VWSD.</li>
+<li><strong>SemEval-2023 VWSD gold</strong>: re-checked for any <em>graded / ranked / continuous</em> variant or extension — <strong>none found</strong>; the gold remains "choose the one gold image among ten" (binary selection), as the in-repo <a href="vwsd-semeval-2023.md.html"><code>resource/vwsd-semeval-2023</code></a> already records.</li>
+<li><strong>"Discovering and Distinguishing Multiple Visual Senses for Polysemous Words"</strong> (AAAI 2018): an <em>unsupervised visual-sense-discovery</em> method, not a human-graded relatedness gold — no magnitude signal.</li>
+<li>No <strong>"DURel-style usage-similarity resource that ships paired images"</strong> exists, per the 2024–2025 search: graded usage-similarity (DURel/WiC/RAW-C/Usim) is uniformly text-only; the graded-image norms are uniformly object-similarity. The two have <strong>not</strong> been joined in any open resource found.</li>
+</ul>
+<h3 id="2-things-as-scaffolding-build-feasibility-task-2">(2) THINGS-as-scaffolding build feasibility [Task 2]</h3>
+<p>The open-question page asks concretely: <em>could a fine-polysemy depicted-sense set be </em><em>built</em><em> using THINGS/THINGSplus PD-CC0 images + its human similarity prior as a stimulus source and pre-stratifier, with the graded sense-relatedness labels still coming from a DURel-style instrument?</em> Worked through, the answer is: <strong>the build is describable but not tractable for this project, for three compounding reasons — and the deeper scout did not improve its tractability; if anything it confirmed the blockers.</strong></p>
+<p><strong>What such a build would require (the steps):</strong></p>
+<ol>
+<li><strong>A within-word polysemy spine THINGS does not have.</strong> THINGS samples <strong>disambiguated object concepts</strong>, one sense per entry (per <a href="things-data-triplets.md.html"><code>resource/things-data-triplets</code></a>: "THINGS samples disambiguated object concepts … not ambiguous word forms," "no same-word, different-sense pairs"). A magnitude set needs <em>target words depicted in two related-but-distinct senses</em>. So step 1 is to <strong>assemble the polysemy structure from elsewhere</strong> (e.g. a DURel-style ambiguous-word list — DWUG / RAW-C words) — THINGS supplies neither the words nor the sense pairs. THINGS can at best supply <em>images for object-noun senses that happen to coincide with a THINGS concept</em>, a small and uncontrolled intersection.</li>
+<li><strong>PD/CC0 images per depicted sense, from THINGSplus not base THINGS.</strong> The base THINGS images are <strong>academic-use-only with publication restrictions</strong>; only <strong>THINGSplus</strong> supplies one PD/CC0 image per concept (both VERIFIED verbatim in <a href="things-data-triplets.md.html"><code>resource/things-data-triplets</code></a>, from THINGSplus PMC10991023). A build must pull images from THINGSplus (or Wikimedia PD/CC0, as the prior image probe did), one per <em>sense</em> — and THINGSplus offers one image per <em>concept</em>, not per <em>sense of an ambiguous word</em>, so for genuine polysemy the THINGSplus image is at most one of the two senses' images; the second must come from elsewhere. The image-license base-vs-THINGSplus split therefore does <strong>not</strong> cleanly cover a two-sense-per-word design.</li>
+<li><strong>A graded <em>sense-relatedness</em> label per usage pair — which THINGS cannot provide and the project cannot produce.</strong> This is the decisive blocker. The graded labels must be <strong>per-item human word-sense relatedness</strong> (DURel-style). THINGS's human signal is <strong>whole-object odd-one-out similarity</strong> — the wrong construct (the entire reason it is "partial / does-not-cleanly-fit"). So the labels would have to come from a <strong>new DURel-style annotation pass</strong> over the constructed image-paired usages. <strong>The project does not run new human annotation</strong> (CLAUDE.md always-on rule 4: "All human bearing comes from existing resources … No human subjects"; the project "uses only existing human-labeled resources — it does NOT run new human annotation," per this unit's brief). The THINGS similarity prior could <em>pre-stratify</em> candidate object pairs by human-rated object similarity (scaffolding), but pre-stratification is not the graded <em>sense</em> label the magnitude Δ is read against.</li>
+</ol>
+<p><strong>The blockers, stated plainly:</strong></p>
+<ul>
+<li><strong>Construct mismatch (fatal for the labels).</strong> THINGS gives graded <em>object similarity</em>; prediction 3 needs graded <em>within-word sense relatedness</em>. No transformation turns one into the other — they are different relations (the same reason CoSimLex and SID are rejected). THINGS can scaffold <em>stimuli</em>, never <em>labels</em>.</li>
+<li><strong>No within-word polysemy in THINGS (fatal for the spine).</strong> The set has no same-word/different-sense pairs, so the very backbone of a magnitude set must be imported from a text resource (DWUG/RAW-C), at which point THINGS is reduced to an optional image source for a minority of object-noun senses.</li>
+<li><strong>Image-license split does not cover a two-sense design (build friction).</strong> THINGSplus PD/CC0 is one image per <em>concept</em>; a two-related-senses-per-word design needs two images, at least one of which THINGS/THINGSplus does not supply — so Wikimedia PD/CC0 sourcing (the prior probe's method) is needed anyway, making THINGS's image contribution marginal.</li>
+<li><strong>New annotation is out of bounds (fatal for tractability).</strong> Even granting steps 1–2, the graded sense-relatedness labels require human annotation the project is constitutionally barred from collecting. There is no existing open resource that supplies those labels <em>over images</em> (Task 1's whole finding). So the build cannot be completed from existing resources alone.</li>
+</ul>
+<p><strong>Tractability verdict for THIS project: NOT tractable as an anchor build.</strong> THINGS (via THINGSplus PD/CC0 + its object-similarity prior) is legitimately usable as <strong>stimulus scaffolding and a pre-stratifier</strong>, exactly as <a href="things-data-triplets.md.html"><code>resource/things-data-triplets</code></a> already says — but the <strong>graded sense-relatedness labels cannot be obtained</strong> without either (i) new human annotation (forbidden) or (ii) an existing open graded-sense-relatedness-over-images resource (does not exist, per Task 1). The deeper scout therefore <strong>confirms</strong> the open-question page's call ("scaffolding, not the anchor") and adds the sharper conclusion that scaffolding cannot be promoted to an anchor <em>within this project's constraints</em> — not because the engineering is impossible in principle, but because the one indispensable ingredient (per-item graded human <em>sense</em> relatedness over images) is exactly the thing neither THINGS nor any found resource supplies, and the project does not manufacture it.</p>
+<h3 id="3-honest-bottom-line-verdict">(3) Honest bottom-line verdict</h3>
+<ul>
+<li><strong>Nothing clears all four requirements.</strong> After a broad open-access hunt (graded multimodal/visual-WSD; visual-polysemy / sense-tagged image datasets; graded cross-modal STS; graded image-similarity MDS norms; DURel-with-images), <strong>no resource carries a graded <em>word-sense</em> relatedness signal together with disambiguating images.</strong> The failures are structural and consistent: graded same-word sense relatedness exists only <strong>text-only</strong> (DWUG, Usim, WiC-as-binary-cross-check, <strong>RAW-C/SAW-C</strong>, <strong>SID</strong>-as-between-word); graded <strong>image</strong> signals exist only over the <strong>wrong construct</strong> — whole-caption/scene similarity (<strong>CxC</strong>) or whole-object/category similarity (<strong>THINGS, PiCS, MM-MDS, Carlson-Image, Mooney-THINGS</strong>); and the sense-tagged image resources (<strong>BabelPic, VisualSem, VerSe</strong>, VWSD) carry only <strong>binary/categorical</strong> human signals. The same two-axis wall the open-question page hit from in-repo candidates holds across the open-access frontier.</li>
+<li><strong>A bespoke build remains the only route — and it is not tractable for this project.</strong> The instrument prediction 3 needs (graded human <em>sense</em> relatedness with disambiguating images per usage, a competence-certifiable non-de-referenced text channel) must be <strong>built</strong>, and the indispensable graded <em>sense</em> labels over images do not exist in any open resource and cannot be produced here without new human annotation the project forbids. THINGS-as-scaffolding does not change this: it can pre-stratify stimuli, not supply labels.</li>
+<li><strong>The honest consequence for prediction 3.</strong> Its <em>magnitude</em> sub-bet ("narrow headroom for concrete sense") is <strong>not testable on any existing open resource</strong>, and the only path that would test it requires capability (new graded sense annotation over images) outside this project's charter. Prediction 3 should be carried as <strong>UNTESTED and, on current open resources, untestable</strong> — not as a pending probe with a known instrument. The gating <em>shape</em> (predictions 1–2) stands on the v2 VWSD evidence; the <em>magnitude</em> does not, and the deeper scout finds no open-access instrument to read it.</li>
+<li><strong>No new typed <code>resource</code> page is warranted from this scout.</strong> None of the new candidates is both fit-for-purpose and a build the project can complete, so none earns promotion to a typed resource for the magnitude question. (Two are <em>separately</em> catalog-worthy for <strong>other</strong> axes — see the closing note — but not for prediction 3.) Everything found is recorded here, in the scouting note, so a future session does not re-rediscover it.</li>
+</ul>
+<p><strong>Catalog-worthy for other axes (not for prediction 3), if a future session opens those axes:</strong> <strong>RAW-C / SAW-C</strong> is a clean graded same-word sense-relatedness <em>text</em> resource (cleaner same-/different-sense design than DWUG; 112 words / 672 pairs; IAA 0.79) that could <strong>strengthen the text-side lexical-gradience program</strong> as a second graded anchor alongside DWUG — <em>if</em> its license is verified (UNVERIFIED this session). <strong>PiCS</strong> (CC BY 4.0, 1,200 images / 20 object categories) and <strong>CxC</strong> could anchor a future <em>representational-alignment</em> axis (object-category or caption-scene similarity geometry), the same adjacent use already noted for THINGS — never a word-sense-relatedness test. Neither belongs to the magnitude question.</p>
+<p><strong>Provenance / verification ledger for this scout.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Key human-annotated feature (cited by)</th>
+<th>Graded?</th>
+<th>Image?</th>
+<th>Construct</th>
+<th>Fails req.</th>
+<th>License</th>
+<th>Verification notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAW-C / SAW-C</td>
+<td>graded relatedness over same-word usage pairs; IAA 0.79; <code>mean_relatedness</code></td>
+<td>YES</td>
+<td>NO</td>
+<td>within-word sense relatedness (RIGHT)</td>
+<td>(c)</td>
+<td><strong>UNVERIFIED</strong> (no LICENSE seen)</td>
+<td>gradedness + IAA VERIFIED; <strong>scale endpoints UNVERIFIED</strong>; text-only VERIFIED (2 fetches)</td>
+</tr>
+<tr>
+<td>Crisscrossed Captions (CxC)</td>
+<td>continuous 0–5 STS over caption/image pairs</td>
+<td>YES</td>
+<td>YES</td>
+<td>whole-caption/scene similarity (WRONG)</td>
+<td>(b)-construct, (d)</td>
+<td><strong>UNVERIFIED</strong> (+ MS-COCO image terms)</td>
+<td>"no isolated target-word structure" VERIFIED verbatim</td>
+</tr>
+<tr>
+<td>BabelPic</td>
+<td>binary recognizability validation; image↔synset tag</td>
+<td>NO</td>
+<td>YES</td>
+<td>sense-tagged images, binary</td>
+<td>(b)</td>
+<td>BabelNet non-commercial</td>
+<td>14,931 imgs / 2,733 synsets VERIFIED; per-image terms UNVERIFIED</td>
+</tr>
+<tr>
+<td>VisualSem</td>
+<td>categorical node↔image links</td>
+<td>NO</td>
+<td>YES</td>
+<td>sense-tagged KG, categorical</td>
+<td>(b)</td>
+<td>BabelNet non-commercial (verbatim)</td>
+<td>"no graded or continuous human judgments" VERIFIED</td>
+</tr>
+<tr>
+<td>Sense Identification Dataset (SID)</td>
+<td>0–4 Likert similarity + BabelNet sense IDs</td>
+<td>YES</td>
+<td>NO</td>
+<td><strong>between-word</strong> similarity (WRONG)</td>
+<td>(c), (b)-construct</td>
+<td><strong>CC BY</strong> (VERIFIED)</td>
+<td>text-only VERIFIED; 492 pairs / 984 terms</td>
+</tr>
+<tr>
+<td>PiCS</td>
+<td>SpAM/MDS object-category similarity</td>
+<td>(MDS distances)</td>
+<td>YES</td>
+<td>object-category similarity (WRONG)</td>
+<td>(b)-construct, (d)</td>
+<td><strong>CC BY 4.0</strong> (VERIFIED)</td>
+<td>"not … word-sense disambiguation" VERIFIED; MDS-derived, not raw ratings</td>
+</tr>
+<tr>
+<td>MM-MDS</td>
+<td>MDS similarity, 240 object categories</td>
+<td>(MDS)</td>
+<td>YES</td>
+<td>object-category similarity (WRONG)</td>
+<td>(b)-construct, (d)</td>
+<td>UNVERIFIED</td>
+<td>from search; construct clear</td>
+</tr>
+<tr>
+<td>Carlson-Image RSA norms</td>
+<td>image relatedness ratings over object exemplars</td>
+<td>YES (claimed)</td>
+<td>YES</td>
+<td>object/concept similarity (WRONG)</td>
+<td>(b)-construct, (d)</td>
+<td>UNVERIFIED</td>
+<td><strong>paper PDF did NOT render — UNVERIFIED beyond snippet</strong></td>
+</tr>
+<tr>
+<td>Mooney-THINGS</td>
+<td>&gt;100k ratings over Mooney 1,854-object images</td>
+<td>YES</td>
+<td>YES</td>
+<td><strong>visual</strong> ambiguity resolution, not lexical (WRONG)</td>
+<td>(b)-construct, (d)</td>
+<td>UNVERIFIED</td>
+<td>construct = perceptual recognizability, not word sense</td>
+</tr>
+<tr>
+<td>VerSe</td>
+<td>binary verb-sense labels with images</td>
+<td>NO</td>
+<td>YES</td>
+<td>sense-labelled, binary</td>
+<td>(b)</td>
+<td>UNVERIFIED</td>
+<td>same class as VWSD</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fetches that failed / facts not verified this scout (stated honestly):</strong>
+- RAW-C <strong>license</strong> and <strong>exact rating-scale endpoints</strong> — not visible in the fetched README; arXiv PDF (2105.13266) rendered as binary, unreadable. UNVERIFIED.
+- CxC <strong>license</strong> — not stated in the fetched paper content. UNVERIFIED.
+- RSA-alignment paper (arXiv 2412.00577) PDF rendered as binary/unreadable — the "Carlson-Image" graded-image-relatedness detail is from a <strong>search snippet only</strong>, UNVERIFIED.
+- MM-MDS license and Mooney-THINGS license not read from primary fields (construct is clear from search; license UNVERIFIED).
+- Per-image redistribution terms for BabelPic / VisualSem / VerSe / CxC images — the usual web-image patchwork, not individually verified (the binding disqualifier for each is the <em>human-signal</em> axis, not the license, so this was not pursued exhaustively).</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

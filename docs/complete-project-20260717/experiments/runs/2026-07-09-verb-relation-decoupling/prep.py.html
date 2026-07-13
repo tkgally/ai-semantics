@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>prep.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-09-verb-relation-decoupling</a> <span class="sep">/</span> <span class="cur">prep.py</span></nav>
+<main>
+<header class="page-head">
+<h1>prep.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">17.9 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-09-verb-relation-decoupling/prep.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;prep.py — FROZEN item build for the VERB-relation decoupling probe (H-verb-1 + H-verb-2).</span>
+
+<span class="sd">Design: experiments/designs/lexical-relation-recovery-verb-decoupling-v1.md</span>
+<span class="sd">Gates RATIFIED s199: wiki/decisions/resolved/verb-relation-decoupling-design.md</span>
+<span class="sd">  Q1-C (5-relation across-relation arm PRIMARY [H1 decoupling] + H2 troponymy-depth CO-PRIMARY;</span>
+<span class="sd">        item-level POWERED SECONDARY descriptive-only; `cause` a CONDITIONAL 6th — mechanical rule below)</span>
+<span class="sd">  Q2-A (troponymy-depth = min_depth of the cue&#39;s FIRST verb synset, pos=&quot;v&quot;; predicted sign NEGATIVE;</span>
+<span class="sd">        byte-analogous to the noun is_a_depth — a verb win is a REPLICATION of the noun mechanism)</span>
+<span class="sd">  Q3   internal-contrast-only</span>
+
+<span class="sd">WHAT THIS FREEZES (anti-cheat: run BEFORE any model call; nothing here reads model output)</span>
+<span class="sd">------------------------------------------------------------------------------------------</span>
+<span class="sd">1. items.json  — for each core VERB relation, up to N_PER_REL FRESH cue verbs (POS-agnostic-surface</span>
+<span class="sd">   DISJOINT from the 1,740 prior cue lemmas: s186 nouns + s193 fresh nouns + s196 adjectives — the</span>
+<span class="sd">   homograph guard, freeze-condition 4 / B-vote), each with its word-form-level gold relatum set AND</span>
+<span class="sd">   its pre-registered troponymy-depth (min_depth of the cue&#39;s FIRST verb synset; Q2-A; predicted NEG).</span>
+<span class="sd">2. vocab.json — the control&#39;s candidate pool V: all single-word SubTLEX VERBS with Lg10WF&gt;=2.0.</span>
+<span class="sd">3. B1 (s199 ratifier) — the achieved per-relation mean troponymy-depths on the FROZEN sample and the</span>
+<span class="sd">   NUMERIC degeneracy bound: DEPTH_DEGENERATE iff the NON-antonymy mean-depth RANGE &lt; DEGEN_MAX_RANGE.</span>
+<span class="sd">   Computed here, before any model call; frozen into items.json + PREREG. If degenerate, H2 is</span>
+<span class="sd">   under-powered SYMMETRICALLY (B2): a DEPTH-FAILS is non-falsifying AND a DEPTH-OUT-PREDICTS is not</span>
+<span class="sd">   banked as noun-equivalent.</span>
+
+<span class="sd">MECHANICAL `cause`-inclusion rule (Q1-C / freeze-condition 5, locked BEFORE any inspection):</span>
+<span class="sd">  `cause` is added as a SIXTH relation IFF its ACHIEVED matched-N (after frequency-matching to the</span>
+<span class="sd">  binding profile) is &gt;= CAUSE_MIN (100). Decided mechanically here, pre-registered either way; `cause`</span>
+<span class="sd">  never enters or exits after recovery is seen. If it drops out, the arm is 5-point and this is reported.</span>
+
+<span class="sd">THIN-RELATION fallback for the CORE set (freeze-condition 3, covers antonymy/entailment not only cause):</span>
+<span class="sd">  Any CORE relation whose achieved matched-N &lt; CORE_FLOOR (80) is reported at its achieved N and</span>
+<span class="sd">  NEVER silently dropped or reweighted; if a core relation falls below CORE_FLOOR the arm is reported at</span>
+<span class="sd">  its true (reduced) point-count and flagged. (Design-time fresh pools: antonymy 140, entailment 242,</span>
+<span class="sd">  troponymy 1136, synonymy 1448, hypernymy 2006 — all clear CORE_FLOOR; measured for real here.)</span>
+
+<span class="sd">DESIGN DECISIONS FROZEN HERE (byte-preserved from the s186/s193/s196 prep.py where noted; see PREREG.md):</span>
+<span class="sd">- POS: VERBS (WordNet POS &#39;v&#39;, via nltk). No pooling across POS.</span>
+<span class="sd">- Frequency band: Lg10WF in [2.0, 4.5]  (byte-identical to s186/s193/s196 — the iconic-outlier cap:</span>
+<span class="sd">  the very-high-frequency iconic antonym pairs come/go, rise/fall, live/die that J&amp;K/Cao flag as G^2</span>
+<span class="sd">  outliers sit above Lg10WF 4.5 and are excluded by the band).</span>
+<span class="sd">- Frequency matching: all chosen relations matched to a COMMON Lg10WF profile (ANTONYMY&#39;s FRESH per-bin</span>
+<span class="sd">  profile — the binding relation, freeze-condition 3), by stratified per-bin sampling (s193/s196 logic).</span>
+<span class="sd">- N_PER_REL = 130 target (equal, powered ~120-150; PROTOCOL sec.4). Each relation reported at ACHIEVED N.</span>
+<span class="sd">- Gold = word-form level, aggregated across ALL verb senses of the cue. Relatum single-word, SubTLEX</span>
+<span class="sd">  Lg10WF&gt;=1.5. RELMIN, VOCAB_MIN, VOCAB_MINLEN, BIN_W, STOPLIST are BYTE-IDENTICAL to s186/s193/s196</span>
+<span class="sd">  prep.py; the relata() verb branches are the POS-specific parallel (verified in the s198 feasibility.py).</span>
+<span class="sd">- SEED = 20260709 (fixed). Deterministic; re-running reproduces items.json byte-identical.</span>
+
+<span class="sd">Inputs (committed / re-derivable):</span>
+<span class="sd">- experiments/data/subtlex-us/SUBTLEXus74286wordstextversion.txt (gitignored, sha-pinned</span>
+<span class="sd">  c5f86f065...; re-fetch via experiments/data/subtlex-us/prep.py — verified this session s199).</span>
+<span class="sd">- WordNet 3.0 via nltk (resource/wordnet-sense-inventory; BSD-style license verified in-repo).</span>
+<span class="sd">- the three prior items.json (s186 nouns / s193 fresh nouns / s196 adjectives) — 1,740 cues to exclude.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">SUBTLEX</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;subtlex-us&quot;</span><span class="p">,</span>
+                       <span class="s2">&quot;SUBTLEXus74286wordstextversion.txt&quot;</span><span class="p">)</span>
+<span class="n">PRIOR_ITEMS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;2026-07-06-antonymy-shadow-saturation&quot;</span><span class="p">,</span> <span class="s2">&quot;items.json&quot;</span><span class="p">),</span>   <span class="c1"># s186 nouns</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;2026-07-08-relation-recovery-taxonomic-proxy&quot;</span><span class="p">,</span> <span class="s2">&quot;items.json&quot;</span><span class="p">),</span>  <span class="c1"># s193 nouns</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;2026-07-09-adjective-antonymy-replication&quot;</span><span class="p">,</span> <span class="s2">&quot;items.json&quot;</span><span class="p">),</span>  <span class="c1"># s196 adjs</span>
+<span class="p">]</span>
+
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">20260709</span>
+<span class="n">FMIN</span><span class="p">,</span> <span class="n">FMAX</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">4.5</span>      <span class="c1"># cue frequency band (Lg10WF) — byte-identical to s186/s193/s196</span>
+<span class="n">RELMIN</span> <span class="o">=</span> <span class="mf">1.5</span>               <span class="c1"># minimum relatum frequency (Lg10WF) — byte-identical</span>
+<span class="n">VOCAB_MIN</span> <span class="o">=</span> <span class="mf">2.0</span>            <span class="c1"># candidate-pool floor (Lg10WF) for control vocabulary V — byte-identical</span>
+<span class="n">VOCAB_MINLEN</span> <span class="o">=</span> <span class="mi">3</span>           <span class="c1"># drop &lt;=2-char forms — byte-identical</span>
+<span class="n">N_PER_REL</span> <span class="o">=</span> <span class="mi">130</span>            <span class="c1"># target (equal); powered ~120-150 (PROTOCOL sec.4)</span>
+<span class="n">BIN_W</span> <span class="o">=</span> <span class="mf">0.25</span>               <span class="c1"># frequency-matching bin width — byte-identical</span>
+<span class="n">CORE</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;antonymy&quot;</span><span class="p">,</span> <span class="s2">&quot;synonymy&quot;</span><span class="p">,</span> <span class="s2">&quot;hypernymy&quot;</span><span class="p">,</span> <span class="s2">&quot;troponymy&quot;</span><span class="p">,</span> <span class="s2">&quot;entailment&quot;</span><span class="p">]</span>  <span class="c1"># 5-relation core (Q1-C)</span>
+<span class="n">CAUSE_MIN</span> <span class="o">=</span> <span class="mi">100</span>            <span class="c1"># `cause` enters as a 6th IFF achieved matched-N &gt;= this (freeze-condition 5)</span>
+<span class="n">CORE_FLOOR</span> <span class="o">=</span> <span class="mi">80</span>            <span class="c1"># a core relation below this is reported/flagged, never dropped (condition 3)</span>
+<span class="n">DEGEN_MAX_RANGE</span> <span class="o">=</span> <span class="mf">0.50</span>     <span class="c1"># B1: non-antonymy mean-depth RANGE &lt; this =&gt; depth spread DEGENERATE (H2</span>
+                           <span class="c1"># under-powered symmetrically). Rationale in PREREG: at within-relation depth</span>
+                           <span class="c1"># SD ~2 and N~130 one SE ~0.18, so a non-antonymy 4-relation range must clear</span>
+                           <span class="c1"># ~2.5-3 SE (~0.5) to be a real, above-noise depth test; frozen before any call.</span>
+
+<span class="c1"># Closed-class / function-word stoplist — BYTE-IDENTICAL to s186/s193/s196 prep.py.</span>
+<span class="n">STOPLIST</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">a an the this that these those some any no every each all both few many much most more</span>
+<span class="s2">i you he she it we they me him her us them my your his its our their mine yours ours theirs</span>
+<span class="s2">who whom whose which what where when why how there here</span>
+<span class="s2">and or nor but so yet for as if then than because although though while whereas unless until</span>
+<span class="s2">of in on at by to from with without within into onto upon over under above below between among</span>
+<span class="s2">about across after before behind beneath beside besides beyond during except inside outside</span>
+<span class="s2">through throughout toward towards up down off out near around against per via</span>
+<span class="s2">is am are was were be been being do does did done have has had having will would shall should</span>
+<span class="s2">can could may might must ought need dare going gonna wanna</span>
+<span class="s2">not never very too also just only even still yet again once ever always often sometimes</span>
+<span class="s2">this that here there now then thus hence therefore however moreover otherwise</span>
+<span class="s2">one two three four five six seven eight nine ten first second next last</span>
+<span class="s2">mr mrs ms dr st etc eg ie am pm</span>
+<span class="s2">he&#39;d she&#39;d don isn wasn aren couldn wouldn shouldn didn doesn hasn haven won</span>
+<span class="s2">o s t d m re ve ll y n r</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_freq</span><span class="p">():</span>
+    <span class="n">freq</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SUBTLEX</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;latin-1&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">freq</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Word&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;Lg10WF&quot;</span><span class="p">])</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">KeyError</span><span class="p">):</span>
+                <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">freq</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">relata</span><span class="p">(</span><span class="n">lem</span><span class="p">,</span> <span class="n">syn</span><span class="p">,</span> <span class="n">rel</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;VERB relation gold — the POS-specific parallel of the s186/s193 noun relata() (verified byte-</span>
+<span class="sd">    equivalent to the s198 feasibility.py verb branches). Single-word, SubTLEX Lg10WF&gt;=RELMIN, word-form.&quot;&quot;&quot;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">rel</span> <span class="o">==</span> <span class="s2">&quot;antonymy&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">lem</span><span class="o">.</span><span class="n">antonyms</span><span class="p">():</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="n">rel</span> <span class="o">==</span> <span class="s2">&quot;synonymy&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">syn</span><span class="o">.</span><span class="n">lemmas</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">l</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="o">!=</span> <span class="n">lem</span><span class="o">.</span><span class="n">name</span><span class="p">():</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="n">rel</span> <span class="o">==</span> <span class="s2">&quot;hypernymy&quot;</span><span class="p">:</span>              <span class="c1"># the more-general verb (troponymy inverse): whisper-&gt;talk</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">syn</span><span class="o">.</span><span class="n">closure</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">hypernyms</span><span class="p">(),</span> <span class="n">depth</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">lemmas</span><span class="p">():</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="n">rel</span> <span class="o">==</span> <span class="s2">&quot;troponymy&quot;</span><span class="p">:</span>              <span class="c1"># more-specific manner (hyponyms): talk-&gt;whisper</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">syn</span><span class="o">.</span><span class="n">closure</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">hyponyms</span><span class="p">(),</span> <span class="n">depth</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">lemmas</span><span class="p">():</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="n">rel</span> <span class="o">==</span> <span class="s2">&quot;entailment&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">syn</span><span class="o">.</span><span class="n">entailments</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">lemmas</span><span class="p">():</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="n">rel</span> <span class="o">==</span> <span class="s2">&quot;cause&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">syn</span><span class="o">.</span><span class="n">causes</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">lemmas</span><span class="p">():</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">out</span> <span class="k">if</span> <span class="s2">&quot; &quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">freq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">RELMIN</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">trop_depth</span><span class="p">(</span><span class="n">cue</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;PRE-REGISTERED H2 proxy (Q2-A, frozen): min_depth of the cue&#39;s FIRST verb synset. Gold-INDEPENDENT</span>
+<span class="sd">    (a property of the cue, not the answer set). Predicted sign NEGATIVE. Byte-analogous to the noun</span>
+<span class="sd">    is_a_depth() (only pos=&quot;n&quot; -&gt; pos=&quot;v&quot;).&quot;&quot;&quot;</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">wordnet</span> <span class="k">as</span> <span class="n">wn</span>
+    <span class="n">ss</span> <span class="o">=</span> <span class="n">wn</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="n">cue</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="s2">&quot;v&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min_depth</span><span class="p">()</span> <span class="k">if</span> <span class="n">ss</span> <span class="k">else</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">():</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">wordnet</span> <span class="k">as</span> <span class="n">wn</span>
+    <span class="n">freq</span> <span class="o">=</span> <span class="n">load_freq</span><span class="p">()</span>
+
+    <span class="c1"># 1,740 prior cue lemmas to EXCLUDE — POS-agnostic surface match (condition 4).</span>
+    <span class="n">prior</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">PRIOR_ITEMS</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">its</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">its</span><span class="p">:</span>
+                <span class="n">prior</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;excluding </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">prior</span><span class="p">)</span><span class="si">}</span><span class="s2"> prior cue lemmas (POS-agnostic surface homograph guard)&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Candidate pool V — single-word VERB forms, Lg10WF&gt;=VOCAB_MIN.</span>
+    <span class="n">verb_forms</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">syn</span> <span class="ow">in</span> <span class="n">wn</span><span class="o">.</span><span class="n">all_synsets</span><span class="p">(</span><span class="s2">&quot;v&quot;</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">lem</span> <span class="ow">in</span> <span class="n">syn</span><span class="o">.</span><span class="n">lemmas</span><span class="p">():</span>
+            <span class="n">nm</span> <span class="o">=</span> <span class="n">lem</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="s2">&quot; &quot;</span> <span class="ow">in</span> <span class="n">nm</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">VOCAB_MINLEN</span> <span class="ow">or</span> <span class="n">nm</span> <span class="ow">in</span> <span class="n">STOPLIST</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">nm</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">freq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">nm</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">VOCAB_MIN</span><span class="p">:</span>
+                <span class="n">verb_forms</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
+    <span class="n">vocab</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">verb_forms</span><span class="p">)</span>
+
+    <span class="c1"># Eligible fresh cues + aggregated word-form gold per relation (CORE + cause), s186 logic MINUS prior.</span>
+    <span class="n">ALL_RELS</span> <span class="o">=</span> <span class="n">CORE</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;cause&quot;</span><span class="p">]</span>
+    <span class="n">cue_gold</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span><span class="p">:</span> <span class="p">{}</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ALL_RELS</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">syn</span> <span class="ow">in</span> <span class="n">wn</span><span class="o">.</span><span class="n">all_synsets</span><span class="p">(</span><span class="s2">&quot;v&quot;</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">lem</span> <span class="ow">in</span> <span class="n">syn</span><span class="o">.</span><span class="n">lemmas</span><span class="p">():</span>
+            <span class="n">nm</span> <span class="o">=</span> <span class="n">lem</span><span class="o">.</span><span class="n">name</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="s2">&quot; &quot;</span> <span class="ow">in</span> <span class="n">nm</span> <span class="ow">or</span> <span class="n">nm</span> <span class="ow">in</span> <span class="n">prior</span><span class="p">:</span>          <span class="c1"># &lt;-- the freshness / homograph exclusion</span>
+                <span class="k">continue</span>
+            <span class="n">fw</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">fw</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="p">(</span><span class="n">FMIN</span> <span class="o">&lt;=</span> <span class="n">fw</span> <span class="o">&lt;=</span> <span class="n">FMAX</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ALL_RELS</span><span class="p">:</span>
+                <span class="n">g</span> <span class="o">=</span> <span class="n">relata</span><span class="p">(</span><span class="n">lem</span><span class="p">,</span> <span class="n">syn</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">freq</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">g</span><span class="p">:</span>
+                    <span class="n">cue_gold</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">nm</span><span class="p">,</span> <span class="nb">set</span><span class="p">())</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ALL_RELS</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  fresh eligible pool </span><span class="si">{</span><span class="n">r</span><span class="si">:</span><span class="s2">11s</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cue_gold</span><span class="p">[</span><span class="n">r</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">binof</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">((</span><span class="n">freq</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">-</span> <span class="n">FMIN</span><span class="p">)</span> <span class="o">/</span> <span class="n">BIN_W</span><span class="p">)</span>
+
+    <span class="c1"># Common frequency profile = ANTONYMY&#39;s FRESH per-bin counts scaled to N_PER_REL (binding relation).</span>
+    <span class="n">ant_cues</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cue_gold</span><span class="p">[</span><span class="s2">&quot;antonymy&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">ant_bins</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">ant_cues</span><span class="p">:</span>
+        <span class="n">ant_bins</span><span class="p">[</span><span class="n">binof</span><span class="p">(</span><span class="n">w</span><span class="p">)]</span> <span class="o">=</span> <span class="n">ant_bins</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">binof</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">total_ant</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ant_cues</span><span class="p">)</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">ant_bins</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">target</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">N_PER_REL</span> <span class="o">*</span> <span class="n">c</span> <span class="o">/</span> <span class="n">total_ant</span><span class="p">)</span>
+    <span class="n">drift</span> <span class="o">=</span> <span class="n">N_PER_REL</span> <span class="o">-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">b</span><span class="p">:</span> <span class="o">-</span><span class="n">target</span><span class="p">[</span><span class="n">b</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">drift</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">drift</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">if</span> <span class="n">target</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">target</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">+=</span> <span class="n">step</span>
+            <span class="n">drift</span> <span class="o">-=</span> <span class="n">step</span>
+
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">sample_rel</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+        <span class="n">by_bin</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">cue_gold</span><span class="p">[</span><span class="n">r</span><span class="p">]:</span>
+            <span class="n">by_bin</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">binof</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">chosen</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">target</span><span class="p">):</span>
+            <span class="n">pool</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">by_bin</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="p">[]))</span>
+            <span class="n">want</span> <span class="o">=</span> <span class="n">target</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">want</span><span class="p">:</span>
+                <span class="n">chosen</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">chosen</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">pool</span><span class="p">,</span> <span class="n">want</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">chosen</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">N_PER_REL</span><span class="p">:</span>
+            <span class="n">remaining</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cue_gold</span><span class="p">[</span><span class="n">r</span><span class="p">])</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">chosen</span><span class="p">))</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">remaining</span><span class="p">)</span>
+            <span class="n">chosen</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">remaining</span><span class="p">[:</span><span class="n">N_PER_REL</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">chosen</span><span class="p">)])</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">chosen</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">N_PER_REL</span><span class="p">:</span>
+            <span class="n">chosen</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">chosen</span><span class="p">,</span> <span class="n">N_PER_REL</span><span class="p">))</span>
+        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">chosen</span><span class="p">)</span>
+
+    <span class="c1"># Sample CORE (in fixed order for determinism) then decide `cause` mechanically.</span>
+    <span class="n">chosen</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span><span class="p">:</span> <span class="n">sample_rel</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">CORE</span><span class="p">}</span>
+    <span class="n">cause_chosen</span> <span class="o">=</span> <span class="n">sample_rel</span><span class="p">(</span><span class="s2">&quot;cause&quot;</span><span class="p">)</span>
+    <span class="n">cause_n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cause_chosen</span><span class="p">)</span>
+    <span class="n">include_cause</span> <span class="o">=</span> <span class="n">cause_n</span> <span class="o">&gt;=</span> <span class="n">CAUSE_MIN</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">MECHANICAL cause-inclusion (freeze-condition 5): achieved matched-N=</span><span class="si">{</span><span class="n">cause_n</span><span class="si">}</span><span class="s2"> &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;&gt;= </span><span class="si">{</span><span class="n">CAUSE_MIN</span><span class="si">}</span><span class="s2">? -&gt; </span><span class="si">{</span><span class="s1">&#39;INCLUDE (6-point arm)&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">include_cause</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;EXCLUDE (5-point arm)&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">include_cause</span><span class="p">:</span>
+        <span class="n">chosen</span><span class="p">[</span><span class="s2">&quot;cause&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cause_chosen</span>
+    <span class="n">rels</span> <span class="o">=</span> <span class="n">CORE</span> <span class="o">+</span> <span class="p">([</span><span class="s2">&quot;cause&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">include_cause</span> <span class="k">else</span> <span class="p">[])</span>
+
+    <span class="c1"># CORE thin-relation floor check (freeze-condition 3).</span>
+    <span class="n">below_floor</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">CORE</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">chosen</span><span class="p">[</span><span class="n">r</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">CORE_FLOOR</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">below_floor</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;!! CORE relations below floor </span><span class="si">{</span><span class="n">CORE_FLOOR</span><span class="si">}</span><span class="s2"> (reported at achieved N, NOT dropped): </span><span class="si">{</span><span class="n">below_floor</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;CORE thin-relation floor OK: all core relations &gt;= </span><span class="si">{</span><span class="n">CORE_FLOOR</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+    <span class="n">items</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rels</span><span class="p">:</span>
+        <span class="n">ch</span> <span class="o">=</span> <span class="n">chosen</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+        <span class="n">items</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;cue&quot;</span><span class="p">:</span> <span class="n">w</span><span class="p">,</span> <span class="s2">&quot;lg10wf&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">freq</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span>
+                     <span class="s2">&quot;trop_depth&quot;</span><span class="p">:</span> <span class="n">trop_depth</span><span class="p">(</span><span class="n">w</span><span class="p">),</span>
+                     <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cue_gold</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">w</span><span class="p">])}</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">ch</span><span class="p">]</span>
+        <span class="n">fws</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">freq</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">ch</span><span class="p">)</span>
+        <span class="n">depths</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">(</span><span class="n">trop_depth</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">ch</span><span class="p">)</span> <span class="k">if</span> <span class="n">d</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">golds</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">cue_gold</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">w</span><span class="p">])</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">ch</span><span class="p">]</span>
+        <span class="n">profile</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">ch</span><span class="p">),</span>
+            <span class="s2">&quot;lg10wf_median&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">fws</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">fws</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">3</span><span class="p">),</span>
+            <span class="s2">&quot;lg10wf_min&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">fws</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">),</span>
+            <span class="s2">&quot;lg10wf_max&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">fws</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">),</span>
+            <span class="s2">&quot;mean_trop_depth&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">depths</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">depths</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="k">if</span> <span class="n">depths</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;n_depth_resolved&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">depths</span><span class="p">),</span>
+            <span class="s2">&quot;gold_size_median&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">golds</span><span class="p">)[</span><span class="nb">len</span><span class="p">(</span><span class="n">golds</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">],</span>
+            <span class="s2">&quot;gold_size_mean&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">golds</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">golds</span><span class="p">),</span> <span class="mi">3</span><span class="p">),</span>
+        <span class="p">}</span>
+
+    <span class="c1"># ---- B1 (s199 ratifier): NUMERIC degeneracy verdict on the FROZEN sample (pre-recovery) ----</span>
+    <span class="c1"># B1 as ratified is a floor on the NON-ANTONYMY *CORE-4* mean-depth range {synonymy, hypernymy,</span>
+    <span class="c1"># troponymy, entailment} — the FIXED backbone, INDEPENDENT of the mechanical `cause` decision (so a</span>
+    <span class="c1"># shallow conditionally-included `cause` cannot manufacture non-degeneracy). The cause-inclusive</span>
+    <span class="c1"># range + the full-set SD are recorded too, for transparency, but do NOT drive the verdict.</span>
+    <span class="n">mean_depths</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span><span class="p">:</span> <span class="n">profile</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="s2">&quot;mean_trop_depth&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rels</span><span class="p">}</span>
+    <span class="n">CORE_NONANT</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;synonymy&quot;</span><span class="p">,</span> <span class="s2">&quot;hypernymy&quot;</span><span class="p">,</span> <span class="s2">&quot;troponymy&quot;</span><span class="p">,</span> <span class="s2">&quot;entailment&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">mean_depths</span><span class="p">]</span>
+    <span class="n">core4_vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">mean_depths</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">CORE_NONANT</span> <span class="k">if</span> <span class="n">mean_depths</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">core4_range</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">core4_vals</span><span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">core4_vals</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">core4_vals</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="n">non_ant_incl_cause</span> <span class="o">=</span> <span class="p">[</span><span class="n">mean_depths</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rels</span> <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="s2">&quot;antonymy&quot;</span> <span class="ow">and</span> <span class="n">mean_depths</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">non_ant_incl_cause_range</span> <span class="o">=</span> <span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">non_ant_incl_cause</span><span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">non_ant_incl_cause</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
+                                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">non_ant_incl_cause</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">all_vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">mean_depths</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rels</span> <span class="k">if</span> <span class="n">mean_depths</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">all_vals</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_vals</span><span class="p">)</span>
+    <span class="n">depth_sd</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="nb">sum</span><span class="p">((</span><span class="n">v</span> <span class="o">-</span> <span class="n">m</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">all_vals</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_vals</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">depth_degenerate</span> <span class="o">=</span> <span class="p">(</span><span class="n">core4_range</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">core4_range</span> <span class="o">&lt;</span> <span class="n">DEGEN_MAX_RANGE</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">B1 DEPTH-SPREAD (frozen, pre-recovery): mean depths </span><span class="si">{</span><span class="n">mean_depths</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   VERDICT-DRIVING non-antonymy CORE-4 range = </span><span class="si">{</span><span class="n">core4_range</span><span class="si">}</span><span class="s2">  (bound DEGEN_MAX_RANGE=</span><span class="si">{</span><span class="n">DEGEN_MAX_RANGE</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   [transparency] non-antonymy incl-cause range = </span><span class="si">{</span><span class="n">non_ant_incl_cause_range</span><span class="si">}</span><span class="s2">; full-set depth SD = </span><span class="si">{</span><span class="n">depth_sd</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   =&gt; DEPTH SPREAD </span><span class="si">{</span><span class="s1">&#39;DEGENERATE (H2 under-powered SYMMETRICALLY per B1/B2)&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">depth_degenerate</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;NON-DEGENERATE (H2 a real test)&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">out_items</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="n">SEED</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;verb&quot;</span><span class="p">,</span> <span class="s2">&quot;wn_pos&quot;</span><span class="p">:</span> <span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="s2">&quot;band&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">FMIN</span><span class="p">,</span> <span class="n">FMAX</span><span class="p">],</span> <span class="s2">&quot;relmin&quot;</span><span class="p">:</span> <span class="n">RELMIN</span><span class="p">,</span>
+        <span class="s2">&quot;n_per_rel_target&quot;</span><span class="p">:</span> <span class="n">N_PER_REL</span><span class="p">,</span> <span class="s2">&quot;relations&quot;</span><span class="p">:</span> <span class="n">rels</span><span class="p">,</span> <span class="s2">&quot;core&quot;</span><span class="p">:</span> <span class="n">CORE</span><span class="p">,</span>
+        <span class="s2">&quot;cause_included&quot;</span><span class="p">:</span> <span class="n">include_cause</span><span class="p">,</span> <span class="s2">&quot;cause_achieved_n&quot;</span><span class="p">:</span> <span class="n">cause_n</span><span class="p">,</span> <span class="s2">&quot;cause_min&quot;</span><span class="p">:</span> <span class="n">CAUSE_MIN</span><span class="p">,</span>
+        <span class="s2">&quot;core_floor&quot;</span><span class="p">:</span> <span class="n">CORE_FLOOR</span><span class="p">,</span> <span class="s2">&quot;core_below_floor&quot;</span><span class="p">:</span> <span class="n">below_floor</span><span class="p">,</span>
+        <span class="s2">&quot;excluded_prior_cue_lemmas&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">prior</span><span class="p">),</span>
+        <span class="s2">&quot;b1_depth_spread&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;mean_trop_depth&quot;</span><span class="p">:</span> <span class="n">mean_depths</span><span class="p">,</span>
+            <span class="s2">&quot;verdict_driving_core4_nonant_range&quot;</span><span class="p">:</span> <span class="n">core4_range</span><span class="p">,</span>
+            <span class="s2">&quot;core4_nonant_relations&quot;</span><span class="p">:</span> <span class="n">CORE_NONANT</span><span class="p">,</span>
+            <span class="s2">&quot;non_antonymy_incl_cause_range&quot;</span><span class="p">:</span> <span class="n">non_ant_incl_cause_range</span><span class="p">,</span>
+            <span class="s2">&quot;depth_sd&quot;</span><span class="p">:</span> <span class="n">depth_sd</span><span class="p">,</span>
+            <span class="s2">&quot;degen_max_range&quot;</span><span class="p">:</span> <span class="n">DEGEN_MAX_RANGE</span><span class="p">,</span>
+            <span class="s2">&quot;depth_degenerate&quot;</span><span class="p">:</span> <span class="n">depth_degenerate</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;profile&quot;</span><span class="p">:</span> <span class="n">profile</span><span class="p">,</span> <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="n">items</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;items.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out_items</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;vocab.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">({</span><span class="s2">&quot;vocab_min_lg10wf&quot;</span><span class="p">:</span> <span class="n">VOCAB_MIN</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">),</span> <span class="s2">&quot;vocab&quot;</span><span class="p">:</span> <span class="n">vocab</span><span class="p">},</span> <span class="n">f</span><span class="p">)</span>
+
+    <span class="c1"># ---- ASSERTIONS: disjointness from all 1,740 prior cues (freeze-condition 4 / anti-cheat) ----</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rels</span><span class="p">:</span>
+        <span class="n">fresh</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">items</span><span class="p">[</span><span class="n">r</span><span class="p">])</span>
+        <span class="n">ov</span> <span class="o">=</span> <span class="n">fresh</span> <span class="o">&amp;</span> <span class="n">prior</span>
+        <span class="k">assert</span> <span class="ow">not</span> <span class="n">ov</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;OVERLAP with prior cues in </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">ov</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">DISJOINTNESS OK: 0 overlap with the </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">prior</span><span class="p">)</span><span class="si">}</span><span class="s2"> prior cue lemmas, all </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rels</span><span class="p">)</span><span class="si">}</span><span class="s2"> relations.&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">items.json written. per-relation profile (FRESH verb cues):&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rels</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">profile</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">r</span><span class="si">:</span><span class="s2">11s</span><span class="si">}</span><span class="s2"> n=</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2">  Lg10WF median=</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;lg10wf_median&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;lg10wf_min&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;lg10wf_max&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">]  mean trop-depth=</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;mean_trop_depth&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;(resolved </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;n_depth_resolved&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)  gold median=</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;gold_size_median&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;vocab.json: |V|=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">)</span><span class="si">}</span><span class="s2"> candidate verbs (Lg10WF&gt;=</span><span class="si">{</span><span class="n">VOCAB_MIN</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">build</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-04-aann-behavioral-gradient-rep2</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">6.5 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-04-aann-behavioral-gradient-rep2/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-aann-behavioral-gradient-second-date-powered-replication-rep2-frozen-before-any-finding-bearing-model-call">PREREG — AANN behavioral gradient, second-date powered REPLICATION (rep2), frozen before any finding-bearing model call</h1>
+<p><strong>What this run is.</strong> The A2a owed cross-date powered re-run of the AANN <strong>anchored acceptability
+gradient</strong> — the "overall positive" whose only gap, named in
+<code>wiki/findings/claims/aann-behavioral-gradient.md</code>, is: <em>"There is no second-date replication of
+the overall positive; the only second date (v2b) replicates the temporal hole."</em> This run supplies
+exactly that: a <strong>fresh-item, second-date</strong> replication of the anchored gradient on the <strong>byte-identical
+frozen v2 instrument</strong>, against the <strong>identical human anchor</strong>.</p>
+<p><strong>Relationship to v2.</strong> The instrument is byte-identical to
+<code>experiments/runs/2026-06-12-aann-behavioral-probe-v2/</code> — <code>probe.py</code> and <code>analyze.py</code> are copied
+unchanged (sha256 verified identical: <code>ec8f7334…</code> / <code>4ce5a709…</code>). The governing design is
+<code>experiments/designs/aann-construction-v2.md</code> (frozen, ratified
+<code>wiki/decisions/resolved/aann-behavioral-operationalization.md</code>, nine binding conditions). The
+<strong>only</strong> differences from v2, both made before any finding-bearing model call:</p>
+<ol>
+<li><strong>Sampling seed</strong> 20260612 → <strong>20260704</strong> (a fresh occasion).</li>
+<li><strong>Anchored arm drawn DISJOINT from v2.</strong> For each of the 204 (adjective × noun-class) cells,
+   the two item-ids v2 sampled are removed from the candidate pool before the seeded pick. Result:
+   <strong>408 anchored items, 0 shared surface items with v2</strong> (<code>prep.py</code> asserts this mechanically;
+   every cell retains ≥ 4 candidates — min pool 6, v2 removed 2). This is the fresh-item standard
+   the sibling dative and CC powered re-runs met ("0 shared items").</li>
+</ol>
+<p><strong>What is UNCHANGED (and mechanically verified before the run):</strong></p>
+<ul>
+<li><strong>Human anchor identical.</strong> <code>human_cell_means.csv</code> (204 cells) and <code>human_class_means.csv</code>
+  (28 class-cells) are computed from ALL 3,600 non-filler Exp-2 ratings (seed-independent) — both
+  <strong>byte-identical to v2</strong> (verified by <code>diff</code>). The fresh model items map to the <strong>same</strong> human cells.</li>
+<li><strong>Held-out arm and Tier-0 tuples byte-identical</strong> (lexically frozen, deterministic construction,
+  not rng-sampled): held-out item ids and sentences are identical to v2; Tier-0 item ids identical
+  (A/B position randomization reseeds, which the scoring path handles via <code>aann_position</code>). rep2
+  therefore also delivers a <strong>second-date re-run of the held-out overall positive and the temporal
+  hole at the identical items</strong> — a bonus, not the primary target.</li>
+<li><strong>Instrument:</strong> primary framing 0–100 (integer only); robustness 4-point (digit only); Tier-0 A/B
+  letter only. Temperature 0; max_tokens 64 (A, B) / 512 (C); gemini <code>reasoning:{"effort":"minimal"}</code>.</li>
+<li><strong>Parsing:</strong> full-string bare integer else the LAST in-range token; one verbatim retry per
+  unparseable response then missing. Missing &gt; 10% in any arm = mandatory caveat; &gt; 25% = arm
+  instrument failure; any verdict-bearing arm absent/wrong-count ⇒ run verdict INCOMPLETE.</li>
+<li>Mirror: MIT <code>github.com/mahowak/aann-public</code>, commit <code>c8095a0008cd6538717de5cc937f90ce5944e688</code>,
+  re-cloned this session and verified (regenerating v2's stimuli with the OLD seed reproduces the
+  committed <code>stimuli.json</code> byte-identically — mirror is the exact one v2 used).</li>
+</ul>
+<h2 id="frozen-statistics-and-thresholds-per-model-byte-identical-to-v2">Frozen statistics and thresholds (per model) — byte-identical to v2</h2>
+<ul>
+<li><strong>ANCHORED PASS</strong> = Spearman ρ(model cell mean, human cell mean) over 204 cells ≥ 0.40 AND
+  10,000-resample percentile bootstrap 95% CI over cells excludes 0 AND partial Spearman
+  controlling adjective Zipf (rank-residualization) ≥ 0.20 AND noun-class guard (mean within-noun-class
+  Spearman across the 6 strata) ≥ 0.25.</li>
+<li><strong>HELD-OUT REPLICATION PASS</strong> = Spearman ρ(model held-out class-cell means, HUMAN anchored
+  class-cell means) over 15 held-out class-cells ≥ 0.50 AND mean within-noun-class Spearman over
+  strata with ≥ 4 class-cells ≥ 0.30.</li>
+<li><strong>TIER-0 PASS</strong> = ≥ 20/24 AANN preferred; failure ⇒ model excluded from the support count.</li>
+<li><strong>Framing-fragility flag:</strong> item-level Spearman between framings on the 102-item subset &lt; 0.50
+  (or NaN) ⇒ FRAGILE.</li>
+</ul>
+<h2 id="frozen-verdict-map-conjecture-level-byte-identical-to-v2">Frozen verdict map (conjecture level) — byte-identical to v2</h2>
+<ul>
+<li><strong>SUPPORTED:</strong> ≥ 2 of 3 Tier-0-passing models achieve ANCHORED PASS, AND every anchored passer
+  also achieves HELD-OUT REPLICATION PASS.</li>
+<li><strong>PARTIAL (memorization-like):</strong> ≥ 2 anchored passes but a held-out failure among them.</li>
+<li><strong>PARTIAL (form-without-gradient):</strong> broad Tier-0 pass, &lt; 2 anchored passes.</li>
+<li><strong>FALSIFIED (current form):</strong> zero anchored passes among Tier-0 passers, or all passes
+  frequency-confounded.</li>
+<li><strong>INSTRUMENT FAILURE:</strong> fewer than 2 Tier-0-passing models.</li>
+<li><strong>INCOMPLETE:</strong> any verdict-bearing arm absent/partial.</li>
+<li>Thresholds are ≥ (inclusive). No post-hoc adjustment under any outcome.</li>
+</ul>
+<h2 id="replication-read-what-rep2-adds-to-the-claim-declared-pre-run">Replication read (what rep2 adds to the claim, declared pre-run)</h2>
+<p>This run does <strong>not</strong> re-open the SUPPORTED/PARTIAL verdict of v2 (that verdict stands on v2's
+occasion). Its evidential contribution, fixed before the data exist, is <strong>cross-date replication of
+the anchored gradient</strong>: the pre-registered success criterion for "the overall positive replicates"
+is that the anchored arm again passes for <strong>≥ 2 of 3</strong> Tier-0-passing models, at a cell-level ρ whose
+bootstrap CI overlaps v2's per-model interval. A failure to replicate (fewer passers, or a
+non-overlapping downward CI) is a first-class negative and would be written as such, <strong>weakening</strong> the
+claim's overall-positive leg rather than strengthening it. No predicted per-model magnitude is
+hardcoded anywhere in the scoring path; scoring is against the empirical human cell means only.</p>
+<h2 id="spend">Spend</h2>
+<p>Pre-flight billed expectation ≈ <strong>$0.31</strong> (v2's measured actual at the identical 1,782-call shape:
+408 anchored + 102 robustness + 60 held-out + 24 Tier-0, × 3 models; single-integer outputs are
+cheap). <code>ABORT_USD</code> in <code>probe.py</code> = <strong>$2.50</strong> (the single-run flag) — never expected to approach.
+Session budget: Tom granted a $10 ceiling for the UTC-2026-07-04 day (day-so-far $4.3312345); this
+run leaves wide headroom and is far under the $2.50 single-run flag. Actual billed <code>usage.cost</code>
+recorded in the run README and <code>config/budget.md</code>.</p>
+<h2 id="freeze">Freeze</h2>
+<p>Frozen 2026-07-04, before any model call. No AANN model output from this run exists at freeze time;
+<code>prep.py</code> (no model calls) produced <code>stimuli.json</code> + the (v2-identical) human tables. An independent
+fresh-agent pre-run critic reviews this PREREG + design + stimuli, and one non-Anthropic
+decorrelation vote is routed through the probe REST path, <strong>before</strong> any finding-bearing call.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

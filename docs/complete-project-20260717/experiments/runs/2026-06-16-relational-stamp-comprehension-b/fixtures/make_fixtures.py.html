@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>make_fixtures.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../../index.html">home</a> <span class="sep">/</span> <a href="../../../index.html">experiments</a> <span class="sep">/</span> <a href="../../index.html">runs</a> <span class="sep">/</span> <a href="../index.html">2026-06-16-relational-stamp-comprehension-b</a> <span class="sep">/</span> <a href="index.html">fixtures</a> <span class="sep">/</span> <span class="cur">make_fixtures.py</span></nav>
+<main>
+<header class="page-head">
+<h1>make_fixtures.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">3.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-16-relational-stamp-comprehension-b/fixtures/make_fixtures.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;make_fixtures.py (no API) — idealized-reader fixtures proving the B instrument separates</span>
+<span class="sd">stamp-comprehension from position-following BEFORE any model is queried (the v4 GO-discipline).</span>
+
+<span class="sd">Builds the frozen stimuli through the real build_trials.build(), then writes three idealized</span>
+<span class="sd">raw sets and shows what analyze.py returns for each:</span>
+<span class="sd">  raw_stamp  : a perfect stamp-reader (always picks correct_nonce)            -&gt; PASS / PASS</span>
+<span class="sd">  raw_lastpos: a pure position-follower (always picks physically-last nonce)  -&gt; FAIL / FAIL (~1/K)</span>
+<span class="sd">  raw_firstpos: a pure first-line follower (always picks physically-first)    -&gt; FAIL / FAIL (~1/K)</span>
+
+<span class="sd">A PASS on raw_lastpos/raw_firstpos would mean the instrument leaks position as comprehension;</span>
+<span class="sd">it must not. These are synthetic and are never findings.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">RUN</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">))</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">RUN</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">build_trials</span>  <span class="c1"># noqa: E402</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">common</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">C</span>    <span class="c1"># noqa: E402</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">analyze</span>        <span class="c1"># noqa: E402</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">write_set</span><span class="p">(</span><span class="n">subdir</span><span class="p">,</span> <span class="n">picker</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="n">subdir</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">records</span> <span class="o">=</span> <span class="n">build_trials</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">C</span><span class="o">.</span><span class="n">MODELS</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;probe-</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.jsonl&quot;</span><span class="p">)</span>
+        <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">records</span><span class="p">:</span>
+            <span class="n">C</span><span class="o">.</span><span class="n">append_jsonl</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="n">rec</span><span class="p">[</span><span class="s2">&quot;rid&quot;</span><span class="p">],</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">rec</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">],</span>
+                                  <span class="s2">&quot;pick&quot;</span><span class="p">:</span> <span class="n">picker</span><span class="p">(</span><span class="n">rec</span><span class="p">),</span> <span class="s2">&quot;parse_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;strict&quot;</span><span class="p">,</span>
+                                  <span class="s2">&quot;retried&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;finish_reason&quot;</span><span class="p">:</span> <span class="s2">&quot;stop&quot;</span><span class="p">,</span>
+                                  <span class="s2">&quot;raw&quot;</span><span class="p">:</span> <span class="n">picker</span><span class="p">(</span><span class="n">rec</span><span class="p">),</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">[]})</span>
+    <span class="k">return</span> <span class="n">d</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># ensure stimuli.json exists &amp; matches build (geometry assert runs inside build-&gt;assert)</span>
+    <span class="n">records</span> <span class="o">=</span> <span class="n">build_trials</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+    <span class="n">build_trials</span><span class="o">.</span><span class="n">assert_balance</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- raw_stamp (perfect stamp-reader; expect PASS/PASS) ---&quot;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">write_set</span><span class="p">(</span><span class="s2">&quot;raw_stamp&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;correct_nonce&quot;</span><span class="p">])</span>
+    <span class="n">o</span> <span class="o">=</span> <span class="n">analyze</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;PASS&quot;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">o</span><span class="p">[</span><span class="s2">&quot;models&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="s2">&quot;stamp-reader should PASS&quot;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- raw_lastpos (position-follower: always physically-last; expect FAIL/FAIL ~1/K) ---&quot;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">write_set</span><span class="p">(</span><span class="s2">&quot;raw_lastpos&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;last_pos_nonce&quot;</span><span class="p">])</span>
+    <span class="n">o</span> <span class="o">=</span> <span class="n">analyze</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;FAIL&quot;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">o</span><span class="p">[</span><span class="s2">&quot;models&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="s2">&quot;position-follower should FAIL&quot;</span>
+    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;accuracy&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">C</span><span class="o">.</span><span class="n">POS_CHANCE</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-9</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">o</span><span class="p">[</span><span class="s2">&quot;models&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> \
+        <span class="s2">&quot;position-follower accuracy must equal POS_CHANCE under balance&quot;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- raw_firstpos (always physically-first; expect FAIL/FAIL ~1/K) ---&quot;</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">write_set</span><span class="p">(</span><span class="s2">&quot;raw_firstpos&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;first_pos_nonce&quot;</span><span class="p">])</span>
+    <span class="n">o</span> <span class="o">=</span> <span class="n">analyze</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;FAIL&quot;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">o</span><span class="p">[</span><span class="s2">&quot;models&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="s2">&quot;first-line follower should FAIL&quot;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">ALL FIXTURE ASSERTS PASS: the instrument separates stamp-comprehension from &quot;</span>
+          <span class="s2">&quot;position-following (both directions score exactly 1/K).&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

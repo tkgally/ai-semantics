@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>VOTE-s204.json — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-10-blimp-forced-choice-sweep-design</a> <span class="sep">/</span> <span class="cur">VOTE-s204.json</span></nav>
+<main>
+<header class="page-head">
+<h1>VOTE-s204.json</h1>
+<p class="subtitle"><span class="ftype">JSON</span> &middot; <span class="fsize">2.6 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-10-blimp-forced-choice-sweep-design/VOTE-s204.json</code></p>
+</header>
+<table class='kv top'><tr><th>model</th><td><span class='j-str'>openai/gpt-5.4-mini</span></td></tr><tr><th>error</th><td><span class='j-null'>null</span></td></tr><tr><th>content</th><td><div class='j-str multiline'>**Overall:** **GO-WITH-CONDITIONS**
+
+### 1) Per-gate vote
+
+- **Q1: B** — Best tradeoff: enough strata to test the depth hypothesis, but frozen by a prewritten locality rule so it doesn’t become post hoc cherry-picking. I would only accept it if the rule and included paradigms are locked before model calls.
+- **Q2: A** — Necessary. Single-order forced choice is too exposed to position bias and order effects; dual-order + netting is the right behavioral control.
+- **Q3: A** — Acceptable if framed as **relative** evidence only. Using per-paradigm human agreement as the anchor is the right yardstick for “hard for models where hard for humans”; contamination makes absolute accuracy only an upper bound.
+
+### 2) Single biggest methodological risk
+
+**Curated subset bias / researcher degrees of freedom in Q1.**  
+A 9–12 paradigm depth-stratified subset can silently become a “best story” set unless the locality rule is genuinely ex ante, mechanistic, and non-outcome-contingent. If the subset is chosen after seeing pilot behavior, the human-anchored profile alignment is not trustworthy.
+
+### 3) Freeze-time condition I would add
+
+**Lock the subset-selection rule in writing before any model outputs, and require a public mapping from each candidate paradigm to stratum based only on syntactic/structural criteria.**  
+Concretely: define the rule so that inclusion is determined without reference to expected model performance or human-agreement values, then publish the final selected paradigms and the excluded paradigms with reasons.
+
+### 4) Any place the design looks aimed at a desired result?
+
+**Potentially yes: Q1.**  
+The default to a depth-stratified selected subset could be viewed as steering toward a “shadow-depth” narrative unless the inclusion rule is strictly ex ante and fully agnostic to outcomes. Q2 and Q3 look more like defensible controls than result-seeking.</div></td></tr></table><details class='section'><summary><span class='sec-k'>usage</span> <span class='muted'>(8 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>prompt_tokens</th><td><span class='j-num'>1077</span></td></tr><tr><th>completion_tokens</th><td><span class='j-num'>420</span></td></tr><tr><th>total_tokens</th><td><span class='j-num'>1497</span></td></tr><tr><th>cost</th><td><span class='j-num'>0.00269775</span></td></tr><tr><th>is_byok</th><td><span class='j-bool'>false</span></td></tr><tr><th>prompt_tokens_details</th><td><table class='kv'><tr><th>cached_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>cache_write_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>audio_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>video_tokens</th><td><span class='j-num'>0</span></td></tr></table></td></tr><tr><th>cost_details</th><td><table class='kv'><tr><th>upstream_inference_cost</th><td><span class='j-num'>0.00269775</span></td></tr><tr><th>upstream_inference_prompt_cost</th><td><span class='j-num'>0.00080775</span></td></tr><tr><th>upstream_inference_completions_cost</th><td><span class='j-num'>0.00189</span></td></tr></table></td></tr><tr><th>completion_tokens_details</th><td><table class='kv'><tr><th>reasoning_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>image_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>audio_tokens</th><td><span class='j-num'>0</span></td></tr></table></td></tr></table></div></details><details class='section'><summary><span class='sec-k'>billed_cost</span> <span class='muted'>(3 items)</span></summary><div class='sec-body'><ul class='j-arr'><li><span class='j-num'>0.00269775</span></li><li><span class='j-num'>1</span></li><li><span class='j-num'>0</span></li></ul></div></details>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

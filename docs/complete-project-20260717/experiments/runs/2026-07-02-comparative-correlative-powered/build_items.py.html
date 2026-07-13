@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_items.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-02-comparative-correlative-powered</a> <span class="sep">/</span> <span class="cur">build_items.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_items.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">15.2 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-02-comparative-correlative-powered/build_items.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Build and freeze the FRESH item set for the comparative-correlative POWERED re-run</span>
+<span class="sd">(A2a; 2026-07-02). Powered N per PROTOCOL.md §4 (~100-150 items).</span>
+
+<span class="sd">This re-uses the FROZEN v1 instrument (experiments/runs/2026-05-29-comparative-correlative-probe-v1)</span>
+<span class="sd">verbatim — same four item forms, same forced-choice + NLI prompts, same parsing, same panel,</span>
+<span class="sd">same thresholds — and changes ONLY the item set: 34 fresh scale pairs (24 typical + 10 atypical),</span>
+<span class="sd">DISJOINT from v1&#39;s 20 pairs, to attach a magnitude+interval to the direction/ordering finding</span>
+<span class="sd">promoted in claim/comparative-correlative-covariation (whose Bounds says the magnitude is</span>
+<span class="sd">&quot;owed to the A2a powered re-run&quot;).</span>
+
+<span class="sd">Pre-registration: this script EMITS experiments/data/comparative-correlative-powered/items.csv</span>
+<span class="sd">and must be run and the CSV committed BEFORE any probe call (charter §8). Scale pairs are</span>
+<span class="sd">hand-authored so the covariation direction is NOT world-knowledge-obvious (typical) or is</span>
+<span class="sd">deliberately absurd (atypical) — the construction, not plausibility, must supply the direction.</span>
+
+<span class="sd">For each scale pair we emit four forms reusing the same scalar lexical material:</span>
+<span class="sd">  cc-positive  : &quot;The MORE x ..., the MORE y ...&quot;   -&gt; covariation direction = increase</span>
+<span class="sd">  cc-inverse   : &quot;The MORE x ..., the LESS y ...&quot;   -&gt; covariation direction = decrease</span>
+<span class="sd">  ctrl-two     : two independent declarative clauses (both scales asserted, no dependency)</span>
+<span class="sd">  ctrl-single  : a single comparative clause (only one scale mentioned)</span>
+
+<span class="sd">Construction-correct answers (fixed here, before the run):</span>
+<span class="sd">  forced-choice (as dim1 increases, does dim2 increase / decrease / undetermined):</span>
+<span class="sd">    cc-positive -&gt; increase ; cc-inverse -&gt; decrease ; both controls -&gt; undetermined</span>
+<span class="sd">  NLI (premise = sentence, hypothesis = &quot;As &lt;dim1&gt; increases, &lt;dim2&gt; increases.&quot;):</span>
+<span class="sd">    cc-positive -&gt; 0 entailment ; cc-inverse -&gt; 2 contradiction ; both controls -&gt; 1 neutral</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># pid, typicality, dim1 (short NP, phrased so &quot;&lt;dim1&gt; increases&quot; reads naturally),</span>
+<span class="c1"># dim2 (short NP), cc_pos, cc_inv, ctrl_two, ctrl_single</span>
+<span class="n">PAIRS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># ---- typical: plausible-either-direction pairs (direction not obvious) ----</span>
+    <span class="p">(</span><span class="s2">&quot;novel&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the novel&#39;s thickness&quot;</span><span class="p">,</span> <span class="s2">&quot;the reader&#39;s patience&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The thicker the novel, the more patient the reader stayed.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The thicker the novel, the less patient the reader stayed.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The novel was thick. The reader was patient.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The novel was thicker than the last one.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;ovens&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the ovens&#39; heat&quot;</span><span class="p">,</span> <span class="s2">&quot;the number of customers&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The hotter the ovens ran, the more customers arrived.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The hotter the ovens ran, the fewer customers arrived.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The ovens ran hot. Many customers arrived.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The ovens ran hotter than usual.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;seminar&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the seminar&#39;s size&quot;</span><span class="p">,</span> <span class="s2">&quot;the amount of discussion&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The larger the seminar, the more discussion it generated.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The larger the seminar, the less discussion it generated.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The seminar was large. The discussion was lively.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The seminar was larger than the lecture.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;summer&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the summer&#39;s dryness&quot;</span><span class="p">,</span> <span class="s2">&quot;the sweetness of the apples&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The drier the summer, the sweeter the apples grew.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The drier the summer, the more sour the apples grew.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The summer was dry. The apples were sweet.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The summer was drier than the year before.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;highway&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the highway&#39;s width&quot;</span><span class="p">,</span> <span class="s2">&quot;the drivers&#39; speed&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The wider the highway, the faster the drivers went.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The wider the highway, the slower the drivers went.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The highway was wide. The drivers went fast.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The highway was wider than the old road.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;gallery&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the gallery&#39;s dimness&quot;</span><span class="p">,</span> <span class="s2">&quot;the visitors&#39; whispering&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The dimmer the gallery, the more the visitors whispered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The dimmer the gallery, the less the visitors whispered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The gallery was dim. The visitors whispered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The gallery was dimmer than the lobby.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;startup&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the startup&#39;s size&quot;</span><span class="p">,</span> <span class="s2">&quot;the investors&#39; caution&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The bigger the startup, the more cautious the investors turned.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The bigger the startup, the less cautious the investors turned.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The startup was big. The investors were cautious.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The startup was bigger than its rival.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;harbor&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the harbor&#39;s busyness&quot;</span><span class="p">,</span> <span class="s2">&quot;the price of fish&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The busier the harbor, the higher the price of fish climbed.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The busier the harbor, the lower the price of fish climbed.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The harbor was busy. The price of fish was high.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The harbor was busier than in winter.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;clinic&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the waiting room&#39;s warmth&quot;</span><span class="p">,</span> <span class="s2">&quot;the patients&#39; drowsiness&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The warmer the waiting room, the drowsier the patients felt.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The warmer the waiting room, the more alert the patients felt.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The waiting room was warm. The patients were drowsy.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The waiting room was warmer than the hall.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;vineyard&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the vineyard slope&#39;s steepness&quot;</span><span class="p">,</span> <span class="s2">&quot;the pickers&#39; wages&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The steeper the vineyard slope, the higher the pickers&#39; wages rose.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The steeper the vineyard slope, the lower the pickers&#39; wages rose.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The vineyard slope was steep. The pickers&#39; wages were high.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The vineyard slope was steeper than the orchard&#39;s.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;pool&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the pool&#39;s coldness&quot;</span><span class="p">,</span> <span class="s2">&quot;the swimmers&#39; lap count&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The colder the pool, the more laps the swimmers did.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The colder the pool, the fewer laps the swimmers did.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The pool was cold. The swimmers did many laps.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The pool was colder than the sea.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;shelves&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the library shelves&#39; height&quot;</span><span class="p">,</span> <span class="s2">&quot;the librarians&#39; walking pace&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The taller the shelves, the faster the librarians walked.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The taller the shelves, the slower the librarians walked.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The shelves were tall. The librarians walked fast.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The shelves were taller than the reading desks.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;band&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the band&#39;s loudness&quot;</span><span class="p">,</span> <span class="s2">&quot;the size of the dancing crowd&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The louder the band, the larger the dancing crowd swelled.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The louder the band, the smaller the dancing crowd swelled.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The band was loud. The dancing crowd was large.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The band was louder than the opening act.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;field&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the field&#39;s flatness&quot;</span><span class="p">,</span> <span class="s2">&quot;the farmers&#39; yield&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The flatter the field, the greater the farmers&#39; yield became.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The flatter the field, the smaller the farmers&#39; yield became.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The field was flat. The farmers&#39; yield was great.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The field was flatter than the hillside.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;brochure&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the brochure&#39;s glossiness&quot;</span><span class="p">,</span> <span class="s2">&quot;the buyers&#39; trust&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The glossier the brochure, the more the buyers trusted it.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The glossier the brochure, the less the buyers trusted it.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The brochure was glossy. The buyers trusted it.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The brochure was glossier than the flyer.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;theater&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the theater&#39;s darkness&quot;</span><span class="p">,</span> <span class="s2">&quot;the audience&#39;s restlessness&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The darker the theater, the more restless the audience grew.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The darker the theater, the calmer the audience grew.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The theater was dark. The audience was restless.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The theater was darker than the foyer.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;curry&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the curry&#39;s spiciness&quot;</span><span class="p">,</span> <span class="s2">&quot;the diners&#39; talkativeness&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The spicier the curry, the more talkative the diners became.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The spicier the curry, the quieter the diners became.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The curry was spicy. The diners were talkative.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The curry was spicier than the starter.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;syllabus&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the syllabus&#39;s length&quot;</span><span class="p">,</span> <span class="s2">&quot;the students&#39; enthusiasm&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The longer the syllabus, the more enthusiastic the students seemed.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The longer the syllabus, the less enthusiastic the students seemed.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The syllabus was long. The students were enthusiastic.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The syllabus was longer than last term&#39;s.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;current&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the current&#39;s speed&quot;</span><span class="p">,</span> <span class="s2">&quot;the anglers&#39; frustration&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The faster the current, the more frustrated the anglers got.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The faster the current, the less frustrated the anglers got.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The current was fast. The anglers were frustrated.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The current was faster than at dawn.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;kitchen&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the kitchen&#39;s tidiness&quot;</span><span class="p">,</span> <span class="s2">&quot;the cooks&#39; chatter&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The tidier the kitchen, the more the cooks chattered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The tidier the kitchen, the less the cooks chattered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The kitchen was tidy. The cooks chattered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The kitchen was tidier than the pantry.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;footpath&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the footpath&#39;s narrowness&quot;</span><span class="p">,</span> <span class="s2">&quot;the hikers&#39; spacing&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The narrower the footpath, the wider the hikers spaced themselves.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The narrower the footpath, the closer the hikers spaced themselves.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The footpath was narrow. The hikers spaced themselves widely.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The footpath was narrower than the fire road.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;auction&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the auction room&#39;s brightness&quot;</span><span class="p">,</span> <span class="s2">&quot;the collectors&#39; lingering&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The brighter the auction room, the longer the collectors lingered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The brighter the auction room, the less the collectors lingered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The auction room was bright. The collectors lingered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The auction room was brighter than the vault.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;soil&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the soil&#39;s sandiness&quot;</span><span class="p">,</span> <span class="s2">&quot;the gardener&#39;s watering&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The sandier the soil, the more the gardener watered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The sandier the soil, the less the gardener watered.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The soil was sandy. The gardener watered often.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The soil was sandier than the loam bed.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;venue&quot;</span><span class="p">,</span> <span class="s2">&quot;typical&quot;</span><span class="p">,</span> <span class="s2">&quot;the venue&#39;s size&quot;</span><span class="p">,</span> <span class="s2">&quot;the fans&#39; rowdiness&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The larger the venue, the rowdier the fans got.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The larger the venue, the tamer the fans got.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The venue was large. The fans were rowdy.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The venue was larger than the club.&quot;</span><span class="p">),</span>
+    <span class="c1"># ---- atypical: deliberately absurd pairings (covariation can ONLY come from the</span>
+    <span class="c1">#      construction; world knowledge gives no direction) ----</span>
+    <span class="p">(</span><span class="s2">&quot;teacup&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the teacup&#39;s roundness&quot;</span><span class="p">,</span> <span class="s2">&quot;the length of the traffic jam&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The rounder the teacup, the longer the traffic jam stretched.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The rounder the teacup, the shorter the traffic jam stretched.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The teacup was round. The traffic jam was long.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The teacup was rounder than the mug.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;carpet&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the carpet&#39;s redness&quot;</span><span class="p">,</span> <span class="s2">&quot;the speed of the elevator&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The redder the carpet, the faster the elevator rose.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The redder the carpet, the slower the elevator rose.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The carpet was red. The elevator rose fast.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The carpet was redder than the drapes.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;pancake&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the pancake&#39;s fluffiness&quot;</span><span class="p">,</span> <span class="s2">&quot;the height of the mountain&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The fluffier the pancake, the taller the mountain loomed.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The fluffier the pancake, the shorter the mountain loomed.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The pancake was fluffy. The mountain loomed tall.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The pancake was fluffier than the waffle.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;stapler&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the stapler&#39;s heaviness&quot;</span><span class="p">,</span> <span class="s2">&quot;the brightness of the sunset&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The heavier the stapler, the brighter the sunset burned.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The heavier the stapler, the dimmer the sunset burned.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The stapler was heavy. The sunset burned bright.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The stapler was heavier than the tape dispenser.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;sock&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the sock&#39;s stripiness&quot;</span><span class="p">,</span> <span class="s2">&quot;the loudness of the thunder&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The stripier the sock, the louder the thunder cracked.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The stripier the sock, the quieter the thunder cracked.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The sock was stripy. The thunder cracked loud.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The sock was stripier than the glove.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;lampshade&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the lampshade&#39;s width&quot;</span><span class="p">,</span> <span class="s2">&quot;the sourness of the yogurt&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The wider the lampshade, the sourer the yogurt tasted.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The wider the lampshade, the sweeter the yogurt tasted.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The lampshade was wide. The yogurt tasted sour.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The lampshade was wider than the base.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;keyboard&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the keyboard&#39;s dustiness&quot;</span><span class="p">,</span> <span class="s2">&quot;the size of the harvest&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The dustier the keyboard, the bigger the harvest came in.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The dustier the keyboard, the smaller the harvest came in.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The keyboard was dusty. The harvest came in big.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The keyboard was dustier than the monitor.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;balloon&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the balloon&#39;s shininess&quot;</span><span class="p">,</span> <span class="s2">&quot;the depth of the well&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The shinier the balloon, the deeper the well ran.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The shinier the balloon, the shallower the well ran.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The balloon was shiny. The well ran deep.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The balloon was shinier than the ribbon.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;envelope&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the envelope&#39;s crumpledness&quot;</span><span class="p">,</span> <span class="s2">&quot;the speed of the train&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The more crumpled the envelope, the faster the train ran.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The more crumpled the envelope, the slower the train ran.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The envelope was crumpled. The train ran fast.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The envelope was more crumpled than the parcel.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;pinecone&quot;</span><span class="p">,</span> <span class="s2">&quot;atypical&quot;</span><span class="p">,</span> <span class="s2">&quot;the pinecone&#39;s stickiness&quot;</span><span class="p">,</span> <span class="s2">&quot;the price of the haircut&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The stickier the pinecone, the pricier the haircut became.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The stickier the pinecone, the cheaper the haircut became.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The pinecone was sticky. The haircut was pricey.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The pinecone was stickier than the acorn.&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">FORMS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;cc-positive&quot;</span><span class="p">,</span>   <span class="s2">&quot;increase&quot;</span><span class="p">,</span>     <span class="s2">&quot;0&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;cc-inverse&quot;</span><span class="p">,</span>    <span class="s2">&quot;decrease&quot;</span><span class="p">,</span>     <span class="s2">&quot;2&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;ctrl-two&quot;</span><span class="p">,</span>      <span class="s2">&quot;undetermined&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;ctrl-single&quot;</span><span class="p">,</span>   <span class="s2">&quot;undetermined&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sentence_for</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span> <span class="n">form</span><span class="p">):</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">cc_pos</span><span class="p">,</span> <span class="n">cc_inv</span><span class="p">,</span> <span class="n">ctrl_two</span><span class="p">,</span> <span class="n">ctrl_single</span> <span class="o">=</span> <span class="n">pair</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;cc-positive&quot;</span><span class="p">:</span> <span class="n">cc_pos</span><span class="p">,</span> <span class="s2">&quot;cc-inverse&quot;</span><span class="p">:</span> <span class="n">cc_inv</span><span class="p">,</span>
+            <span class="s2">&quot;ctrl-two&quot;</span><span class="p">:</span> <span class="n">ctrl_two</span><span class="p">,</span> <span class="s2">&quot;ctrl-single&quot;</span><span class="p">:</span> <span class="n">ctrl_single</span><span class="p">}[</span><span class="n">form</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span>
+                       <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;comparative-correlative-powered&quot;</span><span class="p">,</span> <span class="s2">&quot;items.csv&quot;</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># guard (ENFORCED): no scale_pair id may collide with v1&#39;s frozen pairs. These are v1&#39;s</span>
+    <span class="c1"># actual ids (experiments/runs/2026-05-29-comparative-correlative-probe-v1/build_items.py);</span>
+    <span class="c1"># our v1 &quot;trail&quot; pair was renamed &quot;footpath&quot; precisely so this assertion stays clean.</span>
+    <span class="n">v1_pairs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lecture&quot;</span><span class="p">,</span> <span class="s2">&quot;ticket&quot;</span><span class="p">,</span> <span class="s2">&quot;cafe&quot;</span><span class="p">,</span> <span class="s2">&quot;building&quot;</span><span class="p">,</span> <span class="s2">&quot;lighting&quot;</span><span class="p">,</span> <span class="s2">&quot;music&quot;</span><span class="p">,</span> <span class="s2">&quot;trail&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;queue&quot;</span><span class="p">,</span> <span class="s2">&quot;class&quot;</span><span class="p">,</span> <span class="s2">&quot;dish&quot;</span><span class="p">,</span> <span class="s2">&quot;phone&quot;</span><span class="p">,</span> <span class="s2">&quot;roast&quot;</span><span class="p">,</span> <span class="s2">&quot;river&quot;</span><span class="p">,</span> <span class="s2">&quot;garden&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pebble&quot;</span><span class="p">,</span> <span class="s2">&quot;wallpaper&quot;</span><span class="p">,</span> <span class="s2">&quot;soup&quot;</span><span class="p">,</span> <span class="s2">&quot;doorway&quot;</span><span class="p">,</span> <span class="s2">&quot;curtains&quot;</span><span class="p">,</span> <span class="s2">&quot;map&quot;</span><span class="p">}</span>
+    <span class="n">collide</span> <span class="o">=</span> <span class="p">{</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">PAIRS</span><span class="p">}</span> <span class="o">&amp;</span> <span class="n">v1_pairs</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">collide</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;scale_pair id collides with v1 frozen set: </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">collide</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">PAIRS</span><span class="p">:</span>
+        <span class="n">pid</span><span class="p">,</span> <span class="n">typ</span><span class="p">,</span> <span class="n">dim1</span><span class="p">,</span> <span class="n">dim2</span> <span class="o">=</span> <span class="n">pair</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pair</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">pair</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">form</span><span class="p">,</span> <span class="n">fc_gold</span><span class="p">,</span> <span class="n">nli_gold</span> <span class="ow">in</span> <span class="n">FORMS</span><span class="p">:</span>
+            <span class="n">sent</span> <span class="o">=</span> <span class="n">sentence_for</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span> <span class="n">form</span><span class="p">)</span>
+            <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">form</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;scale_pair&quot;</span><span class="p">:</span> <span class="n">pid</span><span class="p">,</span>
+                <span class="s2">&quot;typicality&quot;</span><span class="p">:</span> <span class="n">typ</span><span class="p">,</span>
+                <span class="s2">&quot;form&quot;</span><span class="p">:</span> <span class="n">form</span><span class="p">,</span>
+                <span class="s2">&quot;dim1&quot;</span><span class="p">:</span> <span class="n">dim1</span><span class="p">,</span>
+                <span class="s2">&quot;dim2&quot;</span><span class="p">:</span> <span class="n">dim2</span><span class="p">,</span>
+                <span class="s2">&quot;sentence&quot;</span><span class="p">:</span> <span class="n">sent</span><span class="p">,</span>
+                <span class="s2">&quot;fc_gold&quot;</span><span class="p">:</span> <span class="n">fc_gold</span><span class="p">,</span>
+                <span class="s2">&quot;nli_hypothesis&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;As </span><span class="si">{</span><span class="n">dim1</span><span class="si">}</span><span class="s2"> increases, </span><span class="si">{</span><span class="n">dim2</span><span class="si">}</span><span class="s2"> increases.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;nli_gold&quot;</span><span class="p">:</span> <span class="n">nli_gold</span><span class="p">,</span>
+            <span class="p">})</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">,</span> <span class="s2">&quot;scale_pair&quot;</span><span class="p">,</span> <span class="s2">&quot;typicality&quot;</span><span class="p">,</span> <span class="s2">&quot;form&quot;</span><span class="p">,</span> <span class="s2">&quot;dim1&quot;</span><span class="p">,</span> <span class="s2">&quot;dim2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;sentence&quot;</span><span class="p">,</span> <span class="s2">&quot;fc_gold&quot;</span><span class="p">,</span> <span class="s2">&quot;nli_hypothesis&quot;</span><span class="p">,</span> <span class="s2">&quot;nli_gold&quot;</span><span class="p">]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+    <span class="n">n_pairs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">PAIRS</span><span class="p">)</span>
+    <span class="n">n_typ</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">PAIRS</span> <span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;typical&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="si">}</span><span class="s2"> items (</span><span class="si">{</span><span class="n">n_pairs</span><span class="si">}</span><span class="s2"> pairs x </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">FORMS</span><span class="p">)</span><span class="si">}</span><span class="s2"> forms) -&gt; </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  typical pairs: </span><span class="si">{</span><span class="n">n_typ</span><span class="si">}</span><span class="s2">, atypical pairs: </span><span class="si">{</span><span class="n">n_pairs</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">n_typ</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

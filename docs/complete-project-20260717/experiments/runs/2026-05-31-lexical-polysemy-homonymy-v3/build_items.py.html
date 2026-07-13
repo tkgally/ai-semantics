@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_items.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-31-lexical-polysemy-homonymy-v3</a> <span class="sep">/</span> <span class="cur">build_items.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_items.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">8.5 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-31-lexical-polysemy-homonymy-v3/build_items.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Build + FREEZE the lexical-v3 item set from a homonymy-enriched WiC NOUN subset (2026-05-31).</span>
+
+<span class="sd">Operationalizes design/lexical-polysemy-homonymy-v3 (status: ready; Tom decision 3a ratified the</span>
+<span class="sd">binary WiC anchor + the homonymy-enriched contrast). The instrument is the SAME ratified graded</span>
+<span class="sd">panel as v1 (gate Q1: DURel 4-point + 0-100), reused verbatim by probe.py. This script only builds</span>
+<span class="sd">the frozen item table; NO model calls happen here.</span>
+
+<span class="sd">STRATIFICATION (gate Q2). The polysemy/homonymy split is a DESIGN-ADDED layer WiC does not carry.</span>
+<span class="sd">It lives in `stratification.csv` (lemma,pos,stratum,n_etymons,key_roots,source_note), authored BY</span>
+<span class="sd">HAND from etymological sources (Wiktionary &quot;Etymology N&quot; sections / Etymonline distinct headwords),</span>
+<span class="sd">each HOMONYM call backed by a quoted distinct-origin statement, applied BLIND to the model ratings</span>
+<span class="sd">and frozen (sha256) before any probe call. NOTE (recorded in the README + result): the preferred</span>
+<span class="sd">WordNet lexicographer-file rule was EVALUATED (explore.py) and found to OVER-CALL homonymy ~6:1</span>
+<span class="sd">(it labels make/break/head as homonyms because WordNet&#39;s fine sense granularity scatters related</span>
+<span class="sd">senses across lexnames), so the gate&#39;s etymology AND-condition is load-bearing and is used as the</span>
+<span class="sd">classifier here; the WordNet structural signal is recorded as a supporting cue only. Restricted to</span>
+<span class="sd">NOUNS (homonymy is cleanest and most concrete for nouns; matches resource/wordnet-sense-inventory).</span>
+
+<span class="sd">GRANULARITY. WiC does not expose the underlying sense ids per item, so the homonym/polyseme label is</span>
+<span class="sd">applied at the LEMMA level (a homonym lemma&#39;s different-sense (F) items are MORE LIKELY cross-etymon</span>
+<span class="sd">than a polyseme lemma&#39;s, but some homonym-F items may be within-etymon polysemy splits). This is the</span>
+<span class="sd">lemma-level fallback the design names; stated plainly in the result.</span>
+
+<span class="sd">LICENCE / DATA HANDLING (mirrors DWUG posture; WiC is CC BY-NC 4.0). Does NOT commit the corpus</span>
+<span class="sd">example sentences. Downloads WiC into experiments/data/wic/ (gitignored), verifies sha256; writes a</span>
+<span class="sd">committable manifest (WiC id + lemma + pos + gold + stratum + lexical-overlap covariate, NO</span>
+<span class="sd">sentences) and a gitignored fulltext.jsonl the probe reads. Freeze = sha256(manifest)+sha256(strat).</span>
+
+<span class="sd">Run: python3 build_items.py   (downloads WiC on first run; no API)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">zipfile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">WIC_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;wic&quot;</span><span class="p">))</span>
+<span class="n">ZIP_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">WIC_DIR</span><span class="p">,</span> <span class="s2">&quot;WiC_dataset.zip&quot;</span><span class="p">)</span>
+<span class="n">WIC_URL</span> <span class="o">=</span> <span class="s2">&quot;https://pilehvar.github.io/wic/package/WiC_dataset.zip&quot;</span>
+<span class="n">EXPECTED_ZIP_SHA256</span> <span class="o">=</span> <span class="s2">&quot;f1a2fb67d903c5b9b1180f1035d4228f7c0254e8f5f868d556235457046bd4b2&quot;</span>
+
+<span class="n">STRAT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;stratification.csv&quot;</span><span class="p">)</span>   <span class="c1"># committed; the frozen design layer</span>
+<span class="n">MANIFEST</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;manifest.csv&quot;</span><span class="p">)</span>      <span class="c1"># committed (ids/gold/stratum/overlap; NO text)</span>
+<span class="n">FULLTEXT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;fulltext.jsonl&quot;</span><span class="p">)</span>    <span class="c1"># gitignored, local-only (the probe reads it)</span>
+
+<span class="n">STOP</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;a an the of to in on at for and or but with from by as is are was were be been &quot;</span>
+           <span class="s2">&quot;being this that these those it its he she they we you i his her their our your my &quot;</span>
+           <span class="s2">&quot;him them us not no so if then than too very can could would should will shall may &quot;</span>
+           <span class="s2">&quot;might must do does did have has had which who whom whose what when where why how &quot;</span>
+           <span class="s2">&quot;into onto over under up down out off about again more most some any all each &quot;</span>
+           <span class="s2">&quot;s t re ve ll d m&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sha256_file</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">20</span><span class="p">),</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="n">h</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">h</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ensure_wic</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ZIP_PATH</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">WIC_DIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;downloading WiC -&gt; </span><span class="si">{</span><span class="n">ZIP_PATH</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">WIC_URL</span><span class="p">,</span> <span class="n">ZIP_PATH</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">sha256_file</span><span class="p">(</span><span class="n">ZIP_PATH</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">h</span> <span class="o">==</span> <span class="n">EXPECTED_ZIP_SHA256</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;WiC sha256 mismatch! got </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">extract</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">WIC_DIR</span><span class="p">,</span> <span class="s2">&quot;extracted&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">extract</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">ZIP_PATH</span><span class="p">)</span> <span class="k">as</span> <span class="n">z</span><span class="p">:</span>
+            <span class="n">z</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">extract</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">extract</span><span class="p">,</span> <span class="n">h</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_wic</span><span class="p">(</span><span class="n">extract</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Deterministic load. Stable id = &#39;&lt;split&gt;-&lt;5digit line index&gt;&#39;.&quot;&quot;&quot;</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">split</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;train&quot;</span><span class="p">,</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">):</span>
+        <span class="n">data_f</span> <span class="o">=</span> <span class="n">gold_f</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">extract</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">fn</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">split</span><span class="si">}</span><span class="s2">.data.txt&quot;</span><span class="p">:</span>
+                    <span class="n">data_f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">fn</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">split</span><span class="si">}</span><span class="s2">.gold.txt&quot;</span><span class="p">:</span>
+                    <span class="n">gold_f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">data_f</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">df</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">gold_f</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">gf</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">dl</span><span class="p">,</span> <span class="n">gl</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">gf</span><span class="p">)):</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">dl</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">tw</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+                <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+                <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;wic_id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">split</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">05d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="n">tw</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="n">pos</span><span class="p">,</span>
+                              <span class="s2">&quot;idx1&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">i1</span><span class="p">),</span> <span class="s2">&quot;idx2&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">i2</span><span class="p">),</span> <span class="s2">&quot;ctx1&quot;</span><span class="p">:</span> <span class="n">c1</span><span class="p">,</span> <span class="s2">&quot;ctx2&quot;</span><span class="p">:</span> <span class="n">c2</span><span class="p">,</span>
+                              <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="n">gl</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="s2">&quot;split&quot;</span><span class="p">:</span> <span class="n">split</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">items</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">target_surface</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="n">toks</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">toks</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">toks</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">content_tokens</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">target_surf</span><span class="p">):</span>
+    <span class="n">toks</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-z]+&quot;</span><span class="p">,</span> <span class="n">ctx</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">tgt</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-z]+&quot;</span><span class="p">,</span> <span class="n">target_surf</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">toks</span> <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">STOP</span> <span class="ow">and</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tgt</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">overlap</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="n">t1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">t2</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">content_tokens</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="n">t1</span><span class="p">),</span> <span class="n">content_tokens</span><span class="p">(</span><span class="n">c2</span><span class="p">,</span> <span class="n">t2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">a</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span>
+    <span class="n">inter</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">inter</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="p">),</span> <span class="mi">4</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">inter</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)),</span> <span class="mi">4</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">extract</span><span class="p">,</span> <span class="n">zip_sha</span> <span class="o">=</span> <span class="n">ensure_wic</span><span class="p">()</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">load_wic</span><span class="p">(</span><span class="n">extract</span><span class="p">)</span>
+
+    <span class="n">strat_rows</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">STRAT</span><span class="p">)))</span>
+    <span class="n">strat</span> <span class="o">=</span> <span class="p">{(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()):</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;stratum&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+             <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">strat_rows</span><span class="p">}</span>
+    <span class="n">selected_strata</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;HOMONYM&quot;</span><span class="p">,</span> <span class="s2">&quot;POLYSEME&quot;</span><span class="p">)</span>
+
+    <span class="c1"># gather all noun items for stratified lemmas</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">])</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">strat</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">s</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">selected_strata</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">surf1</span> <span class="o">=</span> <span class="n">target_surface</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;ctx1&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;idx1&quot;</span><span class="p">])</span>
+        <span class="n">surf2</span> <span class="o">=</span> <span class="n">target_surface</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;ctx2&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;idx2&quot;</span><span class="p">])</span>
+        <span class="n">jac</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">overlap</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;ctx1&quot;</span><span class="p">],</span> <span class="n">surf1</span><span class="p">,</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;ctx2&quot;</span><span class="p">],</span> <span class="n">surf2</span><span class="p">)</span>
+        <span class="n">selected</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="o">**</span><span class="n">it</span><span class="p">,</span> <span class="s2">&quot;stratum&quot;</span><span class="p">:</span> <span class="n">s</span><span class="p">,</span> <span class="s2">&quot;surf1&quot;</span><span class="p">:</span> <span class="n">surf1</span><span class="p">,</span> <span class="s2">&quot;surf2&quot;</span><span class="p">:</span> <span class="n">surf2</span><span class="p">,</span>
+                         <span class="s2">&quot;overlap_jaccard&quot;</span><span class="p">:</span> <span class="n">jac</span><span class="p">,</span> <span class="s2">&quot;overlap_tokenf1&quot;</span><span class="p">:</span> <span class="n">f1</span><span class="p">})</span>
+
+    <span class="c1"># stable item ids: stratum-gold-runningindex, sorted deterministically</span>
+    <span class="n">selected</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;stratum&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;wic_id&quot;</span><span class="p">]))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">selected</span><span class="p">):</span>
+        <span class="n">c</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;v3-</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;stratum&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;gold&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">03d</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="c1"># counts report</span>
+    <span class="n">by</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;lemmas&quot;</span><span class="p">:</span> <span class="nb">set</span><span class="p">()})</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">:</span>
+        <span class="n">by</span><span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;stratum&quot;</span><span class="p">]][</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">by</span><span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;stratum&quot;</span><span class="p">]][</span><span class="s2">&quot;lemmas&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">])</span>
+
+    <span class="n">man_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">,</span> <span class="s2">&quot;wic_id&quot;</span><span class="p">,</span> <span class="s2">&quot;lemma&quot;</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">,</span> <span class="s2">&quot;stratum&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;overlap_jaccard&quot;</span><span class="p">,</span> <span class="s2">&quot;overlap_tokenf1&quot;</span><span class="p">]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">MANIFEST</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">man_cols</span><span class="p">)</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">:</span>
+            <span class="n">w</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">],</span> <span class="s2">&quot;wic_id&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;wic_id&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;lemma&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">],</span> <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">],</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;stratum&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;stratum&quot;</span><span class="p">],</span> <span class="s2">&quot;overlap_jaccard&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;overlap_jaccard&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;overlap_tokenf1&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;overlap_tokenf1&quot;</span><span class="p">]})</span>
+
+    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">FULLTEXT</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+                <span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">],</span> <span class="s2">&quot;wic_id&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;wic_id&quot;</span><span class="p">],</span> <span class="s2">&quot;lemma&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">],</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">],</span> <span class="s2">&quot;stratum&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;stratum&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;ctx1&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;ctx1&quot;</span><span class="p">],</span> <span class="s2">&quot;idx1&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;idx1&quot;</span><span class="p">],</span> <span class="s2">&quot;surf1&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;surf1&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;ctx2&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;ctx2&quot;</span><span class="p">],</span> <span class="s2">&quot;idx2&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;idx2&quot;</span><span class="p">],</span> <span class="s2">&quot;surf2&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;surf2&quot;</span><span class="p">],</span>
+            <span class="p">})</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">man_sha</span> <span class="o">=</span> <span class="n">sha256_file</span><span class="p">(</span><span class="n">MANIFEST</span><span class="p">)</span>
+    <span class="n">strat_sha</span> <span class="o">=</span> <span class="n">sha256_file</span><span class="p">(</span><span class="n">STRAT</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WiC archive sha256: </span><span class="si">{</span><span class="n">zip_sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;selected </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span><span class="si">}</span><span class="s2"> items&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">selected_strata</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">by</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">s</span><span class="si">:</span><span class="s2">9s</span><span class="si">}</span><span class="s2"> T=</span><span class="si">{</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;T&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2"> F=</span><span class="si">{</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">3d</span><span class="si">}</span><span class="s2">  (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;lemmas&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2"> lemmas: &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;lemmas&#39;</span><span class="p">]))</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MANIFEST sha256 (FREEZE): </span><span class="si">{</span><span class="n">man_sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;STRATIFICATION sha256 (FREEZE): </span><span class="si">{</span><span class="n">strat_sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

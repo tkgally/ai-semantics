@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_pool.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-25-vwsd-grounding-headroom-v2</a> <span class="sep">/</span> <span class="cur">build_pool.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_pool.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">1.5 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-25-vwsd-grounding-headroom-v2/build_pool.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;Freeze the ~200-item EN-gold POOL for VWSD grounding-headroom v2 (design B.6 step 1).</span>
+
+<span class="sd">The pool is a seeded random draw of 200 of the 463 EN gold-test items. The Option-B</span>
+<span class="sd">visual-form descriptors and the descriptor-based TEXT/separability covariate are computed</span>
+<span class="sd">over THIS pool (text-only, no model-under-test image arm); the stratified N=120 run set is</span>
+<span class="sd">then drawn FROM the scored pool by draw_stratified.py. Keeping a 200-pool (vs N=120) gives</span>
+<span class="sd">the predicted-small under-determined band a real chance to supply &gt;= 15 after stratification</span>
+<span class="sd">(design Q2 / B.5).</span>
+
+<span class="sd">Seed 20260625 (UTC day of the v2 build). Emits frozen/pool_items.json with a stable sha256.</span>
+<span class="sd">Anchors ONLY to the gold test split (resource/vwsd-semeval-2023).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">hashlib</span><span class="o">,</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">ITEMS</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;frozen&quot;</span><span class="p">,</span> <span class="s2">&quot;items.json&quot;</span><span class="p">)</span>
+<span class="n">OUT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;frozen&quot;</span><span class="p">,</span> <span class="s2">&quot;pool_items.json&quot;</span><span class="p">)</span>
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">20260625</span>
+<span class="n">POOL_N</span> <span class="o">=</span> <span class="mi">200</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">ITEMS</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">==</span> <span class="mi">463</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)))</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="p">[</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">idx</span><span class="p">[:</span><span class="n">POOL_N</span><span class="p">])]</span>  <span class="c1"># sorted by original id for stable order</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">pool</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUT</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">sha</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">OUT</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="n">uniq</span> <span class="o">=</span> <span class="nb">len</span><span class="p">({</span><span class="n">c</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">pool</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;candidates&quot;</span><span class="p">]})</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote </span><span class="si">{</span><span class="n">OUT</span><span class="si">}</span><span class="s2">  n=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span><span class="si">}</span><span class="s2">  seed=</span><span class="si">{</span><span class="n">SEED</span><span class="si">}</span><span class="s2">  sha256=</span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;unique candidate images in pool: </span><span class="si">{</span><span class="n">uniq</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">build</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

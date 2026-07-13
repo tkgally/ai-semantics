@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>README.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-28-monotonicity-within-verbal-battery</a> <span class="sep">/</span> <span class="cur">README.md</span></nav>
+<main>
+<header class="page-head">
+<h1>README.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">2.3 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-28-monotonicity-within-verbal-battery/README.md</code></p>
+</header>
+<div class='md'><h1 id="run-within-verbal-matched-add-vs-cancel-monotonicity-battery-2026-06-28-session-141">Run: within-verbal matched ADD-vs-CANCEL monotonicity battery (2026-06-28, session 141)</h1>
+<p>The decisive <strong>within-verbal</strong> generalization test of
+<a href="../../../wiki/findings/conjectures/constructional-monotonicity-asymmetry.md.html"><code>conjecture/constructional-monotonicity-asymmetry</code></a>:
+the frozen s135 resultative <strong>ADD</strong> arm (verbatim) + the s140 causative-inchoative progressive
+<strong>CANCEL</strong> arm, <strong>both verbal</strong> → a positive asymmetry <strong>discharges the M2 domain mismatch</strong> the
+weak C2 confirm carries. Frozen s134 thresholds, ratified operationalization, no new decision.
+<code>internal-contrast-only</code>.</p>
+<h2 id="frozen-artifacts-committed-before-any-api-call">Frozen artifacts (committed before any API call)</h2>
+<ul>
+<li><code>experiments/data/monotonicity-within-verbal-battery/items.csv</code> — 48 items (30 add verbatim +
+  18 cancel), sha256[:16] <strong><code>2c0d4f70f28bb1c4</code></strong>.</li>
+<li><a href="PREREG.md.html"><code>PREREG.md</code></a> — frozen design, frozen thresholds, pre-stated expectation, anti-cheat.</li>
+<li><code>build_items.py</code> (asserts ADD source sha <code>80bd4b60b55a3e60</code>) / <code>probe.py</code> / <code>analyze.py</code>.</li>
+</ul>
+<h2 id="the-matched-paradigm">The matched paradigm</h2>
+<table>
+<thead>
+<tr>
+<th>arm</th>
+<th>control/default</th>
+<th>construction</th>
+<th>cue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADD (resultative, verbal)</td>
+<td>"Maria beat the cream." (low)</td>
+<td>"Maria beat the cream stiff." (<code>add_no_cue</code>, want ceiling)</td>
+<td>"…stiff, but the cream did not become stiff." (DENIAL)</td>
+</tr>
+<tr>
+<td>CANCEL (progressive, verbal)</td>
+<td>"Sam broke the vase." (B2 anchor)</td>
+<td>"Sam was breaking the vase." (<code>cancel_no_cue</code> = 1−affirm)</td>
+<td>"…the vase, and the pieces scattered across the floor." (RE-ASSERTION)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="frozen-thresholds-ratified-s134">Frozen thresholds (ratified s134)</h2>
+<p>B2 (read first): add construction ≥ 0.80 &amp; control ≤ 0.40; cancel default ≥ 0.80 (each ≥ 2/3).
+Asymmetry: <code>add_no_cue − cancel_no_cue</code> ≥ 0.20 (≥ 2/3) CONFIRMS; |·|&lt;0.20 SYMMETRIC; ≤ −0.20
+REVERSAL. Fragility ≥ 0.10; cue ≥ 0.70. Per-verb cancel breakdown reported, no verb dropped.</p>
+<h2 id="procedure">Procedure</h2>
+<ol>
+<li><code>python3 build_items.py</code> ✅ (sha <code>2c0d4f70f28bb1c4</code>)</li>
+<li>Independent fresh-agent <strong>pre-run critic</strong> GO/NO-GO.</li>
+<li>On GO: <code>OPENROUTER_API_KEY=… python3 probe.py</code> (288 calls), then <code>python3 analyze.py</code>.</li>
+<li>Independent fresh-agent <strong>post-run verifier</strong> + leave-one-out over the 6 cancel verbs.</li>
+</ol>
+<h2 id="result">Result</h2>
+<ul>
+<li>See <a href="../../../wiki/findings/results/monotonicity-within-verbal-battery-v1.md.html"><code>result/monotonicity-within-verbal-battery-v1</code></a> (written after the run).</li>
+<li>Spend: <code>raw/run_summary.json</code> (billed <code>usage.cost</code>) and <code>config/budget.md</code>.</li>
+</ul></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>README.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-02-commitment-framing-decomposition</a> <span class="sep">/</span> <span class="cur">README.md</span></nav>
+<main>
+<header class="page-head">
+<h1>README.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">2.3 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-02-commitment-framing-decomposition/README.md</code></p>
+</header>
+<div class='md'><h1 id="run-2026-07-02-commitment-framing-decomposition">Run: 2026-07-02-commitment-framing-decomposition</h1>
+<p><strong>Narrower follow-up</strong> to <code>2026-07-01-conditional-projection-rescue</code> (session 159). Decomposes the
+<strong>model difference</strong> found in that run's <code>commit</code> arm — an explicit "everything the speaker is
+thereby committed to" framing <strong>rescued</strong> claude's conditional-antecedent presupposition endorsement
+(0.42 → 0.75) but <strong>suppressed</strong> gpt's (0.17 → 0.00)
+(<a href="../../../wiki/findings/results/conditional-projection-rescue-v1.md.html"><code>result/conditional-projection-rescue-v1</code></a>).</p>
+<ul>
+<li><strong>Design + verdict map:</strong> <a href="PREREG.md.html"><code>PREREG.md</code></a> (frozen; manifest sha <code>2b4f69a7…</code>). 12 base
+  scenarios (reused verbatim from s159) × 6 arms (base / scene-only / commit / background / atissue /
+  background-noscene) × 2 targets (presup / entail) = <strong>144 item-conditions × 3 models = 432 calls</strong>.
+  The sentence is held constant across all arms; only the query wrapper (SCENE × WORDING) varies.</li>
+<li><strong>Freeze:</strong> <code>prep.py</code> pins the manifest sha; <code>probe.py</code>'s FREEZE GUARD refuses to run on drift.
+  <code>prep.py --check</code> also asserts <code>base</code>/<code>commit</code> are byte-for-byte identical to s159's wrappers.</li>
+<li><strong>Scope (load-bearing):</strong> a <strong>within-model</strong> contrast, <code>anchor: internal-contrast-only</code> (inherited
+  from the parent line ratified session 159,
+  <a href="../../../wiki/decisions/resolved/presupposition-projection-internal-contrast-anchor.md.html"><code>decisions/resolved/presupposition-projection-internal-contrast-anchor</code></a>).
+  <strong>No human comparison.</strong></li>
+</ul>
+<h2 id="files">Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PREREG.md</code></td>
+<td>frozen design, metrics, verdict map, pre-run critic rulings, cost</td>
+</tr>
+<tr>
+<td><code>prep.py</code></td>
+<td>frozen 144 item-conditions + manifest sha (<code>--check</code> / <code>--dump</code>)</td>
+</tr>
+<tr>
+<td><code>probe.py</code></td>
+<td>the ONLY API caller (FREEZE GUARD + ABORT_USD); writes <code>raw/{A,B,C}.json</code></td>
+</tr>
+<tr>
+<td><code>analyze.py</code></td>
+<td>scoring + decomposition verdict (NO API calls); writes <code>results.json</code></td>
+</tr>
+<tr>
+<td><code>items.json</code></td>
+<td>dumped item set (from <code>prep.py --dump</code>)</td>
+</tr>
+<tr>
+<td><code>raw/</code></td>
+<td>per-model raw answers</td>
+</tr>
+<tr>
+<td><code>results.json</code></td>
+<td>per-model/arm rates + derived contrasts + verdict</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reproduce">Reproduce</h2>
+<div class="highlight"><pre><span></span><code>python3 prep.py --check                        # frozen sha intact + base/commit == s159
+OPENROUTER_API_KEY=... python3 probe.py --model A --limit 12   # pre-flight (one model, 12 items)
+OPENROUTER_API_KEY=... python3 probe.py        # full run (432 calls)
+python3 analyze.py                             # verdict + results.json
+</code></pre></div></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

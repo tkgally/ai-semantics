@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>common.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-17-relational-implicit-reassignment</a> <span class="sep">/</span> <span class="cur">common.py</span></nav>
+<main>
+<header class="page-head">
+<h1>common.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">17.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-17-relational-implicit-reassignment/common.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;common.py — shared machinery for the relational IMPLICIT-REASSIGNMENT control.</span>
+
+<span class="sd">This is the IMPLICIT-reassignment control of result/relational-spontaneous-recency-a (Option A).</span>
+<span class="sd">Option A found both panel models recover a REASSIGNED coined term by its most-recent binding,</span>
+<span class="sd">spontaneously (SPONT latest-binding rate 1.000, position at chance, DIRECT on-demand 1.000) -&gt;</span>
+<span class="sd">claim/relational-order-sensitive-reassignment (order-sensitive / non-commutative in the regime</span>
+<span class="sd">where recency disambiguates). That claim&#39;s sharpest open caveat (scope limit 4 / revision trigger</span>
+<span class="sd">2) is that &quot;spontaneous&quot; there means QUERY-not-directed, NOT cue-free: Option A&#39;s INTRO told the</span>
+<span class="sd">model the term &quot;was reassigned ... in different rounds you agreed it referred to different</span>
+<span class="sd">figures.&quot; This control removes exactly that sentence and re-measures the SPONT latest-binding rate.</span>
+
+<span class="sd">  When a coined term IS used for different referents across several stamped rounds -- WITH NO</span>
+<span class="sd">  sentence flagging that a reassignment occurred -- and the matcher is asked which referent the</span>
+<span class="sd">  term picks out (no recency mention), does the model STILL spontaneously weight the round stamp</span>
+<span class="sd">  (recover the most-recent binding), or does removing the explicit reassignment flag collapse the</span>
+<span class="sd">  latest-binding-wins behaviour?</span>
+
+<span class="sd">A PERSISTING ceiling strongly BOUNDS the surface-artifact reading: latest-binding-wins is not an</span>
+<span class="sd">artifact of the &quot;was reassigned&quot; wording, strengthening the order-sensitivity claim. A COLLAPSE</span>
+<span class="sd">to chance (COMMUTATIVE-HERE) NARROWS the claim to the explicit-reassignment frame. The entire</span>
+<span class="sd">frozen stimuli roster is held BYTE-IDENTICAL to Option A (same sha256); the ONLY manipulation is</span>
+<span class="sd">the one dropped INTRO sentence -- a clean single-factor control.</span>
+
+<span class="sd">Because Option B passed (both models read the round STAMP as a recency value ON DEMAND,</span>
+<span class="sd">result/relational-stamp-comprehension-b) and the DIRECT manipulation check is carried unchanged</span>
+<span class="sd">here, a SPONT null is interpretable: it means &quot;comprehends recency on demand but does not</span>
+<span class="sd">spontaneously weight it WITHOUT the explicit reassignment flag&quot; -- never inflated.</span>
+
+<span class="sd">Two query conditions, each built as its own balanced-block roster:</span>
+<span class="sd">  SPONT  (headline): &quot;Which figure does \&quot;{TERM}\&quot; refer to?&quot; -- NO recency mention. The</span>
+<span class="sd">         latest-governs answer = the figure agreed at the MAX round; the min-round figure is</span>
+<span class="sd">         tracked as the symmetric anti-recency diagnostic. Order-sensitivity in EITHER direction</span>
+<span class="sd">         beating chance is evidence of a non-commutative (path-dependent) convention.</span>
+<span class="sd">  DIRECT (manipulation check): B-style explicit-recency query (&quot;...in the latest/earliest</span>
+<span class="sd">         round?&quot;). Re-confirms ON-DEMAND comprehension survives in THIS instrument (figures +</span>
+<span class="sd">         reassignment + grid). NOT the headline; it gates interpretability of SPONT.</span>
+
+<span class="sd">Shortcut-proofing (binding carry-forward 3 -- certify UNSOLVABLE by a positional/lexical</span>
+<span class="sd">shortcut). Reused verbatim from the Option-B balanced-block proof, now over FIGURES: within each</span>
+<span class="sd">subset (SPONT, DIRECT) every constant-physical-history-slot strategy scores exactly 1/K AND</span>
+<span class="sd">every one of the (pool!) fixed figure-preference orderings scores exactly 1/K, and each figure</span>
+<span class="sd">appears exactly once per record (frequency flat). So no position, lexical, or frequency shortcut</span>
+<span class="sd">can clear the floor; only spontaneously reading the round stamp as recency can. Asserted at build</span>
+<span class="sd">and demonstrated on idealized-reader fixtures BEFORE any model is queried (the v4 GO-discipline).</span>
+
+<span class="sd">anchor: internal-contrast-only (within-model behavioural contrast over byte-identical content;</span>
+<span class="sd">no human-comparison claim -- ratified 2026-06-16). The human side of the commutativity contrast</span>
+<span class="sd">is undischargeable on current resources (Brennan &amp; Clark report an order-INSENSITIVE statistic);</span>
+<span class="sd">none is owed because no human contrast is asserted here.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">string</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.error</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;lib&quot;</span><span class="p">)))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openrouter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PANEL</span><span class="p">,</span> <span class="n">URL</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="n">billed_cost</span>  <span class="c1"># noqa: E402,F401</span>
+
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">)</span>
+<span class="n">LEDGER_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="s2">&quot;cost-ledger.json&quot;</span><span class="p">)</span>
+
+<span class="c1"># A-eligible relational panel carried from v4/B: claude + gemini (both passed Option B).</span>
+<span class="n">MODELS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">],</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">]}</span>
+<span class="n">SEED0</span> <span class="o">=</span> <span class="mi">20260616</span>
+
+<span class="c1"># ---- frozen design parameters (PREREG) --------------------------------------------------</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">4</span>                          <span class="c1"># figures (and rounds) per record</span>
+<span class="n">N_BLOCKS_SPONT</span> <span class="o">=</span> <span class="mi">12</span>            <span class="c1"># SPONT present-sets -&gt; 48 SPONT records/model</span>
+<span class="n">N_BLOCKS_DIRECT</span> <span class="o">=</span> <span class="mi">8</span>            <span class="c1"># DIRECT present-sets -&gt; 32 records/model (16 DIR_MR + 16 DIR_LR)</span>
+                               <span class="c1"># (n_blocks must be divisible by K so target_pos balances uniformly</span>
+                               <span class="c1"># within each query direction under the Latin square; 8 works, 6</span>
+                               <span class="c1"># does not -- DIR_MR uses j&lt;K/2, DIR_LR uses j&gt;=K/2 within a block)</span>
+<span class="c1"># Construction (build_trials): each subset is an independent balanced-block roster. N_BLOCKS</span>
+<span class="c1"># distinct K-figure present-sets (each figure in exactly N_BLOCKS*K/|pool| sets) x K records each</span>
+<span class="c1"># under a Latin square, so within each present-set the GOVERNING figure cycles through all 4</span>
+<span class="c1"># members exactly once AND the governing line&#39;s physical history-slot cycles through all 4 slots</span>
+<span class="c1"># exactly once. Consequence (proven at build, separately per subset): (a) every constant-slot</span>
+<span class="c1"># position-follower scores exactly 1/K; (b) every fixed figure-preference ordering scores exactly</span>
+<span class="c1"># 1/K (the figure is uniform over the present-set&#39;s members); (c) each figure appears exactly once</span>
+<span class="c1"># per record, so frequency is flat. Only spontaneously reading the round stamp clears the floors.</span>
+<span class="n">POS_CHANCE</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">K</span>           <span class="c1"># 0.25</span>
+
+<span class="c1"># Verdict floors (frozen). SPONT order-sensitivity is judged by a Wilson-95 lower bound STRICTLY</span>
+<span class="c1"># above chance (not a point estimate); DIRECT is the on-demand manipulation gate.</span>
+<span class="n">DIRECT_FLOOR</span> <span class="o">=</span> <span class="mf">0.80</span>            <span class="c1"># manipulation check: pooled DIRECT accuracy must clear this</span>
+<span class="n">SPONT_CI</span> <span class="o">=</span> <span class="mf">1.96</span>                <span class="c1"># z for the SPONT order-sensitivity Wilson interval</span>
+
+<span class="c1"># Frozen non-contiguous round quadruples (NOT {1,2,3,4}: forces reading the actual stamp value;</span>
+<span class="c1"># spreads gaps so &quot;max/min round&quot; is the only consistent recency reading). Cycled across records.</span>
+<span class="n">ROUND_SETS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="c1"># The coined term being reassigned (a frozen nonce; constant across records -- each record is an</span>
+<span class="c1"># independent game). Clearly a non-word so no lexical prior bears on which figure it &quot;should&quot; mean.</span>
+<span class="n">TERM</span> <span class="o">=</span> <span class="s2">&quot;DAX&quot;</span>
+
+<span class="c1"># Frozen figure pool: 8 clearly DISTINCT, non-near-twin figures (label tied to identity, stable</span>
+<span class="c1"># across records). Deliberately NOT near-twins: near-twins (the v4 harvest class) would confound a</span>
+<span class="c1"># recency failure with a discrimination failure; Option A isolates spontaneous recency-weighting,</span>
+<span class="c1"># so figures must be trivially discriminable and the ONLY hard step is reading the stamp. The</span>
+<span class="c1"># answer space is the figure LABEL; the history references a figure by its DESCRIPTION (matcher</span>
+<span class="c1"># maps description-&gt;label via the grid, as in the v4 instrument class). See the design doc and</span>
+<span class="c1"># PREREG for why dropping near-twins is a deliberate, surfaced deviation from the Option-A sketch.</span>
+<span class="n">FIGURES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;F1&quot;</span><span class="p">,</span> <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;a coiled spring&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;F2&quot;</span><span class="p">,</span> <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;a five-pointed star&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;F3&quot;</span><span class="p">,</span> <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;a crescent moon&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;F4&quot;</span><span class="p">,</span> <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;a stack of three cubes&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;F5&quot;</span><span class="p">,</span> <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;a single teardrop shape&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;F6&quot;</span><span class="p">,</span> <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;a checkerboard square&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;F7&quot;</span><span class="p">,</span> <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;a jagged lightning bolt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;F8&quot;</span><span class="p">,</span> <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;a spiral seashell&quot;</span><span class="p">},</span>
+<span class="p">]</span>
+<span class="n">LABELS</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">FIGURES</span><span class="p">]</span>
+<span class="n">DESC</span> <span class="o">=</span> <span class="p">{</span><span class="n">f</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]:</span> <span class="n">f</span><span class="p">[</span><span class="s2">&quot;desc&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">FIGURES</span><span class="p">}</span>
+
+<span class="c1"># ---- elicitation (forced format; cap 512 so truncation is RARE, not impossible) ----------</span>
+<span class="n">MAX_TOKENS</span> <span class="o">=</span> <span class="mi">512</span>  <span class="c1"># a reply with finish_reason == &quot;length&quot; is NEVER parsed</span>
+<span class="n">REASONING</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;google/&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;effort&quot;</span><span class="p">:</span> <span class="s2">&quot;minimal&quot;</span><span class="p">}}</span>  <span class="c1"># config/models.md caveat 1</span>
+<span class="n">HARD_STOP_USD</span> <span class="o">=</span> <span class="mf">0.50</span>  <span class="c1"># pre-registered hard stop on PROJECTED total billed cost (A is cheap)</span>
+
+<span class="n">SYS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;You are matching a coined term to one of your figures, recalling a short record of how you &quot;</span>
+    <span class="s2">&quot;and your partner used the term over several rounds of a game. Read the figures and the &quot;</span>
+    <span class="s2">&quot;record, then answer the single question. Reply with EXACTLY ONE figure label (e.g. </span><span class="si">{example}</span><span class="s2">) &quot;</span>
+    <span class="s2">&quot;and NOTHING ELSE -- no explanation, no reasoning, no restatement.&quot;</span><span class="p">)</span>
+
+<span class="c1"># IMPLICIT-reassignment INTRO (the sole manipulation vs Option A). It states the stamp convention</span>
+<span class="c1"># (a higher round number = more recently) and that lines are NOT in round order -- exactly the</span>
+<span class="c1"># framing B proved both models read and that Option A used. It DELIBERATELY OMITS Option A&#39;s</span>
+<span class="c1"># explicit reassignment flag (&quot;The term was reassigned: in different rounds you agreed it referred</span>
+<span class="c1"># to different figures.&quot;): here the term simply IS used for different figures across stamped rounds,</span>
+<span class="c1"># with no sentence telling the model a reassignment / choice-among-bindings occurred. The model must</span>
+<span class="c1"># itself notice the term picks out different figures in different rounds. It still does NOT tell the</span>
+<span class="c1"># model to weight recency or position, nor that the latest agreement governs. Whether the</span>
+<span class="c1"># latest-binding-wins behaviour from Option A survives WITHOUT the explicit &quot;was reassigned&quot; wording</span>
+<span class="c1"># is exactly what this control measures (claim/relational-order-sensitive-reassignment revision</span>
+<span class="c1"># trigger 2 / scope limit 4). Every other byte of the prompt, and the entire frozen stimuli roster,</span>
+<span class="c1"># is held identical to Option A (same sha256), so the ONLY difference is this dropped sentence.</span>
+<span class="n">INTRO_GRID</span> <span class="o">=</span> <span class="s2">&quot;Your figures:&quot;</span>
+<span class="n">INTRO_HIST</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Here is a record of how you and your partner used the term </span><span class="se">\&quot;</span><span class="si">{term}</span><span class="se">\&quot;</span><span class="s2"> for these figures over &quot;</span>
+    <span class="s2">&quot;several rounds. Each line is stamped with the round it was said in (a higher round number &quot;</span>
+    <span class="s2">&quot;means it was said more recently). The lines are NOT necessarily listed in round order:&quot;</span><span class="p">)</span>
+
+<span class="c1"># SPONT: no recency mention. DIR_MR / DIR_LR: explicit recency (the manipulation check).</span>
+<span class="n">QUERY_TEXT</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;SPONT&quot;</span><span class="p">:</span> <span class="s2">&quot;Question: Which of your figures does the term </span><span class="se">\&quot;</span><span class="si">{term}</span><span class="se">\&quot;</span><span class="s2"> refer to?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DIR_MR&quot;</span><span class="p">:</span> <span class="s2">&quot;Question: Which figure did you agree </span><span class="se">\&quot;</span><span class="si">{term}</span><span class="se">\&quot;</span><span class="s2"> referred to MOST RECENTLY &quot;</span>
+              <span class="s2">&quot;(in the latest round)?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DIR_LR&quot;</span><span class="p">:</span> <span class="s2">&quot;Question: Which figure did you agree </span><span class="se">\&quot;</span><span class="si">{term}</span><span class="se">\&quot;</span><span class="s2"> referred to EARLIEST &quot;</span>
+              <span class="s2">&quot;(in the very first round)?&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">STERN</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">IMPORTANT: your reply must be EXACTLY ONE of these labels (</span><span class="si">{label_list}</span><span class="s2">) -- a &quot;</span>
+         <span class="s2">&quot;single label on a single line, with no other text whatsoever.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">reasoning_for</span><span class="p">(</span><span class="n">model</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">pref</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">REASONING</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">pref</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">val</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">render_grid</span><span class="p">(</span><span class="n">present_labels</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;present_labels in pool (canonical) order. The grid order is a fixed function of the</span>
+<span class="sd">    present-set, so a &#39;grid-position&#39; strategy reduces to a fixed figure-preference ordering,</span>
+<span class="sd">    which scores exactly 1/K (proven at build). Answer space = these labels.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">lab</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">DESC</span><span class="p">[</span><span class="n">lab</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">lab</span> <span class="ow">in</span> <span class="n">present_labels</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">render_history</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;lines: list of {round, label} in PHYSICAL (display) order; figure referenced by DESC.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;- Round </span><span class="si">{</span><span class="n">ln</span><span class="p">[</span><span class="s2">&quot;round&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">: we agreed &quot;</span><span class="si">{</span><span class="n">TERM</span><span class="si">}</span><span class="s1">&quot; referred to </span><span class="si">{</span><span class="n">DESC</span><span class="p">[</span><span class="n">ln</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]]</span><span class="si">}</span><span class="s1">.&#39;</span>
+                     <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_user</span><span class="p">(</span><span class="n">rec</span><span class="p">):</span>
+    <span class="n">grid</span> <span class="o">=</span> <span class="n">render_grid</span><span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="s2">&quot;present&quot;</span><span class="p">])</span>
+    <span class="n">hist</span> <span class="o">=</span> <span class="n">render_history</span><span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="s2">&quot;lines_display&quot;</span><span class="p">])</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">QUERY_TEXT</span><span class="p">[</span><span class="n">rec</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">term</span><span class="o">=</span><span class="n">TERM</span><span class="p">)</span>
+    <span class="n">label_list</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="s2">&quot;present&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">INTRO_GRID</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">grid</span><span class="si">}</span><span class="se">\n\n</span><span class="si">{</span><span class="n">INTRO_HIST</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">term</span><span class="o">=</span><span class="n">TERM</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">hist</span><span class="si">}</span><span class="se">\n\n</span><span class="si">{</span><span class="n">q</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Reply with exactly one label (</span><span class="si">{</span><span class="n">label_list</span><span class="si">}</span><span class="s2">) and nothing else.&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># ---- forced parse: reply must be exactly one of the present labels ------------------------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_forced</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">present</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;(pick, mode): mode in {strict, non-strict, None}. `present` = set of labels in record.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">txt</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">whitespace</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">present</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span>
+    <span class="c1"># non-strict: a single present label as a whole token on the last non-empty line</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">ln</span> <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">txt</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span> <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+    <span class="k">if</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="n">toks</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;F[1-8]&quot;</span><span class="p">,</span> <span class="n">lines</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span> <span class="k">if</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">present</span><span class="p">]</span>
+        <span class="n">toks</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">toks</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">toks</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;non-strict&quot;</span>
+    <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">call_fr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">system</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">retries</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+            <span class="n">reasoning</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;One completion that ALSO surfaces finish_reason (a length-truncated reply is never</span>
+<span class="sd">    parsed). Transport mirrored from lib/openrouter.call (usage-include flag, retry/backoff).&quot;&quot;&quot;</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;OPENROUTER_API_KEY&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">max_tokens</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">max_tokens</span> <span class="o">=</span> <span class="mi">4096</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;google/&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="mi">64</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">model</span><span class="p">,</span>
+            <span class="s2">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">system</span><span class="p">},</span>
+                         <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">user</span><span class="p">}],</span>
+            <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="n">temperature</span><span class="p">,</span> <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="n">max_tokens</span><span class="p">,</span>
+            <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;include&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}}</span>
+    <span class="k">if</span> <span class="n">reasoning</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">body</span><span class="p">[</span><span class="s2">&quot;reasoning&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">reasoning</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">retries</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>
+                <span class="n">URL</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">body</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span>
+                <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">})</span>
+            <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="n">ch</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">ch</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+                    <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">,</span> <span class="p">{}),</span>
+                    <span class="s2">&quot;finish_reason&quot;</span><span class="p">:</span> <span class="n">ch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;finish_reason&quot;</span><span class="p">)}</span>
+        <span class="k">except</span> <span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;HTTP </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()[:</span><span class="mi">150</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># noqa: BLE001</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">attempt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;finish_reason&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">last</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_reply</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">present</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;finish_reason&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;length&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">parse_forced</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span> <span class="n">present</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">call_forced</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">present</span><span class="p">,</span> <span class="n">label_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;One forced call; on transport error / length-truncation / parse-fail, ONE stern retry;</span>
+<span class="sd">    persistent failure -&gt; NA. Returns (record, pick, mode, retried, usages).&quot;&quot;&quot;</span>
+    <span class="n">rsn</span> <span class="o">=</span> <span class="n">reasoning_for</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+    <span class="n">sys_p</span> <span class="o">=</span> <span class="n">SYS</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">example</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">present</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">call_fr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">sys_p</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="n">MAX_TOKENS</span><span class="p">,</span> <span class="n">reasoning</span><span class="o">=</span><span class="n">rsn</span><span class="p">)</span>
+    <span class="n">pick</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="n">parse_reply</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">present</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">pick</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">pick</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">,</span> <span class="p">{})]</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">call_fr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">sys_p</span><span class="p">,</span> <span class="n">user</span> <span class="o">+</span> <span class="n">STERN</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">label_list</span><span class="o">=</span><span class="n">label_list</span><span class="p">),</span>
+                 <span class="n">max_tokens</span><span class="o">=</span><span class="n">MAX_TOKENS</span><span class="p">,</span> <span class="n">reasoning</span><span class="o">=</span><span class="n">rsn</span><span class="p">)</span>
+    <span class="n">pick2</span><span class="p">,</span> <span class="n">mode2</span> <span class="o">=</span> <span class="n">parse_reply</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">present</span><span class="p">)</span>
+    <span class="n">usages</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">),</span> <span class="n">r2</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">))</span> <span class="k">if</span> <span class="n">u</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">pick2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">r2</span><span class="p">,</span> <span class="n">pick2</span><span class="p">,</span> <span class="n">mode2</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">usages</span>
+    <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">pick</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">usages</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">flat_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">):</span>
+    <span class="n">flat</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">flat</span> <span class="o">+=</span> <span class="p">[{</span><span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">}</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">u</span> <span class="k">if</span> <span class="n">x</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">u</span><span class="p">:</span>
+            <span class="n">flat</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">u</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">billed_cost</span><span class="p">([</span><span class="n">flat</span><span class="p">])</span>
+
+
+<span class="c1"># ---- cost ledger + pre-registered hard stop ----------------------------------------------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ledger_load</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">LEDGER_PATH</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">LEDGER_PATH</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ledger_total</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s2">&quot;billed_usd&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ledger_load</span><span class="p">())</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ledger_append</span><span class="p">(</span><span class="n">phase</span><span class="p">,</span> <span class="n">calls</span><span class="p">,</span> <span class="n">billed</span><span class="p">,</span> <span class="n">missing</span><span class="p">,</span> <span class="n">note</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">entries</span> <span class="o">=</span> <span class="n">ledger_load</span><span class="p">()</span>
+    <span class="n">entries</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;phase&quot;</span><span class="p">:</span> <span class="n">phase</span><span class="p">,</span> <span class="s2">&quot;calls&quot;</span><span class="p">:</span> <span class="n">calls</span><span class="p">,</span> <span class="s2">&quot;billed_usd&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">billed</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                    <span class="s2">&quot;missing_cost_fields&quot;</span><span class="p">:</span> <span class="n">missing</span><span class="p">,</span> <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="n">note</span><span class="p">,</span>
+                    <span class="s2">&quot;ts_utc&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()})</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">entries</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">LEDGER_PATH</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="s2">&quot;billed_usd&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  [ledger] </span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2">: $</span><span class="si">{</span><span class="n">billed</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">calls</span><span class="si">}</span><span class="s2"> calls, </span><span class="si">{</span><span class="n">missing</span><span class="si">}</span><span class="s2"> missing cost) &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;-&gt; cumulative $</span><span class="si">{</span><span class="n">total</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2"> (hard stop $</span><span class="si">{</span><span class="n">HARD_STOP_USD</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">total</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">check_hard_stop</span><span class="p">(</span><span class="n">projected_additional_usd</span><span class="p">,</span> <span class="n">phase</span><span class="p">):</span>
+    <span class="n">spent</span> <span class="o">=</span> <span class="n">ledger_total</span><span class="p">()</span>
+    <span class="n">projected</span> <span class="o">=</span> <span class="n">spent</span> <span class="o">+</span> <span class="n">projected_additional_usd</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  [gate] </span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2">: spent $</span><span class="si">{</span><span class="n">spent</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> + projected $</span><span class="si">{</span><span class="n">projected_additional_usd</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;= $</span><span class="si">{</span><span class="n">projected</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (hard stop $</span><span class="si">{</span><span class="n">HARD_STOP_USD</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">projected</span> <span class="o">&gt;</span> <span class="n">HARD_STOP_USD</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;HARD STOP: projected total $</span><span class="si">{</span><span class="n">projected</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> exceeds the pre-registered &quot;</span>
+                 <span class="sa">f</span><span class="s2">&quot;$</span><span class="si">{</span><span class="n">HARD_STOP_USD</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> cap. Re-design; do not push through.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">append_jsonl</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">rec</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">read_jsonl</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">ln</span><span class="p">)</span> <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">f</span> <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

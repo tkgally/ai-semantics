@@ -5,6 +5,17 @@ This directory is the **public GitHub Pages site** ("Meaning in the Age of AI"),
 are for the lead agent updating the site (`PROTOCOL.md §5b`; charter §12.5; cadence amended by
 Tom 2026-07-02, `wiki/decisions/resolved/program-2026-07-adoption.md`).
 
+> **FROZEN — do not touch: `docs/complete-project-20260717/`.** That subdirectory is a
+> **one-time, self-contained HTML snapshot of the entire repository** (every wiki page, experiment
+> record, script, and config rendered as a readable web page), built 2026-07-13 at Tom's request so
+> he could share a public link to the full project during a presentation. It has its **own**
+> `style.css` and its own `index.html` entrance; it is **not** part of the regular six-page site and
+> is **not** regenerated per session. **Regular sessions must never edit, rebuild, move, or delete
+> it, and the per-session site-update checklist below does not apply to it.** The normal maintenance
+> targets are only the six generated pages listed under "Update checklist" (`index.html`,
+> `journal.html`, `findings.html`, `plans.html`, `glossary.html`, `about.html`). Leave the snapshot
+> exactly as-is unless Tom explicitly asks for it to be changed or removed.
+
 ## Standing content rules (from the 2026-06-12 rulings — do not relax)
 
 1. **Audience:** a hands-off, interested, non-technical reader. Plain language everywhere.

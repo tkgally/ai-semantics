@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-21-scivetti-let-alone-repeated-runs</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">16.2 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-21-scivetti-let-alone-repeated-runs/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;analyze.py — frozen analysis for the REPEATED-RUNS temp-0 jitter measurement (NO API).</span>
+
+<span class="sd">Characterizes the run-to-run label jitter that session 62 surfaced (~12% from a single</span>
+<span class="sd">s60-&gt;s62 pair) by scoring the byte-identical forced-decomposition instrument K times at</span>
+<span class="sd">temperature 0 over the SAME frozen 63-item set. This is a MEASUREMENT, not a pass/fail probe:</span>
+<span class="sd">the frozen output is the jitter distribution, not a verdict on the let-alone residual.</span>
+
+<span class="sd">Pre-registered questions (PREREG.md):</span>
+
+<span class="sd">  Q1 (per-run accuracy spread — the jitter on the headline number). For each model and each</span>
+<span class="sd">     cell (let-alone combined n=33 / let-alone test n=24 / let-alone train n=9 / comp-corr</span>
+<span class="sd">     n=30), the K per-run accuracies and their {mean, min, max, range=max-min, sample SD}.</span>
+<span class="sd">     The across-run RANGE and SD ARE the jitter on a single-run point estimate.</span>
+
+<span class="sd">  Q2 (per-item label stability — what drives the jitter). For each model and cell: per-item</span>
+<span class="sd">     label counts over the K runs, the modal label, whether the item is CONSTANT (all K</span>
+<span class="sd">     equal), the churn rate (fraction non-constant), and the mean pairwise label agreement</span>
+<span class="sd">     across the C(K,2) run-pairs (the symmetric generalization of s62&#39;s &quot;21/24 agreement&quot;).</span>
+
+<span class="sd">  Q3 (trigger (a) — does jitter shrink at the ceiling?). Contrast the let-alone churn/range</span>
+<span class="sd">     against the comp-corr (ceiling control) churn/range. essay/point-estimate-is-a-draw</span>
+<span class="sd">     revision trigger (a) FIRES if jitter is concentrated at the hard near-chance let-alone</span>
+<span class="sd">     and is negligible at the comp-corr ceiling (narrowing the essay from &quot;single-run point</span>
+<span class="sd">     estimates are draws&quot; to &quot;...on hard, near-chance, functional instruments are draws&quot;).</span>
+
+<span class="sd">  Q4 (the de-noised / pinned estimate). Majority-vote accuracy (per-item modal label vs gold)</span>
+<span class="sd">     and its Wilson CI per model+cell: the best single de-noised estimate the K runs support.</span>
+<span class="sd">     For gpt let-alone combined, does the across-run MAX accuracy still stay below the 0.90</span>
+<span class="sd">     human baseline? (Pins the residual magnitude the session-62 result left at ~±0.12.)</span>
+
+<span class="sd">  Q5 (uptake + ceiling guard). Every run must have uptake INDUCED on let-alone (&gt;=80% worked)</span>
+<span class="sd">     and the comp-corr control at/near ceiling; a run that breaks either is flagged (it would</span>
+<span class="sd">     contaminate the jitter read with a scaffold failure, not measure label noise).</span>
+
+<span class="sd">  Q6 (cross-session corroboration; honest framing). The K runs are SAME-SESSION, so their</span>
+<span class="sd">     spread is a within-session figure and may UNDERESTIMATE true run-to-run jitter. The</span>
+<span class="sd">     s60 draw (24 LA test + 30 CC) and the s62 draw (all 63) are CROSS-SESSION (different</span>
+<span class="sd">     days). Report s60/s62 accuracies per cell and the extended (K + historical) per-item</span>
+<span class="sd">     label distribution, and whether the cross-session spread exceeds the within-session one.</span>
+
+<span class="sd">Frozen reporting map (Q3, descriptive — no result is retuned):</span>
+<span class="sd">  TRIGGER-A-FIRES   : let-alone combined across-run RANGE &gt; 0 AND comp-corr across-run RANGE</span>
+<span class="sd">                      ~ 0 (&lt;=0.034, i.e. &lt;=1 item on n=30) AND let-alone churn &gt; comp-corr</span>
+<span class="sd">                      churn -&gt; jitter concentrates at near-chance, negligible at ceiling.</span>
+<span class="sd">  JITTER-FLAT       : let-alone range ~ comp-corr range (both small) -&gt; the s62 ~12% was a</span>
+<span class="sd">                      high draw; essay/point-estimate-is-a-draw SOFTENS (jitter smaller, and</span>
+<span class="sd">                      not specially concentrated at near-chance). (trigger (a) does not fire.)</span>
+<span class="sd">  JITTER-EVERYWHERE : comp-corr also jitters materially (range &gt; 0.034) -&gt; jitter is NOT</span>
+<span class="sd">                      ceiling-protected; essay&#39;s &quot;barely bites at ceilings&quot; clause needs</span>
+<span class="sd">                      revision. (Unexpected; would itself be the finding.)</span>
+<span class="sd">  GUARD-FAIL        : any run with uptake NOT induced or control broken -&gt; that run flagged;</span>
+<span class="sd">                      jitter read restricted to clean runs (reported).</span>
+
+<span class="sd">Internal-replication anchors: s60 raw at</span>
+<span class="sd">  ../2026-06-20-scivetti-let-alone-forced-decomposition/raw/{A,B,C}-labels.json (24 LA test +</span>
+<span class="sd">  30 CC) and s62 raw at ../2026-06-20-scivetti-let-alone-powered-rerun/raw/{A,B,C}-labels.json</span>
+<span class="sd">  (all 63). Matched by item_id; NO text in any committed artifact.</span>
+
+<span class="sd">Anchor: resource/scivetti-2025-cxnli-dataset (ratified 2026-05-29, Tom). comp-corr carries the</span>
+<span class="sd">ratified anchor; let-alone is descriptive from the same human-annotated release. This run makes</span>
+<span class="sd">NO new human-comparison claim beyond pinning the magnitude of an already-reported residual; its</span>
+<span class="sd">force is a within-model MEASUREMENT of instrument jitter.</span>
+
+<span class="sd">Usage: python3 analyze.py            # reads raw/run*-{A,B,C}-labels.json, writes results.json</span>
+<span class="sd">       python3 analyze.py --selftest # synthetic checks, no raw needed</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">itertools</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+<span class="n">S60_RAW</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;..&quot;</span> <span class="o">/</span> <span class="s2">&quot;2026-06-20-scivetti-let-alone-forced-decomposition&quot;</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+<span class="n">S62_RAW</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;..&quot;</span> <span class="o">/</span> <span class="s2">&quot;2026-06-20-scivetti-let-alone-powered-rerun&quot;</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+<span class="n">PANEL_NAMES</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;claude-sonnet-4.6&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;gemini-3.5-flash&quot;</span><span class="p">}</span>
+<span class="n">TARGET</span> <span class="o">=</span> <span class="s2">&quot;let-alone&quot;</span>
+<span class="n">CONTROL</span> <span class="o">=</span> <span class="s2">&quot;comparative-correlative&quot;</span>
+<span class="n">HUMAN_BASELINE</span> <span class="o">=</span> <span class="mf">0.90</span>
+<span class="n">WORKED_THRESH</span> <span class="o">=</span> <span class="mf">0.80</span>
+<span class="n">CEILING_RANGE_EPS</span> <span class="o">=</span> <span class="mf">0.034</span>  <span class="c1"># &lt;=1 item on n=30 (1/30 = 0.0333) counts as &quot;~0 range&quot;</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">5</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">wilson</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mf">1.96</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">k</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">centre</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">))</span> <span class="o">/</span> <span class="n">denom</span>
+    <span class="n">half</span> <span class="o">=</span> <span class="p">(</span><span class="n">z</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">)))</span> <span class="o">/</span> <span class="n">denom</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">centre</span> <span class="o">-</span> <span class="n">half</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">centre</span> <span class="o">+</span> <span class="n">half</span><span class="p">),</span> <span class="n">p</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">correct</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">acc_of</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">correct</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">k</span> <span class="o">/</span> <span class="n">n</span> <span class="k">if</span> <span class="n">n</span> <span class="k">else</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">cell_rows</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">cxn</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;cxn&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">cxn</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">split</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">out</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;split&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">split</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_runs</span><span class="p">(</span><span class="n">slot</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return {run_idx: [rows]} for every committed run file for this slot.&quot;&quot;&quot;</span>
+    <span class="n">runs</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">RAW</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;run*-</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">-labels.json&quot;</span><span class="p">)):</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+        <span class="n">runs</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">runs</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_hist</span><span class="p">(</span><span class="n">raw_dir</span><span class="p">,</span> <span class="n">slot</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">raw_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">-labels.json&quot;</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">))</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">else</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">spread</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">vals</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;n_runs&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;n_runs&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span> <span class="s2">&quot;per_run&quot;</span><span class="p">:</span> <span class="n">vals</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">:</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span>
+            <span class="s2">&quot;min&quot;</span><span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span> <span class="s2">&quot;max&quot;</span><span class="p">:</span> <span class="nb">max</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span> <span class="s2">&quot;range&quot;</span><span class="p">:</span> <span class="nb">max</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span>
+            <span class="s2">&quot;sd&quot;</span><span class="p">:</span> <span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="mf">0.0</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">item_stability</span><span class="p">(</span><span class="n">runs</span><span class="p">,</span> <span class="n">cxn</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Per-item label distribution across the K runs. Returns per-item records + summary.&quot;&quot;&quot;</span>
+    <span class="c1"># index each run&#39;s cell rows by item_id</span>
+    <span class="n">by_run</span> <span class="o">=</span> <span class="p">{</span><span class="n">idx</span><span class="p">:</span> <span class="p">{</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]:</span> <span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cell_rows</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">cxn</span><span class="p">,</span> <span class="n">split</span><span class="p">)}</span>
+              <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">rows</span> <span class="ow">in</span> <span class="n">runs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+    <span class="n">item_ids</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">({</span><span class="n">iid</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">by_run</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">for</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">d</span><span class="p">})</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">item_ids</span><span class="p">:</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">by_run</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">iid</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">by_run</span><span class="p">)</span> <span class="k">if</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">by_run</span><span class="p">[</span><span class="n">idx</span><span class="p">]]</span>
+        <span class="n">gold</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">by_run</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">iid</span><span class="p">][</span><span class="s2">&quot;gold&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">by_run</span><span class="p">)</span> <span class="k">if</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">by_run</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+        <span class="n">cnt</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>  <span class="c1"># includes None if any missing</span>
+        <span class="n">nonnull</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">labels</span> <span class="k">if</span> <span class="n">l</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">modal</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">nonnull</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">nonnull</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">iid</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="n">gold</span><span class="p">,</span> <span class="s2">&quot;labels&quot;</span><span class="p">:</span> <span class="n">labels</span><span class="p">,</span>
+                      <span class="s2">&quot;label_counts&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="n">cnt</span><span class="p">),</span>
+                      <span class="s2">&quot;modal&quot;</span><span class="p">:</span> <span class="n">modal</span><span class="p">,</span>
+                      <span class="s2">&quot;constant&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span>
+                      <span class="s2">&quot;modal_correct&quot;</span><span class="p">:</span> <span class="n">modal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">modal</span><span class="p">)</span> <span class="o">==</span> <span class="n">gold</span><span class="p">})</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+    <span class="n">n_const</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;constant&quot;</span><span class="p">])</span>
+    <span class="c1"># mean pairwise label agreement across C(K,2) run-pairs, averaged over items</span>
+    <span class="n">pair_aggs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">run_idxs</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">by_run</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">run_idxs</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">shared</span> <span class="o">=</span> <span class="p">[</span><span class="n">iid</span> <span class="k">for</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">item_ids</span> <span class="k">if</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">by_run</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">and</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">by_run</span><span class="p">[</span><span class="n">b</span><span class="p">]]</span>
+        <span class="k">if</span> <span class="n">shared</span><span class="p">:</span>
+            <span class="n">agree</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">iid</span> <span class="ow">in</span> <span class="n">shared</span>
+                        <span class="k">if</span> <span class="n">by_run</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="n">iid</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">by_run</span><span class="p">[</span><span class="n">b</span><span class="p">][</span><span class="n">iid</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+            <span class="n">pair_aggs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">agree</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">shared</span><span class="p">))</span>
+    <span class="n">maj_correct</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;modal_correct&quot;</span><span class="p">])</span>
+    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">wilson</span><span class="p">(</span><span class="n">maj_correct</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;n_items&quot;</span><span class="p">:</span> <span class="n">n</span><span class="p">,</span>
+        <span class="s2">&quot;n_constant&quot;</span><span class="p">:</span> <span class="n">n_const</span><span class="p">,</span>
+        <span class="s2">&quot;churn_rate&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">n_const</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span> <span class="k">if</span> <span class="n">n</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;mean_pairwise_agreement&quot;</span><span class="p">:</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">pair_aggs</span><span class="p">)</span> <span class="k">if</span> <span class="n">pair_aggs</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;n_pairs&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">pair_aggs</span><span class="p">),</span>
+        <span class="s2">&quot;majority_vote_correct&quot;</span><span class="p">:</span> <span class="n">maj_correct</span><span class="p">,</span>
+        <span class="s2">&quot;majority_vote_acc&quot;</span><span class="p">:</span> <span class="n">maj_correct</span> <span class="o">/</span> <span class="n">n</span> <span class="k">if</span> <span class="n">n</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;majority_vote_wilson&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">],</span>
+        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="n">items</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="n">CELLS</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;letalone_combined&quot;</span><span class="p">,</span> <span class="n">TARGET</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;letalone_test&quot;</span><span class="p">,</span> <span class="n">TARGET</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;letalone_train&quot;</span><span class="p">,</span> <span class="n">TARGET</span><span class="p">,</span> <span class="s2">&quot;train&quot;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s2">&quot;compcorr&quot;</span><span class="p">,</span> <span class="n">CONTROL</span><span class="p">,</span> <span class="kc">None</span><span class="p">)]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;K&quot;</span><span class="p">:</span> <span class="n">K</span><span class="p">,</span> <span class="s2">&quot;human_baseline&quot;</span><span class="p">:</span> <span class="n">HUMAN_BASELINE</span><span class="p">,</span> <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;forced-decomposition&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;ceiling_range_eps&quot;</span><span class="p">:</span> <span class="n">CEILING_RANGE_EPS</span><span class="p">,</span> <span class="s2">&quot;per_model&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PANEL_NAMES</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">runs</span> <span class="o">=</span> <span class="n">load_runs</span><span class="p">(</span><span class="n">slot</span><span class="p">)</span>
+        <span class="n">n_runs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">runs</span><span class="p">)</span>
+        <span class="n">s60</span> <span class="o">=</span> <span class="n">load_hist</span><span class="p">(</span><span class="n">S60_RAW</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+        <span class="n">s62</span> <span class="o">=</span> <span class="n">load_hist</span><span class="p">(</span><span class="n">S62_RAW</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;n_runs_committed&quot;</span><span class="p">:</span> <span class="n">n_runs</span><span class="p">,</span> <span class="s2">&quot;cells&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                 <span class="s2">&quot;guard&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;cross_session&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+
+        <span class="c1"># Q5 guard: per run, uptake induced on let-alone + comp-corr at/near ceiling</span>
+        <span class="n">guard_rows</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">rows</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">runs</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="n">la</span> <span class="o">=</span> <span class="n">cell_rows</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">TARGET</span><span class="p">)</span>
+            <span class="n">cc</span> <span class="o">=</span> <span class="n">cell_rows</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">CONTROL</span><span class="p">)</span>
+            <span class="n">worked</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">la</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;uptake&quot;</span><span class="p">][</span><span class="s2">&quot;worked&quot;</span><span class="p">])</span>
+            <span class="n">worked_frac</span> <span class="o">=</span> <span class="n">worked</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">la</span><span class="p">)</span> <span class="k">if</span> <span class="n">la</span> <span class="k">else</span> <span class="mf">0.0</span>
+            <span class="n">cc_acc</span> <span class="o">=</span> <span class="n">acc_of</span><span class="p">(</span><span class="n">cc</span><span class="p">)</span>
+            <span class="n">cc_lo</span> <span class="o">=</span> <span class="n">wilson</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cc</span> <span class="k">if</span> <span class="n">correct</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">cc</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">n_missing</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">guard_rows</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;run&quot;</span><span class="p">:</span> <span class="n">idx</span><span class="p">,</span> <span class="s2">&quot;worked_frac&quot;</span><span class="p">:</span> <span class="n">worked_frac</span><span class="p">,</span>
+                               <span class="s2">&quot;uptake_induced&quot;</span><span class="p">:</span> <span class="n">worked_frac</span> <span class="o">&gt;=</span> <span class="n">WORKED_THRESH</span><span class="p">,</span>
+                               <span class="s2">&quot;cc_acc&quot;</span><span class="p">:</span> <span class="n">cc_acc</span><span class="p">,</span> <span class="s2">&quot;cc_wilson_lo&quot;</span><span class="p">:</span> <span class="n">cc_lo</span><span class="p">,</span>
+                               <span class="s2">&quot;control_preserved&quot;</span><span class="p">:</span> <span class="n">cc_lo</span> <span class="o">&gt;=</span> <span class="mf">0.80</span><span class="p">,</span>
+                               <span class="s2">&quot;n_missing&quot;</span><span class="p">:</span> <span class="n">n_missing</span><span class="p">})</span>
+        <span class="n">model</span><span class="p">[</span><span class="s2">&quot;guard&quot;</span><span class="p">][</span><span class="s2">&quot;per_run&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">guard_rows</span>
+        <span class="n">model</span><span class="p">[</span><span class="s2">&quot;guard&quot;</span><span class="p">][</span><span class="s2">&quot;all_clean&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">all</span><span class="p">(</span>
+            <span class="n">g</span><span class="p">[</span><span class="s2">&quot;uptake_induced&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">g</span><span class="p">[</span><span class="s2">&quot;control_preserved&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">g</span><span class="p">[</span><span class="s2">&quot;n_missing&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">guard_rows</span><span class="p">)</span> <span class="k">if</span> <span class="n">guard_rows</span> <span class="k">else</span> <span class="kc">False</span>
+
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">cxn</span><span class="p">,</span> <span class="n">split</span> <span class="ow">in</span> <span class="n">CELLS</span><span class="p">:</span>
+            <span class="n">per_run_acc</span> <span class="o">=</span> <span class="p">[</span><span class="n">acc_of</span><span class="p">(</span><span class="n">cell_rows</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">cxn</span><span class="p">,</span> <span class="n">split</span><span class="p">))</span>
+                           <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">rows</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">runs</span><span class="o">.</span><span class="n">items</span><span class="p">())]</span>
+            <span class="n">sp</span> <span class="o">=</span> <span class="n">spread</span><span class="p">(</span><span class="n">per_run_acc</span><span class="p">)</span>
+            <span class="n">stab</span> <span class="o">=</span> <span class="n">item_stability</span><span class="p">(</span><span class="n">runs</span><span class="p">,</span> <span class="n">cxn</span><span class="p">,</span> <span class="n">split</span><span class="p">)</span>
+            <span class="n">model</span><span class="p">[</span><span class="s2">&quot;cells&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;spread&quot;</span><span class="p">:</span> <span class="n">sp</span><span class="p">,</span> <span class="s2">&quot;stability&quot;</span><span class="p">:</span> <span class="n">stab</span><span class="p">}</span>
+
+        <span class="c1"># Q6 cross-session: s60 (LA test + CC) and s62 (all 63) draws per cell</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">hist_acc</span><span class="p">(</span><span class="n">hist</span><span class="p">,</span> <span class="n">cxn</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">hist</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
+            <span class="n">rs</span> <span class="o">=</span> <span class="n">cell_rows</span><span class="p">(</span><span class="n">hist</span><span class="p">,</span> <span class="n">cxn</span><span class="p">,</span> <span class="n">split</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">acc_of</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span> <span class="k">if</span> <span class="n">rs</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">model</span><span class="p">[</span><span class="s2">&quot;cross_session&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;s60&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;letalone_test&quot;</span><span class="p">:</span> <span class="n">hist_acc</span><span class="p">(</span><span class="n">s60</span><span class="p">,</span> <span class="n">TARGET</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;compcorr&quot;</span><span class="p">:</span> <span class="n">hist_acc</span><span class="p">(</span><span class="n">s60</span><span class="p">,</span> <span class="n">CONTROL</span><span class="p">)},</span>
+            <span class="s2">&quot;s62&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;letalone_combined&quot;</span><span class="p">:</span> <span class="n">hist_acc</span><span class="p">(</span><span class="n">s62</span><span class="p">,</span> <span class="n">TARGET</span><span class="p">),</span>
+                    <span class="s2">&quot;letalone_test&quot;</span><span class="p">:</span> <span class="n">hist_acc</span><span class="p">(</span><span class="n">s62</span><span class="p">,</span> <span class="n">TARGET</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;letalone_train&quot;</span><span class="p">:</span> <span class="n">hist_acc</span><span class="p">(</span><span class="n">s62</span><span class="p">,</span> <span class="n">TARGET</span><span class="p">,</span> <span class="s2">&quot;train&quot;</span><span class="p">),</span>
+                    <span class="s2">&quot;compcorr&quot;</span><span class="p">:</span> <span class="n">hist_acc</span><span class="p">(</span><span class="n">s62</span><span class="p">,</span> <span class="n">CONTROL</span><span class="p">)},</span>
+        <span class="p">}</span>
+        <span class="c1"># extended within+cross-session per-run accuracy band for LA combined and CC</span>
+        <span class="n">la_runs</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">model</span><span class="p">[</span><span class="s2">&quot;cells&quot;</span><span class="p">][</span><span class="s2">&quot;letalone_combined&quot;</span><span class="p">][</span><span class="s2">&quot;spread&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;per_run&quot;</span><span class="p">,</span> <span class="p">[])]</span>
+        <span class="n">la_ext</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">la_runs</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="p">[</span><span class="n">model</span><span class="p">[</span><span class="s2">&quot;cross_session&quot;</span><span class="p">][</span><span class="s2">&quot;s62&quot;</span><span class="p">][</span><span class="s2">&quot;letalone_combined&quot;</span><span class="p">]]</span>
+                                  <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">cc_runs</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">model</span><span class="p">[</span><span class="s2">&quot;cells&quot;</span><span class="p">][</span><span class="s2">&quot;compcorr&quot;</span><span class="p">][</span><span class="s2">&quot;spread&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;per_run&quot;</span><span class="p">,</span> <span class="p">[])]</span>
+        <span class="n">cc_ext</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cc_runs</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="p">[</span><span class="n">model</span><span class="p">[</span><span class="s2">&quot;cross_session&quot;</span><span class="p">][</span><span class="s2">&quot;s60&quot;</span><span class="p">][</span><span class="s2">&quot;compcorr&quot;</span><span class="p">],</span>
+                                              <span class="n">model</span><span class="p">[</span><span class="s2">&quot;cross_session&quot;</span><span class="p">][</span><span class="s2">&quot;s62&quot;</span><span class="p">][</span><span class="s2">&quot;compcorr&quot;</span><span class="p">]]</span>
+                                  <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">model</span><span class="p">[</span><span class="s2">&quot;cross_session&quot;</span><span class="p">][</span><span class="s2">&quot;extended_band&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;letalone_combined&quot;</span><span class="p">:</span> <span class="n">spread</span><span class="p">(</span><span class="n">la_ext</span><span class="p">),</span> <span class="s2">&quot;compcorr&quot;</span><span class="p">:</span> <span class="n">spread</span><span class="p">(</span><span class="n">cc_ext</span><span class="p">)}</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+
+    <span class="c1"># Q3 trigger-(a) reading map (frozen)</span>
+    <span class="n">reads</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">PANEL_NAMES</span><span class="p">:</span>
+        <span class="n">la</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">][</span><span class="s2">&quot;cells&quot;</span><span class="p">][</span><span class="s2">&quot;letalone_combined&quot;</span><span class="p">][</span><span class="s2">&quot;spread&quot;</span><span class="p">]</span>
+        <span class="n">cc</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">][</span><span class="s2">&quot;cells&quot;</span><span class="p">][</span><span class="s2">&quot;compcorr&quot;</span><span class="p">][</span><span class="s2">&quot;spread&quot;</span><span class="p">]</span>
+        <span class="n">la_churn</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">][</span><span class="s2">&quot;cells&quot;</span><span class="p">][</span><span class="s2">&quot;letalone_combined&quot;</span><span class="p">][</span><span class="s2">&quot;stability&quot;</span><span class="p">][</span><span class="s2">&quot;churn_rate&quot;</span><span class="p">]</span>
+        <span class="n">cc_churn</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">][</span><span class="s2">&quot;cells&quot;</span><span class="p">][</span><span class="s2">&quot;compcorr&quot;</span><span class="p">][</span><span class="s2">&quot;stability&quot;</span><span class="p">][</span><span class="s2">&quot;churn_rate&quot;</span><span class="p">]</span>
+        <span class="n">clean</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">][</span><span class="s2">&quot;guard&quot;</span><span class="p">][</span><span class="s2">&quot;all_clean&quot;</span><span class="p">]</span>
+        <span class="n">la_r</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;range&quot;</span><span class="p">)</span>
+        <span class="n">cc_r</span> <span class="o">=</span> <span class="n">cc</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;range&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">clean</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;GUARD-FAIL&quot;</span>
+        <span class="k">elif</span> <span class="n">cc_r</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cc_r</span> <span class="o">&gt;</span> <span class="n">CEILING_RANGE_EPS</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;JITTER-EVERYWHERE&quot;</span>
+        <span class="k">elif</span> <span class="n">la_r</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">la_r</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">cc_r</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cc_r</span> <span class="o">&lt;=</span> <span class="n">CEILING_RANGE_EPS</span> \
+                <span class="ow">and</span> <span class="p">(</span><span class="n">la_churn</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">cc_churn</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;TRIGGER-A-FIRES&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;JITTER-FLAT&quot;</span>
+        <span class="n">reads</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">PANEL_NAMES</span><span class="p">[</span><span class="n">slot</span><span class="p">],</span> <span class="s2">&quot;verdict&quot;</span><span class="p">:</span> <span class="n">verdict</span><span class="p">,</span>
+                       <span class="s2">&quot;letalone_range&quot;</span><span class="p">:</span> <span class="n">la_r</span><span class="p">,</span> <span class="s2">&quot;compcorr_range&quot;</span><span class="p">:</span> <span class="n">cc_r</span><span class="p">,</span>
+                       <span class="s2">&quot;letalone_churn&quot;</span><span class="p">:</span> <span class="n">la_churn</span><span class="p">,</span> <span class="s2">&quot;compcorr_churn&quot;</span><span class="p">:</span> <span class="n">cc_churn</span><span class="p">}</span>
+    <span class="n">out</span><span class="p">[</span><span class="s2">&quot;trigger_a_read&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">reads</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">selftest</span><span class="p">():</span>
+    <span class="c1"># synthetic: 2 runs, 2 items; run1 labels [0,1], run2 labels [0,2]; gold [0,0]</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">wilson</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-9</span>
+    <span class="n">runs</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;run&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x#1&quot;</span><span class="p">,</span> <span class="s2">&quot;cxn&quot;</span><span class="p">:</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">,</span> <span class="s2">&quot;split&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;uptake&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;worked&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{}},</span>
+                <span class="p">{</span><span class="s2">&quot;run&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x#2&quot;</span><span class="p">,</span> <span class="s2">&quot;cxn&quot;</span><span class="p">:</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">,</span> <span class="s2">&quot;split&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;uptake&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;worked&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{}}],</span>
+            <span class="mi">2</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;run&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x#1&quot;</span><span class="p">,</span> <span class="s2">&quot;cxn&quot;</span><span class="p">:</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">,</span> <span class="s2">&quot;split&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;uptake&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;worked&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{}},</span>
+                <span class="p">{</span><span class="s2">&quot;run&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="s2">&quot;x#2&quot;</span><span class="p">,</span> <span class="s2">&quot;cxn&quot;</span><span class="p">:</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">,</span> <span class="s2">&quot;split&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;uptake&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;worked&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{}}]}</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">item_stability</span><span class="p">(</span><span class="n">runs</span><span class="p">,</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">st</span><span class="p">[</span><span class="s2">&quot;n_items&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="k">assert</span> <span class="n">st</span><span class="p">[</span><span class="s2">&quot;n_constant&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># item x#1 constant (0,0), x#2 not (1,2)</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="s2">&quot;churn_rate&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-9</span>
+    <span class="c1"># modal of x#2 is min-most_common -&gt; Counter([1,2]).most_common(1) deterministic by count</span>
+    <span class="c1"># both appear once; most_common returns insertion order -&gt; &quot;1&quot;; modal_correct False</span>
+    <span class="k">assert</span> <span class="n">st</span><span class="p">[</span><span class="s2">&quot;majority_vote_correct&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>  <span class="c1"># x#1 modal 0 correct; x#2 modal not 0</span>
+    <span class="c1"># pairwise agreement: x#1 agrees, x#2 disagrees -&gt; 0.5</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">st</span><span class="p">[</span><span class="s2">&quot;mean_pairwise_agreement&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-9</span>
+    <span class="n">sp</span> <span class="o">=</span> <span class="n">spread</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="n">sp</span><span class="p">[</span><span class="s2">&quot;range&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span> <span class="ow">and</span> <span class="n">sp</span><span class="p">[</span><span class="s2">&quot;min&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">0.0</span> <span class="ow">and</span> <span class="n">sp</span><span class="p">[</span><span class="s2">&quot;max&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span>
+    <span class="k">assert</span> <span class="n">sp</span><span class="p">[</span><span class="s2">&quot;n_runs&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;selftest PASS&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+    <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--selftest&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">ap</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">selftest</span><span class="p">:</span>
+        <span class="n">selftest</span><span class="p">()</span>
+        <span class="k">return</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">analyze</span><span class="p">()</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;results.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># human-readable summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;K=</span><span class="si">{</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;K&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> runs; instrument=</span><span class="si">{</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;instrument&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">; baseline=</span><span class="si">{</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;human_baseline&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">res</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">== </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">) — </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;n_runs_committed&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> runs committed, &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;all_clean=</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">][</span><span class="s1">&#39;all_clean&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> ==&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;letalone_combined&quot;</span><span class="p">,</span> <span class="s2">&quot;compcorr&quot;</span><span class="p">):</span>
+            <span class="n">sp</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;cells&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">][</span><span class="s2">&quot;spread&quot;</span><span class="p">]</span>
+            <span class="n">stab</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;cells&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">][</span><span class="s2">&quot;stability&quot;</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">key</span><span class="si">:</span><span class="s2">18s</span><span class="si">}</span><span class="s2"> per-run acc </span><span class="si">{</span><span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">sp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;per_run&#39;</span><span class="p">,[])]</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;range=</span><span class="si">{</span><span class="n">sp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;range&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> sd=</span><span class="si">{</span><span class="n">sp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sd&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;churn=</span><span class="si">{</span><span class="n">stab</span><span class="p">[</span><span class="s1">&#39;churn_rate&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mvote=</span><span class="si">{</span><span class="n">stab</span><span class="p">[</span><span class="s1">&#39;majority_vote_acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;pairAgree=</span><span class="si">{</span><span class="n">stab</span><span class="p">[</span><span class="s1">&#39;mean_pairwise_agreement&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="s2">&quot;trigger_a_read&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  trigger-(a) read: </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;verdict&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;(LA range </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;letalone_range&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> churn </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;letalone_churn&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> | &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;CC range </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;compcorr_range&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> churn </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;compcorr_churn&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">wrote results.json&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

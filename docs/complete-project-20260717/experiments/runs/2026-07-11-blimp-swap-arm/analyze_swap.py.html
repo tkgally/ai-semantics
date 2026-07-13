@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze_swap.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-11-blimp-swap-arm</a> <span class="sep">/</span> <span class="cur">analyze_swap.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze_swap.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">11.2 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-11-blimp-swap-arm/analyze_swap.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;analyze_swap.py — score the frozen BLiMP swap arm (A3b, s210). Recomputes every figure from raw/ +</span>
+<span class="sd">the frozen instrument only. Thresholds FROZEN in PREREG.md, copied here as constants; nothing tuned post-hoc.</span>
+
+<span class="sd">Verdict (G-metric — signed-CI TOST equivalence, per model, per stratum):</span>
+<span class="sd">  Δ_pair = acc_swap_pair − acc_orig_pair (order-averaged per member; orig/swap of the same pairID paired).</span>
+<span class="sd">  Δ̄(m,stratum) = mean Δ_pair over the stratum&#39;s pairs; percentile bootstrap CI over pairs (BOOT, SEED).</span>
+<span class="sd">  SWAP-STABLE  iff Δ̄ CI ⊂ [−0.05, +0.05] on BOTH strata for ≥2/3 models.</span>
+<span class="sd">  SWAP-DROPS   iff Δ̄ ≤ −0.05 with CI excluding 0 within a stratum on ≥2/3.</span>
+<span class="sd">  else SWAP-INCONCLUSIVE.</span>
+<span class="sd">G-coverage: a paradigm below the 0.50 coverage floor is flagged weak and EXCLUDED from the stratum verdict.</span>
+<span class="sd">Diagnostics: position-lock / ans1_rate (INSTRUMENT-FAILURE guard); achieved freq-match gap (G-freq).</span>
+
+<span class="sd">  python3 analyze_swap.py           # the verdict + coverage + freq-match (from raw/)</span>
+<span class="sd">  python3 analyze_swap.py --c4      # ALSO the G-freq-pretraining C4 unigram diagnostic ($0, bounded stream)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span><span class="o">,</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">math</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+<span class="n">ITEMS</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;items_swap.json&quot;</span><span class="p">))</span>
+<span class="n">SEL</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;selection.json&quot;</span><span class="p">))</span>
+<span class="n">UIDS</span> <span class="o">=</span> <span class="n">ITEMS</span><span class="p">[</span><span class="s2">&quot;selected&quot;</span><span class="p">]</span>
+<span class="n">STRATA</span> <span class="o">=</span> <span class="n">ITEMS</span><span class="p">[</span><span class="s2">&quot;strata&quot;</span><span class="p">]</span>                      <span class="c1"># uid -&gt; &#39;shallow&#39;|&#39;deep&#39;</span>
+<span class="n">SLOTS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
+
+<span class="c1"># FROZEN (PREREG)</span>
+<span class="n">MARGIN</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="n">COV_FLOOR</span> <span class="o">=</span> <span class="mf">0.50</span>
+<span class="n">BOOT</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">20260711</span>
+<span class="n">POSLOCK_FAIL</span> <span class="o">=</span> <span class="mf">0.50</span>
+<span class="n">ANS1_EXTREME</span> <span class="o">=</span> <span class="mf">0.40</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="n">slot</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return per-pair order-averaged accuracy per condition, per paradigm, + diagnostics.&quot;&quot;&quot;</span>
+    <span class="n">per</span> <span class="o">=</span> <span class="p">{}</span>                                  <span class="c1"># uid -&gt; pairID -&gt; {&#39;orig&#39;:acc,&#39;swap&#39;:acc}</span>
+    <span class="n">ans1</span> <span class="o">=</span> <span class="n">plock_n</span> <span class="o">=</span> <span class="n">plock_d</span> <span class="o">=</span> <span class="n">ncall</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">:</span>
+        <span class="n">rows</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">RAW</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">))</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+            <span class="n">ncall</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;choice&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="n">ans1</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">d</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;pairID&quot;</span><span class="p">],</span> <span class="p">{})</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;cond&quot;</span><span class="p">],</span> <span class="p">{})[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;order&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="n">pd</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">pid</span><span class="p">,</span> <span class="n">conds</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">rec</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">cond</span><span class="p">,</span> <span class="n">od</span> <span class="ow">in</span> <span class="n">conds</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">cs</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;correct&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">od</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;correct&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+                <span class="n">rec</span><span class="p">[</span><span class="n">cond</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">cs</span><span class="p">))</span> <span class="k">if</span> <span class="n">cs</span> <span class="k">else</span> <span class="kc">None</span>
+                <span class="n">gf</span><span class="p">,</span> <span class="n">gs</span> <span class="o">=</span> <span class="n">od</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;gf&quot;</span><span class="p">),</span> <span class="n">od</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;gs&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">gf</span> <span class="ow">and</span> <span class="n">gs</span> <span class="ow">and</span> <span class="n">gf</span><span class="p">[</span><span class="s2">&quot;choice&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">gs</span><span class="p">[</span><span class="s2">&quot;choice&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">plock_d</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">if</span> <span class="n">gf</span><span class="p">[</span><span class="s2">&quot;choice&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">gs</span><span class="p">[</span><span class="s2">&quot;choice&quot;</span><span class="p">]:</span> <span class="n">plock_n</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">pd</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">=</span> <span class="n">rec</span>
+        <span class="n">per</span><span class="p">[</span><span class="n">uid</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span>
+    <span class="n">diag</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ans1_rate&quot;</span><span class="p">:</span> <span class="n">ans1</span> <span class="o">/</span> <span class="n">ncall</span><span class="p">,</span> <span class="s2">&quot;poslock_rate&quot;</span><span class="p">:</span> <span class="n">plock_n</span> <span class="o">/</span> <span class="n">plock_d</span> <span class="k">if</span> <span class="n">plock_d</span> <span class="k">else</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">),</span>
+            <span class="s2">&quot;n_calls&quot;</span><span class="p">:</span> <span class="n">ncall</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">per</span><span class="p">,</span> <span class="n">diag</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">stratum_deltas</span><span class="p">(</span><span class="n">per</span><span class="p">,</span> <span class="n">stratum</span><span class="p">,</span> <span class="n">cov_ok</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;List of Δ_pair over the stratum&#39;s coverage-passing paradigms.&quot;&quot;&quot;</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">STRATA</span><span class="p">[</span><span class="n">uid</span><span class="p">]</span> <span class="o">!=</span> <span class="n">stratum</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">cov_ok</span><span class="p">[</span><span class="n">uid</span><span class="p">]:</span>
+            <span class="k">continue</span>
+        <span class="k">for</span> <span class="n">pid</span><span class="p">,</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">per</span><span class="p">[</span><span class="n">uid</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;orig&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;swap&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">ds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rec</span><span class="p">[</span><span class="s2">&quot;swap&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">rec</span><span class="p">[</span><span class="s2">&quot;orig&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">boot_ci</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">rng</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">))</span>
+    <span class="n">bs</span> <span class="o">=</span> <span class="p">[</span><span class="n">ds</span><span class="p">[</span><span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="p">))]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">BOOT</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">97.5</span><span class="p">]))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">();</span> <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--c4&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">);</span> <span class="n">args</span> <span class="o">=</span> <span class="n">ap</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+
+    <span class="c1"># coverage (G-coverage) from the frozen build</span>
+    <span class="n">cov</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;uid&quot;</span><span class="p">]:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;mean_coverage&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">SEL</span><span class="p">[</span><span class="s2">&quot;build_report&quot;</span><span class="p">]}</span>
+    <span class="n">cov_ok</span> <span class="o">=</span> <span class="p">{</span><span class="n">uid</span><span class="p">:</span> <span class="n">cov</span><span class="p">[</span><span class="n">uid</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">COV_FLOOR</span> <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">}</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;per_model&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;coverage&quot;</span><span class="p">:</span> <span class="n">cov</span><span class="p">,</span> <span class="s2">&quot;coverage_ok&quot;</span><span class="p">:</span> <span class="n">cov_ok</span><span class="p">,</span> <span class="s2">&quot;readings&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">:</span>
+        <span class="n">per</span><span class="p">,</span> <span class="n">diag</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">slot</span><span class="p">)</span>
+        <span class="n">acc</span> <span class="o">=</span> <span class="p">{</span><span class="n">uid</span><span class="p">:</span> <span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">per</span><span class="p">[</span><span class="n">uid</span><span class="p">][</span><span class="n">pid</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">pid</span> <span class="ow">in</span> <span class="n">per</span><span class="p">[</span><span class="n">uid</span><span class="p">]</span> <span class="k">if</span> <span class="n">per</span><span class="p">[</span><span class="n">uid</span><span class="p">][</span><span class="n">pid</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]))</span>
+                     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;orig&quot;</span><span class="p">,</span> <span class="s2">&quot;swap&quot;</span><span class="p">)}</span> <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">}</span>
+        <span class="n">strat</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;shallow&quot;</span><span class="p">,</span> <span class="s2">&quot;deep&quot;</span><span class="p">):</span>
+            <span class="n">ds</span> <span class="o">=</span> <span class="n">stratum_deltas</span><span class="p">(</span><span class="n">per</span><span class="p">,</span> <span class="n">st</span><span class="p">,</span> <span class="n">cov_ok</span><span class="p">)</span>
+            <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">boot_ci</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+            <span class="n">strat</span><span class="p">[</span><span class="n">st</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;delta_mean&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span> <span class="k">else</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">),</span>
+                         <span class="s2">&quot;ci&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">lo</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">hi</span><span class="p">)],</span> <span class="s2">&quot;n_pairs&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="p">)),</span>
+                         <span class="s2">&quot;within_margin&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="o">-</span><span class="n">MARGIN</span> <span class="o">&lt;=</span> <span class="n">lo</span> <span class="ow">and</span> <span class="n">hi</span> <span class="o">&lt;=</span> <span class="n">MARGIN</span><span class="p">),</span>
+                         <span class="s2">&quot;drops&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">((</span><span class="ow">not</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">lo</span><span class="p">))</span> <span class="ow">and</span> <span class="n">hi</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="n">MARGIN</span> <span class="ow">and</span> <span class="n">lo</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="n">MARGIN</span><span class="p">)}</span>
+        <span class="n">result</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;per_paradigm_acc&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">uid</span><span class="p">:</span> <span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">acc</span><span class="p">[</span><span class="n">uid</span><span class="p">][</span><span class="n">c</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;orig&quot;</span><span class="p">,</span> <span class="s2">&quot;swap&quot;</span><span class="p">)}</span> <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">},</span>
+            <span class="s2">&quot;per_paradigm_delta&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">uid</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">acc</span><span class="p">[</span><span class="n">uid</span><span class="p">][</span><span class="s2">&quot;swap&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">acc</span><span class="p">[</span><span class="n">uid</span><span class="p">][</span><span class="s2">&quot;orig&quot;</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">},</span>
+            <span class="s2">&quot;stratum&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">st</span><span class="p">:</span> <span class="p">{</span><span class="o">**</span><span class="n">strat</span><span class="p">[</span><span class="n">st</span><span class="p">],</span> <span class="s2">&quot;delta_mean&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">strat</span><span class="p">[</span><span class="n">st</span><span class="p">][</span><span class="s2">&quot;delta_mean&quot;</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span>
+                             <span class="s2">&quot;ci&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">strat</span><span class="p">[</span><span class="n">st</span><span class="p">][</span><span class="s2">&quot;ci&quot;</span><span class="p">]]}</span> <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="n">strat</span><span class="p">},</span>
+            <span class="s2">&quot;ans1_rate&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">diag</span><span class="p">[</span><span class="s2">&quot;ans1_rate&quot;</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;poslock_rate&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">diag</span><span class="p">[</span><span class="s2">&quot;poslock_rate&quot;</span><span class="p">],</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s2">&quot;n_calls&quot;</span><span class="p">:</span> <span class="n">diag</span><span class="p">[</span><span class="s2">&quot;n_calls&quot;</span><span class="p">]}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">maj</span><span class="p">(</span><span class="n">pred</span><span class="p">):</span> <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span> <span class="k">if</span> <span class="n">pred</span><span class="p">(</span><span class="n">s</span><span class="p">))</span> <span class="o">&gt;=</span> <span class="mi">2</span>
+    <span class="n">pm</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">]</span>
+    <span class="n">stable</span> <span class="o">=</span> <span class="n">maj</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">pm</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;stratum&quot;</span><span class="p">][</span><span class="s2">&quot;shallow&quot;</span><span class="p">][</span><span class="s2">&quot;within_margin&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">pm</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;stratum&quot;</span><span class="p">][</span><span class="s2">&quot;deep&quot;</span><span class="p">][</span><span class="s2">&quot;within_margin&quot;</span><span class="p">])</span>
+    <span class="n">drops</span> <span class="o">=</span> <span class="n">maj</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">pm</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;stratum&quot;</span><span class="p">][</span><span class="s2">&quot;shallow&quot;</span><span class="p">][</span><span class="s2">&quot;drops&quot;</span><span class="p">]</span> <span class="ow">or</span> <span class="n">pm</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;stratum&quot;</span><span class="p">][</span><span class="s2">&quot;deep&quot;</span><span class="p">][</span><span class="s2">&quot;drops&quot;</span><span class="p">])</span>
+    <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;SWAP-STABLE&quot;</span> <span class="k">if</span> <span class="n">stable</span> <span class="k">else</span> <span class="p">(</span><span class="s2">&quot;SWAP-DROPS&quot;</span> <span class="k">if</span> <span class="n">drops</span> <span class="k">else</span> <span class="s2">&quot;SWAP-INCONCLUSIVE&quot;</span><span class="p">)</span>
+    <span class="n">instr_fail</span> <span class="o">=</span> <span class="n">maj</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">pm</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;poslock_rate&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">POSLOCK_FAIL</span> <span class="ow">and</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pm</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;ans1_rate&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">ANS1_EXTREME</span><span class="p">)</span>
+
+    <span class="c1"># G-freq achieved match gap (from the frozen subs: |Lg10WF(orig) − Lg10WF(sub)| where both known)</span>
+    <span class="n">result</span><span class="p">[</span><span class="s2">&quot;g_freq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">g_freq_report</span><span class="p">()</span>
+    <span class="n">result</span><span class="p">[</span><span class="s2">&quot;readings&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;verdict&quot;</span><span class="p">:</span> <span class="n">verdict</span><span class="p">,</span>
+        <span class="s2">&quot;combined_promotion&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;CANDIDATE (SURVIVES-COVARIATE ∧ SWAP-STABLE) — a later cross-session review writes the claim&quot;</span>
+                               <span class="k">if</span> <span class="n">verdict</span> <span class="o">==</span> <span class="s2">&quot;SWAP-STABLE&quot;</span> <span class="k">else</span>
+                               <span class="p">(</span><span class="s2">&quot;REFUSED (SWAP-DROPS)&quot;</span> <span class="k">if</span> <span class="n">verdict</span> <span class="o">==</span> <span class="s2">&quot;SWAP-DROPS&quot;</span> <span class="k">else</span> <span class="s2">&quot;NEITHER (SWAP-INCONCLUSIVE)&quot;</span><span class="p">)),</span>
+        <span class="s2">&quot;instrument_failure&quot;</span><span class="p">:</span> <span class="n">instr_fail</span><span class="p">,</span>
+        <span class="s2">&quot;coverage_floor&quot;</span><span class="p">:</span> <span class="n">COV_FLOOR</span><span class="p">,</span> <span class="s2">&quot;coverage_excluded&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">UIDS</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">cov_ok</span><span class="p">[</span><span class="n">u</span><span class="p">]],</span>
+        <span class="s2">&quot;margin&quot;</span><span class="p">:</span> <span class="n">MARGIN</span><span class="p">,</span> <span class="s2">&quot;n_per_stratum&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">st</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="n">pm</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;stratum&quot;</span><span class="p">][</span><span class="n">st</span><span class="p">][</span><span class="s2">&quot;n_pairs&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">}</span> <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;shallow&quot;</span><span class="p">,</span> <span class="s2">&quot;deep&quot;</span><span class="p">)},</span>
+        <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;per-model, per-stratum signed Δ̄ with bootstrap CI; ≥2/3 rule; scope-deep carries the test (shallow near ceiling).&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;results.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== BLiMP swap arm — results (s210) ===&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;selected shallow=</span><span class="si">{</span><span class="n">ITEMS</span><span class="p">[</span><span class="s1">&#39;selected&#39;</span><span class="p">][:</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">  deep=</span><span class="si">{</span><span class="n">ITEMS</span><span class="p">[</span><span class="s1">&#39;selected&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">:]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;coverage: &quot;</span> <span class="o">+</span> <span class="s2">&quot;  &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">..=</span><span class="si">{</span><span class="n">cov</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">)</span> <span class="o">+</span>
+          <span class="sa">f</span><span class="s2">&quot;   (floor </span><span class="si">{</span><span class="n">COV_FLOOR</span><span class="si">}</span><span class="s2">; excluded </span><span class="si">{</span><span class="p">[</span><span class="n">u</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">UIDS</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">cov_ok</span><span class="p">[</span><span class="n">u</span><span class="p">]]</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="s1">&#39;NONE&#39;</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">pm</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">[</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">] ans1=</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;ans1_rate&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> poslock=</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;poslock_rate&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> n_calls=</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;n_calls&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">st</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;shallow&quot;</span><span class="p">,</span> <span class="s2">&quot;deep&quot;</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;stratum&quot;</span><span class="p">][</span><span class="n">st</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    </span><span class="si">{</span><span class="n">st</span><span class="si">:</span><span class="s2">7s</span><span class="si">}</span><span class="s2"> Δ̄=</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;delta_mean&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2"> CI[</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;ci&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;ci&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2">] &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;n=</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;n_pairs&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">  within±</span><span class="si">{</span><span class="n">MARGIN</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;within_margin&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> drops=</span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;drops&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    per-paradigm Δacc: &quot;</span> <span class="o">+</span> <span class="s2">&quot;  &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">u</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">][:</span><span class="mi">6</span><span class="p">]</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;per_paradigm_delta&#39;</span><span class="p">][</span><span class="n">u</span><span class="p">]</span><span class="si">:</span><span class="s2">+.3f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">))</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;readings&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- VERDICT ---&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SWAP:&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">],</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;combined_promotion&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;instrument-failure:&quot;</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;instrument_failure&quot;</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">c4</span><span class="p">:</span>
+        <span class="n">c4_diagnostic</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">g_freq_report</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;G-freq (freeze-critic condition 3): achieved per-word |Lg10WF(orig) − Lg10WF(sub)| distribution</span>
+<span class="sd">    over the frozen substitutions (both known in the lexicon). Names whose original is absent from the</span>
+<span class="sd">    lexicon (matched to the pool median) are reported separately.&quot;&quot;&quot;</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">importlib.util</span>
+    <span class="n">spec</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">spec_from_file_location</span><span class="p">(</span><span class="s2">&quot;build_swap&quot;</span><span class="p">,</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;build_swap.py&quot;</span><span class="p">)</span>
+    <span class="n">bs</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">module_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">);</span> <span class="n">spec</span><span class="o">.</span><span class="n">loader</span><span class="o">.</span><span class="n">exec_module</span><span class="p">(</span><span class="n">bs</span><span class="p">)</span>
+    <span class="n">lex</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">load_lexicon</span><span class="p">()</span>
+    <span class="n">gaps</span><span class="p">,</span> <span class="n">name_unmatched</span><span class="p">,</span> <span class="n">n_subs</span> <span class="o">=</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="n">by_type</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ITEMS</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">][</span><span class="n">uid</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">p</span><span class="p">[</span><span class="s2">&quot;subs&quot;</span><span class="p">]:</span>
+                <span class="n">typ</span><span class="p">,</span> <span class="n">orig</span><span class="p">,</span> <span class="n">new</span> <span class="o">=</span> <span class="n">sub</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sub</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">sub</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                <span class="n">n_subs</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">lo</span> <span class="o">=</span> <span class="n">lex</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">orig</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lg&quot;</span><span class="p">);</span> <span class="n">ln</span> <span class="o">=</span> <span class="n">lex</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">new</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lg&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="s2">&quot;name&quot;</span> <span class="ow">and</span> <span class="n">lo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">name_unmatched</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">continue</span>
+                <span class="k">if</span> <span class="n">lo</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">ln</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">g</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lo</span> <span class="o">-</span> <span class="n">ln</span><span class="p">);</span> <span class="n">gaps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="p">);</span> <span class="n">by_type</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+    <span class="n">gaps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">gaps</span><span class="p">)</span> <span class="k">if</span> <span class="n">gaps</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;n_subs&quot;</span><span class="p">:</span> <span class="n">n_subs</span><span class="p">,</span> <span class="s2">&quot;n_gaps_measured&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gaps</span><span class="p">)),</span>
+            <span class="s2">&quot;mean_abs_gap&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">gaps</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;max_abs_gap&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">gaps</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s2">&quot;p95_abs_gap&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">gaps</span><span class="p">,</span> <span class="mi">95</span><span class="p">)),</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s2">&quot;frac_within_0.10&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">((</span><span class="n">gaps</span> <span class="o">&lt;=</span> <span class="mf">0.10</span> <span class="o">+</span> <span class="mf">1e-9</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s2">&quot;name_orig_unmatched&quot;</span><span class="p">:</span> <span class="n">name_unmatched</span><span class="p">,</span>
+            <span class="s2">&quot;mean_gap_by_type&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">t</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="p">)),</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">by_type</span><span class="o">.</span><span class="n">items</span><span class="p">()}}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">c4_diagnostic</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;G-freq-pretraining: swap-set vs orig-set unigram C4 (pretraining-proxy) log-freq, bounded stream.&quot;&quot;&quot;</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">importlib.util</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">_re</span>
+    <span class="n">COOC</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;..&quot;</span> <span class="o">/</span> <span class="s2">&quot;2026-07-08-relation-recovery-taxonomic-proxy&quot;</span> <span class="o">/</span> <span class="s2">&quot;build_cooc_c4.py&quot;</span>
+    <span class="n">spec</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">spec_from_file_location</span><span class="p">(</span><span class="s2">&quot;build_cooc_c4&quot;</span><span class="p">,</span> <span class="n">COOC</span><span class="p">)</span>
+    <span class="n">cooc</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">module_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">);</span> <span class="n">spec</span><span class="o">.</span><span class="n">loader</span><span class="o">.</span><span class="n">exec_module</span><span class="p">(</span><span class="n">cooc</span><span class="p">)</span>
+    <span class="n">C4_MAX_SENTENCES</span> <span class="o">=</span> <span class="mi">3_000_000</span>       <span class="c1"># FROZEN bound (PREREG): enough for a word-set distributional compare</span>
+    <span class="c1"># collect orig vs swap open-class substitute words from the frozen build</span>
+    <span class="n">orig_w</span><span class="p">,</span> <span class="n">swap_w</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(),</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">UIDS</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ITEMS</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">][</span><span class="n">uid</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">p</span><span class="p">[</span><span class="s2">&quot;subs&quot;</span><span class="p">]:</span>
+                <span class="n">orig_w</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">sub</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">());</span> <span class="n">swap_w</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">sub</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="n">orig_w</span> <span class="o">|</span> <span class="n">swap_w</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="p">{</span><span class="n">w</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">targets</span><span class="p">}</span>
+    <span class="n">seen</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">toks</span> <span class="ow">in</span> <span class="n">cooc</span><span class="o">.</span><span class="n">stream_sentences</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">toks</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">counts</span><span class="p">:</span> <span class="n">counts</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">seen</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">seen</span> <span class="o">&gt;=</span> <span class="n">C4_MAX_SENTENCES</span><span class="p">:</span> <span class="k">break</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lg</span><span class="p">(</span><span class="n">ws</span><span class="p">):</span> <span class="k">return</span> <span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">counts</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">ws</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()]</span>
+    <span class="n">lo</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="n">lg</span><span class="p">(</span><span class="n">orig_w</span><span class="p">),</span> <span class="n">lg</span><span class="p">(</span><span class="n">swap_w</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;c4_sentences&quot;</span><span class="p">:</span> <span class="n">seen</span><span class="p">,</span> <span class="s2">&quot;n_orig_words&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">orig_w</span><span class="p">),</span> <span class="s2">&quot;n_swap_words&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">swap_w</span><span class="p">),</span>
+           <span class="s2">&quot;orig_mean_log_c4&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">lo</span><span class="p">)),</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;swap_mean_log_c4&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ls</span><span class="p">)),</span> <span class="mi">4</span><span class="p">),</span>
+           <span class="s2">&quot;gap_orig_minus_swap&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">lo</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">ls</span><span class="p">)),</span> <span class="mi">4</span><span class="p">),</span>
+           <span class="s2">&quot;orig_zero_rate&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">orig_w</span> <span class="k">if</span> <span class="n">counts</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">orig_w</span><span class="p">),</span> <span class="mi">4</span><span class="p">),</span>
+           <span class="s2">&quot;swap_zero_rate&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">swap_w</span> <span class="k">if</span> <span class="n">counts</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">swap_w</span><span class="p">),</span> <span class="mi">4</span><span class="p">)}</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;c4_pretraining_diag.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- G-freq-pretraining (C4 pretraining-proxy, </span><span class="si">%d</span><span class="s2"> sentences) ---&quot;</span> <span class="o">%</span> <span class="n">seen</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  orig mean log-C4 </span><span class="si">{</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;orig_mean_log_c4&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">  swap </span><span class="si">{</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;swap_mean_log_c4&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">  &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;gap(orig−swap) </span><span class="si">{</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;gap_orig_minus_swap&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2">  (zero-rate orig </span><span class="si">{</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;orig_zero_rate&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> / swap </span><span class="si">{</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;swap_zero_rate&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>README.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-17-relational-implicit-reassignment</a> <span class="sep">/</span> <span class="cur">README.md</span></nav>
+<main>
+<header class="page-head">
+<h1>README.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">3.9 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-17-relational-implicit-reassignment/README.md</code></p>
+</header>
+<div class='md'><h1 id="2026-06-17-relational-implicit-reassignment-control-of-option-a">2026-06-17 — relational IMPLICIT-reassignment control (of Option A)</h1>
+<p>The <strong>implicit-reassignment control</strong> of <code>result/relational-spontaneous-recency-a</code> (Option A).
+Option A found both panel models recover a <strong>reassigned</strong> coined term (<code>DAX</code>) by its <strong>most-recent
+binding</strong>, spontaneously → <code>claim/relational-order-sensitive-reassignment</code>. That claim's sharpest
+open caveat (scope limit 4 / revision trigger 2) is that "spontaneous" meant <em>query-not-directed,
+not cue-free</em>: Option A's INTRO told the model the term <em>"was reassigned … in different rounds you
+agreed it referred to different figures."</em></p>
+<p><strong>Question.</strong> When a coined term simply <strong>is</strong> used for different figures across stamped,
+non-contiguous rounds — with <strong>no sentence flagging a reassignment</strong> — and the matcher is asked
+which figure the term refers to (no recency mention), does the model <strong>still</strong> spontaneously recover
+the <strong>most-recent</strong> binding, or does removing the explicit flag collapse latest-binding-wins?</p>
+<p><strong>The sole manipulation.</strong> This run drops exactly one sentence from Option A's INTRO (the "was
+reassigned" flag). The <strong>frozen stimuli roster is byte-identical to Option A</strong> (same <code>stimuli.json</code>
+sha256 <code>432cb57d…</code>; the INTRO text is in <code>common.py</code>'s renderer, not the roster). Everything else —
+figures, rounds, balanced-block geometry, query text, panel, parse, scoring, verdict map, DIRECT
+gate — is held identical. A clean single-factor control.</p>
+<div class="highlight"><pre><span></span><code>Your figures:
+- F3: a crescent moon
+- F4: a stack of three cubes
+- F5: a single teardrop shape
+- F8: a spiral seashell
+
+Here is a record of how you and your partner used the term &quot;DAX&quot; for these figures over several
+rounds. Each line is stamped with the round it was said in (a higher round number means it was said
+more recently). The lines are NOT necessarily listed in round order:
+- Round 9: we agreed &quot;DAX&quot; referred to a crescent moon.
+- Round 4: we agreed &quot;DAX&quot; referred to a single teardrop shape.
+- Round 2: we agreed &quot;DAX&quot; referred to a spiral seashell.
+- Round 7: we agreed &quot;DAX&quot; referred to a stack of three cubes.
+
+Question: Which of your figures does the term &quot;DAX&quot; refer to?
+Reply with exactly one label (F3, F4, F5, F8) and nothing else.
+</code></pre></div>
+
+<p><em>(The Option-A SPONT prompt for the same record was identical except for an extra sentence after the
+first: "The term was reassigned: in different rounds you agreed it referred to different figures.")</em></p>
+<p><strong>Verdict map</strong> (frozen; carried verbatim from Option A): <code>SPONTANEOUS-RECENCY</code> /
+<code>SPONTANEOUS-ANTI-RECENCY</code> / <code>ORDER-SENSITIVE-MIXED</code> = order-sensitive (non-commutative);
+<code>COMMUTATIVE-HERE</code> = order-insensitive without the explicit flag; <code>UNINTERPRETABLE</code> = the DIRECT
+manipulation check failed for that model. Pre-registered claim reading: both <code>SPONTANEOUS-RECENCY</code> →
+the latest-binding-wins behaviour is <strong>not</strong> a wording artifact (strengthens the claim, bounds
+revision trigger 2); both <code>COMMUTATIVE-HERE</code> → the claim <strong>narrows</strong> to the explicit-reassignment
+frame (revision trigger 2 fires). See <code>PREREG.md</code>.</p>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>common.py</code> — instrument, panel, elicitation, cost ledger + hard stop (adapted from Option A; the
+  ONE change is the IMPLICIT INTRO that drops the reassignment flag).</li>
+<li><code>build_trials.py</code> — the two balanced-block rosters + at-build shortcut proofs (no API; unchanged).</li>
+<li><code>fixtures/make_fixtures.py</code> — idealized-reader fixtures certifying the verdict map + shortcut
+  bounds (no API; prompt-text-agnostic, so unchanged).</li>
+<li><code>probe.py</code> — <code>liveness</code> / <code>full</code> (freeze-gated on <code>PREREG.md</code> + frozen sha256).</li>
+<li><code>analyze.py</code> — the pre-registered verdict (no API; unchanged).</li>
+<li><code>PREREG-draft.md</code> → <code>PREREG.md</code> — frozen only <strong>after</strong> an independent pre-run critic GO.</li>
+<li><code>raw/</code> — JSONL per model + cost ledger + analysis.json.</li>
+</ul>
+<h2 id="status">Status</h2>
+<p>Built; stimuli sha256 matches Option A; idealized-reader fixtures pass; <strong>awaiting independent
+pre-run critic GO</strong> before freeze and any finding-bearing call.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

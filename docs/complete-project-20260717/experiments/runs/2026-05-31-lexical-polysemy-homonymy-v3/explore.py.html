@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>explore.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-31-lexical-polysemy-homonymy-v3</a> <span class="sep">/</span> <span class="cur">explore.py</span></nav>
+<main>
+<header class="page-head">
+<h1>explore.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">7.9 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-31-lexical-polysemy-homonymy-v3/explore.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;EXPLORATION (no model calls) — survey the WiC homonym pool under the WordNet</span>
+<span class="sd">lexicographer-file + hypernym stratification rule (gate Q2, the WordNet-preferred form</span>
+<span class="sd">Tom endorsed this round). NOT the frozen build; this is to size the homonym pool and</span>
+<span class="sd">decide N before freezing build_items.py.</span>
+
+<span class="sd">WordNet structural rule (per gate Q2, the preferred WordNet form):</span>
+<span class="sd">  For a (lemma, POS), take its WordNet synsets. Cluster them: two senses are RELATED if</span>
+<span class="sd">  their lowest common hypernym is below the unique-beginner (root) level; DISTINCT if their</span>
+<span class="sd">  only common ancestor is a unique beginner (root) or there is none. A lemma is a</span>
+<span class="sd">  HOMONYM CANDIDATE if its senses fall into &gt;=2 mutually-distinct clusters spanning &gt;=2</span>
+<span class="sd">  lexicographer files (lexnames); a POLYSEME CANDIDATE if all senses form one related</span>
+<span class="sd">  cluster. (The etymology AND-condition the gate names is applied by hand to the candidate</span>
+<span class="sd">  list afterwards, to demote known single-origin metaphorical extensions; this script only</span>
+<span class="sd">  computes the structural signal + WiC item availability.)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">zipfile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="k">for</span> <span class="n">pkg</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;wordnet&quot;</span><span class="p">,</span> <span class="s2">&quot;omw-1.4&quot;</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">nltk</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;corpora/</span><span class="si">{</span><span class="n">pkg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">LookupError</span><span class="p">:</span>
+        <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">pkg</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">wordnet</span> <span class="k">as</span> <span class="n">wn</span>  <span class="c1"># noqa: E402</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">WIC_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;wic&quot;</span><span class="p">))</span>
+<span class="n">ZIP_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">WIC_DIR</span><span class="p">,</span> <span class="s2">&quot;WiC_dataset.zip&quot;</span><span class="p">)</span>
+<span class="n">WIC_URL</span> <span class="o">=</span> <span class="s2">&quot;https://pilehvar.github.io/wic/package/WiC_dataset.zip&quot;</span>
+<span class="n">EXPECTED_ZIP_SHA256</span> <span class="o">=</span> <span class="s2">&quot;f1a2fb67d903c5b9b1180f1035d4228f7c0254e8f5f868d556235457046bd4b2&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sha256_file</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">20</span><span class="p">),</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="n">h</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">h</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ensure_wic</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ZIP_PATH</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">WIC_DIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;downloading WiC -&gt; </span><span class="si">{</span><span class="n">ZIP_PATH</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">WIC_URL</span><span class="p">,</span> <span class="n">ZIP_PATH</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">sha256_file</span><span class="p">(</span><span class="n">ZIP_PATH</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WiC_dataset.zip sha256 = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">h</span> <span class="o">==</span> <span class="n">EXPECTED_ZIP_SHA256</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;sha256 mismatch! got </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">extract</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">WIC_DIR</span><span class="p">,</span> <span class="s2">&quot;extracted&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">extract</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">ZIP_PATH</span><span class="p">)</span> <span class="k">as</span> <span class="n">z</span><span class="p">:</span>
+            <span class="n">z</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">extract</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">extract</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_wic</span><span class="p">(</span><span class="n">extract</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return list of items: dict(target, pos, idx1, idx2, ctx1, ctx2, gold, split).&quot;&quot;&quot;</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">split</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;train&quot;</span><span class="p">,</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">):</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">extract</span><span class="p">,</span> <span class="n">split</span><span class="p">,</span> <span class="n">split</span><span class="p">)</span>
+        <span class="n">data_f</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="s2">&quot;.data.txt&quot;</span>
+        <span class="n">gold_f</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="s2">&quot;.gold.txt&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">data_f</span><span class="p">):</span>
+            <span class="c1"># some zips nest differently; search</span>
+            <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">extract</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">fn</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">split</span><span class="si">}</span><span class="s2">.data.txt&quot;</span><span class="p">:</span>
+                        <span class="n">data_f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">fn</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">split</span><span class="si">}</span><span class="s2">.gold.txt&quot;</span><span class="p">:</span>
+                        <span class="n">gold_f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">data_f</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">df</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">gold_f</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">gf</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">dl</span><span class="p">,</span> <span class="n">gl</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">gf</span><span class="p">):</span>
+                <span class="n">p</span> <span class="o">=</span> <span class="n">dl</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">tw</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+                <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+                <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="n">tw</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="n">pos</span><span class="p">,</span> <span class="s2">&quot;idx1&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">i1</span><span class="p">),</span>
+                              <span class="s2">&quot;idx2&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">i2</span><span class="p">),</span> <span class="s2">&quot;ctx1&quot;</span><span class="p">:</span> <span class="n">c1</span><span class="p">,</span> <span class="s2">&quot;ctx2&quot;</span><span class="p">:</span> <span class="n">c2</span><span class="p">,</span>
+                              <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="n">gl</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="s2">&quot;split&quot;</span><span class="p">:</span> <span class="n">split</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">items</span>
+
+
+<span class="n">POS_MAP</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;N&quot;</span><span class="p">:</span> <span class="n">wn</span><span class="o">.</span><span class="n">NOUN</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="n">wn</span><span class="o">.</span><span class="n">VERB</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">root_distinct</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;True if s1,s2 share no hypernym below a unique-beginner (root) synset.&quot;&quot;&quot;</span>
+    <span class="n">lch</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="n">lowest_common_hypernyms</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">lch</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">h</span><span class="o">.</span><span class="n">min_depth</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">lch</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">cluster_synsets</span><span class="p">(</span><span class="n">synsets</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Union-find: merge senses that are RELATED (share a non-root hypernym).&quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">synsets</span><span class="p">)</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">while</span> <span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">!=</span> <span class="n">x</span><span class="p">:</span>
+            <span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]]</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">union</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="n">parent</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">a</span><span class="p">)]</span> <span class="o">=</span> <span class="n">find</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">root_distinct</span><span class="p">(</span><span class="n">synsets</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">synsets</span><span class="p">[</span><span class="n">j</span><span class="p">]):</span>
+                <span class="n">union</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+    <span class="n">groups</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">groups</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">groups</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">classify</span><span class="p">(</span><span class="n">lemma</span><span class="p">,</span> <span class="n">pos_tag</span><span class="p">):</span>
+    <span class="n">wn_pos</span> <span class="o">=</span> <span class="n">POS_MAP</span><span class="p">[</span><span class="n">pos_tag</span><span class="p">]</span>
+    <span class="n">syns</span> <span class="o">=</span> <span class="n">wn</span><span class="o">.</span><span class="n">synsets</span><span class="p">(</span><span class="n">lemma</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">wn_pos</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">syns</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;verdict&quot;</span><span class="p">:</span> <span class="s2">&quot;MONOSEME_OR_ABSENT&quot;</span><span class="p">,</span> <span class="s2">&quot;n_syn&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">syns</span><span class="p">),</span>
+                <span class="s2">&quot;n_clusters&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">syns</span><span class="p">),</span> <span class="s2">&quot;lexfiles&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">({</span><span class="n">s</span><span class="o">.</span><span class="n">lexname</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">syns</span><span class="p">})}</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">cluster_synsets</span><span class="p">(</span><span class="n">syns</span><span class="p">)</span>
+    <span class="n">lexfiles_per_cluster</span> <span class="o">=</span> <span class="p">[</span><span class="nb">sorted</span><span class="p">({</span><span class="n">syns</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">lexname</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">})</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">clusters</span><span class="p">]</span>
+    <span class="n">all_lexfiles</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">({</span><span class="n">s</span><span class="o">.</span><span class="n">lexname</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">syns</span><span class="p">})</span>
+    <span class="n">multi</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">clusters</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">({</span><span class="n">lf</span> <span class="k">for</span> <span class="n">cl</span> <span class="ow">in</span> <span class="n">lexfiles_per_cluster</span> <span class="k">for</span> <span class="n">lf</span> <span class="ow">in</span> <span class="n">cl</span><span class="p">})</span> <span class="o">&gt;=</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;verdict&quot;</span><span class="p">:</span> <span class="s2">&quot;HOMONYM_CAND&quot;</span> <span class="k">if</span> <span class="n">multi</span> <span class="k">else</span> <span class="s2">&quot;POLYSEME_CAND&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;n_syn&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">syns</span><span class="p">),</span> <span class="s2">&quot;n_clusters&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">clusters</span><span class="p">),</span>
+            <span class="s2">&quot;lexfiles&quot;</span><span class="p">:</span> <span class="n">all_lexfiles</span><span class="p">,</span>
+            <span class="s2">&quot;cluster_example_synsets&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="n">syns</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">[:</span><span class="mi">3</span><span class="p">]]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">clusters</span><span class="p">]}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">extract</span> <span class="o">=</span> <span class="n">ensure_wic</span><span class="p">()</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">load_wic</span><span class="p">(</span><span class="n">extract</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span><span class="si">}</span><span class="s2"> WiC items&quot;</span><span class="p">)</span>
+    <span class="n">by_gold</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">by_gold</span><span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gold balance:&quot;</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">by_gold</span><span class="p">))</span>
+
+    <span class="c1"># availability of T/F items per (lemma, pos)</span>
+    <span class="n">avail</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">avail</span><span class="p">[(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">])][</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># classify each (lemma,pos) that has &gt;=1 F and &gt;=1 T item</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">lemma</span><span class="p">,</span> <span class="n">pos</span><span class="p">),</span> <span class="n">cnt</span> <span class="ow">in</span> <span class="n">avail</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">classify</span><span class="p">(</span><span class="n">lemma</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+        <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;lemma&quot;</span><span class="p">:</span> <span class="n">lemma</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="n">pos</span><span class="p">,</span> <span class="s2">&quot;nT&quot;</span><span class="p">:</span> <span class="n">cnt</span><span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">],</span> <span class="s2">&quot;nF&quot;</span><span class="p">:</span> <span class="n">cnt</span><span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">],</span>
+                     <span class="o">**</span><span class="n">c</span><span class="p">})</span>
+
+    <span class="n">homo</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;HOMONYM_CAND&quot;</span><span class="p">]</span>
+    <span class="n">poly</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;POLYSEME_CAND&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">(lemma,pos) keys with &gt;=1 item: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  HOMONYM_CAND : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">homo</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  POLYSEME_CAND: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># the binding resource: homonym candidates with BOTH a T and an F item</span>
+    <span class="n">homo_both</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">homo</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;nT&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;nF&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">],</span>
+                       <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="o">-</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;nT&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;nF&quot;</span><span class="p">]))</span>
+    <span class="n">poly_both</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">poly</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;nT&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;nF&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">HOMONYM_CAND with &gt;=1 T AND &gt;=1 F item: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">homo_both</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  total F items in those: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nF&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">homo_both</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;T items: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nT&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">homo_both</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;POLYSEME_CAND with &gt;=1 T AND &gt;=1 F item: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">poly_both</span><span class="p">)</span><span class="si">}</span><span class="s2"> &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;(F=</span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nF&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">poly_both</span><span class="p">)</span><span class="si">}</span><span class="s2">, T=</span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nT&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">poly_both</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- all </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">homo_both</span><span class="p">)</span><span class="si">}</span><span class="s2"> HOMONYM candidates (lemma/pos: nT/nF, &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;clusters, lexfiles) ---&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">homo_both</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;lemma&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">14s</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">  T=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nT&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2"> F=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;nF&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2">  &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;clusters=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;n_clusters&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> syn=</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;n_syn&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">2d</span><span class="si">}</span><span class="s2">  &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;lexfiles&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># write a candidate CSV for the by-hand etymology review</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">,</span> <span class="s2">&quot;candidates.csv&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="s2">&quot;verdict&quot;</span><span class="p">,</span> <span class="s2">&quot;nT&quot;</span><span class="p">,</span> <span class="s2">&quot;nF&quot;</span><span class="p">,</span>
+                                          <span class="s2">&quot;n_syn&quot;</span><span class="p">,</span> <span class="s2">&quot;n_clusters&quot;</span><span class="p">,</span> <span class="s2">&quot;lexfiles&quot;</span><span class="p">])</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">],</span> <span class="o">-</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;nT&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;nF&quot;</span><span class="p">]))):</span>
+            <span class="n">w</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s2">&quot;lemma&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">],</span> <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">],</span> <span class="s2">&quot;verdict&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;nT&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;nT&quot;</span><span class="p">],</span> <span class="s2">&quot;nF&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;nF&quot;</span><span class="p">],</span> <span class="s2">&quot;n_syn&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;n_syn&quot;</span><span class="p">],</span>
+                        <span class="s2">&quot;n_clusters&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;n_clusters&quot;</span><span class="p">],</span> <span class="s2">&quot;lexfiles&quot;</span><span class="p">:</span> <span class="s2">&quot;|&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;lexfiles&quot;</span><span class="p">])})</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">wrote </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

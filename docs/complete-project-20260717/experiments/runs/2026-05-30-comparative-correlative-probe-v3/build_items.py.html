@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_items.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-30-comparative-correlative-probe-v3</a> <span class="sep">/</span> <span class="cur">build_items.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_items.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">11.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-30-comparative-correlative-probe-v3/build_items.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Build + freeze the embedded-CC (operator-scope) comparative-correlative v3 item set</span>
+<span class="sd">(2026-05-30).</span>
+
+<span class="sd">Pre-registration (charter s8): EMITS experiments/data/comparative-correlative-v3/items.csv,</span>
+<span class="sd">run + committed BEFORE any probe call. Operationalizes the embedded-CC arm that the v2</span>
+<span class="sd">design DEFERRED, under the RATIFIED difficulty gate</span>
+<span class="sd">(decisions/resolved/cc-v2-difficulty-operationalization, 2026-05-29: &quot;...defer embedded-CC</span>
+<span class="sd">to v3...&quot;). No new decision. Behavioral NLI + forced-choice, temperature 0, no logprobs -&gt;</span>
+<span class="sd">existing 3-family panel. Reuses the v1/v2 instrument verbatim (NLI hypothesis is ALWAYS the</span>
+<span class="sd">POSITIVE covariation &quot;As &lt;dim1&gt; increases, &lt;dim2&gt; increases.&quot;; FC asks INCREASE / DECREASE /</span>
+<span class="sd">UNDETERMINED for dim2 as dim1 increases).</span>
+
+<span class="sd">WHY v3 (the embedding / operator-scope wedge)</span>
+<span class="sd">---------------------------------------------</span>
+<span class="sd">v1 + v2 found the CC covariation reading robust AT/ABOVE ceiling, incl. multi-step</span>
+<span class="sd">composition. Both probed the CC as an ASSERTED relation. v3 asks the sharper &quot;meaning vs</span>
+<span class="sd">template&quot; question: when the very same `the more X, the more Y` is placed UNDER an operator</span>
+<span class="sd">that cancels or suspends its assertion -- sentential NEGATION (&quot;it is not the case that...&quot;)</span>
+<span class="sd">or EPISTEMIC hedging (&quot;it remains unproven whether...&quot;) -- does the model track the operator</span>
+<span class="sd">scope (withhold the bare covariation direction), or does it fire a surface</span>
+<span class="sd">&quot;the-more...the-more -&gt; INCREASE&quot; template regardless? A template-firer affirms the positive</span>
+<span class="sd">direction everywhere; a model deploying the covariation MEANING + operator scope withholds it</span>
+<span class="sd">under negation/modality.</span>
+
+<span class="sd">ARMS (graded ladder; difficulty + golds frozen here BEFORE the run)</span>
+<span class="sd">------------------------------------------------------------------</span>
+<span class="sd">  baseline-pos   (d1): plain POSITIVE CC, asserted. correct = INCREASE / entail. [ceiling anchor]</span>
+<span class="sd">  baseline-inv   (d1): plain INVERSE CC, asserted. correct = DECREASE / contradiction.</span>
+<span class="sd">                       [DIRECTION anchor -- guards against an INCREASE-bias readout, the gap</span>
+<span class="sd">                        v2&#39;s set lacked (v2 NIT: no undetermined/decrease-discriminating arm)]</span>
+<span class="sd">  negation       (d2): negated POSITIVE CC (&quot;It is not the case that the more X, the more Y&quot;).</span>
+<span class="sd">                       THE key manipulation. The asserted positive covariation is DENIED.</span>
+<span class="sd">                       FC correct = UNDETERMINED (denial of &quot;increase&quot; does not assert a</span>
+<span class="sd">                       direction); NLI correct = CONTRADICTION (2) -- the premise denies</span>
+<span class="sd">                       exactly the positive hypothesis.</span>
+<span class="sd">  modal-epistemic(d2): epistemically-HEDGED positive CC (&quot;It remains unproven whether the</span>
+<span class="sd">                       more X, the more Y&quot;). The relation is presented as merely possible /</span>
+<span class="sd">                       unconfirmed, NOT asserted. FC correct = UNDETERMINED; NLI correct =</span>
+<span class="sd">                       NEUTRAL (1) -- &quot;X debates whether P&quot; does not entail P.</span>
+<span class="sd">  negation-inv   (d3): negated INVERSE CC (&quot;It is not the case that the more X, the LESS Y&quot;).</span>
+<span class="sd">                       CONTROL against a shallow &quot;see &#39;not&#39; -&gt; UNDETERMINED&quot; heuristic:</span>
+<span class="sd">                       negating a DECREASE does NOT entail an increase. FC correct =</span>
+<span class="sd">                       UNDETERMINED; NLI correct = NEUTRAL (1) (positive hypothesis neither</span>
+<span class="sd">                       entailed nor contradicted). Combined with `negation` (NLI gold = 2,</span>
+<span class="sd">                       not 1) this discriminates operator-scope tracking from a flat</span>
+<span class="sd">                       not-&gt;undetermined rule.</span>
+
+<span class="sd">INDICATOR / READING RULE (RATIFIED report-the-rate; no manufactured pass bar)</span>
+<span class="sd">  Per arm x model x instrument: operator-correct rate (pred == the per-arm, per-instrument</span>
+<span class="sd">  gold below). Headline (report-the-rate):</span>
+<span class="sd">    - the EMBEDDING-CANCELLATION rate = fraction of embedded items (negation + modal +</span>
+<span class="sd">      negation-inv) where the model does NOT answer the bare positive direction</span>
+<span class="sd">      (FC != INCREASE / NLI != 0) -- the off-template signal;</span>
+<span class="sd">    - the per-arm operator-correct rate;</span>
+<span class="sd">    - the degradation SHAPE across d1&lt;d2&lt;d3.</span>
+<span class="sd">  FC is the PRIMARY instrument for the embedded arms (FC gold = UNDETERMINED is uniform and</span>
+<span class="sd">  least gold-contestable). NLI is secondary (its per-arm gold 2/1/1 encodes the finer</span>
+<span class="sd">  entailment status; the negation NLI gold = contradiction is defensible but pragmatically</span>
+<span class="sd">  debatable -- see the run README NIT). No threshold tuned post-run.</span>
+
+<span class="sd">HUMAN ANCHOR: pending / internal-contrast-only (Option-4 logic, same as v2). The Scivetti CC</span>
+<span class="sd">subset has NO negated / hedged CC items -&gt; no in-repo human norm on the embedded arms -&gt; NO</span>
+<span class="sd">human-level claim on them. The baseline arms keep the v1/v2 phenomenon-level Scivetti CC</span>
+<span class="sd">anchor. No human label invented. (Tracked by decisions/open/conflicting-cue-human-anchor.)</span>
+
+<span class="sd">Run: python3 build_items.py   (no API; writes the frozen CSV)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># Each row: (item_id, arm, difficulty, sentence, dim1, dim2, nli_gold, fc_gold)</span>
+<span class="c1">#   nli_gold in {&quot;0&quot; entail, &quot;1&quot; neutral, &quot;2&quot; contradiction}  (for the POSITIVE hypothesis</span>
+<span class="c1">#     &quot;As &lt;dim1&gt; increases, &lt;dim2&gt; increases.&quot;)</span>
+<span class="c1">#   fc_gold  in {&quot;INCREASE&quot;,&quot;DECREASE&quot;,&quot;UNDETERMINED&quot;}</span>
+<span class="c1"># The two golds are set INDEPENDENTLY per row (the embedded arms decouple them): see arm doc.</span>
+<span class="n">ROWS_RAW</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># ---- baseline-pos (d1): plain positive CC, asserted -&gt; entail / INCREASE ----</span>
+    <span class="p">(</span><span class="s2">&quot;bpos-meeting&quot;</span><span class="p">,</span> <span class="s2">&quot;baseline-pos&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The longer the meeting dragged on, the more restless the staff became.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the meeting&#39;s length&quot;</span><span class="p">,</span> <span class="s2">&quot;the staff&#39;s restlessness&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;INCREASE&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;bpos-tower&quot;</span><span class="p">,</span> <span class="s2">&quot;baseline-pos&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The taller the tower grew, the more tourists it attracted.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the tower&#39;s height&quot;</span><span class="p">,</span> <span class="s2">&quot;the number of tourists&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;INCREASE&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;bpos-room&quot;</span><span class="p">,</span> <span class="s2">&quot;baseline-pos&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The darker the room got, the harder it became to read.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the room&#39;s darkness&quot;</span><span class="p">,</span> <span class="s2">&quot;the difficulty of reading&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;INCREASE&quot;</span><span class="p">),</span>
+
+    <span class="c1"># ---- baseline-inv (d1): plain inverse CC, asserted -&gt; contradiction / DECREASE ----</span>
+    <span class="p">(</span><span class="s2">&quot;binv-shelf&quot;</span><span class="p">,</span> <span class="s2">&quot;baseline-inv&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The higher the shelf, the fewer people could reach it.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the shelf&#39;s height&quot;</span><span class="p">,</span> <span class="s2">&quot;the number of people who could reach it&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;DECREASE&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;binv-water&quot;</span><span class="p">,</span> <span class="s2">&quot;baseline-inv&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The colder the water became, the less the children wanted to swim.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the water&#39;s coldness&quot;</span><span class="p">,</span> <span class="s2">&quot;the children&#39;s desire to swim&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;DECREASE&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;binv-fog&quot;</span><span class="p">,</span> <span class="s2">&quot;baseline-inv&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;The thicker the fog grew, the slower the traffic moved.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the fog&#39;s thickness&quot;</span><span class="p">,</span> <span class="s2">&quot;the traffic&#39;s speed&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;DECREASE&quot;</span><span class="p">),</span>
+
+    <span class="c1"># ---- negation (d2): negated POSITIVE CC -&gt; the positive relation is DENIED.</span>
+    <span class="c1">#      FC = UNDETERMINED ; NLI = contradiction (premise denies the positive hypothesis) ----</span>
+    <span class="p">(</span><span class="s2">&quot;neg-team&quot;</span><span class="p">,</span> <span class="s2">&quot;negation&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;It is not true that the more the team trained, the better they performed.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the amount the team trained&quot;</span><span class="p">,</span> <span class="s2">&quot;the team&#39;s performance&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;neg-book&quot;</span><span class="p">,</span> <span class="s2">&quot;negation&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;It is not the case that the longer the book, the more readers enjoyed it.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the book&#39;s length&quot;</span><span class="p">,</span> <span class="s2">&quot;readers&#39; enjoyment&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;neg-ads&quot;</span><span class="p">,</span> <span class="s2">&quot;negation&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;It is simply false that the more the product was advertised, the more it sold.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the amount of advertising&quot;</span><span class="p">,</span> <span class="s2">&quot;the product&#39;s sales&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;neg-push&quot;</span><span class="p">,</span> <span class="s2">&quot;negation&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;Contrary to the coach&#39;s claim, it was not true that the harder the players pushed, the more games they won.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;how hard the players pushed&quot;</span><span class="p">,</span> <span class="s2">&quot;the number of games they won&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+
+    <span class="c1"># ---- modal-epistemic (d2): hedged positive CC -&gt; relation merely possible, NOT asserted.</span>
+    <span class="c1">#      FC = UNDETERMINED ; NLI = neutral (does not entail the positive) ----</span>
+    <span class="p">(</span><span class="s2">&quot;mod-exercise&quot;</span><span class="p">,</span> <span class="s2">&quot;modal-epistemic&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;It remains unproven whether the more people exercise, the longer they live.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the amount people exercise&quot;</span><span class="p">,</span> <span class="s2">&quot;their lifespan&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;mod-reading&quot;</span><span class="p">,</span> <span class="s2">&quot;modal-epistemic&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;Researchers still debate whether the more a child reads, the larger their vocabulary grows.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the amount a child reads&quot;</span><span class="p">,</span> <span class="s2">&quot;the child&#39;s vocabulary size&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;mod-dose&quot;</span><span class="p">,</span> <span class="s2">&quot;modal-epistemic&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;No one has confirmed whether the higher the dose, the faster the recovery.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the dose&quot;</span><span class="p">,</span> <span class="s2">&quot;the recovery speed&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+
+    <span class="c1"># ---- negation-inv (d3): negated INVERSE CC -&gt; negating a DECREASE does NOT entail an</span>
+    <span class="c1">#      increase. CONTROL vs a flat &quot;see &#39;not&#39; -&gt; UNDETERMINED&quot; rule.</span>
+    <span class="c1">#      FC = UNDETERMINED ; NLI = neutral (positive hypothesis neither entailed nor denied) ----</span>
+    <span class="p">(</span><span class="s2">&quot;negi-practice&quot;</span><span class="p">,</span> <span class="s2">&quot;negation-inv&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;It is not the case that the more she practiced, the worse she played.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the amount she practiced&quot;</span><span class="p">,</span> <span class="s2">&quot;how well she played&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;negi-spend&quot;</span><span class="p">,</span> <span class="s2">&quot;negation-inv&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;It isn&#39;t true that the more the company spent, the less it earned.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the company&#39;s spending&quot;</span><span class="p">,</span> <span class="s2">&quot;the company&#39;s earnings&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;negi-alarm&quot;</span><span class="p">,</span> <span class="s2">&quot;negation-inv&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;It was never the case that the louder the alarm, the fewer people ignored it.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;the alarm&#39;s loudness&quot;</span><span class="p">,</span> <span class="s2">&quot;the number of people who ignored it&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># Cross-check: the NLI hypothesis is ALWAYS the positive covariation, so a positive-asserted</span>
+<span class="c1"># CC -&gt; 0, an inverse-asserted CC -&gt; 2; embedded arms decouple (negation of positive -&gt; 2;</span>
+<span class="c1"># modal/negated-inverse -&gt; 1). FC gold for every embedded arm is UNDETERMINED. Assert the</span>
+<span class="c1"># shape so a typo cannot silently ship a wrong gold.</span>
+<span class="n">ARM_FC</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;baseline-pos&quot;</span><span class="p">:</span> <span class="s2">&quot;INCREASE&quot;</span><span class="p">,</span> <span class="s2">&quot;baseline-inv&quot;</span><span class="p">:</span> <span class="s2">&quot;DECREASE&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;negation&quot;</span><span class="p">:</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">,</span> <span class="s2">&quot;modal-epistemic&quot;</span><span class="p">:</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;negation-inv&quot;</span><span class="p">:</span> <span class="s2">&quot;UNDETERMINED&quot;</span><span class="p">}</span>
+<span class="n">ARM_NLI</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;baseline-pos&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;baseline-inv&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;negation&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;modal-epistemic&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;negation-inv&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">rows</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">iid</span><span class="p">,</span> <span class="n">arm</span><span class="p">,</span> <span class="n">diff</span><span class="p">,</span> <span class="n">sent</span><span class="p">,</span> <span class="n">dim1</span><span class="p">,</span> <span class="n">dim2</span><span class="p">,</span> <span class="n">nli_gold</span><span class="p">,</span> <span class="n">fc_gold</span><span class="p">)</span> <span class="ow">in</span> <span class="n">ROWS_RAW</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">fc_gold</span> <span class="o">==</span> <span class="n">ARM_FC</span><span class="p">[</span><span class="n">arm</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">iid</span><span class="si">}</span><span class="s2">: fc_gold </span><span class="si">{</span><span class="n">fc_gold</span><span class="si">}</span><span class="s2"> != arm default </span><span class="si">{</span><span class="n">ARM_FC</span><span class="p">[</span><span class="n">arm</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">assert</span> <span class="n">nli_gold</span> <span class="o">==</span> <span class="n">ARM_NLI</span><span class="p">[</span><span class="n">arm</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">iid</span><span class="si">}</span><span class="s2">: nli_gold </span><span class="si">{</span><span class="n">nli_gold</span><span class="si">}</span><span class="s2"> != arm default </span><span class="si">{</span><span class="n">ARM_NLI</span><span class="p">[</span><span class="n">arm</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">hyp</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;As </span><span class="si">{</span><span class="n">dim1</span><span class="si">}</span><span class="s2"> increases, </span><span class="si">{</span><span class="n">dim2</span><span class="si">}</span><span class="s2"> increases.&quot;</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item_id</span><span class="o">=</span><span class="n">iid</span><span class="p">,</span> <span class="n">arm</span><span class="o">=</span><span class="n">arm</span><span class="p">,</span> <span class="n">difficulty</span><span class="o">=</span><span class="n">diff</span><span class="p">,</span> <span class="n">sentence</span><span class="o">=</span><span class="n">sent</span><span class="p">,</span>
+                        <span class="n">dim1</span><span class="o">=</span><span class="n">dim1</span><span class="p">,</span> <span class="n">dim2</span><span class="o">=</span><span class="n">dim2</span><span class="p">,</span> <span class="n">nli_hypothesis</span><span class="o">=</span><span class="n">hyp</span><span class="p">,</span>
+                        <span class="n">nli_gold</span><span class="o">=</span><span class="n">nli_gold</span><span class="p">,</span> <span class="n">fc_gold</span><span class="o">=</span><span class="n">fc_gold</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+                                       <span class="s2">&quot;comparative-correlative-v3&quot;</span><span class="p">,</span> <span class="s2">&quot;items.csv&quot;</span><span class="p">))</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">rs</span> <span class="o">=</span> <span class="n">rows</span><span class="p">()</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">,</span> <span class="s2">&quot;arm&quot;</span><span class="p">,</span> <span class="s2">&quot;difficulty&quot;</span><span class="p">,</span> <span class="s2">&quot;sentence&quot;</span><span class="p">,</span> <span class="s2">&quot;dim1&quot;</span><span class="p">,</span> <span class="s2">&quot;dim2&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;nli_hypothesis&quot;</span><span class="p">,</span> <span class="s2">&quot;nli_gold&quot;</span><span class="p">,</span> <span class="s2">&quot;fc_gold&quot;</span><span class="p">]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()[:</span><span class="mi">16</span><span class="p">]</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+    <span class="n">by</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span><span class="si">}</span><span class="s2"> items -&gt; </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  arms: </span><span class="si">{</span><span class="nb">dict</span><span class="p">(</span><span class="n">by</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  (per-arm nli_gold/fc_gold cross-checked against ARM_NLI/ARM_FC)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  sha256[:16] = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">  (freeze hash; record in design + README)&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

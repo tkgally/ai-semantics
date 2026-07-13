@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-10-blimp-forced-choice-sweep</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">11.2 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-10-blimp-forced-choice-sweep/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-blimp-forced-choice-sweep-a3b-s205">PREREG — BLiMP forced-choice sweep (A3b, s205)</h1>
+<p><strong>Frozen s205, 2026-07-10, BEFORE any model call.</strong> Design:
+<a href="../../designs/blimp-forced-choice-sweep-v1.md.html"><code>design/blimp-forced-choice-sweep-v1</code></a>. Gates <strong>RATIFIED
+s205</strong>: <a href="../../../wiki/decisions/resolved/blimp-forced-choice-sweep-design.md.html"><code>decisions/resolved/blimp-forced-choice-sweep-design</code></a>
+— <strong>Q1-B / Q2-A / Q3-A</strong>, plus binding condition <strong>C8</strong>. This file freezes the paradigm list, the depth
+strata, the human anchor, the elicitation, the verdict map with numeric thresholds, and the anti-cheat
+fence. <strong>Nothing below may be touched after any accuracy is observed.</strong></p>
+<h2 id="the-question">The question</h2>
+<p>On a <strong>human-agreement-anchored</strong> behavioral 2AFC sweep of BLiMP English grammatical minimal pairs, run
+on the panel:</p>
+<ul>
+<li><strong>R1 (PRIMARY, human-anchored — DESCRIPTIVE/DIRECTIONAL ONLY per C8+F2):</strong> does each model's
+  per-paradigm forced-choice accuracy track BLiMP's per-paradigm human-agreement profile (<code>total_mean</code>)
+  across the 40 selected paradigms (Spearman ρ_prof, per model)? "Are the models hard exactly where
+  people are hard?"</li>
+<li><strong>R2 (SECONDARY, STRICTLY within-panel):</strong> does forced-choice error concentrate on the
+  structurally-deep paradigms (scope + island) relative to the shallow-local ones (adjacent agreement)?</li>
+<li><strong>R2h (human-anchored sub-reading):</strong> is the panel's shallow-minus-deep accuracy gap <strong>larger</strong> than
+  the human shallow-minus-deep agreement gap (the panel finds deep contrasts <em>disproportionately</em> harder
+  than humans do)?</li>
+</ul>
+<p><strong>Anchor (Q3-A):</strong> the result carries <code>anchors: resource/blimp</code> — a genuine <strong>human-comparison</strong> line,
+NOT internal-contrast-only. Absolute accuracy is a <strong>contamination upper bound</strong>, never a headline.</p>
+<h2 id="frozen-instrument-built-committed-by-preppy-before-any-model-call">Frozen instrument (built + committed by <code>prep.py</code> BEFORE any model call)</h2>
+<ul>
+<li><strong>Selection (Q1-B via the maximal-defensible WHOLE-CATEGORY rule; F6-sharp + the ratification vote's
+  mechanical anti-cherry-pick condition).</strong> Select <strong>every paradigm in the on-axis <code>linguistics_term</code>
+  categories</strong>; assign each to a depth stratum by a <strong>structural locality rule</strong>; <strong>no within-category /
+  within-stratum hand-picking</strong>. Selection references <strong>only</strong> BLiMP's own structural metadata
+  (<code>paradigm_meta.json</code>, each file's <code>linguistics_term</code>/<code>field</code>, fetched firsthand), <strong>never the
+  human-agreement values</strong> — human-agreement-BLIND by construction. <strong>40 paradigms</strong> result (well above
+  F2's ≥16 floor). Exact list + sha256 pins + stratum + human anchor in
+  <a href="paradigms.json.html"><code>paradigms.json</code></a> / <a href="items.json.html"><code>items.json</code></a>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>stratum (depth rank)</th>
+<th>n</th>
+<th>on-axis category source</th>
+<th>human agreement range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>local</strong> (1, shallow — adjacent, n-gram-detectable)</td>
+<td>12</td>
+<td><code>determiner_noun_agreement</code> (8) + regular/irregular <code>subject_verb_agreement</code> (4)</td>
+<td>0.850–0.960</td>
+</tr>
+<tr>
+<td><strong>medium</strong> (2 — agreement across an intervener)</td>
+<td>2</td>
+<td><code>distractor_agreement_*</code> (the <code>distractor_</code> split of <code>subject_verb_agreement</code>)</td>
+<td>0.810–0.857</td>
+</tr>
+<tr>
+<td><strong>scope</strong> (3, deep — c-command polarity/quantifier licensing)</td>
+<td>11</td>
+<td><code>npi_licensing</code> (7) + <code>quantifiers</code> (4)</td>
+<td>0.720–0.980</td>
+</tr>
+<tr>
+<td><strong>island</strong> (4, deep — long-distance filler-gap / island)</td>
+<td>15</td>
+<td><code>island_effects</code> (8) + <code>filler_gap_dependency</code> (7)</td>
+<td>0.606–0.990</td>
+</tr>
+</tbody>
+</table>
+<p><code>subject_verb_agreement</code> is split by BLiMP's own <code>distractor_</code> marker — a <strong>structural</strong> criterion (an
+  intervener between controller and verb), not a hand-pick.</p>
+<ul>
+<li>
+<p><strong>Excluded categories (off-axis, with structural reasons — F6).</strong> <code>binding</code> (referential-dependency,
+  different axis), <code>anaphor_agreement</code> (binding-domain), <code>argument_structure</code> (lexical-semantic
+  selection), <code>s-selection</code> (animacy selectional restriction), <code>control_raising</code> (A-movement/PRO +
+  there-raising confound), <code>irregular_forms</code> (morphological-lexical), <code>ellipsis</code> (deletion licensing).
+  Full reasons in <a href="paradigms.json.html"><code>paradigms.json</code></a>.</p>
+</li>
+<li>
+<p><strong>Two paradigms with a human-agreement row but NO data file on master (404) are excluded for
+  data-availability (structural), not for their values:</strong> <code>coordinate_structure_constraint_subject_extraction</code>
+  (human 0.514) and <code>wh_questions_object_gap_long_distance</code> (0.47). <strong>Limitation flagged:</strong> both happen
+  to be low-agreement, so their absence removes 2 of the hardest human points — <strong>mildly conservative
+  for R1</strong> (an alignment reading is slightly <em>harder</em> to obtain without the low-human tail, not easier).</p>
+</li>
+<li>
+<p><strong>Items.</strong> SEED 20260710. For each paradigm, a fixed, per-paradigm-seeded subsample of <strong>N=30 minimal
+  pairs</strong> from its 1,000 (deterministic <code>random.Random(sha256(SEED-uid))</code>). Each pair
+  <code>(sentence_good, sentence_bad)</code>. Full 1,000-pair <code>.jsonl</code> files are sha256-pinned in
+  <a href="paradigms.json.html"><code>paradigms.json</code></a> (<code>sha256_full</code>) but NOT committed (recipe-not-corpus, CC-BY); the
+  frozen 30-pair subsample IS committed in <a href="items.json.html"><code>items.json</code></a>.</p>
+</li>
+<li>
+<p><strong>Human anchor.</strong> <code>total_mean</code> per paradigm, joined from the committed, sha256-pinned
+  <code>experiments/data/blimp/human_validation_summary.csv</code> (sha256 <code>ea0e7c21…</code>), catalogued in
+  <a href="../../../wiki/base/resources/blimp.md.html"><code>resource/blimp</code></a>. <strong>F4 floor 0.60:</strong> paradigms below 0.60
+  would be dropped from the R2 accuracy strata (contested gold); <strong>freeze finding: all 40 clear 0.60</strong>
+  (min <code>sentential_subject_island</code> 0.606), so no paradigm is F4-dropped.</p>
+</li>
+</ul>
+<h2 id="elicitation-q2-a-behavioral-2afc-both-orders-position-bias-netted">Elicitation (Q2-A — behavioral 2AFC, BOTH orders, position-bias netted)</h2>
+<ul>
+<li>Panel = <a href="../../../config/models.md.html"><code>config/models.md</code></a> <code>panel.A/.B/.C</code> (never hardcode slugs).
+  Temperature 0, zero-shot, single-turn. <code>google/*</code> gets <code>reasoning={"effort":"minimal"}</code> + a small
+  <code>max_tokens</code> (forced-choice = one digit; config Caveat 1 — bound the gemini reasoning bill).</li>
+<li><strong>Prompt (frozen, <code>probe.py</code>):</strong> <em>"Which of these two sentences is the more grammatically acceptable
+  sentence of standard written English? Sentence 1: {s1} Sentence 2: {s2}. Answer with ONLY the single
+  digit 1 or 2 — no other text."</em></li>
+<li><strong>Both orders per pair:</strong> <code>gf</code> (good = Sentence 1) and <code>gs</code> (good = Sentence 2). A pick is <strong>correct</strong>
+  iff the model selects <code>sentence_good</code>. <code>parse_choice</code> extracts 1/2 (with a one verbatim retry on an
+  unparsed non-error reply).</li>
+<li><strong>Scored quantities (both pre-registered):</strong> (a) <strong>order-averaged accuracy</strong> (mean correct over the
+  two orders) — PRIMARY for all readings; (b) <strong>consistency accuracy</strong> (correct in <em>both</em> orders) —
+  position-bias-hardened robustness; plus the <strong>position-lock rate</strong> (same digit in both orders) and
+  <strong>ans1_rate</strong> diagnostics.</li>
+</ul>
+<h2 id="metrics-verdict-map-frozen-thresholds-direction-fixed-copied-verbatim-into-analyzepy">Metrics + verdict map (FROZEN thresholds; direction fixed; copied verbatim into <code>analyze.py</code>)</h2>
+<p><code>acc(m,p)</code> = model m order-averaged accuracy on paradigm p; <code>H(p)</code> = human agreement; ρ_prof(m) =
+Spearman over the 40 paradigms of <code>acc(m,·)</code> vs <code>H(·)</code>; bootstrap CI over paradigms (B=5000, seed
+20260710). Aggregate verdicts require <strong>≥2/3 models</strong>.</p>
+<ul>
+<li><strong>R1 — profile alignment (DESCRIPTIVE/DIRECTIONAL ONLY this run, per C8; report ρ_prof + CI):</strong>
+  <strong>PROFILE-ALIGNED</strong> iff ρ_prof &gt; <strong>+0.40</strong> (and NOT F3-saturated) on ≥2/3; <strong>PROFILE-DIVERGES</strong> iff
+  ρ_prof &lt; <strong>+0.20</strong> (and NOT F3-saturated) on ≥2/3; <strong>[+0.20,+0.40] = PROFILE-INCONCLUSIVE</strong>
+  (pre-registered dead-zone; no uncovered gap). <strong>Power (F2):</strong> n=40 → two-sided p&lt;0.05 at |ρ|≈0.31, so
+  the +0.40 band is above significance and ρ_prof is genuinely powered — <strong>but per C8 R1 is
+  non-promotable on this run alone</strong> regardless (a training-frequency confound control is the
+  pre-registered next step; see C8). <strong>F2 symmetry:</strong> this descriptive-only / non-promotable status is
+  fixed HERE by the n=40 power calc, applied identically whether ρ_prof is positive or negative.</li>
+<li><strong>R2 — depth gradient (verdict-bearing, STRICTLY within-panel, no human key):</strong> <strong>DEPTH-GRADED</strong> iff
+  <code>mean acc(shallow=local) − mean acc(deep=scope∪island) ≥ +0.05</code> on ≥2/3; <strong>DEPTH-FLAT</strong> otherwise
+  (includes reversed). Uses only the panel's own shallow-vs-deep accuracy gap. (All 40 pass F4, so no
+  paradigm is dropped from the strata.)</li>
+<li><strong>R2h — vs the human dip (human-anchored sub-reading, F5-labelled human-comparison):</strong>
+  <strong>EXCEEDS-HUMAN-DIP</strong> iff <code>(panel depth-gap) − (human depth-gap) &gt; +0.05</code> on ≥2/3 (panel finds deep
+  contrasts <em>disproportionately</em> harder than humans); <strong>TRACKS-DIP</strong> iff within ±0.05 on ≥2/3;
+  <strong>BELOW-HUMAN-DIP</strong> otherwise. Human depth-gap = mean H(local) − mean H(deep), fixed at freeze.</li>
+<li><strong>F3 saturation/range guard:</strong> if a model's across-paradigm <code>acc</code> SD &lt; <strong>0.03</strong> (all near ceiling),
+  ρ_prof(m) is <strong>INCONCLUSIVE</strong>, not a coefficient (a memorization-saturation signal). Per-model
+  <strong>absolute-accuracy dispersion (mean, SD, range)</strong> is reported as the <strong>contamination diagnostic</strong> (a
+  frequency-driven pseudo-alignment would show high absolute accuracy with compressed dispersion).</li>
+<li><strong>Instrument-failure guard (Q2-A):</strong> if position-lock rate &gt; <strong>0.50</strong> AND |ans1_rate − 0.5| &gt; <strong>0.40</strong>
+  on ≥2/3 models, the 2AFC has collapsed to position-answering → <strong>INSTRUMENT-FAILURE</strong> voids the
+  accuracy readings (reported as such, not silently dropped). A single position-locked model is reported
+  per-model, not a global void.</li>
+<li><strong>Pre-named nulls (all first-class):</strong> PROFILE-DIVERGES; PROFILE-INCONCLUSIVE; DEPTH-FLAT;
+  contamination-saturation (F3 fires on ≥2/3 → the readings are voided and saturation is the finding);
+  INSTRUMENT-FAILURE. <strong>n=3 models; orderings, not pooled coefficients; ρ_prof reported per model.</strong></li>
+</ul>
+<h2 id="c8-binding-the-s205-ratifications-added-condition">C8 (BINDING — the s205 ratification's added condition)</h2>
+<p>R1 (PROFILE-ALIGNED) is <strong>non-promotable to a <code>claim</code></strong> without a training-frequency confound control
+(the F7 content-word-swap arm, or a corpus-frequency covariate partialled from ρ_prof). <strong>This run DEFERS
+the control:</strong> R1 is reported <strong>descriptive/directional + non-promotable-on-this-run</strong>; the C8 frequency
+control is the pre-registered step for a later promotion-prep session. The verdict-bearing outputs this
+run are <strong>R2</strong> (within-panel depth gradient) and <strong>R2h</strong> (human-anchored excess-over-dip); the F3
+absolute-accuracy dispersion is the contamination diagnostic.</p>
+<h2 id="cost-pre-flight-re-estimated-at-freeze">Cost (pre-flight, re-estimated at freeze)</h2>
+<p>40 paradigms × 30 pairs × 2 orders × 3 models = <strong>7,200 calls</strong>; prompt ≈ 60–110 tokens (two short
+sentences + instruction), completion ≈ 1 token. At the corrected rate card (<code>openrouter.py</code>) ≈ <strong>$0.6–1.6</strong>
+(claude ≈ $0.5, gpt ≈ $0.1, gemini the wildcard — reasoning suppressed to <code>minimal</code>, <code>max_tokens=128</code>).
+<strong>Under the $2.50 prefer-split flag → no split.</strong> Per-model hard <code>ABORT_USD = 1.60</code> in <code>probe.py</code>. Every
+call records <code>usage.cost</code> via <a href="../../lib/openrouter.py.html"><code>experiments/lib/openrouter.py</code></a>.</p>
+<h2 id="anti-cheat-fence-protocol-b">Anti-cheat fence (PROTOCOL §B)</h2>
+<p>The 40-paradigm list, the stratum assignment (structural, human-agreement-blind), the subsample seed +
+N, the elicitation prompt + both orders, the ρ_prof bands (+0.40/+0.20 with the INCONCLUSIVE dead-zone),
+the F3 saturation SD (0.03), the DEPTH/R2h margins (0.05), the instrument-failure thresholds, and the
+F4 floor (0.60) are <strong>all frozen here BEFORE any model call</strong>. No band, stratum, paradigm, or threshold
+is added/dropped/tuned after any accuracy is seen. PROFILE-DIVERGES, DEPTH-FLAT, and every null are
+pre-named first-class. Absolute accuracy is a contamination upper bound and is never the headline.
+Registers a <a href="../../../wiki/predictions.md.html"><code>predictions.md</code></a> row at freeze; outcome updated the run
+session.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

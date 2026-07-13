@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-06-aann-quant-temporal-inversion</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">9.2 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-06-aann-quant-temporal-inversion/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-aann-quanttemporal-inversion-class-vs-lexical-widening-probe-session-189">PREREG — AANN quant×temporal inversion (class-vs-lexical widening probe), session 189</h1>
+<p><strong>Frozen 2026-07-06 (s189) before any model call.</strong> Operationalizes
+<a href="../../../wiki/findings/open-questions/aann-quant-temporal-inversion.md.html"><code>open-question/aann-quant-temporal-inversion</code></a>
+per <a href="../../designs/aann-quant-temporal-inversion-v1.md.html"><code>design/aann-quant-temporal-inversion-v1</code></a> and
+the ratified decision
+<a href="../../../wiki/decisions/resolved/aann-quant-temporal-inversion-design.md.html"><code>resolved/aann-quant-temporal-inversion-design</code></a>
+(s189 ADOPT-WITH-CHANGES: <strong>Q1-C human-N-gated / Q2-B monotone-primary / Q3-A</strong>). No model call until
+this file, <code>prep.py</code>, <code>analyze.py</code>, and <code>stimuli.json</code> are committed and the freeze-stage pre-run critic
+(+ one non-Anthropic vote) returns GO.</p>
+<h2 id="the-question">The question</h2>
+<p>Is the one panel-wide AANN model-vs-human inversion cell — <strong>quantity adjectives × temporal nouns</strong>
+("a scant three days": humans rate acceptability <strong>highest</strong> of four adjective classes, every panel
+model <strong>lowest</strong> — <a href="../../../wiki/findings/results/aann-temporal-why-reanalysis.md.html"><code>result/aann-temporal-why-reanalysis</code></a>,
+H4) — the <strong>whole quantity-adjective class</strong> or <strong>a few lexical items</strong>? Widen the quantity-modifier set
+(K=20) and the temporal frame; read how the per-modifier margin below the non-quant baseline is
+distributed. <strong>The NULL is first-class:</strong> if the widened quant cell is no longer lowest of the four
+classes, the located inversion was an artifact of the thin v2b held-out quant sample.</p>
+<h2 id="instrument-byte-frozen-calling-code-new-analysis-self-tested">Instrument (byte-frozen calling code) + new analysis (self-tested)</h2>
+<p><code>probe.py</code> is <strong>byte-identical to <code>../2026-06-13-aann-temporal-heldout-v2b/probe.py</code> except one line</strong>
+(<code>ABORT_USD</code> 0.30 → 0.60, for the ~1.5× larger N; <code>diff</code> = exactly that line). The prompts (<code>P100</code>
+0–100 acceptability, <code>P4</code> 4-point framing, <code>PT0</code> Tier-0 forced choice), the parsing (<code>parse_int</code>
+last-in-range token; <code>parse_ab_last</code>), the per-slot settings (temperature 0; <code>max_tokens</code> 64 A/B, 512 C;
+<code>google/*</code> reasoning effort minimal), the one-retry-then-missing rule, and the <code>PREREG</code>+<code>analyze.py</code>
+run-guards are all unchanged. <em>(The inherited header docstring's counts ["432 calls", "80 items"] describe
+v2b, not this run; the instrument functions are what is frozen, not the comment. This run's counts are
+below.)</em> <code>analyze.py</code> is <strong>new code</strong> (the §6 verdict logic) and is <strong>self-tested</strong> (<code>analyze.py
+--selftest</code> proves CLASS/LEXICAL/MIXED/NULL all reachable + the panel rule) — this is where anti-cheat
+scrutiny belongs (design S10).</p>
+<p>Tier-0 (manipulation check) and the 4-point framing arm are <strong>re-run fresh this occasion</strong>, byte-
+identical, per v2b discipline (not inherited across occasions).</p>
+<h2 id="item-set-stimulijson-built-by-preppy-no-model-calls-260-main-items">Item set (<code>stimuli.json</code>, built by <code>prep.py</code>, no model calls) — 260 main items</h2>
+<p><strong>Quant arm — K=20 modifiers × 10 items = 200.</strong> Every modifier gets the <strong>identical</strong> balanced frame
+(<strong>B1</strong>): 5 temporal nouns (days, hours, months, weeks, years) × 2 numerals (three, five) = 10 cells;
+template = cell_index % 3. Per-modifier: exactly 2 items/noun, 5 items/numeral, template multiset
+{4,3,3} — asserted mechanically, so no noun-mix confound corrupts the per-modifier read. The exact K=20,
+each with documented source + quantity-polarity (<strong>S8</strong>):</p>
+<ul>
+<li><strong>Arm 1 (Mahowald-attested <code>quant</code>, anchored — human temporal means available):</strong> mere(s),
+  staggering(l), whopping(l), hefty(l), paltry(s), meager(s), extra(l), measly(s), substantial(l),
+  record-setting(l). <em>(source: Mahowald 2023 Table 1 <code>quant</code> class.)</em></li>
+<li><strong>Arm 2a (genuinely-new — neither Mahowald nor v2b held-out):</strong> good(l), full(l), whole(l),
+  solid(l), bare(s). <em>(source: OQ/handoff widening targets.)</em></li>
+<li><strong>Arm 2b (v2b held-out quant carryover; retains large-magnitude per S7):</strong> scant(s), skimpy(s),
+  ample(l), towering(l), colossal(l). <em>(source: v2b held-out quant.)</em></li>
+</ul>
+<p><code>(s)</code>=small/diminishing, <code>(l)</code>=large/augmentative. Polarity is <strong>descriptive-only</strong> (<strong>S6</strong>), never a
+verdict bucket.</p>
+<p><strong>Non-quant reference arm — 4 adjectives × 3 classes × 5 items = 60</strong> (<strong>Q3-A</strong>), rated the <strong>same
+occasion</strong> to define each model's non-quant temporal class means. ambig: astonishing, impressive,
+remarkable, surprising; pos: beautiful, charming, lovely, soothing; neg: disgusting, hideous, ugly,
+uninviting <em>(committed-v2 temporal class labels)</em>. <strong>N1:</strong> this is a <strong>structural</strong> four-class
+reproduction on a new occasion (~4 adjectives/class), not the committed full-class cells.</p>
+<p><strong>Tier-0</strong> = 24 v2 forced-choice pairs verbatim; <strong>4-point robustness</strong> = 40 items (2 template-spread
+quant items/modifier, cells 0 &amp; 5). <strong>972 calls total</strong> (324/model × 3).</p>
+<h2 id="frozen-scoring-verdict-q2-b-monotone-primary-null-first-min-baseline">Frozen scoring + verdict (Q2-B monotone primary; NULL-first; MIN baseline)</h2>
+<p>For quant modifier <em>j</em> and <strong>Tier-0-passing</strong> model <em>m</em>: <code>A_m(j)</code> = mean 0–100 over <em>j</em>'s 10 items;
+<code>B_m^min = min</code> over {ambig, pos, neg} of the model's non-quant temporal <strong>class</strong> mean (<strong>S4</strong> — MIN,
+not the pooled mean); <code>d_m(j) = A_m(j) − B_m^min</code>.</p>
+<ul>
+<li><strong>B2 precedence — NULL first.</strong> If the pooled quant-cell mean is <strong>not</strong> the lowest of the four
+  adjective-class cells (quant/ambig/pos/neg) for the model → <strong>NULL</strong> for that model, regardless of the
+  d-distribution.</li>
+<li>Otherwise read the <strong>shape of {d_m(j)}</strong>:</li>
+<li><strong>CLASS</strong> iff <code>median(d) &lt; 0</code> <strong>and</strong> <code>Q3(d) ≤ 0</code> (wholesale below the lowest non-quant baseline).</li>
+<li><strong>LEXICAL</strong> iff <code>median(d) ≥ 0</code> <strong>and</strong> pooled quant-cell mean <code>&lt; B_m^min</code> (inversion tail-carried).</li>
+<li><strong>MIXED</strong> otherwise.</li>
+<li><strong>Panel verdict</strong> = the category holding for <strong>≥ 2/3 Tier-0-passing models</strong> (else SPLIT).</li>
+</ul>
+<p>The cut is <strong>zero = the finding's own baseline</strong>; nothing is tuned. The <strong>0.70/0.30 inversion count +
+bottom-drop are computed but descriptive-secondary only</strong> (never verdict-bearing).</p>
+<p><strong>Anchored Arm 1 (human comparison, per-modifier gradient — NOT item-matched, S3).</strong> Over the 10
+Mahowald quant modifiers (human-N gate <strong>S1 passed: all 10 clear N≥10; N 11–24, total 193</strong>), report
+per-modifier model-low(<code>A_m(j)&lt;B_m^min</code>)/human-high(<code>H(j)&gt;</code> human min non-quant class mean = <strong>neg
+7.5673</strong>) sign, and Spearman(<code>A_m(j)</code>, <code>H(j)</code>) — flagged noisy (human means over 11–24 singly-rated
+items). Anchors → <a href="../../../wiki/base/resources/mahowald-2023-aann-stimuli.md.html"><code>resource/mahowald-2023-aann-stimuli</code></a>.</p>
+<p><strong>Descriptive-secondary (no gates):</strong> the genuinely-new Arm-2a subset shape reported <strong>separately</strong>
+(<strong>S7</strong> — a CLASS verdict must survive {good, full, whole, solid, bare}); the small-vs-large polarity
+median-d; the per-modifier Zipf rank-correlation (<strong>S9</strong> — the ±0.5 class-median Zipf <em>match</em> is
+deliberately <strong>not</strong> enforced on the widened set, which would exclude the natural high-frequency quantity
+modifiers good 6.12 / full 5.54 / whole 5.46 the class-vs-lexical test needs; frequency is controlled by
+the reported partial, not by exclusion); the <strong>tourish-template-2 exclusion recompute</strong> (<strong>S2</strong> —
+<strong>primary = the full set with tourish</strong> [faithful to what Mahowald's raters saw]; the without-template-2
+recompute is a <strong>required sensitivity view</strong>, and if it disagrees with the primary the result reports the
+split and treats the finding as template-sensitive rather than silently adopting the nicer verdict); the
+four-class structural reproduction (N1); bootstrap 95% CIs (10,000 resamples).</p>
+<p><strong>S2 freeze finding (reverses the reviewer's assumed direction):</strong> the "tourish" typo is in Mahowald's
+<strong>own</strong> stimuli (<code>generate_sentence_templates/templates_adj.csv</code>, <code>aann-sents/aann_sentences.txt</code>), so
+his MTurk raters saw "tourish" — faithfulness <strong>keeps</strong> it (as v2b did), and the exclusion recompute is
+the robustness check.</p>
+<h2 id="registered-bet-wikipredictionsmd-scored-this-session">Registered bet (→ <code>wiki/predictions.md</code>, scored this session)</h2>
+<p><strong>The prior:</strong> the re-analysis called the inversion a "clean, localized, panel-wide" effect that "recurs
+across the inventory" with per-noun structure. The <strong>pre-registered directional bet:</strong> the widened quant
+cell <strong>stays lowest of the four classes for ≥ 2/3 models</strong> (i.e. <strong>not NULL</strong>), and the per-modifier
+distribution is <strong>CLASS or MIXED rather than LEXICAL</strong> — the inversion is not carried by scant/mere alone.
+A NULL, or a LEXICAL read, is a genuine loss and is written as such. Confidence is <strong>modest</strong> — the
+widened Arm 2 includes high-acceptability quantity modifiers (good/full/whole/solid) that may <strong>not</strong>
+invert, which would pull toward LEXICAL or MIXED.</p>
+<h2 id="cost-pre-flight">Cost pre-flight</h2>
+<p>972 calls. Using v2b's measured per-call billed rates by arm (main 0–100: A ~$0.00033, B ~$0.00008,
+C ~$0.000115; Tier-0: A ~$0.00026, B ~$0.00007, C ~$0.00022; 4-pt: A ~$0.00036, B ~$0.00008, C
+~$0.00011): main 260×3 ≈ $0.137; Tier-0 72 ≈ $0.013; 4-pt 120 ≈ $0.022 → <strong>point estimate ≈ $0.17;
+expected $0.15–0.30 billed</strong>. <code>ABORT_USD = $0.60</code>. Under the $2.50 single-run flag and the $5.00/day cap
+(UTC 2026-07-06 prior spend ≈ $0.4799; ~$4.52 headroom, less this session's ratification vote $0.00233).</p>
+<h2 id="gates-to-the-runverify-unchanged-discipline">Gates to the run/verify (unchanged discipline)</h2>
+<p>Freeze-stage pre-run critic (fresh agent) GO/NO-GO + one non-Anthropic decorrelation vote → run
+(<code>python3 probe.py</code>, 3× parallel per-model) → post-run recompute-from-raw verifier (independent) → a
+<code>result</code> page (Arm 1 <code>anchors:</code> → Mahowald; Arm 2 internal-contrast) refining the re-analysis and bearing
+on <a href="../../../wiki/findings/claims/aann-behavioral-gradient.md.html"><code>claim/aann-behavioral-gradient</code></a>.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

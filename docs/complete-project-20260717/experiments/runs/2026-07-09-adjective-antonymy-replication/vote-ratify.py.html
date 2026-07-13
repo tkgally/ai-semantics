@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>vote-ratify.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-09-adjective-antonymy-replication</a> <span class="sep">/</span> <span class="cur">vote-ratify.py</span></nav>
+<main>
+<header class="page-head">
+<h1>vote-ratify.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">6.4 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-09-adjective-antonymy-replication/vote-ratify.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;Non-Anthropic decorrelation vote on the s196 RATIFICATION of the three gates of the</span>
+<span class="sd">adjective-antonymy replication design (PROTOCOL §2). One vote through the non-Anthropic</span>
+<span class="sd">slot via the probe REST path. QA input to the fresh-agent ratifier&#39;s verdict — NOT</span>
+<span class="sd">authoritative. Cutoff-aware preamble.&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;../../lib&quot;</span><span class="p">))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openrouter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PANEL</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="n">billed_cost</span>
+
+<span class="n">PREAMBLE</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Today is 2026-07-09. You are a methodology reviewer. Your training cutoff may &quot;</span>
+            <span class="s2">&quot;predate this project; treat post-cutoff papers/datasets/models as neutral, not &quot;</span>
+            <span class="s2">&quot;fabricated. Judge the ratification below on its internal merits; be adversarial &quot;</span>
+            <span class="s2">&quot;and terse.&quot;</span><span class="p">)</span>
+
+<span class="n">DECISION</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;We are RATIFYING (fixing the yardstick for) a frozen-but-not-yet-run behavioral probe.</span>
+<span class="s2">It is internal-contrast (NO human comparison). It re-tests, over WordNet ADJECTIVE relations, two</span>
+<span class="s2">bets that an earlier NOUN run produced (s186 on Simple English Wikipedia; s193 replicated on C4 web</span>
+<span class="s2">text). The motivation is that Justeson &amp; Katz (1991) actually MEASURED &quot;contrastive-frame saturation&quot;</span>
+<span class="s2">(antonyms co-occur in tight lexically-parallel frames like &quot;cold and hot&quot;, &quot;neither X nor Y&quot;) on</span>
+<span class="s2">PREDICATIVE ADJECTIVES; the two noun runs tested it where our own source notes say extending it to</span>
+<span class="s2">nouns is &quot;an extrapolation beyond J&amp;K&#39;s data.&quot; So this probe tests the claims in J&amp;K&#39;s HOME part of</span>
+<span class="s2">speech. The two bets:</span>
+<span class="s2">  H1 (the decoupling): across relations, relation-recovery rank DECOUPLES from contrastive-frame</span>
+<span class="s2">      co-occurrence cue-strength (near-zero/negative rank correlation, &gt;=2/3 models). BREAKS if</span>
+<span class="s2">      cue-strength clearly recovers its predictive power on adjectives (rho_cue clearly positive).</span>
+<span class="s2">  Antonymy-shadow clause (from s186): is adjective antonymy&#39;s recovery residual over the</span>
+<span class="s2">      contrastive-frame control among the LARGEST (s186 falsification replicates: the shadow does NOT</span>
+<span class="s2">      saturate antonymy) or the SMALLEST/near-zero (the measured-denser adjective framing reconstructs</span>
+<span class="s2">      antonym recovery — a POS boundary on the s186 falsification)?</span>
+
+<span class="s2">Recovery = model produces up to k relata for a cued relation; scored by Soundness (precision over</span>
+<span class="s2">produced) + a gold-size-insensitive HIT@3 co-primary, against WordNet adjective-relatum membership.</span>
+<span class="s2">Control = contrastive-frame G^2 co-occurrence on C4 web text (byte-frozen from the noun instrument,</span>
+<span class="s2">only the cue POS + candidate pool changing). n=3 models, orderings not coefficients, adjectives only,</span>
+<span class="s2">never pooled with the noun probes.</span>
+
+<span class="s2">THREE GATES to ratify (options; the design&#39;s provisional defaults in [brackets]):</span>
+
+<span class="s2">Q1 - adjective relation inventory + registered primary clause. WordNet adjective relations are fewer /</span>
+<span class="s2">     less standard than the noun taxonomy (feasibility measured: antonymy ~701, synonymy ~2238,</span>
+<span class="s2">     similar-to ~4538, also-see ~698 cues with an in-band single-word relatum).</span>
+<span class="s2">   A: antonymy + synonymy only (2 relations). Cleanest but a 2-point across-relation Spearman is</span>
+<span class="s2">      degenerate — the decoupling arm cannot carry H1.</span>
+<span class="s2">   B: antonymy + synonymy + similar-to + also-see (4 relations). Enough points for a weak rank test;</span>
+<span class="s2">      decoupling primary. Risk: similar-to/synonymy near-duplicative; also-see least standard.</span>
+<span class="s2">   [C]: the 4-relation set for the across-relation decoupling arm, with the ANTONYMY-SHADOW clause as</span>
+<span class="s2">        the registered PRIMARY and the decoupling (H1) as a REGISTERED CO-PRIMARY reported at its true</span>
+<span class="s2">        low power, plus an item-level cue-strength-&gt;recovery arm (~400-800 cues) as a POWERED SECONDARY</span>
+<span class="s2">        (descriptive/robustness-only, can never on its own fire H1). Rationale: the antonymy-shadow</span>
+<span class="s2">        clause is the sharpest adjective-specific test (J&amp;K&#39;s home POS, one well-defined relation,</span>
+<span class="s2">        independent of the thin relation count), so it carries primary weight.</span>
+
+<span class="s2">Q2 - a structural-proxy arm for adjectives? The earlier noun runs had a second bet H2 (a taxonomic</span>
+<span class="s2">     IS-A path-depth proxy out-predicts cue-strength). WordNet has NO IS-A taxonomy for adjectives:</span>
+<span class="s2">     adjective min_depth() returns a degenerate CONSTANT 0 (adjective synsets have empty hypernyms()).</span>
+<span class="s2">     So H2 cannot transfer.</span>
+<span class="s2">   [A]: NO structural-proxy arm; run H1-only, and state explicitly that the adjective route discharges</span>
+<span class="s2">        H1 but by construction cannot replicate H2.</span>
+<span class="s2">   B: open a NEW pre-registered adjective-structural bet (e.g. similar_to cluster centrality) as a</span>
+<span class="s2">      fresh proxy with its own predicted sign. NOT an H2 replication; needs its own prediction row;</span>
+<span class="s2">      far weaker a-priori motivation than IS-A depth; multiple-comparison burden.</span>
+<span class="s2">   C: import a noun IS-A depth for adjectives via derivational/pertainym links (score &quot;cold&quot; through</span>
+<span class="s2">      its noun &quot;coldness&quot;) — REJECTED up front as smuggling a noun taxonomy through a lossy hop.</span>
+
+<span class="s2">Q3 - anchor: [internal-contrast-only]. Recovery is scored vs WordNet as a shared definitional target</span>
+<span class="s2">     that CANCELS in the head-to-head; the predictor (contrastive-frame G^2) is a corpus statistic; no</span>
+<span class="s2">     human recovery baseline enters. So no human-comparison claim; no resource anchor required.</span>
+
+<span class="s2">ANTI-CHEAT context: the fresh disjoint adjective cue sets, outlier caps, k, relation inventory, the</span>
+<span class="s2">rho_cue band, the antonymy-residual verdict thresholds, and a numeric calibration-gate floor are ALL</span>
+<span class="s2">frozen in PREREG before ANY model call. H1-breaks, antonymy-saturates, and null are pre-named</span>
+<span class="s2">first-class outcomes. A mandatory corpus-free antonymy frame-ablation arm hedges the risk that the C4</span>
+<span class="s2">control is too weak to recover WordNet relata (in which case the antonymy-shadow residual arm goes</span>
+<span class="s2">descriptive-only). The across-relation H1 arm on &lt;=4 relations CANNOT on its own carry claim promotion;</span>
+<span class="s2">promotion rests on the noun replications (s186+s193) PLUS this POS-crossing arm read together.</span>
+
+<span class="s2">VOTE: For EACH gate say ADOPT-&lt;letter&gt; (or KEEP-OPEN + what&#39;s missing). Then judge: (1) is this a</span>
+<span class="s2">FAIR, non-question-begging test where H1-replicates / H1-breaks / antonymy-clears / antonymy-saturates</span>
+<span class="s2">/ null are all genuinely reachable? (2) Do you AGREE that H2 cannot transfer to adjectives and that</span>
+<span class="s2">opening Q2-B (a new adjective-structural bet) is weakly motivated? Reply with per-gate letters first,</span>
+<span class="s2">then &lt;=6 terse bullets.&quot;&quot;&quot;</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">],</span> <span class="n">PREAMBLE</span><span class="p">,</span> <span class="n">DECISION</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">900</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">billed_cost</span><span class="p">([[</span><span class="n">r</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- billed:&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;err:&quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;vote-ratify.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">[billed $</span><span class="si">{</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">; model </span><span class="si">{</span><span class="n">PANEL</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">; s196 ratification vote]</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

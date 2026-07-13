@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_cooc_ja.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-13-comparative-correlative-japanese</a> <span class="sep">/</span> <span class="cur">build_cooc_ja.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_cooc_ja.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">9.7 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-13-comparative-correlative-japanese/build_cooc_ja.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Q2-B frequency/co-occurrence control — derive per-scale-pair corpus statistics from UD Japanese-GSD.</span>
+
+<span class="sd">Ratified freeze condition (vi) of decisions/resolved/cross-linguistic-cc-replication-scope: carry a</span>
+<span class="sd">target-language-corpus frequency/co-occurrence-matched control with a DOCUMENTED matching recipe</span>
+<span class="sd">FROZEN before any model call. UD Japanese-GSD annotations are CC BY-SA 4.0 (README verified firsthand</span>
+<span class="sd">this session: &quot;These are made available under a CC BY-SA 4.0&quot;; Google asserts no ownership over the</span>
+<span class="sd">underlying text), in scope under the s168 UD-treebank rule.</span>
+
+<span class="sd">WHAT THIS CONTROL IS (and honestly, what it is not) — identical logic to the German arm.</span>
+<span class="sd">The core construction-isolation leg (Q2-A) already holds LEXIS IDENTICAL between CC items and their</span>
+<span class="sd">same-word non-CC controls — so there is NO lexical-frequency difference to confound that contrast.</span>
+<span class="sd">The residual loophole a frequency control can still close is: does the panel&#39;s covariation reading</span>
+<span class="sd">track the CORPUS FREQUENCY / ASSOCIATION of the scalar words rather than the construction? This</span>
+<span class="sd">script measures, per scale pair, the UD-Japanese-GSD content-word (NOUN/ADJ) frequency of the pair&#39;s</span>
+<span class="sd">scalar words and the pair&#39;s in-corpus co-occurrence, so analyze.py can test whether the CC</span>
+<span class="sd">covariation-assertion rate (and the construction-isolation gap) is INDEPENDENT of corpus</span>
+<span class="sd">frequency/co-occurrence. It is a COVARIATE/robustness arm, not a separate item arm; the primary</span>
+<span class="sd">co-occurrence control remains the typical-vs-atypical split (absurd pairs whose scalar words</span>
+<span class="sd">essentially never co-occur must get their direction from the construction alone).</span>
+
+<span class="sd">JAPANESE-SPECIFIC RECIPE NOTE (the deliberate difference from the German build_cooc_de.py).</span>
+<span class="sd">German is whitespace-segmented, so the German control resolved item words against the treebank&#39;s own</span>
+<span class="sd">form-&gt;lemma/UPOS maps directly. Japanese is UNSEGMENTED, so surface-form lookup against the treebank</span>
+<span class="sd">would fail on every conjugated/agglutinated form. To keep ONE consistent tokenization basis across the</span>
+<span class="sd">corpus side and the item side, BOTH the UD-Japanese-GSD sentences (their `# text =` lines) AND the</span>
+<span class="sd">items are tokenized with the SAME analyzer — janome 0.5.0 (pure-Python, self-contained IPAdic; pinned</span>
+<span class="sd">below) — keeping NOUN (名詞, excluding numerals/pronouns/non-independent/suffix subtypes) and ADJ</span>
+<span class="sd">(形容詞) base forms. Frequency is therefore a janome-IPAdic count over the licensed UD-GSD sentence</span>
+<span class="sd">set, not the treebank&#39;s gold UniDic lemmas — a deliberate, documented consistency choice (a</span>
+<span class="sd">covariate, not the primary control). The typical/atypical co-occurrence split (below) is the</span>
+<span class="sd">functional check that the measure separates the two families as designed.</span>
+
+<span class="sd">RECIPE (frozen; fully automatic, no hand-specified lemmas — minimizing fabrication risk):</span>
+<span class="sd">1. Read every `# text =` sentence from the three UD-Japanese-GSD splits; janome-tokenize; keep</span>
+<span class="sd">   content tokens (NOUN/ADJ base forms, per CONTENT_POS + subtype exclusions + LEMMA_STOP). Build</span>
+<span class="sd">   lemma_count[lemma] and sent_lemmas (per-sentence content-lemma sets, for co-occurrence).</span>
+<span class="sd">2. For each scale pair, janome-tokenize its cc-positive + cc-inverse + two control sentences, take the</span>
+<span class="sd">   union of content lemmas -&gt; the pair&#39;s CONTENT LEMMAS. Words absent from UD-GSD resolve to freq 0</span>
+<span class="sd">   and are recorded as OOV (itself informative).</span>
+<span class="sd">3. Per pair record: content lemmas, each lemma&#39;s per-million frequency, the pair mean/median content</span>
+<span class="sd">   frequency, the # of UD-GSD sentences containing &gt;=2 distinct content lemmas of the pair</span>
+<span class="sd">   (co-occurrence), OOV count, typicality.</span>
+<span class="sd">4. Emit freq_control.json (the FROZEN artifact, committed before the run) + a corpus-meta block.</span>
+
+<span class="sd">Run: python3 build_cooc_ja.py   (reads /tmp/ja_gsd_{train,dev,test}.conllu; needs janome; no API)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span><span class="o">,</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">collections</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">janome.tokenizer</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tokenizer</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">ITEMS_CSV</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+                                         <span class="s2">&quot;comparative-correlative-japanese&quot;</span><span class="p">,</span> <span class="s2">&quot;items.csv&quot;</span><span class="p">))</span>
+<span class="n">CONLLU</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;/tmp/ja_gsd_</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">.conllu&quot;</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;train&quot;</span><span class="p">,</span> <span class="s2">&quot;dev&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)]</span>
+<span class="n">SOURCE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/UniversalDependencies/UD_Japanese-GSD/master/ja_gsd-ud-{train,dev,test}.conllu&quot;</span>
+<span class="n">OUT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;freq_control.json&quot;</span><span class="p">)</span>
+
+<span class="c1"># janome POS: keep 名詞 (NOUN) and 形容詞 (ADJ) as content; drop noun subtypes that carry no</span>
+<span class="c1"># scalar/referential content (numerals, pronouns, non-independent, suffixes) so the frequency</span>
+<span class="c1"># measure reflects the scalar adjectives and referent nouns the frequency-exploitation loophole is</span>
+<span class="c1"># actually about. Verbs (動詞) are held out (mirrors the German ADJ+NOUN choice: light/copula-like</span>
+<span class="c1"># tokens surface in nearly every pair as a constant offset).</span>
+<span class="n">NOUN_DROP_SUBTYPES</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;数&quot;</span><span class="p">,</span> <span class="s2">&quot;数詞&quot;</span><span class="p">,</span> <span class="s2">&quot;代名詞&quot;</span><span class="p">,</span> <span class="s2">&quot;非自立&quot;</span><span class="p">,</span> <span class="s2">&quot;接尾&quot;</span><span class="p">,</span> <span class="s2">&quot;副詞可能&quot;</span><span class="p">}</span>
+<span class="c1"># Very generic content-light nouns excluded (constant across pairs, no scalar/referential content).</span>
+<span class="n">LEMMA_STOP</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;もの&quot;</span><span class="p">,</span> <span class="s2">&quot;物&quot;</span><span class="p">,</span> <span class="s2">&quot;こと&quot;</span><span class="p">,</span> <span class="s2">&quot;事&quot;</span><span class="p">,</span> <span class="s2">&quot;ため&quot;</span><span class="p">,</span> <span class="s2">&quot;とき&quot;</span><span class="p">,</span> <span class="s2">&quot;時&quot;</span><span class="p">,</span> <span class="s2">&quot;前&quot;</span><span class="p">,</span> <span class="s2">&quot;後&quot;</span><span class="p">,</span> <span class="s2">&quot;方&quot;</span><span class="p">,</span> <span class="s2">&quot;人&quot;</span><span class="p">,</span> <span class="s2">&quot;того&quot;</span><span class="p">}</span>
+
+<span class="n">_tok</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">content_lemmas_of_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;janome-tokenize -&gt; list of (lemma) for NOUN/ADJ content tokens (deduped-preserving upstream).&quot;&quot;&quot;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">_tok</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">part_of_speech</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>  <span class="c1"># e.g. [&#39;名詞&#39;,&#39;一般&#39;,&#39;*&#39;,&#39;*&#39;] or [&#39;形容詞&#39;,&#39;自立&#39;,&#39;*&#39;,&#39;*&#39;]</span>
+        <span class="n">major</span><span class="p">,</span> <span class="n">sub</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;*&quot;</span><span class="p">)</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">base_form</span> <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">base_form</span> <span class="ow">and</span> <span class="n">t</span><span class="o">.</span><span class="n">base_form</span> <span class="o">!=</span> <span class="s2">&quot;*&quot;</span> <span class="k">else</span> <span class="n">t</span><span class="o">.</span><span class="n">surface</span>
+        <span class="k">if</span> <span class="n">major</span> <span class="o">==</span> <span class="s2">&quot;形容詞&quot;</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">major</span> <span class="o">==</span> <span class="s2">&quot;名詞&quot;</span> <span class="ow">and</span> <span class="n">sub</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">NOUN_DROP_SUBTYPES</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">base</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">LEMMA_STOP</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_corpus</span><span class="p">(</span><span class="n">paths</span><span class="p">):</span>
+    <span class="n">lemma_count</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">()</span>
+    <span class="n">sent_lemmas</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">n_sent</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;# text =&quot;</span><span class="p">):</span>
+                    <span class="n">text</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                    <span class="n">n_sent</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">lems</span> <span class="o">=</span> <span class="n">content_lemmas_of_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lems</span><span class="p">:</span>
+                        <span class="n">lemma_count</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="n">sent_lemmas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">lems</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">lemma_count</span><span class="p">,</span> <span class="n">sent_lemmas</span><span class="p">,</span> <span class="n">n_sent</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">dedupe</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+    <span class="n">seen</span><span class="p">,</span> <span class="n">out</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(),</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+            <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">lemma_count</span><span class="p">,</span> <span class="n">sent_lemmas</span><span class="p">,</span> <span class="n">n_sent</span> <span class="o">=</span> <span class="n">parse_corpus</span><span class="p">(</span><span class="n">CONLLU</span><span class="p">)</span>
+    <span class="n">total_content</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">lemma_count</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">per_million</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">lem</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="mf">1e6</span> <span class="o">*</span> <span class="n">lemma_count</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lem</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_content</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+    <span class="n">rows</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">ITEMS_CSV</span><span class="p">)))</span>
+    <span class="n">by_pair</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="n">by_pair</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;scale_pair&quot;</span><span class="p">]][</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;form&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">r</span>
+
+    <span class="n">pairs_out</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">pid</span><span class="p">,</span> <span class="n">forms</span> <span class="ow">in</span> <span class="n">by_pair</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">typ</span> <span class="o">=</span> <span class="n">forms</span><span class="p">[</span><span class="s2">&quot;cc-positive&quot;</span><span class="p">][</span><span class="s2">&quot;typicality&quot;</span><span class="p">]</span>
+        <span class="n">all_lem</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">form</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;cc-positive&quot;</span><span class="p">,</span> <span class="s2">&quot;cc-inverse&quot;</span><span class="p">,</span> <span class="s2">&quot;ctrl-two&quot;</span><span class="p">,</span> <span class="s2">&quot;ctrl-single&quot;</span><span class="p">):</span>
+            <span class="n">all_lem</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">content_lemmas_of_text</span><span class="p">(</span><span class="n">forms</span><span class="p">[</span><span class="n">form</span><span class="p">][</span><span class="s2">&quot;sentence&quot;</span><span class="p">]))</span>
+        <span class="n">lemmas</span> <span class="o">=</span> <span class="n">dedupe</span><span class="p">(</span><span class="n">all_lem</span><span class="p">)</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="p">{</span><span class="n">lem</span><span class="p">:</span> <span class="n">per_million</span><span class="p">(</span><span class="n">lem</span><span class="p">)</span> <span class="k">for</span> <span class="n">lem</span> <span class="ow">in</span> <span class="n">lemmas</span><span class="p">}</span>
+        <span class="n">oov</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">lem</span> <span class="k">for</span> <span class="n">lem</span> <span class="ow">in</span> <span class="n">lemmas</span> <span class="k">if</span> <span class="n">lemma_count</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lem</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="n">mean_f</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">freqs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="k">if</span> <span class="n">freqs</span> <span class="k">else</span> <span class="mf">0.0</span>
+        <span class="n">median_f</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">freqs</span><span class="o">.</span><span class="n">values</span><span class="p">())[</span><span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="k">if</span> <span class="n">freqs</span> <span class="k">else</span> <span class="mf">0.0</span>
+        <span class="n">lemset</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">lemmas</span><span class="p">)</span>
+        <span class="n">cooc</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sent_lemmas</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span> <span class="o">&amp;</span> <span class="n">lemset</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">pairs_out</span><span class="p">[</span><span class="n">pid</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;typicality&quot;</span><span class="p">:</span> <span class="n">typ</span><span class="p">,</span>
+            <span class="s2">&quot;content_lemmas&quot;</span><span class="p">:</span> <span class="n">lemmas</span><span class="p">,</span>
+            <span class="s2">&quot;oov_content_words&quot;</span><span class="p">:</span> <span class="n">oov</span><span class="p">,</span>
+            <span class="s2">&quot;freq_per_million&quot;</span><span class="p">:</span> <span class="n">freqs</span><span class="p">,</span>
+            <span class="s2">&quot;mean_freq_per_million&quot;</span><span class="p">:</span> <span class="n">mean_f</span><span class="p">,</span>
+            <span class="s2">&quot;median_freq_per_million&quot;</span><span class="p">:</span> <span class="n">median_f</span><span class="p">,</span>
+            <span class="s2">&quot;n_content_lemmas&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">lemmas</span><span class="p">),</span>
+            <span class="s2">&quot;n_oov&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">oov</span><span class="p">),</span>
+            <span class="s2">&quot;cooc_sentences_ge2&quot;</span><span class="p">:</span> <span class="n">cooc</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;recipe&quot;</span><span class="p">:</span> <span class="s2">&quot;UD-Japanese-GSD `# text =` sentences + items BOTH tokenized with janome 0.5.0 &quot;</span>
+                  <span class="s2">&quot;(IPAdic); content = NOUN(名詞, minus numeral/pronoun/non-independent/suffix &quot;</span>
+                  <span class="s2">&quot;subtypes)+ADJ(形容詞) base forms; per-lemma per-million frequency + per-pair &quot;</span>
+                  <span class="s2">&quot;co-occurrence (# sentences with &gt;=2 distinct pair content lemmas). FROZEN before &quot;</span>
+                  <span class="s2">&quot;the run. Consistency choice (Japanese is unsegmented): one janome basis across &quot;</span>
+                  <span class="s2">&quot;corpus and items, not the treebank gold UniDic lemmas — a bounded covariate, the &quot;</span>
+                  <span class="s2">&quot;primary co-occurrence control is the typical/atypical split.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tokenizer&quot;</span><span class="p">:</span> <span class="s2">&quot;janome 0.5.0 (IPAdic, bundled)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="n">SOURCE_URL</span><span class="p">,</span>
+        <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="s2">&quot;CC BY-SA 4.0 (UD Japanese-GSD annotations; README verified firsthand s215, in scope s168)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;corpus_meta&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;n_sentences&quot;</span><span class="p">:</span> <span class="n">n_sent</span><span class="p">,</span> <span class="s2">&quot;n_content_tokens&quot;</span><span class="p">:</span> <span class="n">total_content</span><span class="p">,</span>
+                        <span class="s2">&quot;n_distinct_content_lemmas&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">lemma_count</span><span class="p">)},</span>
+        <span class="s2">&quot;pairs&quot;</span><span class="p">:</span> <span class="n">pairs_out</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">OUT</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">typ</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pairs_out</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="s2">&quot;typicality&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;typical&quot;</span><span class="p">]</span>
+    <span class="n">aty</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pairs_out</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">p</span><span class="p">[</span><span class="s2">&quot;typicality&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;atypical&quot;</span><span class="p">]</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">avg</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span> <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;corpus: </span><span class="si">{</span><span class="n">n_sent</span><span class="si">}</span><span class="s2"> sentences, </span><span class="si">{</span><span class="n">total_content</span><span class="si">}</span><span class="s2"> content tokens, &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">lemma_count</span><span class="p">)</span><span class="si">}</span><span class="s2"> distinct content lemmas&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;typical  (n=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">typ</span><span class="p">)</span><span class="si">}</span><span class="s2">): mean_freq/M=</span><span class="si">{</span><span class="n">avg</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span><span class="s1">&#39;mean_freq_per_million&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">  &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;cooc&gt;=2=</span><span class="si">{</span><span class="n">avg</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span><span class="s1">&#39;cooc_sentences_ge2&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">  oov=</span><span class="si">{</span><span class="n">avg</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span><span class="s1">&#39;n_oov&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">  &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;n_lemmas=</span><span class="si">{</span><span class="n">avg</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span><span class="s1">&#39;n_content_lemmas&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;atypical (n=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">aty</span><span class="p">)</span><span class="si">}</span><span class="s2">): mean_freq/M=</span><span class="si">{</span><span class="n">avg</span><span class="p">(</span><span class="n">aty</span><span class="p">,</span><span class="s1">&#39;mean_freq_per_million&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">  &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;cooc&gt;=2=</span><span class="si">{</span><span class="n">avg</span><span class="p">(</span><span class="n">aty</span><span class="p">,</span><span class="s1">&#39;cooc_sentences_ge2&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">  oov=</span><span class="si">{</span><span class="n">avg</span><span class="p">(</span><span class="n">aty</span><span class="p">,</span><span class="s1">&#39;n_oov&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">  &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;n_lemmas=</span><span class="si">{</span><span class="n">avg</span><span class="p">(</span><span class="n">aty</span><span class="p">,</span><span class="s1">&#39;n_content_lemmas&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote </span><span class="si">{</span><span class="n">OUT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

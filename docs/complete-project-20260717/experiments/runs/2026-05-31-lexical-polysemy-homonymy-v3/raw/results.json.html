@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>results.json — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../../index.html">home</a> <span class="sep">/</span> <a href="../../../index.html">experiments</a> <span class="sep">/</span> <a href="../../index.html">runs</a> <span class="sep">/</span> <a href="../index.html">2026-05-31-lexical-polysemy-homonymy-v3</a> <span class="sep">/</span> <a href="index.html">raw</a> <span class="sep">/</span> <span class="cur">results.json</span></nav>
+<main>
+<header class="page-head">
+<h1>results.json</h1>
+<p class="subtitle"><span class="ftype">JSON</span> &middot; <span class="fsize">6.2 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-31-lexical-polysemy-homonymy-v3/raw/results.json</code></p>
+</header>
+<details class='section'><summary><span class='sec-k'>params</span> <span class='muted'>(6 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>FLOOR</th><td><table class='kv'><tr><th>durel</th><td><span class='j-num'>1</span></td></tr><tr><th>cont</th><td><span class='j-num'>10</span></td></tr></table></td></tr><tr><th>N_PERM</th><td><span class='j-num'>10000</span></td></tr><tr><th>N_BOOT</th><td><span class='j-num'>5000</span></td></tr><tr><th>SEED</th><td><span class='j-num'>20260531</span></td></tr><tr><th>overlap_median</th><td><span class='j-num'>0.0</span></td></tr><tr><th>n_items</th><td><span class='j-num'>161</span></td></tr></table></div></details><details class='section'><summary><span class='sec-k'>strat_counts</span> <span class='muted'>(2 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>HOMONYM</th><td><table class='kv'><tr><th>T</th><td><span class='j-num'>21</span></td></tr><tr><th>F</th><td><span class='j-num'>39</span></td></tr><tr><th>n_lemmas</th><td><span class='j-num'>11</span></td></tr></table></td></tr><tr><th>POLYSEME</th><td><table class='kv'><tr><th>T</th><td><span class='j-num'>36</span></td></tr><tr><th>F</th><td><span class='j-num'>65</span></td></tr><tr><th>n_lemmas</th><td><span class='j-num'>11</span></td></tr></table></td></tr></table></div></details><details class='section'><summary><span class='sec-k'>per_model</span> <span class='muted'>(3 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>A</th><td><table class='kv'><tr><th>model</th><td><span class='j-str'>claude-sonnet-4.6</span></td></tr><tr><th>durel</th><td><table class='kv'><tr><th>n_used</th><td><span class='j-num'>161</span></td></tr><tr><th>by_stratum</th><td><table class='kv'><tr><th>HOMONYM</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 21,
+  &quot;nF&quot;: 39,
+  &quot;auc&quot;: 0.882,
+  &quot;mean_T&quot;: 3.62,
+  &quot;mean_F&quot;: 2.0,
+  &quot;TF_gap&quot;: 1.62,
+  &quot;floorfrac_F&quot;: 0.436
+}</pre></td></tr><tr><th>POLYSEME</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 36,
+  &quot;nF&quot;: 65,
+  &quot;auc&quot;: 0.879,
+  &quot;mean_T&quot;: 3.56,
+  &quot;mean_F&quot;: 2.23,
+  &quot;TF_gap&quot;: 1.32,
+  &quot;floorfrac_F&quot;: 0.185
+}</pre></td></tr></table></td></tr><tr><th>AUC_diff(H-P)</th><td><span class='j-num'>0.003</span></td></tr><tr><th>floorfrac_diff(H-P)</th><td><span class='j-num'>0.251</span></td></tr><tr><th>perm_p_AUC</th><td><span class='j-num'>0.9623</span></td></tr><tr><th>perm_p_floor</th><td><span class='j-num'>0.0236</span></td></tr><tr><th>boot95_AUC_diff_itemnaive</th><td><ul class='j-arr'><li><span class='j-num'>-0.099</span></li><li><span class='j-num'>0.102</span></li></ul></td></tr><tr><th>boot95_AUC_diff_clustered</th><td><ul class='j-arr'><li><span class='j-num'>-0.113</span></li><li><span class='j-num'>0.098</span></li></ul></td></tr><tr><th>lowoverlap_AUC_diff(H-P)</th><td><span class='j-num'>0.008</span></td></tr><tr><th>lowoverlap_n</th><td><span class='j-num'>159</span></td></tr><tr><th>homonym_F_mean_by_lemma</th><td><table class='kv'><tr><th>ball</th><td><span class='j-num'>1.8</span></td></tr><tr><th>bank</th><td><span class='j-num'>2.0</span></td></tr><tr><th>case</th><td><span class='j-num'>1.62</span></td></tr><tr><th>date</th><td><span class='j-num'>2.0</span></td></tr><tr><th>pitch</th><td><span class='j-num'>1.0</span></td></tr><tr><th>pitcher</th><td><span class='j-num'>4.0</span></td></tr><tr><th>plane</th><td><span class='j-num'>2.0</span></td></tr><tr><th>rock</th><td><span class='j-num'>3.0</span></td></tr><tr><th>school</th><td><span class='j-num'>2.8</span></td></tr><tr><th>seal</th><td><span class='j-num'>2.0</span></td></tr><tr><th>tear</th><td><span class='j-num'>1.0</span></td></tr></table></td></tr></table></td></tr><tr><th>cont</th><td><table class='kv'><tr><th>n_used</th><td><span class='j-num'>161</span></td></tr><tr><th>by_stratum</th><td><table class='kv'><tr><th>HOMONYM</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 21,
+  &quot;nF&quot;: 39,
+  &quot;auc&quot;: 0.882,
+  &quot;mean_T&quot;: 83.48,
+  &quot;mean_F&quot;: 30.87,
+  &quot;TF_gap&quot;: 52.6,
+  &quot;floorfrac_F&quot;: 0.564
+}</pre></td></tr><tr><th>POLYSEME</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 36,
+  &quot;nF&quot;: 65,
+  &quot;auc&quot;: 0.9,
+  &quot;mean_T&quot;: 84.22,
+  &quot;mean_F&quot;: 37.05,
+  &quot;TF_gap&quot;: 47.18,
+  &quot;floorfrac_F&quot;: 0.308
+}</pre></td></tr></table></td></tr><tr><th>AUC_diff(H-P)</th><td><span class='j-num'>-0.018</span></td></tr><tr><th>floorfrac_diff(H-P)</th><td><span class='j-num'>0.256</span></td></tr><tr><th>perm_p_AUC</th><td><span class='j-num'>0.7324</span></td></tr><tr><th>perm_p_floor</th><td><span class='j-num'>0.0661</span></td></tr><tr><th>boot95_AUC_diff_itemnaive</th><td><ul class='j-arr'><li><span class='j-num'>-0.123</span></li><li><span class='j-num'>0.077</span></li></ul></td></tr><tr><th>boot95_AUC_diff_clustered</th><td><ul class='j-arr'><li><span class='j-num'>-0.12</span></li><li><span class='j-num'>0.071</span></li></ul></td></tr><tr><th>lowoverlap_AUC_diff(H-P)</th><td><span class='j-num'>-0.013</span></td></tr><tr><th>lowoverlap_n</th><td><span class='j-num'>159</span></td></tr><tr><th>homonym_F_mean_by_lemma</th><td><table class='kv'><tr><th>ball</th><td><span class='j-num'>26.0</span></td></tr><tr><th>bank</th><td><span class='j-num'>30.8</span></td></tr><tr><th>case</th><td><span class='j-num'>17.46</span></td></tr><tr><th>date</th><td><span class='j-num'>25.67</span></td></tr><tr><th>pitch</th><td><span class='j-num'>5.0</span></td></tr><tr><th>pitcher</th><td><span class='j-num'>95.0</span></td></tr><tr><th>plane</th><td><span class='j-num'>32.0</span></td></tr><tr><th>rock</th><td><span class='j-num'>47.5</span></td></tr><tr><th>school</th><td><span class='j-num'>67.4</span></td></tr><tr><th>seal</th><td><span class='j-num'>20.0</span></td></tr><tr><th>tear</th><td><span class='j-num'>0.0</span></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><th>B</th><td><table class='kv'><tr><th>model</th><td><span class='j-str'>gpt-5.4-mini</span></td></tr><tr><th>durel</th><td><table class='kv'><tr><th>n_used</th><td><span class='j-num'>161</span></td></tr><tr><th>by_stratum</th><td><table class='kv'><tr><th>HOMONYM</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 21,
+  &quot;nF&quot;: 39,
+  &quot;auc&quot;: 0.775,
+  &quot;mean_T&quot;: 3.24,
+  &quot;mean_F&quot;: 2.1,
+  &quot;TF_gap&quot;: 1.14,
+  &quot;floorfrac_F&quot;: 0.282
+}</pre></td></tr><tr><th>POLYSEME</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 36,
+  &quot;nF&quot;: 65,
+  &quot;auc&quot;: 0.799,
+  &quot;mean_T&quot;: 3.33,
+  &quot;mean_F&quot;: 2.12,
+  &quot;TF_gap&quot;: 1.21,
+  &quot;floorfrac_F&quot;: 0.154
+}</pre></td></tr></table></td></tr><tr><th>AUC_diff(H-P)</th><td><span class='j-num'>-0.024</span></td></tr><tr><th>floorfrac_diff(H-P)</th><td><span class='j-num'>0.128</span></td></tr><tr><th>perm_p_AUC</th><td><span class='j-num'>0.8531</span></td></tr><tr><th>perm_p_floor</th><td><span class='j-num'>0.1323</span></td></tr><tr><th>boot95_AUC_diff_itemnaive</th><td><ul class='j-arr'><li><span class='j-num'>-0.176</span></li><li><span class='j-num'>0.121</span></li></ul></td></tr><tr><th>boot95_AUC_diff_clustered</th><td><ul class='j-arr'><li><span class='j-num'>-0.232</span></li><li><span class='j-num'>0.153</span></li></ul></td></tr><tr><th>lowoverlap_AUC_diff(H-P)</th><td><span class='j-num'>-0.015</span></td></tr><tr><th>lowoverlap_n</th><td><span class='j-num'>159</span></td></tr><tr><th>homonym_F_mean_by_lemma</th><td><table class='kv'><tr><th>ball</th><td><span class='j-num'>2.2</span></td></tr><tr><th>bank</th><td><span class='j-num'>2.0</span></td></tr><tr><th>case</th><td><span class='j-num'>2.0</span></td></tr><tr><th>date</th><td><span class='j-num'>1.67</span></td></tr><tr><th>pitch</th><td><span class='j-num'>1.0</span></td></tr><tr><th>pitcher</th><td><span class='j-num'>4.0</span></td></tr><tr><th>plane</th><td><span class='j-num'>2.0</span></td></tr><tr><th>rock</th><td><span class='j-num'>1.5</span></td></tr><tr><th>school</th><td><span class='j-num'>3.0</span></td></tr><tr><th>seal</th><td><span class='j-num'>2.0</span></td></tr><tr><th>tear</th><td><span class='j-num'>1.0</span></td></tr></table></td></tr></table></td></tr><tr><th>cont</th><td><table class='kv'><tr><th>n_used</th><td><span class='j-num'>161</span></td></tr><tr><th>by_stratum</th><td><table class='kv'><tr><th>HOMONYM</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 21,
+  &quot;nF&quot;: 39,
+  &quot;auc&quot;: 0.83,
+  &quot;mean_T&quot;: 83.62,
+  &quot;mean_F&quot;: 38.9,
+  &quot;TF_gap&quot;: 44.72,
+  &quot;floorfrac_F&quot;: 0.179
+}</pre></td></tr><tr><th>POLYSEME</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 36,
+  &quot;nF&quot;: 65,
+  &quot;auc&quot;: 0.852,
+  &quot;mean_T&quot;: 76.72,
+  &quot;mean_F&quot;: 31.85,
+  &quot;TF_gap&quot;: 44.88,
+  &quot;floorfrac_F&quot;: 0.2
+}</pre></td></tr></table></td></tr><tr><th>AUC_diff(H-P)</th><td><span class='j-num'>-0.022</span></td></tr><tr><th>floorfrac_diff(H-P)</th><td><span class='j-num'>-0.021</span></td></tr><tr><th>perm_p_AUC</th><td><span class='j-num'>0.8332</span></td></tr><tr><th>perm_p_floor</th><td><span class='j-num'>0.8112</span></td></tr><tr><th>boot95_AUC_diff_itemnaive</th><td><ul class='j-arr'><li><span class='j-num'>-0.162</span></li><li><span class='j-num'>0.113</span></li></ul></td></tr><tr><th>boot95_AUC_diff_clustered</th><td><ul class='j-arr'><li><span class='j-num'>-0.209</span></li><li><span class='j-num'>0.124</span></li></ul></td></tr><tr><th>lowoverlap_AUC_diff(H-P)</th><td><span class='j-num'>-0.014</span></td></tr><tr><th>lowoverlap_n</th><td><span class='j-num'>159</span></td></tr><tr><th>homonym_F_mean_by_lemma</th><td><table class='kv'><tr><th>ball</th><td><span class='j-num'>39.4</span></td></tr><tr><th>bank</th><td><span class='j-num'>36.6</span></td></tr><tr><th>case</th><td><span class='j-num'>23.85</span></td></tr><tr><th>date</th><td><span class='j-num'>35.0</span></td></tr><tr><th>pitch</th><td><span class='j-num'>15.0</span></td></tr><tr><th>pitcher</th><td><span class='j-num'>100.0</span></td></tr><tr><th>plane</th><td><span class='j-num'>1.0</span></td></tr><tr><th>rock</th><td><span class='j-num'>59.5</span></td></tr><tr><th>school</th><td><span class='j-num'>76.6</span></td></tr><tr><th>seal</th><td><span class='j-num'>85.0</span></td></tr><tr><th>tear</th><td><span class='j-num'>18.0</span></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><th>C</th><td><table class='kv'><tr><th>model</th><td><span class='j-str'>gemini-3.5-flash</span></td></tr><tr><th>durel</th><td><table class='kv'><tr><th>n_used</th><td><span class='j-num'>161</span></td></tr><tr><th>by_stratum</th><td><table class='kv'><tr><th>HOMONYM</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 21,
+  &quot;nF&quot;: 39,
+  &quot;auc&quot;: 0.894,
+  &quot;mean_T&quot;: 3.48,
+  &quot;mean_F&quot;: 1.92,
+  &quot;TF_gap&quot;: 1.55,
+  &quot;floorfrac_F&quot;: 0.41
+}</pre></td></tr><tr><th>POLYSEME</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 36,
+  &quot;nF&quot;: 65,
+  &quot;auc&quot;: 0.878,
+  &quot;mean_T&quot;: 3.53,
+  &quot;mean_F&quot;: 2.42,
+  &quot;TF_gap&quot;: 1.11,
+  &quot;floorfrac_F&quot;: 0.0
+}</pre></td></tr></table></td></tr><tr><th>AUC_diff(H-P)</th><td><span class='j-num'>0.016</span></td></tr><tr><th>floorfrac_diff(H-P)</th><td><span class='j-num'>0.41</span></td></tr><tr><th>perm_p_AUC</th><td><span class='j-num'>0.7633</span></td></tr><tr><th>perm_p_floor</th><td><span class='j-num'>0.0</span></td></tr><tr><th>boot95_AUC_diff_itemnaive</th><td><ul class='j-arr'><li><span class='j-num'>-0.078</span></li><li><span class='j-num'>0.112</span></li></ul></td></tr><tr><th>boot95_AUC_diff_clustered</th><td><ul class='j-arr'><li><span class='j-num'>-0.089</span></li><li><span class='j-num'>0.094</span></li></ul></td></tr><tr><th>lowoverlap_AUC_diff(H-P)</th><td><span class='j-num'>0.023</span></td></tr><tr><th>lowoverlap_n</th><td><span class='j-num'>159</span></td></tr><tr><th>homonym_F_mean_by_lemma</th><td><table class='kv'><tr><th>ball</th><td><span class='j-num'>2.4</span></td></tr><tr><th>bank</th><td><span class='j-num'>1.6</span></td></tr><tr><th>case</th><td><span class='j-num'>1.54</span></td></tr><tr><th>date</th><td><span class='j-num'>2.0</span></td></tr><tr><th>pitch</th><td><span class='j-num'>1.0</span></td></tr><tr><th>pitcher</th><td><span class='j-num'>4.0</span></td></tr><tr><th>plane</th><td><span class='j-num'>2.0</span></td></tr><tr><th>rock</th><td><span class='j-num'>2.5</span></td></tr><tr><th>school</th><td><span class='j-num'>2.6</span></td></tr><tr><th>seal</th><td><span class='j-num'>1.0</span></td></tr><tr><th>tear</th><td><span class='j-num'>1.0</span></td></tr></table></td></tr></table></td></tr><tr><th>cont</th><td><table class='kv'><tr><th>n_used</th><td><span class='j-num'>161</span></td></tr><tr><th>by_stratum</th><td><table class='kv'><tr><th>HOMONYM</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 21,
+  &quot;nF&quot;: 39,
+  &quot;auc&quot;: 0.907,
+  &quot;mean_T&quot;: 88.33,
+  &quot;mean_F&quot;: 33.08,
+  &quot;TF_gap&quot;: 55.26,
+  &quot;floorfrac_F&quot;: 0.487
+}</pre></td></tr><tr><th>POLYSEME</th><td><pre class='json-lite'>{
+  &quot;nT&quot;: 36,
+  &quot;nF&quot;: 65,
+  &quot;auc&quot;: 0.904,
+  &quot;mean_T&quot;: 87.22,
+  &quot;mean_F&quot;: 45.54,
+  &quot;TF_gap&quot;: 41.68,
+  &quot;floorfrac_F&quot;: 0.031
+}</pre></td></tr></table></td></tr><tr><th>AUC_diff(H-P)</th><td><span class='j-num'>0.003</span></td></tr><tr><th>floorfrac_diff(H-P)</th><td><span class='j-num'>0.456</span></td></tr><tr><th>perm_p_AUC</th><td><span class='j-num'>0.9567</span></td></tr><tr><th>perm_p_floor</th><td><span class='j-num'>0.0</span></td></tr><tr><th>boot95_AUC_diff_itemnaive</th><td><ul class='j-arr'><li><span class='j-num'>-0.095</span></li><li><span class='j-num'>0.097</span></li></ul></td></tr><tr><th>boot95_AUC_diff_clustered</th><td><ul class='j-arr'><li><span class='j-num'>-0.111</span></li><li><span class='j-num'>0.068</span></li></ul></td></tr><tr><th>lowoverlap_AUC_diff(H-P)</th><td><span class='j-num'>0.008</span></td></tr><tr><th>lowoverlap_n</th><td><span class='j-num'>159</span></td></tr><tr><th>homonym_F_mean_by_lemma</th><td><table class='kv'><tr><th>ball</th><td><span class='j-num'>42.0</span></td></tr><tr><th>bank</th><td><span class='j-num'>24.0</span></td></tr><tr><th>case</th><td><span class='j-num'>15.77</span></td></tr><tr><th>date</th><td><span class='j-num'>31.67</span></td></tr><tr><th>pitch</th><td><span class='j-num'>0.0</span></td></tr><tr><th>pitcher</th><td><span class='j-num'>100.0</span></td></tr><tr><th>plane</th><td><span class='j-num'>20.0</span></td></tr><tr><th>rock</th><td><span class='j-num'>52.5</span></td></tr><tr><th>school</th><td><span class='j-num'>67.0</span></td></tr><tr><th>seal</th><td><span class='j-num'>80.0</span></td></tr><tr><th>tear</th><td><span class='j-num'>0.0</span></td></tr></table></td></tr></table></td></tr></table></td></tr></table></div></details><details class='section'><summary><span class='sec-k'>overlap_by_stratum_gold</span> <span class='muted'>(4 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>HOMONYM-F</th><td><span class='j-num'>0.0</span></td></tr><tr><th>HOMONYM-T</th><td><span class='j-num'>0.0</span></td></tr><tr><th>POLYSEME-F</th><td><span class='j-num'>0.0</span></td></tr><tr><th>POLYSEME-T</th><td><span class='j-num'>0.0081</span></td></tr></table></div></details>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

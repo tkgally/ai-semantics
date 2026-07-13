@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-21-modal-arm-widening</a> <span class="sep">/</span> <span class="cur">build.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">11.2 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-21-modal-arm-widening/build.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;build.py -- assemble + freeze the MODAL-ARM-WIDENING stimulus set (session 71, 2026-06-21).</span>
+
+<span class="sd">A FOCUSED FOLLOW-UP to the function-word-vs-content swap probe (run-v2, session 69) that</span>
+<span class="sd">tested wiki/findings/conjectures/function-word-substitutability.md and CONFIRMED it 3/3 but</span>
+<span class="sd">non-uniformly. Its companion essay</span>
+<span class="sd">(wiki/findings/essays/function-words-not-one-category.md) reads the per-arm structure and</span>
+<span class="sd">names revision trigger (a): the modal arm `will`-&gt;`would` was near-null in all three models,</span>
+<span class="sd">but that is a ONE-PAIR observation. This probe WIDENS the modal arm to test whether the modal</span>
+<span class="sd">null generalizes across modal types, or is specific to future-&gt;conditional.</span>
+
+<span class="sd">It REUSES the ratified instrument (3-way NLI entailment-flip), the ratified matching discipline</span>
+<span class="sd">(|dLg10WF| &lt;= 0.10 at both ends, signed-dlen-matched content control, content gap &gt;= function</span>
+<span class="sd">gap so no surface-only reader reproduces the asymmetry -- certify.py), and the</span>
+<span class="sd">internal-contrast-only posture (no new human claim). NO new operationalization decision is owed:</span>
+<span class="sd">the inventory-widening method is already ratified</span>
+<span class="sd">(wiki/decisions/resolved/function-word-count-vs-matching.md), the instrument is ratified</span>
+<span class="sd">(wiki/decisions/resolved/function-word-anchor-design.md), and this is not a re-test of the</span>
+<span class="sd">conjecture (already `tested`) but a per-arm characterization of modal behavior. (The &gt;=200-item</span>
+<span class="sd">count is the CONJECTURE-confirm bar, not this follow-up&#39;s bar; certify.py uses a per-arm power</span>
+<span class="sd">gate instead -- see its docstring.)</span>
+
+<span class="sd">ARMS (5):</span>
+<span class="sd">  Modal sweep (the question):</span>
+<span class="sd">    will -&gt; would   (future -&gt; conditional)        REPLICATION of run-v2&#39;s null; hyp &quot;is going to&quot;.</span>
+<span class="sd">    shall-&gt; should  (deontic obligation -&gt; advisory) NEW; hyp &quot;is required to&quot;.</span>
+<span class="sd">    must -&gt; might   (deontic necessity -&gt; epistemic possibility) NEW; hyp &quot;is required to&quot;.</span>
+<span class="sd">  In-run positive controls (prove the NLI instrument flips on a real inferential change here):</span>
+<span class="sd">    some -&gt; every   (existential -&gt; universal)      REUSE run-v2 frames.</span>
+<span class="sd">    because-&gt;although(causal -&gt; concessive)          REUSE run-v2 frames (also supplies the adj class).</span>
+
+<span class="sd">Each ITEM (same design as run-v2):</span>
+<span class="sd">  premise_base : function word = swap-OUT, content word = OUT.</span>
+<span class="sd">  premise_fn   : function word = swap-IN , content word = OUT.  (function word in PREMISE ONLY; predicted to FLIP.)</span>
+<span class="sd">  premise_ct   : function word = swap-OUT, content word = IN.</span>
+<span class="sd">  hyp_base     : content word = OUT.   hyp_ct : content word = IN.</span>
+<span class="sd">  -&gt; 3 NLI calls/item: (premise_base,hyp_base), (premise_fn,hyp_base), (premise_ct,hyp_ct).</span>
+<span class="sd">     flip_fn = label(fn,hyp_base) != label(base,hyp_base) [predicted YES].</span>
+<span class="sd">     flip_ct = label(ct,hyp_ct)   != label(base,hyp_base) [predicted NO].</span>
+
+<span class="sd">Matching enforced HERE, drop-on-fail (binding conditions b-f), IDENTICAL to run-v2:</span>
+<span class="sd">  (b) content-OUT within |dLg10WF| &lt;= FREQ_TOL of the function-OUT word.</span>
+<span class="sd">  (c) content-IN  within |dLg10WF| &lt;= FREQ_TOL of the function-IN word (mirrored spread).</span>
+<span class="sd">  (d) signed len(in)-len(out) == signed function dlen (per-pair).</span>
+<span class="sd">  (e) per-arm count &gt;= ARM_MIN AND &gt;= 4 content semantic classes (certify.py).</span>
+<span class="sd">  (f) sha256 of stimuli.json recorded in PREREG.md before the first probe call (probe.py guard).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">freqlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">F</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+
+<span class="n">FUNC</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;because&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;out&quot;</span><span class="p">:</span> <span class="s2">&quot;because&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;although&quot;</span><span class="p">,</span> <span class="s2">&quot;gloss&quot;</span><span class="p">:</span> <span class="s2">&quot;subordinator: causal-&gt;concessive (REUSE run-v2; positive control)&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;some&quot;</span><span class="p">:</span>    <span class="p">{</span><span class="s2">&quot;out&quot;</span><span class="p">:</span> <span class="s2">&quot;some&quot;</span><span class="p">,</span>    <span class="s2">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;every&quot;</span><span class="p">,</span>    <span class="s2">&quot;gloss&quot;</span><span class="p">:</span> <span class="s2">&quot;quantifier: existential-&gt;universal (REUSE run-v2; positive control)&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;will&quot;</span><span class="p">:</span>    <span class="p">{</span><span class="s2">&quot;out&quot;</span><span class="p">:</span> <span class="s2">&quot;will&quot;</span><span class="p">,</span>    <span class="s2">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;would&quot;</span><span class="p">,</span>    <span class="s2">&quot;gloss&quot;</span><span class="p">:</span> <span class="s2">&quot;modal: future-&gt;conditional (REUSE run-v2; replication of the null)&quot;</span><span class="p">},</span>
+    <span class="c1"># MODAL-ARM-WIDENING (session 71). The two NEW modal pairs that test essay revision trigger (a):</span>
+    <span class="s2">&quot;shall&quot;</span><span class="p">:</span>   <span class="p">{</span><span class="s2">&quot;out&quot;</span><span class="p">:</span> <span class="s2">&quot;shall&quot;</span><span class="p">,</span>   <span class="s2">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;should&quot;</span><span class="p">,</span>   <span class="s2">&quot;gloss&quot;</span><span class="p">:</span> <span class="s2">&quot;modal: deontic obligation-&gt;advisory (NEW)&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;must&quot;</span><span class="p">:</span>    <span class="p">{</span><span class="s2">&quot;out&quot;</span><span class="p">:</span> <span class="s2">&quot;must&quot;</span><span class="p">,</span>    <span class="s2">&quot;in&quot;</span><span class="p">:</span> <span class="s2">&quot;might&quot;</span><span class="p">,</span>     <span class="s2">&quot;gloss&quot;</span><span class="p">:</span> <span class="s2">&quot;modal: deontic necessity-&gt;epistemic possibility (NEW)&quot;</span><span class="p">},</span>
+<span class="p">}</span>
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">FUNC</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="n">d</span><span class="p">[</span><span class="s2">&quot;out_lg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;out&quot;</span><span class="p">]),</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">d</span><span class="p">[</span><span class="s2">&quot;in_lg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;in&quot;</span><span class="p">]),</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">d</span><span class="p">[</span><span class="s2">&quot;gap&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;out_lg&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;in_lg&quot;</span><span class="p">]),</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="n">FREQ_TOL</span> <span class="o">=</span> <span class="mf">0.10</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">cap_first</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">s</span> <span class="k">else</span> <span class="n">s</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">verify_pair</span><span class="p">(</span><span class="n">ftype</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">inn</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return (ok, reason, stats). Enforces (b),(c),(d) -- per-pair signed dlen. UNCHANGED from run-v2.&quot;&quot;&quot;</span>
+    <span class="n">olg</span><span class="p">,</span> <span class="n">ilg</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">lg10wf</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="n">F</span><span class="o">.</span><span class="n">lg10wf</span><span class="p">(</span><span class="n">inn</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">olg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;out </span><span class="si">{</span><span class="n">out</span><span class="si">!r}</span><span class="s2"> not in norm&quot;</span><span class="p">,</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="n">ilg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;in </span><span class="si">{</span><span class="n">inn</span><span class="si">!r}</span><span class="s2"> not in norm&quot;</span><span class="p">,</span> <span class="p">{}</span>
+    <span class="n">fo</span><span class="p">,</span> <span class="n">fi</span> <span class="o">=</span> <span class="n">FUNC</span><span class="p">[</span><span class="n">ftype</span><span class="p">][</span><span class="s2">&quot;out_lg&quot;</span><span class="p">],</span> <span class="n">FUNC</span><span class="p">[</span><span class="n">ftype</span><span class="p">][</span><span class="s2">&quot;in_lg&quot;</span><span class="p">]</span>
+    <span class="n">func_dlen</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">FUNC</span><span class="p">[</span><span class="n">ftype</span><span class="p">][</span><span class="s2">&quot;in&quot;</span><span class="p">])</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">FUNC</span><span class="p">[</span><span class="n">ftype</span><span class="p">][</span><span class="s2">&quot;out&quot;</span><span class="p">])</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;out_lg&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">olg</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;in_lg&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">ilg</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+             <span class="s2">&quot;content_gap&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">olg</span> <span class="o">-</span> <span class="n">ilg</span><span class="p">),</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;func_gap&quot;</span><span class="p">:</span> <span class="n">FUNC</span><span class="p">[</span><span class="n">ftype</span><span class="p">][</span><span class="s2">&quot;gap&quot;</span><span class="p">],</span>
+             <span class="s2">&quot;d_out_func&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">olg</span> <span class="o">-</span> <span class="n">fo</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;d_in_func&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">ilg</span> <span class="o">-</span> <span class="n">fi</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+             <span class="s2">&quot;len_out&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s2">&quot;len_in&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">inn</span><span class="p">),</span>
+             <span class="s2">&quot;dlen&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">inn</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="s2">&quot;func_dlen&quot;</span><span class="p">:</span> <span class="n">func_dlen</span><span class="p">}</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">olg</span> <span class="o">-</span> <span class="n">fo</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">FREQ_TOL</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;(b) out </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s2"> dLg10WF </span><span class="si">{</span><span class="n">olg</span><span class="o">-</span><span class="n">fo</span><span class="si">:</span><span class="s2">+.3f</span><span class="si">}</span><span class="s2"> &gt; </span><span class="si">{</span><span class="n">FREQ_TOL</span><span class="si">}</span><span class="s2"> from </span><span class="si">{</span><span class="n">ftype</span><span class="si">}</span><span class="s2">-out&quot;</span><span class="p">,</span> <span class="n">stats</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ilg</span> <span class="o">-</span> <span class="n">fi</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">FREQ_TOL</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;(c) in </span><span class="si">{</span><span class="n">inn</span><span class="si">}</span><span class="s2"> dLg10WF </span><span class="si">{</span><span class="n">ilg</span><span class="o">-</span><span class="n">fi</span><span class="si">:</span><span class="s2">+.3f</span><span class="si">}</span><span class="s2"> &gt; </span><span class="si">{</span><span class="n">FREQ_TOL</span><span class="si">}</span><span class="s2"> from </span><span class="si">{</span><span class="n">ftype</span><span class="si">}</span><span class="s2">-in&quot;</span><span class="p">,</span> <span class="n">stats</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">inn</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">))</span> <span class="o">!=</span> <span class="n">func_dlen</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(d) signed dlen </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">inn</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="si">:</span><span class="s2">+d</span><span class="si">}</span><span class="s2"> != function dlen &quot;</span>
+                       <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func_dlen</span><span class="si">:</span><span class="s2">+d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">stats</span>
+    <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="n">stats</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">make</span><span class="p">():</span>
+    <span class="n">frames</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;frames.json&quot;</span><span class="p">)))</span>
+    <span class="n">items</span><span class="p">,</span> <span class="n">dropped</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="n">arms</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">frames</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">k</span> <span class="o">!=</span> <span class="s2">&quot;the_char&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">ftype</span> <span class="ow">in</span> <span class="n">arms</span><span class="p">:</span>
+        <span class="n">fout</span><span class="p">,</span> <span class="n">fin</span> <span class="o">=</span> <span class="n">FUNC</span><span class="p">[</span><span class="n">ftype</span><span class="p">][</span><span class="s2">&quot;out&quot;</span><span class="p">],</span> <span class="n">FUNC</span><span class="p">[</span><span class="n">ftype</span><span class="p">][</span><span class="s2">&quot;in&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">fr</span> <span class="ow">in</span> <span class="n">frames</span><span class="p">[</span><span class="n">ftype</span><span class="p">]:</span>
+            <span class="n">cap</span> <span class="o">=</span> <span class="n">fr</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cap&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="n">fwo</span> <span class="o">=</span> <span class="n">cap_first</span><span class="p">(</span><span class="n">fout</span><span class="p">)</span> <span class="k">if</span> <span class="n">cap</span> <span class="k">else</span> <span class="n">fout</span>
+            <span class="n">fwi</span> <span class="o">=</span> <span class="n">cap_first</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span> <span class="k">if</span> <span class="n">cap</span> <span class="k">else</span> <span class="n">fin</span>
+            <span class="k">for</span> <span class="n">out</span><span class="p">,</span> <span class="n">inn</span> <span class="ow">in</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;pairs&quot;</span><span class="p">]:</span>
+                <span class="n">ok</span><span class="p">,</span> <span class="n">reason</span><span class="p">,</span> <span class="n">st</span> <span class="o">=</span> <span class="n">verify_pair</span><span class="p">(</span><span class="n">ftype</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">inn</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">ok</span><span class="p">:</span>
+                    <span class="n">dropped</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;ftype&quot;</span><span class="p">:</span> <span class="n">ftype</span><span class="p">,</span> <span class="s2">&quot;pair&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">out</span><span class="p">,</span> <span class="n">inn</span><span class="p">],</span> <span class="s2">&quot;reason&quot;</span><span class="p">:</span> <span class="n">reason</span><span class="p">})</span>
+                    <span class="k">continue</span>
+                <span class="n">p_base</span> <span class="o">=</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;premise&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fw</span><span class="o">=</span><span class="n">fout</span><span class="p">,</span> <span class="n">Fw</span><span class="o">=</span><span class="n">fwo</span><span class="p">,</span> <span class="n">cw</span><span class="o">=</span><span class="n">out</span><span class="p">)</span>
+                <span class="n">p_fn</span> <span class="o">=</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;premise&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fw</span><span class="o">=</span><span class="n">fin</span><span class="p">,</span> <span class="n">Fw</span><span class="o">=</span><span class="n">fwi</span><span class="p">,</span> <span class="n">cw</span><span class="o">=</span><span class="n">out</span><span class="p">)</span>
+                <span class="n">p_ct</span> <span class="o">=</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;premise&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fw</span><span class="o">=</span><span class="n">fout</span><span class="p">,</span> <span class="n">Fw</span><span class="o">=</span><span class="n">fwo</span><span class="p">,</span> <span class="n">cw</span><span class="o">=</span><span class="n">inn</span><span class="p">)</span>
+                <span class="n">h_base</span> <span class="o">=</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;hyp&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cw</span><span class="o">=</span><span class="n">out</span><span class="p">)</span>
+                <span class="n">h_ct</span> <span class="o">=</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;hyp&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cw</span><span class="o">=</span><span class="n">inn</span><span class="p">)</span>
+                <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;ftype&quot;</span><span class="p">:</span> <span class="n">ftype</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;slot&quot;</span><span class="p">],</span> <span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="s2">&quot;matched&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;func_out&quot;</span><span class="p">:</span> <span class="n">fout</span><span class="p">,</span> <span class="s2">&quot;func_in&quot;</span><span class="p">:</span> <span class="n">fin</span><span class="p">,</span> <span class="s2">&quot;cont_out&quot;</span><span class="p">:</span> <span class="n">out</span><span class="p">,</span> <span class="s2">&quot;cont_in&quot;</span><span class="p">:</span> <span class="n">inn</span><span class="p">,</span>
+                    <span class="s2">&quot;pred_base&quot;</span><span class="p">:</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;base&quot;</span><span class="p">],</span> <span class="s2">&quot;pred_fn&quot;</span><span class="p">:</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;fn&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;premise_base&quot;</span><span class="p">:</span> <span class="n">p_base</span><span class="p">,</span> <span class="s2">&quot;premise_fn&quot;</span><span class="p">:</span> <span class="n">p_fn</span><span class="p">,</span> <span class="s2">&quot;premise_ct&quot;</span><span class="p">:</span> <span class="n">p_ct</span><span class="p">,</span>
+                    <span class="s2">&quot;hyp_base&quot;</span><span class="p">:</span> <span class="n">h_base</span><span class="p">,</span> <span class="s2">&quot;hyp_ct&quot;</span><span class="p">:</span> <span class="n">h_ct</span><span class="p">,</span>
+                    <span class="s2">&quot;func_gap&quot;</span><span class="p">:</span> <span class="n">FUNC</span><span class="p">[</span><span class="n">ftype</span><span class="p">][</span><span class="s2">&quot;gap&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">st</span><span class="p">,</span>
+                <span class="p">})</span>
+    <span class="c1"># the_char arm optional (not used in the modal-widening set); kept for pipeline parity.</span>
+    <span class="k">for</span> <span class="n">fr</span> <span class="ow">in</span> <span class="n">frames</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;the_char&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+        <span class="n">p_base</span> <span class="o">=</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;premise&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Fw</span><span class="o">=</span><span class="s2">&quot;The&quot;</span><span class="p">)</span>
+        <span class="n">p_fn</span> <span class="o">=</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;premise&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Fw</span><span class="o">=</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+        <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s2">&quot;ftype&quot;</span><span class="p">:</span> <span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="s2">&quot;det&quot;</span><span class="p">,</span> <span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="s2">&quot;det_char&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;func_out&quot;</span><span class="p">:</span> <span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;func_in&quot;</span><span class="p">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;cont_out&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;cont_in&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;pred_base&quot;</span><span class="p">:</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;base&quot;</span><span class="p">],</span> <span class="s2">&quot;pred_fn&quot;</span><span class="p">:</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;fn&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;premise_base&quot;</span><span class="p">:</span> <span class="n">p_base</span><span class="p">,</span> <span class="s2">&quot;premise_fn&quot;</span><span class="p">:</span> <span class="n">p_fn</span><span class="p">,</span> <span class="s2">&quot;premise_ct&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;hyp_base&quot;</span><span class="p">:</span> <span class="n">fr</span><span class="p">[</span><span class="s2">&quot;hyp&quot;</span><span class="p">],</span> <span class="s2">&quot;hyp_ct&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;func_gap&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;the&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">F</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)),</span> <span class="mi">4</span><span class="p">),</span>
+        <span class="p">})</span>
+    <span class="c1"># dedupe + assign stable ids</span>
+    <span class="n">seen</span><span class="p">,</span> <span class="n">uniq</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(),</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;premise_base&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;hyp_base&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;premise_fn&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;premise_ct&quot;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">uniq</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">it</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">uniq</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;ftype&quot;</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">],</span>
+                                                       <span class="n">x</span><span class="p">[</span><span class="s2">&quot;premise_base&quot;</span><span class="p">]))):</span>
+        <span class="n">it</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;ftype&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">03d</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="n">uniq</span><span class="p">,</span> <span class="n">dropped</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span><span class="p">,</span> <span class="n">dropped</span> <span class="o">=</span> <span class="n">make</span><span class="p">()</span>
+    <span class="n">matched</span> <span class="o">=</span> <span class="p">[</span><span class="n">it</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;matched&quot;</span><span class="p">]</span>
+    <span class="n">det</span> <span class="o">=</span> <span class="p">[</span><span class="n">it</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;det_char&quot;</span><span class="p">]</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])}</span>
+    <span class="n">blob</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+    <span class="n">sha</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">blob</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s2">&quot;sha256&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sha</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;stimuli.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span>
+              <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">by_class</span><span class="p">,</span> <span class="n">by_ft</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span>
+    <span class="n">resid</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">out_words</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">matched</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;ftype&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;pos&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">by_class</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">by_class</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">by_ft</span><span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;ftype&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">by_ft</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;ftype&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">resid</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;ftype&quot;</span><span class="p">],</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;content_gap&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;func_gap&quot;</span><span class="p">])</span>
+        <span class="n">out_words</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">out_words</span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;cont_out&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">out_words</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;cont_out&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">diversity</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">single_word_classes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">ow</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">out_words</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">n_items</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ow</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">n_out</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ow</span><span class="p">)</span>
+        <span class="n">diversity</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;distinct_out_words&quot;</span><span class="p">:</span> <span class="n">n_out</span><span class="p">,</span> <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="n">n_items</span><span class="p">,</span>
+                        <span class="s2">&quot;items_per_out_word&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">n_items</span> <span class="o">/</span> <span class="n">n_out</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+                        <span class="s2">&quot;out_word_counts&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">ow</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))}</span>
+        <span class="k">if</span> <span class="n">n_out</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">single_word_classes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+    <span class="n">report</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;function_pairs&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;out_lg&quot;</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;out_lg&quot;</span><span class="p">],</span> <span class="s2">&quot;in_lg&quot;</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;in_lg&quot;</span><span class="p">],</span>
+                               <span class="s2">&quot;gap&quot;</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;gap&quot;</span><span class="p">],</span> <span class="s2">&quot;gloss&quot;</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;gloss&quot;</span><span class="p">]}</span>
+                           <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">FUNC</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
+        <span class="s2">&quot;counts&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;matched_total&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">matched</span><span class="p">),</span> <span class="s2">&quot;det_char&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">det</span><span class="p">),</span>
+                   <span class="s2">&quot;by_function&quot;</span><span class="p">:</span> <span class="n">by_ft</span><span class="p">,</span> <span class="s2">&quot;by_function_x_pos&quot;</span><span class="p">:</span> <span class="n">by_class</span><span class="p">,</span>
+                   <span class="s2">&quot;content_semantic_classes&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">({</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">matched</span><span class="p">})},</span>
+        <span class="s2">&quot;gap_residual_mean_by_ftype&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
+                                       <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">resid</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
+        <span class="s2">&quot;gap_residual_absmax_by_ftype&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">v</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
+                                         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">resid</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
+        <span class="s2">&quot;content_diversity_by_function_x_pos&quot;</span><span class="p">:</span> <span class="n">diversity</span><span class="p">,</span>
+        <span class="s2">&quot;single_out_word_classes&quot;</span><span class="p">:</span> <span class="n">single_word_classes</span><span class="p">,</span>
+        <span class="s2">&quot;dropped_pairs&quot;</span><span class="p">:</span> <span class="n">dropped</span><span class="p">,</span>
+        <span class="s2">&quot;freq_tol&quot;</span><span class="p">:</span> <span class="n">FREQ_TOL</span><span class="p">,</span> <span class="s2">&quot;len_match&quot;</span><span class="p">:</span> <span class="s2">&quot;signed dlen == function dlen (per-pair)&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">report</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;matching-report.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span>
+              <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;items: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">matched</span><span class="p">)</span><span class="si">}</span><span class="s2"> matched + </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">det</span><span class="p">)</span><span class="si">}</span><span class="s2"> det_char)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;by function: </span><span class="si">{</span><span class="n">by_ft</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;by function x pos: </span><span class="si">{</span><span class="n">by_class</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;content semantic classes: </span><span class="si">{</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;counts&#39;</span><span class="p">][</span><span class="s1">&#39;content_semantic_classes&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gap residual mean by ftype: </span><span class="si">{</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;gap_residual_mean_by_ftype&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;gap residual |max| by ftype: </span><span class="si">{</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;gap_residual_absmax_by_ftype&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;single-out-word classes: </span><span class="si">{</span><span class="n">single_word_classes</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dropped pairs: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">dropped</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dropped</span><span class="p">[:</span><span class="mi">20</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   DROP </span><span class="si">{</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;ftype&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;pair&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;reason&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stimuli.json sha256: </span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">ARM_MIN</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">thin</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">by_ft</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="n">ARM_MIN</span><span class="p">}</span>
+    <span class="k">if</span> <span class="n">thin</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">*** WARNING: arms below per-arm min </span><span class="si">{</span><span class="n">ARM_MIN</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">thin</span><span class="si">}</span><span class="s2"> ***&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

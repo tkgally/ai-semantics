@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>README.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-17-relational-integration-depth</a> <span class="sep">/</span> <span class="cur">README.md</span></nav>
+<main>
+<header class="page-head">
+<h1>README.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">2.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-17-relational-integration-depth/README.md</code></p>
+</header>
+<div class='md'><h1 id="2026-06-17-relational-integration-under-load-probe-burial-depth-2">2026-06-17 — relational INTEGRATION-UNDER-LOAD probe (burial depth 2)</h1>
+<p>The harder-load follow-up to <a href="../../../wiki/findings/results/relational-integration-rung-ii.md.html"><code>result/relational-integration-rung-ii</code></a>,
+attacking that result's own honesty-box caveat — "it does not rule out overwrite behaviour under
+harder load (more turns…)". Tests whether rung-(ii) integration survives when the earliest of three
+compatible stamped turns is <strong>buried under two later turns</strong>.</p>
+<p>Internal-contrast-only (the ratified relational posture; no human comparison; no new decision owed).
+Design: <a href="../../designs/relational-integration-depth.md.html"><code>experiments/designs/relational-integration-depth.md</code></a>.</p>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>common.py</code> — panel, frozen params (K=8, ceilings, DIRECT floor), prompt templates, forced
+  parse, cost ledger + hard stop. The full rationale is in its module docstring.</li>
+<li><code>build_trials.py</code> — builds the frozen 2×2×2 balanced-block roster and <strong>certifies the shortcut
+  bounds empirically</strong> (<code>assert_balance</code>): position 0.125, single-attr ≤0.25, every drop-one-turn
+  reader = 0.50, full integrator = 1.000. Prints the sha256 for PREREG.</li>
+<li><code>fixtures/make_fixtures.py</code> — certifies the verdict map on six idealized readers (only a genuine
+  integrator-of-three → INTEGRATION-UNDER-LOAD).</li>
+<li><code>probe.py</code> — <code>liveness</code> (2 calls, format gate, held-out record) then <code>full</code> (160 finding-bearing
+  calls). Refuses <code>full</code> until <code>PREREG.md</code> records the frozen sha.</li>
+<li><code>analyze.py</code> — the pre-registered verdict.</li>
+<li><code>PREREG-draft.md</code> → <code>PREREG.md</code> (frozen after the independent pre-run critic GO).</li>
+</ul>
+<h2 id="run-order">Run order</h2>
+<div class="highlight"><pre><span></span><code>python3 build_trials.py            # writes stimuli.json + prints sha256
+python3 fixtures/make_fixtures.py  # ALL FIXTURES PASS
+# independent pre-run critic GO -&gt; rename PREREG-draft.md PREREG.md (with the sha) -&gt;
+python3 probe.py liveness          # both models parse
+python3 probe.py full              # the only finding-bearing dataset
+python3 analyze.py
+# independent post-run verifier reproduces from raw/
+</code></pre></div></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

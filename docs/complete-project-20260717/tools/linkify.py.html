@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>linkify.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../index.html">home</a> <span class="sep">/</span> <a href="index.html">tools</a> <span class="sep">/</span> <span class="cur">linkify.py</span></nav>
+<main>
+<header class="page-head">
+<h1>linkify.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">6.0 KB</span> &middot; <code class="fpath">tools/linkify.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;linkify.py — keep in-repo references in the wiki clickable and correct.</span>
+
+<span class="sd">The wiki cites other pages as backticked code spans, e.g. `source/weissweiler-2023-cxg-insight`,</span>
+<span class="sd">`claim/formal-competence-aann-ceiling`, `decisions/open/cxg-probing-anchor`, `meaning-senses.md`,</span>
+<span class="sd">`base/sources/foo.md`. Those render as inert code in a markdown viewer. This tool:</span>
+
+<span class="sd">  1. WRAPS each such bare code span whose target exists into a clickable relative link that keeps</span>
+<span class="sd">     the original code-span as its visible label, e.g.</span>
+<span class="sd">        `source/weissweiler-2023-cxg-insight`</span>
+<span class="sd">        -&gt;  [`source/weissweiler-2023-cxg-insight`](../../base/sources/weissweiler-2023-cxg-insight.md)</span>
+<span class="sd">  2. REPAIRS already-linked references whose path is stale (e.g. after a page or folder is moved)</span>
+<span class="sd">     by recomputing the relative path from the recognized label. This makes the wiki robust to</span>
+<span class="sd">     reorganization: move files, re-run linkify, links self-heal.</span>
+
+<span class="sd">Design rules:</span>
+<span class="sd">- Only act on references whose resolved target FILE EXISTS. Aspirational mentions of not-yet-created</span>
+<span class="sd">  pages are left as plain code spans, so the tool never creates a dead link.</span>
+<span class="sd">- Idempotent: re-running changes nothing once paths are correct.</span>
+<span class="sd">- The YAML front-matter `links:` block uses `target: type/id` WITHOUT backticks and is never touched —</span>
+<span class="sd">  it remains the machine-readable typed-link graph that senselint consumes.</span>
+
+<span class="sd">Usage:</span>
+<span class="sd">    python3 tools/linkify.py            # rewrite in place across wiki/</span>
+<span class="sd">    python3 tools/linkify.py --check    # report what would change, exit 1 if anything would</span>
+<span class="sd">    python3 tools/linkify.py PATH ...   # restrict to given files/dirs</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="n">REPO</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))</span>
+<span class="n">WIKI</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">REPO</span><span class="p">,</span> <span class="s2">&quot;wiki&quot;</span><span class="p">)</span>
+
+<span class="c1"># type prefix -&gt; directory (relative to repo root) for the typed findings/base pages</span>
+<span class="n">TYPE_DIR</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;wiki/base/sources&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;resource&quot;</span><span class="p">:</span> <span class="s2">&quot;wiki/base/resources&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;concept&quot;</span><span class="p">:</span> <span class="s2">&quot;wiki/base/concepts&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;claim&quot;</span><span class="p">:</span> <span class="s2">&quot;wiki/findings/claims&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;wiki/findings/results&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;conjecture&quot;</span><span class="p">:</span> <span class="s2">&quot;wiki/findings/conjectures&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;theory&quot;</span><span class="p">:</span> <span class="s2">&quot;wiki/findings/theory&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;open-question&quot;</span><span class="p">:</span> <span class="s2">&quot;wiki/findings/open-questions&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;essay&quot;</span><span class="p">:</span> <span class="s2">&quot;wiki/findings/essays&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">_TYPED</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^(?P&lt;type&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;|&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">TYPE_DIR</span><span class="p">)</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)/(?P&lt;id&gt;[a-z0-9-]+)$&quot;</span><span class="p">)</span>
+<span class="n">_DECISION</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^decisions/(?P&lt;sub&gt;open|resolved)/(?P&lt;id&gt;[a-z0-9-]+)(?:\.md)?$&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">resolve_ref</span><span class="p">(</span><span class="n">ref</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Map a reference label to an existing absolute target path, or None.</span>
+
+<span class="sd">    Handles: typed refs (`type/id`), decision refs (`decisions/open|resolved/id`),</span>
+<span class="sd">    and any relative `.md` path (resolved against wiki/ first, then the repo root).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ref</span> <span class="o">=</span> <span class="n">ref</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">_TYPED</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">m</span><span class="p">:</span>
+        <span class="n">cand</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">REPO</span><span class="p">,</span> <span class="n">TYPE_DIR</span><span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)],</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.md&quot;</span><span class="p">)]</span>
+    <span class="k">elif</span> <span class="n">_DECISION</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">ref</span><span class="p">):</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">_DECISION</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span>
+        <span class="n">cand</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">REPO</span><span class="p">,</span> <span class="s2">&quot;wiki&quot;</span><span class="p">,</span> <span class="s2">&quot;decisions&quot;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;sub&quot;</span><span class="p">),</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.md&quot;</span><span class="p">)]</span>
+    <span class="k">elif</span> <span class="n">ref</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.md&quot;</span><span class="p">):</span>
+        <span class="n">cand</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">WIKI</span><span class="p">,</span> <span class="n">ref</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">REPO</span><span class="p">,</span> <span class="n">ref</span><span class="p">)]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cand</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">c</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="c1"># already-linked reference: [`label`](path)</span>
+<span class="n">_LINKED</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\[`(?P&lt;ref&gt;[^`\n]+)`\]\((?P&lt;path&gt;[^)\n]+)\)&quot;</span><span class="p">)</span>
+<span class="c1"># bare code span not already part of a link</span>
+<span class="n">_BARE</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?&lt;!\[)`(?P&lt;ref&gt;[^`\n]+)`(?!\]\()&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">process_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return (new_text, n_changed). Repairs stale links, then wraps bare refs.</span>
+
+<span class="sd">    Skips fenced code blocks.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">file_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+    <span class="n">changed</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">relto</span><span class="p">(</span><span class="n">target_abs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="n">target_abs</span><span class="p">,</span> <span class="n">file_dir</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">repair</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+        <span class="k">nonlocal</span> <span class="n">changed</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="n">resolve_ref</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;ref&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">target</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># unknown/external link — leave untouched</span>
+        <span class="n">new_rel</span> <span class="o">=</span> <span class="n">relto</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">new_rel</span> <span class="o">==</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">changed</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="s2">&quot;[`</span><span class="si">%s</span><span class="s2">`](</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;ref&quot;</span><span class="p">),</span> <span class="n">new_rel</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">wrap</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+        <span class="k">nonlocal</span> <span class="n">changed</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="n">resolve_ref</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;ref&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">target</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># not an in-repo page — leave as plain code span</span>
+        <span class="n">changed</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="s2">&quot;[`</span><span class="si">%s</span><span class="s2">`](</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;ref&quot;</span><span class="p">),</span> <span class="n">relto</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+
+    <span class="n">out</span><span class="p">,</span> <span class="n">in_fence</span> <span class="o">=</span> <span class="p">[],</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;```&quot;</span><span class="p">):</span>
+            <span class="n">in_fence</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">in_fence</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">in_fence</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">_LINKED</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">repair</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">_BARE</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">wrap</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out</span><span class="p">),</span> <span class="n">changed</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">iter_md</span><span class="p">(</span><span class="n">paths</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
+        <span class="n">ap</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">ap</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">ap</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.md&quot;</span><span class="p">):</span>
+                        <span class="k">yield</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ap</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.md&quot;</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">ap</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">argv</span><span class="p">):</span>
+    <span class="n">check</span> <span class="o">=</span> <span class="s2">&quot;--check&quot;</span> <span class="ow">in</span> <span class="n">argv</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">argv</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">a</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;--&quot;</span><span class="p">)]</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="n">args</span> <span class="ow">or</span> <span class="p">[</span><span class="n">WIKI</span><span class="p">]</span>
+
+    <span class="n">total_files</span><span class="p">,</span> <span class="n">total_links</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">fp</span> <span class="ow">in</span> <span class="n">iter_md</span><span class="p">(</span><span class="n">targets</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+            <span class="n">src</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">new</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">process_text</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">n</span><span class="p">:</span>
+            <span class="n">total_files</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">total_links</span> <span class="o">+=</span> <span class="n">n</span>
+            <span class="n">rel</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">REPO</span><span class="p">)</span>
+            <span class="n">verb</span> <span class="o">=</span> <span class="s2">&quot;WOULD update&quot;</span> <span class="k">if</span> <span class="n">check</span> <span class="k">else</span> <span class="s2">&quot;updated&quot;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  </span><span class="si">%s</span><span class="s2"> </span><span class="si">%2d</span><span class="s2"> link(s) in </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">verb</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">rel</span><span class="p">))</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">check</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+                    <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">new</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;linkify --check: </span><span class="si">%d</span><span class="s2"> link(s) across </span><span class="si">%d</span><span class="s2"> file(s) need attention.&quot;</span>
+              <span class="o">%</span> <span class="p">(</span><span class="n">total_links</span><span class="p">,</span> <span class="n">total_files</span><span class="p">))</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">total_links</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;linkify: updated </span><span class="si">%d</span><span class="s2"> link(s) across </span><span class="si">%d</span><span class="s2"> file(s).&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">total_links</span><span class="p">,</span> <span class="n">total_files</span><span class="p">))</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>vote_script.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-04-aann-behavioral-gradient-rep2</a> <span class="sep">/</span> <span class="cur">vote_script.py</span></nav>
+<main>
+<header class="page-head">
+<h1>vote_script.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">4.3 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-04-aann-behavioral-gradient-rep2/vote_script.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;Non-Anthropic decorrelation PRE-RUN vote for the AANN gradient rep2 replication.</span>
+<span class="sd">Routed via the probe REST path (openrouter.py) per PROTOCOL 2/3, s175/s177 precedent.</span>
+<span class="sd">Model: openai/gpt-5.4-mini (non-Anthropic w.r.t. the harness reviewer). Cutoff-aware preamble.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;/home/user/ai-semantics/experiments/lib&quot;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openrouter</span><span class="w"> </span><span class="kn">import</span> <span class="n">call</span><span class="p">,</span> <span class="n">billed_cost</span>
+
+<span class="n">SYSTEM</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;You are an independent, adversarial methodology reviewer for an autonomous research &quot;</span>
+          <span class="s2">&quot;project on LLM semantics. Judge ONLY the described experimental design for a &quot;</span>
+          <span class="s2">&quot;replication run. You are one decorrelation vote; be skeptical and concrete. &quot;</span>
+          <span class="s2">&quot;Note: you may have a knowledge cutoff; do not rely on any memory of these specific &quot;</span>
+          <span class="s2">&quot;model versions or datasets beyond what the summary states. Answer with a verdict.&quot;</span><span class="p">)</span>
+
+<span class="n">USER</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;A frozen behavioral probe is about to run. Adjudicate GO / GO-WITH-CONDITIONS / NO-GO.</span>
+
+<span class="s2">BACKGROUND. An earlier run (&quot;v2&quot;, 2026-06-12) measured whether three LLMs&#39; prompted graded</span>
+<span class="s2">acceptability (0-100, temperature 0) for AANN sentences (&quot;a beautiful three days&quot;) rank-tracks a</span>
+<span class="s2">human MTurk acceptability gradient over a 204-cell (adjective x noun-class) space. v2 found all</span>
+<span class="s2">three models&#39; cell-level Spearman rho = 0.70/0.68/0.75 (bootstrap CIs exclude 0), surviving a</span>
+<span class="s2">word-frequency partial and a noun-class guard. A claim was promoted from v2 but SCOPED as</span>
+<span class="s2">&quot;single run&quot;: there is no SECOND-DATE replication of the overall positive gradient.</span>
+
+<span class="s2">THIS RUN (&quot;rep2&quot;, 2026-07-04) is the owed second-date replication. Design:</span>
+<span class="s2">- The instrument code (prompting, parsing, statistics, thresholds, verdict map) is BYTE-IDENTICAL</span>
+<span class="s2">  to v2 (sha256-verified copies of probe.py and analyze.py).</span>
+<span class="s2">- The human anchor tables (human cell means over ALL 3,600 ratings) are BYTE-IDENTICAL to v2</span>
+<span class="s2">  (seed-independent; verified by diff). Same yardstick.</span>
+<span class="s2">- The anchored arm draws 408 FRESH sentence items, one seeded sample of 2 items per cell, but</span>
+<span class="s2">  drawn DISJOINT from v2: v2&#39;s two items per cell are removed from the candidate pool before</span>
+<span class="s2">  sampling, so rep2 shares ZERO surface items with v2 (asserted mechanically; every cell keeps</span>
+<span class="s2">  &gt;=4 candidates). So the models rate DIFFERENT sentences that map to the SAME human cells.</span>
+<span class="s2">- Held-out and Tier-0 arms are lexically frozen lists, so byte-identical to v2 by construction</span>
+<span class="s2">  (a bonus second-date re-run of those).</span>
+<span class="s2">- Pre-registered success for &quot;the overall positive replicates&quot;: anchored arm passes for &gt;=2 of 3</span>
+<span class="s2">  Tier-0-passing models, at a cell-level rho whose bootstrap CI overlaps v2&#39;s per-model interval.</span>
+<span class="s2">  A failure (fewer passers, or a non-overlapping downward CI) is declared IN ADVANCE to be a</span>
+<span class="s2">  first-class negative that WEAKENS the claim&#39;s overall-positive leg. No predicted class ordering</span>
+<span class="s2">  is hardcoded in scoring; scoring is against empirical human cell means only.</span>
+<span class="s2">- Cost ~ $0.31 (single-integer outputs), temperature 0.</span>
+
+<span class="s2">Questions to weigh: (a) Is a fresh-item, same-anchor, byte-identical-instrument re-run a sound</span>
+<span class="s2">SECOND-DATE replication of the anchored gradient, or is it merely a re-run that adds little? (b) Is</span>
+<span class="s2">the pre-registered success criterion genuinely falsifiable (can it fail), or does it let the run</span>
+<span class="s2">&quot;win either way&quot;? (c) Any confound the disjoint-sampling introduces? (d) Any reason temperature-0</span>
+<span class="s2">makes this trivial GIVEN the items are fresh? (e) Is scoping the contribution to &quot;cross-date</span>
+<span class="s2">replication of the anchored positive&quot; (NOT re-opening v2&#39;s verdict) the right, modest read?</span>
+
+<span class="s2">Answer in this format:</span>
+<span class="s2">VERDICT: &lt;GO | GO-WITH-CONDITIONS | NO-GO&gt;</span>
+<span class="s2">CONDITIONS: &lt;numbered, only if GO-WITH-CONDITIONS&gt;</span>
+<span class="s2">KEY REASONS: &lt;2-5 sentences, concrete&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="s2">&quot;openai/gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">,</span> <span class="n">USER</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== CONTENT ===&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== ERROR ===&quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">))</span>
+    <span class="n">total</span><span class="p">,</span> <span class="n">have</span><span class="p">,</span> <span class="n">missing</span> <span class="o">=</span> <span class="n">billed_cost</span><span class="p">([[</span><span class="n">r</span><span class="p">]])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;=== billed usage.cost: $</span><span class="si">{</span><span class="n">total</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2"> (have=</span><span class="si">{</span><span class="n">have</span><span class="si">}</span><span class="s2"> missing=</span><span class="si">{</span><span class="n">missing</span><span class="si">}</span><span class="s2">) ===&quot;</span><span class="p">)</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">({</span><span class="s2">&quot;ts&quot;</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">T%H:%M:%SZ&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">gmtime</span><span class="p">()),</span>
+               <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;openai/gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
+               <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">),</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">)},</span>
+              <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/home/user/ai-semantics/experiments/runs/2026-07-04-aann-behavioral-gradient-rep2/prerun_vote.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

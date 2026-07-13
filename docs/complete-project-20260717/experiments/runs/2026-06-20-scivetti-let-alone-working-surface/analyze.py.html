@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-20-scivetti-let-alone-working-surface</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">10.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-20-scivetti-let-alone-working-surface/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;analyze.py — frozen analysis for the let-alone working-surface format probe (NO API).</span>
+
+<span class="sd">Two questions, pre-registered (PREREG.md):</span>
+
+<span class="sd">  Q1 (anchored leg). Under the working surface, what is each model&#39;s per-construction</span>
+<span class="sd">      accuracy vs the per-item gold and the human ~0.90 native-speaker baseline?</span>
+<span class="sd">      comparative-correlative carries the RATIFIED Scivetti anchor (ceiling control);</span>
+<span class="sd">      let-alone is DESCRIPTIVE from the same human-annotated release (not individually</span>
+<span class="sd">      anchored), exactly as in session 57.</span>
+
+<span class="sd">  Q2 (the headline format contrast; internal-contrast-only). Does the working surface</span>
+<span class="sd">      CHANGE the label on the SAME items vs the session-57 forced single-token format?</span>
+<span class="sd">      Within-item paired comparison: for each model and construction, count</span>
+<span class="sd">        b = forced-WRONG -&gt; working-surface-RIGHT (gains)</span>
+<span class="sd">        c = forced-RIGHT -&gt; working-surface-WRONG (losses)</span>
+<span class="sd">      and a one-sided exact binomial (sign) test on the b+c discordant pairs.</span>
+<span class="sd">      Pre-registered per-(model,construction) verdict:</span>
+<span class="sd">        LIFTS     : ws_acc &gt; forced_acc AND P(X&gt;=b | n=b+c, 0.5) &lt; 0.05</span>
+<span class="sd">        DROPS     : ws_acc &lt; forced_acc AND P(X&gt;=c | n=b+c, 0.5) &lt; 0.05</span>
+<span class="sd">        UNCHANGED : otherwise.</span>
+<span class="sd">      Control guard (comp-correlative): PRESERVED if its ws_acc Wilson CI contains the</span>
+<span class="sd">      forced-format acc (the working surface did not break the instrument), else FLAG.</span>
+
+<span class="sd">Paired baseline: ../2026-06-20-scivetti-cxnli-answer-key/raw/{A,B,C}-nli.json</span>
+<span class="sd">  (committed; item_id + cxn + gold + value, NO text). Matched by item_id.</span>
+
+<span class="sd">Anchor: resource/scivetti-2025-cxnli-dataset (ratified 2026-05-29, Tom).</span>
+
+<span class="sd">Usage: python3 analyze.py            # reads raw/{A,B,C}-labels.json, writes results.json</span>
+<span class="sd">       python3 analyze.py --selftest # synthetic checks, no raw needed</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span><span class="p">,</span> <span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+<span class="n">BASELINE_RAW</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;..&quot;</span> <span class="o">/</span> <span class="s2">&quot;2026-06-20-scivetti-cxnli-answer-key&quot;</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+<span class="n">PANEL_NAMES</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;claude-sonnet-4.6&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;gemini-3.5-flash&quot;</span><span class="p">}</span>
+<span class="n">TARGET</span> <span class="o">=</span> <span class="s2">&quot;let-alone&quot;</span>
+<span class="n">CONTROL</span> <span class="o">=</span> <span class="s2">&quot;comparative-correlative&quot;</span>
+<span class="n">RATIFIED</span> <span class="o">=</span> <span class="p">{</span><span class="n">CONTROL</span><span class="p">}</span>
+<span class="n">HUMAN_BASELINE</span> <span class="o">=</span> <span class="mf">0.90</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">wilson</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mf">1.96</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">k</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">centre</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">))</span> <span class="o">/</span> <span class="n">denom</span>
+    <span class="n">half</span> <span class="o">=</span> <span class="p">(</span><span class="n">z</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">)))</span> <span class="o">/</span> <span class="n">denom</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">centre</span> <span class="o">-</span> <span class="n">half</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">centre</span> <span class="o">+</span> <span class="n">half</span><span class="p">),</span> <span class="n">p</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">baseline_verdict</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">lo</span> <span class="o">&gt;</span> <span class="n">HUMAN_BASELINE</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;ABOVE-HUMAN-BASELINE&quot;</span>
+    <span class="k">if</span> <span class="n">hi</span> <span class="o">&lt;</span> <span class="n">HUMAN_BASELINE</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;BELOW-HUMAN-BASELINE&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;MATCHES-HUMAN-BASELINE&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">binom_tail_ge</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;One-sided exact: P(X &gt;= b) for X ~ Binomial(n, p).&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">1.0</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">comb</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="o">*</span> <span class="n">p</span><span class="o">**</span><span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">correct</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">])</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">per_cxn_acc</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">cxn</span><span class="p">):</span>
+    <span class="n">rs</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;cxn&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">cxn</span><span class="p">]</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span> <span class="k">if</span> <span class="n">correct</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
+    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">wilson</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">),</span> <span class="s2">&quot;correct&quot;</span><span class="p">:</span> <span class="n">k</span><span class="p">,</span> <span class="s2">&quot;acc&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s2">&quot;wilson_lo&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;wilson_hi&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="mi">4</span><span class="p">)}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">paired</span><span class="p">(</span><span class="n">ws_rows</span><span class="p">,</span> <span class="n">base_rows</span><span class="p">,</span> <span class="n">cxn</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Within-item paired comparison on construction `cxn`. Match by item_id.&quot;&quot;&quot;</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]:</span> <span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">base_rows</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;cxn&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">cxn</span><span class="p">}</span>
+    <span class="n">ws</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]:</span> <span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ws_rows</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;cxn&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">cxn</span><span class="p">}</span>
+    <span class="n">ids</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">ws</span><span class="p">))</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># both-right / forced-wrong-&gt;ws-right / forced-right-&gt;ws-wrong / both-wrong</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">:</span>
+        <span class="n">bc</span> <span class="o">=</span> <span class="n">correct</span><span class="p">(</span><span class="n">base</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">wc</span> <span class="o">=</span> <span class="n">correct</span><span class="p">(</span><span class="n">ws</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">bc</span> <span class="ow">and</span> <span class="n">wc</span><span class="p">:</span>
+            <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="ow">not</span> <span class="n">bc</span><span class="p">)</span> <span class="ow">and</span> <span class="n">wc</span><span class="p">:</span>
+            <span class="n">b</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">bc</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">wc</span><span class="p">):</span>
+            <span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">d</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">n_disc</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+    <span class="n">ws_acc</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span> <span class="k">if</span> <span class="n">ids</span> <span class="k">else</span> <span class="mf">0.0</span>
+    <span class="n">forced_acc</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span> <span class="k">if</span> <span class="n">ids</span> <span class="k">else</span> <span class="mf">0.0</span>
+    <span class="n">p_lift</span> <span class="o">=</span> <span class="n">binom_tail_ge</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n_disc</span><span class="p">)</span>   <span class="c1"># gains exceed losses?</span>
+    <span class="n">p_drop</span> <span class="o">=</span> <span class="n">binom_tail_ge</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">n_disc</span><span class="p">)</span>   <span class="c1"># losses exceed gains?</span>
+    <span class="k">if</span> <span class="n">ws_acc</span> <span class="o">&gt;</span> <span class="n">forced_acc</span> <span class="ow">and</span> <span class="n">p_lift</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;LIFTS&quot;</span>
+    <span class="k">elif</span> <span class="n">ws_acc</span> <span class="o">&lt;</span> <span class="n">forced_acc</span> <span class="ow">and</span> <span class="n">p_drop</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+        <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;DROPS&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;UNCHANGED&quot;</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;n_paired&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">),</span> <span class="s2">&quot;both_right&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;gains_wrong_to_right&quot;</span><span class="p">:</span> <span class="n">b</span><span class="p">,</span>
+            <span class="s2">&quot;losses_right_to_wrong&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">,</span> <span class="s2">&quot;both_wrong&quot;</span><span class="p">:</span> <span class="n">d</span><span class="p">,</span>
+            <span class="s2">&quot;forced_acc&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">forced_acc</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;ws_acc&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">ws_acc</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s2">&quot;acc_delta&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">ws_acc</span> <span class="o">-</span> <span class="n">forced_acc</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s2">&quot;p_lift_one_sided&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">p_lift</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="s2">&quot;p_drop_one_sided&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">p_drop</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+            <span class="s2">&quot;verdict&quot;</span><span class="p">:</span> <span class="n">verdict</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">control_guard</span><span class="p">(</span><span class="n">ws_cc</span><span class="p">,</span> <span class="n">base_rows</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;comp-correlative: did the working surface break the instrument? PRESERVED if the</span>
+<span class="sd">    ws Wilson CI contains the forced-format acc.&quot;&quot;&quot;</span>
+    <span class="n">base_cc</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">base_rows</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;cxn&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">CONTROL</span><span class="p">]</span>
+    <span class="n">fk</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">base_cc</span> <span class="k">if</span> <span class="n">correct</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
+    <span class="n">forced_acc</span> <span class="o">=</span> <span class="n">fk</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">base_cc</span><span class="p">)</span> <span class="k">if</span> <span class="n">base_cc</span> <span class="k">else</span> <span class="mf">0.0</span>
+    <span class="n">contains</span> <span class="o">=</span> <span class="n">ws_cc</span><span class="p">[</span><span class="s2">&quot;wilson_lo&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">forced_acc</span> <span class="o">&lt;=</span> <span class="n">ws_cc</span><span class="p">[</span><span class="s2">&quot;wilson_hi&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;forced_acc&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">forced_acc</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;ws_acc&quot;</span><span class="p">:</span> <span class="n">ws_cc</span><span class="p">[</span><span class="s2">&quot;acc&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;ws_ci&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">ws_cc</span><span class="p">[</span><span class="s2">&quot;wilson_lo&quot;</span><span class="p">],</span> <span class="n">ws_cc</span><span class="p">[</span><span class="s2">&quot;wilson_hi&quot;</span><span class="p">]],</span>
+            <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;PRESERVED&quot;</span> <span class="k">if</span> <span class="n">contains</span> <span class="k">else</span> <span class="s2">&quot;FLAG-degraded-or-changed&quot;</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;human_baseline_exp1&quot;</span><span class="p">:</span> <span class="n">HUMAN_BASELINE</span><span class="p">,</span>
+           <span class="s2">&quot;anchor&quot;</span><span class="p">:</span> <span class="s2">&quot;resource/scivetti-2025-cxnli-dataset (ratified 2026-05-29, Tom)&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;design&quot;</span><span class="p">:</span> <span class="s2">&quot;format-only (forced single token -&gt; working surface); items byte-identical to session 57&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;models&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PANEL_NAMES</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="n">RAW</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">-labels.json&quot;</span>
+        <span class="n">bf</span> <span class="o">=</span> <span class="n">BASELINE_RAW</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">-nli.json&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">f</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  (missing </span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">; skipping </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="n">ws_rows</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+        <span class="n">base_rows</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">bf</span><span class="p">))</span> <span class="k">if</span> <span class="n">bf</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">else</span> <span class="p">[]</span>
+        <span class="n">unparseable</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ws_rows</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">modes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;parse_mode&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ws_rows</span><span class="p">))</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;unparseable&quot;</span><span class="p">:</span> <span class="n">unparseable</span><span class="p">,</span> <span class="s2">&quot;parse_modes&quot;</span><span class="p">:</span> <span class="n">modes</span><span class="p">,</span>
+             <span class="s2">&quot;per_construction_ws&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;paired&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+        <span class="k">for</span> <span class="n">cxn</span> <span class="ow">in</span> <span class="p">(</span><span class="n">TARGET</span><span class="p">,</span> <span class="n">CONTROL</span><span class="p">):</span>
+            <span class="n">cc</span> <span class="o">=</span> <span class="n">per_cxn_acc</span><span class="p">(</span><span class="n">ws_rows</span><span class="p">,</span> <span class="n">cxn</span><span class="p">)</span>
+            <span class="n">cc</span><span class="p">[</span><span class="s2">&quot;baseline_verdict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">baseline_verdict</span><span class="p">(</span><span class="n">cc</span><span class="p">[</span><span class="s2">&quot;wilson_lo&quot;</span><span class="p">],</span> <span class="n">cc</span><span class="p">[</span><span class="s2">&quot;wilson_hi&quot;</span><span class="p">])</span>
+            <span class="n">cc</span><span class="p">[</span><span class="s2">&quot;ratified_anchor&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cxn</span> <span class="ow">in</span> <span class="n">RATIFIED</span>
+            <span class="n">m</span><span class="p">[</span><span class="s2">&quot;per_construction_ws&quot;</span><span class="p">][</span><span class="n">cxn</span><span class="p">]</span> <span class="o">=</span> <span class="n">cc</span>
+            <span class="k">if</span> <span class="n">base_rows</span><span class="p">:</span>
+                <span class="n">m</span><span class="p">[</span><span class="s2">&quot;paired&quot;</span><span class="p">][</span><span class="n">cxn</span><span class="p">]</span> <span class="o">=</span> <span class="n">paired</span><span class="p">(</span><span class="n">ws_rows</span><span class="p">,</span> <span class="n">base_rows</span><span class="p">,</span> <span class="n">cxn</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">base_rows</span><span class="p">:</span>
+            <span class="n">m</span><span class="p">[</span><span class="s2">&quot;control_guard_comp_correlative&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">control_guard</span><span class="p">(</span>
+                <span class="n">m</span><span class="p">[</span><span class="s2">&quot;per_construction_ws&quot;</span><span class="p">][</span><span class="n">CONTROL</span><span class="p">],</span> <span class="n">base_rows</span><span class="p">)</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;models&quot;</span><span class="p">][</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span>
+    <span class="c1"># cross-model summary on the TARGET</span>
+    <span class="n">out</span><span class="p">[</span><span class="s2">&quot;target_summary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;construction&quot;</span><span class="p">:</span> <span class="n">TARGET</span><span class="p">,</span>
+        <span class="s2">&quot;per_model_verdict&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;paired&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">TARGET</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;verdict&quot;</span><span class="p">)</span>
+                              <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;models&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">m</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;paired&quot;</span><span class="p">)},</span>
+    <span class="p">}</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;results.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote results.json (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;models&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2"> models)&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;models&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: unparseable </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;unparseable&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">, parse_modes </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;parse_modes&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">cxn</span> <span class="ow">in</span> <span class="p">(</span><span class="n">TARGET</span><span class="p">,</span> <span class="n">CONTROL</span><span class="p">):</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;per_construction_ws&quot;</span><span class="p">][</span><span class="n">cxn</span><span class="p">]</span>
+            <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot; *anchor&quot;</span> <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;ratified_anchor&quot;</span><span class="p">]</span> <span class="k">else</span> <span class="s2">&quot; (descriptive)&quot;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">cxn</span><span class="si">:</span><span class="s2">24s</span><span class="si">}</span><span class="s2"> ws_acc=</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;wilson_lo&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;wilson_hi&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">] &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;vs human </span><span class="si">{</span><span class="n">HUMAN_BASELINE</span><span class="si">}</span><span class="s2">-&gt;</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;baseline_verdict&#39;</span><span class="p">]</span><span class="si">}{</span><span class="n">tag</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cxn</span> <span class="ow">in</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;paired&quot;</span><span class="p">]:</span>
+                <span class="n">pr</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;paired&quot;</span><span class="p">][</span><span class="n">cxn</span><span class="p">]</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;     PAIRED forced </span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;forced_acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> -&gt; ws </span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;ws_acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> &quot;</span>
+                      <span class="sa">f</span><span class="s2">&quot;(Δ</span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;acc_delta&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+.3f</span><span class="si">}</span><span class="s2">); gains </span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;gains_wrong_to_right&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+                      <span class="sa">f</span><span class="s2">&quot;losses </span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;losses_right_to_wrong&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+                      <span class="sa">f</span><span class="s2">&quot;p_lift=</span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;p_lift_one_sided&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> =&gt; </span><span class="si">{</span><span class="n">pr</span><span class="p">[</span><span class="s1">&#39;verdict&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;control_guard_comp_correlative&quot;</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;     CONTROL GUARD: </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;control_guard_comp_correlative&#39;</span><span class="p">][</span><span class="s1">&#39;status&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">TARGET (</span><span class="si">{</span><span class="n">TARGET</span><span class="si">}</span><span class="s2">) per-model verdict: </span><span class="si">{</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;target_summary&#39;</span><span class="p">][</span><span class="s1">&#39;per_model_verdict&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">selftest</span><span class="p">():</span>
+    <span class="c1"># binom tail</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">binom_tail_ge</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-12</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">binom_tail_ge</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-12</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">binom_tail_ge</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-12</span>
+    <span class="c1"># wilson sanity</span>
+    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">wilson</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">p</span> <span class="o">==</span> <span class="mf">1.0</span> <span class="ow">and</span> <span class="n">hi</span> <span class="o">==</span> <span class="mf">1.0</span> <span class="ow">and</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="mf">1.0</span>
+    <span class="c1"># paired: all forced-wrong -&gt; ws-right is a clean LIFT</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;let-alone#</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;cxn&quot;</span><span class="p">:</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+             <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span>  <span class="c1"># all wrong</span>
+    <span class="n">ws</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;let-alone#</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;cxn&quot;</span><span class="p">:</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+           <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;parse_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;tagged&quot;</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span>  <span class="c1"># all right</span>
+    <span class="n">pr</span> <span class="o">=</span> <span class="n">paired</span><span class="p">(</span><span class="n">ws</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;gains_wrong_to_right&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span> <span class="ow">and</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;losses_right_to_wrong&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;LIFTS&quot;</span><span class="p">,</span> <span class="n">pr</span>
+    <span class="k">assert</span> <span class="n">pr</span><span class="p">[</span><span class="s2">&quot;p_lift_one_sided&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.05</span>
+    <span class="c1"># paired: no change -&gt; UNCHANGED</span>
+    <span class="n">ws2</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;let-alone#</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;cxn&quot;</span><span class="p">:</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;parse_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;tagged&quot;</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span>
+    <span class="n">pr2</span> <span class="o">=</span> <span class="n">paired</span><span class="p">(</span><span class="n">ws2</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="s2">&quot;let-alone&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">pr2</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;UNCHANGED&quot;</span> <span class="ow">and</span> <span class="n">pr2</span><span class="p">[</span><span class="s2">&quot;gains_wrong_to_right&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="c1"># control guard: ws CI contains forced acc -&gt; PRESERVED</span>
+    <span class="n">base_cc</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;comparative-correlative#</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;cxn&quot;</span><span class="p">:</span> <span class="n">CONTROL</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)]</span>  <span class="c1"># forced acc 1.0</span>
+    <span class="n">ws_cc</span> <span class="o">=</span> <span class="n">per_cxn_acc</span><span class="p">([{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;comparative-correlative#</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;cxn&quot;</span><span class="p">:</span> <span class="n">CONTROL</span><span class="p">,</span>
+                          <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">)],</span> <span class="n">CONTROL</span><span class="p">)</span>  <span class="c1"># ws 1.0</span>
+    <span class="n">cg</span> <span class="o">=</span> <span class="n">control_guard</span><span class="p">(</span><span class="n">ws_cc</span><span class="p">,</span> <span class="n">base_cc</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">cg</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;PRESERVED&quot;</span><span class="p">,</span> <span class="n">cg</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;selftest PASS&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+    <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--selftest&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">ap</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">selftest</span><span class="p">:</span>
+        <span class="n">selftest</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">analyze</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

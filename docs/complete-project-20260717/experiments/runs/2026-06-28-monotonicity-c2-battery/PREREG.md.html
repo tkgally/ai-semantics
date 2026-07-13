@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-28-monotonicity-c2-battery</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">6.9 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-28-monotonicity-c2-battery/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-c2-matched-difficulty-add-vs-cancel-monotonicity-battery-frozen-before-any-probe-call">PREREG — C2 matched-difficulty add-vs-cancel monotonicity battery (frozen before any probe call)</h1>
+<p><strong>Date:</strong> 2026-06-28 (session 137)
+<strong>Step:</strong> STEP 2 of <a href="../../../wiki/decisions/resolved/monotonicity-cancel-arm-redesign.md.html"><code>decisions/resolved/monotonicity-cancel-arm-redesign</code></a> (ratified s136), reached because STEP 1 (C1) was a B2 NO-GO and <strong>STEP 1b (C2 privative) was a B2 GO</strong> (<span class="deadlink" title="referenced page is not part of this snapshot"><code>result/monotonicity-c2-privative-calibration-v1</code></span>). <strong>M2 applied first</strong> (<a href="../../../wiki/findings/conjectures/constructional-monotonicity-asymmetry.md.html"><code>conjecture/constructional-monotonicity-asymmetry</code></a>, the "M2" blockquote): scope broadened to a nominal/adjectival privative cancel arm; verbal-only abstraction relaxed; add-verbal/cancel-nominal domain mismatch a live caveat.
+<strong>Frozen items:</strong> <code>experiments/data/monotonicity-c2-battery/items.csv</code>, sha256[:16] <strong><code>4b823d3d48422eaf</code></strong> (emitted by <code>build_items.py</code>, committed before any API call). <strong>54 items</strong> = 30 ADD (verbatim s135) + 24 CANCEL (C2 privative).
+<strong>Tests:</strong> <a href="../../../wiki/findings/conjectures/constructional-monotonicity-asymmetry.md.html"><code>conjecture/constructional-monotonicity-asymmetry</code></a> — its decisive matched-difficulty add-vs-cancel test, <strong>as broadened by M2</strong>.
+<strong>Yardstick fixed by (ratified):</strong> the s134 operationalization (thresholds) + the s136 re-design (cancel coercion). This session <strong>builds + runs</strong>; it re-tunes nothing.
+<strong>Human anchor:</strong> <strong>none — <code>internal-contrast-only</code></strong> (ratified <a href="../../../wiki/decisions/resolved/conflicting-cue-human-anchor.md.html"><code>decisions/resolved/conflicting-cue-human-anchor</code></a>).</p>
+<h2 id="the-frozen-pair-step-2">The frozen pair (STEP 2)</h2>
+<table>
+<thead>
+<tr>
+<th>arm</th>
+<th>construction</th>
+<th>example</th>
+<th>hypothesis</th>
+<th>discriminating cell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ADD</strong> (verbatim s135, sha <code>80bd4b60b55a3e60</code>)</td>
+<td>resultative</td>
+<td>"Tomas hammered the metal flat."</td>
+<td>"The metal became flat."</td>
+<td>construction affirm = <strong>add_no_cue</strong> (license; want ceiling)</td>
+</tr>
+<tr>
+<td><strong>CANCEL</strong> (C2 privative, M2)</td>
+<td>privative modifier</td>
+<td>"Sam bought a fake gun."</td>
+<td>"Sam bought a weapon."</td>
+<td><strong>cancel_no_cue</strong> = 1 − construction affirm (suppress; want high)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADD verb pool (10, reused verbatim):</strong> beat, boil, cut, hammer, kick, paint, push, scrub, squeeze, wipe — the s135 frozen resultative arm, read byte-for-byte (a sha self-check in <code>build_items.py</code> refuses to build unless the source is <code>80bd4b60b55a3e60</code>).
+<strong>CANCEL noun pool (8, C2):</strong> gun, diamond, rose, tiger, apple, pearl, sword, violin — each a taxonomic (noun ⊨ category) entailment cancelled by a privative modifier (fake/artificial/toy/imitation/plastic). Identical to the STEP-1b GO calibration (sha <code>39598ee7ad97f33d</code>); privatives now used.</p>
+<p>Each arm × 3 conditions (the matched conflicting-cue paradigm):
+- <strong>ADD:</strong> <code>control</code> (bare) / <code>construction</code> (resultative; licensing-no-cue) / <code>cue</code> (explicit <strong>denial</strong>: "…flat, but the metal did not become flat" → follow-cue = <strong>withhold</strong>).
+- <strong>CANCEL:</strong> <code>default</code> (bare noun; category default) / <code>construction</code> (privative; <strong>suppression</strong>) / <code>cue</code> (explicit <strong>re-assertion</strong>: "…a fake gun, but it was a real weapon" → follow-cue = <strong>affirm</strong>).</p>
+<p>54 items × 2 instruments × 3 models = <strong>324 calls</strong> for the full battery; the B2 calibration subset (12 items: add {cut,hammer,kick,push} × {control,construction} + cancel {gun,diamond,tiger,apple} × {default}) is a separate, prior probe.</p>
+<h2 id="frozen-thresholds-ratified-s134-untouched">FROZEN thresholds (ratified s134, UNTOUCHED)</h2>
+<p>All read <strong>panel NLI primary</strong>; "≥2/3 models" = the per-model value clears the bar in ≥2 of 3.</p>
+<p><strong>B2 blocking ceiling gate</strong> — on the calib subset, <strong>before</strong> the main read. Admit only if:
+1. <strong>Add headroom:</strong> construction affirm <strong>≥ 0.80</strong> AND bare control affirm <strong>≤ 0.40</strong>, in ≥2/3.
+2. <strong>Cancel default:</strong> category-membership affirm <strong>≥ 0.80</strong>, in ≥2/3. <em>(Already GO at STEP 1b; re-run on the frozen combined set per the decision.)</em>
+The cancel <strong>suppression</strong> (construction) cell is held <strong>out</strong> of calib, so the asymmetry is not computable at the gate.</p>
+<p><strong>Asymmetry (20 pp).</strong> On the no-cue cell: <code>add_no_cue − cancel_no_cue ≥ 0.20</code> (≥2/3) → <strong>CONFIRMS</strong> (leg 1); <code>|·| &lt; 0.20</code> (≥2/3) → <strong>SYMMETRIC</strong> (falsifies); <code>≤ −0.20</code> (≥2/3) → <strong>REVERSAL</strong> (falsifies).</p>
+<p><strong>Instrument-fragility (10 pp).</strong> Cancel NLI-vs-FC disagreement on the no-cue cell must exceed the add arm's by <strong>≥ 0.10</strong> in ≥2/3 (leg 2).</p>
+<p><strong>Cue-arm rule (inherited):</strong> ≥ 0.70 follow-cue in ≥2/3 = robust; else informative partial-null.</p>
+<h2 id="pre-registered-outcomes-all-first-class-falsify-arms-live">Pre-registered outcomes (all first-class; falsify arms LIVE)</h2>
+<ul>
+<li><strong>Confirms:</strong> asymmetry ≥ 20 pp (≥2/3) <strong>and</strong> cancel more fragile (≥10 pp, ≥2/3) → the asymmetry generalizes to the (M2-broadened) pair; conjecture → <code>tested</code> (supported on this leg, <code>internal-contrast-only</code>, <strong>domain-mismatch caveat</strong>).</li>
+<li><strong>Symmetric → falsifies:</strong> add and cancel no-cue indistinguishable (&lt;20 pp, ≥2/3).</li>
+<li><strong>Reversal → falsifies:</strong> cancel easy / add hard (≥20 pp the other way, ≥2/3).</li>
+<li>A symmetric/reversal result is a <strong>clean falsification</strong> (M3: the principled-limit closure is <strong>not</strong> triggered by an asymmetry result — only by measured B2 NO-GOs, which did not occur). No re-pairing/re-tuning after outputs.</li>
+</ul>
+<h2 id="m1-m2-binding-on-the-result-page">M1 / M2 (binding on the result page)</h2>
+<ul>
+<li><strong>M1:</strong> the B2 default-at-ceiling pass (category membership 1.00, 3/3 at STEP 1b) is what licenses reading a cancel <strong>suppression failure</strong> as <strong>defeasance</strong> — the gate certifies the cancelled default is a real model-held entailment, closing the s135 "the inference was never an entailment" confound.</li>
+<li><strong>M2 live caveat:</strong> the ADD arm is <strong>verbal</strong> (resultative) and the CANCEL arm is <strong>nominal/adjectival</strong> (privative), so any asymmetry is across a <strong>domain difference</strong>, not a clean within-verbal contrast — a broadened, weaker version of the original bet. State prominently.</li>
+</ul>
+<h2 id="anti-cheat-binding">Anti-cheat (binding)</h2>
+<ul>
+<li>Items <strong>frozen + sha256-hashed (<code>4b823d3d48422eaf</code>) and committed before the first probe call</strong>; the ADD arm is reused <strong>verbatim</strong> (byte-for-byte, sha-self-checked); no item added/dropped/re-binned after.</li>
+<li>All thresholds <strong>frozen before any data</strong> (ratified s134); verdicts read mechanically by <code>analyze_calib.py</code> (gate) and <code>analyze.py</code> (asymmetry/fragility/cue). No threshold tuned post-hoc.</li>
+<li><strong>Two-phase, gate-before-run:</strong> (1) <code>probe.py --calib</code> → <code>analyze_calib.py</code> B2 gate; (2) on GO, an <strong>independent fresh-agent pre-run critic</strong> reviews the frozen full set + this PREREG + the gate; (3) on GO, <code>probe.py</code> runs the full battery.</li>
+<li><strong>Post-run</strong>, an independent fresh agent recomputes every number from <code>raw/*.json</code>.</li>
+</ul>
+<h2 id="known-limits-stated-before-data">Known limits (stated before data)</h2>
+<ul>
+<li><strong>Small N, panel-as-subjects, single run.</strong> 10 add + 8 cancel stems × 3 conditions × 3 models; a direction-of-effect signal, not a magnitude or a human comparison.</li>
+<li><strong><code>internal-contrast-only</code>.</strong> No human baseline on any arm.</li>
+<li><strong>Domain mismatch (M2).</strong> The headline caveat: add-verbal vs cancel-nominal.</li>
+<li><strong>Cue arms are deliberately contradictory sentences</strong> (anomalous); they test cue-following, secondary to the no-cue headline.</li>
+</ul></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

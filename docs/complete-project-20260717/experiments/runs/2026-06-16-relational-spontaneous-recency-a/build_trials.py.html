@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_trials.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-16-relational-spontaneous-recency-a</a> <span class="sep">/</span> <span class="cur">build_trials.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_trials.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">9.7 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-16-relational-spontaneous-recency-a/build_trials.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;build_trials.py (no API) — the frozen Option-A spontaneous-recency stimuli.</span>
+
+<span class="sd">Two independent balanced-block rosters over the 8-FIGURE pool (the Option-B construction,</span>
+<span class="sd">generalized from nonces to figures):</span>
+
+<span class="sd">  SPONT  : N_BLOCKS_SPONT present-sets x K records (Latin square) -&gt; 48 records/model.</span>
+<span class="sd">           query = &quot;SPONT&quot; (no recency mention); the GOVERNING figure (latest-governs) is the</span>
+<span class="sd">           one agreed at the MAX round. The min-round figure is recorded as the anti-recency</span>
+<span class="sd">           diagnostic. This is the headline.</span>
+<span class="sd">  DIRECT : N_BLOCKS_DIRECT present-sets x K records -&gt; 32 records/model. Half DIR_MR (correct =</span>
+<span class="sd">           max round), half DIR_LR (correct = min round) -- the B-style on-demand manipulation</span>
+<span class="sd">           check, in THIS instrument.</span>
+
+<span class="sd">Within each subset and each present-set, a Latin square makes the GOVERNING figure cycle through</span>
+<span class="sd">all K members once AND the governing line&#39;s physical history-slot cycle through all K slots once.</span>
+<span class="sd">Round values come from frozen non-contiguous quadruples; the governing figure gets the extreme</span>
+<span class="sd">(max for SPONT/DIR_MR, min for DIR_LR), the others get the rest in shuffled order -- so round</span>
+<span class="sd">value and figure identity are independent of physical history-position, and each figure appears</span>
+<span class="sd">exactly once per record (frequency flat).</span>
+
+<span class="sd">Shortcut bounds asserted EMPIRICALLY before freeze, SEPARATELY per subset:</span>
+<span class="sd">  - every constant-physical-history-slot strategy scores exactly 1/K;</span>
+<span class="sd">  - every one of the |pool|! fixed figure-preference orderings scores exactly 1/K</span>
+<span class="sd">    (incl. the grid-order ordering, so a &#39;grid-position&#39; strategy is covered);</span>
+<span class="sd">  - each figure appears exactly once per record (frequency carries no signal).</span>
+<span class="sd">So ONLY spontaneously reading the round stamp as recency can clear the SPONT order-sensitivity</span>
+<span class="sd">bar or the DIRECT floor. Prints the sha256 that must go into PREREG.md.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">itertools</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">common</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">C</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">OUT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;stimuli.json&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">balanced_blocks</span><span class="p">(</span><span class="n">rng</span><span class="p">,</span> <span class="n">n_blocks</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;n_blocks distinct K-subsets of the pool, each figure in exactly n_blocks*K/|pool| blocks.&quot;&quot;&quot;</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">LABELS</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n_blocks</span> <span class="o">*</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;n_blocks*K must be divisible by pool size for exact balance&quot;</span><span class="p">)</span>
+    <span class="n">target_per</span> <span class="o">=</span> <span class="n">n_blocks</span> <span class="o">*</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span> <span class="o">//</span> <span class="nb">len</span><span class="p">(</span><span class="n">pool</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200000</span><span class="p">):</span>
+        <span class="n">blocks</span><span class="p">,</span> <span class="n">cnt</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">Counter</span><span class="p">()</span>
+        <span class="n">cand</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">pool</span><span class="p">,</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">))</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">cand</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">cand</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">blocks</span><span class="p">)</span> <span class="o">==</span> <span class="n">n_blocks</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">cnt</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">target_per</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">b</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+            <span class="n">cnt</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">blocks</span><span class="p">)</span> <span class="o">==</span> <span class="n">n_blocks</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="n">cnt</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="n">target_per</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pool</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">blocks</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;could not build balanced blocks&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_subset</span><span class="p">(</span><span class="n">rng</span><span class="p">,</span> <span class="n">n_blocks</span><span class="p">,</span> <span class="n">query_of</span><span class="p">,</span> <span class="n">rid_start</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;query_of(j) -&gt; one of SPONT / DIR_MR / DIR_LR for record j within a block. Governing figure</span>
+<span class="sd">    = max-round for SPONT and DIR_MR, min-round for DIR_LR (the correct/scored figure).&quot;&quot;&quot;</span>
+    <span class="n">blocks</span> <span class="o">=</span> <span class="n">balanced_blocks</span><span class="p">(</span><span class="n">rng</span><span class="p">,</span> <span class="n">n_blocks</span><span class="p">)</span>
+    <span class="n">records</span><span class="p">,</span> <span class="n">rid</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">rid_start</span>
+    <span class="k">for</span> <span class="n">bi</span><span class="p">,</span> <span class="n">block</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">blocks</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">):</span>
+            <span class="n">governing</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>                     <span class="c1"># cycles all K members across the block</span>
+            <span class="n">target_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="n">bi</span><span class="p">)</span> <span class="o">%</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span>              <span class="c1"># cycles all K physical slots across the block</span>
+            <span class="n">query</span> <span class="o">=</span> <span class="n">query_of</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">rounds</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">ROUND_SETS</span><span class="p">[</span><span class="n">rid</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">ROUND_SETS</span><span class="p">)])</span>  <span class="c1"># sorted ascending</span>
+            <span class="n">others</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">block</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">governing</span><span class="p">]</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">others</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">query</span> <span class="o">==</span> <span class="s2">&quot;DIR_LR&quot;</span><span class="p">:</span>
+                <span class="n">extreme</span><span class="p">,</span> <span class="n">rest</span> <span class="o">=</span> <span class="n">rounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rounds</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>     <span class="c1"># governing = earliest</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">extreme</span><span class="p">,</span> <span class="n">rest</span> <span class="o">=</span> <span class="n">rounds</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rounds</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>    <span class="c1"># governing = latest</span>
+            <span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">rest</span><span class="p">)</span>
+            <span class="n">fig_round</span> <span class="o">=</span> <span class="p">{</span><span class="n">governing</span><span class="p">:</span> <span class="n">extreme</span><span class="p">}</span>
+            <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">others</span><span class="p">,</span> <span class="n">rest</span><span class="p">):</span>
+                <span class="n">fig_round</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span>
+            <span class="n">display</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span>
+            <span class="n">display</span><span class="p">[</span><span class="n">target_pos</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;round&quot;</span><span class="p">:</span> <span class="n">fig_round</span><span class="p">[</span><span class="n">governing</span><span class="p">],</span> <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="n">governing</span><span class="p">}</span>
+            <span class="n">slot</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">others</span><span class="p">:</span>
+                <span class="k">while</span> <span class="n">display</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">slot</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">display</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;round&quot;</span><span class="p">:</span> <span class="n">fig_round</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">}</span>
+            <span class="c1"># round -&gt; figure map for diagnostics</span>
+            <span class="n">max_round_label</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">display</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;round&quot;</span><span class="p">])[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span>
+            <span class="n">min_round_label</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">display</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;round&quot;</span><span class="p">])[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span>
+            <span class="n">correct</span> <span class="o">=</span> <span class="n">governing</span>  <span class="c1"># by construction = max_round_label (SPONT/DIR_MR) or min (DIR_LR)</span>
+            <span class="n">records</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="n">rid</span><span class="p">,</span>
+                <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="s2">&quot;spont&quot;</span> <span class="k">if</span> <span class="n">query</span> <span class="o">==</span> <span class="s2">&quot;SPONT&quot;</span> <span class="k">else</span> <span class="s2">&quot;direct&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;block&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">query</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="si">}{</span><span class="n">bi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span>
+                <span class="s2">&quot;present&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">block</span><span class="p">),</span>
+                <span class="s2">&quot;lines_display&quot;</span><span class="p">:</span> <span class="n">display</span><span class="p">,</span>
+                <span class="s2">&quot;correct_label&quot;</span><span class="p">:</span> <span class="n">correct</span><span class="p">,</span>
+                <span class="s2">&quot;max_round_label&quot;</span><span class="p">:</span> <span class="n">max_round_label</span><span class="p">,</span>
+                <span class="s2">&quot;min_round_label&quot;</span><span class="p">:</span> <span class="n">min_round_label</span><span class="p">,</span>
+                <span class="s2">&quot;target_pos&quot;</span><span class="p">:</span> <span class="n">target_pos</span><span class="p">,</span>
+                <span class="s2">&quot;last_pos_label&quot;</span><span class="p">:</span> <span class="n">display</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;label&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;first_pos_label&quot;</span><span class="p">:</span> <span class="n">display</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;label&quot;</span><span class="p">],</span>
+            <span class="p">})</span>
+            <span class="n">rid</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">records</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">():</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">SEED0</span><span class="p">)</span>
+    <span class="n">spont</span> <span class="o">=</span> <span class="n">build_subset</span><span class="p">(</span><span class="n">rng</span><span class="p">,</span> <span class="n">C</span><span class="o">.</span><span class="n">N_BLOCKS_SPONT</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">j</span><span class="p">:</span> <span class="s2">&quot;SPONT&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">direct</span> <span class="o">=</span> <span class="n">build_subset</span><span class="p">(</span><span class="n">rng</span><span class="p">,</span> <span class="n">C</span><span class="o">.</span><span class="n">N_BLOCKS_DIRECT</span><span class="p">,</span>
+                          <span class="k">lambda</span> <span class="n">j</span><span class="p">:</span> <span class="s2">&quot;DIR_MR&quot;</span> <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span> <span class="o">//</span> <span class="mi">2</span> <span class="k">else</span> <span class="s2">&quot;DIR_LR&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">spont</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">spont</span> <span class="o">+</span> <span class="n">direct</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_slot_acc</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="n">slot</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span>
+               <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;lines_display&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">][</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;correct_label&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_worst_pref_acc</span><span class="p">(</span><span class="n">records</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;worst (best-for-attacker) fixed figure-preference ordering accuracy over `records`.&quot;&quot;&quot;</span>
+    <span class="n">worst</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">LABELS</span><span class="p">):</span>
+        <span class="n">rank</span> <span class="o">=</span> <span class="p">{</span><span class="n">nm</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">nm</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">order</span><span class="p">)}</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span>
+                <span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;present&quot;</span><span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">rank</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> <span class="o">==</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;correct_label&quot;</span><span class="p">])</span>
+        <span class="n">worst</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">worst</span><span class="p">,</span> <span class="n">c</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">worst</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">assert_balance</span><span class="p">(</span><span class="n">records</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">subset</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;spont&quot;</span><span class="p">,</span> <span class="s2">&quot;direct&quot;</span><span class="p">):</span>
+        <span class="n">rs</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;subset&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">subset</span><span class="p">]</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">: empty&quot;</span>
+        <span class="c1"># 1) governing physical slot uniform within each query =&gt; position-follower = 1/K</span>
+        <span class="k">for</span> <span class="n">query</span> <span class="ow">in</span> <span class="p">{</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">}:</span>
+            <span class="n">qr</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">query</span><span class="p">]</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;target_pos&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">qr</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">pos</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> \
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">: target_pos not balanced: </span><span class="si">{</span><span class="nb">dict</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="c1"># 2) every constant-physical-slot strategy scores exactly 1/K</span>
+        <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">):</span>
+            <span class="n">acc</span> <span class="o">=</span> <span class="n">_slot_acc</span><span class="p">(</span><span class="n">rs</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">acc</span> <span class="o">-</span> <span class="n">C</span><span class="o">.</span><span class="n">POS_CHANCE</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-9</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> slot-</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2"> follower acc </span><span class="si">{</span><span class="n">acc</span><span class="si">}</span><span class="s2"> != 1/K&quot;</span>
+        <span class="c1"># 3) within each present-set the correct figure is UNIFORM over members =&gt;</span>
+        <span class="c1">#    every fixed figure-preference ordering scores exactly 1/K</span>
+        <span class="n">by_block</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">:</span>
+            <span class="n">by_block</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;block&quot;</span><span class="p">],</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">bi</span><span class="p">,</span> <span class="n">brs</span> <span class="ow">in</span> <span class="n">by_block</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">brs</span><span class="p">)</span> <span class="o">==</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> block </span><span class="si">{</span><span class="n">bi</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">brs</span><span class="p">)</span><span class="si">}</span><span class="s2"> records (expected </span><span class="si">{</span><span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="si">}</span><span class="s2">)&quot;</span>
+            <span class="n">corrects</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;correct_label&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">brs</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">corrects</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">==</span> <span class="p">{</span><span class="mi">1</span><span class="p">},</span> \
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> block </span><span class="si">{</span><span class="n">bi</span><span class="si">}</span><span class="s2">: correct figure not uniform: </span><span class="si">{</span><span class="nb">dict</span><span class="p">(</span><span class="n">corrects</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">worst</span> <span class="o">=</span> <span class="n">_worst_pref_acc</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">worst</span> <span class="o">-</span> <span class="n">C</span><span class="o">.</span><span class="n">POS_CHANCE</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-9</span><span class="p">,</span> \
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">: best figure-preference ordering scores </span><span class="si">{</span><span class="n">worst</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> != 1/K (lexical leak!)&quot;</span>
+        <span class="c1"># 4) frequency flat: each figure appears exactly once per record; K distinct figs &amp; rounds</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">:</span>
+            <span class="n">labs</span> <span class="o">=</span> <span class="p">[</span><span class="n">ln</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;lines_display&quot;</span><span class="p">]]</span>
+            <span class="n">rds</span> <span class="o">=</span> <span class="p">[</span><span class="n">ln</span><span class="p">[</span><span class="s2">&quot;round&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;lines_display&quot;</span><span class="p">]]</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">labs</span><span class="p">))</span> <span class="o">==</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">rds</span><span class="p">))</span> <span class="o">==</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span>
+            <span class="k">assert</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">labs</span><span class="p">)</span> <span class="o">==</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;present&quot;</span><span class="p">]</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;correct_label&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;present&quot;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  [</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">] geometry OK: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> records (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">by_block</span><span class="p">)</span><span class="si">}</span><span class="s2"> blocks x </span><span class="si">{</span><span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="si">}</span><span class="s2">); &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;position-follower acc = 1/K exactly; best figure-preference ordering acc = &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">worst</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> (= 1/K); frequency flat.&quot;</span><span class="p">)</span>
+    <span class="c1"># 5) SPONT correct == max-round (latest-governs); DIR_LR correct == min-round</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;SPONT&quot;</span><span class="p">,</span> <span class="s2">&quot;DIR_MR&quot;</span><span class="p">):</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;correct_label&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;max_round_label&quot;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;correct_label&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;min_round_label&quot;</span><span class="p">]</span>
+    <span class="n">sp</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;subset&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;spont&quot;</span><span class="p">]</span>
+    <span class="n">di</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;subset&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;direct&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  totals: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="si">}</span><span class="s2"> SPONT + </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">di</span><span class="p">)</span><span class="si">}</span><span class="s2"> DIRECT = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">)</span><span class="si">}</span><span class="s2"> records/model; &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">MODELS</span><span class="p">)</span><span class="si">}</span><span class="s2"> finding-bearing calls. Only stamp-reading clears &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;the SPONT order-sensitivity bar / the DIRECT floor (</span><span class="si">{</span><span class="n">C</span><span class="o">.</span><span class="n">DIRECT_FLOOR</span><span class="si">}</span><span class="s2">).&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">records</span> <span class="o">=</span> <span class="n">build</span><span class="p">()</span>
+    <span class="n">assert_balance</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
+    <span class="n">blob</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;records&quot;</span><span class="p">:</span> <span class="n">records</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">,</span> <span class="s2">&quot;term&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">TERM</span><span class="p">,</span>
+                       <span class="s2">&quot;figures&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">FIGURES</span><span class="p">,</span>
+                       <span class="s2">&quot;n_blocks_spont&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">N_BLOCKS_SPONT</span><span class="p">,</span> <span class="s2">&quot;n_blocks_direct&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">N_BLOCKS_DIRECT</span><span class="p">,</span>
+                       <span class="s2">&quot;direct_floor&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">DIRECT_FLOOR</span><span class="p">,</span> <span class="s2">&quot;pos_chance&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">POS_CHANCE</span><span class="p">,</span>
+                       <span class="s2">&quot;seed0&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">SEED0</span><span class="p">},</span>
+                      <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">open</span><span class="p">(</span><span class="n">OUT</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">blob</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sha</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">blob</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  wrote </span><span class="si">{</span><span class="n">OUT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  stimuli.json sha256 = </span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  -&gt; put this sha256 in PREREG.md before any finding-bearing call&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>vote-freeze-s189.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-06-aann-quant-temporal-inversion</a> <span class="sep">/</span> <span class="cur">vote-freeze-s189.py</span></nav>
+<main>
+<header class="page-head">
+<h1>vote-freeze-s189.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">4.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-06-aann-quant-temporal-inversion/vote-freeze-s189.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;Non-Anthropic decorrelation vote on the FROZEN probe (PROTOCOL §A3 freeze-stage). One vote via</span>
+<span class="sd">openai/gpt-5.4-mini. QA input to the fresh-agent freeze-stage pre-run critic — not authoritative.&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s2">&quot;../../lib&quot;</span><span class="p">))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openrouter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PANEL</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="n">billed_cost</span>
+
+<span class="n">PREAMBLE</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;You are a methodology reviewer giving a final GO/NO-GO on a FROZEN behavioral probe about &quot;</span>
+            <span class="s2">&quot;to spend money. Your training cutoff may predate this project; judge only the frozen design &quot;</span>
+            <span class="s2">&quot;on its internal merits. Be adversarial and terse. All outcomes must stay reachable; the &quot;</span>
+            <span class="s2">&quot;verdict logic must not be tunable after seeing the data.&quot;</span><span class="p">)</span>
+
+<span class="n">FROZEN</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;FROZEN AANN quant×temporal inversion probe (about to run ~972 calls, ~$0.17). Reuses a</span>
+<span class="s2">byte-frozen 0-100 acceptability instrument; only the item set + verdict code are new (verdict code</span>
+<span class="s2">self-tested to reach CLASS/LEXICAL/MIXED/NULL on synthetic data before any call).</span>
+
+<span class="s2">QUESTION: in &quot;a &lt;ADJ&gt; three days&quot; (AANN), one prior cell inverts panel-wide: for QUANTITY adjectives x</span>
+<span class="s2">TEMPORAL nouns, humans rate acceptability HIGHEST of 4 adjective classes, all 3 frontier models LOWEST.</span>
+<span class="s2">Is the inversion the WHOLE quantity class or a FEW lexical items?</span>
+
+<span class="s2">ITEMS (frozen stimuli.json): K=20 quant modifiers, each on an IDENTICAL balanced frame (5 temporal</span>
+<span class="s2">nouns x 2 numerals x rotated template = 10 items/modifier; asserted 2/noun, 5/numeral). The 20 split</span>
+<span class="s2">into 10 Mahowald-attested (mere/staggering/whopping/hefty/paltry/meager/extra/measly/substantial/</span>
+<span class="s2">record-setting -- carry human temporal means N=11-24, ARM 1 anchored) + 10 widened (good/full/whole/</span>
+<span class="s2">solid/bare genuinely-new + scant/skimpy/ample/towering/colossal v2b-carryover -- NO human rating, ARM 2</span>
+<span class="s2">internal-contrast). Plus 60 non-quant reference items (4 ambig + 4 pos + 4 neg adjectives x 5 items),</span>
+<span class="s2">rated the SAME occasion to define each model&#39;s non-quant class means. Tier-0 manipulation check (24) +</span>
+<span class="s2">4-point framing arm (40) re-run fresh. Frequency: per-modifier Zipf recorded + reported as a partial;</span>
+<span class="s2">the +/-0.5 Zipf MATCH is deliberately NOT enforced (it would exclude natural high-freq quantity words</span>
+<span class="s2">good/full/whole -- exactly what the class-vs-lexical test needs).</span>
+
+<span class="s2">SCORING (frozen before any call; self-tested):</span>
+<span class="s2"> A_m(j)=mean 0-100 over modifier j&#39;s 10 items. B_m^min = MIN over {ambig,pos,neg} of the model&#39;s</span>
+<span class="s2"> non-quant temporal class mean. d_m(j)=A_m(j)-B_m^min.</span>
+<span class="s2"> NULL FIRST: if pooled quant-cell mean is NOT the lowest of the 4 class cells for the model -&gt; NULL.</span>
+<span class="s2"> Else read the SHAPE of {d_m(j)}: CLASS iff median(d)&lt;0 AND Q3(d)&lt;=0; LEXICAL iff median(d)&gt;=0 AND</span>
+<span class="s2"> pooled quant-cell mean &lt; B_m^min (tail-carried); MIXED otherwise. Panel = category for &gt;=2/3 Tier-0</span>
+<span class="s2"> passers. The 0.70/0.30 inversion COUNT is computed but DESCRIPTIVE-ONLY (not verdict-bearing).</span>
+<span class="s2"> ARM 1 human comparison: per-modifier model-low/human-high sign + Spearman(model, human) over the 10</span>
+<span class="s2"> anchored modifiers (flagged noisy). Tourish-template exclusion recompute is gate-bearing.</span>
+
+<span class="s2">PRE-REGISTERED BET: widened quant cell stays lowest for &gt;=2/3 (NOT NULL) and the distribution is</span>
+<span class="s2">CLASS or MIXED rather than LEXICAL. A NULL or LEXICAL is a genuine loss, written as such.</span>
+
+<span class="s2">VOTE: (1) is this a FAIR test where NULL/CLASS/LEXICAL/MIXED are ALL genuinely reachable and none is</span>
+<span class="s2">baked in by the baseline choice (MIN vs pooled) or the item set? (2) is the anchor discipline sound</span>
+<span class="s2">(Arm 1 legitimate human comparison, Arm 2 strictly internal-contrast, no invented ratings)? (3) any</span>
+<span class="s2">freeze defect that must be fixed BEFORE spending? Reply: VERDICT: GO | GO-WITH-CONDITIONS | NO-GO, then</span>
+<span class="s2">&lt;=5 bullets (each BLOCKER/SHOULD-FIX/NIT + concrete fix).&quot;&quot;&quot;</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">],</span> <span class="n">PREAMBLE</span><span class="p">,</span> <span class="n">FROZEN</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- billed:&quot;</span><span class="p">,</span> <span class="n">billed_cost</span><span class="p">([[</span><span class="n">r</span><span class="p">]])[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;err:&quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;vote-freeze-s189-nonanthropic.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;content&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">[billed $</span><span class="si">{</span><span class="n">billed_cost</span><span class="p">([[</span><span class="n">r</span><span class="p">]])[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">; model </span><span class="si">{</span><span class="n">PANEL</span><span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">; s189 freeze-stage decorrelation vote]</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

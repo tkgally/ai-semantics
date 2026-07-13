@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_trials.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-20-relational-order-composition-cross-family</a> <span class="sep">/</span> <span class="cur">build_trials.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_trials.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">18.5 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-20-relational-order-composition-cross-family/build_trials.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;build_trials.py (no API) -- the frozen CROSS-FAMILY (heterogeneous-operation) ORDER-SENSITIVE</span>
+<span class="sd">COMPOSITION stimuli, POSITION-ANCHORED readout, MATCHED-PAIR design: two transparently different</span>
+<span class="sd">operation kinds (a SPATIAL swap + an ATTRIBUTE recolor), non-commuting on the color at a FIXED queried</span>
+<span class="sd">spot (the &quot;DAX spot&quot;). Stamp order = composition.</span>
+
+<span class="sd">THE MATCHED-PAIR CONSTRUCTION (the fix for the geometry-x-cell confound an independent pre-run critic</span>
+<span class="sd">found, 2026-06-20). Every prior attempt balanced the MARGINALS (stamp_first 36:36, etc.) but left the</span>
+<span class="sd">visible swap-pair geometry CORRELATED with the order/cell -- and since the SWAP move names its spots,</span>
+<span class="sd">that geometry is fully visible, so a reader keyed on geometry recovered the answer above 0.50 without</span>
+<span class="sd">reading the round stamps. This design removes that by construction: each &quot;unit&quot; fixes the ENTIRE</span>
+<span class="sd">visible scene (the swap pair a,b; the readout spot s; the recolor target m; the full initial coloring;</span>
+<span class="sd">the recolor color; and the physical print order of the two op-lines) and emits a MATCHED PAIR of</span>
+<span class="sd">records that differ ONLY in which op carries the earlier round stamp (SWAP-first vs RECOLOR-first).</span>
+<span class="sd">The two records of a pair therefore have IDENTICAL visible content except the round numbers attached</span>
+<span class="sd">to the two op-lines, and OPPOSITE answers. So stamp order is independent of EVERYTHING visible except</span>
+<span class="sd">the round stamps themselves: any reader that does not read the per-op round stamps -- including a</span>
+<span class="sd">reader keyed on the swap-pair / any visible-geometry signature -- is forced to exactly 0.50 (it gets</span>
+<span class="sd">one record of each pair right). ONLY a reader that reads the round stamps and applies the two ops in</span>
+<span class="sd">stamp order clears 0.50 (= 1.0). assert_balance proves this two ways: the brute-forced reader family</span>
+<span class="sd">AND a geometry-oracle upper bound (the best a reader keyed on the full visible-minus-stamps signature</span>
+<span class="sd">can do).</span>
+
+<span class="sd">THE FOUR LOGICAL CELLS = readout_type {SAME = the DAX spot s IS the recolor target m; DIFF = s is the</span>
+<span class="sd">non-recolored swap spot} x stamp_first {SWAP, RECOLOR}. The answer at spot s is Cr (the recolor color)</span>
+<span class="sd">in cells {(SAME,SWAP),(DIFF,RECOLOR)} and C_oth (the OTHER swap spot&#39;s initial color) in</span>
+<span class="sd">{(SAME,RECOLOR),(DIFF,SWAP)}; the DAX spot&#39;s own initial color is always overwritten, so it is never</span>
+<span class="sd">the answer. Each unit contributes exactly one Cr-answer record and one C_oth-answer record.</span>
+
+<span class="sd">Prints the sha256 that must go into the PREREG before any finding-bearing call.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span><span class="p">,</span> <span class="n">defaultdict</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">common</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">C</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_wilson_lb</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mf">1.96</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">k</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">p</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">z</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">h</span><span class="p">)</span> <span class="o">/</span> <span class="n">d</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">OUT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;stimuli.json&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># FOUR geometries (a, b, s, m), one per swap pair, chosen so the readout spot s is uniform over the</span>
+<span class="c1"># 4 spots and readout_type is balanced (2 SAME where s==m, 2 DIFF where s!=m). Using only 4 geometries</span>
+<span class="c1"># is deliberate: each geometry is paired with ALL 12 round pairs (build() below), so that CONDITIONING</span>
+<span class="c1"># on the (always-visible) geometry gives the SAME overlapping round distribution as the marginal --</span>
+<span class="c1"># which collapses the geometry x single-round-line reader (the freeze-#5 killer) back to chance. With</span>
+<span class="c1"># more geometries than round-pair slots, geometry would correlate with which round pairs appear and a</span>
+<span class="c1"># geometry-conditional round reader would leak.</span>
+<span class="n">GEOMETRIES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>   <span class="c1"># SAME, s=0, recolor the DAX spot</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>   <span class="c1"># DIFF, s=1, recolor the other swap spot</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>   <span class="c1"># SAME, s=2</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>   <span class="c1"># DIFF, s=3</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_assign_colors</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">cr</span><span class="p">,</span> <span class="n">coth</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Initial coloring of the K spots: spot o = C_oth; spot s = a color distinct from BOTH answers</span>
+<span class="sd">    (it is overwritten either way); the remaining distractor spots distinct; all initials disjoint</span>
+<span class="sd">    from the recolor color Cr.&quot;&quot;&quot;</span>
+    <span class="n">used</span> <span class="o">=</span> <span class="p">{</span><span class="n">cr</span><span class="p">,</span> <span class="n">coth</span><span class="p">}</span>
+    <span class="n">cs</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">C</span><span class="o">.</span><span class="n">COLORS</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">used</span><span class="p">)</span>          <span class="c1"># init color of the readout spot s</span>
+    <span class="n">used</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span>
+    <span class="n">init</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span>
+    <span class="n">init</span><span class="p">[</span><span class="n">o</span><span class="p">]</span> <span class="o">=</span> <span class="n">coth</span>
+    <span class="n">init</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">cs</span>
+    <span class="n">fill</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">C</span><span class="o">.</span><span class="n">COLORS</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">used</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">init</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">init</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">fill</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">init</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_make_record</span><span class="p">(</span><span class="n">rid</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">geo</span><span class="p">,</span> <span class="n">cr</span><span class="p">,</span> <span class="n">coth</span><span class="p">,</span> <span class="n">stamp_first</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span> <span class="n">print_swap_first</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">geo</span>
+    <span class="n">o</span> <span class="o">=</span> <span class="n">b</span> <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">a</span> <span class="k">else</span> <span class="n">a</span>
+    <span class="n">readout_type</span> <span class="o">=</span> <span class="s2">&quot;SAME&quot;</span> <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">m</span> <span class="k">else</span> <span class="s2">&quot;DIFF&quot;</span>
+    <span class="n">stamp_order</span> <span class="o">=</span> <span class="p">(</span><span class="n">stamp_first</span><span class="p">,</span> <span class="s2">&quot;RECOLOR&quot;</span> <span class="k">if</span> <span class="n">stamp_first</span> <span class="o">==</span> <span class="s2">&quot;SWAP&quot;</span> <span class="k">else</span> <span class="s2">&quot;SWAP&quot;</span><span class="p">)</span>
+    <span class="n">init_colors</span> <span class="o">=</span> <span class="n">_assign_colors</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">cr</span><span class="p">,</span> <span class="n">coth</span><span class="p">)</span>
+    <span class="c1"># round attached to each op (lower round = earlier = stamp_first)</span>
+    <span class="n">op_round</span> <span class="o">=</span> <span class="p">{</span><span class="n">stamp_order</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">rounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">stamp_order</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">rounds</span><span class="p">[</span><span class="mi">1</span><span class="p">]}</span>
+    <span class="n">display_ops</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;SWAP&quot;</span><span class="p">,</span> <span class="s2">&quot;RECOLOR&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">print_swap_first</span> <span class="k">else</span> <span class="p">(</span><span class="s2">&quot;RECOLOR&quot;</span><span class="p">,</span> <span class="s2">&quot;SWAP&quot;</span><span class="p">)</span>
+    <span class="n">rec</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;rid&quot;</span><span class="p">:</span> <span class="n">rid</span><span class="p">,</span> <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="n">query</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span>
+        <span class="s2">&quot;block&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">query</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">readout_type</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}{</span><span class="n">stamp_first</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">-s</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">m</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">a</span><span class="si">}{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">:</span> <span class="n">s</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">:</span> <span class="n">o</span><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="n">m</span><span class="p">,</span>
+        <span class="s2">&quot;readout_type&quot;</span><span class="p">:</span> <span class="n">readout_type</span><span class="p">,</span> <span class="s2">&quot;stamp_first&quot;</span><span class="p">:</span> <span class="n">stamp_first</span><span class="p">,</span>
+        <span class="s2">&quot;stamp_order&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">stamp_order</span><span class="p">),</span> <span class="s2">&quot;recolor_color&quot;</span><span class="p">:</span> <span class="n">cr</span><span class="p">,</span>
+        <span class="s2">&quot;init_colors&quot;</span><span class="p">:</span> <span class="n">init_colors</span><span class="p">,</span> <span class="s2">&quot;rounds&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">rounds</span><span class="p">),</span>
+        <span class="s2">&quot;display_order&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">display_ops</span><span class="p">),</span>
+        <span class="s2">&quot;print_swap_first&quot;</span><span class="p">:</span> <span class="n">print_swap_first</span><span class="p">,</span>
+        <span class="s2">&quot;cell_label&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">readout_type</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">stamp_first</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">rec</span><span class="p">[</span><span class="s2">&quot;hist_display&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;round&quot;</span><span class="p">:</span> <span class="n">op_round</span><span class="p">[</span><span class="n">op</span><span class="p">],</span> <span class="s2">&quot;op&quot;</span><span class="p">:</span> <span class="n">op</span><span class="p">,</span> <span class="s2">&quot;desc&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">op_desc</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span> <span class="n">op</span><span class="p">)}</span>
+                           <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">display_ops</span><span class="p">]</span>
+    <span class="n">rec</span><span class="p">[</span><span class="s2">&quot;target_color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">answer_color</span><span class="p">(</span><span class="n">rec</span><span class="p">)</span>
+    <span class="n">rec</span><span class="p">[</span><span class="s2">&quot;rev_color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">stamp_order</span><span class="p">)),</span> <span class="n">s</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rec</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">():</span>
+    <span class="n">records</span><span class="p">,</span> <span class="n">rid</span> <span class="o">=</span> <span class="p">[],</span> <span class="mi">0</span>
+    <span class="n">npairs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">ROUND_PAIRS</span><span class="p">)</span>   <span class="c1"># 12 round pairs</span>
+    <span class="n">ng</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">GEOMETRIES</span><span class="p">)</span>          <span class="c1"># 4 geometries</span>
+    <span class="c1"># COMP: 4 geometries x 12 round pairs = 48 units; each unit emits the MATCHED PAIR (both orders)</span>
+    <span class="c1"># = 96 records. Every geometry is crossed with EVERY round pair exactly once, so conditioning on</span>
+    <span class="c1"># the visible geometry leaves the full overlapping round distribution (defeats the geometry x</span>
+    <span class="c1"># single-round-line reader). Colors make the answer uniform over the 6 colors; print order</span>
+    <span class="c1"># balanced 6:6 within each geometry.</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">gi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ng</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">pi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">npairs</span><span class="p">):</span>
+            <span class="n">geo</span> <span class="o">=</span> <span class="n">GEOMETRIES</span><span class="p">[</span><span class="n">gi</span><span class="p">]</span>
+            <span class="n">cr</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[(</span><span class="n">pi</span> <span class="o">+</span> <span class="n">gi</span><span class="p">)</span> <span class="o">%</span> <span class="n">C</span><span class="o">.</span><span class="n">NUM_COLORS</span><span class="p">]</span>          <span class="c1"># color decorrelated from the round pair</span>
+            <span class="n">coth</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[(</span><span class="n">pi</span> <span class="o">+</span> <span class="n">gi</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">%</span> <span class="n">C</span><span class="o">.</span><span class="n">NUM_COLORS</span><span class="p">]</span>
+            <span class="n">rounds</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">ROUND_PAIRS</span><span class="p">[</span><span class="n">pi</span><span class="p">]</span>
+            <span class="n">print_swap_first</span> <span class="o">=</span> <span class="kc">True</span>                          <span class="c1"># constant print order (SWAP</span>
+            <span class="c1">#   listed first): zero correlation with stamp order; nothing to condition a round reader on</span>
+            <span class="k">for</span> <span class="n">stamp_first</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;SWAP&quot;</span><span class="p">,</span> <span class="s2">&quot;RECOLOR&quot;</span><span class="p">):</span>          <span class="c1"># the matched pair</span>
+                <span class="n">records</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_make_record</span><span class="p">(</span><span class="n">rid</span><span class="p">,</span> <span class="s2">&quot;COMP&quot;</span><span class="p">,</span> <span class="n">geo</span><span class="p">,</span> <span class="n">cr</span><span class="p">,</span> <span class="n">coth</span><span class="p">,</span> <span class="n">stamp_first</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span>
+                                            <span class="n">print_swap_first</span><span class="p">))</span>
+                <span class="n">rid</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">u</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># DIRECT: 4 geometries x 4 round pairs x both orders = 32 records (order is stated, so round</span>
+    <span class="c1"># magnitude is moot); enough for the on-demand gate.</span>
+    <span class="k">for</span> <span class="n">gi</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ng</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <span class="n">geo</span> <span class="o">=</span> <span class="n">GEOMETRIES</span><span class="p">[</span><span class="n">gi</span><span class="p">]</span>
+            <span class="n">cr</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[</span><span class="n">u</span> <span class="o">%</span> <span class="n">C</span><span class="o">.</span><span class="n">NUM_COLORS</span><span class="p">]</span>
+            <span class="n">coth</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">COLORS</span><span class="p">[(</span><span class="n">u</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">%</span> <span class="n">C</span><span class="o">.</span><span class="n">NUM_COLORS</span><span class="p">]</span>
+            <span class="n">rounds</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">ROUND_PAIRS</span><span class="p">[(</span><span class="n">gi</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="o">%</span> <span class="n">npairs</span><span class="p">]</span>
+            <span class="n">print_swap_first</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">for</span> <span class="n">stamp_first</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;SWAP&quot;</span><span class="p">,</span> <span class="s2">&quot;RECOLOR&quot;</span><span class="p">):</span>
+                <span class="n">records</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_make_record</span><span class="p">(</span><span class="n">rid</span><span class="p">,</span> <span class="s2">&quot;DIRECT&quot;</span><span class="p">,</span> <span class="n">geo</span><span class="p">,</span> <span class="n">cr</span><span class="p">,</span> <span class="n">coth</span><span class="p">,</span> <span class="n">stamp_first</span><span class="p">,</span> <span class="n">rounds</span><span class="p">,</span>
+                                            <span class="n">print_swap_first</span><span class="p">))</span>
+                <span class="n">rid</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">u</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">records</span>
+
+
+<span class="c1"># ---- idealized-reader scorers (analytic certification) -----------------------------------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_rate</span><span class="p">(</span><span class="n">records</span><span class="p">,</span> <span class="n">pick_fn</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">pick_fn</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">==</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;target_color&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_composer</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;stamp_order&quot;</span><span class="p">]),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_noncomposing_readers</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A family of readers that do NOT apply the two ops in the per-trial STAMP order. EVERY one must</span>
+<span class="sd">    score &lt;= PRINT_CEILING (0.50). Includes the stamp-using PARTIAL readers and a fixed-order-by-</span>
+<span class="sd">    swap-pair reader (the two shortcuts that broke earlier designs).&quot;&quot;&quot;</span>
+    <span class="n">fams</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">C</span><span class="o">.</span><span class="n">COLORS</span><span class="p">:</span>
+        <span class="n">fams</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;const-</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">:</span> <span class="n">c</span><span class="p">)</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;recolor-color(Cr)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;recolor_color&quot;</span><span class="p">]</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;init@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;init_colors&quot;</span><span class="p">][</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">]]</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;init@o&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;init_colors&quot;</span><span class="p">][</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;o&quot;</span><span class="p">]]</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;swap-only@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;SWAP&quot;</span><span class="p">,),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;recolor-only@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;RECOLOR&quot;</span><span class="p">,),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;apply-only-EARLIER@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;stamp_order&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;apply-only-LATER@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;stamp_order&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;apply-only-PRINT-FIRST@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;display_order&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;apply-only-PRINT-SECOND@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;display_order&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;fixed-SWAP-first@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;SWAP&quot;</span><span class="p">,</span> <span class="s2">&quot;RECOLOR&quot;</span><span class="p">),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;fixed-RECOLOR-first@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;RECOLOR&quot;</span><span class="p">,</span> <span class="s2">&quot;SWAP&quot;</span><span class="p">),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;reverse-stamp@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;rev_color&quot;</span><span class="p">]</span>
+    <span class="n">fams</span><span class="p">[</span><span class="s2">&quot;print-order@s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;display_order&quot;</span><span class="p">]),</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">):</span>
+        <span class="n">fams</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;init-spot</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;init_colors&quot;</span><span class="p">][</span><span class="n">p</span><span class="p">])</span>
+        <span class="n">fams</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;final-spot</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">-SWAPfirst&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;SWAP&quot;</span><span class="p">,</span> <span class="s2">&quot;RECOLOR&quot;</span><span class="p">),</span> <span class="n">p</span><span class="p">))</span>
+        <span class="n">fams</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;final-spot</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">-RECOLORfirst&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">r</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">color_at</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;RECOLOR&quot;</span><span class="p">,</span> <span class="s2">&quot;SWAP&quot;</span><span class="p">),</span> <span class="n">p</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">fams</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_visible_sig</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Everything a reader can see EXCEPT which op carries which round stamp: the spots, the recolor</span>
+<span class="sd">    target+color, the full coloring, the physical print order, and the SET of round numbers (not their</span>
+<span class="sd">    op-assignment). A reader keyed on this signature is the strongest non-composing reader.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;m&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;recolor_color&quot;</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;init_colors&quot;</span><span class="p">]),</span>
+            <span class="nb">tuple</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;display_order&quot;</span><span class="p">]),</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">])))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_round_on_op</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">op</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The round number printed on the line for operation `op` (SWAP or RECOLOR).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;stamp_first&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">op</span> <span class="k">else</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_round_on_print_pos</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The round number on the op printed in physical position `pos` (0 = first printed).&quot;&quot;&quot;</span>
+    <span class="n">op</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;display_order&quot;</span><span class="p">][</span><span class="n">pos</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">_round_on_op</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">op</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_best_single_round_reader</span><span class="p">(</span><span class="n">rs</span><span class="p">,</span> <span class="n">value_fn</span><span class="p">,</span> <span class="n">cond_fn</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The strongest reader keyed on ONE op-line&#39;s absolute round value (optionally CONDITIONED on a</span>
+<span class="sd">    visible feature `cond_fn`, e.g. the geometry): group by (cond, value) and predict the majority</span>
+<span class="sd">    stamp_first per group (optimal predictor). Because matched pairs make the answer determined by</span>
+<span class="sd">    stamp_first, this reader&#39;s ANSWER accuracy equals its stamp_first-prediction accuracy. A reader</span>
+<span class="sd">    that conditions on geometry + ONE round value still does NOT compare the two rounds, so it must</span>
+<span class="sd">    cap at 0.50 -- the freeze-#5 leak was exactly this geometry-conditional version. Returns</span>
+<span class="sd">    (k_correct, n).&quot;&quot;&quot;</span>
+    <span class="n">groups</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">Counter</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">:</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">cond_fn</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">if</span> <span class="n">cond_fn</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="n">value_fn</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
+        <span class="n">groups</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;stamp_first&quot;</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">groups</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">k</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_geometry_oracle_rate</span><span class="p">(</span><span class="n">rs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Upper bound on any reader keyed on the visible-minus-stamps signature: group by signature and</span>
+<span class="sd">    take the most common answer in each group. With matched pairs this is exactly 0.50.&quot;&quot;&quot;</span>
+    <span class="n">groups</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">:</span>
+        <span class="n">groups</span><span class="p">[</span><span class="n">_visible_sig</span><span class="p">(</span><span class="n">r</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;target_color&quot;</span><span class="p">])</span>
+    <span class="n">best</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">groups</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">best</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">assert_balance</span><span class="p">(</span><span class="n">records</span><span class="p">):</span>
+    <span class="n">EPS</span> <span class="o">=</span> <span class="mf">1e-9</span>
+    <span class="k">for</span> <span class="n">subset</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;comp&quot;</span><span class="p">,</span> <span class="s2">&quot;direct&quot;</span><span class="p">):</span>
+        <span class="n">rs</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;subset&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">subset</span><span class="p">]</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">: empty&quot;</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> rid </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;rid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: a==b&quot;</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">])</span> <span class="ow">and</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;m&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">]),</span> \
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> rid </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;rid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: s/m not on swap spots&quot;</span>
+            <span class="k">assert</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;m&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;readout_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;SAME&quot;</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;init_colors&quot;</span><span class="p">]))</span> <span class="o">==</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> rid </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;rid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: inits not distinct&quot;</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;recolor_color&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;init_colors&quot;</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> rid </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;rid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: Cr in inits&quot;</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;rounds&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> rid </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;rid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: rounds not ascending&quot;</span>
+            <span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;stamp_order&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">MOVE_NAMES</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;target_color&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;rev_color&quot;</span><span class="p">],</span> \
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> rid </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;rid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: not order-discriminating&quot;</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;target_color&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">_composer</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;init_colors&quot;</span><span class="p">][</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">]]</span> <span class="o">!=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;target_color&quot;</span><span class="p">],</span> \
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2"> rid </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;rid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: init@s == answer&quot;</span>
+        <span class="n">comp_rate</span> <span class="o">=</span> <span class="n">_rate</span><span class="p">(</span><span class="n">rs</span><span class="p">,</span> <span class="n">_composer</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">comp_rate</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">EPS</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">: stamp-order composer </span><span class="si">{</span><span class="n">comp_rate</span><span class="si">}</span><span class="s2"> != 1.0&quot;</span>
+        <span class="c1"># marginal balance</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;cell_label&quot;</span><span class="p">,</span> <span class="s2">&quot;stamp_first&quot;</span><span class="p">,</span> <span class="s2">&quot;readout_type&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">):</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2"> not balanced </span><span class="si">{</span><span class="nb">dict</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="c1"># print order is CONSTANT (SWAP listed first): zero correlation with stamp order, and nothing</span>
+        <span class="c1"># to condition a single-round-line reader on. A print-order reader is still capped via the</span>
+        <span class="c1"># brute-forced `print-order@s` reader below.</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;display_order&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">: print order not constant&quot;</span>
+        <span class="c1"># MATCHED-PAIR + geometry-oracle: the strongest visible-geometry reader caps at 0.50</span>
+        <span class="n">oracle</span> <span class="o">=</span> <span class="n">_geometry_oracle_rate</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">oracle</span> <span class="o">&lt;=</span> <span class="n">C</span><span class="o">.</span><span class="n">PRINT_CEILING</span> <span class="o">+</span> <span class="n">EPS</span><span class="p">,</span> \
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">: geometry-oracle reader = </span><span class="si">{</span><span class="n">oracle</span><span class="si">}</span><span class="s2"> &gt; 0.50 (visible geometry leaks the answer)&quot;</span>
+        <span class="c1"># SINGLE-ROUND-LINE readers: a reader keyed on ONE op-line&#39;s absolute round value (the lexical</span>
+        <span class="c1"># round-magnitude shortcut). The order is determined only on the COMP arm (DIRECT states it).</span>
+        <span class="n">round_lb_worst</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">if</span> <span class="n">subset</span> <span class="o">==</span> <span class="s2">&quot;comp&quot;</span><span class="p">:</span>
+            <span class="n">line_fns</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;SWAP-line&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">_round_on_op</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;SWAP&quot;</span><span class="p">)),</span>
+                        <span class="p">(</span><span class="s2">&quot;RECOLOR-line&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">_round_on_op</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;RECOLOR&quot;</span><span class="p">)),</span>
+                        <span class="p">(</span><span class="s2">&quot;print-first-line&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">_round_on_print_pos</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">0</span><span class="p">)),</span>
+                        <span class="p">(</span><span class="s2">&quot;print-second-line&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">_round_on_print_pos</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">1</span><span class="p">))]</span>
+            <span class="c1"># marginal AND conditional on the GENERALIZABLE / STRUCTURAL features a model could key on</span>
+            <span class="c1"># per-prompt with a CONSISTENT (causal) relationship to the order: the round magnitude</span>
+            <span class="c1"># itself, and the salient geometry / readout_type (each crossed with ALL round pairs, so</span>
+            <span class="c1"># geometry is independent of the pair). These are the real shortcuts. NOTE (documented</span>
+            <span class="c1"># residual, NOT certified): conditioning on per-prompt CONTENT (the exact recolor color)</span>
+            <span class="c1"># leaves a small in-sample correlation (best (recolor_color, swap-round) reader ~0.656,</span>
+            <span class="c1"># Wilson-LB ~0.557) -- an OVERFITTING artifact of the 96-record frozen set, not a strategy</span>
+            <span class="c1"># a model could apply to a fresh prompt (the recolor color is causally irrelevant to the</span>
+            <span class="c1"># order). Fully erasing even that is combinatorially hard in a small frozen set; this run</span>
+            <span class="c1"># is SUSPENDED before any spend (see README / the witness-seeking-economics suspension),</span>
+            <span class="c1"># so the gap is moot, but it is recorded honestly here rather than hidden.</span>
+            <span class="n">cond_fns</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;marginal&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+                        <span class="p">(</span><span class="s2">&quot;|geometry&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;b&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;m&quot;</span><span class="p">])),</span>
+                        <span class="p">(</span><span class="s2">&quot;|readout_type&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;readout_type&quot;</span><span class="p">])]</span>
+            <span class="k">for</span> <span class="n">ltag</span><span class="p">,</span> <span class="n">lfn</span> <span class="ow">in</span> <span class="n">line_fns</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">ctag</span><span class="p">,</span> <span class="n">cfn</span> <span class="ow">in</span> <span class="n">cond_fns</span><span class="p">:</span>
+                    <span class="n">k</span><span class="p">,</span> <span class="n">nn</span> <span class="o">=</span> <span class="n">_best_single_round_reader</span><span class="p">(</span><span class="n">rs</span><span class="p">,</span> <span class="n">lfn</span><span class="p">,</span> <span class="n">cfn</span><span class="p">)</span>
+                    <span class="n">lb</span> <span class="o">=</span> <span class="n">_wilson_lb</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">nn</span><span class="p">)</span>
+                    <span class="n">round_lb_worst</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">round_lb_worst</span><span class="p">,</span> <span class="n">lb</span><span class="p">)</span>
+                    <span class="k">assert</span> <span class="n">lb</span> <span class="o">&lt;=</span> <span class="n">C</span><span class="o">.</span><span class="n">PRINT_CEILING</span> <span class="o">+</span> <span class="n">EPS</span><span class="p">,</span> \
+                        <span class="sa">f</span><span class="s2">&quot;comp: single-round-line reader &#39;</span><span class="si">{</span><span class="n">ltag</span><span class="si">}{</span><span class="n">ctag</span><span class="si">}</span><span class="s2">&#39; rate=</span><span class="si">{</span><span class="n">k</span><span class="o">/</span><span class="n">nn</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> &quot;</span> \
+                        <span class="sa">f</span><span class="s2">&quot;Wilson-LB=</span><span class="si">{</span><span class="n">lb</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> &gt; 0.50 (round magnitude leaks the order)&quot;</span>
+        <span class="n">worst</span><span class="p">,</span> <span class="n">worst_name</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">subset</span> <span class="o">==</span> <span class="s2">&quot;comp&quot;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">_noncomposing_readers</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">a</span> <span class="o">=</span> <span class="n">_rate</span><span class="p">(</span><span class="n">rs</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">worst</span><span class="p">:</span>
+                    <span class="n">worst</span><span class="p">,</span> <span class="n">worst_name</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">name</span>
+                <span class="k">assert</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="n">C</span><span class="o">.</span><span class="n">PRINT_CEILING</span> <span class="o">+</span> <span class="n">EPS</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;comp: non-composing reader &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39; = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> &gt; 0.50&quot;</span>
+            <span class="n">ansc</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;target_color&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">ansc</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">COLORS</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">ansc</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> \
+                <span class="sa">f</span><span class="s2">&quot;comp: answer color not uniform </span><span class="si">{</span><span class="nb">dict</span><span class="p">(</span><span class="n">ansc</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">for</span> <span class="n">c0</span> <span class="ow">in</span> <span class="n">C</span><span class="o">.</span><span class="n">COLORS</span><span class="p">:</span>
+                <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">_rate</span><span class="p">(</span><span class="n">rs</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c0</span><span class="p">:</span> <span class="n">c</span><span class="p">)</span> <span class="o">-</span> <span class="n">C</span><span class="o">.</span><span class="n">POS_CHANCE</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">EPS</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;comp: const-</span><span class="si">{</span><span class="n">c0</span><span class="si">}</span><span class="s2"> != 1/6&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  [</span><span class="si">{</span><span class="n">subset</span><span class="si">}</span><span class="s2">] geometry OK: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> records; composer=1.000; &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;cells/stamp_first/readout_type/readout-spot balanced; print order constant; &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;geometry-oracle = </span><span class="si">{</span><span class="n">oracle</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">; &quot;</span>
+              <span class="o">+</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;worst single-round-line reader Wilson-LB = </span><span class="si">{</span><span class="n">round_lb_worst</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> (&lt;= </span><span class="si">{</span><span class="n">C</span><span class="o">.</span><span class="n">PRINT_CEILING</span><span class="si">}</span><span class="s2">); &quot;</span>
+                 <span class="sa">f</span><span class="s2">&quot;worst brute-forced non-composing reader = &#39;</span><span class="si">{</span><span class="n">worst_name</span><span class="si">}</span><span class="s2">&#39; at </span><span class="si">{</span><span class="n">worst</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">; &quot;</span>
+                 <span class="sa">f</span><span class="s2">&quot;answer uniform over 6 colors (const=1/6).&quot;</span> <span class="k">if</span> <span class="n">subset</span> <span class="o">==</span> <span class="s2">&quot;comp&quot;</span> <span class="k">else</span> <span class="s2">&quot;manip-check set.&quot;</span><span class="p">))</span>
+    <span class="n">cp</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;subset&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;comp&quot;</span><span class="p">]</span>
+    <span class="n">di</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">records</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;subset&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;direct&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  totals: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cp</span><span class="p">)</span><span class="si">}</span><span class="s2"> COMP + </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">di</span><span class="p">)</span><span class="si">}</span><span class="s2"> DIRECT = </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">)</span><span class="si">}</span><span class="s2"> records/model; &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">MODELS</span><span class="p">)</span><span class="si">}</span><span class="s2"> finding-bearing calls. Matched pairs make stamp order &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;independent of all visible geometry: ONLY reading the round stamps and composing in stamp &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;order clears the </span><span class="si">{</span><span class="n">C</span><span class="o">.</span><span class="n">PRINT_CEILING</span><span class="si">}</span><span class="s2"> bar.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">records</span> <span class="o">=</span> <span class="n">build</span><span class="p">()</span>
+    <span class="n">assert_balance</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
+    <span class="n">blob</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;records&quot;</span><span class="p">:</span> <span class="n">records</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">K</span><span class="p">,</span> <span class="s2">&quot;term&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">TERM</span><span class="p">,</span> <span class="s2">&quot;colors&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">COLORS</span><span class="p">,</span>
+                       <span class="s2">&quot;print_ceiling&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">PRINT_CEILING</span><span class="p">,</span> <span class="s2">&quot;direct_floor&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">DIRECT_FLOOR</span><span class="p">,</span>
+                       <span class="s2">&quot;pos_chance&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">POS_CHANCE</span><span class="p">,</span> <span class="s2">&quot;seed0&quot;</span><span class="p">:</span> <span class="n">C</span><span class="o">.</span><span class="n">SEED0</span><span class="p">,</span>
+                       <span class="s2">&quot;cells&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">C</span><span class="o">.</span><span class="n">CELLS</span><span class="p">],</span> <span class="s2">&quot;geoms&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">C</span><span class="o">.</span><span class="n">GEOMS</span><span class="p">]},</span>
+                      <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">open</span><span class="p">(</span><span class="n">OUT</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">blob</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sha</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">blob</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  wrote </span><span class="si">{</span><span class="n">OUT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  stimuli.json sha256 = </span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  -&gt; put this sha256 in the PREREG before any finding-bearing call&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze-output.txt — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-06-antonymy-shadow-saturation</a> <span class="sep">/</span> <span class="cur">analyze-output.txt</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze-output.txt</h1>
+<p class="subtitle"><span class="ftype">text</span> &middot; <span class="fsize">3.1 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-06-antonymy-shadow-saturation/analyze-output.txt</code></p>
+</header>
+<pre class='plain'>==========================================================================
+HEADLINE: MIXED/NO-MAJORITY
+antonymy-smallest counts (/3) per view: {&#x27;soundness_frame&#x27;: 0, &#x27;soundness_sent&#x27;: 0, &#x27;soundness_sizematched&#x27;: 0, &#x27;hit_frame&#x27;: 0, &#x27;hit_sent&#x27;: 0, &#x27;hit_sizematched&#x27;: 0}
+smallest-residual per model per view:
+   soundness_frame            {&#x27;A&#x27;: &#x27;meronymy&#x27;, &#x27;B&#x27;: &#x27;meronymy&#x27;, &#x27;C&#x27;: &#x27;meronymy&#x27;}
+   soundness_sent             {&#x27;A&#x27;: &#x27;holonymy&#x27;, &#x27;B&#x27;: &#x27;holonymy&#x27;, &#x27;C&#x27;: &#x27;meronymy&#x27;}
+   soundness_sizematched      {&#x27;A&#x27;: &#x27;hyponymy&#x27;, &#x27;B&#x27;: &#x27;hyponymy&#x27;, &#x27;C&#x27;: &#x27;hyponymy&#x27;}
+   hit_frame                  {&#x27;A&#x27;: &#x27;meronymy&#x27;, &#x27;B&#x27;: &#x27;meronymy&#x27;, &#x27;C&#x27;: &#x27;meronymy&#x27;}
+   hit_sent                   {&#x27;A&#x27;: &#x27;holonymy&#x27;, &#x27;B&#x27;: &#x27;holonymy&#x27;, &#x27;C&#x27;: &#x27;meronymy&#x27;}
+   hit_sizematched            {&#x27;A&#x27;: &#x27;hyponymy&#x27;, &#x27;B&#x27;: &#x27;holonymy&#x27;, &#x27;C&#x27;: &#x27;hyponymy&#x27;}
+calibration Spearman(resid,raw) per model: {&#x27;A&#x27;: 0.943, &#x27;B&#x27;: 1.0, &#x27;C&#x27;: 0.829}
+mean control soundness (frame): 0.0291
+
+PRIMARY residual — HIT@3, frame control  (𝒮hit(model)−𝒮hit(control)):
+  A: anto=+0.67[+0.58,+0.75]  syno=+0.49[+0.40,+0.58]  hype=+0.68[+0.60,+0.77]  hypo=+0.40[+0.32,+0.48]  holo=+0.28[+0.19,+0.36]  mero=+0.25[+0.16,+0.35]
+  B: anto=+0.61[+0.52,+0.68]  syno=+0.43[+0.35,+0.51]  hype=+0.69[+0.61,+0.77]  hypo=+0.37[+0.28,+0.46]  holo=+0.23[+0.14,+0.32]  mero=+0.19[+0.10,+0.28]
+  C: anto=+0.66[+0.58,+0.74]  syno=+0.51[+0.43,+0.60]  hype=+0.63[+0.55,+0.72]  hypo=+0.45[+0.36,+0.55]  holo=+0.38[+0.30,+0.48]  mero=+0.32[+0.23,+0.42]
+
+Soundness residual, frame control:
+  A: anto=+0.24  syno=+0.23  hype=+0.36  hypo=+0.23  holo=+0.12  mero=+0.11
+  B: anto=+0.22  syno=+0.21  hype=+0.35  hypo=+0.21  holo=+0.09  mero=+0.09
+  C: anto=+0.25  syno=+0.25  hype=+0.34  hypo=+0.25  holo=+0.18  mero=+0.15
+
+Raw recovery (soundness) + control cue-strength per relation:
+   antonymy     raw 𝒮 A/B/C=[&#x27;0.32&#x27;, &#x27;0.30&#x27;, &#x27;0.33&#x27;]  ctrl-frame 𝒮=0.077
+   synonymy     raw 𝒮 A/B/C=[&#x27;0.24&#x27;, &#x27;0.22&#x27;, &#x27;0.26&#x27;]  ctrl-frame 𝒮=0.010
+   hypernymy    raw 𝒮 A/B/C=[&#x27;0.39&#x27;, &#x27;0.37&#x27;, &#x27;0.36&#x27;]  ctrl-frame 𝒮=0.023
+   hyponymy     raw 𝒮 A/B/C=[&#x27;0.24&#x27;, &#x27;0.22&#x27;, &#x27;0.26&#x27;]  ctrl-frame 𝒮=0.010
+   holonymy     raw 𝒮 A/B/C=[&#x27;0.14&#x27;, &#x27;0.12&#x27;, &#x27;0.20&#x27;]  ctrl-frame 𝒮=0.026
+   meronymy     raw 𝒮 A/B/C=[&#x27;0.14&#x27;, &#x27;0.12&#x27;, &#x27;0.18&#x27;]  ctrl-frame 𝒮=0.028
+
+Clause-2: {&#x27;frame&#x27;: True, &#x27;sent&#x27;: True} | per-model rho (frame): {&#x27;A&#x27;: -0.086, &#x27;B&#x27;: -0.086, &#x27;C&#x27;: -0.086}
+Frame-ablation (antonymy):
+   A: 𝒮 0.3167→0.7872 (Δ+0.4705) | hit 0.9→0.7923 (Δ-0.1077)
+   B: 𝒮 0.2962→0.8038 (Δ+0.5077) | hit 0.8385→0.8154 (Δ-0.0231)
+   C: 𝒮 0.3282→0.7244 (Δ+0.3962) | hit 0.8923→0.8462 (Δ-0.0462)
+
+Gold sizes / %gold-in-V:
+   antonymy     mean=  1.1 median=  1 max=  2 |gold|&lt;=5:130  %gold-in-V=0.881
+   synonymy     mean=  3.0 median=  2 max= 17 |gold|&lt;=5:114  %gold-in-V=0.717
+   hypernymy    mean= 14.1 median= 11 max= 57 |gold|&lt;=5: 32  %gold-in-V=0.829
+   hyponymy     mean= 24.0 median=  8 max=486 |gold|&lt;=5: 59  %gold-in-V=0.677
+   holonymy     mean=  2.8 median=  2 max= 16 |gold|&lt;=5:115  %gold-in-V=0.768
+   meronymy     mean=  4.3 median=  2 max= 83 |gold|&lt;=5:104  %gold-in-V=0.786
+weakly-cued (bottom-2 cue-strength): [&#x27;hyponymy&#x27;, &#x27;synonymy&#x27;]
+
+results.json written.
+</pre>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

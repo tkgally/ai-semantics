@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>prep.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-02-commitment-framing-decomposition</a> <span class="sep">/</span> <span class="cur">prep.py</span></nav>
+<main>
+<header class="page-head">
+<h1>prep.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">16.3 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-02-commitment-framing-decomposition/prep.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;prep.py — frozen stimulus set for the COMMITMENT-FRAMING DECOMPOSITION probe (session 166).</span>
+
+<span class="sd">Narrower follow-up to run 2026-07-01-conditional-projection-rescue (session 159), whose result</span>
+<span class="sd">result/conditional-projection-rescue-v1 (verdict ROBUST-COLLAPSE) found a striking MODEL DIFFERENCE</span>
+<span class="sd">inside its commit arm: an explicit &quot;everything the speaker is thereby committed to&quot; framing RESCUED</span>
+<span class="sd">claude&#39;s conditional-antecedent presupposition endorsement (0.42 -&gt; 0.75, E flat) but SUPPRESSED</span>
+<span class="sd">gpt&#39;s (0.17 -&gt; 0.00). The parent left this open (its own words): &quot;Opens a possible narrower follow-up</span>
+<span class="sd">(why does an explicit commitment framing rescue claude but suppress gpt? — a model-difference in how</span>
+<span class="sd">&#39;speaker commitment&#39; is read), left for a later session.&quot;</span>
+
+<span class="sd">THE ONE QUESTION (nothing wider). Decompose that model difference along TWO axes, holding the</span>
+<span class="sd">sentence constant (always the s159 cond_antecedent sentence — position is NOT a factor here):</span>
+<span class="sd">  (1) advisory-c confound: is the commit effect driven by the SPEAKER SCENE (&quot;a speaker asserts&quot;)</span>
+<span class="sd">      or by the WORDING (&quot;committed to&quot;)?  Read off base -&gt; scene-only -&gt; commit.</span>
+<span class="sd">  (2) the reading hypothesis H: does each model read &quot;committed to&quot; at a BACKGROUNDING-INCLUSIVE pole</span>
+<span class="sd">      (&quot;takes for granted&quot;, reaches the projecting P) or an AT-ISSUE-RESTRICTIVE pole (&quot;the main</span>
+<span class="sd">      point&quot;, reaches neither backgrounded P nor antecedent-trapped E)?  Read off where each model&#39;s</span>
+<span class="sd">      neutral-worded commit.P falls between its own background.P and its own atissue.P.</span>
+
+<span class="sd">H predicts claude&#39;s commit clusters at the BACKGROUNDING pole (P high, E low) and gpt&#39;s clusters at</span>
+<span class="sd">the AT-ISSUE pole (P and E both low). A symmetric null (commit between the poles, or the poles fail</span>
+<span class="sd">to separate the models) is first-class (see verdict map in analyze.py).</span>
+
+<span class="sd">STRICT SCOPE (load-bearing; see PREREG §scope). The primary measure is a WITHIN-MODEL contrast: how</span>
+<span class="sd">a model&#39;s own P/E endorsement moves across query framings that hold the sentence constant, and where</span>
+<span class="sd">its neutral commit arm falls relative to two deliberately-poled anchor arms. It makes NO human</span>
+<span class="sd">comparison (no human projectivity or commitment baseline is claimed, measured, or needed). Its</span>
+<span class="sd">terminal anchor status `internal-contrast-only` was RATIFIED for the parent line</span>
+<span class="sd">(decisions/resolved/presupposition-projection-internal-contrast-anchor, session 159, adversarial</span>
+<span class="sd">review); this follow-up stays strictly within that ratified within-model contrast, so it carries</span>
+<span class="sd">`anchor: internal-contrast-only` and opens NO new anchor decision.</span>
+
+<span class="sd">DESIGN — 12 matched base scenarios (REUSED VERBATIM from s159&#39;s frozen prep.py: same sids, same</span>
+<span class="sd">presup/entail targets, same antecedent-conditional sentence) x 6 arms x 2 targets (P/E) = 144</span>
+<span class="sd">item-conditions per model, 432 calls across the 3-model panel. Every arm uses the SAME sentence</span>
+<span class="sd">(cond_antecedent); only the QUERY WRAPPER (speaker scene x question wording) varies, so every</span>
+<span class="sd">cross-arm difference is a pure framing effect on one fixed sentence.</span>
+
+<span class="sd">  base       (no-scene, plain)      s159 QUERY_PLAIN VERBATIM — must reproduce the collapse.</span>
+<span class="sd">  scene-only (scene,    plain)      pure speaker-scene effect (no commitment wording).</span>
+<span class="sd">  commit     (scene,    commit)     s159 QUERY_COMMIT VERBATIM — the effect being decomposed.</span>
+<span class="sd">  background (scene,    background) backgrounding-INCLUSIVE POLE (&quot;takes for granted&quot;).</span>
+<span class="sd">  atissue    (scene,    atissue)    at-issue-RESTRICTIVE POLE (&quot;directly putting forward as main point&quot;).</span>
+<span class="sd">  background-noscene (no-scene, background)  corroborates the SCENE effect on the backgrounding</span>
+<span class="sd">                                             question; lets `background` wording be seen without a scene.</span>
+
+<span class="sd">Grading + verdict is in analyze.py (NO API calls); this file only freezes the items + a manifest sha.</span>
+<span class="sd">The probe&#39;s FREEZE GUARD refuses to run unless manifest_sha() == FROZEN_SHA, so the set cannot drift</span>
+<span class="sd">after the pre-run critic signs off. These are the PROJECT&#39;S OWN synthetic items (no external corpus).</span>
+
+<span class="sd">Usage:</span>
+<span class="sd">    python3 prep.py            # print manifest sha + per-arm counts</span>
+<span class="sd">    python3 prep.py --check    # assert structural invariants + frozen sha; non-zero on drift</span>
+<span class="sd">    python3 prep.py --dump     # write items.json</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+
+<span class="c1"># Frozen sha of the canonical manifest. &quot;PINME&quot; until the design is frozen (after the pre-run</span>
+<span class="c1"># critic signs off); pinned once. The probe&#39;s FREEZE GUARD refuses to run unless it matches.</span>
+<span class="n">FROZEN_SHA</span> <span class="o">=</span> <span class="s2">&quot;2b4f69a75efb42250d75d196f10259594adcf9f202523c439d2a7ba7c41d5da2&quot;</span>
+
+<span class="c1"># Neutral system prompt — identical to s158/s159; must NOT hint at presupposition / projection /</span>
+<span class="c1"># commitment / the &quot;right&quot; answer.</span>
+<span class="n">SYS</span> <span class="o">=</span> <span class="s2">&quot;You are a careful reader. Answer the user&#39;s question directly.&quot;</span>
+
+<span class="c1"># ---------------------------------------------------------------------------------------------</span>
+<span class="c1"># The six query wrappers. {sentence} is the framed sentence; {target} is the P or E inference</span>
+<span class="c1"># (already ends in &#39;?&#39;). Every wrapper ends with the s158/s159 tail VERBATIM.</span>
+<span class="c1">#   QUERY_PLAIN  == s159 QUERY_PLAIN  BYTE-FOR-BYTE  (base arm; the s159 collapse replication).</span>
+<span class="c1">#   QUERY_COMMIT == s159 QUERY_COMMIT BYTE-FOR-BYTE  (commit arm; the effect being decomposed).</span>
+<span class="c1"># The other four are new wrappers over the same fixed sentences.</span>
+<span class="c1"># ---------------------------------------------------------------------------------------------</span>
+<span class="n">QUERY_PLAIN</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;Consider only the following statement:</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;&quot;</span><span class="si">{sentence}</span><span class="s1">&quot;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Taking that statement at face value, does it follow that: </span><span class="si">{target}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Answer with exactly one word — YES, NO, or UNCLEAR — and nothing else.&#39;</span>
+<span class="p">)</span>
+<span class="n">QUERY_SCENE_PLAIN</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;A speaker sincerely and carefully asserts:</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;&quot;</span><span class="si">{sentence}</span><span class="s1">&quot;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Taking that assertion at face value, does it follow that: </span><span class="si">{target}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Answer with exactly one word — YES, NO, or UNCLEAR — and nothing else.&#39;</span>
+<span class="p">)</span>
+<span class="n">QUERY_COMMIT</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;A speaker sincerely and carefully asserts:</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;&quot;</span><span class="si">{sentence}</span><span class="s1">&quot;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Considering everything the speaker is thereby committed to, does it follow that: </span><span class="si">{target}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Answer with exactly one word — YES, NO, or UNCLEAR — and nothing else.&#39;</span>
+<span class="p">)</span>
+<span class="n">QUERY_BACKGROUND</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;A speaker sincerely and carefully asserts:</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;&quot;</span><span class="si">{sentence}</span><span class="s1">&quot;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Considering everything the speaker takes for granted in saying this, does it follow that: </span><span class="si">{target}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Answer with exactly one word — YES, NO, or UNCLEAR — and nothing else.&#39;</span>
+<span class="p">)</span>
+<span class="n">QUERY_ATISSUE</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;A speaker sincerely and carefully asserts:</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;&quot;</span><span class="si">{sentence}</span><span class="s1">&quot;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Considering only what the speaker is directly putting forward as the main point, does it follow that: </span><span class="si">{target}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Answer with exactly one word — YES, NO, or UNCLEAR — and nothing else.&#39;</span>
+<span class="p">)</span>
+<span class="n">QUERY_BACKGROUND_NOSCENE</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;Consider only the following statement:</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;&quot;</span><span class="si">{sentence}</span><span class="s1">&quot;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Considering everything the statement takes for granted, does it follow that: </span><span class="si">{target}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+    <span class="s1">&#39;Answer with exactly one word — YES, NO, or UNCLEAR — and nothing else.&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># The six arms, in fixed order. Each carries its two factor labels (scene x wording) and its query.</span>
+<span class="c1"># Every arm uses the SAME sentence field: cond_antecedent (position is not a factor in this probe).</span>
+<span class="n">ARMS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="s2">&quot;base&quot;</span><span class="p">,</span>               <span class="s2">&quot;scene&quot;</span><span class="p">:</span> <span class="s2">&quot;no-scene&quot;</span><span class="p">,</span> <span class="s2">&quot;wording&quot;</span><span class="p">:</span> <span class="s2">&quot;plain&quot;</span><span class="p">,</span>      <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">QUERY_PLAIN</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="s2">&quot;scene-only&quot;</span><span class="p">,</span>         <span class="s2">&quot;scene&quot;</span><span class="p">:</span> <span class="s2">&quot;scene&quot;</span><span class="p">,</span>    <span class="s2">&quot;wording&quot;</span><span class="p">:</span> <span class="s2">&quot;plain&quot;</span><span class="p">,</span>      <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">QUERY_SCENE_PLAIN</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="s2">&quot;commit&quot;</span><span class="p">,</span>             <span class="s2">&quot;scene&quot;</span><span class="p">:</span> <span class="s2">&quot;scene&quot;</span><span class="p">,</span>    <span class="s2">&quot;wording&quot;</span><span class="p">:</span> <span class="s2">&quot;commit&quot;</span><span class="p">,</span>     <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">QUERY_COMMIT</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="s2">&quot;background&quot;</span><span class="p">,</span>         <span class="s2">&quot;scene&quot;</span><span class="p">:</span> <span class="s2">&quot;scene&quot;</span><span class="p">,</span>    <span class="s2">&quot;wording&quot;</span><span class="p">:</span> <span class="s2">&quot;background&quot;</span><span class="p">,</span> <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">QUERY_BACKGROUND</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="s2">&quot;atissue&quot;</span><span class="p">,</span>            <span class="s2">&quot;scene&quot;</span><span class="p">:</span> <span class="s2">&quot;scene&quot;</span><span class="p">,</span>    <span class="s2">&quot;wording&quot;</span><span class="p">:</span> <span class="s2">&quot;atissue&quot;</span><span class="p">,</span>    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">QUERY_ATISSUE</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="s2">&quot;background-noscene&quot;</span><span class="p">,</span> <span class="s2">&quot;scene&quot;</span><span class="p">:</span> <span class="s2">&quot;no-scene&quot;</span><span class="p">,</span> <span class="s2">&quot;wording&quot;</span><span class="p">:</span> <span class="s2">&quot;background&quot;</span><span class="p">,</span> <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">QUERY_BACKGROUND_NOSCENE</span><span class="p">},</span>
+<span class="p">]</span>
+<span class="n">SENTENCE_KEY</span> <span class="o">=</span> <span class="s2">&quot;cond_antecedent&quot;</span>  <span class="c1"># every arm holds this sentence constant.</span>
+
+<span class="c1"># ---------------------------------------------------------------------------------------------</span>
+<span class="c1"># 12 matched base scenarios. presup (P) / entail (E) / cond_antecedent are REUSED VERBATIM from</span>
+<span class="c1"># s158/s159&#39;s frozen prep.py (SCEN). cond_consequent is intentionally NOT carried (position is not</span>
+<span class="c1"># a factor here). P is the projecting / backgrounded target; E is the at-issue but antecedent-</span>
+<span class="c1"># trapped target and doubles as the per-arm yes-bias control.</span>
+<span class="c1"># ---------------------------------------------------------------------------------------------</span>
+<span class="n">SCEN</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># ---------------- FACTIVE (P = complement fact; E = subject&#39;s coming-to-know) ----------------</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;fac1&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;factive&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;the door was locked?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;Sam was aware that the door was locked?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If Sam realized that the door was locked, he went back for the key.&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;fac2&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;factive&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;the ledger had been altered?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the auditor found out that the ledger had been altered?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If the auditor discovered that the ledger had been altered, the report was delayed.&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;fac3&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;factive&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;the results were final?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;Maria was aware that the results were final?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If Maria knew that the results were final, she submitted the appeal.&quot;</span><span class="p">},</span>
+    <span class="c1"># ------------- ASPECTUAL / CHANGE-OF-STATE (P = prior state; E = current state) -------------</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;asp1&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;aspectual&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;the company used to fund the lab?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the company is not funding the lab now?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If the company stopped funding the lab, the staff applied for new grants.&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;asp2&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;aspectual&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;the senator had been denying the charges?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the senator is denying the charges now?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If the senator continued to deny the charges, the hearing was extended.&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;asp3&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;aspectual&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;the factory had produced before?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the factory is producing now?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If the factory resumed production, the town&#39;s economy recovered.&quot;</span><span class="p">},</span>
+    <span class="c1"># ---------- DEFINITE DESCRIPTION (P = existence of referent; E = main predication) ----------</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;def1&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;definite&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;there is a new director?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the merger was cancelled?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If the new director cancelled the merger, the shareholders were notified.&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;def2&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;definite&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;someone saw the crash?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the witness testified?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If the witness who saw the crash testified, the defense objected.&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;def3&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;definite&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;the prime minister gave a speech?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the union was angered?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If the prime minister&#39;s speech angered the union, negotiations stalled.&quot;</span><span class="p">},</span>
+    <span class="c1"># --------------- CLEFT (P = existential; E = exhaustive identification) ---------------</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;cle1&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;cleft&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;someone leaked the memo?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the intern leaked the memo?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If it was the intern who leaked the memo, the manager was informed.&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;cle2&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;cleft&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;someone broke the vase?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the cat broke the vase?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If it was the cat that broke the vase, the children were relieved.&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="s2">&quot;cle3&quot;</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="s2">&quot;cleft&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;presup&quot;</span><span class="p">:</span> <span class="s2">&quot;someone won the contract?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;entail&quot;</span><span class="p">:</span> <span class="s2">&quot;the smaller firm won the contract?&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">:</span> <span class="s2">&quot;If it was the smaller firm that won the contract, the board was surprised.&quot;</span><span class="p">},</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_items</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Flatten scenarios into 144 item-conditions (12 scenarios x 6 arms x 2 targets).&quot;&quot;&quot;</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SCEN</span><span class="p">:</span>
+        <span class="n">sentence</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">SENTENCE_KEY</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ARMS</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">tt</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;presup&quot;</span><span class="p">,</span> <span class="s2">&quot;entail&quot;</span><span class="p">):</span>
+                <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="p">[</span><span class="s1">&#39;sid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;arm&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">tt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sid&quot;</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;sid&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;family&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;scene&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;scene&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;wording&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;wording&quot;</span><span class="p">],</span>
+                    <span class="s2">&quot;target_type&quot;</span><span class="p">:</span> <span class="n">tt</span><span class="p">,</span>
+                    <span class="s2">&quot;sentence&quot;</span><span class="p">:</span> <span class="n">sentence</span><span class="p">,</span>
+                    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="n">tt</span><span class="p">],</span>
+                    <span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sentence</span><span class="o">=</span><span class="n">sentence</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">s</span><span class="p">[</span><span class="n">tt</span><span class="p">]),</span>
+                <span class="p">})</span>
+    <span class="k">return</span> <span class="n">items</span>
+
+
+<span class="n">ITEMS</span> <span class="o">=</span> <span class="n">build_items</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">manifest_sha</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Stable sha over everything that defines the frozen stimulus/behavioral spec.&quot;&quot;&quot;</span>
+    <span class="n">canon</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+        <span class="s2">&quot;sys&quot;</span><span class="p">:</span> <span class="n">SYS</span><span class="p">,</span>
+        <span class="s2">&quot;queries&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;plain&quot;</span><span class="p">:</span> <span class="n">QUERY_PLAIN</span><span class="p">,</span>
+            <span class="s2">&quot;scene_plain&quot;</span><span class="p">:</span> <span class="n">QUERY_SCENE_PLAIN</span><span class="p">,</span>
+            <span class="s2">&quot;commit&quot;</span><span class="p">:</span> <span class="n">QUERY_COMMIT</span><span class="p">,</span>
+            <span class="s2">&quot;background&quot;</span><span class="p">:</span> <span class="n">QUERY_BACKGROUND</span><span class="p">,</span>
+            <span class="s2">&quot;atissue&quot;</span><span class="p">:</span> <span class="n">QUERY_ATISSUE</span><span class="p">,</span>
+            <span class="s2">&quot;background_noscene&quot;</span><span class="p">:</span> <span class="n">QUERY_BACKGROUND_NOSCENE</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;arms&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">],</span> <span class="s2">&quot;scene&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;scene&quot;</span><span class="p">],</span> <span class="s2">&quot;wording&quot;</span><span class="p">:</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;wording&quot;</span><span class="p">]}</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ARMS</span><span class="p">],</span>
+        <span class="s2">&quot;sentence_key&quot;</span><span class="p">:</span> <span class="n">SENTENCE_KEY</span><span class="p">,</span>
+        <span class="s2">&quot;scenarios&quot;</span><span class="p">:</span> <span class="n">SCEN</span><span class="p">,</span>
+    <span class="p">},</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">canon</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">check</span><span class="p">():</span>
+    <span class="n">errs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">SCEN</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">12</span><span class="p">:</span>
+        <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;expected 12 scenarios, got </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">SCEN</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ITEMS</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">144</span><span class="p">:</span>
+        <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;expected 144 item-conditions, got </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ITEMS</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">by_fam</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SCEN</span><span class="p">:</span>
+        <span class="n">by_fam</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;family&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">by_fam</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;family&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">by_fam</span> <span class="o">!=</span> <span class="p">{</span><span class="s2">&quot;factive&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;aspectual&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;definite&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;cleft&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}:</span>
+        <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;family balance off: </span><span class="si">{</span><span class="n">by_fam</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">sids</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;sid&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SCEN</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">sids</span><span class="p">))</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sids</span><span class="p">):</span>
+        <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;duplicate sid&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SCEN</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;presup&quot;</span><span class="p">,</span> <span class="s2">&quot;entail&quot;</span><span class="p">,</span> <span class="s2">&quot;cond_antecedent&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+                <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="p">[</span><span class="s1">&#39;sid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: missing </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">tt</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;presup&quot;</span><span class="p">,</span> <span class="s2">&quot;entail&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">[</span><span class="n">tt</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">):</span>
+                <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="p">[</span><span class="s1">&#39;sid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">tt</span><span class="si">}</span><span class="s2"> target should end with &#39;?&#39;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;cond_antecedent&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;if &quot;</span><span class="p">):</span>
+            <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="p">[</span><span class="s1">&#39;sid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">: cond_antecedent does not start with &#39;If&#39;&quot;</span><span class="p">)</span>
+    <span class="c1"># base and commit wrappers must reproduce s159 byte-for-byte (guard against silent drift).</span>
+    <span class="n">S159_PLAIN</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;Consider only the following statement:</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;&quot;</span><span class="si">{sentence}</span><span class="s1">&quot;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;Taking that statement at face value, does it follow that: </span><span class="si">{target}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;Answer with exactly one word — YES, NO, or UNCLEAR — and nothing else.&#39;</span>
+    <span class="p">)</span>
+    <span class="n">S159_COMMIT</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;A speaker sincerely and carefully asserts:</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;&quot;</span><span class="si">{sentence}</span><span class="s1">&quot;</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;Considering everything the speaker is thereby committed to, does it follow that: </span><span class="si">{target}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;Answer with exactly one word — YES, NO, or UNCLEAR — and nothing else.&#39;</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">QUERY_PLAIN</span> <span class="o">!=</span> <span class="n">S159_PLAIN</span><span class="p">:</span>
+        <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;base (QUERY_PLAIN) drifted from s159 QUERY_PLAIN&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">QUERY_COMMIT</span> <span class="o">!=</span> <span class="n">S159_COMMIT</span><span class="p">:</span>
+        <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;commit (QUERY_COMMIT) drifted from s159 QUERY_COMMIT&quot;</span><span class="p">)</span>
+    <span class="c1"># per-arm and per-target balance</span>
+    <span class="n">by_arm</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">by_tt</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">ITEMS</span><span class="p">:</span>
+        <span class="n">by_arm</span><span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">by_arm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">by_tt</span><span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;target_type&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">by_tt</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;target_type&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">by_arm</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">!=</span> <span class="p">{</span><span class="mi">24</span><span class="p">}:</span>
+        <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;per-arm item balance off: </span><span class="si">{</span><span class="n">by_arm</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">by_tt</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">!=</span> <span class="p">{</span><span class="mi">72</span><span class="p">}:</span>
+        <span class="n">errs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;per-target balance off: </span><span class="si">{</span><span class="n">by_tt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">errs</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FAIL:</span><span class="se">\n</span><span class="s2">  &quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">errs</span><span class="p">))</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="n">sha</span> <span class="o">=</span> <span class="n">manifest_sha</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">FROZEN_SHA</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;PINME&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">sha</span> <span class="o">!=</span> <span class="n">FROZEN_SHA</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;FAIL: manifest sha drift</span><span class="se">\n</span><span class="s2">  frozen=</span><span class="si">{</span><span class="n">FROZEN_SHA</span><span class="si">}</span><span class="se">\n</span><span class="s2">  actual=</span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;OK: 12 scenarios, 144 item-conditions, families </span><span class="si">{</span><span class="n">by_fam</span><span class="si">}</span><span class="s2">, arms </span><span class="si">{</span><span class="n">by_arm</span><span class="si">}</span><span class="s2">, sha=</span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">FROZEN_SHA</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;PINME&quot;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  (NOT YET PINNED — set FROZEN_SHA = </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+    <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--check&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+    <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--dump&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">ap</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">check</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">check</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">dump</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;items.json&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">ITEMS</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote items.json (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ITEMS</span><span class="p">)</span><span class="si">}</span><span class="s2"> item-conditions)&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;scenarios=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">SCEN</span><span class="p">)</span><span class="si">}</span><span class="s2"> items=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ITEMS</span><span class="p">)</span><span class="si">}</span><span class="s2"> sha=</span><span class="si">{</span><span class="n">manifest_sha</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;per-arm:&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">]:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">ITEMS</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">a</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ARMS</span><span class="p">})</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>VOTE-critic-s213.json — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-12-comparative-correlative-german</a> <span class="sep">/</span> <span class="cur">VOTE-critic-s213.json</span></nav>
+<main>
+<header class="page-head">
+<h1>VOTE-critic-s213.json</h1>
+<p class="subtitle"><span class="ftype">JSON</span> &middot; <span class="fsize">2.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-12-comparative-correlative-german/VOTE-critic-s213.json</code></p>
+</header>
+<table class='kv top'><tr><th>model</th><td><span class='j-str'>openai/gpt-5.4-mini</span></td></tr><tr><th>role</th><td><span class='j-str'>pre-run critic decorrelation vote + German-fidelity audit</span></td></tr><tr><th>billed_usd</th><td><span class='j-num'>0.003569</span></td></tr><tr><th>content</th><td><div class='j-str multiline'>VERDICT: GO-WITH-CONDITIONS
+
+1) GRAMMATIKALITÄT  
+Die CC-Sätze sind insgesamt gut und in standardnahem Deutsch korrekt gebaut: **je**-Satz mit Verbfinale, **desto**-Satz als Hauptsatz mit Verbzweitstellung.  
+Keine klaren ungrammatischen Items. Kleine Stil-/Naturnähepunkte, aber keine harten Fehler:
+- **[roman]** „Je dicker der Roman war, desto geduldiger blieb der Leser.“ ist grammatisch, aber semantisch etwas literarisch/künstlich.
+- **[oefen]** „Je heißer die Öfen liefen“ ist verständlich, aber „Öfen liefen heiß“ klingt idiomatisch etwas unüblich; dennoch grammatisch.
+- **[socke]** „Je gestreifter die Socke war“ ist korrekt, aber etwas markiert.
+- **ctrl-single**-Vergleiche wie „... war runder als die Tasse“ / „... war klebriger als die Eichel“ sind grammatisch, teils semantisch absurd — was für das Design okay ist.
+- **ctrl-two** sind grammatisch.
+
+2) GOLD-KORREKTHEIT  
+Die Goldlabels für FC/NLI passen zu den CC-Sätzen:
+- **cc-positive**: jeweils dim2 steigt mit dim1 → **increase / entailment (NLI=0)** korrekt.
+- **cc-inverse**: jeweils dim2 sinkt mit dim1 → **decrease / contradiction (NLI=2)** korrekt.
+
+3) INSTRUMENT  
+Ja, ein **rein deutsches Instrument** ist grundsätzlich passend, gerade weil die Frage auf das **deutsche CC-Schema** zielt und die Antwortoptionen deutsch sind. Der Kompetenz-Gate-Ansatz ist sinnvoll.  
+Ein möglicher Rest-Risiko-Punkt: Manche Items sind semantisch sehr absurd/unnatürlich, wodurch Modelle vielleicht eher Weltwissen/Pragmatik als reine Konstruktion lesen. Das ist aber hier offenbar absichtlich als Kontrastmaterial akzeptiert.
+
+4) OVERALL  
+**GO-WITH-CONDITIONS**:  
+- Kein Blocker in Grammatik oder Goldlabels.  
+- Empfehlung: die absurdesten ctrl-single-Paare ggf. in einem kurzen Pilotlauf prüfen, ob sie nicht unnötig zusätzliche Varianz erzeugen.</div></td></tr><tr><th>error</th><td><span class='j-null'>null</span></td></tr></table>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

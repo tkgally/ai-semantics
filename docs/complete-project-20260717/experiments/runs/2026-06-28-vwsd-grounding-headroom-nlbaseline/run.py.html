@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>run.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-28-vwsd-grounding-headroom-nlbaseline</a> <span class="sep">/</span> <span class="cur">run.py</span></nav>
+<main>
+<header class="page-head">
+<h1>run.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">16.9 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-28-vwsd-grounding-headroom-nlbaseline/run.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;VWSD grounding-headroom NL-baseline probe — runnable harness (the MAGNITUDE follow-up).</span>
+
+<span class="sd">Implements the frozen design experiments/designs/vwsd-grounding-headroom-nlbaseline.md</span>
+<span class="sd">under the ratified competence standard (decisions/resolved/vwsd-nlbaseline-competence-dv,</span>
+<span class="sd">ADOPT-DEFAULT Q1-C) with the three deferred numbers ratified s127</span>
+<span class="sd">(decisions/resolved/vwsd-nlbaseline-audit-params, ADOPT-DEFAULTS):</span>
+<span class="sd">  P1 = graded none/partial/high recovery, band metric = the HIGH-recovery rate</span>
+<span class="sd">  P2 = author = panel.A (claude-sonnet-4.6); held-out auditors = panel.B (gpt-5.4-mini)</span>
+<span class="sd">       + panel.C (gemini-3.5-flash); band on the TWO-AUDITOR MEAN high-recovery</span>
+<span class="sd">  P3 = two-sided target band [0.60, 0.95] on the high-recovery rate</span>
+
+<span class="sd">The ONLY new text channel vs v2 is a COMPETENT NATURAL-LANGUAGE description that NAMES</span>
+<span class="sd">the depicted referent plainly and completely (v2 BARRED naming; v1&#39;s captions named and</span>
+<span class="sd">SATURATED — this is the fluent middle). The frozen 120 items, the IMAGE arm, and the</span>
+<span class="sd">DISTRACT control are REUSED VERBATIM BY SHA from the v2 run dir (they are properties of</span>
+<span class="sd">the items + images + models, not of the text channel) — no re-spend on them.</span>
+
+<span class="sd">Anchor: resource/vwsd-semeval-2023 (463 EN gold test); frozen N=120 subset (sha 7f9e52fa…).</span>
+
+<span class="sd">Arms (only the first three are NEW spend; IMAGE/DISTRACT are reused from v2):</span>
+<span class="sd">  desc-preflight   describe 6 candidate images with claude, print + per-image cost</span>
+<span class="sd">  desc-full        author NL descriptions over the 1158 unique candidate images of the</span>
+<span class="sd">                   frozen 120 (claude, low detail, NAMES ALLOWED) -&gt; frozen/nl_descriptors.json</span>
+<span class="sd">                   (resumable, checkpointed, hard DESC_ABORT_USD guard for day-splitting)</span>
+<span class="sd">  text-preflight   2 items x panel, NL-description selection arm, per-call cost</span>
+<span class="sd">  text-full        TEXT-NL selection arm over the frozen 120 x 3 models -&gt; raw/text_nl.json</span>
+<span class="sd">                   (the per-item NL separability covariate sep_nl_i)</span>
+<span class="sd">  audit-preflight  4 gold descriptions x the two held-out auditors, print recovery + score</span>
+<span class="sd">  audit-full       held-out adequacy audit: panel.B + panel.C recover the referent from each</span>
+<span class="sd">                   of the 120 GOLD descriptions (text-only, no image/word/gold); graded</span>
+<span class="sd">                   none/partial/high (v2&#39;s deterministic leak_score, raw guess stored) -&gt;</span>
+<span class="sd">                   adds audit{} to frozen/nl_descriptors.json + raw/audit_calls.json</span>
+
+<span class="sd">The FREEZE (design condition b) = desc-full + text-full + audit-full all complete and</span>
+<span class="sd">checksummed BEFORE the reused IMAGE arm is read. Then a FRESH INDEPENDENT pre-run critic</span>
+<span class="sd">must GO against the observed sep_nl_i + adequacy-audit distributions (must certify: NOT an</span>
+<span class="sd">oracle restatement [audit high-recovery &lt; 0.95]; NOT a degenerate-weak channel [&gt;= 0.60];</span>
+<span class="sd">sep_nl_i genuinely pre-frozen; DISTRACT credited first). A NO-GO defers and relaxes nothing.</span>
+
+<span class="sd">IMAGES ARE OUT OF GIT (resource/vwsd-semeval-2023 License &amp; redistribution). Fetched at</span>
+<span class="sd">runtime into $VWSD_IMAGES (572MB resized EN zip, sha b9f2f1e1…af8f), never committed.</span>
+
+<span class="sd">Usage:</span>
+<span class="sd">  export VWSD_IMAGES=/path/to/extracted/test_images_resized</span>
+<span class="sd">  export OPENROUTER_API_KEY=...</span>
+<span class="sd">  python3 run.py desc-preflight</span>
+<span class="sd">  DESC_ABORT_USD=4.50 python3 run.py desc-full     # resumable; rerun to continue</span>
+<span class="sd">  python3 run.py text-preflight</span>
+<span class="sd">  python3 run.py text-full</span>
+<span class="sd">  python3 run.py audit-preflight</span>
+<span class="sd">  python3 run.py audit-full</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">base64</span><span class="o">,</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">hashlib</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;lib&quot;</span><span class="p">)))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openrouter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PANEL</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="n">billed_cost</span>  <span class="c1"># noqa: E402</span>
+
+<span class="n">MODELS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">],</span> <span class="s2">&quot;gpt&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">],</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">]}</span>
+<span class="n">AUTHOR</span> <span class="o">=</span> <span class="s2">&quot;claude&quot;</span>                 <span class="c1"># P2: NL author = panel.A (held out from the auditors)</span>
+<span class="n">AUDITORS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;gpt&quot;</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">]</span>      <span class="c1"># P2: two held-out auditors = panel.B + panel.C</span>
+<span class="n">BAND</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.60</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">)</span>              <span class="c1"># P3: two-sided target band on the two-auditor MEAN high-recovery</span>
+
+<span class="n">IMAGES_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;VWSD_IMAGES&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>           <span class="c1"># local, gitignored</span>
+<span class="n">RUN_ITEMS</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;frozen&quot;</span><span class="p">,</span> <span class="s2">&quot;run_items.json&quot;</span><span class="p">)</span>   <span class="c1"># the v2 frozen 120 (sha 7f9e52fa…)</span>
+<span class="n">NLDESC</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;frozen&quot;</span><span class="p">,</span> <span class="s2">&quot;nl_descriptors.json&quot;</span><span class="p">)</span>  <span class="c1"># NL descriptions + adequacy audit</span>
+<span class="n">RAWDIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hard spend guard for the resumable descriptor pass (the run&#39;s only large spend).</span>
+<span class="c1"># Day-splittable: rerun to resume; the guard caps THIS process&#39;s cumulative ledger spend.</span>
+<span class="n">DESC_ABORT_USD</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;DESC_ABORT_USD&quot;</span><span class="p">,</span> <span class="s2">&quot;4.50&quot;</span><span class="p">))</span>
+<span class="n">DESC_LIMIT</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;DESC_LIMIT&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">))</span>   <span class="c1"># 0 = no per-batch item cap</span>
+
+<span class="c1"># ----- NL description policy (Q1-C: names ALLOWED, plain + complete, competent describer) -----</span>
+<span class="c1"># The deliberate inverse of v2&#39;s Option-B visual-form policy: v2 FORBADE naming the referent</span>
+<span class="c1"># (&quot;a pile of mustard seeds&quot; was the FORBIDDEN style); here naming it plainly is REQUIRED.</span>
+<span class="n">NLDESC_SYS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;You write a competent, natural-language description of a single image for a reader who &quot;</span>
+    <span class="s2">&quot;cannot see it. Name the depicted object, creature, scene, plant, or concept plainly and &quot;</span>
+    <span class="s2">&quot;completely, exactly as an ordinary competent describer would — say what it IS, not merely &quot;</span>
+    <span class="s2">&quot;what shapes and colours appear. Use one or two plain sentences. Do not hedge, do not list &quot;</span>
+    <span class="s2">&quot;alternatives, do not mention that it is an image or a photo. Example of the REQUIRED style: &quot;</span>
+    <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">A small heap of mustard seeds, the tiny round yellow-brown seeds of the mustard plant, &quot;</span>
+    <span class="s2">&quot;piled together.</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+<span class="n">NLDESC_USER</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Describe this image in one or two plain sentences, naming what it depicts &quot;</span>
+               <span class="s2">&quot;plainly and completely.&quot;</span><span class="p">)</span>
+
+<span class="c1"># ----- TEXT-NL selection arm (text-only: target word + phrase + the 10 NL descriptions) -----</span>
+<span class="c1"># Byte-identical instruction to v2&#39;s descriptor-selection arm (the only change is that the</span>
+<span class="c1"># descriptions now NAME the referent), so the arms are directly comparable.</span>
+<span class="n">SEL_SYS_TEXT</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;You are disambiguating a word&#39;s intended meaning. You will see a target &quot;</span>
+                <span class="s2">&quot;word, a short phrase using it, and ten short descriptions of candidate &quot;</span>
+                <span class="s2">&quot;images numbered 1 to 10. Choose the single description that best matches &quot;</span>
+                <span class="s2">&quot;the intended meaning of the target word in the phrase. Answer with only &quot;</span>
+                <span class="s2">&quot;the number, 1 to 10.&quot;</span><span class="p">)</span>
+
+<span class="c1"># ----- adequacy audit (held-out referent recovery; the v2 leak instrument, opposite direction) -----</span>
+<span class="n">AUDIT_SYS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;You are shown one short description of an image, with no other information. &quot;</span>
+             <span class="s2">&quot;Infer what real-world object, creature, scene, plant, or concept the image &quot;</span>
+             <span class="s2">&quot;most likely depicts. Answer with a short noun phrase only (no sentence).&quot;</span><span class="p">)</span>
+
+<span class="c1"># ---------- data ----------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_run_items</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">RUN_ITEMS</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">unique_candidates</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">({</span><span class="n">c</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;candidates&quot;</span><span class="p">]})</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_nldesc</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">NLDESC</span><span class="p">))</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">NLDESC</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="s2">&quot;policy&quot;</span><span class="p">:</span> <span class="n">NLDESC_SYS</span><span class="p">,</span> <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="n">MODELS</span><span class="p">[</span><span class="n">AUTHOR</span><span class="p">],</span>
+        <span class="s2">&quot;auditors&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">MODELS</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">AUDITORS</span><span class="p">],</span> <span class="s2">&quot;band&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">BAND</span><span class="p">),</span>
+        <span class="s2">&quot;descriptors&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;audit&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">img_path</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">IMAGES_DIR</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">data_uri</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">img_path</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">ext</span> <span class="o">=</span> <span class="s2">&quot;png&quot;</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.png&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;jpeg&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;data:image/</span><span class="si">{</span><span class="n">ext</span><span class="si">}</span><span class="s2">;base64,&quot;</span> <span class="o">+</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_pick</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">txt</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;*.# &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span> <span class="ow">and</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">cands</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\b(\d+)\b&quot;</span><span class="p">,</span> <span class="n">txt</span><span class="p">)</span> <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">cands</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">cands</span> <span class="k">else</span> <span class="kc">None</span>
+
+<span class="c1"># ---------- NL description authoring ----------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">describe</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">MODELS</span><span class="p">[</span><span class="n">AUTHOR</span><span class="p">],</span> <span class="n">NLDESC_SYS</span><span class="p">,</span> <span class="n">NLDESC_USER</span><span class="p">,</span>
+             <span class="n">images</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">data_uri</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="s2">&quot;detail&quot;</span><span class="p">:</span> <span class="s2">&quot;low&quot;</span><span class="p">}],</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">desc</span><span class="p">,</span> <span class="n">r</span>
+
+<span class="c1"># ---------- recovery scoring (deterministic, auditable; the v2 leak_score, verbatim) ----------</span>
+<span class="c1"># Reused verbatim from the v2 harness (decisions/resolved/vwsd-nlbaseline-audit-params P1:</span>
+<span class="c1"># &quot;Reuse v2&#39;s graded scheme verbatim&quot;). 2 = HIGH (recovers the target word itself), 1 = PARTIAL</span>
+<span class="c1"># (recovers a trigger/context token from the phrase), 0 = NONE. Raw guess stored for a later</span>
+<span class="c1"># model re-grade (the scoring rule&#39;s VALIDITY mirrors v2&#39;s design B.4 later-ratification posture).</span>
+<span class="n">STOP</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;an&quot;</span><span class="p">,</span> <span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span> <span class="s2">&quot;with&quot;</span><span class="p">,</span> <span class="s2">&quot;and&quot;</span><span class="p">,</span> <span class="s2">&quot;or&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;for&quot;</span><span class="p">,</span> <span class="s2">&quot;by&quot;</span><span class="p">,</span> <span class="s2">&quot;at&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="s2">&quot;picture&quot;</span><span class="p">,</span> <span class="s2">&quot;photo&quot;</span><span class="p">,</span> <span class="s2">&quot;photograph&quot;</span><span class="p">,</span> <span class="s2">&quot;depicting&quot;</span><span class="p">,</span> <span class="s2">&quot;showing&quot;</span><span class="p">,</span> <span class="s2">&quot;shows&quot;</span><span class="p">,</span> <span class="s2">&quot;likely&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;probably&quot;</span><span class="p">,</span> <span class="s2">&quot;some&quot;</span><span class="p">,</span> <span class="s2">&quot;kind&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span> <span class="s2">&quot;scene&quot;</span><span class="p">,</span> <span class="s2">&quot;thing&quot;</span><span class="p">,</span> <span class="s2">&quot;view&quot;</span><span class="p">,</span> <span class="s2">&quot;close&quot;</span><span class="p">,</span> <span class="s2">&quot;up&quot;</span><span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">lemma</span><span class="p">(</span><span class="n">tok</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[^a-z]&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">tok</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">t</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">):</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">t</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">toks</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">lemma</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">if</span> <span class="n">lemma</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">lemma</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">STOP</span><span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">recovery_score</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">phrase</span><span class="p">,</span> <span class="n">recovered</span><span class="p">):</span>
+    <span class="n">wl</span> <span class="o">=</span> <span class="p">{</span><span class="n">lemma</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">if</span> <span class="n">lemma</span><span class="p">(</span><span class="n">w</span><span class="p">)}</span>
+    <span class="n">pl</span> <span class="o">=</span> <span class="n">toks</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="o">-</span> <span class="n">wl</span>
+    <span class="n">rl</span> <span class="o">=</span> <span class="n">toks</span><span class="p">(</span><span class="n">recovered</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">wl</span> <span class="o">&amp;</span> <span class="n">rl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">wl</span> <span class="o">&amp;</span> <span class="n">rl</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pl</span> <span class="o">&amp;</span> <span class="n">rl</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">pl</span> <span class="o">&amp;</span> <span class="n">rl</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="p">[]</span>
+
+<span class="c1"># ---------- TEXT-NL selection ----------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">text_user</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">nld</span><span class="p">):</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">nld</span><span class="p">[</span><span class="s1">&#39;descriptors&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(no description)&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                      <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;candidates&quot;</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Target word: </span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;word&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">Phrase: </span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;phrase&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Candidate image descriptions:</span><span class="se">\n</span><span class="si">{</span><span class="n">lines</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;Which description best matches the intended meaning of the target word? &quot;</span>
+            <span class="s2">&quot;Answer with only the number, 1 to 10.&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">run_text</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">nld</span><span class="p">,</span> <span class="n">mname</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">MODELS</span><span class="p">[</span><span class="n">mname</span><span class="p">],</span> <span class="n">SEL_SYS_TEXT</span><span class="p">,</span> <span class="n">text_user</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">nld</span><span class="p">),</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+             <span class="n">reasoning</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;effort&quot;</span><span class="p">:</span> <span class="s2">&quot;minimal&quot;</span><span class="p">}</span> <span class="k">if</span> <span class="n">mname</span> <span class="o">==</span> <span class="s2">&quot;gemini&quot;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">pick</span> <span class="o">=</span> <span class="n">parse_pick</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="s2">&quot;text_nl&quot;</span><span class="p">,</span> <span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="s2">&quot;word&quot;</span><span class="p">:</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;word&quot;</span><span class="p">],</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">mname</span><span class="p">,</span>
+            <span class="s2">&quot;gold_idx&quot;</span><span class="p">:</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;gold_idx&quot;</span><span class="p">],</span> <span class="s2">&quot;pick&quot;</span><span class="p">:</span> <span class="n">pick</span><span class="p">,</span>
+            <span class="s2">&quot;correct&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">pick</span> <span class="o">==</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;gold_idx&quot;</span><span class="p">])</span> <span class="k">if</span> <span class="n">pick</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s2">&quot;raw&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">,</span> <span class="p">{}),</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">)}</span>
+
+<span class="c1"># ---------- helpers ----------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+    <span class="n">tot</span><span class="p">,</span> <span class="n">have</span><span class="p">,</span> <span class="n">miss</span> <span class="o">=</span> <span class="n">billed_cost</span><span class="p">([</span><span class="n">recs</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span><span class="si">}</span><span class="s2"> calls, billed=$</span><span class="si">{</span><span class="n">tot</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2"> (have=</span><span class="si">{</span><span class="n">have</span><span class="si">}</span><span class="s2"> missing=</span><span class="si">{</span><span class="n">miss</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tot</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_freeze</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_save_raw</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">RAWDIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAWDIR</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+<span class="c1"># ---------- drivers ----------</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;desc-preflight&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">IMAGES_DIR</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">IMAGES_DIR</span><span class="p">):</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;$VWSD_IMAGES not set / not a dir: </span><span class="si">{</span><span class="n">IMAGES_DIR</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="n">load_run_items</span><span class="p">()</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="n">unique_candidates</span><span class="p">(</span><span class="n">items</span><span class="p">)[:</span><span class="mi">6</span><span class="p">]</span>
+        <span class="n">recs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">nm</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">d</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">describe</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
+            <span class="n">recs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">nm</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">d</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">uniq</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_candidates</span><span class="p">(</span><span class="n">items</span><span class="p">))</span>
+        <span class="n">per</span> <span class="o">=</span> <span class="n">_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="s2">&quot;DESC-PREFLIGHT&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  per-image $</span><span class="si">{</span><span class="n">per</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">; extrapolated </span><span class="si">{</span><span class="n">uniq</span><span class="si">}</span><span class="s2"> unique images ~ $</span><span class="si">{</span><span class="n">per</span><span class="o">*</span><span class="n">uniq</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;desc-full&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">IMAGES_DIR</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">IMAGES_DIR</span><span class="p">):</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;$VWSD_IMAGES not set / not a dir: </span><span class="si">{</span><span class="n">IMAGES_DIR</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="n">load_run_items</span><span class="p">()</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="n">unique_candidates</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+        <span class="n">nld</span> <span class="o">=</span> <span class="n">load_nldesc</span><span class="p">()</span>
+        <span class="n">todo</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">names</span> <span class="k">if</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">nld</span><span class="p">[</span><span class="s2">&quot;descriptors&quot;</span><span class="p">]]</span>
+        <span class="k">if</span> <span class="n">DESC_LIMIT</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">todo</span> <span class="o">=</span> <span class="n">todo</span><span class="p">[:</span><span class="n">DESC_LIMIT</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;authoring </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">todo</span><span class="p">)</span><span class="si">}</span><span class="s2"> of </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span><span class="si">}</span><span class="s2"> unique NL descriptions &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">todo</span><span class="p">)</span><span class="si">}</span><span class="s2"> already done); DESC_ABORT_USD=$</span><span class="si">{</span><span class="n">DESC_ABORT_USD</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+        <span class="n">ledger</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAWDIR</span><span class="p">,</span> <span class="s2">&quot;descriptor_calls.json&quot;</span><span class="p">)</span>
+        <span class="n">allrecs</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">ledger</span><span class="p">))</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ledger</span><span class="p">)</span> <span class="k">else</span> <span class="p">[]</span>
+        <span class="n">running</span> <span class="o">=</span> <span class="n">billed_cost</span><span class="p">([</span><span class="n">allrecs</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">RAWDIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">nm</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">todo</span><span class="p">):</span>
+            <span class="n">d</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">describe</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
+            <span class="n">nld</span><span class="p">[</span><span class="s2">&quot;descriptors&quot;</span><span class="p">][</span><span class="n">nm</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span>
+            <span class="n">allrecs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="n">running</span> <span class="o">+=</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cost&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="mf">0.0</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  [</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">todo</span><span class="p">)</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">nm</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">d</span><span class="si">!r}</span><span class="s2">  (running $</span><span class="si">{</span><span class="n">running</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">25</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">todo</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>   <span class="c1"># checkpoint</span>
+                <span class="n">_freeze</span><span class="p">(</span><span class="n">nld</span><span class="p">,</span> <span class="n">NLDESC</span><span class="p">)</span>
+                <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">allrecs</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">ledger</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">running</span> <span class="o">&gt;</span> <span class="n">DESC_ABORT_USD</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  !! ABORT: running billed $</span><span class="si">{</span><span class="n">running</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> &gt; $</span><span class="si">{</span><span class="n">DESC_ABORT_USD</span><span class="si">}</span><span class="s2"> cap. &quot;</span>
+                      <span class="sa">f</span><span class="s2">&quot;Checkpointed; rerun to resume.&quot;</span><span class="p">)</span>
+                <span class="k">break</span>
+        <span class="n">sha</span> <span class="o">=</span> <span class="n">_freeze</span><span class="p">(</span><span class="n">nld</span><span class="p">,</span> <span class="n">NLDESC</span><span class="p">)</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">allrecs</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">ledger</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">_cost</span><span class="p">(</span><span class="n">allrecs</span><span class="p">,</span> <span class="s2">&quot;DESC-FULL (cumulative)&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  descriptors=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">nld</span><span class="p">[</span><span class="s1">&#39;descriptors&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">NLDESC</span><span class="si">}</span><span class="s2"> sha256=</span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;text-preflight&quot;</span><span class="p">,</span> <span class="s2">&quot;text-full&quot;</span><span class="p">):</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="n">load_run_items</span><span class="p">()</span>
+        <span class="n">nld</span> <span class="o">=</span> <span class="n">load_nldesc</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nld</span><span class="p">[</span><span class="s2">&quot;descriptors&quot;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_candidates</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NL descriptors incomplete (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">nld</span><span class="p">[</span><span class="s1">&#39;descriptors&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2">/&quot;</span>
+                     <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_candidates</span><span class="p">(</span><span class="n">items</span><span class="p">))</span><span class="si">}</span><span class="s2">); run desc-full first&quot;</span><span class="p">)</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="n">items</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;text-preflight&quot;</span> <span class="k">else</span> <span class="n">items</span>
+        <span class="n">recs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">mname</span> <span class="ow">in</span> <span class="n">MODELS</span><span class="p">:</span>
+                <span class="n">recs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">run_text</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">nld</span><span class="p">,</span> <span class="n">mname</span><span class="p">))</span>
+            <span class="n">done</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;text-preflight&quot;</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span> <span class="o">%</span> <span class="mi">60</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">8s</span><span class="si">}</span><span class="s2"> &quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;pick&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">done</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;text-full&quot;</span><span class="p">:</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">sha</span> <span class="o">=</span> <span class="n">_save_raw</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="s2">&quot;text_nl.json&quot;</span><span class="p">)</span>
+            <span class="n">nf</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pick&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="s2">&quot;TEXT-NL-FULL&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  wrote </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">  sha256=</span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="s2">  parse-fails=</span><span class="si">{</span><span class="n">nf</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">per</span> <span class="o">=</span> <span class="n">_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="s2">&quot;TEXT-NL-PREFLIGHT&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  per-(item,model) $</span><span class="si">{</span><span class="n">per</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;audit-preflight&quot;</span><span class="p">,</span> <span class="s2">&quot;audit-full&quot;</span><span class="p">):</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="n">load_run_items</span><span class="p">()</span>
+        <span class="n">nld</span> <span class="o">=</span> <span class="n">load_nldesc</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">nld</span><span class="p">[</span><span class="s2">&quot;descriptors&quot;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_candidates</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NL descriptors incomplete; run desc-full first&quot;</span><span class="p">)</span>
+        <span class="n">sel</span> <span class="o">=</span> <span class="n">items</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;audit-preflight&quot;</span> <span class="k">else</span> <span class="n">items</span>
+        <span class="n">recs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">sel</span><span class="p">:</span>
+            <span class="n">gold</span> <span class="o">=</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;gold_name&quot;</span><span class="p">]</span>
+            <span class="n">gdesc</span> <span class="o">=</span> <span class="n">nld</span><span class="p">[</span><span class="s2">&quot;descriptors&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">gold</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="n">entry</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;gold_name&quot;</span><span class="p">:</span> <span class="n">gold</span><span class="p">,</span> <span class="s2">&quot;word&quot;</span><span class="p">:</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;word&quot;</span><span class="p">],</span> <span class="s2">&quot;phrase&quot;</span><span class="p">:</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;phrase&quot;</span><span class="p">],</span>
+                     <span class="s2">&quot;gold_descriptor&quot;</span><span class="p">:</span> <span class="n">gdesc</span><span class="p">,</span> <span class="s2">&quot;auditors&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+            <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">AUDITORS</span><span class="p">:</span>
+                <span class="n">r</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">MODELS</span><span class="p">[</span><span class="n">a</span><span class="p">],</span> <span class="n">AUDIT_SYS</span><span class="p">,</span>
+                         <span class="sa">f</span><span class="s2">&quot;Description: </span><span class="si">{</span><span class="n">gdesc</span><span class="si">}</span><span class="se">\n</span><span class="s2">What does this image most likely depict? &quot;</span>
+                         <span class="sa">f</span><span class="s2">&quot;Answer with a short noun phrase only.&quot;</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+                         <span class="n">reasoning</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;effort&quot;</span><span class="p">:</span> <span class="s2">&quot;minimal&quot;</span><span class="p">}</span> <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="s2">&quot;gemini&quot;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="n">rec</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+                <span class="n">score</span><span class="p">,</span> <span class="n">matched</span> <span class="o">=</span> <span class="n">recovery_score</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;word&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;phrase&quot;</span><span class="p">],</span> <span class="n">rec</span><span class="p">)</span>
+                <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;auditors&quot;</span><span class="p">][</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;recovered&quot;</span><span class="p">:</span> <span class="n">rec</span><span class="p">,</span> <span class="s2">&quot;recovery_score&quot;</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span>
+                                        <span class="s2">&quot;matched_tokens&quot;</span><span class="p">:</span> <span class="n">matched</span><span class="p">}</span>
+                <span class="n">recs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;audit-preflight&quot;</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> [</span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;word&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;phrase&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">AUDITORS</span><span class="p">:</span>
+                    <span class="n">e</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="s2">&quot;auditors&quot;</span><span class="p">][</span><span class="n">a</span><span class="p">]</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;     </span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s2">7s</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="n">e</span><span class="p">[</span><span class="s1">&#39;recovered&#39;</span><span class="p">]</span><span class="si">!r}</span><span class="s2">  score=</span><span class="si">{</span><span class="n">e</span><span class="p">[</span><span class="s1">&#39;recovery_score&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">e</span><span class="p">[</span><span class="s1">&#39;matched_tokens&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">nld</span><span class="p">[</span><span class="s2">&quot;audit&quot;</span><span class="p">][</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">entry</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;audit-full&quot;</span><span class="p">:</span>
+            <span class="n">sha</span> <span class="o">=</span> <span class="n">_freeze</span><span class="p">(</span><span class="n">nld</span><span class="p">,</span> <span class="n">NLDESC</span><span class="p">)</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">csha</span> <span class="o">=</span> <span class="n">_save_raw</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="s2">&quot;audit_calls.json&quot;</span><span class="p">)</span>
+            <span class="c1"># band metric = HIGH-recovery rate (fraction scoring 2), per auditor + two-auditor mean</span>
+            <span class="n">per_auditor</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">AUDITORS</span><span class="p">:</span>
+                <span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;auditors&quot;</span><span class="p">][</span><span class="n">a</span><span class="p">][</span><span class="s2">&quot;recovery_score&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">nld</span><span class="p">[</span><span class="s2">&quot;audit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+                <span class="n">dist</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vals</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)}</span>
+                <span class="n">hi</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">per_auditor</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;dist&quot;</span><span class="p">:</span> <span class="n">dist</span><span class="p">,</span> <span class="s2">&quot;high_recovery_rate&quot;</span><span class="p">:</span> <span class="n">hi</span><span class="p">}</span>
+            <span class="n">mean_hi</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">per_auditor</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="s2">&quot;high_recovery_rate&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">AUDITORS</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">AUDITORS</span><span class="p">)</span>
+            <span class="n">_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="s2">&quot;AUDIT-FULL&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">AUDITORS</span><span class="p">:</span>
+                <span class="n">pa</span> <span class="o">=</span> <span class="n">per_auditor</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s2">7s</span><span class="si">}</span><span class="s2"> none/partial/high = </span><span class="si">{</span><span class="n">pa</span><span class="p">[</span><span class="s1">&#39;dist&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">pa</span><span class="p">[</span><span class="s1">&#39;dist&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">pa</span><span class="p">[</span><span class="s1">&#39;dist&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">  &quot;</span>
+                      <span class="sa">f</span><span class="s2">&quot;high-recovery rate = </span><span class="si">{</span><span class="n">pa</span><span class="p">[</span><span class="s1">&#39;high_recovery_rate&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">inband</span> <span class="o">=</span> <span class="n">BAND</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">mean_hi</span> <span class="o">&lt;=</span> <span class="n">BAND</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  TWO-AUDITOR MEAN high-recovery = </span><span class="si">{</span><span class="n">mean_hi</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">  band </span><span class="si">{</span><span class="n">BAND</span><span class="si">}</span><span class="s2">  &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;=&gt; </span><span class="si">{</span><span class="s1">&#39;IN BAND&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">inband</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;OUT OF BAND (pre-run-critic NO-GO)&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">NLDESC</span><span class="si">}</span><span class="s2"> sha256=</span><span class="si">{</span><span class="n">sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_cost</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="s2">&quot;AUDIT-PREFLIGHT&quot;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

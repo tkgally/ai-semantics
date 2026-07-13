@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>multimodal-image-anchor.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">wiki</a> <span class="sep">/</span> <a href="../index.html">decisions</a> <span class="sep">/</span> <a href="index.html">resolved</a> <span class="sep">/</span> <span class="cur">multimodal-image-anchor.md</span></nav>
+<main>
+<header class="page-head">
+<h1>multimodal-image-anchor.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">6.2 KB</span> &middot; <code class="fpath">wiki/decisions/resolved/multimodal-image-anchor.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>id</th><td>multimodal-image-anchor</td></tr><tr><th>title</th><td>For the image probe — which human anchor keys it (WiC-binary-keyed constructed image set vs. an existing genuinely-multimodal resource)?</td></tr><tr><th>status</th><td>resolved</td></tr><tr><th>opened</th><td>2026-05-31</td></tr><tr><th>opened-by</th><td>orchestrator</td></tr><tr><th>resolved</th><td>2026-05-31</td></tr><tr><th>resolved-by</th><td>Tom (ratified, this round)</td></tr><tr><th>contingent-artifacts</th><td><ul class='fm-list'><li>conjecture/multimodal-lexical-grounding-divergence</li><li>design/multimodal-grounding-image-v1</li><li>result/multimodal-grounding-image-v1</li></ul></td></tr></table></div><div class='md'><h1 id="decision-the-image-probes-human-anchor">Decision: the image probe's human anchor</h1>
+<h2 id="resolution-2026-05-31-tom">Resolution (2026-05-31, Tom)</h2>
+<p><strong>Ratified — Option A stands.</strong> Tom (this round, decision 1): <em>"multimodal-image-anchor — the
+WordNet-keyed constructed set was the right call; A stands. Move to resolved."</em> The realized
+anchor (a constructed minimal-pair set keyed to the Princeton WordNet sense inventory, with each
+item's gold = same vs different noun synset and the honest "no per-item human judged these
+constructed pairs / the synset mapping is the author's" caveat) is endorsed as the in-force
+anchor for <a href="../../findings/results/multimodal-grounding-image-v1.md.html"><code>result/multimodal-grounding-image-v1</code></a>.
+The three contingent artifacts are promoted: <code>contingent-on: multimodal-image-anchor</code> cleared on
+the conjecture, the design, and the result; provisional language upgraded to settled. <strong>No finding
+changed</strong> — the redundancy null stands on its <a href="../../base/resources/wordnet-sense-inventory.md.html"><code>resource/wordnet-sense-inventory</code></a>
+anchor, scoped to the binary same/different-synset separation. The image-probe <strong>v2</strong> (finer/abstract
+senses, or VWSD as a genuinely-multimodal anchor) remains an open <em>design</em> option, not gated by this
+decision.</p>
+<hr />
+<h1 id="decision-the-image-probes-human-anchor-original-framing-retained">Decision: the image probe's human anchor (original framing, retained)</h1>
+<h2 id="why-this-exists-surfaced-proceeding-under-standing-delegation">Why this exists (surfaced, proceeding under standing delegation)</h2>
+<p>Tom <strong>approved</strong> the genuine image experiment this round (decision 2; the panel/theory/anchor-class
+gate <a href="multimodal-panel-and-grounding-theory.md.html"><code>decisions/resolved/multimodal-panel-and-grounding-theory</code></a>
+is ratified Q3=B GO). Tom <strong>delegated the anchor choice</strong> to the orchestrator but was explicit:
+"Choose the image experiment's human anchor rigorously … (either an imperfect-but-real existing
+human resource with the claim scoped accordingly, or an image-paired stimulus set keyed to an
+EXISTING human sense inventory — no new human subjects); <strong>surface the anchor choice, don't
+fabricate one</strong>." This page is that surfacing. It is <strong>non-blocking</strong>: the design proceeds on the
+provisional default under the standing delegation; Tom can redirect a one-liner asynchronously.</p>
+<h2 id="realized-anchor-2026-05-31-option-a-variant-surfaced">REALIZED ANCHOR (2026-05-31) — Option A-variant, surfaced</h2>
+<p>On building, <strong>WiC's actual sentence items badly under-covered clean visually-distinct homonyms</strong>
+(bat/crane/mouse are absent as WiC nouns; most WiC noun-F items use abstract/non-prototypical senses),
+which would have left the prediction-3 "visually-distinct" stratum weak. So the <strong>realized</strong> v1 anchor
+is the <em>other</em> arm of Tom's authorization — <strong>a constructed minimal-pair set keyed to an EXISTING human
+sense inventory: Princeton WordNet</strong> (<a href="../../base/resources/wordnet-sense-inventory.md.html"><code>resource/wordnet-sense-inventory</code></a>,
+the same inventory WiC is built from). Each item's same/different gold = same vs different WordNet noun
+<strong>synset</strong> (verified via NLTK WordNet; synset ids in the run's <code>items.csv</code>). <strong>Honesty note (forced by
+the independent pre-run critic):</strong> <em>no per-item human annotator judged these constructed pairs</em> — the
+human-anchored part is the WordNet <strong>sense inventory</strong> (these are genuinely distinct vs identical
+synsets); the <strong>mapping of each constructed sentence to a synset is the author's</strong>, weaker than WiC's
+released per-item labels, and the result states this. <strong>WiC remains the anchor for the text-only
+lexical-v3</strong> (<a href="../../../experiments/designs/lexical-polysemy-homonymy-v3.md.html"><code>design/lexical-polysemy-homonymy-v3</code></a>),
+where its actual items suffice. Result: <a href="../../findings/results/multimodal-grounding-image-v1.md.html"><code>result/multimodal-grounding-image-v1</code></a>.
+Tom: a one-liner ("WordNet-keyed constructed set is fine" / "redo with WiC/VWSD") is enough; <strong>not blocking</strong>.</p>
+<h2 id="the-question">The question</h2>
+<p>Which independent human anchor keys the image probe's graded-relatedness DV, and how is the image
+set built — without new human subjects?</p>
+<h2 id="options">Options</h2>
+<ul>
+<li><strong>A (provisional default, in force) — WiC binary same/different labels + a constructed
+  image-paired set keyed to them.</strong> Use <a href="../../base/resources/wic-word-in-context.md.html"><code>resource/wic-word-in-context</code></a>
+  (CC BY-NC 4.0; binary lexicographer same/different-sense labels) as the independent human anchor;
+  for a subset of WiC noun items with concrete, visually-distinct referents (incl. genuine
+  homonyms: bat, crane, bank, seal, pitcher, mouse…), source one small CC0/PD image per context
+  depicting that context's referent (Wikimedia Commons API, verified reachable + downscaled +
+  sha256-frozen). The image is a <strong>designed manipulation</strong>; the human signal stays WiC's binary
+  label; every claim is scoped to a <strong>binary same/different separation</strong> (not a graded correlation).
+  This is exactly Tom's "image-paired stimulus set keyed to an existing human sense inventory," and
+  it <strong>reuses the same anchor as the text-only lexical-v3</strong> so the two axes integrate. Governs
+  <a href="../../../experiments/designs/multimodal-grounding-image-v1.md.html"><code>design/multimodal-grounding-image-v1</code></a>.</li>
+<li><strong>B — a genuinely-multimodal existing human resource (VWSD / SemEval-2023 Task 1).</strong> Images +
+  human gold already paired. Rejected for v1 in the design because its gold is a <em>retrieval</em> answer
+  key (discriminative — the bag-of-words gap the conjecture warns against), it does not slot into the
+  DURel-style relatedness instrument without redesign, and its images are a license patchwork.
+  Reconsider for a v2.</li>
+<li><strong>C — THINGS-data triplet judgments (CC0).</strong> Object-concept similarity, not word-sense relatedness
+  — a <em>related</em> claim, not this one; weaker fit to the lexical program's instrument.</li>
+</ul>
+<h2 id="provisional-default">Provisional default</h2>
+<p><strong>Option A</strong> — WiC-binary-keyed constructed image set, all claims binary-scoped, images sourced
+PD/CC0 and frozen (sha256) before any model call. Proceeding under the standing delegation with the
+choice surfaced here. Tom: a one-liner ("A stands" / "use B/C" / "hold") is enough; <strong>not blocking</strong>.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>openrouter.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../index.html">home</a> <span class="sep">/</span> <a href="../index.html">experiments</a> <span class="sep">/</span> <a href="index.html">lib</a> <span class="sep">/</span> <span class="cur">openrouter.py</span></nav>
+<main>
+<header class="page-head">
+<h1>openrouter.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">15.1 KB</span> &middot; <code class="fpath">experiments/lib/openrouter.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Shared OpenRouter probe helper — records the API&#39;s ACTUAL billed cost.</span>
+
+<span class="sd">WHY THIS EXISTS (maintenance unit, 2026-05-30)</span>
+<span class="sd">----------------------------------------------</span>
+<span class="sd">Every prior `probe.py` estimated cost from a hardcoded local rate card</span>
+<span class="sd">(prompt_tokens * price + completion_tokens * price). The 2026-05-30 session found</span>
+<span class="sd">that estimate UNDERCOUNTS the real OpenRouter bill by ~4.5x (the local card omits</span>
+<span class="sd">reasoning tokens, cache/byok adjustments, and upstream-cost differences). OpenRouter</span>
+<span class="sd">returns the true billed cost per call in `usage.cost` — but ONLY if the request body</span>
+<span class="sd">carries `&quot;usage&quot;: {&quot;include&quot;: true}`. This module bakes that flag in and sums the</span>
+<span class="sd">returned `usage.cost`, so future runs record ACTUAL spend, not an estimate.</span>
+
+<span class="sd">See config/budget.md (&quot;After each probe&quot;) and NEXT.md (the queued fix this closes).</span>
+
+<span class="sd">USAGE (import from a dated run dir)</span>
+<span class="sd">-----------------------------------</span>
+<span class="sd">    import os, sys</span>
+<span class="sd">    sys.path.insert(0, os.path.abspath(os.path.join(</span>
+<span class="sd">        os.path.dirname(__file__), &quot;..&quot;, &quot;..&quot;, &quot;lib&quot;)))</span>
+<span class="sd">    from openrouter import PANEL, call, billed_cost</span>
+
+<span class="sd">    r = call(PANEL[&quot;A&quot;], system, user)        # r[&quot;content&quot;], r[&quot;usage&quot;], r[&quot;error&quot;]</span>
+<span class="sd">    cost = billed_cost([list_of_records])      # sums the API-returned usage.cost</span>
+
+<span class="sd">PANEL slugs mirror config/models.md (the single source of truth — do not edit here</span>
+<span class="sd">without editing that file; this is a convenience copy for runnable code).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.error</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;https://openrouter.ai/api/v1/chat/completions&quot;</span>
+
+<span class="c1"># Mirror of config/models.md &quot;Current panel (2026-05-28)&quot;. config/models.md is the</span>
+<span class="c1"># source of truth; keep these in sync by hand when the panel changes.</span>
+<span class="n">PANEL</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;anthropic/claude-sonnet-4.6&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;openai/gpt-5.4-mini&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;google/gemini-3.5-flash&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># Local rate card (USD per 1M tokens, prompt/completion) — kept ONLY as a fallback</span>
+<span class="c1"># estimate when usage.cost is absent (e.g. a provider that does not report cost). The</span>
+<span class="c1"># 2026-05-30 finding: a naive token-estimate UNDERCOUNTS real spend, so this is a</span>
+<span class="c1"># fallback, not the headline. Prefer billed_cost() (sums usage.cost) for the recorded</span>
+<span class="c1"># figure.</span>
+<span class="c1">#</span>
+<span class="c1"># CORRECTION 2026-06-26: the prior numbers (gpt 0.20/0.60, gemini 0.15/0.60) were</span>
+<span class="c1"># stale by ~4-15x against OpenRouter&#39;s live catalog and were a large part of why the</span>
+<span class="c1"># pre-flight estimate read so far below the bill (gemini in particular billed ~14.5x its</span>
+<span class="c1"># old estimate; see config/budget.md). Verified against the live OpenRouter endpoints</span>
+<span class="c1"># this date (catalog reachable via the optional `openrouter` design-time MCP server, or</span>
+<span class="c1"># the plain REST /api/v1/models endpoint — see config/mcp-servers.md). The headline</span>
+<span class="c1"># recorded cost is STILL the API-returned usage.cost via billed_cost(); these numbers</span>
+<span class="c1"># only sharpen the *pre-flight estimate*. Note the estimate remains a lower bound for</span>
+<span class="c1"># reasoning-heavy gemini runs: gemini bills internal-reasoning tokens at the COMPLETION</span>
+<span class="c1"># rate ($9/MT) and they are not separately modelled here — keep `reasoning` suppressed</span>
+<span class="c1"># or capped on large gemini runs and budget against the billed expectation.</span>
+<span class="n">RATE_CARD</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;anthropic/claude-sonnet-4.6&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">),</span>   <span class="c1"># unchanged — was already accurate</span>
+    <span class="s2">&quot;openai/gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="mf">4.50</span><span class="p">),</span>          <span class="c1"># was (0.20, 0.60) — ~4x/7x too low</span>
+    <span class="s2">&quot;google/gemini-3.5-flash&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">1.50</span><span class="p">,</span> <span class="mf">9.00</span><span class="p">),</span>      <span class="c1"># was (0.15, 0.60) — ~10x/15x too low</span>
+<span class="p">}</span>
+
+<span class="c1"># Cached-input-read price (USD per 1M tokens) — the rate billed for the portion of the</span>
+<span class="c1"># prompt served from a cache hit, ~10x below the full prompt rate. Added 2026-06-26 after</span>
+<span class="c1"># the prompt-caching pilot (decision: prompt-caching-repeated-prefix-probes, ratified s114;</span>
+<span class="c1"># run experiments/runs/2026-06-26-prompt-caching-pilot/). estimated_cost() reads</span>
+<span class="c1"># usage.prompt_tokens_details.cached_tokens and charges those tokens at this rate instead</span>
+<span class="c1"># of the full prompt rate, so the pre-flight ESTIMATE stops over-counting a cached run.</span>
+<span class="c1"># The recorded headline figure is still billed_cost() (sums usage.cost) — unchanged. Values</span>
+<span class="c1"># from the live OpenRouter catalog (2026-06-26), corroborated by the pilot&#39;s measured</span>
+<span class="c1"># warm-read costs (gpt -82.7%, gemini/claude via explicit cache_control -82.7%/-91.4%).</span>
+<span class="n">CACHE_READ</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;anthropic/claude-sonnet-4.6&quot;</span><span class="p">:</span> <span class="mf">0.30</span><span class="p">,</span>
+    <span class="s2">&quot;openai/gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mf">0.07</span><span class="p">,</span>
+    <span class="s2">&quot;google/gemini-3.5-flash&quot;</span><span class="p">:</span> <span class="mf">0.15</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">call</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">system</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">retries</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+         <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reasoning</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cache_prefix</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;One chat completion. Returns {content, usage, error}.</span>
+
+<span class="sd">    `usage` carries the API-billed `cost` field because the request sets</span>
+<span class="sd">    `&quot;usage&quot;: {&quot;include&quot;: true}`. google/* models burn the visible-output budget on</span>
+<span class="sd">    reasoning tokens under a small cap (see config/models.md caveat), so they default</span>
+<span class="sd">    to a large max_tokens unless overridden.</span>
+
+<span class="sd">    REASONING (optional, added 2026-05-31 for the relational reference-game probe — the</span>
+<span class="sd">    most call-heavy probe to date, where Gemini reasoning tokens are the dominant cost</span>
+<span class="sd">    driver per the budget ledger). Pass `reasoning=` to forward OpenRouter&#39;s `reasoning`</span>
+<span class="sd">    control verbatim, e.g. `reasoning={&quot;enabled&quot;: False}` or `{&quot;effort&quot;: &quot;none&quot;}` to</span>
+<span class="sd">    suppress reasoning tokens on tasks that do not need them (short labels / single-token</span>
+<span class="sd">    picks). When `reasoning is None` the field is omitted and behaviour is byte-identical</span>
+<span class="sd">    to before, so existing probes are unaffected.</span>
+
+<span class="sd">    MULTIMODAL (image input). Pass `images=` to attach images to the user turn — all</span>
+<span class="sd">    three current panel families accept image input (verified 2026-05-30 against the</span>
+<span class="sd">    OpenRouter /models catalog: anthropic/claude-sonnet-4.6, openai/gpt-5.4-mini,</span>
+<span class="sd">    google/gemini-3.5-flash all list `image` in input_modalities; gemini also lists</span>
+<span class="sd">    audio+video). `images` is a list, each element either a URL string</span>
+<span class="sd">    (&quot;https://…&quot; or a &quot;data:image/png;base64,…&quot; data URI) or a dict</span>
+<span class="sd">    {&quot;url&quot;: &quot;...&quot;, &quot;detail&quot;: &quot;low|high|auto&quot;}. When `images` is None the user turn is</span>
+<span class="sd">    sent as a plain string (text-only, unchanged from prior behaviour), so existing</span>
+<span class="sd">    text probes are byte-for-byte identical. When images are present the user turn is</span>
+<span class="sd">    built as the OpenAI/OpenRouter multimodal content array</span>
+<span class="sd">    ([{type:text,...}, {type:image_url, image_url:{url:...}}, ...]).</span>
+
+<span class="sd">    PROMPT CACHING (cache_prefix, optional, added 2026-06-26 after the caching pilot —</span>
+<span class="sd">    decision: prompt-caching-repeated-prefix-probes, ratified s114). Default False, in</span>
+<span class="sd">    which case the request body is byte-identical to before (the system turn is sent as a</span>
+<span class="sd">    plain string), so EVERY existing probe is unaffected and every frozen design&#39;s</span>
+<span class="sd">    execution path is unchanged. When True, the system turn is wrapped as a single</span>
+<span class="sd">    cache_control breakpoint block — [{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: system,</span>
+<span class="sd">    &quot;cache_control&quot;: {&quot;type&quot;: &quot;ephemeral&quot;}}] — marking the (typically large, repeated)</span>
+<span class="sd">    system prefix for caching. The pilot measured this as OUTPUT-NEUTRAL (byte-identical</span>
+<span class="sd">    answers cold vs cached on the panel) and a material input saving on repeated-prefix,</span>
+<span class="sd">    high-call-count probes: a warm read costs ~17% of a cold read on claude/gemini and gpt.</span>
+<span class="sd">    NOTES: (a) gpt caches the repeated prefix IMPLICITLY with no flag, so cache_prefix is</span>
+<span class="sd">    only needed for anthropic and google (the pilot found google&#39;s *implicit* caching does</span>
+<span class="sd">    NOT fire via OpenRouter&#39;s route — google needs this explicit breakpoint, like</span>
+<span class="sd">    anthropic). (b) Caching touches INPUT only; on reasoning-heavy google runs (reasoning</span>
+<span class="sd">    is now mandatory on gemini-3.5-flash and bills at the completion rate) the realized</span>
+<span class="sd">    saving on TOTAL cost shrinks because output+reasoning dominate. (c) The first call pays</span>
+<span class="sd">    a one-off cache-write premium (~1.25x input on anthropic), so caching pays off only</span>
+<span class="sd">    when the same prefix is re-sent many times within the cache TTL — i.e. exactly the</span>
+<span class="sd">    high-call-count probe case. (d) Adopt per-probe; the recorded cost stays usage.cost</span>
+<span class="sd">    (already cache-aware); estimated_cost() now discounts cached_tokens too.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;OPENROUTER_API_KEY&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">max_tokens</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">max_tokens</span> <span class="o">=</span> <span class="mi">4096</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;google/&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="mi">64</span>
+    <span class="k">if</span> <span class="n">images</span><span class="p">:</span>
+        <span class="n">user_content</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">user</span><span class="p">}]</span>
+        <span class="k">for</span> <span class="n">im</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">user_content</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;image_url&quot;</span><span class="p">,</span> <span class="s2">&quot;image_url&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">im</span><span class="p">}})</span>
+            <span class="k">else</span><span class="p">:</span>  <span class="c1"># dict with at least &quot;url&quot;, optionally &quot;detail&quot;</span>
+                <span class="n">iu</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">im</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]}</span>
+                <span class="k">if</span> <span class="n">im</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;detail&quot;</span><span class="p">):</span>
+                    <span class="n">iu</span><span class="p">[</span><span class="s2">&quot;detail&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">im</span><span class="p">[</span><span class="s2">&quot;detail&quot;</span><span class="p">]</span>
+                <span class="n">user_content</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;image_url&quot;</span><span class="p">,</span> <span class="s2">&quot;image_url&quot;</span><span class="p">:</span> <span class="n">iu</span><span class="p">})</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">user_content</span> <span class="o">=</span> <span class="n">user</span>
+    <span class="c1"># cache_prefix wraps the (repeated) system prefix in a cache_control breakpoint.</span>
+    <span class="c1"># Default False =&gt; plain string, byte-identical to the historical request body.</span>
+    <span class="k">if</span> <span class="n">cache_prefix</span><span class="p">:</span>
+        <span class="n">system_content</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">system</span><span class="p">,</span>
+                           <span class="s2">&quot;cache_control&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ephemeral&quot;</span><span class="p">}}]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">system_content</span> <span class="o">=</span> <span class="n">system</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">model</span><span class="p">,</span>
+        <span class="s2">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;system&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">system_content</span><span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">user_content</span><span class="p">},</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="n">temperature</span><span class="p">,</span>
+        <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="n">max_tokens</span><span class="p">,</span>
+        <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;include&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>  <span class="c1"># &lt;- makes OpenRouter return the billed usage.cost</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">reasoning</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">body</span><span class="p">[</span><span class="s2">&quot;reasoning&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">reasoning</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">retries</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>
+                <span class="n">URL</span><span class="p">,</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">body</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span>
+                <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">},</span>
+            <span class="p">)</span>
+            <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;message&quot;</span><span class="p">]</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+                    <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">,</span> <span class="p">{})}</span>
+        <span class="k">except</span> <span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;HTTP </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()[:</span><span class="mi">150</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># noqa: BLE001</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">attempt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">last</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">call_tools</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">messages</span><span class="p">,</span> <span class="n">tools</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tool_choice</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+               <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">retries</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">reasoning</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;One chat completion that supports FUNCTION/TOOL calling. Returns {message, usage, error}.</span>
+
+<span class="sd">    WHY A SEPARATE FUNCTION (added 2026-06-30 for the as-if origo probe,</span>
+<span class="sd">    experiments/runs/2026-06-30-tool-origo-deictic-anchor). The workhorse `call()` above takes a</span>
+<span class="sd">    single (system, user) pair, sends the user turn as plain text, and returns only the assistant</span>
+<span class="sd">    `content` string. A tool-calling probe needs three things `call()` deliberately does not do:</span>
+<span class="sd">      1. accept a FULL OpenAI-format `messages` array (so the caller can build a multi-turn loop:</span>
+<span class="sd">         user -&gt; assistant tool_call -&gt; tool result -&gt; assistant final);</span>
+<span class="sd">      2. forward a `tools` list (OpenAI/OpenRouter function schemas) and an optional `tool_choice`;</span>
+<span class="sd">      3. return the RAW assistant `message` dict (which may carry `tool_calls` AND/OR `content`),</span>
+<span class="sd">         not just the content string, so the caller can detect a SPONTANEOUS tool call.</span>
+<span class="sd">    Keeping this separate leaves `call()` byte-identical, so every existing text probe is unaffected.</span>
+
+<span class="sd">    The `usage` dict carries the API-billed `cost` (request sets `&quot;usage&quot;: {&quot;include&quot;: true}`), so</span>
+<span class="sd">    billed_cost() works on records written by a call_tools() loop exactly as for call().</span>
+
+<span class="sd">    `tools` is None for a plain (no-tool) turn — used by this probe&#39;s no-tool baseline arm, which</span>
+<span class="sd">    is then byte-equivalent to a plain chat completion over the same messages. google/* models burn</span>
+<span class="sd">    the visible-output budget on reasoning tokens under a small cap (config/models.md caveat), so</span>
+<span class="sd">    they default to a large max_tokens unless overridden; pass reasoning={&quot;effort&quot;:&quot;minimal&quot;} to</span>
+<span class="sd">    cap gemini reasoning as elsewhere in the codebase.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;OPENROUTER_API_KEY&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">max_tokens</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">max_tokens</span> <span class="o">=</span> <span class="mi">4096</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;google/&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="mi">512</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">model</span><span class="p">,</span>
+        <span class="s2">&quot;messages&quot;</span><span class="p">:</span> <span class="n">messages</span><span class="p">,</span>
+        <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="n">temperature</span><span class="p">,</span>
+        <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="n">max_tokens</span><span class="p">,</span>
+        <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;include&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>  <span class="c1"># &lt;- makes OpenRouter return the billed usage.cost</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="n">tools</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">body</span><span class="p">[</span><span class="s2">&quot;tools&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tools</span>
+    <span class="k">if</span> <span class="n">tool_choice</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">body</span><span class="p">[</span><span class="s2">&quot;tool_choice&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tool_choice</span>
+    <span class="k">if</span> <span class="n">reasoning</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">body</span><span class="p">[</span><span class="s2">&quot;reasoning&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">reasoning</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">retries</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>
+                <span class="n">URL</span><span class="p">,</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">body</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span>
+                <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">},</span>
+            <span class="p">)</span>
+            <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span> <span class="k">as</span> <span class="n">r</span><span class="p">:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;message&quot;</span><span class="p">]</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">msg</span><span class="p">,</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">,</span> <span class="p">{})}</span>
+        <span class="k">except</span> <span class="n">urllib</span><span class="o">.</span><span class="n">error</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;HTTP </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()[:</span><span class="mi">200</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># noqa: BLE001</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">attempt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">last</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">billed_cost</span><span class="p">(</span><span class="n">record_lists</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;ACTUAL billed USD: sum the API-returned usage.cost across record lists.</span>
+
+<span class="sd">    Each element of `record_lists` is a list of records that each carry a `usage`</span>
+<span class="sd">    dict (as written by a probe&#39;s run loop). Returns (total_usd, n_with_cost,</span>
+<span class="sd">    n_missing_cost) so the caller can tell whether any call lacked a reported cost.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">have</span> <span class="o">=</span> <span class="n">missing</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">recs</span> <span class="ow">in</span> <span class="n">record_lists</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+            <span class="n">u</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">{}</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cost&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">c</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">missing</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">total</span> <span class="o">+=</span> <span class="n">c</span>
+                <span class="n">have</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">total</span><span class="p">,</span> <span class="n">have</span><span class="p">,</span> <span class="n">missing</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">estimated_cost</span><span class="p">(</span><span class="n">record_lists</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fallback rate-card ESTIMATE (use only when billed_cost reports missing costs).</span>
+
+<span class="sd">    Documented to UNDERCOUNT real spend ~4.5x (2026-05-30). Kept for parity with the</span>
+<span class="sd">    historical ledger rows, not as the headline figure.</span>
+
+<span class="sd">    CACHE-AWARE (2026-06-26, caching-pilot precondition): tokens reported as served from</span>
+<span class="sd">    cache (usage.prompt_tokens_details.cached_tokens) are charged at the CACHE_READ rate</span>
+<span class="sd">    instead of the full prompt rate, so a cached run is no longer over-ESTIMATED. When no</span>
+<span class="sd">    cached_tokens are reported (the default, every cold run) the arithmetic is identical to</span>
+<span class="sd">    before: cached=0 =&gt; all prompt tokens at the full prompt rate.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pin</span><span class="p">,</span> <span class="n">pout</span> <span class="o">=</span> <span class="n">RATE_CARD</span><span class="p">[</span><span class="n">model</span><span class="p">]</span>
+    <span class="n">cread</span> <span class="o">=</span> <span class="n">CACHE_READ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">pin</span><span class="p">)</span>
+    <span class="n">tin_full</span> <span class="o">=</span> <span class="n">tin_cached</span> <span class="o">=</span> <span class="n">tout</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">recs</span> <span class="ow">in</span> <span class="n">record_lists</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+            <span class="n">u</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">{}</span>
+            <span class="n">pt</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;prompt_tokens&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">0</span>
+            <span class="n">cached</span> <span class="o">=</span> <span class="p">((</span><span class="n">u</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;prompt_tokens_details&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cached_tokens&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="ow">or</span> <span class="mi">0</span>
+            <span class="n">cached</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">cached</span><span class="p">,</span> <span class="n">pt</span><span class="p">)</span>
+            <span class="n">tin_full</span> <span class="o">+=</span> <span class="n">pt</span> <span class="o">-</span> <span class="n">cached</span>
+            <span class="n">tin_cached</span> <span class="o">+=</span> <span class="n">cached</span>
+            <span class="n">tout</span> <span class="o">+=</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;completion_tokens&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">tin_full</span> <span class="o">*</span> <span class="n">pin</span> <span class="o">+</span> <span class="n">tin_cached</span> <span class="o">*</span> <span class="n">cread</span> <span class="o">+</span> <span class="n">tout</span> <span class="o">*</span> <span class="n">pout</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1_000_000</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>
