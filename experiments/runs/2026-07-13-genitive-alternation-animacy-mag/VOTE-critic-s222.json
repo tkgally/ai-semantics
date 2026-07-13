@@ -1,0 +1,8 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "cost_usd": 0.0025545,
+  "n_have": 1,
+  "n_missing": 0,
+  "content": "GO-WITH-CONDITIONS\n\n- Pooling 72 prior + 36 fresh frames is acceptable only if the 108-frame CI is labeled explicitly as **conditional/post hoc on the already-established direction**, not as an independent estimate. The pooled CI is not a clean \u201cnew magnitude\u201d because 2/3 of the data were already used to establish the effect; it will be tighter by construction. Reporting new-36-only and prior-72-only alongside is necessary, but not sufficient unless the pooled number is clearly fenced as an update, not confirmation.\n\n- Dropping the nonce arm is defensible **only if** you do **not** present the run as guarding against item-specific surface confounds. The frozen certification does not substitute for an in-run firewall on the new lemmas. If the new items were authored blind and the within-frame matching is truly the same frozen recipe, that\u2019s fine for magnitude; but if you want to claim the pooled typical magnitude is robust to superficial cues, the absent nonce control leaves a hole.\n\n- The LIFT rule is too permissive as written. \u201c>=2/3 pooled CI-LB > 0 AND fresh-36 positive\u201d lets the old data do almost all the work. For a magnitude attachment, the fresh blind arm should have to clear a **standalone positivity criterion** first (e.g. CI-LB > 0 or a predeclared sign-test threshold), and only then can pooling be used as the reported estimate. Otherwise the pooled result is just a repackaged direction claim with a tighter interval.\n\nVOTE: GO-WITH-CONDITIONS",
+  "error": null
+}

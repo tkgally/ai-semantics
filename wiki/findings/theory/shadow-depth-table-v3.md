@@ -110,6 +110,18 @@ links:
 > beaters — **but held visibly distinct** as **direction-only, magnitude-deferred, same-date**, not yet
 > the dative's evidential equal (thrice-observed and powered). This is a row-level in-place migration,
 > **not** a re-fold or a re-supersede; the edition stays v3. **No beater number changed.**
+>
+> **→ MAGNITUDE ATTACHED 2026-07-13 (s222), in-place row annotation.** The powered magnitude re-run the
+> s221 promotion named as the row's remaining owed unit **ran**:
+> [`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md) added a
+> third disjoint typical arm (36 fresh-blind frames) pooled with s218+rep2 → 108 frames, attaching a
+> within-model magnitude of **+0.145 / +0.169 / +0.139** per model (all CI-LB>0; the fresh-36 blind arm
+> clears CI-LB>0 3/3 — a clean attach). The genitive row's distinctness marker updates from
+> **direction-only, magnitude-deferred, same-date** to **magnitude-attached (pooled), same-date** — so
+> it moves *closer* to the dative's row but is **still held distinct**: the genitive magnitude is from a
+> **pooled** arm (72/108 frames reused) and **same-date** across all three runs, where the dative's is
+> from a fully-fresh powered re-run on a **different date**. Row-level in-place annotation, **not** a
+> re-fold; the edition stays v3. **No beater number changed.**
 
 > **Status: draft (2026-07-13, session 219). The program's flagship deliverable**
 > ([`wiki/program.md`](../../program.md) §"Flagship deliverable"; item A1c). This page introduces
