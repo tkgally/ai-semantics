@@ -238,7 +238,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`config/models.md`](../config/models.md) before any pilot**; every logprob-lane result carries a
   senselint-enforced `logprob-lane`/`verdict-bearing:false` contract; never echo/prompt-logprob
   surprisal; pilot only on an already-frozen battery (A3b BLiMP the natural target).
-- **A5 `[~]` Production-side alternation battery.** Extend the dative pattern (the
+- **A5 `[x]` Production-side alternation battery — second sibling (GENITIVE) RATIFIED + FROZEN + RUN s218 → CONFIRM 3/3.** Extend the dative pattern (the
   best-designed result, anchored to a human *production* direction): free generation scored by
   frozen parsers — given/new manipulations → produced alternant; genitive alternation,
   particle placement, locative alternation, each with published human corpus studies to anchor
@@ -254,13 +254,27 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   design crux (vs the dative) is a **surface-frequency shadow control** — a typical-vs-atypical
   possessor split as primary + a frozen corpus freq covariate — because animacy is lexical to the
   possessor, so the two scored phrasings vary lexically across conditions. Three value-laden gates
-  opened ([`decisions/open/genitive-alternation-anchor-and-indicator`](decisions/open/genitive-alternation-anchor-and-indicator.md),
+  opened ([`decisions/resolved/genitive-alternation-anchor-and-indicator`](decisions/resolved/genitive-alternation-anchor-and-indicator.md),
   provisional defaults **Q1-A animacy / Q2-(i) graded FC + both controls / Q3 human-anchored on the
   direction, per-item gradient deferred [TLC unlicensed]**). Pre-run critic (fresh agent + one
   non-Anthropic decorrelation vote, `gpt-5.4-mini`, $0.002661) → **GO-WITH-CONDITIONS**, convergent
   on Q1/Q2/Q3; binding freeze condition = a precommitted/locked item-selection rule with novelty +
-  semantic-plausibility matching for the atypical set. **Ratifiable s218+; freeze + run + the
-  predictions.md bet after ratification.** Item stays `[~]` until the run.]**
+  semantic-plausibility matching for the atypical set.]** **[RATIFIED + FROZEN + RUN s218 →
+  [`result/genitive-alternation-animacy-v1`](findings/results/genitive-alternation-animacy-v1.md):
+  decision ratified ADOPT DEFAULTS (fresh reviewer + convergent non-Anthropic vote `gpt-5.4-mini`
+  $0.002129; freeze conditions R1–R5 — chiefly: nonce animacy by gloss not orthography, report the
+  covariate's own predictive validity, CONFIRM narrowly directional). Frozen (36 typical + 24 nonce
+  frames; UD-EWT marginal-propensity covariate, CC BY-SA 4.0, license verified firsthand) + run (936
+  calls, $1.164, 0 NA). **PANEL CONFIRM 3/3:** the panel prefers the s-genitive more for animate
+  possessors, human-direction, and the shift **SURVIVES the rare/nonce-possessor firewall 3/3** (no
+  per-lemma corpus statistic) — not merely a possessor-propensity shadow; magnitudes ~4× decorrelated
+  (gpt weakest/marginal on the firewall). The covariate is near-vacuous (R² 0.002–0.038) so CONFIRM
+  rests on the nonce arm (R2/R5); graded animate>collective>inanimate nominal (collective ≈
+  inanimate). `human-anchored` on the direction only. Post-run verifier REPRODUCED-WITH-NOTES.
+  Reading-bearing result stays `proposed`; a cross-session promotion review (writing the `claim`,
+  carrying the gpt-weak-leg + covariate-vacuity caveats) is the successor, and the shadow-depth-table
+  genitive row lands at that promotion. A third A5 sibling (particle placement / locative) is a lower-
+  priority future row. **Item [x] — the calibrated second row landed.**]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked

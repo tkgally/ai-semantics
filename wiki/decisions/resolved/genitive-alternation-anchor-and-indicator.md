@@ -1,27 +1,30 @@
 ---
 id: genitive-alternation-anchor-and-indicator
 title: How to operationalize the genitive-alternation animacy probe — focal constraint, logprob-free indicator + shadow control, and anchor posture?
-status: open
+status: resolved
 opened: 2026-07-13
 opened-by: autonomous (session 217, opening the A5 genitive sibling)
-contingent-artifacts:
-  - conjecture/genitive-alternation-animacy
-  - design/genitive-alternation-animacy-v1
+resolved: 2026-07-13
+resolved-by: autonomous (adversarial review)
+resolution: "ADOPT DEFAULTS — Q1-A (possessor animacy) / Q2-(i) (graded forced-choice + BOTH shadow controls: the rare/nonce-possessor arm as the shortcut-immune PRIMARY control and the frozen possessor-lemma marginal genitive-propensity covariate as corroboration; length+sibilancy+definiteness matched, A/B counterbalanced, collective mid-level) / Q3 human-anchored on the DIRECTION only (per-item gradient deferred to a license-verified scout). Ratified s218 by a fresh-agent adversarial reviewer (verdict authority, independent of the s218 downstream freeze/run) that WEIGHED a non-Anthropic decorrelation vote (gpt-5.4-mini, $0.002129): CONVERGENT on the yardstick — the fresh reviewer ADOPT-DEFAULTS, the vote ADOPT-WITH-MODIFICATION (agreeing Q1 animacy is the right hard target and Q3 direction-only is honest, adding that the control is risk-reducing CORROBORATION, not a definitive shadow-defeat). The critic's B1–B3 (nonce=rare/nonce possessors not novel pairings; ONE sha'd marginal-propensity covariate; ex-ante CONFIRM-vs-SHADOW independence rule) were judged sound and sufficient to close the marginal-frequency channel. Five residual freeze conditions carried to the run: R1 nonce-arm animacy conveyed by gloss not orthography, string forms neutralized across arms; R2 report the covariate's OWN predictive validity — if too weak to absorb collinear variance, CONFIRM rests on the nonce arm and the covariate leg is weak corroboration; R3 power the load-bearing nonce arm (≥20 paired-contrast frames or justify) toward the §4 floor; R4 B1–B3 + S1–S7 + (vi) 'no gradient-match prose' stay binding; R5 (from the vote) frame CONFIRM narrowly directional — no 'distributional shadow defeated' overclaim. Tom's standing override outranks this autonomous ratification."
 anchor: human-anchored (Dubois et al. 2023 native-speaker animacy direction; per-item gradient a queued upgrade only)
 ---
 
-> **Status: OPEN (2026-07-13, session 217).** Opened this session; **ratifiable at the earliest next
-> session** by an independent adversarial-review pass (charter §12.3; PROTOCOL §2), routing one vote
-> through a non-Anthropic panel model. **No probe runs before ratification.** The contingent design
-> [`design/genitive-alternation-animacy-v1`](../../../experiments/designs/genitive-alternation-animacy-v1.md)
+> **RESOLVED — session 218 (2026-07-13), autonomous cross-session adversarial review. ADOPT DEFAULTS
+> (Q1-A / Q2-(i) / Q3 human-anchored on the direction).** A fresh-agent adversarial ratification
+> reviewer (verdict authority, independent of the s218 freeze/run) **weighed** a non-Anthropic
+> decorrelation vote (`gpt-5.4-mini`, $0.002129) — convergent on the yardstick (fresh reviewer
+> ADOPT-DEFAULTS; vote ADOPT-WITH-MODIFICATION, agreeing on Q1/Q3 and adding that the shadow control is
+> corroboratory, not a definitive shadow-defeat). The s217 pre-run critic's B1–B3 were judged sound and
+> sufficient to close the marginal-frequency channel. **Five residual freeze conditions R1–R5** (nonce
+> animacy by gloss not orthography + neutralized string forms; report covariate predictive validity /
+> CONFIRM rests on the nonce arm; power the nonce arm; B1–B3 + S1–S7 stay binding; CONFIRM stays
+> narrowly directional — no "shadow defeated") were carried to the run and honored at the s218 freeze
+> ([`PREREG.md`](../../../experiments/runs/2026-07-13-genitive-alternation-animacy/PREREG.md)). The
+> design [`design/genitive-alternation-animacy-v1`](../../../experiments/designs/genitive-alternation-animacy-v1.md)
 > and conjecture [`conjecture/genitive-alternation-animacy`](../../findings/conjectures/genitive-alternation-animacy.md)
-> are provisional until this resolves. An independent **pre-run critic** (fresh agent, verdict
-> authority + one non-Anthropic decorrelation vote, `gpt-5.4-mini`, $0.002661) was run at design time
-> this session → **GO-WITH-CONDITIONS**, convergent on Q1/Q2/Q3. It caught a load-bearing hole in the
-> Q2 shadow control (a no-animacy reader could score CONFIRM off the possessor's **marginal** genitive
-> propensity); **its blockers B1–B3 are folded into the Q2 default below and the design's freeze
-> conditions this session** (making a spurious positive harder — the yardstick, not the result). This
-> is QA input to the ratification, not a substitute for it.
+> are promoted out of contingent status. **No probe ran in the opening session (s217); the freeze + run
+> are s218**, honoring the anti-cheat separation. Full options + the pre-run-critic record below.
 
 # Decision: anchor + indicator + shadow control for the genitive-animacy probe
 

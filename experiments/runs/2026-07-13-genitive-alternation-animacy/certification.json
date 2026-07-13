@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "(1) within-frame possessor LENGTH matched across levels": true,
+    "(1) within-frame final-SIBILANCY matched across levels": true,
+    "(1) all possessors definite 'the <noun>' (no bare proper name, S1)": true,
+    "(2) no capitalized (proper-name) possessor noun": true,
+    "(2b) every possessor non-sibilant-final (uniform neutralization)": true,
+    "(3) nonce animate/inanimate slot string multisets EQUAL (R1)": true,
+    "(3) each nonce string once-animate & once-inanimate": true,
+    "(4) no length/sibilancy/position/always-s/always-of reader yields ANY within-frame shift": true,
+    "(N) >=40 frames total": true,
+    "(N) nonce arm >=20 frames (critic S2/R3)": true,
+    "(N) typical arm carries collective level (graded test, S7)": true
+  },
+  "fail": [],
+  "max_abs_frame_shift_per_shortcut_reader": {
+    "always_s": 0.0,
+    "always_of": 0.0,
+    "always_A": 0.0,
+    "always_B": 0.0,
+    "position_A_bias": 0.0,
+    "len_shorter_s": 0.0,
+    "sibilant_of": 0.0
+  },
+  "ok": true,
+  "counts": {
+    "n_frames": 60,
+    "n_typical": 36,
+    "n_nonce": 24,
+    "n_trials": 312
+  },
+  "stimuli_sha256": "8e27f89da365ca73c8a214b0f516c95266e324ffd15558ea69fca7f11a3ffee4"
+}

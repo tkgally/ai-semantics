@@ -6,10 +6,9 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: draft
+status: frozen
 anchor: human-anchored
-contingent-on:
-  - genitive-alternation-anchor-and-indicator
+contingent-on: []
 created: 2026-07-13
 updated: 2026-07-13
 links:
@@ -27,11 +26,13 @@ links:
 
 # Design v1 — genitive-alternation possessor-animacy probe (program A5)
 
-**Status:** PROVISIONAL — contingent on
-[`decisions/open/genitive-alternation-anchor-and-indicator`](../../wiki/decisions/open/genitive-alternation-anchor-and-indicator.md)
-(opened s217; ratifiable at the earliest s218). **Nothing is frozen and nothing runs before
-ratification.** This page carries the design; the freeze (item sha + frequency-control sha), the PREREG,
-and the run record follow in the run session, mirroring the dative
+**Status:** FROZEN + RUN (s218). Ratified
+[`decisions/resolved/genitive-alternation-anchor-and-indicator`](../../wiki/decisions/resolved/genitive-alternation-anchor-and-indicator.md)
+(ADOPT DEFAULTS Q1-A / Q2-(i) / Q3 human-anchored; freeze conditions R1–R5). Frozen + run this session:
+[`experiments/runs/2026-07-13-genitive-alternation-animacy/`](../runs/2026-07-13-genitive-alternation-animacy/)
+(`PREREG.md` sha-pins `stimuli.json` + `freq_control.json`); result →
+[`result/genitive-alternation-animacy-v1`](../../wiki/findings/results/genitive-alternation-animacy-v1.md).
+Mirrors the dative
 ([`result/dative-information-structure-v1`](../../wiki/findings/results/dative-information-structure-v1.md))
 and German-CC ([`design/comparative-correlative-german-v1`](comparative-correlative-german-v1.md))
 patterns.
