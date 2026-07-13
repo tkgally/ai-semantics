@@ -312,9 +312,16 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   direction-only anchor, R5 gloss, marginal-propensity-only control, behavioral-only, **same-date/same-
   version** replication, magnitude-deferred). Shadow-depth-table-v3 genitive row migrated in-place
   **result-cited → claim-cited** (held distinct from the four stronger beaters). The A5 second sibling is
-  now a **promoted claim**; the genitive line's remaining owed unit is its powered magnitude re-run. A
-  **third A5 sibling** (particle placement / locative alternation, license-verified anchor) is the next
-  A5 growth row.]**
+  now a **promoted claim**; the genitive line's remaining owed unit is its powered magnitude re-run.]**
+  **[MAGNITUDE ATTACHED s222 → [`result/genitive-alternation-animacy-mag`](findings/results/genitive-alternation-animacy-mag.md):
+  the powered magnitude re-run landed — a third disjoint typical arm (36 fresh-blind frames, 108 lemmas
+  0-overlap with the 214 prior) pooled with s218+rep2 → **108 typical frames**, attaching a within-model
+  magnitude of **+0.145 / +0.169 / +0.139** per model (all CI-LB>0; the fresh-36 blind arm clears CI-LB>0
+  3/3 — a clean attach, not fresh-arm-weak). $0.842 billed, 0 NA; both pre-run gates GO, post-run verifier
+  REPRODUCED. Claim fence (i) lifted magnitude-deferred → magnitude-attached (within-model; anchor stays
+  direction-only); the typical-arm magnitude is cross-model consistent (~1.2×) unlike the nonce arm
+  (~3.6–4×). **The A5 second sibling's owed unit is now discharged.** A **third A5 sibling** (particle
+  placement / locative alternation, license-verified anchor) is the next A5 growth row.]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked

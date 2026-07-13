@@ -1,7 +1,7 @@
 ---
 type: claim
 id: genitive-alternation-animacy
-title: The genitive alternation's possessor-animacy effect is a twice-observed, shortcut-immune, human-direction-anchored production-preference positive — across two controlled runs on certified-disjoint items (s218 v1 + s220 rep2) the panel shifts its s-genitive/of-genitive preference in the human animacy direction (animate → s-genitive) 3/3 AND the shift survives the nonce/rare-possessor firewall 3/3 on both runs; promoted DIRECTION-ONLY (within-model magnitude deferred to an owed powered re-run), with the covariate-vacuity, weak-gpt-leg, animate/non-animate-binary, same-date, and direction-only fences carried verbatim
+title: The genitive alternation's possessor-animacy effect is a twice-observed, shortcut-immune, human-direction-anchored production-preference positive that now carries a within-model MAGNITUDE — across two controlled runs on certified-disjoint items (s218 v1 + s220 rep2) the panel shifts its s-genitive/of-genitive preference in the human animacy direction (animate → s-genitive) 3/3 AND the shift survives the nonce/rare-possessor firewall 3/3 on both runs; a third disjoint typical arm (s222 mag, 36 fresh-blind frames) pooled to 108 frames ATTACHES a within-model magnitude of +0.14–0.17 per model (all CI-LB>0, the fresh-36 blind arm clearing CI-LB>0 3/3), lifting fence (i) from magnitude-deferred to magnitude-attached; the human-anchor scope stays direction-only, and the covariate-vacuity, weak-gpt-firewall-leg, animate/non-animate-binary, same-date, and direction-only-anchor fences are carried verbatim
 meaning-senses:
   - constructional
   - inferential
@@ -19,6 +19,8 @@ links:
     target: result/genitive-alternation-animacy-v1
   - rel: depends-on
     target: result/genitive-alternation-animacy-rep2
+  - rel: depends-on
+    target: result/genitive-alternation-animacy-mag
   - rel: depends-on
     target: concept/constructional-meaning
   - rel: supports
@@ -47,6 +49,20 @@ links:
 > the s220 fresh-item replication discharged it, clearing the §3 **REPLICATED ∧ controls-survived** bar.
 > The non-Anthropic decorrelation vote **dissented (REFUSE)** and is weighed and rebutted in Anti-cheat
 > below — divergence recorded, not smoothed over.
+>
+> **→ MAGNITUDE ATTACHED 2026-07-13 (session 222).** The promoted claim's own remaining owed unit —
+> the powered magnitude re-run — landed:
+> [`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md) added a
+> **third disjoint typical arm** (36 fresh-blind frames, all 108 possessor lemmas 0-overlap with the
+> 214 prior) and **pooled** it with s218+rep2 → **108 typical frames**. **CLEAN attach:** all three
+> models' fresh-36 blind arms independently clear CI-LB>0 (sign-p ≤ 6e-4) and all three pooled-108
+> intervals clear CI-LB>0 — a within-model animate−inanimate s-preference magnitude of **+0.145 /
+> +0.169 / +0.139** (claude / gemini / gpt), panel mean **0.151**. Both pre-run gates cleared GO
+> (fresh-agent critic + non-Anthropic vote, conditions on the write-up, honoured); an independent
+> post-run verifier **REPRODUCED** every figure from raw. This lifts **fence (i)** from
+> magnitude-deferred to **magnitude-attached (within-model)**; the human-anchor scope stays
+> **direction-only**. The magnitude support lives here on the claim layer; the mag result rests
+> `proposed`.
 
 ## Statement
 
@@ -69,12 +85,14 @@ the animacy *category*.
 
 The claim is promoted **direction-only** and is **scoped and qualified**, never panel-uniform:
 
-- **Direction/existence, not magnitude.** The human anchor is a native-speaker acceptability
-  **direction/sign** only, and both runs are founding-N (36+36 frames, below §4's powered band), so the
-  claim asserts the **sign** of the animacy effect and its shortcut-immunity, **not** a within-model
-  magnitude with a stable interval and **not** any human comparison of sizes. A powered A2a re-run
-  (~100–150 frames) is owed to attach magnitude, exactly as the dative deferred its magnitude to a
-  powered re-run.
+- **Direction is human-anchored; magnitude is within-model (now attached).** The human anchor is a
+  native-speaker acceptability **direction/sign** only, so the claim's **human comparison** asserts the
+  **sign** of the animacy effect and its shortcut-immunity, **not** any human comparison of sizes.
+  Within-model, the effect now **carries a magnitude**: the s222 powered pooled arm (108 typical
+  frames) gives an animate−inanimate s-preference shift of **+0.145 / +0.169 / +0.139** per model, all
+  bootstrap CI-LB>0, the 36 fresh-blind frames independently clearing CI-LB>0 3/3 (see the Magnitude
+  section). So the claim now asserts the **sign (human-anchored) AND a within-model magnitude**, but
+  **not** a human comparison of sizes.
 - **The per-model effect sizes decorrelate ~3.6–4× and gpt is the weakest firewall leg.** The
   nonce-arm effect spans gemini ≫ claude ≫ gpt on both runs (rep2 +0.279 ≫ +0.151 ≫ +0.078). gpt's
   nonce leg was **marginal at v1** (16/24 frames, one-sided sign-p 0.076) and **decisive at rep2** once
@@ -118,6 +136,33 @@ billed: v1 $1.164, rep2 $1.431 (both 0 missing). Full CIs, covariate legs, and p
 - **Both runs are recompute-verified.** Independent post-run fresh-agent verifiers reproduced every
   headline statistic from the raw jsonl with their own scripts and different bootstrap seeds
   (REPRODUCED-WITH-NOTES for v1, REPRODUCED for rep2; 0 material discrepancies; billed costs matched).
+
+## The within-model magnitude (attached s222, pooled)
+
+[`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md) added a
+**third disjoint typical arm** (36 fresh frames, authored blind, every possessor lemma 0-overlap with
+the 214 prior) on the same byte-frozen instrument, and pooled it with s218+rep2 → **108 typical
+frames**. Per model, the within-frame animacy shift `mean(s-pref|animate) − mean(s-pref|inanimate)`:
+
+| model | **fresh-36 (blind check)** | **pooled-108 (magnitude, conditional update)** |
+|---|---:|---:|
+| `claude-sonnet-4.6` | +0.155 [0.120, 0.194], 35/36, sign-p 0 | **+0.145 [0.124, 0.167]**, 102/108 |
+| `gemini-3.5-flash` | +0.175 [0.118, 0.235], 30/36, sign-p 3.5e-5 | **+0.169 [0.140, 0.198]**, 93/108 |
+| `gpt-5.4-mini` | +0.178 [0.117, 0.242], 28/36, sign-p 6.0e-4 | **+0.139 [0.110, 0.170]**, 88/108 |
+
+Panel magnitude **mean 0.151, range [0.139, 0.169]** — a within-model animate−inanimate s-preference
+gap of **~14–17 points out of 100**. Two readings the reviewers required (both pre-run gates GO; an
+independent post-run verifier **REPRODUCED** all figures from raw, one sign-p tie-convention note):
+
+- **The pooled column is an UPDATE conditional on the already-established direction**, tighter by
+  construction (72/108 frames reused); the **fresh-36 column is the genuine blind check** and it
+  clears CI-LB>0 3/3 decisively — a **clean** attach, not fresh-arm-weak (fence i).
+- **The typical-arm magnitude is CROSS-MODEL CONSISTENT (~1.2× spread)** — unlike the *nonce firewall*
+  magnitude, which decorrelates ~3.6–4× (fence b). The size of the animate→s-genitive **preference on
+  real possessors** is fairly uniform across the panel; the shortcut-immune *firewall* magnitude is
+  not. Shown, never averaged. The magnitude is a **within-model** quantity with **no** in-run firewall
+  (dropped; the firewall already replicated 3/3 twice) — its surface-robustness rests on the prior
+  firewall + the frozen certification (fences e/f).
 
 ## Human-comparison leg (direction only — magnitude is NOT anchored)
 
@@ -187,9 +232,17 @@ A future reader must carry all nine; none is erased by promotion:
   single-lab, n=3 shared-prior decoders.** There is **no temporal or version decorrelation** — weaker
   on that axis than the dative (v1/v2 landed on different dates). Three decoders converging is weak
   evidence on its own; the human *direction* anchor is what gives the result independent bearing.
-- **(i) Within-model magnitude is deferred.** Both runs are founding-N (36+36 frames, below §4's
-  ~100–150); a powered A2a re-run is **owed** to attach magnitude+interval. The claim asserts
-  direction/ordering only, not a magnitude.
+- **(i) Within-model magnitude is ATTACHED (s222), via a POOLED arm — a fully-fresh powered arm is a
+  possible further strengthening, not owed.** The powered re-run landed
+  ([`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md)): a
+  third disjoint typical arm (36 fresh-blind frames) pooled with s218+rep2 → **108 frames** attaches a
+  within-model magnitude of **+0.145 / +0.169 / +0.139** per model, all CI-LB>0, the fresh-36 blind arm
+  clearing CI-LB>0 3/3. The pooled interval is a magnitude **update conditional on the established
+  direction** — **tighter by construction** because 72/108 frames are reused (the data that set the
+  direction); the fresh-36 column is the genuine blind check. A single *fully-fresh* ~100–150-frame
+  arm would give a non-conditional interval but is **not** owed (the fresh-36 arm already clears its
+  own CI-LB decisively). The magnitude is a **within-model** contrast, **not** a human comparison of
+  sizes (fence d).
 
 ## Where it sits
 
@@ -203,13 +256,16 @@ model-specific). It does **not** reach an inference-licensing reading: the effec
 *preference*, not the licensing of a construction-contributed entailment. On the flagship
 [`theory/shadow-depth-table-v3`](../theory/shadow-depth-table-v3.md) it is the **fifth beater**, now a
 **promoted-claim** row — held distinct from the dative's *thrice-observed, powered* row (the two legs of
-the production-side alternation pair are not yet at equal evidential strength: the genitive is
-direction-only, magnitude-deferred, same-date; the asymmetry is shown, not averaged).
+the production-side alternation pair are not yet at equal evidential strength: the genitive now carries
+a within-model magnitude too, but from a **pooled** arm and **same-date** across all three runs, where
+the dative's magnitude came from a fully-fresh powered re-run on a **different date**; the asymmetry is
+shown, not averaged).
 
 ## What this claim does NOT say
 
-- **No human comparison of magnitudes**, and **no magnitude at all yet** (direction-only; magnitude
-  deferred to a powered re-run, fence i).
+- **No human comparison of magnitudes.** The **within-model** magnitude *is* attached (s222; pooled
+  +0.145 / +0.169 / +0.139, fence i) — what is **not** attached is any comparison of that size to a
+  human effect size (the anchor is direction-only, fence d; Dubois gives no model-scale figure).
 - **No panel-uniform reading.** All three models CONFIRM the direction on both runs, but the nonce-arm
   magnitudes decorrelate ~3.6–4× and gpt is the smallest leg (fence b); the claim reports the 3/3
   direction *and* the spread *and* gpt's weak-leg status together, never averaged.
@@ -267,10 +323,12 @@ construction) — human-anchored on its **direction** leg. `supported` attaches 
 the **replication**, and the **nonce-firewall shortcut-immunity** — with the load-bearing qualifiers
 that the magnitudes **decorrelate ~3.6–4×**, gpt is the **weakest leg**, the gradient is an
 **animate/non-animate binary**, the covariate is **near-vacuous** (CONFIRM rests on the nonce arm), the
-replication is **same-date/same-version**, and the human anchor is **direction-only**. It does **not**
-attach to a within-model **magnitude** (deferred, fence i), a human comparison of **sizes**, a
-**panel-uniform** reading, a **causal shadow-defeat** reading, or a **human-level competence** reading —
-all explicitly disclaimed above. The two underlying results remain `status: proposed` (this promotion
-consolidates them). `contingent-on: []` — the governing operationalization
+replication is **same-date/same-version**, and the human anchor is **direction-only**. As of s222 it
+**also** attaches a **within-model magnitude** (pooled 108 frames, +0.145 / +0.169 / +0.139, all
+CI-LB>0, the fresh-36 blind arm clearing CI-LB>0 3/3; fence i lifted). It does **not** attach to a
+human comparison of **sizes**, a **panel-uniform** reading, a **causal shadow-defeat** reading, or a
+**human-level competence** reading — all explicitly disclaimed above. The three underlying results
+(v1, rep2, mag) remain `status: proposed` (this claim consolidates them). `contingent-on: []` — the
+governing operationalization
 ([`decisions/resolved/genitive-alternation-anchor-and-indicator`](../../decisions/resolved/genitive-alternation-anchor-and-indicator.md),
 ADOPT DEFAULTS) is ratified.

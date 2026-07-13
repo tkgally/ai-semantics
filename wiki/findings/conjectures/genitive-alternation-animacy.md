@@ -37,8 +37,14 @@ links:
 > 3/3 again) and the cross-session promotion review then promoted it **direction-only** →
 > [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md) (`status: supported`).
 > The conjecture's confirm branch (human-direction shift + surviving the shadow control) is realized;
-> predictions 2 (smooth graded ramp) and the magnitude remain fenced (animate/non-animate binary; magnitude
-> deferred to an owed powered re-run). `status: tested` stands.
+> prediction 2 (smooth graded ramp) remains fenced (animate/non-animate binary).
+>
+> **→ MAGNITUDE ATTACHED 2026-07-13 (session 222).** The owed powered re-run landed
+> ([`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md)): a third
+> disjoint typical arm (36 fresh-blind frames) pooled with s218+rep2 → 108 frames attaches a within-model
+> magnitude (+0.145 / +0.169 / +0.139 per model, all CI-LB>0; the fresh-36 blind arm clears CI-LB>0 3/3).
+> The claim's fence (i) is lifted from magnitude-deferred to magnitude-attached (within-model; the
+> human-anchor scope stays direction-only). `status: tested` stands.
 
 # Conjecture: LLMs track the possessor-animacy constraint on the genitive alternation
 
