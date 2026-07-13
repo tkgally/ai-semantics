@@ -43,8 +43,11 @@ s218; s168 UD-treebank rule); per-file sha256 in `freq_control.json.corpus_meta`
 
 1. **Fresh, disjoint items.** All 108 typical possessor lemmas and all 36 nonce strings are **disjoint
    from the s218 frozen set** (certification check (D), loaded from the s218 `stimuli.json`: 0 shared
-   typical lemmas, 0 shared nonce strings). Possessums are fresh too. A genuine second run on new
-   items — never a touch of the frozen s218 dir.
+   typical lemmas, 0 shared nonce strings). Typical possessums are fresh; the disjointness guarantee
+   is on the **finding-bearing possessors + nonce strings** (one neutral nonce property-noun, "base",
+   recurs from s218 — immaterial: possessa are not in check (D), are held fixed within frame, and
+   cancel in the within-frame shift). A genuine second run on new possessors — never a touch of the
+   frozen s218 dir.
 2. **Powered gpt firewall leg.** The nonce arm is enlarged **24 → 36 frames** (derangement offset
    n//2 = 18; multiset-balanced, certified), because the s218 gpt nonce leg was the marginal member
    (mean +0.055, only 16/24 frames positive, one-sided sign-p 0.076 — it cleared the CI-LB rule only

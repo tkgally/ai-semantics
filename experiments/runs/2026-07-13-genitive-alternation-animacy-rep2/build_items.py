@@ -9,8 +9,10 @@ the HARD_STOP_USD budget constant, documented in-file). ONLY the item set is new
 
   1. FRESH, DISJOINT items. Every typical possessor lemma and every nonce string is disjoint from
      the s218 frozen set (asserted in certification check (D) below, loaded from the s218
-     stimuli.json). Possessums are fresh too. So this is a genuine second run on new items, not a
-     re-run of the frozen dir.
+     stimuli.json). Typical possessums are fresh too; the disjointness guarantee is on the finding-
+     bearing possessORs + nonce strings (one neutral nonce property-noun, "base", recurs from s218 --
+     immaterial: possessa are held fixed within frame and cancel in the within-frame shift). So this
+     is a genuine second run on new possessors, not a re-run of the frozen dir.
   2. POWERED gpt firewall leg. The nonce arm is enlarged 24 -> 36 frames (the derangement offset is
      n//2 = 18), because the s218 gpt nonce leg was the marginal member (mean +0.055, 16/24 frames,
      one-sided sign-p 0.076 -- it cleared the CI-LB rule only marginally). 36 paired nonce contrasts
