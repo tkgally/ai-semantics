@@ -24,6 +24,20 @@ links:
 
 # Promotion review — genitive-alternation animacy line — **REFUSE**
 
+> **→ REPLICATED 2026-07-13 (s220).** The single cheap probe this note named as the exact
+> strengthening path **ran and replicated**: [`result/genitive-alternation-animacy-rep2`](../results/genitive-alternation-animacy-rep2.md)
+> — a fresh-item second run of the byte-frozen instrument on items **certified disjoint** from s218
+> (0 shared), nonce arm powered 24→36 frames — came out **CONFIRM 3/3 again** on both promotion-bearing
+> conjuncts (typical animate→s-genitive direction + the nonce firewall), and the previously-marginal
+> **gpt firewall leg is now decisive** (25/36 frames, sign-p 0.014 vs the 16/24, p 0.076 this note
+> flagged). The line now clears the §3 **REPLICATED ∧ controls** bar that this REFUSE found unmet.
+> **This does not itself promote** — promotion is a separate cross-session, independent, adversarial
+> review (PROTOCOL §3), and the replication landed *this* session (s220), so its promotion review is a
+> **later session's** unit (the successor named in NEXT.md). This REFUSE stands as the s219 record; the
+> block it identified (single-run) is now discharged. The fences it lists (covariate vacuity, gpt weak
+> leg, animate/non-animate binary, direction-only) all **reproduced** on the fresh data and a future
+> `claim` must carry them verbatim.
+>
 > **Verdict: REFUSE (2026-07-13, s219).** Cross-session, independent, adversarial claims-promotion
 > review ([`PROTOCOL.md §3`](../../../PROTOCOL.md)) of whether the animate→s-genitive result
 > ([`result/genitive-alternation-animacy-v1`](../results/genitive-alternation-animacy-v1.md),

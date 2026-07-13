@@ -284,6 +284,24 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   carrying the gpt-weak-leg + covariate-vacuity caveats) is the successor, and the shadow-depth-table
   genitive row lands at that promotion. A third A5 sibling (particle placement / locative) is a lower-
   priority future row. **Item [x] — the calibrated second row landed.**]**
+  **[REPLICATED s220 (A2a fresh-item powered re-run, the s219-refusal-named path) →
+  [`result/genitive-alternation-animacy-rep2`](findings/results/genitive-alternation-animacy-rep2.md):
+  the byte-frozen s218 instrument (probe/analyze/build_cooc sha-identical; `common.py` only
+  `HARD_STOP_USD` 1.30→1.90) on a NEW disjoint run dir — 36 typical + **36 nonce** frames (nonce arm
+  enlarged 24→36 to power the marginal gpt firewall leg), all possessor lemmas + nonce strings
+  **certified disjoint** from s218 (0 shared). Pre-run critic (fresh agent → **GO**) + non-Anthropic
+  vote (`gpt-5.4-mini` $0.002130, GO-WITH-CONDITIONS = the R5 gloss fence). Run 1080 calls, $1.431, 0 NA/1
+  retry. **PANEL CONFIRM 3/3 again:** typical +0.146/+0.150/+0.099, nonce firewall +0.151/+0.279/+0.078
+  (all CI-LB >0), and the **gpt firewall leg is now decisive (25/36, sign-p 0.014** vs s218's 16/24,
+  p 0.076). Covariate again near-vacuous (R² ≤0.013) → CONFIRM again rests on the nonce arm; graded
+  again an animate/non-animate binary. Post-run verifier **REPRODUCED** (0 discrepancies). Both
+  promotion-bearing conjuncts (direction + firewall) reproduce on disjoint items → the §3 **REPLICATED
+  ∧ controls** bar is now cleared; the **cross-session promotion review** (writing a direction-only
+  scoped `claim`, carrying the gpt-weak-leg + covariate-vacuity + binary + direction-only fences) is
+  the **next-session** successor. In-place consolidation: result-v1 + note + shadow-depth-table-v3
+  genitive row updated single-run → **replicated pair** (still result-cited until the promotion lands
+  the claim). Reading-bearing result stays `proposed`. Item stays **`[x]`** (replication discharges the
+  single-run flag; the promotion tick lands next session).]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked

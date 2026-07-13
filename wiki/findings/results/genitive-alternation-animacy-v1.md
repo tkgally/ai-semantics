@@ -168,3 +168,12 @@ constraint in the human direction" — from a **discourse-structural** constrain
 > frames on the byte-frozen instrument, powering the marginal gpt firewall leg) — the A2a pattern that
 > discharged the dative and CC single-run flags. This result stays `proposed`; nothing here changes a
 > number.
+>
+> **→ REPLICATED 2026-07-13 (s220).** That fresh-item replication ran:
+> [`result/genitive-alternation-animacy-rep2`](genitive-alternation-animacy-rep2.md) — byte-frozen
+> instrument, items **certified disjoint** from this run (0 shared), nonce arm powered 24→36 frames —
+> came out **CONFIRM 3/3 again**, both conjuncts (typical direction + nonce firewall) reproducing, with
+> the previously-marginal gpt firewall leg now decisive (25/36, sign-p 0.014). The line is now a
+> **replicated pair** and clears the §3 REPLICATED ∧ controls bar; a cross-session promotion review
+> (direction-only scoped `claim`) is the next-session successor. This v1 stays `proposed`; nothing here
+> changes a v1 number.
