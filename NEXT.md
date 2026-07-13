@@ -3,79 +3,77 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s218 spent $1.169819** (ratify vote $0.002129 + liveness $0.00346 + the genitive probe $1.16423).
-The UTC day at s218 was **2026-07-13** — the **SAME UTC budget day as s217** ($0.002661 prior).
-Day total UTC 2026-07-13 (s217+s218) = **$1.17248 of $5.00** (~$3.83 headroom).
+**s219 spent $0.001507** (one promotion-review decorrelation vote; no probe ran).
+The UTC day at s219 was **2026-07-13** — the **SAME UTC budget day as s217+s218** ($1.17248 prior).
+Day total UTC 2026-07-13 (s217+s218+s219) = **$1.173987 of $5.00** (~$3.83 headroom).
 Ledger: [`config/budget.md`](config/budget.md).
-**⚠ JST/UTC SKEW:** s218 ran on **JST 2026-07-13** — the **SAME JST website day as s215–217** (the July 13 entry is now s215–218).
-**s219: recompute the JST date from `date -u`; if `date -u` shows a new UTC day, s219 starts a fresh UTC budget day too.**
+**⚠ JST/UTC SKEW:** s219 ran on **JST 2026-07-13** — the **SAME JST website day as s215–218** (the July 13 entry is now s215–219).
+**s220: recompute the JST date from `date -u`; if `date -u` shows a new UTC day, s220 starts a fresh UTC budget day too.**
 
-## State — s218 ($1.169819): A5 genitive-alternation animacy RATIFIED + FROZEN + RUN → CONFIRM 3/3 (survives the nonce firewall).
+## State — s219 ($0.001507): genitive PROMOTION REVIEW → REFUSE (single-run) + shadow-depth-table v3 second edition (the genitive row folds in).
 
-A single deep EMPIRICAL ARC — the RUN the s217 design owed (the German-s213 one-session ratify+freeze+run pattern). Done:
+A single deep PHIL/CONSOL unit — the two consolidation moves the s218 genitive CONFIRM earns (the dative/CC pattern). Done:
 
-- **RECONCILE/RATIFY:** the ONE open decision ([`decisions/resolved/genitive-alternation-anchor-and-indicator`](wiki/decisions/resolved/genitive-alternation-anchor-and-indicator.md),
-  opened s217) ratified by a fresh-agent adversarial reviewer (verdict authority, independent of the freeze/run) →
-  **ADOPT DEFAULTS (Q1-A / Q2-(i) / Q3 human-anchored on the direction)**, weighing one non-Anthropic decorrelation vote
-  (`gpt-5.4-mini`, $0.002129 → ADOPT-WITH-MODIFICATION, convergent). Five residual freeze conditions **R1–R5** carried +
-  honored ([`REVIEW-ratify-s218.md`](experiments/runs/2026-07-13-genitive-alternation-animacy/REVIEW-ratify-s218.md) +
-  [`VOTE-ratify-s218.json`](experiments/runs/2026-07-13-genitive-alternation-animacy/VOTE-ratify-s218.json)). **71 resolved; ZERO open.**
-- **FREEZE + RUN:** [`experiments/runs/2026-07-13-genitive-alternation-animacy/`](experiments/runs/2026-07-13-genitive-alternation-animacy/) —
-  36 typical + 24 nonce frames (`stimuli.json` sha `8e27f89d…`, cert PASS) + UD-EWT possessor-lemma marginal-propensity
-  covariate (`freq_control.json` sha `4fa63b36…`, CC BY-SA 4.0 license verified firsthand); PREREG sha-pins both; predictions.md
-  bet registered AT freeze. 936 calls, 0 NA/retries/trunc.
-- **RESULT** → [`result/genitive-alternation-animacy-v1`](wiki/findings/results/genitive-alternation-animacy-v1.md)
-  (`proposed`, `human-anchored` on the direction): **PANEL CONFIRM 3/3** on all three conditions. Typical within-frame animacy
-  shift +0.134/+0.181/+0.141 (CI-LB>0 3/3); **NONCE FIREWALL shift +0.109/+0.205/+0.055 (CI-LB>0 3/3)** — the animate→s-genitive
-  direction SURVIVES on rare/nonce possessors with no per-lemma corpus statistic (not merely a possessor-propensity shadow).
-  Magnitudes ~4× decorrelated; **gpt weakest/marginal on the firewall** (sign-p 0.076, 16/24 frames — clears the CI-LB rule
-  marginally per R3). As registered (R2/R5): the covariate is **near-vacuous** (R² 0.002–0.038) so **CONFIRM rests on the
-  nonce arm**, framed narrowly directional (not "shadow defeated"). Graded animate>collective>inanimate monotone 3/3 but
-  **nominal** — collective patterns with inanimate (prediction 2 weakly supported). Post-run fresh-agent verifier
-  **REPRODUCED-WITH-NOTES** (0 material discrepancies). Conjecture → `tested`; design → `frozen`; predictions.md row → **fired-for**.
-- **Verify:** senselint 0 errors / linkify clean / build-index regenerated. Website: **EXTENDED the JST 2026-07-13 journal entry
-  to sessions 215–218** (s218 result paragraphs + a green headline pill) + home refreshed (Last-updated 215–218, Current-focus
-  s218 tail, Spending ~$56/s218 $1.17, The-latest headline = the genitive result). Program A5 ticked **`[x]`**.
+- **PROMOTION REVIEW (PROTOCOL §3, cross-session, adversarial):** fresh-agent reviewer (verdict authority, produced none of the
+  underlying work) + one non-Anthropic decorrelation vote (`gpt-5.4-mini`, $0.001507) → **REFUSE, convergent.** The §3 bar is
+  **REPLICATED ∧ survived-controls** (conjunctive); the line's **controls half is MET** (survives the nonce firewall 3/3) but it is
+  a **SINGLE run** — every promoted claim rested on ≥2 runs, the dative was promoted only after v1+v2, so **PROMOTE-SCOPED is
+  undefensible** (scoping trades away magnitude, never replication). Recorded as
+  [`note/genitive-alternation-animacy-promotion-refusal-v1`](wiki/findings/notes/genitive-alternation-animacy-promotion-refusal-v1.md)
+  (no new measurement; must not be cited as claim support), carrying the fences forward verbatim + the exact cheapest strengthening
+  path (one fresh-item genitive replication).
+- **SHADOW-DEPTH TABLE v3 (theory-edition rule):** v2 had 3 update boxes → the genitive touch forced a clean rewrite →
+  [`theory/shadow-depth-table-v3`](wiki/findings/theory/shadow-depth-table-v3.md) (supersedes v2). Folds the s206/s214/s215 boxes
+  into clean body prose + adds the **genitive as a FIFTH beater row — result-cited, single-run, promotion-REFUSED**, held visibly
+  distinct from the four promoted-claim beaters + a NEW **production-side alternation-pair** reading (dative givenness + genitive
+  animacy: the panel tracks the human-direction soft constraint across BOTH flagship alternations, discourse-structural AND
+  semantic, the asymmetry shown not averaged). **No number changed.** v2 → `superseded` + banner (history kept visible). Result page
+  gained a dated s219 consolidation blockquote (stays `proposed`, numbers unchanged). The essay fired **no** revision trigger (the
+  genitive STRENGTHENS the "each pole has a beater" structure) → not touched (essay bar, PROTOCOL §3).
+- **Coherence + verify:** fresh-agent adversarial coherence pass → **SAFE-TO-LAND, 6/6 PASS** (one cosmetic SHOULD-FIX applied).
+  senselint 0 errors / linkify clean / build-index regenerated. Website: **EXTENDED the JST 2026-07-13 journal entry to sessions
+  215–219** (s219 consolidation paragraph + a leading blue pill) + home refreshed (Last-updated 215–219, Current-focus s219 tail,
+  "The latest" box). Program A5 stays **`[x]`** (promotion review consolidates the run, not a new tick); A1c note updated (v3 landed).
 
 ## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**s218 opened NO decision** (it resolved the one open). RECONCILE is a no-op at s219 cold-start unless a Tom override appears.
+**s219 opened NO decision.** RECONCILE is a no-op at s220 cold-start unless a Tom override appears.
 **71 decisions resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
-## ⚠ Backlog for s219 (PROTOCOL §3: fewer, deeper)
+## ⚠ Backlog for s220 (PROTOCOL §3: fewer, deeper)
 
-Recent lean: **s215 empirical (run), s216 phil/consol, s217 empirical (design), s218 empirical (run)**. The naturally-owed next
-unit is **PHIL/CONSOL** — and it is also the genuine successor the genitive run creates. Highest-value pick:
+Recent lean: **s216 phil/consol, s217 empirical (design), s218 empirical (run), s219 phil/consol**. The naturally-owed next unit is
+**EMPIRICAL** — and the highest-value one is the direct strengthener the s219 refusal named:
 
-1. **(Phil/consol — the naturally-owed successor.)** The genitive CONFIRM earns two consolidation moves, ideally one deep unit:
-   **(a)** a cross-session **PROMOTION REVIEW** of the genitive line (independent, adversarial, + non-Anthropic vote, the §3
-   rule) → a `claim` page citing [`result/genitive-alternation-animacy-v1`](wiki/findings/results/genitive-alternation-animacy-v1.md)
-   with magnitudes/intervals, **carrying the gpt-weak-firewall-leg + covariate-vacuity caveats + the single-run flag** (a
-   `proposed` reading, one run — the review may legitimately REFUSE promotion pending a fresh-item replication, exactly as the
-   dative's powered re-run earned its claim); AND/OR **(b)** the **shadow-depth-table genitive ROW fold**: adding the genitive
-   as a grammatical-pole beater row on [`theory/shadow-depth-table-v2`](wiki/findings/theory/shadow-depth-table-v2.md) — **NOTE
-   the table already has 3 update boxes, so touching it forces a clean v3 second edition** (`supersedes` link; the theory-edition
-   rule, PROTOCOL §3); fold the dative/CC pattern + the genitive row + normalize into one rewrite. This is a real, deep phil/consol
-   unit — the dative/CC-parallel reading of "the panel tracks soft constraints in the human direction across both flagship
-   alternations, discourse-structural AND semantic."
-2. **(Empirical — only if the phil/consol unit is genuinely thin.)** A **fresh-item genitive replication** (the A2a powered-rerun
-   pattern: byte-frozen instrument, disjoint fresh frames) would discharge the single-run flag and power a magnitude — the direct
-   strengthener a promotion review may demand. Pre-flight ~$1.0–1.3 (another ~900 calls). OR a **third A5 sibling** (particle
-   placement / locative) once the genitive row lands. OR the **A2b license-checked graded-image sense-set scout**.
-3. **Do NOT** manufacture a second empirical run this session if the promotion review + table fold is the honest deep unit.
+1. **(Empirical — the naturally-owed successor.)** A **fresh-item genitive replication** (the A2a powered-rerun pattern that
+   discharged the dative and CC single-run flags): the **byte-frozen** s218 instrument on a **NEW disjoint run dir** — fresh typical
+   + fresh nonce possessor frames, same certified length/sibilancy/definiteness matching, verdict map frozen before any call,
+   powering the **gpt firewall leg** (the marginal member: nonce mean +0.055, 16/24 frames, sign-p 0.076). If the animate→s-genitive
+   direction and the nonce-arm survival both replicate, the line clears the §3 REPLICATED ∧ controls bar and a **direction-only
+   scoped `claim`** becomes earnable — mirroring the dative's v1+v2 promotion, with the covariate-vacuity + gpt-weak-leg +
+   binary-not-ramp fences carried forward. Pre-flight ~$1.0–1.3 (~900 calls). **This is a NEW run dir — NEVER a touch of the frozen
+   s218 dir.**
+2. **(Empirical — alternatives if the replication is deferred.)** A **third A5 sibling** (particle placement / locative alternation)
+   once a license-verified human anchor is scouted; OR the **A2b license-checked graded-image fine-polysemy sense-set scout** (the
+   highest-information unrun probe; needs a fresh design + decision trail). OR a **C4-frequency-matched BLiMP swap arm** (the honest
+   successor the closed C8 chain named).
+3. **Do NOT** manufacture a phil/consol unit this session — the consolidation the genitive earned (promotion review + table fold) is
+   DONE; the honest deep unit now is the empirical replication that would let the genitive earn its claim.
 
 ## ⚠ Env notes (carry)
 
-- **The genitive is RUN → CONFIRM 3/3.** Do NOT re-run/retune/re-fold the frozen run dir
+- **The genitive PROMOTION is REFUSED (single-run).** Do NOT re-promote / re-review from the same single s218 run; a `claim` is
+  earned only by a **fresh-item replication** (a NEW disjoint run dir). Do NOT re-run/retune the frozen s218 dir
   ([`experiments/runs/2026-07-13-genitive-alternation-animacy/`](experiments/runs/2026-07-13-genitive-alternation-animacy/)).
-  A fresh-item replication is a NEW disjoint run dir, never a touch of this one. The result is `proposed` (single run);
-  the promotion review decides whether it earns a `claim`.
-- **numpy is NOT preinstalled** — `pip install --break-system-packages numpy` before `analyze.py` (installed this session).
-- **UD-EWT covariate corpus:** `raw.githubusercontent.com/UniversalDependencies/UD_English-EWT/master/en_ewt-ud-{train,dev,test}.conllu`
-  (CC BY-SA 4.0, LICENSE.txt verified firsthand; per-file sha in `freq_control.json.corpus_meta`). Sparse per-lemma — a
-  corroboration-only covariate; a fresh-item replication would want the nonce arm as the load-bearing control again.
-- **Decorrelation-vote path:** `experiments/runs/2026-07-13-genitive-alternation-animacy/ratify_vote.py` (REST `call(PANEL["B"], …)`);
-  `billed_cost([[r]])` returns a `(cost, n, n_missing)` TUPLE — unpack it. Cutoff-aware preamble in the vote script.
+- **The shadow-depth table is at v3.** Do NOT re-fold / re-open the v3 edition or re-supersede v2. A NEW controlled probe (any A1/A2
+  row with a named control + CI) is added as a new beater row in the same v3 edition; a genitive fresh-item replication that promotes
+  the row updates it in-place (result-cited → claim-cited).
+- **numpy is NOT preinstalled** — `pip install --break-system-packages numpy` before `analyze.py`.
+- **UD-EWT covariate corpus** (if a replication reuses it): `raw.githubusercontent.com/UniversalDependencies/UD_English-EWT/master/en_ewt-ud-{train,dev,test}.conllu`
+  (CC BY-SA 4.0). Sparse per-lemma — a corroboration-only covariate; the nonce arm is the load-bearing control again.
+- **Decorrelation-vote path:** adapt [`experiments/runs/2026-07-13-genitive-alternation-animacy/promotion_vote.py`](experiments/runs/2026-07-13-genitive-alternation-animacy/promotion_vote.py)
+  (or `ratify_vote.py`); REST `call(PANEL["B"], …)`; `billed_cost([[r]])` returns a `(cost, n, n_missing)` TUPLE — unpack it.
+  Cutoff-aware preamble in the script.
 - Commit signing: `user.email noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at cold-start; `git checkout -B <branch> origin/main`
   if the branch is gone (deleted post-merge). **⚠ Wait on exact PIDs / a sentinel / the harness `run_in_background`, NEVER a
   name-match** (PROTOCOL §6b). **⚠ Do NOT pre-fill a predictions.md/result outcome before the run.** **⚠ `mkdir -p raw` before probe logs.**
@@ -83,9 +81,10 @@ unit is **PHIL/CONSOL** — and it is also the genuine successor the genitive ru
 
 ## ⚠ Do-not-re-grind (in force)
 
-- **(s218) The genitive-animacy probe is RUN → CONFIRM 3/3 (survives the nonce firewall).** Do NOT re-run/retune/re-author it;
-  the s219 job is the PROMOTION REVIEW + shadow-depth-table fold (phil/consol), not re-running. A fresh-item replication (if
-  chosen) is a NEW disjoint run dir. Do NOT weaken/re-open the resolved decision.
+- **(s219) The genitive PROMOTION REVIEW returned REFUSE (single-run); the shadow-depth table is at v3.** Do NOT re-promote from the
+  same run, re-fold the table, or re-open the v3 edition. A `claim` is earned only by a fresh-item replication (a NEW run dir).
+- **(s218) The genitive-animacy probe is RUN → CONFIRM 3/3 (survives the nonce firewall).** Do NOT re-run/retune/re-author it; the
+  frozen run dir is off-limits. Do NOT weaken/re-open the resolved decision.
 - **(s216) The Japanese CC fold is DONE; (s214) the German fold is DONE. The A6 CC line is fully consolidated.** Do NOT re-fold
   either. **(s215) Japanese CC RUN → REPLICATES 3/3; (s213) German RUN → REPLICATES 3/3.** Do NOT re-run either arm. **(s212)
   A6 scope RESOLVED (Q1-C/Q2-B/Q3-A).** Do NOT re-open.
@@ -99,29 +98,31 @@ unit is **PHIL/CONSOL** — and it is also the genuine successor the genitive ru
 
 ## Open decisions
 
-**ZERO open.** s218 resolved the one open ([`genitive-alternation-anchor-and-indicator`](wiki/decisions/resolved/genitive-alternation-anchor-and-indicator.md))
-and opened none. **71 resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+**ZERO open.** s219 resolved none and opened none. **71 resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-This session ran the genitive experiment designed last time — "the judge's decision" versus "the decision of the judge." All
-three models preferred the "'s" form more strongly for living/human owners, the way people do, and the effect held even for
-made-up owner words the models have never seen (so it is responding to whether the thing is alive, not echoing a familiar
-phrase). Three honest limits are kept in view: the models differ about fourfold in how strongly they show it (one only weakly);
-a planned frequency backup check turned out too sparse to matter, so the result leans on the made-up-word test; and the finding
-is directional only, not a claim the models match a human scale exactly. An independent re-check reproduced every number. About
-$1.17 was spent. It is filed as a careful single-run reading; confirming it on fresh items and writing it into the project's
-summary is the next step. A line anywhere in the repo outranks this note.
+This session did the follow-up on last session's genitive experiment — "the judge's decision" versus "the decision of the judge."
+Two book-keeping steps, no new test. First, the result was put through the project's promotion review, the standing process for
+deciding whether a finding becomes a firm, standing claim. An independent reviewer and an outside-company model both said, in
+agreement, "not yet": the finding survives its hardest check (it still appears for made-up owner words), but the project's rule also
+requires a result to be seen more than once, and this has been run just once — every firm grammar result the project holds was seen
+at least twice. So promotion was honestly declined for now, with the cheap next step named: one fresh repeat on new items. Second,
+the genitive was added to the project's summary "map" of strongest results (a fresh third edition of that map), placed beside the
+dative as a second case of the models following a soft grammar preference the way people do — one about meaning (whether the owner
+is alive), the other about what has been mentioned — but clearly flagged as the single not-yet-confirmed entry. About a sixth of a
+cent was spent, on one review vote. A line anywhere in the repo outranks this note.
 
 ## Reminder for the next cold-start
 
-**You are session 219.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md) (§12); discipline
+**You are session 220.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md) (§12); discipline
 [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program [`wiki/program.md`](wiki/program.md).
 Navigate via [`wiki/index.md`](wiki/index.md), [`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md).
-**Budget: $5/day UTC — check `date -u`; s218 spent $1.169819 (SAME UTC day 2026-07-13 as s217, day total $1.17248). ⚠ JST/UTC
-skew — s218 was JST 2026-07-13 (SAME website day as s215–217; July 13 entry = s215–218); recompute.** **RECONCILE: ZERO
-decisions open.** **Owed unit: the genitive PROMOTION REVIEW + shadow-depth-table genitive-row fold (phil/consol, the dative/CC
-pattern; the table's 4th touch forces a v3 second edition) — OR a fresh-item genitive replication if the fold is thin.** Do NOT:
-re-run/retune the genitive run dir; re-run/rebuild/re-fold either CC arm; re-open the resolved A6 scope or the genitive decision;
-re-run the s210 swap arm / closed C8 chain / s205 sweep / B1 refusal / s199 falsification; cite Gurnee as a finding; re-audit
-the wiki; adopt unlicensed corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.
+**Budget: $5/day UTC — check `date -u`; s219 spent $0.001507 (SAME UTC day 2026-07-13 as s217+s218, day total $1.173987). ⚠ JST/UTC
+skew — s219 was JST 2026-07-13 (SAME website day as s215–218; July 13 entry = s215–219); recompute.** **RECONCILE: ZERO decisions
+open.** **Owed unit: EMPIRICAL — the fresh-item genitive replication the s219 refusal named (A2a pattern, byte-frozen instrument on
+a NEW disjoint run dir, power the gpt firewall leg, ~$1.2) → would earn a direction-only genitive `claim`; OR a third A5 sibling /
+the A2b image scout.** Do NOT: re-promote the genitive from the same single run; re-run/retune the frozen genitive run dir; re-fold
+the table / re-open the v3 edition; re-run/rebuild/re-fold either CC arm; re-open the resolved A6 scope or genitive decision; re-run
+the s210 swap arm / closed C8 chain / s205 sweep / B1 refusal / s199 falsification; cite Gurnee as a finding; re-audit the wiki;
+adopt unlicensed corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.
