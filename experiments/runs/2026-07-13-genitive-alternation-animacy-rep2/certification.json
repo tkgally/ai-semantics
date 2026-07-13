@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "(1) within-frame possessor LENGTH matched across levels": true,
+    "(1) within-frame final-SIBILANCY matched across levels": true,
+    "(1) all possessors definite 'the <noun>' (no bare proper name, S1)": true,
+    "(2) no capitalized (proper-name) possessor noun": true,
+    "(2b) every possessor non-sibilant-final (uniform neutralization)": true,
+    "(3) nonce animate/inanimate slot string multisets EQUAL (R1)": true,
+    "(3) each nonce string once-animate & once-inanimate": true,
+    "(4) no length/sibilancy/position/always-s/always-of reader yields ANY within-frame shift": true,
+    "(D) typical possessor lemmas DISJOINT from s218 (0 shared)": true,
+    "(D) nonce strings DISJOINT from s218 (0 shared)": true,
+    "(N) >=40 frames total": true,
+    "(N) nonce arm >=20 frames (critic S2/R3)": true,
+    "(N) nonce arm ENLARGED >=30 frames (rep2 power the gpt firewall leg)": true,
+    "(N) typical arm carries collective level (graded test, S7)": true
+  },
+  "fail": [],
+  "max_abs_frame_shift_per_shortcut_reader": {
+    "always_s": 0.0,
+    "always_of": 0.0,
+    "always_A": 0.0,
+    "always_B": 0.0,
+    "position_A_bias": 0.0,
+    "len_shorter_s": 0.0,
+    "sibilant_of": 0.0
+  },
+  "disjointness": {
+    "n_typical_lemmas": 108,
+    "typical_overlap_with_s218": [],
+    "n_nonce_strings": 36,
+    "nonce_overlap_with_s218": []
+  },
+  "ok": true,
+  "counts": {
+    "n_frames": 72,
+    "n_typical": 36,
+    "n_nonce": 36,
+    "n_trials": 360
+  },
+  "stimuli_sha256": "54577d3b39e204b4dd33d609762eae1bdfb0fda3a5a8e4d0108477a1d2b7a478"
+}
