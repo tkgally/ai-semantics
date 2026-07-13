@@ -238,11 +238,29 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`config/models.md`](../config/models.md) before any pilot**; every logprob-lane result carries a
   senselint-enforced `logprob-lane`/`verdict-bearing:false` contract; never echo/prompt-logprob
   surprisal; pilot only on an already-frozen battery (A3b BLiMP the natural target).
-- **A5 `[ ]` Production-side alternation battery.** Extend the dative pattern (the
+- **A5 `[~]` Production-side alternation battery.** Extend the dative pattern (the
   best-designed result, anchored to a human *production* direction): free generation scored by
   frozen parsers — given/new manipulations → produced alternant; genitive alternation,
   particle placement, locative alternation, each with published human corpus studies to anchor
   direction. Start with one sibling as a calibrated second row.
+  **[DESIGN landed s217 → the second sibling, the GENITIVE alternation, focal constraint possessor
+  animacy (the strongest genitive constraint — animate possessor → s-genitive).
+  [`design/genitive-alternation-animacy-v1`](../experiments/designs/genitive-alternation-animacy-v1.md)
+  (PROVISIONAL — a port of the validated dative graded-forced-choice), operationalizing
+  [`conjecture/genitive-alternation-animacy`](findings/conjectures/genitive-alternation-animacy.md),
+  with a **license-verified human-comparison anchor** ([`resource/genitive-animacy-human-anchor`](base/resources/genitive-animacy-human-anchor.md);
+  Dubois et al. 2023, 25 native-speaker acceptability ratings, CC BY 4.0, ingested
+  [`source/dubois-2023-genitive-animacy`](base/sources/dubois-2023-genitive-animacy.md)). The
+  design crux (vs the dative) is a **surface-frequency shadow control** — a typical-vs-atypical
+  possessor split as primary + a frozen corpus freq covariate — because animacy is lexical to the
+  possessor, so the two scored phrasings vary lexically across conditions. Three value-laden gates
+  opened ([`decisions/open/genitive-alternation-anchor-and-indicator`](decisions/open/genitive-alternation-anchor-and-indicator.md),
+  provisional defaults **Q1-A animacy / Q2-(i) graded FC + both controls / Q3 human-anchored on the
+  direction, per-item gradient deferred [TLC unlicensed]**). Pre-run critic (fresh agent + one
+  non-Anthropic decorrelation vote, `gpt-5.4-mini`, $0.002661) → **GO-WITH-CONDITIONS**, convergent
+  on Q1/Q2/Q3; binding freeze condition = a precommitted/locked item-selection rule with novelty +
+  semantic-plausibility matching for the atypical set. **Ratifiable s218+; freeze + run + the
+  predictions.md bet after ratification.** Item stays `[~]` until the run.]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked
