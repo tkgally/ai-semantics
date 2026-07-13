@@ -177,3 +177,15 @@ constraint in the human direction" — from a **discourse-structural** constrain
 > **replicated pair** and clears the §3 REPLICATED ∧ controls bar; a cross-session promotion review
 > (direction-only scoped `claim`) is the next-session successor. This v1 stays `proposed`; nothing here
 > changes a v1 number.
+>
+> **→ PROMOTED 2026-07-13 (s221).** The cross-session promotion review ran (fresh-agent reviewer holds
+> authority + non-Anthropic decorrelation vote) and returned **PROMOTE-DIRECTION-ONLY** →
+> [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md) (`status: supported`).
+> The claim consolidates this v1 and the rep2 replication, scoped **direction-only** (within-model
+> magnitude deferred to an owed powered re-run), carrying the covariate-vacuity + weak-gpt-leg +
+> animate/non-animate-binary + same-date + direction-only fences verbatim. The non-Anthropic vote
+> **dissented (REFUSE)** on replication-independence + control-thinness; the fresh reviewer weighed and
+> rebutted it (same-instrument-fresh-items is the project's replication standard; the nonce firewall is
+> the stronger, better-powered control) — the divergence is recorded in the claim's Anti-cheat section.
+> This v1 **stays `proposed`** (the promotion consolidates it; support migrates to the claim layer per
+> the [`CLAUDE.md`](../../../CLAUDE.md) result-status rule); nothing here changes a v1 number.

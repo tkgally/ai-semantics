@@ -24,6 +24,15 @@ links:
 
 # Promotion review — genitive-alternation animacy line — **REFUSE**
 
+> **→ PROMOTED 2026-07-13 (s221).** The block this REFUSE named (single-run) was discharged by the s220
+> replication, and the follow-on cross-session promotion review ran s221 → **PROMOTE-DIRECTION-ONLY**:
+> [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md) (`status: supported`).
+> This REFUSE stands unaltered as the **s219 record** — the fence-listing here (covariate vacuity, gpt
+> weak leg, animate/non-animate binary, direction-only) was carried into the claim verbatim, and the
+> "exact strengthening path" this note named (one fresh-item replication targeting the gpt firewall leg)
+> is exactly what ran. This note carries **no new measurement** and **must not be cited as support for
+> any claim**, including the new one.
+>
 > **→ REPLICATED 2026-07-13 (s220).** The single cheap probe this note named as the exact
 > strengthening path **ran and replicated**: [`result/genitive-alternation-animacy-rep2`](../results/genitive-alternation-animacy-rep2.md)
 > — a fresh-item second run of the byte-frozen instrument on items **certified disjoint** from s218
