@@ -31,6 +31,14 @@ links:
 > convergent) and the probe **frozen + run s218** →
 > [`result/genitive-alternation-animacy-v1`](../results/genitive-alternation-animacy-v1.md). See that
 > result for the verdict.
+>
+> **→ REPLICATED s220, PROMOTED s221.** The line replicated on fresh disjoint items
+> ([`result/genitive-alternation-animacy-rep2`](../results/genitive-alternation-animacy-rep2.md), CONFIRM
+> 3/3 again) and the cross-session promotion review then promoted it **direction-only** →
+> [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md) (`status: supported`).
+> The conjecture's confirm branch (human-direction shift + surviving the shadow control) is realized;
+> predictions 2 (smooth graded ramp) and the magnitude remain fenced (animate/non-animate binary; magnitude
+> deferred to an owed powered re-run). `status: tested` stands.
 
 # Conjecture: LLMs track the possessor-animacy constraint on the genitive alternation
 

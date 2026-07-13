@@ -302,6 +302,19 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   genitive row updated single-run → **replicated pair** (still result-cited until the promotion lands
   the claim). Reading-bearing result stays `proposed`. Item stays **`[x]`** (replication discharges the
   single-run flag; the promotion tick lands next session).]**
+  **[PROMOTED s221 (the next-session cross-session promotion review the replication earned) →
+  [`claim/genitive-alternation-animacy`](findings/claims/genitive-alternation-animacy.md) (`status:
+  supported`): fresh-agent reviewer (verdict authority) + a non-Anthropic decorrelation vote that
+  **dissented REFUSE** (replication-independence + control-thinness), weighed and rebutted →
+  **PROMOTE-DIRECTION-ONLY**. The claim consolidates both results (which stay `proposed`), scoped
+  **direction-only** (within-model magnitude deferred to an owed powered ~100–150-frame A2a re-run),
+  carrying nine fences verbatim (covariate vacuity, gpt weakest leg, animate/non-animate binary,
+  direction-only anchor, R5 gloss, marginal-propensity-only control, behavioral-only, **same-date/same-
+  version** replication, magnitude-deferred). Shadow-depth-table-v3 genitive row migrated in-place
+  **result-cited → claim-cited** (held distinct from the four stronger beaters). The A5 second sibling is
+  now a **promoted claim**; the genitive line's remaining owed unit is its powered magnitude re-run. A
+  **third A5 sibling** (particle placement / locative alternation, license-verified anchor) is the next
+  A5 growth row.]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked

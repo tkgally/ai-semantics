@@ -45,6 +45,13 @@ links:
 > on the nonce firewall**, and the gradient is again an **animate/non-animate binary** (collective
 > patterns with inanimate). So the line now clears the PROTOCOL §3 **REPLICATED ∧ controls-survived**
 > bar; a cross-session promotion review (a **direction-only scoped `claim`**) is the successor.
+>
+> **→ PROMOTED 2026-07-13 (s221).** That successor ran: the cross-session promotion review (fresh-agent
+> reviewer with verdict authority + a non-Anthropic decorrelation vote that **dissented REFUSE**, weighed
+> and rebutted) returned **PROMOTE-DIRECTION-ONLY** →
+> [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md) (`status: supported`),
+> consolidating this rep2 with the s218 v1, carrying all nine fences (a–i) verbatim. This rep2 **stays
+> `proposed`** (support migrates to the claim layer); nothing here changes a rep2 number.
 
 ## What this run is, and why it exists
 

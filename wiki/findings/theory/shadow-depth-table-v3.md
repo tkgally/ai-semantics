@@ -1,7 +1,7 @@
 ---
 type: theory
 id: shadow-depth-table-v3
-title: The shadow-depth table (v3) — the flagship measured object, third edition; the genitive-alternation animacy row folds in as a fifth beater (a second human-anchored production-side alternation, semantic rather than discourse-structural — result-cited; a replicated pair since s220 [s218 + rep2], promotion earnable via a still-owed cross-session review), and the s206/s214/s215 update boxes are folded into clean body prose
+title: The shadow-depth table (v3) — the flagship measured object, third edition; the genitive-alternation animacy row folds in as a fifth beater (a second human-anchored production-side alternation, semantic rather than discourse-structural — PROMOTED to a claim direction-only s221, its row migrated in-place result-cited → claim-cited), and the s206/s214/s215 update boxes are folded into clean body prose
 meaning-senses:
   - distributional
   - constructional
@@ -32,6 +32,8 @@ links:
     target: claim/aann-behavioral-gradient
   - rel: depends-on
     target: claim/lexical-sense-gradience
+  - rel: depends-on
+    target: claim/genitive-alternation-animacy
   - rel: depends-on
     target: result/genitive-alternation-animacy-rep2
   - rel: depends-on
@@ -98,6 +100,16 @@ links:
 > stays **result-cited** (held distinct from the four promoted-claim beaters) until that promotion
 > review lands a `claim`, at which point it migrates result-cited → claim-cited. **No beater number
 > changed.**
+>
+> **→ PROMOTED 2026-07-13 (s221), in-place row migration.** That promotion review ran: the cross-session,
+> independent, adversarial pass (fresh-agent reviewer with verdict authority + a non-Anthropic
+> decorrelation vote that **dissented REFUSE**, weighed and rebutted) returned **PROMOTE-DIRECTION-ONLY**
+> → [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md) (`status:
+> supported`), consolidating both runs and carrying all nine fences verbatim. Per the env-note sanction
+> the genitive row below **migrates in-place result-cited → claim-cited** and joins the promoted-claim
+> beaters — **but held visibly distinct** as **direction-only, magnitude-deferred, same-date**, not yet
+> the dative's evidential equal (thrice-observed and powered). This is a row-level in-place migration,
+> **not** a re-fold or a re-supersede; the edition stays v3. **No beater number changed.**
 
 > **Status: draft (2026-07-13, session 219). The program's flagship deliverable**
 > ([`wiki/program.md`](../../program.md) §"Flagship deliverable"; item A1c). This page introduces
@@ -171,13 +183,13 @@ stated strength; see that page for full CIs, gates, and caveats.
 
 ### Beater rows — a measured residual over a named control (shallow shadow)
 
-The first four rows cite **promoted `claim` pages** (their single-run flags discharged by replication). The
-fifth — **genitive animacy** — is a **result-cited** row (a **replicated pair**, s218 + rep2, since s220),
-included as a controlled beater but held visibly apart because it is **not yet a promoted claim**: its
-s219 promotion review refused pending replication, that replication landed s220 (clearing the §3
-REPLICATED ∧ controls bar), and the promotion itself is a **cross-session review still owed** (the
-next-session successor). Until that review writes a `claim`, the row stays result-cited and must not be
-read as a promoted claim.
+All five rows now cite **promoted `claim` pages**. The first four had their single-run flags discharged by
+replication and their magnitudes attached (or, for CC, ordering); the fifth — **genitive animacy** — was
+**promoted direction-only s221** ([`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md))
+after its s218 + rep2 (s220) replicated pair cleared the §3 REPLICATED ∧ controls bar. It is held **visibly
+apart** from the other four because it is **direction-only, magnitude-deferred, and same-date** (both runs
+2026-07-13): a promoted claim, but not yet the dative's evidential equal (thrice-observed and powered). Read
+it at exactly that scope.
 
 | phenomenon | grain / pole | distributional control (the shadow) | residual over the control | row form | anchor | source |
 |---|---|---|---|---|---|---|
@@ -185,7 +197,7 @@ read as a promoted claim.
 | **Dative information-structure** | construction (grammatical) | within-item shift design — length/order/position **immune by construction** | within-item DOC-shift, **powered N=100**: claude **+0.316 [0.298, 0.334]** / gemini **+0.524 [0.506, 0.542]** / gpt **+0.056 [0.039, 0.074]**; **3/3 CONFIRM at power** (gpt small but clears zero — its v2 WEAK was founding-N noise; ~9× spread) | (i) matched-material (by design) | human — Bresnan `languageR::dative` production direction (direction only) | **[`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md)** · [`result/dative-information-structure-powered`](../results/dative-information-structure-powered.md) |
 | **AANN acceptability gradient** | construction (grammatical) | **Zipf word-frequency** (partialled); noun-class marginal | partial ρ \| frequency **0.692 / 0.661 / 0.736** (base cell-level ρ 0.702 [0.61,0.77] / 0.684 [0.60,0.75] / 0.751 [0.68,0.81]); **replicated cross-date on fresh disjoint items 3/3** (rep2: base ρ 0.692 / 0.702 / 0.735, partial 0.687/0.690/0.722, all CIs overlap v2 — the graded gradient's single-run caveat discharged); held-out replication on unseen adjectives, **noun-class-dependent** (temporal stratum negative, v2b) | (ii) partialled correlation | human — Mahowald Exp-2 MTurk gradient | **[`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)** · [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) · [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md) |
 | **Lexical sense gradience** | word (lexical) | model's own **topic/context-similarity** rating (partialled); lexical overlap (near-degenerate) | partial ρ \| topic **0.52 / 0.50 / 0.73** (base DURel ρ 0.679 [0.59,0.75] / 0.601 [0.49,0.69] / 0.804 [0.75,0.85]); **replicated cross-date on fresh pair-disjoint items 3/3** (rep2: base ρ 0.715 / 0.528 / 0.808, partial\|topic 0.604/0.392/0.657, all CIs overlap v1 — single-run flag discharged; pair-disjoint, 61/357 usages recombine, so not usage-independent) | (ii) partialled correlation | human — DWUG DURel median (human–human ρ 0.69) | **[`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)** · [`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md) · [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) |
-| **Genitive-alternation animacy** *(REPLICATED PAIR s218+rep2 — result-cited; promotion now earnable, a cross-session review is the successor; NOT yet a promoted claim)* | construction (grammatical) | **nonce/rare-possessor firewall** — rare/nonce possessors carry **no per-lemma corpus genitive statistic**, animacy conveyed only by a gloss, nonce string-forms balanced (a no-animacy reader scores 0); + a frozen possessor-lemma marginal-propensity covariate (**near-vacuous**, R² ≤0.038 both runs) | within-frame animacy shift (s-genitive pref: animate − inanimate), **replicated on two disjoint item sets 3/3**. **Nonce/firewall arm: s218 +0.109 / +0.205 / +0.055; rep2 +0.151 / +0.279 / +0.078, all bootstrap CI-LB > 0 (3/3 both runs)**; typical-frame s218 +0.134 / +0.181 / +0.141, rep2 +0.146 / +0.150 / +0.099 (CI-LB > 0, 3/3 both). **CONFIRM rests on the nonce arm** (the covariate leg is near-vacuous both runs). **gpt is the weak firewall leg** but the rep2 power boost (nonce 24→36 frames) made it decisive (**25/36, sign-p 0.014**, vs s218's marginal 16/24, p 0.076); ~3.6–4× decorrelated. Gradient is a **sharp animate/non-animate binary**, not a smooth ramp (collective patterns with inanimate; the Zaenen five-level scale only weakly supported), on **both** runs. **Replicated pair — single-run flag discharged; a direction-only scoped claim is earnable via a cross-session promotion review.** | (i) matched-material (nonce firewall) | human — Dubois et al. (2023) native-speaker direction (**direction only**) | [`result/genitive-alternation-animacy-rep2`](../results/genitive-alternation-animacy-rep2.md) · [`result/genitive-alternation-animacy-v1`](../results/genitive-alternation-animacy-v1.md) · [`note/genitive-alternation-animacy-promotion-refusal-v1`](../notes/genitive-alternation-animacy-promotion-refusal-v1.md) |
+| **Genitive-alternation animacy** *(PROMOTED direction-only s221 — claim-cited; a replicated pair s218+rep2, both CONFIRM 3/3; held distinct from the other four beaters as direction-only / magnitude-deferred / same-date)* | construction (grammatical) | **nonce/rare-possessor firewall** — rare/nonce possessors carry **no per-lemma corpus genitive statistic**, animacy conveyed only by a gloss, nonce string-forms balanced (a no-animacy reader scores 0); + a frozen possessor-lemma marginal-propensity covariate (**near-vacuous**, R² ≤0.038 both runs) | within-frame animacy shift (s-genitive pref: animate − inanimate), **replicated on two disjoint item sets 3/3**. **Nonce/firewall arm: s218 +0.109 / +0.205 / +0.055; rep2 +0.151 / +0.279 / +0.078, all bootstrap CI-LB > 0 (3/3 both runs)**; typical-frame s218 +0.134 / +0.181 / +0.141, rep2 +0.146 / +0.150 / +0.099 (CI-LB > 0, 3/3 both). **CONFIRM rests on the nonce arm** (the covariate leg is near-vacuous both runs). **gpt is the weak firewall leg** but the rep2 power boost (nonce 24→36 frames) made it decisive (**25/36, sign-p 0.014**, vs s218's marginal 16/24, p 0.076); ~3.6–4× decorrelated. Gradient is a **sharp animate/non-animate binary**, not a smooth ramp (collective patterns with inanimate; the Zaenen five-level scale only weakly supported), on **both** runs. **PROMOTED direction-only s221** — the replicated pair cleared the §3 bar; within-model magnitude is deferred to an owed powered re-run. | (i) matched-material (nonce firewall) | human — Dubois et al. (2023) native-speaker direction (**direction only**) | **[`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md)** · [`result/genitive-alternation-animacy-rep2`](../results/genitive-alternation-animacy-rep2.md) · [`result/genitive-alternation-animacy-v1`](../results/genitive-alternation-animacy-v1.md) · [`note/genitive-alternation-animacy-promotion-refusal-v1`](../notes/genitive-alternation-animacy-promotion-refusal-v1.md) |
 
 ### Saturated corners — a placed reading, now controlled-and-weakened at both poles (deep shadow)
 
@@ -204,21 +216,23 @@ constraint is a different kind in each.**
 - The **dative** alternation (DOC vs prepositional dative) turns on a **discourse-structural** constraint —
   *givenness* (given-before-new). Promoted `claim` (3/3 at powered N; magnitudes attached).
 - The **genitive** alternation (s-genitive vs of-genitive) turns on a **semantic/referential** constraint —
-  *possessor animacy* (animate → s-genitive). Result-cited, now a **replicated pair** (s218 + rep2 s220,
-  promotion earnable — a cross-session review is the successor); the animacy shift **survives the nonce
-  firewall 3/3 on both disjoint runs** (a no-animacy surface reader scores zero), so the direction is not
-  merely a possessor-propensity shadow.
+  *possessor animacy* (animate → s-genitive). **Promoted `claim` direction-only** (s221; a replicated pair
+  s218 + rep2 s220, both CONFIRM 3/3); the animacy shift **survives the nonce firewall 3/3 on both disjoint
+  runs** (a no-animacy surface reader scores zero), so the direction is not merely a possessor-propensity
+  shadow.
 
 That the same "tracks the soft constraint in the human direction" behavior appears for a **semantic** driver
 (animacy) as well as a **discourse-structural** one (givenness) is the reason the genitive row belongs on
-the beater side: it shows the dative pattern is **not specific to information structure**. The reading is
-still fenced by the row's status — the genitive leg's gpt member was the marginal firewall leg at s218
-(16/24 frames, sign-p 0.076) though the powered rep2 arm made it decisive (25/36, sign-p 0.014), and the
-human anchor is **direction-only**. So the pair-reading is stated as: *both alternations show the
-human-direction production shift; the dative's is thrice-observed and promoted, the genitive's is now a
-twice-observed controlled pair whose promotion review is the next-session successor.* The parallel is real;
-its two legs are not yet at equal evidential strength (the genitive still awaits its promotion review), and
-the table shows that asymmetry rather than averaging over it.
+the beater side: it shows the dative pattern is **not specific to information structure**. Both legs are now
+promoted claims, but the reading is still fenced by their **unequal evidential strength** — the genitive leg's
+gpt member was the marginal firewall leg at s218 (16/24 frames, sign-p 0.076) though the powered rep2 arm made
+it decisive (25/36, sign-p 0.014), the human anchor is **direction-only**, and the genitive claim is
+**direction-only, magnitude-deferred, and same-date** (both runs 2026-07-13), whereas the dative is
+**thrice-observed at powered N with magnitudes attached**. So the pair-reading is stated as: *both alternations
+show the human-direction production shift and both are promoted claims; the dative's is thrice-observed and
+powered, the genitive's is a twice-observed controlled pair promoted direction-only with magnitude deferred.*
+The parallel is real; its two legs are not yet at equal evidential strength, and the table shows that
+asymmetry rather than averaging over it.
 
 ## The lexical relation-recovery gradient's measured ordering axis (s193 — read at its exact strength)
 
@@ -333,11 +347,13 @@ profile**, so it appears to be an axis people share rather than a model-specific
    taxonomic hierarchical position, 2/3). So "each pole has a shadow-saturated corner" is a
    **controlled-and-weakened** structural claim at both poles, not a bare bet at either.
 
-3. **A within-beater evidential gradient is now visible, and shown, not hidden.** Four of the five beaters
-   are promoted claims with their single-run flags discharged by replication; the fifth (genitive) is a
-   single controlled run whose promotion was refused. The table marks this in the row itself, so a reader
-   never mistakes the genitive's one run for the dative's three. The beater side is not uniform in strength,
-   and pretending it were would be the over-read the row-status discipline exists to prevent.
+3. **A within-beater evidential gradient is now visible, and shown, not hidden.** All five beaters are
+   promoted claims, but not at equal strength: four had their single-run flags discharged and magnitudes
+   attached (or ordering, for CC), some cross-date; the fifth (genitive) was promoted **direction-only s221**
+   from a **twice-observed but same-date** pair, with magnitude deferred. The table marks this in the row
+   itself, so a reader never mistakes the genitive's direction-only, same-date pair for the dative's
+   thrice-observed powered claim. The beater side is not uniform in strength, and pretending it were would be
+   the over-read the row-status discipline exists to prevent.
 
 4. **The saturated side carries three measured forms, kept apart.** The beater rows are forms (i) and (ii);
    the presupposition corner is a run matched control that returned the under-licensed middle; the lexical
@@ -355,12 +371,14 @@ profile**, so it appears to be an axis people share rather than a model-specific
   reading of the ordering axis (R1, PROFILE-ALIGNED), descriptive-only and non-promotable per C8; the
   genitive row's human anchor is **direction-only**. The page runs no new human comparison and asserts no
   human-comparison claim of its own; each imported reading carries its caveat wherever it is cited.
-- **The genitive row is result-cited and single-run, NOT a promoted claim.** It is included as a controlled
-  beater (it survives the nonce firewall 3/3), but its s219 promotion review **REFUSED** promotion pending a
-  fresh-item replication ([`note/genitive-alternation-animacy-promotion-refusal-v1`](../notes/genitive-alternation-animacy-promotion-refusal-v1.md)):
-  a single run does not clear the §3 REPLICATED-∧-controls bar however well-controlled. Its gpt firewall leg
-  is marginal (16/24, sign-p 0.076), its covariate is near-vacuous, and its gradient is a sharp binary not a
-  smooth ramp. It must be read at exactly that strength, never as the dative's equal.
+- **The genitive row is a promoted claim, but direction-only and not the dative's equal.** It was
+  **promoted direction-only s221** ([`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md))
+  after its s218 + rep2 replicated pair cleared the §3 REPLICATED-∧-controls bar (its s219 review had refused
+  pending replication). But the promotion is **direction-only** (within-model magnitude deferred to an owed
+  powered re-run), the replication is **same-date** (both runs 2026-07-13, no temporal/version decorrelation),
+  the covariate is near-vacuous (CONFIRM rests on the nonce firewall), gpt is the weakest firewall leg, and
+  the gradient is a sharp binary not a smooth ramp. It must be read at exactly that scope, never as the
+  dative's thrice-observed powered equal.
 - **No fine ordering among the beaters.** The residual forms and CIs are not commensurable, so the table
   orders only coarsely (beater vs saturated, per pole). It does **not** claim CC's shadow is "shallower" than
   sense gradience's, or rank the beaters by residual size (decision default, question 3).
@@ -368,13 +386,15 @@ profile**, so it appears to be an axis people share rather than a model-specific
   between-relation only, within-distributional, internal-contrast, and its second (Hearst-frame) proxy lost.
   It re-*places* the lexical saturated end onto a measured axis; it does **not** promote a claim, fix a single
   "saturated relation", or license any non-distributional or human-comparison reading.
-- **Behavioral, not representational; single runs (four beaters cross-date replicated, the genitive not
-  yet); small N; n=3 models.** Every source page's scope bound carries onto its row unchanged. The dative row
+- **Behavioral, not representational; small N; n=3 models.** Every source page's scope bound carries onto its
+  row unchanged. Four beaters are cross-date replicated; the genitive is **same-date replicated** (both runs
+  2026-07-13 — a fresh-item pair, but no temporal/version decorrelation). The dative row
   carries its **powered N=100 magnitudes** (s175): a **3/3-CONFIRM-at-power** beater, but gpt's is a tiny
   effect (+0.056, ~9× below gemini, 63/100 items positive) that flickered WEAK at v2's founding N — shown,
   not hidden — so the panel-label-hides-spread discipline of
   [`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md) applies; the
-  genitive's ~4× nonce-arm spread and marginal gpt leg are the same discipline in a fresh, single-run form.
+  genitive's ~3.6–4× nonce-arm spread and weakest-leg gpt member are the same discipline in a
+  direction-only, magnitude-deferred form.
 
 ## Revision triggers (read before citing)
 
@@ -384,14 +404,16 @@ profile**, so it appears to be an axis people share rather than a model-specific
   bet was falsified (s186). A *construction-grain-only* presupposition control (a cleft-family battery with
   the question-frame confound removed) producing a residual a surface-cue account cannot reconstruct is the
   live outstanding form of this trigger at the grammatical pole.
-- **The genitive row's promotion status changes.** The genitive is a **result-cited, single-run** beater; its
-  promotion was refused pending replication (s219). → **A fresh-item genitive replication** (disjoint typical
-  + nonce frames on the byte-frozen instrument, verdict map pre-frozen, powering the gpt firewall leg) that
-  reproduces the animate→s-genitive direction and the nonce-arm survival **promotes** this row to a
-  direction-only `claim` (mirroring the dative's v1+v2 promotion) and it joins the four discharged beaters; a
-  replication that pushed the direction toward zero, or in which the nonce firewall did **not** survive,
-  **drops** the row from the shallow end (it becomes a shadow reading) and weakens the production-pair
-  reading. Either outcome revises this row and the production-side alternation-pair section.
+- **The genitive row's promotion status changes.** → **FIRED s220→s221 (the promote branch).** The
+  fresh-item genitive replication ran (s220, disjoint typical + nonce frames, gpt firewall leg powered) and
+  reproduced both the animate→s-genitive direction and the nonce-arm survival; the cross-session promotion
+  review (s221) then **promoted** this row to a **direction-only `claim`**
+  ([`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md)), mirroring the dative's
+  v1+v2 promotion, and it joined the beater rows as claim-cited. (The other branch — a replication that pushed
+  the direction toward zero or in which the nonce firewall did **not** survive, which would have **dropped**
+  the row to a shadow reading — did not obtain.) The row and the production-side alternation-pair section are
+  revised accordingly above. **Remaining live trigger on this row:** the owed powered A2a re-run (~100–150
+  frames) that would attach a within-model magnitude+interval and lift the claim from direction-only.
 - **The lexical corner's ordering axis is re-tested** → the s193 taxonomic-depth reading (2/3,
   between-relation) fires a revision here if the **adjective-antonymy replication** or a **within-family
   ladder** pushes H2 from 2/3 toward 3/3 (promotable), or breaks it (the axis reopens with taxonomic
@@ -416,8 +438,9 @@ profile**, so it appears to be an axis people share rather than a model-specific
 The **original** contribution is the **arrangement**: collating five-plus weeks of independently verified,
 operationalization-ratified results (each gated by a pre-run critic and a recompute-from-raw verifier) into
 one object sorted by shadow-depth, with row forms and anchor types made explicit so the beater/saturated
-boundary, the internal-contrast/human-anchored boundary, and now the **promoted-claim / result-cited-single-run**
-boundary are all legible. The **shadow-depth reading** is from
+boundary, the internal-contrast/human-anchored boundary, and the **within-beater evidential gradient** (all
+five beaters now promoted claims, but at unequal strength — thrice-observed-and-powered down to
+direction-only-and-same-date) are all legible. The **shadow-depth reading** is from
 [`essay/shadow-depth-cross-cuts-grain`](../essays/shadow-depth-cross-cuts-grain.md); the **continuum frame**
 from [`theory/lexicon-grammar-continuum-v2`](lexicon-grammar-continuum-v2.md); the lexical corner's
 ordering-axis reading from [`essay/cue-strength-recovery-decoupling`](../essays/cue-strength-recovery-decoupling.md);
@@ -426,8 +449,8 @@ re-measured, or re-analyzed.
 
 ## Honesty box 2 — the saturated half is measured now, and it is the weaker half
 
-The table is strongest on the **beater side**: four verified, controlled, interval-bearing results promoted
-to `claim` pages (so the flagship's claims layer is complete) —
+The table is strongest on the **beater side**: five verified, controlled results promoted
+to `claim` pages (so the flagship's beater-side claims layer is complete) —
 [`claim/comparative-correlative-covariation`](../claims/comparative-correlative-covariation.md) (three runs +
 a powered re-run + two cross-linguistic replications; magnitude attached),
 [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md) (three
@@ -435,10 +458,13 @@ runs incl. a powered re-run; **3/3 at power**, magnitude+interval attached),
 [`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md) (one powered run + a *partial*
 held-out replication; single-run flag **discharged for the graded gradient** by the s178 rep2) and
 [`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md) (N=200 ×2 dates, **cross-date
-replicated 3/3** s181). The **fifth** beater, the **genitive** (s218), is a *single* controlled run whose
-promotion was **refused** (s219, [`note/genitive-alternation-animacy-promotion-refusal-v1`](../notes/genitive-alternation-animacy-promotion-refusal-v1.md)):
-it survives the nonce firewall 3/3 but has not replicated, so it is shown as a beater **and** as
-not-yet-a-claim — the table's honesty about its own beater side.
+replicated 3/3** s181). The **fifth** beater, the **genitive**
+([`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md)), is a **twice-observed
+controlled pair** (s218 + rep2, both CONFIRM 3/3, survives the nonce firewall 3/3 on both) **promoted
+direction-only s221** — but held visibly weaker than the other four: **direction-only** (magnitude deferred),
+**same-date** (both runs 2026-07-13, no temporal decorrelation), covariate near-vacuous, gpt the weakest
+firewall leg. So it is shown as a promoted beater **and** as not-yet-the-dative's-equal — the table's
+honesty about the unequal strengths within its own beater side.
 
 The table is **weaker on the saturated side**, which is the half that carries the essay's structural claim —
 but, unlike the first edition, that half is now **measured, not merely argued**. Both saturated corners have
