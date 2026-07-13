@@ -152,11 +152,19 @@ Registered bet updated in [`predictions.md`](../../predictions.md) (**fired-for*
 
 ## What this feeds
 
-A **human-anchored production-side animacy positive** — a candidate genitive row for the shadow-depth
-table ([`theory/shadow-depth-table-v2`](../theory/shadow-depth-table-v2.md)): a within-model residual
-that clears the strongest available surface-frequency control (the nonce firewall), human-anchored on
-the direction. It extends the dative finding — "the panel tracks the soft constraint in the human
-direction" — from a **discourse-structural** constraint (givenness) to a **semantic/referential** one
-(animacy), so the generalization is not specific to information structure. A cross-session **promotion
-review** (writing a `claim` page, with the gpt-weak-leg and covariate-vacuity caveats) is the natural
-successor once this replicates on fresh items; not promoted from a single run.
+A **human-anchored production-side animacy positive** — a genitive row for the shadow-depth
+table: a within-model residual that clears the strongest available surface-frequency control (the nonce
+firewall), human-anchored on the direction. It extends the dative finding — "the panel tracks the soft
+constraint in the human direction" — from a **discourse-structural** constraint (givenness) to a
+**semantic/referential** one (animacy), so the generalization is not specific to information structure.
+
+> **→ Consolidated 2026-07-13 (s219).** The cross-session **promotion review** ran (fresh-agent reviewer +
+> non-Anthropic decorrelation vote, convergent): **REFUSE** — this line's *controls* half is met (survives
+> the nonce firewall 3/3) but the §3 bar also requires **replication**, and this is a single run, so no
+> `claim` is earned yet ([`note/genitive-alternation-animacy-promotion-refusal-v1`](../notes/genitive-alternation-animacy-promotion-refusal-v1.md)).
+> The row is folded into [`theory/shadow-depth-table-v3`](../theory/shadow-depth-table-v3.md) as a
+> **result-cited, single-run** beater held distinct from the four promoted-claim beaters. The honest
+> successor that would earn promotion is a **fresh-item genitive replication** (disjoint typical + nonce
+> frames on the byte-frozen instrument, powering the marginal gpt firewall leg) — the A2a pattern that
+> discharged the dative and CC single-run flags. This result stays `proposed`; nothing here changes a
+> number.

@@ -115,6 +115,15 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   shadow-stripping control); the grammatical pole's ordering moved from two arranged endpoints to a directly
   measured, human-shared axis; one update box (well under the >3 edition threshold); fresh-agent coherence
   pass NO BLOCKERS + 2 SHOULD-FIX applied; $0.
+  **v3 second-edition landed s219** ([`theory/shadow-depth-table-v3`](findings/theory/shadow-depth-table-v3.md);
+  the s206/s214/s215 update boxes [3, the edition threshold] forced a clean rewrite at the genitive touch):
+  folds the three boxes into clean body prose + adds the **genitive-alternation animacy** row as a FIFTH
+  beater — **result-cited, single-run, promotion-REFUSED s219** ([`note/genitive-alternation-animacy-promotion-refusal-v1`](findings/notes/genitive-alternation-animacy-promotion-refusal-v1.md)),
+  held visibly distinct from the four promoted-claim beaters — plus a **production-side alternation-pair**
+  reading (dative givenness + genitive animacy: the panel tracks the human-direction soft constraint across
+  both flagship alternations, discourse-structural AND semantic, the asymmetry shown not averaged). v2 →
+  `superseded` + banner (history kept visible); no number changed; fresh coherence pass SAFE-TO-LAND (6/6);
+  $0.0015 (one promotion-review vote).
 - **A2a Powered confirmations (standing habit, now [`PROTOCOL.md`](../PROTOCOL.md) §4).** Any line about to
   carry a claim gets a fresh-item powered re-run at ~100–150 items (~10× founding-era counts;
   still ≲$1 at observed prices) so the claim states a magnitude with an interval, not a

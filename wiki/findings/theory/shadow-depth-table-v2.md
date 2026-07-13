@@ -8,7 +8,7 @@ meaning-senses:
   - inferential
   - referential
   - human-comparison
-status: draft
+status: superseded
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-09
@@ -63,6 +63,17 @@ links:
 ---
 
 # Theory (second edition): the shadow-depth table, v2
+
+> **⚠ SUPERSEDED (2026-07-13, session 219) by [`theory/shadow-depth-table-v3`](shadow-depth-table-v3.md).**
+> This second edition had accreted three dated update boxes (s206 BLiMP grammar-side axis, s214 German CC,
+> s215/216 Japanese CC), so the theory-edition rule ([`PROTOCOL.md`](../../../PROTOCOL.md) §3) forced a
+> clean rewrite at its next substantive touch. That touch is the **genitive-alternation animacy** row
+> ([`result/genitive-alternation-animacy-v1`](../results/genitive-alternation-animacy-v1.md), s218) — a
+> second human-anchored production-side alternation beater joining the dative. The v3 edition folds the three
+> update boxes into clean body prose and adds the genitive as a **fifth beater row** (result-cited,
+> single-run, not-yet-promoted per [`note/genitive-alternation-animacy-promotion-refusal-v1`](../notes/genitive-alternation-animacy-promotion-refusal-v1.md)).
+> **This page is kept visible as history** and stays a legitimate citation target for the July record; no
+> number changed in the move. Read v3 for the live arrangement.
 
 > **This is the clean second edition**, forced by the theory-edition rule
 > ([`PROTOCOL.md`](../../../PROTOCOL.md) §3: more than ~3 dated update boxes force a rewrite). The first
