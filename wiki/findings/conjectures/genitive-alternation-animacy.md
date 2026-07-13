@@ -6,9 +6,8 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: proposed
-contingent-on:
-  - genitive-alternation-anchor-and-indicator
+status: tested
+contingent-on: []
 created: 2026-07-13
 updated: 2026-07-13
 links:
@@ -20,16 +19,18 @@ links:
     target: source/dubois-2023-genitive-animacy
 ---
 
-> **Proposed 2026-07-13 (session 217).** Opens the second sibling of the program A5 production-side
-> alternation battery — extending the dative pattern
+> **Proposed 2026-07-13 (session 217); ratified + tested 2026-07-13 (session 218).** The second
+> sibling of the program A5 production-side alternation battery — extending the dative pattern
 > ([`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md),
 > a human-direction-anchored production-preference positive) to the **genitive alternation**, with a
 > **human-comparison anchor** ([`resource/genitive-animacy-human-anchor`](../../base/resources/genitive-animacy-human-anchor.md);
-> Dubois et al. 2023, 25 native-speaker acceptability ratings, CC BY 4.0). The operationalization is
-> **contingent** on the value-laden gates opened in
-> [`decisions/open/genitive-alternation-anchor-and-indicator`](../../decisions/open/genitive-alternation-anchor-and-indicator.md)
-> (Q1 focal constraint / Q2 indicator + shadow control / Q3 anchor form). No probe runs before that
-> decision is ratified by a later session.
+> Dubois et al. 2023, 25 native-speaker acceptability ratings, CC BY 4.0). The operationalization gates
+> ([`decisions/resolved/genitive-alternation-anchor-and-indicator`](../../decisions/resolved/genitive-alternation-anchor-and-indicator.md):
+> Q1 possessor animacy / Q2 graded forced-choice + nonce-arm & covariate shadow controls / Q3
+> human-anchored on the direction) were **ratified s218** (adversarial review + non-Anthropic vote,
+> convergent) and the probe **frozen + run s218** →
+> [`result/genitive-alternation-animacy-v1`](../results/genitive-alternation-animacy-v1.md). See that
+> result for the verdict.
 
 # Conjecture: LLMs track the possessor-animacy constraint on the genitive alternation
 

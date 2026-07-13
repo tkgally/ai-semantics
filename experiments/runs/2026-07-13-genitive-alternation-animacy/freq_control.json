@@ -1,0 +1,660 @@
+{
+  "recipe": "UD-English-EWT possessor-lemma marginal s-genitive propensity = (s_count + k*p0)/(s_count + of_count + k), k=4.0, p0=corpus base rate; s-genitive = nmod:poss with possessive-clitic case child; of-genitive = nmod with 'of' case child; per lowercased lemma. FROZEN before any model call.",
+  "source": "https://raw.githubusercontent.com/UniversalDependencies/UD_English-EWT/master/en_ewt-ud-{train,dev,test}.conllu",
+  "license": "CC BY-SA 4.0 (UD English-EWT; LICENSE.txt verified firsthand s218; s168 in scope)",
+  "corpus_meta": {
+    "files": {
+      "en_ewt_train.conllu": {
+        "sha256": "d68e06122a702464c613076523d56740f047e5bbe89dd90ec32737e04d952143"
+      },
+      "en_ewt_dev.conllu": {
+        "sha256": "39239e0a60db3ae68f4b7036189f11b6692741d10ff8240dd91f74f2760d90f8"
+      },
+      "en_ewt_test.conllu": {
+        "sha256": "fa024f43dc5da3c5ac02563bc9bd0e974f46cbb1560823976a8f342a37dc494a"
+      }
+    },
+    "total_s_genitive_possessors": 736,
+    "total_of_genitive_possessors": 3384,
+    "corpus_base_rate_s": 0.1786,
+    "pseudocount_k": 4.0
+  },
+  "per_lemma": {
+    "addict": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "anchor": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "army": {
+      "s_count": 0,
+      "of_count": 4,
+      "n_genitive": 4,
+      "marginal_s_propensity_smoothed": 0.0893
+    },
+    "athlete": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "battalion": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "battery": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "beetle": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "blade": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "brigade": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "cable": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "camel": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "captain": {
+      "s_count": 1,
+      "of_count": 0,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.3429
+    },
+    "caravan": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "cartel": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "castle": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "cathedral": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "cavern": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "champion": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "cheetah": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "choir": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "climate": {
+      "s_count": 0,
+      "of_count": 2,
+      "n_genitive": 2,
+      "marginal_s_propensity_smoothed": 0.1191
+    },
+    "colony": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "comet": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "community": {
+      "s_count": 0,
+      "of_count": 4,
+      "n_genitive": 4,
+      "marginal_s_propensity_smoothed": 0.0893
+    },
+    "congregation": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "convoy": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "council": {
+      "s_count": 0,
+      "of_count": 2,
+      "n_genitive": 2,
+      "marginal_s_propensity_smoothed": 0.1191
+    },
+    "crater": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "crew": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "cricket": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "crowd": {
+      "s_count": 0,
+      "of_count": 2,
+      "n_genitive": 2,
+      "marginal_s_propensity_smoothed": 0.1191
+    },
+    "crystal": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "current": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "dictator": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "dolphin": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "drummer": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "dynasty": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "empire": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "engine": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "falcon": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "family": {
+      "s_count": 2,
+      "of_count": 15,
+      "n_genitive": 17,
+      "marginal_s_propensity_smoothed": 0.1293
+    },
+    "firefly": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "fleet": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "flock": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "forest": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "garrison": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "girder": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "glacier": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "guardian": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "harbor": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "herd": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "household": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "infant": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "kingdom": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "landlord": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "lantern": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "levee": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "market": {
+      "s_count": 0,
+      "of_count": 3,
+      "n_genitive": 3,
+      "marginal_s_propensity_smoothed": 0.1021
+    },
+    "meadow": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "merchant": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "migrant": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "mob": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "monsoon": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "mountain": {
+      "s_count": 0,
+      "of_count": 2,
+      "n_genitive": 2,
+      "marginal_s_propensity_smoothed": 0.1191
+    },
+    "nation": {
+      "s_count": 3,
+      "of_count": 5,
+      "n_genitive": 8,
+      "marginal_s_propensity_smoothed": 0.3095
+    },
+    "orchestra": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "orphan": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "parrot": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "patient": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "pebble": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "pendulum": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "piglet": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "piston": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "planet": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "platoon": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "predator": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "prisoner": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "reactor": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "reef": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "regiment": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "region": {
+      "s_count": 0,
+      "of_count": 5,
+      "n_genitive": 5,
+      "marginal_s_propensity_smoothed": 0.0794
+    },
+    "republic": {
+      "s_count": 0,
+      "of_count": 3,
+      "n_genitive": 3,
+      "marginal_s_propensity_smoothed": 0.1021
+    },
+    "river": {
+      "s_count": 0,
+      "of_count": 2,
+      "n_genitive": 2,
+      "marginal_s_propensity_smoothed": 0.1191
+    },
+    "senate": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "serpent": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "settlement": {
+      "s_count": 0,
+      "of_count": 2,
+      "n_genitive": 2,
+      "marginal_s_propensity_smoothed": 0.1191
+    },
+    "soldier": {
+      "s_count": 2,
+      "of_count": 3,
+      "n_genitive": 5,
+      "marginal_s_propensity_smoothed": 0.3016
+    },
+    "stallion": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "storm": {
+      "s_count": 1,
+      "of_count": 1,
+      "n_genitive": 2,
+      "marginal_s_propensity_smoothed": 0.2858
+    },
+    "sultan": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "survivor": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "swarm": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "tenant": {
+      "s_count": 0,
+      "of_count": 1,
+      "n_genitive": 1,
+      "marginal_s_propensity_smoothed": 0.1429
+    },
+    "toddler": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "tower": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "township": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "tribe": {
+      "s_count": 0,
+      "of_count": 2,
+      "n_genitive": 2,
+      "marginal_s_propensity_smoothed": 0.1191
+    },
+    "tunnel": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "turbine": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "tutor": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "tyrant": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "union": {
+      "s_count": 0,
+      "of_count": 9,
+      "n_genitive": 9,
+      "marginal_s_propensity_smoothed": 0.055
+    },
+    "vessel": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "veteran": {
+      "s_count": 1,
+      "of_count": 1,
+      "n_genitive": 2,
+      "marginal_s_propensity_smoothed": 0.2858
+    },
+    "volcano": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    },
+    "widow": {
+      "s_count": 0,
+      "of_count": 0,
+      "n_genitive": 0,
+      "marginal_s_propensity_smoothed": 0.1786
+    }
+  }
+}
