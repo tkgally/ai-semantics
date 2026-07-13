@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">designs</a> <span class="sep">/</span> <a href="index.html">within-lexical-scalar-vs-disjunctive-v1</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">9.8 KB</span> &middot; <code class="fpath">experiments/designs/within-lexical-scalar-vs-disjunctive-v1/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;Within-lexical scalar-vs-disjunctive analysis -- the FROZEN reading rule (NO API).</span>
+
+<span class="sd">Built with the frozen instrument (2026-06-23); reads raw/ (does NOT exist until a probe runs).</span>
+<span class="sd">Applies instrument.json -&gt; reading_rule_frozen with no threshold tuned after any output.</span>
+
+<span class="sd">Per model, per arm (scalar / disjunctive):</span>
+<span class="sd">  - decline rate (%UNCLEAR) on the AMBIGUOUS class (scalar: bridging; disjunctive: disjunctive)</span>
+<span class="sd">    vs the pooled CLEAR classes (clear-same + clear-different);</span>
+<span class="sd">  - mean confidence (corroborates only, C1);</span>
+<span class="sd">  - C3 clear-class precondition (clear decline &lt; 0.20 AND clear conf &gt; 70);</span>
+<span class="sd">  - WITHIN-ARM clustered-bootstrap CI on the decline gap (ambiguous - clear).</span>
+<span class="sd">Cross-arm: clustered-bootstrap CI on (disjunctive arm decline - scalar bridging decline), the</span>
+<span class="sd">two arms resampled as independent groups (clusters: lemma for scalar, homonym surface for arm2).</span>
+
+<span class="sd">Per-model SURVIVAL vs COLLAPSE (frozen, gate Q3):</span>
+<span class="sd">  COLLAPSE  : disjunctive within-arm decline-gap CI lower bound &gt; 0 (decline elevated over its</span>
+<span class="sd">              own clear controls).  [within-arm; robust to the Arm1-vs-Arm2 register residual]</span>
+<span class="sd">  SURVIVAL  : disjunctive within-arm gap CI lower bound NOT &gt; 0  AND  cross-arm gap CI includes 0</span>
+<span class="sd">              AND disjunctive decline near-zero.  [higher bar: both within- and cross-arm]</span>
+<span class="sd">  MIXED/INCONCLUSIVE : anything else, or C3 fails for an arm, or N too thin.</span>
+
+<span class="sd">Bootstrap: 10000 reps, seed 20260623, 95% percentile CIs. Direction-of-effect only; small</span>
+<span class="sd">clustered N -&gt; wide CIs, no coverage claim. NO human comparison: scalar capped to</span>
+<span class="sd">usage-similarity; disjunctive internal-contrast-only.</span>
+
+<span class="sd">Run (after a probe run): python3 analyze.py   (reads raw/, writes analysis.json, prints table)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">)</span>
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">20260623</span>
+<span class="n">REPS</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="n">ARMS</span> <span class="o">=</span> <span class="p">{</span>  <span class="c1"># arm -&gt; (ambiguous_class, [clear_classes])</span>
+    <span class="s2">&quot;scalar&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;bridging&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;clear-same&quot;</span><span class="p">,</span> <span class="s2">&quot;clear-different&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;disjunctive&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;disjunctive&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;clear-same&quot;</span><span class="p">,</span> <span class="s2">&quot;clear-different&quot;</span><span class="p">]),</span>
+<span class="p">}</span>
+<span class="n">CLEAR_DECLINE_MAX</span> <span class="o">=</span> <span class="mf">0.20</span>
+<span class="n">CLEAR_CONF_MIN</span> <span class="o">=</span> <span class="mi">70</span>
+<span class="n">NEAR_ZERO_DECLINE</span> <span class="o">=</span> <span class="mf">0.10</span>  <span class="c1"># &quot;near-zero&quot; point estimate for the survival criterion</span>
+
+<span class="c1"># PRE-REGISTERED clean subset (declared BEFORE any model output, on linguistic grounds only, by</span>
+<span class="c1"># the independent pre-run critic 2026-06-23). The critic judged 8/12 disjunctive balanced ctx1</span>
+<span class="c1"># contexts genuinely two-way and flagged 4 as leaning toward one sense (mole/punch/club mild,</span>
+<span class="c1"># pupil strong). Because each balanced ctx1 is paired with a sense-fixed ctx2, a lean in EITHER</span>
+<span class="c1"># direction suppresses UNCLEAR and biases TOWARD survival -&gt; leaners erode the collapse signal.</span>
+<span class="c1"># So the within-arm collapse statistic is reported on BOTH all-12 and this clean-8 subset. This</span>
+<span class="c1"># is a fixed linguistic partition fixed pre-run, NOT a post-hoc re-selection against model</span>
+<span class="c1"># confidence (no model output existed when it was declared); items_arm2.json is unchanged.</span>
+<span class="n">CLEAN_SUBSET</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;bank&quot;</span><span class="p">,</span> <span class="s2">&quot;crane&quot;</span><span class="p">,</span> <span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="s2">&quot;organ&quot;</span><span class="p">,</span> <span class="s2">&quot;trunk&quot;</span><span class="p">,</span> <span class="s2">&quot;tank&quot;</span><span class="p">,</span> <span class="s2">&quot;plot&quot;</span><span class="p">,</span> <span class="s2">&quot;ring&quot;</span><span class="p">}</span>
+<span class="n">LEANING_DISCLOSED</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mole&quot;</span><span class="p">:</span> <span class="s2">&quot;toward spy (B)&quot;</span><span class="p">,</span> <span class="s2">&quot;punch&quot;</span><span class="p">:</span> <span class="s2">&quot;toward drink (B)&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;club&quot;</span><span class="p">:</span> <span class="s2">&quot;toward heirloom-stick (B)&quot;</span><span class="p">,</span> <span class="s2">&quot;pupil&quot;</span><span class="p">:</span> <span class="s2">&quot;toward student (B), strong&quot;</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_arm</span><span class="p">(</span><span class="n">arm</span><span class="p">,</span> <span class="n">slot</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">arm</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">rates</span><span class="p">(</span><span class="n">recs</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="n">decl</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;call&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;UNCLEAR&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">confs</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;conf&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;conf&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">mconf</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">confs</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">confs</span><span class="p">)</span> <span class="k">if</span> <span class="n">confs</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">decl</span><span class="p">,</span> <span class="n">mconf</span><span class="p">,</span> <span class="n">n</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">decline_stat</span><span class="p">(</span><span class="n">rs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">rates</span><span class="p">(</span><span class="n">rs</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">conf_stat</span><span class="p">(</span><span class="n">rs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">rates</span><span class="p">(</span><span class="n">rs</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">clustered_gap</span><span class="p">(</span><span class="n">group_a</span><span class="p">,</span> <span class="n">group_b</span><span class="p">,</span> <span class="n">stat</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;95% CI on (stat(a) - stat(b)) resampling CLUSTERS (rec[&#39;cluster&#39;]) with replacement.&quot;&quot;&quot;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+    <span class="n">ca</span><span class="p">,</span> <span class="n">cb</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">group_a</span><span class="p">:</span>
+        <span class="n">ca</span><span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">group_b</span><span class="p">:</span>
+        <span class="n">cb</span><span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">ak</span><span class="p">,</span> <span class="n">bk</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ca</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ak</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">bk</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">gaps</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">REPS</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">ak</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">ak</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ca</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">bk</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">bk</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cb</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
+        <span class="n">sa</span><span class="p">,</span> <span class="n">sb</span> <span class="o">=</span> <span class="n">stat</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">stat</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">sa</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">sb</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">gaps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sa</span> <span class="o">-</span> <span class="n">sb</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">gaps</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">gaps</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">gaps</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="mf">0.025</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">gaps</span><span class="p">))],</span> <span class="mi">4</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">gaps</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="mf">0.975</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">gaps</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze_arm</span><span class="p">(</span><span class="n">arm</span><span class="p">,</span> <span class="n">slot</span><span class="p">):</span>
+    <span class="n">amb_class</span><span class="p">,</span> <span class="n">clear_classes</span> <span class="o">=</span> <span class="n">ARMS</span><span class="p">[</span><span class="n">arm</span><span class="p">]</span>
+    <span class="n">recs</span> <span class="o">=</span> <span class="n">load_arm</span><span class="p">(</span><span class="n">arm</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">recs</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">by_class</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+        <span class="n">by_class</span><span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">amb</span> <span class="o">=</span> <span class="n">by_class</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">amb_class</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="n">clear</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">cc</span> <span class="ow">in</span> <span class="n">clear_classes</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">by_class</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cc</span><span class="p">,</span> <span class="p">[])]</span>
+    <span class="n">a_decl</span><span class="p">,</span> <span class="n">a_conf</span><span class="p">,</span> <span class="n">a_n</span> <span class="o">=</span> <span class="n">rates</span><span class="p">(</span><span class="n">amb</span><span class="p">)</span>
+    <span class="n">c_decl</span><span class="p">,</span> <span class="n">c_conf</span><span class="p">,</span> <span class="n">c_n</span> <span class="o">=</span> <span class="n">rates</span><span class="p">(</span><span class="n">clear</span><span class="p">)</span>
+    <span class="n">precond_ok</span> <span class="o">=</span> <span class="p">(</span><span class="n">c_decl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">c_decl</span> <span class="o">&lt;=</span> <span class="n">CLEAR_DECLINE_MAX</span>
+                  <span class="ow">and</span> <span class="n">c_conf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">c_conf</span> <span class="o">&gt;=</span> <span class="n">CLEAR_CONF_MIN</span><span class="p">)</span>
+    <span class="n">decl_gap</span> <span class="o">=</span> <span class="n">clustered_gap</span><span class="p">(</span><span class="n">amb</span><span class="p">,</span> <span class="n">clear</span><span class="p">,</span> <span class="n">decline_stat</span><span class="p">)</span>
+    <span class="n">conf_gap</span> <span class="o">=</span> <span class="n">clustered_gap</span><span class="p">(</span><span class="n">amb</span><span class="p">,</span> <span class="n">clear</span><span class="p">,</span> <span class="n">conf_stat</span><span class="p">)</span>
+    <span class="n">decline_elevated</span> <span class="o">=</span> <span class="n">decl_gap</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">decl_gap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">conf_lower</span> <span class="o">=</span> <span class="n">conf_gap</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">conf_gap</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span>
+    <span class="n">c4_self_report_only</span> <span class="o">=</span> <span class="n">conf_lower</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">decline_elevated</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;arm&quot;</span><span class="p">:</span> <span class="n">arm</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">slot</span><span class="p">,</span> <span class="s2">&quot;ambiguous_class&quot;</span><span class="p">:</span> <span class="n">amb_class</span><span class="p">,</span>
+            <span class="s2">&quot;ambiguous&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="n">a_n</span><span class="p">,</span> <span class="s2">&quot;decline_rate&quot;</span><span class="p">:</span> <span class="n">a_decl</span><span class="p">,</span> <span class="s2">&quot;mean_conf&quot;</span><span class="p">:</span> <span class="n">a_conf</span><span class="p">},</span>
+            <span class="s2">&quot;clear&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="n">c_n</span><span class="p">,</span> <span class="s2">&quot;decline_rate&quot;</span><span class="p">:</span> <span class="n">c_decl</span><span class="p">,</span> <span class="s2">&quot;mean_conf&quot;</span><span class="p">:</span> <span class="n">c_conf</span><span class="p">},</span>
+            <span class="s2">&quot;within_arm_decline_gap_ci_amb_minus_clear&quot;</span><span class="p">:</span> <span class="n">decl_gap</span><span class="p">,</span>
+            <span class="s2">&quot;within_arm_conf_gap_ci_amb_minus_clear&quot;</span><span class="p">:</span> <span class="n">conf_gap</span><span class="p">,</span>
+            <span class="s2">&quot;C3_precondition_ok&quot;</span><span class="p">:</span> <span class="n">precond_ok</span><span class="p">,</span>
+            <span class="s2">&quot;decline_elevated_within_arm&quot;</span><span class="p">:</span> <span class="n">decline_elevated</span><span class="p">,</span>
+            <span class="s2">&quot;C4_confidence_only_self_report&quot;</span><span class="p">:</span> <span class="n">c4_self_report_only</span><span class="p">,</span>
+            <span class="s2">&quot;_amb_recs&quot;</span><span class="p">:</span> <span class="n">amb</span><span class="p">,</span> <span class="s2">&quot;_clear_recs&quot;</span><span class="p">:</span> <span class="n">clear</span><span class="p">}</span>  <span class="c1"># carried for gaps; stripped before json dump</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">per_model_verdict</span><span class="p">(</span><span class="n">slot</span><span class="p">,</span> <span class="n">scalar</span><span class="p">,</span> <span class="n">disj</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">scalar</span> <span class="ow">and</span> <span class="n">disj</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;verdict&quot;</span><span class="p">:</span> <span class="s2">&quot;WEAK (an arm is missing)&quot;</span><span class="p">}</span>
+    <span class="n">cross</span> <span class="o">=</span> <span class="n">clustered_gap</span><span class="p">(</span><span class="n">disj</span><span class="p">[</span><span class="s2">&quot;_amb_recs&quot;</span><span class="p">],</span> <span class="n">scalar</span><span class="p">[</span><span class="s2">&quot;_amb_recs&quot;</span><span class="p">],</span> <span class="n">decline_stat</span><span class="p">)</span>  <span class="c1"># disj - bridging</span>
+    <span class="c1"># within-arm collapse statistic ALSO on the pre-registered clean-8 subset (robustness)</span>
+    <span class="n">clean_amb</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">disj</span><span class="p">[</span><span class="s2">&quot;_amb_recs&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">CLEAN_SUBSET</span><span class="p">]</span>
+    <span class="n">clean_clear</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">disj</span><span class="p">[</span><span class="s2">&quot;_clear_recs&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;cluster&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">CLEAN_SUBSET</span><span class="p">]</span>
+    <span class="n">clean_gap</span> <span class="o">=</span> <span class="n">clustered_gap</span><span class="p">(</span><span class="n">clean_amb</span><span class="p">,</span> <span class="n">clean_clear</span><span class="p">,</span> <span class="n">decline_stat</span><span class="p">)</span>
+    <span class="n">clean_decl</span> <span class="o">=</span> <span class="n">rates</span><span class="p">(</span><span class="n">clean_amb</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">slot</span><span class="p">,</span>
+           <span class="s2">&quot;scalar_C3_ok&quot;</span><span class="p">:</span> <span class="n">scalar</span><span class="p">[</span><span class="s2">&quot;C3_precondition_ok&quot;</span><span class="p">],</span>
+           <span class="s2">&quot;disjunctive_C3_ok&quot;</span><span class="p">:</span> <span class="n">disj</span><span class="p">[</span><span class="s2">&quot;C3_precondition_ok&quot;</span><span class="p">],</span>
+           <span class="s2">&quot;disjunctive_decline_all12&quot;</span><span class="p">:</span> <span class="n">disj</span><span class="p">[</span><span class="s2">&quot;ambiguous&quot;</span><span class="p">][</span><span class="s2">&quot;decline_rate&quot;</span><span class="p">],</span>
+           <span class="s2">&quot;disjunctive_decline_clean8&quot;</span><span class="p">:</span> <span class="n">clean_decl</span><span class="p">,</span>
+           <span class="s2">&quot;scalar_bridging_decline&quot;</span><span class="p">:</span> <span class="n">scalar</span><span class="p">[</span><span class="s2">&quot;ambiguous&quot;</span><span class="p">][</span><span class="s2">&quot;decline_rate&quot;</span><span class="p">],</span>
+           <span class="s2">&quot;within_arm_disj_gap_ci_all12&quot;</span><span class="p">:</span> <span class="n">disj</span><span class="p">[</span><span class="s2">&quot;within_arm_decline_gap_ci_amb_minus_clear&quot;</span><span class="p">],</span>
+           <span class="s2">&quot;within_arm_disj_gap_ci_clean8&quot;</span><span class="p">:</span> <span class="n">clean_gap</span><span class="p">,</span>
+           <span class="s2">&quot;cross_arm_disj_minus_bridging_ci&quot;</span><span class="p">:</span> <span class="n">cross</span><span class="p">,</span>
+           <span class="s2">&quot;leaning_items_disclosed&quot;</span><span class="p">:</span> <span class="n">LEANING_DISCLOSED</span><span class="p">}</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">disj</span><span class="p">[</span><span class="s2">&quot;C3_precondition_ok&quot;</span><span class="p">]:</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;WEAK (disjunctive arm fails C3 clear-class precondition)&quot;</span>
+        <span class="k">return</span> <span class="n">out</span>
+    <span class="n">within_elevated</span> <span class="o">=</span> <span class="n">disj</span><span class="p">[</span><span class="s2">&quot;decline_elevated_within_arm&quot;</span><span class="p">]</span>
+    <span class="n">cross_includes_0</span> <span class="o">=</span> <span class="n">cross</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cross</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">cross</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">near_zero</span> <span class="o">=</span> <span class="p">(</span><span class="n">disj</span><span class="p">[</span><span class="s2">&quot;ambiguous&quot;</span><span class="p">][</span><span class="s2">&quot;decline_rate&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                 <span class="ow">and</span> <span class="n">disj</span><span class="p">[</span><span class="s2">&quot;ambiguous&quot;</span><span class="p">][</span><span class="s2">&quot;decline_rate&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">NEAR_ZERO_DECLINE</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">within_elevated</span><span class="p">:</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;COLLAPSE: disjunctive decline elevated over its own clear controls &quot;</span>
+                          <span class="s2">&quot;(within-arm CI lower bound &gt; 0) -&gt; kind-reading supported; the lexical &quot;</span>
+                          <span class="s2">&quot;commit-without-hedging was an artifact of the softer scalar stimulus&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="ow">not</span> <span class="n">within_elevated</span><span class="p">)</span> <span class="ow">and</span> <span class="n">cross_includes_0</span> <span class="ow">and</span> <span class="n">near_zero</span><span class="p">:</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;SURVIVAL: disjunctive decline near-zero, NOT elevated within-arm, AND &quot;</span>
+                          <span class="s2">&quot;indistinguishable from scalar bridging (cross-arm CI includes 0) -&gt; &quot;</span>
+                          <span class="s2">&quot;lexical commit-without-hedging survives a genuine disjunction (HIGHER &quot;</span>
+                          <span class="s2">&quot;bar met); register residual cuts toward survival -- led with&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;verdict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;MIXED/INCONCLUSIVE: not within-arm elevated, but the survival &quot;</span>
+                          <span class="s2">&quot;conjunction is not fully met (cross-arm distinguishable or decline not &quot;</span>
+                          <span class="s2">&quot;near-zero) -&gt; no clean survival/collapse for this model&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">RAW</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">RAW</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;raw/ is empty -- no probe has run yet. analyze.py is frozen and ready; run &quot;</span>
+              <span class="s2">&quot;probe.py (in a later, cleared session) first.&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">per</span><span class="p">,</span> <span class="n">verdicts</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]:</span>
+        <span class="n">sc</span> <span class="o">=</span> <span class="n">analyze_arm</span><span class="p">(</span><span class="s2">&quot;scalar&quot;</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+        <span class="n">dj</span> <span class="o">=</span> <span class="n">analyze_arm</span><span class="p">(</span><span class="s2">&quot;disjunctive&quot;</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+        <span class="n">verdicts</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="n">per_model_verdict</span><span class="p">(</span><span class="n">slot</span><span class="p">,</span> <span class="n">sc</span><span class="p">,</span> <span class="n">dj</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="p">(</span><span class="n">sc</span><span class="p">,</span> <span class="n">dj</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+                <span class="n">r</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;_amb_recs&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="n">r</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;_clear_recs&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="n">per</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== PER-MODEL SURVIVAL/COLLAPSE VERDICTS ===&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">verdicts</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">({</span><span class="s2">&quot;per_arm&quot;</span><span class="p">:</span> <span class="n">per</span><span class="p">,</span> <span class="s2">&quot;per_model_verdict&quot;</span><span class="p">:</span> <span class="n">verdicts</span><span class="p">,</span>
+               <span class="s2">&quot;scope_cap&quot;</span><span class="p">:</span> <span class="s2">&quot;NO human comparison; scalar capped to usage-similarity; &quot;</span>
+                            <span class="s2">&quot;disjunctive internal-contrast-only. Behavioural, n=3 commercial &quot;</span>
+                            <span class="s2">&quot;models, small clustered N, direction-of-effect only.&quot;</span><span class="p">},</span>
+              <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;analysis.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

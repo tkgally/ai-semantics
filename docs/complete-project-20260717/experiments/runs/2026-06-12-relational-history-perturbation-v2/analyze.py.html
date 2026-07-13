@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-12-relational-history-perturbation-v2</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">5.7 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-12-relational-history-perturbation-v2/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;analyze.py — pre-registered analysis for the history-perturbation probe (v2).</span>
+
+<span class="sd">Implements exactly the PREREG measures (as revised by the pre-run critic before any</span>
+<span class="sd">finding-bearing call): per-cluster manipulation gate, primary chronological recency-pick</span>
+<span class="sd">rate rho_chron per presentation direction with clustered bootstrap CIs, the physical-</span>
+<span class="sd">position diagnostic rho_phys, out-of-pair and NA rates, secondary clean-vs-interleaved</span>
+<span class="sd">descriptives, and the pre-registered verdict per model. Gemini&#39;s 3-cluster CI is</span>
+<span class="sd">descriptive-only (pre-registered).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">N_BOOT</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">20260612</span>
+<span class="n">CLEAN</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;XXYY&quot;</span><span class="p">,</span> <span class="s2">&quot;YYXX&quot;</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">rate</span><span class="p">(</span><span class="n">trials</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="n">inp</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">trials</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;in_pair&quot;</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">inp</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">inp</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">inp</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">cluster_boot</span><span class="p">(</span><span class="n">trials</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">rng</span><span class="p">):</span>
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">trials</span><span class="p">:</span>
+        <span class="n">clusters</span><span class="p">[(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;pair&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;sample&quot;</span><span class="p">])]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">clusters</span><span class="p">)</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N_BOOT</span><span class="p">):</span>
+        <span class="n">sample</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">_k</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+            <span class="n">sample</span> <span class="o">+=</span> <span class="n">clusters</span><span class="p">[</span><span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">keys</span><span class="p">)]</span>
+        <span class="n">v</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">rate</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="n">vals</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">vals</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">vals</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="mf">0.025</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">))],</span> <span class="n">vals</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="mf">0.975</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">))]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fmt</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;NA&quot;</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ci_side</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;-1 below 0.5, +1 above 0.5, 0 includes 0.5 (or no CI).&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">lo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">lo</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">hi</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">recs</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">,</span> <span class="s2">&quot;results.json&quot;</span><span class="p">)))</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;clusters gated on their own consistent controls (both twins correct).&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;claude&quot;</span><span class="p">,</span> <span class="s2">&quot;gpt&quot;</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">):</span>
+        <span class="n">rs</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">m</span><span class="p">]</span>
+        <span class="n">cons</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;kind&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;consistent&quot;</span><span class="p">]</span>
+        <span class="n">mixed</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;kind&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;mixed&quot;</span><span class="p">]</span>
+        <span class="n">na</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pick_cid&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">retried</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;retried&quot;</span><span class="p">))</span>
+
+        <span class="c1"># per-cluster gate (critic B2): both twins&#39; controls correct</span>
+        <span class="n">gate_ok</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">by_cluster</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cons</span><span class="p">:</span>
+            <span class="n">by_cluster</span><span class="p">[(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;pair&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;sample&quot;</span><span class="p">])]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">cl</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">by_cluster</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+            <span class="n">gate_ok</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">all</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;correct&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cl</span><span class="p">)</span>
+        <span class="n">gacc</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">cons</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;correct&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">cons</span><span class="p">)</span>
+        <span class="n">n_pass</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">gate_ok</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+        <span class="n">parsed</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">mixed</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pick_cid&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">oop</span> <span class="o">=</span> <span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">parsed</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;in_pair&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">parsed</span><span class="p">))</span> <span class="k">if</span> <span class="n">parsed</span> <span class="k">else</span> <span class="mf">1.0</span>
+        <span class="n">gated</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">parsed</span> <span class="k">if</span> <span class="n">gate_ok</span><span class="o">.</span><span class="n">get</span><span class="p">((</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;pair&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;sample&quot;</span><span class="p">]))]</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">[</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">] mixed=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">mixed</span><span class="p">)</span><span class="si">}</span><span class="s2"> consistent=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cons</span><span class="p">)</span><span class="si">}</span><span class="s2"> NA=</span><span class="si">{</span><span class="n">na</span><span class="si">}</span><span class="s2"> retried=</span><span class="si">{</span><span class="n">retried</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  GATE: control acc=</span><span class="si">{</span><span class="n">gacc</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">; clusters passing both-twin gate: &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n_pass</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gate_ok</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">gate_ok</span><span class="o">.</span><span class="n">items</span><span class="p">()</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  out-of-pair (parsed)=</span><span class="si">{</span><span class="n">oop</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="s1">&#39;FLAG under-powered&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">oop</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;ok&#39;</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+        <span class="n">sides</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">pool</span> <span class="ow">in</span> <span class="p">((</span><span class="s2">&quot;GATED&quot;</span><span class="p">,</span> <span class="n">gated</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;ungated&quot;</span><span class="p">,</span> <span class="n">parsed</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;fwd&quot;</span><span class="p">,</span> <span class="s2">&quot;rev&quot;</span><span class="p">):</span>
+                <span class="n">dd</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">pool</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;direction&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">d</span><span class="p">]</span>
+                <span class="n">rc</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">rate</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="s2">&quot;picked_chron_last&quot;</span><span class="p">)</span>
+                <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">cluster_boot</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="s2">&quot;picked_chron_last&quot;</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+                <span class="n">rp</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">rate</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="s2">&quot;picked_phys_last&quot;</span><span class="p">)</span>
+                <span class="n">plo</span><span class="p">,</span> <span class="n">phi</span> <span class="o">=</span> <span class="n">cluster_boot</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="s2">&quot;picked_phys_last&quot;</span><span class="p">,</span> <span class="n">rng</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">label</span><span class="si">:</span><span class="s2">7s</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">: rho_chron=</span><span class="si">{</span><span class="n">fmt</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span><span class="si">}</span><span class="s2"> CI[</span><span class="si">{</span><span class="n">fmt</span><span class="p">(</span><span class="n">lo</span><span class="p">)</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">fmt</span><span class="p">(</span><span class="n">hi</span><span class="p">)</span><span class="si">}</span><span class="s2">] &quot;</span>
+                      <span class="sa">f</span><span class="s2">&quot;rho_phys=</span><span class="si">{</span><span class="n">fmt</span><span class="p">(</span><span class="n">rp</span><span class="p">)</span><span class="si">}</span><span class="s2"> CI[</span><span class="si">{</span><span class="n">fmt</span><span class="p">(</span><span class="n">plo</span><span class="p">)</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">fmt</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span><span class="si">}</span><span class="s2">] (in-pair n=</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">label</span> <span class="o">==</span> <span class="s2">&quot;GATED&quot;</span><span class="p">:</span>
+                    <span class="n">sides</span><span class="p">[(</span><span class="s2">&quot;chron&quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">)]</span> <span class="o">=</span> <span class="n">ci_side</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">)</span>
+                    <span class="n">sides</span><span class="p">[(</span><span class="s2">&quot;phys&quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">)]</span> <span class="o">=</span> <span class="n">ci_side</span><span class="p">(</span><span class="n">plo</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>
+        <span class="c1"># secondary descriptives (gated, both directions pooled, chron measure)</span>
+        <span class="k">for</span> <span class="n">nm</span><span class="p">,</span> <span class="n">sel</span> <span class="ow">in</span> <span class="p">((</span><span class="s2">&quot;clean&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;order&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">CLEAN</span><span class="p">),</span>
+                        <span class="p">(</span><span class="s2">&quot;interleaved&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">r</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;order&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">CLEAN</span><span class="p">)):</span>
+            <span class="n">v</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">rate</span><span class="p">([</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">gated</span> <span class="k">if</span> <span class="n">sel</span><span class="p">(</span><span class="n">r</span><span class="p">)],</span> <span class="s2">&quot;picked_chron_last&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  SECONDARY </span><span class="si">{</span><span class="n">nm</span><span class="si">}</span><span class="s2">: rho_chron=</span><span class="si">{</span><span class="n">fmt</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="si">}</span><span class="s2"> (n=</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+        <span class="c1"># pre-registered verdict</span>
+        <span class="k">if</span> <span class="n">n_pass</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;METHODOLOGICAL NULL (no cluster passed the manipulation gate)&quot;</span>
+        <span class="k">elif</span> <span class="n">oop</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;UNDER-POWERED (out-of-pair &gt; 0.5 on parsed picks)&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">c_f</span><span class="p">,</span> <span class="n">c_r</span> <span class="o">=</span> <span class="n">sides</span><span class="p">[(</span><span class="s2">&quot;chron&quot;</span><span class="p">,</span> <span class="s2">&quot;fwd&quot;</span><span class="p">)],</span> <span class="n">sides</span><span class="p">[(</span><span class="s2">&quot;chron&quot;</span><span class="p">,</span> <span class="s2">&quot;rev&quot;</span><span class="p">)]</span>
+            <span class="n">p_f</span><span class="p">,</span> <span class="n">p_r</span> <span class="o">=</span> <span class="n">sides</span><span class="p">[(</span><span class="s2">&quot;phys&quot;</span><span class="p">,</span> <span class="s2">&quot;fwd&quot;</span><span class="p">)],</span> <span class="n">sides</span><span class="p">[(</span><span class="s2">&quot;phys&quot;</span><span class="p">,</span> <span class="s2">&quot;rev&quot;</span><span class="p">)]</span>
+            <span class="k">if</span> <span class="n">c_f</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">c_f</span> <span class="o">==</span> <span class="n">c_r</span><span class="p">:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="s2">&quot;RECENCY&quot;</span> <span class="k">if</span> <span class="n">c_f</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;PRIMACY&quot;</span>
+                <span class="n">verdict</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NON-COMMUTATIVE (chronology-tracking, </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2">; both presentation &quot;</span>
+                           <span class="sa">f</span><span class="s2">&quot;arms agree) — falsification clause met&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">p_f</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">p_f</span> <span class="o">==</span> <span class="n">p_r</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">c_f</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">c_f</span> <span class="o">==</span> <span class="n">c_r</span><span class="p">):</span>
+                <span class="n">verdict</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;PHYSICAL-POSITION ARTIFACT (pick follows the physically-last &quot;</span>
+                           <span class="s2">&quot;line in both arms) — methodological finding, NOT relational; &quot;</span>
+                           <span class="s2">&quot;conjecture untouched&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">c_f</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">c_r</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">p_f</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">p_r</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;COMMUTATIVE NULL (all CIs include 0.5; conjecture&#39;s bet holds at this power)&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;INCONCLUSIVE/MIXED (arms disagree; report point estimates only)&quot;</span>
+        <span class="k">if</span> <span class="n">m</span> <span class="o">==</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">+=</span> <span class="s2">&quot;  [DESCRIPTIVE ONLY: 3 clusters — pre-registered CI instability]&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  VERDICT: </span><span class="si">{</span><span class="n">verdict</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

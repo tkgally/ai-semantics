@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>vote_critic.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-13-comparative-correlative-japanese</a> <span class="sep">/</span> <span class="cur">vote_critic.py</span></nav>
+<main>
+<header class="page-head">
+<h1>vote_critic.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">4.5 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-13-comparative-correlative-japanese/vote_critic.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Non-Anthropic pre-run decorrelation vote — Japanese-fidelity audit (s215).</span>
+
+<span class="sd">One gpt-5.4-mini vote weighed by the fresh-agent pre-run critic (verdict authority). Mirrors the</span>
+<span class="sd">German arm&#39;s VOTE-critic-s213.json. Sends the FROZEN items + the gold mapping and asks for a</span>
+<span class="sd">Japanese-CC-fidelity + gold audit and a GO / GO-WITH-CONDITIONS / NO-GO verdict. Saves</span>
+<span class="sd">VOTE-critic-s215.json (with billed usage.cost). ~$0.003.</span>
+
+<span class="sd">Run: OPENROUTER_API_KEY=... python3 vote_critic.py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span><span class="o">,</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;lib&quot;</span><span class="p">)))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openrouter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PANEL</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="n">billed_cost</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">ITEMS</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;comparative-correlative-japanese&quot;</span><span class="p">,</span> <span class="s2">&quot;items.csv&quot;</span><span class="p">))</span>
+
+<span class="n">PREAMBLE</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;あなたの学習データは古いかもしれませんが、この作業は自己完結した言語学的監査です。外部知識ではなく、&quot;</span>
+    <span class="s2">&quot;提示された項目そのものの日本語の文法性と正解ラベルの整合性を判断してください。</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="n">SYS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;You are an independent, adversarial pre-run critic for a frozen Japanese linguistics experiment. &quot;</span>
+    <span class="s2">&quot;You are a NATIVE-LEVEL Japanese grammar auditor. Do not rubber-stamp; find real defects.&quot;</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_listing</span><span class="p">():</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">ITEMS</span><span class="p">)))</span>
+    <span class="n">by_pair</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="n">by_pair</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;scale_pair&quot;</span><span class="p">],</span> <span class="p">{})[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;form&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">r</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">pid</span><span class="p">,</span> <span class="n">forms</span> <span class="ow">in</span> <span class="n">by_pair</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">typ</span> <span class="o">=</span> <span class="n">forms</span><span class="p">[</span><span class="s2">&quot;cc-positive&quot;</span><span class="p">][</span><span class="s2">&quot;typicality&quot;</span><span class="p">]</span>
+        <span class="n">d1</span> <span class="o">=</span> <span class="n">forms</span><span class="p">[</span><span class="s2">&quot;cc-positive&quot;</span><span class="p">][</span><span class="s2">&quot;dim1&quot;</span><span class="p">];</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">forms</span><span class="p">[</span><span class="s2">&quot;cc-positive&quot;</span><span class="p">][</span><span class="s2">&quot;dim2&quot;</span><span class="p">]</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s2"> | dim1=</span><span class="si">{</span><span class="n">d1</span><span class="si">}</span><span class="s2"> dim2=</span><span class="si">{</span><span class="n">d2</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;cc-positive&quot;</span><span class="p">,</span> <span class="s2">&quot;cc-inverse&quot;</span><span class="p">,</span> <span class="s2">&quot;ctrl-two&quot;</span><span class="p">,</span> <span class="s2">&quot;ctrl-single&quot;</span><span class="p">):</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">f</span><span class="si">}</span><span class="s2"> (fc_gold=</span><span class="si">{</span><span class="n">forms</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="s1">&#39;fc_gold&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">): </span><span class="si">{</span><span class="n">forms</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="s1">&#39;sentence&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">listing</span> <span class="o">=</span> <span class="n">build_listing</span><span class="p">()</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">PREAMBLE</span> <span class="o">+</span> <span class="p">(</span>
+        <span class="s2">&quot;これは、フラッグシップの『比較相関構文 (comparative correlative)』の共変動結果を日本語 (〜ば〜ほど) &quot;</span>
+        <span class="s2">&quot;で追試する、凍結済みの実験項目です。主張はモデル内部の対比のみ (internal-contrast-only、人間比較なし)：&quot;</span>
+        <span class="s2">&quot;モデルが共変動の読みを『構文』に帰属できるか——CC項目では共変動方向を主張するが、同じ語を使った非CC統制&quot;</span>
+        <span class="s2">&quot;文では主張しないか。</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;4形式 (各スケール対で同じ語を使い回す)：</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;- cc-positive: 〜ば〜ほど で dim2 が上がる → 正解 fc_gold=increase</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;- cc-inverse : 同じ 〜ば〜ほど 前件で dim2 が下がる → 正解 fc_gold=decrease &quot;</span>
+        <span class="s2">&quot;(FC質問は dim2 を肯定形で尋ねる。反意/減少表現で『名指しされた dim2 スケール』が確実に下がる必要がある)</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;- ctrl-two   : 独立した2文 (依存関係なし) → 正解 undetermined</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;- ctrl-single: スケールを1つだけ述べる (dim2 に触れない) → 正解 undetermined</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;監査してください：</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;(1) 文法性：各 cc-positive / cc-inverse は正しい 〜ば〜ほど 構文か (前件 = [述語ば][述語]ほど の反復、&quot;</span>
+        <span class="s2">&quot;文末述語)。非文・不自然で誤読を招くものを item ごとに指摘。</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;(2) cc-inverse：名指しされた dim2 スケールが確実に『減少』方向になっているか。曖昧なものを指摘。</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;(3) 統制文：ctrl-two / ctrl-single が本当に 〜ば〜ほど を欠くか (undetermined が正しいか)。</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;(4) 正解ラベルの誤りがあれば指摘。</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;最後に判定を一語で：GO / GO-WITH-CONDITIONS / NO-GO。問題は item 名を挙げて具体的に。</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+        <span class="s2">&quot;=== 項目一覧 ===</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">listing</span>
+    <span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">],</span> <span class="n">SYS</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">1600</span><span class="p">)</span>
+    <span class="n">cost</span><span class="p">,</span> <span class="n">have</span><span class="p">,</span> <span class="n">missing</span> <span class="o">=</span> <span class="n">billed_cost</span><span class="p">([[</span><span class="n">r</span><span class="p">]])</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">PANEL</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;pre-run critic decorrelation vote + Japanese-fidelity audit&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;billed_usd&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">cost</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+        <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">),</span>
+    <span class="p">}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;VOTE-critic-s215.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;billed: $</span><span class="si">{</span><span class="n">cost</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">  (have=</span><span class="si">{</span><span class="n">have</span><span class="si">}</span><span class="s2"> missing=</span><span class="si">{</span><span class="n">missing</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="sa">f</span><span class="s2">&quot;ERROR: </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

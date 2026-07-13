@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analysis.json — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">designs</a> <span class="sep">/</span> <a href="index.html">lexical-bridging-context-v1</a> <span class="sep">/</span> <span class="cur">analysis.json</span></nav>
+<main>
+<header class="page-head">
+<h1>analysis.json</h1>
+<p class="subtitle"><span class="ftype">JSON</span> &middot; <span class="fsize">12.8 KB</span> &middot; <code class="fpath">experiments/designs/lexical-bridging-context-v1/analysis.json</code></p>
+</header>
+<details class='section'><summary><span class='sec-k'>_meta</span> <span class='muted'>(4 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>n_boot</th><td><span class='j-num'>10000</span></td></tr><tr><th>seed</th><td><span class='j-num'>20260622</span></td></tr><tr><th>band</th><td><ul class='j-arr'><li><span class='j-num'>40</span></li><li><span class='j-num'>60</span></li></ul></td></tr><tr><th>precondition_thresholds</th><td><table class='kv'><tr><th>conf_high</th><td><span class='j-num'>70.0</span></td></tr><tr><th>decline_low</th><td><span class='j-num'>0.2</span></td></tr></table></td></tr></table></div></details><details class='section'><summary><span class='sec-k'>scopes</span> <span class='muted'>(2 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>dwug_plus_wic</th><td><table class='kv'><tr><th>A</th><td><table class='kv'><tr><th>model</th><td><span class='j-str'>claude-sonnet-4.6</span></td></tr><tr><th>n_items</th><td><table class='kv'><tr><th>clear-same</th><td><span class='j-num'>29</span></td></tr><tr><th>bridging</th><td><span class='j-num'>24</span></td></tr><tr><th>clear-different</th><td><span class='j-num'>35</span></td></tr></table></td></tr><tr><th>parse_success</th><td><table class='kv'><tr><th>b_rel</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr><tr><th>b_conf_conf</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr><tr><th>c_third</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr><tr><th>topic</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr></table></td></tr><tr><th>position</th><td><table class='kv'><tr><th>b_rel_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 29.257,
+  &quot;bridging&quot;: 41.333,
+  &quot;clear-same&quot;: 78.862
+}</pre></td></tr><tr><th>brid_in_band_40_60</th><td><span class='j-bool'>true</span></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>22.4829</span></li><li><span class='j-num'>51.7403</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>-3.9457</span></li><li><span class='j-num'>28.0021</span></li></ul></td></tr><tr><th>between_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>between_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>confidence</th><td><table class='kv'><tr><th>b_conf_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 88.057,
+  &quot;bridging&quot;: 82.583,
+  &quot;clear-same&quot;: 85.138
+}</pre></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>-2.0769</span></li><li><span class='j-num'>7.2662</span></li></ul></td></tr><tr><th>gap_cleardiff_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.3919</span></li><li><span class='j-num'>10.3469</span></li></ul></td></tr><tr><th>lower_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>lower_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>decline</th><td><table class='kv'><tr><th>pct_unclear</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.0,
+  &quot;bridging&quot;: 0.0,
+  &quot;clear-same&quot;: 0.034
+}</pre></td></tr><tr><th>gap_bridging_minus_clearsame_ci</th><td><ul class='j-arr'><li><span class='j-num'>-0.1111</span></li><li><span class='j-num'>0.0</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.0</span></li></ul></td></tr><tr><th>elevated_pointwise</th><td><span class='j-bool'>false</span></td></tr><tr><th>elevated_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>dispersion_A_characterizing_only</th><td><table class='kv'><tr><th>entropy_bits_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.028,
+  &quot;bridging&quot;: 0.04,
+  &quot;clear-same&quot;: 0.025
+}</pre></td></tr></table></td></tr><tr><th>q3_topic_control</th><td><table class='kv'><tr><th>n_bridging_pairs</th><td><span class='j-num'>24</span></td></tr><tr><th>pearson_topic_vs_brel_on_bridging</th><td><span class='j-num'>0.5322</span></td></tr></table></td></tr><tr><th>precondition</th><td><table class='kv'><tr><th>conf_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>decline_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>rel_poles_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>met</th><td><span class='j-bool'>true</span></td></tr><tr><th>thresholds</th><td><pre class='json-lite'>{
+  &quot;conf_high&quot;: 70.0,
+  &quot;decline_low&quot;: 0.2,
+  &quot;rel_clearsame_min&quot;: 70.0,
+  &quot;rel_cleardiff_max&quot;: 40.0
+}</pre></td></tr></table></td></tr><tr><th>verdict</th><td><div class='j-str multiline'>CLEAN NULL — bridging handled at clear-item position, confidence, and decline (graded scale + ungraded commitment)</div></td></tr></table></td></tr><tr><th>B</th><td><table class='kv'><tr><th>model</th><td><span class='j-str'>gpt-5.4-mini</span></td></tr><tr><th>n_items</th><td><table class='kv'><tr><th>clear-same</th><td><span class='j-num'>29</span></td></tr><tr><th>bridging</th><td><span class='j-num'>24</span></td></tr><tr><th>clear-different</th><td><span class='j-num'>35</span></td></tr></table></td></tr><tr><th>parse_success</th><td><table class='kv'><tr><th>b_rel</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr><tr><th>b_conf_conf</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr><tr><th>c_third</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr><tr><th>topic</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr></table></td></tr><tr><th>position</th><td><table class='kv'><tr><th>b_rel_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 29.714,
+  &quot;bridging&quot;: 49.75,
+  &quot;clear-same&quot;: 74.448
+}</pre></td></tr><tr><th>brid_in_band_40_60</th><td><span class='j-bool'>true</span></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>9.4524</span></li><li><span class='j-num'>41.2714</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>3.6329</span></li><li><span class='j-num'>34.9565</span></li></ul></td></tr><tr><th>between_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>between_ci_strict</th><td><span class='j-bool'>true</span></td></tr></table></td></tr><tr><th>confidence</th><td><table class='kv'><tr><th>b_conf_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 96.286,
+  &quot;bridging&quot;: 95.667,
+  &quot;clear-same&quot;: 94.172
+}</pre></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>-4.0119</span></li><li><span class='j-num'>0.7619</span></li></ul></td></tr><tr><th>gap_cleardiff_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>-1.2126</span></li><li><span class='j-num'>2.3833</span></li></ul></td></tr><tr><th>lower_pointwise</th><td><span class='j-bool'>false</span></td></tr><tr><th>lower_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>decline</th><td><table class='kv'><tr><th>pct_unclear</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.0,
+  &quot;bridging&quot;: 0.042,
+  &quot;clear-same&quot;: 0.0
+}</pre></td></tr><tr><th>gap_bridging_minus_clearsame_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.1154</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.1154</span></li></ul></td></tr><tr><th>elevated_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>elevated_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>dispersion_A_characterizing_only</th><td><table class='kv'><tr><th>entropy_bits_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.055,
+  &quot;bridging&quot;: 0.182,
+  &quot;clear-same&quot;: 0.3
+}</pre></td></tr></table></td></tr><tr><th>q3_topic_control</th><td><table class='kv'><tr><th>n_bridging_pairs</th><td><span class='j-num'>24</span></td></tr><tr><th>pearson_topic_vs_brel_on_bridging</th><td><span class='j-num'>0.3189</span></td></tr></table></td></tr><tr><th>precondition</th><td><table class='kv'><tr><th>conf_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>decline_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>rel_poles_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>met</th><td><span class='j-bool'>true</span></td></tr><tr><th>thresholds</th><td><pre class='json-lite'>{
+  &quot;conf_high&quot;: 70.0,
+  &quot;decline_low&quot;: 0.2,
+  &quot;rel_clearsame_min&quot;: 70.0,
+  &quot;rel_cleardiff_max&quot;: 40.0
+}</pre></td></tr></table></td></tr><tr><th>verdict</th><td><div class='j-str multiline'>PARTIAL — position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)</div></td></tr></table></td></tr><tr><th>C</th><td><table class='kv'><tr><th>model</th><td><span class='j-str'>gemini-3.5-flash</span></td></tr><tr><th>n_items</th><td><table class='kv'><tr><th>clear-same</th><td><span class='j-num'>29</span></td></tr><tr><th>bridging</th><td><span class='j-num'>24</span></td></tr><tr><th>clear-different</th><td><span class='j-num'>35</span></td></tr></table></td></tr><tr><th>parse_success</th><td><table class='kv'><tr><th>b_rel</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr><tr><th>b_conf_conf</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr><tr><th>c_third</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr><tr><th>topic</th><td><ul class='j-arr'><li><span class='j-num'>88</span></li><li><span class='j-num'>88</span></li></ul></td></tr></table></td></tr><tr><th>position</th><td><table class='kv'><tr><th>b_rel_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 24.143,
+  &quot;bridging&quot;: 45.458,
+  &quot;clear-same&quot;: 82.483
+}</pre></td></tr><tr><th>brid_in_band_40_60</th><td><span class='j-bool'>true</span></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>22.2984</span></li><li><span class='j-num'>49.9655</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>6.8225</span></li><li><span class='j-num'>36.2</span></li></ul></td></tr><tr><th>between_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>between_ci_strict</th><td><span class='j-bool'>true</span></td></tr></table></td></tr><tr><th>confidence</th><td><table class='kv'><tr><th>b_conf_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 98.286,
+  &quot;bridging&quot;: 94.792,
+  &quot;clear-same&quot;: 92.414
+}</pre></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>-6.3276</span></li><li><span class='j-num'>1.3095</span></li></ul></td></tr><tr><th>gap_cleardiff_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.7594</span></li><li><span class='j-num'>6.2278</span></li></ul></td></tr><tr><th>lower_pointwise</th><td><span class='j-bool'>false</span></td></tr><tr><th>lower_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>decline</th><td><table class='kv'><tr><th>pct_unclear</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.0,
+  &quot;bridging&quot;: 0.0,
+  &quot;clear-same&quot;: 0.0
+}</pre></td></tr><tr><th>gap_bridging_minus_clearsame_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.0</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.0</span></li></ul></td></tr><tr><th>elevated_pointwise</th><td><span class='j-bool'>false</span></td></tr><tr><th>elevated_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>dispersion_A_characterizing_only</th><td><table class='kv'><tr><th>entropy_bits_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.021,
+  &quot;bridging&quot;: 0.04,
+  &quot;clear-same&quot;: 0.067
+}</pre></td></tr></table></td></tr><tr><th>q3_topic_control</th><td><table class='kv'><tr><th>n_bridging_pairs</th><td><span class='j-num'>24</span></td></tr><tr><th>pearson_topic_vs_brel_on_bridging</th><td><span class='j-num'>0.5205</span></td></tr></table></td></tr><tr><th>precondition</th><td><table class='kv'><tr><th>conf_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>decline_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>rel_poles_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>met</th><td><span class='j-bool'>true</span></td></tr><tr><th>thresholds</th><td><pre class='json-lite'>{
+  &quot;conf_high&quot;: 70.0,
+  &quot;decline_low&quot;: 0.2,
+  &quot;rel_clearsame_min&quot;: 70.0,
+  &quot;rel_cleardiff_max&quot;: 40.0
+}</pre></td></tr></table></td></tr><tr><th>verdict</th><td><div class='j-str multiline'>PARTIAL — position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)</div></td></tr></table></td></tr></table></td></tr><tr><th>dwug_only</th><td><table class='kv'><tr><th>A</th><td><table class='kv'><tr><th>model</th><td><span class='j-str'>claude-sonnet-4.6</span></td></tr><tr><th>n_items</th><td><table class='kv'><tr><th>clear-same</th><td><span class='j-num'>9</span></td></tr><tr><th>bridging</th><td><span class='j-num'>24</span></td></tr><tr><th>clear-different</th><td><span class='j-num'>15</span></td></tr></table></td></tr><tr><th>parse_success</th><td><table class='kv'><tr><th>b_rel</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr><tr><th>b_conf_conf</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr><tr><th>c_third</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr><tr><th>topic</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr></table></td></tr><tr><th>position</th><td><table class='kv'><tr><th>b_rel_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 15.867,
+  &quot;bridging&quot;: 41.333,
+  &quot;clear-same&quot;: 78.333
+}</pre></td></tr><tr><th>brid_in_band_40_60</th><td><span class='j-bool'>true</span></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>14.3409</span></li><li><span class='j-num'>54.2929</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>10.1643</span></li><li><span class='j-num'>40.5084</span></li></ul></td></tr><tr><th>between_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>between_ci_strict</th><td><span class='j-bool'>true</span></td></tr></table></td></tr><tr><th>confidence</th><td><table class='kv'><tr><th>b_conf_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 89.667,
+  &quot;bridging&quot;: 82.583,
+  &quot;clear-same&quot;: 84.333
+}</pre></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>-3.0417</span></li><li><span class='j-num'>6.9067</span></li></ul></td></tr><tr><th>gap_cleardiff_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>-0.5971</span></li><li><span class='j-num'>13.2933</span></li></ul></td></tr><tr><th>lower_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>lower_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>decline</th><td><table class='kv'><tr><th>pct_unclear</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.0,
+  &quot;bridging&quot;: 0.0,
+  &quot;clear-same&quot;: 0.0
+}</pre></td></tr><tr><th>gap_bridging_minus_clearsame_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.0</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.0</span></li></ul></td></tr><tr><th>elevated_pointwise</th><td><span class='j-bool'>false</span></td></tr><tr><th>elevated_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>dispersion_A_characterizing_only</th><td><table class='kv'><tr><th>entropy_bits_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.0,
+  &quot;bridging&quot;: 0.04,
+  &quot;clear-same&quot;: 0.08
+}</pre></td></tr></table></td></tr><tr><th>q3_topic_control</th><td><table class='kv'><tr><th>n_bridging_pairs</th><td><span class='j-num'>24</span></td></tr><tr><th>pearson_topic_vs_brel_on_bridging</th><td><span class='j-num'>0.5322</span></td></tr></table></td></tr><tr><th>precondition</th><td><table class='kv'><tr><th>conf_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>decline_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>rel_poles_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>met</th><td><span class='j-bool'>true</span></td></tr><tr><th>thresholds</th><td><pre class='json-lite'>{
+  &quot;conf_high&quot;: 70.0,
+  &quot;decline_low&quot;: 0.2,
+  &quot;rel_clearsame_min&quot;: 70.0,
+  &quot;rel_cleardiff_max&quot;: 40.0
+}</pre></td></tr></table></td></tr><tr><th>verdict</th><td><div class='j-str multiline'>PARTIAL — position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)</div></td></tr></table></td></tr><tr><th>B</th><td><table class='kv'><tr><th>model</th><td><span class='j-str'>gpt-5.4-mini</span></td></tr><tr><th>n_items</th><td><table class='kv'><tr><th>clear-same</th><td><span class='j-num'>9</span></td></tr><tr><th>bridging</th><td><span class='j-num'>24</span></td></tr><tr><th>clear-different</th><td><span class='j-num'>15</span></td></tr></table></td></tr><tr><th>parse_success</th><td><table class='kv'><tr><th>b_rel</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr><tr><th>b_conf_conf</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr><tr><th>c_third</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr><tr><th>topic</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr></table></td></tr><tr><th>position</th><td><table class='kv'><tr><th>b_rel_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 20.8,
+  &quot;bridging&quot;: 49.75,
+  &quot;clear-same&quot;: 78.222
+}</pre></td></tr><tr><th>brid_in_band_40_60</th><td><span class='j-bool'>true</span></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>5.4524</span></li><li><span class='j-num'>48.4251</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>11.8643</span></li><li><span class='j-num'>45.3516</span></li></ul></td></tr><tr><th>between_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>between_ci_strict</th><td><span class='j-bool'>true</span></td></tr></table></td></tr><tr><th>confidence</th><td><table class='kv'><tr><th>b_conf_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 96.533,
+  &quot;bridging&quot;: 95.667,
+  &quot;clear-same&quot;: 96.111
+}</pre></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>-0.8746</span></li><li><span class='j-num'>2.0635</span></li></ul></td></tr><tr><th>gap_cleardiff_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>-2.0142</span></li><li><span class='j-num'>3.0732</span></li></ul></td></tr><tr><th>lower_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>lower_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>decline</th><td><table class='kv'><tr><th>pct_unclear</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.0,
+  &quot;bridging&quot;: 0.042,
+  &quot;clear-same&quot;: 0.0
+}</pre></td></tr><tr><th>gap_bridging_minus_clearsame_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.1154</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.12</span></li></ul></td></tr><tr><th>elevated_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>elevated_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>dispersion_A_characterizing_only</th><td><table class='kv'><tr><th>entropy_bits_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.0,
+  &quot;bridging&quot;: 0.182,
+  &quot;clear-same&quot;: 0.537
+}</pre></td></tr></table></td></tr><tr><th>q3_topic_control</th><td><table class='kv'><tr><th>n_bridging_pairs</th><td><span class='j-num'>24</span></td></tr><tr><th>pearson_topic_vs_brel_on_bridging</th><td><span class='j-num'>0.3189</span></td></tr></table></td></tr><tr><th>precondition</th><td><table class='kv'><tr><th>conf_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>decline_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>rel_poles_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>met</th><td><span class='j-bool'>true</span></td></tr><tr><th>thresholds</th><td><pre class='json-lite'>{
+  &quot;conf_high&quot;: 70.0,
+  &quot;decline_low&quot;: 0.2,
+  &quot;rel_clearsame_min&quot;: 70.0,
+  &quot;rel_cleardiff_max&quot;: 40.0
+}</pre></td></tr></table></td></tr><tr><th>verdict</th><td><div class='j-str multiline'>PARTIAL — position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)</div></td></tr></table></td></tr><tr><th>C</th><td><table class='kv'><tr><th>model</th><td><span class='j-str'>gemini-3.5-flash</span></td></tr><tr><th>n_items</th><td><table class='kv'><tr><th>clear-same</th><td><span class='j-num'>9</span></td></tr><tr><th>bridging</th><td><span class='j-num'>24</span></td></tr><tr><th>clear-different</th><td><span class='j-num'>15</span></td></tr></table></td></tr><tr><th>parse_success</th><td><table class='kv'><tr><th>b_rel</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr><tr><th>b_conf_conf</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr><tr><th>c_third</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr><tr><th>topic</th><td><ul class='j-arr'><li><span class='j-num'>48</span></li><li><span class='j-num'>48</span></li></ul></td></tr></table></td></tr><tr><th>position</th><td><table class='kv'><tr><th>b_rel_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 11.533,
+  &quot;bridging&quot;: 45.458,
+  &quot;clear-same&quot;: 82.778
+}</pre></td></tr><tr><th>brid_in_band_40_60</th><td><span class='j-bool'>true</span></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>19.6576</span></li><li><span class='j-num'>52.6966</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>20.8141</span></li><li><span class='j-num'>48.3614</span></li></ul></td></tr><tr><th>between_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>between_ci_strict</th><td><span class='j-bool'>true</span></td></tr></table></td></tr><tr><th>confidence</th><td><table class='kv'><tr><th>b_conf_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 99.0,
+  &quot;bridging&quot;: 94.792,
+  &quot;clear-same&quot;: 96.111
+}</pre></td></tr><tr><th>gap_clearsame_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>-1.8333</span></li><li><span class='j-num'>4.4667</span></li></ul></td></tr><tr><th>gap_cleardiff_minus_bridging_ci</th><td><ul class='j-arr'><li><span class='j-num'>1.1818</span></li><li><span class='j-num'>7.1429</span></li></ul></td></tr><tr><th>lower_pointwise</th><td><span class='j-bool'>true</span></td></tr><tr><th>lower_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>decline</th><td><table class='kv'><tr><th>pct_unclear</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.0,
+  &quot;bridging&quot;: 0.0,
+  &quot;clear-same&quot;: 0.0
+}</pre></td></tr><tr><th>gap_bridging_minus_clearsame_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.0</span></li></ul></td></tr><tr><th>gap_bridging_minus_cleardiff_ci</th><td><ul class='j-arr'><li><span class='j-num'>0.0</span></li><li><span class='j-num'>0.0</span></li></ul></td></tr><tr><th>elevated_pointwise</th><td><span class='j-bool'>false</span></td></tr><tr><th>elevated_ci_strict</th><td><span class='j-bool'>false</span></td></tr></table></td></tr><tr><th>dispersion_A_characterizing_only</th><td><table class='kv'><tr><th>entropy_bits_means</th><td><pre class='json-lite'>{
+  &quot;clear-different&quot;: 0.0,
+  &quot;bridging&quot;: 0.04,
+  &quot;clear-same&quot;: 0.0
+}</pre></td></tr></table></td></tr><tr><th>q3_topic_control</th><td><table class='kv'><tr><th>n_bridging_pairs</th><td><span class='j-num'>24</span></td></tr><tr><th>pearson_topic_vs_brel_on_bridging</th><td><span class='j-num'>0.5205</span></td></tr></table></td></tr><tr><th>precondition</th><td><table class='kv'><tr><th>conf_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>decline_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>rel_poles_ok</th><td><span class='j-bool'>true</span></td></tr><tr><th>met</th><td><span class='j-bool'>true</span></td></tr><tr><th>thresholds</th><td><pre class='json-lite'>{
+  &quot;conf_high&quot;: 70.0,
+  &quot;decline_low&quot;: 0.2,
+  &quot;rel_clearsame_min&quot;: 70.0,
+  &quot;rel_cleardiff_max&quot;: 40.0
+}</pre></td></tr></table></td></tr><tr><th>verdict</th><td><div class='j-str multiline'>PARTIAL — position graded (B) but confidence/decline at clear-item level: graded SCALE with ungraded COMMITMENT (within-item discreteness)</div></td></tr></table></td></tr></table></td></tr></table></div></details>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

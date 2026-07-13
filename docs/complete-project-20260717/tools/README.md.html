@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>README.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../index.html">home</a> <span class="sep">/</span> <a href="index.html">tools</a> <span class="sep">/</span> <span class="cur">README.md</span></nav>
+<main>
+<header class="page-head">
+<h1>README.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">10.0 KB</span> &middot; <code class="fpath">tools/README.md</code></p>
+</header>
+<div class='md'><h1 id="toolsreadmemd">tools/README.md</h1>
+<h2 id="build-indexpy">build-index.py</h2>
+<p><code>tools/build-index.py</code> regenerates the <strong>page catalog</strong> in <code>wiki/index.md</code> — everything between
+its <code>BEGIN GENERATED CATALOG</code> / <code>END GENERATED CATALOG</code> markers — from page front-matter, <strong>one
+line per page</strong> (adopted 2026-07-02 with the program; enforces the 2026-06-18
+<code>wiki-frontmatter-ergonomics</code> slimming intent after the hand-maintained catalog regrew to
+~600 KB). The header above the markers stays hand-maintained; the block between them is owned by
+this tool and must never be hand-edited.</p>
+<div class="highlight"><pre><span></span><code>python3 tools/build-index.py           # rewrite the generated block in place
+python3 tools/build-index.py --check   # report-only; exit 1 if the block is stale
+</code></pre></div>
+
+<ul>
+<li>Covers: open decisions (+ a resolved-count pointer line), base concepts/sources/resources,
+  <code>wanted.md</code>, all findings types (including <code>note</code> when the directory exists), experiment
+  designs, and run records (newest first, linked via their READMEs).</li>
+<li>Line format: link (label = path, so senselint check 6 always matches) — title, truncated —
+  <code>**status**</code> — anchor state for claims/results (<code>anchored</code> / <code>internal-contrast-only</code> /
+  <code>anchor: pending</code>) — updated/created date. Details live on the pages, not in the catalog.</li>
+<li>Uses <code>senselint.py</code>'s front-matter parser, so the two tools can never disagree about a page.</li>
+<li>Run it <strong>first</strong> at the verification step (<code>PROTOCOL.md §5</code>): new, renamed, or retyped pages
+  self-register; a page missing from the catalog after a run means its front-matter is broken
+  (senselint will say how).</li>
+</ul>
+<h2 id="linkifypy">linkify.py</h2>
+<p><code>tools/linkify.py</code> makes the wiki <strong>clickable</strong>: it rewrites in-repo references written as backticked code spans into relative markdown links, so a reader can navigate page-to-page in any markdown viewer.</p>
+<div class="highlight"><pre><span></span><code>python3 tools/linkify.py          # rewrite in place across wiki/
+python3 tools/linkify.py --check  # report-only; exit 1 if anything would change
+</code></pre></div>
+
+<p>It converts three reference shapes, <strong>only when the target file exists on disk</strong>:</p>
+<ul>
+<li>typed refs — <code>`source/foo`</code>, <code>`claim/bar`</code>, <code>`conjecture/baz`</code>, etc. → the page under the matching <code>wiki/</code> directory;</li>
+<li>decision refs — <code>`decisions/open/foo`</code> (with or without <code>.md</code>) → <code>decisions/open/foo.md</code>;</li>
+<li>path refs — any backticked relative <code>.md</code> path such as <code>`base/sources/foo.md`</code> or <code>`meaning-senses.md`</code> (resolved against <code>wiki/</code> first, then the repo root) — this is what makes the <code>index.md</code> catalog clickable.</li>
+</ul>
+<p>The visible label keeps the original backticked text, so <code>`source/foo`</code> becomes <code>[`source/foo`](../../base/sources/foo.md)</code> — still reads as a typed reference, now clickable.</p>
+<p>Design guarantees:</p>
+<ul>
+<li><strong>Existence-gated.</strong> Aspirational mentions of not-yet-created pages (e.g. a <code>decisions/open/</code> entry a conjecture says it <em>will</em> queue) are left as plain code spans, so the tool never creates a dead link.</li>
+<li><strong>Idempotent.</strong> Already-linkified references are never re-wrapped; safe to run every wave.</li>
+<li><strong>YAML untouched.</strong> The front-matter <code>links:</code> block uses <code>target: type/id</code> <em>without</em> backticks and is never modified — it remains the machine-readable typed-link graph that senselint consumes. The clickable links are body prose; the typed links are metadata. Both are kept in sync by hand (and verified by senselint checks 3 and 7).</li>
+</ul>
+<p>Run <code>linkify.py</code> (and <code>senselint.py</code>) as part of the verification step before every commit; see <code>PROTOCOL.md</code>.</p>
+<h2 id="senselintpy">senselint.py</h2>
+<p><code>tools/senselint.py</code> is the mechanical verification gate for the <code>ai-semantics</code> wiki, implementing the checks described in <code>PROTOCOL.md §5</code> and <code>CLAUDE.md §Verification before commit</code>.</p>
+<h3 id="how-to-run">How to run</h3>
+<div class="highlight"><pre><span></span><code>python3 tools/senselint.py
+</code></pre></div>
+
+<p>Run from anywhere inside the repo. The tool auto-detects the repo root by looking for a <code>wiki/</code> directory relative to its own location. You can also pass an explicit repo path:</p>
+<div class="highlight"><pre><span></span><code>python3 tools/senselint.py --repo /path/to/ai-semantics
+</code></pre></div>
+
+<p><strong>Exit code:</strong> 0 if no ERRORs; 1 if any ERROR is found. WARNs and INFOs do not affect the exit code.</p>
+<h3 id="what-it-checks">What it checks</h3>
+<h4 id="check-1-front-matter-presence-and-required-fields">Check 1 — Front-matter presence and required fields</h4>
+<p>Every <code>.md</code> file under <code>wiki/findings/</code> must begin with a YAML front-matter block (delimited by <code>---</code>) that contains at least:</p>
+<ul>
+<li><code>type</code> — one of the declared page types</li>
+<li><code>id</code> — kebab-case stable identifier</li>
+<li><code>title</code> — human-readable title</li>
+</ul>
+<p>Violations in <code>wiki/findings/</code> are <strong>ERROR</strong>. For <code>wiki/base/</code> pages (concepts, sources, resources), missing front-matter is a <strong>WARN</strong> (stubs are tolerated).</p>
+<h4 id="check-2-meaning-senses-vocabulary">Check 2 — meaning-senses vocabulary</h4>
+<p>Every <code>wiki/findings/</code> page must declare at least one tag under <code>meaning-senses:</code>. All tags must be drawn from the controlled vocabulary in <code>wiki/meaning-senses.md</code>, specifically the <code>### \</code>tagname`<code>headings under</code>## Tags`.</p>
+<p>Sub-tags are also allowed. A tag like <code>grounded.perceptual</code> is valid if its prefix (<code>grounded</code>) is in the vocabulary. The vocabulary is parsed dynamically each run; adding a new top-level tag to <code>meaning-senses.md</code> immediately makes it valid here.</p>
+<p>Violations are <strong>ERROR</strong>.</p>
+<h4 id="check-3-typed-links">Check 3 — Typed links</h4>
+<p>Every entry in a page's <code>links:</code> list is checked for:</p>
+<ul>
+<li><strong>Allowed relation:</strong> <code>rel</code> must be one of: <code>supports</code>, <code>contradicts</code>, <code>refines</code>, <code>depends-on</code>, <code>operationalizes</code>, <code>anchors</code>, <code>supersedes</code>. Unknown relations are <strong>ERROR</strong>.</li>
+<li><strong>Resolvable target:</strong> <code>target</code> must look like <code>&lt;type&gt;/&lt;id&gt;</code> and the corresponding file <code>&lt;type-dir&gt;/&lt;id&gt;.md</code> must exist in the repo. Dangling targets are <strong>ERROR</strong>.</li>
+</ul>
+<p>The type-to-directory mapping used:</p>
+<table>
+<thead>
+<tr>
+<th>Target prefix</th>
+<th>Directory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source</code></td>
+<td><code>wiki/base/sources/</code></td>
+</tr>
+<tr>
+<td><code>resource</code></td>
+<td><code>wiki/base/resources/</code></td>
+</tr>
+<tr>
+<td><code>concept</code></td>
+<td><code>wiki/base/concepts/</code></td>
+</tr>
+<tr>
+<td><code>claim</code></td>
+<td><code>wiki/findings/claims/</code></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>wiki/findings/results/</code></td>
+</tr>
+<tr>
+<td><code>conjecture</code></td>
+<td><code>wiki/findings/conjectures/</code></td>
+</tr>
+<tr>
+<td><code>theory</code></td>
+<td><code>wiki/findings/theory/</code></td>
+</tr>
+<tr>
+<td><code>open-question</code></td>
+<td><code>wiki/findings/open-questions/</code></td>
+</tr>
+<tr>
+<td><code>design</code></td>
+<td><code>experiments/designs/</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="check-4-anchor-discipline">Check 4 — Anchor discipline</h4>
+<p>Every <code>claim</code> or <code>result</code> page must satisfy one of:</p>
+<ol>
+<li>Has an <code>anchors</code> link (in <code>links:</code>) pointing to a <code>resource/…</code> target, <strong>OR</strong></li>
+<li>Has <code>anchor: pending</code> in its front-matter <strong>AND</strong> a non-empty <code>contingent-on:</code> list with a corresponding file in <code>decisions/open/</code>.</li>
+</ol>
+<p>Violations are <strong>ERROR</strong>. A page with <code>anchor: pending</code> and a matching <code>decisions/open/</code> entry gets an <strong>INFO</strong> note. If the <code>contingent-on</code> id has no matching <code>decisions/open/&lt;id&gt;.md</code> file, that is a <strong>WARN</strong>.</p>
+<h4 id="check-5-contingent-language-note">Check 5 — Contingent-language note</h4>
+<p>Any page (findings or base) with a non-empty <code>contingent-on:</code> list gets an <strong>INFO</strong> note reminding that the page must use provisional, not settled, language until Tom ratifies the open decision. The tool cannot parse prose sentiment, so this is a human-review prompt, not an automated judgment.</p>
+<h4 id="check-6-index-coverage">Check 6 — Index coverage</h4>
+<p>Every <code>wiki/findings/</code> and <code>wiki/base/</code> page (by filename stem or <code>id</code> field) should appear in <code>wiki/index.md</code>. Pages missing from the index are <strong>WARN</strong>.</p>
+<h4 id="check-7-inline-link-integrity">Check 7 — Inline-link integrity</h4>
+<p>Every inline markdown link in a <code>wiki/</code> page that points to a relative <code>.md</code> target (e.g. <code>[</code>source/foo<code>](../../base/sources/foo.md)</code>) must resolve to a file that exists. Broken targets are <strong>ERROR</strong>. External URLs, pure-anchor links, and non-<code>.md</code> targets are ignored; fenced code blocks are skipped. This keeps the clickable navigation produced by <code>linkify.py</code> (below) from rotting when pages are renamed or moved.</p>
+<h3 id="output-format">Output format</h3>
+<p>The report is grouped into three sections:</p>
+<div class="highlight"><pre><span></span><code>### ERROR (&lt;n&gt; issues) ###
+  [ERROR] wiki/findings/claims/foo.md
+          &lt;message&gt;
+
+### WARN (&lt;n&gt; issues) ###
+  [WARN]  wiki/base/concepts/bar.md
+          &lt;message&gt;
+
+### INFO (&lt;n&gt; notes) ###
+  [INFO]  wiki/findings/conjectures/baz.md
+          &lt;message&gt;
+</code></pre></div>
+
+<p>Followed by a one-line summary count.</p>
+<h3 id="dependencies">Dependencies</h3>
+<p>Stdlib-only Python 3. The tool tries <code>import yaml</code> (PyYAML) for robust front-matter parsing and falls back to a built-in minimal parser if PyYAML is not installed. The minimal parser handles block scalars, block lists, and one-level-deep block mappings — sufficient for all current wiki front-matter.</p>
+<h3 id="extending-senselint">Extending senselint</h3>
+<ul>
+<li><strong>New page type:</strong> add the type and its directory to <code>TYPE_DIR_MAP</code> in the script.</li>
+<li><strong>New relation:</strong> add it to <code>ALLOWED_RELATIONS</code>.</li>
+<li><strong>New meaning-sense:</strong> add a <code>### \</code>tagname`<code>heading under</code>## Tags<code>in</code>wiki/meaning-senses.md`; senselint picks it up dynamically.</li>
+<li><strong>New check:</strong> add a <code>check_*</code> function and call it in <code>main()</code> under the appropriate loop.</li>
+</ul>
+<h2 id="session-clocksh">session-clock.sh</h2>
+<p><strong>Optional since 2026-07-02</strong> — the journal clock-stamp mandate was dropped with the program
+adoption (<a href="../wiki/decisions/resolved/program-2026-07-adoption.md.html"><code>program-2026-07-adoption</code></a>);
+no protocol step requires this tool. It remains available for when a wall-clock duration is
+wanted: sessions carry no other record of their <em>start</em> (the commits and the merge all land at
+the <em>end</em>), so without it a total duration cannot be read back.</p>
+<div class="highlight"><pre><span></span><code>tools/session-clock.sh start            # optionally, near session start
+tools/session-clock.sh report [N]       # optionally, at wind-up; N = session number
+tools/session-clock.sh start --force    # deliberately reset the start (rarely needed)
+</code></pre></div>
+
+<ul>
+<li><strong><code>start</code></strong> writes the start epoch to <code>.session-clock</code> at the repo root. That file is
+  <strong>gitignored and ephemeral</strong> — it lives only inside the run's container and is never committed;
+  the duration it feeds is persisted only in the committed journal entry. <code>start</code> does <strong>not</strong>
+  overwrite an existing clock, so calling it again mid-session (e.g. after a context summary)
+  keeps the true start.</li>
+<li><strong><code>report [N]</code></strong> reads <code>.session-clock</code>, takes <em>now</em> as the end, and prints the start and end
+  JST clock times, the total elapsed (<code>Xh Ym</code>), and a ready-to-paste journal stamp
+  (<code>Month D, YYYY, HH:MM–HH:MM JST (session N) · total Xh Ym</code>; both dates are spelled out if the
+  session crossed JST midnight). If no clock was started it says so and gives an end-only stamp —
+  it never invents a duration.</li>
+</ul>
+<p>All clock times are Japan time (JST) to match the website convention; elapsed is computed from
+epoch seconds, so it is timezone-safe. Stdlib <code>date</code> only; no Python.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

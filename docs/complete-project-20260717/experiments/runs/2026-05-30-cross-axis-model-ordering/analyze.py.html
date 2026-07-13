@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-30-cross-axis-model-ordering</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">8.5 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-30-cross-axis-model-ordering/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Cross-axis model-ordering re-analysis (2026-05-30). Pure-Python, NO API, $0.</span>
+
+<span class="sd">Question (NEXT.md backlog unit 3): does each panel model&#39;s LEXICAL gradience strength</span>
+<span class="sd">(result/lexical-sense-gradience-v1) predict its CONSTRUCTIONAL performance across the</span>
+<span class="sd">project&#39;s own-design grammatical results? Early sign from the bridge result was &quot;no&quot;</span>
+<span class="sd">(gemini strongest lexically yet least coercion-sensitive). This makes it a typed finding.</span>
+
+<span class="sd">This is a TABULATION of numbers already on the in-repo result pages (each value is</span>
+<span class="sd">provenance-tagged to its source page below) + rank correlations across the panel of three.</span>
+<span class="sd">It introduces NO new data and queries NO model. With only n=3 models a Spearman is a blunt</span>
+<span class="sd">instrument (only a handful of distinct orderings exist) — it is reported as a descriptive</span>
+<span class="sd">ordering check with the exact rank pattern, NOT a significance test.</span>
+
+<span class="sd">PANEL order fixed: claude-sonnet-4.6, gpt-5.4-mini, gemini-3.5-flash.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">permutations</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">MODELS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;claude&quot;</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">]</span>
+
+<span class="c1"># --- LEXICAL predictor: Spearman rho vs human DURel median (result/lexical-sense-gradience-v1) ---</span>
+<span class="n">LEXICAL</span> <span class="o">=</span> <span class="p">{</span>  <span class="c1"># durel framing rho (primary); cont in parens on the page</span>
+    <span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mf">0.679</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mf">0.601</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mf">0.804</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">LEXICAL_CONT</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mf">0.696</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mf">0.675</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mf">0.825</span><span class="p">}</span>
+
+<span class="c1"># --- CONSTRUCTIONAL outcomes, per model. Each dict is one result page&#39;s headline per-model</span>
+<span class="c1"># number, with `metric`, `source` (result id), and `direction` (+1 = higher is more competent,</span>
+<span class="c1"># for ranking). Ceiling-for-all rows are flagged ceiling=True and excluded from rank correlation</span>
+<span class="c1"># (no discriminating order). Values quoted from the result pages (see README provenance table).</span>
+<span class="n">CONSTRUCTIONAL</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># add-direction Tier-4 positives — at/near ceiling</span>
+    <span class="s2">&quot;caused-motion-v1 (affirm%, FC)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;affirm caused-motion rate %, forced-choice&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/caused-motion-minimal-pair-divergence-v1&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;way-v1 (affirm%, FC)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mf">77.8</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mf">94.4</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;affirm path-traversal rate %, forced-choice&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/way-construction-traversal-v1&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;conative-v1 (gap pp, FC)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mi">88</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;transitive-conative completed-contact gap pp, forced-choice&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/conative-minimal-pair-divergence-v1&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;conative-v1 (gap pp, NLI)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mi">54</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mi">67</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;transitive-conative gap pp, NLI&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/conative-minimal-pair-divergence-v1&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;CC-v1 (gap pp)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mf">87.5</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mf">90.0</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mf">80.0</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;CC covariation vs control gap pp&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/comparative-correlative-covariation-v1&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;cxnli-distinction (drop pp; LOWER=better)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">41</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;base-&gt;distinction accuracy drop pp (less negative = better)&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/cxnli-distinction-divergence-v1&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;conative-cancel-v2 (suppress%, FC)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mf">66.7</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mf">33.3</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mf">83.3</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;conative suppression-no-cue %, forced-choice&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/conative-cancel-direction-v2&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;coercion-implicit-v2b (impossible-affirm%, FC; LOWER=more world-knowledge)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;affirm physically-impossible coercion %, FC (lower = more WK engagement)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/coercion-implicit-cue-v2b&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;CC-v3 (operator-correct%, FC)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;operator-scope-correct %, FC (negation/hedge embedding)&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/comparative-correlative-covariation-v3&quot;</span><span class="p">},</span>
+    <span class="s2">&quot;caused-motion-near-miss-v2c (gap pp, FC)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mf">68.8</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mf">62.5</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;construction-vs-near-miss causation gap pp, FC&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/caused-motion-near-miss-v2c&quot;</span><span class="p">},</span>
+    <span class="c1"># THE BRIDGE — the discriminating cross-axis datum</span>
+    <span class="s2">&quot;coercion-sense-modulation-v1 (gap cont)&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;claude&quot;</span><span class="p">:</span> <span class="mf">31.4</span><span class="p">,</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">:</span> <span class="mf">20.5</span><span class="p">,</span> <span class="s2">&quot;gemini&quot;</span><span class="p">:</span> <span class="mf">8.3</span><span class="p">},</span>
+        <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="s2">&quot;coercion sense-shift gap (control-elab - coerced), 0-100&quot;</span><span class="p">,</span> <span class="s2">&quot;ceiling&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;result/coercion-sense-modulation-v1&quot;</span><span class="p">},</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ranks</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">while</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="ow">and</span> <span class="n">z</span><span class="p">[</span><span class="n">order</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span> <span class="o">==</span> <span class="n">z</span><span class="p">[</span><span class="n">order</span><span class="p">[</span><span class="n">i</span><span class="p">]]:</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">avg</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">r</span><span class="p">[</span><span class="n">order</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span> <span class="o">=</span> <span class="n">avg</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">r</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pearson</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">mx</span><span class="p">,</span> <span class="n">my</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">cov</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">a</span> <span class="o">-</span> <span class="n">mx</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">my</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+    <span class="n">vx</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">a</span> <span class="o">-</span> <span class="n">mx</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">x</span><span class="p">))</span>
+    <span class="n">vy</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">((</span><span class="n">b</span> <span class="o">-</span> <span class="n">my</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">y</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">cov</span> <span class="o">/</span> <span class="p">(</span><span class="n">vx</span> <span class="o">*</span> <span class="n">vy</span><span class="p">)</span> <span class="k">if</span> <span class="n">vx</span> <span class="ow">and</span> <span class="n">vy</span> <span class="k">else</span> <span class="mf">0.0</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">spearman</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pearson</span><span class="p">(</span><span class="n">ranks</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">ranks</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">order_str</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot; &gt; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="o">-</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">lex</span> <span class="o">=</span> <span class="p">[</span><span class="n">LEXICAL</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">MODELS</span><span class="p">]</span>
+    <span class="n">lex_order</span> <span class="o">=</span> <span class="n">order_str</span><span class="p">(</span><span class="n">LEXICAL</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;panel&quot;</span><span class="p">:</span> <span class="n">MODELS</span><span class="p">,</span>
+           <span class="s2">&quot;lexical_predictor_durel&quot;</span><span class="p">:</span> <span class="n">LEXICAL</span><span class="p">,</span> <span class="s2">&quot;lexical_predictor_cont&quot;</span><span class="p">:</span> <span class="n">LEXICAL_CONT</span><span class="p">,</span>
+           <span class="s2">&quot;lexical_order&quot;</span><span class="p">:</span> <span class="n">lex_order</span><span class="p">,</span>
+           <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;n=3 models: Spearman is descriptive only (few distinct orderings); &quot;</span>
+                   <span class="s2">&quot;report the exact rank pattern. Ceiling-for-all rows excluded from rho.&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;per_result&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">===== CROSS-AXIS MODEL-ORDERING (n=3 models) =====&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LEXICAL predictor (durel rho): </span><span class="si">{</span><span class="n">LEXICAL</span><span class="si">}</span><span class="s2">  order: </span><span class="si">{</span><span class="n">lex_order</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">rhos</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">CONSTRUCTIONAL</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">cvals</span> <span class="o">=</span> <span class="p">[</span><span class="n">info</span><span class="p">[</span><span class="s2">&quot;vals&quot;</span><span class="p">][</span><span class="n">m</span><span class="p">]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">MODELS</span><span class="p">]</span>
+        <span class="n">rho</span> <span class="o">=</span> <span class="n">spearman</span><span class="p">(</span><span class="n">lex</span><span class="p">,</span> <span class="n">cvals</span><span class="p">)</span>
+        <span class="n">co</span> <span class="o">=</span> <span class="n">order_str</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s2">&quot;vals&quot;</span><span class="p">])</span>
+        <span class="n">agree</span> <span class="o">=</span> <span class="s2">&quot;CEILING&quot;</span> <span class="k">if</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;ceiling&quot;</span><span class="p">]</span> <span class="k">else</span> <span class="p">(</span><span class="s2">&quot;MATCH&quot;</span> <span class="k">if</span> <span class="n">co</span> <span class="o">==</span> <span class="n">lex_order</span> <span class="k">else</span> <span class="s2">&quot;DIVERGE&quot;</span><span class="p">)</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_result&quot;</span><span class="p">][</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;vals&quot;</span><span class="p">:</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;vals&quot;</span><span class="p">],</span> <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="n">co</span><span class="p">,</span>
+                                   <span class="s2">&quot;rho_vs_lexical&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+                                   <span class="s2">&quot;ceiling_for_all&quot;</span><span class="p">:</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;ceiling&quot;</span><span class="p">],</span>
+                                   <span class="s2">&quot;lexical_order_agreement&quot;</span><span class="p">:</span> <span class="n">agree</span><span class="p">,</span>
+                                   <span class="s2">&quot;metric&quot;</span><span class="p">:</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;metric&quot;</span><span class="p">],</span> <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;source&quot;</span><span class="p">]}</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;ceiling&quot;</span><span class="p">]:</span>
+            <span class="n">rhos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rho</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">&lt;52</span><span class="si">}</span><span class="s2"> order: </span><span class="si">{</span><span class="n">co</span><span class="si">:</span><span class="s2">&lt;34</span><span class="si">}</span><span class="s2"> rho=</span><span class="si">{</span><span class="n">rho</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2">  [</span><span class="si">{</span><span class="n">agree</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
+    <span class="c1"># summary across discriminating (non-ceiling) results</span>
+    <span class="k">if</span> <span class="n">rhos</span><span class="p">:</span>
+        <span class="n">mean_rho</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">rhos</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">rhos</span><span class="p">)</span>
+        <span class="n">n_match</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_result&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+                      <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;lexical_order_agreement&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;MATCH&quot;</span><span class="p">)</span>
+        <span class="n">n_div</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_result&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;lexical_order_agreement&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;DIVERGE&quot;</span><span class="p">)</span>
+        <span class="n">n_ceil</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_result&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+                     <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;lexical_order_agreement&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;CEILING&quot;</span><span class="p">)</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;summary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;n_results&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">CONSTRUCTIONAL</span><span class="p">),</span> <span class="s2">&quot;n_ceiling_excluded&quot;</span><span class="p">:</span> <span class="n">n_ceil</span><span class="p">,</span>
+            <span class="s2">&quot;n_discriminating&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">rhos</span><span class="p">),</span>
+            <span class="s2">&quot;mean_rho_vs_lexical (discriminating)&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_rho</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+            <span class="s2">&quot;n_order_match&quot;</span><span class="p">:</span> <span class="n">n_match</span><span class="p">,</span> <span class="s2">&quot;n_order_diverge&quot;</span><span class="p">:</span> <span class="n">n_div</span><span class="p">,</span>
+            <span class="s2">&quot;gpt_is_weakest_lexically&quot;</span><span class="p">:</span> <span class="n">LEXICAL</span><span class="p">[</span><span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">min</span><span class="p">(</span><span class="n">LEXICAL</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
+            <span class="s2">&quot;bridge_inverts&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">order_str</span><span class="p">(</span><span class="n">CONSTRUCTIONAL</span><span class="p">[</span><span class="s2">&quot;coercion-sense-modulation-v1 (gap cont)&quot;</span><span class="p">][</span><span class="s2">&quot;vals&quot;</span><span class="p">])</span>
+                               <span class="o">!=</span> <span class="n">lex_order</span><span class="p">),</span>
+        <span class="p">}</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">  mean rho (lexical vs constructional, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rhos</span><span class="p">)</span><span class="si">}</span><span class="s2"> discriminating results) &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;= </span><span class="si">{</span><span class="n">mean_rho</span><span class="si">:</span><span class="s2">+.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  order MATCH=</span><span class="si">{</span><span class="n">n_match</span><span class="si">}</span><span class="s2">  DIVERGE=</span><span class="si">{</span><span class="n">n_div</span><span class="si">}</span><span class="s2">  CEILING(excluded)=</span><span class="si">{</span><span class="n">n_ceil</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  bridge (coercion-sense-modulation) order = &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">order_str</span><span class="p">(</span><span class="n">CONSTRUCTIONAL</span><span class="p">[</span><span class="s1">&#39;coercion-sense-modulation-v1 (gap cont)&#39;</span><span class="p">][</span><span class="s1">&#39;vals&#39;</span><span class="p">])</span><span class="si">}</span><span class="s2"> &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;(lexical order = </span><span class="si">{</span><span class="n">lex_order</span><span class="si">}</span><span class="s2">) -&gt; &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;INVERTS&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;summary&#39;</span><span class="p">][</span><span class="s1">&#39;bridge_inverts&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;matches&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">,</span> <span class="s2">&quot;results.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">wrote </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;raw&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;results.json&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

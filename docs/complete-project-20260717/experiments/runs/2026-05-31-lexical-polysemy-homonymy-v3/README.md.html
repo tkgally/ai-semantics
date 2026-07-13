@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>README.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-31-lexical-polysemy-homonymy-v3</a> <span class="sep">/</span> <span class="cur">README.md</span></nav>
+<main>
+<header class="page-head">
+<h1>README.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">7.3 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-31-lexical-polysemy-homonymy-v3/README.md</code></p>
+</header>
+<div class='md'><h1 id="run-record-lexical-v3-polysemy-vs-homonymy-discreteness-on-a-homonymy-enriched-wic-noun-subset">Run record — lexical-v3: polysemy-vs-homonymy discreteness on a homonymy-enriched WiC noun subset</h1>
+<p><strong>Date:</strong> 2026-05-31 · <strong>Design:</strong> <a href="../../designs/lexical-polysemy-homonymy-v3.md.html"><code>design/lexical-polysemy-homonymy-v3</code></a> · <strong>Anchor:</strong> <a href="../../../wiki/base/resources/wic-word-in-context.md.html"><code>resource/wic-word-in-context</code></a> (WiC binary same/different-sense, CC BY-NC 4.0; Tom decision 3a) · <strong>Conjecture:</strong> <a href="../../../wiki/findings/conjectures/lexical-sense-gradience.md.html"><code>conjecture/lexical-sense-gradience</code></a> clause (b).</p>
+<p>This is the clean clause-(b) re-run the <a href="../../../wiki/findings/results/lexical-polysemy-homonymy-v2.md.html"><code>result/lexical-polysemy-homonymy-v2</code></a> null pointed to: DWUG EN held only <strong>3 clean homonym lemmas</strong>; WiC supplies a homonymy-enriched, human-rated (binary) contrast. The instrument is the <strong>same ratified graded panel as v1</strong> (gate Q1: DURel 4-point + 0–100); the human anchor is WiC's <strong>binary</strong> T(same)/F(different) label; all claims scoped to a <strong>binary same/different separation</strong>, never a graded correlation (WiC has no graded axis).</p>
+<h2 id="freeze-recorded-before-any-model-call">FREEZE (recorded BEFORE any model call)</h2>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>sha256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WiC_dataset.zip</code> (pilehvar package, ships test gold)</td>
+<td><code>f1a2fb67d903c5b9b1180f1035d4228f7c0254e8f5f868d556235457046bd4b2</code></td>
+</tr>
+<tr>
+<td><code>manifest.csv</code> (161 items: WiC id + lemma + pos + gold + stratum + overlap covariate; <strong>NO corpus sentences</strong>)</td>
+<td><code>89dff8e9442ce14128887b59c9c22493019664d526903630bc42a1004dce868e</code></td>
+</tr>
+<tr>
+<td><code>stratification.csv</code> (the design-added polysemy/homonymy layer, etymology-sourced)</td>
+<td><code>dc74fddb464d7b1cd2df48ce7639f1766b8165657479a9559b72696efffdd5e6</code></td>
+</tr>
+</tbody>
+</table>
+<p>Freeze means: the item set, the stratification, the indicators (<code>analyze.py</code>), the model-floor band (durel=1, cont≤10), the permutation/bootstrap machinery, and the overlap-matched control are <strong>all fixed before any probe call</strong>. No threshold is tuned after seeing ratings.</p>
+<h2 id="item-set-frozen">Item set (frozen)</h2>
+<table>
+<thead>
+<tr>
+<th>Stratum</th>
+<th>lemmas (n=11 each)</th>
+<th>T items</th>
+<th>F items</th>
+<th>total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HOMONYM</strong></td>
+<td>ball, bank, case, date, pitch, pitcher, plane, rock, school, seal, tear</td>
+<td>21</td>
+<td>39</td>
+<td>60</td>
+</tr>
+<tr>
+<td><strong>POLYSEME</strong></td>
+<td>bed, body, court, drink, fire, grain, heart, mouth, stick, train, voice</td>
+<td>36</td>
+<td>65</td>
+<td>101</td>
+</tr>
+</tbody>
+</table>
+<p>161 items total. NOUNS only (homonymy is cleanest/most concrete for nouns; matches the WordNet noun-synset framing of <a href="../../../wiki/base/resources/wordnet-sense-inventory.md.html"><code>resource/wordnet-sense-inventory</code></a>). Calls = 161 × 2 framings × 3 models = <strong>966</strong>.</p>
+<h2 id="stratification-method-etymology-grounded-gate-q2-not-the-bare-wordnet-structural-rule">Stratification method — etymology-grounded (gate Q2), NOT the bare WordNet structural rule</h2>
+<p>Tom's steer this round was to <em>prefer the gate's WordNet lexicographer-file rule over the etymological fallback</em> now that nltk WordNet is installable. I <strong>evaluated</strong> that rule (<code>explore.py</code>) and recorded a methodological finding:</p>
+<blockquote>
+<p><strong>The bare WordNet lexicographer-file + hypernym rule OVER-CALLS homonymy ~6:1.</strong> Of 2,585 WiC (lemma,pos) keys it labels <strong>1,487 HOMONYM vs 869 POLYSEME</strong>, flagging textbook <strong>polysemes</strong> like <em>make, break, take, head, work, play</em> as homonyms — because WordNet's fine sense granularity scatters <em>related</em> senses across different lexnames with shallow common hypernyms (e.g. <em>make</em> → 44 "clusters"). For verbs it is essentially useless (no unique beginner; sense inflation). For nouns it still mislabels <strong>light</strong> as a homonym (2 noun clusters) when the noun is single-origin.</p>
+</blockquote>
+<p>So the gate's <strong>etymology AND-condition is load-bearing</strong>, exactly as written ("different lexicographer files … <strong>and</strong> distinct etymologies"). The classifier used here is therefore the <strong>etymology-grounded rule</strong> (as in v2), restricted to nouns, with the WordNet structural signal recorded only as a supporting cue:</p>
+<ul>
+<li><strong>HOMONYM</strong> — the noun has <strong>≥2 distinct etymological origins, both common in general modern English</strong> (separate Wiktionary "Etymology N" sections / distinct Etymonline headwords, each carrying a common noun sense), backed by a <strong>quoted</strong> distinct-origin statement in <code>stratification.csv</code>.</li>
+<li><strong>POLYSEME</strong> — one general-register origin (senses related by metaphor/metonymy/specialization).</li>
+<li><strong>AMBIGUOUS → EXCLUDED</strong> — references disagree, or the second origin is rare/archaic/narrowly-technical/regional. Recorded with reason, applied uniformly. Excluded this run: <strong>grave</strong> (2nd noun technical/archaic), <strong>key</strong> (island sense regional), <strong>light</strong> (the WordNet false-homonym: noun single-origin, <em>not-heavy</em> root is adj/verb).</li>
+</ul>
+<p>Etymology evidence was gathered verbatim from Wiktionary + Etymonline (an independent fetch pass), <strong>blind to any model rating</strong> (no model has been called at freeze time); the classification calls are the orchestrator's, recorded with quotes in <code>stratification.csv</code> for audit.</p>
+<p><strong>Granularity limit (lemma-level).</strong> WiC does not expose the underlying sense ids per item, so the homonym/polyseme label is applied at the <strong>lemma</strong> level. A homonym lemma's F (different-sense) items are <em>more likely</em> cross-etymon than a polyseme lemma's F items, but some homonym-F items may be within-etymon polysemy splits (e.g. <em>case</em> = instance-vs-legal-case, both from <em>casus</em>). This dilutes the homonym signal toward the null — a conservative direction. Stated in the result.</p>
+<h2 id="indicators-frozen-report-the-number-no-pass-bar">Indicators (frozen; report-the-number, NO pass bar)</h2>
+<p>Human anchor = WiC binary label; model signal = graded relatedness rating <em>r</em> (durel 1–4 / cont 0–100). Per model × framing:
+- <strong>(P-b-ii)</strong> per-stratum <strong>AUC</strong>(<em>r</em> vs T/F) computed separately within HOMONYM and POLYSEME, + mean T−F gap. Headline = <strong>AUC_homonym − AUC_polyseme</strong> (predicted <strong>positive</strong>).
+- <strong>(P-b-i)</strong> among <strong>F</strong> items, mean <em>r</em> and <strong>floor-fraction</strong> (durel=1 / cont≤10) by stratum. Headline = <strong>floorfrac_homonymF − floorfrac_polysemeF</strong> (predicted <strong>positive</strong>); mean_r_homonymF &lt; mean_r_polysemeF.
+- <strong>Uncertainty:</strong> whole-<strong>lemma</strong> label-permutation null (10k) for both headline diffs; bootstrap CI (5k) on the AUC diff.
+- <strong>Matched control:</strong> overlap by stratum×gold + AUC diff recomputed on the low-overlap subset (overlap ≤ global median).</p>
+<p><strong>Nulls are first-class:</strong> N1 (no separable homonym low mode), N2 (equal separation). A clean N1+N2 <em>closes</em> clause (b) with adequate power — the point of v3. Lead with the null if N1/N2 hold.</p>
+<h2 id="protocol-status">Protocol status</h2>
+<ul>
+<li>[x] Build + freeze (sha256 above) — <strong>before any model call</strong></li>
+<li>[ ] Independent pre-run stratification critique (read-only)</li>
+<li>[ ] 30-item billed pre-flight (drop to durel-only if it projects &gt; $5; flag NEXT.md if still &gt; $5)</li>
+<li>[ ] Run 966 calls (temp 0, logprob-free)</li>
+<li>[ ] Independent post-run number verification</li>
+<li>[ ] Write result page (null-first if N1/N2 hold)</li>
+</ul>
+<h2 id="cost">Cost</h2>
+<p>Estimate ≈ $1.7 billed (966 calls, 2 framings; v1 ran 1,800 calls / 3 framings for $3.13, gemini-dominated). Under the $5 single-run flag; pre-flight confirms.</p>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>explore.py</code> / <code>explore_nouns.py</code> — WiC + WordNet survey (no API); produced the over-call finding above.</li>
+<li><code>build_items.py</code> — downloads WiC (gitignored), applies <code>stratification.csv</code>, emits <code>manifest.csv</code> (committed) + <code>fulltext.jsonl</code> (gitignored), prints sha256s.</li>
+<li><code>stratification.csv</code> — the frozen etymology-grounded polysemy/homonymy layer (committed).</li>
+<li><code>manifest.csv</code> — committed (ids/gold/stratum/overlap; no corpus text).</li>
+<li><code>probe.py</code> — the panel runner (durel+cont × 3 models); imports <code>experiments/lib/openrouter.py</code>.</li>
+<li><code>analyze.py</code> — per-stratum AUC + T−F gap + floor-fraction + permutation + bootstrap + overlap-matched (pure-Python).</li>
+</ul></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

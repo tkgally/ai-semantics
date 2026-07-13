@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>aann-operationalization.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">wiki</a> <span class="sep">/</span> <a href="../index.html">decisions</a> <span class="sep">/</span> <a href="index.html">resolved</a> <span class="sep">/</span> <span class="cur">aann-operationalization.md</span></nav>
+<main>
+<header class="page-head">
+<h1>aann-operationalization.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">7.0 KB</span> &middot; <code class="fpath">wiki/decisions/resolved/aann-operationalization.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>id</th><td>aann-operationalization</td></tr><tr><th>title</th><td>What counts as evidence that a panel model &quot;tracks&quot; the AANN construction?</td></tr><tr><th>status</th><td>resolved</td></tr><tr><th>resolved</th><td>2026-05-29</td></tr><tr><th>resolution</th><td>Default — indicator A (continuation-likelihood contrast) with Option B (prompted acceptability) fallback where logprobs are unavailable; threshold T1; held-out adjectives locked before the run. Locks the measurement before running (charter §8). Ratified by Tom.</td></tr><tr><th>opened</th><td>2026-05-28</td></tr><tr><th>opened-by</th><td>lead-agent</td></tr><tr><th>contingent-artifacts</th><td><ul class='fm-list'><li>conjecture/aann-construction</li><li>design/aann-construction-v1</li></ul></td></tr></table></div><div class='md'><h1 id="decision-aann-operationalization">Decision: AANN operationalization</h1>
+<blockquote>
+<p><strong>Update 2026-06-12:</strong> this ratification stands as the historical record, but its indicator is
+<strong>executably void</strong> as of 2026-06-12 — both Option A and the Option-B fallback require token
+logprobs no reachable platform provides under the pure-autonomy constitution (see
+<a href="aann-panel-logprob-blocker.md.html"><code>aann-panel-logprob-blocker</code></a>, resolved 2026-06-12). The
+successor operationalization question is
+<a href="aann-behavioral-operationalization.md.html"><code>decisions/resolved/aann-behavioral-operationalization</code></a>.
+Nothing below is rewritten; the lock-before-run discipline it established carries forward.</p>
+</blockquote>
+<h2 id="question">Question</h2>
+<p>The AANN conjecture says LLMs treat the AANN construction (<em>a beautiful three days</em>) as a productive form-meaning unit. To move that from a slogan to a testable claim, we need to commit, <em>before</em> running the probe, to (a) the indicator function we will compute on model behavior, (b) the contrast set the indicator is computed over, (c) the threshold above which we say the model "tracks the construction." This is the canonical operationalization gate from charter §8 — the place an autonomous loop will quietly retune until a null becomes positive if we do not pin it down in advance.</p>
+<h2 id="options-for-the-indicator">Options for the indicator</h2>
+<h3 id="a-continuation-likelihood-contrast-provisional-default">A. Continuation-likelihood contrast (provisional default)</h3>
+<p>For each (template, adjective, numeral, noun) tuple, compute the model's average per-token log-probability assigned to the <strong>licit AANN</strong> instantiation versus each of Mahowald's four <strong>minimally-illicit</strong> variants (switched order, no modifier, singular noun, no article). Indicator = the signed contrast averaged over items, plus the per-item signed-rank correlation against Mahowald's MTurk human ratings on the matched subset.</p>
+<ul>
+<li><strong>Pros</strong>: clean, graded, behaviorally direct, comparable across panel models if all three expose log-probs via OpenRouter; matches the small-model lane (charter §5) for follow-up.</li>
+<li><strong>Cons</strong>: not all panel models expose token logprobs reliably via OpenRouter; reasoning-token leakage on Gemini / DeepSeek (per panel-calibration caveats in <a href="../../../config/models.md.html"><code>config/models.md</code></a>) may interact with this.</li>
+</ul>
+<h3 id="b-prompted-acceptability-rating-mahowald-replication">B. Prompted acceptability rating (Mahowald-replication)</h3>
+<p>Reuse Mahowald's prompt template — a few in-context "good"/"bad" judgments on diverse sentences, then ask the model to rate the target — and take the probability of "good" as the rating.</p>
+<ul>
+<li><strong>Pros</strong>: apples-to-apples comparison with Mahowald's published GPT-3 numbers and with his MTurk human ratings; doesn't require model-side logprob access for arbitrary tokens (only for the two response tokens, which all current chat APIs can usually return via <code>logprobs</code>).</li>
+<li><strong>Cons</strong>: depends on whether the panel models' chat APIs expose response-token logprobs cleanly; conflates "rates as good" with "is sensitive to" — a reasoning-tuned model may produce verbose meta-commentary instead of a clean token.</li>
+</ul>
+<h3 id="c-forced-choice-paraphrase-inferential-probe">C. Forced-choice paraphrase / inferential probe</h3>
+<p>Present the model with an AANN sentence and ask it (e.g.) which of two paraphrases preserves meaning — one capturing the unified/evaluative reading, one capturing the merely-distributive compositional reading. Score by chosen-option probability.</p>
+<ul>
+<li><strong>Pros</strong>: targets the <em>meaning</em> directly rather than only form preference; closer to a <code>constructional</code> × <code>inferential</code> co-tagged claim.</li>
+<li><strong>Cons</strong>: introduces a new generation/answer-format dependency; not what the human anchor measures (Mahowald measures acceptability, not paraphrase choice) — so it answers a <em>different</em> question that the human resource cannot directly anchor.</li>
+</ul>
+<h2 id="options-for-the-threshold">Options for the threshold</h2>
+<p>For Option A (the provisional default):</p>
+<ul>
+<li><strong>T1 (default)</strong>: A panel model "tracks the construction" if, on held-out adjectives (see below), it (i) ranks the AANN variant above all four degenerate variants on ≥ 80% of items, <strong>and</strong> (ii) its signed per-item contrast correlates with Mahowald's MTurk-mean rating at Spearman ρ ≥ 0.30 on the matched subset. The conjecture is supported (in its current form) when ≥ 2 of 3 panel models meet T1.</li>
+<li><strong>T2 (stricter)</strong>: same as T1 but ρ ≥ 0.50.</li>
+<li><strong>T0 (looser)</strong>: drop the correlation requirement; rank-above-degenerate on ≥ 70% of items is enough. Reserve T0 for a sanity check; do not treat it as confirming the conjecture.</li>
+</ul>
+<h2 id="held-out-vs-seen-adjectives">Held-out vs. seen adjectives</h2>
+<p>The conjecture predicts generalization, not memorization. Define held-out items in advance:</p>
+<ul>
+<li><strong>Train-side surface</strong>: any (adjective, numeral, noun) combination whose exact string appears in Mahowald's released <code>aann-sents/</code> is treated as "seen by Mahowald's probe corpus" — not necessarily by the panel models' training data, but a known-public anchor.</li>
+<li><strong>Held-out</strong>: at least 30 items per condition built from adjectives <strong>not</strong> in Mahowald's slot-filler superset, drawn from the same six adjective categories (this requires a small extension to the templates — list to be locked before the probe runs and committed alongside the probe code).</li>
+</ul>
+<h2 id="provisional-default-in-force-until-tom-ratifies">Provisional default (in force until Tom ratifies)</h2>
+<ul>
+<li><strong>Indicator</strong>: Option A (continuation-likelihood contrast), with Option B as fallback on any panel model whose chat API does not expose adequate logprobs.</li>
+<li><strong>Threshold</strong>: T1.</li>
+<li><strong>Held-out items</strong>: ≥ 30 per adjective category, drawn from outside Mahowald's superset, locked in <code>experiments/data/aann/held-out-adjectives.txt</code> <em>before</em> the probe is run.</li>
+</ul>
+<p>Why this default rather than the looser T0: the bootstrap calibration probe already showed a cross-model AANN divergence (<a href="../../../experiments/runs/2026-05-28-panel-calibration/README.md.html"><code>experiments/runs/2026-05-28-panel-calibration/README.md</code></a>). The point of T1 is to make the conjecture's support claim mean something — not to lower the bar until a null becomes positive.</p>
+<h2 id="what-downstream-is-contingent-on-this">What downstream is contingent on this</h2>
+<ul>
+<li><a href="../../findings/conjectures/aann-construction.md.html"><code>wiki/findings/conjectures/aann-construction.md</code></a> (now <code>contingent-on: aann-operationalization</code>).</li>
+<li><a href="../../../experiments/designs/aann-construction-v1.md.html"><code>experiments/designs/aann-construction-v1.md</code></a> (entire design is provisional under this default; if Tom ratifies a different indicator the design must be rewritten before the probe runs, not after).</li>
+<li>All future <code>claim</code> / <code>result</code> pages spawned by the AANN probe.</li>
+</ul>
+<h2 id="notes-for-the-resolver">Notes for the resolver</h2>
+<p>Tom: the choice that bites is <strong>A vs. B</strong> (logprob contrast vs. Mahowald-replication prompt). The threshold (T1 vs. T2) bites less — it's tunable post-hoc only in the sense of being <em>more</em> conservative, never less. If you'd rather lock T2, say so; raising the bar is always safe.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

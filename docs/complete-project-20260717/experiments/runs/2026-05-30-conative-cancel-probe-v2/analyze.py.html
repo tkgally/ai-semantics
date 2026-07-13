@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-30-conative-cancel-probe-v2</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">5.1 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-30-conative-cancel-probe-v2/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Analyze the off-ceiling CANCEL-DIRECTION conative v2 probe (2026-05-30).</span>
+
+<span class="sd">Indicator: affirm-CONTACT rate (FC YES, or NLI label 0 = entailment) on the hypothesis</span>
+<span class="sd">&quot;&lt;subj&gt; made contact with &lt;obj&gt;&quot;.</span>
+
+<span class="sd">Per model x instrument, conative-class verbs:</span>
+<span class="sd">  transitive_affirm  (expect high / ~ceiling -&gt; the lexical default; licensing baseline)</span>
+<span class="sd">  conative_affirm    (LOW = good suppression; the v1 off-ceiling quantity)</span>
+<span class="sd">  cue_affirm         (does the explicit contact-consequence re-license contact, overriding</span>
+<span class="sd">                      the conative? high = cue-respecting / updates under cue)</span>
+<span class="sd">DERIVED (the de-confounding measures, matched to the add-direction v2):</span>
+<span class="sd">  suppression_no_cue = 100 - conative_affirm   (construction-following, no cue;</span>
+<span class="sd">                       COMPARE to add-direction CANONICAL affirm = licensing-no-cue)</span>
+<span class="sd">  cue_following      = cue_affirm               (COMPARE to add cue-following = 100 - cue_affirm)</span>
+<span class="sd">  conative_to_cue_shift = cue_affirm - conative_affirm  (how far the cue moves the model)</span>
+<span class="sd">Control (non-alternating) verbs:</span>
+<span class="sd">  transitive_affirm  (ceiling anchor) ; resist_affirm (anomalous conative; report rate)</span>
+
+<span class="sd">Reading rule (RATIFIED cc-v2-difficulty-operationalization, report-the-rate; no pass bar):</span>
+<span class="sd">  - suppression and cue-following reported as rates with CIs implicit in N; the headline is</span>
+<span class="sd">    the CROSS-DIRECTION comparison against the committed add-direction v2 numbers</span>
+<span class="sd">    (2026-05-29-argument-structure-coercion-probe-v2/raw/results.json), NOT a threshold.</span>
+<span class="sd">  - A clean symmetric pattern (both directions follow the cue; only the no-cue canonical</span>
+<span class="sd">    differs) =&gt; the v1 add/cancel asymmetry was canonical-difficulty, de-confound it.</span>
+<span class="sd">  - Cancel staying harder than add even with the cue arm =&gt; asymmetry is about direction.</span>
+<span class="sd">No threshold tuned after the run.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">)</span>
+<span class="n">PANEL</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;claude-sonnet-4.6&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;gemini-3.5-flash&quot;</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">affirm</span><span class="p">(</span><span class="n">arm</span><span class="p">,</span> <span class="n">pred</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pred</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">pred</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span> <span class="k">if</span> <span class="n">arm</span> <span class="o">==</span> <span class="s2">&quot;nli&quot;</span> <span class="k">else</span> <span class="n">pred</span> <span class="o">==</span> <span class="s2">&quot;YES&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">rate</span><span class="p">(</span><span class="n">recs</span><span class="p">):</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;affirm&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;affirm&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">))</span> <span class="k">if</span> <span class="n">vals</span> <span class="k">else</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;per_model&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;indicator&quot;</span><span class="p">:</span> <span class="s2">&quot;affirm-contact rate on &#39;&lt;subj&gt; made contact with &lt;obj&gt;&#39;&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;reading_rule&quot;</span><span class="p">:</span> <span class="s2">&quot;report-the-rate; headline = cross-direction comparison vs the &quot;</span>
+           <span class="s2">&quot;add-direction v2 (de-confound add/cancel asymmetry from ceiling), not a pass bar&quot;</span><span class="p">}</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">===== CANCEL-DIRECTION CONATIVE v2 — affirm-CONTACT rate =====&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;transitive=lexical default (ceiling anchor); conative=suppression (LOW=good); &quot;</span>
+          <span class="s2">&quot;cue=re-licensing under explicit contact consequence.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PANEL</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">arm</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;nli&quot;</span><span class="p">,</span> <span class="s2">&quot;fc&quot;</span><span class="p">):</span>
+            <span class="n">recs</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">arm</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)))</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+                <span class="n">r</span><span class="p">[</span><span class="s2">&quot;affirm&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">affirm</span><span class="p">(</span><span class="n">arm</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pred&quot;</span><span class="p">])</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;construction&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;conative&quot;</span><span class="p">]</span>
+            <span class="n">ctl</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;construction&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;conative-control&quot;</span><span class="p">]</span>
+            <span class="n">t</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">rate</span><span class="p">([</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">con</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;condition&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;transitive&quot;</span><span class="p">])</span>
+            <span class="n">c</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">rate</span><span class="p">([</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">con</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;condition&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;conative&quot;</span><span class="p">])</span>
+            <span class="n">cue</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">rate</span><span class="p">([</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">con</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;condition&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;cue&quot;</span><span class="p">])</span>
+            <span class="n">ct_t</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">rate</span><span class="p">([</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ctl</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;condition&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;transitive&quot;</span><span class="p">])</span>
+            <span class="n">ct_r</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">rate</span><span class="p">([</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ctl</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;condition&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;resist&quot;</span><span class="p">])</span>
+            <span class="n">supp</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="nb">round</span><span class="p">(</span><span class="mi">100</span> <span class="o">-</span> <span class="n">c</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">shift</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="p">(</span><span class="n">cue</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">c</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="k">else</span> <span class="nb">round</span><span class="p">(</span><span class="n">cue</span> <span class="o">-</span> <span class="n">c</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">m</span><span class="p">[</span><span class="n">arm</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;transitive&quot;</span><span class="p">:</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;conative&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">,</span> <span class="s2">&quot;cue&quot;</span><span class="p">:</span> <span class="n">cue</span><span class="p">,</span>
+                      <span class="s2">&quot;suppression_no_cue&quot;</span><span class="p">:</span> <span class="n">supp</span><span class="p">,</span> <span class="s2">&quot;cue_following&quot;</span><span class="p">:</span> <span class="n">cue</span><span class="p">,</span>
+                      <span class="s2">&quot;conative_to_cue_shift&quot;</span><span class="p">:</span> <span class="n">shift</span><span class="p">,</span>
+                      <span class="s2">&quot;ctrl_transitive&quot;</span><span class="p">:</span> <span class="n">ct_t</span><span class="p">,</span> <span class="s2">&quot;ctrl_resist&quot;</span><span class="p">:</span> <span class="n">ct_r</span><span class="p">}</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span>
+        <span class="k">for</span> <span class="n">arm</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;nli&quot;</span><span class="p">,</span> <span class="s2">&quot;fc&quot;</span><span class="p">):</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="n">arm</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">&lt;18</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">arm</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">:</span><span class="s2">&lt;3</span><span class="si">}</span><span class="s2">] trans=</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;transitive&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">%  &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;conative=</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;conative&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">%  cue=</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;cue&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">%  | suppression(no-cue)=&quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;suppression_no_cue&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">pp  cue-following=</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;cue_following&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">%  &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;shift=</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;conative_to_cue_shift&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">pp  || ctrl: trans=</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;ctrl_transitive&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">% &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;resist=</span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;ctrl_resist&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
+    <span class="c1"># cross-model summaries of the two de-confounding quantities</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- de-confounding quantities (cancel direction), per instrument ---&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">arm</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;nli&quot;</span><span class="p">,</span> <span class="s2">&quot;fc&quot;</span><span class="p">):</span>
+        <span class="n">supp</span> <span class="o">=</span> <span class="p">[</span><span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">s</span><span class="p">][</span><span class="n">arm</span><span class="p">][</span><span class="s2">&quot;suppression_no_cue&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">PANEL</span><span class="p">]</span>
+        <span class="n">cf</span> <span class="o">=</span> <span class="p">[</span><span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">s</span><span class="p">][</span><span class="n">arm</span><span class="p">][</span><span class="s2">&quot;cue_following&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">PANEL</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">arm</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">:</span><span class="s2">&lt;3</span><span class="si">}</span><span class="s2">: suppression-no-cue (100-conative) = </span><span class="si">{</span><span class="n">supp</span><span class="si">}</span><span class="s2">  | &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;cue-following (cue affirm) = </span><span class="si">{</span><span class="n">cf</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Compare against add-direction v2 (committed): &quot;</span>
+          <span class="s2">&quot;../2026-05-29-argument-structure-coercion-probe-v2/raw/results.json&quot;</span><span class="p">)</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="s2">&quot;results.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;results.json&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

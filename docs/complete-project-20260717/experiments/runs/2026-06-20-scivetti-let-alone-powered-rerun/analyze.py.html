@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-20-scivetti-let-alone-powered-rerun</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">10.2 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-20-scivetti-let-alone-powered-rerun/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;analyze.py — frozen analysis for the POWERED let-alone forced-decomposition re-run</span>
+<span class="sd">(NO API). Trigger-(g) power-resolution of session 60&#39;s partial witness.</span>
+
+<span class="sd">Pre-registered questions (PREREG.md):</span>
+
+<span class="sd">  Q1 (the headline — vs-baseline residual, anchored/descriptive leg). Under forced</span>
+<span class="sd">     decomposition, what is each model&#39;s let-alone accuracy on the POWERED combined set</span>
+<span class="sd">     (33 = 24 test + 9 train) and its Wilson 95% CI vs the ≈0.90 human native-speaker</span>
+<span class="sd">     baseline? comparative-correlative carries the RATIFIED Scivetti anchor; let-alone is</span>
+<span class="sd">     DESCRIPTIVE from the same human-annotated release (not individually anchored), exactly</span>
+<span class="sd">     as sessions 57/58/60. The trigger-(g) reading focuses on gpt-5.4-mini: does the</span>
+<span class="sd">     session-60 below-baseline residual (24-item CI hi 0.755 &lt; 0.90) HOLD at higher power?</span>
+
+<span class="sd">  Q1b (internal replication + generalization; internal contrast). Per-split accuracy:</span>
+<span class="sd">     let-alone TEST (n=24) vs let-alone TRAIN (n=9, disjoint). Does the 24-item test</span>
+<span class="sd">     accuracy REPRODUCE session 60 (item-by-item agreement reported)? Do the 9 fresh</span>
+<span class="sd">     disjoint items AGREE in direction (below baseline for gpt)?</span>
+
+<span class="sd">  Q2 (ceiling control guard; internal). comp-correlative (n=30) accuracy + Wilson CI.</span>
+<span class="sd">     PRESERVED iff at/near ceiling (Wilson LB high) — guards &quot;the scaffold broke the</span>
+<span class="sd">     instrument.&quot;</span>
+
+<span class="sd">  Q3 (uptake manipulation check — what makes the residual readable as channel-controlled).</span>
+<span class="sd">     Per model on let-alone: fraction &quot;worked&quot; (&gt;=40 pre-FINAL chars and &gt;=2 numbered step</span>
+<span class="sd">     markers) and the gpt completion-token distribution. The clean reading requires uptake</span>
+<span class="sd">     to be INDUCED (as in session 60: gpt 24/24 worked, median 120 tokens). If uptake is</span>
+<span class="sd">     NOT induced, the run is a method-null on the channel question.</span>
+
+<span class="sd">Pre-registered verdict map (frozen) for gpt-5.4-mini let-alone (combined n=33):</span>
+
+<span class="sd">  CONFIRMS-RESIDUAL : uptake induced (&gt;=80% worked) AND control PRESERVED AND combined</span>
+<span class="sd">                      Wilson CI hi &lt; 0.90  -&gt; the below-baseline channel-controlled residual</span>
+<span class="sd">                      HOLDS at higher power (a cleaner essay/output-channel-confound</span>
+<span class="sd">                      trigger-(b) case; descriptive + contamination-caveated, NOT &quot;cannot&quot;).</span>
+<span class="sd">  DISSOLVES         : uptake induced AND control PRESERVED AND combined Wilson CI COVERS</span>
+<span class="sd">                      0.90 -&gt; the residual was a small-N artifact (leans output-channel-</span>
+<span class="sd">                      artifact, like claude/gemini).</span>
+<span class="sd">  STAYS-PARTIAL     : uptake induced AND control PRESERVED AND combined point estimate</span>
+<span class="sd">                      below 0.90 but CI hi &gt;= 0.90 with point &lt; 0.90 already covered by</span>
+<span class="sd">                      DISSOLVES -&gt; reserved for the genuinely ambiguous case (point near</span>
+<span class="sd">                      0.90 / CI straddles): power bound sharpened, 33 = the max available</span>
+<span class="sd">                      human-anchored let-alone N, redirect axis.</span>
+<span class="sd">  METHOD-NULL       : uptake NOT induced (&lt;80% worked) OR control BROKEN -&gt; channel</span>
+<span class="sd">                      question not cleanly posed this run.</span>
+
+<span class="sd">claude/gemini are the manipulation check: each EXPECTED at/covering baseline (a benign,</span>
+<span class="sd">non-degrading scaffold), control PRESERVED.</span>
+
+<span class="sd">Internal-replication baseline (Q1b): the session-60 24-item forced-decomposition labels at</span>
+<span class="sd">../2026-06-20-scivetti-let-alone-forced-decomposition/raw/{A,B,C}-labels.json. Matched by</span>
+<span class="sd">item_id; NO text in any committed artifact.</span>
+
+<span class="sd">Anchor: resource/scivetti-2025-cxnli-dataset (ratified 2026-05-29, Tom).</span>
+
+<span class="sd">Usage: python3 analyze.py            # reads raw/{A,B,C}-labels.json, writes results.json</span>
+<span class="sd">       python3 analyze.py --selftest # synthetic checks, no raw needed</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+<span class="n">S60_RAW</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;..&quot;</span> <span class="o">/</span> <span class="s2">&quot;2026-06-20-scivetti-let-alone-forced-decomposition&quot;</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span>
+<span class="n">PANEL_NAMES</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;claude-sonnet-4.6&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;gemini-3.5-flash&quot;</span><span class="p">}</span>
+<span class="n">TARGET</span> <span class="o">=</span> <span class="s2">&quot;let-alone&quot;</span>
+<span class="n">CONTROL</span> <span class="o">=</span> <span class="s2">&quot;comparative-correlative&quot;</span>
+<span class="n">RATIFIED</span> <span class="o">=</span> <span class="p">{</span><span class="n">CONTROL</span><span class="p">}</span>
+<span class="n">HUMAN_BASELINE</span> <span class="o">=</span> <span class="mf">0.90</span>
+<span class="n">WORKED_THRESH</span> <span class="o">=</span> <span class="mf">0.80</span>  <span class="c1"># &gt;=80% of let-alone items &quot;worked&quot; =&gt; uptake induced</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">wilson</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mf">1.96</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">k</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">centre</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="p">))</span> <span class="o">/</span> <span class="n">denom</span>
+    <span class="n">half</span> <span class="o">=</span> <span class="p">(</span><span class="n">z</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span> <span class="o">+</span> <span class="n">z</span> <span class="o">*</span> <span class="n">z</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">)))</span> <span class="o">/</span> <span class="n">denom</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">centre</span> <span class="o">-</span> <span class="n">half</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">centre</span> <span class="o">+</span> <span class="n">half</span><span class="p">),</span> <span class="n">p</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">acc</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">])</span>
+    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">wilson</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;correct&quot;</span><span class="p">:</span> <span class="n">k</span><span class="p">,</span> <span class="s2">&quot;acc&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">k</span> <span class="o">/</span> <span class="n">n</span> <span class="k">if</span> <span class="n">n</span> <span class="k">else</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="s2">&quot;wilson_lo&quot;</span><span class="p">:</span> <span class="n">lo</span><span class="p">,</span> <span class="s2">&quot;wilson_hi&quot;</span><span class="p">:</span> <span class="n">hi</span><span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="n">slot</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">RAW</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">-labels.json&quot;</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_s60</span><span class="p">(</span><span class="n">slot</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">S60_RAW</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">-labels.json&quot;</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">))</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">else</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">median_completion</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+    <span class="n">toks</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;completion_tokens&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">]</span>
+    <span class="n">toks</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">toks</span> <span class="k">if</span> <span class="n">t</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">statistics</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">toks</span><span class="p">)</span> <span class="k">if</span> <span class="n">toks</span> <span class="k">else</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;human_baseline&quot;</span><span class="p">:</span> <span class="n">HUMAN_BASELINE</span><span class="p">,</span> <span class="s2">&quot;instrument&quot;</span><span class="p">:</span> <span class="s2">&quot;forced-decomposition&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;letalone_combined_n&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;per_model&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PANEL_NAMES</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">rows</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">slot</span><span class="p">)</span>
+        <span class="n">la</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;cxn&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">TARGET</span><span class="p">]</span>
+        <span class="n">la_test</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">la</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;split&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;test&quot;</span><span class="p">]</span>
+        <span class="n">la_train</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">la</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;split&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;train&quot;</span><span class="p">]</span>
+        <span class="n">cc</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;cxn&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">CONTROL</span><span class="p">]</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;letalone_combined_n&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
+
+        <span class="c1"># uptake (Q3)</span>
+        <span class="n">worked</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">la</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;uptake&quot;</span><span class="p">][</span><span class="s2">&quot;worked&quot;</span><span class="p">])</span>
+        <span class="n">worked_frac</span> <span class="o">=</span> <span class="n">worked</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">la</span><span class="p">)</span> <span class="k">if</span> <span class="n">la</span> <span class="k">else</span> <span class="mf">0.0</span>
+        <span class="n">uptake_induced</span> <span class="o">=</span> <span class="n">worked_frac</span> <span class="o">&gt;=</span> <span class="n">WORKED_THRESH</span>
+
+        <span class="c1"># control guard (Q2): PRESERVED iff Wilson LB &gt;= 0.80 (near ceiling)</span>
+        <span class="n">cc_stat</span> <span class="o">=</span> <span class="n">acc</span><span class="p">(</span><span class="n">cc</span><span class="p">)</span>
+        <span class="n">control_preserved</span> <span class="o">=</span> <span class="n">cc_stat</span><span class="p">[</span><span class="s2">&quot;wilson_lo&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">0.80</span>
+
+        <span class="c1"># combined vs-baseline (Q1)</span>
+        <span class="n">comb</span> <span class="o">=</span> <span class="n">acc</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>
+        <span class="n">ci_hi_below</span> <span class="o">=</span> <span class="n">comb</span><span class="p">[</span><span class="s2">&quot;wilson_hi&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">HUMAN_BASELINE</span>
+        <span class="n">ci_covers</span> <span class="o">=</span> <span class="n">comb</span><span class="p">[</span><span class="s2">&quot;wilson_lo&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">HUMAN_BASELINE</span> <span class="o">&lt;=</span> <span class="n">comb</span><span class="p">[</span><span class="s2">&quot;wilson_hi&quot;</span><span class="p">]</span>
+
+        <span class="c1"># per-split (Q1b)</span>
+        <span class="n">test_stat</span> <span class="o">=</span> <span class="n">acc</span><span class="p">(</span><span class="n">la_test</span><span class="p">)</span>
+        <span class="n">train_stat</span> <span class="o">=</span> <span class="n">acc</span><span class="p">(</span><span class="n">la_train</span><span class="p">)</span>
+
+        <span class="c1"># internal replication vs session 60 (24 test items)</span>
+        <span class="n">rep</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">s60</span> <span class="o">=</span> <span class="n">load_s60</span><span class="p">(</span><span class="n">slot</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">s60</span><span class="p">:</span>
+            <span class="n">s60_la</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]:</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">s60</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;cxn&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">TARGET</span><span class="p">}</span>
+            <span class="n">this_la</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]:</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">la_test</span><span class="p">}</span>
+            <span class="n">shared</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">s60_la</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">this_la</span><span class="p">))</span>
+            <span class="n">agree</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">shared</span>
+                        <span class="k">if</span> <span class="n">s60_la</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">this_la</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+            <span class="n">s60_correct</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">shared</span>
+                              <span class="k">if</span> <span class="n">s60_la</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                              <span class="ow">and</span> <span class="nb">int</span><span class="p">(</span><span class="n">s60_la</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">s60_la</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="s2">&quot;gold&quot;</span><span class="p">])</span>
+            <span class="n">rep</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;n_shared&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">shared</span><span class="p">),</span>
+                   <span class="s2">&quot;label_agreement&quot;</span><span class="p">:</span> <span class="n">agree</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">shared</span><span class="p">)</span> <span class="k">if</span> <span class="n">shared</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+                   <span class="s2">&quot;s60_test_acc&quot;</span><span class="p">:</span> <span class="n">s60_correct</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">shared</span><span class="p">)</span> <span class="k">if</span> <span class="n">shared</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+                   <span class="s2">&quot;this_test_acc&quot;</span><span class="p">:</span> <span class="n">test_stat</span><span class="p">[</span><span class="s2">&quot;acc&quot;</span><span class="p">]}</span>
+
+        <span class="c1"># verdict (gpt is the trigger-(g) subject; others are the manipulation check)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">uptake_induced</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">control_preserved</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;METHOD-NULL&quot;</span>
+        <span class="k">elif</span> <span class="n">ci_hi_below</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;CONFIRMS-RESIDUAL&quot;</span>
+        <span class="k">elif</span> <span class="n">ci_covers</span> <span class="ow">and</span> <span class="n">comb</span><span class="p">[</span><span class="s2">&quot;acc&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">HUMAN_BASELINE</span> <span class="o">-</span> <span class="mf">1e-9</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;DISSOLVES&quot;</span>
+        <span class="k">elif</span> <span class="n">ci_covers</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;STAYS-PARTIAL&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">verdict</span> <span class="o">=</span> <span class="s2">&quot;STAYS-PARTIAL&quot;</span>
+
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;letalone_combined&quot;</span><span class="p">:</span> <span class="n">comb</span><span class="p">,</span>
+            <span class="s2">&quot;letalone_test&quot;</span><span class="p">:</span> <span class="n">test_stat</span><span class="p">,</span>
+            <span class="s2">&quot;letalone_train&quot;</span><span class="p">:</span> <span class="n">train_stat</span><span class="p">,</span>
+            <span class="s2">&quot;control_cc&quot;</span><span class="p">:</span> <span class="n">cc_stat</span><span class="p">,</span>
+            <span class="s2">&quot;control_preserved&quot;</span><span class="p">:</span> <span class="n">control_preserved</span><span class="p">,</span>
+            <span class="s2">&quot;uptake_worked&quot;</span><span class="p">:</span> <span class="n">worked</span><span class="p">,</span> <span class="s2">&quot;uptake_worked_frac&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">worked_frac</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+            <span class="s2">&quot;uptake_induced&quot;</span><span class="p">:</span> <span class="n">uptake_induced</span><span class="p">,</span>
+            <span class="s2">&quot;gpt_or_other_completion_median&quot;</span><span class="p">:</span> <span class="n">median_completion</span><span class="p">(</span><span class="n">la</span><span class="p">),</span>
+            <span class="s2">&quot;vs_baseline&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;ci_hi_below_090&quot;</span><span class="p">:</span> <span class="n">ci_hi_below</span><span class="p">,</span> <span class="s2">&quot;ci_covers_090&quot;</span><span class="p">:</span> <span class="n">ci_covers</span><span class="p">},</span>
+            <span class="s2">&quot;internal_replication_vs_s60&quot;</span><span class="p">:</span> <span class="n">rep</span><span class="p">,</span>
+            <span class="s2">&quot;verdict&quot;</span><span class="p">:</span> <span class="n">verdict</span><span class="p">,</span>
+            <span class="s2">&quot;parse_modes&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;parse_mode&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">)),</span>
+            <span class="s2">&quot;n_missing&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rows</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">),</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">selftest</span><span class="p">():</span>
+    <span class="c1"># wilson sanity</span>
+    <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">wilson</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">19</span> <span class="o">/</span> <span class="mi">33</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-9</span>
+    <span class="k">assert</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="n">hi</span>
+    <span class="c1"># a 19/33 (~0.576) accuracy: hi should be &lt; 0.90 (residual confirmed shape)</span>
+    <span class="k">assert</span> <span class="n">hi</span> <span class="o">&lt;</span> <span class="mf">0.90</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;expected 19/33 CI hi &lt; 0.90, got </span><span class="si">{</span><span class="n">hi</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="c1"># a 30/33 (~0.909) accuracy: CI should cover 0.90</span>
+    <span class="n">lo2</span><span class="p">,</span> <span class="n">hi2</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">wilson</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">lo2</span> <span class="o">&lt;=</span> <span class="mf">0.90</span> <span class="o">&lt;=</span> <span class="n">hi2</span><span class="p">,</span> <span class="s2">&quot;30/33 should cover 0.90&quot;</span>
+    <span class="c1"># acc() basic</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}]</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">acc</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;correct&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;n&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;selftest PASS&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+    <span class="n">ap</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--selftest&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">ap</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">selftest</span><span class="p">:</span>
+        <span class="n">selftest</span><span class="p">()</span>
+        <span class="k">return</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">analyze</span><span class="p">()</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;results.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;let-alone combined n = </span><span class="si">{</span><span class="n">out</span><span class="p">[</span><span class="s1">&#39;letalone_combined_n&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">  (vs human </span><span class="si">{</span><span class="n">HUMAN_BASELINE</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;letalone_combined&quot;</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  let-alone COMBINED  </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;correct&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;wilson_lo&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;wilson_hi&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">]  &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;(test </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;letalone_test&#39;</span><span class="p">][</span><span class="s1">&#39;acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> / train </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;letalone_train&#39;</span><span class="p">][</span><span class="s1">&#39;acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  control cc </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;control_cc&#39;</span><span class="p">][</span><span class="s1">&#39;acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;control_cc&#39;</span><span class="p">][</span><span class="s1">&#39;wilson_lo&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;control_cc&#39;</span><span class="p">][</span><span class="s1">&#39;wilson_hi&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">] &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;-&gt; </span><span class="si">{</span><span class="s1">&#39;PRESERVED&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;control_preserved&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;BROKEN&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  uptake worked </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;uptake_worked&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;uptake_worked_frac&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">) induced=</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;uptake_induced&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;median-completion-tokens=</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;gpt_or_other_completion_median&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;internal_replication_vs_s60&quot;</span><span class="p">]:</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="s2">&quot;internal_replication_vs_s60&quot;</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  vs s60 (24 test): label-agreement </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;label_agreement&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;(s60 acc </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;s60_test_acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> -&gt; this </span><span class="si">{</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;this_test_acc&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  VERDICT: </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;verdict&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

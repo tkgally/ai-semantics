@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-15-conative-preference-commitment-v1</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">7.4 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-15-conative-preference-commitment-v1/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-conative-preferencecommitment-double-contrast-v1-frozen">PREREG — conative preference/commitment double contrast (v1) [FROZEN]</h1>
+<blockquote>
+<p><strong>Status: FROZEN 2026-06-15.</strong> An independent pre-run critic returned
+<strong>GO-WITH-FIXES</strong>; the one SHOULD-FIX (resist verb <code>snap</code>→<code>bump</code>, a lexical-cue-control
+purity defect) was applied pre-run and the stimuli refrozen (<code>stimuli.json</code> sha256[:16]
+<code>3ca3a1d50069f0cd</code>); <code>analyze.py --selftest</code> re-passed (30 checks). This is the binding
+pre-registration; <code>probe.py</code> runs only with this file present. It mirrors the frozen design
+<code>experiments/designs/conative-preference-commitment-v1.md</code> §4–§8. No new
+decision is opened; this run executes under the ratified
+<code>decisions/resolved/fresh-construction-inferential-generalization</code> (Option A —
+the conative), inheriting the AANN double-contrast discipline.</p>
+</blockquote>
+<h2 id="0-the-bet-operationalizes-conjecturepreference-commitment-generality">0. The bet (operationalizes <code>conjecture/preference-commitment-generality</code>)</h2>
+<p>The AANN inferential probe's preference-without-commitment dissociation (paraphrase
+preference shifts in all three panel models; NLI entailment commitment carries in
+only one) is a GENERAL property of constructions whose licensed inference diverges
+from their distributional default — not an AANN artifact. Tested here on the
+<strong>conative</strong> ("Maria kicked <strong>at</strong> the ball" → contact not guaranteed), a
+cancel-direction construction where the inference-vs-default divergence is free.</p>
+<h2 id="1-frozen-materials">1. Frozen materials</h2>
+<ul>
+<li><code>stimuli.json</code> — 40 items, frozen by <code>prep.py</code> (seed <strong>20260615</strong>), committed
+  before any probe call. <strong>sha256[:16] = <code>3ca3a1d50069f0cd</code></strong> (post-critic refreeze).</li>
+<li>Four families (verb + object + subject held constant within a stem):
+  <code>transitive_conative</code> (12), <code>conative</code> (12), <code>resist</code>/LCC (8),
+  <code>transitive_resist</code> (8).</li>
+<li>12 conative verbs reused verbatim from <code>result/conative-cancel-direction-v2</code>
+  (kick/hit/punch/slash/stab/claw/swat/jab/chop/scratch/hack/whack). 8 resist verbs:
+  touch/embrace/break/shatter (reused) + crush/smash/<strong>bump</strong>/split (non-alternating
+  contact verbs, no conative in Levin 1993).</li>
+<li><strong>Pre-run critic fix (2026-06-15, GO-WITH-FIXES):</strong> "snap" was removed from the
+  resist/LCC pool and replaced with "bump" — <em>snapped at</em> is a lexicalized idiom that
+  would contaminate the lexical-cue control (conservative direction, but a purity
+  defect). smash/crush remain marginal; the result page reports Δ² robustness with and
+  without smash/crush in the resist pool.</li>
+</ul>
+<h2 id="2-two-instruments-both-on-the-same-40-frozen-items-design-3">2. Two instruments (both on the same 40 frozen items; design §3)</h2>
+<ul>
+<li><strong>Arm 1 — paraphrase forced-choice (PREFERENCE; the WEAKER signal).</strong> Two
+  lexically parity-matched options differing ONLY by "did not necessarily":
+  D (default) "<subj> made contact with the <obj>." / C (cancel) "<subj> did not
+  necessarily make contact with the <obj>." Seed-counterbalanced A/B per item;
+  chosen letter → reading. <strong>Preference measure = P(cancel-reading C chosen).</strong></li>
+<li><strong>Arm 2 — NLI entailment (COMMITMENT; the load-bearing DISCRIMINATOR).</strong> Premise
+  = sentence; hypothesis = "<subj> made contact with the <obj>." → 0/1/2; identical
+  NLI_SYS + parse_nli to the frozen conative-cancel-v2 NLI arm. <strong>Commitment
+  measure = P(withhold) = P(NLI ≠ 0).</strong> Conative-correct = neutral (1).</li>
+<li>A paraphrase shift without an NLI shift is reported as <strong>"preference without
+  commitment,"</strong> never "the model draws the inference."</li>
+</ul>
+<h2 id="3-the-double-contrast-headline-design-4">3. The double contrast (headline; design §4)</h2>
+<ul>
+<li><strong>Δ²_pref</strong> = P(cancel-pref | conative) − P(cancel-pref | resist/LCC)</li>
+<li><strong>Δ²_commit</strong> = P(withhold | conative) − P(withhold | resist/LCC)</li>
+</ul>
+<p>Raw component effects (conative − transitive; resist − transitive) reported in full,
+but the headline is Δ². A shift wholly attributable to the bare-<em>at</em> cue
+(LCC shifts as much as the conative → Δ² ≈ 0) is a <strong>LEXICAL-CUE ARTIFACT</strong> and
+cannot carry the headline.</p>
+<h2 id="4-thresholds-bootstrap-frozen-pre-run-design-6">4. Thresholds + bootstrap (frozen pre-run; design §6)</h2>
+<ul>
+<li><strong>τ = 0.20</strong> on the double contrast (inclusive, ≥).</li>
+<li><strong>Significance:</strong> item-level bootstrap <strong>95% CI lower bound &gt; 0</strong> (strict),
+  <strong>10,000 resamples</strong>, fixed <strong>seed = 20260615</strong>. (Conative and resist verb pools
+  are disjoint by necessity; the resample is a two-sample item-level bootstrap.)</li>
+<li>A double contrast is <strong>positive</strong> iff Δ² ≥ τ AND CI-lower &gt; 0.</li>
+<li><strong>Tier-0 manipulation check</strong> doubles as the headroom gate (§5).</li>
+</ul>
+<h2 id="5-headroom-precondition-conative-translated-the-ratification-condition-design-5">5. Headroom precondition (conative-translated; the ratification condition; design §5)</h2>
+<p>Pre-headline, per model. NOT the AANN unification thresholds (those are not imported):</p>
+<ul>
+<li><strong>HEADROOM PASS:</strong> P(NLI = entailment | transitive_conative) ≥ <strong>0.85</strong> AND
+  P(paraphrase = D | transitive_conative) ≥ <strong>0.85</strong> (both inclusive).</li>
+<li><strong>HEADROOM-FAIL:</strong> transitive contact default off-ceiling → that model's headline
+  is uninterpretable.</li>
+<li><strong>Whole-design gate:</strong> if fewer than <strong>2 of 3</strong> models clear → HEADROOM-FAIL →
+  route to the <strong>Option-B named fallback</strong> (way/caused-motion near-miss variant).
+  No retuning.</li>
+</ul>
+<h2 id="6-per-model-verdict-map-design-6">6. Per-model verdict map (design §6)</h2>
+<table>
+<thead>
+<tr>
+<th>verdict</th>
+<th>condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CONVERGENT-POSITIVE</td>
+<td>Δ²_pref positive AND Δ²_commit positive</td>
+</tr>
+<tr>
+<td>PARAPHRASE-ONLY</td>
+<td>Δ²_pref positive, Δ²_commit NOT positive</td>
+</tr>
+<tr>
+<td>COMMITMENT-ONLY (anomaly)</td>
+<td>Δ²_commit positive, Δ²_pref NOT positive</td>
+</tr>
+<tr>
+<td>LEXICAL-CUE ARTIFACT</td>
+<td>raw conative shift exists but Δ² not positive on either arm</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>no shift on either arm</td>
+</tr>
+<tr>
+<td>HEADROOM-FAIL</td>
+<td>transitive contact default off-ceiling for that model</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-panel-level-verdict-design-6">7. Panel-level verdict (design §6)</h2>
+<ul>
+<li><strong>CONFIRM (generalizes):</strong> AANN shape reproduces — ≥1 model CONVERGENT-POSITIVE
+  AND ≥1 model PARAPHRASE-ONLY.</li>
+<li><strong>FALSIFY (convergence):</strong> all (headroom-clearing) models CONVERGENT-POSITIVE →
+  dissociation plausibly AANN-specific.</li>
+<li><strong>FALSIFY (null):</strong> all (headroom-clearing) models NULL → antecedent absent for
+  the conative; instance falls, conceptual point survives un-instanced.</li>
+<li><strong>INCONCLUSIVE → fallback:</strong> headroom fails for &lt; 2 models → route to Option-B.</li>
+</ul>
+<h2 id="8-gpt-54-mini-scoring-rule-binding-anti-cheat-design-7">8. gpt-5.4-mini scoring rule (binding anti-cheat; design §7)</h2>
+<p>gpt-5.4-mini already shows conative NLI fragility (does not withhold contact for the
+conative under NLI; <code>result/conative-cancel-direction-v2</code>,
+<code>result/conative-minimal-pair-divergence-v1</code>). <strong>This pre-existing, single-model
+divergence must NOT be retrofitted as new confirmation.</strong> The converging model's
+identity is read from THIS run's data. gpt-5.4-mini is predicted PARAPHRASE-ONLY
+here, so a genuine CONFIRM needs a <strong>different</strong> model to converge — a stringent,
+non-circular test.</p>
+<h2 id="9-anchor-discipline-honest-split-design-8">9. Anchor discipline (honest split; design §8)</h2>
+<ul>
+<li><strong>NLI entailment arm (conative items):</strong> human-anchored against the CxNLI conative
+  gold via <code>resource/scivetti-2025-cxnli-dataset</code> (conative subset, ratified
+  2026-05-29). Answer-key comparison + ≈0.90 aggregate Exp-1 baseline, NOT a per-item
+  human gradient. CxNLI conative gold for "V-at-NP → made contact" is
+  non-entailment → answer-key = withhold.</li>
+<li><strong>Paraphrase forced-choice arm + resist/LCC arm:</strong> <code>anchor: internal-contrast-only</code>
+  — no in-repo human paraphrase-preference norm; anomalous at-string has no human key.</li>
+<li><strong>No anchor invented.</strong> The expert-stipulated conative-correct paraphrase reading
+  (cancel) is labelled expert-stipulated wherever used.</li>
+</ul>
+<h2 id="10-spend-design-10">10. Spend (design §10)</h2>
+<p>40 items × 2 instruments × 3 models = <strong>240 calls</strong> (+ a small verbatim retry per
+unparseable response). Point estimate <strong>≈ $0.037</strong>; expected <strong>≈ $0.04–0.08</strong> billed.
+<code>ABORT_USD = 0.50</code> single-run flag. Well under the $5.00/day UTC cap. Actual billed
+<code>usage.cost</code> recorded; missing-cost calls counted, never silently dropped.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

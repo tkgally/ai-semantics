@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-31-multimodal-grounding-image-v1</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">10.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-31-multimodal-grounding-image-v1/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-multimodal-grounding-image-v1-frozen-before-any-finding-bearing-model-call">PREREG — multimodal-grounding-image-v1 (frozen before any finding-bearing model call)</h1>
+<p><strong>Frozen: 2026-05-31.</strong> Operationalizes predictions 2–3 of
+<code>conjecture/multimodal-lexical-grounding-divergence</code>. Design: <code>design/multimodal-grounding-image-v1</code>.
+Governance: <code>decisions/resolved/multimodal-panel-and-grounding-theory</code> (Q3=B GO) +
+<code>decisions/open/multimodal-image-anchor</code>. <strong>The headline is scoped throughout to the binary
+same/different-sense human signal — there is no graded human score here.</strong></p>
+<h2 id="anchor-realized-deviation-from-the-designs-default-surfaced">Anchor (realized) — DEVIATION from the design's default, surfaced</h2>
+<p>The design's default anchor was <em>WiC's</em> binary labels with a WiC-keyed image set. On building, <strong>WiC's
+actual sentence items badly under-cover clean visually-distinct homonyms</strong> (bat/crane/mouse absent as
+WiC nouns; most WiC noun-F items use abstract/non-prototypical senses), which would leave the
+prediction-3 "visually-distinct" stratum weak. So the realized v1 anchor is <strong>Tom's explicitly
+authorized option (b): a small CONSTRUCTED minimal-pair set keyed to an EXISTING human sense
+inventory — Princeton WordNet</strong> (Fellbaum 1998; the same inventory WiC itself is built from). Each
+item's same/different label = same vs different WordNet noun <strong>synset</strong> (verified via <code>nltk</code> WordNet,
+synset ids recorded in <code>items.csv</code>). WiC remains the anchor for the <em>text-only</em> lexical-v3. This
+deviation is recorded in <code>decisions/open/multimodal-image-anchor</code> and the result page. The human
+signal is the WordNet sense distinction (binary); <strong>the image is a designed manipulation, not a human
+judgment.</strong></p>
+<h2 id="items-12-pairs-frozen-in-itemscsv-2-strata">Items (12 pairs, frozen in items.csv) — 2 strata</h2>
+<ul>
+<li><strong>distinct-F (6):</strong> visually-distinct homonyms, two DIFFERENT synsets → gold = <strong>different</strong>.
+  <code>bat</code> (mammal bat.n.01 / club bat.n.05), <code>crane</code> (bird crane.n.05 / machine crane.n.04),
+  <code>bank</code> (river bank.n.01 / financial bank.n.02), <code>pitcher</code> (vessel pitcher.n.02 / player pitcher.n.01),
+  <code>mouse</code> (rodent mouse.n.01 / device mouse.n.04), <code>seal</code> (mammal seal.n.09 / stamp seal.n.02).</li>
+<li><strong>same-T (6):</strong> SAME synset, two contexts + <strong>two DIFFERENT photos</strong> of that referent → gold = <strong>same</strong>.
+  <code>bank</code>/<code>crane</code>/<code>mouse</code>/<code>pitcher</code>/<code>seal</code>/<code>bat</code>. This is the <strong>surface-similarity / distraction
+  control</strong>: if the image condition rates these <em>less</em> related (driven by photo dissimilarity, not
+  sense), that is distraction contamination, reported explicitly.</li>
+</ul>
+<p><strong>Scope limit, stated up front:</strong> the purest prediction-3 negative cell — <em>different-sense but NOT
+visually distinct</em> (abstract F-pairs) — is <strong>deferred to v2</strong>, because abstract senses cannot be
+faithfully depicted and attaching a misleading image would violate the depiction-faithfulness gate.
+v1 therefore tests prediction 2 (does the image improve T/F separation) + the distraction control
+(does it spuriously split same-sense pairs), not the full abstract-F moderator. Honest under-claim.</p>
+<h2 id="conditions-instrument-frozen">Conditions, instrument (frozen)</h2>
+<ul>
+<li><strong>TEXT-ONLY</strong> vs <strong>IMAGE+TEXT</strong>: identical panel, identical instrument; the <strong>user prompt is
+  byte-identical</strong> across conditions (see <code>run.py</code> FRAMINGS). The only difference is two attached
+  images (<code>images=[{detail:"low"}×2]</code>) in image+text. A fixed clause in the <strong>system prompt</strong>
+  (constant across both conditions) states that <em>if</em> images are attached they depict Context 1/2 in
+  order — present in both conditions, operative only when images are sent.</li>
+<li><strong>Instrument (both framings, reused from the lexical program):</strong> DURel 4-pt (4 Identical / 3 Closely
+  Related / 2 Distantly Related / 1 Unrelated) <strong>and</strong> a 0–100 scale. Temperature 0, greedy, number
+  parsed by first-in-range regex.</li>
+<li><strong>Panel:</strong> <code>anthropic/claude-sonnet-4.6</code> (claude), <code>openai/gpt-5.4-mini</code> (gpt),
+  <code>google/gemini-3.5-flash</code> (gemini). Within-family text-vs-image contrast.</li>
+<li><strong>Grid:</strong> 12 items × 2 conditions × 2 framings × 3 models = <strong>144 calls</strong> (72 carry 2 images).</li>
+</ul>
+<h2 id="dv-reading-rule-frozen-scoped-to-the-binary-label-no-pass-bar-report-the-estimate">DV / reading rule (frozen, scoped to the BINARY label) — no pass bar, report-the-estimate</h2>
+<ul>
+<li><strong>Primary (prediction 2 — movement toward the human signal).</strong> Per model × framing, the <strong>separation</strong>
+  between gold-same (T) and gold-different (F) pairs in the model's relatedness rating:
+  <code>ΔR = mean(rating | same) − mean(rating | different)</code> (and AUC of rating discriminating same vs
+  different). Prediction 2 ⇒ <strong>ΔR larger in IMAGE+TEXT than TEXT-ONLY</strong> (F-pairs pushed toward
+  "Unrelated" once their distinct pictures are shown). Report the per-item paired image−text rating
+  difference, by stratum, with a <strong>cluster bootstrap CI over the 12 items</strong>. (0–100 ratings used as is;
+  4-pt mapped to its own scale; the two framings reported separately.)</li>
+<li><strong>Distraction control (the surface-similarity guard, load-bearing here).</strong> In the <strong>same-T</strong> stratum
+  (two different photos of the same referent), the image condition should <strong>not</strong> lower the relatedness
+  rating. If it does (T-pairs rated less related under image), that is photo-dissimilarity contamination
+  — reported as the distraction null, not suppressed.</li>
+<li><strong>Nulls, first-class (write the null):</strong> <strong>Redundancy</strong> (image ≈ text separation within the bootstrap
+  CI → "the text already carried the sense distinction"; the most likely outcome given the prediction-1
+  null) and <strong>Distraction</strong> (image moves <em>away</em> / splits same-sense pairs). Either is reported AS the
+  result; no indicator is retuned after seeing ratings.</li>
+</ul>
+<h2 id="frozen-artifacts-sha256-computed-before-any-finding-bearing-call">Frozen artifacts — sha256 (computed before any finding-bearing call)</h2>
+<p><code>items.csv</code> (12 items), <code>manifest.json</code> (24 images + source/license), <code>ATTRIBUTION.md</code>. Images
+downscaled locally (≤256px, JPEG q40) from Wikimedia Commons PD/CC0/CC-BY(-SA); per-image source +
+license in <code>manifest.json</code>/<code>ATTRIBUTION.md</code>.</p>
+<div class="highlight"><pre><span></span><code>024b3a47…  crane-F_1.jpg      03f3236b…  pitcher-T_1.jpg    08ea4c89…  seal-T_1.jpg
+0ffe7816…  bank-F_1.jpg       1ccd328d…  crane-T_2.jpg      2547fdcb…  bank-F_2.jpg
+36e48f32…  bat-F_2.jpg        476ef165…  pitcher-T_2.jpg    61534a5f…  pitcher-F_2.jpg
+69df63b7…  bat-T_2.jpg        6bb379b6…  bank-T_2.jpg       76c557b2…  pitcher-F_1.jpg
+35cb1dab…  seal-F_1.jpg       7c929010…  crane-F_2.jpg      89776dbf…  bat-T_1.jpg
+8c329071…  bank-T_1.jpg       9abfae35…  mouse-T_2.jpg      a5133616…  crane-T_1.jpg
+ba939051…  mouse-F_1.jpg      bb613556…  mouse-T_1.jpg      bff13629…  mouse-F_2.jpg
+c49ed3fd…  seal-F_2.jpg       ebb2e014…  seal-T_2.jpg       eff1c9c1…  bat-F_1.jpg
+b4fb9839…  _liveness_red.png (synthetic, liveness only — not a finding)
+</code></pre></div>
+
+<p>(Full 64-hex digests via <code>sha256sum images/*.jpg</code> reproduce these prefixes.)</p>
+<h2 id="independent-pre-run-critic-fixes-applied-re-frozen-2026-05-31">Independent pre-run critic — fixes applied + re-frozen (2026-05-31)</h2>
+<p>An independent adversarial critic reviewed the frozen stimuli/PREREG/design before the grid.
+Applied before any finding-bearing call:
+- <strong>B1 (anchor relabel, BLOCKER):</strong> governance now matches the freeze — <code>decisions/open/multimodal-image-anchor</code>
+  and the design <code>anchor:</code> field relabeled from WiC to <strong>WordNet-synset-keyed constructed pairs</strong>; the
+  result page states the same. <strong>Honesty note the critic forced:</strong> <em>no per-item human annotator judged
+  these pairs.</em> The human anchor is the WordNet <strong>sense inventory</strong> (a human-built lexical resource); the
+  same/different gold is the <strong>author's synset assignment</strong> of constructed sentences, verified to be
+  distinct vs identical synsets — weaker than WiC's per-item human labels, and stated as such.
+- <strong>B2 (attribution, BLOCKER):</strong> <code>ATTRIBUTION.md</code> regenerated from <code>manifest.json</code> (mouse-F_1, bank-T_1
+  credits corrected).
+- <strong>S3 (style confound):</strong> <code>seal-F_1</code> swapped from a captioned lithograph to a clean PD harbor-seal
+  <strong>photo</strong> (sha → <code>35cb1dab…</code>) for stylistic parity; re-frozen.
+- <strong>S4:</strong> <code>seal-F</code> context-2 de-"red"ed ("wax seal", to match the monochrome impression).
+- <strong>S1 (parse):</strong> <code>parse_num</code> now prefers a bare-number reply, else the LAST in-range number (the
+  scale digits 1–4 / 0,100 appear in the prompt); <code>raw</code> logged for every call for hand-audit.
+- <strong>S2 (NA asymmetry — pre-registered rule):</strong> if any model's <strong>image-condition</strong> parse-fail count
+  exceeds its <strong>text-condition</strong> count by <strong>&gt;1 item</strong>, that model's modality contrast is reported as
+  <strong>uninterpretable</strong> (not silently dropped) — guards against gemini reasoning-token overruns biasing
+  the within-family image-vs-text Δ.
+- <strong>NITs noted, not blocking:</strong> bank-F_2 lacks signage (river-vs-building contrast still clear);
+  crane-F_2 crane is small; design-doc §3/§6 are stale vs this 12-item/2-stratum/WordNet freeze
+  (reconciled by a pointer in the design).</p>
+<p><strong>The central structural caveat (lifted into the result, not fixable by item edits):</strong> distinct-F gold
+is <strong>confounded with image surface-dissimilarity by construction</strong> — every gold-"different" pair is shown
+two visibly different pictures. A model doing <em>zero</em> sense computation ("two different-looking pictures →
+less related") reproduces the prediction-2 effect. The <strong>same-T distraction control</strong> (two different
+photos of the <em>same</em> referent) is the only guard, and it is weak. So the strongest honest claim is
+<strong>binary + behavioral</strong>: "showing depicting pictures does / does not increase the panel's separation of
+WordNet-distinct from WordNet-same noun pairs over byte-identical text, within family, and whether that
+survives the same-referent surface-dissimilarity control." It <strong>cannot</strong> license "the model is
+perceptually grounded." Redundancy null is the most likely outcome; power (12 items, 6/stratum, n=3) is
+low and the bootstrap CI will be wide — stated as the lead caveat.</p>
+<h2 id="order-of-operations-mandatory">Order of operations (mandatory)</h2>
+<ol>
+<li><strong>Liveness micro-ping</strong> (<code>run.py liveness</code>) — synthetic red square + "what colour?" × 3 models;
+   confirm the <code>images=</code> path round-trips and <code>usage.cost</code> populates. Not a finding.</li>
+<li><strong>Independent adversarial pre-run critique</strong> over the frozen stimuli + this PREREG; apply
+   BLOCKER/SHOULD-FIX fixes and <strong>re-freeze</strong> before any grid call.</li>
+<li><strong>Pre-flight</strong> (<code>run.py preflight</code>) — 1 item, read billed cost, extrapolate (ceiling <strong>$3.00</strong>).</li>
+<li><strong>Full grid</strong> (<code>run.py full</code>) → <code>raw/results.json</code>.</li>
+<li><strong>Independent post-run number-verification</strong> before the result page is promoted.</li>
+</ol></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

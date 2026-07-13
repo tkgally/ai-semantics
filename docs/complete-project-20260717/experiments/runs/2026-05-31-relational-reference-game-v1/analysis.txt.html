@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analysis.txt — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-31-relational-reference-game-v1</a> <span class="sep">/</span> <span class="cur">analysis.txt</span></nav>
+<main>
+<header class="page-head">
+<h1>analysis.txt</h1>
+<p class="subtitle"><span class="ftype">text</span> &middot; <span class="fsize">3.7 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-31-relational-reference-game-v1/analysis.txt</code></p>
+</header>
+<pre class='plain'>================================================================================
+RELATIONAL REFERENCE GAME v1 — analysis
+================================================================================
+records: 864 | pick-parse-fails: 14
+
+--- ENTRAINMENT (live dyad; Hawkins human: words 7.73-&gt;4.10, acc 0.78-&gt;0.94) ---
+[claude]
+    rep1: acc=0.67  words=9.17  n=12
+    rep2: acc=0.83  words=9.17  n=12
+    rep3: acc=0.92  words=9.08  n=12
+    rep4: acc=1.00  words=9.08  n=12
+    rep5: acc=1.00  words=9.08  n=12
+[gpt]
+    rep1: acc=0.42  words=8.58  n=12
+    rep2: acc=0.75  words=8.83  n=12
+    rep3: acc=0.75  words=8.83  n=12
+    rep4: acc=0.67  words=8.42  n=12
+    rep5: acc=0.75  words=8.42  n=12
+[gemini]
+    rep1: acc=0.92  words=10.67  n=12
+    rep2: acc=1.00  words=10.92  n=12
+    rep3: acc=1.00  words=10.83  n=12
+    rep4: acc=1.00  words=10.83  n=12
+    rep5: acc=1.00  words=10.83  n=12
+
+--- PROBE arms + trajectory contrast (cluster = one coined term) ---
+
+[claude/dyadic] n=12 terms | coined_only=0.583 ordered=0.917 reversed=0.750 shuffled=0.833
+    history_lift (ord-coined) = +0.333 [+0.000,+0.667]   (gate: &gt;0 =&gt; history load-bearing =&gt; order test interpretable)
+    ORDER gap   (ord-shuf)    = +0.083 [+0.000,+0.222]
+    chronology  (ord-rev)     = +0.167   (artifact guard)
+
+[claude/mono] n=12 terms | coined_only=0.417 ordered=0.667 reversed=0.750 shuffled=0.722
+    history_lift (ord-coined) = +0.250 [+0.000,+0.500]   (gate: &gt;0 =&gt; history load-bearing =&gt; order test interpretable)
+    ORDER gap   (ord-shuf)    = -0.056 [-0.194,+0.056]
+    chronology  (ord-rev)     = -0.083   (artifact guard)
+
+[gpt/dyadic] n=12 terms | coined_only=0.333 ordered=0.750 reversed=0.667 shuffled=0.694
+    history_lift (ord-coined) = +0.417 [+0.083,+0.750]   (gate: &gt;0 =&gt; history load-bearing =&gt; order test interpretable)
+    ORDER gap   (ord-shuf)    = +0.056 [-0.194,+0.278]
+    chronology  (ord-rev)     = +0.083   (artifact guard)
+
+[gpt/mono] n=12 terms | coined_only=0.167 ordered=0.583 reversed=0.583 shuffled=0.528
+    history_lift (ord-coined) = +0.417 [+0.167,+0.667]   (gate: &gt;0 =&gt; history load-bearing =&gt; order test interpretable)
+    ORDER gap   (ord-shuf)    = +0.056 [-0.056,+0.167]
+    chronology  (ord-rev)     = +0.000   (artifact guard)
+
+[gemini/dyadic] n=12 terms | coined_only=0.667 ordered=0.917 reversed=0.750 shuffled=0.806
+    history_lift (ord-coined) = +0.250 [+0.000,+0.500]   (gate: &gt;0 =&gt; history load-bearing =&gt; order test interpretable)
+    ORDER gap   (ord-shuf)    = +0.111 [+0.000,+0.278]
+    chronology  (ord-rev)     = +0.167   (artifact guard)
+
+[gemini/mono] n=12 terms | coined_only=0.583 ordered=0.833 reversed=0.833 shuffled=0.806
+    history_lift (ord-coined) = +0.250 [-0.083,+0.583]   (gate: &gt;0 =&gt; history load-bearing =&gt; order test interpretable)
+    ORDER gap   (ord-shuf)    = +0.028 [-0.083,+0.167]
+    chronology  (ord-rev)     = +0.000   (artifact guard)
+
+--- NAMED (confounded) contrast: live-online acc vs dyadic shuffled-replay ---
+[claude] live-online=0.883  shuffled-replay=0.833
+[gpt] live-online=0.667  shuffled-replay=0.694
+[gemini] live-online=0.983  shuffled-replay=0.806
+
+--- VERDICT (pre-registered rule) ---
+[claude] RELATIONAL NULL (deflationary: history content helps, order does not)
+     lift=+0.333(load-bearing yes) order_gap=+0.083[+0.000,+0.222](CI&gt;0 no) chron ok floor ok mono_gap=-0.056
+[gpt] RELATIONAL NULL (deflationary: history content helps, order does not)
+     lift=+0.417(load-bearing yes) order_gap=+0.056[-0.194,+0.278](CI&gt;0 no) chron ok floor ok mono_gap=+0.056
+[gemini] RELATIONAL NULL (deflationary: history content helps, order does not)
+     lift=+0.250(load-bearing yes) order_gap=+0.111[+0.000,+0.278](CI&gt;0 no) chron ok floor ok mono_gap=+0.028
+
+OVERALL: RELATIONAL NULL / under-powered across panel (first-class negative)
+</pre>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

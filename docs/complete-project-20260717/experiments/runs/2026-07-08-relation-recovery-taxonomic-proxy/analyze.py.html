@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-08-relation-recovery-taxonomic-proxy</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">11.7 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-08-relation-recovery-taxonomic-proxy/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;analyze.py — scoring + H1/H2 verdict for the FRESH relation-recovery / taxonomic-proxy probe.</span>
+
+<span class="sd">Recomputes everything from raw/ + items.json + control.json + hearst.json. No threshold is tuned</span>
+<span class="sd">after seeing results (anti-cheat); the verdict map is the one frozen in PREREG.md.</span>
+
+<span class="sd">RATIFIED gates (s193) + six freeze-time conditions honored here:</span>
+<span class="sd">- Q1-C / condition 1: the ACROSS-RELATION (n=6) result is the SOLE VERDICT OF RECORD for H1 and H2.</span>
+<span class="sd">  The item-level cue-depth regression is DESCRIPTIVE/ROBUSTNESS-ONLY (reported, flagged non-decisive,</span>
+<span class="sd">  can never fire H2 or upgrade an across-relation H2-loss).</span>
+<span class="sd">- condition 2: exhaustive, mutually-exclusive H1 bands (no uncovered middle) + a NUMERIC H2 margin.</span>
+<span class="sd">- condition 5 / Q3-A: IS-A depth PRIMARY (predicted sign NEGATIVE); the corpus Hearst proxy SECONDARY</span>
+<span class="sd">  (predicted sign POSITIVE); a Hearst-only H2 win is reported QUALIFIED/WEAKER, never equal-status.</span>
+
+<span class="sd">Recovery 𝒮 (per relation) = mean raw SOUNDNESS (Cao precision-over-produced) over the relation&#39;s cues</span>
+<span class="sd">— the exact quantity the essay&#39;s clause 2 and the pilot use (the −0.086 pipeline). HIT@3 is the</span>
+<span class="sd">gold-size-insensitive CO-PRIMARY carried from s186. Across-relation Spearman is TIE-NAIVE, matching</span>
+<span class="sd">the authoritative s186 pipeline (the pilot notes tie-corrected gives a slightly larger |ρ|; tie-naive</span>
+<span class="sd">is the s186 figure of record). n=3 models, orderings not coefficients; nouns only.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">RELS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;antonymy&quot;</span><span class="p">,</span> <span class="s2">&quot;synonymy&quot;</span><span class="p">,</span> <span class="s2">&quot;hypernymy&quot;</span><span class="p">,</span> <span class="s2">&quot;hyponymy&quot;</span><span class="p">,</span> <span class="s2">&quot;holonymy&quot;</span><span class="p">,</span> <span class="s2">&quot;meronymy&quot;</span><span class="p">]</span>
+<span class="n">SLOTS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
+
+<span class="c1"># ---- FROZEN verdict thresholds (PREREG; condition 2) ----</span>
+<span class="n">H1_REPL_MAX</span> <span class="o">=</span> <span class="mf">0.30</span>     <span class="c1"># rho_cue &lt;= 0.30  -&gt; DECOUPLING-REPLICATES (near-zero or negative)</span>
+<span class="n">H1_BREAK_MIN</span> <span class="o">=</span> <span class="mf">0.50</span>    <span class="c1"># rho_cue &gt;  0.50  -&gt; DECOUPLING-BREAKS (cue-strength clearly recovers)</span>
+<span class="c1"># (0.30, 0.50]         -&gt; H1-PARTIAL/AMBIGUOUS  (exhaustive, mutually exclusive; pre-named)</span>
+<span class="n">H2_MARGIN</span> <span class="o">=</span> <span class="mf">0.20</span>       <span class="c1"># |rho_proxy| - |rho_cue| &gt;= 0.20 AND predicted direction -&gt; proxy wins</span>
+<span class="n">MAJ</span> <span class="o">=</span> <span class="mi">2</span>                <span class="c1"># &gt;=2/3 models</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">soundness</span><span class="p">(</span><span class="n">produced</span><span class="p">,</span> <span class="n">gold</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">produced</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">produced</span> <span class="k">if</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">gold</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">produced</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">hit</span><span class="p">(</span><span class="n">produced</span><span class="p">,</span> <span class="n">gold</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">produced</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="mf">1.0</span> <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">w</span> <span class="ow">in</span> <span class="n">gold</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">produced</span><span class="p">)</span> <span class="k">else</span> <span class="mf">0.0</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">spearman</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;TIE-NAIVE Spearman (byte-identical to s186 analyze.py — the authoritative −0.086 pipeline).&quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rank</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">pos</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">idx</span><span class="p">):</span>
+            <span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">pos</span>
+        <span class="k">return</span> <span class="n">r</span>
+    <span class="n">ra</span><span class="p">,</span> <span class="n">rb</span> <span class="o">=</span> <span class="n">rank</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">rank</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">d2</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">ra</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">rb</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">d2</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_items</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;items.json&quot;</span><span class="p">))</span>
+    <span class="n">gold</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">depth</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{},</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">:</span>
+        <span class="n">order</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">][</span><span class="n">r</span><span class="p">]]</span>
+        <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">][</span><span class="n">r</span><span class="p">]:</span>
+            <span class="n">gold</span><span class="p">[(</span><span class="n">r</span><span class="p">,</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">])]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;gold&quot;</span><span class="p">])</span>
+            <span class="n">depth</span><span class="p">[(</span><span class="n">r</span><span class="p">,</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">])]</span> <span class="o">=</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;is_a_depth&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">items</span><span class="p">,</span> <span class="n">gold</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">depth</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">control_soundness_per_rel</span><span class="p">(</span><span class="n">order</span><span class="p">,</span> <span class="n">gold</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;cue-strength per relation = mean 𝒮(control top-3, frame variant) — s186 clause-2 quantity.&quot;&quot;&quot;</span>
+    <span class="n">ctrl</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;control.json&quot;</span><span class="p">))[</span><span class="s2">&quot;cues&quot;</span><span class="p">]</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;frame&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;sent&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+    <span class="k">for</span> <span class="n">variant</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;frame&quot;</span><span class="p">,</span> <span class="s2">&quot;sent&quot;</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">:</span>
+            <span class="n">vals</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">cue</span> <span class="ow">in</span> <span class="n">order</span><span class="p">[</span><span class="n">r</span><span class="p">]:</span>
+                <span class="n">cand</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cue</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">variant</span><span class="p">,</span> <span class="p">[])]</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="n">soundness</span><span class="p">(</span><span class="n">cand</span><span class="p">,</span> <span class="n">gold</span><span class="p">[(</span><span class="n">r</span><span class="p">,</span> <span class="n">cue</span><span class="p">)])</span>
+                <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">out</span><span class="p">[</span><span class="n">variant</span><span class="p">][</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span> <span class="k">if</span> <span class="n">vals</span> <span class="k">else</span> <span class="mf">0.0</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">model_scores</span><span class="p">(</span><span class="n">gold</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;per (slot, rel): mean raw soundness, mean hit, per-cue soundness dict, empties.&quot;&quot;&quot;</span>
+    <span class="n">S</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">per_cue_S</span><span class="p">,</span> <span class="n">miss</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{},</span> <span class="p">{},</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">:</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;raw&quot;</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">-neutral.json&quot;</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">f</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                <span class="k">continue</span>
+            <span class="n">rows</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+            <span class="n">sv</span><span class="p">,</span> <span class="n">hv</span><span class="p">,</span> <span class="n">pcs</span><span class="p">,</span> <span class="n">empt</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">{},</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;words&quot;</span><span class="p">]:</span>
+                    <span class="n">empt</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="n">soundness</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;words&quot;</span><span class="p">],</span> <span class="n">gold</span><span class="p">[(</span><span class="n">r</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">])])</span>
+                <span class="n">h</span> <span class="o">=</span> <span class="n">hit</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;words&quot;</span><span class="p">],</span> <span class="n">gold</span><span class="p">[(</span><span class="n">r</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">])])</span>
+                <span class="n">pcs</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;cue&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">s</span>
+                <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">sv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">h</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">hv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+            <span class="n">S</span><span class="p">[(</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sv</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">sv</span><span class="p">)</span> <span class="k">if</span> <span class="n">sv</span> <span class="k">else</span> <span class="mf">0.0</span>
+            <span class="n">H</span><span class="p">[(</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">hv</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">hv</span><span class="p">)</span> <span class="k">if</span> <span class="n">hv</span> <span class="k">else</span> <span class="mf">0.0</span>
+            <span class="n">per_cue_S</span><span class="p">[(</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">)]</span> <span class="o">=</span> <span class="n">pcs</span>
+            <span class="n">miss</span><span class="p">[(</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">)]</span> <span class="o">=</span> <span class="n">empt</span>
+    <span class="k">return</span> <span class="n">S</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">per_cue_S</span><span class="p">,</span> <span class="n">miss</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span><span class="p">,</span> <span class="n">gold</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">depth</span> <span class="o">=</span> <span class="n">load_items</span><span class="p">()</span>
+    <span class="n">cs</span> <span class="o">=</span> <span class="n">control_soundness_per_rel</span><span class="p">(</span><span class="n">order</span><span class="p">,</span> <span class="n">gold</span><span class="p">)</span>
+    <span class="n">hearst</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;hearst.json&quot;</span><span class="p">))[</span><span class="s2">&quot;hearst_density&quot;</span><span class="p">]</span>
+    <span class="n">S</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">per_cue_S</span><span class="p">,</span> <span class="n">miss</span> <span class="o">=</span> <span class="n">model_scores</span><span class="p">(</span><span class="n">gold</span><span class="p">,</span> <span class="n">order</span><span class="p">)</span>
+
+    <span class="c1"># predictor vectors (frozen BEFORE recovery; per relation)</span>
+    <span class="n">cue_strength</span> <span class="o">=</span> <span class="p">[</span><span class="n">cs</span><span class="p">[</span><span class="s2">&quot;frame&quot;</span><span class="p">][</span><span class="n">r</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">]</span>           <span class="c1"># H1 predictor</span>
+    <span class="n">isa_depth</span> <span class="o">=</span> <span class="p">[</span><span class="n">items</span><span class="p">[</span><span class="s2">&quot;profile&quot;</span><span class="p">][</span><span class="n">r</span><span class="p">][</span><span class="s2">&quot;mean_is_a_depth&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">]</span>   <span class="c1"># H2 primary proxy</span>
+    <span class="n">hearst_dens</span> <span class="o">=</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">hearst</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">order</span><span class="p">[</span><span class="n">r</span><span class="p">])</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">order</span><span class="p">[</span><span class="n">r</span><span class="p">])</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">]</span>  <span class="c1"># H2 second arm</span>
+
+    <span class="n">rep</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;relations&quot;</span><span class="p">:</span> <span class="n">RELS</span><span class="p">,</span> <span class="s2">&quot;n_per_rel&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">r</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">order</span><span class="p">[</span><span class="n">r</span><span class="p">])</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">},</span>
+           <span class="s2">&quot;corpus&quot;</span><span class="p">:</span> <span class="s2">&quot;C4 (allenai/c4 en, shards 00000-00002, ODC-BY)&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;predictors&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;cue_strength_frame&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">RELS</span><span class="p">,</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cue_strength</span><span class="p">])),</span>
+                          <span class="s2">&quot;isa_depth&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">RELS</span><span class="p">,</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">isa_depth</span><span class="p">])),</span>
+                          <span class="s2">&quot;hearst_density&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">RELS</span><span class="p">,</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">hearst_dens</span><span class="p">]))},</span>
+           <span class="s2">&quot;cue_strength_sent&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">r</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">cs</span><span class="p">[</span><span class="s2">&quot;sent&quot;</span><span class="p">][</span><span class="n">r</span><span class="p">],</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">}}</span>
+
+    <span class="c1"># recovery vectors per model (SOUNDNESS primary, HIT co-primary)</span>
+    <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;recovery_soundness&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">slot</span><span class="p">:</span> <span class="p">{</span><span class="n">r</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">S</span><span class="p">[(</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">)],</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">}</span> <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">}</span>
+    <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;recovery_hit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">slot</span><span class="p">:</span> <span class="p">{</span><span class="n">r</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">H</span><span class="p">[(</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">)],</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">}</span> <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">}</span>
+    <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;empties&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">slot</span><span class="p">:</span> <span class="p">{</span><span class="n">r</span><span class="p">:</span> <span class="n">miss</span><span class="o">.</span><span class="n">get</span><span class="p">((</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">}</span> <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">}</span>
+
+    <span class="c1"># ---- across-relation correlations, per model (PRIMARY = soundness recovery) ----</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rhos</span><span class="p">(</span><span class="n">recov</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;rho_cue&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">spearman</span><span class="p">(</span><span class="n">recov</span><span class="p">,</span> <span class="n">cue_strength</span><span class="p">),</span> <span class="mi">3</span><span class="p">),</span>
+                <span class="s2">&quot;rho_depth&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">spearman</span><span class="p">(</span><span class="n">recov</span><span class="p">,</span> <span class="n">isa_depth</span><span class="p">),</span> <span class="mi">3</span><span class="p">),</span>
+                <span class="s2">&quot;rho_hearst&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">spearman</span><span class="p">(</span><span class="n">recov</span><span class="p">,</span> <span class="n">hearst_dens</span><span class="p">),</span> <span class="mi">3</span><span class="p">)}</span>
+    <span class="n">corr_S</span><span class="p">,</span> <span class="n">corr_H</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">:</span>
+        <span class="n">corr_S</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="n">rhos</span><span class="p">([</span><span class="n">S</span><span class="p">[(</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">)]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">])</span>
+        <span class="n">corr_H</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="n">rhos</span><span class="p">([</span><span class="n">H</span><span class="p">[(</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">)]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">])</span>
+    <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;across_relation_soundness&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">corr_S</span>
+    <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;across_relation_hit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">corr_H</span>
+
+    <span class="c1"># ---- H1 verdict (exhaustive bands; condition 2) on PRIMARY (soundness) ----</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">band</span><span class="p">(</span><span class="n">rc</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">rc</span> <span class="o">&lt;=</span> <span class="n">H1_REPL_MAX</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;REPLICATES&quot;</span>
+        <span class="k">if</span> <span class="n">rc</span> <span class="o">&gt;</span> <span class="n">H1_BREAK_MIN</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;BREAKS&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;PARTIAL&quot;</span>
+    <span class="n">h1_bands</span> <span class="o">=</span> <span class="p">{</span><span class="n">slot</span><span class="p">:</span> <span class="n">band</span><span class="p">(</span><span class="n">corr_S</span><span class="p">[</span><span class="n">slot</span><span class="p">][</span><span class="s2">&quot;rho_cue&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">}</span>
+    <span class="n">n_repl</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span> <span class="k">if</span> <span class="n">h1_bands</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;REPLICATES&quot;</span><span class="p">)</span>
+    <span class="n">n_break</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span> <span class="k">if</span> <span class="n">h1_bands</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;BREAKS&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n_repl</span> <span class="o">&gt;=</span> <span class="n">MAJ</span><span class="p">:</span>
+        <span class="n">H1</span> <span class="o">=</span> <span class="s2">&quot;DECOUPLING-REPLICATES&quot;</span>
+    <span class="k">elif</span> <span class="n">n_break</span> <span class="o">&gt;=</span> <span class="n">MAJ</span><span class="p">:</span>
+        <span class="n">H1</span> <span class="o">=</span> <span class="s2">&quot;DECOUPLING-BREAKS&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">H1</span> <span class="o">=</span> <span class="s2">&quot;H1-PARTIAL/AMBIGUOUS&quot;</span>
+
+    <span class="c1"># ---- H2 verdict (numeric margin; IS-A depth PRIMARY neg; Hearst SECONDARY pos) ----</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">proxy_wins</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">proxy</span><span class="p">,</span> <span class="n">sign</span><span class="p">):</span>
+        <span class="n">rp</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;rho_</span><span class="si">{</span><span class="n">proxy</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+        <span class="n">dir_ok</span> <span class="o">=</span> <span class="p">(</span><span class="n">rp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">if</span> <span class="n">sign</span> <span class="o">==</span> <span class="s2">&quot;neg&quot;</span> <span class="k">else</span> <span class="p">(</span><span class="n">rp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dir_ok</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">rp</span><span class="p">)</span> <span class="o">-</span> <span class="nb">abs</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;rho_cue&quot;</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="n">H2_MARGIN</span><span class="p">)</span>
+    <span class="n">depth_win</span> <span class="o">=</span> <span class="p">{</span><span class="n">slot</span><span class="p">:</span> <span class="n">proxy_wins</span><span class="p">(</span><span class="n">corr_S</span><span class="p">[</span><span class="n">slot</span><span class="p">],</span> <span class="s2">&quot;depth&quot;</span><span class="p">,</span> <span class="s2">&quot;neg&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">}</span>
+    <span class="n">hearst_win</span> <span class="o">=</span> <span class="p">{</span><span class="n">slot</span><span class="p">:</span> <span class="n">proxy_wins</span><span class="p">(</span><span class="n">corr_S</span><span class="p">[</span><span class="n">slot</span><span class="p">],</span> <span class="s2">&quot;hearst&quot;</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">}</span>
+    <span class="n">n_depth</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span> <span class="k">if</span> <span class="n">depth_win</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
+    <span class="n">n_hearst</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span> <span class="k">if</span> <span class="n">hearst_win</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">n_depth</span> <span class="o">&gt;=</span> <span class="n">MAJ</span><span class="p">:</span>
+        <span class="n">H2</span> <span class="o">=</span> <span class="s2">&quot;TAXONOMIC-PROXY-WINS (IS-A depth, primary)&quot;</span>
+    <span class="k">elif</span> <span class="n">n_hearst</span> <span class="o">&gt;=</span> <span class="n">MAJ</span><span class="p">:</span>
+        <span class="n">H2</span> <span class="o">=</span> <span class="s2">&quot;TAXONOMIC-PROXY-WINS-QUALIFIED (Hearst only; IS-A depth did not win — weaker)&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">H2</span> <span class="o">=</span> <span class="s2">&quot;TAXONOMIC-PROXY-LOSES&quot;</span>
+
+    <span class="c1"># ---- item-level SECONDARY (Q1-C / condition 1): DESCRIPTIVE/ROBUSTNESS-ONLY, NON-DECISIVE ----</span>
+    <span class="c1"># within-cue: does a cue&#39;s own IS-A depth predict its own recovery? pooled across relations.</span>
+    <span class="n">item_level</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">:</span>
+        <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">RELS</span><span class="p">:</span>
+            <span class="n">pcs</span> <span class="o">=</span> <span class="n">per_cue_S</span><span class="p">[(</span><span class="n">slot</span><span class="p">,</span> <span class="n">r</span><span class="p">)]</span>
+            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">order</span><span class="p">[</span><span class="n">r</span><span class="p">]:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="n">depth</span><span class="p">[(</span><span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">)]</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="n">pcs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">d</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">s</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">xs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">);</span> <span class="n">ys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">item_level</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span>
+                            <span class="s2">&quot;rho_depth_recovery&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">spearman</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="k">else</span> <span class="kc">None</span><span class="p">}</span>
+    <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;item_level_secondary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;NOTE&quot;</span><span class="p">:</span> <span class="s2">&quot;DESCRIPTIVE/ROBUSTNESS-ONLY per Q1-C + freeze-condition 1 — NON-DECISIVE; &quot;</span>
+                <span class="s2">&quot;cannot fire H2 or upgrade an across-relation H2-loss.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;per_model_rho_depth_vs_recovery&quot;</span><span class="p">:</span> <span class="n">item_level</span><span class="p">}</span>
+
+    <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;H1&quot;</span><span class="p">:</span> <span class="n">H1</span><span class="p">,</span> <span class="s2">&quot;H1_bands_per_model&quot;</span><span class="p">:</span> <span class="n">h1_bands</span><span class="p">,</span>
+        <span class="s2">&quot;H1_rho_cue_per_model&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="n">corr_S</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;rho_cue&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">},</span>
+        <span class="s2">&quot;H2&quot;</span><span class="p">:</span> <span class="n">H2</span><span class="p">,</span>
+        <span class="s2">&quot;H2_rho_depth_per_model&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="n">corr_S</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;rho_depth&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">},</span>
+        <span class="s2">&quot;H2_rho_hearst_per_model&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="n">corr_S</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;rho_hearst&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">},</span>
+        <span class="s2">&quot;H2_depth_win_per_model&quot;</span><span class="p">:</span> <span class="n">depth_win</span><span class="p">,</span> <span class="s2">&quot;H2_hearst_win_per_model&quot;</span><span class="p">:</span> <span class="n">hearst_win</span><span class="p">,</span>
+        <span class="s2">&quot;level_divergence&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># filled below</span>
+        <span class="s2">&quot;thresholds&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;H1_REPL_MAX&quot;</span><span class="p">:</span> <span class="n">H1_REPL_MAX</span><span class="p">,</span> <span class="s2">&quot;H1_BREAK_MIN&quot;</span><span class="p">:</span> <span class="n">H1_BREAK_MIN</span><span class="p">,</span>
+                       <span class="s2">&quot;H2_MARGIN&quot;</span><span class="p">:</span> <span class="n">H2_MARGIN</span><span class="p">,</span> <span class="s2">&quot;MAJ&quot;</span><span class="p">:</span> <span class="n">MAJ</span><span class="p">},</span>
+    <span class="p">}</span>
+    <span class="c1"># level-divergence flag (condition 1: a first-class outcome, reported not resolved)</span>
+    <span class="n">il</span> <span class="o">=</span> <span class="p">[</span><span class="n">item_level</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;rho_depth_recovery&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span> <span class="k">if</span> <span class="n">item_level</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;rho_depth_recovery&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">across_depth_neg</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span> <span class="k">if</span> <span class="n">corr_S</span><span class="p">[</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;rho_depth&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">MAJ</span>
+    <span class="n">item_depth_neg</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">il</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">MAJ</span>
+    <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;level_divergence&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">across_depth_neg</span> <span class="o">!=</span> <span class="n">item_depth_neg</span><span class="p">)</span>
+
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">rep</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;results.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">_print</span><span class="p">(</span><span class="n">rep</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_print</span><span class="p">(</span><span class="n">rep</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">74</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;H1:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;H1&quot;</span><span class="p">],</span> <span class="s2">&quot;| bands:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;H1_bands_per_model&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   rho_cue per model:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;H1_rho_cue_per_model&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;H2:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;H2&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   rho_depth per model:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;H2_rho_depth_per_model&quot;</span><span class="p">],</span> <span class="s2">&quot;(predicted NEG)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   rho_hearst per model:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;H2_rho_hearst_per_model&quot;</span><span class="p">],</span> <span class="s2">&quot;(predicted POS)&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   depth-wins:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;H2_depth_win_per_model&quot;</span><span class="p">],</span>
+          <span class="s2">&quot;| hearst-wins:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;H2_hearst_win_per_model&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   level-divergence (across vs item-level depth sign):&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;headline&quot;</span><span class="p">][</span><span class="s2">&quot;level_divergence&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Predictors per relation:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   cue-strength(frame):&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;predictors&quot;</span><span class="p">][</span><span class="s2">&quot;cue_strength_frame&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   IS-A depth:         &quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;predictors&quot;</span><span class="p">][</span><span class="s2">&quot;isa_depth&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   Hearst density:     &quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;predictors&quot;</span><span class="p">][</span><span class="s2">&quot;hearst_density&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Recovery (soundness) per model per relation:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   </span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;recovery_soundness&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recovery (HIT@3) per model per relation:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   </span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;recovery_hit&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">item-level SECONDARY (descriptive/non-decisive):&quot;</span><span class="p">,</span>
+          <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;item_level_secondary&quot;</span><span class="p">][</span><span class="s2">&quot;per_model_rho_depth_vs_recovery&quot;</span><span class="p">][</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;rho_depth_recovery&quot;</span><span class="p">]</span>
+           <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">})</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;empties per model/rel:&quot;</span><span class="p">,</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;empties&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HIT co-primary across-relation rho_cue:&quot;</span><span class="p">,</span>
+          <span class="p">{</span><span class="n">s</span><span class="p">:</span> <span class="n">rep</span><span class="p">[</span><span class="s2">&quot;across_relation_hit&quot;</span><span class="p">][</span><span class="n">s</span><span class="p">][</span><span class="s2">&quot;rho_cue&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">SLOTS</span><span class="p">})</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">results.json written.&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

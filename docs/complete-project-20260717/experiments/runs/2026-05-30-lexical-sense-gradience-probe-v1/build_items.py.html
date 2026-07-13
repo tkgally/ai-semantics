@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_items.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-30-lexical-sense-gradience-probe-v1</a> <span class="sep">/</span> <span class="cur">build_items.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_items.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">11.7 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-30-lexical-sense-gradience-probe-v1/build_items.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Build + freeze the lexical-sense-gradience v1 item set from DWUG EN (2026-05-30).</span>
+
+<span class="sd">Operationalizes design/lexical-sense-gradience-v1 under the RESOLVED gate</span>
+<span class="sd">(decisions/resolved/lexical-sense-gradience-operationalization, ratified under Tom&#39;s</span>
+<span class="sd">delegation): v1 scope = P1 monotonicity + P3 context-similarity control; Q4 within-period</span>
+<span class="sd">pairs only; Q1 behavioral panel (probe.py); Q3 control = content-token lexical overlap</span>
+<span class="sd">(computed here, stored in the manifest).</span>
+
+<span class="sd">LICENCE / DATA HANDLING (decided with the gate): DWUG EN is CC BY-ND 4.0 over copyrighted</span>
+<span class="sd">CCOHA corpus text. This script does NOT commit the raw archive or the corpus sentences. It:</span>
+<span class="sd">  - downloads dwug_en.zip from Zenodo into experiments/data/dwug/ (gitignored) if absent,</span>
+<span class="sd">    and verifies the archive sha256;</span>
+<span class="sd">  - writes the full-text item file (sentences + target spans) to experiments/data/dwug/</span>
+<span class="sd">    (gitignored, local-only — the probe reads it);</span>
+<span class="sd">  - writes a COMMITTABLE manifest (experiments/runs/.../manifest.csv) of the selected pairs</span>
+<span class="sd">    by DWUG identifier + the human DURel rating used as gold + the derived lexical-overlap</span>
+<span class="sd">    control covariate (pointers + specific annotation values for the sampled pairs; research-</span>
+<span class="sd">    analysis use, NOT redistribution of the dataset or the corpus text).</span>
+<span class="sd">The freeze hash is the sha256 of the deterministic manifest. Re-running reproduces it.</span>
+
+<span class="sd">Pre-registration (charter s8): the within-period filter, the &gt;=2-judgment requirement, the</span>
+<span class="sd">balance (N_PER_LEVEL across rounded-median DURel 1..4), the per-(lemma,level) diversity cap,</span>
+<span class="sd">and the sampling SEED are all fixed HERE, before any model call. No tuning after results.</span>
+
+<span class="sd">Run: python3 build_items.py    (downloads DWUG on first run; no API)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statistics</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">zipfile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">DWUG_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;dwug&quot;</span><span class="p">))</span>
+<span class="n">ZIP_PATH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DWUG_DIR</span><span class="p">,</span> <span class="s2">&quot;dwug_en.zip&quot;</span><span class="p">)</span>
+<span class="n">EXTRACT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DWUG_DIR</span><span class="p">,</span> <span class="s2">&quot;dwug_en&quot;</span><span class="p">)</span>
+<span class="n">ZENODO_URL</span> <span class="o">=</span> <span class="s2">&quot;https://zenodo.org/records/14028531/files/dwug_en.zip?download=1&quot;</span>
+<span class="c1"># archive sha256 recorded for reproducibility (DWUG EN v3.0.0, Zenodo 14028531; pinned 2026-05-30)</span>
+<span class="n">EXPECTED_ZIP_SHA256</span> <span class="o">=</span> <span class="s2">&quot;64eef477154b82cb27925ab4ea8c030a8e23840b538dd06b6464aa1e55af2dbf&quot;</span>
+
+<span class="n">FULLTEXT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DWUG_DIR</span><span class="p">,</span> <span class="s2">&quot;lexical_v1_fulltext.jsonl&quot;</span><span class="p">)</span>  <span class="c1"># gitignored, local-only</span>
+<span class="n">MANIFEST</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;manifest.csv&quot;</span><span class="p">)</span>                   <span class="c1"># committed (no corpus text)</span>
+
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">20260530</span>
+<span class="n">N_PER_LEVEL</span> <span class="o">=</span> <span class="mi">50</span>          <span class="c1"># balanced across rounded-median DURel levels 1..4</span>
+<span class="n">MIN_JUDGMENTS</span> <span class="o">=</span> <span class="mi">2</span>         <span class="c1"># require &gt;=2 annotator judgments per pair (reliable median)</span>
+<span class="n">PER_LEMMA_LEVEL_CAP</span> <span class="o">=</span> <span class="mi">4</span>   <span class="c1"># &lt;= this many sampled pairs per (lemma, level) for diversity</span>
+
+<span class="n">STOP</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s2">&quot;a an the of to in on at for and or but with from by as is are was were be been &quot;</span>
+           <span class="s2">&quot;being this that these those it its he she they we you i his her their our your my &quot;</span>
+           <span class="s2">&quot;him them us not no so if then than too very can could would should will shall may &quot;</span>
+           <span class="s2">&quot;might must do does did have has had which who whom whose what when where why how &quot;</span>
+           <span class="s2">&quot;into onto over under up down out off about again more most some any all each&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sha256_file</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">20</span><span class="p">),</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+            <span class="n">h</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">h</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ensure_dwug</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ZIP_PATH</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">DWUG_DIR</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;downloading DWUG EN from Zenodo -&gt; </span><span class="si">{</span><span class="n">ZIP_PATH</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
+        <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">ZENODO_URL</span><span class="p">,</span> <span class="n">ZIP_PATH</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">sha256_file</span><span class="p">(</span><span class="n">ZIP_PATH</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dwug_en.zip sha256 = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">EXTRACT</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">ZIP_PATH</span><span class="p">)</span> <span class="k">as</span> <span class="n">z</span><span class="p">:</span>
+            <span class="n">z</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">DWUG_DIR</span><span class="p">)</span>
+    <span class="c1"># locate the data/ dir (archive nests dwug_en/dwug_en/data)</span>
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">DWUG_DIR</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">root</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;data&quot;</span> <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">d</span><span class="p">))</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">root</span><span class="p">,</span> <span class="n">h</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;DWUG data/ dir not found after extraction&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">stem_match</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;token (a surface form) is a plausible inflection of the lemma root.&quot;&quot;&quot;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">t</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">need</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">root</span><span class="p">))</span>
+    <span class="n">cp</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
+            <span class="n">cp</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">cp</span> <span class="o">&gt;=</span> <span class="n">need</span> <span class="ow">or</span> <span class="n">root</span> <span class="ow">in</span> <span class="n">t</span> <span class="ow">or</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">root</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_target</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Robustly recover the target word span.</span>
+
+<span class="sd">    DWUG `indexes_target_token` offsets are misaligned (+1) for some items whose `context`</span>
+<span class="sd">    has a leading space (the pre-run critic&#39;s B1). Fix: anchor near the given offset, expand</span>
+<span class="sd">    to the maximal alphabetic run, and validate it is a plausible inflection of the lemma root</span>
+<span class="sd">    (else drop the use). Returns (start, end, surface) or None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+    <span class="n">anchor</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">cand</span> <span class="ow">in</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">cand</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">ctx</span><span class="p">[</span><span class="n">cand</span><span class="p">]</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+            <span class="n">anchor</span> <span class="o">=</span> <span class="n">cand</span>
+            <span class="k">break</span>
+    <span class="k">if</span> <span class="n">anchor</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">anchor</span>
+    <span class="k">while</span> <span class="n">s</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">ctx</span><span class="p">[</span><span class="n">s</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="n">s</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">anchor</span>
+    <span class="k">while</span> <span class="n">e</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">ctx</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
+        <span class="n">e</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">surface</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">[</span><span class="n">s</span><span class="p">:</span><span class="n">e</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">stem_match</span><span class="p">(</span><span class="n">surface</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">surface</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">content_tokens</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="n">target_surface</span><span class="p">):</span>
+    <span class="n">toks</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-z]+&quot;</span><span class="p">,</span> <span class="n">sentence</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">tgt</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-z]+&quot;</span><span class="p">,</span> <span class="n">target_surface</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">toks</span> <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">STOP</span> <span class="ow">and</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tgt</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">overlap</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">t1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">t2</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">content_tokens</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="n">t1</span><span class="p">),</span> <span class="n">content_tokens</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="n">t2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">a</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">b</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span>
+    <span class="n">inter</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">jacc</span> <span class="o">=</span> <span class="n">inter</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span> <span class="o">|</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">f1</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">inter</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">jacc</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">f1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_lemma</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">lemma</span><span class="p">):</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">lemma</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">uses</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">lemma</span><span class="p">,</span> <span class="s2">&quot;uses.csv&quot;</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">):</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;indexes_target_token&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">):</span>
+                <span class="k">continue</span>  <span class="c1"># malformed/missing target offset -&gt; unusable usage</span>
+            <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">got</span> <span class="o">=</span> <span class="n">extract_target</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;context&quot;</span><span class="p">],</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">root</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">got</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>  <span class="c1"># span could not be validated against the lemma -&gt; drop (B1 fix)</span>
+            <span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">surface</span> <span class="o">=</span> <span class="n">got</span>
+            <span class="n">uses</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;identifier&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;context&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;context&quot;</span><span class="p">],</span> <span class="s2">&quot;grouping&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;grouping&quot;</span><span class="p">],</span>
+                                     <span class="s2">&quot;span&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">e</span><span class="p">),</span> <span class="s2">&quot;surface&quot;</span><span class="p">:</span> <span class="n">surface</span><span class="p">,</span>
+                                     <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">],</span> <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]}</span>
+    <span class="n">pj</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">lemma</span><span class="p">,</span> <span class="s2">&quot;judgments.csv&quot;</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">j</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;judgment&quot;</span><span class="p">])</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># &quot;cannot decide&quot;</span>
+                <span class="k">continue</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">((</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;identifier1&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;identifier2&quot;</span><span class="p">])))</span>
+            <span class="n">pj</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">uses</span><span class="p">,</span> <span class="n">pj</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">data_dir</span><span class="p">,</span> <span class="n">zip_sha</span> <span class="o">=</span> <span class="n">ensure_dwug</span><span class="p">()</span>
+    <span class="n">lemmas</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">data_dir</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">d</span><span class="p">)))</span>
+    <span class="c1"># gather candidate within-period, &gt;=2-judgment pairs, bucketed by rounded median</span>
+    <span class="n">buckets</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>  <span class="c1"># level -&gt; list of candidate dicts</span>
+    <span class="k">for</span> <span class="n">lemma</span> <span class="ow">in</span> <span class="n">lemmas</span><span class="p">:</span>
+        <span class="n">uses</span><span class="p">,</span> <span class="n">pj</span> <span class="o">=</span> <span class="n">load_lemma</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">lemma</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">js</span> <span class="ow">in</span> <span class="n">pj</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">uses</span> <span class="ow">or</span> <span class="n">y</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">uses</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">ux</span><span class="p">,</span> <span class="n">uy</span> <span class="o">=</span> <span class="n">uses</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">uses</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">ux</span><span class="p">[</span><span class="s2">&quot;grouping&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">uy</span><span class="p">[</span><span class="s2">&quot;grouping&quot;</span><span class="p">]:</span>
+                <span class="k">continue</span>  <span class="c1"># Q4 synchronic: within-period only</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">js</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">MIN_JUDGMENTS</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">med</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">js</span><span class="p">)</span>
+            <span class="n">level</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">med</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">level</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="n">spread</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">js</span><span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">js</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">jacc</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">overlap</span><span class="p">(</span><span class="n">ux</span><span class="p">[</span><span class="s2">&quot;context&quot;</span><span class="p">],</span> <span class="n">ux</span><span class="p">[</span><span class="s2">&quot;surface&quot;</span><span class="p">],</span> <span class="n">uy</span><span class="p">[</span><span class="s2">&quot;context&quot;</span><span class="p">],</span> <span class="n">uy</span><span class="p">[</span><span class="s2">&quot;surface&quot;</span><span class="p">])</span>
+            <span class="n">buckets</span><span class="p">[</span><span class="n">level</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s2">&quot;lemma&quot;</span><span class="p">:</span> <span class="n">lemma</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">:</span> <span class="n">ux</span><span class="p">[</span><span class="s2">&quot;pos&quot;</span><span class="p">],</span> <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="n">ux</span><span class="p">[</span><span class="s2">&quot;grouping&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;id1&quot;</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;id2&quot;</span><span class="p">:</span> <span class="n">y</span><span class="p">,</span> <span class="s2">&quot;human_median&quot;</span><span class="p">:</span> <span class="n">med</span><span class="p">,</span> <span class="s2">&quot;human_mean&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">js</span><span class="p">),</span> <span class="mi">3</span><span class="p">),</span>
+                <span class="s2">&quot;human_n&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">js</span><span class="p">),</span> <span class="s2">&quot;human_spread&quot;</span><span class="p">:</span> <span class="n">spread</span><span class="p">,</span>
+                <span class="s2">&quot;overlap_jaccard&quot;</span><span class="p">:</span> <span class="n">jacc</span><span class="p">,</span> <span class="s2">&quot;overlap_tokenf1&quot;</span><span class="p">:</span> <span class="n">f1</span><span class="p">,</span>
+                <span class="s2">&quot;ctx1&quot;</span><span class="p">:</span> <span class="n">ux</span><span class="p">[</span><span class="s2">&quot;context&quot;</span><span class="p">],</span> <span class="s2">&quot;span1&quot;</span><span class="p">:</span> <span class="n">ux</span><span class="p">[</span><span class="s2">&quot;span&quot;</span><span class="p">],</span> <span class="s2">&quot;surf1&quot;</span><span class="p">:</span> <span class="n">ux</span><span class="p">[</span><span class="s2">&quot;surface&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;ctx2&quot;</span><span class="p">:</span> <span class="n">uy</span><span class="p">[</span><span class="s2">&quot;context&quot;</span><span class="p">],</span> <span class="s2">&quot;span2&quot;</span><span class="p">:</span> <span class="n">uy</span><span class="p">[</span><span class="s2">&quot;span&quot;</span><span class="p">],</span> <span class="s2">&quot;surf2&quot;</span><span class="p">:</span> <span class="n">uy</span><span class="p">[</span><span class="s2">&quot;surface&quot;</span><span class="p">],</span>
+            <span class="p">})</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;candidate within-period &gt;=2-judgment pairs by level:&quot;</span><span class="p">,</span>
+          <span class="p">{</span><span class="n">lvl</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">buckets</span><span class="p">[</span><span class="n">lvl</span><span class="p">])</span> <span class="k">for</span> <span class="n">lvl</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)})</span>
+
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">lvl</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+        <span class="n">cands</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">buckets</span><span class="p">[</span><span class="n">lvl</span><span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;id1&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;id2&quot;</span><span class="p">]))</span>
+        <span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">cands</span><span class="p">)</span>
+        <span class="n">per_ll</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="n">picked</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cands</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">picked</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">N_PER_LEVEL</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">per_ll</span><span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">]]</span> <span class="o">&gt;=</span> <span class="n">PER_LEMMA_LEVEL_CAP</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">per_ll</span><span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">picked</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">picked</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">N_PER_LEVEL</span><span class="p">:</span>  <span class="c1"># relax cap if a level is short</span>
+            <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cands</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">picked</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">N_PER_LEVEL</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">picked</span><span class="p">:</span>
+                    <span class="n">picked</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="n">selected</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">picked</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  level </span><span class="si">{</span><span class="n">lvl</span><span class="si">}</span><span class="s2">: selected </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">picked</span><span class="p">)</span><span class="si">}</span><span class="s2"> (from </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">cands</span><span class="p">)</span><span class="si">}</span><span class="s2">; &quot;</span>
+              <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;lemma&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">picked</span><span class="p">))</span><span class="si">}</span><span class="s2"> lemmas)&quot;</span><span class="p">)</span>
+
+    <span class="c1"># B2 span-sanity gate: every selected item&#39;s two target surfaces must validate against</span>
+    <span class="c1"># the lemma root (no mid-word/garbage spans ship in the frozen set).</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">:</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">stem_match</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;surf1&quot;</span><span class="p">],</span> <span class="n">root</span><span class="p">)</span> <span class="ow">and</span> <span class="n">stem_match</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;surf2&quot;</span><span class="p">],</span> <span class="n">root</span><span class="p">),</span> \
+            <span class="sa">f</span><span class="s2">&quot;span-sanity fail </span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;id1&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;id2&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> root=</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2"> surf=(</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;surf1&#39;</span><span class="p">]</span><span class="si">!r}</span><span class="s2">,</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;surf2&#39;</span><span class="p">]</span><span class="si">!r}</span><span class="s2">)&quot;</span>
+
+    <span class="c1"># stable item ids</span>
+    <span class="n">selected</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;human_median&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;id1&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;id2&quot;</span><span class="p">]))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">selected</span><span class="p">):</span>
+        <span class="n">c</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;lx-</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;human_median&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">03d</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="c1"># committed manifest: pointers + ratings + overlap covariate, NO corpus text</span>
+    <span class="n">man_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">,</span> <span class="s2">&quot;lemma&quot;</span><span class="p">,</span> <span class="s2">&quot;pos&quot;</span><span class="p">,</span> <span class="s2">&quot;period&quot;</span><span class="p">,</span> <span class="s2">&quot;id1&quot;</span><span class="p">,</span> <span class="s2">&quot;id2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;human_median&quot;</span><span class="p">,</span> <span class="s2">&quot;human_mean&quot;</span><span class="p">,</span> <span class="s2">&quot;human_n&quot;</span><span class="p">,</span> <span class="s2">&quot;human_spread&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;overlap_jaccard&quot;</span><span class="p">,</span> <span class="s2">&quot;overlap_tokenf1&quot;</span><span class="p">]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">MANIFEST</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">man_cols</span><span class="p">)</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">:</span>
+            <span class="n">w</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">man_cols</span><span class="p">})</span>
+    <span class="n">man_sha</span> <span class="o">=</span> <span class="n">sha256_file</span><span class="p">(</span><span class="n">MANIFEST</span><span class="p">)</span>
+
+    <span class="c1"># gitignored full-text file for the probe (sentences + target spans)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">FULLTEXT</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">:</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+                <span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">],</span> <span class="s2">&quot;lemma&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;ctx1&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;ctx1&quot;</span><span class="p">],</span> <span class="s2">&quot;span1&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;span1&quot;</span><span class="p">]),</span> <span class="s2">&quot;surf1&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;surf1&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;ctx2&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;ctx2&quot;</span><span class="p">],</span> <span class="s2">&quot;span2&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s2">&quot;span2&quot;</span><span class="p">]),</span> <span class="s2">&quot;surf2&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;surf2&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;human_median&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;human_median&quot;</span><span class="p">],</span> <span class="s2">&quot;human_n&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;human_n&quot;</span><span class="p">],</span>
+            <span class="p">})</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">wrote </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">selected</span><span class="p">)</span><span class="si">}</span><span class="s2"> items&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  manifest (committed, no corpus text): </span><span class="si">{</span><span class="n">MANIFEST</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  full-text (gitignored, local-only):   </span><span class="si">{</span><span class="n">FULLTEXT</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  lemmas covered: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;lemma&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">selected</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  archive sha256: </span><span class="si">{</span><span class="n">zip_sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  MANIFEST sha256 (FREEZE HASH): </span><span class="si">{</span><span class="n">man_sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

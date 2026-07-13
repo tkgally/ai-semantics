@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>VOTE-freeze-s210.json — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-11-blimp-swap-arm</a> <span class="sep">/</span> <span class="cur">VOTE-freeze-s210.json</span></nav>
+<main>
+<header class="page-head">
+<h1>VOTE-freeze-s210.json</h1>
+<p class="subtitle"><span class="ftype">JSON</span> &middot; <span class="fsize">4.1 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-11-blimp-swap-arm/VOTE-freeze-s210.json</code></p>
+</header>
+<table class='kv top'><tr><th>model</th><td><span class='j-str'>openai/gpt-5.4-mini</span></td></tr><tr><th>billed_cost</th><td><span class='j-num'>0.00439725</span></td></tr><tr><th>n</th><td><span class='j-num'>1</span></td></tr><tr><th>n_missing</th><td><span class='j-num'>0</span></td></tr><tr><th>error</th><td><span class='j-null'>null</span></td></tr><tr><th>content</th><td><div class='j-str multiline'>1. **Overall: NO-GO.**  
+   The build is close, but I would not freeze-run it without at least one additional safeguard because the swap logic is **not demonstrably contrast-preserving in all retained paradigms**, and one of the core representative cases already shows a clear polarity-risk pattern.
+
+2. **Faithful preservation of the minimal contrast?**  
+   **Not fully.** Main concerns:
+   - **determinizer–noun agreement paradigms:** swapping the noun while preserving number can still break the intended contrast if the substituted noun changes **countability, article compatibility, or lexical plurality behavior** in ways that interact with the agreement manipulation.
+   - **subject–verb agreement with proper-name swaps:** the special rule “not the pre-verb subject” is good, but the representative example shows that swapping the object name can create **selectional oddity**; more importantly, if any retained item has a name-like subject elsewhere, title-case is not enough to guarantee number/interpretation stability.
+   - **sentential negation / NPI scope and only-NPI scope:** these are the most fragile. Even if the swapped token is outside the locus, changing an embedded noun/name/adjective can alter **scope preferences, discourse prominence, or locality judgments** enough to affect acceptability asymmetrically. This is a real polarity-flip risk not guaranteed to be caught by the mechanical checks.
+   - **superlative-quantifier items:** adjective/noun swaps inside quantifier environments can change **semantic comparability, classifier-like interpretation, or NP internal well-formedness**. Again, grammaticality can shift without changing the token-difference count.
+   
+   So: the revalidation is necessary, but it does **not** fully certify grammatical-minimality preservation.
+
+3. **“Semantic oddity cancels in the 2AFC” correct?**  
+   **Only partly.** It is true that if the same swapped content appears in both members of a pair, some item-level semantic weirdness can cancel **in expectation**. But it can still bias Delta-acc if the oddity:
+   - interacts differently with the **good** vs **bad** member,
+   - changes **parsing difficulty** asymmetrically,
+   - triggers **agreement/scope repair** tendencies in one member more than the other,
+   - or causes the model to rely on **lexical priors** that differ across the two constructions.
+   
+   So the claim is **not safe as a blanket guarantee**.
+
+4. **Residual anti-cheat concern?**  
+   **Yes.** The most obvious tunable concern is the **selection of “swappable” items by swappability score** and then using the most permissive, high-coverage subset. That can indirectly optimize for a desired outcome by preferentially keeping items that are easiest to preserve or most likely to produce a particular effect. Also, the **&lt;= / &gt;= thresholding around coverage and dropped paradigms** could be used strategically to steer which paradigms survive into the final verdict.
+
+5. **One freeze-time condition I would add:**  
+   Require a **manual audit of a random sample from each retained paradigm, especially all deep/scope paradigms, with explicit certification that the swapped item preserves POS, number, and NP-internal well-formedness and does not alter scope/attachment plausibility**.  
+   If you want a stricter single rule: **drop any paradigm where swapped items include semantically anomalous or selectionally incompatible nouns/names in &gt;5% of pairs.**</div></td></tr></table><details class='section'><summary><span class='sec-k'>usage</span> <span class='muted'>(8 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>prompt_tokens</th><td><span class='j-num'>1471</span></td></tr><tr><th>completion_tokens</th><td><span class='j-num'>732</span></td></tr><tr><th>total_tokens</th><td><span class='j-num'>2203</span></td></tr><tr><th>cost</th><td><span class='j-num'>0.00439725</span></td></tr><tr><th>is_byok</th><td><span class='j-bool'>false</span></td></tr><tr><th>prompt_tokens_details</th><td><table class='kv'><tr><th>cached_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>cache_write_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>audio_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>video_tokens</th><td><span class='j-num'>0</span></td></tr></table></td></tr><tr><th>cost_details</th><td><table class='kv'><tr><th>upstream_inference_cost</th><td><span class='j-num'>0.00439725</span></td></tr><tr><th>upstream_inference_prompt_cost</th><td><span class='j-num'>0.00110325</span></td></tr><tr><th>upstream_inference_completions_cost</th><td><span class='j-num'>0.003294</span></td></tr></table></td></tr><tr><th>completion_tokens_details</th><td><table class='kv'><tr><th>reasoning_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>image_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>audio_tokens</th><td><span class='j-num'>0</span></td></tr></table></td></tr></table></div></details>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

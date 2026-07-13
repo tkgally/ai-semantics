@@ -1,0 +1,5515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>results.json — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-21-scivetti-let-alone-repeated-runs</a> <span class="sep">/</span> <span class="cur">results.json</span></nav>
+<main>
+<header class="page-head">
+<h1>results.json</h1>
+<p class="subtitle"><span class="ftype">JSON</span> &middot; <span class="fsize">103.1 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-21-scivetti-let-alone-repeated-runs/results.json</code></p>
+</header>
+<table class='kv top'><tr><th>K</th><td><span class='j-num'>5</span></td></tr><tr><th>human_baseline</th><td><span class='j-num'>0.9</span></td></tr><tr><th>instrument</th><td><span class='j-str'>forced-decomposition</span></td></tr><tr><th>ceiling_range_eps</th><td><span class='j-num'>0.034</span></td></tr></table><details class='section'><summary><span class='sec-k'>per_model</span> <span class='muted'>(3 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>A</th><td><table class='kv'><tr><th>name</th><td><span class='j-str'>claude-sonnet-4.6</span></td></tr><tr><th>n_runs_committed</th><td><span class='j-num'>5</span></td></tr><tr><th>cells</th><td><table class='kv'><tr><th>letalone_combined</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    0.8181818181818182,
+    0.7575757575757576,
+    0.7575757575757576,
+    0.7878787878787878,
+    0.7575757575757576
+  ],
+  &quot;mean&quot;: 0.7757575757575758,
+  &quot;min&quot;: 0.7575757575757576,
+  &quot;max&quot;: 0.8181818181818182,
+  &quot;range&quot;: 0.06060606060606066,
+  &quot;sd&quot;: 0.027103854272724742
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 33,
+  &quot;n_constant&quot;: 26,
+  &quot;churn_rate&quot;: 0.21212121212121213,
+  &quot;mean_pairwise_agreement&quot;: 0.896969696969697,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 26,
+  &quot;majority_vote_acc&quot;: 0.7878787878787878,
+  &quot;majority_vote_wilson&quot;: [
+    0.6224802241287064,
+    0.8932411343356381
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;let-alone#1&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#10&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 3,
+        &quot;2&quot;: 2
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#11&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#12&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#13&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#14&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#15&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#16&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#17&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#18&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 2,
+        &quot;1&quot;: 3
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#19&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#2&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#20&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 4,
+        &quot;1&quot;: 1
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#21&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#22&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#23&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#24&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#25&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 4,
+        &quot;1&quot;: 1
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#26&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#27&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#28&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 3,
+        &quot;2&quot;: 2
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#29&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#3&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#30&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#31&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 4,
+        &quot;1&quot;: 1
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#32&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#33&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#4&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#5&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#6&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#7&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#8&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#9&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr><tr><th>letalone_test</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    0.7916666666666666,
+    0.75,
+    0.7916666666666666,
+    0.75,
+    0.75
+  ],
+  &quot;mean&quot;: 0.7666666666666666,
+  &quot;min&quot;: 0.75,
+  &quot;max&quot;: 0.7916666666666666,
+  &quot;range&quot;: 0.04166666666666663,
+  &quot;sd&quot;: 0.022821773229381902
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 24,
+  &quot;n_constant&quot;: 20,
+  &quot;churn_rate&quot;: 0.16666666666666666,
+  &quot;mean_pairwise_agreement&quot;: 0.9166666666666666,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 18,
+  &quot;majority_vote_acc&quot;: 0.75,
+  &quot;majority_vote_wilson&quot;: [
+    0.5510017468789357,
+    0.8800079652065766
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;let-alone#10&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 3,
+        &quot;2&quot;: 2
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#11&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#12&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#13&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#14&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#15&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#16&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#17&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#18&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 2,
+        &quot;1&quot;: 3
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#22&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#23&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#24&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#25&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 4,
+        &quot;1&quot;: 1
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#26&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#27&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#31&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 4,
+        &quot;1&quot;: 1
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#32&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#33&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#4&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#5&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#6&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#7&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#8&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#9&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr><tr><th>letalone_train</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    0.8888888888888888,
+    0.7777777777777778,
+    0.6666666666666666,
+    0.8888888888888888,
+    0.7777777777777778
+  ],
+  &quot;mean&quot;: 0.7999999999999999,
+  &quot;min&quot;: 0.6666666666666666,
+  &quot;max&quot;: 0.8888888888888888,
+  &quot;range&quot;: 0.2222222222222222,
+  &quot;sd&quot;: 0.09296222517045283
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 9,
+  &quot;n_constant&quot;: 6,
+  &quot;churn_rate&quot;: 0.3333333333333333,
+  &quot;mean_pairwise_agreement&quot;: 0.8444444444444444,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 8,
+  &quot;majority_vote_acc&quot;: 0.8888888888888888,
+  &quot;majority_vote_wilson&quot;: [
+    0.5649937852319399,
+    0.9801096286728695
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;let-alone#1&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#19&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#2&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#20&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 4,
+        &quot;1&quot;: 1
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#21&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#28&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 3,
+        &quot;2&quot;: 2
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#29&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#3&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#30&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr><tr><th>compcorr</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  &quot;mean&quot;: 1.0,
+  &quot;min&quot;: 1.0,
+  &quot;max&quot;: 1.0,
+  &quot;range&quot;: 0.0,
+  &quot;sd&quot;: 0.0
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 30,
+  &quot;n_constant&quot;: 30,
+  &quot;churn_rate&quot;: 0.0,
+  &quot;mean_pairwise_agreement&quot;: 1.0,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 30,
+  &quot;majority_vote_acc&quot;: 1.0,
+  &quot;majority_vote_wilson&quot;: [
+    0.8864829086095221,
+    1.0
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#436&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#437&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#438&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#439&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#440&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#441&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#442&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#443&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#444&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#445&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#446&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#447&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#448&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#449&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#450&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#451&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#452&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#453&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#454&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#455&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#456&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#457&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#458&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#459&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#466&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#467&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#468&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#472&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#473&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#474&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr></table></td></tr><tr><th>guard</th><td><table class='kv'><tr><th>per_run</th><td><div class='records'><div class='rec-count'>5 items</div><details class='record' open><summary><span class='rec-i'>#0</span> <span class='pv-k'>run</span> 1</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 1,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record' open><summary><span class='rec-i'>#1</span> <span class='pv-k'>run</span> 2</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 2,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record' open><summary><span class='rec-i'>#2</span> <span class='pv-k'>run</span> 3</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 3,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record'><summary><span class='rec-i'>#3</span> <span class='pv-k'>run</span> 4</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 4,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record'><summary><span class='rec-i'>#4</span> <span class='pv-k'>run</span> 5</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 5,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details></div></td></tr><tr><th>all_clean</th><td><span class='j-bool'>true</span></td></tr></table></td></tr><tr><th>cross_session</th><td><table class='kv'><tr><th>s60</th><td><table class='kv'><tr><th>letalone_test</th><td><span class='j-num'>0.8333333333333334</span></td></tr><tr><th>compcorr</th><td><span class='j-num'>1.0</span></td></tr></table></td></tr><tr><th>s62</th><td><table class='kv'><tr><th>letalone_combined</th><td><span class='j-num'>0.7272727272727273</span></td></tr><tr><th>letalone_test</th><td><span class='j-num'>0.7083333333333334</span></td></tr><tr><th>letalone_train</th><td><span class='j-num'>0.7777777777777778</span></td></tr><tr><th>compcorr</th><td><span class='j-num'>1.0</span></td></tr></table></td></tr><tr><th>extended_band</th><td><table class='kv'><tr><th>letalone_combined</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 6,
+  &quot;per_run&quot;: [
+    0.8181818181818182,
+    0.7575757575757576,
+    0.7575757575757576,
+    0.7878787878787878,
+    0.7575757575757576,
+    0.7272727272727273
+  ],
+  &quot;mean&quot;: 0.7676767676767677,
+  &quot;min&quot;: 0.7272727272727273,
+  &quot;max&quot;: 0.8181818181818182,
+  &quot;range&quot;: 0.09090909090909094,
+  &quot;sd&quot;: 0.031296835120868026
+}</pre></td></tr><tr><th>compcorr</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 7,
+  &quot;per_run&quot;: [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  &quot;mean&quot;: 1.0,
+  &quot;min&quot;: 1.0,
+  &quot;max&quot;: 1.0,
+  &quot;range&quot;: 0.0,
+  &quot;sd&quot;: 0.0
+}</pre></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><th>B</th><td><table class='kv'><tr><th>name</th><td><span class='j-str'>gpt-5.4-mini</span></td></tr><tr><th>n_runs_committed</th><td><span class='j-num'>5</span></td></tr><tr><th>cells</th><td><table class='kv'><tr><th>letalone_combined</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    0.6363636363636364,
+    0.6666666666666666,
+    0.5454545454545454,
+    0.6060606060606061,
+    0.5454545454545454
+  ],
+  &quot;mean&quot;: 0.6,
+  &quot;min&quot;: 0.5454545454545454,
+  &quot;max&quot;: 0.6666666666666666,
+  &quot;range&quot;: 0.12121212121212122,
+  &quot;sd&quot;: 0.05420770854544946
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 33,
+  &quot;n_constant&quot;: 23,
+  &quot;churn_rate&quot;: 0.30303030303030304,
+  &quot;mean_pairwise_agreement&quot;: 0.8727272727272727,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 20,
+  &quot;majority_vote_acc&quot;: 0.6060606060606061,
+  &quot;majority_vote_wilson&quot;: [
+    0.4368314280651038,
+    0.7531711776849179
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;let-alone#1&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#10&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#11&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#12&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#13&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#14&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#15&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 1,
+        &quot;1&quot;: 4
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#16&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#17&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#18&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#19&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#2&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#20&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#21&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#22&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#23&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#24&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#25&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#26&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#27&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;0&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#28&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#29&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#3&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#30&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;0&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;0&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#31&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#32&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 4,
+        &quot;1&quot;: 1
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#33&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 3,
+        &quot;1&quot;: 2
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#4&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#5&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#6&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#7&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;0&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#8&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#9&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr><tr><th>letalone_test</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    0.6666666666666666,
+    0.625,
+    0.5416666666666666,
+    0.625,
+    0.5416666666666666
+  ],
+  &quot;mean&quot;: 0.6,
+  &quot;min&quot;: 0.5416666666666666,
+  &quot;max&quot;: 0.6666666666666666,
+  &quot;range&quot;: 0.125,
+  &quot;sd&quot;: 0.05590169943749475
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 24,
+  &quot;n_constant&quot;: 18,
+  &quot;churn_rate&quot;: 0.25,
+  &quot;mean_pairwise_agreement&quot;: 0.8916666666666666,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 15,
+  &quot;majority_vote_acc&quot;: 0.625,
+  &quot;majority_vote_wilson&quot;: [
+    0.42709619037907065,
+    0.7884086656636855
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;let-alone#10&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#11&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#12&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#13&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#14&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#15&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 1,
+        &quot;1&quot;: 4
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#16&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#17&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#18&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#22&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#23&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#24&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#25&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#26&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#27&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;0&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#31&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#32&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 4,
+        &quot;1&quot;: 1
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#33&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 3,
+        &quot;1&quot;: 2
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#4&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#5&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#6&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#7&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;0&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#8&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#9&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr><tr><th>letalone_train</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    0.5555555555555556,
+    0.7777777777777778,
+    0.5555555555555556,
+    0.5555555555555556,
+    0.5555555555555556
+  ],
+  &quot;mean&quot;: 0.6,
+  &quot;min&quot;: 0.5555555555555556,
+  &quot;max&quot;: 0.7777777777777778,
+  &quot;range&quot;: 0.2222222222222222,
+  &quot;sd&quot;: 0.09938079899999065
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 9,
+  &quot;n_constant&quot;: 5,
+  &quot;churn_rate&quot;: 0.4444444444444444,
+  &quot;mean_pairwise_agreement&quot;: 0.8222222222222222,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 5,
+  &quot;majority_vote_acc&quot;: 0.5555555555555556,
+  &quot;majority_vote_wilson&quot;: [
+    0.2666473457440297,
+    0.811224570528086
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;let-alone#1&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#19&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#2&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#20&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#21&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#28&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#29&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#3&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#30&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;0&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;0&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: false
+    }
+  ]
+}</pre></td></tr></table></td></tr><tr><th>compcorr</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    0.9666666666666667,
+    1.0,
+    0.9666666666666667,
+    1.0,
+    1.0
+  ],
+  &quot;mean&quot;: 0.9866666666666667,
+  &quot;min&quot;: 0.9666666666666667,
+  &quot;max&quot;: 1.0,
+  &quot;range&quot;: 0.033333333333333326,
+  &quot;sd&quot;: 0.018257418583505533
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 30,
+  &quot;n_constant&quot;: 28,
+  &quot;churn_rate&quot;: 0.06666666666666667,
+  &quot;mean_pairwise_agreement&quot;: 0.9733333333333334,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 30,
+  &quot;majority_vote_acc&quot;: 1.0,
+  &quot;majority_vote_wilson&quot;: [
+    0.8864829086095221,
+    1.0
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#436&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#437&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#438&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#439&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#440&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#441&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 1,
+        &quot;2&quot;: 4
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#442&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#443&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#444&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#445&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#446&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#447&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#448&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#449&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#450&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#451&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#452&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;1&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 4,
+        &quot;1&quot;: 1
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#453&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#454&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#455&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#456&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#457&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#458&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#459&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#466&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#467&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#468&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#472&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#473&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#474&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr></table></td></tr><tr><th>guard</th><td><table class='kv'><tr><th>per_run</th><td><div class='records'><div class='rec-count'>5 items</div><details class='record' open><summary><span class='rec-i'>#0</span> <span class='pv-k'>run</span> 1</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 1,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 0.9666666666666667,
+  &quot;cc_wilson_lo&quot;: 0.8332924860304112,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record' open><summary><span class='rec-i'>#1</span> <span class='pv-k'>run</span> 2</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 2,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record' open><summary><span class='rec-i'>#2</span> <span class='pv-k'>run</span> 3</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 3,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 0.9666666666666667,
+  &quot;cc_wilson_lo&quot;: 0.8332924860304112,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record'><summary><span class='rec-i'>#3</span> <span class='pv-k'>run</span> 4</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 4,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record'><summary><span class='rec-i'>#4</span> <span class='pv-k'>run</span> 5</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 5,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details></div></td></tr><tr><th>all_clean</th><td><span class='j-bool'>true</span></td></tr></table></td></tr><tr><th>cross_session</th><td><table class='kv'><tr><th>s60</th><td><table class='kv'><tr><th>letalone_test</th><td><span class='j-num'>0.5833333333333334</span></td></tr><tr><th>compcorr</th><td><span class='j-num'>1.0</span></td></tr></table></td></tr><tr><th>s62</th><td><table class='kv'><tr><th>letalone_combined</th><td><span class='j-num'>0.6363636363636364</span></td></tr><tr><th>letalone_test</th><td><span class='j-num'>0.5833333333333334</span></td></tr><tr><th>letalone_train</th><td><span class='j-num'>0.7777777777777778</span></td></tr><tr><th>compcorr</th><td><span class='j-num'>1.0</span></td></tr></table></td></tr><tr><th>extended_band</th><td><table class='kv'><tr><th>letalone_combined</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 6,
+  &quot;per_run&quot;: [
+    0.6363636363636364,
+    0.6666666666666666,
+    0.5454545454545454,
+    0.6060606060606061,
+    0.5454545454545454,
+    0.6363636363636364
+  ],
+  &quot;mean&quot;: 0.6060606060606061,
+  &quot;min&quot;: 0.5454545454545454,
+  &quot;max&quot;: 0.6666666666666666,
+  &quot;range&quot;: 0.12121212121212122,
+  &quot;sd&quot;: 0.05070666827479246
+}</pre></td></tr><tr><th>compcorr</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 7,
+  &quot;per_run&quot;: [
+    0.9666666666666667,
+    1.0,
+    0.9666666666666667,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  &quot;mean&quot;: 0.9904761904761905,
+  &quot;min&quot;: 0.9666666666666667,
+  &quot;max&quot;: 1.0,
+  &quot;range&quot;: 0.033333333333333326,
+  &quot;sd&quot;: 0.016265001215808882
+}</pre></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><th>C</th><td><table class='kv'><tr><th>name</th><td><span class='j-str'>gemini-3.5-flash</span></td></tr><tr><th>n_runs_committed</th><td><span class='j-num'>5</span></td></tr><tr><th>cells</th><td><table class='kv'><tr><th>letalone_combined</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    0.8787878787878788,
+    0.8787878787878788,
+    0.8787878787878788,
+    0.9090909090909091,
+    0.9090909090909091
+  ],
+  &quot;mean&quot;: 0.8909090909090909,
+  &quot;min&quot;: 0.8787878787878788,
+  &quot;max&quot;: 0.9090909090909091,
+  &quot;range&quot;: 0.030303030303030276,
+  &quot;sd&quot;: 0.01659765325773229
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 33,
+  &quot;n_constant&quot;: 31,
+  &quot;churn_rate&quot;: 0.06060606060606061,
+  &quot;mean_pairwise_agreement&quot;: 0.9696969696969697,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 30,
+  &quot;majority_vote_acc&quot;: 0.9090909090909091,
+  &quot;majority_vote_wilson&quot;: [
+    0.7642705646564897,
+    0.968596628950737
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;let-alone#1&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#10&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#11&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#12&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#13&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#14&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#15&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#16&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#17&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#18&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#19&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#2&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#20&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#21&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#22&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#23&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#24&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#25&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 2,
+        &quot;1&quot;: 3
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#26&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#27&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#28&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#29&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#3&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#30&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#31&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#32&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#33&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#4&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#5&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#6&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#7&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#8&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#9&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr><tr><th>letalone_test</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    0.8333333333333334,
+    0.875,
+    0.8333333333333334,
+    0.875,
+    0.875
+  ],
+  &quot;mean&quot;: 0.8583333333333334,
+  &quot;min&quot;: 0.8333333333333334,
+  &quot;max&quot;: 0.875,
+  &quot;range&quot;: 0.04166666666666663,
+  &quot;sd&quot;: 0.022821773229381902
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 24,
+  &quot;n_constant&quot;: 23,
+  &quot;churn_rate&quot;: 0.041666666666666664,
+  &quot;mean_pairwise_agreement&quot;: 0.975,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 21,
+  &quot;majority_vote_acc&quot;: 0.875,
+  &quot;majority_vote_wilson&quot;: [
+    0.6899571185214243,
+    0.9565574496068442
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;let-alone#10&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#11&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#12&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#13&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#14&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#15&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#16&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#17&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#18&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#22&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#23&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#24&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#25&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 2,
+        &quot;1&quot;: 3
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#26&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#27&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#31&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: false
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#32&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#33&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#4&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#5&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#6&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#7&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#8&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#9&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr><tr><th>letalone_train</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    1.0,
+    0.8888888888888888,
+    1.0,
+    1.0,
+    1.0
+  ],
+  &quot;mean&quot;: 0.9777777777777777,
+  &quot;min&quot;: 0.8888888888888888,
+  &quot;max&quot;: 1.0,
+  &quot;range&quot;: 0.11111111111111116,
+  &quot;sd&quot;: 0.04969039949999535
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 9,
+  &quot;n_constant&quot;: 8,
+  &quot;churn_rate&quot;: 0.1111111111111111,
+  &quot;mean_pairwise_agreement&quot;: 0.9555555555555555,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 9,
+  &quot;majority_vote_acc&quot;: 1.0,
+  &quot;majority_vote_wilson&quot;: [
+    0.7008472464490407,
+    1.0
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;let-alone#1&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#19&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#2&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#20&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#21&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#28&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;2&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 4,
+        &quot;2&quot;: 1
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: false,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#29&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#3&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;let-alone#30&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr><tr><th>compcorr</th><td><table class='kv'><tr><th>spread</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 5,
+  &quot;per_run&quot;: [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  &quot;mean&quot;: 1.0,
+  &quot;min&quot;: 1.0,
+  &quot;max&quot;: 1.0,
+  &quot;range&quot;: 0.0,
+  &quot;sd&quot;: 0.0
+}</pre></td></tr><tr><th>stability</th><td><pre class='json-lite'>{
+  &quot;n_items&quot;: 30,
+  &quot;n_constant&quot;: 30,
+  &quot;churn_rate&quot;: 0.0,
+  &quot;mean_pairwise_agreement&quot;: 1.0,
+  &quot;n_pairs&quot;: 10,
+  &quot;majority_vote_correct&quot;: 30,
+  &quot;majority_vote_acc&quot;: 1.0,
+  &quot;majority_vote_wilson&quot;: [
+    0.8864829086095221,
+    1.0
+  ],
+  &quot;items&quot;: [
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#436&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#437&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#438&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#439&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#440&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#441&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#442&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#443&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#444&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#445&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#446&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#447&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#448&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#449&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#450&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#451&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#452&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#453&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#454&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#455&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#456&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#457&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#458&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#459&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#466&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#467&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#468&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#472&quot;,
+      &quot;gold&quot;: 1,
+      &quot;labels&quot;: [
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;,
+        &quot;1&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;1&quot;: 5
+      },
+      &quot;modal&quot;: &quot;1&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#473&quot;,
+      &quot;gold&quot;: 0,
+      &quot;labels&quot;: [
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;,
+        &quot;0&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;0&quot;: 5
+      },
+      &quot;modal&quot;: &quot;0&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    },
+    {
+      &quot;item_id&quot;: &quot;comparative-correlative#474&quot;,
+      &quot;gold&quot;: 2,
+      &quot;labels&quot;: [
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;,
+        &quot;2&quot;
+      ],
+      &quot;label_counts&quot;: {
+        &quot;2&quot;: 5
+      },
+      &quot;modal&quot;: &quot;2&quot;,
+      &quot;constant&quot;: true,
+      &quot;modal_correct&quot;: true
+    }
+  ]
+}</pre></td></tr></table></td></tr></table></td></tr><tr><th>guard</th><td><table class='kv'><tr><th>per_run</th><td><div class='records'><div class='rec-count'>5 items</div><details class='record' open><summary><span class='rec-i'>#0</span> <span class='pv-k'>run</span> 1</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 1,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record' open><summary><span class='rec-i'>#1</span> <span class='pv-k'>run</span> 2</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 2,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record' open><summary><span class='rec-i'>#2</span> <span class='pv-k'>run</span> 3</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 3,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record'><summary><span class='rec-i'>#3</span> <span class='pv-k'>run</span> 4</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 4,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details><details class='record'><summary><span class='rec-i'>#4</span> <span class='pv-k'>run</span> 5</summary><div class='rec-body'><pre class='json-lite'>{
+  &quot;run&quot;: 5,
+  &quot;worked_frac&quot;: 1.0,
+  &quot;uptake_induced&quot;: true,
+  &quot;cc_acc&quot;: 1.0,
+  &quot;cc_wilson_lo&quot;: 0.8864829086095221,
+  &quot;control_preserved&quot;: true,
+  &quot;n_missing&quot;: 0
+}</pre></div></details></div></td></tr><tr><th>all_clean</th><td><span class='j-bool'>true</span></td></tr></table></td></tr><tr><th>cross_session</th><td><table class='kv'><tr><th>s60</th><td><table class='kv'><tr><th>letalone_test</th><td><span class='j-num'>0.875</span></td></tr><tr><th>compcorr</th><td><span class='j-num'>1.0</span></td></tr></table></td></tr><tr><th>s62</th><td><table class='kv'><tr><th>letalone_combined</th><td><span class='j-num'>0.9090909090909091</span></td></tr><tr><th>letalone_test</th><td><span class='j-num'>0.875</span></td></tr><tr><th>letalone_train</th><td><span class='j-num'>1.0</span></td></tr><tr><th>compcorr</th><td><span class='j-num'>1.0</span></td></tr></table></td></tr><tr><th>extended_band</th><td><table class='kv'><tr><th>letalone_combined</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 6,
+  &quot;per_run&quot;: [
+    0.8787878787878788,
+    0.8787878787878788,
+    0.8787878787878788,
+    0.9090909090909091,
+    0.9090909090909091,
+    0.9090909090909091
+  ],
+  &quot;mean&quot;: 0.8939393939393939,
+  &quot;min&quot;: 0.8787878787878788,
+  &quot;max&quot;: 0.9090909090909091,
+  &quot;range&quot;: 0.030303030303030276,
+  &quot;sd&quot;: 0.01659765325773229
+}</pre></td></tr><tr><th>compcorr</th><td><pre class='json-lite'>{
+  &quot;n_runs&quot;: 7,
+  &quot;per_run&quot;: [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  &quot;mean&quot;: 1.0,
+  &quot;min&quot;: 1.0,
+  &quot;max&quot;: 1.0,
+  &quot;range&quot;: 0.0,
+  &quot;sd&quot;: 0.0
+}</pre></td></tr></table></td></tr></table></td></tr></table></td></tr></table></div></details><details class='section'><summary><span class='sec-k'>trigger_a_read</span> <span class='muted'>(3 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>A</th><td><table class='kv'><tr><th>name</th><td><span class='j-str'>claude-sonnet-4.6</span></td></tr><tr><th>verdict</th><td><span class='j-str'>TRIGGER-A-FIRES</span></td></tr><tr><th>letalone_range</th><td><span class='j-num'>0.06060606060606066</span></td></tr><tr><th>compcorr_range</th><td><span class='j-num'>0.0</span></td></tr><tr><th>letalone_churn</th><td><span class='j-num'>0.21212121212121213</span></td></tr><tr><th>compcorr_churn</th><td><span class='j-num'>0.0</span></td></tr></table></td></tr><tr><th>B</th><td><table class='kv'><tr><th>name</th><td><span class='j-str'>gpt-5.4-mini</span></td></tr><tr><th>verdict</th><td><span class='j-str'>TRIGGER-A-FIRES</span></td></tr><tr><th>letalone_range</th><td><span class='j-num'>0.12121212121212122</span></td></tr><tr><th>compcorr_range</th><td><span class='j-num'>0.033333333333333326</span></td></tr><tr><th>letalone_churn</th><td><span class='j-num'>0.30303030303030304</span></td></tr><tr><th>compcorr_churn</th><td><span class='j-num'>0.06666666666666667</span></td></tr></table></td></tr><tr><th>C</th><td><table class='kv'><tr><th>name</th><td><span class='j-str'>gemini-3.5-flash</span></td></tr><tr><th>verdict</th><td><span class='j-str'>TRIGGER-A-FIRES</span></td></tr><tr><th>letalone_range</th><td><span class='j-num'>0.030303030303030276</span></td></tr><tr><th>compcorr_range</th><td><span class='j-num'>0.0</span></td></tr><tr><th>letalone_churn</th><td><span class='j-num'>0.06060606060606061</span></td></tr><tr><th>compcorr_churn</th><td><span class='j-num'>0.0</span></td></tr></table></td></tr></table></div></details>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

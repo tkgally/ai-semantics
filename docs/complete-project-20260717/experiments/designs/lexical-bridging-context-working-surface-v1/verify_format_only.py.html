@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>verify_format_only.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">designs</a> <span class="sep">/</span> <a href="index.html">lexical-bridging-context-working-surface-v1</a> <span class="sep">/</span> <span class="cur">verify_format_only.py</span></nav>
+<main>
+<header class="page-head">
+<h1>verify_format_only.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">3.6 KB</span> &middot; <code class="fpath">experiments/designs/lexical-bridging-context-working-surface-v1/verify_format_only.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;Audit that the working-surface variant changes ONLY the output channel.</span>
+
+<span class="sd">For each framing, this loads the parent (v1) instrument.json and this variant&#39;s</span>
+<span class="sd">replacement map, and prints:</span>
+<span class="sd">  - whether the variant&#39;s &#39;old&#39; clause is a VERBATIM SUFFIX of the v1 system string</span>
+<span class="sd">    (so the task-description prefix is byte-identical by construction), and</span>
+<span class="sd">  - the longest common prefix between v1&#39;s system string and the variant&#39;s system</span>
+<span class="sd">    string (the byte-identical task description), and</span>
+<span class="sd">  - the differing tails (v1 answer-format clause vs the working-surface clause).</span>
+
+<span class="sd">A pre-run critic runs this to confirm the diff is FORMAT-ONLY: identical task text,</span>
+<span class="sd">differing only in the trailing answer-format instruction. It also re-checks the parent</span>
+<span class="sd">sha256 pin and prints the variant instrument sha256. No API calls, no data needed.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">PARENT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;lexical-bridging-context-v1&quot;</span><span class="p">,</span> <span class="s2">&quot;instrument.json&quot;</span><span class="p">))</span>
+<span class="n">SELF</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;instrument.json&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">common_prefix</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">ca</span><span class="p">,</span> <span class="n">cb</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ca</span> <span class="o">!=</span> <span class="n">cb</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">v1_system</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">framing</span><span class="p">):</span>
+    <span class="n">ins</span> <span class="o">=</span> <span class="n">cfg</span><span class="p">[</span><span class="s2">&quot;instruments&quot;</span><span class="p">]</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;b_rel&quot;</span><span class="p">:</span> <span class="n">ins</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">][</span><span class="s2">&quot;framings&quot;</span><span class="p">][</span><span class="s2">&quot;b_rel&quot;</span><span class="p">][</span><span class="s2">&quot;system&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;b_conf&quot;</span><span class="p">:</span> <span class="n">ins</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">][</span><span class="s2">&quot;framings&quot;</span><span class="p">][</span><span class="s2">&quot;b_conf&quot;</span><span class="p">][</span><span class="s2">&quot;system&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;c_third&quot;</span><span class="p">:</span> <span class="n">ins</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">][</span><span class="s2">&quot;framings&quot;</span><span class="p">][</span><span class="s2">&quot;c_third&quot;</span><span class="p">][</span><span class="s2">&quot;system&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="n">ins</span><span class="p">[</span><span class="s2">&quot;Q3_context_control&quot;</span><span class="p">][</span><span class="s2">&quot;framings&quot;</span><span class="p">][</span><span class="s2">&quot;topic&quot;</span><span class="p">][</span><span class="s2">&quot;system&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;a_forced&quot;</span><span class="p">:</span> <span class="n">ins</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">][</span><span class="s2">&quot;framings&quot;</span><span class="p">][</span><span class="s2">&quot;a_forced&quot;</span><span class="p">][</span><span class="s2">&quot;system&quot;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">table</span><span class="p">[</span><span class="n">framing</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">PARENT</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+    <span class="n">me</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">SELF</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+    <span class="c1"># parent sha pin re-check</span>
+    <span class="n">parent_sha</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">PARENT</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="n">pinned</span> <span class="o">=</span> <span class="n">me</span><span class="p">[</span><span class="s2">&quot;_provenance&quot;</span><span class="p">][</span><span class="s2">&quot;parent_instrument_sha256&quot;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;parent instrument sha256 = </span><span class="si">{</span><span class="n">parent_sha</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  pinned in provenance   = </span><span class="si">{</span><span class="n">pinned</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  MATCH = </span><span class="si">{</span><span class="n">parent_sha</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">pinned</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">self_sha</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">SELF</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;this variant instrument sha256 = </span><span class="si">{</span><span class="n">self_sha</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">repl</span> <span class="o">=</span> <span class="n">me</span><span class="p">[</span><span class="s2">&quot;framing_answer_clause_replacements&quot;</span><span class="p">]</span>
+    <span class="n">all_ok</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">for</span> <span class="n">framing</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;b_rel&quot;</span><span class="p">,</span> <span class="s2">&quot;b_conf&quot;</span><span class="p">,</span> <span class="s2">&quot;c_third&quot;</span><span class="p">,</span> <span class="s2">&quot;topic&quot;</span><span class="p">,</span> <span class="s2">&quot;a_forced&quot;</span><span class="p">]:</span>
+        <span class="n">v1s</span> <span class="o">=</span> <span class="n">v1_system</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">framing</span><span class="p">)</span>
+        <span class="n">old</span> <span class="o">=</span> <span class="n">repl</span><span class="p">[</span><span class="n">framing</span><span class="p">][</span><span class="s2">&quot;old&quot;</span><span class="p">]</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">repl</span><span class="p">[</span><span class="n">framing</span><span class="p">][</span><span class="s2">&quot;new&quot;</span><span class="p">]</span>
+        <span class="n">is_suffix</span> <span class="o">=</span> <span class="n">v1s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">old</span><span class="p">)</span>
+        <span class="n">ws</span> <span class="o">=</span> <span class="n">v1s</span><span class="p">[:</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1s</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">old</span><span class="p">)]</span> <span class="o">+</span> <span class="n">new</span> <span class="k">if</span> <span class="n">is_suffix</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">cp</span> <span class="o">=</span> <span class="n">common_prefix</span><span class="p">(</span><span class="n">v1s</span><span class="p">,</span> <span class="n">ws</span><span class="p">)</span> <span class="k">if</span> <span class="n">ws</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;=== </span><span class="si">{</span><span class="n">framing</span><span class="si">}</span><span class="s2"> ===&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  v1 &#39;old&#39; clause is a VERBATIM SUFFIX of v1 system: </span><span class="si">{</span><span class="n">is_suffix</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_suffix</span><span class="p">:</span>
+            <span class="n">all_ok</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  !! &#39;old&#39; is NOT a suffix of v1 — FORMAT-ONLY claim FAILS.&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="c1"># The shared (byte-identical) task description is everything before &#39;old&#39;.</span>
+        <span class="n">shared</span> <span class="o">=</span> <span class="n">v1s</span><span class="p">[:</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1s</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">old</span><span class="p">)]</span>
+        <span class="c1"># Sanity: common prefix of v1 and ws must equal the shared task description.</span>
+        <span class="n">prefix_ok</span> <span class="o">=</span> <span class="n">cp</span> <span class="o">==</span> <span class="n">shared</span>
+        <span class="n">all_ok</span> <span class="o">=</span> <span class="n">all_ok</span> <span class="ow">and</span> <span class="n">prefix_ok</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  byte-identical shared task description (</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">shared</span><span class="p">)</span><span class="si">}</span><span class="s2"> chars):&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    ...</span><span class="si">{</span><span class="n">shared</span><span class="p">[</span><span class="o">-</span><span class="mi">90</span><span class="p">:]</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  v1 answer clause (REMOVED):</span><span class="se">\n</span><span class="s2">    </span><span class="si">{</span><span class="n">old</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  working-surface answer clause (ADDED):</span><span class="se">\n</span><span class="s2">    </span><span class="si">{</span><span class="n">new</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  common-prefix == shared task description: </span><span class="si">{</span><span class="n">prefix_ok</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FORMAT-ONLY DIFF CONFIRMED&quot;</span> <span class="k">if</span> <span class="n">all_ok</span> <span class="k">else</span> <span class="s2">&quot;FORMAT-ONLY DIFF *NOT* CONFIRMED&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

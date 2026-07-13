@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG-draft.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-14-relational-history-perturbation-v4</a> <span class="sep">/</span> <span class="cur">PREREG-draft.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG-draft.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">14.5 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-14-relational-history-perturbation-v4/PREREG-draft.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-draft-relational-history-perturbation-v4">PREREG (DRAFT) — relational-history-perturbation-v4</h1>
+<blockquote>
+<p><strong>DRAFT — NOT FROZEN.</strong> This becomes <code>PREREG.md</code> (frozen) only after the independent
+pre-run critic returns GO and the orchestrator applies every blocker/should-fix and
+fills the placeholders — <strong>before any finding-bearing call</strong>. Harvest and certification
+calls are stimulus-construction (already run; not finding-bearing). <code>probe.py</code> refuses
+<code>liveness</code>/<code>preflight</code>/<code>full</code> while only this draft exists.</p>
+</blockquote>
+<p>Design (authoritative): <code>experiments/designs/relational-history-perturbation-v4.md</code>.
+v4 = the v2/v3 instrument with the v3 verifier's named next step implemented (a
+non-adjacent perturbation point dissociating stamped chronology from text-position within
+one arm) and the v3 fix-list applied (gpt dropped; claude/gemini powered up). It supersedes
+v3 (<code>result/relational-history-perturbation-v3</code>, INCONCLUSIVE/MIXED) at the <strong>verdict level
+only</strong> — no pooling, no numeric comparison with v3.</p>
+<h2 id="adaptations-of-the-frozen-design-flagged-for-the-pre-run-critic">Adaptations of the frozen design — FLAGGED FOR THE PRE-RUN CRITIC</h2>
+<p>The design's §"Gate check" left one borderline call <strong>for the orchestrator to decide
+whether a <code>decisions/open/</code> page is warranted</strong>, and this build made two further
+operational choices the critic must rule on. <strong>If the critic judges any of these a new
+<em>operationalization</em> (not indicator hygiene), it must open a <code>wiki/decisions/open/</code> page;
+ratification is cross-session, so the run is BLOCKED this session</strong> — the build + ruling is
+still legitimate progress (NEXT.md backlog item 1).</p>
+<ol>
+<li><strong>Chronology indicator: explicit per-line round STAMP vs v3 physical position (the
+   design's flagged borderline).</strong> v3 conveyed chronology purely by physical position; v4
+   conveys it by an explicit "Round k:" stamp and deliberately places the decisive line
+   non-terminally. Provisional judgement (design + this build): <strong>inside-class hygiene</strong> —
+   same construct ("does interpretation track <em>where in the chronology</em> conflicting
+   evidence lands"), a sharper indicator that decouples the two readings v3 confounded. The
+   stamp introduces a readability assumption, handled by the <strong>stamp-respect control</strong> (a
+   reasonable critic could still call this a new operationalization). <code>contingent-on</code> is
+   left <strong>empty</strong> on that provisional judgement.</li>
+<li><strong>v3's presentation-direction {fwd, rev} factor is SUBSUMED, not retained as a separate
+   factor.</strong> In v4, physical position is a <em>manipulated</em> factor (DPOS), so v3's
+   earliest-first/most-recent-first reversal (which WAS the position manipulation) cannot be
+   re-added without double-counting position and contradicting a fixed decisive-position.
+   The design's "retained convergent check that a robust effect survives reordering" is
+   provided instead by (a) the 4 frozen line-ordering <strong>variants</strong> per cell and (b) the
+   <strong>early-only / late-only</strong> sensitivity split. Provisional judgement: <strong>inside-class</strong> (a
+   faithful re-organization of the same robustness check). Flagged because the design's
+   Conditions table literally lists "× presentation direction {fwd, rev}".</li>
+<li><strong>The stamp-respect control and its threshold.</strong> The v4-specific stamp-respect control
+   is implemented as a single-twin record with <strong>non-monotonic</strong> stamps vs physical order;
+   the model must still identify that twin. Model-level pass floor <strong>STAMP_RESPECT_MIN =
+   0.75</strong>; below it the model is read <strong>stamp-blind → METHODOLOGICAL NULL</strong> on the
+   chronology question. The control is <strong>necessary, not sufficient</strong>, for stamp-reading
+   (it shows the model is not derailed by non-monotonic stamps; it does not prove the model
+   uses stamps to compute recency). Flagged for the critic.</li>
+</ol>
+<h2 id="stimuli-freeze">Stimuli freeze</h2>
+<p><code>stimuli.json</code>, generated deterministically by <code>build_trials.py</code> (SEED=20260614) from
+<code>certification_report.json</code> (fresh harvest + per-description certification; full
+certification census embedded in <code>stimuli.json</code>). v1 figures unchanged, original content
+sha256 <code>a2709582a58e54378190b3e6e15191be4fe1f05d27c37830856f958371deb6c4</code> (hash-checked in
+code).</p>
+<p><strong>sha256 of <code>stimuli.json</code> = <code>fca7c548d0887cab9898cd7d4860d24d26be3f8515079580f386660949a297cb</code>.</strong>
+No finding-bearing model call before this hash is committed to <code>PREREG.md</code>.</p>
+<ul>
+<li><strong>Panel (finding-bearing): claude + gemini only.</strong> gpt dropped (design §Panel decision:
+  two harvest+certification attempts showed gpt cannot supply solo-decodable near-twin
+  descriptions at this difficulty).</li>
+<li><strong>The 2×2 within one arm</strong>, per (model × pair × sample) cluster over the byte-identical
+  4-description multiset {x1, x2, y1, y2}: <strong>CLAST</strong> ∈ {X, Y} (which twin owns the two
+  latest round stamps R3,R4; R4 = the decisive line) × <strong>DPOS</strong> ∈ {late, early} (R4
+  physically last vs non-terminal with chronologically-earlier lines after it) ×
+  <strong>VARIANT</strong> ∈ {0,1,2,3} (frozen line-orderings/cell). = <strong>16 mixed cells/cluster</strong>.
+  CLAST and the physically-last-line twin are balanced and orthogonal (cov 0; asserted at
+  build).</li>
+<li><strong>Controls per cluster (4):</strong> 2 CONSISTENT (single-twin, monotonic stamps, one per twin)</li>
+<li>2 STAMP-RESPECT (single-twin, non-monotonic stamps, one per twin). Manipulation gate =
+  <strong>all four</strong> controls correct.</li>
+<li><strong>One frozen matcher figure-array permutation per cluster</strong>, constant across that
+  cluster's 16 mixed + 4 control cells (v1 discipline; frozen into <code>stimuli.json</code>).</li>
+<li><strong>Coined term</strong> = a fresh frozen non-descriptive nonce per pair: <code>GORLAX</code>, <code>MIVUNT</code>,
+  <code>ZEPHRO</code> (no v3 carryover).</li>
+<li><strong>Sample partition (pre-registered, carried from v3 critic S4):</strong> sample s ∈
+  {0,…,n_samples−1} takes roster positions 2s, 2s+1 of the frozen first-8-certified-in-
+  harvest-order roster. The ≤12-word budget is enforced mechanically at harvest, before
+  certification.</li>
+<li><strong>Realized geometry (after the one pre-registered top-up; recorded before freeze):</strong>
+  <strong>claude 12/12 clusters</strong> (all figures ≥ 8 certified); <strong>gemini 11/12 clusters</strong> — F4
+  certified 7/8 after its one top-up, so pair-2 drops to 3 samples (min(4, 7//2, 16//2) =
+  3), the pre-registered shortfall rule. → claude <strong>240</strong> finding-bearing trials (192 mixed</li>
+<li>48 controls); gemini <strong>220</strong> (176 mixed + 44 controls); <strong>460 finding-bearing calls
+  total</strong>. The ≥3-gated-cluster guard and the per-cell ≥24/≥36 floors operate on realized
+  gated counts. Per (clast × dpos) cell before gating: claude 48, gemini 44 (both ≥ 36).</li>
+<li><strong>Stimulus-quality bias, disclosed (carried from v3):</strong> certification selects for
+  individually discriminative lines, which sharpens the X-vs-Y conflict — it biases
+  <strong>against</strong> the ~0.5-noise-toward-the-null failure mode, not toward the conjecture's bet.</li>
+</ul>
+<h2 id="elicitation-forced-format-truncation-resistant-frozen">Elicitation (forced format; truncation-resistant; frozen)</h2>
+<p>Carried verbatim from v3: forced single-label format (reply exactly one figure label
+<code>P1</code>…<code>P6</code>, nothing else); completion cap 512 → truncation rare, not impossible; a reply
+with <code>finish_reason == "length"</code> is <strong>never parsed</strong> for a pick (parse-fail → one stern
+retry → NA); gemini keeps <code>reasoning: {"effort": "minimal"}</code>. Strict parse rule (strict /
+non-strict / NA-after-one-retry); out-of-pair over parsed picks; per-model strict-compliance
+rate; NA-concentration flag (&gt; 25% in any clast×dpos cell). Liveness format-gate (both
+models must return a parseable label) before preflight/full; liveness/preflight/harvest/
+certification raw are never analyzed — <code>full</code> is the only finding-bearing dataset.</p>
+<p>The v4 INTRO states <strong>neutrally</strong> that each line is stamped with its round (higher = more
+recent) and that lines are <strong>not</strong> necessarily in round order. It does <strong>not</strong> instruct the
+model to weight recency — whether the model spontaneously weights the stamp, the line order,
+or treats the evidence as an order-free set is exactly what Δ_chron/Δ_pos measure.</p>
+<h2 id="measures-frozen">Measures (frozen)</h2>
+<ul>
+<li><strong>Manipulation gate (per cluster):</strong> all four controls correct → cluster enters the gated
+  primary. Per-model control accuracy (consistent + stamp-respect separately) and ungated
+  rates reported.</li>
+<li><strong>Stamp-respect sub-gate (model level):</strong> stamp-respect accuracy ≥ STAMP_RESPECT_MIN =
+  0.75, else the model is <strong>stamp-blind</strong> → METHODOLOGICAL NULL on the chronology question.</li>
+<li><strong>PRIMARY — Δ_chron = ρ(pick = CLAST twin) − 0.5</strong> and <strong>Δ_pos = ρ(pick =
+  physically-last-line twin) − 0.5</strong>, over gated, parsed, in-pair mixed trials, pooled
+  across the orthogonal factors (per-twin salience cancels by the balanced/orthogonal
+  design). Both also reported per DPOS level (descriptive).</li>
+<li><strong>CIs:</strong> clustered bootstrap, 10,000 resamples over (pair × sample) clusters per model,
+  SEED=20260614, percentile method. <strong>Degenerate (zero-width) CIs carry no inferential
+  weight and satisfy no clause</strong> (the v3 rule, retained).</li>
+<li><strong>Floors (per (clast × dpos) cell, min over the 4 cells):</strong> ≥24 gated in-pair parsed
+  trials for an effect clause (FALSIFIED / TEXT-POSITION ARTIFACT); <strong>≥36</strong> for
+  null-certification.</li>
+<li><strong>Guard:</strong> ≥ k = 3 gated clusters with in-pair data.</li>
+<li><strong>Sensitivity cuts — DESCRIPTIVE ONLY, never verdict-bearing:</strong> leave-one-pair-out (×3);
+  strict-format-only; NAs-as-out-of-pair; <strong>late-only / early-only</strong> (the convergent
+  reordering check); pair-level (3-cluster) bootstrap cross-check. None flips a primary
+  verdict.</li>
+<li><strong>No pooling with v3</strong> (verdict-level supersession only).</li>
+</ul>
+<h2 id="decision-rule-frozen-the-verdict-mapper-is-code-in-analyzepy-verdict">Decision rule (frozen; the verdict mapper is CODE in <code>analyze.py verdict()</code>)</h2>
+<p>Ordered, exhaustive if/else tree, evaluated top-down per model; first clause that fires is
+the verdict. Precedence: <strong>METHODOLOGICAL NULL &gt; UNDER-POWERED &gt; FALSIFIED &gt; TEXT-POSITION
+ARTIFACT &gt; COMMUTATIVE-NULL-CERTIFIED &gt; named-gap sub-label &gt; INCONCLUSIVE/MIXED.</strong>
+Degenerate CIs satisfy no clause.</p>
+<ol>
+<li><strong>METHODOLOGICAL NULL</strong> if the model is <strong>stamp-blind</strong> (stamp-respect acc &lt;
+   STAMP_RESPECT_MIN) <strong>OR</strong> &lt; 3 gated clusters with in-pair data — whatever the point
+   estimates say.</li>
+<li><strong>UNDER-POWERED</strong> if out-of-pair &gt; 0.5 on parsed picks.</li>
+<li><strong>FALSIFIED (non-commutative, chronology-tracking; RECENCY if Δ_chron &gt; 0, PRIMACY if &lt;
+   0)</strong> if Δ_chron's CI excludes 0.5 <strong>and</strong> Δ_pos's CI includes 0.5, with ≥24 gated
+   in-pair parsed trials in every (clast × dpos) cell. → the conjecture's invariance bet
+   falsified for that model <strong>under forced-label elicitation</strong> (scope limit below); surfaced,
+   not auto-promoted.</li>
+<li><strong>TEXT-POSITION ARTIFACT</strong> if Δ_pos's CI excludes 0.5 (last-line- or first-line-
+   following) <strong>and</strong> Δ_chron's CI includes 0.5, with ≥24 gated in-pair parsed trials in
+   every cell. → a methodological finding about prompt geometry / stamp neglect; <strong>says
+   nothing relational</strong> (the honest terminal home for the reading the v3 verifier refused to
+   assert because v3's collinear arm could not earn it).</li>
+<li><strong>COMMUTATIVE-NULL-CERTIFIED</strong> if Δ_chron's and Δ_pos's CIs both include 0.5
+   (non-degenerate) with ≥36 gated in-pair parsed trials in every cell. → extends the v1/v3
+   null to "position <em>and</em> stamped chronology of a reassignment do not move the pick"; the
+   conjecture stays <code>proposed</code>, <strong>strengthened, not proven</strong>; "certified" = the
+   pre-registered null clause fired, never a precise zero. Under forced-label elicitation.</li>
+<li><strong>INCONCLUSIVE — null pattern, certification floor unmet</strong> if both CIs include 0.5
+   (non-degenerate) but the ≥36 floor is unmet in some cell — no clause fires.</li>
+<li><strong>Else: INCONCLUSIVE / MIXED</strong> — both CIs exclude 0.5 (the channels confounded in the
+   picks); a both-channels pattern below the ≥24 floor; or a degenerate/mixed pattern.
+   Reported with point estimates, no substantive label.</li>
+</ol>
+<p><strong>Multiplicity (acknowledged):</strong> two models at 95% CIs. The early/late and variant cuts are
+correlated cross-checks of the same records, not independent replications.</p>
+<p><strong>Power caveat (pre-registered, honest):</strong> still pilot-scale. Only a consistent Δ ≳ 0.2
+(ρ ≳ 0.7) is reliably CI-clean at this cluster count; a CI-including-0.5 remains
+inconclusive-leaning-null, not a precise zero. A symmetric U-shaped serial-position profile
+would dilute Δ_pos toward 0.5; the explicit stamps are intended to make Δ_chron less
+serial-position-susceptible than v3's position-only cue, but that is a design expectation,
+not a guarantee. Because CLAST and physical-last twin are orthogonal, a pure chronology
+reader gives Δ_pos ≈ 0.5 and a pure position reader gives Δ_chron ≈ 0.5 (verified on
+idealized-reader fixtures); the joint reading is what separates them.</p>
+<h2 id="anchor-discipline-frozen">Anchor discipline (frozen)</h2>
+<p><code>anchor: internal-contrast-only</code> — the Δ_chron/Δ_pos measure is the probe's own within-model
+contrast over byte-identical-content records differing only in stamp and line order; <strong>no
+human-comparison claim</strong>, per the ratified relational-line posture
+(<code>decisions/resolved/relational-pilot-operationalization</code>,
+<code>decisions/resolved/relational-fetchable-anchor</code>; terminal-state mechanics per
+<code>decisions/resolved/conflicting-cue-human-anchor</code>). No in-repo human resource anchors
+order-sensitivity (Brennan &amp; Clark anchors historicity/partner-specificity only and reports
+an order-<em>insensitive</em> statistic; Hawkins anchors the convergence baseline only).</p>
+<h2 id="cost-pre-flight-billed-usagecost-not-rate-card">Cost pre-flight (billed <code>usage.cost</code>, not rate-card)</h2>
+<p>Stimulus construction already billed (recorded in <code>raw/cost-ledger.json</code>): harvest $0.0417,
+top-up $0.0198, certification (both passes) $0.2169 → <strong>≈$0.278 so far</strong>. Probe pre-flight:
+460 finding-bearing calls at v3's measured ~$0.0010/call (probe-shaped single-token) ≈
+$0.46 + liveness/preflight ≈$0.03 → <strong>≈$0.5 probe</strong>, <strong>≈$0.78 total session</strong>, under the
+<strong>$1.50</strong> pre-registered hard stop (per-phase ledger + per-record + per-model checkpoint in
+<code>probe.py full</code>) and well under the <strong>$5.00/day</strong> cap. Actual billed recorded per phase in
+<code>config/budget.md</code>.</p>
+<h2 id="scope-limits-carried-from-v2v3-plus-the-v4-stamp-shift">Scope limits (carried from v2/v3, plus the v4 stamp shift)</h2>
+<ul>
+<li>Records are constructed, not live; a contradictory description-set composed from certified
+  descriptions, all lines marked "FOUND" (logically impossible across twins — the conflict
+  IS the manipulation).</li>
+<li><strong>Harvested-and-certified, not live-game by-products</strong> (must be repeated in the result
+  page); certification <strong>selects for individually decodable lines</strong> — the result says
+  nothing about conventions whose lines are only interpretable in context.</li>
+<li><strong>Chronology is an explicit stamp</strong> (the v4 indicator shift, flagged above): any verdict
+  is conditional on the stamp being read at all (the stamp-respect control licenses the
+  Δ_chron reading but is necessary-not-sufficient).</li>
+<li>Any FALSIFIED / CERTIFIED verdict holds <strong>under forced-label elicitation</strong>; it does not
+  automatically transfer to free-form settings.</li>
+<li>Homogeneous per-model probes; text grids (the ratified v1 yardstick, v1-scoped); gpt
+  dropped; n is pilot scale.</li>
+</ul></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

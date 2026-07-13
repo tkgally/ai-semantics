@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>prep.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-06-15-third-construction-preference-commitment-v1</a> <span class="sep">/</span> <span class="cur">prep.py</span></nav>
+<main>
+<header class="page-head">
+<h1>prep.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">13.3 KB</span> &middot; <code class="fpath">experiments/runs/2026-06-15-third-construction-preference-commitment-v1/prep.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;prep.py — candidate-pool authoring for the THIRD-construction (caused-motion)</span>
+<span class="sd">preference/commitment double contrast (run 2026-06-15-third-construction-</span>
+<span class="sd">preference-commitment-v1). NO model calls.</span>
+
+<span class="sd">Implements experiments/designs/third-construction-preference-commitment-v1.md §3-§4</span>
+<span class="sd">under the RATIFIED decision decisions/resolved/aann-uniqueness-third-construction</span>
+<span class="sd">(Option A — engineer add-direction headroom on caused-motion, then run the double</span>
+<span class="sd">contrast; Option C the binding fallback). NO new decision; the yardstick is fixed.</span>
+
+<span class="sd">WHAT THIS FREEZES (before any model call)</span>
+<span class="sd">-----------------------------------------</span>
+<span class="sd">  * the CANDIDATE POOL of marginal verbs (12 M1 cognition/stative + 12 M2 low-</span>
+<span class="sd">    propulsion physical = 24) + the 6 CLEAN-reference propulsion verbs (reused</span>
+<span class="sd">    VERBATIM from caused-motion-near-miss-v2c: sneeze/cough/blow/puff/huff/fan);</span>
+<span class="sd">  * the fixed light-inanimate OBJECT+PATH inventory (reused verbatim from v2c);</span>
+<span class="sd">  * the caused-motion CONSTRUCTION frame, the gerund HYPOTHESIS H, and the two</span>
+<span class="sd">    parity-matched PARAPHRASE options (C = construction-reading, N = no-causation),</span>
+<span class="sd">    seed-counterbalanced A/B (fixed seed 20260615);</span>
+<span class="sd">  * the §3 HARVEST-SELECTION RULE (recorded in candidates.json; APPLIED by harvest.py</span>
+<span class="sd">    AFTER the baseline arm runs): retain a marginal verb iff its pooled baseline</span>
+<span class="sd">    construction-affirm rate (over models x instruments x its objects) is &lt;= 0.50</span>
+<span class="sd">    (target &lt;= 0.30); require &gt;= 10 verbs retained or the design FAILS the headroom</span>
+<span class="sd">    gate (G4) and routes to Option C.</span>
+
+<span class="sd">Only the post-harvest subset selection is data-driven, and it is THIS pre-registered</span>
+<span class="sd">rule, not post-hoc tuning. Running this file emits candidates.json + prints PASS/FAIL</span>
+<span class="sd">on the mechanical checks + the sha256[:16] freeze hash. No API.</span>
+
+<span class="sd">THE HARVEST CANDIDATE ITEMS (each verb x 2 rotating objects; 2 instruments later)</span>
+<span class="sd">  marginal (M1+M2): &quot;&lt;subj&gt; &lt;verb-past&gt; &lt;obj-np&gt; &lt;path&gt;.&quot;  e.g. &quot;Maria blinked the</span>
+<span class="sd">                    feather off the table.&quot;  -&gt; the construction, off-ceiling target.</span>
+<span class="sd">  clean (ref)     : &quot;&lt;subj&gt; &lt;verb-past&gt; &lt;obj-np&gt; &lt;path&gt;.&quot;  e.g. &quot;Maria sneezed the</span>
+<span class="sd">                    napkin off the table.&quot;   -&gt; ceiling reference (G3 sanity &gt;= 0.85).</span>
+
+<span class="sd">  24 marginal verbs x 2 objects = 48 marginal candidate items</span>
+<span class="sd">   6 clean    verbs x 2 objects = 12 clean reference items</span>
+<span class="sd">                                 = 60 harvest items (x paraphrase-FC + NLI x 3 models</span>
+<span class="sd">                                   = 360 harvest calls; est. ~$0.05-0.12 billed)</span>
+
+<span class="sd">ANCHOR (design §9): NLI on clean/marginal MAY make a CxNLI answer-key comparison</span>
+<span class="sd">(caused-motion gold = entailment on canonical items; resource/scivetti-2025-cxnli-</span>
+<span class="sd">dataset). The paraphrase FC arm + (later) cue-control + displaced arms are</span>
+<span class="sd">internal-contrast-only. No human number invented.</span>
+
+<span class="sd">Run: python3 prep.py   (no API; writes candidates.json + PASS/FAIL + sha256)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">20260615</span>
+
+<span class="c1"># ---- M1: cognition / perception / stative verbs (no force/contact that could</span>
+<span class="c1">#         displace a light object) -&gt; design hypothesis: depress the causal-motion</span>
+<span class="c1">#         affirm rate (cf. the v2 `resist` arm: caused-motion cognition verbs</span>
+<span class="c1">#         0-70%). (verb, past, gerund) ----</span>
+<span class="n">M1</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;know&quot;</span><span class="p">,</span>      <span class="s2">&quot;knew&quot;</span><span class="p">,</span>       <span class="s2">&quot;knowing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;believe&quot;</span><span class="p">,</span>   <span class="s2">&quot;believed&quot;</span><span class="p">,</span>   <span class="s2">&quot;believing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;understand&quot;</span><span class="p">,</span><span class="s2">&quot;understood&quot;</span><span class="p">,</span> <span class="s2">&quot;understanding&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;notice&quot;</span><span class="p">,</span>    <span class="s2">&quot;noticed&quot;</span><span class="p">,</span>    <span class="s2">&quot;noticing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;remember&quot;</span><span class="p">,</span>  <span class="s2">&quot;remembered&quot;</span><span class="p">,</span> <span class="s2">&quot;remembering&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;doubt&quot;</span><span class="p">,</span>     <span class="s2">&quot;doubted&quot;</span><span class="p">,</span>    <span class="s2">&quot;doubting&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;perceive&quot;</span><span class="p">,</span>  <span class="s2">&quot;perceived&quot;</span><span class="p">,</span>  <span class="s2">&quot;perceiving&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;recall&quot;</span><span class="p">,</span>    <span class="s2">&quot;recalled&quot;</span><span class="p">,</span>   <span class="s2">&quot;recalling&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;realize&quot;</span><span class="p">,</span>   <span class="s2">&quot;realized&quot;</span><span class="p">,</span>   <span class="s2">&quot;realizing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;suspect&quot;</span><span class="p">,</span>   <span class="s2">&quot;suspected&quot;</span><span class="p">,</span>  <span class="s2">&quot;suspecting&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;imagine&quot;</span><span class="p">,</span>   <span class="s2">&quot;imagined&quot;</span><span class="p">,</span>   <span class="s2">&quot;imagining&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;recognize&quot;</span><span class="p">,</span> <span class="s2">&quot;recognized&quot;</span><span class="p">,</span> <span class="s2">&quot;recognizing&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># ---- M2: low-propulsion / motion-marginal physical verbs (bodily / facial / quiet</span>
+<span class="c1">#         sound verbs whose force is too weak or diffuse to make displacement</span>
+<span class="c1">#         automatic) -&gt; design hypothesis: sit between the clean ceiling and the</span>
+<span class="c1">#         cognition floor. NB the clean propulsion verbs (sneeze/cough/blow/puff/</span>
+<span class="c1">#         huff/fan) are deliberately EXCLUDED here — they are the ceiling reference. ----</span>
+<span class="n">M2</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;blink&quot;</span><span class="p">,</span>   <span class="s2">&quot;blinked&quot;</span><span class="p">,</span>   <span class="s2">&quot;blinking&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;hum&quot;</span><span class="p">,</span>     <span class="s2">&quot;hummed&quot;</span><span class="p">,</span>    <span class="s2">&quot;humming&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;grin&quot;</span><span class="p">,</span>    <span class="s2">&quot;grinned&quot;</span><span class="p">,</span>   <span class="s2">&quot;grinning&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;wink&quot;</span><span class="p">,</span>    <span class="s2">&quot;winked&quot;</span><span class="p">,</span>    <span class="s2">&quot;winking&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;nod&quot;</span><span class="p">,</span>     <span class="s2">&quot;nodded&quot;</span><span class="p">,</span>    <span class="s2">&quot;nodding&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;smile&quot;</span><span class="p">,</span>   <span class="s2">&quot;smiled&quot;</span><span class="p">,</span>    <span class="s2">&quot;smiling&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;shrug&quot;</span><span class="p">,</span>   <span class="s2">&quot;shrugged&quot;</span><span class="p">,</span>  <span class="s2">&quot;shrugging&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;giggle&quot;</span><span class="p">,</span>  <span class="s2">&quot;giggled&quot;</span><span class="p">,</span>   <span class="s2">&quot;giggling&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;frown&quot;</span><span class="p">,</span>   <span class="s2">&quot;frowned&quot;</span><span class="p">,</span>   <span class="s2">&quot;frowning&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;yawn&quot;</span><span class="p">,</span>    <span class="s2">&quot;yawned&quot;</span><span class="p">,</span>    <span class="s2">&quot;yawning&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;whisper&quot;</span><span class="p">,</span> <span class="s2">&quot;whispered&quot;</span><span class="p">,</span> <span class="s2">&quot;whispering&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;sigh&quot;</span><span class="p">,</span>    <span class="s2">&quot;sighed&quot;</span><span class="p">,</span>    <span class="s2">&quot;sighing&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># ---- CLEAN reference propulsion verbs — reused VERBATIM from</span>
+<span class="c1">#      caused-motion-near-miss-v2c (SCENES verbs). These read at ceiling (v2c: 100%</span>
+<span class="c1">#      everywhere) and serve as the G3 within-design positive control. (verb,past,ger) ----</span>
+<span class="n">CLEAN</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;sneeze&quot;</span><span class="p">,</span> <span class="s2">&quot;sneezed&quot;</span><span class="p">,</span> <span class="s2">&quot;sneezing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;cough&quot;</span><span class="p">,</span>  <span class="s2">&quot;coughed&quot;</span><span class="p">,</span> <span class="s2">&quot;coughing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;blow&quot;</span><span class="p">,</span>   <span class="s2">&quot;blew&quot;</span><span class="p">,</span>    <span class="s2">&quot;blowing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;puff&quot;</span><span class="p">,</span>   <span class="s2">&quot;puffed&quot;</span><span class="p">,</span>  <span class="s2">&quot;puffing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;huff&quot;</span><span class="p">,</span>   <span class="s2">&quot;huffed&quot;</span><span class="p">,</span>  <span class="s2">&quot;huffing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;fan&quot;</span><span class="p">,</span>    <span class="s2">&quot;fanned&quot;</span><span class="p">,</span>  <span class="s2">&quot;fanning&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># ---- fixed light-inanimate OBJECT + PATH inventory (reused verbatim from v2c) ----</span>
+<span class="n">OBJECTS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;napkin&quot;</span><span class="p">,</span>   <span class="s2">&quot;the napkin&quot;</span><span class="p">,</span>   <span class="s2">&quot;off the table&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;crumb&quot;</span><span class="p">,</span>    <span class="s2">&quot;the crumb&quot;</span><span class="p">,</span>    <span class="s2">&quot;off the table&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;feather&quot;</span><span class="p">,</span>  <span class="s2">&quot;the feather&quot;</span><span class="p">,</span>  <span class="s2">&quot;off the table&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;wrapper&quot;</span><span class="p">,</span>  <span class="s2">&quot;the wrapper&quot;</span><span class="p">,</span>  <span class="s2">&quot;off the tray&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;petal&quot;</span><span class="p">,</span>    <span class="s2">&quot;the petal&quot;</span><span class="p">,</span>    <span class="s2">&quot;off the railing&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;confetti&quot;</span><span class="p">,</span> <span class="s2">&quot;the confetti&quot;</span><span class="p">,</span> <span class="s2">&quot;off the desk&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">SUBJECTS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Maria&quot;</span><span class="p">,</span> <span class="s2">&quot;Jordan&quot;</span><span class="p">,</span> <span class="s2">&quot;Priya&quot;</span><span class="p">,</span> <span class="s2">&quot;Tomas&quot;</span><span class="p">,</span> <span class="s2">&quot;Lena&quot;</span><span class="p">,</span> <span class="s2">&quot;Omar&quot;</span><span class="p">,</span> <span class="s2">&quot;Nina&quot;</span><span class="p">,</span> <span class="s2">&quot;Carlos&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Aisha&quot;</span><span class="p">,</span> <span class="s2">&quot;Sam&quot;</span><span class="p">,</span> <span class="s2">&quot;Wei&quot;</span><span class="p">,</span> <span class="s2">&quot;Dana&quot;</span><span class="p">,</span> <span class="s2">&quot;Hana&quot;</span><span class="p">,</span> <span class="s2">&quot;Luca&quot;</span><span class="p">,</span> <span class="s2">&quot;Iris&quot;</span><span class="p">,</span> <span class="s2">&quot;Mara&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Noah&quot;</span><span class="p">,</span> <span class="s2">&quot;Yuki&quot;</span><span class="p">,</span> <span class="s2">&quot;Rosa&quot;</span><span class="p">,</span> <span class="s2">&quot;Kofi&quot;</span><span class="p">,</span> <span class="s2">&quot;Ines&quot;</span><span class="p">,</span> <span class="s2">&quot;Bao&quot;</span><span class="p">,</span> <span class="s2">&quot;Tariq&quot;</span><span class="p">,</span> <span class="s2">&quot;Elsa&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Pavel&quot;</span><span class="p">,</span> <span class="s2">&quot;Mei&quot;</span><span class="p">,</span> <span class="s2">&quot;Diego&quot;</span><span class="p">,</span> <span class="s2">&quot;Asha&quot;</span><span class="p">,</span> <span class="s2">&quot;Liam&quot;</span><span class="p">,</span> <span class="s2">&quot;Zoe&quot;</span><span class="p">,</span> <span class="s2">&quot;Ravi&quot;</span><span class="p">,</span> <span class="s2">&quot;Greta&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Otto&quot;</span><span class="p">,</span> <span class="s2">&quot;Suki&quot;</span><span class="p">,</span> <span class="s2">&quot;Ali&quot;</span><span class="p">,</span> <span class="s2">&quot;Vera&quot;</span><span class="p">]</span>
+
+<span class="c1"># capitalize an &quot;the obj&quot; NP for sentence-initial use in option N</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cap_np</span><span class="p">(</span><span class="n">np</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="n">np</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">build_candidates</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Author the harvest candidate items (each verb x 2 rotating objects), with</span>
+<span class="sd">    seed-counterbalanced A/B paraphrase assignment. Returns the item list.&quot;&quot;&quot;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">si</span> <span class="o">=</span> <span class="mi">0</span>           <span class="c1"># subject rotation index</span>
+    <span class="n">oi</span> <span class="o">=</span> <span class="mi">0</span>           <span class="c1"># object rotation index</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">emit</span><span class="p">(</span><span class="n">verb</span><span class="p">,</span> <span class="n">past</span><span class="p">,</span> <span class="n">gerund</span><span class="p">,</span> <span class="n">marginality</span><span class="p">,</span> <span class="n">family</span><span class="p">):</span>
+        <span class="k">nonlocal</span> <span class="n">si</span><span class="p">,</span> <span class="n">oi</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>  <span class="c1"># two rotating objects per verb</span>
+            <span class="n">obj_id</span><span class="p">,</span> <span class="n">obj_np</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">OBJECTS</span><span class="p">[</span><span class="n">oi</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">OBJECTS</span><span class="p">)]</span>
+            <span class="n">oi</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">subj</span> <span class="o">=</span> <span class="n">SUBJECTS</span><span class="p">[</span><span class="n">si</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">SUBJECTS</span><span class="p">)]</span>
+            <span class="n">si</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">gerund_phrase</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subj</span><span class="si">}</span><span class="s2">&#39;s </span><span class="si">{</span><span class="n">gerund</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">hyp</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">gerund_phrase</span><span class="si">}</span><span class="s2"> caused </span><span class="si">{</span><span class="n">obj_np</span><span class="si">}</span><span class="s2"> to move.&quot;</span>          <span class="c1"># H (NLI hyp + option C)</span>
+            <span class="n">para_C</span> <span class="o">=</span> <span class="n">hyp</span>                                               <span class="c1"># construction reading</span>
+            <span class="n">para_N</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cap_np</span><span class="p">(</span><span class="n">obj_np</span><span class="p">)</span><span class="si">}</span><span class="s2"> moved, but not because of </span><span class="si">{</span><span class="n">gerund_phrase</span><span class="si">}</span><span class="s2">.&quot;</span>  <span class="c1"># no-causation</span>
+            <span class="c1"># seed-counterbalanced A/B: which letter shows the CONSTRUCTION reading (C)?</span>
+            <span class="n">c_is_A</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span>
+            <span class="n">c_letter</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span> <span class="k">if</span> <span class="n">c_is_A</span> <span class="k">else</span> <span class="s2">&quot;B&quot;</span>
+            <span class="n">n_letter</span> <span class="o">=</span> <span class="s2">&quot;B&quot;</span> <span class="k">if</span> <span class="n">c_is_A</span> <span class="k">else</span> <span class="s2">&quot;A&quot;</span>
+            <span class="n">opt_A</span> <span class="o">=</span> <span class="n">para_C</span> <span class="k">if</span> <span class="n">c_is_A</span> <span class="k">else</span> <span class="n">para_N</span>
+            <span class="n">opt_B</span> <span class="o">=</span> <span class="n">para_N</span> <span class="k">if</span> <span class="n">c_is_A</span> <span class="k">else</span> <span class="n">para_C</span>
+            <span class="n">sentence</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">subj</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">past</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">obj_np</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span>
+                <span class="n">item_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">family</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">verb</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">obj_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">family</span><span class="p">,</span>
+                <span class="n">marginality</span><span class="o">=</span><span class="n">marginality</span><span class="p">,</span> <span class="n">verb</span><span class="o">=</span><span class="n">verb</span><span class="p">,</span> <span class="n">gerund</span><span class="o">=</span><span class="n">gerund</span><span class="p">,</span> <span class="n">subj</span><span class="o">=</span><span class="n">subj</span><span class="p">,</span>
+                <span class="n">obj</span><span class="o">=</span><span class="n">obj_id</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span>
+                <span class="n">sentence</span><span class="o">=</span><span class="n">sentence</span><span class="p">,</span>
+                <span class="n">nli_hypothesis</span><span class="o">=</span><span class="n">hyp</span><span class="p">,</span>
+                <span class="n">paraphrase_C</span><span class="o">=</span><span class="n">para_C</span><span class="p">,</span> <span class="n">paraphrase_N</span><span class="o">=</span><span class="n">para_N</span><span class="p">,</span>
+                <span class="n">option_A</span><span class="o">=</span><span class="n">opt_A</span><span class="p">,</span> <span class="n">option_B</span><span class="o">=</span><span class="n">opt_B</span><span class="p">,</span>
+                <span class="n">construction_letter</span><span class="o">=</span><span class="n">c_letter</span><span class="p">,</span> <span class="n">nocause_letter</span><span class="o">=</span><span class="n">n_letter</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">M1</span><span class="p">:</span>
+        <span class="n">emit</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="s2">&quot;M1-cognition&quot;</span><span class="p">,</span> <span class="s2">&quot;marginal&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">M2</span><span class="p">:</span>
+        <span class="n">emit</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="s2">&quot;M2-lowpropulsion&quot;</span><span class="p">,</span> <span class="s2">&quot;marginal&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">CLEAN</span><span class="p">:</span>
+        <span class="n">emit</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="s2">&quot;clean-propulsion&quot;</span><span class="p">,</span> <span class="s2">&quot;clean&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">items</span>
+
+
+<span class="n">SELECTION_RULE</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;g2_per_model_ceiling&quot;</span><span class="p">:</span> <span class="mf">0.50</span><span class="p">,</span>
+    <span class="s2">&quot;g2_per_model_target&quot;</span><span class="p">:</span> <span class="mf">0.30</span><span class="p">,</span>
+    <span class="s2">&quot;g3_clean_floor&quot;</span><span class="p">:</span> <span class="mf">0.85</span><span class="p">,</span>
+    <span class="s2">&quot;g4_min_models_pass&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;verb_retain_ceiling&quot;</span><span class="p">:</span> <span class="mf">0.50</span><span class="p">,</span>
+    <span class="s2">&quot;verb_retain_target&quot;</span><span class="p">:</span> <span class="mf">0.30</span><span class="p">,</span>
+    <span class="s2">&quot;min_verbs_retained&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s2">&quot;affirm_pooling&quot;</span><span class="p">:</span> <span class="s2">&quot;FC chose construction-reading C OR NLI == 0 (entailment); &quot;</span>
+                      <span class="s2">&quot;pooled over models x instruments x objects unless stated&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;Applied by harvest.py AFTER the baseline arm runs; FROZEN here pre-run. &quot;</span>
+            <span class="s2">&quot;No retuning, no threshold relaxation, no second harvest (design §5 G4).&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">run_asserts</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="n">ok</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">check</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">cond</span><span class="p">):</span>
+        <span class="k">nonlocal</span> <span class="n">ok</span>
+        <span class="nb">print</span><span class="p">((</span><span class="s2">&quot;PASS &quot;</span> <span class="k">if</span> <span class="n">cond</span> <span class="k">else</span> <span class="s2">&quot;FAIL &quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cond</span><span class="p">:</span>
+            <span class="n">ok</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">check</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;exactly 60 candidate items (got </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">==</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="n">fam</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">marg</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">fam</span><span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;family&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">fam</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;family&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;family&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;marginal&quot;</span><span class="p">:</span>
+            <span class="n">marg</span><span class="p">[</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;marginality&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">marg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;marginality&quot;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">check</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;48 marginal candidate items (got </span><span class="si">{</span><span class="n">fam</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;marginal&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+          <span class="n">fam</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;marginal&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">48</span><span class="p">)</span>
+    <span class="n">check</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;12 clean reference items (got </span><span class="si">{</span><span class="n">fam</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;clean&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fam</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;clean&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">12</span><span class="p">)</span>
+    <span class="n">check</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;24 M1 cognition items (got </span><span class="si">{</span><span class="n">marg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;M1-cognition&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+          <span class="n">marg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;M1-cognition&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">24</span><span class="p">)</span>
+    <span class="n">check</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;24 M2 low-propulsion items (got </span><span class="si">{</span><span class="n">marg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;M2-lowpropulsion&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+          <span class="n">marg</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;M2-lowpropulsion&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">24</span><span class="p">)</span>
+
+    <span class="c1"># paraphrase parity: option N differs from C only by the &quot;moved, but not because</span>
+    <span class="c1"># of&quot; reframing; both name the same gerund-phrase + object.</span>
+    <span class="n">parity_ok</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;gerund&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;paraphrase_C&quot;</span><span class="p">]</span> <span class="ow">or</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;gerund&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;paraphrase_N&quot;</span><span class="p">]:</span>
+            <span class="n">parity_ok</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   gerund missing: </span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;obj&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;sentence&quot;</span><span class="p">]:</span>
+            <span class="n">parity_ok</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   object missing in sentence: </span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">check</span><span class="p">(</span><span class="s2">&quot;both paraphrases name the same gerund + object&quot;</span><span class="p">,</span> <span class="n">parity_ok</span><span class="p">)</span>
+
+    <span class="c1"># NLI hypothesis == paraphrase option C (the construction reading) verbatim</span>
+    <span class="n">check</span><span class="p">(</span><span class="s2">&quot;NLI hypothesis == construction-reading paraphrase C (identical wording)&quot;</span><span class="p">,</span>
+          <span class="nb">all</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;nli_hypothesis&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;paraphrase_C&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">))</span>
+
+    <span class="c1"># option set is exactly {C, N} and the recorded letter matches</span>
+    <span class="n">map_ok</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">{</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;option_A&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;option_B&quot;</span><span class="p">]}</span> <span class="o">!=</span> <span class="p">{</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;paraphrase_C&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;paraphrase_N&quot;</span><span class="p">]}:</span>
+            <span class="n">map_ok</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   option-set break: </span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">a_is_C</span> <span class="o">=</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;option_A&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;paraphrase_C&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;construction_letter&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">a_is_C</span><span class="p">:</span>
+            <span class="n">map_ok</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   letter-map break: </span><span class="si">{</span><span class="n">it</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">check</span><span class="p">(</span><span class="s2">&quot;recorded construction_letter matches option_A/option_B content&quot;</span><span class="p">,</span> <span class="n">map_ok</span><span class="p">)</span>
+
+    <span class="c1"># A/B counterbalancing roughly balanced</span>
+    <span class="n">n_C_A</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;construction_letter&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span>
+    <span class="n">check</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A/B counterbalancing roughly balanced (construction on A=</span><span class="si">{</span><span class="n">n_C_A</span><span class="si">}</span><span class="s2">, &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;B=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">n_C_A</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n_C_A</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.4</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)))</span>
+
+    <span class="c1"># every sentence ends in a path PP; clean verbs not in the marginal pool</span>
+    <span class="n">clean_verbs</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">CLEAN</span><span class="p">}</span>
+    <span class="n">marg_verbs</span> <span class="o">=</span> <span class="p">{</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;verb&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;family&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;marginal&quot;</span><span class="p">}</span>
+    <span class="n">check</span><span class="p">(</span><span class="s2">&quot;clean propulsion verbs excluded from the marginal pool&quot;</span><span class="p">,</span>
+          <span class="nb">len</span><span class="p">(</span><span class="n">clean_verbs</span> <span class="o">&amp;</span> <span class="n">marg_verbs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">check</span><span class="p">(</span><span class="s2">&quot;item_ids unique&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">({</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">})</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">ok</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">build_candidates</span><span class="p">()</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;run&quot;</span><span class="p">:</span> <span class="s2">&quot;2026-06-15-third-construction-preference-commitment-v1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;design&quot;</span><span class="p">:</span> <span class="s2">&quot;experiments/designs/third-construction-preference-commitment-v1.md&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;decision&quot;</span><span class="p">:</span> <span class="s2">&quot;decisions/resolved/aann-uniqueness-third-construction (Option A)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;seed&quot;</span><span class="p">:</span> <span class="n">SEED</span><span class="p">,</span>
+        <span class="s2">&quot;construction&quot;</span><span class="p">:</span> <span class="s2">&quot;caused-motion (add-direction)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hypothesis_template&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;subj&gt;&#39;s &lt;gerund&gt; caused &lt;obj-np&gt; to move.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;paraphrase_options&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;construction reading: &#39;&lt;subj&gt;&#39;s &lt;gerund&gt; caused &lt;obj-np&gt; to move.&#39;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;N&quot;</span><span class="p">:</span> <span class="s2">&quot;no-causation reading: &#39;&lt;Obj-np&gt; moved, but not because of &lt;subj&gt;&#39;s &lt;gerund&gt;.&#39;&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;object_inventory&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">o</span><span class="p">)</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">OBJECTS</span><span class="p">],</span>
+        <span class="s2">&quot;selection_rule&quot;</span><span class="p">:</span> <span class="n">SELECTION_RULE</span><span class="p">,</span>
+        <span class="s2">&quot;anchor_split&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;nli_clean_marginal&quot;</span><span class="p">:</span> <span class="s2">&quot;MAY make a CxNLI answer-key comparison &quot;</span>
+                                  <span class="s2">&quot;(resource/scivetti-2025-cxnli-dataset; caused-motion &quot;</span>
+                                  <span class="s2">&quot;gold = entailment on canonical items)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;paraphrase_fc_arm&quot;</span><span class="p">:</span> <span class="s2">&quot;internal-contrast-only&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cue_control_displaced_arms&quot;</span><span class="p">:</span> <span class="s2">&quot;internal-contrast-only (built only on PASS)&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;generality_claim&quot;</span><span class="p">:</span> <span class="s2">&quot;internal-contrast-only (within-model / cross-construction)&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="n">items</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">ok</span> <span class="o">=</span> <span class="n">run_asserts</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">HERE</span> <span class="o">/</span> <span class="s2">&quot;candidates.json&quot;</span>
+    <span class="n">blob</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">blob</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">blob</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()[:</span><span class="mi">16</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">wrote </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span><span class="si">}</span><span class="s2"> candidate items -&gt; </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sha256[:16] = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">  (candidate-pool freeze hash; record in README + PREREG)&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ok</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="s2">&quot;FAIL: one or more candidate asserts failed&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;all asserts PASS&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

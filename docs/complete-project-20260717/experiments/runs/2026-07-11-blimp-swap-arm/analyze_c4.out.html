@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze_c4.out — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-11-blimp-swap-arm</a> <span class="sep">/</span> <span class="cur">analyze_c4.out</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze_c4.out</h1>
+<p class="subtitle"><span class="ftype">output</span> &middot; <span class="fsize">1.6 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-11-blimp-swap-arm/analyze_c4.out</code></p>
+</header>
+<pre class='plain'>=== BLiMP swap arm — results (s210) ===
+selected shallow=[&#x27;determiner_noun_agreement_2&#x27;, &#x27;determiner_noun_agreement_1&#x27;, &#x27;regular_plural_subject_verb_agreement_1&#x27;]  deep=[&#x27;sentential_negation_npi_scope&#x27;, &#x27;only_npi_scope&#x27;, &#x27;superlative_quantifiers_1&#x27;]
+coverage: determiner..=0.97  determiner..=0.98  regular..=0.70  sentential..=0.98  only..=0.97  superlative..=0.98   (floor 0.5; excluded NONE)
+
+[A] ans1=0.390 poslock=0.220 n_calls=2400
+    shallow Δ̄=-0.0300 CI[-0.0500,-0.0150] n=300  within±0.05=True drops=False
+    deep    Δ̄=-0.0946 CI[-0.1199,-0.0709] n=296  within±0.05=False drops=True
+    per-paradigm Δacc: determ=-0.025  determ=-0.015  regula=-0.050  senten=-0.083  only=-0.069  superl=-0.120
+
+[B] ans1=0.492 poslock=0.147 n_calls=2400
+    shallow Δ̄=-0.0333 CI[-0.0533,-0.0150] n=300  within±0.05=False drops=False
+    deep    Δ̄=-0.0567 CI[-0.0950,-0.0183] n=300  within±0.05=False drops=False
+    per-paradigm Δacc: determ=-0.030  determ=-0.015  regula=-0.055  senten=-0.070  only=-0.020  superl=-0.080
+
+[C] ans1=0.429 poslock=0.156 n_calls=2400
+    shallow Δ̄=-0.0267 CI[-0.0450,-0.0117] n=300  within±0.05=True drops=False
+    deep    Δ̄=-0.0717 CI[-0.0950,-0.0483] n=300  within±0.05=False drops=False
+    per-paradigm Δacc: determ=-0.020  determ=+0.000  regula=-0.060  senten=-0.075  only=-0.075  superl=-0.065
+
+--- VERDICT ---
+SWAP: SWAP-INCONCLUSIVE | NEITHER (SWAP-INCONCLUSIVE)
+instrument-failure: False
+
+--- G-freq-pretraining (C4 pretraining-proxy, 3000000 sentences) ---
+  orig mean log-C4 2.8171  swap 2.6136  gap(orig−swap) +0.2036  (zero-rate orig 0.0 / swap 0.0228)
+</pre>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

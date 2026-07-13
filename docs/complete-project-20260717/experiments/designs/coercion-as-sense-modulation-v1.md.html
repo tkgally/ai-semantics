@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>coercion-as-sense-modulation-v1.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../index.html">home</a> <span class="sep">/</span> <a href="../index.html">experiments</a> <span class="sep">/</span> <a href="index.html">designs</a> <span class="sep">/</span> <span class="cur">coercion-as-sense-modulation-v1.md</span></nav>
+<main>
+<header class="page-head">
+<h1>coercion-as-sense-modulation-v1.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">5.4 KB</span> &middot; <code class="fpath">experiments/designs/coercion-as-sense-modulation-v1.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>type</th><td>design</td></tr><tr><th>id</th><td>coercion-as-sense-modulation-v1</td></tr><tr><th>title</th><td>coercion as lexical sense modulation — does constructional coercion register as a verb-sense shift in the DWUG-style relatedness instrument? (the lexicon–grammar bridge probe)</td></tr><tr><th>meaning-senses</th><td><ul class='fm-list'><li>constructional</li><li>referential</li><li>inferential</li></ul></td></tr><tr><th>status</th><td>ready</td></tr><tr><th>anchor</th><td>pending</td></tr><tr><th>contingent-on</th><td><span class='muted'>(none)</span></td></tr><tr><th>created</th><td>2026-05-30</td></tr><tr><th>updated</th><td>2026-05-30</td></tr><tr><th>links</th><td><ul class='fm-list'><li>rel: operationalizes, target: theory/lexicon-grammar-continuum</li><li>rel: depends-on, target: concept/coercion</li><li>rel: depends-on, target: result/lexical-sense-gradience-v1</li><li>rel: depends-on, target: result/caused-motion-near-miss-v2c</li></ul></td></tr></table></div><div class='md'><h1 id="design-coercion-as-lexical-sense-modulation-v1-the-lexicongrammar-bridge">Design — coercion as lexical sense modulation (v1, the lexicon–grammar bridge)</h1>
+<p><strong>The empirical bridge proposed by <a href="../../wiki/findings/theory/lexicon-grammar-continuum.md.html"><code>theory/lexicon-grammar-continuum</code></a>.</strong> It reuses the <strong>lexical</strong> sense-relatedness instrument built for <a href="../../wiki/findings/results/lexical-sense-gradience-v1.md.html"><code>result/lexical-sense-gradience-v1</code></a> on <strong>constructional</strong> (coercion) stimuli, so a result speaks to both wedges at once. Internal-contrast-only (<code>anchor: pending</code> — no in-repo human relatedness rating for constructed coercion pairs; same status as the off-ceiling constructional probes, tracked by <a href="../../wiki/decisions/resolved/conflicting-cue-human-anchor.md.html"><code>decisions/resolved/conflicting-cue-human-anchor</code></a>). Operationalization fixed under Tom's standing delegation (rigorous, no new gated decision — it reuses ratified instruments).</p>
+<h2 id="the-bet">The bet</h2>
+<p>Constructional coercion (<a href="../../wiki/base/concepts/coercion.md.html"><code>concept/coercion</code></a>) — the caused-motion construction making <em>sneeze</em> contribute causation-of-motion in <em>she sneezed the napkin off the table</em> — <strong>is</strong> a grammar-induced shift in the verb's sense. If a model registers coercion <em>as sense modulation</em>, then asking (with the DWUG-style relatedness rating) how related the <strong>verb's</strong> meaning is between its bare use and its coerced use should yield a <strong>lower</strong> relatedness than between its bare use and a length-matched <strong>non-coercing</strong> elaboration. Coercion would then show up <em>inside the lexical instrument</em> — the join the two wedges never tested together.</p>
+<h2 id="instrument-reused-verbatim-from-the-lexical-v1-probe">Instrument (reused verbatim from the lexical v1 probe)</h2>
+<p>The same target-marked, two-framing relatedness rating: <code>durel</code> (4-point: 4 Identical / 3 Closely Related / 2 Distantly Related / 1 Unrelated) + <code>cont</code> (0–100). The <strong>target is the verb</strong>, marked with «guillemets» in both sentences. Temperature 0, logprob-free → the 3-family panel (<a href="../../config/models.md.html"><code>config/models.md</code></a>). (No <code>topic</code> framing here — the contrast is within-verb, frame-controlled.)</p>
+<h2 id="arms-each-item-one-verb-two-sentences-sentence-1-is-the-bareneutral-use-sentence-2-varies">Arms (each item = one verb, two sentences; sentence 1 is the bare/neutral use, sentence 2 varies)</h2>
+<table>
+<thead>
+<tr>
+<th>arm</th>
+<th>sentence 2 relative to the bare use</th>
+<th>predicted relatedness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coerced-cm</code></td>
+<td>the <strong>caused-motion</strong> coercion (<em>…sneezed the napkin off the table</em>)</td>
+<td><strong>lower</strong> (sense shifted)</td>
+</tr>
+<tr>
+<td><code>coerced-way</code></td>
+<td>the <strong>way-construction</strong> coercion (<em>…sneezed her way down the hall</em>)</td>
+<td><strong>lower</strong> (self-traversal sense added)</td>
+</tr>
+<tr>
+<td><code>control-elab</code></td>
+<td>a <strong>length-matched non-coercing</strong> elaboration of the same verb (<em>…sneezed all through the lecture</em>)</td>
+<td><strong>high</strong> (same sense, just more context)</td>
+</tr>
+<tr>
+<td><code>polysemy-anchor</code></td>
+<td>a genuine lexical <strong>sense shift</strong> of a polysemous verb (<em>ran a race</em> → <em>ran a company</em>)</td>
+<td><strong>low</strong> (calibration: the instrument can detect a real sense shift)</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>control-elab</code> arm is the key control: it matches the coerced arm for "sentence 2 adds material / is longer," so a coerced-vs-control gap isolates the <em>coercion</em>, not mere elaboration. <code>polysemy-anchor</code> calibrates the low end (the instrument must register an uncontested sense shift as low-related, else a null on the coerced arm is uninterpretable).</p>
+<h2 id="reading-rule-report-the-rate-no-pass-bar-internal-contrast">Reading rule (report-the-rate; no pass bar; internal-contrast)</h2>
+<p>Per model per framing: mean relatedness per arm, and the <strong>coercion sense-shift gap</strong> = relatedness(<code>control-elab</code>) − relatedness(<code>coerced-cm</code>/<code>coerced-way</code>). A <strong>positive</strong> gap (coerced rated less sense-related than the matched elaboration) = the model registers constructional coercion as lexical sense modulation; a <strong>null</strong> gap (coerced ≈ control) = it does not, treating the coerced verb as the same sense. Either is first-class. <code>polysemy-anchor</code> must read low for the run to be interpretable. No threshold tuned post-run.</p>
+<h2 id="human-anchor">Human anchor</h2>
+<p><strong>Pending / internal-contrast-only.</strong> No in-repo human relatedness rating exists for constructed coercion pairs; the result makes no human-comparison claim. The DWUG-anchored <em>instrument</em> is validated by <a href="../../wiki/findings/results/lexical-sense-gradience-v1.md.html"><code>result/lexical-sense-gradience-v1</code></a> (it tracks human DURel), but these specific items are the project's own, with no human gold — so the headline is the within-verb arm contrast, not accuracy.</p>
+<h2 id="pre-registration">Pre-registration</h2>
+<p>Own constructed stimuli, frozen + committed (sha256) before any probe call; verbs drawn from the caused-motion / way set already used (so the coercion is independently evidenced by <a href="../../wiki/findings/results/caused-motion-near-miss-v2c.md.html"><code>result/caused-motion-near-miss-v2c</code></a> / <a href="../../wiki/findings/results/way-construction-traversal-v1.md.html"><code>result/way-construction-traversal-v1</code></a>). Independent read-only pre-run critique of the stimuli (are the control elaborations genuinely non-coercing and length-matched? is the polysemy anchor a real sense shift?) before the run; independent post-run number verification.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>CLAUDE.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="index.html">home</a> <span class="sep">/</span> <span class="cur">CLAUDE.md</span></nav>
+<main>
+<header class="page-head">
+<h1>CLAUDE.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">18.5 KB</span> &middot; <code class="fpath">CLAUDE.md</code></p>
+</header>
+<div class='md'><h1 id="claudemd-schema-and-conventions">CLAUDE.md — schema and conventions</h1>
+<p>Read this file every run. It encodes how <code>ai-semantics</code> is shaped. The charter is <code>PROJECT.md</code> (autonomous-era amendment: §12); the run discipline is <code>PROTOCOL.md</code>; the standing program is <code>wiki/program.md</code> (adopted 2026-07-02); the session entry point is <code>continue-prompt.md</code>. This file is the day-to-day cheat sheet.</p>
+<h2 id="always-on-rules">Always-on rules</h2>
+<ol>
+<li><strong>Read first, write second.</strong> Start a run by reading <code>continue-prompt.md</code>, then <code>NEXT.md</code>, then <code>wiki/program.md</code>, then only the pages your next action needs — navigating via <code>wiki/index.md</code>, a tool-generated one-line-per-page catalog (scan or grep the sections you need; never hand-edit its generated part — <code>tools/build-index.py</code> owns it). Do not load the whole wiki.</li>
+<li><strong>Charter takes precedence.</strong> If something here contradicts <code>PROJECT.md</code>, fix this file; don't drift.</li>
+<li><strong>Run discipline.</strong> Follow <code>PROTOCOL.md</code> end-to-end every run, including the verification gates before commit. <strong>Every autonomous session defaults to workflow mode</strong> — a multiagent dynamic workflow (orchestrator + parallel subagents + an adversarial coherence pass); 2–3 waves unless an explicit end time says otherwise. See <code>PROTOCOL.md §0</code> and <code>§A</code>. Single-unit mode is the fallback for small or surgical tasks — or one deep unit. Workflow mode parallelizes <em>generation</em>, never <em>judgement</em>: the gates, the human-anchor discipline, the no-fabrication rule, and "surface decisions, never ratify them in the session that opened them" all still bind. Unit selection is <strong>program-guided</strong> (<code>wiki/program.md</code>; <code>PROTOCOL.md §3</code>): prefer fewer, deeper units, and when nothing substantive is owed, reconcile, verify, and stop rather than pad.</li>
+<li><strong>No human subjects.</strong> Tom is the monitor, not a subject. All human bearing comes from existing resources (treebanks, sense-annotated corpora, dictionaries, acceptability sets, construction inventories). See <code>wiki/base/resources/</code>.</li>
+<li><strong>No silent gate skipping.</strong> When you hit an operationalization or human-anchor question, write a page to <code>wiki/decisions/open/</code> with options and a provisional default; mark downstream artifacts contingent; surface in <code>NEXT.md</code>. <strong>Ratification is autonomous and cross-session</strong> (<code>PROJECT.md</code> §12.3): only a <em>later</em> session may ratify, via an independent adversarial-review pass with written rationale, recorded <code>resolved-by: autonomous (adversarial review)</code>. Tom's standing override outranks any autonomous ratification.</li>
+<li><strong>Modest, realistic claims.</strong> Keep every claim calibrated to its evidence; never inflate for novelty. The project's purpose is to extend <strong>genuine human knowledge and understanding</strong> using AI tools — not to produce publishable research or pad a CV (<code>PROJECT.md</code> §1). When in doubt, under-claim, and write the null. Ratifying an anchor or operationalization fixes the <em>yardstick</em>, never the <em>result</em>.</li>
+<li><strong>Two tracks, inter-feeding</strong> (<code>PROJECT.md</code> §12.1). The empirical loop and the philosophical exploration are both first-class: empirical results revise essays and theory; essays spawn conjectures. No fixed endpoint; scope may extend outward while meaning — especially lexical and grammatical meaning — stays the focus.</li>
+<li><strong>Budget: USD 5.00 per calendar day (UTC)</strong> in OpenRouter spend, tracked as billed <code>usage.cost</code> in <code>config/budget.md</code>. Pre-flight estimate before any probe; record the actual after. The cap is a ceiling, not a target — a claim-carrying probe uses powered N (~100–150 items, <code>PROTOCOL.md §4</code>), and chronic under-use on load-bearing lines is itself a defect.</li>
+<li><strong>The website rolls up daily</strong> (<code>PROTOCOL.md §5b</code>; amended by Tom 2026-07-02). One journal entry per JST calendar day: a session that lands substantive work (spend, or findings/essays/theory/decision changes) <strong>creates or extends today's entry</strong>, refreshes the home-page status block, and replaces "The latest" with the day's entry; a maintenance-only session skips the site. Plain language; glossary-linked; no repo links; never name or refer to the monitor; never state a finding more strongly than the wiki does. Datelines carry the date and session number(s) only — the clock-stamp mandate was dropped 2026-07-02 (<code>tools/session-clock.sh</code> stays available, optional).</li>
+<li><strong>End merged, end clean.</strong> Every session ends commit → push → PR → <strong>squash-merge to <code>main</code></strong>, confirmed (<code>PROTOCOL.md §6</code>). If the merge cannot land, "land PR #N" goes at the top of <code>NEXT.md</code>. Before stopping, kill every background task/loop the session started and verify a clean process table + clean <code>git status</code> (<code>PROTOCOL.md §7</code>). <strong>Never detect process completion by name-match</strong> — <code>pgrep -f</code>/<code>pkill -f</code> on a command substring matches the <code>claude</code> launcher and spins forever; prefer the harness's <code>run_in_background</code>, or wait on an exact captured PID (<code>PROTOCOL.md §6b</code>).</li>
+</ol>
+<h2 id="page-types">Page types</h2>
+<p>Every page under <code>wiki/findings/</code> declares its type in a YAML front-matter block. Allowed types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Where</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source</code></td>
+<td><code>wiki/base/sources/</code></td>
+<td>Summary of an ingested external source, with page-level provenance.</td>
+</tr>
+<tr>
+<td><code>concept</code></td>
+<td><code>wiki/base/concepts/</code></td>
+<td>A human-semantics concept (distributional meaning, sense vs. reference, etc.).</td>
+</tr>
+<tr>
+<td><code>resource</code></td>
+<td><code>wiki/base/resources/</code></td>
+<td>A human-labeled empirical asset: what it is, what it can ground, where it lives.</td>
+</tr>
+<tr>
+<td><code>conjecture</code></td>
+<td><code>wiki/findings/conjectures/</code></td>
+<td>Proposed but untested claim, with confirmation/falsification criteria.</td>
+</tr>
+<tr>
+<td><code>claim</code></td>
+<td><code>wiki/findings/claims/</code></td>
+<td>Supported claim with lifecycle status (<code>proposed</code>, <code>supported</code>, <code>contested</code>, <code>retired</code>).</td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>wiki/findings/results/</code></td>
+<td>Experiment result, linked to its design and data.</td>
+</tr>
+<tr>
+<td><code>theory</code></td>
+<td><code>wiki/findings/theory/</code></td>
+<td>Synthesis page — the recursive theoretical object.</td>
+</tr>
+<tr>
+<td><code>open-question</code></td>
+<td><code>wiki/findings/open-questions/</code></td>
+<td>A live, unresolved question that can spawn a loop turn.</td>
+</tr>
+<tr>
+<td><code>essay</code></td>
+<td><code>wiki/findings/essays/</code></td>
+<td>Original philosophical work (the philosophical track's first-class artifact): a position the project argues in its own voice, citing in-repo sources/findings, with explicit revision triggers. Re-examined as evidence moves; revisions are logged in-page, retractions kept visible. New essays must clear the bar in <code>PROTOCOL.md §3</code> (fired trigger, new literature, or new falsifiable bet).</td>
+</tr>
+<tr>
+<td><code>note</code></td>
+<td><code>wiki/findings/notes/</code></td>
+<td>A session record containing <strong>no new measurement</strong> — build gates, calibration GO/NO-GOs, $0 re-analyses, method records (added 2026-07-02, program B6). Keeps the audit trail without inflating the evidence base; a <code>note</code> is never cited as sole support for a claim.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="yaml-front-matter-schema">YAML front-matter schema</h2>
+<p>Every typed page begins with:</p>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conjecture</span><span class="w">            </span><span class="c1"># one of the page types above</span>
+<span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cxg-dative-alternation</span><span class="w">  </span><span class="c1"># kebab-case, stable, unique within type</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Human-readable title</span>
+<span class="nt">meaning-senses</span><span class="p">:</span><span class="w">             </span><span class="c1"># required on findings pages; see wiki/meaning-senses.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">distributional</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">constructional</span>
+<span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">proposed</span><span class="w">            </span><span class="c1"># for claim/result: proposed | supported | contested | retired</span>
+<span class="w">                            </span><span class="c1"># for conjecture: proposed | designed | tested | retired</span>
+<span class="w">                            </span><span class="c1"># for theory: draft | live | superseded</span>
+<span class="w">                            </span><span class="c1"># for essay: draft | live | revised | retracted</span>
+<span class="w">                            </span><span class="c1"># for note: recorded</span>
+<span class="nt">contingent-on</span><span class="p">:</span><span class="w">              </span><span class="c1"># wiki/decisions/open/ ids this depends on; empty if none</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[]</span>
+<span class="nt">created</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2026-05-28</span>
+<span class="nt">updated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2026-05-28</span>
+<span class="nt">links</span><span class="p">:</span><span class="w">                      </span><span class="c1"># typed links to other pages (see §Typed links)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supports</span>
+<span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claim/foo</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">depends-on</span>
+<span class="w">    </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource/universal-dependencies</span>
+<span class="nn">---</span>
+</code></pre></div>
+
+<p><code>base/</code> pages use the same shape; <code>meaning-senses</code> is recommended but not required there.</p>
+<p><strong>Essay status discipline</strong> (documented 2026-07-05, s183, from corpus practice — the dominant
+convention made explicit): front-matter <code>status:</code> is authoritative, and the opening blockquote's
+first line restates it with the original dates kept visible (e.g. <code>**Status: revised (drafted
+2026-06-20; revised 2026-06-23 …)**</code>). A dated in-page Revision/Update block that <strong>changes,
+scopes, or corrects content</strong> ⇒ <code>status: revised</code>; a pure-confirmation trigger annotation may
+leave <code>draft</code>. A fired trigger gets its <code>→ FIRED …</code> annotation <strong>at the trigger itself</strong> (not
+only in a revision block). <code>updated:</code> equals the date of the newest dated change. The two July
+presupposition essays' blockquote-free <strong>Thesis.</strong>-plus-revision-log opening is a blessed
+variant.</p>
+<p><strong>Result and theory status discipline</strong> (ratified 2026-07-06, s184, autonomous cross-session
+adversarial review — <a href="wiki/decisions/resolved/result-status-upgrade-semantics.md.html"><code>decisions/resolved/result-status-upgrade-semantics</code></a>;
+fresh reviewer + non-Anthropic vote both ADOPT-A). A <code>result</code> page's <code>status:</code> describes the
+<strong>reading's lifecycle</strong>, and only a <strong>recorded dated event</strong> moves it — a replication, a promotion
+review citing it, or a contested/retired call, noted in-page with the session and ground. Two kinds
+of result sort differently:</p>
+<ul>
+<li><strong>Reading-bearing results</strong> (an interpretive confirm / mechanism / beater reading): the honest
+  resting state is <code>proposed</code> — what is <code>proposed</code> is the <em>reading</em>, not the numbers. When such a
+  line replicates and survives its controls, <code>supported</code> is earned by the <strong>promotion review that
+  writes the <code>claim</code></strong> and lives <strong>on the claim layer</strong>; the result page itself stays <code>proposed</code>
+  (or moves to <code>contested</code>/<code>retired</code>). So a replicated-and-promoted result is still <code>proposed</code>,
+  with support migrated to its claim — the flagship pattern (<code>result/comparative-correlative-covariation-v1</code>
+  is <code>proposed</code>; <code>claim/comparative-correlative-covariation</code> is <code>supported</code>).</li>
+<li><strong>Mechanical-gate / feasibility / calibration results</strong> (the finding <em>is</em> a check that passed or a
+  build/feasibility outcome): <code>supported</code> may be the honest description, and such a page <strong>may be
+  created at <code>supported</code></strong> — the in-page gate outcome is itself the dated recorded event (no
+  artificial create-<code>proposed</code>-then-annotate two-step).</li>
+</ul>
+<p><code>supported</code>-at-creation is <strong>deprecated for reading-bearing results</strong> going forward; the ~15
+existing <code>supported</code>-at-creation result pages are <strong>not mass-edited</strong> — each gets a one-line dated
+normalization note (keep <code>supported</code> if a genuine gate, else set <code>proposed</code>) <strong>at its next touch</strong>.
+Result front-matter <code>status</code> is therefore <strong>non-ranking and possibly-stale until normalized</strong>: it is
+not a strength ordering, and readers/tools must not treat it as one — the page's opening blockquote
+and the claim layer are authoritative (<code>senselint.py</code> does not read <code>status</code>). Untouched siblings in
+one line may sit at divergent statuses until normalized; that is expected, not a contradiction.
+<code>theory</code> syntheses may move <code>draft → live</code> at their <strong>next substantive touch</strong> (a <code>live</code> page that
+later gains a <code>supersedes</code> successor becomes <code>superseded</code>) — deferred to each page's next
+substantive edition, not applied in a maintenance pass. The <code>claim</code> convention (<code>supported</code> earned
+by the promotion review) and the <code>conjecture</code> axis (<code>proposed | designed | tested | retired</code>) are
+untouched by this rule.</p>
+<h2 id="typed-links">Typed links</h2>
+<p>Use only these relation strings in <code>links:</code> and in inline prose where typing matters:</p>
+<ul>
+<li><code>supports</code> — page A makes B more likely.</li>
+<li><code>contradicts</code> — page A makes B less likely.</li>
+<li><code>refines</code> — page A is a sharpening of B.</li>
+<li><code>depends-on</code> — page A presupposes B (resource, anchor, or earlier claim).</li>
+<li><code>operationalizes</code> — page A turns construct B into an indicator. Its target <strong>may be a
+  <code>design/&lt;id&gt;</code> artifact</strong> (a frozen design under <code>experiments/designs/</code>, outside the wiki type
+  system) — this is a blessed exception (s184, wiki-coherence P2): a conjecture/result is
+  operationalized by the frozen design that turns it into a probe, and <code>senselint.py</code> tolerates the
+  <code>design/</code> target. All other typed-link targets stay in-wiki (<code>type/id</code>).</li>
+<li><code>anchors</code> — page A declares B as the human resource grounding it (used <strong>on</strong> the
+  <code>claim</code>/<code>result</code>/<code>conjecture</code>/<code>open-question</code> page, <strong>targeting</strong> a <code>resource</code> — corrected
+  2026-07-05 s183: this line previously stated the reverse direction, contradicting universal
+  practice and what <code>senselint.py</code> check 4 actually enforces).</li>
+<li><code>supersedes</code> — page A replaces B (for theory revisions).</li>
+</ul>
+<p><strong>Edition citations</strong> (documented 2026-07-05, s183). When a theory page is superseded (new <code>-v2</code>
+page with a <code>supersedes</code> link; old page banner + <code>status: superseded</code>), inbound references are
+<strong>not</strong> mass-retargeted: quotes and historical engagements keep citing the edition they quote —
+the v1 stays a legitimate citation target for provenance, and its banner routes readers to the
+live edition. Only prose that presents the superseded edition <strong>as the current position</strong> gets a
+one-time bracketed edition pointer at first use (<code>*(superseded sNNN by … — cited here as the
+edition this page engaged)*</code>). Front-matter links to the old edition stay as historical graph
+edges.</p>
+<p>A <code>claim</code> or <code>result</code> without at least one <code>anchors</code> link to a <code>resource</code> is a defect unless <strong>either</strong> (a) explicitly marked <code>anchor: pending</code> with a <code>wiki/decisions/open/</code> entry it names in <code>contingent-on:</code>, <strong>or</strong> (b) explicitly marked <code>anchor: internal-contrast-only</code> — a ratified terminal declaration that the result makes <strong>no human-comparison claim</strong> (its force is a within-model contrast), so no resource anchor is required. The terminal state (b) is for results ratified as internal-contrast-only (introduced 2026-05-31 with <code>decisions/resolved/conflicting-cue-human-anchor</code>, ratified by Tom; from 2026-06-12 such ratifications follow the autonomous cross-session procedure, <code>PROJECT.md</code> §12.3); use it only after such ratification, never to dodge a genuine human-anchor obligation. <code>senselint.py</code> check 4 enforces all three states.</p>
+<h2 id="naming-conventions">Naming conventions</h2>
+<ul>
+<li>Files: kebab-case, <code>.md</code>, with <code>type-</code> prefix only inside <code>findings/</code> where ambiguity exists (e.g. <code>claim-cxg-…</code>). Inside type-scoped directories, the prefix is redundant — omit it.</li>
+<li>Ids in YAML are kebab-case, globally unique within a type, stable once cited.</li>
+<li>Concepts in <code>base/concepts/</code> use the concept name directly (e.g. <code>distributional-meaning.md</code>).</li>
+<li>Source pages in <code>base/sources/</code> use <code>lastname-year-shorttitle.md</code> (e.g. <code>bender-koller-2020-climbing.md</code>).</li>
+</ul>
+<h2 id="cross-references-clickable-links">Cross-references (clickable links)</h2>
+<p>The wiki is meant to be <strong>read by clicking page to page</strong>, so inline cross-references are clickable relative markdown links, not inert code spans. Convention: keep the typed reference as the visible label and point it at the target's relative path —</p>
+<div class="highlight"><pre><span></span><code>[`source/weissweiler-2023-cxg-insight`](../../base/sources/weissweiler-2023-cxg-insight.md)
+[`claim/formal-competence-aann-ceiling`](../claims/formal-competence-aann-ceiling.md)
+[`base/sources/foo.md`](base/sources/foo.md)   # the index.md catalog form
+</code></pre></div>
+
+<ul>
+<li>Only link to a target that <strong>exists</strong>; an aspirational mention of a not-yet-created page stays a plain code span until the page exists.</li>
+<li>This is body prose only. The YAML front-matter <code>links:</code> block stays <code>target: type/id</code> <strong>without</strong> backticks — it is the machine-readable typed-link graph senselint consumes. The two are kept in sync by hand.</li>
+<li><code>tools/linkify.py</code> normalizes references to this form (existence-gated, idempotent); <code>tools/senselint.py</code> check 7 fails the build on a broken inline link. Run both at the verification step — you need not hand-format every link if you run <code>linkify.py</code> before commit.</li>
+</ul>
+<h2 id="meaning-sense-tagging-mechanical-lint">Meaning-sense tagging (mechanical lint)</h2>
+<p>Every page under <code>wiki/findings/</code> must declare at least one entry in <code>meaning-senses:</code> drawn from the controlled vocabulary in <code>wiki/meaning-senses.md</code>. Inline use of the word "meaning" without a clear referent or sense-tag is a defect — qualify it or replace it.</p>
+<p><code>tools/senselint.py</code> enforces this mechanically (check 2). Inline use of the word "meaning" without a clear referent or sense-tag is still a defect the tool cannot catch — qualify it or replace it by hand.</p>
+<h2 id="verification-before-commit">Verification before commit</h2>
+<p>Run the three tools, then do the judgement checks by hand. (Full detail in <code>PROTOCOL.md §5</code> and <code>tools/README.md</code>.)</p>
+<ol>
+<li><strong>build-index</strong> — <code>python3 tools/build-index.py</code> regenerates the <code>wiki/index.md</code> catalog from front-matter (one line per page); new/renamed pages self-register. Hand-edit only the header above its markers.</li>
+<li><strong>senselint</strong> — <code>python3 tools/senselint.py</code> reports <strong>0 errors</strong>. Mechanically covers front-matter, meaning-senses vocabulary, typed-link relations + resolution, anchor discipline, index coverage, and inline-link integrity. Expected residue: a WARN on <code>wanted.md</code> (no front-matter) and INFO notes on contingent pages.</li>
+<li><strong>linkify</strong> — <code>python3 tools/linkify.py</code> then <code>--check</code> shows 0 remaining: cross-references are clickable links to existing pages.</li>
+<li><strong>provenance</strong> (by hand) — every claim/result cites an in-repo <code>source</code> or <code>resource</code> page that bears on it (not just exists), with quotes matching the source page verbatim. Essays cite in-repo sources/findings the same way; an essay's <em>original</em> argument needs no anchor, but any empirical assertion inside it does.</li>
+<li><strong>human-anchor</strong> (by hand) — every empirical claim about LLM meaning carries an <code>anchors:</code> link to a <code>resource</code> page, OR a <code>wiki/decisions/open/</code> entry queuing the anchor question.</li>
+<li><strong>website-consistency</strong> (by hand) — if this session landed substantive work, today's <code>docs/</code> journal entry exists (created or extended) and states nothing more strongly than the wiki (<code>PROTOCOL.md §5b</code>).</li>
+</ol>
+<h2 id="what-to-write-what-not-to-write">What to write, what not to write</h2>
+<ul>
+<li><strong>Write:</strong> typed claims, nulls, conjectures, notes (method records), summarized sources with page-level provenance, short exact quotes.</li>
+<li><strong>Do not write:</strong> wholesale source text, paper drafts, marketing copy. The project is finding-centered, not paper-producing.</li>
+</ul>
+<h2 id="program-discipline-one-liners-full-rules-in-protocolmd-34">Program discipline (one-liners; full rules in <code>PROTOCOL.md §3–§4</code>)</h2>
+<ul>
+<li>Replicated + controlled results get queued <strong>promotion reviews</strong> → <code>claim</code> pages (cross-session, adversarial). The claims layer is what compounds.</li>
+<li>A <code>theory</code> page with &gt;3 update boxes gets a <strong>clean second edition</strong> (<code>supersedes</code> link) at the next touch.</li>
+<li>A new <code>essay</code> needs a fired trigger, new literature, or a new falsifiable bet — else revise in-page.</li>
+<li>After 3 null-yielding instrument redesigns on one construct, a cross-session review decides whether the line continues.</li>
+<li>Every registered bet gets a row in <code>wiki/predictions.md</code>; outcomes update it the same session.</li>
+<li>Claim-carrying probes use powered N (~100–150 items); ratifications and pre-run critiques route one vote through a non-Anthropic panel model.</li>
+</ul>
+<h2 id="when-to-update-this-file">When to update this file</h2>
+<p>When a convention here turns out to be wrong, fix it in the same commit that surfaces the lesson, and note the change in <code>log.md</code>. Never silent drift.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

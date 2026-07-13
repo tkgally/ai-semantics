@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-30-lancaster-perceptual-moderation-v1</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">8.5 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-30-lancaster-perceptual-moderation-v1/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="pre-registration-lancaster-perceptual-strength-moderation-of-the-lexical-v1-result-v1">Pre-registration — Lancaster perceptual-strength moderation of the lexical-v1 result (v1)</h1>
+<p><strong>Date frozen:</strong> 2026-05-30 (before computing any model-rating × perceptual-strength quantity)
+<strong>Unit:</strong> prediction 1 of <a href="../../../wiki/findings/conjectures/multimodal-lexical-grounding-divergence.md.html"><code>conjecture/multimodal-lexical-grounding-divergence</code></a> — the $0, text-side, no-new-probe moderation.
+<strong>Governing decision:</strong> <a href="../../../wiki/decisions/resolved/multimodal-panel-and-grounding-theory.md.html"><code>decisions/resolved/multimodal-panel-and-grounding-theory</code></a> Q3 default <strong>A</strong> (Lancaster text-side moderator first), run under the standing delegation (defaults hold; non-blocking). <code>anchor: pending</code> until Q3 ratified — result stays <code>proposed</code>/contingent.</p>
+<h2 id="question">Question</h2>
+<p>Re-analyzing the <strong>already-collected</strong> lexical-v1 ratings (no new API call), is the text-only
+panel's sense-relatedness monotonicity — Spearman ρ(model rating, human DURel median),
+established in <a href="../../../wiki/findings/results/lexical-sense-gradience-v1.md.html"><code>result/lexical-sense-gradience-v1</code></a>
+(ρ 0.60–0.83) — <strong>stronger for perceptually grounded lemmas</strong> than for abstract ones?</p>
+<p>This is a <em>within-text-model</em> test (no image is shown): does the human-rated perceptual
+groundedness of a <em>word</em> predict how well a text-only model tracks its graded sense
+relatedness? Prediction 1 ⇒ yes (positive moderation). <strong>Null (first-class):</strong> no moderation —
+perceptual strength does not predict tracking quality; sense-tracking is uniform across the
+abstract/concrete divide. A null here lowers the prior on the image predictions (2–4).</p>
+<h2 id="frozen-inputs-sha256">Frozen inputs (sha256)</h2>
+<ul>
+<li>Lancaster Sensorimotor Norms aggregate CSV (Lynott, Connell, Brysbaert, Brand &amp; Carney 2020,
+  <em>Behavior Research Methods</em>; <strong>CC BY 4.0</strong>; OSF node <code>rwhs6</code>, file <code>48wsc</code>):
+  <code>445d363fb1f9f3e50b86d88e2f46cdc9a22b5dd8a713ce4e7be2a773d57f43c5</code> (gitignored, re-downloadable).</li>
+<li>lexical-v1 manifest (200 within-period DWUG EN pairs, 43 lemmas; frozen v1):
+  <code>7b4ad11f25e8734c52f2f87da338aebd9056f764e2130bf36e32aaead6109fd2</code>.</li>
+<li>lexical-v1 raw model ratings (durel = primary, cont = robustness; A=claude-sonnet-4.6,
+  B=gpt-5.4-mini, C=gemini-3.5-flash):</li>
+<li>durel_A <code>254b7684…</code>  durel_B <code>e182073c…</code>  durel_C <code>cd323280…</code></li>
+<li>cont_A  <code>b4bdc25d…</code>  cont_B  <code>745c7d75…</code>  cont_C  <code>e657a674…</code></li>
+<li>join table <code>lemma_perceptual.csv</code> (emitted by <code>build_join.py</code>):
+  <code>0f08944ec9323a8d524d7eeb0631eee9a723084d71c5b1a3796ebc92b1b26da8</code>.</li>
+</ul>
+<h2 id="moderator-pre-registered-fixed-before-any-outcome-was-computed">Moderator (pre-registered, fixed before any outcome was computed)</h2>
+<ul>
+<li><strong>Primary:</strong> <code>Max_strength.perceptual</code> — the lemma's maximum mean strength across the six
+  Lancaster perceptual modalities (0–5). The standard Lancaster summary of overall perceptual
+  grounding; matches the conjecture's "perceptually grounded" wording.</li>
+<li><strong>Secondary (robustness, not headline):</strong> <code>Visual.mean</code> — vision-specific strength, because
+  the downstream image predictions (2–3) use <em>visual</em> depiction. Reported alongside; not the
+  primary verdict.</li>
+</ul>
+<p><strong>Coverage:</strong> 42 / 43 lemmas have a Lancaster entry. <code>lass_nn</code> has <strong>none</strong> (and was already
+excluded as a DWUG sense-conflation in <a href="../../../wiki/findings/results/lexical-polysemy-homonymy-v2.md.html"><code>result/lexical-polysemy-homonymy-v2</code></a>);
+its 4 pairs are <strong>dropped</strong> → <strong>196 pairs</strong> analyzed. Stated, not worked around.</p>
+<h2 id="tests-fixed-no-pass-bar-report-the-estimate">Tests (fixed; no pass bar; report-the-estimate)</h2>
+<p><strong>T1 — primary: median-split stratified ρ difference.</strong>
+Split the 42 covered lemmas at the sample median <code>Max_strength.perceptual</code> = 3.557 into
+HIGH (&gt; median; 21 lemmas, 85 pairs) and LOW (≤ median; 21 lemmas, 111 pairs). For each
+model × framing (durel primary; cont robustness), compute pooled Spearman
+ρ(model rating, human DURel median) within each stratum and report
+<strong>Δρ = ρ_HIGH − ρ_LOW</strong>, with a <strong>cluster bootstrap</strong> 95% CI (resample <em>lemmas</em> with
+replacement — never pairs — 10 000 iters, seed 20260530, recomputing the split-fixed strata
+from the resampled lemmas). Prediction 1 ⇒ Δρ &gt; 0; null ⇒ CI spans 0.</p>
+<p><strong>T2 — robustness, non-pseudoreplicated (continuous, lemma-level).</strong>
+For each lemma, min-max-normalize each pair's model rating and human median to [0,1] within the
+framing's own scale, take the lemma's <strong>mean absolute error</strong> MAE = mean|model−human| over its
+pairs. Then Spearman ρ(lemma MAE, lemma <code>Max_strength.perceptual</code>) across the 42 covered lemmas
+(one point per lemma — no pseudo-replication). Prediction 1 ⇒ <strong>negative</strong> ρ (more perceptual →
+lower error → better tracking).</p>
+<p><strong>T3 — secondary moderator.</strong> Repeat T1+T2 with <code>Visual.mean</code>. Robustness only.</p>
+<p><strong>Confounds checked / disclosed (from the human anchor + manifest only, pre-outcome):</strong>
+- Human-DURel-level distribution is <strong>balanced across the split</strong> (HIGH 1/2/3/4 = .26/.22/.28/.24;
+  LOW = .22/.28/.23/.27) → the ρ comparison is not confounded by differing signal range. (Recorded
+  before any model rating was touched.)
+- <strong>Moderator range is compressed</strong> (2.44–4.95; DWUG targets are mostly concrete content words) →
+  limited power; a null may be range-restriction, not absence of effect. Disclosed as a lead caveat.
+- <strong>Pairs/lemma are uneven</strong> (1–15) → pooled within-stratum ρ (T1) is weighted toward high-count
+  lemmas; T2 weights every lemma equally → the two together bracket the weighting choice.</p>
+<h2 id="discipline">Discipline</h2>
+<ul>
+<li>One <strong>independent adversarial pre-write critic</strong> reviews this prereg + <code>build_join.py</code> +
+  <code>analyze.py</code> <strong>before</strong> the analysis is run.</li>
+<li>One <strong>independent post-run number-verifier</strong> recomputes every reported figure from the frozen
+  inputs after the run.</li>
+<li>No indicator is retuned after seeing an outcome. If the primary is null, the null is the result.</li>
+</ul>
+<h2 id="pre-run-critique-fixes-applied-before-any-outcome-was-computed">Pre-run critique fixes (applied before any outcome was computed)</h2>
+<p>An independent adversarial pre-write critic reviewed this prereg + <code>build_join.py</code> + <code>analyze.py</code>
+(input-only; no moderation outcome computed). It independently re-verified the T1 mechanics are
+correct (fixed-threshold median; lemma-level — not pair-level — cluster resampling; correct
+Spearman tie handling; A/B/C↔model labels; 196 pairs after dropping <code>lass</code>). Fixes applied
+<strong>before the run</strong>:</p>
+<ul>
+<li><strong>B1 (BLOCKER, fixed) — T2 human-side normalization.</strong> The human gold is the DURel median on
+  the <strong>1–4 scale in every framing</strong>; the original T2 normalized the human term by the <em>framing's</em>
+  scale, so under <code>cont</code> (0–100) the human collapsed to ~0.01–0.04 and the "error" reduced to the
+  model's raw level. Fixed: model pred normalized on its framing scale, <strong>human always on (1,4)</strong>
+  (<code>HUMAN_SCALE</code>). T1 is Spearman on raw values (scale-invariant) → was never affected.</li>
+<li><strong>S1 (disclosed) — the secondary moderator is near-collinear with the primary.</strong> Across the 42
+  lemmas, ρ(<code>Max_strength.perceptual</code>, <code>Visual.mean</code>) ≈ 0.85 and ~33/42 are numerically identical
+  (vision is the dominant modality for most DWUG targets). <strong>T3 is therefore a near-duplicate, not
+  independent corroboration</strong> — reported as such, never as a second confirmation. (<code>analyze.py</code>
+  now reports the collinearity in the <code>confounds</code> block.)</li>
+<li><strong>S2 (disclosed) — underpowered + median-boundary fragility.</strong> 21 lemmas/side, compressed
+  moderator range (2.44–4.95), and 3 lemmas (<code>bar</code>, <code>chef</code>, <code>rag</code>) within 0.05 of the median
+  (their HIGH/LOW side is near-arbitrary). A <strong>null must be read as "no detectable moderation OR
+  an effect this design cannot resolve," not as evidence against prediction 1.</strong></li>
+<li><strong>S3 (fixed) — primary cell-set designated in advance:</strong> <code>Max_strength.perceptual</code> × <code>durel</code> ×
+  {A,B,C}, test T1. Everything else (<code>cont</code>, <code>Visual.mean</code>, T2) is exploratory/robustness. All 24
+  cells are reported; no cell is cherry-picked as confirmatory.</li>
+<li><strong>S4 (added) — n≥3 robustness pass.</strong> Half the gold rests on 2 annotators (v1's S3). Added a
+  <code>robustness_n_ge_3</code> pass repeating the primary cell-set on pairs with ≥3 raters. (Critic checked
+  ρ(perceptual, mean human_n) = −0.07 → not a <em>differential</em> confound across the split.)</li>
+<li><strong>N1 (recorded) — input-only confounds, all checked null:</strong> ρ(perceptual, pairs/lemma),
+  ρ(perceptual, mean human_n), ρ(perceptual, human spread) are all emitted in the <code>confounds</code>
+  block so a reader sees they were checked, not assumed.</li>
+<li><strong>S5 (resolved) — the second human anchor is page-grounded:</strong> the Lancaster norms now have a
+  typed <a href="../../../wiki/base/resources/lancaster-sensorimotor-norms.md.html"><code>resource/lancaster-sensorimotor-norms</code></a>
+  page; the result will cite both DWUG (gradience) and Lancaster (moderator) as human anchors.</li>
+</ul>
+<p>Verdict after fixes: sound to run; inherently low-powered (report estimates + CIs, write the null
+first-class, do not over-read).</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

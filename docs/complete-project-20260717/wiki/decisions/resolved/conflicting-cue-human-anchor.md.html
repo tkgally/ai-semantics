@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>conflicting-cue-human-anchor.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">wiki</a> <span class="sep">/</span> <a href="../index.html">decisions</a> <span class="sep">/</span> <a href="index.html">resolved</a> <span class="sep">/</span> <span class="cur">conflicting-cue-human-anchor.md</span></nav>
+<main>
+<header class="page-head">
+<h1>conflicting-cue-human-anchor.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">5.7 KB</span> &middot; <code class="fpath">wiki/decisions/resolved/conflicting-cue-human-anchor.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>id</th><td>conflicting-cue-human-anchor</td></tr><tr><th>title</th><td>Does the off-ceiling conflicting-cue result need a human-rated anchor, and which one?</td></tr><tr><th>status</th><td>resolved</td></tr><tr><th>opened</th><td>2026-05-29</td></tr><tr><th>opened-by</th><td>orchestrator</td></tr><tr><th>resolved</th><td>2026-05-31</td></tr><tr><th>resolved-by</th><td>tom</td></tr><tr><th>resolution</th><td>A</td></tr><tr><th>contingent-artifacts</th><td><ul class='fm-list'><li>result/argument-structure-coercion-v2</li><li>result/caused-motion-near-miss-v2c</li><li>result/coercion-implicit-cue-v2b</li><li>result/coercion-sense-modulation-v1</li><li>result/comparative-correlative-covariation-v2</li><li>result/comparative-correlative-covariation-v3</li><li>result/conative-cancel-direction-v2</li><li>note/cross-axis-lexical-constructional-ordering-v1</li></ul></td></tr></table></div><div class='md'><h1 id="decision-human-anchor-for-the-conflicting-cue-coercion-result">Decision: human anchor for the conflicting-cue coercion result</h1>
+<h2 id="resolution-2026-05-31-tom-option-a">RESOLUTION (2026-05-31, Tom — Option A)</h2>
+<p><strong>Ratified: leave the internal-contrast-only results as internal-contrast-only.</strong> Tom's
+ruling this round (verbatim intent): "leave the internal-contrast-only results
+(argument-structure-coercion-v2 and the off-ceiling/bridge results) as
+internal-contrast-only … they make no human-comparison claim, so this closes the gate
+without changing any finding."</p>
+<p>This <strong>fixes the yardstick, not any result</strong>: no finding changes; the off-ceiling /
+bridge / cross-axis results stand exactly as written, drawing their force from the
+within-model <code>canonical</code>→<code>cue</code> (and ordering / direction-of-effect) contrast. No human
+baseline is claimed or invented for the conflicting-cue / coercion-resisting / embedded /
+near-miss / bridge arms.</p>
+<p><strong>Mechanical consequence (applied this commit):</strong> the eight contingent results below have
+their <code>contingent-on: conflicting-cue-human-anchor</code> removed and their anchor field promoted
+from the ambiguous <code>anchor: pending</code> to the explicit terminal state
+<strong><code>anchor: internal-contrast-only</code></strong> — a ratified declaration that the result makes no
+human-comparison claim and so requires no resource anchor. <code>tools/senselint.py</code>
+check 4 was extended to recognize this terminal state (it previously accepted only
+<code>anchor: pending</code> + an open decision); the convention is documented in <a href="../../../CLAUDE.md.html"><code>CLAUDE.md</code></a>. If a
+<em>human-comparison</em> claim on any of these arms is ever wanted, that is a <strong>new</strong> anchor
+question (Option B below) to be opened fresh, not this one.</p>
+<p>Promoted results: <a href="../../findings/results/argument-structure-coercion-v2.md.html"><code>result/argument-structure-coercion-v2</code></a>,
+<a href="../../findings/results/caused-motion-near-miss-v2c.md.html"><code>result/caused-motion-near-miss-v2c</code></a>,
+<a href="../../findings/results/coercion-implicit-cue-v2b.md.html"><code>result/coercion-implicit-cue-v2b</code></a>,
+<a href="../../findings/results/coercion-sense-modulation-v1.md.html"><code>result/coercion-sense-modulation-v1</code></a>,
+<a href="../../findings/results/comparative-correlative-covariation-v2.md.html"><code>result/comparative-correlative-covariation-v2</code></a>,
+<a href="../../findings/results/comparative-correlative-covariation-v3.md.html"><code>result/comparative-correlative-covariation-v3</code></a>,
+<a href="../../findings/results/conative-cancel-direction-v2.md.html"><code>result/conative-cancel-direction-v2</code></a>,
+<a href="../../findings/notes/cross-axis-lexical-constructional-ordering-v1.md.html"><code>note/cross-axis-lexical-constructional-ordering-v1</code></a>.</p>
+<hr />
+<h1 id="decision-human-anchor-for-the-conflicting-cue-coercion-result-original-for-the-record">Decision: human anchor for the conflicting-cue coercion result <em>(original, for the record)</em></h1>
+<h2 id="why-this-exists-low-priority-mechanical-anchor-tracking">Why this exists (low-priority, mechanical anchor-tracking)</h2>
+<p><a href="../../findings/results/argument-structure-coercion-v2.md.html"><code>result/argument-structure-coercion-v2</code></a> ran the off-ceiling conflicting-cue probe <strong>internal-contrast-only</strong> — exactly as the ratified <a href="cc-v2-difficulty-operationalization.md.html"><code>decisions/resolved/cc-v2-difficulty-operationalization</code></a> specified for the harder arms ("run internal-contrast-only with the human clause marked pending; queue a human-rated harder anchor in <code>wanted.md</code> rather than blocking"). The Scivetti CxNLI subsets contain <strong>no</strong> conflicting-cue / coercion-resisting items, so there is no in-repo human norm for these items, and the result makes <strong>no</strong> human-comparison claim — its force is the within-model <code>canonical</code>→<code>cue</code> contrast.</p>
+<p>This page exists to <strong>track that pending anchor</strong> (and to satisfy the anchor-discipline gate: an <code>anchor: pending</code> result must name the open anchor question it depends on). It is <strong>low-priority</strong>: the result's claim (the v1 add-direction ceilings are cue-sensitive, not a brittle template) stands on the internal contrast and does <strong>not</strong> require a human anchor to be valid as stated.</p>
+<h2 id="the-question">The question</h2>
+<p>If the project later wants a <em>human-comparison</em> claim on conflicting-cue coercions — "humans withhold the construction's inference under an explicit cue at rate X; models match/differ" — it needs a human-rated anchor on such items. None exists in-repo.</p>
+<h2 id="options">Options</h2>
+<ul>
+<li><strong>A — Leave internal-contrast-only (provisional default).</strong> The conflicting-cue reading is near-trivial for humans (an explicit denial "…but it never moved" is obviously decisive), so a rated human baseline adds little; keep the result internal-contrast-only and do not fetch/collect anything. The result stays <code>proposed</code>, anchor <code>pending</code>, no human claim made.</li>
+<li><strong>B — Queue a human-rated conflicting-cue / coercion-resisting set in <code>wanted.md</code></strong> (existing released ratings only — no new human-subject collection, charter §8) if/when a human-comparison claim is actually wanted. Promote only then.</li>
+<li><strong>C — Build the matched off-ceiling cancel-direction (harder conative) probe first</strong> (the add/cancel asymmetry de-confounding the design calls for), and decide the anchor question for the pair together.</li>
+</ul>
+<h2 id="provisional-default">Provisional default</h2>
+<p><strong>Option A</strong> — the result is internal-contrast-only by ratified design and needs no human anchor for its stated (internal) claim; this page just records the gap. Revisit only if a human-comparison claim on conflicting-cue items is later wanted (then Option B). Tom: a one-liner ("A stands" / "queue B" / "do C first") is enough; this is <strong>not</strong> blocking.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

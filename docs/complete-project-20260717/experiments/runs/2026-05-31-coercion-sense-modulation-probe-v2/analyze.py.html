@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-31-coercion-sense-modulation-probe-v2</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">5.1 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-31-coercion-sense-modulation-probe-v2/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Coercion-as-sense-modulation v2 analysis (2026-05-31). Pure-Python.</span>
+
+<span class="sd">Reads raw/{durel,cont}_{A,B,C}.json (the reused lexical relatedness instrument on the v2 stimuli).</span>
+<span class="sd">Reports per model x framing the per-arm mean relatedness and the diagnostic gaps. Report-the-number;</span>
+<span class="sd">no pass bar; reading rule fixed pre-run (design v2). Internal-contrast-only.</span>
+
+<span class="sd">Arms: coerced-way / transitive-ctrl / elab-ctrl / polysemy-anchor.</span>
+
+<span class="sd">Diagnostic gaps:</span>
+<span class="sd">  coercion_gap   = mean(elab-ctrl)       - mean(coerced-way)   [v1 replication: coercion lowers relatedness vs a bare elaboration]</span>
+<span class="sd">  ISOLATION_gap  = mean(transitive-ctrl) - mean(coerced-way)   [THE DECISIVE v2 contrast: both arms add argument structure,</span>
+<span class="sd">                                                                so a POSITIVE isolation gap =&gt; the drop is SENSE-specific, not</span>
+<span class="sd">                                                                a mere added-structure artifact (settles v1&#39;s I1 confound)]</span>
+<span class="sd">  surface_effect = mean(elab-ctrl)       - mean(transitive-ctrl) [does adding a CONVENTIONAL object alone lower relatedness?</span>
+<span class="sd">                                                                  ~0 =&gt; adding structure per se does not drive the drop]</span>
+<span class="sd">  within-verb isolation sign: # verbs with transitive-ctrl &gt; coerced-way (of 8)</span>
+<span class="sd">Predicted ordering (pre-committed): elab-ctrl &gt;= transitive-ctrl &gt;= coerced-way &gt;= polysemy-anchor.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">)</span>
+<span class="n">ITEMS</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;items.csv&quot;</span><span class="p">)</span>
+<span class="n">PANEL</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;claude-sonnet-4.6&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;gpt-5.4-mini&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;gemini-3.5-flash&quot;</span><span class="p">}</span>
+<span class="n">FRAMINGS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;durel&quot;</span><span class="p">,</span> <span class="s2">&quot;cont&quot;</span><span class="p">)</span>
+<span class="n">ARMS</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;elab-ctrl&quot;</span><span class="p">,</span> <span class="s2">&quot;transitive-ctrl&quot;</span><span class="p">,</span> <span class="s2">&quot;coerced-way&quot;</span><span class="p">,</span> <span class="s2">&quot;polysemy-anchor&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span> <span class="k">else</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">meta</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]:</span> <span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">ITEMS</span><span class="p">))}</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;reading&quot;</span><span class="p">:</span> <span class="s2">&quot;isolation_gap = transitive-ctrl - coerced-way is the decisive contrast &quot;</span>
+                       <span class="s2">&quot;(both add argument structure; positive =&gt; sense-specific, settles v1 I1). &quot;</span>
+                       <span class="s2">&quot;Internal-contrast-only; report-the-number.&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;per_model&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PANEL</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">fr</span> <span class="ow">in</span> <span class="n">FRAMINGS</span><span class="p">:</span>
+            <span class="n">recs</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fr</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)))</span>
+            <span class="n">by_arm</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="n">by_verb_arm</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pred&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">by_arm</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;pred&quot;</span><span class="p">])</span>
+                <span class="n">by_verb_arm</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;verb&quot;</span><span class="p">]][</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;arm&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pred&quot;</span><span class="p">]</span>
+            <span class="n">arm_mean</span> <span class="o">=</span> <span class="p">{</span><span class="n">a</span><span class="p">:</span> <span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">by_arm</span><span class="p">[</span><span class="n">a</span><span class="p">]),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="n">by_arm</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ARMS</span><span class="p">}</span>
+            <span class="n">cg</span> <span class="o">=</span> <span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;elab-ctrl&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;coerced-way&quot;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+                  <span class="k">if</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;elab-ctrl&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;coerced-way&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">iso</span> <span class="o">=</span> <span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;transitive-ctrl&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;coerced-way&quot;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+                   <span class="k">if</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;transitive-ctrl&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;coerced-way&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">surf</span> <span class="o">=</span> <span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;elab-ctrl&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;transitive-ctrl&quot;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;elab-ctrl&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;transitive-ctrl&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="c1"># within-verb isolation sign: transitive &gt; coerced</span>
+            <span class="n">iso_pos</span> <span class="o">=</span> <span class="n">iso_tot</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">verb</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">by_verb_arm</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="s2">&quot;transitive-ctrl&quot;</span> <span class="ow">in</span> <span class="n">d</span> <span class="ow">and</span> <span class="s2">&quot;coerced-way&quot;</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+                    <span class="n">iso_tot</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;transitive-ctrl&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;coerced-way&quot;</span><span class="p">]:</span>
+                        <span class="n">iso_pos</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">ordering_ok</span> <span class="o">=</span> <span class="p">(</span><span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;elab-ctrl&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;transitive-ctrl&quot;</span><span class="p">]</span> <span class="o">&gt;=</span>
+                           <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;coerced-way&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">arm_mean</span><span class="p">[</span><span class="s2">&quot;polysemy-anchor&quot;</span><span class="p">])</span> \
+                <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">arm_mean</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ARMS</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="n">m</span><span class="p">[</span><span class="n">fr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;arm_mean&quot;</span><span class="p">:</span> <span class="n">arm_mean</span><span class="p">,</span> <span class="s2">&quot;coercion_gap(elab-coerced)&quot;</span><span class="p">:</span> <span class="n">cg</span><span class="p">,</span>
+                     <span class="s2">&quot;ISOLATION_gap(trans-coerced)&quot;</span><span class="p">:</span> <span class="n">iso</span><span class="p">,</span> <span class="s2">&quot;surface_effect(elab-trans)&quot;</span><span class="p">:</span> <span class="n">surf</span><span class="p">,</span>
+                     <span class="s2">&quot;within_verb_isolation_sign&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">iso_pos</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">iso_tot</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;ordering_elab&gt;=trans&gt;=coerced&gt;=poly&quot;</span><span class="p">:</span> <span class="n">ordering_ok</span><span class="p">}</span>
+        <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="s2">&quot;results.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===== coercion-as-sense-modulation v2 (non-coercing transitive control) =====&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">PANEL</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">[</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">fr</span> <span class="ow">in</span> <span class="n">FRAMINGS</span><span class="p">:</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="s2">&quot;per_model&quot;</span><span class="p">][</span><span class="n">slot</span><span class="p">][</span><span class="n">fr</span><span class="p">]</span>
+            <span class="n">am</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;arm_mean&quot;</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">fr</span><span class="si">:</span><span class="s2">5s</span><span class="si">}</span><span class="s2"> elab=</span><span class="si">{</span><span class="n">am</span><span class="p">[</span><span class="s1">&#39;elab-ctrl&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> trans=</span><span class="si">{</span><span class="n">am</span><span class="p">[</span><span class="s1">&#39;transitive-ctrl&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;coerced=</span><span class="si">{</span><span class="n">am</span><span class="p">[</span><span class="s1">&#39;coerced-way&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> poly=</span><span class="si">{</span><span class="n">am</span><span class="p">[</span><span class="s1">&#39;polysemy-anchor&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;        ISOLATION_gap(trans-coerced)=</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;ISOLATION_gap(trans-coerced)&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;surface(elab-trans)=</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;surface_effect(elab-trans)&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;coercion_gap=</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;coercion_gap(elab-coerced)&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;iso_sign=</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;within_verb_isolation_sign&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;order_ok=</span><span class="si">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;ordering_elab&gt;=trans&gt;=coerced&gt;=poly&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">wrote </span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;results.json&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

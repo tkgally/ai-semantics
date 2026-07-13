@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>cxg-probing-anchor.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">wiki</a> <span class="sep">/</span> <a href="../index.html">decisions</a> <span class="sep">/</span> <a href="index.html">resolved</a> <span class="sep">/</span> <span class="cur">cxg-probing-anchor.md</span></nav>
+<main>
+<header class="page-head">
+<h1>cxg-probing-anchor.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">6.1 KB</span> &middot; <code class="fpath">wiki/decisions/resolved/cxg-probing-anchor.md</code></p>
+</header>
+<div class='frontmatter'><div class='fm-label'>Page metadata</div><table class='fm-table'><tr><th>id</th><td>cxg-probing-anchor</td></tr><tr><th>title</th><td>What human-anchored resource grounds the general claim that CxG-probing surprisal is a valid operationalization of constructional meaning sensitivity?</td></tr><tr><th>status</th><td>resolved</td></tr><tr><th>resolved</th><td>2026-05-29</td></tr><tr><th>resolution</th><td>Option A — keep the claim scoped to AANN (anchored to resource/mahowald-2023-aann-stimuli); cross-construction generality stays an explicitly provisional extrapolation, not settled. Scivetti does not broaden this claim (it concerns the surprisal technique; Scivetti uses inference-style probing). Aligns with Tom&#x27;s standing steer (2026-05-29) to keep all claims realistic and modest. Ratified by Tom.</td></tr><tr><th>opened</th><td>2026-05-28</td></tr><tr><th>opened-by</th><td>subagent</td></tr><tr><th>contingent-artifacts</th><td><ul class='fm-list'><li>claim/cxg-probing-surprisal-validity</li></ul></td></tr></table></div><div class='md'><h1 id="decision-cxg-probing-surprisal-anchor-general">Decision: CxG-probing surprisal anchor (general)</h1>
+<h2 id="question">Question</h2>
+<p><a href="../../findings/claims/cxg-probing-surprisal-validity.md.html"><code>claim/cxg-probing-surprisal-validity</code></a> asserts that contrasting model-assigned surprisal (continuation likelihood) on <strong>form–meaning minimal pairs</strong> is a valid operationalization of an LLM's <em>sensitivity to constructional meaning</em> — across constructions, not just AANN. Per the human-anchor verification gate (<a href="../../../CLAUDE.md.html"><code>CLAUDE.md</code></a> §Verification, <a href="../../../PROTOCOL.md.html"><code>PROTOCOL.md</code></a> §5.3), an empirical claim about LLM meaning needs an <code>anchors:</code> link to an in-repo <code>resource</code> page that bears on it. The general claim does not yet have an adequate one.</p>
+<p>The only in-repo construction-grounded human resource is <a href="../../base/resources/mahowald-2023-aann-stimuli.md.html"><code>resource/mahowald-2023-aann-stimuli</code></a>. It is a <strong>partial</strong> anchor: it is exactly one form–meaning minimal-pair set (the AANN degenerate-variant design), with item-level MTurk acceptability ratings. It can validate the surprisal-contrast method <em>for AANN</em>. It cannot, on its own, ground a claim cast at the level of "minimal-pair surprisal in general."</p>
+<p>The Weissweiler source itself flags this as the field-wide gap. From <a href="../../base/sources/weissweiler-2023-cxg-insight.md.html"><code>source/weissweiler-2023-cxg-insight</code></a> (§3, summarized on the source page): the paper names the "absence of human-normed data for many constructions (making it hard to ground claims about model behavior against human behavior)" as a key open challenge. So the missing general anchor is not an oversight of this repo — it is a known hole in the CxG-probing program.</p>
+<h2 id="options">Options</h2>
+<h3 id="a-scope-the-claim-down-to-its-verified-anchor-treat-generality-as-conjecture-provisional-default">A. Scope the claim down to its verified anchor; treat generality as conjecture (provisional default)</h3>
+<ul>
+<li>Anchor the claim to <a href="../../base/resources/mahowald-2023-aann-stimuli.md.html"><code>resource/mahowald-2023-aann-stimuli</code></a> for the AANN instance, and state the cross-construction generality as a <strong>provisional extrapolation</strong> rather than a settled empirical fact — i.e. the method is <em>validated</em> only where a human-normed minimal-pair set exists, and AANN is currently the sole such set in-repo.</li>
+<li><strong>Pros</strong>: honest about the evidence; the method-validity claim for AANN is genuinely anchored; no fabricated generality.</li>
+<li><strong>Cons</strong>: the claim's headline ("valid operationalization") is then carried mostly by methodological argument (Weissweiler) plus one worked construction, not by a broad human-anchored battery.</li>
+</ul>
+<h3 id="b-acquire-a-broad-human-normed-minimal-pair-resource-and-anchor-against-it">B. Acquire a broad human-normed minimal-pair resource and anchor against it</h3>
+<ul>
+<li>Candidate resources: BLiMP (Warstadt et al. 2020 — 67 minimal-pair paradigms, human acceptability validated); SyntaxGym; the Weissweiler 2022 Comparative Correlative probe; Weissweiler 2024 "Constructions Are So Difficult" NLI challenge set. None is yet catalogued as an in-repo <code>resource</code> page.</li>
+<li><strong>Pros</strong>: would let the general claim stand on a multi-construction human anchor; BLiMP in particular has published human agreement numbers.</li>
+<li><strong>Cons</strong>: BLiMP/SyntaxGym are largely <em>Generative-Grammar</em> minimal pairs (grammaticality), not CxG form–meaning pairings — they anchor <em>form</em> sensitivity, which is precisely the formal-vs-constructional gap that <a href="../../findings/claims/formal-competence-aann-ceiling.md.html"><code>claim/formal-competence-aann-ceiling</code></a> warns against conflating. A grammaticality minimal-pair battery would over-claim if used to anchor <em>meaning</em> sensitivity. The CxG-native sets (Weissweiler 2022/2024) are construction-specific and not yet inspected in-repo.</li>
+</ul>
+<h3 id="c-split-the-claim-a-method-validity-claim-anchored-to-aann-and-a-separate-generality-conjecture">C. Split the claim: a method-validity claim (anchored to AANN) and a separate generality conjecture</h3>
+<ul>
+<li>Keep <a href="../../findings/claims/cxg-probing-surprisal-validity.md.html"><code>claim/cxg-probing-surprisal-validity</code></a> narrow and AANN-anchored; spin out a <code>conjecture/cxg-probing-generalizes</code> for the cross-construction extrapolation, to be tested as more human-normed CxG resources are catalogued.</li>
+<li><strong>Pros</strong>: cleanest separation of what is anchored from what is hoped.</li>
+<li><strong>Cons</strong>: more pages; defers the interesting general claim.</li>
+</ul>
+<h2 id="provisional-default-in-force-until-tom-ratifies">Provisional default (in force until Tom ratifies)</h2>
+<p><strong>Option A.</strong> Anchor the claim to <a href="../../base/resources/mahowald-2023-aann-stimuli.md.html"><code>resource/mahowald-2023-aann-stimuli</code></a> as a partial (AANN-only) anchor, write the cross-construction generality in explicitly provisional language, and mark the claim <code>contingent-on: cxg-probing-anchor</code>. The claim's empirical force is restricted to: (i) the <em>method</em> (surprisal contrast on form–meaning minimal pairs) is sound where a human-normed minimal-pair set exists; (ii) AANN is the worked, anchored instance. Promotion to a general settled claim waits on either a ratified broad anchor (Option B) or the split (Option C).</p>
+<h2 id="what-would-change-the-default">What would change the default</h2>
+<ul>
+<li>If Tom wants the general claim to stand now, the cleanest move is Option B with a <strong>CxG-native</strong> human-normed set (Weissweiler 2022/2024), catalogued as a <code>resource</code> page first — <em>not</em> a Generative-Grammar grammaticality battery, which would re-import the formal-vs-constructional confound.</li>
+<li>If a broad CxG human-normed minimal-pair resource is judged unavailable, Option C (split) is the fallback.</li>
+</ul>
+<h2 id="notes-for-the-resolver">Notes for the resolver</h2>
+<p>Tom: the choice that bites is whether "valid operationalization" is allowed to be <strong>general</strong> now (needs Option B + a catalogued CxG human anchor) or stays <strong>AANN-scoped</strong> until then (Option A). A one-line ratification is enough; if choosing B, name the resource to catalogue.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>probe.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-05-lexical-sense-gradience-probe-rep2</a> <span class="sep">/</span> <span class="cur">probe.py</span></nav>
+<main>
+<header class="page-head">
+<h1>probe.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">5.8 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-05-lexical-sense-gradience-probe-rep2/probe.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Lexical-sense-gradience v1 probe (2026-05-30).</span>
+
+<span class="sd">Operationalizes design/lexical-sense-gradience-v1 under the RESOLVED operationalization gate.</span>
+<span class="sd">v1 scope = P1 monotonicity + P3 context-similarity control. Behavioral panel (Q1), three</span>
+<span class="sd">pre-registered framings per item, temperature 0, logprob-free -&gt; existing 3-family panel:</span>
+<span class="sd">  durel : DURel 4-point sense-relatedness of the marked target word across the two uses</span>
+<span class="sd">          (4 Identical / 3 Closely Related / 2 Distantly Related / 1 Unrelated) -&gt; the primary</span>
+<span class="sd">          graded signal, directly rank-comparable to the human DURel median.</span>
+<span class="sd">  cont  : 0-100 continuous sense-relatedness of the marked target word (instrument robustness).</span>
+<span class="sd">  topic : 0-100 topic/situation similarity of the two sentences IGNORING the target word</span>
+<span class="sd">          (the Q3 semantic context-similarity control).</span>
+
+<span class="sd">DATA/LICENCE: reads the gitignored local full-text file (DWUG / CCOHA corpus text, NOT</span>
+<span class="sd">committed). Committed raw JSON records item_id + lemma + framing + model output + the human</span>
+<span class="sd">DURel gold + usage -- NO corpus sentences. Cost = API-billed usage.cost (experiments/lib).</span>
+
+<span class="sd">Run: OPENROUTER_API_KEY=... python3 probe.py</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;lib&quot;</span><span class="p">)))</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openrouter</span><span class="w"> </span><span class="kn">import</span> <span class="n">PANEL</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="n">billed_cost</span><span class="p">,</span> <span class="n">estimated_cost</span>  <span class="c1"># noqa: E402</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="c1"># REP2: the ONLY line changed from the v1 probe.py — the input-data path points at this run&#39;s</span>
+<span class="c1"># frozen rep2 items (lexical_rep2_fulltext.jsonl), not v1&#39;s. All behavioral logic below (the</span>
+<span class="c1"># three framing system prompts, guillemet item rendering, parsing, temperature-0 panel loop) is</span>
+<span class="c1"># byte-identical to v1. This also removes the item-id collision hazard the pre-run critic flagged:</span>
+<span class="c1"># v1 and rep2 both number items lx-{level}-{idx}, so a shared input filename could silently join</span>
+<span class="c1"># v1 predictions to rep2 gold; a rep2-specific input file makes that impossible.</span>
+<span class="n">FULLTEXT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;dwug&quot;</span><span class="p">,</span>
+                                        <span class="s2">&quot;lexical_rep2_fulltext.jsonl&quot;</span><span class="p">))</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">)</span>
+
+<span class="n">DUREL_SYS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;You are a linguistic annotator judging word meaning in context. You will see one target &quot;</span>
+    <span class="s2">&quot;word, marked with «guillemets», in two sentences. Judge how related the MEANING of that &quot;</span>
+    <span class="s2">&quot;target word is between the two uses, on this scale:</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;4 = Identical</span><span class="se">\n</span><span class="s2">3 = Closely Related</span><span class="se">\n</span><span class="s2">2 = Distantly Related</span><span class="se">\n</span><span class="s2">1 = Unrelated</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;Answer with a single digit 1, 2, 3, or 4 and nothing else.&quot;</span>
+<span class="p">)</span>
+<span class="n">CONT_SYS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;You are a linguistic annotator judging word meaning in context. You will see one target &quot;</span>
+    <span class="s2">&quot;word, marked with «guillemets», in two sentences. Rate how related the MEANING of that &quot;</span>
+    <span class="s2">&quot;target word is between the two uses on a 0-100 scale (100 = exactly the same meaning, &quot;</span>
+    <span class="s2">&quot;0 = completely unrelated meanings). Answer with a single integer from 0 to 100 and &quot;</span>
+    <span class="s2">&quot;nothing else.&quot;</span>
+<span class="p">)</span>
+<span class="n">TOPIC_SYS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;You will see two sentences. One word is marked with «guillemets». IGNORING that marked &quot;</span>
+    <span class="s2">&quot;word entirely, rate how similar the overall TOPIC, SITUATION, and content of the two &quot;</span>
+    <span class="s2">&quot;sentences are, on a 0-100 scale (100 = same situation/topic, 0 = completely different &quot;</span>
+    <span class="s2">&quot;topics). Judge everything EXCEPT the marked word. Answer with a single integer from 0 to &quot;</span>
+    <span class="s2">&quot;100 and nothing else.&quot;</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">mark</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">span</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">span</span>
+    <span class="k">return</span> <span class="n">ctx</span><span class="p">[:</span><span class="n">a</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;«&quot;</span> <span class="o">+</span> <span class="n">ctx</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;»&quot;</span> <span class="o">+</span> <span class="n">ctx</span><span class="p">[</span><span class="n">b</span><span class="p">:]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">user</span><span class="p">(</span><span class="n">it</span><span class="p">):</span>
+    <span class="n">lemma</span> <span class="o">=</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">s1</span> <span class="o">=</span> <span class="n">mark</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;ctx1&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;span1&quot;</span><span class="p">])</span>
+    <span class="n">s2</span> <span class="o">=</span> <span class="n">mark</span><span class="p">(</span><span class="n">it</span><span class="p">[</span><span class="s2">&quot;ctx2&quot;</span><span class="p">],</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;span2&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Target word: </span><span class="si">{</span><span class="n">lemma</span><span class="si">}</span><span class="se">\n</span><span class="s2">Sentence 1: </span><span class="si">{</span><span class="n">s1</span><span class="si">}</span><span class="se">\n</span><span class="s2">Sentence 2: </span><span class="si">{</span><span class="n">s2</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_durel</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[1-4]&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="k">if</span> <span class="n">d</span> <span class="k">else</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">parse_int</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">m</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+
+
+<span class="n">FRAMINGS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;durel&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">DUREL_SYS</span><span class="p">,</span> <span class="n">parse_durel</span><span class="p">),</span>
+            <span class="s2">&quot;cont&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">CONT_SYS</span><span class="p">,</span> <span class="n">parse_int</span><span class="p">),</span>
+            <span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">TOPIC_SYS</span><span class="p">,</span> <span class="n">parse_int</span><span class="p">)}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="n">framing</span><span class="p">,</span> <span class="n">items</span><span class="p">,</span> <span class="n">slot</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+    <span class="n">sys_prompt</span><span class="p">,</span> <span class="n">parse</span> <span class="o">=</span> <span class="n">FRAMINGS</span><span class="p">[</span><span class="n">framing</span><span class="p">]</span>
+    <span class="n">recs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">call</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">sys_prompt</span><span class="p">,</span> <span class="n">user</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
+        <span class="n">recs</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">],</span> <span class="s2">&quot;lemma&quot;</span><span class="p">:</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;lemma&quot;</span><span class="p">],</span> <span class="s2">&quot;framing&quot;</span><span class="p">:</span> <span class="n">framing</span><span class="p">,</span>
+                     <span class="s2">&quot;pred&quot;</span><span class="p">:</span> <span class="n">parse</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">)),</span> <span class="s2">&quot;raw&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;content&quot;</span><span class="p">),</span>
+                     <span class="s2">&quot;human_median&quot;</span><span class="p">:</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;human_median&quot;</span><span class="p">],</span> <span class="s2">&quot;human_n&quot;</span><span class="p">:</span> <span class="n">it</span><span class="p">[</span><span class="s2">&quot;human_n&quot;</span><span class="p">],</span>
+                     <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">),</span> <span class="s2">&quot;usage&quot;</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;usage&quot;</span><span class="p">)})</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">recs</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">framing</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">recs</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">FULLTEXT</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span><span class="si">}</span><span class="s2"> items (first id=</span><span class="si">{</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="n">summary</span><span class="p">,</span> <span class="n">total</span> <span class="o">=</span> <span class="p">{},</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">slot</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">PANEL</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== panel.</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2"> ===&quot;</span><span class="p">)</span>
+        <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">allrecs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">framing</span> <span class="ow">in</span> <span class="n">FRAMINGS</span><span class="p">:</span>
+            <span class="n">allrecs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">run</span><span class="p">(</span><span class="n">framing</span><span class="p">,</span> <span class="n">items</span><span class="p">,</span> <span class="n">slot</span><span class="p">,</span> <span class="n">model</span><span class="p">))</span>
+        <span class="n">billed</span><span class="p">,</span> <span class="n">have</span><span class="p">,</span> <span class="n">missing</span> <span class="o">=</span> <span class="n">billed_cost</span><span class="p">(</span><span class="n">allrecs</span><span class="p">)</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">billed</span>
+        <span class="n">summary</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">model</span><span class="p">,</span> <span class="s2">&quot;n_calls&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">allrecs</span><span class="p">),</span>
+                         <span class="s2">&quot;cost_usd_billed&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">billed</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                         <span class="s2">&quot;cost_usd_estimate&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">estimated_cost</span><span class="p">(</span><span class="n">allrecs</span><span class="p">,</span> <span class="n">model</span><span class="p">),</span> <span class="mi">5</span><span class="p">),</span>
+                         <span class="s2">&quot;n_cost_missing&quot;</span><span class="p">:</span> <span class="n">missing</span><span class="p">,</span>
+                         <span class="s2">&quot;elapsed_s&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                         <span class="s2">&quot;na&quot;</span><span class="p">:</span> <span class="p">{</span><span class="n">fr</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;pred&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+                                <span class="k">for</span> <span class="n">fr</span><span class="p">,</span> <span class="n">rs</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">FRAMINGS</span><span class="p">,</span> <span class="n">allrecs</span><span class="p">)}}</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">summary</span><span class="p">[</span><span class="n">slot</span><span class="p">],</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="s2">&quot;run_summary.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">TOTAL billed cost: $</span><span class="si">{</span><span class="n">total</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>PREREG.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-09-adjective-antonymy-replication</a> <span class="sep">/</span> <span class="cur">PREREG.md</span></nav>
+<main>
+<header class="page-head">
+<h1>PREREG.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">13.3 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-09-adjective-antonymy-replication/PREREG.md</code></p>
+</header>
+<div class='md'><h1 id="prereg-adjective-antonymy-replication-probe-h1-decoupling-the-antonymy-shadow-clause">PREREG — ADJECTIVE-antonymy replication probe (H1 decoupling + the antonymy-shadow clause)</h1>
+<p><strong>Frozen s196, 2026-07-09, BEFORE any model call.</strong> Design:
+<a href="../../designs/adjective-antonymy-replication-v1.md.html"><code>design/adjective-antonymy-replication-v1</code></a>.
+Gates RATIFIED s196:
+<a href="../../../wiki/decisions/resolved/adjective-antonymy-replication-design.md.html"><code>decisions/resolved/adjective-antonymy-replication-design</code></a>
+— <strong>Q1-C / Q2-A / Q3 internal-contrast-only.</strong> This file freezes the item set, the control, the corpus,
+the verdict map with numeric thresholds, and the anti-cheat fence. Nothing below may be touched after
+recovery is observed.</p>
+<h2 id="the-question-nothing-wider-jks-home-part-of-speech">The question (nothing wider) — J&amp;K's HOME part of speech</h2>
+<p>On a <strong>fresh</strong> relatum-production probe over four WordNet <strong>adjective</strong> relations (antonymy, synonymy,
+similar-to, also-see), run on the panel against a contrastive-frame G² control on <strong>C4 web text</strong> (the
+s193-frozen corpus; the byte-frozen s186/s193 G² construction, only the cue POS + candidate pool
+changing), re-tested where Justeson &amp; Katz actually <strong>measured</strong> contrastive-frame saturation —
+predicative adjectives:</p>
+<ul>
+<li><strong>PRIMARY — the antonymy-shadow clause (s186 clause 1, in J&amp;K's home POS):</strong> is adjective antonymy's
+  HIT@3 recovery residual over the contrastive-frame control <strong>among the largest</strong> (the s186
+  falsification replicates: the shadow does NOT saturate antonymy) or the <strong>smallest / near-zero</strong> (the
+  measured-denser adjective framing reconstructs antonym recovery — a POS boundary on the s186
+  falsification)?</li>
+<li><strong>CO-PRIMARY at true low power — H1, the decoupling (essay trigger (a)'s adjective route):</strong> does
+  across-relation recovery rank <strong>again decouple</strong> from contrastive-frame cue-strength (ρ_cue ≤ +0.30,
+  ≥2/3 models) — or does cue-strength recover its predictive power on adjectives (ρ_cue &gt; +0.50, ≥2/3),
+  showing the decoupling was noun-specific?</li>
+</ul>
+<p><strong>Internal-contrast only</strong> (Q3): recovery is scored against WordNet, a shared target that cancels in the
+head-to-head; the predictor (contrastive-frame G²) is a corpus statistic; no human baseline enters.
+<strong>H2 is NOT tested</strong> (Q2-A): adjective <code>min_depth()</code> is a degenerate constant 0 (empty <code>hypernyms()</code>) —
+WordNet has no adjective IS-A taxonomy, so H2's frozen proxy cannot transfer. <strong>Adjectives only; never
+pooled with the noun probes.</strong></p>
+<h2 id="frozen-artifacts-built-committed-before-any-model-call">Frozen artifacts (built + committed BEFORE any model call)</h2>
+<ul>
+<li><strong><code>items.json</code></strong> (<code>prep.py</code>, SEED 20260709): FRESH cue adjectives per relation, DISJOINT from the 707
+  committed s186 noun cue lemmas (asserted 0 overlap, 4/4 relations; the exclusion covers noun/adjective
+  homographs like light/right/fine). WordNet POS <code>a</code>+<code>s</code> (heads + satellites). Gold relatum set
+  word-form level; <code>relata()</code> adjective branches are the POS-specific parallel of the s186 <code>relata()</code>.
+  Frequency band Lg10WF ∈ [2.0, 4.5] (byte-identical to s186/s193 — the iconic-outlier cap: the
+  very-high-frequency iconic pairs <em>big/good/hot</em> J&amp;K/Cao flag as G² outliers sit above 4.5 and are
+  excluded). Matched to <strong>antonymy's</strong> fresh per-bin Lg10WF profile (the primary + one of the two
+  sparsest relations). <strong>ACHIEVED per-relation N (freeze finding):</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>relation</th>
+<th>N</th>
+<th>Lg10WF median</th>
+<th>gold size median (mean)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>antonymy</td>
+<td>130</td>
+<td>2.839</td>
+<td>1 (1.13)</td>
+</tr>
+<tr>
+<td>synonymy</td>
+<td>130</td>
+<td>2.839</td>
+<td>3 (3.60)</td>
+</tr>
+<tr>
+<td>similar</td>
+<td>130</td>
+<td>2.839</td>
+<td>2 (3.92)</td>
+</tr>
+<tr>
+<td>also-see</td>
+<td>130</td>
+<td>2.824</td>
+<td>2 (2.42)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>520 verdict-bearing cues</strong> (130 × 4; the item-level SECONDARY arm pools all 520). Antonymy gold size
+  ≈ 1 (mean 1.13) — the small-gold confound that caps Soundness at 1/k; <strong>HIT@3 is the scorer of record
+  for the antonymy-shadow PRIMARY</strong> (C6). Measured fresh eligible pools (s196): antonymy 512, synonymy
+  1475, similar 1993, also-see 482 — all clear the powered N=130.</p>
+<ul>
+<li><strong><code>control.json</code> / <code>counts.json</code></strong> (<code>build_cooc_c4.py</code>): the contrastive-frame G² control on <strong>C4</strong>.
+  <code>signed_g2</code> + <code>compute_control</code> produce <strong>byte-identical output</strong> to the s186 <code>build_cooc.py</code>
+  (verified by assertion — a battery of inputs + a synthetic <code>compute_control</code> case; K, FRAME_WIN,
+  CONNECTIVES identical); only the C4 IO adapter (byte-identical to the s193 adapter) and the adjective
+  cue/candidate-pool sets differ. <strong>Corpus:</strong> C4 (<code>allenai/c4</code> en) shards <strong>00000–00002</strong> streamed and
+  discarded (the s193-frozen shard set). Achieved volume asserted ≥ s186's 21.3M sentences / ~320M
+  tokens before writing. ODC-BY (+ Common-Crawl terms — travels to the result provenance). <strong>NO Hearst
+  arm</strong> (H2 does not transfer; Q2-A). <strong>NB (J&amp;K-relevant):</strong> the conjunction/adjacency frame is exactly
+  J&amp;K's measured adjective conjunction frame ("<em>cold and hot</em>"), so the control is on its home ground
+  here in a way it was not for nouns — a stronger reconstruction test than the noun runs faced.</li>
+</ul>
+<h2 id="frozen-predictor-vectors-pre-recovery-legitimate-to-state-no-model-data-existed-when-computed">Frozen predictor vectors (pre-recovery — legitimate to state; NO model data existed when computed)</h2>
+<p><em>(Computed from <code>control.json</code> after the C4 build, still BEFORE any model call — legitimate to state.)</em></p>
+<table>
+<thead>
+<tr>
+<th>relation</th>
+<th>cue-strength (frame-G² 𝒮)</th>
+<th>cue-strength (sent-G² 𝒮)</th>
+<th>control-frame HIT@3</th>
+<th>cues w/ ≥1 control cand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>antonymy</td>
+<td><strong>0.1214</strong></td>
+<td>0.1487</td>
+<td>0.3643</td>
+<td>129/130</td>
+</tr>
+<tr>
+<td>synonymy</td>
+<td>0.0465</td>
+<td>0.0388</td>
+<td>0.1240</td>
+<td>129/130</td>
+</tr>
+<tr>
+<td>similar</td>
+<td>0.0462</td>
+<td>0.0487</td>
+<td>0.1154</td>
+<td>130/130</td>
+</tr>
+<tr>
+<td>also-see</td>
+<td>0.0615</td>
+<td>0.0487</td>
+<td>0.1846</td>
+<td>130/130</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Antonymy has by far the highest cue-strength</strong> (frame-G² 𝒮 0.1214 vs ~0.046–0.062 for the other
+three; HIT@3 0.364 vs 0.115–0.185) — the contrastive-frame control recovers antonym relata much better
+than any other relation's relata, exactly J&amp;K's measured adjective contrastive-frame saturation. This is
+the sharp version of the antonymy-shadow test: the control is genuinely strong on antonymy here, so a
+large <em>model</em> residual over it is a real clearance, and a small one is a real reconstruction.</p>
+<p><strong>Mean control-frame soundness = 0.0689 (≥ 0.05 floor) → the calibration gate CLEARS</strong> (computed before
+any model call). Unlike s186's noun run (mean 0.029, gate fired → residual arm descriptive-only), the
+adjective contrastive-frame control is strong enough to be a <strong>powered</strong> comparator, so the
+antonymy-shadow <strong>RESIDUAL arm is verdict-bearing here, not descriptive-only</strong> — a material difference
+the POS change produced, because the contrastive frame is J&amp;K's home ground for adjectives. (The
+frame-ablation arm C1 remains mandatory as an independent corpus-free line.)</p>
+<h2 id="panel-elicitation-byte-identical-to-the-s186-neutral-frame-arms">Panel &amp; elicitation (byte-identical to the s186 neutral + frame arms)</h2>
+<p>Panel = <a href="../../../config/models.md.html"><code>config/models.md</code></a> <code>panel.A/.B/.C</code> (never hardcode slugs).
+Temperature 0, zero-shot, single-turn, neutral system prompt; <code>google/*</code> gets
+<code>reasoning={"effort":"minimal"}</code>. NEUTRAL + FRAME prompts + <code>parse_words</code> byte-identical to s186
+<code>probe.py</code>. <strong>Two arms:</strong> neutral (all 4 relations) + <strong>frame (antonymy only — MANDATORY, C1)</strong>.
+<code>ABORT_USD = 1.20</code>. Every call records <code>usage.cost</code>. Expected ~1,950 calls (1,560 neutral + 390 frame).</p>
+<h2 id="metrics">Metrics</h2>
+<ul>
+<li><strong>Recovery 𝒮</strong> (per relation) = mean <strong>Soundness</strong> (Cao precision-over-produced). <strong>HIT@3</strong> =
+  gold-size-insensitive co-primary (a hit is a hit regardless of over-production).</li>
+<li><strong>Cue-strength</strong> (per relation) = mean 𝒮(control top-3, frame variant) — the s186 clause-2 quantity.</li>
+<li><strong>ρ_cue</strong> = across-relation Spearman (n=4, <strong>tie-naive</strong> — the s186/s193 pipeline) of recovery against
+  cue-strength, <strong>per model</strong>.</li>
+<li><strong>Antonymy-shadow residual</strong> = per-cue HIT@3(model, neutral) − HIT@3(control, frame), bootstrap 95% CI
+  (B=2000, seed 20260709).</li>
+</ul>
+<h2 id="verdict-map-frozen-direction-fixed-c2c3c6c8">Verdict map (FROZEN; direction fixed; C2/C3/C6/C8)</h2>
+<p><strong>PRIMARY = the antonymy-shadow clause</strong> (Q1-C). Relation-agnostic, pre-registered RANK+MARGIN rule
+(C6), per model, on the HIT@3 residual over the 4 relations (<code>ANT_NEARZERO = 0.10</code>):
+- <strong>CLEARS</strong> iff antonymy residual ≥ 0.10 <strong>and</strong> ≥ the median of the 4 relation residuals (among the
+  largest, clears the control).
+- <strong>SATURATES</strong> iff antonymy residual &lt; 0.10 <strong>and</strong> is the smallest of the 4 (near-zero and the
+  smallest — the control reconstructs antonym recovery).
+- <strong>MIDDLING</strong> otherwise (pre-named null: neither a clean clear nor a clean saturate).
+- Aggregate: <strong>ANT-CLEARS-CONTROL</strong> iff CLEARS on ≥2/3; <strong>ANT-SATURATES</strong> iff SATURATES on ≥2/3; else
+  <strong>ANT-MIDDLING/MIXED</strong>.</p>
+<p><strong>Calibration gate (C3):</strong> if mean control-frame soundness over all cues <strong>&lt; 0.05</strong>, the antonymy-shadow
+<strong>residual</strong> arm is <strong>DESCRIPTIVE-ONLY</strong> and interpretive weight shifts to the frame-ablation arm (C1,
+corpus-free) + H1. (s186's analog was 0.029 &lt; 0.05 → fired; a refire is the expected case and is why C1
+is mandatory.)</p>
+<p><strong>Frame-ablation arm (C1 + C8, corpus-free — the hedge against the calibration gate):</strong> antonym HIT@3,
+neutral (frame-suppressed) vs frame-present. Pre-registered numeric rule (C8, <code>DELTA_ABLATE = 0.15</code>):
+antonym recovery <strong>SURVIVES-SUPPRESSION</strong> iff HIT@3(neutral) ≥ HIT@3(frame) − 0.15 on ≥2/3 models
+(removing the contrastive frame does not collapse recovery — the model is not relying on the frame to
+produce antonyms; this re-tests s186's "antonym recovery survives frame suppression" in J&amp;K's home POS).
+<strong>FRAME-DEPENDENT</strong> otherwise.</p>
+<p><strong>H1 co-primary (decoupling; C2 exhaustive bands, on primary soundness ρ_cue), reported at true low
+power (≤4 relations):</strong>
+- <strong>DECOUPLING-REPLICATES</strong> iff ρ_cue <strong>≤ +0.30</strong> on <strong>≥2/3</strong> models.
+- <strong>DECOUPLING-BREAKS</strong> iff ρ_cue <strong>&gt; +0.50</strong> on <strong>≥2/3</strong> models (cue-strength recovers its predictive
+  power on adjectives — s186/s193's decoupling was noun-specific; fires essay trigger (a) against).
+- <strong>H1-PARTIAL/AMBIGUOUS</strong> otherwise (pre-named first-class).
+- <strong>C4 asymmetry acknowledged:</strong> on ≤4 points a high-variance ρ near 0 puts more mass under the wide
+  REPLICATES band than the narrow BREAKS band, so the across-relation H1 arm <strong>cannot on its own carry
+  claim promotion</strong> — promotion rests on the noun replications (s186 + s193) <strong>plus</strong> this POS-crossing
+  arm read together, backed by the item-level arm. A REPLICATES here is a <em>third</em> replication across
+  corpus AND POS, weighed with that caveat.</p>
+<p><strong>Item-level SECONDARY (C7):</strong> pooled (all 520 cues) Spearman of each cue's own contrastive-frame
+cue-strength (control-frame soundness) against its own recovery soundness, per model. <strong>DESCRIPTIVE /
+ROBUSTNESS-ONLY — NON-DECISIVE; can never on its own fire or break H1.</strong> A divergence between the
+across-relation and item-level arms is a pre-named first-class reported outcome.</p>
+<p><strong>Pre-named nulls (first-class):</strong> ρ_cue near-zero <strong>and</strong> the antonymy residual middling; or an
+across-vs-item-level divergence (reported, not resolved by fiat). <strong>n = 3 models; orderings, not
+coefficients; adjectives only. No pooling across models or across POS.</strong></p>
+<h2 id="what-each-outcome-feeds">What each outcome feeds</h2>
+<ul>
+<li><strong>ANT-CLEARS + H1 REPLICATES:</strong> the s186 falsification is at its most robust (antonymy is not the
+  shadow-saturated relation even where the contrastive-frame saturation is measured-strongest) <strong>and</strong>
+  the decoupling holds across a POS boundary — a <em>third</em> replication (s186 nouns, s193 fresh nouns+C4,
+  s196 adjectives) across corpus AND POS. This is the evidentiary basis for a <strong>promotion review</strong> of the
+  decoupling to a <code>claim</code> (cross-session, adversarial), read with the ≤4-relation caveat above.</li>
+<li><strong>ANT-SATURATES:</strong> a clean, first-class POS-boundary result — shadow-saturation holds specifically for
+  adjectives, where J&amp;K's premise is measured; the antonymy-outlier essay's reading is re-scoped to the
+  POS where it is real, and the noun falsification is bounded, not overturned.</li>
+<li><strong>H1 BREAKS:</strong> cue-strength predicts recovery on adjectives — trigger (a) fires against; scope the
+  decoupling to nouns or retract; blocks the claim promotion.</li>
+<li><strong>A <a href="../../../wiki/predictions.md.html"><code>predictions.md</code></a> row</strong> is registered at freeze (co-registered with
+  the existing §B decoupling bet, not double-scored); outcome updated the run session.</li>
+</ul>
+<h2 id="anti-cheat-fence-protocol-b-the-eight-conditions">Anti-cheat fence (PROTOCOL §B; the eight conditions)</h2>
+<p>The fresh disjoint adjective cue sets, the band [2.0,4.5] outlier cap, k=3, the 4-relation inventory,
+the ρ_cue bands, the antonymy-residual RANK+MARGIN rule (<code>ANT_NEARZERO</code>), the calibration floor
+(<code>CALIB_FLOOR = 0.05</code>), and the frame-ablation Δ-rule (<code>DELTA_ABLATE = 0.15</code>) are <strong>all frozen here
+BEFORE any model call</strong>. No band, rule, or threshold is touched after recovery is seen. The
+DECOUPLING-BREAKS, ANT-SATURATES, ANT-MIDDLING, and null outcomes are pre-named first-class.</p>
+<p><strong>The eight freeze-time conditions (design + s196 ratification):</strong> C1 frame-ablation MANDATORY · C2
+exhaustive H1 bands (no dead-zone) · C3 numeric calibration floor + descriptive-only fallback protocol ·
+C4 ≤4-point asymmetry stated (across-relation H1 arm cannot alone carry claim promotion) · C5
+similar/synonymy near-duplication contingency (route weight to the item-level arm; tie-naive Spearman
+handles ties) · C6 HIT@3 + relation-agnostic RANK+MARGIN rule on the antonymy-shadow primary · C7
+item-level arm locked descriptive/robustness-only · <strong>C8 (added s196) the frame-ablation arm has its own
+pre-registered numeric decision rule (<code>DELTA_ABLATE</code>)</strong>.</p>
+<p><strong>Construct-validity scope caveat (carried, not a gate):</strong> the contrastive-frame G² construction is
+byte-frozen from a noun-cue instrument; only the cue POS + candidate pool V (adjectives) differ, verified
+by the <code>_assert_frozen_g2()</code> battery. Recovery scoring and the G² control share no human key; Q3 stays
+internal-contrast-only.</p></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

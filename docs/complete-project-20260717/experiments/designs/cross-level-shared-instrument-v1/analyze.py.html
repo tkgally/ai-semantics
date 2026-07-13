@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>analyze.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">designs</a> <span class="sep">/</span> <a href="index.html">cross-level-shared-instrument-v1</a> <span class="sep">/</span> <span class="cur">analyze.py</span></nav>
+<main>
+<header class="page-head">
+<h1>analyze.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">9.8 KB</span> &middot; <code class="fpath">experiments/designs/cross-level-shared-instrument-v1/analyze.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span></pre></div></td><td class="code"><div><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="sd">&quot;&quot;&quot;Cross-level shared-instrument analysis -- the FROZEN cross-level reading rule.</span>
+
+<span class="sd">Built at the same time as the frozen instrument (2026-06-22); reads raw/ which does NOT</span>
+<span class="sd">yet exist (no probe has run). Applies instrument.json -&gt; reading_rule_frozen with no</span>
+<span class="sd">threshold tuned after any output. Encodes, per the resolved gate&#39;s binding conditions:</span>
+
+<span class="sd">  C1 (decline load-bearing): the moment pole is decided by the categorical DECLINE rate</span>
+<span class="sd">     (%UNCLEAR), NOT the 0-100 confidence. Confidence may CORROBORATE but never, on its</span>
+<span class="sd">     own, flips a moment-axis verdict.</span>
+<span class="sd">  C3 (clear-class precondition -&gt; NO-GO per level): a level is interpretable only if its</span>
+<span class="sd">     clear classes show HIGH confidence AND LOW decline. A failing level collapses to</span>
+<span class="sd">     weak / internal-contrast-only and contributes NO moment verdict.</span>
+<span class="sd">  C4 (channel-sensitivity guard): a confidence shift on the ambiguous class WITHOUT a</span>
+<span class="sd">     matching decline shift is reported as a SELF-REPORT effect, not graded-moment evidence.</span>
+<span class="sd">  Q2 verdict map: CONFIRM (&gt;=2 levels show the two-axis dissociation under the one frozen</span>
+<span class="sd">     instrument, same model) / DISSOLVE (first-class null) / WEAK.</span>
+
+<span class="sd">Per level the ambiguous class is: lexical &#39;bridging&#39; | constructional &#39;ambiguous&#39; |</span>
+<span class="sd">relational &#39;ambiguous-midrecord&#39;. The clear classes are the level&#39;s two clear-* classes.</span>
+
+<span class="sd">Bootstrap: cluster by ITEM-SET where sets exist (constructional set / relational set), by</span>
+<span class="sd">LEMMA for lexical; 10000 reps, seed 20260622, 95% percentile CIs on class-rate gaps.</span>
+<span class="sd">Direction-of-effect only; small clustered N -&gt; wide CIs, no coverage claim. NO human</span>
+<span class="sd">comparison: lexical capped to usage-similarity; constructional+relational internal-contrast-only.</span>
+
+<span class="sd">Run (after a probe run): python3 analyze.py   (reads raw/, writes analysis.json, prints table)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">HERE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="n">RAW</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;raw&quot;</span><span class="p">)</span>
+<span class="n">INSTRUMENT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;instrument.json&quot;</span><span class="p">)</span>
+<span class="n">SEED</span> <span class="o">=</span> <span class="mi">20260622</span>
+<span class="n">REPS</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="c1"># per-level (ambiguous_class, [clear_classes], cluster_key)</span>
+<span class="n">LEVELS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;lexical&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;bridging&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;clear-same&quot;</span><span class="p">,</span> <span class="s2">&quot;clear-different&quot;</span><span class="p">],</span> <span class="s2">&quot;lemma&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;constructional&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;ambiguous&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;clear-reading1&quot;</span><span class="p">,</span> <span class="s2">&quot;clear-reading2&quot;</span><span class="p">],</span> <span class="s2">&quot;set&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;relational&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;ambiguous-midrecord&quot;</span><span class="p">,</span>
+                   <span class="p">[</span><span class="s2">&quot;clear-determinate&quot;</span><span class="p">,</span> <span class="s2">&quot;clear-other-determinate&quot;</span><span class="p">],</span> <span class="s2">&quot;set&quot;</span><span class="p">),</span>
+<span class="p">}</span>
+<span class="c1"># C3 precondition thresholds (frozen, ordinal -- a level interpretable only if clear classes</span>
+<span class="c1"># clear these). Decline LOW = clear-class %UNCLEAR small; confidence HIGH = clear-class mean</span>
+<span class="c1"># confidence well above the [40,60] mid-band. These are NECESSARY-condition gates, not pass</span>
+<span class="c1"># bars for the conjecture; documented as preconditions in the gate (C3).</span>
+<span class="n">CLEAR_DECLINE_MAX</span> <span class="o">=</span> <span class="mf">0.20</span>   <span class="c1"># clear classes must decline on &lt; 20% of items</span>
+<span class="n">CLEAR_CONF_MIN</span> <span class="o">=</span> <span class="mi">70</span>        <span class="c1"># clear-class mean confidence must exceed 70 (above mid-band 60)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_level</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">slot</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">RAW</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">level</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">slot</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">cluster_key</span><span class="p">(</span><span class="n">rec</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">level</span> <span class="o">==</span> <span class="s2">&quot;lexical&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;lemma&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">rec</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">rec</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># set id = item_id minus trailing letter</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">rates</span><span class="p">(</span><span class="n">recs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;decline rate (%UNCLEAR) and mean confidence over valid records.&quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">recs</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="n">decl</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;call&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;UNCLEAR&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">confs</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;conf&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span> <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;conf&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">mconf</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">confs</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">confs</span><span class="p">)</span> <span class="k">if</span> <span class="n">confs</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">decl</span><span class="p">,</span> <span class="n">mconf</span><span class="p">,</span> <span class="n">n</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">clustered_bootstrap_gap</span><span class="p">(</span><span class="n">amb</span><span class="p">,</span> <span class="n">clear</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">stat</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;95% CI on (amb_stat - clear_stat) resampling CLUSTERS with replacement.&quot;&quot;&quot;</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+    <span class="n">amb_c</span><span class="p">,</span> <span class="n">clear_c</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">amb</span><span class="p">:</span>
+        <span class="n">amb_c</span><span class="p">[</span><span class="n">cluster_key</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">level</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">clear</span><span class="p">:</span>
+        <span class="n">clear_c</span><span class="p">[</span><span class="n">cluster_key</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">level</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">ak</span><span class="p">,</span> <span class="n">ck</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">amb_c</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">clear_c</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">ak</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">ck</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">gaps</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">REPS</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">ak</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">ak</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">amb_c</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">ck</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">ck</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">clear_c</span><span class="p">[</span><span class="n">k</span><span class="p">]]</span>
+        <span class="n">sa</span><span class="p">,</span> <span class="n">sc</span> <span class="o">=</span> <span class="n">stat</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">stat</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">sa</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">sc</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">gaps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sa</span> <span class="o">-</span> <span class="n">sc</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">gaps</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">gaps</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">lo</span> <span class="o">=</span> <span class="n">gaps</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="mf">0.025</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">gaps</span><span class="p">))]</span>
+    <span class="n">hi</span> <span class="o">=</span> <span class="n">gaps</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="mf">0.975</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">gaps</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">hi</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze_level</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">slot</span><span class="p">):</span>
+    <span class="n">amb_class</span><span class="p">,</span> <span class="n">clear_classes</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">LEVELS</span><span class="p">[</span><span class="n">level</span><span class="p">]</span>
+    <span class="n">recs</span> <span class="o">=</span> <span class="n">load_level</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">recs</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">by_class</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">recs</span><span class="p">:</span>
+        <span class="n">by_class</span><span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">amb</span> <span class="o">=</span> <span class="n">by_class</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">amb_class</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="n">clear</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">cc</span> <span class="ow">in</span> <span class="n">clear_classes</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">by_class</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cc</span><span class="p">,</span> <span class="p">[])]</span>
+    <span class="n">a_decl</span><span class="p">,</span> <span class="n">a_conf</span><span class="p">,</span> <span class="n">a_n</span> <span class="o">=</span> <span class="n">rates</span><span class="p">(</span><span class="n">amb</span><span class="p">)</span>
+    <span class="n">c_decl</span><span class="p">,</span> <span class="n">c_conf</span><span class="p">,</span> <span class="n">c_n</span> <span class="o">=</span> <span class="n">rates</span><span class="p">(</span><span class="n">clear</span><span class="p">)</span>
+
+    <span class="c1"># C3 precondition: clear classes high confidence AND low decline</span>
+    <span class="n">precond_ok</span> <span class="o">=</span> <span class="p">(</span><span class="n">c_decl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">c_decl</span> <span class="o">&lt;=</span> <span class="n">CLEAR_DECLINE_MAX</span>
+                  <span class="ow">and</span> <span class="n">c_conf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">c_conf</span> <span class="o">&gt;=</span> <span class="n">CLEAR_CONF_MIN</span><span class="p">)</span>
+
+    <span class="c1"># decline stat = %UNCLEAR; the LOAD-BEARING moment-axis signal (C1)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decline_stat</span><span class="p">(</span><span class="n">rs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">rates</span><span class="p">(</span><span class="n">rs</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">conf_stat</span><span class="p">(</span><span class="n">rs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">rates</span><span class="p">(</span><span class="n">rs</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">decl_gap_ci</span> <span class="o">=</span> <span class="n">clustered_bootstrap_gap</span><span class="p">(</span><span class="n">amb</span><span class="p">,</span> <span class="n">clear</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">decline_stat</span><span class="p">)</span>
+    <span class="n">conf_gap_ci</span> <span class="o">=</span> <span class="n">clustered_bootstrap_gap</span><span class="p">(</span><span class="n">amb</span><span class="p">,</span> <span class="n">clear</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">conf_stat</span><span class="p">)</span>
+
+    <span class="c1"># moment pole (C1): &quot;discrete/uncommitted on the moment&quot; holds iff decline is NOT</span>
+    <span class="c1"># elevated on the ambiguous class vs clear classes (CI on the decline gap does not</span>
+    <span class="c1"># clear 0 positive). Elevated decline =&gt; graded-on-the-moment.</span>
+    <span class="n">decline_elevated</span> <span class="o">=</span> <span class="n">decl_gap_ci</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">decl_gap_ci</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">conf_lower</span> <span class="o">=</span> <span class="n">conf_gap_ci</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">conf_gap_ci</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span>  <span class="c1"># amb conf &lt; clear conf</span>
+
+    <span class="c1"># C4 guard: confidence dropped but decline did not rise =&gt; SELF-REPORT effect only</span>
+    <span class="n">c4_self_report_only</span> <span class="o">=</span> <span class="n">conf_lower</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">decline_elevated</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">precond_ok</span><span class="p">:</span>
+        <span class="n">moment_verdict</span> <span class="o">=</span> <span class="s2">&quot;NO-GO (C3 clear-class precondition failed) -&gt; weak/internal-contrast-only&quot;</span>
+    <span class="k">elif</span> <span class="n">decline_elevated</span><span class="p">:</span>
+        <span class="n">moment_verdict</span> <span class="o">=</span> <span class="s2">&quot;GRADED-ON-MOMENT (decline elevated on ambiguous class)&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">moment_verdict</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;DISCRETE/UNCOMMITTED-ON-MOMENT (decline not elevated; C1 load-bearing)&quot;</span>
+                          <span class="o">+</span> <span class="p">(</span><span class="s2">&quot; [C4: confidence-only softening noted as self-report, NOT moment evidence]&quot;</span>
+                             <span class="k">if</span> <span class="n">c4_self_report_only</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="n">level</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">slot</span><span class="p">,</span>
+        <span class="s2">&quot;ambiguous&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="n">amb_class</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="n">a_n</span><span class="p">,</span> <span class="s2">&quot;decline_rate&quot;</span><span class="p">:</span> <span class="n">a_decl</span><span class="p">,</span>
+                      <span class="s2">&quot;mean_conf&quot;</span><span class="p">:</span> <span class="n">a_conf</span><span class="p">},</span>
+        <span class="s2">&quot;clear&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;classes&quot;</span><span class="p">:</span> <span class="n">clear_classes</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="n">c_n</span><span class="p">,</span> <span class="s2">&quot;decline_rate&quot;</span><span class="p">:</span> <span class="n">c_decl</span><span class="p">,</span>
+                  <span class="s2">&quot;mean_conf&quot;</span><span class="p">:</span> <span class="n">c_conf</span><span class="p">},</span>
+        <span class="s2">&quot;decline_gap_ci_amb_minus_clear&quot;</span><span class="p">:</span> <span class="n">decl_gap_ci</span><span class="p">,</span>
+        <span class="s2">&quot;conf_gap_ci_amb_minus_clear&quot;</span><span class="p">:</span> <span class="n">conf_gap_ci</span><span class="p">,</span>
+        <span class="s2">&quot;C3_precondition_ok&quot;</span><span class="p">:</span> <span class="n">precond_ok</span><span class="p">,</span>
+        <span class="s2">&quot;C4_confidence_only_self_report&quot;</span><span class="p">:</span> <span class="n">c4_self_report_only</span><span class="p">,</span>
+        <span class="s2">&quot;moment_verdict&quot;</span><span class="p">:</span> <span class="n">moment_verdict</span><span class="p">,</span>
+    <span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">cross_level_verdict</span><span class="p">(</span><span class="n">per_level_per_model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Q2 map. CONFIRM iff the SAME model shows DISCRETE-on-moment at &gt;=2 C3-passing levels</span>
+<span class="sd">    (the aggregate axis is documented separately per level; here the moment-pole dissociation</span>
+<span class="sd">    is the cross-level test). DISSOLVE iff levels go graded/divergent under the shared</span>
+<span class="sd">    instrument. WEAK if too few interpretable levels.&quot;&quot;&quot;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">by_model</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">per_level_per_model</span><span class="p">:</span>
+        <span class="n">by_model</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">]][</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;level&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">r</span>
+    <span class="k">for</span> <span class="n">model</span><span class="p">,</span> <span class="n">levels</span> <span class="ow">in</span> <span class="n">by_model</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">interpretable</span> <span class="o">=</span> <span class="p">{</span><span class="n">lv</span><span class="p">:</span> <span class="n">r</span> <span class="k">for</span> <span class="n">lv</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">levels</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;C3_precondition_ok&quot;</span><span class="p">]}</span>
+        <span class="n">discrete</span> <span class="o">=</span> <span class="p">[</span><span class="n">lv</span> <span class="k">for</span> <span class="n">lv</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">interpretable</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;moment_verdict&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;DISCRETE&quot;</span><span class="p">)]</span>
+        <span class="n">graded</span> <span class="o">=</span> <span class="p">[</span><span class="n">lv</span> <span class="k">for</span> <span class="n">lv</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">interpretable</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                  <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;moment_verdict&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;GRADED&quot;</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">interpretable</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="s2">&quot;WEAK (fewer than 2 levels passed the C3 precondition / are interpretable)&quot;</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">discrete</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">graded</span><span class="p">:</span>
+            <span class="n">scope</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;3-level&quot;</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">discrete</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="k">else</span>
+                     <span class="s2">&quot;2-level instrument-equalized regularity (R2 over levels tested; &quot;</span>
+                     <span class="s2">&quot;if relational excluded, scope per reporting_nuance)&quot;</span><span class="p">)</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;CONFIRM (</span><span class="si">{</span><span class="n">scope</span><span class="si">}</span><span class="s2">): discrete-on-moment at </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">discrete</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">elif</span> <span class="n">graded</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;DISSOLVE (first-class null): moment pole GRADED under the shared &quot;</span>
+                 <span class="sa">f</span><span class="s2">&quot;instrument at </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">graded</span><span class="p">)</span><span class="si">}</span><span class="s2"> -&gt; the equalized instrument kills the &quot;</span>
+                 <span class="sa">f</span><span class="s2">&quot;shape there; deflationary default stands&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="s2">&quot;DISSOLVE/divergent: no coherent &gt;=2-level discrete-on-moment pattern&quot;</span>
+        <span class="n">out</span><span class="p">[</span><span class="n">model</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;interpretable_levels&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">interpretable</span><span class="p">),</span>
+                      <span class="s2">&quot;discrete_on_moment&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">discrete</span><span class="p">),</span>
+                      <span class="s2">&quot;graded_on_moment&quot;</span><span class="p">:</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">graded</span><span class="p">),</span> <span class="s2">&quot;verdict&quot;</span><span class="p">:</span> <span class="n">v</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">RAW</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">RAW</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;raw/ is empty -- no probe has run yet. This is expected at build time. &quot;</span>
+              <span class="s2">&quot;analyze.py is frozen and ready; run probe.py (in a later, cleared session) &quot;</span>
+              <span class="s2">&quot;first.&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">per</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">slots</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">slots</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">level</span> <span class="ow">in</span> <span class="n">LEVELS</span><span class="p">:</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">analyze_level</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+                <span class="n">per</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">verdicts</span> <span class="o">=</span> <span class="n">cross_level_verdict</span><span class="p">(</span><span class="n">per</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== CROSS-LEVEL VERDICTS (Q2) ===&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">verdicts</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">({</span><span class="s2">&quot;per_level&quot;</span><span class="p">:</span> <span class="n">per</span><span class="p">,</span> <span class="s2">&quot;cross_level&quot;</span><span class="p">:</span> <span class="n">verdicts</span><span class="p">,</span>
+               <span class="s2">&quot;scope_cap&quot;</span><span class="p">:</span> <span class="s2">&quot;NO human comparison; lexical capped to usage-similarity; &quot;</span>
+                            <span class="s2">&quot;constructional+relational internal-contrast-only.&quot;</span><span class="p">},</span>
+              <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HERE</span><span class="p">,</span> <span class="s2">&quot;analysis.json&quot;</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

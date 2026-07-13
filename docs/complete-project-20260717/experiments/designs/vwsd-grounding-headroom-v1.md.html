@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>vwsd-grounding-headroom-v1.md — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../index.html">home</a> <span class="sep">/</span> <a href="../index.html">experiments</a> <span class="sep">/</span> <a href="index.html">designs</a> <span class="sep">/</span> <span class="cur">vwsd-grounding-headroom-v1.md</span></nav>
+<main>
+<header class="page-head">
+<h1>vwsd-grounding-headroom-v1.md</h1>
+<p class="subtitle"><span class="ftype">Markdown</span> &middot; <span class="fsize">12.1 KB</span> &middot; <code class="fpath">experiments/designs/vwsd-grounding-headroom-v1.md</code></p>
+</header>
+<div class='md'><h1 id="design-vwsd-grounding-headroom-probe-v1-frozen-prereg">Design — VWSD grounding-headroom probe v1 (frozen prereg)</h1>
+<p><strong>Status:</strong> frozen design (2026-06-24, session 100). Implements the ratified DV decision
+<a href="../../wiki/decisions/resolved/vwsd-grounding-headroom-dv.md.html"><code>decisions/resolved/vwsd-grounding-headroom-dv</code></a>
+(ADOPT MODIFIED: <strong>Option A</strong> / the <strong>interaction as the sole test of record</strong> / the <strong>Q3 narrow
+human-anchored posture</strong>, with <strong>five binding tightening modifications</strong>). Anchored to
+<a href="../../wiki/base/resources/vwsd-semeval-2023.md.html"><code>resource/vwsd-semeval-2023</code></a>. Operationalizes
+prediction 1 of <a href="../../wiki/findings/conjectures/distributional-saturation-grounding-headroom.md.html"><code>conjecture/distributional-saturation-grounding-headroom</code></a>
+on VWSD — its <strong>gating <em>shape</em></strong> via a selection-accuracy interaction, <strong>explicitly NOT
+prediction-1-as-written</strong> (the graded-Δ × separability interaction), which stays open for a future
+graded-image resource. Run dir: <code>experiments/runs/2026-06-24-vwsd-grounding-headroom-v1/</code>.</p>
+<blockquote>
+<p><strong>This design is frozen BEFORE any image condition runs.</strong> The text-only separability covariate
+is computed, written to a checksummed file, and frozen before the image arm (binding mod 2). The
+design is cleared to author by the resolved decision; the <strong>result is gated on a fresh independent
+pre-run critic GO</strong> against this frozen design and the observed covariate distribution — a NO-GO
+defers the image run and relaxes no condition.</p>
+</blockquote>
+<h2 id="the-question-as-vwsd-can-pose-it">The question (as VWSD can pose it)</h2>
+<p>Prediction 1 of the grounding-headroom conjecture says: perceptual input moves an LLM's lexical-sense
+behavior <strong>only in the residual the text distribution under-determines</strong>, and that residual is narrow
+for concrete sense. VWSD instantiates the <strong>under-determined regime by construction</strong> (minimal 1–2
+word context; trigger words chosen "so as not to give away the meaning of the image in isolation"),
+but supplies only a <strong>binary</strong> human gold (which of 10 images is correct), not the graded relatedness
+gradient the conjecture's instrument uses. So this probe tests a <strong>re-shaped operationalization</strong>:</p>
+<blockquote>
+<p><strong>Does adding the candidate images improve correct-sense selection specifically where text alone
+under-determines the sense — read as an interaction, not a main effect?</strong></p>
+</blockquote>
+<p>The load-bearing object is the <strong>interaction</strong> between per-item text-only separability and image-induced
+selection improvement, predicted <strong>negative</strong> (less text-separable items gain more from the image).</p>
+<h2 id="anchor-and-scope-q3-narrow-posture-what-this-does-and-does-not-establish">Anchor and scope (Q3 narrow posture — what this does and does NOT establish)</h2>
+<ul>
+<li><strong>Anchor:</strong> the human-curated VWSD <strong>English gold test</strong> (463 items; gold = the human-selected
+  correct image after human-authored trigger words + human distractor curation). Sense locus
+  <code>grounded.perceptual</code> × <code>referential.sense</code> × <code>human-comparison</code>. This run uses a <strong>frozen
+  50-item seeded subset</strong> (seed 20260624, <code>frozen/run_items.json</code>, sha256 in the run record) of the
+  463 — a budget-bounded first probe, <strong>not</strong> the full test set; the small N is a stated limit
+  (mandatory power caveat below).</li>
+<li><strong>Establishes (if positive + distraction-controlled):</strong> that model sense <em>selection</em> is sensitive
+  to perceptual input in the under-determined residual, gated by text separability — the conjecture's
+  <strong>gating shape</strong>.</li>
+<li><strong>Does NOT establish:</strong> (i) <strong>not</strong> prediction-1-as-written (no graded human relatedness gradient);
+  (ii) <strong>not</strong> reference — picking the gold image is behavior <em>sensitive to</em> perceptual input, <strong>not</strong>
+  a perceptual symbol system or reference-fixing (<code>referential.externalist</code> untouched); (iii) <strong>not</strong> a
+  graded human judgment (VWSD gold is binary).</li>
+<li><strong>Caveats carried to the result</strong> (all from the resource): binary gold; limited annotator
+  independence (English annotators "includ[ed] the authors of this paper"; BabelNet-automatic seed; no
+  inter-annotator agreement reported); image redistribution unconfirmed (images out of git,
+  fetch-at-runtime only); anchored only to the gold test split (training is silver).</li>
+</ul>
+<h2 id="data-binding-condition-a-fetch-checksum-images-out-of-git">Data (binding condition a — fetch + checksum, images out of git)</h2>
+<p>Fetched this session from the official task site Drive links (<code>raganato.github.io/vwsd</code>), checksummed:</p>
+<ul>
+<li><strong>Test queries + gold</strong> (EN/FA/IT), zip sha256 <code>e0520129…aef0</code>; <code>en.test.data.v1.1.txt</code> sha256
+  <code>0799d8aa…cc59b</code> (463 lines), <code>en.test.gold.v1.1.txt</code> sha256 <code>1e183ecf…5db8</code> (463 lines). These
+  (the annotation overlay) are <strong>committed</strong> under <code>frozen/</code> (usable under CC-BY-NC for non-commercial
+  research with attribution).</li>
+<li><strong>Resized EN test images</strong> (572 MB zip), sha256 <code>b9f2f1e1…af8f</code>; 4090 unique EN candidate images
+  extracted. <strong>Images are OUT of git</strong> (<code>.gitignore</code>); redistribution is unconfirmed
+  (resource License &amp; redistribution). They are read at runtime from <code>$VWSD_IMAGES</code> and never
+  re-hosted. Anchored only to the gold <strong>test</strong> split.</li>
+</ul>
+<h2 id="three-behavioural-arms-binding-condition-b-prereg-the-dv-before-any-model-call">Three behavioural arms (binding condition b — prereg the DV before any model call)</h2>
+<p>All selection prompts present the target word, the phrase, and the ten candidates <strong>in the dataset's
+own order</strong> (gold position is ≈ uniform across slots 1–10 in the frozen set — no positional-prior
+shortcut). Panel: all three current models (claude-sonnet-4.6 / gpt-5.4-mini / gemini-3.5-flash);
+the conjecture's stratification is <strong>per-model</strong> (headroom is a property of <em>text × model</em>), so the
+interaction is read per-model and pooled. Gemini runs <code>reasoning:{effort:"minimal"}</code>; images low
+detail (cost driver).</p>
+<ol>
+<li>
+<p><strong>CAPTION (one-time, frozen pre-image artifact).</strong> Each unique candidate image is captioned once
+   by gemini into a short neutral noun phrase (the text proxy the ratified DV — "image identities
+   masked to text labels" — requires). Captions are <strong>frozen + checksummed</strong> (<code>frozen/captions.json</code>)
+   and committed. They are a <em>fixed text rendering of the candidates</em>, authored before any selection
+   arm. <strong>Honest note on what the text-only baseline therefore measures:</strong> text-only separability here
+   is "can the target word + phrase pick the gold candidate from its <strong>caption</strong> alone," i.e. how far
+   the linguistic context determines the sense <em>given a text description of each candidate</em>. This is
+   the closest VWSD-native realization of the conjecture's "text-only baseline separability"; it is
+   <strong>not</strong> a pure no-candidate measure, and the result states this.</p>
+</li>
+<li>
+<p><strong>TEXT (text-only caption-based selection) — the SEPARABILITY covariate AND the improvement
+   baseline.</strong> Target word + phrase + the ten <strong>captions</strong> (no images), pick 1–10. Per item × model,
+   correct/incorrect. <strong>This is computed and FROZEN to <code>raw/text.json</code> (checksummed) BEFORE the IMAGE
+   arm runs</strong> (binding mod 2 — no retuning). Per-item separability <code>sep_i</code> = fraction of the 3 models
+   correct in TEXT (0, 1/3, 2/3, 1).</p>
+</li>
+<li>
+<p><strong>IMAGE (image-conditioned selection) — the main arm.</strong> Identical prompt, candidates shown as the
+   ten real images (low detail), pick 1–10. Per item × model, correct/incorrect.</p>
+</li>
+<li>
+<p><strong>DISTRACT (word-ablated control) — reported FIRST (binding mod 3).</strong> The ten images, <strong>no target
+   word or phrase</strong>: "pick the most prototypical / canonical / everyday image." If gold is selected
+   <strong>&gt;&gt; chance (0.10)</strong> with no word — and at a rate near the IMAGE arm — then image selection is
+   driven by image-intrinsic salience, not by the word→sense→image mapping, and any IMAGE-arm lift is
+   the <strong>distraction null, not headroom</strong>. This is the VWSD analogue of the prior image probe's
+   same-referent / surface-dissimilarity control (the conjecture's distraction caveat). The
+   distraction result is reported and credited <strong>before</strong> the interaction.</p>
+</li>
+</ol>
+<h2 id="dependent-variable-and-analysis-test-of-record-the-interaction">Dependent variable and analysis (test of record = the interaction)</h2>
+<p>Let <code>t_im</code> = TEXT correctness and <code>g_im</code> = IMAGE correctness for item <em>i</em>, model <em>m</em> (0/1).</p>
+<ul>
+<li><strong>Primary test of record — continuous, per-item, leakage-aware.</strong> Per-item image-induced
+  improvement <code>Δ_i = mean_m(g_im) − mean_m(t_im)</code>; per-item separability <code>sep_i = mean_m(t_im)</code>.
+  Regress <code>Δ_i</code> on <code>sep_i</code> across the N items (Spearman + OLS slope, per-model and pooled). The
+  conjecture predicts a <strong>negative</strong> slope: where text under-determines (low <code>sep_i</code>), the image helps
+  more. <strong>Reported with the mechanical-ceiling caveat made explicit</strong> (see below) — the primary read
+  is therefore the <strong>image-rescue rate among text-failed items</strong>: among items where TEXT is wrong
+  (<code>t_im=0</code>), the rate at which IMAGE is right (<code>g_im=1</code>), contrasted with IMAGE accuracy where TEXT
+  already succeeded. Gating predicts image rescue concentrated in the text-failed (under-determined)
+  cells.</li>
+<li><strong>Mechanical-ceiling caveat (stated, not hidden).</strong> Because per-item accuracy is binary, an item
+  where TEXT is already correct has <code>Δ ≤ 0</code> by construction (no room to improve), so a raw negative
+  <code>Δ</code>–<code>sep</code> correlation is partly mechanical. The non-trivial content is the <strong>image-rescue rate in
+  the text-failed cells</strong> and whether it <strong>survives the DISTRACT control</strong> — that is what distinguishes
+  genuine grounding-in-the-residual from a ceiling artifact. The OLS/Spearman slope is reported as a
+  descriptive companion, not the headline.</li>
+<li><strong>Strata view (binding mod 1 — floor + non-degeneracy).</strong> Items are also binned: <strong>saturated</strong> =
+  <code>sep_i = 1</code> (all 3 models text-correct); <strong>under-determined</strong> = <code>sep_i ≤ 1/3</code>. The result reports the
+  full <code>sep_i</code> distribution and both bin counts. The pre-run critic certifies the strata are <strong>not
+  degenerate</strong> (each bin holds a stated minimum; floor = <strong>≥ 8 items per reported bin</strong> for the binned
+  view to be credited; if a bin falls below floor, the binned interaction is <strong>not</strong> reported and only
+  the continuous + rescue-rate reads + the distraction null stand, with the power caveat foregrounded).</li>
+<li><strong>Distraction null first (binding mod 3).</strong> DISTRACT gold-selection rate vs chance 0.10, per model
+  and pooled, reported before the interaction is credited.</li>
+<li><strong>Power / coarseness caveat (binding mod 4 — MANDATORY in the result).</strong> N=50 items, binary per-item
+  accuracy, a coarse read of a 463-item anchor: a flat (null) interaction is <strong>"no detectable gating
+  OR underpowered,"</strong> never proven absence of headroom. A positive that does not survive DISTRACT is
+  the distraction null.</li>
+</ul>
+<h2 id="pre-run-critic-gate-binding-condition-d">Pre-run critic gate (binding condition d)</h2>
+<p>Before the IMAGE/DISTRACT spend, a <strong>fresh independent critic</strong> certifies, against this frozen design
+and the <strong>observed</strong> <code>sep_i</code> distribution from <code>raw/text.json</code>: (1) the DV honestly tests the gating
+shape, not prediction-1-as-written by sleight; (2) the text-only baseline is genuinely pre-frozen
+(captions + text arm checksummed before image); (3) no surface-salience-only reader beats the
+interaction (the DISTRACT control is adequate); (4) the strata are non-degenerate per the floor, or
+the analysis correctly falls back to the continuous + rescue-rate reads. <strong>GO/NO-GO. A NO-GO defers
+the image run and relaxes nothing.</strong></p>
+<h2 id="budget-binding-condition-e-pre-flight-charter-8-configbudgetmd">Budget (binding condition e — pre-flight; charter §8 / config/budget.md)</h2>
+<p>Measured per-call (this session's preflights): caption $0.00179/image (497 images ≈ $0.89); IMAGE
+$0.0107/(item,model) [claude $0.0128 / gpt $0.0028 / gemini $0.0164]; DISTRACT ≈ same; TEXT (text-only,
+short) ≪ that. Pre-flight estimate for N=50 × 3 models: captions ≈ $0.89 + text ≈ $0.15 + image ≈ $1.6
++ distract ≈ $1.6 ≈ <strong>$4.2 day total</strong> incl. preflights, each arm under the $2.50 single-run prudence
+flag, under the $5/day cap. If any arm's running tally would take the <strong>UTC-day total over $5</strong>, it is
+split or deferred (the resolved decision's anti-cheat: a budget defer never relaxes a condition).</p>
+<h2 id="what-would-confirm-falsify-inherited-from-the-conjecture-re-shaped-to-selection">What would confirm / falsify (inherited from the conjecture, re-shaped to selection)</h2>
+<ul>
+<li><strong>Confirms the gating shape:</strong> image rescue concentrated in text-failed (under-determined) cells,
+  little image lift where text already separates, <strong>surviving</strong> the DISTRACT control. (Still <strong>not</strong>
+  prediction-1-as-written.)</li>
+<li><strong>Falsifies / fails to support:</strong> (a) image helps uniformly, including where text already succeeds —
+  breaks "only in the residual"; (b) image fails to rescue even where text demonstrably under-determines
+  (distraction-controlled) — breaks "headroom is sufficient" (the inert-modality possibility); (c)
+  DISTRACT gold-selection ≈ IMAGE rate — the apparent effect is salience, the distraction null.</li>
+</ul></div>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>VOTE-s207.json — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-07-11-blimp-frequency-control-design</a> <span class="sep">/</span> <span class="cur">VOTE-s207.json</span></nav>
+<main>
+<header class="page-head">
+<h1>VOTE-s207.json</h1>
+<p class="subtitle"><span class="ftype">JSON</span> &middot; <span class="fsize">4.0 KB</span> &middot; <code class="fpath">experiments/runs/2026-07-11-blimp-frequency-control-design/VOTE-s207.json</code></p>
+</header>
+<table class='kv top'><tr><th>model</th><td><span class='j-str'>openai/gpt-5.4-mini</span></td></tr><tr><th>billed_cost</th><td><span class='j-num'>0.0042</span></td></tr><tr><th>error</th><td><span class='j-null'>null</span></td></tr><tr><th>content</th><td><div class='j-str multiline'>1. **Overall vote: GO-WITH-CONDITIONS**
+
+This is a defensible control plan **only if** you treat the frequency control as a **sensitivity analysis / promotion gate**, not as dispositive proof. The main weakness is residual confounding from the proxy’s mismatch to actual training exposure.
+
+2. **Per-gate votes**
+
+- **Q1: C** — Best design. Construction-frequency control and swap arm target different failure modes; together they are complementary, not redundant.  
+- **Q2: C** — If the goal is a training-frequency confound control, use the most literal construction-level proxy available. Bigram/trigram familiarity is too lexical; detectability margin is too entangled with the hypothesis.  
+- **Q3: A** — Correct. Keep this as a separate promotion gate, not a claim-writing step. It preserves the distinction between a controlled result and a promotable claim.
+
+3. **Single biggest methodological risk + one freeze-time condition**
+
+- **Biggest risk:** the frequency proxy may be too weakly aligned with actual pretraining exposure, so a “survives control” result could still be confounded, and a “breaks” result could be an over-control artifact if the proxy absorbs genuine structure.
+- **Add this freeze-time condition:** pre-register a **proxy-validity audit** before looking at model outcomes: show the chosen F(p) has a nontrivial, directionally sensible relation to an external frequency benchmark or a held-out human familiarity proxy, and fix one primary F definition plus one pre-specified sensitivity variant. No post hoc proxy tuning.
+
+4. **Is the covariate alone strong enough, or is the swap arm needed?**
+
+The covariate **alone is not strong enough** to license a human-comparison promotion. Reusing the already-known accuracies and partialling a corpus-frequency proxy can tell you whether the R1 correlation survives one specific adjustment, but it cannot separate **construction-frequency confounding** from **residual lexical familiarity, detectability, or proxy misspecification**. The swap arm is needed to test a different causal channel: exact-string memorization / item-specific lexical support. If you want a credible promotion review, **both** are preferable: the covariate for construction-frequency control and the swap arm for a memorization sanity check. Without the swap arm, a surviving partial rho is still too vulnerable to the “proxy not target” objection.
+
+5. **Any place it looks aimed at a desired result?**
+
+**Yes, a few spots.**
+
+- The **SURVIVES/BREAKS bands** are fine in principle, but the explicit mention of a “promotion-review candidate” plus a note that the claim is written later is good separation; still, any thresholding scheme can be tuned to favor a preferred narrative.  
+- The phrase **“fresh freeze critic checks the recipe was not tuned to preserve/kill rho”** is appropriate, but it also signals real concern that the proxy choice may be outcome-shaped.  
+- The biggest “aimed” risk is **Q2 B**: calling the detectability margin a “conservative sensitivity arm” while acknowledging it may strip genuine shared structure is honest, but it is also the sort of control that can be selected because it tends to break the result. I would keep it only as pre-named sensitivity, never as a decision gate.</div></td></tr><tr><th>n</th><td><span class='j-num'>1</span></td></tr><tr><th>n_missing</th><td><span class='j-num'>0</span></td></tr></table><details class='section'><summary><span class='sec-k'>usage</span> <span class='muted'>(8 fields)</span></summary><div class='sec-body'><table class='kv'><tr><th>prompt_tokens</th><td><span class='j-num'>1424</span></td></tr><tr><th>completion_tokens</th><td><span class='j-num'>696</span></td></tr><tr><th>total_tokens</th><td><span class='j-num'>2120</span></td></tr><tr><th>cost</th><td><span class='j-num'>0.0042</span></td></tr><tr><th>is_byok</th><td><span class='j-bool'>false</span></td></tr><tr><th>prompt_tokens_details</th><td><table class='kv'><tr><th>cached_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>cache_write_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>audio_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>video_tokens</th><td><span class='j-num'>0</span></td></tr></table></td></tr><tr><th>cost_details</th><td><table class='kv'><tr><th>upstream_inference_cost</th><td><span class='j-num'>0.0042</span></td></tr><tr><th>upstream_inference_prompt_cost</th><td><span class='j-num'>0.001068</span></td></tr><tr><th>upstream_inference_completions_cost</th><td><span class='j-num'>0.003132</span></td></tr></table></td></tr><tr><th>completion_tokens_details</th><td><table class='kv'><tr><th>reasoning_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>image_tokens</th><td><span class='j-num'>0</span></td></tr><tr><th>audio_tokens</th><td><span class='j-num'>0</span></td></tr></table></td></tr></table></div></details>
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>

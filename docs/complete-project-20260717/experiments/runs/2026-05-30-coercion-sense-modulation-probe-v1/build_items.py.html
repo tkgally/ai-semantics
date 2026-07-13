@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noai, noimageai">
+<meta name="googlebot" content="noindex, nofollow, noimageindex, nosnippet">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="ai-content-declaration" content="ai-generated">
+<title>build_items.py — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+<div class="proj-banner"><strong>Meaning in the Age of AI</strong> — a fully autonomous research project on lexical and grammatical meaning in humans and language models, <em>designed, run, and written entirely by Claude</em> (Anthropic’s AI), with a human monitor. <span class="bn-note">This is a frozen, complete snapshot of the project for reading and exploration. <a class="bn-home" href="../../../index.html">⌂ Project home</a></span></div>
+<nav class="crumbs"><a href="../../../index.html">home</a> <span class="sep">/</span> <a href="../../index.html">experiments</a> <span class="sep">/</span> <a href="../index.html">runs</a> <span class="sep">/</span> <a href="index.html">2026-05-30-coercion-sense-modulation-probe-v1</a> <span class="sep">/</span> <span class="cur">build_items.py</span></nav>
+<main>
+<header class="page-head">
+<h1>build_items.py</h1>
+<p class="subtitle"><span class="ftype">Python</span> &middot; <span class="fsize">4.9 KB</span> &middot; <code class="fpath">experiments/runs/2026-05-30-coercion-sense-modulation-probe-v1/build_items.py</code></p>
+</header>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span></pre></div></td><td class="code"><div><pre><span></span><span class="sd">&quot;&quot;&quot;Build + freeze the coercion-as-sense-modulation bridge stimuli (v1, 2026-05-30).</span>
+
+<span class="sd">Operationalizes design/coercion-as-sense-modulation-v1 (the lexicon-grammar BRIDGE): reuses</span>
+<span class="sd">the lexical v1 DURel/continuous relatedness instrument on CONSTRUCTIONAL coercion stimuli.</span>
+<span class="sd">The target is the VERB, marked with «guillemets» in both sentences. Each item = one verb,</span>
+<span class="sd">sentence1 = a bare/neutral use, sentence2 = the arm&#39;s frame:</span>
+<span class="sd">  coerced-cm   : the caused-motion coercion (verb + object + path) -&gt; predicted LOWER relatedness</span>
+<span class="sd">  coerced-way  : the way-construction coercion (verb + POSS way + path) -&gt; predicted LOWER</span>
+<span class="sd">  control-elab : a length-matched NON-coercing elaboration of the same verb -&gt; predicted HIGH</span>
+<span class="sd">  polysemy-anchor: a genuine lexical sense shift of a polysemous/homonymous verb (calibrates</span>
+<span class="sd">                   the low end; the instrument must read these LOW or a null is uninterpretable)</span>
+
+<span class="sd">The KEY contrast is within-verb: control-elab (high) vs coerced (?) — a positive gap means the</span>
+<span class="sd">model registers constructional coercion as lexical sense modulation. Internal-contrast-only</span>
+<span class="sd">(anchor pending). No human gold. Own constructed sentences (committable; no corpus/licence).</span>
+
+<span class="sd">Run: python3 build_items.py    (no API; writes the frozen CSV)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># verb, bare-use, caused-motion coercion, non-coercing elaboration  (verb marked with «»)</span>
+<span class="n">CM</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;sneeze&quot;</span><span class="p">,</span> <span class="s2">&quot;She «sneezed».&quot;</span><span class="p">,</span> <span class="s2">&quot;She «sneezed» the napkin off the table.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She «sneezed» twice during the lecture.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;cough&quot;</span><span class="p">,</span> <span class="s2">&quot;He «coughed».&quot;</span><span class="p">,</span> <span class="s2">&quot;He «coughed» the crumb across the table.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He «coughed» quietly into his sleeve.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;blow&quot;</span><span class="p">,</span> <span class="s2">&quot;She «blew» softly.&quot;</span><span class="p">,</span> <span class="s2">&quot;She «blew» the dust off the shelf.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She «blew» gently on her hot tea.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;puff&quot;</span><span class="p">,</span> <span class="s2">&quot;He «puffed».&quot;</span><span class="p">,</span> <span class="s2">&quot;He «puffed» the feather off his palm.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He «puffed» slowly on his pipe.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;huff&quot;</span><span class="p">,</span> <span class="s2">&quot;She «huffed».&quot;</span><span class="p">,</span> <span class="s2">&quot;She «huffed» the wrapper off the tray.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She «huffed» in obvious frustration.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;fan&quot;</span><span class="p">,</span> <span class="s2">&quot;He «fanned» himself.&quot;</span><span class="p">,</span> <span class="s2">&quot;He «fanned» the smoke out of the room.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He «fanned» himself in the summer heat.&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+<span class="c1"># verb, bare-use, way-construction coercion, non-coercing elaboration</span>
+<span class="n">WAY</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;whistle&quot;</span><span class="p">,</span> <span class="s2">&quot;She «whistled».&quot;</span><span class="p">,</span> <span class="s2">&quot;She «whistled» her way down the hall.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She «whistled» a cheerful little tune.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;sing&quot;</span><span class="p">,</span> <span class="s2">&quot;He «sang».&quot;</span><span class="p">,</span> <span class="s2">&quot;He «sang» his way through the crowd.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He «sang» a quiet evening lullaby.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;dance&quot;</span><span class="p">,</span> <span class="s2">&quot;She «danced».&quot;</span><span class="p">,</span> <span class="s2">&quot;She «danced» her way across the stage.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She «danced» gracefully all evening long.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;joke&quot;</span><span class="p">,</span> <span class="s2">&quot;He «joked».&quot;</span><span class="p">,</span> <span class="s2">&quot;He «joked» his way out of trouble.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He «joked» with his old friends.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;smile&quot;</span><span class="p">,</span> <span class="s2">&quot;She «smiled».&quot;</span><span class="p">,</span> <span class="s2">&quot;She «smiled» her way into the job.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;She «smiled» warmly at the arriving guests.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;bluff&quot;</span><span class="p">,</span> <span class="s2">&quot;He «bluffed».&quot;</span><span class="p">,</span> <span class="s2">&quot;He «bluffed» his way past the guard.&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;He «bluffed» during the late card game.&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+<span class="c1"># verb, sense-A use, sense-B use  (a genuine lexical sense shift; calibrates the LOW end)</span>
+<span class="n">POLY</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;She «ran» a marathon.&quot;</span><span class="p">,</span> <span class="s2">&quot;She «ran» a successful company.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;draw&quot;</span><span class="p">,</span> <span class="s2">&quot;He «drew» a quick picture.&quot;</span><span class="p">,</span> <span class="s2">&quot;He «drew» his sword from its sheath.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;charge&quot;</span><span class="p">,</span> <span class="s2">&quot;The cavalry «charged» the hill.&quot;</span><span class="p">,</span> <span class="s2">&quot;The shop «charged» a small fee.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;break&quot;</span><span class="p">,</span> <span class="s2">&quot;He «broke» the window.&quot;</span><span class="p">,</span> <span class="s2">&quot;He «broke» for lunch at noon.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;She «set» the dinner table.&quot;</span><span class="p">,</span> <span class="s2">&quot;The sun «set» behind the hills.&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;bank&quot;</span><span class="p">,</span> <span class="s2">&quot;The plane «banked» sharply left.&quot;</span><span class="p">,</span> <span class="s2">&quot;She «banked» the cheque at noon.&quot;</span><span class="p">),</span>  <span class="c1"># verb homonymy floor (tilt vs deposit)</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">rows</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">vset</span><span class="p">,</span> <span class="n">kind</span> <span class="ow">in</span> <span class="p">((</span><span class="n">CM</span><span class="p">,</span> <span class="s2">&quot;coerced-cm&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">WAY</span><span class="p">,</span> <span class="s2">&quot;coerced-way&quot;</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">verb</span><span class="p">,</span> <span class="n">bare</span><span class="p">,</span> <span class="n">coerced</span><span class="p">,</span> <span class="n">elab</span> <span class="ow">in</span> <span class="n">vset</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">kind</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">verb</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">verb</span><span class="o">=</span><span class="n">verb</span><span class="p">,</span> <span class="n">arm</span><span class="o">=</span><span class="n">kind</span><span class="p">,</span>
+                            <span class="n">predicted</span><span class="o">=</span><span class="s2">&quot;low&quot;</span><span class="p">,</span> <span class="n">marked1</span><span class="o">=</span><span class="n">bare</span><span class="p">,</span> <span class="n">marked2</span><span class="o">=</span><span class="n">coerced</span><span class="p">))</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;control-</span><span class="si">{</span><span class="n">verb</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">verb</span><span class="o">=</span><span class="n">verb</span><span class="p">,</span> <span class="n">arm</span><span class="o">=</span><span class="s2">&quot;control-elab&quot;</span><span class="p">,</span>
+                            <span class="n">predicted</span><span class="o">=</span><span class="s2">&quot;high&quot;</span><span class="p">,</span> <span class="n">marked1</span><span class="o">=</span><span class="n">bare</span><span class="p">,</span> <span class="n">marked2</span><span class="o">=</span><span class="n">elab</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">verb</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">POLY</span><span class="p">:</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">item_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;poly-</span><span class="si">{</span><span class="n">verb</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">verb</span><span class="o">=</span><span class="n">verb</span><span class="p">,</span> <span class="n">arm</span><span class="o">=</span><span class="s2">&quot;polysemy-anchor&quot;</span><span class="p">,</span>
+                        <span class="n">predicted</span><span class="o">=</span><span class="s2">&quot;low&quot;</span><span class="p">,</span> <span class="n">marked1</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">marked2</span><span class="o">=</span><span class="n">b</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;items.csv&quot;</span><span class="p">)</span>
+    <span class="n">rs</span> <span class="o">=</span> <span class="n">rows</span><span class="p">()</span>
+    <span class="c1"># sanity: the verb is marked in both sentences of every item</span>
+    <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rs</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="s2">&quot;«&quot;</span> <span class="ow">in</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;marked1&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="s2">&quot;«&quot;</span> <span class="ow">in</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;marked2&quot;</span><span class="p">],</span> <span class="n">r</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">,</span> <span class="s2">&quot;verb&quot;</span><span class="p">,</span> <span class="s2">&quot;arm&quot;</span><span class="p">,</span> <span class="s2">&quot;predicted&quot;</span><span class="p">,</span> <span class="s2">&quot;marked1&quot;</span><span class="p">,</span> <span class="s2">&quot;marked2&quot;</span><span class="p">]</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()[:</span><span class="mi">16</span><span class="p">]</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;wrote </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="p">)</span><span class="si">}</span><span class="s2"> items -&gt; </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  arms: </span><span class="si">{</span><span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">&#39;arm&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">rs</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  sha256[:16] = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">  (freeze hash)&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div></td></tr></table></div>
+
+</main>
+<footer class="foot">
+<p>Snapshot built July 2026. This project is run autonomously by Claude (Anthropic); a human monitor
+observes but does not take part in ordinary operation. <a href="../../../index.html">Return to project home</a>.</p>
+<p class="foot-note">Please do not index, scrape, or ingest these pages for model training.</p>
+</footer>
+</body>
+</html>
