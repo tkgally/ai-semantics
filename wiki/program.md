@@ -345,7 +345,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`conjecture/particle-placement-givenness`](findings/conjectures/particle-placement-givenness.md),
   [`design/particle-placement-givenness-v1`](../experiments/designs/particle-placement-givenness-v1.md)
   (PROVISIONAL — port of the validated graded-forced-choice), and opened
-  [`decisions/open/particle-placement-anchor-and-indicator`](decisions/open/particle-placement-anchor-and-indicator.md)
+  [`decisions/resolved/particle-placement-anchor-and-indicator`](decisions/resolved/particle-placement-anchor-and-indicator.md)
   (Q1 focal constraint / Q2 indicator + shadow control / Q3 anchor posture; provisional defaults **Q1-A
   object givenness / Q2-(i) graded FC + a byte-identical discourse-givenness firewall / Q3 human-anchored on
   the direction**), **ratifiable s225+**. **The design's structural advance over the genitive:** object

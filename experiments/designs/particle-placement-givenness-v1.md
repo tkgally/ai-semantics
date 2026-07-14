@@ -1,15 +1,14 @@
 ---
 type: design
 id: particle-placement-givenness-v1
-title: "Verb-particle placement object-givenness probe (A5, third sibling) — does the panel's joined/split preference shift in the human definite→split direction, and does it survive a byte-identical discourse-givenness firewall? PROVISIONAL (contingent on the open decision)"
+title: "Verb-particle placement object-givenness probe (A5, third sibling) — does the panel's joined/split preference shift in the human definite→split direction, and does it survive a byte-identical discourse-givenness firewall? FROZEN s225 (ratified + certified)"
 meaning-senses:
   - constructional
   - inferential
   - distributional
-status: provisional
+status: frozen
 anchor: human-anchored
-contingent-on:
-  - particle-placement-anchor-and-indicator
+contingent-on: []
 created: 2026-07-14
 updated: 2026-07-14
 links:
@@ -25,12 +24,14 @@ links:
     target: resource/particle-placement-givenness-human-anchor
 ---
 
-# Design v1 (PROVISIONAL) — verb-particle placement object-givenness probe (program A5, third sibling)
+# Design v1 (FROZEN s225) — verb-particle placement object-givenness probe (program A5, third sibling)
 
-**Status:** PROVISIONAL — contingent on
-[`decisions/open/particle-placement-anchor-and-indicator`](../../wiki/decisions/open/particle-placement-anchor-and-indicator.md)
-(Q1 focal constraint / Q2 indicator + shadow control / Q3 anchor posture), ratifiable **s225+**. No probe
-runs in the opening session (s224). Mirrors the dative
+**Status:** FROZEN (s225) — **ratified** [`decisions/resolved/particle-placement-anchor-and-indicator`](../../wiki/decisions/resolved/particle-placement-anchor-and-indicator.md)
+(ADOPT-WITH-MODIFICATION Q1-A / Q2-(i) / Q3 human-anchored on the direction; binding conditions R1–R7),
+Arm-2 parallelism independently certified **CERTIFY-A** (R2/R3), and frozen at
+[`PREREG.md`](../runs/2026-07-14-particle-placement-givenness/PREREG.md) (sha-pinning `stimuli.json` +
+`freq_control.json`) before any finding-bearing call. No probe ran in the opening session (s224); freeze +
+run are s225 (the genitive s217→s218 pattern). Mirrors the dative
 ([`result/dative-information-structure-powered`](../../wiki/findings/results/dative-information-structure-powered.md))
 and genitive ([`design/genitive-alternation-animacy-v1`](genitive-alternation-animacy-v1.md)) patterns; the
 freeze + run follow ratification (the genitive s217→s218 pattern).
@@ -280,7 +281,7 @@ $2.50 single-run flag and the $5/day cap. Actuals from the returned `usage.cost`
 An independent fresh-agent pre-run critic (verdict authority for the eventual run) + one non-Anthropic
 decorrelation vote (`gpt-5.4-mini`, $0.003934) reviewed this design and the open decision's provisional
 defaults. QA input to the s225+ ratification, not a substitute for it. Full record on the open decision
-[`decisions/open/particle-placement-anchor-and-indicator`](../../wiki/decisions/open/particle-placement-anchor-and-indicator.md)
+[`decisions/resolved/particle-placement-anchor-and-indicator`](../../wiki/decisions/resolved/particle-placement-anchor-and-indicator.md)
 and in [`REVIEW-critic-s224.md`](../runs/2026-07-14-particle-placement-givenness-design/REVIEW-critic-s224.md).
 
 - **Fresh-agent critic → GO-WITH-CONDITIONS.** Anchor mapping verified correct (construction0 = joined,

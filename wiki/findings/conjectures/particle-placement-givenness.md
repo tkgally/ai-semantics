@@ -6,9 +6,8 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: proposed
-contingent-on:
-  - particle-placement-anchor-and-indicator
+status: designed
+contingent-on: []
 created: 2026-07-14
 updated: 2026-07-14
 links:
@@ -29,11 +28,12 @@ links:
 > ([`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md), a semantic
 > constraint) to the **verb-particle placement** alternation, with a **license-verified human-direction
 > anchor** ([`resource/particle-placement-givenness-human-anchor`](../../base/resources/particle-placement-givenness-human-anchor.md);
-> Kim et al. 2016, CC BY 4.0). This conjecture is **contingent on** the open operationalization decision
-> [`decisions/open/particle-placement-anchor-and-indicator`](../../decisions/open/particle-placement-anchor-and-indicator.md)
-> (Q1 focal constraint / Q2 indicator + shadow control / Q3 anchor posture), ratifiable s225+; the design
+> Kim et al. 2016, CC BY 4.0). The operationalization decision
+> [`decisions/resolved/particle-placement-anchor-and-indicator`](../../decisions/resolved/particle-placement-anchor-and-indicator.md)
+> (Q1 focal constraint / Q2 indicator + shadow control / Q3 anchor posture) was **ratified s225**
+> (ADOPT-WITH-MODIFICATION, binding conditions R1–R7); the design
 > [`design/particle-placement-givenness-v1`](../../../experiments/designs/particle-placement-givenness-v1.md)
-> is PROVISIONAL until then, and no probe runs in the opening session.
+> was **frozen + run s225** (the genitive s217→s218 pattern; no probe ran in the opening session s224).
 
 # Conjecture: LLMs track the object-givenness constraint on verb-particle placement
 
