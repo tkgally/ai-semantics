@@ -37,9 +37,9 @@ Standing references:
 
 ### Decisions — open
 
-71 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+72 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/particle-placement-anchor-and-indicator.md`](decisions/open/particle-placement-anchor-and-indicator.md) — How to operationalize the verb-particle placement object-givenness probe — focal constraint, logprob-free indicator + shadow control, and anchor posture? · **open**
+*(none)*
 
 ### Base — concepts
 
@@ -185,7 +185,7 @@ Standing references:
 - [`findings/conjectures/lexical-relation-shadow-saturation.md`](findings/conjectures/lexical-relation-shadow-saturation.md) — Antonymy is shadow-saturated: the relation where lexical-relation competence is least separable from the distributional control · **tested** · (2026-07-06)
 - [`findings/conjectures/lexical-sense-gradience.md`](findings/conjectures/lexical-sense-gradience.md) — LLM same/different-sense behavior is monotonic in human-rated usage similarity, with an intermediate regime for polysemy absent for homonymy — separable from a context-s… · **tested** · (2026-07-05)
 - [`findings/conjectures/multimodal-lexical-grounding-divergence.md`](findings/conjectures/multimodal-lexical-grounding-divergence.md) — Visual grounding moves a model's graded lexical-sense behavior toward the human signal — most where senses are perceptually distinguishable — beyond what the text-only d… · **tested** · (2026-07-05)
-- [`findings/conjectures/particle-placement-givenness.md`](findings/conjectures/particle-placement-givenness.md) — LLMs track the object-givenness constraint on the English verb-particle placement alternation · **proposed** · (2026-07-14)
+- [`findings/conjectures/particle-placement-givenness.md`](findings/conjectures/particle-placement-givenness.md) — LLMs track the object-givenness constraint on the English verb-particle placement alternation · **designed** · (2026-07-14)
 - [`findings/conjectures/preference-commitment-generality.md`](findings/conjectures/preference-commitment-generality.md) — The "preference without commitment" dissociation is a general property of divergent-default constructions, not an AANN artifact · **tested** · (2026-06-15)
 - [`findings/conjectures/presupposition-environment-gated-both-directions.md`](findings/conjectures/presupposition-environment-gated-both-directions.md) — Presuppositional inference in current decoders is environment-gated in BOTH of its signatures — projection by embedding frame, accommodation by context support — a two-d… · **proposed** · (2026-07-05)
 - [`findings/conjectures/presupposition-projection-vs-entailment.md`](findings/conjectures/presupposition-projection-vs-entailment.md) — Under negation/question/conditional embedding, the panel endorses a base sentence's PRESUPPOSITION more than a MATCHED ENTAILMENT — a within-model projection asymmetry · **tested** · (2026-07-05)
@@ -458,7 +458,7 @@ Standing references:
 - [`experiments/designs/lexical-relation-shadow-saturation-v1.md`](../experiments/designs/lexical-relation-shadow-saturation-v1.md) — lexical-relation shadow-saturation probe v1 — is antonymy the relation whose panel relatum-recovery is least separable from a distributional/contrastive-frame control (i… · **draft** · (2026-07-06)
 - [`experiments/designs/lexical-sense-gradience-v1.md`](../experiments/designs/lexical-sense-gradience-v1.md) — lexical-sense-gradience probe v1 — does an LLM's same/different-sense signal track graded human usage-similarity (DWUG), with an intermediate regime for polysemy absent… · **ready** · (2026-05-30)
 - [`experiments/designs/multimodal-grounding-image-v1.md`](../experiments/designs/multimodal-grounding-image-v1.md) — multimodal grounding image probe v1 — does showing the depicting picture move a VLM's graded sense-relatedness behavior TOWARD the WiC binary same/different signal, keye… · **run** · (2026-05-31)
-- [`experiments/designs/particle-placement-givenness-v1.md`](../experiments/designs/particle-placement-givenness-v1.md) — Verb-particle placement object-givenness probe (A5, third sibling) — does the panel's joined/split preference shift in the human definite→split direction, and does it su… · **provisional** · (2026-07-14)
+- [`experiments/designs/particle-placement-givenness-v1.md`](../experiments/designs/particle-placement-givenness-v1.md) — Verb-particle placement object-givenness probe (A5, third sibling) — does the panel's joined/split preference shift in the human definite→split direction, and does it su… · **frozen** · (2026-07-14)
 - [`experiments/designs/presupposition-doppelganger-control-v1.md`](../experiments/designs/presupposition-doppelganger-control-v1.md) — Presupposition doppelgänger control v1 — does presupposition beat a MATCHED surface-cue shadow, or is the corner measurably shadow-saturated? (within-model residual over… · **draft** · (2026-07-03)
 - [`experiments/designs/relational-history-perturbation-v2.md`](../experiments/designs/relational-history-perturbation-v2.md) — Relational v2 — the history-perturbation arm (mid-trajectory reassignment; the decisive commutativity test) · **run (2026-06-12); superseded by relational-history-perturbation-v3** · (2026-06-12)
 - [`experiments/designs/relational-history-perturbation-v3.md`](../experiments/designs/relational-history-perturbation-v3.md) — Relational v3 — the history-perturbation arm, second attempt (verifier fix-list incorporated; the decisive commutativity test, properly powered and truncation-resistant) · **draft** · (2026-06-13)
@@ -486,6 +486,7 @@ Standing references:
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
 - [`experiments/runs/2026-07-14-particle-placement-givenness-design/`](../experiments/runs/2026-07-14-particle-placement-givenness-design/README.md)
+- [`experiments/runs/2026-07-14-particle-placement-givenness/`](../experiments/runs/2026-07-14-particle-placement-givenness/README.md)
 - [`experiments/runs/2026-07-13-genitive-alternation-animacy-rep2/`](../experiments/runs/2026-07-13-genitive-alternation-animacy-rep2/README.md)
 - `experiments/runs/2026-07-13-genitive-alternation-animacy-mag/` (no README)
 - [`experiments/runs/2026-07-13-genitive-alternation-animacy/`](../experiments/runs/2026-07-13-genitive-alternation-animacy/README.md)

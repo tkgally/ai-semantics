@@ -1,0 +1,252 @@
+{
+  "recipe": "UD-English-EWT per-(verb_lemma+particle) marginal SPLIT-order rate = (split + k*p0)/(split + joined + k), k=4.0, p0=corpus base split rate; SPLIT = object head linearly between the verb and its compound:prt particle, JOINED otherwise; per (verb_lemma, particle_form). FROZEN before any model call.",
+  "source": "https://raw.githubusercontent.com/UniversalDependencies/UD_English-EWT/master/en_ewt-ud-{train,dev,test}.conllu",
+  "license": "CC BY-SA 4.0 (UD English-EWT; LICENSE.txt verified firsthand s218; s168 in scope)",
+  "corpus_meta": {
+    "files": {
+      "en_ewt_train.conllu": {
+        "sha256": "d68e06122a702464c613076523d56740f047e5bbe89dd90ec32737e04d952143"
+      },
+      "en_ewt_dev.conllu": {
+        "sha256": "39239e0a60db3ae68f4b7036189f11b6692741d10ff8240dd91f74f2760d90f8"
+      },
+      "en_ewt_test.conllu": {
+        "sha256": "fa024f43dc5da3c5ac02563bc9bd0e974f46cbb1560823976a8f342a37dc494a"
+      }
+    },
+    "total_split_tokens": 188,
+    "total_joined_tokens": 258,
+    "corpus_base_split_rate": 0.4215,
+    "pseudocount_k": 4.0
+  },
+  "per_pair": {
+    "bring+in": {
+      "split_count": 0,
+      "joined_count": 1,
+      "n_tokens": 1,
+      "marginal_split_rate_smoothed": 0.3372
+    },
+    "carry+down": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "carry+in": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "carry+off": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "clear+away": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "clear+off": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "cut+off": {
+      "split_count": 2,
+      "joined_count": 3,
+      "n_tokens": 5,
+      "marginal_split_rate_smoothed": 0.4096
+    },
+    "fold+up": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "hand+over": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "hang+up": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "haul+up": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "lift+off": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "lift+up": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "lock+up": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "pack+away": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "pack+up": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "pick+out": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "pick+up": {
+      "split_count": 10,
+      "joined_count": 13,
+      "n_tokens": 23,
+      "marginal_split_rate_smoothed": 0.4328
+    },
+    "pull+down": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "pull+off": {
+      "split_count": 4,
+      "joined_count": 3,
+      "n_tokens": 7,
+      "marginal_split_rate_smoothed": 0.5169
+    },
+    "pull+out": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "put+away": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "put+back": {
+      "split_count": 1,
+      "joined_count": 0,
+      "n_tokens": 1,
+      "marginal_split_rate_smoothed": 0.5372
+    },
+    "put+down": {
+      "split_count": 8,
+      "joined_count": 1,
+      "n_tokens": 9,
+      "marginal_split_rate_smoothed": 0.7451
+    },
+    "put+out": {
+      "split_count": 1,
+      "joined_count": 3,
+      "n_tokens": 4,
+      "marginal_split_rate_smoothed": 0.3358
+    },
+    "roll+out": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "roll+up": {
+      "split_count": 0,
+      "joined_count": 1,
+      "n_tokens": 1,
+      "marginal_split_rate_smoothed": 0.3372
+    },
+    "set+down": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "set+up": {
+      "split_count": 4,
+      "joined_count": 10,
+      "n_tokens": 14,
+      "marginal_split_rate_smoothed": 0.3159
+    },
+    "shut+off": {
+      "split_count": 1,
+      "joined_count": 0,
+      "n_tokens": 1,
+      "marginal_split_rate_smoothed": 0.5372
+    },
+    "take+apart": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "take+down": {
+      "split_count": 0,
+      "joined_count": 2,
+      "n_tokens": 2,
+      "marginal_split_rate_smoothed": 0.281
+    },
+    "take+off": {
+      "split_count": 3,
+      "joined_count": 4,
+      "n_tokens": 7,
+      "marginal_split_rate_smoothed": 0.426
+    },
+    "take+out": {
+      "split_count": 4,
+      "joined_count": 5,
+      "n_tokens": 9,
+      "marginal_split_rate_smoothed": 0.4374
+    },
+    "throw+out": {
+      "split_count": 0,
+      "joined_count": 2,
+      "n_tokens": 2,
+      "marginal_split_rate_smoothed": 0.281
+    },
+    "turn+off": {
+      "split_count": 1,
+      "joined_count": 0,
+      "n_tokens": 1,
+      "marginal_split_rate_smoothed": 0.5372
+    },
+    "wipe+off": {
+      "split_count": 0,
+      "joined_count": 0,
+      "n_tokens": 0,
+      "marginal_split_rate_smoothed": 0.4215
+    },
+    "wrap+up": {
+      "split_count": 1,
+      "joined_count": 2,
+      "n_tokens": 3,
+      "marginal_split_rate_smoothed": 0.3837
+    }
+  }
+}

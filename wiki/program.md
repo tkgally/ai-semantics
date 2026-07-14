@@ -345,7 +345,7 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`conjecture/particle-placement-givenness`](findings/conjectures/particle-placement-givenness.md),
   [`design/particle-placement-givenness-v1`](../experiments/designs/particle-placement-givenness-v1.md)
   (PROVISIONAL — port of the validated graded-forced-choice), and opened
-  [`decisions/open/particle-placement-anchor-and-indicator`](decisions/open/particle-placement-anchor-and-indicator.md)
+  [`decisions/resolved/particle-placement-anchor-and-indicator`](decisions/resolved/particle-placement-anchor-and-indicator.md)
   (Q1 focal constraint / Q2 indicator + shadow control / Q3 anchor posture; provisional defaults **Q1-A
   object givenness / Q2-(i) graded FC + a byte-identical discourse-givenness firewall / Q3 human-anchored on
   the direction**), **ratifiable s225+**. **The design's structural advance over the genitive:** object
@@ -362,6 +362,15 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   probe ran — freeze + run owed **s225+** after ratification (the genitive s217→s218 pattern).
   predictions.md design-level open bet registered. Item stays **`[x]`** (the second sibling is the landed
   row; this opens the third sibling's design arc — the tick lands at its run).]**
+  **[RATIFIED + FROZEN + RUN HALTED s225.** Cross-session review → **ADOPT-WITH-MODIFICATION** (Q1-A / Q2-i
+  three-condition firewall / Q3 human-anchored; binding R1–R7), weighing a non-Anthropic vote that voted
+  REJECT (weighed-and-addressed). Arm-2 parallelism independently **CERTIFY-A**. Frozen (`stimuli.json`
+  `0b63e252…`, `freq_control.json` `cd472475…`; 40 frames / 560 trials). **RUN HALTED at the pre-registered
+  $1.30 hard stop** after the claude arm ($1.388) — the pre-flight cost was ~4× under-estimated (a 1,680-call
+  panel is ~$2.4–3.3, not ~$0.35–0.65). Per "do not push through," gemini+gpt **deferred** and `analyze.py`
+  **not run** (claude shifts not inspected → the resume stays blind). The owed s226 unit: raise the
+  budget-only hard stop (~$3.50), resume gemini+gpt (crash-safe, ~$1.5 marginal), analyze, verify, write
+  `result/particle-placement-givenness-v1`. Item stays `[x]` (the run tick lands at the **completed** run).]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked

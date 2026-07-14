@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "(1) Arm-2 scored strings BYTE-IDENTICAL across given/newment/new per frame": true,
+    "(2) no scored-string shortcut reader yields ANY within-frame Arm-2 shift": true,
+    "(3) Arm-2 contexts: uniform comma count (1)": true,
+    "(3) Arm-2 contexts: matched word count across given/newment/new": true,
+    "(3) Arm-2 contexts: all declarative": true,
+    "(3) Arm-2 contexts: object noun 1/1/0 in given/newment/new": true,
+    "(3) Arm-2 contexts: no particle word adjacent to the object noun (no leak)": true,
+    "(4) every object a full lexical NP (no pronoun head)": true,
+    "(N) >=40 frames": true,
+    "(N) Arm-2 firewall trials/frame >= Arm-1 definiteness trials/frame (R7 / freeze iv)": true
+  },
+  "fail": [],
+  "max_abs_arm2_frame_shift_per_scored_reader": {
+    "always_split": 0.0,
+    "always_joined": 0.0,
+    "always_A": 0.0,
+    "always_B": 0.0,
+    "position_A_bias": 0.0,
+    "len_shorter_split": 0.0,
+    "objstr_the_split": 0.0
+  },
+  "counts": {
+    "n_frames": 40,
+    "n_trials": 560,
+    "trials_per_frame": {
+      "definiteness": 4,
+      "firewall": 6,
+      "length": 4
+    }
+  },
+  "ok": true,
+  "stimuli_sha256": "0b63e2529ed03c3eb5ccb8d9d96db97198a3f4043a3b6ded67cc12d101d166c9"
+}
