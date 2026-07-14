@@ -322,6 +322,19 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   direction-only); the typical-arm magnitude is cross-model consistent (~1.2×) unlike the nonce arm
   (~3.6–4×). **The A5 second sibling's owed unit is now discharged.** A **third A5 sibling** (particle
   placement / locative alternation, license-verified anchor) is the next A5 growth row.]**
+  **[PHIL/CONSOL FOLD landed s223 (the naturally-owed successor; $0, no new test): the s222
+  cross-model-consistency observation fired revision trigger (a) of
+  [`essay/concordant-verdict-hides-spread`](findings/essays/concordant-verdict-hides-spread.md) — the
+  genitive **typical arm** is a *tight* concordant functional positive (~1.2×), the first the essay had,
+  so the essay is **narrowed**: wide magnitude spread is a contingent property of the probe, not a law of
+  the functional end. A structural point the trigger did not anticipate was added — the *same* construction
+  carries both textures on its two control legs (typical ~1.2× vs nonce firewall ~3.6–4×), so spread is a
+  property of the (construction × item-population/control-leg); with a marked reading (relocated-not-refuted:
+  the shortcut-immune firewall leg still decorrelates as the original thesis predicted). Fresh-agent
+  adversarial coherence pass SAFE-TO-LAND (0 blockers, 2 hedge-alignment should-fixes applied); predictions.md
+  (a) open → fired-for. The **production-side alternation pair** (dative + genitive) are now both
+  magnitude-bearing — the pair contrast (dative ~9× decorrelation vs genitive-typical ~1.2×) is folded into
+  the essay as its sharpest illustration; the v3 table's production-pair row is left untouched (not re-folded).]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked
