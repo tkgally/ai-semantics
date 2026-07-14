@@ -370,7 +370,22 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   panel is ~$2.4–3.3, not ~$0.35–0.65). Per "do not push through," gemini+gpt **deferred** and `analyze.py`
   **not run** (claude shifts not inspected → the resume stays blind). The owed s226 unit: raise the
   budget-only hard stop (~$3.50), resume gemini+gpt (crash-safe, ~$1.5 marginal), analyze, verify, write
-  `result/particle-placement-givenness-v1`. Item stays `[x]` (the run tick lands at the **completed** run).]**
+  [`result/particle-placement-givenness-v1`](findings/results/particle-placement-givenness-v1.md). Item stays `[x]` (the run tick lands at the **completed** run).]**
+  **[COMPLETED s226 → [`result/particle-placement-givenness-v1`](findings/results/particle-placement-givenness-v1.md):
+  the halted run was finished by a **budget-only** hard-stop raise ($1.30→$3.50, frozen shas unchanged, blind
+  through the halt), resuming gemini+gpt (crash-safe, 1,120 calls, s226 marginal **$1.190**; full panel
+  $2.5811, 0 NA). **PANEL CONFIRM.** The byte-identical discourse-givenness firewall (GIVEN−NEW-MENTIONED)
+  clears CI-LB>0 in **2/3** (claude +0.040, gemini +0.072) with the definiteness arm directionally consistent
+  3/3 (0 reversals) — the registered primary Confirm clause. **gpt = the pre-named SHADOW** (definite→split
+  +0.100 but firewall +0.018, CI includes 0) — its determiner effect is a surface/lexical shadow, gpt weakest
+  again (dative/genitive pattern). Convergent length leg 3/3 (+0.29–0.40, strongly tracked); covariate
+  near-vacuous (R² ≤0.02) so CONFIRM **rests on the firewall**, narrowly directional (R1, not "shadow
+  defeated"); direction-only restatement anchor (R6). Post-run fresh-agent verifier **REPRODUCED** (0
+  discrepancies, both shas verified). A **cross-construction generalization** of the dative's
+  information-structural effect (2/3) — the A5 battery's central positive is not specific to the ditransitive
+  frame. Single run → no `claim` (fresh-item replication is the successor); shadow-depth-table fold deferred to
+  a later consolidation unit (theory-edition rule). predictions.md **fired-for**. Reading-bearing result stays
+  `proposed`. **The A5 third sibling has landed its run.**]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked

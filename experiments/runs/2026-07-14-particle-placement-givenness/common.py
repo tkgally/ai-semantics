@@ -46,7 +46,11 @@ REASONING = {"google/": {"effort": "minimal"}}
 # stop $1.30: above expectation so per-call variance does not spuriously trip, well below the $2.50
 # single-run prudence flag and the $5/day cap. Pure budget gate; never touches measurement or the
 # frozen stimuli sha.
-HARD_STOP_USD = 1.30
+# s226 BUDGET-ONLY CORRECTION (2026-07-14 UTC): raised 1.30 -> 3.50 to complete the halted run
+# (claude arm done, gemini+gpt owed). This does NOT touch stimuli.json/freq_control.json/the
+# measurement (shas unchanged); the true 1,680-call panel cost is ~$2.4-3.3 (see PREREG addendum);
+# marginal spend to finish ~$1.5, under the $2.50 single-run flag; day total stays well under $5/UTC.
+HARD_STOP_USD = 3.50
 
 # Arms 1 & 3 present two orders of the SAME proposition with no discourse context (context-free).
 SYS_PLAIN = ("You are a careful native speaker of English judging how natural different phrasings sound. "
