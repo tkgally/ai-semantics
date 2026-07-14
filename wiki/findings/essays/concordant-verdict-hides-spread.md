@@ -8,7 +8,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-20
-updated: 2026-07-06
+updated: 2026-07-14
 links:
   - rel: depends-on
     target: result/dative-information-structure-v1
@@ -26,13 +26,19 @@ links:
     target: result/dative-information-structure-powered
   - rel: depends-on
     target: result/aann-behavioral-gradient-rep2
+  - rel: depends-on
+    target: result/genitive-alternation-animacy-mag
+  - rel: depends-on
+    target: claim/genitive-alternation-animacy
 ---
 
 # Essay: a concordant verdict still hides a spread
 
 > **Status: revised (drafted 2026-06-20; revised 2026-06-20, session 53 [trigger (c) — strengthened]
 > and 2026-06-21, session 63; extended 2026-07-06, session 184 [a third texture — the form-ceiling
-> wobble] — see the Revision log). A philosophical-track / methodological essay
+> wobble]; revised 2026-07-14, session 223 [trigger (a) FIRED — a tight concordant functional
+> positive, and the same construction showing both textures on its two control legs] — see the
+> Revision log). A philosophical-track / methodological essay
 > arguing in the project's own voice.** Its original contribution is a *reading discipline*, not an empirical
 > claim: when a panel returns a **concordant** verdict — every model clears the bar — the binary
 > label "CONFIRM" can still conceal an order-of-magnitude spread in *how cleanly* the models track
@@ -235,8 +241,48 @@ the well-formed string well-formed) and a concordant CONFIRM at the *functional*
 givenness, but across a 10× range) are not the same kind of result, and collapsing both to "3/3
 CONFIRM" hides precisely the dissociation the project exists to describe.
 
+**Scope correction (2026-07-14, s223): spread is not a blanket property of the functional end — it
+concentrates on the *extrapolation-demanding* legs.** The genitive datum below (trigger (a), FIRED)
+shows a *functional*-end concordant positive — possessor-animacy tracking on real possessors — whose
+magnitudes concord **tightly** (~1.2× across the panel), while the *same* construction's
+shortcut-immune nonce-firewall leg decorrelates ~3.6–4×. So the sentence just above must be read
+narrowly: it is not that *the functional end* spreads, but that the legs where the behavior must be
+**generalized beyond dense distributional exposure** (the dative's soft discourse constraint; the
+genitive's novel-possessor firewall) spread, while a *well-exposed* functional leg (the genitive's
+typical, corpus-attested possessors) can concord as tightly as a formal one. The dissociation the
+essay names is real; a **marked reading** (below, trigger (a)) relocates its likely *locus* to the
+extrapolation demand rather than the functional/formal cut per se — offered as an observation on one
+construction's two legs, not a settled finding (and the dative's soft-constraint case and the
+genitive's novel-item case are unified under "extrapolation demand" by interpretive leap, not a common
+test). A skeptic can fairly press that the relocation is *partial*: the genitive's **shortcut-immune
+firewall** leg — the *cleanest* functional test — still decorrelates ~3.6–4× exactly as the original
+"the functional end spreads" thesis predicted, and the tight concordance rides on the
+exposure-supported **typical** leg, which carries *no* in-run firewall. So the honest summary is that
+the thesis is **relocated** (spread lives on the extrapolation-demanding / shortcut-immune legs) more
+than **refuted** — what the genitive refutes is only the *blanket prevalence* claim, that a functional
+concordant label always hides a wide spread.
+
 ## Revision log
 
+- **2026-07-14 (session 223), trigger (a) FIRED → essay narrowed (prevalence), a structural point
+  added; no clause of the discipline changed.** The genitive possessor-animacy typical arm
+  ([`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md), s222,
+  pooled 108 frames; [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md))
+  supplied the *tight concordant functional positive* trigger (a) named — a CONFIRM 3/3 whose
+  magnitudes span only ~1.2× (+0.145 / +0.169 / +0.139), against the dative's ~9×. Per the trigger, the
+  essay narrows: a concordant functional label does **not** *generally* hide a wide spread — it can, and
+  it can concord tightly — so wide spread is a contingent property of the probe, not a functional-end
+  default. The **carry-the-spread** discipline is untouched (indeed vindicated: only reading the
+  per-model magnitudes tells the tight case from the wide). A structural point the trigger did not
+  anticipate was added: the *same* construction shows both textures on its two control legs — the
+  typical arm concords ~1.2× while the shortcut-immune nonce-firewall arm decorrelates ~3.6–4× — so
+  spread is a property of the (construction × item-population/control leg), not of the construction or
+  the functional end. The functional-vs-formal section gained a dated **Scope correction** relocating
+  the "spread is expected at the functional end" claim to the *extrapolation-demanding legs* only. No
+  panel-scoped magnitude or human-comparison claim is added (the genitive magnitude is within-model; its
+  anchor is direction-only). `depends-on result/genitive-alternation-animacy-mag` and
+  [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md) added; status stays `revised`; the predictions.md (a) row moves
+  open → fired-for.
 - **2026-07-06 (session 184), a third texture added — the AANN form-ceiling wobble; no clause
   changed.** The cross-date AANN datum that [`theory/situating-llm-meaning-v2`](../theory/situating-llm-meaning-v2.md)
   had logged as an *unplaced* seed was placed here, as a third texture of heterogeneity a coarse
@@ -284,12 +330,22 @@ CONFIRM" hides precisely the dissociation the project exists to describe.
 
 ## Revision triggers (read before citing)
 
-- **(a) A tight concordant functional positive.** If a future functional-end probe returns a
+- **(a) A tight concordant functional positive. → FIRED 2026-07-14 (s223).** If a future functional-end probe returns a
   concordant CONFIRM with *comparable* magnitudes across the panel (a narrow spread), that would show
   decorrelation is not the default at the functional end — magnitude can concord too — and the essay
   would narrow from "concordant labels generally hide spread at the functional end" to "they *can*,
   and the dative is one case." The discipline (carry the spread) is unaffected either way; only the
   claimed *prevalence* of wide spreads would move.
+  **→ FIRED: the genitive possessor-animacy typical arm is a tight concordant functional positive**
+  ([`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md);
+  [`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md), s222):
+  a concordant CONFIRM whose within-model magnitudes span only **~1.2×** (pooled +0.145 / +0.169 /
+  +0.139 claude / gemini / gpt; the fresh-36 blind arm even tighter, +0.155 / +0.175 / +0.178). So
+  wide decorrelation is **not a law** of the functional end — it is a contingent property of the probe;
+  magnitude can and does concord. The
+  essay narrows exactly as the trigger anticipated (see the dated Update block below), and gains a
+  sharper structural point the trigger did not: the *same* construction shows both textures on its two
+  legs. The discipline (carry the spread) is untouched and reinforced.
 - **(b) A human magnitude anchor.** The essay is careful to claim no human comparison of *sizes*
   because none is in-repo (only the direction is anchored). If a resource ever supplies a graded human
   effect-*size* for the dative (e.g. the Bresnan & Ford 2010 ratings, ratified an opportunistic
@@ -317,6 +373,52 @@ CONFIRM" hides precisely the dissociation the project exists to describe.
 > flickered below detection at founding N. Reading the per-model magnitudes rather than the concordant
 > label is exactly what would have flagged gpt as the fragile member — and now shows its effect is real
 > but an order of magnitude small. The bet row is [`predictions.md`](../../predictions.md).
+
+> **⬆ Update (2026-07-14, session 223) — trigger (a) FIRED: a tight concordant functional positive
+> exists, so wide spread is NOT the functional-end default; and the same construction shows both
+> textures on its two control legs.** The genitive possessor-animacy line — the project's second
+> human-direction-anchored production-side alternation, a sibling of the dative — attached a
+> within-model magnitude at power ([`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md),
+> s222; consolidated on [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md)).
+> Its **typical arm** (animate vs inanimate real possessors — *the judge's decision* over *the decision
+> of the judge*) is a **CONCORDANT CONFIRM whose magnitudes concord tightly**: pooled-108 within-frame
+> animacy shift **+0.145 / +0.169 / +0.139** (claude / gemini / gpt), a **~1.2×** spread, with the
+> fresh-36 blind arm tighter still (+0.155 / +0.175 / +0.178). This is exactly the *comparable-magnitude
+> concordant functional positive* trigger (a) named. **The narrowing it prescribes is now made:** the
+> essay no longer implies that a concordant functional label *generally* hides a wide spread — it can
+> (the dative, ~9×) and it can concord (the genitive typical arm, ~1.2×); wide spread is a **contingent
+> property of the probe, not a law of the functional end.** The carry-the-spread discipline is
+> **untouched and, if anything, vindicated** — carrying the per-model magnitudes is precisely what
+> distinguishes the tight case from the wide one, and nothing short of reading them tells you which you
+> are in.
+>
+> **The structural point trigger (a) did not anticipate — the same construction carries both textures,
+> split by control leg.** The genitive was probed on two legs: a **typical** arm (corpus-attested real
+> possessors) and a shortcut-immune **nonce-firewall** arm (rare/nonce possessors carrying animacy only
+> via a gloss, no per-lemma corpus statistic). The typical arm concords ~1.2×; the **firewall arm
+> decorrelates ~3.6–4×** (rep2 nonce +0.151 / +0.279 / +0.078 claude / gemini / gpt, gpt the smallest
+> leg — [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md) fence (b)).
+> One construction, one panel, one semantic constraint (animacy) — and the magnitude spread flips from
+> tight to wide depending on **which item population the constraint is read on**. So spread is not even
+> a property of *the construction*; it is a property of the **(construction × item-population/control
+> leg)**, and cannot be read off the phenomenon. This refines "Two textures of heterogeneity" above:
+> texture 1 (magnitude decorrelation) and its absence (tight concordance) are not two different
+> *constructions* but can be two different *legs of one*.
+>
+> **A marked reading of *why* the legs differ (an observation, not a claim).** The tight leg is the one
+> where the behavior is supported by **dense distributional exposure** (real possessors the models have
+> seen); the wide leg is the one that forces **generalization to novel items under a firewall** (nonce
+> possessors, animacy from a gloss). Where the panel can lean on rich exposure it concords; where it
+> must *extrapolate the animacy category* to an unseen possessor it decorrelates — which locates the
+> spread in the extrapolation demand, matching the dative (a soft discourse constraint that must be
+> inferred, not read off a lexeme). This is offered as a **marked reading**, not a finding: one
+> construction, one two-leg comparison, no formal test that the leg-difference *causes* the
+> spread-difference, and — per the Honesty box — the "decorrelates *from competence*" gloss on the wide
+> leg (gpt weakest) still rests on the unverified comparable-generalists premise, so the firewall
+> spread stays a **within-panel** observation. `depends-on result/genitive-alternation-animacy-mag` and
+> [`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md) added; status stays `revised`. No panel-scoped magnitude or
+> human-comparison claim is added (the genitive magnitude is within-model; its human anchor is
+> direction-only). The bet row [`predictions.md`](../../predictions.md) (a) moves open → fired-for.
 
 ## What this essay is not
 

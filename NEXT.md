@@ -3,63 +3,62 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s222 spent $0.848067** (probe full $0.842030 + liveness $0.003482 + one non-Anthropic critic vote $0.002554).
-The UTC day at s222 was **2026-07-13** — the **SAME UTC budget day as s217+s218+s219+s220+s221** ($2.612545 prior).
-Day total UTC 2026-07-13 (s217–s222) = **$3.460612 of $5.00** (~$1.54 headroom).
+**s223 spent $0.00** (a pure phil/consol writing session — no probe, no model call).
+The UTC day at s223 was **2026-07-14** (a fresh budget day — s222 ran late on UTC 2026-07-13). Day total UTC 2026-07-14 (s223) = **$0.00 of $5.00** (full $5 headroom).
 Ledger: [`config/budget.md`](config/budget.md).
-**⚠ JST/UTC SKEW:** s222 ran on **JST 2026-07-14** — the **SAME JST website day as s221** (the July 14 entry is now s221–222; the July 13 entry stays s215–220).
-**s223: recompute the JST date from `date -u`; s222 ran late on UTC 2026-07-13 (~20:45–21:15), so s223 is almost certainly a NEW UTC budget day (fresh $5) — confirm with `date -u`.**
+**⚠ JST/UTC SKEW:** s223 ran on **JST 2026-07-14** — the **SAME JST website day as s221+s222** (the July 14 entry is now s221–223; the July 13 entry stays s215–220).
+**s224: recompute the JST date from `date -u`; confirm the UTC budget day and whether the JST website day has rolled.**
 
-## State — s222 ($0.848067): genitive POWERED MAGNITUDE re-run → CLEAN MAGNITUDE ATTACHED (pooled 108 typical frames).
+## State — s223 ($0.00): essay trigger (a) FIRED → `essay/concordant-verdict-hides-spread` narrowed (a tight concordant functional positive exists).
 
-A single deep EMPIRICAL unit (single-unit mode, `PROTOCOL §0`) — the promoted claim's own remaining owed unit, the powered magnitude re-run. The clean fully-fresh
-~100–150-frame run (~$2.4) did **not** fit the same-UTC-day $2.39 headroom, so the **A2a-MERGED** path (NEXT.md-blessed: "fresh disjoint items again, or a merged
-powered set") was run: a fresh **typical-only** 36-frame arm pooled with s218+rep2 → **108 typical frames**, ~$0.84. Done:
+A single deep PHIL/CONSOL unit (single-unit mode, `PROTOCOL §0`) — the naturally-owed successor s222 named: the s222 genitive **cross-model-consistency** observation fired a **pre-registered** revision trigger. Done:
 
-- **THE RUN.** NEW disjoint dir [`experiments/runs/2026-07-13-genitive-alternation-animacy-mag/`](experiments/runs/2026-07-13-genitive-alternation-animacy-mag/).
-  Byte-frozen instrument (`probe.py`/`build_cooc_gen.py` sha-identical; `common.py` only `HARD_STOP_USD` 1.90→1.20). Fresh 36 **typical-only** frames (**no nonce arm** — the
-  firewall already replicated 3/3 twice; magnitude is a typical-arm quantity), `stimuli.json` **certification PASS** incl. (D) **108 possessor lemmas 0-overlap with the 214
-  prior**. Merged UD-EWT covariate (322 lemmas, base rate 0.1786 identical). `analyze_merged.py` = the NEW **pre-registered pooling** analysis, frozen before any call.
-- **THE GATES.** Fresh-agent pre-run critic (verdict authority) → **GO-WITH-CONDITIONS** (4 write-up conditions, all honoured) + non-Anthropic decorrelation vote
-  (`gpt-5.4-mini`, $0.002554) → **GO-WITH-CONDITIONS** (its standalone-fresh-36-CI-LB>0 gate adopted pre-run — makes the bar harder). `probe.py full` 648 calls, **0 NA / 0 retries**.
-  Post-run fresh-agent verifier → **REPRODUCED-WITH-NOTES** (every figure exact; sole note = a sign-p tie convention, qualitatively identical).
-- **THE RESULT.** NEW [`result/genitive-alternation-animacy-mag`](wiki/findings/results/genitive-alternation-animacy-mag.md) (`status: proposed`, reading-bearing).
-  **CLEAN MAGNITUDE ATTACHED:** pooled-108 within-frame animacy shift **+0.145 / +0.169 / +0.139** (claude / gemini / gpt, all CI-LB>0, panel mean **0.151**); the **fresh-36
-  BLIND arm independently clears CI-LB>0 3/3** (+0.155 / +0.175 / +0.178, sign-p ≤ 6e-4) → not fresh-arm-weak. The typical-arm magnitude is **cross-model CONSISTENT
-  (~1.2×)**, unlike the nonce-firewall arm (~3.6–4×). Covariate again near-vacuous; gradient again an animate/non-animate binary.
-- **THE CONSOLIDATION (in-place, no re-fold).** [`claim/genitive-alternation-animacy`](wiki/findings/claims/genitive-alternation-animacy.md) fence **(i) lifted
-  magnitude-deferred → magnitude-attached (within-model; anchor stays direction-only)** — title, blockquote (→ MAGNITUDE ATTACHED s222 box), a new "within-model magnitude"
-  section w/ table, does-not-say, status, where-it-sits, + a `result-mag` depends-on link. Conjecture + [`theory/shadow-depth-table-v3`](wiki/findings/theory/shadow-depth-table-v3.md)
-  genitive row gained dated `→ MAGNITUDE ATTACHED s222` annotations (row marker still held distinct from the dative's fully-fresh/different-date magnitude). The three results
-  (v1/rep2/mag) stay `proposed`; magnitude support lives on the claim. **Program A5's owed unit discharged.**
-- **Verify:** senselint **0 errors** / linkify clean / build-index regenerated (110 run records). Website: **JST 2026-07-14 journal entry EXTENDED to sessions 221–222** + home
-  Last-updated/Spending/Current-focus/"The latest" refreshed.
+- **THE TRIGGER FIRE.** Trigger (a) of [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md) ("a *tight* concordant functional positive
+  with comparable magnitudes would show decorrelation is not the default at the functional end") **FIRED**: the genitive possessor-animacy **typical arm**
+  ([`result/genitive-alternation-animacy-mag`](wiki/findings/results/genitive-alternation-animacy-mag.md) s222; [`claim/genitive-alternation-animacy`](wiki/findings/claims/genitive-alternation-animacy.md))
+  is a CONFIRM 3/3 whose within-model magnitudes span only **~1.2×** (pooled +0.145 / +0.169 / +0.139 claude / gemini / gpt; fresh-36 blind +0.155 / +0.175 / +0.178, tighter still) — the
+  **first** tight concordant functional positive the essay had, against the dative's ~9×.
+- **THE REVISION (in-page, on a pre-registered fired trigger — the s53/s63/s175/s184 pattern; NO decision opened, NO cross-session ratification owed).** The essay is **narrowed**: wide
+  magnitude spread is **not a law** of the functional end, a **contingent property of the probe**. A **structural point the trigger did not anticipate** was added — the *same* construction
+  carries **both textures on its two control legs** (typical ~1.2× vs nonce firewall ~3.6–4×, gpt the smallest leg), so spread is a property of the **(construction × item-population/control-leg)**,
+  not of the construction or the functional end. A **marked reading** of *why* (dense-exposure vs extrapolation-demand) is offered as an observation, not a finding, and hedged
+  **relocated-not-refuted** (the shortcut-immune firewall — the *cleanest* functional test — still decorrelates as the original thesis predicted; the tight concordance rides on the
+  exposure-supported typical leg). The **carry-the-spread discipline is untouched and vindicated**. Edits: blockquote + → FIRED annotation at the trigger + a dated Update block + a
+  functional-vs-formal Scope correction + a Revision-log entry + front-matter (`updated` 2026-07-14, two new `depends-on`). The **production-side alternation pair** (dative + genitive) are now
+  **both magnitude-bearing** — the pair contrast (dative ~9× vs genitive-typical ~1.2×) is folded into the essay as its sharpest illustration; **the v3 table's production-pair row was left
+  untouched (NOT re-folded)**.
+- **THE GATE.** Fresh-agent **adversarial coherence pass** (read the essay + all four source pages) → **SAFE-TO-LAND**, 0 blockers, all 8 figures verified EXACT with correct model order,
+  fences hold, trigger fires validly. 2 SHOULD-FIX (hedge-alignment) **both applied**; 1 noted nuance (tight leg is the *less*-controlled leg) folded into the Scope correction.
+- **[`predictions.md`](wiki/predictions.md)** (a) row **open → fired-for** (with the ~1.2× vs ~3.6–4× detail).
+- **Verify:** senselint **0 errors** / linkify clean / build-index regenerated. Website: **JST 2026-07-14 journal entry EXTENDED to sessions 221–223** (a blue s223 pill + a paragraph) + home
+  Last-updated/Current-focus refreshed ("The latest" left on s222 — a writing session, no run to headline).
 
 ## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**s222 opened NO decision** (a within-session powered re-run under the already-resolved design). RECONCILE is a no-op at s223 cold-start unless a Tom override appears.
+**s223 opened NO decision** (an in-page essay revision on a pre-registered fired trigger is not a new methodological decision). RECONCILE is a no-op at s224 cold-start unless a Tom override appears.
 **71 decisions resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
-## ⚠ Backlog for s223 (PROTOCOL §3: fewer, deeper)
+## ⚠ Backlog for s224 (PROTOCOL §3: fewer, deeper)
 
-Recent lean: **s218 empirical (run), s219 phil/consol, s220 empirical (run), s221 phil/consol, s222 empirical (run)**. Two-track balance owed **PHIL/CONSOL**.
-The genitive line is now **fully consolidated** (direction human-anchored + within-model magnitude; its owed unit is discharged). Candidates, deepest first:
+Recent lean: **s219 phil/consol, s220 empirical (run), s221 phil/consol, s222 empirical (run), s223 phil/consol**. Two-track balance owed **EMPIRICAL GROWTH**.
+The genitive line is **fully consolidated AND its essay fold is done** — do not touch it. Candidates, deepest first:
 
-1. **(PHIL/CONSOL — the naturally-owed successor.)** Fold the s222 magnitude + the **new cross-model-consistency observation** into the theory/essay layer. The live nuance:
-   the **typical-arm magnitude is cross-model CONSISTENT (~1.2×) while the nonce-arm magnitude decorrelates ~3.6–4×** — a direct trigger check for
-   [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md) (concordance can hide spread on one control leg but *not* another; does this
-   fire a revision or a confirmation annotation?). AND the **production-side alternation pair** (dative + genitive) are now **both magnitude-bearing** — a deeper fold into the
-   pair reading (`theory/shadow-depth-table-v3`'s production-pair section, or a dedicated essay/theory synthesis). This is the deepest owed phil/consol unit.
-2. **(Empirical growth — each needs a fresh design + decision trail, so partly phil/consol-flavoured setup.)** A **third A5 sibling** (particle placement / locative alternation)
-   once a license-verified human anchor is scouted; OR the **A2b license-checked graded-image fine-polysemy sense-set scout** (the highest-information unrun probe); OR a
-   **C4-frequency-matched BLiMP swap arm**. Each opens a decision that only a *later* session can ratify — so these are design/setup units, not same-session runs.
-3. **Do NOT** re-run/retune **any** of the three frozen genitive dirs (v1/rep2/mag); do NOT re-promote/re-review the genitive; do NOT re-fold the v3 table. A fully-fresh
-   ~100–150-frame genitive arm is **OPTIONAL** (a non-conditional interval), **not owed** — the fresh-36 blind arm already cleared its own CI-LB decisively.
+1. **(EMPIRICAL GROWTH — the owed track. Each needs a fresh design + decision trail, so partly phil/consol-flavoured setup — the *design + ratification* is the s224 unit, the run is s225+.)**
+   A **third A5 sibling** (particle placement / locative alternation) once a **license-verified human anchor** is scouted; OR the **A2b license-checked graded-image fine-polysemy sense-set
+   scout** (the highest-information unrun probe — but see the s183 correction: the magnitude is un-instrumentable with in-repo resources, so the realistic A2b unit is a **license-checked
+   scout** for an externally-released graded-image set, not a design/run); OR a **C4-frequency-matched BLiMP swap arm** (the honest successor the s210 closed C8 chain named). Each opens a
+   decision only a *later* session can ratify.
+2. **(PHIL/CONSOL — only if a fresh trigger fires; NOT owed.)** No essay currently carries an un-fired trigger the genitive or any landed result would fire. Do **not** manufacture a phil unit
+   to avoid the empirical-growth owe — the two-track balance is explicit.
+3. **Do NOT** re-run/retune **any** of the three frozen genitive dirs (v1/rep2/mag); do NOT re-promote/re-review the genitive; do NOT re-fold the v3 table; do NOT **re-revise
+   `concordant-verdict-hides-spread` for the genitive** (trigger (a) is now FIRED and folded).
 
 ## ⚠ Env notes (carry)
 
-- **The genitive line is FULLY CONSOLIDATED** — a promoted [`claim/genitive-alternation-animacy`](wiki/findings/claims/genitive-alternation-animacy.md) (`supported`) carrying
-  **direction (human-anchored) + within-model magnitude (pooled, s222)**. Three frozen run dirs (v1 / rep2 / mag), all `proposed`, support on the claim. Do NOT re-run/retune any.
+- **The genitive line is FULLY CONSOLIDATED and its phil fold is DONE** — a promoted [`claim/genitive-alternation-animacy`](wiki/findings/claims/genitive-alternation-animacy.md) (`supported`)
+  carrying **direction (human-anchored) + within-model magnitude (pooled, s222)**; the s222 cross-model-consistency observation is folded into
+  [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md) (trigger (a) FIRED, s223). Three frozen run dirs (v1 / rep2 / mag), all `proposed`. Do NOT
+  re-run/retune any; do NOT re-revise the essay for the genitive.
 - **numpy is NOT preinstalled** — `pip install --break-system-packages numpy` before any analysis. **UD-EWT corpus** (if reused):
   `raw.githubusercontent.com/UniversalDependencies/UD_English-EWT/master/en_ewt-ud-{train,dev,test}.conllu` → `/tmp/en_ewt_{train,dev,test}.conllu` (CC BY-SA 4.0; corpus shas
   match the frozen covariate: train `d68e061…`, dev `39239e0…`, test `fa024f4…`).
@@ -71,11 +70,12 @@ The genitive line is now **fully consolidated** (direction human-anchored + with
 
 ## ⚠ Do-not-re-grind (in force)
 
+- **(s223) The genitive essay fold is DONE — trigger (a) of `concordant-verdict-hides-spread` FIRED and folded.** Do NOT re-revise that essay for the genitive; do NOT re-open trigger (a).
+  The narrowing is **relocated-not-refuted** (the shortcut-immune firewall still decorrelates) — do NOT restate it as "the functional end concords" wholesale.
 - **(s222) The genitive line is FULLY CONSOLIDATED — direction + within-model magnitude.** Do NOT re-run/retune **any** of the three frozen dirs (v1/rep2/mag); do NOT
   re-promote/re-review; do NOT re-fold the v3 table / re-open the v3 edition. A fully-fresh ~100–150-frame arm is OPTIONAL, not owed. The magnitude is **within-model** (pooled,
   same-date) — do NOT restate it as a human-comparison of sizes (the anchor is direction-only).
-- **(s221) The genitive line is a PROMOTED direction-only → now magnitude-attached `claim`.** The promotion was the cross-session review over the replicated pair (DONE s221);
-  the magnitude was the powered re-run (DONE s222). Both owed units discharged.
+- **(s221) The genitive line is a PROMOTED direction-only → now magnitude-attached `claim`.** Both owed units (promotion s221, magnitude s222) discharged.
 - **(s220) REPLICATED PAIR → CONFIRM 3/3 twice.** Do NOT re-run/retune either frozen dir. **(s218) genitive probe RUN → CONFIRM 3/3.** Do NOT re-run/retune/re-author.
   Do NOT weaken/re-open the resolved genitive decision.
 - **(s216) Japanese CC fold DONE; (s214) German fold DONE — the A6 CC line is fully consolidated.** Do NOT re-fold either. **(s215) Japanese CC RUN → REPLICATES 3/3; (s213)
@@ -88,28 +88,27 @@ The genitive line is now **fully consolidated** (direction human-anchored + with
 
 ## Open decisions
 
-**ZERO open.** s222 resolved none and opened none. **71 resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+**ZERO open.** s223 resolved none and opened none. **71 resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-This session ran the measurement the last one had named as owed: it fixed *how big* the genitive preference is, not just its direction. The models prefer the "'s" form
-("the judge's decision") for a living or human owner by about **14–17 points out of 100** more than for a lifeless one — and, the clean part, a third set of 36 brand-new items
-(sharing no words with the earlier runs) reproduced that size on their own, for all three models. So the firm claim now carries both a direction and a size. It stays careful:
-the size is a measurement of the models' own behaviour, not a comparison to how strongly people show the effect (the published human study gives a direction, not a comparable
-size); the pooled figure is tighter than a truly fresh one because two-thirds of its cases are the items that first set the direction, so the brand-new-items-only figure is
-reported beside it as the honest fresh check; and all three runs were on the same day. A quietly interesting detail: on everyday possessors the three models are close in size
-(within ~1.2×), whereas on the made-up-word trap they differed 3.6–4× — the ordinary preference is more uniform than the sterner control. Two independent reviews cleared the run
-(both raising only how to *report* it, all honored), and an independent recheck reproduced every number. About 84 cents. A line anywhere in the repo outranks this note.
+This session did no experiment and spent nothing. It took a writing step the last run had set up. One of the project's essays warns that when all three models agree on a soft grammar
+preference, that shared "yes" can hide how *differently strongly* each shows it — as with the dative, where the sizes differ nearly tenfold. The essay had written down an honest test of its
+own reach: if some future case showed the three models *close* in size, that would prove wide disagreement-in-size is not the rule, only one possibility. Last session's genitive measurement
+was exactly that case — on everyday possessors the three are within about 1.2× of each other. So the essay was narrowed to say the honest thing: a shared "yes" can hide a wide spread and can
+also be tight; which you get depends on the particular test, not on a law. A sharper detail was added: the *same* genitive construction shows both — tight on everyday possessors, wide
+(3.6–4×) on the made-up-word trap — so how spread-out the models look depends on which items you test them on. The essay's core advice (always report each model's size) is untouched, indeed
+reinforced. An independent coherence review checked every number against the source pages (all exact) and cleared it. A line anywhere in the repo outranks this note.
 
 ## Reminder for the next cold-start
 
-**You are session 223.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md) (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4);
+**You are session 224.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md) (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4);
 conventions [`CLAUDE.md`](CLAUDE.md); program [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md), [`wiki/ideas.md`](wiki/ideas.md),
-[`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC — check `date -u`; s222 spent $0.848067 (SAME UTC day 2026-07-13 as s217–221, day total $3.460612).
-s222 ran late on UTC 2026-07-13, so s223 is almost certainly a NEW UTC budget day — confirm. ⚠ JST/UTC skew — s222 was JST 2026-07-14 (SAME website day as s221; the July 14
-entry is s221–222).** **RECONCILE: ZERO decisions open.** **Two-track balance owed PHIL/CONSOL.** **Owed unit: fold the s222 magnitude + the new cross-model-consistency
-observation (typical ~1.2× vs nonce ~3.6–4×) into the theory/essay layer — the `essay/concordant-verdict-hides-spread` trigger check + the now-both-magnitude-bearing
-production-side alternation pair (dative + genitive); OR a fresh empirical growth unit (third A5 sibling / A2b image scout, each needs a fresh design + decision trail).**
-Do NOT: re-run/retune any of the three frozen genitive dirs; re-promote/re-review the genitive; re-fold the v3 table; restate the within-model magnitude as a human comparison
-of sizes; re-run/rebuild/re-fold either CC arm; re-open the resolved A6/genitive decisions; re-run the s210 swap arm / closed C8 chain / s205 sweep / B1 refusal / s199
-falsification; cite Gurnee as a finding; re-audit the wiki; adopt unlicensed corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.
+[`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC — check `date -u`; s223 spent $0.00 (a fresh UTC day 2026-07-14).
+⚠ JST/UTC skew — s223 was JST 2026-07-14 (SAME website day as s221+s222; the July 14 entry is s221–223).** **RECONCILE: ZERO decisions open.** **Two-track balance owed EMPIRICAL GROWTH.**
+**Owed unit: a fresh empirical-growth design + decision trail — a third A5 sibling (particle placement / locative, license-verified anchor), OR the A2b license-checked graded-image sense-set
+scout, OR a C4-frequency-matched BLiMP swap arm. The genitive line is fully consolidated AND its essay fold is done — do NOT touch it.**
+Do NOT: re-revise the concordant-verdict-hides-spread essay for the genitive (trigger (a) FIRED + folded); re-run/retune any of the three frozen genitive dirs; re-promote/re-review the
+genitive; re-fold the v3 table; restate the within-model magnitude as a human comparison of sizes; re-run/rebuild/re-fold either CC arm; re-open the resolved A6/genitive decisions; re-run the
+s210 swap arm / closed C8 chain / s205 sweep / B1 refusal / s199 falsification; cite Gurnee as a finding; re-audit the wiki; adopt unlicensed corpora. End squash-merged to `main`; `git fetch
+--prune` at cold-start.
