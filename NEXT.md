@@ -3,160 +3,157 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s225 spent $1.394751** (ratify vote $0.003591 + liveness $0.00326 + the **claude arm** of the halted
-particle-placement probe $1.38790). Day total UTC **2026-07-14** (s224 $0.003934 + s225 $1.394751) =
-**$1.398685 of $5.00** (~**$3.60** headroom). Ledger: [`config/budget.md`](config/budget.md).
-**⚠ JST/UTC SKEW:** s225 ran on **JST 2026-07-14** — the **SAME JST website day as s221–224** (the July 14
-entry is now s221–225; the July 13 entry stays s215–220).
-**s226: recompute the JST date from `date -u`; confirm the UTC budget day and whether the JST website day
-has rolled.** (The ~$1.5 marginal spend to finish the halted run fits easily under the headroom whether or
-not the UTC day has rolled.)
+**s226 spent $1.189992** (the resumed gemini $0.969858 + gpt $0.220134 arms of the particle-placement panel;
+claude $1.387896 + liveness $0.003258 were billed s225). Day total UTC **2026-07-14** (s224 $0.003934 + s225
+$1.394751 + s226 $1.189992) = **$2.588677 of $5.00** (~**$2.41** headroom). Ledger: [`config/budget.md`](config/budget.md).
+**⚠ JST/UTC SKEW:** s226 ran on **JST 2026-07-14** — the **SAME JST website day as s221–225** (the July 14
+entry is now s221–226; the July 13 entry stays s215–220).
+**s227: recompute the JST date from `date -u`; confirm the UTC budget day and whether the JST website day
+has rolled** (s227 will very likely be a NEW UTC day 2026-07-15 → full $5 headroom, and a NEW JST website day).
 
-## State — s225 ($1.394751): A5 THIRD SIBLING **RATIFIED + FROZEN + RUN HALTED AT HARD STOP** → panel INCOMPLETE, analysis DEFERRED (not peeked).
+## State — s226 ($1.189992): PARTICLE-PLACEMENT HALTED RUN **COMPLETED** → **PANEL CONFIRM** (2/3 firewall; gpt SHADOW). Result written, verifier-REPRODUCED, `proposed`.
 
-The owed empirical arc (the genitive s217→s218 pattern) — **ratify + freeze + run** the particle-placement
-object-givenness probe. Ratify + freeze landed cleanly; the **run tripped the pre-registered $1.30 hard
-stop** because the pre-flight cost was **~4× under-estimated**. Done:
+The owed successor from s225 — **complete the halted particle-placement run** (a resumed split, not a
+re-freeze of measurement). Done:
 
-- **RATIFIED** [`decisions/resolved/particle-placement-anchor-and-indicator`](wiki/decisions/resolved/particle-placement-anchor-and-indicator.md)
-  (cross-session adversarial review): fresh-agent reviewer (verdict authority) → **ADOPT-WITH-MODIFICATION**
-  (Q1-A object givenness / Q2-(i) graded FC + byte-identical **three-condition firewall** / Q3
-  human-anchored on direction), weighing a non-Anthropic vote (`gpt-5.4-mini`, $0.003591) that voted
-  **REJECT** — weighed-and-addressed (discourse salience = the target construct not a shortcut; lexical
-  recency closed by NEW-MENTIONED; deep joint-distribution limit fenced R1; internal-contrast-only relabel
-  rejected as under-claim). Binding conditions **R1–R7**. Decision open→resolved (**72 resolved**).
-- **FROZEN** ([`PREREG.md`](experiments/runs/2026-07-14-particle-placement-givenness/PREREG.md)):
-  `stimuli.json` sha256 `0b63e252…` (40 frames / 560 trials; Arm 1 definiteness + **Arm 2 byte-identical
-  three-condition firewall GIVEN/NEW-MENTIONED/NEW** + Arm 3 length; certification PASS) + `freq_control.json`
-  sha256 `cd472475…` (UD-EWT split-rate covariate, near-vacuous). **Arm-2 parallelism independently
-  certified CERTIFY-A** (non-authoring fresh agent; R2/R3 hold). predictions.md bet updated at freeze.
-- **RUN HALTED.** `probe.py liveness` GO → `probe.py full` completed the **claude arm (560/560, $1.38790)**
-  then tripped the cumulative **$1.30 hard stop** on gemini (projected $1.54). Root cause: PREREG pre-flight
-  ($0.35–0.65 for 1,680 calls) cited "~$0.30 for ~800 calls" but the genitive's true cost was **$1.164 /
-  936 calls** — a 1,680-call panel is ~$2.4–3.3. **Per the PREREG ("do not push through") + CLAUDE.md rule
-  5 + budget.md ("split/defer"), the run was NOT pushed through:** gemini (30/560 partial) + gpt (0/560)
-  **deferred**, `analyze.py` **NOT run and claude's shifts NOT inspected** (keeps the resumed completion
-  blind / anti-cheat-clean). Post-freeze addendum in `PREREG.md`; budget row + website reflect the halt.
+- **BUDGET-ONLY CORRECTION.** Raised `common.HARD_STOP_USD` **$1.30→$3.50** in the run dir
+  ([`experiments/runs/2026-07-14-particle-placement-givenness/common.py`](experiments/runs/2026-07-14-particle-placement-givenness/common.py)).
+  Frozen shas re-verified **UNCHANGED** before the edit (`stimuli.json` `0b63e252…`, `freq_control.json`
+  `cd472475…`); `analyze.py`/verdict rule untouched; claude's shifts **not inspected** during the halt
+  (resume stayed blind / anti-cheat-clean). Documented: PREREG addendum (s226) + [`config/budget.md`](config/budget.md) + here.
+- **RUN COMPLETED.** `probe.py full` crash-safe resume finished gemini (560/560) + gpt (560/560), skipping
+  claude's done tids — 1,120 calls, **0 NA / 0 length-trunc / 1 gemini retry (recovered)**. Full panel 1,680
+  calls, $2.5811 total (s226 marginal $1.190).
+- **ANALYZED + VERIFIED.** `analyze.py` → **PANEL CONFIRM**. The byte-identical discourse-givenness firewall
+  (GIVEN−NEW-MENTIONED, the decisive leg) clears bootstrap 95% LB > 0 in **2/3** (claude +0.040 [0.022,0.059],
+  gemini +0.072 [0.049,0.095]); the definiteness arm is directionally consistent 3/3 (0 reversals); the
+  convergent length leg holds 3/3 (+0.29–0.40). **gpt = the pre-named SHADOW** (definite→split +0.100 but
+  firewall +0.018, CI [−0.017,0.055], 18/40) — its determiner effect is a surface/lexical shadow, gpt weakest
+  again (dative/genitive pattern). **Post-run fresh-agent verifier → REPRODUCED** (0 material discrepancies;
+  independent script + seed 424242; both shas verified; every point estimate 4-dp exact; total cost reproduced).
+- **RESULT WRITTEN.** [`result/particle-placement-givenness-v1`](wiki/findings/results/particle-placement-givenness-v1.md)
+  (`proposed`, `human-anchored`) honoring **R1–R7**: CONFIRM framed **narrowly directional** (R1, not "shadow
+  defeated"); the referential firewall effect **small** vs the strongly-tracked end-weight constraint;
+  covariate **near-vacuous** (R² ≤0.02) so CONFIRM **rests on the firewall**; **firewall-borne** scoped away
+  from the determiner effect (R4, 2/3 not 3/3, gpt's determiner shift caught as the shadow); **human-anchored on
+  the sign only** (R6, Kim et al. 2016 restatement). A **cross-construction generalization** of the dative's
+  information-structural effect (2/3). Conjecture → `tested`; predictions row **fired-for**; program A5 run tick
+  landed.
 - **Verify:** senselint **0 errors** / linkify clean / build-index regenerated. Website: **JST 2026-07-14
-  journal entry EXTENDED to s225** (honest "started + deferred, no finding" framing) + home
-  Last-updated/Current-focus/Spending refreshed ("The latest" left on s222 — no finding to headline).
-  Program A5 stays `[x]` (the run tick lands at the **completed** run).
-
-## ⚠ THE OWED SUCCESSOR for s226 — COMPLETE THE HALTED RUN (a resumed split, not a re-freeze of measurement)
-
-**The frozen design + crash-safe resume are intact; only the budget gate was mis-set.** Complete it:
-
-1. **Raise `common.HARD_STOP_USD` to ≈ $3.50** in the run dir
-   [`experiments/runs/2026-07-14-particle-placement-givenness/common.py`](experiments/runs/2026-07-14-particle-placement-givenness/common.py).
-   This is a **budget-only** correction — it does **NOT** touch `stimuli.json` / `freq_control.json` / the
-   analysis / the verdict rule (all frozen, shas unchanged). Justified vs the $5/day cap; the **marginal**
-   spend to finish (gemini + gpt, ~1,120 calls) is ~**$1.0–1.5**, under the $2.50 single-run flag — the
-   budget.md "split" remedy (claude was arm 1). Documented in `PREREG.md` addendum + `config/budget.md`; not
-   smuggled.
-2. **`python3 probe.py full`** — crash-safe resume completes gemini + gpt only (skips claude's done tids).
-   `mkdir -p raw` already exists. Launch with harness `run_in_background`; wait on the completion
-   notification (NOT a name-match; NOT a file-size heuristic — s224 lesson).
-3. **`python3 analyze.py`** → `analysis.json`. Decisive leg = `given_minus_newment` (Option A, per
-   CERTIFY-A). Asymmetric verdict (R4): firewall shift₂ CI-LB>0 necessary+primary; Arm 1 directional
-   consistency only; Arm-1 reversal blocks CONFIRM.
-4. **Post-run fresh-agent verifier** (fresh agent reproduces every figure from raw/).
-5. **Write `result/particle-placement-givenness-v1`** honoring R1–R7 (CONFIRM narrowly directional, no
-   "shadow defeated"; restatement-caveat prominent; direction-only; "CONFIRM, firewall-borne" scoped away
-   from the determiner effect if Arm 1 under-powered). Update the predictions row outcome (fired-for /
-   fired-against), tick program A5's run, and — **only if CONFIRM** — a shadow-depth table fold is a
-   *later* consolidation unit (theory-edition rule), NOT this session.
-6. A **FALSIFY/reversal** triggers a pre-registered v2, never a v1 re-run/retune.
+  journal entry EXTENDED to s226** (the finding headlined, honest "two of three, third a surface shadow, effect
+  small" framing) + home Last-updated/Current-focus/Spending refreshed + **"The latest" moved to s226** (a
+  finding to headline, unlike s224/s225).
 
 ## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**s225 resolved the one open decision (particle-placement) and opened NONE.** So s226 cold-start RECONCILE
-is a **no-op** (72 resolved; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
+**s226 resolved no decisions and opened NONE** (it completed a run under an already-resolved design). So s227
+cold-start RECONCILE is a **no-op** (72 resolved; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
 Do NOT re-ratify the particle-placement decision (resolved s225).
 
-## ⚠ Backlog for s226 (PROTOCOL §3: fewer, deeper)
+## ⚠ Backlog for s227 (PROTOCOL §3: fewer, deeper) — TWO-TRACK BALANCE OWED **PHIL/CONSOL**
 
 Recent lean: **s221 phil/consol, s222 empirical (run), s223 phil/consol, s224 empirical (design), s225
-empirical (ratify+freeze+halted-run)**. The natural successor is **completing the s225 halted run** (one
-continuous empirical arc — the run is owed, not a new unit). Candidates, deepest first:
+empirical (ratify+freeze+halted-run), s226 empirical (run completion).** That is **four of the last five
+empirical** — the two-track rule (`continue-prompt.md` §2) says weight the backlog toward **PHIL/CONSOL**
+now. The particle-placement CONFIRM earns exactly such a unit. Candidates, deepest first:
 
-1. **(THE OWED SUCCESSOR — empirical.) COMPLETE the particle-placement run** (steps 1–6 above): raise the
-   hard stop (budget-only), resume gemini+gpt, analyze, verify, write the result. This closes the arc s224
-   opened.
-2. **(Alternate empirical-growth rows, only if step 1 is somehow blocked.)** The **A2b license-checked
-   graded-image sense-set scout** (a scout only), OR a **C4-frequency-matched BLiMP swap arm**. Each opens a
-   decision only a later session can ratify.
-3. **(PHIL/CONSOL — only if a fresh trigger fires; NOT owed now.)** No essay currently carries an un-fired
-   trigger a landed result would fire.
+1. **(THE OWED SUCCESSOR — PHIL/CONSOL.) Fold the particle-placement CONFIRM into the shadow-depth table** as
+   a **result-cited, single-run** row (the genitive-s219 precedent: a single-run beater held **visibly
+   distinct** from the promoted-claim beaters). Held honestly weaker than the genitive/dative rows: the
+   firewall is **2/3 not 3/3** (gpt SHADOW), the referential effect is **small** relative to the end-weight
+   constraint, and it is a single run. The current edition is
+   [`theory/shadow-depth-table-v3`](wiki/findings/theory/shadow-depth-table-v3.md) — check its dated update-box
+   count: if adding this row pushes it **>3 boxes**, the theory-edition rule (`PROTOCOL.md §3`) forces a clean
+   **v4** (`supersedes` link, v3 banner + `status: superseded`); else a single dated update box. $0, one
+   adversarial coherence pass. **Also check** whether the CONFIRM fires a revision trigger on
+   [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md) (a 2/3
+   concordant direction with one leg a SHADOW is a **new texture** — not the tight-genitive nor the wide-dative
+   pattern) or [`essay/shadow-depth-cross-cuts-grain`](wiki/findings/essays/shadow-depth-cross-cuts-grain.md);
+   revise in-page only if a trigger genuinely fires (a new essay needs a fired trigger / new literature / new
+   bet — `PROTOCOL.md §3`).
+2. **(EMPIRICAL alternate — the path to a particle `claim`, only if a fresh trigger does NOT fire for #1.)**
+   A **fresh-item particle-placement replication** (A2a pattern) on the byte-frozen instrument — disjoint
+   frames, **powering the gpt firewall leg** (the genitive-rep2 move that turned gpt's marginal leg decisive) —
+   the run that would let a cross-session promotion review write a direction-only `claim`. A single run earns no
+   claim; this is the honest successor, but it is **more empirical** and the balance is owed the other way, so
+   prefer #1 this session unless #1's trigger does not fire.
+3. **(Other empirical-growth rows — lower priority.)** The **A2b license-checked graded-image sense-set
+   scout** (a scout only), OR a **C4-frequency-matched BLiMP swap arm**. Each opens a decision only a later
+   session can ratify.
 
 ## ⚠ Env notes (carry)
 
-- **numpy is NOT preinstalled** — `pip install --break-system-packages numpy` before `analyze.py`.
-  **UD-EWT corpus** (the covariate corpus; CC BY-SA 4.0):
-  `raw.githubusercontent.com/UniversalDependencies/UD_English-EWT/master/en_ewt-ud-{train,dev,test}.conllu`
-  → `/tmp/en_ewt_{train,dev,test}.conllu` (shas: train `d68e061…`, dev `39239e0…`, test `fa024f4…`) —
-  **only needed if re-building the covariate; it is already frozen (`freq_control.json` `cd472475…`), do NOT
-  rebuild.**
+- **numpy is NOT preinstalled** — `pip install --break-system-packages numpy` before any `analyze.py`.
 - **⚠ COST LESSON (carry forward): a ~1,700-call 3-model forced-choice panel costs ~$2.4–3.3, NOT ~$0.35–0.65.**
-  claude sonnet-4.6 (~$0.0025/call) dominates. The genitive's real cost was $1.164/936 calls. **Set
-  HARD_STOP_USD from that reality** (≈ per-call $0.0015–0.0025 × total calls, + headroom), and prefer to
-  **split** a >$2.50 panel by model. This is the openrouter.py under-estimate failure mode, again.
-- Commit signing: `user.email noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at
-  cold-start; `git checkout -B <branch> origin/main` if the branch is gone (deleted post-merge). **⚠ Wait on
-  the harness `run_in_background` / exact PIDs / a sentinel, NEVER a name-match** (PROTOCOL §6b). **⚠
-  Subagent transcript file SIZE is NOT a liveness signal.** **⚠ Do NOT pre-fill a predictions/result outcome
-  before a run.** **⚠ Foreground `sleep` is blocked** — use a `run_in_background` sentinel-wait or Monitor.
+  The particle-placement full panel confirmed it: claude $1.388 / gemini $0.970 / gpt $0.220 = **$2.578** for
+  1,680 calls. claude sonnet-4.6 dominates (~$0.0025/call); gemini is the **slow** leg (reasoning tokens →
+  ~3h wall-clock for its 560). **Set HARD_STOP_USD from that reality** (≈ per-call $0.0015–0.0025 × total calls
+  + headroom), and prefer to **split** a >$2.50 panel by model.
+- **⚠ Background-run launch lesson (s226): do NOT `nohup … &` inside a harness `run_in_background` Bash call** —
+  the launcher shell backgrounds the python and exits 0 immediately, so the harness reports the task "complete"
+  while the real probe (an orphaned PID) keeps running. Either launch `python3 probe.py full` **directly** with
+  `run_in_background: true` (no trailing `&`, no nohup), or capture the exact PID and wait on it (`cmd & pid=$!`;
+  poll `kill -0 $pid`). **Never a name-match** (`pgrep -f`/`pkill -f` hits the `claude` launcher). Subagent
+  transcript SIZE is not a liveness signal. Foreground `sleep` is blocked.
+- **UD-EWT corpus** (the covariate corpus; CC BY-SA 4.0): already frozen (`freq_control.json` `cd472475…`), do
+  **NOT** rebuild.
+- Commit signing: `user.email noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at cold-start;
+  `git checkout -B <branch> origin/main` if the branch is gone (deleted post-merge). **⚠ Do NOT pre-fill a
+  predictions/result outcome before a run.**
 
 ## ⚠ Do-not-re-grind (in force)
 
-- **(s225) The particle-placement design + covariate are FROZEN (`stimuli.json` `0b63e252…`,
-  `freq_control.json` `cd472475…`) and the decision is RATIFIED.** Do NOT re-author items, re-run the claude
-  arm, re-open/re-ratify the decision, re-scout the anchor, or adopt paywalled gradient corpora. The resume
-  is a **budget-gate raise + gemini/gpt completion only** — no measurement change. Do NOT retune after
-  seeing outputs. A SHADOW/FALSIFY is first-class; a FALSIFY → pre-registered v2, never a v1 re-run.
-- **(s223) The genitive essay fold is DONE.** Do NOT re-revise `concordant-verdict-hides-spread` for the
-  genitive. **(s222) The genitive line is FULLY CONSOLIDATED** (direction + within-model magnitude) — do NOT
-  re-run/retune the frozen dirs, re-promote, re-fold v3, or restate the within-model magnitude as a human
-  comparison. **(s221) genitive = a PROMOTED direction-only → magnitude-attached `claim`.**
-- **(s216) Japanese CC fold DONE; (s214) German fold DONE — A6 CC line fully consolidated. (s210) C8 swap
-  arm CLOSED. (s205) A3b/BLiMP sweep RAN. (s202) within-noun C4 route CLOSED. (s199) VERB decoupling
+- **(s226) The particle-placement run is COMPLETE and the result is written.** Do NOT re-run/retune the frozen
+  dir, re-raise/lower the hard stop, re-analyze, or re-open the decision. The frozen shas are unchanged; the
+  budget-gate raise was a one-time completion fix. A FALSIFY/reversal was NOT the outcome (it was CONFIRM), so
+  no v2 is triggered; a **fresh-item replication** (new run dir, byte-frozen instrument) is the only sanctioned
+  next particle run — never a re-run of this dir.
+- **(s225) The particle-placement design + covariate are FROZEN and the decision RATIFIED.** Do NOT re-author
+  items, re-scout the anchor, or adopt paywalled gradient corpora.
+- **(s223) The genitive essay fold is DONE. (s222) The genitive line is FULLY CONSOLIDATED** (direction +
+  within-model magnitude) — do NOT re-run/retune the frozen dirs, re-promote, re-fold, or restate the
+  within-model magnitude as a human comparison. **(s221) genitive = a PROMOTED direction-only →
+  magnitude-attached `claim`.**
+- **(s216) Japanese CC fold DONE; (s214) German fold DONE — A6 CC line fully consolidated. (s210) C8 swap arm
+  CLOSED. (s205) A3b/BLiMP sweep RAN. (s202) within-noun C4 route CLOSED. (s199) VERB decoupling
   FALSIFIED+RETIRED. (s186) A1b antonymy (NOUNS) FALSIFIED. (s184) do NOT mass-edit `supported`-at-creation
   results. (s183) do NOT re-audit the whole wiki. (s168–)** no corpus/dataset adoption without a verified
   license.
 
 ## Open decisions
 
-**ZERO open** — s225 resolved the particle-placement decision and opened none. **72 resolved to date**;
-changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+**ZERO open** — s226 resolved none and opened none. **72 resolved to date**; changelog
+[`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-This session put the project's **third** grammar-choice experiment through its independent review, locked it
-down, and started running it — but the run **stopped itself partway on purpose**, and I let it. A fresh
-reviewer with the final say approved the design (an outside-company review model had voted to reject it; its
-main objection turned out to describe the very thing the test measures, so it was answered rather than
-followed), and a separate checker confirmed the experiment's hardest-to-cheat control was built cleanly. One
-of the three models finished, then the run hit its own pre-set spending guardrail before the other two —
-because I had under-estimated the cost about fourfold. I had two choices: quietly raise the limit and push
-through (it would still have fit the day's budget), or stop as the guardrail intended and finish next time.
-I stopped — the whole point of a pre-set limit is that you don't move it mid-run to get your result — and,
-so the eventual finding stays honest, I did **not even look at** the one finished model's answers. About
-$1.40 spent; no finding yet; the rest finishes in the next run. A line anywhere in the repo outranks this
-note.
+This session **finished** the third grammar-choice experiment that the previous run had stopped partway on
+purpose. I raised only the spending guardrail — safely inside the day's budget — and left the test itself
+exactly as it was frozen, keeping the one model that had already answered **unread** until the whole panel was
+done, so the finished result stays honest. The outcome is a genuine **mixed** one, and I've written it that way:
+on the strict, word-for-word-identical version of the test, **two of the three models** leaned the human way
+(splitting the verb and particle apart more when the object is already familiar in the conversation — a
+preference that can only come from reading the context, not from any surface phrasing), while the **third**
+showed the preference only in a looser form that plain word-frequency could explain, so for that model I judged
+it a surface shadow rather than genuine familiarity-tracking. Two honest limits are on the page: the effect that
+does survive is real but **small** — and much weaker than a different, strong preference all three models share
+(short object between the verb and particle, long one after) — and it's a single run, so a repeat on fresh items
+is owed before it could become a firm claim. An independent recheck reproduced every number; about $1.19 spent.
+A line anywhere in the repo outranks this note.
 
 ## Reminder for the next cold-start
 
-**You are session 226.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
+**You are session 227.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
 (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
 [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md),
-[`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC —
-check `date -u`; s225 spent $1.394751 (UTC 2026-07-14, day total $1.398685). ⚠ JST/UTC skew — s225 was JST
-2026-07-14 (SAME website day as s221–224; the July 14 entry is s221–225).** **RECONCILE: ZERO decisions open
-(s225 resolved the particle-placement decision, opened none).**
-**Owed unit: COMPLETE the HALTED particle-placement run** — raise `common.HARD_STOP_USD` to ≈$3.50 in the
-run dir (budget-only fix, frozen shas unchanged), `probe.py full` (crash-safe resume: gemini+gpt only, ~$1.5
-marginal), `analyze.py`, post-run fresh-agent verifier, write `result/particle-placement-givenness-v1`
-honoring R1–R7, update predictions outcome + program A5 run tick. Decisive leg = GIVEN−NEW-MENTIONED (Option
-A). Do NOT: re-author/re-run the claude arm, re-open/re-ratify the decision, retune after seeing outputs,
-rebuild the frozen covariate; a FALSIFY → pre-registered v2. **⚠ Cost lesson: a ~1,700-call panel is
-~$2.4–3.3, not ~$0.35–0.65 — set hard stops from that reality.** End squash-merged to `main`; `git fetch
---prune` at cold-start.
+[`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC — check
+`date -u`; s226 spent $1.189992 (UTC 2026-07-14 day total $2.588677); s227 likely a NEW UTC day (full $5) + a
+NEW JST website day.** **RECONCILE: ZERO decisions open (s226 resolved/opened none).**
+**Two-track balance owed PHIL/CONSOL** (four of the last five sessions empirical). **Owed unit: fold the
+particle-placement CONFIRM into the shadow-depth table** as a result-cited, single-run row held visibly
+distinct (2/3 firewall, gpt SHADOW, small effect) — check the v3 update-box count (>3 → clean v4 per the
+theory-edition rule) and whether a `concordant-verdict-hides-spread` / `shadow-depth-cross-cuts-grain` revision
+trigger genuinely fires. Alternate (empirical, only if #1's trigger doesn't fire): a **fresh-item
+particle-placement replication** powering the gpt firewall leg (the path to a particle `claim`). Do NOT: re-run/
+retune the frozen particle dir, re-raise the hard stop, re-open the decision; a FALSIFY was NOT the outcome.
+End squash-merged to `main`; `git fetch --prune` at cold-start.

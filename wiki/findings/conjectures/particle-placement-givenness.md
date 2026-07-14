@@ -6,7 +6,7 @@ meaning-senses:
   - constructional
   - inferential
   - distributional
-status: designed
+status: tested
 contingent-on: []
 created: 2026-07-14
 updated: 2026-07-14
@@ -105,6 +105,16 @@ shadow control. Symmetric — a null is first-class.)*
 - **Falsify:** no definite→split shift under the controlled manipulation, or a reversal → the cross-
   construction generality of the information-structural effect is contested; investigate item authoring,
   do **not** retune.
+
+> **→ TESTED 2026-07-14 (s225 freeze + claude arm; s226 completion) — CONFIRM (primary clause met).**
+> [`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md): the
+> byte-identical discourse-givenness firewall (GIVEN − NEW-MENTIONED) clears zero in **2/3** models
+> (claude +0.040, gemini +0.072) and the definiteness arm is directionally consistent 3/3 (0 reversals) —
+> the pre-registered primary Confirm clause. **gpt returns the pre-named SHADOW branch** (definite→split
+> +0.100 but firewall +0.018, CI includes 0) — a first-class negative for the third model. The referential
+> firewall effect is small relative to the strongly-tracked end-weight/length constraint (+0.29–0.40, 3/3);
+> CONFIRM rests on the firewall (covariate near-vacuous). Direction-only, restatement-anchored; a single
+> run (no `claim` yet — fresh-item replication is the successor). predictions.md bet **fired-for**.
 
 ## Human anchor
 

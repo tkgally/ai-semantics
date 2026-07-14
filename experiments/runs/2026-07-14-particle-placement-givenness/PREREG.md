@@ -168,3 +168,14 @@ arm 2); (2) `probe.py full` to complete gemini + gpt; (3) `python3 analyze.py`; 
 verifier; (5) write `result/particle-placement-givenness-v1`. The raising of the hard stop is a
 budget-gate fix, not a measurement change, and is recorded here + in `config/budget.md` + `NEXT.md` — not
 smuggled.
+
+## POST-FREEZE ADDENDUM (s226) — HARD STOP RAISED $1.30 → $3.50 (BUDGET-ONLY); RESUME EXECUTED
+
+Per the s225 resume protocol above, `common.HARD_STOP_USD` was raised **$1.30 → $3.50** at the start of
+s226. This is the **budget-only** correction the addendum authorized: `stimuli.json` (`0b63e252…`) and
+`freq_control.json` (`cd472475…`) shas re-verified **unchanged** before the edit; `analyze.py` and the
+verdict rule untouched; claude's arm was **not inspected** before the resume (blind / anti-cheat-clean).
+The raise is justified against the $5/day UTC cap (marginal spend to finish gemini+gpt ~$1.5, under the
+$2.50 single-run flag). Then `probe.py full` (crash-safe resume, gemini+gpt only), `analyze.py`, a
+post-run fresh-agent verifier, and `result/particle-placement-givenness-v1`. Recorded here + in
+`config/budget.md` + `NEXT.md`.
