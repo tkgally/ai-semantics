@@ -155,7 +155,17 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   136 fresh disjoint items, MAGNITUDE-CONFIRMED, verifier-REPRODUCED — construction-isolation gap ≈87pp
   [lb ≈78], inverse-flip 97–100%, no atypical collapse, 3/3; magnitude+interval attached to
   [`claim/comparative-correlative-covariation`](findings/claims/comparative-correlative-covariation.md)) ·
-  environment-gated presupposition `[ ]`.
+  environment-gated presupposition `[ ]` ·
+  verb-particle placement object-givenness **`[~]`** (the A5 third sibling; v1 s225/s226 PANEL CONFIRM
+  single-run → the fresh-item replication is the A2a successor. **rep2 FROZEN + fully pre-run-gated s228**
+  ([`experiments/runs/2026-07-15-particle-placement-givenness-rep2`], byte-frozen instrument + 48 fresh
+  disjoint frames, firewall arm enlarged 40→48 to power the marginal gpt leg; build cert PASS incl.
+  disjointness (D); independent parallelism cert **CERTIFY-B**; non-Anthropic vote **NO-GO** on pair-reuse
+  weighed-and-declined-on-merits → fresh-agent pre-run critic **GO-WITH-CONDITIONS**, 4 post-run
+  disclosures) but the **finding-bearing RUN is DEFERRED** to a full-$5 UTC day — s228 had only ~$2.41 of
+  the $5/UTC cap left and the rep2 panel projects ~$3.1; nothing run/peeked. Record:
+  [`note/particle-placement-givenness-rep2-freeze-v1`](findings/notes/particle-placement-givenness-rep2-freeze-v1.md).
+  Item stays `[~]` until the run + promotion review land the direction-only particle `claim`.).
 - **A2b `[ ]` Grounding-magnitude probe via a different instrument.** The highest-information
   unrun probe in the repo: image/vision referents, genuinely unrun ("costs money" — ~$3–4,
   the best purchase available; the grounded cell has a confirming-direction shape datum and an

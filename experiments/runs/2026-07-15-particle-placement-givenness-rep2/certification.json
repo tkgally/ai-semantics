@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "(1) Arm-2 scored strings BYTE-IDENTICAL across given/newment/new per frame": true,
+    "(2) no scored-string shortcut reader yields ANY within-frame Arm-2 shift": true,
+    "(3) Arm-2 contexts: uniform comma count (1)": true,
+    "(3) Arm-2 contexts: matched word count across given/newment/new": true,
+    "(3) Arm-2 contexts: all declarative": true,
+    "(3) Arm-2 contexts: object noun 1/1/0 in given/newment/new": true,
+    "(3) Arm-2 contexts: no particle word adjacent to the object noun (no leak)": true,
+    "(4) every object a full lexical NP (no pronoun head)": true,
+    "(N) >=40 frames": true,
+    "(N) Arm-2 firewall trials/frame >= Arm-1 definiteness trials/frame (R7 / freeze iv)": true,
+    "(D1) no rep2 (verb,prt,noun) triple shared with v1": true,
+    "(D1b) all 48 rep2 triples distinct within rep2": true,
+    "(D2) no rep2 object noun appears in v1's noun set": true,
+    "(D3) every rep2 verb in the byte-frozen VERB_LEMMA": true,
+    "(D3) every rep2 (verb_lemma,prt) pair in the byte-frozen freq_control.json": true
+  },
+  "fail": [],
+  "max_abs_arm2_frame_shift_per_scored_reader": {
+    "always_split": 0.0,
+    "always_joined": 0.0,
+    "always_A": 0.0,
+    "always_B": 0.0,
+    "position_A_bias": 0.0,
+    "len_shorter_split": 0.0,
+    "objstr_the_split": 0.0
+  },
+  "counts": {
+    "n_frames": 48,
+    "n_trials": 672,
+    "trials_per_frame": {
+      "definiteness": 4,
+      "firewall": 6,
+      "length": 4
+    }
+  },
+  "disjointness": {
+    "n_v1_triples": 40,
+    "n_rep2_triples": 48,
+    "shared_triples": [],
+    "shared_nouns": [],
+    "n_distinct_pairs_reused": 38
+  },
+  "ok": true,
+  "stimuli_sha256": "3544656488431d15eb15dada53b46b2b7573ef647a4c9499f81bece2f2d29826"
+}
