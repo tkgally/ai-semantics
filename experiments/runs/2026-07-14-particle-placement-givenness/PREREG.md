@@ -141,3 +141,30 @@ outputs. A null / SHADOW / FALSIFY is a first-class result. The predictions.md b
 freeze, before the run (never pre-filled with an outcome). A FALSIFY/reversal triggers a pre-registered
 v2, never a v1 re-run. The probe did not run in the opening session (s224) or the ratifying step (s225
 ratification); the freeze + run are this session (s225), the genitive s217→s218 pattern.
+
+## POST-FREEZE ADDENDUM (s225) — RUN HALTED AT HARD STOP; COMPLETION DEFERRED (frozen shas UNCHANGED)
+
+**The run tripped the pre-registered $1.30 hard stop.** `probe.py full` completed the **claude arm
+(560/560, $1.38790 billed)** then halted on the gemini arm (projected cumulative $1.54 > $1.30). **Root
+cause: the pre-flight estimate above (~$0.35–0.65 for 1,680 calls) was ~4× too low** — it cited "~$0.30
+for ~800 calls," but the genitive forced-choice's true cost was **$1.164 / 936 calls**; the true full-
+panel cost here is ~$2.4–3.3 (claude alone 560 calls = $1.39). This is the classic pre-flight under-
+estimate `experiments/lib/openrouter.py` documents; the frozen HARD_STOP_USD = $1.30 was simply set too
+low for a 1,680-call panel.
+
+**Disposition (honoring the freeze — R7, CLAUDE.md rule 5, budget.md).** Per this PREREG's own
+instruction ("do not push through") the run was **NOT pushed through** in-session: gemini (30/560 partial)
++ gpt (0/560) are **deferred**, and `analyze.py` was **NOT run** — claude's finding-bearing shifts were
+**not inspected**, so the resumed completion stays **blind / anti-cheat-clean**. The frozen artifacts
+(`stimuli.json` `0b63e252…`, `freq_control.json` `cd472475…`) and the analysis/verdict rule are
+**unchanged**; only the budget parameter was mis-set.
+
+**Resume protocol (a later session).** The instrument is byte-frozen and `probe.py full` is crash-safe
+(skips completed tids), so the claude arm is **kept**. The resume: (1) raise `common.HARD_STOP_USD` to
+**≈ $3.50** (a **budget-only** correction — it does not touch `stimuli.json`/`freq_control.json`/the
+measurement; justified against the $5/day UTC cap; the **marginal** spend to finish is ~$1.5, under the
+$2.50 single-run prudence flag, so this is the budget.md "split" remedy — claude was arm 1, gemini+gpt are
+arm 2); (2) `probe.py full` to complete gemini + gpt; (3) `python3 analyze.py`; (4) post-run fresh-agent
+verifier; (5) write `result/particle-placement-givenness-v1`. The raising of the hard stop is a
+budget-gate fix, not a measurement change, and is recorded here + in `config/budget.md` + `NEXT.md` — not
+smuggled.

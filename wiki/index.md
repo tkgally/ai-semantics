@@ -486,7 +486,7 @@ Standing references:
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
 - [`experiments/runs/2026-07-14-particle-placement-givenness-design/`](../experiments/runs/2026-07-14-particle-placement-givenness-design/README.md)
-- `experiments/runs/2026-07-14-particle-placement-givenness/` (no README)
+- [`experiments/runs/2026-07-14-particle-placement-givenness/`](../experiments/runs/2026-07-14-particle-placement-givenness/README.md)
 - [`experiments/runs/2026-07-13-genitive-alternation-animacy-rep2/`](../experiments/runs/2026-07-13-genitive-alternation-animacy-rep2/README.md)
 - `experiments/runs/2026-07-13-genitive-alternation-animacy-mag/` (no README)
 - [`experiments/runs/2026-07-13-genitive-alternation-animacy/`](../experiments/runs/2026-07-13-genitive-alternation-animacy/README.md)
