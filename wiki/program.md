@@ -335,6 +335,33 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   (a) open → fired-for. The **production-side alternation pair** (dative + genitive) are now both
   magnitude-bearing — the pair contrast (dative ~9× decorrelation vs genitive-typical ~1.2×) is folded into
   the essay as its sharpest illustration; the v3 table's production-pair row is left untouched (not re-folded).]**
+  **[THIRD SIBLING DESIGN landed s224 — verb-particle placement (particle-placement) object givenness. A
+  license-verified human-direction anchor was scouted + ingested ([`source/kim-2016-particle-placement`](base/sources/kim-2016-particle-placement.md);
+  Kim, Lee & Lee 2016, PACLIC 30, **CC BY 4.0**, verified firsthand — the native-speaker direction
+  *definite/given object → split order* [construction1], *indefinite/new → joined* [construction0], plus
+  *short → split*; a restatement of Gries 1999's synthesis, corroborated on the paper's own native ICE-GB
+  corpus, so a **direction anchor** for the sign, not a fresh rating experiment). Authored
+  [`resource/particle-placement-givenness-human-anchor`](base/resources/particle-placement-givenness-human-anchor.md),
+  [`conjecture/particle-placement-givenness`](findings/conjectures/particle-placement-givenness.md),
+  [`design/particle-placement-givenness-v1`](../experiments/designs/particle-placement-givenness-v1.md)
+  (PROVISIONAL — port of the validated graded-forced-choice), and opened
+  [`decisions/open/particle-placement-anchor-and-indicator`](decisions/open/particle-placement-anchor-and-indicator.md)
+  (Q1 focal constraint / Q2 indicator + shadow control / Q3 anchor posture; provisional defaults **Q1-A
+  object givenness / Q2-(i) graded FC + a byte-identical discourse-givenness firewall / Q3 human-anchored on
+  the direction**), **ratifiable s225+**. **The design's structural advance over the genitive:** object
+  givenness can be moved into the discourse context while the two scored order-strings stay **byte-identical**
+  → a strictly byte-identical firewall (no scored-string statistic can move it), the cleanest shortcut
+  control in the battery, and the same information-structural driver as the dative → a **cross-construction
+  generalization** test. **Pre-run gates:** fresh-agent pre-run critic → **GO-WITH-CONDITIONS** (verdict
+  authority) + one non-Anthropic decorrelation vote (`gpt-5.4-mini`, **$0.003934**) → NO-GO, convergent on
+  the core. **BLOCKER B-crit-1 folded this session:** byte-identity moves the shortcut *into the context*
+  (givenness is created by mentioning the object, so a 2-condition GIVEN−NEW firewall confounds referential
+  givenness with object-noun lexical priming *by construction*) → fixed by a **NEW-MENTIONED** third
+  condition, decisive contrast **GIVEN − NEW-MENTIONED**; plus SHOULD-FIX 1–5 (asymmetric CONFIRM rule;
+  independent parallelism audit; broadened Arm-1 disclosure; definite-in-NEW felicity; FALSIFY → v2). No
+  probe ran — freeze + run owed **s225+** after ratification (the genitive s217→s218 pattern).
+  predictions.md design-level open bet registered. Item stays **`[x]`** (the second sibling is the landed
+  row; this opens the third sibling's design arc — the tick lands at its run).]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked

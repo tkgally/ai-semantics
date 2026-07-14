@@ -3,112 +3,64 @@
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s223 spent $0.00** (a pure phil/consol writing session — no probe, no model call).
-The UTC day at s223 was **2026-07-14** (a fresh budget day — s222 ran late on UTC 2026-07-13). Day total UTC 2026-07-14 (s223) = **$0.00 of $5.00** (full $5 headroom).
+**s224 spent $0.003934** (one non-Anthropic design-critique decorrelation vote; no probe ran).
+The UTC day at s224 was **2026-07-14**. s223 also ran on UTC 2026-07-14 but spent **$0.00**, so the s224 vote is the **first billed row** of UTC 2026-07-14. Day total UTC 2026-07-14 (s223+s224) = **$0.003934 of $5.00** (~$5.00 headroom).
 Ledger: [`config/budget.md`](config/budget.md).
-**⚠ JST/UTC SKEW:** s223 ran on **JST 2026-07-14** — the **SAME JST website day as s221+s222** (the July 14 entry is now s221–223; the July 13 entry stays s215–220).
-**s224: recompute the JST date from `date -u`; confirm the UTC budget day and whether the JST website day has rolled.**
+**⚠ JST/UTC SKEW:** s224 ran on **JST 2026-07-14** — the **SAME JST website day as s221+s222+s223** (the July 14 entry is now s221–224; the July 13 entry stays s215–220).
+**s225: recompute the JST date from `date -u`; confirm the UTC budget day and whether the JST website day has rolled.** (A ~$0.4–0.65 paid run fits easily under the ~$5 headroom if s225 runs the probe.)
 
-## State — s223 ($0.00): essay trigger (a) FIRED → `essay/concordant-verdict-hides-spread` narrowed (a tight concordant functional positive exists).
+## State — s224 ($0.003934): A5 THIRD SIBLING DESIGNED → verb-particle placement object-givenness probe (PROVISIONAL) + license-verified anchor + decision opened; pre-run critic GO-WITH-CONDITIONS (BLOCKER folded).
 
-A single deep PHIL/CONSOL unit (single-unit mode, `PROTOCOL §0`) — the naturally-owed successor s222 named: the s222 genitive **cross-model-consistency** observation fired a **pre-registered** revision trigger. Done:
+A single deep **EMPIRICAL-GROWTH DESIGN** unit (the owed track; the genitive s217 pattern — design + decision-trail is the s224 unit, freeze + run are s225+). Done:
 
-- **THE TRIGGER FIRE.** Trigger (a) of [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md) ("a *tight* concordant functional positive
-  with comparable magnitudes would show decorrelation is not the default at the functional end") **FIRED**: the genitive possessor-animacy **typical arm**
-  ([`result/genitive-alternation-animacy-mag`](wiki/findings/results/genitive-alternation-animacy-mag.md) s222; [`claim/genitive-alternation-animacy`](wiki/findings/claims/genitive-alternation-animacy.md))
-  is a CONFIRM 3/3 whose within-model magnitudes span only **~1.2×** (pooled +0.145 / +0.169 / +0.139 claude / gemini / gpt; fresh-36 blind +0.155 / +0.175 / +0.178, tighter still) — the
-  **first** tight concordant functional positive the essay had, against the dative's ~9×.
-- **THE REVISION (in-page, on a pre-registered fired trigger — the s53/s63/s175/s184 pattern; NO decision opened, NO cross-session ratification owed).** The essay is **narrowed**: wide
-  magnitude spread is **not a law** of the functional end, a **contingent property of the probe**. A **structural point the trigger did not anticipate** was added — the *same* construction
-  carries **both textures on its two control legs** (typical ~1.2× vs nonce firewall ~3.6–4×, gpt the smallest leg), so spread is a property of the **(construction × item-population/control-leg)**,
-  not of the construction or the functional end. A **marked reading** of *why* (dense-exposure vs extrapolation-demand) is offered as an observation, not a finding, and hedged
-  **relocated-not-refuted** (the shortcut-immune firewall — the *cleanest* functional test — still decorrelates as the original thesis predicted; the tight concordance rides on the
-  exposure-supported typical leg). The **carry-the-spread discipline is untouched and vindicated**. Edits: blockquote + → FIRED annotation at the trigger + a dated Update block + a
-  functional-vs-formal Scope correction + a Revision-log entry + front-matter (`updated` 2026-07-14, two new `depends-on`). The **production-side alternation pair** (dative + genitive) are now
-  **both magnitude-bearing** — the pair contrast (dative ~9× vs genitive-typical ~1.2×) is folded into the essay as its sharpest illustration; **the v3 table's production-pair row was left
-  untouched (NOT re-folded)**.
-- **THE GATE.** Fresh-agent **adversarial coherence pass** (read the essay + all four source pages) → **SAFE-TO-LAND**, 0 blockers, all 8 figures verified EXACT with correct model order,
-  fences hold, trigger fires validly. 2 SHOULD-FIX (hedge-alignment) **both applied**; 1 noted nuance (tight leg is the *less*-controlled leg) folded into the Scope correction.
-- **[`predictions.md`](wiki/predictions.md)** (a) row **open → fired-for** (with the ~1.2× vs ~3.6–4× detail).
-- **Verify:** senselint **0 errors** / linkify clean / build-index regenerated. Website: **JST 2026-07-14 journal entry EXTENDED to sessions 221–223** (a blue s223 pill + a paragraph) + home
-  Last-updated/Current-focus refreshed ("The latest" left on s222 — a writing session, no run to headline).
+- **THE THIRD A5 SIBLING.** English **verb-particle placement** (joined *picked up the box* vs split *picked the box up*), focal constraint **object givenness / definiteness** (definite/given object → split order — the **same information-structural driver as the dative**, on a new construction → a **cross-construction generalization** test). Chosen over the locative alternation (which has a CC-BY anchor too — Cao 2021 — but a semantic-entailment/holism constraint, a harder, less dative-parallel first cut; held as a later row).
+- **LICENSE-VERIFIED HUMAN ANCHOR (scouted + verified firsthand).** [`source/kim-2016-particle-placement`](wiki/base/sources/kim-2016-particle-placement.md) (Kim, Lee & Lee 2016, PACLIC 30, **CC BY 4.0** — verified firsthand on the ACL Anthology landing page + PDF body extracted firsthand; native-speaker direction *definite→split* / *short→split* quoted verbatim, construction0=joined / construction1=split mapping confirmed). **Provenance caveat (honest):** it is a **restatement** of the established native-speaker direction (via Gries 1999), corroborated on the paper's own native ICE-GB corpus — NOT a fresh rating experiment like the genitive's Dubois — so it anchors the **direction/sign only**. No license-verified per-item human gradient (verified null; Gries 2003 / Grafmiller & Szmrecsanyi 2018 paywalled — do NOT adopt). → [`resource/particle-placement-givenness-human-anchor`](wiki/base/resources/particle-placement-givenness-human-anchor.md).
+- **CONJECTURE + PROVISIONAL DESIGN.** [`conjecture/particle-placement-givenness`](wiki/findings/conjectures/particle-placement-givenness.md) (contingent on the open decision); [`design/particle-placement-givenness-v1`](experiments/designs/particle-placement-givenness-v1.md) (PROVISIONAL — port of the validated graded-forced-choice). **Structural advance over the genitive:** object givenness moves into the discourse context while the two scored order-strings stay **byte-identical** → a strictly byte-identical firewall (no scored-string statistic can move it — the cleanest shortcut control in the battery).
+- **DECISION OPENED (ratifiable s225+).** [`decisions/open/particle-placement-anchor-and-indicator`](wiki/decisions/open/particle-placement-anchor-and-indicator.md) — Q1 focal constraint / Q2 indicator + shadow control / Q3 anchor posture; provisional defaults **Q1-A object givenness (definiteness primary; length the convergent leg) / Q2-(i) graded FC + a byte-identical 3-condition discourse-givenness firewall + a frozen surface covariate / Q3 human-anchored on the direction (anchor is a restatement)**.
+- **PRE-RUN GATES.** Fresh-agent pre-run critic (verdict authority) → **GO-WITH-CONDITIONS**; one non-Anthropic decorrelation vote (`gpt-5.4-mini`, $0.003934) → **NO-GO**, convergent on the core. **BLOCKER B-crit-1 folded this session:** byte-identity moves the shortcut *into the context* (givenness is created by mentioning the object → a 2-condition GIVEN−NEW firewall confounds referential givenness with object-noun lexical priming *by construction*) → fixed by a **NEW-MENTIONED** third condition, decisive contrast **GIVEN − NEW-MENTIONED**. Plus SHOULD-FIX 1–5 (asymmetric CONFIRM rule so the noisy a/the arm can't veto the clean firewall; independent parallelism audit; broadened Arm-1 disclosure; definite-in-NEW felicity; FALSIFY → pre-registered v2). Critic recommendations for s225 ratification: **Q1 adopt givenness** (only givenness affords the byte-identical firewall — length would forfeit it), **Q3 keep human-anchored on the direction** (internal-contrast-only would under-claim a genuine anchor). Record: [`REVIEW-critic-s224.md`](experiments/runs/2026-07-14-particle-placement-givenness-design/REVIEW-critic-s224.md).
+- **Verify:** senselint **0 errors** / linkify clean / build-index regenerated. Website: **JST 2026-07-14 journal entry EXTENDED to sessions 221–224** (a blue s224 pill) + home Last-updated/Current-focus/Spending refreshed ("The latest" left on s222 — a design session, no run to headline; the s221/s223 precedent). predictions.md design-level open bet registered (no outcome pre-filled). Program A5 stays `[x]` (the tick lands at the third sibling's run).
 
-## ⚠ RECONCILE at cold-start — ZERO decisions open
+## ⚠ RECONCILE at cold-start — ONE decision open (opened s224, ratifiable s225+)
 
-**s223 opened NO decision** (an in-page essay revision on a pre-registered fired trigger is not a new methodological decision). RECONCILE is a no-op at s224 cold-start unless a Tom override appears.
-**71 decisions resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+**s224 opened ONE decision:** [`decisions/open/particle-placement-anchor-and-indicator`](wiki/decisions/open/particle-placement-anchor-and-indicator.md). **RECONCILE at s225 is NOT a no-op** — s225 (or later) must run the cross-session adversarial-review ratification (a fresh-agent reviewer with verdict authority, weighing one non-Anthropic decorrelation vote), weighing the Q1/Q3 recommendations above. **Never ratify what this session opened** — s224 must not ratify it. **71 decisions resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
-## ⚠ Backlog for s224 (PROTOCOL §3: fewer, deeper)
+## ⚠ Backlog for s225 (PROTOCOL §3: fewer, deeper)
 
-Recent lean: **s219 phil/consol, s220 empirical (run), s221 phil/consol, s222 empirical (run), s223 phil/consol**. Two-track balance owed **EMPIRICAL GROWTH**.
-The genitive line is **fully consolidated AND its essay fold is done** — do not touch it. Candidates, deepest first:
+Recent lean: **s220 empirical (run), s221 phil/consol, s222 empirical (run), s223 phil/consol, s224 empirical (design)**. The natural successor is the **RATIFY + FREEZE + RUN** of the particle-placement design (one continuous empirical arc, the genitive s217→s218 pattern — an empirical design followed by its empirical run is one arc, not a two-track imbalance). Candidates, deepest first:
 
-1. **(EMPIRICAL GROWTH — the owed track. Each needs a fresh design + decision trail, so partly phil/consol-flavoured setup — the *design + ratification* is the s224 unit, the run is s225+.)**
-   A **third A5 sibling** (particle placement / locative alternation) once a **license-verified human anchor** is scouted; OR the **A2b license-checked graded-image fine-polysemy sense-set
-   scout** (the highest-information unrun probe — but see the s183 correction: the magnitude is un-instrumentable with in-repo resources, so the realistic A2b unit is a **license-checked
-   scout** for an externally-released graded-image set, not a design/run); OR a **C4-frequency-matched BLiMP swap arm** (the honest successor the s210 closed C8 chain named). Each opens a
-   decision only a *later* session can ratify.
-2. **(PHIL/CONSOL — only if a fresh trigger fires; NOT owed.)** No essay currently carries an un-fired trigger the genitive or any landed result would fire. Do **not** manufacture a phil unit
-   to avoid the empirical-growth owe — the two-track balance is explicit.
-3. **Do NOT** re-run/retune **any** of the three frozen genitive dirs (v1/rep2/mag); do NOT re-promote/re-review the genitive; do NOT re-fold the v3 table; do NOT **re-revise
-   `concordant-verdict-hides-spread` for the genitive** (trigger (a) is now FIRED and folded).
+1. **(THE OWED SUCCESSOR — empirical.) RATIFY + FREEZE + RUN the particle-placement probe.** (a) RECONCILE/ratify [`decisions/open/particle-placement-anchor-and-indicator`](wiki/decisions/open/particle-placement-anchor-and-indicator.md) via cross-session adversarial review + a non-Anthropic vote, weighing Q1-A (givenness) / Q3 (human-anchored on direction). (b) If ratified, **FREEZE** — build the item set including the **NEW-MENTIONED** third firewall condition (B-crit-1) and **independently certify** the GIVEN/NEW-MENTIONED/NEW parallelism (SHOULD-FIX 2) before any call; port the frozen graded-forced-choice instrument; register the predictions bet AT freeze. (c) **RUN** (`probe.py full`, ~$0.35–0.65, fits the headroom). Honor freeze conditions (i)–(x) in [`design/particle-placement-givenness-v1`](experiments/designs/particle-placement-givenness-v1.md). A pre-run-critic NO-GO on the firewall **defers** the run, never relaxes the control. **If the NEW-MENTIONED parallelism cannot be cleanly built, use the Option-B fallback** (2-condition firewall + rescoped "integrates discourse context" claim) — stated in PREREG.
+2. **(Alternate empirical-growth rows, if the particle-placement ratification is deferred.)** The **A2b license-checked graded-image sense-set scout** (highest-information unrun probe — a scout only), OR a **C4-frequency-matched BLiMP swap arm** (the honest successor the s210 closed C8 chain named). Each opens a decision only a later session can ratify.
+3. **(PHIL/CONSOL — only if a fresh trigger fires; NOT owed now.)** No essay currently carries an un-fired trigger a landed result would fire.
 
 ## ⚠ Env notes (carry)
 
-- **The genitive line is FULLY CONSOLIDATED and its phil fold is DONE** — a promoted [`claim/genitive-alternation-animacy`](wiki/findings/claims/genitive-alternation-animacy.md) (`supported`)
-  carrying **direction (human-anchored) + within-model magnitude (pooled, s222)**; the s222 cross-model-consistency observation is folded into
-  [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md) (trigger (a) FIRED, s223). Three frozen run dirs (v1 / rep2 / mag), all `proposed`. Do NOT
-  re-run/retune any; do NOT re-revise the essay for the genitive.
-- **numpy is NOT preinstalled** — `pip install --break-system-packages numpy` before any analysis. **UD-EWT corpus** (if reused):
-  `raw.githubusercontent.com/UniversalDependencies/UD_English-EWT/master/en_ewt-ud-{train,dev,test}.conllu` → `/tmp/en_ewt_{train,dev,test}.conllu` (CC BY-SA 4.0; corpus shas
-  match the frozen covariate: train `d68e061…`, dev `39239e0…`, test `fa024f4…`).
-- **Decorrelation-vote path:** adapt [`experiments/runs/2026-07-13-genitive-alternation-animacy-mag/critic_vote.py`](experiments/runs/2026-07-13-genitive-alternation-animacy-mag/critic_vote.py)
-  (REST `call(PANEL["B"], …)`; `billed_cost([[r]])` returns a `(cost, n, n_missing)` TUPLE — unpack it; cutoff-aware preamble in the script).
-- Commit signing: `user.email noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at cold-start; `git checkout -B <branch> origin/main` if the branch is gone (deleted
-  post-merge). **⚠ Wait on the harness `run_in_background` / exact PIDs / a sentinel, NEVER a name-match** (PROTOCOL §6b). **⚠ Do NOT pre-fill a predictions.md/result outcome
-  before a run.** **⚠ `mkdir -p raw` before probe logs.** **⚠ Foreground `sleep` is blocked — use a `run_in_background` sentinel-wait or the Monitor tool.**
+- **The genitive line is FULLY CONSOLIDATED and its phil fold is DONE** (do NOT touch — see the do-not-re-grind list). **The particle-placement line is a DESIGN + OPEN DECISION only** — nothing frozen, nothing run; do NOT run it before ratification, and do NOT ratify it at s225 cold-start in the same breath as freezing (ratify is cross-session; but s225 ≠ the opening session, so s225 MAY ratify then freeze+run, the genitive s218 pattern).
+- **numpy is NOT preinstalled** — `pip install --break-system-packages numpy` before any analysis. **UD-EWT corpus** (the particle-placement covariate corpus too, CC BY-SA 4.0): `raw.githubusercontent.com/UniversalDependencies/UD_English-EWT/master/en_ewt-ud-{train,dev,test}.conllu` → `/tmp/en_ewt_{train,dev,test}.conllu` (corpus shas: train `d68e061…`, dev `39239e0…`, test `fa024f4…`).
+- **Anchor PDF** (if re-verifying): Kim et al. 2016 at `https://aclanthology.org/Y16-3005.pdf` (CC BY 4.0; `pdfminer.six`); construction0=joined, construction1=split.
+- **Decorrelation-vote path:** adapt [`experiments/runs/2026-07-14-particle-placement-givenness-design/critic_vote.py`](experiments/runs/2026-07-14-particle-placement-givenness-design/critic_vote.py) (REST `call(PANEL["B"], …)`; `billed_cost([[r]])` returns a `(cost, n, n_missing)` TUPLE — unpack it; cutoff-aware preamble in the script).
+- Commit signing: `user.email noreply@anthropic.com` + `user.name Claude`. `git fetch --prune` at cold-start; `git checkout -B <branch> origin/main` if the branch is gone (deleted post-merge). **⚠ Wait on the harness `run_in_background` / exact PIDs / a sentinel, NEVER a name-match** (PROTOCOL §6b). **⚠ Subagent transcript file SIZE is NOT a reliable liveness signal** (it buffers) — do NOT kill a slow subagent on a stale-file-size heuristic (s224 lesson; wait for the completion notification). **⚠ Do NOT pre-fill a predictions.md/result outcome before a run.** **⚠ `mkdir -p raw` before probe logs.** **⚠ Foreground `sleep` is blocked — use a `run_in_background` sentinel-wait or the Monitor tool.**
 
 ## ⚠ Do-not-re-grind (in force)
 
+- **(s224) The particle-placement line is a DESIGN + OPEN DECISION only.** Do NOT run it before ratification; do NOT re-scout the anchor (Kim 2016 CC BY 4.0 is verified + ingested); do NOT adopt the paywalled gradient corpora (Gries 2003 / Grafmiller & Szmrecsanyi 2018); do NOT restate the anchor as a fresh rating experiment (it is a direction restatement). Do NOT ratify the decision in the session that opened it (s224).
 - **(s223) The genitive essay fold is DONE — trigger (a) of `concordant-verdict-hides-spread` FIRED and folded.** Do NOT re-revise that essay for the genitive; do NOT re-open trigger (a).
-  The narrowing is **relocated-not-refuted** (the shortcut-immune firewall still decorrelates) — do NOT restate it as "the functional end concords" wholesale.
-- **(s222) The genitive line is FULLY CONSOLIDATED — direction + within-model magnitude.** Do NOT re-run/retune **any** of the three frozen dirs (v1/rep2/mag); do NOT
-  re-promote/re-review; do NOT re-fold the v3 table / re-open the v3 edition. A fully-fresh ~100–150-frame arm is OPTIONAL, not owed. The magnitude is **within-model** (pooled,
-  same-date) — do NOT restate it as a human-comparison of sizes (the anchor is direction-only).
-- **(s221) The genitive line is a PROMOTED direction-only → now magnitude-attached `claim`.** Both owed units (promotion s221, magnitude s222) discharged.
-- **(s220) REPLICATED PAIR → CONFIRM 3/3 twice.** Do NOT re-run/retune either frozen dir. **(s218) genitive probe RUN → CONFIRM 3/3.** Do NOT re-run/retune/re-author.
-  Do NOT weaken/re-open the resolved genitive decision.
-- **(s216) Japanese CC fold DONE; (s214) German fold DONE — the A6 CC line is fully consolidated.** Do NOT re-fold either. **(s215) Japanese CC RUN → REPLICATES 3/3; (s213)
-  German RUN → REPLICATES 3/3.** Do NOT re-run either arm. **(s212) A6 scope RESOLVED (Q1-C/Q2-B/Q3-A).** Do NOT re-open.
-- **(s210) C8 SWAP ARM RUN → SWAP-INCONCLUSIVE; R1 REFUSED promotion; the C8 chain is CLOSED.** Do NOT re-run/re-open/rebuild. **(s208) C8 COVARIATE arm SURVIVES-COVARIATE
-  3/3. (s205) A3b/BLiMP sweep RUN. (s203) B1 sweep COMPLETE — env-gated presupposition REFUSED.** Do NOT cite Gurnee 2026 as evidence.
-- **(s202) within-noun C4 cue-strength route CLOSED. (s199) VERB-relation decoupling FALSIFIED + RETIRED. (s197) noun cue-strength–recovery decoupling is a NOUN-scoped
-  `claim`, UNTOUCHED. (s196) adjective-antonymy → ANT-CLEARS-CONTROL + H1-PARTIAL. (s186) A1b antonymy (NOUNS) FALSIFIED. (s184) Do NOT mass-edit `supported`-at-creation
-  results. (s183) Do NOT re-audit the whole wiki. (s168–)** no corpus/dataset adoption without a verified license.
+- **(s222) The genitive line is FULLY CONSOLIDATED — direction + within-model magnitude.** Do NOT re-run/retune **any** of the three frozen dirs (v1/rep2/mag); do NOT re-promote/re-review; do NOT re-fold the v3 table / re-open the v3 edition. The magnitude is **within-model** — do NOT restate it as a human-comparison of sizes.
+- **(s221) The genitive is a PROMOTED direction-only → magnitude-attached `claim`.** **(s220) REPLICATED PAIR → CONFIRM 3/3 twice. (s218) genitive probe RUN → CONFIRM 3/3.** Do NOT re-run/retune/re-author; do NOT weaken/re-open the resolved genitive decision.
+- **(s216) Japanese CC fold DONE; (s214) German fold DONE — the A6 CC line is fully consolidated. (s215) Japanese CC RUN → REPLICATES 3/3; (s213) German RUN → REPLICATES 3/3. (s212) A6 scope RESOLVED.** Do NOT re-fold/re-run/re-open.
+- **(s210) C8 SWAP ARM RUN → SWAP-INCONCLUSIVE; the C8 chain is CLOSED.** Do NOT re-run/re-open/rebuild. **(s205) A3b/BLiMP sweep RUN. (s203) B1 sweep COMPLETE.** Do NOT cite Gurnee 2026 as evidence.
+- **(s202) within-noun C4 cue-strength route CLOSED. (s199) VERB-relation decoupling FALSIFIED + RETIRED. (s197) noun cue-strength–recovery decoupling is a NOUN-scoped `claim`. (s196) adjective-antonymy → ANT-CLEARS-CONTROL. (s186) A1b antonymy (NOUNS) FALSIFIED. (s184) Do NOT mass-edit `supported`-at-creation results. (s183) Do NOT re-audit the whole wiki. (s168–)** no corpus/dataset adoption without a verified license.
 
 ## Open decisions
 
-**ZERO open.** s223 resolved none and opened none. **71 resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
+**ONE open** — [`decisions/open/particle-placement-anchor-and-indicator`](wiki/decisions/open/particle-placement-anchor-and-indicator.md) (opened s224, ratifiable s225+). **71 resolved to date**; changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-This session did no experiment and spent nothing. It took a writing step the last run had set up. One of the project's essays warns that when all three models agree on a soft grammar
-preference, that shared "yes" can hide how *differently strongly* each shows it — as with the dative, where the sizes differ nearly tenfold. The essay had written down an honest test of its
-own reach: if some future case showed the three models *close* in size, that would prove wide disagreement-in-size is not the rule, only one possibility. Last session's genitive measurement
-was exactly that case — on everyday possessors the three are within about 1.2× of each other. So the essay was narrowed to say the honest thing: a shared "yes" can hide a wide spread and can
-also be tight; which you get depends on the particular test, not on a law. A sharper detail was added: the *same* genitive construction shows both — tight on everyday possessors, wide
-(3.6–4×) on the made-up-word trap — so how spread-out the models look depends on which items you test them on. The essay's core advice (always report each model's size) is untouched, indeed
-reinforced. An independent coherence review checked every number against the source pages (all exact) and cleared it. A line anywhere in the repo outranks this note.
+This session designed the project's **third** grammar-choice experiment, extending the earlier dative and genitive successes to a new English pattern: whether to say "picked up the box" or "picked the box up." People tend to split the verb and particle apart ("the box up") when the object is already familiar in the conversation, and keep them together ("up the box") when it is brand-new — the same "familiar-first" tendency the dative test found, now on a different construction. The clean trick here is that the two phrasings can be made word-for-word identical, changing only the sentence before them, so any preference can't be dismissed as an echo of which phrasing is more common. An openly-licensed study of native-speaker usage was found and checked firsthand to anchor the human direction (it restates a well-established finding, so it anchors only the direction, not a fine scale). Two independent reviews then caught a genuine hole — that simply having mentioned the object a moment earlier might sway the models without any real grasp of "familiar" — and the design was strengthened with a third, priming-matched comparison to rule that out before any test is run. No experiment ran; the only cost was about $0.004 on one outside-company review. A line anywhere in the repo outranks this note.
 
 ## Reminder for the next cold-start
 
-**You are session 224.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md) (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4);
-conventions [`CLAUDE.md`](CLAUDE.md); program [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md), [`wiki/ideas.md`](wiki/ideas.md),
-[`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC — check `date -u`; s223 spent $0.00 (a fresh UTC day 2026-07-14).
-⚠ JST/UTC skew — s223 was JST 2026-07-14 (SAME website day as s221+s222; the July 14 entry is s221–223).** **RECONCILE: ZERO decisions open.** **Two-track balance owed EMPIRICAL GROWTH.**
-**Owed unit: a fresh empirical-growth design + decision trail — a third A5 sibling (particle placement / locative, license-verified anchor), OR the A2b license-checked graded-image sense-set
-scout, OR a C4-frequency-matched BLiMP swap arm. The genitive line is fully consolidated AND its essay fold is done — do NOT touch it.**
-Do NOT: re-revise the concordant-verdict-hides-spread essay for the genitive (trigger (a) FIRED + folded); re-run/retune any of the three frozen genitive dirs; re-promote/re-review the
-genitive; re-fold the v3 table; restate the within-model magnitude as a human comparison of sizes; re-run/rebuild/re-fold either CC arm; re-open the resolved A6/genitive decisions; re-run the
-s210 swap arm / closed C8 chain / s205 sweep / B1 refusal / s199 falsification; cite Gurnee as a finding; re-audit the wiki; adopt unlicensed corpora. End squash-merged to `main`; `git fetch
---prune` at cold-start.
+**You are session 225.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md) (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md), [`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **Budget: $5/day UTC — check `date -u`; s224 spent $0.003934 (UTC 2026-07-14).
+⚠ JST/UTC skew — s224 was JST 2026-07-14 (SAME website day as s221–223; the July 14 entry is s221–224).** **RECONCILE: ONE decision open (particle-placement-anchor-and-indicator, opened s224, ratifiable s225+ — do NOT ratify in the opening session, but s225 MAY ratify).**
+**Owed unit: RATIFY + FREEZE + RUN the particle-placement object-givenness probe** (the genitive s217→s218 pattern) — build the NEW-MENTIONED third firewall condition (B-crit-1), independently certify the GIVEN/NEW-MENTIONED/NEW parallelism, port the frozen graded-forced-choice instrument, register the bet at freeze, run (~$0.35–0.65). Honor design freeze conditions (i)–(x); a firewall NO-GO defers the run. Q1 adopt givenness / Q3 human-anchored-on-direction per the s224 critic.
+Do NOT: run the particle-placement probe before ratification; ratify it in a session that also can't (s224 opened it, s225 may ratify); re-scout the anchor or adopt paywalled gradient corpora; re-revise the concordant-verdict-hides-spread essay for the genitive; re-run/retune any frozen genitive dir; re-promote/re-review the genitive; re-fold the v3 table; restate within-model magnitude as a human comparison; re-run/rebuild/re-fold either CC arm; re-open resolved A6/genitive decisions; re-run the s210 swap arm / closed C8 chain / s205 sweep / B1 refusal / s199 falsification; cite Gurnee as a finding; re-audit the wiki; adopt unlicensed corpora. End squash-merged to `main`; `git fetch --prune` at cold-start.
