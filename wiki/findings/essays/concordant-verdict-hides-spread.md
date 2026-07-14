@@ -30,6 +30,8 @@ links:
     target: result/genitive-alternation-animacy-mag
   - rel: depends-on
     target: claim/genitive-alternation-animacy
+  - rel: depends-on
+    target: result/particle-placement-givenness-v1
 ---
 
 # Essay: a concordant verdict still hides a spread
@@ -37,8 +39,9 @@ links:
 > **Status: revised (drafted 2026-06-20; revised 2026-06-20, session 53 [trigger (c) — strengthened]
 > and 2026-06-21, session 63; extended 2026-07-06, session 184 [a third texture — the form-ceiling
 > wobble]; revised 2026-07-14, session 223 [trigger (a) FIRED — a tight concordant functional
-> positive, and the same construction showing both textures on its two control legs] — see the
-> Revision log). A philosophical-track / methodological essay
+> positive, and the same construction showing both textures on its two control legs]; extended
+> 2026-07-14, session 227 [a fourth instance — texture 2 sharpened by the byte-identical
+> particle-placement firewall] — see the Revision log). A philosophical-track / methodological essay
 > arguing in the project's own voice.** Its original contribution is a *reading discipline*, not an empirical
 > claim: when a panel returns a **concordant** verdict — every model clears the bar — the binary
 > label "CONFIRM" can still conceal an order-of-magnitude spread in *how cleanly* the models track
@@ -186,6 +189,37 @@ heterogeneous panel throws away the heterogeneity unless something is built to k
 > form-ceiling *indicator* moved, and only at the margin. No panel-scoped or human-comparison claim
 > is added.
 
+> **⬆ Update (2026-07-14, session 227) — a fourth instance, texture 2 sharpened: a concordant *surface*
+> arm can hide a member whose effect is a SHADOW, exposed by a byte-identical deep control within one
+> construction.** The verb-particle placement object-givenness probe
+> ([`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md), s225–226 —
+> the A5 battery's third production-side sibling) is a clean new instance of **texture 2 (convergence
+> heterogeneity)**, and it sharpens what that texture is. All three models shift on the confoundable
+> **definiteness** arm (definite→split **+0.081 / +0.068 / +0.100** claude / gemini / gpt, **3/3**, 0/3
+> reversals) — a concordant surface label. But only **two** carry the shift through the **byte-identical
+> discourse-givenness firewall** (GIVEN − NEW-MENTIONED, the scored object string held identical, only the
+> preceding context varying): claude **+0.040** [0.022, 0.059] and gemini **+0.072** [0.049, 0.095] clear
+> bootstrap CI-LB > 0, while **gpt does not** (+0.018, CI [−0.017, 0.055], 18/40) — gpt "shows it on the
+> surface arm alone," its determiner effect a **SHADOW** the firewall catches. That is exactly texture 2's
+> shape — *convergent at the surface, divergent in depth, one member carrying it deep and another not* — but
+> on a **cleaner control geometry** than the AANN case: there the depth divergence showed up across *two
+> separate instruments* (FC paraphrase vs NLI); here it shows up across a **surface arm and a byte-identical
+> deep control on the same construction**, so the "which way of asking" divergence is pinned to a
+> purpose-built shortcut firewall rather than an instrument switch. The moral is the essay's: a concordant
+> surface label ("all three show definite→split") is a *summary* that discards the depth structure a deeper
+> control keeps — read only the label and you would miss that one member's positive is a shadow.
+>
+> **gpt is the fragile member on all three A5 alternations — the reason the discipline exists.** It is
+> smallest on the dative (+0.056, ~one-tenth gemini's), marginal on the genitive nonce firewall (the weakest
+> leg, decisive only after the rep2 power boost), and a **SHADOW** here (definiteness positive, firewall
+> null). Reading the per-model magnitudes — never the shared label — is exactly what surfaces this recurring
+> fragile member across three separate constructions. **No clause of the reading discipline changes**;
+> texture 2 gains a byte-identically-clean instance and generalizes from *across-instruments* to
+> *across-control-depth-within-a-construction*. No panel-scoped magnitude or human-comparison claim is added
+> (the particle magnitude is within-model; its human anchor is direction-only, a restatement of the Kim et
+> al. 2016 / Gries 1999 native-speaker direction). `depends-on result/particle-placement-givenness-v1`
+> added; status stays `revised`.
+
 ## The reading discipline
 
 The fix is small and continuous with what [`essay/capability-split`](capability-split.md) already
@@ -264,6 +298,19 @@ concordant label always hides a wide spread.
 
 ## Revision log
 
+- **2026-07-14 (session 227), a fourth heterogeneity instance added — texture 2 sharpened; no clause of
+  the discipline changed.** The verb-particle placement object-givenness probe
+  ([`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md), s225–226) is a
+  clean new instance of **texture 2 (convergence heterogeneity)**: a concordant surface **definiteness** arm
+  (+0.081 / +0.068 / +0.100, 3/3) hides a member (gpt) whose effect is a **SHADOW** — it does not survive the
+  **byte-identical discourse-givenness firewall** (only claude +0.040 and gemini +0.072 clear CI-LB > 0; gpt
+  +0.018, CI includes 0). This sharpens texture 2 from *across separate instruments* (the AANN FC-vs-NLI case)
+  to *across a surface arm and a byte-identical deep control on one construction* — the "which way of asking"
+  divergence pinned to a purpose-built shortcut firewall. It also records gpt as the **fragile member on all
+  three A5 alternations** (dative smallest, genitive marginal firewall, particle SHADOW) — precisely what
+  reading per-model magnitudes rather than the shared label surfaces. No clause changes; no panel-scoped or
+  human-comparison claim is added (the particle magnitude is within-model; its anchor is direction-only, a
+  restatement). `depends-on result/particle-placement-givenness-v1` added; status stays `revised`.
 - **2026-07-14 (session 223), trigger (a) FIRED → essay narrowed (prevalence), a structural point
   added; no clause of the discipline changed.** The genitive possessor-animacy typical arm
   ([`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md), s222,

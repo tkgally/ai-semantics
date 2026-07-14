@@ -124,6 +124,23 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   both flagship alternations, discourse-structural AND semantic, the asymmetry shown not averaged). v2 →
   `superseded` + banner (history kept visible); no number changed; fresh coherence pass SAFE-TO-LAND (6/6);
   $0.0015 (one promotion-review vote).
+  **v4 third-edition-rewrite landed s227** ([`theory/shadow-depth-table-v4`](findings/theory/shadow-depth-table-v4.md);
+  the s220/s221/s222 genitive update boxes [3, the edition threshold] forced a clean rewrite at the
+  particle-placement touch): folds the three genitive boxes into clean body prose (the row now states its
+  promoted-direction-only/magnitude-attached-pooled status directly) + adds the **verb-particle placement
+  object-givenness** row as a SIXTH beater — **result-cited, single-run, held visibly distinct** from the
+  five claim-cited beaters (2/3 byte-identical firewall, gpt a SHADOW, referential effect small vs
+  end-weight) — and upgrades the production-side alternation **pair → a three-construction battery** (dative
+  givenness + genitive animacy + particle-placement givenness), whose new reading is that the **same
+  discourse-givenness driver now generalizes across two constructions** (dative + particle, byte-identically,
+  2/3). Two essay-trigger checks: [`essay/concordant-verdict-hides-spread`](findings/essays/concordant-verdict-hides-spread.md)
+  **revised** (particle = a clean fourth texture-2 / convergence-heterogeneity instance, sharpening it from
+  across-instruments to across-control-depth-within-a-construction); [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md)
+  **NOT revised** (no genuine trigger — a new grammatical-pole beater does not overturn the structural
+  thesis; shadow-depth is a phenomenon-level property, so gpt-as-shadow, a model-level fact, does not touch
+  it). v3 → `superseded` + banner (history kept visible); no number changed; fresh-agent adversarial
+  coherence pass BLOCKERS-FOUND (one low-severity miscount "four of six"→"five of six" human-anchored) fixed;
+  senselint 0 / linkify clean; $0.
 - **A2a Powered confirmations (standing habit, now [`PROTOCOL.md`](../PROTOCOL.md) §4).** Any line about to
   carry a claim gets a fresh-item powered re-run at ~100–150 items (~10× founding-era counts;
   still ≲$1 at observed prices) so the claim states a magnitude with an interval, not a
