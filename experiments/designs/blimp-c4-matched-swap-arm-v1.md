@@ -45,6 +45,18 @@ links:
 > ratify the next, run after ratification): **design s231, ratifiable s232+, freeze + run after
 > ratification.** A control that opens value-laden operationalization choices is not run in the session that
 > opens it.
+>
+> **s231 pre-run gates (both GO-WITH-CONDITIONS, convergent Q1-A / Q2-A / Q3-A).** A fresh-agent adversarial
+> pre-run critic (verdict authority) + one non-Anthropic decorrelation vote (`gpt-5.4-mini`, **$0.005444**),
+> recorded in [`REVIEW-design-s231.md`](../runs/2026-07-15-blimp-c4-matched-swap-arm-design/REVIEW-design-s231.md)
+> + [`VOTE-s231.json`](../runs/2026-07-15-blimp-c4-matched-swap-arm-design/VOTE-s231.json). Provenance +
+> anchor **CLEAN**. Two BLOCKERS + three SHOULD-FIX + the vote's blinding guard are **discharged in-design
+> this session** (the s209 precedent: pre-run BLOCKERS on a *design* fold into freeze-time conditions; the
+> design stays `draft`): **B1** (no achieved-match success criterion → `G-C4-match-adequacy` + a new
+> `STILL-INCONCLUSIVE-BY-MATCH-FAILURE` outcome), **B2** (pool-feasibility not a blind rule → `G-C4-band`
+> tightened with a numeric pool floor + a blind Q1-A→Q1-B trigger), **S1** (paradigm-attrition seam →
+> `G-power` extended), **S2** (larger C4 stream option), **S3** (re-motivate the C4 half-width). Nothing
+> frozen, nothing run.
 
 ## The one-line problem this unit exists to solve
 
@@ -131,13 +143,24 @@ norm(s) bind, and how tightly*.
   (the s210 `pick()` discipline, blind to accuracies). This controls **both** confounds at once — it keeps
   the s210 human-frequency guarantee **and** closes the +0.204 pretraining gap — so a residual deep drop
   cannot be *either* a human-frequency *or* a pretraining-frequency artifact, only exact-string memorization
-  (within the reported bands). **Sub-parameter (pinned at freeze after a pool-feasibility check): the C4
-  band width, default ±0.30 log-units** — narrower than the +0.204 gap the arm exists to close, wide enough
-  to keep the intersection pool non-empty for most positions; the freeze session reports pool sizes and, if
-  the intersection is too thin for a position, **drops-and-logs** it (never widens the band after seeing
-  which words survive — G-lexicon-determinism). *Cost of the default:* a smaller eligible pool ⇒ more
-  dropped positions ⇒ possible power loss on thin paradigms (restated per G-power, drop below the usable
-  floor). This is the honest price of a two-confound control and is reported, not hidden.
+  (within the reported bands). **Sub-parameter — the C4 band half-width (default ±0.30 log-units), pinned at
+  freeze by a BLIND, RULE-BASED feasibility gate (B2/S3).** The half-width is motivated **on pool-feasibility
+  + achieved-gap grounds**, not the loose "narrower than +0.204" phrasing — a per-word half-width and a
+  set-mean gap are different quantities (and 0.30 > 0.204 anyway). The freeze session pre-registers a
+  **numeric per-position intersection-pool floor** and a **pre-committed Q1-A→Q1-B fallback trigger** (if the
+  dual-band pool falls below the floor for too many positions), **both decided before any swap item is built
+  and blind to accuracies** — so the band width and the dual-vs-primary choice cannot be selected after
+  seeing which words survive (the DoF the anti-cheat fence closes, sharpened because the s210 drops are
+  known). A position with an empty intersection is **dropped-and-logged**, never force-filled by widening the
+  band (`G-C4-band`). *Cost of the default:* a smaller eligible pool ⇒ more dropped positions ⇒ possible
+  power loss on thin paradigms (restated per G-power). **B1 — the achieved-match ADEQUACY criterion
+  (`G-C4-match-adequacy`):** the input band alone does not prove the confound closed — pool-availability
+  asymmetry (a C4-rare original may have in-band substitutes only *above* it) + coarse 3M-count quantization
+  for exactly the rare deep-scope words can leave a **residual directional set-mean C4 gap**. So the freeze
+  session pre-registers reporting the achieved **per-word AND set-mean** C4 gap and requires
+  |achieved set-mean gap| **≤ ~0.05** (comparable to the s210 achieved SUBTLEX gap of 0.049); if it is not
+  met, the run lands the pre-named **STILL-INCONCLUSIVE-BY-MATCH-FAILURE** (below), never a disambiguation it
+  did not earn.
 - **Q1-B — C4-PRIMARY: match on the C4 band only; report (do not bind) the achieved SUBTLEX gap.** Larger
   pool, less attrition; but it **risks re-introducing a human-frequency gap** — the very confound the s210
   arm controlled — so a deep drop could become a human-frequency artifact instead of a pretraining one. The
@@ -195,6 +218,11 @@ surviving drop.
   - **STILL-INCONCLUSIVE** → neither promotion nor a clean memorization reading; the arm is reported and the
     line notes that even a two-confound-clean swap did not resolve the deep-scope alignment (a candid
     ceiling on what the swap paradigm can show at this N).
+  - **STILL-INCONCLUSIVE-BY-MATCH-FAILURE** (B1 — added by the s231 critic) → the achieved set-mean C4 gap did
+    **not** clear the `G-C4-match-adequacy` threshold (|gap| ≤ ~0.05), so the confound was **not** demonstrably
+    closed; **no verdict is read on DROPS/STABLE** (the disambiguation was not earned), and the line reports
+    that the achievable dual-band match at this stream scale / band width could not close the +0.204 gap
+    cleanly — naming a larger C4 stream (S2) or the Q1-B/Q1-C variants as what a cleaner instrument would need.
 - **Q3-B — treat any stable outcome as a mere robustness datum; never re-open promotion.** Too conservative:
   the s208 SURVIVES-COVARIATE is already in hand, so a genuine DEEP-SWAP-STABLE under a two-confound-clean
   swap *is* the G8 conjunction the program pre-committed would earn candidacy. Rejected.
@@ -216,11 +244,21 @@ the exposure:
    violation the charter forbids (PROTOCOL §2: ratification fixes the yardstick, never the result). This
    design is framed as a **disambiguation** whose two poles are equally publishable; the fresh-agent
    ratifier must confirm the framing is not result-motivated.
-3. **Build-only DoF, verifier-reproduced.** As in s210, the frozen C4-banded lexicon + the substitution
-   recipe + the disjoint-sample seed are frozen in `PREREG.md` and **independently reproduced by a
-   fresh-agent verifier from the recipe before any item is scored** (G5-plus). The C4 counting reuses the
-   s208/s210 `build_cooc_c4.py` streaming adapter import-pinned (no new corpus adoption; the license posture
-   is the in-repo C4 one — [`resource/cooccurrence-corpus-scouting`](../../wiki/base/resources/cooccurrence-corpus-scouting.md)).
+3. **Build-only DoF, verifier-reproduced, and BLIND-SCORED (the vote's guard).** As in s210, the frozen
+   C4-banded lexicon + the substitution recipe + the disjoint-sample seed are frozen in `PREREG.md` and
+   **independently reproduced by a fresh-agent verifier from the recipe before any item is scored** (G5-plus).
+   Per the s231 decorrelation vote's blinding condition, the freeze also **locks the scoring code, the
+   exclusion criteria, and the four-outcome decision table** (DROPS / STABLE / INCONCLUSIVE /
+   INCONCLUSIVE-BY-MATCH-FAILURE) before any re-run, and the verifier **attests no human-readable
+   intermediate output is inspected until the whole batch is scored** — so no analyst discretion can creep in
+   at the point where the prior direction is known. The C4 counting reuses the s208/s210 `build_cooc_c4.py`
+   streaming adapter import-pinned (no new corpus adoption).
+4. **Provenance note (s231 critic flag).** The C4 license posture is anchored to
+   [`resource/cooccurrence-corpus-scouting`](../../wiki/base/resources/cooccurrence-corpus-scouting.md), which
+   is a `status: scouting` page — C4 was never formally *adopted* as a corpus resource; it is used via the
+   `build_cooc_c4.py` adapter (ODC-BY read firsthand). Citing that page for the C4 license posture is accurate
+   and the only correct in-repo target, but the scouting-status lean is flagged: any result this arm produces
+   inherits the s208/s210 C4-as-proxy caveats (G3′), not a formal corpus-adoption anchor.
 
 ## Instrument-line note (the swap-redesign sequence has a governor)
 
@@ -266,10 +304,14 @@ before it runs.
 1. **s231:** wrote this design; opened the decision
    ([`decisions/open/blimp-c4-matched-swap-arm-design`](../../wiki/decisions/open/blimp-c4-matched-swap-arm-design.md);
    Q1–Q3, provisional defaults **Q1-A / Q2-A / Q3-A**); ran the design pre-run critic (fresh agent, verdict
-   authority) + one non-Anthropic decorrelation vote, recorded under
+   authority → **GO-WITH-CONDITIONS**, convergent Q1-A/Q2-A/Q3-A, provenance/anchor CLEAN) + one non-Anthropic
+   decorrelation vote (`gpt-5.4-mini`, **GO-WITH-CONDITIONS**, $0.005444), recorded under
    [`experiments/runs/2026-07-15-blimp-c4-matched-swap-arm-design/`](../runs/2026-07-15-blimp-c4-matched-swap-arm-design/).
-   **Nothing frozen, nothing run.** No `predictions.md` row yet — the bet is registered **at freeze** (the
-   s210 swap-arm lineage: predictions row registered at freeze, not at design), with no outcome pre-filled.
+   **Two BLOCKERS + three SHOULD-FIX + the vote's blinding guard discharged in-design this session** (B1
+   `G-C4-match-adequacy` + the match-failure outcome; B2 `G-C4-band` blind rule-based gate; S1 `G-power`
+   attrition; S2 stream scale; S3 half-width motivation; the blind-scoring lock in G5-plus). **Nothing frozen,
+   nothing run.** No `predictions.md` row yet — the bet is registered **at freeze** (the s210 swap-arm
+   lineage: predictions row registered at freeze, not at design), with no outcome pre-filled.
 2. **Ratify (s232+):** a fresh reviewer + one non-Anthropic vote fix Q1–Q3 (never the opening session).
 3. **Freeze (after ratification):** fork the s210 `build_swap.py` into a C4-banded `build_swap_c4.py` (add
    the C4-band intersection to the substitute pool; sha256-pin the C4-banded lexicon; deterministic seeded
@@ -289,16 +331,31 @@ before it runs.
   recipe before any item is scored**; the C4-banded lexicon is committed + sha256-pinned; the disjoint-sample
   seed is pinned; the symmetric verdict map is frozen. The fresh-agent ratifier explicitly checks the design
   is a disambiguation, not a promotion-seeking retune.
-- **G-C4-band (the new DoF — pinned, not inherited).** The C4 band width (default ±0.30 log-units) is pinned
-  in PREREG after a **pool-feasibility check** (report intersection pool sizes per position); never widened
-  after seeing which words survive. If a position's intersection pool is empty it is **dropped-and-logged**
-  (Q1-A), not force-filled by widening.
-- **G-frame / G-metric / G-coverage / G-power / G-freq / G3′** — all **inherited byte-frozen from the s210
-  PREREG** (frame-safe paradigm restriction; ±0.05 equivalence bands; 0.50 coverage floor; N≈100 fresh pairs
-  with the usable-pair floor and power-restatement; the ±0.10 SUBTLEX achieved-match report; the
-  construction-frequency caveat travels).
+- **G-C4-band (the new DoF — pinned by a BLIND, RULE-BASED gate; B2/S3).** The C4 band half-width (default
+  ±0.30 log-units) is pinned in PREREG by a **numeric per-position intersection-pool floor** + a
+  **pre-committed Q1-A→Q1-B fallback trigger**, **both decided before any swap item is built and blind to
+  accuracies**; never widened after seeing which words survive. A position's empty intersection is
+  **dropped-and-logged** (Q1-A), not force-filled. The half-width is motivated on pool-feasibility +
+  achieved-gap grounds (S3), not "narrower than +0.204".
+- **G-C4-match-adequacy (B1 — the achieved-match SUCCESS criterion; the s231 critic's headline BLOCKER).**
+  The input band does not prove the confound closed. Report the achieved **per-word AND set-mean** C4 gap
+  (at the **same stream scale as the band**, S2); require |achieved set-mean gap| **≤ ~0.05** (comparable to
+  the s210 SUBTLEX gap of 0.049); if not met, land **STILL-INCONCLUSIVE-BY-MATCH-FAILURE** (no DROPS/STABLE
+  verdict read). Verifier-reproduced before scoring.
+- **G-power (extended — S1 the paradigm-attrition seam).** Inherited: N≈100 fresh pairs, `USABLE_FLOOR=60`,
+  power restated on drops. Added: if C4-attrition pushes a **deep** paradigm below the floor, dropping it
+  re-weights the deep-stratum Δ̄ (and `only_npi_scope` was the noisy INCONCLUSIVE-driving paradigm in s210),
+  so the freeze session **pre-registers, before build**, whether a below-floor deep paradigm yields
+  **attrition-inconclusive** vs a re-verdicted **deep-2** — never a post-hoc choice.
+- **S2 (C4 stream scale — freeze option).** Consider banding on the covariate arm's larger C4 stream (22.3M
+  sentences) rather than the 3M diagnostic prefix, so per-word bands are not quantization-limited for rare
+  deep-scope words; whatever stream is chosen, the achieved-gap report (G-C4-match-adequacy) is computed at
+  the **same** scale.
+- **G-frame / G-metric / G-coverage / G-freq / G3′** — all **inherited byte-frozen from the s210 PREREG**
+  (frame-safe paradigm restriction; ±0.05 equivalence bands; 0.50 coverage floor; the ±0.10 SUBTLEX
+  achieved-match report; the construction-frequency caveat travels).
 - **G-disjoint (Q2-A).** The re-run ORIGINAL + C4-matched SWAP sample is a fresh seeded ≈100-pair subsample
   **certified disjoint** from the s210 sample (item ids), asserted + independently re-verified at freeze.
 - Carry the standard fences: PREREG committed before any swap build or model call; independent pre-run critic
-  + one non-Anthropic vote at freeze; `ABORT_USD`; `predictions.md` row at freeze; the s205 INSTRUMENT-FAILURE
-  guard verbatim.
+  + one non-Anthropic vote at freeze; the blind-scoring lock (G5-plus); `ABORT_USD`; `predictions.md` row at
+  freeze; the s205 INSTRUMENT-FAILURE guard verbatim.

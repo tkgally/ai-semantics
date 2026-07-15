@@ -14,10 +14,16 @@ contingent-artifacts:
 > **OPEN — opened session 231 (2026-07-15). Ratifiable s232+** (never in the session that opened it,
 > PROTOCOL §2). Provisional defaults **Q1-A / Q2-A / Q3-A** (front-matter). The design that these gates
 > govern: [`design/blimp-c4-matched-swap-arm-v1`](../../../experiments/designs/blimp-c4-matched-swap-arm-v1.md).
-> The s231 pre-run design critic (fresh agent, verdict authority) + one non-Anthropic decorrelation vote are
-> recorded under
-> [`experiments/runs/2026-07-15-blimp-c4-matched-swap-arm-design/`](../../../experiments/runs/2026-07-15-blimp-c4-matched-swap-arm-design/).
-> Nothing frozen, nothing run. Tom's standing override outranks any autonomous ratification.
+> The s231 pre-run design critic (fresh agent, verdict authority → **GO-WITH-CONDITIONS**, convergent
+> Q1-A/Q2-A/Q3-A, provenance/anchor CLEAN) + one non-Anthropic decorrelation vote (`gpt-5.4-mini`,
+> **GO-WITH-CONDITIONS**, $0.005444) are recorded under
+> [`experiments/runs/2026-07-15-blimp-c4-matched-swap-arm-design/`](../../../experiments/runs/2026-07-15-blimp-c4-matched-swap-arm-design/)
+> ([`REVIEW-design-s231.md`](../../../experiments/runs/2026-07-15-blimp-c4-matched-swap-arm-design/REVIEW-design-s231.md)).
+> **Two BLOCKERS + three SHOULD-FIX + the vote's blinding guard were discharged in-design this session**
+> (B1 → `G-C4-match-adequacy` + a new `STILL-INCONCLUSIVE-BY-MATCH-FAILURE` outcome; B2 → `G-C4-band` as a
+> blind rule-based gate; S1 → `G-power` attrition; S2 → C4 stream scale; S3 → half-width motivation; the
+> blind-scoring lock → G5-plus). Nothing frozen, nothing run. Tom's standing override outranks any autonomous
+> ratification.
 
 ## What is (and is NOT) at stake
 
@@ -78,8 +84,10 @@ the successor arm being that *neither* frequency proxy can explain a surviving d
   strata) → the s210 drop was the C4 confound, SWAP-STABLE obtains, and with the s208 **SURVIVES-COVARIATE**,
   R1 becomes a **bounded promotion-review CANDIDATE** (bounded to "not exact-string memorization, not the
   surface freq proxy, not the pretraining-proxy freq gap"; **still not** construction-frequency-controlled;
-  a later cross-session review writes/refuses the `claim`); **STILL-INCONCLUSIVE** → reported. Promotion is
-  **always cross-session** — this run earns candidacy, never ratifies.
+  a later cross-session review writes/refuses the `claim`); **STILL-INCONCLUSIVE** → reported; and (B1, added
+  by the s231 critic) **STILL-INCONCLUSIVE-BY-MATCH-FAILURE** → the achieved set-mean C4 gap did not clear the
+  `G-C4-match-adequacy` threshold, so no DROPS/STABLE verdict is read (the confound was not demonstrably
+  closed). Promotion is **always cross-session** — this run earns candidacy, never ratifies.
 - **Q3-B** — treat any stable outcome as a mere robustness datum, never re-open promotion. Too conservative
   (the s208 SURVIVES is in hand → a genuine two-confound-clean SWAP-STABLE is exactly the G8 conjunction the
   program pre-committed earns candidacy). Rejected.
@@ -105,13 +113,21 @@ new corpus adoption; the in-repo C4 license posture —
 equivalence, ±0.05 bands), G-coverage (0.50 floor; a low-coverage paradigm's verdict excluded), G-power (N≈100
 fresh pairs, usable-pair floor, power-restatement), G-freq (achieved ±0.10 SUBTLEX gap reported), G3′ (the
 construction-frequency caveat travels; controls exact-string memorization + now both frequency proxies, NOT
-construction frequency), G8 (SURVIVES-COVARIATE ∧ SWAP-STABLE required for candidacy). **New this design:**
-**G-C4-band** (the C4 band width pinned at freeze after a pool-feasibility check, never widened after seeing
-survivors; empty-intersection positions dropped-and-logged), **G-disjoint** (the sample certified disjoint
-from the s210 sample, independently re-verified at freeze), **G5-plus extended** (the ratifier checks the
-disambiguation framing is not a promotion-seeking retune). The standard fences carry: PREREG before any build
-or model call; independent freeze critic + one non-Anthropic vote; `ABORT_USD`; `predictions.md` row at
-freeze; the s205 INSTRUMENT-FAILURE guard verbatim.
+construction frequency), G8 (SURVIVES-COVARIATE ∧ SWAP-STABLE required for candidacy). **New this design (incl. the s231 critic's discharged BLOCKERS/SHOULD-FIX):**
+**G-C4-band** (B2/S3 — the C4 band half-width pinned by a **numeric per-position intersection-pool floor** +
+a pre-committed **blind Q1-A→Q1-B fallback trigger**, decided before build and blind to accuracies; never
+widened; empty-intersection positions dropped-and-logged; half-width motivated on pool-feasibility +
+achieved-gap grounds), **G-C4-match-adequacy** (B1 — report the achieved per-word AND set-mean C4 gap at the
+band's stream scale, require |set-mean gap| ≤ ~0.05 or land **STILL-INCONCLUSIVE-BY-MATCH-FAILURE**),
+**G-power extended** (S1 — pre-register attrition-inconclusive vs re-verdicted deep-2 if a deep paradigm
+drops below the usable floor), **S2** (consider the covariate arm's 22.3M-sentence C4 for banding to avoid
+quantization on rare words), **G-disjoint** (the sample certified disjoint from the s210 sample,
+independently re-verified at freeze), **G5-plus extended** (the ratifier checks the disambiguation framing is
+not a promotion-seeking retune; **the blind-scoring lock** — scoring code + exclusion criteria + the
+four-outcome decision table frozen before any re-run, verifier attests no human-readable intermediate output
+inspected until the whole batch is scored). The standard fences carry: PREREG before any build or model call;
+independent freeze critic + one non-Anthropic vote; `ABORT_USD`; [`predictions.md`](../../predictions.md) row at freeze; the s205
+INSTRUMENT-FAILURE guard verbatim.
 
 ## What each ratification path licenses
 
