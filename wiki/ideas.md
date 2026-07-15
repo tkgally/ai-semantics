@@ -22,7 +22,7 @@ The single test that organizes the project — *does a meaning gradient beat its
 - [`essay/antonymy-outlier-distributional-shadow`](findings/essays/antonymy-outlier-distributional-shadow.md) — antonymy is the relation recovered best because it is where the shadow is largest; cross-method convergence *raises* the deflationary reading (a screening-off failure).
 - [`essay/two-tags-molecularist-bet`](findings/essays/two-tags-molecularist-bet.md) — keeping `distributional` and `inferential` as two tags is structurally a molecularist bet, paid by stipulating the inferential subset per probe.
 
-*Connects to:* [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md) (the measured backbone), [`theory/lexicon-grammar-continuum`](findings/theory/lexicon-grammar-continuum.md).
+*Connects to:* [`theory/shadow-depth-table-v4`](findings/theory/shadow-depth-table-v4.md) (the measured backbone), [`theory/lexicon-grammar-continuum-v2`](findings/theory/lexicon-grammar-continuum-v2.md).
 
 ### 2. Reference: where the behavioral method goes constitutively silent
 
@@ -146,6 +146,6 @@ A cluster of disciplines for constructing and reading behavioral instruments. **
 
 ## Notes
 
-- **How this connects to the rest of the wiki.** The substantive positions (§I) feed the theory pages — [`theory/situating-llm-meaning-v2`](findings/theory/situating-llm-meaning-v2.md) (the four-loci map), [`theory/lexicon-grammar-continuum`](findings/theory/lexicon-grammar-continuum.md) + [`theory/shadow-depth-table-v1`](findings/theory/shadow-depth-table-v1.md) (the continuum and its measured backbone), [`theory/constructional-meaning-in-llms-v2`](findings/theory/constructional-meaning-in-llms-v2.md), [`theory/relational-meaning-in-llms`](findings/theory/relational-meaning-in-llms.md). The methodological disciplines (§II) are codified in [`PROTOCOL.md`](../PROTOCOL.md), and each essay's registered bets and their outcomes are scored in [`predictions.md`](predictions.md).
+- **How this connects to the rest of the wiki.** The substantive positions (§I) feed the theory pages — [`theory/situating-llm-meaning-v2`](findings/theory/situating-llm-meaning-v2.md) (the four-loci map), [`theory/lexicon-grammar-continuum-v2`](findings/theory/lexicon-grammar-continuum-v2.md) + [`theory/shadow-depth-table-v4`](findings/theory/shadow-depth-table-v4.md) (the continuum and its measured backbone), [`theory/constructional-meaning-in-llms-v2`](findings/theory/constructional-meaning-in-llms-v2.md), [`theory/relational-meaning-in-llms`](findings/theory/relational-meaning-in-llms.md). The methodological disciplines (§II) are codified in [`PROTOCOL.md`](../PROTOCOL.md), and each essay's registered bets and their outcomes are scored in [`predictions.md`](predictions.md).
 - **On the count.** "About a dozen" distinct contributions, not a round ten: several essays sharpen, defend, or apply one idea rather than adding a new one, and are listed as members rather than as separate entries.
 - **Maintenance.** A hand-curated reading surface, refreshed at consolidation touches (it is *not* tool-generated). When an essay is added, or an idea genuinely splits, update the relevant entry; add a new numbered entry only for a genuinely new contribution (the `essay` bar, [`PROTOCOL.md`](../PROTOCOL.md) §3, governs whether a new essay was warranted in the first place).
