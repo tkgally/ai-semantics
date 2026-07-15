@@ -8,7 +8,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-06-20
-updated: 2026-07-14
+updated: 2026-07-15
 links:
   - rel: depends-on
     target: result/dative-information-structure-v1
@@ -32,6 +32,10 @@ links:
     target: claim/genitive-alternation-animacy
   - rel: depends-on
     target: result/particle-placement-givenness-v1
+  - rel: depends-on
+    target: result/particle-placement-givenness-rep2
+  - rel: depends-on
+    target: claim/particle-placement-givenness
 ---
 
 # Essay: a concordant verdict still hides a spread
@@ -41,8 +45,10 @@ links:
 > wobble]; revised 2026-07-14, session 223 [trigger (a) FIRED — a tight concordant functional
 > positive, and the same construction showing both textures on its two control legs]; extended
 > 2026-07-14, session 227 [a fourth instance — texture 2 sharpened by the byte-identical
-> particle-placement firewall] — see the Revision log). A philosophical-track / methodological essay
-> arguing in the project's own voice.** Its original contribution is a *reading discipline*, not an empirical
+> particle-placement firewall]; extended 2026-07-15, session 230 [the fourth instance FIRMED — the particle
+> SHADOW replicated + promoted to a claim, gpt's firewall null survived a purpose-built power boost, so it is a
+> persistent shadow, not a single-run draw] — see the Revision log). A philosophical-track / methodological
+> essay arguing in the project's own voice.** Its original contribution is a *reading discipline*, not an empirical
 > claim: when a panel returns a **concordant** verdict — every model clears the bar — the binary
 > label "CONFIRM" can still conceal an order-of-magnitude spread in *how cleanly* the models track
 > the same constraint, and a reader who stops at the label will over-read "they all do it" into
@@ -220,6 +226,41 @@ heterogeneous panel throws away the heterogeneity unless something is built to k
 > al. 2016 / Gries 1999 native-speaker direction). `depends-on result/particle-placement-givenness-v1`
 > added; status stays `revised`.
 
+> **⬆ Update (2026-07-15, session 230) — the fourth instance FIRMED: the particle SHADOW replicated, survived a
+> purpose-built power boost, and was promoted to a claim, so it is a *persistent* shadow, not a single-run
+> draw.** The s227 box above read the particle texture-2 instance off a **single run**
+> ([`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md), s225–226). A
+> fresh-item replication on 48 certified-disjoint frames
+> ([`result/particle-placement-givenness-rep2`](../results/particle-placement-givenness-rep2.md), s229)
+> reproduced the shape exactly — claude **+0.035** [0.019, 0.051] and gemini **+0.057** [0.032, 0.080] again
+> clear the byte-identical firewall (both within v1's CIs), **gpt again does not** (+0.005, CI [−0.027, 0.036])
+> — and the two runs were consolidated by a cross-session promotion review into
+> [`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md) (`supported`,
+> **direction-only, 2/3-firewall**; gpt named a *persistent, replicated SHADOW*). So the fourth heterogeneity
+> instance is no longer a single-run reading; it is a promoted claim, and the citation migrates
+> result → claim.
+>
+> **The sharpening this adds is the one the essay's own framework demands.** A sibling essay,
+> [`essay/point-estimate-is-a-draw`](point-estimate-is-a-draw.md), insists that before any weight rests on a
+> small effect a reader must ask whether it is bigger than its own run-to-run jitter — *is the smaller
+> magnitude bigger than a draw?* gpt's v1 particle firewall null (+0.018, CI including 0) was exactly such a
+> single-run datum, and a fair skeptic could have read it as an underpowered draw rather than a genuine
+> shadow. The rep2 was **built to answer that**: it enlarged only the load-bearing firewall arm **40 → 48
+> frames** *specifically* to power gpt's marginal leg — and gpt **still** did not clear, its point estimate
+> *dropping* to +0.005. A power boost adequate to have detected a small true effect detected none. So gpt's
+> particle shadow is not a single-run draw; it is a **persistent shadow that survived a purpose-built attempt
+> to power it into a real effect** — the strongest form the "read the per-model magnitudes, not the shared
+> label" discipline has yet reached, because here the member the label would have hidden was *stress-tested
+> against the draw hypothesis and held*. The A5 battery is now complete, and gpt is the weak/shadow leg on all
+> three of its alternations at their strongest-tested strength: smallest on the dative (replicated ~9× spread,
+> a real but order-of-magnitude-small effect), the marginal firewall leg on the genitive (decisive only after
+> its rep2 power boost), and a **replicated** SHADOW on the particle (a null that a purpose-built power boost
+> did not move). **No clause of the reading discipline changes**; texture 2's cleanest instance firms from a
+> single run to a replicated, power-stress-tested, promoted claim. No panel-scoped magnitude or human-comparison
+> claim is added (the particle magnitude is within-model; its anchor is direction-only).
+> `depends-on result/particle-placement-givenness-rep2` and [`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md) added; status
+> stays `revised`.
+
 ## The reading discipline
 
 The fix is small and continuous with what [`essay/capability-split`](capability-split.md) already
@@ -298,6 +339,23 @@ concordant label always hides a wide spread.
 
 ## Revision log
 
+- **2026-07-15 (session 230), the fourth instance FIRMED — the particle SHADOW replicated + promoted; no
+  clause of the discipline changed.** The s227 fourth instance rested on the particle **single run** (v1). A
+  fresh-item replication on 48 certified-disjoint frames
+  ([`result/particle-placement-givenness-rep2`](../results/particle-placement-givenness-rep2.md), s229)
+  reproduced the shape (claude +0.035, gemini +0.057 clear the byte-identical firewall, both within v1's CIs;
+  gpt again fails at +0.005), and a cross-session promotion review consolidated the two runs into
+  [`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md) (`supported`,
+  direction-only, 2/3-firewall; gpt a *persistent, replicated SHADOW*). The sharpening the replication adds is
+  the one [`essay/point-estimate-is-a-draw`](point-estimate-is-a-draw.md) demands of any small effect —
+  *is it bigger than a draw?* The rep2 enlarged the firewall arm **40 → 48** *specifically* to power gpt's
+  marginal leg and gpt **still** did not clear (estimate *dropped* to +0.005), so gpt's particle shadow is not
+  a single-run draw but a **persistent** one that survived a purpose-built power boost — texture 2's cleanest
+  instance, firmed from single-run to replicated-and-promoted. gpt is now the weak/shadow leg on all three A5
+  alternations at their strongest-tested strength. No clause changes; no panel-scoped or human-comparison claim
+  is added (particle magnitude within-model; anchor direction-only). `depends-on
+  result/particle-placement-givenness-rep2` and `claim/particle-placement-givenness` added; status stays
+  `revised`.
 - **2026-07-14 (session 227), a fourth heterogeneity instance added — texture 2 sharpened; no clause of
   the discipline changed.** The verb-particle placement object-givenness probe
   ([`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md), s225–226) is a
