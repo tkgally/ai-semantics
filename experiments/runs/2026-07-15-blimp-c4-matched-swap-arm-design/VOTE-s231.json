@@ -1,0 +1,31 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "usage": {
+    "prompt_tokens": 1864,
+    "completion_tokens": 899,
+    "total_tokens": 2763,
+    "cost": 0.0054435,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0054435,
+      "upstream_inference_prompt_cost": 0.001398,
+      "upstream_inference_completions_cost": 0.0040455
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "billed_cost": 0.0054435,
+  "n": 1,
+  "n_missing": 0,
+  "error": null,
+  "content": "1. **Overall vote: GO-WITH-CONDITIONS**\n\nReason: the arm is directionally right \u2014 it directly targets the identified frequency confound \u2014 but the default operationalization still has avoidable leakage and power/selection risks. I would run it only if the freeze-time constraints below are explicit and binding.\n\n2. **Per-gate votes**\n\n- **Q1: A \u2014 DUAL-BAND**\n  - Best default because it closes both the human-frequency and pretraining-proxy channels per word; yes, it risks attrition, but that is the correct cost of identification.  \n  - **Condition:** freeze the band widths and the exact fallback rule before seeing outcomes; no post hoc widening or pool tuning.\n\n- **Q2: A \u2014 SAME 6 PARADIGMS, BOTH STRATA, FRESH DISJOINT SAMPLE**\n  - Necessary to preserve the destructive-control anchor and avoid reusing known baselines.  \n  - Deep-only would weaken interpretability; baseline reuse is a hard no because it reintroduces exposure and drift.\n\n- **Q3: A \u2014 SYMMETRIC MAP WITH CROSS-SESSION PROMOTION**\n  - This is the only option that does not pre-bias the outcome toward \u201cpromotion\u201d or \u201cnegative result.\u201d  \n  - The \u201cbounded candidacy\u201d language is fine as long as it is not secretly a one-way valve for a preferred interpretation.\n\n3. **Biggest methodological risk in C4-matching, and one freeze-time condition**\n\n- **Biggest risk:** the **intersection pool may become selection-biased**. If dual-band matching leaves a nonrandom subset of items eligible, the remaining swaps may systematically differ in lexical class, concreteness, morphology, or semantic salience, so the arm could stop being a clean frequency control and become a new item-selection confound. The \\+-0.30 C4 band is also potentially asymmetric in practical effect: it may still allow big mismatches when the original C4 estimates are noisy or sparse, while attrition may silently reshape the sample.\n\n- **One freeze-time condition:** pre-register the **exact eligible-pool diagnostics and attrition cap**:\n  - report per-paradigm eligible fraction,\n  - forbid any widening or reseeding after freeze,\n  - and require a fixed, predeclared rule for dropping positions with empty intersection.  \n  If attrition exceeds a preset threshold in any paradigm, that paradigm is reported as underpowered rather than repaired.\n\n4. **Is the anti-cheat fence sufficient, or does known-drop exposure need a further guard?**\n\nNot fully sufficient. The symmetric verdict plus fresh disjoint sample and verifier-reproduced build reduce direct leakage, but they do **not** fully neutralize experimenter degrees of freedom when the team already knows the prior direction and rough magnitude of the effect. The remaining risk is subtle: even with no raw accuracies known at freeze, knowledge of the prior deep-drop can influence seemingly innocuous choices in wording, logging, exclusion handling, or how \u201cstable\u201d is interpreted. I would add a hard guard: **lock the scoring code, exclusion criteria, and the exact decision table for interpreting all three outcomes before any re-run starts, and require the verifier to attest that no human-readable intermediate outputs from the fresh run are inspected until after the entire batch is scored.** That makes the current run genuinely blind at the point where analyst discretion would otherwise creep in.\n\n5. **Any place the design looks aimed at a desired result?**\n\n**Yes, mildly.** Two spots stand out:\n\n- The **default choice of Q3-A** is reasonable, but the narrative framing around \u201cbounded promotion-review candidate\u201d and \u201ca first-class negative\u201d reads like the design is already trying to preserve a path to revisiting R1 if the result moves in the favorable direction. That is not fatal, but it is outcome-sensitive language.\n- The **Q1 default DUAL-BAND** is scientifically defensible, yet because it may reduce power and increase empties, there is a risk it can be used to make the arm more likely to return \u201cstill inconclusive\u201d if the eligible pool collapses. That is not obviously intentional, but it is the kind of design that can be tuned toward ambiguity if not tightly frozen.\n\nNet: acceptable to run, but only with strict precommitment on band widths, attrition handling, and scoring blinders."
+}
