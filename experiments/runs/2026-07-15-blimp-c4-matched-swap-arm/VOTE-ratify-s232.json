@@ -1,0 +1,31 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "usage": {
+    "prompt_tokens": 1838,
+    "completion_tokens": 640,
+    "total_tokens": 2478,
+    "cost": 0.0042585,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0042585,
+      "upstream_inference_prompt_cost": 0.0013785,
+      "upstream_inference_completions_cost": 0.00288
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "billed_cost": 0.0042585,
+  "n": 1,
+  "n_missing": 0,
+  "error": null,
+  "content": "1. **Overall verdict: ADOPT-WITH-MODIFICATION**\n\n2. **Per-gate**\n   - **Q1: A** \u2014 Best of the three on confound control: it preserves *both* per-word frequency constraints and makes empty intersections explicit rather than silently relaxing the criterion. I would not ratify it as-is only if the adequacy rule is underspecified (see #3).\n   - **Q2: A** \u2014 Correctly avoids known-accuracy exposure and keeps the re-run disjoint/fresh. The fresh ~100-pair subsample is the right default for a clean within-run Delta-acc.\n   - **Q3: A** \u2014 Symmetric verdicts are appropriate here because the arm is explicitly about separating exact-string/memorization, surface-frequency, and pretraining-proxy explanations. B is too conservative and C is procedurally wrong.\n\n3. **Is G-C4-band + G-C4-match-adequacy sufficient?**\n   - **Not quite.** You have a blind band and a stated adequacy target, but the missing numeric rule is the **decision rule for the set-mean C4 gap when there are empty-intersection drops**: you need a pre-committed threshold on the **fraction of positions dropped / minimum coverage** alongside the \\(|\\text{set-mean gap}|\\le 0.05\\) rule.\n   - As written, a set could \u201cpass\u201d on mean gap while being based on too few matched items. So the missing numeric rule is something like: **minimum retained-position coverage (e.g. \u2265 X% of eligible positions or \u2265 N matched items per paradigm)**, fixed before build.\n\n4. **Is the anti-cheat fence sufficient?**\n   The fence is **good but not fully sufficient**. The disjoint fresh sample, symmetric verdict mapping, verifier-reproduced build, and blind-scoring lock do reduce obvious p-hacking and outcome tuning. But because the arm is designed with knowledge of the prior deep-drop magnitudes, the remaining risk is **selection on the matching sample or band parameters** after seeing how many items survive the intersection. The added guard needed is a **fully pre-committed, numeric stop rule for adequacy/coverage and a fixed fallback hierarchy** (e.g. exactly when Q1-A collapses to Q1-B or the run becomes STILL-INCONCLUSIVE-BY-MATCH-FAILURE), with no post hoc widening or sample reshaping. Without that, the \u201cknown prior effect size\u201d can still influence which matched set gets implicitly treated as admissible.\n\n5. **Any place aimed at a desired result?**\n   - **Potentially yes:** the overall framing leans toward *re-opening R1 promotion* if the deep drop disappears, and Q3-A\u2019s \u201cbounded candidacy\u201d language is somewhat outcome-oriented.\n   - That said, the **symmetric** verdict rule and the explicit refusal condition are genuine safeguards. The main concern is not overt cheating, but **motivated threshold choice** around adequacy/coverage and fallback handling."
+}

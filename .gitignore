@@ -68,3 +68,9 @@ experiments/runs/2026-06-20-scivetti-let-alone-forced-decomposition/raw/cot/
 experiments/runs/2026-06-20-scivetti-let-alone-powered-rerun/raw/cot/
 experiments/runs/2026-06-21-scivetti-let-alone-repeated-runs/raw/cot/
 
+
+# Per-run download cache (.cache/): wholesale re-downloadable third-party corpora a
+# build streams transiently (e.g. the full BLiMP paradigm jsonls, SUBTLEX xlsx). Recipe-
+# not-corpus: commit the build recipe + the DERIVED sha-pinned sample (e.g. the swap arm's
+# disjoint_sample.json / items_swap*.json), never the wholesale corpus dump.
+.cache/

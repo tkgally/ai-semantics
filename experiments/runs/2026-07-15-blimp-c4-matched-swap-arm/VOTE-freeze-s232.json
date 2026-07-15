@@ -1,0 +1,31 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "usage": {
+    "prompt_tokens": 1344,
+    "completion_tokens": 709,
+    "total_tokens": 2053,
+    "cost": 0.0041985,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0041985,
+      "upstream_inference_prompt_cost": 0.001008,
+      "upstream_inference_completions_cost": 0.0031905
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "billed_cost": 0.0041985,
+  "n": 1,
+  "n_missing": 0,
+  "error": null,
+  "content": "1. **Overall: GO-WITH-CONDITIONS.**  \n   The recipe is much better frozen than the prior arm: it pins the main frequency logic, blocks seed-shopping on the substitution step, and separates adequacy from scoring. But I would not call it fully \u201csound to run as-is\u201d until one remaining discretion point is removed: what exactly happens when the pool-floor / trigger conditions are met needs to be unambiguously mechanical and precommitted at the build level, with no analyst choice among alternate fallback paths beyond the single ratified branch.\n\n2. **Dual-band + pool-floor + trigger: mostly blind, but not perfectly discretion-free as written.**  \n   The banding itself is blind if the acceptance rule is literally: eligible iff both constraints pass, with fixed half-widths and deterministic tie-break. The pool-floor is also blind **if** \u201cdrop-and-log\u201d is automatic and the trigger is a deterministic function of counts.  \n   Residual knob: the phrase \u201cthe WHOLE build re-runs under Q1-B C4-primary\u201d could conceal implementation choice unless Q1-B is itself fully specified and irrevocable. Also, if the build can be re-run after seeing the dropped-position rate, an analyst could potentially exploit borderline cases unless the fallback is a single predeclared transformation with no further branching. So: **blind in spirit, but one branch still needs hardening into exact code.**\n\n3. **Adequacy criterion: |signed set-mean C4 gap| \u2264 0.05 is acceptable as the hard adequacy gate; S6 should stay a report, not a gate.**  \n   The hard gate should answer: \u201cIs the matched set close enough in aggregate C4 frequency to make the comparison interpretable?\u201d That is exactly what the set-mean threshold does.  \n   The per-word directional-cancellation flag is valuable diagnostics, but making it a hard gate would be overconstraining and would start reintroducing analyst discretion by letting a secondary pattern override the primary predeclared match criterion. It should remain a **visibility / caution** flag unless you explicitly want a stricter design whose purpose is different from the current one.\n\n4. **On the prior drop: the current protections are close, but I\u2019d still add one guard.**  \n   Seed-pinning, seed-free per-item substitution, verifier-reproduced lexicon, and blind scoring together do remove the obvious \u201csearch until good\u201d pathway. Given the known prior deep drop, the remaining risk is not seed-shopping but **post-build selective interpretation** or silently changing the build rule when the first deterministic realization looks unfavorable. I would add a guard that the exact committed lexicon hash, the exact dropped-position log, and the exact fallback decision are all pre-registered and immutable before any scoring, with a single auditor-verified artifact bundle. That makes it harder to do any after-the-fact narrative smoothing even without changing the seed.\n\n5. **Looks aimed at a desired result?**  \n   **Some mild signs, but not fatal.** The design is clearly motivated by the prior deep drop and by wanting to separate memorization from rarity; that is legitimate. The only potentially result-oriented part is the symmetry of the four-outcome map plus the explicit emphasis on bounded \u201ccross-session candidacy,\u201d which could be read as setting up a favorable interpretive frame. But I do **not** see blatant tuning of constants to force a hoped-for outcome."
+}

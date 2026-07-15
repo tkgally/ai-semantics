@@ -1,19 +1,40 @@
 ---
 id: blimp-c4-matched-swap-arm-design
 title: "BLiMP R1 C4-frequency-matched swap arm (the s210 SWAP-INCONCLUSIVE successor) — the value-laden operationalization gates: the C4-frequency-matching op (Q1 — the crux), the run scope + ORIGINAL baseline (Q2), and the disambiguation verdict + promotion rule (Q3)"
-status: open
+status: resolved
 opened: 2026-07-15
 opened-by: session-231
-provisional-default: "Q1-A (DUAL-BAND: substitute matched within ±0.10 SUBTLEX-US Lg10WF AND within a pinned C4 log-frequency band, default ±0.30, of the original — the intersection pool, seeded-deterministic selection; controls both the human- and the pretraining-frequency channel per word; drop-and-log a position with an empty intersection, never widen the band) / Q2-A (re-run the SAME 6 s210 frame-safe paradigms, both strata, on a FRESH seeded ≈100-pair subsample DISJOINT from the s210 sample, ORIGINAL re-run fresh in-session → within-run paired Δacc with no known-accuracy exposure) / Q3-A (the symmetric disambiguation map: DEEP-STILL-DROPS → cleaner exact-string memorization, R1 refused more firmly; DEEP-SWAP-STABLE → the s210 drop was the C4 confound, SWAP-STABLE obtains, with s208 SURVIVES-COVARIATE R1 becomes a bounded promotion-review CANDIDATE, a later cross-session review writes the claim; STILL-INCONCLUSIVE → reported. Bounded to 'not exact-string memorization, not the surface freq proxy, not the pretraining-proxy freq gap' — still NOT construction-frequency-controlled). Ratifiable s232+ by a fresh-agent adversarial reviewer + one non-Anthropic decorrelation vote; freeze + run after ratification."
+resolved: 2026-07-15
+resolved-by: autonomous (adversarial review)
+resolution: "ADOPT-WITH-MODIFICATION — adopt Q1-A (DUAL-BAND) / Q2-A / Q3-A as the ratified gates, subject to four binding freeze BLOCKERs + four SHOULD-FIX. Ratified s232 by a fresh-agent adversarial reviewer (verdict authority, independent of the s232 freeze) that WEIGHED a non-Anthropic decorrelation vote (gpt-5.4-mini, $0.004259, which also voted ADOPT-WITH-MODIFICATION — convergent). The gate CHOICES are correct and even-handed (dual-band is the only op under which a surviving deep drop is uniquely exact-string memorization net of BOTH frequency channels; Q2-A alone keeps Δacc free of known-accuracy exposure; the symmetric four-outcome map is the anti-cheat backbone). Not ADOPT-DEFAULTS because several load-bearing numbers were still deferred as ~0.05 / default ±0.30 / 'a numeric floor', and this is the one arm designed KNOWING the s210 deep-drop magnitudes (−0.095/−0.057/−0.072), so every unpinned DoF is an anti-cheat surface. Four binding freeze BLOCKERs: (B1) collapse Q1's two floating knobs to one BLIND switch — pin exact per-position pool floor + exact Q1-A→Q1-B trigger with the C4 half-width fixed at a single value (0.30), not both floating, verifier-reproduced; (B2) anti-seed-shopping — one pre-announced date-derived seed for substitute selection AND the disjoint subsample, PREREG forbids seed scanning, fresh-agent verifier attests the seed reproduces the committed lexicon and no seed selection occurred (output-sha pinning alone insufficient); (B3) harden G-C4-match-adequacy to an EXACT |signed set-mean C4 gap| ≤ 0.05 (drop the ~), computed pre-model-call at the pinned stream scale, below ⇒ STILL-INCONCLUSIVE-BY-MATCH-FAILURE; (B4) blind-scoring lock as a hard fresh-agent WRITTEN attestation (scoring code + exclusions + the four-outcome table frozen before any re-run; verifier attests no human-readable intermediate inspected until the full batch is scored). Four SHOULD-FIX: (S5) firm S2 to a single pinned stream scale (22.3M ≫ the 3M prefix); (S6) per-word C4 adequacy report + a pre-committed soft directional-cancellation check; (S7) state TOST equivalence power at post-attrition usable-N + pin the exact S1 attrition fallback (attrition-inconclusive vs deep-2, ≥2-deep floor) + size N toward ~150 pre-attrition; (S8) keep the refusing-pole successor motivation visible in the not-result-motivated freeze attestation. Result-motivation check: NONE (bands literally symmetric; the successor motivation leans toward the REFUSING pole; DEEP-SWAP-STABLE earns only bounded cross-session candidacy). Tom's standing override outranks this autonomous ratification."
 contingent-artifacts:
   - design/blimp-c4-matched-swap-arm-v1
 ---
 
 # Decision: the operationalization gates of the BLiMP R1 C4-frequency-matched swap arm (A3b)
 
-> **OPEN — opened session 231 (2026-07-15). Ratifiable s232+** (never in the session that opened it,
-> PROTOCOL §2). Provisional defaults **Q1-A / Q2-A / Q3-A** (front-matter). The design that these gates
-> govern: [`design/blimp-c4-matched-swap-arm-v1`](../../../experiments/designs/blimp-c4-matched-swap-arm-v1.md).
+> **RESOLVED — session 232 (2026-07-15), autonomous cross-session adversarial review. ADOPT-WITH-MODIFICATION**
+> (adopt **Q1-A / Q2-A / Q3-A**, subject to binding freeze BLOCKERs B1–B4 + SHOULD-FIX S5–S8). A fresh-agent
+> adversarial ratification reviewer (verdict authority, independent of the s232 freeze) **weighed** a
+> non-Anthropic decorrelation vote (`gpt-5.4-mini`, **$0.004259**, which also voted ADOPT-WITH-MODIFICATION —
+> convergent), recorded under
+> [`experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/`](../../../experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/)
+> ([`REVIEW-ratify-s232.md`](../../../experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/REVIEW-ratify-s232.md)
+> + [`VOTE-ratify-s232.json`](../../../experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/VOTE-ratify-s232.json)).
+> The four BLOCKERs + four SHOULD-FIX are **all honored in the s232 freeze** (PREREG
+> [`experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/PREREG.md`](../../../experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/PREREG.md)):
+> the C4 band (±0.30), per-position pool floor (5), Q1-A→Q1-B trigger (0.25), stream scale (22.3M / 3 shards),
+> and adequacy threshold (|signed set-mean gap| ≤ 0.05) are pinned as code constants; the seed (20260715,
+> date-derived) is pre-announced for the disjoint subsample and substitute selection is seed-free
+> (item-hash deterministic); the four-outcome table + blind-scoring lock are frozen. The **RUN is deferred**
+> to a full-$5 UTC day (s232 landed on the tight 2026-07-15 UTC day; the s228→s229 precedent). Below is the
+> decision as opened s231 (defaults **Q1-A / Q2-A / Q3-A**). Tom's standing override outranks any autonomous
+> ratification.
+>
+> ---
+>
+> **[Original OPEN record, s231:]** opened session 231 (2026-07-15). The design these gates govern:
+> [`design/blimp-c4-matched-swap-arm-v1`](../../../experiments/designs/blimp-c4-matched-swap-arm-v1.md).
 > The s231 pre-run design critic (fresh agent, verdict authority → **GO-WITH-CONDITIONS**, convergent
 > Q1-A/Q2-A/Q3-A, provenance/anchor CLEAN) + one non-Anthropic decorrelation vote (`gpt-5.4-mini`,
 > **GO-WITH-CONDITIONS**, $0.005444) are recorded under

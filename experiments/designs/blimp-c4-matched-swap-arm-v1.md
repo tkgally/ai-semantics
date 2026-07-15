@@ -35,6 +35,16 @@ links:
 
 # Design v1 — BLiMP R1 C4-frequency-matched swap arm (program A3b; the s210 SWAP-INCONCLUSIVE honest successor)
 
+> **UPDATE s232 (2026-07-15): RATIFIED + FROZEN; RUN DEFERRED.** The three gates were **ratified s232**
+> (autonomous cross-session adversarial review + one non-Anthropic vote → **ADOPT-WITH-MODIFICATION**,
+> Q1-A DUAL-BAND / Q2-A / Q3-A, subject to freeze BLOCKERs B1–B4 + SHOULD-FIX S5–S8 — all honored at freeze)
+> and the arm was **frozen s232** (recipe + PREREG + disjoint sample under
+> [`experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/`](../runs/2026-07-15-blimp-c4-matched-swap-arm/);
+> freeze critic + a second non-Anthropic vote). The finding-bearing **run is deferred** to a full-$5 UTC day
+> (s232 landed on the tight 2026-07-15 UTC day; the s228→s229 precedent). Decision:
+> [`decisions/resolved/blimp-c4-matched-swap-arm-design`](../../wiki/decisions/resolved/blimp-c4-matched-swap-arm-design.md);
+> freeze method record: [`note/blimp-c4-matched-swap-arm-freeze-v1`](../../wiki/findings/notes/blimp-c4-matched-swap-arm-freeze-v1.md).
+>
 > **A design + decision-trail unit (s231).** Status: **DESIGN — three operationalization gates open,
 > ratifiable s232+.** The instrument is inherited **byte-frozen** from the s210 content-word-swap arm
 > ([`design/blimp-swap-arm-v1`](blimp-swap-arm-v1.md); PREREG
