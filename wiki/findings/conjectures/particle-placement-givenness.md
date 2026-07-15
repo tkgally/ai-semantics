@@ -34,6 +34,17 @@ links:
 > (ADOPT-WITH-MODIFICATION, binding conditions R1–R7); the design
 > [`design/particle-placement-givenness-v1`](../../../experiments/designs/particle-placement-givenness-v1.md)
 > was **frozen + run s225** (the genitive s217→s218 pattern; no probe ran in the opening session s224).
+>
+> **→ TESTED + PROMOTED (direction-only, 2/3) 2026-07-15, session 229.** v1 (s225/s226 PANEL CONFIRM) + the
+> fresh-item replication [`result/particle-placement-givenness-rep2`](../results/particle-placement-givenness-rep2.md)
+> (s229 PANEL CONFIRM on certified-disjoint items) were consolidated by a cross-session promotion review into
+> [`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md) — but promoted
+> **direction-only at 2/3** (claude, gemini): the byte-identical firewall survives for two of three models,
+> and **gpt is a persistent, replicated SHADOW** (its determiner effect does not survive the firewall on
+> either run, and the arm enlargement built to power it did not pull it over). So the conjecture as stated
+> (that *LLMs* — panel-wide — track object-givenness on particle placement) is **partly** confirmed:
+> confirmed for claude and gemini, **falsified for gpt** at the firewall (the referential effect is a
+> surface/lexical shadow there). Direction-only, no within-model magnitude attached.
 
 # Conjecture: LLMs track the object-givenness constraint on verb-particle placement
 

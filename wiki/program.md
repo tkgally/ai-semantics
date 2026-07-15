@@ -156,16 +156,21 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [lb ≈78], inverse-flip 97–100%, no atypical collapse, 3/3; magnitude+interval attached to
   [`claim/comparative-correlative-covariation`](findings/claims/comparative-correlative-covariation.md)) ·
   environment-gated presupposition `[ ]` ·
-  verb-particle placement object-givenness **`[~]`** (the A5 third sibling; v1 s225/s226 PANEL CONFIRM
-  single-run → the fresh-item replication is the A2a successor. **rep2 FROZEN + fully pre-run-gated s228**
+  verb-particle placement object-givenness **`[x]`** (the A5 third sibling; v1 s225/s226 PANEL CONFIRM
+  single-run → **rep2 FROZEN + pre-run-gated s228, RUN s229**. The s228 freeze
   ([`experiments/runs/2026-07-15-particle-placement-givenness-rep2`], byte-frozen instrument + 48 fresh
   disjoint frames, firewall arm enlarged 40→48 to power the marginal gpt leg; build cert PASS incl.
-  disjointness (D); independent parallelism cert **CERTIFY-B**; non-Anthropic vote **NO-GO** on pair-reuse
+  disjointness (D); independent parallelism cert **CERTIFY-B**; non-Anthropic vote NO-GO on pair-reuse
   weighed-and-declined-on-merits → fresh-agent pre-run critic **GO-WITH-CONDITIONS**, 4 post-run
-  disclosures) but the **finding-bearing RUN is DEFERRED** to a full-$5 UTC day — s228 had only ~$2.41 of
-  the $5/UTC cap left and the rep2 panel projects ~$3.1; nothing run/peeked. Record:
-  [`note/particle-placement-givenness-rep2-freeze-v1`](findings/notes/particle-placement-givenness-rep2-freeze-v1.md).
-  Item stays `[~]` until the run + promotion review land the direction-only particle `claim`.).
+  disclosures) deferred the run for budget; **s229 ran it on a fresh full-$5 UTC day** (2,016 calls,
+  0 NA, $3.17645; verifier **REPRODUCED**) → [`result/particle-placement-givenness-rep2`](findings/results/particle-placement-givenness-rep2.md):
+  **PANEL CONFIRM — v1 REPLICATES** (firewall CI-LB>0 2/3, both legs within v1's CIs; gpt a **persistent**
+  SHADOW — the enlargement did not pull it over). Cross-session **PROMOTION REVIEW s229** (fresh reviewer
+  PROMOTE-DIRECTION-ONLY + non-Anthropic vote PROMOTE-WITH-CONDITIONS, convergent) →
+  [`claim/particle-placement-givenness`](findings/claims/particle-placement-givenness.md) (**direction-only,
+  2/3-firewall — the project's first 2/3-firewall promotion**; gpt persistent SHADOW; no magnitude; 12 fences;
+  held below the genitive) + [`theory/shadow-depth-table-v4`](findings/theory/shadow-depth-table-v4.md)
+  particle row migrated result-cited → claim-cited. The A2a firewall row is discharged.).
 - **A2b `[ ]` Grounding-magnitude probe via a different instrument.** The highest-information
   unrun probe in the repo: image/vision referents, genuinely unrun ("costs money" — ~$3–4,
   the best purchase available; the grounded cell has a confirming-direction shape datum and an
