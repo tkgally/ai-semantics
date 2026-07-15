@@ -24,10 +24,20 @@ links:
     target: concept/constructional-meaning
   - rel: supports
     target: claim/dative-information-structure-givenness
+  - rel: supports
+    target: claim/particle-placement-givenness
 ---
 
 # Result: verb-particle placement tracks object discourse-givenness (v1)
 
+> **→ PROMOTED (with rep2) 2026-07-15, session 229.** This result + its fresh-item replication
+> [`result/particle-placement-givenness-rep2`](particle-placement-givenness-rep2.md) (s229, PANEL CONFIRM
+> again on certified-disjoint items) cleared the [`PROTOCOL.md §3`](../../../PROTOCOL.md) REPLICATED ∧
+> controls-survived bar and were consolidated by a cross-session promotion review into
+> [`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md) (`supported`,
+> **direction-only, 2/3-firewall**, the project's first 2/3-firewall promotion; gpt a persistent replicated
+> SHADOW; no magnitude attached). Support migrates to the claim layer; this result stays `proposed`.
+>
 > **Status: proposed (2026-07-14, sessions 225–226).** Runs the frozen, certified, ratified instrument
 > ([`decisions/resolved/particle-placement-anchor-and-indicator`](../../decisions/resolved/particle-placement-anchor-and-indicator.md),
 > ADOPT-WITH-MODIFICATION Q1-A / Q2-(i) / Q3 human-anchored; binding conditions R1–R7 honored in

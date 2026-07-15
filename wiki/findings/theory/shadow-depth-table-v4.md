@@ -1,7 +1,7 @@
 ---
 type: theory
 id: shadow-depth-table-v4
-title: The shadow-depth table (v4) — the flagship measured object, fourth edition; the verb-particle placement object-givenness probe folds in as a sixth beater row (a result-cited single run, held distinct — 2/3 firewall, gpt a SHADOW, effect small), the production-side alternation pair becomes a three-construction battery (dative + genitive + particle placement), and the s220/s221/s222 genitive update boxes fold into clean body prose
+title: The shadow-depth table (v4) — the flagship measured object, fourth edition; the verb-particle placement object-givenness probe folds in as a sixth beater row (result-cited single-run at founding s227; migrated to claim-cited s229 after its fresh-item replication — promoted direction-only at 2/3-firewall, gpt a persistent SHADOW, effect small, no magnitude), the production-side alternation pair becomes a three-construction battery (dative + genitive + particle placement), and the s220/s221/s222 genitive update boxes fold into clean body prose
 meaning-senses:
   - distributional
   - constructional
@@ -12,7 +12,7 @@ status: draft
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-14
-updated: 2026-07-14
+updated: 2026-07-15
 links:
   - rel: supersedes
     target: theory/shadow-depth-table-v3
@@ -34,6 +34,10 @@ links:
     target: claim/lexical-sense-gradience
   - rel: depends-on
     target: claim/genitive-alternation-animacy
+  - rel: depends-on
+    target: claim/particle-placement-givenness
+  - rel: depends-on
+    target: result/particle-placement-givenness-rep2
   - rel: depends-on
     target: result/genitive-alternation-animacy-rep2
   - rel: depends-on
@@ -127,6 +131,17 @@ links:
 > human comparison and asserts no human-comparison claim of its own; the label stands, and every imported
 > reading is displayed with its caveat attached wherever it appears.)*
 
+> **→ Update 2026-07-15 (session 229): the particle row migrated result-cited → claim-cited.** The
+> fresh-item replication [`result/particle-placement-givenness-rep2`](../results/particle-placement-givenness-rep2.md)
+> ran (s229, 48 disjoint frames, PANEL CONFIRM again — firewall CI-LB > 0 in 2/3, both legs within v1's CIs;
+> gpt a **persistent** SHADOW, the 40→48 enlargement not pulling it over), and a cross-session promotion
+> review promoted the line to [`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md)
+> (**direction-only, 2/3-firewall** — the project's first 2/3-firewall promotion; gpt persistent SHADOW; no
+> magnitude attached). The sixth beater row is now **claim-cited** (folded into the row + the battery
+> section), so all six beaters cite promoted claims — held on an evidential gradient, the particle the
+> weakest. **No beater number changed.** The "particle row's promotion status changes" revision trigger is
+> marked **FIRED** below. This is v4's first dated update box (well under the edition threshold).
+
 ## What this table is
 
 The lexicon–grammar continuum ([`theory/lexicon-grammar-continuum-v2`](lexicon-grammar-continuum-v2.md))
@@ -183,17 +198,19 @@ stated strength; see that page for full CIs, gates, and caveats.
 
 ### Beater rows — a measured residual over a named control (shallow shadow)
 
-Six beater rows now. **Five cite promoted `claim` pages** — CC covariation, dative, AANN, sense gradience
-(single-run flags discharged by replication, magnitudes or ordering attached) and **genitive animacy**
-(promoted **direction-only s221** after its s218 + rep2 replicated pair cleared the §3 REPLICATED-∧-controls
-bar, with a within-model magnitude attached s222). The **sixth — verb-particle placement (object
-givenness)** — is **result-cited, a single run**, held **visibly apart** from the five, because it has had
-no promotion review, its load-bearing byte-identical firewall clears in only **2/3** (gpt is a SHADOW), and
-its referential effect is **small** relative to the end-weight constraint the panel tracks strongly. A
-single run earns no `claim`; the honest successor is a fresh-item replication. Two rows are therefore held
-distinct and marked in the row itself: the genitive (direction-only, magnitude-attached-pooled, same-date)
-and the particle (result-cited, single-run, 2/3-firewall, gpt-SHADOW, effect-small). Read each at exactly
-that scope.
+Six beater rows now, **all six citing promoted `claim` pages** (as of s229) — CC covariation, dative, AANN,
+sense gradience (single-run flags discharged by replication, magnitudes or ordering attached), **genitive
+animacy** (promoted **direction-only s221** after its s218 + rep2 replicated pair cleared the §3
+REPLICATED-∧-controls bar, with a within-model magnitude attached s222), and — new to the claim layer s229 —
+**verb-particle placement (object givenness)**, promoted **direction-only, 2/3-firewall** after its v1
+(s225/226) + rep2 (s229) replicated pair cleared the same bar. But the last two are held **visibly apart**
+from the first four and are marked in the row itself, and the particle is held apart from the genitive too —
+an **evidential gradient**, never a flat set: the genitive is direction-only, magnitude-attached-**pooled**,
+same-date; the **particle** is the project's **first 2/3-firewall promotion** — **direction-only, 2/3 not
+3/3** (its load-bearing byte-identical firewall clears in only 2/3), **gpt a persistent replicated SHADOW**
+(it fails the firewall on both runs; the arm enlargement built to power it did not pull it over), its
+referential effect **small** relative to the end-weight constraint, and **no within-model magnitude
+attached**. Read each row at exactly its marked scope.
 
 | phenomenon | grain / pole | distributional control (the shadow) | residual over the control | row form | anchor | source |
 |---|---|---|---|---|---|---|
@@ -202,7 +219,7 @@ that scope.
 | **AANN acceptability gradient** | construction (grammatical) | **Zipf word-frequency** (partialled); noun-class marginal | partial ρ \| frequency **0.692 / 0.661 / 0.736** (base cell-level ρ 0.702 [0.61,0.77] / 0.684 [0.60,0.75] / 0.751 [0.68,0.81]); **replicated cross-date on fresh disjoint items 3/3** (rep2: base ρ 0.692 / 0.702 / 0.735, partial 0.687/0.690/0.722, all CIs overlap v2 — the graded gradient's single-run caveat discharged); held-out replication on unseen adjectives, **noun-class-dependent** (temporal stratum negative, v2b) | (ii) partialled correlation | human — Mahowald Exp-2 MTurk gradient | **[`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)** · [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) · [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md) |
 | **Lexical sense gradience** | word (lexical) | model's own **topic/context-similarity** rating (partialled); lexical overlap (near-degenerate) | partial ρ \| topic **0.52 / 0.50 / 0.73** (base DURel ρ 0.679 [0.59,0.75] / 0.601 [0.49,0.69] / 0.804 [0.75,0.85]); **replicated cross-date on fresh pair-disjoint items 3/3** (rep2: base ρ 0.715 / 0.528 / 0.808, partial\|topic 0.604/0.392/0.657, all CIs overlap v1 — single-run flag discharged; pair-disjoint, 61/357 usages recombine, so not usage-independent) | (ii) partialled correlation | human — DWUG DURel median (human–human ρ 0.69) | **[`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)** · [`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md) · [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) |
 | **Genitive-alternation animacy** *(PROMOTED direction-only s221, magnitude attached s222 — claim-cited; a replicated pair s218+rep2, both CONFIRM 3/3; held distinct from the first four beaters as direction-only / magnitude-attached-**pooled** / same-date)* | construction (grammatical) | **nonce/rare-possessor firewall** — rare/nonce possessors carry **no per-lemma corpus genitive statistic**, animacy conveyed only by a gloss, nonce string-forms balanced (a no-animacy reader scores 0); + a frozen possessor-lemma marginal-propensity covariate (**near-vacuous**, R² ≤0.038 both runs) | within-frame animacy shift (s-genitive pref: animate − inanimate), **replicated on two disjoint item sets 3/3**. **Nonce/firewall arm: s218 +0.109 / +0.205 / +0.055; rep2 +0.151 / +0.279 / +0.078, all bootstrap CI-LB > 0 (3/3 both runs)**; typical-frame s218 +0.134 / +0.181 / +0.141, rep2 +0.146 / +0.150 / +0.099 (CI-LB > 0, 3/3 both). **Within-model magnitude attached s222** (pooled-108 typical-frame shift **+0.145 / +0.169 / +0.139**, all CI-LB > 0; the fresh-36 blind arm clears CI-LB > 0 3/3, +0.155 / +0.175 / +0.178 — a clean attach). **CONFIRM rests on the nonce arm** (the covariate leg is near-vacuous both runs). **gpt is the weak firewall leg** but the rep2 power boost (nonce 24→36 frames) made it decisive (**25/36, sign-p 0.014**, vs s218's marginal 16/24, p 0.076); ~3.6–4× decorrelated on the firewall arm (the typical arm concords ~1.2×). Gradient is a **sharp animate/non-animate binary**, not a smooth ramp (collective patterns with inanimate). | (i) matched-material (nonce firewall) | human — Dubois et al. (2023) native-speaker direction (**direction only**) | **[`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md)** · [`result/genitive-alternation-animacy-rep2`](../results/genitive-alternation-animacy-rep2.md) · [`result/genitive-alternation-animacy-v1`](../results/genitive-alternation-animacy-v1.md) · [`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md) |
-| **Verb-particle placement (object givenness)** *(SINGLE RUN — result-cited; the third A5 production-side sibling; held distinct from the five claim-cited beaters as **single-run / 2-of-3-firewall / gpt-SHADOW / effect-small**; honest successor = a fresh-item replication)* | construction (grammatical) | **byte-identical discourse-givenness firewall** — the scored object string is held **byte-identical** across GIVEN / NEW-MENTIONED / NEW; only the preceding context varies, so any string-frequency / determiner-collocation / always-split reader scores **0 by construction**. The decisive contrast **GIVEN − NEW-MENTIONED** additionally holds object-noun lexical recency constant (critic B-crit-1). + a frozen UD-EWT per-(verb+particle) split-rate covariate (**near-vacuous**, R² ≤0.02) | within-frame split-pref shift on the byte-identical firewall (**GIVEN − NEW-MENTIONED**): claude **+0.040 [0.022, 0.059]** (26/40), gemini **+0.072 [0.049, 0.095]** (31/40), gpt **+0.018 [−0.017, 0.055]** (18/40) — **CI-LB > 0 in 2/3**. The anchor-exact **definiteness** arm is directionally consistent **3/3** (claude +0.081 / gemini +0.068 / gpt +0.100, **0/3 reversals**), and the convergent **length/end-weight** leg holds 3/3 (+0.29–0.40, strongly tracked). **CONFIRM rests on the firewall (2/3), not the confoundable determiner arm.** **gpt = SHADOW:** its definite→split shift (+0.100) does **not** survive the firewall (+0.018, CI includes 0, 18/40) — a surface/lexical shadow, gpt weakest again (dative / genitive pattern). The referential firewall effect is **small** (≈0.04–0.07) relative to the strongly-tracked end-weight constraint; covariate near-vacuous → CONFIRM **firewall-borne**, narrowly directional (not "shadow defeated"). **Single run → no claim yet.** | (i) matched-material (byte-identical firewall) | human — Kim et al. (2016) / Gries (1999) native-speaker direction (**direction only, a restatement**) | [`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md) |
+| **Verb-particle placement (object givenness)** *(PROMOTED direction-only, **2/3-firewall**, s229 — claim-cited; a replicated pair v1 s225/226 + rep2 s229, both CONFIRM with the firewall at 2/3; the project's **first 2/3-firewall promotion**, held distinct from the five stronger beaters as **direction-only / 2-of-3-firewall / gpt-persistent-SHADOW / no-magnitude-attached**)* | construction (grammatical) | **byte-identical discourse-givenness firewall** — the scored object string is held **byte-identical** across GIVEN / NEW-MENTIONED / NEW; only the preceding context varies, so any string-frequency / determiner-collocation / always-split reader scores **0 by construction**. The decisive contrast **GIVEN − NEW-MENTIONED** additionally holds object-noun lexical recency constant (critic B-crit-1). + a frozen UD-EWT per-(verb+particle) split-rate covariate (**near-vacuous**, R² ≤0.02) | within-frame split-pref shift on the byte-identical firewall (**GIVEN − NEW-MENTIONED**), **replicated on two disjoint item sets** (2/3 both runs): claude **+0.040 [0.022, 0.059]** → **+0.035 [0.019, 0.051]**, gemini **+0.072 [0.049, 0.095]** → **+0.057 [0.032, 0.080]** (both rep2 legs within v1's CIs) — **CI-LB > 0 in 2/3 on both**. The anchor-exact **definiteness** arm is directionally consistent **3/3** both runs (**0 reversals**), and the convergent **length/end-weight** leg holds 3/3 both (+0.29–0.40, strongly tracked). **CONFIRM rests on the firewall (2/3), not the confoundable determiner arm.** **gpt = persistent SHADOW (both runs):** its definite→split shift (+0.100) does **not** survive the firewall (v1 +0.018 CI [−0.017,0.055]; rep2 +0.005 CI [−0.027,0.036]) — the arm enlargement 40→48 built to power it did **not** pull it over (estimate *dropped*); a surface/lexical shadow, gpt weakest again (dative / genitive pattern). The referential firewall effect is **small** (≈0.035–0.07) relative to the strongly-tracked end-weight constraint; covariate near-vacuous → CONFIRM **firewall-borne**, narrowly directional (not "shadow defeated"). **No within-model magnitude attached.** | (i) matched-material (byte-identical firewall) | human — Kim et al. (2016) / Gries (1999) native-speaker direction (**direction only, a restatement**) | **[`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md)** · [`result/particle-placement-givenness-rep2`](../results/particle-placement-givenness-rep2.md) · [`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md) |
 
 ### Saturated corners — a placed reading, now controlled-and-weakened at both poles (deep shadow)
 
@@ -229,10 +246,13 @@ three constructions, byte-identically.**
   only, magnitude-attached-pooled, same-date.*
 - **Verb-particle placement** (joined *picked up the box* vs split *picked the box up*) turns on a
   **discourse-structural** constraint — *object givenness* (given/definite object → the split order), the
-  **same driver as the dative** on a different construction. **A single run** ([`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md),
-  s225–226): the split-order preference shifts toward given objects, and the shift **survives a
-  byte-identical discourse-givenness firewall in 2/3** (claude +0.040, gemini +0.072; gpt is a SHADOW). *Held
-  distinct: single-run, 2/3-firewall, gpt-SHADOW, effect-small.*
+  **same driver as the dative** on a different construction. **Promoted `claim` direction-only, 2/3-firewall**
+  ([`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md), s229; a replicated pair
+  v1 s225/226 + rep2 s229, both CONFIRM with the firewall at 2/3): for **two of three models** the split-order
+  preference shifts toward given objects, and the shift **survives a byte-identical discourse-givenness
+  firewall on both disjoint runs** (claude +0.040 → +0.035, gemini +0.072 → +0.057; **gpt a persistent
+  SHADOW**, firewall +0.018 → +0.005, failing both runs). *Held distinct: direction-only, **2/3 not 3/3**,
+  gpt-persistent-SHADOW, effect-small, no-magnitude.*
 
 Two readings sit on top of this battery, and they must be read at different strengths:
 
@@ -240,19 +260,22 @@ Two readings sit on top of this battery, and they must be read at different stre
    behavior appears for a **semantic** driver (genitive animacy) as well as a **discourse-structural** one
    (dative givenness) shows the dative pattern is **not specific to information structure**. This reading
    rests on two promoted claims.
-2. **The givenness constraint itself generalizes across constructions (new in v4).** The dative's
-   *discourse-givenness* effect now reappears on a **wholly different construction** — verb-particle
-   placement — with the scored object string held **byte-identical** and only the preceding discourse
-   varying, for **2/3** models. So the A5 battery's central positive is a **cross-construction
-   generalization**: two models integrate referential givenness the same way on the ditransitive frame *and*
-   on the particle-placement frame. This reading rests on the dative claim **plus a single particle run**,
-   and it is **2/3, not 3/3** (gpt's determiner effect is a surface shadow the firewall catches), with the
-   referential effect **small** relative to the end-weight constraint — so it is stated as a **suggestive
-   cross-construction generalization from one particle run**, not a settled panel property.
+2. **The givenness constraint itself generalizes across constructions (new in v4; the particle leg promoted
+   to a `claim` s229).** The dative's *discourse-givenness* effect reappears on a **wholly different
+   construction** — verb-particle placement — with the scored object string held **byte-identical** and only
+   the preceding discourse varying, for **2/3** models, and this now **replicates on two disjoint item sets**
+   (v1 + rep2, both CONFIRM at 2/3). So the A5 battery's central positive is a **cross-construction
+   generalization**: two models (claude, gemini) integrate referential givenness the same way on the
+   ditransitive frame *and* on the particle-placement frame. This reading rests on the dative claim **plus a
+   twice-observed, promoted particle claim** — but it is **2/3, not 3/3** (gpt's determiner effect is a
+   persistent surface shadow the firewall catches on both runs), with the referential effect **small**
+   relative to the end-weight constraint — so it is a **replicated-but-2/3 cross-construction
+   generalization**, firmer than a single run yet still **not a panel-uniform property** (gpt is excluded).
 
 The battery is shown as an **evidential gradient**, never averaged: the dative is thrice-observed at powered
 N with magnitudes attached; the genitive is a twice-observed controlled pair promoted direction-only with a
-pooled same-date magnitude; the particle is a **single run** whose load-bearing firewall clears in 2/3. The
+pooled same-date magnitude; the particle is a **twice-observed controlled pair promoted direction-only at
+2/3** (no magnitude attached, gpt a persistent SHADOW) — the weakest of the three. The
 parallel is real; its three legs are **not** at equal evidential strength, and the table shows that
 asymmetry rather than averaging over it. gpt is the weakest leg on **all three** alternations (dative +0.056,
 genitive marginal firewall, particle SHADOW) — the same fragile-member pattern the
@@ -349,7 +372,7 @@ Three honest limits travel with this row, and none may be dropped when it is cit
 
 So the grammatical pole of this table now reads: demonstrated shadow-**beaters** at the shallow end (CC,
 dative, AANN — promoted claims — plus the genitive, a promoted-direction-only claim, plus verb-particle
-placement, a controlled-but-unpromoted single run at 2/3), a shadow-**saturated** corner (presupposition,
+placement, now a promoted-direction-only claim too at **2/3**, s229), a shadow-**saturated** corner (presupposition,
 under-licensed middle) at the deep end, and **between them a directly-measured 40-paradigm within-panel depth
 gradient (R2)** — the axis is measured, not merely arranged — that, on a descriptive reading (R1,
 non-promotable per C8), **tracks the human difficulty profile**, so it appears to be an axis people share
@@ -359,8 +382,8 @@ rather than a model-specific deficit.
 
 1. **Each pole carries a beater and a saturated corner, and grain does not separate them.** The
    grammatical pole holds five beaters — three fully-discharged promoted claims (CC, dative, AANN), the
-   genitive (promoted direction-only), and verb-particle placement (a single run at 2/3) — and one saturated
-   corner (presupposition); the lexical pole holds one beater (sense gradience) and one saturated corner
+   genitive (promoted direction-only), and verb-particle placement (promoted direction-only at 2/3) — and one
+   saturated corner (presupposition); the lexical pole holds one beater (sense gradience) and one saturated corner
    (relation recovery). Read the table by column "shadow-depth", not by grain: the beaters cluster at the
    shallow end **at both grains**, and the two saturated corners at the deep end **at both grains**. This is
    the essay's structural claim, now displayed rather than argued — and it is the reason the table exists.
@@ -374,16 +397,17 @@ rather than a model-specific deficit.
    taxonomic hierarchical position, 2/3). So "each pole has a shadow-saturated corner" is a
    **controlled-and-weakened** structural claim at both poles, not a bare bet at either.
 
-3. **A within-beater evidential gradient is now visible, and shown, not hidden.** Five of the six beaters
-   are promoted claims, but not at equal strength: four had their single-run flags discharged and magnitudes
-   attached (or ordering, for CC), some cross-date; the fifth (genitive) was promoted **direction-only s221**
-   from a **twice-observed but same-date** pair, with a pooled magnitude attached s222. The **sixth**
-   (verb-particle placement) is not yet a claim at all — a **single run** whose load-bearing firewall clears
-   in **2/3** (gpt a SHADOW), held **result-cited** and visibly apart. The table marks this in the rows
-   themselves, so a reader never mistakes the particle's single-run 2/3 firewall, or the genitive's
-   direction-only same-date pair, for the dative's thrice-observed powered claim. The beater side is not
-   uniform in strength, and pretending it were would be the over-read the row-status discipline exists to
-   prevent.
+3. **A within-beater evidential gradient is now visible, and shown, not hidden.** All six beaters are
+   promoted claims (as of s229), but not at equal strength: four had their single-run flags discharged and
+   magnitudes attached (or ordering, for CC), some cross-date; the fifth (genitive) was promoted
+   **direction-only s221** from a **twice-observed but same-date** pair, with a pooled magnitude attached s222.
+   The **sixth** (verb-particle placement) was promoted **direction-only s229** from a twice-observed pair too
+   — but it is the project's **first 2/3-firewall promotion**: its load-bearing firewall clears in only **2/3**
+   (gpt a **persistent** SHADOW, failing both runs), and **no magnitude is attached**. The table marks this in
+   the rows themselves, so a reader never mistakes the particle's 2/3-firewall / gpt-SHADOW / no-magnitude
+   claim, or the genitive's direction-only same-date pair, for the dative's thrice-observed powered claim. The
+   beater side is not uniform in strength, and pretending it were would be the over-read the row-status
+   discipline exists to prevent.
 
 4. **The saturated side carries three measured forms, kept apart.** The beater rows are forms (i) and (ii);
    the presupposition corner is a run matched control that returned the under-licensed middle; the lexical
@@ -403,14 +427,17 @@ rather than a model-specific deficit.
   of an established native-speaker direction, not a fresh rating experiment). The page runs no new human
   comparison and asserts no human-comparison claim of its own; each imported reading carries its caveat
   wherever it is cited.
-- **The particle row is a single run, not a claim, and 2/3 not 3/3.** Verb-particle placement is the newest
-  and weakest beater: a **single run** ([`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md)),
-  no promotion review, its load-bearing byte-identical firewall clearing CI-LB > 0 in only **2/3** (gpt is a
-  SHADOW — its determiner effect does not survive the firewall), and the referential effect it measures is
-  **small** (≈0.04–0.07) relative to the end-weight constraint the panel tracks strongly (+0.29–0.40). It
-  earns **no `claim`**; the honest successor is a fresh-item replication (the A2a pattern) that powers the
-  gpt firewall leg. Read it as a **suggestive, human-direction-anchored cross-construction generalization
-  from one run**, never as a settled beater.
+- **The particle row is a promoted claim, but direction-only, 2/3 not 3/3, and no magnitude.** Verb-particle
+  placement is the newest and weakest beater: **promoted direction-only s229**
+  ([`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md)) after its v1 + rep2
+  replicated pair cleared the §3 REPLICATED-∧-controls bar — but the project's **first 2/3-firewall
+  promotion**: its load-bearing byte-identical firewall clears CI-LB > 0 in only **2/3** (gpt a **persistent**
+  SHADOW — its determiner effect does not survive the firewall on either run, and the arm enlargement built to
+  power it did not pull it over), the referential effect it measures is **small** (≈0.035–0.07) relative to
+  the end-weight constraint the panel tracks strongly (+0.29–0.40), **no within-model magnitude is attached**,
+  and the replication is nearly-same-date (one day apart). Read it at exactly that scope — a
+  **replicated-but-2/3, direction-only, human-direction-anchored cross-construction generalization** — never
+  as the dative's or genitive's equal.
 - **The genitive row is a promoted claim, but direction-only and not the dative's equal.** It was
   **promoted direction-only s221** ([`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md))
   after its s218 + rep2 replicated pair cleared the §3 REPLICATED-∧-controls bar, with a within-model
@@ -428,8 +455,9 @@ rather than a model-specific deficit.
   "saturated relation", or license any non-distributional or human-comparison reading.
 - **Behavioral, not representational; small N; n=3 models.** Every source page's scope bound carries onto its
   row unchanged. Four beaters are cross-date replicated; the genitive is **same-date replicated** (both runs
-  2026-07-13 — a fresh-item pair, but no temporal/version decorrelation); the particle is a **single run**
-  (no replication at all yet). The dative row carries its **powered N=100 magnitudes** (s175): a
+  2026-07-13 — a fresh-item pair, but no temporal/version decorrelation); the particle is a **nearly-same-date
+  replicated pair** (v1 2026-07-14, rep2 2026-07-15 — one day apart, same versions, no meaningful
+  temporal/version decorrelation). The dative row carries its **powered N=100 magnitudes** (s175): a
   **3/3-CONFIRM-at-power** beater, but gpt's is a tiny effect (+0.056, ~9× below gemini, 63/100 items
   positive) that flickered WEAK at v2's founding N — shown, not hidden — so the panel-label-hides-spread
   discipline of [`essay/concordant-verdict-hides-spread`](../essays/concordant-verdict-hides-spread.md)
@@ -451,13 +479,18 @@ rather than a model-specific deficit.
   all folded into the row above (the three v3 update boxes). **Remaining live trigger on this row:** a
   **fully-fresh, different-date** powered re-run would lift the "same-date" caveat and move the genitive
   closer still to the dative's evidential standing.
-- **The particle row's promotion status changes** (new in v4). The single-run verb-particle placement row is
-  the newest beater. Its honest successor is a **fresh-item replication** on the byte-frozen instrument,
-  powering the gpt firewall leg (the A2a move that turned the genitive's marginal gpt leg decisive). If that
-  replication reproduces the 2/3 firewall (or lifts gpt out of SHADOW), a cross-session promotion review
-  could write a direction-only particle `claim` and the row migrates result-cited → claim-cited; if the
-  firewall does **not** survive on fresh items, the row **drops** toward a shadow reading. Until then it
-  stays result-cited and visibly apart.
+- **The particle row's promotion status changes** (new in v4). → **FIRED s228→s229 (replicate + promote
+  branch).** The fresh-item replication was frozen + pre-run-gated (s228) and **run (s229)** —
+  [`result/particle-placement-givenness-rep2`](../results/particle-placement-givenness-rep2.md): **PANEL
+  CONFIRM again**, the byte-identical firewall clearing CI-LB > 0 in **2/3** (claude +0.035, gemini +0.057,
+  both within v1's CIs) on certified-disjoint items. The **gpt firewall leg did NOT lift out of SHADOW** —
+  the 40→48 enlargement built to power it did not pull it over (rep2 +0.005, CI incl. 0; estimate *lower*
+  than v1). The cross-session promotion review then wrote a **direction-only, 2/3-firewall particle `claim`**
+  ([`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md), s229) and the row
+  migrated **result-cited → claim-cited** (folded into the row above). **Remaining live trigger on this row:**
+  a **fully-fresh, different-date** powered re-run or a magnitude arm would strengthen it; and if a future run
+  ever lifts gpt out of SHADOW the 2/3 could become 3/3 — but a run where the firewall does **not** survive
+  would **drop** the row toward a shadow reading.
 - **The lexical corner's ordering axis is re-tested** → the s193 taxonomic-depth reading (2/3,
   between-relation) fires a revision here if the **adjective-antonymy replication** or a **within-family
   ladder** pushes H2 from 2/3 toward 3/3 (promotable), or breaks it (the axis reopens with taxonomic
