@@ -171,6 +171,19 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   2/3-firewall — the project's first 2/3-firewall promotion**; gpt persistent SHADOW; no magnitude; 12 fences;
   held below the genitive) + [`theory/shadow-depth-table-v4`](findings/theory/shadow-depth-table-v4.md)
   particle row migrated result-cited → claim-cited. The A2a firewall row is discharged.).
+  **[MAGNITUDE ATTACHED s238** (the s237 review's #1-ranked marginal dollar — a powered magnitude re-run on
+  the one direction-only claim genuinely lacking a magnitude) → [`result/particle-placement-givenness-mag`](findings/results/particle-placement-givenness-mag.md):
+  a third disjoint **firewall-only** arm (48 fresh-blind frames, byte-frozen instrument, certified disjoint
+  from v1 ∪ rep2) pooled with v1+rep2 → **136 firewall frames**. **MAGNITUDE-ATTACHED at 2/3:** for the two
+  firewall-confirming models both gates clear — the fresh-48 blind arm clears CI-LB>0 (claude +0.0351 /
+  gemini +0.0385) **and** pooled-136 clears CI-LB>0 (claude **+0.0365 [0.027,0.046]** / gemini **+0.0548
+  [0.040,0.069]**) — small (≈3.7–5.5 pts/100, quantifying "small vs end-weight"). **gpt a persistent SHADOW
+  that does NOT lift at pooled N=136** (+0.0067, CI includes 0) — fence (b) confirmed a third time. Pre-run
+  critic **GO** over-ruled a non-Anthropic vote **NO-GO** (presentation-discipline, honoured); post-run
+  verifier **REPRODUCED**. Claim fence (j) lifted magnitude-absent → magnitude-attached (within-model, 2/3);
+  shadow-depth-table-v4 particle row + battery prose updated (2nd dated update box, under the edition
+  threshold). $1.662291 (864 calls). **The particle line's magnitude is now attached; a fully-fresh powered
+  arm is NOT owed.**]**
 - **A2b `[ ]` Grounding-magnitude probe via a different instrument.** The highest-information
   unrun probe in the repo: image/vision referents, genuinely unrun ("costs money" — ~$3–4,
   the best purchase available; the grounded cell has a confirming-direction shape datum and an

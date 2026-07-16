@@ -1,7 +1,7 @@
 ---
 type: theory
 id: shadow-depth-table-v4
-title: The shadow-depth table (v4) — the flagship measured object, fourth edition; the verb-particle placement object-givenness probe folds in as a sixth beater row (result-cited single-run at founding s227; migrated to claim-cited s229 after its fresh-item replication — promoted direction-only at 2/3-firewall, gpt a persistent SHADOW, effect small, no magnitude), the production-side alternation pair becomes a three-construction battery (dative + genitive + particle placement), and the s220/s221/s222 genitive update boxes fold into clean body prose
+title: The shadow-depth table (v4) — the flagship measured object, fourth edition; the verb-particle placement object-givenness probe folds in as a sixth beater row (result-cited single-run at founding s227; migrated to claim-cited s229 after its fresh-item replication — promoted direction-only at 2/3-firewall, gpt a persistent SHADOW, effect small; a within-model firewall magnitude attached-pooled at 2/3 s238), the production-side alternation pair becomes a three-construction battery (dative + genitive + particle placement), and the s220/s221/s222 genitive update boxes fold into clean body prose
 meaning-senses:
   - distributional
   - constructional
@@ -46,6 +46,8 @@ links:
     target: result/genitive-alternation-animacy-mag
   - rel: depends-on
     target: result/particle-placement-givenness-v1
+  - rel: depends-on
+    target: result/particle-placement-givenness-mag
   - rel: depends-on
     target: result/dative-information-structure-v1
   - rel: depends-on
@@ -144,6 +146,23 @@ links:
 > weakest. **No beater number changed.** The "particle row's promotion status changes" revision trigger is
 > marked **FIRED** below. This is v4's first dated update box (well under the edition threshold).
 
+> **→ Update 2026-07-16 (session 238): the particle row gains a within-model FIREWALL MAGNITUDE at 2/3.**
+> The powered magnitude re-run the s237 review named as the best marginal dollar landed
+> ([`result/particle-placement-givenness-mag`](../results/particle-placement-givenness-mag.md)): a third
+> disjoint firewall-only arm (48 fresh-blind frames) pooled with v1+rep2 → **136 firewall frames**. For the
+> two firewall-confirming models the within-model given−new-mentioned split-preference magnitude attaches —
+> **claude +0.0365 [0.027, 0.046]**, **gemini +0.0548 [0.040, 0.069]** (pooled-136, both CI-LB>0; the
+> fresh-48 blind arm clears CI-LB>0 for both) — **small** (≈3.7 / 5.5 points out of 100, quantifying the
+> row's "small vs end-weight" reading). **gpt stays a persistent, replicated SHADOW that does NOT lift at
+> pooled N** (+0.0067 [−0.010, 0.024], CI includes 0) — the 2/3 scope is unchanged and fence (b) is
+> confirmed a third time. Claim fence (j) lifts magnitude-absent → **magnitude-attached (within-model,
+> 2/3)**; the particle row's descriptor moves *no-magnitude-attached* → *magnitude-attached-**pooled**-at-
+> 2/3*, held below the genitive (3/3-firewall, magnitude-attached). Pre-run critic GO over-ruled a
+> non-Anthropic NO-GO (presentation-discipline, honoured); post-run verifier REPRODUCED. **No beater number
+> reading changed** (the magnitude quantifies the already-stated small firewall effect); the human-anchor
+> scope stays direction-only, so this page still runs no new human comparison. This is v4's second dated
+> update box (well under the edition threshold). $1.66 (the mag run).
+
 ## What this table is
 
 The lexicon–grammar continuum ([`theory/lexicon-grammar-continuum-v2`](lexicon-grammar-continuum-v2.md))
@@ -211,8 +230,9 @@ an **evidential gradient**, never a flat set: the genitive is direction-only, ma
 same-date; the **particle** is the project's **first 2/3-firewall promotion** — **direction-only, 2/3 not
 3/3** (its load-bearing byte-identical firewall clears in only 2/3), **gpt a persistent replicated SHADOW**
 (it fails the firewall on both runs; the arm enlargement built to power it did not pull it over), its
-referential effect **small** relative to the end-weight constraint, and **no within-model magnitude
-attached**. Read each row at exactly its marked scope.
+referential effect **small** relative to the end-weight constraint, with a **within-model firewall magnitude
+attached-pooled s238 at 2/3** (claude +0.037 / gemini +0.055; gpt a non-lifting SHADOW). Read each row at
+exactly its marked scope.
 
 | phenomenon | grain / pole | distributional control (the shadow) | residual over the control | row form | anchor | source |
 |---|---|---|---|---|---|---|
@@ -221,7 +241,7 @@ attached**. Read each row at exactly its marked scope.
 | **AANN acceptability gradient** | construction (grammatical) | **Zipf word-frequency** (partialled); noun-class marginal | partial ρ \| frequency **0.692 / 0.661 / 0.736** (base cell-level ρ 0.702 [0.61,0.77] / 0.684 [0.60,0.75] / 0.751 [0.68,0.81]); **replicated cross-date on fresh disjoint items 3/3** (rep2: base ρ 0.692 / 0.702 / 0.735, partial 0.687/0.690/0.722, all CIs overlap v2 — the graded gradient's single-run caveat discharged); held-out replication on unseen adjectives, **noun-class-dependent** (temporal stratum negative, v2b) | (ii) partialled correlation | human — Mahowald Exp-2 MTurk gradient | **[`claim/aann-behavioral-gradient`](../claims/aann-behavioral-gradient.md)** · [`result/aann-behavioral-gradient-rep2`](../results/aann-behavioral-gradient-rep2.md) · [`result/aann-behavioral-gradient-v2`](../results/aann-behavioral-gradient-v2.md) |
 | **Lexical sense gradience** | word (lexical) | model's own **topic/context-similarity** rating (partialled); lexical overlap (near-degenerate) | partial ρ \| topic **0.52 / 0.50 / 0.73** (base DURel ρ 0.679 [0.59,0.75] / 0.601 [0.49,0.69] / 0.804 [0.75,0.85]); **replicated cross-date on fresh pair-disjoint items 3/3** (rep2: base ρ 0.715 / 0.528 / 0.808, partial\|topic 0.604/0.392/0.657, all CIs overlap v1 — single-run flag discharged; pair-disjoint, 61/357 usages recombine, so not usage-independent) | (ii) partialled correlation | human — DWUG DURel median (human–human ρ 0.69) | **[`claim/lexical-sense-gradience`](../claims/lexical-sense-gradience.md)** · [`result/lexical-sense-gradience-rep2`](../results/lexical-sense-gradience-rep2.md) · [`result/lexical-sense-gradience-v1`](../results/lexical-sense-gradience-v1.md) |
 | **Genitive-alternation animacy** *(PROMOTED direction-only s221, magnitude attached s222 — claim-cited; a replicated pair s218+rep2, both CONFIRM 3/3; held distinct from the first four beaters as direction-only / magnitude-attached-**pooled** / same-date)* | construction (grammatical) | **nonce/rare-possessor firewall** — rare/nonce possessors carry **no per-lemma corpus genitive statistic**, animacy conveyed only by a gloss, nonce string-forms balanced (a no-animacy reader scores 0); + a frozen possessor-lemma marginal-propensity covariate (**near-vacuous**, R² ≤0.038 both runs) | within-frame animacy shift (s-genitive pref: animate − inanimate), **replicated on two disjoint item sets 3/3**. **Nonce/firewall arm: s218 +0.109 / +0.205 / +0.055; rep2 +0.151 / +0.279 / +0.078, all bootstrap CI-LB > 0 (3/3 both runs)**; typical-frame s218 +0.134 / +0.181 / +0.141, rep2 +0.146 / +0.150 / +0.099 (CI-LB > 0, 3/3 both). **Within-model magnitude attached s222** (pooled-108 typical-frame shift **+0.145 / +0.169 / +0.139**, all CI-LB > 0; the fresh-36 blind arm clears CI-LB > 0 3/3, +0.155 / +0.175 / +0.178 — a clean attach). **CONFIRM rests on the nonce arm** (the covariate leg is near-vacuous both runs). **gpt is the weak firewall leg** but the rep2 power boost (nonce 24→36 frames) made it decisive (**25/36, sign-p 0.014**, vs s218's marginal 16/24, p 0.076); ~3.6–4× decorrelated on the firewall arm (the typical arm concords ~1.2×). Gradient is a **sharp animate/non-animate binary**, not a smooth ramp (collective patterns with inanimate). | (i) matched-material (nonce firewall) | human — Dubois et al. (2023) native-speaker direction (**direction only**) | **[`claim/genitive-alternation-animacy`](../claims/genitive-alternation-animacy.md)** · [`result/genitive-alternation-animacy-rep2`](../results/genitive-alternation-animacy-rep2.md) · [`result/genitive-alternation-animacy-v1`](../results/genitive-alternation-animacy-v1.md) · [`result/genitive-alternation-animacy-mag`](../results/genitive-alternation-animacy-mag.md) |
-| **Verb-particle placement (object givenness)** *(PROMOTED direction-only, **2/3-firewall**, s229 — claim-cited; a replicated pair v1 s225/226 + rep2 s229, both CONFIRM with the firewall at 2/3; the project's **first 2/3-firewall promotion**, held distinct from the five stronger beaters as **direction-only / 2-of-3-firewall / gpt-persistent-SHADOW / no-magnitude-attached**)* | construction (grammatical) | **byte-identical discourse-givenness firewall** — the scored object string is held **byte-identical** across GIVEN / NEW-MENTIONED / NEW; only the preceding context varies, so any string-frequency / determiner-collocation / always-split reader scores **0 by construction**. The decisive contrast **GIVEN − NEW-MENTIONED** additionally holds object-noun lexical recency constant (critic B-crit-1). + a frozen UD-EWT per-(verb+particle) split-rate covariate (**near-vacuous**, R² ≤0.02) | within-frame split-pref shift on the byte-identical firewall (**GIVEN − NEW-MENTIONED**), **replicated on two disjoint item sets** (2/3 both runs): claude **+0.040 [0.022, 0.059]** → **+0.035 [0.019, 0.051]**, gemini **+0.072 [0.049, 0.095]** → **+0.057 [0.032, 0.080]** (both rep2 legs within v1's CIs) — **CI-LB > 0 in 2/3 on both**. The anchor-exact **definiteness** arm is directionally consistent **3/3** both runs (**0 reversals**), and the convergent **length/end-weight** leg holds 3/3 both (+0.29–0.40, strongly tracked). **CONFIRM rests on the firewall (2/3), not the confoundable determiner arm.** **gpt = persistent SHADOW (both runs):** its definite→split shift (+0.100) does **not** survive the firewall (v1 +0.018 CI [−0.017,0.055]; rep2 +0.005 CI [−0.027,0.036]) — the arm enlargement 40→48 built to power it did **not** pull it over (estimate *dropped*); a surface/lexical shadow, gpt weakest again (dative / genitive pattern). The referential firewall effect is **small** (≈0.035–0.07) relative to the strongly-tracked end-weight constraint; covariate near-vacuous → CONFIRM **firewall-borne**, narrowly directional (not "shadow defeated"). **No within-model magnitude attached.** | (i) matched-material (byte-identical firewall) | human — Kim et al. (2016) / Gries (1999) native-speaker direction (**direction only, a restatement**) | **[`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md)** · [`result/particle-placement-givenness-rep2`](../results/particle-placement-givenness-rep2.md) · [`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md) |
+| **Verb-particle placement (object givenness)** *(PROMOTED direction-only, **2/3-firewall**, s229 — claim-cited; a replicated pair v1 s225/226 + rep2 s229, both CONFIRM with the firewall at 2/3; the project's **first 2/3-firewall promotion**, held distinct from the five stronger beaters as **direction-only / 2-of-3-firewall / gpt-persistent-SHADOW / firewall-magnitude-attached-pooled-at-2/3 (s238)**)* | construction (grammatical) | **byte-identical discourse-givenness firewall** — the scored object string is held **byte-identical** across GIVEN / NEW-MENTIONED / NEW; only the preceding context varies, so any string-frequency / determiner-collocation / always-split reader scores **0 by construction**. The decisive contrast **GIVEN − NEW-MENTIONED** additionally holds object-noun lexical recency constant (critic B-crit-1). + a frozen UD-EWT per-(verb+particle) split-rate covariate (**near-vacuous**, R² ≤0.02) | within-frame split-pref shift on the byte-identical firewall (**GIVEN − NEW-MENTIONED**), **replicated on two disjoint item sets** (2/3 both runs): claude **+0.040 [0.022, 0.059]** → **+0.035 [0.019, 0.051]**, gemini **+0.072 [0.049, 0.095]** → **+0.057 [0.032, 0.080]** (both rep2 legs within v1's CIs) — **CI-LB > 0 in 2/3 on both**. The anchor-exact **definiteness** arm is directionally consistent **3/3** both runs (**0 reversals**), and the convergent **length/end-weight** leg holds 3/3 both (+0.29–0.40, strongly tracked). **CONFIRM rests on the firewall (2/3), not the confoundable determiner arm.** **gpt = persistent SHADOW (both runs):** its definite→split shift (+0.100) does **not** survive the firewall (v1 +0.018 CI [−0.017,0.055]; rep2 +0.005 CI [−0.027,0.036]) — the arm enlargement 40→48 built to power it did **not** pull it over (estimate *dropped*); a surface/lexical shadow, gpt weakest again (dative / genitive pattern). The referential firewall effect is **small** (≈0.035–0.07) relative to the strongly-tracked end-weight constraint; covariate near-vacuous → CONFIRM **firewall-borne**, narrowly directional (not "shadow defeated"). **Within-model FIREWALL magnitude attached s238** (pooled-136 given−new-mentioned shift **claude +0.0365 [0.027, 0.046] / gemini +0.0548 [0.040, 0.069]**, both CI-LB>0, the fresh-48 blind arm clearing CI-LB>0 for both; small ≈3.7–5.5 pts/100; **gpt a non-lifting SHADOW**, pooled +0.0067 CI includes 0). | (i) matched-material (byte-identical firewall) | human — Kim et al. (2016) / Gries (1999) native-speaker direction (**direction only, a restatement**) | **[`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md)** · [`result/particle-placement-givenness-rep2`](../results/particle-placement-givenness-rep2.md) · [`result/particle-placement-givenness-v1`](../results/particle-placement-givenness-v1.md) · [`result/particle-placement-givenness-mag`](../results/particle-placement-givenness-mag.md) |
 
 ### Saturated corners — a placed reading, now controlled-and-weakened at both poles (deep shadow)
 
@@ -254,7 +274,8 @@ three constructions, byte-identically.**
   preference shifts toward given objects, and the shift **survives a byte-identical discourse-givenness
   firewall on both disjoint runs** (claude +0.040 → +0.035, gemini +0.072 → +0.057; **gpt a persistent
   SHADOW**, firewall +0.018 → +0.005, failing both runs). *Held distinct: direction-only, **2/3 not 3/3**,
-  gpt-persistent-SHADOW, effect-small, no-magnitude.*
+  gpt-persistent-SHADOW, effect-small, firewall-magnitude-attached-at-2/3 (s238: claude +0.037 / gemini
++0.055; gpt a non-lifting SHADOW).*
 
 Two readings sit on top of this battery, and they must be read at different strengths:
 
@@ -277,7 +298,8 @@ Two readings sit on top of this battery, and they must be read at different stre
 The battery is shown as an **evidential gradient**, never averaged: the dative is thrice-observed at powered
 N with magnitudes attached; the genitive is a twice-observed controlled pair promoted direction-only with a
 pooled same-date magnitude; the particle is a **twice-observed controlled pair promoted direction-only at
-2/3** (no magnitude attached, gpt a persistent SHADOW) — the weakest of the three. The
+2/3** (a within-model firewall magnitude attached-pooled s238 for the two confirming models — claude +0.037
+/ gemini +0.055, small; gpt a persistent non-lifting SHADOW) — the weakest of the three. The
 parallel is real; its three legs are **not** at equal evidential strength, and the table shows that
 asymmetry rather than averaging over it. gpt is the weakest leg on **all three** alternations (dative +0.056,
 genitive marginal firewall, particle SHADOW) — the same fragile-member pattern the
@@ -405,9 +427,11 @@ rather than a model-specific deficit.
    **direction-only s221** from a **twice-observed but same-date** pair, with a pooled magnitude attached s222.
    The **sixth** (verb-particle placement) was promoted **direction-only s229** from a twice-observed pair too
    — but it is the project's **first 2/3-firewall promotion**: its load-bearing firewall clears in only **2/3**
-   (gpt a **persistent** SHADOW, failing both runs), and **no magnitude is attached**. The table marks this in
-   the rows themselves, so a reader never mistakes the particle's 2/3-firewall / gpt-SHADOW / no-magnitude
-   claim, or the genitive's direction-only same-date pair, for the dative's thrice-observed powered claim. The
+   (gpt a **persistent** SHADOW, failing both runs), and its within-model firewall magnitude, **attached-pooled
+   s238**, covers only those **two** models (small, ≈3.7–5.5 pts/100; gpt a non-lifting SHADOW). The table marks
+   this in the rows themselves, so a reader never mistakes the particle's 2/3-firewall / gpt-SHADOW /
+   magnitude-at-2/3 claim, or the genitive's direction-only same-date pair, for the dative's thrice-observed
+   powered claim. The
    beater side is not uniform in strength, and pretending it were would be the over-read the row-status
    discipline exists to prevent.
 
@@ -429,15 +453,16 @@ rather than a model-specific deficit.
   of an established native-speaker direction, not a fresh rating experiment). The page runs no new human
   comparison and asserts no human-comparison claim of its own; each imported reading carries its caveat
   wherever it is cited.
-- **The particle row is a promoted claim, but direction-only, 2/3 not 3/3, and no magnitude.** Verb-particle
+- **The particle row is a promoted claim, but direction-only, 2/3 not 3/3, magnitude only at 2/3.** Verb-particle
   placement is the newest and weakest beater: **promoted direction-only s229**
   ([`claim/particle-placement-givenness`](../claims/particle-placement-givenness.md)) after its v1 + rep2
   replicated pair cleared the §3 REPLICATED-∧-controls bar — but the project's **first 2/3-firewall
   promotion**: its load-bearing byte-identical firewall clears CI-LB > 0 in only **2/3** (gpt a **persistent**
   SHADOW — its determiner effect does not survive the firewall on either run, and the arm enlargement built to
   power it did not pull it over), the referential effect it measures is **small** (≈0.035–0.07) relative to
-  the end-weight constraint the panel tracks strongly (+0.29–0.40), **no within-model magnitude is attached**,
-  and the replication is nearly-same-date (one day apart). Read it at exactly that scope — a
+  the end-weight constraint the panel tracks strongly (+0.29–0.40), a **within-model firewall magnitude is
+  attached-pooled s238 only for the two confirming models** (claude +0.037 / gemini +0.055; gpt a non-lifting
+  SHADOW), and the replication is nearly-same-date (one day apart). Read it at exactly that scope — a
   **replicated-but-2/3, direction-only, human-direction-anchored cross-construction generalization** — never
   as the dative's or genitive's equal.
 - **The genitive row is a promoted claim, but direction-only and not the dative's equal.** It was

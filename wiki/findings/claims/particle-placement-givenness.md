@@ -1,7 +1,7 @@
 ---
 type: claim
 id: particle-placement-givenness
-title: On English verb-particle placement, TWO of three models (claude, gemini) shift their split-order preference toward discourse-given objects in the human direction and the shift SURVIVES a byte-identical discourse-givenness firewall across two controlled runs on certified-disjoint items (s225/s226 v1 + s229 rep2) — a direction-only, human-anchored cross-construction generalization of the dative's information-structural effect, promoted strictly BELOW the genitive's 3/3-firewall claim because the load-bearing firewall replicates at 2/3 not 3/3 and gpt is a persistent, replicated SHADOW (its determiner effect does not survive either run, and the arm enlargement built to power it did not pull it over); the referential effect is small vs the strongly-tracked end-weight constraint, no within-model magnitude attached, all fences carried verbatim
+title: On English verb-particle placement, TWO of three models (claude, gemini) shift their split-order preference toward discourse-given objects in the human direction and the shift SURVIVES a byte-identical discourse-givenness firewall across two controlled runs on certified-disjoint items (s225/s226 v1 + s229 rep2) — a direction-only, human-anchored cross-construction generalization of the dative's information-structural effect, promoted strictly BELOW the genitive's 3/3-firewall claim because the load-bearing firewall replicates at 2/3 not 3/3 and gpt is a persistent, replicated SHADOW (its determiner effect does not survive either run, and the arm enlargement built to power it did not pull it over); the referential effect is small vs the strongly-tracked end-weight constraint; a within-model FIREWALL magnitude is now attached at 2/3 (s238, pooled-136 claude +0.037 / gemini +0.055, both CI-LB>0 and both fresh-48 blind arms clearing CI-LB>0; gpt a persistent SHADOW that does NOT lift at pooled N), all fences carried verbatim
 meaning-senses:
   - constructional
   - inferential
@@ -11,7 +11,7 @@ status: supported
 anchor: human-anchored
 contingent-on: []
 created: 2026-07-15
-updated: 2026-07-15
+updated: 2026-07-16
 links:
   - rel: anchors
     target: resource/particle-placement-givenness-human-anchor
@@ -19,6 +19,8 @@ links:
     target: result/particle-placement-givenness-v1
   - rel: depends-on
     target: result/particle-placement-givenness-rep2
+  - rel: depends-on
+    target: result/particle-placement-givenness-mag
   - rel: depends-on
     target: concept/constructional-meaning
   - rel: supports
@@ -49,6 +51,26 @@ links:
 > effect; no panel-wide language) — convergent, weighed in Anti-cheat below. **No within-model magnitude is
 > attached** (unlike the genitive's fence i): the claim asserts direction + firewall-survival (2/3) + a
 > stable gpt-SHADOW + "small vs end-weight," nothing quantitative beyond the reported shifts.
+>
+> **→ MAGNITUDE ATTACHED 2026-07-16 (session 238).** The s237 instrument-line-continuation review named a
+> powered magnitude re-run on a direction-only claim as the best available marginal dollar, and the
+> particle was the one flagship production-side alternation still lacking a magnitude. The re-run landed:
+> [`result/particle-placement-givenness-mag`](../results/particle-placement-givenness-mag.md) added a
+> **third disjoint FIREWALL-ONLY arm** (48 fresh frames, every triple + object noun 0-overlap with the 88
+> prior) and **pooled** it with v1+rep2 → **136 firewall frames**. **MAGNITUDE ATTACHED at 2/3:** for the
+> two firewall-confirming models both gates clear — the FRESH-48 blind arm clears CI-LB>0 (claude +0.0351
+> [0.021,0.049], gemini +0.0385 [0.014,0.064]) **and** the pooled-136 clears CI-LB>0 (claude **+0.0365
+> [0.027,0.046]**, gemini **+0.0548 [0.040,0.069]**) — a within-model given−new-mentioned split-preference
+> shift of **≈3.7 / 5.5 points out of 100** (small, exactly as fence c says). **gpt is a persistent,
+> replicated SHADOW that does NOT lift at pooled N=136** (pooled +0.0067 [−0.010,0.024], CI includes 0) —
+> fence (b) **confirmed a third time, strengthened, not weakened**. The fresh-agent pre-run critic **GO**
+> weighed and **over-ruled** a non-Anthropic vote **NO-GO** (presentation-discipline objections, honoured);
+> an independent post-run verifier **REPRODUCED** every figure. This lifts **fence (j)** from
+> magnitude-absent → **magnitude-attached (within-model, claude+gemini)**; the human-anchor scope stays
+> **direction-only** and the 2/3 scope is **unchanged**. The magnitude support lives here on the claim
+> layer; the mag result rests `proposed`. Two honest caveats carried: gemini's fresh-48 arm meets the
+> CI-LB gate but its frame-level sign test is weak (28/48, p 0.156) and it attenuates below its prior
+> (+0.0385 vs +0.0636); claude is clean and stable (fresh ≈ prior ≈ pooled, sign-p 0.001).
 
 ## Statement
 
@@ -83,10 +105,14 @@ the genitive's breadth:
   point estimate *dropped*. So for gpt the determiner effect is a **surface/lexical shadow**, not
   information-structure tracking; gpt is the weakest leg **again** (weakest on the dative, marginal on the
   genitive firewall, SHADOW on the particle firewall **twice**) (fence b). Displayed, never averaged.
-- **Direction is human-anchored (sign only); no magnitude is attached.** The human anchor is a native-speaker
-  **direction/sign** (Kim et al. 2016 / Gries 1999, a restatement), so the human-comparison force is on the
-  **sign** of the effect, not any size, and — unlike the genitive — **no** within-model magnitude has been
-  measured (no powered/pooled magnitude arm was run; the effect is small; fence j).
+- **Direction is human-anchored (sign only); a within-model FIREWALL magnitude is now attached (2/3, s238).**
+  The human anchor is a native-speaker **direction/sign** (Kim et al. 2016 / Gries 1999, a restatement), so
+  the human-comparison force is on the **sign** of the effect, not any size. Within-model, the effect now
+  **carries a magnitude** for the two confirming models: the s238 powered pooled firewall arm (136 frames)
+  gives a given−new-mentioned split-preference shift of **+0.0365 / +0.0548** (claude / gemini, both
+  CI-LB>0, the fresh-48 blind arm clearing CI-LB>0 for both), gpt staying a non-lifting SHADOW. So the claim
+  now asserts the **sign (human-anchored) AND a within-model firewall magnitude (2/3)**, but **not** a human
+  comparison of sizes; the effect is **small** (fence c/j).
 
 ## Grounds
 
@@ -183,10 +209,22 @@ A future reader must carry all twelve; none is erased by promotion:
   shortcuts and object-noun lexical recency — the strongest logprob-free shortcut controls available — but
   **not** the panel reproducing the human context→order joint distribution from pretraining. Narrowly
   directional.
-- **(j) No within-model magnitude attached** (contrast the genitive's fence i). No powered/pooled magnitude
-  arm was run; the claim asserts direction + firewall-survival (2/3) + stable gpt-SHADOW + "small vs
-  end-weight," nothing quantitative beyond the reported shifts. A magnitude would be a future powered arm,
-  **not** owed.
+- **(j) Within-model FIREWALL magnitude ATTACHED (s238), at 2/3, via a POOLED arm.** The powered magnitude
+  re-run landed ([`result/particle-placement-givenness-mag`](../results/particle-placement-givenness-mag.md)):
+  a third disjoint firewall-only arm (48 fresh-blind frames) pooled with v1+rep2 → **136 firewall frames**
+  attaches a within-model given−new-mentioned split-preference magnitude for the **two firewall-confirming
+  models** — **claude +0.0365 [0.027, 0.046]**, **gemini +0.0548 [0.040, 0.069]** (pooled-136, both
+  CI-LB>0; the fresh-48 blind arm clears CI-LB>0 for both, claude +0.0351 / gemini +0.0385). The pooled
+  interval is a magnitude **update conditional on the established direction** — tighter by construction
+  (88/136 reused); the fresh-48 column is the genuine blind check. The magnitude is **small** (≈3.7 / 5.5
+  points out of 100, quantifying fence c) and is a **firewall-specific, within-model** quantity, **not** a
+  human comparison of sizes (fence f). **gpt is NOT part of the attach** — its firewall shift stays a
+  SHADOW that does **not** lift at pooled N=136 (pooled +0.0067 [−0.010, 0.024], CI includes 0), confirming
+  fence (b) a third time. Two caveats on the attach: gemini's fresh-48 arm meets the CI-LB gate but its
+  frame-level sign test is weak (28/48, p 0.156) and attenuates below its prior (+0.0385 vs +0.0636), while
+  claude is clean/stable (fresh ≈ prior ≈ pooled, sign-p 0.001). A single *fully-fresh* powered arm would
+  give a non-conditional interval but is **not** owed (the fresh-48 arm already clears its own CI-LB for
+  both confirming models).
 - **(k) Pair-reuse disclosure (rep2-specific).** rep2's 48 frames use 38 distinct verb+particle pairs; 10
   recur (frames f39–f48, a fresh noun + fresh context each), all drawn from v1's frozen 38-pair set to keep
   the covariate + `analyze.py` byte-frozen; selection criterion **linguistic** ("flexible/both-orders"),
@@ -224,8 +262,10 @@ row, held visibly distinct from the five stronger beaters).
   definiteness 3/3 and the coded "full CONFIRM" are **not** the load-bearing evidence.
 - **gpt is a persistent SHADOW, not "marginal."** It never clears the firewall (worse than the genitive's
   gpt, which cleared once powered).
-- **No human comparison of magnitudes; no within-model magnitude at all.** The anchor is direction-only, and
-  no magnitude arm was run (fence j).
+- **No human comparison of magnitudes.** The **within-model firewall** magnitude *is* attached (s238, 2/3;
+  claude +0.0365 / gemini +0.0548, fence j) — what is **not** attached is any comparison of that size to a
+  human effect size (the anchor is direction-only, fence f; Kim/Gries give no model-scale figure), nor a
+  magnitude for gpt (a non-lifting SHADOW).
 - **Not "the distributional shadow is defeated"** — narrowly directional, robust to the firewall's
   logprob-free shortcut controls, nothing stronger (fence i).
 - **Not temporally/version robust** — nearly same-date, same versions, single-lab, n=3 (fence h).
@@ -268,11 +308,14 @@ byte-identical discourse-givenness firewall** on both runs (a string-frequency /
 scores zero by construction) — human-anchored on its **direction** leg. `supported` attaches to the
 **direction/sign**, the **replication**, and the **firewall shortcut-immunity for the two covered members** —
 with the load-bearing qualifiers that the firewall is **2/3 not 3/3**, **gpt is a persistent replicated
-SHADOW**, the effect is **small vs end-weight**, the covariate is **near-vacuous**, the anchor is
-**direction-only**, and **no within-model magnitude is attached**. It does **not** attach to a panel-uniform
-reading, a human comparison of sizes, a within-model magnitude, a causal shadow-defeat reading, or a
-human-level competence reading — all explicitly disclaimed above. The two underlying results (v1, rep2)
-remain `status: proposed` (this claim consolidates them). `contingent-on: []` — the governing
+SHADOW**, the effect is **small vs end-weight**, the covariate is **near-vacuous**, and the anchor is
+**direction-only**. As of s238 it **also** attaches a **within-model FIREWALL magnitude** (pooled-136,
+claude **+0.0365 [0.027, 0.046]** / gemini **+0.0548 [0.040, 0.069]**, both CI-LB>0, the fresh-48 blind arm
+clearing CI-LB>0 for both; gpt a non-lifting SHADOW; fence j lifted) — small (≈3.7 / 5.5 points out of 100)
+and within-model, not a human comparison of sizes. It does **not** attach to a panel-uniform reading, a
+human comparison of sizes, a within-model magnitude **for gpt**, a causal shadow-defeat reading, or a
+human-level competence reading — all explicitly disclaimed above. The three underlying results (v1, rep2,
+mag) remain `status: proposed` (this claim consolidates them). `contingent-on: []` — the governing
 operationalization
 ([`decisions/resolved/particle-placement-anchor-and-indicator`](../../decisions/resolved/particle-placement-anchor-and-indicator.md),
 ADOPT-WITH-MODIFICATION) is ratified.

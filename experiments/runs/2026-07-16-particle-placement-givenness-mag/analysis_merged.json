@@ -1,0 +1,159 @@
+{
+  "verdict": "MAGNITUDE-ATTACHED",
+  "decisive_firewall_leg": "given_minus_newment",
+  "scope": "magnitude attaches to claude+gemini (the 2 firewall-confirming models); gpt is a displayed, replicated SHADOW (not gated). Claim particle-placement-givenness fence (j).",
+  "gate1_fresh48_claude_and_gemini_lb_gt0": true,
+  "gate2_pooled136_claude_and_gemini_lb_gt0": true,
+  "gpt_shadow_lifts_at_pooled_N": false,
+  "stimuli_sha256": "181461b2fa0616afe1840a0fce753d9d7ddd22757b8f41fbcfc482f7e01c9264",
+  "freq_control_sha256": "cd472475cfae6f03862cd12ffc9421cd085d8abca831e2cccf1edd7a42da20d7",
+  "billed_usd_mag_run": 1.658902,
+  "n_cost_have": 865,
+  "n_cost_missing": 0,
+  "models": {
+    "claude": {
+      "model": "claude",
+      "fresh_48_given_minus_newment": {
+        "shift2": 0.0351,
+        "ci95": [
+          0.0211,
+          0.0487
+        ],
+        "frames_pos": "35/48",
+        "sign_p": 0.00104,
+        "cond_lb_gt0": true
+      },
+      "prior_88_given_minus_newment": {
+        "shift2": 0.0372,
+        "ci95": [
+          0.0252,
+          0.0497
+        ],
+        "frames_pos": "58/88",
+        "sign_p": 0.00187,
+        "cond_lb_gt0": true
+      },
+      "pooled_136_given_minus_newment": {
+        "shift2": 0.0365,
+        "ci95": [
+          0.0272,
+          0.0459
+        ],
+        "frames_pos": "93/136",
+        "sign_p": 1e-05,
+        "cond_lb_gt0": true
+      },
+      "fresh_48_given_minus_new_desc": {
+        "shift2": 0.079,
+        "ci95": [
+          0.0592,
+          0.0989
+        ],
+        "frames_pos": "41/48",
+        "sign_p": 0.0,
+        "cond_lb_gt0": true
+      },
+      "n_frames": {
+        "v1": 40,
+        "rep2": 48,
+        "mag": 48
+      }
+    },
+    "gemini": {
+      "model": "gemini",
+      "fresh_48_given_minus_newment": {
+        "shift2": 0.0385,
+        "ci95": [
+          0.0135,
+          0.0635
+        ],
+        "frames_pos": "28/48",
+        "sign_p": 0.15616,
+        "cond_lb_gt0": true
+      },
+      "prior_88_given_minus_newment": {
+        "shift2": 0.0636,
+        "ci95": [
+          0.0463,
+          0.0807
+        ],
+        "frames_pos": "66/88",
+        "sign_p": 0.0,
+        "cond_lb_gt0": true
+      },
+      "pooled_136_given_minus_newment": {
+        "shift2": 0.0548,
+        "ci95": [
+          0.0404,
+          0.0689
+        ],
+        "frames_pos": "94/136",
+        "sign_p": 0.0,
+        "cond_lb_gt0": true
+      },
+      "fresh_48_given_minus_new_desc": {
+        "shift2": 0.2091,
+        "ci95": [
+          0.1771,
+          0.2417
+        ],
+        "frames_pos": "47/48",
+        "sign_p": 0.0,
+        "cond_lb_gt0": true
+      },
+      "n_frames": {
+        "v1": 40,
+        "rep2": 48,
+        "mag": 48
+      }
+    },
+    "gpt": {
+      "model": "gpt",
+      "fresh_48_given_minus_newment": {
+        "shift2": -0.0006,
+        "ci95": [
+          -0.021,
+          0.022
+        ],
+        "frames_pos": "18/48",
+        "sign_p": 0.97027,
+        "cond_lb_gt0": false
+      },
+      "prior_88_given_minus_newment": {
+        "shift2": 0.0107,
+        "ci95": [
+          -0.0126,
+          0.0341
+        ],
+        "frames_pos": "42/88",
+        "sign_p": 0.70286,
+        "cond_lb_gt0": false
+      },
+      "pooled_136_given_minus_newment": {
+        "shift2": 0.0067,
+        "ci95": [
+          -0.0104,
+          0.0242
+        ],
+        "frames_pos": "60/136",
+        "sign_p": 0.92768,
+        "cond_lb_gt0": false
+      },
+      "fresh_48_given_minus_new_desc": {
+        "shift2": 0.0278,
+        "ci95": [
+          -0.0006,
+          0.0542
+        ],
+        "frames_pos": "31/48",
+        "sign_p": 0.02973,
+        "cond_lb_gt0": false
+      },
+      "n_frames": {
+        "v1": 40,
+        "rep2": 48,
+        "mag": 48
+      }
+    }
+  }
+}
