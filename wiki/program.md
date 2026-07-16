@@ -124,6 +124,15 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   both flagship alternations, discourse-structural AND semantic, the asymmetry shown not averaged). v2 →
   `superseded` + banner (history kept visible); no number changed; fresh coherence pass SAFE-TO-LAND (6/6);
   $0.0015 (one promotion-review vote).
+  **v4 fourth-edition landed s227** ([`theory/shadow-depth-table-v4`](findings/theory/shadow-depth-table-v4.md);
+  the s220/s221/s222 genitive update boxes [3, the edition threshold] forced a clean rewrite at the
+  particle-placement touch): folds the three boxes into clean body prose + adds **verb-particle placement**
+  as a SIXTH beater — **result-cited, single-run, `proposed`** ([`result/particle-placement-givenness-v1`](findings/results/particle-placement-givenness-v1.md)),
+  held visibly distinct from the five promoted-claim beaters (one run, firewall 2/3 with gpt a SHADOW, the
+  s219-genitive slot) — and grows the production-side reading from a **pair to a trio** (dative + genitive +
+  particle, the three legs shown at unequal evidential strength). Neither downstream essay trigger fired
+  (checked s227; the particle is a 2/3 SPLIT, not a concordant verdict). v3 → `superseded` + banner (history
+  kept visible); no number changed; fresh coherence pass SAFE-TO-LAND; $0.
 - **A2a Powered confirmations (standing habit, now [`PROTOCOL.md`](../PROTOCOL.md) §4).** Any line about to
   carry a claim gets a fresh-item powered re-run at ~100–150 items (~10× founding-era counts;
   still ≲$1 at observed prices) so the claim states a magnitude with an interval, not a
@@ -386,6 +395,22 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   frame. Single run → no `claim` (fresh-item replication is the successor); shadow-depth-table fold deferred to
   a later consolidation unit (theory-edition rule). predictions.md **fired-for**. Reading-bearing result stays
   `proposed`. **The A5 third sibling has landed its run.**]**
+  **[PHIL/CONSOL FOLD landed s227 (the naturally-owed successor; $0, no new test): the particle-placement
+  CONFIRM folded into the shadow-depth table as a **sixth beater row**. Because v3 already carried three
+  dated update boxes (s220/s221/s222), the theory-edition rule ([`PROTOCOL.md`](../PROTOCOL.md) §3) forced a
+  clean **v4** ([`theory/shadow-depth-table-v4`](findings/theory/shadow-depth-table-v4.md); v3 →
+  `superseded` + banner, kept visible as the July 13 record): the three genitive boxes fold into clean prose,
+  and the particle enters as a **result-cited, single-run** row held visibly distinct from the five
+  promoted-claim beaters (one run, no replication, firewall 2/3 with gpt a SHADOW, referential effect small
+  vs end-weight) — the slot the genitive held at s219. The **production-side alternation pair** section grew
+  to a **trio** (dative + genitive + particle), the three legs shown at their unequal evidential strength
+  rather than averaged. **Neither downstream essay trigger fired** (checked s227): the particle is a **2/3
+  SPLIT with a SHADOW leg**, not a *concordant* verdict, so it is outside
+  [`essay/concordant-verdict-hides-spread`](findings/essays/concordant-verdict-hides-spread.md)'s domain
+  (none of its three triggers applies), and it *corroborates* rather than moves/breaks any placement in
+  [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md). Fresh-agent
+  adversarial coherence pass SAFE-TO-LAND; $0. The A5 battery's third row is now on the table, held honestly
+  weakest.]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked
