@@ -9,7 +9,7 @@ meaning-senses:
 status: revised
 contingent-on: []
 created: 2026-07-02
-updated: 2026-07-13
+updated: 2026-07-16
 links:
   - rel: refines
     target: theory/lexicon-grammar-continuum
@@ -19,6 +19,8 @@ links:
     target: result/comparative-correlative-japanese-v1
   - rel: depends-on
     target: result/blimp-swap-arm-v1
+  - rel: depends-on
+    target: result/blimp-c4-matched-swap-arm-v1
   - rel: depends-on
     target: result/presupposition-doppelganger-control-v1
   - rel: depends-on
@@ -112,7 +114,35 @@ links:
 > "if the underlying numbers move on re-run" self-discipline guard (predictions §C) — re-examined in-page,
 > reading weakened, not overturned.
 
-> **Status: revised (2026-07-13 — the CC beater's cross-linguistic corroboration extends to Japanese `〜ば〜ほど`, a *stronger-but-still-partial* discharge of the English-n-gram worry [typologically distant, no overt comparative morpheme], s215/s216 [strengthening corroboration, no reading changed]; 2026-07-12 — the grammatical-pole CC beater gains a cross-linguistic (German) within-model replication, a *partial* discharge of the English-n-gram worry, s213/s214 [strengthening corroboration, no reading changed]; 2026-07-11 — the s205 grammar-side corroboration's R1 human-shared reading probed for swap-stability and REFUSED promotion, s210/s211; 2026-07-06 antonymy corner falsified on the panel, s186; earlier 2026-07-03; was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
+> **REVISION (2026-07-16, s236) — the s211 box's named C4-matched successor RAN; the C4
+> pretraining-frequency confound is now CONTROLLED, and R1's human-shared reading stays non-promotable
+> for a *cleaner* reason (a residual too small to resolve, not an uncontrolled confound).**
+> The s211 box above (and the Honesty-box bullet below) rested part of the R1 downgrade on a **confound**:
+> the s210 deep-scope swap drop was "confounded by a +0.204 C4 pretraining-frequency gap," so it was
+> "neither a clean exact-string-memorization signal nor a clean refutation of the descriptive R1
+> alignment." The **C4-frequency-matched swap arm** that box named as the "honest successor" has now run →
+> [`result/blimp-c4-matched-swap-arm-v1`](../results/blimp-c4-matched-swap-arm-v1.md). Dual-band matching
+> each substitute on **both** SUBTLEX-US *and* the C4 pretraining proxy closed the +0.204 gap **by
+> construction** (build-time signed set-mean C4 gap +0.0106, ADEQUATE) — the confound the s211 box invoked
+> is now **demonstrably controlled** on the set mean. Net of **both** frequency channels the deep stratum
+> still drops directionally on 3/3 (Δ̄acc −0.072 / −0.057 / −0.042, all CIs exclude 0) but **too weakly**
+> to clear the strict whole-CI ≤ −0.05 bar on any (0/3, CI-uppers −0.048 / −0.023 / −0.022): verdict
+> **STILL-INCONCLUSIVE**. Two things sharpen here; neither overturns. **(i)** Part of the s210 drop *was*
+> the C4 confound — closing it **attenuated** the deep drop for claude (−0.095 → −0.072) and gemini (−0.072
+> → −0.042; gpt ~unchanged) — so this essay's contamination caution was **vindicated by measurement**, not
+> merely hedged. **(ii)** A **residual** deep-scope drop survives *both* frequency proxies on all three, so
+> R1 is **still non-swap-stable and non-promotable** — but the operative reason is no longer "an
+> uncontrolled C4 confound"; it is now "a residual deep-scope drop too small to resolve at this N" (with a
+> disclosed per-word directional-cancellation caveat — the C4 gap is matched on the *set mean*, not
+> word-by-word). **Net for this essay:** the structural thesis is **untouched** (the swap arm bears only on
+> the s205 corroboration, not on the load-bearing beater/saturated-corner inputs); the R1 human-shared gloss
+> stays exactly where s211 left it — non-swap-stable, non-promotable, its human comparison honestly **not
+> made** — now restated on a **twice-controlled** footing rather than a confounded one. This **fires** the
+> "if the underlying numbers move / a control runs" self-discipline guard (predictions §C) a second time:
+> re-examined in-page, reading **sharpened**, not overturned. The s211 box's "C4-confounded" framing is the
+> **pre-s236** reading, superseded on the confound-status point and kept visible.
+
+> **Status: revised (2026-07-16 — the s211 R1-downgrade's named C4-matched successor ran → STILL-INCONCLUSIVE; the C4 pretraining-frequency confound is now *controlled* by construction, and R1's human-shared reading stays non-swap-stable/non-promotable on a twice-controlled footing [a residual deep drop survives both frequency proxies but is too small to resolve], structural thesis untouched, s236; 2026-07-13 — the CC beater's cross-linguistic corroboration extends to Japanese `〜ば〜ほど`, a *stronger-but-still-partial* discharge of the English-n-gram worry [typologically distant, no overt comparative morpheme], s215/s216 [strengthening corroboration, no reading changed]; 2026-07-12 — the grammatical-pole CC beater gains a cross-linguistic (German) within-model replication, a *partial* discharge of the English-n-gram worry, s213/s214 [strengthening corroboration, no reading changed]; 2026-07-11 — the s205 grammar-side corroboration's R1 human-shared reading probed for swap-stability and REFUSED promotion, s210/s211; 2026-07-06 antonymy corner falsified on the panel, s186; earlier 2026-07-03; was draft 2026-07-02). A philosophical-track essay in the project's own voice.**
 > It introduces **no new empirical claim** and makes **no human comparison of its own**. Every
 > empirical assertion cites the in-repo `result` or `essay` page that carries it, at that page's
 > stated strength. Its two load-bearing empirical inputs on the *shadow-saturated* side — the
@@ -392,7 +422,15 @@ the targets, and is silent on which model tracks which.
   −0.06 to −0.09 (CIs exclude 0), C4-frequency-confounded. Re-examined in-page (top revision box + s205-box
   annotation + Honesty-box bullet below): the DEPTH-GRADED (R2) half stands (untouched, consistent with the
   swap arm), the human-shared (R1) half is weakened to a non-swap-stable descriptive reading. The
-  structural thesis is untouched.
+  structural thesis is untouched. **→ FIRED AGAIN (2026-07-16, s236):** the C4-frequency-matched
+  successor named in the s211 box ran →
+  [`result/blimp-c4-matched-swap-arm-v1`](../results/blimp-c4-matched-swap-arm-v1.md),
+  **STILL-INCONCLUSIVE** — dual-band matching **closed** the +0.204 C4 confound by construction (set-mean
+  gap +0.0106) and a **residual** deep-scope drop survives *both* frequency proxies on 3/3 (Δ̄acc −0.072 /
+  −0.057 / −0.042, all CIs exclude 0) but clears the strict whole-CI ≤ −0.05 bar on 0/3. So R1 stays
+  non-swap-stable and non-promotable on a **twice-controlled** footing (the reason is now "a residual too
+  small to resolve," not "an uncontrolled C4 confound"); the structural thesis is untouched. See the s236
+  box at top.
 
 ## Honesty box
 
@@ -442,9 +480,16 @@ the targets, and is silent on which model tracks which.
   PROFILE-ALIGNED — the panel is hard where humans are hard) as descriptive-only corroboration. Its C8
   promotion controls have since run and the chain is CLOSED: the covariate arm survived (robustness), but
   the exact-string-swap arm REFUSED R1 ([`result/blimp-swap-arm-v1`](../results/blimp-swap-arm-v1.md), not
-  SWAP-STABLE), and the deep drop is C4-pretraining-frequency-confounded. So the essay's strongest
-  grammar-side corroboration — the one it leaned on for "*shared* human–model difficulty axis, not a
-  model-specific deficit" — is now a **non-swap-stable, non-promotable, confounded descriptive reading**.
+  SWAP-STABLE), and the deep drop was — *at s210/s211* — C4-pretraining-frequency-confounded. So the
+  essay's strongest grammar-side corroboration — the one it leaned on for "*shared* human–model difficulty
+  axis, not a model-specific deficit" — is a **non-swap-stable, non-promotable descriptive reading**.
+  **→ UPDATED (2026-07-16, s236):** the C4-frequency-matched successor has since run
+  ([`result/blimp-c4-matched-swap-arm-v1`](../results/blimp-c4-matched-swap-arm-v1.md); see the s236 box at
+  top) and **controlled** that confound (dual-band SUBTLEX ∧ C4, set-mean gap +0.0106) — so the reading is
+  now non-swap-stable and non-promotable on a **twice-controlled** footing (a residual deep drop survives
+  both frequency proxies, 3/3 directional, but is too small to resolve — 0/3 clear the strict bar), **not**
+  a merely confounded one. The confound-vindication cuts *toward* honesty (part of the s210 drop was the C4
+  gap, and closing it attenuated the drop) while leaving the human-comparison claim exactly as unmade.
   The **within-panel DEPTH-GRADED** grading it also carries is untouched (and consistent with the swap
   arm — the deep stratum is where the drop concentrates). This is the essay's
   weakest-where-it-most-needs-strength point on the grammatical pole's *human-comparison* leg: the depth
