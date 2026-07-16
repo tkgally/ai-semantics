@@ -1,0 +1,31 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "usage": {
+    "prompt_tokens": 1526,
+    "completion_tokens": 624,
+    "total_tokens": 2150,
+    "cost": 0.0039525,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0039525,
+      "upstream_inference_prompt_cost": 0.0011445,
+      "upstream_inference_completions_cost": 0.002808
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "billed_cost": 0.0039525,
+  "n": 1,
+  "n_missing": 0,
+  "error": null,
+  "content": "1. **Overall verdict on the line:** **STOP-AT-CEILING**  \n   The line has already spent two redesigns to get a clean read on the construct and has landed in a **twice-controlled STILL-INCONCLUSIVE** state. A third swap-direction arm would be a further redesign with diminishing decision value, not a necessary continuation.\n\n2. **Core economic question / rank:**  \n   **Best marginal use of ~$1.3\u20131.6:**\n   1) **(a) Larger-N rerun of the existing dual-band C4 arm** \u2014 best if the goal is to resolve the residual deep-drop magnitude around the current threshold; it directly attacks the only remaining quantitative ambiguity.  \n   2) **(b) Grounding-magnitude / image-referent probe** \u2014 higher-information *program* purchase, but not the immediate best use of this small budget because it is blocked and not same-line.  \n   3) **(c) Other promoted program lines** \u2014 likely better portfolio value than another redesign on a saturated line.  \n   4) **(d) Stop and redeploy** \u2014 economically sensible default once a line has hit a ceiling.  \n   5) **Third verb-swap arm** \u2014 **below** the above options; it adds one more perturbation axis, but the line\u2019s already-established ceiling means the expected value is low.\n\n   **Bottom line:** a third swap arm is **not** the best marginal use of budget here.\n\n3. **Honest one-sentence resting statement about R1:**  \n   **R1 is descriptively human-profile-aligned, but after two frequency-controlled swap arms its provenance remains unresolved at a measured ceiling, so it stays non-promotable.**\n\n4. **If a verb-swap arm were run: best-case information gain, and promotion status**  \n   - **Best-case gain:** it would tell you whether the deep-scope profile is stable under a *third* perturbation direction, now over verbs/valence rather than nouns/adjectives. That would modestly strengthen the claim that the alignment is not tied to one specific lexical channel.  \n   - **But it would not be decisive for promotion in the current framework.** Why: even a clean verb-swap stability result would still leave open **construction-frequency / residual frequency shadow / shared-difficulty** explanations unless those are separately controlled at the relevant construction level.  \n   - So **no, any swap arm alone cannot promote R1** under the present evidentiary standard. At best it can increment confidence in robustness; it cannot close the provenance question by itself.\n\n5. **Any sign of result-chasing?**  \n   **Some sign of line-holding / result-chasing risk.** The proposed third arm reads like \u201cone more perturbation just to see if the pattern survives,\u201d despite two prior arms already yielding a principled ceiling. That is not bad-faith, but it is exactly the kind of inertia the stopping rule is meant to resist."
+}

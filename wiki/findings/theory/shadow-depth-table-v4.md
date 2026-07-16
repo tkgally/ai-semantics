@@ -515,6 +515,14 @@ rather than a model-specific deficit.
   descriptive/non-promotable exactly as the s210 closure left it, and this row is unchanged** (the successor
   it named resolved nothing cleanly). A verb-swap arm is the only remaining direction and would trip the
   PROTOCOL §3 instrument-line governor (cross-session review first).
+  **→ that cross-session line-continuation review RAN s237 → STOP-FOR-NOW-WITH-CONDITIONS, form (iv) UNCHANGED**
+  ([`note/blimp-swap-line-continuation-review-v1`](../notes/blimp-swap-line-continuation-review-v1.md)): the
+  verb-swap arm is **not owed and not run** — the decisive ground is that **no swap arm can promote R1**,
+  because construction-frequency (not lexical identity) is the binding uncontrolled alternative and every
+  swap arm holds the construction fixed. The line rests at its twice-controlled ceiling until a
+  **construction-frequency instrument** (a *different* instrument, not a third swap) becomes available; the
+  non-Anthropic decorrelation vote converged (STOP-AT-CEILING). This changes no number and no reading in
+  form (iv) — only that the "verb-swap successor" pointer is now on hold by governance decision.
 - **A new controlled probe lands** (any A1/A2 item with a named control + CI) → it is added as a new beater
   row in the same edition, keeping the table the live roll-up the program intends.
 - **The row-inclusion decision is reopened and re-ratified differently** → the ratified default
