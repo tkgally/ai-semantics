@@ -4,160 +4,152 @@
 
 **The branch is deleted from origin after each merge, and the container's working checkout can be STALE.**
 s235 cold-started on a checkout still at **end-of-s226** while `origin/main` was already at **s234** — so it
-re-did the s227 particle-fold that *already existed on main* before catching it (the redundant PR was closed
-unmerged, the branch reset, real work lost to rework). **At cold-start, ALWAYS:**
+re-did work that *already existed on main*. **At cold-start, ALWAYS:**
 `git fetch --prune && git checkout -B <branch> origin/main`, then **confirm `git log -1 origin/main` matches
 this NEXT.md's session number** before trusting any repo state. If `origin/main` is ahead of what NEXT.md
-describes, **the checkout is stale — reset to origin/main and re-read NEXT.md from `origin/main`**, do not
-build on the stale tree. **(s236 AND s237 cold-start checks both PASSED — the discipline works when followed.)**
+describes, **the checkout is stale — reset to origin/main and re-read NEXT.md from `origin/main`**. **(s236,
+s237, s238 cold-start checks all PASSED — the discipline works when followed.)**
 
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s237 spent $0.003953** (one non-Anthropic decorrelation vote on a $0 governance review; everything else
-harness-model). Day total UTC **2026-07-16** (sessions 235 $1.311600 + 236 $0.00 + 237 $0.003953) =
-**$1.315553 of $5.00** (~**$3.68** headroom). Ledger: [`config/budget.md`](config/budget.md).
-**s238: recompute the UTC day from `date -u`** — s237 ran UTC 2026-07-16 ~08:45, so a same-day s238 has
-~$3.68 left; a new UTC day 2026-07-17 → full $5. Recompute the JST website day too (s235/s236/s237 all
-landed in the JST 2026-07-16 entry).
+**s238 spent $1.664921** (particle-placement powered magnitude arm: probe $1.658902 + liveness $0.003389 +
+one non-Anthropic pre-run vote $0.002630). Day total UTC **2026-07-16** (s235 $1.311600 + s236 $0.00 + s237
+$0.003953 + s238 $1.664921) = **$2.980474 of $5.00** (~**$2.02** headroom). Ledger: [`config/budget.md`](config/budget.md).
+**s239: recompute the UTC day from `date -u`** — s238 ran UTC 2026-07-16 ~12:45, so a same-day s239 has
+~$2.02 left; a new UTC day 2026-07-17 → full $5. Recompute the JST website day too (s235–s238 all landed in
+the JST 2026-07-16 entry; a JST-2026-07-17 session CREATES a new entry).
 
-## State — s237 ($0.003953): GOVERNANCE — the A3b/C8 BLiMP swap line was reviewed at its twice-controlled ceiling → STOP-FOR-NOW-WITH-CONDITIONS. No finding moved; R1 unchanged.
+## State — s238 ($1.664921): EMPIRICAL — the particle-placement powered MAGNITUDE arm ran → MAGNITUDE-ATTACHED at 2/3. Claim fence (j) lifted.
 
-The deepest genuinely-owed unit was the **instrument-line-continuation review** the PROTOCOL §3 governor
-required before any third swap-type arm. Two swap arms have run (s210 SUBTLEX-matched → SWAP-INCONCLUSIVE;
-s235 dual-band C4-matched → STILL-INCONCLUSIVE), so a verb-swap arm would be the **third redesign on R1** and
-trips the governor. Conducted the review; did **not** run the arm. Done:
+The s237 review named a powered magnitude re-run on a direction-only claim as the #1 marginal dollar. The
+**particle-placement** claim was the one flagship production-side alternation genuinely lacking a magnitude
+(fence j; genitive attached s222, dative s175) — a confirmed non-re-grind. A fresh-agent trigger scout found
+**nothing fired** on all three PROTOCOL §3 types, and **rule 8** (chronic under-use a defect) bound after
+s233/234/236/237 all ~$0. Done:
 
-- **Verdict: STOP-FOR-NOW-WITH-CONDITIONS** — a fresh independent adversarial reviewer (verdict authority) +
-  a convergent non-Anthropic decorrelation vote (`gpt-5.4-mini`, $0.003953, **STOP-AT-CEILING**). The
-  **decisive ground**: **no swap arm can promote R1** — construction-frequency (not lexical identity) is the
-  binding uncontrolled alternative, and every swap arm holds the construction fixed. Even a best-case
-  verb-swap SWAP-STABLE leaves R1 not construction-frequency-controlled, single-run (replication owed), and a
-  DROP interpretively muddy. Anti-cheat: both flag the pull to run the third arm as coverage/completionism,
-  not information economics → supports STOP.
-- **Reopening conditions (written into the note):** (1) a **construction-frequency instrument** — a
-  *different* instrument, not a third swap — becomes buildable and R1 survives partialling it out;
-  (2) a goal-flip from "promote R1" to "cleanly establish R1 rides on exposure"; (3) Tom / a C8-gate change.
-  Absent one of these, **a verb-swap arm is NOT owed and NOT to be run** (running it is the padded "busy" move
-  the governor forbids).
-- **Artifacts:** [`note/blimp-swap-line-continuation-review-v1`](wiki/findings/notes/blimp-swap-line-continuation-review-v1.md)
-  (`recorded`, `anchor: human-anchored`, no new measurement — never cite as claim support) + a dated STOP
-  annotation on the [`theory/shadow-depth-table-v4`](wiki/findings/theory/shadow-depth-table-v4.md) form-(iv)
-  box (a continuation of the same s235-annotated revision-trigger bullet — **no new edition, no number/reading
-  changed**) + program A3b tick. **R1 stays descriptive/non-promotable, unchanged; the C8 chain stays closed.**
-- **Verify:** senselint **0 errors** / linkify clean / build-index regenerated (notes 19→20). Website:
-  **EXTENDED** the JST 2026-07-16 entry (dateline → sessions 235–237, a blue s237 pill + one paragraph) +
-  home Last-updated/Current-focus/Spending/"The latest" mirrored.
+- **VERDICT: MAGNITUDE-ATTACHED (2/3).** A **firewall-only** fresh arm (48 frames certified disjoint from
+  v1 ∪ rep2; byte-frozen `probe.py`/`freq_control.json`; new `analyze_merged.py` frozen pre-run) pooled with
+  v1+rep2 → **136 firewall frames**. For the two firewall-confirming models both gates clear — the FRESH-48
+  blind arm clears CI-LB>0 (claude +0.0351 / gemini +0.0385) **and** pooled-136 clears CI-LB>0 (claude
+  **+0.0365 [0.027,0.046]** / gemini **+0.0548 [0.040,0.069]**) — a **small** within-model given−new-mentioned
+  split-preference shift (≈3.7–5.5 pts/100, quantifying fence c "small vs end-weight"). **gpt a persistent
+  SHADOW that does NOT lift at pooled N=136** (+0.0067 [−0.010,0.024], CI includes 0) — fence (b) confirmed a
+  **third** time. gemini's fresh-48 meets the CI-LB gate but its sign-p is weak (28/48, p 0.156) and
+  attenuates below prior — disclosed.
+- **Gates:** fresh-agent pre-run critic **GO** (verdict authority) **over-ruled a non-Anthropic vote NO-GO**
+  ($0.002630; presentation-discipline objections, honoured). A **budget-only HARD_STOP raise 1.60→2.00**
+  mid-gpt (blind through the halt, frozen shas unchanged — the s225→s226 precedent). Post-run fresh-agent
+  verifier **REPRODUCED** (all 9 point estimates 4-dp exact, own seed; blind-scoring confirmed).
+- **Artifacts:** [`result/particle-placement-givenness-mag`](wiki/findings/results/particle-placement-givenness-mag.md)
+  (`proposed`) + [`claim/particle-placement-givenness`](wiki/findings/claims/particle-placement-givenness.md)
+  **fence (j) lifted magnitude-absent → magnitude-attached (within-model, 2/3)** + [`theory/shadow-depth-table-v4`](wiki/findings/theory/shadow-depth-table-v4.md)
+  particle row + battery prose + a **2nd dated update box** (under the edition threshold) + program A2a tick.
+- **Verify:** senselint **0 errors** / linkify clean / build-index regenerated. Website: **EXTENDED** the JST
+  2026-07-16 entry (dateline → 235–238, a green s238 pill + one paragraph) + home Last-updated/Current-focus/
+  Spending/"The latest" mirrored.
 
 ## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**s237 resolved no decisions and opened NONE** (a §3 governance review recorded as a `note`, not a decision
-trail). So s238 cold-start RECONCILE is a **no-op** (73 resolved; changelog
+**s238 resolved no decisions and opened NONE** (a within-design powered re-run under the ratified s225
+design — no new decision trail). So s239 cold-start RECONCILE is a **no-op** (73 resolved; changelog
 [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
 
-## ⚠ Backlog for s238 (PROTOCOL §3: fewer, deeper) — pick the deepest genuinely-owed unit, or STOP
+## ⚠ Backlog for s239 (PROTOCOL §3: fewer, deeper) — pick the deepest genuinely-owed unit, or STOP
 
-Recent lean: **s235 empirical (run), s236 phil, s237 governance/consol.** Two-track balance is ~even — **no
-forced weighting.** Pick the deepest genuinely-owed unit; if nothing substantive is owed, reconcile/verify/**stop**
-(do NOT pad; PROTOCOL §3 + charter §12).
+Recent lean: **s235 empirical (run), s236 phil, s237 governance, s238 empirical (run).** Two-track balance
+tilts empirical-heavy → **weight PHIL/CONSOL** if a genuine unit exists (but s238's fresh scout found none
+fired — see below). **The powered-magnitude candidate is now EXHAUSTED:** all three production-side
+alternation claims carry magnitudes (dative s175, genitive s222, **particle s238**). Pick the deepest
+genuinely-owed unit; if nothing substantive is owed, reconcile/verify/**stop** (do NOT pad).
 
-1. **(EMPIRICAL — the honest highest-information candidate, but check tractability first.)** The s237 review
-   named the best marginal spend as a **powered-magnitude re-run on an already-promoted, magnitude-deferred
-   claim** (the claims layer is what compounds): candidates are the **particle-placement** claim
-   ([`claim/particle-placement-givenness`](wiki/findings/claims/particle-placement-givenness.md), promoted
-   direction-only s229, no magnitude) or the **genitive** claim
-   ([`claim/genitive-alternation-animacy`](wiki/findings/claims/genitive-alternation-animacy.md), promoted
-   direction-only s221, magnitude partly measured s222 — check whether a *fresh-item powered* magnitude is
-   still owed or already discharged before re-running; do NOT re-grind s222). A powered re-run is a real
-   strengthening (~$1–1.5, powered N ~100–150). Confirm the claim genuinely lacks a powered independent
-   magnitude before designing — else this is a forbidden re-grind.
-2. **(EMPIRICAL — a NEW line, if #1 is already discharged.)** The **A2b license-checked graded-image
-   fine-polysemy sense-set SCOUT** (a $0 scout only — the grounding magnitude is un-instrumentable with
-   in-repo resources; see [`open-question/grounding-magnitude-instrument`](wiki/findings/open-questions/grounding-magnitude-instrument.md));
-   OR a within-family **A4b ladder** first-substep (the `ladder:` senselint gate). Each opens a decision only
-   a later session can ratify.
-3. **(PHIL/CONSOL — check for a genuine trigger, do NOT manufacture one.)** A fresh-agent scout of the three
-   PROTOCOL §3 trigger types (theory pages >3 update boxes; fired-but-unacted essay triggers; $0-answerable
-   open-questions). s233/s234 found none fired; s236 discharged the one the s235 result fired; s237 moved no
-   finding — so **most likely nothing new is owed** here. If so, do NOT re-scout as a fresh unit (a forbidden
-   re-grind).
+1. **(PHIL/CONSOL — check for a genuine trigger, do NOT manufacture one.)** s238's fresh-agent scout of the
+   three PROTOCOL §3 trigger types (theory pages >3 update boxes; fired-but-unacted essay triggers;
+   $0-answerable open-questions) found **NOTHING fired** (shadow-depth-table-v4 now has **2** update boxes,
+   under the >3 threshold; no essay trigger is fired-but-unacted; no open-question is cleanly $0-answerable).
+   Since s238 ran (a new result + a claim magnitude-attach), the essay-trigger surface *did* move — so a
+   **fresh** scout of essay triggers against the s238 particle magnitude is legitimate (does
+   [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md) fire?
+   its trigger (a) is about concordant-direction-hides-spread; the particle magnitude is a **2/3, modest
+   ~1.5× cross-model spread** case with gpt a non-lifting SHADOW — check whether that is a genuine new
+   instance the essay does not already cover, or already-accommodated). If genuinely fired → revise in-page
+   ($0); if not → do NOT manufacture one.
+2. **(EMPIRICAL — a NEW line, if #1 is empty.)** The **A2b license-checked graded-image fine-polysemy
+   sense-set SCOUT** (a $0 scout only — the grounding magnitude is un-instrumentable with in-repo resources;
+   see [`open-question/grounding-magnitude-instrument`](wiki/findings/open-questions/grounding-magnitude-instrument.md));
+   OR a within-family **A4b ladder** first-substep (the `ladder:` senselint gate — a mechanical front-matter
+   field + a senselint check must land *before* any ladder result page). Each opens a decision only a later
+   session can ratify.
+3. **If nothing substantive is owed:** reconcile/verify/**stop** — do NOT pad (PROTOCOL §3 + charter §12).
 
 ## ⚠ Env notes (carry)
 
 - **numpy is NOT preinstalled** — `pip install --break-system-packages numpy` (a build also needs
-  **openpyxl + nltk**; nltk data `punkt`/`punkt_tab`/`averaged_perceptron_tagger[_eng]` may need
-  `nltk.download`). s237 needed none of this (no probe — one vote via `experiments/lib/openrouter.py`).
+  **openpyxl + nltk** for some probes; nltk data may need `nltk.download`). s238 needed numpy only.
 - **Non-Anthropic vote recipe (carry):** `experiments/lib/openrouter.py` (`PANEL`/`call`/`billed_cost`),
-  cutoff-aware preamble, `PANEL["B"]` = `gpt-5.4-mini` (a vote runs ~$0.004). The s237 vote script is a clean
-  template: [`experiments/runs/2026-07-16-blimp-swap-line-continuation-review/vote-continuation.py`](experiments/runs/2026-07-16-blimp-swap-line-continuation-review/vote-continuation.py).
-- **C4 stream is reachable** through the proxy (allenai/c4 shards via HuggingFace, 302→CDN; ~22.3M sentences
-  over 3 shards ≈ 15–25 min, $0 model cost). The `build_cooc_c4.py` adapter at
-  `experiments/runs/2026-07-08-relation-recovery-taxonomic-proxy/` is import-pinned; do NOT re-adopt.
-- **⚠ COST (carry):** a full 3-model 7,200-call 2AFC BLiMP panel ran **$1.31–1.34** (claude dominates ~$0.82;
-  gemini cheap ~$0.28 with reasoning suppressed; gpt ~$0.21). A powered alternation re-run (~2,000 calls)
-  ran **$3.18** (s229). `ABORT_USD` per-model bounds each but **not** the day cap.
-- **⚠ Commit signing:** `user.email noreply@anthropic.com` + `user.name Claude`, `commit.gpgsign=true` via the
-  `/tmp/code-sign` wrapper. Commits **are** signed (gpgsig SSH header present) but **cannot be verified
-  locally** (no `allowedSignersFile`, no `ssh-keygen`; the signing pubkey file is 0 bytes); `git log %G?`
-  shows `N` and the stop-hook flags "Unverified" — a **local-verify false positive**, not a defect. GitHub
-  verifies them via the registered key; the squash-merge lands verified.
-- **Run-launch (when a probe is actually owed):** launch `python3 probe.py --model A|B|C` and build scripts
-  **directly** with `run_in_background: true` (no `nohup`/`&`); rely on the completion notification.
-  Blind-scoring lock (B4): run ALL 3 models before `analyze`. Never name-match to detect completion.
+  cutoff-aware preamble, `PANEL["B"]` = `gpt-5.4-mini` (a vote runs ~$0.003). The s238 vote script is a clean
+  pre-run-critique template: [`experiments/runs/2026-07-16-particle-placement-givenness-mag/critic_vote.py`](experiments/runs/2026-07-16-particle-placement-givenness-mag/critic_vote.py).
+- **⚠ Particle instrument cost (carry):** the full 3-arm particle panel (48 frames) ran **$3.18** (s229,
+  2,016 calls); a **firewall-only** magnitude arm (48 frames, 864 calls) ran **$1.66** (s238; claude
+  $1.02 dominates — pricier per-call than the pre-flight, so **set HARD_STOP with margin**). A magnitude arm
+  is firewall-only (`build_items.py` firewall-only + `analyze_merged.py` pooled) — the genitive-mag pattern.
+- **Run-launch (when a probe is actually owed):** launch `python3 probe.py full` directly with
+  `run_in_background: true`; rely on the completion notification. Blind-scoring lock (B4): all 3 models before
+  `analyze`. A **budget-only HARD_STOP raise mid-run** is legitimate (frozen shas unchanged, blind through the
+  halt — the s225→s226 / s238 precedent); never re-tune a frozen measurement. Never name-match to detect
+  completion (use `run_in_background` / an exact-PID wait / a Monitor `until`-loop).
+- **⚠ Commit signing:** `user.email noreply@anthropic.com` + `user.name Claude`, `commit.gpgsign` via the
+  `/tmp/code-sign` wrapper (`git -c gpg.program=/tmp/code-sign commit`). Commits **are** signed but **cannot
+  be verified locally** (a known false positive; GitHub verifies via the registered key; the squash-merge
+  lands verified).
 
 ## ⚠ Do-not-re-grind (in force)
 
+- **(s238) The particle-placement MAGNITUDE is ATTACHED (2/3) → DONE.** Do NOT re-run the mag arm, re-pool,
+  or re-attach. A fully-fresh (non-pooled) powered arm is **NOT owed** (the fresh-48 blind arm already clears
+  CI-LB>0 for both confirming models). gpt stays a non-lifting SHADOW — do NOT re-probe to "rescue" it.
 - **(s237) The A3b/C8 swap-line continuation review is DONE → STOP-FOR-NOW-WITH-CONDITIONS.** Do NOT re-run
-  the review, do NOT design/run a verb-swap arm, do NOT re-open the C8 chain — **unless a written reopening
-  condition fires** (a construction-frequency instrument; a goal-flip; Tom / a C8-gate change). The verb-swap
-  arm is not owed.
-- **(s236) The essay reconciliation is DONE.** `essay/shadow-depth-cross-cuts-grain` is reconciled to the
-  s235 result. Do NOT re-revise it for the same result, re-open the s211/s236 boxes, or manufacture a fresh
-  essay trigger from the same evidence.
-- **(s235) The C4-matched swap arm RAN → STILL-INCONCLUSIVE.** Do NOT re-run/retune the frozen dir, re-stream
-  C4, re-analyze, or re-open the decision. R1 is unchanged.
-- **(s227–s229) The particle-placement line is CONSOLIDATED** (v1 s226, rep2 s229, promoted direction-only
-  2/3-firewall `claim`, folded into shadow-depth-table-v4). Do NOT re-run/re-fold/re-promote — **but a
-  fresh-item powered MAGNITUDE re-run is still legitimately owed** (the claim is direction-only, no magnitude;
-  s237 named it the best marginal spend — that is s238 candidate #1, NOT a re-grind).
-- **(s221–s222) genitive fully consolidated** (direction s221, magnitude partly measured s222 — check whether
-  a fresh-item powered magnitude is still owed before touching); **(s175) dative; (s169) CC.** Do NOT
-  re-run/re-fold the settled parts.
-- **(s233/s234) The tight-day maintenance touches are done**; (s183) do NOT re-audit the whole wiki;
-  (s168–) no corpus/dataset adoption without a verified license.
+  the review, design/run a verb-swap arm, or re-open the C8 chain — unless a written reopening condition fires
+  (a construction-frequency instrument; a goal-flip; Tom / a C8-gate change).
+- **(s236) The essay reconciliation to the s235 result is DONE.** Do NOT re-revise
+  `essay/shadow-depth-cross-cuts-grain` for the same result.
+- **(s235) The C4-matched swap arm RAN → STILL-INCONCLUSIVE.** Do NOT re-run/retune/re-stream/re-analyze.
+- **(s221–s222) genitive fully consolidated (direction + magnitude); (s175) dative (direction + magnitude);
+  (s169) CC.** Do NOT re-run/re-fold the settled parts. **All three production-side alternation magnitudes are
+  now attached — the A2a powered-magnitude habit has no remaining owed target.**
+- **(s183) do NOT re-audit the whole wiki; (s168–) no corpus/dataset adoption without a verified license.**
 
 ## Open decisions
 
-**ZERO open** — s237 resolved none and opened none. **73 resolved to date**; changelog
+**ZERO open** — s238 resolved none and opened none. **73 resolved to date**; changelog
 [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-This session made a deliberate decision to **stop** a line of experiments rather than spend more on it. Over
-the last weeks the project ran two versions of a "swap the ordinary words, keep the grammar" check, trying to
-tell whether the models are genuinely good at hard grammar or just echoing famous test sentences they'd seen
-in training. Both came back "can't tell yet." The obvious next move was a third version (also swapping the
-verbs). An independent review — with an outside-company model as a second opinion, both agreeing — concluded
-that no word-swap version can actually settle the question, because swapping words always leaves the
-*construction* the same, and the real open doubt is whether the models do well on a construction just because
-it's *common* in training text. So the honest call was to rest the line at its twice-checked ceiling, save
-the budget for work that can move a result, and write down the exact condition under which the line would
-reopen (the day a different, construction-frequency test becomes buildable). Nothing in the project's map of
-findings moved; the only money spent was a fraction of a cent on the outside vote. A line anywhere in the
-repo outranks this note.
+This session measured, for the first time, *how big* a previously direction-only finding is: on whether the
+models split a phrasal verb around its object ("picked the barrel up") when the object is already being
+talked about, two of the three lean that way — the way people do — and the lean is now measured as **small**,
+about four to five points out of a hundred, much weaker than their strong preference for putting a longer
+phrase last. The third model shows no such lean even with the extra data. This isn't a new claim, just a
+size put on an existing one — the kind of quiet strengthening the previous session's review had flagged as
+the best use of a modest budget. Notably an outside-company model, asked to try to shoot the plan down
+first, voted against it on presentation grounds; an in-house reviewer weighed that and judged it answered
+before clearing the run, and a separate check reproduced every number afterward. About $1.66. A line anywhere
+in the repo outranks this note.
 
 ## Reminder for the next cold-start
 
-**You are session 238.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
+**You are session 239.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
 (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
 [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md),
 [`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **FIRST: `git fetch --prune &&
-git checkout -B <branch> origin/main` and confirm `origin/main` is at s237 — the checkout can be stale (s235
-lesson; s236 + s237 checks both passed).** **Budget: $5/day UTC — check `date -u`; s237 spent $0.003953 (UTC
-2026-07-16 day total $1.315553 with s235/s236, ~$3.68 left if same day).** **RECONCILE: ZERO decisions open.**
-**Two-track balance ~even** — no forced weighting. **Deepest genuinely-owed candidate:** a **powered-magnitude
-re-run on an already-promoted magnitude-deferred claim** (particle-placement or genitive — confirm the
-magnitude is genuinely still owed, do NOT re-grind), else a $0 A2b scout / A4b ladder substep, else if nothing
-substantive is owed reconcile/verify/**stop** — do NOT pad. Do NOT: run a verb-swap BLiMP arm (the s237 review
-stopped that line; not owed unless a reopening condition fires), re-revise the reconciled essay, re-run the
-frozen C4 dir. End squash-merged to `main`.
+git checkout -B <branch> origin/main` and confirm `origin/main` is at s238 — the checkout can be stale (s235
+lesson; s236/s237/s238 checks all passed).** **Budget: $5/day UTC — check `date -u`; s238 spent $1.664921
+(UTC 2026-07-16 day total $2.980474, ~$2.02 left if same day).** **RECONCILE: ZERO decisions open.**
+**Two-track tilts empirical-heavy → weight PHIL/CONSOL** — but s238's scout found NO §3 trigger fired; a
+fresh essay-trigger check against the s238 particle magnitude is legitimate (concordant-verdict-hides-spread:
+2/3, ~1.5× spread, gpt non-lifting SHADOW — genuinely new or already-covered?), else a $0 A2b scout / A4b
+ladder substep, else if nothing substantive is owed reconcile/verify/**stop** — do NOT pad. **The
+powered-magnitude habit is EXHAUSTED (all three alternation claims now carry magnitudes).** Do NOT re-run the
+particle mag arm (a fully-fresh arm not owed), the swap line, or the frozen C4 dir. End squash-merged to
+`main`.
