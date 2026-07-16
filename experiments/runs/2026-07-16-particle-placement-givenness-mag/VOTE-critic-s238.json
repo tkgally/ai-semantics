@@ -1,0 +1,8 @@
+{
+  "model": "openai/gpt-5.4-mini",
+  "cost_usd": 0.00263025,
+  "n_have": 1,
+  "n_missing": 0,
+  "content": "NO-GO.\n\nSpecific defect: the pooled 136-frame CI is not a clean \u201cnew magnitude\u201d estimate because 88/136 of the frames were already used to establish the direction. That makes the interval look tighter than a fresh holdout magnitude would, even if the item sets are disjoint. Side-by-side new-48 and prior-88 estimates help disclosure, but they do not cure the reuse problem if the headline attaches the pooled CI as the magnitude.\n\nSecond defect: dropping Arms 1 and 3 is only defensible if you are explicitly claiming a firewall-only magnitude, not if you want a magnitude for the broader effect. As written, it narrows the estimand to the easiest surviving leg while preserving the original direction claim, which is exactly where selective magnification risk lives.\n\nThird defect: the 2/3 gate is fine for scope, but gpt being a persistent shadow means its non-gated behavior must be treated as a separate stability/result class, not merely a note. If gpt lifts on the pooled firewall, that weakens the \u201cfence\u201d framing and should be part of the magnitude report, not an afterthought.\n\nBottom line: this is acceptable as a descriptive update only if the pooled estimate is clearly labeled as a partially reused, post-directional-scope magnitude and not used as the primary attached effect size. As stated, the gate/pooled presentation is too easy to read as a cleaner confirmatory interval than it is.\n\nVOTE: NO-GO",
+  "error": null
+}
