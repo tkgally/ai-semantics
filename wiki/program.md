@@ -132,7 +132,9 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   s219-genitive slot) — and grows the production-side reading from a **pair to a trio** (dative + genitive +
   particle, the three legs shown at unequal evidential strength). Neither downstream essay trigger fired
   (checked s227; the particle is a 2/3 SPLIT, not a concordant verdict). v3 → `superseded` + banner (history
-  kept visible); no number changed; fresh coherence pass SAFE-TO-LAND; $0.
+  kept visible); no number changed; fresh-agent adversarial coherence pass returned FIX-REQUIRED (0
+  blockers; 2 SHOULD-FIX — an anchor miscount and a stale genitive "magnitude-deferred" tag — + 1 nit, all
+  applied) → clean; $0.
 - **A2a Powered confirmations (standing habit, now [`PROTOCOL.md`](../PROTOCOL.md) §4).** Any line about to
   carry a claim gets a fresh-item powered re-run at ~100–150 items (~10× founding-era counts;
   still ≲$1 at observed prices) so the claim states a magnitude with an interval, not a
@@ -409,8 +411,8 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`essay/concordant-verdict-hides-spread`](findings/essays/concordant-verdict-hides-spread.md)'s domain
   (none of its three triggers applies), and it *corroborates* rather than moves/breaks any placement in
   [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md). Fresh-agent
-  adversarial coherence pass SAFE-TO-LAND; $0. The A5 battery's third row is now on the table, held honestly
-  weakest.]**
+  adversarial coherence pass returned FIX-REQUIRED (0 blockers; 2 SHOULD-FIX + 1 nit, all applied) → clean;
+  $0. The A5 battery's third row is now on the table, held honestly weakest.]**
 - **A6 `[x]` Cross-linguistic CC replication — GERMAN RAN + REPLICATES s213; JAPANESE RAN + REPLICATES s215** (both arms done). Same-construction/different-surface-
   statistics replication (e.g. the comparative correlative's Japanese counterpart) is one of the strongest
   charter-compatible levers against the distributional-shadow null. Scout open, license-checked
