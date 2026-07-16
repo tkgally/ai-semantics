@@ -242,8 +242,21 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/`](../experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/),
   freeze note [`note/blimp-c4-matched-swap-arm-freeze-v1`](findings/notes/blimp-c4-matched-swap-arm-freeze-v1.md)).
   **RUN DEFERRED** (~$1.3–1.6, one full-$5 UTC day; s232 landed the tight 2026-07-15 UTC day, the s228→s229
-  precedent). The item stays `[x]` (this is a sub-continuation of the closed C8 chain, not a
-  new checkbox; the run tick would land at the completed arm).]** **s211 (phil/consol): the downstream essay
+  precedent; deferred again s233/s234 on the same tight day). **RAN s235** (full-$5 UTC 2026-07-16) →
+  [`result/blimp-c4-matched-swap-arm-v1`](findings/results/blimp-c4-matched-swap-arm-v1.md): **STILL-INCONCLUSIVE.**
+  Build **ADEQUATE** (dual-band, set-mean C4 gap +0.0106 ≤0.05 — the +0.204 confound closed by construction;
+  S6 per-word cancellation flag disclosed; G5-plus build-repro verifier REPRODUCED before scoring). 7,200
+  calls, $1.3116, 5 unparsed/0.07%, no INSTRUMENT-FAILURE; post-run verifier REPRODUCED (B4/F5 attested).
+  Net of BOTH frequency channels the deep stratum still drops directionally 3/3 (Δ̄ −0.072/−0.057/−0.042, CIs
+  exclude 0, prose-rule DROPS 2/3) but **0/3** clear the strict whole-CI≤−0.05 bar (deep CI-uppers
+  −0.048/−0.023/−0.022) and CIs extend below −0.05 → neither DEEP-STILL-DROPS nor DEEP-SWAP-STABLE. Closing
+  C4 **attenuated** the s210 deep drop for 2/3 (claude −0.095→−0.072, gemini −0.072→−0.042; gpt ~unchanged) —
+  part of s210's drop WAS the C4 confound — but a residual survives both proxies, too small to resolve at
+  this N. **R1 stays descriptive/non-promotable, unchanged; the C8 chain stays closed; the shadow-depth-table
+  form-(iv) row is unchanged** (dated trigger annotation only). predictions.md → fired-for (STILL-INCONCLUSIVE,
+  a pre-named alternative). A **verb-swap arm** is the only remaining direction and would trip the PROTOCOL §3
+  instrument-line governor (2 swap-type arms now run: s210 SUBTLEX, s235 dual-band C4). The item stays `[x]`
+  (a sub-continuation of the closed C8 chain; the run tick lands here at the completed arm).]** **s211 (phil/consol): the downstream essay
   [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md) reconciled to the
   closed chain** — its s205 CORROBORATION box's "No revision trigger fires against" superseded; the
   human-shared (R1) gloss weakened to a non-swap-stable, non-promotable, C4-confounded descriptive reading;

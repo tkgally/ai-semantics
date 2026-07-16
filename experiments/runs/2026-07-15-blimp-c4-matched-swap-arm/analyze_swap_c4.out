@@ -1,0 +1,22 @@
+=== BLiMP C4-matched swap arm — results (s232) ===
+build mode: dual  |  C4 stream: 22329495 sent (3 shards)
+G-C4-match-adequacy: signed set-mean gap +0.0106 (|·| 0.0106 vs ≤0.05) -> ADEQUATE  [per-word mean|gap| 0.154, within±0.15=0.5102, cancellation_flag=True]
+coverage: determ=0.92  determ=0.96  regula=0.68  senten=0.94  only=0.91  superl=0.94   (floor 0.5; excluded NONE)
+attrition: deep kept ['sentential_negation_npi_scope', 'only_npi_scope', 'superlative_quantifiers_1'] (floor 60); ok
+
+[A] ans1=0.391 poslock=0.222 n_calls=2356
+    shallow Δ̄=-0.0294 CI[-0.0484,-0.0121] n=289  within±0.05=True drops=False
+    deep    Δ̄=-0.0717 CI[-0.0950,-0.0483] n=300  within±0.05=False drops=False
+
+[B] ans1=0.487 poslock=0.157 n_calls=2356
+    shallow Δ̄=-0.0329 CI[-0.0536,-0.0156] n=289  within±0.05=False drops=False
+    deep    Δ̄=-0.0567 CI[-0.0917,-0.0233] n=300  within±0.05=False drops=False
+
+[C] ans1=0.438 poslock=0.136 n_calls=2356
+    shallow Δ̄=-0.0260 CI[-0.0450,-0.0104] n=289  within±0.05=True drops=False
+    deep    Δ̄=-0.0417 CI[-0.0633,-0.0217] n=300  within±0.05=False drops=False
+
+--- VERDICT ---
+STILL-INCONCLUSIVE
+neither a ≥2/3 deep drop nor a ≥2/3 both-strata equivalence; even a two-confound-clean swap did not resolve the deep-scope alignment at this N (a candid ceiling).
+instrument-failure: False

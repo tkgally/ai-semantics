@@ -1,0 +1,10 @@
+# recipe-not-corpus: the full SUBTLEX-with-PoS xlsx + full BLiMP 1,000-pair .jsonl are re-fetchable
+# (sha256-pinned in build_swap.py), NOT committed. The frozen swap instrument IS committed
+# (items_swap.json, selection.json). .cache/ is transient.
+.cache/
+*.jsonl
+__pycache__/
+*.log
+.done-*
+raw/cost-log.txt
+
