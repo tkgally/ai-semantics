@@ -256,7 +256,16 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   form-(iv) row is unchanged** (dated trigger annotation only). predictions.md → fired-for (STILL-INCONCLUSIVE,
   a pre-named alternative). A **verb-swap arm** is the only remaining direction and would trip the PROTOCOL §3
   instrument-line governor (2 swap-type arms now run: s210 SUBTLEX, s235 dual-band C4). The item stays `[x]`
-  (a sub-continuation of the closed C8 chain; the run tick lands here at the completed arm).]** **s211 (phil/consol): the downstream essay
+  (a sub-continuation of the closed C8 chain; the run tick lands here at the completed arm).]**
+  **[s237: the instrument-line-continuation review the governor required RAN → STOP-FOR-NOW-WITH-CONDITIONS
+  ([`note/blimp-swap-line-continuation-review-v1`](findings/notes/blimp-swap-line-continuation-review-v1.md);
+  fresh-agent reviewer with verdict authority + convergent non-Anthropic vote `gpt-5.4-mini` $0.003953
+  STOP-AT-CEILING). The verb-swap arm is **not owed and not run**: the decisive ground is that **no swap arm
+  can promote R1** — construction-frequency (not lexical identity) is the binding uncontrolled alternative,
+  and every swap arm holds the construction fixed. The swap line rests at its twice-controlled ceiling until a
+  **construction-frequency instrument** (a *different* instrument, not a third swap) becomes available (or
+  Tom / a C8-gate change). The [`theory/shadow-depth-table-v4`](findings/theory/shadow-depth-table-v4.md)
+  form-(iv) box got a dated STOP annotation; no number/reading changed. $0.003953 (one vote).]** **s211 (phil/consol): the downstream essay
   [`essay/shadow-depth-cross-cuts-grain`](findings/essays/shadow-depth-cross-cuts-grain.md) reconciled to the
   closed chain** — its s205 CORROBORATION box's "No revision trigger fires against" superseded; the
   human-shared (R1) gloss weakened to a non-swap-stable, non-promotable, C4-confounded descriptive reading;
