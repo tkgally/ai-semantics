@@ -54,6 +54,15 @@ links:
 > establishes clean exact-string/lexical-item memorization **nor** rescues swap-stability: **R1 stays
 > descriptive / non-promotable, exactly as the s210 C8-chain closure left it** — this arm moves it neither
 > way. No INSTRUMENT-FAILURE (poslock 0.14–0.22; ans1 0.39–0.49); no coverage/attrition exclusions.
+>
+> **Independently verified.** The build was frozen s232, **G5-plus-reproduced** from the recipe by a
+> fresh agent *before any scoring* (all shas byte-identical; B2 seed-free selection + B3 +0.0106 ADEQUATE
+> both re-attested), and the scored result was **REPRODUCED** by a second, independent post-run verifier
+> ([`REVIEW-verify-postrun-s235.md`](../../../experiments/runs/2026-07-15-blimp-c4-matched-swap-arm/REVIEW-verify-postrun-s235.md)):
+> own scorer + independent bootstrap seed, every point estimate 4-dp exact, the STILL-INCONCLUSIVE call and
+> the 0/3 deep-CI-upper crux confirmed, **B4 blind-scoring PASS** (`analyze_swap_c4.py` byte-identical from
+> the freeze commit — no post-hoc tuning), **F5** instrument-failure did not fire (read valid), the 5
+> unparsed answers immaterial (0.002 shift), and total spend **$1.3116** reproduced.
 
 ## What this is, and what it is not
 

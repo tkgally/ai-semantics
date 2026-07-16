@@ -12,7 +12,7 @@ status: draft
 anchor: internal-contrast-only
 contingent-on: []
 created: 2026-07-14
-updated: 2026-07-15
+updated: 2026-07-16
 links:
   - rel: supersedes
     target: theory/shadow-depth-table-v3
@@ -62,6 +62,8 @@ links:
     target: result/lexical-sense-gradience-v1
   - rel: depends-on
     target: result/blimp-forced-choice-sweep-v1
+  - rel: depends-on
+    target: result/blimp-c4-matched-swap-arm-v1
   - rel: depends-on
     target: result/presupposition-doppelganger-control-v1
   - rel: depends-on
@@ -504,6 +506,15 @@ rather than a model-specific deficit.
   SWAP-INCONCLUSIVE, R1 REFUSED promotion, C4-frequency-confounded). Form (iv) stays as written —
   DEPTH-GRADED (R2, within-panel) load-bearing, PROFILE-ALIGNED (R1) descriptive-only, promotion CLOSED not
   pending. A C4-frequency-matched swap arm (or a valence-guarded verb-swap arm) is the honest successor.
+  **→ the C4-frequency-matched swap arm RAN s235 → STILL-INCONCLUSIVE, form (iv) UNCHANGED**
+  ([`result/blimp-c4-matched-swap-arm-v1`](../results/blimp-c4-matched-swap-arm-v1.md)): closing the s210
+  +0.204 C4 pretraining-frequency confound by construction (build ADEQUATE, set-mean gap +0.0106)
+  **attenuated** the deep-scope swap drop for 2/3 (claude −0.095→−0.072, gemini −0.072→−0.042) but left a
+  residual directional drop on 3/3 (Δ̄ −0.072/−0.057/−0.042, CIs exclude 0) too weak to clear the strict
+  whole-CI≤−0.05 bar (0/3) — neither DEEP-STILL-DROPS nor DEEP-SWAP-STABLE. So **R1 stays
+  descriptive/non-promotable exactly as the s210 closure left it, and this row is unchanged** (the successor
+  it named resolved nothing cleanly). A verb-swap arm is the only remaining direction and would trip the
+  PROTOCOL §3 instrument-line governor (cross-session review first).
 - **A new controlled probe lands** (any A1/A2 item with a named control + CI) → it is added as a new beater
   row in the same edition, keeping the table the live roll-up the program intends.
 - **The row-inclusion decision is reopened and re-ratified differently** → the ratified default
