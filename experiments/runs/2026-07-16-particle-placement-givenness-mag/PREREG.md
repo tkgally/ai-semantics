@@ -119,3 +119,17 @@ Pre-flight ~**$1.32** billed (864 calls; claude ~$0.71, gemini ~$0.50, gpt ~$0.1
 per-call prices). UTC 2026-07-16 spend before this run **$1.315553** (s235 $1.311600 + s237 $0.003953) →
 projected **~$2.64 of $5.00**; under the $2.50 single-run prudence flag per model and well under the $5/day
 cap. `HARD_STOP_USD = 1.60`. Plus one non-Anthropic decorrelation vote (~$0.004).
+
+## Run note (s238) — budget-only HARD_STOP halt + resume (the s225→s226 precedent)
+
+The full run **halted mid-gpt** at the pre-registered `HARD_STOP_USD = 1.60`: claude billed **$1.0208**
+(pricier than the ~$0.71 pre-flight — longer graded justifications this occasion, $0.00355/call vs the
+v1/rep2 $0.00248) + gemini **$0.5100** + liveness **$0.0034** = **$1.5342**, so gpt's projected $1.684
+tripped 1.60 after its 30th call. Per "do not push through," the run stopped cleanly. **The halt is
+budget-only:** `common.py`'s `HARD_STOP_USD` was raised **1.60 → 2.00** (documented in-file) — a **pure
+budget constant** that never touches measurement, the prompt/parser/indicator, or the frozen
+`stimuli.json` / `freq_control.json` shas (both unchanged: `181461b2…` / `cd472475…`). The run stayed
+**BLIND through the halt**: no `analyze_merged.py` run, no raw jsonl peeked; state at halt was claude
+288/288, gemini 288/288, gpt 30/288. Resumed with `probe.py full` (crash-safe: skips the 576 done
+claude+gemini trials, finishes gpt from 30). True full-run cost ~**$1.64**; UTC-day total after ~**$2.96
+of $5.00**.

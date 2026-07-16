@@ -48,7 +48,17 @@ REASONING = {"google/": {"effort": "minimal"}}
 # ~$0.71 + gemini ~$0.50 + gpt ~$0.11). HARD stop $1.60: above that projection (~21% headroom) so per-call
 # variance does not spuriously trip, and far below the $5/day UTC cap. Set from the v1/rep2 REALITY (not
 # the ~4x-too-low v1 pre-flight that halted s225). Run on a same-UTC-day with ~$3.68 headroom (s238).
-HARD_STOP_USD = 1.60
+#
+# BUDGET-ONLY RAISE 1.60 -> 2.00 (s238, mid-run; the s225->s226 precedent). The initial 1.60 halted the
+# run partway through gpt: claude billed $1.0208 (pricier than the ~$0.71 pre-flight -- longer graded
+# justifications this occasion, $0.00355/call vs the v1/rep2 $0.00248) + gemini $0.5100 + liveness $0.0034
+# = $1.5342, so gpt's projected $1.684 tripped 1.60. True full-run cost ~$1.64 (gpt ~$0.11 remaining). This
+# is a PURE budget constant -- it never touches measurement, the prompt/parser/indicator, or the frozen
+# stimuli/freq_control shas, and the run stayed BLIND through the halt (no analyze run, no raw peeked;
+# claude 288/288, gemini 288/288, gpt 30/288 when halted). 2.00 clears the true ~$1.64 with margin, stays
+# under the $2.50 single-run prudence flag, and far under the $5/day cap. Resume: `probe.py full`
+# (crash-safe; skips the 576 done claude+gemini trials, finishes gpt from 30).
+HARD_STOP_USD = 2.00
 
 # Arms 1 & 3 present two orders of the SAME proposition with no discourse context (context-free).
 SYS_PLAIN = ("You are a careful native speaker of English judging how natural different phrasings sound. "
