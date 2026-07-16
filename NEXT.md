@@ -8,91 +8,96 @@ re-did work that *already existed on main*. **At cold-start, ALWAYS:**
 `git fetch --prune && git checkout -B <branch> origin/main`, then **confirm `git log -1 origin/main` matches
 this NEXT.md's session number** before trusting any repo state. If `origin/main` is ahead of what NEXT.md
 describes, **the checkout is stale — reset to origin/main and re-read NEXT.md from `origin/main`**. **(s236,
-s237, s238 cold-start checks all PASSED — the discipline works when followed.)**
+s237, s238, s239 cold-start checks all PASSED — the discipline works when followed.)**
 
 ## ⚠ Budget note — read first
 
 **Check `date -u` FIRST** (a new UTC day resets the ledger). Standard **$5.00/day (UTC)** cap.
-**s238 spent $1.664921** (particle-placement powered magnitude arm: probe $1.658902 + liveness $0.003389 +
-one non-Anthropic pre-run vote $0.002630). Day total UTC **2026-07-16** (s235 $1.311600 + s236 $0.00 + s237
-$0.003953 + s238 $1.664921) = **$2.980474 of $5.00** (~**$2.02** headroom). Ledger: [`config/budget.md`](config/budget.md).
-**s239: recompute the UTC day from `date -u`** — s238 ran UTC 2026-07-16 ~12:45, so a same-day s239 has
-~$2.02 left; a new UTC day 2026-07-17 → full $5. Recompute the JST website day too (s235–s238 all landed in
-the JST 2026-07-16 entry; a JST-2026-07-17 session CREATES a new entry).
+**s239 spent $0.00** (a light session: the named PHIL essay-trigger check ran → considered null, one fresh
+read-only adversarial scout, verification — all harness-model/$0). Day total UTC **2026-07-16** (s235
+$1.311600 + s236 $0.00 + s237 $0.003953 + s238 $1.664921 + s239 $0.00) = **$2.980474 of $5.00** (~**$2.02**
+headroom, **unchanged** from s238). Ledger: [`config/budget.md`](config/budget.md).
+**s240: recompute the UTC day from `date -u`** — s239 ran UTC 2026-07-16 ~16:53, and the UTC day rolls to
+**2026-07-17** at 00:00 UTC (~7h after s239). A same-UTC-day s240 has ~$2.02 left; a new UTC day 2026-07-17 →
+full $5. Recompute the JST website day too (s235–s238 all landed in the JST 2026-07-16 entry; s239 was
+JST-2026-07-17 but maintenance-only so it **skipped the site**; the next substantive session on JST-2026-07-17
+CREATES a new entry).
 
-## State — s238 ($1.664921): EMPIRICAL — the particle-placement powered MAGNITUDE arm ran → MAGNITUDE-ATTACHED at 2/3. Claim fence (j) lifted.
+## State — s239 ($0.00): LIGHT SESSION — the #1 PHIL candidate (essay-trigger check) ran → CONSIDERED NULL; no §3 trigger fired; nothing substantive owed → reconcile/verify/STOP (no pad).
 
-The s237 review named a powered magnitude re-run on a direction-only claim as the #1 marginal dollar. The
-**particle-placement** claim was the one flagship production-side alternation genuinely lacking a magnitude
-(fence j; genitive attached s222, dative s175) — a confirmed non-re-grind. A fresh-agent trigger scout found
-**nothing fired** on all three PROTOCOL §3 types, and **rule 8** (chronic under-use a defect) bound after
-s233/234/236/237 all ~$0. Done:
+The two-track balance tilted empirical-heavy (s235 empirical, s236 phil, s237 governance, s238 empirical), so
+s239 weighted **PHIL/CONSOL** and checked NEXT.md's #1 named candidate: does the **s238 particle-placement
+magnitude** genuinely fire a revision on [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md)?
+**Verdict: DO-NOT-REVISE (a considered null, adversarially cross-checked).** Done:
 
-- **VERDICT: MAGNITUDE-ATTACHED (2/3).** A **firewall-only** fresh arm (48 frames certified disjoint from
-  v1 ∪ rep2; byte-frozen `probe.py`/`freq_control.json`; new `analyze_merged.py` frozen pre-run) pooled with
-  v1+rep2 → **136 firewall frames**. For the two firewall-confirming models both gates clear — the FRESH-48
-  blind arm clears CI-LB>0 (claude +0.0351 / gemini +0.0385) **and** pooled-136 clears CI-LB>0 (claude
-  **+0.0365 [0.027,0.046]** / gemini **+0.0548 [0.040,0.069]**) — a **small** within-model given−new-mentioned
-  split-preference shift (≈3.7–5.5 pts/100, quantifying fence c "small vs end-weight"). **gpt a persistent
-  SHADOW that does NOT lift at pooled N=136** (+0.0067 [−0.010,0.024], CI includes 0) — fence (b) confirmed a
-  **third** time. gemini's fresh-48 meets the CI-LB gate but its sign-p is weak (28/48, p 0.156) and
-  attenuates below prior — disclosed.
-- **Gates:** fresh-agent pre-run critic **GO** (verdict authority) **over-ruled a non-Anthropic vote NO-GO**
-  ($0.002630; presentation-discipline objections, honoured). A **budget-only HARD_STOP raise 1.60→2.00**
-  mid-gpt (blind through the halt, frozen shas unchanged — the s225→s226 precedent). Post-run fresh-agent
-  verifier **REPRODUCED** (all 9 point estimates 4-dp exact, own seed; blind-scoring confirmed).
-- **Artifacts:** [`result/particle-placement-givenness-mag`](wiki/findings/results/particle-placement-givenness-mag.md)
-  (`proposed`) + [`claim/particle-placement-givenness`](wiki/findings/claims/particle-placement-givenness.md)
-  **fence (j) lifted magnitude-absent → magnitude-attached (within-model, 2/3)** + [`theory/shadow-depth-table-v4`](wiki/findings/theory/shadow-depth-table-v4.md)
-  particle row + battery prose + a **2nd dated update box** (under the edition threshold) + program A2a tick.
-- **Verify:** senselint **0 errors** / linkify clean / build-index regenerated. Website: **EXTENDED** the JST
-  2026-07-16 entry (dateline → 235–238, a green s238 pill + one paragraph) + home Last-updated/Current-focus/
-  Spending/"The latest" mirrored.
+- **The essay trigger does NOT fire — structurally + already-accommodated.** Trigger (a) requires a
+  **CONCORDANT** (all-3-clear) functional positive; the particle firewall is **2/3** with gpt a non-lifting
+  SHADOW (pooled +0.0067, CI includes 0) — the essay's **texture-2 / SPLIT** case, categorically ineligible
+  for the concordant-spread trigger (a) (which is anyway already **fired+discharged** by the genitive typical
+  arm, s223). And the s238 magnitude is **already-accommodated**: the essay's **s227 + s230** dated boxes
+  already carry the per-model particle firewall shifts (claude +0.040/+0.035, gemini +0.072/+0.057) and
+  gpt-as-persistent-SHADOW-that-survived-a-power-boost; the s238 pooled numbers (claude +0.0365 [0.027,0.046],
+  gemini +0.0548 [0.040,0.069]) fall **inside** those already-displayed CIs, and the magnitude support
+  correctly migrates to [`claim/particle-placement-givenness`](wiki/findings/claims/particle-placement-givenness.md)
+  (fence j), which the essay **already** lists as a `depends-on`. Revising = restating within-CI numbers under
+  a new date = the padding NEXT.md explicitly forbids ("if not → do NOT manufacture one").
+- **A fresh read-only adversarial scout** (general-purpose subagent, $0) independently reached the **same
+  three verdicts**: (1) DO-NOT-REVISE (trigger structurally ineligible + already-accommodated); (2) no other
+  §3 trigger fired — [`theory/shadow-depth-table-v4`](wiki/findings/theory/shadow-depth-table-v4.md) has
+  exactly **2** dated update boxes (<the >3 edition threshold; all other live editions ≤1; high-count pages
+  already superseded), and no open-question is cleanly $0-answerable from an s238 particle magnitude; (3) the
+  only genuinely-owed-eventually unit is the **A4b `ladder:` senselint gate** — but it guards nothing until a
+  ladder result is scheduled (process-ahead-of-need), so "stop" is the honest call.
+- **No page changed; no probe; no decision opened.** The empirical **powered-magnitude habit is EXHAUSTED**
+  (all three production-side alternation claims carry magnitudes); the **A3b/C8 swap line is
+  stopped-with-conditions** (s237); **A2b grounding-magnitude is un-instrumentable in-repo** (a $0 scout is
+  open-ended, not a headline unit). Per PROTOCOL §3 + charter §12 ("deep over busy; when nothing substantive
+  is owed, reconcile, verify, and stop rather than pad"), s239 landed **no manufactured work**.
+- **Verify:** build-index regenerated (index byte-unchanged — no page add/rename), senselint **0 errors** (1
+  expected `wanted.md` WARN + 58 expected INFO), linkify --check clean. Website: **SKIPPED** (maintenance-only,
+  CLAUDE.md rule 9 — no substantive page change, $0).
 
 ## ⚠ RECONCILE at cold-start — ZERO decisions open
 
-**s238 resolved no decisions and opened NONE** (a within-design powered re-run under the ratified s225
-design — no new decision trail). So s239 cold-start RECONCILE is a **no-op** (73 resolved; changelog
-[`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
+**s239 resolved no decisions and opened NONE.** So s240 cold-start RECONCILE is a **no-op** (73 resolved;
+changelog [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md)).
 
-## ⚠ Backlog for s239 (PROTOCOL §3: fewer, deeper) — pick the deepest genuinely-owed unit, or STOP
+## ⚠ Backlog for s240 (PROTOCOL §3: fewer, deeper) — pick the deepest genuinely-owed unit, or STOP
 
-Recent lean: **s235 empirical (run), s236 phil, s237 governance, s238 empirical (run).** Two-track balance
-tilts empirical-heavy → **weight PHIL/CONSOL** if a genuine unit exists (but s238's fresh scout found none
-fired — see below). **The powered-magnitude candidate is now EXHAUSTED:** all three production-side
-alternation claims carry magnitudes (dative s175, genitive s222, **particle s238**). Pick the deepest
-genuinely-owed unit; if nothing substantive is owed, reconcile/verify/**stop** (do NOT pad).
+Recent lean: **s235 empirical, s236 phil, s237 governance, s238 empirical, s239 light/consol-null.** Balance
+is now ~even. **The s238 particle magnitude has been checked against the essay trigger and found
+already-accommodated — do NOT re-check it (see do-not-re-grind).** Genuine s240 options, deepest first:
 
-1. **(PHIL/CONSOL — check for a genuine trigger, do NOT manufacture one.)** s238's fresh-agent scout of the
-   three PROTOCOL §3 trigger types (theory pages >3 update boxes; fired-but-unacted essay triggers;
-   $0-answerable open-questions) found **NOTHING fired** (shadow-depth-table-v4 now has **2** update boxes,
-   under the >3 threshold; no essay trigger is fired-but-unacted; no open-question is cleanly $0-answerable).
-   Since s238 ran (a new result + a claim magnitude-attach), the essay-trigger surface *did* move — so a
-   **fresh** scout of essay triggers against the s238 particle magnitude is legitimate (does
-   [`essay/concordant-verdict-hides-spread`](wiki/findings/essays/concordant-verdict-hides-spread.md) fire?
-   its trigger (a) is about concordant-direction-hides-spread; the particle magnitude is a **2/3, modest
-   ~1.5× cross-model spread** case with gpt a non-lifting SHADOW — check whether that is a genuine new
-   instance the essay does not already cover, or already-accommodated). If genuinely fired → revise in-page
-   ($0); if not → do NOT manufacture one.
-2. **(EMPIRICAL — a NEW line, if #1 is empty.)** The **A2b license-checked graded-image fine-polysemy
-   sense-set SCOUT** (a $0 scout only — the grounding magnitude is un-instrumentable with in-repo resources;
-   see [`open-question/grounding-magnitude-instrument`](wiki/findings/open-questions/grounding-magnitude-instrument.md));
-   OR a within-family **A4b ladder** first-substep (the `ladder:` senselint gate — a mechanical front-matter
-   field + a senselint check must land *before* any ladder result page). Each opens a decision only a later
-   session can ratify.
-3. **If nothing substantive is owed:** reconcile/verify/**stop** — do NOT pad (PROTOCOL §3 + charter §12).
+1. **(A4b — the one concrete owed-EVENTUALLY infrastructure unit, if judged genuinely worth landing.)** The
+   **`ladder:` senselint-gate first sub-step** ([`wiki/program.md`](wiki/program.md) A4b, line ~316): a
+   ratified **binding pre-condition** — add a mechanical `ladder: true` front-matter field + a `senselint.py`
+   check forbidding any `supports`/`anchors` link from a ladder-flagged page into a panel-v1 claim/result;
+   *no ladder result page may be written before that gate lands*. It lands as a `note` (build gate, no
+   measurement) + a `senselint.py` change + a CLAUDE.md schema line. **Caveat (why s239 did NOT do it):** it
+   guards nothing until a ladder run is actually designed, so building it as a standalone session is
+   process-ahead-of-need (YAGNI) — arguably better bundled with the session that first designs a ladder run.
+   Land it only if a fresh read judges it a genuine increment, not padding.
+2. **(PHIL/CONSOL — a fresh trigger scout, ONLY if a session has run since s239 that moved the surface.)** If
+   s240 cold-starts with no new evidence landed since s239, the trigger surface is UNMOVED and re-scouting is a
+   forbidden re-grind. A fresh essay-trigger / theory-edition / open-question scout is legitimate only after a
+   session lands new evidence.
+3. **(EMPIRICAL — a NEW line, thin.)** The **A2b license-checked graded-image fine-polysemy sense-set SCOUT**
+   ($0, open-ended — the grounding magnitude is un-instrumentable in-repo; see
+   [`open-question/grounding-magnitude-instrument`](wiki/findings/open-questions/grounding-magnitude-instrument.md)).
+   Not a headline unit; a scout only.
+4. **If nothing substantive is owed:** reconcile/verify/**stop** — do NOT pad (PROTOCOL §3 + charter §12).
+   s239 did exactly this; a second consecutive honest stop is fine if the surface is genuinely unmoved.
 
 ## ⚠ Env notes (carry)
 
 - **numpy is NOT preinstalled** — `pip install --break-system-packages numpy` (a build also needs
-  **openpyxl + nltk** for some probes; nltk data may need `nltk.download`). s238 needed numpy only.
+  **openpyxl + nltk** for some probes; nltk data may need `nltk.download`). s239 needed no deps ($0 session).
 - **Non-Anthropic vote recipe (carry):** `experiments/lib/openrouter.py` (`PANEL`/`call`/`billed_cost`),
   cutoff-aware preamble, `PANEL["B"]` = `gpt-5.4-mini` (a vote runs ~$0.003). The s238 vote script is a clean
   pre-run-critique template: [`experiments/runs/2026-07-16-particle-placement-givenness-mag/critic_vote.py`](experiments/runs/2026-07-16-particle-placement-givenness-mag/critic_vote.py).
 - **⚠ Particle instrument cost (carry):** the full 3-arm particle panel (48 frames) ran **$3.18** (s229,
   2,016 calls); a **firewall-only** magnitude arm (48 frames, 864 calls) ran **$1.66** (s238; claude
-  $1.02 dominates — pricier per-call than the pre-flight, so **set HARD_STOP with margin**). A magnitude arm
-  is firewall-only (`build_items.py` firewall-only + `analyze_merged.py` pooled) — the genitive-mag pattern.
+  $1.02 dominates — pricier per-call than the pre-flight, so **set HARD_STOP with margin**).
 - **Run-launch (when a probe is actually owed):** launch `python3 probe.py full` directly with
   `run_in_background: true`; rely on the completion notification. Blind-scoring lock (B4): all 3 models before
   `analyze`. A **budget-only HARD_STOP raise mid-run** is legitimate (frozen shas unchanged, blind through the
@@ -105,9 +110,12 @@ genuinely-owed unit; if nothing substantive is owed, reconcile/verify/**stop** (
 
 ## ⚠ Do-not-re-grind (in force)
 
+- **(s239) The s238 particle magnitude has been CHECKED against `essay/concordant-verdict-hides-spread` →
+  DO-NOT-REVISE (already-accommodated; trigger (a) structurally ineligible, 2/3 not concordant).** Do NOT
+  re-run this essay-trigger check on the same s238 magnitude, and do NOT manufacture a revision box for it.
 - **(s238) The particle-placement MAGNITUDE is ATTACHED (2/3) → DONE.** Do NOT re-run the mag arm, re-pool,
-  or re-attach. A fully-fresh (non-pooled) powered arm is **NOT owed** (the fresh-48 blind arm already clears
-  CI-LB>0 for both confirming models). gpt stays a non-lifting SHADOW — do NOT re-probe to "rescue" it.
+  or re-attach. A fully-fresh (non-pooled) powered arm is **NOT owed**. gpt stays a non-lifting SHADOW — do
+  NOT re-probe to "rescue" it.
 - **(s237) The A3b/C8 swap-line continuation review is DONE → STOP-FOR-NOW-WITH-CONDITIONS.** Do NOT re-run
   the review, design/run a verb-swap arm, or re-open the C8 chain — unless a written reopening condition fires
   (a construction-frequency instrument; a goal-flip; Tom / a C8-gate change).
@@ -121,35 +129,32 @@ genuinely-owed unit; if nothing substantive is owed, reconcile/verify/**stop** (
 
 ## Open decisions
 
-**ZERO open** — s238 resolved none and opened none. **73 resolved to date**; changelog
+**ZERO open** — s239 resolved none and opened none. **73 resolved to date**; changelog
 [`wiki/decisions/resolved/index.md`](wiki/decisions/resolved/index.md).
 
 ## Standing-override notes (for Tom, if he looks)
 
-This session measured, for the first time, *how big* a previously direction-only finding is: on whether the
-models split a phrasal verb around its object ("picked the barrel up") when the object is already being
-talked about, two of the three lean that way — the way people do — and the lean is now measured as **small**,
-about four to five points out of a hundred, much weaker than their strong preference for putting a longer
-phrase last. The third model shows no such lean even with the extra data. This isn't a new claim, just a
-size put on an existing one — the kind of quiet strengthening the previous session's review had flagged as
-the best use of a modest budget. Notably an outside-company model, asked to try to shoot the plan down
-first, voted against it on presentation grounds; an in-house reviewer weighed that and judged it answered
-before clearing the run, and a separate check reproduced every number afterward. About $1.66. A line anywhere
-in the repo outranks this note.
+This session did no measurement. It asked one question: does the size we put on the phrasal-verb finding last
+session change how our written essay on "a shared verdict can hide a spread" should read? The answer, checked
+twice (once by me, once by a fresh independent reviewer that agreed), was **no** — that essay is about cases
+where *all three* models agree, and the phrasal-verb result is a two-of-three case the essay already discusses
+in full, with the new size falling right inside the range it already reports. Rather than pad the session with
+a needless edit or a piece of scaffolding nothing yet uses, the run confirmed everything is in order and
+stopped. Nothing spent; nothing changed. A line anywhere in the repo outranks this note.
 
 ## Reminder for the next cold-start
 
-**You are session 239.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
+**You are session 240.** Entry [`continue-prompt.md`](continue-prompt.md); charter [`PROJECT.md`](PROJECT.md)
 (§12); discipline [`PROTOCOL.md`](PROTOCOL.md) (§2–§4); conventions [`CLAUDE.md`](CLAUDE.md); program
 [`wiki/program.md`](wiki/program.md). Navigate via [`wiki/index.md`](wiki/index.md),
 [`wiki/ideas.md`](wiki/ideas.md), [`wiki/maintenance.md`](wiki/maintenance.md). **FIRST: `git fetch --prune &&
-git checkout -B <branch> origin/main` and confirm `origin/main` is at s238 — the checkout can be stale (s235
-lesson; s236/s237/s238 checks all passed).** **Budget: $5/day UTC — check `date -u`; s238 spent $1.664921
-(UTC 2026-07-16 day total $2.980474, ~$2.02 left if same day).** **RECONCILE: ZERO decisions open.**
-**Two-track tilts empirical-heavy → weight PHIL/CONSOL** — but s238's scout found NO §3 trigger fired; a
-fresh essay-trigger check against the s238 particle magnitude is legitimate (concordant-verdict-hides-spread:
-2/3, ~1.5× spread, gpt non-lifting SHADOW — genuinely new or already-covered?), else a $0 A2b scout / A4b
-ladder substep, else if nothing substantive is owed reconcile/verify/**stop** — do NOT pad. **The
-powered-magnitude habit is EXHAUSTED (all three alternation claims now carry magnitudes).** Do NOT re-run the
-particle mag arm (a fully-fresh arm not owed), the swap line, or the frozen C4 dir. End squash-merged to
-`main`.
+git checkout -B <branch> origin/main` and confirm `origin/main` is at s239 — the checkout can be stale (s235
+lesson; s236–s239 checks all passed).** **Budget: $5/day UTC — check `date -u`; s239 spent $0.00 (UTC
+2026-07-16 day total UNCHANGED $2.980474; a same-day s240 has ~$2.02, a new UTC day 2026-07-17 → full $5).**
+**RECONCILE: ZERO decisions open.** **Balance is ~even.** The named PHIL essay-trigger candidate is
+**discharged (DO-NOT-REVISE)** — do NOT re-check it. Deepest genuine options: the **A4b `ladder:` senselint
+gate** (owed-eventually but process-ahead-of-need — land only if judged a genuine increment), a fresh trigger
+scout **only if a session has landed new evidence since s239**, or a $0 A2b scout — **else reconcile/verify/
+stop** (a second consecutive honest stop is fine if the surface is genuinely unmoved; do NOT pad). The
+**powered-magnitude habit is EXHAUSTED** and the **swap line is stopped-with-conditions**. End squash-merged
+to `main`.
