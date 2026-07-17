@@ -68,7 +68,8 @@ verified (CC BY 4.0, firsthand), mirrored, inspected, and **adopted as a scoped 
 graded-acceptability companion** — grounding the *definiteness/length preference surface* and the
 conjecture's graded-acceptability clause (see the resolved decision). What remains is the measurement the
 adoption deliberately did **not** perform: run the panel and report a **human-vs-model graded correlation**.
-This design is that measurement — the dative line's first human effect-size comparison, wanted since
+This design is that measurement — the dative line's first human effect-size comparison, **scoped to the
+definiteness/length + verb-bias preference surface** (not the discourse-context givenness shift), wanted since
 founding.
 
 ## The load-bearing scope fence (carry from the s245 resolution — read before citing anything this produces)
@@ -127,19 +128,37 @@ interesting (a first human-vs-model verb-bias magnitude) but its confound is exp
 verbs) is **binding** before any "graded sensitivity beyond lexical bias" reading (the BLiMP
 frequency-confound discipline, mirrored).
 
-**Arm B — the definiteness/length preference surface (the DAIS-named grounding; the cleaner test).** Within
-**alternating** verbs (where both phrasings are licensed, so the recipient definiteness/length factor can
-actually move preference), does the panel reproduce the human recipient gradient (pronoun > shortDefinite >
-shortIndefinite > longDefinite > longIndefinite) with a **comparable magnitude**? Measured as (i) a
-within-model rank correlation across the 5 conditions and (ii) a per-verb monotonicity rate, correlated
-against the human per-condition surface. This is the arm the s245 resolution most directly licenses, and it
-is confound-cleaner than Arm A because the alternating-verb restriction removes the lexical-subcategorization
-floor.
+**Arm B — the definiteness/length preference surface (the DAIS-named grounding).** Within **alternating**
+verbs (where both phrasings are licensed, so the recipient definiteness/length factor can actually move
+preference), does the panel reproduce the human recipient gradient (pronoun > shortDefinite > shortIndefinite
+> longDefinite > longIndefinite)? The **powered** Arm-B measure is the **per-verb monotonicity rate** over
+the ~40 Arm-B verbs (the fraction whose model gradient is monotone in the human direction) — a majority test
+with real N; the 5-condition rank correlation is reported only as a **direction/monotonicity check** (n = 5
+condition means has near-zero resolving power and does not carry a bootstrap CI, so it is never presented as a
+powered ρ).
 
-**Why both.** Arm A gives the powered human-vs-model magnitude the line has never had; Arm B gives the
-confound-cleaner graded-surface test DAIS was adopted to ground. Reporting both, and their divergence, is the
-honest deliverable — a model with strong verb-bias ρ but a flat definiteness/length gradient has *lexical*
-knowledge, not the *graded preference surface*, and that dissociation is a first-class result.
+**Arm B carries its own binding confound control — the within-length definiteness contrast.** The five DAIS
+recipient conditions covary length *with* definiteness (pronoun is shortest, longIndefinite longest), so a
+pure **end-weight / length-only** reader (shorter recipient → DOC) reproduces the full recipient gradient
+with *zero* definiteness or information-structure sensitivity — the exact shortcut the flagship givenness
+claim spent its rigor budget excluding (its end-weight dissociation control). So Arm B is **not**
+confound-free: it swaps Arm A's lexical-subcategorization floor for an end-weight confound. The control is
+available in the committed human data: the **within-length definiteness contrasts** hold length fixed and
+move only definiteness — human `DOpreference` shortDefinite **30.50** > shortIndefinite **25.15** (+5.35 at
+short length) and longDefinite **20.78** > longIndefinite **18.31** (+2.47 at long length). A
+"definiteness-sensitive, not merely length-counting" reading of Arm B **requires** the model to reproduce
+these within-length definiteness contrasts (≥2/3, direction-consistent); absent that, a TRACKS reading on the
+raw 5-condition gradient carries an explicit **end-weight caveat** (the model may be counting length, not
+tracking the definiteness/information-structure surface). This is Arm B's analogue of Arm A's binding
+frequency/classification control, and it is the reason Arm B is the *definiteness*-surface test only when the
+within-length contrast survives.
+
+**Why both.** Arm A gives the powered human-vs-model verb-bias magnitude the line has never had; Arm B, with
+its within-length control, gives the graded definiteness/length surface test DAIS was adopted to ground.
+Reporting both, and their divergence, is the honest deliverable — a model with strong verb-bias ρ but a flat
+definiteness/length gradient has *lexical* knowledge, not the *graded preference surface*; a model that
+reproduces the raw recipient gradient but fails the within-length definiteness contrast is *length-counting*,
+not tracking definiteness — both dissociations are first-class results.
 
 ## The contamination fence (LOAD-BEARING — DAIS public since 2020)
 
@@ -224,11 +243,14 @@ an **adopted human resource**, so it carries a real anchor.
   result measuring model-vs-DAIS on it is the honest home for the anchor edge. The result's opening
   blockquote must state the scope fence (this is not a human-effect-size comparison for the givenness claim).
   **Verdict map** (direction + thresholds frozen at freeze):
-  - **TRACKS-HUMAN-SURFACE** — Arm A per-verb ρ CI-LB > 0 on ≥2/3 models **AND** Arm B reproduces the human
-    recipient gradient direction (per-condition ρ > 0 or a monotone-consistent majority) on ≥2/3 — the panel
-    tracks the human graded verb-bias + definiteness/length surface, with a measured effect-size
-    correspondence and its cross-model spread.
-  - **VERB-BIAS-ONLY** — Arm A ρ clears but Arm B's definiteness/length gradient is flat/reversed ≥2/3 — the
+  - **TRACKS-HUMAN-SURFACE** — Arm A per-verb ρ CI-LB > 0 on ≥2/3 models **AND** Arm B's per-verb
+    monotonicity rate beats chance on ≥2/3 **AND** the **within-length definiteness contrast** clears
+    (≥2/3) — the panel tracks the human graded verb-bias + definiteness/length surface, definiteness-sensitive
+    (not merely length-counting), with a measured effect-size correspondence and its cross-model spread.
+  - **LENGTH-ONLY** — Arm B reproduces the raw recipient gradient but the **within-length definiteness
+    contrast fails** ≥2/3 — the panel is end-weight-counting, not tracking the definiteness/information-structure
+    surface; the raw-gradient reading carries the end-weight caveat (a first-class dissociation).
+  - **VERB-BIAS-ONLY** — Arm A ρ clears but Arm B's monotonicity rate is at chance / reversed ≥2/3 — the
     panel has lexical verb-bias but **not** the graded definiteness/length preference surface (a
     first-class dissociation).
   - **SURFACE-ONLY / DECOUPLED / null** — pre-named: Arm B gradient tracks but Arm A ρ collapses under the
@@ -282,9 +304,14 @@ particle-line split precedent) — neither measurement changes.
   and per-(verb,condition) (Arm B) model means.
 - **Arm A statistic:** Spearman ρ(model per-verb DO-pref, human per-verb mean `DOpreference`) per model, with
   a bootstrap CI; **plus** the binding partial-ρ / alternating-only frequency-classification control.
-- **Arm B statistic:** per-condition Spearman ρ(model, human) over the 5 recipient conditions per model, plus
-  the per-verb monotonicity rate (fraction of Arm-B verbs whose model gradient is monotone in the human
-  direction), correlated against the human per-condition surface.
+- **Arm B statistic (powered = the monotonicity rate; the 5-point ρ is a direction check only):** the
+  **per-verb monotonicity rate** over the ~40 Arm-B verbs (fraction whose model recipient gradient is monotone
+  in the human direction), tested against chance; the 5-condition Spearman ρ(model, human) is reported as a
+  direction/monotonicity check, **not** a powered correlation (n = 5, no CI). **Plus the binding within-length
+  definiteness contrast:** the model's DOC-preference at shortDefinite − shortIndefinite and at longDefinite −
+  longIndefinite, each tested for the human-direction sign — Arm B is the *definiteness*-surface test only when
+  these clear (≥2/3, direction-consistent); otherwise a raw-gradient TRACKS reading carries the end-weight
+  caveat.
 - **Verdicts:** TRACKS-HUMAN-SURFACE / VERB-BIAS-ONLY / SURFACE-ONLY / DECOUPLED / null, per the Q3 map;
   n = 3 models, orderings/directions not pooled coefficients; CONTAMINATION-CEILING flag on a near-perfect ρ.
 - **Anti-cheat fence (PROTOCOL §B):** the stimulus lexicalizations, the fixed Arm-A condition, the Arm-B verb
@@ -309,16 +336,20 @@ particle-line split precedent) — neither measurement changes.
 - **DECOUPLED / null:** an honest human-magnitude *divergence* — the panel shifts in the human direction
   (already shown) but its graded surface does not track the human graded surface. A first-class negative on
   the calibration record; would caution any "the panel has human-like graded dative preferences" reading.
-- **Registers a [`predictions.md`](../../wiki/predictions.md) §B row** at freeze (a DAIS-correlation bet,
-  co-registered with the conjecture's secondary-confirm clause — not double-scored); outcome updated the run
-  session.
+- **Registered in [`predictions.md`](../../wiki/predictions.md) §B** — a DAIS-correlation bet, provisionally
+  registered at **design (s246)** (the particle A5-third-sibling precedent for a design-stage registration),
+  **finalized at freeze** once Q1/Q2/Q3 fix the exact verdict bands; co-registered with the conjecture's
+  secondary-confirm graded-acceptability clause (not double-scored); outcome updated the run session.
 
 ## Handoff (what s246 did, and what remains)
 
 1. **s246 (this session):** wrote this design; opened
    [`decisions/open/dais-graded-preference-correlation-design`](../../wiki/decisions/open/dais-graded-preference-correlation-design.md)
-   (Q1–Q3, provisional defaults Q1-A / Q2-A / Q3-A); ran a fresh-agent adversarial coherence read of the
-   design (no spend). **Nothing frozen, nothing run; no OpenRouter spend.**
+   (Q1–Q3, provisional defaults Q1-A / Q2-A / Q3-A); provisionally registered the DAIS-correlation bet in
+   [`predictions.md`](../../wiki/predictions.md) §B (finalized at freeze); ran a fresh-agent adversarial
+   coherence read of the design (no spend) whose three SHOULD-FIX were folded in (Arm B within-length
+   definiteness control; Arm B monotonicity-rate as the powered measure; this registration reconciliation).
+   **Nothing frozen, nothing run; no OpenRouter spend.**
 2. **Ratify (s247+):** a fresh-agent adversarial reviewer (verdict authority) + one non-Anthropic
    decorrelation vote fix Q1–Q3 (never the opening session); `anchor: pending` → `human-anchored` (Q3-A) or
    as ratified; `contingent-on:` cleared.

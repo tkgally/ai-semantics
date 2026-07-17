@@ -66,7 +66,9 @@ each factor level and report the drift as a fence.
   alternating verbs × 5 conditions (600 calls); ≈1,200 calls ≈ $2.6; separable/splittable runs** (per-arm
   hard stop; split across UTC days if the freeze-time pre-flight exceeds the day's headroom — the
   particle-line precedent). Keeps Arm A fully powered where power is cheap; spends the second arm on the
-  confound-cleaner definiteness/length surface.
+  definiteness/length surface, whose powered measure is the per-verb monotonicity rate and whose **binding
+  within-length definiteness control** (shortDef−shortIndef, longDef−longIndef, holding length fixed) falls
+  out of the same 5-condition grid at no extra cost (see the design's Arm B).
 - **Q2-B — the full 200 × 5 grid on all 3 models** (~3,000 calls, ~$6.5). Richest joint; over cap,
   unsplittable; rejected unless a later session judges it worth two full-$5 days.
 - **Q2-C — a ≈12-verb micro-pilot as the claim-carrying N. REJECTED** as under-powered (PROTOCOL §4);
@@ -75,11 +77,14 @@ each factor level and report the drift as a fence.
 ## Q3 — anchor declaration, verdict map, promotability
 
 - **Q3-A (provisional default) — `anchor: human-anchored`, `anchors: → resource/dais-dative-ratings`, scoped
-  to the definiteness/length + verb-bias preference surface, NOT the discourse-context givenness shift.** The
-  frequency/classification control on Arm A is **binding** for any "graded sensitivity beyond lexical
-  verb-bias" reading; a near-perfect ρ is flagged a **contamination ceiling**; verdicts TRACKS-HUMAN-SURFACE /
-  VERB-BIAS-ONLY / SURFACE-ONLY / DECOUPLED / null; single run → result stays `proposed` (a `claim` needs a
-  fresh-item replication + a cross-session promotion review, held distinct from the givenness claim).
+  to the definiteness/length + verb-bias preference surface, NOT the discourse-context givenness shift.** Two
+  **binding** controls: the frequency/classification control on Arm A (for any "graded sensitivity beyond
+  lexical verb-bias" reading) and the **within-length definiteness control** on Arm B (for a
+  "definiteness-sensitive, not merely end-weight-counting" reading — DAIS's 5 conditions covary length with
+  definiteness). A near-perfect ρ is flagged a **contamination ceiling**; verdicts TRACKS-HUMAN-SURFACE /
+  LENGTH-ONLY / VERB-BIAS-ONLY / SURFACE-ONLY / DECOUPLED / null; single run → result stays `proposed` (a
+  `claim` needs a fresh-item replication + a cross-session promotion review, held distinct from the givenness
+  claim).
 - **Q3-B — `anchor: internal-contrast-only`. REJECTED:** this genuinely compares model preference against a
   human rating surface — an internal-contrast declaration would under-claim and mis-describe it.
 - **Q3-C — promote on this run. REJECTED:** a single run is not a promotion (PROTOCOL §3).
@@ -101,9 +106,11 @@ measurement honest to the s245 scope and the anti-cheat rule.
 - The scope fence must stay sharp: DAIS anchors the **definiteness/length + verb-bias surface**, **not** the
   discourse-context givenness shift (which has no human effect-size anchor, by design). The reviewer should
   reject any wording that lets this result read as a human-effect-size comparison for the givenness claim.
-- The contamination fence (Q1-A + the ceiling flag) and the Arm-A frequency/classification control must be
-  pre-committed before any model call; the reviewer should confirm a high ρ cannot be read as competence
-  without the control surviving.
+- The contamination fence (Q1-A + the ceiling flag), the Arm-A frequency/classification control, **and the
+  Arm-B within-length definiteness control** must be pre-committed before any model call; the reviewer should
+  confirm a high Arm-A ρ cannot be read as competence without the frequency control surviving, and that a
+  reproduced recipient gradient cannot be read as definiteness-tracking without the within-length control
+  surviving (else it is end-weight-counting — the LENGTH-ONLY verdict).
 - Route **one vote through a non-Anthropic panel model** (`experiments/lib/openrouter.py`, `PANEL["B"]`), as
   for every operationalization ratification; convergence is comfort, divergence is signal to weigh in
   writing.
