@@ -37,9 +37,9 @@ Standing references:
 
 ### Decisions — open
 
-73 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+74 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/dais-dative-rating-anchor.md`](decisions/open/dais-dative-rating-anchor.md) — Should DAIS be adopted as the graded per-item human acceptability / effect-size anchor for the dative-alternation line — and if so, for which sub-claim exactly? · **open**
+*(none)*
 
 ### Base — concepts
 
@@ -180,7 +180,7 @@ Standing references:
 - [`findings/conjectures/conative-construction.md`](findings/conjectures/conative-construction.md) — LLMs track the non-completion / attempted-contact meaning of the conative alternation · **tested** · (2026-07-05)
 - [`findings/conjectures/constructional-monotonicity-asymmetry.md`](findings/conjectures/constructional-monotonicity-asymmetry.md) — LLM constructional inference is additive-easy but defeasance-hard (a monotonicity asymmetry) · **tested** · (2026-07-05)
 - [`findings/conjectures/cross-level-gradience-aggregate-not-moment.md`](findings/conjectures/cross-level-gradience-aggregate-not-moment.md) — The 'graded-in-the-aggregate, discrete-in-the-moment' shape is ONE cross-level property of distributional competence, not three rhyming facts · **tested** · (2026-06-22)
-- [`findings/conjectures/dative-alternation-information-structure.md`](findings/conjectures/dative-alternation-information-structure.md) — LLMs track the information-structure constraint on dative alternation · **tested** · (2026-07-05)
+- [`findings/conjectures/dative-alternation-information-structure.md`](findings/conjectures/dative-alternation-information-structure.md) — LLMs track the information-structure constraint on dative alternation · **tested** · (2026-07-17)
 - [`findings/conjectures/decoupling-lexical-hierarchy-pos-generality.md`](findings/conjectures/decoupling-lexical-hierarchy-pos-generality.md) — The cue-strength–recovery decoupling is a lexical-hierarchy effect: it reappears in any POS that has an IS-A-like taxonomic backbone and vanishes in any POS that lacks o… · **retired** · (2026-07-09)
 - [`findings/conjectures/decoupling-relation-inventory-shape.md`](findings/conjectures/decoupling-relation-inventory-shape.md) — What carries the noun cue-strength–recovery decoupling is the SHAPE of the relation inventory, not the presence of a hierarchy: the clean decoupling needs both a low-cue… · **proposed** · (2026-07-10)
 - [`findings/conjectures/distributional-saturation-grounding-headroom.md`](findings/conjectures/distributional-saturation-grounding-headroom.md) — The grounding-headroom hypothesis — perceptual input can move an LLM's lexical-sense behavior only in the residual the text distribution under-determines, and for concre… · **tested** · (2026-06-28)
@@ -500,6 +500,7 @@ Standing references:
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
 - `experiments/runs/2026-07-17-dais-license-scout/` (no README)
+- `experiments/runs/2026-07-17-dais-anchor-ratification/` (no README)
 - `experiments/runs/2026-07-16-particle-placement-givenness-mag/` (no README)
 - `experiments/runs/2026-07-16-blimp-swap-line-continuation-review/` (no README)
 - [`experiments/runs/2026-07-15-particle-placement-givenness-rep2/`](../experiments/runs/2026-07-15-particle-placement-givenness-rep2/README.md)

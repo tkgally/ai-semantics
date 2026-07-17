@@ -9,12 +9,14 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-05-28
-updated: 2026-07-05
+updated: 2026-07-17
 links:
   - rel: depends-on
     target: concept/constructional-meaning
   - rel: depends-on
     target: resource/languageR-dative-corpus
+  - rel: depends-on
+    target: resource/dais-dative-ratings
   - rel: depends-on
     target: result/dative-information-structure-v1
 ---
@@ -41,6 +43,24 @@ links:
 > session 174 as
 > [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md).
 > *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
+
+> **Graded-acceptability companion anchor ADOPTED 2026-07-17 (session 245, cross-session adversarial
+> review — [`decisions/resolved/dais-dative-rating-anchor`](../../decisions/resolved/dais-dative-rating-anchor.md);
+> fresh-reviewer ADOPT-A-WITH-MODIFICATION + a convergent non-Anthropic vote).** The
+> *"anchor-dependent, non-decisive"* graded-acceptability slot that Prediction 2 and the secondary-confirm
+> clause below have reserved since founding — *"graded acceptability ratings if that anchor is adopted"* —
+> is now filled by **DAIS** ([`resource/dais-dative-ratings`](../../base/resources/dais-dative-ratings.md);
+> Hawkins, Yamakoshi, Griffiths & Goldberg 2020, CC BY 4.0, 50,136 human slider judgments), adopted as a
+> **scoped SECONDARY** companion to the primary `languageR::dative` production anchor. **Scope (load-bearing):**
+> DAIS grounds the graded human *preference surface* over recipient/theme **definiteness and length** on
+> isolated pairs — a genuinely graded human magnitude in the same directional family (pronoun 37.7 →
+> longIndefinite 18.3). It does **NOT** anchor the project's discourse-context **within-item givenness
+> shift** (a different instrument on byte-identical phrasings, which stays anchored to the production
+> *direction* only), and it is deliberately **not** wired as an `anchors:` link on the promoted
+> [`claim/dative-information-structure-givenness`](../claims/dative-information-structure-givenness.md).
+> **No result, verdict, or confirm criterion changes** (this fills the yardstick's reserved secondary slot;
+> a human-vs-model *magnitude* correlation on DAIS remains a separate, powered, pre-critiqued probe — the
+> decision's Option B, out of scope for the adoption).
 
 > **Operationalization RATIFIED 2026-06-20 (session 50, ADOPT MODIFIED).** The human anchor is
 > in-repo ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md) —
