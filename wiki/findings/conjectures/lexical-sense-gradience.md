@@ -37,6 +37,24 @@ links:
 > flag for the direction/agreement core. Clause (b) is untouched (its powered null stays unpromoted).
 > *(Back-annotation added by a maintenance pass; nothing measured or decided on this page changes.)*
 
+> **Update (2026-07-17, session 241 — external cross-method corroboration of the clause-(b) discreteness
+> difficulty; a phil-track source ingest, nothing on this page changes).** Ingested
+> [`source/mosolova-2025-wsi-unsolved`](../../base/sources/mosolova-2025-wsi-unsolved.md) (Mosolova, Candito
+> & Ramisch, Findings of ACL 2025). On a SemCor-derived dataset respecting natural corpus polysemy and
+> frequency distributions, **no** fully unsupervised word-sense-**induction** method — theirs, prior SOTA,
+> or an LLM-prompting method they build — surpasses the trivial **"one cluster per lemma" (1cpl)** no-split
+> baseline, and "LLMs have troubles performing this task." This is external, **cross-method** (clustering /
+> induction, not graded pairwise rating) corroboration that **discrete sense individuation from natural
+> text resists solution** — consistent with this conjecture's **clause-(b) powered null**
+> ([`result/lexical-polysemy-homonymy-v3`](../results/lexical-polysemy-homonymy-v3.md): the panel does not
+> treat polysemy as a discrete regime beyond graded distance) and with the gradience-over-discreteness
+> reading. It does **not** bear on clauses (a)+(c): those concern the *frontier panel's* graded pairwise
+> relatedness rank-tracking the human DURel median (a direction/agreement claim), a **different task, grain,
+> and model set** (Mosolova test BERT/PolyLM/Llama on clustering metrics — not claude/gemini/gpt). Mosolova
+> is a **methodology/counterweight source, NOT a human anchor**; it corroborates a difficulty the clause-(b)
+> null already records and reinforces the promoted claim's existing modesty. **No number, verdict, or status
+> on this page changes** (the conjecture stays `tested`).
+
 ## Statement
 
 Lexicographers treat word sense as **graded**: the senses of a polysemous word (*paper*: material / newspaper / academic article; *run* across dozens of related uses) shade into one another with intermediate, bridging cases, **unlike** homonymy (*bank*: riverside / financial), where the two senses are discrete and unrelated. The seed open-question fixed three hypotheses for how an LLM might behave against this picture: **graded-sense tracking**, **discrete-sense collapse**, and **distributional shadow**.
