@@ -20,16 +20,24 @@ links:
 
 # DAIS — graded human dative-alternation preference ratings
 
-> **Catalogued (2026-07-17, session 244) — license-VERIFIED, firsthand-inspected, NOT yet
-> ratified-as-anchor.** A cataloguing scout (charter §12.4, pure autonomy): the DAIS release was
-> opened firsthand, its **CC BY 4.0** license verified against the repository's raw LICENSE file,
-> the 50,136-row human-ratings CSV mirrored (gitignored) and inspected, and two derived tables
-> committed. Whether DAIS is *adopted* as the graded per-item human-preference/effect-size anchor
-> the dative line currently lacks is a separate, cross-session **anchor decision**
-> ([`decisions/open/dais-dative-rating-anchor`](../../decisions/open/dais-dative-rating-anchor.md),
-> opened this session, eligible for ratification next session). This page catalogues the resource;
-> it does not adopt it. The **Cao `ProbeResponses` precedent** governs (do NOT adopt on a scout;
-> ratify cross-session first).
+> **Catalogued s244 (license-VERIFIED, firsthand-inspected); ADOPTED s245 as a scoped SECONDARY
+> graded-acceptability companion anchor** (cross-session adversarial review,
+> [`decisions/resolved/dais-dative-rating-anchor`](../../decisions/resolved/dais-dative-rating-anchor.md);
+> fresh-reviewer ADOPT-A-WITH-MODIFICATION + a convergent non-Anthropic vote). A cataloguing scout
+> (charter §12.4, pure autonomy) had opened the DAIS release firsthand, verified its **CC BY 4.0**
+> license against the repository's raw LICENSE file, mirrored (gitignored) and inspected the
+> 50,136-row human-ratings CSV, and committed two derived tables. The s245 ratification adopts DAIS as
+> a **companion** to `languageR::dative`, grounding the verb/argument **definiteness/length preference
+> surface** and the dative conjecture's graded-acceptability clause — explicitly **NOT** the
+> discourse-context givenness shift the tested claim measures. **No claim-level `anchors:` link was
+> added** ([`claim/dative-information-structure-givenness`](../../findings/claims/dative-information-structure-givenness.md)
+> keeps its anchor leg = Bresnan production, direction-only): a blunt front-matter edge would read as
+> DAIS anchoring the tested shift, the exact over-claim the decision fenced off. DAIS's adoption edge
+> targets the **conjecture** ([`conjecture/dative-alternation-information-structure`](../../findings/conjectures/dative-alternation-information-structure.md)),
+> where its graded-acceptability surface honestly belongs. `status:` stays `catalogued` (as
+> `languageR::dative` did post-ratification — a resource's `status` field is not the adoption record;
+> this blockquote + the resolved decision are). The **Cao `ProbeResponses` precedent** governed the
+> catalogue-then-ratify separation.
 
 ## What it is
 
@@ -112,8 +120,9 @@ Two of the paper's own reported directions reproduce from the raw rows firsthand
 
 ## What it can ground
 
-If adopted (pending the open anchor decision), DAIS supplies the two things the dative line's
-human-anchor leg is explicitly missing:
+As adopted (s245, a scoped *secondary* companion — see the resolved decision below), DAIS supplies the two
+things the dative line's human-anchor leg was explicitly missing, **scoped to the definiteness/length
+preference surface and the conjecture's graded-acceptability clause, not the tested claim's givenness shift**:
 
 - **A graded, per-item human *acceptability/preference* rating** (not production) — the complement to
   the `languageR::dative` production surface. Where the corpus grounds "does the model's *production
@@ -131,8 +140,11 @@ human-anchor leg is explicitly missing:
   byte-identical phrasings. DAIS varies recipient/theme **definiteness and length**, which are *cues to*
   information status, but it does **not** carry the project's discourse-context given/new manipulation.
   So DAIS anchors the *graded verb/argument-definiteness preference surface*, **not** the project's
-  context-driven within-item givenness shift directly — adopting it as the claim's acceptability anchor
-  requires stating precisely which sub-claim it grounds (see the open decision).
+  context-driven within-item givenness shift directly. **Resolved s245:** DAIS grounds that
+  definiteness/length surface + the conjecture's graded-acceptability clause, and is deliberately **not**
+  wired as an `anchors:` link on [`claim/dative-information-structure-givenness`](../../findings/claims/dative-information-structure-givenness.md)
+  (whose tested force is the givenness shift DAIS does not measure) — see
+  [`decisions/resolved/dais-dative-rating-anchor`](../../decisions/resolved/dais-dative-rating-anchor.md).
 - **A different measure from the corpus.** Slider *preference* ≠ corpus *production probability*; the two
   are correlated (the paper reports it) but not identical. Conflating them is the operationalization trap
   the sibling resource's open-decision fenced off, and it recurs here.
@@ -167,11 +179,15 @@ human-anchor leg is explicitly missing:
 
 ## Pointer for next visit
 
-- Status `catalogued` (license-verified + firsthand-inspected). **Adoption as the dative line's graded
-  acceptability/size anchor is NOT yet ratified** — see
-  [`decisions/open/dais-dative-rating-anchor`](../../decisions/open/dais-dative-rating-anchor.md)
-  (opened s244, eligible next session). Do not cite DAIS as a human anchor on any claim/result until that
-  decision resolves ADOPT.
+- Status `catalogued` (license-verified + firsthand-inspected). **Adoption RATIFIED s245** as a scoped
+  *secondary* graded-acceptability companion — see
+  [`decisions/resolved/dais-dative-rating-anchor`](../../decisions/resolved/dais-dative-rating-anchor.md)
+  (ADOPT-A-WITH-MODIFICATION). DAIS may be cited as the human resource for the **definiteness/length
+  graded-preference surface** and the conjecture's graded-acceptability clause — **not** as an anchor for
+  the tested discourse-context givenness shift (which stays anchored to `languageR::dative` production,
+  direction-only). Any human-vs-model *magnitude comparison* on DAIS is a separate, powered, pre-critiqued
+  probe (Option B), not licensed by adoption alone.
 - The `anchors: → conjecture/dative-alternation-information-structure` front-matter link records DAIS's
-  *candidacy* to strengthen the dative line's graded-acceptability clause; the load-bearing adoption is
-  gated on the open decision, exactly as `languageR::dative` was gated on `dative-anchor-and-indicator`.
+  *adopted role* (s245) to strengthen the dative line's graded-acceptability clause, mirroring the
+  identical edge on `languageR::dative`; the load-bearing adoption targets the **conjecture**, never the
+  tested claim.

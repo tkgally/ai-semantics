@@ -191,7 +191,10 @@ wrong anchor for 'does the model rate sentences the way humans rate them'"* — 
 per-item human acceptability rating and **not** a human effect-*size*. So the human-comparison statement
 is exactly: *for claude and gemini, the model's production preference shifts in the direction the human
 production corpus attests.* No human comparison of magnitudes is made or owed (the Bresnan & Ford 2010
-graded-rating anchor was ratified an opportunistic upgrade only and was not used).
+graded-rating anchor was ratified an opportunistic upgrade only and was not used) — and DAIS's graded surface,
+though it reproduces this direction with a magnitude, does so for the definiteness/length dimension on isolated
+pairs, not for the within-item context shift, so it licenses no magnitude comparison for the effect this claim
+tests either.
 
 ## The controls that earn the rigor
 
@@ -285,8 +288,13 @@ This claim carries `anchor: human-anchored` with an `anchors:` link to
 **human-comparison** statement on its **direction** leg: the models' production preference shifts in the
 direction the Bresnan et al. (2007) production corpus attests (given recipient → DOC, given theme → PD,
 via `AccessOfRec` / `AccessOfTheme` against `RealizationOfRecipient`, in-sample accuracy 0.887). That link
-grounds **only the direction of the effect**, not its magnitude (no human effect-size anchor is in-repo)
-and not a per-item acceptability comparison (the corpus is production, not judgment). The claim is
+grounds **only the direction of the effect**, not its magnitude (no human effect-size anchor *for the
+discourse-context givenness shift this probe tests* is in-repo — DAIS
+([`resource/dais-dative-ratings`](../../base/resources/dais-dative-ratings.md); adopted s245 as a scoped
+*secondary* graded-acceptability companion) supplies a graded human *preference surface* for recipient/theme
+**definiteness and length** on isolated pairs, a **different instrument** that does **not** carry this claim's
+context-driven within-item manipulation and therefore does **not** anchor its magnitude) and not a per-item
+acceptability comparison (the corpus is production, not judgment). The claim is
 therefore **not** `internal-contrast-only`: it does lean, in part, on the human production direction, and
 states that leg at exactly its (direction-only, production, corpus-gradient) strength.
 
