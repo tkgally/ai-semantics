@@ -1,0 +1,77 @@
+{
+  "source": "https://github.com/taka-yamakoshi/neural_constructions (master), file DAIS/data/experiment_output/data_cleaned.zip",
+  "license": "CC BY 4.0 (verified firsthand against raw LICENSE, 2026-07-17)",
+  "paper": "Hawkins, Yamakoshi, Griffiths, Goldberg 2020, EMNLP pp.4653-4663, arXiv 2010.02375",
+  "zip_sha256": "f3860b93c6e7d5a7065ea3b7256360c8d1227112f340c790d3a00a192cc1c652",
+  "csv_sha256": "01ee1b163003e354cddf1c6c6be1b386123cbbce3424163bf198e9fbc4c251f9",
+  "n_judgments": 50136,
+  "columns": [
+    "rt",
+    "set_id",
+    "participant_id",
+    "theme_type",
+    "recipient_id",
+    "verb_id",
+    "theme_id",
+    "DOsentence",
+    "PDsentence",
+    "frequency_rank",
+    "classification",
+    "trial_index",
+    "DOpreference",
+    "verb"
+  ],
+  "n_unique_verbs": 200,
+  "n_participants": 1011,
+  "n_unique_sentence_pairs": 5000,
+  "judgments_per_pair": {
+    "min": 4,
+    "max": 14,
+    "mean": 10.027
+  },
+  "DOpreference": {
+    "scale": "0-100 continuous slider; 0=strong PD/PO, 100=strong DO, 50=about the same",
+    "min": 0.0,
+    "max": 100.0,
+    "mean": 26.48,
+    "median": 17.0
+  },
+  "recipient_conditions": [
+    "longDefinite",
+    "longIndefinite",
+    "pronoun",
+    "shortDefinite",
+    "shortIndefinite"
+  ],
+  "theme_types": [
+    "def",
+    "indef",
+    "something"
+  ],
+  "classification_counts": {
+    "alternating": 25177,
+    "non-alternating": 24959
+  },
+  "DOpref_by_classification": {
+    "alternating": 33.972,
+    "non-alternating": 18.922
+  },
+  "DOpref_by_recipient_condition": {
+    "pronoun": 37.744,
+    "shortDefinite": 30.5,
+    "shortIndefinite": 25.153,
+    "longDefinite": 20.781,
+    "longIndefinite": 18.311
+  },
+  "n_verb_means": 200,
+  "verb_means_sample": {
+    "addressed": 17.215,
+    "administered": 25.451,
+    "admitted": 9.769,
+    "advanced": 32.064,
+    "allocated": 28.95,
+    "alloted": 37.504,
+    "announced": 11.773,
+    "articulated": 15.433
+  }
+}
