@@ -1,0 +1,154 @@
+{
+  "arm_A": {
+    "claude": {
+      "n_verbs": 200,
+      "n_na": 0,
+      "rho_matched": 0.6841954330253706,
+      "ci_matched": [
+        0.5995466156831326,
+        0.7552849965615908
+      ],
+      "ci_lb_gt0": true,
+      "rho_collapsed": 0.7131671738754857,
+      "ci_collapsed": [
+        0.6261872651945279,
+        0.7820298942059953
+      ],
+      "rho_alternating_only": 0.6302841162913921,
+      "ci_alt": [
+        0.5004427733452459,
+        0.7346449665892517
+      ],
+      "alt_ci_lb_gt0": true,
+      "n_alt": 100,
+      "partial_rho_freqclass": 0.5262209653817786,
+      "contamination_ceiling": false
+    },
+    "gemini": {
+      "n_verbs": 200,
+      "n_na": 0,
+      "rho_matched": 0.8154886641170642,
+      "ci_matched": [
+        0.7608145793669968,
+        0.8576966107616271
+      ],
+      "ci_lb_gt0": true,
+      "rho_collapsed": 0.8163279391007517,
+      "ci_collapsed": [
+        0.7570197047123255,
+        0.8617573615084393
+      ],
+      "rho_alternating_only": 0.6913124503632696,
+      "ci_alt": [
+        0.5738216129240528,
+        0.7797763016869093
+      ],
+      "alt_ci_lb_gt0": true,
+      "n_alt": 100,
+      "partial_rho_freqclass": 0.6662709098071702,
+      "contamination_ceiling": false
+    },
+    "gpt": {
+      "n_verbs": 200,
+      "n_na": 0,
+      "rho_matched": 0.7006601325954782,
+      "ci_matched": [
+        0.6269314306997296,
+        0.7606971598108923
+      ],
+      "ci_lb_gt0": true,
+      "rho_collapsed": 0.7139664492506608,
+      "ci_collapsed": [
+        0.637704101571441,
+        0.7762803091303274
+      ],
+      "rho_alternating_only": 0.5392658309291456,
+      "ci_alt": [
+        0.3716937684012432,
+        0.6749758654253303
+      ],
+      "alt_ci_lb_gt0": true,
+      "n_alt": 100,
+      "partial_rho_freqclass": 0.5235678020040542,
+      "contamination_ceiling": false
+    }
+  },
+  "arm_B": {
+    "claude": {
+      "n_verbs_used": 40,
+      "successes": 28,
+      "monotonicity_rate": 0.7,
+      "binom_p_vs_p0": 2.160714088884145e-10,
+      "beats_chance": true,
+      "mean_rho_s": 0.5946903643094997,
+      "short_contrast_mean": 0.09,
+      "short_ci": [
+        0.03649375000000002,
+        0.14300000000000002
+      ],
+      "long_contrast_mean": 0.05650000000000001,
+      "long_ci": [
+        0.0025000000000000022,
+        0.1102562499999999
+      ],
+      "within_length_pass": true,
+      "5cond_dir_rho": 0.9999999999999999
+    },
+    "gemini": {
+      "n_verbs_used": 40,
+      "successes": 29,
+      "monotonicity_rate": 0.725,
+      "binom_p_vs_p0": 2.5569988142838832e-11,
+      "beats_chance": true,
+      "mean_rho_s": 0.6307558263388591,
+      "short_contrast_mean": 0.0975,
+      "short_ci": [
+        0.04250000000000002,
+        0.15625
+      ],
+      "long_contrast_mean": 0.05256578947368421,
+      "long_ci": [
+        0.015,
+        0.0944736842105263
+      ],
+      "within_length_pass": true,
+      "5cond_dir_rho": 0.9999999999999999
+    },
+    "gpt": {
+      "n_verbs_used": 40,
+      "successes": 24,
+      "monotonicity_rate": 0.6,
+      "binom_p_vs_p0": 3.6873607161621053e-07,
+      "beats_chance": true,
+      "mean_rho_s": 0.49635665017685504,
+      "short_contrast_mean": 0.12050000000000001,
+      "short_ci": [
+        0.025500000000000005,
+        0.21625
+      ],
+      "long_contrast_mean": 0.025500000000000005,
+      "long_ci": [
+        -0.08725625000000001,
+        0.137
+      ],
+      "within_length_pass": false,
+      "5cond_dir_rho": 0.9999999999999999
+    }
+  },
+  "verdict": {
+    "band": "TRACKS-HUMAN-SURFACE",
+    "contamination_ceiling_flag": false,
+    "gates": {
+      "armA_full_ci_lb_gt0_ge2of3": true,
+      "armA_alt_control_ge2of3": true,
+      "armB_monotonicity_beats_chance_ge2of3": true,
+      "armB_within_length_definiteness_ge2of3": true
+    }
+  },
+  "frozen": {
+    "armb_rho_threshold": 0.5,
+    "armb_null_p0": 0.225,
+    "contamination_ceiling_rho": 0.95,
+    "canonical_arma_condition": "shortDefinite"
+  }
+}

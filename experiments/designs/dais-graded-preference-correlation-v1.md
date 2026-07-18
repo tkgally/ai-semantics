@@ -50,6 +50,17 @@ ratified gates.
 > `proposed`; predictions §B bet LOST. Run dir
 > [`experiments/runs/2026-07-18-dais-option-b/`](../runs/2026-07-18-dais-option-b/).
 >
+> **Fresh-item REPLICATION + PROMOTION (2026-07-18, session 250).** The design's Q3 route ("a `claim` …
+> needs a fresh-item replication + a cross-session promotion review") was executed: the byte-frozen
+> instrument re-ran on fully disjoint fresh fillers →
+> [`result/dais-graded-preference-correlation-rep2`](../../wiki/findings/results/dais-graded-preference-correlation-rep2.md):
+> **the Arm-A verb-bias leg REPLICATED 3/3** (VERB-BIAS-REPLICATES) and was promoted (PROMOTE-WITH-CONDITIONS,
+> fresh reviewer + non-Anthropic vote) → [`claim/dative-verb-bias-graded-correspondence`](../../wiki/findings/claims/dative-verb-bias-graded-correspondence.md)
+> (a scoped ordering correspondence, distinct from the givenness claim). **The Arm-B definiteness/length band
+> did NOT replicate** — it flipped LENGTH-ONLY (s248) → TRACKS-HUMAN-SURFACE (rep2), so that surface is
+> **filler-unstable** and is NOT promoted. Run dir
+> [`experiments/runs/2026-07-18-dais-option-b-rep2/`](../runs/2026-07-18-dais-option-b-rep2/).
+>
 > **Status was: RATIFIED (2026-07-18, session 247) — ADOPT-WITH-MODIFICATION. Nothing frozen, nothing run.**
 > Session 246 wrote this design and opened the governing decision; **session 247 ratified it** (cross-session
 > adversarial review — a fresh-agent reviewer with verdict authority returned ADOPT-WITH-MODIFICATION + a

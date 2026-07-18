@@ -9,7 +9,7 @@ meaning-senses:
 status: tested
 contingent-on: []
 created: 2026-05-28
-updated: 2026-07-17
+updated: 2026-07-18
 links:
   - rel: depends-on
     target: concept/constructional-meaning
@@ -74,6 +74,22 @@ links:
 > gradient* surfaces, and an honest **null-leaning dissociation** on the clean *definiteness* surface; per
 > this conjecture's confirm criterion it **cannot convert or rescue the primary givenness test**, which it
 > does not touch. Registered predictions §B bet: **LOST** (TRACKS did not obtain).
+>
+> **Fresh-item REPLICATION RAN 2026-07-18 (session 250) → the verb-bias companion is now TWICE-observed
+> and PROMOTED; the definiteness surface is filler-UNSTABLE** ([`result/dais-graded-preference-correlation-rep2`](../results/dais-graded-preference-correlation-rep2.md);
+> byte-frozen instrument, fresh disjoint fillers; verifier REPRODUCED). **VERB-BIAS-REPLICATES 3/3** (matched
+> ρ +0.68/+0.82/+0.70, each inside the s248 CI; alternating-only control survives 3/3) → the verb-bias leg
+> was promoted (cross-session review, PROMOTE-WITH-CONDITIONS) to
+> [`claim/dative-verb-bias-graded-correspondence`](../claims/dative-verb-bias-graded-correspondence.md) — a
+> scoped **ordering** correspondence (not a magnitude match; contamination-vulnerable; held **distinct** from
+> the primary givenness claim). **But the Arm-B definiteness/length band FLIPPED** (s248 LENGTH-ONLY → rep2
+> TRACKS-HUMAN-SURFACE, within-length control cleared 2/3), so the definiteness surface is **filler-unstable**
+> — neither LENGTH-ONLY nor TRACKS is a stable verdict, and it is **not** promoted. Net for this conjecture:
+> the secondary graded-acceptability clause's **verb-bias** leg is now a supported companion (twice-observed,
+> contamination-caveated, still secondary/non-decisive — it neither converts nor rescues the primary givenness
+> test); the **definiteness** leg remains an unresolved, filler-sensitive dissociation. *(Correction to the
+> s248 blockquote's wording, per the s250 promotion review: the verb-bias correspondence is an **ordering**/rank
+> correspondence, not a human effect-**size** "magnitude" match.)*
 
 > **Operationalization RATIFIED 2026-06-20 (session 50, ADOPT MODIFIED).** The human anchor is
 > in-repo ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md) —
