@@ -1,0 +1,22 @@
+/home/user/ai-semantics/experiments/runs/2026-07-18-dais-option-b/analyze.py:113: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rs = spearmanr(vals, HUM_RANKS).statistic
+=== VERDICT: LENGTH-ONLY  (contamination-ceiling flag: False) ===
+gates: {"armA_full_ci_lb_gt0_ge2of3": true, "armA_alt_control_ge2of3": true, "armB_monotonicity_beats_chance_ge2of3": true, "armB_within_length_definiteness_ge2of3": false}
+
+Arm A (per-verb DO-pref vs human, matched condition):
+  claude: rho_matched=+0.608 CI[+0.501,+0.700] | alt-only=+0.597 CI-LB>0=True | partial=+0.480 | ceiling=False (n=200,NA=0)
+  gemini: rho_matched=+0.763 CI[+0.683,+0.825] | alt-only=+0.696 CI-LB>0=True | partial=+0.631 | ceiling=False (n=200,NA=0)
+  gpt: rho_matched=+0.628 CI[+0.542,+0.702] | alt-only=+0.467 CI-LB>0=True | partial=+0.542 | ceiling=False (n=200,NA=0)
+
+Arm B (recipient definiteness/length gradient):
+  claude: mono_rate=0.700 (28/40) binom_p=0.0000 beats_chance=True | shortDef-Indef=+0.052 CI[+0.010,+0.092] longDef-Indef=+0.033 within_pass=False
+  gemini: mono_rate=0.725 (29/40) binom_p=0.0000 beats_chance=True | shortDef-Indef=+0.071 CI[+0.024,+0.119] longDef-Indef=+0.021 within_pass=False
+  gpt: mono_rate=0.450 (18/40) binom_p=0.0013 beats_chance=True | shortDef-Indef=+0.114 CI[+0.021,+0.210] longDef-Indef=+0.049 within_pass=False
+
+=== POST-RUN VERIFIER (s248) ===
+Independent recomputation from raw (separate code path, point estimates) reproduced every headline
+figure in analysis.json to the printed precision: Arm-A matched rho 0.608/0.763/0.628, alternating-only
+0.597/0.696/0.467; Arm-B monotonicity 28/29/18 of 40 (rates 0.700/0.725/0.450, all binom p<0.05 vs
+p0=0.225); within-length short-contrast means +0.052/+0.071/+0.114 (CI-LB>0 3/3), long-contrast means
++0.033/+0.021/+0.049 (CI includes 0 3/3). analyze.py re-run byte-identical (deterministic, seeded
+bootstrap). 0 NA / 1200 calls. VERDICT LENGTH-ONLY REPRODUCED. 0 discrepancies.

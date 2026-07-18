@@ -40,7 +40,17 @@ ratifiable s247+, run after ratification.** A probe that opens a value-laden dec
 session that opens it — and this one carries an OpenRouter spend, so its freeze + run wait for the
 ratified gates.
 
-> **Status: RATIFIED (2026-07-18, session 247) — ADOPT-WITH-MODIFICATION. Nothing frozen, nothing run.**
+> **Status: FROZEN + RUN (2026-07-18, session 248) → VERDICT LENGTH-ONLY.** The ratified instrument was
+> frozen (honoring B1–B3/S1–S3; `stimuli.json` sha `8e26f033…`; PREREG + pre-run critic **GO-WITH-CONDITIONS**
+> [C1 applied pre-data] + non-Anthropic vote **GO-WITH-CONDITIONS**) and run (1,200 calls, 0 NA, $1.82074;
+> post-run verifier REPRODUCED) → [`result/dais-graded-preference-correlation-v1`](../../wiki/findings/results/dais-graded-preference-correlation-v1.md):
+> **LENGTH-ONLY** — Arm A verb-bias tracked 3/3 (matched ρ +0.61/+0.76/+0.63; alternating-only control
+> survives 3/3), Arm B recipient monotonicity beats chance 3/3, short-length definiteness clears 3/3, but
+> the binding within-length definiteness control fails 3/3 at long length (end-weight-dominated). Result
+> `proposed`; predictions §B bet LOST. Run dir
+> [`experiments/runs/2026-07-18-dais-option-b/`](../runs/2026-07-18-dais-option-b/).
+>
+> **Status was: RATIFIED (2026-07-18, session 247) — ADOPT-WITH-MODIFICATION. Nothing frozen, nothing run.**
 > Session 246 wrote this design and opened the governing decision; **session 247 ratified it** (cross-session
 > adversarial review — a fresh-agent reviewer with verdict authority returned ADOPT-WITH-MODIFICATION + a
 > convergent non-Anthropic decorrelation vote RATIFY-WITH-MODIFICATION):

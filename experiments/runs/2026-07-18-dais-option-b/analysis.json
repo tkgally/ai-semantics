@@ -1,0 +1,154 @@
+{
+  "arm_A": {
+    "claude": {
+      "n_verbs": 200,
+      "n_na": 0,
+      "rho_matched": 0.6079931509856504,
+      "ci_matched": [
+        0.5010149355826553,
+        0.6999256586591156
+      ],
+      "ci_lb_gt0": true,
+      "rho_collapsed": 0.5937164756495651,
+      "ci_collapsed": [
+        0.4820396412823902,
+        0.6895482872387471
+      ],
+      "rho_alternating_only": 0.5973917658001076,
+      "ci_alt": [
+        0.4373479017611364,
+        0.7223970579887101
+      ],
+      "alt_ci_lb_gt0": true,
+      "n_alt": 100,
+      "partial_rho_freqclass": 0.4799074302163772,
+      "contamination_ceiling": false
+    },
+    "gemini": {
+      "n_verbs": 200,
+      "n_na": 0,
+      "rho_matched": 0.7626321546578717,
+      "ci_matched": [
+        0.6833956080083371,
+        0.8254584459054737
+      ],
+      "ci_lb_gt0": true,
+      "rho_collapsed": 0.7450046768792169,
+      "ci_collapsed": [
+        0.6675980353879453,
+        0.807879665351423
+      ],
+      "rho_alternating_only": 0.6956152401619797,
+      "ci_alt": [
+        0.5582121166642282,
+        0.801557216482794
+      ],
+      "alt_ci_lb_gt0": true,
+      "n_alt": 100,
+      "partial_rho_freqclass": 0.6312002709066842,
+      "contamination_ceiling": false
+    },
+    "gpt": {
+      "n_verbs": 200,
+      "n_na": 0,
+      "rho_matched": 0.6284122357233156,
+      "ci_matched": [
+        0.5415012610377377,
+        0.7019690065683076
+      ],
+      "ci_lb_gt0": true,
+      "rho_collapsed": 0.6069018055480528,
+      "ci_collapsed": [
+        0.5144421586849958,
+        0.6836642859624089
+      ],
+      "rho_alternating_only": 0.4667764685864344,
+      "ci_alt": [
+        0.26922512309450636,
+        0.6332403226107544
+      ],
+      "alt_ci_lb_gt0": true,
+      "n_alt": 100,
+      "partial_rho_freqclass": 0.541878459429129,
+      "contamination_ceiling": false
+    }
+  },
+  "arm_B": {
+    "claude": {
+      "n_verbs_used": 40,
+      "successes": 28,
+      "monotonicity_rate": 0.7,
+      "binom_p_vs_p0": 2.160714088884145e-10,
+      "beats_chance": true,
+      "mean_rho_s": 0.5135293129655519,
+      "short_contrast_mean": 0.051750000000000004,
+      "short_ci": [
+        0.010000000000000012,
+        0.09175
+      ],
+      "long_contrast_mean": 0.0325,
+      "long_ci": [
+        -0.014500000000000002,
+        0.07925
+      ],
+      "within_length_pass": false,
+      "5cond_dir_rho": 0.9999999999999999
+    },
+    "gemini": {
+      "n_verbs_used": 40,
+      "successes": 29,
+      "monotonicity_rate": 0.725,
+      "binom_p_vs_p0": 2.5569988142838832e-11,
+      "beats_chance": true,
+      "mean_rho_s": 0.5312771005676822,
+      "short_contrast_mean": 0.07125000000000001,
+      "short_ci": [
+        0.02375,
+        0.11875
+      ],
+      "long_contrast_mean": 0.021184210526315785,
+      "long_ci": [
+        -0.02388157894736842,
+        0.0643421052631579
+      ],
+      "within_length_pass": false,
+      "5cond_dir_rho": 0.9999999999999999
+    },
+    "gpt": {
+      "n_verbs_used": 40,
+      "successes": 18,
+      "monotonicity_rate": 0.45,
+      "binom_p_vs_p0": 0.0013414519579046272,
+      "beats_chance": true,
+      "mean_rho_s": 0.3570316217505023,
+      "short_contrast_mean": 0.11425,
+      "short_ci": [
+        0.02075000000000001,
+        0.20975624999999992
+      ],
+      "long_contrast_mean": 0.049249999999999995,
+      "long_ci": [
+        -0.04949999999999998,
+        0.1465124999999998
+      ],
+      "within_length_pass": false,
+      "5cond_dir_rho": 0.9999999999999999
+    }
+  },
+  "verdict": {
+    "band": "LENGTH-ONLY",
+    "contamination_ceiling_flag": false,
+    "gates": {
+      "armA_full_ci_lb_gt0_ge2of3": true,
+      "armA_alt_control_ge2of3": true,
+      "armB_monotonicity_beats_chance_ge2of3": true,
+      "armB_within_length_definiteness_ge2of3": false
+    }
+  },
+  "frozen": {
+    "armb_rho_threshold": 0.5,
+    "armb_null_p0": 0.225,
+    "contamination_ceiling_rho": 0.95,
+    "canonical_arma_condition": "shortDefinite"
+  }
+}
