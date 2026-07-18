@@ -1,0 +1,83 @@
+{
+  "conditions": [
+    {
+      "condition": "pronoun",
+      "dais_canonical_realization": "him",
+      "dais_wc": 1,
+      "definiteness": "pronoun",
+      "length_class": "pronoun",
+      "project_realization": "her",
+      "project_wc": 1
+    },
+    {
+      "condition": "shortDefinite",
+      "dais_canonical_realization": "the man",
+      "dais_wc": 2,
+      "definiteness": "definite",
+      "length_class": "short",
+      "project_realization": "the girl",
+      "project_wc": 2
+    },
+    {
+      "condition": "shortIndefinite",
+      "dais_canonical_realization": "a man",
+      "dais_wc": 2,
+      "definiteness": "indefinite",
+      "length_class": "short",
+      "project_realization": "a girl",
+      "project_wc": 2
+    },
+    {
+      "condition": "longDefinite",
+      "dais_canonical_realization": "the man from work",
+      "dais_wc": 4,
+      "definiteness": "definite",
+      "length_class": "long",
+      "project_realization": "the girl from college",
+      "project_wc": 4
+    },
+    {
+      "condition": "longIndefinite",
+      "dais_canonical_realization": "a man from work",
+      "dais_wc": 4,
+      "definiteness": "indefinite",
+      "length_class": "long",
+      "project_realization": "a girl from college",
+      "project_wc": 4
+    }
+  ],
+  "example_item_gave": {
+    "longDefinite": {
+      "doc": "Nadia gave the girl from college a parcel.",
+      "pd": "Nadia gave a parcel to the girl from college."
+    },
+    "longIndefinite": {
+      "doc": "Nadia gave a girl from college a parcel.",
+      "pd": "Nadia gave a parcel to a girl from college."
+    },
+    "pronoun": {
+      "doc": "Nadia gave her a parcel.",
+      "pd": "Nadia gave a parcel to her."
+    },
+    "shortDefinite": {
+      "doc": "Nadia gave the girl a parcel.",
+      "pd": "Nadia gave a parcel to the girl."
+    },
+    "shortIndefinite": {
+      "doc": "Nadia gave a girl a parcel.",
+      "pd": "Nadia gave a parcel to a girl."
+    }
+  },
+  "note": "Each project recipient realization vs the DAIS factor level it instantiates. Length (word count) and definiteness are matched to DAIS's factor structure; the lexemes are project-chosen and disjoint (B3). Theme held fixed per verb across the 5 conditions -- only the recipient moves.",
+  "subject": "Nadia",
+  "within_length_definiteness_contrasts": {
+    "long": [
+      "longDefinite",
+      "longIndefinite"
+    ],
+    "short": [
+      "shortDefinite",
+      "shortIndefinite"
+    ]
+  }
+}
