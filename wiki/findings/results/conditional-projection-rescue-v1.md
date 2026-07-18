@@ -181,6 +181,15 @@ genuine-limit reading. Opens a possible narrower follow-up (why does an explicit
 rescue claude but *suppress* gpt? — a model-difference in how "speaker commitment" is read), left for a
 later session.
 
+**External companion (session 249, no change to this result):** an independent human-vs-LLM study of
+conditional presupposition — [`source/azin-2026-presupposition-conditionals`](../../base/sources/azin-2026-presupposition-conditionals.md)
+(Azin et al. 2026, CoNLL 2026) — reaches a **broadly convergent** reading (LLM presupposition behavior
+looks like "surface pattern matching rather than pragmatic competence", with weak human alignment). It
+is recorded as **companion, not corroboration**: Azin studies the **proviso** cell (trigger in the
+*consequent*, modulated by antecedent relevance), a **different structural configuration** from this
+result's **antecedent**-of-conditional collapse, on a non-project model set — so it does not replicate
+or strengthen this specific result, and this page's `internal-contrast-only` scope is untouched.
+
 **Update (session 166): that follow-up ran** →
 [`result/commitment-framing-model-difference-v1`](commitment-framing-model-difference-v1.md) (verdict
 **PARTIAL**). The model difference reproduced. **claude** reads "committed" **inclusively** (a

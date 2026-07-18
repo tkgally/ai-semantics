@@ -8,7 +8,7 @@ meaning-senses:
   - distributional
 status: scouting
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-18
 links:
   - rel: depends-on
     target: result/presupposition-projection-v1
@@ -16,7 +16,23 @@ links:
     target: result/conditional-projection-rescue-v1
   - rel: depends-on
     target: result/projection-trigger-inventory-v1
+  - rel: depends-on
+    target: source/azin-2026-presupposition-conditionals
 ---
+
+> **Update — 2026-07-18 (session 249): a fifth candidate added, and it is the first *designed,
+> normed, human-rated conditional-presupposition* release the project has surfaced.** The s249 phil-track
+> ingest of [`source/azin-2026-presupposition-conditionals`](../sources/azin-2026-presupposition-conditionals.md)
+> (Azin, Yu, Singh & Jouravlev 2026, CoNLL 2026) brings a **released dataset of 90 conditional sentences
+> with 120-participant likelihood ratings** — see **Candidate 5** below. **Its license came back
+> UNVERIFIED** (repo `LICENSE`/`.md`/`.txt` → HTTP 404 on both `main` and `master`, firsthand; the CC BY
+> 4.0 on the arXiv paper covers the paper, not the data), so it **joins the null, not the exceptions**:
+> the honest posture below is unchanged, and nothing is adopted. **One scope point that matters:**
+> Azin's dataset targets the **proviso** configuration (presupposition triggered in the *consequent*,
+> modulated by antecedent relevance), which is a *different cell* from the project's headline
+> **antecedent-of-conditional** collapse — so even with a verified license it would anchor the proviso
+> question, not the project's specific collapse. It is added for completeness and for a future
+> anchor-adoption session's benefit.
 
 # Presupposition/projection human-anchor scouting — a HUMAN projection-variability signal for the projection line
 
@@ -236,6 +252,47 @@ but not identical to the project's authored trigger set.
 
 ---
 
+## Candidate 5: proviso-bench (Azin, Yu, Singh & Jouravlev 2026) — a designed, normed, human-rated conditional-presupposition dataset (added s249)
+
+**What it is (verified firsthand from the paper).** Azin et al. 2026, "Presupposition and Reasoning in
+Conditionals" (CoNLL 2026; arXiv 2605.18352; catalogued
+[`source/azin-2026-presupposition-conditionals`](../sources/azin-2026-presupposition-conditionals.md)).
+A **normed dataset of 90 conditional sentences** (30 base propositions × 3 variants) that crosses
+**antecedent–presupposition relevance** (relevant / somewhat relevant / irrelevant) with **proposition
+probability** (low / mid / high, from a norming study), with **likelihood ratings from 120 human
+participants** (Prolific, native English, 0–7 Likert) plus four LLMs under matched with/without-context
+conditions. The presupposition triggers are **possessive pronouns** ("his/her/their"). The human signal
+is graded likelihood-of-projection judgments per item — exactly the *graded human projection judgment*
+shape this scout is looking for. Release: `github.com/proviso-bench/Presupposition-and-Reasoning-in-Conditionals`.
+
+**Why it is only a *partial* environment fit — the proviso caveat.** Unlike the project's headline
+environment (presupposition trigger in the **antecedent** of the conditional,
+[`result/conditional-projection-rescue-v1`](../../findings/results/conditional-projection-rescue-v1.md)),
+Azin's items place the trigger in the **consequent** and vary the antecedent's *relevance* to it — the
+**proviso** configuration. So it human-anchors a **different, adjacent** conditional-presupposition cell.
+It is the closest *designed* (rather than naturally-occurring) match to the project's authored-minimal-pair
+style among all five candidates, and the only one built specifically for conditionals with graded human
+ratings — but it is **not** the antecedent-collapse cell.
+
+**License: UNVERIFIED (no license file found).** Firsthand raw-file check 2026-07-18: `LICENSE`,
+`LICENSE.md`, `LICENSE.txt` all returned **HTTP 404** on both `main` and `master`; the repo landing page
+returned **HTTP 403** through the proxy, so the GitHub-API `license` field could not be read. The
+**arXiv paper** is CC BY 4.0 — that covers the **paper text**, *not* the released data/annotations (the
+NOPE / Cao precedent). Treat the dataset as **license-unverified**; do not assume permissive terms.
+
+**What it could anchor (if licensed).** A **graded human projection baseline for the proviso problem** —
+how strongly people take a consequent-triggered presupposition to hold as a function of antecedent
+relevance and proposition probability — against which the panel's proviso behavior (or a purpose-built
+proviso probe) could be scored. It would also supply an item-level human ranking on *designed* stimuli,
+closer to the project's own construction style than the naturally-occurring candidates.
+
+**What it cannot anchor.** The project's **antecedent-of-conditional collapse** (different structural
+cell). Its trigger inventory is **possessive pronouns only** — narrower than the project's factive /
+aspectual / definite / cleft / temporal / focus / quantifier set — so it does not bear on the
+trigger-inventory line. And, license unverified, it is a *candidate*, not an anchor.
+
+---
+
 ## What this could and could not anchor (summary)
 
 **Could anchor (pending a verified license):**
@@ -309,6 +366,7 @@ in [`decisions/resolved/presupposition-projection-human-anchor`](../../decisions
 | MegaVeridicality | veridicality/projection judgments (positive/negative frames) | v1 1,088 sent / 517 pred / 2 frames; v2.1 3,938 sent / 773 pred / 9 frames | megaattitude.io/projects/mega-veridicality/ | **UNVERIFIED** | project page + rawlins.io/data both state no license (fetched); no repo LICENSE located |
 | Degen & Tonhauser (projective-probability) | graded projection ratings; by-participant projection variability | not counted this session | github.com/judith-tonhauser/projective-probability | **UNVERIFIED** | raw `LICENSE` → HTTP 404; README no license (fetched); conditional-antecedent coverage **not** verified |
 | NOPE | presupposition-inference ratings over 10 trigger types; per-item human variability | 2,386 main + 346 adversarial; 10 trigger types | github.com/nyu-mll/nope | **UNVERIFIED (corpus)** | raw `LICENSE` → HTTP 404 (both repo names/branches); **arXiv paper** = CC BY-SA 4.0 (paper only, not data); text-source terms **not** verified |
+| proviso-bench (Azin et al. 2026, added s249) | graded human likelihood-of-projection ratings (0–7) on **conditionals**, **proviso** cell (consequent-trigger × antecedent-relevance × proposition-probability) | 90 sentences / 30 base props; 120 participants; possessive-pronoun triggers only | github.com/proviso-bench/Presupposition-and-Reasoning-in-Conditionals | **UNVERIFIED (data)** | raw `LICENSE`/`.md`/`.txt` → HTTP 404 (`main`+`master`, firsthand 2026-07-18); repo page HTTP 403 (proxy) so API license field unread; **arXiv paper** = CC BY 4.0 (paper only, not data). Environment: **proviso/consequent**, not the antecedent-collapse cell |
 
 **Fetches / facts NOT verified this scout (stated honestly):**
 - No `LICENSE` file exists in any of the four repositories on the branches/names tried (HTTP 404 on
