@@ -1,0 +1,37 @@
+POST-RUN VERIFIER — s250 DAIS Option-B graded-preference correlation REP2
+==========================================================================
+Independent fresh-agent verifier (general-purpose subagent, no paid calls). Re-derived every headline
+figure from raw/probe-{A,B}-<model>.jsonl via a SEPARATE code path (own loader, own bootstrap at an
+independent seed 99887766 / NB=20000, scipy Spearman), then re-ran the committed analyze.py +
+replication_check.py to confirm determinism.
+
+ITEM 1 — Arm A matched rho: REPRODUCED.
+  claude +0.6842, gemini +0.8155, gpt +0.7007 (committed +0.684/+0.815/+0.701). All CI-LB > 0.
+
+ITEM 2 — Arm A alternating-only rho (n=100 alternating): REPRODUCED.
+  claude +0.6303, gemini +0.6913, gpt +0.5393 (committed +0.630/+0.691/+0.539). All alt CI-LB > 0.
+
+ITEM 3 — Replication predicate: REPRODUCED. R1 3/3, R2 3/3, R3 3/3; VERB_BIAS_REPLICATES = True.
+  Each rep2 point inside the v1 95% CI: claude +0.6842 in [+0.501,+0.700]; gemini +0.8155 in
+  [+0.683,+0.825]; gpt +0.7007 in [+0.5415,+0.7020]. The gpt near-boundary pass is GENUINE: rep2 point
+  0.7006601 vs v1 upper 0.7019690, margin +0.0013089, inside = True.
+
+ITEM 4 — Arm B: REPRODUCED. Monotonicity claude 28/40, gemini 29/40, gpt 24/40, all beats_chance = True
+  (binom p vs p0=0.225: 2.2e-10 / 2.6e-11 / 3.7e-07). Within-length definiteness: claude within_pass =
+  True, gemini True, gpt False. The gpt LONG contrast (+0.0255) CI GENUINELY includes 0 — committed
+  [-0.0873,+0.137]; independent-seed bootstrap [-0.0843,+0.135], lower bound robustly negative across
+  both seeds. The band flip to TRACKS-HUMAN-SURFACE (armB_within >=2/3 via claude+gemini) is confirmed
+  load-bearing and correct.
+
+ITEM 5 — Data quality: REPRODUCED. 0 NA (doc_pref None) across all 6 files; each Arm-A file 200 rows /
+  200 verbs; each Arm-B file 200 rows / 40 verbs x 5 conditions = 200 cells.
+
+ITEM 6 — Blindness / anti-cheat: REPRODUCED. probe.py never reads human_targets.json (docstring comment
+  only, no json.load). stimuli.json sha256 = a5779f04cd9ea70f337b749c2233fdf832ba0a6bab4be67e32dd9636a341e159,
+  matching PREREG.md.
+
+DETERMINISM: re-running committed analyze.py + replication_check.py reproduced analysis.json and
+  replication.json byte-for-byte (empty diffs). Independent-seed bootstrap CIs differ at the 3rd-4th
+  decimal (expected), but every gating sign decision (CI-LB>0, within_pass, R3 membership) agrees.
+
+VERIFIER: REPRODUCED (0 discrepancies)

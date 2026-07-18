@@ -194,6 +194,16 @@ preference surface and the conjecture's graded-acceptability clause, not the tes
   definiteness control fails 3/3 at long length (end-weight-dominated), so its recipient gradient is not cleanly
   a definiteness surface. Scoped to the definiteness/length + verb-bias surface, NOT the givenness shift; single
   run → `proposed`.
+- **Option-B REPLICATION RAN s250** ([`result/dais-graded-preference-correlation-rep2`](../../findings/results/dais-graded-preference-correlation-rep2.md),
+  fresh disjoint fillers, verifier REPRODUCED): the **verb-bias leg REPLICATED 3/3** (VERB-BIAS-REPLICATES;
+  matched ρ +0.68/+0.82/+0.70 each inside the s248 CI; alternating-only control survives) and was **promoted**
+  to [`claim/dative-verb-bias-graded-correspondence`](../../findings/claims/dative-verb-bias-graded-correspondence.md)
+  — a scoped **ordering** correspondence (not a magnitude match; contamination-vulnerable) that carries an
+  `anchors: → resource/dais-dative-ratings` edge for the **verb-bias per-verb gradient** (the first supported
+  claim this resource anchors). **The definiteness/length band did NOT replicate** — it flipped LENGTH-ONLY →
+  TRACKS-HUMAN-SURFACE on fresh fillers, so that surface is **filler-unstable** and stays `proposed`,
+  unpromoted. So DAIS now grounds one supported claim (verb-bias ordering) and one unstable dissociation
+  (definiteness/length).
 - The `anchors: → conjecture/dative-alternation-information-structure` front-matter link records DAIS's
   *adopted role* (s245) to strengthen the dative line's graded-acceptability clause, mirroring the
   identical edge on `languageR::dative`; the load-bearing adoption targets the **conjecture**, never the

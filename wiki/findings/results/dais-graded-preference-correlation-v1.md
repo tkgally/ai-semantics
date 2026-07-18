@@ -47,6 +47,21 @@ links:
 > **VERDICT: LENGTH-ONLY** (frozen S3 decision-tree). The registered
 > [`predictions.md`](../../predictions.md) §B bet (TRACKS-HUMAN-SURFACE) is a **LOSS** — an honest,
 > informative negative on the calibration record.
+>
+> **⬆ Cross-reference (2026-07-18, s250) — a fresh-item replication REPLICATES the verb-bias leg but shows
+> this LENGTH-ONLY band is filler-UNSTABLE.** [`result/dais-graded-preference-correlation-rep2`](dais-graded-preference-correlation-rep2.md)
+> re-ran the byte-frozen instrument on fully disjoint fresh fillers: **Arm-A verb-bias REPLICATES 3/3 on
+> all conjuncts** (every rep2 ρ inside this run's CI; the alternating-only control survives both runs) →
+> the verb-bias leg was **promoted** (PROMOTE-WITH-CONDITIONS, cross-session review) to a scoped
+> ordering-correspondence claim [`claim/dative-verb-bias-graded-correspondence`](../claims/dative-verb-bias-graded-correspondence.md),
+> held distinct from the givenness claim. **But the Arm-B band
+> FLIPPED**: rep2 read TRACKS-HUMAN-SURFACE (the within-length definiteness control cleared 2/3), where
+> this run read LENGTH-ONLY (it failed 3/3 at long length). Two single runs, opposite bands ⇒ the
+> definiteness/length band is **under-determined** at this N/filler (the long-length definite−indefinite
+> contrast is small, human +2.47 pts, and filler-sensitive) — **not** that TRACKS is the answer. This
+> LENGTH-ONLY reading is therefore a **single-run band on a small, filler-sensitive contrast**, not a
+> stable result; the durable, replicated finding is the **verb-bias correspondence**, not the
+> definiteness-band verdict either way.
 
 ## Headline — Arm B first (S2): the recipient definiteness/length surface
 
@@ -138,10 +153,15 @@ is n=3 concordant orderings, not a pooled coefficient.
   confirm criterion; it neither converts nor rescues the primary givenness test, which it does not touch.
 - **The predictions §B bet: a LOSS** (TRACKS did not obtain; LENGTH-ONLY). Recorded as an honest
   calibration negative.
-- **Promotion:** not now. Single run → `proposed`. A scoped `claim` (a human-effect-size dative claim on
-  the definiteness/length + verb-bias surface, held **distinct** from the givenness claim) would need a
-  fresh-item replication + a cross-session promotion review; the verb-bias ρ is the promotable leg if it
-  replicates, the definiteness surface is a **null-leaning** LENGTH-ONLY dissociation.
+- **Promotion:** ~~not now~~ **DONE s250 for the verb-bias leg.** *(At s248: single run → `proposed`, a
+  scoped `claim` would need a fresh-item replication + a cross-session promotion review; the verb-bias ρ
+  the promotable leg, the definiteness surface a null-leaning LENGTH-ONLY dissociation.)* The s250
+  fresh-item replication landed: **the verb-bias ρ REPLICATED 3/3** and was promoted (PROMOTE-WITH-
+  CONDITIONS) to the ordering-correspondence claim
+  [`claim/dative-verb-bias-graded-correspondence`](../claims/dative-verb-bias-graded-correspondence.md),
+  held distinct from the givenness claim. **The definiteness/length surface was NOT promoted** — its band
+  proved **filler-unstable** (this run's LENGTH-ONLY ≠ rep2's TRACKS-HUMAN-SURFACE); this result page
+  stays `proposed`. See [`result/dais-graded-preference-correlation-rep2`](dais-graded-preference-correlation-rep2.md).
 
 ## Provenance + reproduction
 

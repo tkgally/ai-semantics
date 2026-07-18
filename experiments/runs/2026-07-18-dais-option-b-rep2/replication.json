@@ -1,0 +1,87 @@
+{
+  "promotable_leg": "Arm-A verb-bias rho (matched + alternating-only B2 control)",
+  "per_model": [
+    {
+      "model": "claude",
+      "v1_rho_matched": 0.6079931509856504,
+      "v1_ci": [
+        0.5010149355826553,
+        0.6999256586591156
+      ],
+      "rep2_rho_matched": 0.6841954330253706,
+      "rep2_ci": [
+        0.5995466156831326,
+        0.7552849965615908
+      ],
+      "rep2_rho_alt": 0.6302841162913921,
+      "rep2_alt_ci": [
+        0.5004427733452459,
+        0.7346449665892517
+      ],
+      "R1_ci_lb_gt0": true,
+      "R2_alt_ci_lb_gt0": true,
+      "R3_rep2_point_in_v1_ci": true,
+      "desc_ci_overlap": true,
+      "desc_v1_point_in_rep2_ci": true,
+      "all_three": true
+    },
+    {
+      "model": "gemini",
+      "v1_rho_matched": 0.7626321546578717,
+      "v1_ci": [
+        0.6833956080083371,
+        0.8254584459054737
+      ],
+      "rep2_rho_matched": 0.8154886641170642,
+      "rep2_ci": [
+        0.7608145793669968,
+        0.8576966107616271
+      ],
+      "rep2_rho_alt": 0.6913124503632696,
+      "rep2_alt_ci": [
+        0.5738216129240528,
+        0.7797763016869093
+      ],
+      "R1_ci_lb_gt0": true,
+      "R2_alt_ci_lb_gt0": true,
+      "R3_rep2_point_in_v1_ci": true,
+      "desc_ci_overlap": true,
+      "desc_v1_point_in_rep2_ci": true,
+      "all_three": true
+    },
+    {
+      "model": "gpt",
+      "v1_rho_matched": 0.6284122357233156,
+      "v1_ci": [
+        0.5415012610377377,
+        0.7019690065683076
+      ],
+      "rep2_rho_matched": 0.7006601325954782,
+      "rep2_ci": [
+        0.6269314306997296,
+        0.7606971598108923
+      ],
+      "rep2_rho_alt": 0.5392658309291456,
+      "rep2_alt_ci": [
+        0.3716937684012432,
+        0.6749758654253303
+      ],
+      "R1_ci_lb_gt0": true,
+      "R2_alt_ci_lb_gt0": true,
+      "R3_rep2_point_in_v1_ci": true,
+      "desc_ci_overlap": true,
+      "desc_v1_point_in_rep2_ci": true,
+      "all_three": true
+    }
+  ],
+  "counts": {
+    "R1_ci_lb_gt0": 3,
+    "R2_alt_ci_lb_gt0": 3,
+    "R3_rep2_point_in_v1_ci": 3
+  },
+  "VERB_BIAS_REPLICATES": true,
+  "licenses_promotion_review": true,
+  "instrument_band_v1": "LENGTH-ONLY",
+  "instrument_band_rep2": "TRACKS-HUMAN-SURFACE",
+  "length_only_dissociation_replicates": false
+}
