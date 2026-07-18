@@ -150,12 +150,17 @@ claim) needs a fresh-item replication + a cross-session promotion review.
 
 ## Registered bet
 
-[`predictions.md`](../../../wiki/predictions.md) §B DAIS-correlation bet, finalized at this freeze:
-**pre-registered prediction = TRACKS-HUMAN-SURFACE fails as a clean 3/3 — most likely LENGTH-ONLY or
-VERB-BIAS-ONLY** (the panel reproduces the raw recipient gradient and/or the verb-bias magnitude, but
-the binding within-length definiteness control and/or the alternating-only frequency control does not
-clear ≥2/3), with gpt the weakest leg (its persistent-shadow pattern across the dative/particle lines).
-Outcome updated the run session.
+[`predictions.md`](../../../wiki/predictions.md) §B DAIS-correlation bet, **finalized at this freeze**
+(registered at design s246 as **open**, bands now pinned). **Registered directional bet =
+TRACKS-HUMAN-SURFACE** (the conjecture's graded-acceptability implication: the panel tracks the human
+graded verb-bias + definiteness/length surface — all three conjuncts clear ≥2/3). **Confidence:
+moderate-to-low** — Arm A (verb-bias ρ) is expected to clear easily (partly memorizable, the honest
+worry S1 flags), but the two binding controls are hard: the **alternating-only** control (B2) and
+especially the **within-length definiteness** control (B1's LENGTH-ONLY guard) are where TRACKS most
+plausibly breaks to **LENGTH-ONLY** or **VERB-BIAS-ONLY**, with **gpt the weakest leg** (its
+persistent-shadow pattern across the dative/particle lines). All failure modes are pre-named
+first-class outcomes; the bet is scored on the frozen decision-tree band. Outcome updated the run
+session.
 
 ## Pre-run gates (before the frozen instrument runs)
 
