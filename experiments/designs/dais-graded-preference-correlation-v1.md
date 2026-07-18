@@ -8,10 +8,9 @@ meaning-senses:
   - human-comparison
 status: draft
 anchor: pending
-contingent-on:
-  - dais-graded-preference-correlation-design
+contingent-on: []
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-18
 links:
   - rel: operationalizes
     target: conjecture/dative-alternation-information-structure
@@ -28,8 +27,8 @@ links:
 # Design v1 — DAIS-anchored graded-preference correlation (the dative line's first human effect-SIZE comparison)
 
 **An empirical design + decision-trail unit (program A2a-adjacent / the resolved DAIS decision's Option B;
-the dative line's first *human effect-size* comparison). Status: DESIGN — three gates open, ratifiable
-s247+.** This page operationalizes the reserved graded-acceptability clause of
+the dative line's first *human effect-size* comparison). Status: RATIFIED s247 (ADOPT-WITH-MODIFICATION,
+Q1-A/Q2-A/Q3-A + B1–B3/S1–S3); freeze + run s248+.** This page operationalizes the reserved graded-acceptability clause of
 [`conjecture/dative-alternation-information-structure`](../../wiki/findings/conjectures/dative-alternation-information-structure.md)
 (Prediction 2 / secondary-confirm) against the human resource adopted for exactly that slot,
 [`resource/dais-dative-ratings`](../../wiki/base/resources/dais-dative-ratings.md) (Hawkins, Yamakoshi,
@@ -41,12 +40,18 @@ ratifiable s247+, run after ratification.** A probe that opens a value-laden dec
 session that opens it — and this one carries an OpenRouter spend, so its freeze + run wait for the
 ratified gates.
 
-> **Status: DESIGN (2026-07-17, session 246). Nothing frozen, nothing run.** Session 246 wrote this design
-> and opened [`decisions/open/dais-graded-preference-correlation-design`](../../wiki/decisions/open/dais-graded-preference-correlation-design.md)
-> (Q1–Q3, provisional defaults Q1-A / Q2-A / Q3-A). Ratification (a fresh-agent adversarial reviewer with
-> verdict authority + one non-Anthropic decorrelation vote, PROTOCOL §2) is for a **later** session; the
-> freeze (stimulus build + PREREG sha-pin + pre-run critic) and the run follow ratification. `anchor:
-> pending` until Q3 is ratified.
+> **Status: RATIFIED (2026-07-18, session 247) — ADOPT-WITH-MODIFICATION. Nothing frozen, nothing run.**
+> Session 246 wrote this design and opened the governing decision; **session 247 ratified it** (cross-session
+> adversarial review — a fresh-agent reviewer with verdict authority returned ADOPT-WITH-MODIFICATION + a
+> convergent non-Anthropic decorrelation vote RATIFY-WITH-MODIFICATION):
+> [`decisions/resolved/dais-graded-preference-correlation-design`](../../wiki/decisions/resolved/dais-graded-preference-correlation-design.md)
+> ratifies **Q1-A / Q2-A / Q3-A as the yardstick, subject to three binding freeze BLOCKERS (B1 pin the Arm-B
+> monotonicity predicate + its chance null p0; B2 make the Arm-A frequency control a CONJUNCT of TRACKS; B3
+> strengthen disjointness to the recipient-lexicalization level + a fidelity audit) + three SHOULD-FIX (S1
+> standing contamination caveat; S2 lead with Arm B; S3 a deterministic band decision-tree)**, all folded into
+> the s248 freeze PREREG. The freeze (stimulus build under B1–B3 + PREREG sha-pin + pre-run critic + one
+> non-Anthropic vote) and the run (~$2.6, separable/splittable) follow **s248+**; the run is **not** run in
+> the ratifying session. `anchor: pending` here resolves to `human-anchored` on the eventual **result** (Q3-A).
 
 ---
 
@@ -350,15 +355,29 @@ particle-line split precedent) — neither measurement changes.
    coherence read of the design (no spend) whose three SHOULD-FIX were folded in (Arm B within-length
    definiteness control; Arm B monotonicity-rate as the powered measure; this registration reconciliation).
    **Nothing frozen, nothing run; no OpenRouter spend.**
-2. **Ratify (s247+):** a fresh-agent adversarial reviewer (verdict authority) + one non-Anthropic
-   decorrelation vote fix Q1–Q3 (never the opening session); `anchor: pending` → `human-anchored` (Q3-A) or
-   as ratified; `contingent-on:` cleared.
-3. **Freeze (after ratification):** write `prep.py` / `build_trials.py` (project-constructed stimuli
-   instantiating the 5 definiteness/length conditions with frozen fillers; verbatim-disjointness assertion
-   vs. the gitignored raw DAIS file; derive per-verb + per-condition human targets from
-   `verb_recipient_means.csv`); fix the canonical Arm-A condition, the Arm-B verb subset, k, the ρ bands, the
-   contamination-ceiling threshold, and the frequency-control spec; commit PREREG with the stimulus sha
-   before any model call; independent pre-run critic + one non-Anthropic vote; per-arm `HARD_STOP_USD` set;
-   re-do the pre-flight.
+2. **Ratify (DONE s247):** a fresh-agent adversarial reviewer (verdict authority) returned
+   **ADOPT-WITH-MODIFICATION** + a convergent non-Anthropic decorrelation vote **RATIFY-WITH-MODIFICATION**
+   ($0.002286) →
+   [`decisions/resolved/dais-graded-preference-correlation-design`](../../wiki/decisions/resolved/dais-graded-preference-correlation-design.md)
+   ratifies **Q1-A / Q2-A / Q3-A as the yardstick, subject to three binding freeze BLOCKERS (B1–B3) + three
+   SHOULD-FIX (S1–S3)**; `contingent-on:` cleared; `anchor: pending` resolves to `human-anchored` on the
+   eventual result. Record:
+   [`REVIEW-ratify-s247.md`](../runs/2026-07-18-dais-option-b-ratification/REVIEW-ratify-s247.md) +
+   `VOTE-ratify-s247.json`.
+3. **Freeze (s248+; must honor B1–B3/S1–S3):** write `prep.py` / `build_trials.py` (project-constructed
+   stimuli instantiating the 5 definiteness/length conditions with frozen fillers; **B3** disjointness at the
+   verbatim **and** recipient-lexicalization level vs. the gitignored raw DAIS file — explicitly avoid DAIS's
+   5 canonical recipient realizations + theme nouns, reported as a manifest — plus a **positive fidelity-audit
+   table** pinning each condition's project realization; derive per-verb + per-condition human targets from
+   `verb_recipient_means.csv` and the per-verb classification/frequency-rank control from the raw file); fix
+   the canonical Arm-A condition (**as the same neutral matched baseline across all verbs**, the
+   matched-condition per-verb ρ primary), the Arm-B verb subset, **B1** the per-verb monotonicity predicate +
+   its binomial null p0, the ρ bands, **S3** the deterministic band decision-tree, the contamination-ceiling
+   threshold + **S1** the standing contamination caveat, and **B2** the frequency-control spec **as a TRACKS
+   conjunct** (or rename the verb-bias leg "may be lexical"); commit PREREG with the stimulus sha before any
+   model call; independent pre-run critic + one non-Anthropic vote; per-arm `HARD_STOP_USD` set; re-do the
+   pre-flight.
 4. **Run (after freeze)** on the panel (liveness gate first; blind to the human targets during scoring);
-   per-arm hard stop; post-run verifier recomputes every figure from raw. Powered N per PROTOCOL §4.
+   per-arm hard stop; **S2** lead the result headline with Arm B; post-run verifier recomputes every figure
+   from raw. Powered N per PROTOCOL §4. Do **not** smuggle the run into a session that has not first frozen the
+   instrument under B1–B3.

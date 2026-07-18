@@ -37,9 +37,9 @@ Standing references:
 
 ### Decisions — open
 
-74 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
+75 resolved to date — full rationale changelog: [`decisions/resolved/index.md`](decisions/resolved/index.md).
 
-- [`decisions/open/dais-graded-preference-correlation-design.md`](decisions/open/dais-graded-preference-correlation-design.md) — Decision: how to operationalize the DAIS Option-B graded-preference correlation?
+*(none)*
 
 ### Base — concepts
 
@@ -463,7 +463,7 @@ Standing references:
 - [`experiments/designs/conative-construction-v1.md`](../experiments/designs/conative-construction-v1.md) — Design: conative minimal-pair probe v1
 - [`experiments/designs/conative-preference-commitment-v1.md`](../experiments/designs/conative-preference-commitment-v1.md) — conative preference/commitment v1 — does the AANN "preference without commitment" dissociation generalize to a fresh divergent-default construction? · **provisional** · (2026-06-15)
 - [`experiments/designs/cross-level-shared-instrument-v1.md`](../experiments/designs/cross-level-shared-instrument-v1.md) — cross-level shared-instrument probe v1 — one frozen graded-decline + confidence instrument applied identically at the lexical, constructional, and relational levels, to… · **draft** · (2026-06-22)
-- [`experiments/designs/dais-graded-preference-correlation-v1.md`](../experiments/designs/dais-graded-preference-correlation-v1.md) — DAIS-anchored graded-preference correlation — the dative line's first human effect-SIZE comparison. Correlate the panel's bare graded DO-preference against DAIS's human… · **draft** · (2026-07-17)
+- [`experiments/designs/dais-graded-preference-correlation-v1.md`](../experiments/designs/dais-graded-preference-correlation-v1.md) — DAIS-anchored graded-preference correlation — the dative line's first human effect-SIZE comparison. Correlate the panel's bare graded DO-preference against DAIS's human… · **draft** · (2026-07-18)
 - [`experiments/designs/genitive-alternation-animacy-v1.md`](../experiments/designs/genitive-alternation-animacy-v1.md) — Genitive-alternation possessor-animacy probe (A5) — does the panel's s-genitive/of-genitive preference shift in the human-rated animacy direction, and does it survive a… · **frozen** · (2026-07-13)
 - [`experiments/designs/lexical-bridging-context-v1.md`](../experiments/designs/lexical-bridging-context-v1.md) — lexical bridging-context probe v1 — does a model land in an intermediate, lower-confidence regime on human-rated usage-similarity-midpoint (bridging) items, between clea… · **draft** · (2026-06-21)
 - [`experiments/designs/lexical-polysemy-homonymy-v2.md`](../experiments/designs/lexical-polysemy-homonymy-v2.md) — lexical-sense-gradience v2 — does the panel treat polysemy (graded, intermediate) differently from homonymy (discrete, floored)? A re-analysis of the v1 ratings under a… · **ready** · (2026-05-30)
@@ -500,6 +500,7 @@ Standing references:
 
 (Newest first. Not part of the wiki tree; indexed for navigability.)
 
+- `experiments/runs/2026-07-18-dais-option-b-ratification/` (no README)
 - `experiments/runs/2026-07-17-dais-license-scout/` (no README)
 - `experiments/runs/2026-07-17-dais-anchor-ratification/` (no README)
 - `experiments/runs/2026-07-16-particle-placement-givenness-mag/` (no README)
