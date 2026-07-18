@@ -61,6 +61,19 @@ links:
 > **No result, verdict, or confirm criterion changes** (this fills the yardstick's reserved secondary slot;
 > a human-vs-model *magnitude* correlation on DAIS remains a separate, powered, pre-critiqued probe — the
 > decision's Option B, out of scope for the adoption).
+>
+> **Option B RAN 2026-07-18 (session 248) → the secondary-confirm graded-acceptability slot is filled by a
+> PARTIAL/dissociated result: VERDICT LENGTH-ONLY** ([`result/dais-graded-preference-correlation-v1`](../results/dais-graded-preference-correlation-v1.md);
+> frozen, ratified instrument; 1,200 calls; verifier REPRODUCED). The panel **tracks the human graded
+> verb-bias magnitude** (Arm A per-verb ρ +0.61/+0.76/+0.63, and the binding alternating-only control
+> survives 3/3 — not merely the memorizable alternating/non-alternating split) and **reproduces the raw
+> recipient definiteness/length gradient** (Arm B monotonicity beats chance 3/3), but its recipient
+> gradient is **not cleanly a definiteness surface**: the within-length definiteness contrast clears at
+> **short** length 3/3 yet **fails at long length 3/3** (end-weight-dominated) → LENGTH-ONLY. This is a
+> **secondary, non-decisive** confirmation of the graded-acceptability clause on the *verb-bias* and *raw
+> gradient* surfaces, and an honest **null-leaning dissociation** on the clean *definiteness* surface; per
+> this conjecture's confirm criterion it **cannot convert or rescue the primary givenness test**, which it
+> does not touch. Registered predictions §B bet: **LOST** (TRACKS did not obtain).
 
 > **Operationalization RATIFIED 2026-06-20 (session 50, ADOPT MODIFIED).** The human anchor is
 > in-repo ([`resource/languageR-dative-corpus`](../../base/resources/languageR-dative-corpus.md) —

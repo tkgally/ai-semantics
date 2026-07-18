@@ -187,6 +187,13 @@ preference surface and the conjecture's graded-acceptability clause, not the tes
   the tested discourse-context givenness shift (which stays anchored to `languageR::dative` production,
   direction-only). Any human-vs-model *magnitude comparison* on DAIS is a separate, powered, pre-critiqued
   probe (Option B), not licensed by adoption alone.
+- **Option B RAN s248** ([`result/dais-graded-preference-correlation-v1`](../../findings/results/dais-graded-preference-correlation-v1.md),
+  `anchors: → resource/dais-dative-ratings`): the first human-effect-size comparison on this surface. **VERDICT
+  LENGTH-ONLY** — the panel tracks the human graded verb-bias magnitude (matched ρ +0.61/+0.76/+0.63,
+  alternating-only control survives 3/3) and reproduces the raw recipient gradient, but the within-length
+  definiteness control fails 3/3 at long length (end-weight-dominated), so its recipient gradient is not cleanly
+  a definiteness surface. Scoped to the definiteness/length + verb-bias surface, NOT the givenness shift; single
+  run → `proposed`.
 - The `anchors: → conjecture/dative-alternation-information-structure` front-matter link records DAIS's
   *adopted role* (s245) to strengthen the dative line's graded-acceptability clause, mirroring the
   identical edge on `languageR::dative`; the load-bearing adoption targets the **conjecture**, never the
