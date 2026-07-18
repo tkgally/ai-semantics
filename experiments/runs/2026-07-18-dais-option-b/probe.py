@@ -66,10 +66,6 @@ def run_arm(arm):
         path = os.path.join(C.RAW, f"probe-{arm}-{name}.jsonl")
         done = {r["tid"] for r in C.read_jsonl(path)}
         recs_for_cost = C.read_jsonl(path)
-        arm_recs = []
-        for a_arm in ("A", "B"):
-            for m in C.MODELS:
-                arm_recs += C.read_jsonl(os.path.join(C.RAW, f"probe-{a_arm}-{m}.jsonl"))
         new_calls = 0
         for t in trials:
             if t["tid"] in done:

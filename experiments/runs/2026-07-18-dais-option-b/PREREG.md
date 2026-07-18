@@ -189,5 +189,20 @@ Outcome updated the run session.
     within-length definiteness control** → the LENGTH-ONLY band. CONTAMINATION-CEILING is explicitly
     "one tripwire, not the defense" (S1); the real defenses are the two controls + Q1-A + "pattern not
     magnitude".
-- **Fresh-agent pre-run critic** (verdict authority): _appended when it returns._
+- **Fresh-agent pre-run critic** (verdict authority): **GO-WITH-CONDITIONS**. Reproduced the freeze
+  artifacts and re-derived the load-bearing numbers; B1 null/predicate, B2 conjunct wiring, B3
+  disjointness+fidelity, S1–S3, anti-cheat, and the scope fence all verified. One binding condition:
+  - **C1 (binding, APPLIED before any model call):** the implemented Arm-B predicate `rs >= 0.50`
+    silently excluded the six exact-ρₛ=0.5 permutations (scipy returns 0.4999…94), so the *scored*
+    predicate was effectively `> 0.50` whose true null is 21/120 = 0.175, **not** the frozen 27/120 =
+    0.225 — breaking B1's predicate↔null pairing (conservative in direction, not result-inflating).
+    **Fixed:** `analyze.py::arm_b` now compares `rs >= RHO_THR - 1e-9`, so the six exact-0.5 patterns
+    score as successes exactly as the pinned null assumes (re-verified: 27/120; ≥14/40 threshold
+    unchanged). No frozen PREREG value moved; `stimuli.json` sha unchanged.
+  - **C2 (recommended, HONORED):** the result page + `analysis.json` surface **per-model** gate
+    booleans and the three raw ρ / monotonicity-rate values alongside the ≥2/3 verdict, so a single
+    strong-memorizer driving a gate is visible, not hidden.
+  - Critic also confirmed the end-weight escape (a monotonicity rate beating chance via pure
+    length-counting) is correctly quarantined to **LENGTH-ONLY** by the within-length control, and Arm
+    A cannot be end-weight-gamed (single fixed condition across all verbs).
 - **Liveness:** _appended at run._

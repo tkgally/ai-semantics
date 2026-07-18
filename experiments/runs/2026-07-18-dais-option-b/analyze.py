@@ -112,7 +112,10 @@ def arm_b():
             used += 1
             rs = spearmanr(vals, HUM_RANKS).statistic
             rhos.append(rs)
-            if not np.isnan(rs) and rs >= RHO_THR:
+            # Boundary-inclusive to match the frozen null (p0 = 27/120 counts the six exact-rho_s=0.5
+            # patterns as successes; scipy returns 0.4999...94 for them, so a bare >= would exclude
+            # them and silently shift the true null to 21/120). Pre-run critic C1 (s248). Conservative.
+            if not np.isnan(rs) and rs >= RHO_THR - 1e-9:
                 successes += 1
             # within-length definiteness contrasts (index: pronoun0 shortDef1 shortIndef2 longDef3 longIndef4)
             short_c.append(vals[1] - vals[2])   # shortDef - shortIndef
