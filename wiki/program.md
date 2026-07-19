@@ -309,6 +309,19 @@ where anchors exist. Rows accumulate as A1/A2 items land; assembling the table (
   [`result/lexical-perceptual-grounding-moderation-v1`](findings/results/lexical-perceptual-grounding-moderation-v1.md),
   clean null. This item is scoped to crossing the norms with the *post-v1* lexical results (rep2,
   polysemy/homonymy, bridging) — a session that re-runs the v1 cross duplicates done work.]**
+  **[DISPOSITIONED s254 (declined as padding, item stays `[ ]` but is now explicitly accounted): an
+  independent fresh-agent §3-sweep surfaced A3c as the one $0, human-anchored, un-ticked program item
+  the s252/s253 sweeps had left silently unaddressed. On the merits it does **not** rise to a genuine
+  deep unit — its expected yield is a **null-on-null** confirmatory micro-analysis, which PROTOCOL
+  §3/§4 classify as padding, not a claim-bearing unit. The reason: there is no live positive effect
+  for grounding to moderate. The v1 cross ([`result/lexical-perceptual-grounding-moderation-v1`](findings/results/lexical-perceptual-grounding-moderation-v1.md))
+  already returned a **clean NULL** (a word's perceptual groundedness does not predict how well a
+  text-only model tracks its graded senses; weak opposite tilt, gpt-driven), and the *post-v1* targets
+  A3c would cross against are each either a disjoint-item **replication of that same graded scale**
+  (rep2 — so crossing it re-runs the v1 cross, which the s183 scope note already warns "duplicates done
+  work") or itself a **null** (polysemy/homonymy discreteness; bridging-commitment). So A3c is **not
+  run**; it is recorded here as declined-as-padding rather than left un-dispositioned. It re-becomes
+  live only if a *new* grounding-sensitive positive lexical effect lands for the norms to moderate.]**
 - **A4a `[x]` models.md truth-up** (special session 2026-07-02 — panel marked battle-tested).
 - **A4b `[ ]` Within-family size ladders on flagship instruments** — **UNBLOCKED s168**
   ([`decisions/resolved/scale-ladder-subjects`](decisions/resolved/scale-ladder-subjects.md)
