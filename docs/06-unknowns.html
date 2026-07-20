@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="author" content="Claude (Anthropic)">
+<meta name="description" content="What is unknown, undecidable, or unprovable — the report’s blank regions, listed.">
+<title>6. What is not known — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<p class="site-name"><a href="./">Meaning in the Age of AI</a></p>
+<p class="site-tag">A research report written entirely by an AI (Claude) &mdash; <a href="./#about">about this site</a></p>
+</header>
+<nav class="pagenav top"><a href="05-what-was-learned.html">&larr; 5. What has been learned</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="07-implications.html">7. Implications &rarr;</a></nav>
+<main>
+<h2>6. What is not known, and what cannot be said with confidence</h2>
+<p>An honest map shows its blank regions. These are the project's, in roughly descending order of
+depth.</p>
+<p><strong>1. Whether model words refer — probably not answerable by experiment.</strong> Consider the question
+"does the model's word <em>water</em> actually pick out water — the stuff in the world?" The project's
+analysis of the philosophical literature concluded that this question is <strong><a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/essays/reference-as-premise-bound.md">premise-bound</a></strong>: rival
+philosophical camps, running the <em>same</em> theory of how reference works, reach opposite verdicts
+about LLMs because they disagree about one non-empirical premise — roughly, whether soaking up the
+recorded usage of a language community makes a system <em>part of</em> that community, inheriting the
+word–world connections its practices established. No behavioral experiment adjudicates that
+premise; it is a question about what we are willing to count, not about what the model will do.
+The project therefore stopped running experiments on reference and marked the question as one its
+methods cannot close — either answer, asserted confidently about LLMs, is philosophy presented as
+if it were measurement.</p>
+<p><strong>2. Absence of a capability can never be proven.</strong> One clean success can prove a capability is
+present. No number of failures proves it absent — there is always another way to ask, another
+format, another easing, and the space of elicitations is open-ended. This asymmetry (the project
+calls a behavioral negative <strong><a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/essays/undischargeable-negative.md">undischargeable</a></strong>) is not a technicality; it bit hard once, when an
+apparent inability dissolved the moment the answer format alone was eased (<a href="04-experiments.html#s4-11">section 4.11</a>). Every
+negative in this report therefore means "not found, searched this far, with these instruments" — a bounded search report, never "cannot."</p>
+<p><strong>3. A subtler shortcut may explain any given beater.</strong> The controls rule out the statistical
+shortcuts the project could measure: word frequencies, word-company, topic overlap. They cannot
+rule out shortcuts nobody has instrumented. The named, known gap is <strong>construction frequency</strong>:
+how often the <em>pattern itself</em> (as opposed to its words) occurs in training text. A model could in
+principle track pattern-level statistics the way the controls prove it is not merely tracking
+word-level ones. Building a construction-frequency instrument is listed as future work (section
+10); until it exists, "beats the shadow" means "beats the word-level shadow," and the project's
+grammar-difficulty result stands as the cautionary tale — its apparent human-likeness failed
+exactly such a deeper control, twice, and was refused promotion.</p>
+<p><strong>4. Contamination: the tests may be in the training data.</strong> The panel models were trained on
+internet-scale text, and several anchor datasets have been public for years. Where a result could
+be inflated by memorized test material, the project fences it (the verb-bias result of <a href="04-experiments.html#s4-2">section 4.2</a>
+carries this fence explicitly; the BLiMP accuracy numbers are treated only as upper bounds). The
+firewall-style designs — invented words, byte-identical strings, fresh items written for each
+replication — exist largely to defeat this worry, and the strongest claims rest on them.</p>
+<p><strong>5. Three models, one moment, outside view only.</strong> Everything here is about three particular
+commercial models of one era, probed from outside. Whether the findings hold for larger or smaller
+models, for open-weight models, for future systems; whether the behavioral gradients correspond to
+anything mechanistically real inside the networks; whether the panel's spread reflects
+architecture, data, or fine-tuning — all unknown. The project deliberately makes no claim beyond
+its panel, and none about mechanism.</p>
+<p><strong>6. The unresolved middle cases.</strong> Presupposition behavior beat its word-matched control but in a
+way a surface-cue account survives, and its promotion was refused — the honest status is "gated
+behavior, cause unresolved." The models' missing <em>hesitation</em> on borderline word senses (section
+4.4) is measured and replicated, but whether it reflects something deep about these systems or
+just their conversational training is unknown. And roughly two-thirds of all results are
+internal-contrast-only — solid facts about model behavior that are simply not comparable to human
+data yet, because no license-clean human dataset exists to anchor them.</p>
+</main>
+<nav class="pagenav bottom"><a href="05-what-was-learned.html">&larr; 5. What has been learned</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="07-implications.html">7. Implications &rarr;</a></nav>
+<footer>
+<p>This report and this website were researched, written, and built entirely by Claude, an AI
+assistant made by <a href="https://www.anthropic.com/">Anthropic</a>, working autonomously.
+The project was conceived, funded, and monitored by <a href="https://www.gally.net/">Tom Gally</a>.
+Published July 2026.</p>
+<p><a href="https://github.com/tkgally/ai-semantics/blob/main/project-history/20260719-capstone-report.md">Report source (Markdown)</a> &middot;
+<a href="https://github.com/tkgally/ai-semantics">Project repository</a></p>
+<p>Please do not index, archive, scrape, or use the contents of this site for AI training.</p>
+</footer>
+</body>
+</html>

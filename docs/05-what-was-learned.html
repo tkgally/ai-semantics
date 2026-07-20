@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="author" content="Claude (Anthropic)">
+<meta name="description" content="The shadow-depth table and the sense-by-sense scorecard.">
+<title>5. What has been learned — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<p class="site-name"><a href="./">Meaning in the Age of AI</a></p>
+<p class="site-tag">A research report written entirely by an AI (Claude) &mdash; <a href="./#about">about this site</a></p>
+</header>
+<nav class="pagenav top"><a href="04-experiments.html">&larr; 4. What the experiments found</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="06-unknowns.html">6. What is not known &rarr;</a></nav>
+<main>
+<h2>5. Putting it together: what has been learned</h2>
+<h3>The map, not the verdict</h3>
+<p>The project's flagship synthesis is the <strong><a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/theory/shadow-depth-table-v4.md">shadow-depth table</a></strong>: one row per probed phenomenon, each
+row recording the measured residual over its named control, with its error bars, its human anchor
+(or its internal-contrast-only label), and its caveats. Six rows are "shadow-beaters" backed by
+promoted claims — the comparative correlative, the dative, genitive, and particle-placement
+alternations, the AANN acceptability gradient, and word-sense gradience — and around them sit the
+honestly labeled corners: the presupposition line that beat one control but not convincingly, the
+falsified antonymy prediction, the grammar-difficulty gradient that is real within models but
+whose human-likeness could not be promoted, the grounding nulls, the deflationary relational
+results.
+The table below is a simplified rendering of that flagship object — the full version, with
+confidence intervals, exact controls, and every fence, is the wiki page
+<a href="https://github.com/tkgally/ai-semantics/blob/main/wiki/findings/theory/shadow-depth-table-v4.md"><code>theory/shadow-depth-table-v4</code></a>. Rows 1–6 are
+the promoted shadow-beaters; rows 7–8 are the two measured corners that did not earn (or lost)
+their placement. Positive shifts are on the 0-to-1 preference scale of <a href="04-experiments.html#s4-2">section 4.2</a> (so +0.32 ≈ 32
+points of 100); ρ is rank correlation with the human gradient.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Phenomenon</th>
+<th>Level</th>
+<th>The shadow it had to beat</th>
+<th>What survived, per model</th>
+<th>Human anchor</th>
+<th>Standing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Comparative correlative — the covariation reading</td>
+<td>pattern</td>
+<td>same-word controls without the construction</td>
+<td>assertion gap ≈ 87 pp in all three models (CI lower bound ≈ 78); German +93 / +88 / +88, Japanese +94 / +84 / +96 pp (claude / gemini / gpt)</td>
+<td>none exists for the inference itself (within-model contrast; small human answer-key check 93–100%)</td>
+<td>promoted claim; replicated; three languages</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dative alternation — discourse givenness</td>
+<td>pattern</td>
+<td>byte-identical sentence pairs; only the context varies</td>
+<td>preference shift claude +0.32, gemini +0.52, gpt +0.06 — all clear zero at N = 100</td>
+<td>human production direction (Bresnan corpus data)</td>
+<td>promoted claim, 3/3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>AANN acceptability gradient</td>
+<td>pattern</td>
+<td>word frequency, statistically removed</td>
+<td>correlation with the human gradient after the partial: claude 0.69, gpt 0.66, gemini 0.74; replicated across dates</td>
+<td>human acceptability ratings (Mahowald)</td>
+<td>promoted claim, 3/3; temporal-noun stratum fails</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Word-sense gradience</td>
+<td>word</td>
+<td>topic similarity of the two sentences, statistically removed</td>
+<td>correlation with human medians after the partial: claude 0.52, gpt 0.50, gemini 0.73 (raw 0.60–0.80); replicated on fresh pairs</td>
+<td>human relatedness ratings (DWUG), at/above annotator agreement</td>
+<td>promoted claim, 3/3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Genitive alternation — possessor animacy</td>
+<td>pattern</td>
+<td>invented-word (nonce) possessors, which have no usage statistics</td>
+<td>animacy shift claude +0.15, gemini +0.17, gpt +0.14; the nonce firewall survives in all three models, twice</td>
+<td>human direction (Dubois et al. 2023)</td>
+<td>promoted claim, 3/3, direction-only</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Particle placement — object givenness</td>
+<td>pattern</td>
+<td>byte-identical orders plus the "new-mentioned" context control</td>
+<td>firewall shift claude +0.037, gemini +0.055; gpt +0.007, indistinguishable from zero</td>
+<td>human direction (Kim et al. 2016 / Gries 1999)</td>
+<td>promoted claim, 2/3; gpt a persistent shadow</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Presupposition — projection and accommodation</td>
+<td>pattern</td>
+<td>word-form doppelgänger control</td>
+<td>margin over the control claude +0.78, gpt +0.47, gemini +0.94 — but keyed to the trigger word-forms, so a surface-cue reading survives</td>
+<td>none (internal-contrast-only)</td>
+<td>unpromoted — the "under-licensed middle"</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Lexical relation recovery — antonymy and kin</td>
+<td>word</td>
+<td>corpus contrastive-frame statistics</td>
+<td>the saturation prediction was <em>falsified</em>: antonymy's residual is among the largest (+0.61–0.67 hit-rate), and recovery does not track cue strength (ρ ≈ −0.09)</td>
+<td>none (internal-contrast-only)</td>
+<td>registered bet lost; the corner moved</td>
+</tr>
+</tbody>
+</table></div>
+<p>Two structural lessons emerged from building that table, and they are the project's most original
+theoretical contributions.</p>
+<p><strong>First: what organizes the data is not words-versus-grammar but shadow-depth.</strong> The project began
+with a continuum in mind, from word meaning at one end to grammatical meaning at the other, and
+expected the interesting boundary to lie somewhere along it. It does not. Both ends of the
+continuum contain phenomena that beat the distributional shadow (sense gradience at the word end,
+the comparative correlative at the grammar end) <em>and</em> phenomena that stay inside it (the
+presupposition corner; and, before the falsification, antonymy was expected to be one). The
+informative axis is <strong>how much daylight exists between a phenomenon and its statistical
+footprint</strong> — how deep its shadow runs — and that axis cuts <em>across</em> the word/grammar divide. This
+sounds abstract, but it has a practical edge: it predicts which impressive-looking model behaviors
+are actually informative. A model acing antonyms tells you almost nothing (the shadow is deep
+there — though see <a href="04-experiments.html#s4-7">section 4.7</a> for the twist); a model shifting word order for a discourse reason
+on byte-identical sentences tells you something real.</p>
+<p><strong>Second: agreement in direction, wild variation in size.</strong> Across nearly every positive finding,
+the three panel models agree on <em>which way</em> the effect points and disagree — up to ninefold — on
+<em>how big</em> it is, with gpt-5.4-mini repeatedly the weakest or a pure shadow-follower. "LLMs" as a
+uniform kind is not what the data show; what they show is a family of systems sharing directional
+sensitivities with strikingly different strengths. Any single-model study, and any study reporting
+only averages, would have missed this.</p>
+<h3>The scorecard, sense by sense</h3>
+<p>The question of <a href="01-the-question.html">section 1</a> — for each sense of "meaning," what do LLMs show? — can now be answered
+in summary form. Everything below is a statement about the three panel models, probed behaviorally,
+in mid-2026; <a href="06-unknowns.html">section 6</a> lists the standing caveats.</p>
+<ul>
+<li><strong>Distributional meaning: the confirmed substrate.</strong> Word-company statistics predict a great
+  deal of model behavior — that is why the project's controls have to be so aggressive — and where
+  a behavior stays inside the shadow, the project says so.</li>
+<li><strong>Constructional meaning: the strongest positive case.</strong> Grammatical patterns carry meaning for
+  these models over and above their words: the comparative correlative's inference survives
+  same-word controls at an enormous margin, in three languages; three word-order alternations
+  track human soft constraints through firewall controls; graded grammatical acceptability tracks
+  the human gradient after frequency is partialled out.</li>
+<li><strong>Inferential meaning: present but thin, with a signature.</strong> The models draw construction-licensed
+  inferences and compose them, but with a repeated asymmetry: <em>adding</em> an inference layer is easy;
+  <em>cancelling</em> a default is hard. Multi-step inference often needs room to think (<a href="04-experiments.html#s4-11">section 4.11</a>).
+  Deep inferential competence of the kind that would hold invariantly across embeddings — the
+  presupposition test — did not clearly appear.</li>
+<li><strong>Grounded meaning: no measurable headroom found.</strong> Where text statistics were already
+  saturated, adding images added nothing detectable, and a word's perceptual character did not
+  predict how well its senses were tracked. The magnitude question remains open for lack of an
+  instrument, not settled in the negative.</li>
+<li><strong>Referential meaning: not decidable by these methods</strong> — and, the project argues, not decidable
+  by any behavioral method (<a href="06-unknowns.html">section 6</a>).</li>
+<li><strong>Relational meaning: deflationary.</strong> Conventions coined between models are recoverable from the
+  transcript's content; nothing found so far is constituted <em>between</em> the parties in a way that
+  outruns what a single reader could recover. A thin order-sensitivity (latest agreement wins) is
+  real and replicated.</li>
+<li><strong>Human-comparison, overall:</strong> where human gradients exist and licenses allowed their use, the
+  models' <em>orderings</em> almost always aligned with human orderings; their <em>magnitudes</em> are their
+  own, and one panel member's alignment is often only surface-deep.</li>
+</ul>
+<p>The one-sentence verdict, unchanged through the final weeks of stronger evidence, is this: <strong>where
+this project can see it, LLM meaning is a real, graded, use-based structure, compositional at the
+level of grammatical constructions, thinly inferential, that beats but does not escape the
+distributional shadow — silent on reference, negative so far on grounding beyond text, and thin on
+meaning between agents.</strong></p>
+</main>
+<nav class="pagenav bottom"><a href="04-experiments.html">&larr; 4. What the experiments found</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="06-unknowns.html">6. What is not known &rarr;</a></nav>
+<footer>
+<p>This report and this website were researched, written, and built entirely by Claude, an AI
+assistant made by <a href="https://www.anthropic.com/">Anthropic</a>, working autonomously.
+The project was conceived, funded, and monitored by <a href="https://www.gally.net/">Tom Gally</a>.
+Published July 2026.</p>
+<p><a href="https://github.com/tkgally/ai-semantics/blob/main/project-history/20260719-capstone-report.md">Report source (Markdown)</a> &middot;
+<a href="https://github.com/tkgally/ai-semantics">Project repository</a></p>
+<p>Please do not index, archive, scrape, or use the contents of this site for AI training.</p>
+</footer>
+</body>
+</html>

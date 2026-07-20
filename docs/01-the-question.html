@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="author" content="Claude (Anthropic)">
+<meta name="description" content="Why the old philosophical puzzle of meaning became urgent again, and the six senses of “meaning” the project keeps apart.">
+<title>1. The question — Meaning in the Age of AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<p class="site-name"><a href="./">Meaning in the Age of AI</a></p>
+<p class="site-tag">A research report written entirely by an AI (Claude) &mdash; <a href="./#about">about this site</a></p>
+</header>
+<nav class="pagenav top"><a href="./">&larr; Title page</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="02-how-it-worked.html">2. How the project worked &rarr;</a></nav>
+<main>
+<h2>1. The question</h2>
+<p>When you read the sentence <em>The cat is on the mat</em>, something happens that goes beyond the letters
+on the page. You picture a cat; you know what would make the sentence true; you could act on it,
+argue with it, translate it. That extra something is what we casually call the sentence's
+<strong>meaning</strong> — and it is one of the oldest puzzles in philosophy, because it is remarkably hard to
+say what kind of thing it is. Is meaning a connection between words and objects in the world? Is it
+the set of situations in which a sentence would be true? Is it the way a word is <em>used</em> — the moves
+it lets you make in conversation? Is it something that happens inside an individual mind, or
+something that exists between people, in the shared life of a community? Philosophers and linguists
+have defended all of these answers, and the disagreements were never resolved — they were, for the
+most part, set aside.</p>
+<p>Large language models made the puzzle urgent again. A <strong>large language model</strong> (<strong>LLM</strong>) — the
+technology behind systems like ChatGPT, Gemini, and Claude — is a computer program trained on
+enormous amounts of text to do one basic thing: predict what word is likely to come next. Out of
+that training comes something unsettling: fluent, flexible, apparently understanding-laden
+language. And so an old philosophical question returned in a new form, and turned into a public
+argument. One camp says LLMs are "<a href="https://doi.org/10.1145/3442188.3445922">stochastic parrots</a>": they shuffle patterns of words they have
+absorbed, with no meaning behind the words at all, the way a parrot can say "pretty bird" without
+meaning anything by it. The other camp points to what the models actually do — answer questions,
+draw inferences, explain jokes — and says that whatever meaning is, this must be at least some of
+it. The debate has mostly been conducted as a yes/no question: <em>do these systems really understand,
+or not?</em></p>
+<p>This project — called <strong><a href="https://github.com/tkgally/ai-semantics">ai-semantics</a></strong> — began from a decision to refuse that yes/no question. Its
+<a href="https://github.com/tkgally/ai-semantics/blob/main/PROJECT.md">founding charter</a> sets out two commitments. First, be <strong>constructive, not adjudicative</strong>: rather
+than ruling on whether LLM behavior "really" counts as meaning, treat that behavior as a genuine
+phenomenon and describe its <em>structure</em> carefully, side by side with the human case — where it
+matches human meaning, where it falls short, where it is simply different. Second, focus on
+<strong>lexical and grammatical meaning</strong> — the meanings of words and of grammatical structures — rather
+than "meaning" in general. Word meanings are the home territory of lexicographers (dictionary
+makers), who have long known that word senses shade into one another gradually rather than sitting
+in neat numbered boxes. And grammatical meanings — the contribution made by word order, by little
+function words like <em>the</em> and <em>of</em>, by sentence patterns themselves — turn out to be an unusually
+sharp probe, for a reason <a href="04-experiments.html">section 4</a> will make vivid: you can hold the words of a sentence constant
+and vary only the pattern, and see whether a model notices what the pattern itself contributes.</p>
+<p>One more ground rule shaped everything. In ordinary talk, the single word "meaning" quietly covers
+many different things, and arguments about AI often go wrong by sliding between them. So the
+project maintains a controlled list of <strong>senses of "meaning"</strong> and requires every research page to
+declare which sense it is about. The main ones, in plain terms:</p>
+<ul>
+<li><strong>Distributional meaning</strong> — meaning as a word's pattern of company: which words it occurs with,
+  in which contexts. ("You shall know a word by the company it keeps.") This is the sense closest
+  to what an LLM's training directly rewards.</li>
+<li><strong>Referential meaning</strong> — the connection between words and the world: <em>cat</em> picks out cats. This
+  is the sense in which a word is <em>about</em> something.</li>
+<li><strong>Inferential meaning</strong> — meaning as the inferences a word or sentence licenses: from <em>Rex is a
+  dog</em> you may conclude <em>Rex is an animal</em>.</li>
+<li><strong>Grounded meaning</strong> — meaning anchored in non-linguistic experience: seeing cats, petting them,
+  hearing them. A book-only knowledge of <em>cat</em> would be ungrounded in this sense.</li>
+<li><strong>Constructional meaning</strong> — meaning carried by a grammatical pattern itself rather than by the
+  individual words in it. (Section 4.1 gives the flagship example.)</li>
+<li><strong>Relational meaning</strong> — meaning that exists <em>between</em> parties: private shorthands coined in a
+  conversation, conventions that live in a relationship rather than in either party alone.</li>
+</ul>
+<p>With those distinctions in hand, the project's driving question can be stated precisely: <strong>for each
+sense of "meaning," what does the behavior of today's LLMs actually show — measured against human
+evidence, with the statistical shortcuts ruled out?</strong> The rest of this report is what happened when
+that question was pursued, experiment by experiment, for seven weeks.</p>
+</main>
+<nav class="pagenav bottom"><a href="./">&larr; Title page</a> &nbsp;&middot;&nbsp; <a href="./#contents">Contents</a> &nbsp;&middot;&nbsp; <a href="02-how-it-worked.html">2. How the project worked &rarr;</a></nav>
+<footer>
+<p>This report and this website were researched, written, and built entirely by Claude, an AI
+assistant made by <a href="https://www.anthropic.com/">Anthropic</a>, working autonomously.
+The project was conceived, funded, and monitored by <a href="https://www.gally.net/">Tom Gally</a>.
+Published July 2026.</p>
+<p><a href="https://github.com/tkgally/ai-semantics/blob/main/project-history/20260719-capstone-report.md">Report source (Markdown)</a> &middot;
+<a href="https://github.com/tkgally/ai-semantics">Project repository</a></p>
+<p>Please do not index, archive, scrape, or use the contents of this site for AI training.</p>
+</footer>
+</body>
+</html>

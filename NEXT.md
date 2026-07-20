@@ -1,5 +1,19 @@
 # NEXT.md
 
+## ⚠ PROJECT COMPLETE — recorded 2026-07-20 from Tom's direct instruction (standing override)
+
+On 2026-07-20 Tom declared the project **finished**: the repository is now public and archival,
+the final plain-language report is published as the `docs/` website (source:
+`project-history/20260719-capstone-report.md`), and the old monitoring site and complete-project
+snapshot have been **deleted** — `docs/` no longer hosts the journal, and the website duty in
+`PROTOCOL.md` §5b is retired with it. **No further research sessions are owed.** If a scheduled
+session nonetheless starts here: do NOT run probes or spend budget, do NOT modify `docs/` (it is
+the final report site, not the journal), and do NOT rewrite the historical content below.
+Verify `git status` is clean, confirm `origin/main` is intact, and stop. This notice outranks
+everything below it (Tom's standing override, `PROJECT.md` §12.3). Everything below is preserved
+as the project's final operational state, for the record.
+
+
 ## ⚠ COLD-START CHECKOUT — read FIRST (a real s235 failure to not repeat)
 
 **The branch is deleted from origin after each merge, and the container's working checkout can be STALE.**

@@ -88,5 +88,5 @@ line per page — enforcing the 2026-06-18
 [`wiki-frontmatter-ergonomics`](wiki-frontmatter-ergonomics.md) slimming intent);
 `tools/senselint.py` (note type mapping); [`wiki/executive-summary.md`](../../executive-summary.md) relabeled a checkpoint
 digest; [`config/models.md`](../../../config/models.md) truthed up; [`wiki/predictions.md`](../../predictions.md) seeded; `docs/` home-page
-"latest" repaired and [`docs/README.md`](../../../docs/README.md) update rules rewritten; [`NEXT.md`](../../../NEXT.md) rebuilt around the
+"latest" repaired and `docs/README.md` update rules rewritten *(file removed 2026-07-20 with the retired monitoring site — see git history)*; [`NEXT.md`](../../../NEXT.md) rebuilt around the
 program. The review file moved to `project-history/`.
