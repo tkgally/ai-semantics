@@ -104,6 +104,22 @@ role is described in section 9); the day-to-day science — asking the questions
 running the experiments, doing the statistics, writing every page, catching and correcting its own
 errors — was done by the AI.
 
+The arrangement did not come from nowhere. It was directly inspired by a recent line of
+autonomous-research systems and proposals. The most prominent is Sakana AI's "AI Scientist,"
+which between 2024 and 2026 demonstrated a machine running the whole research cycle — generating
+ideas, coding and running experiments, writing papers, even conducting reviews — and documented
+the progression in a series of reports ([2024](https://sakana.ai/ai-scientist/),
+[2025](https://sakana.ai/ai-scientist-first-publication/),
+[2026](https://sakana.ai/ai-scientist-nature/)). Two frameworks published by Andrej Karpathy
+shaped the design more directly:
+[AutoResearch](https://github.com/karpathy/autoresearch), a deliberately minimal loop in which a
+coding agent autonomously proposes, runs, evaluates, and keeps or discards its own experiments,
+and the [LLM-wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) pattern, in
+which an agent incrementally builds and maintains a persistent, interlinked wiki of knowledge
+instead of re-deriving everything from raw sources each time. The debt to that last one is
+concrete: the wiki in which all of this project's knowledge lives, described just below, is this
+project's implementation of the LLM-wiki framework.
+
 The project's knowledge lives in a **wiki**: a web of small, typed, cross-linked pages. Some pages
 summarize published papers (82 of them were read and summarized, from classic philosophy of
 language to current AI research); some catalogue **datasets of human judgments** that experiments

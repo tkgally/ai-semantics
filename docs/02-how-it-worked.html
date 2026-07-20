@@ -28,6 +28,21 @@ before stopping. The human researcher, <a href="https://www.gally.net/">Tom Gall
 role is described in <a href="09-human-contribution.html">section 9</a>); the day-to-day science — asking the questions, designing and
 running the experiments, doing the statistics, writing every page, catching and correcting its own
 errors — was done by the AI.</p>
+<p>The arrangement did not come from nowhere. It was directly inspired by a recent line of
+autonomous-research systems and proposals. The most prominent is Sakana AI's "AI Scientist,"
+which between 2024 and 2026 demonstrated a machine running the whole research cycle — generating
+ideas, coding and running experiments, writing papers, even conducting reviews — and documented
+the progression in a series of reports (<a href="https://sakana.ai/ai-scientist/">2024</a>,
+<a href="https://sakana.ai/ai-scientist-first-publication/">2025</a>,
+<a href="https://sakana.ai/ai-scientist-nature/">2026</a>). Two frameworks published by Andrej Karpathy
+shaped the design more directly:
+<a href="https://github.com/karpathy/autoresearch">AutoResearch</a>, a deliberately minimal loop in which a
+coding agent autonomously proposes, runs, evaluates, and keeps or discards its own experiments,
+and the <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">LLM-wiki</a> pattern, in
+which an agent incrementally builds and maintains a persistent, interlinked wiki of knowledge
+instead of re-deriving everything from raw sources each time. The debt to that last one is
+concrete: the wiki in which all of this project's knowledge lives, described just below, is this
+project's implementation of the LLM-wiki framework.</p>
 <p>The project's knowledge lives in a <strong><a href="https://github.com/tkgally/ai-semantics/tree/main/wiki">wiki</a></strong>: a web of small, typed, cross-linked pages. Some pages
 summarize published papers (82 of them were read and summarized, from classic philosophy of
 language to current AI research); some catalogue <strong>datasets of human judgments</strong> that experiments
